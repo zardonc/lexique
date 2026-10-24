@@ -1,0 +1,19 @@
+[package]
+name = "lexique-desktop"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[lib]
+name = "lexique_desktop_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+lexique-storage.workspace = true
+rusqlite.workspace = true
+serde.workspace = true

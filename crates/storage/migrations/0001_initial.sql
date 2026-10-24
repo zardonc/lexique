@@ -1,0 +1,6 @@
+CREATE TABLE app_metadata (
+    key TEXT PRIMARY KEY NOT NULL,
+    value TEXT NOT NULL
+) STRICT;
+
+PRAGMA user_version = 1;

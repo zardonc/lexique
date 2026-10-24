@@ -1,0 +1,22 @@
+{
+  "name": "lexique-workspace",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.25.0",
+  "engines": { "node": ">=22.12.0" },
+  "scripts": {
+    "dev": "pnpm --filter @lexique/desktop dev",
+    "desktop": "pnpm --filter @lexique/desktop tauri dev",
+    "desktop:build": "pnpm --filter @lexique/desktop tauri build",
+    "build": "pnpm --filter @lexique/desktop build",
+    "typecheck": "pnpm --filter @lexique/desktop typecheck",
+    "lint": "pnpm --filter @lexique/desktop lint",
+    "test:e2e": "pnpm --filter @lexique/desktop test:e2e",
+    "rust:check": "cargo check --locked --workspace",
+    "rust:fmt": "cargo fmt --all --check",
+    "rust:test:build": "cargo test --locked -p lexique-storage --no-run",
+    "test:rust": "node scripts/test-rust.mjs",
+    "wasm:build": "cargo build --locked --release -p lexique-core --target wasm32-unknown-unknown"
+  }
+}
