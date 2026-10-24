@@ -53,6 +53,6 @@ E2E 结束后在 `apps/desktop/test-results/` 产生桌面 / 手机截图，在 
 
 词典 / MDX / MDD、完整变位、离线 TTS、笔记与分类、FSRS、Google OAuth / Sheets、翻译与 AI、练习、浏览器复习与 BFF 尚未实现。WASM 当前只导出版本查询，不能算作 FSRS 或浏览器复习验收。原型的演示数据、密钥表单和伪同步没有被搬进生产代码。
 
-不包含词典、模型、个人学习数据、服务凭据或 OAuth 配置。外部内容的许可尚需逐项核实。项目自身许可证也尚未决定，因此暂不添加未经确认的 LICENSE；公开可见并不自动授予开源使用许可。
+不包含词典、模型、个人学习数据、服务凭据或 OAuth 配置。项目自有源码采用 [MIT](LICENSE)；第三方组件、数据、模型和声线分别遵守其上游许可，默认资源尚需逐项准入。已确认的开发链路、资源候选及验证门槛见 [开发准备清单](docs/development-readiness.md)。
 
 产品范围见 [产品基线](docs/product.md)，模块边界见 [架构](docs/architecture.md)，实施顺序见 [开发路线](docs/roadmap.md)，实测范围见 [验证记录](docs/verification.md)。
