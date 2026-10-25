@@ -50,6 +50,8 @@ Windows 的 `tauri.windows.conf.json` 通过 Tauri `appDirectoriesOverride` 将�
 
 `pnpm desktop:portable` 构建 Windows x64 release 后，仅打包可执行文件、已准入词典资源、许可与使用说明，生成独立 ZIP 和 SHA-256 清单，并逐项回读校验压缩包。新交付必须使用空路径；不打包运行时 `Lexique-data/`，也不覆盖旧交付。当前仍依赖系统已有 WebView2，不启动安装器或首次联网下载；这不等于缺运行依赖机器、签名或完整资源发行已验收。
 
+公开原生构建入口由 `scripts/build-desktop.mjs` 用参数数组调用已安装 Tauri CLI，在最终进程边界追加 Cargo 的 `-- --locked`，避免 pnpm 消耗转发分隔符。portable 使用同一入口，可通过 `--output-dir` 指定新交付父目录；隔离工具测试已接入现有 CI。macOS 专属退出及实际运行统一由 [blocked 清单](macos-m1-blockers.md) 管理。
+
 仓库中的配置仅包含构建、测试和应用标识，不包含部署配置、凭据、用户数据、服务端点或 OAuth 客户端配置。真实设置应在运行时注入并与秘密分开保存，绝不能放入 `VITE_*` 并打进前端。
 
 安装器、签名、公证、更新和完整默认离线资源尚未就绪，`bundle.active` 因此关闭。开发图标是随骨架提供的原创临时 L 字形，不代表最终品牌。`pnpm desktop:build` 仅编译程序，不声称生成完整可分发安装包。CI 对四个系统 / 架构做编译检查，不能替代实际安装、首装断网和 TTS 验收。

@@ -118,3 +118,13 @@ SQLite 集成测试的本机预编译未通过：环境缺少 MSVC `link.exe`，
 - 独立审查的未确认保存保护与 macOS 菜单 Quit / Cmd+Q 问题已修复并复查。macOS Dock Quit 仍可能绕过未保存提示，须在该平台验收前处理；macOS 专属代码未在本机编译或运行。
 
 本轮仅 Windows x64 开发构建验收；其他架构 / 平台、远端 CI、release portable 重打及正式发行未验证。没有新增草稿、删除、FSRS、同步、TTS 或服务。验证进程均已关闭；本轮开始前的文档编辑未纳入本次实现提交。
+
+## M1 Windows 复盘修复与 macOS 阻塞
+
+日期：2026-10-25。Windows 可执行的复盘项已修复：公开原生构建入口默认 locked，portable 复用同一入口；独立打包测试与构建参数测试接入 CI，交付说明更新 M1 笔记能力。新包输出到隔离目录，旧交付与既有学习数据保留。详见 [Windows 后续证据](evidence/issue-10/windows-follow-up.md)。
+
+- 工具测试 7 项、资源检查 7 项、Edge E2E 13 项、预编译后的 Rust 测试 15 项通过；lint / typecheck 与 release 内嵌前端生产构建通过。后端执行硬限仍为 60 秒。
+- Windows x64 locked release portable 成功生成并逐项校验；真实禁网窗口验证 Alt+F4、标题栏关闭、继续编辑、保存失败不退出、恢复数据库后重试，以及多语言笔记与排序的重启恢复。Windows ARM64 workspace 编译通过，但无该架构实机运行证据。
+- macOS 专属编译、菜单 Quit / Cmd+Q / Dock Quit 及原生数据恢复集中标记为 **blocked — 等待 macOS 执行环境**。退出矩阵、已知 Dock Quit 缺陷与解除阻塞条件见 [macOS 清单](macos-m1-blockers.md)。Windows 结果不替代其验收。
+
+本轮未推送、未运行远端 CI；没有验证 macOS / Windows ARM64 实机、缺 WebView2 干净机器、签名或正式发行。验证仅使用隔离合成数据，原有未提交文档修改保持原样。

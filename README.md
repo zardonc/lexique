@@ -43,11 +43,14 @@ pnpm rust:test:build      # 先编译测试，避免将首次编译计入运行�
 pnpm test:rust            # 真正执行后端测试，硬性 60 秒超时并终止进程树
 pnpm wasm:build
 node scripts/check-wasm.mjs
-pnpm desktop:build       # 仅构建原生可执行文件；暂未开启安装包与签名
+pnpm desktop:build       # 默认 Cargo --locked；仅构建原生可执行文件，暂未开启安装包与签名
 pnpm desktop:portable    # Windows x64 release ZIP，免安装，解压后运行 Lexique.exe
+pnpm test:tooling        # 构建参数传递与隔离打包回归，不编译原生程序
 ```
 
-便携交付位于 `target/portable/Lexique-0.1.0-windows-x64-portable.zip`，附带 `.zip.sha256`。解压整个 ZIP 到可写目录，保持 `dictionary/` 与 `Lexique.exe` 同级；首次启动生成 `Lexique-data/`，退出后可将整个目录一起移动或备份。更新时保留 `Lexique-data/`。打包命令拒绝覆盖同名交付目录或 ZIP；重建前先移走已有交付，避免误删使用中的数据。CI 产物 `windows-x64-portable` 提供相同布局。
+已有 portable 交付会被保留；再次交付可运行 `pnpm desktop:portable --output-dir <新目录>`。构建入口会在最终进程边界追加 Cargo 的 `--locked`，无需经 pnpm 手动传递分隔符。
+
+便携交付默认位于 `target/portable/Lexique-0.1.0-windows-x64-portable.zip`，附带 `.zip.sha256`。解压整个 ZIP 到可写目录，保持 `dictionary/` 与 `Lexique.exe` 同级；首次启动生成 `Lexique-data/`，退出后可将整个目录一起移动或备份。更新时保留 `Lexique-data/`。打包命令拒绝覆盖同名交付目录或 ZIP；重复交付使用新的 `--output-dir`，保留使用中的旧目录。CI 产物 `windows-x64-portable` 提供相同布局。
 
 当前便携包是未签名的 Windows 11 x64 开发小样，需要系统已有 WebView2；不启动依赖安装器、不联网补下载。无 WebView2 的干净机器和 ARM64 / macOS 发行尚未验收，完整离线依赖交付仍属于后续发行门槛。
 
@@ -61,7 +64,7 @@ E2E 结束后在 `apps/desktop/test-results/` 产生桌面 / 手机截图，在 
 
 桌面词典页已接入固定的 FreeDict 法中小样，完全匹配原始拼写并分开显示同键记录、释义和来源；可试 `école`、`œil`、`aujourd’hui`、`or`、`vacances`。缺项与资源错误分别显示；浏览器预览不能读取内置词典。
 
-M1 生词本支持同词一份的逻辑引用、收藏时只读摘要与独立纯文本笔记。点击“加入生词本”后需明确保存；笔记可为空、可清空，最多 20,000 个 Unicode 标量（组合重音分别计数）。查询结果、摘要与来源不能由笔记编辑覆盖。支持搜索词头 / 摘要 / 笔记，以及词头、创建时间、修改时间的双向排序和偏好恢复；保存失败保留输入，旧版本冲突拒绝覆盖。Windows 正常关闭经过保存 / 放弃 / 继续编辑选择；已保存记录可离线重启恢复。验证与平台限制见 [M1 证据](docs/evidence/issue-10/README.md)。
+M1 生词本支持同词一份的逻辑引用、收藏时只读摘要与独立纯文本笔记。点击“加入生词本”后需明确保存；笔记可为空、可清空，最多 20,000 个 Unicode 标量（组合重音分别计数）。查询结果、摘要与来源不能由笔记编辑覆盖。支持搜索词头 / 摘要 / 笔记，以及词头、创建时间、修改时间的双向排序和偏好恢复；保存失败保留输入，旧版本冲突拒绝覆盖。Windows 正常关闭经过保存 / 放弃 / 继续编辑选择；已保存记录可离线重启恢复。验证与平台限制见 [M1 证据](docs/evidence/issue-10/README.md)；必须在 macOS 执行的项目统一记录为 [blocked](docs/macos-m1-blockers.md)。
 
 完整词典 / MDX / MDD、完整变位、离线 TTS、语法笔记与分类、FSRS、Google OAuth / Sheets、翻译与 AI、练习、浏览器复习与 BFF 尚未实现。WASM 当前只导出版本查询，不能算作 FSRS 或浏览器复习验收。原型的演示数据、密钥表单和伪同步没有被搬进生产代码。
 

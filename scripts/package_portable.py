@@ -1,5 +1,6 @@
 """Package the Windows x64 release without installers or personal runtime data."""
 
+import argparse
 import hashlib
 import json
 from pathlib import Path
@@ -8,8 +9,7 @@ import struct
 import zipfile
 
 
-def main():
-    root = Path(__file__).resolve().parent.parent
+def package(root: Path, output_directory: Path | None = None):
     release = root / "target/release"
     executable = release / "lexique-desktop.exe"
     binary = executable.read_bytes()
@@ -20,7 +20,7 @@ def main():
         raise ValueError("This package targets Windows x64 only")
     config = json.loads((root / "apps/desktop/src-tauri/tauri.conf.json").read_text())
     name = f"Lexique-{config['version']}-windows-x64-portable"
-    output = root / "target/portable" / name
+    output = (output_directory if output_directory is not None else root / "target/portable") / name
     archive = output.parent / f"{name}.zip"
     checksum_path = archive.with_suffix(".zip.sha256")
     if output.exists() or archive.exists() or checksum_path.exists():
@@ -45,7 +45,8 @@ def main():
         "Close the app before moving or backing up the whole folder. Preserve Lexique-data/\n"
         "when updating. Existing AppData files are neither imported nor removed.\n"
         "A read-only location fails; there is no fallback to AppData.\n\n"
-        "This sample provides only FreeDict fra-zho lookup, not notes, TTS or a full dictionary.\n"
+        "This sample provides FreeDict fra-zho lookup and M1 vocabulary notes with explicit save,\n"
+        "search, sorting and restart recovery. TTS and a full dictionary are not included.\n"
         "Try: école, œil, aujourd’hui, or, vacances.\n"
         "Project code: MIT (LICENSE). Dictionary: CC BY-SA 3.0 (dictionary/COPYING).\n",
         encoding="utf-8",
@@ -67,9 +68,12 @@ def main():
     checksum = hashlib.sha256(archive.read_bytes()).hexdigest()
     with checksum_path.open("x", encoding="utf-8") as checksum_file:
         checksum_file.write(f"{checksum}  {archive.name}\n")
-    print(json.dumps({"archive": str(archive), "bytes": archive.stat().st_size,
-                      "sha256": checksum, "verified_files": len(expected) + 1}, indent=2))
+    return {"archive": str(archive), "bytes": archive.stat().st_size,
+            "sha256": checksum, "verified_files": len(expected) + 1}
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--output-dir", type=Path, help="Separate delivery parent; existing artifacts are never overwritten")
+    args = parser.parse_args()
+    print(json.dumps(package(Path(__file__).resolve().parent.parent, args.output_dir), indent=2))

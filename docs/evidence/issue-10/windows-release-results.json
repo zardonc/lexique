@@ -1,0 +1,24 @@
+{
+  "record": {
+    "id": 1,
+    "headword": "or",
+    "snapshot": "{\"reference\":{\"dictionary\":\"français-中文 (Zhōngwén) FreeDict+WikDict dictionary\",\"lookup_key\":\"or\",\"version\":\"2025.11.23\",\"attribution\":\"Karl Bartel; FreeDict; WikDict; Wiktionary contributors; DBnary\",\"license\":\"CC-BY-SA-3.0\",\"source_url\":\"https://download.freedict.org/dictionaries/fra-zho/2025.11.23/freedict-fra-zho-2025.11.23.src.tar.xz\",\"license_url\":\"https://creativecommons.org/licenses/by-sa/3.0/\",\"sha256\":\"11cdba7ed8fbdcd6f6a388586c11a181def517d840aae0baa6ef4a4ab5c55c51\"},\"digest\":[{\"pronunciations\":[\"ɔʁ\"],\"grammar\":[],\"translation\":\"而\"},{\"pronunciations\":[\"ɔʁ\"],\"grammar\":[\"adj\"],\"translation\":\"金\"},{\"pronunciations\":[\"ɔʁ\"],\"grammar\":[\"n\",\"masc\"],\"translation\":\"金\"}]}",
+    "notes": "Windows release verified — 学习笔记 😀\nAlt+F4 explicit save",
+    "revision": 6,
+    "created_at": 1792944147023,
+    "updated_at": 1792947630328
+  },
+  "discard_preserved_record": true,
+  "schema_version": 2,
+  "sort": "headword-asc",
+  "first": {
+    "is_app_container": true,
+    "ip_socket_winerror": 10013,
+    "dns": "[Errno 11001] getaddrinfo failed"
+  },
+  "restart": {
+    "is_app_container": true,
+    "ip_socket_winerror": 10013,
+    "dns": "[Errno 11001] getaddrinfo failed"
+  }
+}

@@ -18,6 +18,7 @@ jobs:
           node-version: 24
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+      - run: pnpm test:build-args
       - run: pnpm lint && pnpm typecheck && pnpm build
       - run: pnpm --filter @lexique/desktop exec playwright install --with-deps chromium
       - run: pnpm test:e2e
@@ -63,6 +64,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -X utf8 -m unittest discover -s scripts -p test_dictionary_sample.py -v
+      - run: python -X utf8 -m unittest discover -s scripts -p test_package_portable.py -v
 
   native:
     strategy:
@@ -115,6 +117,7 @@ jobs:
         with:
           arch: amd64
       - run: pnpm install --frozen-lockfile
+      - run: pnpm test:tooling
       - run: pnpm desktop:portable
       - uses: actions/upload-artifact@v4
         with:
