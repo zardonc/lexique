@@ -14,11 +14,12 @@
     "lint": "pnpm --filter @lexique/desktop lint",
     "test:e2e": "pnpm --filter @lexique/desktop test:e2e",
     "resources:build": "python -X utf8 scripts/dictionary_sample.py build",
+    "resources:prepare": "python -X utf8 scripts/dictionary_sample.py prepare target/desktop-dictionary-sample",
     "resources:query": "python -X utf8 scripts/dictionary_sample.py query",
     "test:resources": "python -X utf8 -m unittest discover -s scripts -p test_dictionary_sample.py -v",
     "rust:check": "cargo check --locked --workspace",
     "rust:fmt": "cargo fmt --all --check",
-    "rust:test:build": "cargo test --locked -p lexique-storage --no-run",
+    "rust:test:build": "pnpm resources:prepare && cargo test --locked -p lexique-storage -p lexique-dictionary --no-run",
     "test:rust": "node scripts/test-rust.mjs",
     "wasm:build": "cargo build --locked --release -p lexique-core --target wasm32-unknown-unknown"
   }

@@ -10,6 +10,29 @@ use status::{RuntimeStatus, StorageKind};
 const DATABASE_FILENAME: &str = "lexique.sqlite3";
 
 #[tauri::command]
+async fn dictionary_lookup(
+    app: tauri::AppHandle,
+    key: String,
+) -> Result<lexique_dictionary::Lookup, lexique_dictionary::DictionaryError> {
+    let path = app
+        .path()
+        .resource_dir()
+        .map_err(|error| lexique_dictionary::DictionaryError {
+            code: "query_failed",
+            message: format!("Could not resolve dictionary resources: {error}"),
+        })?
+        .join("dictionary/dictionary.sqlite3");
+    tauri::async_runtime::spawn_blocking(move || {
+        lexique_dictionary::lookup(&path, &key, env!("LEXIQUE_DICTIONARY_SHA256"))
+    })
+    .await
+    .map_err(|error| lexique_dictionary::DictionaryError {
+        code: "query_failed",
+        message: format!("Dictionary query task failed: {error}"),
+    })?
+}
+
+#[tauri::command]
 fn runtime_status(status: State<'_, RuntimeStatus>) -> RuntimeStatus {
     status.inner().clone()
 }
@@ -28,7 +51,7 @@ pub fn run() {
             });
             Ok(())
         })
-        .invoke_handler(tauri::generate_handler![runtime_status])
+        .invoke_handler(tauri::generate_handler![runtime_status, dictionary_lookup])
         .run(tauri::generate_context!())
         .expect("Lexique could not start; check native initialization errors");
 }

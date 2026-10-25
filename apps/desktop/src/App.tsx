@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { messages } from './content';
 import type { Locale, Messages, Theme } from './content';
 import { Navigation } from './navigation';
+import { DictionaryPanel } from './dictionary';
 import { RuntimeStatusPanel } from './runtime-status';
 import type { RuntimeAdapter } from './platform/runtime';
 
@@ -47,7 +48,8 @@ export function App({ runtime }: { readonly runtime: RuntimeAdapter }) {
         <section className="page-content" aria-labelledby="page-title">
           <span className="page-index" aria-hidden="true">{String(page + 1).padStart(2, '0')}</span>
           <h2 id="page-title">{text.title}</h2><p className="intro">{text.intro}</p>
-          <div className="empty-state"><p>{text.pending[page]}</p><small>{text.scaffold}</small></div>
+          {page === 0 ? <DictionaryPanel runtime={runtime} text={text.dictionary} /> :
+            <div className="empty-state"><p>{text.pending[page]}</p><small>{text.scaffold}</small></div>}
         </section>
         <RuntimeStatusPanel runtime={runtime} text={text} />
       </main>

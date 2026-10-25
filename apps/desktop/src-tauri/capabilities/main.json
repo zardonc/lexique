@@ -1,7 +1,7 @@
 {
   "$schema": "../gen/schemas/desktop-schema.json",
   "identifier": "main",
-  "description": "Local main window may read initialized runtime status only.",
+  "description": "Local main window may read runtime status and query the bundled dictionary.",
   "windows": ["main"],
-  "permissions": ["allow-runtime-status"]
+  "permissions": ["allow-runtime-status", "allow-dictionary-lookup"]
 }

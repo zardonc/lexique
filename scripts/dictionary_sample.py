@@ -153,21 +153,39 @@ def build(output, source=SOURCE):
     return report
 
 
+def prepare(output):
+    """Reuse a verified generated directory; damaged outputs require explicit repair."""
+    output = Path(output)
+    if not output.exists():
+        return build(output)
+    with Dictionary(output / "dictionary.sqlite3"):
+        pass
+    for name in (SOURCE.name, "COPYING", "provenance.json", SOURCE.name + ".sha512"):
+        if (output / name).read_bytes() != (RESOURCE / name).read_bytes():
+            raise ValueError(f"Generated resource differs from its source: {name}")
+    report = json.loads((output / "report.json").read_text(encoding="utf-8"))
+    for filename, field in (("dictionary.sqlite3", "sqlite_sha256"), ("sample.tar.gz", "bundle_sha256")):
+        if hashlib.sha256((output / filename).read_bytes()).hexdigest() != report[field]:
+            raise ValueError(f"Generated resource checksum mismatch: {filename}")
+    return report
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     commands = parser.add_subparsers(dest="command", required=True)
     commands.add_parser("build").add_argument("output", type=Path)
+    commands.add_parser("prepare").add_argument("output", type=Path)
     query = commands.add_parser("query")
     query.add_argument("database", type=Path)
     query.add_argument("key")
     arguments = parser.parse_args()
-    if arguments.command == "build":
-        result = build(arguments.output)
+    if arguments.command in ("build", "prepare"):
+        result = build(arguments.output) if arguments.command == "build" else prepare(arguments.output)
     else:
         with Dictionary(arguments.database) as dictionary:
             result = dictionary.lookup(arguments.key)
     print(json.dumps(result, ensure_ascii=False, indent=2))
-    return 0 if arguments.command == "build" or result else 2
+    return 0 if arguments.command != "query" or result else 2
 
 
 if __name__ == "__main__":

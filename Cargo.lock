@@ -1678,11 +1678,25 @@ version = "0.1.0"
 name = "lexique-desktop"
 version = "0.1.0"
 dependencies = [
+ "lexique-dictionary",
  "lexique-storage",
  "rusqlite",
  "serde",
+ "serde_json",
  "tauri",
  "tauri-build",
+]
+
+[[package]]
+name = "lexique-dictionary"
+version = "0.1.0"
+dependencies = [
+ "lexique-storage",
+ "quick-xml",
+ "rusqlite",
+ "serde",
+ "serde_json",
+ "sha2",
 ]
 
 [[package]]
@@ -2398,6 +2412,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "41b1177fdf999d2321d3fb46ff47159d9c1fb9ad66a4879f8c50a0b504615e9b"
 dependencies = [
  "memchr",
+ "serde",
 ]
 
 [[package]]

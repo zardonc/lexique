@@ -12,10 +12,23 @@ import xml.etree.ElementTree as ET
 from contextlib import closing
 from pathlib import Path
 
-from dictionary_sample import SOURCE, Dictionary, build
+from dictionary_sample import SOURCE, Dictionary, build, prepare
 
 
 class DictionarySampleTests(unittest.TestCase):
+    def test_prepare_reuses_only_verified_generated_resources(self):
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory) / "sample"
+            first = prepare(output)
+            database = output / "dictionary.sqlite3"
+            before = database.stat().st_mtime_ns
+            self.assertEqual(prepare(output), first)
+            self.assertEqual(database.stat().st_mtime_ns, before)
+            database.write_bytes(b"corrupt")
+            with self.assertRaises(sqlite3.DatabaseError):
+                prepare(output)
+            self.assertEqual(database.read_bytes(), b"corrupt")
+
     def test_build_preserves_real_unicode_and_same_key_records(self):
         with tempfile.TemporaryDirectory() as directory:
             output = Path(directory) / "sample"
