@@ -1,5 +1,10 @@
 import { invoke, isTauri } from '@tauri-apps/api/core';
 import { z } from 'zod';
+import { listen } from '@tauri-apps/api/event';
+import { recordSchema, saveRequestSchema, saveResultSchema, sortSchema } from './vocabulary';
+import type { SaveRequest, SaveResult, VocabularyRecord, VocabularySort } from './vocabulary';
+import { dictionarySchema } from './dictionary';
+import type { DictionaryLookup } from './dictionary';
 
 const runtimeStatusSchema = z.object({
   version: z.string().min(1),
@@ -11,11 +16,45 @@ export type RuntimeStatus = z.infer<typeof runtimeStatusSchema>;
 
 export interface RuntimeAdapter {
   readonly getStatus: () => Promise<RuntimeStatus | null>;
+  readonly lookupDictionary: (key: string) => Promise<DictionaryLookup | null>;
+  readonly findVocabulary: (headword: string) => Promise<VocabularyRecord | null>;
+  readonly listVocabulary: (query: string, sort: VocabularySort) => Promise<readonly VocabularyRecord[] | null>;
+  readonly saveVocabulary: (request: SaveRequest) => Promise<SaveResult | null>;
+  readonly vocabularySort: (sort?: VocabularySort) => Promise<VocabularySort | null>;
+  readonly onCloseRequested: (callback: () => void) => Promise<() => void>;
+  readonly finishClose: () => Promise<void>;
 }
 
 export const runtime: RuntimeAdapter = {
   async getStatus() {
     if (!isTauri()) return null;
     return runtimeStatusSchema.parse(await invoke('runtime_status'));
+  },
+  async lookupDictionary(key) {
+    if (!isTauri()) return null;
+    return dictionarySchema.parse(await invoke('dictionary_lookup', { key }));
+  },
+  async findVocabulary(headword) {
+    if (!isTauri()) return null;
+    return recordSchema.nullable().parse(await invoke('vocabulary_find', { headword }));
+  },
+  async listVocabulary(query, sort) {
+    if (!isTauri()) return null;
+    return recordSchema.array().readonly().parse(await invoke('vocabulary_list', { query, sort: sortSchema.parse(sort) }));
+  },
+  async saveVocabulary(request) {
+    if (!isTauri()) return null;
+    return saveResultSchema.parse(await invoke('vocabulary_save', { request: saveRequestSchema.parse(request) }));
+  },
+  async vocabularySort(sort) {
+    if (!isTauri()) return null;
+    return sortSchema.parse(await invoke('vocabulary_sort', { sort: sort === undefined ? null : sortSchema.parse(sort) }));
+  },
+  async onCloseRequested(callback) {
+    if (!isTauri()) return () => {};
+    return listen('lexique-close-requested', callback);
+  },
+  async finishClose() {
+    if (isTauri()) await invoke('finish_close');
   },
 };

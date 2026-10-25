@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-vocabulary-sort"
+description = "Enables the vocabulary_sort command without any pre-configured scope."
+commands.allow = ["vocabulary_sort"]
+
+[[permission]]
+identifier = "deny-vocabulary-sort"
+description = "Denies the vocabulary_sort command without any pre-configured scope."
+commands.deny = ["vocabulary_sort"]

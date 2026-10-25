@@ -17,12 +17,19 @@ Rust storage → 注入 SQLite connection → 事务迁移
 | `apps/desktop/src` | 页面壳、主题、本地化、交互状态 | 原生文件操作、真实凭据 |
 | `src/platform/runtime.ts` | Tauri IPC 与 Zod 响应校验；显式浏览器预览 | 假成功、吞掉 IPC 错误 |
 | `apps/desktop/src-tauri` | 平台路径、应用启动、命令装配 | UI 状态与未授权的远程内容 |
-| `crates/storage` | SQLite 初始化与原子迁移 | 字典资源更新覆盖用户库 |
+| `crates/storage` | SQLite 迁移、生词记录、幂等保存与版本冲突、搜索排序 | 字典资源更新覆盖用户库 |
+| `crates/dictionary` | 固定资源 SHA-256 校验、只读内存快照查询、TEI 解析为纯文本 | 用户库、网络、原始 HTML 执行 |
 | `crates/core` | 可移植 Rust / WASM 入口 | 文件系统、Tauri、SQLite、令牌 |
 
-首个迁移仅创建 `app_metadata` 并设置 schema version。笔记、分类、卡片、进度、日志与同步基线的物理结构尚未固化。未来迁移应增量增加；遇到更高 schema 立即报错，禁止降级重建。迁移在事务内完成，失败不提高版本。
+首个迁移创建 `app_metadata`；第二个迁移增量创建生词记录与已提交保存操作。NFC 标准词头唯一约束与立即事务防止并发副本；操作编号绑定原请求，在响应丢失后返回当前记录且不重放写入；修订号检查和更新在同一事务中完成。收藏时摘要与来源为只读 JSON，独立笔记另列保存。只保存已提交操作，不持久化草稿。用户库与资源库独立；分类、卡片、进度、日志和同步尚未固化。遇到更高 schema 立即报错，禁止降级重建；迁移失败回滚且不提高版本。
 
-状态命令只读且无外部输入；通过应用命令清单自动生成权限，仅授权本地 main 窗口。未开放文件系统、shell、HTTP 插件或远程窗口。IPC 响应用 Zod 校验；SQLite 初始化错误保持原始错误链，不转换成成功。只有框架边界创建平台资源，存储逻辑接收 connection。
+M1 请求由 Rust 严格反序列化，前端请求 / 响应由 Zod 校验。标准词头最多 200 个 Unicode 标量且无控制字符，独立笔记最多 20,000 个标量；保留笔记原样，组合重音不作自动合并。新记录的来源和摘要在平台层重新查询已校验词典生成，IPC 不接受前端提供的来源或摘要。逻辑引用保留源查询拼写，避免 NFC 身份归一改变现有精确查询。搜索独立采用 NFD 去组合音标及小写后的字面子串；排序同值时使用稳定身份打破平局。
+
+原生数据命令在阻塞任务中重新打开已初始化用户库（不在库丢失时静默新建），读取错误保持可见。窗口正常关闭先阻止默认退出，再通知 React；明确选择保存并得到成功确认、放弃，或当前没有未保存修改时才调用受限 `finish_close` 销毁窗口。macOS 菜单 Quit / Cmd+Q 替换为同一路径；macOS Dock Quit 的框架终止路径尚未覆盖，须在该平台验收前解决。main 窗口仅新增生词命令、事件监听和完成关闭权限，不开放文件系统、shell 或网络插件。
+
+状态命令只读且无外部输入；查词命令只接受 1–512 UTF-8 字节的无控制字符查询，保留原始拼写，不接受路径。通过应用命令清单自动生成权限，仅授权本地 main 窗口。未开放文件系统、shell、HTTP 插件或远程窗口。IPC 响应用 Zod 校验；SQLite 初始化错误保持原始错误链，不转换成成功。只有框架边界创建平台资源，存储逻辑接收 connection。
+
+原生构建用 Python 标准库从已准入源包生成 SQLite，并附带来源、原始源包和许可；构建前验证已有生成物，损坏则失败。运行时由平台层解析 `dictionary/dictionary.sqlite3`，每次查询校验构建时固定的哈希，再反序列化同一批字节为只读 SQLite 快照，避免资源被并发替换时读取未验证内容。`entries.key` 采用二进制完全匹配与参数化查询，同键记录按源序排列；TEI 仅解析为 React 文本，不执行标记。缺失、损坏、查询失败与无结果分别返回。用户库路径、schema 及迁移完全独立。
 
 ## 后续模块放置
 
@@ -39,8 +46,14 @@ Rust storage → 注入 SQLite connection → 事务迁移
 
 ## 配置与发行
 
+Windows 的 `tauri.windows.conf.json` 通过 Tauri `appDirectoriesOverride` 将五类应用目录定位到可执行文件旁的 `Lexique-data/`；WebView 未设置独立 `dataDirectory`，由框架继承被覆盖的 local-data 路径。入口在启动框架线程前将子进程继承的 `TEMP` / `TMP` 定位到同一目录下的 `temp/`，并固定 `WEBVIEW2_USER_DATA_FOLDER` 到 `webview/EBWebView/`，避免继承的外部路径覆盖框架设置。用户库、WebView profile、配置、日志和临时文件因此随目录移动，不依赖启动工作目录。不可写时保留失败，不回退系统目录；原 AppData 内容保持原样。操作系统自身的事件日志、预取和安全软件记录不由应用控制。
+
+`pnpm desktop:portable` 构建 Windows x64 release 后，仅打包可执行文件、已准入词典资源、许可与使用说明，生成独立 ZIP 和 SHA-256 清单，并逐项回读校验压缩包。新交付必须使用空路径；不打包运行时 `Lexique-data/`，也不覆盖旧交付。当前仍依赖系统已有 WebView2，不启动安装器或首次联网下载；这不等于缺运行依赖机器、签名或完整资源发行已验收。
+
+公开原生构建入口由 `scripts/build-desktop.mjs` 用参数数组调用已安装 Tauri CLI，在最终进程边界追加 Cargo 的 `-- --locked`，避免 pnpm 消耗转发分隔符。portable 使用同一入口，可通过 `--output-dir` 指定新交付父目录；隔离工具测试已接入现有 CI。macOS 专属退出及实际运行统一由 [blocked 清单](macos-m1-blockers.md) 管理。
+
 仓库中的配置仅包含构建、测试和应用标识，不包含部署配置、凭据、用户数据、服务端点或 OAuth 客户端配置。真实设置应在运行时注入并与秘密分开保存，绝不能放入 `VITE_*` 并打进前端。
 
-安装器、签名、公证、更新和默认离线资源尚未就绪，`bundle.active` 因此关闭。开发图标是随骨架提供的原创临时 L 字形，不代表最终品牌。`pnpm desktop:build` 仅编译程序，不声称生成完整可分发安装包。CI 对四个系统 / 架构做编译检查，不能替代实际安装、首装断网和 TTS 验收。
+安装器、签名、公证、更新和完整默认离线资源尚未就绪，`bundle.active` 因此关闭。开发图标是随骨架提供的原创临时 L 字形，不代表最终品牌。`pnpm desktop:build` 仅编译程序，不声称生成完整可分发安装包。CI 对四个系统 / 架构做编译检查，不能替代实际安装、首装断网和 TTS 验收。
 
 依据：[Tauri Vite 配置](https://v2.tauri.app/start/frontend/vite/)、[命令调用](https://v2.tauri.app/develop/calling-rust/)、[权限能力](https://v2.tauri.app/security/capabilities/)。

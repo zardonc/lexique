@@ -1,0 +1,375 @@
+use lexique_storage::{DigestEntry, Reference, SaveRequest, Snapshot, get, initialize, save};
+use lexique_storage::{find, list, set_sort_preference, sort_preference};
+use rusqlite::Connection;
+
+fn snapshot() -> Snapshot {
+    Snapshot {
+        reference: Reference {
+            dictionary: "FreeDict".into(),
+            lookup_key: "école".into(),
+            version: "2025.11.23".into(),
+            attribution: "Wiktionary contributors".into(),
+            license: "CC-BY-SA-3.0".into(),
+            source_url: "https://download.freedict.org/".into(),
+            license_url: "https://creativecommons.org/licenses/by-sa/3.0/".into(),
+            sha256: "a".repeat(64),
+        },
+        digest: vec![DigestEntry {
+            pronunciations: vec!["e.kɔl".into()],
+            grammar: vec!["n".into()],
+            translation: Some("学校".into()),
+        }],
+    }
+}
+
+fn create(operation: &str, headword: &str, notes: &str) -> SaveRequest {
+    SaveRequest {
+        operation: operation.into(),
+        headword: headword.into(),
+        notes: notes.into(),
+        id: None,
+        revision: None,
+    }
+}
+
+#[test]
+fn explicit_save_creates_one_record_and_duplicate_collection_preserves_it() {
+    let mut connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    let saved = save(
+        &mut connection,
+        &create("create-1", "école", ""),
+        Some(snapshot()),
+    )
+    .unwrap();
+    assert_eq!(saved.outcome, "created");
+    let duplicate = save(
+        &mut connection,
+        &create("create-2", "école", "other"),
+        Some(snapshot()),
+    )
+    .unwrap();
+    assert_eq!(duplicate.outcome, "existing");
+    assert_eq!(duplicate.record.id, saved.record.id);
+    assert_eq!(
+        save(&mut connection, &create("create-2", "école", "other"), None)
+            .unwrap()
+            .outcome,
+        "existing"
+    );
+    assert_eq!(get(&connection, saved.record.id).unwrap().notes, "");
+    assert_eq!(
+        duplicate.record.digest[0].translation.as_deref(),
+        Some("学校")
+    );
+}
+
+fn update(operation: &str, record: &lexique_storage::VocabularyRecord, notes: &str) -> SaveRequest {
+    SaveRequest {
+        operation: operation.into(),
+        headword: record.headword.clone(),
+        notes: notes.into(),
+        id: Some(record.id),
+        revision: Some(record.revision),
+    }
+}
+
+#[test]
+fn canonical_identity_is_separate_from_accent_insensitive_literal_search() {
+    let mut connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    for (index, word) in [
+        "cote",
+        "côte",
+        "côté",
+        "Côté",
+        "aujourd'hui",
+        "aujourd’hui",
+        "école",
+    ]
+    .iter()
+    .enumerate()
+    {
+        save(
+            &mut connection,
+            &create(&format!("word-{index}"), word, "Éléphant 100%_\\"),
+            Some(snapshot()),
+        )
+        .unwrap();
+    }
+    let duplicate = save(
+        &mut connection,
+        &create("equivalent", "e\u{301}cole", "ignored"),
+        Some(snapshot()),
+    )
+    .unwrap();
+    assert_eq!(duplicate.outcome, "existing");
+    assert_eq!(list(&connection, "", "updated-desc").unwrap().len(), 7);
+    assert_eq!(list(&connection, "COTE", "headword-asc").unwrap().len(), 4);
+    assert_eq!(
+        list(&connection, "elephant", "headword-asc").unwrap().len(),
+        7
+    );
+    assert_eq!(list(&connection, "%_\\", "headword-asc").unwrap().len(), 7);
+    assert!(
+        list(&connection, "ele phant", "headword-asc")
+            .unwrap()
+            .is_empty()
+    );
+    assert_eq!(list(&connection, "学校", "headword-asc").unwrap().len(), 7);
+    assert_eq!(
+        find(&connection, "e\u{301}cole").unwrap().unwrap().headword,
+        "école"
+    );
+}
+
+#[test]
+fn retry_after_lost_response_never_reapplies_over_a_later_edit() {
+    let mut connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    let request = create("first-create", "école", "");
+    let original = save(&mut connection, &request, Some(snapshot()))
+        .unwrap()
+        .record;
+    let request2 = update("first-update", &original, "line one\nÉcole 😀");
+    let edited = save(&mut connection, &request2, None).unwrap().record;
+    let newest = save(
+        &mut connection,
+        &update("newer-update", &edited, "newer"),
+        None,
+    )
+    .unwrap()
+    .record;
+    for retry in [&request, &request2] {
+        let replay = save(&mut connection, retry, None).unwrap();
+        assert_eq!(replay.outcome, "replayed");
+        assert_eq!(replay.record.notes, "newer");
+        assert_eq!(replay.record.revision, newest.revision);
+    }
+    let stale = update("stale-update", &original, "must not overwrite");
+    assert_eq!(
+        save(&mut connection, &stale, None).unwrap().outcome,
+        "conflict"
+    );
+    assert_eq!(
+        save(&mut connection, &stale, None).unwrap().outcome,
+        "conflict"
+    );
+    assert!(
+        save(
+            &mut connection,
+            &create("first-create", "école", "different payload"),
+            None
+        )
+        .is_err()
+    );
+    let cleared = save(&mut connection, &update("clear", &newest, ""), None)
+        .unwrap()
+        .record;
+    assert_eq!(cleared.id, original.id);
+    assert_eq!(cleared.notes, "");
+    assert_eq!(cleared.reference, original.reference);
+    assert_eq!(cleared.digest, original.digest);
+    assert!(cleared.updated_at > original.updated_at);
+}
+
+#[test]
+fn character_limits_count_unicode_scalars_and_reject_without_truncation() {
+    let mut connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    let notes = format!("{}e\u{301}", "😀".repeat(19_998));
+    let original = save(
+        &mut connection,
+        &create("boundary", &"é".repeat(200), &notes),
+        Some(snapshot()),
+    )
+    .unwrap()
+    .record;
+    assert!(
+        save(
+            &mut connection,
+            &update("too-long", &original, &format!("{notes}a")),
+            None
+        )
+        .is_err()
+    );
+    assert_eq!(get(&connection, original.id).unwrap().notes, notes);
+    for (index, word) in [String::new(), "a\nb".into(), "é".repeat(201)]
+        .iter()
+        .enumerate()
+    {
+        assert!(
+            save(
+                &mut connection,
+                &create(&format!("bad-{index}"), word, ""),
+                Some(snapshot())
+            )
+            .is_err()
+        );
+    }
+    let mut renamed = update("rename", &original, "");
+    renamed.headword = "different".into();
+    assert!(save(&mut connection, &renamed, None).is_err());
+}
+
+#[test]
+fn failed_writes_roll_back_record_and_operation_so_retry_can_succeed() {
+    let mut connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    let original = save(
+        &mut connection,
+        &create("initial", "école", "keep"),
+        Some(snapshot()),
+    )
+    .unwrap()
+    .record;
+    let request = update("retry-update", &original, "new");
+    // Fault injection only; exercise the public save API against a read-only database.
+    connection.execute_batch("PRAGMA query_only = ON").unwrap();
+    let error = save(&mut connection, &request, None)
+        .unwrap_err()
+        .to_string();
+    assert!(error.contains("SQLite"));
+    assert_eq!(get(&connection, original.id).unwrap().notes, "keep");
+    connection.execute_batch("PRAGMA query_only = OFF").unwrap();
+    assert_eq!(
+        save(&mut connection, &request, None).unwrap().outcome,
+        "updated"
+    );
+}
+
+#[test]
+fn failed_commit_rolls_back_both_content_and_retry_identity() {
+    let mut connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    let original = save(
+        &mut connection,
+        &create("commit-original", "école", "keep"),
+        Some(snapshot()),
+    )
+    .unwrap()
+    .record;
+    let request = update("commit-retry", &original, "new");
+    connection.commit_hook(Some(|| true)).unwrap();
+    assert!(save(&mut connection, &request, None).is_err());
+    assert_eq!(get(&connection, original.id).unwrap().notes, "keep");
+    connection.commit_hook(None::<fn() -> bool>).unwrap();
+    let saved = save(&mut connection, &request, None).unwrap();
+    assert_eq!(saved.outcome, "updated");
+    assert_eq!(saved.record.revision, original.revision + 1);
+}
+
+fn database_path(label: &str) -> std::path::PathBuf {
+    std::env::temp_dir().join(format!(
+        "lexique-m1-{label}-{}-{}.sqlite3",
+        std::process::id(),
+        std::time::SystemTime::now()
+            .duration_since(std::time::UNIX_EPOCH)
+            .unwrap()
+            .as_nanos()
+    ))
+}
+
+#[test]
+fn file_database_reopens_with_record_identity_content_and_sort_preference() {
+    let path = database_path("reopen");
+    let original;
+    {
+        let mut connection = Connection::open(&path).unwrap();
+        initialize(&connection).unwrap();
+        assert_eq!(sort_preference(&connection).unwrap(), "updated-desc");
+        original = save(
+            &mut connection,
+            &create("persistent", "école", "l’école\n学校"),
+            Some(snapshot()),
+        )
+        .unwrap()
+        .record;
+        set_sort_preference(&connection, "headword-asc").unwrap();
+    }
+    {
+        let connection = Connection::open(&path).unwrap();
+        initialize(&connection).unwrap();
+        let restored = get(&connection, original.id).unwrap();
+        assert_eq!(
+            serde_json::to_value(restored).unwrap(),
+            serde_json::to_value(original).unwrap()
+        );
+        assert_eq!(sort_preference(&connection).unwrap(), "headword-asc");
+        assert!(set_sort_preference(&connection, "not-valid").is_err());
+    }
+    std::fs::remove_file(path).unwrap();
+}
+
+#[test]
+fn concurrent_creators_share_one_record_and_stale_writer_cannot_overwrite() {
+    let path = database_path("race");
+    let connection = Connection::open(&path).unwrap();
+    initialize(&connection).unwrap();
+    let barrier = std::sync::Arc::new(std::sync::Barrier::new(2));
+    let handles: Vec<_> = (0..2)
+        .map(|index| {
+            let path = path.clone();
+            let barrier = barrier.clone();
+            std::thread::spawn(move || {
+                let mut connection = Connection::open(path).unwrap();
+                connection
+                    .busy_timeout(std::time::Duration::from_secs(3))
+                    .unwrap();
+                barrier.wait();
+                save(
+                    &mut connection,
+                    &create(&format!("race-{index}"), "école", ""),
+                    Some(snapshot()),
+                )
+                .unwrap()
+                .record
+                .id
+            })
+        })
+        .collect();
+    let ids: Vec<_> = handles
+        .into_iter()
+        .map(|handle| handle.join().unwrap())
+        .collect();
+    assert_eq!(ids[0], ids[1]);
+    assert_eq!(list(&connection, "", "created-asc").unwrap().len(), 1);
+    drop(connection);
+    std::fs::remove_file(path).unwrap();
+}
+
+#[test]
+fn sorting_is_stable_in_each_direction_and_search_keeps_the_order() {
+    let mut connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    for (index, word) in ["zèbre", "école", "avion"].iter().enumerate() {
+        save(
+            &mut connection,
+            &create(&format!("sort-{index}"), word, "match"),
+            Some(snapshot()),
+        )
+        .unwrap();
+    }
+    let words = list(&connection, "MATCH", "headword-asc").unwrap();
+    assert_eq!(
+        words
+            .iter()
+            .map(|r| r.headword.as_str())
+            .collect::<Vec<_>>(),
+        ["avion", "école", "zèbre"]
+    );
+    for field in ["headword", "created", "updated"] {
+        let asc: Vec<_> = list(&connection, "", &format!("{field}-asc"))
+            .unwrap()
+            .iter()
+            .map(|r| r.id)
+            .collect();
+        let mut desc: Vec<_> = list(&connection, "match", &format!("{field}-desc"))
+            .unwrap()
+            .iter()
+            .map(|r| r.id)
+            .collect();
+        desc.reverse();
+        assert_eq!(asc, desc);
+    }
+}

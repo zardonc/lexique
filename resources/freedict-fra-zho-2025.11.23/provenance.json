@@ -1,0 +1,23 @@
+{
+  "resource_id": "freedict-fra-zho-2025.11.23",
+  "title": "français-中文 (Zhōngwén) FreeDict+WikDict dictionary",
+  "version": "2025.11.23",
+  "source_language": "fr",
+  "translation_language": "zh",
+  "source_file": "freedict-fra-zho-2025.11.23.src.tar.xz",
+  "source_url": "https://download.freedict.org/dictionaries/fra-zho/2025.11.23/freedict-fra-zho-2025.11.23.src.tar.xz",
+  "checksum_url": "https://download.freedict.org/dictionaries/fra-zho/2025.11.23/freedict-fra-zho-2025.11.23.src.tar.xz.sha512",
+  "source_sha512": "3a101af1bdd523e29f217dd8612ade44dbc73b65b4ea1358ac778ebe155a2cd8b02e3816cb1a9f1dd6500937fa35825d1544db57c5a8aedf71a365c57cdf188a",
+  "records_sha256": "88a0b7e9609d5d51d89fc0d719e89924c2252974bb24753aa30a7996914ed5ca",
+  "license": "CC-BY-SA-3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "attribution": "Karl Bartel; FreeDict; WikDict; Wiktionary contributors; DBnary",
+  "upstream_urls": [
+    "https://freedict.org/",
+    "http://www.wikdict.com/",
+    "https://www.wiktionary.org/",
+    "http://kaiko.getalp.org/about-dbnary/"
+  ],
+  "changes": "Lexique conversion v1: store every original TEI entry fragment and exact orthographic key in SQLite, in source order; no normalization, deduplication or generated forms.",
+  "redistribution": "Keep attribution, source links, original notices and COPYING. Distribute converted dictionary data under CC BY-SA 3.0 without additional restrictions or DRM. Lexique source code remains MIT. CC BY-SA 3.0 has no GPL-style corresponding-source offer requirement; this sample nevertheless includes the unmodified source archive and published checksum for audit and reconstruction."
+}

@@ -1,9 +1,9 @@
 :root { font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; font-synthesis: none; text-rendering: optimizeLegibility; }
 * { box-sizing: border-box; }
 body { margin: 0; }
-button, select { font: inherit; color: inherit; }
+button, select, input, textarea { font: inherit; color: inherit; }
 button { cursor: pointer; }
-button:focus-visible, select:focus-visible, a:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+button:focus-visible, select:focus-visible, input:focus-visible, textarea:focus-visible, summary:focus-visible, a:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
 .app { --paper: #f7f7f4; --surface: #fcfcfa; --sidebar: #e7e7e2; --ink: #242424; --muted: #63635e; --line: #d5d5d1; --hover: #deded8; min-height: 100dvh; display: grid; grid-template-columns: 232px minmax(0, 1fr); color: var(--ink); background: var(--paper); color-scheme: light; }
 .app[data-theme='sepia'] { --paper: #f8f2e6; --surface: #fcf8ef; --sidebar: #eee8da; --ink: #3a3024; --muted: #6b5b45; --line: #dad1be; --hover: #e2d7c2; }
 .app[data-theme='dark'] { --paper: #151515; --surface: #1d1d1d; --sidebar: #222220; --ink: #e4e1da; --muted: #afada5; --line: #45443e; --hover: #3c3c36; color-scheme: dark; }
@@ -41,6 +41,47 @@ h2 { max-width: 700px; font-family: Georgia, 'Songti SC', 'SimSun', serif; font-
 .runtime-status { color: var(--muted); font-size: 12px; line-height: 1.8; margin-top: 18px; }
 .runtime-error { margin-top: 18px; padding: 12px; border: 1px solid currentColor; overflow-wrap: anywhere; }
 .runtime-error button { margin-left: 12px; background: var(--surface); border: 1px solid var(--line); padding: 6px 12px; }
+.dictionary label { display: block; font-size: 13px; margin-bottom: 10px; }
+.dictionary-search { display: flex; gap: 10px; }
+.dictionary-search input { width: 100%; min-width: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 4px; padding: 12px; }
+.dictionary-search button { flex-shrink: 0; padding: 10px 18px; background: var(--ink); color: var(--paper); border: 1px solid var(--ink); border-radius: 4px; }
+.dictionary-search button:disabled { cursor: wait; opacity: 0.65; }
+.dictionary-hint, .dictionary-source, .dictionary-grammar { color: var(--muted); font-size: 12px; line-height: 1.8; }
+.dictionary-hint { margin: 12px 0 24px; }
+.dictionary-entry { border-top: 1px solid var(--line); padding: 18px 0; }
+.dictionary-entry h3 { margin: 0; font-family: Georgia, serif; font-size: 26px; font-weight: 400; }
+.dictionary-senses { padding-left: 24px; line-height: 1.8; }
+.dictionary-senses p { margin: 6px 0; }
+.dictionary-source { border-top: 1px solid var(--line); padding-top: 12px; overflow-wrap: anywhere; }
+.dictionary-source p { margin: 4px 0; }
+.dictionary .runtime-error { font-size: 14px; }
+.dictionary summary { cursor: pointer; }
+.vocabulary-summary { margin: 24px 0; padding: 20px; background: var(--surface); border: 1px solid var(--line); border-radius: 4px; }
+.vocabulary-summary h3 { font-family: Georgia, serif; font-size: 28px; font-weight: 400; margin: 0 0 16px; overflow-wrap: anywhere; }
+.vocabulary-summary dl { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 8px 20px; font-size: 14px; line-height: 1.7; }
+.vocabulary-summary dt { color: var(--muted); }
+.vocabulary-summary dd { margin: 0; overflow-wrap: anywhere; }
+.vocabulary-editor { margin-top: 30px; border-top: 1px solid var(--line); padding-top: 24px; }
+.vocabulary-editor label { display: block; margin-bottom: 10px; }
+.vocabulary-editor textarea { width: 100%; resize: vertical; min-height: 160px; background: var(--surface); border: 1px solid var(--line); border-radius: 4px; padding: 12px; line-height: 1.7; }
+.vocabulary-editor pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+.vocabulary-editor #note-count { color: var(--muted); font-size: 12px; }
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 16px 0; }
+.actions button, .notebook button, .dictionary > button, .dictionary [role='status'] button { padding: 10px 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 4px; }
+button:disabled { cursor: default; opacity: 0.6; }
+.dictionary-original { margin-top: 28px; }
+.dictionary-original > h3 { font-size: 16px; }
+.notebook-controls { display: flex; flex-wrap: wrap; gap: 16px; align-items: end; }
+.notebook-controls label { display: grid; gap: 8px; font-size: 13px; flex: 1; min-width: 0; }
+.notebook-controls input { width: 100%; min-height: 38px; padding: 8px; border: 1px solid var(--line); border-radius: 4px; background: var(--surface); }
+.notebook-controls select { max-width: none; }
+.vocabulary-list { list-style: none; padding: 0; margin: 24px 0; display: grid; gap: 8px; }
+.vocabulary-list button { display: grid; gap: 8px; text-align: left; width: 100%; overflow-wrap: anywhere; }
+.vocabulary-list strong { font-family: Georgia, serif; font-size: 22px; font-weight: 400; }
+.vocabulary-list span { font-size: 13px; color: var(--muted); }
+.note-excerpt { white-space: pre-wrap; max-height: 3.5em; overflow: hidden; }
+dialog { max-width: min(520px, 90vw); border: 1px solid var(--line); border-radius: 6px; padding: 24px; color: var(--ink); background: var(--surface); }
+dialog::backdrop { background: #0006; }
 @media (max-width: 720px) {
   .app, .app[data-collapsed='true'] { grid-template-columns: 64px minmax(0, 1fr); }
   .sidebar { padding: 20px 8px 12px; }

@@ -1,0 +1,53 @@
+{
+  "record": {
+    "id": 1,
+    "headword": "or",
+    "snapshot": "{\"reference\":{\"dictionary\":\"français-中文 (Zhōngwén) FreeDict+WikDict dictionary\",\"lookup_key\":\"or\",\"version\":\"2025.11.23\",\"attribution\":\"Karl Bartel; FreeDict; WikDict; Wiktionary contributors; DBnary\",\"license\":\"CC-BY-SA-3.0\",\"source_url\":\"https://download.freedict.org/dictionaries/fra-zho/2025.11.23/freedict-fra-zho-2025.11.23.src.tar.xz\",\"license_url\":\"https://creativecommons.org/licenses/by-sa/3.0/\",\"sha256\":\"11cdba7ed8fbdcd6f6a388586c11a181def517d840aae0baa6ef4a4ab5c55c51\"},\"digest\":[{\"pronunciations\":[\"ɔʁ\"],\"grammar\":[],\"translation\":\"而\"},{\"pronunciations\":[\"ɔʁ\"],\"grammar\":[\"adj\"],\"translation\":\"金\"},{\"pronunciations\":[\"ɔʁ\"],\"grammar\":[\"n\",\"masc\"],\"translation\":\"金\"}]}",
+    "notes": "M1 final note — 学校 😀\n资源变更不覆盖笔记",
+    "revision": 5,
+    "created_at": 1792944147023,
+    "updated_at": 1792945301602
+  },
+  "metadata": {
+    "vocabulary-sort": "headword-asc"
+  },
+  "checks": {
+    "first": {
+      "is_app_container": true,
+      "internet_capabilities_absent": true,
+      "ip_socket_winerror": 10013,
+      "dns_result": "[Errno 11001] getaddrinfo failed",
+      "dictionary_sha256": "11cdba7ed8fbdcd6f6a388586c11a181def517d840aae0baa6ef4a4ab5c55c51"
+    },
+    "restart": {
+      "is_app_container": true,
+      "internet_capabilities_absent": true,
+      "ip_socket_winerror": 10013,
+      "dns_result": "[Errno 11001] getaddrinfo failed",
+      "dictionary_sha256": "11cdba7ed8fbdcd6f6a388586c11a181def517d840aae0baa6ef4a4ab5c55c51"
+    },
+    "missing": {
+      "is_app_container": true,
+      "internet_capabilities_absent": true,
+      "ip_socket_winerror": 10013,
+      "dns_result": "[Errno 11001] getaddrinfo failed",
+      "dictionary_sha256": null
+    },
+    "changed": {
+      "is_app_container": true,
+      "internet_capabilities_absent": true,
+      "ip_socket_winerror": 10013,
+      "dns_result": "[Errno 11001] getaddrinfo failed",
+      "dictionary_sha256": "001f55e825c1344e4d4f5f5eff008a0d2bd45fe58cdefc24ccb7facf1f8ffa24"
+    },
+    "final": {
+      "is_app_container": true,
+      "internet_capabilities_absent": true,
+      "ip_socket_winerror": 10013,
+      "dns_result": "[Errno 11001] getaddrinfo failed",
+      "dictionary_sha256": "11cdba7ed8fbdcd6f6a388586c11a181def517d840aae0baa6ef4a4ab5c55c51"
+    }
+  },
+  "executable_sha256": "14667d78df7b1775069acb61bdaa3c102b783e9604e51164be301cb781c32eae",
+  "learning_database_sha256_after_final_restart": "e9f146b15294980f660262f7de210c6597c62c55295943816b22d120713f7df3"
+}

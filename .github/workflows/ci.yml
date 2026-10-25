@@ -18,6 +18,7 @@ jobs:
           node-version: 24
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+      - run: pnpm test:build-args
       - run: pnpm lint && pnpm typecheck && pnpm build
       - run: pnpm --filter @lexique/desktop exec playwright install --with-deps chromium
       - run: pnpm test:e2e
@@ -33,13 +34,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
       - uses: actions/setup-node@v4
         with:
           node-version: 24
       - run: rustup show
       - run: cargo fmt --all --check
-      - run: cargo clippy --locked -p lexique-core -p lexique-storage --all-targets -- -D warnings
-      - run: cargo test --locked -p lexique-storage --no-run
+      - run: python -X utf8 scripts/dictionary_sample.py prepare target/desktop-dictionary-sample
+      - run: cargo clippy --locked -p lexique-core -p lexique-storage -p lexique-dictionary --all-targets -- -D warnings
+      - run: cargo test --locked -p lexique-storage -p lexique-dictionary --no-run
       - run: node scripts/test-rust.mjs
       - run: cargo build --locked --release -p lexique-core --target wasm32-unknown-unknown
       - run: node scripts/check-wasm.mjs
@@ -47,6 +52,19 @@ jobs:
         with:
           name: core-wasm
           path: target/wasm32-unknown-unknown/release/lexique_core.wasm
+
+  dictionary-resource:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -X utf8 -m unittest discover -s scripts -p test_dictionary_sample.py -v
+      - run: python -X utf8 -m unittest discover -s scripts -p test_package_portable.py -v
 
   native:
     strategy:
@@ -66,6 +84,9 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
@@ -79,3 +100,29 @@ jobs:
       - run: pnpm build
       - run: rustup target add ${{ matrix.target }}
       - run: cargo check --locked --workspace --target ${{ matrix.target }}
+
+  windows-portable:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - uses: ilammy/msvc-dev-cmd@v1
+        with:
+          arch: amd64
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm test:tooling
+      - run: pnpm desktop:portable
+      - uses: actions/upload-artifact@v4
+        with:
+          name: windows-x64-portable
+          path: |
+            target/portable/*.zip
+            target/portable/*.zip.sha256
+          if-no-files-found: error

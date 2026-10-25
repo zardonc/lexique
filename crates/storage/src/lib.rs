@@ -3,18 +3,25 @@ use std::{error::Error, fmt};
 use lexique_core::DATABASE_SCHEMA_VERSION;
 use rusqlite::Connection;
 
+mod vocabulary;
+pub use vocabulary::*;
+
 const INITIAL_SCHEMA: &str = include_str!("../migrations/0001_initial.sql");
 
 #[derive(Debug)]
 pub enum StorageError {
     Database(rusqlite::Error),
     FutureSchema(u32),
+    Invalid(String),
+    Json(serde_json::Error),
 }
 
 impl fmt::Display for StorageError {
     fn fmt(&self, formatter: &mut fmt::Formatter<'_>) -> fmt::Result {
         match self {
-            Self::Database(error) => write!(formatter, "SQLite initialization failed: {error}"),
+            Self::Database(error) => write!(formatter, "SQLite operation failed: {error}"),
+            Self::Invalid(message) => write!(formatter, "{message}"),
+            Self::Json(error) => write!(formatter, "Invalid saved vocabulary data: {error}"),
             Self::FutureSchema(version) => write!(
                 formatter,
                 "Unsupported database schema {version}; this app supports {DATABASE_SCHEMA_VERSION}"
@@ -27,8 +34,15 @@ impl Error for StorageError {
     fn source(&self) -> Option<&(dyn Error + 'static)> {
         match self {
             Self::Database(error) => Some(error),
-            Self::FutureSchema(_) => None,
+            Self::Json(error) => Some(error),
+            Self::FutureSchema(_) | Self::Invalid(_) => None,
         }
+    }
+}
+
+impl From<serde_json::Error> for StorageError {
+    fn from(error: serde_json::Error) -> Self {
+        Self::Json(error)
     }
 }
 
@@ -49,7 +63,12 @@ pub fn initialize(connection: &Connection) -> Result<u32, StorageError> {
         return Ok(version);
     }
     let transaction = connection.unchecked_transaction()?;
-    transaction.execute_batch(INITIAL_SCHEMA)?;
+    if version < 1 {
+        transaction.execute_batch(INITIAL_SCHEMA)?;
+    }
+    if version < 2 {
+        transaction.execute_batch(include_str!("../migrations/0002_vocabulary.sql"))?;
+    }
     transaction.commit()?;
     Ok(DATABASE_SCHEMA_VERSION)
 }
