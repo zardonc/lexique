@@ -6,6 +6,7 @@
 - Preserve pre-existing edits and user learning data. Before discarding work, rewriting Git history, or applying destructive data migrations, explain the impact and obtain explicit approval.
 - Before feature work, read `docs/product.md` and `docs/roadmap.md`. Before adding resources or service integrations, read `docs/development-readiness.md` for admission and milestone gates.
 - Before changing module boundaries, persistence, IPC, or credential handling, read `docs/architecture.md`.
+- **unfamiliar features**: don't AI-generate from scratch. Reference active, well-licensed GitHub projects for proven designs and known pitfalls. Never copy unverified or incompatible code.
 
 ## Code and safety
 
