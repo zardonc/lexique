@@ -98,3 +98,28 @@ jobs:
       - run: pnpm build
       - run: rustup target add ${{ matrix.target }}
       - run: cargo check --locked --workspace --target ${{ matrix.target }}
+
+  windows-portable:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - uses: ilammy/msvc-dev-cmd@v1
+        with:
+          arch: amd64
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm desktop:portable
+      - uses: actions/upload-artifact@v4
+        with:
+          name: windows-x64-portable
+          path: |
+            target/portable/*.zip
+            target/portable/*.zip.sha256
+          if-no-files-found: error

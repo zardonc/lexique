@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "app": {
+    "appDirectoriesOverride": {
+      "config": "./Lexique-data/config",
+      "data": "./Lexique-data/data",
+      "localData": "./Lexique-data/webview",
+      "cache": "./Lexique-data/cache",
+      "log": "./Lexique-data/logs"
+    }
+  }
+}

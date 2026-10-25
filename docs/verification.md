@@ -94,3 +94,16 @@ SQLite 集成测试的本机预编译未通过：环境缺少 MSVC `link.exe`，
 - 独立规范审查 0 项、规格审查 0 项；差异及本次 Markdown 本地链接检查通过。验证启动的应用均已退出，Playwright 管理的服务已停止；既有未提交调查文档保留且未纳入本次提交。
 
 这次只证明本机 Windows x64 开发构建的小样查询；没有重跑其他平台运行、完整词库 / 三语覆盖、WASM、安装器、缺 WebView2 的离线依赖安装、笔记恢复或正式发行。原生查词不接受用户资源路径、不执行原始 HTML；仅新增本地 main 窗口的查词命令，没有开放文件、shell、HTTP 插件或远程窗口权限。CI 已为资源准备与 Rust 词典测试补齐配置，本票提交尚未在远端执行。
+
+## Windows portable 交付（issue #8 补充）
+
+日期：2026-10-25。本节补充前述 debug 验收：Windows release 现按用户要求构建免安装 portable ZIP，运行数据、WebView profile、临时文件及框架配置 / 缓存 / 日志均定位到 `.exe` 同级 `Lexique-data/`。来源、尺寸、最终二进制与 ZIP 哈希、截图及逐项观察见 [portable 交付证据](evidence/issue-8/README.md#windows-portable-交付补充)。
+
+- `pnpm desktop:portable`：通过；locked release 构建，无安装器，10 个交付文件逐项回读校验，ZIP 为 4,972,902 字节。重复打包和只遗留 `.zip.sha256` 均明确拒绝覆盖；旧交付保留。
+- `pnpm lint`、`pnpm typecheck`、构建中的 `pnpm build`：通过；`pnpm test:resources` 7 项、`pnpm test:e2e` 4 项通过。保留原有 Zod / Rollup 注释与终端颜色环境警告。
+- `pnpm rust:fmt`、`pnpm rust:check`、`cargo clippy --offline --locked --workspace --all-targets -- -D warnings`：通过；入口修正后再次通过格式与全 workspace Clippy。保留受限文件系统缓存硬链接复制警告。
+- `pnpm rust:test:build` 后 `pnpm test:rust`：2 项词典与 3 项存储测试通过，执行仍受硬性 60 秒限制。
+- 原生回归先确认旧构建不生成 exe 同级数据库；最终 ZIP 在带中文 / 空格路径、不同工作目录、外部 WebView 环境变量覆盖条件下禁网启动并查询成功。关闭退出 0 后整目录移动、同等禁网重启仍可查词并退出 0；实际应用及两轮各六个 WebView 后代令牌已检查。无法创建便携目录时退出 101，不改旧库、不回退；旧用户库哈希和旧 WebView 文件元数据保持不变。
+- 独立规范审查发现校验 sidecar 可被覆盖，规格审查发现继承的 WebView 数据目录可逸出；两项已修复并以公开打包入口 / 实际 native 进程验证，独立复查各剩余 0 项。差异、链接与远端 CI 结果在交付时另行核对；原有未提交的资源调查文档保持原样。
+
+这仅交付 Windows 11 x64 小样 portable，不证明签名、缺 WebView2 的干净机器、四目标发行、完整资源、笔记或同步。操作系统自己的诊断 / 安全记录不受应用目录配置控制；程序不写系统安装目录，不自动迁移旧 AppData。验证启动的原生进程和 Playwright 服务均已关闭。CI 已新增 `windows-x64-portable` ZIP 产物；远端结果见 issue #8 最终交付记录。

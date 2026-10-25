@@ -14,7 +14,7 @@ pnpm dev                 # 浏览器开发预览
 pnpm desktop             # Tauri 原生窗口，初始化本地 SQLite
 ```
 
-浏览器预览不会模拟 SQLite 成功，也不保存学习数据。桌面数据库保存在 Tauri 的系统应用数据目录 `io.github.zardonc.lexique` 中，独立于项目与资源目录；初始化失败会阻止启动并保留原始错误。
+浏览器预览不会模拟 SQLite 成功，也不保存学习数据。Windows 使用便携目录：数据库位于 `.exe` 同级的 `Lexique-data/data/lexique.sqlite3`，WebView 缓存与临时文件分别位于 `Lexique-data/webview/` 和 `Lexique-data/temp/`，配置、缓存和日志也统一位于 `Lexique-data/`。路径基于可执行文件，与启动工作目录无关；目录不可写则启动失败，不回退到 AppData。既有 AppData 数据不会自动迁移或删除。macOS 暂沿用系统应用数据目录 `io.github.zardonc.lexique`。
 
 ## 仓库结构
 
@@ -44,7 +44,12 @@ pnpm test:rust            # 真正执行后端测试，硬性 60 秒超时并终
 pnpm wasm:build
 node scripts/check-wasm.mjs
 pnpm desktop:build       # 仅构建原生可执行文件；暂未开启安装包与签名
+pnpm desktop:portable    # Windows x64 release ZIP，免安装，解压后运行 Lexique.exe
 ```
+
+便携交付位于 `target/portable/Lexique-0.1.0-windows-x64-portable.zip`，附带 `.zip.sha256`。解压整个 ZIP 到可写目录，保持 `dictionary/` 与 `Lexique.exe` 同级；首次启动生成 `Lexique-data/`，退出后可将整个目录一起移动或备份。更新时保留 `Lexique-data/`。打包命令拒绝覆盖同名交付目录或 ZIP；重建前先移走已有交付，避免误删使用中的数据。CI 产物 `windows-x64-portable` 提供相同布局。
+
+当前便携包是未签名的 Windows 11 x64 开发小样，需要系统已有 WebView2；不启动依赖安装器、不联网补下载。无 WebView2 的干净机器和 ARM64 / macOS 发行尚未验收，完整离线依赖交付仍属于后续发行门槛。
 
 资源独立入口：`pnpm resources:build target/dictionary-sample`、`pnpm resources:query target/dictionary-sample/dictionary.sqlite3 "œil"`、`pnpm test:resources`。源包和许可已随仓库保存，生成及查询无需联网；`build` 输出目录必须是新目录。原生构建自动准备 `target/desktop-dictionary-sample`，复用前验证内容；损坏时直接失败，人工检查后移走该生成目录再重建。可先运行 `pnpm resources:prepare`。来源、覆盖缺项、只读查询契约和体积见 [FreeDict 小样记录](resources/freedict-fra-zho-2025.11.23/README.md)。
 

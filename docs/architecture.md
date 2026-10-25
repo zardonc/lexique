@@ -42,6 +42,10 @@ Rust storage → 注入 SQLite connection → 事务迁移
 
 ## 配置与发行
 
+Windows 的 `tauri.windows.conf.json` 通过 Tauri `appDirectoriesOverride` 将五类应用目录定位到可执行文件旁的 `Lexique-data/`；WebView 未设置独立 `dataDirectory`，由框架继承被覆盖的 local-data 路径。入口在启动框架线程前将子进程继承的 `TEMP` / `TMP` 定位到同一目录下的 `temp/`，并固定 `WEBVIEW2_USER_DATA_FOLDER` 到 `webview/EBWebView/`，避免继承的外部路径覆盖框架设置。用户库、WebView profile、配置、日志和临时文件因此随目录移动，不依赖启动工作目录。不可写时保留失败，不回退系统目录；原 AppData 内容保持原样。操作系统自身的事件日志、预取和安全软件记录不由应用控制。
+
+`pnpm desktop:portable` 构建 Windows x64 release 后，仅打包可执行文件、已准入词典资源、许可与使用说明，生成独立 ZIP 和 SHA-256 清单，并逐项回读校验压缩包。新交付必须使用空路径；不打包运行时 `Lexique-data/`，也不覆盖旧交付。当前仍依赖系统已有 WebView2，不启动安装器或首次联网下载；这不等于缺运行依赖机器、签名或完整资源发行已验收。
+
 仓库中的配置仅包含构建、测试和应用标识，不包含部署配置、凭据、用户数据、服务端点或 OAuth 客户端配置。真实设置应在运行时注入并与秘密分开保存，绝不能放入 `VITE_*` 并打进前端。
 
 安装器、签名、公证、更新和完整默认离线资源尚未就绪，`bundle.active` 因此关闭。开发图标是随骨架提供的原创临时 L 字形，不代表最终品牌。`pnpm desktop:build` 仅编译程序，不声称生成完整可分发安装包。CI 对四个系统 / 架构做编译检查，不能替代实际安装、首装断网和 TTS 验收。
