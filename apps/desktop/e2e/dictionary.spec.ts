@@ -41,7 +41,7 @@ test('native adapter displays results, no match and resource errors', async ({ p
   await page.goto('/');
   await page.getByLabel('法语词或词组').fill('école');
   await page.getByRole('button', { name: '查词', exact: true }).click();
-  await expect(page.getByText('学校', { exact: true })).toBeVisible();
+  await expect(page.locator('.dictionary-entry').getByText('学校', { exact: true })).toBeVisible();
   await expect(page.getByText('Lieu dédié à l’apprentissage', { exact: true })).toBeVisible();
   await expect(page.locator('.dictionary-source')).toContainText('CC-BY-SA-3.0');
   for (const [key, message] of [['sommes', '未找到完全匹配的词条'], ['missing', '内置词典资源不存在'],

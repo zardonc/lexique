@@ -20,9 +20,9 @@ pnpm desktop             # Tauri 原生窗口，初始化本地 SQLite
 
 ```text
 apps/desktop/             React 界面、运行时适配器与浏览器 E2E
-  src-tauri/              Tauri 入口、只读状态 / 查词命令与最小权限
+  src-tauri/              Tauri 入口、状态 / 查词 / 生词本命令与关闭协调
 crates/core/              可编译为 WASM 的共享 Rust 核心入口
-crates/storage/           SQLite 初始化、事务迁移与集成测试
+crates/storage/           SQLite 迁移、生词记录、幂等保存与集成测试
 crates/dictionary/        校验内置资源、只读 SQLite 快照查询、TEI 文本解析
 docs/                     产品基线、模块职责、开发顺序与验证记录
 scripts/                  60 秒后端测试限制、WASM 实际执行检查
@@ -61,7 +61,9 @@ E2E 结束后在 `apps/desktop/test-results/` 产生桌面 / 手机截图，在 
 
 桌面词典页已接入固定的 FreeDict 法中小样，完全匹配原始拼写并分开显示同键记录、释义和来源；可试 `école`、`œil`、`aujourd’hui`、`or`、`vacances`。缺项与资源错误分别显示；浏览器预览不能读取内置词典。
 
-完整词典 / MDX / MDD、完整变位、离线 TTS、笔记与分类、FSRS、Google OAuth / Sheets、翻译与 AI、练习、浏览器复习与 BFF 尚未实现。WASM 当前只导出版本查询，不能算作 FSRS 或浏览器复习验收。原型的演示数据、密钥表单和伪同步没有被搬进生产代码。
+M1 生词本支持同词一份的逻辑引用、收藏时只读摘要与独立纯文本笔记。点击“加入生词本”后需明确保存；笔记可为空、可清空，最多 20,000 个 Unicode 标量（组合重音分别计数）。查询结果、摘要与来源不能由笔记编辑覆盖。支持搜索词头 / 摘要 / 笔记，以及词头、创建时间、修改时间的双向排序和偏好恢复；保存失败保留输入，旧版本冲突拒绝覆盖。Windows 正常关闭经过保存 / 放弃 / 继续编辑选择；已保存记录可离线重启恢复。验证与平台限制见 [M1 证据](docs/evidence/issue-10/README.md)。
+
+完整词典 / MDX / MDD、完整变位、离线 TTS、语法笔记与分类、FSRS、Google OAuth / Sheets、翻译与 AI、练习、浏览器复习与 BFF 尚未实现。WASM 当前只导出版本查询，不能算作 FSRS 或浏览器复习验收。原型的演示数据、密钥表单和伪同步没有被搬进生产代码。
 
 仓库包含已准入的 FreeDict 法中开发小样源包及其 CC BY-SA 3.0 许可；尚无正式发行的完整默认资源、模型、个人学习数据、服务凭据或 OAuth 配置。项目自有源码采用 [MIT](LICENSE)；第三方组件、数据、模型和声线分别遵守其上游许可，其他默认资源尚需逐项准入。已确认的开发链路、资源候选及验证门槛见 [开发准备清单](docs/development-readiness.md)。
 

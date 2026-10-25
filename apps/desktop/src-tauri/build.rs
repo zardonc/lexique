@@ -30,7 +30,15 @@ fn main() {
             .expect("Missing dictionary hash")
     );
     tauri_build::try_build(tauri_build::Attributes::new().app_manifest(
-        tauri_build::AppManifest::new().commands(&["runtime_status", "dictionary_lookup"]),
+        tauri_build::AppManifest::new().commands(&[
+            "runtime_status",
+            "dictionary_lookup",
+            "vocabulary_find",
+            "vocabulary_list",
+            "vocabulary_save",
+            "vocabulary_sort",
+            "finish_close",
+        ]),
     ))
     .expect("Tauri build metadata could not be generated");
 }

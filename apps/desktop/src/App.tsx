@@ -2,9 +2,14 @@ import { useEffect, useState } from 'react';
 import { messages } from './content';
 import type { Locale, Messages, Theme } from './content';
 import { Navigation } from './navigation';
-import { DictionaryPanel } from './dictionary';
+import { DictionaryPanel, RecordOriginal } from './dictionary';
 import { RuntimeStatusPanel } from './runtime-status';
 import type { RuntimeAdapter } from './platform/runtime';
+import { useNotebook } from './use-notebook';
+import { NotebookPanel } from './notebook';
+import { VocabularyEditor } from './vocabulary-view';
+import { notebookMessages } from './notebook-content';
+import { LeaveDialog, useLeaveGuard } from './leave-guard';
 
 const themes: readonly Theme[] = ['white', 'sepia', 'dark'];
 const locales: readonly Locale[] = ['zh', 'en', 'fr'];
@@ -38,21 +43,37 @@ export function App({ runtime }: { readonly runtime: RuntimeAdapter }) {
   const [page, setPage] = useState(0);
   const [collapsed, setCollapsed] = useState(false);
   const text = messages[locale];
+  const notebookText = notebookMessages[locale];
+  const notebook = useNotebook(runtime);
+  const guard = useLeaveGuard(runtime, notebook);
+  function changePage(next: number) { guard.request(() => { notebook.clear(); setPage(next); }); }
   useEffect(() => { document.documentElement.lang = languageTags[locale]; }, [locale]);
   return <div className="app" data-theme={theme} data-collapsed={collapsed}>
     <a className="skip-link" href="#main-content">{text.skip}</a>
-    <Navigation text={text} selected={page} collapsed={collapsed} onSelect={setPage} onToggle={() => setCollapsed((value) => !value)} />
+    <Navigation text={text} selected={page} collapsed={collapsed} onSelect={changePage} onToggle={() => setCollapsed((value) => !value)} />
     <div className="workspace"><Header text={text} locale={locale} theme={theme} onLocale={setLocale} onTheme={setTheme} />
       <main id="main-content" tabIndex={-1}>
         <p className="eyebrow">{text.eyebrow}</p><h1>{text.modules[page]}</h1>
         <section className="page-content" aria-labelledby="page-title">
           <span className="page-index" aria-hidden="true">{String(page + 1).padStart(2, '0')}</span>
           <h2 id="page-title">{text.title}</h2><p className="intro">{text.intro}</p>
-          {page === 0 ? <DictionaryPanel runtime={runtime} text={text.dictionary} /> :
+          {page === 0 ? <DictionaryPanel runtime={runtime} text={text.dictionary} notebookText={notebookText} version={notebook.version}
+            onCollect={(result) => guard.request(() => notebook.collect(result))}
+            onOpen={(record) => guard.request(() => notebook.open(record))}
+            beforeSearch={(action) => guard.request(() => { notebook.clear(); action(); })} /> : page === 2 ?
+            <NotebookPanel runtime={runtime} version={notebook.version} text={notebookText}
+              onOpen={(record) => guard.request(() => notebook.open(record))} /> :
             <div className="empty-state"><p>{text.pending[page]}</p><small>{text.scaffold}</small></div>}
+          <VocabularyEditor notebook={notebook} text={notebookText} viewExisting={() => {
+            if (notebook.existing) { const record = notebook.existing; guard.request(() => notebook.open(record)); }
+          }} />
+          {page === 2 && notebook.editor && <RecordOriginal headword={notebook.editor.snapshot.reference.lookup_key}
+            runtime={runtime} text={text.dictionary} title={notebookText.original} />}
+          {guard.error && <p role="alert">{notebookText.closeError}: {guard.error}</p>}
         </section>
         <RuntimeStatusPanel runtime={runtime} text={text} />
       </main>
     </div>
+    <LeaveDialog guard={guard} notebook={notebook} text={notebookText} />
   </div>;
 }

@@ -1,7 +1,9 @@
 {
   "$schema": "../gen/schemas/desktop-schema.json",
   "identifier": "main",
-  "description": "Local main window may read runtime status and query the bundled dictionary.",
+  "description": "Local main window may query the dictionary, manage vocabulary and coordinate closing.",
   "windows": ["main"],
-  "permissions": ["allow-runtime-status", "allow-dictionary-lookup"]
+  "permissions": ["allow-runtime-status", "allow-dictionary-lookup", "allow-vocabulary-find",
+    "allow-vocabulary-list", "allow-vocabulary-save", "allow-vocabulary-sort", "allow-finish-close",
+    "core:event:allow-listen", "core:event:allow-unlisten"]
 }
