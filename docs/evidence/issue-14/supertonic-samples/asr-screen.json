@@ -1,0 +1,255 @@
+{
+  "recognizer": "Whisper tiny int8",
+  "language": "fr",
+  "network_denials_before": [
+    {
+      "host": "1.1.1.1",
+      "port": 443,
+      "winerror": 10013
+    },
+    {
+      "host": "8.8.8.8",
+      "port": 443,
+      "winerror": 10013
+    }
+  ],
+  "limitation": "ASR can mishear or hallucinate; word errors are a diagnostic, not a quality admission verdict",
+  "cases": [
+    {
+      "label": "accepted-siwis",
+      "input_file": "C:\\Users\\inthe\\IdeaProjects\\lexique\\docs\\evidence\\issue-14\\comparison\\siwis\\08.wav",
+      "sha256": "8a980748b4547fb7b70e1401c39e07a8572a8a649884552a68aa27240c1228c6",
+      "expected": "J'apprends le français tous les jours.",
+      "recognized": "J'apprends le français tous les jours",
+      "word_error_rate": 0.0
+    },
+    {
+      "label": "accepted-tom",
+      "input_file": "C:\\Users\\inthe\\IdeaProjects\\lexique\\docs\\evidence\\issue-14\\comparison\\tom\\08.wav",
+      "sha256": "7cc2dd5b43b5edd7863f4c6d9d9b8693c5d8a148374eb93b83bd88a4fc368391",
+      "expected": "J'apprends le français tous les jours.",
+      "recognized": "J'apprend le France et tous les jours.",
+      "word_error_rate": 0.42857142857142855
+    },
+    {
+      "label": "rejected-mls-female",
+      "input_file": "C:\\Users\\inthe\\IdeaProjects\\lexique\\docs\\evidence\\issue-14\\mls-samples\\female-normal-08.wav",
+      "sha256": "17a0827fe06b7bee768a4e18a85aacbcac9db17db9e4046242136f3091e61348",
+      "expected": "J'apprends le français tous les jours.",
+      "recognized": "Je vais vous remerter tout, je vais vous remerter tout.",
+      "word_error_rate": 1.4285714285714286
+    },
+    {
+      "label": "rejected-mls-male",
+      "input_file": "C:\\Users\\inthe\\IdeaProjects\\lexique\\docs\\evidence\\issue-14\\mls-samples\\male-normal-08.wav",
+      "sha256": "ecab44366014ce0c18991eab3b0e351533336da9c77c9c95c477af0dc46cf964",
+      "expected": "J'apprends le français tous les jours.",
+      "recognized": "J'apprends cette route, c'est tout, elle joue.",
+      "word_error_rate": 1.0
+    },
+    {
+      "label": "supertonic-female-normal-01.wav",
+      "input_file": ".tooling\\issue-14\\supertonic-3\\run-03-fr\\female-normal-01.wav",
+      "sha256": "84caa844ec7c8853d8691bfc8a7c6f6e83add53450b95f5fdc19a644b0e038f0",
+      "expected": "école",
+      "recognized": "Eccole",
+      "word_error_rate": 1.0
+    },
+    {
+      "label": "supertonic-female-normal-02.wav",
+      "input_file": ".tooling\\issue-14\\supertonic-3\\run-03-fr\\female-normal-02.wav",
+      "sha256": "c20b5fb41d94523f5685360829db035562ece89c26c8da9de341e92f28e686c2",
+      "expected": "œil",
+      "recognized": "A",
+      "word_error_rate": 1.0
+    },
+    {
+      "label": "supertonic-female-normal-03.wav",
+      "input_file": ".tooling\\issue-14\\supertonic-3\\run-03-fr\\female-normal-03.wav",
+      "sha256": "1d5cd8d7163eeecaf8768bc8f91a72a7405782e437a85859f54a0caa8010bf29",
+      "expected": "nous sommes ici",
+      "recognized": "Nous sommes ici.",
+      "word_error_rate": 0.0
+    },
+    {
+      "label": "supertonic-female-normal-04.wav",
+      "input_file": ".tooling\\issue-14\\supertonic-3\\run-03-fr\\female-normal-04.wav",
+      "sha256": "777961b87f83757be42bd48ad3244763f26fef06d880b8b5446c4d56f9e7bda7",
+      "expected": "J'apprends le français tous les jours.",
+      "recognized": "Je apprend le français tous les jours.",
+      "word_error_rate": 0.2857142857142857
+    },
+    {
+      "label": "supertonic-female-normal-05.wav",
+      "input_file": ".tooling\\issue-14\\supertonic-3\\run-03-fr\\female-normal-05.wav",
+      "sha256": "568e01a76a5ff7ddd7eca043ebb4b8d5218c73dbfeea5f26311d0a0a2c9eeddc",
+      "expected": "y",
+      "recognized": "et...",
+      "word_error_rate": 1.0
+    },
+    {
+      "label": "supertonic-female-normal-06.wav",
+      "input_file": ".tooling\\issue-14\\supertonic-3\\run-03-fr\\female-normal-06.wav",
+      "sha256": "22171e2eb4450484594252f09723b2c59bb4d58a173430b3d13e7dcb0f7105d4",
+      "expected": "i",
+      "recognized": "et...",
+      "word_error_rate": 1.0
+    },
+    {
+      "label": "supertonic-female-slow-01.wav",
+      "input_file": ".tooling\\issue-14\\supertonic-3\\run-03-fr\\female-slow-01.wav",
+      "sha256": "4a26397b9ec410cb082cbc9fbb777e625372e7bc4a95ba05fe692bc82ae797f2",
+      "expected": "école",
+      "recognized": "École. École. École. É",
+      "word_error_rate": 3.0
+    },
+    {
+      "label": "supertonic-female-slow-02.wav",
+      "input_file": ".tooling\\issue-14\\supertonic-3\\run-03-fr\\female-slow-02.wav",
+      "sha256": "917ed8f3ffd35a623619f1d1af9a59786318d40918ccaa8be0ba73c40ef2897c",
+      "expected": "œil",
+      "recognized": "Aïla.",
+      "word_error_rate": 1.0
+    },
+    {
+      "label": "supertonic-female-slow-03.wav",
+      "input_file": ".tooling\\issue-14\\supertonic-3\\run-03-fr\\female-slow-03.wav",
+      "sha256": "8aaec2c093542ac688e1ed32b3d5c33f96658b300d5a16aa375f0b0bcd17d780",
+      "expected": "nous sommes ici",
+      "recognized": "Nous sommes ici.",
+      "word_error_rate": 0.0
+    },
+    {
+      "label": "supertonic-female-slow-04.wav",
+      "input_file": ".tooling\\issue-14\\supertonic-3\\run-03-fr\\female-slow-04.wav",
+      "sha256": "9317cc17a051294f1206e8ac6f92dda12d38bcf47fb52320f117d12dc8fc6061",
+      "expected": "J'apprends le français tous les jours.",
+      "recognized": "J'apprends le français, tous les jours.",
+      "word_error_rate": 0.0
+    },
+    {
+      "label": "supertonic-female-slow-05.wav",
+      "input_file": ".tooling\\issue-14\\supertonic-3\\run-03-fr\\female-slow-05.wav",
+      "sha256": "de7027e70377f7957ad33de7d083d9f9f80d8152b85e4ce6670fe213eb3f8dad",
+      "expected": "y",
+      "recognized": "et...",
+      "word_error_rate": 1.0
+    },
+    {
+      "label": "supertonic-female-slow-06.wav",
+      "input_file": ".tooling\\issue-14\\supertonic-3\\run-03-fr\\female-slow-06.wav",
+      "sha256": "84dee8ce8a0310b5f4bcecf96de305a90dc7b8cfbc2d394c0d6418ac413daa36",
+      "expected": "i",
+      "recognized": "et...",
+      "word_error_rate": 1.0
+    },
+    {
+      "label": "supertonic-male-normal-01.wav",
+      "input_file": ".tooling\\issue-14\\supertonic-3\\run-03-fr\\male-normal-01.wav",
+      "sha256": "a55f3ca7e5a9a7ec884b492c2480e7f834a844d484927340f85d97486860bf2d",
+      "expected": "école",
+      "recognized": "E-colne",
+      "word_error_rate": 2.0
+    },
+    {
+      "label": "supertonic-male-normal-02.wav",
+      "input_file": ".tooling\\issue-14\\supertonic-3\\run-03-fr\\male-normal-02.wav",
+      "sha256": "8e4002490eaee565a9abafb6ead6ae0d8c18b596a1db5d732bf134f43e0394f3",
+      "expected": "œil",
+      "recognized": "Aille.",
+      "word_error_rate": 1.0
+    },
+    {
+      "label": "supertonic-male-normal-03.wav",
+      "input_file": ".tooling\\issue-14\\supertonic-3\\run-03-fr\\male-normal-03.wav",
+      "sha256": "57f8a9f0e7162f13a67b58da144afc2a2d83f6db60c6c8671dca928e39f5dc2f",
+      "expected": "nous sommes ici",
+      "recognized": "Nous sommes ici.",
+      "word_error_rate": 0.0
+    },
+    {
+      "label": "supertonic-male-normal-04.wav",
+      "input_file": ".tooling\\issue-14\\supertonic-3\\run-03-fr\\male-normal-04.wav",
+      "sha256": "8389bf4abbf187885e8114e79831978837326b56e41e8c157162d83ca69e9f81",
+      "expected": "J'apprends le français tous les jours.",
+      "recognized": "J'apprends le français tous les jours.",
+      "word_error_rate": 0.0
+    },
+    {
+      "label": "supertonic-male-normal-05.wav",
+      "input_file": ".tooling\\issue-14\\supertonic-3\\run-03-fr\\male-normal-05.wav",
+      "sha256": "a2340084e7640e7001e935d90d86504f6f8291f3dfe138488fbc28fea49c889c",
+      "expected": "y",
+      "recognized": "... ... ... ... ... ... ... ...",
+      "word_error_rate": 1.0
+    },
+    {
+      "label": "supertonic-male-normal-06.wav",
+      "input_file": ".tooling\\issue-14\\supertonic-3\\run-03-fr\\male-normal-06.wav",
+      "sha256": "d25e5748232826c10359330f3bb685ea2424067e6c7ac678ca0dd7c5f520c48c",
+      "expected": "i",
+      "recognized": "et",
+      "word_error_rate": 1.0
+    },
+    {
+      "label": "supertonic-male-slow-01.wav",
+      "input_file": ".tooling\\issue-14\\supertonic-3\\run-03-fr\\male-slow-01.wav",
+      "sha256": "d7db6c45a657eb1546ae8df418661cd7b2b486996b792ef570a52009dcd576a6",
+      "expected": "école",
+      "recognized": "Ecole",
+      "word_error_rate": 0.0
+    },
+    {
+      "label": "supertonic-male-slow-02.wav",
+      "input_file": ".tooling\\issue-14\\supertonic-3\\run-03-fr\\male-slow-02.wav",
+      "sha256": "edee0512516e10fc9d23c3f9e8e26c187640a97a18c956a7a03279417ff5e8fd",
+      "expected": "œil",
+      "recognized": "Eil.",
+      "word_error_rate": 1.0
+    },
+    {
+      "label": "supertonic-male-slow-03.wav",
+      "input_file": ".tooling\\issue-14\\supertonic-3\\run-03-fr\\male-slow-03.wav",
+      "sha256": "18a6af08a65c08c50c8f724c0a87007375b06b4b8978efaa2bb190a1472ba12d",
+      "expected": "nous sommes ici",
+      "recognized": "Nous sommes ici.",
+      "word_error_rate": 0.0
+    },
+    {
+      "label": "supertonic-male-slow-04.wav",
+      "input_file": ".tooling\\issue-14\\supertonic-3\\run-03-fr\\male-slow-04.wav",
+      "sha256": "91bde2888e011fb58e9cbb62e3e6285a249fdc7ad038a7c2e47490d0b1a977be",
+      "expected": "J'apprends le français tous les jours.",
+      "recognized": "J'apprends le français tous les jours.",
+      "word_error_rate": 0.0
+    },
+    {
+      "label": "supertonic-male-slow-05.wav",
+      "input_file": ".tooling\\issue-14\\supertonic-3\\run-03-fr\\male-slow-05.wav",
+      "sha256": "873b5ceeffe6d992689ead9afc6bfae59e98a94d3cf179e36d68c7df3c0ca61d",
+      "expected": "y",
+      "recognized": "1",
+      "word_error_rate": 1.0
+    },
+    {
+      "label": "supertonic-male-slow-06.wav",
+      "input_file": ".tooling\\issue-14\\supertonic-3\\run-03-fr\\male-slow-06.wav",
+      "sha256": "4726216bb3106abb7f4ecf857c3e55006119a435adfef7d9983bcfed15baa8bf",
+      "expected": "i",
+      "recognized": "et...",
+      "word_error_rate": 1.0
+    }
+  ],
+  "network_denials_after": [
+    {
+      "host": "1.1.1.1",
+      "port": 443,
+      "winerror": 10013
+    },
+    {
+      "host": "8.8.8.8",
+      "port": 443,
+      "winerror": 10013
+    }
+  ]
+}

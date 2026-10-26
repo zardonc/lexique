@@ -23,7 +23,7 @@ const messages = {
 
 export function SpeechSettings({ runtime, locale }: { readonly runtime: RuntimeAdapter; readonly locale: Locale }) {
   const text = messages[locale];
-  const [choices, setChoices] = useState<SpeechPreferences>({ voice: 'siwis', speed: 'normal' });
+  const [choices, setChoices] = useState<SpeechPreferences>({ voice: 'female', speed: 'normal' });
   const [state, setState] = useState<'loading' | 'ready' | 'preview' | 'saving' | 'saved' | 'failed'>('loading');
   const [error, setError] = useState('');
   const [loaded, setLoaded] = useState(false);
@@ -49,8 +49,8 @@ export function SpeechSettings({ runtime, locale }: { readonly runtime: RuntimeA
   return <section className="speech-settings" aria-labelledby="speech-title">
     <h3 id="speech-title">{text.title}</h3><p>{text.pending}</p>
     <div className="speech-options"><label>{text.voice}<select value={choices.voice} disabled={disabled}
-      onChange={(event) => { const voice = event.target.value; if (voice === 'siwis' || voice === 'tom') { setChoices({ ...choices, voice }); setState('ready'); setError(''); } }}>
-      <option value="siwis">{text.female}</option><option value="tom">{text.male}</option>
+      onChange={(event) => { const voice = event.target.value; if (voice === 'female' || voice === 'male') { setChoices({ ...choices, voice }); setState('ready'); setError(''); } }}>
+      <option value="female">{text.female}</option><option value="male">{text.male}</option>
     </select></label>
     <label>{text.speed}<select value={choices.speed} disabled={disabled}
       onChange={(event) => { const speed = event.target.value; if (speed === 'normal' || speed === 'slow') { setChoices({ ...choices, speed }); setState('ready'); setError(''); } }}>

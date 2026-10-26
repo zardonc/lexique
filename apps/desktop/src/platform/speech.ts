@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
 export const speechPreferencesSchema = z.object({
-  voice: z.enum(['siwis', 'tom']),
+  voice: z.enum(['female', 'male']),
   speed: z.enum(['normal', 'slow']),
 }).strict().readonly();
 

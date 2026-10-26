@@ -1,0 +1,78 @@
+{
+  "evidence": [
+    {
+      "file": "LICENSE-SUPERTONE-model-OpenRAIL-M.txt",
+      "scope": "Supertonic-3 model weights and voice style assets",
+      "source_repository": "Supertone/supertonic-3",
+      "revision": "3cadd1ee6394adea1bd021217a0e650ede09a323",
+      "source_url": "https://huggingface.co/Supertone/supertonic-3/resolve/3cadd1ee6394adea1bd021217a0e650ede09a323/LICENSE",
+      "api_metadata": "https://huggingface.co/api/models/Supertone/supertonic-3?blobs=true",
+      "license_metadata": "openrail",
+      "expected_bytes": 15007,
+      "expected_git_blob_sha1": "1e2cbe6cef94c8cdf3ed1fcebc0f5317ca7ad5a1",
+      "actual_bytes": 15007,
+      "actual_git_blob_sha1": "1e2cbe6cef94c8cdf3ed1fcebc0f5317ca7ad5a1",
+      "actual_sha256": "0d944a9110fed9a9602d60e0423a272903e7bd21ab060490774efc77c2275e9f"
+    },
+    {
+      "file": "LICENSE-SUPERTONE-sample-code-MIT.txt",
+      "scope": "The sample code identified by the sherpa release archive README; not the model weights",
+      "source_repository": "sherpa-onnx release asset",
+      "source_url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/sherpa-onnx-supertonic-3-tts-int8-2026-05-11.tar.bz2",
+      "archive_sha256": "82fa96f91c4ef8abaae3a14a3f4153facf88bed821d1f7331cec2700f432c427",
+      "archive_member": "sherpa-onnx-supertonic-3-tts-int8-2026-05-11/LICENSE",
+      "actual_bytes": 1070,
+      "actual_sha256": "0dfe0d0ba84416fe3879d9a34f4909d8d0137c78d1e95834177b0414ac096fa2"
+    },
+    {
+      "file": "LICENSE-SHERPA-ONNX-Apache-2.0.txt",
+      "scope": "sherpa-onnx engine/source code, separate from the model archive assets",
+      "source_repository": "k2-fsa/sherpa-onnx",
+      "revision": "af2d8d81dbfa61c4cea4c568da78f3982edca005",
+      "source_url": "https://raw.githubusercontent.com/k2-fsa/sherpa-onnx/af2d8d81dbfa61c4cea4c568da78f3982edca005/LICENSE",
+      "expected_bytes": 11358,
+      "expected_git_blob_sha1": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "actual_bytes": 11358,
+      "actual_git_blob_sha1": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "actual_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "file": "LICENSE-SUPERTONE-PY-SDK-MIT.txt",
+      "scope": "Official SDK documentation repository containing voices.md",
+      "source_repository": "supertone-oss-archive/supertonic-py",
+      "revision": "df0f9686dac7fbbde391b759e2ee5286a3737622",
+      "source_url": "https://raw.githubusercontent.com/supertone-oss-archive/supertonic-py/df0f9686dac7fbbde391b759e2ee5286a3737622/LICENSE",
+      "expected_bytes": 1071,
+      "expected_git_blob_sha1": "6bd4c6bff0954ca3990d1f3f995c006bb1a463a8",
+      "actual_bytes": 1071,
+      "actual_git_blob_sha1": "6bd4c6bff0954ca3990d1f3f995c006bb1a463a8",
+      "actual_sha256": "f41cb0ff617e2ed634215f3e62f7b33b3dc02b079c6379a2f1a9c7ce7bd84c03"
+    },
+    {
+      "file": "voices.md",
+      "scope": "Official voice names, gender labels, and descriptions; no linked example WAV files are included",
+      "source_repository": "supertone-oss-archive/supertonic-py",
+      "revision": "df0f9686dac7fbbde391b759e2ee5286a3737622",
+      "source_url": "https://raw.githubusercontent.com/supertone-oss-archive/supertonic-py/df0f9686dac7fbbde391b759e2ee5286a3737622/docs/voices.md",
+      "expected_bytes": 3647,
+      "expected_git_blob_sha1": "3108796afe1fc648dee533655948818537a9e294",
+      "actual_bytes": 3647,
+      "actual_git_blob_sha1": "3108796afe1fc648dee533655948818537a9e294",
+      "actual_sha256": "223479df53c46d8a57da04b903efa61e5e5c6843ecf43033fb26bbbb09119629"
+    }
+  ],
+  "voice_map_sources": {
+    "generator_repository": "k2-fsa/sherpa-onnx",
+    "revision": "af2d8d81dbfa61c4cea4c568da78f3982edca005",
+    "generator_path": "scripts/supertonic/generate_voices_bin.py",
+    "generator_url": "https://raw.githubusercontent.com/k2-fsa/sherpa-onnx/af2d8d81dbfa61c4cea4c568da78f3982edca005/scripts/supertonic/generate_voices_bin.py",
+    "generator_bytes": 4267,
+    "generator_git_blob_sha1": "7405b78df73b404923be89583a23ce231d063fa5",
+    "algorithm_note": "The generator sorts *.json filenames lexicographically before stacking style arrays. The official voices.md classifies M1-M5 as male and F1-F5 as female; sorted IDs are therefore F1-F5 at sid 0-4 then M1-M5 at sid 5-9.",
+    "python_example_path": "python-api-examples/supertonic-tts.py",
+    "python_example_url": "https://github.com/k2-fsa/sherpa-onnx/blob/af2d8d81dbfa61c4cea4c568da78f3982edca005/python-api-examples/supertonic-tts.py",
+    "python_example_bytes": 3313,
+    "python_example_git_blob_sha1": "b4fcaee1d07269b299e14b0d208fdb7b02cc11ed",
+    "example_facts": "This example says the model has 10 speakers and valid sid values 0-9."
+  }
+}

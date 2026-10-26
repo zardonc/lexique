@@ -1,0 +1,267 @@
+{
+  "candidate": "SupertonicTTS 3 int8 assets from the sherpa-onnx release",
+  "status": "download hashes and isolated Windows synthesis checked; human French quality, product integration and complete distribution admission pending",
+  "archive": {
+    "release_api": "https://api.github.com/repos/k2-fsa/sherpa-onnx/releases/tags/tts-models",
+    "release_url": "https://github.com/k2-fsa/sherpa-onnx/releases/tag/tts-models",
+    "name": "sherpa-onnx-supertonic-3-tts-int8-2026-05-11.tar.bz2",
+    "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/sherpa-onnx-supertonic-3-tts-int8-2026-05-11.tar.bz2",
+    "asset_created_at": "2026-05-13T01:37:28Z",
+    "expected_bytes": 128774318,
+    "expected_sha256": "82fa96f91c4ef8abaae3a14a3f4153facf88bed821d1f7331cec2700f432c427",
+    "actual_bytes": 128774318,
+    "actual_sha256": "82fa96f91c4ef8abaae3a14a3f4153facf88bed821d1f7331cec2700f432c427",
+    "extraction": {
+      "method": "tar.exe after Python tarfile member validation",
+      "members": 10,
+      "directories": 1,
+      "files": 9,
+      "unsafe_members": 0,
+      "checks": [
+        "no absolute paths",
+        "no drive-qualified paths",
+        "no parent traversal",
+        "no backslashes",
+        "no symlinks or hardlinks",
+        "no special files"
+      ],
+      "extracted_file_bytes": 145316356
+    }
+  },
+  "files": [
+    {
+      "path": "duration_predictor.int8.onnx",
+      "bytes": 3700147,
+      "actual_sha256": "c3eb91414d5ff8a7a239b7fe9e34e7e2bf8a8140d8375ffb14718b1c639325db"
+    },
+    {
+      "path": "text_encoder.int8.onnx",
+      "bytes": 36416150,
+      "actual_sha256": "c7befd5ea8c3119769e8a6c1486c4edc6a3bc8365c67621c881bbb774b9902ff"
+    },
+    {
+      "path": "vector_estimator.int8.onnx",
+      "bytes": 78400833,
+      "actual_sha256": "20cd86fa5c6effedfda0e7cffe5b0569ca401c440a0c3a1d72bf39286c0db3fd"
+    },
+    {
+      "path": "vocoder.int8.onnx",
+      "bytes": 25991073,
+      "actual_sha256": "e923d60f53f95eb1ce235f1dc33ec56d9c057823c96fa6f8acf98f32b0da6152"
+    },
+    {
+      "path": "tts.json",
+      "bytes": 8253,
+      "actual_sha256": "42078d3aef1cd43ab43021f3c54f47d2d75ceb4e75f627f118890128b06a0d09"
+    },
+    {
+      "path": "unicode_indexer.bin",
+      "bytes": 262144,
+      "actual_sha256": "8402ca48e5189a8950138580b0fff64db6f072f24ac07cd54ba8b2fbb9883b30"
+    },
+    {
+      "path": "voice.bin",
+      "bytes": 517168,
+      "actual_sha256": "67d5209b0ee8ce6c74105ffbe12fe6a7628aea3b4ba2fcb308a4a67938a93ce8"
+    },
+    {
+      "path": "README.md",
+      "bytes": 19518,
+      "actual_sha256": "a96c347945f7c8bc1673bea3525b1ac8d36fdde556e1e0a6a186052429caf863"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1070,
+      "actual_sha256": "0dfe0d0ba84416fe3879d9a34f4909d8d0137c78d1e95834177b0414ac096fa2"
+    }
+  ],
+  "model_facts": {
+    "tts_config_version": "v1.7.3",
+    "sample_rate_hz": 44100,
+    "speaker_count": 10,
+    "language_count": 31,
+    "french_language_code": "fr",
+    "voice_bundle": {
+      "path": "voice.bin",
+      "ttl_shape": [
+        10,
+        50,
+        256
+      ],
+      "duration_predictor_shape": [
+        10,
+        8,
+        16
+      ]
+    },
+    "speaker_id_map": [
+      {
+        "sid": 0,
+        "voice": "F1",
+        "gender": "female"
+      },
+      {
+        "sid": 1,
+        "voice": "F2",
+        "gender": "female"
+      },
+      {
+        "sid": 2,
+        "voice": "F3",
+        "gender": "female"
+      },
+      {
+        "sid": 3,
+        "voice": "F4",
+        "gender": "female"
+      },
+      {
+        "sid": 4,
+        "voice": "F5",
+        "gender": "female"
+      },
+      {
+        "sid": 5,
+        "voice": "M1",
+        "gender": "male"
+      },
+      {
+        "sid": 6,
+        "voice": "M2",
+        "gender": "male"
+      },
+      {
+        "sid": 7,
+        "voice": "M3",
+        "gender": "male"
+      },
+      {
+        "sid": 8,
+        "voice": "M4",
+        "gender": "male"
+      },
+      {
+        "sid": 9,
+        "voice": "M5",
+        "gender": "male"
+      }
+    ],
+    "mapping_basis": "The pinned sherpa-onnx voice-bundle generator sorts *.json filenames before writing the arrays. The pinned official voice SDK documentation identifies F1-F5 as female and M1-M5 as male; voice.bin dimensions contain 10 style entries."
+  },
+  "source_evidence": {
+    "sherpa_docs": {
+      "url": "https://k2-fsa.github.io/sherpa/onnx/tts/supertonic.html",
+      "accessed": "2026-10-26",
+      "facts": "Documents SupertonicTTS 3 as offline, lists French among supported languages, and names the four ONNX files, tts.json, unicode_indexer.bin, and voice.bin."
+    },
+    "sherpa_source_revision": "af2d8d81dbfa61c4cea4c568da78f3982edca005",
+    "voice_bundle_generator": {
+      "path": "scripts/supertonic/generate_voices_bin.py",
+      "url": "https://github.com/k2-fsa/sherpa-onnx/blob/af2d8d81dbfa61c4cea4c568da78f3982edca005/scripts/supertonic/generate_voices_bin.py",
+      "bytes": 4267,
+      "git_blob_sha1": "7405b78df73b404923be89583a23ce231d063fa5"
+    },
+    "sherpa_python_example": {
+      "path": "python-api-examples/supertonic-tts.py",
+      "url": "https://github.com/k2-fsa/sherpa-onnx/blob/af2d8d81dbfa61c4cea4c568da78f3982edca005/python-api-examples/supertonic-tts.py",
+      "bytes": 3313,
+      "git_blob_sha1": "b4fcaee1d07269b299e14b0d208fdb7b02cc11ed",
+      "fact": "The example states 10 speakers and valid sid values 0-9."
+    },
+    "voice_sdk": {
+      "repository": "supertone-oss-archive/supertonic-py",
+      "revision": "df0f9686dac7fbbde391b759e2ee5286a3737622",
+      "voices_doc_path": "docs/voices.md",
+      "voices_doc_url": "https://github.com/supertone-oss-archive/supertonic-py/blob/df0f9686dac7fbbde391b759e2ee5286a3737622/docs/voices.md"
+    },
+    "upstream_model": {
+      "repository": "Supertone/supertonic-3",
+      "revision": "3cadd1ee6394adea1bd021217a0e650ede09a323",
+      "api_url": "https://huggingface.co/api/models/Supertone/supertonic-3?blobs=true",
+      "license_metadata": "openrail",
+      "readme_url": "https://huggingface.co/Supertone/supertonic-3/blob/3cadd1ee6394adea1bd021217a0e650ede09a323/README.md",
+      "voice_styles": [
+        {
+          "name": "F1",
+          "gender": "female",
+          "path": "voice_styles/F1.json",
+          "bytes": 292046,
+          "git_blob_sha1": "421365f307ed1535d8da16845031d0e9fa3e60c5"
+        },
+        {
+          "name": "F2",
+          "gender": "female",
+          "path": "voice_styles/F2.json",
+          "bytes": 292423,
+          "git_blob_sha1": "b09a3a433df8a4856d1d7d64736a56ddf37a4ea3"
+        },
+        {
+          "name": "F3",
+          "gender": "female",
+          "path": "voice_styles/F3.json",
+          "bytes": 290794,
+          "git_blob_sha1": "a366f94c77c4b440404071f1a52bed3ccf83a5ff"
+        },
+        {
+          "name": "F4",
+          "gender": "female",
+          "path": "voice_styles/F4.json",
+          "bytes": 291808,
+          "git_blob_sha1": "39c78a52795320c6101b7eaf984c0e2352fbdc18"
+        },
+        {
+          "name": "F5",
+          "gender": "female",
+          "path": "voice_styles/F5.json",
+          "bytes": 291479,
+          "git_blob_sha1": "06983f8816ad00a8eeb7efd37a33d457587e16f8"
+        },
+        {
+          "name": "M1",
+          "gender": "male",
+          "path": "voice_styles/M1.json",
+          "bytes": 291748,
+          "git_blob_sha1": "bddfff85a7c4c140c11620bd7005d86681dccdac"
+        },
+        {
+          "name": "M2",
+          "gender": "male",
+          "path": "voice_styles/M2.json",
+          "bytes": 292055,
+          "git_blob_sha1": "602ff6c4d6d48cdb71c37461f7c175d71fe8b34b"
+        },
+        {
+          "name": "M3",
+          "gender": "male",
+          "path": "voice_styles/M3.json",
+          "bytes": 290198,
+          "git_blob_sha1": "000b60436b77619b933fdc33628ad737595e6794"
+        },
+        {
+          "name": "M4",
+          "gender": "male",
+          "path": "voice_styles/M4.json",
+          "bytes": 291522,
+          "git_blob_sha1": "aae253ae81185fa06a6469c3f1cdff04ed121ddf"
+        },
+        {
+          "name": "M5",
+          "gender": "male",
+          "path": "voice_styles/M5.json",
+          "bytes": 291469,
+          "git_blob_sha1": "0536b252698830f8536c077edcb94e1ce4768ab6"
+        }
+      ]
+    }
+  },
+  "license_scopes": {
+    "model_weights_and_voice_styles": "OpenRAIL-M, as stated by the pinned Supertone model README; exact license text is captured in docs/evidence/issue-14/supertonic-licenses.",
+    "archive_sample_code": "MIT per the archive README and its bundled LICENSE. This does not relicense the model weights.",
+    "sherpa_onnx_engine_source": "Apache-2.0. The engine source is a separate component and is not included in this model archive."
+  },
+  "not_verified": [
+    "Human French pronunciation quality and naturalness remain unaccepted; isolated Windows generation/playback of 26 samples was checked, see supertonic-trial.md",
+    "OpenRAIL-M distribution suitability has not been legally approved.",
+    "The exact transformation pipeline for each int8 ONNX file has not been independently audited."
+  ]
+}

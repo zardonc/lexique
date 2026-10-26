@@ -1,5 +1,9 @@
 # M2 单词离线语音验证
 
+新替代试验：[Supertonic 3 四组合试听](supertonic-samples/listen.html)、[许可与来源](replacement-options-after-mls.md)、[模型哈希](supertonic3-model.json)。短词与孤立 `y`／`i` 仍待人工确认；本地 ASR 只是对照，不作音质准入结论。
+
+Piper MLS medium 双说话人已因用户反馈读音混乱及音质不佳撤回，不作为当前候选。失败记录详见[准入补查](replacement-admission.md)、[模型清单](mls-model.json)和[女声／男声 × 正常／慢速试听](mls-samples/listen.html)。下文保留早期 Kokoro 探针的历史证据，不代表当前默认模型。
+
 工作记录，2026-10-26。候选为 Kokoro v1.0 int8 + ff_siwis +
 kokoro-onnx 0.6.1 + eSpeak NG 1.52.0。技术生成不等于音质通过；
 本票保持打开，等待修正后完整样本的最终试听验收。

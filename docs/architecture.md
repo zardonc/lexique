@@ -48,7 +48,7 @@ M1 请求由 Rust 严格反序列化，前端请求 / 响应由 Zod 校验。标
 
 ## 配置与发行
 
-语音偏好通过受限 `speech_preferences` 命令读取／保存，沿用 `app_metadata` 中单条 JSON；不提高 schema 版本。Rust 枚举及前端 Zod 严格限制声线 `siwis`／`tom` 和语速 `normal`／`slow`。未知字段、非法响应和损坏配置保持错误，不覆盖为默认值；只有配置不存在时使用女声／正常默认值。当前没有合成或播放命令，偏好不改变学习进度或既有音频。
+语音偏好通过受限 `speech_preferences` 命令读取／保存，沿用 `app_metadata` 中单条 JSON；不提高 schema 版本。Rust 枚举及前端 Zod 严格限制声线 `female`／`male`（兼容读取旧 `siwis`／`tom`，保存使用新值）和语速 `normal`／`slow`。未知字段、非法响应和损坏配置保持错误，不覆盖为默认值；只有配置不存在时使用女声／正常默认值。当前没有合成或播放命令，偏好不改变学习进度或既有音频。
 
 Windows 的 `tauri.windows.conf.json` 通过 Tauri `appDirectoriesOverride` 将五类应用目录定位到可执行文件旁的 `Lexique-data/`；WebView 未设置独立 `dataDirectory`，由框架继承被覆盖的 local-data 路径。入口在启动框架线程前将子进程继承的 `TEMP` / `TMP` 定位到同一目录下的 `temp/`，并固定 `WEBVIEW2_USER_DATA_FOLDER` 到 `webview/EBWebView/`，避免继承的外部路径覆盖框架设置。用户库、WebView profile、配置、日志和临时文件因此随目录移动，不依赖启动工作目录。不可写时保留失败，不回退系统目录；原 AppData 内容保持原样。操作系统自身的事件日志、预取和安全软件记录不由应用控制。
 

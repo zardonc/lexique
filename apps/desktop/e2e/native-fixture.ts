@@ -34,7 +34,7 @@ export async function nativeFixture(page: Page, responses: Readonly<Record<strin
     window.testNative = { calls: [], close: () => { for (const callback of callbacks.values()) callback({ payload: null }); } };
     const defaults: Record<string, unknown> = { runtime_status: { version: '0.1.0', schemaVersion: 2, storage: 'sqlite' },
       dictionary_lookup: dictionary, vocabulary_find: null, vocabulary_list: [], vocabulary_sort: 'updated-desc', finish_close: null,
-      speech_preferences: { voice: 'siwis', speed: 'normal' } };
+      speech_preferences: { voice: 'female', speed: 'normal' } };
     function defaultReply(command: string, args?: Record<string, unknown>) {
       if (command === 'speech_preferences' && args?.preferences) defaults[command] = args.preferences;
       return command === 'vocabulary_sort' ? args?.sort ?? defaults[command] : defaults[command];

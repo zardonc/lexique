@@ -7,8 +7,10 @@ use crate::StorageError;
 #[serde(rename_all = "snake_case")]
 pub enum SpeechVoice {
     #[default]
-    Siwis,
-    Tom,
+    #[serde(alias = "siwis")]
+    Female,
+    #[serde(alias = "tom")]
+    Male,
 }
 
 #[derive(Debug, Default, Deserialize, Serialize)]
