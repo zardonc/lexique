@@ -37,6 +37,7 @@ fn main() {
             "vocabulary_list",
             "vocabulary_save",
             "vocabulary_sort",
+            "speech_preferences",
             "finish_close",
         ]),
     ))

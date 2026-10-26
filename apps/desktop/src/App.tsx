@@ -10,6 +10,7 @@ import { NotebookPanel } from './notebook';
 import { VocabularyEditor } from './vocabulary-view';
 import { notebookMessages } from './notebook-content';
 import { LeaveDialog, useLeaveGuard } from './leave-guard';
+import { SpeechSettings } from './speech-settings';
 
 const themes: readonly Theme[] = ['white', 'sepia', 'dark'];
 const locales: readonly Locale[] = ['zh', 'en', 'fr'];
@@ -56,13 +57,14 @@ export function App({ runtime }: { readonly runtime: RuntimeAdapter }) {
         <p className="eyebrow">{text.eyebrow}</p><h1>{text.modules[page]}</h1>
         <section className="page-content" aria-labelledby="page-title">
           <span className="page-index" aria-hidden="true">{String(page + 1).padStart(2, '0')}</span>
-          <h2 id="page-title">{text.title}</h2><p className="intro">{text.intro}</p>
+          <h2 id="page-title">{page === 7 ? text.settingsTitle : text.title}</h2><p className="intro">{page === 7 ? text.settingsIntro : text.intro}</p>
           {page === 0 ? <DictionaryPanel runtime={runtime} text={text.dictionary} notebookText={notebookText} version={notebook.version}
             onCollect={(result) => guard.request(() => notebook.collect(result))}
             onOpen={(record) => guard.request(() => notebook.open(record))}
             beforeSearch={(action) => guard.request(() => { notebook.clear(); action(); })} /> : page === 2 ?
             <NotebookPanel runtime={runtime} version={notebook.version} text={notebookText}
-              onOpen={(record) => guard.request(() => notebook.open(record))} /> :
+              onOpen={(record) => guard.request(() => notebook.open(record))} /> : page === 7 ?
+            <SpeechSettings runtime={runtime} locale={locale} /> :
             <div className="empty-state"><p>{text.pending[page]}</p><small>{text.scaffold}</small></div>}
           <VocabularyEditor notebook={notebook} text={notebookText} viewExisting={() => {
             if (notebook.existing) { const record = notebook.existing; guard.request(() => notebook.open(record)); }

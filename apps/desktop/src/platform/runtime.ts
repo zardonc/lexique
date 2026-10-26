@@ -5,6 +5,8 @@ import { recordSchema, saveRequestSchema, saveResultSchema, sortSchema } from '.
 import type { SaveRequest, SaveResult, VocabularyRecord, VocabularySort } from './vocabulary';
 import { dictionarySchema } from './dictionary';
 import type { DictionaryLookup } from './dictionary';
+import { speechPreferencesSchema } from './speech';
+import type { SpeechPreferences } from './speech';
 
 const runtimeStatusSchema = z.object({
   version: z.string().min(1),
@@ -21,6 +23,7 @@ export interface RuntimeAdapter {
   readonly listVocabulary: (query: string, sort: VocabularySort) => Promise<readonly VocabularyRecord[] | null>;
   readonly saveVocabulary: (request: SaveRequest) => Promise<SaveResult | null>;
   readonly vocabularySort: (sort?: VocabularySort) => Promise<VocabularySort | null>;
+  readonly speechPreferences: (preferences?: SpeechPreferences) => Promise<SpeechPreferences | null>;
   readonly onCloseRequested: (callback: () => void) => Promise<() => void>;
   readonly finishClose: () => Promise<void>;
 }
@@ -53,6 +56,12 @@ export const runtime: RuntimeAdapter = {
   async onCloseRequested(callback) {
     if (!isTauri()) return () => {};
     return listen('lexique-close-requested', callback);
+  },
+  async speechPreferences(preferences) {
+    if (!isTauri()) return null;
+    return speechPreferencesSchema.parse(await invoke('speech_preferences', {
+      preferences: preferences === undefined ? null : speechPreferencesSchema.parse(preferences),
+    }));
   },
   async finishClose() {
     if (isTauri()) await invoke('finish_close');

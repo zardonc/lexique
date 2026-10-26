@@ -6,7 +6,8 @@ use tauri::{Emitter, Manager, State};
 
 mod vocabulary;
 use vocabulary::{
-    DatabasePath, finish_close, vocabulary_find, vocabulary_list, vocabulary_save, vocabulary_sort,
+    DatabasePath, finish_close, speech_preferences, vocabulary_find, vocabulary_list,
+    vocabulary_save, vocabulary_sort,
 };
 
 mod status;
@@ -75,6 +76,7 @@ pub fn run() {
             vocabulary_list,
             vocabulary_save,
             vocabulary_sort,
+            speech_preferences,
             finish_close
         ])
         .run(tauri::generate_context!())

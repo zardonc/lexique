@@ -80,6 +80,13 @@ button:disabled { cursor: default; opacity: 0.6; }
 .vocabulary-list strong { font-family: Georgia, serif; font-size: 22px; font-weight: 400; }
 .vocabulary-list span { font-size: 13px; color: var(--muted); }
 .note-excerpt { white-space: pre-wrap; max-height: 3.5em; overflow: hidden; }
+.speech-settings { border-top: 1px solid var(--line); padding-top: 20px; }
+.speech-settings h3 { margin: 0; font-size: 18px; }
+.speech-settings p { font-size: 13px; color: var(--muted); line-height: 1.8; }
+.speech-options { display: flex; flex-wrap: wrap; gap: 20px; }
+.speech-options label { display: grid; gap: 10px; font-size: 13px; }
+.speech-options select { max-width: 100%; min-width: 130px; }
+.speech-settings [role='alert'] { overflow-wrap: anywhere; font-size: 13px; }
 dialog { max-width: min(520px, 90vw); border: 1px solid var(--line); border-radius: 6px; padding: 24px; color: var(--ink); background: var(--surface); }
 dialog::backdrop { background: #0006; }
 @media (max-width: 720px) {

@@ -179,6 +179,24 @@ pub async fn vocabulary_sort(
 }
 
 #[tauri::command]
+pub async fn speech_preferences(
+    path: State<'_, DatabasePath>,
+    preferences: Option<lexique_storage::SpeechPreferences>,
+) -> Result<lexique_storage::SpeechPreferences, String> {
+    let path = DatabasePath(path.0.clone());
+    tauri::async_runtime::spawn_blocking(move || {
+        let connection = open(&path)?;
+        if let Some(preferences) = preferences {
+            lexique_storage::set_speech_preferences(&connection, &preferences)
+                .map_err(|error| error.to_string())?;
+        }
+        lexique_storage::speech_preferences(&connection).map_err(|error| error.to_string())
+    })
+    .await
+    .map_err(|error| format!("Speech preference task failed: {error}"))?
+}
+
+#[tauri::command]
 pub fn finish_close(app: tauri::AppHandle) -> Result<(), String> {
     app.get_webview_window("main")
         .ok_or("Main window unavailable")?

@@ -5,6 +5,8 @@ use rusqlite::Connection;
 
 mod vocabulary;
 pub use vocabulary::*;
+mod speech;
+pub use speech::*;
 
 const INITIAL_SCHEMA: &str = include_str!("../migrations/0001_initial.sql");
 

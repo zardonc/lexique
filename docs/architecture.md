@@ -48,6 +48,8 @@ M1 请求由 Rust 严格反序列化，前端请求 / 响应由 Zod 校验。标
 
 ## 配置与发行
 
+语音偏好通过受限 `speech_preferences` 命令读取／保存，沿用 `app_metadata` 中单条 JSON；不提高 schema 版本。Rust 枚举及前端 Zod 严格限制声线 `siwis`／`tom` 和语速 `normal`／`slow`。未知字段、非法响应和损坏配置保持错误，不覆盖为默认值；只有配置不存在时使用女声／正常默认值。当前没有合成或播放命令，偏好不改变学习进度或既有音频。
+
 Windows 的 `tauri.windows.conf.json` 通过 Tauri `appDirectoriesOverride` 将五类应用目录定位到可执行文件旁的 `Lexique-data/`；WebView 未设置独立 `dataDirectory`，由框架继承被覆盖的 local-data 路径。入口在启动框架线程前将子进程继承的 `TEMP` / `TMP` 定位到同一目录下的 `temp/`，并固定 `WEBVIEW2_USER_DATA_FOLDER` 到 `webview/EBWebView/`，避免继承的外部路径覆盖框架设置。用户库、WebView profile、配置、日志和临时文件因此随目录移动，不依赖启动工作目录。不可写时保留失败，不回退系统目录；原 AppData 内容保持原样。操作系统自身的事件日志、预取和安全软件记录不由应用控制。
 
 `pnpm desktop:portable` 构建 Windows x64 release 后，仅打包可执行文件、已准入词典资源、许可与使用说明，生成独立 ZIP 和 SHA-256 清单，并逐项回读校验压缩包。新交付必须使用空路径；不打包运行时 `Lexique-data/`，也不覆盖旧交付。当前仍依赖系统已有 WebView2，不启动安装器或首次联网下载；这不等于缺运行依赖机器、签名或完整资源发行已验收。

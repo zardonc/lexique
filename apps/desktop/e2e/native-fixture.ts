@@ -33,7 +33,12 @@ export async function nativeFixture(page: Page, responses: Readonly<Record<strin
     const indexes: Record<string, number> = {};
     window.testNative = { calls: [], close: () => { for (const callback of callbacks.values()) callback({ payload: null }); } };
     const defaults: Record<string, unknown> = { runtime_status: { version: '0.1.0', schemaVersion: 2, storage: 'sqlite' },
-      dictionary_lookup: dictionary, vocabulary_find: null, vocabulary_list: [], vocabulary_sort: 'updated-desc', finish_close: null };
+      dictionary_lookup: dictionary, vocabulary_find: null, vocabulary_list: [], vocabulary_sort: 'updated-desc', finish_close: null,
+      speech_preferences: { voice: 'siwis', speed: 'normal' } };
+    function defaultReply(command: string, args?: Record<string, unknown>) {
+      if (command === 'speech_preferences' && args?.preferences) defaults[command] = args.preferences;
+      return command === 'vocabulary_sort' ? args?.sort ?? defaults[command] : defaults[command];
+    }
     Object.defineProperty(window, 'isTauri', { value: true });
     Object.defineProperty(window, '__TAURI_INTERNALS__', { value: {
       transformCallback: (callback: (event: unknown) => void) => { const id = callbacks.size + 1; callbacks.set(id, callback); return id; },
@@ -43,7 +48,7 @@ export async function nativeFixture(page: Page, responses: Readonly<Record<strin
         if (command === 'plugin:event|listen') return 1;
         if (command === 'plugin:event|unlisten') return null;
         const queue = responses[command];
-        if (!queue) return command === 'vocabulary_sort' ? args?.sort ?? defaults[command] : defaults[command];
+        if (!queue) return defaultReply(command, args);
         const index = indexes[command] ?? 0;
         indexes[command] = index + 1;
         const response = queue[Math.min(index, queue.length - 1)];
