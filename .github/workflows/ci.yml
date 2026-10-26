@@ -58,6 +58,7 @@ jobs:
             target/wasm32-unknown-unknown/release/lexique_core.wasm
             target/issue-13/conformance.json
             resources/fsrs-6.6.2/
+            resources/libm-0.2.16/
             docs/evidence/issue-13/dependencies.txt
 
   dictionary-resource:

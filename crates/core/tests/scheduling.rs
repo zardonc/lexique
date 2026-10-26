@@ -102,3 +102,25 @@ fn malformed_or_oversized_json_remains_an_explicit_failure() {
         assert!(result["Err"].is_string());
     }
 }
+
+#[test]
+fn replay_rejects_the_unpatched_platform_math_revision() {
+    let mut request = json!({
+        "card": {"phase": "new", "memory": null, "last_review_at": null, "due_at": null},
+        "rating": "easy", "now": 1792929600_i64, "timezone": "Europe/Paris"
+    });
+    let result: Value = serde_json::from_str(&schedule_json(&request.to_string())).unwrap();
+    assert_eq!(
+        result["Ok"]["model"]["version"],
+        "fsrs-rs/6.6.2+libm-0.2.16"
+    );
+    request["model"] = result["Ok"]["model"].clone();
+    request["model"]["version"] = json!("fsrs-rs/6.6.2");
+    let rejected: Value = serde_json::from_str(&schedule_json(&request.to_string())).unwrap();
+    assert!(
+        rejected["Err"]
+            .as_str()
+            .unwrap()
+            .contains("unsupported historical model")
+    );
+}

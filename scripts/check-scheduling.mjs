@@ -107,6 +107,7 @@ const nativeBytes = await readFile(nativePath);
 const artifact = bytes => ({ bytes: bytes.length, gzipBytes: gzipSync(bytes).length, sha256: createHash('sha256').update(bytes).digest('hex') });
 const report = {
   admission: scheduleMismatches.length === 0 ? 'passed' : 'blocked',
+  model: outputs.find(output => output.Ok).Ok.model.version,
   platform: process.platform, arch: process.arch, node: process.version,
   fixedVectors: vectors.length, calibrationVectors: requests.length - vectors.length,
   maxAbsoluteError, maxRelativeError,

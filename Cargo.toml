@@ -1,6 +1,10 @@
 [workspace]
 members = ["crates/core", "crates/storage", "crates/dictionary", "apps/desktop/src-tauri"]
+exclude = ["vendor/fsrs-6.6.2"]
 resolver = "3"
+
+[patch.crates-io]
+fsrs = { path = "vendor/fsrs-6.6.2" }
 
 [workspace.package]
 version = "0.1.0"

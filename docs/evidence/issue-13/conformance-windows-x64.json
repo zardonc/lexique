@@ -1,12 +1,13 @@
 {
-  "admission": "blocked",
+  "admission": "passed",
+  "model": "fsrs-rs/6.6.2+libm-0.2.16",
   "platform": "win32",
   "arch": "x64",
   "node": "v24.22.1",
   "fixedVectors": 71,
   "calibrationVectors": 4096,
-  "maxAbsoluteError": 0.037000000000261934,
-  "maxRelativeError": 0.000001176814165593972,
+  "maxAbsoluteError": 0,
+  "maxRelativeError": 0,
   "tolerance": {
     "absolute": 0.000001,
     "relative": 0.000002
@@ -22,221 +23,16 @@
     "retention_percent",
     "timezone_database"
   ],
-  "fixtureSha256": "184e37f65b4ec4717254b5e583c2fca4d700f03a1c431a5dd203cef67f3e3707",
+  "fixtureSha256": "1223c4f28a931e554507f15f2549ae29623664096d7bb6c63f1b8bffabc9929f",
   "native": {
-    "bytes": 1544192,
-    "gzipBytes": 292335,
-    "sha256": "c3b2b3fe6018f9cbd3121e78fe148add5fcaa9faf4b76fe366c9d1228c79ecad"
+    "bytes": 1547776,
+    "gzipBytes": 294610,
+    "sha256": "5aff769d2673cc5a946a2f9e908a117975d2c494c650f75c6fb1ebd29607a1f3"
   },
   "wasm": {
-    "bytes": 1109194,
-    "gzipBytes": 204994,
-    "sha256": "d1dac0391d56aa12d370db1f77c681530a385271c23cbf990dc0ca4d8f5b22f0"
+    "bytes": 1109906,
+    "gzipBytes": 205917,
+    "sha256": "ea274c914b883030232706a61c00bf57661699ea173941a426afb8f6c08cf547"
   },
-  "scheduleMismatches": [
-    {
-      "name": "regression-half-day-hard-native-wasm",
-      "request": {
-        "card": {
-          "phase": "review",
-          "memory": {
-            "stability": 1039.7044445777535,
-            "difficulty": 4.816997789079323
-          },
-          "last_review_at": 1781179200,
-          "due_at": 1792929600
-        },
-        "rating": "hard",
-        "now": 1792929600,
-        "timezone": "Europe/Paris",
-        "retention_percent": 70
-      },
-      "native": {
-        "card": {
-          "phase": "review",
-          "memory": {
-            "stability": 1156.5043,
-            "difficulty": 6.5445104
-          },
-          "last_review_at": 1792929600,
-          "due_at": 2721006000
-        },
-        "elapsed_days": 136,
-        "step_seconds": null,
-        "interval_days": 10742,
-        "model": {
-          "version": "fsrs-rs/6.6.2",
-          "parameters": [
-            0.212,
-            1.2931,
-            2.3065,
-            8.2956,
-            6.4133,
-            0.8334,
-            3.0194,
-            0.001,
-            1.8722,
-            0.1666,
-            0.796,
-            1.4835,
-            0.0614,
-            0.2629,
-            1.6483,
-            0.6014,
-            1.8729,
-            0.5425,
-            0.0912,
-            0.0658,
-            0.1542
-          ]
-        },
-        "retention_percent": 70,
-        "timezone_database": "2025b"
-      },
-      "wasm": {
-        "card": {
-          "phase": "review",
-          "memory": {
-            "stability": 1156.5032,
-            "difficulty": 6.5445104
-          },
-          "last_review_at": 1792929600,
-          "due_at": 2720919600
-        },
-        "elapsed_days": 136,
-        "step_seconds": null,
-        "interval_days": 10741,
-        "model": {
-          "version": "fsrs-rs/6.6.2",
-          "parameters": [
-            0.212,
-            1.2931,
-            2.3065,
-            8.2956,
-            6.4133,
-            0.8334,
-            3.0194,
-            0.001,
-            1.8722,
-            0.1666,
-            0.796,
-            1.4835,
-            0.0614,
-            0.2629,
-            1.6483,
-            0.6014,
-            1.8729,
-            0.5425,
-            0.0912,
-            0.0658,
-            0.1542
-          ]
-        },
-        "retention_percent": 70,
-        "timezone_database": "2025b"
-      }
-    },
-    {
-      "name": "regression-half-day-good-native-wasm",
-      "request": {
-        "card": {
-          "phase": "review",
-          "memory": {
-            "stability": 837.2720678560436,
-            "difficulty": 2.0614781198091805
-          },
-          "last_review_at": 1735473600,
-          "due_at": 1792929600
-        },
-        "rating": "good",
-        "now": 1792929600,
-        "timezone": "Europe/Paris",
-        "retention_percent": 92
-      },
-      "native": {
-        "card": {
-          "phase": "review",
-          "memory": {
-            "stability": 1946.9675,
-            "difficulty": 2.054645
-          },
-          "last_review_at": 1792929600,
-          "due_at": 1916013600
-        },
-        "elapsed_days": 665,
-        "step_seconds": null,
-        "interval_days": 1425,
-        "model": {
-          "version": "fsrs-rs/6.6.2",
-          "parameters": [
-            0.212,
-            1.2931,
-            2.3065,
-            8.2956,
-            6.4133,
-            0.8334,
-            3.0194,
-            0.001,
-            1.8722,
-            0.1666,
-            0.796,
-            1.4835,
-            0.0614,
-            0.2629,
-            1.6483,
-            0.6014,
-            1.8729,
-            0.5425,
-            0.0912,
-            0.0658,
-            0.1542
-          ]
-        },
-        "retention_percent": 92,
-        "timezone_database": "2025b"
-      },
-      "wasm": {
-        "card": {
-          "phase": "review",
-          "memory": {
-            "stability": 1946.9673,
-            "difficulty": 2.054645
-          },
-          "last_review_at": 1792929600,
-          "due_at": 1915927200
-        },
-        "elapsed_days": 665,
-        "step_seconds": null,
-        "interval_days": 1424,
-        "model": {
-          "version": "fsrs-rs/6.6.2",
-          "parameters": [
-            0.212,
-            1.2931,
-            2.3065,
-            8.2956,
-            6.4133,
-            0.8334,
-            3.0194,
-            0.001,
-            1.8722,
-            0.1666,
-            0.796,
-            1.4835,
-            0.0614,
-            0.2629,
-            1.6483,
-            0.6014,
-            1.8729,
-            0.5425,
-            0.0912,
-            0.0658,
-            0.1542
-          ]
-        },
-        "retention_percent": 92,
-        "timezone_database": "2025b"
-      }
-    }
-  ]
+  "scheduleMismatches": []
 }

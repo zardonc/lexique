@@ -3,6 +3,8 @@ use chrono_tz::Tz;
 use fsrs::{DEFAULT_PARAMETERS, FSRS, MemoryState};
 use serde::{Deserialize, Serialize};
 
+const MODEL_VERSION: &str = "fsrs-rs/6.6.2+libm-0.2.16";
+
 #[derive(Debug, Clone, Copy, Deserialize, Serialize, PartialEq, Eq)]
 #[serde(rename_all = "snake_case")]
 pub enum Phase {
@@ -48,7 +50,7 @@ pub struct Model {
 impl Default for Model {
     fn default() -> Self {
         Self {
-            version: "fsrs-rs/6.6.2".into(),
+            version: MODEL_VERSION.into(),
             parameters: DEFAULT_PARAMETERS.to_vec(),
         }
     }
@@ -105,7 +107,7 @@ fn learning_day(timestamp: i64, zone: Tz) -> Result<NaiveDate, String> {
     }
 }
 
-/// Admission candidate only: #13 records native/WASM day-rounding divergence.
+/// Uses the recorded portable-math revision for reproducible scheduling.
 pub fn schedule(request: ScheduleRequest) -> Result<Scheduled, String> {
     if request.timezone_database != chrono_tz::IANA_TZDB_VERSION {
         return Err("unsupported timezone database; use the recorded core build for replay".into());
@@ -113,7 +115,7 @@ pub fn schedule(request: ScheduleRequest) -> Result<Scheduled, String> {
     if !(70..=99).contains(&request.retention_percent) {
         return Err("retention must be an integer percentage between 70 and 99".into());
     }
-    if request.model.version != "fsrs-rs/6.6.2"
+    if request.model.version != MODEL_VERSION
         || request.model.parameters.as_slice() != DEFAULT_PARAMETERS
     {
         return Err("unsupported historical model version or parameters".into());

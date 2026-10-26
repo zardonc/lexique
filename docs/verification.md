@@ -148,3 +148,11 @@ SQLite 集成测试的本机预编译未通过：环境缺少 MSVC `link.exe`，
 - Windows ARM64 workspace 编译通过，尚无实机运行证据。本机 Python Store 别名失效导致首次资源准备 / workspace check 失败；仅在验证进程中将已有 Python 3.12.13 目录加入 PATH 后重跑通过，没有修改全局设置。首次 WASM 构建暴露上游随机数依赖限制，最终使用其明确报错的 unsupported 后端；实际产物没有宿主导入。
 
 未接入学习数据存储、评分 UI 或 TTS，未更改数据库 schema。#13 保持未通过，依赖它的后续集成继续阻塞；没有换库、补丁替换上游算法或改变已确认取整规则。TTS 仍由 #14 单独准入，生成后需人工试听校验。macOS 实机、Windows ARM64 实机、远端 CI、完整离线资源及发行仍未验证；本次不据此关闭 M2 或解除其他里程碑门槛。
+
+### Issue #13 数学兼容修复
+
+日期：2026-10-26。本节更新上段历史阻塞结论。优先检查依赖与开发环境后，以零第三方依赖的最小程序确认 Windows / WASM 的标准 `exp` / `powf` 相差 1 ULP；固定包哈希、隔离 target 重建、Debug / Release 及 Rust 1.91.1 交叉检查没有发现应用代码、缓存或配置导致偏差的证据。完整假设、探针与原失败结果见 [诊断](evidence/issue-13/math-diagnosis.md)。
+
+保留 FSRS 6.6.2 原公式与官方参数，显式 vendored 补丁只将标量调度路径的数学函数统一为固定 libm 0.2.16，关闭其默认 features；源码审计仅 manifest / model.rs 与官方包不同。模型标识为 `fsrs-rs/6.6.2+libm-0.2.16`，新增回归拒绝未打补丁的历史版本。当前 Windows x64 release 原生 / 实际 WASM 的 71+4,096 向量通过、记忆差为零，原两条反例继续要求整数排程严格相等。Rust 格式、workspace Clippy、预编译后 21 项 Rust 测试和 Windows ARM64 workspace 编译通过。
+
+本次未改 UI，未重跑前端 / E2E 或重打 portable；macOS / ARM64 实机、远端 CI 仍未运行。没有修改用户数据、迁移存储或集成 TTS；#14 的语音准入及人工试听仍独立保留，不能据此宣称完整 M2 通过。上游标准数学的独立诊断命令仍在本机退出 1，这是刻意保留的原因复现，正式 `pnpm test:scheduling` 已通过。
