@@ -1,0 +1,92 @@
+{
+  "date": "2026-10-26",
+  "status": "technical checks passed; pending final human listening; not admitted to default desktop package",
+  "artifact": ".tooling/issue-14/Lexique-speech-probe-windows-x64-r2.zip",
+  "sha256": "8bda20bf34c414352b5bed10b76c14965d33cf2a5eacb30839e8a2fffac030bf",
+  "archive_bytes": 183781200,
+  "archive_decimal_mb": 183.7812,
+  "archive_mib": 175.2674102783203,
+  "installed_logical_bytes": 298248751,
+  "original_download_materials_bytes": 215446330,
+  "components": {
+    "assets": {
+      "installed_bytes": 120575669,
+      "compressed_data_bytes": 88979181,
+      "files": 2
+    },
+    "probe-evidence-and-manifest": {
+      "installed_bytes": 464692,
+      "compressed_data_bytes": 130916,
+      "files": 12
+    },
+    "notice": {
+      "installed_bytes": 26400,
+      "compressed_data_bytes": 9847,
+      "files": 4
+    },
+    "prerequisite": {
+      "installed_bytes": 25635768,
+      "compressed_data_bytes": 25385516,
+      "files": 1
+    },
+    "provenance": {
+      "installed_bytes": 523425,
+      "compressed_data_bytes": 482914,
+      "files": 1
+    },
+    "runtime": {
+      "installed_bytes": 130972547,
+      "compressed_data_bytes": 48894724,
+      "files": 2040
+    },
+    "samples": {
+      "installed_bytes": 590872,
+      "compressed_data_bytes": 498268,
+      "files": 18
+    },
+    "source": {
+      "installed_bytes": 19459378,
+      "compressed_data_bytes": 18976994,
+      "files": 4
+    }
+  },
+  "zip_headers_and_directory_bytes": 422840,
+  "performance": {
+    "load_seconds": 1.2699532999977237,
+    "first_complete_wav_seconds": 0.3849754999973811,
+    "min_generation_seconds": 0.1119944999954896,
+    "max_generation_seconds": 0.3942380999942543,
+    "peak_working_set_bytes": 271093760,
+    "streaming_first_chunk": "not measured; batch WAV API"
+  },
+  "hardware": {
+    "cpu": "AMD Ryzen 9 8945HS w/ Radeon 780M Graphics",
+    "logical_cpus": 16,
+    "physical_memory_bytes": 33555279872,
+    "os": "Windows-11-10.0.26300-SP0"
+  },
+  "vc_runtime": {
+    "offline_installer_version": "14.44.35211.0",
+    "installer_bytes": 25635768,
+    "signature": "Valid; Microsoft Corporation",
+    "clean_machine_installation": "not tested; existing system runtime used"
+  },
+  "desktop_comparison": {
+    "existing_archive": "target/portable/Lexique-0.1.0-windows-x64-portable.zip",
+    "existing_archive_bytes": 4972902,
+    "sum_of_separate_downloads_bytes": 188754102,
+    "meaning": "arithmetic only, not an integrated desktop release"
+  },
+  "webview2": "Not used by standalone speech probe. Desktop clean-machine offline installer size and combined total not measured.",
+  "thresholds": "Under 200 MB for this speech probe only; misses target below 100 MB; not an M5 package-size acceptance.",
+  "quality": {
+    "initial_user_feedback": "voice can continue evaluation; fix y before acceptance",
+    "y_override": "exact lowercase vocabulary y -> /i/; original frontend output retained",
+    "final_listening": "pending"
+  },
+  "final_archive_validation": {
+    "crc": "passed",
+    "extracted_inventory_sha256": "all files passed",
+    "actual_extracted_runtime": "17 exact WAV hashes matched under network denial; no cached audio read"
+  }
+}
