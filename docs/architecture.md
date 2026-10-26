@@ -6,7 +6,7 @@ React / TypeScript
         ├─ 浏览器：明确报告预览，不冒充本地存储
         └─ 桌面：Tauri invoke → Rust → SQLite
 
-Rust core → wasm32-unknown-unknown（当前仅 schema_version ABI）
+Rust core → 同一 FSRS 调度入口 → 原生 / wasm32-unknown-unknown
 Rust storage → 注入 SQLite connection → 事务迁移
 ```
 
@@ -19,7 +19,7 @@ Rust storage → 注入 SQLite connection → 事务迁移
 | `apps/desktop/src-tauri` | 平台路径、应用启动、命令装配 | UI 状态与未授权的远程内容 |
 | `crates/storage` | SQLite 迁移、生词记录、幂等保存与版本冲突、搜索排序 | 字典资源更新覆盖用户库 |
 | `crates/dictionary` | 固定资源 SHA-256 校验、只读内存快照查询、TEI 解析为纯文本 | 用户库、网络、原始 HTML 执行 |
-| `crates/core` | 可移植 Rust / WASM 入口 | 文件系统、Tauri、SQLite、令牌 |
+| `crates/core` | 可移植 Rust / WASM、固定 FSRS 与日历学习日调度 | 文件系统、Tauri、SQLite、令牌 |
 
 首个迁移创建 `app_metadata`；第二个迁移增量创建生词记录与已提交保存操作。NFC 标准词头唯一约束与立即事务防止并发副本；操作编号绑定原请求，在响应丢失后返回当前记录且不重放写入；修订号检查和更新在同一事务中完成。收藏时摘要与来源为只读 JSON，独立笔记另列保存。只保存已提交操作，不持久化草稿。用户库与资源库独立；分类、卡片、进度、日志和同步尚未固化。遇到更高 schema 立即报错，禁止降级重建；迁移失败回滚且不提高版本。
 
@@ -32,6 +32,8 @@ M1 请求由 Rust 严格反序列化，前端请求 / 响应由 Zod 校验。标
 原生构建用 Python 标准库从已准入源包生成 SQLite，并附带来源、原始源包和许可；构建前验证已有生成物，损坏则失败。运行时由平台层解析 `dictionary/dictionary.sqlite3`，每次查询校验构建时固定的哈希，再反序列化同一批字节为只读 SQLite 快照，避免资源被并发替换时读取未验证内容。`entries.key` 采用二进制完全匹配与参数化查询，同键记录按源序排列；TEI 仅解析为 React 文本，不执行标记。缺失、损坏、查询失败与无结果分别返回。用户库路径、schema 及迁移完全独立。
 
 ## 后续模块放置
+
+#13 在共享核心提供准入候选 `scheduling::schedule` 及严格 JSON 入口 `schedule_json`，接收卡片、评分、Unix 秒时间与 IANA 时区，不读取设备时钟。输出记忆状态、阶段、完整步骤秒数或取整天数、绝对到期时间、经过学习日、模型参数和时区库版本；调用方须保存完整请求和结果作为历史，不以最新设置重建旧请求。当前实际 native / WASM 存在一天排程差异，准入 **blocked**，不能接入正式评分链路。此票不迁移用户库、不添加 IPC 或评分 UI。原生 CLI 与 WASM 的有界输入缓冲区调用同一 JSON 入口；缓冲区 ABI 为同步调用，下一次请求使旧指针失效。详见 [#13 验证](evidence/issue-13/README.md)。
 
 | 能力 | 建议实现位置 | 先决条件 |
 | --- | --- | --- |

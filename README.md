@@ -43,6 +43,8 @@ pnpm rust:test:build      # 先编译测试，避免将首次编译计入运行�
 pnpm test:rust            # 真正执行后端测试，硬性 60 秒超时并终止进程树
 pnpm wasm:build
 node scripts/check-wasm.mjs
+pnpm scheduling:build     # 编译同一调度入口的原生 CLI 与 WASM，编译不计入执行预算
+pnpm test:scheduling      # 固定向量 + 4,096 个校准向量，实际执行并严格比较日期 / 阶段
 pnpm desktop:build       # 默认 Cargo --locked；仅构建原生可执行文件，暂未开启安装包与签名
 pnpm desktop:portable    # Windows x64 release ZIP，免安装，解压后运行 Lexique.exe
 pnpm test:tooling        # 构建参数传递与隔离打包回归，不编译原生程序
@@ -66,7 +68,9 @@ E2E 结束后在 `apps/desktop/test-results/` 产生桌面 / 手机截图，在 
 
 M1 生词本支持同词一份的逻辑引用、收藏时只读摘要与独立纯文本笔记。点击“加入生词本”后需明确保存；笔记可为空、可清空，最多 20,000 个 Unicode 标量（组合重音分别计数）。查询结果、摘要与来源不能由笔记编辑覆盖。支持搜索词头 / 摘要 / 笔记，以及词头、创建时间、修改时间的双向排序和偏好恢复；保存失败保留输入，旧版本冲突拒绝覆盖。Windows 正常关闭经过保存 / 放弃 / 继续编辑选择；已保存记录可离线重启恢复。验证与平台限制见 [M1 证据](docs/evidence/issue-10/README.md)；必须在 macOS 执行的项目统一记录为 [blocked](docs/macos-m1-blockers.md)。
 
-完整词典 / MDX / MDD、完整变位、离线 TTS、语法笔记与分类、FSRS、Google OAuth / Sheets、翻译与 AI、练习、浏览器复习与 BFF 尚未实现。WASM 当前只导出版本查询，不能算作 FSRS 或浏览器复习验收。原型的演示数据、密钥表单和伪同步没有被搬进生产代码。
+共享核心已建立固定 `fsrs-rs 6.6.2`、初学 / 重学步骤及原生 / 实际 WASM 对照，但 **#13 准入 blocked**：合法输入存在跨端取整后相差一天的反例，`pnpm test:scheduling` 会保留报告并失败。复验、许可、误差与限制见 [#13 证据](docs/evidence/issue-13/README.md)。候选尚未接入用户库或评分界面，也不是浏览器复习产品。
+
+完整词典 / MDX / MDD、完整变位、离线 TTS、语法笔记与分类、持久化复习、Google OAuth / Sheets、翻译与 AI、练习、浏览器复习与 BFF 尚未实现。原型的演示数据、密钥表单和伪同步没有被搬进生产代码。
 
 仓库包含已准入的 FreeDict 法中开发小样源包及其 CC BY-SA 3.0 许可；尚无正式发行的完整默认资源、模型、个人学习数据、服务凭据或 OAuth 配置。项目自有源码采用 [MIT](LICENSE)；第三方组件、数据、模型和声线分别遵守其上游许可，其他默认资源尚需逐项准入。已确认的开发链路、资源候选及验证门槛见 [开发准备清单](docs/development-readiness.md)。
 

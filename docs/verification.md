@@ -138,3 +138,13 @@ SQLite 集成测试的本机预编译未通过：环境缺少 MSVC `link.exe`，
 - macOS 专属编译、菜单 Quit / Cmd+Q / Dock Quit 及原生数据恢复集中标记为 **blocked — 等待 macOS 执行环境**。退出矩阵、已知 Dock Quit 缺陷与解除阻塞条件见 [macOS 清单](macos-m1-blockers.md)。Windows 结果不替代其验收。
 
 本轮未推送、未运行远端 CI；没有验证 macOS / Windows ARM64 实机、缺 WebView2 干净机器、签名或正式发行。验证仅使用隔离合成数据，原有未提交文档修改保持原样。
+
+## M2 固定 FSRS 与原生 / 实际 WASM（issue #13）
+
+日期：2026-10-26。共享核心候选使用固定 `fsrs-rs 6.6.2` 官方默认参数执行四档评分、初学 / 重学步骤与日历排程，不含优化或间隔扰动。Windows x64 原生 CLI 和无宿主导入的实际 WASM 通过同一公开入口执行，最终一致性准入 **blocked**：两个合法反例出现一天排程差异。来源、许可、完整命令、输入契约、误差与产物体积见 [#13 证据](evidence/issue-13/README.md)。
+
+- 首轮 69 个固定向量及 4,096 个固定种子校准向量通过；独立审查扩大输入后发现浮点误差跨过取整边界。反例已加入固定集，最终 71+4,096 对照有 2 项严格排程不一致，`pnpm test:scheduling` 退出 1 并保留完整报告；没有放宽日期 / 整数间隔比较或将失败改为通过。
+- 5 项核心集成测试、既有 15 项 Rust 测试通过；先 `pnpm rust:test:build`，再执行 `pnpm test:rust`，硬限仍为 60 秒。lint / typecheck / build、Rust 格式、workspace check / Clippy、资源 7 项、工具 7 项及 Edge E2E 13 项均通过。
+- Windows ARM64 workspace 编译通过，尚无实机运行证据。本机 Python Store 别名失效导致首次资源准备 / workspace check 失败；仅在验证进程中将已有 Python 3.12.13 目录加入 PATH 后重跑通过，没有修改全局设置。首次 WASM 构建暴露上游随机数依赖限制，最终使用其明确报错的 unsupported 后端；实际产物没有宿主导入。
+
+未接入学习数据存储、评分 UI 或 TTS，未更改数据库 schema。#13 保持未通过，依赖它的后续集成继续阻塞；没有换库、补丁替换上游算法或改变已确认取整规则。TTS 仍由 #14 单独准入，生成后需人工试听校验。macOS 实机、Windows ARM64 实机、远端 CI、完整离线资源及发行仍未验证；本次不据此关闭 M2 或解除其他里程碑门槛。

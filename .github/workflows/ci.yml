@@ -44,14 +44,21 @@ jobs:
       - run: cargo fmt --all --check
       - run: python -X utf8 scripts/dictionary_sample.py prepare target/desktop-dictionary-sample
       - run: cargo clippy --locked -p lexique-core -p lexique-storage -p lexique-dictionary --all-targets -- -D warnings
-      - run: cargo test --locked -p lexique-storage -p lexique-dictionary --no-run
+      - run: cargo test --locked -p lexique-core -p lexique-storage -p lexique-dictionary --no-run
       - run: node scripts/test-rust.mjs
       - run: cargo build --locked --release -p lexique-core --target wasm32-unknown-unknown
       - run: node scripts/check-wasm.mjs
+      - run: cargo build --locked --release -p lexique-core --example schedule
+      - run: node scripts/check-scheduling.mjs
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: core-wasm
-          path: target/wasm32-unknown-unknown/release/lexique_core.wasm
+          path: |
+            target/wasm32-unknown-unknown/release/lexique_core.wasm
+            target/issue-13/conformance.json
+            resources/fsrs-6.6.2/
+            docs/evidence/issue-13/dependencies.txt
 
   dictionary-resource:
     strategy:

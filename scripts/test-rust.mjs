@@ -2,7 +2,7 @@ import { spawn } from 'node:child_process';
 
 const TIMEOUT_MS = 60_000;
 const IS_WINDOWS = process.platform === 'win32';
-const child = spawn('cargo', ['test', '--locked', '-p', 'lexique-storage', '-p', 'lexique-dictionary'], {
+const child = spawn('cargo', ['test', '--locked', '-p', 'lexique-core', '-p', 'lexique-storage', '-p', 'lexique-dictionary'], {
   stdio: 'inherit',
   detached: !IS_WINDOWS,
 });
