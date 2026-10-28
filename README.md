@@ -52,6 +52,8 @@ pnpm test:tooling        # 构建参数传递与隔离打包回归，不编译�
 
 已有 portable 交付会被保留；再次交付可运行 `pnpm desktop:portable --output-dir <新目录>`。构建入口会在最终进程边界追加 Cargo 的 `--locked`，无需经 pnpm 手动传递分隔符。
 
+Windows ARM64 开发样例可在已配置该目标工具链时先运行 `node scripts/build-desktop.mjs --no-bundle --target aarch64-pc-windows-msvc`，再运行 `python -X utf8 scripts/package_portable.py --architecture arm64`。打包器检查可执行文件的 PE 架构并保留已有交付；它不构成 ARM64 实机或正式发行验收。
+
 便携交付默认位于 `target/portable/Lexique-0.1.0-windows-x64-portable.zip`，附带 `.zip.sha256`。解压整个 ZIP 到可写目录，保持 `dictionary/` 与 `Lexique.exe` 同级；首次启动生成 `Lexique-data/`，退出后可将整个目录一起移动或备份。更新时保留 `Lexique-data/`。打包命令拒绝覆盖同名交付目录或 ZIP；重复交付使用新的 `--output-dir`，保留使用中的旧目录。CI 产物 `windows-x64-portable` 提供相同布局。
 
 当前便携包是未签名的 Windows 11 x64 开发小样，需要系统已有 WebView2；不启动依赖安装器、不联网补下载。无 WebView2 的干净机器和 ARM64 / macOS 发行尚未验收，完整离线依赖交付仍属于后续发行门槛。

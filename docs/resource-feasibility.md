@@ -46,3 +46,15 @@ Sherpa-ONNX 是推理引擎，Kokoro 和 Pocket TTS 是模型 / 工具生态；�
 - MDX：头部长度及校验和检查成功；独立 Rust 工具逐条读取正文，完成真实查询。文件 HTML 只按文本读取，没有在浏览器或原生窗口执行。
 - 初次 Python 输出遇到终端 GBK 无法显示 `œ`，改为显式 UTF-8 后重跑成功；没有改写源数据来消除字符。
 - 尚未验证：MDD、损坏输入、全部格式版本与压缩组合、SQLite 转换、应用内查询、完整词义质量、四目标运行或任何正式资源准入。
+
+## M2 单词离线语音补查
+
+2026-10-25：M2 访谈已将听音卡所需的单词离线发音提前，见[确认记录](m2-review-core.md)。本节仅核对当前官方代码、模型卡与依赖，不代表资源已准入或已实际生成声音。
+
+- Sherpa 2 的旧 `data_dir` 路径已弃用，Piper 路径需要法语 lexicon 或外部音素输入；旧版 SIWIS 示例不足以证明新组合能完成法语文本到声音。[固定版本配置](https://raw.githubusercontent.com/k2-fsa/sherpa-onnx/v2.0.0/sherpa-onnx/csrc/offline-tts-vits-model-config.h)、[生成接口](https://raw.githubusercontent.com/k2-fsa/sherpa-onnx/v2.0.0/sherpa-onnx/c-api/c-api.h)
+- SIWIS low 单权重约 28.1 MB，但模型卡说明从 Ryan-low 微调，其来源卡标注训练数据为 CC BY-NC-SA；SIWIS medium 约 63.2 MB，从 Lessac-medium 微调，后者指向限研究用途的来源许可。训练数据条款不能直接替代对最终权重授权的判断；目前证据不足以闭合这两条权重的目标再分发授权链，不能仅凭 SIWIS 数据集的 CC BY 标签认定准入。[SIWIS low](https://huggingface.co/rhasspy/piper-voices/blob/main/fr/fr_FR/siwis/low/MODEL_CARD)、[Ryan 来源](https://huggingface.co/rhasspy/piper-voices/blob/main/en/en_US/ryan/low/MODEL_CARD)、[SIWIS medium](https://huggingface.co/rhasspy/piper-voices/blob/main/fr/fr_FR/siwis/medium/MODEL_CARD)、[Lessac 来源](https://huggingface.co/rhasspy/piper-voices/blob/main/en/en_US/lessac/medium/MODEL_CARD)、[来源许可](https://www.cstr.ed.ac.uk/projects/blizzard/2013/lessac_blizzard2013/license.html)
+- 维护中的 [OHF Piper](https://github.com/OHF-Voice/piper1-gpl) 提供含 eSpeak 的原生 C API，但采用 GPL-3.0，需分别核对代码集成与分发义务；替换运行时不会消除上述权重授权疑问。Windows ARM64 的完整构建仍须验证。[原生依赖与构建](https://github.com/OHF-Voice/piper1-gpl/blob/main/libpiper/README.md)
+- Kokoro 仍需完整法语文本前端；已查 Sherpa 多语言包未证明包含可直接使用的法语 lexicon。该包模型文件约 326 MB，另有至少约 28.2 MB 声音文件；这些是文件体积，不是压缩分发包实测，也不覆盖全部依赖。短文本质量仍为单词卡的关键验证项。[包文件](https://huggingface.co/csukuangfj/kokoro-multi-lang-v1_0/tree/main)、[法语声音与短文本说明](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md)
+- Pocket 当前已有官方 Rust 独立运行时，不能沿用仅能通过 Python 的旧假设；法语权重仍约 219 MB，另需 tokenizer、声音与运行依赖，模型有访问条件。没有 Windows ARM64 的完整执行证据，也未测压缩下载总量。[官方运行时](https://github.com/kyutai-labs/pocket-tts)、[法语文件](https://huggingface.co/kyutai/pocket-tts/tree/main/languages/french)、[访问条件](https://huggingface.co/kyutai/pocket-tts/blob/main/README.md)
+
+下一步先落实具体组合与版本的许可证据，再在 Windows x64 验证代表性单词、未知词 / 音素、真实播放、首启断网、重启缓存及失败重试，测量含前端、模型、原生库和许可文件的完整压缩包。词典式前端可能跳过未知部分，须检测部分生成而非仅判断是否返回音频。本轮未下载模型、接受访问条件、安装、编译或试听；没有候选被宣称满足完整分发要求。

@@ -1,4 +1,4 @@
-"""Package the Windows x64 release without installers or personal runtime data."""
+"""Package a Windows release without installers or personal runtime data."""
 
 import argparse
 import hashlib
@@ -9,17 +9,22 @@ import struct
 import zipfile
 
 
-def package(root: Path, output_directory: Path | None = None):
-    release = root / "target/release"
+def package(root: Path, output_directory: Path | None = None, architecture: str = "x64"):
+    targets = {"x64": ("target/release", 0x8664),
+               "arm64": ("target/aarch64-pc-windows-msvc/release", 0xAA64)}
+    if architecture not in targets:
+        raise ValueError(f"Unsupported Windows architecture: {architecture}")
+    release_path, machine = targets[architecture]
+    release = root / release_path
     executable = release / "lexique-desktop.exe"
     binary = executable.read_bytes()
     pe_offset = struct.unpack_from("<I", binary, 0x3C)[0]
     if binary[:2] != b"MZ" or binary[pe_offset:pe_offset + 4] != b"PE\0\0":
         raise ValueError("Expected a Windows executable")
-    if struct.unpack_from("<H", binary, pe_offset + 4)[0] != 0x8664:
-        raise ValueError("This package targets Windows x64 only")
+    if struct.unpack_from("<H", binary, pe_offset + 4)[0] != machine:
+        raise ValueError(f"Executable does not target Windows {architecture}")
     config = json.loads((root / "apps/desktop/src-tauri/tauri.conf.json").read_text())
-    name = f"Lexique-{config['version']}-windows-x64-portable"
+    name = f"Lexique-{config['version']}-windows-{architecture}-portable"
     output = (output_directory if output_directory is not None else root / "target/portable") / name
     archive = output.parent / f"{name}.zip"
     checksum_path = archive.with_suffix(".zip.sha256")
@@ -35,7 +40,7 @@ def package(root: Path, output_directory: Path | None = None):
     shutil.copy2(dictionary, output / "dictionary/dictionary.sqlite3")
     shutil.copy2(root / "LICENSE", output / "LICENSE")
     (output / "README.txt").write_text(
-        f"Lexique {config['version']} - Windows 11 x64 portable development sample\n\n"
+        f"Lexique {config['version']} - Windows 11 {architecture.upper()} portable development sample\n\n"
         "Extract the entire ZIP into a writable folder, then open Lexique.exe.\n"
         "Keep dictionary/ beside the executable. No installer or first-run download is used.\n"
         "Requires an existing Microsoft Edge WebView2 runtime (normally present on Windows 11).\n"
@@ -75,5 +80,6 @@ def package(root: Path, output_directory: Path | None = None):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output-dir", type=Path, help="Separate delivery parent; existing artifacts are never overwritten")
+    parser.add_argument("--architecture", choices=("x64", "arm64"), default="x64")
     args = parser.parse_args()
-    print(json.dumps(package(Path(__file__).resolve().parent.parent, args.output_dir), indent=2))
+    print(json.dumps(package(Path(__file__).resolve().parent.parent, args.output_dir, args.architecture), indent=2))
