@@ -6,6 +6,9 @@ test('speech settings save both choices and restore them when reopened', async (
   await page.goto('/');
   await page.getByRole('button', { name: '设置', exact: true }).click();
   await expect(page.getByLabel('法语声线')).toHaveValue('female');
+  await expect(page.getByLabel('朗读语速')).toHaveValue('normal');
+  await expect(page.getByRole('option', { name: '常速语音（1×）' })).toHaveAttribute('value', 'normal');
+  await expect(page.getByRole('option', { name: '慢速语音（0.6×）' })).toHaveAttribute('value', 'slow');
   await page.getByLabel('法语声线').selectOption('male');
   await page.getByLabel('朗读语速').selectOption('slow');
   await page.getByRole('button', { name: '保存语音偏好' }).click();

@@ -1,6 +1,6 @@
 {
   "candidate": "SupertonicTTS 3 int8 assets from the sherpa-onnx release",
-  "status": "download hashes and isolated Windows synthesis checked; human French quality, product integration and complete distribution admission pending",
+  "status": "download hashes, isolated Windows synthesis, and user listening checked; product integration and complete distribution admission pending",
   "archive": {
     "release_api": "https://api.github.com/repos/k2-fsa/sherpa-onnx/releases/tags/tts-models",
     "release_url": "https://github.com/k2-fsa/sherpa-onnx/releases/tag/tts-models",
@@ -149,6 +149,18 @@
     "mapping_basis": "The pinned sherpa-onnx voice-bundle generator sorts *.json filenames before writing the arrays. The pinned official voice SDK documentation identifies F1-F5 as female and M1-M5 as male; voice.bin dimensions contain 10 style entries."
   },
   "source_evidence": {
+    "initial_snapshot_comparison": {
+      "revision": "724fb5abbf5502583fb520898d45929e62f02c0b",
+      "tree_api": "https://huggingface.co/api/models/Supertone/supertonic-3/tree/724fb5abbf5502583fb520898d45929e62f02c0b/onnx?expand=true",
+      "matches": [
+        "upstream duration_predictor.onnx LFS SHA-256 equals release duration_predictor.int8.onnx",
+        "upstream text_encoder.onnx LFS SHA-256 equals release text_encoder.int8.onnx",
+        "upstream tts.json Git blob 28575b0793c92607a0f0a292550df9bd17709a79 equals release tts.json",
+        "all ten voice styles converted to float32 and packed with the upstream generator layout match release voice.bin SHA-256",
+        "65536 upstream unicode index integers encoded as little-endian int32 match release unicode_indexer.bin SHA-256"
+      ],
+      "limits": "File identity does not prove the converter run or identify every input; upstream vector_estimator and vocoder SHA-256 differ from the release files. Partial static tensor comparison is documented in supertonic-static-comparison.md and does not establish graph equivalence or a complete conversion chain."
+    },
     "sherpa_docs": {
       "url": "https://k2-fsa.github.io/sherpa/onnx/tts/supertonic.html",
       "accessed": "2026-10-26",
@@ -260,7 +272,7 @@
     "sherpa_onnx_engine_source": "Apache-2.0. The engine source is a separate component and is not included in this model archive."
   },
   "not_verified": [
-    "Human French pronunciation quality and naturalness remain unaccepted; isolated Windows generation/playback of 26 samples was checked, see supertonic-trial.md",
+    "User accepted the full listening samples; product playback integration and clean-machine behavior remain unverified, see supertonic-trial.md",
     "OpenRAIL-M distribution suitability has not been legally approved.",
     "The exact transformation pipeline for each int8 ONNX file has not been independently audited."
   ]

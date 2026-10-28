@@ -1,12 +1,28 @@
 # M2 单词离线语音验证
 
-新替代试验：[Supertonic 3 四组合试听](supertonic-samples/listen.html)、[许可与来源](replacement-options-after-mls.md)、[模型哈希](supertonic3-model.json)。短词与孤立 `y`／`i` 仍待人工确认；本地 ASR 只是对照，不作音质准入结论。
+## 当前准入决定
+
+2026-10-28 收尾复验：v16-revised 六项打包 / 清单检查、四项无音频探针检查和五项静态比较测试通过；探针真实生成项按既有用户要求跳过。试听材料 38 条完整样本、32 条历史慢速样本和 76 条 Opus 的报告哈希均匹配，39 份许可材料的 Git 暂存内容与来源清单哈希一致。前端 lint、typecheck、build 和 Edge 的五项语音设置 / 试听页测试通过；构建保留依赖注释的 Rollup 警告。本次未重新合成或进行人工试听。
+
+- 已有证据：Windows x86-64 受限网络进程实际生成并调用播放；用户确认 v9 声音正确，并接受此前完整样本及 48 kbit/s Opus 的听感。反馈未逐项列出试听文件、设备或播放速度。
+- 用户决定接受 v9 Windows x64 候选的上游证据边界：PyPI wheel 没有对应的签名构建证明，两个量化 ONNX 图的校准过程未独立复现。使用保守通知归档已知及候选依赖；这些事实不视为 #14 的阻塞，但不代表完整二进制依赖或最终分发义务已被证明。
+- 已测候选体积及待核系统依赖：v16-revised 独立语音验证包压缩 159,725,647 字节、解压 241,177,527 字节；模型和运行时与已试听的 v9 哈希相同。Windows 系统及 VC 运行依赖尚未通过干净机器核验。完整桌面应用、默认资源和 WebView2 不包含在该测量中，最终产品下载量与安装占用留待发行验收。
+- 后续产品工作：接入真实 TTS、默认 48 kbit/s Opus、应用目录下临时音频和安全定期清理；实现完整版和 Lite 版、Lite 的“额外资源”模型下载以及最终完整包体与许可验收。这些不是现有独立探针已实现的功能。
+- Windows ARM64、macOS x86-64 和 macOS ARM64 的构建及实机验证仍待后续进行；按用户确认，不阻塞 #14。
+
+详细测量、各版本的试验和限制见[独立验证包与复测](supertonic-trial.md)，二进制来源和许可待核项见[许可证据](supertonic-licenses/ATTRIBUTION.md)，部分模型权重比较见[静态比较](supertonic-static-comparison.md)。
+
+2026-10-28：一次[受控源码构建](controlled-build-20261028.md)成功，但 C API DLL 的代码段与 v9 wheel 不同，不能证明 wheel 的依赖或直接继承其试听结论。v16 在该构建和完整源码扫描结果记录之前打包；这些后续记录仅在工作区中，不在 v16 内。
+
+用户选择继续保留 v9 的模型与 wheel，并对已知及候选依赖准备[保守通知](supertonic-licenses/NOTICE-CONSERVATIVE.md)，记录 wheel 构建来源和两个模型图转换链的缺口。这是候选选择及证据边界，不代表已证明完整依赖清单或完成正式发行许可审查。
+
+新替代试验：[Supertonic 3 四组合试听](supertonic-samples/listen.html)、[较慢速度和字母名对照](supertonic-slower/listen.html)、[许可与来源](replacement-options-after-mls.md)、[模型哈希](supertonic3-model.json)。用户确认完整样本和 Opus 对照可用、0.6 倍播放清晰自然，且单独字母 `y` 使用 `i grec`。本地 ASR 只是对照，不作音质准入结论；[独立验证包与复测](supertonic-trial.md)不等同于产品发行准入。
 
 Piper MLS medium 双说话人已因用户反馈读音混乱及音质不佳撤回，不作为当前候选。失败记录详见[准入补查](replacement-admission.md)、[模型清单](mls-model.json)和[女声／男声 × 正常／慢速试听](mls-samples/listen.html)。下文保留早期 Kokoro 探针的历史证据，不代表当前默认模型。
 
-工作记录，2026-10-26。候选为 Kokoro v1.0 int8 + ff_siwis +
+以下为 2026-10-26 Kokoro 历史工作记录，不代表当前候选或当前试听状态。候选为 Kokoro v1.0 int8 + ff_siwis +
 kokoro-onnx 0.6.1 + eSpeak NG 1.52.0。技术生成不等于音质通过；
-本票保持打开，等待修正后完整样本的最终试听验收。
+当时本票保持打开，等待修正后完整样本的最终试听验收。
 
 后续新增两套 Piper、本地压缩实测及 y 多读音范围说明，见[模型与格式对比](comparison.md)。
 现有准确小写 y 的发音修正只作为代词实验控制，不代表最终产品只允许一种读音。
@@ -72,7 +88,7 @@ anticonstitutionnellement。输入不补句、不补标点；短句仅保留既�
 报告保留前端原输出及 `pronunciation_override`，不改输入、不拼句、不使用预生成缓存。
 这是单词词汇用法修正，不是字母名称发音功能；大写 Y 或句内 y 不套用此孤立词修正。
 修正前音频保留为 `samples/11-before.wav`，对应事实见 `y-before.json`，修正后为 `samples/11.wav`。
-用户尚未确认修正后的完整样本，不能解除 #14 的集成阻塞。
+当时用户尚未确认修正后的完整样本，不能据该历史候选解除 #14 的集成阻塞。
 
 ## 许可与资源身份
 

@@ -24,6 +24,9 @@ def main():
     args = parser.parse_args()
     if args.output.exists():
         raise FileExistsError(f"Preserving previous trial: {args.output}")
+    inputs = json.loads(Path(__file__).with_name("inputs.json").read_text(encoding="utf-8"))
+    if not isinstance(inputs, list) or len(inputs) != 17 or not all(isinstance(text, str) and text for text in inputs):
+        raise ValueError("Invalid trial inputs")
     names = {
         "duration_predictor": "duration_predictor.int8.onnx",
         "text_encoder": "text_encoder.int8.onnx",
@@ -37,16 +40,20 @@ def main():
     hashes = {name: hashlib.sha256((args.assets / name).read_bytes()).hexdigest() for name in names.values()}
     manifest = json.loads(Path(__file__).with_name("supertonic3-model.json").read_text(encoding="utf-8"))
     expected = {item["path"]: item["actual_sha256"] for item in manifest["files"]}
-    assert all(expected[name] == digest for name, digest in hashes.items()), "Unexpected model resources"
+    for name, digest in hashes.items():
+        if expected[name] != digest:
+            raise ValueError(f"resource checksum mismatch: {name}")
     config = sherpa_onnx.OfflineTtsConfig(model=sherpa_onnx.OfflineTtsModelConfig(
         supertonic=sherpa_onnx.OfflineTtsSupertonicModelConfig(**paths),
         num_threads=2, provider="cpu", debug=False,
     ))
-    assert config.validate(), "Invalid Supertonic resources"
+    if not config.validate():
+        raise ValueError("Invalid Supertonic resources")
     before = network_denials()
     started = time.perf_counter()
     tts = sherpa_onnx.OfflineTts(config)
-    assert tts.num_speakers == 10, tts.num_speakers
+    if tts.num_speakers != 10:
+        raise ValueError(f"Unexpected speaker count: {tts.num_speakers}")
     report = {
         "model": "sherpa-onnx-supertonic-3-tts-int8-2026-05-11",
         "source_example": "https://github.com/k2-fsa/sherpa-onnx/blob/af2d8d81dbfa61c4cea4c568da78f3982edca005/python-api-examples/supertonic-tts.py",
@@ -58,18 +65,14 @@ def main():
         "cases": [],
     }
     args.output.mkdir(parents=True)
-    inputs = ["école", "œil", "nous sommes ici", "J'apprends le français tous les jours.", "y", "i"]
     for gender, sid in (("female", 0), ("male", 5)):
-        for speed_name, speed in (("normal", 1.0), ("slow", 0.8)):
-            for index, text in enumerate(inputs, 1):
-                generate(tts, args.output, report, gender, sid, speed_name, speed, index, text, "fr")
-        generate(tts, args.output, report, gender, sid, "normal", 1.0, 7,
+        for index, text in enumerate(inputs, 1):
+            generate(tts, args.output, report, gender, sid, "normal", 1.0, index, text, "fr")
+        generate(tts, args.output, report, gender, sid, "normal", 1.0, 18,
                  "Hello. I am learning French every day.", "en")
-    for gender in ("female", "male"):
-        normal = [case for case in report["cases"] if case["voice"] == gender and case["speed"] == "normal" and case["language"] == "fr"]
-        slow = [case for case in report["cases"] if case["voice"] == gender and case["speed"] == "slow"]
-        assert len(normal) == len(slow) == 6
-        assert all(b["audio_seconds"] > a["audio_seconds"] for a, b in zip(normal, slow))
+        generate(tts, args.output, report, gender, sid, "normal", 1.0, 19, "i grec", "fr")
+    if len(report["cases"]) != 38 or not all(case["speed_parameter"] == 1.0 for case in report["cases"]):
+        raise ValueError("Incomplete trial results")
     report["network_denials_after"] = network_denials()
     report["peak_working_set_bytes"] = peak_memory()
     (args.output / "report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -80,20 +83,24 @@ def generate(tts, output, report, gender, sid, speed_name, speed, index, text, l
     config.sid, config.speed, config.num_steps = sid, speed, 8
     # The Python binding returns a copy; mutating its dict drops the language.
     config.extra = {"lang": lang}
-    assert config.extra.get("lang") == lang, "Synthesis language was not forwarded to the native runtime"
+    if config.extra.get("lang") != lang:
+        raise ValueError("Synthesis language was not forwarded to the native runtime")
     started = time.perf_counter()
     audio = tts.generate(text, config)
     elapsed = time.perf_counter() - started
     samples = np.asarray(audio.samples)
-    assert samples.ndim == 1 and samples.size > 0 and np.isfinite(samples).all()
-    assert float(np.max(np.abs(samples))) > 0, "Silent output"
+    if samples.ndim != 1 or samples.size == 0 or not np.isfinite(samples).all():
+        raise ValueError("Invalid audio output")
+    if float(np.max(np.abs(samples))) == 0:
+        raise ValueError("Silent output")
     filename = f"{gender}-{speed_name}-{index:02}.wav"
     path = output / filename
     with wave.open(str(path), "wb") as wav:
         wav.setparams((1, 2, audio.sample_rate, 0, "NONE", "not compressed"))
         wav.writeframes((np.clip(samples, -1, 1) * 32767).astype("<i2").tobytes())
     with wave.open(str(path), "rb") as wav:
-        assert wav.getnframes() == samples.size and wav.getframerate() == tts.sample_rate
+        if wav.getnframes() != samples.size or wav.getframerate() != tts.sample_rate:
+            raise ValueError("WAV readback mismatch")
     winsound.PlaySound(str(path.resolve()), winsound.SND_FILENAME | winsound.SND_NODEFAULT)
     case = {"input": text, "language": lang, "voice": gender, "sid": sid,
             "speed": speed_name, "speed_parameter": speed, "num_steps": 8,

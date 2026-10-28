@@ -1,5 +1,165 @@
 {
   "evidence": [
+    {"file":"LICENSE-GOOGLETEST-1.13.0.txt","scope":"GoogleTest 1.13.0 optional test dependency; wheel inclusion unverified","source_url":"https://github.com/google/googletest/blob/v1.13.0/LICENSE","source_git_blob_sha1":"1941a11f8ce94389160b458927a29ba217542818","actual_bytes":1475,"actual_sha256":"9702de7e4117a8e2b20dafab11ffda58c198aede066406496bef670d40a22138"},
+    {"file":"COPYING-ASIO.txt","scope":"Asio 1.24.0 source notice; wheel inclusion unverified","source_url":"https://github.com/chriskohlhoff/asio/archive/refs/tags/asio-1-24-0.tar.gz","actual_bytes":224,"actual_sha256":"2d312781ba7ca3f5b494aec3bcca5cfbb69b7302838b2a7595d1537fc494457f"},
+    {"file":"LICENSE-ASIO-BOOST.txt","scope":"Asio 1.24.0 Boost license; wheel inclusion unverified","source_url":"https://github.com/chriskohlhoff/asio/archive/refs/tags/asio-1-24-0.tar.gz","actual_bytes":1338,"actual_sha256":"c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566"},
+    {"file":"LICENSE-PORTAUDIO.txt","scope":"PortAudio pa_stable_v190700_20210406 source license; wheel inclusion unverified","source_url":"https://github.com/k2-fsa/sherpa-onnx/blob/af2d8d81dbfa61c4cea4c568da78f3982edca005/cmake/portaudio.cmake","actual_bytes":3524,"actual_sha256":"ec52a1952d701f94e5135719a47376da4ee0b4a0201f1cafb49f61db6480ac3d"},
+    {"file":"COPYING-PORTAUDIO-CPP.txt","scope":"PortAudio C++ bindings source notice; wheel inclusion unverified","source_url":"https://github.com/k2-fsa/sherpa-onnx/blob/af2d8d81dbfa61c4cea4c568da78f3982edca005/cmake/portaudio.cmake","actual_bytes":1545,"actual_sha256":"3ec8d97acf149e39aa440f39eb1126a6ec5089e2864cbecdf2d2952bc0a5ed83"},
+    {"file":"COPYING-WEBSOCKETPP.txt","scope":"websocketpp b9aeec6e source notice; wheel inclusion unverified","source_url":"https://github.com/zaphoyd/websocketpp/archive/b9aeec6eaf3d5610503439b4fae3581d9aff08e8.zip","actual_bytes":7494,"actual_sha256":"5ba81a1ed402517dce2581fa2d4042baf6a9c8ca0fe94fa6a7043ce6ab23064f"},
+    {
+      "file": "COPYING-EIGEN-3.4.0-APACHE.txt",
+      "scope": "Eigen 3.4.0 source archive APACHE; actual wheel inclusion and version unverified",
+      "source_url": "https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.tar.gz",
+      "revision": "3.4.0",
+      "actual_bytes": 11362,
+      "actual_sha256": "03379001a7b12a2ec997a25554247d985270b353c10d5bafee9ac8d6519820b7"
+    },
+    {
+      "file": "COPYING-EIGEN-3.4.0-BSD.txt",
+      "scope": "Eigen 3.4.0 source archive BSD; actual wheel inclusion and version unverified",
+      "source_url": "https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.tar.gz",
+      "revision": "3.4.0",
+      "actual_bytes": 1517,
+      "actual_sha256": "51928dce36213c5333ba3172e847d735d4c6e9b7ff2722a326c49067155b82eb"
+    },
+    {
+      "file": "COPYING-EIGEN-3.4.0-GPL.txt",
+      "scope": "Eigen 3.4.0 source archive GPL; actual wheel inclusion and version unverified",
+      "source_url": "https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.tar.gz",
+      "revision": "3.4.0",
+      "actual_bytes": 35147,
+      "actual_sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    {
+      "file": "COPYING-EIGEN-3.4.0-LGPL.txt",
+      "scope": "Eigen 3.4.0 source archive LGPL; actual wheel inclusion and version unverified",
+      "source_url": "https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.tar.gz",
+      "revision": "3.4.0",
+      "actual_bytes": 26530,
+      "actual_sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551"
+    },
+    {
+      "file": "COPYING-EIGEN-3.4.0-MINPACK.txt",
+      "scope": "Eigen 3.4.0 source archive MINPACK; actual wheel inclusion and version unverified",
+      "source_url": "https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.tar.gz",
+      "revision": "3.4.0",
+      "actual_bytes": 2193,
+      "actual_sha256": "c87b7f8ee88f6195e91743820c00354833583aef091b72e2d4a49c8e28e798a0"
+    },
+    {
+      "file": "COPYING-EIGEN-3.4.0-MPL2.txt",
+      "scope": "Eigen 3.4.0 source archive MPL2; actual wheel inclusion and version unverified",
+      "source_url": "https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.tar.gz",
+      "revision": "3.4.0",
+      "actual_bytes": 16726,
+      "actual_sha256": "fab3dd6bdab226f1c08630b1dd917e11fcb4ec5e1e020e2c16f83a0a13863e85"
+    },
+    {
+      "file": "COPYING-EIGEN-3.4.0-README.txt",
+      "scope": "Eigen 3.4.0 source archive README; actual wheel inclusion and version unverified",
+      "source_url": "https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.tar.gz",
+      "revision": "3.4.0",
+      "actual_bytes": 779,
+      "actual_sha256": "c83230b770f17ef1386ea1fd3681271dd98aa93646bdbfb5bff3a1b7050fff9d"
+    },
+    {
+      "file": "COPYING-EIGEN-5.0.1-APACHE.txt",
+      "scope": "Eigen 5.0.1 source archive APACHE; actual wheel inclusion and version unverified",
+      "source_url": "https://gitlab.com/libeigen/eigen/-/archive/5.0.1/eigen-5.0.1.tar.gz",
+      "revision": "5.0.1",
+      "actual_bytes": 11362,
+      "actual_sha256": "03379001a7b12a2ec997a25554247d985270b353c10d5bafee9ac8d6519820b7"
+    },
+    {
+      "file": "COPYING-EIGEN-5.0.1-MINPACK.txt",
+      "scope": "Eigen 5.0.1 source archive MINPACK; actual wheel inclusion and version unverified",
+      "source_url": "https://gitlab.com/libeigen/eigen/-/archive/5.0.1/eigen-5.0.1.tar.gz",
+      "revision": "5.0.1",
+      "actual_bytes": 2193,
+      "actual_sha256": "c87b7f8ee88f6195e91743820c00354833583aef091b72e2d4a49c8e28e798a0"
+    },
+    {
+      "file": "COPYING-EIGEN-5.0.1-MPL2.txt",
+      "scope": "Eigen 5.0.1 source archive MPL 2.0; actual wheel inclusion and version unverified",
+      "source_url": "https://gitlab.com/libeigen/eigen/-/archive/5.0.1/eigen-5.0.1.tar.gz",
+      "revision": "5.0.1",
+      "actual_bytes": 16727,
+      "actual_sha256": "66a3107d5ad6a058aab753eaac2047ccb2ed0e39465dd0fe5844da3e300d5172"
+    },
+    {
+      "file": "COPYING-EIGEN-5.0.1-BSD.txt",
+      "scope": "Eigen 5.0.1 source archive BSD license; actual wheel inclusion and version unverified",
+      "source_url": "https://gitlab.com/libeigen/eigen/-/archive/5.0.1/eigen-5.0.1.tar.gz",
+      "revision": "5.0.1",
+      "actual_bytes": 1517,
+      "actual_sha256": "51928dce36213c5333ba3172e847d735d4c6e9b7ff2722a326c49067155b82eb"
+    },
+    {
+      "file": "COPYING-EIGEN-5.0.1-README.txt",
+      "scope": "Eigen 5.0.1 source archive license overview; actual wheel inclusion and version unverified",
+      "source_url": "https://gitlab.com/libeigen/eigen/-/archive/5.0.1/eigen-5.0.1.tar.gz",
+      "revision": "5.0.1",
+      "actual_bytes": 264,
+      "actual_sha256": "db640ff2bd90c6abd6a4d3fbb351e0ee4d555417cf840492054d1cbb2ea85644"
+    },
+    {
+      "file": "NOTICE-DARTS-CLONE.txt",
+      "scope": "License header of darts.h from simple-sentencepiece; source paths appear in both native binaries but exact source revision is unverified",
+      "source_repository": "pkufool/simple-sentencepiece",
+      "revision": "v0.7",
+      "source_url": "https://github.com/pkufool/simple-sentencepiece/blob/v0.7/ssentencepiece/csrc/darts.h",
+      "source_git_blob_sha1": "8c3194eec42a6e4964eb1fd633c926a85272fc7b",
+      "source_lines": "1-29",
+      "actual_bytes": 1417,
+      "actual_sha256": "0ea58b484f07096cc1d43122caf2c34909040b8747ad46cbfe1942b165f40f49"
+    },
+    {
+      "file": "NOTICE-THREADPOOL.txt",
+      "scope": "License header of threadpool.h from simple-sentencepiece; actual binary inclusion is unverified",
+      "source_repository": "pkufool/simple-sentencepiece",
+      "revision": "v0.7",
+      "source_url": "https://github.com/pkufool/simple-sentencepiece/blob/v0.7/ssentencepiece/csrc/threadpool.h",
+      "source_git_blob_sha1": "264ff492ab778096fe89cfec4cdeaafea1b60a5b",
+      "source_lines": "1-25",
+      "actual_bytes": 983,
+      "actual_sha256": "ccbda6990c305d81b9027656d7a69f88caa9b3c1925ddd1ce5dd97451b9aeb1d"
+    },
+    {
+      "file": "LICENSE-HCLUST-CPP.txt",
+      "scope": "hclust-cpp dependency declared by pinned sherpa-onnx source; binary symbols indicate fastclustercpp but do not prove the exact source revision",
+      "source_repository": "csukuangfj/hclust-cpp",
+      "revision": "2026-02-25",
+      "source_url": "https://github.com/csukuangfj/hclust-cpp/blob/2026-02-25/LICENSE",
+      "expected_bytes": 1483,
+      "expected_git_blob_sha1": "ab8b4db7d73569ad5dfaa282ca77541effebfb40",
+      "actual_bytes": 1483,
+      "actual_git_blob_sha1": "ab8b4db7d73569ad5dfaa282ca77541effebfb40",
+      "actual_sha256": "e361d842da1d290351860ad6dcce2673a1e42e4f873a3ae1ff4eb92c6adaa882"
+    },
+    {
+      "file": "LICENSE-LIBTOMMATH-TCL-9.0.4.0.txt",
+      "scope": "LibTomMath in the CPython Windows Tcl source dependency",
+      "source_repository": "python/cpython-source-deps",
+      "revision": "53c758cbf2cc178b359abc03fdd912c5e66ed74f",
+      "source_url": "https://raw.githubusercontent.com/python/cpython-source-deps/53c758cbf2cc178b359abc03fdd912c5e66ed74f/libtommath/LICENSE",
+      "expected_bytes": 1257,
+      "expected_git_blob_sha1": "b23b3c8672b1937923c7f800b5f1d0ddd1c6cc28",
+      "actual_bytes": 1257,
+      "actual_git_blob_sha1": "b23b3c8672b1937923c7f800b5f1d0ddd1c6cc28",
+      "actual_sha256": "2fa64b163659f41965c9815882a8296d3d03ff546b76153e11445f9bdecf955a"
+    },
+    {
+      "file": "CPYTHON-3.14.10-LICENSES.rst",
+      "scope": "CPython 3.14.10 documentation and incomplete incorporated-software notices, including Expat and Unicode",
+      "source_repository": "python/cpython",
+      "revision": "b703b2c5e704341d61e367b9b940b77ed11dded0",
+      "source_url": "https://raw.githubusercontent.com/python/cpython/b703b2c5e704341d61e367b9b940b77ed11dded0/Doc/license.rst",
+      "expected_bytes": 60039,
+      "expected_git_blob_sha1": "56073c9118f672e29917f0eaea7073edf253d884",
+      "actual_bytes": 60039,
+      "actual_git_blob_sha1": "56073c9118f672e29917f0eaea7073edf253d884",
+      "actual_sha256": "8a7329b25131f64b2bea284155f0824876b1af9f4a2f970e6335751d97dfa6dd"
+    },
     {
       "file": "LICENSE-SUPERTONE-model-OpenRAIL-M.txt",
       "scope": "Supertonic-3 model weights and voice style assets",
@@ -47,6 +207,132 @@
       "actual_bytes": 1071,
       "actual_git_blob_sha1": "6bd4c6bff0954ca3990d1f3f995c006bb1a463a8",
       "actual_sha256": "f41cb0ff617e2ed634215f3e62f7b33b3dc02b079c6379a2f1a9c7ce7bd84c03"
+    },
+    {
+      "file": "LICENSE-ONNXRuntime-1.28.2.txt",
+      "scope": "ONNX Runtime Windows x64 MT Release binary license",
+      "source_url": "https://github.com/csukuangfj/onnxruntime-libs/releases/download/v1.28.2/onnxruntime-win-x64-MT-Release-1.28.2.tar.bz2",
+      "archive_sha256": "cd7f757f7a38ce14238bc9198bee197a9430b42ec3ecadea3408dd2e832eb02e",
+      "archive_member": "onnxruntime-win-x64-MT-Release-1.28.2/LICENSE",
+      "actual_bytes": 1094,
+      "actual_sha256": "c250d6278f0b47a6439fb7592b08b58a55eb9f535aa49a1db63211c3f982b674"
+    },
+    {
+      "file": "ThirdPartyNotices-ONNXRuntime-1.28.2.txt",
+      "scope": "ONNX Runtime Windows x64 MT Release third-party notices",
+      "source_url": "https://github.com/csukuangfj/onnxruntime-libs/releases/download/v1.28.2/onnxruntime-win-x64-MT-Release-1.28.2.tar.bz2",
+      "archive_sha256": "cd7f757f7a38ce14238bc9198bee197a9430b42ec3ecadea3408dd2e832eb02e",
+      "archive_member": "onnxruntime-win-x64-MT-Release-1.28.2/ThirdPartyNotices.txt",
+      "actual_bytes": 331175,
+      "actual_sha256": "fb0af774b4d7cffc5b9d046f2aaeade2f37df2f80abf8033c95dfffcc77a8866"
+    },
+    {
+      "file": "LICENSE-UTF8PROC-2.12.0.md",
+      "scope": "Dependency declared by pinned sherpa-onnx source build; wheel linkage not independently established",
+      "source_repository": "JuliaStrings/utf8proc",
+      "revision": "v2.12.0",
+      "source_url": "https://raw.githubusercontent.com/JuliaStrings/utf8proc/v2.12.0/LICENSE.md",
+      "expected_bytes": 5125,
+      "expected_git_blob_sha1": "f18b1f3abdcb55e82ecdd84f476e7f366b00183b",
+      "actual_bytes": 5125,
+      "actual_git_blob_sha1": "f18b1f3abdcb55e82ecdd84f476e7f366b00183b",
+      "actual_sha256": "3b510150d34f248a221bb88e1d811238d6c6c18b51231822c42974c39bb07256"
+    },
+    {
+      "file": "LICENSE-PYBIND11-3.0.0.txt",
+      "scope": "Dependency declared by pinned sherpa-onnx source build; wheel linkage not independently established",
+      "source_repository": "pybind/pybind11",
+      "revision": "v3.0.0",
+      "source_url": "https://raw.githubusercontent.com/pybind/pybind11/v3.0.0/LICENSE",
+      "expected_bytes": 1684,
+      "expected_git_blob_sha1": "e466b0dfda14f3a7c8ece512937eb99c8b7b6d68",
+      "actual_bytes": 1684,
+      "actual_git_blob_sha1": "e466b0dfda14f3a7c8ece512937eb99c8b7b6d68",
+      "actual_sha256": "83965b843b98f670d3a85bd041ed4b372c8ec50d7b4a5995a83ac697ba675dcb"
+    },
+    {
+      "file": "LICENSE-NLOHMANN-JSON-3.12.0.txt",
+      "scope": "Dependency declared by pinned sherpa-onnx source build; wheel linkage not independently established",
+      "source_repository": "nlohmann/json",
+      "revision": "v3.12.0",
+      "source_url": "https://raw.githubusercontent.com/nlohmann/json/v3.12.0/LICENSE.MIT",
+      "expected_bytes": 1076,
+      "expected_git_blob_sha1": "a1dacc8dbbd907c4b622ff1f08e279c27465dcbc",
+      "actual_bytes": 1076,
+      "actual_git_blob_sha1": "a1dacc8dbbd907c4b622ff1f08e279c27465dcbc",
+      "actual_sha256": "46a65cffd1ea955132d95a8dd921640714a8d6b537d2e4e482d31145ae95b603"
+    },
+    {
+      "file": "LICENSE-SIMPLE-SENTENCEPIECE-0.7.txt",
+      "scope": "Dependency declared by pinned sherpa-onnx source build; wheel linkage not independently established",
+      "source_repository": "pkufool/simple-sentencepiece",
+      "revision": "v0.7",
+      "source_url": "https://raw.githubusercontent.com/pkufool/simple-sentencepiece/v0.7/LICENSE",
+      "expected_bytes": 11357,
+      "expected_git_blob_sha1": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "actual_bytes": 11357,
+      "actual_git_blob_sha1": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "actual_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "file": "COPYING-KISSFFT.txt",
+      "scope": "KissFFT dependency declared by pinned kaldi-native-fbank source; wheel linkage not independently established",
+      "source_repository": "mborgerding/kissfft",
+      "revision": "febd4caeed32e33ad8b2e0bb5ea77542c40f18ec",
+      "source_url": "https://raw.githubusercontent.com/mborgerding/kissfft/febd4caeed32e33ad8b2e0bb5ea77542c40f18ec/COPYING",
+      "expected_bytes": 246,
+      "expected_git_blob_sha1": "6b4b622e7bd7053be8531deaf4242603bca4c85b",
+      "actual_bytes": 246,
+      "actual_git_blob_sha1": "6b4b622e7bd7053be8531deaf4242603bca4c85b",
+      "actual_sha256": "a2840585f8411be8e6826a31ef15ae65c950bd74a2437a73b013398a934ad0c6"
+    },
+    {
+      "file": "LICENSE-KISSFFT-BSD-3-Clause.txt",
+      "scope": "KissFFT dependency declared by pinned kaldi-native-fbank source; wheel linkage not independently established",
+      "source_repository": "mborgerding/kissfft",
+      "revision": "febd4caeed32e33ad8b2e0bb5ea77542c40f18ec",
+      "source_url": "https://raw.githubusercontent.com/mborgerding/kissfft/febd4caeed32e33ad8b2e0bb5ea77542c40f18ec/LICENSES/BSD-3-Clause",
+      "expected_bytes": 1830,
+      "expected_git_blob_sha1": "b8d56812171eb511e50d06698700f8e8b5fb6c41",
+      "actual_bytes": 1830,
+      "actual_git_blob_sha1": "b8d56812171eb511e50d06698700f8e8b5fb6c41",
+      "actual_sha256": "4d6bcab46f27d6d0c878e8305d4bdcfe040d52bf6656b9771f04c9fb9902c0ed"
+    },
+    {
+      "file": "LICENSE-KALDIFST-1.8.0.txt",
+      "scope": "Dependency declared by kaldi-decoder; actual wheel linkage not independently established",
+      "source_repository": "k2-fsa/kaldifst",
+      "revision": "ab5bdd013bdf13921e6aeee77db5722ebf9955fb",
+      "source_url": "https://raw.githubusercontent.com/k2-fsa/kaldifst/ab5bdd013bdf13921e6aeee77db5722ebf9955fb/LICENSE",
+      "expected_bytes": 11728,
+      "expected_git_blob_sha1": "ee06cfc772ef1c8ed22f28527fe4cee5aa06b246",
+      "actual_bytes": 11728,
+      "actual_git_blob_sha1": "ee06cfc772ef1c8ed22f28527fe4cee5aa06b246",
+      "actual_sha256": "a682d6efd1ee5dee08a8e405c233c2c198ea70ae0718129daa83ab58cfe31c5d"
+    },
+    {
+      "file": "COPYING-OPENFST.txt",
+      "scope": "Dependency declared by kaldifst; actual wheel linkage not independently established",
+      "source_repository": "csukuangfj/openfst",
+      "revision": "b3b4c7aa57e65ac32faec5648f45da9061490ddb",
+      "source_url": "https://raw.githubusercontent.com/csukuangfj/openfst/b3b4c7aa57e65ac32faec5648f45da9061490ddb/COPYING",
+      "expected_bytes": 559,
+      "expected_git_blob_sha1": "d0d7ee0b8011b1a38155219ba1497e03238c5faa",
+      "actual_bytes": 559,
+      "actual_git_blob_sha1": "d0d7ee0b8011b1a38155219ba1497e03238c5faa",
+      "actual_sha256": "4300529197035fd3452350718a0b8cee984e9412c9932d7f35fcde849fc97a4b"
+    },
+    {
+      "file": "AUTHORS-OPENFST.txt",
+      "scope": "Upstream author list for OpenFST source; actual wheel linkage not independently established",
+      "source_repository": "csukuangfj/openfst",
+      "revision": "b3b4c7aa57e65ac32faec5648f45da9061490ddb",
+      "source_url": "https://raw.githubusercontent.com/csukuangfj/openfst/b3b4c7aa57e65ac32faec5648f45da9061490ddb/AUTHORS",
+      "expected_bytes": 546,
+      "expected_git_blob_sha1": "5e2fc62e630eada308fc619be3849d7ab84c4444",
+      "actual_bytes": 546,
+      "actual_git_blob_sha1": "5e2fc62e630eada308fc619be3849d7ab84c4444",
+      "actual_sha256": "43f2391d54a1b711ead93f27e1cbca4d38bf66de9aff05b4e00d957e3acac09a"
     },
     {
       "file": "voices.md",
