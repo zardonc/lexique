@@ -91,7 +91,7 @@ fn undo_rating_restores_queue_and_can_be_retried() {
 }
 
 #[test]
-fn undo_rating_outside_queue_keeps_independent_settings() {
+fn undo_rating_outside_queue_keeps_later_notes_and_settings() {
     let mut connection = Connection::open_in_memory().unwrap();
     initialize(&connection).unwrap();
     let word = saved_word(&mut connection);
@@ -112,15 +112,33 @@ fn undo_rating_outside_queue_keeps_independent_settings() {
         },
     )
     .unwrap();
+    let record = lexique_storage::get(&connection, word).unwrap();
+    let edited = save(
+        &mut connection,
+        &SaveRequest {
+            operation: "edit-after-rating".into(),
+            headword: record.headword,
+            notes: "Notes saved after the rating\nÉcole : mon exemple.".into(),
+            id: Some(word),
+            revision: Some(record.revision),
+        },
+        None,
+    )
+    .unwrap();
+    assert_eq!(edited.outcome, "updated");
     let mut settings = lexique_storage::review_settings(&connection).unwrap();
     settings.new_limit = 1;
+    settings.review_limit = 7;
+    settings.retention_percent = 85;
     lexique_storage::set_review_settings(&connection, &settings).unwrap();
     lexique_storage::undo_rating(&mut connection, "direct-undo", "direct-rating").unwrap();
     assert_eq!(
-        lexique_storage::review_settings(&connection)
-            .unwrap()
-            .new_limit,
-        1
+        lexique_storage::review_settings(&connection).unwrap(),
+        settings
+    );
+    assert_eq!(
+        serde_json::to_value(lexique_storage::get(&connection, word).unwrap()).unwrap(),
+        serde_json::to_value(edited.record).unwrap()
     );
     assert_eq!(
         lexique_storage::review_progress(&connection, cards[0].id)
@@ -129,6 +147,82 @@ fn undo_rating_outside_queue_keeps_independent_settings() {
             .phase,
         lexique_core::scheduling::Phase::New
     );
+}
+
+#[test]
+fn stale_undo_from_another_connection_preserves_newer_rating() {
+    let path = std::env::temp_dir().join(format!(
+        "lexique-undo-concurrent-{}-{}.sqlite3",
+        std::process::id(),
+        std::time::SystemTime::now()
+            .duration_since(std::time::UNIX_EPOCH)
+            .unwrap()
+            .as_nanos()
+    ));
+    {
+        let mut first = Connection::open(&path).unwrap();
+        initialize(&first).unwrap();
+        let mut second = Connection::open(&path).unwrap();
+        initialize(&second).unwrap();
+        let word = saved_word(&mut first);
+        let card = add_review(&mut first, word).unwrap()[0].id;
+        lexique_storage::rate_card(
+            &mut first,
+            &lexique_storage::RatingRequest {
+                operation: "first-connection-rating".into(),
+                card_id: card,
+                expected_revision: 0,
+                rating: Rating::Good,
+                now: 1_700_000_000,
+                timezone: "UTC".into(),
+            },
+        )
+        .unwrap();
+        let target = lexique_storage::undo_target(&first).unwrap().unwrap();
+        let before = lexique_storage::review_progress(&second, card).unwrap();
+        let now = before.card.due_at.unwrap();
+        lexique_storage::rate_card(
+            &mut second,
+            &lexique_storage::RatingRequest {
+                operation: "second-connection-rating".into(),
+                card_id: card,
+                expected_revision: before.revision,
+                rating: Rating::Easy,
+                now,
+                timezone: "UTC".into(),
+            },
+        )
+        .unwrap();
+        let newer = lexique_storage::review_progress(&second, card).unwrap();
+        assert!(matches!(
+            lexique_storage::undo_rating(&mut first, "stale-connection-undo", &target),
+            Err(lexique_storage::StorageError::Invalid(_))
+        ));
+        assert_eq!(
+            serde_json::to_value(lexique_storage::review_progress(&first, card).unwrap()).unwrap(),
+            serde_json::to_value(newer).unwrap()
+        );
+        assert_eq!(
+            lexique_storage::undo_target(&first).unwrap().as_deref(),
+            Some("second-connection-rating")
+        );
+        lexique_storage::undo_rating(
+            &mut first,
+            "current-connection-undo",
+            "second-connection-rating",
+        )
+        .unwrap();
+        assert_eq!(
+            serde_json::to_value(
+                lexique_storage::review_progress(&second, card)
+                    .unwrap()
+                    .card
+            )
+            .unwrap(),
+            serde_json::to_value(before.card).unwrap()
+        );
+    }
+    std::fs::remove_file(path).unwrap();
 }
 
 #[test]

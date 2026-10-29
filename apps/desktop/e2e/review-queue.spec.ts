@@ -22,6 +22,44 @@ test('browser preview reports review queue unavailable', async ({ page }) => {
   await expect(page.getByText('浏览器预览无法读取复习队列。')).toBeVisible();
 });
 
+for (const phase of ['new', 'learning_first', 'review'] as const) {
+  test(`undo restores a ${phase} card and permits continued rating`, async ({ page }) => {
+    const card = { phase, memory: phase === 'new' ? null : { stability: 1, difficulty: 5 },
+      last_review_at: phase === 'new' ? null : 1700000000, due_at: phase === 'new' ? null : 1700000060 };
+    const empty = { queue: { cards: [], reason: null, available_at: null }, record: null, audio_pending: false, audio_error: null };
+    const restored = { queue: { cards: [{ id: 1, vocabulary_id: 1, kind: 'recognition' }], reason: null, available_at: null }, record, audio_pending: false, audio_error: null };
+    await nativeFixture(page, {
+      review_queue: [{ value: empty }, { value: empty }, { value: restored }, { value: empty }],
+      review_undo_target: [{ value: 'last-rating' }],
+      review_progress: [{ value: { revision: 2, card } }],
+      review_rate: [{ value: { status: 'committed', result: { card, elapsed_days: 0, step_seconds: null, interval_days: 1,
+        model: { version: 'test', parameters: [] }, retention_percent: 90, timezone_database: 'test' } } }],
+    });
+    await page.goto('/');
+    await page.getByRole('button', { name: '闪卡复习', exact: true }).click();
+    await page.getByRole('button', { name: '撤销最近评分' }).click();
+    await page.getByRole('button', { name: '查看识义卡' }).click();
+    await page.getByRole('button', { name: '显示答案' }).click();
+    await page.getByRole('button', { name: '记得', exact: true }).click();
+    await expect(page.getByText('本轮完成', { exact: true })).toBeVisible();
+    const rating = (await page.evaluate(() => window.testNative.calls)).filter((call) => call.command === 'review_rate');
+    expect(rating).toHaveLength(1);
+    expect(rating[0].args?.request).toMatchObject({ expected_revision: 2, card_id: 1 });
+  });
+}
+
+test('pending undo survives page reload and retries its original identity', async ({ page }) => {
+  await nativeFixture(page, { review_undo_target: [{ value: null }] });
+  await page.goto('/');
+  await page.evaluate(() => localStorage.setItem('lexique-pending-undo', JSON.stringify({ operation: 'lost-response', ratingOperation: 'prior-day-rating' })));
+  await page.reload();
+  await page.getByRole('button', { name: '闪卡复习', exact: true }).click();
+  await page.getByRole('button', { name: '撤销最近评分' }).click();
+  await expect.poll(() => page.evaluate(() => localStorage.getItem('lexique-pending-undo'))).toBeNull();
+  const calls = (await page.evaluate(() => window.testNative.calls)).filter((call) => call.command === 'review_undo');
+  expect(calls.map((call) => call.args)).toEqual([{ operation: 'lost-response', ratingOperation: 'prior-day-rating' }]);
+});
+
 test('undo retries the same operation after a lost response', async ({ page }) => {
   await nativeFixture(page, { review_undo_target: [{ value: 'rating-1' }], review_undo: [{ error: 'connection lost' }, { value: { status: 'committed', queue_rebuilt: false } }] });
   await page.goto('/');
