@@ -572,7 +572,12 @@ pub fn rate_card(
             |row| row.get(0),
         )
         .optional()?;
-    let queue_before = serde_json::json!({ "card_id": request.card_id, "position": position, "learning_day": day, "timezone": request.timezone }).to_string();
+    let mut statement = tx.prepare("SELECT card_id FROM review_queue_entries ORDER BY position")?;
+    let ordered_cards = statement
+        .query_map([], |row| row.get::<_, i64>(0))?
+        .collect::<Result<Vec<_>, _>>()?;
+    drop(statement);
+    let queue_before = serde_json::json!({ "card_id": request.card_id, "position": position, "ordered_cards": ordered_cards, "learning_day": day, "timezone": request.timezone }).to_string();
     tx.execute(
         "DELETE FROM review_queue_entries WHERE card_id = ?1",
         [request.card_id],

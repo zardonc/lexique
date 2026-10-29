@@ -68,6 +68,18 @@ fn queue_preserves_order_and_defers_a_rated_cards_sibling() {
         },
     )
     .unwrap();
+    let saved: String = connection
+        .query_row(
+            "SELECT queue_before FROM review_ratings WHERE operation = 'queue-first'",
+            [],
+            |row| row.get(0),
+        )
+        .unwrap();
+    let snapshot: serde_json::Value = serde_json::from_str(&saved).unwrap();
+    assert_eq!(
+        snapshot["ordered_cards"],
+        serde_json::json!(before.cards.iter().map(|card| card.id).collect::<Vec<_>>())
+    );
     let after = lexique_storage::review_queue(&mut connection, 1_700_000_000, "UTC").unwrap();
     assert_eq!(
         after.cards.iter().map(|card| card.id).collect::<Vec<_>>(),

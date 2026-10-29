@@ -2,6 +2,8 @@
 
 ## M2 每日设置与复习队列（issue #17）
 
+2026-10-29 验收复核：规范和规格审查发现队列检查延长未播放音频的缓存寿命，以及评分前的数值位置不足以支持后续撤销恢复。修复后，Windows 原生隔离测试确认队列检查不更新访问时间、实际音频读取会更新访问时间，设置和两张队列卡重启恢复；存储回归确认评分事务保存评分前的卡片顺序。此前两项检查均先复现失败。复核后 `pnpm lint`、`pnpm typecheck`、`pnpm build`、`cargo fmt --all --check`、`cargo check --locked --workspace`、`pnpm desktop:build --no-bundle`、预编译后 `pnpm test:rust`（43 项）通过；Edge 42 项在修复前通过，修复未改前端行为。真实撤销及保留后续编辑仍由 #18 验证。完整队列快照随评分次数和队列长度增长，尚未测量大词库成本。
+
 2026-10-29：schema 5 增量保存每日设置及队列顺序；分钟卡优先，新旧卡按实际额度穿插，并在评分事务中保存队列上下文。音频不可用的听音卡不阻塞识义卡；播放失败可跳过而不评分。
 
 - `pnpm lint`、`pnpm typecheck`、`pnpm build`、`cargo fmt --all --check`、`cargo check --locked --workspace` 和 `pnpm desktop:build --no-bundle`：通过。构建保留既有 Zod / Rollup 注释警告和 Rust 增量缓存硬链接回退警告。

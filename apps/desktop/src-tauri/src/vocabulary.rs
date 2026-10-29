@@ -299,11 +299,11 @@ pub async fn review_queue(
             .iter()
             .filter(|card| card.kind == "listening" && !skipped.contains(&card.id))
         {
-            match crate::speech_cache::read(&path.0, card.vocabulary_id) {
-                Ok(Some(_)) => {
+            match crate::speech_cache::inspect(&path.0, card.vocabulary_id) {
+                Ok(true) => {
                     verified_audio.insert(card.id);
                 }
-                Ok(None) => {
+                Ok(false) => {
                     audio_pending = true;
                 }
                 Err(error) => {

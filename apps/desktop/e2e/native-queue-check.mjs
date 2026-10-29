@@ -1,7 +1,7 @@
 /* global process, window, fetch, console */
 import { chromium } from '@playwright/test';
 import { spawn, spawnSync } from 'node:child_process';
-import { cp, mkdir } from 'node:fs/promises';
+import { cp, mkdir, writeFile, utimes, stat } from 'node:fs/promises';
 import { resolve, join } from 'node:path';
 import { createServer } from 'node:net';
 import { setTimeout as delay } from 'node:timers/promises';
@@ -47,6 +47,13 @@ async function stop() {
 }
 try {
   let page = await start();
+  const cache = join(destination, 'Lexique-data', 'temp', 'speech');
+  await mkdir(cache, { recursive: true });
+  const audio = join(cache, '1.ogg');
+  await writeFile(audio, 'OggS synthetic');
+  const past = new Date(Date.now() - 2 * 86400_000);
+  await utimes(audio, past, past);
+  const beforeAccess = (await stat(audio)).atimeMs;
   const initial = await page.evaluate(async () => {
     const invoke = window.__TAURI_INTERNALS__.invoke;
     const settings = { retention_percent: 87, new_limit: 7, review_limit: 13 };
@@ -55,6 +62,9 @@ try {
     return { settings, queue };
   });
   assert.ok(initial.queue.queue.cards.length > 0, 'Fixture must contain an eligible card');
+  assert.equal((await stat(audio)).atimeMs, beforeAccess, 'Queue inspection must not renew unused audio');
+  await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('speech_cached', { vocabularyId: 1 }));
+  assert.ok((await stat(audio)).atimeMs > beforeAccess, 'Reading audio for playback must renew its access time');
   await page.getByRole('button', { name: '闪卡复习', exact: true }).click();
   await page.getByRole('button', { name: '查看识义卡' }).waitFor();
   await stop();

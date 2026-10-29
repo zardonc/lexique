@@ -104,6 +104,14 @@ fn lock(dir: &Dir) -> Result<File, String> {
 }
 
 pub fn read(database: &Path, id: i64) -> Result<Option<Vec<u8>>, String> {
+    read_inner(database, id, true)
+}
+
+pub fn inspect(database: &Path, id: i64) -> Result<bool, String> {
+    Ok(read_inner(database, id, false)?.is_some())
+}
+
+fn read_inner(database: &Path, id: i64, touch: bool) -> Result<Option<Vec<u8>>, String> {
     let dir = directory(database)?;
     let name = format!("{id}.ogg");
     match dir.symlink_metadata(&name) {
@@ -129,6 +137,35 @@ pub fn read(database: &Path, id: i64) -> Result<Option<Vec<u8>>, String> {
         .map_err(|e| e.to_string())?
         .into_std();
     #[cfg(windows)]
+    if !touch {
+        use std::os::windows::io::AsRawHandle;
+        #[link(name = "kernel32")]
+        unsafe extern "system" {
+            fn SetFileTime(
+                handle: *mut std::ffi::c_void,
+                creation: *const u64,
+                access: *const u64,
+                write: *const u64,
+            ) -> i32;
+        }
+        // Windows treats an all-ones access time as disabling updates for this handle.
+        let disabled = u64::MAX;
+        let success = unsafe {
+            SetFileTime(
+                file.as_raw_handle(),
+                std::ptr::null(),
+                &disabled,
+                std::ptr::null(),
+            )
+        };
+        if success == 0 {
+            return Err(format!(
+                "Could not preserve speech access time: {}",
+                std::io::Error::last_os_error()
+            ));
+        }
+    }
+    #[cfg(windows)]
     {
         use std::os::windows::fs::MetadataExt as _;
         let metadata = file.metadata().map_err(|e| e.to_string())?;
@@ -143,8 +180,10 @@ pub fn read(database: &Path, id: i64) -> Result<Option<Vec<u8>>, String> {
     if bytes.len() > 10_000_000 || !bytes.starts_with(b"OggS") {
         return Err("Invalid cached speech audio".into());
     }
-    file.set_times(std::fs::FileTimes::new().set_accessed(std::time::SystemTime::now()))
-        .map_err(|e| format!("Could not update speech access time: {e}"))?;
+    if touch {
+        file.set_times(std::fs::FileTimes::new().set_accessed(std::time::SystemTime::now()))
+            .map_err(|e| format!("Could not update speech access time: {e}"))?;
+    }
     Ok(Some(bytes))
 }
 
