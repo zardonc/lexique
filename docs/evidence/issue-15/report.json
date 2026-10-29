@@ -28,7 +28,7 @@
     "decoded_channels": 1,
     "decoded_sample_width": 2,
     "decoded_peak_pcm16": 11799,
-    "human_quality_acceptance": "pending user listening",
+    "human_quality_acceptance": "passed: user confirmed the delivered audio has no issue on 2026-10-29",
     "files": {
       "audio/native-ecole-female.opus": {
         "bytes": 8275,
@@ -68,7 +68,6 @@
     "spec_review": "no remaining material findings"
   },
   "not_verified": [
-    "new audio human listening quality",
     "full desktop run under external network denial",
     "cache file symlink check: privilege unavailable; directory junction test passed",
     "continuous 24-hour cleanup trigger",
