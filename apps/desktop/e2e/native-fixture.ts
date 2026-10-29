@@ -21,7 +21,7 @@ export const record = {
     { pronunciations: [], grammar: [], translation: '流派' }],
 };
 
-interface Reply { readonly value?: unknown; readonly error?: unknown }
+interface Reply { readonly value?: unknown; readonly error?: unknown; readonly delay?: number }
 interface Call { readonly command: string; readonly args?: Record<string, unknown> }
 declare global {
   interface Window { testNative: { calls: Call[]; close: () => void } }
@@ -32,11 +32,18 @@ export async function nativeFixture(page: Page, responses: Readonly<Record<strin
     const callbacks = new Map<number, (event: unknown) => void>();
     const indexes: Record<string, number> = {};
     window.testNative = { calls: [], close: () => { for (const callback of callbacks.values()) callback({ payload: null }); } };
-    const defaults: Record<string, unknown> = { runtime_status: { version: '0.1.0', schemaVersion: 3, storage: 'sqlite' },
+    const defaults: Record<string, unknown> = { runtime_status: { version: '0.1.0', schemaVersion: 4, storage: 'sqlite' },
       dictionary_lookup: dictionary, vocabulary_find: null, vocabulary_list: [], vocabulary_sort: 'updated-desc', finish_close: null,
-      speech_preferences: { voice: 'female', speed: 'normal' }, review_cards: [], speech_cached: null };
+      speech_preferences: { voice: 'female', speed: 'normal' }, review_cards: [], speech_cached: null,
+      review_progress: { revision: 0, card: { phase: 'new', memory: null, last_review_at: null, due_at: null } } };
+    function defaultAvailability() {
+        const progress = (responses.review_progress?.[0]?.value ?? defaults.review_progress) as { card: { due_at: number | null } };
+        const due = progress.card.due_at;
+        return { progress, reason: due && due * 1000 > Date.now() ? 'due' : null, available_at: due && due * 1000 > Date.now() ? due : null };
+    }
     function defaultReply(command: string, args?: Record<string, unknown>) {
       if (command === 'speech_preferences' && args?.preferences) defaults[command] = args.preferences;
+      if (command === 'review_availability') return defaultAvailability();
       return command === 'vocabulary_sort' ? args?.sort ?? defaults[command] : defaults[command];
     }
     Object.defineProperty(window, 'isTauri', { value: true });
@@ -52,6 +59,7 @@ export async function nativeFixture(page: Page, responses: Readonly<Record<strin
         const index = indexes[command] ?? 0;
         indexes[command] = index + 1;
         const response = queue[Math.min(index, queue.length - 1)];
+        if (response.delay) await new Promise((resolve) => setTimeout(resolve, response.delay));
         if (response.error !== undefined) throw response.error;
         if (command === 'vocabulary_save') defaults.vocabulary_find = (response.value as { record: unknown }).record;
         return response.value;

@@ -199,6 +199,117 @@ pub async fn review_cards(
     .map_err(|error| format!("Review read task failed: {error}"))?
 }
 
+#[derive(serde::Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct RateInput {
+    operation: String,
+    card_id: i64,
+    expected_revision: i64,
+    rating: lexique_storage::Rating,
+    timezone: String,
+}
+
+#[derive(serde::Serialize)]
+#[serde(tag = "status", rename_all = "snake_case")]
+pub enum RateOutcome {
+    Committed { result: serde_json::Value },
+    Rejected { code: String, detail: String },
+}
+
+#[tauri::command]
+pub async fn review_progress(
+    path: State<'_, DatabasePath>,
+    card_id: i64,
+) -> Result<lexique_storage::ReviewProgress, String> {
+    if card_id <= 0 || card_id > 9_007_199_254_740_991 {
+        return Err("Invalid card ID".into());
+    }
+    let path = DatabasePath(path.0.clone());
+    tauri::async_runtime::spawn_blocking(move || {
+        lexique_storage::review_progress(&open(&path)?, card_id).map_err(|e| e.to_string())
+    })
+    .await
+    .map_err(|e| format!("Review read task failed: {e}"))?
+}
+
+#[tauri::command]
+pub async fn review_availability(
+    path: State<'_, DatabasePath>,
+    card_id: i64,
+    timezone: String,
+) -> Result<lexique_storage::ReviewAvailability, String> {
+    if card_id <= 0 || card_id > 9_007_199_254_740_991 || timezone.len() > 128 {
+        return Err("Invalid card ID or timezone".into());
+    }
+    let path = DatabasePath(path.0.clone());
+    tauri::async_runtime::spawn_blocking(move || {
+        let now = std::time::SystemTime::now()
+            .duration_since(std::time::UNIX_EPOCH)
+            .map_err(|e| e.to_string())?
+            .as_secs();
+        lexique_storage::review_availability(
+            &open(&path)?,
+            card_id,
+            i64::try_from(now).map_err(|e| e.to_string())?,
+            &timezone,
+        )
+        .map_err(|e| e.to_string())
+    })
+    .await
+    .map_err(|e| format!("Review availability task failed: {e}"))?
+}
+
+#[tauri::command]
+pub async fn review_rate(
+    path: State<'_, DatabasePath>,
+    request: RateInput,
+) -> Result<RateOutcome, String> {
+    if request.card_id <= 0
+        || request.card_id > 9_007_199_254_740_991
+        || request.expected_revision > 9_007_199_254_740_991
+    {
+        return Err("Invalid card ID or revision".into());
+    }
+    let path = DatabasePath(path.0.clone());
+    tauri::async_runtime::spawn_blocking(move || {
+        let now = std::time::SystemTime::now()
+            .duration_since(std::time::UNIX_EPOCH)
+            .map_err(|e| e.to_string())?
+            .as_secs();
+        let now = i64::try_from(now).map_err(|e| e.to_string())?;
+        let rating = lexique_storage::RatingRequest {
+            operation: request.operation,
+            card_id: request.card_id,
+            expected_revision: request.expected_revision,
+            rating: request.rating,
+            now,
+            timezone: request.timezone,
+        };
+        match lexique_storage::rate_card(&mut open(&path)?, &rating) {
+            Ok(result) => Ok(RateOutcome::Committed { result }),
+            Err(error @ lexique_storage::StorageError::RatingConflict) => {
+                Ok(RateOutcome::Rejected {
+                    code: "conflict".into(),
+                    detail: error.to_string(),
+                })
+            }
+            Err(lexique_storage::StorageError::RatingUnavailable(reason)) => {
+                Ok(RateOutcome::Rejected {
+                    detail: format!("rating unavailable: {reason}"),
+                    code: reason,
+                })
+            }
+            Err(lexique_storage::StorageError::Invalid(detail)) => Ok(RateOutcome::Rejected {
+                code: "invalid".into(),
+                detail,
+            }),
+            Err(other) => Err(other.to_string()),
+        }
+    })
+    .await
+    .map_err(|e| format!("Review rating task failed: {e}"))?
+}
+
 #[tauri::command]
 pub async fn speech_cached(
     path: State<'_, DatabasePath>,

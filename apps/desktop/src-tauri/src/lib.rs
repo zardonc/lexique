@@ -7,8 +7,9 @@ use tauri::{Emitter, Manager, State};
 mod speech_cache;
 mod vocabulary;
 use vocabulary::{
-    DatabasePath, finish_close, review_add, review_cards, speech_cached, speech_generate,
-    speech_preferences, vocabulary_find, vocabulary_list, vocabulary_save, vocabulary_sort,
+    DatabasePath, finish_close, review_add, review_availability, review_cards, review_progress,
+    review_rate, speech_cached, speech_generate, speech_preferences, vocabulary_find,
+    vocabulary_list, vocabulary_save, vocabulary_sort,
 };
 
 mod status;
@@ -81,6 +82,9 @@ pub fn run() {
             vocabulary_sort,
             review_add,
             review_cards,
+            review_availability,
+            review_progress,
+            review_rate,
             speech_cached,
             speech_generate,
             speech_preferences,

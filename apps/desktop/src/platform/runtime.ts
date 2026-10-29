@@ -19,6 +19,30 @@ export type RuntimeStatus = z.infer<typeof runtimeStatusSchema>;
 const cardsSchema = z.array(z.object({ id: z.number().int().positive().safe(),
   kind: z.enum(['recognition', 'listening']) }).strict().readonly()).max(2).readonly();
 export type ReviewCard = z.infer<typeof cardsSchema>[number];
+const ratingSchema = z.enum(['again', 'hard', 'good', 'easy']);
+const scheduleCardSchema = z.object({ phase: z.enum(['new', 'learning_first', 'learning_last', 'review', 'relearning']),
+  memory: z.object({ stability: z.number().finite(), difficulty: z.number().finite() }).strict().nullable(),
+  last_review_at: z.number().int().safe().nullable(), due_at: z.number().int().safe().nullable() }).strict();
+const progressSchema = z.object({ revision: z.number().int().nonnegative().safe(), card: scheduleCardSchema }).strict();
+const availabilitySchema = z.object({ progress: progressSchema, reason: z.enum(['clock', 'due', 'quota', 'deferred']).nullable(),
+  available_at: z.number().int().safe().nullable() }).strict();
+export const rateRequestSchema = z.object({ operation: z.string().min(1).max(128), card_id: z.number().int().positive().safe(),
+  expected_revision: z.number().int().nonnegative().safe(), rating: ratingSchema, timezone: z.string().min(1).max(128) }).strict();
+const scheduledSchema = z.object({ card: scheduleCardSchema, elapsed_days: z.number().int().nonnegative(),
+  step_seconds: z.number().int().positive().nullable(), interval_days: z.number().int().positive().nullable(),
+  model: z.object({ version: z.string(), parameters: z.array(z.number().finite()) }).strict(),
+  retention_percent: z.number().int().min(70).max(99), timezone_database: z.string() }).strict();
+const rateOutcomeSchema = z.discriminatedUnion('status', [
+  z.object({ status: z.literal('committed'), result: scheduledSchema }).strict(),
+  z.object({ status: z.literal('rejected'), code: z.enum(['clock', 'due', 'quota', 'deferred', 'conflict', 'invalid']), detail: z.string() }).strict(),
+]);
+export class RatingRejected extends Error {
+  constructor(readonly code: 'clock' | 'due' | 'quota' | 'deferred' | 'conflict' | 'invalid', detail: string) { super(detail); }
+}
+export type Rating = z.infer<typeof ratingSchema>;
+export type RateRequest = z.infer<typeof rateRequestSchema>;
+export type ReviewProgress = z.infer<typeof progressSchema>;
+export type ReviewAvailability = z.infer<typeof availabilitySchema>;
 
 export interface RuntimeAdapter {
   readonly getStatus: () => Promise<RuntimeStatus | null>;
@@ -30,6 +54,9 @@ export interface RuntimeAdapter {
   readonly speechPreferences: (preferences?: SpeechPreferences) => Promise<SpeechPreferences | null>;
   readonly addReview: (id: number) => Promise<readonly ReviewCard[] | null>;
   readonly reviewCards: (id: number) => Promise<readonly ReviewCard[] | null>;
+  readonly reviewProgress: (id: number) => Promise<ReviewProgress | null>;
+  readonly reviewAvailability: (id: number) => Promise<ReviewAvailability | null>;
+  readonly rateReview: (request: RateRequest) => Promise<ReviewProgress | null>;
   readonly generateSpeech: (id: number, regenerate?: boolean) => Promise<Uint8Array | null>;
   readonly cachedSpeech: (id: number) => Promise<Uint8Array | null>;
   readonly onCloseRequested: (callback: () => void) => Promise<() => void>;
@@ -68,6 +95,22 @@ export const runtime: RuntimeAdapter = {
   async reviewCards(id) {
     if (!isTauri()) return null;
     return cardsSchema.parse(await invoke('review_cards', { vocabularyId: z.number().int().positive().safe().parse(id) }));
+  },
+  async reviewProgress(id) {
+    if (!isTauri()) return null;
+    return progressSchema.parse(await invoke('review_progress', { cardId: z.number().int().positive().safe().parse(id) }));
+  },
+  async reviewAvailability(id) {
+    if (!isTauri()) return null;
+    return availabilitySchema.parse(await invoke('review_availability', { cardId: z.number().int().positive().safe().parse(id),
+      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone }));
+  },
+  async rateReview(request) {
+    if (!isTauri()) return null;
+    const valid = rateRequestSchema.parse(request);
+    const outcome = rateOutcomeSchema.parse(await invoke('review_rate', { request: valid }));
+    if (outcome.status === 'rejected') throw new RatingRejected(outcome.code, outcome.detail);
+    return { revision: valid.expected_revision + 1, card: outcome.result.card };
   },
   async generateSpeech(id, regenerate) {
     if (!isTauri()) return null;

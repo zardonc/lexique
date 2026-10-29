@@ -3,6 +3,7 @@ import type { NotebookText } from './notebook-content';
 import type { ReviewCard, RuntimeAdapter } from './platform/runtime';
 import { errorMessage } from './platform/vocabulary';
 import type { VocabularyRecord } from './platform/vocabulary';
+import { ReviewRating } from './review-rating';
 
 function Answer({ record, text }: { readonly record: VocabularyRecord; readonly text: NotebookText }) {
   return <>
@@ -14,19 +15,21 @@ function Answer({ record, text }: { readonly record: VocabularyRecord; readonly 
   </>;
 }
 
-function RecognitionCard({ record, text }: { readonly record: VocabularyRecord; readonly text: NotebookText }) {
+function RecognitionCard({ record, text, runtime, card }: { readonly record: VocabularyRecord; readonly text: NotebookText; readonly runtime: RuntimeAdapter; readonly card: ReviewCard }) {
   const [revealed, setRevealed] = useState(false);
+  const [ratingBusy, setRatingBusy] = useState(false);
   const dialog = useRef<HTMLDialogElement>(null);
   return <>
     <p>{text.recognition}</p>
     <div className="actions"><button onClick={() => { setRevealed(false); dialog.current?.showModal(); }}>{text.openRecognition}</button></div>
-    <dialog ref={dialog} className="review-card" aria-label={text.recognition}>
+    <dialog ref={dialog} className="review-card" aria-label={text.recognition} onCancel={(event) => { if (ratingBusy) event.preventDefault(); }}>
       <section aria-label={text.recognition}>
         <h3 lang="fr">{record.headword}</h3>
         {revealed && <Answer record={record} text={text} />}
+        {revealed && <ReviewRating id={card.id} runtime={runtime} text={text} enabled onBusyChange={setRatingBusy} onSuccess={() => dialog.current?.close()} />}
         <div className="actions">
           {!revealed && <button onClick={() => setRevealed(true)}>{text.reveal}</button>}
-          <button onClick={() => dialog.current?.close()}>{text.closeCard}</button>
+          <button disabled={ratingBusy} onClick={() => dialog.current?.close()}>{text.closeCard}</button>
         </div>
       </section>
     </dialog>
@@ -67,26 +70,30 @@ function useListeningAudio(audio: Uint8Array, runtime: RuntimeAdapter, onPlaybac
   return { dialog, player, url, error, setError, play, close, cancel };
 }
 
-function ListeningCard({ record, text, runtime, audio, onPlayback }: {
+function ListeningCard({ record, text, runtime, audio, onPlayback, card }: {
   readonly record: VocabularyRecord; readonly text: NotebookText; readonly runtime: RuntimeAdapter; readonly audio: Uint8Array;
+  readonly card: ReviewCard;
   readonly onPlayback: (failed: boolean) => void;
 }) {
-  const { dialog, player, url, error, setError, play, close, cancel } = useListeningAudio(audio, runtime, onPlayback);
+  const [played, setPlayed] = useState(false);
+  const [ratingBusy, setRatingBusy] = useState(false);
+  const { dialog, player, url, error, setError, play, close, cancel } = useListeningAudio(audio, runtime, (failed) => { setPlayed(!failed); onPlayback(failed); });
   const [revealed, setRevealed] = useState(false);
   return <>
     <div className="actions"><button disabled={!url} onClick={() => {
-      setRevealed(false); dialog.current?.showModal(); void play();
+      setRevealed(false); setPlayed(false); dialog.current?.showModal(); void play();
     }}>{text.openListening}</button></div>
-    <dialog ref={dialog} className="review-card" aria-label={text.listening} onCancel={cancel}>
+    <dialog ref={dialog} className="review-card" aria-label={text.listening} onCancel={(event) => { if (ratingBusy) event.preventDefault(); else cancel(); }}>
       <section aria-label={text.listening}>
         <p>{text.machineVoice}</p><audio ref={player} src={url} onError={() => {
-          if (dialog.current?.open) { setError(text.playbackError); onPlayback(true); }
+          if (dialog.current?.open) { setError(text.playbackError); setPlayed(false); onPlayback(true); }
         }} />
         {error && <p role="alert">{text.playbackError}: {error}</p>}
         {revealed && <><h3 lang="fr">{record.headword}</h3><Answer record={record} text={text} /></>}
+        {revealed && <ReviewRating id={card.id} runtime={runtime} text={text} enabled={played} onBusyChange={setRatingBusy} onSuccess={close} />}
         <div className="actions"><button onClick={() => { void play(); }}>{text.replay}</button>
           {!revealed && <button onClick={() => setRevealed(true)}>{text.reveal}</button>}
-          <button onClick={close}>{text.skip}</button></div>
+          <button disabled={ratingBusy} onClick={close}>{text.skip}</button></div>
       </section>
     </dialog>
   </>;
@@ -137,8 +144,8 @@ export function ReviewCards({ record, runtime, text }: {
   return <section>
     <div className="actions"><button disabled={busy || loading} onClick={() => { void add(); }}>{text.addReview}</button></div>
     {error && <p role="alert">{text.reviewError}: {error}</p>}
-    {cards.some((card) => card.kind === 'recognition') && <RecognitionCard record={record} text={text} />}
-    {cards.some((card) => card.kind === 'listening') && <><p>{audio ? text.listeningReady : text.listeningPending}</p>
-      {audio && <ListeningCard record={record} text={text} runtime={runtime} audio={audio} onPlayback={setPlaybackFailed} />}</>}
+    {cards.filter((card) => card.kind === 'recognition').map((card) => <RecognitionCard key={card.id} card={card} record={record} text={text} runtime={runtime} />)}
+    {cards.filter((card) => card.kind === 'listening').map((card) => <div key={card.id}><p>{audio ? text.listeningReady : text.listeningPending}</p>
+      {audio && <ListeningCard card={card} record={record} text={text} runtime={runtime} audio={audio} onPlayback={setPlaybackFailed} />}</div>)}
   </section>;
 }

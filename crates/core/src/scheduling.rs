@@ -15,7 +15,7 @@ pub enum Phase {
     Relearning,
 }
 
-#[derive(Debug, Clone, Copy, Deserialize, Serialize)]
+#[derive(Debug, Clone, Copy, Deserialize, Serialize, PartialEq, Eq)]
 #[serde(rename_all = "snake_case")]
 pub enum Rating {
     Again,
@@ -60,7 +60,7 @@ fn default_retention() -> u8 {
     90
 }
 
-fn timezone_database() -> String {
+pub fn timezone_database() -> String {
     chrono_tz::IANA_TZDB_VERSION.into()
 }
 
@@ -105,6 +105,23 @@ fn learning_day(timestamp: i64, zone: Tz) -> Result<NaiveDate, String> {
     } else {
         Ok(local.date_naive())
     }
+}
+
+pub fn learning_day_for(timestamp: i64, timezone: &str) -> Result<String, String> {
+    let zone: Tz = timezone.parse().map_err(|_| "unknown timezone")?;
+    Ok(learning_day(timestamp, zone)?.to_string())
+}
+
+pub fn next_learning_day_at(timestamp: i64, timezone: &str) -> Result<i64, String> {
+    let zone: Tz = timezone.parse().map_err(|_| "unknown timezone")?;
+    let date = learning_day(timestamp, zone)?
+        .succ_opt()
+        .ok_or("date out of range")?;
+    Ok(zone
+        .from_local_datetime(&date.and_hms_opt(4, 0, 0).ok_or("invalid time")?)
+        .single()
+        .ok_or("next 04:00 is ambiguous or nonexistent")?
+        .timestamp())
 }
 
 /// Uses the recorded portable-math revision for reproducible scheduling.

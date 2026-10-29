@@ -20,6 +20,8 @@ export const notebookMessages = {
     openRecognition: '查看识义卡', reveal: '显示答案', closeCard: '关闭卡片', exampleMissing: '待补例句', more: '笔记与来源',
     listeningReady: '听音卡：语音已生成',
     listening: '听音卡', openListening: '查看听音卡', replay: '重播', skip: '跳过', machineVoice: '机器合成语音', playbackError: '播放失败',
+    ratings: ['忘记', '困难', '记得', '轻松'], ratingHint: '困难表示想起但费力；未想起请选择忘记。', ratingWait: '尚未到期', ratingUnavailable: '评分不可用',
+    availability: { due: '尚未到期', quota: '今日额度已用完', deferred: '同词卡片暂缓', clock: '设备时间早于最近评分，请检查时间', conflict: '卡片已被其他操作修改', invalid: '评分请求无效' },
   },
   en: {
     summary: 'Word summary', fallback: 'Read-only summary saved at collection', original: 'Dictionary text', notes: 'Personal notes',
@@ -40,6 +42,8 @@ export const notebookMessages = {
     openRecognition: 'Open recognition card', reveal: 'Show answer', closeCard: 'Close card', exampleMissing: 'Example needed', more: 'Notes and source',
     listeningReady: 'Listening card: audio generated',
     listening: 'Listening card', openListening: 'Open listening card', replay: 'Replay', skip: 'Skip', machineVoice: 'Machine-generated speech', playbackError: 'Playback failed',
+    ratings: ['Again', 'Hard', 'Good', 'Easy'], ratingHint: 'Hard means recalled with effort; choose Again if you did not recall.', ratingWait: 'Not due yet', ratingUnavailable: 'Rating unavailable',
+    availability: { due: 'Not due yet', quota: 'Daily limit reached', deferred: 'Other card deferred', clock: 'Device time is before the last rating; check the clock', conflict: 'Card changed in another operation', invalid: 'Invalid rating request' },
   },
   fr: {
     summary: 'Résumé du mot', fallback: 'Résumé en lecture seule conservé à l’ajout', original: 'Texte du dictionnaire', notes: 'Notes personnelles',
@@ -60,6 +64,8 @@ export const notebookMessages = {
     openRecognition: 'Voir la carte de reconnaissance', reveal: 'Afficher la réponse', closeCard: 'Fermer la carte', exampleMissing: 'Exemple à ajouter', more: 'Notes et source',
     listeningReady: 'Carte d’écoute : audio généré',
     listening: 'Carte d’écoute', openListening: 'Voir la carte d’écoute', replay: 'Réécouter', skip: 'Passer', machineVoice: 'Voix de synthèse', playbackError: 'Échec de la lecture',
+    ratings: ['Oublié', 'Difficile', 'Retenu', 'Facile'], ratingHint: 'Difficile signifie retrouvé avec effort ; sinon choisissez Oublié.', ratingWait: 'Pas encore à réviser', ratingUnavailable: 'Évaluation indisponible',
+    availability: { due: 'Pas encore à réviser', quota: 'Limite quotidienne atteinte', deferred: 'Autre carte reportée', clock: 'L’heure précède la dernière évaluation ; vérifiez l’horloge', conflict: 'Carte modifiée par une autre opération', invalid: 'Évaluation invalide' },
   },
 } as const;
 
