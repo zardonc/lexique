@@ -15,7 +15,7 @@ function Answer({ record, text }: { readonly record: VocabularyRecord; readonly 
   </>;
 }
 
-function RecognitionCard({ record, text, runtime, card }: { readonly record: VocabularyRecord; readonly text: NotebookText; readonly runtime: RuntimeAdapter; readonly card: ReviewCard }) {
+export function RecognitionCard({ record, text, runtime, card, onRated }: { readonly record: VocabularyRecord; readonly text: NotebookText; readonly runtime: RuntimeAdapter; readonly card: ReviewCard; readonly onRated?: () => void }) {
   const [revealed, setRevealed] = useState(false);
   const [ratingBusy, setRatingBusy] = useState(false);
   const dialog = useRef<HTMLDialogElement>(null);
@@ -26,7 +26,7 @@ function RecognitionCard({ record, text, runtime, card }: { readonly record: Voc
       <section aria-label={text.recognition}>
         <h3 lang="fr">{record.headword}</h3>
         {revealed && <Answer record={record} text={text} />}
-        {revealed && <ReviewRating id={card.id} runtime={runtime} text={text} enabled onBusyChange={setRatingBusy} onSuccess={() => dialog.current?.close()} />}
+        {revealed && <ReviewRating id={card.id} runtime={runtime} text={text} enabled onBusyChange={setRatingBusy} onSuccess={() => { dialog.current?.close(); onRated?.(); }} />}
         <div className="actions">
           {!revealed && <button onClick={() => setRevealed(true)}>{text.reveal}</button>}
           <button disabled={ratingBusy} onClick={() => dialog.current?.close()}>{text.closeCard}</button>
@@ -70,10 +70,12 @@ function useListeningAudio(audio: Uint8Array, runtime: RuntimeAdapter, onPlaybac
   return { dialog, player, url, error, setError, play, close, cancel };
 }
 
-function ListeningCard({ record, text, runtime, audio, onPlayback, card }: {
+export function ListeningCard({ record, text, runtime, audio, onPlayback, card, onRated, onSkip }: {
   readonly record: VocabularyRecord; readonly text: NotebookText; readonly runtime: RuntimeAdapter; readonly audio: Uint8Array;
   readonly card: ReviewCard;
   readonly onPlayback: (failed: boolean) => void;
+  readonly onRated?: () => void;
+  readonly onSkip?: () => void;
 }) {
   const [played, setPlayed] = useState(false);
   const [ratingBusy, setRatingBusy] = useState(false);
@@ -90,10 +92,10 @@ function ListeningCard({ record, text, runtime, audio, onPlayback, card }: {
         }} />
         {error && <p role="alert">{text.playbackError}: {error}</p>}
         {revealed && <><h3 lang="fr">{record.headword}</h3><Answer record={record} text={text} /></>}
-        {revealed && <ReviewRating id={card.id} runtime={runtime} text={text} enabled={played} onBusyChange={setRatingBusy} onSuccess={close} />}
+        {revealed && <ReviewRating id={card.id} runtime={runtime} text={text} enabled={played} onBusyChange={setRatingBusy} onSuccess={() => { close(); onRated?.(); }} />}
         <div className="actions"><button onClick={() => { void play(); }}>{text.replay}</button>
           {!revealed && <button onClick={() => setRevealed(true)}>{text.reveal}</button>}
-          <button disabled={ratingBusy} onClick={close}>{text.skip}</button></div>
+          <button disabled={ratingBusy} onClick={() => { close(); onSkip?.(); }}>{text.skip}</button></div>
       </section>
     </dialog>
   </>;

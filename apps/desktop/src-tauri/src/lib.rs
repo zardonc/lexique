@@ -8,8 +8,8 @@ mod speech_cache;
 mod vocabulary;
 use vocabulary::{
     DatabasePath, finish_close, review_add, review_availability, review_cards, review_progress,
-    review_rate, speech_cached, speech_generate, speech_preferences, vocabulary_find,
-    vocabulary_list, vocabulary_save, vocabulary_sort,
+    review_queue, review_rate, review_settings, speech_cached, speech_generate, speech_preferences,
+    vocabulary_find, vocabulary_list, vocabulary_save, vocabulary_sort,
 };
 
 mod status;
@@ -85,6 +85,8 @@ pub fn run() {
             review_availability,
             review_progress,
             review_rate,
+            review_queue,
+            review_settings,
             speech_cached,
             speech_generate,
             speech_preferences,

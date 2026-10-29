@@ -43,6 +43,13 @@ export type Rating = z.infer<typeof ratingSchema>;
 export type RateRequest = z.infer<typeof rateRequestSchema>;
 export type ReviewProgress = z.infer<typeof progressSchema>;
 export type ReviewAvailability = z.infer<typeof availabilitySchema>;
+const reviewSettingsSchema = z.object({ retention_percent: z.number().int().min(70).max(99),
+  new_limit: z.number().int().min(0).max(1_000_000), review_limit: z.number().int().min(0).max(1_000_000) }).strict().readonly();
+export type ReviewSettings = z.infer<typeof reviewSettingsSchema>;
+const queueCardSchema = z.object({ id: z.number().int().positive().safe(), vocabulary_id: z.number().int().positive().safe(), kind: z.enum(['recognition', 'listening']) }).strict();
+const queueViewSchema = z.object({ queue: z.object({ cards: z.array(queueCardSchema), reason: z.enum(['clock', 'due', 'quota', 'deferred']).nullable(), available_at: z.number().int().safe().nullable() }).strict(), record: recordSchema.nullable(), audio_pending: z.boolean(), audio_error: z.string().nullable() }).strict()
+  .refine((value) => value.queue.cards.length ? value.record?.id === value.queue.cards[0]?.vocabulary_id : value.record === null, 'Invalid queue record');
+export type QueueView = z.infer<typeof queueViewSchema>;
 
 export interface RuntimeAdapter {
   readonly getStatus: () => Promise<RuntimeStatus | null>;
@@ -57,6 +64,8 @@ export interface RuntimeAdapter {
   readonly reviewProgress: (id: number) => Promise<ReviewProgress | null>;
   readonly reviewAvailability: (id: number) => Promise<ReviewAvailability | null>;
   readonly rateReview: (request: RateRequest) => Promise<ReviewProgress | null>;
+  readonly reviewSettings: (settings?: ReviewSettings) => Promise<ReviewSettings | null>;
+  readonly reviewQueue: (skipped?: readonly number[]) => Promise<QueueView | null>;
   readonly generateSpeech: (id: number, regenerate?: boolean) => Promise<Uint8Array | null>;
   readonly cachedSpeech: (id: number) => Promise<Uint8Array | null>;
   readonly onCloseRequested: (callback: () => void) => Promise<() => void>;
@@ -111,6 +120,14 @@ export const runtime: RuntimeAdapter = {
     const outcome = rateOutcomeSchema.parse(await invoke('review_rate', { request: valid }));
     if (outcome.status === 'rejected') throw new RatingRejected(outcome.code, outcome.detail);
     return { revision: valid.expected_revision + 1, card: outcome.result.card };
+  },
+  async reviewSettings(settings) {
+    if (!isTauri()) return null;
+    return reviewSettingsSchema.parse(await invoke('review_settings', { settings: settings === undefined ? null : reviewSettingsSchema.parse(settings) }));
+  },
+  async reviewQueue(skipped = []) {
+    if (!isTauri()) return null;
+    return queueViewSchema.parse(await invoke('review_queue', { timezone: Intl.DateTimeFormat().resolvedOptions().timeZone, skipped: z.array(z.number().int().positive().safe()).max(10_000).parse(skipped) }));
   },
   async generateSpeech(id, regenerate) {
     if (!isTauri()) return null;

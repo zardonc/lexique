@@ -259,6 +259,85 @@ pub async fn review_availability(
     .map_err(|e| format!("Review availability task failed: {e}"))?
 }
 
+#[derive(serde::Serialize)]
+pub struct QueueView {
+    queue: lexique_storage::ReviewQueue,
+    record: Option<VocabularyRecord>,
+    audio_pending: bool,
+    audio_error: Option<String>,
+}
+
+#[tauri::command]
+pub async fn review_queue(
+    path: State<'_, DatabasePath>,
+    timezone: String,
+    skipped: Vec<i64>,
+) -> Result<QueueView, String> {
+    if timezone.is_empty()
+        || timezone.len() > 128
+        || skipped.len() > 10_000
+        || skipped
+            .iter()
+            .any(|id| *id <= 0 || *id > 9_007_199_254_740_991)
+    {
+        return Err("Invalid timezone".into());
+    }
+    let path = DatabasePath(path.0.clone());
+    tauri::async_runtime::spawn_blocking(move || {
+        let now = std::time::SystemTime::now()
+            .duration_since(std::time::UNIX_EPOCH)
+            .map_err(|e| e.to_string())?
+            .as_secs();
+        let mut connection = open(&path)?;
+        let inventory =
+            lexique_storage::review_card_inventory(&connection).map_err(|e| e.to_string())?;
+        let skipped: std::collections::HashSet<i64> = skipped.into_iter().collect();
+        let mut verified_audio = std::collections::HashSet::new();
+        let mut audio_pending = false;
+        let mut audio_error = None;
+        for card in inventory
+            .iter()
+            .filter(|card| card.kind == "listening" && !skipped.contains(&card.id))
+        {
+            match crate::speech_cache::read(&path.0, card.vocabulary_id) {
+                Ok(Some(_)) => {
+                    verified_audio.insert(card.id);
+                }
+                Ok(None) => {
+                    audio_pending = true;
+                }
+                Err(error) => {
+                    audio_error = Some(error);
+                }
+            }
+        }
+        let queue = lexique_storage::review_queue_filtered(
+            &mut connection,
+            i64::try_from(now).map_err(|e| e.to_string())?,
+            &timezone,
+            |card| {
+                Ok(!skipped.contains(&card.id)
+                    && (card.kind != "listening" || verified_audio.contains(&card.id)))
+            },
+        )
+        .map_err(|e| e.to_string())?;
+        let record = queue
+            .cards
+            .first()
+            .map(|card| lexique_storage::get(&connection, card.vocabulary_id))
+            .transpose()
+            .map_err(|e| e.to_string())?;
+        Ok(QueueView {
+            queue,
+            record,
+            audio_pending,
+            audio_error,
+        })
+    })
+    .await
+    .map_err(|e| format!("Review queue task failed: {e}"))?
+}
+
 #[tauri::command]
 pub async fn review_rate(
     path: State<'_, DatabasePath>,
@@ -467,6 +546,24 @@ pub async fn speech_preferences(
     })
     .await
     .map_err(|error| format!("Speech preference task failed: {error}"))?
+}
+
+#[tauri::command]
+pub async fn review_settings(
+    path: State<'_, DatabasePath>,
+    settings: Option<lexique_storage::ReviewSettings>,
+) -> Result<lexique_storage::ReviewSettings, String> {
+    let path = DatabasePath(path.0.clone());
+    tauri::async_runtime::spawn_blocking(move || {
+        let connection = open(&path)?;
+        if let Some(settings) = settings {
+            lexique_storage::set_review_settings(&connection, &settings)
+                .map_err(|error| error.to_string())?;
+        }
+        lexique_storage::review_settings(&connection).map_err(|error| error.to_string())
+    })
+    .await
+    .map_err(|error| format!("Review settings task failed: {error}"))?
 }
 
 #[tauri::command]

@@ -5,6 +5,42 @@ use serde::{Deserialize, Serialize};
 
 use crate::StorageError;
 
+#[derive(Debug, PartialEq, Eq, Serialize, Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct ReviewSettings {
+    pub retention_percent: u8,
+    pub new_limit: u32,
+    pub review_limit: u32,
+}
+
+pub fn review_settings(connection: &Connection) -> Result<ReviewSettings, StorageError> {
+    Ok(connection.query_row(
+        "SELECT retention_percent, new_limit, review_limit FROM review_settings WHERE id = 1",
+        [],
+        |row| {
+            Ok(ReviewSettings {
+                retention_percent: row.get(0)?,
+                new_limit: row.get(1)?,
+                review_limit: row.get(2)?,
+            })
+        },
+    )?)
+}
+
+pub fn set_review_settings(
+    connection: &Connection,
+    settings: &ReviewSettings,
+) -> Result<(), StorageError> {
+    if !(70..=99).contains(&settings.retention_percent)
+        || settings.new_limit > 1_000_000
+        || settings.review_limit > 1_000_000
+    {
+        return Err(StorageError::Invalid("Invalid review settings".into()));
+    }
+    connection.execute("UPDATE review_settings SET retention_percent = ?1, new_limit = ?2, review_limit = ?3 WHERE id = 1", params![settings.retention_percent, settings.new_limit, settings.review_limit])?;
+    Ok(())
+}
+
 #[derive(Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
 pub struct RatingRequest {
@@ -27,6 +63,304 @@ pub struct ReviewAvailability {
     pub progress: ReviewProgress,
     pub reason: Option<String>,
     pub available_at: Option<i64>,
+}
+
+#[derive(Debug, PartialEq, Eq, Serialize)]
+pub struct QueueCard {
+    pub id: i64,
+    pub vocabulary_id: i64,
+    pub kind: String,
+}
+
+#[derive(Serialize)]
+pub struct ReviewQueue {
+    pub cards: Vec<QueueCard>,
+    pub reason: Option<String>,
+    pub available_at: Option<i64>,
+}
+
+pub fn review_card_inventory(connection: &Connection) -> Result<Vec<QueueCard>, StorageError> {
+    let mut statement =
+        connection.prepare("SELECT id, vocabulary_id, kind FROM review_cards ORDER BY id")?;
+    let rows = statement.query_map([], |row| {
+        Ok(QueueCard {
+            id: row.get(0)?,
+            vocabulary_id: row.get(1)?,
+            kind: row.get(2)?,
+        })
+    })?;
+    Ok(rows.collect::<Result<Vec<_>, _>>()?)
+}
+
+pub fn review_queue(
+    connection: &mut Connection,
+    now: i64,
+    timezone: &str,
+) -> Result<ReviewQueue, StorageError> {
+    review_queue_filtered(connection, now, timezone, |_| Ok(true))
+}
+
+pub fn review_queue_filtered(
+    connection: &mut Connection,
+    now: i64,
+    timezone: &str,
+    mut available: impl FnMut(&QueueCard) -> Result<bool, StorageError>,
+) -> Result<ReviewQueue, StorageError> {
+    let day =
+        lexique_core::scheduling::learning_day_for(now, timezone).map_err(StorageError::Invalid)?;
+    let tx = connection.transaction_with_behavior(TransactionBehavior::Immediate)?;
+    let previous: Option<(String, String)> = tx
+        .query_row(
+            "SELECT learning_day, timezone FROM review_queue_state WHERE id = 1",
+            [],
+            |row| Ok((row.get(0)?, row.get(1)?)),
+        )
+        .optional()?;
+    if previous
+        .as_ref()
+        .is_none_or(|(previous_day, _)| previous_day != &day)
+    {
+        tx.execute("DELETE FROM review_queue_entries", [])?;
+        tx.execute("INSERT INTO review_queue_state VALUES (1, ?1, ?2) ON CONFLICT(id) DO UPDATE SET learning_day = excluded.learning_day, timezone = excluded.timezone", params![day, timezone])?;
+    }
+    let all = review_card_inventory(&tx)?;
+    let settings = review_settings(&tx)?;
+    let mut used_new = 0_u32;
+    let mut used_review = 0_u32;
+    let mut siblings: std::collections::HashMap<i64, Vec<i64>> = std::collections::HashMap::new();
+    let latest: Option<i64> =
+        tx.query_row("SELECT MAX(reviewed_at) FROM review_ratings", [], |row| {
+            row.get(0)
+        })?;
+    let mut statement = tx.prepare("SELECT r.reviewed_at, r.quota, c.vocabulary_id, c.id FROM review_ratings r JOIN review_cards c ON c.id = r.card_id WHERE r.reviewed_at >= ?1 AND r.reviewed_at <= ?2")?;
+    let ratings = statement.query_map(params![now.saturating_sub(172_800), now], |row| {
+        Ok((
+            row.get::<_, i64>(0)?,
+            row.get::<_, String>(1)?,
+            row.get::<_, i64>(2)?,
+            row.get::<_, i64>(3)?,
+        ))
+    })?;
+    for rating in ratings {
+        let (time, quota, vocabulary_id, card_id) = rating?;
+        if lexique_core::scheduling::learning_day_for(time, timezone)
+            .map_err(StorageError::Invalid)?
+            == day
+        {
+            if quota == "new" {
+                used_new = used_new.saturating_add(1);
+            } else {
+                used_review = used_review.saturating_add(1);
+            }
+            siblings.entry(vocabulary_id).or_default().push(card_id);
+        }
+    }
+    drop(statement);
+    let remaining_new = settings.new_limit.saturating_sub(used_new) as usize;
+    let remaining_review = settings.review_limit.saturating_sub(used_review) as usize;
+    let mut pending = Vec::new();
+    let mut reason = None;
+    let mut available_at: Option<i64> = None;
+    for card in all {
+        if !available(&card)? {
+            continue;
+        }
+        let progress = review_progress(&tx, card.id)?;
+        let state = &progress.card;
+        let quota = if state.phase == Phase::New {
+            used_new >= settings.new_limit
+        } else {
+            used_review >= settings.review_limit
+        };
+        let deferred = matches!(state.phase, Phase::New | Phase::Review)
+            && siblings
+                .get(&card.vocabulary_id)
+                .is_some_and(|ids| ids.iter().any(|id| *id != card.id));
+        let (blocked, at) = if latest.is_some_and(|time| now < time) {
+            (Some("clock".to_owned()), latest)
+        } else if quota || deferred {
+            (
+                Some(if quota { "quota" } else { "deferred" }.to_owned()),
+                Some(
+                    lexique_core::scheduling::next_learning_day_at(now, timezone)
+                        .map_err(StorageError::Invalid)?,
+                ),
+            )
+        } else if state.due_at.is_some_and(|due| now < due) {
+            (Some("due".to_owned()), state.due_at)
+        } else {
+            (None, None)
+        };
+        if let Some(blocked) = blocked {
+            if reason.is_none()
+                || blocked == "clock"
+                || (reason.as_deref() != Some("clock") && at < available_at)
+            {
+                reason = Some(blocked);
+                available_at = at;
+            }
+        } else {
+            pending.push((card, progress.card));
+        }
+    }
+    let mut new = Vec::new();
+    let mut old = Vec::new();
+    for (card, state) in &pending {
+        if state.phase == Phase::New {
+            new.push(card.id);
+        } else if state.phase == Phase::Review {
+            let due = state
+                .due_at
+                .ok_or_else(|| StorageError::Invalid("Review card has no due time".into()))?;
+            let due_day = lexique_core::scheduling::learning_day_for(due, timezone)
+                .map_err(StorageError::Invalid)?;
+            let mut hash = 14695981039346656037_u64;
+            for byte in due_day.bytes().chain(card.id.to_le_bytes()) {
+                hash = (hash ^ u64::from(byte)).wrapping_mul(1099511628211);
+            }
+            old.push((due_day, hash, card.id));
+        }
+    }
+    old.sort_unstable();
+    let minute_count = pending
+        .iter()
+        .filter(|(_, state)| {
+            matches!(
+                state.phase,
+                Phase::LearningFirst | Phase::LearningLast | Phase::Relearning
+            )
+        })
+        .count();
+    new.truncate(remaining_new);
+    old.truncate(remaining_review.saturating_sub(minute_count));
+    let old: Vec<i64> = old.into_iter().map(|(_, _, id)| id).collect();
+    let mut order = Vec::new();
+    let (mut ni, mut oi) = (0, 0);
+    while ni < new.len() || oi < old.len() {
+        if ni < new.len()
+            && (oi == old.len() || (2 * ni + 1) * old.len() <= (2 * oi + 1) * new.len())
+        {
+            order.push(new[ni]);
+            ni += 1;
+        } else {
+            order.push(old[oi]);
+            oi += 1;
+        }
+    }
+    order.extend(
+        pending
+            .iter()
+            .filter(|(_, state)| {
+                matches!(
+                    state.phase,
+                    Phase::LearningFirst | Phase::LearningLast | Phase::Relearning
+                )
+            })
+            .map(|(card, _)| card.id),
+    );
+    let mut statement = tx.prepare("SELECT card_id, position FROM review_queue_entries")?;
+    let existing = statement
+        .query_map([], |row| Ok((row.get::<_, i64>(0)?, row.get::<_, i64>(1)?)))?
+        .collect::<Result<Vec<_>, _>>()?;
+    drop(statement);
+    let mut positions: std::collections::HashMap<i64, i64> = existing.iter().copied().collect();
+    let mut occupied: std::collections::BTreeMap<i64, i64> = existing
+        .into_iter()
+        .map(|(id, position)| (position, id))
+        .collect();
+    let mut next: Option<i64> = None;
+    for card_id in order.into_iter().rev() {
+        if positions.contains_key(&card_id) {
+            next = Some(card_id);
+            continue;
+        }
+        if let Some(next_id) = next {
+            let right = positions[&next_id];
+            let left = occupied
+                .range(..right)
+                .next_back()
+                .map(|(&value, _)| value)
+                .unwrap_or(0);
+            if right - left <= 1 {
+                let ids: Vec<i64> = occupied.values().copied().collect();
+                tx.execute("UPDATE review_queue_entries SET position = -position", [])?;
+                occupied.clear();
+                for (index, id) in ids.into_iter().enumerate() {
+                    let position = (index as i64 + 1) * 1_000_000;
+                    tx.execute(
+                        "UPDATE review_queue_entries SET position = ?1 WHERE card_id = ?2",
+                        params![position, id],
+                    )?;
+                    positions.insert(id, position);
+                    occupied.insert(position, id);
+                }
+            }
+        }
+        let position = if let Some(next_id) = next {
+            let right = positions[&next_id];
+            let left = occupied
+                .range(..right)
+                .next_back()
+                .map(|(&value, _)| value)
+                .unwrap_or(0);
+            left + (right - left) / 2
+        } else {
+            occupied
+                .last_key_value()
+                .map_or(1_000_000, |(&position, _)| {
+                    position.saturating_add(1_000_000)
+                })
+        };
+        tx.execute(
+            "INSERT INTO review_queue_entries(card_id, position) VALUES (?1, ?2)",
+            params![card_id, position],
+        )?;
+        occupied.insert(position, card_id);
+        positions.insert(card_id, position);
+        next = Some(card_id);
+    }
+    let mut ordered = Vec::new();
+    for (card, state) in pending {
+        let position: Option<i64> = tx
+            .query_row(
+                "SELECT position FROM review_queue_entries WHERE card_id = ?1",
+                [card.id],
+                |row| row.get(0),
+            )
+            .optional()?;
+        let Some(position) = position else {
+            continue;
+        };
+        let minute = matches!(
+            state.phase,
+            Phase::LearningFirst | Phase::LearningLast | Phase::Relearning
+        );
+        ordered.push((!minute, position, card));
+    }
+    ordered.sort_by_key(|(not_minute, position, _)| (*not_minute, *position));
+    let mut remaining_new = remaining_new;
+    let mut remaining_review = remaining_review;
+    let mut cards = Vec::new();
+    for (_, _, card) in ordered {
+        let phase = review_progress(&tx, card.id)?.card.phase;
+        let remaining = if phase == Phase::New {
+            &mut remaining_new
+        } else {
+            &mut remaining_review
+        };
+        if *remaining > 0 {
+            *remaining -= 1;
+            cards.push(card);
+        } else if reason.is_none() {
+            reason = Some("quota".into());
+        }
+    }
+    tx.commit()?;
+    Ok(ReviewQueue {
+        cards,
+        reason,
+        available_at,
+    })
 }
 
 pub fn review_availability(
@@ -88,7 +422,13 @@ fn eligibility(
             deferred |= sibling;
         }
     }
-    let reason = if used >= if quota == "new" { 20 } else { 50 } {
+    let settings = review_settings(connection)?;
+    let limit = if quota == "new" {
+        settings.new_limit
+    } else {
+        settings.review_limit
+    };
+    let reason = if used >= i64::from(limit) {
         Some("quota")
     } else if deferred && matches!(card.phase, Phase::New | Phase::Review) {
         Some("deferred")
@@ -218,14 +558,26 @@ pub fn rate_card(
         timezone: request.timezone.clone(),
         timezone_database: lexique_core::scheduling::timezone_database(),
         latest_review_at: latest,
-        retention_percent: 90,
+        retention_percent: review_settings(&tx)?.retention_percent,
         model: Model::default(),
     })
     .map_err(StorageError::Invalid)?;
     let state = serde_json::to_string(&scheduled.card)?;
     let result = serde_json::to_string(&serde_json::to_value(&scheduled)?)?;
     tx.execute("INSERT INTO review_progress (card_id, revision, state) VALUES (?1, ?2, ?3) ON CONFLICT(card_id) DO UPDATE SET revision = excluded.revision, state = excluded.state", params![request.card_id, revision + 1, state])?;
-    tx.execute("INSERT INTO review_ratings (operation, card_id, request, before_state, result, reviewed_at, learning_day, quota) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8)", params![request.operation, request.card_id, encoded, before, result, request.now, day, quota])?;
+    let position: Option<i64> = tx
+        .query_row(
+            "SELECT position FROM review_queue_entries WHERE card_id = ?1",
+            [request.card_id],
+            |row| row.get(0),
+        )
+        .optional()?;
+    let queue_before = serde_json::json!({ "card_id": request.card_id, "position": position, "learning_day": day, "timezone": request.timezone }).to_string();
+    tx.execute(
+        "DELETE FROM review_queue_entries WHERE card_id = ?1",
+        [request.card_id],
+    )?;
+    tx.execute("INSERT INTO review_ratings (operation, card_id, request, before_state, result, reviewed_at, learning_day, quota, queue_before) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9)", params![request.operation, request.card_id, encoded, before, result, request.now, day, quota, queue_before])?;
     tx.commit()?;
     Ok(serde_json::from_str(&result)?)
 }

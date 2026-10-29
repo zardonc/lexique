@@ -11,6 +11,8 @@ import { VocabularyEditor } from './vocabulary-view';
 import { notebookMessages } from './notebook-content';
 import { LeaveDialog, useLeaveGuard } from './leave-guard';
 import { SpeechSettings } from './speech-settings';
+import { ReviewSettingsPanel } from './review-settings';
+import { ReviewQueuePanel } from './review-queue';
 
 const themes: readonly Theme[] = ['white', 'sepia', 'dark'];
 const locales: readonly Locale[] = ['zh', 'en', 'fr'];
@@ -63,8 +65,8 @@ export function App({ runtime }: { readonly runtime: RuntimeAdapter }) {
             onOpen={(record) => guard.request(() => notebook.open(record))}
             beforeSearch={(action) => guard.request(() => { notebook.clear(); action(); })} /> : page === 2 ?
             <NotebookPanel runtime={runtime} version={notebook.version} text={notebookText}
-              onOpen={(record) => guard.request(() => notebook.open(record))} /> : page === 7 ?
-            <SpeechSettings runtime={runtime} locale={locale} /> :
+              onOpen={(record) => guard.request(() => notebook.open(record))} /> : page === 3 ? <ReviewQueuePanel runtime={runtime} locale={locale} text={notebookText} /> : page === 7 ?
+            <><ReviewSettingsPanel runtime={runtime} locale={locale} /><SpeechSettings runtime={runtime} locale={locale} /></> :
             <div className="empty-state"><p>{text.pending[page]}</p><small>{text.scaffold}</small></div>}
           <VocabularyEditor notebook={notebook} text={notebookText} runtime={runtime} viewExisting={() => {
             if (notebook.existing) { const record = notebook.existing; guard.request(() => notebook.open(record)); }

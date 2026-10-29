@@ -1,5 +1,17 @@
 # 骨架验证记录
 
+## M2 每日设置与复习队列（issue #17）
+
+2026-10-29：schema 5 增量保存每日设置及队列顺序；分钟卡优先，新旧卡按实际额度穿插，并在评分事务中保存队列上下文。音频不可用的听音卡不阻塞识义卡；播放失败可跳过而不评分。
+
+- `pnpm lint`、`pnpm typecheck`、`pnpm build`、`cargo fmt --all --check`、`cargo check --locked --workspace` 和 `pnpm desktop:build --no-bundle`：通过。构建保留既有 Zod / Rollup 注释警告和 Rust 增量缓存硬链接回退警告。
+- `pnpm rust:test:build` 后 `pnpm test:rust`：43 项通过，包含固定时间下的额度、等待、同词暂缓、混排、上调额度及数据库重启恢复；测试执行保留 60 秒上限。
+- `pnpm test:e2e`：Edge 42 项通过，包含设置保存失败和听音播放失败后跳过；浏览器使用原生接口 fixture，不证明原生持久化。
+- `pnpm wasm:build` 后 `node scripts/check-wasm.mjs`：WASM ABI 实际执行通过，不作为排程一致性验收。
+- `node apps/desktop/e2e/native-queue-check.mjs`：Windows x64 release 在隔离合成数据库副本上启动真实窗口；通过原生 IPC 保存设置，重启后设置及一张队列卡保持一致。测试进程已停止，未修改用户学习数据。
+
+本次原生检查未覆盖多卡混排、原生播放失败或禁网；多卡顺序由 SQLite 测试覆盖。跨重启撤销属于后续 #18，其他平台和发行验收尚未验证。构建使用 Node.js 24.22.1 和 Python 3.14.10；资源准备输出中的 Python 3.12.13 是既有缓存清单的生成版本，不代表本次执行版本。
+
 ## M2 单卡评分与事务恢复（issue #16）
 
 2026-10-29：schema 4 增量保存卡片进度、评分前状态、排程结果和评分上下文。识义卡翻面及听音卡成功播放并翻面后可评分；同词暂缓、每日额度、到期和时钟倒退在资格查询及评分事务内检查。失败保留操作身份以便重试，明确拒绝可刷新状态。此前 #15 尚无复习队列，完整队列及撤销分别由后续工单实现。
