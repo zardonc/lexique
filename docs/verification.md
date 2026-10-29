@@ -2,6 +2,8 @@
 
 ## M2 批量管理与暂停（issue #19）
 
+2026-10-29 独立验收：审查 `18feb64...058c18e`，未发现确定的规格缺陷或规范违规；双卡创建在自动加入和手动加入处重复，属于维护性风险。补充公开存储测试验证暂停后恢复仍遵守新卡额度、听音不可用过滤及同词暂缓。复跑 `pnpm lint`、`pnpm typecheck`、`pnpm build`、`pnpm rust:fmt`、`pnpm rust:check`、`pnpm rust:test:build` 后 `pnpm test:rust`（57 项，执行硬 60 秒限制）及 Edge `pnpm test:e2e`（57 项）均通过。Windows x64 release 重新构建后，以先前创建的合成数据库副本运行 `native-management-check.mjs`，设置、暂停、队列过滤、重启、恢复和新收藏自动建卡通过。
+
 2026-10-29：schema 7 增量保存单词级暂停；自动加入偏好默认关闭，仅在新建生词事务中建卡。批量操作逐词报告结果；卡片已创建但语音失败与建卡失败分开显示。暂停和恢复不修改进度，评分入口与队列均检查暂停，撤销评分不改变后续暂停状态。
 
 - `pnpm lint`、`pnpm typecheck`、`cargo fmt --all --check`、`cargo check --locked --workspace`、`pnpm desktop:build --no-bundle`：通过。构建使用仓库 pnpm 缓存及本机 Python 3.12；保留既有 Rollup 注释和 Rust 硬链接回退警告。

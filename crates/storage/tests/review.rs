@@ -95,6 +95,75 @@ fn pausing_both_cards_survives_undo_and_resume_preserves_progress() {
 }
 
 #[test]
+fn resumed_cards_respect_quota_audio_and_sibling_deferral() {
+    let mut connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    let word = saved_word(&mut connection);
+    let cards = add_review(&mut connection, word).unwrap();
+    let now = 1_700_000_000;
+    let mut settings = lexique_storage::review_settings(&connection).unwrap();
+    settings.new_limit = 1;
+    lexique_storage::set_review_settings(&connection, &settings).unwrap();
+    lexique_storage::set_review_paused(&mut connection, word, true).unwrap();
+    assert!(
+        lexique_storage::review_queue(&mut connection, now, "UTC")
+            .unwrap()
+            .cards
+            .is_empty()
+    );
+    lexique_storage::set_review_paused(&mut connection, word, false).unwrap();
+
+    let queue = lexique_storage::review_queue(&mut connection, now, "UTC").unwrap();
+    assert_eq!(queue.cards.len(), 1);
+    assert_eq!(queue.cards[0].id, cards[0].id);
+    settings.new_limit = 2;
+    lexique_storage::set_review_settings(&connection, &settings).unwrap();
+    assert_eq!(
+        lexique_storage::review_queue(&mut connection, now, "UTC")
+            .unwrap()
+            .cards
+            .len(),
+        2
+    );
+    let without_audio =
+        lexique_storage::review_queue_filtered(&mut connection, now, "UTC", |card| {
+            Ok(card.kind != "listening")
+        })
+        .unwrap();
+    assert_eq!(without_audio.cards.len(), 1);
+    assert_eq!(without_audio.cards[0].id, cards[0].id);
+
+    lexique_storage::rate_card(
+        &mut connection,
+        &lexique_storage::RatingRequest {
+            operation: "resume-deferral".into(),
+            card_id: cards[0].id,
+            expected_revision: 0,
+            rating: Rating::Good,
+            now,
+            timezone: "UTC".into(),
+        },
+    )
+    .unwrap();
+    lexique_storage::set_review_paused(&mut connection, word, true).unwrap();
+    lexique_storage::set_review_paused(&mut connection, word, false).unwrap();
+    assert_eq!(
+        lexique_storage::review_availability(&connection, cards[1].id, now, "UTC")
+            .unwrap()
+            .reason
+            .as_deref(),
+        Some("deferred")
+    );
+    assert!(
+        !lexique_storage::review_queue(&mut connection, now, "UTC")
+            .unwrap()
+            .cards
+            .iter()
+            .any(|card| card.id == cards[1].id)
+    );
+}
+
+#[test]
 fn auto_enrollment_applies_only_to_newly_saved_words() {
     let mut connection = Connection::open_in_memory().unwrap();
     initialize(&connection).unwrap();
