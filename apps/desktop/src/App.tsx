@@ -66,7 +66,7 @@ export function App({ runtime }: { readonly runtime: RuntimeAdapter }) {
               onOpen={(record) => guard.request(() => notebook.open(record))} /> : page === 7 ?
             <SpeechSettings runtime={runtime} locale={locale} /> :
             <div className="empty-state"><p>{text.pending[page]}</p><small>{text.scaffold}</small></div>}
-          <VocabularyEditor notebook={notebook} text={notebookText} viewExisting={() => {
+          <VocabularyEditor notebook={notebook} text={notebookText} runtime={runtime} viewExisting={() => {
             if (notebook.existing) { const record = notebook.existing; guard.request(() => notebook.open(record)); }
           }} />
           {page === 2 && notebook.editor && <RecordOriginal headword={notebook.editor.snapshot.reference.lookup_key}

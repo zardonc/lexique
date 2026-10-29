@@ -89,6 +89,8 @@ button:disabled { cursor: default; opacity: 0.6; }
 .speech-settings [role='alert'] { overflow-wrap: anywhere; font-size: 13px; }
 dialog { max-width: min(520px, 90vw); border: 1px solid var(--line); border-radius: 6px; padding: 24px; color: var(--ink); background: var(--surface); }
 dialog::backdrop { background: #0006; }
+dialog.review-card::backdrop { background: var(--surface); }
+dialog.review-card { width: min(480px, 90vw); overflow-wrap: anywhere; }
 @media (max-width: 720px) {
   .app, .app[data-collapsed='true'] { grid-template-columns: 64px minmax(0, 1fr); }
   .sidebar { padding: 20px 8px 12px; }

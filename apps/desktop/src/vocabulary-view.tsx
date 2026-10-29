@@ -3,6 +3,8 @@ import type { NotebookText } from './notebook-content';
 import { characterCount } from './platform/vocabulary';
 import type { VocabularySnapshot } from './platform/vocabulary';
 import type { Notebook } from './use-notebook';
+import type { RuntimeAdapter } from './platform/runtime';
+import { ReviewCards } from './review-cards';
 
 export function VocabularySummary({ snapshot, text }: { readonly snapshot: VocabularySnapshot; readonly text: NotebookText }) {
   return <section className="vocabulary-summary" aria-label={text.summary}>
@@ -42,8 +44,8 @@ function SaveActions({ notebook, text, overLimit }: {
     <span role="status">{notebook.saved ? text.saved : notebook.dirty ? text.unsaved : ''}</span></div>;
 }
 
-export function VocabularyEditor({ notebook, text, viewExisting }: {
-  readonly notebook: Notebook; readonly text: NotebookText; readonly viewExisting: () => void;
+export function VocabularyEditor({ notebook, text, viewExisting, runtime }: {
+  readonly notebook: Notebook; readonly text: NotebookText; readonly viewExisting: () => void; readonly runtime: RuntimeAdapter;
 }) {
   const textarea = useRef<HTMLTextAreaElement>(null);
   const headword = notebook.editor?.snapshot.headword;
@@ -60,6 +62,7 @@ export function VocabularyEditor({ notebook, text, viewExisting }: {
     {overLimit && <p role="alert">{text.limit}</p>}
     {notebook.error && <p role="alert">{text.saveError}: {notebook.error}</p>}
     <SaveActions notebook={notebook} text={text} overLimit={overLimit} />
+    {notebook.editor.record && <ReviewCards key={notebook.editor.record.id} record={notebook.editor.record} runtime={runtime} text={text} />}
     {notebook.existing && <p role="status">{text.existing} <button onClick={viewExisting}>{text.view}</button></p>}
     <Conflict notebook={notebook} text={text} /><SavedSource snapshot={snapshot} text={text} />
   </section>;

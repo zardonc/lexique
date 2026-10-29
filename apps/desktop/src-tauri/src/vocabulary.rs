@@ -1,4 +1,9 @@
-use std::{path::PathBuf, time::Duration};
+use std::{
+    io::Write,
+    path::PathBuf,
+    process::{Command, Stdio},
+    time::Duration,
+};
 
 use lexique_dictionary::{Lookup, Sense};
 use lexique_storage::{
@@ -158,6 +163,163 @@ pub async fn vocabulary_list(
     })
     .await
     .map_err(|error| format!("Vocabulary list task failed: {error}"))?
+}
+
+#[tauri::command]
+pub async fn review_add(
+    path: State<'_, DatabasePath>,
+    vocabulary_id: i64,
+) -> Result<Vec<lexique_storage::ReviewCard>, String> {
+    if vocabulary_id <= 0 || vocabulary_id > 9_007_199_254_740_991 {
+        return Err("Invalid vocabulary ID".into());
+    }
+    let path = DatabasePath(path.0.clone());
+    tauri::async_runtime::spawn_blocking(move || {
+        lexique_storage::add_review(&mut open(&path)?, vocabulary_id)
+            .map_err(|error| error.to_string())
+    })
+    .await
+    .map_err(|error| format!("Review creation task failed: {error}"))?
+}
+
+#[tauri::command]
+pub async fn review_cards(
+    path: State<'_, DatabasePath>,
+    vocabulary_id: i64,
+) -> Result<Vec<lexique_storage::ReviewCard>, String> {
+    if vocabulary_id <= 0 || vocabulary_id > 9_007_199_254_740_991 {
+        return Err("Invalid vocabulary ID".into());
+    }
+    let path = DatabasePath(path.0.clone());
+    tauri::async_runtime::spawn_blocking(move || {
+        lexique_storage::review_cards(&open(&path)?, vocabulary_id)
+            .map_err(|error| error.to_string())
+    })
+    .await
+    .map_err(|error| format!("Review read task failed: {error}"))?
+}
+
+#[tauri::command]
+pub async fn speech_cached(
+    path: State<'_, DatabasePath>,
+    vocabulary_id: i64,
+) -> Result<Option<Vec<u8>>, String> {
+    if vocabulary_id <= 0 || vocabulary_id > 9_007_199_254_740_991 {
+        return Err("Invalid vocabulary ID".into());
+    }
+    let path = DatabasePath(path.0.clone());
+    tauri::async_runtime::spawn_blocking(move || {
+        let cards = lexique_storage::review_cards(&open(&path)?, vocabulary_id)
+            .map_err(|e| e.to_string())?;
+        if !cards.iter().any(|card| card.kind == "listening") {
+            return Err("Listening card does not exist".into());
+        }
+        crate::speech_cache::read(&path.0, vocabulary_id)
+    })
+    .await
+    .map_err(|e| format!("Speech cache task failed: {e}"))?
+}
+
+#[tauri::command]
+pub async fn speech_generate(
+    app: tauri::AppHandle,
+    path: State<'_, DatabasePath>,
+    vocabulary_id: i64,
+    regenerate: Option<bool>,
+) -> Result<Vec<u8>, String> {
+    if vocabulary_id <= 0 || vocabulary_id > 9_007_199_254_740_991 {
+        return Err("Invalid vocabulary ID".into());
+    }
+    let path = DatabasePath(path.0.clone());
+    let resources = app
+        .path()
+        .resource_dir()
+        .map_err(|error| error.to_string())?
+        .join("speech");
+    tauri::async_runtime::spawn_blocking(move || {
+        static GENERATION: std::sync::Mutex<()> = std::sync::Mutex::new(());
+        let _guard = GENERATION.lock().map_err(|error| error.to_string())?;
+        let connection = open(&path)?;
+        let cards = lexique_storage::review_cards(&connection, vocabulary_id)
+            .map_err(|error| error.to_string())?;
+        if !cards.iter().any(|card| card.kind == "listening") {
+            return Err("Listening card does not exist".into());
+        }
+        let replace = match crate::speech_cache::read(&path.0, vocabulary_id) {
+            Ok(Some(bytes)) if !regenerate.unwrap_or(false) => return Ok(bytes),
+            Ok(Some(_)) => true,
+            Ok(None) => false,
+            Err(error) if error == "Invalid cached speech audio" => true,
+            Err(error) => return Err(error),
+        };
+        let record =
+            lexique_storage::get(&connection, vocabulary_id).map_err(|error| error.to_string())?;
+        let preferences =
+            lexique_storage::speech_preferences(&connection).map_err(|error| error.to_string())?;
+        let voice = match preferences.voice {
+            lexique_storage::SpeechVoice::Female => "female",
+            lexique_storage::SpeechVoice::Male => "male",
+        };
+        let request =
+            serde_json::to_vec(&serde_json::json!({ "text": record.headword, "voice": voice }))
+                .map_err(|error| error.to_string())?;
+        let mut command = Command::new(resources.join("runtime/python.exe"));
+        command
+            .args([
+                "-I",
+                "-X",
+                "utf8",
+                "-c",
+                include_str!("../speech_worker.py"),
+            ])
+            .arg(resources.join("assets"))
+            .arg(resources.join("opusenc.dll"))
+            .stdin(Stdio::piped())
+            .stdout(Stdio::piped())
+            .stderr(Stdio::piped());
+        #[cfg(target_os = "windows")]
+        {
+            use std::os::windows::process::CommandExt;
+            command.creation_flags(0x0800_0000);
+        }
+        let mut child = command
+            .spawn()
+            .map_err(|error| format!("Could not start offline speech: {error}"))?;
+        let input = child
+            .stdin
+            .take()
+            .ok_or_else(|| "Speech input unavailable".to_string());
+        let input_result = input.and_then(|mut input| {
+            input
+                .write_all(&request)
+                .map_err(|error| format!("Could not send speech request: {error}"))
+        });
+        if let Err(error) = input_result {
+            let _ = child.kill();
+            let _ = child.wait();
+            return Err(error);
+        }
+        let output = child
+            .wait_with_output()
+            .map_err(|error| format!("Speech process failed: {error}"))?;
+        if !output.status.success() {
+            return Err(format!(
+                "Offline speech failed: {}",
+                String::from_utf8_lossy(&output.stderr)
+                    .chars()
+                    .take(2048)
+                    .collect::<String>()
+            ));
+        }
+        if output.stdout.len() > 10_000_000 || !output.stdout.starts_with(b"OggS") {
+            return Err("Offline speech returned invalid audio".into());
+        }
+        crate::speech_cache::write(&path.0, vocabulary_id, &output.stdout, replace)?;
+        crate::speech_cache::read(&path.0, vocabulary_id)?
+            .ok_or_else(|| "Generated speech cache disappeared".to_string())
+    })
+    .await
+    .map_err(|error| format!("Speech task failed: {error}"))?
 }
 
 #[tauri::command]

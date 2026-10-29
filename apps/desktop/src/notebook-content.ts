@@ -16,6 +16,10 @@ export const notebookMessages = {
     leave: '有尚未保存的修改', saveLeave: '保存后离开', discard: '放弃修改', stay: '继续编辑',
     source: '收藏时来源与许可', readOriginal: '读取原文', edit: '查看与编辑',
     closeError: '关闭协调失败', preferenceError: '排序偏好保存失败',
+    addReview: '加入复习', recognition: '识义卡', listeningPending: '听音卡：待生成语音', reviewError: '复习卡操作失败',
+    openRecognition: '查看识义卡', reveal: '显示答案', closeCard: '关闭卡片', exampleMissing: '待补例句', more: '笔记与来源',
+    listeningReady: '听音卡：语音已生成',
+    listening: '听音卡', openListening: '查看听音卡', replay: '重播', skip: '跳过', machineVoice: '机器合成语音', playbackError: '播放失败',
   },
   en: {
     summary: 'Word summary', fallback: 'Read-only summary saved at collection', original: 'Dictionary text', notes: 'Personal notes',
@@ -32,6 +36,10 @@ export const notebookMessages = {
     leave: 'You have unsaved changes', saveLeave: 'Save and leave', discard: 'Discard changes', stay: 'Keep editing',
     source: 'Source and license at collection', readOriginal: 'Read dictionary text', edit: 'View and edit',
     closeError: 'Could not coordinate closing', preferenceError: 'Could not save sort preference',
+    addReview: 'Add to review', recognition: 'Recognition card', listeningPending: 'Listening card: audio pending', reviewError: 'Review card operation failed',
+    openRecognition: 'Open recognition card', reveal: 'Show answer', closeCard: 'Close card', exampleMissing: 'Example needed', more: 'Notes and source',
+    listeningReady: 'Listening card: audio generated',
+    listening: 'Listening card', openListening: 'Open listening card', replay: 'Replay', skip: 'Skip', machineVoice: 'Machine-generated speech', playbackError: 'Playback failed',
   },
   fr: {
     summary: 'Résumé du mot', fallback: 'Résumé en lecture seule conservé à l’ajout', original: 'Texte du dictionnaire', notes: 'Notes personnelles',
@@ -48,6 +56,10 @@ export const notebookMessages = {
     leave: 'Des modifications ne sont pas enregistrées', saveLeave: 'Enregistrer et quitter', discard: 'Abandonner les modifications', stay: 'Continuer l’édition',
     source: 'Source et licence lors de l’ajout', readOriginal: 'Lire le texte du dictionnaire', edit: 'Voir et modifier',
     closeError: 'Fermeture impossible', preferenceError: 'Enregistrement du tri impossible',
+    addReview: 'Ajouter aux révisions', recognition: 'Carte de reconnaissance', listeningPending: 'Carte d’écoute : audio en attente', reviewError: 'Opération de révision impossible',
+    openRecognition: 'Voir la carte de reconnaissance', reveal: 'Afficher la réponse', closeCard: 'Fermer la carte', exampleMissing: 'Exemple à ajouter', more: 'Notes et source',
+    listeningReady: 'Carte d’écoute : audio généré',
+    listening: 'Carte d’écoute', openListening: 'Voir la carte d’écoute', replay: 'Réécouter', skip: 'Passer', machineVoice: 'Voix de synthèse', playbackError: 'Échec de la lecture',
   },
 } as const;
 

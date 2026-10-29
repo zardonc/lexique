@@ -7,6 +7,8 @@ mod vocabulary;
 pub use vocabulary::*;
 mod speech;
 pub use speech::*;
+mod review;
+pub use review::*;
 
 const INITIAL_SCHEMA: &str = include_str!("../migrations/0001_initial.sql");
 
@@ -70,6 +72,9 @@ pub fn initialize(connection: &Connection) -> Result<u32, StorageError> {
     }
     if version < 2 {
         transaction.execute_batch(include_str!("../migrations/0002_vocabulary.sql"))?;
+    }
+    if version < 3 {
+        transaction.execute_batch(include_str!("../migrations/0003_review.sql"))?;
     }
     transaction.commit()?;
     Ok(DATABASE_SCHEMA_VERSION)

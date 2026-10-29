@@ -6,10 +6,22 @@ import json
 from pathlib import Path
 import shutil
 import struct
+import sys
+import tempfile
 import zipfile
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from prepare_speech import stage
 
-def package(root: Path, output_directory: Path | None = None, architecture: str = "x64"):
+
+def package(root: Path, output_directory: Path | None = None, architecture: str = "x64",
+            speech_bundle: Path | None = None, speech_encoder: Path | None = None,
+            speech_sources: Path | None = None):
+    speech_inputs = (speech_bundle, speech_encoder, speech_sources)
+    if any(speech_inputs) and not all(speech_inputs):
+        raise ValueError("Speech bundle, encoder, and sources must be supplied together")
+    if all(speech_inputs) and architecture != "x64":
+        raise ValueError("Speech development resources require Windows x64")
     targets = {"x64": ("target/release", 0x8664),
                "arm64": ("target/aarch64-pc-windows-msvc/release", 0xAA64)}
     if architecture not in targets:
@@ -24,7 +36,8 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
     if struct.unpack_from("<H", binary, pe_offset + 4)[0] != machine:
         raise ValueError(f"Executable does not target Windows {architecture}")
     config = json.loads((root / "apps/desktop/src-tauri/tauri.conf.json").read_text())
-    name = f"Lexique-{config['version']}-windows-{architecture}-portable"
+    suffix = "-speech" if all(speech_inputs) else ""
+    name = f"Lexique-{config['version']}-windows-{architecture}-portable{suffix}"
     output = (output_directory if output_directory is not None else root / "target/portable") / name
     archive = output.parent / f"{name}.zip"
     checksum_path = archive.with_suffix(".zip.sha256")
@@ -34,7 +47,14 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
     dictionary = release / "dictionary/dictionary.sqlite3"
     if hashlib.sha256(dictionary.read_bytes()).hexdigest() != report["sqlite_sha256"]:
         raise ValueError("Release dictionary does not match the prepared resource")
-    output.mkdir(parents=True)
+    if all(speech_inputs):
+        with tempfile.TemporaryDirectory(prefix="lexique-speech-stage-") as temporary:
+            staged = Path(temporary) / "speech"
+            stage(speech_bundle, speech_encoder, speech_sources, staged)
+            output.mkdir(parents=True)
+            shutil.copytree(staged, output / "speech")
+    else:
+        output.mkdir(parents=True)
     shutil.copy2(executable, output / "Lexique.exe")
     shutil.copytree(root / "resources/freedict-fra-zho-2025.11.23", output / "dictionary")
     shutil.copy2(dictionary, output / "dictionary/dictionary.sqlite3")
@@ -51,7 +71,11 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
         "when updating. Existing AppData files are neither imported nor removed.\n"
         "A read-only location fails; there is no fallback to AppData.\n\n"
         "This sample provides FreeDict fra-zho lookup and M1 vocabulary notes with explicit save,\n"
-        "search, sorting and restart recovery. TTS and a full dictionary are not included.\n"
+        "search, sorting and restart recovery. Saved words can be added to two review cards;\n"
+        "card identity and content survive restart. Scoring and a full dictionary are not included.\n"
+        + ("Offline speech is included for development testing. See speech/docs for its licenses.\n"
+           "The voice is machine-generated; model use restrictions apply.\n"
+           if all(speech_inputs) else "TTS is not included.\n") +
         "Try: école, œil, aujourd’hui, or, vacances.\n"
         "Project code: MIT (LICENSE). Dictionary: CC BY-SA 3.0 (dictionary/COPYING).\n",
         encoding="utf-8",
@@ -81,5 +105,9 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output-dir", type=Path, help="Separate delivery parent; existing artifacts are never overwritten")
     parser.add_argument("--architecture", choices=("x64", "arm64"), default="x64")
+    parser.add_argument("--speech-bundle", type=Path, help="Verified speech evidence bundle")
+    parser.add_argument("--speech-encoder", type=Path, help="Fixed Windows x64 Opus encoder DLL")
+    parser.add_argument("--speech-sources", type=Path, help="Directory containing fixed Opus source archives")
     args = parser.parse_args()
-    print(json.dumps(package(Path(__file__).resolve().parent.parent, args.output_dir, args.architecture), indent=2))
+    print(json.dumps(package(Path(__file__).resolve().parent.parent, args.output_dir, args.architecture,
+                             args.speech_bundle, args.speech_encoder, args.speech_sources), indent=2))

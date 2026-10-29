@@ -4,14 +4,14 @@ use rusqlite::Connection;
 #[test]
 fn initialization_is_repeatable_and_preserves_existing_values() {
     let connection = Connection::open_in_memory().unwrap();
-    assert_eq!(initialize(&connection).unwrap(), 2);
+    assert_eq!(initialize(&connection).unwrap(), 3);
     connection
         .execute(
             "INSERT INTO app_metadata (key, value) VALUES (?1, ?2)",
             ["example", "keep"],
         )
         .unwrap();
-    assert_eq!(initialize(&connection).unwrap(), 2);
+    assert_eq!(initialize(&connection).unwrap(), 3);
     let value: String = connection
         .query_row(
             "SELECT value FROM app_metadata WHERE key = ?1",
@@ -72,7 +72,7 @@ fn version_one_metadata_survives_incremental_migration_and_failure_rolls_back() 
         1
     );
     connection.execute("DROP TABLE vocabulary", []).unwrap();
-    assert_eq!(initialize(&connection).unwrap(), 2);
+    assert_eq!(initialize(&connection).unwrap(), 3);
     assert_eq!(
         connection
             .query_row(
@@ -82,5 +82,44 @@ fn version_one_metadata_survives_incremental_migration_and_failure_rolls_back() 
             )
             .unwrap(),
         "original"
+    );
+}
+
+#[test]
+fn version_two_migration_preserves_vocabulary_and_rolls_back_on_conflict() {
+    let connection = Connection::open_in_memory().unwrap();
+    connection
+        .execute_batch(include_str!("../migrations/0001_initial.sql"))
+        .unwrap();
+    connection
+        .execute_batch(include_str!("../migrations/0002_vocabulary.sql"))
+        .unwrap();
+    connection.execute("INSERT INTO vocabulary (headword, snapshot, notes, created_at, updated_at) VALUES ('test', '{}', 'keep', 1, 1)", []).unwrap();
+    connection
+        .execute("CREATE TABLE review_cards (unexpected TEXT)", [])
+        .unwrap();
+    assert!(initialize(&connection).is_err());
+    assert_eq!(
+        connection
+            .pragma_query_value(None, "user_version", |row| row.get::<_, u32>(0))
+            .unwrap(),
+        2
+    );
+    connection.execute("DROP TABLE review_cards", []).unwrap();
+    assert_eq!(initialize(&connection).unwrap(), 3);
+    assert_eq!(
+        connection
+            .query_row(
+                "SELECT notes FROM vocabulary WHERE headword = 'test'",
+                [],
+                |row| row.get::<_, String>(0)
+            )
+            .unwrap(),
+        "keep"
+    );
+    assert!(
+        lexique_storage::review_cards(&connection, 1)
+            .unwrap()
+            .is_empty()
     );
 }

@@ -1,0 +1,79 @@
+{
+  "date_utc": "2026-10-29",
+  "issue": "https://github.com/zardonc/lexique/issues/15",
+  "review_baseline": "7430729",
+  "delivery": {
+    "path": "target/issue-15-delivery-20261029/Lexique-0.1.0-windows-x64-portable-speech",
+    "archive_bytes": 165205335,
+    "archive_sha256": "81ae90b7a1cc9e1b646289e4cf3a9d91084efa709484f07485fbf539bbd83fa8",
+    "verified_archive_files": 1072,
+    "installed_logical_bytes": 258873423,
+    "speech_logical_bytes": 241571209,
+    "executable_sha256": "94635df8223a60ad352f0e9e631dc72645b221fa21fe86893804d4d575f87221",
+    "native_test_same_content_files": 1070,
+    "native_comparison_excluded": [
+      "README.txt",
+      "SHA256SUMS.json"
+    ],
+    "includes_learning_data": false
+  },
+  "audio": {
+    "input": "école",
+    "voice": "female",
+    "generation_speed": 1.0,
+    "slow_playback_rate": 0.6,
+    "target_bitrate_bits_per_second": 48000,
+    "decoded_sample_rate": 44100,
+    "decoded_frames": 59762,
+    "decoded_channels": 1,
+    "decoded_sample_width": 2,
+    "decoded_peak_pcm16": 11799,
+    "human_quality_acceptance": "pending user listening",
+    "files": {
+      "audio/native-ecole-female.opus": {
+        "bytes": 8275,
+        "sha256": "911fa59adb80bd47671e84ccb63ae2a81dad3354d9c98f83287e2b7793072cab"
+      },
+      "audio/native-ecole-female.wav": {
+        "bytes": 119568,
+        "sha256": "495238b8e3266f4f46d9539cccb367ff6990b35bc03ebff8a758487b5bcb3db1"
+      }
+    }
+  },
+  "checks": {
+    "frontend_lint_typecheck_build": "passed",
+    "edge_e2e": {
+      "passed": 28,
+      "review_tests": 10
+    },
+    "rust_tests": {
+      "passed": 29,
+      "execution_timeout_seconds": 60,
+      "precompiled": true
+    },
+    "resource_tests": {
+      "passed": 7
+    },
+    "tooling_tests": {
+      "passed": 12,
+      "real_speech_package_skipped": false
+    },
+    "native_cleanup": {
+      "passed": 4
+    },
+    "wasm_schema_3_abi": "passed",
+    "native_ui": "real play, hidden front, reveal, slow replay, skip and restart passed",
+    "native_ipc": "corrupt cache, concurrent generation, failed and successful regeneration passed",
+    "standards_review": "no remaining actionable findings",
+    "spec_review": "no remaining material findings"
+  },
+  "not_verified": [
+    "new audio human listening quality",
+    "full desktop run under external network denial",
+    "cache file symlink check: privilege unavailable; directory junction test passed",
+    "continuous 24-hour cleanup trigger",
+    "simultaneous generation across processes and long playback cleanup",
+    "filesystems without hard-link support",
+    "other platforms, clean machine and final M5 full/Lite distribution"
+  ]
+}

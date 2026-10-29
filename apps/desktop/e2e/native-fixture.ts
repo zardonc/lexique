@@ -32,9 +32,9 @@ export async function nativeFixture(page: Page, responses: Readonly<Record<strin
     const callbacks = new Map<number, (event: unknown) => void>();
     const indexes: Record<string, number> = {};
     window.testNative = { calls: [], close: () => { for (const callback of callbacks.values()) callback({ payload: null }); } };
-    const defaults: Record<string, unknown> = { runtime_status: { version: '0.1.0', schemaVersion: 2, storage: 'sqlite' },
+    const defaults: Record<string, unknown> = { runtime_status: { version: '0.1.0', schemaVersion: 3, storage: 'sqlite' },
       dictionary_lookup: dictionary, vocabulary_find: null, vocabulary_list: [], vocabulary_sort: 'updated-desc', finish_close: null,
-      speech_preferences: { voice: 'female', speed: 'normal' } };
+      speech_preferences: { voice: 'female', speed: 'normal' }, review_cards: [], speech_cached: null };
     function defaultReply(command: string, args?: Record<string, unknown>) {
       if (command === 'speech_preferences' && args?.preferences) defaults[command] = args.preferences;
       return command === 'vocabulary_sort' ? args?.sort ?? defaults[command] : defaults[command];
