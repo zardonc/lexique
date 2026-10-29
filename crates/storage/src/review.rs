@@ -5,6 +5,36 @@ use serde::{Deserialize, Serialize};
 
 use crate::StorageError;
 
+pub fn auto_enroll(connection: &Connection) -> Result<bool, StorageError> {
+    let value: Option<String> = connection
+        .query_row(
+            "SELECT value FROM app_metadata WHERE key = 'review-auto-enroll'",
+            [],
+            |row| row.get(0),
+        )
+        .optional()?;
+    match value.as_deref() {
+        None | Some("false") => Ok(false),
+        Some("true") => Ok(true),
+        _ => Err(StorageError::Invalid(
+            "Invalid auto-enrollment preference".into(),
+        )),
+    }
+}
+
+pub fn set_auto_enroll(connection: &Connection, enabled: bool) -> Result<(), StorageError> {
+    connection.execute("INSERT INTO app_metadata (key, value) VALUES ('review-auto-enroll', ?1) ON CONFLICT(key) DO UPDATE SET value = excluded.value", [enabled.to_string()])?;
+    Ok(())
+}
+
+pub fn review_paused(connection: &Connection, vocabulary_id: i64) -> Result<bool, StorageError> {
+    Ok(connection.query_row(
+        "SELECT EXISTS(SELECT 1 FROM review_paused WHERE vocabulary_id = ?1)",
+        [vocabulary_id],
+        |row| row.get(0),
+    )?)
+}
+
 #[derive(Debug, PartialEq, Eq, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
 pub struct ReviewSettings {
@@ -81,7 +111,7 @@ pub struct ReviewQueue {
 
 pub fn review_card_inventory(connection: &Connection) -> Result<Vec<QueueCard>, StorageError> {
     let mut statement =
-        connection.prepare("SELECT id, vocabulary_id, kind FROM review_cards ORDER BY id")?;
+        connection.prepare("SELECT id, vocabulary_id, kind FROM review_cards WHERE vocabulary_id NOT IN (SELECT vocabulary_id FROM review_paused) ORDER BY id")?;
     let rows = statement.query_map([], |row| {
         Ok(QueueCard {
             id: row.get(0)?,
@@ -389,6 +419,13 @@ fn eligibility(
     now: i64,
     timezone: &str,
 ) -> Result<(Option<String>, Option<i64>), StorageError> {
+    let paused: bool = connection.query_row(
+        "SELECT EXISTS(SELECT 1 FROM review_cards c JOIN review_paused p ON p.vocabulary_id = c.vocabulary_id WHERE c.id = ?1)",
+        [card_id], |row| row.get(0),
+    )?;
+    if paused {
+        return Ok((Some("paused".into()), None));
+    }
     let day =
         lexique_core::scheduling::learning_day_for(now, timezone).map_err(StorageError::Invalid)?;
     let quota = if card.phase == Phase::New {
@@ -776,4 +813,33 @@ pub fn add_review(
     let cards = review_cards(&transaction, vocabulary_id)?;
     transaction.commit()?;
     Ok(cards)
+}
+
+pub fn set_review_paused(
+    connection: &mut Connection,
+    vocabulary_id: i64,
+    paused: bool,
+) -> Result<(), StorageError> {
+    let tx = connection.transaction_with_behavior(TransactionBehavior::Immediate)?;
+    let exists: bool = tx.query_row(
+        "SELECT EXISTS(SELECT 1 FROM review_cards WHERE vocabulary_id = ?1)",
+        [vocabulary_id],
+        |row| row.get(0),
+    )?;
+    if !exists {
+        return Err(StorageError::Invalid("Review cards not found".into()));
+    }
+    if paused {
+        tx.execute(
+            "INSERT INTO review_paused (vocabulary_id) VALUES (?1) ON CONFLICT DO NOTHING",
+            [vocabulary_id],
+        )?;
+    } else {
+        tx.execute(
+            "DELETE FROM review_paused WHERE vocabulary_id = ?1",
+            [vocabulary_id],
+        )?;
+    }
+    tx.commit()?;
+    Ok(())
 }

@@ -4,11 +4,11 @@ import { errorMessage } from './platform/vocabulary';
 import type { Notebook } from './use-notebook';
 import type { NotebookText } from './notebook-content';
 
-export function useLeaveGuard(runtime: RuntimeAdapter, notebook: Notebook) {
+export function useLeaveGuard(runtime: RuntimeAdapter, notebook: Notebook, batchBusy: boolean) {
   const [pending, setPending] = useState<(() => void) | null>(null);
   const [error, setError] = useState('');
   function request(action: () => void) {
-    if (notebook.busy) return;
+    if (notebook.busy || batchBusy) return;
     if (notebook.dirty) setPending(() => action);
     else action();
   }
@@ -40,6 +40,7 @@ export function LeaveDialog({ guard, notebook, text }: {
   return <dialog ref={dialog} aria-labelledby="leave-heading" onCancel={(event) => { event.preventDefault(); guard.stay(); }}>
     <h3 id="leave-heading">{text.leave}</h3>
     {notebook.error && <p role="alert">{text.saveError}: {notebook.error}</p>}
+    {notebook.audioError && <p role="alert">{text.saved}. {text.listeningPending}: {notebook.audioError}</p>}
     {notebook.conflict && <p role="alert">{text.conflict}</p>}
     {notebook.existing && <p role="alert">{text.existing}</p>}
     <div className="actions"><button disabled={notebook.busy} onClick={() => { void guard.saveLeave(); }}>{text.saveLeave}</button>

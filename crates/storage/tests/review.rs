@@ -36,6 +36,146 @@ fn saved_word(connection: &mut Connection) -> i64 {
 }
 
 #[test]
+fn pausing_both_cards_survives_undo_and_resume_preserves_progress() {
+    let mut connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    let word = saved_word(&mut connection);
+    let cards = add_review(&mut connection, word).unwrap();
+    let now = 1_700_000_000;
+    lexique_storage::review_queue(&mut connection, now, "UTC").unwrap();
+    lexique_storage::rate_card(
+        &mut connection,
+        &lexique_storage::RatingRequest {
+            operation: "pause-rating".into(),
+            card_id: cards[0].id,
+            expected_revision: 0,
+            rating: Rating::Good,
+            now,
+            timezone: "UTC".into(),
+        },
+    )
+    .unwrap();
+    lexique_storage::set_review_paused(&mut connection, word, true).unwrap();
+    assert!(
+        lexique_storage::review_queue(&mut connection, now, "UTC")
+            .unwrap()
+            .cards
+            .is_empty()
+    );
+    assert_eq!(
+        lexique_storage::review_availability(&connection, cards[1].id, now, "UTC")
+            .unwrap()
+            .reason
+            .as_deref(),
+        Some("paused")
+    );
+    lexique_storage::undo_rating(&mut connection, "pause-undo", "pause-rating").unwrap();
+    assert!(
+        lexique_storage::review_queue(&mut connection, now, "UTC")
+            .unwrap()
+            .cards
+            .is_empty()
+    );
+    assert_eq!(add_review(&mut connection, word).unwrap(), cards);
+    lexique_storage::set_review_paused(&mut connection, word, false).unwrap();
+    assert_eq!(
+        lexique_storage::review_queue(&mut connection, now, "UTC")
+            .unwrap()
+            .cards
+            .len(),
+        2
+    );
+    assert_eq!(
+        lexique_storage::review_progress(&connection, cards[0].id)
+            .unwrap()
+            .card
+            .phase,
+        lexique_core::scheduling::Phase::New
+    );
+}
+
+#[test]
+fn auto_enrollment_applies_only_to_newly_saved_words() {
+    let mut connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    let existing = saved_word(&mut connection);
+    assert!(!lexique_storage::auto_enroll(&connection).unwrap());
+    lexique_storage::set_auto_enroll(&connection, true).unwrap();
+    assert!(review_cards(&connection, existing).unwrap().is_empty());
+    let original = lexique_storage::get(&connection, existing).unwrap();
+    let request = SaveRequest {
+        operation: "new-auto-word".into(),
+        headword: "bonjour".into(),
+        notes: String::new(),
+        id: None,
+        revision: None,
+    };
+    let snapshot = Snapshot {
+        reference: original.reference,
+        digest: original.digest,
+    };
+    let result = save(&mut connection, &request, Some(snapshot)).unwrap();
+    let cards = review_cards(&connection, result.record.id).unwrap();
+    assert_eq!(cards.len(), 2);
+    assert_eq!(
+        save(&mut connection, &request, None).unwrap().record.id,
+        result.record.id
+    );
+    assert_eq!(review_cards(&connection, result.record.id).unwrap(), cards);
+    lexique_storage::set_auto_enroll(&connection, false).unwrap();
+    assert_eq!(review_cards(&connection, result.record.id).unwrap(), cards);
+}
+
+#[test]
+fn paused_cards_and_auto_enrollment_persist_after_reopening() {
+    let path = std::env::temp_dir().join(format!(
+        "lexique-management-{}-{}.sqlite3",
+        std::process::id(),
+        std::time::SystemTime::now()
+            .duration_since(std::time::UNIX_EPOCH)
+            .unwrap()
+            .as_nanos()
+    ));
+    let mut connection = Connection::open(&path).unwrap();
+    initialize(&connection).unwrap();
+    let word = saved_word(&mut connection);
+    let cards = add_review(&mut connection, word).unwrap();
+    lexique_storage::set_auto_enroll(&connection, true).unwrap();
+    lexique_storage::set_review_paused(&mut connection, word, true).unwrap();
+    drop(connection);
+    let mut connection = Connection::open(&path).unwrap();
+    initialize(&connection).unwrap();
+    assert!(lexique_storage::auto_enroll(&connection).unwrap());
+    assert!(lexique_storage::review_paused(&connection, word).unwrap());
+    assert!(
+        lexique_storage::rate_card(
+            &mut connection,
+            &lexique_storage::RatingRequest {
+                operation: "paused-attempt".into(),
+                card_id: cards[0].id,
+                expected_revision: 0,
+                rating: Rating::Good,
+                now: 1_700_000_000,
+                timezone: "UTC".into(),
+            }
+        )
+        .is_err()
+    );
+    assert_eq!(add_review(&mut connection, word).unwrap(), cards);
+    assert!(lexique_storage::review_paused(&connection, word).unwrap());
+    lexique_storage::set_review_paused(&mut connection, word, false).unwrap();
+    assert_eq!(
+        lexique_storage::review_queue(&mut connection, 1_700_000_000, "UTC")
+            .unwrap()
+            .cards
+            .len(),
+        2
+    );
+    drop(connection);
+    std::fs::remove_file(path).unwrap();
+}
+
+#[test]
 fn undo_rating_restores_queue_and_can_be_retried() {
     let mut connection = Connection::open_in_memory().unwrap();
     initialize(&connection).unwrap();
@@ -409,7 +549,7 @@ fn legacy_schema_upgrade_undo_retry_survives_reopening() {
         )
         .unwrap();
         connection.execute("UPDATE review_ratings SET queue_before = json_remove(queue_before, '$.ordered_cards')", []).unwrap();
-        connection.execute_batch("DROP INDEX review_ratings_undo_operation; ALTER TABLE review_ratings DROP COLUMN undo_operation; ALTER TABLE review_ratings DROP COLUMN undo_queue_rebuilt; PRAGMA user_version = 5;").unwrap();
+        connection.execute_batch("DROP TABLE review_paused; DROP INDEX review_ratings_undo_operation; ALTER TABLE review_ratings DROP COLUMN undo_operation; ALTER TABLE review_ratings DROP COLUMN undo_queue_rebuilt; PRAGMA user_version = 5;").unwrap();
     }
     {
         let mut connection = Connection::open(&path).unwrap();
@@ -1026,7 +1166,10 @@ fn adding_a_saved_word_creates_two_cards_once_without_changing_the_record() {
         .unwrap();
     let id = saved_word(&mut connection);
     let original = lexique_storage::get(&connection, id).unwrap();
-    assert_eq!(initialize(&connection).unwrap(), 6);
+    assert_eq!(
+        initialize(&connection).unwrap(),
+        lexique_core::DATABASE_SCHEMA_VERSION
+    );
     assert!(review_cards(&connection, id).unwrap().is_empty());
     let first = add_review(&mut connection, id).unwrap();
     assert_eq!(first.len(), 2);

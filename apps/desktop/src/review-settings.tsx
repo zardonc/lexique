@@ -9,6 +9,29 @@ const messages = {
   fr: { title: 'Réglages de révision', retention: 'Rétention cible (%)', newLimit: 'Limite quotidienne de nouvelles cartes', reviewLimit: 'Limite quotidienne de réponses', save: 'Enregistrer les réglages', saved: 'Enregistré', loading: 'Chargement des réglages', preview: 'Les réglages ne sont pas disponibles dans l’aperçu web.', error: 'Échec des réglages', retry: 'Recharger' },
 } as const;
 
+const autoLabels = { zh: '今后收藏自动加入复习', en: 'Automatically add future saved words to review', fr: 'Ajouter automatiquement les nouveaux mots aux révisions' } as const;
+
+function AutoEnroll({ runtime, locale }: { readonly runtime: RuntimeAdapter; readonly locale: Locale }) {
+  const [value, setValue] = useState<boolean | null>(null);
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState('');
+  useEffect(() => {
+    let active = true;
+    void runtime.reviewAutoEnroll().then((result) => { if (active) setValue(result); })
+      .catch((cause: unknown) => { if (active) setError(errorMessage(cause)); });
+    return () => { active = false; };
+  }, [runtime]);
+  async function update(enabled: boolean) {
+    setBusy(true); setError('');
+    try { const result = await runtime.reviewAutoEnroll(enabled); if (result === null) throw new Error(messages[locale].preview); setValue(result); }
+    catch (cause) { setError(errorMessage(cause)); }
+    finally { setBusy(false); }
+  }
+  return <><label><input type="checkbox" checked={value ?? false} disabled={value === null || busy}
+    onChange={(event) => { void update(event.target.checked); }} />{autoLabels[locale]}</label>
+    {error && <p role="alert">{messages[locale].error}: {error}</p>}</>;
+}
+
 export function ReviewSettingsPanel({ runtime, locale }: { readonly runtime: RuntimeAdapter; readonly locale: Locale }) {
   const text = messages[locale];
   const [settings, setSettings] = useState<ReviewSettings | null>(null);
@@ -30,6 +53,7 @@ export function ReviewSettingsPanel({ runtime, locale }: { readonly runtime: Run
   const fields = [['retention_percent', text.retention, 70, 99], ['new_limit', text.newLimit, 0, 1_000_000], ['review_limit', text.reviewLimit, 0, 1_000_000]] as const;
   return <section className="speech-settings" aria-labelledby="review-settings-title">
     <h3 id="review-settings-title">{text.title}</h3>
+    <AutoEnroll runtime={runtime} locale={locale} />
     {settings && <><div className="speech-options">{fields.map(([key, label, min, max]) => <label key={key}>{label}
       <input type="number" min={min} max={max} step={1} value={settings[key]} disabled={status === 'saving'}
         onChange={(event) => { const value = event.currentTarget.valueAsNumber; setSettings({ ...settings, [key]: value }); setStatus('ready'); }} />

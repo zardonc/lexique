@@ -61,8 +61,9 @@ export function VocabularyEditor({ notebook, text, viewExisting, runtime }: {
     <p id="note-count">{characterCount(notes).toLocaleString()} / 20,000 {text.count}</p>
     {overLimit && <p role="alert">{text.limit}</p>}
     {notebook.error && <p role="alert">{text.saveError}: {notebook.error}</p>}
+    {notebook.audioError && <p role="alert">{text.listeningPending}: {notebook.audioError}</p>}
     <SaveActions notebook={notebook} text={text} overLimit={overLimit} />
-    {notebook.editor.record && <ReviewCards key={notebook.editor.record.id} record={notebook.editor.record} runtime={runtime} text={text} />}
+    {notebook.editor.record && <ReviewCards key={`${notebook.editor.record.id}-${notebook.version}`} record={notebook.editor.record} runtime={runtime} text={text} />}
     {notebook.existing && <p role="status">{text.existing} <button onClick={viewExisting}>{text.view}</button></p>}
     <Conflict notebook={notebook} text={text} /><SavedSource snapshot={snapshot} text={text} />
   </section>;

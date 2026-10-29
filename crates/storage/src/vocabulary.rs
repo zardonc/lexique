@@ -215,10 +215,16 @@ pub fn save(
              VALUES (?1, ?2, ?3, CAST(unixepoch('subsec') * 1000 AS INTEGER), CAST(unixepoch('subsec') * 1000 AS INTEGER))",
             params![headword, serde_json::to_string(&snapshot)?, request.notes],
         )?;
-        (
-            "created",
-            get(&transaction, transaction.last_insert_rowid())?,
-        )
+        let id = transaction.last_insert_rowid();
+        if crate::auto_enroll(&transaction)? {
+            for kind in ["recognition", "listening"] {
+                transaction.execute(
+                    "INSERT INTO review_cards (vocabulary_id, kind) VALUES (?1, ?2)",
+                    params![id, kind],
+                )?;
+            }
+        }
+        ("created", get(&transaction, id)?)
     };
     transaction.execute(
         "INSERT INTO save_operations (operation, request, record_id, outcome) VALUES (?1, ?2, ?3, ?4)",

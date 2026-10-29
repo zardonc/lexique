@@ -76,6 +76,8 @@ button:disabled { cursor: default; opacity: 0.6; }
 .notebook-controls input { width: 100%; min-height: 38px; padding: 8px; border: 1px solid var(--line); border-radius: 4px; background: var(--surface); }
 .notebook-controls select { max-width: none; }
 .vocabulary-list { list-style: none; padding: 0; margin: 24px 0; display: grid; gap: 8px; }
+.vocabulary-list li { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.vocabulary-list li > button { min-width: 0; }
 .vocabulary-list button { display: grid; gap: 8px; text-align: left; width: 100%; overflow-wrap: anywhere; }
 .vocabulary-list strong { font-family: Georgia, serif; font-size: 22px; font-weight: 400; }
 .vocabulary-list span { font-size: 13px; color: var(--muted); }

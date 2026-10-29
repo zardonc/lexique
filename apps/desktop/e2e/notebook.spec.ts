@@ -1,6 +1,124 @@
 import { expect, test } from '@playwright/test';
 import { collect, nativeFixture, record } from './native-fixture';
 
+test('batch review selection survives sorting, clears on search and reports partial failure', async ({ page }) => {
+  const second = { ...record, id: 2, headword: 'bonjour' };
+  const cards = [{ id: 1, kind: 'recognition' }, { id: 2, kind: 'listening' }];
+  await nativeFixture(page, { vocabulary_list: [{ value: [record, second] }],
+    review_add: [{ value: cards }, { error: 'disk full' }, { value: cards }],
+    speech_cached: [{ value: [1] }], speech_generate: [{ value: [1] }] });
+  await page.goto('/');
+  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByLabel('全选当前搜索结果').check();
+  await page.getByLabel('排序方式').selectOption('headword-asc');
+  await expect(page.getByLabel('选择 école')).toBeChecked();
+  await page.getByRole('button', { name: '批量加入复习' }).click();
+  await expect(page.getByText('bonjour：失败')).toBeVisible();
+  await page.getByRole('button', { name: '重试 bonjour' }).click();
+  await expect(page.getByText('bonjour：成功')).toBeVisible();
+  await page.getByRole('searchbox', { name: '搜索词头、摘要或笔记' }).fill('école');
+  await expect(page.getByLabel('选择 école')).not.toBeChecked();
+});
+
+test('automatic enrollment keeps a successful save visible when audio generation fails', async ({ page }) => {
+  await nativeFixture(page, { vocabulary_save: [{ value: { outcome: 'created', record } }],
+    review_cards: [{ value: [{ id: 1, kind: 'recognition' }, { id: 2, kind: 'listening' }] }],
+    speech_cached: [{ value: null }], speech_generate: [{ error: 'voice unavailable' }] });
+  await collect(page);
+  await page.getByRole('button', { name: '保存', exact: true }).click();
+  await expect(page.getByText('已保存', { exact: true })).toBeVisible();
+  await expect(page.getByRole('alert')).toContainText('voice unavailable');
+});
+
+test('save and leave keeps the audio failure visible after the word is saved', async ({ page }) => {
+  await nativeFixture(page, { vocabulary_save: [{ value: { outcome: 'created', record } }],
+    review_cards: [{ value: [{ id: 1, kind: 'recognition' }, { id: 2, kind: 'listening' }] }],
+    speech_cached: [{ value: null }], speech_generate: [{ error: 'voice unavailable' }] });
+  await collect(page);
+  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '保存后离开' }).click();
+  await expect(page.getByRole('dialog')).toContainText('已保存');
+  await expect(page.getByRole('dialog')).toContainText('voice unavailable');
+});
+
+test('batch enrollment distinguishes saved cards from failed audio', async ({ page }) => {
+  await nativeFixture(page, { vocabulary_list: [{ value: [record] }],
+    review_add: [{ value: [{ id: 1, kind: 'recognition' }, { id: 2, kind: 'listening' }] }],
+    speech_cached: [{ value: null }], speech_generate: [{ error: 'voice unavailable' }] });
+  await page.goto('/');
+  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByLabel('选择 école').check();
+  await page.getByRole('button', { name: '批量加入复习' }).click();
+  await expect(page.getByText('école：卡片已加入，语音失败')).toBeVisible();
+  await expect(page.getByRole('button', { name: '重试 école' })).toBeVisible();
+});
+
+test('batch results cannot be lost by navigating while an operation is running', async ({ page }) => {
+  await nativeFixture(page, { vocabulary_list: [{ value: [record] }],
+    review_add: [{ value: [{ id: 1, kind: 'recognition' }, { id: 2, kind: 'listening' }], delay: 500 }],
+    speech_cached: [{ value: [1] }] });
+  await page.goto('/');
+  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByLabel('选择 école').check();
+  await page.getByRole('button', { name: '批量加入复习' }).click();
+  await expect(page.getByRole('button', { name: '词典', exact: true })).toBeDisabled();
+  await expect(page.locator('.vocabulary-list button')).toBeDisabled();
+  await expect(page.getByText('école：成功')).toBeVisible();
+  await expect(page.getByRole('button', { name: '词典', exact: true })).toBeEnabled();
+});
+
+test('review management exposes persisted auto enrollment and word pause', async ({ page }) => {
+  await nativeFixture(page, { vocabulary_list: [{ value: [record] }],
+    review_cards: [{ value: [{ id: 1, kind: 'recognition' }, { id: 2, kind: 'listening' }] }] });
+  await page.goto('/');
+  await page.getByRole('button', { name: '设置', exact: true }).click();
+  await page.getByLabel('今后收藏自动加入复习').check();
+  await expect(page.getByLabel('今后收藏自动加入复习')).toBeChecked();
+  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.locator('.vocabulary-list button').click();
+  await page.getByRole('button', { name: '暂停复习', exact: true }).click();
+  await expect(page.getByText('复习已暂停', { exact: true })).toBeVisible();
+  await page.getByRole('button', { name: '恢复复习', exact: true }).click();
+  await expect(page.getByRole('button', { name: '暂停复习', exact: true })).toBeVisible();
+  await page.getByRole('button', { name: '设置', exact: true }).click();
+  await expect(page.getByLabel('今后收藏自动加入复习')).toBeChecked();
+});
+
+test('retrying audio for a paused word does not resume it', async ({ page }) => {
+  const cards = [{ id: 1, kind: 'recognition' }, { id: 2, kind: 'listening' }];
+  await nativeFixture(page, { vocabulary_list: [{ value: [record] }], review_cards: [{ value: cards }],
+    review_pause: [{ value: true }], review_add: [{ value: cards }], speech_cached: [{ value: null }], speech_generate: [{ value: [1] }] });
+  await page.goto('/');
+  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.locator('.vocabulary-list button').click();
+  await expect(page.getByText('复习已暂停', { exact: true })).toBeVisible();
+  await page.getByRole('button', { name: '加入复习', exact: true }).click();
+  await expect(page.getByText('复习已暂停', { exact: true })).toBeVisible();
+  expect(await page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'review_pause' && call.args?.paused === false))).toHaveLength(0);
+});
+
+test('pause and resume reload card rating eligibility', async ({ page }) => {
+  await nativeFixture(page, { vocabulary_list: [{ value: [record] }],
+    review_cards: [{ value: [{ id: 1, kind: 'recognition' }] }] });
+  await page.goto('/');
+  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.locator('.vocabulary-list button').click();
+  await expect(page.getByRole('button', { name: '暂停复习', exact: true })).toBeVisible();
+  await page.getByRole('button', { name: '查看识义卡' }).click();
+  await page.getByRole('button', { name: '显示答案' }).click();
+  await expect(page.getByRole('button', { name: '记得', exact: true })).toBeEnabled();
+  await page.getByRole('button', { name: '关闭卡片' }).click();
+  await page.getByRole('button', { name: '暂停复习', exact: true }).click();
+  await page.getByRole('button', { name: '查看识义卡' }).click();
+  await page.getByRole('button', { name: '显示答案' }).click();
+  await expect(page.getByRole('dialog').getByText('复习已暂停')).toBeVisible();
+  await page.getByRole('button', { name: '关闭卡片' }).click();
+  await page.getByRole('button', { name: '恢复复习', exact: true }).click();
+  await page.getByRole('button', { name: '查看识义卡' }).click();
+  await page.getByRole('button', { name: '显示答案' }).click();
+  await expect(page.getByRole('button', { name: '记得', exact: true })).toBeEnabled();
+});
+
 test('browser notebook clearly reports unavailable native persistence', async ({ page }) => {
   await page.goto('/');
   await page.getByRole('button', { name: '生词本', exact: true }).click();

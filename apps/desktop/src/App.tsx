@@ -45,15 +45,16 @@ export function App({ runtime }: { readonly runtime: RuntimeAdapter }) {
   const [theme, setTheme] = useState<Theme>('white');
   const [page, setPage] = useState(0);
   const [collapsed, setCollapsed] = useState(false);
+  const [batchBusy, setBatchBusy] = useState(false);
   const text = messages[locale];
   const notebookText = notebookMessages[locale];
   const notebook = useNotebook(runtime);
-  const guard = useLeaveGuard(runtime, notebook);
+  const guard = useLeaveGuard(runtime, notebook, batchBusy);
   function changePage(next: number) { guard.request(() => { notebook.clear(); setPage(next); }); }
   useEffect(() => { document.documentElement.lang = languageTags[locale]; }, [locale]);
   return <div className="app" data-theme={theme} data-collapsed={collapsed}>
     <a className="skip-link" href="#main-content">{text.skip}</a>
-    <Navigation text={text} selected={page} collapsed={collapsed} onSelect={changePage} onToggle={() => setCollapsed((value) => !value)} />
+    <Navigation text={text} selected={page} collapsed={collapsed} disabled={batchBusy} onSelect={changePage} onToggle={() => setCollapsed((value) => !value)} />
     <div className="workspace"><Header text={text} locale={locale} theme={theme} onLocale={setLocale} onTheme={setTheme} />
       <main id="main-content" tabIndex={-1}>
         <p className="eyebrow">{text.eyebrow}</p><h1>{text.modules[page]}</h1>
@@ -64,7 +65,7 @@ export function App({ runtime }: { readonly runtime: RuntimeAdapter }) {
             onCollect={(result) => guard.request(() => notebook.collect(result))}
             onOpen={(record) => guard.request(() => notebook.open(record))}
             beforeSearch={(action) => guard.request(() => { notebook.clear(); action(); })} /> : page === 2 ?
-            <NotebookPanel runtime={runtime} version={notebook.version} text={notebookText}
+            <NotebookPanel runtime={runtime} version={notebook.version} text={notebookText} onWorkingChange={setBatchBusy}
               onOpen={(record) => guard.request(() => notebook.open(record))} /> : page === 3 ? <ReviewQueuePanel runtime={runtime} locale={locale} text={notebookText} /> : page === 7 ?
             <><ReviewSettingsPanel runtime={runtime} locale={locale} /><SpeechSettings runtime={runtime} locale={locale} /></> :
             <div className="empty-state"><p>{text.pending[page]}</p><small>{text.scaffold}</small></div>}

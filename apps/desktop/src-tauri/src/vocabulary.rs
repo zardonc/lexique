@@ -183,6 +183,47 @@ pub async fn review_add(
 }
 
 #[tauri::command]
+pub async fn review_pause(
+    path: State<'_, DatabasePath>,
+    vocabulary_id: i64,
+    paused: Option<bool>,
+) -> Result<bool, String> {
+    if vocabulary_id <= 0 || vocabulary_id > 9_007_199_254_740_991 {
+        return Err("Invalid vocabulary ID".into());
+    }
+    let path = DatabasePath(path.0.clone());
+    tauri::async_runtime::spawn_blocking(move || {
+        let mut connection = open(&path)?;
+        if let Some(value) = paused {
+            lexique_storage::set_review_paused(&mut connection, vocabulary_id, value)
+                .map_err(|error| error.to_string())?;
+        }
+        lexique_storage::review_paused(&connection, vocabulary_id)
+            .map_err(|error| error.to_string())
+    })
+    .await
+    .map_err(|error| format!("Review pause task failed: {error}"))?
+}
+
+#[tauri::command]
+pub async fn review_auto_enroll(
+    path: State<'_, DatabasePath>,
+    enabled: Option<bool>,
+) -> Result<bool, String> {
+    let path = DatabasePath(path.0.clone());
+    tauri::async_runtime::spawn_blocking(move || {
+        let connection = open(&path)?;
+        if let Some(value) = enabled {
+            lexique_storage::set_auto_enroll(&connection, value)
+                .map_err(|error| error.to_string())?;
+        }
+        lexique_storage::auto_enroll(&connection).map_err(|error| error.to_string())
+    })
+    .await
+    .map_err(|error| format!("Review preference task failed: {error}"))?
+}
+
+#[tauri::command]
 pub async fn review_cards(
     path: State<'_, DatabasePath>,
     vocabulary_id: i64,

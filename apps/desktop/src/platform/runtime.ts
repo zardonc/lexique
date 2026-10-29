@@ -24,7 +24,7 @@ const scheduleCardSchema = z.object({ phase: z.enum(['new', 'learning_first', 'l
   memory: z.object({ stability: z.number().finite(), difficulty: z.number().finite() }).strict().nullable(),
   last_review_at: z.number().int().safe().nullable(), due_at: z.number().int().safe().nullable() }).strict();
 const progressSchema = z.object({ revision: z.number().int().nonnegative().safe(), card: scheduleCardSchema }).strict();
-const availabilitySchema = z.object({ progress: progressSchema, reason: z.enum(['clock', 'due', 'quota', 'deferred']).nullable(),
+const availabilitySchema = z.object({ progress: progressSchema, reason: z.enum(['clock', 'due', 'quota', 'deferred', 'paused']).nullable(),
   available_at: z.number().int().safe().nullable() }).strict();
 export const rateRequestSchema = z.object({ operation: z.string().min(1).max(128), card_id: z.number().int().positive().safe(),
   expected_revision: z.number().int().nonnegative().safe(), rating: ratingSchema, timezone: z.string().min(1).max(128) }).strict();
@@ -34,10 +34,10 @@ const scheduledSchema = z.object({ card: scheduleCardSchema, elapsed_days: z.num
   retention_percent: z.number().int().min(70).max(99), timezone_database: z.string() }).strict();
 const rateOutcomeSchema = z.discriminatedUnion('status', [
   z.object({ status: z.literal('committed'), result: scheduledSchema }).strict(),
-  z.object({ status: z.literal('rejected'), code: z.enum(['clock', 'due', 'quota', 'deferred', 'conflict', 'invalid']), detail: z.string() }).strict(),
+  z.object({ status: z.literal('rejected'), code: z.enum(['clock', 'due', 'quota', 'deferred', 'paused', 'conflict', 'invalid']), detail: z.string() }).strict(),
 ]);
 export class RatingRejected extends Error {
-  constructor(readonly code: 'clock' | 'due' | 'quota' | 'deferred' | 'conflict' | 'invalid', detail: string) { super(detail); }
+  constructor(readonly code: 'clock' | 'due' | 'quota' | 'deferred' | 'paused' | 'conflict' | 'invalid', detail: string) { super(detail); }
 }
 export class UndoRejected extends Error {}
 const undoOutcomeSchema = z.discriminatedUnion('status', [
@@ -66,6 +66,8 @@ export interface RuntimeAdapter {
   readonly speechPreferences: (preferences?: SpeechPreferences) => Promise<SpeechPreferences | null>;
   readonly addReview: (id: number) => Promise<readonly ReviewCard[] | null>;
   readonly reviewCards: (id: number) => Promise<readonly ReviewCard[] | null>;
+  readonly reviewPause: (id: number, paused?: boolean) => Promise<boolean | null>;
+  readonly reviewAutoEnroll: (enabled?: boolean) => Promise<boolean | null>;
   readonly reviewProgress: (id: number) => Promise<ReviewProgress | null>;
   readonly reviewAvailability: (id: number) => Promise<ReviewAvailability | null>;
   readonly rateReview: (request: RateRequest) => Promise<ReviewProgress | null>;
@@ -111,6 +113,14 @@ export const runtime: RuntimeAdapter = {
   async reviewCards(id) {
     if (!isTauri()) return null;
     return cardsSchema.parse(await invoke('review_cards', { vocabularyId: z.number().int().positive().safe().parse(id) }));
+  },
+  async reviewPause(id, paused) {
+    if (!isTauri()) return null;
+    return z.boolean().parse(await invoke('review_pause', { vocabularyId: z.number().int().positive().safe().parse(id), paused: paused === undefined ? null : z.boolean().parse(paused) }));
+  },
+  async reviewAutoEnroll(enabled) {
+    if (!isTauri()) return null;
+    return z.boolean().parse(await invoke('review_auto_enroll', { enabled: enabled === undefined ? null : z.boolean().parse(enabled) }));
   },
   async reviewProgress(id) {
     if (!isTauri()) return null;

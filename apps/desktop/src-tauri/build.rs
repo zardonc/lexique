@@ -38,6 +38,8 @@ fn main() {
             "vocabulary_save",
             "vocabulary_sort",
             "review_add",
+            "review_pause",
+            "review_auto_enroll",
             "review_cards",
             "review_availability",
             "review_progress",
