@@ -95,6 +95,12 @@ pub fn initialize(connection: &Connection) -> Result<u32, StorageError> {
     if version < 7 {
         transaction.execute_batch(include_str!("../migrations/0007_review_management.sql"))?;
     }
+    if version < 8 {
+        transaction.execute_batch(include_str!("../migrations/0008_examples.sql"))?;
+    }
+    if version < 9 {
+        transaction.execute_batch(include_str!("../migrations/0009_more_examples.sql"))?;
+    }
     transaction.commit()?;
     Ok(DATABASE_SCHEMA_VERSION)
 }

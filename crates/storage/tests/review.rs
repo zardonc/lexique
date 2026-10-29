@@ -9,6 +9,9 @@ fn saved_word(connection: &mut Connection) -> i64 {
         operation: "create-review-word".into(),
         headword: "école".into(),
         notes: "my notes".into(),
+        example_fr: String::new(),
+        example_zh: String::new(),
+        more_examples: vec![],
         id: None,
         revision: None,
     };
@@ -176,6 +179,9 @@ fn auto_enrollment_applies_only_to_newly_saved_words() {
         operation: "new-auto-word".into(),
         headword: "bonjour".into(),
         notes: String::new(),
+        example_fr: String::new(),
+        example_zh: String::new(),
+        more_examples: vec![],
         id: None,
         revision: None,
     };
@@ -211,6 +217,9 @@ fn auto_enrollment_rolls_back_word_and_cards_when_card_creation_fails() {
         operation: "failed-auto-word".into(),
         headword: "bonjour".into(),
         notes: String::new(),
+        example_fr: String::new(),
+        example_zh: String::new(),
+        more_examples: vec![],
         id: None,
         revision: None,
     };
@@ -362,6 +371,9 @@ fn undo_rating_outside_queue_keeps_later_notes_and_settings() {
             operation: "edit-after-rating".into(),
             headword: record.headword,
             notes: "Notes saved after the rating\nÉcole : mon exemple.".into(),
+            example_fr: "Je vais à l'école.".into(),
+            example_zh: "我去学校。".into(),
+            more_examples: vec![],
             id: Some(word),
             revision: Some(record.revision),
         },
@@ -652,7 +664,7 @@ fn legacy_schema_upgrade_undo_retry_survives_reopening() {
         )
         .unwrap();
         connection.execute("UPDATE review_ratings SET queue_before = json_remove(queue_before, '$.ordered_cards')", []).unwrap();
-        connection.execute_batch("DROP TABLE review_paused; DROP INDEX review_ratings_undo_operation; ALTER TABLE review_ratings DROP COLUMN undo_operation; ALTER TABLE review_ratings DROP COLUMN undo_queue_rebuilt; PRAGMA user_version = 5;").unwrap();
+        connection.execute_batch("DROP TABLE review_paused; DROP INDEX review_ratings_undo_operation; ALTER TABLE review_ratings DROP COLUMN undo_operation; ALTER TABLE review_ratings DROP COLUMN undo_queue_rebuilt; ALTER TABLE vocabulary DROP COLUMN example_fr; ALTER TABLE vocabulary DROP COLUMN example_zh; ALTER TABLE vocabulary DROP COLUMN more_examples; PRAGMA user_version = 5;").unwrap();
     }
     {
         let mut connection = Connection::open(&path).unwrap();
@@ -1260,6 +1272,14 @@ fn minute_step_ratings_use_the_separate_review_limit() {
 
 #[test]
 fn adding_a_saved_word_creates_two_cards_once_without_changing_the_record() {
+    let mut source = Connection::open_in_memory().unwrap();
+    initialize(&source).unwrap();
+    let source_id = saved_word(&mut source);
+    let source_record = lexique_storage::get(&source, source_id).unwrap();
+    let snapshot = Snapshot {
+        reference: source_record.reference,
+        digest: source_record.digest,
+    };
     let mut connection = Connection::open_in_memory().unwrap();
     connection
         .execute_batch(include_str!("../migrations/0001_initial.sql"))
@@ -1267,12 +1287,15 @@ fn adding_a_saved_word_creates_two_cards_once_without_changing_the_record() {
     connection
         .execute_batch(include_str!("../migrations/0002_vocabulary.sql"))
         .unwrap();
-    let id = saved_word(&mut connection);
-    let original = lexique_storage::get(&connection, id).unwrap();
+    connection.execute("INSERT INTO vocabulary (headword, snapshot, notes, created_at, updated_at) VALUES (?1, ?2, ?3, 1, 1)", rusqlite::params!["école", serde_json::to_string(&snapshot).unwrap(), "my notes"]).unwrap();
+    let id = connection.last_insert_rowid();
     assert_eq!(
         initialize(&connection).unwrap(),
         lexique_core::DATABASE_SCHEMA_VERSION
     );
+    let original = lexique_storage::get(&connection, id).unwrap();
+    assert_eq!(original.notes, "my notes");
+    assert_eq!(original.example_fr, "");
     assert!(review_cards(&connection, id).unwrap().is_empty());
     let first = add_review(&mut connection, id).unwrap();
     assert_eq!(first.len(), 2);

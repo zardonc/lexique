@@ -32,12 +32,22 @@ pub struct Snapshot {
     pub digest: Vec<DigestEntry>,
 }
 
-#[derive(Debug, Deserialize, Serialize)]
+#[derive(Debug, Clone, Deserialize, Serialize, PartialEq)]
+#[serde(deny_unknown_fields)]
+pub struct Example {
+    pub fr: String,
+    pub zh: String,
+}
+
+#[derive(Debug, Deserialize, Serialize, PartialEq)]
 #[serde(deny_unknown_fields)]
 pub struct SaveRequest {
     pub operation: String,
     pub headword: String,
     pub notes: String,
+    pub example_fr: String,
+    pub example_zh: String,
+    pub more_examples: Vec<Example>,
     pub id: Option<i64>,
     pub revision: Option<i64>,
 }
@@ -49,6 +59,9 @@ pub struct VocabularyRecord {
     pub reference: Reference,
     pub digest: Vec<DigestEntry>,
     pub notes: String,
+    pub example_fr: String,
+    pub example_zh: String,
+    pub more_examples: Vec<Example>,
     pub revision: i64,
     pub created_at: i64,
     pub updated_at: i64,
@@ -85,6 +98,21 @@ pub fn validate(request: &SaveRequest) -> Result<(), StorageError> {
             "Notes exceed 20,000 Unicode characters".into(),
         ));
     }
+    if request.example_fr.chars().count() > 20_000 || request.example_zh.chars().count() > 20_000 {
+        return Err(StorageError::Invalid(
+            "Example exceeds 20,000 Unicode characters".into(),
+        ));
+    }
+    if request.more_examples.len() > 100
+        || request
+            .more_examples
+            .iter()
+            .any(|e| e.fr.chars().count() > 20_000 || e.zh.chars().count() > 20_000)
+    {
+        return Err(StorageError::Invalid(
+            "Too many or oversized examples".into(),
+        ));
+    }
     if request.id.is_some() != request.revision.is_some()
         || request.id.is_some_and(|id| id <= 0)
         || request.revision.is_some_and(|revision| revision <= 0)
@@ -110,10 +138,19 @@ fn row_record(row: &rusqlite::Row<'_>) -> rusqlite::Result<VocabularyRecord> {
         revision: row.get(4)?,
         created_at: row.get(5)?,
         updated_at: row.get(6)?,
+        example_fr: row.get(7)?,
+        example_zh: row.get(8)?,
+        more_examples: serde_json::from_str(&row.get::<_, String>(9)?).map_err(|error| {
+            rusqlite::Error::FromSqlConversionFailure(
+                9,
+                rusqlite::types::Type::Text,
+                Box::new(error),
+            )
+        })?,
     })
 }
 
-const COLUMNS: &str = "id, headword, snapshot, notes, revision, created_at, updated_at";
+const COLUMNS: &str = "id, headword, snapshot, notes, revision, created_at, updated_at, example_fr, example_zh, more_examples";
 
 pub fn get(connection: &Connection, id: i64) -> Result<VocabularyRecord, StorageError> {
     Ok(connection.query_row(
@@ -157,7 +194,15 @@ pub fn replay(
     match previous {
         None => Ok(None),
         Some((payload, id, outcome)) => {
-            if payload != serde_json::to_string(request)? {
+            let mut stored: serde_json::Value = serde_json::from_str(&payload)?;
+            if let Some(fields) = stored.as_object_mut() {
+                fields.entry("example_fr").or_insert_with(|| "".into());
+                fields.entry("example_zh").or_insert_with(|| "".into());
+                fields
+                    .entry("more_examples")
+                    .or_insert_with(|| serde_json::json!([]));
+            }
+            if serde_json::from_value::<SaveRequest>(stored)? != *request {
                 return Err(StorageError::Invalid(
                     "Save identifier reused with different content".into(),
                 ));
@@ -197,9 +242,9 @@ pub fn save(
             });
         }
         transaction.execute(
-            "UPDATE vocabulary SET notes = ?1, revision = revision + 1,
-             updated_at = MAX(updated_at + 1, CAST(unixepoch('subsec') * 1000 AS INTEGER)) WHERE id = ?2",
-            params![request.notes, id],
+            "UPDATE vocabulary SET notes = ?1, example_fr = ?2, example_zh = ?3, more_examples = ?4, revision = revision + 1,
+             updated_at = MAX(updated_at + 1, CAST(unixepoch('subsec') * 1000 AS INTEGER)) WHERE id = ?5",
+            params![request.notes, request.example_fr, request.example_zh, serde_json::to_string(&request.more_examples)?, id],
         )?;
         ("updated", get(&transaction, id)?)
     } else if let Some(existing) = find(&transaction, &headword)? {
@@ -211,9 +256,9 @@ pub fn save(
             return Err(StorageError::Invalid("Dictionary digest is empty".into()));
         }
         transaction.execute(
-            "INSERT INTO vocabulary (headword, snapshot, notes, created_at, updated_at)
-             VALUES (?1, ?2, ?3, CAST(unixepoch('subsec') * 1000 AS INTEGER), CAST(unixepoch('subsec') * 1000 AS INTEGER))",
-            params![headword, serde_json::to_string(&snapshot)?, request.notes],
+            "INSERT INTO vocabulary (headword, snapshot, notes, example_fr, example_zh, more_examples, created_at, updated_at)
+             VALUES (?1, ?2, ?3, ?4, ?5, ?6, CAST(unixepoch('subsec') * 1000 AS INTEGER), CAST(unixepoch('subsec') * 1000 AS INTEGER))",
+            params![headword, serde_json::to_string(&snapshot)?, request.notes, request.example_fr, request.example_zh, serde_json::to_string(&request.more_examples)?],
         )?;
         let id = transaction.last_insert_rowid();
         if crate::auto_enroll(&transaction)? {

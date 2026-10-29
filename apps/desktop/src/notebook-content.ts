@@ -2,8 +2,8 @@ import type { Locale } from './content';
 
 export const notebookMessages = {
   zh: {
-    summary: '基本词汇信息', fallback: '收藏时的只读摘要', original: '词典原文', notes: '独立笔记',
-    pronunciation: '音标', grammar: '语法', translation: '中文译义', missing: '未提供',
+    summary: '基本词汇信息', fallback: '收藏时的只读摘要', original: '词典原文', notes: '独立笔记', exampleFr: '法语例句', exampleZh: '例句中文译文', exampleUser: '个人例句', exampleLimit: '例句每项不能超过 20,000 个字符。',
+    pronunciation: '音标', grammar: '语法', translation: '中文译义', missing: '未提供', moreExamples: '更多例句', addExample: '添加例句', removeExample: '删除例句',
     collect: '加入生词本', existing: '已在生词本', view: '查看现有记录',
     save: '保存', saved: '已保存', saving: '正在保存…', unsaved: '尚未保存', retry: '重试',
     preview: '浏览器预览无法读写生词本，请使用桌面应用。',
@@ -25,8 +25,8 @@ export const notebookMessages = {
     availability: { due: '尚未到期', quota: '今日额度已用完', deferred: '同词卡片暂缓', paused: '复习已暂停', clock: '设备时间早于最近评分，请检查时间', conflict: '卡片已被其他操作修改', invalid: '评分请求无效' },
   },
   en: {
-    summary: 'Word summary', fallback: 'Read-only summary saved at collection', original: 'Dictionary text', notes: 'Personal notes',
-    pronunciation: 'Pronunciation', grammar: 'Grammar', translation: 'Chinese translation', missing: 'Not provided',
+    summary: 'Word summary', fallback: 'Read-only summary saved at collection', original: 'Dictionary text', notes: 'Personal notes', exampleFr: 'French example', exampleZh: 'Chinese translation of example', exampleUser: 'Personal example', exampleLimit: 'Each example field must be at most 20,000 characters.',
+    pronunciation: 'Pronunciation', grammar: 'Grammar', translation: 'Chinese translation', missing: 'Not provided', moreExamples: 'More examples', addExample: 'Add example', removeExample: 'Remove example',
     collect: 'Add to notebook', existing: 'Already in notebook', view: 'View existing record',
     save: 'Save', saved: 'Saved', saving: 'Saving…', unsaved: 'Unsaved', retry: 'Retry',
     preview: 'Browser preview cannot read or save notebook data. Use the desktop app.',
@@ -48,8 +48,8 @@ export const notebookMessages = {
     availability: { due: 'Not due yet', quota: 'Daily limit reached', deferred: 'Other card deferred', paused: 'Review paused', clock: 'Device time is before the last rating; check the clock', conflict: 'Card changed in another operation', invalid: 'Invalid rating request' },
   },
   fr: {
-    summary: 'Résumé du mot', fallback: 'Résumé en lecture seule conservé à l’ajout', original: 'Texte du dictionnaire', notes: 'Notes personnelles',
-    pronunciation: 'Prononciation', grammar: 'Grammaire', translation: 'Traduction chinoise', missing: 'Non fourni',
+    summary: 'Résumé du mot', fallback: 'Résumé en lecture seule conservé à l’ajout', original: 'Texte du dictionnaire', notes: 'Notes personnelles', exampleFr: 'Exemple en français', exampleZh: 'Traduction chinoise de l’exemple', exampleUser: 'Exemple personnel', exampleLimit: 'Chaque champ d’exemple est limité à 20 000 caractères.',
+    pronunciation: 'Prononciation', grammar: 'Grammaire', translation: 'Traduction chinoise', missing: 'Non fourni', moreExamples: 'Autres exemples', addExample: 'Ajouter un exemple', removeExample: 'Supprimer l’exemple',
     collect: 'Ajouter au carnet', existing: 'Déjà dans le carnet', view: 'Voir la fiche existante',
     save: 'Enregistrer', saved: 'Enregistré', saving: 'Enregistrement…', unsaved: 'Non enregistré', retry: 'Réessayer',
     preview: 'L’aperçu web ne peut ni lire ni enregistrer le carnet. Utilisez l’application de bureau.',

@@ -29,6 +29,9 @@ function Conflict({ notebook, text }: { readonly notebook: Notebook; readonly te
   if (!notebook.conflict) return null;
   return <section role="alert" className="runtime-error" aria-label={text.conflict}>
     <h4>{text.conflict}</h4><p>{text.current}</p><pre>{notebook.conflict.notes || '∅'}</pre>
+    <p>{text.exampleFr}</p><pre>{notebook.conflict.example_fr || '∅'}</pre>
+    <p>{text.exampleZh}</p><pre>{notebook.conflict.example_zh || '∅'}</pre>
+    {notebook.conflict.more_examples.map((example, index) => <pre key={index}>{example.fr}{'\n'}{example.zh}</pre>)}
     <p>{text.discardWarning}</p><div className="actions">
       <button disabled={notebook.busy} onClick={notebook.adopt}>{text.adopt}</button>
       <button disabled={notebook.busy} onClick={notebook.back}>{text.back}</button>
@@ -44,6 +47,24 @@ function SaveActions({ notebook, text, overLimit }: {
     <span role="status">{notebook.saved ? text.saved : notebook.dirty ? text.unsaved : ''}</span></div>;
 }
 
+function exampleTooLong(editor: NonNullable<Notebook['editor']>) {
+  return [editor.example_fr, editor.example_zh, ...editor.more_examples.flatMap((e) => [e.fr, e.zh])].some((value) => characterCount(value) > 20_000);
+}
+
+function ExampleEditor({ notebook, text }: { readonly notebook: Notebook; readonly text: NotebookText }) {
+  const editor = notebook.editor!;
+  const overLimit = exampleTooLong(editor);
+  return <><h4>{text.exampleUser}</h4>
+    <label htmlFor="example-fr">{text.exampleFr}</label><textarea id="example-fr" lang="fr" value={editor.example_fr} disabled={notebook.busy} rows={3} aria-invalid={characterCount(editor.example_fr) > 20_000} aria-describedby={overLimit ? 'example-limit' : undefined} onChange={(event) => notebook.editExample('example_fr', event.target.value)} />
+    <label htmlFor="example-zh">{text.exampleZh}</label><textarea id="example-zh" lang="zh" value={editor.example_zh} disabled={notebook.busy} rows={3} aria-invalid={characterCount(editor.example_zh) > 20_000} aria-describedby={overLimit ? 'example-limit' : undefined} onChange={(event) => notebook.editExample('example_zh', event.target.value)} />
+    {editor.more_examples.map((example, index) => <fieldset key={index}><legend>{text.exampleUser} {index + 2}</legend>
+      <label htmlFor={`example-fr-${index}`}>{text.exampleFr}</label><textarea id={`example-fr-${index}`} lang="fr" value={example.fr} disabled={notebook.busy} aria-invalid={characterCount(example.fr) > 20_000} aria-describedby={overLimit ? 'example-limit' : undefined} onChange={(event) => notebook.editMore(editor.more_examples.map((item, i) => i === index ? { ...item, fr: event.target.value } : item))} />
+      <label htmlFor={`example-zh-${index}`}>{text.exampleZh}</label><textarea id={`example-zh-${index}`} lang="zh" value={example.zh} disabled={notebook.busy} aria-invalid={characterCount(example.zh) > 20_000} aria-describedby={overLimit ? 'example-limit' : undefined} onChange={(event) => notebook.editMore(editor.more_examples.map((item, i) => i === index ? { ...item, zh: event.target.value } : item))} />
+      <button disabled={notebook.busy} onClick={() => notebook.editMore(editor.more_examples.filter((_, i) => i !== index))}>{text.removeExample}</button></fieldset>)}
+    <button disabled={notebook.busy || editor.more_examples.length >= 100} onClick={() => notebook.editMore([...editor.more_examples, { fr: '', zh: '' }])}>{text.addExample}</button>
+    {overLimit && <p id="example-limit" role="alert">{text.exampleLimit}</p>}</>;
+}
+
 export function VocabularyEditor({ notebook, text, viewExisting, runtime }: {
   readonly notebook: Notebook; readonly text: NotebookText; readonly viewExisting: () => void; readonly runtime: RuntimeAdapter;
 }) {
@@ -52,14 +73,16 @@ export function VocabularyEditor({ notebook, text, viewExisting, runtime }: {
   useEffect(() => { textarea.current?.focus(); }, [headword]);
   if (!notebook.editor) return null;
   const { snapshot, notes } = notebook.editor;
-  const overLimit = characterCount(notes) > 20_000;
+  const exampleOverLimit = exampleTooLong(notebook.editor);
+  const overLimit = characterCount(notes) > 20_000 || exampleOverLimit;
   return <section className="vocabulary-editor" aria-label={text.edit}>
     <p className="eyebrow">{text.fallback}</p><VocabularySummary snapshot={snapshot} text={text} />
     <label htmlFor="personal-notes">{text.notes}</label>
     <textarea ref={textarea} id="personal-notes" value={notes} disabled={notebook.busy} rows={8} spellCheck={false}
-      aria-invalid={overLimit} aria-describedby="note-count" onChange={(event) => notebook.edit(event.target.value)} />
+      aria-invalid={characterCount(notes) > 20_000} aria-describedby="note-count" onChange={(event) => notebook.edit(event.target.value)} />
     <p id="note-count">{characterCount(notes).toLocaleString()} / 20,000 {text.count}</p>
-    {overLimit && <p role="alert">{text.limit}</p>}
+    {characterCount(notes) > 20_000 && <p role="alert">{text.limit}</p>}
+    <ExampleEditor notebook={notebook} text={text} />
     {notebook.error && <p role="alert">{text.saveError}: {notebook.error}</p>}
     {notebook.audioError && <p role="alert">{text.listeningPending}: {notebook.audioError}</p>}
     <SaveActions notebook={notebook} text={text} overLimit={overLimit} />

@@ -27,6 +27,9 @@ fn create(operation: &str, headword: &str, notes: &str) -> SaveRequest {
         operation: operation.into(),
         headword: headword.into(),
         notes: notes.into(),
+        example_fr: String::new(),
+        example_zh: String::new(),
+        more_examples: vec![],
         id: None,
         revision: None,
     }
@@ -69,9 +72,83 @@ fn update(operation: &str, record: &lexique_storage::VocabularyRecord, notes: &s
         operation: operation.into(),
         headword: record.headword.clone(),
         notes: notes.into(),
+        example_fr: record.example_fr.clone(),
+        example_zh: record.example_zh.clone(),
+        more_examples: record.more_examples.clone(),
         id: Some(record.id),
         revision: Some(record.revision),
     }
+}
+
+#[test]
+fn save_request_requires_all_example_fields() {
+    let request = serde_json::to_value(create("required-fields", "école", "note")).unwrap();
+    for field in ["example_fr", "example_zh", "more_examples"] {
+        let mut missing = request.clone();
+        missing.as_object_mut().unwrap().remove(field);
+        assert!(
+            serde_json::from_value::<SaveRequest>(missing).is_err(),
+            "missing {field}"
+        );
+    }
+}
+
+#[test]
+fn review_example_is_saved_with_revision_and_safe_retry() {
+    let mut connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    let original = save(
+        &mut connection,
+        &create("example-create", "école", "note"),
+        Some(snapshot()),
+    )
+    .unwrap()
+    .record;
+    let mut value = serde_json::to_value(update("example-edit", &original, "note")).unwrap();
+    value["example_fr"] = "Je vais à l'école.".into();
+    value["example_zh"] = "".into();
+    let request: SaveRequest = serde_json::from_value(value).unwrap();
+    let saved = save(&mut connection, &request, None).unwrap();
+    assert_eq!(
+        serde_json::to_value(&saved.record).unwrap()["example_fr"],
+        "Je vais à l'école."
+    );
+    assert_eq!(
+        save(&mut connection, &request, None).unwrap().outcome,
+        "replayed"
+    );
+    assert_eq!(
+        save(
+            &mut connection,
+            &update("stale-example", &original, "stale"),
+            None
+        )
+        .unwrap()
+        .outcome,
+        "conflict"
+    );
+    assert_eq!(get(&connection, original.id).unwrap().notes, "note");
+}
+
+#[test]
+fn pre_example_save_operation_can_be_retried_after_upgrade() {
+    let mut connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    let request = create("legacy-operation", "école", "note");
+    let saved = save(&mut connection, &request, Some(snapshot())).unwrap();
+    let mut legacy = serde_json::to_value(&request).unwrap();
+    legacy.as_object_mut().unwrap().remove("example_fr");
+    legacy.as_object_mut().unwrap().remove("example_zh");
+    connection
+        .execute(
+            "UPDATE save_operations SET request = ?1 WHERE operation = ?2",
+            rusqlite::params![legacy.to_string(), request.operation],
+        )
+        .unwrap();
+    let replay = save(&mut connection, &request, None).unwrap();
+    assert_eq!(replay.outcome, "replayed");
+    assert_eq!(replay.record.id, saved.record.id);
+    assert_eq!(replay.record.notes, "note");
 }
 
 #[test]
@@ -278,13 +355,21 @@ fn file_database_reopens_with_record_identity_content_and_sort_preference() {
         let mut connection = Connection::open(&path).unwrap();
         initialize(&connection).unwrap();
         assert_eq!(sort_preference(&connection).unwrap(), "updated-desc");
-        original = save(
+        let created = save(
             &mut connection,
             &create("persistent", "école", "l’école\n学校"),
             Some(snapshot()),
         )
         .unwrap()
         .record;
+        let mut request = update("persistent-example", &created, &created.notes);
+        request.example_fr = "Je vais à l'école.".into();
+        request.example_zh = "我去学校。".into();
+        request.more_examples.push(lexique_storage::Example {
+            fr: "Une autre phrase.".into(),
+            zh: "另一句话。".into(),
+        });
+        original = save(&mut connection, &request, None).unwrap().record;
         set_sort_preference(&connection, "headword-asc").unwrap();
     }
     {

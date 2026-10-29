@@ -1,6 +1,34 @@
 import { expect, test } from '@playwright/test';
 import { collect, nativeFixture, record } from './native-fixture';
 
+test('example edits remain guarded and the saved pair appears on the recognition card', async ({ page }) => {
+  const saved = { ...record, revision: 2, example_fr: 'Je vais à l’école.', example_zh: '我去学校。', more_examples: [{ fr: 'Une autre phrase.', zh: '另一句话。' }] };
+  await nativeFixture(page, { vocabulary_list: [{ value: [record] }],
+    vocabulary_save: [{ error: 'disk full' }, { value: { outcome: 'updated', record: saved } }],
+    review_cards: [{ value: [{ id: 1, kind: 'recognition' }] }] });
+  await page.goto('/');
+  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.locator('.vocabulary-list button').click();
+  await page.getByLabel('法语例句').fill(saved.example_fr);
+  await page.getByLabel('例句中文译文').fill(saved.example_zh);
+  await page.getByRole('button', { name: '添加例句' }).click();
+  await page.locator('#example-fr-0').fill(saved.more_examples[0].fr);
+  await page.locator('#example-zh-0').fill(saved.more_examples[0].zh);
+  await page.getByRole('button', { name: '保存', exact: true }).click();
+  await expect(page.getByRole('alert')).toContainText('disk full');
+  await expect(page.getByLabel('法语例句')).toHaveValue(saved.example_fr);
+  await expect(page.locator('#example-fr-0')).toHaveValue(saved.more_examples[0].fr);
+  await page.getByRole('button', { name: '保存', exact: true }).click();
+  await expect(page.getByText('已保存', { exact: true })).toBeVisible();
+  await page.getByRole('button', { name: '查看识义卡' }).click();
+  await page.getByRole('button', { name: '显示答案' }).click();
+  await expect(page.getByRole('dialog')).toContainText(saved.example_fr);
+  await expect(page.getByRole('dialog')).toContainText(saved.example_zh);
+  await expect(page.getByRole('dialog')).not.toContainText('待补例句');
+  await page.getByRole('dialog').getByText('更多例句').click();
+  await expect(page.getByRole('dialog')).toContainText('Une autre phrase.');
+});
+
 test('batch review selection survives sorting, clears on search and reports partial failure', async ({ page }) => {
   const second = { ...record, id: 2, headword: 'bonjour' };
   const cards = [{ id: 1, kind: 'recognition' }, { id: 2, kind: 'listening' }];

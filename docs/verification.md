@@ -403,3 +403,9 @@ ONNX Runtime 1.28.2 DLL 与上游 MT Release 版本逐字节哈希一致，已�
 同日用户确认 Windows ARM64、macOS x86-64 和 macOS ARM64 留待后续验证，不阻塞 #14；正式桌面发行仍须满足四目标要求。v6 Python 扩展及 C API DLL 自报同一 `2.0.1` 版本与 `af2d8d81` 源码提交前缀；完整依赖和发行许可不能由自报版本代替，详见[来源记录](evidence/issue-14/supertonic-licenses/ATTRIBUTION.md)。
 
 2026-10-27：新增 portable 语音临时目录与定期清理的产品要求及后续接入验收项；当前没有产品语音生成或清理实现，本次不声称已验证文件存放、过期清理或移动后重试。macOS portable 路径与四架构实机验证仍待落实。
+
+## 共享例句（issue #20）
+
+2026-10-29：`pnpm lint`、`pnpm typecheck`、`pnpm build`、`pnpm rust:fmt`、`pnpm rust:check`、`pnpm rust:test:build` 和 `pnpm test:rust` 通过。存储测试覆盖例句保存、冲突、重试、历史操作兼容和请求字段校验。Windows x64 使用 `pnpm desktop:build --no-bundle` 构建后，通过 `apps/desktop/e2e/native-examples-check.mjs` 在合成数据库副本中编辑两条例句并重启，确认例句与复习卡进度恢复。
+
+Obscura MCP 使用模拟桌面接口检查了识义卡展示；这不是原生卡片全流程验证。新增 Playwright 浏览器测试尚未运行，本机缺少对应的 Playwright 浏览器；未验证其他平台、完整 portable 包或真实音频播放。

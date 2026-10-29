@@ -8,6 +8,7 @@ const headword = z.string().refine((value) => value.trim().length > 0 && charact
     return code < 32 || (code >= 127 && code <= 159);
   }), 'Headword must be 1–200 characters on one line');
 const notes = z.string().refine((value) => characterCount(value) <= 20_000, 'Notes exceed 20,000 Unicode characters');
+const moreExamples = z.array(z.object({ fr: notes, zh: notes }).strict().readonly()).max(100).readonly();
 const positiveId = z.number().int().positive().max(Number.MAX_SAFE_INTEGER);
 const digestEntry = z.object({
   pronunciations: z.array(z.string()).readonly(), grammar: z.array(z.string()).readonly(),
@@ -20,11 +21,11 @@ const reference = z.object({
   sha256: z.string().regex(/^[a-f0-9]{64}$/),
 }).strict().readonly();
 export const recordSchema = z.object({
-  id: positiveId, headword, reference, digest: z.array(digestEntry).min(1).readonly(), notes,
+  id: positiveId, headword, reference, digest: z.array(digestEntry).min(1).readonly(), notes, example_fr: notes, example_zh: notes, more_examples: moreExamples,
   revision: positiveId, created_at: positiveId, updated_at: positiveId,
 }).strict().readonly();
 export const saveRequestSchema = z.object({
-  operation: z.string().min(1).max(128).regex(/^[a-zA-Z0-9-]+$/), headword, notes,
+  operation: z.string().min(1).max(128).regex(/^[a-zA-Z0-9-]+$/), headword, notes, example_fr: notes, example_zh: notes, more_examples: moreExamples,
   id: positiveId.nullable(), revision: positiveId.nullable(),
 }).strict().readonly().refine((value) => (value.id === null) === (value.revision === null));
 export const saveResultSchema = z.object({

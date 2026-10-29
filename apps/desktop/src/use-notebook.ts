@@ -8,15 +8,22 @@ interface Editor {
   readonly snapshot: VocabularySnapshot;
   readonly record: VocabularyRecord | null;
   readonly notes: string;
+  readonly example_fr: string;
+  readonly example_zh: string;
+  readonly more_examples: VocabularyRecord['more_examples'];
 }
 
 function acceptRecord(record: VocabularyRecord): Editor {
-  return { snapshot: record, record, notes: record.notes };
+  return { snapshot: record, record, notes: record.notes, example_fr: record.example_fr, example_zh: record.example_zh, more_examples: record.more_examples };
 }
 
 function savePayload(editor: Editor) {
-  return { headword: editor.snapshot.headword, notes: editor.notes,
+  return { headword: editor.snapshot.headword, notes: editor.notes, example_fr: editor.example_fr, example_zh: editor.example_zh, more_examples: editor.more_examples,
     id: editor.record?.id ?? null, revision: editor.record?.revision ?? null };
+}
+
+function samePayload(previous: SaveRequest, payload: ReturnType<typeof savePayload>) {
+  return Object.entries(payload).every(([key, value]) => JSON.stringify(previous[key as keyof SaveRequest]) === JSON.stringify(value));
 }
 
 async function generateEnrolledAudio(runtime: RuntimeAdapter, id: number) {
@@ -51,18 +58,16 @@ export function useNotebook(runtime: RuntimeAdapter) {
   const audio = useEnrollmentAudio(runtime, () => setVersion((value) => value + 1));
   const operation = useRef<SaveRequest | null>(null); const saving = useRef(false);
   // A failed response can hide a committed update, even when input returns to its original text.
-  const dirty = editor !== null && (editor.record === null || editor.notes !== editor.record.notes || operation.current !== null);
-  function clear() {
-    setEditor(null); setConflict(null); setExisting(null); setError(''); audio.clearAudioError(); setSaved(false); operation.current = null;
-  }
+  const dirty = editor !== null && (editor.record === null || !samePayload({ ...savePayload(editor), operation: '', notes: editor.record.notes, example_fr: editor.record.example_fr, example_zh: editor.record.example_zh, more_examples: editor.record.more_examples }, savePayload(editor)) || operation.current !== null);
+  function clear() { setEditor(null); setConflict(null); setExisting(null); setError(''); audio.clearAudioError(); setSaved(false); operation.current = null; }
   function open(record: VocabularyRecord) { clear(); setEditor(acceptRecord(record)); }
   function collect(lookup: DictionaryLookup) {
-    clear(); setEditor({ snapshot: snapshotFromLookup(lookup), record: null, notes: '' });
+    clear(); setEditor({ snapshot: snapshotFromLookup(lookup), record: null, notes: '', example_fr: '', example_zh: '', more_examples: [] });
   }
-  function applyResult(result: SaveResult, notes: string) {
+  function applyResult(result: SaveResult, payload: ReturnType<typeof savePayload>) {
     setVersion((value) => value + 1);
     if (result.outcome === 'existing') { setExisting(result.record); return false; }
-    if (result.outcome === 'conflict' || result.record.notes !== notes) {
+    if (result.outcome === 'conflict' || result.record.notes !== payload.notes || result.record.example_fr !== payload.example_fr || result.record.example_zh !== payload.example_zh || JSON.stringify(result.record.more_examples) !== JSON.stringify(payload.more_examples)) {
       setConflict(result.record); return false;
     }
     setEditor(acceptRecord(result.record)); setSaved(true); operation.current = null;
@@ -72,14 +77,14 @@ export function useNotebook(runtime: RuntimeAdapter) {
     if (!editor || saving.current) return false;
     const payload = savePayload(editor);
     const previous = operation.current;
-    if (!previous || Object.entries(payload).some(([key, value]) => previous[key as keyof SaveRequest] !== value)) {
+    if (!previous || !samePayload(previous, payload)) {
       operation.current = { ...payload, operation: crypto.randomUUID() };
     }
     saving.current = true; setBusy(true); setError(''); setSaved(false);
     try {
       const result = await runtime.saveVocabulary(operation.current!);
       if (!result) throw new Error('Native notebook storage unavailable');
-      const accepted = applyResult(result, payload.notes);
+      const accepted = applyResult(result, payload);
       if (needsAudio(result, payload.id, accepted) && !await audio.generate(result.record.id)) return false;
       return accepted;
     } catch (cause) { setError(errorMessage(cause)); return false; }
@@ -87,6 +92,8 @@ export function useNotebook(runtime: RuntimeAdapter) {
   }
   return { editor, conflict, existing, error, audioError: audio.audioError, saved, busy, dirty, version, save, clear, open, collect,
     edit: (notes: string) => { setEditor((value) => value && { ...value, notes }); setSaved(false); setExisting(null); },
+    editExample: (field: 'example_fr' | 'example_zh', text: string) => { setEditor((value) => value && { ...value, [field]: text }); setSaved(false); setExisting(null); },
+    editMore: (examples: VocabularyRecord['more_examples']) => { setEditor((value) => value && { ...value, more_examples: examples }); setSaved(false); setExisting(null); },
     adopt: () => { if (conflict) open(conflict); },
     back: () => setConflict(null),
   };
