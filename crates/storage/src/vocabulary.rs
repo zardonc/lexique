@@ -217,12 +217,7 @@ pub fn save(
         )?;
         let id = transaction.last_insert_rowid();
         if crate::auto_enroll(&transaction)? {
-            for kind in ["recognition", "listening"] {
-                transaction.execute(
-                    "INSERT INTO review_cards (vocabulary_id, kind) VALUES (?1, ?2)",
-                    params![id, kind],
-                )?;
-            }
+            crate::review::ensure_review_cards(&transaction, id)?;
         }
         ("created", get(&transaction, id)?)
     };

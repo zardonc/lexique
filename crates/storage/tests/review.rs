@@ -187,12 +187,46 @@ fn auto_enrollment_applies_only_to_newly_saved_words() {
     let cards = review_cards(&connection, result.record.id).unwrap();
     assert_eq!(cards.len(), 2);
     assert_eq!(
+        add_review(&mut connection, result.record.id).unwrap(),
+        cards
+    );
+    assert_eq!(
         save(&mut connection, &request, None).unwrap().record.id,
         result.record.id
     );
     assert_eq!(review_cards(&connection, result.record.id).unwrap(), cards);
     lexique_storage::set_auto_enroll(&connection, false).unwrap();
     assert_eq!(review_cards(&connection, result.record.id).unwrap(), cards);
+}
+
+#[test]
+fn auto_enrollment_rolls_back_word_and_cards_when_card_creation_fails() {
+    let mut connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    let existing = saved_word(&mut connection);
+    let original = lexique_storage::get(&connection, existing).unwrap();
+    lexique_storage::set_auto_enroll(&connection, true).unwrap();
+    connection.execute_batch("CREATE TRIGGER fail_listening BEFORE INSERT ON review_cards WHEN NEW.kind = 'listening' BEGIN SELECT RAISE(ABORT, 'card creation failed'); END;").unwrap();
+    let request = SaveRequest {
+        operation: "failed-auto-word".into(),
+        headword: "bonjour".into(),
+        notes: String::new(),
+        id: None,
+        revision: None,
+    };
+    let snapshot = Snapshot {
+        reference: original.reference,
+        digest: original.digest,
+    };
+    assert!(save(&mut connection, &request, Some(snapshot)).is_err());
+    let word_count: i64 = connection
+        .query_row("SELECT count(*) FROM vocabulary", [], |row| row.get(0))
+        .unwrap();
+    let card_count: i64 = connection
+        .query_row("SELECT count(*) FROM review_cards", [], |row| row.get(0))
+        .unwrap();
+    assert_eq!(word_count, 1);
+    assert_eq!(card_count, 0);
 }
 
 #[test]

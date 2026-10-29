@@ -804,15 +804,23 @@ pub fn add_review(
     vocabulary_id: i64,
 ) -> Result<Vec<ReviewCard>, StorageError> {
     let transaction = connection.transaction_with_behavior(TransactionBehavior::Immediate)?;
+    ensure_review_cards(&transaction, vocabulary_id)?;
+    let cards = review_cards(&transaction, vocabulary_id)?;
+    transaction.commit()?;
+    Ok(cards)
+}
+
+pub(crate) fn ensure_review_cards(
+    transaction: &rusqlite::Transaction<'_>,
+    vocabulary_id: i64,
+) -> Result<(), StorageError> {
     for kind in ["recognition", "listening"] {
         transaction.execute(
             "INSERT INTO review_cards (vocabulary_id, kind) VALUES (?1, ?2) ON CONFLICT (vocabulary_id, kind) DO NOTHING",
             params![vocabulary_id, kind],
         )?;
     }
-    let cards = review_cards(&transaction, vocabulary_id)?;
-    transaction.commit()?;
-    Ok(cards)
+    Ok(())
 }
 
 pub fn set_review_paused(
