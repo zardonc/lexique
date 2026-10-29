@@ -36,6 +36,415 @@ fn saved_word(connection: &mut Connection) -> i64 {
 }
 
 #[test]
+fn undo_rating_restores_queue_and_can_be_retried() {
+    let mut connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    let word = saved_word(&mut connection);
+    let cards = add_review(&mut connection, word).unwrap();
+    let before = lexique_storage::review_queue(&mut connection, 1_700_000_000, "UTC").unwrap();
+    lexique_storage::rate_card(
+        &mut connection,
+        &lexique_storage::RatingRequest {
+            operation: "undo-rating".into(),
+            card_id: cards[0].id,
+            expected_revision: 0,
+            rating: Rating::Good,
+            now: 1_700_000_000,
+            timezone: "UTC".into(),
+        },
+    )
+    .unwrap();
+    lexique_storage::undo_rating(&mut connection, "undo-1", "undo-rating").unwrap();
+    lexique_storage::undo_rating(&mut connection, "undo-1", "undo-rating").unwrap();
+    let retry = lexique_storage::RatingRequest {
+        operation: "undo-rating".into(),
+        card_id: cards[0].id,
+        expected_revision: 0,
+        rating: Rating::Good,
+        now: 1_700_000_000,
+        timezone: "UTC".into(),
+    };
+    assert!(lexique_storage::rate_card(&mut connection, &retry).is_err());
+    let progress = lexique_storage::review_progress(&connection, cards[0].id).unwrap();
+    assert_eq!(progress.card.phase, lexique_core::scheduling::Phase::New);
+    let after = lexique_storage::review_queue(&mut connection, 1_700_000_000, "UTC").unwrap();
+    assert_eq!(after.cards, before.cards);
+    let next = lexique_storage::RatingRequest {
+        operation: "after-undo".into(),
+        card_id: cards[0].id,
+        expected_revision: progress.revision,
+        rating: Rating::Easy,
+        now: 1_700_000_000,
+        timezone: "UTC".into(),
+    };
+    lexique_storage::rate_card(&mut connection, &next).unwrap();
+    lexique_storage::undo_rating(&mut connection, "undo-1", "undo-rating").unwrap();
+    assert_eq!(
+        lexique_storage::undo_target(&connection)
+            .unwrap()
+            .as_deref(),
+        Some("after-undo")
+    );
+    assert!(
+        lexique_storage::undo_rating(&mut connection, "different-undo", "undo-rating").is_err()
+    );
+}
+
+#[test]
+fn undo_rating_outside_queue_keeps_independent_settings() {
+    let mut connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    let word = saved_word(&mut connection);
+    let cards = add_review(&mut connection, word).unwrap();
+    lexique_storage::review_queue_filtered(&mut connection, 1_700_000_000, "UTC", |card| {
+        Ok(card.id != cards[0].id)
+    })
+    .unwrap();
+    lexique_storage::rate_card(
+        &mut connection,
+        &lexique_storage::RatingRequest {
+            operation: "direct-rating".into(),
+            card_id: cards[0].id,
+            expected_revision: 0,
+            rating: Rating::Good,
+            now: 1_700_000_000,
+            timezone: "UTC".into(),
+        },
+    )
+    .unwrap();
+    let mut settings = lexique_storage::review_settings(&connection).unwrap();
+    settings.new_limit = 1;
+    lexique_storage::set_review_settings(&connection, &settings).unwrap();
+    lexique_storage::undo_rating(&mut connection, "direct-undo", "direct-rating").unwrap();
+    assert_eq!(
+        lexique_storage::review_settings(&connection)
+            .unwrap()
+            .new_limit,
+        1
+    );
+    assert_eq!(
+        lexique_storage::review_progress(&connection, cards[0].id)
+            .unwrap()
+            .card
+            .phase,
+        lexique_core::scheduling::Phase::New
+    );
+}
+
+#[test]
+fn undo_restores_queue_after_timezone_change_within_learning_day() {
+    let mut connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    let word = saved_word(&mut connection);
+    let cards = add_review(&mut connection, word).unwrap();
+    let before = lexique_storage::review_queue(&mut connection, 1_700_000_000, "UTC").unwrap();
+    lexique_storage::rate_card(
+        &mut connection,
+        &lexique_storage::RatingRequest {
+            operation: "timezone-rating".into(),
+            card_id: cards[0].id,
+            expected_revision: 0,
+            rating: Rating::Good,
+            now: 1_700_000_000,
+            timezone: "Europe/Paris".into(),
+        },
+    )
+    .unwrap();
+    lexique_storage::undo_rating(&mut connection, "timezone-undo", "timezone-rating").unwrap();
+    let after =
+        lexique_storage::review_queue(&mut connection, 1_700_000_000, "Europe/Paris").unwrap();
+    assert_eq!(after.cards, before.cards);
+}
+
+#[test]
+fn undo_prior_learning_day_does_not_change_current_day_quota_after_travel() {
+    let mut connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    let first = saved_word(&mut connection);
+    let cards = add_review(&mut connection, first).unwrap();
+    connection.execute("INSERT INTO vocabulary (headword, snapshot, notes, created_at, updated_at) VALUES ('second', '{}', '', 1, 1)", []).unwrap();
+    let second_id = connection.last_insert_rowid();
+    let second = add_review(&mut connection, second_id).unwrap();
+    lexique_storage::set_review_settings(
+        &connection,
+        &lexique_storage::ReviewSettings {
+            retention_percent: 90,
+            new_limit: 1,
+            review_limit: 50,
+        },
+    )
+    .unwrap();
+    lexique_storage::rate_card(
+        &mut connection,
+        &lexique_storage::RatingRequest {
+            operation: "travel-undo-rating".into(),
+            card_id: cards[0].id,
+            expected_revision: 0,
+            rating: Rating::Good,
+            now: 1_700_000_000,
+            timezone: "UTC".into(),
+        },
+    )
+    .unwrap();
+    let before = lexique_storage::review_availability(
+        &connection,
+        second[0].id,
+        1_700_000_000,
+        "Asia/Tokyo",
+    )
+    .unwrap();
+    assert_eq!(before.reason, None);
+    lexique_storage::undo_rating(&mut connection, "travel-undo", "travel-undo-rating").unwrap();
+    let after = lexique_storage::review_availability(
+        &connection,
+        second[0].id,
+        1_700_000_000,
+        "Asia/Tokyo",
+    )
+    .unwrap();
+    assert_eq!(after.reason, None);
+}
+
+#[test]
+fn undo_restores_minute_and_long_term_states() {
+    for (initial, name) in [(Rating::Good, "minute"), (Rating::Easy, "long")] {
+        let mut connection = Connection::open_in_memory().unwrap();
+        initialize(&connection).unwrap();
+        let word = saved_word(&mut connection);
+        let card = add_review(&mut connection, word).unwrap()[0].id;
+        lexique_storage::rate_card(
+            &mut connection,
+            &lexique_storage::RatingRequest {
+                operation: format!("{name}-first"),
+                card_id: card,
+                expected_revision: 0,
+                rating: initial,
+                now: 1_700_000_000,
+                timezone: "UTC".into(),
+            },
+        )
+        .unwrap();
+        let before = lexique_storage::review_progress(&connection, card).unwrap();
+        let due = before.card.due_at.unwrap();
+        lexique_storage::review_queue(&mut connection, due, "UTC").unwrap();
+        lexique_storage::rate_card(
+            &mut connection,
+            &lexique_storage::RatingRequest {
+                operation: format!("{name}-second"),
+                card_id: card,
+                expected_revision: before.revision,
+                rating: Rating::Good,
+                now: due,
+                timezone: "UTC".into(),
+            },
+        )
+        .unwrap();
+        lexique_storage::undo_rating(
+            &mut connection,
+            &format!("{name}-undo"),
+            &format!("{name}-second"),
+        )
+        .unwrap();
+        let restored = lexique_storage::review_progress(&connection, card).unwrap();
+        assert_eq!(
+            serde_json::to_value(restored.card).unwrap(),
+            serde_json::to_value(before.card).unwrap()
+        );
+    }
+}
+
+#[test]
+fn undo_legacy_position_only_snapshot_rebuilds_queue_and_reports_retry() {
+    let mut connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    let word = saved_word(&mut connection);
+    let card = add_review(&mut connection, word).unwrap()[0].id;
+    lexique_storage::review_queue(&mut connection, 1_700_000_000, "UTC").unwrap();
+    lexique_storage::rate_card(
+        &mut connection,
+        &lexique_storage::RatingRequest {
+            operation: "legacy-rating".into(),
+            card_id: card,
+            expected_revision: 0,
+            rating: Rating::Good,
+            now: 1_700_000_000,
+            timezone: "UTC".into(),
+        },
+    )
+    .unwrap();
+    connection.execute("UPDATE review_ratings SET queue_before = json_remove(queue_before, '$.ordered_cards') WHERE operation = 'legacy-rating'", []).unwrap();
+    assert!(lexique_storage::undo_rating(&mut connection, "legacy-undo", "legacy-rating").unwrap());
+    assert!(lexique_storage::undo_rating(&mut connection, "legacy-undo", "legacy-rating").unwrap());
+    let after = lexique_storage::review_progress(&connection, card).unwrap();
+    assert_eq!(after.card.phase, lexique_core::scheduling::Phase::New);
+    assert!(
+        lexique_storage::review_queue(&mut connection, 1_700_000_000, "UTC")
+            .unwrap()
+            .cards
+            .iter()
+            .any(|entry| entry.id == card)
+    );
+}
+
+#[test]
+fn legacy_schema_upgrade_undo_retry_survives_reopening() {
+    let path = std::env::temp_dir().join(format!(
+        "lexique-legacy-{}-{}.sqlite3",
+        std::process::id(),
+        std::time::SystemTime::now()
+            .duration_since(std::time::UNIX_EPOCH)
+            .unwrap()
+            .as_nanos()
+    ));
+    {
+        let mut connection = Connection::open(&path).unwrap();
+        initialize(&connection).unwrap();
+        let word = saved_word(&mut connection);
+        let card = add_review(&mut connection, word).unwrap()[0].id;
+        lexique_storage::review_queue(&mut connection, 1_700_000_000, "UTC").unwrap();
+        lexique_storage::rate_card(
+            &mut connection,
+            &lexique_storage::RatingRequest {
+                operation: "legacy-file".into(),
+                card_id: card,
+                expected_revision: 0,
+                rating: Rating::Good,
+                now: 1_700_000_000,
+                timezone: "UTC".into(),
+            },
+        )
+        .unwrap();
+        connection.execute("UPDATE review_ratings SET queue_before = json_remove(queue_before, '$.ordered_cards')", []).unwrap();
+        connection.execute_batch("DROP INDEX review_ratings_undo_operation; ALTER TABLE review_ratings DROP COLUMN undo_operation; ALTER TABLE review_ratings DROP COLUMN undo_queue_rebuilt; PRAGMA user_version = 5;").unwrap();
+    }
+    {
+        let mut connection = Connection::open(&path).unwrap();
+        initialize(&connection).unwrap();
+        lexique_storage::review_queue(&mut connection, 1_700_086_400, "UTC").unwrap();
+        assert!(
+            lexique_storage::undo_rating(&mut connection, "legacy-file-undo", "legacy-file")
+                .unwrap()
+        );
+    }
+    {
+        let mut connection = Connection::open(&path).unwrap();
+        initialize(&connection).unwrap();
+        assert!(
+            lexique_storage::undo_rating(&mut connection, "legacy-file-undo", "legacy-file")
+                .unwrap()
+        );
+    }
+    std::fs::remove_file(path).unwrap();
+}
+
+#[test]
+fn undo_rejects_invalid_saved_card_state_without_changing_progress() {
+    let mut connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    let word = saved_word(&mut connection);
+    let card = add_review(&mut connection, word).unwrap()[0].id;
+    lexique_storage::rate_card(
+        &mut connection,
+        &lexique_storage::RatingRequest {
+            operation: "invalid-before".into(),
+            card_id: card,
+            expected_revision: 0,
+            rating: Rating::Good,
+            now: 1_700_000_000,
+            timezone: "UTC".into(),
+        },
+    )
+    .unwrap();
+    connection.execute("UPDATE review_ratings SET before_state = '{\"phase\":\"review\",\"memory\":null,\"last_review_at\":null,\"due_at\":null}' WHERE operation = 'invalid-before'", []).unwrap();
+    let before = lexique_storage::review_progress(&connection, card).unwrap();
+    assert!(
+        lexique_storage::undo_rating(&mut connection, "invalid-undo", "invalid-before").is_err()
+    );
+    assert_eq!(
+        serde_json::to_value(before).unwrap(),
+        serde_json::to_value(lexique_storage::review_progress(&connection, card).unwrap()).unwrap()
+    );
+}
+
+#[test]
+fn undo_survives_reopening_and_failed_commit_across_learning_days() {
+    let path = std::env::temp_dir().join(format!(
+        "lexique-undo-{}-{}.sqlite3",
+        std::process::id(),
+        std::time::SystemTime::now()
+            .duration_since(std::time::UNIX_EPOCH)
+            .unwrap()
+            .as_nanos()
+    ));
+    let card;
+    {
+        let mut connection = Connection::open(&path).unwrap();
+        initialize(&connection).unwrap();
+        let word = saved_word(&mut connection);
+        card = add_review(&mut connection, word).unwrap()[0].id;
+        lexique_storage::review_queue(&mut connection, 1_700_000_000, "UTC").unwrap();
+        lexique_storage::rate_card(
+            &mut connection,
+            &lexique_storage::RatingRequest {
+                operation: "persist-rating".into(),
+                card_id: card,
+                expected_revision: 0,
+                rating: Rating::Good,
+                now: 1_700_000_000,
+                timezone: "UTC".into(),
+            },
+        )
+        .unwrap();
+    }
+    {
+        let mut connection = Connection::open(&path).unwrap();
+        initialize(&connection).unwrap();
+        assert_eq!(
+            lexique_storage::undo_target(&connection)
+                .unwrap()
+                .as_deref(),
+            Some("persist-rating")
+        );
+        lexique_storage::review_queue(&mut connection, 1_700_086_400, "UTC").unwrap();
+        connection.commit_hook(Some(|| true)).unwrap();
+        assert!(
+            lexique_storage::undo_rating(&mut connection, "persist-undo", "persist-rating")
+                .is_err()
+        );
+        connection.commit_hook(None::<fn() -> bool>).unwrap();
+        assert_eq!(
+            lexique_storage::review_progress(&connection, card)
+                .unwrap()
+                .card
+                .phase,
+            lexique_core::scheduling::Phase::LearningLast
+        );
+        lexique_storage::undo_rating(&mut connection, "persist-undo", "persist-rating").unwrap();
+        assert_eq!(
+            lexique_storage::review_progress(&connection, card)
+                .unwrap()
+                .card
+                .phase,
+            lexique_core::scheduling::Phase::New
+        );
+    }
+    {
+        let mut connection = Connection::open(&path).unwrap();
+        initialize(&connection).unwrap();
+        assert_eq!(lexique_storage::undo_target(&connection).unwrap(), None);
+        lexique_storage::undo_rating(&mut connection, "persist-undo", "persist-rating").unwrap();
+        assert!(
+            lexique_storage::review_queue(&mut connection, 1_700_086_400, "UTC")
+                .unwrap()
+                .cards
+                .iter()
+                .any(|entry| entry.id == card)
+        );
+    }
+    std::fs::remove_file(path).unwrap();
+}
+
+#[test]
 fn queue_preserves_order_and_defers_a_rated_cards_sibling() {
     let mut connection = Connection::open_in_memory().unwrap();
     initialize(&connection).unwrap();
@@ -523,7 +932,7 @@ fn adding_a_saved_word_creates_two_cards_once_without_changing_the_record() {
         .unwrap();
     let id = saved_word(&mut connection);
     let original = lexique_storage::get(&connection, id).unwrap();
-    assert_eq!(initialize(&connection).unwrap(), 5);
+    assert_eq!(initialize(&connection).unwrap(), 6);
     assert!(review_cards(&connection, id).unwrap().is_empty());
     let first = add_review(&mut connection, id).unwrap();
     assert_eq!(first.len(), 2);

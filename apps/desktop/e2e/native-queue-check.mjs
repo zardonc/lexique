@@ -75,5 +75,22 @@ try {
   });
   assert.deepEqual(restored.settings, initial.settings);
   assert.deepEqual(restored.queue.queue.cards, initial.queue.queue.cards);
+  await page.getByRole('button', { name: '闪卡复习', exact: true }).click();
+  await page.getByRole('button', { name: '查看识义卡' }).click();
+  await page.getByRole('button', { name: '显示答案' }).click();
+  await page.getByRole('button', { name: '记得', exact: true }).click();
+  await page.getByRole('dialog', { name: '识义卡' }).waitFor({ state: 'hidden' });
+  await page.waitForFunction(async () => Boolean(await window.__TAURI_INTERNALS__.invoke('review_undo_target')));
+  await stop();
+  page = await start();
+  await page.getByRole('button', { name: '闪卡复习', exact: true }).click();
+  const undo = page.getByRole('button', { name: '撤销最近评分' });
+  await undo.waitFor();
+  await undo.click();
+  await page.getByRole('button', { name: '查看识义卡' }).click();
+  await page.getByRole('button', { name: '显示答案' }).click();
+  await page.getByRole('button', { name: '记得', exact: true }).click();
+  await page.getByRole('dialog', { name: '识义卡' }).waitFor({ state: 'hidden' });
+  console.log('Native rating, restart, undo and continued rating succeeded');
   console.log(`Native settings and ${restored.queue.queue.cards.length} queued cards survived restart`);
 } finally { await stop(); }

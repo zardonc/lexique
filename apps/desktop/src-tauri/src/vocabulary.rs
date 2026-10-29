@@ -268,6 +268,46 @@ pub struct QueueView {
 }
 
 #[tauri::command]
+pub async fn review_undo_target(path: State<'_, DatabasePath>) -> Result<Option<String>, String> {
+    let path = DatabasePath(path.0.clone());
+    tauri::async_runtime::spawn_blocking(move || {
+        lexique_storage::undo_target(&open(&path)?).map_err(|e| e.to_string())
+    })
+    .await
+    .map_err(|e| format!("Undo target task failed: {e}"))?
+}
+
+#[tauri::command]
+pub async fn review_undo(
+    path: State<'_, DatabasePath>,
+    operation: String,
+    rating_operation: String,
+) -> Result<UndoOutcome, String> {
+    let path = DatabasePath(path.0.clone());
+    tauri::async_runtime::spawn_blocking(move || {
+        match lexique_storage::undo_rating(&mut open(&path)?, &operation, &rating_operation) {
+            Ok(queue_rebuilt) => Ok(UndoOutcome::Committed { queue_rebuilt }),
+            Err(
+                error @ (lexique_storage::StorageError::Invalid(_)
+                | lexique_storage::StorageError::RatingConflict),
+            ) => Ok(UndoOutcome::Rejected {
+                detail: error.to_string(),
+            }),
+            Err(error) => Err(error.to_string()),
+        }
+    })
+    .await
+    .map_err(|e| format!("Undo task failed: {e}"))?
+}
+
+#[derive(serde::Serialize)]
+#[serde(tag = "status", rename_all = "snake_case")]
+pub enum UndoOutcome {
+    Committed { queue_rebuilt: bool },
+    Rejected { detail: String },
+}
+
+#[tauri::command]
 pub async fn review_queue(
     path: State<'_, DatabasePath>,
     timezone: String,

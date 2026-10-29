@@ -42,6 +42,8 @@ fn main() {
             "review_availability",
             "review_progress",
             "review_rate",
+            "review_undo_target",
+            "review_undo",
             "review_queue",
             "review_settings",
             "speech_cached",

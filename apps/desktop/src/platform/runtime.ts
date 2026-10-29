@@ -39,6 +39,11 @@ const rateOutcomeSchema = z.discriminatedUnion('status', [
 export class RatingRejected extends Error {
   constructor(readonly code: 'clock' | 'due' | 'quota' | 'deferred' | 'conflict' | 'invalid', detail: string) { super(detail); }
 }
+export class UndoRejected extends Error {}
+const undoOutcomeSchema = z.discriminatedUnion('status', [
+  z.object({ status: z.literal('committed'), queue_rebuilt: z.boolean() }).strict(),
+  z.object({ status: z.literal('rejected'), detail: z.string() }).strict(),
+]);
 export type Rating = z.infer<typeof ratingSchema>;
 export type RateRequest = z.infer<typeof rateRequestSchema>;
 export type ReviewProgress = z.infer<typeof progressSchema>;
@@ -64,6 +69,8 @@ export interface RuntimeAdapter {
   readonly reviewProgress: (id: number) => Promise<ReviewProgress | null>;
   readonly reviewAvailability: (id: number) => Promise<ReviewAvailability | null>;
   readonly rateReview: (request: RateRequest) => Promise<ReviewProgress | null>;
+  readonly undoTarget: () => Promise<string | null>;
+  readonly undoReview: (operation: string, ratingOperation: string) => Promise<{ readonly queue_rebuilt: boolean } | null>;
   readonly reviewSettings: (settings?: ReviewSettings) => Promise<ReviewSettings | null>;
   readonly reviewQueue: (skipped?: readonly number[]) => Promise<QueueView | null>;
   readonly generateSpeech: (id: number, regenerate?: boolean) => Promise<Uint8Array | null>;
@@ -124,6 +131,17 @@ export const runtime: RuntimeAdapter = {
   async reviewSettings(settings) {
     if (!isTauri()) return null;
     return reviewSettingsSchema.parse(await invoke('review_settings', { settings: settings === undefined ? null : reviewSettingsSchema.parse(settings) }));
+  },
+  async undoTarget() {
+    if (!isTauri()) return null;
+    return z.string().min(1).max(128).nullable().parse(await invoke('review_undo_target'));
+  },
+  async undoReview(operation, ratingOperation) {
+    if (!isTauri()) return null;
+    const valid = z.string().min(1).max(128);
+    const outcome = undoOutcomeSchema.parse(await invoke('review_undo', { operation: valid.parse(operation), ratingOperation: valid.parse(ratingOperation) }));
+    if (outcome.status === 'rejected') throw new UndoRejected(outcome.detail);
+    return { queue_rebuilt: outcome.queue_rebuilt };
   },
   async reviewQueue(skipped = []) {
     if (!isTauri()) return null;

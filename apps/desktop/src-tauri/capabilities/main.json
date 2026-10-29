@@ -5,5 +5,5 @@
   "windows": ["main"],
   "permissions": ["allow-runtime-status", "allow-dictionary-lookup", "allow-vocabulary-find",
     "allow-vocabulary-list", "allow-vocabulary-save", "allow-vocabulary-sort", "allow-review-add", "allow-review-cards", "allow-review-availability", "allow-review-progress", "allow-review-rate", "allow-review-queue", "allow-review-settings", "allow-speech-cached", "allow-speech-generate", "allow-speech-preferences", "allow-finish-close",
-    "core:event:allow-listen", "core:event:allow-unlisten"]
+    "allow-review-undo-target", "allow-review-undo", "core:event:allow-listen", "core:event:allow-unlisten"]
 }

@@ -32,9 +32,10 @@ export async function nativeFixture(page: Page, responses: Readonly<Record<strin
     const callbacks = new Map<number, (event: unknown) => void>();
     const indexes: Record<string, number> = {};
     window.testNative = { calls: [], close: () => { for (const callback of callbacks.values()) callback({ payload: null }); } };
-    const defaults: Record<string, unknown> = { runtime_status: { version: '0.1.0', schemaVersion: 5, storage: 'sqlite' },
+    const defaults: Record<string, unknown> = { runtime_status: { version: '0.1.0', schemaVersion: 6, storage: 'sqlite' },
       dictionary_lookup: dictionary, vocabulary_find: null, vocabulary_list: [], vocabulary_sort: 'updated-desc', finish_close: null,
       speech_preferences: { voice: 'female', speed: 'normal' }, review_settings: { retention_percent: 90, new_limit: 20, review_limit: 50 }, review_queue: { queue: { cards: [], reason: null, available_at: null }, record: null, audio_pending: false, audio_error: null }, review_cards: [], speech_cached: null,
+      review_undo_target: null, review_undo: { status: 'committed', queue_rebuilt: false },
       review_progress: { revision: 0, card: { phase: 'new', memory: null, last_review_at: null, due_at: null } } };
     function defaultAvailability() {
         const progress = (responses.review_progress?.[0]?.value ?? defaults.review_progress) as { card: { due_at: number | null } };

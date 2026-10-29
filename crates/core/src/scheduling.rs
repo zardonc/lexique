@@ -124,6 +124,36 @@ pub fn next_learning_day_at(timestamp: i64, timezone: &str) -> Result<i64, Strin
         .timestamp())
 }
 
+pub fn validate_card(card: &Card) -> Result<(), String> {
+    match card.phase {
+        Phase::New
+            if card.memory.is_none() && card.last_review_at.is_none() && card.due_at.is_none() => {}
+        Phase::New => return Err("new card must not contain learned state".into()),
+        _ if card.memory.is_none() || card.last_review_at.is_none() || card.due_at.is_none() => {
+            return Err("learned card requires memory and timestamps".into());
+        }
+        _ => {}
+    }
+    if let Some(memory) = card.memory
+        && (!memory.stability.is_finite()
+            || !(0.001..=36_500.0).contains(&memory.stability)
+            || !memory.difficulty.is_finite()
+            || !(1.0..=10.0).contains(&memory.difficulty))
+    {
+        return Err("invalid memory state".into());
+    }
+    if let Some(previous) = card.last_review_at {
+        learning_day(previous, chrono_tz::UTC)?;
+    }
+    if let Some(due) = card.due_at {
+        learning_day(due, chrono_tz::UTC)?;
+        if due < card.last_review_at.unwrap() {
+            return Err("due time precedes previous rating".into());
+        }
+    }
+    Ok(())
+}
+
 /// Uses the recorded portable-math revision for reproducible scheduling.
 pub fn schedule(request: ScheduleRequest) -> Result<Scheduled, String> {
     if request.timezone_database != chrono_tz::IANA_TZDB_VERSION {
@@ -137,6 +167,7 @@ pub fn schedule(request: ScheduleRequest) -> Result<Scheduled, String> {
     {
         return Err("unsupported historical model version or parameters".into());
     }
+    validate_card(&request.card)?;
     for previous in [request.latest_review_at, request.card.last_review_at]
         .into_iter()
         .flatten()
@@ -146,35 +177,10 @@ pub fn schedule(request: ScheduleRequest) -> Result<Scheduled, String> {
             return Err("clock moved backwards; check device time before rating".into());
         }
     }
-    match request.card.phase {
-        Phase::New
-            if request.card.memory.is_none()
-                && request.card.last_review_at.is_none()
-                && request.card.due_at.is_none() => {}
-        Phase::New => return Err("new card must not contain learned state".into()),
-        _ if request.card.memory.is_none()
-            || request.card.last_review_at.is_none()
-            || request.card.due_at.is_none() =>
-        {
-            return Err("learned card requires memory and timestamps".into());
-        }
-        _ => {}
-    }
-    if let Some(memory) = request.card.memory
-        && (!memory.stability.is_finite()
-            || !(0.001..=36_500.0).contains(&memory.stability)
-            || !memory.difficulty.is_finite()
-            || !(1.0..=10.0).contains(&memory.difficulty))
-    {
-        return Err("invalid memory state".into());
-    }
     let zone: Tz = request.timezone.parse().map_err(|_| "unknown timezone")?;
     let today = learning_day(request.now, zone)?;
     if let Some(due) = request.card.due_at {
         learning_day(due, zone)?;
-        if due < request.card.last_review_at.unwrap() {
-            return Err("due time precedes previous rating".into());
-        }
         if request.now < due {
             return Err("card is not due".into());
         }

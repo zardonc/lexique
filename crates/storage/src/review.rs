@@ -128,30 +128,34 @@ pub fn review_queue_filtered(
     let mut used_new = 0_u32;
     let mut used_review = 0_u32;
     let mut siblings: std::collections::HashMap<i64, Vec<i64>> = std::collections::HashMap::new();
-    let latest: Option<i64> =
-        tx.query_row("SELECT MAX(reviewed_at) FROM review_ratings", [], |row| {
-            row.get(0)
-        })?;
-    let mut statement = tx.prepare("SELECT r.reviewed_at, r.quota, c.vocabulary_id, c.id FROM review_ratings r JOIN review_cards c ON c.id = r.card_id WHERE r.reviewed_at >= ?1 AND r.reviewed_at <= ?2")?;
-    let ratings = statement.query_map(params![now.saturating_sub(172_800), now], |row| {
+    let latest: Option<i64> = tx.query_row(
+        "SELECT MAX(reviewed_at) FROM review_ratings WHERE undo_operation IS NULL",
+        [],
+        |row| row.get(0),
+    )?;
+    let mut statement = tx.prepare("SELECT r.reviewed_at, r.quota, c.vocabulary_id, c.id, r.learning_day FROM review_ratings r JOIN review_cards c ON c.id = r.card_id WHERE r.undo_operation IS NULL AND r.reviewed_at >= ?1 AND r.reviewed_at <= ?2")?;
+    let ratings = statement.query_map(params![now.saturating_sub(259_200), now], |row| {
         Ok((
             row.get::<_, i64>(0)?,
             row.get::<_, String>(1)?,
             row.get::<_, i64>(2)?,
             row.get::<_, i64>(3)?,
+            row.get::<_, String>(4)?,
         ))
     })?;
     for rating in ratings {
-        let (time, quota, vocabulary_id, card_id) = rating?;
-        if lexique_core::scheduling::learning_day_for(time, timezone)
-            .map_err(StorageError::Invalid)?
-            == day
-        {
+        let (time, quota, vocabulary_id, card_id, rated_day) = rating?;
+        if rated_day == day {
             if quota == "new" {
                 used_new = used_new.saturating_add(1);
             } else {
                 used_review = used_review.saturating_add(1);
             }
+        }
+        if lexique_core::scheduling::learning_day_for(time, timezone)
+            .map_err(StorageError::Invalid)?
+            == day
+        {
             siblings.entry(vocabulary_id).or_default().push(card_id);
         }
     }
@@ -392,10 +396,11 @@ fn eligibility(
     } else {
         "review"
     };
-    let latest: Option<i64> =
-        connection.query_row("SELECT MAX(reviewed_at) FROM review_ratings", [], |row| {
-            row.get(0)
-        })?;
+    let latest: Option<i64> = connection.query_row(
+        "SELECT MAX(reviewed_at) FROM review_ratings WHERE undo_operation IS NULL",
+        [],
+        |row| row.get(0),
+    )?;
     if latest.is_some_and(|time| now < time) {
         return Ok((Some("clock".into()), latest));
     }
@@ -404,21 +409,24 @@ fn eligibility(
     }
     let mut used = 0;
     let mut deferred = false;
-    let mut statement = connection.prepare("SELECT r.reviewed_at, r.quota, r.card_id != ?1 AND other.vocabulary_id = current.vocabulary_id FROM review_ratings r JOIN review_cards other ON other.id = r.card_id JOIN review_cards current ON current.id = ?1 WHERE r.reviewed_at >= ?2 AND r.reviewed_at <= ?3")?;
-    let rows = statement.query_map(params![card_id, now.saturating_sub(172_800), now], |row| {
+    let mut statement = connection.prepare("SELECT r.reviewed_at, r.quota, r.card_id != ?1 AND other.vocabulary_id = current.vocabulary_id, r.learning_day FROM review_ratings r JOIN review_cards other ON other.id = r.card_id JOIN review_cards current ON current.id = ?1 WHERE r.undo_operation IS NULL AND r.reviewed_at >= ?2 AND r.reviewed_at <= ?3")?;
+    let rows = statement.query_map(params![card_id, now.saturating_sub(259_200), now], |row| {
         Ok((
             row.get::<_, i64>(0)?,
             row.get::<_, String>(1)?,
             row.get::<_, bool>(2)?,
+            row.get::<_, String>(3)?,
         ))
     })?;
     for row in rows {
-        let (time, previous_quota, sibling) = row?;
+        let (time, previous_quota, sibling, rated_day) = row?;
+        if rated_day == day {
+            used += i64::from(previous_quota == quota);
+        }
         if lexique_core::scheduling::learning_day_for(time, timezone)
             .map_err(StorageError::Invalid)?
             == day
         {
-            used += i64::from(previous_quota == quota);
             deferred |= sibling;
         }
     }
@@ -484,14 +492,14 @@ pub fn rate_card(
     }
     let encoded = serde_json::to_string(request)?;
     let tx = connection.transaction_with_behavior(TransactionBehavior::Immediate)?;
-    let previous: Option<(String, String)> = tx
+    let previous: Option<(String, String, Option<String>)> = tx
         .query_row(
-            "SELECT request, result FROM review_ratings WHERE operation = ?1",
+            "SELECT request, result, undo_operation FROM review_ratings WHERE operation = ?1",
             [&request.operation],
-            |row| Ok((row.get(0)?, row.get(1)?)),
+            |row| Ok((row.get(0)?, row.get(1)?, row.get(2)?)),
         )
         .optional()?;
-    if let Some((original, result)) = previous {
+    if let Some((original, result, undone)) = previous {
         let original: RatingRequest = serde_json::from_str(&original)?;
         if original.card_id != request.card_id
             || original.expected_revision != request.expected_revision
@@ -501,6 +509,9 @@ pub fn rate_card(
             return Err(StorageError::Invalid(
                 "Rating operation already used for another request".into(),
             ));
+        }
+        if undone.is_some() {
+            return Err(StorageError::RatingConflict);
         }
         return Ok(serde_json::from_str(&result)?);
     }
@@ -541,10 +552,11 @@ pub fn rate_card(
     } else {
         "review"
     };
-    let latest: Option<i64> =
-        tx.query_row("SELECT MAX(reviewed_at) FROM review_ratings", [], |row| {
-            row.get(0)
-        })?;
+    let latest: Option<i64> = tx.query_row(
+        "SELECT MAX(reviewed_at) FROM review_ratings WHERE undo_operation IS NULL",
+        [],
+        |row| row.get(0),
+    )?;
     if let (Some(reason), _) =
         eligibility(&tx, request.card_id, &card, request.now, &request.timezone)?
     {
@@ -585,6 +597,148 @@ pub fn rate_card(
     tx.execute("INSERT INTO review_ratings (operation, card_id, request, before_state, result, reviewed_at, learning_day, quota, queue_before) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9)", params![request.operation, request.card_id, encoded, before, result, request.now, day, quota, queue_before])?;
     tx.commit()?;
     Ok(serde_json::from_str(&result)?)
+}
+
+#[derive(Deserialize)]
+#[serde(deny_unknown_fields)]
+struct QueueSnapshot {
+    card_id: i64,
+    position: Option<i64>,
+    ordered_cards: Option<Vec<i64>>,
+    learning_day: String,
+    timezone: String,
+}
+
+pub fn undo_target(connection: &Connection) -> Result<Option<String>, StorageError> {
+    let row: Option<(String, Option<String>)> = connection
+        .query_row(
+            "SELECT operation, undo_operation FROM review_ratings ORDER BY rowid DESC LIMIT 1",
+            [],
+            |row| Ok((row.get(0)?, row.get(1)?)),
+        )
+        .optional()?;
+    Ok(row.and_then(|(operation, undone)| undone.is_none().then_some(operation)))
+}
+
+pub fn undo_rating(
+    connection: &mut Connection,
+    operation: &str,
+    rating_operation: &str,
+) -> Result<bool, StorageError> {
+    if operation.is_empty()
+        || operation.len() > 128
+        || rating_operation.is_empty()
+        || rating_operation.len() > 128
+    {
+        return Err(StorageError::Invalid("Invalid undo request".into()));
+    }
+    let tx = connection.transaction_with_behavior(TransactionBehavior::Immediate)?;
+    let retry: Option<(String, bool)> = tx
+        .query_row(
+            "SELECT operation, undo_queue_rebuilt FROM review_ratings WHERE undo_operation = ?1",
+            [operation],
+            |row| Ok((row.get(0)?, row.get(1)?)),
+        )
+        .optional()?;
+    if let Some((original, rebuilt)) = retry {
+        return if original == rating_operation {
+            Ok(rebuilt)
+        } else {
+            Err(StorageError::Invalid("Undo operation already used".into()))
+        };
+    }
+    let latest: Option<(String, i64, String, String, Option<String>, Option<String>)> = tx.query_row(
+        "SELECT operation, card_id, request, before_state, queue_before, undo_operation FROM review_ratings ORDER BY rowid DESC LIMIT 1", [],
+        |row| Ok((row.get(0)?, row.get(1)?, row.get(2)?, row.get(3)?, row.get(4)?, row.get(5)?))
+    ).optional()?;
+    let (rating, card_id, request, before, queue, undone) =
+        latest.ok_or_else(|| StorageError::Invalid("No rating to undo".into()))?;
+    if rating != rating_operation || undone.is_some() {
+        return Err(StorageError::Invalid(
+            "Rating is no longer available for undo".into(),
+        ));
+    }
+    let request: RatingRequest = serde_json::from_str(&request)?;
+    let progress = review_progress(&tx, card_id)?;
+    if progress.revision != request.expected_revision + 1 {
+        return Err(StorageError::RatingConflict);
+    }
+    let previous: Card = serde_json::from_str(&before)?;
+    lexique_core::scheduling::validate_card(&previous).map_err(StorageError::Invalid)?;
+    tx.execute(
+        "UPDATE review_progress SET state = ?1, revision = revision + 1 WHERE card_id = ?2",
+        params![before, card_id],
+    )?;
+    if let Some(queue) = queue {
+        let snapshot: QueueSnapshot = serde_json::from_str(&queue)?;
+        if snapshot.card_id != card_id
+            || snapshot.timezone.is_empty()
+            || snapshot.learning_day.is_empty()
+        {
+            return Err(StorageError::Invalid("Invalid queue snapshot".into()));
+        }
+        let state: Option<(String, String)> = tx
+            .query_row(
+                "SELECT learning_day, timezone FROM review_queue_state WHERE id = 1",
+                [],
+                |row| Ok((row.get(0)?, row.get(1)?)),
+            )
+            .optional()?;
+        if snapshot.position.is_some() && snapshot.ordered_cards.is_none() {
+            if state
+                .as_ref()
+                .is_some_and(|(day, _)| snapshot.learning_day == *day)
+            {
+                tx.execute("DELETE FROM review_queue_entries", [])?;
+            }
+            tx.execute("UPDATE review_ratings SET undo_operation = ?1, undo_queue_rebuilt = 1 WHERE operation = ?2", params![operation, rating_operation])?;
+            tx.commit()?;
+            return Ok(true);
+        }
+        if state
+            .as_ref()
+            .is_some_and(|(day, _)| snapshot.learning_day == *day)
+            && snapshot.position.is_some()
+        {
+            let Some(ids) = snapshot.ordered_cards else {
+                return Err(StorageError::Invalid(
+                    "Legacy queue snapshot cannot be restored safely".into(),
+                ));
+            };
+            if ids.iter().any(|id| *id <= 0) {
+                return Err(StorageError::Invalid("Invalid queue snapshot".into()));
+            }
+            let mut current =
+                tx.prepare("SELECT card_id FROM review_queue_entries ORDER BY position")?;
+            let mut order = current
+                .query_map([], |row| row.get::<_, i64>(0))?
+                .collect::<Result<Vec<_>, _>>()?;
+            drop(current);
+            order.retain(|id| *id != card_id);
+            let index = ids
+                .iter()
+                .position(|id| *id == card_id)
+                .ok_or_else(|| StorageError::Invalid("Card missing from queue snapshot".into()))?;
+            let insert = ids[index + 1..]
+                .iter()
+                .find_map(|id| order.iter().position(|current| current == id))
+                .unwrap_or(order.len());
+            order.insert(insert, card_id);
+            tx.execute("DELETE FROM review_queue_entries", [])?;
+            for (index, id) in order.into_iter().enumerate() {
+                tx.execute(
+                    "INSERT INTO review_queue_entries(card_id, position) VALUES (?1, ?2)",
+                    params![id, (index as i64 + 1) * 1_000_000],
+                )?;
+            }
+        }
+    }
+    tx.execute(
+        "UPDATE review_ratings SET undo_operation = ?1 WHERE operation = ?2",
+        params![operation, rating_operation],
+    )?;
+    tx.commit()?;
+    Ok(false)
 }
 
 #[derive(Debug, PartialEq, Eq, Serialize)]
