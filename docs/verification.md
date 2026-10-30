@@ -6,9 +6,9 @@
 
 - `pnpm lint`、`pnpm typecheck`、`pnpm build`、`pnpm rust:fmt`、`pnpm rust:check`、`pnpm rust:test:build` 后 `pnpm test:rust`：通过，后端执行保留 60 秒限制。SQLite 测试覆盖双卡不同到期、同时间、未学习、暂停、搜索及数据库重开。
 - `pnpm test:e2e`：Edge 66 项通过，包括评分后列表刷新和新排序选项。首次并行测试期间修改源文件触发热重载，4 项失败；代码稳定后完整重跑通过。
-- `pnpm desktop:build --no-bundle` 和 `node apps/desktop/e2e/native-review-sort-check.mjs target/issue-20-sense-20261030 target/release/lexique-desktop.exe target/issue-21-native-20261030`：Windows x64 隔离新数据库中真实评分、界面重排和重启恢复通过；测试进程已停止。
+- `pnpm desktop:build --no-bundle` 和 `node apps/desktop/e2e/native-review-sort-check.mjs target/issue-20-sense-20261030 target/release/lexique-desktop.exe target/issue-21-native-20261030-b`：Windows x64 隔离新数据库中两个单词真实评分后按不同到期时间重排，重启恢复通过；测试进程已停止。
 
-其他平台未实机验证；撤销、暂停及批量选择的最终组合由 #22 补验。浏览器测试使用原生接口 fixture，不证明原生持久化。
+同时间排序和同词双卡不同到期已在真实 SQLite 测试中验证，尚未在原生界面单独复验。其他平台未实机验证；撤销、暂停及批量选择的最终组合由 #22 补验。浏览器测试使用原生接口 fixture，不证明原生持久化。
 
 ## M2 批量管理与暂停（issue #19）
 

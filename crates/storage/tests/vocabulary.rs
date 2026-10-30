@@ -576,6 +576,13 @@ fn review_due_sort_prioritizes_learned_then_enrolled_then_other_records() {
         .map(|record| record.headword)
         .collect();
     assert_eq!(words, ["zèbre", "avion", "école", "bateau"]);
+    connection
+        .execute(
+            "UPDATE review_progress SET state = 'invalid' WHERE card_id = ?1",
+            [cards[0].id],
+        )
+        .unwrap();
+    assert!(list(&connection, "match", "review-due-asc").is_err());
 }
 
 #[test]

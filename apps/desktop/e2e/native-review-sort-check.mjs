@@ -61,10 +61,15 @@ try {
   await card.getByRole('button', { name: '显示答案' }).click();
   await card.getByRole('button', { name: '记得' }).click();
   await page.locator('.vocabulary-list button').first().getByText('école').waitFor();
+  await page.getByRole('button', { name: /bonjour/ }).click();
+  await page.getByRole('button', { name: '查看识义卡' }).click();
+  await card.getByRole('button', { name: '显示答案' }).click();
+  await card.getByRole('button', { name: '忘记' }).click();
+  await page.locator('.vocabulary-list button').first().getByText('bonjour').waitFor();
   await stop();
   page = await start();
   await page.getByRole('button', { name: '生词本', exact: true }).click();
   await page.waitForFunction(() => [...document.querySelectorAll('select')].some((select) => select.value === 'review-due-asc'));
-  await page.locator('.vocabulary-list button').first().getByText('école').waitFor();
+  await page.locator('.vocabulary-list button').first().getByText('bonjour').waitFor();
   console.log('Native rating, review-time order and preference survive restart');
 } finally { await stop(); }
