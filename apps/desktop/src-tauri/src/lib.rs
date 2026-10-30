@@ -4,9 +4,13 @@ use lexique_storage::initialize;
 use rusqlite::Connection;
 use tauri::{Emitter, Manager, State};
 
+mod speech_cache;
 mod vocabulary;
 use vocabulary::{
-    DatabasePath, finish_close, vocabulary_find, vocabulary_list, vocabulary_save, vocabulary_sort,
+    DatabasePath, finish_close, review_add, review_auto_enroll, review_availability, review_cards,
+    review_pause, review_progress, review_queue, review_rate, review_settings, review_undo,
+    review_undo_target, speech_cached, speech_generate, speech_preferences, vocabulary_find,
+    vocabulary_list, vocabulary_save, vocabulary_sort,
 };
 
 mod status;
@@ -52,6 +56,8 @@ pub fn run() {
             let database_path = directory.join(DATABASE_FILENAME);
             let connection = Connection::open(&database_path)?;
             let schema_version = initialize(&connection)?;
+            #[cfg(windows)]
+            speech_cache::start_cleanup(database_path.clone());
             app.manage(DatabasePath(database_path));
             app.manage(RuntimeStatus {
                 version: app.package_info().version.to_string(),
@@ -75,6 +81,20 @@ pub fn run() {
             vocabulary_list,
             vocabulary_save,
             vocabulary_sort,
+            review_add,
+            review_pause,
+            review_auto_enroll,
+            review_cards,
+            review_availability,
+            review_progress,
+            review_rate,
+            review_undo_target,
+            review_undo,
+            review_queue,
+            review_settings,
+            speech_cached,
+            speech_generate,
+            speech_preferences,
             finish_close
         ])
         .run(tauri::generate_context!())

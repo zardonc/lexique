@@ -19,11 +19,15 @@
     "resources:query": "python -X utf8 scripts/dictionary_sample.py query",
     "test:resources": "python -X utf8 -m unittest discover -s scripts -p test_dictionary_sample.py -v",
     "test:build-args": "node --test scripts/test-build-desktop.mjs",
-    "test:tooling": "pnpm test:build-args && python -X utf8 -m unittest discover -s scripts -p test_package_portable.py -v",
+    "test:tooling": "pnpm test:build-args && python -X utf8 -m unittest discover -s scripts -p test_package_portable.py -v && pnpm test:speech:portable",
+    "test:speech:portable": "python -X utf8 -m unittest discover -s scripts -p test_speech_portable.py -v",
+    "test:speech:cleanup": "python -X utf8 scripts/test_speech_cleanup.py -v",
     "rust:check": "cargo check --locked --workspace",
     "rust:fmt": "cargo fmt --all --check",
-    "rust:test:build": "pnpm resources:prepare && cargo test --locked -p lexique-storage -p lexique-dictionary --no-run",
+    "rust:test:build": "pnpm resources:prepare && cargo test --locked -p lexique-core -p lexique-storage -p lexique-dictionary --no-run",
     "test:rust": "node scripts/test-rust.mjs",
-    "wasm:build": "cargo build --locked --release -p lexique-core --target wasm32-unknown-unknown"
+    "wasm:build": "cargo build --locked --release -p lexique-core --target wasm32-unknown-unknown",
+    "scheduling:build": "cargo build --locked --release -p lexique-core --example schedule && pnpm wasm:build",
+    "test:scheduling": "node scripts/check-scheduling.mjs"
   }
 }

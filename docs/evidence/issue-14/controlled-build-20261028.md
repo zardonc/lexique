@@ -1,0 +1,9 @@
+# Windows x64 controlled build comparison
+
+On 2026-10-28, a separate Git checkout at sherpa-onnx commit `af2d8d81dbfa61c4cea4c568da78f3982edca005` was configured with Visual Studio 2022 x64 and MSVC 19.44.35229. The Release `sherpa-onnx-c-api` target built successfully without inference or audio. Compiler warnings C4804 and C4068 were retained in the build log. The selected static CRT, Eigen 5.0.1 and OpenFST `v1.8.5-2026-07-09` are facts about this configuration, not proven properties of the published wheel.
+
+The new C API DLL SHA-256 is `c61085264702c3990eaa5e13b7a1eaa7739272215be69d9e66248b983292948b`. The v9 wheel's C API DLL SHA-256 is `5dd36dbd3572846b72c4a40a4017c5a770160ee8e00da5053bebc8b2632501e8`. Their `.text` sections are both 3,174,400 bytes but have different hashes; their `.rdata` sections are 948,736 and 932,864 bytes respectively. Differences therefore cannot be attributed solely to PE header timestamps or GUIDs. This build does not establish the actual source files, flags or dependency versions of the wheel. It is a new candidate whose sound and execution have not been validated.
+
+Sixteen MSVC `CL.read.1.tlog` files recorded 204 distinct Eigen paths for this build; none of those path names contained `unsupported`, `MINPACK` or `ConstrainedConjGrad`. This observation is limited to the recorded build and does not prove the dependency contents of the v9 wheel or complete license obligations.
+
+Local retained evidence is under `.tooling/issue-14/controlled-build-20261028/`: `cmake-git-trace-retry.log`, `build-git/CMakeCache.txt`, and `build-git/sherpa-onnx/c-api/sherpa-onnx-c-api.dir/Release/sherpa-o.67EB3767.tlog/link.command.1.tlog`. These ignored files are local evidence and are not part of the v16 ZIP. An earlier archive-based configuration erroneously inherited the outer repository's Git identity and was stopped; the successful build uses the independent checkout.

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Supertonic Opus 试听对比</title>
+  <style>
+    body { max-width: 720px; margin: auto; padding: 24px 16px; font: 16px/1.5 "Segoe UI", sans-serif; color: #202827; }
+    label { display: block; margin: 16px 0; }
+    select { max-width: 100%; font: inherit; }
+    section { border-top: 1px solid #cad4d1; padding: 12px 0; }
+    audio { display: block; width: min(100%, 400px); }
+  </style>
+</head>
+<body>
+  <h1>Opus 试听对比</h1>
+  <p>使用相同的常速语音比较 WAV 和 Ogg Opus。切换慢速会以 0.6 倍播放，不重新生成音频。</p>
+  <label>样本 <select id="sample"></select></label>
+  <label>声线 <select id="voice"><option value="female">女声</option><option value="male">男声</option></select></label>
+  <label>播放速度 <select id="speed"><option value="1">常速 1×</option><option value="0.6">慢速 0.6×</option></select></label>
+  <section>原始 WAV<audio id="wav" controls preload="none"></audio></section>
+  <section>Opus 24 kbit/s<audio id="opus24" controls preload="none"></audio></section>
+  <section>Opus 48 kbit/s<audio id="opus48" controls preload="none"></audio></section>
+  <p><a href="report.json">编码和解码报告</a></p>
+  <script>
+    const inputs = ['être', 'sommes', 'œil', 'école', "aujourd'hui", 'nous sommes ici', 'les amis arrivent', "J'apprends le français tous les jours.", 'a', 'à', 'y（原始输入）', 'eu', 'eau', 'un', 'chat', 'qzxyplouf', 'anticonstitutionnellement', 'Hello. I am learning French every day.', 'i grec（字母 y 名称）'];
+    const sample = document.querySelector('#sample');
+    const voice = document.querySelector('#voice');
+    const speed = document.querySelector('#speed');
+    const players = [...document.querySelectorAll('audio')];
+    inputs.forEach((text, index) => sample.add(new Option(text, String(index + 1).padStart(2, '0'))));
+    function update() {
+      const stem = voice.value + '-normal-' + sample.value;
+      players.forEach((player) => player.pause());
+      players[0].src = '../supertonic-full/' + stem + '.wav';
+      players[1].src = stem + '-24k.opus';
+      players[2].src = stem + '-48k.opus';
+      players.forEach((player) => { player.defaultPlaybackRate = Number(speed.value); player.playbackRate = Number(speed.value); });
+    }
+    sample.addEventListener('change', update);
+    voice.addEventListener('change', update);
+    speed.addEventListener('change', () => players.forEach((player) => { player.defaultPlaybackRate = Number(speed.value); player.playbackRate = Number(speed.value); }));
+    update();
+  </script>
+</body>
+</html>

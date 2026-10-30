@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Supertonic 法语单词完整样本</title>
+  <style>
+    body { max-width: 1000px; margin: auto; padding: 24px 16px; font: 16px/1.5 "Segoe UI", sans-serif; color: #202827; }
+    .sample { display: grid; grid-template-columns: minmax(140px, 1fr) repeat(2, minmax(220px, 300px)); gap: 12px; align-items: center; border-top: 1px solid #cad4d1; padding: 10px 0; }
+    audio { width: 100%; }
+    @media (max-width: 750px) { .sample { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <h1>法语单词完整样本</h1>
+  <p>音频由 Supertonic 3 机器合成。原始 17 项及字母名、英语对照均以常速生成。</p>
+  <p>“y”保留原始文本输入；“i grec”是单独字母名称，不代表代词发音。</p>
+  <label>播放速度 <select id="speed"><option value="1">常速 1×</option><option value="0.6">慢速 0.6×</option></select></label>
+  <p><a href="report.json">生成报告</a> · <a href="../supertonic-licenses/ATTRIBUTION.md">许可与署名</a></p>
+  <main id="samples"></main>
+  <script>
+    const inputs = ['être', 'sommes', 'œil', 'école', "aujourd'hui", 'nous sommes ici', 'les amis arrivent', "J'apprends le français tous les jours.", 'a', 'à', 'y', 'eu', 'eau', 'un', 'chat', 'qzxyplouf', 'anticonstitutionnellement', 'Hello. I am learning French every day.', 'i grec（字母 y 名称）'];
+    const speed = document.querySelector('#speed');
+    inputs.forEach((text, index) => {
+      const row = document.createElement('section');
+      row.className = 'sample';
+      const label = document.createElement('strong');
+      label.textContent = text;
+      row.append(label);
+      for (const [voice, name] of [['female', '女声'], ['male', '男声']]) {
+        const audio = document.createElement('audio');
+        audio.controls = true;
+        audio.preload = 'none';
+        audio.src = `${voice}-normal-${String(index + 1).padStart(2, '0')}.wav`;
+        audio.setAttribute('aria-label', `${name} ${text}`);
+        row.append(audio);
+      }
+      document.querySelector('#samples').append(row);
+    });
+    speed.addEventListener('change', () => {
+      document.querySelectorAll('audio').forEach((audio) => {
+        audio.defaultPlaybackRate = Number(speed.value);
+        audio.playbackRate = audio.defaultPlaybackRate;
+      });
+    });
+  </script>
+</body>
+</html>

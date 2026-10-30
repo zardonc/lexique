@@ -36,7 +36,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: '3.14.10'
       - uses: actions/setup-node@v4
         with:
           node-version: 24
@@ -44,14 +44,22 @@ jobs:
       - run: cargo fmt --all --check
       - run: python -X utf8 scripts/dictionary_sample.py prepare target/desktop-dictionary-sample
       - run: cargo clippy --locked -p lexique-core -p lexique-storage -p lexique-dictionary --all-targets -- -D warnings
-      - run: cargo test --locked -p lexique-storage -p lexique-dictionary --no-run
+      - run: cargo test --locked -p lexique-core -p lexique-storage -p lexique-dictionary --no-run
       - run: node scripts/test-rust.mjs
       - run: cargo build --locked --release -p lexique-core --target wasm32-unknown-unknown
       - run: node scripts/check-wasm.mjs
+      - run: cargo build --locked --release -p lexique-core --example schedule
+      - run: node scripts/check-scheduling.mjs
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: core-wasm
-          path: target/wasm32-unknown-unknown/release/lexique_core.wasm
+          path: |
+            target/wasm32-unknown-unknown/release/lexique_core.wasm
+            target/issue-13/conformance.json
+            resources/fsrs-6.6.2/
+            resources/libm-0.2.16/
+            docs/evidence/issue-13/dependencies.txt
 
   dictionary-resource:
     strategy:
@@ -62,9 +70,10 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: '3.14.10'
       - run: python -X utf8 -m unittest discover -s scripts -p test_dictionary_sample.py -v
       - run: python -X utf8 -m unittest discover -s scripts -p test_package_portable.py -v
+      - run: python -X utf8 -m unittest discover -s scripts -p test_speech_portable.py -v
 
   native:
     strategy:
@@ -86,7 +95,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: '3.14.10'
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
@@ -107,7 +116,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: '3.14.10'
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:

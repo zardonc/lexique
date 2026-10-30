@@ -1,0 +1,1986 @@
+{
+  "model": "fr_FR-mls-medium.onnx",
+  "model_sha256": "0ed223f78466917f2bae05ee90096ce69ab1fdeb251f55590d0e7422d234e162",
+  "packages": {
+    "flatbuffers": "25.12.19",
+    "imageio-ffmpeg": "0.6.0",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.0",
+    "packaging": "26.3",
+    "pathvalidate": "3.3.1",
+    "piper-tts": "1.8.0",
+    "protobuf": "7.36.2"
+  },
+  "speaker_map": {
+    "female": {
+      "source_id": "3698",
+      "inference_id": 1
+    },
+    "male": {
+      "source_id": "1840",
+      "inference_id": 0
+    }
+  },
+  "config": {
+    "language": "fr_FR",
+    "sample_rate": 22050,
+    "speaker_count": 125,
+    "normal_length_scale": 1,
+    "slow_length_scale": 1.3
+  },
+  "load_seconds": 1.7595264999981737,
+  "network_denials_before": [
+    {
+      "host": "1.1.1.1",
+      "port": 443,
+      "winerror": 10013
+    },
+    {
+      "host": "8.8.8.8",
+      "port": 443,
+      "winerror": 10013
+    }
+  ],
+  "cases": [
+    {
+      "input": "être",
+      "purpose": "fixed French comparison input",
+      "file": "female-normal-01.wav",
+      "voice_label_for_comparison": "female",
+      "source_speaker_id": "3698",
+      "inference_speaker_id": 1,
+      "speed": "normal",
+      "length_scale": 1,
+      "phonemes": [
+        [
+          "ˈ",
+          "ɛ",
+          "t",
+          "ʁ"
+        ]
+      ],
+      "generation_seconds": 1.8340540000062902,
+      "sample_rate": 22050,
+      "audio_seconds": 1.2770975056689342,
+      "sha256": "0c9bbec07322a52cbb32b4b446fb04b90be8060b11850874b7922087c0c042f3",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "sommes",
+      "purpose": "fixed French comparison input",
+      "file": "female-normal-02.wav",
+      "voice_label_for_comparison": "female",
+      "source_speaker_id": "3698",
+      "inference_speaker_id": 1,
+      "speed": "normal",
+      "length_scale": 1,
+      "phonemes": [
+        [
+          "s",
+          "ˈ",
+          "ɔ",
+          "m"
+        ]
+      ],
+      "generation_seconds": 0.035056200009421445,
+      "sample_rate": 22050,
+      "audio_seconds": 1.0448979591836736,
+      "sha256": "5a2d0d6c09b7a9dec12251285666c623b166d75614090b6a99ea326aa1d6485f",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "œil",
+      "purpose": "fixed French comparison input",
+      "file": "female-normal-03.wav",
+      "voice_label_for_comparison": "female",
+      "source_speaker_id": "3698",
+      "inference_speaker_id": 1,
+      "speed": "normal",
+      "length_scale": 1,
+      "phonemes": [
+        [
+          "ˈ",
+          "œ",
+          "j"
+        ]
+      ],
+      "generation_seconds": 0.025523999996948987,
+      "sample_rate": 22050,
+      "audio_seconds": 0.7198185941043084,
+      "sha256": "507bd27842d2a7ddc7928fa40ed4086ff63f693f6f0790d5540a9b0fcf5cd079",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "école",
+      "purpose": "fixed French comparison input",
+      "file": "female-normal-04.wav",
+      "voice_label_for_comparison": "female",
+      "source_speaker_id": "3698",
+      "inference_speaker_id": 1,
+      "speed": "normal",
+      "length_scale": 1,
+      "phonemes": [
+        [
+          "e",
+          "k",
+          "ˈ",
+          "ɔ",
+          "l"
+        ]
+      ],
+      "generation_seconds": 0.04605160000210162,
+      "sample_rate": 22050,
+      "audio_seconds": 1.555736961451247,
+      "sha256": "11e4f93c47ef913bade4730c6396960ea159c9cecf945279dad28b29bdaa8e4e",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "aujourd'hui",
+      "purpose": "fixed French comparison input",
+      "file": "female-normal-05.wav",
+      "voice_label_for_comparison": "female",
+      "source_speaker_id": "3698",
+      "inference_speaker_id": 1,
+      "speed": "normal",
+      "length_scale": 1,
+      "phonemes": [
+        [
+          "o",
+          "ʒ",
+          "u",
+          "ʁ",
+          "d",
+          "y",
+          "ˈ",
+          "i"
+        ]
+      ],
+      "generation_seconds": 0.050707099988358095,
+      "sample_rate": 22050,
+      "audio_seconds": 1.5673469387755101,
+      "sha256": "fd127bbb2cf5b125d26a0b840f6a3a221059e2320b01a4163a29ae961b2deb6e",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "nous sommes ici",
+      "purpose": "fixed French comparison input",
+      "file": "female-normal-06.wav",
+      "voice_label_for_comparison": "female",
+      "source_speaker_id": "3698",
+      "inference_speaker_id": 1,
+      "speed": "normal",
+      "length_scale": 1,
+      "phonemes": [
+        [
+          "n",
+          "u",
+          " ",
+          "s",
+          "ɔ",
+          "m",
+          "z",
+          " ",
+          "i",
+          "s",
+          "ˈ",
+          "i"
+        ]
+      ],
+      "generation_seconds": 0.1187701000017114,
+      "sample_rate": 22050,
+      "audio_seconds": 2.2058956916099772,
+      "sha256": "8475deed04ff46e7eadd47fd8bce2c97852541210df84da345afd6389efc2be1",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "les amis arrivent",
+      "purpose": "fixed French comparison input",
+      "file": "female-normal-07.wav",
+      "voice_label_for_comparison": "female",
+      "source_speaker_id": "3698",
+      "inference_speaker_id": 1,
+      "speed": "normal",
+      "length_scale": 1,
+      "phonemes": [
+        [
+          "l",
+          "e",
+          "-",
+          "z",
+          " ",
+          "a",
+          "m",
+          "ˈ",
+          "i",
+          "ʲ",
+          " ",
+          "a",
+          "ʁ",
+          "ˈ",
+          "i",
+          "v"
+        ]
+      ],
+      "generation_seconds": 0.4894973000045866,
+      "sample_rate": 22050,
+      "audio_seconds": 4.957460317460318,
+      "sha256": "f63bf34f1fc6a912b7c3f15600c77a0245ee4578b0a2e255d0930b2fac627457",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "J'apprends le français tous les jours.",
+      "purpose": "fixed French comparison input",
+      "file": "female-normal-08.wav",
+      "voice_label_for_comparison": "female",
+      "source_speaker_id": "3698",
+      "inference_speaker_id": 1,
+      "speed": "normal",
+      "length_scale": 1,
+      "phonemes": [
+        [
+          "ʒ",
+          "a",
+          "p",
+          "ʁ",
+          "ˈ",
+          "ɑ",
+          "̃",
+          " ",
+          "l",
+          "ə",
+          "-",
+          " ",
+          "f",
+          "ʁ",
+          "ɑ",
+          "̃",
+          "s",
+          "ˈ",
+          "ɛ",
+          " ",
+          "t",
+          "u",
+          " ",
+          "l",
+          "e",
+          "-",
+          " ",
+          "ʒ",
+          "ˈ",
+          "u",
+          "ʁ",
+          "."
+        ]
+      ],
+      "generation_seconds": 0.2433168999996269,
+      "sample_rate": 22050,
+      "audio_seconds": 6.199727891156463,
+      "sha256": "aa9262f0cb6a7c68f7a31999a7d5adfd862ba0c07e76478d2c28bb545c8217e4",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "a",
+      "purpose": "fixed French comparison input",
+      "file": "female-normal-09.wav",
+      "voice_label_for_comparison": "female",
+      "source_speaker_id": "3698",
+      "inference_speaker_id": 1,
+      "speed": "normal",
+      "length_scale": 1,
+      "phonemes": [
+        [
+          "ˈ",
+          "a"
+        ]
+      ],
+      "generation_seconds": 0.02808950000326149,
+      "sample_rate": 22050,
+      "audio_seconds": 0.6849886621315193,
+      "sha256": "c9f7ebebdd6267ecb475a117500ea230c3e5ad63ca60493c222042f41236a448",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "à",
+      "purpose": "fixed French comparison input",
+      "file": "female-normal-10.wav",
+      "voice_label_for_comparison": "female",
+      "source_speaker_id": "3698",
+      "inference_speaker_id": 1,
+      "speed": "normal",
+      "length_scale": 1,
+      "phonemes": [
+        [
+          "ˈ",
+          "a"
+        ]
+      ],
+      "generation_seconds": 0.030620599995017983,
+      "sample_rate": 22050,
+      "audio_seconds": 0.8359183673469388,
+      "sha256": "f0487ceb355bb68b1f8bba8d4f203f88ddca5ccce48bf1a3a8917803329b6130",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "y",
+      "purpose": "fixed French comparison input",
+      "file": "female-normal-11.wav",
+      "voice_label_for_comparison": "female",
+      "source_speaker_id": "3698",
+      "inference_speaker_id": 1,
+      "speed": "normal",
+      "length_scale": 1,
+      "phonemes": [
+        [
+          "i",
+          "ɡ",
+          "ʁ",
+          "ˈ",
+          "ɛ",
+          "k"
+        ]
+      ],
+      "generation_seconds": 0.058275399991543964,
+      "sample_rate": 22050,
+      "audio_seconds": 2.2058956916099772,
+      "sha256": "8debebe1d7eeafe0fe62289ee8291c62b50e3e2445318bcc0735a3d4ec468b7e",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "eu",
+      "purpose": "fixed French comparison input",
+      "file": "female-normal-12.wav",
+      "voice_label_for_comparison": "female",
+      "source_speaker_id": "3698",
+      "inference_speaker_id": 1,
+      "speed": "normal",
+      "length_scale": 1,
+      "phonemes": [
+        [
+          "ˈ",
+          "y"
+        ]
+      ],
+      "generation_seconds": 0.018943300005048513,
+      "sample_rate": 22050,
+      "audio_seconds": 0.3599092970521542,
+      "sha256": "99a25becf46de8d6ee9901878c49e50a99e4f20e900a3609c1853659257b6ca5",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "eau",
+      "purpose": "fixed French comparison input",
+      "file": "female-normal-13.wav",
+      "voice_label_for_comparison": "female",
+      "source_speaker_id": "3698",
+      "inference_speaker_id": 1,
+      "speed": "normal",
+      "length_scale": 1,
+      "phonemes": [
+        [
+          "ˈ",
+          "o"
+        ]
+      ],
+      "generation_seconds": 0.028309500004979782,
+      "sample_rate": 22050,
+      "audio_seconds": 0.7082086167800453,
+      "sha256": "425b62cc1bd356004817dfdf445a638dfde84fca73b72ff2379a1a6e0e1d1f50",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "un",
+      "purpose": "fixed French comparison input",
+      "file": "female-normal-14.wav",
+      "voice_label_for_comparison": "female",
+      "source_speaker_id": "3698",
+      "inference_speaker_id": 1,
+      "speed": "normal",
+      "length_scale": 1,
+      "phonemes": [
+        [
+          "ˈ",
+          "œ",
+          "̃"
+        ]
+      ],
+      "generation_seconds": 0.03494239998690318,
+      "sample_rate": 22050,
+      "audio_seconds": 0.7430385487528345,
+      "sha256": "b1d4cf9bf1e22dad533ef4c8ff9283606913fb64017e33a77d0d87ffa03876ab",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "chat",
+      "purpose": "fixed French comparison input",
+      "file": "female-normal-15.wav",
+      "voice_label_for_comparison": "female",
+      "source_speaker_id": "3698",
+      "inference_speaker_id": 1,
+      "speed": "normal",
+      "length_scale": 1,
+      "phonemes": [
+        [
+          "ʃ",
+          "ˈ",
+          "a"
+        ]
+      ],
+      "generation_seconds": 0.02665559999877587,
+      "sample_rate": 22050,
+      "audio_seconds": 0.8243083900226758,
+      "sha256": "1ee9087243b0461a64b930d75d6702155d2e6f18050d8ef8c76c284a949b1a0c",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "qzxyplouf",
+      "purpose": "fixed French comparison input",
+      "file": "female-normal-16.wav",
+      "voice_label_for_comparison": "female",
+      "source_speaker_id": "3698",
+      "inference_speaker_id": 1,
+      "speed": "normal",
+      "length_scale": 1,
+      "phonemes": [
+        [
+          "k",
+          "z",
+          "k",
+          "s",
+          "i",
+          "p",
+          "l",
+          "ˈ",
+          "u",
+          "f"
+        ]
+      ],
+      "generation_seconds": 0.1016333999868948,
+      "sample_rate": 22050,
+      "audio_seconds": 3.4946031746031747,
+      "sha256": "7a1f7f5a995217ea38220afaf0d2a7ba07571ec99baaeae4603d32727eeb77cf",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "anticonstitutionnellement",
+      "purpose": "fixed French comparison input",
+      "file": "female-normal-17.wav",
+      "voice_label_for_comparison": "female",
+      "source_speaker_id": "3698",
+      "inference_speaker_id": 1,
+      "speed": "normal",
+      "length_scale": 1,
+      "phonemes": [
+        [
+          "ɑ",
+          "̃",
+          "t",
+          "i",
+          "k",
+          "ɔ",
+          "̃",
+          "s",
+          "t",
+          "i",
+          "t",
+          "y",
+          "s",
+          "j",
+          "ɔ",
+          "n",
+          "ɛ",
+          "l",
+          "m",
+          "ˈ",
+          "ɑ",
+          "̃"
+        ]
+      ],
+      "generation_seconds": 0.09756900000502355,
+      "sample_rate": 22050,
+      "audio_seconds": 3.4713832199546486,
+      "sha256": "7628b008bba77790897b5367a111ebc08fc97af2d0cbc4aca79d4fa9e28e5b0a",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "[[i]]",
+      "purpose": "explicit /i/ phoneme control; not unchanged-text inference",
+      "file": "female-normal-18.wav",
+      "voice_label_for_comparison": "female",
+      "source_speaker_id": "3698",
+      "inference_speaker_id": 1,
+      "speed": "normal",
+      "length_scale": 1,
+      "phonemes": [
+        [
+          "i"
+        ]
+      ],
+      "generation_seconds": 0.018497400000342168,
+      "sample_rate": 22050,
+      "audio_seconds": 0.17414965986394557,
+      "sha256": "becf782285bc2cb577e7ea5523a9b65f80cf45f4824e7f7bf23fe0e15f49512e",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "être",
+      "purpose": "fixed French comparison input",
+      "file": "female-slow-01.wav",
+      "voice_label_for_comparison": "female",
+      "source_speaker_id": "3698",
+      "inference_speaker_id": 1,
+      "speed": "slow",
+      "length_scale": 1.3,
+      "phonemes": [
+        [
+          "ˈ",
+          "ɛ",
+          "t",
+          "ʁ"
+        ]
+      ],
+      "generation_seconds": 0.0388639000011608,
+      "sample_rate": 22050,
+      "audio_seconds": 1.486077097505669,
+      "sha256": "db2781c72a38404f512f7b036a481ab61dbad6df3ab5a187756a77bbe8a10411",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "sommes",
+      "purpose": "fixed French comparison input",
+      "file": "female-slow-02.wav",
+      "voice_label_for_comparison": "female",
+      "source_speaker_id": "3698",
+      "inference_speaker_id": 1,
+      "speed": "slow",
+      "length_scale": 1.3,
+      "phonemes": [
+        [
+          "s",
+          "ˈ",
+          "ɔ",
+          "m"
+        ]
+      ],
+      "generation_seconds": 0.050661800007219426,
+      "sample_rate": 22050,
+      "audio_seconds": 2.066575963718821,
+      "sha256": "e746b1c112886d875550227ebeae4ffbeb2e7c32623caa2e63876974abdc6568",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "œil",
+      "purpose": "fixed French comparison input",
+      "file": "female-slow-03.wav",
+      "voice_label_for_comparison": "female",
+      "source_speaker_id": "3698",
+      "inference_speaker_id": 1,
+      "speed": "slow",
+      "length_scale": 1.3,
+      "phonemes": [
+        [
+          "ˈ",
+          "œ",
+          "j"
+        ]
+      ],
+      "generation_seconds": 0.03989479999290779,
+      "sample_rate": 22050,
+      "audio_seconds": 1.3815873015873017,
+      "sha256": "48f79e189012bd10fadf32cdf49322d79d4702f9c987d1c6488d7ddadd4f4301",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "école",
+      "purpose": "fixed French comparison input",
+      "file": "female-slow-04.wav",
+      "voice_label_for_comparison": "female",
+      "source_speaker_id": "3698",
+      "inference_speaker_id": 1,
+      "speed": "slow",
+      "length_scale": 1.3,
+      "phonemes": [
+        [
+          "e",
+          "k",
+          "ˈ",
+          "ɔ",
+          "l"
+        ]
+      ],
+      "generation_seconds": 0.05387530000007246,
+      "sample_rate": 22050,
+      "audio_seconds": 2.1130158730158732,
+      "sha256": "21dcbc473e0ced49827cadf821acb88fe5e2f84caf82c5509f65a4d2ffb9297e",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "aujourd'hui",
+      "purpose": "fixed French comparison input",
+      "file": "female-slow-05.wav",
+      "voice_label_for_comparison": "female",
+      "source_speaker_id": "3698",
+      "inference_speaker_id": 1,
+      "speed": "slow",
+      "length_scale": 1.3,
+      "phonemes": [
+        [
+          "o",
+          "ʒ",
+          "u",
+          "ʁ",
+          "d",
+          "y",
+          "ˈ",
+          "i"
+        ]
+      ],
+      "generation_seconds": 0.05217310000443831,
+      "sample_rate": 22050,
+      "audio_seconds": 2.147845804988662,
+      "sha256": "70d3eeb2f529d93df40eff9731c58411c56b726d62b1075a21937050cf915f0f",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "nous sommes ici",
+      "purpose": "fixed French comparison input",
+      "file": "female-slow-06.wav",
+      "voice_label_for_comparison": "female",
+      "source_speaker_id": "3698",
+      "inference_speaker_id": 1,
+      "speed": "slow",
+      "length_scale": 1.3,
+      "phonemes": [
+        [
+          "n",
+          "u",
+          " ",
+          "s",
+          "ɔ",
+          "m",
+          "z",
+          " ",
+          "i",
+          "s",
+          "ˈ",
+          "i"
+        ]
+      ],
+      "generation_seconds": 0.12034209999546874,
+      "sample_rate": 22050,
+      "audio_seconds": 5.201269841269841,
+      "sha256": "4de2ee92657a80894fe1611bf8fb79a47fd8e252185f4cefff6de1f5019477ac",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "les amis arrivent",
+      "purpose": "fixed French comparison input",
+      "file": "female-slow-07.wav",
+      "voice_label_for_comparison": "female",
+      "source_speaker_id": "3698",
+      "inference_speaker_id": 1,
+      "speed": "slow",
+      "length_scale": 1.3,
+      "phonemes": [
+        [
+          "l",
+          "e",
+          "-",
+          "z",
+          " ",
+          "a",
+          "m",
+          "ˈ",
+          "i",
+          "ʲ",
+          " ",
+          "a",
+          "ʁ",
+          "ˈ",
+          "i",
+          "v"
+        ]
+      ],
+      "generation_seconds": 0.10185369999089744,
+      "sample_rate": 22050,
+      "audio_seconds": 3.7500226757369615,
+      "sha256": "66348e466b3d85ad91c251494e5c0669c90a522e23e74e5f561116567532d395",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "J'apprends le français tous les jours.",
+      "purpose": "fixed French comparison input",
+      "file": "female-slow-08.wav",
+      "voice_label_for_comparison": "female",
+      "source_speaker_id": "3698",
+      "inference_speaker_id": 1,
+      "speed": "slow",
+      "length_scale": 1.3,
+      "phonemes": [
+        [
+          "ʒ",
+          "a",
+          "p",
+          "ʁ",
+          "ˈ",
+          "ɑ",
+          "̃",
+          " ",
+          "l",
+          "ə",
+          "-",
+          " ",
+          "f",
+          "ʁ",
+          "ɑ",
+          "̃",
+          "s",
+          "ˈ",
+          "ɛ",
+          " ",
+          "t",
+          "u",
+          " ",
+          "l",
+          "e",
+          "-",
+          " ",
+          "ʒ",
+          "ˈ",
+          "u",
+          "ʁ",
+          "."
+        ]
+      ],
+      "generation_seconds": 0.16560530000424478,
+      "sample_rate": 22050,
+      "audio_seconds": 7.2562358276643995,
+      "sha256": "f69fed37e212b2b3014fc19753ecb6cbaa02e2a74f6cf44c15ec6b75e45d8b79",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "a",
+      "purpose": "fixed French comparison input",
+      "file": "female-slow-09.wav",
+      "voice_label_for_comparison": "female",
+      "source_speaker_id": "3698",
+      "inference_speaker_id": 1,
+      "speed": "slow",
+      "length_scale": 1.3,
+      "phonemes": [
+        [
+          "ˈ",
+          "a"
+        ]
+      ],
+      "generation_seconds": 0.03651240000908729,
+      "sample_rate": 22050,
+      "audio_seconds": 1.1493877551020408,
+      "sha256": "19c277f554aa152d2942eb89539ec5bf80979b433cff12dc14bc64c6bb03df49",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "à",
+      "purpose": "fixed French comparison input",
+      "file": "female-slow-10.wav",
+      "voice_label_for_comparison": "female",
+      "source_speaker_id": "3698",
+      "inference_speaker_id": 1,
+      "speed": "slow",
+      "length_scale": 1.3,
+      "phonemes": [
+        [
+          "ˈ",
+          "a"
+        ]
+      ],
+      "generation_seconds": 0.02707770001143217,
+      "sample_rate": 22050,
+      "audio_seconds": 0.603718820861678,
+      "sha256": "dadd171849f4884bfb19426876ea1383b3959fe346647d4a084d6c6ca8c65256",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "y",
+      "purpose": "fixed French comparison input",
+      "file": "female-slow-11.wav",
+      "voice_label_for_comparison": "female",
+      "source_speaker_id": "3698",
+      "inference_speaker_id": 1,
+      "speed": "slow",
+      "length_scale": 1.3,
+      "phonemes": [
+        [
+          "i",
+          "ɡ",
+          "ʁ",
+          "ˈ",
+          "ɛ",
+          "k"
+        ]
+      ],
+      "generation_seconds": 0.04602560000785161,
+      "sample_rate": 22050,
+      "audio_seconds": 1.6486167800453515,
+      "sha256": "1fcb3275b1de82c3dccc5a361561878e79a8f20898b52d6a958a82dd2c6896c0",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "eu",
+      "purpose": "fixed French comparison input",
+      "file": "female-slow-12.wav",
+      "voice_label_for_comparison": "female",
+      "source_speaker_id": "3698",
+      "inference_speaker_id": 1,
+      "speed": "slow",
+      "length_scale": 1.3,
+      "phonemes": [
+        [
+          "ˈ",
+          "y"
+        ]
+      ],
+      "generation_seconds": 0.024432200007140636,
+      "sample_rate": 22050,
+      "audio_seconds": 0.7546485260770975,
+      "sha256": "f2e2aa9c2165456a8f8230139c91a28b8526ecd443457ba7a64cfe3a4bfb66ed",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "eau",
+      "purpose": "fixed French comparison input",
+      "file": "female-slow-13.wav",
+      "voice_label_for_comparison": "female",
+      "source_speaker_id": "3698",
+      "inference_speaker_id": 1,
+      "speed": "slow",
+      "length_scale": 1.3,
+      "phonemes": [
+        [
+          "ˈ",
+          "o"
+        ]
+      ],
+      "generation_seconds": 0.026347699997131713,
+      "sample_rate": 22050,
+      "audio_seconds": 0.603718820861678,
+      "sha256": "5b992f363af80289dedad8b2060043826edbc5d4378938a0752bf48962b9ee03",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "un",
+      "purpose": "fixed French comparison input",
+      "file": "female-slow-14.wav",
+      "voice_label_for_comparison": "female",
+      "source_speaker_id": "3698",
+      "inference_speaker_id": 1,
+      "speed": "slow",
+      "length_scale": 1.3,
+      "phonemes": [
+        [
+          "ˈ",
+          "œ",
+          "̃"
+        ]
+      ],
+      "generation_seconds": 0.036956199997803196,
+      "sample_rate": 22050,
+      "audio_seconds": 1.3235374149659864,
+      "sha256": "b052a1d977ad6b1a96bee97953cd857a25243b898c5d77c59073cc86a6747211",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "chat",
+      "purpose": "fixed French comparison input",
+      "file": "female-slow-15.wav",
+      "voice_label_for_comparison": "female",
+      "source_speaker_id": "3698",
+      "inference_speaker_id": 1,
+      "speed": "slow",
+      "length_scale": 1.3,
+      "phonemes": [
+        [
+          "ʃ",
+          "ˈ",
+          "a"
+        ]
+      ],
+      "generation_seconds": 0.03941549999581184,
+      "sample_rate": 22050,
+      "audio_seconds": 1.4512471655328798,
+      "sha256": "c1288ed71a27f41b9774a93291874ec4c10736a1843a35f11eeffeb424cab551",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "qzxyplouf",
+      "purpose": "fixed French comparison input",
+      "file": "female-slow-16.wav",
+      "voice_label_for_comparison": "female",
+      "source_speaker_id": "3698",
+      "inference_speaker_id": 1,
+      "speed": "slow",
+      "length_scale": 1.3,
+      "phonemes": [
+        [
+          "k",
+          "z",
+          "k",
+          "s",
+          "i",
+          "p",
+          "l",
+          "ˈ",
+          "u",
+          "f"
+        ]
+      ],
+      "generation_seconds": 0.07746549999865238,
+      "sample_rate": 22050,
+      "audio_seconds": 3.239183673469388,
+      "sha256": "476526f7d5d77aa8d5a538d8132bb785bc62f69661a6b21d573447ad3875dc7a",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "anticonstitutionnellement",
+      "purpose": "fixed French comparison input",
+      "file": "female-slow-17.wav",
+      "voice_label_for_comparison": "female",
+      "source_speaker_id": "3698",
+      "inference_speaker_id": 1,
+      "speed": "slow",
+      "length_scale": 1.3,
+      "phonemes": [
+        [
+          "ɑ",
+          "̃",
+          "t",
+          "i",
+          "k",
+          "ɔ",
+          "̃",
+          "s",
+          "t",
+          "i",
+          "t",
+          "y",
+          "s",
+          "j",
+          "ɔ",
+          "n",
+          "ɛ",
+          "l",
+          "m",
+          "ˈ",
+          "ɑ",
+          "̃"
+        ]
+      ],
+      "generation_seconds": 0.12505950000195298,
+      "sample_rate": 22050,
+      "audio_seconds": 5.445079365079365,
+      "sha256": "ebd3fd9f9697dbcc3e58d90de64e3e046de24cf3aaf29d14c86d9cc316803334",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "[[i]]",
+      "purpose": "explicit /i/ phoneme control; not unchanged-text inference",
+      "file": "female-slow-18.wav",
+      "voice_label_for_comparison": "female",
+      "source_speaker_id": "3698",
+      "inference_speaker_id": 1,
+      "speed": "slow",
+      "length_scale": 1.3,
+      "phonemes": [
+        [
+          "i"
+        ]
+      ],
+      "generation_seconds": 0.02213159999519121,
+      "sample_rate": 22050,
+      "audio_seconds": 0.4527891156462585,
+      "sha256": "5c768e563f146d886a3f9ce43d259f8da173058b00e06d1d394d01b3de936362",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "être",
+      "purpose": "fixed French comparison input",
+      "file": "male-normal-01.wav",
+      "voice_label_for_comparison": "male",
+      "source_speaker_id": "1840",
+      "inference_speaker_id": 0,
+      "speed": "normal",
+      "length_scale": 1,
+      "phonemes": [
+        [
+          "ˈ",
+          "ɛ",
+          "t",
+          "ʁ"
+        ]
+      ],
+      "generation_seconds": 0.04004759999224916,
+      "sample_rate": 22050,
+      "audio_seconds": 1.4164172335600906,
+      "sha256": "73ee274efb74072f396e279aa1621d97528986b79842d147bafd65305093406e",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "sommes",
+      "purpose": "fixed French comparison input",
+      "file": "male-normal-02.wav",
+      "voice_label_for_comparison": "male",
+      "source_speaker_id": "1840",
+      "inference_speaker_id": 0,
+      "speed": "normal",
+      "length_scale": 1,
+      "phonemes": [
+        [
+          "s",
+          "ˈ",
+          "ɔ",
+          "m"
+        ]
+      ],
+      "generation_seconds": 0.03416260000085458,
+      "sample_rate": 22050,
+      "audio_seconds": 1.2654875283446712,
+      "sha256": "5d60bdb533cee03d2db977aa9fecfd3299685bc6b1fb78eb338b178fcca9d5f7",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "œil",
+      "purpose": "fixed French comparison input",
+      "file": "male-normal-03.wav",
+      "voice_label_for_comparison": "male",
+      "source_speaker_id": "1840",
+      "inference_speaker_id": 0,
+      "speed": "normal",
+      "length_scale": 1,
+      "phonemes": [
+        [
+          "ˈ",
+          "œ",
+          "j"
+        ]
+      ],
+      "generation_seconds": 0.02011260000290349,
+      "sample_rate": 22050,
+      "audio_seconds": 0.4992290249433107,
+      "sha256": "b9ea04bb9e3bba22448ce76c3fbaebf7be59a4e20f98816e893a05d0d074ac07",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "école",
+      "purpose": "fixed French comparison input",
+      "file": "male-normal-04.wav",
+      "voice_label_for_comparison": "male",
+      "source_speaker_id": "1840",
+      "inference_speaker_id": 0,
+      "speed": "normal",
+      "length_scale": 1,
+      "phonemes": [
+        [
+          "e",
+          "k",
+          "ˈ",
+          "ɔ",
+          "l"
+        ]
+      ],
+      "generation_seconds": 0.0317947000003187,
+      "sample_rate": 22050,
+      "audio_seconds": 0.9287981859410431,
+      "sha256": "6be6b4183c83ae86da6aa359bdc76d7aef8a6ef3f0ae1ddd7302e2b19b459cd7",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "aujourd'hui",
+      "purpose": "fixed French comparison input",
+      "file": "male-normal-05.wav",
+      "voice_label_for_comparison": "male",
+      "source_speaker_id": "1840",
+      "inference_speaker_id": 0,
+      "speed": "normal",
+      "length_scale": 1,
+      "phonemes": [
+        [
+          "o",
+          "ʒ",
+          "u",
+          "ʁ",
+          "d",
+          "y",
+          "ˈ",
+          "i"
+        ]
+      ],
+      "generation_seconds": 0.04955409999820404,
+      "sample_rate": 22050,
+      "audio_seconds": 1.7182766439909296,
+      "sha256": "a296343338c4f27db394911db9e8e01a0743f9ee832875603fcd92bb22063744",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "nous sommes ici",
+      "purpose": "fixed French comparison input",
+      "file": "male-normal-06.wav",
+      "voice_label_for_comparison": "male",
+      "source_speaker_id": "1840",
+      "inference_speaker_id": 0,
+      "speed": "normal",
+      "length_scale": 1,
+      "phonemes": [
+        [
+          "n",
+          "u",
+          " ",
+          "s",
+          "ɔ",
+          "m",
+          "z",
+          " ",
+          "i",
+          "s",
+          "ˈ",
+          "i"
+        ]
+      ],
+      "generation_seconds": 0.05377319999388419,
+      "sample_rate": 22050,
+      "audio_seconds": 2.159455782312925,
+      "sha256": "b93062769f60c1bcd27fb290b9404c68fa5812d3f66c09266d9535692ac4b1a9",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "les amis arrivent",
+      "purpose": "fixed French comparison input",
+      "file": "male-normal-07.wav",
+      "voice_label_for_comparison": "male",
+      "source_speaker_id": "1840",
+      "inference_speaker_id": 0,
+      "speed": "normal",
+      "length_scale": 1,
+      "phonemes": [
+        [
+          "l",
+          "e",
+          "-",
+          "z",
+          " ",
+          "a",
+          "m",
+          "ˈ",
+          "i",
+          "ʲ",
+          " ",
+          "a",
+          "ʁ",
+          "ˈ",
+          "i",
+          "v"
+        ]
+      ],
+      "generation_seconds": 0.05218539999623317,
+      "sample_rate": 22050,
+      "audio_seconds": 1.8692063492063493,
+      "sha256": "862789c5b55343007cb73d1c5a78dca4bdb2e89e1e5b5eebc03f599dcc71b56e",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "J'apprends le français tous les jours.",
+      "purpose": "fixed French comparison input",
+      "file": "male-normal-08.wav",
+      "voice_label_for_comparison": "male",
+      "source_speaker_id": "1840",
+      "inference_speaker_id": 0,
+      "speed": "normal",
+      "length_scale": 1,
+      "phonemes": [
+        [
+          "ʒ",
+          "a",
+          "p",
+          "ʁ",
+          "ˈ",
+          "ɑ",
+          "̃",
+          " ",
+          "l",
+          "ə",
+          "-",
+          " ",
+          "f",
+          "ʁ",
+          "ɑ",
+          "̃",
+          "s",
+          "ˈ",
+          "ɛ",
+          " ",
+          "t",
+          "u",
+          " ",
+          "l",
+          "e",
+          "-",
+          " ",
+          "ʒ",
+          "ˈ",
+          "u",
+          "ʁ",
+          "."
+        ]
+      ],
+      "generation_seconds": 0.08703890000469983,
+      "sample_rate": 22050,
+      "audio_seconds": 3.4133333333333336,
+      "sha256": "ffaed5c3ce2562d7993fd7e6a36629bc7ce321afb2fb7ba6afa27c4dd5528d43",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "a",
+      "purpose": "fixed French comparison input",
+      "file": "male-normal-09.wav",
+      "voice_label_for_comparison": "male",
+      "source_speaker_id": "1840",
+      "inference_speaker_id": 0,
+      "speed": "normal",
+      "length_scale": 1,
+      "phonemes": [
+        [
+          "ˈ",
+          "a"
+        ]
+      ],
+      "generation_seconds": 0.023555599997052923,
+      "sample_rate": 22050,
+      "audio_seconds": 0.40634920634920635,
+      "sha256": "c2f624ecfd22728d0dd792a99376ac6320a9b5566c35e0db371b2de2e81b2c32",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "à",
+      "purpose": "fixed French comparison input",
+      "file": "male-normal-10.wav",
+      "voice_label_for_comparison": "male",
+      "source_speaker_id": "1840",
+      "inference_speaker_id": 0,
+      "speed": "normal",
+      "length_scale": 1,
+      "phonemes": [
+        [
+          "ˈ",
+          "a"
+        ]
+      ],
+      "generation_seconds": 0.023877200001152232,
+      "sample_rate": 22050,
+      "audio_seconds": 0.6965986394557823,
+      "sha256": "d56deb747c48ecf50a4a55019664b002ca731ef146494488950815c4520eef33",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "y",
+      "purpose": "fixed French comparison input",
+      "file": "male-normal-11.wav",
+      "voice_label_for_comparison": "male",
+      "source_speaker_id": "1840",
+      "inference_speaker_id": 0,
+      "speed": "normal",
+      "length_scale": 1,
+      "phonemes": [
+        [
+          "i",
+          "ɡ",
+          "ʁ",
+          "ˈ",
+          "ɛ",
+          "k"
+        ]
+      ],
+      "generation_seconds": 0.050273699991521426,
+      "sample_rate": 22050,
+      "audio_seconds": 1.8692063492063493,
+      "sha256": "c6d7898052b244d1a851ed6a1c9309850f8927603e286aefc9fadfd28356441d",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "eu",
+      "purpose": "fixed French comparison input",
+      "file": "male-normal-12.wav",
+      "voice_label_for_comparison": "male",
+      "source_speaker_id": "1840",
+      "inference_speaker_id": 0,
+      "speed": "normal",
+      "length_scale": 1,
+      "phonemes": [
+        [
+          "ˈ",
+          "y"
+        ]
+      ],
+      "generation_seconds": 0.03619529999559745,
+      "sample_rate": 22050,
+      "audio_seconds": 1.1609977324263039,
+      "sha256": "35badbd03c12e3eeda77c6ee4beb598c404d53451352a576179a44f0cac44668",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "eau",
+      "purpose": "fixed French comparison input",
+      "file": "male-normal-13.wav",
+      "voice_label_for_comparison": "male",
+      "source_speaker_id": "1840",
+      "inference_speaker_id": 0,
+      "speed": "normal",
+      "length_scale": 1,
+      "phonemes": [
+        [
+          "ˈ",
+          "o"
+        ]
+      ],
+      "generation_seconds": 0.034454799999366514,
+      "sample_rate": 22050,
+      "audio_seconds": 1.0797278911564625,
+      "sha256": "d6328da401774e000edbb3db1fc9c808338ece4bea513ac74a0d5caaed60d753",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "un",
+      "purpose": "fixed French comparison input",
+      "file": "male-normal-14.wav",
+      "voice_label_for_comparison": "male",
+      "source_speaker_id": "1840",
+      "inference_speaker_id": 0,
+      "speed": "normal",
+      "length_scale": 1,
+      "phonemes": [
+        [
+          "ˈ",
+          "œ",
+          "̃"
+        ]
+      ],
+      "generation_seconds": 0.03174970000691246,
+      "sample_rate": 22050,
+      "audio_seconds": 0.7546485260770975,
+      "sha256": "885f779861fdae461811febb672afa42d056e40ff9445eccbf501f9a3b34a4c6",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "chat",
+      "purpose": "fixed French comparison input",
+      "file": "male-normal-15.wav",
+      "voice_label_for_comparison": "male",
+      "source_speaker_id": "1840",
+      "inference_speaker_id": 0,
+      "speed": "normal",
+      "length_scale": 1,
+      "phonemes": [
+        [
+          "ʃ",
+          "ˈ",
+          "a"
+        ]
+      ],
+      "generation_seconds": 0.02770020000752993,
+      "sample_rate": 22050,
+      "audio_seconds": 0.6733786848072563,
+      "sha256": "17b681845854728439e62bc53d3c719345fa795506abe62bbaef47412386c14f",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "qzxyplouf",
+      "purpose": "fixed French comparison input",
+      "file": "male-normal-16.wav",
+      "voice_label_for_comparison": "male",
+      "source_speaker_id": "1840",
+      "inference_speaker_id": 0,
+      "speed": "normal",
+      "length_scale": 1,
+      "phonemes": [
+        [
+          "k",
+          "z",
+          "k",
+          "s",
+          "i",
+          "p",
+          "l",
+          "ˈ",
+          "u",
+          "f"
+        ]
+      ],
+      "generation_seconds": 0.042856800006120466,
+      "sample_rate": 22050,
+      "audio_seconds": 1.7066666666666668,
+      "sha256": "0c5ff99535266b5f77b88c8fbeb3ac4efff6e5f49116e705cc93d15aa11874a6",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "anticonstitutionnellement",
+      "purpose": "fixed French comparison input",
+      "file": "male-normal-17.wav",
+      "voice_label_for_comparison": "male",
+      "source_speaker_id": "1840",
+      "inference_speaker_id": 0,
+      "speed": "normal",
+      "length_scale": 1,
+      "phonemes": [
+        [
+          "ɑ",
+          "̃",
+          "t",
+          "i",
+          "k",
+          "ɔ",
+          "̃",
+          "s",
+          "t",
+          "i",
+          "t",
+          "y",
+          "s",
+          "j",
+          "ɔ",
+          "n",
+          "ɛ",
+          "l",
+          "m",
+          "ˈ",
+          "ɑ",
+          "̃"
+        ]
+      ],
+      "generation_seconds": 0.06036780000431463,
+      "sample_rate": 22050,
+      "audio_seconds": 2.391655328798186,
+      "sha256": "8f3918730585f331a481f177e4e95b142795436538d008a3eb727279f3d024c7",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "[[i]]",
+      "purpose": "explicit /i/ phoneme control; not unchanged-text inference",
+      "file": "male-normal-18.wav",
+      "voice_label_for_comparison": "male",
+      "source_speaker_id": "1840",
+      "inference_speaker_id": 0,
+      "speed": "normal",
+      "length_scale": 1,
+      "phonemes": [
+        [
+          "i"
+        ]
+      ],
+      "generation_seconds": 0.024832900002365932,
+      "sample_rate": 22050,
+      "audio_seconds": 0.5108390022675737,
+      "sha256": "576f8947f78055886334c0cc0e6cc58cff9edcd2e86c5c85503c3362db484539",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "être",
+      "purpose": "fixed French comparison input",
+      "file": "male-slow-01.wav",
+      "voice_label_for_comparison": "male",
+      "source_speaker_id": "1840",
+      "inference_speaker_id": 0,
+      "speed": "slow",
+      "length_scale": 1.3,
+      "phonemes": [
+        [
+          "ˈ",
+          "ɛ",
+          "t",
+          "ʁ"
+        ]
+      ],
+      "generation_seconds": 0.04220369999529794,
+      "sample_rate": 22050,
+      "audio_seconds": 1.5441269841269842,
+      "sha256": "10318442a8916fe41d5e0f99ee8ef20937e8fbe8deb3a4d5aa8fa2b6f44ad94a",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "sommes",
+      "purpose": "fixed French comparison input",
+      "file": "male-slow-02.wav",
+      "voice_label_for_comparison": "male",
+      "source_speaker_id": "1840",
+      "inference_speaker_id": 0,
+      "speed": "slow",
+      "length_scale": 1.3,
+      "phonemes": [
+        [
+          "s",
+          "ˈ",
+          "ɔ",
+          "m"
+        ]
+      ],
+      "generation_seconds": 0.030711100000189617,
+      "sample_rate": 22050,
+      "audio_seconds": 1.0913378684807256,
+      "sha256": "fe2702efb8457c4deac22e210e31e43b72ef15c63b9b341109a3d211e7212c92",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "œil",
+      "purpose": "fixed French comparison input",
+      "file": "male-slow-03.wav",
+      "voice_label_for_comparison": "male",
+      "source_speaker_id": "1840",
+      "inference_speaker_id": 0,
+      "speed": "slow",
+      "length_scale": 1.3,
+      "phonemes": [
+        [
+          "ˈ",
+          "œ",
+          "j"
+        ]
+      ],
+      "generation_seconds": 0.028855299999122508,
+      "sample_rate": 22050,
+      "audio_seconds": 0.7778684807256235,
+      "sha256": "0f3a0abbd33b3b09b5b47a18f3b30fe4fcbe609b27c635ab82f4b835ba89ab23",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "école",
+      "purpose": "fixed French comparison input",
+      "file": "male-slow-04.wav",
+      "voice_label_for_comparison": "male",
+      "source_speaker_id": "1840",
+      "inference_speaker_id": 0,
+      "speed": "slow",
+      "length_scale": 1.3,
+      "phonemes": [
+        [
+          "e",
+          "k",
+          "ˈ",
+          "ɔ",
+          "l"
+        ]
+      ],
+      "generation_seconds": 0.035946900010458194,
+      "sample_rate": 22050,
+      "audio_seconds": 1.2190476190476192,
+      "sha256": "b0185963fdac9ba2e808338ba6e804e480e76c3082e066c08c96a4bb9fc1f3f2",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "aujourd'hui",
+      "purpose": "fixed French comparison input",
+      "file": "male-slow-05.wav",
+      "voice_label_for_comparison": "male",
+      "source_speaker_id": "1840",
+      "inference_speaker_id": 0,
+      "speed": "slow",
+      "length_scale": 1.3,
+      "phonemes": [
+        [
+          "o",
+          "ʒ",
+          "u",
+          "ʁ",
+          "d",
+          "y",
+          "ˈ",
+          "i"
+        ]
+      ],
+      "generation_seconds": 0.04724739999801386,
+      "sample_rate": 22050,
+      "audio_seconds": 1.6950566893424037,
+      "sha256": "8ed6b31cdfb3b64975b3e44e31ec4b68dd007796917c44c6fdebc4f374ddc5cc",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "nous sommes ici",
+      "purpose": "fixed French comparison input",
+      "file": "male-slow-06.wav",
+      "voice_label_for_comparison": "male",
+      "source_speaker_id": "1840",
+      "inference_speaker_id": 0,
+      "speed": "slow",
+      "length_scale": 1.3,
+      "phonemes": [
+        [
+          "n",
+          "u",
+          " ",
+          "s",
+          "ɔ",
+          "m",
+          "z",
+          " ",
+          "i",
+          "s",
+          "ˈ",
+          "i"
+        ]
+      ],
+      "generation_seconds": 0.050202900005388074,
+      "sample_rate": 22050,
+      "audio_seconds": 2.020136054421769,
+      "sha256": "b02af9eb7c217f4870cdd0718f8436af81973253caf65a3b3c14ab23172d7ead",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "les amis arrivent",
+      "purpose": "fixed French comparison input",
+      "file": "male-slow-07.wav",
+      "voice_label_for_comparison": "male",
+      "source_speaker_id": "1840",
+      "inference_speaker_id": 0,
+      "speed": "slow",
+      "length_scale": 1.3,
+      "phonemes": [
+        [
+          "l",
+          "e",
+          "-",
+          "z",
+          " ",
+          "a",
+          "m",
+          "ˈ",
+          "i",
+          "ʲ",
+          " ",
+          "a",
+          "ʁ",
+          "ˈ",
+          "i",
+          "v"
+        ]
+      ],
+      "generation_seconds": 0.055936300006578676,
+      "sample_rate": 22050,
+      "audio_seconds": 2.2058956916099772,
+      "sha256": "536f479a17638e5c269b9f73871eefca1239200f3bbb5154d56152d6399c98a9",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "J'apprends le français tous les jours.",
+      "purpose": "fixed French comparison input",
+      "file": "male-slow-08.wav",
+      "voice_label_for_comparison": "male",
+      "source_speaker_id": "1840",
+      "inference_speaker_id": 0,
+      "speed": "slow",
+      "length_scale": 1.3,
+      "phonemes": [
+        [
+          "ʒ",
+          "a",
+          "p",
+          "ʁ",
+          "ˈ",
+          "ɑ",
+          "̃",
+          " ",
+          "l",
+          "ə",
+          "-",
+          " ",
+          "f",
+          "ʁ",
+          "ɑ",
+          "̃",
+          "s",
+          "ˈ",
+          "ɛ",
+          " ",
+          "t",
+          "u",
+          " ",
+          "l",
+          "e",
+          "-",
+          " ",
+          "ʒ",
+          "ˈ",
+          "u",
+          "ʁ",
+          "."
+        ]
+      ],
+      "generation_seconds": 0.08880019999924116,
+      "sample_rate": 22050,
+      "audio_seconds": 3.4481632653061225,
+      "sha256": "7fa4a9dc09dd13f5ef6618aa7716b46a9aecb999254d8770d57f3107d12637a2",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "a",
+      "purpose": "fixed French comparison input",
+      "file": "male-slow-09.wav",
+      "voice_label_for_comparison": "male",
+      "source_speaker_id": "1840",
+      "inference_speaker_id": 0,
+      "speed": "slow",
+      "length_scale": 1.3,
+      "phonemes": [
+        [
+          "ˈ",
+          "a"
+        ]
+      ],
+      "generation_seconds": 0.043505800000275485,
+      "sample_rate": 22050,
+      "audio_seconds": 1.4396371882086167,
+      "sha256": "fb8db542efefbaf834b8e097e1b0648f4e3866ec29fbb8278cca66466cd5e8f0",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "à",
+      "purpose": "fixed French comparison input",
+      "file": "male-slow-10.wav",
+      "voice_label_for_comparison": "male",
+      "source_speaker_id": "1840",
+      "inference_speaker_id": 0,
+      "speed": "slow",
+      "length_scale": 1.3,
+      "phonemes": [
+        [
+          "ˈ",
+          "a"
+        ]
+      ],
+      "generation_seconds": 0.02666000000317581,
+      "sample_rate": 22050,
+      "audio_seconds": 0.7546485260770975,
+      "sha256": "0ebcd4cf7ede44c29dfe1ca727ea1efe0c14a8ce678c30ebee6890deeec44c71",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "y",
+      "purpose": "fixed French comparison input",
+      "file": "male-slow-11.wav",
+      "voice_label_for_comparison": "male",
+      "source_speaker_id": "1840",
+      "inference_speaker_id": 0,
+      "speed": "slow",
+      "length_scale": 1.3,
+      "phonemes": [
+        [
+          "i",
+          "ɡ",
+          "ʁ",
+          "ˈ",
+          "ɛ",
+          "k"
+        ]
+      ],
+      "generation_seconds": 0.03945959999691695,
+      "sample_rate": 22050,
+      "audio_seconds": 1.3119274376417234,
+      "sha256": "26594ec21d1567e704dfdf6d8e5464976ad1e1dd688cfee0c5fc6bb1777b6f84",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "eu",
+      "purpose": "fixed French comparison input",
+      "file": "male-slow-12.wav",
+      "voice_label_for_comparison": "male",
+      "source_speaker_id": "1840",
+      "inference_speaker_id": 0,
+      "speed": "slow",
+      "length_scale": 1.3,
+      "phonemes": [
+        [
+          "ˈ",
+          "y"
+        ]
+      ],
+      "generation_seconds": 0.03517950000241399,
+      "sample_rate": 22050,
+      "audio_seconds": 1.253877551020408,
+      "sha256": "4f9bd849a780272604a08f4afafca31048b94c5333b2ed967a9d6efd1a99273c",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "eau",
+      "purpose": "fixed French comparison input",
+      "file": "male-slow-13.wav",
+      "voice_label_for_comparison": "male",
+      "source_speaker_id": "1840",
+      "inference_speaker_id": 0,
+      "speed": "slow",
+      "length_scale": 1.3,
+      "phonemes": [
+        [
+          "ˈ",
+          "o"
+        ]
+      ],
+      "generation_seconds": 0.03120640000270214,
+      "sample_rate": 22050,
+      "audio_seconds": 0.7662585034013606,
+      "sha256": "f79a9b3b588e184a7a55ab76f79ad34d15ebb09434de2793f1f7624fdaa162b3",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "un",
+      "purpose": "fixed French comparison input",
+      "file": "male-slow-14.wav",
+      "voice_label_for_comparison": "male",
+      "source_speaker_id": "1840",
+      "inference_speaker_id": 0,
+      "speed": "slow",
+      "length_scale": 1.3,
+      "phonemes": [
+        [
+          "ˈ",
+          "œ",
+          "̃"
+        ]
+      ],
+      "generation_seconds": 0.022729699994670227,
+      "sample_rate": 22050,
+      "audio_seconds": 0.626938775510204,
+      "sha256": "cae8d730ae2940ab3c4e2312e6e0aa5c1b4158012970a42369c37204331cb5f5",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "chat",
+      "purpose": "fixed French comparison input",
+      "file": "male-slow-15.wav",
+      "voice_label_for_comparison": "male",
+      "source_speaker_id": "1840",
+      "inference_speaker_id": 0,
+      "speed": "slow",
+      "length_scale": 1.3,
+      "phonemes": [
+        [
+          "ʃ",
+          "ˈ",
+          "a"
+        ]
+      ],
+      "generation_seconds": 0.022938599999179132,
+      "sample_rate": 22050,
+      "audio_seconds": 0.603718820861678,
+      "sha256": "afdd346baebf41aa608526b2626e89883b14a6f71b37c042c51989920c5cefa1",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "qzxyplouf",
+      "purpose": "fixed French comparison input",
+      "file": "male-slow-16.wav",
+      "voice_label_for_comparison": "male",
+      "source_speaker_id": "1840",
+      "inference_speaker_id": 0,
+      "speed": "slow",
+      "length_scale": 1.3,
+      "phonemes": [
+        [
+          "k",
+          "z",
+          "k",
+          "s",
+          "i",
+          "p",
+          "l",
+          "ˈ",
+          "u",
+          "f"
+        ]
+      ],
+      "generation_seconds": 0.057768600003328174,
+      "sample_rate": 22050,
+      "audio_seconds": 2.2755555555555556,
+      "sha256": "64f8ed94dfbc2544205f23089b93fb5aae44f031e64b8ba510a741c7c114dd3c",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "anticonstitutionnellement",
+      "purpose": "fixed French comparison input",
+      "file": "male-slow-17.wav",
+      "voice_label_for_comparison": "male",
+      "source_speaker_id": "1840",
+      "inference_speaker_id": 0,
+      "speed": "slow",
+      "length_scale": 1.3,
+      "phonemes": [
+        [
+          "ɑ",
+          "̃",
+          "t",
+          "i",
+          "k",
+          "ɔ",
+          "̃",
+          "s",
+          "t",
+          "i",
+          "t",
+          "y",
+          "s",
+          "j",
+          "ɔ",
+          "n",
+          "ɛ",
+          "l",
+          "m",
+          "ˈ",
+          "ɑ",
+          "̃"
+        ]
+      ],
+      "generation_seconds": 0.07875060000515077,
+      "sample_rate": 22050,
+      "audio_seconds": 3.1927437641723357,
+      "sha256": "b379a15826b320be0abec9b8d335801d736f39ce1affb7705d76296fe10322b7",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    },
+    {
+      "input": "[[i]]",
+      "purpose": "explicit /i/ phoneme control; not unchanged-text inference",
+      "file": "male-slow-18.wav",
+      "voice_label_for_comparison": "male",
+      "source_speaker_id": "1840",
+      "inference_speaker_id": 0,
+      "speed": "slow",
+      "length_scale": 1.3,
+      "phonemes": [
+        [
+          "i"
+        ]
+      ],
+      "generation_seconds": 0.022966799995629117,
+      "sample_rate": 22050,
+      "audio_seconds": 0.4527891156462585,
+      "sha256": "fbfb73c18379afd5a72255168829157f660b727cd06b2ce8ce0f90343837811c",
+      "playback": "synchronous Windows PlaySound completed; human quality pending"
+    }
+  ],
+  "quality": "pending human listening; generation, playback, and duration checks do not establish voice gender or quality",
+  "aggregate_duration_by_profile": {
+    "female-normal": 33.03038548752834,
+    "female-slow": 42.07455782312926,
+    "male-normal": 24.52027210884354,
+    "male-slow": 26.679727891156464
+  },
+  "slow_to_normal_duration_ratio": {
+    "female": 1.2738137082601058,
+    "male": 1.0880681818181819
+  },
+  "network_denials_after": [
+    {
+      "host": "1.1.1.1",
+      "port": 443,
+      "winerror": 10013
+    },
+    {
+      "host": "8.8.8.8",
+      "port": 443,
+      "winerror": 10013
+    }
+  ],
+  "peak_working_set_bytes": 399097856
+}

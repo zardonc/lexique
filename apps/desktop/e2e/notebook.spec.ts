@@ -1,6 +1,171 @@
 import { expect, test } from '@playwright/test';
 import { collect, nativeFixture, record } from './native-fixture';
 
+test('rating a card refreshes the review-time order in the open notebook', async ({ page }) => {
+  const other = { ...record, id: 2, headword: 'bonjour' };
+  await nativeFixture(page, {
+    vocabulary_list: [{ value: [other, record] }, { value: [other, record] }, { value: [record, other] }],
+    review_cards: [{ value: [{ id: 10, kind: 'recognition' }] }],
+    review_rate: [{ value: { status: 'committed', result: { card: { phase: 'learning_first', memory: { stability: 1, difficulty: 5 }, last_review_at: 1700000000, due_at: 1700000060 }, elapsed_days: 0, step_seconds: 60, interval_days: null, model: { version: 'v', parameters: [] }, retention_percent: 90, timezone_database: 'v' } } }],
+  });
+  await page.goto('/');
+  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByLabel('排序方式').selectOption('review-due-asc');
+  await page.getByRole('button', { name: /école/ }).click();
+  await page.getByRole('button', { name: '查看识义卡' }).click();
+  const card = page.getByRole('region', { name: '识义卡' });
+  await card.getByRole('button', { name: '显示答案' }).click();
+  await card.getByRole('button', { name: '忘记' }).click();
+  await expect(page.locator('.vocabulary-list button').first()).toContainText('école');
+});
+
+test('example edits remain guarded and the saved pair appears on the recognition card', async ({ page }) => {
+  const saved = { ...record, revision: 2, example_sense: 0, example_fr: 'Je vais à l’école.', example_zh: '我去学校。', more_examples: [{ fr: 'Une autre phrase.', zh: '另一句话。' }] };
+  await nativeFixture(page, { vocabulary_list: [{ value: [record] }],
+    vocabulary_save: [{ error: 'disk full' }, { value: { outcome: 'updated', record: saved } }],
+    review_cards: [{ value: [{ id: 1, kind: 'recognition' }] }] });
+  await page.goto('/');
+  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.locator('.vocabulary-list button').click();
+  await page.getByLabel('例句对应释义').selectOption('0');
+  await page.getByLabel('法语例句').fill(saved.example_fr);
+  await page.getByLabel('例句中文译文').fill(saved.example_zh);
+  await page.getByRole('button', { name: '添加例句' }).click();
+  await page.locator('#example-fr-0').fill(saved.more_examples[0].fr);
+  await page.locator('#example-zh-0').fill(saved.more_examples[0].zh);
+  await page.getByRole('button', { name: '保存', exact: true }).click();
+  await expect(page.getByRole('alert')).toContainText('disk full');
+  await expect(page.locator('#example-fr')).toHaveValue(saved.example_fr);
+  await expect(page.locator('#example-fr-0')).toHaveValue(saved.more_examples[0].fr);
+  await page.getByRole('button', { name: '保存', exact: true }).click();
+  await expect(page.getByText('已保存', { exact: true })).toBeVisible();
+  await page.getByRole('button', { name: '查看识义卡' }).click();
+  await page.getByRole('button', { name: '显示答案' }).click();
+  await expect(page.getByRole('dialog')).toContainText(saved.example_fr);
+  await expect(page.getByRole('dialog')).toContainText(saved.example_zh);
+  await expect(page.getByRole('dialog')).not.toContainText('待补例句');
+  await page.getByRole('dialog').getByText('更多例句').click();
+  await expect(page.getByRole('dialog')).toContainText('Une autre phrase.');
+});
+
+test('batch review selection survives sorting, clears on search and reports partial failure', async ({ page }) => {
+  const second = { ...record, id: 2, headword: 'bonjour' };
+  const cards = [{ id: 1, kind: 'recognition' }, { id: 2, kind: 'listening' }];
+  await nativeFixture(page, { vocabulary_list: [{ value: [record, second] }],
+    review_add: [{ value: cards }, { error: 'disk full' }, { value: cards }],
+    speech_cached: [{ value: [1] }], speech_generate: [{ value: [1] }] });
+  await page.goto('/');
+  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByLabel('全选当前搜索结果').check();
+  await page.getByLabel('排序方式').selectOption('headword-asc');
+  await expect(page.getByLabel('选择 école')).toBeChecked();
+  await page.getByRole('button', { name: '批量加入复习' }).click();
+  await expect(page.getByText('bonjour：失败')).toBeVisible();
+  await page.getByRole('button', { name: '重试 bonjour' }).click();
+  await expect(page.getByText('bonjour：成功')).toBeVisible();
+  await page.getByRole('searchbox', { name: '搜索词头、摘要或笔记' }).fill('école');
+  await expect(page.getByLabel('选择 école')).not.toBeChecked();
+});
+
+test('automatic enrollment keeps a successful save visible when audio generation fails', async ({ page }) => {
+  await nativeFixture(page, { vocabulary_save: [{ value: { outcome: 'created', record } }],
+    review_cards: [{ value: [{ id: 1, kind: 'recognition' }, { id: 2, kind: 'listening' }] }],
+    speech_cached: [{ value: null }], speech_generate: [{ error: 'voice unavailable' }] });
+  await collect(page);
+  await page.getByRole('button', { name: '保存', exact: true }).click();
+  await expect(page.getByText('已保存', { exact: true })).toBeVisible();
+  await expect(page.getByRole('alert')).toContainText('voice unavailable');
+});
+
+test('save and leave keeps the audio failure visible after the word is saved', async ({ page }) => {
+  await nativeFixture(page, { vocabulary_save: [{ value: { outcome: 'created', record } }],
+    review_cards: [{ value: [{ id: 1, kind: 'recognition' }, { id: 2, kind: 'listening' }] }],
+    speech_cached: [{ value: null }], speech_generate: [{ error: 'voice unavailable' }] });
+  await collect(page);
+  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '保存后离开' }).click();
+  await expect(page.getByRole('dialog')).toContainText('已保存');
+  await expect(page.getByRole('dialog')).toContainText('voice unavailable');
+});
+
+test('batch enrollment distinguishes saved cards from failed audio', async ({ page }) => {
+  await nativeFixture(page, { vocabulary_list: [{ value: [record] }],
+    review_add: [{ value: [{ id: 1, kind: 'recognition' }, { id: 2, kind: 'listening' }] }],
+    speech_cached: [{ value: null }], speech_generate: [{ error: 'voice unavailable' }] });
+  await page.goto('/');
+  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByLabel('选择 école').check();
+  await page.getByRole('button', { name: '批量加入复习' }).click();
+  await expect(page.getByText('école：卡片已加入，语音失败')).toBeVisible();
+  await expect(page.getByRole('button', { name: '重试 école' })).toBeVisible();
+});
+
+test('batch results cannot be lost by navigating while an operation is running', async ({ page }) => {
+  await nativeFixture(page, { vocabulary_list: [{ value: [record] }],
+    review_add: [{ value: [{ id: 1, kind: 'recognition' }, { id: 2, kind: 'listening' }], delay: 500 }],
+    speech_cached: [{ value: [1] }] });
+  await page.goto('/');
+  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByLabel('选择 école').check();
+  await page.getByRole('button', { name: '批量加入复习' }).click();
+  await expect(page.getByRole('button', { name: '词典', exact: true })).toBeDisabled();
+  await expect(page.locator('.vocabulary-list button')).toBeDisabled();
+  await expect(page.getByText('école：成功')).toBeVisible();
+  await expect(page.getByRole('button', { name: '词典', exact: true })).toBeEnabled();
+});
+
+test('review management exposes persisted auto enrollment and word pause', async ({ page }) => {
+  await nativeFixture(page, { vocabulary_list: [{ value: [record] }],
+    review_cards: [{ value: [{ id: 1, kind: 'recognition' }, { id: 2, kind: 'listening' }] }] });
+  await page.goto('/');
+  await page.getByRole('button', { name: '设置', exact: true }).click();
+  await page.getByLabel('今后收藏自动加入复习').check();
+  await expect(page.getByLabel('今后收藏自动加入复习')).toBeChecked();
+  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.locator('.vocabulary-list button').click();
+  await page.getByRole('button', { name: '暂停复习', exact: true }).click();
+  await expect(page.getByText('复习已暂停', { exact: true })).toBeVisible();
+  await page.getByRole('button', { name: '恢复复习', exact: true }).click();
+  await expect(page.getByRole('button', { name: '暂停复习', exact: true })).toBeVisible();
+  await page.getByRole('button', { name: '设置', exact: true }).click();
+  await expect(page.getByLabel('今后收藏自动加入复习')).toBeChecked();
+});
+
+test('retrying audio for a paused word does not resume it', async ({ page }) => {
+  const cards = [{ id: 1, kind: 'recognition' }, { id: 2, kind: 'listening' }];
+  await nativeFixture(page, { vocabulary_list: [{ value: [record] }], review_cards: [{ value: cards }],
+    review_pause: [{ value: true }], review_add: [{ value: cards }], speech_cached: [{ value: null }], speech_generate: [{ value: [1] }] });
+  await page.goto('/');
+  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.locator('.vocabulary-list button').click();
+  await expect(page.getByText('复习已暂停', { exact: true })).toBeVisible();
+  await page.getByRole('button', { name: '加入复习', exact: true }).click();
+  await expect(page.getByText('复习已暂停', { exact: true })).toBeVisible();
+  expect(await page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'review_pause' && call.args?.paused === false))).toHaveLength(0);
+});
+
+test('pause and resume reload card rating eligibility', async ({ page }) => {
+  await nativeFixture(page, { vocabulary_list: [{ value: [record] }],
+    review_cards: [{ value: [{ id: 1, kind: 'recognition' }] }] });
+  await page.goto('/');
+  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.locator('.vocabulary-list button').click();
+  await expect(page.getByRole('button', { name: '暂停复习', exact: true })).toBeVisible();
+  await page.getByRole('button', { name: '查看识义卡' }).click();
+  await page.getByRole('button', { name: '显示答案' }).click();
+  await expect(page.getByRole('button', { name: '记得', exact: true })).toBeEnabled();
+  await page.getByRole('button', { name: '关闭卡片' }).click();
+  await page.getByRole('button', { name: '暂停复习', exact: true }).click();
+  await page.getByRole('button', { name: '查看识义卡' }).click();
+  await page.getByRole('button', { name: '显示答案' }).click();
+  await expect(page.getByRole('dialog').getByText('复习已暂停')).toBeVisible();
+  await page.getByRole('button', { name: '关闭卡片' }).click();
+  await page.getByRole('button', { name: '恢复复习', exact: true }).click();
+  await page.getByRole('button', { name: '查看识义卡' }).click();
+  await page.getByRole('button', { name: '显示答案' }).click();
+  await expect(page.getByRole('button', { name: '记得', exact: true })).toBeEnabled();
+});
+
 test('browser notebook clearly reports unavailable native persistence', async ({ page }) => {
   await page.goto('/');
   await page.getByRole('button', { name: '生词本', exact: true }).click();
@@ -130,7 +295,7 @@ test('all sort directions persist through the adapter and notebook works in thre
   await nativeFixture(page, { vocabulary_list: [{ value: [record] }] });
   await page.goto('/'); await page.getByRole('button', { name: '生词本', exact: true }).click();
   await expect(page.getByLabel('排序方式')).toHaveValue('updated-desc');
-  for (const sort of ['headword-asc', 'headword-desc', 'created-asc', 'created-desc', 'updated-asc', 'updated-desc']) {
+  for (const sort of ['headword-asc', 'headword-desc', 'created-asc', 'created-desc', 'updated-asc', 'updated-desc', 'review-due-asc']) {
     await page.getByLabel('排序方式').selectOption(sort);
     await expect(page.getByLabel('排序方式')).toBeEnabled();
     await expect.poll(() => page.evaluate((expected) => window.testNative.calls.filter((call) =>
@@ -146,4 +311,16 @@ test('all sort directions persist through the adapter and notebook works in thre
   await expect(page.getByLabel('独立笔记', { exact: true })).toBeFocused();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   await page.screenshot({ path: 'test-results/notebook-mobile.png', fullPage: true });
+});
+test('new examples require a meaning and a conflict shows the saved meaning', async ({ page }) => {
+  const current = { ...record, example_sense: 1, revision: 2 };
+  await nativeFixture(page, { vocabulary_list: [{ value: [record] }], vocabulary_save: [{ value: { outcome: 'conflict', record: current } }] });
+  await page.goto('/');
+  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.locator('.vocabulary-list button').click();
+  await page.getByLabel('法语例句').fill('Une phrase.');
+  await expect(page.getByRole('button', { name: '保存', exact: true })).toBeDisabled();
+  await page.getByLabel('例句对应释义').selectOption('0');
+  await page.getByRole('button', { name: '保存', exact: true }).click();
+  await expect(page.getByRole('alert')).toContainText('流派');
 });

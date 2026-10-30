@@ -5,6 +5,10 @@ use rusqlite::Connection;
 
 mod vocabulary;
 pub use vocabulary::*;
+mod speech;
+pub use speech::*;
+mod review;
+pub use review::*;
 
 const INITIAL_SCHEMA: &str = include_str!("../migrations/0001_initial.sql");
 
@@ -13,6 +17,8 @@ pub enum StorageError {
     Database(rusqlite::Error),
     FutureSchema(u32),
     Invalid(String),
+    RatingUnavailable(String),
+    RatingConflict,
     Json(serde_json::Error),
 }
 
@@ -21,6 +27,8 @@ impl fmt::Display for StorageError {
         match self {
             Self::Database(error) => write!(formatter, "SQLite operation failed: {error}"),
             Self::Invalid(message) => write!(formatter, "{message}"),
+            Self::RatingUnavailable(reason) => write!(formatter, "rating unavailable: {reason}"),
+            Self::RatingConflict => write!(formatter, "Review card revision conflict"),
             Self::Json(error) => write!(formatter, "Invalid saved vocabulary data: {error}"),
             Self::FutureSchema(version) => write!(
                 formatter,
@@ -35,7 +43,10 @@ impl Error for StorageError {
         match self {
             Self::Database(error) => Some(error),
             Self::Json(error) => Some(error),
-            Self::FutureSchema(_) | Self::Invalid(_) => None,
+            Self::FutureSchema(_)
+            | Self::Invalid(_)
+            | Self::RatingUnavailable(_)
+            | Self::RatingConflict => None,
         }
     }
 }
@@ -68,6 +79,30 @@ pub fn initialize(connection: &Connection) -> Result<u32, StorageError> {
     }
     if version < 2 {
         transaction.execute_batch(include_str!("../migrations/0002_vocabulary.sql"))?;
+    }
+    if version < 3 {
+        transaction.execute_batch(include_str!("../migrations/0003_review.sql"))?;
+    }
+    if version < 4 {
+        transaction.execute_batch(include_str!("../migrations/0004_ratings.sql"))?;
+    }
+    if version < 5 {
+        transaction.execute_batch(include_str!("../migrations/0005_review_settings.sql"))?;
+    }
+    if version < 6 {
+        transaction.execute_batch(include_str!("../migrations/0006_undo.sql"))?;
+    }
+    if version < 7 {
+        transaction.execute_batch(include_str!("../migrations/0007_review_management.sql"))?;
+    }
+    if version < 8 {
+        transaction.execute_batch(include_str!("../migrations/0008_examples.sql"))?;
+    }
+    if version < 9 {
+        transaction.execute_batch(include_str!("../migrations/0009_more_examples.sql"))?;
+    }
+    if version < 10 {
+        transaction.execute_batch(include_str!("../migrations/0010_example_sense.sql"))?;
     }
     transaction.commit()?;
     Ok(DATABASE_SCHEMA_VERSION)

@@ -1,4 +1,9 @@
-use std::{path::PathBuf, time::Duration};
+use std::{
+    io::Write,
+    path::PathBuf,
+    process::{Command, Stdio},
+    time::Duration,
+};
 
 use lexique_dictionary::{Lookup, Sense};
 use lexique_storage::{
@@ -161,6 +166,434 @@ pub async fn vocabulary_list(
 }
 
 #[tauri::command]
+pub async fn review_add(
+    path: State<'_, DatabasePath>,
+    vocabulary_id: i64,
+) -> Result<Vec<lexique_storage::ReviewCard>, String> {
+    if vocabulary_id <= 0 || vocabulary_id > 9_007_199_254_740_991 {
+        return Err("Invalid vocabulary ID".into());
+    }
+    let path = DatabasePath(path.0.clone());
+    tauri::async_runtime::spawn_blocking(move || {
+        lexique_storage::add_review(&mut open(&path)?, vocabulary_id)
+            .map_err(|error| error.to_string())
+    })
+    .await
+    .map_err(|error| format!("Review creation task failed: {error}"))?
+}
+
+#[tauri::command]
+pub async fn review_pause(
+    path: State<'_, DatabasePath>,
+    vocabulary_id: i64,
+    paused: Option<bool>,
+) -> Result<bool, String> {
+    if vocabulary_id <= 0 || vocabulary_id > 9_007_199_254_740_991 {
+        return Err("Invalid vocabulary ID".into());
+    }
+    let path = DatabasePath(path.0.clone());
+    tauri::async_runtime::spawn_blocking(move || {
+        let mut connection = open(&path)?;
+        if let Some(value) = paused {
+            lexique_storage::set_review_paused(&mut connection, vocabulary_id, value)
+                .map_err(|error| error.to_string())?;
+        }
+        lexique_storage::review_paused(&connection, vocabulary_id)
+            .map_err(|error| error.to_string())
+    })
+    .await
+    .map_err(|error| format!("Review pause task failed: {error}"))?
+}
+
+#[tauri::command]
+pub async fn review_auto_enroll(
+    path: State<'_, DatabasePath>,
+    enabled: Option<bool>,
+) -> Result<bool, String> {
+    let path = DatabasePath(path.0.clone());
+    tauri::async_runtime::spawn_blocking(move || {
+        let connection = open(&path)?;
+        if let Some(value) = enabled {
+            lexique_storage::set_auto_enroll(&connection, value)
+                .map_err(|error| error.to_string())?;
+        }
+        lexique_storage::auto_enroll(&connection).map_err(|error| error.to_string())
+    })
+    .await
+    .map_err(|error| format!("Review preference task failed: {error}"))?
+}
+
+#[tauri::command]
+pub async fn review_cards(
+    path: State<'_, DatabasePath>,
+    vocabulary_id: i64,
+) -> Result<Vec<lexique_storage::ReviewCard>, String> {
+    if vocabulary_id <= 0 || vocabulary_id > 9_007_199_254_740_991 {
+        return Err("Invalid vocabulary ID".into());
+    }
+    let path = DatabasePath(path.0.clone());
+    tauri::async_runtime::spawn_blocking(move || {
+        lexique_storage::review_cards(&open(&path)?, vocabulary_id)
+            .map_err(|error| error.to_string())
+    })
+    .await
+    .map_err(|error| format!("Review read task failed: {error}"))?
+}
+
+#[derive(serde::Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct RateInput {
+    operation: String,
+    card_id: i64,
+    expected_revision: i64,
+    rating: lexique_storage::Rating,
+    timezone: String,
+}
+
+#[derive(serde::Serialize)]
+#[serde(tag = "status", rename_all = "snake_case")]
+pub enum RateOutcome {
+    Committed { result: serde_json::Value },
+    Rejected { code: String, detail: String },
+}
+
+#[tauri::command]
+pub async fn review_progress(
+    path: State<'_, DatabasePath>,
+    card_id: i64,
+) -> Result<lexique_storage::ReviewProgress, String> {
+    if card_id <= 0 || card_id > 9_007_199_254_740_991 {
+        return Err("Invalid card ID".into());
+    }
+    let path = DatabasePath(path.0.clone());
+    tauri::async_runtime::spawn_blocking(move || {
+        lexique_storage::review_progress(&open(&path)?, card_id).map_err(|e| e.to_string())
+    })
+    .await
+    .map_err(|e| format!("Review read task failed: {e}"))?
+}
+
+#[tauri::command]
+pub async fn review_availability(
+    path: State<'_, DatabasePath>,
+    card_id: i64,
+    timezone: String,
+) -> Result<lexique_storage::ReviewAvailability, String> {
+    if card_id <= 0 || card_id > 9_007_199_254_740_991 || timezone.len() > 128 {
+        return Err("Invalid card ID or timezone".into());
+    }
+    let path = DatabasePath(path.0.clone());
+    tauri::async_runtime::spawn_blocking(move || {
+        let now = std::time::SystemTime::now()
+            .duration_since(std::time::UNIX_EPOCH)
+            .map_err(|e| e.to_string())?
+            .as_secs();
+        lexique_storage::review_availability(
+            &open(&path)?,
+            card_id,
+            i64::try_from(now).map_err(|e| e.to_string())?,
+            &timezone,
+        )
+        .map_err(|e| e.to_string())
+    })
+    .await
+    .map_err(|e| format!("Review availability task failed: {e}"))?
+}
+
+#[derive(serde::Serialize)]
+pub struct QueueView {
+    queue: lexique_storage::ReviewQueue,
+    record: Option<VocabularyRecord>,
+    audio_pending: bool,
+    audio_error: Option<String>,
+}
+
+#[tauri::command]
+pub async fn review_undo_target(path: State<'_, DatabasePath>) -> Result<Option<String>, String> {
+    let path = DatabasePath(path.0.clone());
+    tauri::async_runtime::spawn_blocking(move || {
+        lexique_storage::undo_target(&open(&path)?).map_err(|e| e.to_string())
+    })
+    .await
+    .map_err(|e| format!("Undo target task failed: {e}"))?
+}
+
+#[tauri::command]
+pub async fn review_undo(
+    path: State<'_, DatabasePath>,
+    operation: String,
+    rating_operation: String,
+) -> Result<UndoOutcome, String> {
+    let path = DatabasePath(path.0.clone());
+    tauri::async_runtime::spawn_blocking(move || {
+        match lexique_storage::undo_rating(&mut open(&path)?, &operation, &rating_operation) {
+            Ok(queue_rebuilt) => Ok(UndoOutcome::Committed { queue_rebuilt }),
+            Err(
+                error @ (lexique_storage::StorageError::Invalid(_)
+                | lexique_storage::StorageError::RatingConflict),
+            ) => Ok(UndoOutcome::Rejected {
+                detail: error.to_string(),
+            }),
+            Err(error) => Err(error.to_string()),
+        }
+    })
+    .await
+    .map_err(|e| format!("Undo task failed: {e}"))?
+}
+
+#[derive(serde::Serialize)]
+#[serde(tag = "status", rename_all = "snake_case")]
+pub enum UndoOutcome {
+    Committed { queue_rebuilt: bool },
+    Rejected { detail: String },
+}
+
+#[tauri::command]
+pub async fn review_queue(
+    path: State<'_, DatabasePath>,
+    timezone: String,
+    skipped: Vec<i64>,
+) -> Result<QueueView, String> {
+    if timezone.is_empty()
+        || timezone.len() > 128
+        || skipped.len() > 10_000
+        || skipped
+            .iter()
+            .any(|id| *id <= 0 || *id > 9_007_199_254_740_991)
+    {
+        return Err("Invalid timezone".into());
+    }
+    let path = DatabasePath(path.0.clone());
+    tauri::async_runtime::spawn_blocking(move || {
+        let now = std::time::SystemTime::now()
+            .duration_since(std::time::UNIX_EPOCH)
+            .map_err(|e| e.to_string())?
+            .as_secs();
+        let mut connection = open(&path)?;
+        let inventory =
+            lexique_storage::review_card_inventory(&connection).map_err(|e| e.to_string())?;
+        let skipped: std::collections::HashSet<i64> = skipped.into_iter().collect();
+        let mut verified_audio = std::collections::HashSet::new();
+        let mut audio_pending = false;
+        let mut audio_error = None;
+        for card in inventory
+            .iter()
+            .filter(|card| card.kind == "listening" && !skipped.contains(&card.id))
+        {
+            match crate::speech_cache::inspect(&path.0, card.vocabulary_id) {
+                Ok(true) => {
+                    verified_audio.insert(card.id);
+                }
+                Ok(false) => {
+                    audio_pending = true;
+                }
+                Err(error) => {
+                    audio_error = Some(error);
+                }
+            }
+        }
+        let queue = lexique_storage::review_queue_filtered(
+            &mut connection,
+            i64::try_from(now).map_err(|e| e.to_string())?,
+            &timezone,
+            |card| {
+                Ok(!skipped.contains(&card.id)
+                    && (card.kind != "listening" || verified_audio.contains(&card.id)))
+            },
+        )
+        .map_err(|e| e.to_string())?;
+        let record = queue
+            .cards
+            .first()
+            .map(|card| lexique_storage::get(&connection, card.vocabulary_id))
+            .transpose()
+            .map_err(|e| e.to_string())?;
+        Ok(QueueView {
+            queue,
+            record,
+            audio_pending,
+            audio_error,
+        })
+    })
+    .await
+    .map_err(|e| format!("Review queue task failed: {e}"))?
+}
+
+#[tauri::command]
+pub async fn review_rate(
+    path: State<'_, DatabasePath>,
+    request: RateInput,
+) -> Result<RateOutcome, String> {
+    if request.card_id <= 0
+        || request.card_id > 9_007_199_254_740_991
+        || request.expected_revision > 9_007_199_254_740_991
+    {
+        return Err("Invalid card ID or revision".into());
+    }
+    let path = DatabasePath(path.0.clone());
+    tauri::async_runtime::spawn_blocking(move || {
+        let now = std::time::SystemTime::now()
+            .duration_since(std::time::UNIX_EPOCH)
+            .map_err(|e| e.to_string())?
+            .as_secs();
+        let now = i64::try_from(now).map_err(|e| e.to_string())?;
+        let rating = lexique_storage::RatingRequest {
+            operation: request.operation,
+            card_id: request.card_id,
+            expected_revision: request.expected_revision,
+            rating: request.rating,
+            now,
+            timezone: request.timezone,
+        };
+        match lexique_storage::rate_card(&mut open(&path)?, &rating) {
+            Ok(result) => Ok(RateOutcome::Committed { result }),
+            Err(error @ lexique_storage::StorageError::RatingConflict) => {
+                Ok(RateOutcome::Rejected {
+                    code: "conflict".into(),
+                    detail: error.to_string(),
+                })
+            }
+            Err(lexique_storage::StorageError::RatingUnavailable(reason)) => {
+                Ok(RateOutcome::Rejected {
+                    detail: format!("rating unavailable: {reason}"),
+                    code: reason,
+                })
+            }
+            Err(lexique_storage::StorageError::Invalid(detail)) => Ok(RateOutcome::Rejected {
+                code: "invalid".into(),
+                detail,
+            }),
+            Err(other) => Err(other.to_string()),
+        }
+    })
+    .await
+    .map_err(|e| format!("Review rating task failed: {e}"))?
+}
+
+#[tauri::command]
+pub async fn speech_cached(
+    path: State<'_, DatabasePath>,
+    vocabulary_id: i64,
+) -> Result<Option<Vec<u8>>, String> {
+    if vocabulary_id <= 0 || vocabulary_id > 9_007_199_254_740_991 {
+        return Err("Invalid vocabulary ID".into());
+    }
+    let path = DatabasePath(path.0.clone());
+    tauri::async_runtime::spawn_blocking(move || {
+        let cards = lexique_storage::review_cards(&open(&path)?, vocabulary_id)
+            .map_err(|e| e.to_string())?;
+        if !cards.iter().any(|card| card.kind == "listening") {
+            return Err("Listening card does not exist".into());
+        }
+        crate::speech_cache::read(&path.0, vocabulary_id)
+    })
+    .await
+    .map_err(|e| format!("Speech cache task failed: {e}"))?
+}
+
+#[tauri::command]
+pub async fn speech_generate(
+    app: tauri::AppHandle,
+    path: State<'_, DatabasePath>,
+    vocabulary_id: i64,
+    regenerate: Option<bool>,
+) -> Result<Vec<u8>, String> {
+    if vocabulary_id <= 0 || vocabulary_id > 9_007_199_254_740_991 {
+        return Err("Invalid vocabulary ID".into());
+    }
+    let path = DatabasePath(path.0.clone());
+    let resources = app
+        .path()
+        .resource_dir()
+        .map_err(|error| error.to_string())?
+        .join("speech");
+    tauri::async_runtime::spawn_blocking(move || {
+        static GENERATION: std::sync::Mutex<()> = std::sync::Mutex::new(());
+        let _guard = GENERATION.lock().map_err(|error| error.to_string())?;
+        let connection = open(&path)?;
+        let cards = lexique_storage::review_cards(&connection, vocabulary_id)
+            .map_err(|error| error.to_string())?;
+        if !cards.iter().any(|card| card.kind == "listening") {
+            return Err("Listening card does not exist".into());
+        }
+        let replace = match crate::speech_cache::read(&path.0, vocabulary_id) {
+            Ok(Some(bytes)) if !regenerate.unwrap_or(false) => return Ok(bytes),
+            Ok(Some(_)) => true,
+            Ok(None) => false,
+            Err(error) if error == "Invalid cached speech audio" => true,
+            Err(error) => return Err(error),
+        };
+        let record =
+            lexique_storage::get(&connection, vocabulary_id).map_err(|error| error.to_string())?;
+        let preferences =
+            lexique_storage::speech_preferences(&connection).map_err(|error| error.to_string())?;
+        let voice = match preferences.voice {
+            lexique_storage::SpeechVoice::Female => "female",
+            lexique_storage::SpeechVoice::Male => "male",
+        };
+        let request =
+            serde_json::to_vec(&serde_json::json!({ "text": record.headword, "voice": voice }))
+                .map_err(|error| error.to_string())?;
+        let mut command = Command::new(resources.join("runtime/python.exe"));
+        command
+            .args([
+                "-I",
+                "-X",
+                "utf8",
+                "-c",
+                include_str!("../speech_worker.py"),
+            ])
+            .arg(resources.join("assets"))
+            .arg(resources.join("opusenc.dll"))
+            .stdin(Stdio::piped())
+            .stdout(Stdio::piped())
+            .stderr(Stdio::piped());
+        #[cfg(target_os = "windows")]
+        {
+            use std::os::windows::process::CommandExt;
+            command.creation_flags(0x0800_0000);
+        }
+        let mut child = command
+            .spawn()
+            .map_err(|error| format!("Could not start offline speech: {error}"))?;
+        let input = child
+            .stdin
+            .take()
+            .ok_or_else(|| "Speech input unavailable".to_string());
+        let input_result = input.and_then(|mut input| {
+            input
+                .write_all(&request)
+                .map_err(|error| format!("Could not send speech request: {error}"))
+        });
+        if let Err(error) = input_result {
+            let _ = child.kill();
+            let _ = child.wait();
+            return Err(error);
+        }
+        let output = child
+            .wait_with_output()
+            .map_err(|error| format!("Speech process failed: {error}"))?;
+        if !output.status.success() {
+            return Err(format!(
+                "Offline speech failed: {}",
+                String::from_utf8_lossy(&output.stderr)
+                    .chars()
+                    .take(2048)
+                    .collect::<String>()
+            ));
+        }
+        if output.stdout.len() > 10_000_000 || !output.stdout.starts_with(b"OggS") {
+            return Err("Offline speech returned invalid audio".into());
+        }
+        crate::speech_cache::write(&path.0, vocabulary_id, &output.stdout, replace)?;
+        crate::speech_cache::read(&path.0, vocabulary_id)?
+            .ok_or_else(|| "Generated speech cache disappeared".to_string())
+    })
+    .await
+    .map_err(|error| format!("Speech task failed: {error}"))?
+}
+
+#[tauri::command]
 pub async fn vocabulary_sort(
     path: State<'_, DatabasePath>,
     sort: Option<String>,
@@ -176,6 +609,42 @@ pub async fn vocabulary_sort(
     })
     .await
     .map_err(|error| format!("Vocabulary preference task failed: {error}"))?
+}
+
+#[tauri::command]
+pub async fn speech_preferences(
+    path: State<'_, DatabasePath>,
+    preferences: Option<lexique_storage::SpeechPreferences>,
+) -> Result<lexique_storage::SpeechPreferences, String> {
+    let path = DatabasePath(path.0.clone());
+    tauri::async_runtime::spawn_blocking(move || {
+        let connection = open(&path)?;
+        if let Some(preferences) = preferences {
+            lexique_storage::set_speech_preferences(&connection, &preferences)
+                .map_err(|error| error.to_string())?;
+        }
+        lexique_storage::speech_preferences(&connection).map_err(|error| error.to_string())
+    })
+    .await
+    .map_err(|error| format!("Speech preference task failed: {error}"))?
+}
+
+#[tauri::command]
+pub async fn review_settings(
+    path: State<'_, DatabasePath>,
+    settings: Option<lexique_storage::ReviewSettings>,
+) -> Result<lexique_storage::ReviewSettings, String> {
+    let path = DatabasePath(path.0.clone());
+    tauri::async_runtime::spawn_blocking(move || {
+        let connection = open(&path)?;
+        if let Some(settings) = settings {
+            lexique_storage::set_review_settings(&connection, &settings)
+                .map_err(|error| error.to_string())?;
+        }
+        lexique_storage::review_settings(&connection).map_err(|error| error.to_string())
+    })
+    .await
+    .map_err(|error| format!("Review settings task failed: {error}"))?
 }
 
 #[tauri::command]

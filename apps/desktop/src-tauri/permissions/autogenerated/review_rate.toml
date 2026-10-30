@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-review-rate"
+description = "Enables the review_rate command without any pre-configured scope."
+commands.allow = ["review_rate"]
+
+[[permission]]
+identifier = "deny-review-rate"
+description = "Denies the review_rate command without any pre-configured scope."
+commands.deny = ["review_rate"]

@@ -1,0 +1,38 @@
+{
+  "admission": "passed",
+  "model": "fsrs-rs/6.6.2+libm-0.2.16",
+  "platform": "win32",
+  "arch": "x64",
+  "node": "v24.22.1",
+  "fixedVectors": 71,
+  "calibrationVectors": 4096,
+  "maxAbsoluteError": 0,
+  "maxRelativeError": 0,
+  "tolerance": {
+    "absolute": 0.000001,
+    "relative": 0.000002
+  },
+  "exact": [
+    "phase",
+    "step_seconds",
+    "interval_days",
+    "due_at",
+    "last_review_at",
+    "elapsed_days",
+    "model",
+    "retention_percent",
+    "timezone_database"
+  ],
+  "fixtureSha256": "1223c4f28a931e554507f15f2549ae29623664096d7bb6c63f1b8bffabc9929f",
+  "native": {
+    "bytes": 1956352,
+    "gzipBytes": 418730,
+    "sha256": "e98560aed694316756b541ce8c422d7634219d987d206b8a2da5eae93670c831"
+  },
+  "wasm": {
+    "bytes": 15743837,
+    "gzipBytes": 3275521,
+    "sha256": "a511ab2865d7aac31e4ee7c625b49f2e3a92da0a2f878b204517ad2ec6a72ab8"
+  },
+  "scheduleMismatches": []
+}

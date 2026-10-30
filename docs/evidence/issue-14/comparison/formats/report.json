@@ -1,0 +1,552 @@
+{
+  "ffmpeg_version": "ffmpeg version 7.1-essentials_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers",
+  "ffmpeg_sha256": "2ce797a0f88d7f067180338fb227f7b1928ea727bd9a4d7a1d022f7c52af71a3",
+  "settings": {
+    "flac": [
+      "-c:a",
+      "flac",
+      "-metadata_header_padding",
+      "0"
+    ],
+    "opus": [
+      "-c:a",
+      "libopus",
+      "-b:a",
+      "24k",
+      "-application",
+      "voip"
+    ],
+    "m4a": [
+      "-c:a",
+      "aac",
+      "-b:a",
+      "32k"
+    ],
+    "mp3": [
+      "-c:a",
+      "libmp3lame",
+      "-b:a",
+      "48k"
+    ]
+  },
+  "cases": [
+    {
+      "source": "01.wav",
+      "wav_bytes": 23596,
+      "formats": {
+        "flac": {
+          "bytes": 13594,
+          "sha256": "eab009dac5f4216f48e2fd7b6bf878ff89bea2e6eeef534ec3d20741f152c89b",
+          "decoded_sample_delta": 0,
+          "pcm_identical": true
+        },
+        "opus": {
+          "bytes": 1589,
+          "sha256": "33ac5dc1b837404aa5986a4a674a70fa23769718bfa43c3d82998188f1b4d4be",
+          "decoded_sample_delta": 0,
+          "pcm_identical": false
+        },
+        "m4a": {
+          "bytes": 3020,
+          "sha256": "a587ac58f5852dcf52a444bc872f7df54e635184c75805e8b2665189f6135d8f",
+          "decoded_sample_delta": 512,
+          "pcm_identical": false
+        },
+        "mp3": {
+          "bytes": 3548,
+          "sha256": "2ad8d5fe42f0e6536309b5467eaaa6d24fe70c729223a312f7fe7121f9a18763",
+          "decoded_sample_delta": 0,
+          "pcm_identical": false
+        }
+      }
+    },
+    {
+      "source": "02.wav",
+      "wav_bytes": 26668,
+      "formats": {
+        "flac": {
+          "bytes": 15408,
+          "sha256": "4605590e1f403adec06e9c3a3b24999a77bbd3c627a07d3222e95dc32785aba6",
+          "decoded_sample_delta": 0,
+          "pcm_identical": true
+        },
+        "opus": {
+          "bytes": 1728,
+          "sha256": "75b80929220e22de27e5cb1f913ccd2bbfdb2e02eb20fb896957c4c82c452d9a",
+          "decoded_sample_delta": 0,
+          "pcm_identical": false
+        },
+        "m4a": {
+          "bytes": 3398,
+          "sha256": "52895279233514a925a47c14f033474c3a15d85e37ea78b2087690c95d1457da",
+          "decoded_sample_delta": 0,
+          "pcm_identical": false
+        },
+        "mp3": {
+          "bytes": 3980,
+          "sha256": "8a8a563856034789e6091c47c8e6fd00cafc3be0020b3bd25d65fb12151c9e0e",
+          "decoded_sample_delta": 0,
+          "pcm_identical": false
+        }
+      }
+    },
+    {
+      "source": "03.wav",
+      "wav_bytes": 21548,
+      "formats": {
+        "flac": {
+          "bytes": 11474,
+          "sha256": "c216fab362fe15945a4e0c0b74c6366420ed99020677397eb9d30a6c1181c198",
+          "decoded_sample_delta": 0,
+          "pcm_identical": true
+        },
+        "opus": {
+          "bytes": 1433,
+          "sha256": "722764a33af0598331b9ee452d39adaa69e5b940c5ad4642b3fda0e29504605a",
+          "decoded_sample_delta": 0,
+          "pcm_identical": false
+        },
+        "m4a": {
+          "bytes": 2907,
+          "sha256": "84665b378e9fd21a9e82f1d2464dee3f071fd2a04ff46bf386d3ddcd823fbbdc",
+          "decoded_sample_delta": 512,
+          "pcm_identical": false
+        },
+        "mp3": {
+          "bytes": 3260,
+          "sha256": "f04758d5b12c30092f68f791de90391cda8223ae1817a6706f0986d7227ce20a",
+          "decoded_sample_delta": 0,
+          "pcm_identical": false
+        }
+      }
+    },
+    {
+      "source": "04.wav",
+      "wav_bytes": 28716,
+      "formats": {
+        "flac": {
+          "bytes": 16843,
+          "sha256": "5287f9a1315c0ee705898e7dd884b43e53e11bd07e7e9b2cb9f91a46e340becd",
+          "decoded_sample_delta": 0,
+          "pcm_identical": true
+        },
+        "opus": {
+          "bytes": 1921,
+          "sha256": "ac33346eb47f34099de0681a05fdebb4fb3993724d0dc619fa5f86e95ee961d3",
+          "decoded_sample_delta": 0,
+          "pcm_identical": false
+        },
+        "m4a": {
+          "bytes": 3574,
+          "sha256": "656dedc8ab8826a1bc793c6ee241ff6a2d18d519571a13c19e8319791d77b375",
+          "decoded_sample_delta": 0,
+          "pcm_identical": false
+        },
+        "mp3": {
+          "bytes": 4124,
+          "sha256": "655c841a47938768cd148f178956fd75d16b344e318364a8368d2a5b2e54d0ab",
+          "decoded_sample_delta": 0,
+          "pcm_identical": false
+        }
+      }
+    },
+    {
+      "source": "05.wav",
+      "wav_bytes": 38956,
+      "formats": {
+        "flac": {
+          "bytes": 24072,
+          "sha256": "4010dbc808ddcb733228b88650cac82521079cdcd2191728b0436d8ebba9c2fa",
+          "decoded_sample_delta": 0,
+          "pcm_identical": true
+        },
+        "opus": {
+          "bytes": 2561,
+          "sha256": "05af7a26d93bb2a0c76fc338003edd94d56f38793e9877fd3b07628f99ed9e32",
+          "decoded_sample_delta": 0,
+          "pcm_identical": false
+        },
+        "m4a": {
+          "bytes": 4456,
+          "sha256": "f8ad687f042c894910c7c04b19cede3edb432826a13ecdab4ca578d0d09052ac",
+          "decoded_sample_delta": 0,
+          "pcm_identical": false
+        },
+        "mp3": {
+          "bytes": 5420,
+          "sha256": "249bf9b04d7b7f972bbb1b6b8a2909c27b0f000060612e10841cc230def1a534",
+          "decoded_sample_delta": 0,
+          "pcm_identical": false
+        }
+      }
+    },
+    {
+      "source": "06.wav",
+      "wav_bytes": 47148,
+      "formats": {
+        "flac": {
+          "bytes": 30352,
+          "sha256": "4660795fb0b24b5aa0dea0c7cfa8f03ffaf9b767373c718e1ce90c7d4ad8047e",
+          "decoded_sample_delta": 0,
+          "pcm_identical": true
+        },
+        "opus": {
+          "bytes": 3084,
+          "sha256": "a89b5e02126eba781f63a0b12eeb6c33b60e4dde921fff0bdede3407e8120cc6",
+          "decoded_sample_delta": 0,
+          "pcm_identical": false
+        },
+        "m4a": {
+          "bytes": 5084,
+          "sha256": "69e867edbc5bcb22b124d834f00e2ebf9e7bfad71eaddc5c9e22d27e69fe8915",
+          "decoded_sample_delta": 0,
+          "pcm_identical": false
+        },
+        "mp3": {
+          "bytes": 6428,
+          "sha256": "8ae3ccac995f4a0b2ced96f67c00737c3fd01826571531d8c88e685f4cdb4b11",
+          "decoded_sample_delta": 0,
+          "pcm_identical": false
+        }
+      }
+    },
+    {
+      "source": "07.wav",
+      "wav_bytes": 52268,
+      "formats": {
+        "flac": {
+          "bytes": 32821,
+          "sha256": "71212c86ecb63686a3038cc01300b1256fd91274c76d5c5872b6c5f27dcd4914",
+          "decoded_sample_delta": 0,
+          "pcm_identical": true
+        },
+        "opus": {
+          "bytes": 3400,
+          "sha256": "e4b57d1c2116c4564212f572e2be90d9290d290dce22367eed99a14c23df8f1e",
+          "decoded_sample_delta": 0,
+          "pcm_identical": false
+        },
+        "m4a": {
+          "bytes": 5580,
+          "sha256": "f67873b71a02cbdb0aa04df97d53591a8aa0cc9c16c04fe87393e9f8c6b6ff10",
+          "decoded_sample_delta": 512,
+          "pcm_identical": false
+        },
+        "mp3": {
+          "bytes": 7148,
+          "sha256": "7eb2452ae29cb23ace096596afe72b2dbf8fc76cdf13a484393cd552e7996f3a",
+          "decoded_sample_delta": 0,
+          "pcm_identical": false
+        }
+      }
+    },
+    {
+      "source": "08.wav",
+      "wav_bytes": 84012,
+      "formats": {
+        "flac": {
+          "bytes": 54017,
+          "sha256": "d321996ea01a0a7276eb6c889c1a26ed7bcf3f53ce39d89b971f46076c500434",
+          "decoded_sample_delta": 0,
+          "pcm_identical": true
+        },
+        "opus": {
+          "bytes": 5527,
+          "sha256": "7c94682d30e5685ac6353892daefab35024df45851b49ae1cee37e26aece7996",
+          "decoded_sample_delta": 0,
+          "pcm_identical": false
+        },
+        "m4a": {
+          "bytes": 8181,
+          "sha256": "731fac2e179f6e341bb7d886053079c719012c777b6cbe300d62b1f45a24291d",
+          "decoded_sample_delta": 0,
+          "pcm_identical": false
+        },
+        "mp3": {
+          "bytes": 11036,
+          "sha256": "cdcaa0ee766d0cf9f90ed7b6020e05dc3c133c42c0287ceae7a53faf147033d3",
+          "decoded_sample_delta": 0,
+          "pcm_identical": false
+        }
+      }
+    },
+    {
+      "source": "09.wav",
+      "wav_bytes": 16428,
+      "formats": {
+        "flac": {
+          "bytes": 8589,
+          "sha256": "9d73575f2f85ac840a4f504f367fcb0e3c08530cc226a1735e4d70584a2a7b6e",
+          "decoded_sample_delta": 0,
+          "pcm_identical": true
+        },
+        "opus": {
+          "bytes": 1165,
+          "sha256": "27aa777ec282d7c03a36454cf00d501670d305212030db9d8a753b5ade4dae6b",
+          "decoded_sample_delta": 0,
+          "pcm_identical": false
+        },
+        "m4a": {
+          "bytes": 2408,
+          "sha256": "5e910d46b0871a682d212923461fbd8d6e526d519359b05fc91b1d4625f77be3",
+          "decoded_sample_delta": 0,
+          "pcm_identical": false
+        },
+        "mp3": {
+          "bytes": 2684,
+          "sha256": "03f467aa5b607ba682db3959f2cdf49e2076aa6dcce794f54971e630db0957f7",
+          "decoded_sample_delta": 0,
+          "pcm_identical": false
+        }
+      }
+    },
+    {
+      "source": "10.wav",
+      "wav_bytes": 16428,
+      "formats": {
+        "flac": {
+          "bytes": 8589,
+          "sha256": "9d73575f2f85ac840a4f504f367fcb0e3c08530cc226a1735e4d70584a2a7b6e",
+          "decoded_sample_delta": 0,
+          "pcm_identical": true
+        },
+        "opus": {
+          "bytes": 1165,
+          "sha256": "5e05f2f5f1f29052f214a292f90fd003058c038197224137700b58f480b7da6a",
+          "decoded_sample_delta": 0,
+          "pcm_identical": false
+        },
+        "m4a": {
+          "bytes": 2408,
+          "sha256": "5e910d46b0871a682d212923461fbd8d6e526d519359b05fc91b1d4625f77be3",
+          "decoded_sample_delta": 0,
+          "pcm_identical": false
+        },
+        "mp3": {
+          "bytes": 2684,
+          "sha256": "03f467aa5b607ba682db3959f2cdf49e2076aa6dcce794f54971e630db0957f7",
+          "decoded_sample_delta": 0,
+          "pcm_identical": false
+        }
+      }
+    },
+    {
+      "source": "11.wav",
+      "wav_bytes": 14332,
+      "formats": {
+        "flac": {
+          "bytes": 8016,
+          "sha256": "f7923caca60dee5d47e78b406d68539f26c6409548c5c0eba62b80affa68f721",
+          "decoded_sample_delta": 0,
+          "pcm_identical": true
+        },
+        "opus": {
+          "bytes": 1068,
+          "sha256": "cd75eb4740fc48c6989b3d48e28316086fe690aef23b3948bf2352612c727804",
+          "decoded_sample_delta": 0,
+          "pcm_identical": false
+        },
+        "m4a": {
+          "bytes": 2311,
+          "sha256": "9048cc28fff34951abffaf291de622d9acc5927f9d8a848173954bba23a2ec83",
+          "decoded_sample_delta": 24,
+          "pcm_identical": false
+        },
+        "mp3": {
+          "bytes": 2396,
+          "sha256": "6f9e02210e1449ea28747b94b377baaf512b5d4f0c78712160ee0e0acb11ab15",
+          "decoded_sample_delta": 0,
+          "pcm_identical": false
+        }
+      }
+    },
+    {
+      "source": "12.wav",
+      "wav_bytes": 14684,
+      "formats": {
+        "flac": {
+          "bytes": 8186,
+          "sha256": "1a3243a0f74ebbe42d1242e02097fa5af8a282b4d9bf5b561a69c8e9863415ba",
+          "decoded_sample_delta": 0,
+          "pcm_identical": true
+        },
+        "opus": {
+          "bytes": 1092,
+          "sha256": "5d00f946fb8e38e4965ef9c557d68f2eef5846a77014dd8563f6117f856143e7",
+          "decoded_sample_delta": 0,
+          "pcm_identical": false
+        },
+        "m4a": {
+          "bytes": 2390,
+          "sha256": "1c9ca5f33458a9ad1c0754efc6029d5463bbd93915298ea68f37ad3ca8f5f0ca",
+          "decoded_sample_delta": 872,
+          "pcm_identical": false
+        },
+        "mp3": {
+          "bytes": 2396,
+          "sha256": "771d57e6222e3642ea397daf597caed5970826e0aea202626ab6dcd68ae77b4a",
+          "decoded_sample_delta": 0,
+          "pcm_identical": false
+        }
+      }
+    },
+    {
+      "source": "13.wav",
+      "wav_bytes": 16428,
+      "formats": {
+        "flac": {
+          "bytes": 8700,
+          "sha256": "adc7d596761c8ee2913057a26215a5b966ed0d053760480a1072872b09833b19",
+          "decoded_sample_delta": 0,
+          "pcm_identical": true
+        },
+        "opus": {
+          "bytes": 1155,
+          "sha256": "310dd42329c22d1326d287e4a38dbce22e3764eb7d4384cbac394ac65dd38546",
+          "decoded_sample_delta": 0,
+          "pcm_identical": false
+        },
+        "m4a": {
+          "bytes": 2598,
+          "sha256": "f395f58dc3ecc9f5f6f5554a9c1ed1eb7043f7b815d81e368c43f885039f5ca1",
+          "decoded_sample_delta": 0,
+          "pcm_identical": false
+        },
+        "mp3": {
+          "bytes": 2684,
+          "sha256": "159c09bdfdad5b3bf4558f5142d681ba28efde15a1806bcd1ea5e87f354a23a5",
+          "decoded_sample_delta": 0,
+          "pcm_identical": false
+        }
+      }
+    },
+    {
+      "source": "14.wav",
+      "wav_bytes": 17452,
+      "formats": {
+        "flac": {
+          "bytes": 10135,
+          "sha256": "2600caae7750b71295b5d89e899261d839a58015c1b08b65149ec0faf16214d8",
+          "decoded_sample_delta": 0,
+          "pcm_identical": true
+        },
+        "opus": {
+          "bytes": 1228,
+          "sha256": "c3ca453afd4515b30f3339c5ca14a8cae9154b46a32a453d93205643e462c178",
+          "decoded_sample_delta": 0,
+          "pcm_identical": false
+        },
+        "m4a": {
+          "bytes": 2448,
+          "sha256": "114dc80b9f43842fe478433bc908f024d97a7403b2b79dc43e40182bd64ebbfe",
+          "decoded_sample_delta": 512,
+          "pcm_identical": false
+        },
+        "mp3": {
+          "bytes": 2828,
+          "sha256": "620e965f407665e74024d3c05b62c501c924a371e327b92e24d2cde2004382f3",
+          "decoded_sample_delta": 0,
+          "pcm_identical": false
+        }
+      }
+    },
+    {
+      "source": "15.wav",
+      "wav_bytes": 21548,
+      "formats": {
+        "flac": {
+          "bytes": 12493,
+          "sha256": "8915be9ad5111a594161703f2455501acb63c8f11f2320c774d09f3cfd6bec41",
+          "decoded_sample_delta": 0,
+          "pcm_identical": true
+        },
+        "opus": {
+          "bytes": 1458,
+          "sha256": "aac04f79b46886fc5523fbf25df196f707ad427c8a2cc7b6cbd91232b65bcad4",
+          "decoded_sample_delta": 0,
+          "pcm_identical": false
+        },
+        "m4a": {
+          "bytes": 2888,
+          "sha256": "d76042da9e44797301a3e7d7e1dab9ad7a3f51052684f3f14e60163b26093a8d",
+          "decoded_sample_delta": 512,
+          "pcm_identical": false
+        },
+        "mp3": {
+          "bytes": 3260,
+          "sha256": "7a8f822dc46385a08bb6890b2c17c9222ef5c2f723d490d7d81447f366279b66",
+          "decoded_sample_delta": 0,
+          "pcm_identical": false
+        }
+      }
+    },
+    {
+      "source": "16.wav",
+      "wav_bytes": 44076,
+      "formats": {
+        "flac": {
+          "bytes": 27426,
+          "sha256": "a235501dd69833dcb8ec1601c56e8a7d8b57302e29904086336763b2e9d8ceda",
+          "decoded_sample_delta": 0,
+          "pcm_identical": true
+        },
+        "opus": {
+          "bytes": 2937,
+          "sha256": "afe87c1d0895ba3c8f257cd60753af21a16eddce66a4c82e8c1f227793cb60dd",
+          "decoded_sample_delta": 0,
+          "pcm_identical": false
+        },
+        "m4a": {
+          "bytes": 4905,
+          "sha256": "71178e29c554531951378317540dafe6c0ebb1f0e826703860d3db0e37a18492",
+          "decoded_sample_delta": 512,
+          "pcm_identical": false
+        },
+        "mp3": {
+          "bytes": 6140,
+          "sha256": "ce2c1b6fd9d7607086aca22fbc5606a1cf207b4b1ccaedcee991666effbb4423",
+          "decoded_sample_delta": 0,
+          "pcm_identical": false
+        }
+      }
+    },
+    {
+      "source": "17.wav",
+      "wav_bytes": 71724,
+      "formats": {
+        "flac": {
+          "bytes": 45370,
+          "sha256": "8872581ac36f3dc329ae057edf355dff9ce23887aba913835d66ac7494364fbd",
+          "decoded_sample_delta": 0,
+          "pcm_identical": true
+        },
+        "opus": {
+          "bytes": 4676,
+          "sha256": "b2447c42570e69a022c1875d32701f6c4ab8f8ff78a1f7679a3ef066aaacffca",
+          "decoded_sample_delta": 0,
+          "pcm_identical": false
+        },
+        "m4a": {
+          "bytes": 7113,
+          "sha256": "d4ccfb0e72b72e18c0821808fd23c5daddb2dce2891a3715635cc8770a507c6f",
+          "decoded_sample_delta": 0,
+          "pcm_identical": false
+        },
+        "mp3": {
+          "bytes": 9596,
+          "sha256": "cba5edaf9e8cf62b7dee625c6cf28d841fbc07d1025678491dfc4a290df11225",
+          "decoded_sample_delta": 0,
+          "pcm_identical": false
+        }
+      }
+    }
+  ],
+  "quality": "decoding checks only; perceptual quality pending listening",
+  "total_bytes": {
+    "wav": 556012,
+    "flac": 336085,
+    "opus": 37187,
+    "m4a": 65669,
+    "mp3": 79612
+  }
+}

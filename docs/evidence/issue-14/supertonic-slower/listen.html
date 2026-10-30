@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Supertonic 慢速与字母名对照</title>
+  <style>
+    body { max-width: 820px; margin: auto; padding: 24px 16px; font: 16px/1.5 "Segoe UI", sans-serif; color: #202827; }
+    section { border-top: 1px solid #cad4d1; padding: 12px 0; }
+    .sample { display: grid; grid-template-columns: minmax(200px, 1fr) minmax(260px, 340px); gap: 12px; align-items: center; padding: 8px 0; }
+    audio { width: 100%; }
+    @media (max-width: 600px) { .sample { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <h1>慢速与字母名对照</h1>
+  <p>以下音频由 Supertonic 3 机器合成，均使用常速生成的音频。常速播放 1 倍，慢速播放 0.6 倍。</p>
+  <p>字母名样本以文本“i grec”生成，尚需人工确认；代词 y 的读音 /i/ 是不同用法。</p>
+  <p><a href="../supertonic-samples/listen.html">原试听页</a> · <a href="report.json">完整生成报告</a> · <a href="../supertonic-licenses/ATTRIBUTION.md">许可与署名</a></p>
+  <section>
+    <h2>女声</h2>
+    <div class="sample"><span>法语句子 · 常速 1×</span><audio controls preload="none" aria-label="女声法语句子常速" src="female-normal-04.wav"></audio></div>
+    <div class="sample"><span>法语句子 · 慢速 0.6×</span><audio controls preload="none" aria-label="女声法语句子慢速" data-rate="0.6" src="female-normal-04.wav"></audio></div>
+    <div class="sample"><span>école · 慢速 0.6×</span><audio controls preload="none" aria-label="女声 école 慢速" data-rate="0.6" src="female-normal-01.wav"></audio></div>
+    <div class="sample"><span>英语句子 · 慢速 0.6×</span><audio controls preload="none" aria-label="女声英语句子慢速" data-rate="0.6" src="female-normal-07.wav"></audio></div>
+    <div class="sample"><span>字母 y 名称候选 · 输入 i grec · 正常</span><audio controls preload="none" aria-label="女声 i grec 正常" src="female-normal-08.wav"></audio></div>
+    <div class="sample"><span>字母 y 名称候选 · 输入 i grec · 慢速</span><audio controls preload="none" aria-label="女声 i grec 慢速" data-rate="0.6" src="female-normal-08.wav"></audio></div>
+    <div class="sample"><span>普通文本 y · 正常</span><audio controls preload="none" aria-label="女声普通文本 y 正常" src="female-normal-05.wav"></audio></div>
+  </section>
+  <section>
+    <h2>男声</h2>
+    <div class="sample"><span>法语句子 · 常速 1×</span><audio controls preload="none" aria-label="男声法语句子常速" src="male-normal-04.wav"></audio></div>
+    <div class="sample"><span>法语句子 · 慢速 0.6×</span><audio controls preload="none" aria-label="男声法语句子慢速" data-rate="0.6" src="male-normal-04.wav"></audio></div>
+    <div class="sample"><span>école · 慢速 0.6×</span><audio controls preload="none" aria-label="男声 école 慢速" data-rate="0.6" src="male-normal-01.wav"></audio></div>
+    <div class="sample"><span>英语句子 · 慢速 0.6×</span><audio controls preload="none" aria-label="男声英语句子慢速" data-rate="0.6" src="male-normal-07.wav"></audio></div>
+    <div class="sample"><span>字母 y 名称候选 · 输入 i grec · 正常</span><audio controls preload="none" aria-label="男声 i grec 正常" src="male-normal-08.wav"></audio></div>
+    <div class="sample"><span>字母 y 名称候选 · 输入 i grec · 慢速</span><audio controls preload="none" aria-label="男声 i grec 慢速" data-rate="0.6" src="male-normal-08.wav"></audio></div>
+    <div class="sample"><span>普通文本 y · 正常</span><audio controls preload="none" aria-label="男声普通文本 y 正常" src="male-normal-05.wav"></audio></div>
+  </section>
+  <script>
+    document.querySelectorAll('audio[data-rate]').forEach((audio) => {
+      audio.defaultPlaybackRate = Number(audio.dataset.rate);
+      audio.playbackRate = audio.defaultPlaybackRate;
+    });
+  </script>
+</body>
+</html>

@@ -76,12 +76,23 @@ button:disabled { cursor: default; opacity: 0.6; }
 .notebook-controls input { width: 100%; min-height: 38px; padding: 8px; border: 1px solid var(--line); border-radius: 4px; background: var(--surface); }
 .notebook-controls select { max-width: none; }
 .vocabulary-list { list-style: none; padding: 0; margin: 24px 0; display: grid; gap: 8px; }
+.vocabulary-list li { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.vocabulary-list li > button { min-width: 0; }
 .vocabulary-list button { display: grid; gap: 8px; text-align: left; width: 100%; overflow-wrap: anywhere; }
 .vocabulary-list strong { font-family: Georgia, serif; font-size: 22px; font-weight: 400; }
 .vocabulary-list span { font-size: 13px; color: var(--muted); }
 .note-excerpt { white-space: pre-wrap; max-height: 3.5em; overflow: hidden; }
+.speech-settings { border-top: 1px solid var(--line); padding-top: 20px; }
+.speech-settings h3 { margin: 0; font-size: 18px; }
+.speech-settings p { font-size: 13px; color: var(--muted); line-height: 1.8; }
+.speech-options { display: flex; flex-wrap: wrap; gap: 20px; }
+.speech-options label { display: grid; gap: 10px; font-size: 13px; }
+.speech-options select { max-width: 100%; min-width: 130px; }
+.speech-settings [role='alert'] { overflow-wrap: anywhere; font-size: 13px; }
 dialog { max-width: min(520px, 90vw); border: 1px solid var(--line); border-radius: 6px; padding: 24px; color: var(--ink); background: var(--surface); }
 dialog::backdrop { background: #0006; }
+dialog.review-card::backdrop { background: var(--surface); }
+dialog.review-card { width: min(480px, 90vw); overflow-wrap: anywhere; }
 @media (max-width: 720px) {
   .app, .app[data-collapsed='true'] { grid-template-columns: 64px minmax(0, 1fr); }
   .sidebar { padding: 20px 8px 12px; }

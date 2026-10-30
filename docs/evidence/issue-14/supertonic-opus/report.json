@@ -1,0 +1,780 @@
+{
+  "ffmpeg_version": "ffmpeg version 7.1-essentials_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers",
+  "ffmpeg_sha256": "2ce797a0f88d7f067180338fb227f7b1928ea727bd9a4d7a1d022f7c52af71a3",
+  "settings": {
+    "codec": "libopus",
+    "container": "ogg",
+    "application": "voip",
+    "bitrates_kbps": [
+      24,
+      48
+    ]
+  },
+  "cases": [
+    {
+      "input": "être",
+      "voice": "female",
+      "wav": "female-normal-01.wav",
+      "wav_bytes": 118962,
+      "formats": {
+        "24": {
+          "file": "female-normal-01-24k.opus",
+          "bytes": 2834,
+          "sha256": "dc2b48c7400b39395237480cb800b6f29ef6a54a08b228cd935ef5bdec1308c1",
+          "decoded_sample_delta": 1
+        },
+        "48": {
+          "file": "female-normal-01-48k.opus",
+          "bytes": 5222,
+          "sha256": "d641846b946bf8a8281b01e52938ebcf12ee9e1b811df47e594298ffa23c008e",
+          "decoded_sample_delta": 1
+        }
+      }
+    },
+    {
+      "input": "sommes",
+      "voice": "female",
+      "wav": "female-normal-02.wav",
+      "wav_bytes": 120466,
+      "formats": {
+        "24": {
+          "file": "female-normal-02-24k.opus",
+          "bytes": 3200,
+          "sha256": "b193591431cf8698813e4f0911f105276db4cfeb70d3a47e1fc1142d5cb5a22a",
+          "decoded_sample_delta": 1
+        },
+        "48": {
+          "file": "female-normal-02-48k.opus",
+          "bytes": 6294,
+          "sha256": "2d6b139fd9e3c7ea41c3f6f8f0c2f8952e44215718a362ebd269e0099d0c9bbc",
+          "decoded_sample_delta": 1
+        }
+      }
+    },
+    {
+      "input": "œil",
+      "voice": "female",
+      "wav": "female-normal-03.wav",
+      "wav_bytes": 118744,
+      "formats": {
+        "24": {
+          "file": "female-normal-03-24k.opus",
+          "bytes": 2746,
+          "sha256": "dde9164cbefdca190e5eecdac121daac46709a6ea4bd6d8b65eaa15cc19944a5",
+          "decoded_sample_delta": 1
+        },
+        "48": {
+          "file": "female-normal-03-48k.opus",
+          "bytes": 5384,
+          "sha256": "a0364beccb5c3ab57d693d6529fcdbb95854493774bc003419caf49699d49f58",
+          "decoded_sample_delta": 1
+        }
+      }
+    },
+    {
+      "input": "école",
+      "voice": "female",
+      "wav": "female-normal-04.wav",
+      "wav_bytes": 119568,
+      "formats": {
+        "24": {
+          "file": "female-normal-04-24k.opus",
+          "bytes": 3219,
+          "sha256": "2729f965b689a1014f45804444f8b743b350398b2808967628dc4d9e8232dd9d",
+          "decoded_sample_delta": 1
+        },
+        "48": {
+          "file": "female-normal-04-48k.opus",
+          "bytes": 6346,
+          "sha256": "fea98f54a74a7eeeda9850870d1e2ba858f64e37128fe7faafeba24c9b307c4d",
+          "decoded_sample_delta": 1
+        }
+      }
+    },
+    {
+      "input": "aujourd'hui",
+      "voice": "female",
+      "wav": "female-normal-05.wav",
+      "wav_bytes": 127272,
+      "formats": {
+        "24": {
+          "file": "female-normal-05-24k.opus",
+          "bytes": 3454,
+          "sha256": "f5b83348d3ead3ec2d0aeb4bc2ea1d30ff906595301d16fa80a51d54a071f86f",
+          "decoded_sample_delta": 1
+        },
+        "48": {
+          "file": "female-normal-05-48k.opus",
+          "bytes": 6727,
+          "sha256": "b5ba9f3811a4ce2ed2f7636a08151d7156b63cc067683e3d2c72a5f4c273c429",
+          "decoded_sample_delta": 1
+        }
+      }
+    },
+    {
+      "input": "nous sommes ici",
+      "voice": "female",
+      "wav": "female-normal-06.wav",
+      "wav_bytes": 153062,
+      "formats": {
+        "24": {
+          "file": "female-normal-06-24k.opus",
+          "bytes": 4177,
+          "sha256": "30f51cab2831e3b689796f725382e5f0e8c79c149872f62681ac29837f9cf837",
+          "decoded_sample_delta": 1
+        },
+        "48": {
+          "file": "female-normal-06-48k.opus",
+          "bytes": 8202,
+          "sha256": "badb621ceea698a2199b30e966f98ee9ca0c5e6e789c38b50be812eea956db9c",
+          "decoded_sample_delta": 1
+        }
+      }
+    },
+    {
+      "input": "les amis arrivent",
+      "voice": "female",
+      "wav": "female-normal-07.wav",
+      "wav_bytes": 171492,
+      "formats": {
+        "24": {
+          "file": "female-normal-07-24k.opus",
+          "bytes": 4600,
+          "sha256": "09bc442bec12d0fe45bbd2e1229823d1c41801a954b87ddc7938da8e31309d2e",
+          "decoded_sample_delta": 1
+        },
+        "48": {
+          "file": "female-normal-07-48k.opus",
+          "bytes": 9069,
+          "sha256": "9efc40050593e647a18020971c19e9f4407ca216ffc596ca7c0903c4291ead7e",
+          "decoded_sample_delta": 1
+        }
+      }
+    },
+    {
+      "input": "J'apprends le français tous les jours.",
+      "voice": "female",
+      "wav": "female-normal-08.wav",
+      "wav_bytes": 252508,
+      "formats": {
+        "24": {
+          "file": "female-normal-08-24k.opus",
+          "bytes": 7004,
+          "sha256": "b26e59527f2c8c69070d508b0c8d0c146c396a267e28a27f6bb9661e23cc7d9a",
+          "decoded_sample_delta": 0
+        },
+        "48": {
+          "file": "female-normal-08-48k.opus",
+          "bytes": 13971,
+          "sha256": "2354958e3777a3da993024634807e6992039f52071982d551218964e405a3899",
+          "decoded_sample_delta": 0
+        }
+      }
+    },
+    {
+      "input": "a",
+      "voice": "female",
+      "wav": "female-normal-09.wav",
+      "wav_bytes": 118720,
+      "formats": {
+        "24": {
+          "file": "female-normal-09-24k.opus",
+          "bytes": 2686,
+          "sha256": "7b94b31562406e75ed781cfa83bea64eda012bff8d40a32bc2162b69cebade82",
+          "decoded_sample_delta": 1
+        },
+        "48": {
+          "file": "female-normal-09-48k.opus",
+          "bytes": 5313,
+          "sha256": "4c348b31ce34c14f0a23f44beeeece3dfe313ef1672ec701a223916d73acf9e6",
+          "decoded_sample_delta": 1
+        }
+      }
+    },
+    {
+      "input": "à",
+      "voice": "female",
+      "wav": "female-normal-10.wav",
+      "wav_bytes": 118656,
+      "formats": {
+        "24": {
+          "file": "female-normal-10-24k.opus",
+          "bytes": 2706,
+          "sha256": "d5b711e8b03c196c4bd786c74de7f8b9bd578e392698ee846a0a24c557627c16",
+          "decoded_sample_delta": 1
+        },
+        "48": {
+          "file": "female-normal-10-48k.opus",
+          "bytes": 5089,
+          "sha256": "8d32d01f0d0ecf37438c48c02f96e6ac25245840b2f10d2455410985a4b809d4",
+          "decoded_sample_delta": 1
+        }
+      }
+    },
+    {
+      "input": "y",
+      "voice": "female",
+      "wav": "female-normal-11.wav",
+      "wav_bytes": 118826,
+      "formats": {
+        "24": {
+          "file": "female-normal-11-24k.opus",
+          "bytes": 2766,
+          "sha256": "05ed6ee0198869e007cd903ecc217916e152cb1c2dfcab8020177cdc9765680e",
+          "decoded_sample_delta": 1
+        },
+        "48": {
+          "file": "female-normal-11-48k.opus",
+          "bytes": 5516,
+          "sha256": "89e536d92f617f98dc9eb319cfc4866bb7e8229a310b3dd3f1381a1ff8f4b5c0",
+          "decoded_sample_delta": 1
+        }
+      }
+    },
+    {
+      "input": "eu",
+      "voice": "female",
+      "wav": "female-normal-12.wav",
+      "wav_bytes": 118630,
+      "formats": {
+        "24": {
+          "file": "female-normal-12-24k.opus",
+          "bytes": 2751,
+          "sha256": "08ec1e9f94f186b74dbf29b482a713089bf8eb2a5d79224a4e8e519a8b1140dc",
+          "decoded_sample_delta": 1
+        },
+        "48": {
+          "file": "female-normal-12-48k.opus",
+          "bytes": 5489,
+          "sha256": "ef7095d917df0180fca80f94ec7ae606a8c8108f09611deb967a523280a0f73e",
+          "decoded_sample_delta": 1
+        }
+      }
+    },
+    {
+      "input": "eau",
+      "voice": "female",
+      "wav": "female-normal-13.wav",
+      "wav_bytes": 118680,
+      "formats": {
+        "24": {
+          "file": "female-normal-13-24k.opus",
+          "bytes": 2639,
+          "sha256": "56bf1327274fbf5970c15dc147468186ef1f96b92acb5c5500f85a9052109d70",
+          "decoded_sample_delta": 1
+        },
+        "48": {
+          "file": "female-normal-13-48k.opus",
+          "bytes": 5324,
+          "sha256": "42ec51c7ea657d1664d91e6de585d3bde89840859f64c959cf7e4ee34119db4c",
+          "decoded_sample_delta": 1
+        }
+      }
+    },
+    {
+      "input": "un",
+      "voice": "female",
+      "wav": "female-normal-14.wav",
+      "wav_bytes": 118544,
+      "formats": {
+        "24": {
+          "file": "female-normal-14-24k.opus",
+          "bytes": 2686,
+          "sha256": "8e1640fe9dfbf3c2e5c4ad34ee04759896589321e1281471b629017dbeb6c9da",
+          "decoded_sample_delta": 1
+        },
+        "48": {
+          "file": "female-normal-14-48k.opus",
+          "bytes": 5456,
+          "sha256": "aee5371427fe549c7fa6f2a301c3736132db9d1696cc099fe5da2434d4997806",
+          "decoded_sample_delta": 1
+        }
+      }
+    },
+    {
+      "input": "chat",
+      "voice": "female",
+      "wav": "female-normal-15.wav",
+      "wav_bytes": 118768,
+      "formats": {
+        "24": {
+          "file": "female-normal-15-24k.opus",
+          "bytes": 2916,
+          "sha256": "626ca52b11660e6465c3741613ce6c5c03e0cb8678ebb757e6dc074a4c014a7b",
+          "decoded_sample_delta": 1
+        },
+        "48": {
+          "file": "female-normal-15-48k.opus",
+          "bytes": 5765,
+          "sha256": "1b9ca1179c38bbc59fcedfedf530ff62e32a644fcdabf33c052046d1bccf15d4",
+          "decoded_sample_delta": 1
+        }
+      }
+    },
+    {
+      "input": "qzxyplouf",
+      "voice": "female",
+      "wav": "female-normal-16.wav",
+      "wav_bytes": 123666,
+      "formats": {
+        "24": {
+          "file": "female-normal-16-24k.opus",
+          "bytes": 3466,
+          "sha256": "600c55d44929f2545130ad811576e49d7152f25bc582eff57088acfd8f01149e",
+          "decoded_sample_delta": 1
+        },
+        "48": {
+          "file": "female-normal-16-48k.opus",
+          "bytes": 6684,
+          "sha256": "f2cbc6c690c7ce0f58e92888d821cb0af6086f8804153f5f90ed833d74362772",
+          "decoded_sample_delta": 1
+        }
+      }
+    },
+    {
+      "input": "anticonstitutionnellement",
+      "voice": "female",
+      "wav": "female-normal-17.wav",
+      "wav_bytes": 190902,
+      "formats": {
+        "24": {
+          "file": "female-normal-17-24k.opus",
+          "bytes": 5509,
+          "sha256": "0635a8c34800c44ee5ab5ebd5c3ac06bd43dbb1b68e7c17b15f2b3245f33ffe3",
+          "decoded_sample_delta": 1
+        },
+        "48": {
+          "file": "female-normal-17-48k.opus",
+          "bytes": 10818,
+          "sha256": "6ccc1abdf8368c09bdfd01119ecac614bf53df835323b9852b8fb10617017618",
+          "decoded_sample_delta": 1
+        }
+      }
+    },
+    {
+      "input": "Hello. I am learning French every day.",
+      "voice": "female",
+      "wav": "female-normal-18.wav",
+      "wav_bytes": 289554,
+      "formats": {
+        "24": {
+          "file": "female-normal-18-24k.opus",
+          "bytes": 8412,
+          "sha256": "07d9bd425b25db18705cfea8bc69ea9c3b7554fb21d2c4bcaf07cfcca1a6e143",
+          "decoded_sample_delta": 1
+        },
+        "48": {
+          "file": "female-normal-18-48k.opus",
+          "bytes": 16695,
+          "sha256": "eec2cfd122a3009981d15b7b9f70679e36b983f4d627ffce4b85d4c11de39251",
+          "decoded_sample_delta": 1
+        }
+      }
+    },
+    {
+      "input": "i grec",
+      "voice": "female",
+      "wav": "female-normal-19.wav",
+      "wav_bytes": 119678,
+      "formats": {
+        "24": {
+          "file": "female-normal-19-24k.opus",
+          "bytes": 3234,
+          "sha256": "b3d596fd7cd21ba76a6476da209793c841bab9710b19ad7ec11098950b59ceb6",
+          "decoded_sample_delta": 1
+        },
+        "48": {
+          "file": "female-normal-19-48k.opus",
+          "bytes": 6267,
+          "sha256": "13a31ab7be91e22750ddef920246984d3a016d270d1906c81b3d815269b8a1ea",
+          "decoded_sample_delta": 1
+        }
+      }
+    },
+    {
+      "input": "être",
+      "voice": "male",
+      "wav": "male-normal-01.wav",
+      "wav_bytes": 118702,
+      "formats": {
+        "24": {
+          "file": "male-normal-01-24k.opus",
+          "bytes": 3147,
+          "sha256": "4c4768d029099de5300e87515a728c3697be733b0f9d611fb31f6f10f77a076e",
+          "decoded_sample_delta": 1
+        },
+        "48": {
+          "file": "male-normal-01-48k.opus",
+          "bytes": 6193,
+          "sha256": "607bbf3cd1ecac7e65a893f32652ef90f4e93afe6276d573ffeace4c95522bf6",
+          "decoded_sample_delta": 1
+        }
+      }
+    },
+    {
+      "input": "sommes",
+      "voice": "male",
+      "wav": "male-normal-02.wav",
+      "wav_bytes": 120222,
+      "formats": {
+        "24": {
+          "file": "male-normal-02-24k.opus",
+          "bytes": 3104,
+          "sha256": "4d6af7ccd0e5f68f4f6369dbdf89ed40d39735575d46d112fe3232f53e0d920e",
+          "decoded_sample_delta": 1
+        },
+        "48": {
+          "file": "male-normal-02-48k.opus",
+          "bytes": 6066,
+          "sha256": "a0facbad1b4fc3db754435ab8d115ad618e54746657227fc7f3f404cb9ac9892",
+          "decoded_sample_delta": 1
+        }
+      }
+    },
+    {
+      "input": "œil",
+      "voice": "male",
+      "wav": "male-normal-03.wav",
+      "wav_bytes": 118486,
+      "formats": {
+        "24": {
+          "file": "male-normal-03-24k.opus",
+          "bytes": 3013,
+          "sha256": "19b8b120610c038cf345157abbd5352ee5741131fd0578266bb0f98b850501a8",
+          "decoded_sample_delta": 1
+        },
+        "48": {
+          "file": "male-normal-03-48k.opus",
+          "bytes": 6001,
+          "sha256": "3dbc493020e503c9069a0cdab541d5a13d2b67af919b1205c5de5dc9705aa7bf",
+          "decoded_sample_delta": 1
+        }
+      }
+    },
+    {
+      "input": "école",
+      "voice": "male",
+      "wav": "male-normal-04.wav",
+      "wav_bytes": 119316,
+      "formats": {
+        "24": {
+          "file": "male-normal-04-24k.opus",
+          "bytes": 3193,
+          "sha256": "c5d58045249de306a1e5292783384909fd6ca50f732ae09d628a50fc7781a1fb",
+          "decoded_sample_delta": 1
+        },
+        "48": {
+          "file": "male-normal-04-48k.opus",
+          "bytes": 6269,
+          "sha256": "2ef2b9ce3fc2f58e98c162033ce00dabdebe391d8e96f1a6a14c19f0c07d7f55",
+          "decoded_sample_delta": 1
+        }
+      }
+    },
+    {
+      "input": "aujourd'hui",
+      "voice": "male",
+      "wav": "male-normal-05.wav",
+      "wav_bytes": 126996,
+      "formats": {
+        "24": {
+          "file": "male-normal-05-24k.opus",
+          "bytes": 3494,
+          "sha256": "36d7774fa6aaa9ab13e19cb6b34fd6277c4fa927c101f9d51da76374add409bd",
+          "decoded_sample_delta": 1
+        },
+        "48": {
+          "file": "male-normal-05-48k.opus",
+          "bytes": 6951,
+          "sha256": "7bdc1657ab7d31b95e871828b9aa7234bcd9f6333069b04a023dbb2c71afcec7",
+          "decoded_sample_delta": 1
+        }
+      }
+    },
+    {
+      "input": "nous sommes ici",
+      "voice": "male",
+      "wav": "male-normal-06.wav",
+      "wav_bytes": 152398,
+      "formats": {
+        "24": {
+          "file": "male-normal-06-24k.opus",
+          "bytes": 4349,
+          "sha256": "e60852cd0ce8bceb1f1ead772178de511b982213303df3e6f22bd161538bfc89",
+          "decoded_sample_delta": 1
+        },
+        "48": {
+          "file": "male-normal-06-48k.opus",
+          "bytes": 8589,
+          "sha256": "b48f9cb887ebe1257000c16a511c681326d0116cacbf8f5d4ea1eb7c1eb6cd2e",
+          "decoded_sample_delta": 1
+        }
+      }
+    },
+    {
+      "input": "les amis arrivent",
+      "voice": "male",
+      "wav": "male-normal-07.wav",
+      "wav_bytes": 170766,
+      "formats": {
+        "24": {
+          "file": "male-normal-07-24k.opus",
+          "bytes": 4869,
+          "sha256": "1051711a39867faca8b17158aec8181af71033a40cf79cc622091f54d6af1249",
+          "decoded_sample_delta": 1
+        },
+        "48": {
+          "file": "male-normal-07-48k.opus",
+          "bytes": 9638,
+          "sha256": "b64038ba8fd2f8b6b279ce0d898d50ca3cfa75b5e27674c184856b8a62e317f6",
+          "decoded_sample_delta": 1
+        }
+      }
+    },
+    {
+      "input": "J'apprends le français tous les jours.",
+      "voice": "male",
+      "wav": "male-normal-08.wav",
+      "wav_bytes": 252246,
+      "formats": {
+        "24": {
+          "file": "male-normal-08-24k.opus",
+          "bytes": 7383,
+          "sha256": "3c6c04cca83de1dbee16379d6dc1915840ceb4037ea4e826993e37d795655fe7",
+          "decoded_sample_delta": 1
+        },
+        "48": {
+          "file": "male-normal-08-48k.opus",
+          "bytes": 14568,
+          "sha256": "88baa246991c35766b81926d031963d21dc14549a9f16a21599f778698ab8f4c",
+          "decoded_sample_delta": 1
+        }
+      }
+    },
+    {
+      "input": "a",
+      "voice": "male",
+      "wav": "male-normal-09.wav",
+      "wav_bytes": 118460,
+      "formats": {
+        "24": {
+          "file": "male-normal-09-24k.opus",
+          "bytes": 2749,
+          "sha256": "929f2d739797d05557d196a702675b47bfeb88323ea36f43cccb263866cc8f7d",
+          "decoded_sample_delta": 1
+        },
+        "48": {
+          "file": "male-normal-09-48k.opus",
+          "bytes": 5441,
+          "sha256": "18bddf21882f0ffb9a5d0b3fc71d75e6a0c81ba91ce6af58f91410e91ce4879b",
+          "decoded_sample_delta": 1
+        }
+      }
+    },
+    {
+      "input": "à",
+      "voice": "male",
+      "wav": "male-normal-10.wav",
+      "wav_bytes": 118396,
+      "formats": {
+        "24": {
+          "file": "male-normal-10-24k.opus",
+          "bytes": 3009,
+          "sha256": "fa5f1aa6ba70010f7ce5d1892c818c78bb32f5310d1d98b22717334877544dc9",
+          "decoded_sample_delta": 1
+        },
+        "48": {
+          "file": "male-normal-10-48k.opus",
+          "bytes": 6020,
+          "sha256": "dc1a4fbadd815be14d8cfb0e3015623919b35a43538d9878b18530ad27211441",
+          "decoded_sample_delta": 1
+        }
+      }
+    },
+    {
+      "input": "y",
+      "voice": "male",
+      "wav": "male-normal-11.wav",
+      "wav_bytes": 118566,
+      "formats": {
+        "24": {
+          "file": "male-normal-11-24k.opus",
+          "bytes": 2921,
+          "sha256": "041c668c766b1217e493d4593ed3c270e2c6570e93e46406787f6aa58e765700",
+          "decoded_sample_delta": 1
+        },
+        "48": {
+          "file": "male-normal-11-48k.opus",
+          "bytes": 5752,
+          "sha256": "1f40f17c0f0e422261e3ff1ace8c1b0cf0a7507b3f5365e1d5d65bb4648079d9",
+          "decoded_sample_delta": 1
+        }
+      }
+    },
+    {
+      "input": "eu",
+      "voice": "male",
+      "wav": "male-normal-12.wav",
+      "wav_bytes": 118372,
+      "formats": {
+        "24": {
+          "file": "male-normal-12-24k.opus",
+          "bytes": 2925,
+          "sha256": "945a43ae84f0013b8d0fabab2a58fb3bd902b7f4f8e2166e2210b4607ad0c791",
+          "decoded_sample_delta": 1
+        },
+        "48": {
+          "file": "male-normal-12-48k.opus",
+          "bytes": 5381,
+          "sha256": "a0ec945622c6a814a66ff730315edf3ecc5d6a24ed18ddb12c0f9e66fbd2035a",
+          "decoded_sample_delta": 1
+        }
+      }
+    },
+    {
+      "input": "eau",
+      "voice": "male",
+      "wav": "male-normal-13.wav",
+      "wav_bytes": 118422,
+      "formats": {
+        "24": {
+          "file": "male-normal-13-24k.opus",
+          "bytes": 3011,
+          "sha256": "d6651d23cf8487a0e6cc00c38d8352c934cdde07bd71689e1eee1bb9b42db539",
+          "decoded_sample_delta": 0
+        },
+        "48": {
+          "file": "male-normal-13-48k.opus",
+          "bytes": 5928,
+          "sha256": "6228608edc81f37901d13feeda14b5409f94b0cb024c2d0bcec8fcf17f745a45",
+          "decoded_sample_delta": 0
+        }
+      }
+    },
+    {
+      "input": "un",
+      "voice": "male",
+      "wav": "male-normal-14.wav",
+      "wav_bytes": 118286,
+      "formats": {
+        "24": {
+          "file": "male-normal-14-24k.opus",
+          "bytes": 2930,
+          "sha256": "c138493e7de032d450d6b3a49595bafa1e0331b2bd68f7163657614dc1d77af4",
+          "decoded_sample_delta": 0
+        },
+        "48": {
+          "file": "male-normal-14-48k.opus",
+          "bytes": 5627,
+          "sha256": "23752116b64e9ba6c558fe0242f8c49b1c98381aa9cda0598fa4f2f321d76068",
+          "decoded_sample_delta": 0
+        }
+      }
+    },
+    {
+      "input": "chat",
+      "voice": "male",
+      "wav": "male-normal-15.wav",
+      "wav_bytes": 118510,
+      "formats": {
+        "24": {
+          "file": "male-normal-15-24k.opus",
+          "bytes": 3279,
+          "sha256": "d8f85e9892935f09fa046ef60a553debd73f69ac01fd618d885a13059ba8e1c0",
+          "decoded_sample_delta": 1
+        },
+        "48": {
+          "file": "male-normal-15-48k.opus",
+          "bytes": 6442,
+          "sha256": "07566ab256d131980712ad8c5f1a6ac5e01dc69689fda8f1ef3f419f00958fee",
+          "decoded_sample_delta": 1
+        }
+      }
+    },
+    {
+      "input": "qzxyplouf",
+      "voice": "male",
+      "wav": "male-normal-16.wav",
+      "wav_bytes": 123412,
+      "formats": {
+        "24": {
+          "file": "male-normal-16-24k.opus",
+          "bytes": 3563,
+          "sha256": "88e383fc10d728b43ef9738a606be902d92d889da3795ddf5afed3b02afc5a91",
+          "decoded_sample_delta": 1
+        },
+        "48": {
+          "file": "male-normal-16-48k.opus",
+          "bytes": 6978,
+          "sha256": "e5f20dd1347647cf91be5808299d0c3954b48ba669eee4628d097bba85e27a9c",
+          "decoded_sample_delta": 1
+        }
+      }
+    },
+    {
+      "input": "anticonstitutionnellement",
+      "voice": "male",
+      "wav": "male-normal-17.wav",
+      "wav_bytes": 190610,
+      "formats": {
+        "24": {
+          "file": "male-normal-17-24k.opus",
+          "bytes": 5866,
+          "sha256": "96042f22b24d297f3d858a95d7557c20ceda7a5ce663986635afc256a85bf1c7",
+          "decoded_sample_delta": 0
+        },
+        "48": {
+          "file": "male-normal-17-48k.opus",
+          "bytes": 11472,
+          "sha256": "f96a9a9cb165524614aa4c1d069f3ab629f559eb6fe2d1d94064714e36aa0f6d",
+          "decoded_sample_delta": 0
+        }
+      }
+    },
+    {
+      "input": "Hello. I am learning French every day.",
+      "voice": "male",
+      "wav": "male-normal-18.wav",
+      "wav_bytes": 289374,
+      "formats": {
+        "24": {
+          "file": "male-normal-18-24k.opus",
+          "bytes": 8646,
+          "sha256": "374f7199b0bee29d6b3eb7371b88291750034a4faed2d87c3e0d1ab016dd8464",
+          "decoded_sample_delta": 1
+        },
+        "48": {
+          "file": "male-normal-18-48k.opus",
+          "bytes": 17137,
+          "sha256": "d0b24bf8f47540b19b2e71949f4befa348f1f3091a56a6cbc27388cec1259f20",
+          "decoded_sample_delta": 1
+        }
+      }
+    },
+    {
+      "input": "i grec",
+      "voice": "male",
+      "wav": "male-normal-19.wav",
+      "wav_bytes": 119424,
+      "formats": {
+        "24": {
+          "file": "male-normal-19-24k.opus",
+          "bytes": 3396,
+          "sha256": "0ec9a39de17f7fed03ef0cbd0fa45713958418c312132f5fd1d528bfb32a98a5",
+          "decoded_sample_delta": 1
+        },
+        "48": {
+          "file": "male-normal-19-48k.opus",
+          "bytes": 6621,
+          "sha256": "87300d0d9cf08619942a972b7cb063211da920d87eab6fe0226568fcbb383703",
+          "decoded_sample_delta": 1
+        }
+      }
+    }
+  ],
+  "total_bytes": {
+    "wav": 5467662,
+    "24": 145852,
+    "48": 286705
+  }
+}

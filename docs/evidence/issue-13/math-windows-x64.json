@@ -1,0 +1,25 @@
+{
+  "toolchain": "rustc 1.99.1 (58cf8f9c3 2026-10-13)\nbinary: rustc\ncommit-hash: 58cf8f9c35b355199727627d07ae34a4e2846d67\ncommit-date: 2026-10-13\nhost: x86_64-pc-windows-msvc\nrelease: 1.99.1\nLLVM version: 23.1.1",
+  "platform": "win32",
+  "arch": "x64",
+  "node": "v24.22.1",
+  "operations": [
+    {
+      "operation": 0,
+      "name": "exp((1-r)*w10)",
+      "x": 0.014672648161649704,
+      "y": 0,
+      "nativeBits": 1065477207,
+      "wasmBits": 1065477206
+    },
+    {
+      "operation": 1,
+      "name": "powf(stability,-w9)",
+      "x": 837.2720947265625,
+      "y": -0.16660000383853912,
+      "nativeBits": 1051121927,
+      "wasmBits": 1051121926
+    }
+  ],
+  "mismatches": 2
+}
