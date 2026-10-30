@@ -29,6 +29,7 @@ fn create(operation: &str, headword: &str, notes: &str) -> SaveRequest {
         notes: notes.into(),
         example_fr: String::new(),
         example_zh: String::new(),
+        example_sense: None,
         more_examples: vec![],
         id: None,
         revision: None,
@@ -74,6 +75,7 @@ fn update(operation: &str, record: &lexique_storage::VocabularyRecord, notes: &s
         notes: notes.into(),
         example_fr: record.example_fr.clone(),
         example_zh: record.example_zh.clone(),
+        example_sense: record.example_sense,
         more_examples: record.more_examples.clone(),
         id: Some(record.id),
         revision: Some(record.revision),
@@ -83,7 +85,7 @@ fn update(operation: &str, record: &lexique_storage::VocabularyRecord, notes: &s
 #[test]
 fn save_request_requires_all_example_fields() {
     let request = serde_json::to_value(create("required-fields", "école", "note")).unwrap();
-    for field in ["example_fr", "example_zh", "more_examples"] {
+    for field in ["example_fr", "example_zh", "example_sense", "more_examples"] {
         let mut missing = request.clone();
         missing.as_object_mut().unwrap().remove(field);
         assert!(
@@ -91,6 +93,36 @@ fn save_request_requires_all_example_fields() {
             "missing {field}"
         );
     }
+}
+
+#[test]
+fn example_meaning_survives_upgrade_and_rejects_out_of_range() {
+    let mut connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    let original = save(
+        &mut connection,
+        &create("meaning-create", "école", "note"),
+        Some(snapshot()),
+    )
+    .unwrap()
+    .record;
+    connection
+        .execute_batch("ALTER TABLE vocabulary DROP COLUMN example_sense; PRAGMA user_version = 9;")
+        .unwrap();
+    initialize(&connection).unwrap();
+    let migrated = get(&connection, original.id).unwrap();
+    assert_eq!(migrated.example_sense, None);
+    let mut request = update("meaning-edit", &migrated, "note");
+    request.example_sense = Some(1);
+    assert!(save(&mut connection, &request, None).is_err());
+    assert_eq!(get(&connection, original.id).unwrap().example_sense, None);
+    request.example_sense = Some(0);
+    let saved = save(&mut connection, &request, None).unwrap();
+    assert_eq!(saved.record.example_sense, Some(0));
+    assert_eq!(
+        save(&mut connection, &request, None).unwrap().outcome,
+        "replayed"
+    );
 }
 
 #[test]
@@ -139,6 +171,7 @@ fn pre_example_save_operation_can_be_retried_after_upgrade() {
     let mut legacy = serde_json::to_value(&request).unwrap();
     legacy.as_object_mut().unwrap().remove("example_fr");
     legacy.as_object_mut().unwrap().remove("example_zh");
+    legacy.as_object_mut().unwrap().remove("example_sense");
     connection
         .execute(
             "UPDATE save_operations SET request = ?1 WHERE operation = ?2",

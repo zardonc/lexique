@@ -4,6 +4,28 @@ import { nativeFixture, record } from './native-fixture';
 
 const audio = [...readFileSync(new URL('../../../docs/evidence/issue-14/supertonic-opus/female-normal-01-48k.opus', import.meta.url))];
 
+test('both cards identify the meaning selected for an example', async ({ page }) => {
+  const saved = { ...record, example_fr: 'Une école de pensée.', example_zh: '一个思想流派。', example_sense: 1, revision: 2 };
+  await nativeFixture(page, { vocabulary_list: [{ value: [record] }],
+    vocabulary_save: [{ value: { outcome: 'updated', record: saved } }],
+    review_cards: [{ value: [{ id: 10, kind: 'recognition' }, { id: 11, kind: 'listening' }] }], speech_cached: [{ value: audio }] });
+  await page.goto('/');
+  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.locator('.vocabulary-list button').click();
+  await page.getByLabel('例句对应释义').selectOption('1');
+  await page.getByLabel('法语例句').fill(saved.example_fr);
+  await page.getByLabel('例句中文译文').fill(saved.example_zh);
+  await page.getByRole('button', { name: '保存', exact: true }).click();
+  await expect(page.getByRole('status').filter({ hasText: '已保存' })).toBeVisible();
+  for (const [open, region] of [['查看识义卡', '识义卡'], ['查看听音卡', '听音卡']] as const) {
+    await page.getByRole('button', { name: open }).click();
+    const card = page.getByRole('region', { name: region });
+    await card.getByRole('button', { name: '显示答案' }).click();
+    await expect(card.getByText('例句对应释义：流派')).toBeVisible();
+    await card.getByRole('button', { name: region === '识义卡' ? '关闭卡片' : '跳过' }).click();
+  }
+});
+
 for (const [fr, zh, missing] of [['Bonjour.', '', true], ['', '你好。', true], ['Bonjour.', '你好。', false], ['', '', true]] as const) {
   test(`both cards show example completeness: ${fr || 'empty'} / ${zh || 'empty'}`, async ({ page }) => {
     const exampleRecord = { ...record, example_fr: fr, example_zh: zh, more_examples: [{ fr: 'Autre phrase.', zh: '另一句。' }] };

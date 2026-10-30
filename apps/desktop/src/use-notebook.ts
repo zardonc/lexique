@@ -10,15 +10,16 @@ interface Editor {
   readonly notes: string;
   readonly example_fr: string;
   readonly example_zh: string;
+  readonly example_sense: number | null;
   readonly more_examples: VocabularyRecord['more_examples'];
 }
 
 function acceptRecord(record: VocabularyRecord): Editor {
-  return { snapshot: record, record, notes: record.notes, example_fr: record.example_fr, example_zh: record.example_zh, more_examples: record.more_examples };
+  return { snapshot: record, record, notes: record.notes, example_fr: record.example_fr, example_zh: record.example_zh, example_sense: record.example_sense, more_examples: record.more_examples };
 }
 
 function savePayload(editor: Editor) {
-  return { headword: editor.snapshot.headword, notes: editor.notes, example_fr: editor.example_fr, example_zh: editor.example_zh, more_examples: editor.more_examples,
+  return { headword: editor.snapshot.headword, notes: editor.notes, example_fr: editor.example_fr, example_zh: editor.example_zh, example_sense: editor.example_sense, more_examples: editor.more_examples,
     id: editor.record?.id ?? null, revision: editor.record?.revision ?? null };
 }
 
@@ -58,16 +59,16 @@ export function useNotebook(runtime: RuntimeAdapter) {
   const audio = useEnrollmentAudio(runtime, () => setVersion((value) => value + 1));
   const operation = useRef<SaveRequest | null>(null); const saving = useRef(false);
   // A failed response can hide a committed update, even when input returns to its original text.
-  const dirty = editor !== null && (editor.record === null || !samePayload({ ...savePayload(editor), operation: '', notes: editor.record.notes, example_fr: editor.record.example_fr, example_zh: editor.record.example_zh, more_examples: editor.record.more_examples }, savePayload(editor)) || operation.current !== null);
+  const dirty = editor !== null && (editor.record === null || !samePayload({ ...savePayload(acceptRecord(editor.record)), operation: '' }, savePayload(editor)) || operation.current !== null);
   function clear() { setEditor(null); setConflict(null); setExisting(null); setError(''); audio.clearAudioError(); setSaved(false); operation.current = null; }
   function open(record: VocabularyRecord) { clear(); setEditor(acceptRecord(record)); }
   function collect(lookup: DictionaryLookup) {
-    clear(); setEditor({ snapshot: snapshotFromLookup(lookup), record: null, notes: '', example_fr: '', example_zh: '', more_examples: [] });
+    clear(); setEditor({ snapshot: snapshotFromLookup(lookup), record: null, notes: '', example_fr: '', example_zh: '', example_sense: null, more_examples: [] });
   }
   function applyResult(result: SaveResult, payload: ReturnType<typeof savePayload>) {
     setVersion((value) => value + 1);
     if (result.outcome === 'existing') { setExisting(result.record); return false; }
-    if (result.outcome === 'conflict' || result.record.notes !== payload.notes || result.record.example_fr !== payload.example_fr || result.record.example_zh !== payload.example_zh || JSON.stringify(result.record.more_examples) !== JSON.stringify(payload.more_examples)) {
+    if (result.outcome === 'conflict' || !samePayload({ ...savePayload(acceptRecord(result.record)), id: payload.id, revision: payload.revision, operation: '' }, payload)) {
       setConflict(result.record); return false;
     }
     setEditor(acceptRecord(result.record)); setSaved(true); operation.current = null;
@@ -93,7 +94,7 @@ export function useNotebook(runtime: RuntimeAdapter) {
   return { editor, conflict, existing, error, audioError: audio.audioError, saved, busy, dirty, version, save, clear, open, collect,
     edit: (notes: string) => { setEditor((value) => value && { ...value, notes }); setSaved(false); setExisting(null); },
     editExample: (field: 'example_fr' | 'example_zh', text: string) => { setEditor((value) => value && { ...value, [field]: text }); setSaved(false); setExisting(null); },
-    editMore: (examples: VocabularyRecord['more_examples']) => { setEditor((value) => value && { ...value, more_examples: examples }); setSaved(false); setExisting(null); },
+    editSense: (example_sense: number | null) => { setEditor((value) => value && { ...value, example_sense }); setSaved(false); setExisting(null); }, editMore: (examples: VocabularyRecord['more_examples']) => { setEditor((value) => value && { ...value, more_examples: examples }); setSaved(false); setExisting(null); },
     adopt: () => { if (conflict) open(conflict); },
     back: () => setConflict(null),
   };

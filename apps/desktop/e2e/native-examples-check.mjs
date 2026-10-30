@@ -57,6 +57,7 @@ try {
   assert.ok(initial.cards.length > 0, 'Fixture must contain review cards');
   await page.getByRole('button', { name: '生词本', exact: true }).click();
   await page.locator('.vocabulary-list button').first().click();
+  await page.getByLabel('例句对应释义').selectOption('0');
   await page.getByLabel('法语例句').fill('Je lis un livre.');
   await page.getByLabel('例句中文译文').fill('我读一本书。');
   await page.getByRole('button', { name: '添加例句' }).click();
@@ -75,6 +76,7 @@ try {
   const record = restored.records.find((item) => item.id === initial.record.id);
   assert.equal(record.example_fr, 'Je lis un livre.');
   assert.equal(record.example_zh, '我读一本书。');
+  assert.equal(record.example_sense, 0);
   assert.deepEqual(record.more_examples, [{ fr: 'Une autre phrase.', zh: '另一句话。' }]);
   assert.deepEqual(restored.cards, initial.cards);
   assert.deepEqual(restored.progress, initial.progress);

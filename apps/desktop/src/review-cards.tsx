@@ -5,9 +5,15 @@ import { errorMessage } from './platform/vocabulary';
 import type { VocabularyRecord } from './platform/vocabulary';
 import { ReviewRating } from './review-rating';
 
+function ExampleSense({ record, text }: { readonly record: VocabularyRecord; readonly text: NotebookText }) {
+  const meaning = record.example_sense === null ? text.exampleSenseUnspecified : record.digest[record.example_sense]?.translation || text.missing;
+  return <p>{text.exampleSense}：{meaning}</p>;
+}
+
 function Answer({ record, text }: { readonly record: VocabularyRecord; readonly text: NotebookText }) {
   return <>
     <p>{record.digest.map((entry) => entry.translation || text.missing).join(' · ')}</p>
+    <ExampleSense record={record} text={text} />
     {(record.example_fr || record.example_zh) && <section aria-label={text.exampleUser}><p>{text.exampleUser}</p>
       {record.example_fr && <p lang="fr">{record.example_fr}</p>}{record.example_zh && <p lang="zh">{record.example_zh}</p>}</section>}
     {(!record.example_fr.trim() || !record.example_zh.trim()) && <p>{text.exampleMissing}</p>}

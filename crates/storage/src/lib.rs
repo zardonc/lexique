@@ -101,6 +101,9 @@ pub fn initialize(connection: &Connection) -> Result<u32, StorageError> {
     if version < 9 {
         transaction.execute_batch(include_str!("../migrations/0009_more_examples.sql"))?;
     }
+    if version < 10 {
+        transaction.execute_batch(include_str!("../migrations/0010_example_sense.sql"))?;
+    }
     transaction.commit()?;
     Ok(DATABASE_SCHEMA_VERSION)
 }

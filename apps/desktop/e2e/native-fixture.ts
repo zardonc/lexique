@@ -13,7 +13,7 @@ export const dictionary = {
 };
 
 export const record = {
-  id: 1, headword: 'école', notes: '', example_fr: '', example_zh: '', more_examples: [], revision: 1, created_at: 1000, updated_at: 1000,
+  id: 1, headword: 'école', notes: '', example_fr: '', example_zh: '', example_sense: null, more_examples: [], revision: 1, created_at: 1000, updated_at: 1000,
   reference: { dictionary: dictionary.source.title, lookup_key: 'école', version: dictionary.source.version,
     attribution: dictionary.source.attribution, license: dictionary.source.license,
     source_url: dictionary.source.source_url, license_url: dictionary.source.license_url, sha256: dictionary.sha256 },

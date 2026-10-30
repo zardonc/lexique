@@ -409,3 +409,5 @@ ONNX Runtime 1.28.2 DLL 与上游 MT Release 版本逐字节哈希一致，已�
 2026-10-29：`pnpm lint`、`pnpm typecheck`、`pnpm build`、`pnpm rust:fmt`、`pnpm rust:check`、`pnpm rust:test:build` 和 `pnpm test:rust` 通过。存储测试覆盖例句保存、冲突、重试、历史操作兼容和请求字段校验。Windows x64 使用 `pnpm desktop:build --no-bundle` 构建后，通过 `apps/desktop/e2e/native-examples-check.mjs` 在合成数据库副本中编辑两条例句并重启，确认例句与复习卡进度恢复。
 
 Obscura MCP 使用模拟桌面接口检查了识义卡展示；这不是原生卡片全流程验证。新增 Playwright 浏览器测试尚未运行，本机缺少对应的 Playwright 浏览器；未验证其他平台、完整 portable 包或真实音频播放。
+
+2026-10-30 补充：例句组现可明确关联收藏时摘要中的一个释义；旧记录保持未指定，不推断原意。`pnpm lint`、`pnpm typecheck`、`pnpm build`、`pnpm rust:fmt`、`pnpm rust:check`、`pnpm rust:test:build`、`pnpm test:rust` 通过；使用项目 `target/playwright-browsers` 中的 Playwright Chromium、固定 UTC 时区运行 `pnpm test:e2e -- --workers=2`，63 项通过，覆盖两类卡的多义词选择。Windows x64 release 原生检查使用合成数据库副本，验证所选释义、两条例句及复习进度重启恢复。未验证其他平台、完整 portable 包或真实音频播放；浏览器测试使用模拟 IPC，原生重启检查不覆盖完整原生复习流程。

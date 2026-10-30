@@ -11,6 +11,7 @@ fn saved_word(connection: &mut Connection) -> i64 {
         notes: "my notes".into(),
         example_fr: String::new(),
         example_zh: String::new(),
+        example_sense: None,
         more_examples: vec![],
         id: None,
         revision: None,
@@ -181,6 +182,7 @@ fn auto_enrollment_applies_only_to_newly_saved_words() {
         notes: String::new(),
         example_fr: String::new(),
         example_zh: String::new(),
+        example_sense: None,
         more_examples: vec![],
         id: None,
         revision: None,
@@ -219,6 +221,7 @@ fn auto_enrollment_rolls_back_word_and_cards_when_card_creation_fails() {
         notes: String::new(),
         example_fr: String::new(),
         example_zh: String::new(),
+        example_sense: None,
         more_examples: vec![],
         id: None,
         revision: None,
@@ -372,6 +375,7 @@ fn undo_rating_outside_queue_keeps_later_notes_and_settings() {
             headword: record.headword,
             notes: "Notes saved after the rating\nÉcole : mon exemple.".into(),
             example_fr: "Je vais à l'école.".into(),
+            example_sense: None,
             example_zh: "我去学校。".into(),
             more_examples: vec![],
             id: Some(word),
@@ -664,7 +668,7 @@ fn legacy_schema_upgrade_undo_retry_survives_reopening() {
         )
         .unwrap();
         connection.execute("UPDATE review_ratings SET queue_before = json_remove(queue_before, '$.ordered_cards')", []).unwrap();
-        connection.execute_batch("DROP TABLE review_paused; DROP INDEX review_ratings_undo_operation; ALTER TABLE review_ratings DROP COLUMN undo_operation; ALTER TABLE review_ratings DROP COLUMN undo_queue_rebuilt; ALTER TABLE vocabulary DROP COLUMN example_fr; ALTER TABLE vocabulary DROP COLUMN example_zh; ALTER TABLE vocabulary DROP COLUMN more_examples; PRAGMA user_version = 5;").unwrap();
+        connection.execute_batch("DROP TABLE review_paused; DROP INDEX review_ratings_undo_operation; ALTER TABLE review_ratings DROP COLUMN undo_operation; ALTER TABLE review_ratings DROP COLUMN undo_queue_rebuilt; ALTER TABLE vocabulary DROP COLUMN example_fr; ALTER TABLE vocabulary DROP COLUMN example_zh; ALTER TABLE vocabulary DROP COLUMN more_examples; ALTER TABLE vocabulary DROP COLUMN example_sense; PRAGMA user_version = 5;").unwrap();
     }
     {
         let mut connection = Connection::open(&path).unwrap();

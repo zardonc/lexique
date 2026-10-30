@@ -16,7 +16,7 @@ test('example edits remain guarded and the saved pair appears on the recognition
   await page.locator('#example-zh-0').fill(saved.more_examples[0].zh);
   await page.getByRole('button', { name: '保存', exact: true }).click();
   await expect(page.getByRole('alert')).toContainText('disk full');
-  await expect(page.getByLabel('法语例句')).toHaveValue(saved.example_fr);
+  await expect(page.locator('#example-fr')).toHaveValue(saved.example_fr);
   await expect(page.locator('#example-fr-0')).toHaveValue(saved.more_examples[0].fr);
   await page.getByRole('button', { name: '保存', exact: true }).click();
   await expect(page.getByText('已保存', { exact: true })).toBeVisible();

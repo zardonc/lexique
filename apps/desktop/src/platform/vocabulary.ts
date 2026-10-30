@@ -21,11 +21,11 @@ const reference = z.object({
   sha256: z.string().regex(/^[a-f0-9]{64}$/),
 }).strict().readonly();
 export const recordSchema = z.object({
-  id: positiveId, headword, reference, digest: z.array(digestEntry).min(1).readonly(), notes, example_fr: notes, example_zh: notes, more_examples: moreExamples,
+  id: positiveId, headword, reference, digest: z.array(digestEntry).min(1).readonly(), notes, example_fr: notes, example_zh: notes, example_sense: z.number().int().nonnegative().safe().nullable(), more_examples: moreExamples,
   revision: positiveId, created_at: positiveId, updated_at: positiveId,
 }).strict().readonly();
 export const saveRequestSchema = z.object({
-  operation: z.string().min(1).max(128).regex(/^[a-zA-Z0-9-]+$/), headword, notes, example_fr: notes, example_zh: notes, more_examples: moreExamples,
+  operation: z.string().min(1).max(128).regex(/^[a-zA-Z0-9-]+$/), headword, notes, example_fr: notes, example_zh: notes, example_sense: z.number().int().nonnegative().safe().nullable(), more_examples: moreExamples,
   id: positiveId.nullable(), revision: positiveId.nullable(),
 }).strict().readonly().refine((value) => (value.id === null) === (value.revision === null));
 export const saveResultSchema = z.object({
