@@ -413,3 +413,5 @@ Obscura MCP 使用模拟桌面接口检查了识义卡展示；这不是原生�
 2026-10-30 补充：例句组现可明确关联收藏时摘要中的一个释义；旧记录保持未指定，不推断原意。`pnpm lint`、`pnpm typecheck`、`pnpm build`、`pnpm rust:fmt`、`pnpm rust:check`、`pnpm rust:test:build`、`pnpm test:rust` 通过；使用项目 `target/playwright-browsers` 中的 Playwright Chromium、固定 UTC 时区运行 `pnpm test:e2e -- --workers=2`，63 项通过，覆盖两类卡的多义词选择。Windows x64 release 原生检查使用合成数据库副本，验证所选释义、两条例句及复习进度重启恢复。未验证其他平台、完整 portable 包或真实音频播放；浏览器测试使用模拟 IPC，原生重启检查不覆盖完整原生复习流程。
 
 同日审查修复：新增或修改非空例句须选择释义，未关联的旧例句可原样保留并单独编辑笔记；冲突面板显示当前保存的例句释义。`pnpm lint`、`pnpm typecheck`、`pnpm build`、`pnpm rust:fmt`、`pnpm rust:check`、`pnpm rust:test:build` 和 `pnpm test:rust` 通过；固定 UTC 的 `pnpm test:e2e -- --workers=2` 64 项通过。浏览器测试使用模拟 IPC；本轮未重跑原生窗口、其他平台或真实音频播放。
+
+后续修复：两类卡默认展示按顺序首个非空例句，并按该例句标记缺项；其余非空例句仍可展开。`pnpm lint`、`pnpm typecheck`、`pnpm build` 和固定 UTC 的 `pnpm test:e2e -- --workers=2` 通过（65 项）。浏览器测试使用模拟 IPC，本轮未重跑原生窗口或真实音频播放。

@@ -10,15 +10,24 @@ function ExampleSense({ record, text }: { readonly record: VocabularyRecord; rea
   return <p>{text.exampleSense}：{meaning}</p>;
 }
 
+function Examples({ record, text }: { readonly record: VocabularyRecord; readonly text: NotebookText }) {
+  const examples = [{ fr: record.example_fr, zh: record.example_zh }, ...record.more_examples]
+    .filter((example) => example.fr.trim() || example.zh.trim());
+  const [first, ...rest] = examples;
+  return <>
+    {first && <section aria-label={text.exampleUser}><p>{text.exampleUser}</p>
+      {first.fr.trim() && <p lang="fr">{first.fr}</p>}{first.zh.trim() && <p lang="zh">{first.zh}</p>}</section>}
+    {(!first?.fr.trim() || !first?.zh.trim()) && <p>{text.exampleMissing}</p>}
+    {rest.length > 0 && <details><summary>{text.moreExamples}</summary>{rest.map((example, index) => <section key={index}>
+      <p lang="fr">{example.fr}</p><p lang="zh">{example.zh}</p>{(!example.fr.trim() || !example.zh.trim()) && <p>{text.exampleMissing}</p>}</section>)}</details>}
+  </>;
+}
+
 function Answer({ record, text }: { readonly record: VocabularyRecord; readonly text: NotebookText }) {
   return <>
     <p>{record.digest.map((entry) => entry.translation || text.missing).join(' · ')}</p>
     <ExampleSense record={record} text={text} />
-    {(record.example_fr || record.example_zh) && <section aria-label={text.exampleUser}><p>{text.exampleUser}</p>
-      {record.example_fr && <p lang="fr">{record.example_fr}</p>}{record.example_zh && <p lang="zh">{record.example_zh}</p>}</section>}
-    {(!record.example_fr.trim() || !record.example_zh.trim()) && <p>{text.exampleMissing}</p>}
-    {record.more_examples.length > 0 && <details><summary>{text.moreExamples}</summary>{record.more_examples.map((example, index) => <section key={index}>
-      <p lang="fr">{example.fr}</p><p lang="zh">{example.zh}</p>{(!example.fr.trim() || !example.zh.trim()) && <p>{text.exampleMissing}</p>}</section>)}</details>}
+    <Examples record={record} text={text} />
     <details><summary>{text.more}</summary><p>{record.notes || text.missing}</p>
       <p>{record.reference.dictionary} · {record.reference.version} · {record.reference.attribution} · {record.reference.license}</p>
       <p>{record.reference.source_url}</p><p>{record.reference.license_url}</p></details>

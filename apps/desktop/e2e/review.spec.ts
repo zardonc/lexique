@@ -26,7 +26,45 @@ test('both cards identify the meaning selected for an example', async ({ page })
   }
 });
 
-for (const [fr, zh, missing] of [['Bonjour.', '', true], ['', '你好。', true], ['Bonjour.', '你好。', false], ['', '', true]] as const) {
+test('both cards show the first nonempty later example by default', async ({ page }) => {
+  const exampleRecord = { ...record, example_fr: '  ', example_zh: '', more_examples: [
+    { fr: '', zh: ' ' }, { fr: 'Première phrase.', zh: '' }, { fr: 'Deuxième phrase.', zh: '第二句。' },
+  ] };
+  await nativeFixture(page, { vocabulary_list: [{ value: [exampleRecord] }],
+    review_cards: [{ value: [{ id: 10, kind: 'recognition' }, { id: 11, kind: 'listening' }] }], speech_cached: [{ value: audio }] });
+  await page.goto('/');
+  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.locator('.vocabulary-list button').click();
+  for (const [open, region] of [['查看识义卡', '识义卡'], ['查看听音卡', '听音卡']] as const) {
+    await page.getByRole('button', { name: open }).click();
+    const card = page.getByRole('region', { name: region });
+    await card.getByRole('button', { name: '显示答案' }).click();
+    await expect(card.getByText('Première phrase.')).toBeVisible();
+    await expect(card.getByText('待补例句')).toBeVisible();
+    await expect(card.getByText('Deuxième phrase.')).not.toBeVisible();
+    await card.getByText('更多例句').click();
+    await expect(card.getByText('Deuxième phrase.')).toBeVisible();
+    await expect(card.getByText('Première phrase.')).toHaveCount(1);
+    await card.getByRole('button', { name: region === '识义卡' ? '关闭卡片' : '跳过' }).click();
+  }
+});
+
+test('a complete later example does not show a missing marker', async ({ page }) => {
+  const exampleRecord = { ...record, more_examples: [{ fr: 'Une phrase.', zh: '一句话。' }] };
+  await nativeFixture(page, { vocabulary_list: [{ value: [exampleRecord] }], review_cards: [{ value: [{ id: 10, kind: 'recognition' }] }] });
+  await page.goto('/');
+  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.locator('.vocabulary-list button').click();
+  await page.getByRole('button', { name: '查看识义卡' }).click();
+  const card = page.getByRole('region', { name: '识义卡' });
+  await card.getByRole('button', { name: '显示答案' }).click();
+  await expect(card.getByText('Une phrase.')).toBeVisible();
+  await expect(card.getByText('一句话。')).toBeVisible();
+  await expect(card.getByText('待补例句')).toHaveCount(0);
+  await expect(card.getByText('更多例句')).toHaveCount(0);
+});
+
+for (const [fr, zh, missing] of [['Bonjour.', '', true], ['', '你好。', true], ['Bonjour.', '你好。', false]] as const) {
   test(`both cards show example completeness: ${fr || 'empty'} / ${zh || 'empty'}`, async ({ page }) => {
     const exampleRecord = { ...record, example_fr: fr, example_zh: zh, more_examples: [{ fr: 'Autre phrase.', zh: '另一句。' }] };
     await nativeFixture(page, { vocabulary_list: [{ value: [exampleRecord] }],
