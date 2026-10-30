@@ -61,6 +61,8 @@ class PortableTests(unittest.TestCase):
             description = zipped.read(prefix + "README.txt").decode("utf-8")
             self.assertIn("notes", description)
             self.assertNotIn("not notes", description)
+            self.assertIn("scoring", description.lower())
+            self.assertNotIn("Scoring and a full dictionary are not included", description)
         after = self.files()
         self.assertTrue(all(after[path] == content for path, content in before.items()))
 

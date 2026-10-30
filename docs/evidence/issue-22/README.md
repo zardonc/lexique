@@ -1,0 +1,30 @@
+# Issue #22：Windows x64 M2 集成证据（未完成）
+
+2026-10-30，在 Windows x64 上使用隔离的测试数据库与便携包副本执行以下检查。用户学习数据未参与测试；原生调试通过本地 WebView2 回环连接运行，并非断网测试。
+
+| 检查 | 结果 |
+| --- | --- |
+| `pnpm lint`、`pnpm typecheck`、`pnpm build` | 通过；Vite 报告依赖 PURE 注释警告 |
+| `pnpm rust:fmt`、`pnpm rust:check`、`pnpm rust:test:build`、`pnpm test:rust` | 通过；先独立编译，执行阶段仍使用硬 60 秒超时 |
+| `pnpm test:e2e` | 本机 Edge 66 项通过；浏览器使用模拟 IPC |
+| `pnpm test:resources`、`pnpm test:tooling` | 通过，包括真实语音资源打包；默认临时目录权限失败后改用项目 `target/tmp` |
+| `pnpm wasm:build`、`node scripts/check-wasm.mjs` | 实际加载 WASM 和 ABI 检查通过 |
+| `pnpm scheduling:build`、`pnpm test:scheduling` | 实际原生 / WASM：71 固定及 4,096 校准向量，数值最大误差为零，排程字段无差异 |
+| `cargo check --locked --workspace --target aarch64-pc-windows-msvc` | 通过；先调整 Python PATH，实际 ARM64 运行未测 |
+| `native-speech-check.mjs` | 真实生成、播放、慢速重播、失败替换和重启恢复通过；文件符号链接检查因权限跳过 |
+| `native-queue-check.mjs` | 队列、设置、评分、重启、撤销和继续评分通过；此脚本使用合成音频头 |
+| `native-review-sort-check.mjs` | 使用 #21 完整样本复验同时间排序、双卡最早到期和重启恢复通过；较早的不同样本缺少搜索标记，首次运行超时 |
+| `native-m2-check.mjs` | 真实语音生成后评分，编辑例句、调整设置、暂停，移动目录并重启，撤销后独立修改保留；调度内容恢复，修订号保持单调 |
+
+打包命令使用 #14 已接受的 `supertonic-evidence-v16-revised` 和 #15 Opus 资源：
+
+```powershell
+python -X utf8 scripts/package_portable.py --speech-bundle .tooling/issue-14/supertonic-evidence-v16-revised --speech-encoder .tooling/issue-15-opus/speech-stage/opusenc.dll --speech-sources .tooling/issue-15-opus --output-dir target/issue-22-delivery-20261030
+node apps/desktop/e2e/native-m2-check.mjs target/issue-22-delivery-20261030/Lexique-0.1.0-windows-x64-portable-speech .tooling/issue-15-native-cache-check/Lexique-data/data/lexique.sqlite3 target/NEW-CHECK target/NEW-MOVED-CHECK
+```
+
+输出目录必须不存在。ZIP 为 165,610,559 字节，SHA-256 `f825397f4441608821f732261b45425ed7f4fa9bb9a1e366f2bde60ab3f3a12d`；回读校验 1,072 文件。解压文件总逻辑大小 261,056,585 字节，语音资源 241,571,209 字节；主程序 13,772,288 字节，SHA-256 `72c3a6d900b7f2e1f31f251c4769782a6f4e67b3da45e8c2994afab175ea82c4`。不包括系统 WebView2 / VC 运行库和运行数据，不能当成完整离线依赖下载量或干净机器占用。许可证及上游固定资源说明沿用 [#14](../issue-14/README.md) 和 [#15](../issue-15/README.md)；#15 的 `école` 音频已获用户听感确认，不能推断本轮新文件已逐一人工验收。
+
+受限 AppContainer 探针确认测试进程及应用进程没有网络能力，`1.1.1.1:443` 返回 WinError 10013，DNS 查询失败；应用窗口已创建。原生窗口自动化访问审批超时，未能在受限进程中执行操作，因此不能把这一启动探针或普通网络下的原生测试合并表述为完整断网链路。
+
+仍需：受限网络下真实添加、生成 / 播放、评分、失败 / 部分失败重试、重启与移动后的完整交互；完整离线系统依赖压缩体积和干净机器验证；macOS 两目标编译，以及 Windows ARM64 和 macOS 两目标实际运行。macOS M1 阻塞和 M5 四目标发行门槛不变。完整 M2 验收尚未通过。

@@ -72,7 +72,7 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
         "A read-only location fails; there is no fallback to AppData.\n\n"
         "This sample provides FreeDict fra-zho lookup and M1 vocabulary notes with explicit save,\n"
         "search, sorting and restart recovery. Saved words can be added to two review cards;\n"
-        "card identity and content survive restart. Scoring and a full dictionary are not included.\n"
+        "review scoring and card progress survive restart. A full dictionary is not included.\n"
         + ("Offline speech is included for development testing. See speech/docs for its licenses.\n"
            "The voice is machine-generated; model use restrictions apply.\n"
            if all(speech_inputs) else "TTS is not included.\n") +
