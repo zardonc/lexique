@@ -42,10 +42,14 @@ async function start() {
   throw new Error('Native window unavailable');
 }
 async function stop() {
-  if (browser) { await browser.close(); browser = undefined; }
-  if (child?.pid && child.exitCode === null) spawnSync('taskkill', ['/PID', String(child.pid), '/T', '/F'], { stdio: 'ignore' });
-  child = undefined;
-  await delay(500);
+  try {
+    if (browser) await browser.close();
+  } finally {
+    browser = undefined;
+    if (child?.pid && child.exitCode === null) spawnSync('taskkill', ['/PID', String(child.pid), '/T', '/F'], { stdio: 'ignore' });
+    child = undefined;
+    await delay(500);
+  }
 }
 try {
   let page = await start();
@@ -78,9 +82,14 @@ try {
     const settings = { retention_percent: 87, new_limit: 7, review_limit: 13 };
     await invoke('review_settings', { settings });
     await invoke('review_pause', { vocabularyId: id, paused: true });
-    return { settings, target: await invoke('review_undo_target') };
+    await invoke('review_auto_enroll', { enabled: true });
+    const target = await invoke('review_undo_target');
+    const rejected = await invoke('review_undo', { operation: 'm2-invalid-undo', ratingOperation: 'm2-invalid-rating' });
+    return { settings, target, rejected, targetAfterRejection: await invoke('review_undo_target') };
   }, before.word.id);
   assert.ok(changed.target);
+  assert.equal(changed.rejected.status, 'rejected');
+  assert.equal(changed.targetAfterRejection, changed.target);
   await stop();
   await rename(destination, moved);
   directory = moved;
@@ -90,10 +99,12 @@ try {
     return { words: await invoke('vocabulary_list', { query: '', sort: 'headword-asc' }),
       settings: await invoke('review_settings', { settings: null }),
       paused: await invoke('review_pause', { vocabularyId: id, paused: null }),
+      autoEnroll: await invoke('review_auto_enroll', { enabled: null }),
       target: await invoke('review_undo_target'), audio: await invoke('speech_cached', { vocabularyId: id }) };
   }, before.word.id);
   assert.deepEqual(restored.settings, changed.settings);
   assert.equal(restored.paused, true);
+  assert.equal(restored.autoEnroll, true);
   assert.equal(restored.target, changed.target);
   assert.deepEqual(restored.audio, before.audio);
   await page.getByRole('button', { name: '闪卡复习', exact: true }).click();
@@ -105,12 +116,14 @@ try {
     const cards = await invoke('review_cards', { vocabularyId: id });
     return { word: words.find((item) => item.id === id), settings: await invoke('review_settings', { settings: null }),
       paused: await invoke('review_pause', { vocabularyId: id, paused: null }),
+      autoEnroll: await invoke('review_auto_enroll', { enabled: null }),
       progress: await Promise.all(cards.map((card) => invoke('review_progress', { cardId: card.id }))) };
   }, before.word.id);
   assert.equal(after.word.example_fr, 'Je vais à l’école.');
   assert.equal(after.word.example_zh, '我去学校。');
   assert.deepEqual(after.settings, changed.settings);
   assert.equal(after.paused, true);
+  assert.equal(after.autoEnroll, true);
   assert.deepEqual(after.progress.map((item) => item.card), before.progress.map((item) => item.card));
   assert.ok(after.progress.every((item, index) => item.revision >= before.progress[index].revision));
   console.log('Native rating, independent edits, portable move and undo preserved their state');
