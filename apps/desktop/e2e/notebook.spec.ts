@@ -1,6 +1,24 @@
 import { expect, test } from '@playwright/test';
 import { collect, nativeFixture, record } from './native-fixture';
 
+test('rating a card refreshes the review-time order in the open notebook', async ({ page }) => {
+  const other = { ...record, id: 2, headword: 'bonjour' };
+  await nativeFixture(page, {
+    vocabulary_list: [{ value: [other, record] }, { value: [other, record] }, { value: [record, other] }],
+    review_cards: [{ value: [{ id: 10, kind: 'recognition' }] }],
+    review_rate: [{ value: { status: 'committed', result: { card: { phase: 'learning_first', memory: { stability: 1, difficulty: 5 }, last_review_at: 1700000000, due_at: 1700000060 }, elapsed_days: 0, step_seconds: 60, interval_days: null, model: { version: 'v', parameters: [] }, retention_percent: 90, timezone_database: 'v' } } }],
+  });
+  await page.goto('/');
+  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByLabel('排序方式').selectOption('review-due-asc');
+  await page.getByRole('button', { name: /école/ }).click();
+  await page.getByRole('button', { name: '查看识义卡' }).click();
+  const card = page.getByRole('region', { name: '识义卡' });
+  await card.getByRole('button', { name: '显示答案' }).click();
+  await card.getByRole('button', { name: '忘记' }).click();
+  await expect(page.locator('.vocabulary-list button').first()).toContainText('école');
+});
+
 test('example edits remain guarded and the saved pair appears on the recognition card', async ({ page }) => {
   const saved = { ...record, revision: 2, example_sense: 0, example_fr: 'Je vais à l’école.', example_zh: '我去学校。', more_examples: [{ fr: 'Une autre phrase.', zh: '另一句话。' }] };
   await nativeFixture(page, { vocabulary_list: [{ value: [record] }],
@@ -277,7 +295,7 @@ test('all sort directions persist through the adapter and notebook works in thre
   await nativeFixture(page, { vocabulary_list: [{ value: [record] }] });
   await page.goto('/'); await page.getByRole('button', { name: '生词本', exact: true }).click();
   await expect(page.getByLabel('排序方式')).toHaveValue('updated-desc');
-  for (const sort of ['headword-asc', 'headword-desc', 'created-asc', 'created-desc', 'updated-asc', 'updated-desc']) {
+  for (const sort of ['headword-asc', 'headword-desc', 'created-asc', 'created-desc', 'updated-asc', 'updated-desc', 'review-due-asc']) {
     await page.getByLabel('排序方式').selectOption(sort);
     await expect(page.getByLabel('排序方式')).toBeEnabled();
     await expect.poll(() => page.evaluate((expected) => window.testNative.calls.filter((call) =>

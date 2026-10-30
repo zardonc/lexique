@@ -46,6 +46,8 @@ export function App({ runtime }: { readonly runtime: RuntimeAdapter }) {
   const [page, setPage] = useState(0);
   const [collapsed, setCollapsed] = useState(false);
   const [batchBusy, setBatchBusy] = useState(false);
+  const [reviewVersion, setReviewVersion] = useState(0);
+  const reviewChanged = () => setReviewVersion((value) => value + 1);
   const text = messages[locale];
   const notebookText = notebookMessages[locale];
   const notebook = useNotebook(runtime);
@@ -65,11 +67,11 @@ export function App({ runtime }: { readonly runtime: RuntimeAdapter }) {
             onCollect={(result) => guard.request(() => notebook.collect(result))}
             onOpen={(record) => guard.request(() => notebook.open(record))}
             beforeSearch={(action) => guard.request(() => { notebook.clear(); action(); })} /> : page === 2 ?
-            <NotebookPanel runtime={runtime} version={notebook.version} text={notebookText} onWorkingChange={setBatchBusy}
+            <NotebookPanel runtime={runtime} version={notebook.version + reviewVersion} text={notebookText} onWorkingChange={setBatchBusy} onReviewChanged={reviewChanged}
               onOpen={(record) => guard.request(() => notebook.open(record))} /> : page === 3 ? <ReviewQueuePanel runtime={runtime} locale={locale} text={notebookText} /> : page === 7 ?
             <><ReviewSettingsPanel runtime={runtime} locale={locale} /><SpeechSettings runtime={runtime} locale={locale} /></> :
             <div className="empty-state"><p>{text.pending[page]}</p><small>{text.scaffold}</small></div>}
-          <VocabularyEditor notebook={notebook} text={notebookText} runtime={runtime} viewExisting={() => {
+          <VocabularyEditor notebook={notebook} text={notebookText} runtime={runtime} onReviewChanged={reviewChanged} viewExisting={() => {
             if (notebook.existing) { const record = notebook.existing; guard.request(() => notebook.open(record)); }
           }} />
           {page === 2 && notebook.editor && <RecordOriginal headword={notebook.editor.snapshot.reference.lookup_key}

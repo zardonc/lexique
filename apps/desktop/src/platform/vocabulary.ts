@@ -31,7 +31,7 @@ export const saveRequestSchema = z.object({
 export const saveResultSchema = z.object({
   outcome: z.enum(['created', 'existing', 'updated', 'replayed', 'conflict']), record: recordSchema,
 }).strict().readonly();
-export const sortSchema = z.enum(['headword-asc', 'headword-desc', 'created-asc', 'created-desc', 'updated-asc', 'updated-desc']);
+export const sortSchema = z.enum(['headword-asc', 'headword-desc', 'created-asc', 'created-desc', 'updated-asc', 'updated-desc', 'review-due-asc']);
 export type VocabularyRecord = z.infer<typeof recordSchema>;
 export type SaveRequest = z.infer<typeof saveRequestSchema>;
 export type SaveResult = z.infer<typeof saveResultSchema>;

@@ -535,3 +535,114 @@ fn sorting_is_stable_in_each_direction_and_search_keeps_the_order() {
         assert_eq!(asc, desc);
     }
 }
+
+#[test]
+fn review_due_sort_prioritizes_learned_then_enrolled_then_other_records() {
+    let mut connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    let mut ids = Vec::new();
+    for (index, word) in ["zèbre", "école", "avion", "bateau"].iter().enumerate() {
+        ids.push(
+            save(
+                &mut connection,
+                &create(&format!("due-{index}"), word, "match"),
+                Some(snapshot()),
+            )
+            .unwrap()
+            .record
+            .id,
+        );
+    }
+    let cards = lexique_storage::add_review(&mut connection, ids[0]).unwrap();
+    lexique_storage::add_review(&mut connection, ids[1]).unwrap();
+    lexique_storage::add_review(&mut connection, ids[2]).unwrap();
+    let now = 1_700_000_000;
+    lexique_storage::review_queue(&mut connection, now, "UTC").unwrap();
+    lexique_storage::rate_card(
+        &mut connection,
+        &lexique_storage::RatingRequest {
+            operation: "due-rating".into(),
+            card_id: cards[0].id,
+            expected_revision: 0,
+            rating: lexique_core::scheduling::Rating::Good,
+            now,
+            timezone: "UTC".into(),
+        },
+    )
+    .unwrap();
+    let words: Vec<_> = list(&connection, "match", "review-due-asc")
+        .unwrap()
+        .into_iter()
+        .map(|record| record.headword)
+        .collect();
+    assert_eq!(words, ["zèbre", "avion", "école", "bateau"]);
+}
+
+#[test]
+fn review_due_sort_uses_earliest_card_and_survives_reopen_and_pause() {
+    let path = database_path("review-due");
+    {
+        let mut connection = Connection::open(&path).unwrap();
+        initialize(&connection).unwrap();
+        let mut ids = Vec::new();
+        for (index, word) in ["zèbre", "avion", "bateau", "chat"].iter().enumerate() {
+            ids.push(
+                save(
+                    &mut connection,
+                    &create(&format!("persist-due-{index}"), word, "match"),
+                    Some(snapshot()),
+                )
+                .unwrap()
+                .record
+                .id,
+            );
+        }
+        let z = lexique_storage::add_review(&mut connection, ids[0]).unwrap();
+        let a = lexique_storage::add_review(&mut connection, ids[1]).unwrap();
+        lexique_storage::add_review(&mut connection, ids[2]).unwrap();
+        let now = 1_700_000_000;
+        lexique_storage::review_queue(&mut connection, now, "UTC").unwrap();
+        for (operation, card_id, time) in [("rate-z", z[0].id, now), ("rate-a", a[0].id, now)] {
+            lexique_storage::rate_card(
+                &mut connection,
+                &lexique_storage::RatingRequest {
+                    operation: operation.into(),
+                    card_id,
+                    expected_revision: 0,
+                    rating: lexique_core::scheduling::Rating::Good,
+                    now: time,
+                    timezone: "UTC".into(),
+                },
+            )
+            .unwrap();
+        }
+        let later = now + 86_400;
+        lexique_storage::review_queue(&mut connection, later, "UTC").unwrap();
+        lexique_storage::rate_card(
+            &mut connection,
+            &lexique_storage::RatingRequest {
+                operation: "rate-z-listening".into(),
+                card_id: z[1].id,
+                expected_revision: 0,
+                rating: lexique_core::scheduling::Rating::Good,
+                now: later,
+                timezone: "UTC".into(),
+            },
+        )
+        .unwrap();
+        lexique_storage::set_review_paused(&mut connection, ids[0], true).unwrap();
+        set_sort_preference(&connection, "review-due-asc").unwrap();
+    }
+    {
+        let connection = Connection::open(&path).unwrap();
+        initialize(&connection).unwrap();
+        assert_eq!(sort_preference(&connection).unwrap(), "review-due-asc");
+        let words: Vec<_> = list(&connection, "match", &sort_preference(&connection).unwrap())
+            .unwrap()
+            .into_iter()
+            .map(|record| record.headword)
+            .collect();
+        assert_eq!(words, ["avion", "zèbre", "bateau", "chat"]);
+    }
+    std::fs::remove_file(path).unwrap();
+}

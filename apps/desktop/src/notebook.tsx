@@ -39,7 +39,9 @@ function useVocabularyList(runtime: RuntimeAdapter, version: number) {
   return { query, setQuery, sort, records, error, busy, changeSort, retry: () => setRetry((value) => value + 1) };
 }
 
-function useBatchReview(runtime: RuntimeAdapter, text: NotebookText, onWorkingChange: (working: boolean) => void) {
+function useBatchReview({ runtime, text, onWorkingChange, onReviewChanged }: {
+  readonly runtime: RuntimeAdapter; readonly text: NotebookText; readonly onWorkingChange: (working: boolean) => void; readonly onReviewChanged: () => void;
+}) {
   const [selected, setSelected] = useState<readonly number[]>([]);
   const [results, setResults] = useState<readonly { readonly record: VocabularyRecord; readonly action: 'add' | 'pause' | 'resume'; readonly error: string; readonly added: boolean }[]>([]);
   const [working, setWorking] = useState(false);
@@ -60,7 +62,7 @@ function useBatchReview(runtime: RuntimeAdapter, text: NotebookText, onWorkingCh
   async function run(records: readonly VocabularyRecord[], action: 'add' | 'pause' | 'resume') {
     setWorking(true); onWorkingChange(true);
     try { for (const record of records) await perform(record, action); }
-    finally { setWorking(false); onWorkingChange(false); }
+    finally { setWorking(false); onWorkingChange(false); onReviewChanged(); }
   }
   return { selected, setSelected, results, setResults, working, run };
 }
@@ -88,13 +90,14 @@ function BatchControls({ records, batch, text }: { readonly records: readonly Vo
       <button key={action} disabled={working || !selected.length} onClick={() => { setResults([]); void run(records.filter((record) => selected.includes(record.id)), action); }}>{label}</button>)}</div></>;
 }
 
-export function NotebookPanel({ runtime, version, text, onOpen, onWorkingChange }: {
+export function NotebookPanel({ runtime, version, text, onOpen, onWorkingChange, onReviewChanged }: {
   readonly runtime: RuntimeAdapter; readonly version: number; readonly text: NotebookText;
   readonly onOpen: (record: VocabularyRecord) => void;
   readonly onWorkingChange: (working: boolean) => void;
+  readonly onReviewChanged: () => void;
 }) {
   const list = useVocabularyList(runtime, version);
-  const batch = useBatchReview(runtime, text, onWorkingChange);
+  const batch = useBatchReview({ runtime, text, onWorkingChange, onReviewChanged });
   const { selected, setSelected, results, setResults, working, run } = batch;
   if (list.records === null) return <p role="status">{text.preview}</p>;
   return <section className="notebook" aria-label={text.search}>

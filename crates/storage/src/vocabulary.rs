@@ -338,6 +338,7 @@ pub fn validate_sort(sort: &str) -> Result<(), StorageError> {
         "created-desc",
         "updated-asc",
         "updated-desc",
+        "review-due-asc",
     ]
     .contains(&sort)
     {
@@ -402,6 +403,29 @@ pub fn list(
             .iter()
             .any(|value| search_key(value).contains(&query))
     });
+    if sort == "review-due-asc" {
+        let mut statement = connection.prepare("SELECT id, vocabulary_id FROM review_cards")?;
+        let cards =
+            statement.query_map([], |row| Ok((row.get::<_, i64>(0)?, row.get::<_, i64>(1)?)))?;
+        let mut due = std::collections::HashMap::new();
+        for card in cards {
+            let (card_id, vocabulary_id) = card?;
+            let progress = crate::review_progress(connection, card_id)?;
+            let entry = due.entry(vocabulary_id).or_insert(None::<i64>);
+            if let Some(time) = progress.card.due_at {
+                *entry = Some(entry.map_or(time, |old| old.min(time)));
+            }
+        }
+        records.sort_by_cached_key(|record| {
+            let (group, time) = match due.get(&record.id) {
+                Some(Some(time)) => (0, *time),
+                Some(None) => (1, 0),
+                None => (2, 0),
+            };
+            (group, time, search_key(&record.headword), record.id)
+        });
+        return Ok(records);
+    }
     records.sort_by_cached_key(|record| match sort.split('-').next().unwrap_or_default() {
         "headword" => (0, search_key(&record.headword), record.id),
         "created" => (record.created_at, String::new(), record.id),

@@ -1,5 +1,15 @@
 # 骨架验证记录
 
+## M2 下次复习时间排序（issue #21）
+
+2026-10-30：生词本按已学习卡最早原始到期时间排序，已加入但未学习的记录随后，未加入的记录最后，同组按词头稳定排序。评分和加入复习后刷新列表；排序偏好保存并恢复。来源为 [#9 的 D4](https://github.com/zardonc/lexique/issues/9)。
+
+- `pnpm lint`、`pnpm typecheck`、`pnpm build`、`pnpm rust:fmt`、`pnpm rust:check`、`pnpm rust:test:build` 后 `pnpm test:rust`：通过，后端执行保留 60 秒限制。SQLite 测试覆盖双卡不同到期、同时间、未学习、暂停、搜索及数据库重开。
+- `pnpm test:e2e`：Edge 66 项通过，包括评分后列表刷新和新排序选项。首次并行测试期间修改源文件触发热重载，4 项失败；代码稳定后完整重跑通过。
+- `pnpm desktop:build --no-bundle` 和 `node apps/desktop/e2e/native-review-sort-check.mjs target/issue-20-sense-20261030 target/release/lexique-desktop.exe target/issue-21-native-20261030`：Windows x64 隔离新数据库中真实评分、界面重排和重启恢复通过；测试进程已停止。
+
+其他平台未实机验证；撤销、暂停及批量选择的最终组合由 #22 补验。浏览器测试使用原生接口 fixture，不证明原生持久化。
+
 ## M2 批量管理与暂停（issue #19）
 
 2026-10-29 独立验收：审查 `18feb64...058c18e`，未发现确定的规格缺陷或规范违规；双卡创建在自动加入和手动加入处重复，属于维护性风险。补充公开存储测试验证暂停后恢复仍遵守新卡额度、听音不可用过滤及同词暂缓。复跑 `pnpm lint`、`pnpm typecheck`、`pnpm build`、`pnpm rust:fmt`、`pnpm rust:check`、`pnpm rust:test:build` 后 `pnpm test:rust`（57 项，执行硬 60 秒限制）及 Edge `pnpm test:e2e`（57 项）均通过。Windows x64 release 重新构建后，以先前创建的合成数据库副本运行 `native-management-check.mjs`，设置、暂停、队列过滤、重启、恢复和新收藏自动建卡通过。

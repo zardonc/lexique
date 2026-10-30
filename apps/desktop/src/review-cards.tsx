@@ -141,7 +141,9 @@ function usePause({ id, runtime, text, setError, setBusy }: { readonly id: numbe
   return { paused, changePause };
 }
 
-function useReviewCards(id: number, runtime: RuntimeAdapter, text: NotebookText) {
+function useReviewCards({ id, runtime, text, onChanged }: {
+  readonly id: number; readonly runtime: RuntimeAdapter; readonly text: NotebookText; readonly onChanged: () => void;
+}) {
   const [cards, setCards] = useState<readonly ReviewCard[]>([]);
   const [error, setError] = useState('');
   const [busy, setBusy] = useState(false);
@@ -172,6 +174,7 @@ function useReviewCards(id: number, runtime: RuntimeAdapter, text: NotebookText)
       const result = await runtime.addReview(id);
       if (!result) throw new Error('Native review storage unavailable');
       setCards(result);
+      onChanged();
       if (!audio || playbackFailed) {
         const generated = await runtime.generateSpeech(id, playbackFailed);
         if (!generated) throw new Error('Native speech unavailable');
@@ -184,17 +187,17 @@ function useReviewCards(id: number, runtime: RuntimeAdapter, text: NotebookText)
   return { cards, error, busy, loading, audio, playbackFailed, setPlaybackFailed, paused, add, changePause };
 }
 
-export function ReviewCards({ record, runtime, text }: {
-  readonly record: VocabularyRecord; readonly runtime: RuntimeAdapter; readonly text: NotebookText;
+export function ReviewCards({ record, runtime, text, onChanged }: {
+  readonly record: VocabularyRecord; readonly runtime: RuntimeAdapter; readonly text: NotebookText; readonly onChanged: () => void;
 }) {
-  const { cards, error, busy, loading, audio, setPlaybackFailed, paused, add, changePause } = useReviewCards(record.id, runtime, text);
+  const { cards, error, busy, loading, audio, setPlaybackFailed, paused, add, changePause } = useReviewCards({ id: record.id, runtime, text, onChanged });
   return <section>
     <div className="actions"><button disabled={busy || loading} onClick={() => { void add(); }}>{text.addReview}</button></div>
     {cards.length > 0 && paused !== null && <div className="actions"><button disabled={busy} onClick={() => void changePause(!paused)}>{paused ? text.resume : text.pause}</button></div>}
     {paused && <p role="status">{text.paused}</p>}
     {error && <p role="alert">{text.reviewError}: {error}</p>}
-    {paused !== null && cards.filter((card) => card.kind === 'recognition').map((card) => <RecognitionCard key={`${card.id}-${paused}`} card={card} record={record} text={text} runtime={runtime} />)}
+    {paused !== null && cards.filter((card) => card.kind === 'recognition').map((card) => <RecognitionCard key={`${card.id}-${paused}`} card={card} record={record} text={text} runtime={runtime} onRated={onChanged} />)}
     {paused !== null && cards.filter((card) => card.kind === 'listening').map((card) => <div key={`${card.id}-${paused}`}><p>{audio ? text.listeningReady : text.listeningPending}</p>
-      {audio && <ListeningCard card={card} record={record} text={text} runtime={runtime} audio={audio} onPlayback={setPlaybackFailed} />}</div>)}
+      {audio && <ListeningCard card={card} record={record} text={text} runtime={runtime} audio={audio} onPlayback={setPlaybackFailed} onRated={onChanged} />}</div>)}
   </section>;
 }

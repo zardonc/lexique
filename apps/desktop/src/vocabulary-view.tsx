@@ -70,8 +70,8 @@ function ExampleEditor({ notebook, text }: { readonly notebook: Notebook; readon
     {overLimit && <p id="example-limit" role="alert">{text.exampleLimit}</p>}</>;
 }
 
-export function VocabularyEditor({ notebook, text, viewExisting, runtime }: {
-  readonly notebook: Notebook; readonly text: NotebookText; readonly viewExisting: () => void; readonly runtime: RuntimeAdapter;
+export function VocabularyEditor({ notebook, text, viewExisting, runtime, onReviewChanged }: {
+  readonly notebook: Notebook; readonly text: NotebookText; readonly viewExisting: () => void; readonly runtime: RuntimeAdapter; readonly onReviewChanged: () => void;
 }) {
   const textarea = useRef<HTMLTextAreaElement>(null);
   const headword = notebook.editor?.snapshot.headword;
@@ -91,7 +91,7 @@ export function VocabularyEditor({ notebook, text, viewExisting, runtime }: {
     {notebook.error && <p role="alert">{text.saveError}: {notebook.error}</p>}
     {notebook.audioError && <p role="alert">{text.listeningPending}: {notebook.audioError}</p>}
     <SaveActions notebook={notebook} text={text} overLimit={overLimit} />
-    {notebook.editor.record && <ReviewCards key={`${notebook.editor.record.id}-${notebook.version}`} record={notebook.editor.record} runtime={runtime} text={text} />}
+    {notebook.editor.record && <ReviewCards key={`${notebook.editor.record.id}-${notebook.version}`} record={notebook.editor.record} runtime={runtime} text={text} onChanged={onReviewChanged} />}
     {notebook.existing && <p role="status">{text.existing} <button onClick={viewExisting}>{text.view}</button></p>}
     <Conflict notebook={notebook} text={text} /><SavedSource snapshot={snapshot} text={text} />
   </section>;
