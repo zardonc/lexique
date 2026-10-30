@@ -2,13 +2,14 @@ import { expect, test } from '@playwright/test';
 import { collect, nativeFixture, record } from './native-fixture';
 
 test('example edits remain guarded and the saved pair appears on the recognition card', async ({ page }) => {
-  const saved = { ...record, revision: 2, example_fr: 'Je vais à l’école.', example_zh: '我去学校。', more_examples: [{ fr: 'Une autre phrase.', zh: '另一句话。' }] };
+  const saved = { ...record, revision: 2, example_sense: 0, example_fr: 'Je vais à l’école.', example_zh: '我去学校。', more_examples: [{ fr: 'Une autre phrase.', zh: '另一句话。' }] };
   await nativeFixture(page, { vocabulary_list: [{ value: [record] }],
     vocabulary_save: [{ error: 'disk full' }, { value: { outcome: 'updated', record: saved } }],
     review_cards: [{ value: [{ id: 1, kind: 'recognition' }] }] });
   await page.goto('/');
   await page.getByRole('button', { name: '生词本', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
+  await page.getByLabel('例句对应释义').selectOption('0');
   await page.getByLabel('法语例句').fill(saved.example_fr);
   await page.getByLabel('例句中文译文').fill(saved.example_zh);
   await page.getByRole('button', { name: '添加例句' }).click();
@@ -292,4 +293,16 @@ test('all sort directions persist through the adapter and notebook works in thre
   await expect(page.getByLabel('独立笔记', { exact: true })).toBeFocused();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   await page.screenshot({ path: 'test-results/notebook-mobile.png', fullPage: true });
+});
+test('new examples require a meaning and a conflict shows the saved meaning', async ({ page }) => {
+  const current = { ...record, example_sense: 1, revision: 2 };
+  await nativeFixture(page, { vocabulary_list: [{ value: [record] }], vocabulary_save: [{ value: { outcome: 'conflict', record: current } }] });
+  await page.goto('/');
+  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.locator('.vocabulary-list button').click();
+  await page.getByLabel('法语例句').fill('Une phrase.');
+  await expect(page.getByRole('button', { name: '保存', exact: true })).toBeDisabled();
+  await page.getByLabel('例句对应释义').selectOption('0');
+  await page.getByRole('button', { name: '保存', exact: true }).click();
+  await expect(page.getByRole('alert')).toContainText('流派');
 });

@@ -31,6 +31,7 @@ function Conflict({ notebook, text }: { readonly notebook: Notebook; readonly te
     <h4>{text.conflict}</h4><p>{text.current}</p><pre>{notebook.conflict.notes || '∅'}</pre>
     <p>{text.exampleFr}</p><pre>{notebook.conflict.example_fr || '∅'}</pre>
     <p>{text.exampleZh}</p><pre>{notebook.conflict.example_zh || '∅'}</pre>
+    <p>{text.exampleSense}</p><pre>{notebook.conflict.example_sense === null ? text.exampleSenseUnspecified : notebook.conflict.digest[notebook.conflict.example_sense]?.translation || text.missing}</pre>
     {notebook.conflict.more_examples.map((example, index) => <pre key={index}>{example.fr}{'\n'}{example.zh}</pre>)}
     <p>{text.discardWarning}</p><div className="actions">
       <button disabled={notebook.busy} onClick={notebook.adopt}>{text.adopt}</button>
@@ -42,7 +43,7 @@ function Conflict({ notebook, text }: { readonly notebook: Notebook; readonly te
 function SaveActions({ notebook, text, overLimit }: {
   readonly notebook: Notebook; readonly text: NotebookText; readonly overLimit: boolean;
 }) {
-  return <div className="actions"><button disabled={overLimit || notebook.busy || !notebook.dirty}
+  return <div className="actions"><button disabled={overLimit || notebook.meaningRequired || notebook.busy || !notebook.dirty}
     onClick={() => { void notebook.save(); }}>{notebook.busy ? text.saving : text.save}</button>
     <span role="status">{notebook.saved ? text.saved : notebook.dirty ? text.unsaved : ''}</span></div>;
 }
@@ -58,6 +59,7 @@ function ExampleEditor({ notebook, text }: { readonly notebook: Notebook; readon
     <label htmlFor="example-sense">{text.exampleSense}</label><select id="example-sense" disabled={notebook.busy} value={editor.example_sense === null ? '' : String(editor.example_sense)} onChange={(event) => notebook.editSense(event.target.value === '' ? null : Number(event.target.value))}>
       <option value="">{text.exampleSenseUnspecified}</option>{editor.snapshot.digest.map((entry, index) => <option key={index} value={index}>{entry.translation || text.missing}</option>)}
     </select>
+    {notebook.meaningRequired && <p role="alert">{text.exampleSenseRequired}</p>}
     <label htmlFor="example-fr">{text.exampleFr}</label><textarea id="example-fr" lang="fr" value={editor.example_fr} disabled={notebook.busy} rows={3} aria-invalid={characterCount(editor.example_fr) > 20_000} aria-describedby={overLimit ? 'example-limit' : undefined} onChange={(event) => notebook.editExample('example_fr', event.target.value)} />
     <label htmlFor="example-zh">{text.exampleZh}</label><textarea id="example-zh" lang="zh" value={editor.example_zh} disabled={notebook.busy} rows={3} aria-invalid={characterCount(editor.example_zh) > 20_000} aria-describedby={overLimit ? 'example-limit' : undefined} onChange={(event) => notebook.editExample('example_zh', event.target.value)} />
     {editor.more_examples.map((example, index) => <fieldset key={index}><legend>{text.exampleUser} {index + 2}</legend>

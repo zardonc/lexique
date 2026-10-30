@@ -96,6 +96,48 @@ fn save_request_requires_all_example_fields() {
 }
 
 #[test]
+fn unassigned_legacy_examples_are_preserved_but_new_edits_require_a_meaning() {
+    let mut connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    let original = save(
+        &mut connection,
+        &create("legacy-word", "école", ""),
+        Some(snapshot()),
+    )
+    .unwrap()
+    .record;
+    let mut new_example = update("new-example", &original, "");
+    new_example.example_fr = "Bonjour".into();
+    assert!(save(&mut connection, &new_example, None).is_err());
+    connection
+        .execute(
+            "UPDATE vocabulary SET example_fr = ?1 WHERE id = ?2",
+            rusqlite::params!["Legacy", original.id],
+        )
+        .unwrap();
+    let legacy = get(&connection, original.id).unwrap();
+    let preserved = save(
+        &mut connection,
+        &update("notes-only", &legacy, "note"),
+        None,
+    )
+    .unwrap()
+    .record;
+    assert_eq!(preserved.example_fr, "Legacy");
+    let mut edit = update("edit-legacy", &preserved, "note");
+    edit.example_fr = "Changed".into();
+    assert!(save(&mut connection, &edit, None).is_err());
+    edit.example_sense = Some(0);
+    assert_eq!(
+        save(&mut connection, &edit, None)
+            .unwrap()
+            .record
+            .example_fr,
+        "Changed"
+    );
+}
+
+#[test]
 fn example_meaning_survives_upgrade_and_rejects_out_of_range() {
     let mut connection = Connection::open_in_memory().unwrap();
     initialize(&connection).unwrap();
@@ -139,6 +181,7 @@ fn review_example_is_saved_with_revision_and_safe_retry() {
     let mut value = serde_json::to_value(update("example-edit", &original, "note")).unwrap();
     value["example_fr"] = "Je vais à l'école.".into();
     value["example_zh"] = "".into();
+    value["example_sense"] = 0.into();
     let request: SaveRequest = serde_json::from_value(value).unwrap();
     let saved = save(&mut connection, &request, None).unwrap();
     assert_eq!(
@@ -398,6 +441,7 @@ fn file_database_reopens_with_record_identity_content_and_sort_preference() {
         let mut request = update("persistent-example", &created, &created.notes);
         request.example_fr = "Je vais à l'école.".into();
         request.example_zh = "我去学校。".into();
+        request.example_sense = Some(0);
         request.more_examples.push(lexique_storage::Example {
             fr: "Une autre phrase.".into(),
             zh: "另一句话。".into(),

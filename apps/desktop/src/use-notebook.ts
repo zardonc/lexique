@@ -27,6 +27,13 @@ function samePayload(previous: SaveRequest, payload: ReturnType<typeof savePaylo
   return Object.entries(payload).every(([key, value]) => JSON.stringify(previous[key as keyof SaveRequest]) === JSON.stringify(value));
 }
 
+function needsExampleSense(editor: Editor) {
+  const hasContent = [editor.example_fr, editor.example_zh, ...editor.more_examples.flatMap((example) => [example.fr, example.zh])].some((value) => value.trim());
+  const original = editor.record;
+  const unchangedLegacy = original && original.example_sense === null && editor.example_fr === original.example_fr && editor.example_zh === original.example_zh && JSON.stringify(editor.more_examples) === JSON.stringify(original.more_examples);
+  return editor.example_sense === null && hasContent && !unchangedLegacy;
+}
+
 async function generateEnrolledAudio(runtime: RuntimeAdapter, id: number) {
   const cards = await runtime.reviewCards(id);
   if (!cards?.some((card) => card.kind === 'listening') || await runtime.cachedSpeech(id)) return false;
@@ -75,7 +82,7 @@ export function useNotebook(runtime: RuntimeAdapter) {
     return true;
   }
   async function save() {
-    if (!editor || saving.current) return false;
+    if (!editor || saving.current || needsExampleSense(editor)) return false;
     const payload = savePayload(editor);
     const previous = operation.current;
     if (!previous || !samePayload(previous, payload)) {
@@ -91,7 +98,7 @@ export function useNotebook(runtime: RuntimeAdapter) {
     } catch (cause) { setError(errorMessage(cause)); return false; }
     finally { saving.current = false; setBusy(false); }
   }
-  return { editor, conflict, existing, error, audioError: audio.audioError, saved, busy, dirty, version, save, clear, open, collect,
+  return { editor, conflict, existing, error, audioError: audio.audioError, saved, busy, dirty, meaningRequired: editor !== null && needsExampleSense(editor), version, save, clear, open, collect,
     edit: (notes: string) => { setEditor((value) => value && { ...value, notes }); setSaved(false); setExisting(null); },
     editExample: (field: 'example_fr' | 'example_zh', text: string) => { setEditor((value) => value && { ...value, [field]: text }); setSaved(false); setExisting(null); },
     editSense: (example_sense: number | null) => { setEditor((value) => value && { ...value, example_sense }); setSaved(false); setExisting(null); }, editMore: (examples: VocabularyRecord['more_examples']) => { setEditor((value) => value && { ...value, more_examples: examples }); setSaved(false); setExisting(null); },

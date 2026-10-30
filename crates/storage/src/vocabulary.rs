@@ -237,6 +237,12 @@ pub fn save(
         return Ok(result);
     }
     let headword = request.headword.nfc().collect::<String>();
+    let has_examples = !request.example_fr.trim().is_empty()
+        || !request.example_zh.trim().is_empty()
+        || request
+            .more_examples
+            .iter()
+            .any(|example| !example.fr.trim().is_empty() || !example.zh.trim().is_empty());
     let (outcome, record) = if let Some(id) = request.id {
         let current = get(&transaction, id)?;
         if current.headword != headword {
@@ -247,6 +253,15 @@ pub fn save(
                 outcome: "conflict",
                 record: current,
             });
+        }
+        let unchanged_legacy = current.example_sense.is_none()
+            && current.example_fr == request.example_fr
+            && current.example_zh == request.example_zh
+            && current.more_examples == request.more_examples;
+        if has_examples && request.example_sense.is_none() && !unchanged_legacy {
+            return Err(StorageError::Invalid(
+                "Select a meaning for new or edited examples".into(),
+            ));
         }
         if request
             .example_sense
@@ -265,6 +280,11 @@ pub fn save(
     } else if let Some(existing) = find(&transaction, &headword)? {
         ("existing", existing)
     } else {
+        if has_examples && request.example_sense.is_none() {
+            return Err(StorageError::Invalid(
+                "Select a meaning for new or edited examples".into(),
+            ));
+        }
         let snapshot = snapshot
             .ok_or_else(|| StorageError::Invalid("Verified dictionary content required".into()))?;
         if snapshot.digest.is_empty() {

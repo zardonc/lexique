@@ -375,7 +375,7 @@ fn undo_rating_outside_queue_keeps_later_notes_and_settings() {
             headword: record.headword,
             notes: "Notes saved after the rating\nÉcole : mon exemple.".into(),
             example_fr: "Je vais à l'école.".into(),
-            example_sense: None,
+            example_sense: Some(0),
             example_zh: "我去学校。".into(),
             more_examples: vec![],
             id: Some(word),
