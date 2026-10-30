@@ -1,4 +1,4 @@
-/* global process, window, fetch, console */
+/* global process, window, document, fetch, console */
 import { chromium } from '@playwright/test';
 import { spawn, spawnSync } from 'node:child_process';
 import { cp, mkdir } from 'node:fs/promises';
@@ -7,11 +7,15 @@ import { createServer } from 'node:net';
 import { setTimeout as delay } from 'node:timers/promises';
 import assert from 'node:assert/strict';
 
-const [source, executable, destination] = process.argv.slice(2).map((path) => resolve(path));
-if (!source || !executable || !destination || process.argv.length !== 5) throw new Error('Expected resource directory, executable, and new destination');
+const [source, executable, destination, fixture] = process.argv.slice(2).map((path) => resolve(path));
+if (!source || !executable || !destination || ![5, 6].includes(process.argv.length)) throw new Error('Expected resource directory, executable, new destination, and optional fixture database');
 await mkdir(destination);
 await cp(executable, join(destination, 'Lexique.exe'));
 await cp(join(source, 'dictionary'), join(destination, 'dictionary'), { recursive: true });
+if (fixture) {
+  await mkdir(join(destination, 'Lexique-data', 'data'), { recursive: true });
+  await cp(fixture, join(destination, 'Lexique-data', 'data', 'lexique.sqlite3'));
+}
 const server = createServer();
 await new Promise((done) => server.listen(0, '127.0.0.1', done));
 const port = server.address().port;
@@ -44,6 +48,34 @@ async function stop() {
 }
 try {
   let page = await start();
+  if (fixture) {
+    const progress = await page.evaluate(async () => {
+      const invoke = window.__TAURI_INTERNALS__.invoke;
+      const rows = await invoke('vocabulary_list', { query: '', sort: 'review-due-asc' });
+      const result = {};
+      for (const word of ['avion', 'zèbre', 'bonjour']) {
+        const cards = await invoke('review_cards', { vocabularyId: rows.find((row) => row.headword === word).id });
+        result[word] = await Promise.all(cards.map((card) => invoke('review_progress', { cardId: card.id })));
+      }
+      return result;
+    });
+    const [early, late] = progress['zèbre'].map((item) => item.card.due_at);
+    assert.equal(progress.avion[0].card.due_at, early);
+    assert.ok(early < progress.bonjour[0].card.due_at && progress.bonjour[0].card.due_at < late);
+    await page.getByRole('button', { name: '生词本', exact: true }).click();
+    await page.waitForFunction(() => document.querySelectorAll('.vocabulary-list button').length === 5);
+    assert.deepEqual(await page.locator('.vocabulary-list button strong').allTextContents(), ['avion', 'zèbre', 'bonjour', 'bateau', 'chat']);
+    await page.getByRole('searchbox').fill('filtered');
+    await page.waitForFunction(() => document.querySelectorAll('.vocabulary-list button').length === 2);
+    assert.deepEqual(await page.locator('.vocabulary-list button strong').allTextContents(), ['avion', 'zèbre']);
+    await stop();
+    page = await start();
+    await page.getByRole('button', { name: '生词本', exact: true }).click();
+    await page.waitForFunction(() => document.querySelectorAll('.vocabulary-list button').length === 5);
+    assert.equal(await page.getByLabel('排序方式').inputValue(), 'review-due-asc');
+    assert.deepEqual(await page.locator('.vocabulary-list button strong').allTextContents(), ['avion', 'zèbre', 'bonjour', 'bateau', 'chat']);
+    console.log('Native UI preserves same-time order and the earliest of two scheduled cards after restart');
+  } else {
   await page.evaluate(async () => {
     const invoke = window.__TAURI_INTERNALS__.invoke;
     for (const word of ['bonjour', 'école']) {
@@ -72,4 +104,5 @@ try {
   await page.waitForFunction(() => [...document.querySelectorAll('select')].some((select) => select.value === 'review-due-asc'));
   await page.locator('.vocabulary-list button').first().getByText('bonjour').waitFor();
   console.log('Native rating, review-time order and preference survive restart');
+  }
 } finally { await stop(); }

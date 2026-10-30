@@ -8,7 +8,9 @@
 - `pnpm test:e2e`：Edge 66 项通过，包括评分后列表刷新和新排序选项。首次并行测试期间修改源文件触发热重载，4 项失败；代码稳定后完整重跑通过。
 - `pnpm desktop:build --no-bundle` 和 `node apps/desktop/e2e/native-review-sort-check.mjs target/issue-20-sense-20261030 target/release/lexique-desktop.exe target/issue-21-native-20261030-b`：Windows x64 隔离新数据库中两个单词真实评分后按不同到期时间重排，重启恢复通过；测试进程已停止。
 
-同时间排序和同词双卡不同到期已在真实 SQLite 测试中验证，尚未在原生界面单独复验。其他平台未实机验证；撤销、暂停及批量选择的最终组合由 #22 补验。浏览器测试使用原生接口 fixture，不证明原生持久化。
+2026-10-30 补验：SQLite 测试通过公开评分接口生成隔离数据库，两个单词的识义卡同一时间到期；其中一个单词的听音卡较晚到期，另一个已学习单词的到期时间位于两者之间。暂停双卡并将两项额度设为 0 后，原生窗口仍按 `avion`、`zèbre`、`bonjour` 排序，未学习和未加入记录随后；搜索筛出两个同时间记录后和重启后顺序一致。先以 `LEXIQUE_NATIVE_REVIEW_SORT_FIXTURE` 指向不存在的新文件运行 `cargo test --locked -p lexique-storage --test vocabulary review_due_sort_uses_earliest_card_and_survives_reopen_and_pause -- --exact`，再运行 `node apps/desktop/e2e/native-review-sort-check.mjs target/issue-20-sense-20261030 target/release/lexique-desktop.exe target/issue-21-native-fixture-20261030-c target/issue-21-review-sort-fixture-20261030-c.sqlite3`。脚本读取两卡真实进度并断言到期关系，测试进程已停止，未使用用户数据。
+
+其他平台留待后续，不阻塞本票；撤销、暂停及批量选择的最终组合由 #22 补验。浏览器测试使用原生接口 fixture，不证明原生持久化。
 
 ## M2 批量管理与暂停（issue #19）
 

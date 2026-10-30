@@ -592,11 +592,18 @@ fn review_due_sort_uses_earliest_card_and_survives_reopen_and_pause() {
         let mut connection = Connection::open(&path).unwrap();
         initialize(&connection).unwrap();
         let mut ids = Vec::new();
-        for (index, word) in ["zèbre", "avion", "bateau", "chat"].iter().enumerate() {
+        for (index, word) in ["zèbre", "avion", "bateau", "chat", "bonjour"]
+            .iter()
+            .enumerate()
+        {
             ids.push(
                 save(
                     &mut connection,
-                    &create(&format!("persist-due-{index}"), word, "match"),
+                    &create(
+                        &format!("persist-due-{index}"),
+                        word,
+                        if index < 2 { "match filtered" } else { "match" },
+                    ),
                     Some(snapshot()),
                 )
                 .unwrap()
@@ -606,6 +613,7 @@ fn review_due_sort_uses_earliest_card_and_survives_reopen_and_pause() {
         }
         let z = lexique_storage::add_review(&mut connection, ids[0]).unwrap();
         let a = lexique_storage::add_review(&mut connection, ids[1]).unwrap();
+        let b = lexique_storage::add_review(&mut connection, ids[4]).unwrap();
         lexique_storage::add_review(&mut connection, ids[2]).unwrap();
         let now = 1_700_000_000;
         lexique_storage::review_queue(&mut connection, now, "UTC").unwrap();
@@ -623,6 +631,18 @@ fn review_due_sort_uses_earliest_card_and_survives_reopen_and_pause() {
             )
             .unwrap();
         }
+        lexique_storage::rate_card(
+            &mut connection,
+            &lexique_storage::RatingRequest {
+                operation: "rate-b".into(),
+                card_id: b[0].id,
+                expected_revision: 0,
+                rating: lexique_core::scheduling::Rating::Good,
+                now: now + 3_600,
+                timezone: "UTC".into(),
+            },
+        )
+        .unwrap();
         let later = now + 86_400;
         lexique_storage::review_queue(&mut connection, later, "UTC").unwrap();
         lexique_storage::rate_card(
@@ -638,6 +658,10 @@ fn review_due_sort_uses_earliest_card_and_survives_reopen_and_pause() {
         )
         .unwrap();
         lexique_storage::set_review_paused(&mut connection, ids[0], true).unwrap();
+        let mut settings = lexique_storage::review_settings(&connection).unwrap();
+        settings.new_limit = 0;
+        settings.review_limit = 0;
+        lexique_storage::set_review_settings(&connection, &settings).unwrap();
         set_sort_preference(&connection, "review-due-asc").unwrap();
     }
     {
@@ -649,7 +673,15 @@ fn review_due_sort_uses_earliest_card_and_survives_reopen_and_pause() {
             .into_iter()
             .map(|record| record.headword)
             .collect();
-        assert_eq!(words, ["avion", "zèbre", "bateau", "chat"]);
+        assert_eq!(words, ["avion", "zèbre", "bonjour", "bateau", "chat"]);
+    }
+    if let Some(destination) = std::env::var_os("LEXIQUE_NATIVE_REVIEW_SORT_FIXTURE") {
+        let mut output = std::fs::OpenOptions::new()
+            .write(true)
+            .create_new(true)
+            .open(destination)
+            .unwrap();
+        std::io::copy(&mut std::fs::File::open(&path).unwrap(), &mut output).unwrap();
     }
     std::fs::remove_file(path).unwrap();
 }
