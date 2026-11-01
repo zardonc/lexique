@@ -53,8 +53,7 @@ function useBatchReview({ runtime, text, onWorkingChange, onReviewChanged }: {
         const cards = await runtime.addReview(record.id);
         if (!cards) throw new Error(text.preview);
         added = true;
-        const cached = await runtime.cachedSpeech(record.id);
-        if (!cached && !await runtime.generateSpeech(record.id)) throw new Error(text.listeningPending);
+        if (!await runtime.generateSpeech(record.id)) throw new Error(text.listeningPending);
       } else if (await runtime.reviewPause(record.id, action === 'pause') === null) throw new Error(text.preview);
     } catch (cause) { error = errorMessage(cause); }
     setResults((current) => [...current.filter((item) => item.record.id !== record.id), { record, action, error, added }]);

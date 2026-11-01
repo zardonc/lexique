@@ -121,10 +121,26 @@ test('batch enrollment distinguishes saved cards from failed audio', async ({ pa
   await expect(page.getByRole('button', { name: '重试 école' })).toBeVisible();
 });
 
+test('batch enrollment retries corrupt audio and keeps generation failures visible', async ({ page }) => {
+  const cards = [{ id: 1, kind: 'recognition' }, { id: 2, kind: 'listening' }];
+  await nativeFixture(page, { vocabulary_list: [{ value: [record] }], review_add: [{ value: cards }],
+    speech_cached: [{ error: 'Invalid cached speech audio' }],
+    speech_generate: [{ error: 'voice unavailable' }, { value: [1] }] });
+  await page.goto('/');
+  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByLabel('选择 école').check();
+  await page.getByRole('button', { name: '批量加入复习' }).click();
+  await expect(page.getByText('école：卡片已加入，语音失败')).toBeVisible();
+  await expect(page.getByText('voice unavailable')).toBeVisible();
+  await page.getByRole('button', { name: '重试 école' }).click();
+  await expect(page.getByText('école：成功')).toBeVisible();
+  await expect(page.getByRole('button', { name: '重试 école' })).toHaveCount(0);
+});
+
 test('batch results cannot be lost by navigating while an operation is running', async ({ page }) => {
   await nativeFixture(page, { vocabulary_list: [{ value: [record] }],
     review_add: [{ value: [{ id: 1, kind: 'recognition' }, { id: 2, kind: 'listening' }], delay: 500 }],
-    speech_cached: [{ value: [1] }] });
+    speech_cached: [{ value: [1] }], speech_generate: [{ value: [1] }] });
   await page.goto('/');
   await page.getByRole('button', { name: '生词本', exact: true }).click();
   await page.getByLabel('选择 école').check();

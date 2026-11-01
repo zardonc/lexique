@@ -77,19 +77,43 @@ try {
       invoke('review_add', { vocabularyId: 1 }),
       invoke('review_add', { vocabularyId: 1 }),
     ]);
-    const generated = await Promise.all([
-      invoke('speech_generate', { vocabularyId: 1 }),
-      invoke('speech_generate', { vocabularyId: 1 }),
-    ]);
-    return { words, cards, added, generated };
+    const recognition = cards.find((card) => card.kind === 'recognition');
+    const existing = await invoke('review_progress', { cardId: recognition.id });
+    if (existing.card.phase === 'new') {
+      await invoke('review_pause', { vocabularyId: 1, paused: false });
+      const rated = await invoke('review_rate', { request: { operation: 'native-batch-cache-progress',
+        card_id: recognition.id, expected_revision: existing.revision, rating: 'good', timezone: 'UTC' } });
+      if (rated.status !== 'committed') throw new Error(`Fixture rating failed: ${JSON.stringify(rated)}`);
+    }
+    const progress = await Promise.all(cards.map((card) => invoke('review_progress', { cardId: card.id })));
+    const paused = await invoke('review_pause', { vocabularyId: 1, paused: true });
+    return { words, cards, added, progress, paused };
   });
   assert.equal(result.cards.length, 2);
   assert.deepEqual(result.added, [result.cards, result.cards]);
-  assert.deepEqual(result.generated[0], result.generated[1]);
-  assert.equal(Buffer.from(result.generated[0]).subarray(0, 4).toString(), 'OggS');
+  assert.ok(result.progress.some((progress) => progress.revision > 0 && progress.card.phase !== 'new'));
+  assert.equal(result.paused, true);
+  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByLabel('选择 école', { exact: true }).check();
+  await page.getByRole('button', { name: '批量加入复习' }).click();
+  await expect(page.getByText('école：成功')).toBeVisible({ timeout: 20_000 });
+  const afterBatch = await page.evaluate(async (cards) => ({
+    progress: await Promise.all(cards.map((card) => window.__TAURI_INTERNALS__.invoke('review_progress', { cardId: card.id }))),
+    paused: await window.__TAURI_INTERNALS__.invoke('review_pause', { vocabularyId: 1, paused: null }),
+  }), result.cards);
+  assert.deepEqual(afterBatch, { progress: result.progress, paused: result.paused });
+  const generated = await page.evaluate(() => Promise.all([
+    window.__TAURI_INTERNALS__.invoke('speech_generate', { vocabularyId: 1 }),
+    window.__TAURI_INTERNALS__.invoke('speech_generate', { vocabularyId: 1 }),
+  ]));
+  assert.deepEqual(generated[0], generated[1]);
+  assert.equal(Buffer.from(generated[0]).subarray(0, 4).toString(), 'OggS');
   const before = await readFile(join(cache, '1.ogg'));
   const python = join(destination, 'speech', 'runtime', 'python.exe');
   await rename(python, `${python}.disabled`);
+  await page.getByRole('button', { name: '批量加入复习' }).click();
+  await expect(page.getByText('école：成功')).toBeVisible();
+  assert.deepEqual(await readFile(join(cache, '1.ogg')), before);
   const error = await page.evaluate(async () => {
     try { await window.__TAURI_INTERNALS__.invoke('speech_generate', { vocabularyId: 1, regenerate: true }); return ''; }
     catch (cause) { return String(cause); }
@@ -180,6 +204,7 @@ try {
   await reopened.locator('.vocabulary-list button').filter({ hasText: 'école' }).click();
   await expect(reopened.getByText('听音卡：语音已生成', { exact: true })).toBeVisible();
   console.log('Native UI: real playback, slow replay, hidden front, reveal, skip and restart recovery passed');
+  console.log('Native UI: batch repairs corrupt audio without changing progress/pause and reuses valid audio without the engine');
   console.log('Native IPC: corrupt cache, concurrent generation, failed and successful regeneration passed');
 } finally {
   await stop();
