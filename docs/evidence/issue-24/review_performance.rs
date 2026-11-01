@@ -106,13 +106,29 @@ impl Probes {
         if cache != "missing" && !(cache == "mixed" && id % 4 == 0) {
             self.bytes += audio_size;
         }
+        let expected_missing = cache == "missing" || (cache == "mixed" && id % 4 == 0);
+        let expected_invalid = cache == "mixed" && id % 4 == 1;
         match result {
-            Ok(true) => true,
+            Ok(true) => {
+                assert!(
+                    !expected_missing && !expected_invalid,
+                    "Unexpected valid cache for synthetic ID {id}"
+                );
+                true
+            }
             Ok(false) => {
+                assert!(
+                    expected_missing,
+                    "Unexpected missing cache for synthetic ID {id}"
+                );
                 self.missing += 1;
                 false
             }
-            Err(_) => {
+            Err(error) => {
+                assert!(
+                    expected_invalid && error == "Invalid cached speech audio",
+                    "Unexpected cache error for synthetic ID {id}: {error}"
+                );
                 self.invalid += 1;
                 false
             }
@@ -272,9 +288,7 @@ fn batch_run(root: &Path, count: i64, chunk: usize) {
                     .transaction_with_behavior(rusqlite::TransactionBehavior::Immediate)
                     .unwrap();
                 for id in first..=(first + chunk as i64 - 1).min(count) {
-                    for kind in ["recognition", "listening"] {
-                        tx.execute("INSERT INTO review_cards(vocabulary_id,kind) VALUES (?1,?2) ON CONFLICT(vocabulary_id,kind) DO NOTHING", params![id,kind]).unwrap();
-                    }
+                    candidate::ensure_review_cards(&tx, id).unwrap();
                     candidate::review_cards(&tx, id).unwrap();
                 }
                 tx.commit().unwrap();
