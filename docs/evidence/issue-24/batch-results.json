@@ -1,0 +1,251 @@
+{
+  "hardware": {
+    "os": "Windows 11 Home 10.0.26300",
+    "cpu": "AMD Ryzen 9 8945HS",
+    "physical_cores": 8,
+    "logical_processors": 16,
+    "ram_bytes": 33555279872,
+    "disk": "Micron 2400 MTFDKBA1T0QFM",
+    "bus": "NVMe",
+    "filesystem": "NTFS",
+    "rust": "1.99.1",
+    "node": "24.22.1",
+    "pnpm": "11.25.0",
+    "python": "3.14.10"
+  },
+  "environment": {
+    "utc": "2026-11-01T18:33:47Z",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "source_sha256": "43419216cdc7ae969e23ed3fc332c0601f6c84c792369318e6a8510926ef6276",
+    "candidate_sha256": "ff260fdc1f3fcbf5a020ff81cd58bf036a0185614069c150330210593457efb0",
+    "cache_source_sha256": "d7a67c19f6a47a56a01494dde21e7dc70d64e8869b2793f004adecb14b0f8e7a",
+    "pinned_cache_sha256": "b7df2ad62f74c0ed2c1f48255ebc865195bc7e4edcf263530acec4717abe9c9d",
+    "baseline_commit": "eae82eab0364db59a64f2295fefd0fa1213bc04a",
+    "cache_note": "Fixtures just written; first pass is not cold disk. Later passes are OS-warm. Logical payload only; no OS cache eviction."
+  },
+  "note": "Separate process per chunk and repeat; 10000 words/chunk 1 exceeded the whole-invocation 60-second execution limit; remaining two repeats skipped. Total operation time unavailable.",
+  "samples": [
+    {
+      "cards": 200,
+      "chunk": 1,
+      "commits": 100,
+      "count": 100,
+      "journal_mode": "delete",
+      "synchronous": 2,
+      "total_ms": 525.5228
+    },
+    {
+      "cards": 200,
+      "chunk": 1,
+      "commits": 100,
+      "count": 100,
+      "journal_mode": "delete",
+      "synchronous": 2,
+      "total_ms": 506.7758
+    },
+    {
+      "cards": 200,
+      "chunk": 1,
+      "commits": 100,
+      "count": 100,
+      "journal_mode": "delete",
+      "synchronous": 2,
+      "total_ms": 522.9479
+    },
+    {
+      "cards": 200,
+      "chunk": 100,
+      "commits": 1,
+      "count": 100,
+      "journal_mode": "delete",
+      "synchronous": 2,
+      "total_ms": 6.4709
+    },
+    {
+      "cards": 200,
+      "chunk": 100,
+      "commits": 1,
+      "count": 100,
+      "journal_mode": "delete",
+      "synchronous": 2,
+      "total_ms": 5.965599999999999
+    },
+    {
+      "cards": 200,
+      "chunk": 100,
+      "commits": 1,
+      "count": 100,
+      "journal_mode": "delete",
+      "synchronous": 2,
+      "total_ms": 5.6581
+    },
+    {
+      "cards": 200,
+      "chunk": 500,
+      "commits": 1,
+      "count": 100,
+      "journal_mode": "delete",
+      "synchronous": 2,
+      "total_ms": 5.9847
+    },
+    {
+      "cards": 200,
+      "chunk": 500,
+      "commits": 1,
+      "count": 100,
+      "journal_mode": "delete",
+      "synchronous": 2,
+      "total_ms": 6.9985
+    },
+    {
+      "cards": 200,
+      "chunk": 500,
+      "commits": 1,
+      "count": 100,
+      "journal_mode": "delete",
+      "synchronous": 2,
+      "total_ms": 6.766900000000001
+    },
+    {
+      "cards": 2000,
+      "chunk": 1,
+      "commits": 1000,
+      "count": 1000,
+      "journal_mode": "delete",
+      "synchronous": 2,
+      "total_ms": 5664.8508
+    },
+    {
+      "cards": 2000,
+      "chunk": 1,
+      "commits": 1000,
+      "count": 1000,
+      "journal_mode": "delete",
+      "synchronous": 2,
+      "total_ms": 5809.6625
+    },
+    {
+      "cards": 2000,
+      "chunk": 1,
+      "commits": 1000,
+      "count": 1000,
+      "journal_mode": "delete",
+      "synchronous": 2,
+      "total_ms": 5682.185
+    },
+    {
+      "cards": 2000,
+      "chunk": 100,
+      "commits": 10,
+      "count": 1000,
+      "journal_mode": "delete",
+      "synchronous": 2,
+      "total_ms": 53.7124
+    },
+    {
+      "cards": 2000,
+      "chunk": 100,
+      "commits": 10,
+      "count": 1000,
+      "journal_mode": "delete",
+      "synchronous": 2,
+      "total_ms": 71.2792
+    },
+    {
+      "cards": 2000,
+      "chunk": 100,
+      "commits": 10,
+      "count": 1000,
+      "journal_mode": "delete",
+      "synchronous": 2,
+      "total_ms": 54.050399999999996
+    },
+    {
+      "cards": 2000,
+      "chunk": 500,
+      "commits": 2,
+      "count": 1000,
+      "journal_mode": "delete",
+      "synchronous": 2,
+      "total_ms": 20.1796
+    },
+    {
+      "cards": 2000,
+      "chunk": 500,
+      "commits": 2,
+      "count": 1000,
+      "journal_mode": "delete",
+      "synchronous": 2,
+      "total_ms": 20.2511
+    },
+    {
+      "cards": 2000,
+      "chunk": 500,
+      "commits": 2,
+      "count": 1000,
+      "journal_mode": "delete",
+      "synchronous": 2,
+      "total_ms": 19.6403
+    },
+    {
+      "count": 10000,
+      "chunk": 1,
+      "execution_timeout_s": 60,
+      "total_ms": null
+    },
+    {
+      "cards": 20000,
+      "chunk": 100,
+      "commits": 100,
+      "count": 10000,
+      "journal_mode": "delete",
+      "synchronous": 2,
+      "total_ms": 515.0969
+    },
+    {
+      "cards": 20000,
+      "chunk": 100,
+      "commits": 100,
+      "count": 10000,
+      "journal_mode": "delete",
+      "synchronous": 2,
+      "total_ms": 544.3580999999999
+    },
+    {
+      "cards": 20000,
+      "chunk": 100,
+      "commits": 100,
+      "count": 10000,
+      "journal_mode": "delete",
+      "synchronous": 2,
+      "total_ms": 523.9701
+    },
+    {
+      "cards": 20000,
+      "chunk": 500,
+      "commits": 20,
+      "count": 10000,
+      "journal_mode": "delete",
+      "synchronous": 2,
+      "total_ms": 199.5795
+    },
+    {
+      "cards": 20000,
+      "chunk": 500,
+      "commits": 20,
+      "count": 10000,
+      "journal_mode": "delete",
+      "synchronous": 2,
+      "total_ms": 209.9205
+    },
+    {
+      "cards": 20000,
+      "chunk": 500,
+      "commits": 20,
+      "count": 10000,
+      "journal_mode": "delete",
+      "synchronous": 2,
+      "total_ms": 212.5429
+    }
+  ]
+}

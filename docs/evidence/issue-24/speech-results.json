@@ -1,0 +1,210 @@
+{
+  "worker_sha256": "cdebdc0a9411c0aff268ee543f32c92dc23f72b76c91ff56cf25a6425bbd96c7",
+  "note": "Real packaged worker and synthesis; no IPC, cache publication or playback. First process follows existing local resource state, no cold-cache claim.",
+  "words": [
+    "école",
+    "bonjour",
+    "œil",
+    "vacances",
+    "aujourd’hui"
+  ],
+  "baseline": [
+    {
+      "repeat": 0,
+      "word": "école",
+      "total_ms": 2168.6593999911565,
+      "audio_bytes": 7965
+    },
+    {
+      "repeat": 0,
+      "word": "bonjour",
+      "total_ms": 2076.1730000085663,
+      "audio_bytes": 9507
+    },
+    {
+      "repeat": 0,
+      "word": "œil",
+      "total_ms": 2083.882899984019,
+      "audio_bytes": 6066
+    },
+    {
+      "repeat": 0,
+      "word": "vacances",
+      "total_ms": 2067.7107000083197,
+      "audio_bytes": 9799
+    },
+    {
+      "repeat": 0,
+      "word": "aujourd’hui",
+      "total_ms": 2113.6335999763105,
+      "audio_bytes": 8494
+    },
+    {
+      "repeat": 1,
+      "word": "école",
+      "total_ms": 2483.1393999920692,
+      "audio_bytes": 8828
+    },
+    {
+      "repeat": 1,
+      "word": "bonjour",
+      "total_ms": 2367.1775000111666,
+      "audio_bytes": 8257
+    },
+    {
+      "repeat": 1,
+      "word": "œil",
+      "total_ms": 2288.3378000115044,
+      "audio_bytes": 9273
+    },
+    {
+      "repeat": 1,
+      "word": "vacances",
+      "total_ms": 2404.5619999815244,
+      "audio_bytes": 8613
+    },
+    {
+      "repeat": 1,
+      "word": "aujourd’hui",
+      "total_ms": 2377.8687000158243,
+      "audio_bytes": 8471
+    },
+    {
+      "repeat": 2,
+      "word": "école",
+      "total_ms": 2340.128200012259,
+      "audio_bytes": 8723
+    },
+    {
+      "repeat": 2,
+      "word": "bonjour",
+      "total_ms": 2347.6917000079993,
+      "audio_bytes": 7515
+    },
+    {
+      "repeat": 2,
+      "word": "œil",
+      "total_ms": 2304.060499998741,
+      "audio_bytes": 9311
+    },
+    {
+      "repeat": 2,
+      "word": "vacances",
+      "total_ms": 2366.7942000029143,
+      "audio_bytes": 9753
+    },
+    {
+      "repeat": 2,
+      "word": "aujourd’hui",
+      "total_ms": 2315.2383000124246,
+      "audio_bytes": 9827
+    }
+  ],
+  "baseline_word_median_ms": 2315.2383000124246,
+  "reuse_process_runs": [
+    {
+      "repeat": 0,
+      "process_total_ms": 4611.282099998789
+    },
+    {
+      "repeat": 1,
+      "process_total_ms": 4616.163900005631
+    },
+    {
+      "repeat": 2,
+      "process_total_ms": 4586.003700009314
+    }
+  ],
+  "reuse": [
+    {
+      "text": "école",
+      "setup_ms": 1289.9338999995962,
+      "word_ms": 543.7591999943834,
+      "audio_bytes": 8707
+    },
+    {
+      "text": "bonjour",
+      "setup_ms": 1289.9338999995962,
+      "word_ms": 549.167999997735,
+      "audio_bytes": 9530
+    },
+    {
+      "text": "œil",
+      "setup_ms": 1289.9338999995962,
+      "word_ms": 648.7593000056222,
+      "audio_bytes": 9311
+    },
+    {
+      "text": "vacances",
+      "setup_ms": 1289.9338999995962,
+      "word_ms": 665.2104999811854,
+      "audio_bytes": 9799
+    },
+    {
+      "text": "aujourd’hui",
+      "setup_ms": 1289.9338999995962,
+      "word_ms": 618.1226999906357,
+      "audio_bytes": 7325
+    },
+    {
+      "text": "école",
+      "setup_ms": 1426.8083999922965,
+      "word_ms": 566.6550000023562,
+      "audio_bytes": 8083
+    },
+    {
+      "text": "bonjour",
+      "setup_ms": 1426.8083999922965,
+      "word_ms": 592.187100002775,
+      "audio_bytes": 9555
+    },
+    {
+      "text": "œil",
+      "setup_ms": 1426.8083999922965,
+      "word_ms": 563.5010999976657,
+      "audio_bytes": 9311
+    },
+    {
+      "text": "vacances",
+      "setup_ms": 1426.8083999922965,
+      "word_ms": 586.7467999923974,
+      "audio_bytes": 9779
+    },
+    {
+      "text": "aujourd’hui",
+      "setup_ms": 1426.8083999922965,
+      "word_ms": 580.3242000110913,
+      "audio_bytes": 8747
+    },
+    {
+      "text": "école",
+      "setup_ms": 1412.5632000213955,
+      "word_ms": 565.782699995907,
+      "audio_bytes": 9311
+    },
+    {
+      "text": "bonjour",
+      "setup_ms": 1412.5632000213955,
+      "word_ms": 560.7510999834631,
+      "audio_bytes": 8556
+    },
+    {
+      "text": "œil",
+      "setup_ms": 1412.5632000213955,
+      "word_ms": 559.438099997351,
+      "audio_bytes": 8101
+    },
+    {
+      "text": "vacances",
+      "setup_ms": 1412.5632000213955,
+      "word_ms": 584.597200009739,
+      "audio_bytes": 9749
+    },
+    {
+      "text": "aujourd’hui",
+      "setup_ms": 1412.5632000213955,
+      "word_ms": 592.3216000082903,
+      "audio_bytes": 7744
+    }
+  ]
+}
