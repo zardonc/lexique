@@ -70,12 +70,13 @@
     "raw_directory": "target/issue-24/tts-runtime-check-v2-20261101"
   },
   "verification": {
-    "trials": 122,
-    "ogg_outputs": 2214,
-    "pcm_outputs": 2178,
-    "fixed_seed_pcm_outputs": 1890,
-    "pcm_outputs_matching_serial_reference": 1764,
+    "trials": 137,
+    "ogg_outputs": 2574,
+    "pcm_outputs": 2538,
+    "fixed_seed_pcm_outputs": 2250,
+    "pcm_outputs_matching_serial_reference": 2124,
     "random_seed_pcm_outputs": 288,
+    "strict_memory_confirmation_trials": 15,
     "all_fixed_seed_repeats_equal": true,
     "step_variant_sample_counts_equal": true
   },
@@ -158,6 +159,7 @@
       ],
       "worker_sha256": "cdebdc0a9411c0aff268ee543f32c92dc23f72b76c91ff56cf25a6425bbd96c7",
       "measured_script_sha256": "36359624ace35c13796b09e51493889b2bfe7ed1f3682fcd0fa6182eec75a5be",
+      "memory_sampling_policy": "legacy_query_failures_not_recorded",
       "probe_sha256": "e8597f4ef0cca649f5cbf26a0a22322671a6788e98b8914926100770c9679333",
       "seed_policy": "fixed_per_request",
       "configurations": [
@@ -322,6 +324,7 @@
       ],
       "worker_sha256": "cdebdc0a9411c0aff268ee543f32c92dc23f72b76c91ff56cf25a6425bbd96c7",
       "measured_script_sha256": "cc77cab484911f05146ae27a14889814abc8ec5c24703d12b770000d2c20dbcc",
+      "memory_sampling_policy": "legacy_query_failures_not_recorded",
       "probe_sha256": "e8597f4ef0cca649f5cbf26a0a22322671a6788e98b8914926100770c9679333",
       "seed_policy": "fixed_per_request",
       "configurations": [
@@ -675,6 +678,7 @@
       ],
       "worker_sha256": "cdebdc0a9411c0aff268ee543f32c92dc23f72b76c91ff56cf25a6425bbd96c7",
       "measured_script_sha256": "ac821792a1edd7293b49f40175ecb3b464a24b147d707e1befd91de1cc58ed60",
+      "memory_sampling_policy": "legacy_query_failures_not_recorded",
       "probe_sha256": "e8597f4ef0cca649f5cbf26a0a22322671a6788e98b8914926100770c9679333",
       "seed_policy": "fixed_per_request",
       "configurations": [
@@ -1316,6 +1320,7 @@
       ],
       "worker_sha256": "cdebdc0a9411c0aff268ee543f32c92dc23f72b76c91ff56cf25a6425bbd96c7",
       "measured_script_sha256": "b1626fe3704e1e6eb535c1a68ef4c7813606f812fe6981ac758295c303b146b6",
+      "memory_sampling_policy": "legacy_query_failures_not_recorded",
       "probe_sha256": "e8597f4ef0cca649f5cbf26a0a22322671a6788e98b8914926100770c9679333",
       "seed_policy": "fixed_per_request",
       "configurations": [
@@ -1616,6 +1621,7 @@
       ],
       "worker_sha256": "cdebdc0a9411c0aff268ee543f32c92dc23f72b76c91ff56cf25a6425bbd96c7",
       "measured_script_sha256": "99a30a493f5e4649951c4daa0113a2cc85f6f0c72002fc4f358664cb72f8deaf",
+      "memory_sampling_policy": "legacy_query_failures_not_recorded",
       "probe_sha256": "e8597f4ef0cca649f5cbf26a0a22322671a6788e98b8914926100770c9679333",
       "seed_policy": "fixed_per_request",
       "configurations": [
@@ -1823,6 +1829,7 @@
       ],
       "worker_sha256": "cdebdc0a9411c0aff268ee543f32c92dc23f72b76c91ff56cf25a6425bbd96c7",
       "measured_script_sha256": "e0d55ee0da7c86d55727e222945da0de1d60824de9f0633b243f0b4b53eb2572",
+      "memory_sampling_policy": "legacy_query_failures_not_recorded",
       "probe_sha256": "e8597f4ef0cca649f5cbf26a0a22322671a6788e98b8914926100770c9679333",
       "seed_policy": "fixed_per_request",
       "configurations": [
@@ -1994,6 +2001,7 @@
       ],
       "worker_sha256": "cdebdc0a9411c0aff268ee543f32c92dc23f72b76c91ff56cf25a6425bbd96c7",
       "measured_script_sha256": "e0d55ee0da7c86d55727e222945da0de1d60824de9f0633b243f0b4b53eb2572",
+      "memory_sampling_policy": "legacy_query_failures_not_recorded",
       "probe_sha256": "e8597f4ef0cca649f5cbf26a0a22322671a6788e98b8914926100770c9679333",
       "seed_policy": "fixed_per_request",
       "configurations": [
@@ -2185,6 +2193,7 @@
       ],
       "worker_sha256": "cdebdc0a9411c0aff268ee543f32c92dc23f72b76c91ff56cf25a6425bbd96c7",
       "measured_script_sha256": "e0d55ee0da7c86d55727e222945da0de1d60824de9f0633b243f0b4b53eb2572",
+      "memory_sampling_policy": "legacy_query_failures_not_recorded",
       "probe_sha256": "e8597f4ef0cca649f5cbf26a0a22322671a6788e98b8914926100770c9679333",
       "seed_policy": "fixed_per_request",
       "configurations": [
@@ -2608,6 +2617,7 @@
       ],
       "worker_sha256": "cdebdc0a9411c0aff268ee543f32c92dc23f72b76c91ff56cf25a6425bbd96c7",
       "measured_script_sha256": "e0d55ee0da7c86d55727e222945da0de1d60824de9f0633b243f0b4b53eb2572",
+      "memory_sampling_policy": "legacy_query_failures_not_recorded",
       "probe_sha256": "e8597f4ef0cca649f5cbf26a0a22322671a6788e98b8914926100770c9679333",
       "seed_policy": "fixed_per_request",
       "configurations": [
@@ -2856,6 +2866,7 @@
       ],
       "worker_sha256": "cdebdc0a9411c0aff268ee543f32c92dc23f72b76c91ff56cf25a6425bbd96c7",
       "measured_script_sha256": "4f60e3e0e58d995ddea50b5b03719e6402a99924456bcb42918f3cd904556bdd",
+      "memory_sampling_policy": "legacy_query_failures_not_recorded",
       "probe_sha256": "0c3d1877cef0796bd8308a3c4040981138ac8c2a74978bf32b0205ef359553bb",
       "seed_policy": "current_random",
       "configurations": [
@@ -3099,6 +3110,7 @@
       ],
       "worker_sha256": "cdebdc0a9411c0aff268ee543f32c92dc23f72b76c91ff56cf25a6425bbd96c7",
       "measured_script_sha256": "4f60e3e0e58d995ddea50b5b03719e6402a99924456bcb42918f3cd904556bdd",
+      "memory_sampling_policy": "legacy_query_failures_not_recorded",
       "probe_sha256": "0c3d1877cef0796bd8308a3c4040981138ac8c2a74978bf32b0205ef359553bb",
       "seed_policy": "fixed_per_request",
       "configurations": [
@@ -3194,6 +3206,317 @@
           "median_completion_ms": 829.011,
           "max_peak_amplitude": 2.19276762008667,
           "outputs_above_full_scale": 33
+        }
+      ]
+    },
+    {
+      "raw_directory": "target/issue-24/tts-monitor-confirm-20261101",
+      "jobs": [
+        {
+          "id": 0,
+          "text": "école",
+          "voice": "female",
+          "seed": 42
+        },
+        {
+          "id": 1,
+          "text": "bonjour",
+          "voice": "female",
+          "seed": 43
+        },
+        {
+          "id": 2,
+          "text": "œil",
+          "voice": "female",
+          "seed": 44
+        },
+        {
+          "id": 3,
+          "text": "vacances",
+          "voice": "female",
+          "seed": 45
+        },
+        {
+          "id": 4,
+          "text": "aujourd’hui",
+          "voice": "female",
+          "seed": 46
+        },
+        {
+          "id": 5,
+          "text": "fille",
+          "voice": "female",
+          "seed": 47
+        },
+        {
+          "id": 6,
+          "text": "rouge",
+          "voice": "female",
+          "seed": 48
+        },
+        {
+          "id": 7,
+          "text": "beaucoup",
+          "voice": "female",
+          "seed": 49
+        },
+        {
+          "id": 8,
+          "text": "heureusement",
+          "voice": "female",
+          "seed": 50
+        },
+        {
+          "id": 9,
+          "text": "anticonstitutionnellement",
+          "voice": "female",
+          "seed": 51
+        },
+        {
+          "id": 10,
+          "text": "rendez-vous",
+          "voice": "female",
+          "seed": 52
+        },
+        {
+          "id": 11,
+          "text": "y",
+          "voice": "female",
+          "seed": 53
+        },
+        {
+          "id": 12,
+          "text": "école",
+          "voice": "female",
+          "seed": 54
+        },
+        {
+          "id": 13,
+          "text": "bonjour",
+          "voice": "female",
+          "seed": 55
+        },
+        {
+          "id": 14,
+          "text": "œil",
+          "voice": "female",
+          "seed": 56
+        },
+        {
+          "id": 15,
+          "text": "vacances",
+          "voice": "female",
+          "seed": 57
+        },
+        {
+          "id": 16,
+          "text": "aujourd’hui",
+          "voice": "female",
+          "seed": 58
+        },
+        {
+          "id": 17,
+          "text": "fille",
+          "voice": "female",
+          "seed": 59
+        },
+        {
+          "id": 18,
+          "text": "rouge",
+          "voice": "female",
+          "seed": 60
+        },
+        {
+          "id": 19,
+          "text": "beaucoup",
+          "voice": "female",
+          "seed": 61
+        },
+        {
+          "id": 20,
+          "text": "heureusement",
+          "voice": "female",
+          "seed": 62
+        },
+        {
+          "id": 21,
+          "text": "anticonstitutionnellement",
+          "voice": "female",
+          "seed": 63
+        },
+        {
+          "id": 22,
+          "text": "rendez-vous",
+          "voice": "female",
+          "seed": 64
+        },
+        {
+          "id": 23,
+          "text": "y",
+          "voice": "female",
+          "seed": 65
+        }
+      ],
+      "worker_sha256": "cdebdc0a9411c0aff268ee543f32c92dc23f72b76c91ff56cf25a6425bbd96c7",
+      "measured_script_sha256": "59f4f6e4c7359f74af8eca2dd22f1b8e94fe1fc048d276ccbb1e0cbb5e39cb69",
+      "memory_sampling_policy": "reject_live_query_failure",
+      "probe_sha256": "0c3d1877cef0796bd8308a3c4040981138ac8c2a74978bf32b0205ef359553bb",
+      "seed_policy": "fixed_per_request",
+      "configurations": [
+        {
+          "config": {
+            "name": "serial-1-4-8-on",
+            "mode": "serial",
+            "workers": 1,
+            "threads": 4,
+            "steps": 8,
+            "spin": "on"
+          },
+          "batch_ms": [
+            23380.026,
+            23004.867,
+            23351.005
+          ],
+          "median_batch_ms": 23351.005,
+          "median_process_total_ms": 25849.684,
+          "median_initialization_ms": 1686.756,
+          "median_active_cpu_s": 107.531,
+          "peak_private_mib": 773.973,
+          "peak_working_set_mib": 290.957,
+          "other_process_cpu_percent": [
+            8.209,
+            5.38,
+            8.3
+          ],
+          "median_inference_ms": 953.142,
+          "median_service_ms": 979.173,
+          "median_completion_ms": 11948.79,
+          "max_peak_amplitude": 0.5817317366600037,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "shared-12-1-8-on",
+            "mode": "shared",
+            "workers": 12,
+            "threads": 1,
+            "steps": 8,
+            "spin": "on"
+          },
+          "batch_ms": [
+            5790.609,
+            5762.247,
+            5582.454
+          ],
+          "median_batch_ms": 5762.247,
+          "median_process_total_ms": 10086.183,
+          "median_initialization_ms": 1581.52,
+          "median_active_cpu_s": 60.562,
+          "peak_private_mib": 1215.977,
+          "peak_working_set_mib": 652.469,
+          "other_process_cpu_percent": [
+            27.544,
+            25.796,
+            20.763
+          ],
+          "median_inference_ms": 2678.489,
+          "median_service_ms": 2730.282,
+          "median_completion_ms": 4131.376,
+          "max_peak_amplitude": 0.5817317366600037,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "shared-12-2-8-off",
+            "mode": "shared",
+            "workers": 12,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "batch_ms": [
+            5582.687,
+            5633.929,
+            5535.76
+          ],
+          "median_batch_ms": 5582.687,
+          "median_process_total_ms": 9844.944,
+          "median_initialization_ms": 1574.117,
+          "median_active_cpu_s": 63.766,
+          "peak_private_mib": 1220.152,
+          "peak_working_set_mib": 600.867,
+          "other_process_cpu_percent": [
+            25.262,
+            12.233,
+            22.687
+          ],
+          "median_inference_ms": 2619.61,
+          "median_service_ms": 2655.564,
+          "median_completion_ms": 3925.307,
+          "max_peak_amplitude": 0.5817317366600037,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "shared-16-2-8-off",
+            "mode": "shared",
+            "workers": 16,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "batch_ms": [
+            5986.817,
+            5729.532,
+            5525.835
+          ],
+          "median_batch_ms": 5729.532,
+          "median_process_total_ms": 11278.68,
+          "median_initialization_ms": 1712.7,
+          "median_active_cpu_s": 64.672,
+          "peak_private_mib": 1483.418,
+          "peak_working_set_mib": 755.25,
+          "other_process_cpu_percent": [
+            27.627,
+            7.834,
+            16.77
+          ],
+          "median_inference_ms": 3321.052,
+          "median_service_ms": 3363.931,
+          "median_completion_ms": 3794.991,
+          "max_peak_amplitude": 0.5817317366600037,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "process-8-2-8-off",
+            "mode": "process",
+            "workers": 8,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "batch_ms": [
+            5997.422,
+            5330.448,
+            5140.621
+          ],
+          "median_batch_ms": 5330.448,
+          "median_process_total_ms": 10014.882,
+          "median_initialization_ms": 2799.594,
+          "median_active_cpu_s": 62.281,
+          "peak_private_mib": 6177.75,
+          "peak_working_set_mib": 2290.836,
+          "other_process_cpu_percent": [
+            31.25,
+            22.507,
+            12.329
+          ],
+          "median_inference_ms": 1697.004,
+          "median_service_ms": 1730.623,
+          "median_completion_ms": 3453.297,
+          "max_peak_amplitude": 0.5817317366600037,
+          "outputs_above_full_scale": 0
         }
       ]
     }

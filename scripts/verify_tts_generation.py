@@ -12,6 +12,7 @@ import tempfile
 
 from measure_tts_generation import OWNED, WORKER, new_output, parse_config, validate_job
 
+MEMORY_CONFIRM_RUN = "tts-monitor-confirm-20261101"
 RUNS = (
     ("tts-pilot-20261101", 12, 3, 1),
     ("tts-screen-a-20261101", 12, 10, 1),
@@ -24,6 +25,7 @@ RUNS = (
     ("tts-stress-20261101", 48, 3, 3),
     ("tts-current-seed-20261101", 24, 4, 3),
     ("tts-steps-20261101", 18, 3, 3),
+    (MEMORY_CONFIRM_RUN, 24, 5, 3),
 )
 
 
@@ -78,6 +80,9 @@ def verify():
         summary = json.loads(inside(root, "summary.json").read_text(encoding="utf-8"))
         require(summary["worker_sha256"] == worker_hash and summary["hard_execution_timeout_s"] == 60,
                 f"Worker identity/execution limit changed: {name}")
+        if name == MEMORY_CONFIRM_RUN:
+            require(summary["script_sha256"] == hashlib.sha256(inside(root, "source.py").read_bytes()).hexdigest(),
+                    "Memory confirmation source hash mismatch")
         jobs = summary["jobs"]
         require(len(jobs) == job_count and [job["id"] for job in jobs] == list(range(job_count)),
                 f"Incomplete/duplicate jobs: {name}")
@@ -143,6 +148,7 @@ def verify():
         require(len({config["config"]["name"] for config in configurations}) == config_count, f"Duplicate configuration: {name}")
         runs.append({"raw_directory": root.relative_to(OWNED.parent.parent).as_posix(), "jobs": jobs,
                      "worker_sha256": worker_hash, "measured_script_sha256": summary["script_sha256"],
+                     "memory_sampling_policy": "reject_live_query_failure" if name == MEMORY_CONFIRM_RUN else "legacy_query_failures_not_recorded",
                      "probe_sha256": hashlib.sha256(inside(root, "probe.py").read_bytes()).hexdigest(),
                      "seed_policy": summary.get("seed_policy", "fixed_per_request"), "configurations": configurations})
     serial = {output["key"]: output["hash"] for output in outputs if output["serial"] and output["key"][2] >= 0}
@@ -181,6 +187,8 @@ def verify():
                              "ogg_outputs": sum(RUNS[i][1] * RUNS[i][2] * RUNS[i][3] for i in range(len(RUNS))),
                              "pcm_outputs": len(outputs), "fixed_seed_pcm_outputs": len(outputs) - random_count,
                              "pcm_outputs_matching_serial_reference": serial_count, "random_seed_pcm_outputs": random_count,
+                             "strict_memory_confirmation_trials": sum(count * repeats for name, _, count, repeats in RUNS
+                                                                      if name == MEMORY_CONFIRM_RUN),
                              "all_fixed_seed_repeats_equal": True, "step_variant_sample_counts_equal": True}, "runs": runs}
 
 

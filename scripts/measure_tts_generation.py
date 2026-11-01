@@ -20,6 +20,7 @@ import time
 REPO = Path(__file__).resolve().parents[1]
 WORKER = REPO / "apps/desktop/src-tauri/speech_worker.py"
 OWNED = REPO / "target/issue-24"
+STILL_ACTIVE = 259
 WORDS = ("école", "bonjour", "œil", "vacances", "aujourd’hui", "fille",
          "rouge", "beaucoup", "heureusement", "anticonstitutionnellement", "rendez-vous", "y")
 SENTENCES = ("Bonjour, comment allez-vous ?", "J’apprends le français tous les jours.",
@@ -102,8 +103,11 @@ class Monitor:
         self.kernel.OpenProcess.restype = wintypes.HANDLE
         self.kernel.CloseHandle.argtypes = [wintypes.HANDLE]
         self.kernel.GetProcessTimes.argtypes = [wintypes.HANDLE] + [ctypes.POINTER(wintypes.FILETIME)] * 4
+        self.kernel.GetExitCodeProcess.argtypes = [wintypes.HANDLE, ctypes.POINTER(wintypes.DWORD)]
+        self.kernel.GetExitCodeProcess.restype = wintypes.BOOL
         self.kernel.GetSystemTimes.argtypes = [ctypes.POINTER(wintypes.FILETIME)] * 3
         self.psapi.GetProcessMemoryInfo.argtypes = [wintypes.HANDLE, ctypes.POINTER(Memory), wintypes.DWORD]
+        self.psapi.GetProcessMemoryInfo.restype = wintypes.BOOL
         self.handles, self.samples, self.error = {}, [], None
         self.guard, self.stop = threading.Lock(), threading.Event()
         self.started = time.perf_counter()
@@ -127,6 +131,13 @@ class Monitor:
                 if self.psapi.GetProcessMemoryInfo(handle, ctypes.byref(info), info.cb):
                     ws += info.ws
                     private += info.private
+                else:
+                    memory_error = ctypes.WinError(ctypes.get_last_error())
+                    exit_code = wintypes.DWORD()
+                    if not self.kernel.GetExitCodeProcess(handle, ctypes.byref(exit_code)):
+                        raise ctypes.WinError(ctypes.get_last_error()) from memory_error
+                    if exit_code.value == STILL_ACTIVE:
+                        raise memory_error
                 created, ended, kernel, user = (wintypes.FILETIME() for _ in range(4))
                 if not self.kernel.GetProcessTimes(handle, ctypes.byref(created), ctypes.byref(ended), ctypes.byref(kernel), ctypes.byref(user)):
                     raise ctypes.WinError(ctypes.get_last_error())
@@ -154,12 +165,15 @@ class Monitor:
     def close(self):
         self.stop.set()
         self.thread.join()
-        self.sample()
-        with self.guard:
-            for handle in self.handles.values():
-                self.kernel.CloseHandle(handle)
-        if self.error:
-            raise self.error
+        try:
+            if self.error:
+                raise self.error
+            self.sample()
+        finally:
+            with self.guard:
+                for handle in self.handles.values():
+                    self.kernel.CloseHandle(handle)
+                self.handles.clear()
 
 
 def namespace():
@@ -485,6 +499,7 @@ def main():
         if not path.is_file():
             raise ValueError(f"Missing admitted runtime input: {path}")
     output = new_output(args.output)
+    (output / "source.py").write_bytes(Path(__file__).read_bytes())
     (output / "temp").mkdir()
     env = os.environ.copy()
     env["TEMP"] = env["TMP"] = str(output / "temp")
