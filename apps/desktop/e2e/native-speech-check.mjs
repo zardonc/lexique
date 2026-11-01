@@ -102,6 +102,7 @@ try {
     paused: await window.__TAURI_INTERNALS__.invoke('review_pause', { vocabularyId: 1, paused: null }),
   }), result.cards);
   assert.deepEqual(afterBatch, { progress: result.progress, paused: result.paused });
+  await writeFile(join(cache, '1.ogg'), 'invalid audio');
   const generated = await page.evaluate(() => Promise.all([
     window.__TAURI_INTERNALS__.invoke('speech_generate', { vocabularyId: 1 }),
     window.__TAURI_INTERNALS__.invoke('speech_generate', { vocabularyId: 1 }),

@@ -47,3 +47,21 @@ PowerShell 7、Node 24.22.1、pnpm 11.25.0、uv 管理的 Python 3.14.10、Rust/
 默认 pnpm 启动器的联网下载和 WindowsApps Python 占位程序最初失败，使用既有缓存和 uv 解释器后恢复。受限环境的 Vite 子进程未就绪及浏览器 localhost 访问被拒绝；相关尝试均结束。普通权限请求曾因自动审批服务错误未执行，随后权限审批恢复，在普通权限下完成标准回归。另在受限环境用本地构建资源的离线路由复现了同一界面错误；它不替代上表标准回归。既有 Rust 硬链接复制和 Rollup 注释警告保留，没有压低诊断。
 
 本轮没有施加网络限制或重做干净 Windows 验收；既有用户断网实测结论及平台限制沿用 [#22 收尾报告](../issue-22/review-2026-11-01.md)。本轮文件 symlink 检查跳过，既有 junction 拒绝证据保持，不冒称本轮补测。macOS / ARM64 实机、连续 24 小时缓存清理、完整默认资源及正式完整版 / Lite 发行仍未验收。没有自动合并 PR。
+
+## 2026-11-01 后续独立验证
+
+用户指定以 `210f8a38780823f8505e2fd5a7414fe58e1498a6` 为基点，复核 `39fa8a576f6ec66696293b81a62e38ee95a59476` 的五文件修复差异。两名全新上下文代理分别审查规范与规格。Spec 为 0 项；Standards 发现 1 项 P2 验证覆盖退化：并发生成移至批量修复成功之后，两次调用只复用有效缓存，没有实际合成或替换。现于批量进度 / 暂停比较之后重新写入坏缓存，再调用并发生成；独立复审确认恢复原检查边界，增强后的真实原生检查通过，未解决发现为 0。
+
+| 本次命令 / 边界 | 结果 |
+| --- | --- |
+| `pnpm lint`、`pnpm typecheck`、`pnpm build` | 通过；补齐测试后再次 lint 通过 |
+| `pnpm test:e2e -- --workers=2 notebook.spec.ts` | 22 项通过，含坏缓存失败反馈及重试；首次因未指定既有浏览器缓存而无法启动，设置 `PLAYWRIGHT_BROWSERS_PATH=target/playwright-browsers` 后通过 |
+| `pnpm rust:test:build` 后 `pnpm test:rust` | 70 项通过；预编译独立，执行硬 60 秒限制保持 |
+| `node --check apps/desktop/e2e/native-speech-check.mjs`、`git diff --check` | 通过 |
+| `native-speech-check.mjs`，指定原 release 程序及既有合成数据库的独立副本 | 批量坏缓存修复、进度 / 暂停保留、坏缓存并发实际生成 / 替换、无引擎复用有效缓存、失败替换保留旧音频、真实播放、0.6 倍重播与重启恢复通过；文件 symlink 分支因权限跳过 |
+
+本次原生副本为 `target/pr23-review-native-20261101-01a19831/`。复用的 `target/release/lexique-desktop.exe` 与上轮已验证程序 SHA-256 相同：`ea796007bad7b06e8326f2842f105035e826ccb51355ecf823ae55ac312f8694`；原生及产品前端源码未新增改动。运行进程由检查脚本退出并清理，未改写既有交付或用户学习数据库。
+
+实时读取同一 HEAD 的 [PR CI](https://github.com/zardonc/lexique/actions/runs/41331441882) 与 [push CI](https://github.com/zardonc/lexique/actions/runs/41331438375)，各 10 项全部通过，包含四目标编译。此次没有重跑完整 72 项浏览器套件、FSRS 原生 / WASM 向量、四目标编译或断网验收；对应上一轮证据与 CI 分别保留，不表述为此次本机重跑。文件 symlink、连续 24 小时清理、其他目标实机及正式发行门槛保持。
+
+用户明确选择“不合并，直接关闭 PR”。2026-11-01T18:06:02Z 已关闭 #23，回读状态为 `CLOSED`、`mergedAt=null`；远端 `codex/m2-review-design` 保持 `39fa8a5`，`main` 保持 `45fc84a`。此次测试补强与验证记录仅保留在本地，未提交或推送。
