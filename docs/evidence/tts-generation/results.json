@@ -1,0 +1,3201 @@
+{
+  "date": "2026-11-01",
+  "scope": "model-only; production unchanged",
+  "hard_execution_timeout_s": 60,
+  "runtime_checks": {
+    "hard_execution_timeout_s": 60,
+    "worker_sha256": "cdebdc0a9411c0aff268ee543f32c92dc23f72b76c91ff56cf25a6425bbd96c7",
+    "script_sha256": "62a7409c12ac8f551cdd511efbdd793a71393736973f13264200a2d15816e9c1",
+    "checks": {
+      "inputs": {
+        "checks": [
+          {
+            "case": "empty_text",
+            "error": "Invalid headword",
+            "passed": true
+          },
+          {
+            "case": "long_text",
+            "error": "Invalid headword",
+            "passed": true
+          },
+          {
+            "case": "control_character",
+            "error": "Invalid headword",
+            "passed": true
+          },
+          {
+            "case": "non_string_text",
+            "error": "Invalid headword",
+            "passed": true
+          },
+          {
+            "case": "invalid_voice",
+            "error": "Invalid voice",
+            "passed": true
+          },
+          {
+            "case": "path_like_id",
+            "error": "Invalid experiment request identity",
+            "passed": true
+          },
+          {
+            "case": "model_checksum",
+            "error": "Model checksum mismatch: duration_predictor.int8.onnx",
+            "passed": true
+          }
+        ],
+        "no_audio_outputs": true,
+        "returncode": 0
+      },
+      "gpu": {
+        "requested_provider": "cuda",
+        "model_loaded": true,
+        "speakers": 10,
+        "sample_rate": 44100,
+        "runtime": {
+          "version": "2.0.1",
+          "git_sha1": "af2d8d81",
+          "onnxruntime_version": "1.28.2"
+        },
+        "returncode": 0,
+        "diagnostic": "D:\\a\\sherpa-onnx\\sherpa-onnx\\sherpa-onnx\\csrc\\session.cc:GetSessionOptionsImpl:440 Please compile with -DSHERPA_ONNX_ENABLE_GPU=ON. Available providers: CPUExecutionProvider, . Fallback to cpu!\r\n",
+        "available_provider_diagnostics": [
+          "CPUExecutionProvider, "
+        ],
+        "cpu_fallback_detected": true,
+        "gpu_execution_verified": false
+      }
+    },
+    "raw_directory": "target/issue-24/tts-runtime-check-v2-20261101"
+  },
+  "verification": {
+    "trials": 122,
+    "ogg_outputs": 2214,
+    "pcm_outputs": 2178,
+    "fixed_seed_pcm_outputs": 1890,
+    "pcm_outputs_matching_serial_reference": 1764,
+    "random_seed_pcm_outputs": 288,
+    "all_fixed_seed_repeats_equal": true,
+    "step_variant_sample_counts_equal": true
+  },
+  "runs": [
+    {
+      "raw_directory": "target/issue-24/tts-pilot-20261101",
+      "jobs": [
+        {
+          "id": 0,
+          "text": "école",
+          "voice": "female",
+          "seed": 42
+        },
+        {
+          "id": 1,
+          "text": "bonjour",
+          "voice": "female",
+          "seed": 43
+        },
+        {
+          "id": 2,
+          "text": "œil",
+          "voice": "female",
+          "seed": 44
+        },
+        {
+          "id": 3,
+          "text": "vacances",
+          "voice": "female",
+          "seed": 45
+        },
+        {
+          "id": 4,
+          "text": "aujourd’hui",
+          "voice": "female",
+          "seed": 46
+        },
+        {
+          "id": 5,
+          "text": "fille",
+          "voice": "female",
+          "seed": 47
+        },
+        {
+          "id": 6,
+          "text": "rouge",
+          "voice": "female",
+          "seed": 48
+        },
+        {
+          "id": 7,
+          "text": "beaucoup",
+          "voice": "female",
+          "seed": 49
+        },
+        {
+          "id": 8,
+          "text": "heureusement",
+          "voice": "female",
+          "seed": 50
+        },
+        {
+          "id": 9,
+          "text": "anticonstitutionnellement",
+          "voice": "female",
+          "seed": 51
+        },
+        {
+          "id": 10,
+          "text": "rendez-vous",
+          "voice": "female",
+          "seed": 52
+        },
+        {
+          "id": 11,
+          "text": "y",
+          "voice": "female",
+          "seed": 53
+        }
+      ],
+      "worker_sha256": "cdebdc0a9411c0aff268ee543f32c92dc23f72b76c91ff56cf25a6425bbd96c7",
+      "measured_script_sha256": "36359624ace35c13796b09e51493889b2bfe7ed1f3682fcd0fa6182eec75a5be",
+      "probe_sha256": "e8597f4ef0cca649f5cbf26a0a22322671a6788e98b8914926100770c9679333",
+      "seed_policy": "fixed_per_request",
+      "configurations": [
+        {
+          "config": {
+            "name": "serial-1-2-8-on",
+            "mode": "serial",
+            "workers": 1,
+            "threads": 2,
+            "steps": 8,
+            "spin": "on"
+          },
+          "batch_ms": [
+            13346.655
+          ],
+          "median_batch_ms": 13346.655,
+          "median_process_total_ms": 15690.014,
+          "median_initialization_ms": 1533.641,
+          "median_active_cpu_s": 28.766,
+          "peak_private_mib": 771.355,
+          "peak_working_set_mib": 286.438,
+          "other_process_cpu_percent": [
+            null
+          ],
+          "median_inference_ms": 1128.828,
+          "median_service_ms": 1150.887,
+          "median_completion_ms": 6741.111,
+          "max_peak_amplitude": 0.4883604943752289,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "serial-1-1-8-on",
+            "mode": "serial",
+            "workers": 1,
+            "threads": 1,
+            "steps": 8,
+            "spin": "on"
+          },
+          "batch_ms": [
+            14750.565
+          ],
+          "median_batch_ms": 14750.565,
+          "median_process_total_ms": 17441.711,
+          "median_initialization_ms": 1567.891,
+          "median_active_cpu_s": 14.219,
+          "peak_private_mib": 769.836,
+          "peak_working_set_mib": 285.148,
+          "other_process_cpu_percent": [
+            null
+          ],
+          "median_inference_ms": 1359.744,
+          "median_service_ms": 1382.038,
+          "median_completion_ms": 7044.142,
+          "max_peak_amplitude": 0.4883604943752289,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "shared-2-1-8-off",
+            "mode": "shared",
+            "workers": 2,
+            "threads": 1,
+            "steps": 8,
+            "spin": "off"
+          },
+          "batch_ms": [
+            10510.356
+          ],
+          "median_batch_ms": 10510.356,
+          "median_process_total_ms": 13194.893,
+          "median_initialization_ms": 1576.732,
+          "median_active_cpu_s": 20.562,
+          "peak_private_mib": 871.051,
+          "peak_working_set_mib": 328.746,
+          "other_process_cpu_percent": [
+            null
+          ],
+          "median_inference_ms": 1780.077,
+          "median_service_ms": 1800.965,
+          "median_completion_ms": 5758.343,
+          "max_peak_amplitude": 0.4883604943752289,
+          "outputs_above_full_scale": 0
+        }
+      ]
+    },
+    {
+      "raw_directory": "target/issue-24/tts-screen-a-20261101",
+      "jobs": [
+        {
+          "id": 0,
+          "text": "école",
+          "voice": "female",
+          "seed": 42
+        },
+        {
+          "id": 1,
+          "text": "bonjour",
+          "voice": "female",
+          "seed": 43
+        },
+        {
+          "id": 2,
+          "text": "œil",
+          "voice": "female",
+          "seed": 44
+        },
+        {
+          "id": 3,
+          "text": "vacances",
+          "voice": "female",
+          "seed": 45
+        },
+        {
+          "id": 4,
+          "text": "aujourd’hui",
+          "voice": "female",
+          "seed": 46
+        },
+        {
+          "id": 5,
+          "text": "fille",
+          "voice": "female",
+          "seed": 47
+        },
+        {
+          "id": 6,
+          "text": "rouge",
+          "voice": "female",
+          "seed": 48
+        },
+        {
+          "id": 7,
+          "text": "beaucoup",
+          "voice": "female",
+          "seed": 49
+        },
+        {
+          "id": 8,
+          "text": "heureusement",
+          "voice": "female",
+          "seed": 50
+        },
+        {
+          "id": 9,
+          "text": "anticonstitutionnellement",
+          "voice": "female",
+          "seed": 51
+        },
+        {
+          "id": 10,
+          "text": "rendez-vous",
+          "voice": "female",
+          "seed": 52
+        },
+        {
+          "id": 11,
+          "text": "y",
+          "voice": "female",
+          "seed": 53
+        }
+      ],
+      "worker_sha256": "cdebdc0a9411c0aff268ee543f32c92dc23f72b76c91ff56cf25a6425bbd96c7",
+      "measured_script_sha256": "cc77cab484911f05146ae27a14889814abc8ec5c24703d12b770000d2c20dbcc",
+      "probe_sha256": "e8597f4ef0cca649f5cbf26a0a22322671a6788e98b8914926100770c9679333",
+      "seed_policy": "fixed_per_request",
+      "configurations": [
+        {
+          "config": {
+            "name": "serial-1-4-8-on",
+            "mode": "serial",
+            "workers": 1,
+            "threads": 4,
+            "steps": 8,
+            "spin": "on"
+          },
+          "batch_ms": [
+            11342.634
+          ],
+          "median_batch_ms": 11342.634,
+          "median_process_total_ms": 13537.869,
+          "median_initialization_ms": 1451.058,
+          "median_active_cpu_s": 52.125,
+          "peak_private_mib": 772.996,
+          "peak_working_set_mib": 287.941,
+          "other_process_cpu_percent": [
+            5.811
+          ],
+          "median_inference_ms": 966.74,
+          "median_service_ms": 990.57,
+          "median_completion_ms": 5810.423,
+          "max_peak_amplitude": 0.4883604943752289,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "serial-1-8-8-on",
+            "mode": "serial",
+            "workers": 1,
+            "threads": 8,
+            "steps": 8,
+            "spin": "on"
+          },
+          "batch_ms": [
+            12041.463
+          ],
+          "median_batch_ms": 12041.463,
+          "median_process_total_ms": 14355.482,
+          "median_initialization_ms": 1430.945,
+          "median_active_cpu_s": 108.344,
+          "peak_private_mib": 776.746,
+          "peak_working_set_mib": 291.25,
+          "other_process_cpu_percent": [
+            8.833
+          ],
+          "median_inference_ms": 1008.668,
+          "median_service_ms": 1033.491,
+          "median_completion_ms": 6199.741,
+          "max_peak_amplitude": 0.4883604943752289,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "serial-1-16-8-on",
+            "mode": "serial",
+            "workers": 1,
+            "threads": 16,
+            "steps": 8,
+            "spin": "on"
+          },
+          "batch_ms": [
+            14980.521
+          ],
+          "median_batch_ms": 14980.521,
+          "median_process_total_ms": 17746.012,
+          "median_initialization_ms": 1536.349,
+          "median_active_cpu_s": 221.406,
+          "peak_private_mib": 788.254,
+          "peak_working_set_mib": 300.32,
+          "other_process_cpu_percent": [
+            7.675
+          ],
+          "median_inference_ms": 1202.716,
+          "median_service_ms": 1246.116,
+          "median_completion_ms": 7987.333,
+          "max_peak_amplitude": 0.4883604943752289,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "serial-1-2-8-off",
+            "mode": "serial",
+            "workers": 1,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "batch_ms": [
+            15305.155
+          ],
+          "median_batch_ms": 15305.155,
+          "median_process_total_ms": 17657.51,
+          "median_initialization_ms": 1523.927,
+          "median_active_cpu_s": 26.672,
+          "peak_private_mib": 771.656,
+          "peak_working_set_mib": 286.98,
+          "other_process_cpu_percent": [
+            7.596
+          ],
+          "median_inference_ms": 1321.302,
+          "median_service_ms": 1343.049,
+          "median_completion_ms": 7810.769,
+          "max_peak_amplitude": 0.4883604943752289,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "serial-1-4-8-off",
+            "mode": "serial",
+            "workers": 1,
+            "threads": 4,
+            "steps": 8,
+            "spin": "off"
+          },
+          "batch_ms": [
+            14643.156
+          ],
+          "median_batch_ms": 14643.156,
+          "median_process_total_ms": 16949.023,
+          "median_initialization_ms": 1503.923,
+          "median_active_cpu_s": 26.906,
+          "peak_private_mib": 773.777,
+          "peak_working_set_mib": 288.84,
+          "other_process_cpu_percent": [
+            7.211
+          ],
+          "median_inference_ms": 1281.624,
+          "median_service_ms": 1306.616,
+          "median_completion_ms": 7413.515,
+          "max_peak_amplitude": 0.4883604943752289,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "serial-1-8-8-off",
+            "mode": "serial",
+            "workers": 1,
+            "threads": 8,
+            "steps": 8,
+            "spin": "off"
+          },
+          "batch_ms": [
+            14369.143
+          ],
+          "median_batch_ms": 14369.143,
+          "median_process_total_ms": 16556.617,
+          "median_initialization_ms": 1407.054,
+          "median_active_cpu_s": 28.422,
+          "peak_private_mib": 777.191,
+          "peak_working_set_mib": 291.871,
+          "other_process_cpu_percent": [
+            6.889
+          ],
+          "median_inference_ms": 1267.047,
+          "median_service_ms": 1287.892,
+          "median_completion_ms": 7187.975,
+          "max_peak_amplitude": 0.4883604943752289,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "serial-1-16-8-off",
+            "mode": "serial",
+            "workers": 1,
+            "threads": 16,
+            "steps": 8,
+            "spin": "off"
+          },
+          "batch_ms": [
+            14741.27
+          ],
+          "median_batch_ms": 14741.27,
+          "median_process_total_ms": 16984.597,
+          "median_initialization_ms": 1444.158,
+          "median_active_cpu_s": 30.922,
+          "peak_private_mib": 786.844,
+          "peak_working_set_mib": 299.266,
+          "other_process_cpu_percent": [
+            6.947
+          ],
+          "median_inference_ms": 1291.068,
+          "median_service_ms": 1314.735,
+          "median_completion_ms": 7528.928,
+          "max_peak_amplitude": 0.4883604943752289,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "serial-1-2-8-bounded",
+            "mode": "serial",
+            "workers": 1,
+            "threads": 2,
+            "steps": 8,
+            "spin": "bounded"
+          },
+          "batch_ms": [
+            13181.665
+          ],
+          "median_batch_ms": 13181.665,
+          "median_process_total_ms": 15410.559,
+          "median_initialization_ms": 1472.777,
+          "median_active_cpu_s": 25.422,
+          "peak_private_mib": 771.352,
+          "peak_working_set_mib": 286.254,
+          "other_process_cpu_percent": [
+            11.335
+          ],
+          "median_inference_ms": 1131.084,
+          "median_service_ms": 1152.622,
+          "median_completion_ms": 6684.633,
+          "max_peak_amplitude": 0.4883604943752289,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "serial-1-4-8-bounded",
+            "mode": "serial",
+            "workers": 1,
+            "threads": 4,
+            "steps": 8,
+            "spin": "bounded"
+          },
+          "batch_ms": [
+            11678.309
+          ],
+          "median_batch_ms": 11678.309,
+          "median_process_total_ms": 14044.014,
+          "median_initialization_ms": 1583.417,
+          "median_active_cpu_s": 44.094,
+          "peak_private_mib": 773.812,
+          "peak_working_set_mib": 288.715,
+          "other_process_cpu_percent": [
+            13.154
+          ],
+          "median_inference_ms": 988.631,
+          "median_service_ms": 1010.252,
+          "median_completion_ms": 6032.648,
+          "max_peak_amplitude": 0.4883604943752289,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "serial-1-8-8-bounded",
+            "mode": "serial",
+            "workers": 1,
+            "threads": 8,
+            "steps": 8,
+            "spin": "bounded"
+          },
+          "batch_ms": [
+            11862.002
+          ],
+          "median_batch_ms": 11862.002,
+          "median_process_total_ms": 14057.295,
+          "median_initialization_ms": 1428.794,
+          "median_active_cpu_s": 72.984,
+          "peak_private_mib": 776.859,
+          "peak_working_set_mib": 291.449,
+          "other_process_cpu_percent": [
+            4.925
+          ],
+          "median_inference_ms": 1032.53,
+          "median_service_ms": 1052.299,
+          "median_completion_ms": 5971.065,
+          "max_peak_amplitude": 0.4883604943752289,
+          "outputs_above_full_scale": 0
+        }
+      ]
+    },
+    {
+      "raw_directory": "target/issue-24/tts-screen-b-20261101",
+      "jobs": [
+        {
+          "id": 0,
+          "text": "école",
+          "voice": "female",
+          "seed": 42
+        },
+        {
+          "id": 1,
+          "text": "bonjour",
+          "voice": "female",
+          "seed": 43
+        },
+        {
+          "id": 2,
+          "text": "œil",
+          "voice": "female",
+          "seed": 44
+        },
+        {
+          "id": 3,
+          "text": "vacances",
+          "voice": "female",
+          "seed": 45
+        },
+        {
+          "id": 4,
+          "text": "aujourd’hui",
+          "voice": "female",
+          "seed": 46
+        },
+        {
+          "id": 5,
+          "text": "fille",
+          "voice": "female",
+          "seed": 47
+        },
+        {
+          "id": 6,
+          "text": "rouge",
+          "voice": "female",
+          "seed": 48
+        },
+        {
+          "id": 7,
+          "text": "beaucoup",
+          "voice": "female",
+          "seed": 49
+        },
+        {
+          "id": 8,
+          "text": "heureusement",
+          "voice": "female",
+          "seed": 50
+        },
+        {
+          "id": 9,
+          "text": "anticonstitutionnellement",
+          "voice": "female",
+          "seed": 51
+        },
+        {
+          "id": 10,
+          "text": "rendez-vous",
+          "voice": "female",
+          "seed": 52
+        },
+        {
+          "id": 11,
+          "text": "y",
+          "voice": "female",
+          "seed": 53
+        }
+      ],
+      "worker_sha256": "cdebdc0a9411c0aff268ee543f32c92dc23f72b76c91ff56cf25a6425bbd96c7",
+      "measured_script_sha256": "ac821792a1edd7293b49f40175ecb3b464a24b147d707e1befd91de1cc58ed60",
+      "probe_sha256": "e8597f4ef0cca649f5cbf26a0a22322671a6788e98b8914926100770c9679333",
+      "seed_policy": "fixed_per_request",
+      "configurations": [
+        {
+          "config": {
+            "name": "shared-2-1-8-off",
+            "mode": "shared",
+            "workers": 2,
+            "threads": 1,
+            "steps": 8,
+            "spin": "off"
+          },
+          "batch_ms": [
+            9960.38
+          ],
+          "median_batch_ms": 9960.38,
+          "median_process_total_ms": 12502.218,
+          "median_initialization_ms": 1452.057,
+          "median_active_cpu_s": 19.688,
+          "peak_private_mib": 871.109,
+          "peak_working_set_mib": 327.75,
+          "other_process_cpu_percent": [
+            6.359
+          ],
+          "median_inference_ms": 1674.585,
+          "median_service_ms": 1699.512,
+          "median_completion_ms": 5461.314,
+          "max_peak_amplitude": 0.4883604943752289,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "shared-4-1-8-off",
+            "mode": "shared",
+            "workers": 4,
+            "threads": 1,
+            "steps": 8,
+            "spin": "off"
+          },
+          "batch_ms": [
+            5199.656
+          ],
+          "median_batch_ms": 5199.656,
+          "median_process_total_ms": 7880.703,
+          "median_initialization_ms": 1458.939,
+          "median_active_cpu_s": 20.078,
+          "peak_private_mib": 871.09,
+          "peak_working_set_mib": 365.016,
+          "other_process_cpu_percent": [
+            5.591
+          ],
+          "median_inference_ms": 1721.7,
+          "median_service_ms": 1748.852,
+          "median_completion_ms": 3179.211,
+          "max_peak_amplitude": 0.4883604943752289,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "shared-8-1-8-off",
+            "mode": "shared",
+            "workers": 8,
+            "threads": 1,
+            "steps": 8,
+            "spin": "off"
+          },
+          "batch_ms": [
+            4033.518
+          ],
+          "median_batch_ms": 4033.518,
+          "median_process_total_ms": 7644.682,
+          "median_initialization_ms": 1474.461,
+          "median_active_cpu_s": 23.797,
+          "peak_private_mib": 1078.746,
+          "peak_working_set_mib": 502.352,
+          "other_process_cpu_percent": [
+            9.157
+          ],
+          "median_inference_ms": 2039.668,
+          "median_service_ms": 2073.118,
+          "median_completion_ms": 2146.202,
+          "max_peak_amplitude": 0.4883604943752289,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "shared-12-1-8-off",
+            "mode": "shared",
+            "workers": 12,
+            "threads": 1,
+            "steps": 8,
+            "spin": "off"
+          },
+          "batch_ms": [
+            2912.955
+          ],
+          "median_batch_ms": 2912.955,
+          "median_process_total_ms": 7078.222,
+          "median_initialization_ms": 1428.462,
+          "median_active_cpu_s": 30.219,
+          "peak_private_mib": 1212.812,
+          "peak_working_set_mib": 640.754,
+          "other_process_cpu_percent": [
+            25.101
+          ],
+          "median_inference_ms": 2670.526,
+          "median_service_ms": 2706.829,
+          "median_completion_ms": 2710.48,
+          "max_peak_amplitude": 0.4883604943752289,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "shared-2-2-8-off",
+            "mode": "shared",
+            "workers": 2,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "batch_ms": [
+            7734.439
+          ],
+          "median_batch_ms": 7734.439,
+          "median_process_total_ms": 10060.856,
+          "median_initialization_ms": 1447.51,
+          "median_active_cpu_s": 21.812,
+          "peak_private_mib": 871.312,
+          "peak_working_set_mib": 328.176,
+          "other_process_cpu_percent": [
+            5.644
+          ],
+          "median_inference_ms": 1359.945,
+          "median_service_ms": 1387.799,
+          "median_completion_ms": 4033.092,
+          "max_peak_amplitude": 0.4883604943752289,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "shared-4-2-8-off",
+            "mode": "shared",
+            "workers": 4,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "batch_ms": [
+            4590.478
+          ],
+          "median_batch_ms": 4590.478,
+          "median_process_total_ms": 7184.112,
+          "median_initialization_ms": 1437.013,
+          "median_active_cpu_s": 22.688,
+          "peak_private_mib": 939.027,
+          "peak_working_set_mib": 391.48,
+          "other_process_cpu_percent": [
+            5.548
+          ],
+          "median_inference_ms": 1605.099,
+          "median_service_ms": 1629.464,
+          "median_completion_ms": 2841.684,
+          "max_peak_amplitude": 0.4883604943752289,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "shared-8-2-8-off",
+            "mode": "shared",
+            "workers": 8,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "batch_ms": [
+            3779.508
+          ],
+          "median_batch_ms": 3779.508,
+          "median_process_total_ms": 7205.672,
+          "median_initialization_ms": 1460.819,
+          "median_active_cpu_s": 26.703,
+          "peak_private_mib": 1077.211,
+          "peak_working_set_mib": 511.223,
+          "other_process_cpu_percent": [
+            8.032
+          ],
+          "median_inference_ms": 1974.718,
+          "median_service_ms": 2006.868,
+          "median_completion_ms": 2050.71,
+          "max_peak_amplitude": 0.4883604943752289,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "shared-2-4-8-off",
+            "mode": "shared",
+            "workers": 2,
+            "threads": 4,
+            "steps": 8,
+            "spin": "off"
+          },
+          "batch_ms": [
+            6906.045
+          ],
+          "median_batch_ms": 6906.045,
+          "median_process_total_ms": 9146.78,
+          "median_initialization_ms": 1446.66,
+          "median_active_cpu_s": 23.594,
+          "peak_private_mib": 873.531,
+          "peak_working_set_mib": 330.945,
+          "other_process_cpu_percent": [
+            5.916
+          ],
+          "median_inference_ms": 1279.766,
+          "median_service_ms": 1306.551,
+          "median_completion_ms": 3537.599,
+          "max_peak_amplitude": 0.4883604943752289,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "shared-4-4-8-off",
+            "mode": "shared",
+            "workers": 4,
+            "threads": 4,
+            "steps": 8,
+            "spin": "off"
+          },
+          "batch_ms": [
+            4000.375
+          ],
+          "median_batch_ms": 4000.375,
+          "median_process_total_ms": 6500.28,
+          "median_initialization_ms": 1414.585,
+          "median_active_cpu_s": 24.922,
+          "peak_private_mib": 877.203,
+          "peak_working_set_mib": 388.551,
+          "other_process_cpu_percent": [
+            8.13
+          ],
+          "median_inference_ms": 1411.419,
+          "median_service_ms": 1438.791,
+          "median_completion_ms": 2450.655,
+          "max_peak_amplitude": 0.4883604943752289,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "process-2-1-8-off",
+            "mode": "process",
+            "workers": 2,
+            "threads": 1,
+            "steps": 8,
+            "spin": "off"
+          },
+          "batch_ms": [
+            10031.434
+          ],
+          "median_batch_ms": 10031.434,
+          "median_process_total_ms": 12785.994,
+          "median_initialization_ms": 1677.925,
+          "median_active_cpu_s": 19.594,
+          "peak_private_mib": 1552.484,
+          "peak_working_set_mib": 590.234,
+          "other_process_cpu_percent": [
+            8.453
+          ],
+          "median_inference_ms": 1708.24,
+          "median_service_ms": 1733.298,
+          "median_completion_ms": 5495.271,
+          "max_peak_amplitude": 0.4883604943752289,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "process-4-1-8-off",
+            "mode": "process",
+            "workers": 4,
+            "threads": 1,
+            "steps": 8,
+            "spin": "off"
+          },
+          "batch_ms": [
+            5595.354
+          ],
+          "median_batch_ms": 5595.354,
+          "median_process_total_ms": 8648.845,
+          "median_initialization_ms": 1805.744,
+          "median_active_cpu_s": 21.359,
+          "peak_private_mib": 3088.23,
+          "peak_working_set_mib": 1150.094,
+          "other_process_cpu_percent": [
+            15.328
+          ],
+          "median_inference_ms": 1792.223,
+          "median_service_ms": 1817.653,
+          "median_completion_ms": 3503.688,
+          "max_peak_amplitude": 0.4883604943752289,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "process-8-1-8-off",
+            "mode": "process",
+            "workers": 8,
+            "threads": 1,
+            "steps": 8,
+            "spin": "off"
+          },
+          "batch_ms": [
+            4152.452
+          ],
+          "median_batch_ms": 4152.452,
+          "median_process_total_ms": 9089.52,
+          "median_initialization_ms": 2594.999,
+          "median_active_cpu_s": 25.062,
+          "peak_private_mib": 6159.559,
+          "peak_working_set_mib": 2238.102,
+          "other_process_cpu_percent": [
+            12.244
+          ],
+          "median_inference_ms": 2142.324,
+          "median_service_ms": 2167.842,
+          "median_completion_ms": 2219.932,
+          "max_peak_amplitude": 0.4883604943752289,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "process-2-2-8-off",
+            "mode": "process",
+            "workers": 2,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "batch_ms": [
+            7205.377
+          ],
+          "median_batch_ms": 7205.377,
+          "median_process_total_ms": 9691.649,
+          "median_initialization_ms": 1632.757,
+          "median_active_cpu_s": 22.953,
+          "peak_private_mib": 1556.699,
+          "peak_working_set_mib": 592.977,
+          "other_process_cpu_percent": [
+            7.85
+          ],
+          "median_inference_ms": 1303.546,
+          "median_service_ms": 1331.089,
+          "median_completion_ms": 3726.016,
+          "max_peak_amplitude": 0.4883604943752289,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "process-4-2-8-off",
+            "mode": "process",
+            "workers": 4,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "batch_ms": [
+            4026.437
+          ],
+          "median_batch_ms": 4026.437,
+          "median_process_total_ms": 6853.023,
+          "median_initialization_ms": 1747.617,
+          "median_active_cpu_s": 25.891,
+          "peak_private_mib": 3094.758,
+          "peak_working_set_mib": 1156.223,
+          "other_process_cpu_percent": [
+            8.067
+          ],
+          "median_inference_ms": 1398.594,
+          "median_service_ms": 1427.766,
+          "median_completion_ms": 2490.404,
+          "max_peak_amplitude": 0.4883604943752289,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "process-8-2-8-off",
+            "mode": "process",
+            "workers": 8,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "batch_ms": [
+            3079.02
+          ],
+          "median_batch_ms": 3079.02,
+          "median_process_total_ms": 7481.024,
+          "median_initialization_ms": 2521.371,
+          "median_active_cpu_s": 28.641,
+          "peak_private_mib": 6167.844,
+          "peak_working_set_mib": 2246.277,
+          "other_process_cpu_percent": [
+            12.777
+          ],
+          "median_inference_ms": 1550.526,
+          "median_service_ms": 1580.444,
+          "median_completion_ms": 1599.316,
+          "max_peak_amplitude": 0.4883604943752289,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "process-4-4-8-off",
+            "mode": "process",
+            "workers": 4,
+            "threads": 4,
+            "steps": 8,
+            "spin": "off"
+          },
+          "batch_ms": [
+            3905.058
+          ],
+          "median_batch_ms": 3905.058,
+          "median_process_total_ms": 6835.234,
+          "median_initialization_ms": 1774.535,
+          "median_active_cpu_s": 26.969,
+          "peak_private_mib": 3102.426,
+          "peak_working_set_mib": 1163.461,
+          "other_process_cpu_percent": [
+            8.848
+          ],
+          "median_inference_ms": 1308.405,
+          "median_service_ms": 1336.106,
+          "median_completion_ms": 2499.678,
+          "max_peak_amplitude": 0.4883604943752289,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "shared-4-2-8-on",
+            "mode": "shared",
+            "workers": 4,
+            "threads": 2,
+            "steps": 8,
+            "spin": "on"
+          },
+          "batch_ms": [
+            4539.935
+          ],
+          "median_batch_ms": 4539.935,
+          "median_process_total_ms": 7199.873,
+          "median_initialization_ms": 1489.837,
+          "median_active_cpu_s": 23.562,
+          "peak_private_mib": 873.043,
+          "peak_working_set_mib": 374.836,
+          "other_process_cpu_percent": [
+            7.198
+          ],
+          "median_inference_ms": 1484.375,
+          "median_service_ms": 1513.369,
+          "median_completion_ms": 2858.602,
+          "max_peak_amplitude": 0.4883604943752289,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "process-4-2-8-on",
+            "mode": "process",
+            "workers": 4,
+            "threads": 2,
+            "steps": 8,
+            "spin": "on"
+          },
+          "batch_ms": [
+            3965.365
+          ],
+          "median_batch_ms": 3965.365,
+          "median_process_total_ms": 6963.023,
+          "median_initialization_ms": 1789.77,
+          "median_active_cpu_s": 33.359,
+          "peak_private_mib": 3092.078,
+          "peak_working_set_mib": 1154.277,
+          "other_process_cpu_percent": [
+            7.579
+          ],
+          "median_inference_ms": 1297.671,
+          "median_service_ms": 1324.577,
+          "median_completion_ms": 2524.379,
+          "max_peak_amplitude": 0.4883604943752289,
+          "outputs_above_full_scale": 0
+        }
+      ]
+    },
+    {
+      "raw_directory": "target/issue-24/tts-confirm-words-20261101",
+      "jobs": [
+        {
+          "id": 0,
+          "text": "école",
+          "voice": "female",
+          "seed": 42
+        },
+        {
+          "id": 1,
+          "text": "bonjour",
+          "voice": "female",
+          "seed": 43
+        },
+        {
+          "id": 2,
+          "text": "œil",
+          "voice": "female",
+          "seed": 44
+        },
+        {
+          "id": 3,
+          "text": "vacances",
+          "voice": "female",
+          "seed": 45
+        },
+        {
+          "id": 4,
+          "text": "aujourd’hui",
+          "voice": "female",
+          "seed": 46
+        },
+        {
+          "id": 5,
+          "text": "fille",
+          "voice": "female",
+          "seed": 47
+        },
+        {
+          "id": 6,
+          "text": "rouge",
+          "voice": "female",
+          "seed": 48
+        },
+        {
+          "id": 7,
+          "text": "beaucoup",
+          "voice": "female",
+          "seed": 49
+        },
+        {
+          "id": 8,
+          "text": "heureusement",
+          "voice": "female",
+          "seed": 50
+        },
+        {
+          "id": 9,
+          "text": "anticonstitutionnellement",
+          "voice": "female",
+          "seed": 51
+        },
+        {
+          "id": 10,
+          "text": "rendez-vous",
+          "voice": "female",
+          "seed": 52
+        },
+        {
+          "id": 11,
+          "text": "y",
+          "voice": "female",
+          "seed": 53
+        },
+        {
+          "id": 12,
+          "text": "école",
+          "voice": "female",
+          "seed": 54
+        },
+        {
+          "id": 13,
+          "text": "bonjour",
+          "voice": "female",
+          "seed": 55
+        },
+        {
+          "id": 14,
+          "text": "œil",
+          "voice": "female",
+          "seed": 56
+        },
+        {
+          "id": 15,
+          "text": "vacances",
+          "voice": "female",
+          "seed": 57
+        },
+        {
+          "id": 16,
+          "text": "aujourd’hui",
+          "voice": "female",
+          "seed": 58
+        },
+        {
+          "id": 17,
+          "text": "fille",
+          "voice": "female",
+          "seed": 59
+        },
+        {
+          "id": 18,
+          "text": "rouge",
+          "voice": "female",
+          "seed": 60
+        },
+        {
+          "id": 19,
+          "text": "beaucoup",
+          "voice": "female",
+          "seed": 61
+        },
+        {
+          "id": 20,
+          "text": "heureusement",
+          "voice": "female",
+          "seed": 62
+        },
+        {
+          "id": 21,
+          "text": "anticonstitutionnellement",
+          "voice": "female",
+          "seed": 63
+        },
+        {
+          "id": 22,
+          "text": "rendez-vous",
+          "voice": "female",
+          "seed": 64
+        },
+        {
+          "id": 23,
+          "text": "y",
+          "voice": "female",
+          "seed": 65
+        }
+      ],
+      "worker_sha256": "cdebdc0a9411c0aff268ee543f32c92dc23f72b76c91ff56cf25a6425bbd96c7",
+      "measured_script_sha256": "b1626fe3704e1e6eb535c1a68ef4c7813606f812fe6981ac758295c303b146b6",
+      "probe_sha256": "e8597f4ef0cca649f5cbf26a0a22322671a6788e98b8914926100770c9679333",
+      "seed_policy": "fixed_per_request",
+      "configurations": [
+        {
+          "config": {
+            "name": "serial-1-4-8-on",
+            "mode": "serial",
+            "workers": 1,
+            "threads": 4,
+            "steps": 8,
+            "spin": "on"
+          },
+          "batch_ms": [
+            23502.678,
+            23308.766,
+            23641.581
+          ],
+          "median_batch_ms": 23502.678,
+          "median_process_total_ms": 25771.222,
+          "median_initialization_ms": 1486.425,
+          "median_active_cpu_s": 108.25,
+          "peak_private_mib": 773.938,
+          "peak_working_set_mib": 290.938,
+          "other_process_cpu_percent": [
+            6.674,
+            6.468,
+            7.452
+          ],
+          "median_inference_ms": 974.34,
+          "median_service_ms": 999.651,
+          "median_completion_ms": 11936.513,
+          "max_peak_amplitude": 0.5817317366600037,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "shared-8-1-8-on",
+            "mode": "shared",
+            "workers": 8,
+            "threads": 1,
+            "steps": 8,
+            "spin": "on"
+          },
+          "batch_ms": [
+            6601.241,
+            6537.921,
+            6630.107
+          ],
+          "median_batch_ms": 6601.241,
+          "median_process_total_ms": 10154.276,
+          "median_initialization_ms": 1472.432,
+          "median_active_cpu_s": 50.484,
+          "peak_private_mib": 1078.742,
+          "peak_working_set_mib": 507.98,
+          "other_process_cpu_percent": [
+            8.732,
+            8.906,
+            8.8
+          ],
+          "median_inference_ms": 2098.622,
+          "median_service_ms": 2134.642,
+          "median_completion_ms": 4286.369,
+          "max_peak_amplitude": 0.5817317366600037,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "shared-12-1-8-on",
+            "mode": "shared",
+            "workers": 12,
+            "threads": 1,
+            "steps": 8,
+            "spin": "on"
+          },
+          "batch_ms": [
+            5761.343,
+            5891.663,
+            5719.334
+          ],
+          "median_batch_ms": 5761.343,
+          "median_process_total_ms": 9975.53,
+          "median_initialization_ms": 1518.414,
+          "median_active_cpu_s": 60.0,
+          "peak_private_mib": 1215.961,
+          "peak_working_set_mib": 660.09,
+          "other_process_cpu_percent": [
+            27.19,
+            30.376,
+            27.92
+          ],
+          "median_inference_ms": 2727.49,
+          "median_service_ms": 2770.856,
+          "median_completion_ms": 4316.614,
+          "max_peak_amplitude": 0.5817317366600037,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "shared-16-1-8-on",
+            "mode": "shared",
+            "workers": 16,
+            "threads": 1,
+            "steps": 8,
+            "spin": "on"
+          },
+          "batch_ms": [
+            5963.578,
+            5993.79,
+            5763.938
+          ],
+          "median_batch_ms": 5963.578,
+          "median_process_total_ms": 11221.102,
+          "median_initialization_ms": 1496.617,
+          "median_active_cpu_s": 62.016,
+          "peak_private_mib": 1477.754,
+          "peak_working_set_mib": 742.254,
+          "other_process_cpu_percent": [
+            28.283,
+            24.886,
+            19.089
+          ],
+          "median_inference_ms": 3411.572,
+          "median_service_ms": 3458.241,
+          "median_completion_ms": 3662.218,
+          "max_peak_amplitude": 0.5817317366600037,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "shared-12-2-8-off",
+            "mode": "shared",
+            "workers": 12,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "batch_ms": [
+            5634.71,
+            5657.633,
+            5612.745
+          ],
+          "median_batch_ms": 5634.71,
+          "median_process_total_ms": 10010.165,
+          "median_initialization_ms": 1510.753,
+          "median_active_cpu_s": 63.703,
+          "peak_private_mib": 1215.945,
+          "peak_working_set_mib": 634.648,
+          "other_process_cpu_percent": [
+            25.052,
+            27.003,
+            25.383
+          ],
+          "median_inference_ms": 2686.922,
+          "median_service_ms": 2739.032,
+          "median_completion_ms": 4141.495,
+          "max_peak_amplitude": 0.5817317366600037,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "shared-16-2-8-off",
+            "mode": "shared",
+            "workers": 16,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "batch_ms": [
+            5787.974,
+            5834.734,
+            5564.794
+          ],
+          "median_batch_ms": 5787.974,
+          "median_process_total_ms": 10850.485,
+          "median_initialization_ms": 1441.676,
+          "median_active_cpu_s": 64.266,
+          "peak_private_mib": 1482.82,
+          "peak_working_set_mib": 757.961,
+          "other_process_cpu_percent": [
+            22.372,
+            22.802,
+            14.361
+          ],
+          "median_inference_ms": 3320.656,
+          "median_service_ms": 3371.725,
+          "median_completion_ms": 3685.869,
+          "max_peak_amplitude": 0.5817317366600037,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "process-8-2-8-off",
+            "mode": "process",
+            "workers": 8,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "batch_ms": [
+            5648.94,
+            5709.579,
+            5658.768
+          ],
+          "median_batch_ms": 5658.768,
+          "median_process_total_ms": 10187.888,
+          "median_initialization_ms": 2618.717,
+          "median_active_cpu_s": 62.156,
+          "peak_private_mib": 6171.305,
+          "peak_working_set_mib": 2286.27,
+          "other_process_cpu_percent": [
+            28.064,
+            27.175,
+            27.659
+          ],
+          "median_inference_ms": 1788.993,
+          "median_service_ms": 1829.1,
+          "median_completion_ms": 3759.095,
+          "max_peak_amplitude": 0.5817317366600037,
+          "outputs_above_full_scale": 0
+        }
+      ]
+    },
+    {
+      "raw_directory": "target/issue-24/tts-latency-20261101",
+      "jobs": [
+        {
+          "id": 0,
+          "text": "école",
+          "voice": "female",
+          "seed": 42
+        },
+        {
+          "id": 1,
+          "text": "bonjour",
+          "voice": "female",
+          "seed": 43
+        },
+        {
+          "id": 2,
+          "text": "œil",
+          "voice": "female",
+          "seed": 44
+        },
+        {
+          "id": 3,
+          "text": "vacances",
+          "voice": "female",
+          "seed": 45
+        },
+        {
+          "id": 4,
+          "text": "aujourd’hui",
+          "voice": "female",
+          "seed": 46
+        },
+        {
+          "id": 5,
+          "text": "fille",
+          "voice": "female",
+          "seed": 47
+        },
+        {
+          "id": 6,
+          "text": "rouge",
+          "voice": "female",
+          "seed": 48
+        },
+        {
+          "id": 7,
+          "text": "beaucoup",
+          "voice": "female",
+          "seed": 49
+        },
+        {
+          "id": 8,
+          "text": "heureusement",
+          "voice": "female",
+          "seed": 50
+        },
+        {
+          "id": 9,
+          "text": "anticonstitutionnellement",
+          "voice": "female",
+          "seed": 51
+        },
+        {
+          "id": 10,
+          "text": "rendez-vous",
+          "voice": "female",
+          "seed": 52
+        },
+        {
+          "id": 11,
+          "text": "y",
+          "voice": "female",
+          "seed": 53
+        }
+      ],
+      "worker_sha256": "cdebdc0a9411c0aff268ee543f32c92dc23f72b76c91ff56cf25a6425bbd96c7",
+      "measured_script_sha256": "99a30a493f5e4649951c4daa0113a2cc85f6f0c72002fc4f358664cb72f8deaf",
+      "probe_sha256": "e8597f4ef0cca649f5cbf26a0a22322671a6788e98b8914926100770c9679333",
+      "seed_policy": "fixed_per_request",
+      "configurations": [
+        {
+          "config": {
+            "name": "fresh-1-2-8-on",
+            "mode": "fresh",
+            "workers": 1,
+            "threads": 2,
+            "steps": 8,
+            "spin": "on"
+          },
+          "batch_ms": [
+            25504.355,
+            25683.028,
+            25485.356
+          ],
+          "median_batch_ms": 25504.355,
+          "median_process_total_ms": 25656.39,
+          "median_initialization_ms": 0.184,
+          "median_active_cpu_s": 34.094,
+          "peak_private_mib": 780.801,
+          "peak_working_set_mib": 293.973,
+          "other_process_cpu_percent": [
+            6.338,
+            5.912,
+            5.671
+          ],
+          "median_inference_ms": null,
+          "median_service_ms": 2132.361,
+          "median_completion_ms": 13780.05,
+          "max_peak_amplitude": null,
+          "outputs_above_full_scale": null
+        },
+        {
+          "config": {
+            "name": "serial-1-2-8-on",
+            "mode": "serial",
+            "workers": 1,
+            "threads": 2,
+            "steps": 8,
+            "spin": "on"
+          },
+          "batch_ms": [
+            12704.707,
+            12517.474,
+            12769.803
+          ],
+          "median_batch_ms": 12704.707,
+          "median_process_total_ms": 14920.393,
+          "median_initialization_ms": 1434.43,
+          "median_active_cpu_s": 27.391,
+          "peak_private_mib": 771.613,
+          "peak_working_set_mib": 286.676,
+          "other_process_cpu_percent": [
+            5.956,
+            5.626,
+            6.022
+          ],
+          "median_inference_ms": 1094.103,
+          "median_service_ms": 1120.242,
+          "median_completion_ms": 6375.58,
+          "max_peak_amplitude": 0.4883604943752289,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "serial-1-4-8-on",
+            "mode": "serial",
+            "workers": 1,
+            "threads": 4,
+            "steps": 8,
+            "spin": "on"
+          },
+          "batch_ms": [
+            11303.362,
+            11378.415,
+            11212.048
+          ],
+          "median_batch_ms": 11303.362,
+          "median_process_total_ms": 13522.628,
+          "median_initialization_ms": 1417.813,
+          "median_active_cpu_s": 52.359,
+          "peak_private_mib": 773.871,
+          "peak_working_set_mib": 289.004,
+          "other_process_cpu_percent": [
+            5.947,
+            6.061,
+            6.485
+          ],
+          "median_inference_ms": 976.268,
+          "median_service_ms": 997.431,
+          "median_completion_ms": 5735.312,
+          "max_peak_amplitude": 0.4883604943752289,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "serial-1-4-8-bounded",
+            "mode": "serial",
+            "workers": 1,
+            "threads": 4,
+            "steps": 8,
+            "spin": "bounded"
+          },
+          "batch_ms": [
+            12011.621,
+            11301.112,
+            11384.131
+          ],
+          "median_batch_ms": 11384.131,
+          "median_process_total_ms": 13572.287,
+          "median_initialization_ms": 1445.835,
+          "median_active_cpu_s": 43.359,
+          "peak_private_mib": 773.477,
+          "peak_working_set_mib": 288.531,
+          "other_process_cpu_percent": [
+            5.444,
+            5.178,
+            4.784
+          ],
+          "median_inference_ms": 983.904,
+          "median_service_ms": 1007.66,
+          "median_completion_ms": 5816.43,
+          "max_peak_amplitude": 0.4883604943752289,
+          "outputs_above_full_scale": 0
+        }
+      ]
+    },
+    {
+      "raw_directory": "target/issue-24/tts-direct-control-20261101",
+      "jobs": [
+        {
+          "id": 0,
+          "text": "école",
+          "voice": "female",
+          "seed": 42
+        },
+        {
+          "id": 1,
+          "text": "bonjour",
+          "voice": "female",
+          "seed": 43
+        },
+        {
+          "id": 2,
+          "text": "œil",
+          "voice": "female",
+          "seed": 44
+        },
+        {
+          "id": 3,
+          "text": "vacances",
+          "voice": "female",
+          "seed": 45
+        },
+        {
+          "id": 4,
+          "text": "aujourd’hui",
+          "voice": "female",
+          "seed": 46
+        },
+        {
+          "id": 5,
+          "text": "fille",
+          "voice": "female",
+          "seed": 47
+        },
+        {
+          "id": 6,
+          "text": "rouge",
+          "voice": "female",
+          "seed": 48
+        },
+        {
+          "id": 7,
+          "text": "beaucoup",
+          "voice": "female",
+          "seed": 49
+        },
+        {
+          "id": 8,
+          "text": "heureusement",
+          "voice": "female",
+          "seed": 50
+        },
+        {
+          "id": 9,
+          "text": "anticonstitutionnellement",
+          "voice": "female",
+          "seed": 51
+        },
+        {
+          "id": 10,
+          "text": "rendez-vous",
+          "voice": "female",
+          "seed": 52
+        },
+        {
+          "id": 11,
+          "text": "y",
+          "voice": "female",
+          "seed": 53
+        }
+      ],
+      "worker_sha256": "cdebdc0a9411c0aff268ee543f32c92dc23f72b76c91ff56cf25a6425bbd96c7",
+      "measured_script_sha256": "e0d55ee0da7c86d55727e222945da0de1d60824de9f0633b243f0b4b53eb2572",
+      "probe_sha256": "e8597f4ef0cca649f5cbf26a0a22322671a6788e98b8914926100770c9679333",
+      "seed_policy": "fixed_per_request",
+      "configurations": [
+        {
+          "config": {
+            "name": "direct-1-2-8-on",
+            "mode": "direct",
+            "workers": 1,
+            "threads": 2,
+            "steps": 8,
+            "spin": "on"
+          },
+          "batch_ms": [
+            12667.969,
+            12641.074,
+            12711.733
+          ],
+          "median_batch_ms": 12667.969,
+          "median_process_total_ms": 14882.58,
+          "median_initialization_ms": 1425.469,
+          "median_active_cpu_s": 27.5,
+          "peak_private_mib": 771.496,
+          "peak_working_set_mib": 286.59,
+          "other_process_cpu_percent": [
+            14.588,
+            5.562,
+            5.275
+          ],
+          "median_inference_ms": 1101.179,
+          "median_service_ms": 1126.497,
+          "median_completion_ms": 6327.782,
+          "max_peak_amplitude": 0.4883604943752289,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "direct-1-4-8-on",
+            "mode": "direct",
+            "workers": 1,
+            "threads": 4,
+            "steps": 8,
+            "spin": "on"
+          },
+          "batch_ms": [
+            11284.261,
+            11492.351,
+            11365.288
+          ],
+          "median_batch_ms": 11365.288,
+          "median_process_total_ms": 13543.608,
+          "median_initialization_ms": 1429.937,
+          "median_active_cpu_s": 52.016,
+          "peak_private_mib": 773.148,
+          "peak_working_set_mib": 288.316,
+          "other_process_cpu_percent": [
+            12.266,
+            6.689,
+            7.564
+          ],
+          "median_inference_ms": 975.48,
+          "median_service_ms": 999.554,
+          "median_completion_ms": 5727.919,
+          "max_peak_amplitude": 0.4883604943752289,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "direct-1-4-8-bounded",
+            "mode": "direct",
+            "workers": 1,
+            "threads": 4,
+            "steps": 8,
+            "spin": "bounded"
+          },
+          "batch_ms": [
+            12019.474,
+            11964.65,
+            12122.649
+          ],
+          "median_batch_ms": 12019.474,
+          "median_process_total_ms": 14267.295,
+          "median_initialization_ms": 1428.814,
+          "median_active_cpu_s": 40.797,
+          "peak_private_mib": 773.02,
+          "peak_working_set_mib": 288.145,
+          "other_process_cpu_percent": [
+            6.347,
+            6.315,
+            5.147
+          ],
+          "median_inference_ms": 1043.961,
+          "median_service_ms": 1065.29,
+          "median_completion_ms": 6047.585,
+          "max_peak_amplitude": 0.4883604943752289,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "serial-1-4-8-on",
+            "mode": "serial",
+            "workers": 1,
+            "threads": 4,
+            "steps": 8,
+            "spin": "on"
+          },
+          "batch_ms": [
+            11248.135,
+            11361.24,
+            11426.821
+          ],
+          "median_batch_ms": 11361.24,
+          "median_process_total_ms": 13541.006,
+          "median_initialization_ms": 1432.911,
+          "median_active_cpu_s": 52.469,
+          "peak_private_mib": 773.711,
+          "peak_working_set_mib": 288.637,
+          "other_process_cpu_percent": [
+            5.417,
+            5.983,
+            6.335
+          ],
+          "median_inference_ms": 972.522,
+          "median_service_ms": 995.595,
+          "median_completion_ms": 5749.647,
+          "max_peak_amplitude": 0.4883604943752289,
+          "outputs_above_full_scale": 0
+        }
+      ]
+    },
+    {
+      "raw_directory": "target/issue-24/tts-sentences-pilot-20261101",
+      "jobs": [
+        {
+          "id": 0,
+          "text": "Bonjour, comment allez-vous ?",
+          "voice": "female",
+          "seed": 42
+        },
+        {
+          "id": 1,
+          "text": "J’apprends le français tous les jours.",
+          "voice": "male",
+          "seed": 43
+        },
+        {
+          "id": 2,
+          "text": "Aujourd’hui, il fait beau et nous allons à l’école.",
+          "voice": "female",
+          "seed": 44
+        },
+        {
+          "id": 3,
+          "text": "Les enfants ont trouvé un petit écureuil près de la rivière.",
+          "voice": "male",
+          "seed": 45
+        },
+        {
+          "id": 4,
+          "text": "Pourriez-vous m’expliquer la différence entre ces deux expressions ?",
+          "voice": "female",
+          "seed": 46
+        },
+        {
+          "id": 5,
+          "text": "À vingt-trois heures, le dernier train pour Lyon quitte la gare.",
+          "voice": "male",
+          "seed": 47
+        }
+      ],
+      "worker_sha256": "cdebdc0a9411c0aff268ee543f32c92dc23f72b76c91ff56cf25a6425bbd96c7",
+      "measured_script_sha256": "e0d55ee0da7c86d55727e222945da0de1d60824de9f0633b243f0b4b53eb2572",
+      "probe_sha256": "e8597f4ef0cca649f5cbf26a0a22322671a6788e98b8914926100770c9679333",
+      "seed_policy": "fixed_per_request",
+      "configurations": [
+        {
+          "config": {
+            "name": "serial-1-4-8-on",
+            "mode": "serial",
+            "workers": 1,
+            "threads": 4,
+            "steps": 8,
+            "spin": "on"
+          },
+          "batch_ms": [
+            10373.901
+          ],
+          "median_batch_ms": 10373.901,
+          "median_process_total_ms": 12573.004,
+          "median_initialization_ms": 1449.954,
+          "median_active_cpu_s": 43.609,
+          "peak_private_mib": 781.465,
+          "peak_working_set_mib": 292.328,
+          "other_process_cpu_percent": [
+            6.918
+          ],
+          "median_inference_ms": 1892.211,
+          "median_service_ms": 1979.5,
+          "median_completion_ms": 4931.4,
+          "max_peak_amplitude": 0.4707830846309662,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "shared-12-2-8-off",
+            "mode": "shared",
+            "workers": 12,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "batch_ms": [
+            4335.785
+          ],
+          "median_batch_ms": 4335.785,
+          "median_process_total_ms": 8543.276,
+          "median_initialization_ms": 1472.616,
+          "median_active_cpu_s": 26.094,
+          "peak_private_mib": 1221.047,
+          "peak_working_set_mib": 596.512,
+          "other_process_cpu_percent": [
+            18.412
+          ],
+          "median_inference_ms": 3803.579,
+          "median_service_ms": 3921.493,
+          "median_completion_ms": 3923.333,
+          "max_peak_amplitude": 0.4707830846309662,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "shared-16-2-8-off",
+            "mode": "shared",
+            "workers": 16,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "batch_ms": [
+            4337.736
+          ],
+          "median_batch_ms": 4337.736,
+          "median_process_total_ms": 9401.287,
+          "median_initialization_ms": 1475.552,
+          "median_active_cpu_s": 26.219,
+          "peak_private_mib": 1221.605,
+          "peak_working_set_mib": 735.387,
+          "other_process_cpu_percent": [
+            5.89
+          ],
+          "median_inference_ms": 3712.481,
+          "median_service_ms": 3834.444,
+          "median_completion_ms": 3835.862,
+          "max_peak_amplitude": 0.4707830846309662,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "shared-4-4-8-off",
+            "mode": "shared",
+            "workers": 4,
+            "threads": 4,
+            "steps": 8,
+            "spin": "off"
+          },
+          "batch_ms": [
+            5065.885
+          ],
+          "median_batch_ms": 5065.885,
+          "median_process_total_ms": 7715.405,
+          "median_initialization_ms": 1541.564,
+          "median_active_cpu_s": 26.016,
+          "peak_private_mib": 883.547,
+          "peak_working_set_mib": 354.785,
+          "other_process_cpu_percent": [
+            7.038
+          ],
+          "median_inference_ms": 2489.79,
+          "median_service_ms": 2610.447,
+          "median_completion_ms": 2611.389,
+          "max_peak_amplitude": 0.4707830846309662,
+          "outputs_above_full_scale": 0
+        }
+      ]
+    },
+    {
+      "raw_directory": "target/issue-24/tts-confirm-sentences-20261101",
+      "jobs": [
+        {
+          "id": 0,
+          "text": "Bonjour, comment allez-vous ?",
+          "voice": "female",
+          "seed": 42
+        },
+        {
+          "id": 1,
+          "text": "J’apprends le français tous les jours.",
+          "voice": "male",
+          "seed": 43
+        },
+        {
+          "id": 2,
+          "text": "Aujourd’hui, il fait beau et nous allons à l’école.",
+          "voice": "female",
+          "seed": 44
+        },
+        {
+          "id": 3,
+          "text": "Les enfants ont trouvé un petit écureuil près de la rivière.",
+          "voice": "male",
+          "seed": 45
+        },
+        {
+          "id": 4,
+          "text": "Pourriez-vous m’expliquer la différence entre ces deux expressions ?",
+          "voice": "female",
+          "seed": 46
+        },
+        {
+          "id": 5,
+          "text": "À vingt-trois heures, le dernier train pour Lyon quitte la gare.",
+          "voice": "male",
+          "seed": 47
+        },
+        {
+          "id": 6,
+          "text": "Bonjour, comment allez-vous ?",
+          "voice": "female",
+          "seed": 48
+        },
+        {
+          "id": 7,
+          "text": "J’apprends le français tous les jours.",
+          "voice": "male",
+          "seed": 49
+        },
+        {
+          "id": 8,
+          "text": "Aujourd’hui, il fait beau et nous allons à l’école.",
+          "voice": "female",
+          "seed": 50
+        },
+        {
+          "id": 9,
+          "text": "Les enfants ont trouvé un petit écureuil près de la rivière.",
+          "voice": "male",
+          "seed": 51
+        },
+        {
+          "id": 10,
+          "text": "Pourriez-vous m’expliquer la différence entre ces deux expressions ?",
+          "voice": "female",
+          "seed": 52
+        },
+        {
+          "id": 11,
+          "text": "À vingt-trois heures, le dernier train pour Lyon quitte la gare.",
+          "voice": "male",
+          "seed": 53
+        }
+      ],
+      "worker_sha256": "cdebdc0a9411c0aff268ee543f32c92dc23f72b76c91ff56cf25a6425bbd96c7",
+      "measured_script_sha256": "e0d55ee0da7c86d55727e222945da0de1d60824de9f0633b243f0b4b53eb2572",
+      "probe_sha256": "e8597f4ef0cca649f5cbf26a0a22322671a6788e98b8914926100770c9679333",
+      "seed_policy": "fixed_per_request",
+      "configurations": [
+        {
+          "config": {
+            "name": "serial-1-4-8-on",
+            "mode": "serial",
+            "workers": 1,
+            "threads": 4,
+            "steps": 8,
+            "spin": "on"
+          },
+          "batch_ms": [
+            21710.198,
+            21560.14,
+            21774.358
+          ],
+          "median_batch_ms": 21710.198,
+          "median_process_total_ms": 23977.561,
+          "median_initialization_ms": 1474.113,
+          "median_active_cpu_s": 91.75,
+          "peak_private_mib": 847.27,
+          "peak_working_set_mib": 338.996,
+          "other_process_cpu_percent": [
+            6.237,
+            6.354,
+            5.756
+          ],
+          "median_inference_ms": 1867.117,
+          "median_service_ms": 1956.361,
+          "median_completion_ms": 11169.378,
+          "max_peak_amplitude": 0.4707830846309662,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "serial-1-8-8-on",
+            "mode": "serial",
+            "workers": 1,
+            "threads": 8,
+            "steps": 8,
+            "spin": "on"
+          },
+          "batch_ms": [
+            21144.516,
+            20935.183,
+            21091.03
+          ],
+          "median_batch_ms": 21091.03,
+          "median_process_total_ms": 23368.144,
+          "median_initialization_ms": 1440.889,
+          "median_active_cpu_s": 177.938,
+          "peak_private_mib": 852.078,
+          "peak_working_set_mib": 343.012,
+          "other_process_cpu_percent": [
+            5.613,
+            4.776,
+            5.699
+          ],
+          "median_inference_ms": 1784.072,
+          "median_service_ms": 1874.221,
+          "median_completion_ms": 11005.262,
+          "max_peak_amplitude": 0.4707830846309662,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "shared-12-2-8-off",
+            "mode": "shared",
+            "workers": 12,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "batch_ms": [
+            5746.124,
+            5777.271,
+            5727.376
+          ],
+          "median_batch_ms": 5746.124,
+          "median_process_total_ms": 9892.306,
+          "median_initialization_ms": 1430.33,
+          "median_active_cpu_s": 59.219,
+          "peak_private_mib": 1233.207,
+          "peak_working_set_mib": 641.805,
+          "other_process_cpu_percent": [
+            20.856,
+            19.899,
+            22.326
+          ],
+          "median_inference_ms": 4983.052,
+          "median_service_ms": 5097.201,
+          "median_completion_ms": 5099.02,
+          "max_peak_amplitude": 0.4707830846309662,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "shared-16-2-8-off",
+            "mode": "shared",
+            "workers": 16,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "batch_ms": [
+            5820.575,
+            5746.329,
+            5751.43
+          ],
+          "median_batch_ms": 5751.43,
+          "median_process_total_ms": 10762.898,
+          "median_initialization_ms": 1434.071,
+          "median_active_cpu_s": 59.078,
+          "peak_private_mib": 1498.852,
+          "peak_working_set_mib": 747.516,
+          "other_process_cpu_percent": [
+            23.576,
+            20.075,
+            21.467
+          ],
+          "median_inference_ms": 5004.645,
+          "median_service_ms": 5152.648,
+          "median_completion_ms": 5155.972,
+          "max_peak_amplitude": 0.4707830846309662,
+          "outputs_above_full_scale": 0
+        }
+      ]
+    },
+    {
+      "raw_directory": "target/issue-24/tts-stress-20261101",
+      "jobs": [
+        {
+          "id": 0,
+          "text": "école",
+          "voice": "female",
+          "seed": 42
+        },
+        {
+          "id": 1,
+          "text": "bonjour",
+          "voice": "male",
+          "seed": 43
+        },
+        {
+          "id": 2,
+          "text": "œil",
+          "voice": "female",
+          "seed": 44
+        },
+        {
+          "id": 3,
+          "text": "vacances",
+          "voice": "male",
+          "seed": 45
+        },
+        {
+          "id": 4,
+          "text": "aujourd’hui",
+          "voice": "female",
+          "seed": 46
+        },
+        {
+          "id": 5,
+          "text": "fille",
+          "voice": "male",
+          "seed": 47
+        },
+        {
+          "id": 6,
+          "text": "rouge",
+          "voice": "female",
+          "seed": 48
+        },
+        {
+          "id": 7,
+          "text": "beaucoup",
+          "voice": "male",
+          "seed": 49
+        },
+        {
+          "id": 8,
+          "text": "heureusement",
+          "voice": "female",
+          "seed": 50
+        },
+        {
+          "id": 9,
+          "text": "anticonstitutionnellement",
+          "voice": "male",
+          "seed": 51
+        },
+        {
+          "id": 10,
+          "text": "rendez-vous",
+          "voice": "female",
+          "seed": 52
+        },
+        {
+          "id": 11,
+          "text": "y",
+          "voice": "male",
+          "seed": 53
+        },
+        {
+          "id": 12,
+          "text": "école",
+          "voice": "female",
+          "seed": 54
+        },
+        {
+          "id": 13,
+          "text": "bonjour",
+          "voice": "male",
+          "seed": 55
+        },
+        {
+          "id": 14,
+          "text": "œil",
+          "voice": "female",
+          "seed": 56
+        },
+        {
+          "id": 15,
+          "text": "vacances",
+          "voice": "male",
+          "seed": 57
+        },
+        {
+          "id": 16,
+          "text": "aujourd’hui",
+          "voice": "female",
+          "seed": 58
+        },
+        {
+          "id": 17,
+          "text": "fille",
+          "voice": "male",
+          "seed": 59
+        },
+        {
+          "id": 18,
+          "text": "rouge",
+          "voice": "female",
+          "seed": 60
+        },
+        {
+          "id": 19,
+          "text": "beaucoup",
+          "voice": "male",
+          "seed": 61
+        },
+        {
+          "id": 20,
+          "text": "heureusement",
+          "voice": "female",
+          "seed": 62
+        },
+        {
+          "id": 21,
+          "text": "anticonstitutionnellement",
+          "voice": "male",
+          "seed": 63
+        },
+        {
+          "id": 22,
+          "text": "rendez-vous",
+          "voice": "female",
+          "seed": 64
+        },
+        {
+          "id": 23,
+          "text": "y",
+          "voice": "male",
+          "seed": 65
+        },
+        {
+          "id": 24,
+          "text": "école",
+          "voice": "female",
+          "seed": 66
+        },
+        {
+          "id": 25,
+          "text": "bonjour",
+          "voice": "male",
+          "seed": 67
+        },
+        {
+          "id": 26,
+          "text": "œil",
+          "voice": "female",
+          "seed": 68
+        },
+        {
+          "id": 27,
+          "text": "vacances",
+          "voice": "male",
+          "seed": 69
+        },
+        {
+          "id": 28,
+          "text": "aujourd’hui",
+          "voice": "female",
+          "seed": 70
+        },
+        {
+          "id": 29,
+          "text": "fille",
+          "voice": "male",
+          "seed": 71
+        },
+        {
+          "id": 30,
+          "text": "rouge",
+          "voice": "female",
+          "seed": 72
+        },
+        {
+          "id": 31,
+          "text": "beaucoup",
+          "voice": "male",
+          "seed": 73
+        },
+        {
+          "id": 32,
+          "text": "heureusement",
+          "voice": "female",
+          "seed": 74
+        },
+        {
+          "id": 33,
+          "text": "anticonstitutionnellement",
+          "voice": "male",
+          "seed": 75
+        },
+        {
+          "id": 34,
+          "text": "rendez-vous",
+          "voice": "female",
+          "seed": 76
+        },
+        {
+          "id": 35,
+          "text": "y",
+          "voice": "male",
+          "seed": 77
+        },
+        {
+          "id": 36,
+          "text": "école",
+          "voice": "female",
+          "seed": 78
+        },
+        {
+          "id": 37,
+          "text": "bonjour",
+          "voice": "male",
+          "seed": 79
+        },
+        {
+          "id": 38,
+          "text": "œil",
+          "voice": "female",
+          "seed": 80
+        },
+        {
+          "id": 39,
+          "text": "vacances",
+          "voice": "male",
+          "seed": 81
+        },
+        {
+          "id": 40,
+          "text": "aujourd’hui",
+          "voice": "female",
+          "seed": 82
+        },
+        {
+          "id": 41,
+          "text": "fille",
+          "voice": "male",
+          "seed": 83
+        },
+        {
+          "id": 42,
+          "text": "rouge",
+          "voice": "female",
+          "seed": 84
+        },
+        {
+          "id": 43,
+          "text": "beaucoup",
+          "voice": "male",
+          "seed": 85
+        },
+        {
+          "id": 44,
+          "text": "heureusement",
+          "voice": "female",
+          "seed": 86
+        },
+        {
+          "id": 45,
+          "text": "anticonstitutionnellement",
+          "voice": "male",
+          "seed": 87
+        },
+        {
+          "id": 46,
+          "text": "rendez-vous",
+          "voice": "female",
+          "seed": 88
+        },
+        {
+          "id": 47,
+          "text": "y",
+          "voice": "male",
+          "seed": 89
+        }
+      ],
+      "worker_sha256": "cdebdc0a9411c0aff268ee543f32c92dc23f72b76c91ff56cf25a6425bbd96c7",
+      "measured_script_sha256": "e0d55ee0da7c86d55727e222945da0de1d60824de9f0633b243f0b4b53eb2572",
+      "probe_sha256": "e8597f4ef0cca649f5cbf26a0a22322671a6788e98b8914926100770c9679333",
+      "seed_policy": "fixed_per_request",
+      "configurations": [
+        {
+          "config": {
+            "name": "serial-1-4-8-on",
+            "mode": "serial",
+            "workers": 1,
+            "threads": 4,
+            "steps": 8,
+            "spin": "on"
+          },
+          "batch_ms": [
+            47390.363,
+            47435.105,
+            49334.877
+          ],
+          "median_batch_ms": 47435.105,
+          "median_process_total_ms": 49624.725,
+          "median_initialization_ms": 1441.394,
+          "median_active_cpu_s": 218.844,
+          "peak_private_mib": 773.875,
+          "peak_working_set_mib": 291.348,
+          "other_process_cpu_percent": [
+            5.817,
+            6.398,
+            11.214
+          ],
+          "median_inference_ms": 970.943,
+          "median_service_ms": 995.817,
+          "median_completion_ms": 24362.365,
+          "max_peak_amplitude": 0.6738510131835938,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "shared-12-2-8-off",
+            "mode": "shared",
+            "workers": 12,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "batch_ms": [
+            10851.938,
+            11291.337,
+            11224.688
+          ],
+          "median_batch_ms": 11224.688,
+          "median_process_total_ms": 15371.042,
+          "median_initialization_ms": 1454.818,
+          "median_active_cpu_s": 125.766,
+          "peak_private_mib": 1217.0,
+          "peak_working_set_mib": 641.52,
+          "other_process_cpu_percent": [
+            20.108,
+            26.176,
+            26.747
+          ],
+          "median_inference_ms": 2644.335,
+          "median_service_ms": 2689.339,
+          "median_completion_ms": 6913.495,
+          "max_peak_amplitude": 0.6738510131835938,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "shared-16-2-8-off",
+            "mode": "shared",
+            "workers": 16,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "batch_ms": [
+            11196.159,
+            11088.605,
+            11076.558
+          ],
+          "median_batch_ms": 11088.605,
+          "median_process_total_ms": 16188.327,
+          "median_initialization_ms": 1479.716,
+          "median_active_cpu_s": 134.016,
+          "peak_private_mib": 1480.473,
+          "peak_working_set_mib": 752.785,
+          "other_process_cpu_percent": [
+            23.621,
+            22.071,
+            20.654
+          ],
+          "median_inference_ms": 3438.813,
+          "median_service_ms": 3516.156,
+          "median_completion_ms": 7200.264,
+          "max_peak_amplitude": 0.6738510131835938,
+          "outputs_above_full_scale": 0
+        }
+      ]
+    },
+    {
+      "raw_directory": "target/issue-24/tts-current-seed-20261101",
+      "jobs": [
+        {
+          "id": 0,
+          "text": "école",
+          "voice": "female",
+          "seed": -1
+        },
+        {
+          "id": 1,
+          "text": "bonjour",
+          "voice": "female",
+          "seed": -1
+        },
+        {
+          "id": 2,
+          "text": "œil",
+          "voice": "female",
+          "seed": -1
+        },
+        {
+          "id": 3,
+          "text": "vacances",
+          "voice": "female",
+          "seed": -1
+        },
+        {
+          "id": 4,
+          "text": "aujourd’hui",
+          "voice": "female",
+          "seed": -1
+        },
+        {
+          "id": 5,
+          "text": "fille",
+          "voice": "female",
+          "seed": -1
+        },
+        {
+          "id": 6,
+          "text": "rouge",
+          "voice": "female",
+          "seed": -1
+        },
+        {
+          "id": 7,
+          "text": "beaucoup",
+          "voice": "female",
+          "seed": -1
+        },
+        {
+          "id": 8,
+          "text": "heureusement",
+          "voice": "female",
+          "seed": -1
+        },
+        {
+          "id": 9,
+          "text": "anticonstitutionnellement",
+          "voice": "female",
+          "seed": -1
+        },
+        {
+          "id": 10,
+          "text": "rendez-vous",
+          "voice": "female",
+          "seed": -1
+        },
+        {
+          "id": 11,
+          "text": "y",
+          "voice": "female",
+          "seed": -1
+        },
+        {
+          "id": 12,
+          "text": "école",
+          "voice": "female",
+          "seed": -1
+        },
+        {
+          "id": 13,
+          "text": "bonjour",
+          "voice": "female",
+          "seed": -1
+        },
+        {
+          "id": 14,
+          "text": "œil",
+          "voice": "female",
+          "seed": -1
+        },
+        {
+          "id": 15,
+          "text": "vacances",
+          "voice": "female",
+          "seed": -1
+        },
+        {
+          "id": 16,
+          "text": "aujourd’hui",
+          "voice": "female",
+          "seed": -1
+        },
+        {
+          "id": 17,
+          "text": "fille",
+          "voice": "female",
+          "seed": -1
+        },
+        {
+          "id": 18,
+          "text": "rouge",
+          "voice": "female",
+          "seed": -1
+        },
+        {
+          "id": 19,
+          "text": "beaucoup",
+          "voice": "female",
+          "seed": -1
+        },
+        {
+          "id": 20,
+          "text": "heureusement",
+          "voice": "female",
+          "seed": -1
+        },
+        {
+          "id": 21,
+          "text": "anticonstitutionnellement",
+          "voice": "female",
+          "seed": -1
+        },
+        {
+          "id": 22,
+          "text": "rendez-vous",
+          "voice": "female",
+          "seed": -1
+        },
+        {
+          "id": 23,
+          "text": "y",
+          "voice": "female",
+          "seed": -1
+        }
+      ],
+      "worker_sha256": "cdebdc0a9411c0aff268ee543f32c92dc23f72b76c91ff56cf25a6425bbd96c7",
+      "measured_script_sha256": "4f60e3e0e58d995ddea50b5b03719e6402a99924456bcb42918f3cd904556bdd",
+      "probe_sha256": "0c3d1877cef0796bd8308a3c4040981138ac8c2a74978bf32b0205ef359553bb",
+      "seed_policy": "current_random",
+      "configurations": [
+        {
+          "config": {
+            "name": "serial-1-2-8-on",
+            "mode": "serial",
+            "workers": 1,
+            "threads": 2,
+            "steps": 8,
+            "spin": "on"
+          },
+          "batch_ms": [
+            26617.176,
+            26338.258,
+            26069.372
+          ],
+          "median_batch_ms": 26338.258,
+          "median_process_total_ms": 28539.765,
+          "median_initialization_ms": 1455.022,
+          "median_active_cpu_s": 57.078,
+          "peak_private_mib": 772.293,
+          "peak_working_set_mib": 289.566,
+          "other_process_cpu_percent": [
+            5.685,
+            5.305,
+            5.265
+          ],
+          "median_inference_ms": 1098.86,
+          "median_service_ms": 1123.829,
+          "median_completion_ms": 13344.94,
+          "max_peak_amplitude": 0.6041719317436218,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "serial-1-4-8-on",
+            "mode": "serial",
+            "workers": 1,
+            "threads": 4,
+            "steps": 8,
+            "spin": "on"
+          },
+          "batch_ms": [
+            23383.096,
+            23230.554,
+            23410.557
+          ],
+          "median_batch_ms": 23383.096,
+          "median_process_total_ms": 25608.471,
+          "median_initialization_ms": 1450.877,
+          "median_active_cpu_s": 107.453,
+          "peak_private_mib": 773.582,
+          "peak_working_set_mib": 290.762,
+          "other_process_cpu_percent": [
+            6.847,
+            5.607,
+            5.582
+          ],
+          "median_inference_ms": 969.085,
+          "median_service_ms": 995.793,
+          "median_completion_ms": 11870.393,
+          "max_peak_amplitude": 0.6420936584472656,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "shared-12-2-8-off",
+            "mode": "shared",
+            "workers": 12,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "batch_ms": [
+            5719.389,
+            5430.315,
+            5661.108
+          ],
+          "median_batch_ms": 5661.108,
+          "median_process_total_ms": 9883.632,
+          "median_initialization_ms": 1495.886,
+          "median_active_cpu_s": 63.078,
+          "peak_private_mib": 1217.262,
+          "peak_working_set_mib": 637.637,
+          "other_process_cpu_percent": [
+            29.662,
+            16.78,
+            26.38
+          ],
+          "median_inference_ms": 2649.993,
+          "median_service_ms": 2726.65,
+          "median_completion_ms": 3952.011,
+          "max_peak_amplitude": 0.5900365114212036,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "shared-16-2-8-off",
+            "mode": "shared",
+            "workers": 16,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "batch_ms": [
+            5936.788,
+            5900.39,
+            5858.052
+          ],
+          "median_batch_ms": 5900.39,
+          "median_process_total_ms": 10946.702,
+          "median_initialization_ms": 1422.105,
+          "median_active_cpu_s": 63.266,
+          "peak_private_mib": 1481.363,
+          "peak_working_set_mib": 754.883,
+          "other_process_cpu_percent": [
+            25.424,
+            26.194,
+            24.833
+          ],
+          "median_inference_ms": 3419.455,
+          "median_service_ms": 3492.302,
+          "median_completion_ms": 3786.61,
+          "max_peak_amplitude": 0.6582566499710083,
+          "outputs_above_full_scale": 0
+        }
+      ]
+    },
+    {
+      "raw_directory": "target/issue-24/tts-steps-20261101",
+      "jobs": [
+        {
+          "id": 0,
+          "text": "école",
+          "voice": "female",
+          "seed": 42
+        },
+        {
+          "id": 1,
+          "text": "bonjour",
+          "voice": "male",
+          "seed": 43
+        },
+        {
+          "id": 2,
+          "text": "œil",
+          "voice": "female",
+          "seed": 44
+        },
+        {
+          "id": 3,
+          "text": "vacances",
+          "voice": "male",
+          "seed": 45
+        },
+        {
+          "id": 4,
+          "text": "aujourd’hui",
+          "voice": "female",
+          "seed": 46
+        },
+        {
+          "id": 5,
+          "text": "fille",
+          "voice": "male",
+          "seed": 47
+        },
+        {
+          "id": 6,
+          "text": "rouge",
+          "voice": "female",
+          "seed": 48
+        },
+        {
+          "id": 7,
+          "text": "beaucoup",
+          "voice": "male",
+          "seed": 49
+        },
+        {
+          "id": 8,
+          "text": "heureusement",
+          "voice": "female",
+          "seed": 50
+        },
+        {
+          "id": 9,
+          "text": "anticonstitutionnellement",
+          "voice": "male",
+          "seed": 51
+        },
+        {
+          "id": 10,
+          "text": "rendez-vous",
+          "voice": "female",
+          "seed": 52
+        },
+        {
+          "id": 11,
+          "text": "y",
+          "voice": "male",
+          "seed": 53
+        },
+        {
+          "id": 12,
+          "text": "Bonjour, comment allez-vous ?",
+          "voice": "female",
+          "seed": 54
+        },
+        {
+          "id": 13,
+          "text": "J’apprends le français tous les jours.",
+          "voice": "male",
+          "seed": 55
+        },
+        {
+          "id": 14,
+          "text": "Aujourd’hui, il fait beau et nous allons à l’école.",
+          "voice": "female",
+          "seed": 56
+        },
+        {
+          "id": 15,
+          "text": "Les enfants ont trouvé un petit écureuil près de la rivière.",
+          "voice": "male",
+          "seed": 57
+        },
+        {
+          "id": 16,
+          "text": "Pourriez-vous m’expliquer la différence entre ces deux expressions ?",
+          "voice": "female",
+          "seed": 58
+        },
+        {
+          "id": 17,
+          "text": "À vingt-trois heures, le dernier train pour Lyon quitte la gare.",
+          "voice": "male",
+          "seed": 59
+        }
+      ],
+      "worker_sha256": "cdebdc0a9411c0aff268ee543f32c92dc23f72b76c91ff56cf25a6425bbd96c7",
+      "measured_script_sha256": "4f60e3e0e58d995ddea50b5b03719e6402a99924456bcb42918f3cd904556bdd",
+      "probe_sha256": "0c3d1877cef0796bd8308a3c4040981138ac8c2a74978bf32b0205ef359553bb",
+      "seed_policy": "fixed_per_request",
+      "configurations": [
+        {
+          "config": {
+            "name": "shared-12-2-8-off",
+            "mode": "shared",
+            "workers": 12,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "batch_ms": [
+            7061.444,
+            7132.505,
+            7071.331
+          ],
+          "median_batch_ms": 7071.331,
+          "median_process_total_ms": 11440.175,
+          "median_initialization_ms": 1509.083,
+          "median_active_cpu_s": 57.781,
+          "peak_private_mib": 1223.262,
+          "peak_working_set_mib": 645.602,
+          "other_process_cpu_percent": [
+            19.524,
+            22.259,
+            23.579
+          ],
+          "median_inference_ms": 2737.091,
+          "median_service_ms": 2778.743,
+          "median_completion_ms": 2783.667,
+          "max_peak_amplitude": 0.5900943279266357,
+          "outputs_above_full_scale": 0
+        },
+        {
+          "config": {
+            "name": "shared-12-2-4-off",
+            "mode": "shared",
+            "workers": 12,
+            "threads": 2,
+            "steps": 4,
+            "spin": "off"
+          },
+          "batch_ms": [
+            3822.394,
+            3854.817,
+            3780.81
+          ],
+          "median_batch_ms": 3822.394,
+          "median_process_total_ms": 6758.345,
+          "median_initialization_ms": 1444.79,
+          "median_active_cpu_s": 31.375,
+          "peak_private_mib": 1488.484,
+          "peak_working_set_mib": 690.535,
+          "other_process_cpu_percent": [
+            24.155,
+            21.761,
+            21.875
+          ],
+          "median_inference_ms": 1355.918,
+          "median_service_ms": 1412.049,
+          "median_completion_ms": 1412.462,
+          "max_peak_amplitude": 1.1652581691741943,
+          "outputs_above_full_scale": 3
+        },
+        {
+          "config": {
+            "name": "shared-12-2-2-off",
+            "mode": "shared",
+            "workers": 12,
+            "threads": 2,
+            "steps": 2,
+            "spin": "off"
+          },
+          "batch_ms": [
+            2123.481,
+            2209.361,
+            2233.608
+          ],
+          "median_batch_ms": 2209.361,
+          "median_process_total_ms": 4720.456,
+          "median_initialization_ms": 1496.422,
+          "median_active_cpu_s": 16.906,
+          "peak_private_mib": 1486.449,
+          "peak_working_set_mib": 687.379,
+          "other_process_cpu_percent": [
+            19.512,
+            24.384,
+            32.736
+          ],
+          "median_inference_ms": 743.569,
+          "median_service_ms": 828.191,
+          "median_completion_ms": 829.011,
+          "max_peak_amplitude": 2.19276762008667,
+          "outputs_above_full_scale": 33
+        }
+      ]
+    }
+  ]
+}
