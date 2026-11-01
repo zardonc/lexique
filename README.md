@@ -49,6 +49,8 @@ pnpm desktop:build       # 默认 Cargo --locked；仅构建原生可执行文�
 pnpm desktop:portable    # Windows x64 release ZIP，免安装，解压后运行 Lexique.exe
 pnpm test:tooling        # 构建参数传递与隔离打包回归，不编译原生程序
 pnpm test:speech:cleanup # Windows 缓存清理；需设置 LEXIQUE_TEST_EXECUTABLE
+cargo test --locked --release -p lexique-desktop --test speech_cache --no-run
+pnpm test:speech:cache   # Windows 缓存发布 / 并发 / 重解析点；执行硬限 60 秒
 ```
 
 已有 portable 交付会被保留；再次交付可运行 `pnpm desktop:portable --output-dir <新目录>`。构建入口会在最终进程边界追加 Cargo 的 `--locked`，无需经 pnpm 手动传递分隔符。

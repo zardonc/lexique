@@ -8,6 +8,7 @@ import type { NotebookText } from './notebook-content';
 import { errorMessage, snapshotFromLookup } from './platform/vocabulary';
 import type { VocabularyRecord } from './platform/vocabulary';
 import { VocabularySummary } from './vocabulary-view';
+import { SpeechButton } from './speech-button';
 
 function Senses({ senses }: { readonly senses: readonly DictionarySense[] }) {
   return <ol className="dictionary-senses">{senses.map((sense, index) => <li key={index}>
@@ -52,6 +53,7 @@ function Collection({ result, runtime, text, version, onCollect, onOpen }: {
   }, [runtime, headword, version, retry]);
   if (!headword) return null;
   return <><VocabularySummary snapshot={snapshotFromLookup(result)} text={text} />
+    <SpeechButton key={headword} word={headword} runtime={runtime} text={text} />
     {error ? <p role="alert">{text.readError}: {error} <button onClick={() => setRetry((value) => value + 1)}>{text.retry}</button></p>
       : record ? <p role="status">{text.existing} <button onClick={() => onOpen(record)}>{text.view}</button></p>
         : <button disabled={record === undefined} onClick={() => onCollect(result)}>{text.collect}</button>}</>;

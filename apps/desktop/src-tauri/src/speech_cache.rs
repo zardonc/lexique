@@ -258,6 +258,66 @@ pub fn start_cleanup(database: PathBuf) {
     });
 }
 
+#[cfg(windows)]
+fn publish_new(dir: &Dir, temporary: &str, id: i64) -> std::io::Result<()> {
+    use std::{
+        ffi::c_void,
+        os::windows::{
+            ffi::{OsStrExt, OsStringExt},
+            io::AsRawHandle,
+        },
+    };
+
+    #[link(name = "kernel32")]
+    unsafe extern "system" {
+        fn MoveFileW(from: *const u16, to: *const u16) -> i32;
+        fn GetFinalPathNameByHandleW(
+            handle: *mut c_void,
+            path: *mut u16,
+            size: u32,
+            flags: u32,
+        ) -> u32;
+    }
+    // SAFETY: The directory handle remains open; a null buffer requests its required size.
+    let size =
+        unsafe { GetFinalPathNameByHandleW(dir.as_raw_handle(), std::ptr::null_mut(), 0, 0) };
+    if size == 0 {
+        return Err(std::io::Error::last_os_error());
+    }
+    let mut buffer = vec![0; size as usize];
+    // SAFETY: The writable buffer has the advertised size and the directory remains pinned.
+    let length =
+        unsafe { GetFinalPathNameByHandleW(dir.as_raw_handle(), buffer.as_mut_ptr(), size, 0) };
+    if length == 0 {
+        return Err(std::io::Error::last_os_error());
+    }
+    if length >= size {
+        return Err(std::io::Error::other(
+            "Pinned speech directory path changed",
+        ));
+    }
+    let path = PathBuf::from(std::ffi::OsString::from_wide(&buffer[..length as usize]));
+    let wide = |name: &str| {
+        path.join(name)
+            .as_os_str()
+            .encode_wide()
+            .chain(Some(0))
+            .collect::<Vec<_>>()
+    };
+    let from = wide(temporary);
+    let to = wide(&format!("{id}.ogg"));
+    // SAFETY: Names are internal, buffers are NUL-terminated, and cap-std pins the directory
+    // without FILE_SHARE_DELETE, just as in its Windows rename implementation.
+    if unsafe { MoveFileW(from.as_ptr(), to.as_ptr()) } != 0 {
+        return Ok(());
+    }
+    let error = std::io::Error::last_os_error();
+    if error.kind() == std::io::ErrorKind::AlreadyExists {
+        return Ok(());
+    }
+    Err(error)
+}
+
 pub fn write(database: &Path, id: i64, bytes: &[u8], replace: bool) -> Result<(), String> {
     let dir = directory(database)?;
     let _lock = lock(&dir)?;
@@ -267,7 +327,10 @@ pub fn write(database: &Path, id: i64, bytes: &[u8], replace: bool) -> Result<()
         .as_nanos();
     let temporary = format!(".{id}-{}-{nonce}.tmp", std::process::id());
     let mut options = OpenOptions::new();
-    options.write(true).create_new(true);
+    options
+        .write(true)
+        .create_new(true)
+        .follow(FollowSymlinks::No);
     let mut file = dir
         .open_with(&temporary, &options)
         .map_err(|e| e.to_string())?;
@@ -280,6 +343,10 @@ pub fn write(database: &Path, id: i64, bytes: &[u8], replace: bool) -> Result<()
                 .rename(&temporary, &dir, format!("{id}.ogg"))
                 .map_err(|e| e.to_string());
         }
+        #[cfg(windows)]
+        return publish_new(&dir, &temporary, id)
+            .map_err(|error| format!("Could not publish cached speech audio: {error}"));
+        #[cfg(not(windows))]
         match dir.hard_link(&temporary, &dir, format!("{id}.ogg")) {
             Ok(()) => Ok(()),
             Err(error) if error.kind() == std::io::ErrorKind::AlreadyExists => Ok(()),

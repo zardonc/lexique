@@ -508,8 +508,9 @@ pub async fn speech_generate(
         .map_err(|error| error.to_string())?
         .join("speech");
     tauri::async_runtime::spawn_blocking(move || {
-        static GENERATION: std::sync::Mutex<()> = std::sync::Mutex::new(());
-        let _guard = GENERATION.lock().map_err(|error| error.to_string())?;
+        let _guard = SPEECH_GENERATION
+            .lock()
+            .map_err(|error| error.to_string())?;
         let connection = open(&path)?;
         let cards = lexique_storage::review_cards(&connection, vocabulary_id)
             .map_err(|error| error.to_string())?;
@@ -531,63 +532,104 @@ pub async fn speech_generate(
             lexique_storage::SpeechVoice::Female => "female",
             lexique_storage::SpeechVoice::Male => "male",
         };
-        let request =
-            serde_json::to_vec(&serde_json::json!({ "text": record.headword, "voice": voice }))
-                .map_err(|error| error.to_string())?;
-        let mut command = Command::new(resources.join("runtime/python.exe"));
-        command
-            .args([
-                "-I",
-                "-X",
-                "utf8",
-                "-c",
-                include_str!("../speech_worker.py"),
-            ])
-            .arg(resources.join("assets"))
-            .arg(resources.join("opusenc.dll"))
-            .stdin(Stdio::piped())
-            .stdout(Stdio::piped())
-            .stderr(Stdio::piped());
-        #[cfg(target_os = "windows")]
-        {
-            use std::os::windows::process::CommandExt;
-            command.creation_flags(0x0800_0000);
-        }
-        let mut child = command
-            .spawn()
-            .map_err(|error| format!("Could not start offline speech: {error}"))?;
-        let input = child
-            .stdin
-            .take()
-            .ok_or_else(|| "Speech input unavailable".to_string());
-        let input_result = input.and_then(|mut input| {
-            input
-                .write_all(&request)
-                .map_err(|error| format!("Could not send speech request: {error}"))
-        });
-        if let Err(error) = input_result {
-            let _ = child.kill();
-            let _ = child.wait();
-            return Err(error);
-        }
-        let output = child
-            .wait_with_output()
-            .map_err(|error| format!("Speech process failed: {error}"))?;
-        if !output.status.success() {
-            return Err(format!(
-                "Offline speech failed: {}",
-                String::from_utf8_lossy(&output.stderr)
-                    .chars()
-                    .take(2048)
-                    .collect::<String>()
-            ));
-        }
-        if output.stdout.len() > 10_000_000 || !output.stdout.starts_with(b"OggS") {
-            return Err("Offline speech returned invalid audio".into());
-        }
-        crate::speech_cache::write(&path.0, vocabulary_id, &output.stdout, replace)?;
+        let audio = synthesize_speech(&resources, &record.headword, voice)?;
+        crate::speech_cache::write(&path.0, vocabulary_id, &audio, replace)?;
         crate::speech_cache::read(&path.0, vocabulary_id)?
             .ok_or_else(|| "Generated speech cache disappeared".to_string())
+    })
+    .await
+    .map_err(|error| format!("Speech task failed: {error}"))?
+}
+
+static SPEECH_GENERATION: std::sync::Mutex<()> = std::sync::Mutex::new(());
+
+fn synthesize_speech(
+    resources: &std::path::Path,
+    text: &str,
+    voice: &str,
+) -> Result<Vec<u8>, String> {
+    let request = serde_json::to_vec(&serde_json::json!({ "text": text, "voice": voice }))
+        .map_err(|error| error.to_string())?;
+    let mut command = Command::new(resources.join("runtime/python.exe"));
+    command
+        .args([
+            "-I",
+            "-X",
+            "utf8",
+            "-c",
+            include_str!("../speech_worker.py"),
+        ])
+        .arg(resources.join("assets"))
+        .arg(resources.join("opusenc.dll"))
+        .stdin(Stdio::piped())
+        .stdout(Stdio::piped())
+        .stderr(Stdio::piped());
+    #[cfg(target_os = "windows")]
+    {
+        use std::os::windows::process::CommandExt;
+        command.creation_flags(0x0800_0000);
+    }
+    let mut child = command
+        .spawn()
+        .map_err(|error| format!("Could not start offline speech: {error}"))?;
+    let input = child
+        .stdin
+        .take()
+        .ok_or_else(|| "Speech input unavailable".to_string());
+    let input_result = input.and_then(|mut input| {
+        input
+            .write_all(&request)
+            .map_err(|error| format!("Could not send speech request: {error}"))
+    });
+    if let Err(error) = input_result {
+        let _ = child.kill();
+        let _ = child.wait();
+        return Err(error);
+    }
+    let output = child
+        .wait_with_output()
+        .map_err(|error| format!("Speech process failed: {error}"))?;
+    if !output.status.success() {
+        return Err(format!(
+            "Offline speech failed: {}",
+            String::from_utf8_lossy(&output.stderr)
+                .chars()
+                .take(2048)
+                .collect::<String>()
+        ));
+    }
+    if output.stdout.len() > 10_000_000 || !output.stdout.starts_with(b"OggS") {
+        return Err("Offline speech returned invalid audio".into());
+    }
+    Ok(output.stdout)
+}
+
+#[tauri::command]
+pub async fn speech_preview(
+    app: tauri::AppHandle,
+    path: State<'_, DatabasePath>,
+    text: String,
+) -> Result<Vec<u8>, String> {
+    if text.trim().is_empty() || text.chars().count() > 200 || text.chars().any(char::is_control) {
+        return Err("Invalid speech text".into());
+    }
+    let path = DatabasePath(path.0.clone());
+    let resources = app
+        .path()
+        .resource_dir()
+        .map_err(|error| error.to_string())?
+        .join("speech");
+    tauri::async_runtime::spawn_blocking(move || {
+        let _guard = SPEECH_GENERATION
+            .lock()
+            .map_err(|error| error.to_string())?;
+        let preferences = lexique_storage::speech_preferences(&open(&path)?)
+            .map_err(|error| error.to_string())?;
+        let voice = match preferences.voice {
+            lexique_storage::SpeechVoice::Female => "female",
+            lexique_storage::SpeechVoice::Male => "male",
+        };
+        synthesize_speech(&resources, &text, voice)
     })
     .await
     .map_err(|error| format!("Speech task failed: {error}"))?

@@ -5,6 +5,7 @@ import type { VocabularySnapshot } from './platform/vocabulary';
 import type { Notebook } from './use-notebook';
 import type { RuntimeAdapter } from './platform/runtime';
 import { ReviewCards } from './review-cards';
+import { SpeechButton } from './speech-button';
 
 export function VocabularySummary({ snapshot, text }: { readonly snapshot: VocabularySnapshot; readonly text: NotebookText }) {
   return <section className="vocabulary-summary" aria-label={text.summary}>
@@ -45,7 +46,8 @@ function SaveActions({ notebook, text, overLimit }: {
 }) {
   return <div className="actions"><button disabled={overLimit || notebook.meaningRequired || notebook.busy || !notebook.dirty}
     onClick={() => { void notebook.save(); }}>{notebook.busy ? text.saving : text.save}</button>
-    <span role="status">{notebook.saved ? text.saved : notebook.dirty ? text.unsaved : ''}</span></div>;
+    <span role="status">{notebook.saved ? text.saved : notebook.dirty ? text.unsaved : ''}</span>
+    {notebook.meaningRequired && <p role="alert" className="runtime-error">{text.exampleSenseRequired}</p>}</div>;
 }
 
 function exampleTooLong(editor: NonNullable<Notebook['editor']>) {
@@ -56,10 +58,10 @@ function ExampleEditor({ notebook, text }: { readonly notebook: Notebook; readon
   const editor = notebook.editor!;
   const overLimit = exampleTooLong(editor);
   return <><h4>{text.exampleUser}</h4>
-    <label htmlFor="example-sense">{text.exampleSense}</label><select id="example-sense" disabled={notebook.busy} value={editor.example_sense === null ? '' : String(editor.example_sense)} onChange={(event) => notebook.editSense(event.target.value === '' ? null : Number(event.target.value))}>
+    <label htmlFor="example-sense">{text.exampleSense}</label><select id="example-sense" disabled={notebook.busy} aria-invalid={notebook.meaningRequired} aria-describedby={notebook.meaningRequired ? 'example-sense-required' : undefined} value={editor.example_sense === null ? '' : String(editor.example_sense)} onChange={(event) => notebook.editSense(event.target.value === '' ? null : Number(event.target.value))}>
       <option value="">{text.exampleSenseUnspecified}</option>{editor.snapshot.digest.map((entry, index) => <option key={index} value={index}>{entry.translation || text.missing}</option>)}
     </select>
-    {notebook.meaningRequired && <p role="alert">{text.exampleSenseRequired}</p>}
+    {notebook.meaningRequired && <p id="example-sense-required" className="runtime-error">{text.exampleSenseRequired}</p>}
     <label htmlFor="example-fr">{text.exampleFr}</label><textarea id="example-fr" lang="fr" value={editor.example_fr} disabled={notebook.busy} rows={3} aria-invalid={characterCount(editor.example_fr) > 20_000} aria-describedby={overLimit ? 'example-limit' : undefined} onChange={(event) => notebook.editExample('example_fr', event.target.value)} />
     <label htmlFor="example-zh">{text.exampleZh}</label><textarea id="example-zh" lang="zh" value={editor.example_zh} disabled={notebook.busy} rows={3} aria-invalid={characterCount(editor.example_zh) > 20_000} aria-describedby={overLimit ? 'example-limit' : undefined} onChange={(event) => notebook.editExample('example_zh', event.target.value)} />
     {editor.more_examples.map((example, index) => <fieldset key={index}><legend>{text.exampleUser} {index + 2}</legend>
@@ -82,6 +84,7 @@ export function VocabularyEditor({ notebook, text, viewExisting, runtime, onRevi
   const overLimit = characterCount(notes) > 20_000 || exampleOverLimit;
   return <section className="vocabulary-editor" aria-label={text.edit}>
     <p className="eyebrow">{text.fallback}</p><VocabularySummary snapshot={snapshot} text={text} />
+    <SpeechButton key={snapshot.headword} word={snapshot.headword} runtime={runtime} text={text} />
     <label htmlFor="personal-notes">{text.notes}</label>
     <textarea ref={textarea} id="personal-notes" value={notes} disabled={notebook.busy} rows={8} spellCheck={false}
       aria-invalid={characterCount(notes) > 20_000} aria-describedby="note-count" onChange={(event) => notebook.edit(event.target.value)} />

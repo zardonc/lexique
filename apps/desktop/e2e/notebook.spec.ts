@@ -1,6 +1,27 @@
 import { expect, test } from '@playwright/test';
 import { collect, nativeFixture, record } from './native-fixture';
 
+test('save and leave explains why an example without a meaning cannot be saved', async ({ page }) => {
+  const saved = { ...record, revision: 2, example_sense: 0, example_fr: 'Je vais à l’école.' };
+  await nativeFixture(page, { vocabulary_list: [{ value: [record] }], vocabulary_save: [{ value: { outcome: 'updated', record: saved } }] });
+  await page.goto('/');
+  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.locator('.vocabulary-list button').click();
+  await page.getByLabel('法语例句').fill('Je vais à l’école.');
+  await expect(page.getByRole('button', { name: '保存', exact: true }).locator('..').getByRole('alert')).toContainText('请为新增或修改的例句选择释义');
+  await page.getByRole('button', { name: '词典', exact: true }).click();
+  const dialog = page.getByRole('dialog', { name: '有尚未保存的修改' });
+  await dialog.getByRole('button', { name: '保存后离开' }).click();
+  await expect(dialog.getByRole('alert')).toContainText('请为新增或修改的例句选择释义');
+  await expect(dialog).toBeVisible();
+  await dialog.getByRole('button', { name: '继续编辑' }).click();
+  await page.getByLabel('例句对应释义').selectOption('0');
+  await page.getByRole('button', { name: '词典', exact: true }).click();
+  await dialog.getByRole('button', { name: '保存后离开' }).click();
+  await expect(dialog).toBeHidden();
+  await expect.poll(async () => (await page.evaluate(() => window.testNative.calls)).filter((call) => call.command === 'vocabulary_save').length).toBe(1);
+});
+
 test('rating a card refreshes the review-time order in the open notebook', async ({ page }) => {
   const other = { ...record, id: 2, headword: 'bonjour' };
   await nativeFixture(page, {

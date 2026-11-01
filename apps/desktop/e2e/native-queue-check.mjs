@@ -56,7 +56,7 @@ try {
   const beforeAccess = (await stat(audio)).atimeMs;
   const initial = await page.evaluate(async () => {
     const invoke = window.__TAURI_INTERNALS__.invoke;
-    const settings = { retention_percent: 87, new_limit: 7, review_limit: 13 };
+    const settings = { retention_percent: 87, new_limit: 7, review_limit: 13, new_cards_ignore_review_limit: true };
     await invoke('review_settings', { settings });
     const queue = await invoke('review_queue', { timezone: 'UTC', skipped: [] });
     return { settings, queue };

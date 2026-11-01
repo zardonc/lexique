@@ -41,9 +41,27 @@ pub struct ReviewSettings {
     pub retention_percent: u8,
     pub new_limit: u32,
     pub review_limit: u32,
+    #[serde(default)]
+    pub new_cards_ignore_review_limit: bool,
 }
 
 pub fn review_settings(connection: &Connection) -> Result<ReviewSettings, StorageError> {
+    let ignore: Option<String> = connection
+        .query_row(
+            "SELECT value FROM app_metadata WHERE key = 'new-cards-ignore-review-limit'",
+            [],
+            |row| row.get(0),
+        )
+        .optional()?;
+    let new_cards_ignore_review_limit = match ignore.as_deref() {
+        None | Some("false") => false,
+        Some("true") => true,
+        _ => {
+            return Err(StorageError::Invalid(
+                "Invalid new card limit preference".into(),
+            ));
+        }
+    };
     Ok(connection.query_row(
         "SELECT retention_percent, new_limit, review_limit FROM review_settings WHERE id = 1",
         [],
@@ -52,6 +70,7 @@ pub fn review_settings(connection: &Connection) -> Result<ReviewSettings, Storag
                 retention_percent: row.get(0)?,
                 new_limit: row.get(1)?,
                 review_limit: row.get(2)?,
+                new_cards_ignore_review_limit,
             })
         },
     )?)
@@ -67,8 +86,77 @@ pub fn set_review_settings(
     {
         return Err(StorageError::Invalid("Invalid review settings".into()));
     }
-    connection.execute("UPDATE review_settings SET retention_percent = ?1, new_limit = ?2, review_limit = ?3 WHERE id = 1", params![settings.retention_percent, settings.new_limit, settings.review_limit])?;
+    let tx = connection.unchecked_transaction()?;
+    tx.execute("UPDATE review_settings SET retention_percent = ?1, new_limit = ?2, review_limit = ?3 WHERE id = 1", params![settings.retention_percent, settings.new_limit, settings.review_limit])?;
+    tx.execute("INSERT INTO app_metadata (key, value) VALUES ('new-cards-ignore-review-limit', ?1) ON CONFLICT(key) DO UPDATE SET value = excluded.value", [settings.new_cards_ignore_review_limit.to_string()])?;
+    tx.commit()?;
     Ok(())
+}
+
+#[derive(Clone, Copy, PartialEq, Eq)]
+enum QueueClass {
+    New,
+    Intraday,
+    Interday,
+    Review,
+}
+
+fn queue_class(card: &Card, day: &str, timezone: &str) -> Result<QueueClass, StorageError> {
+    match card.phase {
+        Phase::New => Ok(QueueClass::New),
+        Phase::Review => Ok(QueueClass::Review),
+        _ => {
+            let last = card
+                .last_review_at
+                .ok_or_else(|| StorageError::Invalid("Learning card has no review time".into()))?;
+            let last_day = lexique_core::scheduling::learning_day_for(last, timezone)
+                .map_err(StorageError::Invalid)?;
+            Ok(if last_day == day {
+                QueueClass::Intraday
+            } else {
+                QueueClass::Interday
+            })
+        }
+    }
+}
+
+fn daily_usage(connection: &Connection, day: &str, now: i64) -> Result<(u32, u32), StorageError> {
+    let mut statement = connection.prepare("SELECT quota, before_state, request FROM review_ratings WHERE undo_operation IS NULL AND learning_day = ?1 AND reviewed_at <= ?2")?;
+    let rows = statement.query_map(params![day, now], |row| {
+        Ok((
+            row.get::<_, String>(0)?,
+            row.get::<_, String>(1)?,
+            row.get::<_, String>(2)?,
+        ))
+    })?;
+    let (mut new, mut review) = (0_u32, 0_u32);
+    for row in rows {
+        let (quota, before, request) = row?;
+        if quota == "new" {
+            new = new.saturating_add(1);
+        } else {
+            let card: Card = serde_json::from_str(&before)?;
+            let request: RatingRequest = serde_json::from_str(&request)?;
+            if matches!(
+                queue_class(&card, day, &request.timezone)?,
+                QueueClass::Interday | QueueClass::Review
+            ) {
+                review = review.saturating_add(1);
+            }
+        }
+    }
+    Ok((new, review))
+}
+
+fn remaining_limits(settings: &ReviewSettings, used_new: u32, used_review: u32) -> (usize, usize) {
+    let mut review = settings.review_limit.saturating_sub(used_review);
+    if !settings.new_cards_ignore_review_limit {
+        review = review.saturating_sub(used_new);
+    }
+    (
+        settings.new_limit.saturating_sub(used_new) as usize,
+        review as usize,
+    )
 }
 
 #[derive(Serialize, Deserialize)]
@@ -155,43 +243,13 @@ pub fn review_queue_filtered(
     }
     let all = review_card_inventory(&tx)?;
     let settings = review_settings(&tx)?;
-    let mut used_new = 0_u32;
-    let mut used_review = 0_u32;
-    let mut siblings: std::collections::HashMap<i64, Vec<i64>> = std::collections::HashMap::new();
+    let (used_new, used_review) = daily_usage(&tx, &day, now)?;
     let latest: Option<i64> = tx.query_row(
         "SELECT MAX(reviewed_at) FROM review_ratings WHERE undo_operation IS NULL",
         [],
         |row| row.get(0),
     )?;
-    let mut statement = tx.prepare("SELECT r.reviewed_at, r.quota, c.vocabulary_id, c.id, r.learning_day FROM review_ratings r JOIN review_cards c ON c.id = r.card_id WHERE r.undo_operation IS NULL AND r.reviewed_at >= ?1 AND r.reviewed_at <= ?2")?;
-    let ratings = statement.query_map(params![now.saturating_sub(259_200), now], |row| {
-        Ok((
-            row.get::<_, i64>(0)?,
-            row.get::<_, String>(1)?,
-            row.get::<_, i64>(2)?,
-            row.get::<_, i64>(3)?,
-            row.get::<_, String>(4)?,
-        ))
-    })?;
-    for rating in ratings {
-        let (time, quota, vocabulary_id, card_id, rated_day) = rating?;
-        if rated_day == day {
-            if quota == "new" {
-                used_new = used_new.saturating_add(1);
-            } else {
-                used_review = used_review.saturating_add(1);
-            }
-        }
-        if lexique_core::scheduling::learning_day_for(time, timezone)
-            .map_err(StorageError::Invalid)?
-            == day
-        {
-            siblings.entry(vocabulary_id).or_default().push(card_id);
-        }
-    }
-    drop(statement);
-    let remaining_new = settings.new_limit.saturating_sub(used_new) as usize;
-    let remaining_review = settings.review_limit.saturating_sub(used_review) as usize;
+    let (remaining_new, remaining_review) = remaining_limits(&settings, used_new, used_review);
     let mut pending = Vec::new();
     let mut reason = None;
     let mut available_at: Option<i64> = None;
@@ -201,25 +259,8 @@ pub fn review_queue_filtered(
         }
         let progress = review_progress(&tx, card.id)?;
         let state = &progress.card;
-        let quota = if state.phase == Phase::New {
-            used_new >= settings.new_limit
-        } else {
-            used_review >= settings.review_limit
-        };
-        let deferred = matches!(state.phase, Phase::New | Phase::Review)
-            && siblings
-                .get(&card.vocabulary_id)
-                .is_some_and(|ids| ids.iter().any(|id| *id != card.id));
         let (blocked, at) = if latest.is_some_and(|time| now < time) {
             (Some("clock".to_owned()), latest)
-        } else if quota || deferred {
-            (
-                Some(if quota { "quota" } else { "deferred" }.to_owned()),
-                Some(
-                    lexique_core::scheduling::next_learning_day_at(now, timezone)
-                        .map_err(StorageError::Invalid)?,
-                ),
-            )
         } else if state.due_at.is_some_and(|due| now < due) {
             (Some("due".to_owned()), state.due_at)
         } else {
@@ -239,34 +280,46 @@ pub fn review_queue_filtered(
     }
     let mut new = Vec::new();
     let mut old = Vec::new();
+    let mut interday = Vec::new();
+    let mut intraday = Vec::new();
     for (card, state) in &pending {
-        if state.phase == Phase::New {
-            new.push(card.id);
-        } else if state.phase == Phase::Review {
-            let due = state
-                .due_at
-                .ok_or_else(|| StorageError::Invalid("Review card has no due time".into()))?;
-            let due_day = lexique_core::scheduling::learning_day_for(due, timezone)
-                .map_err(StorageError::Invalid)?;
-            let mut hash = 14695981039346656037_u64;
-            for byte in due_day.bytes().chain(card.id.to_le_bytes()) {
-                hash = (hash ^ u64::from(byte)).wrapping_mul(1099511628211);
+        match queue_class(state, &day, timezone)? {
+            QueueClass::New => new.push(card.id),
+            QueueClass::Intraday => intraday.push(card.id),
+            QueueClass::Interday => interday.push(card.id),
+            QueueClass::Review => {
+                let due = state
+                    .due_at
+                    .ok_or_else(|| StorageError::Invalid("Review card has no due time".into()))?;
+                let due_day = lexique_core::scheduling::learning_day_for(due, timezone)
+                    .map_err(StorageError::Invalid)?;
+                let mut hash = 14695981039346656037_u64;
+                for byte in due_day.bytes().chain(card.id.to_le_bytes()) {
+                    hash = (hash ^ u64::from(byte)).wrapping_mul(1099511628211);
+                }
+                old.push((due_day, hash, card.id));
             }
-            old.push((due_day, hash, card.id));
         }
     }
     old.sort_unstable();
-    let minute_count = pending
-        .iter()
-        .filter(|(_, state)| {
-            matches!(
-                state.phase,
-                Phase::LearningFirst | Phase::LearningLast | Phase::Relearning
-            )
-        })
-        .count();
-    new.truncate(remaining_new);
-    old.truncate(remaining_review.saturating_sub(minute_count));
+    let total_candidates = new.len() + old.len() + interday.len() + intraday.len();
+    interday.truncate(remaining_review);
+    old.truncate(remaining_review.saturating_sub(interday.len()));
+    let new_limit = if settings.new_cards_ignore_review_limit {
+        remaining_new
+    } else {
+        remaining_new.min(remaining_review.saturating_sub(interday.len() + old.len()))
+    };
+    new.truncate(new_limit);
+    if new.len() + old.len() + interday.len() + intraday.len() < total_candidates {
+        let next_day = lexique_core::scheduling::next_learning_day_at(now, timezone)
+            .map_err(StorageError::Invalid)?;
+        if reason.is_none() || (reason.as_deref() != Some("clock") && Some(next_day) < available_at)
+        {
+            reason = Some("quota".into());
+            available_at = Some(next_day);
+        }
+    }
     let old: Vec<i64> = old.into_iter().map(|(_, _, id)| id).collect();
     let mut order = Vec::new();
     let (mut ni, mut oi) = (0, 0);
@@ -281,17 +334,9 @@ pub fn review_queue_filtered(
             oi += 1;
         }
     }
-    order.extend(
-        pending
-            .iter()
-            .filter(|(_, state)| {
-                matches!(
-                    state.phase,
-                    Phase::LearningFirst | Phase::LearningLast | Phase::Relearning
-                )
-            })
-            .map(|(card, _)| card.id),
-    );
+    order.extend(interday.iter().copied());
+    order.extend(intraday.iter().copied());
+    let admitted: std::collections::HashSet<i64> = order.iter().copied().collect();
     let mut statement = tx.prepare("SELECT card_id, position FROM review_queue_entries")?;
     let existing = statement
         .query_map([], |row| Ok((row.get::<_, i64>(0)?, row.get::<_, i64>(1)?)))?
@@ -355,6 +400,9 @@ pub fn review_queue_filtered(
     }
     let mut ordered = Vec::new();
     for (card, state) in pending {
+        if !admitted.contains(&card.id) {
+            continue;
+        }
         let position: Option<i64> = tx
             .query_row(
                 "SELECT position FROM review_queue_entries WHERE card_id = ?1",
@@ -372,23 +420,7 @@ pub fn review_queue_filtered(
         ordered.push((!minute, position, card));
     }
     ordered.sort_by_key(|(not_minute, position, _)| (*not_minute, *position));
-    let mut remaining_new = remaining_new;
-    let mut remaining_review = remaining_review;
-    let mut cards = Vec::new();
-    for (_, _, card) in ordered {
-        let phase = review_progress(&tx, card.id)?.card.phase;
-        let remaining = if phase == Phase::New {
-            &mut remaining_new
-        } else {
-            &mut remaining_review
-        };
-        if *remaining > 0 {
-            *remaining -= 1;
-            cards.push(card);
-        } else if reason.is_none() {
-            reason = Some("quota".into());
-        }
-    }
+    let cards = ordered.into_iter().map(|(_, _, card)| card).collect();
     tx.commit()?;
     Ok(ReviewQueue {
         cards,
@@ -428,11 +460,6 @@ fn eligibility(
     }
     let day =
         lexique_core::scheduling::learning_day_for(now, timezone).map_err(StorageError::Invalid)?;
-    let quota = if card.phase == Phase::New {
-        "new"
-    } else {
-        "review"
-    };
     let latest: Option<i64> = connection.query_row(
         "SELECT MAX(reviewed_at) FROM review_ratings WHERE undo_operation IS NULL",
         [],
@@ -444,42 +471,15 @@ fn eligibility(
     if card.due_at.is_some_and(|due| now < due) {
         return Ok((Some("due".into()), card.due_at));
     }
-    let mut used = 0;
-    let mut deferred = false;
-    let mut statement = connection.prepare("SELECT r.reviewed_at, r.quota, r.card_id != ?1 AND other.vocabulary_id = current.vocabulary_id, r.learning_day FROM review_ratings r JOIN review_cards other ON other.id = r.card_id JOIN review_cards current ON current.id = ?1 WHERE r.undo_operation IS NULL AND r.reviewed_at >= ?2 AND r.reviewed_at <= ?3")?;
-    let rows = statement.query_map(params![card_id, now.saturating_sub(259_200), now], |row| {
-        Ok((
-            row.get::<_, i64>(0)?,
-            row.get::<_, String>(1)?,
-            row.get::<_, bool>(2)?,
-            row.get::<_, String>(3)?,
-        ))
-    })?;
-    for row in rows {
-        let (time, previous_quota, sibling, rated_day) = row?;
-        if rated_day == day {
-            used += i64::from(previous_quota == quota);
-        }
-        if lexique_core::scheduling::learning_day_for(time, timezone)
-            .map_err(StorageError::Invalid)?
-            == day
-        {
-            deferred |= sibling;
-        }
-    }
     let settings = review_settings(connection)?;
-    let limit = if quota == "new" {
-        settings.new_limit
-    } else {
-        settings.review_limit
+    let (used_new, used_review) = daily_usage(connection, &day, now)?;
+    let (new, review) = remaining_limits(&settings, used_new, used_review);
+    let blocked = match queue_class(card, &day, timezone)? {
+        QueueClass::New => new == 0 || (!settings.new_cards_ignore_review_limit && review == 0),
+        QueueClass::Interday | QueueClass::Review => review == 0,
+        QueueClass::Intraday => false,
     };
-    let reason = if used >= i64::from(limit) {
-        Some("quota")
-    } else if deferred && matches!(card.phase, Phase::New | Phase::Review) {
-        Some("deferred")
-    } else {
-        None
-    };
+    let reason = if blocked { Some("quota") } else { None };
     let available_at = reason
         .map(|_| {
             lexique_core::scheduling::next_learning_day_at(now, timezone)
@@ -684,7 +684,8 @@ pub fn undo_rating(
             Err(StorageError::Invalid("Undo operation already used".into()))
         };
     }
-    let latest: Option<(String, i64, String, String, Option<String>, Option<String>)> = tx.query_row(
+    type UndoRatingRow = (String, i64, String, String, Option<String>, Option<String>);
+    let latest: Option<UndoRatingRow> = tx.query_row(
         "SELECT operation, card_id, request, before_state, queue_before, undo_operation FROM review_ratings ORDER BY rowid DESC LIMIT 1", [],
         |row| Ok((row.get(0)?, row.get(1)?, row.get(2)?, row.get(3)?, row.get(4)?, row.get(5)?))
     ).optional()?;

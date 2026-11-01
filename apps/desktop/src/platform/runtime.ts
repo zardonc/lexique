@@ -49,7 +49,8 @@ export type RateRequest = z.infer<typeof rateRequestSchema>;
 export type ReviewProgress = z.infer<typeof progressSchema>;
 export type ReviewAvailability = z.infer<typeof availabilitySchema>;
 const reviewSettingsSchema = z.object({ retention_percent: z.number().int().min(70).max(99),
-  new_limit: z.number().int().min(0).max(1_000_000), review_limit: z.number().int().min(0).max(1_000_000) }).strict().readonly();
+  new_limit: z.number().int().min(0).max(1_000_000), review_limit: z.number().int().min(0).max(1_000_000),
+  new_cards_ignore_review_limit: z.boolean() }).strict().readonly();
 export type ReviewSettings = z.infer<typeof reviewSettingsSchema>;
 const queueCardSchema = z.object({ id: z.number().int().positive().safe(), vocabulary_id: z.number().int().positive().safe(), kind: z.enum(['recognition', 'listening']) }).strict();
 const queueViewSchema = z.object({ queue: z.object({ cards: z.array(queueCardSchema), reason: z.enum(['clock', 'due', 'quota', 'deferred']).nullable(), available_at: z.number().int().safe().nullable() }).strict(), record: recordSchema.nullable(), audio_pending: z.boolean(), audio_error: z.string().nullable() }).strict()
@@ -76,6 +77,7 @@ export interface RuntimeAdapter {
   readonly reviewSettings: (settings?: ReviewSettings) => Promise<ReviewSettings | null>;
   readonly reviewQueue: (skipped?: readonly number[]) => Promise<QueueView | null>;
   readonly generateSpeech: (id: number, regenerate?: boolean) => Promise<Uint8Array | null>;
+  readonly previewSpeech: (text: string) => Promise<Uint8Array | null>;
   readonly cachedSpeech: (id: number) => Promise<Uint8Array | null>;
   readonly onCloseRequested: (callback: () => void) => Promise<() => void>;
   readonly finishClose: () => Promise<void>;
@@ -169,6 +171,12 @@ export const runtime: RuntimeAdapter = {
     const bytes = z.array(z.number().int().min(0).max(255)).min(1).max(10_000_000).nullable()
       .parse(await invoke('speech_cached', { vocabularyId: z.number().int().positive().safe().parse(id) }));
     return bytes === null ? null : new Uint8Array(bytes);
+  },
+  async previewSpeech(text) {
+    if (!isTauri()) return null;
+    const bytes = z.array(z.number().int().min(0).max(255)).min(1).max(10_000_000)
+      .parse(await invoke('speech_preview', { text }));
+    return new Uint8Array(bytes);
   },
   async onCloseRequested(callback) {
     if (!isTauri()) return () => {};

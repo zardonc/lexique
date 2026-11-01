@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import type { NotebookText } from './notebook-content';
 import type { ReviewCard, RuntimeAdapter } from './platform/runtime';
 import { errorMessage } from './platform/vocabulary';
@@ -34,7 +34,25 @@ function Answer({ record, text }: { readonly record: VocabularyRecord; readonly 
   </>;
 }
 
-export function RecognitionCard({ record, text, runtime, card, onRated }: { readonly record: VocabularyRecord; readonly text: NotebookText; readonly runtime: RuntimeAdapter; readonly card: ReviewCard; readonly onRated?: () => void }) {
+export function QueueReviewCard({ record, text, runtime, card, audio, onRated, onSkip }: {
+  readonly record: VocabularyRecord; readonly text: NotebookText; readonly runtime: RuntimeAdapter;
+  readonly card: ReviewCard; readonly audio: Uint8Array | null; readonly onRated: () => void; readonly onSkip: () => void;
+}) {
+  const [revealed, setRevealed] = useState(false);
+  const [busy, setBusy] = useState(false);
+  const { player, played, error, play, mediaError } = useListeningAudio({ audio, runtime, autoPlay: true });
+  return <section className="queue-review-card" aria-label={text.queueCard}>
+    {audio ? <><p>{text.machineVoice}</p><audio ref={player} onError={() => mediaError(text.playbackError)} />
+      <button onClick={() => { void play(); }}>{text.replay}</button></> : <h3 lang="fr">{record.headword}</h3>}
+    {error && <p role="alert">{text.playbackError}: {error}</p>}
+    {revealed && <>{audio && <h3 lang="fr">{record.headword}</h3>}<Answer record={record} text={text} />
+      <ReviewRating id={card.id} runtime={runtime} text={text} enabled={!audio || played} onBusyChange={setBusy} onSuccess={onRated} /></>}
+    <div className="actions">{!revealed && <button onClick={() => setRevealed(true)}>{text.reveal}</button>}
+      <button disabled={busy} onClick={onSkip}>{text.skip}</button></div>
+  </section>;
+}
+
+export function RecognitionCard({ record, text, runtime, card, onRated, onSkip }: { readonly record: VocabularyRecord; readonly text: NotebookText; readonly runtime: RuntimeAdapter; readonly card: ReviewCard; readonly onRated?: () => void; readonly onSkip?: () => void }) {
   const [revealed, setRevealed] = useState(false);
   const [ratingBusy, setRatingBusy] = useState(false);
   const dialog = useRef<HTMLDialogElement>(null);
@@ -49,28 +67,31 @@ export function RecognitionCard({ record, text, runtime, card, onRated }: { read
         <div className="actions">
           {!revealed && <button onClick={() => setRevealed(true)}>{text.reveal}</button>}
           <button disabled={ratingBusy} onClick={() => dialog.current?.close()}>{text.closeCard}</button>
+          {onSkip && <button disabled={ratingBusy} onClick={() => { dialog.current?.close(); onSkip(); }}>{text.skip}</button>}
         </div>
       </section>
     </dialog>
   </>;
 }
 
-function useListeningAudio(audio: Uint8Array, runtime: RuntimeAdapter, onPlayback: (failed: boolean) => void) {
+function useListeningAudio({ audio, runtime, autoPlay, onPlayback }: {
+  readonly audio: Uint8Array | null; readonly runtime: RuntimeAdapter; readonly autoPlay: boolean;
+  readonly onPlayback?: (failed: boolean) => void;
+}) {
   const dialog = useRef<HTMLDialogElement>(null);
   const player = useRef<HTMLAudioElement>(null);
   const playback = useRef(0);
+  const failedPlayback = useRef(-1);
+  const onPlaybackRef = useRef<(failed: boolean) => void>(() => {});
   const [url, setUrl] = useState('');
   const [error, setError] = useState('');
-  function cancel() { playback.current += 1; player.current?.pause(); }
-  function current(request: number) { return request === playback.current && dialog.current?.open; }
-  useEffect(() => {
-    const objectUrl = URL.createObjectURL(new Blob([audio.slice().buffer as ArrayBuffer], { type: 'audio/ogg; codecs=opus' }));
-    setUrl(objectUrl);
-    return () => { cancel(); URL.revokeObjectURL(objectUrl); };
-  }, [audio]);
-  async function play() {
+  const [played, setPlayed] = useState(false);
+  useEffect(() => { onPlaybackRef.current = onPlayback ?? (() => {}); }, [onPlayback]);
+  const cancel = useCallback(() => { playback.current += 1; player.current?.pause(); }, []);
+  const current = useCallback((request: number) => request === playback.current && (autoPlay || dialog.current?.open), [autoPlay]);
+  const play = useCallback(async () => {
     const request = ++playback.current;
-    setError('');
+    setPlayed(false); setError('');
     try {
       const preferences = await runtime.speechPreferences();
       if (!current(request)) return;
@@ -78,15 +99,27 @@ function useListeningAudio(audio: Uint8Array, runtime: RuntimeAdapter, onPlaybac
       player.current.playbackRate = preferences.speed === 'slow' ? 0.6 : 1;
       player.current.currentTime = 0;
       await player.current.play();
-      if (current(request)) onPlayback(false);
+      if (current(request) && failedPlayback.current !== request) { setPlayed(true); onPlaybackRef.current(false); }
     } catch (cause) {
       if (current(request)) {
-        setError(errorMessage(cause)); onPlayback(true);
+        setError(errorMessage(cause)); onPlaybackRef.current(true);
       }
     }
+  }, [runtime, current]);
+  useEffect(() => {
+    if (!audio) return;
+    const objectUrl = URL.createObjectURL(new Blob([audio.slice().buffer as ArrayBuffer], { type: 'audio/ogg; codecs=opus' }));
+    setUrl(objectUrl);
+    if (autoPlay && player.current) { player.current.src = objectUrl; void play(); }
+    return () => { cancel(); URL.revokeObjectURL(objectUrl); };
+  }, [audio, autoPlay, cancel, play]);
+  function mediaError(message: string) {
+    if (!autoPlay && !dialog.current?.open) return;
+    failedPlayback.current = playback.current;
+    setPlayed(false); setError((previous) => previous || message); onPlaybackRef.current(true);
   }
   function close() { cancel(); dialog.current?.close(); }
-  return { dialog, player, url, error, setError, play, close, cancel };
+  return { dialog, player, url, error, played, play, close, cancel, mediaError };
 }
 
 export function ListeningCard({ record, text, runtime, audio, onPlayback, card, onRated, onSkip }: {
@@ -96,19 +129,16 @@ export function ListeningCard({ record, text, runtime, audio, onPlayback, card, 
   readonly onRated?: () => void;
   readonly onSkip?: () => void;
 }) {
-  const [played, setPlayed] = useState(false);
   const [ratingBusy, setRatingBusy] = useState(false);
-  const { dialog, player, url, error, setError, play, close, cancel } = useListeningAudio(audio, runtime, (failed) => { setPlayed(!failed); onPlayback(failed); });
+  const { dialog, player, url, error, played, play, close, cancel, mediaError } = useListeningAudio({ audio, runtime, autoPlay: false, onPlayback });
   const [revealed, setRevealed] = useState(false);
   return <>
     <div className="actions"><button disabled={!url} onClick={() => {
-      setRevealed(false); setPlayed(false); dialog.current?.showModal(); void play();
+      setRevealed(false); dialog.current?.showModal(); void play();
     }}>{text.openListening}</button></div>
     <dialog ref={dialog} className="review-card" aria-label={text.listening} onCancel={(event) => { if (ratingBusy) event.preventDefault(); else cancel(); }}>
       <section aria-label={text.listening}>
-        <p>{text.machineVoice}</p><audio ref={player} src={url} onError={() => {
-          if (dialog.current?.open) { setError(text.playbackError); setPlayed(false); onPlayback(true); }
-        }} />
+        <p>{text.machineVoice}</p><audio ref={player} src={url} onError={() => mediaError(text.playbackError)} />
         {error && <p role="alert">{text.playbackError}: {error}</p>}
         {revealed && <><h3 lang="fr">{record.headword}</h3><Answer record={record} text={text} /></>}
         {revealed && <ReviewRating id={card.id} runtime={runtime} text={text} enabled={played} onBusyChange={setRatingBusy} onSuccess={() => { close(); onRated?.(); }} />}

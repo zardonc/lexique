@@ -50,6 +50,7 @@ fn main() {
             "review_settings",
             "speech_cached",
             "speech_generate",
+            "speech_preview",
             "speech_preferences",
             "finish_close",
         ]),

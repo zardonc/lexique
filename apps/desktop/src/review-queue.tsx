@@ -4,12 +4,12 @@ import type { NotebookText } from './notebook-content';
 import type { QueueView, RuntimeAdapter } from './platform/runtime';
 import { UndoRejected } from './platform/runtime';
 import { errorMessage } from './platform/vocabulary';
-import { ListeningCard, RecognitionCard } from './review-cards';
+import { QueueReviewCard } from './review-cards';
 
 const messages = {
-  zh: { loading: '正在读取复习队列', preview: '浏览器预览无法读取复习队列。', done: '本轮完成', waiting: '尚未到期', quota: '今日额度已用完', error: '队列读取失败', retry: '刷新队列', undo: '撤销最近评分', undoError: '撤销失败', rebuilt: '旧版评分已撤销，队列顺序可能变化。' },
-  en: { loading: 'Loading review queue', preview: 'Review queue is unavailable in browser preview.', done: 'Review complete', waiting: 'Not due yet', quota: 'Daily limit reached', error: 'Could not load review queue', retry: 'Refresh queue', undo: 'Undo last rating', undoError: 'Could not undo rating', rebuilt: 'Earlier rating undone. The queue order may change.' },
-  fr: { loading: 'Chargement de la file', preview: 'La file est indisponible dans l’aperçu web.', done: 'Révision terminée', waiting: 'Pas encore à réviser', quota: 'Limite quotidienne atteinte', error: 'Lecture de la file impossible', retry: 'Actualiser la file', undo: 'Annuler la dernière évaluation', undoError: 'Annulation impossible', rebuilt: 'Ancienne évaluation annulée. L’ordre de la file peut changer.' },
+  zh: { loading: '正在读取复习队列', preview: '浏览器预览无法读取复习队列。', done: '本轮完成', waiting: '尚未到期', quota: '今日额度已用完', error: '队列读取失败', retry: '刷新队列', undo: '撤销最近评分', undoError: '撤销失败', rebuilt: '旧版评分已撤销，队列顺序可能变化。', counts: (count: number) => `待复习：${count} 张` },
+  en: { loading: 'Loading review queue', preview: 'Review queue is unavailable in browser preview.', done: 'Review complete', waiting: 'Not due yet', quota: 'Daily limit reached', error: 'Could not load review queue', retry: 'Refresh queue', undo: 'Undo last rating', undoError: 'Could not undo rating', rebuilt: 'Earlier rating undone. The queue order may change.', counts: (count: number) => `Cards remaining: ${count}` },
+  fr: { loading: 'Chargement de la file', preview: 'La file est indisponible dans l’aperçu web.', done: 'Révision terminée', waiting: 'Pas encore à réviser', quota: 'Limite quotidienne atteinte', error: 'Lecture de la file impossible', retry: 'Actualiser la file', undo: 'Annuler la dernière évaluation', undoError: 'Annulation impossible', rebuilt: 'Ancienne évaluation annulée. L’ordre de la file peut changer.', counts: (count: number) => `Cartes restantes : ${count}` },
 } as const;
 
 async function queueAudio(runtime: RuntimeAdapter, view: QueueView | null, pending: string) {
@@ -46,13 +46,14 @@ function QueueCard({ view, audio, runtime, text, refresh, skip }: { readonly vie
   const card = view.queue.cards[0];
   const record = view.record;
   if (!card || !record) return null;
-  if (card.kind === 'recognition') return <RecognitionCard key={card.id} card={card} record={record} runtime={runtime} text={text} onRated={() => { void refresh(); }} />;
-  return audio && <ListeningCard key={card.id} card={card} record={record} runtime={runtime} text={text} audio={audio} onPlayback={() => {}} onRated={() => { void refresh(); }} onSkip={() => skip(card.id)} />;
+  if (card.kind === 'listening' && !audio) return null;
+  return <QueueReviewCard key={card.id} card={card} record={record} runtime={runtime} text={text} audio={card.kind === 'listening' ? audio : null} onRated={() => { void refresh(); }} onSkip={() => skip(card.id)} />;
 }
 
 function emptyMessage(view: QueueView, labels: (typeof messages)[Locale], text: NotebookText) {
   if (view.queue.reason === 'quota') return labels.quota;
   if (view.queue.reason === 'clock') return text.availability.clock;
+  if (view.queue.reason === 'deferred') return text.availability.deferred;
   if (view.queue.reason) return labels.waiting;
   if (view.audio_error) return labels.error;
   if (view.audio_pending) return text.listeningPending;
@@ -61,6 +62,7 @@ function emptyMessage(view: QueueView, labels: (typeof messages)[Locale], text: 
 
 function ReadyQueue({ view, audio, runtime, text, refresh, labels, skip }: { readonly view: QueueView; readonly audio: Uint8Array | null; readonly runtime: RuntimeAdapter; readonly text: NotebookText; readonly refresh: () => Promise<void>; readonly labels: (typeof messages)[Locale]; readonly skip: (id: number) => void }) {
   return <>{view.audio_error && <p role="alert">{text.playbackError}: {view.audio_error}</p>}
+    {view.queue.cards.length > 0 && <p role="status">{labels.counts(view.queue.cards.length)}</p>}
     {view.queue.cards.length ? <QueueCard view={view} audio={audio} runtime={runtime} text={text} refresh={refresh} skip={skip} /> :
       <p role="status">{emptyMessage(view, labels, text)}
         {view.queue.available_at != null && `: ${new Date(view.queue.available_at * 1000).toLocaleString()}`}</p>}</>;
@@ -76,8 +78,8 @@ export function ReviewQueuePanel({ runtime, locale, text }: { readonly runtime: 
     {error && <p role="alert">{labels.error}: {error}</p>}
     {status === 'ready' && view && <ReadyQueue view={view} audio={audio} runtime={runtime} text={text} refresh={refresh} labels={labels} skip={skip} />}
     {rebuilt && <p role="status">{labels.rebuilt}</p>}
-    {status !== 'preview' && status !== 'loading' && <UndoRating runtime={runtime} labels={labels} refresh={refresh} onRebuilt={setRebuilt} />}
-    <button disabled={status === 'loading'} onClick={() => { void refresh(); }}>{labels.retry}</button>
+    <div className="actions">{status !== 'preview' && status !== 'loading' && <UndoRating runtime={runtime} labels={labels} refresh={refresh} onRebuilt={setRebuilt} />}
+      <button disabled={status === 'loading'} onClick={() => { void refresh(); }}>{labels.retry}</button></div>
   </section>;
 }
 

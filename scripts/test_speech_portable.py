@@ -71,7 +71,8 @@ class SpeechPortableTest(unittest.TestCase):
             self.assertEqual(len(archives), 1)
             with zipfile.ZipFile(archives[0]) as archive:
                 names = archive.namelist()
-                for suffix in ("speech/runtime/python.exe", "speech/assets/voice.bin",
+                for suffix in ("speech/runtime/python.exe", "speech/runtime/vcruntime140.dll",
+                               "speech/runtime/vcruntime140_1.dll", "speech/assets/voice.bin",
                                "speech/opusenc.dll", "speech/opus-1.6.1.tar.gz.LICENSE",
                                "speech/libopusenc-0.3.tar.gz.LICENSE",
                                "speech/docs/evidence/issue-14/supertonic-licenses/LICENSE-SUPERTONE-model-OpenRAIL-M.txt"):

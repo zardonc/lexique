@@ -2,7 +2,10 @@ import { spawn } from 'node:child_process';
 
 const TIMEOUT_MS = 60_000;
 const IS_WINDOWS = process.platform === 'win32';
-const child = spawn('cargo', ['test', '--locked', '-p', 'lexique-core', '-p', 'lexique-storage', '-p', 'lexique-dictionary'], {
+const targets = process.argv.includes('--speech-cache')
+  ? ['--release', '-p', 'lexique-desktop', '--test', 'speech_cache', '--', '--nocapture']
+  : ['-p', 'lexique-core', '-p', 'lexique-storage', '-p', 'lexique-dictionary'];
+const child = spawn('cargo', ['test', '--locked', ...targets], {
   stdio: 'inherit',
   detached: !IS_WINDOWS,
 });

@@ -93,6 +93,7 @@ dialog { max-width: min(520px, 90vw); border: 1px solid var(--line); border-radi
 dialog::backdrop { background: #0006; }
 dialog.review-card::backdrop { background: var(--surface); }
 dialog.review-card { width: min(480px, 90vw); overflow-wrap: anywhere; }
+.queue-review-card { max-width: 480px; overflow-wrap: anywhere; }
 @media (max-width: 720px) {
   .app, .app[data-collapsed='true'] { grid-template-columns: 64px minmax(0, 1fr); }
   .sidebar { padding: 20px 8px 12px; }

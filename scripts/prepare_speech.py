@@ -57,7 +57,9 @@ def stage(bundle, encoder, sources, destination):
         if digest(source) != expected:
             raise ValueError(f"Speech resource checksum mismatch: {name}")
         selected[name] = source
-    if "runtime/python.exe" not in selected or "assets/voice.bin" not in selected:
+    required = {"runtime/python.exe", "runtime/vcruntime140.dll", "runtime/vcruntime140_1.dll",
+                "assets/voice.bin"}
+    if not required.issubset(selected):
         raise ValueError("Speech resources are incomplete")
     regular(encoder)
     if digest(encoder) != ENCODER:

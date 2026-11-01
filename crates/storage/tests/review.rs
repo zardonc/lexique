@@ -99,7 +99,7 @@ fn pausing_both_cards_survives_undo_and_resume_preserves_progress() {
 }
 
 #[test]
-fn resumed_cards_respect_quota_audio_and_sibling_deferral() {
+fn resumed_cards_respect_quota_and_audio() {
     let mut connection = Connection::open_in_memory().unwrap();
     initialize(&connection).unwrap();
     let word = saved_word(&mut connection);
@@ -156,10 +156,10 @@ fn resumed_cards_respect_quota_audio_and_sibling_deferral() {
             .unwrap()
             .reason
             .as_deref(),
-        Some("deferred")
+        None
     );
     assert!(
-        !lexique_storage::review_queue(&mut connection, now, "UTC")
+        lexique_storage::review_queue(&mut connection, now, "UTC")
             .unwrap()
             .cards
             .iter()
@@ -524,6 +524,7 @@ fn undo_prior_learning_day_does_not_change_current_day_quota_after_travel() {
             retention_percent: 90,
             new_limit: 1,
             review_limit: 50,
+            new_cards_ignore_review_limit: false,
         },
     )
     .unwrap();
@@ -798,7 +799,7 @@ fn undo_survives_reopening_and_failed_commit_across_learning_days() {
 }
 
 #[test]
-fn queue_preserves_order_and_defers_a_rated_cards_sibling() {
+fn queue_preserves_order_and_retains_a_rated_cards_sibling() {
     let mut connection = Connection::open_in_memory().unwrap();
     initialize(&connection).unwrap();
     let first = saved_word(&mut connection);
@@ -845,7 +846,7 @@ fn queue_preserves_order_and_defers_a_rated_cards_sibling() {
     let after = lexique_storage::review_queue(&mut connection, 1_700_000_000, "UTC").unwrap();
     assert_eq!(
         after.cards.iter().map(|card| card.id).collect::<Vec<_>>(),
-        vec![second_cards[0].id, second_cards[1].id]
+        vec![first_cards[1].id, second_cards[0].id, second_cards[1].id]
     );
 }
 
@@ -929,6 +930,7 @@ fn mixed_queue_uses_admitted_counts_and_survives_reopening() {
             retention_percent: 90,
             new_limit: 2,
             review_limit: 1,
+            new_cards_ignore_review_limit: true,
         };
         lexique_storage::set_review_settings(&connection, &settings).unwrap();
         let queue = lexique_storage::review_queue(&mut connection, 1_702_592_000, "UTC").unwrap();
@@ -958,6 +960,7 @@ fn minute_learning_takes_priority_and_daily_quota_resets() {
         retention_percent: 90,
         new_limit: 1,
         review_limit: 1,
+        new_cards_ignore_review_limit: true,
     };
     lexique_storage::set_review_settings(&connection, &settings).unwrap();
     lexique_storage::rate_card(
@@ -991,8 +994,7 @@ fn minute_learning_takes_priority_and_daily_quota_resets() {
     )
     .unwrap();
     let exhausted = lexique_storage::review_queue(&mut connection, 1_700_000_120, "UTC").unwrap();
-    assert!(exhausted.cards.is_empty());
-    assert_eq!(exhausted.reason.as_deref(), Some("quota"));
+    assert_eq!(exhausted.cards[0].id, cards[0].id);
     let tomorrow = lexique_storage::review_queue(&mut connection, 1_700_086_400, "UTC").unwrap();
     assert_eq!(tomorrow.cards[0].id, cards[0].id);
     assert!(tomorrow.cards.iter().any(|card| card.id == cards[1].id));
@@ -1020,6 +1022,7 @@ fn raising_review_limit_interleaves_newly_admitted_cards() {
         retention_percent: 90,
         new_limit: 2,
         review_limit: 0,
+        new_cards_ignore_review_limit: true,
     };
     lexique_storage::set_review_settings(&connection, &settings).unwrap();
     let before = lexique_storage::review_queue(&mut connection, 1_702_592_000, "UTC").unwrap();
@@ -1066,6 +1069,7 @@ fn review_settings_control_future_ratings_and_preserve_daily_usage() {
         retention_percent: 80,
         new_limit: 0,
         review_limit: 0,
+        new_cards_ignore_review_limit: false,
     };
     lexique_storage::set_review_settings(&connection, &settings).unwrap();
     assert_eq!(
@@ -1077,7 +1081,7 @@ fn review_settings_control_future_ratings_and_preserve_daily_usage() {
             .unwrap()
             .reason
             .as_deref(),
-        Some("quota")
+        None
     );
     let next = lexique_storage::RatingRequest {
         operation: "settings-next".into(),
@@ -1085,14 +1089,13 @@ fn review_settings_control_future_ratings_and_preserve_daily_usage() {
         now: request.now + 600,
         ..request
     };
-    assert!(lexique_storage::rate_card(&mut connection, &next).is_err());
+    let scheduled = lexique_storage::rate_card(&mut connection, &next).unwrap();
+    assert_eq!(scheduled["retention_percent"], 80);
     let raised = lexique_storage::ReviewSettings {
         review_limit: 1,
         ..settings
     };
     lexique_storage::set_review_settings(&connection, &raised).unwrap();
-    let scheduled = lexique_storage::rate_card(&mut connection, &next).unwrap();
-    assert_eq!(scheduled["retention_percent"], 80);
     let replayed = lexique_storage::rate_card(&mut connection, &next).unwrap();
     assert_eq!(replayed, scheduled);
     let invalid = lexique_storage::ReviewSettings {
@@ -1164,7 +1167,7 @@ fn failed_rating_commit_can_be_retried_without_advancing_progress() {
 }
 
 #[test]
-fn rating_defers_the_other_new_card_until_the_next_learning_day() {
+fn rating_allows_the_other_new_card_on_the_same_learning_day() {
     let mut connection = Connection::open_in_memory().unwrap();
     initialize(&connection).unwrap();
     let id = saved_word(&mut connection);
@@ -1180,23 +1183,25 @@ fn rating_defers_the_other_new_card_until_the_next_learning_day() {
     lexique_storage::rate_card(&mut connection, &first).unwrap();
     let availability =
         lexique_storage::review_availability(&connection, cards[1].id, first.now, "UTC").unwrap();
-    assert_eq!(availability.reason.as_deref(), Some("deferred"));
-    assert!(availability.available_at.unwrap() > first.now);
+    assert_eq!(availability.reason, None);
+    assert_eq!(availability.available_at, None);
+    assert!(
+        lexique_storage::review_queue(&mut connection, first.now, "UTC")
+            .unwrap()
+            .cards
+            .iter()
+            .any(|card| card.id == cards[1].id)
+    );
     let sibling = lexique_storage::RatingRequest {
         operation: "sibling".into(),
         card_id: cards[1].id,
         ..first
     };
-    assert!(lexique_storage::rate_card(&mut connection, &sibling).is_err());
-    let tomorrow = lexique_storage::RatingRequest {
-        now: 1_700_086_400,
-        ..sibling
-    };
-    assert!(lexique_storage::rate_card(&mut connection, &tomorrow).is_ok());
+    assert!(lexique_storage::rate_card(&mut connection, &sibling).is_ok());
 }
 
 #[test]
-fn sibling_deferral_uses_current_timezone_after_travel() {
+fn sibling_remains_available_after_travel() {
     let mut connection = Connection::open_in_memory().unwrap();
     initialize(&connection).unwrap();
     let id = saved_word(&mut connection);
@@ -1216,7 +1221,46 @@ fn sibling_deferral_uses_current_timezone_after_travel() {
         timezone: "Asia/Tokyo".into(),
         ..first
     };
-    assert!(lexique_storage::rate_card(&mut connection, &second).is_err());
+    assert!(lexique_storage::rate_card(&mut connection, &second).is_ok());
+}
+
+#[test]
+fn daily_new_limit_counts_each_card_and_rolls_over_added_cards() {
+    let mut connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    let now = 1_700_000_000;
+    for index in 0..10 {
+        connection.execute("INSERT INTO vocabulary (headword, snapshot, notes, created_at, updated_at) VALUES (?1, '{}', '', 1, 1)", [format!("daily-{index}")]).unwrap();
+        let word = connection.last_insert_rowid();
+        let cards = add_review(&mut connection, word).unwrap();
+        assert_eq!(cards.len(), 2);
+        for card in cards {
+            lexique_storage::rate_card(
+                &mut connection,
+                &lexique_storage::RatingRequest {
+                    operation: format!("daily-{}", card.id),
+                    card_id: card.id,
+                    expected_revision: 0,
+                    rating: Rating::Easy,
+                    now,
+                    timezone: "UTC".into(),
+                },
+            )
+            .unwrap();
+        }
+    }
+    connection.execute("INSERT INTO vocabulary (headword, snapshot, notes, created_at, updated_at) VALUES ('next-day', '{}', '', 1, 1)", []).unwrap();
+    let later_id = connection.last_insert_rowid();
+    let later = add_review(&mut connection, later_id).unwrap();
+    let today = lexique_storage::review_queue(&mut connection, now, "UTC").unwrap();
+    assert!(today.cards.is_empty());
+    assert_eq!(today.reason.as_deref(), Some("quota"));
+    let tomorrow = lexique_core::scheduling::next_learning_day_at(now, "UTC").unwrap();
+    let queue = lexique_storage::review_queue(&mut connection, tomorrow, "UTC").unwrap();
+    assert_eq!(
+        queue.cards.iter().map(|card| card.id).collect::<Vec<_>>(),
+        later.iter().map(|card| card.id).collect::<Vec<_>>()
+    );
 }
 
 #[test]
@@ -1253,7 +1297,7 @@ fn new_card_limit_counts_successful_ratings_once_per_learning_day() {
 }
 
 #[test]
-fn minute_step_ratings_use_the_separate_review_limit() {
+fn anki_intraday_learning_does_not_consume_review_limit() {
     let mut connection = Connection::open_in_memory().unwrap();
     initialize(&connection).unwrap();
     let id = saved_word(&mut connection);
@@ -1267,11 +1311,195 @@ fn minute_step_ratings_use_the_separate_review_limit() {
             now: 1_700_000_000 + revision * 60,
             timezone: "UTC".into(),
         };
-        assert_eq!(
-            lexique_storage::rate_card(&mut connection, &request).is_ok(),
-            revision <= 50
-        );
+        assert!(lexique_storage::rate_card(&mut connection, &request).is_ok());
     }
+}
+
+#[test]
+fn anki_review_limit_blocks_new_cards_by_default() {
+    let mut connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    let word = saved_word(&mut connection);
+    let cards = add_review(&mut connection, word).unwrap();
+    let mut settings = lexique_storage::review_settings(&connection).unwrap();
+    settings.review_limit = 0;
+    lexique_storage::set_review_settings(&connection, &settings).unwrap();
+    let now = 1_700_000_000;
+    let queue = lexique_storage::review_queue(&mut connection, now, "UTC").unwrap();
+    assert!(queue.cards.is_empty());
+    assert_eq!(queue.reason.as_deref(), Some("quota"));
+    assert_eq!(
+        lexique_storage::review_availability(&connection, cards[0].id, now, "UTC")
+            .unwrap()
+            .reason
+            .as_deref(),
+        Some("quota")
+    );
+}
+
+#[test]
+fn anki_interday_cards_precede_reviews_and_undo_restores_quota() {
+    let mut connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    let word = saved_word(&mut connection);
+    let cards = add_review(&mut connection, word).unwrap();
+    connection.execute("INSERT INTO vocabulary (headword, snapshot, notes, created_at, updated_at) VALUES ('backlog', '{}', '', 1, 1)", []).unwrap();
+    let other = connection.last_insert_rowid();
+    let new = add_review(&mut connection, other).unwrap();
+    let now = 1_700_000_000;
+    for (card, phase) in [(cards[0].id, "review"), (cards[1].id, "learning_first")] {
+        let state = serde_json::json!({"phase": phase, "memory": {"stability": 1.0, "difficulty": 5.0}, "last_review_at": now - 86_400, "due_at": now - 60});
+        connection
+            .execute(
+                "INSERT INTO review_progress (card_id, revision, state) VALUES (?1, 1, ?2)",
+                rusqlite::params![card, state.to_string()],
+            )
+            .unwrap();
+    }
+    let mut settings = lexique_storage::review_settings(&connection).unwrap();
+    settings.new_limit = 2;
+    settings.review_limit = 1;
+    lexique_storage::set_review_settings(&connection, &settings).unwrap();
+    let queue = lexique_storage::review_queue(&mut connection, now, "UTC").unwrap();
+    assert_eq!(
+        queue.cards.iter().map(|card| card.id).collect::<Vec<_>>(),
+        vec![cards[1].id]
+    );
+    let request = lexique_storage::RatingRequest {
+        operation: "interday-first".into(),
+        card_id: cards[1].id,
+        expected_revision: 1,
+        rating: Rating::Again,
+        now,
+        timezone: "UTC".into(),
+    };
+    lexique_storage::rate_card(&mut connection, &request).unwrap();
+    let next = lexique_storage::review_queue(&mut connection, now + 60, "UTC").unwrap();
+    assert_eq!(
+        next.cards.iter().map(|card| card.id).collect::<Vec<_>>(),
+        vec![cards[1].id]
+    );
+    assert_eq!(
+        lexique_storage::review_availability(&connection, cards[0].id, now + 60, "UTC")
+            .unwrap()
+            .reason
+            .as_deref(),
+        Some("quota")
+    );
+    lexique_storage::undo_rating(&mut connection, "interday-undo", "interday-first").unwrap();
+    let restored = lexique_storage::review_queue(&mut connection, now, "UTC").unwrap();
+    assert_eq!(restored.cards[0].id, cards[1].id);
+    settings.new_cards_ignore_review_limit = true;
+    lexique_storage::set_review_settings(&connection, &settings).unwrap();
+    let independent = lexique_storage::review_queue(&mut connection, now, "UTC").unwrap();
+    assert_eq!(independent.cards.len(), 3);
+    assert!(independent.cards.iter().any(|card| card.id == new[0].id));
+    assert!(independent.cards.iter().any(|card| card.id == new[1].id));
+}
+
+#[test]
+fn anki_new_card_consumes_review_capacity_only_when_enabled() {
+    let mut connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    let word = saved_word(&mut connection);
+    let cards = add_review(&mut connection, word).unwrap();
+    let mut settings = lexique_storage::review_settings(&connection).unwrap();
+    settings.review_limit = 1;
+    lexique_storage::set_review_settings(&connection, &settings).unwrap();
+    let now = 1_700_000_000;
+    assert_eq!(
+        lexique_storage::review_queue(&mut connection, now, "UTC")
+            .unwrap()
+            .cards
+            .len(),
+        1
+    );
+    let request = lexique_storage::RatingRequest {
+        operation: "new-capacity".into(),
+        card_id: cards[0].id,
+        expected_revision: 0,
+        rating: Rating::Good,
+        now,
+        timezone: "UTC".into(),
+    };
+    lexique_storage::rate_card(&mut connection, &request).unwrap();
+    assert_eq!(
+        lexique_storage::review_availability(&connection, cards[1].id, now, "UTC")
+            .unwrap()
+            .reason
+            .as_deref(),
+        Some("quota")
+    );
+    settings.new_cards_ignore_review_limit = true;
+    lexique_storage::set_review_settings(&connection, &settings).unwrap();
+    assert_eq!(
+        lexique_storage::review_settings(&connection).unwrap(),
+        settings
+    );
+    assert!(
+        lexique_storage::review_queue(&mut connection, now, "UTC")
+            .unwrap()
+            .cards
+            .iter()
+            .any(|card| card.id == cards[1].id)
+    );
+    lexique_storage::undo_rating(&mut connection, "new-capacity-undo", "new-capacity").unwrap();
+    settings.new_cards_ignore_review_limit = false;
+    lexique_storage::set_review_settings(&connection, &settings).unwrap();
+    assert_eq!(
+        lexique_storage::review_queue(&mut connection, now, "UTC")
+            .unwrap()
+            .cards
+            .len(),
+        1
+    );
+}
+
+#[test]
+fn anki_limit_settings_are_atomic_and_survive_reopening() {
+    let path = std::env::temp_dir().join(format!(
+        "lexique-limits-{}-{}.sqlite3",
+        std::process::id(),
+        std::time::SystemTime::now()
+            .duration_since(std::time::UNIX_EPOCH)
+            .unwrap()
+            .as_nanos()
+    ));
+    let connection = Connection::open(&path).unwrap();
+    initialize(&connection).unwrap();
+    let original = lexique_storage::review_settings(&connection).unwrap();
+    let mut changed = lexique_storage::ReviewSettings {
+        new_limit: 3,
+        review_limit: 4,
+        new_cards_ignore_review_limit: true,
+        ..original
+    };
+    connection.commit_hook(Some(|| true)).unwrap();
+    assert!(lexique_storage::set_review_settings(&connection, &changed).is_err());
+    connection.commit_hook(None::<fn() -> bool>).unwrap();
+    assert!(
+        !lexique_storage::review_settings(&connection)
+            .unwrap()
+            .new_cards_ignore_review_limit
+    );
+    assert_eq!(
+        lexique_storage::review_settings(&connection)
+            .unwrap()
+            .new_limit,
+        20
+    );
+    lexique_storage::set_review_settings(&connection, &changed).unwrap();
+    drop(connection);
+    let connection = Connection::open(&path).unwrap();
+    initialize(&connection).unwrap();
+    assert_eq!(
+        lexique_storage::review_settings(&connection).unwrap(),
+        changed
+    );
+    changed.new_limit = 5;
+    lexique_storage::set_review_settings(&connection, &changed).unwrap();
+    drop(connection);
+    std::fs::remove_file(path).unwrap();
 }
 
 #[test]
@@ -1381,7 +1609,7 @@ fn cards_keep_their_identity_after_reopening_the_database() {
             now: 1_700_000_000,
             timezone: "UTC".into(),
         };
-        assert!(lexique_storage::rate_card(&mut connection, &sibling).is_err());
+        assert!(lexique_storage::rate_card(&mut connection, &sibling).is_ok());
     }
     std::fs::remove_file(path).unwrap();
 }

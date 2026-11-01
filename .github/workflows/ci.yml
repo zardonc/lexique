@@ -128,6 +128,8 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm test:tooling
       - run: pnpm desktop:portable
+      - run: cargo test --locked --release -p lexique-desktop --test speech_cache --no-run
+      - run: pnpm test:speech:cache
       - uses: actions/upload-artifact@v4
         with:
           name: windows-x64-portable

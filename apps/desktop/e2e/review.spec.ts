@@ -370,6 +370,38 @@ test('listening card plays once, hides the word and reports playback failure', a
   await expect(card).not.toBeVisible();
 });
 
+test('listening card blocks rating while replay is pending', async ({ page }) => {
+  await page.addInitScript(() => {
+    let calls = 0;
+    HTMLMediaElement.prototype.play = () => {
+      calls += 1;
+      return calls === 1 ? Promise.resolve() : new Promise<void>((resolve) => { Reflect.set(window, 'finishReplay', resolve); });
+    };
+  });
+  await nativeFixture(page, {
+    vocabulary_list: [{ value: [record] }],
+    review_cards: [{ value: [{ id: 10, kind: 'recognition' }, { id: 11, kind: 'listening' }] }],
+    speech_cached: [{ value: audio }],
+  });
+  await page.goto('/');
+  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.locator('.vocabulary-list button').click();
+  await page.getByRole('button', { name: '查看听音卡' }).click();
+  const card = page.getByRole('region', { name: '听音卡' });
+  await card.getByRole('button', { name: '显示答案' }).click();
+  await expect(card.getByRole('button', { name: '忘记' })).toBeEnabled();
+  await card.getByRole('button', { name: '重播' }).click();
+  await expect(card.getByRole('button', { name: '忘记' })).toBeDisabled();
+  await page.evaluate(() => { Reflect.get(window, 'finishReplay')(); });
+  await expect(card.getByRole('button', { name: '忘记' })).toBeEnabled();
+  await page.evaluate(() => { Reflect.set(window, 'finishReplay', null); });
+  await card.getByRole('button', { name: '重播' }).click();
+  await expect.poll(() => page.evaluate(() => typeof Reflect.get(window, 'finishReplay'))).toBe('function');
+  await card.locator('audio').evaluate((element) => element.dispatchEvent(new Event('error')));
+  await page.evaluate(() => { Reflect.get(window, 'finishReplay')(); });
+  await expect(card.getByRole('button', { name: '忘记' })).toBeDisabled();
+});
+
 test('adding again regenerates audio after playback failure', async ({ page }) => {
   await page.addInitScript(() => {
     HTMLMediaElement.prototype.play = () => Promise.reject(new Error('invalid audio'));

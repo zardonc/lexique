@@ -40,6 +40,14 @@ function Header({ text, locale, theme, onLocale, onTheme }: HeaderProps) {
   </div></header>;
 }
 
+function PageIntroduction({ page, text }: { readonly page: number; readonly text: Messages }) {
+  if (page === 3) return null;
+  return <><span className="page-index" aria-hidden="true">{String(page + 1).padStart(2, '0')}</span>
+    <h2 id="page-title">{page === 7 ? text.settingsTitle : text.title}</h2><p className="intro">{page === 7 ? text.settingsIntro : text.intro}</p></>;
+}
+
+function pageTitleId(page: number) { return page === 3 ? 'main-page-heading' : 'page-title'; }
+
 export function App({ runtime }: { readonly runtime: RuntimeAdapter }) {
   const [locale, setLocale] = useState<Locale>('zh');
   const [theme, setTheme] = useState<Theme>('white');
@@ -59,10 +67,9 @@ export function App({ runtime }: { readonly runtime: RuntimeAdapter }) {
     <Navigation text={text} selected={page} collapsed={collapsed} disabled={batchBusy} onSelect={changePage} onToggle={() => setCollapsed((value) => !value)} />
     <div className="workspace"><Header text={text} locale={locale} theme={theme} onLocale={setLocale} onTheme={setTheme} />
       <main id="main-content" tabIndex={-1}>
-        <p className="eyebrow">{text.eyebrow}</p><h1>{text.modules[page]}</h1>
-        <section className="page-content" aria-labelledby="page-title">
-          <span className="page-index" aria-hidden="true">{String(page + 1).padStart(2, '0')}</span>
-          <h2 id="page-title">{page === 7 ? text.settingsTitle : text.title}</h2><p className="intro">{page === 7 ? text.settingsIntro : text.intro}</p>
+        <p className="eyebrow">{text.eyebrow}</p><h1 id="main-page-heading">{text.modules[page]}</h1>
+        <section className="page-content" aria-labelledby={pageTitleId(page)}>
+          <PageIntroduction page={page} text={text} />
           {page === 0 ? <DictionaryPanel runtime={runtime} text={text.dictionary} notebookText={notebookText} version={notebook.version}
             onCollect={(result) => guard.request(() => notebook.collect(result))}
             onOpen={(record) => guard.request(() => notebook.open(record))}
