@@ -155,3 +155,23 @@ git diff --check
 固定证据目录为 `tts-cache-space-20261101`、`tts-cuda-diagnostic-20261101`、`tts-cuda-screen-20261101`、`tts-cuda-pad-pilot-20261101`、`tts-cuda-confirm-20261101`，另有 `tts-cuda-unavailable-20261101` 预期拒绝。独立 verifier 核验这些本次目录，不会自动把任意新跑目录认作原证据。`--export <新路径>` 只新建摘要文件；阶段 source 字节 / 哈希按原轮次归档，当前脚本不能冒充先前阶段字节。
 
 实机通过：38 个成功试验、上述输出和空间 / 汇总回算、4 个真实 CUDA profile、504 份重复 / 共享一致性、发布归档 / wheels / 提取文件摘要、CPU-only 请求 CUDA 的失败识别、两项 runner 自检、6 项内存采样回归、3 个 Python 模块编译，以及文档 diff / 本地链接检查。调查记录的 42 个远端来源由研究员检查为 HTTP 200。应用未改，本轮未重跑 TS、Rust、产品 UI、正式 portable 或离线发行检查，也未修改既有准入结论。任务启动的试验进程均已退出，未停止原有服务。
+
+2026-11-01 收尾审查：按 `code-review` 技能分别在两个全新上下文中只读审查 `git diff 2b4970fed46000633b6756a61eb2e3492896de5c...c331d2a`。审查提交为 `c331d2a perf: verify word audio footprint and CUDA generation`，以下两轴独立保留。
+
+## Standards
+
+No documented-standard violations or actionable baseline smells found in the 8-file diff.
+
+The changes preserve experiment evidence, enforce isolated output boundaries, reject CPU fallback, and clearly separate measurements from product readiness and licensing approval.
+
+`git diff --check 2b4970fed46000633b6756a61eb2e3492896de5c...c331d2a` passed. Review was read-only; benchmarks and existing test suites were not rerun.
+
+## Spec
+
+No Spec findings: no missing requested verification, scope creep, or incorrectly implemented requirement found.
+
+The report answers both questions with actual audio samples, separate logical/allocation estimates, demonstrated CUDA execution, serial/shared timing comparisons, and dependency measurements. Sampling limits, run variability, unverified audio quality, and the difference between experimental DLL space and minimum product packaging are explicit.
+
+Persistent caching, sentence eviction, GPU product integration, bulk enrollment, and closing #24 remain outside the narrowed verification scope. Review was read-only; no benchmarks, suites, dependencies, or services were run.
+
+审查汇总：Standards 0 项，Spec 0 项；两轴均无最高等级问题。
