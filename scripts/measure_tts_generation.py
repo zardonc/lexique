@@ -231,7 +231,9 @@ def validate_job(job):
         raise ValueError("Invalid experiment seed")
 
 
-def trial(resources, output, config, jobs):
+def trial(resources, output, config, jobs, runtime_provider=None):
+    if runtime_provider is not None and config["mode"] in ("fresh", "process"):
+        raise ValueError("Provider overrides require a single shared model")
     monitor = Monitor()
     children, streams, pool = [], [], None
     initialized = time.perf_counter()
@@ -279,7 +281,7 @@ def trial(resources, output, config, jobs):
                 return {"id": job["id"], "voice": job["voice"], "seed": job["seed"], "generation_seed": -1, "audio_file": f"{job['id']}.ogg", "audio_bytes": len(audio), "generation_ms": (time.perf_counter() - started) * 1000}
         else:
             space = namespace()
-            model = space["create_model"](str(resources / "assets"), config["threads"], provider(config, output))
+            model = space["create_model"](str(resources / "assets"), config["threads"], runtime_provider or provider(config, output))
             def execute(job):
                 return finish(space, model, job, config, resources, output)
         initialization_ms = (time.perf_counter() - initialized) * 1000
