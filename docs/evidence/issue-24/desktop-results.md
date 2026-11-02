@@ -96,3 +96,5 @@ node e2e/native-recovery-24.mjs ../../target/issue-22-final-evidence/Lexique-0.1
 对 `c4da7a8` 的规格复审剩余 0 项；规范复审原 1 hard／2 possible 已解决，另指出 1 项 P3 判断性 SQL 重复。已将 ready 与显式 retry 的重置合成一次 UPDATE：ready 总可重新核验，failed/cancelled 只在 retry 为真时重入。该整理后重新预编译并运行 93 项后端（日志 `rust-review-build-final.log`、`rust-review-tests-final.log`），格式和 workspace check 通过；前端代码未变，87 项完整 E2E 证据仍适用。最终二进制与六项原生复核单独保存，避免把上一个 hash 当最终运行证据。
 
 最终 release SHA-256 为 `f5ab46d516021d46af5082f6c84672c2f94218403afe0bd907599cf75076bed1`，`native-single-errors-final`、`native-ready-final`、`native-targeted-retry-final`、`native-product-final`、`native-lifecycle-final`、`native-recovery-final` 六个新目录全部 passed；最终构建日志 `desktop-final-build.log`，workspace check 日志 `rust-review-check-final.log`。六项原生断言与上一轮相同，完整音频解码／播放结束、提交中断恢复、迁移与正常退出均在最终 hash 下重新执行。上轮 `33b34bb6…` 的原始快照可从提交 `c4da7a8` 恢复，当前 [review-results.json](review-results.json) 保存最终 hash 的结果。浏览器／SQLite／缓存／原生证据范围继续分开，未扩大未测场景。
+
+最终独立复审 HEAD `39ab1e13b611206a69bba20d6ad0f71cb2f56fb1`：Standards 为 0 hard、0 possible，无剩余最坏项；Spec 为 0 项，无剩余最坏项。两位代理分别只读核查差异、连接源码与证据，未重复运行测试。最终核验任务启动的 native/worker 进程为 0；本轮提交不包含起始已有的规格／研究文档修改，不推送或关闭工单。
