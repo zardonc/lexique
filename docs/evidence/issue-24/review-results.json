@@ -1,0 +1,691 @@
+{
+  "binarySha256": "33b34bb661ffb3de53dcaf73e715df6085352d434b15ecae4b172d75159000e3",
+  "hardTimeoutSeconds": 60,
+  "checks": {
+    "frontend": 87,
+    "backend": 93,
+    "speechCache": 8
+  },
+  "results": {
+    "native-single-green": {
+      "unknown": {
+        "error": "SQLite operation failed: Query returned no rows"
+      },
+      "full": {
+        "error": "Speech backlog is full",
+        "cards": []
+      },
+      "workers": 0
+    },
+    "native-ready-green": {
+      "batch": {
+        "operation": "ready-two",
+        "cancelled": false,
+        "items": [
+          {
+            "vocabulary_id": 1,
+            "created_cards": 0,
+            "error": null,
+            "audio_state": "queued",
+            "audio_error": null
+          }
+        ]
+      }
+    },
+    "native-targeted-green-b": {
+      "view": {
+        "queue": {
+          "cards": [
+            {
+              "id": 1,
+              "vocabulary_id": 1,
+              "kind": "recognition"
+            },
+            {
+              "id": 3,
+              "vocabulary_id": 2,
+              "kind": "recognition"
+            }
+          ],
+          "reason": null,
+          "available_at": null
+        },
+        "record": {
+          "id": 1,
+          "headword": "école",
+          "reference": {
+            "dictionary": "français-中文 (Zhōngwén) FreeDict+WikDict dictionary",
+            "lookup_key": "école",
+            "version": "2025.11.23",
+            "attribution": "Karl Bartel; FreeDict; WikDict; Wiktionary contributors; DBnary",
+            "license": "CC-BY-SA-3.0",
+            "source_url": "https://download.freedict.org/dictionaries/fra-zho/2025.11.23/freedict-fra-zho-2025.11.23.src.tar.xz",
+            "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "sha256": "11cdba7ed8fbdcd6f6a388586c11a181def517d840aae0baa6ef4a4ab5c55c51"
+          },
+          "digest": [
+            {
+              "pronunciations": [
+                "e.kɔl"
+              ],
+              "grammar": [
+                "n",
+                "fem"
+              ],
+              "translation": "学校"
+            }
+          ],
+          "notes": "keep",
+          "example_fr": "",
+          "example_zh": "",
+          "example_sense": null,
+          "more_examples": [],
+          "revision": 1,
+          "created_at": 1793656283886,
+          "updated_at": 1793656283886
+        },
+        "audio_pending": true,
+        "audio_error": null,
+        "audio_vocabulary_id": 1
+      },
+      "retried": 1,
+      "batch": {
+        "operation": "target-batch",
+        "cancelled": false,
+        "items": [
+          {
+            "vocabulary_id": 1,
+            "created_cards": 2,
+            "error": null,
+            "audio_state": "queued",
+            "audio_error": null
+          },
+          {
+            "vocabulary_id": 2,
+            "created_cards": 2,
+            "error": null,
+            "audio_state": "cancelled",
+            "audio_error": null
+          }
+        ]
+      },
+      "omitted": "invalid args `vocabularyId` for command `speech_retry_missing`: command speech_retry_missing missing required key vocabularyId"
+    },
+    "product-native-review": {
+      "binarySha256": "33b34bb661ffb3de53dcaf73e715df6085352d434b15ecae4b172d75159000e3",
+      "hardTimeoutSeconds": 60,
+      "result": {
+        "metrics": [
+          {
+            "command": "speech_preview",
+            "ms": 4927.099999964237
+          },
+          {
+            "command": "vocabulary_save",
+            "ms": 20
+          },
+          {
+            "command": "vocabulary_save",
+            "ms": 16.600000023841858
+          },
+          {
+            "command": "vocabulary_save",
+            "ms": 16.19999998807907
+          },
+          {
+            "command": "vocabulary_save",
+            "ms": 16.5
+          },
+          {
+            "command": "vocabulary_save",
+            "ms": 16.100000023841858
+          },
+          {
+            "command": "vocabulary_save",
+            "ms": 15.599999964237213
+          },
+          {
+            "command": "speech_preview",
+            "ms": 6
+          },
+          {
+            "command": "review_add_batch",
+            "ms": 9.5
+          },
+          {
+            "command": "review_queue",
+            "ms": 36.40000003576279
+          },
+          {
+            "command": "dictionary_lookup",
+            "ms": 14.699999988079071
+          },
+          {
+            "command": "vocabulary_save",
+            "ms": 19.299999952316284
+          },
+          {
+            "command": "review_rate",
+            "ms": 71.19999998807907
+          },
+          {
+            "command": "speech_preview",
+            "ms": 1095.199999988079
+          },
+          {
+            "command": "speech_cached",
+            "ms": 6.600000023841858
+          },
+          {
+            "command": "speech_cached",
+            "ms": 6
+          },
+          {
+            "command": "speech_cached",
+            "ms": 6.899999976158142
+          },
+          {
+            "command": "speech_cached",
+            "ms": 6.099999964237213
+          },
+          {
+            "command": "speech_cached",
+            "ms": 5.600000023841858
+          },
+          {
+            "command": "speech_cached",
+            "ms": 6.699999988079071
+          },
+          {
+            "command": "actual-play-start",
+            "ms": 39.19999998807907
+          }
+        ],
+        "ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "batch": {
+          "operation": "product-six",
+          "cancelled": false,
+          "items": [
+            {
+              "vocabulary_id": 1,
+              "created_cards": 2,
+              "error": null,
+              "audio_state": "queued",
+              "audio_error": null
+            },
+            {
+              "vocabulary_id": 2,
+              "created_cards": 2,
+              "error": null,
+              "audio_state": "queued",
+              "audio_error": null
+            },
+            {
+              "vocabulary_id": 3,
+              "created_cards": 2,
+              "error": null,
+              "audio_state": "queued",
+              "audio_error": null
+            },
+            {
+              "vocabulary_id": 4,
+              "created_cards": 2,
+              "error": null,
+              "audio_state": "queued",
+              "audio_error": null
+            },
+            {
+              "vocabulary_id": 5,
+              "created_cards": 2,
+              "error": null,
+              "audio_state": "queued",
+              "audio_error": null
+            },
+            {
+              "vocabulary_id": 6,
+              "created_cards": 2,
+              "error": null,
+              "audio_state": "queued",
+              "audio_error": null
+            }
+          ]
+        },
+        "duringCardCount": 7,
+        "status": {
+          "operation": "product-six",
+          "cancelled": false,
+          "items": [
+            {
+              "vocabulary_id": 1,
+              "created_cards": 2,
+              "error": null,
+              "audio_state": "ready",
+              "audio_error": null
+            },
+            {
+              "vocabulary_id": 2,
+              "created_cards": 2,
+              "error": null,
+              "audio_state": "ready",
+              "audio_error": null
+            },
+            {
+              "vocabulary_id": 3,
+              "created_cards": 2,
+              "error": null,
+              "audio_state": "ready",
+              "audio_error": null
+            },
+            {
+              "vocabulary_id": 4,
+              "created_cards": 2,
+              "error": null,
+              "audio_state": "ready",
+              "audio_error": null
+            },
+            {
+              "vocabulary_id": 5,
+              "created_cards": 2,
+              "error": null,
+              "audio_state": "ready",
+              "audio_error": null
+            },
+            {
+              "vocabulary_id": 6,
+              "created_cards": 2,
+              "error": null,
+              "audio_state": "ready",
+              "audio_error": null
+            }
+          ]
+        },
+        "decoded": [
+          {
+            "channels": 1,
+            "duration": 1.3551666666666666,
+            "finite": true,
+            "audible": true
+          },
+          {
+            "channels": 1,
+            "duration": 1.3735416666666667,
+            "finite": true,
+            "audible": true
+          },
+          {
+            "channels": 1,
+            "duration": 1.3479166666666667,
+            "finite": true,
+            "audible": true
+          },
+          {
+            "channels": 1,
+            "duration": 1.3455,
+            "finite": true,
+            "audible": true
+          },
+          {
+            "channels": 1,
+            "duration": 1.3645208333333334,
+            "finite": true,
+            "audible": true
+          },
+          {
+            "channels": 1,
+            "duration": 1.3460833333333333,
+            "finite": true,
+            "audible": true
+          }
+        ],
+        "interactiveBytes": 9311,
+        "dictionaryCount": 1,
+        "edited": "concurrent",
+        "rated": "committed"
+      },
+      "restored": {
+        "status": {
+          "operation": "product-six",
+          "cancelled": false,
+          "items": [
+            {
+              "vocabulary_id": 1,
+              "created_cards": 2,
+              "error": null,
+              "audio_state": "ready",
+              "audio_error": null
+            },
+            {
+              "vocabulary_id": 2,
+              "created_cards": 2,
+              "error": null,
+              "audio_state": "ready",
+              "audio_error": null
+            },
+            {
+              "vocabulary_id": 3,
+              "created_cards": 2,
+              "error": null,
+              "audio_state": "ready",
+              "audio_error": null
+            },
+            {
+              "vocabulary_id": 4,
+              "created_cards": 2,
+              "error": null,
+              "audio_state": "ready",
+              "audio_error": null
+            },
+            {
+              "vocabulary_id": 5,
+              "created_cards": 2,
+              "error": null,
+              "audio_state": "ready",
+              "audio_error": null
+            },
+            {
+              "vocabulary_id": 6,
+              "created_cards": 2,
+              "error": null,
+              "audio_state": "ready",
+              "audio_error": null
+            }
+          ]
+        },
+        "cachedBytes": 7091,
+        "progress": {
+          "revision": 1,
+          "card": {
+            "phase": "learning_last",
+            "memory": {
+              "stability": 2.3065,
+              "difficulty": 2.118104
+            },
+            "last_review_at": 1793656316,
+            "due_at": 1793656916
+          }
+        }
+      },
+      "residentProcesses": 1,
+      "ownedWorkersAfterExit": 0
+    },
+    "native-lifecycle-review": {
+      "hardTimeoutSeconds": 60,
+      "interrupted": {
+        "operation": "life-batch",
+        "cancelled": false,
+        "items": [
+          {
+            "vocabulary_id": 1,
+            "created_cards": 2,
+            "error": null,
+            "audio_state": "ready",
+            "audio_error": null
+          },
+          {
+            "vocabulary_id": 2,
+            "created_cards": 2,
+            "error": null,
+            "audio_state": "ready",
+            "audio_error": null
+          },
+          {
+            "vocabulary_id": 3,
+            "created_cards": 2,
+            "error": null,
+            "audio_state": "retry_wait",
+            "audio_error": "Speech frame prefix: failed to fill whole buffer"
+          },
+          {
+            "vocabulary_id": 4,
+            "created_cards": 2,
+            "error": null,
+            "audio_state": "retry_wait",
+            "audio_error": "Speech frame prefix: failed to fill whole buffer"
+          },
+          {
+            "vocabulary_id": 5,
+            "created_cards": 2,
+            "error": null,
+            "audio_state": "queued",
+            "audio_error": null
+          },
+          {
+            "vocabulary_id": 6,
+            "created_cards": 2,
+            "error": null,
+            "audio_state": "queued",
+            "audio_error": null
+          },
+          {
+            "vocabulary_id": 7,
+            "created_cards": 2,
+            "error": null,
+            "audio_state": "queued",
+            "audio_error": null
+          },
+          {
+            "vocabulary_id": 8,
+            "created_cards": 2,
+            "error": null,
+            "audio_state": "queued",
+            "audio_error": null
+          }
+        ]
+      },
+      "cancelled": {
+        "operation": "life-batch",
+        "cancelled": true,
+        "items": [
+          {
+            "vocabulary_id": 1,
+            "created_cards": 2,
+            "error": null,
+            "audio_state": "ready",
+            "audio_error": null
+          },
+          {
+            "vocabulary_id": 2,
+            "created_cards": 2,
+            "error": null,
+            "audio_state": "ready",
+            "audio_error": null
+          },
+          {
+            "vocabulary_id": 3,
+            "created_cards": 2,
+            "error": null,
+            "audio_state": "cancelled",
+            "audio_error": "Speech frame prefix: failed to fill whole buffer"
+          },
+          {
+            "vocabulary_id": 4,
+            "created_cards": 2,
+            "error": null,
+            "audio_state": "cancelled",
+            "audio_error": "Speech frame prefix: failed to fill whole buffer"
+          },
+          {
+            "vocabulary_id": 5,
+            "created_cards": 2,
+            "error": null,
+            "audio_state": "cancelled",
+            "audio_error": null
+          },
+          {
+            "vocabulary_id": 6,
+            "created_cards": 2,
+            "error": null,
+            "audio_state": "cancelled",
+            "audio_error": null
+          },
+          {
+            "vocabulary_id": 7,
+            "created_cards": 2,
+            "error": null,
+            "audio_state": "cancelled",
+            "audio_error": null
+          },
+          {
+            "vocabulary_id": 8,
+            "created_cards": 2,
+            "error": null,
+            "audio_state": "cancelled",
+            "audio_error": null
+          }
+        ]
+      },
+      "restored": {
+        "status": {
+          "operation": "life-batch",
+          "cancelled": true,
+          "items": [
+            {
+              "vocabulary_id": 1,
+              "created_cards": 2,
+              "error": null,
+              "audio_state": "ready",
+              "audio_error": null
+            },
+            {
+              "vocabulary_id": 2,
+              "created_cards": 2,
+              "error": null,
+              "audio_state": "ready",
+              "audio_error": null
+            },
+            {
+              "vocabulary_id": 3,
+              "created_cards": 2,
+              "error": null,
+              "audio_state": "cancelled",
+              "audio_error": "Speech frame prefix: failed to fill whole buffer"
+            },
+            {
+              "vocabulary_id": 4,
+              "created_cards": 2,
+              "error": null,
+              "audio_state": "cancelled",
+              "audio_error": "Speech frame prefix: failed to fill whole buffer"
+            },
+            {
+              "vocabulary_id": 5,
+              "created_cards": 2,
+              "error": null,
+              "audio_state": "cancelled",
+              "audio_error": null
+            },
+            {
+              "vocabulary_id": 6,
+              "created_cards": 2,
+              "error": null,
+              "audio_state": "cancelled",
+              "audio_error": null
+            },
+            {
+              "vocabulary_id": 7,
+              "created_cards": 2,
+              "error": null,
+              "audio_state": "cancelled",
+              "audio_error": null
+            },
+            {
+              "vocabulary_id": 8,
+              "created_cards": 2,
+              "error": null,
+              "audio_state": "cancelled",
+              "audio_error": null
+            }
+          ]
+        },
+        "cards": [
+          {
+            "id": 1,
+            "kind": "recognition"
+          },
+          {
+            "id": 2,
+            "kind": "listening"
+          }
+        ],
+        "paused": true,
+        "record": {
+          "id": 1,
+          "headword": "école",
+          "reference": {
+            "dictionary": "français-中文 (Zhōngwén) FreeDict+WikDict dictionary",
+            "lookup_key": "école",
+            "version": "2025.11.23",
+            "attribution": "Karl Bartel; FreeDict; WikDict; Wiktionary contributors; DBnary",
+            "license": "CC-BY-SA-3.0",
+            "source_url": "https://download.freedict.org/dictionaries/fra-zho/2025.11.23/freedict-fra-zho-2025.11.23.src.tar.xz",
+            "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "sha256": "11cdba7ed8fbdcd6f6a388586c11a181def517d840aae0baa6ef4a4ab5c55c51"
+          },
+          "digest": [
+            {
+              "pronunciations": [
+                "e.kɔl"
+              ],
+              "grammar": [
+                "n",
+                "fem"
+              ],
+              "translation": "学校"
+            }
+          ],
+          "notes": "keep",
+          "example_fr": "",
+          "example_zh": "",
+          "example_sense": null,
+          "more_examples": [],
+          "revision": 1,
+          "created_at": 1793656352874,
+          "updated_at": 1793656352874
+        }
+      },
+      "gap": {
+        "publication_gap": "prepared",
+        "semantic_key": "844fc1bf1cf9bb516ceea829e68de0a0d73b93461270f1ac4123efb4168e41a2",
+        "generated_at": 1793656357
+      },
+      "ownedWorkersAfterExit": 0
+    },
+    "native-recovery-review": {
+      "legacy": {
+        "semantic_key": "844fc1bf1cf9bb516ceea829e68de0a0d73b93461270f1ac4123efb4168e41a2",
+        "spec": "{\"text\":\"école\",\"context\":\"word\",\"language\":\"fr\",\"engine\":\"sherpa-onnx/2.0.1+ort/1.28.2\",\"model\":\"supertonic-3/int8/c3eb91414d5ff8a7a239b7fe9e34e7e2bf8a8140d8375ffb14718b1c639325db/c7befd5ea8c3119769e8a6c1486c4edc6a3bc8365c67621c881bbb774b9902ff/20cd86fa5c6effedfda0e7cffe5b0569ca401c440a0c3a1d72bf39286c0db3fd/e923d60f53f95eb1ce235f1dc33ec56d9c057823c96fa6f8acf98f32b0da6152/42078d3aef1cd43ab43021f3c54f47d2d75ceb4e75f627f118890128b06a0d09/8402ca48e5189a8950138580b0fff64db6f072f24ac07cd54ba8b2fbb9883b30/67d5209b0ee8ce6c74105ffbe12fe6a7628aea3b4ba2fcb308a4a67938a93ce8\",\"preprocessing\":\"nfc/y-i-grec/v1\",\"voice\":\"female\",\"speed\":1,\"steps\":8,\"encoding\":\"ogg-opus/opus-1.6.1+libopusenc-0.3\",\"bitrate\":48000}",
+        "context": "word",
+        "content_hash": "cc326363a9ea0e65ebcdfaab86f77ae71597e951b7ce8d7b571d52e0226d1c8b",
+        "generated_at": 1793656425
+      },
+      "state": {
+        "legacy_registered": true,
+        "gc_gap_prepared": true
+      },
+      "gc": {
+        "gc_recovered": true,
+        "legacy_preserved": true,
+        "notes_preserved": true
+      },
+      "preservedCards": [
+        {
+          "id": 1,
+          "kind": "recognition"
+        },
+        {
+          "id": 2,
+          "kind": "listening"
+        }
+      ],
+      "schema": 11,
+      "ownedWorkersAfterExit": 0
+    }
+  }
+}

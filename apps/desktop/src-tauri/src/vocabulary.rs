@@ -184,13 +184,20 @@ pub async fn review_add(
                 .map_err(|e| e.to_string())?
                 .as_nanos()
         );
-        lexique_storage::add_review_batch(
+        let batch = lexique_storage::add_review_batch(
             &mut connection,
             &operation,
             &[vocabulary_id],
             crate::speech_tasks::now()?,
         )
         .map_err(|e| e.to_string())?;
+        let item = batch
+            .items
+            .first()
+            .ok_or("Single review result unavailable")?;
+        if let Some(error) = &item.error {
+            return Err(error.clone());
+        }
         app.state::<crate::speech_tasks::SpeechTasks>().wake()?;
         crate::speech_tasks::changed(&app);
         lexique_storage::review_cards(&connection, vocabulary_id).map_err(|e| e.to_string())
@@ -325,6 +332,7 @@ pub struct QueueView {
     record: Option<VocabularyRecord>,
     audio_pending: bool,
     audio_error: Option<String>,
+    audio_vocabulary_id: Option<i64>,
 }
 
 #[tauri::command]
@@ -400,6 +408,7 @@ pub async fn review_queue(
         let mut verified_audio = std::collections::HashSet::new();
         let mut audio_pending = false;
         let mut audio_error = None;
+        let mut audio_vocabulary_id = None;
         let mut checked = std::collections::HashMap::new();
         let mut legacy = Vec::new();
         let mut next_audio_due: Option<i64> = None;
@@ -442,9 +451,11 @@ pub async fn review_queue(
                 }
                 Ok(false) => {
                     audio_pending = true;
+                    audio_vocabulary_id.get_or_insert(card.vocabulary_id);
                 }
                 Err(error) => {
                     audio_pending = true;
+                    audio_vocabulary_id.get_or_insert(card.vocabulary_id);
                     audio_error = Some(error.clone());
                 }
             }
@@ -480,6 +491,7 @@ pub async fn review_queue(
             record,
             audio_pending,
             audio_error,
+            audio_vocabulary_id,
         })
     })
     .await
@@ -738,56 +750,55 @@ pub async fn review_cancel_batch(
 pub async fn speech_retry_missing(
     app: tauri::AppHandle,
     path: State<'_, DatabasePath>,
+    vocabulary_id: i64,
 ) -> Result<u32, String> {
+    if vocabulary_id <= 0 || vocabulary_id > 9_007_199_254_740_991 {
+        return Err("Invalid vocabulary ID".into());
+    }
     let path = DatabasePath(path.0.clone());
     tauri::async_runtime::spawn_blocking(move || {
         let mut connection = open(&path)?;
         let inspector = crate::speech_cache::Inspector::new(&path.0)?;
-        let inventory =
-            lexique_storage::review_card_inventory(&connection).map_err(|e| e.to_string())?;
-        let mut count = 0;
-        for card in inventory.iter().filter(|card| card.kind == "listening") {
-            if count >= 32 {
-                break;
-            }
-            let cached = crate::speech_tasks::cached_word(
-                &connection,
-                &inspector,
-                card.vocabulary_id,
-                crate::speech_tasks::now()?,
-            );
-            let replace = match cached {
-                Ok(Some(_)) => continue,
-                Ok(None) => false,
-                Err(error)
-                    if error == "Invalid cached speech audio"
-                        || error == "Cached speech content checksum mismatch" =>
-                {
-                    true
-                }
-                Err(error) => return Err(error),
-            };
-            let record =
-                lexique_storage::get(&connection, card.vocabulary_id).map_err(|e| e.to_string())?;
-            let spec = lexique_storage::SpeechSpec::word(
-                &record.headword,
-                lexique_storage::speech_preferences(&connection)
-                    .map_err(|e| e.to_string())?
-                    .voice,
-            );
-            lexique_storage::request_speech(
-                &mut connection,
-                &spec,
-                Some(card.vocabulary_id),
-                crate::speech_tasks::now()?,
-                replace,
-            )
-            .map_err(|e| e.to_string())?;
-            count += 1;
+        let cards =
+            lexique_storage::review_cards(&connection, vocabulary_id).map_err(|e| e.to_string())?;
+        if !cards.iter().any(|card| card.kind == "listening") {
+            return Err("Listening card does not exist".into());
         }
+        let cached = crate::speech_tasks::cached_word(
+            &connection,
+            &inspector,
+            vocabulary_id,
+            crate::speech_tasks::now()?,
+        );
+        let replace = match cached {
+            Ok(Some(_)) => return Ok(0),
+            Ok(None) => false,
+            Err(error)
+                if error == "Invalid cached speech audio"
+                    || error == "Cached speech content checksum mismatch" =>
+            {
+                true
+            }
+            Err(error) => return Err(error),
+        };
+        let record = lexique_storage::get(&connection, vocabulary_id).map_err(|e| e.to_string())?;
+        let spec = lexique_storage::SpeechSpec::word(
+            &record.headword,
+            lexique_storage::speech_preferences(&connection)
+                .map_err(|e| e.to_string())?
+                .voice,
+        );
+        lexique_storage::request_speech(
+            &mut connection,
+            &spec,
+            Some(vocabulary_id),
+            crate::speech_tasks::now()?,
+            replace,
+        )
+        .map_err(|e| e.to_string())?;
         app.state::<crate::speech_tasks::SpeechTasks>().wake()?;
         crate::speech_tasks::changed(&app);
-        Ok(count)
+        Ok(1)
     })
     .await
     .map_err(|e| format!("Missing speech demand failed: {e}"))?

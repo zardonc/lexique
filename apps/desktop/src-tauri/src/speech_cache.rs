@@ -146,7 +146,7 @@ impl Inspector {
     }
 }
 
-fn key_name(key: &str) -> Result<String, String> {
+fn validate_hash(key: &str) -> Result<(), String> {
     if key.len() != 64
         || !key
             .bytes()
@@ -154,12 +154,12 @@ fn key_name(key: &str) -> Result<String, String> {
     {
         return Err("Invalid speech asset identity".into());
     }
-    Ok(format!("s-{key}.ogg"))
+    Ok(())
 }
 
 fn asset_name(key: &str, hash: &str) -> Result<String, String> {
-    key_name(key)?;
-    key_name(hash)?;
+    validate_hash(key)?;
+    validate_hash(hash)?;
     Ok(format!("s-{key}-{hash}.ogg"))
 }
 
@@ -258,8 +258,8 @@ fn managed_name(name: &str) -> bool {
     {
         let parts: Vec<_> = stem.split('-').collect();
         return parts.len() == 4
-            && key_name(parts[0]).is_ok()
-            && key_name(parts[1]).is_ok()
+            && validate_hash(parts[0]).is_ok()
+            && validate_hash(parts[1]).is_ok()
             && parts[2]
                 .parse::<u32>()
                 .is_ok_and(|pid| pid > 0 && pid.to_string() == parts[2])

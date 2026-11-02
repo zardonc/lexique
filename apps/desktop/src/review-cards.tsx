@@ -4,6 +4,7 @@ import type { ReviewCard, RuntimeAdapter } from './platform/runtime';
 import { errorMessage } from './platform/vocabulary';
 import type { VocabularyRecord } from './platform/vocabulary';
 import { ReviewRating } from './review-rating';
+import { useQueueAudioReplacement } from './use-queue-audio-replacement';
 
 function ExampleSense({ record, text }: { readonly record: VocabularyRecord; readonly text: NotebookText }) {
   const meaning = record.example_sense === null ? text.exampleSenseUnspecified : record.digest[record.example_sense]?.translation || text.missing;
@@ -40,16 +41,27 @@ export function QueueReviewCard({ record, text, runtime, card, audio, onRated, o
 }) {
   const [revealed, setRevealed] = useState(false);
   const [busy, setBusy] = useState(false);
-  const { player, played, error, play, mediaError } = useListeningAudio({ audio, runtime, autoPlay: true });
+  const replacement = useQueueAudioReplacement(record.id, runtime);
+  const { player, played, error, play, cancel, mediaError } = useListeningAudio({ audio: replacement.audio ?? audio, runtime, autoPlay: true });
   return <section className="queue-review-card" aria-label={text.queueCard}>
     {audio ? <><p>{text.machineVoice}</p><audio ref={player} onError={() => mediaError(text.playbackError)} />
-      <button onClick={() => { void play(); }}>{text.replay}</button></> : <h3 lang="fr">{record.headword}</h3>}
-    {error && <p role="alert">{text.playbackError}: {error}</p>}
+      <button disabled={replacement.busy} onClick={() => { void play(); }}>{text.replay}</button></> : <h3 lang="fr">{record.headword}</h3>}
+    <QueuePlaybackRecovery text={text} error={error} replacement={replacement} cancel={cancel} />
     {revealed && <>{audio && <h3 lang="fr">{record.headword}</h3>}<Answer record={record} text={text} />
-      <ReviewRating id={card.id} runtime={runtime} text={text} enabled={!audio || played} onBusyChange={setBusy} onSuccess={onRated} /></>}
+      <ReviewRating id={card.id} runtime={runtime} text={text} enabled={!audio || (played && !replacement.busy)} onBusyChange={setBusy} onSuccess={onRated} /></>}
     <div className="actions">{!revealed && <button onClick={() => setRevealed(true)}>{text.reveal}</button>}
       <button disabled={busy} onClick={onSkip}>{text.skip}</button></div>
   </section>;
+}
+
+function QueuePlaybackRecovery({ text, error, replacement, cancel }: {
+  readonly text: NotebookText; readonly error: string;
+  readonly replacement: ReturnType<typeof useQueueAudioReplacement>; readonly cancel: () => void;
+}) {
+  return <>{error && <p role="alert">{text.playbackError}: {error}</p>}
+    {replacement.error && <p role="alert">{text.playbackError}: {replacement.error}</p>}
+    {(error || replacement.error || replacement.busy) && <button disabled={replacement.busy}
+      onClick={() => { cancel(); void replacement.regenerate(); }}>{text.regenerateSpeech}</button>}</>;
 }
 
 export function RecognitionCard({ record, text, runtime, card, onRated, onSkip }: { readonly record: VocabularyRecord; readonly text: NotebookText; readonly runtime: RuntimeAdapter; readonly card: ReviewCard; readonly onRated?: () => void; readonly onSkip?: () => void }) {

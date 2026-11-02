@@ -3,6 +3,7 @@ import type { NotebookText } from './notebook-content';
 import { RatingRejected, rateRequestSchema } from './platform/runtime';
 import type { RateRequest, Rating, ReviewAvailability, RuntimeAdapter } from './platform/runtime';
 import { errorMessage } from './platform/vocabulary';
+import { subscribeReviewEvents } from './review-events';
 
 const ratings: readonly Rating[] = ['again', 'hard', 'good', 'easy'];
 
@@ -40,10 +41,8 @@ function useAvailabilityEvents({ id, runtime, setAvailability, setError }: {
       finally { running = false; if (pending) { pending = false; void read(); } }
     }
     const resume = () => { void read(); };
-    let unlisten: (() => void) | undefined;
-    void runtime.onReviewChanged(resume).then((stop) => { if (active) unlisten = stop; else stop(); }).catch((cause: unknown) => { if (active) setError(errorMessage(cause)); });
-    window.addEventListener('focus', resume); document.addEventListener('visibilitychange', resume);
-    return () => { active = false; unlisten?.(); window.removeEventListener('focus', resume); document.removeEventListener('visibilitychange', resume); };
+    const stop = subscribeReviewEvents(runtime, { changed: resume, resumed: resume, failed: (cause) => setError(errorMessage(cause)) });
+    return () => { active = false; stop(); };
   }, [id, runtime, setAvailability, setError]);
 }
 

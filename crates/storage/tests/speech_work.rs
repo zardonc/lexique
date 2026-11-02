@@ -1,6 +1,71 @@
 use lexique_storage::*;
 use rusqlite::{Connection, params};
 
+#[test]
+fn new_batch_rechecks_completed_audio_without_reviving_cancelled_or_failed_tasks() {
+    let mut connection = fixture();
+    add_review_batch(&mut connection, "first", &[1, 2], 1000).unwrap();
+    let first = claim_speech(&mut connection, 1000, 2).unwrap().unwrap();
+    let second = claim_speech(&mut connection, 1000, 2).unwrap().unwrap();
+    publish_speech(&connection, &first.semantic_key, &"a".repeat(64), 1001).unwrap();
+    fail_speech(&connection, second.id, 1001, "permanent failure", true).unwrap();
+    let again = add_review_batch(&mut connection, "second", &[1, 2], 1002).unwrap();
+    assert_eq!(again.items[0].created_cards, 0);
+    assert_eq!(again.items[0].audio_state.as_deref(), Some("queued"));
+    assert_eq!(again.items[1].audio_state.as_deref(), Some("failed"));
+    let recheck = claim_speech(&mut connection, 1002, 2).unwrap().unwrap();
+    assert_eq!(recheck.id, first.id);
+    assert_eq!(recheck.attempts, 1);
+    ready_speech_task(&connection, &recheck.semantic_key).unwrap();
+    add_review_batch(&mut connection, "third", &[1], 1003).unwrap();
+    cancel_batch(&connection, "first").unwrap();
+    cancel_batch(&connection, "second").unwrap();
+    cancel_batch(&connection, "third").unwrap();
+    let cancelled = add_review_batch(&mut connection, "fourth", &[1], 1004).unwrap();
+    assert_eq!(cancelled.items[0].audio_state.as_deref(), Some("cancelled"));
+    assert!(claim_speech(&mut connection, 1004, 2).unwrap().is_none());
+    request_speech(
+        &mut connection,
+        &SpeechSpec::word("école", SpeechVoice::Female),
+        Some(1),
+        1005,
+        false,
+    )
+    .unwrap();
+    assert_eq!(
+        claim_speech(&mut connection, 1005, 2)
+            .unwrap()
+            .unwrap()
+            .priority,
+        0
+    );
+}
+
+#[test]
+fn completed_audio_recheck_obeys_interactive_capacity_and_rolls_back() {
+    let mut connection = fixture();
+    let spec = SpeechSpec::word("école", SpeechVoice::Female);
+    let key = request_speech(&mut connection, &spec, Some(1), 1000, false).unwrap();
+    claim_speech(&mut connection, 1000, 2).unwrap().unwrap();
+    publish_speech(&connection, &key, &"a".repeat(64), 1001).unwrap();
+    for index in 0..32 {
+        request_speech(
+            &mut connection,
+            &SpeechSpec::word(&format!("mot{index}"), SpeechVoice::Male),
+            None,
+            1001,
+            false,
+        )
+        .unwrap();
+    }
+    assert!(request_speech(&mut connection, &spec, Some(1), 1002, false).is_err());
+    assert_eq!(
+        speech_task_state(&connection, &key).unwrap().unwrap().0,
+        "ready"
+    );
+    assert!(speech_asset(&connection, &key, 1002).unwrap().is_some());
+}
+
 fn fixture() -> Connection {
     let connection = Connection::open_in_memory().unwrap();
     initialize(&connection).unwrap();

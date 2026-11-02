@@ -4,6 +4,7 @@ import { batchRequestSchema } from './platform/runtime';
 import type { VocabularyRecord } from './platform/vocabulary';
 import { errorMessage } from './platform/vocabulary';
 import { QueueRefresh } from './queue-refresh';
+import { subscribeReviewEvents } from './review-events';
 
 const pendingKey = 'lexique-pending-review-batch';
 
@@ -25,13 +26,11 @@ function useBatchSubscription({ runtime, setPending, setError, setStatus }: {
     const controller = new QueueRefresh({ visible: () => document.visibilityState !== 'hidden',
       failed: (cause) => { if (active) setError(errorMessage(cause)); },
       read: async () => { const value = await runtime.reviewBatchStatus(); if (active) setStatus(value); } });
-    let unlisten: (() => void) | undefined;
-    void runtime.onReviewChanged(() => controller.invalidate()).then((stop) => { if (active) unlisten = stop; else stop(); })
-      .catch((cause: unknown) => { if (active) setError(errorMessage(cause)); });
     const resume = () => { if (document.visibilityState === 'hidden') controller.suspend(); else controller.invalidate(); };
-    document.addEventListener('visibilitychange', resume); window.addEventListener('focus', resume);
+    const stop = subscribeReviewEvents(runtime, { changed: () => controller.invalidate(), resumed: resume,
+      failed: (cause) => setError(errorMessage(cause)) });
     controller.invalidate(true);
-    return () => { active = false; controller.stop(); unlisten?.(); document.removeEventListener('visibilitychange', resume); window.removeEventListener('focus', resume); };
+    return () => { active = false; controller.stop(); stop(); };
   }, [runtime, setPending, setError, setStatus]);
 }
 

@@ -63,7 +63,7 @@ test('T01/T07: hidden notifications stop reads and resume merges them', async ({
 
 test('T02: absolute due wake fires at the boundary without early queries', async ({ page }) => {
   const time = new Date('2026-11-02T10:00:00Z');
-  await page.clock.install({ time });
+  await page.clock.install({ time: new Date(time.getTime() - 1000) });
   await page.clock.pauseAt(time);
   await nativeFixture(page, { review_queue: [{ value: { ...empty, queue: { ...empty.queue, reason: 'due', available_at: time.getTime() / 1000 + 5 } } }, { value: ready }] });
   await open(page); await page.clock.runFor(1); await expect(page.getByText(/尚未到期/)).toBeVisible();

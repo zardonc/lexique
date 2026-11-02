@@ -53,7 +53,7 @@ const reviewSettingsSchema = z.object({ retention_percent: z.number().int().min(
   new_cards_ignore_review_limit: z.boolean() }).strict().readonly();
 export type ReviewSettings = z.infer<typeof reviewSettingsSchema>;
 const queueCardSchema = z.object({ id: z.number().int().positive().safe(), vocabulary_id: z.number().int().positive().safe(), kind: z.enum(['recognition', 'listening']) }).strict();
-const queueViewSchema = z.object({ queue: z.object({ cards: z.array(queueCardSchema), reason: z.enum(['clock', 'due', 'quota', 'deferred']).nullable(), available_at: z.number().int().safe().nullable() }).strict(), record: recordSchema.nullable(), audio_pending: z.boolean(), audio_error: z.string().nullable() }).strict()
+const queueViewSchema = z.object({ queue: z.object({ cards: z.array(queueCardSchema), reason: z.enum(['clock', 'due', 'quota', 'deferred']).nullable(), available_at: z.number().int().safe().nullable() }).strict(), record: recordSchema.nullable(), audio_pending: z.boolean(), audio_error: z.string().nullable(), audio_vocabulary_id: z.number().int().positive().safe().nullable().default(null) }).strict()
   .refine((value) => value.queue.cards.length ? value.record?.id === value.queue.cards[0]?.vocabulary_id : value.record === null, 'Invalid queue record');
 export type QueueView = z.infer<typeof queueViewSchema>;
 
@@ -77,7 +77,7 @@ export interface RuntimeAdapter {
   readonly addReviewBatch: (request: BatchRequest) => Promise<BatchStatus | null>;
   readonly reviewBatchStatus: (operation?: string) => Promise<BatchStatus | null>;
   readonly cancelReviewBatch: (operation: string) => Promise<void>;
-  readonly retryMissingSpeech: () => Promise<number | null>;
+  readonly retryMissingSpeech: (id: number) => Promise<number | null>;
   readonly onReviewChanged: (callback: () => void) => Promise<() => void>;
   readonly reviewCards: (id: number) => Promise<readonly ReviewCard[] | null>;
   readonly reviewPause: (id: number, paused?: boolean) => Promise<boolean | null>;
@@ -112,9 +112,9 @@ export const runtime: RuntimeAdapter = {
   async cancelReviewBatch(operation) {
     if (isTauri()) await invoke('review_cancel_batch', { operation: z.string().min(1).max(128).parse(operation) });
   },
-  async retryMissingSpeech() {
+  async retryMissingSpeech(id) {
     if (!isTauri()) return null;
-    return z.number().int().min(0).max(100).parse(await invoke('speech_retry_missing'));
+    return z.number().int().min(0).max(1).parse(await invoke('speech_retry_missing', { vocabularyId: z.number().int().positive().safe().parse(id) }));
   },
   async onReviewChanged(callback) {
     if (!isTauri()) return () => {};

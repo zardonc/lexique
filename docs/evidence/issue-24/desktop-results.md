@@ -14,9 +14,9 @@ Schema 11 增量加入元数据与最小任务表，不替换学习库或存 BLO
 | --- | --- |
 | `pnpm lint`、`pnpm typecheck`、`pnpm build` | passed |
 | `cargo fmt --all --check`、`cargo check --locked --workspace` | passed |
-| `pnpm rust:test:build` 后 `pnpm test:rust` | passed；首次迁移 fixture 残留新表失败已修复；硬限 60 秒 |
-| `pnpm test:e2e` | 84 passed；Playwright 使用任务已有 headless shell，模拟 IPC |
-| speech_work 产品存储聚焦 | 13 passed；附加跨 chunk 声线／取消／同 operation 竞争、32 需求容量原子回滚、GC 恢复、重试预算及 100／1k／10k |
+| `pnpm rust:test:build` 后 `pnpm test:rust` | 最终 93 passed；首次迁移 fixture 残留新表失败已修复；硬限 60 秒 |
+| `pnpm test:e2e` | 最终 87 passed；Playwright 使用任务已有 headless shell，模拟 IPC |
+| speech_work 产品存储聚焦 | 最终 16 passed；跨 chunk 声线／取消／同 operation 竞争、32 需求容量原子回滚、完成音频重新核验、终态保留、GC 恢复、重试预算及 100／1k／10k |
 | `pnpm test:speech:cache`（先预编译） | 8 passed；Windows nofollow／junction、并发发布、失败保留、不可变版本／定向 GC |
 | resident 私有 framing Rust 单元 | 1 passed；超界／未知字段／响应身份／截断 |
 | `scripts/test_speech_protocol.py` | 3 passed；乱序响应归属、故障可见、严格 framing |
@@ -74,3 +74,21 @@ node e2e/native-recovery-24.mjs ../../target/issue-22-final-evidence/Lexique-0.1
 原始结果：`target/issue-24/product-native-accepted-c/results.json`、`native-lifecycle-accepted/results.json`、`native-recovery-accepted-b/results.json`；四项清理 `cleanup-final.log`；规模 `speech-work-final-complete.log`、`scale-*-b/results.json`；完整 E2E `e2e-full.log`、最终后端 `rust-tests-accepted.log`。精简可追溯结果随仓库保存于 `native-scale-results.json`、`native-results.json` 和 `preflight-summary.json`。a/b 初轮 origin 为 null，重建 Tauri release 并等待有效 origin 后通过；最新二进制两次主流程和一次 recovery 的 WebView2 在首请求关闭，重试及后续生命周期／迁移通过，关闭原因未确定。首次 recovery 的 schema 字段命名断言错误修复后通过；先前 baseline harness/时钟 fixture 失败保留。测试运行错误不冒充产品成功。
 
 当前未施加网络限制、未做干净系统断网或其他平台实机，也未新增人工法语音质验收。旧包的用户离线结果保留为历史证据，不能继承为这个新二进制的结论。测试服务、窗口和 worker 均在本次验证结束停止；用户数据和无关进程保留。
+
+## 审查修复与最终验证
+
+审查比较固定为 `git diff 6850ffb095a69084b02ee40a702355f660c3bd97...HEAD`。两个独立代理分别审查规范与 #24 规格；不混合排序。
+
+规范首轮：1 项 P2 硬违反（单项建卡丢弃逐词错误），2 项 P3 判断性异味（重复订阅生命周期、hash 校验器名称不准确）。已传播单项错误；统一 native change、focus、pageshow、visibility 的订阅／异步注销／清理，各调用者保留自身合并和隐藏逻辑；校验器改为 `validate_hash`，移除无用文件名分配。
+
+规格首轮：3 项 P2，分别为旧 ready 在文件失效后不重新核验、当前听音卡播放失败没有重新生成入口、缺失语音重试扫描全库。新需求将完成任务排队核验文件／TTL，取消和失败仍保留终态；当前卡可显式重新生成，保留答案状态，替换音频成功播放前禁止评分，卸载后不回写／播放；队列返回首个实际缺失词 ID，重试只提交该词 P0，不复活无关取消项。未增加未来服务集成。
+
+原生单项和 ready 两项先在首轮 `1026d941…` 二进制失败，日志为 `native-single-red.log`、`native-ready-red.log`；当前卡生成入口的浏览器红测为 `queue-audio-red.log`。随后修复并通过聚焦及完整回归。聚焦首轮的双 alert 选择器与 `pauseAt` 同时刻竞态属于测试错误，已分别改为按错误内容定位及从前一秒安装时钟；存储取消 fixture 最初还有其他活动批次引用，修正为取消全部引用再验证，未改变共享任务取消语义。定向原生 fixture 的 Unicode operation 被正确拒绝，改为合法 ASCII 身份后通过；失败日志保留。
+
+最终 `pnpm lint`、`pnpm typecheck`、`pnpm build`、`cargo fmt --all --check`、`cargo check --locked --workspace` 通过；`pnpm rust:test:build` 后 `pnpm test:rust` 为 93 passed（speech_work 16），`pnpm test:e2e` 为 87 passed，预编译后 `pnpm test:speech:cache` 为 8 passed。最终日志为 `lint-review-final.log`、`rust-review-build-b.log`、`rust-review-tests-b.log`、`rust-review-check.log`、`e2e-review-full.log`、`cache-review-tests.log`。执行硬限仍为 60 秒，首次编译单独完成。
+
+最后运行 `pnpm desktop:build --no-bundle`，得到新 release SHA-256 `33b34bb661ffb3de53dcaf73e715df6085352d434b15ecae4b172d75159000e3`。上文 `1026d941…` 的性能数字及规模对照保留为首轮证据；新二进制主流程六词建卡 9.5 ms、音频完成前 7 张卡可用，冷 preview 4927.1 ms、热 P0 1095.2 ms、缓存 5.6–6.9 ms、实际播放开始 39.2 ms；并发查词 14.7 ms、笔记 19.3 ms、评分 71.2 ms。六段真实音频完整解码并播放到 ended，重启缓存复用且正常退出无 worker。仍是一台设备的代表样本，不声称尾延迟或大规模实时生成达标。
+
+新原生边界：`native-single-green` 确认未知词／满积压返回错误且无空卡成功；`native-ready-green` 删除自己 fixture 的真实音频后，新批次返回 queued，created_cards=0；`native-targeted-green-b` 确认缺失 ID、单词 P0、另一取消词保持取消及缺少必需 IPC 身份被拒绝。上述短用例最后采用 fixture 强制清理，不当作正常退出证据；正常退出与崩溃恢复由独立生命周期用例验证。各原生用例串行执行、使用独立目录、保留硬 60 秒上限。精简结果及新 hash 见 [最终修复结果](review-results.json)。
+
+新 hash 下 `product-native-review`、`native-lifecycle-review`、`native-recovery-review` 全部通过：完整实播及重启、worker kill→retry_wait／取消／发布提交 gap 恢复、schema10→11 旧 Ogg 精确复用／笔记／暂停保留、GC gap 恢复、正常退出无残留 worker。此次三个独立复核首轮均通过；前述旧二进制 WebView2 偶发关闭仍未定位，不由本次通过抹除。源码交付继续保留其他平台、长时休眠／资源增长、全到期 10k 的明显等待、断网／干净系统和 F01–F05 边界。

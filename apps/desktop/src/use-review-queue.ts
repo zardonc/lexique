@@ -3,6 +3,7 @@ import type { RefObject } from 'react';
 import type { QueueView, RuntimeAdapter } from './platform/runtime';
 import { errorMessage } from './platform/vocabulary';
 import { nextQueueWake, QueueRefresh, readQueue } from './queue-refresh';
+import { subscribeReviewEvents } from './review-events';
 
 type Status = 'loading' | 'ready' | 'preview' | 'error';
 interface Subscription {
@@ -42,14 +43,10 @@ function useQueueEvents(options: Subscription) {
       } });
     controller.current = refresh;
     const resume = () => { if (document.visibilityState === 'hidden') { refresh.suspend(); setWakeAt(undefined); } else refresh.invalidate(); };
-    window.addEventListener('focus', resume); window.addEventListener('pageshow', resume);
-    document.addEventListener('visibilitychange', resume);
-    let unlisten: (() => void) | undefined;
-    void runtime.onReviewChanged(() => refresh.invalidate()).then((stop) => { if (active) unlisten = stop; else stop(); })
-      .catch((cause: unknown) => { if (active) setError(errorMessage(cause)); });
+    const stop = subscribeReviewEvents(runtime, { changed: () => refresh.invalidate(), resumed: resume,
+      failed: (cause) => setError(errorMessage(cause)) });
     refresh.invalidate(true);
-    return () => { active = false; refresh.stop(); unlisten?.(); controller.current = null;
-      window.removeEventListener('focus', resume); window.removeEventListener('pageshow', resume); document.removeEventListener('visibilitychange', resume); };
+    return () => { active = false; refresh.stop(); stop(); controller.current = null; };
   }, [runtime, skipped, advance, current, controller, pendingMessage, setWakeAt, setError, setStatus, setView, setAudio]);
 }
 

@@ -2,6 +2,7 @@ import type { Locale } from './content';
 
 export const notebookMessages = {
   zh: {
+    regenerateSpeech: '重新生成语音',
     batchProgress: '批量任务', cardsCreated: '已创建卡片', audioProgress: '音频完成', stopAudio: '停止剩余音频生成', audioCancelled: '已停止剩余生成；卡片与完成音频保留',
     pageSize: '每页词数', previousPage: '上一页', nextPage: '下一页',
     exampleSense: '例句对应释义', exampleSenseUnspecified: '未指定释义', exampleSenseRequired: '请为新增或修改的例句选择释义。',
@@ -28,6 +29,7 @@ export const notebookMessages = {
     availability: { due: '尚未到期', quota: '今日额度已用完', deferred: '同词卡片暂缓', paused: '复习已暂停', clock: '设备时间早于最近评分，请检查时间', conflict: '卡片已被其他操作修改', invalid: '评分请求无效' },
   },
   en: {
+    regenerateSpeech: 'Regenerate audio',
     batchProgress: 'Batch tasks', cardsCreated: 'Cards created', audioProgress: 'Audio complete', stopAudio: 'Stop remaining audio', audioCancelled: 'Remaining generation stopped; cards and completed audio kept',
     pageSize: 'Words per page', previousPage: 'Previous page', nextPage: 'Next page',
     exampleSense: 'Meaning for examples', exampleSenseUnspecified: 'Meaning not specified', exampleSenseRequired: 'Select a meaning for new or edited examples.',
@@ -54,6 +56,7 @@ export const notebookMessages = {
     availability: { due: 'Not due yet', quota: 'Daily limit reached', deferred: 'Other card deferred', paused: 'Review paused', clock: 'Device time is before the last rating; check the clock', conflict: 'Card changed in another operation', invalid: 'Invalid rating request' },
   },
   fr: {
+    regenerateSpeech: 'Régénérer l’audio',
     batchProgress: 'Tâches du lot', cardsCreated: 'Cartes créées', audioProgress: 'Audio terminé', stopAudio: 'Arrêter les audios restants', audioCancelled: 'Génération restante arrêtée ; cartes et audios terminés conservés',
     pageSize: 'Mots par page', previousPage: 'Page précédente', nextPage: 'Page suivante',
     exampleSense: 'Sens des exemples', exampleSenseUnspecified: 'Sens non précisé', exampleSenseRequired: 'Choisissez un sens pour les exemples ajoutés ou modifiés.',

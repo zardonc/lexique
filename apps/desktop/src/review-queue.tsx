@@ -61,15 +61,15 @@ function QueueActions({ status, view, runtime, text, labels, refresh, retry, set
 }) {
   return <div className="actions">{status !== 'preview' && status !== 'loading' && <UndoRating runtime={runtime} labels={labels} refresh={refresh} onRebuilt={setRebuilt} />}
     {status === 'error' && <button onClick={retry}>{text.retry}</button>}
-    {view?.audio_pending && <MissingAudio runtime={runtime} text={text} />}</div>;
+    {view?.audio_pending && view.audio_vocabulary_id !== null && <MissingAudio runtime={runtime} text={text} id={view.audio_vocabulary_id} />}</div>;
 }
 
-function MissingAudio({ runtime, text }: { readonly runtime: RuntimeAdapter; readonly text: NotebookText }) {
+function MissingAudio({ runtime, text, id }: { readonly runtime: RuntimeAdapter; readonly text: NotebookText; readonly id: number }) {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState('');
   async function retry() {
     setBusy(true); setError('');
-    try { if (await runtime.retryMissingSpeech() === null) throw new Error(text.preview); }
+    try { if (await runtime.retryMissingSpeech(id) === null) throw new Error(text.preview); }
     catch (cause) { setError(errorMessage(cause)); }
     finally { setBusy(false); }
   }

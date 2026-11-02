@@ -209,7 +209,8 @@ pub fn demand_speech(
         Some((old_priority, state)) if matches!(state.as_str(), "queued" | "retry_wait") => {
             priority < *old_priority
         }
-        Some((_, state)) if matches!(state.as_str(), "ready" | "failed" | "cancelled") => retry,
+        Some((_, state)) if state == "ready" => true,
+        Some((_, state)) if matches!(state.as_str(), "failed" | "cancelled") => retry,
         _ => false,
     };
     if additional && ((priority == 1 && pending >= 10000) || (priority == 0 && interactive >= 32)) {
@@ -225,7 +226,9 @@ fn registered_demand(
     now: i64,
     retry: bool,
 ) -> Result<i64, StorageError> {
-    connection.execute("INSERT INTO speech_tasks(semantic_key,priority,state,wake_at) VALUES(?1,?2,'queued',?3) ON CONFLICT(semantic_key) DO UPDATE SET priority=CASE WHEN state='running' THEN priority ELSE MIN(priority,excluded.priority) END",params![key,priority,now])?;
+    connection.execute("INSERT INTO speech_tasks(semantic_key,priority,state,wake_at) VALUES(?1,?2,'queued',?3) ON CONFLICT(semantic_key) DO UPDATE SET priority=CASE WHEN state='running' THEN priority WHEN state IN ('ready','failed','cancelled') THEN excluded.priority ELSE MIN(priority,excluded.priority) END",params![key,priority,now])?;
+    // Completion is historical; a new demand validates the current file and TTL.
+    connection.execute("UPDATE speech_tasks SET state='queued',attempts=0,deadline_at=NULL,wake_at=?1,cancel_requested=0,error=NULL WHERE semantic_key=?2 AND state='ready'",params![now,key])?;
     if retry {
         connection.execute("UPDATE speech_tasks SET state='queued',attempts=0,deadline_at=NULL,wake_at=?1,cancel_requested=0,error=NULL WHERE semantic_key=?2 AND state IN ('failed','cancelled','ready')",params![now,key])?;
     }
@@ -404,16 +407,16 @@ fn build_word(
         params![key, id],
     )?;
     protect_word_audio(tx, &key, now)?;
-    let exists: bool = tx.query_row(
-        "SELECT EXISTS(SELECT 1 FROM speech_tasks WHERE semantic_key=?1)",
+    let additional: bool = tx.query_row(
+        "SELECT NOT EXISTS(SELECT 1 FROM speech_tasks WHERE semantic_key=?1 AND state<>'ready')",
         [&key],
         |r| r.get(0),
     )?;
-    if !exists && *remaining <= 0 {
+    if additional && *remaining <= 0 {
         return Err(StorageError::Invalid("Speech backlog is full".into()));
     }
     registered_demand(tx, &key, 1, now, false)?;
-    if !exists {
+    if additional {
         *remaining -= 1;
     }
     Ok((key, (crate::review_cards(tx, id)?.len() - before) as u8))
