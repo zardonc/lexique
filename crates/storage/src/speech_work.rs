@@ -228,10 +228,7 @@ fn registered_demand(
 ) -> Result<i64, StorageError> {
     connection.execute("INSERT INTO speech_tasks(semantic_key,priority,state,wake_at) VALUES(?1,?2,'queued',?3) ON CONFLICT(semantic_key) DO UPDATE SET priority=CASE WHEN state='running' THEN priority WHEN state IN ('ready','failed','cancelled') THEN excluded.priority ELSE MIN(priority,excluded.priority) END",params![key,priority,now])?;
     // Completion is historical; a new demand validates the current file and TTL.
-    connection.execute("UPDATE speech_tasks SET state='queued',attempts=0,deadline_at=NULL,wake_at=?1,cancel_requested=0,error=NULL WHERE semantic_key=?2 AND state='ready'",params![now,key])?;
-    if retry {
-        connection.execute("UPDATE speech_tasks SET state='queued',attempts=0,deadline_at=NULL,wake_at=?1,cancel_requested=0,error=NULL WHERE semantic_key=?2 AND state IN ('failed','cancelled','ready')",params![now,key])?;
-    }
+    connection.execute("UPDATE speech_tasks SET state='queued',attempts=0,deadline_at=NULL,wake_at=?1,cancel_requested=0,error=NULL WHERE semantic_key=?2 AND (state='ready' OR (?3 AND state IN ('failed','cancelled')))",params![now,key,retry])?;
     Ok(connection.query_row(
         "SELECT id FROM speech_tasks WHERE semantic_key=?1",
         [key],

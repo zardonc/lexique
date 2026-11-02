@@ -1,5 +1,6 @@
 {
-  "binarySha256": "33b34bb661ffb3de53dcaf73e715df6085352d434b15ecae4b172d75159000e3",
+  "binarySha256": "f5ab46d516021d46af5082f6c84672c2f94218403afe0bd907599cf75076bed1",
+  "previousEvidenceCommit": "c4da7a8",
   "hardTimeoutSeconds": 60,
   "checks": {
     "frontend": 87,
@@ -7,7 +8,7 @@
     "speechCache": 8
   },
   "results": {
-    "native-single-green": {
+    "native-single-errors-final": {
       "unknown": {
         "error": "SQLite operation failed: Query returned no rows"
       },
@@ -17,7 +18,7 @@
       },
       "workers": 0
     },
-    "native-ready-green": {
+    "native-ready-final": {
       "batch": {
         "operation": "ready-two",
         "cancelled": false,
@@ -32,7 +33,7 @@
         ]
       }
     },
-    "native-targeted-green-b": {
+    "native-targeted-retry-final": {
       "view": {
         "queue": {
           "cards": [
@@ -81,8 +82,8 @@
           "example_sense": null,
           "more_examples": [],
           "revision": 1,
-          "created_at": 1793656283886,
-          "updated_at": 1793656283886
+          "created_at": 1793656911861,
+          "updated_at": 1793656911861
         },
         "audio_pending": true,
         "audio_error": null,
@@ -111,70 +112,74 @@
       },
       "omitted": "invalid args `vocabularyId` for command `speech_retry_missing`: command speech_retry_missing missing required key vocabularyId"
     },
-    "product-native-review": {
-      "binarySha256": "33b34bb661ffb3de53dcaf73e715df6085352d434b15ecae4b172d75159000e3",
+    "native-product-final": {
+      "binarySha256": "f5ab46d516021d46af5082f6c84672c2f94218403afe0bd907599cf75076bed1",
       "hardTimeoutSeconds": 60,
       "result": {
         "metrics": [
           {
             "command": "speech_preview",
-            "ms": 4927.099999964237
+            "ms": 4956.199999988079
           },
           {
             "command": "vocabulary_save",
-            "ms": 20
+            "ms": 21.100000023841858
           },
           {
             "command": "vocabulary_save",
-            "ms": 16.600000023841858
+            "ms": 14.5
           },
           {
             "command": "vocabulary_save",
-            "ms": 16.19999998807907
+            "ms": 16.599999964237213
           },
           {
             "command": "vocabulary_save",
-            "ms": 16.5
+            "ms": 15.200000047683716
           },
           {
             "command": "vocabulary_save",
-            "ms": 16.100000023841858
+            "ms": 15.699999988079071
           },
           {
             "command": "vocabulary_save",
-            "ms": 15.599999964237213
+            "ms": 15.199999988079071
           },
           {
             "command": "speech_preview",
-            "ms": 6
+            "ms": 5.799999952316284
           },
           {
             "command": "review_add_batch",
-            "ms": 9.5
+            "ms": 11.699999988079071
           },
           {
             "command": "review_queue",
-            "ms": 36.40000003576279
-          },
-          {
-            "command": "dictionary_lookup",
-            "ms": 14.699999988079071
+            "ms": 39.30000001192093
           },
           {
             "command": "vocabulary_save",
-            "ms": 19.299999952316284
+            "ms": 10.299999952316284
+          },
+          {
+            "command": "dictionary_lookup",
+            "ms": 19
           },
           {
             "command": "review_rate",
-            "ms": 71.19999998807907
+            "ms": 22
           },
           {
             "command": "speech_preview",
-            "ms": 1095.199999988079
+            "ms": 1142.699999988079
           },
           {
             "command": "speech_cached",
-            "ms": 6.600000023841858
+            "ms": 6.199999988079071
+          },
+          {
+            "command": "speech_cached",
+            "ms": 5.699999988079071
           },
           {
             "command": "speech_cached",
@@ -182,23 +187,19 @@
           },
           {
             "command": "speech_cached",
-            "ms": 6.899999976158142
-          },
-          {
-            "command": "speech_cached",
-            "ms": 6.099999964237213
-          },
-          {
-            "command": "speech_cached",
-            "ms": 5.600000023841858
+            "ms": 5.899999976158142
           },
           {
             "command": "speech_cached",
             "ms": 6.699999988079071
           },
           {
+            "command": "speech_cached",
+            "ms": 5.800000011920929
+          },
+          {
             "command": "actual-play-start",
-            "ms": 39.19999998807907
+            "ms": 41.89999997615814
           }
         ],
         "ids": [
@@ -344,7 +345,7 @@
             "audible": true
           }
         ],
-        "interactiveBytes": 9311,
+        "interactiveBytes": 7259,
         "dictionaryCount": 1,
         "edited": "concurrent",
         "rated": "committed"
@@ -398,7 +399,7 @@
             }
           ]
         },
-        "cachedBytes": 7091,
+        "cachedBytes": 8779,
         "progress": {
           "revision": 1,
           "card": {
@@ -407,15 +408,15 @@
               "stability": 2.3065,
               "difficulty": 2.118104
             },
-            "last_review_at": 1793656316,
-            "due_at": 1793656916
+            "last_review_at": 1793656922,
+            "due_at": 1793657522
           }
         }
       },
       "residentProcesses": 1,
       "ownedWorkersAfterExit": 0
     },
-    "native-lifecycle-review": {
+    "native-lifecycle-final": {
       "hardTimeoutSeconds": 60,
       "interrupted": {
         "operation": "life-batch",
@@ -646,24 +647,24 @@
           "example_sense": null,
           "more_examples": [],
           "revision": 1,
-          "created_at": 1793656352874,
-          "updated_at": 1793656352874
+          "created_at": 1793656934198,
+          "updated_at": 1793656934198
         }
       },
       "gap": {
         "publication_gap": "prepared",
         "semantic_key": "844fc1bf1cf9bb516ceea829e68de0a0d73b93461270f1ac4123efb4168e41a2",
-        "generated_at": 1793656357
+        "generated_at": 1793656939
       },
       "ownedWorkersAfterExit": 0
     },
-    "native-recovery-review": {
+    "native-recovery-final": {
       "legacy": {
         "semantic_key": "844fc1bf1cf9bb516ceea829e68de0a0d73b93461270f1ac4123efb4168e41a2",
         "spec": "{\"text\":\"école\",\"context\":\"word\",\"language\":\"fr\",\"engine\":\"sherpa-onnx/2.0.1+ort/1.28.2\",\"model\":\"supertonic-3/int8/c3eb91414d5ff8a7a239b7fe9e34e7e2bf8a8140d8375ffb14718b1c639325db/c7befd5ea8c3119769e8a6c1486c4edc6a3bc8365c67621c881bbb774b9902ff/20cd86fa5c6effedfda0e7cffe5b0569ca401c440a0c3a1d72bf39286c0db3fd/e923d60f53f95eb1ce235f1dc33ec56d9c057823c96fa6f8acf98f32b0da6152/42078d3aef1cd43ab43021f3c54f47d2d75ceb4e75f627f118890128b06a0d09/8402ca48e5189a8950138580b0fff64db6f072f24ac07cd54ba8b2fbb9883b30/67d5209b0ee8ce6c74105ffbe12fe6a7628aea3b4ba2fcb308a4a67938a93ce8\",\"preprocessing\":\"nfc/y-i-grec/v1\",\"voice\":\"female\",\"speed\":1,\"steps\":8,\"encoding\":\"ogg-opus/opus-1.6.1+libopusenc-0.3\",\"bitrate\":48000}",
         "context": "word",
-        "content_hash": "cc326363a9ea0e65ebcdfaab86f77ae71597e951b7ce8d7b571d52e0226d1c8b",
-        "generated_at": 1793656425
+        "content_hash": "5d3c28257e43d45bc1ef93441925a89954faf14eca23c29c1935e89c268b1acb",
+        "generated_at": 1793656951
       },
       "state": {
         "legacy_registered": true,
