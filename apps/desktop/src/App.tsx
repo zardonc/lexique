@@ -13,6 +13,8 @@ import { LeaveDialog, useLeaveGuard } from './leave-guard';
 import { SpeechSettings } from './speech-settings';
 import { ReviewSettingsPanel } from './review-settings';
 import { ReviewQueuePanel } from './review-queue';
+import { useBatchReview } from './use-batch-review';
+import { BatchProgress } from './batch-progress';
 
 const themes: readonly Theme[] = ['white', 'sepia', 'dark'];
 const locales: readonly Locale[] = ['zh', 'en', 'fr'];
@@ -53,18 +55,18 @@ export function App({ runtime }: { readonly runtime: RuntimeAdapter }) {
   const [theme, setTheme] = useState<Theme>('white');
   const [page, setPage] = useState(0);
   const [collapsed, setCollapsed] = useState(false);
-  const [batchBusy, setBatchBusy] = useState(false);
+  const batch = useBatchReview(runtime);
   const [reviewVersion, setReviewVersion] = useState(0);
   const reviewChanged = () => setReviewVersion((value) => value + 1);
   const text = messages[locale];
   const notebookText = notebookMessages[locale];
   const notebook = useNotebook(runtime);
-  const guard = useLeaveGuard(runtime, notebook, batchBusy);
+  const guard = useLeaveGuard(runtime, notebook, false);
   function changePage(next: number) { guard.request(() => { notebook.clear(); setPage(next); }); }
   useEffect(() => { document.documentElement.lang = languageTags[locale]; }, [locale]);
   return <div className="app" data-theme={theme} data-collapsed={collapsed}>
     <a className="skip-link" href="#main-content">{text.skip}</a>
-    <Navigation text={text} selected={page} collapsed={collapsed} disabled={batchBusy} onSelect={changePage} onToggle={() => setCollapsed((value) => !value)} />
+    <Navigation text={text} selected={page} collapsed={collapsed} disabled={false} onSelect={changePage} onToggle={() => setCollapsed((value) => !value)} />
     <div className="workspace"><Header text={text} locale={locale} theme={theme} onLocale={setLocale} onTheme={setTheme} />
       <main id="main-content" tabIndex={-1}>
         <p className="eyebrow">{text.eyebrow}</p><h1 id="main-page-heading">{text.modules[page]}</h1>
@@ -74,7 +76,7 @@ export function App({ runtime }: { readonly runtime: RuntimeAdapter }) {
             onCollect={(result) => guard.request(() => notebook.collect(result))}
             onOpen={(record) => guard.request(() => notebook.open(record))}
             beforeSearch={(action) => guard.request(() => { notebook.clear(); action(); })} /> : page === 2 ?
-            <NotebookPanel runtime={runtime} version={notebook.version + reviewVersion} text={notebookText} onWorkingChange={setBatchBusy} onReviewChanged={reviewChanged}
+            <NotebookPanel runtime={runtime} version={notebook.version + reviewVersion} text={notebookText} batch={batch}
               onOpen={(record) => guard.request(() => notebook.open(record))} /> : page === 3 ? <ReviewQueuePanel runtime={runtime} locale={locale} text={notebookText} /> : page === 7 ?
             <><ReviewSettingsPanel runtime={runtime} locale={locale} /><SpeechSettings runtime={runtime} locale={locale} /></> :
             <div className="empty-state"><p>{text.pending[page]}</p><small>{text.scaffold}</small></div>}
@@ -84,6 +86,7 @@ export function App({ runtime }: { readonly runtime: RuntimeAdapter }) {
           {page === 2 && notebook.editor && <RecordOriginal headword={notebook.editor.snapshot.reference.lookup_key}
             runtime={runtime} text={text.dictionary} title={notebookText.original} />}
           {guard.error && <p role="alert">{notebookText.closeError}: {guard.error}</p>}
+          <BatchProgress batch={batch} text={notebookText} />
         </section>
         <RuntimeStatusPanel runtime={runtime} text={text} />
       </main>

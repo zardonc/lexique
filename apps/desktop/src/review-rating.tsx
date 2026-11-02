@@ -19,10 +19,32 @@ function useAvailabilityTimer({ id, runtime, availability, setAvailability, setE
 }) {
   useEffect(() => {
     if (!availability?.available_at) return;
+    let active = true;
     const delay = Math.max(1000, Math.min(2_147_483_647, availability.available_at * 1000 - Date.now() + 1000));
-    const timer = window.setTimeout(() => { void runtime.reviewAvailability(id).then((value) => { setAvailability(value); setError(''); }).catch((cause: unknown) => setError(errorMessage(cause))); }, delay);
-    return () => window.clearTimeout(timer);
+    const timer = window.setTimeout(() => { if (document.visibilityState === 'hidden') return; void runtime.reviewAvailability(id).then((value) => { if (active) { setAvailability(value); setError(''); } }).catch((cause: unknown) => { if (active) setError(errorMessage(cause)); }); }, delay);
+    return () => { active = false; window.clearTimeout(timer); };
   }, [availability, id, runtime, setAvailability, setError]);
+}
+
+function useAvailabilityEvents({ id, runtime, setAvailability, setError }: {
+  readonly id: number; readonly runtime: RuntimeAdapter; readonly setAvailability: (value: ReviewAvailability | null) => void; readonly setError: (value: string) => void;
+}) {
+  useEffect(() => {
+    let active = true, running = false, pending = false;
+    async function read() {
+      if (!active || document.visibilityState === 'hidden') return;
+      if (running) { pending = true; return; }
+      running = true;
+      try { const value = await runtime.reviewAvailability(id); if (active) setAvailability(value); }
+      catch (cause) { if (active) setError(errorMessage(cause)); }
+      finally { running = false; if (pending) { pending = false; void read(); } }
+    }
+    const resume = () => { void read(); };
+    let unlisten: (() => void) | undefined;
+    void runtime.onReviewChanged(resume).then((stop) => { if (active) unlisten = stop; else stop(); }).catch((cause: unknown) => { if (active) setError(errorMessage(cause)); });
+    window.addEventListener('focus', resume); document.addEventListener('visibilitychange', resume);
+    return () => { active = false; unlisten?.(); window.removeEventListener('focus', resume); document.removeEventListener('visibilitychange', resume); };
+  }, [id, runtime, setAvailability, setError]);
 }
 
 function useReviewRating({ id, runtime, text, onSuccess, onBusyChange }: {
@@ -49,6 +71,7 @@ function useReviewRating({ id, runtime, text, onSuccess, onBusyChange }: {
     return () => { active = false; };
   }, [id, key, runtime]);
   useAvailabilityTimer({ id, runtime, availability, setAvailability, setError });
+  useAvailabilityEvents({ id, runtime, setAvailability, setError });
   async function submit(request: RateRequest) {
     setBusy(true); onBusyChange(true); setError('');
     try {

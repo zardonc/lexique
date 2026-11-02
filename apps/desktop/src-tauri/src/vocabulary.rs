@@ -1,9 +1,4 @@
-use std::{
-    io::Write,
-    path::PathBuf,
-    process::{Command, Stdio},
-    time::Duration,
-};
+use std::{path::PathBuf, time::Duration};
 
 use lexique_dictionary::{Lookup, Sense};
 use lexique_storage::{
@@ -48,7 +43,7 @@ pub fn coordinate_quit(app: &tauri::App) -> Result<(), Box<dyn std::error::Error
     Ok(())
 }
 
-fn open(path: &DatabasePath) -> Result<Connection, String> {
+pub(crate) fn open(path: &DatabasePath) -> Result<Connection, String> {
     let connection =
         Connection::open_with_flags(&path.0, rusqlite::OpenFlags::SQLITE_OPEN_READ_WRITE)
             .map_err(|error| format!("Could not open learning database: {error}"))?;
@@ -129,7 +124,11 @@ pub async fn vocabulary_save(
         } else {
             None
         };
-        lexique_storage::save(&mut connection, &request, content).map_err(|error| error.to_string())
+        let result = lexique_storage::save(&mut connection, &request, content)
+            .map_err(|error| error.to_string())?;
+        app.state::<crate::speech_tasks::SpeechTasks>().wake()?;
+        crate::speech_tasks::changed(&app);
+        Ok(result)
     })
     .await
     .map_err(|error| format!("Vocabulary save task failed: {error}"))?
@@ -167,6 +166,7 @@ pub async fn vocabulary_list(
 
 #[tauri::command]
 pub async fn review_add(
+    app: tauri::AppHandle,
     path: State<'_, DatabasePath>,
     vocabulary_id: i64,
 ) -> Result<Vec<lexique_storage::ReviewCard>, String> {
@@ -175,8 +175,25 @@ pub async fn review_add(
     }
     let path = DatabasePath(path.0.clone());
     tauri::async_runtime::spawn_blocking(move || {
-        lexique_storage::add_review(&mut open(&path)?, vocabulary_id)
-            .map_err(|error| error.to_string())
+        let mut connection = open(&path)?;
+        let operation = format!(
+            "single-{}-{}",
+            vocabulary_id,
+            std::time::SystemTime::now()
+                .duration_since(std::time::UNIX_EPOCH)
+                .map_err(|e| e.to_string())?
+                .as_nanos()
+        );
+        lexique_storage::add_review_batch(
+            &mut connection,
+            &operation,
+            &[vocabulary_id],
+            crate::speech_tasks::now()?,
+        )
+        .map_err(|e| e.to_string())?;
+        app.state::<crate::speech_tasks::SpeechTasks>().wake()?;
+        crate::speech_tasks::changed(&app);
+        lexique_storage::review_cards(&connection, vocabulary_id).map_err(|e| e.to_string())
     })
     .await
     .map_err(|error| format!("Review creation task failed: {error}"))?
@@ -184,6 +201,7 @@ pub async fn review_add(
 
 #[tauri::command]
 pub async fn review_pause(
+    app: tauri::AppHandle,
     path: State<'_, DatabasePath>,
     vocabulary_id: i64,
     paused: Option<bool>,
@@ -197,6 +215,7 @@ pub async fn review_pause(
         if let Some(value) = paused {
             lexique_storage::set_review_paused(&mut connection, vocabulary_id, value)
                 .map_err(|error| error.to_string())?;
+            crate::speech_tasks::changed(&app);
         }
         lexique_storage::review_paused(&connection, vocabulary_id)
             .map_err(|error| error.to_string())
@@ -320,6 +339,7 @@ pub async fn review_undo_target(path: State<'_, DatabasePath>) -> Result<Option<
 
 #[tauri::command]
 pub async fn review_undo(
+    app: tauri::AppHandle,
     path: State<'_, DatabasePath>,
     operation: String,
     rating_operation: String,
@@ -327,7 +347,10 @@ pub async fn review_undo(
     let path = DatabasePath(path.0.clone());
     tauri::async_runtime::spawn_blocking(move || {
         match lexique_storage::undo_rating(&mut open(&path)?, &operation, &rating_operation) {
-            Ok(queue_rebuilt) => Ok(UndoOutcome::Committed { queue_rebuilt }),
+            Ok(queue_rebuilt) => {
+                crate::speech_tasks::changed(&app);
+                Ok(UndoOutcome::Committed { queue_rebuilt })
+            }
             Err(
                 error @ (lexique_storage::StorageError::Invalid(_)
                 | lexique_storage::StorageError::RatingConflict),
@@ -370,17 +393,50 @@ pub async fn review_queue(
             .map_err(|e| e.to_string())?
             .as_secs();
         let mut connection = open(&path)?;
+        let inspector = crate::speech_cache::Inspector::new(&path.0);
         let inventory =
             lexique_storage::review_card_inventory(&connection).map_err(|e| e.to_string())?;
         let skipped: std::collections::HashSet<i64> = skipped.into_iter().collect();
         let mut verified_audio = std::collections::HashSet::new();
         let mut audio_pending = false;
         let mut audio_error = None;
+        let mut checked = std::collections::HashMap::new();
+        let mut legacy = Vec::new();
+        let mut next_audio_due: Option<i64> = None;
+        let limits = lexique_storage::review_settings(&connection).map_err(|e| e.to_string())?;
         for card in inventory
             .iter()
             .filter(|card| card.kind == "listening" && !skipped.contains(&card.id))
         {
-            match crate::speech_cache::inspect(&path.0, card.vocabulary_id) {
+            let progress = lexique_storage::review_progress(&connection, card.id)
+                .map_err(|e| e.to_string())?;
+            if let Some(due) = progress.card.due_at.filter(|due| *due > now as i64) {
+                next_audio_due = Some(next_audio_due.map_or(due, |previous| previous.min(due)));
+                continue;
+            }
+            if limits.new_limit == 0 && limits.review_limit == 0 {
+                continue;
+            }
+            let found = checked.entry(card.vocabulary_id).or_insert_with(|| {
+                inspector
+                    .as_ref()
+                    .map_err(Clone::clone)
+                    .and_then(|inspector| {
+                        crate::speech_tasks::inspect_word(
+                            &connection,
+                            inspector,
+                            card.vocabulary_id,
+                            now as i64,
+                        )
+                    })
+                    .map(|(audio, hash)| {
+                        if let Some(hash) = hash {
+                            legacy.push((card.vocabulary_id, hash));
+                        }
+                        audio.is_some()
+                    })
+            });
+            match found {
                 Ok(true) => {
                     verified_audio.insert(card.id);
                 }
@@ -388,11 +444,14 @@ pub async fn review_queue(
                     audio_pending = true;
                 }
                 Err(error) => {
-                    audio_error = Some(error);
+                    audio_pending = true;
+                    audio_error = Some(error.clone());
                 }
             }
         }
-        let queue = lexique_storage::review_queue_filtered(
+        lexique_storage::register_legacy_speeches(&mut connection, &legacy)
+            .map_err(|e| e.to_string())?;
+        let mut queue = lexique_storage::review_queue_filtered(
             &mut connection,
             i64::try_from(now).map_err(|e| e.to_string())?,
             &timezone,
@@ -402,6 +461,14 @@ pub async fn review_queue(
             },
         )
         .map_err(|e| e.to_string())?;
+        if let Some(due) = next_audio_due {
+            if queue.available_at.is_none_or(|at| due < at) {
+                queue.available_at = Some(due);
+                if queue.cards.is_empty() && queue.reason.is_none() {
+                    queue.reason = Some("due".into());
+                }
+            }
+        }
         let record = queue
             .cards
             .first()
@@ -421,6 +488,7 @@ pub async fn review_queue(
 
 #[tauri::command]
 pub async fn review_rate(
+    app: tauri::AppHandle,
     path: State<'_, DatabasePath>,
     request: RateInput,
 ) -> Result<RateOutcome, String> {
@@ -446,7 +514,10 @@ pub async fn review_rate(
             timezone: request.timezone,
         };
         match lexique_storage::rate_card(&mut open(&path)?, &rating) {
-            Ok(result) => Ok(RateOutcome::Committed { result }),
+            Ok(result) => {
+                crate::speech_tasks::changed(&app);
+                Ok(RateOutcome::Committed { result })
+            }
             Err(error @ lexique_storage::StorageError::RatingConflict) => {
                 Ok(RateOutcome::Rejected {
                     code: "conflict".into(),
@@ -485,7 +556,13 @@ pub async fn speech_cached(
         if !cards.iter().any(|card| card.kind == "listening") {
             return Err("Listening card does not exist".into());
         }
-        crate::speech_cache::read(&path.0, vocabulary_id)
+        let connection = open(&path)?;
+        crate::speech_tasks::cached_word(
+            &connection,
+            &crate::speech_cache::Inspector::new(&path.0)?,
+            vocabulary_id,
+            crate::speech_tasks::now()?,
+        )
     })
     .await
     .map_err(|e| format!("Speech cache task failed: {e}"))?
@@ -502,106 +579,41 @@ pub async fn speech_generate(
         return Err("Invalid vocabulary ID".into());
     }
     let path = DatabasePath(path.0.clone());
-    let resources = app
-        .path()
-        .resource_dir()
-        .map_err(|error| error.to_string())?
-        .join("speech");
     tauri::async_runtime::spawn_blocking(move || {
-        let _guard = SPEECH_GENERATION
-            .lock()
-            .map_err(|error| error.to_string())?;
-        let connection = open(&path)?;
-        let cards = lexique_storage::review_cards(&connection, vocabulary_id)
-            .map_err(|error| error.to_string())?;
-        if !cards.iter().any(|card| card.kind == "listening") {
-            return Err("Listening card does not exist".into());
+        let mut connection = open(&path)?;
+        let inspector = crate::speech_cache::Inspector::new(&path.0)?;
+        if !regenerate.unwrap_or(false) {
+            if let Some(bytes) = crate::speech_tasks::cached_word(
+                &connection,
+                &inspector,
+                vocabulary_id,
+                crate::speech_tasks::now()?,
+            )? {
+                return Ok(bytes);
+            }
         }
-        let replace = match crate::speech_cache::read(&path.0, vocabulary_id) {
-            Ok(Some(bytes)) if !regenerate.unwrap_or(false) => return Ok(bytes),
-            Ok(Some(_)) => true,
-            Ok(None) => false,
-            Err(error) if error == "Invalid cached speech audio" => true,
-            Err(error) => return Err(error),
-        };
-        let record =
-            lexique_storage::get(&connection, vocabulary_id).map_err(|error| error.to_string())?;
-        let preferences =
-            lexique_storage::speech_preferences(&connection).map_err(|error| error.to_string())?;
-        let voice = match preferences.voice {
-            lexique_storage::SpeechVoice::Female => "female",
-            lexique_storage::SpeechVoice::Male => "male",
-        };
-        let audio = synthesize_speech(&resources, &record.headword, voice)?;
-        crate::speech_cache::write(&path.0, vocabulary_id, &audio, replace)?;
-        crate::speech_cache::read(&path.0, vocabulary_id)?
-            .ok_or_else(|| "Generated speech cache disappeared".to_string())
+        let record = lexique_storage::get(&connection, vocabulary_id).map_err(|e| e.to_string())?;
+        let spec = lexique_storage::SpeechSpec::word(
+            &record.headword,
+            lexique_storage::speech_preferences(&connection)
+                .map_err(|e| e.to_string())?
+                .voice,
+        );
+        let key = lexique_storage::request_speech(
+            &mut connection,
+            &spec,
+            Some(vocabulary_id),
+            crate::speech_tasks::now()?,
+            regenerate.unwrap_or(false),
+        )
+        .map_err(|e| e.to_string())?;
+        drop(connection);
+        let tasks = app.state::<crate::speech_tasks::SpeechTasks>();
+        tasks.wake()?;
+        tasks.wait(key)
     })
     .await
-    .map_err(|error| format!("Speech task failed: {error}"))?
-}
-
-static SPEECH_GENERATION: std::sync::Mutex<()> = std::sync::Mutex::new(());
-
-fn synthesize_speech(
-    resources: &std::path::Path,
-    text: &str,
-    voice: &str,
-) -> Result<Vec<u8>, String> {
-    let request = serde_json::to_vec(&serde_json::json!({ "text": text, "voice": voice }))
-        .map_err(|error| error.to_string())?;
-    let mut command = Command::new(resources.join("runtime/python.exe"));
-    command
-        .args([
-            "-I",
-            "-X",
-            "utf8",
-            "-c",
-            include_str!("../speech_worker.py"),
-        ])
-        .arg(resources.join("assets"))
-        .arg(resources.join("opusenc.dll"))
-        .stdin(Stdio::piped())
-        .stdout(Stdio::piped())
-        .stderr(Stdio::piped());
-    #[cfg(target_os = "windows")]
-    {
-        use std::os::windows::process::CommandExt;
-        command.creation_flags(0x0800_0000);
-    }
-    let mut child = command
-        .spawn()
-        .map_err(|error| format!("Could not start offline speech: {error}"))?;
-    let input = child
-        .stdin
-        .take()
-        .ok_or_else(|| "Speech input unavailable".to_string());
-    let input_result = input.and_then(|mut input| {
-        input
-            .write_all(&request)
-            .map_err(|error| format!("Could not send speech request: {error}"))
-    });
-    if let Err(error) = input_result {
-        let _ = child.kill();
-        let _ = child.wait();
-        return Err(error);
-    }
-    let output = child
-        .wait_with_output()
-        .map_err(|error| format!("Speech process failed: {error}"))?;
-    if !output.status.success() {
-        return Err(format!(
-            "Offline speech failed: {}",
-            String::from_utf8_lossy(&output.stderr)
-                .chars()
-                .take(2048)
-                .collect::<String>()
-        ));
-    }
-    if output.stdout.len() > 10_000_000 || !output.stdout.starts_with(b"OggS") {
-        return Err("Offline speech returned invalid audio".into());
-    }
-    Ok(output.stdout)
+    .map_err(|e| format!("Speech task failed: {e}"))?
 }
 
 #[tauri::command]
@@ -610,29 +622,175 @@ pub async fn speech_preview(
     path: State<'_, DatabasePath>,
     text: String,
 ) -> Result<Vec<u8>, String> {
-    if text.trim().is_empty() || text.chars().count() > 200 || text.chars().any(char::is_control) {
-        return Err("Invalid speech text".into());
-    }
     let path = DatabasePath(path.0.clone());
-    let resources = app
-        .path()
-        .resource_dir()
-        .map_err(|error| error.to_string())?
-        .join("speech");
     tauri::async_runtime::spawn_blocking(move || {
-        let _guard = SPEECH_GENERATION
-            .lock()
-            .map_err(|error| error.to_string())?;
-        let preferences = lexique_storage::speech_preferences(&open(&path)?)
-            .map_err(|error| error.to_string())?;
-        let voice = match preferences.voice {
-            lexique_storage::SpeechVoice::Female => "female",
-            lexique_storage::SpeechVoice::Male => "male",
-        };
-        synthesize_speech(&resources, &text, voice)
+        let mut connection = open(&path)?;
+        let spec = lexique_storage::SpeechSpec::word(
+            &text,
+            lexique_storage::speech_preferences(&connection)
+                .map_err(|e| e.to_string())?
+                .voice,
+        );
+        let key = spec.key().map_err(|e| e.to_string())?;
+        let inspector = crate::speech_cache::Inspector::new(&path.0)?;
+        if let Some(bytes) = crate::speech_tasks::cached_asset(
+            &connection,
+            &inspector,
+            &key,
+            crate::speech_tasks::now()?,
+        )? {
+            return Ok(bytes);
+        }
+        lexique_storage::request_speech(
+            &mut connection,
+            &spec,
+            None,
+            crate::speech_tasks::now()?,
+            false,
+        )
+        .map_err(|e| e.to_string())?;
+        drop(connection);
+        let tasks = app.state::<crate::speech_tasks::SpeechTasks>();
+        tasks.wake()?;
+        tasks.wait(key)
     })
     .await
-    .map_err(|error| format!("Speech task failed: {error}"))?
+    .map_err(|e| format!("Speech preview task failed: {e}"))?
+}
+
+#[derive(serde::Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct BatchInput {
+    operation: String,
+    vocabulary_ids: Vec<i64>,
+}
+
+#[tauri::command]
+pub async fn review_add_batch(
+    app: tauri::AppHandle,
+    path: State<'_, DatabasePath>,
+    request: BatchInput,
+) -> Result<lexique_storage::BatchStatus, String> {
+    let path = DatabasePath(path.0.clone());
+    tauri::async_runtime::spawn_blocking(move || {
+        let result = lexique_storage::add_review_batch_observed(
+            &mut open(&path)?,
+            &request.operation,
+            &request.vocabulary_ids,
+            crate::speech_tasks::now()?,
+            || crate::speech_tasks::changed(&app),
+        )
+        .map_err(|e| e.to_string())?;
+        app.state::<crate::speech_tasks::SpeechTasks>().wake()?;
+        crate::speech_tasks::changed(&app);
+        Ok(result)
+    })
+    .await
+    .map_err(|e| format!("Review batch task failed: {e}"))?
+}
+
+#[tauri::command]
+pub async fn review_batch_status(
+    path: State<'_, DatabasePath>,
+    operation: Option<String>,
+) -> Result<Option<lexique_storage::BatchStatus>, String> {
+    if operation
+        .as_ref()
+        .is_some_and(|s| s.is_empty() || s.len() > 128)
+    {
+        return Err("Invalid batch operation".into());
+    }
+    let path = DatabasePath(path.0.clone());
+    tauri::async_runtime::spawn_blocking(move || {
+        let connection = open(&path)?;
+        match operation {
+            Some(operation) => lexique_storage::batch_status(&connection, &operation)
+                .map(Some)
+                .map_err(|e| e.to_string()),
+            None => lexique_storage::latest_batch(&connection).map_err(|e| e.to_string()),
+        }
+    })
+    .await
+    .map_err(|e| format!("Review batch status failed: {e}"))?
+}
+
+#[tauri::command]
+pub async fn review_cancel_batch(
+    app: tauri::AppHandle,
+    path: State<'_, DatabasePath>,
+    operation: String,
+) -> Result<(), String> {
+    if operation.is_empty() || operation.len() > 128 {
+        return Err("Invalid batch operation".into());
+    }
+    let path = DatabasePath(path.0.clone());
+    tauri::async_runtime::spawn_blocking(move || {
+        lexique_storage::cancel_batch(&open(&path)?, &operation).map_err(|e| e.to_string())?;
+        app.state::<crate::speech_tasks::SpeechTasks>().wake()?;
+        crate::speech_tasks::changed(&app);
+        Ok(())
+    })
+    .await
+    .map_err(|e| format!("Review cancellation failed: {e}"))?
+}
+
+#[tauri::command]
+pub async fn speech_retry_missing(
+    app: tauri::AppHandle,
+    path: State<'_, DatabasePath>,
+) -> Result<u32, String> {
+    let path = DatabasePath(path.0.clone());
+    tauri::async_runtime::spawn_blocking(move || {
+        let mut connection = open(&path)?;
+        let inspector = crate::speech_cache::Inspector::new(&path.0)?;
+        let inventory =
+            lexique_storage::review_card_inventory(&connection).map_err(|e| e.to_string())?;
+        let mut count = 0;
+        for card in inventory.iter().filter(|card| card.kind == "listening") {
+            if count >= 32 {
+                break;
+            }
+            let cached = crate::speech_tasks::cached_word(
+                &connection,
+                &inspector,
+                card.vocabulary_id,
+                crate::speech_tasks::now()?,
+            );
+            let replace = match cached {
+                Ok(Some(_)) => continue,
+                Ok(None) => false,
+                Err(error)
+                    if error == "Invalid cached speech audio"
+                        || error == "Cached speech content checksum mismatch" =>
+                {
+                    true
+                }
+                Err(error) => return Err(error),
+            };
+            let record =
+                lexique_storage::get(&connection, card.vocabulary_id).map_err(|e| e.to_string())?;
+            let spec = lexique_storage::SpeechSpec::word(
+                &record.headword,
+                lexique_storage::speech_preferences(&connection)
+                    .map_err(|e| e.to_string())?
+                    .voice,
+            );
+            lexique_storage::request_speech(
+                &mut connection,
+                &spec,
+                Some(card.vocabulary_id),
+                crate::speech_tasks::now()?,
+                replace,
+            )
+            .map_err(|e| e.to_string())?;
+            count += 1;
+        }
+        app.state::<crate::speech_tasks::SpeechTasks>().wake()?;
+        crate::speech_tasks::changed(&app);
+        Ok(count)
+    })
+    .await
+    .map_err(|e| format!("Missing speech demand failed: {e}"))?
 }
 
 #[tauri::command]
@@ -655,6 +813,7 @@ pub async fn vocabulary_sort(
 
 #[tauri::command]
 pub async fn speech_preferences(
+    app: tauri::AppHandle,
     path: State<'_, DatabasePath>,
     preferences: Option<lexique_storage::SpeechPreferences>,
 ) -> Result<lexique_storage::SpeechPreferences, String> {
@@ -664,6 +823,7 @@ pub async fn speech_preferences(
         if let Some(preferences) = preferences {
             lexique_storage::set_speech_preferences(&connection, &preferences)
                 .map_err(|error| error.to_string())?;
+            crate::speech_tasks::changed(&app);
         }
         lexique_storage::speech_preferences(&connection).map_err(|error| error.to_string())
     })
@@ -673,6 +833,7 @@ pub async fn speech_preferences(
 
 #[tauri::command]
 pub async fn review_settings(
+    app: tauri::AppHandle,
     path: State<'_, DatabasePath>,
     settings: Option<lexique_storage::ReviewSettings>,
 ) -> Result<lexique_storage::ReviewSettings, String> {
@@ -682,6 +843,7 @@ pub async fn review_settings(
         if let Some(settings) = settings {
             lexique_storage::set_review_settings(&connection, &settings)
                 .map_err(|error| error.to_string())?;
+            crate::speech_tasks::changed(&app);
         }
         lexique_storage::review_settings(&connection).map_err(|error| error.to_string())
     })
@@ -691,6 +853,7 @@ pub async fn review_settings(
 
 #[tauri::command]
 pub fn finish_close(app: tauri::AppHandle) -> Result<(), String> {
+    app.state::<crate::speech_tasks::SpeechTasks>().shutdown()?;
     app.get_webview_window("main")
         .ok_or("Main window unavailable")?
         .destroy()

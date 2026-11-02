@@ -57,6 +57,14 @@ const queueViewSchema = z.object({ queue: z.object({ cards: z.array(queueCardSch
   .refine((value) => value.queue.cards.length ? value.record?.id === value.queue.cards[0]?.vocabulary_id : value.record === null, 'Invalid queue record');
 export type QueueView = z.infer<typeof queueViewSchema>;
 
+export const batchRequestSchema = z.object({ operation: z.string().min(1).max(128), vocabulary_ids: z.array(z.number().int().positive().safe()).min(1).max(10_000) }).strict().readonly();
+const batchSchema = z.object({ operation: z.string().min(1).max(128), cancelled: z.boolean(), items: z.array(z.object({
+  vocabulary_id: z.number().int().safe(), created_cards: z.number().int().min(0).max(2), error: z.string().nullable(),
+  audio_state: z.enum(['queued', 'running', 'retry_wait', 'ready', 'failed', 'cancelled']).nullable(), audio_error: z.string().nullable(),
+}).strict().readonly()).max(10_000).readonly() }).strict().readonly();
+export type BatchRequest = z.infer<typeof batchRequestSchema>;
+export type BatchStatus = z.infer<typeof batchSchema>;
+
 export interface RuntimeAdapter {
   readonly getStatus: () => Promise<RuntimeStatus | null>;
   readonly lookupDictionary: (key: string) => Promise<DictionaryLookup | null>;
@@ -66,6 +74,11 @@ export interface RuntimeAdapter {
   readonly vocabularySort: (sort?: VocabularySort) => Promise<VocabularySort | null>;
   readonly speechPreferences: (preferences?: SpeechPreferences) => Promise<SpeechPreferences | null>;
   readonly addReview: (id: number) => Promise<readonly ReviewCard[] | null>;
+  readonly addReviewBatch: (request: BatchRequest) => Promise<BatchStatus | null>;
+  readonly reviewBatchStatus: (operation?: string) => Promise<BatchStatus | null>;
+  readonly cancelReviewBatch: (operation: string) => Promise<void>;
+  readonly retryMissingSpeech: () => Promise<number | null>;
+  readonly onReviewChanged: (callback: () => void) => Promise<() => void>;
   readonly reviewCards: (id: number) => Promise<readonly ReviewCard[] | null>;
   readonly reviewPause: (id: number, paused?: boolean) => Promise<boolean | null>;
   readonly reviewAutoEnroll: (enabled?: boolean) => Promise<boolean | null>;
@@ -84,6 +97,29 @@ export interface RuntimeAdapter {
 }
 
 export const runtime: RuntimeAdapter = {
+  async addReviewBatch(request) {
+    if (!isTauri()) return null;
+    const valid = batchRequestSchema.parse(request);
+    const result = batchSchema.parse(await invoke('review_add_batch', { request: valid }));
+    const ids = new Set(valid.vocabulary_ids);
+    if (result.operation !== valid.operation || result.items.length !== ids.size || !result.items.every((item) => ids.delete(item.vocabulary_id))) throw new Error('Invalid batch response identity');
+    return result;
+  },
+  async reviewBatchStatus(operation) {
+    if (!isTauri()) return null;
+    return batchSchema.nullable().parse(await invoke('review_batch_status', { operation: operation === undefined ? null : z.string().min(1).max(128).parse(operation) }));
+  },
+  async cancelReviewBatch(operation) {
+    if (isTauri()) await invoke('review_cancel_batch', { operation: z.string().min(1).max(128).parse(operation) });
+  },
+  async retryMissingSpeech() {
+    if (!isTauri()) return null;
+    return z.number().int().min(0).max(100).parse(await invoke('speech_retry_missing'));
+  },
+  async onReviewChanged(callback) {
+    if (!isTauri()) return () => {};
+    return listen('lexique-review-changed', (event) => { z.null().parse(event.payload); callback(); });
+  },
   async getStatus() {
     if (!isTauri()) return null;
     return runtimeStatusSchema.parse(await invoke('runtime_status'));

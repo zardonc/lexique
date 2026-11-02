@@ -669,6 +669,7 @@ fn legacy_schema_upgrade_undo_retry_survives_reopening() {
         )
         .unwrap();
         connection.execute("UPDATE review_ratings SET queue_before = json_remove(queue_before, '$.ordered_cards')", []).unwrap();
+        connection.execute_batch("DROP TABLE review_batch_items; DROP TABLE review_batches; DROP TABLE speech_tasks; DROP TABLE speech_owners; DROP TABLE legacy_speech; DROP TABLE speech_assets;").unwrap();
         connection.execute_batch("DROP TABLE review_paused; DROP INDEX review_ratings_undo_operation; ALTER TABLE review_ratings DROP COLUMN undo_operation; ALTER TABLE review_ratings DROP COLUMN undo_queue_rebuilt; ALTER TABLE vocabulary DROP COLUMN example_fr; ALTER TABLE vocabulary DROP COLUMN example_zh; ALTER TABLE vocabulary DROP COLUMN more_examples; ALTER TABLE vocabulary DROP COLUMN example_sense; PRAGMA user_version = 5;").unwrap();
     }
     {

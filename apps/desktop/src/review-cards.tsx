@@ -180,6 +180,8 @@ function useReviewCards({ id, runtime, text, onChanged }: {
   const [loading, setLoading] = useState(true);
   const [audio, setAudio] = useState<Uint8Array | null>(null);
   const [playbackFailed, setPlaybackFailed] = useState(false);
+  const mounted = useRef(true);
+  useEffect(() => { mounted.current = true; return () => { mounted.current = false; }; }, [id]);
   const { paused, changePause } = usePause({ id, runtime, text, setError, setBusy });
   useEffect(() => {
     let active = true;
@@ -203,16 +205,18 @@ function useReviewCards({ id, runtime, text, onChanged }: {
     try {
       const result = await runtime.addReview(id);
       if (!result) throw new Error('Native review storage unavailable');
+      if (!mounted.current) return;
       setCards(result);
       onChanged();
       if (!audio || playbackFailed) {
         const generated = await runtime.generateSpeech(id, playbackFailed);
         if (!generated) throw new Error('Native speech unavailable');
+        if (!mounted.current) return;
         setAudio(generated);
         setPlaybackFailed(false);
       }
-    } catch (cause) { setError(errorMessage(cause)); }
-    finally { setBusy(false); }
+    } catch (cause) { if (mounted.current) setError(errorMessage(cause)); }
+    finally { if (mounted.current) setBusy(false); }
   }
   return { cards, error, busy, loading, audio, playbackFailed, setPlaybackFailed, paused, add, changePause };
 }

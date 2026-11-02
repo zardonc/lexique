@@ -11,7 +11,7 @@ import unittest
 
 
 class SpeechCleanupTest(unittest.TestCase):
-    def test_cleanup_waits_for_other_process_cache_lock(self):
+    def test_cleanup_busy_lock_is_bounded_and_retried_on_restart(self):
         executable = os.environ.get("LEXIQUE_TEST_EXECUTABLE")
         if os.name != "nt" or not executable:
             self.skipTest("Windows release executable is required")
@@ -22,7 +22,7 @@ class SpeechCleanupTest(unittest.TestCase):
             shutil.copy2(executable, application)
             cache = root / "Lexique-data" / "temp" / "speech"
             cache.mkdir(parents=True)
-            expired = cache / "1.ogg"
+            expired = cache / ".1-123-456.tmp"
             expired.write_bytes(b"OggS test")
             old = time.time() - 8 * 24 * 60 * 60
             os.utime(expired, (old, old))
@@ -41,15 +41,28 @@ class SpeechCleanupTest(unittest.TestCase):
                 while not database.exists() and process.poll() is None and time.monotonic() < deadline:
                     time.sleep(0.1)
                 self.assertTrue(database.exists())
-                self.assertTrue(expired.exists(), "cleanup must wait for the other process")
-                lock.seek(0)
-                msvcrt.locking(lock.fileno(), msvcrt.LK_UNLCK, 1)
+                log = root / "Lexique-data" / "logs" / "speech-cache.log"
+                deadline = time.monotonic() + 15
+                while not log.exists() and process.poll() is None and time.monotonic() < deadline:
+                    time.sleep(0.1)
+                self.assertTrue(log.exists(), "busy lock must return a diagnostic within the bound")
+                self.assertIn(b"Speech cache is busy", log.read_bytes())
+                self.assertIsNone(process.poll(), "cache contention must preserve learning UI")
+                self.assertTrue(expired.exists(), "locked files must remain")
+            finally:
+                lock.close()
+                subprocess.run(["taskkill", "/PID", str(process.pid), "/T", "/F"],
+                               check=False, capture_output=True)
+                process.wait(timeout=15)
+                time.sleep(1)
+            process = subprocess.Popen([str(application)], cwd=root,
+                env=dict(os.environ, WEBVIEW2_ADDITIONAL_BROWSER_ARGUMENTS="--disable-gpu"), startupinfo=startup)
+            try:
                 deadline = time.monotonic() + 15
                 while expired.exists() and process.poll() is None and time.monotonic() < deadline:
                     time.sleep(0.1)
-                self.assertFalse(expired.exists(), "cleanup should resume after lock release")
+                self.assertFalse(expired.exists(), "restart should retry cleanup after lock release")
             finally:
-                lock.close()
                 subprocess.run(["taskkill", "/PID", str(process.pid), "/T", "/F"],
                                check=False, capture_output=True)
                 process.wait(timeout=15)
@@ -98,7 +111,7 @@ class SpeechCleanupTest(unittest.TestCase):
 
             cache.unlink()
             cache.mkdir()
-            expired = cache / "1.ogg"
+            expired = cache / ".1-123-456.tmp"
             expired.write_bytes(b"OggS test")
             old = time.time() - 8 * 24 * 60 * 60
             os.utime(expired, (old, old))
@@ -149,10 +162,10 @@ class SpeechCleanupTest(unittest.TestCase):
             process = subprocess.Popen([str(application)], cwd=root, env=environment, startupinfo=startup)
             try:
                 deadline = time.monotonic() + 15
-                while expired.exists() and process.poll() is None and time.monotonic() < deadline:
+                while abandoned.exists() and process.poll() is None and time.monotonic() < deadline:
                     time.sleep(0.1)
                 self.assertIsNone(process.poll(), "desktop app exited during cleanup")
-                self.assertFalse(expired.exists(), "expired audio should be removed")
+                self.assertTrue(expired.exists(), "legacy audio with unknown generation time must remain")
                 self.assertFalse(abandoned.exists(), "abandoned app-owned temporary audio should expire")
                 self.assertTrue(recent.exists(), "recent audio should remain")
                 self.assertTrue(temporary_recent.exists(), "recent temporary audio should remain")

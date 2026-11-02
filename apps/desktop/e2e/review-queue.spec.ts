@@ -1,24 +1,23 @@
 import { expect, test } from '@playwright/test';
 import { nativeFixture, record } from './native-fixture';
 
-test('queue shows one combined count', async ({ page }) => {
+test('queue shows one combined count and applies new eligibility after advancing', async ({ page }) => {
   const cards = [{ id: 1, vocabulary_id: 1, kind: 'recognition' }, { id: 2, vocabulary_id: 1, kind: 'listening' }];
   await nativeFixture(page, { review_queue: [
-    { value: { queue: { cards, reason: null, available_at: null }, record, audio_pending: false, audio_error: null } },
     { value: { queue: { cards, reason: null, available_at: null }, record, audio_pending: false, audio_error: null } },
     { value: { queue: { cards: [], reason: 'quota', available_at: null }, record: null, audio_pending: false, audio_error: null } },
   ] });
   await page.goto('/');
   await page.getByRole('button', { name: '闪卡复习', exact: true }).click();
   await expect(page.getByText('待复习：2 张')).toBeVisible();
-  await page.getByRole('button', { name: '刷新队列' }).click();
+  await page.getByRole('button', { name: '跳过', exact: true }).click();
   await expect(page.getByText('今日额度已用完')).toBeVisible();
 });
 
 test('skipping recognition opens the queued listening card without rating', async ({ page }) => {
   const recognition = { queue: { cards: [{ id: 1, vocabulary_id: 1, kind: 'recognition' }, { id: 2, vocabulary_id: 1, kind: 'listening' }], reason: null, available_at: null }, record, audio_pending: false, audio_error: null };
   const listening = { queue: { cards: [{ id: 2, vocabulary_id: 1, kind: 'listening' }], reason: null, available_at: null }, record, audio_pending: false, audio_error: null };
-  await nativeFixture(page, { review_queue: [{ value: recognition }, { value: recognition }, { value: listening }], speech_cached: [{ value: [79, 103, 103, 83] }] });
+  await nativeFixture(page, { review_queue: [{ value: recognition }, { value: listening }], speech_cached: [{ value: [79, 103, 103, 83] }] });
   await page.goto('/');
   await page.getByRole('button', { name: '闪卡复习', exact: true }).click();
   await page.getByRole('region', { name: '复习卡片' }).getByRole('button', { name: '跳过', exact: true }).click();
@@ -31,7 +30,6 @@ test('skipping recognition opens the queued listening card without rating', asyn
 test('review queue displays a card and refreshes after rating', async ({ page }) => {
   const progress = { revision: 0, card: { phase: 'new', memory: null, last_review_at: null, due_at: null } };
   await nativeFixture(page, { review_queue: [
-    { value: { queue: { cards: [{ id: 1, vocabulary_id: 1, kind: 'recognition' }], reason: null, available_at: null }, record, audio_pending: false, audio_error: null } },
     { value: { queue: { cards: [{ id: 1, vocabulary_id: 1, kind: 'recognition' }], reason: null, available_at: null }, record, audio_pending: false, audio_error: null } },
     { value: { queue: { cards: [], reason: 'due', available_at: 1_800_000_000 }, record: null, audio_pending: false, audio_error: null } },
   ], review_rate: [{ value: { status: 'committed', result: { card: progress.card, elapsed_days: 0, step_seconds: 60, interval_days: null, model: { version: 'test', parameters: [] }, retention_percent: 90, timezone_database: 'test' } } }] });
@@ -55,7 +53,7 @@ for (const phase of ['new', 'learning_first', 'review'] as const) {
     const empty = { queue: { cards: [], reason: null, available_at: null }, record: null, audio_pending: false, audio_error: null };
     const restored = { queue: { cards: [{ id: 1, vocabulary_id: 1, kind: 'recognition' }], reason: null, available_at: null }, record, audio_pending: false, audio_error: null };
     await nativeFixture(page, {
-      review_queue: [{ value: empty }, { value: empty }, { value: restored }, { value: empty }],
+      review_queue: [{ value: empty }, { value: restored }, { value: empty }],
       review_undo_target: [{ value: 'last-rating' }],
       review_progress: [{ value: { revision: 2, card } }],
       review_rate: [{ value: { status: 'committed', result: { card, elapsed_days: 0, step_seconds: null, interval_days: 1,
@@ -129,7 +127,7 @@ test('skipping failed listening playback advances without rating', async ({ page
   await page.addInitScript(() => { HTMLMediaElement.prototype.play = () => Promise.reject(new Error('speaker unavailable')); });
   const listening = { queue: { cards: [{ id: 2, vocabulary_id: 1, kind: 'listening' }], reason: null, available_at: null }, record, audio_pending: false, audio_error: null };
   const recognition = { queue: { cards: [{ id: 1, vocabulary_id: 1, kind: 'recognition' }], reason: null, available_at: null }, record, audio_pending: false, audio_error: null };
-  await nativeFixture(page, { review_queue: [{ value: listening }, { value: listening }, { value: recognition }], speech_cached: [{ value: [79, 103, 103, 83] }] });
+  await nativeFixture(page, { review_queue: [{ value: listening }, { value: recognition }], speech_cached: [{ value: [79, 103, 103, 83] }] });
   await page.goto('/');
   await page.getByRole('button', { name: '闪卡复习', exact: true }).click();
   await expect(page.getByRole('alert')).toContainText('speaker unavailable');

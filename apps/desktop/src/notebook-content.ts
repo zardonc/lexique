@@ -2,6 +2,8 @@ import type { Locale } from './content';
 
 export const notebookMessages = {
   zh: {
+    batchProgress: '批量任务', cardsCreated: '已创建卡片', audioProgress: '音频完成', stopAudio: '停止剩余音频生成', audioCancelled: '已停止剩余生成；卡片与完成音频保留',
+    pageSize: '每页词数', previousPage: '上一页', nextPage: '下一页',
     exampleSense: '例句对应释义', exampleSenseUnspecified: '未指定释义', exampleSenseRequired: '请为新增或修改的例句选择释义。',
     summary: '基本词汇信息', fallback: '收藏时的只读摘要', original: '词典原文', notes: '独立笔记', exampleFr: '法语例句', exampleZh: '例句中文译文', exampleUser: '个人例句', exampleLimit: '例句每项不能超过 20,000 个字符。',
     pronunciation: '音标', grammar: '语法', translation: '中文译义', missing: '未提供', moreExamples: '更多例句', addExample: '添加例句', removeExample: '删除例句',
@@ -22,10 +24,12 @@ export const notebookMessages = {
     listeningReady: '听音卡：语音已生成',
     listening: '听音卡', openListening: '查看听音卡', replay: '重播', playWord: '播放单词', skip: '跳过', machineVoice: '机器合成语音', playbackError: '播放失败',
     ratings: ['忘记', '困难', '记得', '轻松'], ratingHint: '困难表示想起但费力；未想起请选择忘记。', ratingWait: '尚未到期', ratingUnavailable: '评分不可用',
-    selectAll: '全选当前搜索结果', select: '选择', batchAdd: '批量加入复习', batchPause: '批量暂停复习', batchResume: '批量恢复复习', success: '成功', failed: '失败', audioFailed: '卡片已加入，语音失败', pause: '暂停复习', resume: '恢复复习', paused: '复习已暂停',
+    selectAll: '选择本页', select: '选择', batchAdd: '批量加入复习', batchPause: '批量暂停复习', batchResume: '批量恢复复习', success: '成功', failed: '失败', audioFailed: '卡片已加入，语音失败', pause: '暂停复习', resume: '恢复复习', paused: '复习已暂停',
     availability: { due: '尚未到期', quota: '今日额度已用完', deferred: '同词卡片暂缓', paused: '复习已暂停', clock: '设备时间早于最近评分，请检查时间', conflict: '卡片已被其他操作修改', invalid: '评分请求无效' },
   },
   en: {
+    batchProgress: 'Batch tasks', cardsCreated: 'Cards created', audioProgress: 'Audio complete', stopAudio: 'Stop remaining audio', audioCancelled: 'Remaining generation stopped; cards and completed audio kept',
+    pageSize: 'Words per page', previousPage: 'Previous page', nextPage: 'Next page',
     exampleSense: 'Meaning for examples', exampleSenseUnspecified: 'Meaning not specified', exampleSenseRequired: 'Select a meaning for new or edited examples.',
     summary: 'Word summary', fallback: 'Read-only summary saved at collection', original: 'Dictionary text', notes: 'Personal notes', exampleFr: 'French example', exampleZh: 'Chinese translation of example', exampleUser: 'Personal example', exampleLimit: 'Each example field must be at most 20,000 characters.',
     pronunciation: 'Pronunciation', grammar: 'Grammar', translation: 'Chinese translation', missing: 'Not provided', moreExamples: 'More examples', addExample: 'Add example', removeExample: 'Remove example',
@@ -46,10 +50,12 @@ export const notebookMessages = {
     listeningReady: 'Listening card: audio generated',
     listening: 'Listening card', openListening: 'Open listening card', replay: 'Replay', playWord: 'Play word', skip: 'Skip', machineVoice: 'Machine-generated speech', playbackError: 'Playback failed',
     ratings: ['Again', 'Hard', 'Good', 'Easy'], ratingHint: 'Hard means recalled with effort; choose Again if you did not recall.', ratingWait: 'Not due yet', ratingUnavailable: 'Rating unavailable',
-    selectAll: 'Select all search results', select: 'Select', batchAdd: 'Add selected to review', batchPause: 'Pause selected', batchResume: 'Resume selected', success: 'Succeeded', failed: 'Failed', audioFailed: 'Cards added; audio failed', pause: 'Pause review', resume: 'Resume review', paused: 'Review paused',
+    selectAll: 'Select this page', select: 'Select', batchAdd: 'Add selected to review', batchPause: 'Pause selected', batchResume: 'Resume selected', success: 'Succeeded', failed: 'Failed', audioFailed: 'Cards added; audio failed', pause: 'Pause review', resume: 'Resume review', paused: 'Review paused',
     availability: { due: 'Not due yet', quota: 'Daily limit reached', deferred: 'Other card deferred', paused: 'Review paused', clock: 'Device time is before the last rating; check the clock', conflict: 'Card changed in another operation', invalid: 'Invalid rating request' },
   },
   fr: {
+    batchProgress: 'Tâches du lot', cardsCreated: 'Cartes créées', audioProgress: 'Audio terminé', stopAudio: 'Arrêter les audios restants', audioCancelled: 'Génération restante arrêtée ; cartes et audios terminés conservés',
+    pageSize: 'Mots par page', previousPage: 'Page précédente', nextPage: 'Page suivante',
     exampleSense: 'Sens des exemples', exampleSenseUnspecified: 'Sens non précisé', exampleSenseRequired: 'Choisissez un sens pour les exemples ajoutés ou modifiés.',
     summary: 'Résumé du mot', fallback: 'Résumé en lecture seule conservé à l’ajout', original: 'Texte du dictionnaire', notes: 'Notes personnelles', exampleFr: 'Exemple en français', exampleZh: 'Traduction chinoise de l’exemple', exampleUser: 'Exemple personnel', exampleLimit: 'Chaque champ d’exemple est limité à 20 000 caractères.',
     pronunciation: 'Prononciation', grammar: 'Grammaire', translation: 'Traduction chinoise', missing: 'Non fourni', moreExamples: 'Autres exemples', addExample: 'Ajouter un exemple', removeExample: 'Supprimer l’exemple',
@@ -70,7 +76,7 @@ export const notebookMessages = {
     listeningReady: 'Carte d’écoute : audio généré',
     listening: 'Carte d’écoute', openListening: 'Voir la carte d’écoute', replay: 'Réécouter', playWord: 'Écouter le mot', skip: 'Passer', machineVoice: 'Voix de synthèse', playbackError: 'Échec de la lecture',
     ratings: ['Oublié', 'Difficile', 'Retenu', 'Facile'], ratingHint: 'Difficile signifie retrouvé avec effort ; sinon choisissez Oublié.', ratingWait: 'Pas encore à réviser', ratingUnavailable: 'Évaluation indisponible',
-    selectAll: 'Sélectionner tous les résultats', select: 'Sélectionner', batchAdd: 'Ajouter la sélection aux révisions', batchPause: 'Suspendre la sélection', batchResume: 'Reprendre la sélection', success: 'Réussi', failed: 'Échec', audioFailed: 'Cartes ajoutées ; échec audio', pause: 'Suspendre les révisions', resume: 'Reprendre les révisions', paused: 'Révisions suspendues',
+    selectAll: 'Sélectionner cette page', select: 'Sélectionner', batchAdd: 'Ajouter la sélection aux révisions', batchPause: 'Suspendre la sélection', batchResume: 'Reprendre la sélection', success: 'Réussi', failed: 'Échec', audioFailed: 'Cartes ajoutées ; échec audio', pause: 'Suspendre les révisions', resume: 'Reprendre les révisions', paused: 'Révisions suspendues',
     availability: { due: 'Pas encore à réviser', quota: 'Limite quotidienne atteinte', deferred: 'Autre carte reportée', paused: 'Révisions suspendues', clock: 'L’heure précède la dernière évaluation ; vérifiez l’horloge', conflict: 'Carte modifiée par une autre opération', invalid: 'Évaluation invalide' },
   },
 } as const;

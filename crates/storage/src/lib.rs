@@ -9,6 +9,10 @@ mod speech;
 pub use speech::*;
 mod review;
 pub use review::*;
+mod speech_work;
+pub use speech_work::*;
+mod speech_demand;
+pub use speech_demand::*;
 
 const INITIAL_SCHEMA: &str = include_str!("../migrations/0001_initial.sql");
 
@@ -103,6 +107,9 @@ pub fn initialize(connection: &Connection) -> Result<u32, StorageError> {
     }
     if version < 10 {
         transaction.execute_batch(include_str!("../migrations/0010_example_sense.sql"))?;
+    }
+    if version < 11 {
+        transaction.execute_batch(include_str!("../migrations/0011_speech_work.sql"))?;
     }
     transaction.commit()?;
     Ok(DATABASE_SCHEMA_VERSION)

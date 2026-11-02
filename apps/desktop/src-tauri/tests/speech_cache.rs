@@ -52,6 +52,31 @@ impl Drop for Cache {
 }
 
 #[test]
+fn immutable_asset_versions_and_legacy_files_survive_targeted_gc() {
+    let cache = Cache::new();
+    let database = cache.database();
+    let key = "a".repeat(64);
+    let first = b"OggSfirst";
+    let second = b"OggSsecond";
+    let one = lexique_storage::content_hash(first);
+    let two = lexique_storage::content_hash(second);
+    speech_cache::write(&database, 1, b"OggSlegacy", false).unwrap();
+    speech_cache::write_asset(&database, &key, &one, first).unwrap();
+    speech_cache::write_asset(&database, &key, &two, second).unwrap();
+    let inspector = speech_cache::Inspector::new(&database).unwrap();
+    assert_eq!(inspector.read_asset(&key, &one).unwrap().unwrap(), first);
+    assert_eq!(inspector.read_asset(&key, &two).unwrap().unwrap(), second);
+    assert!(speech_cache::remove_asset(&database, &key, &one).unwrap());
+    assert!(!speech_cache::remove_asset(&database, &key, &one).unwrap());
+    assert!(inspector.read_asset(&key, &one).unwrap().is_none());
+    assert_eq!(inspector.read_asset(&key, &two).unwrap().unwrap(), second);
+    assert_eq!(inspector.legacy(1).unwrap().unwrap(), b"OggSlegacy");
+    assert!(speech_cache::write_asset(&database, &key, &one, second).is_err());
+    assert!(inspector.read_asset("../../escape", &two).is_err());
+    cache.assert_no_temporary();
+}
+
+#[test]
 fn publishes_new_audio_without_overwriting_an_existing_file() {
     let cache = Cache::new();
     let database = cache.database();

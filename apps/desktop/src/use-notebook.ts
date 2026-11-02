@@ -34,26 +34,6 @@ function needsExampleSense(editor: Editor) {
   return editor.example_sense === null && hasContent && !unchangedLegacy;
 }
 
-async function generateEnrolledAudio(runtime: RuntimeAdapter, id: number) {
-  const cards = await runtime.reviewCards(id);
-  if (!cards?.some((card) => card.kind === 'listening') || await runtime.cachedSpeech(id)) return false;
-  if (!await runtime.generateSpeech(id)) throw new Error('Native speech unavailable');
-  return true;
-}
-
-function needsAudio(result: SaveResult, id: number | null, accepted: boolean) {
-  return accepted && id === null && (result.outcome === 'created' || result.outcome === 'replayed');
-}
-
-function useEnrollmentAudio(runtime: RuntimeAdapter, refresh: () => void) {
-  const [audioError, setAudioError] = useState('');
-  async function generate(id: number) {
-    setAudioError('');
-    try { if (await generateEnrolledAudio(runtime, id)) refresh(); return true; }
-    catch (cause) { setAudioError(errorMessage(cause)); return false; }
-  }
-  return { audioError, clearAudioError: () => setAudioError(''), generate };
-}
 
 export function useNotebook(runtime: RuntimeAdapter) {
   const [editor, setEditor] = useState<Editor | null>(null);
@@ -63,11 +43,10 @@ export function useNotebook(runtime: RuntimeAdapter) {
   const [saved, setSaved] = useState(false);
   const [busy, setBusy] = useState(false);
   const [version, setVersion] = useState(0);
-  const audio = useEnrollmentAudio(runtime, () => setVersion((value) => value + 1));
   const operation = useRef<SaveRequest | null>(null); const saving = useRef(false);
   // A failed response can hide a committed update, even when input returns to its original text.
   const dirty = editor !== null && (editor.record === null || !samePayload({ ...savePayload(acceptRecord(editor.record)), operation: '' }, savePayload(editor)) || operation.current !== null);
-  function clear() { setEditor(null); setConflict(null); setExisting(null); setError(''); audio.clearAudioError(); setSaved(false); operation.current = null; }
+  function clear() { setEditor(null); setConflict(null); setExisting(null); setError(''); setSaved(false); operation.current = null; }
   function open(record: VocabularyRecord) { clear(); setEditor(acceptRecord(record)); }
   function collect(lookup: DictionaryLookup) {
     clear(); setEditor({ snapshot: snapshotFromLookup(lookup), record: null, notes: '', example_fr: '', example_zh: '', example_sense: null, more_examples: [] });
@@ -93,12 +72,11 @@ export function useNotebook(runtime: RuntimeAdapter) {
       const result = await runtime.saveVocabulary(operation.current!);
       if (!result) throw new Error('Native notebook storage unavailable');
       const accepted = applyResult(result, payload);
-      if (needsAudio(result, payload.id, accepted) && !await audio.generate(result.record.id)) return false;
       return accepted;
     } catch (cause) { setError(errorMessage(cause)); return false; }
     finally { saving.current = false; setBusy(false); }
   }
-  return { editor, conflict, existing, error, audioError: audio.audioError, saved, busy, dirty, meaningRequired: editor !== null && needsExampleSense(editor), version, save, clear, open, collect,
+  return { editor, conflict, existing, error, audioError: '', saved, busy, dirty, meaningRequired: editor !== null && needsExampleSense(editor), version, save, clear, open, collect,
     edit: (notes: string) => { setEditor((value) => value && { ...value, notes }); setSaved(false); setExisting(null); },
     editExample: (field: 'example_fr' | 'example_zh', text: string) => { setEditor((value) => value && { ...value, [field]: text }); setSaved(false); setExisting(null); },
     editSense: (example_sense: number | null) => { setEditor((value) => value && { ...value, example_sense }); setSaved(false); setExisting(null); }, editMore: (examples: VocabularyRecord['more_examples']) => { setEditor((value) => value && { ...value, more_examples: examples }); setSaved(false); setExisting(null); },

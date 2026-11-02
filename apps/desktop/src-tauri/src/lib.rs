@@ -5,6 +5,7 @@ use rusqlite::Connection;
 use tauri::{Emitter, Manager, State};
 
 mod speech_cache;
+mod speech_tasks;
 mod vocabulary;
 use vocabulary::{
     DatabasePath, finish_close, review_add, review_auto_enroll, review_availability, review_cards,
@@ -56,8 +57,13 @@ pub fn run() {
             let database_path = directory.join(DATABASE_FILENAME);
             let connection = Connection::open(&database_path)?;
             let schema_version = initialize(&connection)?;
-            #[cfg(windows)]
-            speech_cache::start_cleanup(database_path.clone());
+            drop(connection);
+            let resources = app.path().resource_dir()?.join("speech");
+            app.manage(speech_tasks::SpeechTasks::start(
+                app.handle().clone(),
+                database_path.clone(),
+                resources,
+            ));
             app.manage(DatabasePath(database_path));
             app.manage(RuntimeStatus {
                 version: app.package_info().version.to_string(),
@@ -82,6 +88,10 @@ pub fn run() {
             vocabulary_save,
             vocabulary_sort,
             review_add,
+            vocabulary::review_add_batch,
+            vocabulary::review_batch_status,
+            vocabulary::review_cancel_batch,
+            vocabulary::speech_retry_missing,
             review_pause,
             review_auto_enroll,
             review_cards,

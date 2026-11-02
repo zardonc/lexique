@@ -37,6 +37,35 @@ fn create(operation: &str, headword: &str, notes: &str) -> SaveRequest {
 }
 
 #[test]
+fn saving_a_favorite_protects_seconds_based_audio_independently_of_millisecond_note_timestamps() {
+    let mut connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    let now: i64 = connection
+        .query_row("SELECT unixepoch()", [], |row| row.get(0))
+        .unwrap();
+    let spec = lexique_storage::SpeechSpec::word("école", lexique_storage::SpeechVoice::Female);
+    let key = lexique_storage::register_speech(&connection, &spec).unwrap();
+    lexique_storage::publish_speech(&connection, &key, &"a".repeat(64), now).unwrap();
+    let result = save(
+        &mut connection,
+        &create("favorite-seconds", "école", "keep"),
+        Some(snapshot()),
+    )
+    .unwrap();
+    assert!(result.record.updated_at > now * 1000);
+    assert!(
+        lexique_storage::review_cards(&connection, result.record.id)
+            .unwrap()
+            .is_empty()
+    );
+    assert!(
+        lexique_storage::speech_asset(&connection, &key, now + 604800)
+            .unwrap()
+            .is_some()
+    );
+}
+
+#[test]
 fn explicit_save_creates_one_record_and_duplicate_collection_preserves_it() {
     let mut connection = Connection::open_in_memory().unwrap();
     initialize(&connection).unwrap();
@@ -149,7 +178,7 @@ fn example_meaning_survives_upgrade_and_rejects_out_of_range() {
     .unwrap()
     .record;
     connection
-        .execute_batch("ALTER TABLE vocabulary DROP COLUMN example_sense; PRAGMA user_version = 9;")
+        .execute_batch("DROP TABLE review_batch_items; DROP TABLE review_batches; DROP TABLE speech_tasks; DROP TABLE speech_owners; DROP TABLE legacy_speech; DROP TABLE speech_assets; ALTER TABLE vocabulary DROP COLUMN example_sense; PRAGMA user_version = 9;")
         .unwrap();
     initialize(&connection).unwrap();
     let migrated = get(&connection, original.id).unwrap();

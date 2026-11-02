@@ -317,6 +317,15 @@ pub fn save(
             record.id, outcome
         ],
     )?;
+    let audio_now = transaction.query_row("SELECT unixepoch()", [], |row| row.get(0))?;
+    crate::attach_word_audio_at(&transaction, record.id, audio_now)?;
+    if outcome == "created" && crate::auto_enroll(&transaction)? {
+        let spec = crate::SpeechSpec::word(
+            &record.headword,
+            crate::speech_preferences(&transaction)?.voice,
+        );
+        crate::demand_speech(&transaction, &spec, 1, audio_now, false)?;
+    }
     transaction.commit()?;
     Ok(SaveResult { outcome, record })
 }

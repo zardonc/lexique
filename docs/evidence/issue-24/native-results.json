@@ -1,0 +1,548 @@
+{
+  "product": {
+    "binarySha256": "1026d941075a32bcfaf9ec526cb907faf7a7f0307252b98bdcf4dfba679a4838",
+    "hardTimeoutSeconds": 60,
+    "result": {
+      "metrics": [
+        {
+          "command": "speech_preview",
+          "ms": 5097.199999988079
+        },
+        {
+          "command": "vocabulary_save",
+          "ms": 28.600000023841858
+        },
+        {
+          "command": "vocabulary_save",
+          "ms": 26.5
+        },
+        {
+          "command": "vocabulary_save",
+          "ms": 24.69999998807907
+        },
+        {
+          "command": "vocabulary_save",
+          "ms": 25.19999998807907
+        },
+        {
+          "command": "vocabulary_save",
+          "ms": 20.80000001192093
+        },
+        {
+          "command": "vocabulary_save",
+          "ms": 20.80000001192093
+        },
+        {
+          "command": "speech_preview",
+          "ms": 5.800000011920929
+        },
+        {
+          "command": "review_add_batch",
+          "ms": 10.900000035762787
+        },
+        {
+          "command": "review_queue",
+          "ms": 26
+        },
+        {
+          "command": "vocabulary_save",
+          "ms": 19.100000023841858
+        },
+        {
+          "command": "dictionary_lookup",
+          "ms": 19.600000023841858
+        },
+        {
+          "command": "review_rate",
+          "ms": 37
+        },
+        {
+          "command": "speech_preview",
+          "ms": 1067.699999988079
+        },
+        {
+          "command": "speech_cached",
+          "ms": 7.099999964237213
+        },
+        {
+          "command": "speech_cached",
+          "ms": 7.699999988079071
+        },
+        {
+          "command": "speech_cached",
+          "ms": 7.100000023841858
+        },
+        {
+          "command": "speech_cached",
+          "ms": 6.800000011920929
+        },
+        {
+          "command": "speech_cached",
+          "ms": 8.400000035762787
+        },
+        {
+          "command": "speech_cached",
+          "ms": 7
+        },
+        {
+          "command": "actual-play-start",
+          "ms": 36.30000001192093
+        }
+      ],
+      "ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "batch": {
+        "operation": "product-six",
+        "cancelled": false,
+        "items": [
+          {
+            "vocabulary_id": 1,
+            "created_cards": 2,
+            "error": null,
+            "audio_state": "ready",
+            "audio_error": null
+          },
+          {
+            "vocabulary_id": 2,
+            "created_cards": 2,
+            "error": null,
+            "audio_state": "queued",
+            "audio_error": null
+          },
+          {
+            "vocabulary_id": 3,
+            "created_cards": 2,
+            "error": null,
+            "audio_state": "queued",
+            "audio_error": null
+          },
+          {
+            "vocabulary_id": 4,
+            "created_cards": 2,
+            "error": null,
+            "audio_state": "queued",
+            "audio_error": null
+          },
+          {
+            "vocabulary_id": 5,
+            "created_cards": 2,
+            "error": null,
+            "audio_state": "queued",
+            "audio_error": null
+          },
+          {
+            "vocabulary_id": 6,
+            "created_cards": 2,
+            "error": null,
+            "audio_state": "queued",
+            "audio_error": null
+          }
+        ]
+      },
+      "duringCardCount": 7,
+      "status": {
+        "operation": "product-six",
+        "cancelled": false,
+        "items": [
+          {
+            "vocabulary_id": 1,
+            "created_cards": 2,
+            "error": null,
+            "audio_state": "ready",
+            "audio_error": null
+          },
+          {
+            "vocabulary_id": 2,
+            "created_cards": 2,
+            "error": null,
+            "audio_state": "ready",
+            "audio_error": null
+          },
+          {
+            "vocabulary_id": 3,
+            "created_cards": 2,
+            "error": null,
+            "audio_state": "ready",
+            "audio_error": null
+          },
+          {
+            "vocabulary_id": 4,
+            "created_cards": 2,
+            "error": null,
+            "audio_state": "ready",
+            "audio_error": null
+          },
+          {
+            "vocabulary_id": 5,
+            "created_cards": 2,
+            "error": null,
+            "audio_state": "ready",
+            "audio_error": null
+          },
+          {
+            "vocabulary_id": 6,
+            "created_cards": 2,
+            "error": null,
+            "audio_state": "ready",
+            "audio_error": null
+          }
+        ]
+      },
+      "decoded": [
+        {
+          "channels": 1,
+          "duration": 1.3551666666666666,
+          "finite": true,
+          "audible": true
+        },
+        {
+          "channels": 1,
+          "duration": 1.3735416666666667,
+          "finite": true,
+          "audible": true
+        },
+        {
+          "channels": 1,
+          "duration": 1.3479166666666667,
+          "finite": true,
+          "audible": true
+        },
+        {
+          "channels": 1,
+          "duration": 1.3455,
+          "finite": true,
+          "audible": true
+        },
+        {
+          "channels": 1,
+          "duration": 1.3645208333333334,
+          "finite": true,
+          "audible": true
+        },
+        {
+          "channels": 1,
+          "duration": 1.3460833333333333,
+          "finite": true,
+          "audible": true
+        }
+      ],
+      "interactiveBytes": 8205,
+      "dictionaryCount": 1,
+      "edited": "concurrent",
+      "rated": "committed"
+    },
+    "restored": {
+      "status": {
+        "operation": "product-six",
+        "cancelled": false,
+        "items": [
+          {
+            "vocabulary_id": 1,
+            "created_cards": 2,
+            "error": null,
+            "audio_state": "ready",
+            "audio_error": null
+          },
+          {
+            "vocabulary_id": 2,
+            "created_cards": 2,
+            "error": null,
+            "audio_state": "ready",
+            "audio_error": null
+          },
+          {
+            "vocabulary_id": 3,
+            "created_cards": 2,
+            "error": null,
+            "audio_state": "ready",
+            "audio_error": null
+          },
+          {
+            "vocabulary_id": 4,
+            "created_cards": 2,
+            "error": null,
+            "audio_state": "ready",
+            "audio_error": null
+          },
+          {
+            "vocabulary_id": 5,
+            "created_cards": 2,
+            "error": null,
+            "audio_state": "ready",
+            "audio_error": null
+          },
+          {
+            "vocabulary_id": 6,
+            "created_cards": 2,
+            "error": null,
+            "audio_state": "ready",
+            "audio_error": null
+          }
+        ]
+      },
+      "cachedBytes": 8261,
+      "progress": {
+        "revision": 1,
+        "card": {
+          "phase": "learning_last",
+          "memory": {
+            "stability": 2.3065,
+            "difficulty": 2.118104
+          },
+          "last_review_at": 1793654445,
+          "due_at": 1793655045
+        }
+      }
+    },
+    "residentProcesses": 1,
+    "ownedWorkersAfterExit": 0
+  },
+  "lifecycle": {
+    "hardTimeoutSeconds": 60,
+    "interrupted": {
+      "operation": "life-batch",
+      "cancelled": false,
+      "items": [
+        {
+          "vocabulary_id": 1,
+          "created_cards": 2,
+          "error": null,
+          "audio_state": "ready",
+          "audio_error": null
+        },
+        {
+          "vocabulary_id": 2,
+          "created_cards": 2,
+          "error": null,
+          "audio_state": "ready",
+          "audio_error": null
+        },
+        {
+          "vocabulary_id": 3,
+          "created_cards": 2,
+          "error": null,
+          "audio_state": "retry_wait",
+          "audio_error": "Speech frame prefix: failed to fill whole buffer"
+        },
+        {
+          "vocabulary_id": 4,
+          "created_cards": 2,
+          "error": null,
+          "audio_state": "retry_wait",
+          "audio_error": "Speech frame prefix: failed to fill whole buffer"
+        },
+        {
+          "vocabulary_id": 5,
+          "created_cards": 2,
+          "error": null,
+          "audio_state": "queued",
+          "audio_error": null
+        },
+        {
+          "vocabulary_id": 6,
+          "created_cards": 2,
+          "error": null,
+          "audio_state": "queued",
+          "audio_error": null
+        },
+        {
+          "vocabulary_id": 7,
+          "created_cards": 2,
+          "error": null,
+          "audio_state": "queued",
+          "audio_error": null
+        },
+        {
+          "vocabulary_id": 8,
+          "created_cards": 2,
+          "error": null,
+          "audio_state": "queued",
+          "audio_error": null
+        }
+      ]
+    },
+    "cancelled": {
+      "operation": "life-batch",
+      "cancelled": true,
+      "items": [
+        {
+          "vocabulary_id": 1,
+          "created_cards": 2,
+          "error": null,
+          "audio_state": "ready",
+          "audio_error": null
+        },
+        {
+          "vocabulary_id": 2,
+          "created_cards": 2,
+          "error": null,
+          "audio_state": "ready",
+          "audio_error": null
+        },
+        {
+          "vocabulary_id": 3,
+          "created_cards": 2,
+          "error": null,
+          "audio_state": "cancelled",
+          "audio_error": "Speech frame prefix: failed to fill whole buffer"
+        },
+        {
+          "vocabulary_id": 4,
+          "created_cards": 2,
+          "error": null,
+          "audio_state": "cancelled",
+          "audio_error": "Speech frame prefix: failed to fill whole buffer"
+        },
+        {
+          "vocabulary_id": 5,
+          "created_cards": 2,
+          "error": null,
+          "audio_state": "cancelled",
+          "audio_error": null
+        },
+        {
+          "vocabulary_id": 6,
+          "created_cards": 2,
+          "error": null,
+          "audio_state": "cancelled",
+          "audio_error": null
+        },
+        {
+          "vocabulary_id": 7,
+          "created_cards": 2,
+          "error": null,
+          "audio_state": "cancelled",
+          "audio_error": null
+        },
+        {
+          "vocabulary_id": 8,
+          "created_cards": 2,
+          "error": null,
+          "audio_state": "cancelled",
+          "audio_error": null
+        }
+      ]
+    },
+    "restored": {
+      "status": {
+        "operation": "life-batch",
+        "cancelled": true,
+        "items": [
+          {
+            "vocabulary_id": 1,
+            "created_cards": 2,
+            "error": null,
+            "audio_state": "ready",
+            "audio_error": null
+          },
+          {
+            "vocabulary_id": 2,
+            "created_cards": 2,
+            "error": null,
+            "audio_state": "ready",
+            "audio_error": null
+          },
+          {
+            "vocabulary_id": 3,
+            "created_cards": 2,
+            "error": null,
+            "audio_state": "cancelled",
+            "audio_error": "Speech frame prefix: failed to fill whole buffer"
+          },
+          {
+            "vocabulary_id": 4,
+            "created_cards": 2,
+            "error": null,
+            "audio_state": "cancelled",
+            "audio_error": "Speech frame prefix: failed to fill whole buffer"
+          },
+          {
+            "vocabulary_id": 5,
+            "created_cards": 2,
+            "error": null,
+            "audio_state": "cancelled",
+            "audio_error": null
+          },
+          {
+            "vocabulary_id": 6,
+            "created_cards": 2,
+            "error": null,
+            "audio_state": "cancelled",
+            "audio_error": null
+          },
+          {
+            "vocabulary_id": 7,
+            "created_cards": 2,
+            "error": null,
+            "audio_state": "cancelled",
+            "audio_error": null
+          },
+          {
+            "vocabulary_id": 8,
+            "created_cards": 2,
+            "error": null,
+            "audio_state": "cancelled",
+            "audio_error": null
+          }
+        ]
+      },
+      "cards": [
+        {
+          "id": 1,
+          "kind": "recognition"
+        },
+        {
+          "id": 2,
+          "kind": "listening"
+        }
+      ],
+      "paused": true
+    },
+    "gap": {
+      "publication_gap": "prepared",
+      "semantic_key": "844fc1bf1cf9bb516ceea829e68de0a0d73b93461270f1ac4123efb4168e41a2",
+      "generated_at": 1793654519
+    },
+    "ownedWorkersAfterExit": 0
+  },
+  "recovery": {
+    "legacy": {
+      "semantic_key": "844fc1bf1cf9bb516ceea829e68de0a0d73b93461270f1ac4123efb4168e41a2",
+      "context": "word",
+      "content_hash": "e2134029d6a2adec0de92eaa49ca6a1c41baf97b00f2e3a4db65cc85cd5db32e",
+      "generated_at": 1793654614
+    },
+    "state": {
+      "legacy_registered": true,
+      "gc_gap_prepared": true
+    },
+    "gc": {
+      "gc_recovered": true,
+      "legacy_preserved": true,
+      "notes_preserved": true
+    },
+    "preservedCards": [
+      {
+        "id": 1,
+        "kind": "recognition"
+      },
+      {
+        "id": 2,
+        "kind": "listening"
+      }
+    ],
+    "schema": 11,
+    "ownedWorkersAfterExit": 0
+  },
+  "raw_directories": [
+    "target/issue-24/product-native-accepted-c",
+    "target/issue-24/native-lifecycle-accepted",
+    "target/issue-24/native-recovery-accepted-b"
+  ]
+}

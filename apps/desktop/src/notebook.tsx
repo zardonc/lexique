@@ -3,6 +3,7 @@ import type { RuntimeAdapter } from './platform/runtime';
 import { errorMessage, sortSchema } from './platform/vocabulary';
 import type { VocabularyRecord, VocabularySort } from './platform/vocabulary';
 import type { NotebookText } from './notebook-content';
+import type { BatchReview } from './use-batch-review';
 
 function useVocabularyList(runtime: RuntimeAdapter, version: number) {
   const [query, setQuery] = useState('');
@@ -39,82 +40,74 @@ function useVocabularyList(runtime: RuntimeAdapter, version: number) {
   return { query, setQuery, sort, records, error, busy, changeSort, retry: () => setRetry((value) => value + 1) };
 }
 
-function useBatchReview({ runtime, text, onWorkingChange, onReviewChanged }: {
-  readonly runtime: RuntimeAdapter; readonly text: NotebookText; readonly onWorkingChange: (working: boolean) => void; readonly onReviewChanged: () => void;
-}) {
-  const [selected, setSelected] = useState<readonly number[]>([]);
-  const [results, setResults] = useState<readonly { readonly record: VocabularyRecord; readonly action: 'add' | 'pause' | 'resume'; readonly error: string; readonly added: boolean }[]>([]);
-  const [working, setWorking] = useState(false);
-  async function perform(record: VocabularyRecord, action: 'add' | 'pause' | 'resume') {
-    let error = '';
-    let added = false;
-    try {
-      if (action === 'add') {
-        const cards = await runtime.addReview(record.id);
-        if (!cards) throw new Error(text.preview);
-        added = true;
-        if (!await runtime.generateSpeech(record.id)) throw new Error(text.listeningPending);
-      } else if (await runtime.reviewPause(record.id, action === 'pause') === null) throw new Error(text.preview);
-    } catch (cause) { error = errorMessage(cause); }
-    setResults((current) => [...current.filter((item) => item.record.id !== record.id), { record, action, error, added }]);
-  }
-  async function run(records: readonly VocabularyRecord[], action: 'add' | 'pause' | 'resume') {
-    setWorking(true); onWorkingChange(true);
-    try { for (const record of records) await perform(record, action); }
-    finally { setWorking(false); onWorkingChange(false); onReviewChanged(); }
-  }
-  return { selected, setSelected, results, setResults, working, run };
-}
-
-function BatchResults({ results, working, run, text }: {
-  readonly results: ReturnType<typeof useBatchReview>['results']; readonly working: boolean;
-  readonly run: ReturnType<typeof useBatchReview>['run']; readonly text: NotebookText;
-}) {
-  return results.length > 0 && <ul>{results.map(({ record, action, error, added }) => <li key={record.id}>
-    <span>{record.headword}：{error ? added ? text.audioFailed : text.failed : text.success}</span>{error && <>: {error} <button disabled={working} onClick={() => void run([record], action)}>{text.retry} {record.headword}</button></>}
-  </li>)}</ul>;
-}
-
 function toggleSelection(current: readonly number[], id: number, checked: boolean) {
   return checked ? [...current, id] : current.filter((value) => value !== id);
 }
 
-function BatchControls({ records, batch, text }: { readonly records: readonly VocabularyRecord[] | null | undefined; readonly batch: ReturnType<typeof useBatchReview>; readonly text: NotebookText }) {
-  if (!records?.length) return null;
-  const { selected, setSelected, setResults, working, run } = batch;
-  return <><label><input type="checkbox" disabled={working} aria-label={text.selectAll}
+function BatchControls({ records, selected, setSelected, batch, text }: {
+  readonly records: readonly VocabularyRecord[]; readonly selected: readonly number[];
+  readonly setSelected: (value: readonly number[]) => void; readonly batch: BatchReview; readonly text: NotebookText;
+}) {
+  if (!records.length) return null;
+  return <><label><input type="checkbox" aria-label={text.selectAll}
     checked={records.every((record) => selected.includes(record.id))}
     onChange={(event) => setSelected(event.target.checked ? records.map((record) => record.id) : [])} />{text.selectAll}</label>
     <div className="actions">{([['add', text.batchAdd], ['pause', text.batchPause], ['resume', text.batchResume]] as const).map(([action, label]) =>
-      <button key={action} disabled={working || !selected.length} onClick={() => { setResults([]); void run(records.filter((record) => selected.includes(record.id)), action); }}>{label}</button>)}</div></>;
+      <button key={action} disabled={batch.working || !!batch.pending || !selected.length} onClick={() => {
+        const snapshot = records.filter((record) => selected.includes(record.id)); setSelected([]); void batch.run(snapshot, action);
+      }}>{label}</button>)}</div></>;
 }
 
-export function NotebookPanel({ runtime, version, text, onOpen, onWorkingChange, onReviewChanged }: {
+function PageControls({ page, count, capacity, changePage, changeCapacity, text }: {
+  readonly page: number; readonly count: number; readonly capacity: number; readonly text: NotebookText;
+  readonly changePage: (value: number) => void; readonly changeCapacity: (value: number) => void;
+}) {
+  const pages = Math.max(1, Math.ceil(count / capacity));
+  return <div className="actions"><label>{text.pageSize}<select value={capacity} onChange={(event) => changeCapacity(Number(event.target.value))}>
+    {[20, 50, 100].map((value) => <option key={value} value={value}>{value}</option>)}</select></label>
+    <button disabled={page === 0} onClick={() => changePage(page - 1)}>{text.previousPage}</button>
+    <span>{page + 1}/{pages}</span><button disabled={page + 1 >= pages} onClick={() => changePage(page + 1)}>{text.nextPage}</button></div>;
+}
+
+function ReadingState({ list, text }: { readonly list: ReturnType<typeof useVocabularyList>; readonly text: NotebookText }) {
+  if (list.error) return <p role="alert">{text.readError}: {list.error} <button onClick={list.retry}>{text.retry}</button></p>;
+  if (list.records === undefined) return <p role="status">{text.loading}</p>;
+  return list.records?.length === 0 && <p role="status">{text.empty}</p>;
+}
+
+function visiblePage(page: number, capacity: number, records: readonly VocabularyRecord[] | null | undefined) {
+  const count = records?.length ?? 0;
+  return Math.min(page, Math.max(0, Math.ceil(count / capacity) - 1));
+}
+
+export function NotebookPanel({ runtime, version, text, onOpen, batch }: {
   readonly runtime: RuntimeAdapter; readonly version: number; readonly text: NotebookText;
-  readonly onOpen: (record: VocabularyRecord) => void;
-  readonly onWorkingChange: (working: boolean) => void;
-  readonly onReviewChanged: () => void;
+  readonly onOpen: (record: VocabularyRecord) => void; readonly batch: BatchReview;
 }) {
   const list = useVocabularyList(runtime, version);
-  const batch = useBatchReview({ runtime, text, onWorkingChange, onReviewChanged });
-  const { selected, setSelected, results, setResults, working, run } = batch;
+  const [selected, setSelected] = useState<readonly number[]>([]);
+  const [page, setPage] = useState(0);
+  const [capacity, setCapacity] = useState(20);
+  useEffect(() => { setSelected([]); }, [list.records]);
+  const currentPage = visiblePage(page, capacity, list.records);
+  const records = list.records?.slice(currentPage * capacity, (currentPage + 1) * capacity) ?? [];
+  function reset() { setSelected([]); setPage(0); }
   if (list.records === null) return <p role="status">{text.preview}</p>;
   return <section className="notebook" aria-label={text.search}>
-    <div className="notebook-controls"><label>{text.search}<input type="search" value={list.query} disabled={working}
-      onChange={(event) => { setSelected([]); setResults([]); list.setQuery(event.target.value); }} /></label>
-      <label>{text.sort}<select value={list.sort ?? 'updated-desc'} disabled={working || list.busy || !list.sort}
-        onChange={(event) => { void list.changeSort(sortSchema.parse(event.target.value)); }}>
+    <div className="notebook-controls"><label>{text.search}<input type="search" value={list.query}
+      onChange={(event) => { reset(); list.setQuery(event.target.value); }} /></label>
+      <label>{text.sort}<select value={list.sort ?? 'updated-desc'} disabled={list.busy || !list.sort}
+        onChange={(event) => { reset(); void list.changeSort(sortSchema.parse(event.target.value)); }}>
         {sortSchema.options.map((value, index) => <option key={value} value={value}>{text.sorts[index]}</option>)}
       </select></label></div>
-    {list.error ? <p role="alert">{text.readError}: {list.error} <button onClick={list.retry}>{text.retry}</button></p>
-      : list.records === undefined ? <p role="status">{text.loading}</p>
-        : list.records.length === 0 && <p role="status">{text.empty}</p>}
-    <BatchControls records={list.records} batch={batch} text={text} />
-    <BatchResults results={results} working={working} run={run} text={text} />
-    {!list.error && <ul className="vocabulary-list">{list.records?.map((record) => <li key={record.id}>
-      <label><input type="checkbox" disabled={working} aria-label={`${text.select} ${record.headword}`} checked={selected.includes(record.id)}
+    <ReadingState list={list} text={text} />
+    <PageControls page={currentPage} count={list.records?.length ?? 0} capacity={capacity} text={text}
+      changePage={(value) => { setSelected([]); setPage(value); }} changeCapacity={(value) => { reset(); setCapacity(value); }} />
+    <BatchControls records={records} selected={selected} setSelected={setSelected} batch={batch} text={text} />
+    {!list.error && <ul className="vocabulary-list">{records.map((record) => <li key={record.id}>
+      <label><input type="checkbox" aria-label={`${text.select} ${record.headword}`} checked={selected.includes(record.id)}
         onChange={(event) => { const checked = event.target.checked; setSelected((current) => toggleSelection(current, record.id, checked)); }} /></label>
-      <button disabled={working} onClick={() => onOpen(record)}><strong lang="fr">{record.headword}</strong>
+      <button onClick={() => onOpen(record)}><strong lang="fr">{record.headword}</strong>
         <span>{record.digest.map((entry) => entry.translation || text.missing).join(' · ')}</span>
         <span className="note-excerpt">{record.notes}</span></button>
     </li>)}</ul>}

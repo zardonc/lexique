@@ -1,4 +1,5 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useReviewQueue } from './use-review-queue';
 import type { Locale } from './content';
 import type { NotebookText } from './notebook-content';
 import type { QueueView, RuntimeAdapter } from './platform/runtime';
@@ -12,35 +13,6 @@ const messages = {
   fr: { loading: 'Chargement de la file', preview: 'La file est indisponible dans l’aperçu web.', done: 'Révision terminée', waiting: 'Pas encore à réviser', quota: 'Limite quotidienne atteinte', error: 'Lecture de la file impossible', retry: 'Actualiser la file', undo: 'Annuler la dernière évaluation', undoError: 'Annulation impossible', rebuilt: 'Ancienne évaluation annulée. L’ordre de la file peut changer.', counts: (count: number) => `Cartes restantes : ${count}` },
 } as const;
 
-async function queueAudio(runtime: RuntimeAdapter, view: QueueView | null, pending: string) {
-  const first = view?.queue.cards[0];
-  if (first?.kind !== 'listening') return null;
-  const audio = await runtime.cachedSpeech(first.vocabulary_id);
-  if (!audio) throw new Error(pending);
-  return audio;
-}
-
-function useQueue(runtime: RuntimeAdapter, pending: string) {
-  const [view, setView] = useState<QueueView | null>(null);
-  const [audio, setAudio] = useState<Uint8Array | null>(null);
-  const [status, setStatus] = useState<'loading' | 'ready' | 'preview' | 'error'>('loading');
-  const [error, setError] = useState('');
-  const skipped = useRef<number[]>([]);
-  const generation = useRef(0);
-  const refresh = useCallback(async () => {
-    const request = ++generation.current;
-    setStatus('loading'); setError('');
-    try {
-      const result = await runtime.reviewQueue(skipped.current);
-      const bytes = await queueAudio(runtime, result, pending);
-      if (request !== generation.current) return;
-      setAudio(bytes); setView(result); setStatus(result ? 'ready' : 'preview');
-    } catch (cause) { if (request === generation.current) { setError(errorMessage(cause)); setStatus('error'); } }
-  }, [runtime, pending]);
-  useEffect(() => { void refresh(); return () => { generation.current += 1; }; }, [refresh]);
-  function skip(id: number) { skipped.current = [...skipped.current, id]; void refresh(); }
-  return { view, audio, status, error, refresh, skip };
-}
 
 function QueueCard({ view, audio, runtime, text, refresh, skip }: { readonly view: QueueView; readonly audio: Uint8Array | null; readonly runtime: RuntimeAdapter; readonly text: NotebookText; readonly refresh: () => Promise<void>; readonly skip: (id: number) => void }) {
   const card = view.queue.cards[0];
@@ -71,16 +43,37 @@ function ReadyQueue({ view, audio, runtime, text, refresh, labels, skip }: { rea
 export function ReviewQueuePanel({ runtime, locale, text }: { readonly runtime: RuntimeAdapter; readonly locale: Locale; readonly text: NotebookText }) {
   const labels = messages[locale];
   const [rebuilt, setRebuilt] = useState(false);
-  const { view, audio, status, error, refresh, skip } = useQueue(runtime, text.listeningPending);
+  const { view, audio, status, error, refresh, retry, skip } = useReviewQueue(runtime, text.listeningPending);
   return <section aria-label={labels.loading}>
     {status === 'loading' && <p role="status">{labels.loading}</p>}
     {status === 'preview' && <p>{labels.preview}</p>}
     {error && <p role="alert">{labels.error}: {error}</p>}
-    {status === 'ready' && view && <ReadyQueue view={view} audio={audio} runtime={runtime} text={text} refresh={refresh} labels={labels} skip={skip} />}
+    {view && <ReadyQueue view={view} audio={audio} runtime={runtime} text={text} refresh={refresh} labels={labels} skip={skip} />}
     {rebuilt && <p role="status">{labels.rebuilt}</p>}
-    <div className="actions">{status !== 'preview' && status !== 'loading' && <UndoRating runtime={runtime} labels={labels} refresh={refresh} onRebuilt={setRebuilt} />}
-      <button disabled={status === 'loading'} onClick={() => { void refresh(); }}>{labels.retry}</button></div>
+    <QueueActions status={status} view={view} runtime={runtime} text={text} labels={labels} refresh={refresh} retry={retry} setRebuilt={setRebuilt} />
   </section>;
+}
+
+function QueueActions({ status, view, runtime, text, labels, refresh, retry, setRebuilt }: {
+  readonly status: string; readonly view: QueueView | null; readonly runtime: RuntimeAdapter; readonly text: NotebookText;
+  readonly labels: (typeof messages)[Locale]; readonly refresh: () => Promise<void>; readonly setRebuilt: (value: boolean) => void;
+  readonly retry: () => void;
+}) {
+  return <div className="actions">{status !== 'preview' && status !== 'loading' && <UndoRating runtime={runtime} labels={labels} refresh={refresh} onRebuilt={setRebuilt} />}
+    {status === 'error' && <button onClick={retry}>{text.retry}</button>}
+    {view?.audio_pending && <MissingAudio runtime={runtime} text={text} />}</div>;
+}
+
+function MissingAudio({ runtime, text }: { readonly runtime: RuntimeAdapter; readonly text: NotebookText }) {
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState('');
+  async function retry() {
+    setBusy(true); setError('');
+    try { if (await runtime.retryMissingSpeech() === null) throw new Error(text.preview); }
+    catch (cause) { setError(errorMessage(cause)); }
+    finally { setBusy(false); }
+  }
+  return <>{error && <p role="alert">{error}</p>}<button disabled={busy} onClick={() => { void retry(); }}>{text.retry} · {text.listeningPending}</button></>;
 }
 
 function undoRequest(target: string | null) {
