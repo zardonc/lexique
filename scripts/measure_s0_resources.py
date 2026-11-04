@@ -20,43 +20,65 @@ def large_audio(resources, root):
     return finish(space, model, {"id": 0, "text": text, "voice": "female", "seed": 42}, config, resources, root)
 
 
+def synthesize(request):
+    """Called only by the bounded subprocess; never reuse an output directory."""
+    background = request["background"]
+    if background is not None and (type(background) is not int or background not in (0, 1, 2, 4)):
+        raise ValueError("Invalid background concurrency")
+    root = new_directory(Path(request["output"]))
+    resources = Path(request["resources"]).resolve()
+    return large_audio(resources, root) if background is None else trial(resources, root, background, "on", "fixed")
+
+
+def run_case(resources, root, background=None):
+    command = [str(resources / "runtime/python.exe"), "-I", "-B", "-X", "utf8", "-c",
+        f"import sys,json;sys.path.insert(0,{str(REPO / 'scripts')!r});"
+        "from measure_s0_resources import synthesize;print(json.dumps(synthesize(json.load(sys.stdin))))"]
+    outcome = execute(command, root / "stdout.json", timeout=60,
+        request={"resources": str(resources), "output": str(root / "audio"), "background": background})
+    outcome["audio_directory"] = "audio"
+    if outcome["status"] == "passed":
+        outcome["result"] = json.loads((root / "stdout.json").read_text(encoding="utf8"))
+    return outcome
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("resources", type=Path)
     parser.add_argument("output", type=Path)
-    parser.add_argument("--child", type=int, choices=(0, 1, 2, 4))
-    parser.add_argument("--large", action="store_true")
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument("--child", type=int, choices=(0, 1, 2, 4))
+    mode.add_argument("--large", action="store_true")
     args = parser.parse_args()
     resources = args.resources.resolve()
-    if args.child is not None:
-        print(json.dumps(trial(resources, args.output.resolve(), args.child, "on", "fixed")))
-        return
-    if args.large:
-        print(json.dumps(large_audio(resources, args.output.resolve())))
-        return
     root = new_directory(args.output)
+    if args.child is not None or args.large:
+        outcome = run_case(resources, root, args.child)
+        (root / "results.json").write_text(json.dumps(outcome, indent=2), encoding="utf8")
+        print(json.dumps(outcome))
+        if outcome["status"] != "passed":
+            sys.exit(1)
+        return
     budgets = json.loads((REPO / "docs/evidence/issue-25/budgets.json").read_text())
     report = {"budgets_sha256": hashlib.sha256((REPO / "docs/evidence/issue-25/budgets.json").read_bytes()).hexdigest(),
         "provider": "cpu", "steps": 8, "bitrate": 48000, "trials": [], "boundary": "model only; actual product P0/IPC/playback separately recorded"}
-    command = [str(resources / "runtime/python.exe"), "-I", "-B", "-X", "utf8", "-c",
-        f"import sys,runpy;sys.path.insert(0,{str(REPO / 'scripts')!r});runpy.run_path({str(Path(__file__).resolve())!r},run_name='__main__')"]
     for repeat in range(3):
         for background in (0, 1, 2, 4):
             directory = new_directory(root / f"repeat-{repeat}-background-{background}")
-            outcome = execute(command + [str(resources), str(directory), "--child", str(background)], directory / "stdout.json")
-            if outcome["status"] == "passed":
-                outcome["result"] = json.loads((directory / "stdout.json").read_text(encoding="utf8"))
+            outcome = run_case(resources, directory, background)
             report["trials"].append({"repeat": repeat, "background": background, "case": directory.name, **outcome})
             (root / "results.json").write_text(json.dumps(report, indent=2), encoding="utf8")
             print(f"{directory.name}: {outcome['status']}", flush=True)
     successful = [item for item in report["trials"] if item["status"] == "passed"]
-    baseline = statistics.median(item["result"]["p0"]["click_to_complete_ms"] for item in successful if item["background"] == 0)
+    solo = [item["result"]["p0"]["click_to_complete_ms"] for item in successful if item["background"] == 0]
+    baseline = statistics.median(solo) if solo else None
     limits = budgets["model_only_interaction"]
     report["comparisons"] = []
     for background in (0, 1, 2, 4):
         rows = [item["result"] for item in successful if item["background"] == background]
-        if not rows:
-            report["comparisons"].append({"background": background, "accepted": False, "reason": "no successful samples"})
+        if not rows or baseline is None:
+            report["comparisons"].append({"background": background, "accepted": False,
+                "reason": "no successful samples" if not rows else "no successful solo baseline"})
             continue
         p0 = [row["p0"]["click_to_complete_ms"] for row in rows]
         report["comparisons"].append({"background": background, "total": max(1, background + 1), "attempts": 3, "successes": len(rows),
@@ -66,9 +88,7 @@ def main():
                 and all(row["peak_private_bytes"] <= limits["private_bytes_max"] and row["peak_working_set_bytes"] <= limits["working_set_bytes_max"] for row in rows),
             "percentiles": "not claimed"})
     directory = new_directory(root / "large-audio")
-    large = execute(command + [str(resources), str(directory), "--large"], directory / "stdout.json")
-    if large["status"] == "passed":
-        large["result"] = json.loads((directory / "stdout.json").read_text(encoding="utf8"))
+    large = run_case(resources, directory)
     report["large_audio"] = large
     (root / "results.json").write_text(json.dumps(report, indent=2), encoding="utf8")
     if any(item["status"] != "passed" for item in report["trials"]) or large["status"] != "passed":

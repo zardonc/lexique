@@ -32,9 +32,9 @@ try {
     assert.ok(resources.startsWith(resolve('../../target/issue-25') + '\\'));
     const evidence = JSON.parse(await readFile(join(resources, 'results.json'), 'utf8'));
     const inputs = evidence.trials.flatMap(trial => trial.result.results.map(result => ({
-      path: join(resources, trial.case, result.audio_file), duration: result.duration_s,
+      path: join(resources, trial.case, trial.audio_directory ?? '', result.audio_file), duration: result.duration_s,
     })));
-    inputs.push({ path: join(resources, 'large-audio/0.ogg'), duration: evidence.large_audio.result.duration_s });
+    inputs.push({ path: join(resources, 'large-audio', evidence.large_audio.audio_directory ?? '', '0.ogg'), duration: evidence.large_audio.result.duration_s });
     report.decoded = [];
     for (const input of inputs) {
       const bytes = await readFile(input.path);

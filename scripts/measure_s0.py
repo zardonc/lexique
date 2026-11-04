@@ -9,6 +9,7 @@ import sqlite3
 import subprocess
 import sys
 import time
+import zipfile
 
 from s0_baseline import NOW, REPO, SEED, operations, oracle, seed_rows, summarize
 from s0_faults import files
@@ -30,11 +31,11 @@ def new_directory(path):
     return path
 
 
-def execute(command, log, *, env=None, timeout=60, request=None):
+def execute(command, log, *, env=None, timeout=60, request=None, cwd=None):
     """Compilation may have a separate budget; every execution is hard <=60s."""
     started = time.perf_counter()
     with log.open("wb") as stdout, log.with_suffix(".stderr").open("wb") as stderr:
-        child = subprocess.Popen(command, cwd=REPO, env=env, stdin=subprocess.PIPE,
+        child = subprocess.Popen(command, cwd=cwd or REPO, env=env, stdin=subprocess.PIPE,
             stdout=stdout, stderr=stderr, creationflags=subprocess.CREATE_NO_WINDOW if os.name == "nt" else 0)
         try:
             child.communicate(None if request is None else json.dumps(request).encode(), timeout=timeout)
@@ -49,9 +50,42 @@ def execute(command, log, *, env=None, timeout=60, request=None):
         "ms": (time.perf_counter() - started) * 1000}
 
 
+def frozen_source(root):
+    """Restore recorded inputs without reading or changing product working files."""
+    evidence = REPO / "docs/evidence/issue-25"
+    definition = json.loads((evidence / "source-inputs.json").read_text(encoding="utf8"))
+    snapshot = evidence / "frozen-source.patch"
+    if hashlib.sha256(snapshot.read_bytes()).hexdigest() != definition["patch_sha256"]:
+        raise ValueError("Frozen source patch hash mismatch")
+    source = new_directory(root / "source")
+    archive = root / "source.zip"
+    checkout = subprocess.check_output(["git", "rev-parse", "--show-toplevel"],
+        cwd=REPO, text=True, timeout=60).strip()
+    command = ["git", "archive", "--format=zip", "--output", str(archive), definition["base_commit"]]
+    result = execute(command, root / "source-archive.log", cwd=checkout)
+    if result["status"] != "passed":
+        raise RuntimeError(f"Frozen base commit unavailable; see {root / 'source-archive.stderr'}")
+    with zipfile.ZipFile(archive) as bundle:
+        for member in bundle.infolist():
+            if not (source / member.filename).resolve().is_relative_to(source):
+                raise ValueError("Frozen archive contains an unsafe path")
+        bundle.extractall(source)
+    for name, command in (("source-init", ["git", "init", "--quiet"]),
+            ("source-patch", ["git", "apply", "--unidiff-zero", "--whitespace=error", str(snapshot)])):
+        result = execute(command, root / f"{name}.log", cwd=source)
+        if result["status"] != "passed":
+            raise RuntimeError(f"Frozen source restoration failed; see {root / (name + '.stderr')}")
+    for relative, expected in definition["files_sha256"].items():
+        path = (source / relative).resolve()
+        if not path.is_relative_to(source) or hashlib.sha256(path.read_bytes()).hexdigest() != expected:
+            raise ValueError(f"Frozen source hash mismatch: {relative}")
+    return source
+
+
 def sources(root):
-    """Copy the current blocking body; change only clock injection and measurement."""
-    files = {name: (REPO / path).read_text(encoding="utf8") for name, path in {
+    """Copy the frozen blocking body; change only clock injection and measurement."""
+    source = frozen_source(root)
+    files = {name: (source / path).read_text(encoding="utf8") for name, path in {
         "vocabulary.rs": "apps/desktop/src-tauri/src/vocabulary.rs",
         "speech_tasks.rs": "apps/desktop/src-tauri/src/speech_tasks.rs",
         "speech_cache.rs": "apps/desktop/src-tauri/src/speech_cache.rs",
@@ -90,15 +124,15 @@ def sources(root):
     review = replace_once(review, "    old.sort_unstable();", '    crate::metrics::measure("sort_review", || old.sort_unstable());')
     review = replace_once(review, "    ordered.sort_by_key(|(not_minute, position, _)| (*not_minute, *position));", '    crate::metrics::measure("sort_position", || ordered.sort_by_key(|(not_minute, position, _)| (*not_minute, *position)));')
     files["review.rs"] = review
-    files.update(worker_sources())
+    files.update(worker_sources(source))
     for name, source in files.items():
         (root / name).write_text(source, encoding="utf8")
     return files
 
 
-def worker_sources():
-    """Observe the current Actor; replace only its UI event sink with a counter."""
-    actor = (REPO / "apps/desktop/src-tauri/src/speech_tasks.rs").read_text(encoding="utf8")
+def worker_sources(source):
+    """Observe the frozen Actor; replace only its UI event sink with a counter."""
+    actor = (source / "apps/desktop/src-tauri/src/speech_tasks.rs").read_text(encoding="utf8")
     actor = actor.replace("//!", "//")
     actor = replace_once(actor, "use tauri::Emitter;", "use crate::tauri;")
     for name in ("speech_worker", "speech_protocol", "speech_resident"):
@@ -111,18 +145,18 @@ def worker_sources():
     actor = actor.replace("storage::complete_speech_publication(", "crate::metrics::complete_publication(")
     actor = replace_once(actor, "                            let bytes = inspector\n                                .read_asset(&running.task.semantic_key, &hash)?",
         '                            let bytes = crate::metrics::measure("publication_readback", || inspector.read_asset(&running.task.semantic_key, &hash))?')
-    resident = "import _s0\n" + (REPO / "apps/desktop/src-tauri/speech_resident.py").read_text(encoding="utf8")
+    resident = "import _s0\n" + (source / "apps/desktop/src-tauri/speech_resident.py").read_text(encoding="utf8")
     resident = replace_once(resident, 'hashlib.file_digest(file, "sha256")', '_s0.measure("resource_hash", lambda: hashlib.file_digest(file, "sha256"))')
     resident = replace_once(resident, "    model = sherpa_onnx.OfflineTts(config)", '    model = _s0.measure("model_load", lambda: sherpa_onnx.OfflineTts(config))')
     resident = replace_once(resident, '    audio = model.generate("i grec" if text == "y" else text, generation)',
         '    audio = _s0.measure("inference", lambda: model.generate("i grec" if text == "y" else text, generation))')
     resident = replace_once(resident, '    return encode(Path(encoder), samples, audio.sample_rate)',
         '    return _s0.measure("encoding", lambda: encode(Path(encoder), samples, audio.sample_rate))')
-    protocol = "import _s0\n" + (REPO / "apps/desktop/src-tauri/speech_protocol.py").read_text(encoding="utf8")
+    protocol = "import _s0\n" + (source / "apps/desktop/src-tauri/speech_protocol.py").read_text(encoding="utf8")
     protocol = replace_once(protocol, "    def execute(value):", '    def execute(value):\n        _s0.enter(value["id"])')
     protocol = replace_once(protocol, "            slots.acquire()", '            _s0.queued(value["id"])\n            _s0.measure("slot_wait", slots.acquire)')
     return {"speech_actor.rs": actor, "speech_resident.py": resident, "speech_protocol.py": protocol,
-        "speech_worker.py": (REPO / "apps/desktop/src-tauri/speech_worker.py").read_text(encoding="utf8"),
+        "speech_worker.py": (source / "apps/desktop/src-tauri/speech_worker.py").read_text(encoding="utf8"),
         "phase_log.py": '''import json, os, threading, time
 _lock = threading.Lock()
 _local = threading.local()
@@ -146,11 +180,15 @@ def enter(identity):
 
 def build(root):
     generated = sources(root)
+    source = root / "source"
+    definition = json.loads((REPO / "docs/evidence/issue-25/source-inputs.json").read_text(encoding="utf8"))
+    target = REPO / "target/issue-25/cargo"
     environment = os.environ.copy()
     environment["PATH"] = str(Path(sys.executable).parent) + os.pathsep + environment["PATH"]
     environment["S0_SOURCE"], environment["S0_REPO"] = str(root), str(REPO)
+    environment["CARGO_TARGET_DIR"] = str(target)
     command = ["cargo", "build", "--locked", "--release", "-p", "lexique-desktop", "--lib", "--message-format=json"]
-    result = execute(command, root / "cargo.jsonl", env=environment, timeout=1200)
+    result = execute(command, root / "cargo.jsonl", env=environment, timeout=1200, cwd=source)
     cargo_seconds = result["ms"] / 1000
     if result["status"] != "passed":
         raise RuntimeError(f"Compilation failed: {root / 'cargo.stderr'}")
@@ -166,7 +204,7 @@ def build(root):
                 if filename.endswith(".rlib"):
                     artifacts[message["target"]["name"]] = filename
     binary = root / "baseline_probe.exe"
-    command = ["rustc", "--edition=2024", "-C", "opt-level=3", "-L", f"dependency={REPO / 'target/release/deps'}",
+    command = ["rustc", "--edition=2024", "-C", "opt-level=3", "-L", f"dependency={target / 'release/deps'}",
         str(REPO / "docs/evidence/issue-25/baseline_probe.rs"), "-o", str(binary)]
     for name in ("lexique_core", "lexique_storage", "rusqlite", "serde", "serde_json", "cap_std", "cap_fs_ext", "cap_primitives"):
         command.extend(["--extern", f"{name}={artifacts[name]}"])
@@ -176,9 +214,10 @@ def build(root):
     if result["status"] != "passed":
         raise RuntimeError(f"Probe compilation failed: {root / 'rustc.stderr'}")
     metadata = {"seed": SEED, "now": NOW, "platform": platform.platform(), "python": sys.version,
-        "head": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=REPO, text=True).strip(),
-        "binary_sha256": hashlib.sha256(binary.read_bytes()).hexdigest(), "cargo_lock_sha256": hashlib.sha256((REPO / "Cargo.lock").read_bytes()).hexdigest(),
-        "original_source_sha256": {name: hashlib.sha256((REPO / path).read_bytes()).hexdigest() for name, path in {
+        "head": definition["base_commit"], "source_patch_sha256": definition["patch_sha256"],
+        "checkout_head": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=REPO, text=True).strip(),
+        "binary_sha256": hashlib.sha256(binary.read_bytes()).hexdigest(), "cargo_lock_sha256": hashlib.sha256((source / "Cargo.lock").read_bytes()).hexdigest(),
+        "original_source_sha256": {name: hashlib.sha256((source / path).read_bytes()).hexdigest() for name, path in {
             "vocabulary": "apps/desktop/src-tauri/src/vocabulary.rs", "review": "crates/storage/src/review.rs", "cache": "apps/desktop/src-tauri/src/speech_cache.rs", "worker": "apps/desktop/src-tauri/speech_worker.py"}.items()},
         "generated_sha256": {name: hashlib.sha256(value.encode()).hexdigest() for name, value in generated.items()},
         "execution_timeout_s": 60, "compile_seconds": cargo_seconds + result["ms"] / 1000,

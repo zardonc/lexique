@@ -4,8 +4,11 @@
 交付现状观察程序、独立 oracle、故障／竞争控制、原生检查、冻结预算及结果。
 本次没有更改产品查询、schema、音频选择、清理或 UI 行为。
 [精简结果](results.json)、[输入与环境](manifest.json)、[预算](budgets.json)可供后续票直接引用。
-当前工作区包含此前尚未提交的 #24 实现及规格；manifest 固定其源文件 hash。
-重跑应先核对源码、资源及二进制，不能用另一个 checkout 的结果代替此次基线。
+原始测量包含此前尚未提交的 #24 实现；manifest 保留测量时的源文件 hash。
+2026-11-04 复核修正：新增 [冻结源码补丁](frozen-source.patch)及 [输入清单](source-inputs.json)，保存测量所需的源码、构建配置和测试输入。
+`--build-only` 自动从固定 `c9d8bf8` 导出源码，在新输出目录的 `source/` 中应用补丁，并核对全部 16 个文件 hash；不读取当前产品文件来构造观察器，也不改动工作区产品代码。
+Cargo 使用独立的 `target/issue-25/cargo` 编译缓存；新 manifest 分别记录基点、补丁 hash 和运行工具的 checkout HEAD。历史统计与二进制 hash 保留，新构建的二进制另记 hash，不宣称不同构建路径的产物逐字节相同。
+重跑仍须核对资源及所用二进制，不能用另一个输入或环境的结果代替历史基线。
 
 ## 当前结果
 
@@ -51,7 +54,7 @@ python -X utf8 scripts/measure_s0.py target/issue-25/red-new --binary target/iss
 
 ## 测量与预算语义
 
-`baseline_probe.rs` 观察当前 desktop blocking body、真实 storage 和安全 cache；`measure_s0.py` 在隔离目录复制当前源文件，只有 clock／计时插入，产品源文件不改。
+`baseline_probe.rs` 观察冻结时的 desktop blocking body、真实 storage 和安全 cache；`measure_s0.py` 在隔离目录恢复固定基点及源码补丁，只有 clock／计时插入，产品源文件不改。
 锚点不唯一时构建失败，manifest 保存原文件、生成文件、Cargo.lock 和 probe hash。
 `build-v2` 是 18-case 原始测量；`build-v3` 补上 file-open／JSON-to-value 计时，万词 100 次补测为 p95 791.6501 ms。
 观察器自身开销包含在后端计时，未测减去计时器开销后的推算值。
@@ -117,6 +120,9 @@ Node ICU 独立计算 IANA 学习日／04:00 与 DST；new 无 progress／null d
 PowerShell 7，pnpm 11.25.0、Rust 1.99.1；Python 使用 `uv python find 3.14`，把该解释器目录放 PATH 首位。
 资源使用已准入 Supertonic，模型 assets hash 已实际核对；不安装新模型或服务。
 所有输出必须是新子目录，禁止复用／覆盖；只创建合成数据。
+资源工具的直接 `--child 0/1/2/4` 和 `--large` 同样要求新输出目录，合成统一在硬限 60 秒的子进程中执行。
+每个 case 的音频写入新的 `audio/` 子目录；结果 JSON 以 `status`／`result` 包装直接运行结果，并记录 `audio_directory: "audio"`。解码检查兼容历史平铺结果与此新布局。
+源码基点须存在于本地 Git 历史；缺少、补丁损坏或 hash 不匹配均明确失败。编译依赖与模型的获取方式沿用已有准入说明。
 
 ```powershell
 python -X utf8 scripts/measure_s0.py target/issue-25/build-new --build-only
@@ -137,4 +143,6 @@ Python 完整发现套件最终 54 项中 6 项因缺专用输入／环境跳过
 浏览器优先查 Obscura；自动化使用仓库已有 bundled headless Playwright，未手动启动系统浏览器。
 
 本轮不声明物理冷盘、禁网新包、掉电恢复、50k 长时、其他平台或发行就绪。后续票负责优化前红测与优化后同输入复测。
-最终独立 [Standards／Spec 审查](review.md) 均无未解决发现；修正过的工具问题、检查调用错误及不同构建产物失败均保留证据。
+历史 [Standards／Spec 审查](review.md) 使用当时工作区作为输入。2026-11-04 按 `c9d8bf8 → 3c48180` 复核发现提交源码不能重建观察器、资源直接模式绕过输出保护；本次修复和复核记录另见 [提交复核](fix-review.md)，历史检查与失败证据继续保留。
+
+2026-11-04 最终独立复核：干净修复快照 `006cfa81` 对固定基点 `c9d8bf8`，Standards 通过（0 项规范违反、1 项 P3 维护建议），Spec 通过（0 项可执行发现）。20 项 S0 回归和语法／格式检查重新通过；同输入的此前编译、后端、模型及原生证据经 hash／原始结果核对后复用。S0 可闭票；Q04 与超过预算的对照仍按后续票处理，完整历史矩阵、50k 执行、其他平台和正式发行未重验。
