@@ -1,0 +1,108 @@
+{
+  "seed": 250001,
+  "now": 1700000000,
+  "platform": "Windows-11-10.0.26300-SP0",
+  "python": "3.14.10 (main, Oct 26 2026, 14:10:46) [MSC v.1944 64 bit (AMD64)]",
+  "head": "c9d8bf8a8707b13abcf2919caa850bfc6f40dcdc",
+  "binary_sha256": "f0d44f00cce47dd4037602fa4454802931f4ec61df78e4742b039a40a37418b6",
+  "cargo_lock_sha256": "ee544fb235c075efa7e61785a29817f0a63a84d9910aef26ea607bcce4cf2464",
+  "original_source_sha256": {
+    "vocabulary": "d0685b2d31905b468d5f86dd4a093aeb479d985c9263eb06d2e4ca07d08fae3d",
+    "review": "eadd16dc35c75f86ca7a032f80bf16da0d3246def591227729137a5e52299731",
+    "cache": "6ae609c28cbd5bfc67368998aefc0bc7940aecc6e5b047c81b67f61bb1f3ec18",
+    "worker": "cdebdc0a9411c0aff268ee543f32c92dc23f72b76c91ff56cf25a6425bbd96c7"
+  },
+  "generated_sha256": {
+    "vocabulary.rs": "f02155c7919c048f7d6239955193ca5092e2ead4e95e5024914f917690788caf",
+    "speech_tasks.rs": "bd0a46cacfab355c701e1bbde03c6108093926a8c5200bc17bf07ec57ec07ba9",
+    "speech_cache.rs": "7ed81150ab12b8da9771db8c8174e754a90b4b15527fb791f82d744909546b66",
+    "review.rs": "771fd6279cdefde8859ed808d8e942deb3a0c0ae8536ccf85111740a218d0ef9"
+  },
+  "execution_timeout_s": 60,
+  "compile_seconds": 28.693519000022206,
+  "cargo_compile_seconds": 22.026579900004435,
+  "probe_compile_seconds": 6.666939100017771,
+  "cache": "fresh files then OS-warm; fresh probe process per request; physical cold and app-resident cache unclaimed",
+  "native_binary_sha256": "57334356d84addf966e3a639d0fdb7cea38d936d96171f6f0f15fb46de8ed77b",
+  "native_binary_path": "target/issue-25/fixed-native/Lexique.exe",
+  "current_build_artifact_sha256": "0cd87bf1800a57d55225bb6013abf5a2f504e2eeffebc19b61866cf2fbc1300a",
+  "current_build_artifact_native_readiness": "unverified; differs from frozen baseline",
+  "probe_v2_sha256": "6bddb5f7bd09386d2f2cf78c042fd12a02849e6a9524798503d7f5b78525fb9d",
+  "model_assets_sha256": {
+    "assets/duration_predictor.int8.onnx": "c3eb91414d5ff8a7a239b7fe9e34e7e2bf8a8140d8375ffb14718b1c639325db",
+    "assets/text_encoder.int8.onnx": "c7befd5ea8c3119769e8a6c1486c4edc6a3bc8365c67621c881bbb774b9902ff",
+    "assets/tts.json": "42078d3aef1cd43ab43021f3c54f47d2d75ceb4e75f627f118890128b06a0d09",
+    "assets/unicode_indexer.bin": "8402ca48e5189a8950138580b0fff64db6f072f24ac07cd54ba8b2fbb9883b30",
+    "assets/vector_estimator.int8.onnx": "20cd86fa5c6effedfda0e7cffe5b0569ca401c440a0c3a1d72bf39286c0db3fd",
+    "assets/vocoder.int8.onnx": "e923d60f53f95eb1ce235f1dc33ec56d9c057823c96fa6f8acf98f32b0da6152",
+    "assets/voice.bin": "67d5209b0ee8ce6c74105ffbe12fe6a7628aea3b4ba2fcb308a4a67938a93ce8"
+  },
+  "schema": {
+    "words": 100,
+    "cards": 200,
+    "scenario": "new",
+    "missing_percent": 0,
+    "seed": 250001,
+    "audio": "H: Ogg header fixture, not decodable or playback evidence",
+    "journal_mode": "delete",
+    "schema": 11,
+    "sqlite_source_id": "2025-11-28 17:28:25 281fc0e9afc38674b9b0991943b9e9d1e64c6cbdb133d35f6f5c87ff6af38a88",
+    "sqlite_version": "3.51.1",
+    "synchronous": 2,
+    "process_ms": 49.12539996439591
+  },
+  "budgets_sha256": "edf8ded6e0fbcf327843b3c809d3715986184e250800c6fb0a9999041c72568a",
+  "worker_observer": {
+    "seed": 250001,
+    "now": 1700000000,
+    "platform": "Windows-11-10.0.26300-SP0",
+    "python": "3.14.10 (main, Oct 26 2026, 14:10:46) [MSC v.1944 64 bit (AMD64)]",
+    "head": "c9d8bf8a8707b13abcf2919caa850bfc6f40dcdc",
+    "binary_sha256": "89c594328cb36e54e3c80897f243acd978a7f93996a6d65c37b58b6670533714",
+    "cargo_lock_sha256": "ee544fb235c075efa7e61785a29817f0a63a84d9910aef26ea607bcce4cf2464",
+    "original_source_sha256": {
+      "vocabulary": "d0685b2d31905b468d5f86dd4a093aeb479d985c9263eb06d2e4ca07d08fae3d",
+      "review": "eadd16dc35c75f86ca7a032f80bf16da0d3246def591227729137a5e52299731",
+      "cache": "6ae609c28cbd5bfc67368998aefc0bc7940aecc6e5b047c81b67f61bb1f3ec18",
+      "worker": "cdebdc0a9411c0aff268ee543f32c92dc23f72b76c91ff56cf25a6425bbd96c7"
+    },
+    "generated_sha256": {
+      "vocabulary.rs": "f02155c7919c048f7d6239955193ca5092e2ead4e95e5024914f917690788caf",
+      "speech_tasks.rs": "bd0a46cacfab355c701e1bbde03c6108093926a8c5200bc17bf07ec57ec07ba9",
+      "speech_cache.rs": "fee419a011dda5190cce2d906d7e9d9fb615cbdf40e68a1732922f6582fa9dbb",
+      "review.rs": "771fd6279cdefde8859ed808d8e942deb3a0c0ae8536ccf85111740a218d0ef9",
+      "speech_actor.rs": "ad810c1254c2ed45602329147384d825732ff554254dae09b1c82bf57efb9cc7",
+      "speech_resident.py": "de5b2284974cdfb9fbca04743922ad34ccecedc15870a08bc4f82494a677840b",
+      "speech_protocol.py": "c79a24357b6546337177b95f7bed97f619675b7c716ca62c992b598b85549802",
+      "speech_worker.py": "cdebdc0a9411c0aff268ee543f32c92dc23f72b76c91ff56cf25a6425bbd96c7",
+      "phase_log.py": "b7f3ef6b156be49199c56cdb80b142f286d362f27bf8cfeef549c4f52c3b3ff2"
+    },
+    "execution_timeout_s": 60,
+    "compile_seconds": 4.204632100008894,
+    "cargo_compile_seconds": 0.8020880999974906,
+    "probe_compile_seconds": 3.402544000011403,
+    "cache": "fresh files then OS-warm; fresh probe process per request; physical cold and app-resident cache unclaimed"
+  },
+  "worker_original_source_sha256": {
+    "actor": "bef975abff2ba731424fd4024b64c6e61c9dbb401622c3f3087218d89b53a4e0",
+    "resident": "dde475436a6dc2884bb221bd4fee0da3e366954f086001572a56581d723b1be8",
+    "protocol": "9075d6259c85aadea9cdff78d95d2d380028ee96e3f182bf36afa59a49fa2bdf"
+  },
+  "environment": {
+    "cpu": "Ryzen 9 8945HS",
+    "cores": 8,
+    "logical_processors": 16,
+    "ram_bytes": 33555279872,
+    "system": "Windows 11 build 26300",
+    "storage": "Micron_2400_MTFDKBA1T0QFM, NVMe, C: NTFS",
+    "node": "24.22.1",
+    "pnpm": "11.25.0",
+    "rust": "1.99.1",
+    "webview_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0",
+    "original_rtss": "running during original native measurements",
+    "repeat_rtss": "user closed; process query found none",
+    "repeat_power_mode": "performance mode reported by user; powercfg active scheme remains Balanced (Windows mode is separate)",
+    "physical_disk_cold": false,
+    "network_blocked": false
+  }
+}

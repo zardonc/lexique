@@ -1,0 +1,16 @@
+{
+  "issue": 25,
+  "frozen_before_measurement": "2026-11-03 America/Vancouver",
+  "execution_timeout_seconds": 60,
+  "compile_separate": true,
+  "steady_attempts": 100,
+  "quantile": "nearest rank, all attempts retained, timeout represented by 60000 ms",
+  "cpu": { "provider": "cpu", "threads": 2, "steps": 8, "bitrate_bps": 48000 },
+  "comparison": { "page_capacity": [20, 50, 100], "transaction_chunk": [20, 50, 100], "background_workers": [1, 2, 4], "total_synthesis_concurrency": [1, 2, 3] },
+  "model_only_interaction": { "p0_median_relative_max": 1.5, "p0_max_ms": 3000, "private_bytes_max": 1610612736, "working_set_bytes_max": 1073741824 },
+  "native_interaction": { "lookup_notes_rating_cached_read_relative_max": 1.5, "p0_max_ms": 3000, "ordinary_ipc_max_ms": 2000, "all_failures_visible": true },
+  "transaction_comparison": { "transaction_max_ms": 100, "competing_notes_and_rating_max_ms": 250, "source": "existing V03 preflight thresholds; candidate comparison, not production page policy" },
+  "future_queue": { "metadata_page": 50, "display_window": 4, "strict_probe_max": 8, "bytes_max": 33554432, "wait_ms_max": 75, "validation_workers": 2, "healthy_10k_p95_ms": 100, "prefetched_ui_switch_p95_ms": 20 },
+  "future_task": { "attempts_max": 4, "backoff_seconds": [2, 8, 20], "first_claim_deadline_seconds": 120, "startup_seconds": 30 },
+  "notes": "Budgets are acceptance inputs, not a claim that current implementation meets them. Sparse three-trial model/transaction comparisons have no p95 claim. Source instrumentation overhead is reported; IPC and physical cold remain separate. Future protocol budgets belong to #26-#34."
+}
