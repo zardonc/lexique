@@ -129,3 +129,17 @@ CLI 缺项返回 `status: not_found`；资源错误返回非零退出码和 stde
 公开 CLI 的真实源构建、全部样例和失败路径已执行；测试命令与最终结果见下方记录。
 未接 Rust、IPC、桌面 UI、打包或用户库，也未运行上游语言生成器。
 其他平台执行、全词表语言学审校、复合时态生成及正式 M3 范围批准仍待后续。
+
+| 命令 | 结果 |
+| --- | --- |
+| `uv run --python 3.14.10 python -X utf8 scripts/conjugation_sample.py build target/issue-4-conjugation` | 通过，真实全量源转换；体积见 sizes.json |
+| `uv run --python 3.14.10 python -X utf8 -m unittest discover -s scripts -p 'test_*.py' -v` | 74 项，68 通过、6 跳过；含 9 项变位 CLI 回归 |
+| `pnpm lint` / `pnpm typecheck` / `pnpm build` | 通过 |
+| `pnpm test:docs` | 99 份文档、605 个仓库链接通过；67 个本机证据链接单独计数 |
+| `git diff --cached --check -- . ':!resources/lefff-3.4/LICENSE-LGPLLR'` | 通过；上游许可保留原始空白与字节 |
+
+六项跳过为既有四项原生语音清理、语音开发包及受限网络语音探测，缺少相应执行输入。
+Rust／浏览器 E2E 未重跑：本票只新增独立资源转换与 CLI，不改变应用执行路径。
+
+以 `4e2a1b1dddfd660f4844875af1c5be3bf34f5027` 为基点的 Standards／Spec 审查均无剩余问题；
+Spec 审查另行执行 9 项变位 CLI 回归，全部通过。
