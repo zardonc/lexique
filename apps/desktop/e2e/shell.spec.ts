@@ -17,7 +17,7 @@ test('shell navigation, themes and mobile layout remain usable', async ({ page }
   await expect(page.getByRole('button', { name: '展开导航' })).toBeVisible();
   await page.getByRole('button', { name: '闪卡复习', exact: true }).click();
   await expect(page.getByRole('heading', { name: '闪卡复习', exact: true })).toBeVisible();
-  await expect(page.getByText('FSRS 调度尚未接入。')).toBeVisible();
+  await expect(page.getByText('浏览器预览无法读取复习队列。')).toBeVisible();
   await page.setViewportSize({ width: 390, height: 844 });
   await page.getByRole('button', { name: '设置', exact: true }).click();
   await expect(page.getByRole('heading', { name: '设置', exact: true })).toBeVisible();

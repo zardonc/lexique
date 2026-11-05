@@ -4,6 +4,7 @@ target/
 .env
 .env.*
 *.local
+LOCAL-DEV-ENV.md
 *.db
 *.db-*
 *.sqlite*

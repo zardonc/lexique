@@ -7,11 +7,12 @@ interface NavigationProps {
   readonly text: Messages;
   readonly selected: number;
   readonly collapsed: boolean;
+  readonly disabled?: boolean;
   readonly onSelect: (page: number) => void;
   readonly onToggle: () => void;
 }
 
-export function Navigation({ text, selected, collapsed, onSelect, onToggle }: NavigationProps) {
+export function Navigation({ text, selected, collapsed, disabled, onSelect, onToggle }: NavigationProps) {
   const ToggleIcon = collapsed ? PanelLeftOpen : PanelLeftClose;
   const toggleLabel = collapsed ? text.expand : text.collapse;
   return <aside className="sidebar">
@@ -20,7 +21,7 @@ export function Navigation({ text, selected, collapsed, onSelect, onToggle }: Na
     </div>
     <nav aria-label={text.subtitle}>{text.modules.map((label, index) => {
       const Icon = icons[index];
-      return <button key={label} type="button" title={label} aria-label={label}
+      return <button key={label} type="button" title={label} aria-label={label} disabled={disabled}
         aria-current={selected === index ? 'page' : undefined} onClick={() => onSelect(index)}>
         {Icon && <Icon size={19} aria-hidden="true" />}<span className="nav-label">{label}</span>
       </button>;

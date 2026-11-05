@@ -1,3 +1,5 @@
 * text=auto eol=lf
 *.png binary
 *.ico binary
+docs/evidence/issue-14/supertonic-licenses/** -text
+docs/evidence/issue-14/mls-licenses/PIPER-VOICES.md -text

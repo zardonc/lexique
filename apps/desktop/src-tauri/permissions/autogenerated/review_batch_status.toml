@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-review-batch-status"
+description = "Enables the review_batch_status command without any pre-configured scope."
+commands.allow = ["review_batch_status"]
+
+[[permission]]
+identifier = "deny-review-batch-status"
+description = "Denies the review_batch_status command without any pre-configured scope."
+commands.deny = ["review_batch_status"]

@@ -1,0 +1,60 @@
+{
+  "purpose": "temporary local ASR diagnostic only; not a Lexique product dependency",
+  "repository": "csukuangfj/sherpa-onnx-whisper-tiny",
+  "revision": "65176e2deb88badc814a94058666cadccc29b61c",
+  "languages": "multilingual Whisper tiny includes French; not the tiny.en model",
+  "license_boundary": {
+    "model_card": "Apache-2.0",
+    "model_card_source": "https://huggingface.co/openai/whisper-tiny/blob/169d4a4341b33bc18d8881c4b69c2e104e1cc0af/README.md",
+    "original_openai_repository_code": "MIT; this separate code license does not replace the model card license",
+    "sherpa_onnx_tooling": "Apache-2.0",
+    "converted_model_repository_has_readme_or_license_file": false
+  },
+  "files": [
+    {
+      "path": "tiny-encoder.int8.onnx",
+      "url": "https://huggingface.co/csukuangfj/sherpa-onnx-whisper-tiny/resolve/65176e2deb88badc814a94058666cadccc29b61c/tiny-encoder.int8.onnx",
+      "bytes": 12937772,
+      "sha256": "d24fb083ae3b1041fc24e97971d60e280c9342201fbb67b0ab428a8b4a51a434",
+      "hf_lfs_pointer_blob_oid": "16e39b36b676d7614c6324c4c36653bc666beef3",
+      "local_file": ".tooling/issue-14/asr-check/tiny-encoder.int8.onnx"
+    },
+    {
+      "path": "tiny-decoder.int8.onnx",
+      "url": "https://huggingface.co/csukuangfj/sherpa-onnx-whisper-tiny/resolve/65176e2deb88badc814a94058666cadccc29b61c/tiny-decoder.int8.onnx",
+      "bytes": 89855401,
+      "sha256": "d2fece8dd42771f1df975c6c0445770d0c292bf7547c2cae04a6c0cc57540925",
+      "hf_lfs_pointer_blob_oid": "a62129e6f2e71df56f77c04b3c13d64358e49c47",
+      "local_file": ".tooling/issue-14/asr-check/tiny-decoder.int8.onnx"
+    },
+    {
+      "path": "tiny-tokens.txt",
+      "url": "https://huggingface.co/csukuangfj/sherpa-onnx-whisper-tiny/resolve/65176e2deb88badc814a94058666cadccc29b61c/tiny-tokens.txt",
+      "bytes": 816730,
+      "sha256": "b34b360dbb493e781e479794586d661700670d65564001f23024971d1f2fa126",
+      "hf_git_blob_oid": "a4edf0b719c10d28cd83f8c294449f99ff5d5dc0",
+      "local_file": ".tooling/issue-14/asr-check/tiny-tokens.txt"
+    }
+  ],
+  "upstream_documents": [
+    {
+      "local_file": ".tooling/issue-14/asr-check/upstream/openai-whisper-tiny-README.md",
+      "source": "https://huggingface.co/openai/whisper-tiny/raw/169d4a4341b33bc18d8881c4b69c2e104e1cc0af/README.md",
+      "bytes": 19787,
+      "sha256": "57a3bbbbf1e79369e4d1ced790812a1723b43a256c1b43fc70cc2f3339ae9881"
+    },
+    {
+      "local_file": ".tooling/issue-14/asr-check/upstream/openai-whisper-code-LICENSE.txt",
+      "source": "https://raw.githubusercontent.com/openai/whisper/86098128c0b4f24f0e2aa2994de830614b474227/LICENSE",
+      "bytes": 1063,
+      "sha256": "b5d65a59060e68c4ff940e1eddfa6f94b2d68fdf58ed7f4dd57721c997e35e9d"
+    },
+    {
+      "local_file": ".tooling/issue-14/asr-check/upstream/sherpa-onnx-LICENSE.txt",
+      "source": "https://raw.githubusercontent.com/k2-fsa/sherpa-onnx/af2d8d81dbfa61c4cea4c568da78f3982edca005/LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    }
+  ],
+  "total_model_and_token_bytes": 103609903
+}

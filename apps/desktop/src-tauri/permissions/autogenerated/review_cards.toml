@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-review-cards"
+description = "Enables the review_cards command without any pre-configured scope."
+commands.allow = ["review_cards"]
+
+[[permission]]
+identifier = "deny-review-cards"
+description = "Denies the review_cards command without any pre-configured scope."
+commands.deny = ["review_cards"]

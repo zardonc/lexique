@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Supertonic 3 int8 试听证据</title>
+  <style>
+    :root { color-scheme: light; font: 16px/1.5 "Segoe UI", sans-serif; color: #202827; background: #f5f7f6; }
+    body { max-width: 1020px; margin: 0 auto; padding: 24px 16px 56px; }
+    h1 { margin: 0 0 8px; font-size: 1.55rem; }
+    h2 { margin: 0; font-size: 1.15rem; }
+    h3 { margin: 0; font-size: 1rem; }
+    p { margin: 8px 0; }
+    .notice { margin: 16px 0 22px; padding: 12px 14px; border-left: 4px solid #b34c32; background: #fff; }
+    .links { display: flex; flex-wrap: wrap; gap: 8px 16px; margin: 12px 0 24px; }
+    .quick { border-collapse: collapse; margin: 10px 0 26px; width: 100%; }
+    .quick th, .quick td { border-bottom: 1px solid #d9e1de; padding: 8px 10px; text-align: left; }
+    .quick th { color: #42514e; font-size: .9rem; }
+    section { border-top: 1px solid #cad4d1; padding: 18px 0 22px; }
+    .meta { color: #52615e; font-size: .9rem; }
+    .samples { list-style: none; margin: 8px 0 0; padding: 0; }
+    .samples li { display: grid; grid-template-columns: minmax(250px, 1fr) minmax(260px, 360px); align-items: center; gap: 16px; padding: 10px 0; border-top: 1px solid #e0e6e4; }
+    .samples audio { display: block; width: 100%; }
+    .input { margin: 0; font-weight: 600; }
+    .asr { margin: 2px 0 0; color: #4c5c59; font-size: .9rem; overflow-wrap: anywhere; }
+    .english { margin-top: 8px; }
+    @media (max-width: 600px) { .samples li { grid-template-columns: 1fr; gap: 5px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Supertonic 3 int8 · 离线语音样本</h1>
+    <p>本页 26 段音频全部为机器合成，音频为 44.1 kHz WAV。用户确认英语和法语样本可用，并希望慢速再慢一些；<a href="../supertonic-slower/listen.html">新慢速及字母名候选试听</a>仍待确认。</p>
+    <div class="notice">
+      <strong>ASR 仅是识别诊断，不是真值，也不代表语音质量通过。</strong>
+      Whisper tiny int8 本轮以法语模式运行，可能误听或产生幻觉。`y` 与 `i` 是普通文本输入，不是音素覆盖；ASR 的输出不能单独证明发音是否正确。
+    </div>
+
+    <nav class="links" aria-label="证据文件">
+      <a href="report.json">合成报告</a>
+      <a href="asr-screen.json">ASR 诊断</a>
+      <a href="../replacement-options-after-mls.md">替代方案比较</a>
+      <a href="../supertonic3-model.json">模型清单</a>
+      <a href="../supertonic-licenses/sources.json">许可来源与哈希</a>
+      <a href="../supertonic-licenses/ATTRIBUTION.md">署名与许可范围</a>
+      <a href="../supertonic-licenses/LICENSE-SUPERTONE-model-OpenRAIL-M.txt">OpenRAIL-M 许可文本</a>
+    </nav>
+
+    <section aria-labelledby="quick-heading">
+      <h2 id="quick-heading">先听四种组合</h2>
+      <p class="meta">相同长句：J'apprends le français tous les jours. 点击跳到对应的唯一播放控件。</p>
+      <table class="quick">
+        <thead><tr><th>声线</th><th>速度</th><th>对照</th></tr></thead>
+        <tbody>
+          <tr><td>F1 女声 · sid 0</td><td>正常 · 1.0</td><td><a href="#female-normal-04">试听句 04</a></td></tr>
+          <tr><td>F1 女声 · sid 0</td><td>慢速 · 0.8</td><td><a href="#female-slow-04">试听句 04</a></td></tr>
+          <tr><td>M1 男声 · sid 5</td><td>正常 · 1.0</td><td><a href="#male-normal-04">试听句 04</a></td></tr>
+          <tr><td>M1 男声 · sid 5</td><td>慢速 · 0.8</td><td><a href="#male-slow-04">试听句 04</a></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section aria-labelledby="female-normal-heading">
+      <h2 id="female-normal-heading">法语女声 F1 · 正常</h2>
+      <p class="meta">sid 0 · speed 1.0 · 8 steps</p>
+      <ol class="samples">
+        <li id="female-normal-01"><div><p class="input">01 · 输入：école</p><p class="asr">ASR：Eccole</p></div><audio controls preload="none" aria-label="F1 女声正常，école" src="female-normal-01.wav"></audio></li>
+        <li id="female-normal-02"><div><p class="input">02 · 输入：œil</p><p class="asr">ASR：A</p></div><audio controls preload="none" aria-label="F1 女声正常，œil" src="female-normal-02.wav"></audio></li>
+        <li id="female-normal-03"><div><p class="input">03 · 输入：nous sommes ici</p><p class="asr">ASR：Nous sommes ici.</p></div><audio controls preload="none" aria-label="F1 女声正常，nous sommes ici" src="female-normal-03.wav"></audio></li>
+        <li id="female-normal-04"><div><p class="input">04 · 输入：J'apprends le français tous les jours.</p><p class="asr">ASR：Je apprend le français tous les jours.</p></div><audio controls preload="none" aria-label="F1 女声正常，J'apprends le français tous les jours" src="female-normal-04.wav"></audio></li>
+        <li id="female-normal-05"><div><p class="input">05 · 普通文本：y</p><p class="asr">ASR：et...</p></div><audio controls preload="none" aria-label="F1 女声正常，普通文本 y" src="female-normal-05.wav"></audio></li>
+        <li id="female-normal-06"><div><p class="input">06 · 普通文本：i</p><p class="asr">ASR：et...</p></div><audio controls preload="none" aria-label="F1 女声正常，普通文本 i" src="female-normal-06.wav"></audio></li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="female-slow-heading">
+      <h2 id="female-slow-heading">法语女声 F1 · 慢速</h2>
+      <p class="meta">sid 0 · speed 0.8 · 8 steps</p>
+      <ol class="samples">
+        <li id="female-slow-01"><div><p class="input">01 · 输入：école</p><p class="asr">ASR：École. École. École. É</p></div><audio controls preload="none" aria-label="F1 女声慢速，école" src="female-slow-01.wav"></audio></li>
+        <li id="female-slow-02"><div><p class="input">02 · 输入：œil</p><p class="asr">ASR：Aïla.</p></div><audio controls preload="none" aria-label="F1 女声慢速，œil" src="female-slow-02.wav"></audio></li>
+        <li id="female-slow-03"><div><p class="input">03 · 输入：nous sommes ici</p><p class="asr">ASR：Nous sommes ici.</p></div><audio controls preload="none" aria-label="F1 女声慢速，nous sommes ici" src="female-slow-03.wav"></audio></li>
+        <li id="female-slow-04"><div><p class="input">04 · 输入：J'apprends le français tous les jours.</p><p class="asr">ASR：J'apprends le français, tous les jours.</p></div><audio controls preload="none" aria-label="F1 女声慢速，J'apprends le français tous les jours" src="female-slow-04.wav"></audio></li>
+        <li id="female-slow-05"><div><p class="input">05 · 普通文本：y</p><p class="asr">ASR：et...</p></div><audio controls preload="none" aria-label="F1 女声慢速，普通文本 y" src="female-slow-05.wav"></audio></li>
+        <li id="female-slow-06"><div><p class="input">06 · 普通文本：i</p><p class="asr">ASR：et...</p></div><audio controls preload="none" aria-label="F1 女声慢速，普通文本 i" src="female-slow-06.wav"></audio></li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="male-normal-heading">
+      <h2 id="male-normal-heading">法语男声 M1 · 正常</h2>
+      <p class="meta">sid 5 · speed 1.0 · 8 steps</p>
+      <ol class="samples">
+        <li id="male-normal-01"><div><p class="input">01 · 输入：école</p><p class="asr">ASR：E-colne</p></div><audio controls preload="none" aria-label="M1 男声正常，école" src="male-normal-01.wav"></audio></li>
+        <li id="male-normal-02"><div><p class="input">02 · 输入：œil</p><p class="asr">ASR：Aille.</p></div><audio controls preload="none" aria-label="M1 男声正常，œil" src="male-normal-02.wav"></audio></li>
+        <li id="male-normal-03"><div><p class="input">03 · 输入：nous sommes ici</p><p class="asr">ASR：Nous sommes ici.</p></div><audio controls preload="none" aria-label="M1 男声正常，nous sommes ici" src="male-normal-03.wav"></audio></li>
+        <li id="male-normal-04"><div><p class="input">04 · 输入：J'apprends le français tous les jours.</p><p class="asr">ASR：J'apprends le français tous les jours.</p></div><audio controls preload="none" aria-label="M1 男声正常，J'apprends le français tous les jours" src="male-normal-04.wav"></audio></li>
+        <li id="male-normal-05"><div><p class="input">05 · 普通文本：y</p><p class="asr">ASR：... ... ... ... ... ... ... ...</p></div><audio controls preload="none" aria-label="M1 男声正常，普通文本 y" src="male-normal-05.wav"></audio></li>
+        <li id="male-normal-06"><div><p class="input">06 · 普通文本：i</p><p class="asr">ASR：et</p></div><audio controls preload="none" aria-label="M1 男声正常，普通文本 i" src="male-normal-06.wav"></audio></li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="male-slow-heading">
+      <h2 id="male-slow-heading">法语男声 M1 · 慢速</h2>
+      <p class="meta">sid 5 · speed 0.8 · 8 steps</p>
+      <ol class="samples">
+        <li id="male-slow-01"><div><p class="input">01 · 输入：école</p><p class="asr">ASR：Ecole</p></div><audio controls preload="none" aria-label="M1 男声慢速，école" src="male-slow-01.wav"></audio></li>
+        <li id="male-slow-02"><div><p class="input">02 · 输入：œil</p><p class="asr">ASR：Eil.</p></div><audio controls preload="none" aria-label="M1 男声慢速，œil" src="male-slow-02.wav"></audio></li>
+        <li id="male-slow-03"><div><p class="input">03 · 输入：nous sommes ici</p><p class="asr">ASR：Nous sommes ici.</p></div><audio controls preload="none" aria-label="M1 男声慢速，nous sommes ici" src="male-slow-03.wav"></audio></li>
+        <li id="male-slow-04"><div><p class="input">04 · 输入：J'apprends le français tous les jours.</p><p class="asr">ASR：J'apprends le français tous les jours.</p></div><audio controls preload="none" aria-label="M1 男声慢速，J'apprends le français tous les jours" src="male-slow-04.wav"></audio></li>
+        <li id="male-slow-05"><div><p class="input">05 · 普通文本：y</p><p class="asr">ASR：1</p></div><audio controls preload="none" aria-label="M1 男声慢速，普通文本 y" src="male-slow-05.wav"></audio></li>
+        <li id="male-slow-06"><div><p class="input">06 · 普通文本：i</p><p class="asr">ASR：et...</p></div><audio controls preload="none" aria-label="M1 男声慢速，普通文本 i" src="male-slow-06.wav"></audio></li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="english-heading">
+      <h2 id="english-heading">英语控制样本</h2>
+      <p class="meta">同一英文输入，F1 与 M1 正常速度。当前 ASR 使用法语模式，因此不显示英文识别结果。</p>
+      <ol class="samples">
+        <li id="female-english"><div><p class="input">F1 女声 · sid 0 · 输入：Hello. I am learning French every day.</p><p class="asr">English control · no ASR result in this French-language screen</p></div><audio controls preload="none" aria-label="F1 女声英语控制，Hello. I am learning French every day" src="female-normal-07.wav"></audio></li>
+        <li id="male-english"><div><p class="input">M1 男声 · sid 5 · 输入：Hello. I am learning French every day.</p><p class="asr">English control · no ASR result in this French-language screen</p></div><audio controls preload="none" aria-label="M1 男声英语控制，Hello. I am learning French every day" src="male-normal-07.wav"></audio></li>
+      </ol>
+    </section>
+  </main>
+</body>
+</html>

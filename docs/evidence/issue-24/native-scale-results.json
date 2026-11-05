@@ -1,0 +1,330 @@
+{
+  "baseline": "6850ffb095a69084b02ee40a702355f660c3bd97",
+  "product_binary_sha256": "1026d941075a32bcfaf9ec526cb907faf7a7f0307252b98bdcf4dfba679a4838",
+  "measurements": [
+    {
+      "count": 100,
+      "seed": {
+        "words": 100,
+        "fixture_bytes": 819200,
+        "cache": "Ogg header fixture; not decodable playback evidence"
+      },
+      "samples": [
+        {
+          "state": "due",
+          "iteration": 0,
+          "ms": 197.69999998807907,
+          "cards": 20
+        },
+        {
+          "state": "due",
+          "iteration": 1,
+          "ms": 79.19999998807907,
+          "cards": 20
+        },
+        {
+          "state": "due",
+          "iteration": 2,
+          "ms": 77.19999998807907,
+          "cards": 20
+        },
+        {
+          "state": "due",
+          "iteration": 3,
+          "ms": 67.60000002384186,
+          "cards": 20
+        },
+        {
+          "state": "future",
+          "iteration": 0,
+          "ms": 107.89999997615814,
+          "cards": 0,
+          "available": 1793740230
+        },
+        {
+          "state": "future",
+          "iteration": 1,
+          "ms": 82.5,
+          "cards": 0,
+          "available": 1793740230
+        },
+        {
+          "state": "future",
+          "iteration": 2,
+          "ms": 77.70000004768372,
+          "cards": 0,
+          "available": 1793740230
+        },
+        {
+          "state": "future",
+          "iteration": 3,
+          "ms": 87,
+          "cards": 0,
+          "available": 1793740230
+        }
+      ],
+      "physicalDiskCold": false,
+      "sourceBoundary": "real native IPC and SQLite; synthetic Ogg header files",
+      "workers": 0,
+      "raw_directory": "target/issue-24/scale-baseline-100",
+      "kind": "baseline"
+    },
+    {
+      "count": 1000,
+      "seed": {
+        "words": 1000,
+        "fixture_bytes": 8192000,
+        "cache": "Ogg header fixture; not decodable playback evidence"
+      },
+      "samples": [
+        {
+          "state": "due",
+          "iteration": 0,
+          "ms": 1805.199999988079,
+          "cards": 20
+        },
+        {
+          "state": "due",
+          "iteration": 1,
+          "ms": 1108.300000011921,
+          "cards": 20
+        },
+        {
+          "state": "due",
+          "iteration": 2,
+          "ms": 1248.6000000238419,
+          "cards": 20
+        },
+        {
+          "state": "due",
+          "iteration": 3,
+          "ms": 1215.0999999642372,
+          "cards": 20
+        },
+        {
+          "state": "future",
+          "iteration": 0,
+          "ms": 902.6000000238419,
+          "cards": 0,
+          "available": 1793740272
+        },
+        {
+          "state": "future",
+          "iteration": 1,
+          "ms": 652.6999999880791,
+          "cards": 0,
+          "available": 1793740272
+        },
+        {
+          "state": "future",
+          "iteration": 2,
+          "ms": 615.8000000119209,
+          "cards": 0,
+          "available": 1793740272
+        },
+        {
+          "state": "future",
+          "iteration": 3,
+          "ms": 711.6000000238419,
+          "cards": 0,
+          "available": 1793740272
+        }
+      ],
+      "physicalDiskCold": false,
+      "sourceBoundary": "real native IPC and SQLite; synthetic Ogg header files",
+      "workers": 0,
+      "raw_directory": "target/issue-24/scale-baseline-1000",
+      "kind": "baseline"
+    },
+    {
+      "count": 10000,
+      "seed": {
+        "words": 10000,
+        "fixture_bytes": 81920000,
+        "cache": "Ogg header fixture; not decodable playback evidence"
+      },
+      "samples": [
+        {
+          "state": "due",
+          "iteration": 0,
+          "ms": 19665.399999976158,
+          "cards": 20
+        },
+        {
+          "state": "future",
+          "iteration": 0,
+          "ms": 9896.300000011921,
+          "cards": 0,
+          "available": 1793740616
+        }
+      ],
+      "physicalDiskCold": false,
+      "sourceBoundary": "real native IPC and SQLite; synthetic Ogg header files",
+      "workers": 0,
+      "raw_directory": "target/issue-24/scale-baseline-10000-b",
+      "kind": "baseline"
+    },
+    {
+      "count": 100,
+      "seed": {
+        "words": 100,
+        "fixture_bytes": 819200,
+        "cache": "Ogg header fixture; not decodable playback evidence"
+      },
+      "samples": [
+        {
+          "state": "due",
+          "iteration": 0,
+          "ms": 152.69999998807907,
+          "cards": 20
+        },
+        {
+          "state": "due",
+          "iteration": 1,
+          "ms": 44.5,
+          "cards": 20
+        },
+        {
+          "state": "due",
+          "iteration": 2,
+          "ms": 44.5,
+          "cards": 20
+        },
+        {
+          "state": "due",
+          "iteration": 3,
+          "ms": 42.59999996423721,
+          "cards": 20
+        },
+        {
+          "state": "future",
+          "iteration": 0,
+          "ms": 17,
+          "cards": 0,
+          "available": 1793740573
+        },
+        {
+          "state": "future",
+          "iteration": 1,
+          "ms": 13.199999988079071,
+          "cards": 0,
+          "available": 1793740573
+        },
+        {
+          "state": "future",
+          "iteration": 2,
+          "ms": 12.900000035762787,
+          "cards": 0,
+          "available": 1793740573
+        },
+        {
+          "state": "future",
+          "iteration": 3,
+          "ms": 10.899999976158142,
+          "cards": 0,
+          "available": 1793740573
+        }
+      ],
+      "physicalDiskCold": false,
+      "sourceBoundary": "real native IPC and SQLite; synthetic Ogg header files",
+      "workers": 0,
+      "raw_directory": "target/issue-24/scale-product-100-b",
+      "kind": "product"
+    },
+    {
+      "count": 1000,
+      "seed": {
+        "words": 1000,
+        "fixture_bytes": 8192000,
+        "cache": "Ogg header fixture; not decodable playback evidence"
+      },
+      "samples": [
+        {
+          "state": "due",
+          "iteration": 0,
+          "ms": 1407.9000000357628,
+          "cards": 20
+        },
+        {
+          "state": "due",
+          "iteration": 1,
+          "ms": 392.5999999642372,
+          "cards": 20
+        },
+        {
+          "state": "due",
+          "iteration": 2,
+          "ms": 412.5,
+          "cards": 20
+        },
+        {
+          "state": "due",
+          "iteration": 3,
+          "ms": 673.9000000357628,
+          "cards": 20
+        },
+        {
+          "state": "future",
+          "iteration": 0,
+          "ms": 74.19999998807907,
+          "cards": 0,
+          "available": 1793740583
+        },
+        {
+          "state": "future",
+          "iteration": 1,
+          "ms": 71.69999998807907,
+          "cards": 0,
+          "available": 1793740583
+        },
+        {
+          "state": "future",
+          "iteration": 2,
+          "ms": 74.80000001192093,
+          "cards": 0,
+          "available": 1793740583
+        },
+        {
+          "state": "future",
+          "iteration": 3,
+          "ms": 78.19999998807907,
+          "cards": 0,
+          "available": 1793740583
+        }
+      ],
+      "physicalDiskCold": false,
+      "sourceBoundary": "real native IPC and SQLite; synthetic Ogg header files",
+      "workers": 0,
+      "raw_directory": "target/issue-24/scale-product-1000-b",
+      "kind": "product"
+    },
+    {
+      "count": 10000,
+      "seed": {
+        "words": 10000,
+        "fixture_bytes": 81920000,
+        "cache": "Ogg header fixture; not decodable playback evidence"
+      },
+      "samples": [
+        {
+          "state": "due",
+          "iteration": 0,
+          "ms": 14270.5,
+          "cards": 20
+        },
+        {
+          "state": "future",
+          "iteration": 0,
+          "ms": 697.4000000357628,
+          "cards": 0,
+          "available": 1793740653
+        }
+      ],
+      "physicalDiskCold": false,
+      "sourceBoundary": "real native IPC and SQLite; synthetic Ogg header files",
+      "workers": 0,
+      "raw_directory": "target/issue-24/scale-product-10000-b",
+      "kind": "product"
+    }
+  ]
+}

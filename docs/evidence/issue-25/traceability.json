@@ -1,0 +1,804 @@
+{
+  "issue": 25,
+  "parent": 24,
+  "no_parent_acceptance_claim": true,
+  "original": [
+    {
+      "id": "R01",
+      "s0_status": "baseline_partial",
+      "evidence": "queue matrix / E2E",
+      "remaining": "new window, revision and event contract",
+      "owners": [
+        26,
+        29,
+        31,
+        34
+      ]
+    },
+    {
+      "id": "R02",
+      "s0_status": "baseline_partial",
+      "evidence": "E2E page selection / V03",
+      "remaining": "product batch snapshots and acceptance",
+      "owners": [
+        32,
+        34
+      ]
+    },
+    {
+      "id": "R03",
+      "s0_status": "budget_failed",
+      "evidence": "native interaction / model trials",
+      "remaining": "fairness and P0 isolation",
+      "owners": [
+        32,
+        34
+      ]
+    },
+    {
+      "id": "R04",
+      "s0_status": "baseline_partial",
+      "evidence": "SQLite batch / native workers",
+      "remaining": "new publication identities and recovery",
+      "owners": [
+        28,
+        32,
+        34
+      ]
+    },
+    {
+      "id": "R05",
+      "s0_status": "fixture_ready",
+      "evidence": "safe file tests / raw oracle",
+      "remaining": "selected asset protection and GC protocol",
+      "owners": [
+        27,
+        28,
+        29,
+        33
+      ]
+    },
+    {
+      "id": "R06",
+      "s0_status": "fixture_ready",
+      "evidence": "clock / raw due data",
+      "remaining": "bounded actual demand contract",
+      "owners": [
+        32,
+        34
+      ]
+    },
+    {
+      "id": "R07",
+      "s0_status": "baseline_partial",
+      "evidence": "worker controls / native P0",
+      "remaining": "new retry identities and exact budgets",
+      "owners": [
+        28,
+        32,
+        34
+      ]
+    },
+    {
+      "id": "R08",
+      "s0_status": "deferred",
+      "evidence": "no service integration",
+      "remaining": "M4 / M6 gates",
+      "owners": [
+        34
+      ]
+    },
+    {
+      "id": "R09",
+      "s0_status": "deferred",
+      "evidence": "no synchronization integration",
+      "remaining": "M4 / M6 optional sharing",
+      "owners": [
+        34
+      ]
+    },
+    {
+      "id": "R10",
+      "s0_status": "baseline_partial",
+      "evidence": "100-sample matrix / native resource trials",
+      "remaining": "long duration and incremental targets",
+      "owners": [
+        26,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34
+      ]
+    },
+    {
+      "id": "V01",
+      "s0_status": "reproduced",
+      "evidence": "Q04 / Q10 / held writer / native and E2E",
+      "remaining": "new concurrency contracts",
+      "owners": [
+        26,
+        30,
+        31,
+        32
+      ]
+    },
+    {
+      "id": "V02",
+      "s0_status": "baseline_partial",
+      "evidence": "CPU bg1/2/4 total1/2/3; real decode / playback",
+      "remaining": "future isolation acceptance / physical cold",
+      "owners": [
+        32
+      ]
+    },
+    {
+      "id": "V03",
+      "s0_status": "baseline_partial",
+      "evidence": "real V03 candidate20/50/100 / constraints / concurrent notes-rating",
+      "remaining": "production batch comparisons; conditional WAL gate",
+      "owners": [
+        30,
+        32
+      ]
+    },
+    {
+      "id": "V04",
+      "s0_status": "fixture_ready",
+      "evidence": "raw states / safe files / absolute clock",
+      "remaining": "new ownership and retention boundaries",
+      "owners": [
+        27,
+        28,
+        33
+      ]
+    },
+    {
+      "id": "V05",
+      "s0_status": "fixture_ready",
+      "evidence": "worker and publication / GC rendezvous",
+      "remaining": "future protocols must execute barriers before changes",
+      "owners": [
+        28,
+        32,
+        33
+      ]
+    },
+    {
+      "id": "V06",
+      "s0_status": "deferred",
+      "evidence": "F01-F05 explicitly retained",
+      "remaining": "M3 / M4 / M6 admission",
+      "owners": [
+        34
+      ]
+    },
+    {
+      "id": "T01",
+      "s0_status": "baseline_partial",
+      "evidence": "existing automatic-update E2E",
+      "remaining": "full new event/lifecycle matrix",
+      "owners": [
+        31,
+        34
+      ]
+    },
+    {
+      "id": "T02",
+      "s0_status": "reproduced",
+      "evidence": "Q04 + time/quota oracle",
+      "remaining": "new queue and complete time boundary matrix",
+      "owners": [
+        26,
+        34
+      ]
+    },
+    {
+      "id": "T03",
+      "s0_status": "baseline_partial",
+      "evidence": "existing presentation E2E",
+      "remaining": "new revision / current-answer contracts",
+      "owners": [
+        29,
+        31,
+        34
+      ]
+    },
+    {
+      "id": "T04",
+      "s0_status": "baseline_partial",
+      "evidence": "page-selection E2E",
+      "remaining": "production snapshots / capacity / reverse response acceptance",
+      "owners": [
+        32,
+        34
+      ]
+    },
+    {
+      "id": "T05",
+      "s0_status": "baseline_partial",
+      "evidence": "SQLite batch tests / native batch",
+      "remaining": "full chunk failure and idempotency matrix",
+      "owners": [
+        28,
+        32,
+        34
+      ]
+    },
+    {
+      "id": "T06",
+      "s0_status": "budget_failed",
+      "evidence": "idle/batch native IPC + real model",
+      "remaining": "sufficient full product isolation",
+      "owners": [
+        32,
+        34
+      ]
+    },
+    {
+      "id": "T07",
+      "s0_status": "baseline_partial",
+      "evidence": "native normal exit / worker controls",
+      "remaining": "new cancellation/restart/deadline fault matrix",
+      "owners": [
+        28,
+        32,
+        34
+      ]
+    },
+    {
+      "id": "T08",
+      "s0_status": "fixture_ready",
+      "evidence": "raw ownership / clock",
+      "remaining": "selected current/previous/grace and shared bytes",
+      "owners": [
+        27,
+        33,
+        34
+      ]
+    },
+    {
+      "id": "T09",
+      "s0_status": "baseline_partial",
+      "evidence": "safe-cache tests / malformed actual files",
+      "remaining": "new publication/GC races and migration",
+      "owners": [
+        27,
+        28,
+        29,
+        33,
+        34
+      ]
+    },
+    {
+      "id": "T10",
+      "s0_status": "fixture_ready",
+      "evidence": "due/audio/pause oracle",
+      "remaining": "bounded actual demand / prefetch contract",
+      "owners": [
+        32,
+        34
+      ]
+    },
+    {
+      "id": "T11",
+      "s0_status": "baseline_partial",
+      "evidence": "visible errors / controlled worker",
+      "remaining": "exact retry and missing-resource matrix",
+      "owners": [
+        28,
+        32,
+        34
+      ]
+    },
+    {
+      "id": "T12",
+      "s0_status": "baseline_partial",
+      "evidence": "100/1k/10k / model / 50k prepared",
+      "remaining": "50k execution / long duration / suspend",
+      "owners": [
+        32,
+        34
+      ]
+    },
+    {
+      "id": "F01",
+      "s0_status": "deferred",
+      "evidence": "no simulated integration",
+      "remaining": "M3 real French examples and admission",
+      "owners": [
+        34
+      ]
+    },
+    {
+      "id": "F02",
+      "s0_status": "deferred",
+      "evidence": "no simulated integration",
+      "remaining": "M4 online settings/auth/errors/costs",
+      "owners": [
+        34
+      ]
+    },
+    {
+      "id": "F03",
+      "s0_status": "deferred",
+      "evidence": "no simulated integration",
+      "remaining": "M6 actual WASM/browser demand and storage",
+      "owners": [
+        34
+      ]
+    },
+    {
+      "id": "F04",
+      "s0_status": "deferred",
+      "evidence": "no simulated integration",
+      "remaining": "M6 mobile codecs/quota/offline",
+      "owners": [
+        34
+      ]
+    },
+    {
+      "id": "F05",
+      "s0_status": "deferred",
+      "evidence": "no simulated integration",
+      "remaining": "M4/M6 optional stable asset sharing",
+      "owners": [
+        34
+      ]
+    },
+    {
+      "id": "AC01",
+      "s0_status": "baseline_partial",
+      "evidence": "manifest/matrix/budgets",
+      "remaining": "post-optimization comparisons",
+      "owners": [
+        34
+      ]
+    },
+    {
+      "id": "AC02",
+      "s0_status": "baseline_partial",
+      "evidence": "existing E2E",
+      "remaining": "full new triggers and languages",
+      "owners": [
+        31,
+        34
+      ]
+    },
+    {
+      "id": "AC03",
+      "s0_status": "baseline_partial",
+      "evidence": "oracle + current regression",
+      "remaining": "new playback/revision/operation contracts",
+      "owners": [
+        26,
+        29,
+        31,
+        34
+      ]
+    },
+    {
+      "id": "AC04",
+      "s0_status": "baseline_partial",
+      "evidence": "existing event E2E",
+      "remaining": "new bounded event/lifecycle contract",
+      "owners": [
+        31,
+        34
+      ]
+    },
+    {
+      "id": "AC05",
+      "s0_status": "baseline_partial",
+      "evidence": "safe-file, DB, native",
+      "remaining": "new product publication/window/transactions",
+      "owners": [
+        28,
+        29,
+        32,
+        34
+      ]
+    },
+    {
+      "id": "AC06",
+      "s0_status": "baseline_partial",
+      "evidence": "traceability and commands",
+      "remaining": "full original stability and new specialized cases",
+      "owners": [
+        34
+      ]
+    },
+    {
+      "id": "AC07",
+      "s0_status": "budget_failed",
+      "evidence": "native/model resource statistics",
+      "remaining": "optimize and meet fixed budgets",
+      "owners": [
+        26,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34
+      ]
+    },
+    {
+      "id": "AC08",
+      "s0_status": "baseline_partial",
+      "evidence": "final checks recorded separately",
+      "remaining": "all implementation tickets must reverify",
+      "owners": [
+        34
+      ]
+    },
+    {
+      "id": "AC09",
+      "s0_status": "fixture_ready",
+      "evidence": "V01-V05 baseline + 12 owners",
+      "remaining": "run future red contracts before corresponding changes",
+      "owners": [
+        26,
+        27,
+        28,
+        29,
+        31,
+        32,
+        33,
+        34
+      ]
+    },
+    {
+      "id": "AC10",
+      "s0_status": "baseline_partial",
+      "evidence": "page/batch/native current checks",
+      "remaining": "new identities/capacity/lifecycle",
+      "owners": [
+        28,
+        32,
+        34
+      ]
+    },
+    {
+      "id": "AC11",
+      "s0_status": "fixture_ready",
+      "evidence": "clock/files/GC controls",
+      "remaining": "new ownership, retention, migration",
+      "owners": [
+        27,
+        28,
+        33,
+        34
+      ]
+    },
+    {
+      "id": "AC12",
+      "s0_status": "baseline_partial",
+      "evidence": "current worker/errors",
+      "remaining": "new precise local retry; F02 deferred",
+      "owners": [
+        28,
+        32,
+        34
+      ]
+    },
+    {
+      "id": "AC13",
+      "s0_status": "fixture_ready",
+      "evidence": "demand inputs; F deferred",
+      "remaining": "T10 actual bounded contract",
+      "owners": [
+        32,
+        34
+      ]
+    },
+    {
+      "id": "AC14",
+      "s0_status": "baseline_partial",
+      "evidence": "all IDs mapped",
+      "remaining": "#24 acceptance and future milestones",
+      "owners": [
+        34
+      ]
+    }
+  ],
+  "specialized": {
+    "T24-Q01": {
+      "owner": 26,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-Q02": {
+      "owner": 26,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-Q03": {
+      "owner": 26,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-Q04": {
+      "owner": 26,
+      "new_contract": "not_executed",
+      "s0_status": "current_defect_reproduced"
+    },
+    "T24-Q05": {
+      "owner": 26,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-Q06": {
+      "owner": 26,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-Q07": {
+      "owner": 26,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-Q10": {
+      "owner": 26,
+      "new_contract": "not_executed",
+      "s0_status": "current_defect_reproduced"
+    },
+    "T24-C02": {
+      "owner": 26,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-C04": {
+      "owner": 26,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-C05": {
+      "owner": 26,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-G01": {
+      "owner": 27,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-L01": {
+      "owner": 27,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-L02": {
+      "owner": 27,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-L05": {
+      "owner": 27,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-A06": {
+      "owner": 28,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-W03": {
+      "owner": 28,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-W04": {
+      "owner": 28,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-W06": {
+      "owner": 28,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-L03": {
+      "owner": 28,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-L04": {
+      "owner": 28,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-Q08": {
+      "owner": 29,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-Q09": {
+      "owner": 29,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-A01": {
+      "owner": 29,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-A02": {
+      "owner": 29,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-A03": {
+      "owner": 29,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-A04": {
+      "owner": 29,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-A05": {
+      "owner": 29,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-A07": {
+      "owner": 29,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-A08": {
+      "owner": 29,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-P03": {
+      "owner": 29,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-C03": {
+      "owner": 30,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-C06": {
+      "owner": 30,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-P01": {
+      "owner": 30,
+      "new_contract": "not_executed",
+      "s0_status": "baseline_measured_target_unmet"
+    },
+    "T24-C01": {
+      "owner": 31,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-P02": {
+      "owner": 31,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-W01": {
+      "owner": 32,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-W02": {
+      "owner": 32,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-W05": {
+      "owner": 32,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-G02": {
+      "owner": 33,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-G03": {
+      "owner": 33,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-G04": {
+      "owner": 33,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-G05": {
+      "owner": 33,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-G06": {
+      "owner": 33,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-G07": {
+      "owner": 33,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-P04": {
+      "owner": 34,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-S01": {
+      "owner": 34,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-S02": {
+      "owner": 34,
+      "new_contract": "not_executed",
+      "s0_status": "fixture_or_existing_baseline_only"
+    },
+    "T24-F01": {
+      "owner": 34,
+      "new_contract": "not_executed",
+      "s0_status": "deferred_platform"
+    },
+    "T24-F02": {
+      "owner": 34,
+      "new_contract": "not_executed",
+      "s0_status": "deferred_platform"
+    }
+  },
+  "original_stability_matrix": {
+    "automatic_triggers": [
+      31,
+      34
+    ],
+    "time_quotas": [
+      26,
+      34
+    ],
+    "current_answer": [
+      29,
+      31,
+      34
+    ],
+    "request_races": [
+      26,
+      28,
+      31,
+      32,
+      34
+    ],
+    "fault_recovery": [
+      27,
+      28,
+      29,
+      32,
+      33,
+      34
+    ],
+    "audio_directory": [
+      29,
+      33,
+      34
+    ],
+    "lifecycle": [
+      28,
+      31,
+      32,
+      34
+    ],
+    "batch_interaction": [
+      32,
+      34
+    ]
+  },
+  "notes": "All new-protocol contracts remain unexecuted in S0. Baseline partial is not a passed #24 requirement. See README and results for measured boundaries."
+}

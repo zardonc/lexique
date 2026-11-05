@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-review-undo-target"
+description = "Enables the review_undo_target command without any pre-configured scope."
+commands.allow = ["review_undo_target"]
+
+[[permission]]
+identifier = "deny-review-undo-target"
+description = "Denies the review_undo_target command without any pre-configured scope."
+commands.deny = ["review_undo_target"]

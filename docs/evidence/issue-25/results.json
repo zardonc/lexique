@@ -1,0 +1,1413 @@
+{
+  "issue": 25,
+  "scope": "baseline and tools only; no product optimization",
+  "backend_matrix": [
+    {
+      "case": "100-new-0",
+      "first_ms": 31.815299999999997,
+      "steady": {
+        "attempts": 100,
+        "failures": 0,
+        "failure_rate": 0.0,
+        "quantile": "nearest rank over all attempts; timeout=60000ms",
+        "p50_ms": 16.4041,
+        "p95_ms": 18.7117,
+        "max_ms": 20.3053,
+        "accepted": true
+      }
+    },
+    {
+      "case": "100-new-50",
+      "first_ms": 24.2486,
+      "steady": {
+        "attempts": 100,
+        "failures": 0,
+        "failure_rate": 0.0,
+        "quantile": "nearest rank over all attempts; timeout=60000ms",
+        "p50_ms": 15.838700000000001,
+        "p95_ms": 17.6699,
+        "max_ms": 19.206899999999997,
+        "accepted": true
+      }
+    },
+    {
+      "case": "100-new-100",
+      "first_ms": 17.8611,
+      "steady": {
+        "attempts": 100,
+        "failures": 0,
+        "failure_rate": 0.0,
+        "quantile": "nearest rank over all attempts; timeout=60000ms",
+        "p50_ms": 14.8079,
+        "p95_ms": 16.538,
+        "max_ms": 18.1432,
+        "accepted": true
+      }
+    },
+    {
+      "case": "100-mixed-0",
+      "first_ms": 27.8637,
+      "steady": {
+        "attempts": 100,
+        "failures": 0,
+        "failure_rate": 0.0,
+        "quantile": "nearest rank over all attempts; timeout=60000ms",
+        "p50_ms": 16.339,
+        "p95_ms": 19.2657,
+        "max_ms": 20.7759,
+        "accepted": true
+      }
+    },
+    {
+      "case": "100-backlog-50",
+      "first_ms": 26.3201,
+      "steady": {
+        "attempts": 100,
+        "failures": 0,
+        "failure_rate": 0.0,
+        "quantile": "nearest rank over all attempts; timeout=60000ms",
+        "p50_ms": 16.523699999999998,
+        "p95_ms": 18.1315,
+        "max_ms": 18.9009,
+        "accepted": true
+      }
+    },
+    {
+      "case": "100-future-0",
+      "first_ms": 16.6626,
+      "steady": {
+        "attempts": 100,
+        "failures": 0,
+        "failure_rate": 0.0,
+        "quantile": "nearest rank over all attempts; timeout=60000ms",
+        "p50_ms": 11.714,
+        "p95_ms": 12.904499999999999,
+        "max_ms": 15.014700000000001,
+        "accepted": true
+      }
+    },
+    {
+      "case": "1000-new-0",
+      "first_ms": 183.9581,
+      "steady": {
+        "attempts": 100,
+        "failures": 0,
+        "failure_rate": 0.0,
+        "quantile": "nearest rank over all attempts; timeout=60000ms",
+        "p50_ms": 76.0415,
+        "p95_ms": 82.22160000000001,
+        "max_ms": 89.5085,
+        "accepted": true
+      }
+    },
+    {
+      "case": "1000-new-50",
+      "first_ms": 109.1207,
+      "steady": {
+        "attempts": 100,
+        "failures": 0,
+        "failure_rate": 0.0,
+        "quantile": "nearest rank over all attempts; timeout=60000ms",
+        "p50_ms": 69.61720000000001,
+        "p95_ms": 76.6973,
+        "max_ms": 80.1871,
+        "accepted": true
+      }
+    },
+    {
+      "case": "1000-new-100",
+      "first_ms": 60.6259,
+      "steady": {
+        "attempts": 100,
+        "failures": 0,
+        "failure_rate": 0.0,
+        "quantile": "nearest rank over all attempts; timeout=60000ms",
+        "p50_ms": 60.6414,
+        "p95_ms": 68.5702,
+        "max_ms": 70.9752,
+        "accepted": true
+      }
+    },
+    {
+      "case": "1000-mixed-0",
+      "first_ms": 195.6634,
+      "steady": {
+        "attempts": 100,
+        "failures": 0,
+        "failure_rate": 0.0,
+        "quantile": "nearest rank over all attempts; timeout=60000ms",
+        "p50_ms": 67.4495,
+        "p95_ms": 76.0716,
+        "max_ms": 81.79050000000001,
+        "accepted": true
+      }
+    },
+    {
+      "case": "1000-backlog-50",
+      "first_ms": 132.2697,
+      "steady": {
+        "attempts": 100,
+        "failures": 0,
+        "failure_rate": 0.0,
+        "quantile": "nearest rank over all attempts; timeout=60000ms",
+        "p50_ms": 71.7534,
+        "p95_ms": 77.9488,
+        "max_ms": 83.0,
+        "accepted": true
+      }
+    },
+    {
+      "case": "1000-future-0",
+      "first_ms": 41.2641,
+      "steady": {
+        "attempts": 100,
+        "failures": 0,
+        "failure_rate": 0.0,
+        "quantile": "nearest rank over all attempts; timeout=60000ms",
+        "p50_ms": 32.7895,
+        "p95_ms": 37.631299999999996,
+        "max_ms": 38.5467,
+        "accepted": true
+      }
+    },
+    {
+      "case": "10000-new-0",
+      "first_ms": 1738.4176999999997,
+      "steady": {
+        "attempts": 100,
+        "failures": 0,
+        "failure_rate": 0.0,
+        "quantile": "nearest rank over all attempts; timeout=60000ms",
+        "p50_ms": 615.4060999999999,
+        "p95_ms": 670.0161999999999,
+        "max_ms": 773.2618,
+        "accepted": true
+      }
+    },
+    {
+      "case": "10000-new-50",
+      "first_ms": 1024.3608,
+      "steady": {
+        "attempts": 100,
+        "failures": 0,
+        "failure_rate": 0.0,
+        "quantile": "nearest rank over all attempts; timeout=60000ms",
+        "p50_ms": 553.0167,
+        "p95_ms": 610.2842,
+        "max_ms": 643.5679,
+        "accepted": true
+      }
+    },
+    {
+      "case": "10000-new-100",
+      "first_ms": 483.0264,
+      "steady": {
+        "attempts": 100,
+        "failures": 0,
+        "failure_rate": 0.0,
+        "quantile": "nearest rank over all attempts; timeout=60000ms",
+        "p50_ms": 461.2987,
+        "p95_ms": 524.4481,
+        "max_ms": 668.0791,
+        "accepted": true
+      }
+    },
+    {
+      "case": "10000-mixed-0",
+      "first_ms": 2106.7459999999996,
+      "steady": {
+        "attempts": 100,
+        "failures": 0,
+        "failure_rate": 0.0,
+        "quantile": "nearest rank over all attempts; timeout=60000ms",
+        "p50_ms": 541.1369000000001,
+        "p95_ms": 582.3762,
+        "max_ms": 597.0645,
+        "accepted": true
+      }
+    },
+    {
+      "case": "10000-backlog-50",
+      "first_ms": 1544.5619000000002,
+      "steady": {
+        "attempts": 100,
+        "failures": 0,
+        "failure_rate": 0.0,
+        "quantile": "nearest rank over all attempts; timeout=60000ms",
+        "p50_ms": 581.7778,
+        "p95_ms": 640.2136,
+        "max_ms": 703.1363,
+        "accepted": true
+      }
+    },
+    {
+      "case": "10000-future-0",
+      "first_ms": 281.5647,
+      "steady": {
+        "attempts": 100,
+        "failures": 0,
+        "failure_rate": 0.0,
+        "quantile": "nearest rank over all attempts; timeout=60000ms",
+        "p50_ms": 228.4822,
+        "p95_ms": 264.2946,
+        "max_ms": 298.76779999999997,
+        "accepted": true
+      }
+    }
+  ],
+  "empty": {
+    "attempts": 100,
+    "failures": 0,
+    "failure_rate": 0.0,
+    "quantile": "nearest rank over all attempts; timeout=60000ms",
+    "p50_ms": 2.2582,
+    "p95_ms": 3.1830000000000003,
+    "max_ms": 3.6064000000000003,
+    "accepted": true
+  },
+  "instrumentation_v3": {
+    "attempts": 100,
+    "failures": 0,
+    "failure_rate": 0.0,
+    "quantile": "nearest rank over all attempts; timeout=60000ms",
+    "p50_ms": 690.0992,
+    "p95_ms": 791.6501000000001,
+    "max_ms": 916.8712999999999,
+    "accepted": true
+  },
+  "differential": {
+    "operations": 100,
+    "seed": 250001,
+    "oracle_equal": true,
+    "raw": "target/issue-25/differential-v2/operations.json"
+  },
+  "defects": {
+    "Q04": {
+      "owner": 26,
+      "expected": [
+        1,
+        2
+      ],
+      "actual": [
+        1
+      ]
+    },
+    "Q10": {
+      "owner": 26,
+      "hot_write_transactions": true
+    },
+    "shared_writer": {
+      "owner": 30,
+      "visible_database_locked": true
+    },
+    "explicit_red_exit": 1,
+    "raw": "target/issue-25/regressions-red-final/results.json"
+  },
+  "pressure_50k": "prepared only: 50000 words / 100000 cards",
+  "native": {
+    "original": {
+      "first_ms": [
+        2286.199999988079,
+        2467.199999988079,
+        2084.899999976158,
+        1733.9000000357628,
+        2297.300000011921
+      ],
+      "steady": {
+        "attempts": 100,
+        "failures": 0,
+        "failure_rate": 0.0,
+        "quantile": "nearest rank over all attempts; timeout=60000ms",
+        "p50_ms": 831.9000000357628,
+        "p95_ms": 1025,
+        "max_ms": 1294.800000011921,
+        "accepted": true
+      },
+      "runs_passed": true,
+      "owned_workers_after_exit": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "raw": [
+        "target/issue-24/s0-native-10k-1/s0-results.json",
+        "target/issue-24/s0-native-10k-2/s0-results.json",
+        "target/issue-24/s0-native-10k-3/s0-results.json",
+        "target/issue-24/s0-native-10k-4/s0-results.json",
+        "target/issue-24/s0-native-10k-5/s0-results.json"
+      ]
+    },
+    "rtss_off": {
+      "first_ms": [
+        1965.2999999523163,
+        2115.399999976158,
+        1877.7000000476837,
+        1793.199999988079,
+        1674.2000000476837
+      ],
+      "steady": {
+        "attempts": 100,
+        "failures": 0,
+        "failure_rate": 0.0,
+        "quantile": "nearest rank over all attempts; timeout=60000ms",
+        "p50_ms": 713.0999999642372,
+        "p95_ms": 895,
+        "max_ms": 918.6999999880791,
+        "accepted": true
+      },
+      "runs_passed": true,
+      "owned_workers_after_exit": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "raw": [
+        "target/issue-24/s0-rtss-off-native-10k-1/s0-results.json",
+        "target/issue-24/s0-rtss-off-native-10k-2/s0-results.json",
+        "target/issue-24/s0-rtss-off-native-10k-3/s0-results.json",
+        "target/issue-24/s0-rtss-off-native-10k-4/s0-results.json",
+        "target/issue-24/s0-rtss-off-native-10k-5/s0-results.json"
+      ]
+    }
+  },
+  "native_interaction": {
+    "original": {
+      "commands": [
+        {
+          "command": "dictionary_lookup",
+          "samples": {
+            "idle": [
+              15,
+              17.099999964237213,
+              14
+            ],
+            "batch": [
+              14.199999988079071,
+              20.80000001192093,
+              14.899999976158142
+            ]
+          },
+          "medians_ms": {
+            "idle": 15,
+            "batch": 14.899999976158142
+          },
+          "relative": 0.9933333317438762,
+          "relative_budget_passed": true
+        },
+        {
+          "command": "vocabulary_save",
+          "samples": {
+            "idle": [
+              8.899999976158142,
+              9.5,
+              9
+            ],
+            "batch": [
+              51.19999998807907,
+              76.79999995231628,
+              78.19999998807907
+            ]
+          },
+          "medians_ms": {
+            "idle": 9,
+            "batch": 76.79999995231628
+          },
+          "relative": 8.533333328035143,
+          "relative_budget_passed": false
+        },
+        {
+          "command": "review_rate",
+          "samples": {
+            "idle": [
+              10.199999988079071,
+              9.600000023841858,
+              9.300000011920929
+            ],
+            "batch": [
+              18.19999998807907,
+              46.19999998807907,
+              17.900000035762787
+            ]
+          },
+          "medians_ms": {
+            "idle": 9.600000023841858,
+            "batch": 18.19999998807907
+          },
+          "relative": 1.8958333273832169,
+          "relative_budget_passed": false
+        },
+        {
+          "command": "speech_cached",
+          "samples": {
+            "idle": [
+              8.800000011920929,
+              9.600000023841858,
+              8.300000011920929
+            ],
+            "batch": [
+              61.5,
+              29.30000001192093,
+              8.300000011920929
+            ]
+          },
+          "medians_ms": {
+            "idle": 8.800000011920929,
+            "batch": 29.30000001192093
+          },
+          "relative": 3.3295454513897336,
+          "relative_budget_passed": false
+        }
+      ],
+      "raw": [
+        "target/issue-24/s0-interaction-v4/s0-results.json",
+        "target/issue-24/s0-interaction-v5/s0-results.json",
+        "target/issue-24/s0-interaction-v6/s0-results.json"
+      ],
+      "p0_batch_ms": [
+        1208.2999999523163,
+        1117.800000011921,
+        1084.5999999642372
+      ],
+      "runs_passed": true,
+      "percentiles": "not claimed"
+    },
+    "rtss_off": {
+      "commands": [
+        {
+          "command": "dictionary_lookup",
+          "samples": {
+            "idle": [
+              11.599999964237213,
+              11.5,
+              10.399999976158142
+            ],
+            "batch": [
+              12.899999976158142,
+              16,
+              14.5
+            ]
+          },
+          "medians_ms": {
+            "idle": 11.5,
+            "batch": 14.5
+          },
+          "relative": 1.2608695652173914,
+          "relative_budget_passed": true
+        },
+        {
+          "command": "vocabulary_save",
+          "samples": {
+            "idle": [
+              7.899999976158142,
+              6.5,
+              7.600000023841858
+            ],
+            "batch": [
+              31.30000001192093,
+              48.30000001192093,
+              42.39999997615814
+            ]
+          },
+          "medians_ms": {
+            "idle": 7.600000023841858,
+            "batch": 42.39999997615814
+          },
+          "relative": 5.578947347782325,
+          "relative_budget_passed": false
+        },
+        {
+          "command": "review_rate",
+          "samples": {
+            "idle": [
+              7.5,
+              7.300000011920929,
+              8
+            ],
+            "batch": [
+              59.19999998807907,
+              66.69999998807907,
+              73.5
+            ]
+          },
+          "medians_ms": {
+            "idle": 7.5,
+            "batch": 66.69999998807907
+          },
+          "relative": 8.893333331743877,
+          "relative_budget_passed": false
+        },
+        {
+          "command": "speech_cached",
+          "samples": {
+            "idle": [
+              7.899999976158142,
+              6.099999964237213,
+              7.100000023841858
+            ],
+            "batch": [
+              27.69999998807907,
+              32.39999997615814,
+              27.5
+            ]
+          },
+          "medians_ms": {
+            "idle": 7.100000023841858,
+            "batch": 27.69999998807907
+          },
+          "relative": 3.90140843592426,
+          "relative_budget_passed": false
+        }
+      ],
+      "raw": [
+        "target/issue-24/s0-rtss-off-interaction-1/s0-results.json",
+        "target/issue-24/s0-rtss-off-interaction-2/s0-results.json",
+        "target/issue-24/s0-rtss-off-interaction-3/s0-results.json"
+      ],
+      "p0_batch_ms": [
+        1108.2999999523163,
+        1063.5999999642372,
+        1152.5
+      ],
+      "runs_passed": true,
+      "percentiles": "not claimed"
+    }
+  },
+  "model_resources": {
+    "original": {
+      "comparisons": [
+        {
+          "background": 0,
+          "total": 1,
+          "attempts": 3,
+          "successes": 3,
+          "p0_median_ms": 655.8753999997862,
+          "p0_max_ms": 828.3387999981642,
+          "relative": 1.0,
+          "private_max": 807006208,
+          "working_set_max": 301535232,
+          "accepted": true,
+          "percentiles": "not claimed"
+        },
+        {
+          "background": 1,
+          "total": 2,
+          "attempts": 3,
+          "successes": 3,
+          "p0_median_ms": 801.614600000903,
+          "p0_max_ms": 862.7905999892391,
+          "relative": 1.2222056201546274,
+          "private_max": 911712256,
+          "working_set_max": 340361216,
+          "accepted": true,
+          "percentiles": "not claimed"
+        },
+        {
+          "background": 2,
+          "total": 3,
+          "attempts": 3,
+          "successes": 3,
+          "p0_median_ms": 1161.2829999648966,
+          "p0_max_ms": 1287.5210999627598,
+          "relative": 1.7705847787022888,
+          "private_max": 915668992,
+          "working_set_max": 390631424,
+          "accepted": false,
+          "percentiles": "not claimed"
+        },
+        {
+          "background": 4,
+          "total": 5,
+          "attempts": 3,
+          "successes": 3,
+          "p0_median_ms": 1477.915600000415,
+          "p0_max_ms": 1509.172199992463,
+          "relative": 2.253348120696243,
+          "private_max": 1123827712,
+          "working_set_max": 414748672,
+          "accepted": false,
+          "percentiles": "not claimed"
+        }
+      ],
+      "budgets_sha256_at_run": "c4b5de854f0564e15ce4e5a76b1bde6fadb5b1e1d2884f356055bd72ba98408a",
+      "raw": "target/issue-25/resources-v1/results.json"
+    },
+    "rtss_off": {
+      "comparisons": [
+        {
+          "background": 0,
+          "total": 1,
+          "attempts": 3,
+          "successes": 3,
+          "p0_median_ms": 596.9405000214465,
+          "p0_max_ms": 679.2048999923281,
+          "relative": 1.0,
+          "private_max": 807313408,
+          "working_set_max": 301539328,
+          "accepted": true,
+          "percentiles": "not claimed"
+        },
+        {
+          "background": 1,
+          "total": 2,
+          "attempts": 3,
+          "successes": 3,
+          "p0_median_ms": 741.6043000412174,
+          "p0_max_ms": 784.8727999953553,
+          "relative": 1.2423420759934591,
+          "private_max": 911982592,
+          "working_set_max": 340365312,
+          "accepted": true,
+          "percentiles": "not claimed"
+        },
+        {
+          "background": 2,
+          "total": 3,
+          "attempts": 3,
+          "successes": 3,
+          "p0_median_ms": 886.6052000084892,
+          "p0_max_ms": 940.7205000170507,
+          "relative": 1.4852488647974729,
+          "private_max": 915615744,
+          "working_set_max": 398127104,
+          "accepted": true,
+          "percentiles": "not claimed"
+        },
+        {
+          "background": 4,
+          "total": 5,
+          "attempts": 3,
+          "successes": 3,
+          "p0_median_ms": 1287.7846999908797,
+          "p0_max_ms": 1327.616200025659,
+          "relative": 2.1573083078541546,
+          "private_max": 985538560,
+          "working_set_max": 387973120,
+          "accepted": false,
+          "percentiles": "not claimed"
+        }
+      ],
+      "budgets_sha256_at_run": "edf8ded6e0fbcf327843b3c809d3715986184e250800c6fb0a9999041c72568a",
+      "raw": "target/issue-25/resources-rtss-off-v1/results.json"
+    }
+  },
+  "decoding": {
+    "outputs": 145,
+    "large_bytes": 77231,
+    "large_duration_s": 13.147,
+    "finite_non_silent_mono": true,
+    "header_only_rejected": true,
+    "raw": "target/issue-24/s0-decode-v1/s0-results.json"
+  },
+  "unrun": [
+    "physical cold",
+    "network-blocked new package",
+    "multi-platform execution",
+    "50k execution / long-duration pressure",
+    "future #26-#34 contracts"
+  ],
+  "worker_phases": [
+    {
+      "status": "passed",
+      "end_to_end_ms": 4102.5184,
+      "ready": 6,
+      "normal_shutdown": true,
+      "rust_stages": {
+        "committed_enqueue_to_claim": {
+          "calls": 6,
+          "cumulative_ms": 12377.2929,
+          "phase_samples_ms": [
+            1456.1405,
+            1453.2852,
+            1450.7655,
+            2387.3533,
+            2438.0978999999998,
+            3191.6505
+          ],
+          "units": 0
+        },
+        "publication_db_complete": {
+          "calls": 6,
+          "cumulative_ms": 28.630800000000004,
+          "phase_samples_ms": [
+            4.2885,
+            4.6641,
+            4.6949000000000005,
+            5.5118,
+            4.7796,
+            4.6918999999999995
+          ],
+          "units": 0
+        },
+        "publication_intent": {
+          "calls": 6,
+          "cumulative_ms": 23.975399999999997,
+          "phase_samples_ms": [
+            3.8064,
+            3.8352,
+            3.7616,
+            4.0508999999999995,
+            4.4841999999999995,
+            4.0371
+          ],
+          "units": 0
+        },
+        "publication_readback": {
+          "calls": 6,
+          "cumulative_ms": 51.2247,
+          "phase_samples_ms": [
+            6.925,
+            6.5466999999999995,
+            18.5892,
+            6.0083,
+            6.8923,
+            6.2632
+          ],
+          "units": 0
+        },
+        "publication_rename": {
+          "calls": 6,
+          "cumulative_ms": 5.4014,
+          "phase_samples_ms": [
+            0.6353,
+            1.0193999999999999,
+            0.9632,
+            1.0456,
+            0.976,
+            0.7619
+          ],
+          "units": 0
+        },
+        "publication_tmp_sync": {
+          "calls": 6,
+          "cumulative_ms": 5.0516,
+          "phase_samples_ms": [
+            0.6951,
+            0.8476999999999999,
+            0.8751,
+            0.7993,
+            0.8941,
+            0.9403
+          ],
+          "units": 0
+        },
+        "publication_tmp_write": {
+          "calls": 6,
+          "cumulative_ms": 0.6186,
+          "phase_samples_ms": [
+            0.0722,
+            0.1168,
+            0.11019999999999999,
+            0.115,
+            0.1159,
+            0.0885
+          ],
+          "units": 0
+        },
+        "worker_start_to_ready": {
+          "calls": 1,
+          "cumulative_ms": 1244.8321,
+          "phase_samples_ms": [
+            1244.8321
+          ],
+          "units": 0
+        }
+      },
+      "resident_stages": {
+        "encoding": [
+          11.529400013387203,
+          19.624800013843924,
+          14.827699982561171,
+          11.046700004953891,
+          11.209700023755431,
+          17.292700009420514
+        ],
+        "inference": [
+          908.9553999947384,
+          903.5910000093281,
+          909.6019999706186,
+          777.6526000234298,
+          805.3247000207193,
+          770.1558999833651
+        ],
+        "model_load": [
+          809.3552999780513
+        ],
+        "resource_hash": [
+          2.860999957192689,
+          28.331600013189018,
+          58.86569997528568,
+          26.8804999650456,
+          0.10060000931844115,
+          0.2590999938547611,
+          0.40740001713857055
+        ],
+        "slot_wait": [
+          0.009000010322779417,
+          0.004900037311017513,
+          0.004499976057559252,
+          0.004300032742321491,
+          0.004099973011761904,
+          0.004199973773211241
+        ],
+        "worker_queue_to_execute": [
+          0.964100006967783,
+          0.9757999796420336,
+          0.8499000105075538,
+          0.5995000246912241,
+          0.611600000411272,
+          0.5790000432170928
+        ]
+      },
+      "raw": "target/issue-25/worker-phases-final-1"
+    },
+    {
+      "status": "passed",
+      "end_to_end_ms": 4137.6093,
+      "ready": 6,
+      "normal_shutdown": true,
+      "rust_stages": {
+        "committed_enqueue_to_claim": {
+          "calls": 6,
+          "cumulative_ms": 12343.1344,
+          "phase_samples_ms": [
+            1431.5848,
+            1427.7033000000001,
+            1424.1717,
+            2433.5279,
+            2452.1904,
+            3173.9563
+          ],
+          "units": 0
+        },
+        "publication_db_complete": {
+          "calls": 6,
+          "cumulative_ms": 26.9087,
+          "phase_samples_ms": [
+            4.756,
+            4.0541,
+            4.6061000000000005,
+            4.2912,
+            4.7395,
+            4.4618
+          ],
+          "units": 0
+        },
+        "publication_intent": {
+          "calls": 6,
+          "cumulative_ms": 42.6047,
+          "phase_samples_ms": [
+            6.8199000000000005,
+            4.1871,
+            4.3257,
+            4.801200000000001,
+            4.0755,
+            18.3953
+          ],
+          "units": 0
+        },
+        "publication_readback": {
+          "calls": 6,
+          "cumulative_ms": 47.64099999999999,
+          "phase_samples_ms": [
+            8.2065,
+            10.4247,
+            8.4751,
+            4.3911999999999995,
+            6.5822,
+            9.5613
+          ],
+          "units": 0
+        },
+        "publication_rename": {
+          "calls": 6,
+          "cumulative_ms": 4.4030000000000005,
+          "phase_samples_ms": [
+            0.6058,
+            0.5745,
+            0.6914,
+            0.9701,
+            0.8104,
+            0.7508
+          ],
+          "units": 0
+        },
+        "publication_tmp_sync": {
+          "calls": 6,
+          "cumulative_ms": 5.0679,
+          "phase_samples_ms": [
+            0.7121999999999999,
+            0.7232000000000001,
+            0.7615000000000001,
+            0.8331000000000001,
+            1.2443,
+            0.7936
+          ],
+          "units": 0
+        },
+        "publication_tmp_write": {
+          "calls": 6,
+          "cumulative_ms": 0.5939,
+          "phase_samples_ms": [
+            0.07669999999999999,
+            0.1218,
+            0.0898,
+            0.1104,
+            0.0959,
+            0.0993
+          ],
+          "units": 0
+        },
+        "worker_start_to_ready": {
+          "calls": 1,
+          "cumulative_ms": 1197.2227,
+          "phase_samples_ms": [
+            1197.2227
+          ],
+          "units": 0
+        }
+      },
+      "resident_stages": {
+        "encoding": [
+          13.49450001725927,
+          11.450799996964633,
+          16.966099967248738,
+          8.755200018640608,
+          9.158300003036857,
+          8.562000002712011
+        ],
+        "inference": [
+          952.9757999698631,
+          950.1390000223182,
+          959.3901999760419,
+          718.8263999996707,
+          716.5466999867931,
+          820.1795000350103
+        ],
+        "model_load": [
+          804.9070999841206
+        ],
+        "resource_hash": [
+          2.8276999946683645,
+          26.16059995489195,
+          56.13509996328503,
+          17.740299983415753,
+          0.07930002175271511,
+          0.20870001753792167,
+          0.4040999920107424
+        ],
+        "slot_wait": [
+          0.007499998901039362,
+          0.004599976819008589,
+          0.0031999661587178707,
+          0.006699992809444666,
+          0.003700028173625469,
+          0.00200001522898674
+        ],
+        "worker_queue_to_execute": [
+          0.8325999951921403,
+          0.9423000155948102,
+          0.8674999698996544,
+          0.7054999587126076,
+          0.47990004532039165,
+          0.44680002611130476
+        ]
+      },
+      "raw": "target/issue-25/worker-phases-final-2"
+    },
+    {
+      "status": "passed",
+      "end_to_end_ms": 4005.199,
+      "ready": 6,
+      "normal_shutdown": true,
+      "rust_stages": {
+        "committed_enqueue_to_claim": {
+          "calls": 6,
+          "cumulative_ms": 12217.9868,
+          "phase_samples_ms": [
+            1406.1142,
+            1403.124,
+            1399.7632,
+            2410.8206,
+            2459.0724,
+            3139.0924
+          ],
+          "units": 0
+        },
+        "publication_db_complete": {
+          "calls": 6,
+          "cumulative_ms": 29.1543,
+          "phase_samples_ms": [
+            4.5148,
+            4.962000000000001,
+            5.4057,
+            4.8457,
+            4.6509,
+            4.7752
+          ],
+          "units": 0
+        },
+        "publication_intent": {
+          "calls": 6,
+          "cumulative_ms": 29.4545,
+          "phase_samples_ms": [
+            4.011,
+            4.469200000000001,
+            4.5859000000000005,
+            7.6019,
+            4.5056,
+            4.2809
+          ],
+          "units": 0
+        },
+        "publication_readback": {
+          "calls": 6,
+          "cumulative_ms": 71.60910000000001,
+          "phase_samples_ms": [
+            26.1551,
+            9.2614,
+            12.7612,
+            10.7029,
+            6.6564,
+            6.072100000000001
+          ],
+          "units": 0
+        },
+        "publication_rename": {
+          "calls": 6,
+          "cumulative_ms": 5.3295,
+          "phase_samples_ms": [
+            0.8578,
+            0.6646,
+            1.0,
+            0.8039,
+            1.0562,
+            0.9470000000000001
+          ],
+          "units": 0
+        },
+        "publication_tmp_sync": {
+          "calls": 6,
+          "cumulative_ms": 5.1043,
+          "phase_samples_ms": [
+            0.7302,
+            0.833,
+            0.8777,
+            0.8315,
+            0.9644,
+            0.8675
+          ],
+          "units": 0
+        },
+        "publication_tmp_write": {
+          "calls": 6,
+          "cumulative_ms": 0.7346,
+          "phase_samples_ms": [
+            0.0777,
+            0.0976,
+            0.127,
+            0.1727,
+            0.1517,
+            0.1079
+          ],
+          "units": 0
+        },
+        "worker_start_to_ready": {
+          "calls": 1,
+          "cumulative_ms": 1176.4067,
+          "phase_samples_ms": [
+            1176.4067
+          ],
+          "units": 0
+        }
+      },
+      "resident_stages": {
+        "encoding": [
+          14.757299970369786,
+          9.926399972755462,
+          20.633700012695044,
+          9.92219999898225,
+          15.680599957704544,
+          9.443499962799251
+        ],
+        "inference": [
+          953.0683999764733,
+          967.1871999744326,
+          978.9388999924995,
+          697.1832999843173,
+          703.682099992875,
+          741.0048000165261
+        ],
+        "model_load": [
+          791.0617999732494
+        ],
+        "resource_hash": [
+          2.8548999689519405,
+          25.57080000406131,
+          54.181299987249076,
+          24.80220003053546,
+          0.07100001676008105,
+          0.21379999816417694,
+          0.3899000003002584
+        ],
+        "slot_wait": [
+          0.009100011084228754,
+          0.003999972250312567,
+          0.0032999669201672077,
+          0.0032999669201672077,
+          0.006599992047995329,
+          0.0048999791033566
+        ],
+        "worker_queue_to_execute": [
+          1.000499993097037,
+          0.8516000234521925,
+          0.7447000243701041,
+          0.4028999828733504,
+          0.7246999884955585,
+          0.5871999892406166
+        ]
+      },
+      "raw": "target/issue-25/worker-phases-final-3"
+    }
+  ],
+  "checks": [
+    {
+      "name": "s0",
+      "timeout": 60,
+      "status": "passed",
+      "exit_code": 0,
+      "ms": 1019.5194000261836
+    },
+    {
+      "name": "python-syntax",
+      "timeout": 60,
+      "status": "passed",
+      "exit_code": 0,
+      "ms": 203.46009999047965
+    },
+    {
+      "name": "node-syntax-clock",
+      "timeout": 60,
+      "status": "passed",
+      "exit_code": 0,
+      "ms": 84.38690000912175
+    },
+    {
+      "name": "node-syntax-native",
+      "timeout": 60,
+      "status": "passed",
+      "exit_code": 0,
+      "ms": 80.14610002283007
+    },
+    {
+      "name": "probe-format",
+      "timeout": 60,
+      "status": "passed",
+      "exit_code": 0,
+      "ms": 361.063499993179
+    },
+    {
+      "name": "lint",
+      "timeout": 1200,
+      "status": "passed",
+      "exit_code": 0,
+      "ms": 27290.571700024884
+    },
+    {
+      "name": "typecheck",
+      "timeout": 1200,
+      "status": "passed",
+      "exit_code": 0,
+      "ms": 8711.929499986582
+    },
+    {
+      "name": "build",
+      "timeout": 1200,
+      "status": "passed",
+      "exit_code": 0,
+      "ms": 14459.803700039629
+    },
+    {
+      "name": "rust:fmt",
+      "timeout": 1200,
+      "status": "passed",
+      "exit_code": 0,
+      "ms": 1638.933399983216
+    },
+    {
+      "name": "rust:check",
+      "timeout": 1200,
+      "status": "passed",
+      "exit_code": 0,
+      "ms": 12613.18659997778
+    },
+    {
+      "name": "rust:test:build",
+      "timeout": 1200,
+      "status": "passed",
+      "exit_code": 0,
+      "ms": 3190.989999973681
+    },
+    {
+      "name": "test:rust",
+      "timeout": 60,
+      "status": "passed",
+      "exit_code": 0,
+      "ms": 15968.870399985462
+    },
+    {
+      "name": "cache-compile",
+      "timeout": 1200,
+      "status": "passed",
+      "exit_code": 0,
+      "ms": 10098.150500038173
+    },
+    {
+      "name": "test:speech:cache",
+      "timeout": 60,
+      "status": "passed",
+      "exit_code": 0,
+      "ms": 2318.4664999716915
+    },
+    {
+      "name": "desktop-unit-compile",
+      "timeout": 1200,
+      "status": "passed",
+      "exit_code": 0,
+      "ms": 876.7326999804936
+    },
+    {
+      "name": "desktop-unit",
+      "timeout": 60,
+      "status": "passed",
+      "exit_code": 0,
+      "ms": 1433.5974999703467
+    },
+    {
+      "name": "v03-comparison",
+      "timeout": 60,
+      "status": "passed",
+      "exit_code": 0,
+      "ms": 8962.856700003613
+    },
+    {
+      "name": "all-python-tooling",
+      "timeout": 60,
+      "status": "passed",
+      "exit_code": 0,
+      "ms": 13735.44740001671
+    },
+    {
+      "name": "build-args",
+      "timeout": 60,
+      "status": "failed",
+      "exit_code": 1,
+      "ms": 346.9720000284724
+    },
+    {
+      "name": "test:e2e",
+      "timeout": 600,
+      "status": "passed",
+      "exit_code": 0,
+      "ms": 42605.965700000525
+    }
+  ],
+  "followup_checks": [
+    {
+      "name": "s0-final",
+      "timeout": 60,
+      "status": "passed",
+      "exit_code": 0,
+      "ms": 1205.9140999917872
+    },
+    {
+      "name": "python-final-syntax",
+      "timeout": 60,
+      "status": "passed",
+      "exit_code": 0,
+      "ms": 180.6376000167802
+    },
+    {
+      "name": "native-final-syntax",
+      "timeout": 60,
+      "status": "passed",
+      "exit_code": 0,
+      "ms": 92.02730003744364
+    },
+    {
+      "name": "probe-final-format",
+      "timeout": 60,
+      "status": "passed",
+      "exit_code": 0,
+      "ms": 124.70300000859424
+    },
+    {
+      "name": "lint-final",
+      "timeout": 120,
+      "status": "passed",
+      "exit_code": 0,
+      "ms": 3121.812900004443
+    },
+    {
+      "name": "build-args-correct-invocation",
+      "timeout": 60,
+      "status": "passed",
+      "exit_code": 0,
+      "ms": 1493.3499000035226
+    },
+    {
+      "name": "python-final-full",
+      "timeout": 60,
+      "status": "passed",
+      "exit_code": 0,
+      "ms": 13242.768800002523
+    },
+    {
+      "name": "native-cleanup-pinned",
+      "timeout": 60,
+      "status": "passed",
+      "exit_code": 0,
+      "ms": 16008.979699981865
+    }
+  ],
+  "native_cleanup": {
+    "status": "passed",
+    "tests": 4,
+    "command": "LEXIQUE_TEST_EXECUTABLE=target/issue-25/fixed-native/Lexique.exe python -X utf8 scripts/test_speech_cleanup.py -v"
+  },
+  "native_explicit_red": {
+    "status": "expected-contract-failure",
+    "samples": 21,
+    "exit_code": 1,
+    "raw": "target/issue-24/s0-gap-red-pinned/s0-results.json"
+  },
+  "native_changed_artifact_failures": {
+    "runs": [
+      "target/issue-24/s0-gap-red-final",
+      "target/issue-24/s0-gap-red-retry"
+    ],
+    "status": "navigation_failed",
+    "binary_sha256": "0cd87bf1800a57d55225bb6013abf5a2f504e2eeffebc19b61866cf2fbc1300a",
+    "resolution": "Use saved frozen binary. These are not Q04 red reproductions or baseline performance samples."
+  },
+  "initial_check_invocation_failure": {
+    "name": "build-args",
+    "reason": "Direct node invocation omitted pnpm environment required by its test",
+    "resolution": "pnpm test:build-args passed; no product changes"
+  },
+  "workspace_preservation": {
+    "original_files": 53,
+    "original_content_preserved": true,
+    "task_hunks_in_existing_files": [
+      "docs/verification.md: two-line S0 entry only"
+    ]
+  },
+  "code_review": {
+    "standards_unresolved": 0,
+    "spec_unresolved": 0,
+    "evidence": "docs/evidence/issue-25/review.md"
+  }
+}

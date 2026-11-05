@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Piper MLS 法语样本试听</title>
+  <style>
+    :root { color-scheme: light; font: 16px/1.5 "Segoe UI", sans-serif; color: #202827; background: #f5f7f6; }
+    body { max-width: 980px; margin: 0 auto; padding: 24px 16px 56px; }
+    h1 { margin: 0 0 8px; font-size: 1.55rem; }
+    .status { margin: 0 0 24px; color: #4c5c59; }
+    section { margin: 0; padding: 18px 0 22px; border-top: 1px solid #cad4d1; }
+    h2 { margin: 0; font-size: 1.15rem; }
+    .meta { margin: 4px 0 12px; color: #52615e; font-size: .9rem; }
+    .samples { list-style: none; margin: 0; padding: 0; }
+    .samples li { display: grid; grid-template-columns: minmax(190px, 1fr) minmax(260px, 360px); align-items: center; gap: 16px; padding: 8px 0; border-top: 1px solid #e0e6e4; }
+    .samples audio { display: block; width: 100%; }
+    @media (max-width: 560px) { .samples li { grid-template-columns: 1fr; gap: 4px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Piper MLS 法语样本（人工验收失败）</h1>
+    <p><strong>用户反馈：全部为混乱人声，法语读音错误且音质不佳。本组已撤回候选，仅保留失败证据。</strong></p>
+    <p class="status">当前 WAV 为第二轮校准样本：保留模型默认 noise_scale 0.333，设 noise_w_scale=0；36 组同输入配对均通过慢速时长更长检查。首轮使用默认音素宽度噪声时，女声 5/18、男声 8/18 慢速样本短于对应正常样本，原报告已保留。人工试听已否决本组合；时长校准不代表发音正确。点击原生播放控件试听。</p>
+    <p class="meta"><a href="report.json">当前校准报告</a> · <a href="report-default-duration-noise.json">首轮默认噪声报告</a></p>
+
+    <section aria-labelledby="female-normal">
+      <h2 id="female-normal">法语女声 · 正常</h2>
+      <p class="meta">MLS source speaker 3698（F）→ Piper speaker_id 1 · length_scale 1.0</p>
+      <ol class="samples">
+        <li><span>01 · être</span><audio controls preload="none" aria-label="女声正常，être" src="female-normal-01.wav"></audio></li>
+        <li><span>02 · sommes</span><audio controls preload="none" aria-label="女声正常，sommes" src="female-normal-02.wav"></audio></li>
+        <li><span>03 · œil</span><audio controls preload="none" aria-label="女声正常，œil" src="female-normal-03.wav"></audio></li>
+        <li><span>04 · école</span><audio controls preload="none" aria-label="女声正常，école" src="female-normal-04.wav"></audio></li>
+        <li><span>05 · aujourd'hui</span><audio controls preload="none" aria-label="女声正常，aujourd'hui" src="female-normal-05.wav"></audio></li>
+        <li><span>06 · nous sommes ici</span><audio controls preload="none" aria-label="女声正常，nous sommes ici" src="female-normal-06.wav"></audio></li>
+        <li><span>07 · les amis arrivent</span><audio controls preload="none" aria-label="女声正常，les amis arrivent" src="female-normal-07.wav"></audio></li>
+        <li><span>08 · J'apprends le français tous les jours.</span><audio controls preload="none" aria-label="女声正常，J'apprends le français tous les jours" src="female-normal-08.wav"></audio></li>
+        <li><span>09 · a</span><audio controls preload="none" aria-label="女声正常，a" src="female-normal-09.wav"></audio></li>
+        <li><span>10 · à</span><audio controls preload="none" aria-label="女声正常，à" src="female-normal-10.wav"></audio></li>
+        <li><span>11 · y</span><audio controls preload="none" aria-label="女声正常，y" src="female-normal-11.wav"></audio></li>
+        <li><span>12 · eu</span><audio controls preload="none" aria-label="女声正常，eu" src="female-normal-12.wav"></audio></li>
+        <li><span>13 · eau</span><audio controls preload="none" aria-label="女声正常，eau" src="female-normal-13.wav"></audio></li>
+        <li><span>14 · un</span><audio controls preload="none" aria-label="女声正常，un" src="female-normal-14.wav"></audio></li>
+        <li><span>15 · chat</span><audio controls preload="none" aria-label="女声正常，chat" src="female-normal-15.wav"></audio></li>
+        <li><span>16 · qzxyplouf</span><audio controls preload="none" aria-label="女声正常，qzxyplouf" src="female-normal-16.wav"></audio></li>
+        <li><span>17 · anticonstitutionnellement</span><audio controls preload="none" aria-label="女声正常，anticonstitutionnellement" src="female-normal-17.wav"></audio></li>
+        <li><span>18 · 显式 [i] 音素对照（输入 [[i]]）</span><audio controls preload="none" aria-label="女声正常，显式 i 音素对照" src="female-normal-18.wav"></audio></li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="female-slow">
+      <h2 id="female-slow">法语女声 · 慢速</h2>
+      <p class="meta">MLS source speaker 3698（F）→ Piper speaker_id 1 · length_scale 1.3</p>
+      <ol class="samples">
+        <li><span>01 · être</span><audio controls preload="none" aria-label="女声慢速，être" src="female-slow-01.wav"></audio></li>
+        <li><span>02 · sommes</span><audio controls preload="none" aria-label="女声慢速，sommes" src="female-slow-02.wav"></audio></li>
+        <li><span>03 · œil</span><audio controls preload="none" aria-label="女声慢速，œil" src="female-slow-03.wav"></audio></li>
+        <li><span>04 · école</span><audio controls preload="none" aria-label="女声慢速，école" src="female-slow-04.wav"></audio></li>
+        <li><span>05 · aujourd'hui</span><audio controls preload="none" aria-label="女声慢速，aujourd'hui" src="female-slow-05.wav"></audio></li>
+        <li><span>06 · nous sommes ici</span><audio controls preload="none" aria-label="女声慢速，nous sommes ici" src="female-slow-06.wav"></audio></li>
+        <li><span>07 · les amis arrivent</span><audio controls preload="none" aria-label="女声慢速，les amis arrivent" src="female-slow-07.wav"></audio></li>
+        <li><span>08 · J'apprends le français tous les jours.</span><audio controls preload="none" aria-label="女声慢速，J'apprends le français tous les jours" src="female-slow-08.wav"></audio></li>
+        <li><span>09 · a</span><audio controls preload="none" aria-label="女声慢速，a" src="female-slow-09.wav"></audio></li>
+        <li><span>10 · à</span><audio controls preload="none" aria-label="女声慢速，à" src="female-slow-10.wav"></audio></li>
+        <li><span>11 · y</span><audio controls preload="none" aria-label="女声慢速，y" src="female-slow-11.wav"></audio></li>
+        <li><span>12 · eu</span><audio controls preload="none" aria-label="女声慢速，eu" src="female-slow-12.wav"></audio></li>
+        <li><span>13 · eau</span><audio controls preload="none" aria-label="女声慢速，eau" src="female-slow-13.wav"></audio></li>
+        <li><span>14 · un</span><audio controls preload="none" aria-label="女声慢速，un" src="female-slow-14.wav"></audio></li>
+        <li><span>15 · chat</span><audio controls preload="none" aria-label="女声慢速，chat" src="female-slow-15.wav"></audio></li>
+        <li><span>16 · qzxyplouf</span><audio controls preload="none" aria-label="女声慢速，qzxyplouf" src="female-slow-16.wav"></audio></li>
+        <li><span>17 · anticonstitutionnellement</span><audio controls preload="none" aria-label="女声慢速，anticonstitutionnellement" src="female-slow-17.wav"></audio></li>
+        <li><span>18 · 显式 [i] 音素对照（输入 [[i]]）</span><audio controls preload="none" aria-label="女声慢速，显式 i 音素对照" src="female-slow-18.wav"></audio></li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="male-normal">
+      <h2 id="male-normal">法语男声 · 正常</h2>
+      <p class="meta">MLS source speaker 1840（M）→ Piper speaker_id 0 · length_scale 1.0</p>
+      <ol class="samples">
+        <li><span>01 · être</span><audio controls preload="none" aria-label="男声正常，être" src="male-normal-01.wav"></audio></li>
+        <li><span>02 · sommes</span><audio controls preload="none" aria-label="男声正常，sommes" src="male-normal-02.wav"></audio></li>
+        <li><span>03 · œil</span><audio controls preload="none" aria-label="男声正常，œil" src="male-normal-03.wav"></audio></li>
+        <li><span>04 · école</span><audio controls preload="none" aria-label="男声正常，école" src="male-normal-04.wav"></audio></li>
+        <li><span>05 · aujourd'hui</span><audio controls preload="none" aria-label="男声正常，aujourd'hui" src="male-normal-05.wav"></audio></li>
+        <li><span>06 · nous sommes ici</span><audio controls preload="none" aria-label="男声正常，nous sommes ici" src="male-normal-06.wav"></audio></li>
+        <li><span>07 · les amis arrivent</span><audio controls preload="none" aria-label="男声正常，les amis arrivent" src="male-normal-07.wav"></audio></li>
+        <li><span>08 · J'apprends le français tous les jours.</span><audio controls preload="none" aria-label="男声正常，J'apprends le français tous les jours" src="male-normal-08.wav"></audio></li>
+        <li><span>09 · a</span><audio controls preload="none" aria-label="男声正常，a" src="male-normal-09.wav"></audio></li>
+        <li><span>10 · à</span><audio controls preload="none" aria-label="男声正常，à" src="male-normal-10.wav"></audio></li>
+        <li><span>11 · y</span><audio controls preload="none" aria-label="男声正常，y" src="male-normal-11.wav"></audio></li>
+        <li><span>12 · eu</span><audio controls preload="none" aria-label="男声正常，eu" src="male-normal-12.wav"></audio></li>
+        <li><span>13 · eau</span><audio controls preload="none" aria-label="男声正常，eau" src="male-normal-13.wav"></audio></li>
+        <li><span>14 · un</span><audio controls preload="none" aria-label="男声正常，un" src="male-normal-14.wav"></audio></li>
+        <li><span>15 · chat</span><audio controls preload="none" aria-label="男声正常，chat" src="male-normal-15.wav"></audio></li>
+        <li><span>16 · qzxyplouf</span><audio controls preload="none" aria-label="男声正常，qzxyplouf" src="male-normal-16.wav"></audio></li>
+        <li><span>17 · anticonstitutionnellement</span><audio controls preload="none" aria-label="男声正常，anticonstitutionnellement" src="male-normal-17.wav"></audio></li>
+        <li><span>18 · 显式 [i] 音素对照（输入 [[i]]）</span><audio controls preload="none" aria-label="男声正常，显式 i 音素对照" src="male-normal-18.wav"></audio></li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="male-slow">
+      <h2 id="male-slow">法语男声 · 慢速</h2>
+      <p class="meta">MLS source speaker 1840（M）→ Piper speaker_id 0 · length_scale 1.3</p>
+      <ol class="samples">
+        <li><span>01 · être</span><audio controls preload="none" aria-label="男声慢速，être" src="male-slow-01.wav"></audio></li>
+        <li><span>02 · sommes</span><audio controls preload="none" aria-label="男声慢速，sommes" src="male-slow-02.wav"></audio></li>
+        <li><span>03 · œil</span><audio controls preload="none" aria-label="男声慢速，œil" src="male-slow-03.wav"></audio></li>
+        <li><span>04 · école</span><audio controls preload="none" aria-label="男声慢速，école" src="male-slow-04.wav"></audio></li>
+        <li><span>05 · aujourd'hui</span><audio controls preload="none" aria-label="男声慢速，aujourd'hui" src="male-slow-05.wav"></audio></li>
+        <li><span>06 · nous sommes ici</span><audio controls preload="none" aria-label="男声慢速，nous sommes ici" src="male-slow-06.wav"></audio></li>
+        <li><span>07 · les amis arrivent</span><audio controls preload="none" aria-label="男声慢速，les amis arrivent" src="male-slow-07.wav"></audio></li>
+        <li><span>08 · J'apprends le français tous les jours.</span><audio controls preload="none" aria-label="男声慢速，J'apprends le français tous les jours" src="male-slow-08.wav"></audio></li>
+        <li><span>09 · a</span><audio controls preload="none" aria-label="男声慢速，a" src="male-slow-09.wav"></audio></li>
+        <li><span>10 · à</span><audio controls preload="none" aria-label="男声慢速，à" src="male-slow-10.wav"></audio></li>
+        <li><span>11 · y</span><audio controls preload="none" aria-label="男声慢速，y" src="male-slow-11.wav"></audio></li>
+        <li><span>12 · eu</span><audio controls preload="none" aria-label="男声慢速，eu" src="male-slow-12.wav"></audio></li>
+        <li><span>13 · eau</span><audio controls preload="none" aria-label="男声慢速，eau" src="male-slow-13.wav"></audio></li>
+        <li><span>14 · un</span><audio controls preload="none" aria-label="男声慢速，un" src="male-slow-14.wav"></audio></li>
+        <li><span>15 · chat</span><audio controls preload="none" aria-label="男声慢速，chat" src="male-slow-15.wav"></audio></li>
+        <li><span>16 · qzxyplouf</span><audio controls preload="none" aria-label="男声慢速，qzxyplouf" src="male-slow-16.wav"></audio></li>
+        <li><span>17 · anticonstitutionnellement</span><audio controls preload="none" aria-label="男声慢速，anticonstitutionnellement" src="male-slow-17.wav"></audio></li>
+        <li><span>18 · 显式 [i] 音素对照（输入 [[i]]）</span><audio controls preload="none" aria-label="男声慢速，显式 i 音素对照" src="male-slow-18.wav"></audio></li>
+      </ol>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,3053 @@
+{
+  "date": "2026-11-01",
+  "scope": "standalone Windows x64 experiments; product/cache policy unchanged",
+  "verified_measured_outputs": 893,
+  "verified_warmup_outputs": 306,
+  "cache": {
+    "sources": {
+      "scripts/measure_tts_acceleration.py": "45aad5198213fd4fe9409b6804ab764e98643ff2b7efc9f15f420c6e85a15acd",
+      "scripts/measure_tts_generation.py": "66d2ad2283f02b451d4ebb57b97323b0c797c08b5cf679090218e4c9e115bd17",
+      "apps/desktop/src-tauri/speech_worker.py": "cdebdc0a9411c0aff268ee543f32c92dc23f72b76c91ff56cf25a6425bbd96c7"
+    },
+    "hard_execution_timeout_s": 60,
+    "audio_encoding": "44.1 kHz mono, 48 kbit/s Ogg Opus",
+    "dictionary": "C:\\Users\\inthe\\IdeaProjects\\lexique\\target\\desktop-dictionary-sample\\dictionary.sqlite3",
+    "distinct_nfc_keys": 10777,
+    "eligible_single_word_keys": 8047,
+    "sampling_seed": 20261101,
+    "sampled_words": [
+      "pizza",
+      "Jacques",
+      "Marches",
+      "ère",
+      "covellite",
+      "Diourbel",
+      "orchidologie",
+      "Ceuta",
+      "Colombie",
+      "moscovium",
+      "actionneur",
+      "azimut",
+      "carrosserie",
+      "Moustapha",
+      "Oulan-Bator",
+      "déshabiller",
+      "éclair",
+      "indécent",
+      "sednoïde",
+      "sida",
+      "serrure",
+      "formol",
+      "Némésis",
+      "trochoïde",
+      "marbre",
+      "Aalsmeer",
+      "christadelphe",
+      "Belgrade",
+      "framboisier",
+      "corvée",
+      "Lhassa",
+      "fréon",
+      "Allemagne",
+      "valise",
+      "Tchad",
+      "nénufar",
+      "quaternaire",
+      "tableau",
+      "syncope",
+      "Lyonnais",
+      "matière",
+      "cartable",
+      "tronquer",
+      "spectroscopie",
+      "antirouge",
+      "Séville",
+      "boutonner",
+      "capitaine",
+      "préchargement",
+      "Biélorusse",
+      "Péloponnèse",
+      "proto-coréen",
+      "anatomie",
+      "demi-pause",
+      "blanc",
+      "chanson",
+      "apartheid",
+      "entrepreneuriat",
+      "yen",
+      "sundae",
+      "cœlentéré",
+      "graphite",
+      "Christophe",
+      "linguiste",
+      "Douchanbé",
+      "désintérêt",
+      "dépendance",
+      "Reiwa",
+      "caviar",
+      "morphème",
+      "folie",
+      "remarquable",
+      "Taipei",
+      "funérailles",
+      "participation",
+      "enregistrement",
+      "Lucie",
+      "conductivité",
+      "soixante-neuf",
+      "Ouzbékistan",
+      "national-socialisme",
+      "ignorance",
+      "sage-femme",
+      "ramasse-poussières",
+      "fomite",
+      "francium",
+      "kiwi",
+      "microphone",
+      "pedigree",
+      "teff",
+      "végétarisme",
+      "papa",
+      "sinojaponais",
+      "Aguascalientes",
+      "okinawaïen",
+      "Manama",
+      "occitan",
+      "Phœbé",
+      "sagacité",
+      "potentiel",
+      "homosexualité",
+      "Philips",
+      "stylisme",
+      "yôkai",
+      "lampadaire",
+      "excursion",
+      "Zemmour",
+      "fjord",
+      "est",
+      "Spider-Man",
+      "étal",
+      "abzyme",
+      "quasi-synonyme",
+      "hafnium",
+      "CAPTCHA",
+      "Sainte-Hélène",
+      "more",
+      "syphilis",
+      "benzopyrène",
+      "couverture",
+      "érable",
+      "géranium",
+      "paresser",
+      "diamant",
+      "organigramme",
+      "pélamide",
+      "moi",
+      "chamois"
+    ],
+    "scope": "public dictionary; uniform sample, not frequency weighted; proper nouns included",
+    "sizes": {
+      "female": {
+        "logical_bytes": {
+          "count": 128,
+          "sum": 1123214,
+          "mean": 8775.109375,
+          "median": 8884.5,
+          "min": 6601,
+          "max": 13215,
+          "p95": 10153
+        },
+        "allocated_bytes": {
+          "count": 128,
+          "sum": 1421312,
+          "mean": 11104,
+          "median": 12288.0,
+          "min": 8192,
+          "max": 16384,
+          "p95": 12288
+        },
+        "duration_s": {
+          "count": 128,
+          "sum": 183.34517006802722,
+          "mean": 1.4323841411564626,
+          "median": 1.3959183673469386,
+          "min": 1.3442403628117914,
+          "max": 1.9923809523809524,
+          "p95": 1.6092290249433105
+        }
+      },
+      "male": {
+        "logical_bytes": {
+          "count": 128,
+          "sum": 1127971,
+          "mean": 8812.2734375,
+          "median": 8951.0,
+          "min": 6839,
+          "max": 13209,
+          "p95": 10360
+        },
+        "allocated_bytes": {
+          "count": 128,
+          "sum": 1421312,
+          "mean": 11104,
+          "median": 12288.0,
+          "min": 8192,
+          "max": 16384,
+          "p95": 12288
+        },
+        "duration_s": {
+          "count": 128,
+          "sum": 182.92877551020408,
+          "mean": 1.4291310586734693,
+          "median": 1.3929591836734694,
+          "min": 1.341315192743764,
+          "max": 1.9847165532879818,
+          "p95": 1.6041950113378685
+        }
+      },
+      "both": {
+        "logical_bytes": {
+          "count": 256,
+          "sum": 2251185,
+          "mean": 8793.69140625,
+          "median": 8937.0,
+          "min": 6601,
+          "max": 13215,
+          "p95": 10279
+        },
+        "allocated_bytes": {
+          "count": 256,
+          "sum": 2842624,
+          "mean": 11104,
+          "median": 12288.0,
+          "min": 8192,
+          "max": 16384,
+          "p95": 12288
+        },
+        "duration_s": {
+          "count": 256,
+          "sum": 366.2739455782313,
+          "mean": 1.430757599914966,
+          "median": 1.3949092970521542,
+          "min": 1.341315192743764,
+          "max": 1.9923809523809524,
+          "p95": 1.605283446712018
+        }
+      }
+    },
+    "projections": [
+      {
+        "words": 1000,
+        "female_logical_bytes": 8775109.375,
+        "female_allocated_bytes": 11104000,
+        "male_logical_bytes": 8812273.4375,
+        "male_allocated_bytes": 11104000,
+        "both_logical_bytes": 17587382.8125,
+        "both_allocated_bytes": 22208000
+      },
+      {
+        "words": 5000,
+        "female_logical_bytes": 43875546.875,
+        "female_allocated_bytes": 55520000,
+        "male_logical_bytes": 44061367.1875,
+        "male_allocated_bytes": 55520000,
+        "both_logical_bytes": 87936914.0625,
+        "both_allocated_bytes": 111040000
+      },
+      {
+        "words": 10000,
+        "female_logical_bytes": 87751093.75,
+        "female_allocated_bytes": 111040000,
+        "male_logical_bytes": 88122734.375,
+        "male_allocated_bytes": 111040000,
+        "both_logical_bytes": 175873828.125,
+        "both_allocated_bytes": 222080000
+      },
+      {
+        "words": 30000,
+        "female_logical_bytes": 263253281.25,
+        "female_allocated_bytes": 333120000,
+        "male_logical_bytes": 264368203.125,
+        "male_allocated_bytes": 333120000,
+        "both_logical_bytes": 527621484.375,
+        "both_allocated_bytes": 666240000
+      }
+    ]
+  },
+  "cuda_placement": [
+    {
+      "component": "duration_predictor",
+      "file": "ort-profile_2026-11-01_15-45-45_362.json",
+      "sha256": "903ef45659721acc3b7ba5864364fca3166e257e9caa3e08272ae90fee61f785",
+      "node_event_counts": {
+        "CUDAExecutionProvider": 500,
+        "CPUExecutionProvider": 274
+      },
+      "host_node_event_duration_us": {
+        "CUDAExecutionProvider": 647283,
+        "CPUExecutionProvider": 4836
+      },
+      "operations": {
+        "CUDAExecutionProvider Reshape": 44,
+        "CUDAExecutionProvider Slice": 30,
+        "CUDAExecutionProvider Shape": 20,
+        "CUDAExecutionProvider ConstantOfShape": 2,
+        "CUDAExecutionProvider Concat": 14,
+        "CUDAExecutionProvider Transpose": 52,
+        "CUDAExecutionProvider Gather": 2,
+        "CUDAExecutionProvider Mul": 70,
+        "CPUExecutionProvider Gather": 44,
+        "CPUExecutionProvider Unsqueeze": 70,
+        "CPUExecutionProvider Concat": 54,
+        "CPUExecutionProvider Reshape": 26,
+        "CPUExecutionProvider Equal": 2,
+        "CPUExecutionProvider Where": 2,
+        "CUDAExecutionProvider Expand": 2,
+        "CUDAExecutionProvider Pad": 36,
+        "CUDAExecutionProvider Conv": 62,
+        "CUDAExecutionProvider LayerNormalization": 20,
+        "CUDAExecutionProvider Gelu": 12,
+        "CUDAExecutionProvider Add": 34,
+        "CUDAExecutionProvider Unsqueeze": 24,
+        "CUDAExecutionProvider Equal": 2,
+        "CUDAExecutionProvider FusedMatMul": 12,
+        "CPUExecutionProvider Mul": 20,
+        "CUDAExecutionProvider MemcpyFromHost": 12,
+        "CPUExecutionProvider Sub": 20,
+        "CUDAExecutionProvider Clip": 8,
+        "CUDAExecutionProvider Sub": 4,
+        "CUDAExecutionProvider MemcpyToHost": 12,
+        "CPUExecutionProvider Add": 8,
+        "CPUExecutionProvider Slice": 12,
+        "CPUExecutionProvider Transpose": 12,
+        "CUDAExecutionProvider Where": 4,
+        "CUDAExecutionProvider Softmax": 4,
+        "CPUExecutionProvider Pow": 4,
+        "CUDAExecutionProvider MatMul": 4,
+        "CUDAExecutionProvider Relu": 4,
+        "CUDAExecutionProvider Gemm": 4,
+        "CUDAExecutionProvider PRelu": 2,
+        "CUDAExecutionProvider Exp": 2,
+        "CUDAExecutionProvider Squeeze": 2
+      }
+    },
+    {
+      "component": "text_encoder",
+      "file": "ort-profile_2026-11-01_15-45-45_982.json",
+      "sha256": "a872155eb022570e20b251ac084cbe34077392fab8a5c1bc04a8073f5320a806",
+      "node_event_counts": {
+        "CUDAExecutionProvider": 852,
+        "CPUExecutionProvider": 520
+      },
+      "host_node_event_duration_us": {
+        "CUDAExecutionProvider": 390029,
+        "CPUExecutionProvider": 9200
+      },
+      "operations": {
+        "CUDAExecutionProvider Transpose": 80,
+        "CUDAExecutionProvider Unsqueeze": 62,
+        "CUDAExecutionProvider Equal": 4,
+        "CUDAExecutionProvider Gather": 2,
+        "CUDAExecutionProvider Mul": 88,
+        "CUDAExecutionProvider Pad": 60,
+        "CUDAExecutionProvider Conv": 84,
+        "CUDAExecutionProvider LayerNormalization": 30,
+        "CUDAExecutionProvider Gelu": 12,
+        "CUDAExecutionProvider Add": 70,
+        "CUDAExecutionProvider Shape": 32,
+        "CPUExecutionProvider Gather": 80,
+        "CPUExecutionProvider Unsqueeze": 136,
+        "CPUExecutionProvider Concat": 104,
+        "CUDAExecutionProvider Reshape": 80,
+        "CUDAExecutionProvider FusedMatMul": 30,
+        "CPUExecutionProvider Mul": 40,
+        "CUDAExecutionProvider MemcpyFromHost": 24,
+        "CPUExecutionProvider Sub": 40,
+        "CUDAExecutionProvider Clip": 16,
+        "CUDAExecutionProvider Sub": 8,
+        "CUDAExecutionProvider MemcpyToHost": 24,
+        "CUDAExecutionProvider Concat": 28,
+        "CUDAExecutionProvider Slice": 48,
+        "CPUExecutionProvider Add": 16,
+        "CPUExecutionProvider Reshape": 48,
+        "CPUExecutionProvider Slice": 24,
+        "CPUExecutionProvider Transpose": 24,
+        "CUDAExecutionProvider Where": 12,
+        "CUDAExecutionProvider Softmax": 12,
+        "CPUExecutionProvider Pow": 8,
+        "CUDAExecutionProvider MatMul": 22,
+        "CUDAExecutionProvider Relu": 8,
+        "CUDAExecutionProvider Split": 12,
+        "CUDAExecutionProvider Squeeze": 4
+      }
+    },
+    {
+      "component": "vector_estimator",
+      "file": "ort-profile_2026-11-01_15-45-46_977.json",
+      "sha256": "737167668c2ac62b25fbd1cf019d83c9fbd479caeb10c3277bd8491f16ae0a69",
+      "node_event_counts": {
+        "CUDAExecutionProvider": 17376,
+        "CPUExecutionProvider": 1952
+      },
+      "host_node_event_duration_us": {
+        "CUDAExecutionProvider": 1265376,
+        "CPUExecutionProvider": 125201
+      },
+      "operations": {
+        "CUDAExecutionProvider Tile": 80,
+        "CUDAExecutionProvider DequantizeLinear": 1280,
+        "CUDAExecutionProvider Conv": 1376,
+        "CUDAExecutionProvider Mul": 4160,
+        "CUDAExecutionProvider Pad": 448,
+        "CUDAExecutionProvider Transpose": 2096,
+        "CUDAExecutionProvider LayerNormalization": 576,
+        "CUDAExecutionProvider Gelu": 448,
+        "CUDAExecutionProvider Add": 1392,
+        "CUDAExecutionProvider Div": 48,
+        "CUDAExecutionProvider Reshape": 336,
+        "CUDAExecutionProvider Unsqueeze": 704,
+        "CUDAExecutionProvider Cos": 48,
+        "CUDAExecutionProvider Sin": 48,
+        "CUDAExecutionProvider Concat": 448,
+        "CUDAExecutionProvider MemcpyToHost": 352,
+        "CPUExecutionProvider DynamicQuantizeLinear": 352,
+        "CPUExecutionProvider MatMulInteger": 608,
+        "CUDAExecutionProvider MemcpyFromHost": 960,
+        "CUDAExecutionProvider Cast": 640,
+        "CUDAExecutionProvider Softplus": 16,
+        "CUDAExecutionProvider Tanh": 80,
+        "CUDAExecutionProvider Shape": 384,
+        "CPUExecutionProvider Slice": 256,
+        "CPUExecutionProvider Concat": 320,
+        "CUDAExecutionProvider Split": 320,
+        "CPUExecutionProvider Gather": 160,
+        "CPUExecutionProvider Unsqueeze": 112,
+        "CUDAExecutionProvider Slice": 208,
+        "CUDAExecutionProvider ReduceSum": 32,
+        "CUDAExecutionProvider Sub": 144,
+        "CPUExecutionProvider Equal": 48,
+        "CPUExecutionProvider Where": 48,
+        "CUDAExecutionProvider Expand": 48,
+        "CUDAExecutionProvider ConstantOfShape": 16,
+        "CUDAExecutionProvider FusedMatMul": 128,
+        "CUDAExecutionProvider Equal": 32,
+        "CUDAExecutionProvider Where": 192,
+        "CUDAExecutionProvider Softmax": 128,
+        "CUDAExecutionProvider MatMul": 128,
+        "CUDAExecutionProvider Squeeze": 64,
+        "CPUExecutionProvider Add": 16,
+        "CPUExecutionProvider Div": 16,
+        "CPUExecutionProvider Mul": 16,
+        "CUDAExecutionProvider Reciprocal": 16
+      }
+    },
+    {
+      "component": "vocoder",
+      "file": "ort-profile_2026-11-01_15-45-48_656.json",
+      "sha256": "655cad9576a5bea3bd865ebee4aec82516891df95e68f16d4d943accc07c77d1",
+      "node_event_counts": {
+        "CPUExecutionProvider": 82,
+        "CUDAExecutionProvider": 698
+      },
+      "host_node_event_duration_us": {
+        "CPUExecutionProvider": 1957,
+        "CUDAExecutionProvider": 107775
+      },
+      "operations": {
+        "CPUExecutionProvider DequantizeLinear": 50,
+        "CUDAExecutionProvider MemcpyFromHost": 50,
+        "CUDAExecutionProvider Div": 18,
+        "CUDAExecutionProvider Shape": 6,
+        "CPUExecutionProvider Slice": 2,
+        "CPUExecutionProvider Squeeze": 2,
+        "CPUExecutionProvider Unsqueeze": 10,
+        "CPUExecutionProvider Gather": 12,
+        "CPUExecutionProvider Concat": 6,
+        "CUDAExecutionProvider Reshape": 6,
+        "CUDAExecutionProvider Transpose": 44,
+        "CUDAExecutionProvider Mul": 54,
+        "CUDAExecutionProvider Add": 38,
+        "CUDAExecutionProvider Pad": 24,
+        "CUDAExecutionProvider QuantizeLinear": 132,
+        "CUDAExecutionProvider DequantizeLinear": 216,
+        "CUDAExecutionProvider Conv": 66,
+        "CUDAExecutionProvider LayerNormalization": 20,
+        "CUDAExecutionProvider Erf": 16,
+        "CUDAExecutionProvider Gelu": 4,
+        "CUDAExecutionProvider BatchNormalization": 2,
+        "CUDAExecutionProvider PRelu": 2
+      }
+    }
+  ],
+  "output_consistency": {
+    "repeat_consistency": [
+      {
+        "label": "cuda-default",
+        "config": "serial,1,2,8,off",
+        "repeat_output_count": 72,
+        "repeat_pcm_hash_matches": 72
+      },
+      {
+        "label": "cuda",
+        "config": "shared,12,2,8,off",
+        "repeat_output_count": 72,
+        "repeat_pcm_hash_matches": 72
+      },
+      {
+        "label": "cpu-original",
+        "config": "serial,1,4,8,off",
+        "repeat_output_count": 72,
+        "repeat_pcm_hash_matches": 72
+      },
+      {
+        "label": "cuda-default",
+        "config": "shared,12,2,8,off",
+        "repeat_output_count": 72,
+        "repeat_pcm_hash_matches": 72
+      },
+      {
+        "label": "cpu-gpu-build",
+        "config": "shared,12,2,8,off",
+        "repeat_output_count": 72,
+        "repeat_pcm_hash_matches": 72
+      },
+      {
+        "label": "cuda",
+        "config": "serial,1,2,8,off",
+        "repeat_output_count": 72,
+        "repeat_pcm_hash_matches": 72
+      },
+      {
+        "label": "cpu-original",
+        "config": "shared,12,2,8,off",
+        "repeat_output_count": 72,
+        "repeat_pcm_hash_matches": 72
+      }
+    ],
+    "cpu_comparisons": [
+      {
+        "label": "cuda-default",
+        "config": "serial,1,2,8,off",
+        "cpu_pcm_exact_matches": 0,
+        "sample_count_delta_range": [
+          -4,
+          1
+        ],
+        "relative_rms_delta_range": [
+          -0.019551522233723584,
+          0.017245496207066058
+        ]
+      },
+      {
+        "label": "cuda",
+        "config": "shared,12,2,8,off",
+        "cpu_pcm_exact_matches": 0,
+        "sample_count_delta_range": [
+          -4,
+          1
+        ],
+        "relative_rms_delta_range": [
+          -0.018288399372729525,
+          0.013526193612994009
+        ]
+      },
+      {
+        "label": "cpu-original",
+        "config": "serial,1,4,8,off",
+        "cpu_pcm_exact_matches": 24,
+        "sample_count_delta_range": [
+          0,
+          0
+        ],
+        "relative_rms_delta_range": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "label": "cuda-default",
+        "config": "shared,12,2,8,off",
+        "cpu_pcm_exact_matches": 0,
+        "sample_count_delta_range": [
+          -4,
+          1
+        ],
+        "relative_rms_delta_range": [
+          -0.019551522233723584,
+          0.017245496207066058
+        ]
+      },
+      {
+        "label": "cpu-gpu-build",
+        "config": "shared,12,2,8,off",
+        "cpu_pcm_exact_matches": 24,
+        "sample_count_delta_range": [
+          0,
+          0
+        ],
+        "relative_rms_delta_range": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "label": "cuda",
+        "config": "serial,1,2,8,off",
+        "cpu_pcm_exact_matches": 0,
+        "sample_count_delta_range": [
+          -4,
+          1
+        ],
+        "relative_rms_delta_range": [
+          -0.018288399372729525,
+          0.013526193612994009
+        ]
+      },
+      {
+        "label": "cpu-original",
+        "config": "shared,12,2,8,off",
+        "cpu_pcm_exact_matches": 24,
+        "sample_count_delta_range": [
+          0,
+          0
+        ],
+        "relative_rms_delta_range": [
+          0.0,
+          0.0
+        ]
+      }
+    ],
+    "parallel_consistency": [
+      {
+        "label": "cuda",
+        "shared_pcm_outputs_matching_serial": 24
+      },
+      {
+        "label": "cuda-default",
+        "shared_pcm_outputs_matching_serial": 24
+      },
+      {
+        "label": "cpu-original",
+        "shared_pcm_outputs_matching_serial": 24
+      }
+    ],
+    "human_pronunciation_and_quality_acceptance": false
+  },
+  "dependencies": {
+    "sherpa_archive": {
+      "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/v2.0.1/sherpa-onnx-v2.0.1-cuda-13.x-cudnn-9.x-onnxruntime1.28.2-win-x64-cuda.tar.bz2",
+      "publisher_sha256": "206f56c80cca702ca564fb21e48462f4210a13f941de32c336a4c6debb1e9efb",
+      "publisher_bytes": 480541871,
+      "scope": "isolated GPU experiment; not an application dependency change",
+      "actual_sha256": "206f56c80cca702ca564fb21e48462f4210a13f941de32c336a4c6debb1e9efb",
+      "actual_bytes": 480541871,
+      "download_seconds": 21.856506199983414,
+      "unpacked_logical_bytes": 625636878,
+      "archive_members": 51
+    },
+    "nvidia_packages": [
+      {
+        "package": "nvidia-cuda-runtime",
+        "version": "13.4.92",
+        "dependencies": null,
+        "filename": "nvidia_cuda_runtime-13.4.92-py3-none-win_amd64.whl",
+        "size": 2778543,
+        "url": "https://files.pythonhosted.org/packages/86/00/d5436004268f049214193659ebc36550b5ef3925c3d13b4cc980e13be6f5/nvidia_cuda_runtime-13.4.92-py3-none-win_amd64.whl",
+        "digests": {
+          "blake2b_256": "8600d5436004268f049214193659ebc36550b5ef3925c3d13b4cc980e13be6f5",
+          "md5": "9ae49bff3ce88acdf223dbcf04f8da85",
+          "sha256": "08dca5e4aba480c2fd5b55075c0fa71b84ef9dcf0521f2d58baa14a803a7311c"
+        }
+      },
+      {
+        "package": "nvidia-cublas",
+        "version": "13.8.0.4",
+        "dependencies": [
+          "nvidia-cuda-nvrtc"
+        ],
+        "filename": "nvidia_cublas-13.8.0.4-py3-none-win_amd64.whl",
+        "size": 423266897,
+        "url": "https://files.pythonhosted.org/packages/a3/df/f1246959833e2c437db8be3e5b477f66b87f8817821ed40de6c7561c9a36/nvidia_cublas-13.8.0.4-py3-none-win_amd64.whl",
+        "digests": {
+          "blake2b_256": "a3dff1246959833e2c437db8be3e5b477f66b87f8817821ed40de6c7561c9a36",
+          "md5": "9f0e14099cb3944c3ae1936f4fcaf65a",
+          "sha256": "8c5494423bb8a46822cb6b0cb95d7fa4be2d7b96a31155dff083839ec8297910"
+        }
+      },
+      {
+        "package": "nvidia-cufft",
+        "version": "12.4.0.43",
+        "dependencies": [
+          "nvidia-nvjitlink"
+        ],
+        "filename": "nvidia_cufft-12.4.0.43-py3-none-win_amd64.whl",
+        "size": 160953139,
+        "url": "https://files.pythonhosted.org/packages/7b/cc/be7fe31058127336a66c88414a2ecc6beecf680baf85994a43eaf292b202/nvidia_cufft-12.4.0.43-py3-none-win_amd64.whl",
+        "digests": {
+          "blake2b_256": "7bccbe7fe31058127336a66c88414a2ecc6beecf680baf85994a43eaf292b202",
+          "md5": "2a4fd7910f6e4c2e6a7fc49c03ae62bd",
+          "sha256": "4ff7075f2d0b5f69291f70938d37a86ec632cbe5747184c74ba1f50f17accacc"
+        }
+      },
+      {
+        "package": "nvidia-cudnn-cu13",
+        "version": "9.27.0.42",
+        "dependencies": [
+          "nvidia-cublas"
+        ],
+        "filename": "nvidia_cudnn_cu13-9.27.0.42-py3-none-win_amd64.whl",
+        "size": 436469905,
+        "url": "https://files.pythonhosted.org/packages/87/6a/e55ff0ac26a5c6e2b21f41c9d04ad096b4ed6da593fba7e25845c61b0532/nvidia_cudnn_cu13-9.27.0.42-py3-none-win_amd64.whl",
+        "digests": {
+          "blake2b_256": "876ae55ff0ac26a5c6e2b21f41c9d04ad096b4ed6da593fba7e25845c61b0532",
+          "md5": "03d4600b796b74a78e8be749ad0b7956",
+          "sha256": "7d96f634adafd55c72231eb0500ca77ab109ec8ebff7b33000b76e081bc4558e"
+        }
+      },
+      {
+        "package": "nvidia-cuda-nvrtc",
+        "version": "13.4.92",
+        "dependencies": null,
+        "filename": "nvidia_cuda_nvrtc-13.4.92-py3-none-win_amd64.whl",
+        "size": 46972283,
+        "url": "https://files.pythonhosted.org/packages/64/5b/aa91896f64444eff1dd7f189f4db05046c7f0ba08c0f531283c1c1aac581/nvidia_cuda_nvrtc-13.4.92-py3-none-win_amd64.whl",
+        "digests": {
+          "blake2b_256": "645baa91896f64444eff1dd7f189f4db05046c7f0ba08c0f531283c1c1aac581",
+          "md5": "9851037f7672158b10c04f8dc68eeff0",
+          "sha256": "6af7ac5372920f6a7a560d0699348560fe44cb52c1d722d6afd3119f8af948c4"
+        }
+      },
+      {
+        "package": "nvidia-nvjitlink",
+        "version": "13.4.92",
+        "dependencies": null,
+        "filename": "nvidia_nvjitlink-13.4.92-py3-none-win_amd64.whl",
+        "size": 39053950,
+        "url": "https://files.pythonhosted.org/packages/72/7c/c44bd7277afafed9de262a23baec4dc8dcf7ecbb1b9ecb228821442d1e9b/nvidia_nvjitlink-13.4.92-py3-none-win_amd64.whl",
+        "digests": {
+          "blake2b_256": "727cc44bd7277afafed9de262a23baec4dc8dcf7ecbb1b9ecb228821442d1e9b",
+          "md5": "7d7e6e4bf8df9a57ec13f59b6c5eabbb",
+          "sha256": "b286f3a4f227a9363efdec263c7b91788cef1478d2b8a5fa8bab7f3e82ff82fd"
+        }
+      }
+    ],
+    "native_replacements": [
+      {
+        "file": "onnxruntime.dll",
+        "bytes": 16283488,
+        "sha256": "acea7dcd8cc2bc51806382bd5bdeed5dd1bddfdcee38f4e6d67a6823b1980604"
+      },
+      {
+        "file": "onnxruntime_providers_cuda.dll",
+        "bytes": 267632952,
+        "sha256": "26bce13391d2178c4fbb1ffeca6e828594ad1c1393c89f2a934bc977b0d1b5b7"
+      },
+      {
+        "file": "onnxruntime_providers_shared.dll",
+        "bytes": 21816,
+        "sha256": "6b980b6c52f9849a20953d70a2ae5c09d9c7365be151cab9f55b38fc41e7f296"
+      },
+      {
+        "file": "onnxruntime_providers_tensorrt.dll",
+        "bytes": 855864,
+        "sha256": "b0b88f72f76aade314a2ec0c71a9262f623872a740857f35670d69dbaf03945a"
+      },
+      {
+        "file": "sherpa-onnx-c-api.dll",
+        "bytes": 4294656,
+        "sha256": "5848cf8680ddcdf1b5f0452e975a1f6a9b6bd754f2e1b89b3c1e7ff811c04a26"
+      },
+      {
+        "file": "sherpa-onnx-cxx-api.dll",
+        "bytes": 264192,
+        "sha256": "7351068055e9f7b3133a887b481303f1792ff6c4140b7a95a654d89d9c5488c9"
+      }
+    ],
+    "nvidia_wheel_bytes": 1109494717,
+    "nvidia_extracted_bytes": 1629838001,
+    "nvidia_dll_bytes": 1618957904,
+    "cuda_native_dll_bytes_excluding_tensorrt": 288497104,
+    "cpu_native_dll_bytes": 22358016,
+    "experimental_dll_net_increase_bytes": 1885096992,
+    "is_minimized_product_distribution": false
+  },
+  "failure_checks": {
+    "cpu_only_runtime_cuda_request_rejected": true,
+    "valid_audio_is_not_gpu_execution_proof": true,
+    "expected_parent_cli_exit_code": 1,
+    "native_child_exit_code": 0,
+    "run": "tts-cuda-unavailable-20261101"
+  },
+  "runs": [
+    {
+      "run": "tts-cache-space-20261101",
+      "measured_outputs": 256,
+      "warmup_outputs": 96,
+      "trials": [
+        {
+          "settings": {
+            "config": "shared,12,2,8,off",
+            "provider": "cpu",
+            "profile": false,
+            "dll_dirs": []
+          },
+          "returncode": 0,
+          "hard_execution_timeout_s": 60,
+          "timed_out": false,
+          "process_total_ms": 14274.040499993134,
+          "raw_directory": "female-000",
+          "cpu_fallback_detected": false,
+          "status": "passed",
+          "config": {
+            "name": "shared-12-2-8-off",
+            "mode": "shared",
+            "workers": 12,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "initialization_ms": 2252.842199988663,
+          "memory_ready": {
+            "elapsed_ms": 2253.78230001661,
+            "working_set_bytes": 232087552,
+            "private_bytes": 731967488,
+            "cpu_s": 2.265625,
+            "system_total_cpu_s": 2124267.40625,
+            "system_busy_cpu_s": 249200.6875
+          },
+          "batch_ms": 8301.9687999913,
+          "jobs_per_s": 3.8545073790247844,
+          "active_cpu_s": 79.125,
+          "system_cpu_percent": 95.00941619585687,
+          "other_process_cpu_percent": 35.40489642184557,
+          "peak_working_set_bytes": 635875328,
+          "peak_private_bytes": 1278160896,
+          "runtime": {
+            "version": "2.0.1",
+            "git_sha1": "af2d8d81",
+            "onnxruntime_version": "1.28.2"
+          },
+          "requested_provider": "cpu",
+          "median_inference_ms": 2927.90400001104,
+          "over_full_scale_outputs": []
+        },
+        {
+          "settings": {
+            "config": "shared,12,2,8,off",
+            "provider": "cpu",
+            "profile": false,
+            "dll_dirs": []
+          },
+          "returncode": 0,
+          "hard_execution_timeout_s": 60,
+          "timed_out": false,
+          "process_total_ms": 12859.888499981025,
+          "raw_directory": "female-032",
+          "cpu_fallback_detected": false,
+          "status": "passed",
+          "config": {
+            "name": "shared-12-2-8-off",
+            "mode": "shared",
+            "workers": 12,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "initialization_ms": 1822.6239000214264,
+          "memory_ready": {
+            "elapsed_ms": 1823.3973999740556,
+            "working_set_bytes": 232452096,
+            "private_bytes": 732090368,
+            "cpu_s": 1.921875,
+            "system_total_cpu_s": 2124503.796875,
+            "system_busy_cpu_s": 249385.6875
+          },
+          "batch_ms": 7900.197199982358,
+          "jobs_per_s": 4.050531801924066,
+          "active_cpu_s": 83.453125,
+          "system_cpu_percent": 92.77420948616601,
+          "other_process_cpu_percent": 26.803359683794465,
+          "peak_working_set_bytes": 633475072,
+          "peak_private_bytes": 1277956096,
+          "runtime": {
+            "version": "2.0.1",
+            "git_sha1": "af2d8d81",
+            "onnxruntime_version": "1.28.2"
+          },
+          "requested_provider": "cpu",
+          "median_inference_ms": 2629.300799992052,
+          "over_full_scale_outputs": []
+        },
+        {
+          "settings": {
+            "config": "shared,12,2,8,off",
+            "provider": "cpu",
+            "profile": false,
+            "dll_dirs": []
+          },
+          "returncode": 0,
+          "hard_execution_timeout_s": 60,
+          "timed_out": false,
+          "process_total_ms": 13348.507199989399,
+          "raw_directory": "female-064",
+          "cpu_fallback_detected": false,
+          "status": "passed",
+          "config": {
+            "name": "shared-12-2-8-off",
+            "mode": "shared",
+            "workers": 12,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "initialization_ms": 1761.6094999830239,
+          "memory_ready": {
+            "elapsed_ms": 1762.670199997956,
+            "working_set_bytes": 232554496,
+            "private_bytes": 732286976,
+            "cpu_s": 1.796875,
+            "system_total_cpu_s": 2124727.546875,
+            "system_busy_cpu_s": 249559.359375
+          },
+          "batch_ms": 8657.722500007367,
+          "jobs_per_s": 3.696122161454444,
+          "active_cpu_s": 79.34375,
+          "system_cpu_percent": 97.92629324918292,
+          "other_process_cpu_percent": 40.6964949847853,
+          "peak_working_set_bytes": 601387008,
+          "peak_private_bytes": 1279987712,
+          "runtime": {
+            "version": "2.0.1",
+            "git_sha1": "af2d8d81",
+            "onnxruntime_version": "1.28.2"
+          },
+          "requested_provider": "cpu",
+          "median_inference_ms": 2832.5880500051426,
+          "over_full_scale_outputs": []
+        },
+        {
+          "settings": {
+            "config": "shared,12,2,8,off",
+            "provider": "cpu",
+            "profile": false,
+            "dll_dirs": []
+          },
+          "returncode": 0,
+          "hard_execution_timeout_s": 60,
+          "timed_out": false,
+          "process_total_ms": 12581.704000011086,
+          "raw_directory": "female-096",
+          "cpu_fallback_detected": false,
+          "status": "passed",
+          "config": {
+            "name": "shared-12-2-8-off",
+            "mode": "shared",
+            "workers": 12,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "initialization_ms": 1740.0769999949262,
+          "memory_ready": {
+            "elapsed_ms": 1741.0086000163574,
+            "working_set_bytes": 232034304,
+            "private_bytes": 731869184,
+            "cpu_s": 1.828125,
+            "system_total_cpu_s": 2124959.546875,
+            "system_busy_cpu_s": 249743.28125
+          },
+          "batch_ms": 7910.50689999247,
+          "jobs_per_s": 4.0452527764093675,
+          "active_cpu_s": 81.421875,
+          "system_cpu_percent": 93.44039530574429,
+          "other_process_cpu_percent": 29.06732550957381,
+          "peak_working_set_bytes": 591659008,
+          "peak_private_bytes": 1276887040,
+          "runtime": {
+            "version": "2.0.1",
+            "git_sha1": "af2d8d81",
+            "onnxruntime_version": "1.28.2"
+          },
+          "requested_provider": "cpu",
+          "median_inference_ms": 2768.210199996247,
+          "over_full_scale_outputs": []
+        },
+        {
+          "settings": {
+            "config": "shared,12,2,8,off",
+            "provider": "cpu",
+            "profile": false,
+            "dll_dirs": []
+          },
+          "returncode": 0,
+          "hard_execution_timeout_s": 60,
+          "timed_out": false,
+          "process_total_ms": 13115.098700014642,
+          "raw_directory": "male-000",
+          "cpu_fallback_detected": false,
+          "status": "passed",
+          "config": {
+            "name": "shared-12-2-8-off",
+            "mode": "shared",
+            "workers": 12,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "initialization_ms": 1769.0598999906797,
+          "memory_ready": {
+            "elapsed_ms": 1770.0894000008702,
+            "working_set_bytes": 232558592,
+            "private_bytes": 732340224,
+            "cpu_s": 1.875,
+            "system_total_cpu_s": 2125179.296875,
+            "system_busy_cpu_s": 249909.71875
+          },
+          "batch_ms": 8246.696699992754,
+          "jobs_per_s": 3.880341567554936,
+          "active_cpu_s": 82.140625,
+          "system_cpu_percent": 95.65577651515152,
+          "other_process_cpu_percent": 33.428030303030305,
+          "peak_working_set_bytes": 673325056,
+          "peak_private_bytes": 1278345216,
+          "runtime": {
+            "version": "2.0.1",
+            "git_sha1": "af2d8d81",
+            "onnxruntime_version": "1.28.2"
+          },
+          "requested_provider": "cpu",
+          "median_inference_ms": 2926.698249997571,
+          "over_full_scale_outputs": []
+        },
+        {
+          "settings": {
+            "config": "shared,12,2,8,off",
+            "provider": "cpu",
+            "profile": false,
+            "dll_dirs": []
+          },
+          "returncode": 0,
+          "hard_execution_timeout_s": 60,
+          "timed_out": false,
+          "process_total_ms": 14129.679600009695,
+          "raw_directory": "male-032",
+          "cpu_fallback_detected": false,
+          "status": "passed",
+          "config": {
+            "name": "shared-12-2-8-off",
+            "mode": "shared",
+            "workers": 12,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "initialization_ms": 1891.3911000126973,
+          "memory_ready": {
+            "elapsed_ms": 1892.2784000169486,
+            "working_set_bytes": 231915520,
+            "private_bytes": 731635712,
+            "cpu_s": 1.921875,
+            "system_total_cpu_s": 2125409.296875,
+            "system_busy_cpu_s": 250098.5625
+          },
+          "batch_ms": 8330.67709999159,
+          "jobs_per_s": 3.8412243825933796,
+          "active_cpu_s": 81.390625,
+          "system_cpu_percent": 96.82223264540337,
+          "other_process_cpu_percent": 35.74108818011257,
+          "peak_working_set_bytes": 651829248,
+          "peak_private_bytes": 1276657664,
+          "runtime": {
+            "version": "2.0.1",
+            "git_sha1": "af2d8d81",
+            "onnxruntime_version": "1.28.2"
+          },
+          "requested_provider": "cpu",
+          "median_inference_ms": 2828.481100004865,
+          "over_full_scale_outputs": []
+        },
+        {
+          "settings": {
+            "config": "shared,12,2,8,off",
+            "provider": "cpu",
+            "profile": false,
+            "dll_dirs": []
+          },
+          "returncode": 0,
+          "hard_execution_timeout_s": 60,
+          "timed_out": false,
+          "process_total_ms": 12921.215899987146,
+          "raw_directory": "male-064",
+          "cpu_fallback_detected": false,
+          "status": "passed",
+          "config": {
+            "name": "shared-12-2-8-off",
+            "mode": "shared",
+            "workers": 12,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "initialization_ms": 1644.7440999909304,
+          "memory_ready": {
+            "elapsed_ms": 1645.471900003031,
+            "working_set_bytes": 232058880,
+            "private_bytes": 731865088,
+            "cpu_s": 1.71875,
+            "system_total_cpu_s": 2125648.515625,
+            "system_busy_cpu_s": 250288.625
+          },
+          "batch_ms": 8191.494200000307,
+          "jobs_per_s": 3.90649119912687,
+          "active_cpu_s": 82.875,
+          "system_cpu_percent": 96.42175572519083,
+          "other_process_cpu_percent": 33.158396946564885,
+          "peak_working_set_bytes": 645214208,
+          "peak_private_bytes": 1278160896,
+          "runtime": {
+            "version": "2.0.1",
+            "git_sha1": "af2d8d81",
+            "onnxruntime_version": "1.28.2"
+          },
+          "requested_provider": "cpu",
+          "median_inference_ms": 2786.9757499865955,
+          "over_full_scale_outputs": [
+            74
+          ]
+        },
+        {
+          "settings": {
+            "config": "shared,12,2,8,off",
+            "provider": "cpu",
+            "profile": false,
+            "dll_dirs": []
+          },
+          "returncode": 0,
+          "hard_execution_timeout_s": 60,
+          "timed_out": false,
+          "process_total_ms": 12694.372300000396,
+          "raw_directory": "male-096",
+          "cpu_fallback_detected": false,
+          "status": "passed",
+          "config": {
+            "name": "shared-12-2-8-off",
+            "mode": "shared",
+            "workers": 12,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "initialization_ms": 1665.7133999979123,
+          "memory_ready": {
+            "elapsed_ms": 1666.7810999788344,
+            "working_set_bytes": 232243200,
+            "private_bytes": 732086272,
+            "cpu_s": 1.78125,
+            "system_total_cpu_s": 2125874.453125,
+            "system_busy_cpu_s": 250467.140625
+          },
+          "batch_ms": 8064.675400004489,
+          "jobs_per_s": 3.967921635132666,
+          "active_cpu_s": 79.8125,
+          "system_cpu_percent": 95.54263565891473,
+          "other_process_cpu_percent": 33.67248062015504,
+          "peak_working_set_bytes": 695377920,
+          "peak_private_bytes": 1557925888,
+          "runtime": {
+            "version": "2.0.1",
+            "git_sha1": "af2d8d81",
+            "onnxruntime_version": "1.28.2"
+          },
+          "requested_provider": "cpu",
+          "median_inference_ms": 2795.6787500006612,
+          "over_full_scale_outputs": []
+        }
+      ],
+      "aggregates": []
+    },
+    {
+      "run": "tts-cuda-diagnostic-20261101",
+      "measured_outputs": 1,
+      "warmup_outputs": 1,
+      "trials": [
+        {
+          "settings": {
+            "config": "serial,1,2,8,off",
+            "provider": "cuda",
+            "profile": true,
+            "dll_dirs": [
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cu13\\bin\\x86_64",
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cudnn\\bin"
+            ]
+          },
+          "returncode": 0,
+          "hard_execution_timeout_s": 60,
+          "timed_out": false,
+          "process_total_ms": 11066.023999999743,
+          "raw_directory": "r0-serial-1-2-8-off",
+          "cpu_fallback_detected": false,
+          "status": "passed",
+          "config": {
+            "name": "serial-1-2-8-off",
+            "mode": "serial",
+            "workers": 1,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "initialization_ms": 6067.135600023903,
+          "memory_ready": {
+            "elapsed_ms": 6068.012100004125,
+            "working_set_bytes": 436731904,
+            "private_bytes": 1393512448,
+            "cpu_s": 5.0625,
+            "system_total_cpu_s": 2126606.296875,
+            "system_busy_cpu_s": 250700.078125
+          },
+          "batch_ms": 1535.035400011111,
+          "jobs_per_s": 0.6514507743552765,
+          "active_cpu_s": 1.5,
+          "system_cpu_percent": 24.399494310998737,
+          "other_process_cpu_percent": 18.331226295828067,
+          "peak_working_set_bytes": 1025581056,
+          "peak_private_bytes": 2161127424,
+          "runtime": {
+            "version": "2.0.1",
+            "git_sha1": "af2d8d81",
+            "onnxruntime_version": "1.28.2"
+          },
+          "requested_provider": "cuda",
+          "repeat": 0,
+          "median_inference_ms": 1511.7701000126544,
+          "over_full_scale_outputs": []
+        }
+      ],
+      "aggregates": [
+        {
+          "config": "serial,1,2,8,off",
+          "passed": 1,
+          "failed": 0,
+          "median_batch_ms": 1535.035400011111,
+          "median_process_ms": 11066.023999999743,
+          "median_inference_ms": 1511.7701000126544,
+          "peak_private_bytes": 2161127424,
+          "peak_working_set_bytes": 1025581056
+        }
+      ]
+    },
+    {
+      "run": "tts-cuda-screen-20261101",
+      "measured_outputs": 60,
+      "warmup_outputs": 27,
+      "trials": [
+        {
+          "settings": {
+            "config": "shared,4,2,8,off",
+            "provider": "cuda",
+            "profile": false,
+            "dll_dirs": [
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cu13\\bin\\x86_64",
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cudnn\\bin"
+            ]
+          },
+          "returncode": 0,
+          "hard_execution_timeout_s": 60,
+          "timed_out": false,
+          "process_total_ms": 9790.607400005683,
+          "raw_directory": "r0-shared-4-2-8-off",
+          "cpu_fallback_detected": false,
+          "status": "passed",
+          "config": {
+            "name": "shared-4-2-8-off",
+            "mode": "shared",
+            "workers": 4,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "initialization_ms": 2665.424600010738,
+          "memory_ready": {
+            "elapsed_ms": 2666.136500018183,
+            "working_set_bytes": 437944320,
+            "private_bytes": 1392058368,
+            "cpu_s": 2.828125,
+            "system_total_cpu_s": 2127877.765625,
+            "system_busy_cpu_s": 250897.96875
+          },
+          "batch_ms": 5048.1632000009995,
+          "jobs_per_s": 2.3771022299749784,
+          "active_cpu_s": 13.96875,
+          "system_cpu_percent": 30.069659442724458,
+          "other_process_cpu_percent": 12.770897832817337,
+          "peak_working_set_bytes": 1012215808,
+          "peak_private_bytes": 2657034240,
+          "runtime": {
+            "version": "2.0.1",
+            "git_sha1": "af2d8d81",
+            "onnxruntime_version": "1.28.2"
+          },
+          "requested_provider": "cuda",
+          "repeat": 0,
+          "median_inference_ms": 1672.952950000763,
+          "over_full_scale_outputs": []
+        },
+        {
+          "settings": {
+            "config": "shared,8,2,8,off",
+            "provider": "cuda",
+            "profile": false,
+            "dll_dirs": [
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cu13\\bin\\x86_64",
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cudnn\\bin"
+            ]
+          },
+          "returncode": 0,
+          "hard_execution_timeout_s": 60,
+          "timed_out": false,
+          "process_total_ms": 8487.706399988383,
+          "raw_directory": "r0-shared-8-2-8-off",
+          "cpu_fallback_detected": false,
+          "status": "passed",
+          "config": {
+            "name": "shared-8-2-8-off",
+            "mode": "shared",
+            "workers": 8,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "initialization_ms": 2175.5160000175238,
+          "memory_ready": {
+            "elapsed_ms": 2176.284199988004,
+            "working_set_bytes": 437284864,
+            "private_bytes": 1385365504,
+            "cpu_s": 2.28125,
+            "system_total_cpu_s": 2128033.921875,
+            "system_busy_cpu_s": 250935.6875
+          },
+          "batch_ms": 3835.554700024659,
+          "jobs_per_s": 3.1286217870710726,
+          "active_cpu_s": 13.359375,
+          "system_cpu_percent": 39.06050548889456,
+          "other_process_cpu_percent": 17.232575950982895,
+          "peak_working_set_bytes": 1036222464,
+          "peak_private_bytes": 3281960960,
+          "runtime": {
+            "version": "2.0.1",
+            "git_sha1": "af2d8d81",
+            "onnxruntime_version": "1.28.2"
+          },
+          "requested_provider": "cuda",
+          "repeat": 0,
+          "median_inference_ms": 1892.5753999938024,
+          "over_full_scale_outputs": []
+        },
+        {
+          "settings": {
+            "config": "shared,2,2,8,off",
+            "provider": "cuda",
+            "profile": false,
+            "dll_dirs": [
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cu13\\bin\\x86_64",
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cudnn\\bin"
+            ]
+          },
+          "returncode": 0,
+          "hard_execution_timeout_s": 60,
+          "timed_out": false,
+          "process_total_ms": 9458.725300006336,
+          "raw_directory": "r0-shared-2-2-8-off",
+          "cpu_fallback_detected": false,
+          "status": "passed",
+          "config": {
+            "name": "shared-2-2-8-off",
+            "mode": "shared",
+            "workers": 2,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "initialization_ms": 2358.422499994049,
+          "memory_ready": {
+            "elapsed_ms": 2359.5631000061985,
+            "working_set_bytes": 436883456,
+            "private_bytes": 1383178240,
+            "cpu_s": 2.515625,
+            "system_total_cpu_s": 2128179.546875,
+            "system_busy_cpu_s": 250977.375
+          },
+          "batch_ms": 5419.281699985731,
+          "jobs_per_s": 2.2143155983258067,
+          "active_cpu_s": 8.375,
+          "system_cpu_percent": 19.686599423631122,
+          "other_process_cpu_percent": 10.032420749279538,
+          "peak_working_set_bytes": 987172864,
+          "peak_private_bytes": 2326425600,
+          "runtime": {
+            "version": "2.0.1",
+            "git_sha1": "af2d8d81",
+            "onnxruntime_version": "1.28.2"
+          },
+          "requested_provider": "cuda",
+          "repeat": 0,
+          "median_inference_ms": 691.1070499918424,
+          "over_full_scale_outputs": []
+        },
+        {
+          "settings": {
+            "config": "shared,12,2,8,off",
+            "provider": "cuda",
+            "profile": false,
+            "dll_dirs": [
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cu13\\bin\\x86_64",
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cudnn\\bin"
+            ]
+          },
+          "returncode": 0,
+          "hard_execution_timeout_s": 60,
+          "timed_out": false,
+          "process_total_ms": 8112.013600009959,
+          "raw_directory": "r0-shared-12-2-8-off",
+          "cpu_fallback_detected": false,
+          "status": "passed",
+          "config": {
+            "name": "shared-12-2-8-off",
+            "mode": "shared",
+            "workers": 12,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "initialization_ms": 2197.307099995669,
+          "memory_ready": {
+            "elapsed_ms": 2198.1878000078723,
+            "working_set_bytes": 436871168,
+            "private_bytes": 1386504192,
+            "cpu_s": 2.28125,
+            "system_total_cpu_s": 2128334.03125,
+            "system_busy_cpu_s": 251005.609375
+          },
+          "batch_ms": 2816.3445999962278,
+          "jobs_per_s": 4.26084222790637,
+          "active_cpu_s": 19.796875,
+          "system_cpu_percent": 65.01042390548993,
+          "other_process_cpu_percent": 20.98679638637943,
+          "peak_working_set_bytes": 1058381824,
+          "peak_private_bytes": 3894185984,
+          "runtime": {
+            "version": "2.0.1",
+            "git_sha1": "af2d8d81",
+            "onnxruntime_version": "1.28.2"
+          },
+          "requested_provider": "cuda",
+          "repeat": 0,
+          "median_inference_ms": 2690.5345500126714,
+          "over_full_scale_outputs": []
+        },
+        {
+          "settings": {
+            "config": "serial,1,2,8,off",
+            "provider": "cuda",
+            "profile": false,
+            "dll_dirs": [
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cu13\\bin\\x86_64",
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cudnn\\bin"
+            ]
+          },
+          "returncode": 0,
+          "hard_execution_timeout_s": 60,
+          "timed_out": false,
+          "process_total_ms": 10117.747599986615,
+          "raw_directory": "r0-serial-1-2-8-off",
+          "cpu_fallback_detected": false,
+          "status": "passed",
+          "config": {
+            "name": "serial-1-2-8-off",
+            "mode": "serial",
+            "workers": 1,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "initialization_ms": 2253.6407000152394,
+          "memory_ready": {
+            "elapsed_ms": 2254.446100007044,
+            "working_set_bytes": 436731904,
+            "private_bytes": 1384353792,
+            "cpu_s": 2.390625,
+            "system_total_cpu_s": 2128471.453125,
+            "system_busy_cpu_s": 251056.0625
+          },
+          "batch_ms": 6670.726300013484,
+          "jobs_per_s": 1.7989045660553848,
+          "active_cpu_s": 5.328125,
+          "system_cpu_percent": 13.056206088992974,
+          "other_process_cpu_percent": 8.064988290398126,
+          "peak_working_set_bytes": 963031040,
+          "peak_private_bytes": 2085818368,
+          "runtime": {
+            "version": "2.0.1",
+            "git_sha1": "af2d8d81",
+            "onnxruntime_version": "1.28.2"
+          },
+          "requested_provider": "cuda",
+          "repeat": 0,
+          "median_inference_ms": 533.4774499933701,
+          "over_full_scale_outputs": []
+        }
+      ],
+      "aggregates": [
+        {
+          "config": "serial,1,2,8,off",
+          "passed": 1,
+          "failed": 0,
+          "median_batch_ms": 6670.726300013484,
+          "median_process_ms": 10117.747599986615,
+          "median_inference_ms": 533.4774499933701,
+          "peak_private_bytes": 2085818368,
+          "peak_working_set_bytes": 963031040
+        },
+        {
+          "config": "shared,2,2,8,off",
+          "passed": 1,
+          "failed": 0,
+          "median_batch_ms": 5419.281699985731,
+          "median_process_ms": 9458.725300006336,
+          "median_inference_ms": 691.1070499918424,
+          "peak_private_bytes": 2326425600,
+          "peak_working_set_bytes": 987172864
+        },
+        {
+          "config": "shared,4,2,8,off",
+          "passed": 1,
+          "failed": 0,
+          "median_batch_ms": 5048.1632000009995,
+          "median_process_ms": 9790.607400005683,
+          "median_inference_ms": 1672.952950000763,
+          "peak_private_bytes": 2657034240,
+          "peak_working_set_bytes": 1012215808
+        },
+        {
+          "config": "shared,8,2,8,off",
+          "passed": 1,
+          "failed": 0,
+          "median_batch_ms": 3835.554700024659,
+          "median_process_ms": 8487.706399988383,
+          "median_inference_ms": 1892.5753999938024,
+          "peak_private_bytes": 3281960960,
+          "peak_working_set_bytes": 1036222464
+        },
+        {
+          "config": "shared,12,2,8,off",
+          "passed": 1,
+          "failed": 0,
+          "median_batch_ms": 2816.3445999962278,
+          "median_process_ms": 8112.013600009959,
+          "median_inference_ms": 2690.5345500126714,
+          "peak_private_bytes": 3894185984,
+          "peak_working_set_bytes": 1058381824
+        }
+      ]
+    },
+    {
+      "run": "tts-cuda-pad-pilot-20261101",
+      "measured_outputs": 72,
+      "warmup_outputs": 29,
+      "trials": [
+        {
+          "settings": {
+            "config": "shared,12,2,8,off",
+            "provider": "cuda",
+            "profile": false,
+            "dll_dirs": [
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cu13\\bin\\x86_64",
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cudnn\\bin"
+            ],
+            "cuda_options": {
+              "cudnn_conv1d_pad_to_nc1d": "1"
+            }
+          },
+          "returncode": 0,
+          "hard_execution_timeout_s": 60,
+          "timed_out": false,
+          "process_total_ms": 10930.723199999193,
+          "raw_directory": "r0-shared-12-2-8-off",
+          "cpu_fallback_detected": false,
+          "status": "passed",
+          "config": {
+            "name": "shared-12-2-8-off",
+            "mode": "shared",
+            "workers": 12,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "initialization_ms": 2211.54089999618,
+          "memory_ready": {
+            "elapsed_ms": 2212.3481999733485,
+            "working_set_bytes": 437690368,
+            "private_bytes": 1396318208,
+            "cpu_s": 2.25,
+            "system_total_cpu_s": 2131663.546875,
+            "system_busy_cpu_s": 251262.03125
+          },
+          "batch_ms": 5642.059800011339,
+          "jobs_per_s": 4.253765619420015,
+          "active_cpu_s": 34.25,
+          "system_cpu_percent": 57.4792243767313,
+          "other_process_cpu_percent": 19.52908587257618,
+          "peak_working_set_bytes": 1065549824,
+          "peak_private_bytes": 3918422016,
+          "runtime": {
+            "version": "2.0.1",
+            "git_sha1": "af2d8d81",
+            "onnxruntime_version": "1.28.2"
+          },
+          "requested_provider": "cuda",
+          "child_source_sha256": "93bbf857ed0d06581fa213d2ba833558a02b16327322dbdcb984034d2fd1c25a",
+          "repeat": 0,
+          "median_inference_ms": 2712.457249988802,
+          "over_full_scale_outputs": []
+        },
+        {
+          "settings": {
+            "config": "serial,1,2,8,off",
+            "provider": "cuda",
+            "profile": false,
+            "dll_dirs": [
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cu13\\bin\\x86_64",
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cudnn\\bin"
+            ],
+            "cuda_options": {
+              "cudnn_conv1d_pad_to_nc1d": "1"
+            }
+          },
+          "returncode": 0,
+          "hard_execution_timeout_s": 60,
+          "timed_out": false,
+          "process_total_ms": 16119.081599987112,
+          "raw_directory": "r0-serial-1-2-8-off",
+          "cpu_fallback_detected": false,
+          "status": "passed",
+          "config": {
+            "name": "serial-1-2-8-off",
+            "mode": "serial",
+            "workers": 1,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "initialization_ms": 2190.504999976838,
+          "memory_ready": {
+            "elapsed_ms": 2191.5154000162147,
+            "working_set_bytes": 437321728,
+            "private_bytes": 1385910272,
+            "cpu_s": 2.390625,
+            "system_total_cpu_s": 2131851.609375,
+            "system_busy_cpu_s": 251332.875
+          },
+          "batch_ms": 12745.888000004925,
+          "jobs_per_s": 1.882960214305251,
+          "active_cpu_s": 10.234375,
+          "system_cpu_percent": 13.021472392638037,
+          "other_process_cpu_percent": 7.998466257668712,
+          "peak_working_set_bytes": 962285568,
+          "peak_private_bytes": 2087305216,
+          "runtime": {
+            "version": "2.0.1",
+            "git_sha1": "af2d8d81",
+            "onnxruntime_version": "1.28.2"
+          },
+          "requested_provider": "cuda",
+          "child_source_sha256": "93bbf857ed0d06581fa213d2ba833558a02b16327322dbdcb984034d2fd1c25a",
+          "repeat": 0,
+          "median_inference_ms": 507.3034999950323,
+          "over_full_scale_outputs": []
+        },
+        {
+          "settings": {
+            "config": "shared,16,2,8,off",
+            "provider": "cuda",
+            "profile": false,
+            "dll_dirs": [
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cu13\\bin\\x86_64",
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cudnn\\bin"
+            ],
+            "cuda_options": {
+              "cudnn_conv1d_pad_to_nc1d": "1"
+            }
+          },
+          "returncode": 0,
+          "hard_execution_timeout_s": 60,
+          "timed_out": false,
+          "process_total_ms": 11977.654899994377,
+          "raw_directory": "r0-shared-16-2-8-off",
+          "cpu_fallback_detected": false,
+          "status": "passed",
+          "config": {
+            "name": "shared-16-2-8-off",
+            "mode": "shared",
+            "workers": 16,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "initialization_ms": 2194.4317999877967,
+          "memory_ready": {
+            "elapsed_ms": 2195.3320000029635,
+            "working_set_bytes": 437202944,
+            "private_bytes": 1384714240,
+            "cpu_s": 2.34375,
+            "system_total_cpu_s": 2132122.28125,
+            "system_busy_cpu_s": 251365.90625
+          },
+          "batch_ms": 5863.488800008781,
+          "jobs_per_s": 4.093126262979142,
+          "active_cpu_s": 37.125,
+          "system_cpu_percent": 62.034574468085104,
+          "other_process_cpu_percent": 22.539893617021278,
+          "peak_working_set_bytes": 1089146880,
+          "peak_private_bytes": 4267212800,
+          "runtime": {
+            "version": "2.0.1",
+            "git_sha1": "af2d8d81",
+            "onnxruntime_version": "1.28.2"
+          },
+          "requested_provider": "cuda",
+          "child_source_sha256": "93bbf857ed0d06581fa213d2ba833558a02b16327322dbdcb984034d2fd1c25a",
+          "repeat": 0,
+          "median_inference_ms": 3599.7758000012254,
+          "over_full_scale_outputs": []
+        }
+      ],
+      "aggregates": [
+        {
+          "config": "serial,1,2,8,off",
+          "passed": 1,
+          "failed": 0,
+          "median_batch_ms": 12745.888000004925,
+          "median_process_ms": 16119.081599987112,
+          "median_inference_ms": 507.3034999950323,
+          "peak_private_bytes": 2087305216,
+          "peak_working_set_bytes": 962285568
+        },
+        {
+          "config": "shared,12,2,8,off",
+          "passed": 1,
+          "failed": 0,
+          "median_batch_ms": 5642.059800011339,
+          "median_process_ms": 10930.723199999193,
+          "median_inference_ms": 2712.457249988802,
+          "peak_private_bytes": 3918422016,
+          "peak_working_set_bytes": 1065549824
+        },
+        {
+          "config": "shared,16,2,8,off",
+          "passed": 1,
+          "failed": 0,
+          "median_batch_ms": 5863.488800008781,
+          "median_process_ms": 11977.654899994377,
+          "median_inference_ms": 3599.7758000012254,
+          "peak_private_bytes": 4267212800,
+          "peak_working_set_bytes": 1089146880
+        }
+      ]
+    },
+    {
+      "run": "tts-cuda-confirm-20261101",
+      "measured_outputs": 504,
+      "warmup_outputs": 153,
+      "trials": [
+        {
+          "settings": {
+            "config": "serial,1,2,8,off",
+            "provider": "cuda",
+            "profile": false,
+            "dll_dirs": [
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cu13\\bin\\x86_64",
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cudnn\\bin"
+            ],
+            "cuda_options": {}
+          },
+          "returncode": 0,
+          "hard_execution_timeout_s": 60,
+          "timed_out": false,
+          "process_total_ms": 16200.047199992696,
+          "raw_directory": "r0-cuda-default-serial-1-2-8-off",
+          "cpu_fallback_detected": false,
+          "status": "passed",
+          "config": {
+            "name": "serial-1-2-8-off",
+            "mode": "serial",
+            "workers": 1,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "initialization_ms": 2181.4509000105318,
+          "memory_ready": {
+            "elapsed_ms": 2182.399199984502,
+            "working_set_bytes": 437415936,
+            "private_bytes": 1390993408,
+            "cpu_s": 2.3125,
+            "system_total_cpu_s": 2134016.5,
+            "system_busy_cpu_s": 251573.390625
+          },
+          "batch_ms": 12851.503200014122,
+          "jobs_per_s": 1.8674858206449831,
+          "active_cpu_s": 10.90625,
+          "system_cpu_percent": 19.729647630619684,
+          "other_process_cpu_percent": 14.428918590522478,
+          "peak_working_set_bytes": 962928640,
+          "peak_private_bytes": 2091692032,
+          "runtime": {
+            "version": "2.0.1",
+            "git_sha1": "af2d8d81",
+            "onnxruntime_version": "1.28.2"
+          },
+          "requested_provider": "cuda",
+          "child_source_sha256": "4b91c9af86ddbc63f2354f8f726bb6d98331239176a1ba33544d0034e851ea52",
+          "repeat": 0,
+          "label": "cuda-default",
+          "resources": "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\stage",
+          "median_inference_ms": 538.9594000153011,
+          "over_full_scale_outputs": []
+        },
+        {
+          "settings": {
+            "config": "shared,12,2,8,off",
+            "provider": "cuda",
+            "profile": false,
+            "dll_dirs": [
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cu13\\bin\\x86_64",
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cudnn\\bin"
+            ],
+            "cuda_options": {
+              "cudnn_conv1d_pad_to_nc1d": "1"
+            }
+          },
+          "returncode": 0,
+          "hard_execution_timeout_s": 60,
+          "timed_out": false,
+          "process_total_ms": 10822.855100006564,
+          "raw_directory": "r0-cuda-shared-12-2-8-off",
+          "cpu_fallback_detected": false,
+          "status": "passed",
+          "config": {
+            "name": "shared-12-2-8-off",
+            "mode": "shared",
+            "workers": 12,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "initialization_ms": 2176.298100006534,
+          "memory_ready": {
+            "elapsed_ms": 2177.196400007233,
+            "working_set_bytes": 436453376,
+            "private_bytes": 1385603072,
+            "cpu_s": 2.265625,
+            "system_total_cpu_s": 2134288.53125,
+            "system_busy_cpu_s": 251620.484375
+          },
+          "batch_ms": 5603.36060001282,
+          "jobs_per_s": 4.283143940431942,
+          "active_cpu_s": 35.21875,
+          "system_cpu_percent": 57.433844011142064,
+          "other_process_cpu_percent": 18.19289693593315,
+          "peak_working_set_bytes": 1049681920,
+          "peak_private_bytes": 3622887424,
+          "runtime": {
+            "version": "2.0.1",
+            "git_sha1": "af2d8d81",
+            "onnxruntime_version": "1.28.2"
+          },
+          "requested_provider": "cuda",
+          "child_source_sha256": "4b91c9af86ddbc63f2354f8f726bb6d98331239176a1ba33544d0034e851ea52",
+          "repeat": 0,
+          "label": "cuda",
+          "resources": "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\stage",
+          "median_inference_ms": 2697.8609499929007,
+          "over_full_scale_outputs": []
+        },
+        {
+          "settings": {
+            "config": "serial,1,4,8,off",
+            "provider": "cpu",
+            "profile": false,
+            "dll_dirs": [],
+            "cuda_options": {}
+          },
+          "returncode": 0,
+          "hard_execution_timeout_s": 60,
+          "timed_out": false,
+          "process_total_ms": 32721.471900003962,
+          "raw_directory": "r0-cpu-original-serial-1-4-8-off",
+          "cpu_fallback_detected": false,
+          "status": "passed",
+          "config": {
+            "name": "serial-1-4-8-off",
+            "mode": "serial",
+            "workers": 1,
+            "threads": 4,
+            "steps": 8,
+            "spin": "off"
+          },
+          "initialization_ms": 1642.7095000108238,
+          "memory_ready": {
+            "elapsed_ms": 1643.5845000087284,
+            "working_set_bytes": 233885696,
+            "private_bytes": 733696000,
+            "cpu_s": 1.71875,
+            "system_total_cpu_s": 2134467.046875,
+            "system_busy_cpu_s": 251688.984375
+          },
+          "batch_ms": 30250.049900001613,
+          "jobs_per_s": 0.7933871209911201,
+          "active_cpu_s": 56.484375,
+          "system_cpu_percent": 18.517561983471076,
+          "other_process_cpu_percent": 6.847236570247934,
+          "peak_working_set_bytes": 306409472,
+          "peak_private_bytes": 812457984,
+          "runtime": {
+            "version": "2.0.1",
+            "git_sha1": "af2d8d81",
+            "onnxruntime_version": "1.28.2"
+          },
+          "requested_provider": "cpu",
+          "child_source_sha256": "4b91c9af86ddbc63f2354f8f726bb6d98331239176a1ba33544d0034e851ea52",
+          "repeat": 0,
+          "label": "cpu-original",
+          "resources": "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-15-opus\\speech-stage",
+          "median_inference_ms": 1281.3984999957029,
+          "over_full_scale_outputs": []
+        },
+        {
+          "settings": {
+            "config": "shared,12,2,8,off",
+            "provider": "cuda",
+            "profile": false,
+            "dll_dirs": [
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cu13\\bin\\x86_64",
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cudnn\\bin"
+            ],
+            "cuda_options": {}
+          },
+          "returncode": 0,
+          "hard_execution_timeout_s": 60,
+          "timed_out": false,
+          "process_total_ms": 10831.85119999689,
+          "raw_directory": "r0-cuda-default-shared-12-2-8-off",
+          "cpu_fallback_detected": false,
+          "status": "passed",
+          "config": {
+            "name": "shared-12-2-8-off",
+            "mode": "shared",
+            "workers": 12,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "initialization_ms": 2176.277500024298,
+          "memory_ready": {
+            "elapsed_ms": 2177.5257000117563,
+            "working_set_bytes": 437186560,
+            "private_bytes": 1385623552,
+            "cpu_s": 2.296875,
+            "system_total_cpu_s": 2135012.28125,
+            "system_busy_cpu_s": 251784.890625
+          },
+          "batch_ms": 5653.902900026878,
+          "jobs_per_s": 4.244855354676485,
+          "active_cpu_s": 33.3125,
+          "system_cpu_percent": 64.83080110497238,
+          "other_process_cpu_percent": 28.021408839779006,
+          "peak_working_set_bytes": 1071259648,
+          "peak_private_bytes": 3912085504,
+          "runtime": {
+            "version": "2.0.1",
+            "git_sha1": "af2d8d81",
+            "onnxruntime_version": "1.28.2"
+          },
+          "requested_provider": "cuda",
+          "child_source_sha256": "4b91c9af86ddbc63f2354f8f726bb6d98331239176a1ba33544d0034e851ea52",
+          "repeat": 0,
+          "label": "cuda-default",
+          "resources": "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\stage",
+          "median_inference_ms": 2619.385299985879,
+          "over_full_scale_outputs": []
+        },
+        {
+          "settings": {
+            "config": "shared,12,2,8,off",
+            "provider": "cpu",
+            "profile": false,
+            "dll_dirs": [
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cu13\\bin\\x86_64",
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cudnn\\bin"
+            ],
+            "cuda_options": {}
+          },
+          "returncode": 0,
+          "hard_execution_timeout_s": 60,
+          "timed_out": false,
+          "process_total_ms": 10104.37479999382,
+          "raw_directory": "r0-cpu-gpu-build-shared-12-2-8-off",
+          "cpu_fallback_detected": false,
+          "status": "passed",
+          "config": {
+            "name": "shared-12-2-8-off",
+            "mode": "shared",
+            "workers": 12,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "initialization_ms": 1806.2857999757398,
+          "memory_ready": {
+            "elapsed_ms": 1806.9906000164337,
+            "working_set_bytes": 234622976,
+            "private_bytes": 733499392,
+            "cpu_s": 1.9375,
+            "system_total_cpu_s": 2135191.9375,
+            "system_busy_cpu_s": 251862.671875
+          },
+          "batch_ms": 5557.662400009576,
+          "jobs_per_s": 4.318362338806086,
+          "active_cpu_s": 61.78125,
+          "system_cpu_percent": 94.83848314606742,
+          "other_process_cpu_percent": 25.421348314606742,
+          "peak_working_set_bytes": 647405568,
+          "peak_private_bytes": 1278234624,
+          "runtime": {
+            "version": "2.0.1",
+            "git_sha1": "af2d8d81",
+            "onnxruntime_version": "1.28.2"
+          },
+          "requested_provider": "cpu",
+          "child_source_sha256": "4b91c9af86ddbc63f2354f8f726bb6d98331239176a1ba33544d0034e851ea52",
+          "repeat": 0,
+          "label": "cpu-gpu-build",
+          "resources": "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\stage",
+          "median_inference_ms": 2652.6054999994813,
+          "over_full_scale_outputs": []
+        },
+        {
+          "settings": {
+            "config": "serial,1,2,8,off",
+            "provider": "cuda",
+            "profile": false,
+            "dll_dirs": [
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cu13\\bin\\x86_64",
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cudnn\\bin"
+            ],
+            "cuda_options": {
+              "cudnn_conv1d_pad_to_nc1d": "1"
+            }
+          },
+          "returncode": 0,
+          "hard_execution_timeout_s": 60,
+          "timed_out": false,
+          "process_total_ms": 15792.362500011222,
+          "raw_directory": "r0-cuda-serial-1-2-8-off",
+          "cpu_fallback_detected": false,
+          "status": "passed",
+          "config": {
+            "name": "serial-1-2-8-off",
+            "mode": "serial",
+            "workers": 1,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "initialization_ms": 2173.101799999131,
+          "memory_ready": {
+            "elapsed_ms": 2173.97410000558,
+            "working_set_bytes": 437637120,
+            "private_bytes": 1383518208,
+            "cpu_s": 2.3125,
+            "system_total_cpu_s": 2135373.875,
+            "system_busy_cpu_s": 251988.859375
+          },
+          "batch_ms": 12447.440799995093,
+          "jobs_per_s": 1.9281071816794229,
+          "active_cpu_s": 10.796875,
+          "system_cpu_percent": 13.769309182153219,
+          "other_process_cpu_percent": 8.350976240884497,
+          "peak_working_set_bytes": 962482176,
+          "peak_private_bytes": 2081968128,
+          "runtime": {
+            "version": "2.0.1",
+            "git_sha1": "af2d8d81",
+            "onnxruntime_version": "1.28.2"
+          },
+          "requested_provider": "cuda",
+          "child_source_sha256": "4b91c9af86ddbc63f2354f8f726bb6d98331239176a1ba33544d0034e851ea52",
+          "repeat": 0,
+          "label": "cuda",
+          "resources": "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\stage",
+          "median_inference_ms": 499.77559999388177,
+          "over_full_scale_outputs": []
+        },
+        {
+          "settings": {
+            "config": "shared,12,2,8,off",
+            "provider": "cpu",
+            "profile": false,
+            "dll_dirs": [],
+            "cuda_options": {}
+          },
+          "returncode": 0,
+          "hard_execution_timeout_s": 60,
+          "timed_out": false,
+          "process_total_ms": 9785.163499996997,
+          "raw_directory": "r0-cpu-original-shared-12-2-8-off",
+          "cpu_fallback_detected": false,
+          "status": "passed",
+          "config": {
+            "name": "shared-12-2-8-off",
+            "mode": "shared",
+            "workers": 12,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "initialization_ms": 1575.4223999974784,
+          "memory_ready": {
+            "elapsed_ms": 1576.3238999934401,
+            "working_set_bytes": 232878080,
+            "private_bytes": 732577792,
+            "cpu_s": 1.625,
+            "system_total_cpu_s": 2135630.1875,
+            "system_busy_cpu_s": 252023.71875
+          },
+          "batch_ms": 5496.363799989922,
+          "jobs_per_s": 4.366523191213072,
+          "active_cpu_s": 62.484375,
+          "system_cpu_percent": 94.74431818181819,
+          "other_process_cpu_percent": 23.73934659090909,
+          "peak_working_set_bytes": 662245376,
+          "peak_private_bytes": 1278935040,
+          "runtime": {
+            "version": "2.0.1",
+            "git_sha1": "af2d8d81",
+            "onnxruntime_version": "1.28.2"
+          },
+          "requested_provider": "cpu",
+          "child_source_sha256": "4b91c9af86ddbc63f2354f8f726bb6d98331239176a1ba33544d0034e851ea52",
+          "repeat": 0,
+          "label": "cpu-original",
+          "resources": "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-15-opus\\speech-stage",
+          "median_inference_ms": 2636.159449990373,
+          "over_full_scale_outputs": []
+        },
+        {
+          "settings": {
+            "config": "shared,12,2,8,off",
+            "provider": "cuda",
+            "profile": false,
+            "dll_dirs": [
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cu13\\bin\\x86_64",
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cudnn\\bin"
+            ],
+            "cuda_options": {}
+          },
+          "returncode": 0,
+          "hard_execution_timeout_s": 60,
+          "timed_out": false,
+          "process_total_ms": 11019.11680001649,
+          "raw_directory": "r1-cuda-default-shared-12-2-8-off",
+          "cpu_fallback_detected": false,
+          "status": "passed",
+          "config": {
+            "name": "shared-12-2-8-off",
+            "mode": "shared",
+            "workers": 12,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "initialization_ms": 2240.3729999787174,
+          "memory_ready": {
+            "elapsed_ms": 2241.0688000090886,
+            "working_set_bytes": 437178368,
+            "private_bytes": 1386610688,
+            "cpu_s": 2.46875,
+            "system_total_cpu_s": 2135812.9375,
+            "system_busy_cpu_s": 252151.921875
+          },
+          "batch_ms": 5703.698099998292,
+          "jobs_per_s": 4.207796341816757,
+          "active_cpu_s": 35.328125,
+          "system_cpu_percent": 75.35138841275283,
+          "other_process_cpu_percent": 36.595817620843334,
+          "peak_working_set_bytes": 1082912768,
+          "peak_private_bytes": 4469231616,
+          "runtime": {
+            "version": "2.0.1",
+            "git_sha1": "af2d8d81",
+            "onnxruntime_version": "1.28.2"
+          },
+          "requested_provider": "cuda",
+          "child_source_sha256": "4b91c9af86ddbc63f2354f8f726bb6d98331239176a1ba33544d0034e851ea52",
+          "repeat": 1,
+          "label": "cuda-default",
+          "resources": "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\stage",
+          "median_inference_ms": 2634.2072499974165,
+          "over_full_scale_outputs": []
+        },
+        {
+          "settings": {
+            "config": "shared,12,2,8,off",
+            "provider": "cpu",
+            "profile": false,
+            "dll_dirs": [
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cu13\\bin\\x86_64",
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cudnn\\bin"
+            ],
+            "cuda_options": {}
+          },
+          "returncode": 0,
+          "hard_execution_timeout_s": 60,
+          "timed_out": false,
+          "process_total_ms": 10116.995299991686,
+          "raw_directory": "r1-cpu-gpu-build-shared-12-2-8-off",
+          "cpu_fallback_detected": false,
+          "status": "passed",
+          "config": {
+            "name": "shared-12-2-8-off",
+            "mode": "shared",
+            "workers": 12,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "initialization_ms": 1778.0885000247508,
+          "memory_ready": {
+            "elapsed_ms": 1778.9052000152878,
+            "working_set_bytes": 234733568,
+            "private_bytes": 733724672,
+            "cpu_s": 1.859375,
+            "system_total_cpu_s": 2135993.390625,
+            "system_busy_cpu_s": 252238.53125
+          },
+          "batch_ms": 5564.156100008404,
+          "jobs_per_s": 4.313322553974313,
+          "active_cpu_s": 63.28125,
+          "system_cpu_percent": 94.82001755926251,
+          "other_process_cpu_percent": 23.705004389815628,
+          "peak_working_set_bytes": 646520832,
+          "peak_private_bytes": 1278484480,
+          "runtime": {
+            "version": "2.0.1",
+            "git_sha1": "af2d8d81",
+            "onnxruntime_version": "1.28.2"
+          },
+          "requested_provider": "cpu",
+          "child_source_sha256": "4b91c9af86ddbc63f2354f8f726bb6d98331239176a1ba33544d0034e851ea52",
+          "repeat": 1,
+          "label": "cpu-gpu-build",
+          "resources": "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\stage",
+          "median_inference_ms": 2638.008299996727,
+          "over_full_scale_outputs": []
+        },
+        {
+          "settings": {
+            "config": "serial,1,4,8,off",
+            "provider": "cpu",
+            "profile": false,
+            "dll_dirs": [],
+            "cuda_options": {}
+          },
+          "returncode": 0,
+          "hard_execution_timeout_s": 60,
+          "timed_out": false,
+          "process_total_ms": 30036.27049998613,
+          "raw_directory": "r1-cpu-original-serial-1-4-8-off",
+          "cpu_fallback_detected": false,
+          "status": "passed",
+          "config": {
+            "name": "serial-1-4-8-off",
+            "mode": "serial",
+            "workers": 1,
+            "threads": 4,
+            "steps": 8,
+            "spin": "off"
+          },
+          "initialization_ms": 1590.7363999867812,
+          "memory_ready": {
+            "elapsed_ms": 1591.5226000070106,
+            "working_set_bytes": 233799680,
+            "private_bytes": 733622272,
+            "cpu_s": 1.671875,
+            "system_total_cpu_s": 2136166.546875,
+            "system_busy_cpu_s": 252365.4375
+          },
+          "batch_ms": 27634.976500004996,
+          "jobs_per_s": 0.8684646429858792,
+          "active_cpu_s": 49.046875,
+          "system_cpu_percent": 28.516411687806947,
+          "other_process_cpu_percent": 17.425714588559515,
+          "peak_working_set_bytes": 306577408,
+          "peak_private_bytes": 812314624,
+          "runtime": {
+            "version": "2.0.1",
+            "git_sha1": "af2d8d81",
+            "onnxruntime_version": "1.28.2"
+          },
+          "requested_provider": "cpu",
+          "child_source_sha256": "4b91c9af86ddbc63f2354f8f726bb6d98331239176a1ba33544d0034e851ea52",
+          "repeat": 1,
+          "label": "cpu-original",
+          "resources": "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-15-opus\\speech-stage",
+          "median_inference_ms": 1170.6946499907644,
+          "over_full_scale_outputs": []
+        },
+        {
+          "settings": {
+            "config": "shared,12,2,8,off",
+            "provider": "cuda",
+            "profile": false,
+            "dll_dirs": [
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cu13\\bin\\x86_64",
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cudnn\\bin"
+            ],
+            "cuda_options": {
+              "cudnn_conv1d_pad_to_nc1d": "1"
+            }
+          },
+          "returncode": 0,
+          "hard_execution_timeout_s": 60,
+          "timed_out": false,
+          "process_total_ms": 8150.064699992072,
+          "raw_directory": "r1-cuda-shared-12-2-8-off",
+          "cpu_fallback_detected": false,
+          "status": "passed",
+          "config": {
+            "name": "shared-12-2-8-off",
+            "mode": "shared",
+            "workers": 12,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "initialization_ms": 2201.5777000051457,
+          "memory_ready": {
+            "elapsed_ms": 2202.5150999834295,
+            "working_set_bytes": 436891648,
+            "private_bytes": 1382535168,
+            "cpu_s": 2.328125,
+            "system_total_cpu_s": 2136669.125,
+            "system_busy_cpu_s": 252499.859375
+          },
+          "batch_ms": 3575.458699982846,
+          "jobs_per_s": 6.712425457498682,
+          "active_cpu_s": 21.9375,
+          "system_cpu_percent": 57.77838427947598,
+          "other_process_cpu_percent": 19.459606986899562,
+          "peak_working_set_bytes": 1056993280,
+          "peak_private_bytes": 3638280192,
+          "runtime": {
+            "version": "2.0.1",
+            "git_sha1": "af2d8d81",
+            "onnxruntime_version": "1.28.2"
+          },
+          "requested_provider": "cuda",
+          "child_source_sha256": "4b91c9af86ddbc63f2354f8f726bb6d98331239176a1ba33544d0034e851ea52",
+          "repeat": 1,
+          "label": "cuda",
+          "resources": "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\stage",
+          "median_inference_ms": 1725.5186499969568,
+          "over_full_scale_outputs": []
+        },
+        {
+          "settings": {
+            "config": "serial,1,2,8,off",
+            "provider": "cuda",
+            "profile": false,
+            "dll_dirs": [
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cu13\\bin\\x86_64",
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cudnn\\bin"
+            ],
+            "cuda_options": {}
+          },
+          "returncode": 0,
+          "hard_execution_timeout_s": 60,
+          "timed_out": false,
+          "process_total_ms": 9531.26550000161,
+          "raw_directory": "r1-cuda-default-serial-1-2-8-off",
+          "cpu_fallback_detected": false,
+          "status": "passed",
+          "config": {
+            "name": "serial-1-2-8-off",
+            "mode": "serial",
+            "workers": 1,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "initialization_ms": 2213.6938000039663,
+          "memory_ready": {
+            "elapsed_ms": 2214.429999992717,
+            "working_set_bytes": 436318208,
+            "private_bytes": 1382621184,
+            "cpu_s": 2.375,
+            "system_total_cpu_s": 2136811.796875,
+            "system_busy_cpu_s": 252551.71875
+          },
+          "batch_ms": 6211.53790000244,
+          "jobs_per_s": 3.863777439076814,
+          "active_cpu_s": 6.390625,
+          "system_cpu_percent": 13.693467336683417,
+          "other_process_cpu_percent": 7.2707286432160805,
+          "peak_working_set_bytes": 963514368,
+          "peak_private_bytes": 2085330944,
+          "runtime": {
+            "version": "2.0.1",
+            "git_sha1": "af2d8d81",
+            "onnxruntime_version": "1.28.2"
+          },
+          "requested_provider": "cuda",
+          "child_source_sha256": "4b91c9af86ddbc63f2354f8f726bb6d98331239176a1ba33544d0034e851ea52",
+          "repeat": 1,
+          "label": "cuda-default",
+          "resources": "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\stage",
+          "median_inference_ms": 276.46169999206904,
+          "over_full_scale_outputs": []
+        },
+        {
+          "settings": {
+            "config": "shared,12,2,8,off",
+            "provider": "cpu",
+            "profile": false,
+            "dll_dirs": [],
+            "cuda_options": {}
+          },
+          "returncode": 0,
+          "hard_execution_timeout_s": 60,
+          "timed_out": false,
+          "process_total_ms": 10224.035399995046,
+          "raw_directory": "r1-cpu-original-shared-12-2-8-off",
+          "cpu_fallback_detected": false,
+          "status": "passed",
+          "config": {
+            "name": "shared-12-2-8-off",
+            "mode": "shared",
+            "workers": 12,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "initialization_ms": 1698.732699995162,
+          "memory_ready": {
+            "elapsed_ms": 1699.87690000562,
+            "working_set_bytes": 232230912,
+            "private_bytes": 731975680,
+            "cpu_s": 1.75,
+            "system_total_cpu_s": 2136966.265625,
+            "system_busy_cpu_s": 252573.640625
+          },
+          "batch_ms": 5835.323700011941,
+          "jobs_per_s": 4.112882375308655,
+          "active_cpu_s": 59.40625,
+          "system_cpu_percent": 98.29260127217944,
+          "other_process_cpu_percent": 34.65015065282893,
+          "peak_working_set_bytes": 622927872,
+          "peak_private_bytes": 1276530688,
+          "runtime": {
+            "version": "2.0.1",
+            "git_sha1": "af2d8d81",
+            "onnxruntime_version": "1.28.2"
+          },
+          "requested_provider": "cpu",
+          "child_source_sha256": "4b91c9af86ddbc63f2354f8f726bb6d98331239176a1ba33544d0034e851ea52",
+          "repeat": 1,
+          "label": "cpu-original",
+          "resources": "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-15-opus\\speech-stage",
+          "median_inference_ms": 2778.7743999797385,
+          "over_full_scale_outputs": []
+        },
+        {
+          "settings": {
+            "config": "serial,1,2,8,off",
+            "provider": "cuda",
+            "profile": false,
+            "dll_dirs": [
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cu13\\bin\\x86_64",
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cudnn\\bin"
+            ],
+            "cuda_options": {
+              "cudnn_conv1d_pad_to_nc1d": "1"
+            }
+          },
+          "returncode": 0,
+          "hard_execution_timeout_s": 60,
+          "timed_out": false,
+          "process_total_ms": 10556.311299995286,
+          "raw_directory": "r1-cuda-serial-1-2-8-off",
+          "cpu_fallback_detected": false,
+          "status": "passed",
+          "config": {
+            "name": "serial-1-2-8-off",
+            "mode": "serial",
+            "workers": 1,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "initialization_ms": 2297.2371999931056,
+          "memory_ready": {
+            "elapsed_ms": 2297.9584999848157,
+            "working_set_bytes": 437219328,
+            "private_bytes": 1384161280,
+            "cpu_s": 2.421875,
+            "system_total_cpu_s": 2137151.984375,
+            "system_busy_cpu_s": 252713.171875
+          },
+          "batch_ms": 6911.69350000564,
+          "jobs_per_s": 3.4723761983919594,
+          "active_cpu_s": 6.953125,
+          "system_cpu_percent": 16.652530392988407,
+          "other_process_cpu_percent": 10.361888606163415,
+          "peak_working_set_bytes": 961560576,
+          "peak_private_bytes": 2083651584,
+          "runtime": {
+            "version": "2.0.1",
+            "git_sha1": "af2d8d81",
+            "onnxruntime_version": "1.28.2"
+          },
+          "requested_provider": "cuda",
+          "child_source_sha256": "4b91c9af86ddbc63f2354f8f726bb6d98331239176a1ba33544d0034e851ea52",
+          "repeat": 1,
+          "label": "cuda",
+          "resources": "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\stage",
+          "median_inference_ms": 308.07510000886396,
+          "over_full_scale_outputs": []
+        },
+        {
+          "settings": {
+            "config": "shared,12,2,8,off",
+            "provider": "cpu",
+            "profile": false,
+            "dll_dirs": [
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cu13\\bin\\x86_64",
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cudnn\\bin"
+            ],
+            "cuda_options": {}
+          },
+          "returncode": 0,
+          "hard_execution_timeout_s": 60,
+          "timed_out": false,
+          "process_total_ms": 10687.965299992356,
+          "raw_directory": "r2-cpu-gpu-build-shared-12-2-8-off",
+          "cpu_fallback_detected": false,
+          "status": "passed",
+          "config": {
+            "name": "shared-12-2-8-off",
+            "mode": "shared",
+            "workers": 12,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "initialization_ms": 1955.6345000164583,
+          "memory_ready": {
+            "elapsed_ms": 1956.2945000070613,
+            "working_set_bytes": 234872832,
+            "private_bytes": 733794304,
+            "cpu_s": 2.046875,
+            "system_total_cpu_s": 2137330.828125,
+            "system_busy_cpu_s": 252743.390625
+          },
+          "batch_ms": 5842.929200007347,
+          "jobs_per_s": 4.107528805923204,
+          "active_cpu_s": 61.609375,
+          "system_cpu_percent": 96.60762032085562,
+          "other_process_cpu_percent": 30.71524064171123,
+          "peak_working_set_bytes": 635498496,
+          "peak_private_bytes": 1277960192,
+          "runtime": {
+            "version": "2.0.1",
+            "git_sha1": "af2d8d81",
+            "onnxruntime_version": "1.28.2"
+          },
+          "requested_provider": "cpu",
+          "child_source_sha256": "4b91c9af86ddbc63f2354f8f726bb6d98331239176a1ba33544d0034e851ea52",
+          "repeat": 2,
+          "label": "cpu-gpu-build",
+          "resources": "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\stage",
+          "median_inference_ms": 2776.7037999874447,
+          "over_full_scale_outputs": []
+        },
+        {
+          "settings": {
+            "config": "shared,12,2,8,off",
+            "provider": "cuda",
+            "profile": false,
+            "dll_dirs": [
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cu13\\bin\\x86_64",
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cudnn\\bin"
+            ],
+            "cuda_options": {
+              "cudnn_conv1d_pad_to_nc1d": "1"
+            }
+          },
+          "returncode": 0,
+          "hard_execution_timeout_s": 60,
+          "timed_out": false,
+          "process_total_ms": 11213.524099992355,
+          "raw_directory": "r2-cuda-shared-12-2-8-off",
+          "cpu_fallback_detected": false,
+          "status": "passed",
+          "config": {
+            "name": "shared-12-2-8-off",
+            "mode": "shared",
+            "workers": 12,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "initialization_ms": 2221.7598000133876,
+          "memory_ready": {
+            "elapsed_ms": 2222.578099987004,
+            "working_set_bytes": 436768768,
+            "private_bytes": 1396207616,
+            "cpu_s": 2.328125,
+            "system_total_cpu_s": 2137520.859375,
+            "system_busy_cpu_s": 252882.53125
+          },
+          "batch_ms": 5658.965899987379,
+          "jobs_per_s": 4.241057540221885,
+          "active_cpu_s": 36.703125,
+          "system_cpu_percent": 59.68577348066298,
+          "other_process_cpu_percent": 19.129834254143645,
+          "peak_working_set_bytes": 1069359104,
+          "peak_private_bytes": 3921231872,
+          "runtime": {
+            "version": "2.0.1",
+            "git_sha1": "af2d8d81",
+            "onnxruntime_version": "1.28.2"
+          },
+          "requested_provider": "cuda",
+          "child_source_sha256": "4b91c9af86ddbc63f2354f8f726bb6d98331239176a1ba33544d0034e851ea52",
+          "repeat": 2,
+          "label": "cuda",
+          "resources": "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\stage",
+          "median_inference_ms": 2648.7332499964396,
+          "over_full_scale_outputs": []
+        },
+        {
+          "settings": {
+            "config": "serial,1,2,8,off",
+            "provider": "cuda",
+            "profile": false,
+            "dll_dirs": [
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cu13\\bin\\x86_64",
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cudnn\\bin"
+            ],
+            "cuda_options": {
+              "cudnn_conv1d_pad_to_nc1d": "1"
+            }
+          },
+          "returncode": 0,
+          "hard_execution_timeout_s": 60,
+          "timed_out": false,
+          "process_total_ms": 17075.648300000466,
+          "raw_directory": "r2-cuda-serial-1-2-8-off",
+          "cpu_fallback_detected": false,
+          "status": "passed",
+          "config": {
+            "name": "serial-1-2-8-off",
+            "mode": "serial",
+            "workers": 1,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "initialization_ms": 2258.498500013957,
+          "memory_ready": {
+            "elapsed_ms": 2259.2758999962825,
+            "working_set_bytes": 437227520,
+            "private_bytes": 1384345600,
+            "cpu_s": 2.390625,
+            "system_total_cpu_s": 2137716.328125,
+            "system_busy_cpu_s": 252959.734375
+          },
+          "batch_ms": 13584.054799983278,
+          "jobs_per_s": 1.766777324840411,
+          "active_cpu_s": 10.96875,
+          "system_cpu_percent": 18.962047153536517,
+          "other_process_cpu_percent": 13.916043703277746,
+          "peak_working_set_bytes": 963182592,
+          "peak_private_bytes": 2084601856,
+          "runtime": {
+            "version": "2.0.1",
+            "git_sha1": "af2d8d81",
+            "onnxruntime_version": "1.28.2"
+          },
+          "requested_provider": "cuda",
+          "child_source_sha256": "4b91c9af86ddbc63f2354f8f726bb6d98331239176a1ba33544d0034e851ea52",
+          "repeat": 2,
+          "label": "cuda",
+          "resources": "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\stage",
+          "median_inference_ms": 581.6751499951351,
+          "over_full_scale_outputs": []
+        },
+        {
+          "settings": {
+            "config": "shared,12,2,8,off",
+            "provider": "cpu",
+            "profile": false,
+            "dll_dirs": [],
+            "cuda_options": {}
+          },
+          "returncode": 0,
+          "hard_execution_timeout_s": 60,
+          "timed_out": false,
+          "process_total_ms": 9976.483900012681,
+          "raw_directory": "r2-cpu-original-shared-12-2-8-off",
+          "cpu_fallback_detected": false,
+          "status": "passed",
+          "config": {
+            "name": "shared-12-2-8-off",
+            "mode": "shared",
+            "workers": 12,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "initialization_ms": 1583.4478000178933,
+          "memory_ready": {
+            "elapsed_ms": 1584.2365999997128,
+            "working_set_bytes": 232357888,
+            "private_bytes": 732037120,
+            "cpu_s": 1.640625,
+            "system_total_cpu_s": 2137991.875,
+            "system_busy_cpu_s": 253008.078125
+          },
+          "batch_ms": 5653.749999997672,
+          "jobs_per_s": 4.244970152555363,
+          "active_cpu_s": 62.734375,
+          "system_cpu_percent": 95.6146408839779,
+          "other_process_cpu_percent": 26.29488950276243,
+          "peak_working_set_bytes": 675246080,
+          "peak_private_bytes": 1281323008,
+          "runtime": {
+            "version": "2.0.1",
+            "git_sha1": "af2d8d81",
+            "onnxruntime_version": "1.28.2"
+          },
+          "requested_provider": "cpu",
+          "child_source_sha256": "4b91c9af86ddbc63f2354f8f726bb6d98331239176a1ba33544d0034e851ea52",
+          "repeat": 2,
+          "label": "cpu-original",
+          "resources": "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-15-opus\\speech-stage",
+          "median_inference_ms": 2707.8209500032244,
+          "over_full_scale_outputs": []
+        },
+        {
+          "settings": {
+            "config": "serial,1,4,8,off",
+            "provider": "cpu",
+            "profile": false,
+            "dll_dirs": [],
+            "cuda_options": {}
+          },
+          "returncode": 0,
+          "hard_execution_timeout_s": 60,
+          "timed_out": false,
+          "process_total_ms": 30851.3003999833,
+          "raw_directory": "r2-cpu-original-serial-1-4-8-off",
+          "cpu_fallback_detected": false,
+          "status": "passed",
+          "config": {
+            "name": "serial-1-4-8-off",
+            "mode": "serial",
+            "workers": 1,
+            "threads": 4,
+            "steps": 8,
+            "spin": "off"
+          },
+          "initialization_ms": 1764.3071000056807,
+          "memory_ready": {
+            "elapsed_ms": 1765.3489999938756,
+            "working_set_bytes": 233836544,
+            "private_bytes": 733720576,
+            "cpu_s": 1.90625,
+            "system_total_cpu_s": 2138169.28125,
+            "system_busy_cpu_s": 253140.765625
+          },
+          "batch_ms": 28192.812699999195,
+          "jobs_per_s": 0.8512807946970359,
+          "active_cpu_s": 50.359375,
+          "system_cpu_percent": 34.1844512195122,
+          "other_process_cpu_percent": 23.01829268292683,
+          "peak_working_set_bytes": 307388416,
+          "peak_private_bytes": 812945408,
+          "runtime": {
+            "version": "2.0.1",
+            "git_sha1": "af2d8d81",
+            "onnxruntime_version": "1.28.2"
+          },
+          "requested_provider": "cpu",
+          "child_source_sha256": "4b91c9af86ddbc63f2354f8f726bb6d98331239176a1ba33544d0034e851ea52",
+          "repeat": 2,
+          "label": "cpu-original",
+          "resources": "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-15-opus\\speech-stage",
+          "median_inference_ms": 1162.3244499933207,
+          "over_full_scale_outputs": []
+        },
+        {
+          "settings": {
+            "config": "shared,12,2,8,off",
+            "provider": "cuda",
+            "profile": false,
+            "dll_dirs": [
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cu13\\bin\\x86_64",
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cudnn\\bin"
+            ],
+            "cuda_options": {}
+          },
+          "returncode": 0,
+          "hard_execution_timeout_s": 60,
+          "timed_out": false,
+          "process_total_ms": 11684.383699990576,
+          "raw_directory": "r2-cuda-default-shared-12-2-8-off",
+          "cpu_fallback_detected": false,
+          "status": "passed",
+          "config": {
+            "name": "shared-12-2-8-off",
+            "mode": "shared",
+            "workers": 12,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "initialization_ms": 2417.1631000062916,
+          "memory_ready": {
+            "elapsed_ms": 2418.044000020018,
+            "working_set_bytes": 436895744,
+            "private_bytes": 1387474944,
+            "cpu_s": 2.53125,
+            "system_total_cpu_s": 2138689.359375,
+            "system_busy_cpu_s": 253315.171875
+          },
+          "batch_ms": 5653.411499981303,
+          "jobs_per_s": 4.245224321647093,
+          "active_cpu_s": 34.53125,
+          "system_cpu_percent": 64.55455801104972,
+          "other_process_cpu_percent": 26.398480662983424,
+          "peak_working_set_bytes": 1068523520,
+          "peak_private_bytes": 3909431296,
+          "runtime": {
+            "version": "2.0.1",
+            "git_sha1": "af2d8d81",
+            "onnxruntime_version": "1.28.2"
+          },
+          "requested_provider": "cuda",
+          "child_source_sha256": "4b91c9af86ddbc63f2354f8f726bb6d98331239176a1ba33544d0034e851ea52",
+          "repeat": 2,
+          "label": "cuda-default",
+          "resources": "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\stage",
+          "median_inference_ms": 2714.213950006524,
+          "over_full_scale_outputs": []
+        },
+        {
+          "settings": {
+            "config": "serial,1,2,8,off",
+            "provider": "cuda",
+            "profile": false,
+            "dll_dirs": [
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cu13\\bin\\x86_64",
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cudnn\\bin"
+            ],
+            "cuda_options": {}
+          },
+          "returncode": 0,
+          "hard_execution_timeout_s": 60,
+          "timed_out": false,
+          "process_total_ms": 17623.07630002033,
+          "raw_directory": "r2-cuda-default-serial-1-2-8-off",
+          "cpu_fallback_detected": false,
+          "status": "passed",
+          "config": {
+            "name": "serial-1-2-8-off",
+            "mode": "serial",
+            "workers": 1,
+            "threads": 2,
+            "steps": 8,
+            "spin": "off"
+          },
+          "initialization_ms": 2410.903000010876,
+          "memory_ready": {
+            "elapsed_ms": 2411.7046000028495,
+            "working_set_bytes": 437374976,
+            "private_bytes": 1386356736,
+            "cpu_s": 2.5625,
+            "system_total_cpu_s": 2138889.96875,
+            "system_busy_cpu_s": 253403.28125
+          },
+          "batch_ms": 13688.436600001296,
+          "jobs_per_s": 1.7533046834579873,
+          "active_cpu_s": 12.3125,
+          "system_cpu_percent": 28.042516764160364,
+          "other_process_cpu_percent": 22.42117277785704,
+          "peak_working_set_bytes": 965181440,
+          "peak_private_bytes": 2091528192,
+          "runtime": {
+            "version": "2.0.1",
+            "git_sha1": "af2d8d81",
+            "onnxruntime_version": "1.28.2"
+          },
+          "requested_provider": "cuda",
+          "child_source_sha256": "4b91c9af86ddbc63f2354f8f726bb6d98331239176a1ba33544d0034e851ea52",
+          "repeat": 2,
+          "label": "cuda-default",
+          "resources": "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\stage",
+          "median_inference_ms": 586.2727500061737,
+          "over_full_scale_outputs": []
+        }
+      ],
+      "aggregates": [
+        {
+          "label": "cuda",
+          "settings": {
+            "config": "serial,1,2,8,off",
+            "provider": "cuda",
+            "profile": false,
+            "dll_dirs": [
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cu13\\bin\\x86_64",
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cudnn\\bin"
+            ],
+            "cuda_options": {
+              "cudnn_conv1d_pad_to_nc1d": "1"
+            }
+          },
+          "passed": 3,
+          "failed": 0,
+          "median_batch_ms": 12447.440799995093,
+          "median_process_ms": 15792.362500011222,
+          "median_inference_ms": 422.4286499811569,
+          "peak_private_bytes": 2084601856,
+          "peak_working_set_bytes": 963182592
+        },
+        {
+          "label": "cuda-default",
+          "settings": {
+            "config": "serial,1,2,8,off",
+            "provider": "cuda",
+            "profile": false,
+            "dll_dirs": [
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cu13\\bin\\x86_64",
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cudnn\\bin"
+            ],
+            "cuda_options": {}
+          },
+          "passed": 3,
+          "failed": 0,
+          "median_batch_ms": 12851.503200014122,
+          "median_process_ms": 16200.047199992696,
+          "median_inference_ms": 427.91810001654085,
+          "peak_private_bytes": 2091692032,
+          "peak_working_set_bytes": 965181440
+        },
+        {
+          "label": "cuda",
+          "settings": {
+            "config": "shared,12,2,8,off",
+            "provider": "cuda",
+            "profile": false,
+            "dll_dirs": [
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cu13\\bin\\x86_64",
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cudnn\\bin"
+            ],
+            "cuda_options": {
+              "cudnn_conv1d_pad_to_nc1d": "1"
+            }
+          },
+          "passed": 3,
+          "failed": 0,
+          "median_batch_ms": 5603.36060001282,
+          "median_process_ms": 10822.855100006564,
+          "median_inference_ms": 2594.902249998995,
+          "peak_private_bytes": 3921231872,
+          "peak_working_set_bytes": 1069359104
+        },
+        {
+          "label": "cuda-default",
+          "settings": {
+            "config": "shared,12,2,8,off",
+            "provider": "cuda",
+            "profile": false,
+            "dll_dirs": [
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cu13\\bin\\x86_64",
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cudnn\\bin"
+            ],
+            "cuda_options": {}
+          },
+          "passed": 3,
+          "failed": 0,
+          "median_batch_ms": 5653.902900026878,
+          "median_process_ms": 11019.11680001649,
+          "median_inference_ms": 2667.304199989303,
+          "peak_private_bytes": 4469231616,
+          "peak_working_set_bytes": 1082912768
+        },
+        {
+          "label": "cpu-original",
+          "settings": {
+            "config": "serial,1,4,8,off",
+            "provider": "cpu",
+            "profile": false,
+            "dll_dirs": [],
+            "cuda_options": {}
+          },
+          "passed": 3,
+          "failed": 0,
+          "median_batch_ms": 28192.812699999195,
+          "median_process_ms": 30851.3003999833,
+          "median_inference_ms": 1208.2403499807697,
+          "peak_private_bytes": 812945408,
+          "peak_working_set_bytes": 307388416
+        },
+        {
+          "label": "cpu-original",
+          "settings": {
+            "config": "shared,12,2,8,off",
+            "provider": "cpu",
+            "profile": false,
+            "dll_dirs": [],
+            "cuda_options": {}
+          },
+          "passed": 3,
+          "failed": 0,
+          "median_batch_ms": 5653.749999997672,
+          "median_process_ms": 9976.483900012681,
+          "median_inference_ms": 2677.071149999392,
+          "peak_private_bytes": 1281323008,
+          "peak_working_set_bytes": 675246080
+        },
+        {
+          "label": "cpu-gpu-build",
+          "settings": {
+            "config": "shared,12,2,8,off",
+            "provider": "cpu",
+            "profile": false,
+            "dll_dirs": [
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cu13\\bin\\x86_64",
+              "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-24\\gpu-cuda13-20261101\\nvidia-runtime\\nvidia\\cudnn\\bin"
+            ],
+            "cuda_options": {}
+          },
+          "passed": 3,
+          "failed": 0,
+          "median_batch_ms": 5564.156100008404,
+          "median_process_ms": 10116.995299991686,
+          "median_inference_ms": 2691.0301500029163,
+          "peak_private_bytes": 1278484480,
+          "peak_working_set_bytes": 647405568
+        }
+      ]
+    }
+  ]
+}

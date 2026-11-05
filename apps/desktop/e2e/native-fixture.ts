@@ -13,7 +13,7 @@ export const dictionary = {
 };
 
 export const record = {
-  id: 1, headword: 'école', notes: '', revision: 1, created_at: 1000, updated_at: 1000,
+  id: 1, headword: 'école', notes: '', example_fr: '', example_zh: '', example_sense: null, more_examples: [], revision: 1, created_at: 1000, updated_at: 1000,
   reference: { dictionary: dictionary.source.title, lookup_key: 'école', version: dictionary.source.version,
     attribution: dictionary.source.attribution, license: dictionary.source.license,
     source_url: dictionary.source.source_url, license_url: dictionary.source.license_url, sha256: dictionary.sha256 },
@@ -21,38 +21,107 @@ export const record = {
     { pronunciations: [], grammar: [], translation: '流派' }],
 };
 
-interface Reply { readonly value?: unknown; readonly error?: unknown }
+interface Reply { readonly value?: unknown; readonly error?: unknown; readonly delay?: number; readonly gate?: string }
 interface Call { readonly command: string; readonly args?: Record<string, unknown> }
 declare global {
-  interface Window { testNative: { calls: Call[]; close: () => void } }
+  interface Window { testNative: { calls: Call[]; close: () => void; emit: (event: string) => void; release: (gate: string) => void } }
+}
+
+class NativeFixture {
+  private readonly callbacks = new Map<number, (event: unknown) => void>();
+  private readonly indexes: Record<string, number> = {};
+  private readonly gates = new Map<string, () => void>();
+  private readonly listeners = new Map<number, { event: string; handler: number }>();
+  private readonly calls: Call[] = [];
+  private readonly defaults: Record<string, unknown>;
+
+  constructor(private readonly responses: Readonly<Record<string, readonly Reply[]>>, lookup: typeof dictionary) {
+    this.defaults = { runtime_status: { version: '0.1.0', schemaVersion: 17, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } },
+      dictionary_lookup: lookup, vocabulary_find: null, vocabulary_list: [], vocabulary_sort: 'updated-desc', finish_close: null,
+      speech_preferences: { voice: 'female', speed: 'normal' }, review_settings: { retention_percent: 90, new_limit: 20, review_limit: 50, new_cards_ignore_review_limit: false },
+      review_queue: { queue: { cards: [], reason: null, available_at: null }, record: null, audio_pending: false, audio_error: null }, review_cards: [], speech_cached: null,
+      review_undo_target: null, review_undo: { status: 'committed', queue_rebuilt: false }, review_auto_enroll: false, review_pause: false,
+      review_batch_status: null, speech_retry_missing: 1, review_cancel_batch: null,
+      review_progress: { revision: 0, card: { phase: 'new', memory: null, last_review_at: null, due_at: null } } };
+  }
+  private emit(event: string) {
+    for (const [id, listener] of this.listeners) if (listener.event === event) this.callbacks.get(listener.handler)?.({ event, id, payload: null });
+  }
+  private availability() {
+    const progress = (this.responses.review_progress?.[0]?.value ?? this.defaults.review_progress) as { card: { due_at: number | null } };
+    const due = progress.card.due_at;
+    const future = due !== null && due * 1000 > Date.now();
+    return { progress, reason: this.defaults.review_pause ? 'paused' : future ? 'due' : null, available_at: future ? due : null };
+  }
+  private batch(args?: Record<string, unknown>) {
+    const request = args?.request as { operation: string; vocabulary_ids: number[] };
+    return this.defaults.review_batch_status = { operation: request.operation, cancelled: false,
+      items: request.vocabulary_ids.map((vocabulary_id) => ({ vocabulary_id, created_cards: 2, error: null, audio_state: 'queued', audio_error: null })) };
+  }
+  private settings(command: string, args?: Record<string, unknown>) {
+    const settingKey = command === 'speech_preferences' ? 'preferences' : 'settings';
+    if ((command === 'speech_preferences' || command === 'review_settings') && args?.[settingKey]) this.defaults[command] = args[settingKey];
+    const booleanKey = { review_auto_enroll: 'enabled', review_pause: 'paused' }[command];
+    if (booleanKey && typeof args?.[booleanKey] === 'boolean') this.defaults[command] = args[booleanKey];
+  }
+  private defaultReply(command: string, args?: Record<string, unknown>) {
+    if (command === 'review_add_batch') return this.batch(args);
+    this.settings(command, args);
+    if (command === 'review_availability') return this.availability();
+    const value=command === 'vocabulary_sort' ? args?.sort ?? this.defaults[command] : this.defaults[command];
+    return command === 'review_queue' ? this.queueResponse(value) : value;
+  }
+  private event(command: string, args?: Record<string, unknown>) {
+    if (command === 'plugin:event|listen') {
+      const id = Math.max(0, ...this.listeners.keys()) + 1;
+      this.listeners.set(id, { event: String(args?.event), handler: Number(args?.handler) }); return id;
+    }
+    this.listeners.delete(Number(args?.eventId)); return null;
+  }
+  private async invoke(command: string, args?: Record<string, unknown>) {
+    this.calls.push({ command, args });
+    if (command.startsWith('plugin:event|')) return this.event(command, args);
+    const queue = this.responses[command];
+    if (!queue) return this.defaultReply(command, args);
+    const index = this.indexes[command] ?? 0; this.indexes[command] = index + 1;
+    const response = queue[Math.min(index, queue.length - 1)];
+    if (response.gate) await new Promise<void>((resolve) => { this.gates.set(response.gate!, resolve); });
+    else if (response.delay) await new Promise((resolve) => setTimeout(resolve, response.delay));
+    if (response.error !== undefined) throw response.error;
+    if (command === 'vocabulary_save') this.defaults.vocabulary_find = (response.value as { record: unknown }).record;
+    if (command === 'review_add_batch') return this.batchResponse(response.value, args);
+    return command === 'review_queue' ? this.queueResponse(response.value) : response.value;
+  }
+  private queueResponse(value: unknown) {
+    const view=value as { queue: { cards: { id:number; vocabulary_id:number; kind:string }[] }; record:typeof record|null; audio_pending:boolean; window?:unknown };
+    if (!view || view.window !== undefined) return value;
+    const audio=this.responses.speech_cached?.[0]?.value ?? [79,103,103,83];
+    return { ...view, summary: { admitted_count:view.queue.cards.length,audio_pending_count:view.audio_pending?1:0,missing_vocabulary_ids:[],verification_pending:false,learning_day:'2026-11-04',timezone:'UTC',revision:0,unknown_legacy:false },
+      window:view.queue.cards.map((card)=>({ card,record:{...view.record,id:card.vocabulary_id},progress:this.responses.review_progress?.[0]?.value ?? this.defaults.review_progress,
+        version:card.kind==='listening'?'a'.repeat(64):null,content_hash:card.kind==='listening'?'b'.repeat(64):null,audio:card.kind==='listening'?audio:null })),
+      delta: { before_revision:null,after_revision:0,removed:[],order:view.queue.cards.map((card)=>card.id) },
+      metrics:{metadata_candidates:view.queue.cards.length,strict_probes:0,compressed_bytes:0,payload_bytes:0,validation_wait_ms:0,metadata_loaded_rows:0,parsed_progress:0,metadata_rebuilt:false,rebuild_reason:null,database_ms:0} };
+  }
+  private batchResponse(value: unknown, args?: Record<string, unknown>) {
+    const batch = value as { operation: string };
+    const request = args?.request as { operation: string };
+    return this.defaults.review_batch_status = batch.operation === 'fixture' ? { ...batch, operation: request.operation } : batch;
+  }
+  install() {
+    window.testNative = { calls: this.calls, close: () => this.emit('lexique-close-requested'), emit: (event) => this.emit(event),
+      release: (gate) => { this.gates.get(gate)?.(); this.gates.delete(gate); } };
+    Object.defineProperty(window, 'isTauri', { value: true });
+    Object.defineProperty(window, '__TAURI_INTERNALS__', { value: {
+      transformCallback: (callback: (event: unknown) => void) => { const id = Math.max(0, ...this.callbacks.keys()) + 1; this.callbacks.set(id, callback); return id; },
+      unregisterCallback: (id: number) => this.callbacks.delete(id),
+      invoke: (command: string, args?: Record<string, unknown>) => this.invoke(command, args),
+    } });
+  }
 }
 
 export async function nativeFixture(page: Page, responses: Readonly<Record<string, readonly Reply[]>> = {}) {
-  await page.addInitScript(({ responses, dictionary }) => {
-    const callbacks = new Map<number, (event: unknown) => void>();
-    const indexes: Record<string, number> = {};
-    window.testNative = { calls: [], close: () => { for (const callback of callbacks.values()) callback({ payload: null }); } };
-    const defaults: Record<string, unknown> = { runtime_status: { version: '0.1.0', schemaVersion: 2, storage: 'sqlite' },
-      dictionary_lookup: dictionary, vocabulary_find: null, vocabulary_list: [], vocabulary_sort: 'updated-desc', finish_close: null };
-    Object.defineProperty(window, 'isTauri', { value: true });
-    Object.defineProperty(window, '__TAURI_INTERNALS__', { value: {
-      transformCallback: (callback: (event: unknown) => void) => { const id = callbacks.size + 1; callbacks.set(id, callback); return id; },
-      unregisterCallback: (id: number) => callbacks.delete(id),
-      invoke: async (command: string, args?: Record<string, unknown>) => {
-        window.testNative.calls.push({ command, args });
-        if (command === 'plugin:event|listen') return 1;
-        if (command === 'plugin:event|unlisten') return null;
-        const queue = responses[command];
-        if (!queue) return command === 'vocabulary_sort' ? args?.sort ?? defaults[command] : defaults[command];
-        const index = indexes[command] ?? 0;
-        indexes[command] = index + 1;
-        const response = queue[Math.min(index, queue.length - 1)];
-        if (response.error !== undefined) throw response.error;
-        if (command === 'vocabulary_save') defaults.vocabulary_find = (response.value as { record: unknown }).record;
-        return response.value;
-      },
-    } });
-  }, { responses, dictionary });
+  // Serialize the complete self-contained fixture, so browser callbacks share one registry.
+  await page.addInitScript(`new (${NativeFixture.toString()})(${JSON.stringify(responses)}, ${JSON.stringify(dictionary)}).install();`);
 }
 
 export async function collect(page: Page) {

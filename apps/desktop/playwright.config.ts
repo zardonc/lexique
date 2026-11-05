@@ -14,6 +14,7 @@ export default defineConfig({
     trace: 'retain-on-failure',
     screenshot: 'only-on-failure',
     viewport: { width: 1366, height: 768 },
+    timezoneId: 'UTC',
     launchOptions: { executablePath: process.env.PLAYWRIGHT_EXECUTABLE_PATH },
   },
   webServer: {

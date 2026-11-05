@@ -2,6 +2,7 @@
 
 ## Scope and decisions
 
+- **Overall SCOPE LIMITS** MUST FOLLOW: [SCOPE LIMITS](DEV-SCOPE.md)
 - Make the smallest complete change for the requested behavior; reuse existing modules before adding dependencies or abstractions.
 - Preserve pre-existing edits and user learning data. Before discarding work, rewriting Git history, or applying destructive data migrations, explain the impact and obtain explicit approval.
 - Before feature work, read `docs/product.md` and `docs/roadmap.md`. Before adding resources or service integrations, read `docs/development-readiness.md` for admission and milestone gates.
@@ -19,6 +20,7 @@
 
 ## Development workflow
 
+- Before invoking development environment dependencies, consult [LOCAL-DEV-ENV.md](LOCAL-DEV-ENV.md) when present and follow its requirements.
 - Use the pnpm version in `package.json` and the Rust toolchain in `rust-toolchain.toml`. Install with `pnpm install --frozen-lockfile`; use locked Cargo commands and change lockfiles only for intentional dependency changes.
 - On Windows, use PowerShell 7. Prefer the native file-editing / `apply_patch` tool; if a safe fallback is needed, verify the resulting diff.
 - Use `rg` for text and file searches. For symbol or call-path exploration, use the existing CodeGraph index when available, then verify findings against current source; creating or rebuilding an index requires a user request.

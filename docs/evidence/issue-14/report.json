@@ -1,0 +1,281 @@
+{
+  "platform": "Windows-11-10.0.26300-SP0",
+  "cpu": "AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD",
+  "logical_cpus": 16,
+  "python": "3.12.10",
+  "packages": {
+    "attrs": "26.1.0",
+    "cloudpickle": "3.1.2",
+    "dlinfo": "2.0.0",
+    "espeakng-loader": "0.2.4",
+    "flatbuffers": "25.12.19",
+    "joblib": "1.6.0",
+    "kokoro-onnx": "0.6.1",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.0",
+    "packaging": "26.3",
+    "phonemizer": "3.4.0",
+    "protobuf": "7.36.2",
+    "typing_extensions": "4.16.0"
+  },
+  "voice": "ff_siwis",
+  "language": "fr-fr",
+  "speed": 1.0,
+  "frontend": {
+    "version": "1.52.0",
+    "dll_sha256": "646d387acbc7ac2aa45e3625aa00a6835ae5d446ff8b0748298c3900b4dde258",
+    "data_tree_sha256": "cb4cda14d18557524f3fc3e3b7a45849a7481494a1fd78493fdd00721213f26c",
+    "library": "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-14\\bundle-01\\runtime\\Lib\\site-packages\\espeakng_loader\\espeak-ng.dll",
+    "data": "C:\\Users\\inthe\\IdeaProjects\\lexique\\.tooling\\issue-14\\bundle-01\\runtime\\Lib\\site-packages\\espeakng_loader\\espeak-ng-data"
+  },
+  "load_seconds": 1.2699532999977237,
+  "network_denials_before": [
+    {
+      "host": "1.1.1.1",
+      "port": 443,
+      "winerror": 10013
+    },
+    {
+      "host": "8.8.8.8",
+      "port": 443,
+      "winerror": 10013
+    }
+  ],
+  "cases": [
+    {
+      "input": "être",
+      "quality": "pending human listening",
+      "frontend_phonemes": "ˈɛtʁ",
+      "phonemes": "ˈɛtʁ",
+      "file": "01.wav",
+      "sha256": "6a73618de9f579ea161e56a933fd762500049f10d208eaf1d7d42209e2cb6f3f",
+      "generation_seconds": 0.3849754999973811,
+      "audio_seconds": 0.49066666666666664,
+      "peak_amplitude": 0.6425775289535522,
+      "playback_seconds": 1.4665048999886494,
+      "playback": "PlaySound completed; acoustic quality unconfirmed"
+    },
+    {
+      "input": "sommes",
+      "quality": "pending human listening",
+      "frontend_phonemes": "sˈɔm",
+      "phonemes": "sˈɔm",
+      "file": "02.wav",
+      "sha256": "13e72e7aa0188d3aa75718dfb14f5d0b0524139f449526f93b8c863b7ed05092",
+      "generation_seconds": 0.1801619999896502,
+      "audio_seconds": 0.5546666666666666,
+      "peak_amplitude": 0.7016090750694275,
+      "playback_seconds": 0.7520286999933887,
+      "playback": "PlaySound completed; acoustic quality unconfirmed"
+    },
+    {
+      "input": "œil",
+      "quality": "pending human listening",
+      "frontend_phonemes": "ˈœj",
+      "phonemes": "ˈœj",
+      "file": "03.wav",
+      "sha256": "a9291bf9be268410b8f7ff1b2159dbc5743766fe1202384ee6b48dc87b519f36",
+      "generation_seconds": 0.14611700001114514,
+      "audio_seconds": 0.448,
+      "peak_amplitude": 0.502617597579956,
+      "playback_seconds": 0.601627299998654,
+      "playback": "PlaySound completed; acoustic quality unconfirmed"
+    },
+    {
+      "input": "école",
+      "quality": "pending human listening",
+      "frontend_phonemes": "ekˈɔl",
+      "phonemes": "ekˈɔl",
+      "file": "04.wav",
+      "sha256": "9c55d9002b8577bb9c48becb2e702e9ad1f8fffb893e3bb2a3415f42ee1b6936",
+      "generation_seconds": 0.17359739998937584,
+      "audio_seconds": 0.5973333333333334,
+      "peak_amplitude": 0.6821513175964355,
+      "playback_seconds": 0.7382314000133192,
+      "playback": "PlaySound completed; acoustic quality unconfirmed"
+    },
+    {
+      "input": "aujourd'hui",
+      "quality": "pending human listening",
+      "frontend_phonemes": "oʒuʁdyˈi",
+      "phonemes": "oʒuʁdyˈi",
+      "file": "05.wav",
+      "sha256": "acd5fb89724703acd89172cd8940ad449d46dda266374656e07ebcab2f51bdd6",
+      "generation_seconds": 0.22289349998754915,
+      "audio_seconds": 0.8106666666666666,
+      "peak_amplitude": 0.698796808719635,
+      "playback_seconds": 0.9745846000005258,
+      "playback": "PlaySound completed; acoustic quality unconfirmed"
+    },
+    {
+      "input": "nous sommes ici",
+      "quality": "pending human listening",
+      "frontend_phonemes": "nu sɔmz isˈi",
+      "phonemes": "nu sɔmz isˈi",
+      "file": "06.wav",
+      "sha256": "ddfd21fee1c7c5a5b4e18256c99a555059dd21e87976edd04fef397dfc343e41",
+      "generation_seconds": 0.25517950000357814,
+      "audio_seconds": 0.9813333333333333,
+      "peak_amplitude": 0.832984209060669,
+      "playback_seconds": 1.141166000001249,
+      "playback": "PlaySound completed; acoustic quality unconfirmed"
+    },
+    {
+      "input": "les amis arrivent",
+      "quality": "pending human listening",
+      "frontend_phonemes": "le-z amˈi aʁˈiv",
+      "phonemes": "lez amˈi aʁˈiv",
+      "file": "07.wav",
+      "sha256": "6b0eb4a348f5db0e5b166e14dbe5f3a5ab0fc1f05e6fd0a95f5509385d474773",
+      "generation_seconds": 0.27318479999667034,
+      "audio_seconds": 1.088,
+      "peak_amplitude": 0.6471604108810425,
+      "playback_seconds": 1.2237618999934057,
+      "playback": "PlaySound completed; acoustic quality unconfirmed"
+    },
+    {
+      "input": "J'apprends le français tous les jours.",
+      "quality": "pending human listening",
+      "frontend_phonemes": "ʒapʁˈɑ̃ lə- fʁɑ̃sˈɛ tu le- ʒˈuʁ.",
+      "phonemes": "ʒapʁˈɑ̃ lə fʁɑ̃sˈɛ tu le ʒˈuʁ.",
+      "file": "08.wav",
+      "sha256": "4dfab27a9fa0c32f9c2ba272b3a63684f329c0d3ba9a09f3ca03f3ceb3674db8",
+      "generation_seconds": 0.3942380999942543,
+      "audio_seconds": 1.7493333333333334,
+      "peak_amplitude": 0.7515257596969604,
+      "playback_seconds": 1.9142792000056943,
+      "playback": "PlaySound completed; acoustic quality unconfirmed"
+    },
+    {
+      "input": "a",
+      "quality": "pending human listening",
+      "frontend_phonemes": "ˈa",
+      "phonemes": "ˈa",
+      "file": "09.wav",
+      "sha256": "04cdbf014684a5554243bece68530d96eaa8c69bd4ac727dfeddc6edd9905c17",
+      "generation_seconds": 0.13218390000110958,
+      "audio_seconds": 0.3413333333333333,
+      "peak_amplitude": 0.5132309794425964,
+      "playback_seconds": 0.5076311000011628,
+      "playback": "PlaySound completed; acoustic quality unconfirmed"
+    },
+    {
+      "input": "à",
+      "quality": "pending human listening",
+      "frontend_phonemes": "ˈa",
+      "phonemes": "ˈa",
+      "file": "10.wav",
+      "sha256": "04cdbf014684a5554243bece68530d96eaa8c69bd4ac727dfeddc6edd9905c17",
+      "generation_seconds": 0.12175389999174513,
+      "audio_seconds": 0.3413333333333333,
+      "peak_amplitude": 0.5132309794425964,
+      "playback_seconds": 0.5130429999990156,
+      "playback": "PlaySound completed; acoustic quality unconfirmed"
+    },
+    {
+      "input": "y",
+      "quality": "pending human listening",
+      "frontend_phonemes": "iɡʁˈɛk",
+      "pronunciation_override": "French vocabulary y (pronoun/adverb): /i/",
+      "phonemes": "i",
+      "file": "11.wav",
+      "sha256": "c521decb8171f599710d0080511f884d3664f1846218416c25276ca548f4471a",
+      "generation_seconds": 0.1119944999954896,
+      "audio_seconds": 0.2976666666666667,
+      "peak_amplitude": 0.4943447709083557,
+      "playback_seconds": 0.43718610001087654,
+      "playback": "PlaySound completed; acoustic quality unconfirmed"
+    },
+    {
+      "input": "eu",
+      "quality": "pending human listening",
+      "frontend_phonemes": "ˈy",
+      "phonemes": "ˈy",
+      "file": "12.wav",
+      "sha256": "4277c160e943858d727a4733bc8fb4e6cf8bb627decb576b7ea4ed841d6f70f7",
+      "generation_seconds": 0.11771840001165401,
+      "audio_seconds": 0.305,
+      "peak_amplitude": 0.5046395063400269,
+      "playback_seconds": 0.4437574999901699,
+      "playback": "PlaySound completed; acoustic quality unconfirmed"
+    },
+    {
+      "input": "eau",
+      "quality": "pending human listening",
+      "frontend_phonemes": "ˈo",
+      "phonemes": "ˈo",
+      "file": "13.wav",
+      "sha256": "2d9ba7d06d784bb8107893be295afa3cc9408d67a2450c7d9d8ccb0279ed9e0a",
+      "generation_seconds": 0.11439560000144411,
+      "audio_seconds": 0.3413333333333333,
+      "peak_amplitude": 0.5633506178855896,
+      "playback_seconds": 0.5220595999999205,
+      "playback": "PlaySound completed; acoustic quality unconfirmed"
+    },
+    {
+      "input": "un",
+      "quality": "pending human listening",
+      "frontend_phonemes": "ˈœ̃",
+      "phonemes": "ˈœ̃",
+      "file": "14.wav",
+      "sha256": "104da7e3330abde0fc5940d4ae660c9fc00f39a712c9a6099a99ae56584a96fe",
+      "generation_seconds": 0.1561777000024449,
+      "audio_seconds": 0.3626666666666667,
+      "peak_amplitude": 0.6702389717102051,
+      "playback_seconds": 0.5099986999994144,
+      "playback": "PlaySound completed; acoustic quality unconfirmed"
+    },
+    {
+      "input": "chat",
+      "quality": "pending human listening",
+      "frontend_phonemes": "ʃˈa",
+      "phonemes": "ʃˈa",
+      "file": "15.wav",
+      "sha256": "e62bdb7602fd9a22d94f5ac1fc53abd6df6962bf2c52c480fd97169248da5a80",
+      "generation_seconds": 0.16393450000032317,
+      "audio_seconds": 0.448,
+      "peak_amplitude": 0.7606135606765747,
+      "playback_seconds": 0.6043940000090515,
+      "playback": "PlaySound completed; acoustic quality unconfirmed"
+    },
+    {
+      "input": "qzxyplouf",
+      "quality": "pending human listening",
+      "frontend_phonemes": "kzksiplˈuf",
+      "phonemes": "kzksiplˈuf",
+      "file": "16.wav",
+      "sha256": "02426891b8b809315e66b5fb98513543032ecc990a69921b49ada32aeaeb7e23",
+      "generation_seconds": 0.24587159999646246,
+      "audio_seconds": 0.9173333333333333,
+      "peak_amplitude": 0.6367278099060059,
+      "playback_seconds": 1.0696133999881567,
+      "playback": "PlaySound completed; acoustic quality unconfirmed"
+    },
+    {
+      "input": "anticonstitutionnellement",
+      "quality": "pending human listening",
+      "frontend_phonemes": "ɑ̃tikɔ̃stitysjɔnɛlmˈɑ̃",
+      "phonemes": "ɑ̃tikɔ̃stitysjɔnɛlmˈɑ̃",
+      "file": "17.wav",
+      "sha256": "87e0b1764aa0d9c0bf1d7fcd32ab873358b829c2f3449bf0cc10f89ce8234d58",
+      "generation_seconds": 0.34483660000842065,
+      "audio_seconds": 1.4933333333333334,
+      "peak_amplitude": 0.7154664993286133,
+      "playback_seconds": 1.6755314000038197,
+      "playback": "PlaySound completed; acoustic quality unconfirmed"
+    }
+  ],
+  "peak_working_set_bytes": 271093760,
+  "network_denials_after": [
+    {
+      "host": "1.1.1.1",
+      "port": 443,
+      "winerror": 10013
+    },
+    {
+      "host": "8.8.8.8",
+      "port": 443,
+      "winerror": 10013
+    }
+  ]
+}

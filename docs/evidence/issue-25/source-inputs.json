@@ -1,0 +1,24 @@
+{
+  "format": 1,
+  "base_commit": "c9d8bf8a8707b13abcf2919caa850bfc6f40dcdc",
+  "purpose": "Exact source and build/test inputs for the historical #25 observation only; restored beneath a fresh target/issue-25 child.",
+  "patch_sha256": "8311a0cfa3499436ef7a70e4002881fb4032a80a7812acb9bb77b97209e31146",
+  "files_sha256": {
+    "Cargo.lock": "ee544fb235c075efa7e61785a29817f0a63a84d9910aef26ea607bcce4cf2464",
+    "apps/desktop/src-tauri/Cargo.toml": "9475350f69d2eb002f3fc9d235b5a3ae34aebb66393406e2901cad0737106141",
+    "apps/desktop/src-tauri/src/lib.rs": "dff6b90cf3b853a2c5e63a21a350c94c11c92c7cda2d159bccda502b62d4c300",
+    "apps/desktop/src-tauri/src/speech_cache.rs": "6ae609c28cbd5bfc67368998aefc0bc7940aecc6e5b047c81b67f61bb1f3ec18",
+    "apps/desktop/src-tauri/src/speech_tasks.rs": "bef975abff2ba731424fd4024b64c6e61c9dbb401622c3f3087218d89b53a4e0",
+    "apps/desktop/src-tauri/src/vocabulary.rs": "d0685b2d31905b468d5f86dd4a093aeb479d985c9263eb06d2e4ca07d08fae3d",
+    "crates/storage/src/review.rs": "eadd16dc35c75f86ca7a032f80bf16da0d3246def591227729137a5e52299731",
+    "crates/storage/src/speech_work.rs": "a379732989d0b10b3ba43481b749135e2467397a7b7695818822a5125ceb0c11",
+    "crates/storage/tests/speech_work.rs": "17ad4576ca2b488148ef365edd9ecb5ddc2f19812f634280d9e7b0e12f8d3b97",
+    "apps/desktop/e2e/native-24-harness.mjs": "77d88bbc4b5885139901e21dc941959177f8f2f07352e82ce31634193207fa53",
+    "apps/desktop/e2e/native-scale-24.mjs": "f09e846b9ac195c04f3fdd31f2ed9b8c117ad7ac6a4f53e8c60ebdf3da252f0a",
+    "apps/desktop/e2e/native-single-errors-24.mjs": "ac63c58c333e12caf341e33118d4f9c6f52695dcfde661c9f12a2861436874f2",
+    "apps/desktop/src-tauri/src/webview_diagnostics.rs": "67be7791fa026e7d57467b989016fd8fde2fc7974a85ff0d7d766df7abb1fd8d",
+    "apps/desktop/src-tauri/speech_worker.py": "cdebdc0a9411c0aff268ee543f32c92dc23f72b76c91ff56cf25a6425bbd96c7",
+    "apps/desktop/src-tauri/speech_resident.py": "dde475436a6dc2884bb221bd4fee0da3e366954f086001572a56581d723b1be8",
+    "apps/desktop/src-tauri/speech_protocol.py": "9075d6259c85aadea9cdff78d95d2d380028ee96e3f182bf36afa59a49fa2bdf"
+  }
+}

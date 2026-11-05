@@ -1,0 +1,3 @@
+[target.wasm32-unknown-unknown]
+# Scheduling never requests entropy; unused optimizer RNG must fail, not import browser glue.
+rustflags = ['--cfg', 'getrandom_backend="unsupported"']

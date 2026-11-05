@@ -1,0 +1,898 @@
+{
+  "model": "fr_FR-siwis-medium.onnx",
+  "load_seconds": 3.0231177999958163,
+  "packages": {
+    "flatbuffers": "25.12.19",
+    "imageio-ffmpeg": "0.6.0",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.0",
+    "packaging": "26.3",
+    "pathvalidate": "3.3.1",
+    "piper-tts": "1.8.0",
+    "protobuf": "7.36.2"
+  },
+  "config": {
+    "audio": {
+      "sample_rate": 22050
+    },
+    "espeak": {
+      "voice": "fr"
+    },
+    "phoneme_type": "espeak",
+    "num_symbols": 256,
+    "num_speakers": 1,
+    "inference": {
+      "noise_scale": 0.667,
+      "length_scale": 1,
+      "noise_w": 0.8
+    },
+    "phoneme_id_map": {
+      "_": [
+        0
+      ],
+      "^": [
+        1
+      ],
+      "$": [
+        2
+      ],
+      " ": [
+        3
+      ],
+      "!": [
+        4
+      ],
+      "'": [
+        5
+      ],
+      "(": [
+        6
+      ],
+      ")": [
+        7
+      ],
+      ",": [
+        8
+      ],
+      "-": [
+        9
+      ],
+      ".": [
+        10
+      ],
+      ":": [
+        11
+      ],
+      ";": [
+        12
+      ],
+      "?": [
+        13
+      ],
+      "a": [
+        14
+      ],
+      "b": [
+        15
+      ],
+      "c": [
+        16
+      ],
+      "d": [
+        17
+      ],
+      "e": [
+        18
+      ],
+      "f": [
+        19
+      ],
+      "h": [
+        20
+      ],
+      "i": [
+        21
+      ],
+      "j": [
+        22
+      ],
+      "k": [
+        23
+      ],
+      "l": [
+        24
+      ],
+      "m": [
+        25
+      ],
+      "n": [
+        26
+      ],
+      "o": [
+        27
+      ],
+      "p": [
+        28
+      ],
+      "q": [
+        29
+      ],
+      "r": [
+        30
+      ],
+      "s": [
+        31
+      ],
+      "t": [
+        32
+      ],
+      "u": [
+        33
+      ],
+      "v": [
+        34
+      ],
+      "w": [
+        35
+      ],
+      "x": [
+        36
+      ],
+      "y": [
+        37
+      ],
+      "z": [
+        38
+      ],
+      "æ": [
+        39
+      ],
+      "ç": [
+        40
+      ],
+      "ð": [
+        41
+      ],
+      "ø": [
+        42
+      ],
+      "ħ": [
+        43
+      ],
+      "ŋ": [
+        44
+      ],
+      "œ": [
+        45
+      ],
+      "ǀ": [
+        46
+      ],
+      "ǁ": [
+        47
+      ],
+      "ǂ": [
+        48
+      ],
+      "ǃ": [
+        49
+      ],
+      "ɐ": [
+        50
+      ],
+      "ɑ": [
+        51
+      ],
+      "ɒ": [
+        52
+      ],
+      "ɓ": [
+        53
+      ],
+      "ɔ": [
+        54
+      ],
+      "ɕ": [
+        55
+      ],
+      "ɖ": [
+        56
+      ],
+      "ɗ": [
+        57
+      ],
+      "ɘ": [
+        58
+      ],
+      "ə": [
+        59
+      ],
+      "ɚ": [
+        60
+      ],
+      "ɛ": [
+        61
+      ],
+      "ɜ": [
+        62
+      ],
+      "ɞ": [
+        63
+      ],
+      "ɟ": [
+        64
+      ],
+      "ɠ": [
+        65
+      ],
+      "ɡ": [
+        66
+      ],
+      "ɢ": [
+        67
+      ],
+      "ɣ": [
+        68
+      ],
+      "ɤ": [
+        69
+      ],
+      "ɥ": [
+        70
+      ],
+      "ɦ": [
+        71
+      ],
+      "ɧ": [
+        72
+      ],
+      "ɨ": [
+        73
+      ],
+      "ɪ": [
+        74
+      ],
+      "ɫ": [
+        75
+      ],
+      "ɬ": [
+        76
+      ],
+      "ɭ": [
+        77
+      ],
+      "ɮ": [
+        78
+      ],
+      "ɯ": [
+        79
+      ],
+      "ɰ": [
+        80
+      ],
+      "ɱ": [
+        81
+      ],
+      "ɲ": [
+        82
+      ],
+      "ɳ": [
+        83
+      ],
+      "ɴ": [
+        84
+      ],
+      "ɵ": [
+        85
+      ],
+      "ɶ": [
+        86
+      ],
+      "ɸ": [
+        87
+      ],
+      "ɹ": [
+        88
+      ],
+      "ɺ": [
+        89
+      ],
+      "ɻ": [
+        90
+      ],
+      "ɽ": [
+        91
+      ],
+      "ɾ": [
+        92
+      ],
+      "ʀ": [
+        93
+      ],
+      "ʁ": [
+        94
+      ],
+      "ʂ": [
+        95
+      ],
+      "ʃ": [
+        96
+      ],
+      "ʄ": [
+        97
+      ],
+      "ʈ": [
+        98
+      ],
+      "ʉ": [
+        99
+      ],
+      "ʊ": [
+        100
+      ],
+      "ʋ": [
+        101
+      ],
+      "ʌ": [
+        102
+      ],
+      "ʍ": [
+        103
+      ],
+      "ʎ": [
+        104
+      ],
+      "ʏ": [
+        105
+      ],
+      "ʐ": [
+        106
+      ],
+      "ʑ": [
+        107
+      ],
+      "ʒ": [
+        108
+      ],
+      "ʔ": [
+        109
+      ],
+      "ʕ": [
+        110
+      ],
+      "ʘ": [
+        111
+      ],
+      "ʙ": [
+        112
+      ],
+      "ʛ": [
+        113
+      ],
+      "ʜ": [
+        114
+      ],
+      "ʝ": [
+        115
+      ],
+      "ʟ": [
+        116
+      ],
+      "ʡ": [
+        117
+      ],
+      "ʢ": [
+        118
+      ],
+      "ʲ": [
+        119
+      ],
+      "ˈ": [
+        120
+      ],
+      "ˌ": [
+        121
+      ],
+      "ː": [
+        122
+      ],
+      "ˑ": [
+        123
+      ],
+      "˞": [
+        124
+      ],
+      "β": [
+        125
+      ],
+      "θ": [
+        126
+      ],
+      "χ": [
+        127
+      ],
+      "ᵻ": [
+        128
+      ],
+      "ⱱ": [
+        129
+      ],
+      "0": [
+        130
+      ],
+      "1": [
+        131
+      ],
+      "2": [
+        132
+      ],
+      "3": [
+        133
+      ],
+      "4": [
+        134
+      ],
+      "5": [
+        135
+      ],
+      "6": [
+        136
+      ],
+      "7": [
+        137
+      ],
+      "8": [
+        138
+      ],
+      "9": [
+        139
+      ],
+      "̧": [
+        140
+      ],
+      "̃": [
+        141
+      ],
+      "̪": [
+        142
+      ],
+      "̯": [
+        143
+      ],
+      "̩": [
+        144
+      ],
+      "ʰ": [
+        145
+      ],
+      "ˤ": [
+        146
+      ],
+      "ε": [
+        147
+      ],
+      "↓": [
+        148
+      ],
+      "#": [
+        149
+      ],
+      "\"": [
+        150
+      ],
+      "↑": [
+        151
+      ],
+      "̺": [
+        152
+      ],
+      "̻": [
+        153
+      ]
+    },
+    "speaker_id_map": {},
+    "hop_length": 256,
+    "default_speaker_id": 0,
+    "piper_version": "1.0.0"
+  },
+  "network_denials_before": [
+    {
+      "host": "1.1.1.1",
+      "port": 443,
+      "winerror": 10013
+    },
+    {
+      "host": "8.8.8.8",
+      "port": 443,
+      "winerror": 10013
+    }
+  ],
+  "cases": [
+    {
+      "input": "être",
+      "file": "01.wav",
+      "phonemes": [
+        [
+          "ˈ",
+          "ɛ",
+          "t",
+          "ʁ"
+        ]
+      ],
+      "generation_seconds": 0.13632019999204203,
+      "sample_rate": 22050,
+      "audio_seconds": 0.5688888888888889,
+      "sha256": "2260629445ff7d106bb5da046b61b22d744187324215c9c494471830271d4a2c",
+      "playback": "synchronous Windows PlaySound completed; quality unconfirmed"
+    },
+    {
+      "input": "sommes",
+      "file": "02.wav",
+      "phonemes": [
+        [
+          "s",
+          "ˈ",
+          "ɔ",
+          "m"
+        ]
+      ],
+      "generation_seconds": 0.02841660000558477,
+      "sample_rate": 22050,
+      "audio_seconds": 0.7778684807256235,
+      "sha256": "a89a435344fdcc0b1847409e5b7b27738e0f670a6a716b075bc390226199f99b",
+      "playback": "synchronous Windows PlaySound completed; quality unconfirmed"
+    },
+    {
+      "input": "œil",
+      "file": "03.wav",
+      "phonemes": [
+        [
+          "ˈ",
+          "œ",
+          "j"
+        ]
+      ],
+      "generation_seconds": 0.024926400001277216,
+      "sample_rate": 22050,
+      "audio_seconds": 0.626938775510204,
+      "sha256": "5e14f54bed5f8ec7ec927d4a15af97e36141c8f6230e001d432850a7871508ec",
+      "playback": "synchronous Windows PlaySound completed; quality unconfirmed"
+    },
+    {
+      "input": "école",
+      "file": "04.wav",
+      "phonemes": [
+        [
+          "e",
+          "k",
+          "ˈ",
+          "ɔ",
+          "l"
+        ]
+      ],
+      "generation_seconds": 0.02880679999361746,
+      "sample_rate": 22050,
+      "audio_seconds": 0.7662585034013606,
+      "sha256": "4c3ce489086f8b10f7b084cfcf76b0c23f075daa5e5de5028d2d6f85062b477e",
+      "playback": "synchronous Windows PlaySound completed; quality unconfirmed"
+    },
+    {
+      "input": "aujourd'hui",
+      "file": "05.wav",
+      "phonemes": [
+        [
+          "o",
+          "ʒ",
+          "u",
+          "ʁ",
+          "d",
+          "y",
+          "ˈ",
+          "i"
+        ]
+      ],
+      "generation_seconds": 0.028398399997968227,
+      "sample_rate": 22050,
+      "audio_seconds": 0.7430385487528345,
+      "sha256": "7eab4a488f16c83d74e849f78e2582de12b175cd652c2d5d6650f26cd4f89069",
+      "playback": "synchronous Windows PlaySound completed; quality unconfirmed"
+    },
+    {
+      "input": "nous sommes ici",
+      "file": "06.wav",
+      "phonemes": [
+        [
+          "n",
+          "u",
+          " ",
+          "s",
+          "ɔ",
+          "m",
+          "z",
+          " ",
+          "i",
+          "s",
+          "ˈ",
+          "i"
+        ]
+      ],
+      "generation_seconds": 0.03461079999397043,
+      "sample_rate": 22050,
+      "audio_seconds": 1.1377777777777778,
+      "sha256": "0da86de0670a645bb0ea6f48c6d7981668961a82b31935a154f8d073033f0e31",
+      "playback": "synchronous Windows PlaySound completed; quality unconfirmed"
+    },
+    {
+      "input": "les amis arrivent",
+      "file": "07.wav",
+      "phonemes": [
+        [
+          "l",
+          "e",
+          "-",
+          "z",
+          " ",
+          "a",
+          "m",
+          "ˈ",
+          "i",
+          "ʲ",
+          " ",
+          "a",
+          "ʁ",
+          "ˈ",
+          "i",
+          "v"
+        ]
+      ],
+      "generation_seconds": 0.04213570000138134,
+      "sample_rate": 22050,
+      "audio_seconds": 1.3003174603174603,
+      "sha256": "85172c92a212bd077e4698d94b41ac042b5422602588a70128939dafb77849c6",
+      "playback": "synchronous Windows PlaySound completed; quality unconfirmed"
+    },
+    {
+      "input": "J'apprends le français tous les jours.",
+      "file": "08.wav",
+      "phonemes": [
+        [
+          "ʒ",
+          "a",
+          "p",
+          "ʁ",
+          "ˈ",
+          "ɑ",
+          "̃",
+          " ",
+          "l",
+          "ə",
+          "-",
+          " ",
+          "f",
+          "ʁ",
+          "ɑ",
+          "̃",
+          "s",
+          "ˈ",
+          "ɛ",
+          " ",
+          "t",
+          "u",
+          " ",
+          "l",
+          "e",
+          "-",
+          " ",
+          "ʒ",
+          "ˈ",
+          "u",
+          "ʁ",
+          "."
+        ]
+      ],
+      "generation_seconds": 0.05573170000570826,
+      "sample_rate": 22050,
+      "audio_seconds": 1.8343764172335602,
+      "sha256": "8a980748b4547fb7b70e1401c39e07a8572a8a649884552a68aa27240c1228c6",
+      "playback": "synchronous Windows PlaySound completed; quality unconfirmed"
+    },
+    {
+      "input": "a",
+      "file": "09.wav",
+      "phonemes": [
+        [
+          "ˈ",
+          "a"
+        ]
+      ],
+      "generation_seconds": 0.024242799991043285,
+      "sample_rate": 22050,
+      "audio_seconds": 0.3831292517006803,
+      "sha256": "ce25536ae785d72022d1ee2ae6435a000360dfc44094318c5752b877506c6955",
+      "playback": "synchronous Windows PlaySound completed; quality unconfirmed"
+    },
+    {
+      "input": "à",
+      "file": "10.wav",
+      "phonemes": [
+        [
+          "ˈ",
+          "a"
+        ]
+      ],
+      "generation_seconds": 0.019581300002755597,
+      "sample_rate": 22050,
+      "audio_seconds": 0.47600907029478456,
+      "sha256": "fcf51659ccf44be87f8de3502e03c121e0774d2b38dfdca4118437afe5b24302",
+      "playback": "synchronous Windows PlaySound completed; quality unconfirmed"
+    },
+    {
+      "input": "y",
+      "file": "11.wav",
+      "phonemes": [
+        [
+          "i",
+          "ɡ",
+          "ʁ",
+          "ˈ",
+          "ɛ",
+          "k"
+        ]
+      ],
+      "generation_seconds": 0.03096930000174325,
+      "sample_rate": 22050,
+      "audio_seconds": 0.7082086167800453,
+      "sha256": "69a5a2684877408c81beca36e95bb5d45ab8d2c2063d306806a262aaaa34db30",
+      "playback": "synchronous Windows PlaySound completed; quality unconfirmed"
+    },
+    {
+      "input": "eu",
+      "file": "12.wav",
+      "phonemes": [
+        [
+          "ˈ",
+          "y"
+        ]
+      ],
+      "generation_seconds": 0.02107590000377968,
+      "sample_rate": 22050,
+      "audio_seconds": 0.3831292517006803,
+      "sha256": "db9b15234f733f4b5d2a9b90a951c84f513b539992400f6bdc9e50735609b4eb",
+      "playback": "synchronous Windows PlaySound completed; quality unconfirmed"
+    },
+    {
+      "input": "eau",
+      "file": "13.wav",
+      "phonemes": [
+        [
+          "ˈ",
+          "o"
+        ]
+      ],
+      "generation_seconds": 0.021430000007967465,
+      "sample_rate": 22050,
+      "audio_seconds": 0.37151927437641724,
+      "sha256": "4c80004e715fb691c43403521634c9e2e5149397b9e9b4b4fd131f121988d05c",
+      "playback": "synchronous Windows PlaySound completed; quality unconfirmed"
+    },
+    {
+      "input": "un",
+      "file": "14.wav",
+      "phonemes": [
+        [
+          "ˈ",
+          "œ",
+          "̃"
+        ]
+      ],
+      "generation_seconds": 0.018233700000564568,
+      "sample_rate": 22050,
+      "audio_seconds": 0.4876190476190476,
+      "sha256": "1f255081af7ed010d2cc8e9e15822fb7428fb99b64f265a3b5f360d9657321b6",
+      "playback": "synchronous Windows PlaySound completed; quality unconfirmed"
+    },
+    {
+      "input": "chat",
+      "file": "15.wav",
+      "phonemes": [
+        [
+          "ʃ",
+          "ˈ",
+          "a"
+        ]
+      ],
+      "generation_seconds": 0.021002100009354763,
+      "sample_rate": 22050,
+      "audio_seconds": 0.40634920634920635,
+      "sha256": "0a1051fc15ef4d927d39c8f1837dc9c562a1eb3d94a01ce50555aaedf406ea10",
+      "playback": "synchronous Windows PlaySound completed; quality unconfirmed"
+    },
+    {
+      "input": "qzxyplouf",
+      "file": "16.wav",
+      "phonemes": [
+        [
+          "k",
+          "z",
+          "k",
+          "s",
+          "i",
+          "p",
+          "l",
+          "ˈ",
+          "u",
+          "f"
+        ]
+      ],
+      "generation_seconds": 0.03457730000081938,
+      "sample_rate": 22050,
+      "audio_seconds": 0.9868480725623583,
+      "sha256": "1c430284a7f1097fddf8fa77f25ca0296a8f530a53b802e0959f0d06dc19e87c",
+      "playback": "synchronous Windows PlaySound completed; quality unconfirmed"
+    },
+    {
+      "input": "anticonstitutionnellement",
+      "file": "17.wav",
+      "phonemes": [
+        [
+          "ɑ",
+          "̃",
+          "t",
+          "i",
+          "k",
+          "ɔ",
+          "̃",
+          "s",
+          "t",
+          "i",
+          "t",
+          "y",
+          "s",
+          "j",
+          "ɔ",
+          "n",
+          "ɛ",
+          "l",
+          "m",
+          "ˈ",
+          "ɑ",
+          "̃"
+        ]
+      ],
+      "generation_seconds": 0.04173000001173932,
+      "sample_rate": 22050,
+      "audio_seconds": 1.4280272108843537,
+      "sha256": "4ce653463231aa90a718d7716b7d11da3c926c8b9566a5d602748a112cf9b53a",
+      "playback": "synchronous Windows PlaySound completed; quality unconfirmed"
+    },
+    {
+      "input": "[[i]]",
+      "file": "18.wav",
+      "purpose": "explicit /i/ phoneme control for vocabulary y; not unchanged-text inference",
+      "phonemes": [
+        [
+          "i"
+        ]
+      ],
+      "generation_seconds": 0.019561300010536797,
+      "sample_rate": 22050,
+      "audio_seconds": 0.34829931972789113,
+      "sha256": "f0b543679e55c8119a878b83fddcd3f4d9ae396ae7a346878c76c49262045fd2",
+      "playback": "synchronous Windows PlaySound completed; quality unconfirmed"
+    }
+  ],
+  "quality": "pending human comparison; not redistribution admission",
+  "network_denials_after": [
+    {
+      "host": "1.1.1.1",
+      "port": 443,
+      "winerror": 10013
+    },
+    {
+      "host": "8.8.8.8",
+      "port": 443,
+      "winerror": 10013
+    }
+  ],
+  "peak_working_set_bytes": 200257536
+}

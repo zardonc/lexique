@@ -1,0 +1,526 @@
+diff --git a/Cargo.lock b/Cargo.lock
+index 3e23004..9a3b115 100644
+--- a/Cargo.lock
++++ b/Cargo.lock
+@@ -1869,0 +1870,2 @@ dependencies = [
++ "webview2-com",
++ "windows-core",
+diff --git a/apps/desktop/e2e/native-24-harness.mjs b/apps/desktop/e2e/native-24-harness.mjs
+index 6cc766f..5d60957 100644
+--- a/apps/desktop/e2e/native-24-harness.mjs
++++ b/apps/desktop/e2e/native-24-harness.mjs
+@@ -4,0 +5 @@ import { cp, mkdir } from 'node:fs/promises';
++import { appendFileSync } from 'node:fs';
+@@ -19,0 +21,5 @@ export async function native24Fixture(packagePath, binaryPath, destinationPath)
++  let stopping = false;
++  const started = Date.now();
++  function diagnostic(event, detail = {}) {
++    appendFileSync(join(destination, 'lifecycle.jsonl'), JSON.stringify({ ms: Date.now() - started, event, stopping, ...detail }) + '\n');
++  }
+@@ -24,0 +31 @@ export async function native24Fixture(packagePath, binaryPath, destinationPath)
++    stopping = false;
+@@ -27,2 +34,4 @@ export async function native24Fixture(packagePath, binaryPath, destinationPath)
+-    child.on('error', (error) => { process.stderr.write(String(error)); });
+-    child.on('exit', (code, signal) => { process.stderr.write(`Owned desktop exited: ${code}, ${signal}\n`); });
++    diagnostic('host-start', { pid: child.pid });
++    child.stderr.on('data', (bytes) => diagnostic('host-stderr', { message: bytes.toString().slice(0, 4096) }));
++    child.on('error', (error) => { diagnostic('host-error', { message: String(error) }); process.stderr.write(String(error)); });
++    child.on('exit', (code, signal) => { diagnostic('host-exit', { code, signal }); process.stderr.write(`Owned desktop exited: ${code}, ${signal}\n`); });
+@@ -36,0 +46,4 @@ export async function native24Fixture(packagePath, binaryPath, destinationPath)
++    browser.on('disconnected', () => diagnostic('cdp-disconnected'));
++    page.on('crash', () => diagnostic('renderer-crash'));
++    page.on('close', () => diagnostic('page-closed'));
++    page.on('pageerror', (error) => diagnostic('page-error', { message: String(error).slice(0, 4096) }));
+@@ -39,0 +53 @@ export async function native24Fixture(packagePath, binaryPath, destinationPath)
++    diagnostic('navigation-ready');
+@@ -42,0 +57 @@ export async function native24Fixture(packagePath, binaryPath, destinationPath)
++    stopping = true; diagnostic('stop-request', { normal });
+diff --git a/apps/desktop/e2e/native-scale-24.mjs b/apps/desktop/e2e/native-scale-24.mjs
+index 26a3cbf..d1fffee 100644
+--- a/apps/desktop/e2e/native-scale-24.mjs
++++ b/apps/desktop/e2e/native-scale-24.mjs
+@@ -8 +8 @@ import { native24Fixture } from './native-24-harness.mjs';
+-const [packagePath,binaryPath,destinationPath,countText] = process.argv.slice(2);
++const [packagePath,binaryPath,destinationPath,countText,budgetText] = process.argv.slice(2);
+@@ -9,0 +10,2 @@ const count = Number(countText); assert.ok([100,1000,10000].includes(count));
++const budget = budgetText === undefined ? undefined : Number(budgetText);
++assert.ok(budget === undefined || (Number.isFinite(budget) && budget > 0));
+@@ -25 +27 @@ c.commit();print(json.dumps({'words':count,'fixture_bytes':count*8192,'cache':'O
+-  const passes=count===10000?1:4;
++  const passes=count===10000?3:4;
+@@ -31,0 +34,3 @@ c.commit();print(json.dumps({'words':count,'fixture_bytes':count*8192,'cache':'O
++  if (budget !== undefined) {
++    assert.ok(samples.every(row => row.ms <= budget), `Due queue exceeded ${budget} ms: ${JSON.stringify(samples)}`);
++  }
+diff --git a/apps/desktop/e2e/native-single-errors-24.mjs b/apps/desktop/e2e/native-single-errors-24.mjs
+index 5a0f577..57a61d3 100644
+--- a/apps/desktop/e2e/native-single-errors-24.mjs
++++ b/apps/desktop/e2e/native-single-errors-24.mjs
+@@ -22,2 +22,3 @@ c.commit()`,database],{windowsHide:true,encoding:'utf8'});assert.equal(seed.stat
+-  const full=await page.evaluate(async (id) => {const invoke=window.__TAURI_INTERNALS__.invoke;let error;try{await invoke('review_add',{vocabularyId:id});}catch(cause){error=String(cause);}return {error,cards:await invoke('review_cards',{vocabularyId:id})};},saved.record.id);
+-  assert.match(full.error,/Speech backlog is full/);assert.deepEqual(full.cards,[]);assert.equal(fixture.workerPids().length,0);
++  const full=await page.evaluate(async (id) => {const invoke=window.__TAURI_INTERNALS__.invoke;const added=await invoke('review_add',{vocabularyId:id});return {added,cards:await invoke('review_cards',{vocabularyId:id}),batch:await invoke('review_batch_status',{operation:null})};},saved.record.id);
++  assert.equal(full.cards.length,2);assert.equal(full.added.length,2);
++  assert.equal(full.batch.items[0].error,null);assert.equal(full.batch.items[0].audio_state,'failed');assert.match(full.batch.items[0].audio_error,/Speech backlog is full/);assert.equal(fixture.workerPids().length,0);
+diff --git a/apps/desktop/src-tauri/Cargo.toml b/apps/desktop/src-tauri/Cargo.toml
+index d1fd7f4..3b1ad15 100644
+--- a/apps/desktop/src-tauri/Cargo.toml
++++ b/apps/desktop/src-tauri/Cargo.toml
+@@ -25,0 +26,4 @@ cap-fs-ext = "=4.0.3"
++
++[target.'cfg(windows)'.dependencies]
++webview2-com = "=0.39.1"
++windows-core = "=0.62.2"
+diff --git a/apps/desktop/src-tauri/src/lib.rs b/apps/desktop/src-tauri/src/lib.rs
+index 75221a5..78e6080 100644
+--- a/apps/desktop/src-tauri/src/lib.rs
++++ b/apps/desktop/src-tauri/src/lib.rs
+@@ -9,0 +10,2 @@ mod vocabulary;
++#[cfg(windows)]
++mod webview_diagnostics;
+@@ -60,0 +63,2 @@ pub fn run() {
++            #[cfg(windows)]
++            webview_diagnostics::attach(app, database_path.clone())?;
+@@ -76,0 +81,4 @@ pub fn run() {
++                speech_cache::report_error(
++                    &window.state::<DatabasePath>().0,
++                    "[native-lifecycle] Window CloseRequested",
++                );
+diff --git a/apps/desktop/src-tauri/src/speech_cache.rs b/apps/desktop/src-tauri/src/speech_cache.rs
+index 2d9c406..15f5468 100644
+--- a/apps/desktop/src-tauri/src/speech_cache.rs
++++ b/apps/desktop/src-tauri/src/speech_cache.rs
+@@ -167,14 +166,0 @@ fn read_named(dir: &Dir, name: &str, touch: bool) -> Result<Option<Vec<u8>>, Str
+-    match dir.symlink_metadata(&name) {
+-        Err(e) if e.kind() == std::io::ErrorKind::NotFound => return Ok(None),
+-        Err(e) => return Err(e.to_string()),
+-        Ok(meta) if !meta.is_file() || meta.file_type().is_symlink() => {
+-            return Err("Invalid cached speech file".into());
+-        }
+-        #[cfg(windows)]
+-        Ok(meta) if meta.file_attributes() & 0x400 != 0 => {
+-            return Err("Invalid cached speech file".into());
+-        }
+-        Ok(meta) if meta.len() > 10_000_000 => return Err("Invalid cached speech audio".into()),
+-        Ok(_) => (),
+-    }
+-    let mut bytes = Vec::new();
+@@ -185,4 +171,22 @@ fn read_named(dir: &Dir, name: &str, touch: bool) -> Result<Option<Vec<u8>>, Str
+-    let file = dir
+-        .open_with(name, &options)
+-        .map_err(|e| e.to_string())?
+-        .into_std();
++    let file = match dir.open_with(name, &options) {
++        Ok(file) => file.into_std(),
++        Err(error) if error.kind() == std::io::ErrorKind::NotFound => return Ok(None),
++        Err(error) => return Err(error.to_string()),
++    };
++    // Validate the nofollow handle we actually read, avoiding a second path open and its race.
++    let metadata = file.metadata().map_err(|e| e.to_string())?;
++    if !metadata.is_file() {
++        return Err("Invalid cached speech file".into());
++    }
++    #[cfg(windows)]
++    {
++        use std::os::windows::fs::MetadataExt as _;
++        if metadata.file_attributes() & 0x400 != 0 {
++            return Err("Invalid cached speech file".into());
++        }
++    }
++    if metadata.len() > 10_000_000 {
++        return Err("Invalid cached speech audio".into());
++    }
++    // Take<File> cannot use File's length hint; reserve it to avoid many tiny reads.
++    let mut bytes = Vec::with_capacity(metadata.len() as usize + 1);
+@@ -218,8 +221,0 @@ fn read_named(dir: &Dir, name: &str, touch: bool) -> Result<Option<Vec<u8>>, Str
+-    #[cfg(windows)]
+-    {
+-        use std::os::windows::fs::MetadataExt as _;
+-        let metadata = file.metadata().map_err(|e| e.to_string())?;
+-        if !metadata.is_file() || metadata.file_attributes() & 0x400 != 0 {
+-            return Err("Invalid cached speech file".into());
+-        }
+-    }
+diff --git a/apps/desktop/src-tauri/src/speech_tasks.rs b/apps/desktop/src-tauri/src/speech_tasks.rs
+index d977b07..28a3d5b 100644
+--- a/apps/desktop/src-tauri/src/speech_tasks.rs
++++ b/apps/desktop/src-tauri/src/speech_tasks.rs
+@@ -696,7 +696,7 @@ impl Actor {
+-                    cached_asset(
+-                        &self.connection,
+-                        &speech_cache::Inspector::new(&self.database)?,
+-                        &key,
+-                        now()?,
+-                    )?
+-                    .ok_or_else(|| "Completed speech cache unavailable".to_string())
++                    speech_cache::Inspector::new(&self.database)
++                        .and_then(|inspector| {
++                            cached_asset(&self.connection, &inspector, &key, now()?)
++                        })
++                        .and_then(|audio| {
++                            audio.ok_or_else(|| "Completed speech cache unavailable".to_string())
++                        })
+@@ -735,6 +735,13 @@ impl Actor {
+-                Ok(None) => storage::speech_owner(&self.connection, &key)
+-                    .map_err(|e| e.to_string())?
+-                    .map(|id| inspector.legacy(id))
+-                    .transpose()?
+-                    .flatten()
+-                    .is_some(),
++                Ok(None) => {
++                    let legacy = storage::speech_owner(&self.connection, &key)
++                        .map_err(|e| e.to_string())?
++                        .map(|id| inspector.legacy(id))
++                        .transpose();
++                    match legacy {
++                        Ok(audio) => audio.flatten().is_some(),
++                        Err(error) => {
++                            speech_cache::report_error(&self.database, &error);
++                            false
++                        }
++                    }
++                }
+diff --git a/apps/desktop/src-tauri/src/vocabulary.rs b/apps/desktop/src-tauri/src/vocabulary.rs
+index d8208d6..8d04383 100644
+--- a/apps/desktop/src-tauri/src/vocabulary.rs
++++ b/apps/desktop/src-tauri/src/vocabulary.rs
+@@ -11,0 +12,63 @@ pub struct DatabasePath(pub PathBuf);
++#[cfg(all(test, windows))]
++mod queue_audio_tests {
++    use super::*;
++
++    #[test]
++    fn parallel_inspection_preserves_full_checks_due_skips_and_read_only_access() {
++        let root = std::env::temp_dir().join(format!(
++            "lexique-queue-inspection-{}-{}",
++            std::process::id(),
++            std::time::SystemTime::now()
++                .duration_since(std::time::UNIX_EPOCH)
++                .unwrap()
++                .as_nanos()
++        ));
++        let directory = root.join("Lexique-data/data");
++        std::fs::create_dir_all(&directory).unwrap();
++        let path = DatabasePath(directory.join("lexique.sqlite3"));
++        let connection = Connection::open(&path.0).unwrap();
++        lexique_storage::initialize(&connection).unwrap();
++        let inspector = crate::speech_cache::Inspector::new(&path.0).unwrap();
++        for id in 1..=32 {
++            connection.execute("INSERT INTO vocabulary(id,headword,snapshot,notes,created_at,updated_at) VALUES(?1,?2,'{}','',1,1)", rusqlite::params![id, format!("word-{id}")]).unwrap();
++            connection
++                .execute(
++                    "INSERT INTO review_cards(id,vocabulary_id,kind) VALUES(?1,?1,'listening')",
++                    [id],
++                )
++                .unwrap();
++            std::fs::write(
++                root.join(format!("Lexique-data/temp/speech/{id}.ogg")),
++                b"OggSfixture",
++            )
++            .unwrap();
++        }
++        std::fs::remove_file(root.join("Lexique-data/temp/speech/2.ogg")).unwrap();
++        std::fs::write(root.join("Lexique-data/temp/speech/3.ogg"), b"BAD!").unwrap();
++        connection.execute("INSERT INTO review_progress VALUES(4,1,?1)", [r#"{"phase":"review","memory":{"stability":10,"difficulty":5},"last_review_at":900,"due_at":1010}"#]).unwrap();
++        let cards = lexique_storage::review_card_inventory(&connection).unwrap();
++        let skipped = std::collections::HashSet::from([5]);
++        // Readers must not acquire a write transaction while inspecting files.
++        connection.execute_batch("BEGIN IMMEDIATE").unwrap();
++        let (found, due) =
++            inspect_queue_audio(&path, Ok(&inspector), &cards, &skipped, 1000, true).unwrap();
++        assert_eq!(due, Some(1010));
++        assert_eq!(found.len(), 30);
++        assert_eq!(
++            found[0].1.as_ref().unwrap(),
++            &(true, Some(lexique_storage::content_hash(b"OggSfixture")))
++        );
++        assert_eq!(found[1].1.as_ref().unwrap(), &(false, None));
++        assert!(found[2].1.as_ref().unwrap_err().contains("Invalid"));
++        assert!(found.iter().all(|(id, _)| ![4, 5].contains(id)));
++        let (found, due) =
++            inspect_queue_audio(&path, Ok(&inspector), &cards, &skipped, 1000, false).unwrap();
++        assert!(found.is_empty());
++        assert_eq!(due, Some(1010));
++        connection.execute_batch("ROLLBACK").unwrap();
++        drop(inspector);
++        drop(connection);
++        std::fs::remove_dir_all(&root).unwrap();
++    }
++}
++
+@@ -381,0 +445,64 @@ pub enum UndoOutcome {
++type AudioInspection = (i64, Result<(bool, Option<String>), String>);
++
++fn inspect_queue_audio(
++    path: &DatabasePath,
++    inspector: Result<&crate::speech_cache::Inspector, &String>,
++    cards: &[lexique_storage::QueueCard],
++    skipped: &std::collections::HashSet<i64>,
++    now: i64,
++    check_audio: bool,
++) -> Result<(Vec<AudioInspection>, Option<i64>), String> {
++    let listening: Vec<_> = cards
++        .iter()
++        .filter(|card| card.kind == "listening" && !skipped.contains(&card.id))
++        .collect();
++    std::thread::scope(|scope| {
++        let mut workers = Vec::new();
++        let chunk_size = listening.len().div_ceil(16).max(1);
++        // File I/O only: each worker owns its connection, one update owns the safe directory.
++        for chunk in listening.chunks(chunk_size) {
++            workers.push(scope.spawn(move || {
++                let connection = open(path)?;
++                let mut results = Vec::new();
++                let mut next_due: Option<i64> = None;
++                for card in chunk {
++                    let progress = lexique_storage::review_progress(&connection, card.id)
++                        .map_err(|e| e.to_string())?;
++                    if let Some(due) = progress.card.due_at.filter(|due| *due > now) {
++                        next_due = Some(next_due.map_or(due, |previous| previous.min(due)));
++                        continue;
++                    }
++                    if !check_audio {
++                        continue;
++                    }
++                    let found = inspector
++                        .map_err(Clone::clone)
++                        .and_then(|inspector| {
++                            crate::speech_tasks::inspect_word(
++                                &connection,
++                                inspector,
++                                card.vocabulary_id,
++                                now,
++                            )
++                        })
++                        .map(|(audio, hash)| (audio.is_some(), hash));
++                    results.push((card.vocabulary_id, found));
++                }
++                Ok::<_, String>((results, next_due))
++            }));
++        }
++        let mut results = Vec::new();
++        let mut next_due: Option<i64> = None;
++        for worker in workers {
++            let (found, due) = worker
++                .join()
++                .map_err(|_| "Queue audio inspector panicked")??;
++            results.extend(found);
++            if let Some(due) = due {
++                next_due = Some(next_due.map_or(due, |previous| previous.min(due)));
++            }
++        }
++        Ok((results, next_due))
++    })
++}
++
+@@ -412 +538,0 @@ pub async fn review_queue(
+-        let mut checked = std::collections::HashMap::new();
+@@ -414 +539,0 @@ pub async fn review_queue(
+-        let mut next_audio_due: Option<i64> = None;
+@@ -416,32 +541,9 @@ pub async fn review_queue(
+-        for card in inventory
+-            .iter()
+-            .filter(|card| card.kind == "listening" && !skipped.contains(&card.id))
+-        {
+-            let progress = lexique_storage::review_progress(&connection, card.id)
+-                .map_err(|e| e.to_string())?;
+-            if let Some(due) = progress.card.due_at.filter(|due| *due > now as i64) {
+-                next_audio_due = Some(next_audio_due.map_or(due, |previous| previous.min(due)));
+-                continue;
+-            }
+-            if limits.new_limit == 0 && limits.review_limit == 0 {
+-                continue;
+-            }
+-            let found = checked.entry(card.vocabulary_id).or_insert_with(|| {
+-                inspector
+-                    .as_ref()
+-                    .map_err(Clone::clone)
+-                    .and_then(|inspector| {
+-                        crate::speech_tasks::inspect_word(
+-                            &connection,
+-                            inspector,
+-                            card.vocabulary_id,
+-                            now as i64,
+-                        )
+-                    })
+-                    .map(|(audio, hash)| {
+-                        if let Some(hash) = hash {
+-                            legacy.push((card.vocabulary_id, hash));
+-                        }
+-                        audio.is_some()
+-                    })
+-            });
++        let (checked, next_audio_due) = inspect_queue_audio(
++            &path,
++            inspector.as_ref(),
++            &inventory,
++            &skipped,
++            now as i64,
++            limits.new_limit != 0 || limits.review_limit != 0,
++        )?;
++        for (id, found) in checked {
+@@ -449,2 +551,5 @@ pub async fn review_queue(
+-                Ok(true) => {
+-                    verified_audio.insert(card.id);
++                Ok((true, hash)) => {
++                    verified_audio.insert(id);
++                    if let Some(hash) = hash {
++                        legacy.push((id, hash));
++                    }
+@@ -452 +557 @@ pub async fn review_queue(
+-                Ok(false) => {
++                Ok((false, _)) => {
+@@ -454 +559 @@ pub async fn review_queue(
+-                    audio_vocabulary_id.get_or_insert(card.vocabulary_id);
++                    audio_vocabulary_id.get_or_insert(id);
+@@ -458,2 +563,2 @@ pub async fn review_queue(
+-                    audio_vocabulary_id.get_or_insert(card.vocabulary_id);
+-                    audio_error = Some(error.clone());
++                    audio_vocabulary_id.get_or_insert(id);
++                    audio_error = Some(error);
+@@ -471 +576 @@ pub async fn review_queue(
+-                    && (card.kind != "listening" || verified_audio.contains(&card.id)))
++                    && (card.kind != "listening" || verified_audio.contains(&card.vocabulary_id)))
+@@ -866,0 +972,4 @@ pub fn finish_close(app: tauri::AppHandle) -> Result<(), String> {
++    crate::speech_cache::report_error(
++        &app.state::<DatabasePath>().0,
++        "[native-lifecycle] finish_close accepted",
++    );
+diff --git a/crates/storage/src/review.rs b/crates/storage/src/review.rs
+index 8d79214..4955623 100644
+--- a/crates/storage/src/review.rs
++++ b/crates/storage/src/review.rs
+@@ -496,2 +496,2 @@ pub fn review_progress(
+-    let row: Option<(i64, Option<i64>, Option<String>)> = connection.query_row(
+-        "SELECT c.id, p.revision, p.state FROM review_cards c LEFT JOIN review_progress p ON p.card_id = c.id WHERE c.id = ?1",
++    let row: Option<(i64, Option<i64>, Option<String>)> = connection.prepare_cached(
++        "SELECT c.id, p.revision, p.state FROM review_cards c LEFT JOIN review_progress p ON p.card_id = c.id WHERE c.id = ?1")?.query_row(
+diff --git a/crates/storage/src/speech_work.rs b/crates/storage/src/speech_work.rs
+index b7ff8a8..4429edd 100644
+--- a/crates/storage/src/speech_work.rs
++++ b/crates/storage/src/speech_work.rs
+@@ -148 +148 @@ pub fn word_audio_keys(connection: &Connection, id: i64) -> Result<Vec<String>,
+-    let mut query=connection.prepare("SELECT a.semantic_key FROM speech_assets a JOIN speech_owners o USING(semantic_key) WHERE o.vocabulary_id=?1 AND a.content_hash IS NOT NULL ORDER BY a.generated_at DESC,a.semantic_key LIMIT 20")?;
++    let mut query=connection.prepare_cached("SELECT a.semantic_key FROM speech_assets a JOIN speech_owners o USING(semantic_key) WHERE o.vocabulary_id=?1 AND a.content_hash IS NOT NULL ORDER BY a.generated_at DESC,a.semantic_key LIMIT 20")?;
+@@ -413,5 +413,7 @@ fn build_word(
+-        return Err(StorageError::Invalid("Speech backlog is full".into()));
+-    }
+-    registered_demand(tx, &key, 1, now, false)?;
+-    if additional {
+-        *remaining -= 1;
++        // Speech capacity must not roll back independently usable review cards.
++        tx.execute("INSERT INTO speech_tasks(semantic_key,priority,state,wake_at,error) VALUES(?1,1,'failed',?2,'Speech backlog is full') ON CONFLICT(semantic_key) DO UPDATE SET state='failed',error=excluded.error", params![key,now])?;
++    } else {
++        registered_demand(tx, &key, 1, now, false)?;
++        if additional {
++            *remaining -= 1;
++        }
+@@ -655,5 +657,2 @@ pub fn register_legacy_speech(
+-        .query_row(
+-            "SELECT content_hash FROM legacy_speech WHERE vocabulary_id=?1",
+-            [id],
+-            |r| r.get(0),
+-        )
++        .prepare_cached("SELECT content_hash FROM legacy_speech WHERE vocabulary_id=?1")?
++        .query_row([id], |r| r.get(0))
+@@ -664 +663 @@ pub fn register_legacy_speech(
+-    connection.execute("INSERT INTO legacy_speech VALUES(?1,?2) ON CONFLICT(vocabulary_id) DO UPDATE SET content_hash=excluded.content_hash WHERE content_hash<>excluded.content_hash",params![id,hash])?;
++    connection.prepare_cached("INSERT INTO legacy_speech VALUES(?1,?2) ON CONFLICT(vocabulary_id) DO UPDATE SET content_hash=excluded.content_hash WHERE content_hash<>excluded.content_hash")?.execute(params![id,hash])?;
+diff --git a/crates/storage/tests/speech_work.rs b/crates/storage/tests/speech_work.rs
+index f42718e..55cd59d 100644
+--- a/crates/storage/tests/speech_work.rs
++++ b/crates/storage/tests/speech_work.rs
+@@ -3,0 +4,45 @@ use rusqlite::{Connection, params};
++#[test]
++fn full_speech_backlog_preserves_committed_cards_and_allows_interactive_retry() {
++    let mut connection = fixture();
++    let spec = serde_json::to_string(&SpeechSpec::word("backlog", SpeechVoice::Female)).unwrap();
++    connection.execute("WITH RECURSIVE n(x) AS(SELECT 1 UNION ALL SELECT x+1 FROM n WHERE x<10000) INSERT INTO speech_assets(semantic_key,spec,context) SELECT printf('%064x',x),?1,'word' FROM n", [spec]).unwrap();
++    connection.execute("INSERT INTO speech_tasks(semantic_key,priority,state,wake_at) SELECT semantic_key,1,'queued',1000 FROM speech_assets", []).unwrap();
++    let result = add_review_batch(&mut connection, "full-backlog", &[1], 1000).unwrap();
++    assert_eq!(
++        result.items[0].created_cards, 2,
++        "Speech capacity must not roll back card creation"
++    );
++    assert!(result.items[0].error.is_none());
++    assert_eq!(result.items[0].audio_state.as_deref(), Some("failed"));
++    assert!(
++        result.items[0]
++            .audio_error
++            .as_deref()
++            .unwrap()
++            .contains("backlog")
++    );
++    let repeated = add_review_batch(&mut connection, "full-backlog", &[1], 1001).unwrap();
++    assert_eq!(repeated.items[0].created_cards, 2);
++    assert_eq!(review_cards(&connection, 1).unwrap().len(), 2);
++    let queue = review_queue_filtered(&mut connection, 1001, "UTC", |card| {
++        Ok(card.kind == "recognition")
++    })
++    .unwrap();
++    assert_eq!(queue.cards.len(), 1);
++    request_speech(
++        &mut connection,
++        &SpeechSpec::word("école", SpeechVoice::Female),
++        Some(1),
++        1002,
++        false,
++    )
++    .unwrap();
++    assert_eq!(
++        claim_speech(&mut connection, 1002, 2)
++            .unwrap()
++            .unwrap()
++            .priority,
++        0
++    );
++}
++
+diff --git a/apps/desktop/src-tauri/src/webview_diagnostics.rs b/apps/desktop/src-tauri/src/webview_diagnostics.rs
+new file mode 100644
+--- /dev/null
++++ b/apps/desktop/src-tauri/src/webview_diagnostics.rs
+@@ -0,0 +1,43 @@
++//! Native failure codes only; never persist page URLs or learning content.
++use std::path::PathBuf;
++
++use tauri::Manager;
++use webview2_com::{
++    Microsoft::Web::WebView2::Win32::{
++        COREWEBVIEW2_PROCESS_FAILED_KIND, COREWEBVIEW2_PROCESS_FAILED_REASON,
++        ICoreWebView2ProcessFailedEventArgs2,
++    },
++    ProcessFailedEventHandler,
++};
++use windows_core::Interface;
++
++pub fn attach(app: &tauri::App, database: PathBuf) -> tauri::Result<()> {
++    if let Some(window) = app.get_webview_window("main") {
++        window.with_webview(move |webview| {
++            let diagnostic_path = database.clone();
++            let handler = ProcessFailedEventHandler::create(Box::new(move |_, args| {
++                if let Some(args) = args {
++                    let mut kind = COREWEBVIEW2_PROCESS_FAILED_KIND::default();
++                    let kind_result = unsafe { args.ProcessFailedKind(&mut kind) };
++                    let detail = args.cast::<ICoreWebView2ProcessFailedEventArgs2>().and_then(|args| {
++                        let mut reason = COREWEBVIEW2_PROCESS_FAILED_REASON::default();
++                        let mut exit_code = 0;
++                        unsafe { args.Reason(&mut reason)?; args.ExitCode(&mut exit_code)?; }
++                        Ok((reason.0, exit_code))
++                    });
++                    crate::speech_cache::report_error(&diagnostic_path, &format!(
++                        "[native-lifecycle] WebView2 ProcessFailed kind={} kind_result={kind_result:?} detail={detail:?}", kind.0
++                    ));
++                }
++                Ok(())
++            }));
++            let result = unsafe {
++                webview.controller().CoreWebView2().and_then(|view| view.add_ProcessFailed(&handler, &mut 0))
++            };
++            if let Err(error) = result {
++                crate::speech_cache::report_error(&database, &format!("[native-lifecycle] WebView2 diagnostics unavailable: {error}"));
++            }
++        })?;
++    }
++    Ok(())
++}

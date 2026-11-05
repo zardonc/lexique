@@ -61,6 +61,11 @@ class PortableTests(unittest.TestCase):
             description = zipped.read(prefix + "README.txt").decode("utf-8")
             self.assertIn("notes", description)
             self.assertNotIn("not notes", description)
+            self.assertIn("scoring", description.lower())
+            self.assertIn("Evergreen Standalone Installer", description)
+            self.assertIn("https://developer.microsoft.com/microsoft-edge/webview2/", description)
+            self.assertIn("does not download, install, or bundle WebView2", description)
+            self.assertNotIn("Scoring and a full dictionary are not included", description)
         after = self.files()
         self.assertTrue(all(after[path] == content for path, content in before.items()))
 
@@ -104,6 +109,27 @@ class PortableTests(unittest.TestCase):
         result = package(self.root, self.root / "new delivery")
         self.assertTrue(Path(result["archive"]).is_file())
         self.assertEqual((self.output / (self.name + ".zip")).read_bytes(), b"old delivery")
+
+    def test_arm64_package_checks_architecture_and_preserves_dictionary(self):
+        binary = bytearray((self.root / "target/release/lexique-desktop.exe").read_bytes())
+        struct.pack_into("<H", binary, 0x84, 0xAA64)
+        self.write("target/aarch64-pc-windows-msvc/release/lexique-desktop.exe", binary)
+        self.write("target/aarch64-pc-windows-msvc/release/dictionary/dictionary.sqlite3", b"verified dictionary")
+        result = package(self.root, architecture="arm64")
+        with zipfile.ZipFile(result["archive"]) as zipped:
+            prefix = "Lexique-0.1.0-windows-arm64-portable/"
+            self.assertEqual(zipped.read(prefix + "dictionary/dictionary.sqlite3"), b"verified dictionary")
+            self.assertIn("Windows 11 ARM64", zipped.read(prefix + "README.txt").decode("utf-8"))
+            self.assertFalse(any("Lexique-data/" in name for name in zipped.namelist()))
+
+    def test_arm64_rejects_x64_binary_without_creating_delivery(self):
+        binary = (self.root / "target/release/lexique-desktop.exe").read_bytes()
+        self.write("target/aarch64-pc-windows-msvc/release/lexique-desktop.exe", binary)
+        before = self.files()
+        with self.assertRaisesRegex(ValueError, "arm64"):
+            package(self.root, architecture="arm64")
+        self.assertEqual(self.files(), before)
+        self.assertFalse(self.output.exists())
 
 
 if __name__ == "__main__":

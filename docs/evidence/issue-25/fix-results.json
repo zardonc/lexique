@@ -1,0 +1,318 @@
+{
+  "format": 1,
+  "issue": 25,
+  "date": "2026-11-04",
+  "review_range": {
+    "base": "c9d8bf8a8707b13abcf2919caa850bfc6f40dcdc",
+    "head": "3c48180dda8abd47009d86441c28647bb22d658f"
+  },
+  "scope": "Resolve the three reported review findings; preserve the historical S0 observation and existing product work.",
+  "resolved_findings": [
+    {
+      "axis": "Standards",
+      "priority": "P1",
+      "finding": "The committed checkout could not build the observer without uncommitted #24 sources.",
+      "status": "resolved",
+      "evidence": "Clean detached checkout builds from the pinned base and hash-verified source patch."
+    },
+    {
+      "axis": "Standards",
+      "priority": "P2",
+      "finding": "Direct resource modes bypassed output ownership and overwrote existing Ogg/PCM files.",
+      "status": "resolved",
+      "evidence": "Both public modes and bounded synthesis require new owned directories; regression checks cover real writes, subprocesses and timeout cleanup."
+    },
+    {
+      "axis": "Spec",
+      "priority": "P1",
+      "finding": "The frozen source inputs lacked a reconstructible snapshot or patch.",
+      "status": "resolved",
+      "evidence": "frozen-source.patch plus source-inputs.json reproduce all nine historical observer source hashes and the locked dependency inputs."
+    }
+  ],
+  "reproduction": {
+    "original": "IndexError at the AudioInspection anchor; --large and --child 0 overwrite both 0.ogg and 0.f32 with injected synthesis and real file writes.",
+    "original_artifact": "target/issue-25/debug-repro-20261104-u3bwy3ai/results.json",
+    "minimal_command": "python -B -X utf8 target/issue-25/debug-repro-20261104-u3bwy3ai/minimal_review_regressions.py <checkout>",
+    "original_exit_code": 1,
+    "fixed_exit_code": 0,
+    "artifact": "target/issue-25/fix-validation-20261104-r_8mqu8t/minimal-green.json"
+  },
+  "source_reconstruction": {
+    "status": "passed",
+    "compile_seconds": 141.998725500016,
+    "cargo_compile_seconds": 138.95867530000396,
+    "probe_compile_seconds": 3.040050200012047,
+    "binary_sha256": "3f34f8a8c51d896f069193dea798d9a3d279dcf46bd1c5577c18d6e24028e212",
+    "source_patch_sha256": "8311a0cfa3499436ef7a70e4002881fb4032a80a7812acb9bb77b97209e31146",
+    "generated_files": 9,
+    "exact_historical_sources": true,
+    "source_base": "c9d8bf8a8707b13abcf2919caa850bfc6f40dcdc",
+    "checkout_head": "3c48180dda8abd47009d86441c28647bb22d658f"
+  },
+  "checks": {
+    "s0_regressions": {
+      "status": "passed",
+      "tests": 20,
+      "command": "python -B -X utf8 -m unittest discover -s scripts -p 'test_*s0*.py' -v",
+      "cwd": "target/issue-25/fix-validation-20261104-r_8mqu8t/checkout",
+      "artifact": "target/issue-25/fix-validation-20261104-r_8mqu8t/isolated-s0-tests.log"
+    },
+    "frontend": {
+      "status": "passed",
+      "commands": [
+        "pnpm lint",
+        "pnpm typecheck",
+        "pnpm build"
+      ]
+    },
+    "format_and_syntax": {
+      "status": "passed",
+      "commands": [
+        "cargo fmt --all --check",
+        "rustfmt --edition 2024 --check docs/evidence/issue-25/baseline_probe.rs",
+        "node --check scripts/s0-clock.mjs",
+        "node --check apps/desktop/e2e/native-s0-baseline.mjs"
+      ]
+    },
+    "rust_precompile": {
+      "status": "passed",
+      "command": "pnpm rust:test:build",
+      "cwd": "target/issue-25/fix-validation-20261104-r_8mqu8t/checkout/target/issue-25/build/source",
+      "artifact": "target/issue-25/fix-validation-20261104-r_8mqu8t/rust-precompile.log",
+      "environment": {
+        "CARGO_TARGET_DIR": "C:/Users/inthe/IdeaProjects/lexique/target/issue-25/fix-validation-20261104-r_8mqu8t/checkout/target/issue-25/cargo",
+        "python": "uv python find 3.14; prepend its directory to PATH"
+      }
+    },
+    "rust_execution": {
+      "status": "passed",
+      "tests": 94,
+      "failed": 0,
+      "ignored": 0,
+      "command": "pnpm test:rust",
+      "hard_timeout_seconds": 60,
+      "artifact": "target/issue-25/fix-validation-20261104-r_8mqu8t/rust-tests.log",
+      "environment": {
+        "CARGO_TARGET_DIR": "C:/Users/inthe/IdeaProjects/lexique/target/issue-25/fix-validation-20261104-r_8mqu8t/checkout/target/issue-25/cargo",
+        "python": "uv python find 3.14; prepend its directory to PATH"
+      }
+    },
+    "backend": {
+      "status": "passed",
+      "cases": {
+        "100-new": {
+          "first_status": "passed",
+          "warm_attempts": 100,
+          "failures": 0,
+          "artifact": "target/issue-25/fix-validation-20261104-r_8mqu8t/checkout/target/issue-25/100-new/summary.json"
+        },
+        "1000-mixed": {
+          "first_status": "passed",
+          "warm_attempts": 100,
+          "failures": 0,
+          "artifact": "target/issue-25/fix-validation-20261104-r_8mqu8t/checkout/target/issue-25/1000-mixed/summary.json"
+        },
+        "10000-backlog-missing50": {
+          "first_status": "passed",
+          "warm_attempts": 100,
+          "failures": 0,
+          "artifact": "target/issue-25/fix-validation-20261104-r_8mqu8t/checkout/target/issue-25/10000-backlog-missing50/summary.json"
+        }
+      },
+      "fixed_operations": 100,
+      "seed": 250001,
+      "oracle_equal": true,
+      "original_regressions": "Q04, Q10 and shared writer reproduced; --require-contract intentionally exits 1.",
+      "commands_artifact": "target/issue-25/fix-validation-20261104-r_8mqu8t/backend-checks.json"
+    },
+    "resources": {
+      "status": "passed",
+      "model_trials": 12,
+      "audio_outputs": 145,
+      "large_audio_status": "passed",
+      "audio_directory": "audio",
+      "hard_timeout_seconds": 60,
+      "artifact": "target/issue-25/fix-validation-20261104-r_8mqu8t/checkout/target/issue-25/resources-matrix/results.json",
+      "budget_comparisons": [
+        {
+          "background": 0,
+          "total": 1,
+          "attempts": 3,
+          "successes": 3,
+          "p0_median_ms": 465.0567999924533,
+          "p0_max_ms": 517.1870000194758,
+          "relative": 1,
+          "private_max": 807497728,
+          "working_set_max": 299667456,
+          "accepted": true,
+          "percentiles": "not claimed"
+        },
+        {
+          "background": 1,
+          "total": 2,
+          "attempts": 3,
+          "successes": 3,
+          "p0_median_ms": 591.1202999996021,
+          "p0_max_ms": 594.9498999980278,
+          "relative": 1.2710711896034947,
+          "private_max": 912142336,
+          "working_set_max": 338735104,
+          "accepted": true,
+          "percentiles": "not claimed"
+        },
+        {
+          "background": 2,
+          "total": 3,
+          "attempts": 3,
+          "successes": 3,
+          "p0_median_ms": 749.0091000217944,
+          "p0_max_ms": 759.5885999617167,
+          "relative": 1.6105755254711875,
+          "private_max": 915591168,
+          "working_set_max": 388681728,
+          "accepted": false,
+          "percentiles": "not claimed"
+        },
+        {
+          "background": 4,
+          "total": 5,
+          "attempts": 3,
+          "successes": 3,
+          "p0_median_ms": 1088.916299981065,
+          "p0_max_ms": 1101.693200005684,
+          "relative": 2.341469472113375,
+          "private_max": 1124675584,
+          "working_set_max": 435941376,
+          "accepted": false,
+          "percentiles": "not claimed"
+        }
+      ]
+    },
+    "direct_resource_modes": {
+      "status": "passed",
+      "modes": [
+        "--large",
+        "--child 0"
+      ],
+      "commands_artifact": "target/issue-25/fix-validation-20261104-r_8mqu8t/runtime-checks.json"
+    },
+    "native_decode": {
+      "legacy": {
+        "status": "passed",
+        "decoded": 145,
+        "header_fixture_rejected": true,
+        "hard_timeout_seconds": 60,
+        "artifact": "target/issue-24/s0-fix-legacy-decode-20261104-r8m/s0-results.json"
+      },
+      "audio_subdirectory": {
+        "status": "passed",
+        "decoded": 145,
+        "header_fixture_rejected": true,
+        "hard_timeout_seconds": 60,
+        "artifact": "target/issue-24/s0-fix-new-decode-20261104-r8m/s0-results.json"
+      }
+    },
+    "worker_phases": {
+      "status": "passed",
+      "real_tasks": 6,
+      "publication_calls": {
+        "committed_enqueue_to_claim": 6,
+        "publication_intent": 6,
+        "publication_tmp_write": 6,
+        "publication_tmp_sync": 6,
+        "publication_rename": 6,
+        "publication_readback": 6,
+        "publication_db_complete": 6
+      },
+      "commands_artifact": "target/issue-25/fix-validation-20261104-r_8mqu8t/runtime-checks.json",
+      "artifact": "target/issue-25/fix-validation-20261104-r_8mqu8t/worker-phases.stdout"
+    },
+    "admitted_inputs": {
+      "status": "passed",
+      "model_assets_sha256": {
+        "assets/duration_predictor.int8.onnx": "c3eb91414d5ff8a7a239b7fe9e34e7e2bf8a8140d8375ffb14718b1c639325db",
+        "assets/text_encoder.int8.onnx": "c7befd5ea8c3119769e8a6c1486c4edc6a3bc8365c67621c881bbb774b9902ff",
+        "assets/tts.json": "42078d3aef1cd43ab43021f3c54f47d2d75ceb4e75f627f118890128b06a0d09",
+        "assets/unicode_indexer.bin": "8402ca48e5189a8950138580b0fff64db6f072f24ac07cd54ba8b2fbb9883b30",
+        "assets/vector_estimator.int8.onnx": "20cd86fa5c6effedfda0e7cffe5b0569ca401c440a0c3a1d72bf39286c0db3fd",
+        "assets/vocoder.int8.onnx": "e923d60f53f95eb1ce235f1dc33ec56d9c057823c96fa6f8acf98f32b0da6152",
+        "assets/voice.bin": "67d5209b0ee8ce6c74105ffbe12fe6a7628aea3b4ba2fcb308a4a67938a93ce8"
+      },
+      "native_binary_sha256": "57334356d84addf966e3a639d0fdb7cea38d936d96171f6f0f15fb46de8ed77b",
+      "schema": {
+        "schema": 11,
+        "journal_mode": "delete",
+        "synchronous": 2,
+        "sqlite_version": "3.51.1",
+        "sqlite_source_id": "2025-11-28 17:28:25 281fc0e9afc38674b9b0991943b9e9d1e64c6cbdb133d35f6f5c87ff6af38a88"
+      },
+      "budget_sha256": "edf8ded6e0fbcf327843b3c809d3715986184e250800c6fb0a9999041c72568a"
+    },
+    "preserved_work": {
+      "status": "passed",
+      "unrelated_recorded_file_changes": [],
+      "fingerprints_artifact": "target/issue-25/fix-validation-20261104-r_8mqu8t/workspace-before.json"
+    },
+    "delivery_checks": {
+      "status": "passed",
+      "diff_check": "passed",
+      "local_links_checked": 11,
+      "json_files_valid": 2,
+      "unrelated_recorded_file_changes": 0,
+      "owned_processes_remaining": 0,
+      "artifact": "target/issue-25/fix-validation-20261104-r_8mqu8t/delivery-checks.json"
+    }
+  },
+  "limitations": [
+    "Verification is Windows x64; other platforms, fresh offline packages, release readiness and power-loss recovery were not tested.",
+    "Three representative scale cases were rerun; the full historical 18-case matrix and 50k execution were not rerun.",
+    "Native decoding uses the recorded fixed application binary; the new observer binary has its own hash and is not claimed byte-identical to the historical observer.",
+    "Current 2/4-background model comparisons exceed the unchanged 1.5 relative latency budget; these results are retained and do not establish production concurrency acceptance.",
+    "The existing Q04 contract failure belongs to #26; this change preserves the historical product behavior."
+  ],
+  "final_review": {
+    "date": "2026-11-04",
+    "base": "c9d8bf8a8707b13abcf2919caa850bfc6f40dcdc",
+    "reviewed_snapshot": "006cfa81a8ca9db417ae679a36fce9644f43e4e2",
+    "diff_command": "git diff c9d8bf8a8707b13abcf2919caa850bfc6f40dcdc...HEAD",
+    "changed_files": 21,
+    "standards": {
+      "status": "passed",
+      "hard_violations": 0,
+      "advisories": 1,
+      "worst_priority": "P3",
+      "advisory": "Possible duplicated browser AudioContext/decode/sample summary in native-s0-baseline.mjs lines 42-49 and 155-163; maintenance heuristic, not a documented-rule violation or closure blocker."
+    },
+    "spec": {
+      "status": "passed",
+      "actionable_findings": 0,
+      "worst_priority": null
+    },
+    "fresh_checks": {
+      "s0_regressions": { "status": "passed", "tests": 20, "seconds": 25.996 },
+      "node_native_syntax": "passed",
+      "rust_format": "passed",
+      "observer_format": "passed"
+    },
+    "evidence_reuse": {
+      "unchanged_executable_and_frozen_inputs": 7,
+      "raw_artifacts_verified": 16,
+      "historical_observer_sources_verified": 9,
+      "model_assets_verified": 7,
+      "native_decoded_per_layout": 145,
+      "native_header_fixture_rejected": true,
+      "native_owned_workers_after_exit": 0
+    },
+    "artifact_directory": "target/issue-25/review-again-20261104-6fw3sby8",
+    "closure_eligible": true,
+    "review_execution": "Fresh independent contexts; Astra could not start, inherited model completed each review after rate-limit resumptions.",
+    "delivery_note": "The following delivery object records the earlier validation snapshot; current publication and closure are recorded by Git and GitHub issue #25."
+  },
+  "delivery": {
+    "commit_or_push_performed": false,
+    "issue_state": "OPEN",
+    "artifacts_retained_under": "target/issue-25/fix-validation-20261104-r_8mqu8t",
+    "task_processes_stopped": true
+  }
+}

@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-speech-retry-missing"
+description = "Enables the speech_retry_missing command without any pre-configured scope."
+commands.allow = ["speech_retry_missing"]
+
+[[permission]]
+identifier = "deny-speech-retry-missing"
+description = "Denies the speech_retry_missing command without any pre-configured scope."
+commands.deny = ["speech_retry_missing"]
