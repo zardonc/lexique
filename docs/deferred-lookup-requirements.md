@@ -22,7 +22,7 @@
 | C1 | MDX 重定向、词条内跳转、MDD 音频 / 媒体、多个词典展开 | [#3](https://github.com/zardonc/lexique/issues/3) 的格式与媒体验证 | 明确失败 / 循环边界，外部 HTML 与原生权限隔离；不默认照搬 Shadow DOM 或过滤器实现 |
 | C2 | 跨词典摘录例句并汇集到同词独立学习层 | 合法资源、文本提取与生词记录身份已落实后 | 摘录来源、去重、编辑方式和明确保存；附件的自动建档 / 自动入库尚未确认 |
 | C3 | 分级离线语音及可选在线音频缓存 | TTS 组合验证 [#5](https://github.com/zardonc/lexique/issues/5)、[#6](https://github.com/zardonc/lexique/issues/6)、[#7](https://github.com/zardonc/lexique/issues/7) 与 M3 门槛 | 静态音频、模型和媒体分别核查许可；不采纳附件的体积、延迟、去重比例承诺，在线部分另行确认 |
-| C4 | 手机浏览器或直接查看 Sheet 时使用微型摘要与独立笔记 | M4 同步格式与 M6 浏览器持久化 / WASM 门槛 | 不提前实现附件 SQL、同步状态机或凭据表；不在资源缺失时清空用户内容 |
+| C4 | 手机浏览器内使用微型摘要与独立笔记，按需生成应用外查看导出 | M4 [文件同步设计](sync-design.md)与 M6 IndexedDB / WASM 门槛 | 较早直接查看 Sheet 的候选由 #1 的 2026-11-02 同步方向修订替代；不提前实现附件 SQL / 凭据表，不在资源缺失时清空用户内容 |
 
 ## 回收规则
 
