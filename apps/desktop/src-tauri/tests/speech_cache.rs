@@ -6,6 +6,83 @@ mod speech_cache;
 
 use std::path::PathBuf;
 
+/// Executed explicitly by native-crash-24.mjs after precompilation. The native
+/// application performs the restart/recovery assertions against these real files.
+#[test]
+#[ignore = "subprocess crash fixture; requires explicit isolated paths"]
+fn publication_crash_fixture() {
+    use lexique_storage::*;
+    let database = PathBuf::from(std::env::var_os("LEXIQUE_TEST_CRASH_DATABASE").unwrap());
+    let connection = rusqlite::Connection::open(&database).unwrap();
+    initialize(&connection).unwrap();
+    let inspector = speech_cache::Inspector::new(&database).unwrap();
+    let point = std::env::var("LEXIQUE_TEST_CRASH_POINT").unwrap();
+    let bytes = include_bytes!(
+        "../../../../docs/evidence/issue-14/supertonic-opus/female-normal-01-48k.opus"
+    );
+    if point.starts_with("gc_") {
+        let key = register_speech(
+            &connection,
+            &SpeechSpec::word("temporary", SpeechVoice::Female),
+        )
+        .unwrap();
+        let version = prepare_source_audio(
+            &connection,
+            &key,
+            &content_hash(bytes),
+            bytes.len() as i64,
+            1000,
+        )
+        .unwrap();
+        inspector
+            .publish_version(&version.physical_locator, &version.content_hash, bytes)
+            .unwrap();
+        verify_audio_content(&connection, &version.locator, bytes.len() as i64).unwrap();
+        complete_source_audio(&connection, &version.locator).unwrap();
+        let gc = mark_audio_gc(&connection, &version.locator, 605800)
+            .unwrap()
+            .unwrap();
+        speech_cache::crash_boundary("gc_marked");
+        assert!(
+            speech_cache::remove_asset(&database, &version.physical_locator, &version.content_hash)
+                .unwrap()
+        );
+        speech_cache::crash_boundary("gc_deleted");
+        assert!(finish_audio_gc(&connection, &version.locator, gc.generation).unwrap());
+        speech_cache::crash_boundary("gc_finished");
+    } else {
+        let now = std::time::SystemTime::now()
+            .duration_since(std::time::UNIX_EPOCH)
+            .unwrap()
+            .as_secs() as i64;
+        let version = prepare_audio_version(
+            &connection,
+            1,
+            None,
+            &content_hash(bytes),
+            bytes.len() as i64,
+            None,
+            0,
+            now,
+        )
+        .unwrap();
+        speech_cache::crash_boundary("intent_committed");
+        inspector
+            .publish_version(&version.physical_locator, &version.content_hash, bytes)
+            .unwrap();
+        let read = inspector
+            .read_asset(&version.physical_locator, &version.content_hash)
+            .unwrap()
+            .unwrap();
+        assert_eq!(read, bytes);
+        verify_audio_content(&connection, &version.locator, read.len() as i64).unwrap();
+        speech_cache::crash_boundary("readback");
+        assert!(complete_audio_version(&connection, &version.locator, now).unwrap());
+        speech_cache::crash_boundary("db_complete");
+    }
+    panic!("unknown/unreached crash point: {point}");
+}
+
 struct Cache(PathBuf);
 
 impl Cache {
@@ -49,6 +126,113 @@ impl Drop for Cache {
         assert!(self.0.starts_with(owned));
         std::fs::remove_dir_all(&self.0).unwrap();
     }
+}
+
+#[test]
+fn reconciliation_advances_in_bounded_chunks_and_preserves_unregistered_files() {
+    let cache = Cache::new();
+    let database = cache.database();
+    let connection = rusqlite::Connection::open_in_memory().unwrap();
+    lexique_storage::initialize(&connection).unwrap();
+    let inspector = speech_cache::Inspector::new(&database).unwrap();
+    let bytes = b"OggSunknown";
+    for index in 0..450 {
+        std::fs::write(
+            cache.speech().join(format!("unregistered-{index}.ogg")),
+            bytes,
+        )
+        .unwrap();
+    }
+    let unknown = format!(
+        "s-{}-{}.ogg",
+        "a".repeat(64),
+        lexique_storage::content_hash(bytes)
+    );
+    std::fs::write(cache.speech().join(&unknown), bytes).unwrap();
+    let mut scan = speech_cache::Reconciler::new(&database).unwrap();
+    assert!(!scan.step(&connection, &database, 1000, || false).unwrap());
+    assert!(scan.report.in_progress);
+    assert_eq!(scan.report.scanned_entries, 200);
+    for _ in 0..2 {
+        scan.step(&connection, &database, 1000, || false).unwrap();
+    }
+    assert!(!scan.report.in_progress);
+    assert_eq!(scan.report.unknown_files, 451);
+    assert_eq!(scan.report.file_bytes, 451 * bytes.len() as u64);
+    assert!(scan.report.allocated_bytes.unwrap() >= scan.report.file_bytes);
+    assert_eq!(scan.report.scan_failures, 0);
+    assert_eq!(std::fs::read(cache.speech().join(unknown)).unwrap(), bytes);
+    drop(inspector);
+}
+
+#[test]
+fn occupied_gc_file_stays_marked_until_deletion_can_finish() {
+    use lexique_storage::*;
+    use std::os::windows::fs::OpenOptionsExt;
+    let cache = Cache::new();
+    let connection = rusqlite::Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    let key = register_speech(
+        &connection,
+        &SpeechSpec::word("temporary", SpeechVoice::Female),
+    )
+    .unwrap();
+    let bytes = b"OggSgc-owned";
+    let version = prepare_source_audio(
+        &connection,
+        &key,
+        &content_hash(bytes),
+        bytes.len() as i64,
+        1000,
+    )
+    .unwrap();
+    let inspector = speech_cache::Inspector::new(&cache.database()).unwrap();
+    inspector
+        .publish_version(&version.physical_locator, &version.content_hash, bytes)
+        .unwrap();
+    verify_audio_content(&connection, &version.locator, bytes.len() as i64).unwrap();
+    complete_source_audio(&connection, &version.locator).unwrap();
+    let gc = mark_audio_gc(&connection, &version.locator, 605800)
+        .unwrap()
+        .unwrap();
+    let path = cache.speech().join(format!(
+        "s-{}-{}.ogg",
+        version.physical_locator, version.content_hash
+    ));
+    let occupied = std::fs::OpenOptions::new()
+        .read(true)
+        .share_mode(3)
+        .open(&path)
+        .unwrap();
+    let error = speech_cache::remove_asset(
+        &cache.database(),
+        &version.physical_locator,
+        &version.content_hash,
+    )
+    .unwrap_err();
+    fail_audio_gc(&connection, &version.locator, gc.generation, &error).unwrap();
+    assert_eq!(std::fs::read(&path).unwrap(), bytes);
+    assert_eq!(
+        connection
+            .query_row(
+                "SELECT gc_state FROM speech_versions WHERE locator=?1",
+                [&version.locator],
+                |row| row.get::<_, String>(0)
+            )
+            .unwrap(),
+        "marked"
+    );
+    drop(occupied);
+    assert!(
+        speech_cache::remove_asset(
+            &cache.database(),
+            &version.physical_locator,
+            &version.content_hash
+        )
+        .unwrap()
+    );
+    assert!(finish_audio_gc(&connection, &version.locator, gc.generation).unwrap());
+    assert!(!path.exists());
 }
 
 #[test]

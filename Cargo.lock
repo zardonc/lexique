@@ -384,8 +384,6 @@ dependencies = [
 [[package]]
 name = "chrono-tz"
 version = "0.10.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a6139a8597ed92cf816dfb33f5dd6cf0bb93a6adc938f11039f371bc5bcd26c3"
 dependencies = [
  "chrono",
  "phf 0.12.1",
@@ -1867,6 +1865,8 @@ dependencies = [
  "serde_json",
  "tauri",
  "tauri-build",
+ "webview2-com",
+ "windows-core",
 ]
 
 [[package]]

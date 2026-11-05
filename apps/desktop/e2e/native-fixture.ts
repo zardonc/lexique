@@ -36,7 +36,7 @@ class NativeFixture {
   private readonly defaults: Record<string, unknown>;
 
   constructor(private readonly responses: Readonly<Record<string, readonly Reply[]>>, lookup: typeof dictionary) {
-    this.defaults = { runtime_status: { version: '0.1.0', schemaVersion: 11, storage: 'sqlite' },
+    this.defaults = { runtime_status: { version: '0.1.0', schemaVersion: 17, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } },
       dictionary_lookup: lookup, vocabulary_find: null, vocabulary_list: [], vocabulary_sort: 'updated-desc', finish_close: null,
       speech_preferences: { voice: 'female', speed: 'normal' }, review_settings: { retention_percent: 90, new_limit: 20, review_limit: 50, new_cards_ignore_review_limit: false },
       review_queue: { queue: { cards: [], reason: null, available_at: null }, record: null, audio_pending: false, audio_error: null }, review_cards: [], speech_cached: null,
@@ -68,7 +68,8 @@ class NativeFixture {
     if (command === 'review_add_batch') return this.batch(args);
     this.settings(command, args);
     if (command === 'review_availability') return this.availability();
-    return command === 'vocabulary_sort' ? args?.sort ?? this.defaults[command] : this.defaults[command];
+    const value=command === 'vocabulary_sort' ? args?.sort ?? this.defaults[command] : this.defaults[command];
+    return command === 'review_queue' ? this.queueResponse(value) : value;
   }
   private event(command: string, args?: Record<string, unknown>) {
     if (command === 'plugin:event|listen') {
@@ -89,7 +90,17 @@ class NativeFixture {
     if (response.error !== undefined) throw response.error;
     if (command === 'vocabulary_save') this.defaults.vocabulary_find = (response.value as { record: unknown }).record;
     if (command === 'review_add_batch') return this.batchResponse(response.value, args);
-    return response.value;
+    return command === 'review_queue' ? this.queueResponse(response.value) : response.value;
+  }
+  private queueResponse(value: unknown) {
+    const view=value as { queue: { cards: { id:number; vocabulary_id:number; kind:string }[] }; record:typeof record|null; audio_pending:boolean; window?:unknown };
+    if (!view || view.window !== undefined) return value;
+    const audio=this.responses.speech_cached?.[0]?.value ?? [79,103,103,83];
+    return { ...view, summary: { admitted_count:view.queue.cards.length,audio_pending_count:view.audio_pending?1:0,missing_vocabulary_ids:[],verification_pending:false,learning_day:'2026-11-04',timezone:'UTC',revision:0,unknown_legacy:false },
+      window:view.queue.cards.map((card)=>({ card,record:{...view.record,id:card.vocabulary_id},progress:this.responses.review_progress?.[0]?.value ?? this.defaults.review_progress,
+        version:card.kind==='listening'?'a'.repeat(64):null,content_hash:card.kind==='listening'?'b'.repeat(64):null,audio:card.kind==='listening'?audio:null })),
+      delta: { before_revision:null,after_revision:0,removed:[],order:view.queue.cards.map((card)=>card.id) },
+      metrics:{metadata_candidates:view.queue.cards.length,strict_probes:0,compressed_bytes:0,payload_bytes:0,validation_wait_ms:0,metadata_loaded_rows:0,parsed_progress:0,metadata_rebuilt:false,rebuild_reason:null,database_ms:0} };
   }
   private batchResponse(value: unknown, args?: Record<string, unknown>) {
     const batch = value as { operation: string };

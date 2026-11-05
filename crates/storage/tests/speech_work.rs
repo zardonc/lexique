@@ -2,6 +2,107 @@ use lexique_storage::*;
 use rusqlite::{Connection, params};
 
 #[test]
+fn batch_audio_candidates_match_existing_expiry_ownership_and_selection_rules() {
+    let connection = fixture();
+    for index in 0..25 {
+        let spec = SpeechSpec::word(&format!("candidate-{index}"), SpeechVoice::Female);
+        let key = register_speech(&connection, &spec).unwrap();
+        connection
+            .execute("INSERT INTO speech_owners VALUES(?1,1)", [&key])
+            .unwrap();
+        publish_speech(
+            &connection,
+            &key,
+            &content_hash(format!("output-{index}").as_bytes()),
+            1000 + index,
+        )
+        .unwrap();
+    }
+    // A shared version stays retained past expiry, while GC candidates are excluded.
+    let keys = word_audio_keys(&connection, 1).unwrap();
+    connection
+        .execute("INSERT INTO speech_owners VALUES(?1,2)", [&keys[0]])
+        .unwrap();
+    connection
+        .execute(
+            "UPDATE speech_assets SET gc_pending=1 WHERE semantic_key=?1",
+            [&keys[1]],
+        )
+        .unwrap();
+    connection
+        .execute(
+            "UPDATE speech_assets SET retain=0,expires_at=1000 WHERE semantic_key=?1",
+            [&keys[2]],
+        )
+        .unwrap();
+    for now in [1001, 1_000_000] {
+        let batch = word_audio_assets(&connection, &[1, 2, 999], now).unwrap();
+        for id in [1, 2, 999] {
+            let expected: Vec<_> = word_audio_keys(&connection, id)
+                .unwrap()
+                .into_iter()
+                .filter_map(|key| speech_asset(&connection, &key, now).unwrap())
+                .collect();
+            let actual = batch.get(&id).map_or(&[][..], Vec::as_slice);
+            assert_eq!(
+                serde_json::to_value(actual).unwrap(),
+                serde_json::to_value(expected).unwrap()
+            );
+        }
+    }
+    assert!(
+        word_audio_assets(&connection, &[], 1000)
+            .unwrap()
+            .is_empty()
+    );
+}
+
+#[test]
+fn full_speech_backlog_preserves_committed_cards_and_allows_interactive_retry() {
+    let mut connection = fixture();
+    let spec = serde_json::to_string(&SpeechSpec::word("backlog", SpeechVoice::Female)).unwrap();
+    connection.execute("WITH RECURSIVE n(x) AS(SELECT 1 UNION ALL SELECT x+1 FROM n WHERE x<10000) INSERT INTO speech_assets(semantic_key,spec,context) SELECT printf('%064x',x),?1,'word' FROM n", [spec]).unwrap();
+    connection.execute("INSERT INTO speech_tasks(semantic_key,priority,state,wake_at) SELECT semantic_key,1,'queued',1000 FROM speech_assets", []).unwrap();
+    let result = add_review_batch(&mut connection, "full-backlog", &[1], 1000).unwrap();
+    assert_eq!(
+        result.items[0].created_cards, 2,
+        "Speech capacity must not roll back card creation"
+    );
+    assert!(result.items[0].error.is_none());
+    assert_eq!(result.items[0].audio_state.as_deref(), Some("failed"));
+    assert!(
+        result.items[0]
+            .audio_error
+            .as_deref()
+            .unwrap()
+            .contains("backlog")
+    );
+    let repeated = add_review_batch(&mut connection, "full-backlog", &[1], 1001).unwrap();
+    assert_eq!(repeated.items[0].created_cards, 2);
+    assert_eq!(review_cards(&connection, 1).unwrap().len(), 2);
+    let queue = review_queue_filtered(&mut connection, 1001, "UTC", |card| {
+        Ok(card.kind == "recognition")
+    })
+    .unwrap();
+    assert_eq!(queue.cards.len(), 1);
+    request_speech(
+        &mut connection,
+        &SpeechSpec::word("école", SpeechVoice::Female),
+        Some(1),
+        1002,
+        false,
+    )
+    .unwrap();
+    assert_eq!(
+        claim_speech(&mut connection, 1002, 2)
+            .unwrap()
+            .unwrap()
+            .priority,
+        0
+    );
+}
+
+#[test]
 fn new_batch_rechecks_completed_audio_without_reviving_cancelled_or_failed_tasks() {
     let mut connection = fixture();
     add_review_batch(&mut connection, "first", &[1, 2], 1000).unwrap();
@@ -153,8 +254,44 @@ fn legacy_metadata_is_registered_in_atomic_bounded_chunks_without_rewriting_unch
     );
     register_legacy_speeches(&mut connection, &hashes).unwrap();
     let before = connection.total_changes();
+    static TRANSACTIONS: std::sync::atomic::AtomicUsize = std::sync::atomic::AtomicUsize::new(0);
+    fn count_transactions(event: rusqlite::trace::TraceEvent<'_>) {
+        if let rusqlite::trace::TraceEvent::Stmt(_, sql) = event
+            && sql.starts_with("BEGIN")
+        {
+            TRANSACTIONS.fetch_add(1, std::sync::atomic::Ordering::Relaxed);
+        }
+    }
+    connection.trace_v2(
+        rusqlite::trace::TraceEventCodes::SQLITE_TRACE_STMT,
+        Some(count_transactions),
+    );
     register_legacy_speeches(&mut connection, &hashes).unwrap();
+    connection.trace_v2(rusqlite::trace::TraceEventCodes::empty(), None);
     assert_eq!(connection.total_changes(), before);
+    assert_eq!(TRANSACTIONS.load(std::sync::atomic::Ordering::Relaxed), 0);
+    let changed = vec![(1, "c".repeat(64)), (2, "d".repeat(64))];
+    connection.commit_hook(Some(|| true)).unwrap();
+    assert!(register_legacy_speeches(&mut connection, &changed).is_err());
+    connection.commit_hook(None::<fn() -> bool>).unwrap();
+    let retained: String = connection
+        .query_row(
+            "SELECT content_hash FROM legacy_speech WHERE vocabulary_id=1",
+            [],
+            |row| row.get(0),
+        )
+        .unwrap();
+    assert_eq!(retained, hashes[0].1);
+    register_legacy_speeches(&mut connection, &changed).unwrap();
+    let updated: String = connection
+        .query_row(
+            "SELECT content_hash FROM legacy_speech WHERE vocabulary_id=1",
+            [],
+            |row| row.get(0),
+        )
+        .unwrap();
+    assert_eq!(updated, changed[0].1);
+    assert!(register_legacy_speeches(&mut connection, &[(1, "invalid".into())]).is_err());
     assert!(
         speech_asset(
             &connection,
@@ -401,7 +538,13 @@ fn gc_rechecks_word_ownership_but_does_not_permanently_protect_sentences() {
         .unwrap();
     assert!(speech_asset(&connection, &key, 605800).unwrap().is_none());
     assert!(mark_speech_gc(&connection, &key, 605800).unwrap().is_some());
-    assert!(prepare_speech_publication(&connection, &key, &"c".repeat(64), 605800).is_err());
+    prepare_speech_publication(&connection, &key, &"c".repeat(64), 605800).unwrap();
+    let pending = lexique_storage::pending_source_audio(&connection, "").unwrap();
+    assert_eq!(
+        pending.len(),
+        1,
+        "a marked old instance does not block a fresh publication"
+    );
     finish_speech_gc(&connection, &key, &"b".repeat(64)).unwrap();
     assert!(speech_asset(&connection, &key, 605800).unwrap().is_none());
 }

@@ -9,6 +9,10 @@ export const messages = {
     title: '从一个词开始。', intro: '查词、记录与复习，留在同一个安静的空间里。',
     settingsTitle: '按你的习惯朗读。', settingsIntro: '选择法语声线与朗读语速。',
     statusLoading: '正在检查本地存储…', statusReady: '本地存储已就绪。',
+    audioMigrating: '正在保留已有单词音频，可以继续学习。', audioMigrationFailed: '部分已有音频未能保留，请打开生词重试。',
+    audioCache: { title: '音频占用', logical: '已登记内容', files: '已检查文件', allocated: '磁盘分配', permanent: '生词选定音频',
+      protected: '保留期内音频', reclaimable: '可清理音频', unknown: '来源未知的文件（保留）', checking: '正在分块检查…',
+      unavailable: '未能测量', over: '未归属音频超过 200 MiB 软目标，选定音频及保留期继续受保护。', failures: '未完成的清理或检查', },
     statusPreview: '浏览器预览：本地数据功能仅在桌面应用可用。', retry: '重试',
     scaffold: '当前为开发骨架；学习功能将按模块逐步接入。',
     dictionary: {
@@ -31,6 +35,10 @@ export const messages = {
     title: 'Start with a word.', intro: 'Look up, collect and review in one quiet space.',
     settingsTitle: 'Speech at your pace.', settingsIntro: 'Choose your French voice and speaking speed.',
     statusLoading: 'Checking local storage…', statusReady: 'Local storage is ready.',
+    audioMigrating: 'Preserving saved word audio. You can keep learning.', audioMigrationFailed: 'Some saved audio could not be preserved. Open the word to retry.',
+    audioCache: { title: 'Audio storage', logical: 'Registered content', files: 'Inspected files', allocated: 'Allocated disk space', permanent: 'Selected word audio',
+      protected: 'Audio in its retention period', reclaimable: 'Reclaimable audio', unknown: 'Unknown files (preserved)', checking: 'Checking in chunks…',
+      unavailable: 'Could not measure', over: 'Unowned audio exceeds the 200 MiB soft target. Selected audio and retention periods remain protected.', failures: 'Incomplete cleanup or inspection', },
     statusPreview: 'Browser preview: local data is available in the desktop app only.', retry: 'Retry',
     scaffold: 'This is a development scaffold. Learning features will be connected module by module.',
     dictionary: {
@@ -54,6 +62,10 @@ export const messages = {
     title: 'Tout commence par un mot.', intro: 'Chercher, noter et réviser dans un même espace calme.',
     settingsTitle: 'Une voix à votre rythme.', settingsIntro: 'Choisissez la voix française et la vitesse de lecture.',
     statusLoading: 'Vérification du stockage local…', statusReady: 'Le stockage local est prêt.',
+    audioMigrating: 'Conservation des audios enregistrés. Vous pouvez continuer à apprendre.', audioMigrationFailed: 'Certains audios n’ont pas pu être conservés. Ouvrez le mot pour réessayer.',
+    audioCache: { title: 'Stockage audio', logical: 'Contenu enregistré', files: 'Fichiers vérifiés', allocated: 'Espace disque alloué', permanent: 'Audio sélectionné des mots',
+      protected: 'Audio en période de conservation', reclaimable: 'Audio récupérable', unknown: 'Fichiers inconnus (conservés)', checking: 'Vérification par lots…',
+      unavailable: 'Mesure indisponible', over: 'L’audio sans propriétaire dépasse la cible indicative de 200 MiB. Les audios sélectionnés et leurs périodes de conservation restent protégés.', failures: 'Nettoyage ou vérification incomplets', },
     statusPreview: 'Aperçu web : les données locales sont disponibles uniquement dans l’application de bureau.', retry: 'Réessayer',
     scaffold: 'Il s’agit du socle de développement. Les fonctions d’apprentissage seront ajoutées progressivement.',
     dictionary: {

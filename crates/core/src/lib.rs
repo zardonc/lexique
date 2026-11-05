@@ -1,4 +1,4 @@
-pub const DATABASE_SCHEMA_VERSION: u32 = 11;
+pub const DATABASE_SCHEMA_VERSION: u32 = 17;
 
 pub mod scheduling;
 

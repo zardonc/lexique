@@ -3,6 +3,287 @@ use lexique_storage::{
     DigestEntry, Reference, SaveRequest, Snapshot, add_review, initialize, review_cards, save,
 };
 use rusqlite::Connection;
+use std::sync::atomic::{AtomicUsize, Ordering};
+
+static POSITION_QUERIES: AtomicUsize = AtomicUsize::new(0);
+static PROGRESS_QUERIES: AtomicUsize = AtomicUsize::new(0);
+static INITIAL_POSITION_UPDATES: AtomicUsize = AtomicUsize::new(0);
+
+#[test]
+fn initial_bulk_order_assigns_positions_without_repeated_renumbering() {
+    use rusqlite::trace::{TraceEvent, TraceEventCodes};
+    let mut connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    for index in 0..25 {
+        connection.execute("INSERT INTO vocabulary(headword,snapshot,notes,created_at,updated_at) VALUES(?1,'{}','',1,1)", [format!("bulk-{index}")]).unwrap();
+        let id = connection.last_insert_rowid();
+        add_review(&mut connection, id).unwrap();
+    }
+    let mut settings = lexique_storage::review_settings(&connection).unwrap();
+    settings.new_limit = 100;
+    settings.review_limit = 100;
+    lexique_storage::set_review_settings(&connection, &settings).unwrap();
+    INITIAL_POSITION_UPDATES.store(0, Ordering::SeqCst);
+    connection.trace_v2(
+        TraceEventCodes::SQLITE_TRACE_STMT,
+        Some(|event| {
+            if let TraceEvent::Stmt(_, sql) = event
+                && sql.starts_with("UPDATE review_queue_entries SET position")
+            {
+                INITIAL_POSITION_UPDATES.fetch_add(1, Ordering::SeqCst);
+            }
+        }),
+    );
+    let queue = lexique_storage::review_queue(&mut connection, 1_700_000_000, "UTC").unwrap();
+    connection.trace_v2(TraceEventCodes::empty(), None);
+    assert_eq!(queue.cards.len(), 50);
+    assert_eq!(INITIAL_POSITION_UPDATES.load(Ordering::SeqCst), 0);
+    assert_eq!(
+        queue.cards.iter().map(|card| card.id).collect::<Vec<_>>(),
+        (1..=50).collect::<Vec<_>>()
+    );
+}
+
+#[test]
+fn queue_reindexes_positions_near_the_integer_limit() {
+    let mut connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    let word = saved_word(&mut connection);
+    let cards = add_review(&mut connection, word).unwrap();
+    let now = 1_700_000_000;
+    lexique_storage::review_queue(&mut connection, now, "UTC").unwrap();
+    for (index, card) in cards.iter().enumerate() {
+        connection
+            .execute(
+                "UPDATE review_queue_entries SET position=?1 WHERE card_id=?2",
+                rusqlite::params![i64::MAX - 1 + index as i64, card.id],
+            )
+            .unwrap();
+    }
+    connection.execute("INSERT INTO vocabulary(headword,snapshot,notes,created_at,updated_at) VALUES('new','{}','',1,1)", []).unwrap();
+    let other = connection.last_insert_rowid();
+    add_review(&mut connection, other).unwrap();
+    let positions = |connection: &Connection| {
+        connection
+            .prepare("SELECT card_id,position FROM review_queue_entries ORDER BY position")
+            .unwrap()
+            .query_map([], |row| Ok((row.get::<_, i64>(0)?, row.get::<_, i64>(1)?)))
+            .unwrap()
+            .collect::<Result<Vec<_>, _>>()
+            .unwrap()
+    };
+    let before = positions(&connection);
+    connection.commit_hook(Some(|| true)).unwrap();
+    assert!(lexique_storage::review_queue(&mut connection, now, "UTC").is_err());
+    connection.commit_hook(None::<fn() -> bool>).unwrap();
+    assert_eq!(positions(&connection), before);
+    let queue = lexique_storage::review_queue(&mut connection, now, "UTC").unwrap();
+    assert_eq!(queue.cards.len(), 4);
+    let stable = lexique_storage::review_queue(&mut connection, now, "UTC").unwrap();
+    assert_eq!(queue.cards, stable.cards);
+}
+
+#[test]
+fn exhausted_position_gap_rolls_back_and_preserves_undo_after_reopening() {
+    let path = std::env::temp_dir().join(format!(
+        "lexique-position-gap-{}-{}.sqlite3",
+        std::process::id(),
+        std::time::SystemTime::now()
+            .duration_since(std::time::UNIX_EPOCH)
+            .unwrap()
+            .as_nanos()
+    ));
+    let now = 1_700_000_000;
+    let expected;
+    {
+        let mut connection = Connection::open(&path).unwrap();
+        initialize(&connection).unwrap();
+        let first = saved_word(&mut connection);
+        let mut cards = add_review(&mut connection, first).unwrap();
+        connection.execute("INSERT INTO vocabulary(headword,snapshot,notes,created_at,updated_at) VALUES('second','{}','',1,1)", []).unwrap();
+        let second = connection.last_insert_rowid();
+        cards.extend(add_review(&mut connection, second).unwrap());
+        let hidden = cards[2].id;
+        lexique_storage::review_queue_filtered(&mut connection, now, "UTC", |card| {
+            Ok(card.id != hidden)
+        })
+        .unwrap();
+        let positions = |connection: &Connection| {
+            connection
+                .prepare("SELECT card_id,position FROM review_queue_entries ORDER BY position")
+                .unwrap()
+                .query_map([], |row| Ok((row.get::<_, i64>(0)?, row.get::<_, i64>(1)?)))
+                .unwrap()
+                .collect::<Result<Vec<_>, _>>()
+                .unwrap()
+        };
+        for (index, (id, _)) in positions(&connection).iter().enumerate() {
+            connection
+                .execute(
+                    "UPDATE review_queue_entries SET position=?1 WHERE card_id=?2",
+                    rusqlite::params![index as i64, id],
+                )
+                .unwrap();
+        }
+        let before = positions(&connection);
+        connection.commit_hook(Some(|| true)).unwrap();
+        assert!(lexique_storage::review_queue(&mut connection, now, "UTC").is_err());
+        connection.commit_hook(None::<fn() -> bool>).unwrap();
+        assert_eq!(positions(&connection), before);
+        expected = cards.iter().map(|card| card.id).collect::<Vec<_>>();
+        let queue = lexique_storage::review_queue(&mut connection, now, "UTC").unwrap();
+        assert_eq!(
+            queue.cards.iter().map(|card| card.id).collect::<Vec<_>>(),
+            expected
+        );
+        assert!(
+            positions(&connection)
+                .windows(2)
+                .all(|pair| pair[1].1 - pair[0].1 > 1)
+        );
+        lexique_storage::rate_card(
+            &mut connection,
+            &lexique_storage::RatingRequest {
+                operation: "gap-rating".into(),
+                card_id: expected[0],
+                expected_revision: 0,
+                rating: Rating::Good,
+                now,
+                timezone: "UTC".into(),
+            },
+        )
+        .unwrap();
+    }
+    {
+        let mut connection = Connection::open(&path).unwrap();
+        initialize(&connection).unwrap();
+        lexique_storage::undo_rating(&mut connection, "gap-undo", "gap-rating").unwrap();
+        lexique_storage::undo_rating(&mut connection, "gap-undo", "gap-rating").unwrap();
+        assert_eq!(
+            lexique_storage::review_queue(&mut connection, now, "UTC")
+                .unwrap()
+                .cards
+                .iter()
+                .map(|card| card.id)
+                .collect::<Vec<_>>(),
+            expected
+        );
+    }
+    std::fs::remove_file(path).unwrap();
+}
+
+#[test]
+fn zero_limits_preserve_both_due_intraday_cards() {
+    let mut connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    let word = saved_word(&mut connection);
+    let cards = add_review(&mut connection, word).unwrap();
+    let now = 1_700_000_000;
+    for card in &cards {
+        connection.execute("INSERT INTO review_progress VALUES(?1,1,?2)", rusqlite::params![card.id, serde_json::json!({"phase":"learning_first","memory":null,"last_review_at":now-120,"due_at":now-60}).to_string()]).unwrap();
+    }
+    let mut settings = lexique_storage::review_settings(&connection).unwrap();
+    settings.new_limit = 0;
+    settings.review_limit = 0;
+    lexique_storage::set_review_settings(&connection, &settings).unwrap();
+    let inventory = lexique_storage::review_card_inventory(&connection).unwrap();
+    assert_eq!(inventory.len(), 2);
+    let queue = lexique_storage::review_queue(&mut connection, now, "UTC").unwrap();
+    assert_eq!(
+        queue.cards.iter().map(|card| card.id).collect::<Vec<_>>(),
+        cards.iter().map(|card| card.id).collect::<Vec<_>>()
+    );
+}
+
+#[test]
+fn queue_audio_checks_do_not_hold_a_database_snapshot() {
+    let path = std::env::temp_dir().join(format!(
+        "lexique-queue-io-{}-{}.sqlite3",
+        std::process::id(),
+        std::time::SystemTime::now()
+            .duration_since(std::time::UNIX_EPOCH)
+            .unwrap()
+            .as_nanos()
+    ));
+    let mut connection = Connection::open(&path).unwrap();
+    initialize(&connection).unwrap();
+    let word = saved_word(&mut connection);
+    add_review(&mut connection, word).unwrap();
+    let writer = Connection::open(&path).unwrap();
+    writer.busy_timeout(std::time::Duration::ZERO).unwrap();
+    let mut committed = false;
+    let result =
+        lexique_storage::review_queue_filtered(&mut connection, 1_700_000_000, "UTC", |_| {
+            if !committed {
+                writer
+                    .execute_batch(
+                        "BEGIN IMMEDIATE; UPDATE review_settings SET new_limit=0; COMMIT",
+                    )
+                    .unwrap();
+                committed = true;
+            }
+            Ok(true)
+        });
+    assert!(committed);
+    // A concurrent eligibility change must never return the obsolete snapshot.
+    assert!(result.unwrap().cards.is_empty());
+    let mut probes = 0;
+    let result =
+        lexique_storage::review_queue_filtered(&mut connection, 1_700_000_000, "UTC", |_| {
+            probes += 1;
+            writer
+                .execute("UPDATE review_settings SET new_limit=new_limit+1", [])
+                .unwrap();
+            Ok(true)
+        });
+    assert!(matches!(
+        result,
+        Err(lexique_storage::StorageError::QueueChanged)
+    ));
+    assert_eq!(probes, 6, "three bounded attempts over two cards");
+    drop(writer);
+    drop(connection);
+    std::fs::remove_file(path).unwrap();
+}
+
+fn count_position_queries(event: rusqlite::trace::TraceEvent<'_>) {
+    if let rusqlite::trace::TraceEvent::Stmt(_, sql) = event {
+        if sql.starts_with("SELECT position FROM review_queue_entries WHERE card_id") {
+            POSITION_QUERIES.fetch_add(1, Ordering::Relaxed);
+        }
+        if sql.starts_with("SELECT c.id, p.revision, p.state FROM review_cards") {
+            PROGRESS_QUERIES.fetch_add(1, Ordering::Relaxed);
+        }
+    }
+}
+
+#[test]
+fn warm_queue_reuses_the_loaded_positions() {
+    let mut connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    let word = saved_word(&mut connection);
+    let cards = add_review(&mut connection, word).unwrap();
+    let now = 1_700_000_000;
+    lexique_storage::review_queue(&mut connection, now, "UTC").unwrap();
+    POSITION_QUERIES.store(0, Ordering::Relaxed);
+    PROGRESS_QUERIES.store(0, Ordering::Relaxed);
+    connection.trace_v2(
+        rusqlite::trace::TraceEventCodes::SQLITE_TRACE_STMT,
+        Some(count_position_queries),
+    );
+    let queue = lexique_storage::review_queue(&mut connection, now, "UTC").unwrap();
+    let progress =
+        lexique_storage::review_progress_batch(&connection, &[cards[1].id, cards[0].id]).unwrap();
+    assert!(
+        progress
+            .iter()
+            .all(|progress| progress.revision == 0 && progress.card.due_at.is_none())
+    );
+    connection.trace_v2(rusqlite::trace::TraceEventCodes::empty(), None);
+    assert_eq!(queue.cards.len(), cards.len());
+    assert_eq!(POSITION_QUERIES.load(Ordering::Relaxed), 0);
+    assert_eq!(PROGRESS_QUERIES.load(Ordering::Relaxed), 0);
+}
 
 fn saved_word(connection: &mut Connection) -> i64 {
     let request = SaveRequest {
@@ -37,6 +318,71 @@ fn saved_word(connection: &mut Connection) -> i64 {
         .unwrap()
         .record
         .id
+}
+
+#[test]
+fn batch_progress_preserves_order_duplicates_defaults_and_errors() {
+    let mut connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    let word = saved_word(&mut connection);
+    let cards = add_review(&mut connection, word).unwrap();
+    connection
+        .execute(
+            "INSERT INTO review_progress VALUES(?1,7,?2)",
+            rusqlite::params![
+                cards[1].id,
+                r#"{"phase":"learning_first","memory":null,"last_review_at":900,"due_at":1010}"#
+            ],
+        )
+        .unwrap();
+    let mut ids = vec![cards[1].id; 101];
+    ids[1] = cards[0].id;
+    let before = connection.total_changes();
+    let progress = lexique_storage::review_progress_batch(&connection, &ids).unwrap();
+    assert_eq!(progress.len(), 101);
+    assert_eq!(progress[0].revision, 7);
+    assert_eq!(progress[0].card.due_at, Some(1010));
+    assert_eq!(progress[1].revision, 0);
+    assert_eq!(progress[1].card.due_at, None);
+    assert_eq!(progress[100].revision, 7);
+    assert!(
+        lexique_storage::review_progress_batch(&connection, &[])
+            .unwrap()
+            .is_empty()
+    );
+    assert!(lexique_storage::review_progress_batch(&connection, &[i64::MAX]).is_err());
+    assert_eq!(connection.total_changes(), before);
+    connection
+        .execute("UPDATE review_progress SET state='invalid'", [])
+        .unwrap();
+    assert!(lexique_storage::review_progress_batch(&connection, &[cards[1].id]).is_err());
+}
+
+#[test]
+fn stable_queue_can_read_while_another_connection_owns_the_writer() {
+    let path = std::env::temp_dir().join(format!(
+        "lexique-queue-reader-{}-{}.sqlite3",
+        std::process::id(),
+        std::time::SystemTime::now()
+            .duration_since(std::time::UNIX_EPOCH)
+            .unwrap()
+            .as_nanos()
+    ));
+    let mut connection = Connection::open(&path).unwrap();
+    initialize(&connection).unwrap();
+    let word = saved_word(&mut connection);
+    add_review(&mut connection, word).unwrap();
+    let now = 1_700_000_000;
+    let expected = lexique_storage::review_queue(&mut connection, now, "UTC").unwrap();
+    connection.busy_timeout(std::time::Duration::ZERO).unwrap();
+    let writer = Connection::open(&path).unwrap();
+    writer.execute_batch("BEGIN IMMEDIATE").unwrap();
+    let actual = lexique_storage::review_queue(&mut connection, now, "UTC");
+    writer.execute_batch("ROLLBACK").unwrap();
+    drop(writer);
+    drop(connection);
+    std::fs::remove_file(path).unwrap();
+    assert_eq!(actual.unwrap().cards, expected.cards);
 }
 
 #[test]
@@ -669,7 +1015,13 @@ fn legacy_schema_upgrade_undo_retry_survives_reopening() {
         )
         .unwrap();
         connection.execute("UPDATE review_ratings SET queue_before = json_remove(queue_before, '$.ordered_cards')", []).unwrap();
-        connection.execute_batch("DROP TABLE review_batch_items; DROP TABLE review_batches; DROP TABLE speech_tasks; DROP TABLE speech_owners; DROP TABLE legacy_speech; DROP TABLE speech_assets;").unwrap();
+        let triggers = connection.prepare("SELECT name FROM sqlite_master WHERE type='trigger' AND name LIKE 'queue_revision_%'").unwrap().query_map([], |row| row.get::<_,String>(0)).unwrap().collect::<Result<Vec<_>,_>>().unwrap();
+        for trigger in triggers {
+            connection
+                .execute_batch(&format!("DROP TRIGGER {trigger}"))
+                .unwrap();
+        }
+        connection.execute_batch("DROP VIEW audio_version_protection; DROP TABLE review_queue_changes; DROP TABLE word_audio_repairs; DROP TABLE word_audio_operations; DROP TABLE word_audio_publications; DROP TABLE word_audio_imports; DROP TABLE word_audio_selections; DROP TABLE speech_versions; DROP TABLE review_batch_items; DROP TABLE review_batches; DROP TABLE speech_tasks; DROP TABLE speech_owners; DROP TABLE legacy_speech; DROP TABLE speech_assets;").unwrap();
         connection.execute_batch("DROP TABLE review_paused; DROP INDEX review_ratings_undo_operation; ALTER TABLE review_ratings DROP COLUMN undo_operation; ALTER TABLE review_ratings DROP COLUMN undo_queue_rebuilt; ALTER TABLE vocabulary DROP COLUMN example_fr; ALTER TABLE vocabulary DROP COLUMN example_zh; ALTER TABLE vocabulary DROP COLUMN more_examples; ALTER TABLE vocabulary DROP COLUMN example_sense; PRAGMA user_version = 5;").unwrap();
     }
     {

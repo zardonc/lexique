@@ -1,7 +1,12 @@
 //! V03 isolated candidate. Product callers and schema remain unchanged.
 use std::{path::PathBuf, time::Instant};
 
+use candidate as review;
+pub use candidate::{QueueAudioMetadata, QueueCard, ReviewProgress};
 pub use lexique_storage::StorageError;
+#[path = "../src/queue_cache.rs"]
+mod queue_cache;
+pub use queue_cache::*;
 use rusqlite::{Connection, params};
 
 #[allow(dead_code)]

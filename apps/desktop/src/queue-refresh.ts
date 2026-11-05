@@ -56,5 +56,5 @@ export function nextQueueWake(view: QueueView | null) {
   const day = new Date(); day.setHours(4, 0, 0, 0);
   if (day.getTime() <= Date.now()) day.setDate(day.getDate() + 1);
   const due = view?.queue.available_at == null ? Infinity : view.queue.available_at * 1000;
-  return Math.min(day.getTime(), due > Date.now() ? due : Infinity);
+  return Math.min(day.getTime(), Number.isFinite(due) ? Math.max(Date.now() + 1, due) : Infinity);
 }

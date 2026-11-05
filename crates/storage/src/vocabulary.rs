@@ -54,7 +54,7 @@ pub struct SaveRequest {
     pub revision: Option<i64>,
 }
 
-#[derive(Debug, Deserialize, Serialize)]
+#[derive(Clone, Debug, Deserialize, Serialize)]
 pub struct VocabularyRecord {
     pub id: i64,
     pub headword: String,
@@ -162,6 +162,24 @@ pub fn get(connection: &Connection, id: i64) -> Result<VocabularyRecord, Storage
         [id],
         row_record,
     )?)
+}
+
+pub fn get_batch(
+    connection: &Connection,
+    ids: &[i64],
+) -> Result<std::collections::HashMap<i64, VocabularyRecord>, StorageError> {
+    let mut records = std::collections::HashMap::new();
+    for chunk in ids.chunks(100) {
+        let placeholders = vec!["?"; chunk.len()].join(",");
+        let mut query = connection.prepare(&format!(
+            "SELECT {COLUMNS} FROM vocabulary WHERE id IN ({placeholders})"
+        ))?;
+        for record in query.query_map(rusqlite::params_from_iter(chunk), row_record)? {
+            let record = record?;
+            records.insert(record.id, record);
+        }
+    }
+    Ok(records)
 }
 
 pub fn find(

@@ -19,7 +19,8 @@ for i in range(10000):
  key=f'{i:064x}';c.execute("INSERT INTO speech_assets(semantic_key,spec,context) VALUES(?,'{}','word')",(key,));c.execute("INSERT INTO speech_tasks(semantic_key,priority,state,wake_at) VALUES(?,1,'queued',?)",(key,wake))
 c.commit()`,database],{windowsHide:true,encoding:'utf8'});assert.equal(seed.status,0,seed.stderr);
   page=await fixture.start();
-  const full=await page.evaluate(async (id) => {const invoke=window.__TAURI_INTERNALS__.invoke;let error;try{await invoke('review_add',{vocabularyId:id});}catch(cause){error=String(cause);}return {error,cards:await invoke('review_cards',{vocabularyId:id})};},saved.record.id);
-  assert.match(full.error,/Speech backlog is full/);assert.deepEqual(full.cards,[]);assert.equal(fixture.workerPids().length,0);
+  const full=await page.evaluate(async (id) => {const invoke=window.__TAURI_INTERNALS__.invoke;const added=await invoke('review_add',{vocabularyId:id});return {added,cards:await invoke('review_cards',{vocabularyId:id}),batch:await invoke('review_batch_status',{operation:null})};},saved.record.id);
+  assert.equal(full.cards.length,2);assert.equal(full.added.length,2);
+  assert.equal(full.batch.items[0].error,null);assert.equal(full.batch.items[0].audio_state,'failed');assert.match(full.batch.items[0].audio_error,/Speech backlog is full/);assert.equal(fixture.workerPids().length,0);
   const report={unknown,full,workers:0};await writeFile(join(fixture.destination,'results.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report));
 } finally {await fixture.finish();}

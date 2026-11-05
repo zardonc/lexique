@@ -41,10 +41,11 @@ try {
     const audio = document.createElement('audio'); const url = URL.createObjectURL(new Blob([new Uint8Array(bytes)], { type: 'audio/ogg' })); audio.src = url;
     const start = performance.now(); await audio.play(); metrics.push({ command: 'actual-play-start', ms: performance.now() - start });
     await new Promise((done, reject) => { audio.onended = done; audio.onerror = reject; }); URL.revokeObjectURL(url);
-    return { metrics, ids, batch, duringCardCount: during.queue.cards.length, status, decoded, interactiveBytes: interactive.length, dictionaryCount: dictionary.entries.length, edited: edited.record.notes, rated: rated.status };
+    return { metrics, ids, batch, duringCardCount: during.queue.cards.length, duringAdmittedCount: during.summary.admitted_count, status, decoded, interactiveBytes: interactive.length, dictionaryCount: dictionary.entries.length, edited: edited.record.notes, rated: rated.status };
   });
   assert.ok(result.batch.items.every((item) => item.created_cards === 2));
-  assert.ok(result.duringCardCount >= 6, 'Recognition cards must be usable before all audio completes');
+  assert.ok(result.duringCardCount <= 4);
+  assert.ok(result.duringAdmittedCount >= 6, 'Recognition cards must be admitted before all audio completes');
   assert.ok(result.status.items.every((item) => item.audio_state === 'ready'), JSON.stringify(result.status));
   assert.equal(result.edited, 'concurrent'); assert.equal(result.rated, 'committed'); assert.ok(result.dictionaryCount > 0 && result.interactiveBytes > 0);
   assert.ok(result.decoded.every((audio) => audio.channels === 1 && audio.finite && audio.audible && audio.duration > 0));

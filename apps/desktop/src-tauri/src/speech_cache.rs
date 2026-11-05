@@ -132,17 +132,29 @@ fn read_inner(database: &Path, id: i64, touch: bool) -> Result<Option<Vec<u8>>, 
     read_named(&dir, &name, touch)
 }
 
-pub struct Inspector(Dir);
+pub struct Inspector(Dir, PathBuf);
 
 impl Inspector {
     pub fn new(database: &Path) -> Result<Self, String> {
-        Ok(Self(directory(database)?))
+        Ok(Self(directory(database)?, database.to_path_buf()))
     }
     pub fn legacy(&self, id: i64) -> Result<Option<Vec<u8>>, String> {
         read_named(&self.0, &format!("{id}.ogg"), false)
     }
     pub fn read_asset(&self, key: &str, hash: &str) -> Result<Option<Vec<u8>>, String> {
         read_named(&self.0, &asset_name(key, hash)?, false)
+    }
+    pub fn publish_version(&self, locator: &str, hash: &str, bytes: &[u8]) -> Result<(), String> {
+        if lexique_storage::content_hash(bytes) != hash {
+            return Err("Audio version checksum mismatch".into());
+        }
+        write_named(
+            &self.1,
+            &asset_name(locator, hash)?,
+            &format!("s-{locator}-{hash}"),
+            bytes,
+            false,
+        )
     }
 }
 
@@ -164,28 +176,32 @@ fn asset_name(key: &str, hash: &str) -> Result<String, String> {
 }
 
 fn read_named(dir: &Dir, name: &str, touch: bool) -> Result<Option<Vec<u8>>, String> {
-    match dir.symlink_metadata(&name) {
-        Err(e) if e.kind() == std::io::ErrorKind::NotFound => return Ok(None),
-        Err(e) => return Err(e.to_string()),
-        Ok(meta) if !meta.is_file() || meta.file_type().is_symlink() => {
-            return Err("Invalid cached speech file".into());
-        }
-        #[cfg(windows)]
-        Ok(meta) if meta.file_attributes() & 0x400 != 0 => {
-            return Err("Invalid cached speech file".into());
-        }
-        Ok(meta) if meta.len() > 10_000_000 => return Err("Invalid cached speech audio".into()),
-        Ok(_) => (),
-    }
-    let mut bytes = Vec::new();
     let mut options = OpenOptions::new();
     options.read(true).write(true).follow(FollowSymlinks::No);
     #[cfg(windows)]
     options.share_mode(3);
-    let file = dir
-        .open_with(name, &options)
-        .map_err(|e| e.to_string())?
-        .into_std();
+    let file = match dir.open_with(name, &options) {
+        Ok(file) => file.into_std(),
+        Err(error) if error.kind() == std::io::ErrorKind::NotFound => return Ok(None),
+        Err(error) => return Err(error.to_string()),
+    };
+    // Validate the nofollow handle we actually read, avoiding a second path open and its race.
+    let metadata = file.metadata().map_err(|e| e.to_string())?;
+    if !metadata.is_file() {
+        return Err("Invalid cached speech file".into());
+    }
+    #[cfg(windows)]
+    {
+        use std::os::windows::fs::MetadataExt as _;
+        if metadata.file_attributes() & 0x400 != 0 {
+            return Err("Invalid cached speech file".into());
+        }
+    }
+    if metadata.len() > 10_000_000 {
+        return Err("Invalid cached speech audio".into());
+    }
+    // Take<File> cannot use File's length hint; reserve it to avoid many tiny reads.
+    let mut bytes = Vec::with_capacity(metadata.len() as usize + 1);
     #[cfg(windows)]
     if !touch {
         use std::os::windows::io::AsRawHandle;
@@ -213,14 +229,6 @@ fn read_named(dir: &Dir, name: &str, touch: bool) -> Result<Option<Vec<u8>>, Str
                 "Could not preserve speech access time: {}",
                 std::io::Error::last_os_error()
             ));
-        }
-    }
-    #[cfg(windows)]
-    {
-        use std::os::windows::fs::MetadataExt as _;
-        let metadata = file.metadata().map_err(|e| e.to_string())?;
-        if !metadata.is_file() || metadata.file_attributes() & 0x400 != 0 {
-            return Err("Invalid cached speech file".into());
         }
     }
     (&file)
@@ -289,6 +297,7 @@ fn managed_name(name: &str) -> bool {
 }
 
 #[cfg(windows)]
+#[cfg(test)]
 pub fn cleanup(database: &Path) -> Result<(), String> {
     let dir = directory(database)?;
     let _lock = lock(&dir)?;
@@ -322,6 +331,311 @@ pub fn cleanup(database: &Path) -> Result<(), String> {
         }
     }
     Ok(())
+}
+
+#[derive(Clone, Debug, serde::Serialize)]
+pub struct CacheReport {
+    pub file_bytes: u64,
+    pub allocated_bytes: Option<u64>,
+    pub unknown_files: u32,
+    pub unknown_bytes: u64,
+    pub unsafe_files: u32,
+    pub scan_failures: u32,
+    pub scanned_entries: u64,
+    pub in_progress: bool,
+    pub last_reconciled_at: Option<i64>,
+    pub error: Option<String>,
+}
+
+impl Default for CacheReport {
+    fn default() -> Self {
+        Self {
+            file_bytes: 0,
+            allocated_bytes: Some(0),
+            unknown_files: 0,
+            unknown_bytes: 0,
+            unsafe_files: 0,
+            scan_failures: 0,
+            scanned_entries: 0,
+            in_progress: true,
+            last_reconciled_at: None,
+            error: None,
+        }
+    }
+}
+
+#[cfg(windows)]
+pub struct Reconciler {
+    dir: Dir,
+    entries: cap_std::fs::ReadDir,
+    pub report: CacheReport,
+}
+
+#[cfg(windows)]
+impl Reconciler {
+    pub fn new(database: &Path) -> Result<Self, String> {
+        let dir = directory(database)?;
+        let entries = dir.entries().map_err(|e| e.to_string())?;
+        Ok(Self {
+            dir,
+            entries,
+            report: CacheReport::default(),
+        })
+    }
+
+    /// Retain the pinned iterator; do not restart a full directory scan for each chunk.
+    pub fn step(
+        &mut self,
+        connection: &rusqlite::Connection,
+        database: &Path,
+        now: i64,
+        should_stop: impl Fn() -> bool,
+    ) -> Result<bool, String> {
+        let mut names = Vec::with_capacity(200);
+        for _ in 0..200 {
+            let Some(entry) = self.entries.next() else {
+                self.report.in_progress = false;
+                self.report.last_reconciled_at = Some(now);
+                break;
+            };
+            names.push(entry.map_err(|e| e.to_string())?.file_name());
+            self.report.scanned_entries += 1;
+        }
+        let mut assets = Vec::new();
+        let mut legacy = Vec::new();
+        for name in &names {
+            if let Some((physical, hash)) = name.to_str().and_then(asset_identity) {
+                assets.push((physical.to_owned(), hash.to_owned()));
+            } else if let Some(id) = name
+                .to_str()
+                .and_then(|s| s.strip_suffix(".ogg"))
+                .and_then(|s| s.parse::<i64>().ok())
+                .filter(|id| *id > 0)
+            {
+                legacy.push(id);
+            }
+        }
+        let mut registered = std::collections::HashMap::new();
+        if !assets.is_empty() {
+            let values = vec!["(?,?)"; assets.len()].join(",");
+            let mut query = connection.prepare(&format!("SELECT physical_locator,content_hash,locator,COALESCE(byte_length,0),gc_state FROM speech_versions WHERE (physical_locator,content_hash) IN (VALUES {values})")).map_err(|e| e.to_string())?;
+            let rows = query
+                .query_map(
+                    rusqlite::params_from_iter(assets.iter().flat_map(|(p, h)| [p, h])),
+                    |r| {
+                        Ok((
+                            (r.get::<_, String>(0)?, r.get::<_, String>(1)?),
+                            (
+                                r.get::<_, String>(2)?,
+                                r.get::<_, i64>(3)?,
+                                r.get::<_, String>(4)?,
+                            ),
+                        ))
+                    },
+                )
+                .map_err(|e| e.to_string())?;
+            for row in rows {
+                let (key, value) = row.map_err(|e| e.to_string())?;
+                registered.insert(key, value);
+            }
+        }
+        let mut legacy_words = std::collections::HashSet::new();
+        if !legacy.is_empty() {
+            let values = vec!["?"; legacy.len()].join(",");
+            let mut query = connection
+                .prepare(&format!("SELECT id FROM vocabulary WHERE id IN ({values})"))
+                .map_err(|e| e.to_string())?;
+            for row in query
+                .query_map(rusqlite::params_from_iter(legacy), |r| r.get::<_, i64>(0))
+                .map_err(|e| e.to_string())?
+            {
+                legacy_words.insert(row.map_err(|e| e.to_string())?);
+            }
+        }
+        let mut changed = false;
+        for name in names {
+            if should_stop() {
+                break;
+            }
+            let result = (|| {
+                let metadata = match self.dir.symlink_metadata(&name) {
+                    Ok(metadata) => metadata,
+                    Err(e) if e.kind() == std::io::ErrorKind::NotFound => return Ok(()),
+                    Err(e) => return Err(e.to_string()),
+                };
+                if metadata.file_attributes() & 0x400 != 0 {
+                    self.report.unsafe_files += 1;
+                    return Ok(());
+                }
+                if !metadata.is_file() {
+                    return Ok(());
+                }
+                let mut options = OpenOptions::new();
+                options.read(true).follow(FollowSymlinks::No).share_mode(3);
+                let file = match self.dir.open_with(&name, &options) {
+                    Ok(file) => file.into_std(),
+                    Err(e) if e.kind() == std::io::ErrorKind::NotFound => return Ok(()),
+                    Err(e) => return Err(e.to_string()),
+                };
+                let metadata = file.metadata().map_err(|e| e.to_string())?;
+                use std::os::windows::fs::MetadataExt as _;
+                if !metadata.is_file() || metadata.file_attributes() & 0x400 != 0 {
+                    self.report.unsafe_files += 1;
+                    return Ok(());
+                }
+                let text = name.to_str().unwrap_or("");
+                let registration = asset_identity(text)
+                    .and_then(|(p, h)| registered.get(&(p.to_owned(), h.to_owned())));
+                if registration.is_some_and(|(_, _, state)| state == "deleted") {
+                    drop(file);
+                    let (physical, hash) =
+                        asset_identity(text).ok_or("Invalid retired audio name")?;
+                    changed |= remove_asset(database, physical, hash)?;
+                    return Ok(());
+                }
+                if managed_name(text)
+                    && (text.ends_with(".tmp") || text.ends_with(".config"))
+                    && SystemTime::now()
+                        .duration_since(metadata.modified().map_err(|e| e.to_string())?)
+                        .unwrap_or_default()
+                        >= Duration::from_secs(604800)
+                {
+                    drop(file);
+                    let _guard = lock(&self.dir)?;
+                    self.dir.remove_file(&name).map_err(|e| e.to_string())?;
+                    return Ok(());
+                }
+                self.report.file_bytes = self.report.file_bytes.saturating_add(metadata.len());
+                match allocated_size(&file) {
+                    Ok(bytes) => {
+                        self.report.allocated_bytes = self
+                            .report
+                            .allocated_bytes
+                            .map(|total| total.saturating_add(bytes))
+                    }
+                    Err(error) => {
+                        self.report.allocated_bytes = None;
+                        self.failure(&error);
+                    }
+                }
+                let known = text == ".lock"
+                    || registration.is_some()
+                    || (managed_name(text)
+                        && (text.ends_with(".tmp") || text.ends_with(".config")))
+                    || text
+                        .strip_suffix(".ogg")
+                        .and_then(|s| s.parse::<i64>().ok())
+                        .is_some_and(|id| {
+                            legacy_words.contains(&id) && text == format!("{id}.ogg")
+                        });
+                if !known {
+                    self.report.unknown_files += 1;
+                    self.report.unknown_bytes =
+                        self.report.unknown_bytes.saturating_add(metadata.len());
+                }
+                if let Some((locator, expected, state)) = registration {
+                    if *expected > 0 && *expected as u64 != metadata.len() && state == "live" {
+                        changed |= connection.execute("UPDATE speech_versions SET verification='invalid' WHERE locator=?1 AND gc_state='live' AND verification<>'invalid'",[locator]).map_err(|e|e.to_string())?==1;
+                    }
+                }
+                Ok::<_, String>(())
+            })();
+            if let Err(error) = result {
+                self.failure(&error);
+            }
+        }
+        Ok(changed)
+    }
+
+    fn failure(&mut self, error: &str) {
+        self.report.scan_failures += 1;
+        self.report.allocated_bytes = None;
+        self.report.error = Some(format!("Speech cache reconciliation failed: {error}"));
+    }
+}
+
+#[cfg(windows)]
+fn asset_identity(name: &str) -> Option<(&str, &str)> {
+    let (physical, hash) = name
+        .strip_prefix("s-")?
+        .strip_suffix(".ogg")?
+        .split_once('-')?;
+    validate_hash(physical).ok()?;
+    validate_hash(hash).ok()?;
+    Some((physical, hash))
+}
+
+#[cfg(windows)]
+fn allocated_size(file: &File) -> Result<u64, String> {
+    use std::{
+        ffi::c_void,
+        os::windows::{fs::MetadataExt as _, io::AsRawHandle},
+    };
+    #[repr(C)]
+    #[derive(Default)]
+    struct Standard {
+        allocation: i64,
+        end: i64,
+        links: u32,
+        deleting: u8,
+        directory: u8,
+    }
+    #[repr(C)]
+    #[derive(Default)]
+    struct Compression {
+        size: i64,
+        format: u16,
+        unit: u8,
+        chunk: u8,
+        cluster: u8,
+        reserved: [u8; 3],
+    }
+    #[link(name = "kernel32")]
+    unsafe extern "system" {
+        fn GetFileInformationByHandleEx(
+            handle: *mut c_void,
+            class: i32,
+            info: *mut c_void,
+            length: u32,
+        ) -> i32;
+    }
+    let mut standard = Standard::default();
+    // SAFETY: the nofollow file handle is pinned; the C layout and buffer size match FILE_STANDARD_INFO.
+    if unsafe {
+        GetFileInformationByHandleEx(
+            file.as_raw_handle(),
+            1,
+            std::ptr::from_mut(&mut standard).cast(),
+            std::mem::size_of::<Standard>() as u32,
+        )
+    } == 0
+    {
+        return Err(std::io::Error::last_os_error().to_string());
+    }
+    let mut bytes = standard.allocation;
+    if file
+        .metadata()
+        .map_err(|e| e.to_string())?
+        .file_attributes()
+        & (0x800 | 0x200)
+        != 0
+    {
+        let mut compression = Compression::default();
+        // SAFETY: the same pinned handle and FILE_COMPRESSION_INFO layout cover compressed/sparse allocation.
+        if unsafe {
+            GetFileInformationByHandleEx(
+                file.as_raw_handle(),
+                8,
+                std::ptr::from_mut(&mut compression).cast(),
+                std::mem::size_of::<Compression>() as u32,
+            )
+        } == 0
+        {
+            return Err(std::io::Error::last_os_error().to_string());
+        }
+        bytes = compression.size;
+    }
+    u64::try_from(bytes).map_err(|_| "Invalid allocated speech cache size".into())
 }
 
 #[cfg(windows)]
@@ -451,6 +765,7 @@ pub fn write(database: &Path, id: i64, bytes: &[u8], replace: bool) -> Result<()
     )
 }
 
+#[cfg(test)]
 pub fn write_asset(database: &Path, key: &str, hash: &str, bytes: &[u8]) -> Result<(), String> {
     if lexique_storage::content_hash(bytes) != hash {
         return Err("Generated speech content hash mismatch".into());
@@ -511,7 +826,11 @@ fn write_named(
         .map_err(|e| e.to_string())?;
     let result = (|| {
         file.write_all(bytes).map_err(|e| e.to_string())?;
+        #[cfg(test)]
+        crash_boundary("tmp_written");
         file.sync_all().map_err(|e| e.to_string())?;
+        #[cfg(test)]
+        crash_boundary("tmp_synced");
         drop(file);
         if replace {
             return dir
@@ -528,6 +847,10 @@ fn write_named(
             Err(error) => Err(error.to_string()),
         }
     })();
+    #[cfg(test)]
+    if result.is_ok() {
+        crash_boundary("renamed");
+    }
     if let Err(error) = dir.remove_file(&temporary)
         && error.kind() != std::io::ErrorKind::NotFound
     {
@@ -537,4 +860,22 @@ fn write_named(
         );
     }
     result
+}
+
+// Available only in test binaries, including the subprocess used by the native
+// crash matrix. No environment-controlled pause exists in the shipped application.
+#[cfg(test)]
+pub fn crash_boundary(point: &str) {
+    if std::env::var("LEXIQUE_TEST_CRASH_POINT").as_deref() != Ok(point) {
+        return;
+    }
+    let marker = std::env::var_os("LEXIQUE_TEST_CRASH_MARKER").expect("crash marker path");
+    std::fs::write(marker, point).expect("write crash marker");
+    // The supervising harness kills this process after independently inspecting
+    // the durable boundary. EOF is an error, never simulated crash success.
+    let mut release = [0];
+    std::io::stdin()
+        .read_exact(&mut release)
+        .expect("crash barrier released");
+    panic!("crash boundary was released instead of killed");
 }

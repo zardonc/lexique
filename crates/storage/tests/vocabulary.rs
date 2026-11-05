@@ -177,8 +177,22 @@ fn example_meaning_survives_upgrade_and_rejects_out_of_range() {
     )
     .unwrap()
     .record;
+    let triggers = connection
+        .prepare(
+            "SELECT name FROM sqlite_master WHERE type='trigger' AND name LIKE 'queue_revision_%'",
+        )
+        .unwrap()
+        .query_map([], |row| row.get::<_, String>(0))
+        .unwrap()
+        .collect::<Result<Vec<_>, _>>()
+        .unwrap();
+    for trigger in triggers {
+        connection
+            .execute_batch(&format!("DROP TRIGGER {trigger}"))
+            .unwrap();
+    }
     connection
-        .execute_batch("DROP TABLE review_batch_items; DROP TABLE review_batches; DROP TABLE speech_tasks; DROP TABLE speech_owners; DROP TABLE legacy_speech; DROP TABLE speech_assets; ALTER TABLE vocabulary DROP COLUMN example_sense; PRAGMA user_version = 9;")
+        .execute_batch("DROP VIEW audio_version_protection; DROP TABLE review_queue_changes; DROP TABLE word_audio_repairs; DROP TABLE word_audio_operations; DROP TABLE word_audio_publications; DROP TABLE word_audio_imports; DROP TABLE word_audio_selections; DROP TABLE speech_versions; DROP TABLE review_batch_items; DROP TABLE review_batches; DROP TABLE speech_tasks; DROP TABLE speech_owners; DROP TABLE legacy_speech; DROP TABLE speech_assets; ALTER TABLE vocabulary DROP COLUMN example_sense; PRAGMA user_version = 9;")
         .unwrap();
     initialize(&connection).unwrap();
     let migrated = get(&connection, original.id).unwrap();

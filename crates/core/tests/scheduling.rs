@@ -2,6 +2,45 @@ use lexique_core::scheduling::schedule_json;
 use serde_json::{Value, json};
 
 #[test]
+fn vancouver_2026_permanent_daylight_time_keeps_the_learning_boundary_at_four() {
+    use lexique_core::scheduling::{learning_day_for, next_learning_day_at};
+    let zone = "America/Vancouver";
+    // 2026-11-05 04:00 at UTC-07:00, after B.C. stopped changing clocks.
+    let boundary = 1_793_876_400;
+    assert_eq!(next_learning_day_at(boundary - 1, zone).unwrap(), boundary);
+    assert_eq!(learning_day_for(boundary - 1, zone).unwrap(), "2026-11-04");
+    assert_eq!(learning_day_for(boundary, zone).unwrap(), "2026-11-05");
+    // Existing timestamps retain their identity; pre-change winter still used UTC-08.
+    assert_eq!(
+        next_learning_day_at(1_767_609_599, zone).unwrap(),
+        1_767_614_400
+    );
+}
+
+#[test]
+fn timezone_data_update_keeps_replay_versions_explicit() {
+    use lexique_core::scheduling::{next_learning_day_at, timezone_database};
+    assert_eq!(timezone_database(), "2026f");
+    // Cuba's cancelled November 2026 fallback is newer than the host ICU 2026e oracle.
+    assert_eq!(
+        next_learning_day_at(1_793_861_203, "America/Havana").unwrap(),
+        1_793_865_600
+    );
+    let request = json!({
+        "card": {"phase": "new", "memory": null, "last_review_at": null, "due_at": null},
+        "rating": "easy", "now": 1793861203_i64, "timezone": "America/Vancouver",
+        "timezone_database": "2025b"
+    });
+    let result: Value = serde_json::from_str(&schedule_json(&request.to_string())).unwrap();
+    assert!(
+        result["Err"]
+            .as_str()
+            .unwrap()
+            .contains("unsupported timezone database")
+    );
+}
+
+#[test]
 fn first_again_updates_memory_and_waits_a_full_minute() {
     let request = json!({
         "card": {"phase": "new", "memory": null, "last_review_at": null, "due_at": null},

@@ -13,6 +13,12 @@ mod speech_work;
 pub use speech_work::*;
 mod speech_demand;
 pub use speech_demand::*;
+mod selected_audio;
+pub use selected_audio::*;
+mod audio_lifecycle;
+pub use audio_lifecycle::*;
+mod queue_cache;
+pub use queue_cache::*;
 
 const INITIAL_SCHEMA: &str = include_str!("../migrations/0001_initial.sql");
 
@@ -23,6 +29,7 @@ pub enum StorageError {
     Invalid(String),
     RatingUnavailable(String),
     RatingConflict,
+    QueueChanged,
     Json(serde_json::Error),
 }
 
@@ -33,6 +40,9 @@ impl fmt::Display for StorageError {
             Self::Invalid(message) => write!(formatter, "{message}"),
             Self::RatingUnavailable(reason) => write!(formatter, "rating unavailable: {reason}"),
             Self::RatingConflict => write!(formatter, "Review card revision conflict"),
+            Self::QueueChanged => {
+                write!(formatter, "Review queue changed during audio checks; retry")
+            }
             Self::Json(error) => write!(formatter, "Invalid saved vocabulary data: {error}"),
             Self::FutureSchema(version) => write!(
                 formatter,
@@ -51,6 +61,7 @@ impl Error for StorageError {
             | Self::Invalid(_)
             | Self::RatingUnavailable(_)
             | Self::RatingConflict => None,
+            Self::QueueChanged => None,
         }
     }
 }
@@ -77,7 +88,21 @@ pub fn initialize(connection: &Connection) -> Result<u32, StorageError> {
     if version == DATABASE_SCHEMA_VERSION {
         return Ok(version);
     }
-    let transaction = connection.unchecked_transaction()?;
+    if !connection.is_autocommit() {
+        return Err(StorageError::Invalid(
+            "Schema migration requires its own transaction".into(),
+        ));
+    }
+    // A referenced parent-table rebuild requires FK checks off before BEGIN, then an explicit check.
+    connection.pragma_update(None, "foreign_keys", false)?;
+    let result = migrate(connection, version);
+    connection.pragma_update(None, "foreign_keys", true)?;
+    result
+}
+
+fn migrate(connection: &Connection, version: u32) -> Result<u32, StorageError> {
+    let transaction =
+        rusqlite::Transaction::new_unchecked(connection, rusqlite::TransactionBehavior::Immediate)?;
     if version < 1 {
         transaction.execute_batch(INITIAL_SCHEMA)?;
     }
@@ -110,6 +135,32 @@ pub fn initialize(connection: &Connection) -> Result<u32, StorageError> {
     }
     if version < 11 {
         transaction.execute_batch(include_str!("../migrations/0011_speech_work.sql"))?;
+    }
+    if version < 12 {
+        transaction.execute_batch(include_str!("../migrations/0012_selected_audio.sql"))?;
+    }
+    if version < 13 {
+        transaction.execute_batch(include_str!("../migrations/0013_speech_successors.sql"))?;
+    }
+    if version < 14 {
+        transaction.execute_batch(include_str!("../migrations/0014_audio_operations.sql"))?;
+    }
+    if version < 15 {
+        transaction.execute_batch(include_str!("../migrations/0015_audio_lifecycle.sql"))?;
+    }
+    if version < 16 {
+        transaction.execute_batch(include_str!("../migrations/0016_queue_revision.sql"))?;
+    }
+    if version < 17 {
+        transaction.execute_batch(include_str!("../migrations/0017_audio_demands.sql"))?;
+    }
+    if transaction
+        .prepare("PRAGMA foreign_key_check")?
+        .exists([])?
+    {
+        return Err(StorageError::Invalid(
+            "Schema migration failed its foreign-key check".into(),
+        ));
     }
     transaction.commit()?;
     Ok(DATABASE_SCHEMA_VERSION)

@@ -95,12 +95,13 @@ function useReviewRating({ id, runtime, text, onSuccess, onBusyChange }: {
   return { availability, pending, error, busy: busy || blocked, submit, refresh };
 }
 
-export function ReviewRating({ id, runtime, text, enabled, onSuccess, onBusyChange }: {
+export function ReviewRating({ id, runtime, text, enabled, onSuccess, onBusyChange, presentationRevision }: {
   readonly id: number; readonly runtime: RuntimeAdapter; readonly text: NotebookText;
   readonly enabled: boolean; readonly onSuccess: () => void; readonly onBusyChange: (busy: boolean) => void;
+  readonly presentationRevision?: number;
 }) {
   const { availability, pending, error, busy, submit, refresh } = useReviewRating({ id, runtime, text, onSuccess, onBusyChange });
-  return <RatingBody id={id} text={text} enabled={enabled} availability={availability} pending={pending} error={error} busy={busy} submit={submit} refresh={refresh} />;
+  return <RatingBody id={id} text={text} enabled={enabled} availability={availability} pending={pending} error={error} busy={busy} submit={submit} refresh={refresh} presentationRevision={presentationRevision} />;
 }
 
 function AvailabilityError({ error, text, pending, busy, availability, refresh }: {
@@ -112,21 +113,32 @@ function AvailabilityError({ error, text, pending, busy, availability, refresh }
   return <><p role="alert">{text.reviewError}: {error}</p>{retry && <button onClick={() => { void refresh(); }}>{text.retry}</button>}</>;
 }
 
-function RatingBody({ id, text, enabled, availability, pending, error, busy, submit, refresh }: {
+function presentationChanged(availability: ReviewAvailability | null, revision: number | undefined) {
+  return availability !== null && revision !== undefined && revision !== availability.progress.revision;
+}
+
+function PresentationConflict({ pending, stale, text }: { readonly pending: RateRequest | null; readonly stale: boolean; readonly text: NotebookText }) {
+  return !pending && stale ? <p role="status">{text.availability.conflict}</p> : null;
+}
+
+function RatingBody({ id, text, enabled, availability, pending, error, busy, submit, refresh, presentationRevision }: {
   readonly id: number; readonly text: NotebookText; readonly enabled: boolean; readonly availability: ReviewAvailability | null;
   readonly pending: RateRequest | null; readonly error: string; readonly busy: boolean; readonly submit: (request: RateRequest) => Promise<void>;
   readonly refresh: () => Promise<void>;
+  readonly presentationRevision?: number;
 }) {
+  const stale = presentationChanged(availability, presentationRevision);
   let controls;
   if (pending) controls = <button disabled={busy || !enabled} onClick={() => { void submit(pending); }}>{text.retry}</button>;
   else if (availability?.reason) controls = <p>{text.availability[availability.reason]}{availability.available_at != null && `: ${new Date(availability.available_at * 1000).toLocaleString()}`}</p>;
-  else controls = <RatingChoices text={text} disabled={!enabled || busy || !availability} onRate={(rating) => {
+  else controls = <RatingChoices text={text} disabled={!enabled || busy || !availability || stale} onRate={(rating) => {
     if (!availability) return;
-    void submit({ operation: crypto.randomUUID(), card_id: id, expected_revision: availability.progress.revision,
+    void submit({ operation: crypto.randomUUID(), card_id: id, expected_revision: presentationRevision ?? availability.progress.revision,
       rating, timezone: Intl.DateTimeFormat().resolvedOptions().timeZone });
   }} />;
   return <>
     <AvailabilityError error={error} text={text} pending={pending} busy={busy} availability={availability} refresh={refresh} />
+    <PresentationConflict pending={pending} stale={stale} text={text} />
     {controls}
   </>;
 }

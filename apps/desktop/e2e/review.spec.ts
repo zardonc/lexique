@@ -149,7 +149,7 @@ test('missing cached audio can be regenerated for existing cards', async ({ page
   await expect(page.getByText('听音卡：语音已生成', { exact: true })).toBeVisible();
   await expect(page.getByText('识义卡', { exact: true })).toBeVisible();
   expect(await page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'speech_generate')
-    .map((call) => call.args))).toEqual([{ vocabularyId: 1 }]);
+    .map((call) => call.args))).toEqual([{ vocabularyId: 1, operation: expect.any(String) }]);
 });
 
 test('recognition card reveals the saved meaning only after flipping', async ({ page }) => {
@@ -422,7 +422,7 @@ test('adding again regenerates audio after playback failure', async ({ page }) =
   await card.getByRole('button', { name: '跳过' }).click();
   await page.getByRole('button', { name: '加入复习', exact: true }).click();
   await expect.poll(() => page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'speech_generate')
-    .map((call) => call.args))).toEqual([{ vocabularyId: 1 }, { vocabularyId: 1, regenerate: true }]);
+    .map((call) => call.args))).toEqual([{ vocabularyId: 1, operation: expect.any(String) }, { vocabularyId: 1, regenerate: true, operation: expect.any(String) }]);
 });
 
 test('successful replay preserves usable audio when adding again', async ({ page }) => {

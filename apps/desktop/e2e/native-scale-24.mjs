@@ -5,8 +5,10 @@ import { join } from 'node:path';
 import assert from 'node:assert/strict';
 import { native24Fixture } from './native-24-harness.mjs';
 
-const [packagePath,binaryPath,destinationPath,countText] = process.argv.slice(2);
+const [packagePath,binaryPath,destinationPath,countText,budgetText] = process.argv.slice(2);
 const count = Number(countText); assert.ok([100,1000,10000].includes(count));
+const budget = budgetText === undefined ? undefined : Number(budgetText);
+assert.ok(budget === undefined || (Number.isFinite(budget) && budget > 0));
 const fixture = await native24Fixture(packagePath,binaryPath,destinationPath);
 try {
   await fixture.start(); await fixture.stop(true);
@@ -22,13 +24,16 @@ for i in range(1,count+1):
 c.commit();print(json.dumps({'words':count,'fixture_bytes':count*8192,'cache':'Ogg header fixture; not decodable playback evidence'}))`,database,String(count)],{windowsHide:true,encoding:'utf8'});
   assert.equal(seed.status,0,seed.stderr);
   const page=await fixture.start();
-  const passes=count===10000?1:4;
+  const passes=count===10000?3:4;
   const samples=await page.evaluate(async (passes) => {
     const invoke=window.__TAURI_INTERNALS__.invoke;const rows=[];
     for (let i=0;i<passes;i++) { const start=performance.now();const result=await invoke('review_queue',{timezone:'UTC',skipped:[]});rows.push({state:'due',iteration:i,ms:performance.now()-start,cards:result.queue.cards.length}); }
     return rows;
   },passes);
   await writeFile(join(fixture.destination,'checkpoint-due.json'),JSON.stringify(samples,null,2));
+  if (budget !== undefined) {
+    assert.ok(samples.every(row => row.ms <= budget), `Due queue exceeded ${budget} ms: ${JSON.stringify(samples)}`);
+  }
   await fixture.stop(true);
   const future=spawnSync('python',['-X','utf8','-c',`import sqlite3,json,sys,time
 c=sqlite3.connect(sys.argv[1]);now=int(time.time());state=json.dumps({'phase':'review','memory':{'stability':10.0,'difficulty':5.0},'last_review_at':now-86400,'due_at':now+86400})

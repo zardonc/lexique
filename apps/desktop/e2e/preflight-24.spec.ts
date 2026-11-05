@@ -47,3 +47,18 @@ test('T05: lost commit reply retries the same snapshot after navigation', async 
   const calls = await page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'review_add_batch'));
   expect(calls[0].args).toEqual(calls[1].args);
 });
+
+test('T04: a late search reply cannot restore the old page or its selection', async ({ page }) => {
+  await nativeFixture(page, { vocabulary_list: [{ value: [record, other] }, { value: [record], gate: 'old-search' }, { value: [other] }] });
+  await page.goto('/'); await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByLabel('选择本页', { exact: true }).check();
+  const search = page.locator('.notebook-controls input[type=search]');
+  await search.fill('é');
+  await expect.poll(() => page.evaluate(() => window.testNative.calls.filter(call => call.command === 'vocabulary_list').length)).toBe(2);
+  await search.fill('bon');
+  await expect(page.locator('.vocabulary-list')).toContainText('bonjour');
+  await page.evaluate(() => window.testNative.release('old-search'));
+  await expect(page.locator('.vocabulary-list')).not.toContainText('école');
+  await expect(page.getByLabel('选择本页', { exact: true })).not.toBeChecked();
+  await expect(page.getByRole('button', { name: '批量加入复习', exact: true })).toBeDisabled();
+});

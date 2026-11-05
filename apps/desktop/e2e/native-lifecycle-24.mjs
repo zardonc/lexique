@@ -1,65 +1,56 @@
 /* global process, window, console */
-import { spawnSync } from 'node:child_process';
-import { writeFile } from 'node:fs/promises';
-import { join } from 'node:path';
-import { setTimeout as delay } from 'node:timers/promises';
 import assert from 'node:assert/strict';
+import { spawnSync } from 'node:child_process';
+import { readFile, writeFile } from 'node:fs/promises';
+import { join, resolve } from 'node:path';
+import { setTimeout as delay } from 'node:timers/promises';
 import { native24Fixture } from './native-24-harness.mjs';
 
-const [packagePath, binaryPath, destinationPath] = process.argv.slice(2);
-const fixture = await native24Fixture(packagePath, binaryPath, destinationPath);
+const fixture = await native24Fixture(...process.argv.slice(2));
+const database = join(fixture.destination, 'Lexique-data', 'data', 'lexique.sqlite3');
+const clip = resolve('../../docs/evidence/issue-14/supertonic-opus/female-normal-01-48k.opus');
+function python(source) {
+  const result = spawnSync('python', ['-X','utf8','-c', source, database, clip], { windowsHide:true,encoding:'utf8',timeout:10_000 });
+  assert.equal(result.status,0,result.stderr); return result.stdout ? JSON.parse(result.stdout) : null;
+}
+const observe = () => python(`import sqlite3,json,sys
+c=sqlite3.connect(sys.argv[1]);expired=c.execute("SELECT COUNT(*) FROM speech_versions WHERE expires_at<strftime('%s','now') AND gc_state='deleted'").fetchone()[0]
+unowned=c.execute("SELECT COALESCE(SUM(byte_length),0) FROM audio_version_protection WHERE gc_state<>'deleted' AND NOT owned").fetchone()[0]
+print(json.dumps(dict(expired=expired,unowned=unowned,business=c.execute('SELECT id,notes,revision FROM vocabulary').fetchall(),cards=c.execute('SELECT id,vocabulary_id,kind FROM review_cards ORDER BY id').fetchall(),ratings=c.execute('SELECT COUNT(*) FROM review_ratings').fetchone()[0],current=c.execute('SELECT current_version,previous_version FROM word_audio_selections').fetchall())))`);
 try {
-  let page = await fixture.start();
-  const before = await page.evaluate(async () => {
-    const invoke = window.__TAURI_INTERNALS__.invoke; const ids = [];
-    for (const [index, headword] of ['école', 'bonjour', 'rouge', 'bleu', 'maison', 'chat', 'chien', 'oui'].entries()) {
-      const saved = await invoke('vocabulary_save', { request: { operation: `life-${index}`, headword, notes: 'keep', example_fr: '', example_zh: '', example_sense: null, more_examples: [], id: null, revision: null } }); ids.push(saved.record.id);
-    }
-    await invoke('review_add_batch', { request: { operation: 'life-batch', vocabulary_ids: ids } });
-    await invoke('review_pause', { vocabularyId: ids[0], paused: true });
-    return { ids, cards: await invoke('review_cards', { vocabularyId: ids[0] }) };
-  });
-  let status;
-  for (let i = 0; i < 100; i++) {
-    status = await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('review_batch_status', { operation: 'life-batch' }));
-    if (status.items.some((item) => item.audio_state === 'running')) break;
-    await delay(50);
-  }
-  assert.ok(status.items.some((item) => item.audio_state === 'running'));
-  const workers = fixture.workerPids(); assert.equal(workers.length, 1);
-  const killed = spawnSync('taskkill.exe', ['/PID', String(workers[0]), '/T', '/F'], { windowsHide: true }); assert.equal(killed.status, 0);
-  let interrupted;
-  for (let i = 0; i < 40; i++) {
-    interrupted = await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('review_batch_status', { operation: 'life-batch' }));
-    if (interrupted.items.some((item) => item.audio_state === 'retry_wait')) break;
-    await delay(25);
-  }
-  assert.ok(interrupted.items.some((item) => item.audio_state === 'retry_wait'), JSON.stringify(interrupted));
-  await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('review_cancel_batch', { operation: 'life-batch' }));
-  const cancelled = await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('review_batch_status', { operation: 'life-batch' }));
-  assert.equal(cancelled.cancelled, true); assert.ok(cancelled.items.some((item) => item.audio_state === 'cancelled'));
-  await fixture.stop(true); assert.equal(fixture.workerPids().length, 0);
-  // Create a controlled publication/metadata gap using an actual decoded product file.
-  const database = join(fixture.destination, 'Lexique-data', 'data', 'lexique.sqlite3');
-  const inject = spawnSync('python', ['-X', 'utf8', '-c', `import hashlib,json,sqlite3,sys,time
+  await fixture.start(); await fixture.stop(true);
+  const seed = python(`import sqlite3,json,sys,time,hashlib
 from pathlib import Path
-db=Path(sys.argv[1]);c=sqlite3.connect(db)
-row=c.execute("SELECT semantic_key,content_hash,generated_at FROM speech_assets WHERE content_hash IS NOT NULL LIMIT 1").fetchone()
-if row is None:
- print(json.dumps({'publication_gap':'no_completed_file'}));sys.exit(0)
-key,content,generated=row;file=db.parent.parent/'temp'/'speech'/f's-{key}-{content}.ogg'
-assert hashlib.sha256(file.read_bytes()).hexdigest()==content
-c.execute("UPDATE speech_assets SET pending_hash=content_hash,pending_generated_at=generated_at,content_hash=NULL,generated_at=NULL,expires_at=NULL WHERE semantic_key=?",(key,))
-c.execute("UPDATE speech_tasks SET state='running',deadline_at=? WHERE semantic_key=?",(int(time.time())+120,key));c.commit()
-print(json.dumps({'publication_gap':'prepared','semantic_key':key,'generated_at':generated}))`, database], { windowsHide: true, encoding: 'utf8' });
-  assert.equal(inject.status, 0, inject.stderr); const gap = JSON.parse(inject.stdout);
-  page = await fixture.start();
-  const restored = await page.evaluate(async (id) => { const invoke = window.__TAURI_INTERNALS__.invoke; return {
-    status: await invoke('review_batch_status', { operation: 'life-batch' }), cards: await invoke('review_cards', { vocabularyId: id }), paused: await invoke('review_pause', { vocabularyId: id, paused: null }), record: await invoke('vocabulary_find', { headword: 'école' }) }; }, before.ids[0]);
-  assert.equal(restored.status.cancelled, true); assert.deepEqual(restored.cards, before.cards); assert.equal(restored.paused, true); assert.equal(restored.record.notes, 'keep');
-  assert.ok(restored.status.items.every((item) => ['ready', 'failed', 'cancelled'].includes(item.audio_state)));
-  if (gap.publication_gap === 'prepared') assert.ok(restored.status.items.some((item) => item.audio_state === 'ready'));
-  assert.equal(fixture.workerPids().length, 0);
-  const report = { hardTimeoutSeconds: 60, interrupted, cancelled, restored, gap, ownedWorkersAfterExit: 0 };
-  await writeFile(join(fixture.destination, 'results.json'), JSON.stringify(report, null, 2)); console.log(JSON.stringify(report));
+db=Path(sys.argv[1]);cache=db.parent.parent/'temp'/'speech';audio=Path(sys.argv[2]).read_bytes();large=audio*1400;now=int(time.time());c=sqlite3.connect(db)
+snapshot=json.dumps({'reference':{'dictionary':'synthetic','lookup_key':'école','version':'1','attribution':'synthetic','license':'MIT','source_url':'https://example.org','license_url':'https://example.org','sha256':'a'*64},'digest':[]})
+c.execute("INSERT INTO vocabulary(id,headword,snapshot,notes,created_at,updated_at) VALUES(1,'école',?,'keep',1000,1000)",(snapshot,))
+c.execute("INSERT INTO review_cards VALUES(1,1,'recognition')");c.execute("INSERT INTO review_cards VALUES(2,1,'listening')")
+files=[]
+for i in range(1,340):
+ data=large if i>=304 else audio;content=hashlib.sha256(data).hexdigest();locator=f'{i:064x}';generated=now-604801 if 3<=i<=303 else now-120;expiry=generated+604800
+ c.execute("INSERT INTO speech_versions(locator,content_hash,byte_length,generated_at,created_at,vocabulary_id,expected_revision,generation,sealed,physical_locator,context,verification,expires_at,last_used) VALUES(?,?,?,?,?,1,0,0,1,?,'word','verified',?,?)",(locator,content,len(data),generated,generated,locator,expiry,generated))
+ name=f's-{locator}-{content}.ogg';(cache/name).write_bytes(data);files.append(name)
+c.execute('INSERT INTO word_audio_selections(vocabulary_id,current_version,previous_version,previous_until) VALUES(1,?,?,?)',(f'{1:064x}',f'{2:064x}',now+1209600))
+(cache/'unregistered-user.ogg').write_bytes(audio);c.commit();print(json.dumps(dict(expired=301,files=len(files),permanent=files[0],previous=files[1],clip_bytes=len(audio),large_bytes=len(large))))`);
+  const before=observe(); assert.ok(before.unowned>209_715_200,'The fixture must exert real capacity pressure');
+  const page=await fixture.start(); let after=observe();
+  for (let index=0;index<40 && after.expired!==301;index++) { await delay(100); after=observe(); }
+  let status=await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('runtime_status'));
+  for (let index=0;index<40 && status.audioCache?.in_progress;index++) {
+    await delay(100); status=await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('runtime_status'));
+  }
+  after=observe();
+  await writeFile(join(fixture.destination,'lifecycle-checkpoint.json'),JSON.stringify({seed,before,after,status},null,2));
+  assert.equal(after.expired,301,'Maintenance must continue after the first 100 reclaimable files');
+  assert.ok(after.unowned<=209_715_200,'Unprotected temporary content must meet the logical soft target');
+  assert.deepEqual(after.business,before.business);assert.deepEqual(after.cards,before.cards);assert.deepEqual(after.current,before.current);assert.equal(after.ratings,0);
+  const cache=join(fixture.destination,'Lexique-data','temp','speech');const original=await readFile(clip);
+  for (const name of [seed.permanent,seed.previous,'unregistered-user.ogg']) assert.deepEqual(await readFile(join(cache,name)),original);
+  assert.ok(status.audioCache,'Capacity and unknown files must be reported');
+  assert.equal(status.audioCache.in_progress,false,'The bounded reconciliation must finish');
+  assert.equal(status.audioCache.error,null);
+  assert.equal(status.audioCache.unknown_files,1);assert.ok(status.audioCache.allocated_bytes>=status.audioCache.file_bytes);
+  assert.equal(status.audioCache.file_bytes,status.audioCache.logical_bytes+status.audioCache.unknown_bytes);
+  await writeFile(join(fixture.destination,'results.json'),JSON.stringify({seed,after,status},null,2));
+  console.log(JSON.stringify({expired:after.expired,unowned:after.unowned,status}));await fixture.stop(true);
 } finally { await fixture.finish(); }

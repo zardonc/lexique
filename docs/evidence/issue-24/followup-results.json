@@ -1,0 +1,245 @@
+{
+  "recordedDate": "2026-11-03",
+  "issue": 24,
+  "reviewFixedPoint": "eae82eab0364db59a64f2295fefd0fa1213bc04a",
+  "followupSourceHead": "c9d8bf8",
+  "binarySha256": "57334356d84addf966e3a639d0fdb7cea38d936d96171f6f0f15fb46de8ed77b",
+  "baselineSha256": "f5ab46d516021d46af5082f6c84672c2f94218403afe0bd907599cf75076bed1",
+  "baselineDue": {
+    "status": "failed 2000 ms budget as expected",
+    "ms": [
+      15821.2,
+      7478,
+      4561.1
+    ],
+    "cards": [
+      20,
+      20,
+      20
+    ],
+    "future": "not run; stopped after due-budget assertion",
+    "rawLog": "target/issue-24/followup-20261102/baseline-rtss-off.log"
+  },
+  "scaleBoundary": {
+    "bytesPerFile": 8192,
+    "physicalDiskCold": false,
+    "decodablePlaybackEvidence": false,
+    "hardExecutionLimitSeconds": 60,
+    "dueBudgetMs": 2000
+  },
+  "scales": [
+    {
+      "count": 100,
+      "dueMs": [
+        56.7,
+        18,
+        17.3,
+        18.1
+      ],
+      "futureMs": [
+        15.2,
+        16,
+        12.8,
+        13.5
+      ],
+      "dueCardsPerSample": 20,
+      "futureCardsPerSample": 0,
+      "futureWakeUpEverySample": true,
+      "rawResult": "target/issue-24/followup-pinned-scale-100-20261103/results.json"
+    },
+    {
+      "count": 1000,
+      "dueMs": [
+        237.8,
+        74.8,
+        76.7,
+        78
+      ],
+      "futureMs": [
+        43.1,
+        40.5,
+        41.7,
+        39.9
+      ],
+      "dueCardsPerSample": 20,
+      "futureCardsPerSample": 0,
+      "futureWakeUpEverySample": true,
+      "rawResult": "target/issue-24/followup-pinned-scale-1000-20261103/results.json"
+    },
+    {
+      "count": 10000,
+      "dueMs": [
+        1684.9,
+        768.3,
+        691.7
+      ],
+      "futureMs": [
+        260.1,
+        236.5,
+        229.2
+      ],
+      "dueCardsPerSample": 20,
+      "futureCardsPerSample": 0,
+      "futureWakeUpEverySample": true,
+      "rawResult": "target/issue-24/followup-pinned-scale-10000-20261103/results.json"
+    }
+  ],
+  "nativeCaseResults": [
+    {
+      "case": "startup",
+      "status": "passed",
+      "rawResult": "target/issue-24/followup-pinned-startup-20261103/results.json"
+    },
+    {
+      "case": "product-1",
+      "status": "passed",
+      "rawResult": "target/issue-24/followup-pinned-product-1-20261103/results.json"
+    },
+    {
+      "case": "product-2",
+      "status": "passed",
+      "rawResult": "target/issue-24/followup-pinned-product-2-20261103/results.json"
+    },
+    {
+      "case": "product-3",
+      "status": "passed",
+      "rawResult": "target/issue-24/followup-pinned-product-3-20261103/results.json"
+    },
+    {
+      "case": "lifecycle",
+      "status": "passed",
+      "rawResult": "target/issue-24/followup-pinned-lifecycle-20261103/results.json"
+    },
+    {
+      "case": "recovery",
+      "status": "passed",
+      "rawResult": "target/issue-24/followup-pinned-recovery-20261103/results.json"
+    },
+    {
+      "case": "corrupt-retry",
+      "status": "passed",
+      "rawResult": "target/issue-24/followup-pinned-corrupt-retry-20261103/results.json"
+    },
+    {
+      "case": "single-errors",
+      "status": "passed",
+      "rawResult": "target/issue-24/followup-pinned-single-errors-20261103/results.json"
+    },
+    {
+      "case": "targeted-retry",
+      "status": "passed",
+      "rawResult": "target/issue-24/followup-pinned-targeted-retry-20261103/results.json"
+    },
+    {
+      "case": "disconnect",
+      "status": "passed",
+      "rawResult": "target/issue-24/followup-pinned-disconnect-20261103/results.json"
+    },
+    {
+      "case": "scale-100",
+      "status": "passed",
+      "rawResult": "target/issue-24/followup-pinned-scale-100-20261103/results.json"
+    },
+    {
+      "case": "scale-1000",
+      "status": "passed",
+      "rawResult": "target/issue-24/followup-pinned-scale-1000-20261103/results.json"
+    },
+    {
+      "case": "scale-10000",
+      "status": "passed",
+      "rawResult": "target/issue-24/followup-pinned-scale-10000-20261103/results.json"
+    }
+  ],
+  "processFailedCases": [],
+  "startupSuccessfulFirstRequests": 15,
+  "realPlaybackRuns": [
+    {
+      "run": 1,
+      "decoded": 6,
+      "allFiniteAudibleMono": true,
+      "workersAfterExit": 0,
+      "cardCommitMs": 13.1,
+      "playStartMs": 36.8
+    },
+    {
+      "run": 2,
+      "decoded": 6,
+      "allFiniteAudibleMono": true,
+      "workersAfterExit": 0,
+      "cardCommitMs": 12.5,
+      "playStartMs": 41.3
+    },
+    {
+      "run": 3,
+      "decoded": 6,
+      "allFiniteAudibleMono": true,
+      "workersAfterExit": 0,
+      "cardCommitMs": 10.9,
+      "playStartMs": 39
+    }
+  ],
+  "checks": {
+    "lint": "passed",
+    "typecheck": "passed",
+    "frontendBuild": "passed via final Tauri build",
+    "rustFmt": "passed",
+    "rustCheckLocked": "passed",
+    "backendTestsPassed": 94,
+    "cacheTestsPassed": 8,
+    "desktopTestsPassed": 2,
+    "browserTestsPassed": 87,
+    "nativeCleanupTestsPassed": 4
+  },
+  "crashSignature": {
+    "exception": "0xC0000005",
+    "module": "RTSSHooks64.dll",
+    "offset": "0x1490af",
+    "processFailedKind": 0,
+    "reason": 0,
+    "exitCode": -1073741819,
+    "rtssVersion": "7.3.5.28314",
+    "failedMitigation": "RTSSHooksProfileOverride=EnableHooking,0 in main, inherited at creation, and bootstrap; removed"
+  },
+  "environment": {
+    "rtssDuringPinnedNativeTests": "closed",
+    "rtssAfterTests": "restored; observed PID 13940",
+    "taskOwnedProcessesAfterVerification": 0
+  },
+  "exploration": [
+    {
+      "candidate": "concurrent legacy metadata commits during reads",
+      "dueMs": 2684.6,
+      "status": "failed; removed"
+    },
+    {
+      "candidate": "16 workers with prepared statements",
+      "dueMs": 2106.4,
+      "status": "failed 2000 ms budget"
+    },
+    {
+      "candidate": "32 workers with prepared statements",
+      "dueMs": 2063.1,
+      "status": "failed 2000 ms budget; not selected"
+    },
+    {
+      "candidate": "16 workers and preallocated bounded read buffer",
+      "dueMs": 1653.8,
+      "status": "exploratory pass; final pinned matrix measured separately"
+    }
+  ],
+  "review": {
+    "standards": "independent final review incomplete: model token rate limit",
+    "spec": "independent final review incomplete: model token rate limit; 2 confirmed initial defects fixed",
+    "manualSupplement": "followup source and focused boundaries checked; does not replace independent full-baseline review"
+  },
+  "remainingUnverified": [
+    "RTSS-on stable compatibility",
+    "other hardware and platform runtime",
+    "physical cold disk and 64 KiB scale files",
+    "large review history mixture",
+    "long-duration sleep and resource growth",
+    "new binary clean-system offline readiness",
+    "F01-F05 future integrations"
+  ]
+}

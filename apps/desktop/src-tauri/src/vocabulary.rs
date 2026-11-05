@@ -9,6 +9,117 @@ use tauri::{Manager, State};
 
 pub struct DatabasePath(pub PathBuf);
 
+#[cfg(all(test, windows))]
+mod queue_audio_tests {
+    use super::*;
+
+    #[test]
+    fn saved_word_keeps_its_selected_audio_when_preferences_change() {
+        let root = std::env::temp_dir().join(format!(
+            "lexique-selected-{}-{}",
+            std::process::id(),
+            std::time::SystemTime::now()
+                .duration_since(std::time::UNIX_EPOCH)
+                .unwrap()
+                .as_nanos()
+        ));
+        std::fs::create_dir_all(root.join("Lexique-data/data")).unwrap();
+        let path = root.join("Lexique-data/data/lexique.sqlite3");
+        let connection = Connection::open(&path).unwrap();
+        lexique_storage::initialize(&connection).unwrap();
+        let snapshot = serde_json::json!({"reference":{"dictionary":"synthetic","lookup_key":"école","version":"1","attribution":"fixture","license":"MIT","source_url":"https://example.org","license_url":"https://example.org","sha256":"a".repeat(64)},"digest":[]}).to_string();
+        connection.execute("INSERT INTO vocabulary(id,headword,snapshot,notes,created_at,updated_at) VALUES(1,'école',?1,'preserve',1,1)", [snapshot]).unwrap();
+        let female = lexique_storage::attach_word_audio_at(&connection, 1, 1000).unwrap();
+        let first = b"OggSoriginal-female";
+        let hash = lexique_storage::content_hash(first);
+        crate::speech_cache::write_asset(&path, &female, &hash, first).unwrap();
+        lexique_storage::publish_speech(&connection, &female, &hash, 1000).unwrap();
+        let inspector = crate::speech_cache::Inspector::new(&path).unwrap();
+        assert_eq!(
+            crate::speech_tasks::cached_word(&connection, &inspector, 1, 1001)
+                .unwrap()
+                .unwrap(),
+            first
+        );
+        lexique_storage::set_speech_preferences(
+            &connection,
+            &lexique_storage::SpeechPreferences {
+                voice: lexique_storage::SpeechVoice::Male,
+                speed: lexique_storage::SpeechSpeed::Normal,
+            },
+        )
+        .unwrap();
+        let male = lexique_storage::attach_word_audio_at(&connection, 1, 1002).unwrap();
+        let second = b"OggSnew-male";
+        let hash = lexique_storage::content_hash(second);
+        crate::speech_cache::write_asset(&path, &male, &hash, second).unwrap();
+        lexique_storage::publish_speech(&connection, &male, &hash, 1002).unwrap();
+        assert_eq!(
+            crate::speech_tasks::cached_word(&connection, &inspector, 1, 1003)
+                .unwrap()
+                .unwrap(),
+            first,
+            "Changing preference and saving a word must not replace its selected audio"
+        );
+        let selected = lexique_storage::selected_audio(&connection, 1)
+            .unwrap()
+            .unwrap();
+        assert_eq!(selected.semantic_key.as_deref(), Some(female.as_str()));
+        crate::speech_cache::remove_asset(&path, &male, &lexique_storage::content_hash(second))
+            .unwrap();
+        assert_eq!(
+            crate::speech_tasks::cached_word(&connection, &inspector, 1, 1004)
+                .unwrap()
+                .unwrap(),
+            first,
+            "Removing an unselected source preserves the selected instance"
+        );
+        drop(inspector);
+        drop(connection);
+        let connection = Connection::open(&path).unwrap();
+        lexique_storage::initialize(&connection).unwrap();
+        let inspector = crate::speech_cache::Inspector::new(&path).unwrap();
+        assert_eq!(
+            crate::speech_tasks::cached_word(&connection, &inspector, 1, 1005)
+                .unwrap()
+                .unwrap(),
+            first
+        );
+        assert_eq!(
+            lexique_storage::selected_audio(&connection, 1)
+                .unwrap()
+                .unwrap()
+                .locator,
+            selected.locator
+        );
+        assert_eq!(
+            repair_spec(&connection, &lexique_storage::get(&connection, 1).unwrap())
+                .unwrap()
+                .voice,
+            "female",
+            "repair uses the selected specification after preferences change"
+        );
+        std::fs::write(
+            root.join(format!(
+                "Lexique-data/temp/speech/s-{}-{}.ogg",
+                selected.physical_locator, selected.content_hash
+            )),
+            b"OggSdamaged-selection",
+        )
+        .unwrap();
+        assert!(
+            crate::speech_tasks::cached_word(&connection, &inspector, 1, 1006).is_err(),
+            "damaged selected audio cannot silently fall back to the newer male variant"
+        );
+        drop(inspector);
+        drop(connection);
+        std::fs::remove_dir_all(root).unwrap();
+    }
+
+    // WindowValidator's worker/IPC boundary is covered by native-window-24 and native-corrupt-retry-24;
+    // due/skip and concurrent-reader eligibility are covered by storage queue_cache tests.
+}
+
 #[cfg(target_os = "macos")]
 // shortcut: Dock Quit bypasses this guard; cover it before macOS acceptance.
 pub fn coordinate_quit(app: &tauri::App) -> Result<(), Box<dyn std::error::Error>> {
@@ -124,14 +235,32 @@ pub async fn vocabulary_save(
         } else {
             None
         };
+        if let Some(id) = request.id {
+            select_saved_audio(&connection, &path, id);
+        }
         let result = lexique_storage::save(&mut connection, &request, content)
             .map_err(|error| error.to_string())?;
+        select_saved_audio(&connection, &path, result.record.id);
         app.state::<crate::speech_tasks::SpeechTasks>().wake()?;
         crate::speech_tasks::changed(&app);
         Ok(result)
     })
     .await
     .map_err(|error| format!("Vocabulary save task failed: {error}"))?
+}
+
+fn select_saved_audio(connection: &Connection, path: &DatabasePath, id: i64) {
+    let result = (|| {
+        let inspector = crate::speech_cache::Inspector::new(&path.0)?;
+        crate::speech_tasks::cached_word(connection, &inspector, id, crate::speech_tasks::now()?)?;
+        Ok::<_, String>(())
+    })();
+    if let Err(error) = result {
+        crate::speech_cache::report_error(
+            &path.0,
+            &format!("Could not select saved word audio: {error}"),
+        );
+    }
 }
 
 #[tauri::command]
@@ -326,14 +455,7 @@ pub async fn review_availability(
     .map_err(|e| format!("Review availability task failed: {e}"))?
 }
 
-#[derive(serde::Serialize)]
-pub struct QueueView {
-    queue: lexique_storage::ReviewQueue,
-    record: Option<VocabularyRecord>,
-    audio_pending: bool,
-    audio_error: Option<String>,
-    audio_vocabulary_id: Option<i64>,
-}
+pub type QueueView = crate::review_window::QueueView;
 
 #[tauri::command]
 pub async fn review_undo_target(path: State<'_, DatabasePath>) -> Result<Option<String>, String> {
@@ -382,117 +504,40 @@ pub enum UndoOutcome {
 #[tauri::command]
 pub async fn review_queue(
     path: State<'_, DatabasePath>,
+    validator: State<'_, std::sync::Arc<crate::review_window::WindowValidator>>,
+    app: tauri::AppHandle,
     timezone: String,
     skipped: Vec<i64>,
+    cursor: Option<crate::review_window::QueueCursor>,
 ) -> Result<QueueView, String> {
     if timezone.is_empty()
         || timezone.len() > 128
         || skipped.len() > 10_000
+        || cursor.as_ref().is_some_and(|cursor| !cursor.valid())
         || skipped
             .iter()
             .any(|id| *id <= 0 || *id > 9_007_199_254_740_991)
     {
-        return Err("Invalid timezone".into());
+        return Err("Invalid review queue scope".into());
     }
     let path = DatabasePath(path.0.clone());
+    let validator = validator.inner().clone();
     tauri::async_runtime::spawn_blocking(move || {
-        let now = std::time::SystemTime::now()
-            .duration_since(std::time::UNIX_EPOCH)
-            .map_err(|e| e.to_string())?
-            .as_secs();
-        let mut connection = open(&path)?;
-        let inspector = crate::speech_cache::Inspector::new(&path.0);
-        let inventory =
-            lexique_storage::review_card_inventory(&connection).map_err(|e| e.to_string())?;
-        let skipped: std::collections::HashSet<i64> = skipped.into_iter().collect();
-        let mut verified_audio = std::collections::HashSet::new();
-        let mut audio_pending = false;
-        let mut audio_error = None;
-        let mut audio_vocabulary_id = None;
-        let mut checked = std::collections::HashMap::new();
-        let mut legacy = Vec::new();
-        let mut next_audio_due: Option<i64> = None;
-        let limits = lexique_storage::review_settings(&connection).map_err(|e| e.to_string())?;
-        for card in inventory
-            .iter()
-            .filter(|card| card.kind == "listening" && !skipped.contains(&card.id))
-        {
-            let progress = lexique_storage::review_progress(&connection, card.id)
-                .map_err(|e| e.to_string())?;
-            if let Some(due) = progress.card.due_at.filter(|due| *due > now as i64) {
-                next_audio_due = Some(next_audio_due.map_or(due, |previous| previous.min(due)));
-                continue;
-            }
-            if limits.new_limit == 0 && limits.review_limit == 0 {
-                continue;
-            }
-            let found = checked.entry(card.vocabulary_id).or_insert_with(|| {
-                inspector
-                    .as_ref()
-                    .map_err(Clone::clone)
-                    .and_then(|inspector| {
-                        crate::speech_tasks::inspect_word(
-                            &connection,
-                            inspector,
-                            card.vocabulary_id,
-                            now as i64,
-                        )
-                    })
-                    .map(|(audio, hash)| {
-                        if let Some(hash) = hash {
-                            legacy.push((card.vocabulary_id, hash));
-                        }
-                        audio.is_some()
-                    })
-            });
-            match found {
-                Ok(true) => {
-                    verified_audio.insert(card.id);
-                }
-                Ok(false) => {
-                    audio_pending = true;
-                    audio_vocabulary_id.get_or_insert(card.vocabulary_id);
-                }
-                Err(error) => {
-                    audio_pending = true;
-                    audio_vocabulary_id.get_or_insert(card.vocabulary_id);
-                    audio_error = Some(error.clone());
-                }
-            }
-        }
-        lexique_storage::register_legacy_speeches(&mut connection, &legacy)
-            .map_err(|e| e.to_string())?;
-        let mut queue = lexique_storage::review_queue_filtered(
-            &mut connection,
-            i64::try_from(now).map_err(|e| e.to_string())?,
+        let skipped = skipped.into_iter().collect();
+        let view = crate::review_window::read(
+            &path,
+            &validator,
+            crate::speech_tasks::now()?,
             &timezone,
-            |card| {
-                Ok(!skipped.contains(&card.id)
-                    && (card.kind != "listening" || verified_audio.contains(&card.id)))
-            },
-        )
-        .map_err(|e| e.to_string())?;
-        if let Some(due) = next_audio_due {
-            if queue.available_at.is_none_or(|at| due < at) {
-                queue.available_at = Some(due);
-                if queue.cards.is_empty() && queue.reason.is_none() {
-                    queue.reason = Some("due".into());
-                }
-            }
+            &skipped,
+            cursor.as_ref(),
+        )?;
+        app.state::<crate::speech_tasks::SpeechTasks>()
+            .prioritize(view.demands.clone())?;
+        if view.audio_error.is_some() && view.summary.verification_pending {
+            crate::speech_tasks::changed(&app);
         }
-        let record = queue
-            .cards
-            .first()
-            .map(|card| lexique_storage::get(&connection, card.vocabulary_id))
-            .transpose()
-            .map_err(|e| e.to_string())?;
-        Ok(QueueView {
-            queue,
-            record,
-            audio_pending,
-            audio_error,
-            audio_vocabulary_id,
-        })
+        Ok(view)
     })
     .await
     .map_err(|e| format!("Review queue task failed: {e}"))?
@@ -586,6 +631,7 @@ pub async fn speech_generate(
     path: State<'_, DatabasePath>,
     vocabulary_id: i64,
     regenerate: Option<bool>,
+    operation: Option<String>,
 ) -> Result<Vec<u8>, String> {
     if vocabulary_id <= 0 || vocabulary_id > 9_007_199_254_740_991 {
         return Err("Invalid vocabulary ID".into());
@@ -594,7 +640,20 @@ pub async fn speech_generate(
     tauri::async_runtime::spawn_blocking(move || {
         let mut connection = open(&path)?;
         let inspector = crate::speech_cache::Inspector::new(&path.0)?;
-        if !regenerate.unwrap_or(false) {
+        let receipt = operation
+            .as_deref()
+            .map(|operation| {
+                lexique_storage::selected_speech_operation(
+                    &connection,
+                    operation,
+                    vocabulary_id,
+                    regenerate.unwrap_or(false),
+                )
+            })
+            .transpose()
+            .map_err(|e| e.to_string())?
+            .flatten();
+        if !regenerate.unwrap_or(false) && receipt.is_none() {
             if let Some(bytes) = crate::speech_tasks::cached_word(
                 &connection,
                 &inspector,
@@ -604,28 +663,60 @@ pub async fn speech_generate(
                 return Ok(bytes);
             }
         }
-        let record = lexique_storage::get(&connection, vocabulary_id).map_err(|e| e.to_string())?;
-        let spec = lexique_storage::SpeechSpec::word(
-            &record.headword,
-            lexique_storage::speech_preferences(&connection)
+        let (key, generation) = match receipt {
+            Some(receipt) => receipt,
+            None => {
+                let record =
+                    lexique_storage::get(&connection, vocabulary_id).map_err(|e| e.to_string())?;
+                let spec = if regenerate.unwrap_or(false) {
+                    lexique_storage::SpeechSpec::word(
+                        &record.headword,
+                        lexique_storage::speech_preferences(&connection)
+                            .map_err(|e| e.to_string())?
+                            .voice,
+                    )
+                } else {
+                    repair_spec(&connection, &record)?
+                };
+                lexique_storage::request_selected_speech(
+                    &mut connection,
+                    &spec,
+                    vocabulary_id,
+                    crate::speech_tasks::now()?,
+                    regenerate.unwrap_or(false),
+                    operation.as_deref(),
+                )
                 .map_err(|e| e.to_string())?
-                .voice,
-        );
-        let key = lexique_storage::request_speech(
-            &mut connection,
-            &spec,
-            Some(vocabulary_id),
-            crate::speech_tasks::now()?,
-            regenerate.unwrap_or(false),
-        )
-        .map_err(|e| e.to_string())?;
+            }
+        };
         drop(connection);
         let tasks = app.state::<crate::speech_tasks::SpeechTasks>();
         tasks.wake()?;
-        tasks.wait(key)
+        tasks
+            .wait(key.clone())
+            .map_err(|e| format!("Audio generation failed: {e}"))?;
+        let connection = open(&path)?;
+        let version = lexique_storage::selected_audio(&connection, vocabulary_id)
+            .map_err(|e| e.to_string())?
+            .ok_or("Generated audio selection was not committed")?;
+        if version.generation != generation || version.semantic_key.as_deref() != Some(key.as_str())
+        {
+            return Err("Audio selection was superseded; retry".into());
+        }
+        let bytes = crate::speech_tasks::read_selected(&inspector, &version)?
+            .ok_or("Generated audio selection is unavailable")?;
+        crate::speech_tasks::changed(&app);
+        Ok(bytes)
     })
     .await
     .map_err(|e| format!("Speech task failed: {e}"))?
+}
+
+fn repair_spec(
+    connection: &Connection,
+    record: &VocabularyRecord,
+) -> Result<lexique_storage::SpeechSpec, String> {
+    lexique_storage::word_repair_spec(connection, record.id).map_err(|e| e.to_string())
 }
 
 #[tauri::command]
@@ -775,25 +866,22 @@ pub async fn speech_retry_missing(
             Ok(None) => false,
             Err(error)
                 if error == "Invalid cached speech audio"
-                    || error == "Cached speech content checksum mismatch" =>
+                    || error == "Cached speech content checksum mismatch"
+                    || error == "Selected audio integrity check failed" =>
             {
                 true
             }
             Err(error) => return Err(error),
         };
         let record = lexique_storage::get(&connection, vocabulary_id).map_err(|e| e.to_string())?;
-        let spec = lexique_storage::SpeechSpec::word(
-            &record.headword,
-            lexique_storage::speech_preferences(&connection)
-                .map_err(|e| e.to_string())?
-                .voice,
-        );
-        lexique_storage::request_speech(
+        let spec = repair_spec(&connection, &record)?;
+        lexique_storage::request_selected_speech(
             &mut connection,
             &spec,
-            Some(vocabulary_id),
+            vocabulary_id,
             crate::speech_tasks::now()?,
             replace,
+            None,
         )
         .map_err(|e| e.to_string())?;
         app.state::<crate::speech_tasks::SpeechTasks>().wake()?;
@@ -864,7 +952,13 @@ pub async fn review_settings(
 
 #[tauri::command]
 pub fn finish_close(app: tauri::AppHandle) -> Result<(), String> {
+    crate::speech_cache::report_error(
+        &app.state::<DatabasePath>().0,
+        "[native-lifecycle] finish_close accepted",
+    );
     app.state::<crate::speech_tasks::SpeechTasks>().shutdown()?;
+    app.state::<std::sync::Arc<crate::review_window::WindowValidator>>()
+        .stop();
     app.get_webview_window("main")
         .ok_or("Main window unavailable")?
         .destroy()

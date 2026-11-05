@@ -4,9 +4,14 @@ use lexique_storage::initialize;
 use rusqlite::Connection;
 use tauri::{Emitter, Manager, State};
 
+#[cfg(windows)]
+mod audio_maintenance;
+mod review_window;
 mod speech_cache;
 mod speech_tasks;
 mod vocabulary;
+#[cfg(windows)]
+mod webview_diagnostics;
 use vocabulary::{
     DatabasePath, finish_close, review_add, review_auto_enroll, review_availability, review_cards,
     review_pause, review_progress, review_queue, review_rate, review_settings, review_undo,
@@ -43,8 +48,31 @@ async fn dictionary_lookup(
 }
 
 #[tauri::command]
-fn runtime_status(status: State<'_, RuntimeStatus>) -> RuntimeStatus {
-    status.inner().clone()
+async fn runtime_status(
+    status: State<'_, RuntimeStatus>,
+    path: State<'_, DatabasePath>,
+    _tasks: State<'_, speech_tasks::SpeechTasks>,
+) -> Result<RuntimeStatus, String> {
+    let mut status = status.inner().clone();
+    #[cfg(windows)]
+    let cache = _tasks.cache_status()?;
+    let path = DatabasePath(path.0.clone());
+    tauri::async_runtime::spawn_blocking(move || {
+        let connection = vocabulary::open(&path)?;
+        status.audio_migration =
+            lexique_storage::audio_migration_status(&connection).map_err(|e| e.to_string())?;
+        #[cfg(windows)]
+        {
+            status.audio_cache = Some(status::AudioCacheStatus {
+                files: cache,
+                usage: lexique_storage::audio_usage(&connection, speech_tasks::now()?)
+                    .map_err(|e| e.to_string())?,
+            });
+        }
+        Ok(status)
+    })
+    .await
+    .map_err(|e| format!("Audio migration status failed: {e}"))?
 }
 
 pub fn run() {
@@ -58,22 +86,34 @@ pub fn run() {
             let connection = Connection::open(&database_path)?;
             let schema_version = initialize(&connection)?;
             drop(connection);
+            #[cfg(windows)]
+            webview_diagnostics::attach(app, database_path.clone())?;
             let resources = app.path().resource_dir()?.join("speech");
             app.manage(speech_tasks::SpeechTasks::start(
                 app.handle().clone(),
                 database_path.clone(),
                 resources,
             ));
+            app.manage(review_window::WindowValidator::start(
+                app.handle().clone(),
+                database_path.clone(),
+            ));
             app.manage(DatabasePath(database_path));
             app.manage(RuntimeStatus {
                 version: app.package_info().version.to_string(),
                 schema_version,
                 storage: StorageKind::Sqlite,
+                audio_migration: lexique_storage::AudioMigrationStatus::default(),
+                audio_cache: None,
             });
             Ok(())
         })
         .on_window_event(|window, event| {
             if let tauri::WindowEvent::CloseRequested { api, .. } = event {
+                speech_cache::report_error(
+                    &window.state::<DatabasePath>().0,
+                    "[native-lifecycle] Window CloseRequested",
+                );
                 api.prevent_close();
                 if let Err(error) = window.emit("lexique-close-requested", ()) {
                     eprintln!("Could not coordinate window close: {error}");

@@ -75,12 +75,14 @@ E2E 结束后在 `apps/desktop/test-results/` 产生桌面 / 手机截图，在 
 
 M1 生词本支持同词一份的逻辑引用、收藏时只读摘要与独立纯文本笔记。点击“加入生词本”后需明确保存；笔记可为空、可清空，最多 20,000 个 Unicode 标量（组合重音分别计数）。查询结果、摘要与来源不能由笔记编辑覆盖。支持搜索词头 / 摘要 / 笔记，以及词头、创建时间、修改时间的双向排序和偏好恢复；保存失败保留输入，旧版本冲突拒绝覆盖。Windows 正常关闭经过保存 / 放弃 / 继续编辑选择；已保存记录可离线重启恢复。验证与平台限制见 [M1 证据](docs/evidence/issue-10/README.md)；必须在 macOS 执行的项目统一记录为 [blocked](docs/macos-m1-blockers.md)。
 
-共享核心使用 `fsrs-rs 6.6.2` 官方默认参数及显式的 `libm 0.2.16` 数学兼容补丁，修订标识为 `fsrs-rs/6.6.2+libm-0.2.16`。Windows x64 原生 / 实际 WASM 的 71+4,096 向量严格排程一致，包含原先相差一天的两个反例。复验、上游差异、许可与限制见 [#13 证据](docs/evidence/issue-13/README.md)。尚未接入用户库或评分界面，也不是浏览器复习产品。
+共享核心使用 `fsrs-rs 6.6.2` 官方默认参数及显式的 `libm 0.2.16` 数学兼容补丁，修订标识为 `fsrs-rs/6.6.2+libm-0.2.16`。Windows x64 原生／实际 WASM 的 71+4,096 向量严格排程一致，包含原先相差一天的两个反例，见 [#13 证据](docs/evidence/issue-13/README.md)。M2 已接入用户库、评分、队列及一级撤销，并在 [#22](docs/evidence/issue-22/review-2026-11-01.md) 收尾；浏览器持久复习仍未实现。
 
-#15 已接入生词详情的单个“加入复习”、识义卡与听音卡、真实错误及重启恢复。schema 3 增量保留 M1 内容，不自动批量建卡；再次加入保持两卡身份，仅对缺失或失败音频重试。语音开发包使用 Supertonic 3 本地资源生成目标 48 kbit/s 的 Ogg Opus；听音卡进入播放一次、翻面不自动播放，重播读取正常 / 0.6 倍速偏好，正面不显示词头。临时音频位于 `Lexique-data/temp/speech/`，启动和每次清理后 24 小时检查七天未使用的文件；错误保存在 `Lexique-data/logs/speech-cache.log`。Windows x64 实播和重启检查已通过，新音频由用户试听判定；连续 24 小时触发未实测。评分与排程持久化属于 #16。
+#15 已接入生词详情的单个“加入复习”、识义卡与听音卡、真实错误及重启恢复。schema 3 增量保留 M1 内容；再次加入保持两卡身份，仅对缺失或失败音频重试。语音开发包使用 Supertonic 3 本地资源生成目标 48 kbit/s 的 Ogg Opus；听音卡进入播放一次、翻面不自动播放，重播读取正常 / 0.6 倍速偏好，正面不显示词头。音频位于 `Lexique-data/temp/speech/`，错误保存在 `Lexique-data/logs/speech-cache.log`。#24 已用绝对期限和选定内容保护取代早期“七天未使用”规则，具体保留及维护边界见[架构](docs/architecture.md)。Windows x64 的 #15 实播和重启检查属于历史证据；新构建及长期维护分别验收。
 
-完整词典 / MDX / MDD、完整变位及例句朗读、语法笔记与分类、评分 / 队列 / 撤销、Google OAuth / Sheets、翻译与 AI、练习、浏览器复习与 BFF 尚未实现。原型的演示数据、密钥表单和伪同步没有被搬进生产代码。
+完整词典 / MDX / MDD、完整变位及例句朗读、语法笔记与分类、Google OAuth / Sheets、翻译与 AI、练习、浏览器复习与 BFF 尚未实现。原型的演示数据、密钥表单和伪同步没有被搬进生产代码。
 
 仓库包含已准入的 FreeDict 法中开发小样源包及其 CC BY-SA 3.0 许可；尚无正式发行的完整默认资源、模型、个人学习数据、服务凭据或 OAuth 配置。项目自有源码采用 [MIT](LICENSE)；第三方组件、数据、模型和声线分别遵守其上游许可，其他默认资源尚需逐项准入。已确认的开发链路、资源候选及验证门槛见 [开发准备清单](docs/development-readiness.md)。
 
 产品范围见 [产品基线](docs/product.md)，模块边界见 [架构](docs/architecture.md)，实施顺序见 [开发路线](docs/roadmap.md)，实测范围见 [验证记录](docs/verification.md)。
+
+2026-11-05，#24 及 #25–#34 的 Windows x64 本期验收完成。schema 17 已接入有界四卡窗口、真实修订／delta、按实际近期和本日需求修复、共享选定音频及统一 GC／容量／分块对账。三语运行状态分别报告登记逻辑字节、Windows 分配空间、永久／保护／可清理内容和保留的未知文件。完整性能、生命周期及平台限制见[实施记录](docs/evidence/issue-24/continuation-2026-11-04.md)与[验收清单](docs/evidence/issue-24/acceptance-matrix-2026-11-05.md)，提交前检查见[最终复核](docs/evidence/issue-24/final-review-2026-11-05.md)。

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import type { RuntimeAdapter } from './platform/runtime';
+import { AudioGenerationFailed } from './platform/runtime';
 import { errorMessage } from './platform/vocabulary';
 
 export function useQueueAudioReplacement(id: number, runtime: RuntimeAdapter) {
@@ -8,6 +9,7 @@ export function useQueueAudioReplacement(id: number, runtime: RuntimeAdapter) {
   const [error, setError] = useState('');
   const request = useRef(0);
   const running = useRef(false);
+  const operation = useRef<string | null>(null);
   useEffect(() => () => { request.current += 1; }, [id, runtime]);
   async function regenerate() {
     if (running.current) return;
@@ -15,10 +17,15 @@ export function useQueueAudioReplacement(id: number, runtime: RuntimeAdapter) {
     const version = ++request.current;
     setBusy(true); setError('');
     try {
-      const bytes = await runtime.generateSpeech(id, true);
+      operation.current ??= crypto.randomUUID();
+      const bytes = await runtime.generateSpeech(id, true, operation.current);
       if (!bytes) throw new Error('Native speech unavailable');
+      operation.current = null;
       if (version === request.current) setAudio(bytes);
-    } catch (cause) { if (version === request.current) setError(errorMessage(cause)); }
+    } catch (cause) {
+      if (cause instanceof AudioGenerationFailed) operation.current = null;
+      if (version === request.current) setError(errorMessage(cause));
+    }
     finally { running.current = false; if (version === request.current) setBusy(false); }
   }
   return { audio, busy, error, regenerate };

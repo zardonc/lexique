@@ -28,8 +28,11 @@ test('failed queue audio can be regenerated in place; replacement must play befo
   await expect(card.getByRole('button', { name: '忘记' })).toBeDisabled();
   await page.evaluate(() => Reflect.get(window, 'finishReplacement')());
   await expect(card.getByRole('button', { name: '忘记' })).toBeEnabled();
-  expect(await page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'speech_generate').map((call) => call.args)))
+  const calls = await page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'speech_generate').map((call) => call.args));
+  expect(calls.map((args) => ({ vocabularyId: args?.vocabularyId, regenerate: args?.regenerate })))
     .toEqual([{ vocabularyId: 1, regenerate: true }, { vocabularyId: 1, regenerate: true }]);
+  expect(calls[0]?.operation).toBeTruthy();
+  expect(calls[1]?.operation).toBe(calls[0]?.operation);
 });
 
 test('pending audio retry sends only the missing word identity', async ({ page }) => {

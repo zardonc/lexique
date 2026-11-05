@@ -35,9 +35,11 @@ function Answer({ record, text }: { readonly record: VocabularyRecord; readonly 
   </>;
 }
 
-export function QueueReviewCard({ record, text, runtime, card, audio, onRated, onSkip }: {
+export function QueueReviewCard({ record, text, runtime, card, audio, onRated, onSkip, enabled = true, progressRevision }: {
   readonly record: VocabularyRecord; readonly text: NotebookText; readonly runtime: RuntimeAdapter;
   readonly card: ReviewCard; readonly audio: Uint8Array | null; readonly onRated: () => void; readonly onSkip: () => void;
+  readonly enabled?: boolean;
+  readonly progressRevision: number;
 }) {
   const [revealed, setRevealed] = useState(false);
   const [busy, setBusy] = useState(false);
@@ -48,7 +50,7 @@ export function QueueReviewCard({ record, text, runtime, card, audio, onRated, o
       <button disabled={replacement.busy} onClick={() => { void play(); }}>{text.replay}</button></> : <h3 lang="fr">{record.headword}</h3>}
     <QueuePlaybackRecovery text={text} error={error} replacement={replacement} cancel={cancel} />
     {revealed && <>{audio && <h3 lang="fr">{record.headword}</h3>}<Answer record={record} text={text} />
-      <ReviewRating id={card.id} runtime={runtime} text={text} enabled={!audio || (played && !replacement.busy)} onBusyChange={setBusy} onSuccess={onRated} /></>}
+      <ReviewRating id={card.id} runtime={runtime} text={text} enabled={enabled && (!audio || (played && !replacement.busy))} presentationRevision={progressRevision} onBusyChange={setBusy} onSuccess={onRated} /></>}
     <div className="actions">{!revealed && <button onClick={() => setRevealed(true)}>{text.reveal}</button>}
       <button disabled={busy} onClick={onSkip}>{text.skip}</button></div>
   </section>;

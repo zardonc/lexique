@@ -170,7 +170,7 @@ pub struct RatingRequest {
     pub timezone: String,
 }
 
-#[derive(Serialize)]
+#[derive(Clone, Serialize)]
 pub struct ReviewProgress {
     pub revision: i64,
     pub card: Card,
@@ -183,11 +183,63 @@ pub struct ReviewAvailability {
     pub available_at: Option<i64>,
 }
 
-#[derive(Debug, PartialEq, Eq, Serialize)]
+#[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]
+#[serde(deny_unknown_fields)]
 pub struct QueueCard {
     pub id: i64,
     pub vocabulary_id: i64,
     pub kind: String,
+}
+
+pub struct QueueAudioMetadata {
+    pub ready: std::collections::HashSet<i64>,
+    pub pending_count: usize,
+    pub missing_words: Vec<i64>,
+    pub next_due: Option<i64>,
+}
+
+pub fn review_learning_day(now: i64, timezone: &str) -> Result<String, StorageError> {
+    lexique_core::scheduling::learning_day_for(now, timezone).map_err(StorageError::Invalid)
+}
+
+/// Readiness is only a candidate filter. File verification belongs to the platform window.
+pub fn queue_audio_metadata(
+    connection: &Connection,
+    now: i64,
+    skipped: &std::collections::HashSet<i64>,
+) -> Result<QueueAudioMetadata, StorageError> {
+    let mut metadata = QueueAudioMetadata {
+        ready: std::collections::HashSet::new(),
+        pending_count: 0,
+        missing_words: Vec::new(),
+        next_due: None,
+    };
+    let mut query=connection.prepare("SELECT c.id,c.vocabulary_id,json_extract(p.state,'$.due_at'),COALESCE(v.sealed=1 AND v.gc_state='live' AND v.verification IN ('unverified','verified'),0) FROM review_cards c LEFT JOIN review_progress p ON p.card_id=c.id LEFT JOIN word_audio_selections s USING(vocabulary_id) LEFT JOIN speech_versions v ON v.locator=s.current_version WHERE c.kind='listening' AND NOT EXISTS(SELECT 1 FROM review_paused q WHERE q.vocabulary_id=c.vocabulary_id) ORDER BY c.id")?;
+    for row in query.query_map([], |r| {
+        Ok((
+            r.get::<_, i64>(0)?,
+            r.get::<_, i64>(1)?,
+            r.get::<_, Option<i64>>(2)?,
+            r.get::<_, bool>(3)?,
+        ))
+    })? {
+        let (card, word, due, ready) = row?;
+        if skipped.contains(&card) {
+            continue;
+        }
+        if let Some(due) = due.filter(|due| *due > now) {
+            metadata.next_due = Some(metadata.next_due.map_or(due, |old| old.min(due)));
+        }
+        if ready {
+            metadata.ready.insert(word);
+        } else if due.is_none_or(|due| due <= now) {
+            metadata.pending_count += 1;
+            if metadata.missing_words.len() < 100 {
+                metadata.missing_words.push(word);
+            }
+        }
+    }
+    Ok(metadata)
 }
 
 #[derive(Serialize)]
@@ -224,40 +276,186 @@ pub fn review_queue_filtered(
     timezone: &str,
     mut available: impl FnMut(&QueueCard) -> Result<bool, StorageError>,
 ) -> Result<ReviewQueue, StorageError> {
+    let mut cache = crate::QueueCache::default();
+    for _ in 0..3 {
+        match read_queue_from_cache(connection, now, timezone, &mut cache, true, |card, _| {
+            available(card)
+        }) {
+            Err(StorageError::QueueChanged) => continue,
+            result => return result,
+        }
+    }
+    Err(StorageError::QueueChanged)
+}
+
+pub fn review_queue_cached(
+    connection: &mut Connection,
+    now: i64,
+    timezone: &str,
+    skipped: &std::collections::HashSet<i64>,
+    cache: &mut crate::QueueCache,
+) -> Result<(ReviewQueue, QueueAudioMetadata, crate::QueueCacheMetrics), StorageError> {
+    for _ in 0..3 {
+        match read_queue_from_cache(connection, now, timezone, cache, true, |card, ready| {
+            Ok(!skipped.contains(&card.id) && (card.kind != "listening" || ready))
+        }) {
+            Err(StorageError::QueueChanged) => continue,
+            Ok(queue) => {
+                return Ok((
+                    queue,
+                    cache.audio_metadata(now, skipped),
+                    cache.metrics.clone(),
+                ));
+            }
+            Err(error) => return Err(error),
+        }
+    }
+    Err(StorageError::QueueChanged)
+}
+
+/// Plans today's actual quota-admitted demand without changing persisted queue positions.
+pub fn review_audio_candidates(
+    connection: &mut Connection,
+    now: i64,
+    timezone: &str,
+    skipped: &std::collections::HashSet<i64>,
+    cache: &mut crate::QueueCache,
+) -> Result<ReviewQueue, StorageError> {
+    for _ in 0..3 {
+        match read_queue_from_cache(connection, now, timezone, cache, false, |card, _| {
+            Ok(!skipped.contains(&card.id))
+        }) {
+            Err(StorageError::QueueChanged) => continue,
+            result => return result,
+        }
+    }
+    Err(StorageError::QueueChanged)
+}
+
+/// Keeps admission, demand planning and the caller's remaining reads in one snapshot.
+/// No filesystem work may run while this transaction is held.
+pub struct ReviewQueueSnapshot<'a> {
+    pub transaction: rusqlite::Transaction<'a>,
+    pub queue: ReviewQueue,
+    pub audio: QueueAudioMetadata,
+    pub demand_candidates: Vec<QueueCard>,
+    pub metrics: crate::QueueCacheMetrics,
+}
+
+pub fn review_queue_snapshot<'a>(
+    connection: &'a Connection,
+    now: i64,
+    timezone: &str,
+    skipped: &std::collections::HashSet<i64>,
+    cache: &mut crate::QueueCache,
+) -> Result<ReviewQueueSnapshot<'a>, StorageError> {
+    for behavior in [
+        TransactionBehavior::Deferred,
+        TransactionBehavior::Immediate,
+    ] {
+        let tx = rusqlite::Transaction::new_unchecked(connection, behavior)?;
+        let result = (|| {
+            let queue = read_queue_from_cache(&tx, now, timezone, cache, true, |card, ready| {
+                Ok(!skipped.contains(&card.id) && (card.kind != "listening" || ready))
+            })?;
+            let metrics = cache.metrics.clone();
+            let audio = cache.audio_metadata(now, skipped);
+            let demand_candidates = if audio.pending_count > 0 {
+                read_queue_from_cache(&tx, now, timezone, cache, false, |card, _| {
+                    Ok(!skipped.contains(&card.id))
+                })?
+                .cards
+            } else {
+                Vec::new()
+            };
+            Ok((queue, audio, demand_candidates, metrics))
+        })();
+        match result {
+            Ok((queue, audio, demand_candidates, metrics)) => {
+                return Ok(ReviewQueueSnapshot {
+                    transaction: tx,
+                    queue,
+                    audio,
+                    demand_candidates,
+                    metrics,
+                });
+            }
+            Err(StorageError::Database(rusqlite::Error::SqliteFailure(error, _)))
+                if matches!(behavior, TransactionBehavior::Deferred)
+                    && error.code == rusqlite::ErrorCode::DatabaseBusy =>
+            {
+                // A concurrent commit prevented the position write upgrade. Reserve
+                // the writer before rereading rather than chasing changing revisions.
+                cache.invalidate();
+            }
+            Err(error) => {
+                cache.invalidate();
+                return Err(error);
+            }
+        }
+    }
+    unreachable!("the immediate attempt returns its result")
+}
+
+fn read_queue_from_cache(
+    connection: &Connection,
+    now: i64,
+    timezone: &str,
+    cache: &mut crate::QueueCache,
+    persist: bool,
+    mut available: impl FnMut(&QueueCard, bool) -> Result<bool, StorageError>,
+) -> Result<ReviewQueue, StorageError> {
     let day =
         lexique_core::scheduling::learning_day_for(now, timezone).map_err(StorageError::Invalid)?;
-    let tx = connection.transaction_with_behavior(TransactionBehavior::Immediate)?;
-    let previous: Option<(String, String)> = tx
+    let owned = connection.is_autocommit();
+    let tx = if owned {
+        Some(rusqlite::Transaction::new_unchecked(
+            connection,
+            TransactionBehavior::Deferred,
+        )?)
+    } else {
+        None
+    };
+    let snapshot = tx.as_deref().unwrap_or(connection);
+    let previous: Option<(String, String)> = snapshot
         .query_row(
             "SELECT learning_day, timezone FROM review_queue_state WHERE id = 1",
             [],
             |row| Ok((row.get(0)?, row.get(1)?)),
         )
         .optional()?;
-    if previous
+    let reset = previous
         .as_ref()
-        .is_none_or(|(previous_day, _)| previous_day != &day)
-    {
-        tx.execute("DELETE FROM review_queue_entries", [])?;
-        tx.execute("INSERT INTO review_queue_state VALUES (1, ?1, ?2) ON CONFLICT(id) DO UPDATE SET learning_day = excluded.learning_day, timezone = excluded.timezone", params![day, timezone])?;
-    }
-    let all = review_card_inventory(&tx)?;
-    let settings = review_settings(&tx)?;
-    let (used_new, used_review) = daily_usage(&tx, &day, now)?;
-    let latest: Option<i64> = tx.query_row(
+        .is_none_or(|(previous_day, _)| previous_day != &day);
+    cache.metrics = cache.refresh(snapshot, &day, timezone)?;
+    let source_revision = cache.revision;
+    let all: Vec<_> = cache.cards.values().cloned().collect();
+    let settings = review_settings(snapshot)?;
+    let (used_new, used_review) = daily_usage(snapshot, &day, now)?;
+    let latest: Option<i64> = snapshot.query_row(
         "SELECT MAX(reviewed_at) FROM review_ratings WHERE undo_operation IS NULL",
         [],
         |row| row.get(0),
     )?;
     let (remaining_new, remaining_review) = remaining_limits(&settings, used_new, used_review);
+    let existing: Vec<_> = cache
+        .positions
+        .iter()
+        .map(|(card, position)| (*card, *position))
+        .collect();
+    let version: i64 = snapshot.pragma_query_value(None, "data_version", |row| row.get(0))?;
+    if let Some(tx) = tx {
+        tx.commit()?;
+    }
+    // The callback can perform slow filesystem checks. Never retain a database
+    // snapshot (or a day-reset write reservation) across those checks.
     let mut pending = Vec::new();
     let mut reason = None;
     let mut available_at: Option<i64> = None;
-    for card in all {
-        if !available(&card)? {
+    for (card, progress) in all {
+        if !available(&card, cache.ready.contains(&card.vocabulary_id))? {
             continue;
         }
-        let progress = review_progress(&tx, card.id)?;
         let state = &progress.card;
         let (blocked, at) = if latest.is_some_and(|time| now < time) {
             (Some("clock".to_owned()), latest)
@@ -337,22 +535,65 @@ pub fn review_queue_filtered(
     order.extend(interday.iter().copied());
     order.extend(intraday.iter().copied());
     let admitted: std::collections::HashSet<i64> = order.iter().copied().collect();
-    let mut statement = tx.prepare("SELECT card_id, position FROM review_queue_entries")?;
-    let existing = statement
-        .query_map([], |row| Ok((row.get::<_, i64>(0)?, row.get::<_, i64>(1)?)))?
-        .collect::<Result<Vec<_>, _>>()?;
-    drop(statement);
+    let existing = if reset { Vec::new() } else { existing };
     let mut positions: std::collections::HashMap<i64, i64> = existing.iter().copied().collect();
     let mut occupied: std::collections::BTreeMap<i64, i64> = existing
         .into_iter()
         .map(|(id, position)| (position, id))
         .collect();
+    let needs_write = reset || order.iter().any(|id| !positions.contains_key(id));
+    let connection: &Connection = connection;
+    let tx = if needs_write && persist && owned {
+        Some(rusqlite::Transaction::new_unchecked(
+            connection,
+            TransactionBehavior::Immediate,
+        )?)
+    } else {
+        None
+    };
+    let current_version: i64 = connection_version(tx.as_deref().unwrap_or(connection))?;
+    if (owned && current_version != version)
+        || crate::queue_revision(tx.as_deref().unwrap_or(connection))? != source_revision
+    {
+        return Err(StorageError::QueueChanged);
+    }
+    let writer = persist.then(|| tx.as_deref().unwrap_or(connection));
+    if reset && persist {
+        let tx = writer.expect("day reset requires a writer");
+        tx.execute("DELETE FROM review_queue_entries", [])?;
+        tx.execute("INSERT INTO review_queue_state VALUES (1, ?1, ?2) ON CONFLICT(id) DO UPDATE SET learning_day = excluded.learning_day, timezone = excluded.timezone", params![day, timezone])?;
+    }
+    if needs_write
+        && occupied
+            .last_key_value()
+            .is_some_and(|(&position, _)| position.checked_add(1_000_000).is_none())
+    {
+        renumber_positions(writer, &mut positions, &mut occupied)?;
+    }
+    if positions.is_empty() {
+        for (index, &card_id) in order.iter().enumerate() {
+            let position = i64::try_from(index)
+                .ok()
+                .and_then(|n| n.checked_add(1))
+                .and_then(|n| n.checked_mul(1_000_000))
+                .ok_or_else(|| StorageError::Invalid("Review queue position overflow".into()))?;
+            if let Some(tx) = writer {
+                tx.execute(
+                    "INSERT INTO review_queue_entries(card_id, position) VALUES (?1, ?2)",
+                    params![card_id, position],
+                )?;
+            }
+            positions.insert(card_id, position);
+            occupied.insert(position, card_id);
+        }
+    }
     let mut next: Option<i64> = None;
     for card_id in order.into_iter().rev() {
         if positions.contains_key(&card_id) {
             next = Some(card_id);
             continue;
         }
+        let tx = writer;
         if let Some(next_id) = next {
             let right = positions[&next_id];
             let left = occupied
@@ -361,18 +602,7 @@ pub fn review_queue_filtered(
                 .map(|(&value, _)| value)
                 .unwrap_or(0);
             if right - left <= 1 {
-                let ids: Vec<i64> = occupied.values().copied().collect();
-                tx.execute("UPDATE review_queue_entries SET position = -position", [])?;
-                occupied.clear();
-                for (index, id) in ids.into_iter().enumerate() {
-                    let position = (index as i64 + 1) * 1_000_000;
-                    tx.execute(
-                        "UPDATE review_queue_entries SET position = ?1 WHERE card_id = ?2",
-                        params![position, id],
-                    )?;
-                    positions.insert(id, position);
-                    occupied.insert(position, id);
-                }
+                renumber_positions(tx, &mut positions, &mut occupied)?;
             }
         }
         let position = if let Some(next_id) = next {
@@ -386,14 +616,17 @@ pub fn review_queue_filtered(
         } else {
             occupied
                 .last_key_value()
-                .map_or(1_000_000, |(&position, _)| {
-                    position.saturating_add(1_000_000)
+                .map_or(Some(1_000_000), |(&position, _)| {
+                    position.checked_add(1_000_000)
                 })
+                .ok_or_else(|| StorageError::Invalid("Review queue position overflow".into()))?
         };
-        tx.execute(
-            "INSERT INTO review_queue_entries(card_id, position) VALUES (?1, ?2)",
-            params![card_id, position],
-        )?;
+        if let Some(tx) = tx {
+            tx.execute(
+                "INSERT INTO review_queue_entries(card_id, position) VALUES (?1, ?2)",
+                params![card_id, position],
+            )?;
+        }
         occupied.insert(position, card_id);
         positions.insert(card_id, position);
         next = Some(card_id);
@@ -403,14 +636,7 @@ pub fn review_queue_filtered(
         if !admitted.contains(&card.id) {
             continue;
         }
-        let position: Option<i64> = tx
-            .query_row(
-                "SELECT position FROM review_queue_entries WHERE card_id = ?1",
-                [card.id],
-                |row| row.get(0),
-            )
-            .optional()?;
-        let Some(position) = position else {
+        let Some(&position) = positions.get(&card.id) else {
             continue;
         };
         let minute = matches!(
@@ -421,12 +647,53 @@ pub fn review_queue_filtered(
     }
     ordered.sort_by_key(|(not_minute, position, _)| (*not_minute, *position));
     let cards = ordered.into_iter().map(|(_, _, card)| card).collect();
-    tx.commit()?;
+    let committed_revision = crate::queue_revision(tx.as_deref().unwrap_or(connection))?;
+    if let Some(tx) = tx {
+        tx.commit()?;
+    }
+    if persist {
+        cache.positions = positions;
+        cache.revision = committed_revision;
+    }
     Ok(ReviewQueue {
         cards,
         reason,
         available_at,
     })
+}
+
+fn connection_version(connection: &Connection) -> Result<i64, StorageError> {
+    Ok(connection.pragma_query_value(None, "data_version", |row| row.get(0))?)
+}
+
+fn renumber_positions(
+    tx: Option<&Connection>,
+    positions: &mut std::collections::HashMap<i64, i64>,
+    occupied: &mut std::collections::BTreeMap<i64, i64>,
+) -> Result<(), StorageError> {
+    let ids: Vec<i64> = occupied.values().copied().collect();
+    // Move every old positive position out of the destination range first;
+    // SQLite enforces the UNIQUE constraint after each individual update.
+    if let Some(tx) = tx {
+        tx.execute("UPDATE review_queue_entries SET position = -position", [])?;
+    }
+    occupied.clear();
+    for (index, id) in ids.into_iter().enumerate() {
+        let position = i64::try_from(index)
+            .ok()
+            .and_then(|n| n.checked_add(1))
+            .and_then(|n| n.checked_mul(1_000_000))
+            .ok_or_else(|| StorageError::Invalid("Review queue position overflow".into()))?;
+        if let Some(tx) = tx {
+            tx.execute(
+                "UPDATE review_queue_entries SET position = ?1 WHERE card_id = ?2",
+                params![position, id],
+            )?;
+        }
+        positions.insert(id, position);
+        occupied.insert(position, id);
+    }
+    Ok(())
 }
 
 pub fn review_availability(
@@ -493,16 +760,57 @@ pub fn review_progress(
     connection: &Connection,
     card_id: i64,
 ) -> Result<ReviewProgress, StorageError> {
-    let row: Option<(i64, Option<i64>, Option<String>)> = connection.query_row(
-        "SELECT c.id, p.revision, p.state FROM review_cards c LEFT JOIN review_progress p ON p.card_id = c.id WHERE c.id = ?1",
+    let row: Option<(i64, Option<i64>, Option<String>)> = connection.prepare_cached(
+        "SELECT c.id, p.revision, p.state FROM review_cards c LEFT JOIN review_progress p ON p.card_id = c.id WHERE c.id = ?1")?.query_row(
         [card_id], |row| Ok((row.get(0)?, row.get(1)?, row.get(2)?)),
     ).optional()?;
     match row {
-        Some((_, Some(revision), Some(state))) => Ok(ReviewProgress {
+        Some((_, revision, state)) => decode_review_progress(revision, state),
+        None => Err(StorageError::Invalid("Review card not found".into())),
+    }
+}
+
+pub fn review_progress_batch(
+    connection: &Connection,
+    card_ids: &[i64],
+) -> Result<Vec<ReviewProgress>, StorageError> {
+    let mut progress = Vec::with_capacity(card_ids.len());
+    for chunk in card_ids.chunks(100) {
+        let placeholders = vec!["?"; chunk.len()].join(",");
+        let mut query = connection.prepare(&format!(
+            "SELECT c.id,p.revision,p.state FROM review_cards c LEFT JOIN review_progress p ON p.card_id=c.id WHERE c.id IN ({placeholders})"
+        ))?;
+        let rows = query
+            .query_map(rusqlite::params_from_iter(chunk.iter()), |row| {
+                Ok((
+                    row.get::<_, i64>(0)?,
+                    (
+                        row.get::<_, Option<i64>>(1)?,
+                        row.get::<_, Option<String>>(2)?,
+                    ),
+                ))
+            })?
+            .collect::<Result<std::collections::HashMap<_, _>, _>>()?;
+        for id in chunk {
+            let (revision, state) = rows
+                .get(id)
+                .ok_or_else(|| StorageError::Invalid("Review card not found".into()))?;
+            progress.push(decode_review_progress(*revision, state.clone())?);
+        }
+    }
+    Ok(progress)
+}
+
+pub(crate) fn decode_review_progress(
+    revision: Option<i64>,
+    state: Option<String>,
+) -> Result<ReviewProgress, StorageError> {
+    match (revision, state) {
+        (Some(revision), Some(state)) => Ok(ReviewProgress {
             revision,
             card: serde_json::from_str(&state)?,
         }),
-        Some((_, None, None)) => Ok(ReviewProgress {
+        (None, None) => Ok(ReviewProgress {
             revision: 0,
             card: Card {
                 phase: Phase::New,
@@ -511,8 +819,7 @@ pub fn review_progress(
                 due_at: None,
             },
         }),
-        Some(_) => Err(StorageError::Invalid("Invalid review progress".into())),
-        None => Err(StorageError::Invalid("Review card not found".into())),
+        _ => Err(StorageError::Invalid("Invalid review progress".into())),
     }
 }
 
