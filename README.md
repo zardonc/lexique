@@ -70,6 +70,8 @@ Windows x64 语音开发小样可在构建后运行 `python -X utf8 scripts/pack
 
 资源独立入口：`pnpm resources:build target/dictionary-sample`、`pnpm resources:query target/dictionary-sample/dictionary.sqlite3 "œil"`、`pnpm test:resources`。源包和许可已随仓库保存，生成及查询无需联网；`build` 输出目录必须是新目录。原生构建自动准备 `target/desktop-dictionary-sample`，复用前验证内容；损坏时直接失败，人工检查后移走该生成目录再重建。可先运行 `pnpm resources:prepare`。来源、覆盖缺项、只读查询契约和体积见 [FreeDict 小样记录](resources/freedict-fra-zho-2025.11.23/README.md)。
 
+变位 M0 独立验证：`pnpm conjugation:build target/conjugation-sample`、`pnpm conjugation:query target/conjugation-sample/conjugation.sqlite3 sommes`、`pnpm conjugation:table target/conjugation-sample/conjugation.sqlite3 falloir`、`pnpm test:conjugation`。固定 Lefff 3.4 原始数据及 LGPL-LR 随仓库保存，离线构建、精确反查全部匹配并读取源表；输出目录必须是新目录。来源、许可、实际输出、体积及待确认的复合时态／代词式边界见 [#4 验证](docs/evidence/issue-4/README.md)。此工具尚未接入桌面变位页。
+
 E2E 结束后在 `apps/desktop/test-results/` 产生桌面 / 手机截图，在 `apps/desktop/playwright-report/` 产生报告。若使用已安装浏览器，可设置 `PLAYWRIGHT_EXECUTABLE_PATH` 为其可执行文件路径。测试自己的服务由 Playwright 启动与关闭，不复用其他开发服务。
 
 ## 当前交付边界

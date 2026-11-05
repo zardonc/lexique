@@ -83,6 +83,7 @@ jobs:
         with:
           python-version: '3.14.10'
       - run: python -X utf8 -m unittest discover -s scripts -p test_dictionary_sample.py -v
+      - run: python -X utf8 -m unittest discover -s scripts -p test_conjugation_sample.py -v
       - run: python -X utf8 -m unittest discover -s scripts -p test_package_portable.py -v
       - run: python -X utf8 -m unittest discover -s scripts -p test_speech_portable.py -v
 

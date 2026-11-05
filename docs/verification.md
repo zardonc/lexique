@@ -1,5 +1,7 @@
 # 骨架验证记录
 
+2026-11-05 #4：固定 Lefff 3.4 原始形态数据、双 SHA-256 与 LGPL-LR，独立离线 CLI 已验证 `sommes` → sommer / être、全部匹配格标记、代表性源表及损坏／缺失失败路径。342,771 源动词记录转换为 397,413 格，SQLite 33,095,680 bytes，反查索引 7,942,144 bytes。语式／时态矩阵、未确认的复合／代词式和原始异常项见 [#4 证据](evidence/issue-4/README.md)。此结果不代表桌面变位已接入或 M3 完整范围获批。
+
 2026-11-05 M2 合并前检查：`cargo clippy --locked -p lexique-core -p lexique-storage -p lexique-dictionary --all-targets -- -D warnings`、`pnpm rust:fmt` 和 `pnpm rust:check` 通过。音频发布边界将 hash、字节数及生成时间归入 `AudioPublicationContent`，全部调用点保持原值；既有事务、选择、验证及错误规则不变。`pnpm rust:test:build` 后 `pnpm test:rust` 138 项通过，执行保持硬 60 秒限制。`git merge-tree --write-tree origin/main HEAD` 无冲突；本轮未重新执行干净系统离线或其他平台实机验收。
 
 2026-11-05 CI 检查补齐：Windows portable job 使用 `cargo test --locked --release -p lexique-desktop --test speech_cache --lib --no-run` 预编译后分别运行缓存和桌面库测试，各保持 60 秒硬限。本机 `pnpm test:desktop:lib` 3 项、`pnpm test:speech:cache` 10 项通过；崩溃子进程 fixture 仍为显式 ignored。`pnpm rust:test:build` 后 `pnpm test:rust` 138 项通过。独立文档 job 运行 `pnpm test:docs:validator` 和 `pnpm test:docs`：13 项隔离 Git 回归、95 份项目 Markdown 通过，覆盖格式、跟踪文件链接及本机证据分类；#24 设计验证的 50 用例／12 优先回归／R、V、T、F 追踪仍通过。`node --check scripts/test-rust.mjs` 与 `git diff --check` 通过。GitHub Actions 运行结果待推送后确认；产品验收沿用 #24 已登记的执行身份。
