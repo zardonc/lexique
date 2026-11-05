@@ -1,5 +1,7 @@
 # 骨架验证记录
 
+2026-11-05 CI 检查补齐：Windows portable job 使用 `cargo test --locked --release -p lexique-desktop --test speech_cache --lib --no-run` 预编译后分别运行缓存和桌面库测试，各保持 60 秒硬限。本机 `pnpm test:desktop:lib` 3 项、`pnpm test:speech:cache` 10 项通过；崩溃子进程 fixture 仍为显式 ignored。`pnpm rust:test:build` 后 `pnpm test:rust` 138 项通过。独立文档 job 运行 `pnpm test:docs:validator` 和 `pnpm test:docs`：13 项隔离 Git 回归、95 份项目 Markdown 通过，覆盖格式、跟踪文件链接及本机证据分类；#24 设计验证的 50 用例／12 优先回归／R、V、T、F 追踪仍通过。`node --check scripts/test-rust.mjs` 与 `git diff --check` 通过。GitHub Actions 运行结果待推送后确认；产品验收沿用 #24 已登记的执行身份。
+
 2026-11-05 #24 最终复核：以 `c1acaeb` 比较，Standards／Spec 均通过且剩余 findings 为零。lint／typecheck／build、Rust 格式／locked 编译、138 项后端、101 项浏览器、10 项 Windows 缓存及 3 项桌面库通过；74 固定＋4,096 原生／实际 WASM 调度输入零差异。固定生产二进制的十种不支持持久规格拒绝、合法合成、选定内容／预算重启保留、六词真实生成实播及原规格修复均通过；10k 健康热窗口 100 次无失败，p95 83.5ms，结构及增量预算保持。命令、二进制身份及原始结果见[最终复核](evidence/issue-24/final-review-2026-11-05.md)。新二进制未重做干净系统离线、九断点及长时／其它平台检查；此前用户离线报告与专项按各自执行身份保留。
 
 2026-11-05 #24：Windows x64本期实现与验收完成，用户确认干净系统离线测试通过。schema17有界窗口／delta、选定音频／后继执行、共享保护／维护、一致SQLite快照及批量初始位置分配均有实际验证；共享核心使用IANA2026f。138项后端、100项浏览器、10项Windows缓存、74固定调度向量与4096原生／实际WASM校准通过；独立识义／音频参考、九个进程kill断点、原生启动／执行超时恢复通过。最终健康10k热窗口p95为92.7ms；50k词／100k卡／100k历史的100次评分逐次仅加载1行metadata／解析1项progress、0重建。资源增长、性能分片、二进制身份和便携测试交付见[实施记录](evidence/issue-24/continuation-2026-11-04.md)与[82项覆盖](evidence/issue-24/acceptance-matrix-2026-11-05.md)。干净系统结果依据用户报告；小时级／物理故障、其它硬件／平台及正式发行边界集中记录。

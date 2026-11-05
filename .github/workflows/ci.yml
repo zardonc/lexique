@@ -8,6 +8,17 @@ permissions:
   contents: read
 
 jobs:
+  documentation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: pnpm test:docs:validator
+      - run: pnpm test:docs
+
   frontend:
     runs-on: ubuntu-latest
     steps:
@@ -128,8 +139,9 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm test:tooling
       - run: pnpm desktop:portable
-      - run: cargo test --locked --release -p lexique-desktop --test speech_cache --no-run
+      - run: cargo test --locked --release -p lexique-desktop --test speech_cache --lib --no-run
       - run: pnpm test:speech:cache
+      - run: pnpm test:desktop:lib
       - uses: actions/upload-artifact@v4
         with:
           name: windows-x64-portable

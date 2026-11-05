@@ -12,48 +12,10 @@ $taskFiles = @(
   'docs/evidence/issue-24/github-design-review.md',
   'docs/evidence/issue-24/design-validation/results.md'
 )
+. (Join-Path $RepositoryRoot 'scripts/check-docs.ps1') -RepositoryRoot $RepositoryRoot
+$taskDocumentation = Test-Documentation -Root $RepositoryRoot -DesignRoot $DesignRoot -Files $taskFiles
 $taskProblems = [System.Collections.Generic.List[string]]::new()
-$taskLocalLinks = 0
-$taskRepositoryLinks = 0
-$taskUtf8 = [System.Text.UTF8Encoding]::new($false, $true)
-foreach ($taskRelativeFile in $taskFiles) {
-  $taskDocPath = Join-Path $DesignRoot $taskRelativeFile
-  if (-not (Test-Path -LiteralPath $taskDocPath -PathType Leaf)) {
-    $taskProblems.Add("Missing document: $taskRelativeFile")
-    continue
-  }
-  $taskText = $taskUtf8.GetString([System.IO.File]::ReadAllBytes($taskDocPath))
-  $taskLines = $taskText -split '\r?\n'
-  for ($taskLineNumber = 0; $taskLineNumber -lt $taskLines.Length; $taskLineNumber++) {
-    if ($taskLines[$taskLineNumber] -match '[\t ]+$') {
-      $taskProblems.Add("Trailing whitespace: $taskRelativeFile line $($taskLineNumber + 1)")
-    }
-    if ($taskLines[$taskLineNumber] -match '^#{1,6} ' -and $taskLineNumber + 1 -lt $taskLines.Length -and $taskLines[$taskLineNumber + 1] -ne '') {
-      $taskProblems.Add("Heading needs blank line: $taskRelativeFile line $($taskLineNumber + 1)")
-    }
-  }
-  $taskFenceCount = @($taskLines | Where-Object { $_ -match '^\x60{3}' }).Count
-  if ($taskFenceCount % 2 -ne 0) { $taskProblems.Add("Unbalanced code fence: $taskRelativeFile") }
-  foreach ($taskMatch in [regex]::Matches($taskText, '\[[^\]]+\]\(([^)]+)\)')) {
-    $taskTarget = $taskMatch.Groups[1].Value.Trim('<', '>')
-    if ($taskTarget -match '^https?://' -or $taskTarget.StartsWith('#')) { continue }
-    $taskTarget = [System.Uri]::UnescapeDataString(($taskTarget -split '#', 2)[0])
-    $taskActualPath = [System.IO.Path]::GetFullPath((Join-Path (Split-Path $taskDocPath -Parent) $taskTarget))
-    if (Test-Path -LiteralPath $taskActualPath -PathType Leaf) {
-      $taskLocalLinks++
-      continue
-    }
-    $taskFuturePath = Join-Path $RepositoryRoot $taskRelativeFile
-    $taskResolvedPath = [System.IO.Path]::GetFullPath((Join-Path (Split-Path $taskFuturePath -Parent) $taskTarget))
-    if (-not $taskResolvedPath.StartsWith([System.IO.Path]::GetFullPath($RepositoryRoot), [System.StringComparison]::OrdinalIgnoreCase)) {
-      $taskProblems.Add("Link leaves intended repository: $taskRelativeFile -> $taskTarget")
-    } elseif (Test-Path -LiteralPath $taskResolvedPath -PathType Leaf) {
-      $taskRepositoryLinks++
-    } else {
-      $taskProblems.Add("Broken planned-repository link: $taskRelativeFile -> $taskTarget")
-    }
-  }
-}
+$taskProblems.AddRange([string[]]$taskDocumentation.problems)
 $taskTestText = Get-Content -Raw -LiteralPath (Join-Path $DesignRoot 'docs/issue-24-test-plan.md')
 $taskCaseRows = @($taskTestText -split '\r?\n' | Where-Object {
   $_ -match '^\| T24-[A-Z]\d{2} \|' -and ($_.Split('|').Count -eq 6)
@@ -103,10 +65,11 @@ $taskResult = [ordered]@{
   cases = $taskCaseIds.Count
   priority_regressions = $taskRedIds.Count
   questions = $taskQuestionIds.Count
-  local_links = $taskLocalLinks
-  repository_fallback_links = $taskRepositoryLinks
+  local_links = $taskDocumentation.local_links
+  repository_fallback_links = $taskDocumentation.repository_fallback_links
+  skipped_local_links = $taskDocumentation.skipped_local_links
   github_coverage = $taskCoverageCounts
-  validation_scope = 'UTF-8, whitespace, headings, fences, local links, IDs, confirmation status, GitHub coverage, internal contract wording'
+  validation_scope = 'UTF-8, whitespace, headings, fences, tracked links, IDs, confirmation status, GitHub coverage, internal contract wording'
   product_tests = 'not run'
   problems = @($taskProblems)
 }

@@ -1,6 +1,7 @@
 # Agent guidance
 
 ## Scope and decisions
+
 - **Overall SCOPE LIMITS** MUST FOLLOW: [SCOPE LIMITS](DEV-SCOPE.md)
 - Make the smallest complete change for the requested behavior; reuse existing modules before adding dependencies or abstractions.
 - Preserve pre-existing edits and user learning data. Before discarding work, rewriting Git history, or applying destructive data migrations, explain the impact and obtain explicit approval.
