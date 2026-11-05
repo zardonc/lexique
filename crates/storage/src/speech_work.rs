@@ -645,17 +645,16 @@ pub fn request_selected_speech(
     operation: Option<&str>,
 ) -> Result<(String, i64), StorageError> {
     let tx = connection.transaction_with_behavior(TransactionBehavior::Immediate)?;
-    if let Some(operation) = operation {
-        if let Some((key, generation)) = selected_speech_operation(&tx, operation, owner, refresh)?
-        {
-            if key != spec.key()? {
-                return Err(StorageError::Invalid(
-                    "Audio operation identity conflict".into(),
-                ));
-            }
-            tx.commit()?;
-            return Ok((key, generation));
+    if let Some(operation) = operation
+        && let Some((key, generation)) = selected_speech_operation(&tx, operation, owner, refresh)?
+    {
+        if key != spec.key()? {
+            return Err(StorageError::Invalid(
+                "Audio operation identity conflict".into(),
+            ));
         }
+        tx.commit()?;
+        return Ok((key, generation));
     }
     let key = request_speech_in(&tx, spec, Some(owner), now, refresh)?;
     let generation = crate::selected_audio::begin_audio_change_in(&tx, owner, &key)?;

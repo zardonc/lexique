@@ -162,9 +162,11 @@ pub fn publish_selection(
         connection,
         id,
         key,
-        &hash,
-        bytes.len() as i64,
-        generated_at,
+        lexique_storage::AudioPublicationContent {
+            hash: &hash,
+            bytes: bytes.len() as i64,
+            generated_at,
+        },
         generation,
         time,
     )
@@ -1361,9 +1363,11 @@ mod tests {
             &connection,
             1,
             Some(&key),
-            &storage::content_hash(intended),
-            intended.len() as i64,
-            Some(1000),
+            lexique_storage::AudioPublicationContent {
+                hash: &storage::content_hash(intended),
+                bytes: intended.len() as i64,
+                generated_at: Some(1000),
+            },
             0,
             1001,
         )

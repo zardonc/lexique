@@ -90,17 +90,26 @@ pub(crate) fn begin_audio_change_in(
     Ok(generation)
 }
 
+pub struct AudioPublicationContent<'a> {
+    pub hash: &'a str,
+    pub bytes: i64,
+    pub generated_at: Option<i64>,
+}
+
 /// Reserve an instance before file publication. A crash leaves a recoverable intent.
 pub fn prepare_audio_version(
     connection: &Connection,
     id: i64,
     key: Option<&str>,
-    hash: &str,
-    bytes: i64,
-    generated_at: Option<i64>,
+    content: AudioPublicationContent<'_>,
     generation: i64,
     now: i64,
 ) -> Result<AudioVersion, StorageError> {
+    let AudioPublicationContent {
+        hash,
+        bytes,
+        generated_at,
+    } = content;
     if now < 0
         || now.checked_add(1_209_600).is_none()
         || generated_at.is_some_and(|at| at < 0 || at > now)

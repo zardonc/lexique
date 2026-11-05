@@ -59,9 +59,11 @@ fn publication_crash_fixture() {
             &connection,
             1,
             None,
-            &content_hash(bytes),
-            bytes.len() as i64,
-            None,
+            lexique_storage::AudioPublicationContent {
+                hash: &content_hash(bytes),
+                bytes: bytes.len() as i64,
+                generated_at: None,
+            },
             0,
             now,
         )

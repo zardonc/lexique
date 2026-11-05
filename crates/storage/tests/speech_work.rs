@@ -525,7 +525,7 @@ fn gc_rechecks_word_ownership_but_does_not_permanently_protect_sentences() {
     publish_speech(&connection, &key, &"a".repeat(64), 1000).unwrap();
     assert_eq!(
         expired_speech(&connection, 605800, 100).unwrap(),
-        [key.clone()]
+        std::slice::from_ref(&key)
     );
     attach_word_audio_at(&connection, 1, 605799).unwrap();
     assert!(mark_speech_gc(&connection, &key, 605800).unwrap().is_none());

@@ -169,9 +169,11 @@ fn progress_audio_and_context_changes_match_the_uncached_queue() {
         &connection,
         cards[1].vocabulary_id,
         None,
-        &content_hash(b"OggSfixture"),
-        11,
-        None,
+        lexique_storage::AudioPublicationContent {
+            hash: &content_hash(b"OggSfixture"),
+            bytes: 11,
+            generated_at: None,
+        },
         0,
         now,
     )
@@ -296,9 +298,11 @@ fn a_queue_snapshot_keeps_admission_records_and_revision_coherent_during_repair_
         &reader,
         1,
         None,
-        &content_hash(b"OggS"),
-        4,
-        None,
+        lexique_storage::AudioPublicationContent {
+            hash: &content_hash(b"OggS"),
+            bytes: 4,
+            generated_at: None,
+        },
         0,
         1_700_000_000,
     )

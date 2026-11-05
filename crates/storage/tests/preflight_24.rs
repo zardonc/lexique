@@ -13,10 +13,12 @@ use rusqlite::{Connection, params};
 mod candidate {
     include!("../src/review.rs");
 
+    type BatchOutcome = (i64, Result<Vec<ReviewCard>, String>);
+
     pub fn batch(
         connection: &mut Connection,
         ids: &[i64],
-    ) -> Result<Vec<(i64, Result<Vec<ReviewCard>, String>)>, StorageError> {
+    ) -> Result<Vec<BatchOutcome>, StorageError> {
         let tx = connection.transaction_with_behavior(TransactionBehavior::Immediate)?;
         let mut outcomes = vec![];
         for &id in ids {

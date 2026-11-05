@@ -1,5 +1,7 @@
 # 骨架验证记录
 
+2026-11-05 M2 合并前检查：`cargo clippy --locked -p lexique-core -p lexique-storage -p lexique-dictionary --all-targets -- -D warnings`、`pnpm rust:fmt` 和 `pnpm rust:check` 通过。音频发布边界将 hash、字节数及生成时间归入 `AudioPublicationContent`，全部调用点保持原值；既有事务、选择、验证及错误规则不变。`pnpm rust:test:build` 后 `pnpm test:rust` 138 项通过，执行保持硬 60 秒限制。`git merge-tree --write-tree origin/main HEAD` 无冲突；本轮未重新执行干净系统离线或其他平台实机验收。
+
 2026-11-05 CI 检查补齐：Windows portable job 使用 `cargo test --locked --release -p lexique-desktop --test speech_cache --lib --no-run` 预编译后分别运行缓存和桌面库测试，各保持 60 秒硬限。本机 `pnpm test:desktop:lib` 3 项、`pnpm test:speech:cache` 10 项通过；崩溃子进程 fixture 仍为显式 ignored。`pnpm rust:test:build` 后 `pnpm test:rust` 138 项通过。独立文档 job 运行 `pnpm test:docs:validator` 和 `pnpm test:docs`：13 项隔离 Git 回归、95 份项目 Markdown 通过，覆盖格式、跟踪文件链接及本机证据分类；#24 设计验证的 50 用例／12 优先回归／R、V、T、F 追踪仍通过。`node --check scripts/test-rust.mjs` 与 `git diff --check` 通过。GitHub Actions 运行结果待推送后确认；产品验收沿用 #24 已登记的执行身份。
 
 2026-11-05 #24 最终复核：以 `c1acaeb` 比较，Standards／Spec 均通过且剩余 findings 为零。lint／typecheck／build、Rust 格式／locked 编译、138 项后端、101 项浏览器、10 项 Windows 缓存及 3 项桌面库通过；74 固定＋4,096 原生／实际 WASM 调度输入零差异。固定生产二进制的十种不支持持久规格拒绝、合法合成、选定内容／预算重启保留、六词真实生成实播及原规格修复均通过；10k 健康热窗口 100 次无失败，p95 83.5ms，结构及增量预算保持。命令、二进制身份及原始结果见[最终复核](evidence/issue-24/final-review-2026-11-05.md)。新二进制未重做干净系统离线、九断点及长时／其它平台检查；此前用户离线报告与专项按各自执行身份保留。
