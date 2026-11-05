@@ -172,9 +172,11 @@ fn automatic_repair_keeps_known_voice_and_reports_unsupported_specs() {
         &connection,
         1,
         Some(&key),
-        &content_hash(b"OggSvalid"),
-        9,
-        Some(1000),
+        lexique_storage::AudioPublicationContent {
+            hash: &content_hash(b"OggSvalid"),
+            bytes: 9,
+            generated_at: Some(1000),
+        },
         0,
         1000,
     )
@@ -197,9 +199,11 @@ fn automatic_repair_keeps_known_voice_and_reports_unsupported_specs() {
         &connection,
         2,
         Some(&key),
-        &content_hash(b"OggSvalid"),
-        9,
-        Some(1000),
+        lexique_storage::AudioPublicationContent {
+            hash: &content_hash(b"OggSvalid"),
+            bytes: 9,
+            generated_at: Some(1000),
+        },
         0,
         1000,
     )

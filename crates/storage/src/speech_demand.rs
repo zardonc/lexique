@@ -108,15 +108,17 @@ pub fn plan_review_words(
 /// A known specification is repaired exactly; only unknown legacy provenance adopts preferences.
 pub fn word_repair_spec(connection: &Connection, id: i64) -> Result<SpeechSpec, StorageError> {
     let record = crate::get(connection, id)?;
-    if let Some(version) = crate::selected_audio(connection, id)? {
-        if let Some(key) = version.semantic_key {
-            let saved: String = connection.query_row(
-                "SELECT spec FROM speech_assets WHERE semantic_key=?1",
-                [key],
-                |row| row.get(0),
-            )?;
-            let previous: SpeechSpec = serde_json::from_str(&saved)?;
-            let voice = match previous.voice.as_str() {
+    if let Some(version) = crate::selected_audio(connection, id)?
+        && let Some(key) = version.semantic_key
+    {
+        let saved: String = connection.query_row(
+            "SELECT spec FROM speech_assets WHERE semantic_key=?1",
+            [key],
+            |row| row.get(0),
+        )?;
+        let previous: SpeechSpec = serde_json::from_str(&saved)?;
+        let voice =
+            match previous.voice.as_str() {
                 "female" => crate::SpeechVoice::Female,
                 "male" => crate::SpeechVoice::Male,
                 _ => return Err(StorageError::Invalid(
@@ -124,14 +126,13 @@ pub fn word_repair_spec(connection: &Connection, id: i64) -> Result<SpeechSpec, 
                         .into(),
                 )),
             };
-            if previous.key()? != SpeechSpec::word(&record.headword, voice).key()? {
-                return Err(StorageError::Invalid(
-                    "Selected audio specification is unsupported; an explicit upgrade is required"
-                        .into(),
-                ));
-            }
-            return Ok(previous);
+        if previous.key()? != SpeechSpec::word(&record.headword, voice).key()? {
+            return Err(StorageError::Invalid(
+                "Selected audio specification is unsupported; an explicit upgrade is required"
+                    .into(),
+            ));
         }
+        return Ok(previous);
     }
     Ok(SpeechSpec::word(
         &record.headword,
@@ -151,9 +152,9 @@ pub fn demand_word_repair(
         ));
     }
     let tx = connection.transaction_with_behavior(rusqlite::TransactionBehavior::Immediate)?;
-    let row: Option<(String, bool, Option<String>, i64, i64, Option<String>)> = tx.query_row(
+    let row = tx.query_row(
         "SELECT COALESCE(s.current_version,'absent')||':'||COALESCE(v.verification,'missing'),COALESCE(v.verification IN ('verified','unverified') AND v.gc_state='live',0),s.desired_key,COALESCE(s.desired_generation,0),COALESCE(s.current_generation,0),i.error FROM vocabulary w LEFT JOIN word_audio_selections s ON s.vocabulary_id=w.id LEFT JOIN speech_versions v ON v.locator=s.current_version LEFT JOIN word_audio_imports i ON i.vocabulary_id=w.id WHERE w.id=?1 AND NOT EXISTS(SELECT 1 FROM review_paused WHERE vocabulary_id=w.id) AND COALESCE(i.state,'ready')<>'pending'",
-        [demand.vocabulary_id], |r| Ok((r.get(0)?,r.get(1)?,r.get(2)?,r.get(3)?,r.get(4)?,r.get(5)?))).optional()?;
+        [demand.vocabulary_id], |r| Ok((r.get::<_, String>(0)?,r.get::<_, bool>(1)?,r.get::<_, Option<String>>(2)?,r.get::<_, i64>(3)?,r.get::<_, i64>(4)?,r.get::<_, Option<String>>(5)?))).optional()?;
     let Some((identity, ready, desired_key, desired, current, migration_error)) = row else {
         return Ok(false);
     };

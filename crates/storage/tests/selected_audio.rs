@@ -22,9 +22,11 @@ fn pending_initial_publication_cannot_be_bypassed_by_cached_source_or_distinct_c
         &connection,
         1,
         None,
-        &content_hash(b"OggSintended"),
-        12,
-        None,
+        lexique_storage::AudioPublicationContent {
+            hash: &content_hash(b"OggSintended"),
+            bytes: 12,
+            generated_at: None,
+        },
         0,
         1001,
     )
@@ -38,9 +40,11 @@ fn pending_initial_publication_cannot_be_bypassed_by_cached_source_or_distinct_c
             &connection,
             1,
             None,
-            &content_hash(b"OggSother"),
-            9,
-            None,
+            lexique_storage::AudioPublicationContent {
+                hash: &content_hash(b"OggSother"),
+                bytes: 9,
+                generated_at: None
+            },
             0,
             1002
         )
@@ -51,9 +55,11 @@ fn pending_initial_publication_cannot_be_bypassed_by_cached_source_or_distinct_c
         &connection,
         1,
         None,
-        &pending.content_hash,
-        12,
-        None,
+        lexique_storage::AudioPublicationContent {
+            hash: &pending.content_hash,
+            bytes: 12,
+            generated_at: None,
+        },
         0,
         1002,
     )
@@ -109,9 +115,11 @@ fn immutable_instances_selection_generations_and_previous_protection_are_atomic(
         &connection,
         1,
         None,
-        &content_hash(b"OggSfirst"),
-        9,
-        None,
+        lexique_storage::AudioPublicationContent {
+            hash: &content_hash(b"OggSfirst"),
+            bytes: 9,
+            generated_at: None,
+        },
         0,
         1000,
     )
@@ -127,8 +135,19 @@ fn immutable_instances_selection_generations_and_previous_protection_are_atomic(
             .is_err(),
         "unverified publication must not become current"
     );
-    let retry =
-        prepare_audio_version(&connection, 1, None, &first.content_hash, 9, None, 0, 1001).unwrap();
+    let retry = prepare_audio_version(
+        &connection,
+        1,
+        None,
+        lexique_storage::AudioPublicationContent {
+            hash: &first.content_hash,
+            bytes: 9,
+            generated_at: None,
+        },
+        0,
+        1001,
+    )
+    .unwrap();
     assert_eq!(
         retry.locator, first.locator,
         "an interrupted copy reuses its durable intent"
@@ -139,9 +158,11 @@ fn immutable_instances_selection_generations_and_previous_protection_are_atomic(
             &connection,
             1,
             None,
-            &content_hash(b"OggSother"),
-            9,
-            None,
+            lexique_storage::AudioPublicationContent {
+                hash: &content_hash(b"OggSother"),
+                bytes: 9,
+                generated_at: None
+            },
             0,
             1002
         )
@@ -164,9 +185,11 @@ fn immutable_instances_selection_generations_and_previous_protection_are_atomic(
         &connection,
         1,
         Some(&key),
-        &content_hash(b"OggSold"),
-        7,
-        Some(1003),
+        lexique_storage::AudioPublicationContent {
+            hash: &content_hash(b"OggSold"),
+            bytes: 7,
+            generated_at: Some(1003),
+        },
         stale,
         1003,
     )
@@ -181,9 +204,11 @@ fn immutable_instances_selection_generations_and_previous_protection_are_atomic(
         &connection,
         1,
         Some(&key),
-        &old.content_hash,
-        7,
-        Some(1003),
+        lexique_storage::AudioPublicationContent {
+            hash: &old.content_hash,
+            bytes: 7,
+            generated_at: Some(1003),
+        },
         latest,
         1005,
     )
@@ -236,7 +261,21 @@ fn version_metadata_and_generation_overflow_fail_without_changing_selection() {
         (content_hash(b"OggS"), 10_000_001, 1000),
         (content_hash(b"OggS"), 4, i64::MAX),
     ] {
-        assert!(prepare_audio_version(&connection, 1, None, &hash, size, None, 0, time).is_err());
+        assert!(
+            prepare_audio_version(
+                &connection,
+                1,
+                None,
+                lexique_storage::AudioPublicationContent {
+                    hash: &hash,
+                    bytes: size,
+                    generated_at: None
+                },
+                0,
+                time
+            )
+            .is_err()
+        );
     }
     let key =
         register_speech(&connection, &SpeechSpec::word("école", SpeechVoice::Female)).unwrap();
@@ -248,9 +287,11 @@ fn version_metadata_and_generation_overflow_fail_without_changing_selection() {
             &connection,
             1,
             Some(&wrong),
-            &content_hash(b"OggS"),
-            4,
-            None,
+            lexique_storage::AudioPublicationContent {
+                hash: &content_hash(b"OggS"),
+                bytes: 4,
+                generated_at: None
+            },
             0,
             1000
         )
@@ -279,9 +320,11 @@ fn recovery_pages_past_missing_versions_without_repeating_them() {
             &connection,
             id,
             None,
-            &content_hash(format!("OggS{i}").as_bytes()),
-            8,
-            None,
+            lexique_storage::AudioPublicationContent {
+                hash: &content_hash(format!("OggS{i}").as_bytes()),
+                bytes: 8,
+                generated_at: None,
+            },
             0,
             1000,
         )
@@ -408,9 +451,11 @@ fn a_new_regeneration_during_execution_gets_a_successor_before_selection() {
         &connection,
         1,
         None,
-        &content_hash(b"OggSoriginal"),
-        12,
-        None,
+        lexique_storage::AudioPublicationContent {
+            hash: &content_hash(b"OggSoriginal"),
+            bytes: 12,
+            generated_at: None,
+        },
         0,
         999,
     )
@@ -574,9 +619,11 @@ fn failed_or_cancelled_publication_cannot_replace_the_selected_audio() {
             &connection,
             1,
             None,
-            &content_hash(b"OggSoriginal"),
-            12,
-            None,
+            lexique_storage::AudioPublicationContent {
+                hash: &content_hash(b"OggSoriginal"),
+                bytes: 12,
+                generated_at: None,
+            },
             0,
             999,
         )
@@ -590,9 +637,11 @@ fn failed_or_cancelled_publication_cannot_replace_the_selected_audio() {
             &connection,
             1,
             Some(&key),
-            &content_hash(b"OggSpending"),
-            11,
-            Some(1001),
+            lexique_storage::AudioPublicationContent {
+                hash: &content_hash(b"OggSpending"),
+                bytes: 11,
+                generated_at: Some(1001),
+            },
             generation,
             1001,
         )
@@ -632,9 +681,11 @@ fn a_previous_execution_cannot_bind_after_a_retry_claims_the_same_demand() {
         &connection,
         1,
         Some(&key),
-        &content_hash(b"OggSpending"),
-        11,
-        Some(1001),
+        lexique_storage::AudioPublicationContent {
+            hash: &content_hash(b"OggSpending"),
+            bytes: 11,
+            generated_at: Some(1001),
+        },
         generation,
         1001,
     )
@@ -656,9 +707,11 @@ fn verified_content_can_outlive_its_creating_word_and_keep_another_binding() {
         &connection,
         1,
         None,
-        &content_hash(b"OggSshared"),
-        10,
-        None,
+        lexique_storage::AudioPublicationContent {
+            hash: &content_hash(b"OggSshared"),
+            bytes: 10,
+            generated_at: None,
+        },
         0,
         1000,
     )
@@ -694,9 +747,11 @@ fn shared_ownership_previous_protection_and_last_detachment_use_exact_deadlines(
         &connection,
         1,
         None,
-        &content_hash(b"OggSfirst"),
-        9,
-        None,
+        lexique_storage::AudioPublicationContent {
+            hash: &content_hash(b"OggSfirst"),
+            bytes: 9,
+            generated_at: None,
+        },
         0,
         1000,
     )
@@ -711,9 +766,11 @@ fn shared_ownership_previous_protection_and_last_detachment_use_exact_deadlines(
         &connection,
         1,
         Some(&key),
-        &content_hash(b"OggSsecond"),
-        10,
-        Some(1002),
+        lexique_storage::AudioPublicationContent {
+            hash: &content_hash(b"OggSsecond"),
+            bytes: 10,
+            generated_at: Some(1002),
+        },
         generation,
         1002,
     )
@@ -760,9 +817,11 @@ fn releasing_an_older_previous_version_preserves_other_protection_without_renewi
         &connection,
         1,
         None,
-        &content_hash(b"OggSfirst"),
-        9,
-        None,
+        lexique_storage::AudioPublicationContent {
+            hash: &content_hash(b"OggSfirst"),
+            bytes: 9,
+            generated_at: None,
+        },
         0,
         1000,
     )
@@ -777,9 +836,11 @@ fn releasing_an_older_previous_version_preserves_other_protection_without_renewi
             &connection,
             1,
             Some(&key),
-            &content_hash(format!("OggS{at}").as_bytes()),
-            8,
-            Some(at),
+            lexique_storage::AudioPublicationContent {
+                hash: &content_hash(format!("OggS{at}").as_bytes()),
+                bytes: 8,
+                generated_at: Some(at),
+            },
             generation,
             at,
         )
@@ -860,9 +921,11 @@ fn pending_publication_prevents_gc_and_missing_intent_can_be_retired() {
         &connection,
         1,
         None,
-        &content_hash(b"OggSpending"),
-        11,
-        None,
+        lexique_storage::AudioPublicationContent {
+            hash: &content_hash(b"OggSpending"),
+            bytes: 11,
+            generated_at: None,
+        },
         0,
         1000,
     )
@@ -892,9 +955,11 @@ fn soft_capacity_evicts_unprotected_content_without_changing_expiry_or_permanent
         &connection,
         1,
         None,
-        &"a".repeat(64),
-        10_000_000,
-        None,
+        lexique_storage::AudioPublicationContent {
+            hash: &"a".repeat(64),
+            bytes: 10_000_000,
+            generated_at: None,
+        },
         0,
         1000,
     )

@@ -176,12 +176,12 @@ pub(crate) fn reuse_audio_version_in(
     if !valid {
         return Ok(false);
     }
-    if generation > 0 {
-        if let Some(execution) = version.execution_generation {
-            let valid:bool=connection.query_row("SELECT EXISTS(SELECT 1 FROM speech_tasks t JOIN speech_assets a USING(semantic_key) WHERE t.semantic_key=?1 AND t.execution_generation=?2 AND a.current_version=?3 AND t.state='ready' AND t.cancel_requested=0 AND t.refresh_requested=0 AND t.successor_requested=0)",params![version.semantic_key,execution,locator],|r|r.get(0))?;
-            if !valid {
-                return Ok(false);
-            }
+    if generation > 0
+        && let Some(execution) = version.execution_generation
+    {
+        let valid:bool=connection.query_row("SELECT EXISTS(SELECT 1 FROM speech_tasks t JOIN speech_assets a USING(semantic_key) WHERE t.semantic_key=?1 AND t.execution_generation=?2 AND a.current_version=?3 AND t.state='ready' AND t.cancel_requested=0 AND t.refresh_requested=0 AND t.successor_requested=0)",params![version.semantic_key,execution,locator],|r|r.get(0))?;
+        if !valid {
+            return Ok(false);
         }
     }
     connection.execute(
