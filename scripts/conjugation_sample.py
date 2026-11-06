@@ -93,7 +93,11 @@ def build(output, source, metadata_source=VERB_RESOURCE):
     supplement.mkdir()
     for name in (*supplemental_provenance["files"], "provenance.json"):
         shutil.copyfile(Path(metadata_source) / name, supplement / name)
+    for name in ("conjugation_sample.py", "conjugation_metadata.py"):
+        shutil.copyfile(Path(__file__).with_name(name), output / name)
+    shutil.copyfile(RESOURCE.parents[1] / "LICENSE", output / "LICENSE-MIT")
     report = {
+        "sqlite_sha256": hashlib.sha256(database.read_bytes()).hexdigest(),
         "source_bytes": source_bytes, "source_gzip_bytes": Path(source).stat().st_size,
         "source_verb_rows": len({r[0] for r in rows}), "slots": len(rows),
         "lemmas": len({r[2] for r in rows}), "forms": len({r[1] for r in rows}),
@@ -111,6 +115,21 @@ def build(output, source, metadata_source=VERB_RESOURCE):
     }
     (output / "report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n",
                                         encoding="utf-8")
+    return report
+
+
+def prepare(output):
+    """Reuse verified build output without replacing existing resources."""
+    output = Path(output)
+    if not output.exists():
+        return build(output, SOURCE)
+    read_resource(output / "conjugation.sqlite3")
+    report = json.loads((output / "report.json").read_text(encoding="utf-8"))
+    if hashlib.sha256((output / "conjugation.sqlite3").read_bytes()).hexdigest() != report["sqlite_sha256"]:
+        raise ValueError("Generated conjugation resource checksum mismatch")
+    for name in (SOURCE.name, "LICENSE-LGPLLR", "provenance.json", "README.md"):
+        if (output / name).read_bytes() != (RESOURCE / name).read_bytes():
+            raise ValueError(f"Generated conjugation resource differs from source: {name}")
     return report
 
 
@@ -163,13 +182,16 @@ def main():
     builder.add_argument("output", type=Path)
     builder.add_argument("--source", type=Path, default=SOURCE)
     builder.add_argument("--metadata-source", type=Path, default=VERB_RESOURCE)
+    commands.add_parser("prepare").add_argument("output", type=Path)
     for command, argument in (("query", "form"), ("table", "lemma")):
         reader = commands.add_parser(command)
         reader.add_argument("database", type=Path)
         reader.add_argument(argument)
     args = parser.parse_args()
     try:
-        if args.command == "build":
+        if args.command == "prepare":
+            result = prepare(args.output)
+        elif args.command == "build":
             result = build(args.output, args.source, args.metadata_source)
         else:
             value = args.form if args.command == "query" else args.lemma

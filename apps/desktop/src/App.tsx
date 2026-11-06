@@ -15,6 +15,7 @@ import { ReviewSettingsPanel } from './review-settings';
 import { ReviewQueuePanel } from './review-queue';
 import { useBatchReview } from './use-batch-review';
 import { BatchProgress } from './batch-progress';
+import { ConjugationPanel } from './conjugation';
 
 const themes: readonly Theme[] = ['white', 'sepia', 'dark'];
 const locales: readonly Locale[] = ['zh', 'en', 'fr'];
@@ -43,12 +44,12 @@ function Header({ text, locale, theme, onLocale, onTheme }: HeaderProps) {
 }
 
 function PageIntroduction({ page, text }: { readonly page: number; readonly text: Messages }) {
-  if (page === 3) return null;
+  if (page === 3 || page === 1) return null;
   return <><span className="page-index" aria-hidden="true">{String(page + 1).padStart(2, '0')}</span>
     <h2 id="page-title">{page === 7 ? text.settingsTitle : text.title}</h2><p className="intro">{page === 7 ? text.settingsIntro : text.intro}</p></>;
 }
 
-function pageTitleId(page: number) { return page === 3 ? 'main-page-heading' : 'page-title'; }
+function pageTitleId(page: number) { return page === 3 || page === 1 ? 'main-page-heading' : 'page-title'; }
 
 export function App({ runtime }: { readonly runtime: RuntimeAdapter }) {
   const [locale, setLocale] = useState<Locale>('zh');
@@ -75,7 +76,7 @@ export function App({ runtime }: { readonly runtime: RuntimeAdapter }) {
           {page === 0 ? <DictionaryPanel runtime={runtime} text={text.dictionary} notebookText={notebookText} version={notebook.version}
             onCollect={(result) => guard.request(() => notebook.collect(result))}
             onOpen={(record) => guard.request(() => notebook.open(record))}
-            beforeSearch={(action) => guard.request(() => { notebook.clear(); action(); })} /> : page === 2 ?
+            beforeSearch={(action) => guard.request(() => { notebook.clear(); action(); })} /> : page === 1 ? <ConjugationPanel runtime={runtime} locale={locale} /> : page === 2 ?
             <NotebookPanel runtime={runtime} version={notebook.version + reviewVersion} text={notebookText} batch={batch}
               onOpen={(record) => guard.request(() => notebook.open(record))} /> : page === 3 ? <ReviewQueuePanel runtime={runtime} locale={locale} text={notebookText} /> : page === 7 ?
             <><ReviewSettingsPanel runtime={runtime} locale={locale} /><SpeechSettings runtime={runtime} locale={locale} /></> :

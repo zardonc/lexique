@@ -1,0 +1,3649 @@
+{
+  "sommes": {
+    "query": "sommes",
+    "tables": [
+      {
+        "lemma": "sommer",
+        "verb": {
+          "group": 1,
+          "group_status": "supported",
+          "auxiliaries": [
+            {
+              "lemma": "avoir",
+              "use": "ordinary active"
+            }
+          ],
+          "auxiliary_status": "supported",
+          "ordinary_status": "supported",
+          "usage_labels": [
+            "transitive"
+          ],
+          "source": {
+            "resource": "grammalecte-2.3.0",
+            "entry": "dVerb/sommer",
+            "raw_type": "1__t____a"
+          },
+          "correction": null
+        },
+        "cells": [
+          {
+            "source_line": 475035,
+            "form": "sommerions",
+            "lemma": "sommer",
+            "raw_tag": "C1p",
+            "tense": "C",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 475030,
+            "form": "sommerais",
+            "lemma": "sommer",
+            "raw_tag": "C12s",
+            "tense": "C",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 475034,
+            "form": "sommeriez",
+            "lemma": "sommer",
+            "raw_tag": "C2p",
+            "tense": "C",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 475030,
+            "form": "sommerais",
+            "lemma": "sommer",
+            "raw_tag": "C12s",
+            "tense": "C",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 475029,
+            "form": "sommeraient",
+            "lemma": "sommer",
+            "raw_tag": "C3p",
+            "tense": "C",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 475031,
+            "form": "sommerait",
+            "lemma": "sommer",
+            "raw_tag": "C3s",
+            "tense": "C",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 475036,
+            "form": "sommerons",
+            "lemma": "sommer",
+            "raw_tag": "F1p",
+            "tense": "F",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 475028,
+            "form": "sommerai",
+            "lemma": "sommer",
+            "raw_tag": "F1s",
+            "tense": "F",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 475033,
+            "form": "sommerez",
+            "lemma": "sommer",
+            "raw_tag": "F2p",
+            "tense": "F",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 475032,
+            "form": "sommeras",
+            "lemma": "sommer",
+            "raw_tag": "F2s",
+            "tense": "F",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 475037,
+            "form": "sommeront",
+            "lemma": "sommer",
+            "raw_tag": "F3p",
+            "tense": "F",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 475027,
+            "form": "sommera",
+            "lemma": "sommer",
+            "raw_tag": "F3s",
+            "tense": "F",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 474959,
+            "form": "sommant",
+            "lemma": "sommer",
+            "raw_tag": "G",
+            "tense": "G",
+            "person": null,
+            "number": null,
+            "gender": null
+          },
+          {
+            "source_line": 475050,
+            "form": "sommions",
+            "lemma": "sommer",
+            "raw_tag": "I1p",
+            "tense": "I",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 474957,
+            "form": "sommais",
+            "lemma": "sommer",
+            "raw_tag": "I12s",
+            "tense": "I",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 475048,
+            "form": "sommiez",
+            "lemma": "sommer",
+            "raw_tag": "I2p",
+            "tense": "I",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 474957,
+            "form": "sommais",
+            "lemma": "sommer",
+            "raw_tag": "I12s",
+            "tense": "I",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 474951,
+            "form": "sommaient",
+            "lemma": "sommer",
+            "raw_tag": "I3p",
+            "tense": "I",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 474958,
+            "form": "sommait",
+            "lemma": "sommer",
+            "raw_tag": "I3s",
+            "tense": "I",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 475056,
+            "form": "sommâmes",
+            "lemma": "sommer",
+            "raw_tag": "J1p",
+            "tense": "J",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 474950,
+            "form": "sommai",
+            "lemma": "sommer",
+            "raw_tag": "J1s",
+            "tense": "J",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 475058,
+            "form": "sommâtes",
+            "lemma": "sommer",
+            "raw_tag": "J2p",
+            "tense": "J",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 474960,
+            "form": "sommas",
+            "lemma": "sommer",
+            "raw_tag": "J2s",
+            "tense": "J",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 475059,
+            "form": "sommèrent",
+            "lemma": "sommer",
+            "raw_tag": "J3p",
+            "tense": "J",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 474949,
+            "form": "somma",
+            "lemma": "sommer",
+            "raw_tag": "J3s",
+            "tense": "J",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 475065,
+            "form": "sommées",
+            "lemma": "sommer",
+            "raw_tag": "Kfp",
+            "tense": "K",
+            "person": null,
+            "number": "p",
+            "gender": "f"
+          },
+          {
+            "source_line": 475067,
+            "form": "sommés",
+            "lemma": "sommer",
+            "raw_tag": "Kmp",
+            "tense": "K",
+            "person": null,
+            "number": "p",
+            "gender": "m"
+          },
+          {
+            "source_line": 475063,
+            "form": "sommée",
+            "lemma": "sommer",
+            "raw_tag": "Kfs",
+            "tense": "K",
+            "person": null,
+            "number": "s",
+            "gender": "f"
+          },
+          {
+            "source_line": 475061,
+            "form": "sommé",
+            "lemma": "sommer",
+            "raw_tag": "Kms",
+            "tense": "K",
+            "person": null,
+            "number": "s",
+            "gender": "m"
+          },
+          {
+            "source_line": 475054,
+            "form": "sommons",
+            "lemma": "sommer",
+            "raw_tag": "P1p",
+            "tense": "P",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 474969,
+            "form": "somme",
+            "lemma": "sommer",
+            "raw_tag": "PS13s",
+            "tense": "P",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 475044,
+            "form": "sommez",
+            "lemma": "sommer",
+            "raw_tag": "P2p",
+            "tense": "P",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 475040,
+            "form": "sommes",
+            "lemma": "sommer",
+            "raw_tag": "PS2s",
+            "tense": "P",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 475025,
+            "form": "somment",
+            "lemma": "sommer",
+            "raw_tag": "PS3p",
+            "tense": "P",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 474969,
+            "form": "somme",
+            "lemma": "sommer",
+            "raw_tag": "PS13s",
+            "tense": "P",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 475051,
+            "form": "sommions",
+            "lemma": "sommer",
+            "raw_tag": "S1p",
+            "tense": "S",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 474969,
+            "form": "somme",
+            "lemma": "sommer",
+            "raw_tag": "PS13s",
+            "tense": "S",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 475049,
+            "form": "sommiez",
+            "lemma": "sommer",
+            "raw_tag": "S2p",
+            "tense": "S",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 475040,
+            "form": "sommes",
+            "lemma": "sommer",
+            "raw_tag": "PS2s",
+            "tense": "S",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 475025,
+            "form": "somment",
+            "lemma": "sommer",
+            "raw_tag": "PS3p",
+            "tense": "S",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 474969,
+            "form": "somme",
+            "lemma": "sommer",
+            "raw_tag": "PS13s",
+            "tense": "S",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 474965,
+            "form": "sommassions",
+            "lemma": "sommer",
+            "raw_tag": "T1p",
+            "tense": "T",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 474961,
+            "form": "sommasse",
+            "lemma": "sommer",
+            "raw_tag": "T1s",
+            "tense": "T",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 474964,
+            "form": "sommassiez",
+            "lemma": "sommer",
+            "raw_tag": "T2p",
+            "tense": "T",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 474963,
+            "form": "sommasses",
+            "lemma": "sommer",
+            "raw_tag": "T2s",
+            "tense": "T",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 474962,
+            "form": "sommassent",
+            "lemma": "sommer",
+            "raw_tag": "T3p",
+            "tense": "T",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 475057,
+            "form": "sommât",
+            "lemma": "sommer",
+            "raw_tag": "T3s",
+            "tense": "T",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 475026,
+            "form": "sommer",
+            "lemma": "sommer",
+            "raw_tag": "W",
+            "tense": "W",
+            "person": null,
+            "number": null,
+            "gender": null
+          },
+          {
+            "source_line": 475055,
+            "form": "sommons",
+            "lemma": "sommer",
+            "raw_tag": "Y1p",
+            "tense": "Y",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 475045,
+            "form": "sommez",
+            "lemma": "sommer",
+            "raw_tag": "Y2p",
+            "tense": "Y",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 474970,
+            "form": "somme",
+            "lemma": "sommer",
+            "raw_tag": "Y2s",
+            "tense": "Y",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          }
+        ]
+      },
+      {
+        "lemma": "être",
+        "verb": {
+          "group": 3,
+          "group_status": "supported",
+          "auxiliaries": [
+            {
+              "lemma": "avoir",
+              "use": "ordinary active"
+            }
+          ],
+          "auxiliary_status": "supported",
+          "ordinary_status": "supported",
+          "usage_labels": [
+            "intransitive"
+          ],
+          "source": {
+            "resource": "grammalecte-2.3.0",
+            "entry": "dVerb/être",
+            "raw_type": "0ei_____a"
+          },
+          "correction": null
+        },
+        "cells": [
+          {
+            "source_line": 470087,
+            "form": "serions",
+            "lemma": "être",
+            "raw_tag": "C1p",
+            "tense": "C",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 469832,
+            "form": "serais",
+            "lemma": "être",
+            "raw_tag": "C12s",
+            "tense": "C",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 469967,
+            "form": "seriez",
+            "lemma": "être",
+            "raw_tag": "C2p",
+            "tense": "C",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 469832,
+            "form": "serais",
+            "lemma": "être",
+            "raw_tag": "C12s",
+            "tense": "C",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 469830,
+            "form": "seraient",
+            "lemma": "être",
+            "raw_tag": "C3p",
+            "tense": "C",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 469834,
+            "form": "serait",
+            "lemma": "être",
+            "raw_tag": "C3s",
+            "tense": "C",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 470153,
+            "form": "serons",
+            "lemma": "être",
+            "raw_tag": "F1p",
+            "tense": "F",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 469828,
+            "form": "serai",
+            "lemma": "être",
+            "raw_tag": "F1s",
+            "tense": "F",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 469902,
+            "form": "serez",
+            "lemma": "être",
+            "raw_tag": "F2p",
+            "tense": "F",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 469836,
+            "form": "seras",
+            "lemma": "être",
+            "raw_tag": "F2s",
+            "tense": "F",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 470155,
+            "form": "seront",
+            "lemma": "être",
+            "raw_tag": "F3p",
+            "tense": "F",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 469826,
+            "form": "sera",
+            "lemma": "être",
+            "raw_tag": "F3s",
+            "tense": "F",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 546001,
+            "form": "étant",
+            "lemma": "être",
+            "raw_tag": "G",
+            "tense": "G",
+            "person": null,
+            "number": null,
+            "gender": null
+          },
+          {
+            "source_line": 546788,
+            "form": "étions",
+            "lemma": "être",
+            "raw_tag": "I1p",
+            "tense": "I",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 545548,
+            "form": "étais",
+            "lemma": "être",
+            "raw_tag": "I12s",
+            "tense": "I",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 546672,
+            "form": "étiez",
+            "lemma": "être",
+            "raw_tag": "I2p",
+            "tense": "I",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 545548,
+            "form": "étais",
+            "lemma": "être",
+            "raw_tag": "I12s",
+            "tense": "I",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 545531,
+            "form": "étaient",
+            "lemma": "être",
+            "raw_tag": "I3p",
+            "tense": "I",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 545550,
+            "form": "était",
+            "lemma": "être",
+            "raw_tag": "I3s",
+            "tense": "I",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 271669,
+            "form": "fûmes",
+            "lemma": "être",
+            "raw_tag": "J1p",
+            "tense": "J",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 270308,
+            "form": "fus",
+            "lemma": "être",
+            "raw_tag": "J12s",
+            "tense": "J",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 271674,
+            "form": "fûtes",
+            "lemma": "être",
+            "raw_tag": "J2p",
+            "tense": "J",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 270308,
+            "form": "fus",
+            "lemma": "être",
+            "raw_tag": "J12s",
+            "tense": "J",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 270195,
+            "form": "furent",
+            "lemma": "être",
+            "raw_tag": "J3p",
+            "tense": "J",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 270621,
+            "form": "fut",
+            "lemma": "être",
+            "raw_tag": "J3s",
+            "tense": "J",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 548089,
+            "form": "été",
+            "lemma": "être",
+            "raw_tag": "K",
+            "tense": "K",
+            "person": null,
+            "number": null,
+            "gender": null
+          },
+          {
+            "source_line": 475041,
+            "form": "sommes",
+            "lemma": "être",
+            "raw_tag": "P1p",
+            "tense": "P",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 484866,
+            "form": "suis",
+            "lemma": "être",
+            "raw_tag": "P1s",
+            "tense": "P",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 549181,
+            "form": "êtes",
+            "lemma": "être",
+            "raw_tag": "P2p",
+            "tense": "P",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 245111,
+            "form": "es",
+            "lemma": "être",
+            "raw_tag": "P2s",
+            "tense": "P",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 475459,
+            "form": "sont",
+            "lemma": "être",
+            "raw_tag": "P3p",
+            "tense": "P",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 479877,
+            "form": "st",
+            "lemma": "être",
+            "raw_tag": "P3p",
+            "tense": "P",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 247107,
+            "form": "est",
+            "lemma": "être",
+            "raw_tag": "P3s",
+            "tense": "P",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 478187,
+            "form": "soyons",
+            "lemma": "être",
+            "raw_tag": "S1p",
+            "tense": "S",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 473966,
+            "form": "sois",
+            "lemma": "être",
+            "raw_tag": "S1s",
+            "tense": "S",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 478183,
+            "form": "soyez",
+            "lemma": "être",
+            "raw_tag": "S2p",
+            "tense": "S",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 473967,
+            "form": "sois",
+            "lemma": "être",
+            "raw_tag": "S2s",
+            "tense": "S",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 473881,
+            "form": "soient",
+            "lemma": "être",
+            "raw_tag": "S3p",
+            "tense": "S",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 473972,
+            "form": "soit",
+            "lemma": "être",
+            "raw_tag": "S3s",
+            "tense": "S",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 270557,
+            "form": "fussions",
+            "lemma": "être",
+            "raw_tag": "T1p",
+            "tense": "T",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 270549,
+            "form": "fusse",
+            "lemma": "être",
+            "raw_tag": "T1s",
+            "tense": "T",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 270555,
+            "form": "fussiez",
+            "lemma": "être",
+            "raw_tag": "T2p",
+            "tense": "T",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 270553,
+            "form": "fusses",
+            "lemma": "être",
+            "raw_tag": "T2s",
+            "tense": "T",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 270551,
+            "form": "fussent",
+            "lemma": "être",
+            "raw_tag": "T3p",
+            "tense": "T",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 271672,
+            "form": "fût",
+            "lemma": "être",
+            "raw_tag": "T3s",
+            "tense": "T",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 549184,
+            "form": "être",
+            "lemma": "être",
+            "raw_tag": "W",
+            "tense": "W",
+            "person": null,
+            "number": null,
+            "gender": null
+          },
+          {
+            "source_line": 478188,
+            "form": "soyons",
+            "lemma": "être",
+            "raw_tag": "Y1p",
+            "tense": "Y",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 478184,
+            "form": "soyez",
+            "lemma": "être",
+            "raw_tag": "Y2p",
+            "tense": "Y",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 473968,
+            "form": "sois",
+            "lemma": "être",
+            "raw_tag": "Y2s",
+            "tense": "Y",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          }
+        ]
+      }
+    ]
+  },
+  "suis": {
+    "query": "suis",
+    "tables": [
+      {
+        "lemma": "suivre",
+        "verb": {
+          "group": 3,
+          "group_status": "supported",
+          "auxiliaries": [
+            {
+              "lemma": "avoir",
+              "use": "ordinary active"
+            }
+          ],
+          "auxiliary_status": "supported",
+          "ordinary_status": "supported",
+          "usage_labels": [
+            "intransitive",
+            "transitive"
+          ],
+          "source": {
+            "resource": "grammalecte-2.3.0",
+            "entry": "dVerb/suivre",
+            "raw_type": "3_it_x__a"
+          },
+          "correction": null
+        },
+        "cells": [
+          {
+            "source_line": 484950,
+            "form": "suivrions",
+            "lemma": "suivre",
+            "raw_tag": "C1p",
+            "tense": "C",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 484944,
+            "form": "suivrais",
+            "lemma": "suivre",
+            "raw_tag": "C12s",
+            "tense": "C",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 484949,
+            "form": "suivriez",
+            "lemma": "suivre",
+            "raw_tag": "C2p",
+            "tense": "C",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 484944,
+            "form": "suivrais",
+            "lemma": "suivre",
+            "raw_tag": "C12s",
+            "tense": "C",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 484943,
+            "form": "suivraient",
+            "lemma": "suivre",
+            "raw_tag": "C3p",
+            "tense": "C",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 484945,
+            "form": "suivrait",
+            "lemma": "suivre",
+            "raw_tag": "C3s",
+            "tense": "C",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 484951,
+            "form": "suivrons",
+            "lemma": "suivre",
+            "raw_tag": "F1p",
+            "tense": "F",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 484942,
+            "form": "suivrai",
+            "lemma": "suivre",
+            "raw_tag": "F1s",
+            "tense": "F",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 484948,
+            "form": "suivrez",
+            "lemma": "suivre",
+            "raw_tag": "F2p",
+            "tense": "F",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 484946,
+            "form": "suivras",
+            "lemma": "suivre",
+            "raw_tag": "F2s",
+            "tense": "F",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 484952,
+            "form": "suivront",
+            "lemma": "suivre",
+            "raw_tag": "F3p",
+            "tense": "F",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 484941,
+            "form": "suivra",
+            "lemma": "suivre",
+            "raw_tag": "F3s",
+            "tense": "F",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 484894,
+            "form": "suivant",
+            "lemma": "suivre",
+            "raw_tag": "G",
+            "tense": "G",
+            "person": null,
+            "number": null,
+            "gender": null
+          },
+          {
+            "source_line": 484922,
+            "form": "suivions",
+            "lemma": "suivre",
+            "raw_tag": "I1p",
+            "tense": "I",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 484887,
+            "form": "suivais",
+            "lemma": "suivre",
+            "raw_tag": "I12s",
+            "tense": "I",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 484920,
+            "form": "suiviez",
+            "lemma": "suivre",
+            "raw_tag": "I2p",
+            "tense": "I",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 484887,
+            "form": "suivais",
+            "lemma": "suivre",
+            "raw_tag": "I12s",
+            "tense": "I",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 484886,
+            "form": "suivaient",
+            "lemma": "suivre",
+            "raw_tag": "I3p",
+            "tense": "I",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 484888,
+            "form": "suivait",
+            "lemma": "suivre",
+            "raw_tag": "I3s",
+            "tense": "I",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 484953,
+            "form": "suivîmes",
+            "lemma": "suivre",
+            "raw_tag": "J1p",
+            "tense": "J",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 484927,
+            "form": "suivis",
+            "lemma": "suivre",
+            "raw_tag": "J12s",
+            "tense": "J",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 484955,
+            "form": "suivîtes",
+            "lemma": "suivre",
+            "raw_tag": "J2p",
+            "tense": "J",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 484927,
+            "form": "suivis",
+            "lemma": "suivre",
+            "raw_tag": "J12s",
+            "tense": "J",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 484924,
+            "form": "suivirent",
+            "lemma": "suivre",
+            "raw_tag": "J3p",
+            "tense": "J",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 484938,
+            "form": "suivit",
+            "lemma": "suivre",
+            "raw_tag": "J3s",
+            "tense": "J",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 484919,
+            "form": "suivies",
+            "lemma": "suivre",
+            "raw_tag": "Kfp",
+            "tense": "K",
+            "person": null,
+            "number": "p",
+            "gender": "f"
+          },
+          {
+            "source_line": 484928,
+            "form": "suivis",
+            "lemma": "suivre",
+            "raw_tag": "Kmp",
+            "tense": "K",
+            "person": null,
+            "number": "p",
+            "gender": "m"
+          },
+          {
+            "source_line": 484917,
+            "form": "suivie",
+            "lemma": "suivre",
+            "raw_tag": "Kfs",
+            "tense": "K",
+            "person": null,
+            "number": "s",
+            "gender": "f"
+          },
+          {
+            "source_line": 484915,
+            "form": "suivi",
+            "lemma": "suivre",
+            "raw_tag": "Kms",
+            "tense": "K",
+            "person": null,
+            "number": "s",
+            "gender": "m"
+          },
+          {
+            "source_line": 484939,
+            "form": "suivons",
+            "lemma": "suivre",
+            "raw_tag": "P1p",
+            "tense": "P",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 484864,
+            "form": "suis",
+            "lemma": "suivre",
+            "raw_tag": "P12s",
+            "tense": "P",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 484910,
+            "form": "suivez",
+            "lemma": "suivre",
+            "raw_tag": "P2p",
+            "tense": "P",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 484864,
+            "form": "suis",
+            "lemma": "suivre",
+            "raw_tag": "P12s",
+            "tense": "P",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 12,
+            "form": "&gt;",
+            "lemma": "suivre",
+            "raw_tag": "PS3",
+            "tense": "P",
+            "person": "3",
+            "number": null,
+            "gender": null
+          },
+          {
+            "source_line": 13,
+            "form": "&gt;&gt;",
+            "lemma": "suivre",
+            "raw_tag": "PS3",
+            "tense": "P",
+            "person": "3",
+            "number": null,
+            "gender": null
+          },
+          {
+            "source_line": 94,
+            "form": ">",
+            "lemma": "suivre",
+            "raw_tag": "PS3",
+            "tense": "P",
+            "person": "3",
+            "number": null,
+            "gender": null
+          },
+          {
+            "source_line": 95,
+            "form": ">>",
+            "lemma": "suivre",
+            "raw_tag": "PS3",
+            "tense": "P",
+            "person": "3",
+            "number": null,
+            "gender": null
+          },
+          {
+            "source_line": 484904,
+            "form": "suivent",
+            "lemma": "suivre",
+            "raw_tag": "PS3p",
+            "tense": "P",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 484878,
+            "form": "suit",
+            "lemma": "suivre",
+            "raw_tag": "P3s",
+            "tense": "P",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 484923,
+            "form": "suivions",
+            "lemma": "suivre",
+            "raw_tag": "S1p",
+            "tense": "S",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 484903,
+            "form": "suive",
+            "lemma": "suivre",
+            "raw_tag": "S13s",
+            "tense": "S",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 484921,
+            "form": "suiviez",
+            "lemma": "suivre",
+            "raw_tag": "S2p",
+            "tense": "S",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 484905,
+            "form": "suives",
+            "lemma": "suivre",
+            "raw_tag": "S2s",
+            "tense": "S",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 12,
+            "form": "&gt;",
+            "lemma": "suivre",
+            "raw_tag": "PS3",
+            "tense": "S",
+            "person": "3",
+            "number": null,
+            "gender": null
+          },
+          {
+            "source_line": 13,
+            "form": "&gt;&gt;",
+            "lemma": "suivre",
+            "raw_tag": "PS3",
+            "tense": "S",
+            "person": "3",
+            "number": null,
+            "gender": null
+          },
+          {
+            "source_line": 94,
+            "form": ">",
+            "lemma": "suivre",
+            "raw_tag": "PS3",
+            "tense": "S",
+            "person": "3",
+            "number": null,
+            "gender": null
+          },
+          {
+            "source_line": 95,
+            "form": ">>",
+            "lemma": "suivre",
+            "raw_tag": "PS3",
+            "tense": "S",
+            "person": "3",
+            "number": null,
+            "gender": null
+          },
+          {
+            "source_line": 484904,
+            "form": "suivent",
+            "lemma": "suivre",
+            "raw_tag": "PS3p",
+            "tense": "S",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 484903,
+            "form": "suive",
+            "lemma": "suivre",
+            "raw_tag": "S13s",
+            "tense": "S",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 484935,
+            "form": "suivissions",
+            "lemma": "suivre",
+            "raw_tag": "T1p",
+            "tense": "T",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 484931,
+            "form": "suivisse",
+            "lemma": "suivre",
+            "raw_tag": "T1s",
+            "tense": "T",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 484934,
+            "form": "suivissiez",
+            "lemma": "suivre",
+            "raw_tag": "T2p",
+            "tense": "T",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 484933,
+            "form": "suivisses",
+            "lemma": "suivre",
+            "raw_tag": "T2s",
+            "tense": "T",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 484932,
+            "form": "suivissent",
+            "lemma": "suivre",
+            "raw_tag": "T3p",
+            "tense": "T",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 484954,
+            "form": "suivît",
+            "lemma": "suivre",
+            "raw_tag": "T3s",
+            "tense": "T",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 484947,
+            "form": "suivre",
+            "lemma": "suivre",
+            "raw_tag": "W",
+            "tense": "W",
+            "person": null,
+            "number": null,
+            "gender": null
+          },
+          {
+            "source_line": 484940,
+            "form": "suivons",
+            "lemma": "suivre",
+            "raw_tag": "Y1p",
+            "tense": "Y",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 484911,
+            "form": "suivez",
+            "lemma": "suivre",
+            "raw_tag": "Y2p",
+            "tense": "Y",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 484865,
+            "form": "suis",
+            "lemma": "suivre",
+            "raw_tag": "Y2s",
+            "tense": "Y",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          }
+        ]
+      },
+      {
+        "lemma": "être",
+        "verb": {
+          "group": 3,
+          "group_status": "supported",
+          "auxiliaries": [
+            {
+              "lemma": "avoir",
+              "use": "ordinary active"
+            }
+          ],
+          "auxiliary_status": "supported",
+          "ordinary_status": "supported",
+          "usage_labels": [
+            "intransitive"
+          ],
+          "source": {
+            "resource": "grammalecte-2.3.0",
+            "entry": "dVerb/être",
+            "raw_type": "0ei_____a"
+          },
+          "correction": null
+        },
+        "cells": [
+          {
+            "source_line": 470087,
+            "form": "serions",
+            "lemma": "être",
+            "raw_tag": "C1p",
+            "tense": "C",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 469832,
+            "form": "serais",
+            "lemma": "être",
+            "raw_tag": "C12s",
+            "tense": "C",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 469967,
+            "form": "seriez",
+            "lemma": "être",
+            "raw_tag": "C2p",
+            "tense": "C",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 469832,
+            "form": "serais",
+            "lemma": "être",
+            "raw_tag": "C12s",
+            "tense": "C",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 469830,
+            "form": "seraient",
+            "lemma": "être",
+            "raw_tag": "C3p",
+            "tense": "C",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 469834,
+            "form": "serait",
+            "lemma": "être",
+            "raw_tag": "C3s",
+            "tense": "C",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 470153,
+            "form": "serons",
+            "lemma": "être",
+            "raw_tag": "F1p",
+            "tense": "F",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 469828,
+            "form": "serai",
+            "lemma": "être",
+            "raw_tag": "F1s",
+            "tense": "F",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 469902,
+            "form": "serez",
+            "lemma": "être",
+            "raw_tag": "F2p",
+            "tense": "F",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 469836,
+            "form": "seras",
+            "lemma": "être",
+            "raw_tag": "F2s",
+            "tense": "F",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 470155,
+            "form": "seront",
+            "lemma": "être",
+            "raw_tag": "F3p",
+            "tense": "F",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 469826,
+            "form": "sera",
+            "lemma": "être",
+            "raw_tag": "F3s",
+            "tense": "F",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 546001,
+            "form": "étant",
+            "lemma": "être",
+            "raw_tag": "G",
+            "tense": "G",
+            "person": null,
+            "number": null,
+            "gender": null
+          },
+          {
+            "source_line": 546788,
+            "form": "étions",
+            "lemma": "être",
+            "raw_tag": "I1p",
+            "tense": "I",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 545548,
+            "form": "étais",
+            "lemma": "être",
+            "raw_tag": "I12s",
+            "tense": "I",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 546672,
+            "form": "étiez",
+            "lemma": "être",
+            "raw_tag": "I2p",
+            "tense": "I",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 545548,
+            "form": "étais",
+            "lemma": "être",
+            "raw_tag": "I12s",
+            "tense": "I",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 545531,
+            "form": "étaient",
+            "lemma": "être",
+            "raw_tag": "I3p",
+            "tense": "I",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 545550,
+            "form": "était",
+            "lemma": "être",
+            "raw_tag": "I3s",
+            "tense": "I",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 271669,
+            "form": "fûmes",
+            "lemma": "être",
+            "raw_tag": "J1p",
+            "tense": "J",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 270308,
+            "form": "fus",
+            "lemma": "être",
+            "raw_tag": "J12s",
+            "tense": "J",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 271674,
+            "form": "fûtes",
+            "lemma": "être",
+            "raw_tag": "J2p",
+            "tense": "J",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 270308,
+            "form": "fus",
+            "lemma": "être",
+            "raw_tag": "J12s",
+            "tense": "J",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 270195,
+            "form": "furent",
+            "lemma": "être",
+            "raw_tag": "J3p",
+            "tense": "J",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 270621,
+            "form": "fut",
+            "lemma": "être",
+            "raw_tag": "J3s",
+            "tense": "J",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 548089,
+            "form": "été",
+            "lemma": "être",
+            "raw_tag": "K",
+            "tense": "K",
+            "person": null,
+            "number": null,
+            "gender": null
+          },
+          {
+            "source_line": 475041,
+            "form": "sommes",
+            "lemma": "être",
+            "raw_tag": "P1p",
+            "tense": "P",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 484866,
+            "form": "suis",
+            "lemma": "être",
+            "raw_tag": "P1s",
+            "tense": "P",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 549181,
+            "form": "êtes",
+            "lemma": "être",
+            "raw_tag": "P2p",
+            "tense": "P",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 245111,
+            "form": "es",
+            "lemma": "être",
+            "raw_tag": "P2s",
+            "tense": "P",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 475459,
+            "form": "sont",
+            "lemma": "être",
+            "raw_tag": "P3p",
+            "tense": "P",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 479877,
+            "form": "st",
+            "lemma": "être",
+            "raw_tag": "P3p",
+            "tense": "P",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 247107,
+            "form": "est",
+            "lemma": "être",
+            "raw_tag": "P3s",
+            "tense": "P",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 478187,
+            "form": "soyons",
+            "lemma": "être",
+            "raw_tag": "S1p",
+            "tense": "S",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 473966,
+            "form": "sois",
+            "lemma": "être",
+            "raw_tag": "S1s",
+            "tense": "S",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 478183,
+            "form": "soyez",
+            "lemma": "être",
+            "raw_tag": "S2p",
+            "tense": "S",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 473967,
+            "form": "sois",
+            "lemma": "être",
+            "raw_tag": "S2s",
+            "tense": "S",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 473881,
+            "form": "soient",
+            "lemma": "être",
+            "raw_tag": "S3p",
+            "tense": "S",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 473972,
+            "form": "soit",
+            "lemma": "être",
+            "raw_tag": "S3s",
+            "tense": "S",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 270557,
+            "form": "fussions",
+            "lemma": "être",
+            "raw_tag": "T1p",
+            "tense": "T",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 270549,
+            "form": "fusse",
+            "lemma": "être",
+            "raw_tag": "T1s",
+            "tense": "T",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 270555,
+            "form": "fussiez",
+            "lemma": "être",
+            "raw_tag": "T2p",
+            "tense": "T",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 270553,
+            "form": "fusses",
+            "lemma": "être",
+            "raw_tag": "T2s",
+            "tense": "T",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 270551,
+            "form": "fussent",
+            "lemma": "être",
+            "raw_tag": "T3p",
+            "tense": "T",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 271672,
+            "form": "fût",
+            "lemma": "être",
+            "raw_tag": "T3s",
+            "tense": "T",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 549184,
+            "form": "être",
+            "lemma": "être",
+            "raw_tag": "W",
+            "tense": "W",
+            "person": null,
+            "number": null,
+            "gender": null
+          },
+          {
+            "source_line": 478188,
+            "form": "soyons",
+            "lemma": "être",
+            "raw_tag": "Y1p",
+            "tense": "Y",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 478184,
+            "form": "soyez",
+            "lemma": "être",
+            "raw_tag": "Y2p",
+            "tense": "Y",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 473968,
+            "form": "sois",
+            "lemma": "être",
+            "raw_tag": "Y2s",
+            "tense": "Y",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          }
+        ]
+      }
+    ]
+  },
+  "paie": {
+    "query": "paie",
+    "tables": [
+      {
+        "lemma": "payer",
+        "verb": {
+          "group": 1,
+          "group_status": "supported",
+          "auxiliaries": [
+            {
+              "lemma": "avoir",
+              "use": "ordinary active"
+            }
+          ],
+          "auxiliary_status": "supported",
+          "ordinary_status": "supported",
+          "usage_labels": [
+            "intransitive",
+            "transitive",
+            "indirect_transitive"
+          ],
+          "source": {
+            "resource": "grammalecte-2.3.0",
+            "entry": "dVerb/payer",
+            "raw_type": "1_itnq__a"
+          },
+          "correction": null
+        },
+        "cells": [
+          {
+            "source_line": 367154,
+            "form": "paierions",
+            "lemma": "payer",
+            "raw_tag": "C1p",
+            "tense": "C",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 374276,
+            "form": "payerions",
+            "lemma": "payer",
+            "raw_tag": "C1p",
+            "tense": "C",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 367147,
+            "form": "paierais",
+            "lemma": "payer",
+            "raw_tag": "C12s",
+            "tense": "C",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 374271,
+            "form": "payerais",
+            "lemma": "payer",
+            "raw_tag": "C12s",
+            "tense": "C",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 367153,
+            "form": "paieriez",
+            "lemma": "payer",
+            "raw_tag": "C2p",
+            "tense": "C",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 374275,
+            "form": "payeriez",
+            "lemma": "payer",
+            "raw_tag": "C2p",
+            "tense": "C",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 367147,
+            "form": "paierais",
+            "lemma": "payer",
+            "raw_tag": "C12s",
+            "tense": "C",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 374271,
+            "form": "payerais",
+            "lemma": "payer",
+            "raw_tag": "C12s",
+            "tense": "C",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 367146,
+            "form": "paieraient",
+            "lemma": "payer",
+            "raw_tag": "C3p",
+            "tense": "C",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 374270,
+            "form": "payeraient",
+            "lemma": "payer",
+            "raw_tag": "C3p",
+            "tense": "C",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 367148,
+            "form": "paierait",
+            "lemma": "payer",
+            "raw_tag": "C3s",
+            "tense": "C",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 374272,
+            "form": "payerait",
+            "lemma": "payer",
+            "raw_tag": "C3s",
+            "tense": "C",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 367155,
+            "form": "paierons",
+            "lemma": "payer",
+            "raw_tag": "F1p",
+            "tense": "F",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 374277,
+            "form": "payerons",
+            "lemma": "payer",
+            "raw_tag": "F1p",
+            "tense": "F",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 367145,
+            "form": "paierai",
+            "lemma": "payer",
+            "raw_tag": "F1s",
+            "tense": "F",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 374269,
+            "form": "payerai",
+            "lemma": "payer",
+            "raw_tag": "F1s",
+            "tense": "F",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 367150,
+            "form": "paierez",
+            "lemma": "payer",
+            "raw_tag": "F2p",
+            "tense": "F",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 374274,
+            "form": "payerez",
+            "lemma": "payer",
+            "raw_tag": "F2p",
+            "tense": "F",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 367149,
+            "form": "paieras",
+            "lemma": "payer",
+            "raw_tag": "F2s",
+            "tense": "F",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 374273,
+            "form": "payeras",
+            "lemma": "payer",
+            "raw_tag": "F2s",
+            "tense": "F",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 367156,
+            "form": "paieront",
+            "lemma": "payer",
+            "raw_tag": "F3p",
+            "tense": "F",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 374278,
+            "form": "payeront",
+            "lemma": "payer",
+            "raw_tag": "F3p",
+            "tense": "F",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 367144,
+            "form": "paiera",
+            "lemma": "payer",
+            "raw_tag": "F3s",
+            "tense": "F",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 374268,
+            "form": "payera",
+            "lemma": "payer",
+            "raw_tag": "F3s",
+            "tense": "F",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 374250,
+            "form": "payant",
+            "lemma": "payer",
+            "raw_tag": "G",
+            "tense": "G",
+            "person": null,
+            "number": null,
+            "gender": null
+          },
+          {
+            "source_line": 374289,
+            "form": "payions",
+            "lemma": "payer",
+            "raw_tag": "I1p",
+            "tense": "I",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 374246,
+            "form": "payais",
+            "lemma": "payer",
+            "raw_tag": "I12s",
+            "tense": "I",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 374287,
+            "form": "payiez",
+            "lemma": "payer",
+            "raw_tag": "I2p",
+            "tense": "I",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 374246,
+            "form": "payais",
+            "lemma": "payer",
+            "raw_tag": "I12s",
+            "tense": "I",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 374245,
+            "form": "payaient",
+            "lemma": "payer",
+            "raw_tag": "I3p",
+            "tense": "I",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 374247,
+            "form": "payait",
+            "lemma": "payer",
+            "raw_tag": "I3s",
+            "tense": "I",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 374367,
+            "form": "payâmes",
+            "lemma": "payer",
+            "raw_tag": "J1p",
+            "tense": "J",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 374244,
+            "form": "payai",
+            "lemma": "payer",
+            "raw_tag": "J1s",
+            "tense": "J",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 374369,
+            "form": "payâtes",
+            "lemma": "payer",
+            "raw_tag": "J2p",
+            "tense": "J",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 374255,
+            "form": "payas",
+            "lemma": "payer",
+            "raw_tag": "J2s",
+            "tense": "J",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 374370,
+            "form": "payèrent",
+            "lemma": "payer",
+            "raw_tag": "J3p",
+            "tense": "J",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 374241,
+            "form": "paya",
+            "lemma": "payer",
+            "raw_tag": "J3s",
+            "tense": "J",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 374376,
+            "form": "payées",
+            "lemma": "payer",
+            "raw_tag": "Kfp",
+            "tense": "K",
+            "person": null,
+            "number": "p",
+            "gender": "f"
+          },
+          {
+            "source_line": 374378,
+            "form": "payés",
+            "lemma": "payer",
+            "raw_tag": "Kmp",
+            "tense": "K",
+            "person": null,
+            "number": "p",
+            "gender": "m"
+          },
+          {
+            "source_line": 374374,
+            "form": "payée",
+            "lemma": "payer",
+            "raw_tag": "Kfs",
+            "tense": "K",
+            "person": null,
+            "number": "s",
+            "gender": "f"
+          },
+          {
+            "source_line": 374372,
+            "form": "payé",
+            "lemma": "payer",
+            "raw_tag": "Kms",
+            "tense": "K",
+            "person": null,
+            "number": "s",
+            "gender": "m"
+          },
+          {
+            "source_line": 374291,
+            "form": "payons",
+            "lemma": "payer",
+            "raw_tag": "P1p",
+            "tense": "P",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 367139,
+            "form": "paie",
+            "lemma": "payer",
+            "raw_tag": "PS13s",
+            "tense": "P",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 374262,
+            "form": "paye",
+            "lemma": "payer",
+            "raw_tag": "PS13s",
+            "tense": "P",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 374285,
+            "form": "payez",
+            "lemma": "payer",
+            "raw_tag": "P2p",
+            "tense": "P",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 367158,
+            "form": "paies",
+            "lemma": "payer",
+            "raw_tag": "PS2s",
+            "tense": "P",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 374280,
+            "form": "payes",
+            "lemma": "payer",
+            "raw_tag": "PS2s",
+            "tense": "P",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 367143,
+            "form": "paient",
+            "lemma": "payer",
+            "raw_tag": "PS3p",
+            "tense": "P",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 374266,
+            "form": "payent",
+            "lemma": "payer",
+            "raw_tag": "PS3p",
+            "tense": "P",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 367139,
+            "form": "paie",
+            "lemma": "payer",
+            "raw_tag": "PS13s",
+            "tense": "P",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 374262,
+            "form": "paye",
+            "lemma": "payer",
+            "raw_tag": "PS13s",
+            "tense": "P",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 374290,
+            "form": "payions",
+            "lemma": "payer",
+            "raw_tag": "S1p",
+            "tense": "S",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 367139,
+            "form": "paie",
+            "lemma": "payer",
+            "raw_tag": "PS13s",
+            "tense": "S",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 374262,
+            "form": "paye",
+            "lemma": "payer",
+            "raw_tag": "PS13s",
+            "tense": "S",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 374288,
+            "form": "payiez",
+            "lemma": "payer",
+            "raw_tag": "S2p",
+            "tense": "S",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 367158,
+            "form": "paies",
+            "lemma": "payer",
+            "raw_tag": "PS2s",
+            "tense": "S",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 374280,
+            "form": "payes",
+            "lemma": "payer",
+            "raw_tag": "PS2s",
+            "tense": "S",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 367143,
+            "form": "paient",
+            "lemma": "payer",
+            "raw_tag": "PS3p",
+            "tense": "S",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 374266,
+            "form": "payent",
+            "lemma": "payer",
+            "raw_tag": "PS3p",
+            "tense": "S",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 367139,
+            "form": "paie",
+            "lemma": "payer",
+            "raw_tag": "PS13s",
+            "tense": "S",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 374262,
+            "form": "paye",
+            "lemma": "payer",
+            "raw_tag": "PS13s",
+            "tense": "S",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 374260,
+            "form": "payassions",
+            "lemma": "payer",
+            "raw_tag": "T1p",
+            "tense": "T",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 374256,
+            "form": "payasse",
+            "lemma": "payer",
+            "raw_tag": "T1s",
+            "tense": "T",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 374259,
+            "form": "payassiez",
+            "lemma": "payer",
+            "raw_tag": "T2p",
+            "tense": "T",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 374258,
+            "form": "payasses",
+            "lemma": "payer",
+            "raw_tag": "T2s",
+            "tense": "T",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 374257,
+            "form": "payassent",
+            "lemma": "payer",
+            "raw_tag": "T3p",
+            "tense": "T",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 374368,
+            "form": "payât",
+            "lemma": "payer",
+            "raw_tag": "T3s",
+            "tense": "T",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 374267,
+            "form": "payer",
+            "lemma": "payer",
+            "raw_tag": "W",
+            "tense": "W",
+            "person": null,
+            "number": null,
+            "gender": null
+          },
+          {
+            "source_line": 374292,
+            "form": "payons",
+            "lemma": "payer",
+            "raw_tag": "Y1p",
+            "tense": "Y",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 374286,
+            "form": "payez",
+            "lemma": "payer",
+            "raw_tag": "Y2p",
+            "tense": "Y",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 367140,
+            "form": "paie",
+            "lemma": "payer",
+            "raw_tag": "Y2s",
+            "tense": "Y",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 374263,
+            "form": "paye",
+            "lemma": "payer",
+            "raw_tag": "Y2s",
+            "tense": "Y",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          }
+        ]
+      }
+    ]
+  },
+  "falloir": {
+    "query": "falloir",
+    "tables": [
+      {
+        "lemma": "falloir",
+        "verb": {
+          "group": 3,
+          "group_status": "supported",
+          "auxiliaries": [
+            {
+              "lemma": "avoir",
+              "use": "ordinary active"
+            }
+          ],
+          "auxiliary_status": "supported",
+          "ordinary_status": "supported",
+          "usage_labels": [
+            "transitive",
+            "indirect_transitive",
+            "impersonal"
+          ],
+          "source": {
+            "resource": "grammalecte-2.3.0",
+            "entry": "dVerb/falloir",
+            "raw_type": "3__tnem_a"
+          },
+          "correction": null
+        },
+        "cells": [
+          {
+            "source_line": 255918,
+            "form": "faudrait",
+            "lemma": "falloir",
+            "raw_tag": "C3s",
+            "tense": "C",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 255917,
+            "form": "faudra",
+            "lemma": "falloir",
+            "raw_tag": "F3s",
+            "tense": "F",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 254496,
+            "form": "fallait",
+            "lemma": "falloir",
+            "raw_tag": "I3s",
+            "tense": "I",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 254499,
+            "form": "fallut",
+            "lemma": "falloir",
+            "raw_tag": "J3s",
+            "tense": "J",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 254498,
+            "form": "fallu",
+            "lemma": "falloir",
+            "raw_tag": "K",
+            "tense": "K",
+            "person": null,
+            "number": null,
+            "gender": null
+          },
+          {
+            "source_line": 256054,
+            "form": "faut",
+            "lemma": "falloir",
+            "raw_tag": "P3s",
+            "tense": "P",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 254234,
+            "form": "faille",
+            "lemma": "falloir",
+            "raw_tag": "S3s",
+            "tense": "S",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 254500,
+            "form": "fallût",
+            "lemma": "falloir",
+            "raw_tag": "T3s",
+            "tense": "T",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 254497,
+            "form": "falloir",
+            "lemma": "falloir",
+            "raw_tag": "W",
+            "tense": "W",
+            "person": null,
+            "number": null,
+            "gender": null
+          }
+        ]
+      }
+    ]
+  },
+  "enfuir": {
+    "query": "enfuir",
+    "tables": [
+      {
+        "lemma": "enfuir",
+        "verb": {
+          "group": 3,
+          "group_status": "supported",
+          "auxiliaries": [],
+          "auxiliary_status": "not_applicable",
+          "ordinary_status": "not_applicable",
+          "usage_labels": [
+            "pronominal_only"
+          ],
+          "source": {
+            "resource": "grammalecte-2.3.0",
+            "entry": "dVerb/enfuir",
+            "raw_type": "3____p_e_"
+          },
+          "correction": null
+        },
+        "cells": [
+          {
+            "source_line": 236894,
+            "form": "enfuirions",
+            "lemma": "enfuir",
+            "raw_tag": "C1p",
+            "tense": "C",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 236888,
+            "form": "enfuirais",
+            "lemma": "enfuir",
+            "raw_tag": "C12s",
+            "tense": "C",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 236893,
+            "form": "enfuiriez",
+            "lemma": "enfuir",
+            "raw_tag": "C2p",
+            "tense": "C",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 236888,
+            "form": "enfuirais",
+            "lemma": "enfuir",
+            "raw_tag": "C12s",
+            "tense": "C",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 236887,
+            "form": "enfuiraient",
+            "lemma": "enfuir",
+            "raw_tag": "C3p",
+            "tense": "C",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 236889,
+            "form": "enfuirait",
+            "lemma": "enfuir",
+            "raw_tag": "C3s",
+            "tense": "C",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 236895,
+            "form": "enfuirons",
+            "lemma": "enfuir",
+            "raw_tag": "F1p",
+            "tense": "F",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 236886,
+            "form": "enfuirai",
+            "lemma": "enfuir",
+            "raw_tag": "F1s",
+            "tense": "F",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 236892,
+            "form": "enfuirez",
+            "lemma": "enfuir",
+            "raw_tag": "F2p",
+            "tense": "F",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 236890,
+            "form": "enfuiras",
+            "lemma": "enfuir",
+            "raw_tag": "F2s",
+            "tense": "F",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 236896,
+            "form": "enfuiront",
+            "lemma": "enfuir",
+            "raw_tag": "F3p",
+            "tense": "F",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 236885,
+            "form": "enfuira",
+            "lemma": "enfuir",
+            "raw_tag": "F3s",
+            "tense": "F",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 237012,
+            "form": "enfuyant",
+            "lemma": "enfuir",
+            "raw_tag": "G",
+            "tense": "G",
+            "person": null,
+            "number": null,
+            "gender": null
+          },
+          {
+            "source_line": 237017,
+            "form": "enfuyions",
+            "lemma": "enfuir",
+            "raw_tag": "I1p",
+            "tense": "I",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 237010,
+            "form": "enfuyais",
+            "lemma": "enfuir",
+            "raw_tag": "I12s",
+            "tense": "I",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 237015,
+            "form": "enfuyiez",
+            "lemma": "enfuir",
+            "raw_tag": "I2p",
+            "tense": "I",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 237010,
+            "form": "enfuyais",
+            "lemma": "enfuir",
+            "raw_tag": "I12s",
+            "tense": "I",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 237009,
+            "form": "enfuyaient",
+            "lemma": "enfuir",
+            "raw_tag": "I3p",
+            "tense": "I",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 237011,
+            "form": "enfuyait",
+            "lemma": "enfuir",
+            "raw_tag": "I3s",
+            "tense": "I",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 237021,
+            "form": "enfuîmes",
+            "lemma": "enfuir",
+            "raw_tag": "J1p",
+            "tense": "J",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 236898,
+            "form": "enfuis",
+            "lemma": "enfuir",
+            "raw_tag": "PJ12s",
+            "tense": "J",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 237023,
+            "form": "enfuîtes",
+            "lemma": "enfuir",
+            "raw_tag": "J2p",
+            "tense": "J",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 236898,
+            "form": "enfuis",
+            "lemma": "enfuir",
+            "raw_tag": "PJ12s",
+            "tense": "J",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 236891,
+            "form": "enfuirent",
+            "lemma": "enfuir",
+            "raw_tag": "J3p",
+            "tense": "J",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 236905,
+            "form": "enfuit",
+            "lemma": "enfuir",
+            "raw_tag": "J3s",
+            "tense": "J",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 236882,
+            "form": "enfuies",
+            "lemma": "enfuir",
+            "raw_tag": "Kfp",
+            "tense": "K",
+            "person": null,
+            "number": "p",
+            "gender": "f"
+          },
+          {
+            "source_line": 236897,
+            "form": "enfuis",
+            "lemma": "enfuir",
+            "raw_tag": "Kmp",
+            "tense": "K",
+            "person": null,
+            "number": "p",
+            "gender": "m"
+          },
+          {
+            "source_line": 236879,
+            "form": "enfuie",
+            "lemma": "enfuir",
+            "raw_tag": "Kfs",
+            "tense": "K",
+            "person": null,
+            "number": "s",
+            "gender": "f"
+          },
+          {
+            "source_line": 236878,
+            "form": "enfui",
+            "lemma": "enfuir",
+            "raw_tag": "Kms",
+            "tense": "K",
+            "person": null,
+            "number": "s",
+            "gender": "m"
+          },
+          {
+            "source_line": 237019,
+            "form": "enfuyons",
+            "lemma": "enfuir",
+            "raw_tag": "P1p",
+            "tense": "P",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 236898,
+            "form": "enfuis",
+            "lemma": "enfuir",
+            "raw_tag": "PJ12s",
+            "tense": "P",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 237013,
+            "form": "enfuyez",
+            "lemma": "enfuir",
+            "raw_tag": "P2p",
+            "tense": "P",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 236898,
+            "form": "enfuis",
+            "lemma": "enfuir",
+            "raw_tag": "PJ12s",
+            "tense": "P",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 236881,
+            "form": "enfuient",
+            "lemma": "enfuir",
+            "raw_tag": "PS3p",
+            "tense": "P",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 236906,
+            "form": "enfuit",
+            "lemma": "enfuir",
+            "raw_tag": "P3s",
+            "tense": "P",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 237018,
+            "form": "enfuyions",
+            "lemma": "enfuir",
+            "raw_tag": "S1p",
+            "tense": "S",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 236880,
+            "form": "enfuie",
+            "lemma": "enfuir",
+            "raw_tag": "S13s",
+            "tense": "S",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 237016,
+            "form": "enfuyiez",
+            "lemma": "enfuir",
+            "raw_tag": "S2p",
+            "tense": "S",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 236883,
+            "form": "enfuies",
+            "lemma": "enfuir",
+            "raw_tag": "S2s",
+            "tense": "S",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 236881,
+            "form": "enfuient",
+            "lemma": "enfuir",
+            "raw_tag": "PS3p",
+            "tense": "S",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 236880,
+            "form": "enfuie",
+            "lemma": "enfuir",
+            "raw_tag": "S13s",
+            "tense": "S",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 236904,
+            "form": "enfuissions",
+            "lemma": "enfuir",
+            "raw_tag": "T1p",
+            "tense": "T",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 236900,
+            "form": "enfuisse",
+            "lemma": "enfuir",
+            "raw_tag": "T1s",
+            "tense": "T",
+            "person": "1",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 236903,
+            "form": "enfuissiez",
+            "lemma": "enfuir",
+            "raw_tag": "T2p",
+            "tense": "T",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 236902,
+            "form": "enfuisses",
+            "lemma": "enfuir",
+            "raw_tag": "T2s",
+            "tense": "T",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 236901,
+            "form": "enfuissent",
+            "lemma": "enfuir",
+            "raw_tag": "T3p",
+            "tense": "T",
+            "person": "3",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 237022,
+            "form": "enfuît",
+            "lemma": "enfuir",
+            "raw_tag": "T3s",
+            "tense": "T",
+            "person": "3",
+            "number": "s",
+            "gender": null
+          },
+          {
+            "source_line": 236884,
+            "form": "enfuir",
+            "lemma": "enfuir",
+            "raw_tag": "W",
+            "tense": "W",
+            "person": null,
+            "number": null,
+            "gender": null
+          },
+          {
+            "source_line": 237020,
+            "form": "enfuyons",
+            "lemma": "enfuir",
+            "raw_tag": "Y1p",
+            "tense": "Y",
+            "person": "1",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 237014,
+            "form": "enfuyez",
+            "lemma": "enfuir",
+            "raw_tag": "Y2p",
+            "tense": "Y",
+            "person": "2",
+            "number": "p",
+            "gender": null
+          },
+          {
+            "source_line": 236899,
+            "form": "enfuis",
+            "lemma": "enfuir",
+            "raw_tag": "Y2s",
+            "tense": "Y",
+            "person": "2",
+            "number": "s",
+            "gender": null
+          }
+        ]
+      }
+    ]
+  },
+  "voilà": {
+    "query": "voilà",
+    "tables": [
+      {
+        "lemma": "voilà",
+        "verb": {
+          "group": null,
+          "group_status": "unconfirmed",
+          "auxiliaries": [],
+          "auxiliary_status": "unconfirmed",
+          "ordinary_status": "unconfirmed",
+          "usage_labels": [],
+          "source": null,
+          "correction": null
+        },
+        "cells": [
+          {
+            "source_line": 518536,
+            "form": "v'là",
+            "lemma": "voilà",
+            "raw_tag": "",
+            "tense": null,
+            "person": null,
+            "number": null,
+            "gender": null
+          },
+          {
+            "source_line": 526286,
+            "form": "voilà",
+            "lemma": "voilà",
+            "raw_tag": "",
+            "tense": null,
+            "person": null,
+            "number": null,
+            "gender": null
+          }
+        ]
+      }
+    ]
+  }
+}

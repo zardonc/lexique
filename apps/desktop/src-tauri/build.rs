@@ -3,6 +3,11 @@ fn main() {
     for source in [
         "scripts/dictionary_sample.py",
         "resources/freedict-fra-zho-2025.11.23",
+        "scripts/conjugation_sample.py",
+        "scripts/conjugation_metadata.py",
+        "resources/lefff-3.4",
+        "resources/grammalecte-2.3.0",
+        "LICENSE",
     ] {
         println!("cargo:rerun-if-changed={}", root.join(source).display());
     }
@@ -29,10 +34,35 @@ fn main() {
             .as_str()
             .expect("Missing dictionary hash")
     );
+    let prepared = std::process::Command::new("python")
+        .args([
+            "-X",
+            "utf8",
+            "scripts/conjugation_sample.py",
+            "prepare",
+            "target/desktop-conjugation",
+        ])
+        .current_dir(&root)
+        .output()
+        .expect("Python 3.12+ is required to prepare bundled conjugations");
+    assert!(
+        prepared.status.success(),
+        "Bundled conjugation preparation failed: {}",
+        String::from_utf8_lossy(&prepared.stderr)
+    );
+    let conjugation: serde_json::Value =
+        serde_json::from_slice(&prepared.stdout).expect("Invalid conjugation report");
+    println!(
+        "cargo:rustc-env=LEXIQUE_CONJUGATION_SHA256={}",
+        conjugation["sqlite_sha256"]
+            .as_str()
+            .expect("Missing conjugation hash")
+    );
     tauri_build::try_build(tauri_build::Attributes::new().app_manifest(
         tauri_build::AppManifest::new().commands(&[
             "runtime_status",
             "dictionary_lookup",
+            "conjugation_lookup",
             "vocabulary_find",
             "vocabulary_list",
             "vocabulary_save",

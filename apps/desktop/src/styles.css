@@ -1,4 +1,20 @@
 :root { font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; font-synthesis: none; text-rendering: optimizeLegibility; }
+.conjugation-choices { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0; }
+.conjugation-choices button[aria-pressed='true'] { outline: 2px solid var(--ink); }
+.conjugation-table h3 { font: 36px Georgia, serif; margin-bottom: 12px; }
+.conjugation-blocks { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 310px), 1fr)); gap: 16px; margin-top: 28px; }
+.conjugation-block { padding: 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; }
+.conjugation-block h4 { font-size: 17px; margin: 0 0 8px; }
+.conjugation-block header small { display: block; color: var(--muted); }
+.conjugation-block dl { margin: 18px 0 0; }
+.conjugation-block dl > div { padding: 10px 0; border-top: 1px solid var(--line); }
+.conjugation-block dt { font-size: 12px; color: var(--muted); }
+.conjugation-block dd { margin: 5px 0 0; }
+.conjugation-cell[data-matched='true'] { border-inline-start: 3px solid var(--ink); padding-inline-start: 10px; }
+.conjugation-cell small, .conjugation-match { display: block; font-size: 12px; margin-bottom: 6px; }
+.conjugation-expression { display: block; overflow-wrap: anywhere; line-height: 1.7; }
+.conjugation-expression[data-matched='true'] { font-weight: 600; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.conjugation pre { overflow: auto; max-height: 350px; font-size: 12px; }
 * { box-sizing: border-box; }
 body { margin: 0; }
 button, select, input, textarea { font: inherit; color: inherit; }

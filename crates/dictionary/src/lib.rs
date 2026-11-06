@@ -1,12 +1,13 @@
 //! Read-only access to admitted dictionary resources, separate from learning data.
 
-use std::{fs::File, io::Read, path::Path};
+use std::path::Path;
 
-use rusqlite::{Connection, MAIN_DB};
+use rusqlite::Connection;
 use serde::{Deserialize, Serialize};
-use sha2::{Digest, Sha256};
 
+pub mod conjugation;
 mod entry;
+mod snapshot;
 pub use entry::{Entry, Sense};
 
 const PROVENANCE: &str =
@@ -58,51 +59,12 @@ pub fn lookup(path: &Path, key: &str, expected_sha256: &str) -> Result<Lookup, D
             "enter 1–512 UTF-8 bytes without control characters",
         ));
     }
-    let mut data = Vec::new();
-    File::open(path)
-        .and_then(|file| file.take(16_000_001).read_to_end(&mut data))
-        .map_err(|error| {
-            let code = if error.kind() == std::io::ErrorKind::NotFound {
-                "missing"
-            } else {
-                "query_failed"
-            };
-            failure(
-                code,
-                &format!("Could not read dictionary {}", path.display()),
-                error,
-            )
-        })?;
-    let hash = format!("{:x}", Sha256::digest(&data));
-    if data.len() > 16_000_000 || !data.starts_with(b"SQLite format 3\0") || hash != expected_sha256
-    {
-        return Err(failure("corrupt", "Dictionary checksum mismatch", &hash));
-    }
-    let mut connection = Connection::open_in_memory().map_err(|error| {
-        failure(
-            "query_failed",
-            "Could not open dictionary connection",
-            error,
-        )
-    })?;
-    // Query exactly the verified bytes, even if the resource is replaced concurrently.
-    connection
-        .deserialize_read_exact(MAIN_DB, data.as_slice(), data.len(), true)
-        .map_err(|error| failure("corrupt", "Could not load read-only dictionary", error))?;
-    connection
-        .pragma_update(None, "trusted_schema", false)
-        .map_err(|error| {
-            failure(
-                "query_failed",
-                "Could not restrict dictionary schema",
-                error,
-            )
-        })?;
+    let connection = snapshot::open(path, expected_sha256, 16_000_000)?;
     let entries = read_entries(&connection, key)?;
     Ok(Lookup {
         source: serde_json::from_str(PROVENANCE)
             .map_err(|error| failure("corrupt", "Invalid source attribution", error))?,
-        sha256: hash,
+        sha256: expected_sha256.to_owned(),
         entries,
     })
 }

@@ -45,6 +45,26 @@ class ConjugationCliTests(unittest.TestCase):
         self.assertEqual(len(highlighted), 3)
         self.assertTrue(all(c["form"] == "sommes" for c in highlighted))
 
+    def test_prepare_reuses_the_resource_and_refuses_damaged_output(self):
+        prepared = Path(self.temporary.name) / "prepared"
+        result = run_cli("prepare", prepared)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        for name in ("conjugation_sample.py", "conjugation_metadata.py"):
+            self.assertEqual((prepared / name).read_bytes(), CLI.with_name(name).read_bytes())
+        before = {p.relative_to(self.output): p.read_bytes() for p in self.output.rglob("*") if p.is_file()}
+        result = run_cli("prepare", self.output)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual(json.loads(result.stdout)["database_bytes"], 35_667_968)
+        self.assertEqual({p.relative_to(self.output): p.read_bytes() for p in self.output.rglob("*") if p.is_file()}, before)
+        broken = Path(self.temporary.name) / "damaged-prepare"
+        shutil.copytree(self.output, broken)
+        with (broken / "conjugation.sqlite3").open("ab") as stream:
+            stream.write(b"damaged")
+        result = run_cli("prepare", broken)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("checksum", result.stderr)
+        self.assertTrue((broken / "conjugation.sqlite3").read_bytes().endswith(b"damaged"))
+
     def test_traditional_groups_and_ordinary_auxiliaries_have_source_evidence(self):
         # Literal expectations independently checked against the cited grammar tables.
         for lemma, group, auxiliaries in [

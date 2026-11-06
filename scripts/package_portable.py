@@ -47,6 +47,10 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
     dictionary = release / "dictionary/dictionary.sqlite3"
     if hashlib.sha256(dictionary.read_bytes()).hexdigest() != report["sqlite_sha256"]:
         raise ValueError("Release dictionary does not match the prepared resource")
+    conjugation_report = json.loads((root / "target/desktop-conjugation/report.json").read_text())
+    conjugation = release / "conjugation"
+    if hashlib.sha256((conjugation / "conjugation.sqlite3").read_bytes()).hexdigest() != conjugation_report["sqlite_sha256"]:
+        raise ValueError("Release conjugation does not match the prepared resource")
     if all(speech_inputs):
         with tempfile.TemporaryDirectory(prefix="lexique-speech-stage-") as temporary:
             staged = Path(temporary) / "speech"
@@ -58,11 +62,12 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
     shutil.copy2(executable, output / "Lexique.exe")
     shutil.copytree(root / "resources/freedict-fra-zho-2025.11.23", output / "dictionary")
     shutil.copy2(dictionary, output / "dictionary/dictionary.sqlite3")
+    shutil.copytree(conjugation, output / "conjugation")
     shutil.copy2(root / "LICENSE", output / "LICENSE")
     (output / "README.txt").write_text(
         f"Lexique {config['version']} - Windows 11 {architecture.upper()} portable development sample\n\n"
         "Extract the entire ZIP into a writable folder, then open Lexique.exe.\n"
-        "Keep dictionary/ beside the executable. No installer or first-run download is used.\n"
+        "Keep dictionary/ and conjugation/ beside the executable. No installer or first-run download is used.\n"
         "Requires an existing Microsoft Edge WebView2 runtime (normally present on Windows 11).\n"
         "If Lexique cannot open because WebView2 is missing, install the Microsoft Edge\n"
         "WebView2 Evergreen Runtime from https://developer.microsoft.com/microsoft-edge/webview2/\n"
@@ -78,11 +83,21 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
         "This sample provides FreeDict fra-zho lookup and M1 vocabulary notes with explicit save,\n"
         "search, sorting and restart recovery. Saved words can be added to two review cards;\n"
         "review scoring and card progress survive restart. A full dictionary is not included.\n"
+        "Conjugation supports exact simple-form lookup and source tables; compound forms,\n"
+        "pronominal expressions, English meanings, colors and conjugation playback remain unavailable.\n"
         + ("Offline speech is included for development testing. See speech/docs for its licenses.\n"
            "The voice is machine-generated; model use restrictions apply.\n"
            if all(speech_inputs) else "TTS is not included.\n") +
         "Try: école, œil, aujourd’hui, or, vacances.\n"
-        "Project code: MIT (LICENSE). Dictionary: CC BY-SA 3.0 (dictionary/COPYING).\n",
+        "Project code: MIT (LICENSE). Dictionary: CC BY-SA 3.0 (dictionary/COPYING).\n"
+        "Conjugation: Lefff forms LGPL-LR (conjugation/LICENSE-LGPLLR), Grammalecte metadata\n"
+        "GPL-3.0-only (conjugation/grammalecte-2.3.0/LICENSE-GPL3). Raw sources, provenance,\n"
+        "corrections, decoder and MIT conversion scripts accompany the SQLite resource.\n\n"
+        "Rebuild conjugation with Python 3.12+ (standard library only): in a new workspace,\n"
+        "copy conjugation/conjugation_*.py into scripts/, LICENSE into the workspace root,\n"
+        "and conjugation/grammalecte-2.3.0/ into resources/grammalecte-2.3.0/. Copy\n"
+        "conjugation/lefff-3.4.mlex.gz, provenance.json, README.md and LICENSE-LGPLLR into\n"
+        "resources/lefff-3.4/. Run python -X utf8 scripts/conjugation_sample.py build target/rebuilt.\n",
         encoding="utf-8",
     )
     files = sorted(path for path in output.rglob("*") if path.is_file())
