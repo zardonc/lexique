@@ -10,3 +10,6 @@ resources/grammalecte-2.3.0/upstream-README.txt -text
 resources/lefff-syntax/** -text -whitespace
 resources/lefff-syntax/provenance.json text eol=lf
 resources/lefff-syntax/README.md text eol=lf
+resources/freedict-fra-eng-0.4.1/** -text -whitespace
+resources/freedict-fra-eng-0.4.1/provenance.json text eol=lf
+resources/freedict-fra-eng-0.4.1/README.md text eol=lf

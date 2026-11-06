@@ -14,9 +14,16 @@ const verbSchema = z.object({
   auxiliaries: z.array(z.object({ lemma: z.enum(['avoir', 'être']), use: z.string().min(1) }).strict().readonly()).readonly(),
   usage_labels: z.array(z.string()).readonly(), source: z.json().nullable(), correction: z.json().nullable(),
 }).strict().readonly();
+const meaningsSchema = z.object({
+  status: z.enum(['available', 'unavailable']), senses: z.array(z.object({
+    source_entry: z.number().int().positive(), source_sense: z.number().int().positive(),
+    headword: z.string().min(1), use: z.enum(['ordinary', 'pronominal']),
+    labels: z.array(z.string().min(1)).readonly(), glosses: z.array(z.string().min(1)).min(1).readonly(),
+  }).strict().readonly()).readonly(),
+}).strict().readonly().refine((value) => (value.status === 'available') === (value.senses.length > 0));
 export const conjugationSchema = z.object({
   query: z.string(), tables: z.array(z.object({
-    lemma: z.string().min(1), verb: verbSchema,
+    lemma: z.string().min(1), verb: verbSchema, meanings: meaningsSchema,
     cells: z.array(slotSchema).readonly(),
   }).strict().readonly()).readonly(),
 }).strict().readonly().superRefine((result, context) => {

@@ -1489,7 +1489,33 @@
               "aie aimé"
             ]
           }
-        ]
+        ],
+        "meanings": {
+          "status": "available",
+          "senses": [
+            {
+              "source_entry": 1264,
+              "source_sense": 1,
+              "headword": "aimer",
+              "use": "ordinary",
+              "labels": [],
+              "glosses": [
+                "love"
+              ]
+            },
+            {
+              "source_entry": 1264,
+              "source_sense": 2,
+              "headword": "aimer",
+              "use": "ordinary",
+              "labels": [],
+              "glosses": [
+                "appreciate",
+                "like"
+              ]
+            }
+          ]
+        }
       }
     ]
   },
@@ -3933,7 +3959,34 @@
               "sois allé"
             ]
           }
-        ]
+        ],
+        "meanings": {
+          "status": "available",
+          "senses": [
+            {
+              "source_entry": 1313,
+              "source_sense": 1,
+              "headword": "aller",
+              "use": "ordinary",
+              "labels": [],
+              "glosses": [
+                "fare"
+              ]
+            },
+            {
+              "source_entry": 1313,
+              "source_sense": 2,
+              "headword": "aller",
+              "use": "ordinary",
+              "labels": [],
+              "glosses": [
+                "go",
+                "ride",
+                "travel"
+              ]
+            }
+          ]
+        }
       }
     ]
   },
@@ -5400,7 +5453,23 @@
               "aie habité"
             ]
           }
-        ]
+        ],
+        "meanings": {
+          "status": "available",
+          "senses": [
+            {
+              "source_entry": 4385,
+              "source_sense": 1,
+              "headword": "habiter",
+              "use": "ordinary",
+              "labels": [],
+              "glosses": [
+                "dwell",
+                "live"
+              ]
+            }
+          ]
+        }
       }
     ]
   },
@@ -6845,7 +6914,11 @@
               "aie abélisé"
             ]
           }
-        ]
+        ],
+        "meanings": {
+          "status": "unavailable",
+          "senses": []
+        }
       }
     ]
   },
@@ -10023,7 +10096,47 @@
               "sois monté"
             ]
           }
-        ]
+        ],
+        "meanings": {
+          "status": "available",
+          "senses": [
+            {
+              "source_entry": 5371,
+              "source_sense": 1,
+              "headword": "monter",
+              "use": "ordinary",
+              "labels": [],
+              "glosses": [
+                "get in",
+                "get into a car"
+              ]
+            },
+            {
+              "source_entry": 5371,
+              "source_sense": 2,
+              "headword": "monter",
+              "use": "ordinary",
+              "labels": [],
+              "glosses": [
+                "assemble",
+                "link",
+                "mount"
+              ]
+            },
+            {
+              "source_entry": 5371,
+              "source_sense": 3,
+              "headword": "monter",
+              "use": "ordinary",
+              "labels": [],
+              "glosses": [
+                "ascend",
+                "climb",
+                "scale"
+              ]
+            }
+          ]
+        }
       }
     ]
   },
@@ -13201,7 +13314,47 @@
               "sois monté"
             ]
           }
-        ]
+        ],
+        "meanings": {
+          "status": "available",
+          "senses": [
+            {
+              "source_entry": 5371,
+              "source_sense": 1,
+              "headword": "monter",
+              "use": "ordinary",
+              "labels": [],
+              "glosses": [
+                "get in",
+                "get into a car"
+              ]
+            },
+            {
+              "source_entry": 5371,
+              "source_sense": 2,
+              "headword": "monter",
+              "use": "ordinary",
+              "labels": [],
+              "glosses": [
+                "assemble",
+                "link",
+                "mount"
+              ]
+            },
+            {
+              "source_entry": 5371,
+              "source_sense": 3,
+              "headword": "monter",
+              "use": "ordinary",
+              "labels": [],
+              "glosses": [
+                "ascend",
+                "climb",
+                "scale"
+              ]
+            }
+          ]
+        }
       }
     ]
   },
@@ -13637,7 +13790,11 @@
               "gésir"
             ]
           }
-        ]
+        ],
+        "meanings": {
+          "status": "unavailable",
+          "senses": []
+        }
       }
     ]
   },
@@ -14970,7 +15127,11 @@
               "aie pu"
             ]
           }
-        ]
+        ],
+        "meanings": {
+          "status": "unavailable",
+          "senses": []
+        }
       },
       {
         "lemma": "pouvoir",
@@ -16350,7 +16511,22 @@
               "avoir pu"
             ]
           }
-        ]
+        ],
+        "meanings": {
+          "status": "available",
+          "senses": [
+            {
+              "source_entry": 6264,
+              "source_sense": 1,
+              "headword": "pouvoir",
+              "use": "ordinary",
+              "labels": [],
+              "glosses": [
+                "be able to"
+              ]
+            }
+          ]
+        }
       }
     ]
   },
@@ -17404,7 +17580,11 @@
               "aie occis"
             ]
           }
-        ]
+        ],
+        "meanings": {
+          "status": "unavailable",
+          "senses": []
+        }
       }
     ]
   },
@@ -18457,7 +18637,11 @@
               "être avenus"
             ]
           }
-        ]
+        ],
+        "meanings": {
+          "status": "unavailable",
+          "senses": []
+        }
       }
     ]
   },
@@ -21425,7 +21609,11 @@
               "sois chu"
             ]
           }
-        ]
+        ],
+        "meanings": {
+          "status": "unavailable",
+          "senses": []
+        }
       }
     ]
   },
@@ -22479,7 +22667,11 @@
               "aie occis"
             ]
           }
-        ]
+        ],
+        "meanings": {
+          "status": "unavailable",
+          "senses": []
+        }
       }
     ]
   },
@@ -23346,7 +23538,11 @@
               "aie stupéfait"
             ]
           }
-        ]
+        ],
+        "meanings": {
+          "status": "unavailable",
+          "senses": []
+        }
       }
     ]
   },
@@ -24213,7 +24409,11 @@
               "aie stupéfait"
             ]
           }
-        ]
+        ],
+        "meanings": {
+          "status": "unavailable",
+          "senses": []
+        }
       }
     ]
   },
@@ -25031,7 +25231,11 @@
               "aie forclos"
             ]
           }
-        ]
+        ],
+        "meanings": {
+          "status": "unavailable",
+          "senses": []
+        }
       }
     ]
   }

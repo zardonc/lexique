@@ -9,7 +9,7 @@ import { setTimeout as delay } from 'node:timers/promises';
 import assert from 'node:assert/strict';
 
 const [resources, binary, data, destination] = process.argv.slice(2).map((path) => resolve(path));
-assert.ok(['issue-40', 'issue-41'].some((issue) => destination.startsWith(resolve('../../target/' + issue) + '\\')));
+assert.ok(['issue-40', 'issue-41', 'issue-42'].some((issue) => destination.startsWith(resolve('../../target/' + issue) + '\\')));
 await mkdir(destination);
 for (const name of ['dictionary', 'conjugation']) await cp(join(resources, name), join(destination, name), { recursive: true });
 await cp(binary, join(destination, 'Lexique.exe'));
@@ -53,6 +53,8 @@ async function check(page) {
     return results;
   });
   assert.deepEqual(results.sommes.tables.map((table) => table.lemma), ['sommer', 'être']);
+  assert.deepEqual(results.sommes.tables[1].meanings.senses[0].glosses, ['be']);
+  assert.deepEqual(results['j’ai abélisé'].tables[0].meanings, { status: 'unavailable', senses: [] });
   assert.equal(results.suis.tables.flatMap((table) => table.cells.filter((cell) => cell.form === 'suis')).length, 4);
   const payer = results.paie.tables[0];
   assert.deepEqual(payer.cells.filter((cell) => cell.tense === 'P' && cell.person === '1' && cell.number === 's').map((cell) => cell.form), ['paie', 'paye']);
@@ -61,10 +63,13 @@ async function check(page) {
   await page.getByRole('button', { name: '动词变位', exact: true }).click();
   await page.getByLabel('法语动词或简单变位词形').fill('suis'); await page.getByRole('button', { name: '查询变位', exact: true }).click();
   await expect(page.getByRole('button', { name: /^suivre/ })).toContainText('匹配单元格: 3');
+  await expect(page.getByRole('button', { name: /^suivre/ })).toContainText('act on, act upon, follow, observe');
   await page.getByRole('button', { name: /^suivre/ }).click();
+  await expect(page.locator('.conjugation-table .conjugation-meaning')).toHaveText('act on, act upon, follow, observe');
   await expect(page.locator('.conjugation-block')).toHaveCount(23);
   await expect(page.locator('.conjugation-cell[data-matched=true]')).toHaveCount(3);
   await page.screenshot({ path: join(destination, 'conjugation.png'), fullPage: true });
+  await page.screenshot({ path: join(destination, 'meanings.png') });
   for (const [query, count] of [['aie aimé', 2], ['je suis allée', 1]]) {
     await page.getByLabel('法语动词或简单变位词形').fill(query);
     await page.getByRole('button', { name: '查询变位', exact: true }).click();
@@ -93,6 +98,9 @@ async function check(page) {
   await page.getByRole('button', { name: '查询变位', exact: true }).click();
   for (const code of ['PC', 'J', 'YP']) await expect(page.locator(`[data-tense=${code}]`)).toContainText('不适用（已验证）');
   await page.screenshot({ path: join(destination, 'ordinary.png'), fullPage: true });
+  await page.getByLabel('法语动词或简单变位词形').fill('abstenir');
+  await page.getByRole('button', { name: '查询变位', exact: true }).click();
+  await expect(page.locator('.conjugation-meaning')).toHaveText("s'abstenir · abstain");
   await page.getByLabel('法语动词或简单变位词形').fill('suis');
   await page.getByRole('button', { name: '查询变位', exact: true }).click();
   await failures(page);

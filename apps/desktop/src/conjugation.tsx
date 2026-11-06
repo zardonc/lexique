@@ -10,6 +10,15 @@ import { ConjugationBlocks } from './conjugation-table';
 import { conjugationMessages, conjugationUse } from './conjugation-content';
 import type { ConjugationText } from './conjugation-content';
 
+function Meanings({ table, text }: { readonly table: ConjugationTable; readonly text: ConjugationText }) {
+  return <span className="conjugation-meaning">{table.meanings.status === 'unavailable' ? text.meaning
+    : table.meanings.senses.map((sense, index) => <span key={`${sense.source_entry}/${sense.source_sense}`}>
+      {index > 0 && '; '}{sense.use === 'pronominal' && <small lang="fr">{sense.headword} · </small>}
+      {sense.labels.length > 0 && <small>{sense.labels.join(', ')} · </small>}
+      <span lang="en">{sense.glosses.join(', ')}</span>
+    </span>)}</span>;
+}
+
 function VerbMetadata({ table, text }: { readonly table: ConjugationTable; readonly text: ConjugationText }) {
   const verb = table.verb;
   const group = verb.group === 3 ? `3 · ${text.irregular}` : `${verb.group} · -${verb.group === 1 ? 'er' : 'ir'}`;
@@ -17,7 +26,7 @@ function VerbMetadata({ table, text }: { readonly table: ConjugationTable; reado
     <p>{text.usage}: {verb.usage_labels.map((use) => conjugationUse(text, use)).join(' · ') || text.unconfirmed}</p>
     <p>{text.auxiliary}: {verb.auxiliaries.map((auxiliary) => `${auxiliary.lemma} (${conjugationUse(text, auxiliary.use)})`).join(' · ')}
       {verb.auxiliary_status !== 'supported' && ` · ${verb.auxiliary_status === 'not_applicable' ? text.notApplicable : text.unconfirmed}`}</p>
-    <p>{text.meaning}</p>{verb.ordinary_status === 'not_applicable' && <p>{text.rawOnly}</p>}</>;
+    <p><Meanings table={table} text={text} /></p>{verb.ordinary_status === 'not_applicable' && <p>{text.rawOnly}</p>}</>;
 }
 
 function Results({ result, selected, onSelect, text }: {
@@ -31,15 +40,16 @@ function Results({ result, selected, onSelect, text }: {
       <button key={candidate.lemma} type="button" aria-pressed={candidate.lemma === selected} onClick={() => onSelect(candidate.lemma)}>
         <strong lang="fr">{candidate.lemma}</strong> · {candidate.verb.usage_labels.map((use) => conjugationUse(text, use)).join(' · ') || text.unconfirmed}
         {` · ${text.matches}: ${matchingCells(candidate, result.query)}`}
+        <br /><Meanings table={candidate} text={text} />
       </button>)}</div>}
     {tables.length > 1 && !table && <p>{text.choose}</p>}
-    {tables.length > 1 && !table && <p>{text.meaning}</p>}
     {table && <article className="conjugation-table"><h3 lang="fr">{table.lemma}</h3><VerbMetadata table={table} text={text} />
       <ConjugationBlocks table={table} query={result.query} text={text} />
       <details><summary>{text.source}</summary><pre>{JSON.stringify(table, null, 2)}</pre></details></article>}
     <footer className="dictionary-source"><p>{text.sourceOnly}</p>
       <p>Lefff © Benoît Sagot · LGPL-LR · <a href="https://pauillac.inria.fr/~sagot/index.html#lefff">Lefff 3.4</a></p>
-      <p>Grammalecte © Olivier R. · GPL-3.0 · <a href="https://grammalecte.net/">Grammalecte 2.3.0</a></p></footer></>;
+      <p>Grammalecte © Olivier R. · GPL-3.0 · <a href="https://grammalecte.net/">Grammalecte 2.3.0</a></p>
+      <p>FreeDict © Horst Eyermann, Michael Bunk, John Darrington, FreeDict · GPL-2.0-or-later · <a href="https://freedict.org/">fra-eng 0.4.1</a></p></footer></>;
 }
 
 export function ConjugationPanel({ runtime, locale }: { readonly runtime: RuntimeAdapter; readonly locale: Locale }) {

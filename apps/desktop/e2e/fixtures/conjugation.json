@@ -536,7 +536,35 @@
             "number": "s",
             "gender": null
           }
-        ]
+        ],
+        "meanings": {
+          "status": "available",
+          "senses": [
+            {
+              "source_entry": 7492,
+              "source_sense": 1,
+              "headword": "sommer",
+              "use": "ordinary",
+              "labels": [],
+              "glosses": [
+                "admonish",
+                "scold"
+              ]
+            },
+            {
+              "source_entry": 7492,
+              "source_sense": 2,
+              "headword": "sommer",
+              "use": "ordinary",
+              "labels": [],
+              "glosses": [
+                "command",
+                "order",
+                "tell"
+              ]
+            }
+          ]
+        }
       },
       {
         "lemma": "être",
@@ -1052,7 +1080,22 @@
             "number": "s",
             "gender": null
           }
-        ]
+        ],
+        "meanings": {
+          "status": "available",
+          "senses": [
+            {
+              "source_entry": 8471,
+              "source_sense": 1,
+              "headword": "être",
+              "use": "ordinary",
+              "labels": [],
+              "glosses": [
+                "be"
+              ]
+            }
+          ]
+        }
       }
     ]
   },
@@ -1674,7 +1717,25 @@
             "number": "s",
             "gender": null
           }
-        ]
+        ],
+        "meanings": {
+          "status": "available",
+          "senses": [
+            {
+              "source_entry": 7651,
+              "source_sense": 1,
+              "headword": "suivre",
+              "use": "ordinary",
+              "labels": [],
+              "glosses": [
+                "act on",
+                "act upon",
+                "follow",
+                "observe"
+              ]
+            }
+          ]
+        }
       },
       {
         "lemma": "être",
@@ -2190,7 +2251,22 @@
             "number": "s",
             "gender": null
           }
-        ]
+        ],
+        "meanings": {
+          "status": "available",
+          "senses": [
+            {
+              "source_entry": 8471,
+              "source_sense": 1,
+              "headword": "être",
+              "use": "ordinary",
+              "labels": [],
+              "glosses": [
+                "be"
+              ]
+            }
+          ]
+        }
       }
     ]
   },
@@ -2943,7 +3019,22 @@
             "number": "s",
             "gender": null
           }
-        ]
+        ],
+        "meanings": {
+          "status": "available",
+          "senses": [
+            {
+              "source_entry": 5932,
+              "source_sense": 1,
+              "headword": "payer",
+              "use": "ordinary",
+              "labels": [],
+              "glosses": [
+                "pay"
+              ]
+            }
+          ]
+        }
       }
     ]
   },
@@ -3066,7 +3157,11 @@
             "number": null,
             "gender": null
           }
-        ]
+        ],
+        "meanings": {
+          "status": "unavailable",
+          "senses": []
+        }
       }
     ]
   },
@@ -3602,7 +3697,22 @@
             "number": "s",
             "gender": null
           }
-        ]
+        ],
+        "meanings": {
+          "status": "available",
+          "senses": [
+            {
+              "source_entry": 7142,
+              "source_sense": 1,
+              "headword": "s'enfuir",
+              "use": "pronominal",
+              "labels": [],
+              "glosses": [
+                "abscond"
+              ]
+            }
+          ]
+        }
       }
     ]
   },
@@ -3642,7 +3752,11 @@
             "number": null,
             "gender": null
           }
-        ]
+        ],
+        "meanings": {
+          "status": "unavailable",
+          "senses": []
+        }
       }
     ]
   }

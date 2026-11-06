@@ -30,6 +30,7 @@ test('ordinary compounds expose every interpretation and complete agreement alte
     await input.fill(query); await input.press('Enter');
     await expect(page.locator('.conjugation-expression[data-matched=true]')).toHaveText([query]);
     await expect(page.locator('[data-tense=PC] .conjugation-cell').first()).not.toContainText('未确认');
+    if (query === 'j’ai abélisé') await expect(page.locator('.conjugation-meaning')).toHaveText('英语释义暂缺');
   }
   await input.fill('gésir'); await input.press('Enter');
   for (const code of ['PC', 'J', 'YP']) await expect(page.locator(`[data-tense=${code}]`)).toContainText('不适用（已验证）');
@@ -69,6 +70,8 @@ test('simple lookup keeps all candidates, cells and spelling alternatives access
   await expect(choices.getByRole('button')).toHaveText([/être/, /sommer/]);
   await expect(choices.getByRole('button', { name: /^être/ })).toContainText('matching cells: 1');
   await expect(choices.getByRole('button', { name: /^sommer/ })).toContainText('matching cells: 2');
+  await expect(choices.getByRole('button', { name: /^être/ })).toContainText('be');
+  await expect(choices.getByRole('button', { name: /^sommer/ })).toContainText('admonish, scold');
   await expect(page.locator('.conjugation-table')).toHaveCount(0);
   await choices.getByRole('button', { name: /^sommer/ }).click();
   await expect(page.locator('.conjugation-block')).toHaveCount(23);
@@ -81,8 +84,9 @@ test('simple lookup keeps all candidates, cells and spelling alternatives access
   ]);
   await expect(page.locator('.conjugation-block[data-priority=true]')).toHaveCount(7);
   await expect(page.locator('.conjugation-cell[data-matched=true]')).toHaveCount(2);
-  await expect(page.getByText('English meaning unavailable', { exact: true })).toBeVisible();
+  await expect(page.locator('.conjugation-table')).toContainText('admonish, scold');
   await choices.getByRole('button', { name: /^être/ }).click();
+  await expect(page.locator('.conjugation-table .conjugation-meaning')).toHaveText('be');
   await expect(page.locator('.conjugation-cell[data-matched=true]')).toHaveCount(1);
   await input.fill('suis'); await search.click();
   await expect(choices.getByRole('button', { name: /^suivre/ })).toContainText('matching cells: 3');

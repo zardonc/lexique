@@ -91,3 +91,5 @@ Windows 缓存以能力目录句柄及 nofollow 打开目录／文件，写入�
 依据：[Tauri Vite 配置](https://v2.tauri.app/start/frontend/vite/)、[命令调用](https://v2.tauri.app/develop/calling-rust/)、[权限能力](https://v2.tauri.app/security/capabilities/)。
 
 2026-11-06，#41 将变位资源升级为格式 3，单独准备到 `target/desktop-conjugation-v3/`，保留旧生成物。构建器物化已准入的普通复合、分词和副动词表达，附带显式主语表达与用法；原始 Lefff 行不变。原生查询先以完整词形或去除已识别主语后的完整表达查索引，再验证原输入属于该格的表达列表，不回退到单独成分。仍使用固定摘要与只读快照，资源上限按实测扩为 128 MiB；Zod 校验新增区块和表达字段。固定 Lefff 句法的最新正面普通用法提供准入、助动词及形态可用性；较旧正面用法仅补充新版未列的普通用法。Grammalecte 补充词形，RosaeNLG 数据约束 h/y 省音，有引用的罕见／历史纠正显式标注。原始源、独立许可及四份 MIT 转换器随资源保存；过期转换器或损坏输入使准备失败并保留原物。全部已准入普通动词的 23 区块报告已无缺失／未确认项，学习库和原生接口边界不变；来源政策、明确不可用项及 CLI 成本限制见 [#41 证据](evidence/issue-41/README.md)。
+
+2026-11-06，#42 在格式 4 的 `verbs.meanings` 中保存独立英文义项，固定 FreeDict fra-eng 0.4.1 源归档、官方摘要、GPL-2.0-or-later 及署名随资源保存。只准入明确动词词性和翻译引用，精确原形／显式代词前缀映射保留源词头及词条／义项序号，不覆盖 Lefff 元数据。原生既有查找返回同一字段，Zod 校验状态和义项；缺释义不影响变位表。构建改用 `target/desktop-conjugation-v4/` 并保留旧版生成物，用户库与 IPC 命令权限不变。详见 [#42 证据](evidence/issue-42/README.md)。

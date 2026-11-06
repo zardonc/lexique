@@ -35,6 +35,52 @@ class ConjugationCliTests(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stderr)
         return json.loads(result.stdout)
 
+    def test_english_meanings_preserve_source_senses_and_missing_tables(self):
+        aimer = self.read("table", "aimer")["tables"][0]
+        self.assertEqual(aimer["meanings"]["status"], "available")
+        self.assertEqual([s["glosses"] for s in aimer["meanings"]["senses"]], [["love"], ["appreciate", "like"]])
+        candidates = self.read("query", "sommes")["tables"]
+        self.assertEqual([t["lemma"] for t in candidates], ["sommer", "être"])
+        self.assertEqual(candidates[1]["meanings"]["senses"][0]["glosses"], ["be"])
+        missing = self.read("table", "abéliser")["tables"][0]
+        self.assertEqual(missing["meanings"], {"status": "unavailable", "senses": []})
+        self.assertEqual(len(missing["verb"]["blocks"]), 23)
+        abstain = self.read("table", "abstenir")["tables"][0]["meanings"]["senses"]
+        self.assertEqual(abstain[0]["headword"], "s'abstenir")
+        self.assertTrue(all(s["use"] == "pronominal" for s in abstain))
+        self.assertEqual(abstain[0]["glosses"], ["abstain"])
+        self.assertEqual(self.read("table", "avenir")["tables"][0]["meanings"]["status"], "unavailable")
+        retain = self.read("table", "retenir")["tables"][0]["meanings"]["senses"]
+        self.assertTrue(any("keep" in s["glosses"] for s in retain))
+        self.assertFalse(any("thunder" in s["glosses"] for s in retain))
+
+    def test_english_meaning_inputs_and_tampered_payloads_fail_visibly(self):
+        source = Path(self.temporary.name) / "english-source"
+        shutil.copytree(self.output / "freedict-fra-eng-0.4.1", source)
+        for name in ("freedict-fra-eng-0.4.1.src.tar.xz", "COPYING", "provenance.json"):
+            path = source / name
+            original = path.read_bytes()
+            path.write_bytes(b"corrupt")
+            output = Path(self.temporary.name) / "bad-english"
+            result = run_cli("build", output, "--meanings-source", source)
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("Conjugation resource error:", result.stderr)
+            self.assertFalse(output.exists())
+            path.write_bytes(original)
+        altered = Path(self.temporary.name) / "altered-english"
+        shutil.copytree(self.output, altered)
+        with sqlite3.connect(altered / "conjugation.sqlite3") as connection:
+            connection.execute("UPDATE verbs SET meanings = ? WHERE lemma = ?",
+                               (json.dumps({"status": "available", "senses": []}), "aimer"))
+        connection.close()
+        result = run_cli("table", altered / "conjugation.sqlite3", "aimer")
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("English meanings differ", result.stderr)
+        self.assertEqual(self.read("table", "falloir")["tables"][0]["meanings"]["status"], "unavailable")
+        coverage = json.loads((self.output / "report.json").read_text(encoding="utf-8"))["english_coverage"]
+        self.assertEqual(coverage["available"] + len(coverage["unavailable"]), 7826)
+        self.assertIn("avenir", coverage["unavailable"])
+
     def test_sommes_preserves_both_lemmas_and_all_slots(self):
         result = self.read("query", "sommes")
         self.assertEqual([(r["lemma"], r["tense"], r["person"], r["number"])
@@ -256,6 +302,7 @@ class ConjugationCliTests(unittest.TestCase):
             path = directory / "resource.sqlite3"
             shutil.copytree(self.output / "grammalecte-2.3.0", directory / "grammalecte-2.3.0")
             shutil.copytree(self.output / "lefff-syntax", directory / "lefff-syntax")
+            shutil.copytree(self.output / "freedict-fra-eng-0.4.1", directory / "freedict-fra-eng-0.4.1")
             malformed = self.read("table", "aimer")["tables"][0]["verb"]
             malformed["auxiliaries"] = [{"lemma": "être"}]
             for statement, parameters in [
@@ -362,6 +409,9 @@ class ConjugationCliTests(unittest.TestCase):
                                  (VERB_RESOURCE / name).read_bytes())
             for path in (CLI.parent.parent / "resources/lefff-syntax").iterdir():
                 self.assertEqual((output / "lefff-syntax" / path.name).read_bytes(), path.read_bytes())
+            for path in (CLI.parent.parent / "resources/freedict-fra-eng-0.4.1").iterdir():
+                self.assertEqual((output / "freedict-fra-eng-0.4.1" / path.name).read_bytes(), path.read_bytes())
+            self.assertEqual((output / "conjugation_meanings.py").read_bytes(), CLI.with_name("conjugation_meanings.py").read_bytes())
 
 
 if __name__ == "__main__":

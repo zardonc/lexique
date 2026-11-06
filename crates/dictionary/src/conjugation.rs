@@ -16,6 +16,7 @@ pub struct Lookup {
 pub struct Table {
     pub lemma: String,
     pub verb: serde_json::Value,
+    pub meanings: serde_json::Value,
     pub cells: Vec<Cell>,
 }
 
@@ -44,7 +45,7 @@ pub fn lookup(path: &Path, key: &str, expected_sha256: &str) -> Result<Lookup, D
     let base = query_base(key);
     let mut statement = connection
         .prepare(
-            "SELECT DISTINCT s.lemma, v.information FROM slots s JOIN verbs v ON v.lemma = s.lemma
+            "SELECT DISTINCT s.lemma, v.information, v.meanings FROM slots s JOIN verbs v ON v.lemma = s.lemma
          WHERE s.form IN (?1, ?2) COLLATE BINARY ORDER BY s.lemma COLLATE BINARY",
         )
         .map_err(|error| {
@@ -56,7 +57,11 @@ pub fn lookup(path: &Path, key: &str, expected_sha256: &str) -> Result<Lookup, D
         })?;
     let rows = statement
         .query_map([key, base], |row| {
-            Ok((row.get::<_, String>(0)?, row.get::<_, String>(1)?))
+            Ok((
+                row.get::<_, String>(0)?,
+                row.get::<_, String>(1)?,
+                row.get::<_, String>(2)?,
+            ))
         })
         .map_err(|error| {
             failure(
@@ -67,7 +72,7 @@ pub fn lookup(path: &Path, key: &str, expected_sha256: &str) -> Result<Lookup, D
         })?;
     let mut tables = Vec::new();
     for row in rows {
-        let (lemma, metadata) =
+        let (lemma, metadata, meanings) =
             row.map_err(|error| failure("corrupt", "Could not read conjugation metadata", error))?;
         let cells = read_cells(&connection, &lemma)?;
         if !cells.iter().any(|cell| {
@@ -80,6 +85,8 @@ pub fn lookup(path: &Path, key: &str, expected_sha256: &str) -> Result<Lookup, D
             cells,
             verb: serde_json::from_str(&metadata)
                 .map_err(|error| failure("corrupt", "Invalid conjugation metadata", error))?,
+            meanings: serde_json::from_str(&meanings)
+                .map_err(|error| failure("corrupt", "Invalid English meanings", error))?,
         });
     }
     Ok(Lookup {

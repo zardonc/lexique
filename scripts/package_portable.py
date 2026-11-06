@@ -47,7 +47,7 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
     dictionary = release / "dictionary/dictionary.sqlite3"
     if hashlib.sha256(dictionary.read_bytes()).hexdigest() != report["sqlite_sha256"]:
         raise ValueError("Release dictionary does not match the prepared resource")
-    conjugation_report = json.loads((root / "target/desktop-conjugation-v3/report.json").read_text())
+    conjugation_report = json.loads((root / "target/desktop-conjugation-v4/report.json").read_text())
     conjugation = release / "conjugation"
     if hashlib.sha256((conjugation / "conjugation.sqlite3").read_bytes()).hexdigest() != conjugation_report["sqlite_sha256"]:
         raise ValueError("Release conjugation does not match the prepared resource")
@@ -84,7 +84,7 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
         "search, sorting and restart recovery. Saved words can be added to two review cards;\n"
         "review scoring and card progress survive restart. A full dictionary is not included.\n"
         "Conjugation supports exact ordinary expressions and 23 reference blocks;\n"
-        "pronominal expressions, English meanings, colors and conjugation playback remain unavailable.\n"
+        "pronominal expressions, colors and conjugation playback remain unavailable.\n"
         + ("Offline speech is included for development testing. See speech/docs for its licenses.\n"
            "The voice is machine-generated; model use restrictions apply.\n"
            if all(speech_inputs) else "TTS is not included.\n") +
@@ -94,11 +94,14 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
         "GPL-3.0-only (conjugation/grammalecte-2.3.0/LICENSE-GPL3).\n"
         "Lefff syntax (LGPL-LR) and RosaeNLG elision data (CC BY-SA 3.0) are in\n"
         "conjugation/lefff-syntax/ with attribution and separate reference-code licenses.\n"
+        "English verb meanings: FreeDict fra-eng 0.4.1, GPL-2.0-or-later; complete source and\n"
+        "notices in conjugation/freedict-fra-eng-0.4.1/. Missing meanings leave tables usable.\n"
         "Raw sources, provenance, corrections, decoder and MIT converters accompany the resource.\n\n"
         "Rebuild conjugation with Python 3.12+ (standard library only): in a new workspace,\n"
         "copy conjugation/conjugation_*.py into scripts/, LICENSE into the workspace root,\n"
         "and conjugation/grammalecte-2.3.0/ into resources/grammalecte-2.3.0/. Copy\n"
         "conjugation/lefff-syntax/ into resources/lefff-syntax/. Copy\n"
+        "conjugation/freedict-fra-eng-0.4.1/ into resources/freedict-fra-eng-0.4.1/. Copy\n"
         "conjugation/lefff-3.4.mlex.gz, provenance.json, README.md and LICENSE-LGPLLR into\n"
         "resources/lefff-3.4/. Run python -X utf8 scripts/conjugation_sample.py build target/rebuilt.\n",
         encoding="utf-8",

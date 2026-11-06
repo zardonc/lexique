@@ -15,6 +15,7 @@ import sqlite3
 from conjugation_generation import generate, query_base
 from conjugation_metadata import RESOURCE as VERB_RESOURCE, load_metadata, metadata_report, verb_metadata
 from conjugation_syntax import RESOURCE as SYNTAX_RESOURCE
+from conjugation_meanings import RESOURCE as MEANING_RESOURCE, load_meanings, verb_meanings
 
 RESOURCE = Path(__file__).resolve().parents[1] / "resources/lefff-3.4"
 PROVENANCE = json.loads((RESOURCE / "provenance.json").read_text(encoding="utf-8"))
@@ -58,22 +59,24 @@ def source_rows(source):
     return rows, len(raw)
 
 
-def build(output, source, metadata_source=VERB_RESOURCE, syntax_source=SYNTAX_RESOURCE):
+def build(output, source, metadata_source=VERB_RESOURCE, syntax_source=SYNTAX_RESOURCE, meanings_source=MEANING_RESOURCE):
+    english, english_provenance = load_meanings(meanings_source)
     rows, source_bytes = source_rows(source)
     linguistic_data, corrections, supplemental_provenance = load_metadata(metadata_source, syntax_source)
     verbs = {lemma: verb_metadata(lemma, linguistic_data, corrections) for lemma in sorted({r[2] for r in rows})}
     source_slots = len(rows)
     rows, block_coverage = generate(rows, verbs, linguistic_data)
+    meanings = {lemma: verb_meanings(lemma, verb, english) for lemma, verb in verbs.items()}
     output = Path(output)
     output.mkdir(parents=True, exist_ok=False)
     database = output / "conjugation.sqlite3"
     with closing(sqlite3.connect(database)) as connection:
         connection.executescript(f"""
             PRAGMA application_id = {APPLICATION_ID};
-            PRAGMA user_version = 3;
+            PRAGMA user_version = 4;
             CREATE TABLE metadata (provenance TEXT NOT NULL, slots INTEGER NOT NULL,
-                                   supplement TEXT NOT NULL, verbs INTEGER NOT NULL);
-            CREATE TABLE verbs (lemma TEXT PRIMARY KEY, information TEXT NOT NULL);
+                                   supplement TEXT NOT NULL, verbs INTEGER NOT NULL, english TEXT NOT NULL);
+            CREATE TABLE verbs (lemma TEXT PRIMARY KEY, information TEXT NOT NULL, meanings TEXT NOT NULL);
             CREATE TABLE slots (
                 source_line INTEGER NOT NULL, form TEXT NOT NULL COLLATE BINARY,
                 lemma TEXT NOT NULL COLLATE BINARY, raw_tag TEXT NOT NULL,
@@ -81,11 +84,11 @@ def build(output, source, metadata_source=VERB_RESOURCE, syntax_source=SYNTAX_RE
             );
         """)
         connection.executemany("INSERT INTO slots VALUES (?,?,?,?,?,?,?,?,?)", rows)
-        connection.executemany("INSERT INTO verbs VALUES (?,?)",
-                               [(lemma, json.dumps(info, ensure_ascii=False)) for lemma, info in verbs.items()])
-        connection.execute("INSERT INTO metadata VALUES (?,?,?,?)",
+        connection.executemany("INSERT INTO verbs VALUES (?,?,?)",
+                               [(lemma, json.dumps(info, ensure_ascii=False), json.dumps(meanings[lemma], ensure_ascii=False)) for lemma, info in verbs.items()])
+        connection.execute("INSERT INTO metadata VALUES (?,?,?,?,?)",
                            (json.dumps(PROVENANCE, ensure_ascii=False), len(rows),
-                            json.dumps(supplemental_provenance, ensure_ascii=False), len(verbs)))
+                            json.dumps(supplemental_provenance, ensure_ascii=False), len(verbs), json.dumps(english_provenance, ensure_ascii=False)))
         connection.commit()
         table_bytes = database.stat().st_size
         connection.execute("CREATE INDEX slots_lemma ON slots(lemma)")
@@ -105,7 +108,11 @@ def build(output, source, metadata_source=VERB_RESOURCE, syntax_source=SYNTAX_RE
     syntax.mkdir()
     for name in (*supplemental_provenance["lefff_syntax"]["files"], "provenance.json"):
         shutil.copyfile(Path(syntax_source) / name, syntax / name)
-    for name in ("conjugation_sample.py", "conjugation_metadata.py", "conjugation_generation.py", "conjugation_syntax.py"):
+    english_source = output / "freedict-fra-eng-0.4.1"
+    english_source.mkdir()
+    for name in (*english_provenance["files"], "provenance.json"):
+        shutil.copyfile(Path(meanings_source) / name, english_source / name)
+    for name in ("conjugation_sample.py", "conjugation_metadata.py", "conjugation_generation.py", "conjugation_syntax.py", "conjugation_meanings.py"):
         shutil.copyfile(Path(__file__).with_name(name), output / name)
     shutil.copyfile(RESOURCE.parents[1] / "LICENSE", output / "LICENSE-MIT")
     report = {
@@ -125,6 +132,10 @@ def build(output, source, metadata_source=VERB_RESOURCE, syntax_source=SYNTAX_RE
         "metadata_source_bytes": supplemental_provenance["grammalecte"]["source_bytes"],
         "metadata_gzip_bytes": (Path(metadata_source) / "conj_data.json.gz").stat().st_size,
         "metadata_coverage": metadata_report(verbs),
+        "english_provenance": english_provenance,
+        "english_coverage": {"verbs": len(verbs), "available": sum(m["status"] == "available" for m in meanings.values()),
+                             "unavailable": [lemma for lemma, m in meanings.items() if m["status"] == "unavailable"],
+                             "senses": sum(len(m["senses"]) for m in meanings.values())},
     }
     (output / "report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n",
                                         encoding="utf-8")
@@ -143,7 +154,7 @@ def prepare(output):
     for name in (SOURCE.name, "LICENSE-LGPLLR", "provenance.json", "README.md"):
         if (output / name).read_bytes() != (RESOURCE / name).read_bytes():
             raise ValueError(f"Generated conjugation resource differs from source: {name}")
-    for name in ("conjugation_sample.py", "conjugation_metadata.py", "conjugation_generation.py", "conjugation_syntax.py"):
+    for name in ("conjugation_sample.py", "conjugation_metadata.py", "conjugation_generation.py", "conjugation_syntax.py", "conjugation_meanings.py"):
         if (output / name).read_bytes() != Path(__file__).with_name(name).read_bytes():
             raise ValueError(f"Generated conjugation converter differs from source; rebuild in a new directory: {name}")
     return report
@@ -155,11 +166,11 @@ def read_resource(database, query=None, lemma=None):
         connection.row_factory = sqlite3.Row
         connection.execute("PRAGMA trusted_schema = OFF")
         if (connection.execute("PRAGMA application_id").fetchone()[0] != APPLICATION_ID
-                or connection.execute("PRAGMA user_version").fetchone()[0] != 3):
+                or connection.execute("PRAGMA user_version").fetchone()[0] != 4):
             raise ValueError("Unsupported conjugation resource format")
         if [r[0] for r in connection.execute("PRAGMA integrity_check")] != ["ok"]:
             raise ValueError("Conjugation resource failed integrity check")
-        metadata = connection.execute("SELECT provenance, slots, supplement, verbs FROM metadata").fetchall()
+        metadata = connection.execute("SELECT provenance, slots, supplement, verbs, english FROM metadata").fetchall()
         if (len(metadata) != 1 or json.loads(metadata[0][0]) != PROVENANCE
                 or connection.execute("SELECT count(*) FROM slots").fetchone()[0] != metadata[0][1]
                 or connection.execute("SELECT count(*) FROM verbs").fetchone()[0] != metadata[0][3]
@@ -170,6 +181,15 @@ def read_resource(database, query=None, lemma=None):
             Path(database).resolve().parent / "grammalecte-2.3.0", Path(database).resolve().parent / "lefff-syntax")
         if json.loads(metadata[0][2]) != supplemental_provenance:
             raise ValueError("Conjugation supplemental provenance mismatch")
+        english, english_provenance = load_meanings(Path(database).resolve().parent / "freedict-fra-eng-0.4.1")
+        if json.loads(metadata[0][4]) != english_provenance:
+            raise ValueError("Conjugation English meaning provenance mismatch")
+        for headword, information, meaning in connection.execute("SELECT lemma, information, meanings FROM verbs"):
+            info = json.loads(information)
+            if not isinstance(info, dict) or info.get("ordinary_status") not in ("supported", "not_applicable", "unconfirmed"):
+                raise ValueError("Invalid conjugation verb metadata")
+            if json.loads(meaning) != verb_meanings(headword, info, english):
+                raise ValueError("Conjugation English meanings differ from pinned source")
         matches = [] if query is None else [dict(r) for r in connection.execute(
             f"SELECT {COLUMNS} FROM slots WHERE form IN (?, ?) ORDER BY lemma, source_line, tense, person",
             (query, query_base(query)))]
@@ -185,13 +205,13 @@ def read_resource(database, query=None, lemma=None):
             for cell in cells:
                 cell["expressions"] = json.loads(cell["expressions"])
                 cell["matched"] = query is not None and (cell["form"] == query or query in cell["expressions"])
-            information = connection.execute("SELECT information FROM verbs WHERE lemma = ?", (headword,)).fetchone()
+            information = connection.execute("SELECT information, meanings FROM verbs WHERE lemma = ?", (headword,)).fetchone()
             verb = json.loads(information[0]) if information else None
             if information is not None and (not isinstance(verb, dict) or {k: v for k, v in verb.items() if k != "blocks"} != verb_metadata(headword, linguistic_data, corrections)):
                 raise ValueError("Conjugation verb metadata differs from pinned sources")
             table_status = "ordinary_active" if verb and verb["ordinary_status"] == "supported" else "source_only"
             tables.append({"lemma": headword, "status": table_status if cells else "not_found",
-                           "verb": verb, "cells": cells})
+                           "verb": verb, "meanings": json.loads(information[1]) if information else {"status": "unavailable", "senses": []}, "cells": cells})
         return {"status": "found" if matches or any(t["cells"] for t in tables) else "not_found",
                 "query": query, "matches": matches, "tables": tables,
                 "tense_labels": TENSES, "coverage": "ordinary/v1; see per-verb blocks and resource-wide block_coverage"}
@@ -205,6 +225,7 @@ def main():
     builder.add_argument("--source", type=Path, default=SOURCE)
     builder.add_argument("--metadata-source", type=Path, default=VERB_RESOURCE)
     builder.add_argument("--syntax-source", type=Path, default=SYNTAX_RESOURCE)
+    builder.add_argument("--meanings-source", type=Path, default=MEANING_RESOURCE)
     commands.add_parser("prepare").add_argument("output", type=Path)
     for command, argument in (("query", "form"), ("table", "lemma")):
         reader = commands.add_parser(command)
@@ -215,7 +236,7 @@ def main():
         if args.command == "prepare":
             result = prepare(args.output)
         elif args.command == "build":
-            result = build(args.output, args.source, args.metadata_source, args.syntax_source)
+            result = build(args.output, args.source, args.metadata_source, args.syntax_source, args.meanings_source)
         else:
             value = args.form if args.command == "query" else args.lemma
             if not value or any(ord(c) < 32 for c in value):
