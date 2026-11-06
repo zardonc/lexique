@@ -35,6 +35,18 @@ class ConjugationCliTests(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stderr)
         return json.loads(result.stdout)
 
+    def test_pronominal_lookup_keeps_a_distinct_identity_and_complete_simple_forms(self):
+        table = self.read("query", "se laver")["tables"]
+        self.assertEqual([t["lemma"] for t in table], ["se laver"])
+        pron = table[0]
+        self.assertEqual(pron["verb"]["pronominal"]["base"], "laver")
+        self.assertEqual(len(pron["verb"]["blocks"]), 23)
+        self.assertTrue(any("je me lave" in c["expressions"] for c in pron["cells"] if c["tense"] == "P"))
+        self.assertTrue(any(c["form"] == "lave-toi" for c in pron["cells"] if c["tense"] == "Y"))
+        self.assertTrue(any(c["form"] == "en se lavant" for c in pron["cells"] if c["tense"] == "GP"))
+        ordinary = self.read("query", "je lave")["tables"]
+        self.assertEqual([t["lemma"] for t in ordinary], ["laver"])
+
     def test_english_meanings_preserve_source_senses_and_missing_tables(self):
         aimer = self.read("table", "aimer")["tables"][0]
         self.assertEqual(aimer["meanings"]["status"], "available")
@@ -53,6 +65,59 @@ class ConjugationCliTests(unittest.TestCase):
         retain = self.read("table", "retenir")["tables"][0]["meanings"]["senses"]
         self.assertTrue(any("keep" in s["glosses"] for s in retain))
         self.assertFalse(any("thunder" in s["glosses"] for s in retain))
+
+    def test_pronominal_compounds_label_agreement_and_preserve_whole_expressions(self):
+        for query, lemma in (("elles se sont abstenues", "s’abstenir"), ("elles se sont lavées", "se laver"),
+                             ("elles se sont parlé", "se parler"), ("elle s’est arrogé", "s’arroger"),
+                             ("va-t’en", "s’en aller"), ("je m’en suis allé", "s’en aller")):
+            tables = self.read("query", query)["tables"]
+            self.assertEqual([t["lemma"] for t in tables], [lemma], query)
+            self.assertTrue(any(query in c["expressions"] for c in tables[0]["cells"]))
+        for lemma, agreement in (("s’abstenir", "subject"), ("se laver", "contextual"),
+                                 ("se parler", "invariable"), ("s’arroger", "contextual")):
+            table = self.read("table", lemma)["tables"][0]
+            self.assertEqual(table["verb"]["pronominal"]["agreement"], agreement)
+        for query in ("elles se sont abstenus", "elles se sont parlées", "je se lave", "elle se suis lavée",
+                      "se falloir", "se abéliser"):
+            self.assertEqual(self.read("query", query)["tables"], [], query)
+
+    def test_pronominal_source_restrictions_and_resource_wide_coverage(self):
+        for query, lemma in (("il s’agit", "s’agir"), ("on s’entraide", "s’entraider"),
+                             ("ils s’entraident", "s’entraider"), ("il s’est ensuivi", "s’ensuivre"),
+                             ("je me hais", "se haïr"), ("je m’habille", "s’habiller")):
+            self.assertEqual([t["lemma"] for t in self.read("query", query)["tables"]], [lemma], query)
+        for query in ("je m’agis", "je m’entraide", "je m’ensuis", "elle s’est abstenu", "s’en découdre"):
+            self.assertEqual(self.read("query", query)["tables"], [], query)
+        report = json.loads((self.output / "report.json").read_text(encoding="utf-8"))
+        coverage = report["pronominal_coverage"]
+        self.assertGreater(coverage["identities"], 2500)
+        self.assertEqual(coverage["base_lemmas"] + len(coverage["excluded"]), report["ordinary_lemmas"])
+        self.assertEqual(coverage["incomplete"], [])
+        for counts in coverage["blocks"].values():
+            self.assertEqual(sum(counts.values()), coverage["identities"])
+            self.assertEqual(counts.get("missing", 0) + counts.get("unconfirmed", 0), 0)
+
+    def test_indirect_reflexives_keep_preceding_direct_object_agreement_contextual(self):
+        for query, lemma in (("elles se sont dites", "se dire"), ("nous nous sommes écrites", "s’écrire")):
+            tables = self.read("query", query)["tables"]
+            self.assertEqual([t["lemma"] for t in tables], [lemma], query)
+            self.assertEqual(tables[0]["verb"]["pronominal"]["agreement"], "contextual")
+            self.assertTrue(any(query in c["expressions"] for c in tables[0]["cells"]))
+
+    def test_collective_on_agrees_without_licensing_plural_impersonal_or_il_forms(self):
+        for query in ("on s’est abstenus", "on s’est abstenues"):
+            self.assertEqual([t["lemma"] for t in self.read("query", query)["tables"]], ["s’abstenir"])
+        self.assertEqual([t["lemma"] for t in self.read("query", "il s’est agi")["tables"]], ["s’agir"])
+        for query in ("il s’est abstenues", "il s’est abstenus", "s’étant agie", "s’étant agis"):
+            self.assertEqual(self.read("query", query)["tables"], [], query)
+
+    def test_en_uses_keep_explicit_meanings_and_other_pronominal_uses_distinct(self):
+        for query in ("se vouloir", "se découdre"):
+            self.assertEqual([t["lemma"] for t in self.read("query", query)["tables"]], [query])
+        departure = self.read("table", "s’en aller")["tables"][0]
+        self.assertTrue(any("go away" in s["glosses"] for s in departure["meanings"]["senses"]))
+        self.assertTrue(all(s["headword"] == "s'en aller" for s in departure["meanings"]["senses"]))
+        self.assertEqual(self.read("query", "s’en découdre")["tables"], [])
 
     def test_english_meaning_inputs_and_tampered_payloads_fail_visibly(self):
         source = Path(self.temporary.name) / "english-source"
@@ -78,7 +143,7 @@ class ConjugationCliTests(unittest.TestCase):
         self.assertIn("English meanings differ", result.stderr)
         self.assertEqual(self.read("table", "falloir")["tables"][0]["meanings"]["status"], "unavailable")
         coverage = json.loads((self.output / "report.json").read_text(encoding="utf-8"))["english_coverage"]
-        self.assertEqual(coverage["available"] + len(coverage["unavailable"]), 7826)
+        self.assertEqual(coverage["available"] + len(coverage["unavailable"]), coverage["verbs"])
         self.assertIn("avenir", coverage["unavailable"])
 
     def test_sommes_preserves_both_lemmas_and_all_slots(self):
@@ -390,7 +455,8 @@ class ConjugationCliTests(unittest.TestCase):
     def test_size_report_accounts_for_both_indices(self):
         report = json.loads((self.output / "report.json").read_text(encoding="utf-8"))
         self.assertEqual(report["source_verb_rows"], 342771)
-        self.assertEqual(report["lemmas"], 7826)
+        self.assertEqual(report["ordinary_lemmas"], 7826)
+        self.assertEqual(report["lemmas"], 7826 + report["pronominal_coverage"]["identities"])
         self.assertEqual(report["database_bytes"], report["table_bytes"]
                          + report["lemma_index_bytes"] + report["reverse_index_bytes"])
         for name in ("LICENSE-LGPLLR", "provenance.json", "lefff-3.4.mlex.gz", "README.md"):
@@ -412,6 +478,7 @@ class ConjugationCliTests(unittest.TestCase):
             for path in (CLI.parent.parent / "resources/freedict-fra-eng-0.4.1").iterdir():
                 self.assertEqual((output / "freedict-fra-eng-0.4.1" / path.name).read_bytes(), path.read_bytes())
             self.assertEqual((output / "conjugation_meanings.py").read_bytes(), CLI.with_name("conjugation_meanings.py").read_bytes())
+            self.assertEqual((output / "conjugation_pronominal.py").read_bytes(), CLI.with_name("conjugation_pronominal.py").read_bytes())
 
 
 if __name__ == "__main__":

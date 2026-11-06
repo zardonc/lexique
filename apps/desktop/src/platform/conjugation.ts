@@ -13,6 +13,11 @@ const verbSchema = z.object({
   group_status: z.enum(['supported', 'unconfirmed']), auxiliary_status: status, ordinary_status: status,
   auxiliaries: z.array(z.object({ lemma: z.enum(['avoir', 'être']), use: z.string().min(1) }).strict().readonly()).readonly(),
   usage_labels: z.array(z.string()).readonly(), source: z.json().nullable(), correction: z.json().nullable(),
+  pronominal: z.object({
+    base: z.string().min(1), agreement: z.enum(['subject', 'contextual', 'invariable']),
+    persons: z.array(z.enum(['1s', '2s', '3s', '1p', '2p', '3p'])).min(1).readonly(),
+    with_en: z.boolean(), reciprocal: z.boolean(), source: z.json(),
+  }).strict().readonly().optional(),
 }).strict().readonly();
 const meaningsSchema = z.object({
   status: z.enum(['available', 'unavailable']), senses: z.array(z.object({

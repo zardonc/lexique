@@ -16,6 +16,7 @@ from conjugation_generation import generate, query_base
 from conjugation_metadata import RESOURCE as VERB_RESOURCE, load_metadata, metadata_report, verb_metadata
 from conjugation_syntax import RESOURCE as SYNTAX_RESOURCE
 from conjugation_meanings import RESOURCE as MEANING_RESOURCE, load_meanings, verb_meanings
+from conjugation_pronominal import generate_pronominal, pronominal_metadata
 
 RESOURCE = Path(__file__).resolve().parents[1] / "resources/lefff-3.4"
 PROVENANCE = json.loads((RESOURCE / "provenance.json").read_text(encoding="utf-8"))
@@ -66,6 +67,10 @@ def build(output, source, metadata_source=VERB_RESOURCE, syntax_source=SYNTAX_RE
     verbs = {lemma: verb_metadata(lemma, linguistic_data, corrections) for lemma in sorted({r[2] for r in rows})}
     source_slots = len(rows)
     rows, block_coverage = generate(rows, verbs, linguistic_data)
+    ordinary_verbs = dict(verbs)
+    pronominal_rows, pronominal_verbs, pronominal_coverage = generate_pronominal(rows, verbs, linguistic_data)
+    rows.extend(pronominal_rows)
+    verbs.update(pronominal_verbs)
     meanings = {lemma: verb_meanings(lemma, verb, english) for lemma, verb in verbs.items()}
     output = Path(output)
     output.mkdir(parents=True, exist_ok=False)
@@ -73,7 +78,7 @@ def build(output, source, metadata_source=VERB_RESOURCE, syntax_source=SYNTAX_RE
     with closing(sqlite3.connect(database)) as connection:
         connection.executescript(f"""
             PRAGMA application_id = {APPLICATION_ID};
-            PRAGMA user_version = 4;
+            PRAGMA user_version = 5;
             CREATE TABLE metadata (provenance TEXT NOT NULL, slots INTEGER NOT NULL,
                                    supplement TEXT NOT NULL, verbs INTEGER NOT NULL, english TEXT NOT NULL);
             CREATE TABLE verbs (lemma TEXT PRIMARY KEY, information TEXT NOT NULL, meanings TEXT NOT NULL);
@@ -112,14 +117,15 @@ def build(output, source, metadata_source=VERB_RESOURCE, syntax_source=SYNTAX_RE
     english_source.mkdir()
     for name in (*english_provenance["files"], "provenance.json"):
         shutil.copyfile(Path(meanings_source) / name, english_source / name)
-    for name in ("conjugation_sample.py", "conjugation_metadata.py", "conjugation_generation.py", "conjugation_syntax.py", "conjugation_meanings.py"):
+    for name in ("conjugation_sample.py", "conjugation_metadata.py", "conjugation_generation.py", "conjugation_syntax.py", "conjugation_meanings.py", "conjugation_pronominal.py"):
         shutil.copyfile(Path(__file__).with_name(name), output / name)
     shutil.copyfile(RESOURCE.parents[1] / "LICENSE", output / "LICENSE-MIT")
     report = {
         "sqlite_sha256": hashlib.sha256(database.read_bytes()).hexdigest(),
         "source_bytes": source_bytes, "source_gzip_bytes": Path(source).stat().st_size,
         "source_verb_rows": len({r[0] for r in rows}), "slots": len(rows), "source_slots": source_slots, "block_coverage": block_coverage,
-        "lemmas": len({r[2] for r in rows}), "forms": len({r[1] for r in rows}),
+        "lemmas": len({r[2] for r in rows}), "ordinary_lemmas": len(ordinary_verbs), "pronominal_coverage": pronominal_coverage,
+        "forms": len({r[1] for r in rows}),
         "table_bytes": table_bytes, "lemma_index_bytes": lemma_bytes,
         "reverse_index_bytes": reverse_bytes, "database_bytes": database.stat().st_size,
         "database_gzip_bytes": len(gzip.compress(database.read_bytes(), mtime=0)),
@@ -131,7 +137,7 @@ def build(output, source, metadata_source=VERB_RESOURCE, syntax_source=SYNTAX_RE
         "syntax_provenance": supplemental_provenance["lefff_syntax"],
         "metadata_source_bytes": supplemental_provenance["grammalecte"]["source_bytes"],
         "metadata_gzip_bytes": (Path(metadata_source) / "conj_data.json.gz").stat().st_size,
-        "metadata_coverage": metadata_report(verbs),
+        "metadata_coverage": metadata_report(ordinary_verbs),
         "english_provenance": english_provenance,
         "english_coverage": {"verbs": len(verbs), "available": sum(m["status"] == "available" for m in meanings.values()),
                              "unavailable": [lemma for lemma, m in meanings.items() if m["status"] == "unavailable"],
@@ -154,7 +160,7 @@ def prepare(output):
     for name in (SOURCE.name, "LICENSE-LGPLLR", "provenance.json", "README.md"):
         if (output / name).read_bytes() != (RESOURCE / name).read_bytes():
             raise ValueError(f"Generated conjugation resource differs from source: {name}")
-    for name in ("conjugation_sample.py", "conjugation_metadata.py", "conjugation_generation.py", "conjugation_syntax.py", "conjugation_meanings.py"):
+    for name in ("conjugation_sample.py", "conjugation_metadata.py", "conjugation_generation.py", "conjugation_syntax.py", "conjugation_meanings.py", "conjugation_pronominal.py"):
         if (output / name).read_bytes() != Path(__file__).with_name(name).read_bytes():
             raise ValueError(f"Generated conjugation converter differs from source; rebuild in a new directory: {name}")
     return report
@@ -166,7 +172,7 @@ def read_resource(database, query=None, lemma=None):
         connection.row_factory = sqlite3.Row
         connection.execute("PRAGMA trusted_schema = OFF")
         if (connection.execute("PRAGMA application_id").fetchone()[0] != APPLICATION_ID
-                or connection.execute("PRAGMA user_version").fetchone()[0] != 4):
+                or connection.execute("PRAGMA user_version").fetchone()[0] != 5):
             raise ValueError("Unsupported conjugation resource format")
         if [r[0] for r in connection.execute("PRAGMA integrity_check")] != ["ok"]:
             raise ValueError("Conjugation resource failed integrity check")
@@ -188,6 +194,10 @@ def read_resource(database, query=None, lemma=None):
             info = json.loads(information)
             if not isinstance(info, dict) or info.get("ordinary_status") not in ("supported", "not_applicable", "unconfirmed"):
                 raise ValueError("Invalid conjugation verb metadata")
+            if "pronominal" in info and (not isinstance(info["pronominal"], dict)
+                                        or not isinstance(info["pronominal"].get("base"), str)
+                                        or not isinstance(info["pronominal"].get("with_en"), bool)):
+                raise ValueError("Invalid pronominal metadata")
             if json.loads(meaning) != verb_meanings(headword, info, english):
                 raise ValueError("Conjugation English meanings differ from pinned source")
         matches = [] if query is None else [dict(r) for r in connection.execute(
@@ -207,9 +217,13 @@ def read_resource(database, query=None, lemma=None):
                 cell["matched"] = query is not None and (cell["form"] == query or query in cell["expressions"])
             information = connection.execute("SELECT information, meanings FROM verbs WHERE lemma = ?", (headword,)).fetchone()
             verb = json.loads(information[0]) if information else None
-            if information is not None and (not isinstance(verb, dict) or {k: v for k, v in verb.items() if k != "blocks"} != verb_metadata(headword, linguistic_data, corrections)):
+            base = verb.get("pronominal", {}).get("base", headword) if isinstance(verb, dict) else headword
+            expected = verb_metadata(base, linguistic_data, corrections)
+            if isinstance(verb, dict) and "pronominal" in verb:
+                expected = pronominal_metadata(base, expected, linguistic_data, verb["pronominal"]["with_en"])
+            if information is not None and (not isinstance(verb, dict) or {k: v for k, v in verb.items() if k != "blocks"} != expected):
                 raise ValueError("Conjugation verb metadata differs from pinned sources")
-            table_status = "ordinary_active" if verb and verb["ordinary_status"] == "supported" else "source_only"
+            table_status = "pronominal" if verb and "pronominal" in verb else "ordinary_active" if verb and verb["ordinary_status"] == "supported" else "source_only"
             tables.append({"lemma": headword, "status": table_status if cells else "not_found",
                            "verb": verb, "meanings": json.loads(information[1]) if information else {"status": "unavailable", "senses": []}, "cells": cells})
         return {"status": "found" if matches or any(t["cells"] for t in tables) else "not_found",

@@ -1,6 +1,53 @@
 import { expect, test } from '@playwright/test';
 import fixtures from './fixtures/conjugation.json' with { type: 'json' };
 import ordinary from './fixtures/conjugation-ordinary.json' with { type: 'json' };
+import pronominal from './fixtures/conjugation-pronominal.json' with { type: 'json' };
+
+test('pronominal expressions retain their identity, agreement labels and every alternative', async ({ page }) => {
+  await page.addInitScript((data) => {
+    Object.defineProperty(window, 'isTauri', { value: true });
+    Object.defineProperty(window, '__TAURI_INTERNALS__', { value: { invoke: async (command: string, args?: { key: string }) => {
+      if (command === 'runtime_status') return { version: '0.1.0', schemaVersion: 1, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } };
+      return command === 'conjugation_lookup' ? data[args?.key as keyof typeof data] ?? { query: args?.key, tables: [] } : null;
+    } } });
+  }, pronominal);
+  await page.goto('/'); await page.getByLabel('界面语言').selectOption('en');
+  await page.getByRole('button', { name: 'Conjugation', exact: true }).click();
+  const input = page.getByLabel('French verb or simple form');
+  await input.fill('se laver'); await input.press('Enter');
+  await expect(page.locator('.conjugation-table h3')).toHaveText('se laver');
+  await expect(page.locator('.conjugation-block')).toHaveCount(23);
+  await expect(page.locator('.conjugation-table')).toContainText('Context-dependent pronominal agreement');
+  await expect(page.locator('[data-tense=Y]')).toContainText('lave-toi');
+  await expect(page.locator('[data-tense=PC]')).toContainText('elle s’est lavée');
+  await expect(page.locator('[data-tense=PC]')).toContainText('elle s’est lavé');
+  await expect(page.locator('[data-tense=GP]')).toContainText('en se lavant');
+  await input.fill('elles se sont abstenues'); await input.press('Enter');
+  await expect(page.locator('.conjugation-table h3')).toHaveText('s’abstenir');
+  await expect(page.locator('.conjugation-expression[data-matched=true]')).toHaveText(['elles se sont abstenues']);
+  await expect(page.locator('.conjugation-table')).toContainText('Pronominal agreement with the subject');
+  await expect(page.locator('.conjugation-table .conjugation-meaning')).toContainText('abstain');
+  await expect(page.locator('[data-tense=PC]')).toContainText('vous vous êtes abstenue');
+  await expect(page.locator('[data-tense=PC]')).toContainText('vous vous êtes abstenues');
+  await input.fill('elles se sont parlé'); await input.press('Enter');
+  await expect(page.locator('.conjugation-table')).toContainText('Invariable pronominal participle');
+  await expect(page.locator('[data-tense=PC]')).not.toContainText('parlées');
+  await input.fill('va-t’en'); await input.press('Enter');
+  await expect(page.locator('.conjugation-table h3')).toHaveText('s’en aller');
+  await expect(page.locator('[data-tense=Y] .conjugation-expression[data-matched=true]')).toHaveText(['va-t’en']);
+  await input.fill('se laver'); await input.press('Enter');
+  await page.getByLabel('Interface language').selectOption('fr');
+  await expect(page.locator('.conjugation-table')).toContainText('Accord pronominal selon le contexte');
+  for (const theme of ['white', 'sepia', 'dark']) {
+    await page.getByLabel('Thème d’affichage').selectOption(theme);
+    await expect(page.locator('.app')).toHaveAttribute('data-theme', theme);
+  }
+  await page.getByLabel('Langue de l’interface').selectOption('zh');
+  await expect(page.locator('.conjugation-table')).toContainText('代词式配合取决于语境');
+  await page.getByLabel('界面语言').selectOption('en');
+  await input.fill('je se lave'); await input.press('Enter');
+  await expect(page.getByRole('status')).toHaveText('No exact source form found.');
+});
 
 test('ordinary compounds expose every interpretation and complete agreement alternative', async ({ page }) => {
   await page.addInitScript((data) => {

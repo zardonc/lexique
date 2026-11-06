@@ -30,6 +30,10 @@ def source_form(data, lemma, tense, who, model=None):
     return (lemma[:-cut] if cut else lemma) + suffix[1:]
 
 
+def elides(form, h_aspire):
+    return bool(re.match("[aàâeéèêëiîïoôœuùûü]", form)) or form.startswith("h") and not h_aspire or form.startswith("y") and not re.match("y[aeiouy]", form)
+
+
 def expressions(form, tense, person, number, gender, impersonal, h_aspire):
     if tense in ("Y", "YP", "W", "WP", "G", "K", "KP", "GP", "GPP"):
         return [form]
@@ -40,7 +44,7 @@ def expressions(form, tense, person, number, gender, impersonal, h_aspire):
     for subject in pronouns:
         if gender == "f" and subject in ("il", "ils") or gender == "m" and subject in ("elle", "elles"):
             continue
-        vowel = bool(re.match("[aàâeéèêëiîïoôœuùûü]", form)) or form.startswith("h") and not h_aspire or form.startswith("y") and not re.match("y[aeiouy]", form)
+        vowel = elides(form, h_aspire)
         verbal = "j’" + form if subject == "je" and vowel else subject + " " + form
         result.append(verbal)
         if tense in ("S", "T", "SP", "SQP"):

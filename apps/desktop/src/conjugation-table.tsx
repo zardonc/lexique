@@ -61,7 +61,7 @@ function Block({ code, table, query, text }: {
   readonly code: string; readonly table: ConjugationTable; readonly query: string; readonly text: ConjugationText;
 }) {
   const cells = table.cells.filter((cell) => cell.tense === code);
-  const raw = table.verb.ordinary_status === 'not_applicable';
+  const raw = table.verb.ordinary_status === 'not_applicable' && !table.verb.pronominal;
   const impersonal = table.verb.usage_labels.includes('impersonal');
   if (table.verb.blocks?.[code] === 'not_applicable') return <p>{text.notApplicable}</p>;
   if (['P', 'PC', 'I', 'PQP', 'J', 'PA', 'F', 'FA', 'C', 'CP', 'S', 'SP', 'T', 'SQP', 'Y', 'YP'].includes(code)) {
@@ -89,5 +89,5 @@ export function ConjugationBlocks({ table, query, text }: {
     <Block code={code} table={table} query={query} text={text} />
   </section>)}</div>{other.length > 0 && <section><h4>{text.other}</h4>{groupCells(other).map(([key, values]) =>
     <SourceCell key={key} cells={values} query={query} text={text} raw />)}</section>}
-  <p className="dictionary-hint">{text.agreement}</p><p className="dictionary-hint">{text.historical}</p></>;
+  {!table.verb.pronominal && <p className="dictionary-hint">{text.agreement}</p>}<p className="dictionary-hint">{text.historical}</p></>;
 }

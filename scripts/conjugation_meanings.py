@@ -64,6 +64,8 @@ def load_meanings(directory=RESOURCE):
 
 
 def verb_meanings(lemma, verb, meanings):
-    senses = [s for s in meanings.get(lemma, [])
-              if s["use"] == "pronominal" or verb["ordinary_status"] == "supported"]
+    pronominal = verb.get("pronominal")
+    key = ("en " if pronominal["with_en"] else "") + pronominal["base"] if pronominal else lemma
+    senses = [s for s in meanings.get(key, [])
+              if s["use"] == "pronominal" or not pronominal and verb["ordinary_status"] == "supported"]
     return {"status": "available" if senses else "unavailable", "senses": senses}

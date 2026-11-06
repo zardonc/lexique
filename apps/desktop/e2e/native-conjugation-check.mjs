@@ -9,7 +9,7 @@ import { setTimeout as delay } from 'node:timers/promises';
 import assert from 'node:assert/strict';
 
 const [resources, binary, data, destination] = process.argv.slice(2).map((path) => resolve(path));
-assert.ok(['issue-40', 'issue-41', 'issue-42'].some((issue) => destination.startsWith(resolve('../../target/' + issue) + '\\')));
+assert.ok(['issue-40', 'issue-41', 'issue-42', 'issue-43'].some((issue) => destination.startsWith(resolve('../../target/' + issue) + '\\')));
 await mkdir(destination);
 for (const name of ['dictionary', 'conjugation']) await cp(join(resources, name), join(destination, name), { recursive: true });
 await cp(binary, join(destination, 'Lexique.exe'));
@@ -101,6 +101,28 @@ async function check(page) {
   await page.getByLabel('法语动词或简单变位词形').fill('abstenir');
   await page.getByRole('button', { name: '查询变位', exact: true }).click();
   await expect(page.locator('.conjugation-meaning')).toHaveText("s'abstenir · abstain");
+  for (const [query, lemma] of [['se laver', 'se laver'], ['elles se sont abstenues', 's’abstenir'],
+    ['elles se sont parlé', 'se parler'], ['va-t’en', 's’en aller']]) {
+    const result = await page.evaluate((key) => window.__TAURI_INTERNALS__.invoke('conjugation_lookup', { key }), query);
+    results[query] = result;
+    assert.deepEqual(result.tables.map((table) => table.lemma), [lemma]);
+    await page.getByLabel('法语动词或简单变位词形').fill(query);
+    await page.getByRole('button', { name: '查询变位', exact: true }).click();
+    await expect(page.locator('.conjugation-table h3')).toHaveText(lemma);
+    await expect(page.locator('.conjugation-block')).toHaveCount(23);
+    await expect(page.locator('.conjugation-expression[data-matched=true]').filter({ hasText: new RegExp(`^${query}$`, 'u') }).first()).toHaveText(query);
+    if (query === 'se laver') {
+      await expect(page.locator('.conjugation-table')).toContainText('代词式配合取决于语境');
+      await expect(page.locator('[data-tense=Y]')).toContainText('lave-toi');
+      await page.screenshot({ path: join(destination, 'pronominal.png') });
+    }
+    if (query === 'elles se sont abstenues') {
+      await expect(page.locator('[data-tense=PC]')).toContainText('vous vous êtes abstenue');
+      await expect(page.locator('[data-tense=PC]')).toContainText('vous vous êtes abstenues');
+      await expect(page.locator('.conjugation-meaning')).toContainText('abstain');
+    }
+    if (query === 'elles se sont parlé') await expect(page.locator('[data-tense=PC]')).not.toContainText('parlées');
+  }
   await page.getByLabel('法语动词或简单变位词形').fill('suis');
   await page.getByRole('button', { name: '查询变位', exact: true }).click();
   await failures(page);

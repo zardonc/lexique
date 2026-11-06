@@ -19,7 +19,7 @@
     "resources:query": "python -X utf8 scripts/dictionary_sample.py query",
     "test:resources": "python -X utf8 -m unittest discover -s scripts -p test_dictionary_sample.py -v",
     "conjugation:build": "python -X utf8 scripts/conjugation_sample.py build",
-    "conjugation:prepare": "python -X utf8 scripts/conjugation_sample.py prepare target/desktop-conjugation-v4",
+    "conjugation:prepare": "python -X utf8 scripts/conjugation_sample.py prepare target/desktop-conjugation-v5",
     "conjugation:query": "python -X utf8 scripts/conjugation_sample.py query",
     "conjugation:table": "python -X utf8 scripts/conjugation_sample.py table",
     "test:conjugation": "python -X utf8 -m unittest discover -s scripts -p test_conjugation_sample.py -v",

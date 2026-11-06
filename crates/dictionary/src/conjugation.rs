@@ -1,4 +1,4 @@
-//! Exact whole-expression lookup in the admitted ordinary active resource.
+//! Exact whole-expression lookup in the admitted ordinary and pronominal resource.
 use std::path::Path;
 
 use rusqlite::Connection;
@@ -41,7 +41,7 @@ pub fn lookup(path: &Path, key: &str, expected_sha256: &str) -> Result<Lookup, D
             "enter 1–512 UTF-8 bytes without control characters",
         ));
     }
-    let connection = snapshot::open(path, expected_sha256, 128 * 1024 * 1024)?;
+    let connection = snapshot::open(path, expected_sha256, 256 * 1024 * 1024)?;
     let base = query_base(key);
     let mut statement = connection
         .prepare(

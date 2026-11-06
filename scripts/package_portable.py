@@ -47,7 +47,7 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
     dictionary = release / "dictionary/dictionary.sqlite3"
     if hashlib.sha256(dictionary.read_bytes()).hexdigest() != report["sqlite_sha256"]:
         raise ValueError("Release dictionary does not match the prepared resource")
-    conjugation_report = json.loads((root / "target/desktop-conjugation-v4/report.json").read_text())
+    conjugation_report = json.loads((root / "target/desktop-conjugation-v5/report.json").read_text())
     conjugation = release / "conjugation"
     if hashlib.sha256((conjugation / "conjugation.sqlite3").read_bytes()).hexdigest() != conjugation_report["sqlite_sha256"]:
         raise ValueError("Release conjugation does not match the prepared resource")
@@ -83,8 +83,8 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
         "This sample provides FreeDict fra-zho lookup and M1 vocabulary notes with explicit save,\n"
         "search, sorting and restart recovery. Saved words can be added to two review cards;\n"
         "review scoring and card progress survive restart. A full dictionary is not included.\n"
-        "Conjugation supports exact ordinary expressions and 23 reference blocks;\n"
-        "pronominal expressions, colors and conjugation playback remain unavailable.\n"
+        "Conjugation supports exact ordinary/pronominal expressions and 23 reference blocks;\n"
+        "colors and conjugation playback remain unavailable.\n"
         + ("Offline speech is included for development testing. See speech/docs for its licenses.\n"
            "The voice is machine-generated; model use restrictions apply.\n"
            if all(speech_inputs) else "TTS is not included.\n") +

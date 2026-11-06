@@ -26,7 +26,9 @@ function VerbMetadata({ table, text }: { readonly table: ConjugationTable; reado
     <p>{text.usage}: {verb.usage_labels.map((use) => conjugationUse(text, use)).join(' · ') || text.unconfirmed}</p>
     <p>{text.auxiliary}: {verb.auxiliaries.map((auxiliary) => `${auxiliary.lemma} (${conjugationUse(text, auxiliary.use)})`).join(' · ')}
       {verb.auxiliary_status !== 'supported' && ` · ${verb.auxiliary_status === 'not_applicable' ? text.notApplicable : text.unconfirmed}`}</p>
-    <p><Meanings table={table} text={text} /></p>{verb.ordinary_status === 'not_applicable' && <p>{text.rawOnly}</p>}</>;
+    <p><Meanings table={table} text={text} /></p>
+    {verb.pronominal && <p>{text.pronominalAgreement[verb.pronominal.agreement]}</p>}
+    {verb.ordinary_status === 'not_applicable' && !verb.pronominal && <p>{text.rawOnly}</p>}</>;
 }
 
 function Results({ result, selected, onSelect, text }: {
