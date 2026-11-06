@@ -1,0 +1,30 @@
+{
+  "source_bytes": 15677049,
+  "source_gzip_bytes": 2843158,
+  "source_verb_rows": 342771,
+  "slots": 397413,
+  "lemmas": 7826,
+  "forms": 301208,
+  "table_bytes": 17842176,
+  "lemma_index_bytes": 7311360,
+  "reverse_index_bytes": 7942144,
+  "database_bytes": 33095680,
+  "database_gzip_bytes": 9799124,
+  "slots_by_tense": {
+    "C": 46864,
+    "F": 46861,
+    "G": 7788,
+    "I": 46669,
+    "J": 46591,
+    "K": 31167,
+    "P": 46865,
+    "S": 46839,
+    "T": 46587,
+    "W": 7821,
+    "Y": 23353,
+    "unspecified": 8
+  },
+  "unspecified_finite_slots": 26,
+  "data_license": "LGPL-LR",
+  "modification": "2026-11-05: lossless gzip packaging; generated SQLite selects verb rows and expands explicit tags; no invented forms"
+}

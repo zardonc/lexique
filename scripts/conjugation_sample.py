@@ -1,0 +1,158 @@
+"""Offline Lefff feasibility CLI. Generated data remains under LGPL-LR."""
+
+import argparse
+from collections import Counter
+from contextlib import closing
+import gzip
+import hashlib
+import itertools
+import json
+from pathlib import Path
+import re
+import shutil
+import sqlite3
+
+RESOURCE = Path(__file__).resolve().parents[1] / "resources/lefff-3.4"
+PROVENANCE = json.loads((RESOURCE / "provenance.json").read_text(encoding="utf-8"))
+SOURCE = RESOURCE / "lefff-3.4.mlex.gz"
+TENSES = {
+    "P": "indicatif présent", "I": "indicatif imparfait", "J": "indicatif passé simple",
+    "F": "indicatif futur simple", "C": "conditionnel présent", "S": "subjonctif présent",
+    "T": "subjonctif imparfait", "Y": "impératif présent", "W": "infinitif présent",
+    "G": "participe présent", "K": "participe passé",
+}
+COLUMNS = "source_line, form, lemma, raw_tag, tense, person, number, gender"
+APPLICATION_ID = 0x4C58434A
+
+
+def source_rows(source):
+    archive = Path(source).read_bytes()
+    if hashlib.sha256(archive).hexdigest() != PROVENANCE["archive_sha256"]:
+        raise ValueError("Source archive SHA-256 differs from pinned Lefff")
+    raw = gzip.decompress(archive)
+    if hashlib.sha256(raw).hexdigest() != PROVENANCE["source_sha256"]:
+        raise ValueError("Uncompressed source SHA-256 differs from pinned Lefff")
+    rows = []
+    for ordinal, line in enumerate(raw.decode("utf-8").splitlines(), 1):
+        fields = line.split("\t")
+        if len(fields) != 4:
+            raise ValueError(f"Invalid Lefff row at line {ordinal}")
+        form, category, lemma, tag = fields
+        if category != "v":
+            continue
+        if not form or not lemma or (tag and not re.fullmatch(r"[PFIJCYSTKGW]+[123]*[mf]*[sp]*", tag)):
+            raise ValueError(f"Unsupported verb record at line {ordinal}: {tag}")
+        # Expand only explicit dimensions; unspecified agreement stays unspecified.
+        dimensions = [[c for c in tag if c in alphabet] or [None]
+                      for alphabet in ("PFIJCYSTKGW", "123", "sp", "mf")]
+        for tense, person, number, gender in itertools.product(*dimensions):
+            rows.append((ordinal, form, lemma, tag, tense, person, number, gender))
+    return rows, len(raw)
+
+
+def build(output, source):
+    rows, source_bytes = source_rows(source)
+    output = Path(output)
+    output.mkdir(parents=True, exist_ok=False)
+    database = output / "conjugation.sqlite3"
+    with closing(sqlite3.connect(database)) as connection:
+        connection.executescript(f"""
+            PRAGMA application_id = {APPLICATION_ID};
+            PRAGMA user_version = 1;
+            CREATE TABLE metadata (provenance TEXT NOT NULL, slots INTEGER NOT NULL);
+            CREATE TABLE slots (
+                source_line INTEGER NOT NULL, form TEXT NOT NULL COLLATE BINARY,
+                lemma TEXT NOT NULL COLLATE BINARY, raw_tag TEXT NOT NULL,
+                tense TEXT, person TEXT, number TEXT, gender TEXT
+            );
+        """)
+        connection.executemany("INSERT INTO slots VALUES (?,?,?,?,?,?,?,?)", rows)
+        connection.execute("INSERT INTO metadata VALUES (?,?)",
+                           (json.dumps(PROVENANCE, ensure_ascii=False), len(rows)))
+        connection.commit()
+        table_bytes = database.stat().st_size
+        connection.execute("CREATE INDEX slots_lemma ON slots(lemma)")
+        connection.commit()
+        lemma_bytes = database.stat().st_size - table_bytes
+        before_reverse = database.stat().st_size
+        connection.execute("CREATE INDEX slots_form ON slots(form)")
+        connection.commit()
+        reverse_bytes = database.stat().st_size - before_reverse
+    for name in (SOURCE.name, "LICENSE-LGPLLR", "provenance.json", "README.md"):
+        shutil.copyfile(RESOURCE / name, output / name)
+    report = {
+        "source_bytes": source_bytes, "source_gzip_bytes": Path(source).stat().st_size,
+        "source_verb_rows": len({r[0] for r in rows}), "slots": len(rows),
+        "lemmas": len({r[2] for r in rows}), "forms": len({r[1] for r in rows}),
+        "table_bytes": table_bytes, "lemma_index_bytes": lemma_bytes,
+        "reverse_index_bytes": reverse_bytes, "database_bytes": database.stat().st_size,
+        "database_gzip_bytes": len(gzip.compress(database.read_bytes(), mtime=0)),
+        "slots_by_tense": dict(sorted(Counter(r[4] or "unspecified" for r in rows).items())),
+        "unspecified_finite_slots": sum(r[4] is not None and r[4] in "PFIJCYST" and (r[5] is None or r[6] is None)
+                                        for r in rows),
+        "data_license": "LGPL-LR", "modification": PROVENANCE["modified"],
+    }
+    (output / "report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n",
+                                        encoding="utf-8")
+    return report
+
+
+def read_resource(database, query=None, lemma=None):
+    uri = Path(database).resolve().as_uri() + "?mode=ro"
+    with closing(sqlite3.connect(uri, uri=True)) as connection:
+        connection.row_factory = sqlite3.Row
+        connection.execute("PRAGMA trusted_schema = OFF")
+        if (connection.execute("PRAGMA application_id").fetchone()[0] != APPLICATION_ID
+                or connection.execute("PRAGMA user_version").fetchone()[0] != 1):
+            raise ValueError("Unsupported conjugation resource format")
+        if [r[0] for r in connection.execute("PRAGMA integrity_check")] != ["ok"]:
+            raise ValueError("Conjugation resource failed integrity check")
+        metadata = connection.execute("SELECT provenance, slots FROM metadata").fetchall()
+        if (len(metadata) != 1 or json.loads(metadata[0][0]) != PROVENANCE
+                or connection.execute("SELECT count(*) FROM slots").fetchone()[0] != metadata[0][1]):
+            raise ValueError("Conjugation resource metadata/count mismatch")
+        matches = [] if query is None else [dict(r) for r in connection.execute(
+            f"SELECT {COLUMNS} FROM slots WHERE form = ? ORDER BY lemma, source_line, tense, person",
+            (query,))]
+        lemmas = [lemma] if lemma is not None else sorted({r["lemma"] for r in matches})
+        tables = []
+        for headword in lemmas:
+            cells = [dict(r) for r in connection.execute(
+                f"SELECT {COLUMNS} FROM slots WHERE lemma = ? ORDER BY tense, person, number, gender, source_line",
+                (headword,))]
+            for cell in cells:
+                cell["matched"] = query is not None and cell["form"] == query
+            tables.append({"lemma": headword, "status": "source_only" if cells else "not_found",
+                           "cells": cells})
+        return {"status": "found" if matches or any(t["cells"] for t in tables) else "not_found",
+                "query": query, "matches": matches, "tables": tables,
+                "tense_labels": TENSES, "coverage": "source_only; absent cells are not generated"}
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    commands = parser.add_subparsers(dest="command", required=True)
+    builder = commands.add_parser("build")
+    builder.add_argument("output", type=Path)
+    builder.add_argument("--source", type=Path, default=SOURCE)
+    for command, argument in (("query", "form"), ("table", "lemma")):
+        reader = commands.add_parser(command)
+        reader.add_argument("database", type=Path)
+        reader.add_argument(argument)
+    args = parser.parse_args()
+    try:
+        if args.command == "build":
+            result = build(args.output, args.source)
+        else:
+            value = args.form if args.command == "query" else args.lemma
+            if not value or any(ord(c) < 32 for c in value):
+                raise ValueError("Lookup must be nonempty and contain no control characters")
+            result = read_resource(args.database, query=value if args.command == "query" else None,
+                                   lemma=value if args.command == "table" else None)
+    except (OSError, ValueError, sqlite3.Error, EOFError) as error:
+        parser.exit(1, f"Conjugation resource error: {error}\n")
+    print(json.dumps(result, ensure_ascii=False, indent=2))
+
+
+if __name__ == "__main__":
+    main()

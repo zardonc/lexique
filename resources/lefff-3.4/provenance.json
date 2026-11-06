@@ -1,0 +1,9 @@
+{
+  "upstream": "https://github.com/RosaeNLG/rosaenlg",
+  "commit": "ff38d3275e86567142506592d6e14ce679bf70e3",
+  "source_path": "packages/french-verbs-lefff/resources/lefff-3.4.mlex",
+  "source_sha256": "f3da25e58aec161c5ae34d598038dd6304056c2649867ede7e220a74fd34fe12",
+  "archive_sha256": "094a443a5c22685a05858093eab8152f4ec08f09718b46cbe2c8541c9136f6ce",
+  "license": "LGPL-LR",
+  "modified": "2026-11-05: lossless gzip packaging; generated SQLite selects verb rows and expands explicit tags; no invented forms"
+}
