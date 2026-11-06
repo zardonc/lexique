@@ -12,6 +12,8 @@
 
 每条真实链路在实现前列出失败场景，开发中运行 lint / typecheck，结束时运行完整 E2E 并保留截图、导出或数据库回读证据。后端测试先编译，执行阶段硬性 60 秒超时。禁止用“没有测试可运行”当作通过。
 
+M3 变位的逐项范围、23 区块矩阵、着色模式和 Windows x64 首次验收目标已获用户最终确认，见[变位范围](m3-conjugation-scope.md)。[实施规格](m3-conjugation-spec.md)已发布为 [#38](https://github.com/zardonc/lexique/issues/38)，后续据此拆分工单；资源与生成验证、产品实现和正式发行仍按各自门槛执行。
+
 2026-10-25 M1 访谈补充：采用现有 FreeDict 小样验证“逻辑引用 + 微型兜底摘要 + 独立笔记”的同词一份记录，以及查词摘要置顶、原文 / 笔记分开、收藏状态联动与重启恢复。[保存规则](m1-note-saving.md)已逐项确认，包含搜索、三种字段排序与偏好恢复、重复收藏及编辑冲突处理；正式规格为 [#10](https://github.com/zardonc/lexique/issues/10)。资源测试后的多词典、完整摘要、词形反查与 M2 复习日期排序见[后续需求暂存](deferred-lookup-requirements.md)，明确不纳入 #10。
 
 2026-10-25 M1 当前状态：Windows x64 的本地链路及 release portable 已验证，见[验证记录](verification.md#m1-windows-复盘修复与-macos-阻塞)。macOS 专属编译、退出保护与恢复验证仍为 **blocked — 等待 macOS 执行环境**，后续按[阻塞清单](macos-m1-blockers.md)集中执行；Windows ARM64 仅编译通过。下述 M2 规则来自独立访谈，不因 Windows M1 通过而宣称 M2 或完整发行就绪。
