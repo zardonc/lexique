@@ -72,6 +72,8 @@ Windows x64 语音开发小样可在构建后运行 `python -X utf8 scripts/pack
 
 变位 M0 独立验证：`pnpm conjugation:build target/conjugation-sample`、`pnpm conjugation:query target/conjugation-sample/conjugation.sqlite3 sommes`、`pnpm conjugation:table target/conjugation-sample/conjugation.sqlite3 falloir`、`pnpm test:conjugation`。固定 Lefff 3.4 原始数据及 LGPL-LR 随仓库保存，离线构建、精确反查全部匹配并读取源表；输出目录必须是新目录。来源、许可、实际输出、体积及待确认的复合时态／代词式边界见 [#4 验证](docs/evidence/issue-4/README.md)。此工具尚未接入桌面变位页。
 
+2026-11-05，#39 在同一 CLI 加入固定 Grammalecte 2.3.0 的传统组别、普通主动式助动词与用法元数据，保留原始标记、纠正依据及未知／不适用状态；构建报告列出全资源覆盖。数据许可分别为 Lefff 的 LGPL-LR 与元数据的 GPL-3.0-only，许可、源数据和转换材料随资源保留。新生成资源格式为 2；旧小样保持原样，使用新输出目录重新构建。查询须保留数据库旁的 `grammalecte-2.3.0/` 目录。见 [#39 证据与限制](docs/evidence/issue-39/README.md)。
+
 E2E 结束后在 `apps/desktop/test-results/` 产生桌面 / 手机截图，在 `apps/desktop/playwright-report/` 产生报告。若使用已安装浏览器，可设置 `PLAYWRIGHT_EXECUTABLE_PATH` 为其可执行文件路径。测试自己的服务由 Playwright 启动与关闭，不复用其他开发服务。
 
 ## 当前交付边界

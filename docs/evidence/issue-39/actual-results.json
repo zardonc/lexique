@@ -1,0 +1,473 @@
+{
+  "aimer": {
+    "verb": {
+      "group": 1,
+      "group_status": "supported",
+      "auxiliaries": [
+        {
+          "lemma": "avoir",
+          "use": "ordinary active"
+        }
+      ],
+      "auxiliary_status": "supported",
+      "ordinary_status": "supported",
+      "usage_labels": [
+        "intransitive",
+        "transitive"
+      ],
+      "source": {
+        "resource": "grammalecte-2.3.0",
+        "entry": "dVerb/aimer",
+        "raw_type": "1_it_q__a"
+      },
+      "correction": null
+    },
+    "source_cells": 51
+  },
+  "finir": {
+    "verb": {
+      "group": 2,
+      "group_status": "supported",
+      "auxiliaries": [
+        {
+          "lemma": "avoir",
+          "use": "ordinary active"
+        }
+      ],
+      "auxiliary_status": "supported",
+      "ordinary_status": "supported",
+      "usage_labels": [
+        "intransitive",
+        "transitive"
+      ],
+      "source": {
+        "resource": "grammalecte-2.3.0",
+        "entry": "dVerb/finir",
+        "raw_type": "2_it____a"
+      },
+      "correction": null
+    },
+    "source_cells": 51
+  },
+  "aller": {
+    "verb": {
+      "group": 3,
+      "group_status": "supported",
+      "auxiliaries": [
+        {
+          "lemma": "être",
+          "use": "ordinary active"
+        }
+      ],
+      "auxiliary_status": "supported",
+      "ordinary_status": "supported",
+      "usage_labels": [
+        "intransitive"
+      ],
+      "source": {
+        "resource": "grammalecte-2.3.0",
+        "entry": "dVerb/aller",
+        "raw_type": "1_i__e_e_"
+      },
+      "correction": {
+        "group": 3,
+        "note": "Traditional group 3; the upstream conjugator's internal group 1 is not the requested pedagogical classification.",
+        "references": [
+          "https://www.dictionnaire-academie.fr/conjuguer/A9A1226"
+        ]
+      }
+    },
+    "source_cells": 51
+  },
+  "partir": {
+    "verb": {
+      "group": 3,
+      "group_status": "supported",
+      "auxiliaries": [
+        {
+          "lemma": "être",
+          "use": "ordinary active"
+        }
+      ],
+      "auxiliary_status": "supported",
+      "ordinary_status": "supported",
+      "usage_labels": [
+        "intransitive"
+      ],
+      "source": {
+        "resource": "grammalecte-2.3.0",
+        "entry": "dVerb/partir",
+        "raw_type": "3_i____e_"
+      },
+      "correction": null
+    },
+    "source_cells": 51
+  },
+  "avoir": {
+    "verb": {
+      "group": 3,
+      "group_status": "supported",
+      "auxiliaries": [
+        {
+          "lemma": "avoir",
+          "use": "ordinary active"
+        }
+      ],
+      "auxiliary_status": "supported",
+      "ordinary_status": "supported",
+      "usage_labels": [
+        "intransitive",
+        "transitive"
+      ],
+      "source": {
+        "resource": "grammalecte-2.3.0",
+        "entry": "dVerb/avoir",
+        "raw_type": "0ait____a"
+      },
+      "correction": null
+    },
+    "source_cells": 51
+  },
+  "être": {
+    "verb": {
+      "group": 3,
+      "group_status": "supported",
+      "auxiliaries": [
+        {
+          "lemma": "avoir",
+          "use": "ordinary active"
+        }
+      ],
+      "auxiliary_status": "supported",
+      "ordinary_status": "supported",
+      "usage_labels": [
+        "intransitive"
+      ],
+      "source": {
+        "resource": "grammalecte-2.3.0",
+        "entry": "dVerb/être",
+        "raw_type": "0ei_____a"
+      },
+      "correction": null
+    },
+    "source_cells": 49
+  },
+  "descendre": {
+    "verb": {
+      "group": 3,
+      "group_status": "supported",
+      "auxiliaries": [
+        {
+          "lemma": "avoir",
+          "use": "transitive"
+        },
+        {
+          "lemma": "être",
+          "use": "intransitive"
+        }
+      ],
+      "auxiliary_status": "supported",
+      "ordinary_status": "supported",
+      "usage_labels": [
+        "intransitive",
+        "transitive"
+      ],
+      "source": {
+        "resource": "grammalecte-2.3.0",
+        "entry": "dVerb/descendre",
+        "raw_type": "3_it____a"
+      },
+      "correction": {
+        "auxiliaries": [
+          {
+            "lemma": "avoir",
+            "use": "transitive"
+          },
+          {
+            "lemma": "être",
+            "use": "intransitive"
+          }
+        ],
+        "note": "The upstream raw type lists avoir only; ordinary intransitive use also takes être.",
+        "references": [
+          "https://www.dictionnaire-academie.fr/conjuguer/A9D1797"
+        ]
+      }
+    },
+    "source_cells": 51
+  },
+  "falloir": {
+    "verb": {
+      "group": 3,
+      "group_status": "supported",
+      "auxiliaries": [
+        {
+          "lemma": "avoir",
+          "use": "ordinary active"
+        }
+      ],
+      "auxiliary_status": "supported",
+      "ordinary_status": "supported",
+      "usage_labels": [
+        "transitive",
+        "indirect_transitive",
+        "impersonal"
+      ],
+      "source": {
+        "resource": "grammalecte-2.3.0",
+        "entry": "dVerb/falloir",
+        "raw_type": "3__tnem_a"
+      },
+      "correction": null
+    },
+    "source_cells": 9
+  },
+  "abstenir": {
+    "verb": {
+      "group": 3,
+      "group_status": "supported",
+      "auxiliaries": [],
+      "auxiliary_status": "not_applicable",
+      "ordinary_status": "not_applicable",
+      "usage_labels": [
+        "pronominal_only"
+      ],
+      "source": {
+        "resource": "grammalecte-2.3.0",
+        "entry": "dVerb/abstenir",
+        "raw_type": "3____p_e_"
+      },
+      "correction": null
+    },
+    "source_cells": 51
+  },
+  "aboyer": {
+    "verb": {
+      "group": 1,
+      "group_status": "supported",
+      "auxiliaries": [],
+      "auxiliary_status": "unconfirmed",
+      "ordinary_status": "supported",
+      "usage_labels": [
+        "intransitive",
+        "transitive"
+      ],
+      "source": {
+        "resource": "grammalecte-2.3.0",
+        "entry": "dVerb/aboyer",
+        "raw_type": "1_it___zz"
+      },
+      "correction": null
+    },
+    "source_cells": 51
+  },
+  "ressortir": {
+    "verb": {
+      "group": null,
+      "group_status": "unconfirmed",
+      "auxiliaries": [
+        {
+          "lemma": "avoir",
+          "use": "ordinary active; sense mapping unconfirmed"
+        },
+        {
+          "lemma": "être",
+          "use": "ordinary active; sense mapping unconfirmed"
+        }
+      ],
+      "auxiliary_status": "unconfirmed",
+      "ordinary_status": "supported",
+      "usage_labels": [
+        "intransitive",
+        "transitive"
+      ],
+      "source": {
+        "resource": "grammalecte-2.3.0",
+        "entry": "dVerb/ressortir",
+        "raw_type": "3_it___ea"
+      },
+      "correction": {
+        "group": null,
+        "group_status": "unconfirmed",
+        "note": "Homographic group-2 and group-3 uses require sense separation before assigning one traditional group to this source lemma.",
+        "references": [
+          "https://college.lerobert.com/demo/helpclg/pdf/conjugaisons.pdf"
+        ]
+      }
+    },
+    "source_cells": 76
+  },
+  "accourir": {
+    "verb": {
+      "group": 3,
+      "group_status": "supported",
+      "auxiliaries": [
+        {
+          "lemma": "avoir",
+          "use": "action"
+        },
+        {
+          "lemma": "être",
+          "use": "resulting state"
+        }
+      ],
+      "auxiliary_status": "supported",
+      "ordinary_status": "supported",
+      "usage_labels": [
+        "intransitive"
+      ],
+      "source": {
+        "resource": "grammalecte-2.3.0",
+        "entry": "dVerb/accourir",
+        "raw_type": "3_i_____a"
+      },
+      "correction": {
+        "auxiliaries": [
+          {
+            "lemma": "avoir",
+            "use": "action"
+          },
+          {
+            "lemma": "être",
+            "use": "resulting state"
+          }
+        ],
+        "note": "Both ordinary auxiliaries are attested; upstream lists only avoir.",
+        "references": [
+          "https://www.larousse.fr/conjugaison/francais/accourir/98"
+        ]
+      }
+    },
+    "source_cells": 51
+  },
+  "demeurer": {
+    "verb": {
+      "group": 1,
+      "group_status": "supported",
+      "auxiliaries": [
+        {
+          "lemma": "avoir",
+          "use": "live or last"
+        },
+        {
+          "lemma": "être",
+          "use": "remain in a state"
+        }
+      ],
+      "auxiliary_status": "supported",
+      "ordinary_status": "supported",
+      "usage_labels": [
+        "intransitive"
+      ],
+      "source": {
+        "resource": "grammalecte-2.3.0",
+        "entry": "dVerb/demeurer",
+        "raw_type": "1ei_____a"
+      },
+      "correction": {
+        "auxiliaries": [
+          {
+            "lemma": "avoir",
+            "use": "live or last"
+          },
+          {
+            "lemma": "être",
+            "use": "remain in a state"
+          }
+        ],
+        "note": "Ordinary auxiliary depends on meaning; upstream lists only avoir.",
+        "references": [
+          "https://dictionnaire.lerobert.com/definition/demeurer"
+        ]
+      }
+    },
+    "source_cells": 51
+  },
+  "voilà": {
+    "verb": {
+      "group": null,
+      "group_status": "unconfirmed",
+      "auxiliaries": [],
+      "auxiliary_status": "unconfirmed",
+      "ordinary_status": "unconfirmed",
+      "usage_labels": [],
+      "source": null,
+      "correction": null
+    },
+    "source_cells": 2
+  },
+  "query:sommes": [
+    {
+      "source_line": 475040,
+      "form": "sommes",
+      "lemma": "sommer",
+      "raw_tag": "PS2s",
+      "tense": "P",
+      "person": "2",
+      "number": "s",
+      "gender": null
+    },
+    {
+      "source_line": 475040,
+      "form": "sommes",
+      "lemma": "sommer",
+      "raw_tag": "PS2s",
+      "tense": "S",
+      "person": "2",
+      "number": "s",
+      "gender": null
+    },
+    {
+      "source_line": 475041,
+      "form": "sommes",
+      "lemma": "être",
+      "raw_tag": "P1p",
+      "tense": "P",
+      "person": "1",
+      "number": "p",
+      "gender": null
+    }
+  ],
+  "query:suis": [
+    {
+      "source_line": 484864,
+      "form": "suis",
+      "lemma": "suivre",
+      "raw_tag": "P12s",
+      "tense": "P",
+      "person": "1",
+      "number": "s",
+      "gender": null
+    },
+    {
+      "source_line": 484864,
+      "form": "suis",
+      "lemma": "suivre",
+      "raw_tag": "P12s",
+      "tense": "P",
+      "person": "2",
+      "number": "s",
+      "gender": null
+    },
+    {
+      "source_line": 484865,
+      "form": "suis",
+      "lemma": "suivre",
+      "raw_tag": "Y2s",
+      "tense": "Y",
+      "person": "2",
+      "number": "s",
+      "gender": null
+    },
+    {
+      "source_line": 484866,
+      "form": "suis",
+      "lemma": "être",
+      "raw_tag": "P1s",
+      "tense": "P",
+      "person": "1",
+      "number": "s",
+      "gender": null
+    }
+  ]
+}

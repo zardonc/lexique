@@ -1,0 +1,28 @@
+{
+  "aller": {
+    "group": 3,
+    "note": "Traditional group 3; the upstream conjugator's internal group 1 is not the requested pedagogical classification.",
+    "references": ["https://www.dictionnaire-academie.fr/conjuguer/A9A1226"]
+  },
+  "descendre": {
+    "auxiliaries": [{"lemma": "avoir", "use": "transitive"}, {"lemma": "être", "use": "intransitive"}],
+    "note": "The upstream raw type lists avoir only; ordinary intransitive use also takes être.",
+    "references": ["https://www.dictionnaire-academie.fr/conjuguer/A9D1797"]
+  },
+  "accourir": {
+    "auxiliaries": [{"lemma": "avoir", "use": "action"}, {"lemma": "être", "use": "resulting state"}],
+    "note": "Both ordinary auxiliaries are attested; upstream lists only avoir.",
+    "references": ["https://www.larousse.fr/conjugaison/francais/accourir/98"]
+  },
+  "demeurer": {
+    "auxiliaries": [{"lemma": "avoir", "use": "live or last"}, {"lemma": "être", "use": "remain in a state"}],
+    "note": "Ordinary auxiliary depends on meaning; upstream lists only avoir.",
+    "references": ["https://dictionnaire.lerobert.com/definition/demeurer"]
+  },
+  "ressortir": {
+    "group": null,
+    "group_status": "unconfirmed",
+    "note": "Homographic group-2 and group-3 uses require sense separation before assigning one traditional group to this source lemma.",
+    "references": ["https://college.lerobert.com/demo/helpclg/pdf/conjugaisons.pdf"]
+  }
+}

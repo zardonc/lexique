@@ -11,6 +11,7 @@ import tempfile
 import unittest
 
 CLI = Path(__file__).with_name("conjugation_sample.py")
+VERB_RESOURCE = CLI.parent.parent / "resources/grammalecte-2.3.0"
 
 
 def run_cli(*args):
@@ -43,6 +44,100 @@ class ConjugationCliTests(unittest.TestCase):
         highlighted = [c for t in result["tables"] for c in t["cells"] if c["matched"]]
         self.assertEqual(len(highlighted), 3)
         self.assertTrue(all(c["form"] == "sommes" for c in highlighted))
+
+    def test_traditional_groups_and_ordinary_auxiliaries_have_source_evidence(self):
+        # Literal expectations independently checked against the cited grammar tables.
+        for lemma, group, auxiliaries in [
+            ("aimer", 1, ["avoir"]), ("finir", 2, ["avoir"]),
+            ("aller", 3, ["être"]), ("partir", 3, ["être"]),
+            ("avoir", 3, ["avoir"]), ("être", 3, ["avoir"]),
+            ("descendre", 3, ["avoir", "être"]), ("falloir", 3, ["avoir"]),
+        ]:
+            with self.subTest(lemma=lemma):
+                verb = self.read("table", lemma)["tables"][0]["verb"]
+                self.assertEqual(verb["group"], group)
+                self.assertEqual(verb["group_status"], "supported")
+                self.assertEqual([a["lemma"] for a in verb["auxiliaries"]], auxiliaries)
+                self.assertEqual(verb["auxiliary_status"], "supported")
+                self.assertTrue(verb["source"]["raw_type"])
+        descendre = self.read("table", "descendre")["tables"][0]["verb"]
+        self.assertEqual([a["use"] for a in descendre["auxiliaries"]],
+                         ["transitive", "intransitive"])
+        self.assertTrue(descendre["correction"]["references"])
+
+    def test_invalid_metadata_inputs_fail_before_publishing_and_preserve_valid_output(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            directory = Path(temporary)
+            source = directory / "metadata"
+            shutil.copytree(VERB_RESOURCE, source)
+            output = directory / "output"
+            for name in ("conj_data.json.gz", "corrections.json", "provenance.json", "LICENSE-GPL3", "README.md"):
+                path = source / name
+                original = path.read_bytes()
+                for content in (None, b"corrupt", original[:16]):
+                    with self.subTest(name=name, content=content is None):
+                        if content is None:
+                            path.unlink()
+                        else:
+                            path.write_bytes(content)
+                        result = run_cli("build", output, "--metadata-source", source)
+                        self.assertNotEqual(result.returncode, 0)
+                        self.assertIn("Conjugation resource error:", result.stderr)
+                        self.assertEqual(result.stdout, "")
+                        self.assertFalse(output.exists())
+                        path.write_bytes(original)
+            result = run_cli("build", self.output, "--metadata-source", source)
+            self.assertNotEqual(result.returncode, 0)
+            self.assertEqual(self.read("table", "finir")["tables"][0]["verb"]["group"], 2)
+
+    def test_unknown_metadata_is_not_guessed_and_pronominal_only_is_not_ordinary(self):
+        pronominal = self.read("table", "abstenir")["tables"][0]["verb"]
+        self.assertEqual(pronominal["ordinary_status"], "not_applicable")
+        self.assertEqual(pronominal["auxiliary_status"], "not_applicable")
+        self.assertEqual(pronominal["auxiliaries"], [])
+        self.assertIn("pronominal_only", pronominal["usage_labels"])
+        unknown = self.read("table", "voilà")["tables"][0]
+        self.assertTrue(unknown["cells"])
+        self.assertIsNone(unknown["verb"]["group"])
+        self.assertEqual(unknown["verb"]["group_status"], "unconfirmed")
+        self.assertIsNone(unknown["verb"]["source"])
+        incomplete = self.read("table", "aboyer")["tables"][0]["verb"]
+        self.assertEqual(incomplete["auxiliary_status"], "unconfirmed")
+        self.assertEqual(incomplete["auxiliaries"], [])
+        ambiguous = self.read("table", "ressortir")["tables"][0]["verb"]
+        self.assertIsNone(ambiguous["group"])
+        self.assertEqual(ambiguous["group_status"], "unconfirmed")
+        self.assertEqual([a["lemma"] for a in ambiguous["auxiliaries"]], ["avoir", "être"])
+        self.assertEqual(ambiguous["auxiliary_status"], "unconfirmed")
+        coverage = json.loads((self.output / "report.json").read_text(encoding="utf-8"))["metadata_coverage"]
+        self.assertEqual(coverage["verbs"], 7826)
+        for field in ("group_status", "auxiliary_status", "ordinary_status"):
+            self.assertEqual(sum(coverage[field].values()), 7826)
+        self.assertIn("voilà", coverage["missing_lemmas"])
+        self.assertEqual(coverage["excluded_source_rows"], 0)
+
+    def test_incompatible_incomplete_and_changed_metadata_resources_fail_visibly(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            directory = Path(temporary)
+            path = directory / "resource.sqlite3"
+            shutil.copytree(self.output / "grammalecte-2.3.0", directory / "grammalecte-2.3.0")
+            malformed = self.read("table", "aimer")["tables"][0]["verb"]
+            malformed["auxiliaries"] = [{"lemma": "être"}]
+            for statement, parameters in [
+                ("PRAGMA user_version = 999", ()),
+                ("DELETE FROM verbs WHERE lemma = ?", ("aimer",)),
+                ("UPDATE verbs SET information = ? WHERE lemma = ?", (json.dumps(malformed), "aimer")),
+                ("UPDATE verbs SET information = ? WHERE lemma = ?", ("null", "aimer")),
+            ]:
+                with self.subTest(statement=statement):
+                    shutil.copyfile(self.database, path)
+                    with sqlite3.connect(path) as connection:
+                        connection.execute(statement, parameters)
+                    connection.close()
+                    result = run_cli("table", path, "aimer")
+                    self.assertNotEqual(result.returncode, 0)
+                    self.assertIn("Conjugation resource error:", result.stderr)
+                    self.assertEqual(result.stdout, "")
 
     def test_suis_and_aime_expand_every_explicit_person_and_tense(self):
         result = self.read("query", "suis")
@@ -118,6 +213,18 @@ class ConjugationCliTests(unittest.TestCase):
                          + report["lemma_index_bytes"] + report["reverse_index_bytes"])
         for name in ("LICENSE-LGPLLR", "provenance.json", "lefff-3.4.mlex.gz", "README.md"):
             self.assertTrue((self.output / name).is_file())
+
+    def test_rebuild_is_reproducible_and_contains_complete_redistribution_materials(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            output = Path(temporary) / "rebuilt"
+            result = run_cli("build", output)
+            self.assertEqual(result.returncode, 0, result.stderr)
+            self.assertEqual((output / "conjugation.sqlite3").read_bytes(), self.database.read_bytes())
+            self.assertEqual(json.loads(result.stdout), json.loads((self.output / "report.json").read_text(encoding="utf-8")))
+            for name in ("conj_data.json.gz", "LICENSE-GPL3", "provenance.json", "conj.py",
+                         "corrections.json", "upstream-README.txt", "README.md"):
+                self.assertEqual((output / "grammalecte-2.3.0" / name).read_bytes(),
+                                 (VERB_RESOURCE / name).read_bytes())
 
 
 if __name__ == "__main__":

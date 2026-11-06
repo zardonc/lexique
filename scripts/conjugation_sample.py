@@ -1,4 +1,4 @@
-"""Offline Lefff feasibility CLI. Generated data remains under LGPL-LR."""
+"""Offline conjugation resource CLI: LGPL-LR forms and GPL-3.0 metadata."""
 
 import argparse
 from collections import Counter
@@ -11,6 +11,8 @@ from pathlib import Path
 import re
 import shutil
 import sqlite3
+
+from conjugation_metadata import RESOURCE as VERB_RESOURCE, load_metadata, metadata_report, verb_metadata
 
 RESOURCE = Path(__file__).resolve().parents[1] / "resources/lefff-3.4"
 PROVENANCE = json.loads((RESOURCE / "provenance.json").read_text(encoding="utf-8"))
@@ -50,16 +52,20 @@ def source_rows(source):
     return rows, len(raw)
 
 
-def build(output, source):
+def build(output, source, metadata_source=VERB_RESOURCE):
     rows, source_bytes = source_rows(source)
+    linguistic_data, corrections, supplemental_provenance = load_metadata(metadata_source)
+    verbs = {lemma: verb_metadata(lemma, linguistic_data, corrections) for lemma in sorted({r[2] for r in rows})}
     output = Path(output)
     output.mkdir(parents=True, exist_ok=False)
     database = output / "conjugation.sqlite3"
     with closing(sqlite3.connect(database)) as connection:
         connection.executescript(f"""
             PRAGMA application_id = {APPLICATION_ID};
-            PRAGMA user_version = 1;
-            CREATE TABLE metadata (provenance TEXT NOT NULL, slots INTEGER NOT NULL);
+            PRAGMA user_version = 2;
+            CREATE TABLE metadata (provenance TEXT NOT NULL, slots INTEGER NOT NULL,
+                                   supplement TEXT NOT NULL, verbs INTEGER NOT NULL);
+            CREATE TABLE verbs (lemma TEXT PRIMARY KEY, information TEXT NOT NULL);
             CREATE TABLE slots (
                 source_line INTEGER NOT NULL, form TEXT NOT NULL COLLATE BINARY,
                 lemma TEXT NOT NULL COLLATE BINARY, raw_tag TEXT NOT NULL,
@@ -67,8 +73,11 @@ def build(output, source):
             );
         """)
         connection.executemany("INSERT INTO slots VALUES (?,?,?,?,?,?,?,?)", rows)
-        connection.execute("INSERT INTO metadata VALUES (?,?)",
-                           (json.dumps(PROVENANCE, ensure_ascii=False), len(rows)))
+        connection.executemany("INSERT INTO verbs VALUES (?,?)",
+                               [(lemma, json.dumps(info, ensure_ascii=False)) for lemma, info in verbs.items()])
+        connection.execute("INSERT INTO metadata VALUES (?,?,?,?)",
+                           (json.dumps(PROVENANCE, ensure_ascii=False), len(rows),
+                            json.dumps(supplemental_provenance, ensure_ascii=False), len(verbs)))
         connection.commit()
         table_bytes = database.stat().st_size
         connection.execute("CREATE INDEX slots_lemma ON slots(lemma)")
@@ -80,6 +89,10 @@ def build(output, source):
         reverse_bytes = database.stat().st_size - before_reverse
     for name in (SOURCE.name, "LICENSE-LGPLLR", "provenance.json", "README.md"):
         shutil.copyfile(RESOURCE / name, output / name)
+    supplement = output / "grammalecte-2.3.0"
+    supplement.mkdir()
+    for name in (*supplemental_provenance["files"], "provenance.json"):
+        shutil.copyfile(Path(metadata_source) / name, supplement / name)
     report = {
         "source_bytes": source_bytes, "source_gzip_bytes": Path(source).stat().st_size,
         "source_verb_rows": len({r[0] for r in rows}), "slots": len(rows),
@@ -91,6 +104,10 @@ def build(output, source):
         "unspecified_finite_slots": sum(r[4] is not None and r[4] in "PFIJCYST" and (r[5] is None or r[6] is None)
                                         for r in rows),
         "data_license": "LGPL-LR", "modification": PROVENANCE["modified"],
+        "metadata_license": supplemental_provenance["license"],
+        "metadata_source_bytes": supplemental_provenance["source_bytes"],
+        "metadata_gzip_bytes": (Path(metadata_source) / "conj_data.json.gz").stat().st_size,
+        "metadata_coverage": metadata_report(verbs),
     }
     (output / "report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n",
                                         encoding="utf-8")
@@ -103,14 +120,20 @@ def read_resource(database, query=None, lemma=None):
         connection.row_factory = sqlite3.Row
         connection.execute("PRAGMA trusted_schema = OFF")
         if (connection.execute("PRAGMA application_id").fetchone()[0] != APPLICATION_ID
-                or connection.execute("PRAGMA user_version").fetchone()[0] != 1):
+                or connection.execute("PRAGMA user_version").fetchone()[0] != 2):
             raise ValueError("Unsupported conjugation resource format")
         if [r[0] for r in connection.execute("PRAGMA integrity_check")] != ["ok"]:
             raise ValueError("Conjugation resource failed integrity check")
-        metadata = connection.execute("SELECT provenance, slots FROM metadata").fetchall()
+        metadata = connection.execute("SELECT provenance, slots, supplement, verbs FROM metadata").fetchall()
         if (len(metadata) != 1 or json.loads(metadata[0][0]) != PROVENANCE
-                or connection.execute("SELECT count(*) FROM slots").fetchone()[0] != metadata[0][1]):
+                or connection.execute("SELECT count(*) FROM slots").fetchone()[0] != metadata[0][1]
+                or connection.execute("SELECT count(*) FROM verbs").fetchone()[0] != metadata[0][3]
+                or connection.execute("SELECT count(DISTINCT lemma) FROM slots").fetchone()[0] != metadata[0][3]
+                or connection.execute("SELECT lemma FROM slots EXCEPT SELECT lemma FROM verbs").fetchone()):
             raise ValueError("Conjugation resource metadata/count mismatch")
+        linguistic_data, corrections, supplemental_provenance = load_metadata(Path(database).resolve().parent / "grammalecte-2.3.0")
+        if json.loads(metadata[0][2]) != supplemental_provenance:
+            raise ValueError("Conjugation supplemental provenance mismatch")
         matches = [] if query is None else [dict(r) for r in connection.execute(
             f"SELECT {COLUMNS} FROM slots WHERE form = ? ORDER BY lemma, source_line, tense, person",
             (query,))]
@@ -122,8 +145,12 @@ def read_resource(database, query=None, lemma=None):
                 (headword,))]
             for cell in cells:
                 cell["matched"] = query is not None and cell["form"] == query
+            information = connection.execute("SELECT information FROM verbs WHERE lemma = ?", (headword,)).fetchone()
+            verb = json.loads(information[0]) if information else None
+            if information is not None and verb != verb_metadata(headword, linguistic_data, corrections):
+                raise ValueError("Conjugation verb metadata differs from pinned sources")
             tables.append({"lemma": headword, "status": "source_only" if cells else "not_found",
-                           "cells": cells})
+                           "verb": verb, "cells": cells})
         return {"status": "found" if matches or any(t["cells"] for t in tables) else "not_found",
                 "query": query, "matches": matches, "tables": tables,
                 "tense_labels": TENSES, "coverage": "source_only; absent cells are not generated"}
@@ -135,6 +162,7 @@ def main():
     builder = commands.add_parser("build")
     builder.add_argument("output", type=Path)
     builder.add_argument("--source", type=Path, default=SOURCE)
+    builder.add_argument("--metadata-source", type=Path, default=VERB_RESOURCE)
     for command, argument in (("query", "form"), ("table", "lemma")):
         reader = commands.add_parser(command)
         reader.add_argument("database", type=Path)
@@ -142,7 +170,7 @@ def main():
     args = parser.parse_args()
     try:
         if args.command == "build":
-            result = build(args.output, args.source)
+            result = build(args.output, args.source, args.metadata_source)
         else:
             value = args.form if args.command == "query" else args.lemma
             if not value or any(ord(c) < 32 for c in value):

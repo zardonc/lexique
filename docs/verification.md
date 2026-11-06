@@ -1,5 +1,7 @@
 # 骨架验证记录
 
+2026-11-05 #39：独立变位 CLI 已接入固定 Grammalecte 2.3.0 的传统组别、普通助动词与用法元数据，保留原始标记、纠正依据及未知／不适用状态。7,826 个 Lefff 词元和 397,413 格不变；传统组别 6,573 项获支持、1,253 项未确认，普通助动词 1,310 项获支持、6,361 项未确认、155 项不适用。格式 2 的许可、源材料、覆盖、真实输出、查询计量及失败／重建检查见 [#39 证据](evidence/issue-39/README.md)。桌面接入与完整 M3 生成准入仍待后续，不以本次元数据验证宣称完成。
+
 2026-11-05 #4：固定 Lefff 3.4 原始形态数据、双 SHA-256 与 LGPL-LR，独立离线 CLI 已验证 `sommes` → sommer / être、全部匹配格标记、代表性源表及损坏／缺失失败路径。342,771 源动词记录转换为 397,413 格，SQLite 33,095,680 bytes，反查索引 7,942,144 bytes。语式／时态矩阵、未确认的复合／代词式和原始异常项见 [#4 证据](evidence/issue-4/README.md)。此结果不代表桌面变位已接入或 M3 完整范围获批。
 
 2026-11-05 M2 合并前检查：`cargo clippy --locked -p lexique-core -p lexique-storage -p lexique-dictionary --all-targets -- -D warnings`、`pnpm rust:fmt` 和 `pnpm rust:check` 通过。音频发布边界将 hash、字节数及生成时间归入 `AudioPublicationContent`，全部调用点保持原值；既有事务、选择、验证及错误规则不变。`pnpm rust:test:build` 后 `pnpm test:rust` 138 项通过，执行保持硬 60 秒限制。`git merge-tree --write-tree origin/main HEAD` 无冲突；本轮未重新执行干净系统离线或其他平台实机验收。
