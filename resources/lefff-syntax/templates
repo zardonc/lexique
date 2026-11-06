@@ -1,0 +1,515 @@
+#############################################################
+# ATTRIBUTES DECLARATION
+#############################################################
+
+ATTRIBUTE
+	Suj = <[]>;
+	Obj = <[]>;
+	Objà = <[]>;
+	Objde = <[]>;
+	Loc = <[]>;
+	Dloc = <[]>;
+	Att = <[]>;
+	Obl = <[]>;
+	Obl2 = <[]>;
+	adjunct = {[]};
+	arg1 = <[]>;		// argument d'une coordonnée ou juxtaposée
+	arg2 = <[]>;		// argument d'une coordonnée ou juxtaposée
+/sxlfg/	SujC = <[]>;
+	RDexplication = [];
+
+	// REALISATIONS
+	real = {après-sn, avec-sn, cla, cln, cld, comme-sa, comme-sn, contre-sn, dans-sn, de-sa, de-scompl, de-sinf, de-sn, devant-sn, en, en-sn, loc-sn, par-sn, pour-sa, pour-scompl, pour-sinf, pour-sn, qcompl, sa, sadv, scompl, sinf, sn, sous-sn, sur-sn, vers-sn, y, à-sinf, à-sn, auprès_de-sn, autour_de-sn, de_la_part_de-sn, sans-sn, sur-scompl, à-scompl, à-qcompl, parmi-sn};
+
+//	intro = {après, avec, comme, contre, dans, de, devant, en, loc, par, pour, sous, sur, vers, à};
+//	real = {cln, cla, cld, en, y, sn, sinf, scompl, qcompl, sa, sadv};
+
+	//------------------------------------------------------------
+	// attributs à valeur atomique
+	//------------------------------------------------------------
+	gender = {masc, fem}; 
+	number = {sg, pl}; 
+	person = {1, 2, 3};
+	inflnumber = {sg, pl}; 
+	inflperson = {1, 2, 3};
+	numberposs = {sg, pl};		// pour les possessifs
+	persposs = {1, 2, 3};
+	case = {acc, dat, nom, loc, gen, rfl};
+//	mode = {indicative, conditional, subjonctive, imperative, infinitive, participle};
+//	tense = {present, past, imperfect, future, pluperfect, past-historic, past-anterior, future-perfect, perfect};
+//	aspect = {neutral, inchoative, terminative, durative, notperfect, perfect};
+//	v-form = {tensed, participle, infinitive};
+	mode = {indicative, subjonctive, conditional, imperative};
+/xlfg/	tense = {future, future-perfect, imperfect, past, past-anterior, past-historic, perfect, pluperfect, present};
+/xlfg4/	tense = {future, future-perfect, imperfect, past, past-anterior, past-historic, perfect, pluperfect, present};
+/sxlfg/	tense = {future, future-perfect, imperfect, past, past-anterior, past-historic, perfect, pluperfect, present, none};
+	aspect = {neutral, inchoative, terminative, durative};
+	mod_kind = {causal};
+	v-form = {infinitive, participle, past-participle, tensed};
+	form = {il, ça, si, que, comme, virgule};
+	define = {+, -};
+//	partitive = {+, -};
+	demonstrative = {+, -};
+	wh = {+, -};
+	que = {+};
+	possessive = {+, -};
+	pcas = {à, de, dans, sur, vers, par, devant, en, contre, après, avec, autre, pour, comme, loc};
+	neg = {+, -};
+	clneg = {+, -};
+	type = {ind, card, ord, poss, int, qual, part, excl, rel, dem, def};
+	diathesis = {active, passive};
+	aux-req = {être, avoir};
+	form-aux = {être, avoir, aller, venir, venir-de};
+
+//	degree = {+, -};
+	qu = {+,-};
+	det = {+,-};
+	pre_det = {+};
+	adv_kind = {intens,très,modnc};
+	chunk_type = {GN,GP,NV};
+	refl = {+};
+	imp = {+,-};
+	clloc = {+, -};
+	clgen = {+, -};
+	clle = {+, -};
+	clla = {+, -};
+	clles = {+, -};
+
+	clivee = {+};
+	detach_neg = {+};
+	adv_parlant = {+};
+	detach = {+};
+	advi = {combien,comment,en_combien_de_temps,à_quel_moment,à_quelle_fréquence};
+	modnc = {+};
+	
+	//----------restriction de sélection--------------------------------------------------
+	hum = {+, -};
+//	anim = {+, -};
+//	conc = {+, -};
+	locative = {+, -};
+	time = {-, arto,  artf, arti};
+//	pobody = {+, -};
+
+	//----------pour traduction automatique-----------------------------------------------
+	cat = {adj, nc, np, v, adv, prep, coo, etr};
+
+	//----------pour SXLFG-----------------------------------------------
+/sxlfg/	aij = {Aij, Pij ...}2;
+
+	//--------- OUBLIS ? ---------------
+//        dem = {+};
+	  pro = {+, -};
+
+	  //--------- verbes support et assimilés ---------
+	lightverb = {-,accorder,acquérir,administrer,adresser,allonger,apporter,asséner,attribuer,avoir,causer,commettre,comporter,comprendre,concevoir,connaître,conserver,donner,écoper,effectuer,émettre,encaisser,encourir,endurer,éprouver,essuyer,être,exercer,faire,filer,fixer,flanquer,formuler,garder,imposer,infliger,jeter,lancer,manifester,mettre,obtenir,octroyer,passer,percevoir,perdre,porter,pratiquer,prendre,prescrire,prêter,procéder,procurer,prononcer,provoquer,réaliser,recevoir,ressentir,rester,retrouver,souffrir,subir,tenir,tirer,tomber,toucher,trouver,valoir,vivre};
+	synt_head = {...};
+
+
+#############################################################
+# MACROS DEFINITION
+#############################################################
+
+@m = [gender = masc];
+@f = [gender = fem];
+@s = [number = sg];
+@p = [number = pl];
+@1 = [person = 1];
+@2 = [person = 2];
+@3 = [person = 3];
+@13 = [person = 1|3];
+@12 = [person = 1|2];
+@infls = [inflnumber = sg];
+@inflp = [inflnumber = pl];
+@infl1 = [inflperson = 1];
+@infl2 = [inflperson = 2];
+@infl3 = [inflperson = 3];
+@infl13 = [inflperson = 1|3];
+@infl12 = [inflperson = 1|2];
+@ms = [@m, @s];
+@mp = [@m, @p];
+@fs = [@f, @s];
+@fp = [@f, @p];
+@1m = [@1, @m];
+@2m = [@2, @m];
+@3m = [@3, @m];
+@1f = [@1, @f];
+@2f = [@2, @f];
+@3f = [@3, @f];
+@1s = [@1, @s];
+@2s = [@2, @s];
+@3s = [@3, @s];
+@1p = [@1, @p];
+@2p = [@2, @p];
+@3p = [@3, @p];
+@infl1s = [@infl1, @infls];
+@infl2s = [@infl2, @infls];
+@infl3s = [@infl3, @infls];
+@infl1p = [@infl1, @inflp];
+@infl2p = [@infl2, @inflp];
+@infl3p = [@infl3, @inflp];
+@infl12s = [@infl12, @infls];
+@infl13s = [@infl13, @infls];
+@13s = [@13];
+@12s = [@12];
+@1ms = [@1, @ms];
+@2ms = [@2, @ms];
+@3ms = [@3, @ms];
+@1mp = [@1, @mp];
+@2mp = [@2, @mp];
+@3mp = [@3, @mp];
+@1fs = [@1, @fs];
+@2fs = [@2, @fs];
+@3fs = [@3, @fs];
+@1fp = [@1, @fp];
+@2fp = [@2, @fp];
+@3fp = [@3, @fp];
+
+@poss = [possessive = +];
+@posss = [numberposs = sg];
+@possp = [numberposs = pl];
+@poss1 = [persposs = 1];
+@poss2 = [persposs = 2];
+@poss3 = [persposs = 3];
+
+@fp_P1p = [@fp, @poss1, @possp];
+@fp_P1s = [@fp, @poss1, @posss];
+@fp_P2p = [@fp, @poss2, @possp];
+@fp_P2s = [@fp, @poss2, @posss];
+@fp_P3p = [@fp, @poss3, @possp];
+@fp_P3s = [@fp, @poss3, @posss];
+@fs_P1p = [@fs, @poss1, @possp];
+@fs_P1s = [@fs, @poss1, @posss];
+@fs_P2p = [@fs, @poss2, @possp];
+@fs_P2s = [@fs, @poss2, @posss];
+@fs_P3p = [@fs, @poss3, @possp];
+@fs_P3s = [@fs, @poss3, @posss];
+@mp_P1p = [@mp, @poss1, @possp];
+@mp_P1s = [@mp, @poss1, @posss];
+@mp_P2p = [@mp, @poss2, @possp];
+@mp_P2s = [@mp, @poss2, @posss];
+@mp_P3p = [@mp, @poss3, @possp];
+@mp_P3s = [@mp, @poss3, @posss];
+@ms_P1p = [@ms, @poss1, @possp];
+@ms_P1s = [@ms, @poss1, @posss];
+@ms_P2p = [@ms, @poss2, @possp];
+@ms_P2s = [@ms, @poss2, @posss];
+@ms_P3p = [@ms, @poss3, @possp];
+@ms_P3s = [@ms, @poss3, @posss];
+@p_P1p = [@p, @poss1, @possp];
+@p_P1s = [@p, @poss1, @posss];
+@p_P2p = [@p, @poss2, @possp];
+@p_P2s = [@p, @poss2, @posss];
+@p_P3p = [@p, @poss3, @possp];
+@p_P3s = [@p, @poss3, @posss];
+@s_P1p = [@s, @poss1, @possp];
+@s_P1s = [@s, @poss1, @posss];
+@s_P2p = [@s, @poss2, @possp];
+@s_P2s = [@s, @poss2, @posss];
+@s_P3p = [@s, @poss3, @possp];
+@s_P3s = [@s, @poss3, @posss];
+
+/xlfg/@imperative = [Suj=[pred="pro"]];
+/xlfg4/@imperative = [Suj=[pred='pro']];
+/sxlfg/@imperative = [Suj=[pred="pro"]];
+/xlfg/@internal_Objde = [Objde=[pred="poss"]];
+/xlfg4/@internal_Objde = [Objde=[pred='poss']];
+/sxlfg/@internal_Objde = [Objde=[pred="poss"]];
+
+// temps simples
+/sxlfg/@P = [tense = present, mode = indicative, v-form=tensed];
+/sxlfg/@F = [tense = future, mode = indicative, v-form=tensed];
+/sxlfg/@I = [tense = imperfect, mode = indicative, v-form=tensed];
+/sxlfg/@J = [tense = past-historic, mode = indicative, v-form=tensed];
+/sxlfg/@T = [tense = imperfect, mode = subjonctive, v-form=tensed];
+/sxlfg/@Y = [tense = present, mode = imperative, v-form=tensed];
+/sxlfg/@S = [tense = present, mode = subjonctive, v-form=tensed];
+/sxlfg/@C = [tense = present, mode = conditional, v-form=tensed];
+/xlfg/@P = [tense = present, mode = indicative];
+/xlfg/@F = [tense = future, mode = indicative];
+/xlfg/@I = [tense = imperfect, mode = indicative];
+/xlfg/@J = [tense = past-historic, mode = indicative];
+/xlfg/@T = [tense = imperfect, mode = subjonctive];
+/xlfg/@Y = [tense = present, mode = imperative];
+/xlfg/@S = [tense = present, mode = subjonctive];
+/xlfg/@C = [tense = present, mode = conditional];
+/xlfg4/@P = [tense = present, mode = indicative];
+/xlfg4/@F = [tense = future, mode = indicative];
+/xlfg4/@I = [tense = imperfect, mode = indicative];
+/xlfg4/@J = [tense = past-historic, mode = indicative];
+/xlfg4/@T = [tense = imperfect, mode = subjonctive];
+/xlfg4/@Y = [tense = present, mode = imperative];
+/xlfg4/@S = [tense = present, mode = subjonctive];
+/xlfg4/@C = [tense = present, mode = conditional];
+
+/sxlfg/@K = [v-form = past-participle,tense=none];
+/xlfg4/@K = [v-form = past-participle];
+/xlfg/@K = [v-form = participle];
+/sxlfg/@G = [v-form = participle];
+/xlfg4/@G = [v-form = participle];
+/xlfg/# Modified EVDLC 07/08/04 (was @G = [v-form = participle];)
+/xlfg/@G = [v-form = gerundive];
+@W = [v-form = infinitive];
+
+// temps composés
+@PP = [tense = perfect, mode = indicative];		// Passé composé			aux:P
+@FF = [tense = future-perfect, mode = indicative];	// Futur antérieur			aux:F
+@II = [tense = pluperfect, mode = indicative];		// Plus-que-parfait			aux:I
+@JJ = [tense = past-anterior, mode = indicative];	// Passé antérieur			aux:J
+@SS = [tense = past, mode = subjonctive];		// Subjonctif passé			aux:S
+@TT = [tense = pluperfect, mode = subjonctive];		// Plus-que-parfait du subjonctif	aux:T
+@CC = [tense = past, mode = conditional];		// Conditionnel passé 			aux:C
+@YY = [tense = past, mode = imperative];		// Impératif passé			aux:Y
+@GG = [v-form = participle, tense = perfect];		// Participe passé 2e forme		aux:G
+@WW = [v-form = infinitive, tense = perfect];		// Infinitif passé			aux:W
+
+// temps ambigus
+/xlfg/@PS = [tense = present, mode = indicative|subjonctive];
+/xlfg/@PJ = [tense = present|past-historic, mode = indicative];
+/xlfg/@YP = [tense = present, mode = imperative|indicative];
+/xlfg/@ST = [tense = present|imperfect, mode = subjonctive];
+/xlfg/@PFIJTSC = [mode = indicative|subjonctive|conditional];
+/xlfg4/@PS = [tense = present, mode = indicative|subjonctive];
+/xlfg4/@PJ = [tense = present|past-historic, mode = indicative];
+/xlfg4/@YP = [tense = present, mode = imperative|indicative];
+/xlfg4/@ST = [tense = present|imperfect, mode = subjonctive];
+/xlfg4/@PFIJTSC = [mode = indicative|subjonctive|conditional];
+/sxlfg/@PS = [tense = present, mode = indicative|subjonctive, v-form=tensed];
+/sxlfg/@PJ = [tense = present|past-historic, mode = indicative, v-form=tensed];
+/sxlfg/@YP = [tense = present, mode = imperative|indicative, v-form=tensed];
+/sxlfg/@ST = [tense = present|imperfect, mode = subjonctive, v-form=tensed];
+/sxlfg/@PFIJTSC = [mode = indicative|subjonctive|conditional, v-form=tensed];
+
+
+@Kms = [@K, @m, @s];
+@Kmp = [@K, @m, @p];
+@Kfs = [@K, @f, @s];
+@Kfp = [@K, @f, @p];
+@Km = [@K, @m];
+@Kf = [@K, @f];
+@Ks = [@K, @s];
+@Kp = [@K, @p];
+
+@P1s = [@P, @infl1s];
+@P2s = [@P, @infl2s];
+@P3s = [@P, @infl3s];
+@P1p = [@P, @infl1p];
+@P2p = [@P, @infl2p];
+@P3p = [@P, @infl3p];
+@F1s = [@F, @infl1s];
+@F2s = [@F, @infl2s];
+@F3s = [@F, @infl3s];
+@F1p = [@F, @infl1p];
+@F2p = [@F, @infl2p];
+@F3p = [@F, @infl3p];
+@I1s = [@I, @infl1s];
+@I2s = [@I, @infl2s];
+@I3s = [@I, @infl3s];
+@I1p = [@I, @infl1p];
+@I2p = [@I, @infl2p];
+@I3p = [@I, @infl3p];
+@J1s = [@J, @infl1s];
+@J2s = [@J, @infl2s];
+@J3s = [@J, @infl3s];
+@J1p = [@J, @infl1p];
+@J2p = [@J, @infl2p];
+@J3p = [@J, @infl3p];
+@S1s = [@S, @infl1s];
+@S2s = [@S, @infl2s];
+@S3s = [@S, @infl3s];
+@S1p = [@S, @infl1p];
+@S2p = [@S, @infl2p];
+@S3p = [@S, @infl3p];
+@T1s = [@T, @infl1s];
+@T2s = [@T, @infl2s];
+@T3s = [@T, @infl3s];
+@T1p = [@T, @infl1p];
+@T2p = [@T, @infl2p];
+@T3p = [@T, @infl3p];
+@C1s = [@C, @infl1s];
+@C2s = [@C, @infl2s];
+@C3s = [@C, @infl3s];
+@C1p = [@C, @infl1p];
+@C2p = [@C, @infl2p];
+@C3p = [@C, @infl3p];
+@Y2s = [@Y, @infl2s];
+@Y1p = [@Y, @infl1p];
+@Y2p = [@Y, @infl2p];
+@PP1s = [@PP, @infl1s];
+@PP2s = [@PP, @infl2s];
+@PP3s = [@PP, @infl3s];
+@PP1p = [@PP, @infl1p];
+@PP2p = [@PP, @infl2p];
+@PP3p = [@PP, @infl3p];
+@FF1s = [@FF, @infl1s];
+@FF2s = [@FF, @infl2s];
+@FF3s = [@FF, @infl3s];
+@FF1p = [@FF, @infl1p];
+@FF2p = [@FF, @infl2p];
+@FF3p = [@FF, @infl3p];
+@II1s = [@II, @infl1s];
+@II2s = [@II, @infl2s];
+@II3s = [@II, @infl3s];
+@II1p = [@II, @infl1p];
+@II2p = [@II, @infl2p];
+@II3p = [@II, @infl3p];
+@JJ1s = [@JJ, @infl1s];
+@JJ2s = [@JJ, @infl2s];
+@JJ3s = [@JJ, @infl3s];
+@JJ1p = [@JJ, @infl1p];
+@JJ2p = [@JJ, @infl2p];
+@JJ3p = [@JJ, @infl3p];
+@SS1s = [@SS, @infl1s];
+@SS2s = [@SS, @infl2s];
+@SS3s = [@SS, @infl3s];
+@SS1p = [@SS, @infl1p];
+@SS2p = [@SS, @infl2p];
+@SS3p = [@SS, @infl3p];
+@TT1s = [@TT, @infl1s];
+@TT2s = [@TT, @infl2s];
+@TT3s = [@TT, @infl3s];
+@TT1p = [@TT, @infl1p];
+@TT2p = [@TT, @infl2p];
+@TT3p = [@TT, @infl3p];
+@CC1s = [@CC, @infl1s];
+@CC2s = [@CC, @infl2s];
+@CC3s = [@CC, @infl3s];
+@CC1p = [@CC, @infl1p];
+@CC2p = [@CC, @infl2p];
+@CC3p = [@CC, @infl3p];
+@YY2s = [@YY, @infl2s];
+@YY1p = [@YY, @infl1p];
+@YY2p = [@YY, @infl2p];
+@CC12s = [@CC, @infl12s];
+@II12s = [@II, @infl12s];
+@JJ12s = [@JJ, @infl12s];
+
+@ST2s = [@ST, @infl2s];
+@C12s = [@C, @infl12s];
+@S13s = [@S, @infl13s];
+@PS13s = [@PS, @infl13s];
+@PS3p = [@PS, @infl3p];
+@PS3s = [@PS, @infl3s];
+@PS3 = [@PS, @infl3];
+@PS2s = [@PS, @infl2s];
+@I12s = [@I, @infl12s];
+@J12s = [@J, @infl12s];
+@P12s = [@P, @infl12s];
+@PJ12s = [@PJ, @infl12s];
+@YP2p = [@YP, @infl2p];
+
+@avoir = [aux-req = avoir];
+@être = [aux-req = être];
+@favoir = [form-aux = avoir];
+@fêtre = [form-aux = être];
+@faller = [form-aux = aller];
+@fvenir = [form-aux = venir];
+
+@pcasà = [pcas = à];
+@pcasde = [pcas = de];
+@pcasavec = [pcas = avec];
+@pcasaprès = [pcas = après];
+@pcascomme = [pcas = comme];
+@pcascontre = [pcas = contre];
+@pcassur = [pcas = sur];
+@pcasvers = [pcas = vers];
+@pcaspour = [pcas = pour];
+@pcasdans = [pcas = dans];
+@pcaspar = [pcas = par];
+@pcasdevant = [pcas = devant];
+@pcasen = [pcas = en];
+
+@pro_loc = [case = loc];
+@pro_acc = [case = acc];
+@pro_nom = [case = nom];
+@pro_gen = [case = gen];
+
+@ord = [type = ord];
+@card = [type = card];
+
+# restrictions
+@hum = [hum = +];
+@time = [time = arto];
+@weekday = [time = artf];
+@year = [time = arti];
+@loc = [locative = +];
+
+@active = [diathesis = active];
+@passive = [diathesis = passive, aux-req = être];
+@pron = [refl =c +];
+@se_moyen = [refl =c +];
+/sxlfg/@pron_possible = [];
+/frmg/@pron_possible = [refl = +|-];
+/sxlfg/@impers = [imp =c +];
+@impers_ca = [impca =c +];
+@pers = [imp = -];
+@pseudo-en = [clgen =c +];
+@pseudo-en_possible = [];
+@pseudo-y = [clloc =c +];
+@pseudo-le = [clle =c +];
+@pseudo-la = [clla =c +];
+@pseudo-les = [clles =c +];
+@négatif = [clneg =c +];
+
+/frmg/@être_possible = [aux-req = être|avoir ];
+/frmg/@impers = [imp = -|+];
+
+// complétive objet=patient (actif)
+/xlfg/@CompSubj = [scomp=[mode = subjonctive]];
+/xlfg/@CompInd = [scomp=[mode = indicative]];
+/sxlfg/@CompSubj = [Obj =? [mode =? subjonctive]];
+/sxlfg/@CompSujSubj = [Suj =? [mode =? subjonctive]];
+/sxlfg/@CompInd = [Obj =? [mode =? indicative]];
+/sxlfg/@CompSujInd = [Suj =? [mode =? indicative]];
+/xlfg4/@CompSubj = [(scomp)=[mode = subjonctive]];
+/xlfg4/@CompInd = [(scomp)=[mode = indicative]];
+/xlfg/@ACompSubj = [à-scomp=[mode = subjonctive]];
+/xlfg/@ACompInd = [à-scomp=[mode = indicative]];
+/sxlfg/@ACompSubj = [];
+/sxlfg/@ACompInd = [];
+/xlfg4/@ACompSubj = [(à-scomp)=[mode = subjonctive]];
+/xlfg4/@ACompInd = [(à-scomp)=[mode = indicative]];
+/xlfg/@DeCompSubj = [de-scomp=[mode = subjonctive]];
+/xlfg/@DeCompInd = [de-scomp=[mode = indicative]];
+/sxlfg/@DeCompSubj = [];
+/sxlfg/@DeCompInd = [];
+/xlfg4/@DeCompSubj = [(de-scomp)=[mode = subjonctive]];
+/xlfg4/@DeCompInd = [(de-scomp)=[mode = indicative]];
+
+
+// contrôle et attributif
+/sxlfg/@CtrlObjAtt = [Obj =? []1, Att =? [Suj =? []1]];
+/sxlfg/@CtrlObjObl = [Obj =? []1, Obl =? [Suj =? []1]];
+/sxlfg/@CtrlSujObl = [Suj =? []1, Obl =? [Suj =? []1]];
+/sxlfg/@OCtrlSujObl = [Suj =? []1, Obl =? [Obj =? []1]];
+/sxlfg/@CtrlObjObjde = [Obj =? []1, Objde =? [Suj =? []1]];
+/sxlfg/@CtrlObjObjà = [Obj =? []1, Objà =? [Suj =? []1]];
+/sxlfg/@CtrlObjàObj = [Objà =? []1, Obj =? [Suj =? []1]];
+/sxlfg/@CtrlObjàSuj = [Objà =? []1, Suj =? [Suj =? []1]];
+/sxlfg/@CtrlObjàObl = [Objà =? []1, Obl =? [Suj =? []1]];
+/sxlfg/@CtrlObjSuj = [Obj =? []1, Suj =? [Suj =? []1]];
+/sxlfg/@CtrlSujAtt = [Suj =? []1, Att =? [Suj =? []1]];
+/sxlfg/@CtrlSujLoc = [Suj =? []1, Loc =? [Suj =? []1]];
+/sxlfg/@CtrlSujObj = [Suj =? []1, Obj =? [Suj =? []1]];
+/sxlfg/@CtrlSujObjde = [Suj =? []1, Objde =? [Suj =? []1]];
+/sxlfg/@CtrlSujObjà = [Suj =? []1, Objà =? [Suj =? []1]];
+/sxlfg/@AttSuj = [Suj =? []1,Att =? [Suj =? []1]];
+/sxlfg/@AttObj = [Obj =? []1,Att =? [Suj =? []1]];
+
+## we now use functions rather kinds for ctrsubj
+/frmg/@CtrlObjAtt = [ctrsubj = obj];
+/frmg/@CtrlObjObl = [ctrsubj = obj];
+/frmg/@CtrlSujObl = [ctrsubj = suj];
+/frmg/@CtrlObjObjde = [ctrsubj = obj];
+/frmg/@CtrlObjObjà = [ctrsubj = obj];
+/frmg/@CtrlObjàObj = [ctrsubj = objà];
+/frmg/@CtrlObjàSuj = [ctrsubj = objà];
+/frmg/@CtrlObjàObl = [ctrsubj = objà];
+/frmg/@CtrlObjSuj = [ctrsubj = obj];
+/frmg/@CtrlSujAtt = [ctrsubj = suj];
+/frmg/@CtrlSujLoc = [ctrsubj = suj];
+/frmg/@CtrlSujObj = [ctrsubj = suj];
+/frmg/@CtrlSujObjde = [ctrsubj = suj];
+/frmg/@CtrlSujObjà = [ctrsubj = suj];
+/frmg/@AttSuj = [ctrsubj = suj];
+/frmg/@AttObj = [ctrsubj = obj];
+

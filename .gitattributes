@@ -7,3 +7,6 @@ resources/lefff-3.4/LICENSE-LGPLLR -text
 resources/grammalecte-2.3.0/LICENSE-GPL3 -text
 resources/grammalecte-2.3.0/conj.py -text
 resources/grammalecte-2.3.0/upstream-README.txt -text
+resources/lefff-syntax/** -text -whitespace
+resources/lefff-syntax/provenance.json text eol=lf
+resources/lefff-syntax/README.md text eol=lf

@@ -45,7 +45,7 @@ async function check(page) {
   assert.ok(before.records.length && before.cards.flat().length && before.audio.some((bytes) => bytes?.length) && Object.keys(audio).length, 'Use an existing learning/audio fixture');
   const results = await page.evaluate(async () => {
     const invoke = window.__TAURI_INTERNALS__.invoke, results = {};
-    for (const key of ['avons aimé', 'aie aimé', 'je suis allée', 'en ayant aimé', 'je avons aimé', 'sommes', 'suis', 'paie', 'falloir', 'enfuir', 'voilà', 'SOMMES', "' OR 1=1 --"]) results[key] = await invoke('conjugation_lookup', { key });
+    for (const key of ['avons aimé', 'aie aimé', 'je suis allée', 'en ayant aimé', 'j’ai abélisé', 'je suis monté', 'j’ai monté', 'j’habite', 'je hais', 'gésir', 'j’occirai', 'ayons chu', 'il est avenu', 'j’ai pu', 'aie occis', 'il stupéfait', 'aie stupéfait', 'aie forclos', 'j’abstiens', 'j’ai parvenu', 'je avons aimé', 'sommes', 'suis', 'paie', 'falloir', 'enfuir', 'voilà', 'SOMMES', "' OR 1=1 --"]) results[key] = await invoke('conjugation_lookup', { key });
     for (const key of ['', '\u0000', 'é'.repeat(257)]) {
       try { await invoke('conjugation_lookup', { key }); throw new Error('Invalid input accepted'); }
       catch (error) { if (error.code !== 'invalid_query') throw error; }
@@ -81,6 +81,17 @@ async function check(page) {
   }
   assert.equal(results['je avons aimé'].tables.length, 0);
   assert.ok(results['en ayant aimé'].tables.some((table) => table.lemma === 'aimer'));
+  for (const query of ['j’abstiens', 'j’ai parvenu']) assert.equal(results[query].tables.length, 0);
+  assert.deepEqual(results['j’ai pu'].tables.map((table) => table.lemma), ['paître', 'pouvoir']);
+  for (const [query, lemma] of [['j’ai abélisé', 'abéliser'], ['je suis monté', 'monter'], ['j’ai monté', 'monter'], ['j’habite', 'habiter'], ['je hais', 'haïr'], ['j’occirai', 'occire'], ['ayons chu', 'choir'], ['il est avenu', 'avenir'], ['aie occis', 'occire'], ['il stupéfait', 'stupéfaire'], ['aie stupéfait', 'stupéfaire'], ['aie forclos', 'forclore']]) {
+    assert.ok(results[query].tables.some((table) => table.lemma === lemma));
+    await page.getByLabel('法语动词或简单变位词形').fill(query);
+    await page.getByRole('button', { name: '查询变位', exact: true }).click();
+    await expect(page.locator('.conjugation-expression[data-matched=true]').filter({ hasText: new RegExp(`^${query}$`, 'u') }).first()).toHaveText(query);
+  }
+  await page.getByLabel('法语动词或简单变位词形').fill('gésir');
+  await page.getByRole('button', { name: '查询变位', exact: true }).click();
+  for (const code of ['PC', 'J', 'YP']) await expect(page.locator(`[data-tense=${code}]`)).toContainText('不适用（已验证）');
   await page.screenshot({ path: join(destination, 'ordinary.png'), fullPage: true });
   await page.getByLabel('法语动词或简单变位词形').fill('suis');
   await page.getByRole('button', { name: '查询变位', exact: true }).click();

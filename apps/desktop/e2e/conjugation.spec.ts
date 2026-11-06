@@ -24,7 +24,27 @@ test('ordinary compounds expose every interpretation and complete agreement alte
   await expect(page.locator('.conjugation-expression[data-matched=true]')).toHaveText(['je suis allée']);
   await input.fill('habite'); await input.press('Enter');
   await expect(page.locator('[data-tense=P]')).not.toContainText('je habite');
-  await expect(page.locator('[data-tense=P]')).toContainText('主语省音未确认');
+  await expect(page.locator('[data-tense=P]')).toContainText('j’habite');
+  await expect(page.locator('[data-tense=P]')).not.toContainText('主语省音未确认');
+  for (const query of ['j’ai abélisé', 'je suis monté', 'j’ai monté']) {
+    await input.fill(query); await input.press('Enter');
+    await expect(page.locator('.conjugation-expression[data-matched=true]')).toHaveText([query]);
+    await expect(page.locator('[data-tense=PC] .conjugation-cell').first()).not.toContainText('未确认');
+  }
+  await input.fill('gésir'); await input.press('Enter');
+  for (const code of ['PC', 'J', 'YP']) await expect(page.locator(`[data-tense=${code}]`)).toContainText('不适用（已验证）');
+  for (const query of ['j’occirai', 'il est avenu', 'ayons chu', 'aie occis', 'il stupéfait', 'aie stupéfait', 'aie forclos']) {
+    await input.fill(query); await input.press('Enter');
+    await expect(page.locator('.conjugation-expression[data-matched=true]').filter({ hasText: new RegExp(`^${query}$`, 'u') }).first()).toHaveText(query);
+  }
+  await input.fill('aie occis'); await input.press('Enter');
+  await expect(page.locator('.conjugation-cell[data-matched=true]')).toHaveCount(2);
+  await expect(page.locator('[data-tense=Y]')).not.toContainText('未确认');
+  await input.fill('j’ai pu'); await input.press('Enter');
+  await expect(page.getByRole('group', { name: '匹配动词' }).getByRole('button')).toHaveCount(2);
+  await page.getByRole('button', { name: /^paître/ }).click();
+  await expect(page.locator('[data-tense=PC]')).toContainText('鹰猎用语');
+  await expect(page.locator('[data-tense=K]')).toContainText('鹰猎用语');
   await input.fill('je avons aimé'); await input.press('Enter');
   await expect(page.locator('.conjugation-table')).toHaveCount(0);
 });

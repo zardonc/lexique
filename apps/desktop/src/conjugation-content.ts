@@ -6,7 +6,7 @@ const en = {
   choose: 'Choose a verb to open its table.', group: 'Group', irregular: 'irregular', auxiliary: 'Auxiliary',
   meaning: 'English meaning unavailable', unconfirmed: 'Unconfirmed', notApplicable: 'Not applicable (verified)',
   absent: 'No confirmed source form', priority: 'Priority tense', exact: 'Exact match', source: 'Source details',
-  sourceOnly: 'Lefff 3.4 source forms · Grammalecte 2.3.0 forms/metadata · ordinary construction rules v1. Missing forms do not establish defectiveness.',
+  sourceOnly: 'Lefff 3.4 forms and Lefff syntactic frames · Grammalecte 2.3.0 forms · RosaeNLG subject elision · ordinary construction rules v1. Missing forms do not establish defectiveness.',
   rawOnly: 'Pronominal construction unconfirmed; source words are shown without a constructed expression.',
   elision: 'Subject elision unconfirmed; source word shown.',
   expression: 'Complete expression unconfirmed; source word shown.', usage: 'Use',
@@ -15,7 +15,7 @@ const en = {
   gender: 'Gender / number unspecified', other: 'Unclassified source forms',
   missing: 'Bundled conjugation resource is missing.', corrupt: 'Bundled conjugation resource is corrupt.',
   query_failed: 'Conjugation lookup failed.', invalid_query: 'Enter a valid French verb or simple form.',
-  uses: { impersonal: 'impersonal', indirect_transitive: 'indirect transitive', intransitive: 'intransitive',
+  uses: { historical: 'historical verb', rare: 'rare attested form', falconry: 'falconry', falconry_participle: 'past participle and compounds: falconry only', non_ordinary_source_identity: 'source identity without ordinary infinitival use', impersonal: 'impersonal', indirect_transitive: 'indirect transitive', intransitive: 'intransitive',
     pronominal_only: 'pronominal only', transitive: 'transitive', action: 'action', 'live or last': 'live or last',
     'ordinary active': 'ordinary active', 'ordinary active; sense mapping unconfirmed': 'ordinary active; sense mapping unconfirmed',
     'remain in a state': 'remain in a state', 'resulting state': 'resulting state' },
@@ -28,7 +28,7 @@ const fr: typeof en = {
   choose: 'Choisissez un verbe pour ouvrir son tableau.', group: 'Groupe', irregular: 'irrégulier', auxiliary: 'Auxiliaire',
   meaning: 'Sens anglais indisponible', unconfirmed: 'Non confirmé', notApplicable: 'Sans objet (vérifié)',
   absent: 'Aucune forme source confirmée', priority: 'Temps prioritaire', exact: 'Correspondance exacte', source: 'Détails de la source',
-  sourceOnly: 'Formes du Lefff 3.4 · formes et emplois de Grammalecte 2.3.0 · constructions ordinaires v1. Une forme absente ne prouve pas un emploi défectif.',
+  sourceOnly: 'Formes du Lefff 3.4 et cadres syntaxiques Lefff · formes de Grammalecte 2.3.0 · élision RosaeNLG · constructions ordinaires v1. Une forme absente ne prouve pas un emploi défectif.',
   rawOnly: 'Construction pronominale non confirmée ; mots sources présentés sans expression construite.',
   elision: 'Élision du sujet non confirmée ; mot source présenté.',
   expression: 'Expression complète non confirmée ; mot source présenté.', usage: 'Emploi',
@@ -37,7 +37,7 @@ const fr: typeof en = {
   gender: 'Genre / nombre non précisé', other: 'Formes sources non classées',
   missing: 'La ressource de conjugaison intégrée est absente.', corrupt: 'La ressource de conjugaison intégrée est corrompue.',
   query_failed: 'Échec de la recherche de conjugaison.', invalid_query: 'Saisissez un verbe français ou une forme simple valide.',
-  uses: { impersonal: 'impersonnel', indirect_transitive: 'transitif indirect', intransitive: 'intransitif',
+  uses: { historical: 'verbe historique', rare: 'forme rare attestée', falconry: 'fauconnerie', falconry_participle: 'participe passé et composés : fauconnerie seulement', non_ordinary_source_identity: 'entrée source sans emploi infinitif ordinaire', impersonal: 'impersonnel', indirect_transitive: 'transitif indirect', intransitive: 'intransitif',
     pronominal_only: 'essentiellement pronominal', transitive: 'transitif', action: 'action', 'live or last': 'vivre ou durer',
     'ordinary active': 'actif non pronominal', 'ordinary active; sense mapping unconfirmed': 'actif non pronominal ; sens non confirmé',
     'remain in a state': 'rester dans un état', 'resulting state': 'état résultant' },
@@ -50,7 +50,7 @@ const zh: typeof en = {
   choose: '选择动词以打开变位表。', group: '动词组', irregular: '不规则', auxiliary: '助动词',
   meaning: '英语释义暂缺', unconfirmed: '未确认', notApplicable: '不适用（已验证）',
   absent: '没有已确认的源词形', priority: '优先时态', exact: '完全匹配', source: '来源详情',
-  sourceOnly: 'Lefff 3.4 源词形 · Grammalecte 2.3.0 词形及用法 · 普通结构规则 v1。缺少词形不代表该动词为缺陷动词。',
+  sourceOnly: 'Lefff 3.4 词形与 Lefff 句法框架 · Grammalecte 2.3.0 词形 · RosaeNLG 主语省音 · 普通结构规则 v1。缺少词形不代表该动词为缺陷动词。',
   rawOnly: '代词式结构未确认；仅显示源词形，不构造完整表达。', elision: '主语省音未确认；仅显示源词形。',
   expression: '完整表达未确认；仅显示源词形。', usage: '用法',
   historical: '“Conditionnel passé deuxième forme” 是虚拟式愈过去时的旧称，不另设重复区块。',
@@ -58,7 +58,7 @@ const zh: typeof en = {
   gender: '性 / 数未指定', other: '未分类的源词形',
   missing: '内置变位资源不存在。', corrupt: '内置变位资源已损坏。',
   query_failed: '变位查询失败。', invalid_query: '请输入有效的法语动词或简单变位词形。',
-  uses: { impersonal: '无人称', indirect_transitive: '间接及物', intransitive: '不及物',
+  uses: { historical: '历史动词', rare: '罕用但有据的词形', falconry: '鹰猎用语', falconry_participle: '过去分词与复合式仅用于鹰猎', non_ordinary_source_identity: '无普通不定式用法的源身份', impersonal: '无人称', indirect_transitive: '间接及物', intransitive: '不及物',
     pronominal_only: '仅代词式', transitive: '及物', action: '动作', 'live or last': '居住或持续',
     'ordinary active': '普通主动式', 'ordinary active; sense mapping unconfirmed': '普通主动式；词义对应未确认',
     'remain in a state': '保持某种状态', 'resulting state': '结果状态' },
@@ -66,5 +66,5 @@ const zh: typeof en = {
 export const conjugationMessages = { en, fr, zh };
 export type ConjugationText = typeof en;
 export function conjugationUse(text: ConjugationText, use: string): string {
-  return text.uses[use as keyof typeof text.uses] ?? text.unconfirmed;
+  return use.split('; ').map((label) => text.uses[label as keyof typeof text.uses] ?? text.unconfirmed).join(' / ');
 }

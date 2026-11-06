@@ -72,10 +72,92 @@ class ConjugationCliTests(unittest.TestCase):
                              ("suis rentré", "rentrer"), ("ai rentré", "rentrer")):
             table = next(t for t in self.read("query", query)["tables"] if t["lemma"] == lemma)
             self.assertTrue(any(c["matched"] for c in table["cells"]))
-        # OQLF's transitive rule closes incomplete auxiliary metadata without a default guess.
+        # The admitted syntactic frames preserve both ordinary uses.
         verb = self.read("table", "aboyer")["tables"][0]["verb"]
-        self.assertEqual(verb["auxiliaries"], [{"lemma": "avoir", "use": "transitive"}])
-        self.assertTrue(verb["correction"]["references"])
+        self.assertEqual(verb["auxiliaries"], [{"lemma": "avoir", "use": "intransitive; transitive"}])
+        self.assertTrue(verb["source"]["syntax"]["entries"])
+
+    def test_syntactic_source_closes_rare_and_multiple_auxiliary_gaps(self):
+        for query, lemma in (("j’ai abélisé", "abéliser"), ("nous avons abondé", "abonder"),
+                             ("j’ai différentié", "différentier"), ("j’ai doué", "douer"),
+                             ("je suis monté", "monter"), ("j’ai monté", "monter"),
+                             ("je suis remontée", "remonter"), ("j’ai remonté", "remonter")):
+            with self.subTest(query=query):
+                result = self.read("query", query)
+                self.assertIn(lemma, [t["lemma"] for t in result["tables"]])
+                verb = next(t["verb"] for t in result["tables"] if t["lemma"] == lemma)
+                self.assertTrue(verb["source"]["syntax"]["entries"])
+        for lemma in ("agenouiller", "abstenir"):
+            verb = self.read("table", lemma)["tables"][0]["verb"]
+            self.assertEqual(verb["ordinary_status"], "not_applicable")
+        self.assertEqual(self.read("query", "j’ai agenouillé")["status"], "not_found")
+        for query in ("j’abstiens", "j’agenouille", "je voilà"):
+            self.assertEqual(self.read("query", query)["status"], "not_found")
+        for query, lemma in (("je suis parvenue", "parvenir"), ("elle est née", "naître"), ("je suis resté", "rester")):
+            self.assertIn(lemma, [t["lemma"] for t in self.read("query", query)["tables"]])
+        for query in ("j’ai parvenu", "j’ai né", "j’ai resté"):
+            self.assertEqual(self.read("query", query)["status"], "not_found")
+        for query, lemma in (("j’ai démoralisé", "démoraliser"), ("j’ai scandalisé", "scandaliser"),
+                             ("j’ai évaporé", "évaporer"), ("j’ai métabolisé", "métaboliser"), ("j’ai ranci", "rancir")):
+            self.assertIn(lemma, [t["lemma"] for t in self.read("query", query)["tables"]])
+
+    def test_full_resource_has_no_unresolved_ordinary_block_admission(self):
+        report = json.loads((self.output / "report.json").read_text(encoding="utf-8"))
+        for code, counts in report["block_coverage"].items():
+            with self.subTest(block=code):
+                self.assertEqual(sum(counts.values()), 7826)
+                self.assertEqual(counts.get("unconfirmed", 0), 0)
+                self.assertEqual(counts.get("missing", 0), 0)
+        for lemma in ("accroire", "quérir", "ravoir", "gésir"):
+            verb = self.read("table", lemma)["tables"][0]["verb"]
+            self.assertEqual(verb["blocks"]["PC"], "not_applicable")
+
+    def test_subject_elision_uses_lexical_h_and_y_evidence(self):
+        for query, lemma in (("j’habite", "habiter"), ("je hais", "haïr"),
+                             ("je hurle", "hurler"), ("je harcèle", "harceler"),
+                             ("je hèle", "héler"), ("je yorubaïse", "yorubaïser")):
+            with self.subTest(query=query):
+                self.assertIn(lemma, [t["lemma"] for t in self.read("query", query)["tables"]])
+        for query in ("je habite", "j’hais", "j’hurle", "j’harcèle", "j’hèle", "j’yorubaïse"):
+            self.assertEqual(self.read("query", query)["status"], "not_found")
+
+    def test_positively_attested_rare_forms_override_source_omissions_with_use_labels(self):
+        for query, lemma, tense in (("j’occirai", "occire", "F"), ("j’occirais", "occire", "C"),
+                                    ("je suis chue", "choir", "PC"), ("ayons chu", "choir", "YP"),
+                                    ("il est avenu", "avenir", "PC"), ("elles sont avenues", "avenir", "PC"),
+                                    ("il aviendra", "avenir", "F"), ("aie occis", "occire", "YP"),
+                                    ("il stupéfait", "stupéfaire", "P"), ("aie stupéfait", "stupéfaire", "YP"),
+                                    ("aie forclos", "forclore", "YP")):
+            with self.subTest(query=query):
+                matches = self.read("query", query)["matches"]
+                self.assertTrue(any(c["lemma"] == lemma and c["tense"] == tense for c in matches))
+        self.assertEqual({(c["tense"], c["person"], c["number"]) for c in self.read("query", "aie occis")["matches"]},
+                         {("SP", "1", "s"), ("YP", "2", "s")})
+        tables = self.read("query", "j’ai pu")["tables"]
+        self.assertEqual({t["lemma"] for t in tables}, {"paître", "pouvoir"})
+        verb = next(t["verb"] for t in tables if t["lemma"] == "paître")
+        self.assertIn("falconry_participle", verb["usage_labels"])
+        self.assertEqual(verb["auxiliaries"][0]["use"], "falconry")
+        self.assertEqual(self.read("query", "je suis avenu")["status"], "not_found")
+
+    def test_syntax_inputs_and_stale_converters_fail_without_replacing_output(self):
+        source = Path(self.temporary.name) / "syntax"
+        shutil.copytree(self.output / "lefff-syntax", source)
+        for name in ("v_new.ilex.gz", "morpho.fr", "rosaenlg-hmuet.ts", "provenance.json", "LICENSE"):
+            path = source / name
+            original = path.read_bytes()
+            path.write_bytes(b"corrupt")
+            output = Path(self.temporary.name) / "bad-syntax"
+            result = run_cli("build", output, "--syntax-source", source)
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("Conjugation resource error:", result.stderr)
+            self.assertFalse(output.exists())
+            path.write_bytes(original)
+        stale = Path(self.temporary.name) / "stale-converter"
+        shutil.copytree(self.output, stale)
+        (stale / "conjugation_generation.py").write_text("stale", encoding="utf-8")
+        self.assertIn("converter differs", run_cli("prepare", stale).stderr)
+        self.assertEqual((stale / "conjugation_generation.py").read_text(), "stale")
 
     def test_prepare_reuses_the_resource_and_refuses_damaged_output(self):
         prepared = Path(self.temporary.name) / "prepared"
@@ -155,7 +237,7 @@ class ConjugationCliTests(unittest.TestCase):
         self.assertIsNone(unknown["verb"]["source"])
         incomplete = self.read("table", "aboyer")["tables"][0]["verb"]
         self.assertEqual(incomplete["auxiliary_status"], "supported")
-        self.assertEqual(incomplete["auxiliaries"], [{"lemma": "avoir", "use": "transitive"}])
+        self.assertEqual(incomplete["auxiliaries"], [{"lemma": "avoir", "use": "intransitive; transitive"}])
         ambiguous = self.read("table", "ressortir")["tables"][0]["verb"]
         self.assertIsNone(ambiguous["group"])
         self.assertEqual(ambiguous["group_status"], "unconfirmed")
@@ -173,6 +255,7 @@ class ConjugationCliTests(unittest.TestCase):
             directory = Path(temporary)
             path = directory / "resource.sqlite3"
             shutil.copytree(self.output / "grammalecte-2.3.0", directory / "grammalecte-2.3.0")
+            shutil.copytree(self.output / "lefff-syntax", directory / "lefff-syntax")
             malformed = self.read("table", "aimer")["tables"][0]["verb"]
             malformed["auxiliaries"] = [{"lemma": "être"}]
             for statement, parameters in [
@@ -277,6 +360,8 @@ class ConjugationCliTests(unittest.TestCase):
                          "corrections.json", "upstream-README.txt", "README.md"):
                 self.assertEqual((output / "grammalecte-2.3.0" / name).read_bytes(),
                                  (VERB_RESOURCE / name).read_bytes())
+            for path in (CLI.parent.parent / "resources/lefff-syntax").iterdir():
+                self.assertEqual((output / "lefff-syntax" / path.name).read_bytes(), path.read_bytes())
 
 
 if __name__ == "__main__":

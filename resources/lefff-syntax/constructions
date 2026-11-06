@@ -1,0 +1,67 @@
+%passif_impersonnel = %passif + %impersonnel
+%ppp_employé_comme_adj = %passif
+		       + {Cat adj} + {cat=v cat=adj} 
+		       + ?{Obj -cla} + ?{Objde -clg} + ?{Objà -cld -cll} + ?{Loc -cll} 
+		       + {@passive } + ?{@AttSubj }
+%actif = Infinitive:{Suj ()}
+       + PastParticiple:{Macros @active} 
+       + {Macros @pers}
+       + Imperative:{Macros @imperative} + Imperative:?{@CtrlObjSuj } + Imperative:?{@CtrlObjàSuj } + Imperative:?{@CtrlObjdeSuj }
+%impersonnel = {Skip Imperative} + {Skip Default} + {@pers @impers} + {Suj <Suj[cln>,sinf>de-sinf]}
+%actif_impersonnel = %actif + %impersonnel
+%actif_impersonnel_compl = %actif + %impersonnel + {Suj <Suj[cln>,sinf>,de-sinf>,sn>,qcompl>]}
+%actif_impersonnel_ça = %actif
+	     + {Skip Imperative} + {Skip Default} + {@pers @impers} + {Suj <Suj[cln>,sinf>de-sinf]}
+%passif = {Only PastParticiple}
+	+ ?{@avoir } + ?{@être } 
+	+ {Macros @pers} + {Macros @passive}
+	+ {Suj <Obj[cla>cln,de-sinf>sinf,seréfl>,seréc>]} + {Suj )(} + {Obl2 (par-sn)}
+	+ ?{@CtrlSuj.* } + ?{@CtrlObjObjà @CtrlSujObjà} + ?{@CtrlObjObjde @CtrlSujObjde} + ?{@CtrlObj.* }
+	+ ?{@AttSuj }+ ?{@AttObj @AttSuj}
+	+ ?{@Comp.* }
+%passif_de = {Only PastParticiple}
+	+ ?{@avoir } + ?{@être } 
+	+ {Macros @pers} + {Macros @passive}
+	+ {Suj <Obj[cla>cln,de-sinf>sinf]} + {Suj )(} + {Obl2 (de-sn)}
+	+ ?{@CtrlSuj.* } + ?{@CtrlObjObjà @CtrlSujObjà} + ?{@CtrlObjObjde @CtrlSujObjde} + ?{@CtrlObj.* }
+	 + ?{@AttSuj }+ ?{@AttObj @AttSuj}
+	+ ?{@Comp.* }
+%passif_à_sinf2de_sinf = %passif
+        + {Objde <Objde[à-sinf>de-sinf]}
+%se_moyen = %actif 
+	  + ?{@avoir }
+	  + {Macros @se_moyen,@être}  + {0 se}
+	  + {Suj <Obj[cla>,de-sinf>sinf,seréfl>,seréc>]} + {Suj )(} + ?{@Ctrl.* }
+	  + ?{@AttSuj } + ?{@AttObj @AttSuj} + ?{@Comp.* }
+%se_moyen_impersonnel = %se_moyen + %impersonnel
+%se_moyen_ou_neutre = %se_moyen
+%se_neutre = {Only Default} + {Skip Default}
+%verbe_de_citation = %actif
+		   + {Skip Imperative}
+		   + {Suj -scompl -sinf -de-scompl -de-sinf}
+		   + {Obj 0}
+		   + {Macros @report_verb}
+%verbe_de_citation_2 = %actif
+		   + {Skip Imperative}
+		   + {Suj -scompl -sinf -de-scompl -de-sinf}
+		   + {Objde 0}
+		   + {Macros @report_verb}
+%adj_personnel = {Macros @pers} + Poss:{Macros @internal_Objde}
+%adj_impersonnel = {Macros @impers} + {Suj <Suj[cln>,sinf>de-sinf]}
+
+%%agentif-eur = %%nom_déverbal + %%agentif
+%%nom_déverbal = ?{Obj <Obj[cla>,sn>de-sn]}
+	       + ?{Objde ()} + ?{Objde <Objde[clg>,]}
+	       + ?{Objà <Objà[cll>,cld>]}
+	       + {cat=v cat=nc} + {Cat nc}
+%%agentif = {Skip @pron} + {Suj 0}
+%%causatif_déadjectival-ir(%actif,%passif) = %%verbe_déadjectival + %%causatif # passivable!!!
+%%verbe_déadjectival(%actif,%passif) = {cat=adj cat=v} + {Cat v}
+%%causatif(%actif,%passif) = {Obj <Suj[sn>sn|cla]} + {Suj sn|cln}
+%%adjectif_nominalisé = %%nom_déadjectival
+%%nom_déadjectival = {cat=adj cat=n} + {Cat nc}
+%%péjoratif-âtre = 
+%%dé-nominatif(%adj_personnel,%adj_impersonnel) = {Suj <Objde[de-sn>sn,de-scompl>scompl,de-sinf>sinf,clg>]}
+%%nom_d_action-ation = {Suj <Suj[sn>par-sn,cln>,sinf>,de-sinf>,scompl>]}
+		     + {Obj <Obj[sn>de-sn,cla>,sinf>,de-sinf>,scompl>,de-scompl>]}
+		     + {Suj ()} + {cat=v cat=n} + {Cat nc}

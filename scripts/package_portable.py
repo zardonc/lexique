@@ -91,11 +91,14 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
         "Try: école, œil, aujourd’hui, or, vacances.\n"
         "Project code: MIT (LICENSE). Dictionary: CC BY-SA 3.0 (dictionary/COPYING).\n"
         "Conjugation: Lefff forms LGPL-LR (conjugation/LICENSE-LGPLLR), Grammalecte forms/metadata\n"
-        "GPL-3.0-only (conjugation/grammalecte-2.3.0/LICENSE-GPL3). Raw sources, provenance,\n"
-        "corrections, decoder and MIT conversion scripts accompany the SQLite resource.\n\n"
+        "GPL-3.0-only (conjugation/grammalecte-2.3.0/LICENSE-GPL3).\n"
+        "Lefff syntax (LGPL-LR) and RosaeNLG elision data (CC BY-SA 3.0) are in\n"
+        "conjugation/lefff-syntax/ with attribution and separate reference-code licenses.\n"
+        "Raw sources, provenance, corrections, decoder and MIT converters accompany the resource.\n\n"
         "Rebuild conjugation with Python 3.12+ (standard library only): in a new workspace,\n"
         "copy conjugation/conjugation_*.py into scripts/, LICENSE into the workspace root,\n"
         "and conjugation/grammalecte-2.3.0/ into resources/grammalecte-2.3.0/. Copy\n"
+        "conjugation/lefff-syntax/ into resources/lefff-syntax/. Copy\n"
         "conjugation/lefff-3.4.mlex.gz, provenance.json, README.md and LICENSE-LGPLLR into\n"
         "resources/lefff-3.4/. Run python -X utf8 scripts/conjugation_sample.py build target/rebuilt.\n",
         encoding="utf-8",

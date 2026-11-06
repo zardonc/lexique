@@ -2,27 +2,308 @@
   "aller": {
     "group": 3,
     "note": "Traditional group 3; the upstream conjugator's internal group 1 is not the requested pedagogical classification.",
-    "references": ["https://www.dictionnaire-academie.fr/conjuguer/A9A1226"]
+    "references": [
+      "https://www.dictionnaire-academie.fr/conjuguer/A9A1226"
+    ]
   },
   "descendre": {
-    "auxiliaries": [{"lemma": "avoir", "use": "transitive"}, {"lemma": "être", "use": "intransitive"}],
+    "auxiliaries": [
+      {
+        "lemma": "avoir",
+        "use": "transitive"
+      },
+      {
+        "lemma": "être",
+        "use": "intransitive"
+      }
+    ],
     "note": "The upstream raw type lists avoir only; ordinary intransitive use also takes être.",
-    "references": ["https://www.dictionnaire-academie.fr/conjuguer/A9D1797"]
+    "references": [
+      "https://www.dictionnaire-academie.fr/conjuguer/A9D1797"
+    ]
   },
   "accourir": {
-    "auxiliaries": [{"lemma": "avoir", "use": "action"}, {"lemma": "être", "use": "resulting state"}],
+    "auxiliaries": [
+      {
+        "lemma": "avoir",
+        "use": "action"
+      },
+      {
+        "lemma": "être",
+        "use": "resulting state"
+      }
+    ],
     "note": "Both ordinary auxiliaries are attested; upstream lists only avoir.",
-    "references": ["https://www.larousse.fr/conjugaison/francais/accourir/98"]
+    "references": [
+      "https://www.larousse.fr/conjugaison/francais/accourir/98"
+    ]
   },
   "demeurer": {
-    "auxiliaries": [{"lemma": "avoir", "use": "live or last"}, {"lemma": "être", "use": "remain in a state"}],
+    "auxiliaries": [
+      {
+        "lemma": "avoir",
+        "use": "live or last"
+      },
+      {
+        "lemma": "être",
+        "use": "remain in a state"
+      }
+    ],
     "note": "Ordinary auxiliary depends on meaning; upstream lists only avoir.",
-    "references": ["https://dictionnaire.lerobert.com/definition/demeurer"]
+    "references": [
+      "https://dictionnaire.lerobert.com/definition/demeurer"
+    ]
   },
   "ressortir": {
     "group": null,
     "group_status": "unconfirmed",
     "note": "Homographic group-2 and group-3 uses require sense separation before assigning one traditional group to this source lemma.",
-    "references": ["https://college.lerobert.com/demo/helpclg/pdf/conjugaisons.pdf"]
+    "references": [
+      "https://college.lerobert.com/demo/helpclg/pdf/conjugaisons.pdf"
+    ]
+  },
+  "rester": {
+    "auxiliaries": [
+      {
+        "lemma": "être",
+        "use": "ordinary active"
+      }
+    ],
+    "note": "Modern ordinary reference forms use être; the Lefff optional-auxiliary frame is not projected as an unlabelled modern avoir alternative.",
+    "references": [
+      "https://vitrinelinguistique.oqlf.gouv.qc.ca/24584/la-grammaire/le-verbe/auxiliaires/tableau-synthese-de-lemploi-des-auxiliaires-avoir-et-etre"
+    ]
+  },
+  "choir": {
+    "auxiliaries": [
+      {
+        "lemma": "avoir",
+        "use": "intransitive"
+      },
+      {
+        "lemma": "être",
+        "use": "intransitive"
+      }
+    ],
+    "forms": [
+      {
+        "form": "chois",
+        "tense": "Y",
+        "person": "2",
+        "number": "s"
+      }
+    ],
+    "compound_imperative_persons": [
+      "2s",
+      "1p",
+      "2p"
+    ],
+    "note": "The modern Académie table admits both auxiliaries, singular present imperative and all three compound imperative persons.",
+    "references": [
+      "https://www.dictionnaire-academie.fr/conjuguer/A9C2105"
+    ],
+    "unavailable_cells": [
+      "Y/1p",
+      "Y/2p"
+    ]
+  },
+  "occire": {
+    "forms": [
+      {
+        "form": "occirai",
+        "tense": "F",
+        "person": "1",
+        "number": "s"
+      },
+      {
+        "form": "occiras",
+        "tense": "F",
+        "person": "2",
+        "number": "s"
+      },
+      {
+        "form": "occira",
+        "tense": "F",
+        "person": "3",
+        "number": "s"
+      },
+      {
+        "form": "occirons",
+        "tense": "F",
+        "person": "1",
+        "number": "p"
+      },
+      {
+        "form": "occirez",
+        "tense": "F",
+        "person": "2",
+        "number": "p"
+      },
+      {
+        "form": "occiront",
+        "tense": "F",
+        "person": "3",
+        "number": "p"
+      },
+      {
+        "form": "occirais",
+        "tense": "C",
+        "person": "1",
+        "number": "s"
+      },
+      {
+        "form": "occirais",
+        "tense": "C",
+        "person": "2",
+        "number": "s"
+      },
+      {
+        "form": "occirait",
+        "tense": "C",
+        "person": "3",
+        "number": "s"
+      },
+      {
+        "form": "occirions",
+        "tense": "C",
+        "person": "1",
+        "number": "p"
+      },
+      {
+        "form": "occiriez",
+        "tense": "C",
+        "person": "2",
+        "number": "p"
+      },
+      {
+        "form": "occiraient",
+        "tense": "C",
+        "person": "3",
+        "number": "p"
+      }
+    ],
+    "note": "Larousse explicitly admits future and conditional forms omitted by the other sources; reference policy preserves positively attested rare forms. Académie explicitly admits all three compound imperative persons despite no simple imperative.",
+    "references": [
+      "https://www.larousse.fr/conjugaison/francais/occire-conditionnel/9794",
+      "https://www.dictionnaire-academie.fr/conjuguer/A9O0126"
+    ],
+    "compound_imperative_persons": [
+      "2s",
+      "1p",
+      "2p"
+    ]
+  },
+  "paître": {
+    "auxiliaries": [
+      {
+        "lemma": "avoir",
+        "use": "falconry"
+      }
+    ],
+    "usage_labels": [
+      "falconry_participle"
+    ],
+    "forms": [
+      {
+        "form": "pu",
+        "tense": "K",
+        "gender": "m",
+        "number": "s",
+        "use": "falconry"
+      },
+      {
+        "form": "pue",
+        "tense": "K",
+        "gender": "f",
+        "number": "s",
+        "use": "falconry"
+      },
+      {
+        "form": "pus",
+        "tense": "K",
+        "gender": "m",
+        "number": "p",
+        "use": "falconry"
+      },
+      {
+        "form": "pues",
+        "tense": "K",
+        "gender": "f",
+        "number": "p",
+        "use": "falconry"
+      }
+    ],
+    "note": "The Académie article restricts past participle pu to falconry; its conjugation table explicitly dimensions all four participles and admits compounds. Other simple forms are not restricted by this note.",
+    "references": [
+      "https://www.dictionnaire-academie.fr/article/A9P0092",
+      "https://www.dictionnaire-academie.fr/conjuguer/A9P0092"
+    ]
+  },
+  "avenir": {
+    "model": "venir",
+    "persons": [
+      "3s",
+      "3p"
+    ],
+    "auxiliaries": [
+      {
+        "lemma": "être",
+        "use": "historical"
+      }
+    ],
+    "usage_labels": [
+      "historical"
+    ],
+    "forms": [
+      {
+        "form": "avenoit",
+        "tense": "I",
+        "person": "3",
+        "number": "s",
+        "use": "historical"
+      },
+      {
+        "form": "aviendroit",
+        "tense": "C",
+        "person": "3",
+        "number": "s",
+        "use": "historical"
+      }
+    ],
+    "note": "Historical verb, using the licensed venir morphology model with the avenir stem. Académie fifth edition restricts it to third persons and explicitly attests avint, avienne, aviendra/aviendront, avient, avenant, avenu/avenue, est avenu and sont avenues. Original historical spellings are retained beside model forms. This is not the modern noun avenir.",
+    "references": [
+      "https://www.dictionnaire-academie.fr/article/A5A2084",
+      "https://www.littre.org/definition/avenir"
+    ]
+  },
+  "stupéfaire": {
+    "forms": [
+      {
+        "form": "stupéfait",
+        "tense": "P",
+        "person": "3",
+        "number": "s"
+      }
+    ],
+    "compound_imperative_persons": [
+      "2s",
+      "1p",
+      "2p"
+    ],
+    "note": "Le Robert explicitly admits active present third-person singular and all three compound imperative persons despite no simple imperative. Other simple finite forms remain unavailable.",
+    "references": [
+      "https://dictionnaire.lerobert.com/conjugaison/stupefaire"
+    ]
+  },
+  "forclore": {
+    "compound_imperative_persons": [
+      "2s",
+      "1p",
+      "2p"
+    ],
+    "note": "Académie explicitly admits all three active compound imperative persons despite unavailable simple imperative.",
+    "references": [
+      "https://www.dictionnaire-academie.fr/conjuguer/A9F1241"
+    ]
   }
 }

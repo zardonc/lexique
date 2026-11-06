@@ -14,6 +14,7 @@ import sqlite3
 
 from conjugation_generation import generate, query_base
 from conjugation_metadata import RESOURCE as VERB_RESOURCE, load_metadata, metadata_report, verb_metadata
+from conjugation_syntax import RESOURCE as SYNTAX_RESOURCE
 
 RESOURCE = Path(__file__).resolve().parents[1] / "resources/lefff-3.4"
 PROVENANCE = json.loads((RESOURCE / "provenance.json").read_text(encoding="utf-8"))
@@ -57,9 +58,9 @@ def source_rows(source):
     return rows, len(raw)
 
 
-def build(output, source, metadata_source=VERB_RESOURCE):
+def build(output, source, metadata_source=VERB_RESOURCE, syntax_source=SYNTAX_RESOURCE):
     rows, source_bytes = source_rows(source)
-    linguistic_data, corrections, supplemental_provenance = load_metadata(metadata_source)
+    linguistic_data, corrections, supplemental_provenance = load_metadata(metadata_source, syntax_source)
     verbs = {lemma: verb_metadata(lemma, linguistic_data, corrections) for lemma in sorted({r[2] for r in rows})}
     source_slots = len(rows)
     rows, block_coverage = generate(rows, verbs, linguistic_data)
@@ -98,9 +99,13 @@ def build(output, source, metadata_source=VERB_RESOURCE):
         shutil.copyfile(RESOURCE / name, output / name)
     supplement = output / "grammalecte-2.3.0"
     supplement.mkdir()
-    for name in (*supplemental_provenance["files"], "provenance.json"):
+    for name in (*supplemental_provenance["grammalecte"]["files"], "provenance.json"):
         shutil.copyfile(Path(metadata_source) / name, supplement / name)
-    for name in ("conjugation_sample.py", "conjugation_metadata.py", "conjugation_generation.py"):
+    syntax = output / "lefff-syntax"
+    syntax.mkdir()
+    for name in (*supplemental_provenance["lefff_syntax"]["files"], "provenance.json"):
+        shutil.copyfile(Path(syntax_source) / name, syntax / name)
+    for name in ("conjugation_sample.py", "conjugation_metadata.py", "conjugation_generation.py", "conjugation_syntax.py"):
         shutil.copyfile(Path(__file__).with_name(name), output / name)
     shutil.copyfile(RESOURCE.parents[1] / "LICENSE", output / "LICENSE-MIT")
     report = {
@@ -115,8 +120,9 @@ def build(output, source, metadata_source=VERB_RESOURCE):
         "unspecified_finite_slots": sum(r[4] is not None and r[4] in "PFIJCYST" and (r[5] is None or r[6] is None)
                                         for r in rows),
         "data_license": "LGPL-LR", "modification": PROVENANCE["modified"],
-        "metadata_license": supplemental_provenance["license"],
-        "metadata_source_bytes": supplemental_provenance["source_bytes"],
+        "metadata_license": supplemental_provenance["grammalecte"]["license"],
+        "syntax_provenance": supplemental_provenance["lefff_syntax"],
+        "metadata_source_bytes": supplemental_provenance["grammalecte"]["source_bytes"],
         "metadata_gzip_bytes": (Path(metadata_source) / "conj_data.json.gz").stat().st_size,
         "metadata_coverage": metadata_report(verbs),
     }
@@ -137,6 +143,9 @@ def prepare(output):
     for name in (SOURCE.name, "LICENSE-LGPLLR", "provenance.json", "README.md"):
         if (output / name).read_bytes() != (RESOURCE / name).read_bytes():
             raise ValueError(f"Generated conjugation resource differs from source: {name}")
+    for name in ("conjugation_sample.py", "conjugation_metadata.py", "conjugation_generation.py", "conjugation_syntax.py"):
+        if (output / name).read_bytes() != Path(__file__).with_name(name).read_bytes():
+            raise ValueError(f"Generated conjugation converter differs from source; rebuild in a new directory: {name}")
     return report
 
 
@@ -157,7 +166,8 @@ def read_resource(database, query=None, lemma=None):
                 or connection.execute("SELECT count(DISTINCT lemma) FROM slots").fetchone()[0] != metadata[0][3]
                 or connection.execute("SELECT lemma FROM slots EXCEPT SELECT lemma FROM verbs").fetchone()):
             raise ValueError("Conjugation resource metadata/count mismatch")
-        linguistic_data, corrections, supplemental_provenance = load_metadata(Path(database).resolve().parent / "grammalecte-2.3.0")
+        linguistic_data, corrections, supplemental_provenance = load_metadata(
+            Path(database).resolve().parent / "grammalecte-2.3.0", Path(database).resolve().parent / "lefff-syntax")
         if json.loads(metadata[0][2]) != supplemental_provenance:
             raise ValueError("Conjugation supplemental provenance mismatch")
         matches = [] if query is None else [dict(r) for r in connection.execute(
@@ -194,6 +204,7 @@ def main():
     builder.add_argument("output", type=Path)
     builder.add_argument("--source", type=Path, default=SOURCE)
     builder.add_argument("--metadata-source", type=Path, default=VERB_RESOURCE)
+    builder.add_argument("--syntax-source", type=Path, default=SYNTAX_RESOURCE)
     commands.add_parser("prepare").add_argument("output", type=Path)
     for command, argument in (("query", "form"), ("table", "lemma")):
         reader = commands.add_parser(command)
@@ -204,7 +215,7 @@ def main():
         if args.command == "prepare":
             result = prepare(args.output)
         elif args.command == "build":
-            result = build(args.output, args.source, args.metadata_source)
+            result = build(args.output, args.source, args.metadata_source, args.syntax_source)
         else:
             value = args.form if args.command == "query" else args.lemma
             if not value or any(ord(c) < 32 for c in value):

@@ -6,8 +6,10 @@ fn main() {
         "scripts/conjugation_sample.py",
         "scripts/conjugation_metadata.py",
         "scripts/conjugation_generation.py",
+        "scripts/conjugation_syntax.py",
         "resources/lefff-3.4",
         "resources/grammalecte-2.3.0",
+        "resources/lefff-syntax",
         "LICENSE",
     ] {
         println!("cargo:rerun-if-changed={}", root.join(source).display());

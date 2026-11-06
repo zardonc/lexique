@@ -18,11 +18,11 @@ SUBJECTS = {"1s": ["je"], "2s": ["tu"], "3s": ["il", "elle", "on"],
             "1p": ["nous"], "2p": ["vous"], "3p": ["ils", "elles"]}
 
 
-def source_form(data, lemma, tense, who):
+def source_form(data, lemma, tense, who, model=None):
     if tense == "W":
         return lemma
     family, index = SIMPLE[tense]
-    pattern = data["lTags"][data["dVerb"][lemma][1]][index]
+    pattern = data["lTags"][data["dVerb"][model or lemma][1]][index]
     suffix = data["dPatternConj"][family][pattern].get(who, "")
     if not suffix:
         return ""
@@ -30,18 +30,18 @@ def source_form(data, lemma, tense, who):
     return (lemma[:-cut] if cut else lemma) + suffix[1:]
 
 
-def expressions(form, tense, person, number, gender, impersonal):
+def expressions(form, tense, person, number, gender, impersonal, h_aspire):
     if tense in ("Y", "YP", "W", "WP", "G", "K", "KP", "GP", "GPP"):
+        return [form]
+    if impersonal and (person, number) != ("3", "s"):
         return [form]
     pronouns = ["il"] if impersonal and person == "3" and number == "s" else SUBJECTS.get(f"{person}{number}", [])
     result = []
     for subject in pronouns:
         if gender == "f" and subject in ("il", "ils") or gender == "m" and subject in ("elle", "elles"):
             continue
-        # h/y elision requires lexical information not present in these sources.
-        if subject == "je" and re.match("[hy]", form):
-            continue
-        verbal = "j’" + form if subject == "je" and re.match("[aàâeéèêëiîïoôœuùûü]", form) else subject + " " + form
+        vowel = bool(re.match("[aàâeéèêëiîïoôœuùûü]", form)) or form.startswith("h") and not h_aspire or form.startswith("y") and not re.match("y[aeiouy]", form)
+        verbal = "j’" + form if subject == "je" and vowel else subject + " " + form
         result.append(verbal)
         if tense in ("S", "T", "SP", "SQP"):
             result.append(("qu’" if verbal.startswith(("il", "elle", "on")) else "que ") + verbal)
@@ -62,9 +62,13 @@ def generate(rows, verbs, data):
         original = by_lemma[lemma]
         cells = list(original)
         seen = {(r[1], *r[4:]) for r in cells}
-        impersonal = "impersonal" in verb["usage_labels"] and not any(
-            r[4] in ("P", "I", "J", "F", "C", "S", "T") and r[5] and (r[5], r[6]) != ("3", "s") for r in original)
-        admitted = lemma in data["dVerb"] and verb["ordinary_status"] == "supported"
+        impersonal = "impersonal" in verb["usage_labels"]
+        admitted = verb["ordinary_status"] == "supported"
+        correction = verb["correction"] or {}
+        model = correction.get("model")
+        allowed_persons = correction.get("persons", ["3s"] if impersonal else list(SUBJECTS))
+        syntax = [e for e in data["syntax"].get(lemma, []) if e["ordinary"]]
+        defined = {tuple(s) for e in syntax for s in e["slots"]}
 
         def add(form, tense, person=None, number=None, gender=None, provenance="grammalecte"):
             identity = (form, tense, person, number, gender)
@@ -75,18 +79,24 @@ def generate(rows, verbs, data):
                 generated.append(cell)
 
         if admitted:
-            for tense in SIMPLE:
+            for form in correction.get("forms", []):
+                add(form["form"], form["tense"], form.get("person"), form.get("number"), form.get("gender"),
+                    "reference/" + form.get("use", "rare"))
+            # These literal source-pattern forms were omitted by the old compiled lexicon.
+            if lemma in {"déluger", "frimasser", "mouillasser", "pluvioter"}:
+                add(lemma[:-2] + "ant", "G", provenance="lefff-syntax/morpho.fr/v-er/G")
+            for tense in SIMPLE if lemma in data["dVerb"] or model else ():
                 if tense == "K":
                     for gender in "mf":
                         for number in "sp":
-                            add(source_form(data, lemma, tense, f":{gender}:{number}"), tense,
+                            add(source_form(data, lemma, tense, f":{gender}:{number}", model), tense,
                                 number=number, gender=gender)
                 elif tense == "G":
-                    add(source_form(data, lemma, tense, ":P"), tense)
+                    add(source_form(data, lemma, tense, ":P", model), tense)
                 else:
                     for person_number in SUBJECTS:
-                        if not impersonal or person_number == "3s":
-                            add(source_form(data, lemma, tense, ":" + person_number), tense,
+                        if person_number in allowed_persons:
+                            add(source_form(data, lemma, tense, ":" + person_number, model), tense,
                                 person_number[0], person_number[1])
             for row in list(cells):
                 if row[4] == "G":
@@ -98,17 +108,17 @@ def generate(rows, verbs, data):
                     for tense, base in COMPOUND.items():
                         persons = [None] if base in ("W", "G") else list(SUBJECTS)
                         for pn in persons:
-                            if pn and impersonal and pn != "3s":
+                            if pn and pn not in allowed_persons:
                                 continue
                             # A missing imperative is not licensed by an auxiliary imperative.
-                            if base == "Y" and not any(r[4] == "Y" and f"{r[5]}{r[6]}" == pn for r in cells):
+                            if base == "Y" and pn not in correction.get("compound_imperative_persons", []) and not any(r[4] == "Y" and f"{r[5]}{r[6]}" == pn for r in cells):
                                 continue
                             prefix = source_form(data, aux, base, ":" + pn if pn else ":P")
                             if not prefix:
                                 continue
                             for pp in participles:
                                 _, form, _, _, _, _, number, gender = pp
-                                if aux == "avoir" and form != source_form(data, lemma, "K", ":m:s"):
+                                if aux == "avoir" and (gender not in (None, "m") or number not in (None, "s")):
                                     continue
                                 if aux == "être" and pn and number != pn[1] and pn != "2p":
                                     continue
@@ -125,13 +135,24 @@ def generate(rows, verbs, data):
                 state = "supported"
             elif verb["ordinary_status"] == "not_applicable":
                 state = "not_applicable"
-            elif admitted and impersonal and code in ("Y", "YP"):
+            elif admitted and (impersonal and code in ("Y", "YP")
+                               or code in SIMPLE and not any(s[0] == code for s in defined)
+                               or code == "GP" and not any(s[0] == "G" for s in defined)
+                               or code in COMPOUND and not any(s[0] == "K" for s in defined)
+                               or code == "YP" and not any(s[0] == "Y" for s in defined)):
                 state = "not_applicable"
             elif not admitted or code in COMPOUND and verb["auxiliary_status"] != "supported":
                 state = "unconfirmed"
             else:
                 state = "missing"
             statuses[code] = state
+        if admitted:
+            actual = {(r[4], r[5], r[6]) for r in cells}
+            for code, person, number in defined:
+                if code in ("P", "I", "J", "F", "C", "S", "T", "Y") and person and number:
+                    if not impersonal or (person, number) == ("3", "s") and code != "Y":
+                        if (code, person, number) not in actual:
+                            statuses[code] = "missing"
         if admitted and impersonal:
             for code in ("P", "PC", "I", "PQP", "J", "PA", "F", "FA", "C", "CP", "S", "SP", "T", "SQP", "Y", "YP"):
                 for pn in SUBJECTS:
@@ -139,10 +160,17 @@ def generate(rows, verbs, data):
                         statuses[f"{code}/{pn}"] = "not_applicable"
             for code in ("Y", "YP"):
                 statuses[code] = "not_applicable"
+        if admitted and "persons" in correction:
+            for code in ("P", "PC", "I", "PQP", "J", "PA", "F", "FA", "C", "CP", "S", "SP", "T", "SQP"):
+                for pn in SUBJECTS:
+                    if pn not in allowed_persons:
+                        statuses[f"{code}/{pn}"] = "not_applicable"
+        statuses.update(dict.fromkeys(correction.get("unavailable_cells", []), "not_applicable"))
         verb["blocks"] = statuses
         for code in BLOCKS:
             coverage[code][statuses[code]] += 1
     all_rows = rows + generated
     return [(*r, json.dumps(expressions(r[1], r[4], r[5], r[6], r[7],
-                                      "impersonal" in verbs[r[2]]["usage_labels"]), ensure_ascii=False))
+                                      "impersonal" in verbs[r[2]]["usage_labels"], r[2] in data["h_aspire"])
+                           if verbs[r[2]]["ordinary_status"] == "supported" else [r[1]], ensure_ascii=False))
             for r in all_rows], {code: dict(counts) for code, counts in coverage.items()}
