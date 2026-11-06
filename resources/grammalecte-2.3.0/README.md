@@ -9,8 +9,10 @@ the unmodified [GPL version 3](LICENSE-GPL3), and the original
 
 The archive contains the complete original `conj_data.json` bytes, including
 all 8,403 verb identities and raw type flags. Lexique's MIT conversion code
-projects only metadata onto existing Lefff identities; no extra verbs or
-conjugation forms are generated. Linguistic metadata derived from this source
+projects metadata and explicit conjugation forms onto existing Lefff identities.
+The format-3 build adds ordinary compound and gerund constructions (2026-11-06);
+conjugation_generation.py is the corresponding conversion source. No extra
+verb identities are admitted. Generated forms retain GPL-3.0-only attribution. Linguistic metadata derived from this source
 remains GPL-3.0-only. Lefff forms remain separately governed by LGPL-LR.
 The resource combines these separately attributed tables; it does not relicense
 either source or change the application's MIT source license.
@@ -36,5 +38,5 @@ the traditional classification of aller, additional ordinary auxiliaries, and
 the unresolved homographic groups of ressortir. These annotations contain
 original factual summaries, not copied dictionary definitions or tables.
 Dual auxiliaries without validated sense mappings remain labelled unconfirmed.
-Metadata admission does not certify every source claim or a complete paradigm;
+Admission does not certify unresolved source claims or a complete paradigm;
 the build reports unresolved coverage separately.

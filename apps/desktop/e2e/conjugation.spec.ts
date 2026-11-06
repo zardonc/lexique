@@ -1,5 +1,33 @@
 import { expect, test } from '@playwright/test';
 import fixtures from './fixtures/conjugation.json' with { type: 'json' };
+import ordinary from './fixtures/conjugation-ordinary.json' with { type: 'json' };
+
+test('ordinary compounds expose every interpretation and complete agreement alternative', async ({ page }) => {
+  await page.addInitScript((data) => {
+    Object.defineProperty(window, 'isTauri', { value: true });
+    Object.defineProperty(window, '__TAURI_INTERNALS__', { value: { invoke: async (command: string, args?: { key: string }) => {
+      if (command === 'runtime_status') return { version: '0.1.0', schemaVersion: 1, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } };
+      return command === 'conjugation_lookup' ? data[args?.key as keyof typeof data] ?? { query: args?.key, tables: [] } : null;
+    } } });
+  }, ordinary);
+  await page.goto('/'); await page.getByRole('button', { name: '动词变位', exact: true }).click();
+  const input = page.getByLabel('法语动词或简单变位词形');
+  await input.fill('aie aimé'); await input.press('Enter');
+  await expect(page.locator('.conjugation-cell[data-matched=true]')).toHaveCount(2);
+  for (const code of ['SP', 'YP']) await expect(page.locator(`[data-tense=${code}] [data-matched=true]`).first()).toBeVisible();
+  await expect(page.locator('[data-tense=KP]')).toContainText('ayant aimé');
+  await expect(page.locator('[data-tense=GP]')).toContainText('en aimant');
+  await expect(page.locator('[data-tense=GPP]')).toContainText('en ayant aimé');
+  await input.fill('je suis allée'); await input.press('Enter');
+  await expect(page.locator('[data-tense=PC]')).toContainText('je suis allé');
+  await expect(page.locator('[data-tense=PC]')).toContainText('je suis allée');
+  await expect(page.locator('.conjugation-expression[data-matched=true]')).toHaveText(['je suis allée']);
+  await input.fill('habite'); await input.press('Enter');
+  await expect(page.locator('[data-tense=P]')).not.toContainText('je habite');
+  await expect(page.locator('[data-tense=P]')).toContainText('主语省音未确认');
+  await input.fill('je avons aimé'); await input.press('Enter');
+  await expect(page.locator('.conjugation-table')).toHaveCount(0);
+});
 
 test('simple lookup keeps all candidates, cells and spelling alternatives accessible', async ({ page }) => {
   await page.addInitScript((data) => {

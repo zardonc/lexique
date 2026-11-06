@@ -1,6 +1,6 @@
-import { cellKey } from './platform/conjugation';
+import { cellKey, cellMatches } from './platform/conjugation';
 import type { ConjugationCell, ConjugationTable } from './platform/conjugation';
-import type { ConjugationText } from './conjugation-content';
+import { conjugationUse, type ConjugationText } from './conjugation-content';
 
 // Priority order, then the remaining mood families in the confirmed M3 matrix.
 const blocks = [
@@ -26,6 +26,7 @@ function groupCells(cells: readonly ConjugationCell[]) {
 }
 
 function expressions(cell: ConjugationCell, impersonal: boolean): readonly string[] {
+  if (cell.expressions) return cell.expressions.length ? cell.expressions : [cell.form];
   if (!cell.tense || 'YWGK'.includes(cell.tense)) return [cell.form];
   const pronouns = impersonal && cell.person === '3' && cell.number === 's' ? ['il'] : subjects[`${cell.person}${cell.number}`];
   if (!pronouns) return [cell.form];
@@ -42,14 +43,15 @@ function SourceCell({ cells, query, text, raw, impersonal = false }: {
   const first = cells[0];
   if (!first) return <span>{text.unconfirmed} · {text.absent}</span>;
   const variants = [...new Map(cells.map((cell) => [cell.form, cell])).values()];
-  const matched = variants.some((cell) => cell.form === query);
+  const matched = variants.some((cell) => cellMatches(cell, query));
   const elision = first.person === '1' && first.number === 's' && variants.some((cell) => /^[hy]/iu.test(cell.form));
   return <div className="conjugation-cell" data-matched={matched} data-person={`${first.person}${first.number}`}>
     {matched && <strong className="conjugation-match">✓ {text.exact}</strong>}
     {(raw || elision) && <small>{text.unconfirmed} · {raw ? text.expression : text.elision}</small>}
     {variants.map((cell) => <div className="conjugation-variant" key={cell.form}>
+      {cell.raw_tag.startsWith('ordinary/v1/') && cell.raw_tag.split('/')[2] !== 'gerund' && <small>{conjugationUse(text, cell.raw_tag.split('/').slice(3).join('/'))}</small>}
       {(raw || elision ? [cell.form] : expressions(cell, impersonal)).map((expression) => <span className="conjugation-expression" lang="fr"
-        key={expression} data-matched={cell.form === query}>{expression}</span>)}
+        key={expression} data-matched={cell.form === query || expression === query}>{expression}</span>)}
     </div>)}
   </div>;
 }
@@ -60,18 +62,19 @@ function Block({ code, table, query, text }: {
   const cells = table.cells.filter((cell) => cell.tense === code);
   const raw = table.verb.ordinary_status === 'not_applicable';
   const impersonal = table.verb.usage_labels.includes('impersonal');
-  if (['P', 'I', 'J', 'F', 'C', 'S', 'T', 'Y'].includes(code)) {
-    const rows: readonly string[] = code === 'Y' ? ['2s', '1p', '2p'] : persons;
+  if (['P', 'PC', 'I', 'PQP', 'J', 'PA', 'F', 'FA', 'C', 'CP', 'S', 'SP', 'T', 'SQP', 'Y', 'YP'].includes(code)) {
+    const rows: readonly string[] = ['Y', 'YP'].includes(code) ? ['2s', '1p', '2p'] : persons;
     const unassigned = cells.filter((cell) => !rows.includes(`${cell.person}${cell.number}`));
     return <><dl>{rows.map((person) => <div key={person}><dt lang="fr">{impersonal && person === '3s' ? 'il' : subjects[person]?.join(' / ')}</dt>
-      <dd><SourceCell cells={cells.filter((cell) => `${cell.person}${cell.number}` === person)} query={query} text={text} raw={raw} impersonal={impersonal} /></dd></div>)}</dl>
+      <dd>{table.verb.blocks?.[`${code}/${person}`] === 'not_applicable' ? text.notApplicable
+        : <SourceCell cells={cells.filter((cell) => `${cell.person}${cell.number}` === person)} query={query} text={text} raw={raw} impersonal={impersonal} />}</dd></div>)}</dl>
       {groupCells(unassigned).map(([key, values]) => <SourceCell key={key} cells={values} query={query} text={text} raw />)}</>;
   }
   const groups = groupCells(cells);
   return groups.length ? <dl>{groups.map(([key, values]) => <div key={key}><dt>{code === 'K'
     ? [values[0]?.gender, values[0]?.number].filter(Boolean).join(' · ') || text.gender : '—'}</dt>
     <dd><SourceCell cells={values} query={query} text={text} raw={raw} /></dd></div>)}</dl>
-    : <p>{text.unconfirmed} · {text.absent}</p>;
+    : <p>{table.verb.blocks?.[code] === 'not_applicable' ? text.notApplicable : table.verb.blocks?.[code] === 'missing' ? text.absent : text.unconfirmed}</p>;
 }
 
 export function ConjugationBlocks({ table, query, text }: {
@@ -84,5 +87,5 @@ export function ConjugationBlocks({ table, query, text }: {
     <Block code={code} table={table} query={query} text={text} />
   </section>)}</div>{other.length > 0 && <section><h4>{text.other}</h4>{groupCells(other).map(([key, values]) =>
     <SourceCell key={key} cells={values} query={query} text={text} raw />)}</section>}
-  <p className="dictionary-hint">{text.historical}</p></>;
+  <p className="dictionary-hint">{text.agreement}</p><p className="dictionary-hint">{text.historical}</p></>;
 }

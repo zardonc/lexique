@@ -1,0 +1,5213 @@
+{
+  "aie aimé": {
+    "query": "aie aimé",
+    "tables": [
+      {
+        "lemma": "aimer",
+        "verb": {
+          "group": 1,
+          "group_status": "supported",
+          "auxiliaries": [
+            {
+              "lemma": "avoir",
+              "use": "ordinary active"
+            }
+          ],
+          "auxiliary_status": "supported",
+          "ordinary_status": "supported",
+          "usage_labels": [
+            "intransitive",
+            "transitive"
+          ],
+          "source": {
+            "resource": "grammalecte-2.3.0",
+            "entry": "dVerb/aimer",
+            "raw_type": "1_it_q__a"
+          },
+          "correction": null,
+          "blocks": {
+            "G": "supported",
+            "K": "supported",
+            "P": "supported",
+            "I": "supported",
+            "J": "supported",
+            "F": "supported",
+            "C": "supported",
+            "S": "supported",
+            "T": "supported",
+            "Y": "supported",
+            "W": "supported",
+            "PC": "supported",
+            "PQP": "supported",
+            "PA": "supported",
+            "FA": "supported",
+            "CP": "supported",
+            "SP": "supported",
+            "SQP": "supported",
+            "YP": "supported",
+            "WP": "supported",
+            "KP": "supported",
+            "GPP": "supported",
+            "GP": "supported"
+          }
+        },
+        "cells": [
+          {
+            "source_line": 65006,
+            "form": "aimerions",
+            "lemma": "aimer",
+            "raw_tag": "C1p",
+            "tense": "C",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous aimerions"
+            ]
+          },
+          {
+            "source_line": 65001,
+            "form": "aimerais",
+            "lemma": "aimer",
+            "raw_tag": "C12s",
+            "tense": "C",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "j’aimerais"
+            ]
+          },
+          {
+            "source_line": 65005,
+            "form": "aimeriez",
+            "lemma": "aimer",
+            "raw_tag": "C2p",
+            "tense": "C",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous aimeriez"
+            ]
+          },
+          {
+            "source_line": 65001,
+            "form": "aimerais",
+            "lemma": "aimer",
+            "raw_tag": "C12s",
+            "tense": "C",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu aimerais"
+            ]
+          },
+          {
+            "source_line": 65000,
+            "form": "aimeraient",
+            "lemma": "aimer",
+            "raw_tag": "C3p",
+            "tense": "C",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils aimeraient",
+              "elles aimeraient"
+            ]
+          },
+          {
+            "source_line": 65002,
+            "form": "aimerait",
+            "lemma": "aimer",
+            "raw_tag": "C3s",
+            "tense": "C",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il aimerait",
+              "elle aimerait",
+              "on aimerait"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "aurions aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "CP",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous aurions aimé"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "aurais aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "CP",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "j’aurais aimé"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "auriez aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "CP",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous auriez aimé"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "aurais aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "CP",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu aurais aimé"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "auraient aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "CP",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils auraient aimé",
+              "elles auraient aimé"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "aurait aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "CP",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il aurait aimé",
+              "elle aurait aimé",
+              "on aurait aimé"
+            ]
+          },
+          {
+            "source_line": 65007,
+            "form": "aimerons",
+            "lemma": "aimer",
+            "raw_tag": "F1p",
+            "tense": "F",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous aimerons"
+            ]
+          },
+          {
+            "source_line": 64999,
+            "form": "aimerai",
+            "lemma": "aimer",
+            "raw_tag": "F1s",
+            "tense": "F",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "j’aimerai"
+            ]
+          },
+          {
+            "source_line": 65004,
+            "form": "aimerez",
+            "lemma": "aimer",
+            "raw_tag": "F2p",
+            "tense": "F",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous aimerez"
+            ]
+          },
+          {
+            "source_line": 65003,
+            "form": "aimeras",
+            "lemma": "aimer",
+            "raw_tag": "F2s",
+            "tense": "F",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu aimeras"
+            ]
+          },
+          {
+            "source_line": 65008,
+            "form": "aimeront",
+            "lemma": "aimer",
+            "raw_tag": "F3p",
+            "tense": "F",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils aimeront",
+              "elles aimeront"
+            ]
+          },
+          {
+            "source_line": 64998,
+            "form": "aimera",
+            "lemma": "aimer",
+            "raw_tag": "F3s",
+            "tense": "F",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il aimera",
+              "elle aimera",
+              "on aimera"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "aurons aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "FA",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous aurons aimé"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "aurai aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "FA",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "j’aurai aimé"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "aurez aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "FA",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous aurez aimé"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "auras aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "FA",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu auras aimé"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "auront aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "FA",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils auront aimé",
+              "elles auront aimé"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "aura aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "FA",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il aura aimé",
+              "elle aura aimé",
+              "on aura aimé"
+            ]
+          },
+          {
+            "source_line": 64929,
+            "form": "aimant",
+            "lemma": "aimer",
+            "raw_tag": "G",
+            "tense": "G",
+            "person": null,
+            "number": null,
+            "gender": null,
+            "expressions": [
+              "aimant"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "en aimant",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/gerund",
+            "tense": "GP",
+            "person": null,
+            "number": null,
+            "gender": null,
+            "expressions": [
+              "en aimant"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "en ayant aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "GPP",
+            "person": null,
+            "number": null,
+            "gender": null,
+            "expressions": [
+              "en ayant aimé"
+            ]
+          },
+          {
+            "source_line": 65014,
+            "form": "aimions",
+            "lemma": "aimer",
+            "raw_tag": "I1p",
+            "tense": "I",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous aimions"
+            ]
+          },
+          {
+            "source_line": 64925,
+            "form": "aimais",
+            "lemma": "aimer",
+            "raw_tag": "I12s",
+            "tense": "I",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "j’aimais"
+            ]
+          },
+          {
+            "source_line": 65012,
+            "form": "aimiez",
+            "lemma": "aimer",
+            "raw_tag": "I2p",
+            "tense": "I",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous aimiez"
+            ]
+          },
+          {
+            "source_line": 64925,
+            "form": "aimais",
+            "lemma": "aimer",
+            "raw_tag": "I12s",
+            "tense": "I",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu aimais"
+            ]
+          },
+          {
+            "source_line": 64924,
+            "form": "aimaient",
+            "lemma": "aimer",
+            "raw_tag": "I3p",
+            "tense": "I",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils aimaient",
+              "elles aimaient"
+            ]
+          },
+          {
+            "source_line": 64926,
+            "form": "aimait",
+            "lemma": "aimer",
+            "raw_tag": "I3s",
+            "tense": "I",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il aimait",
+              "elle aimait",
+              "on aimait"
+            ]
+          },
+          {
+            "source_line": 65018,
+            "form": "aimâmes",
+            "lemma": "aimer",
+            "raw_tag": "J1p",
+            "tense": "J",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous aimâmes"
+            ]
+          },
+          {
+            "source_line": 64923,
+            "form": "aimai",
+            "lemma": "aimer",
+            "raw_tag": "J1s",
+            "tense": "J",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "j’aimai"
+            ]
+          },
+          {
+            "source_line": 65020,
+            "form": "aimâtes",
+            "lemma": "aimer",
+            "raw_tag": "J2p",
+            "tense": "J",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous aimâtes"
+            ]
+          },
+          {
+            "source_line": 64988,
+            "form": "aimas",
+            "lemma": "aimer",
+            "raw_tag": "J2s",
+            "tense": "J",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu aimas"
+            ]
+          },
+          {
+            "source_line": 65021,
+            "form": "aimèrent",
+            "lemma": "aimer",
+            "raw_tag": "J3p",
+            "tense": "J",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils aimèrent",
+              "elles aimèrent"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "aima",
+            "lemma": "aimer",
+            "raw_tag": "J3s",
+            "tense": "J",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il aima",
+              "elle aima",
+              "on aima"
+            ]
+          },
+          {
+            "source_line": 65033,
+            "form": "aimées",
+            "lemma": "aimer",
+            "raw_tag": "Kfp",
+            "tense": "K",
+            "person": null,
+            "number": "p",
+            "gender": "f",
+            "expressions": [
+              "aimées"
+            ]
+          },
+          {
+            "source_line": 65037,
+            "form": "aimés",
+            "lemma": "aimer",
+            "raw_tag": "Kmp",
+            "tense": "K",
+            "person": null,
+            "number": "p",
+            "gender": "m",
+            "expressions": [
+              "aimés"
+            ]
+          },
+          {
+            "source_line": 65029,
+            "form": "aimée",
+            "lemma": "aimer",
+            "raw_tag": "Kfs",
+            "tense": "K",
+            "person": null,
+            "number": "s",
+            "gender": "f",
+            "expressions": [
+              "aimée"
+            ]
+          },
+          {
+            "source_line": 65025,
+            "form": "aimé",
+            "lemma": "aimer",
+            "raw_tag": "Kms",
+            "tense": "K",
+            "person": null,
+            "number": "s",
+            "gender": "m",
+            "expressions": [
+              "aimé"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "ayant aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "KP",
+            "person": null,
+            "number": null,
+            "gender": null,
+            "expressions": [
+              "ayant aimé"
+            ]
+          },
+          {
+            "source_line": 65016,
+            "form": "aimons",
+            "lemma": "aimer",
+            "raw_tag": "P1p",
+            "tense": "P",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous aimons"
+            ]
+          },
+          {
+            "source_line": 64994,
+            "form": "aime",
+            "lemma": "aimer",
+            "raw_tag": "PS13s",
+            "tense": "P",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "j’aime"
+            ]
+          },
+          {
+            "source_line": 65010,
+            "form": "aimez",
+            "lemma": "aimer",
+            "raw_tag": "P2p",
+            "tense": "P",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous aimez"
+            ]
+          },
+          {
+            "source_line": 65009,
+            "form": "aimes",
+            "lemma": "aimer",
+            "raw_tag": "PS2s",
+            "tense": "P",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu aimes"
+            ]
+          },
+          {
+            "source_line": 64996,
+            "form": "aiment",
+            "lemma": "aimer",
+            "raw_tag": "PS3p",
+            "tense": "P",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils aiment",
+              "elles aiment"
+            ]
+          },
+          {
+            "source_line": 64994,
+            "form": "aime",
+            "lemma": "aimer",
+            "raw_tag": "PS13s",
+            "tense": "P",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il aime",
+              "elle aime",
+              "on aime"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "eûmes aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "PA",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous eûmes aimé"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "eus aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "PA",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "j’eus aimé"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "eûtes aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "PA",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous eûtes aimé"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "eus aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "PA",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu eus aimé"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "eurent aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "PA",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils eurent aimé",
+              "elles eurent aimé"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "eut aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "PA",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il eut aimé",
+              "elle eut aimé",
+              "on eut aimé"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "avons aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "PC",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous avons aimé"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "ai aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "PC",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "j’ai aimé"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "avez aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "PC",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous avez aimé"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "as aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "PC",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu as aimé"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "ont aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "PC",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils ont aimé",
+              "elles ont aimé"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "a aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "PC",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il a aimé",
+              "elle a aimé",
+              "on a aimé"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "avions aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "PQP",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous avions aimé"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "avais aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "PQP",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "j’avais aimé"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "aviez aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "PQP",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous aviez aimé"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "avais aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "PQP",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu avais aimé"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "avaient aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "PQP",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils avaient aimé",
+              "elles avaient aimé"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "avait aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "PQP",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il avait aimé",
+              "elle avait aimé",
+              "on avait aimé"
+            ]
+          },
+          {
+            "source_line": 65015,
+            "form": "aimions",
+            "lemma": "aimer",
+            "raw_tag": "S1p",
+            "tense": "S",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous aimions",
+              "que nous aimions"
+            ]
+          },
+          {
+            "source_line": 64994,
+            "form": "aime",
+            "lemma": "aimer",
+            "raw_tag": "PS13s",
+            "tense": "S",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "j’aime",
+              "que j’aime"
+            ]
+          },
+          {
+            "source_line": 65013,
+            "form": "aimiez",
+            "lemma": "aimer",
+            "raw_tag": "S2p",
+            "tense": "S",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous aimiez",
+              "que vous aimiez"
+            ]
+          },
+          {
+            "source_line": 65009,
+            "form": "aimes",
+            "lemma": "aimer",
+            "raw_tag": "PS2s",
+            "tense": "S",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu aimes",
+              "que tu aimes"
+            ]
+          },
+          {
+            "source_line": 64996,
+            "form": "aiment",
+            "lemma": "aimer",
+            "raw_tag": "PS3p",
+            "tense": "S",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils aiment",
+              "qu’ils aiment",
+              "elles aiment",
+              "qu’elles aiment"
+            ]
+          },
+          {
+            "source_line": 64994,
+            "form": "aime",
+            "lemma": "aimer",
+            "raw_tag": "PS13s",
+            "tense": "S",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il aime",
+              "qu’il aime",
+              "elle aime",
+              "qu’elle aime",
+              "on aime",
+              "qu’on aime"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "ayons aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "SP",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous ayons aimé",
+              "que nous ayons aimé"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "aie aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "SP",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "j’aie aimé",
+              "que j’aie aimé"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "ayez aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "SP",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous ayez aimé",
+              "que vous ayez aimé"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "aies aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "SP",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu aies aimé",
+              "que tu aies aimé"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "aient aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "SP",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils aient aimé",
+              "qu’ils aient aimé",
+              "elles aient aimé",
+              "qu’elles aient aimé"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "ait aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "SP",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il ait aimé",
+              "qu’il ait aimé",
+              "elle ait aimé",
+              "qu’elle ait aimé",
+              "on ait aimé",
+              "qu’on ait aimé"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "eussions aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "SQP",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous eussions aimé",
+              "que nous eussions aimé"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "eusse aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "SQP",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "j’eusse aimé",
+              "que j’eusse aimé"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "eussiez aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "SQP",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous eussiez aimé",
+              "que vous eussiez aimé"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "eusses aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "SQP",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu eusses aimé",
+              "que tu eusses aimé"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "eussent aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "SQP",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils eussent aimé",
+              "qu’ils eussent aimé",
+              "elles eussent aimé",
+              "qu’elles eussent aimé"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "eût aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "SQP",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il eût aimé",
+              "qu’il eût aimé",
+              "elle eût aimé",
+              "qu’elle eût aimé",
+              "on eût aimé",
+              "qu’on eût aimé"
+            ]
+          },
+          {
+            "source_line": 64993,
+            "form": "aimassions",
+            "lemma": "aimer",
+            "raw_tag": "T1p",
+            "tense": "T",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous aimassions",
+              "que nous aimassions"
+            ]
+          },
+          {
+            "source_line": 64989,
+            "form": "aimasse",
+            "lemma": "aimer",
+            "raw_tag": "T1s",
+            "tense": "T",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "j’aimasse",
+              "que j’aimasse"
+            ]
+          },
+          {
+            "source_line": 64992,
+            "form": "aimassiez",
+            "lemma": "aimer",
+            "raw_tag": "T2p",
+            "tense": "T",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous aimassiez",
+              "que vous aimassiez"
+            ]
+          },
+          {
+            "source_line": 64991,
+            "form": "aimasses",
+            "lemma": "aimer",
+            "raw_tag": "T2s",
+            "tense": "T",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu aimasses",
+              "que tu aimasses"
+            ]
+          },
+          {
+            "source_line": 64990,
+            "form": "aimassent",
+            "lemma": "aimer",
+            "raw_tag": "T3p",
+            "tense": "T",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils aimassent",
+              "qu’ils aimassent",
+              "elles aimassent",
+              "qu’elles aimassent"
+            ]
+          },
+          {
+            "source_line": 65019,
+            "form": "aimât",
+            "lemma": "aimer",
+            "raw_tag": "T3s",
+            "tense": "T",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il aimât",
+              "qu’il aimât",
+              "elle aimât",
+              "qu’elle aimât",
+              "on aimât",
+              "qu’on aimât"
+            ]
+          },
+          {
+            "source_line": 64997,
+            "form": "aimer",
+            "lemma": "aimer",
+            "raw_tag": "W",
+            "tense": "W",
+            "person": null,
+            "number": null,
+            "gender": null,
+            "expressions": [
+              "aimer"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "avoir aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "WP",
+            "person": null,
+            "number": null,
+            "gender": null,
+            "expressions": [
+              "avoir aimé"
+            ]
+          },
+          {
+            "source_line": 65017,
+            "form": "aimons",
+            "lemma": "aimer",
+            "raw_tag": "Y1p",
+            "tense": "Y",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "aimons"
+            ]
+          },
+          {
+            "source_line": 65011,
+            "form": "aimez",
+            "lemma": "aimer",
+            "raw_tag": "Y2p",
+            "tense": "Y",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "aimez"
+            ]
+          },
+          {
+            "source_line": 64995,
+            "form": "aime",
+            "lemma": "aimer",
+            "raw_tag": "Y2s",
+            "tense": "Y",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "aime"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "ayons aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "YP",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ayons aimé"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "ayez aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "YP",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ayez aimé"
+            ]
+          },
+          {
+            "source_line": 64919,
+            "form": "aie aimé",
+            "lemma": "aimer",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "YP",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "aie aimé"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "je suis allée": {
+    "query": "je suis allée",
+    "tables": [
+      {
+        "lemma": "aller",
+        "verb": {
+          "group": 3,
+          "group_status": "supported",
+          "auxiliaries": [
+            {
+              "lemma": "être",
+              "use": "ordinary active"
+            }
+          ],
+          "auxiliary_status": "supported",
+          "ordinary_status": "supported",
+          "usage_labels": [
+            "intransitive"
+          ],
+          "source": {
+            "resource": "grammalecte-2.3.0",
+            "entry": "dVerb/aller",
+            "raw_type": "1_i__e_e_"
+          },
+          "correction": {
+            "group": 3,
+            "note": "Traditional group 3; the upstream conjugator's internal group 1 is not the requested pedagogical classification.",
+            "references": [
+              "https://www.dictionnaire-academie.fr/conjuguer/A9A1226"
+            ]
+          },
+          "blocks": {
+            "G": "supported",
+            "K": "supported",
+            "P": "supported",
+            "I": "supported",
+            "J": "supported",
+            "F": "supported",
+            "C": "supported",
+            "S": "supported",
+            "T": "supported",
+            "Y": "supported",
+            "W": "supported",
+            "PC": "supported",
+            "PQP": "supported",
+            "PA": "supported",
+            "FA": "supported",
+            "CP": "supported",
+            "SP": "supported",
+            "SQP": "supported",
+            "YP": "supported",
+            "WP": "supported",
+            "KP": "supported",
+            "GPP": "supported",
+            "GP": "supported"
+          }
+        },
+        "cells": [
+          {
+            "source_line": 313053,
+            "form": "irions",
+            "lemma": "aller",
+            "raw_tag": "C1p",
+            "tense": "C",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous irions"
+            ]
+          },
+          {
+            "source_line": 312905,
+            "form": "irais",
+            "lemma": "aller",
+            "raw_tag": "C12s",
+            "tense": "C",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "j’irais"
+            ]
+          },
+          {
+            "source_line": 313052,
+            "form": "iriez",
+            "lemma": "aller",
+            "raw_tag": "C2p",
+            "tense": "C",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous iriez"
+            ]
+          },
+          {
+            "source_line": 312905,
+            "form": "irais",
+            "lemma": "aller",
+            "raw_tag": "C12s",
+            "tense": "C",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu irais"
+            ]
+          },
+          {
+            "source_line": 312904,
+            "form": "iraient",
+            "lemma": "aller",
+            "raw_tag": "C3p",
+            "tense": "C",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils iraient",
+              "elles iraient"
+            ]
+          },
+          {
+            "source_line": 312906,
+            "form": "irait",
+            "lemma": "aller",
+            "raw_tag": "C3s",
+            "tense": "C",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il irait",
+              "elle irait",
+              "on irait"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "serions allées",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "CP",
+            "person": "1",
+            "number": "p",
+            "gender": "f",
+            "expressions": [
+              "nous serions allées"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "serions allés",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "CP",
+            "person": "1",
+            "number": "p",
+            "gender": "m",
+            "expressions": [
+              "nous serions allés"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "serais allée",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "CP",
+            "person": "1",
+            "number": "s",
+            "gender": "f",
+            "expressions": [
+              "je serais allée"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "serais allé",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "CP",
+            "person": "1",
+            "number": "s",
+            "gender": "m",
+            "expressions": [
+              "je serais allé"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "seriez allée",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "CP",
+            "person": "2",
+            "number": "p",
+            "gender": "f",
+            "expressions": [
+              "vous seriez allée"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "seriez allées",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "CP",
+            "person": "2",
+            "number": "p",
+            "gender": "f",
+            "expressions": [
+              "vous seriez allées"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "seriez allé",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "CP",
+            "person": "2",
+            "number": "p",
+            "gender": "m",
+            "expressions": [
+              "vous seriez allé"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "seriez allés",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "CP",
+            "person": "2",
+            "number": "p",
+            "gender": "m",
+            "expressions": [
+              "vous seriez allés"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "serais allée",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "CP",
+            "person": "2",
+            "number": "s",
+            "gender": "f",
+            "expressions": [
+              "tu serais allée"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "serais allé",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "CP",
+            "person": "2",
+            "number": "s",
+            "gender": "m",
+            "expressions": [
+              "tu serais allé"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "seraient allées",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "CP",
+            "person": "3",
+            "number": "p",
+            "gender": "f",
+            "expressions": [
+              "elles seraient allées"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "seraient allés",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "CP",
+            "person": "3",
+            "number": "p",
+            "gender": "m",
+            "expressions": [
+              "ils seraient allés"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "serait allée",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "CP",
+            "person": "3",
+            "number": "s",
+            "gender": "f",
+            "expressions": [
+              "elle serait allée",
+              "on serait allée"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "serait allé",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "CP",
+            "person": "3",
+            "number": "s",
+            "gender": "m",
+            "expressions": [
+              "il serait allé",
+              "on serait allé"
+            ]
+          },
+          {
+            "source_line": 313233,
+            "form": "irons",
+            "lemma": "aller",
+            "raw_tag": "F1p",
+            "tense": "F",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous irons"
+            ]
+          },
+          {
+            "source_line": 312903,
+            "form": "irai",
+            "lemma": "aller",
+            "raw_tag": "F1s",
+            "tense": "F",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "j’irai"
+            ]
+          },
+          {
+            "source_line": 313033,
+            "form": "irez",
+            "lemma": "aller",
+            "raw_tag": "F2p",
+            "tense": "F",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous irez"
+            ]
+          },
+          {
+            "source_line": 313025,
+            "form": "iras",
+            "lemma": "aller",
+            "raw_tag": "F2s",
+            "tense": "F",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu iras"
+            ]
+          },
+          {
+            "source_line": 313234,
+            "form": "iront",
+            "lemma": "aller",
+            "raw_tag": "F3p",
+            "tense": "F",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils iront",
+              "elles iront"
+            ]
+          },
+          {
+            "source_line": 312902,
+            "form": "ira",
+            "lemma": "aller",
+            "raw_tag": "F3s",
+            "tense": "F",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il ira",
+              "elle ira",
+              "on ira"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "serons allées",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "FA",
+            "person": "1",
+            "number": "p",
+            "gender": "f",
+            "expressions": [
+              "nous serons allées"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "serons allés",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "FA",
+            "person": "1",
+            "number": "p",
+            "gender": "m",
+            "expressions": [
+              "nous serons allés"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "serai allée",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "FA",
+            "person": "1",
+            "number": "s",
+            "gender": "f",
+            "expressions": [
+              "je serai allée"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "serai allé",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "FA",
+            "person": "1",
+            "number": "s",
+            "gender": "m",
+            "expressions": [
+              "je serai allé"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "serez allée",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "FA",
+            "person": "2",
+            "number": "p",
+            "gender": "f",
+            "expressions": [
+              "vous serez allée"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "serez allées",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "FA",
+            "person": "2",
+            "number": "p",
+            "gender": "f",
+            "expressions": [
+              "vous serez allées"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "serez allé",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "FA",
+            "person": "2",
+            "number": "p",
+            "gender": "m",
+            "expressions": [
+              "vous serez allé"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "serez allés",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "FA",
+            "person": "2",
+            "number": "p",
+            "gender": "m",
+            "expressions": [
+              "vous serez allés"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "seras allée",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "FA",
+            "person": "2",
+            "number": "s",
+            "gender": "f",
+            "expressions": [
+              "tu seras allée"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "seras allé",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "FA",
+            "person": "2",
+            "number": "s",
+            "gender": "m",
+            "expressions": [
+              "tu seras allé"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "seront allées",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "FA",
+            "person": "3",
+            "number": "p",
+            "gender": "f",
+            "expressions": [
+              "elles seront allées"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "seront allés",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "FA",
+            "person": "3",
+            "number": "p",
+            "gender": "m",
+            "expressions": [
+              "ils seront allés"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "sera allée",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "FA",
+            "person": "3",
+            "number": "s",
+            "gender": "f",
+            "expressions": [
+              "elle sera allée",
+              "on sera allée"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "sera allé",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "FA",
+            "person": "3",
+            "number": "s",
+            "gender": "m",
+            "expressions": [
+              "il sera allé",
+              "on sera allé"
+            ]
+          },
+          {
+            "source_line": 66857,
+            "form": "allant",
+            "lemma": "aller",
+            "raw_tag": "G",
+            "tense": "G",
+            "person": null,
+            "number": null,
+            "gender": null,
+            "expressions": [
+              "allant"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "en allant",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/gerund",
+            "tense": "GP",
+            "person": null,
+            "number": null,
+            "gender": null,
+            "expressions": [
+              "en allant"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "en étant allée",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "GPP",
+            "person": null,
+            "number": null,
+            "gender": "f",
+            "expressions": [
+              "en étant allée"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "en étant allées",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "GPP",
+            "person": null,
+            "number": null,
+            "gender": "f",
+            "expressions": [
+              "en étant allées"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "en étant allé",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "GPP",
+            "person": null,
+            "number": null,
+            "gender": "m",
+            "expressions": [
+              "en étant allé"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "en étant allés",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "GPP",
+            "person": null,
+            "number": null,
+            "gender": "m",
+            "expressions": [
+              "en étant allés"
+            ]
+          },
+          {
+            "source_line": 66976,
+            "form": "allions",
+            "lemma": "aller",
+            "raw_tag": "I1p",
+            "tense": "I",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous allions"
+            ]
+          },
+          {
+            "source_line": 66799,
+            "form": "allais",
+            "lemma": "aller",
+            "raw_tag": "I12s",
+            "tense": "I",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "j’allais"
+            ]
+          },
+          {
+            "source_line": 66966,
+            "form": "alliez",
+            "lemma": "aller",
+            "raw_tag": "I2p",
+            "tense": "I",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous alliez"
+            ]
+          },
+          {
+            "source_line": 66799,
+            "form": "allais",
+            "lemma": "aller",
+            "raw_tag": "I12s",
+            "tense": "I",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu allais"
+            ]
+          },
+          {
+            "source_line": 66798,
+            "form": "allaient",
+            "lemma": "aller",
+            "raw_tag": "I3p",
+            "tense": "I",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils allaient",
+              "elles allaient"
+            ]
+          },
+          {
+            "source_line": 66800,
+            "form": "allait",
+            "lemma": "aller",
+            "raw_tag": "I3s",
+            "tense": "I",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il allait",
+              "elle allait",
+              "on allait"
+            ]
+          },
+          {
+            "source_line": 67375,
+            "form": "allâmes",
+            "lemma": "aller",
+            "raw_tag": "J1p",
+            "tense": "J",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous allâmes"
+            ]
+          },
+          {
+            "source_line": 66797,
+            "form": "allai",
+            "lemma": "aller",
+            "raw_tag": "J1s",
+            "tense": "J",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "j’allai"
+            ]
+          },
+          {
+            "source_line": 67377,
+            "form": "allâtes",
+            "lemma": "aller",
+            "raw_tag": "J2p",
+            "tense": "J",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous allâtes"
+            ]
+          },
+          {
+            "source_line": 66866,
+            "form": "allas",
+            "lemma": "aller",
+            "raw_tag": "J2s",
+            "tense": "J",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu allas"
+            ]
+          },
+          {
+            "source_line": 67405,
+            "form": "allèrent",
+            "lemma": "aller",
+            "raw_tag": "J3p",
+            "tense": "J",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils allèrent",
+              "elles allèrent"
+            ]
+          },
+          {
+            "source_line": 66796,
+            "form": "alla",
+            "lemma": "aller",
+            "raw_tag": "J3s",
+            "tense": "J",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il alla",
+              "elle alla",
+              "on alla"
+            ]
+          },
+          {
+            "source_line": 67458,
+            "form": "allées",
+            "lemma": "aller",
+            "raw_tag": "Kfp",
+            "tense": "K",
+            "person": null,
+            "number": "p",
+            "gender": "f",
+            "expressions": [
+              "allées"
+            ]
+          },
+          {
+            "source_line": 67630,
+            "form": "allés",
+            "lemma": "aller",
+            "raw_tag": "Kmp",
+            "tense": "K",
+            "person": null,
+            "number": "p",
+            "gender": "m",
+            "expressions": [
+              "allés"
+            ]
+          },
+          {
+            "source_line": 67456,
+            "form": "allée",
+            "lemma": "aller",
+            "raw_tag": "Kfs",
+            "tense": "K",
+            "person": null,
+            "number": "s",
+            "gender": "f",
+            "expressions": [
+              "allée"
+            ]
+          },
+          {
+            "source_line": 67406,
+            "form": "allé",
+            "lemma": "aller",
+            "raw_tag": "Kms",
+            "tense": "K",
+            "person": null,
+            "number": "s",
+            "gender": "m",
+            "expressions": [
+              "allé"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "étant allée",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "KP",
+            "person": null,
+            "number": null,
+            "gender": "f",
+            "expressions": [
+              "étant allée"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "étant allées",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "KP",
+            "person": null,
+            "number": null,
+            "gender": "f",
+            "expressions": [
+              "étant allées"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "étant allé",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "KP",
+            "person": null,
+            "number": null,
+            "gender": "m",
+            "expressions": [
+              "étant allé"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "étant allés",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "KP",
+            "person": null,
+            "number": null,
+            "gender": "m",
+            "expressions": [
+              "étant allés"
+            ]
+          },
+          {
+            "source_line": 67137,
+            "form": "allons",
+            "lemma": "aller",
+            "raw_tag": "P1p",
+            "tense": "P",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous allons"
+            ]
+          },
+          {
+            "source_line": 519079,
+            "form": "vais",
+            "lemma": "aller",
+            "raw_tag": "P1s",
+            "tense": "P",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "je vais"
+            ]
+          },
+          {
+            "source_line": 66923,
+            "form": "allez",
+            "lemma": "aller",
+            "raw_tag": "P2p",
+            "tense": "P",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous allez"
+            ]
+          },
+          {
+            "source_line": 520363,
+            "form": "vas",
+            "lemma": "aller",
+            "raw_tag": "P2s",
+            "tense": "P",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu vas"
+            ]
+          },
+          {
+            "source_line": 527050,
+            "form": "vont",
+            "lemma": "aller",
+            "raw_tag": "P3p",
+            "tense": "P",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils vont",
+              "elles vont"
+            ]
+          },
+          {
+            "source_line": 518539,
+            "form": "va",
+            "lemma": "aller",
+            "raw_tag": "P3s",
+            "tense": "P",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il va",
+              "elle va",
+              "on va"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "fûmes allées",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "PA",
+            "person": "1",
+            "number": "p",
+            "gender": "f",
+            "expressions": [
+              "nous fûmes allées"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "fûmes allés",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "PA",
+            "person": "1",
+            "number": "p",
+            "gender": "m",
+            "expressions": [
+              "nous fûmes allés"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "fus allée",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "PA",
+            "person": "1",
+            "number": "s",
+            "gender": "f",
+            "expressions": [
+              "je fus allée"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "fus allé",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "PA",
+            "person": "1",
+            "number": "s",
+            "gender": "m",
+            "expressions": [
+              "je fus allé"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "fûtes allée",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "PA",
+            "person": "2",
+            "number": "p",
+            "gender": "f",
+            "expressions": [
+              "vous fûtes allée"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "fûtes allées",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "PA",
+            "person": "2",
+            "number": "p",
+            "gender": "f",
+            "expressions": [
+              "vous fûtes allées"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "fûtes allé",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "PA",
+            "person": "2",
+            "number": "p",
+            "gender": "m",
+            "expressions": [
+              "vous fûtes allé"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "fûtes allés",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "PA",
+            "person": "2",
+            "number": "p",
+            "gender": "m",
+            "expressions": [
+              "vous fûtes allés"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "fus allée",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "PA",
+            "person": "2",
+            "number": "s",
+            "gender": "f",
+            "expressions": [
+              "tu fus allée"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "fus allé",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "PA",
+            "person": "2",
+            "number": "s",
+            "gender": "m",
+            "expressions": [
+              "tu fus allé"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "furent allées",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "PA",
+            "person": "3",
+            "number": "p",
+            "gender": "f",
+            "expressions": [
+              "elles furent allées"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "furent allés",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "PA",
+            "person": "3",
+            "number": "p",
+            "gender": "m",
+            "expressions": [
+              "ils furent allés"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "fut allée",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "PA",
+            "person": "3",
+            "number": "s",
+            "gender": "f",
+            "expressions": [
+              "elle fut allée",
+              "on fut allée"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "fut allé",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "PA",
+            "person": "3",
+            "number": "s",
+            "gender": "m",
+            "expressions": [
+              "il fut allé",
+              "on fut allé"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "sommes allées",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "PC",
+            "person": "1",
+            "number": "p",
+            "gender": "f",
+            "expressions": [
+              "nous sommes allées"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "sommes allés",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "PC",
+            "person": "1",
+            "number": "p",
+            "gender": "m",
+            "expressions": [
+              "nous sommes allés"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "suis allée",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "PC",
+            "person": "1",
+            "number": "s",
+            "gender": "f",
+            "expressions": [
+              "je suis allée"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "suis allé",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "PC",
+            "person": "1",
+            "number": "s",
+            "gender": "m",
+            "expressions": [
+              "je suis allé"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "êtes allée",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "PC",
+            "person": "2",
+            "number": "p",
+            "gender": "f",
+            "expressions": [
+              "vous êtes allée"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "êtes allées",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "PC",
+            "person": "2",
+            "number": "p",
+            "gender": "f",
+            "expressions": [
+              "vous êtes allées"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "êtes allé",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "PC",
+            "person": "2",
+            "number": "p",
+            "gender": "m",
+            "expressions": [
+              "vous êtes allé"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "êtes allés",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "PC",
+            "person": "2",
+            "number": "p",
+            "gender": "m",
+            "expressions": [
+              "vous êtes allés"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "es allée",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "PC",
+            "person": "2",
+            "number": "s",
+            "gender": "f",
+            "expressions": [
+              "tu es allée"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "es allé",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "PC",
+            "person": "2",
+            "number": "s",
+            "gender": "m",
+            "expressions": [
+              "tu es allé"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "sont allées",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "PC",
+            "person": "3",
+            "number": "p",
+            "gender": "f",
+            "expressions": [
+              "elles sont allées"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "sont allés",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "PC",
+            "person": "3",
+            "number": "p",
+            "gender": "m",
+            "expressions": [
+              "ils sont allés"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "est allée",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "PC",
+            "person": "3",
+            "number": "s",
+            "gender": "f",
+            "expressions": [
+              "elle est allée",
+              "on est allée"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "est allé",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "PC",
+            "person": "3",
+            "number": "s",
+            "gender": "m",
+            "expressions": [
+              "il est allé",
+              "on est allé"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "étions allées",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "PQP",
+            "person": "1",
+            "number": "p",
+            "gender": "f",
+            "expressions": [
+              "nous étions allées"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "étions allés",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "PQP",
+            "person": "1",
+            "number": "p",
+            "gender": "m",
+            "expressions": [
+              "nous étions allés"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "étais allée",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "PQP",
+            "person": "1",
+            "number": "s",
+            "gender": "f",
+            "expressions": [
+              "j’étais allée"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "étais allé",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "PQP",
+            "person": "1",
+            "number": "s",
+            "gender": "m",
+            "expressions": [
+              "j’étais allé"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "étiez allée",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "PQP",
+            "person": "2",
+            "number": "p",
+            "gender": "f",
+            "expressions": [
+              "vous étiez allée"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "étiez allées",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "PQP",
+            "person": "2",
+            "number": "p",
+            "gender": "f",
+            "expressions": [
+              "vous étiez allées"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "étiez allé",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "PQP",
+            "person": "2",
+            "number": "p",
+            "gender": "m",
+            "expressions": [
+              "vous étiez allé"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "étiez allés",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "PQP",
+            "person": "2",
+            "number": "p",
+            "gender": "m",
+            "expressions": [
+              "vous étiez allés"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "étais allée",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "PQP",
+            "person": "2",
+            "number": "s",
+            "gender": "f",
+            "expressions": [
+              "tu étais allée"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "étais allé",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "PQP",
+            "person": "2",
+            "number": "s",
+            "gender": "m",
+            "expressions": [
+              "tu étais allé"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "étaient allées",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "PQP",
+            "person": "3",
+            "number": "p",
+            "gender": "f",
+            "expressions": [
+              "elles étaient allées"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "étaient allés",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "PQP",
+            "person": "3",
+            "number": "p",
+            "gender": "m",
+            "expressions": [
+              "ils étaient allés"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "était allée",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "PQP",
+            "person": "3",
+            "number": "s",
+            "gender": "f",
+            "expressions": [
+              "elle était allée",
+              "on était allée"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "était allé",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "PQP",
+            "person": "3",
+            "number": "s",
+            "gender": "m",
+            "expressions": [
+              "il était allé",
+              "on était allé"
+            ]
+          },
+          {
+            "source_line": 66977,
+            "form": "allions",
+            "lemma": "aller",
+            "raw_tag": "S1p",
+            "tense": "S",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous allions",
+              "que nous allions"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "aille",
+            "lemma": "aller",
+            "raw_tag": "S13s",
+            "tense": "S",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "j’aille",
+              "que j’aille"
+            ]
+          },
+          {
+            "source_line": 66967,
+            "form": "alliez",
+            "lemma": "aller",
+            "raw_tag": "S2p",
+            "tense": "S",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous alliez",
+              "que vous alliez"
+            ]
+          },
+          {
+            "source_line": 64838,
+            "form": "ailles",
+            "lemma": "aller",
+            "raw_tag": "S2s",
+            "tense": "S",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu ailles",
+              "que tu ailles"
+            ]
+          },
+          {
+            "source_line": 64824,
+            "form": "aillent",
+            "lemma": "aller",
+            "raw_tag": "S3p",
+            "tense": "S",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils aillent",
+              "qu’ils aillent",
+              "elles aillent",
+              "qu’elles aillent"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "aille",
+            "lemma": "aller",
+            "raw_tag": "S13s",
+            "tense": "S",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il aille",
+              "qu’il aille",
+              "elle aille",
+              "qu’elle aille",
+              "on aille",
+              "qu’on aille"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "soyons allées",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "SP",
+            "person": "1",
+            "number": "p",
+            "gender": "f",
+            "expressions": [
+              "nous soyons allées",
+              "que nous soyons allées"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "soyons allés",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "SP",
+            "person": "1",
+            "number": "p",
+            "gender": "m",
+            "expressions": [
+              "nous soyons allés",
+              "que nous soyons allés"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "sois allée",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "SP",
+            "person": "1",
+            "number": "s",
+            "gender": "f",
+            "expressions": [
+              "je sois allée",
+              "que je sois allée"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "sois allé",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "SP",
+            "person": "1",
+            "number": "s",
+            "gender": "m",
+            "expressions": [
+              "je sois allé",
+              "que je sois allé"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "soyez allée",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "SP",
+            "person": "2",
+            "number": "p",
+            "gender": "f",
+            "expressions": [
+              "vous soyez allée",
+              "que vous soyez allée"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "soyez allées",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "SP",
+            "person": "2",
+            "number": "p",
+            "gender": "f",
+            "expressions": [
+              "vous soyez allées",
+              "que vous soyez allées"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "soyez allé",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "SP",
+            "person": "2",
+            "number": "p",
+            "gender": "m",
+            "expressions": [
+              "vous soyez allé",
+              "que vous soyez allé"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "soyez allés",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "SP",
+            "person": "2",
+            "number": "p",
+            "gender": "m",
+            "expressions": [
+              "vous soyez allés",
+              "que vous soyez allés"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "sois allée",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "SP",
+            "person": "2",
+            "number": "s",
+            "gender": "f",
+            "expressions": [
+              "tu sois allée",
+              "que tu sois allée"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "sois allé",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "SP",
+            "person": "2",
+            "number": "s",
+            "gender": "m",
+            "expressions": [
+              "tu sois allé",
+              "que tu sois allé"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "soient allées",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "SP",
+            "person": "3",
+            "number": "p",
+            "gender": "f",
+            "expressions": [
+              "elles soient allées",
+              "qu’elles soient allées"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "soient allés",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "SP",
+            "person": "3",
+            "number": "p",
+            "gender": "m",
+            "expressions": [
+              "ils soient allés",
+              "qu’ils soient allés"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "soit allée",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "SP",
+            "person": "3",
+            "number": "s",
+            "gender": "f",
+            "expressions": [
+              "elle soit allée",
+              "qu’elle soit allée",
+              "on soit allée",
+              "qu’on soit allée"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "soit allé",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "SP",
+            "person": "3",
+            "number": "s",
+            "gender": "m",
+            "expressions": [
+              "il soit allé",
+              "qu’il soit allé",
+              "on soit allé",
+              "qu’on soit allé"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "fussions allées",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "SQP",
+            "person": "1",
+            "number": "p",
+            "gender": "f",
+            "expressions": [
+              "nous fussions allées",
+              "que nous fussions allées"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "fussions allés",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "SQP",
+            "person": "1",
+            "number": "p",
+            "gender": "m",
+            "expressions": [
+              "nous fussions allés",
+              "que nous fussions allés"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "fusse allée",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "SQP",
+            "person": "1",
+            "number": "s",
+            "gender": "f",
+            "expressions": [
+              "je fusse allée",
+              "que je fusse allée"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "fusse allé",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "SQP",
+            "person": "1",
+            "number": "s",
+            "gender": "m",
+            "expressions": [
+              "je fusse allé",
+              "que je fusse allé"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "fussiez allée",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "SQP",
+            "person": "2",
+            "number": "p",
+            "gender": "f",
+            "expressions": [
+              "vous fussiez allée",
+              "que vous fussiez allée"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "fussiez allées",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "SQP",
+            "person": "2",
+            "number": "p",
+            "gender": "f",
+            "expressions": [
+              "vous fussiez allées",
+              "que vous fussiez allées"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "fussiez allé",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "SQP",
+            "person": "2",
+            "number": "p",
+            "gender": "m",
+            "expressions": [
+              "vous fussiez allé",
+              "que vous fussiez allé"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "fussiez allés",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "SQP",
+            "person": "2",
+            "number": "p",
+            "gender": "m",
+            "expressions": [
+              "vous fussiez allés",
+              "que vous fussiez allés"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "fusses allée",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "SQP",
+            "person": "2",
+            "number": "s",
+            "gender": "f",
+            "expressions": [
+              "tu fusses allée",
+              "que tu fusses allée"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "fusses allé",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "SQP",
+            "person": "2",
+            "number": "s",
+            "gender": "m",
+            "expressions": [
+              "tu fusses allé",
+              "que tu fusses allé"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "fussent allées",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "SQP",
+            "person": "3",
+            "number": "p",
+            "gender": "f",
+            "expressions": [
+              "elles fussent allées",
+              "qu’elles fussent allées"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "fussent allés",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "SQP",
+            "person": "3",
+            "number": "p",
+            "gender": "m",
+            "expressions": [
+              "ils fussent allés",
+              "qu’ils fussent allés"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "fût allée",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "SQP",
+            "person": "3",
+            "number": "s",
+            "gender": "f",
+            "expressions": [
+              "elle fût allée",
+              "qu’elle fût allée",
+              "on fût allée",
+              "qu’on fût allée"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "fût allé",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "SQP",
+            "person": "3",
+            "number": "s",
+            "gender": "m",
+            "expressions": [
+              "il fût allé",
+              "qu’il fût allé",
+              "on fût allé",
+              "qu’on fût allé"
+            ]
+          },
+          {
+            "source_line": 66871,
+            "form": "allassions",
+            "lemma": "aller",
+            "raw_tag": "T1p",
+            "tense": "T",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous allassions",
+              "que nous allassions"
+            ]
+          },
+          {
+            "source_line": 66867,
+            "form": "allasse",
+            "lemma": "aller",
+            "raw_tag": "T1s",
+            "tense": "T",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "j’allasse",
+              "que j’allasse"
+            ]
+          },
+          {
+            "source_line": 66870,
+            "form": "allassiez",
+            "lemma": "aller",
+            "raw_tag": "T2p",
+            "tense": "T",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous allassiez",
+              "que vous allassiez"
+            ]
+          },
+          {
+            "source_line": 66869,
+            "form": "allasses",
+            "lemma": "aller",
+            "raw_tag": "T2s",
+            "tense": "T",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu allasses",
+              "que tu allasses"
+            ]
+          },
+          {
+            "source_line": 66868,
+            "form": "allassent",
+            "lemma": "aller",
+            "raw_tag": "T3p",
+            "tense": "T",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils allassent",
+              "qu’ils allassent",
+              "elles allassent",
+              "qu’elles allassent"
+            ]
+          },
+          {
+            "source_line": 67376,
+            "form": "allât",
+            "lemma": "aller",
+            "raw_tag": "T3s",
+            "tense": "T",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il allât",
+              "qu’il allât",
+              "elle allât",
+              "qu’elle allât",
+              "on allât",
+              "qu’on allât"
+            ]
+          },
+          {
+            "source_line": 66891,
+            "form": "aller",
+            "lemma": "aller",
+            "raw_tag": "W",
+            "tense": "W",
+            "person": null,
+            "number": null,
+            "gender": null,
+            "expressions": [
+              "aller"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "être allée",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "WP",
+            "person": null,
+            "number": null,
+            "gender": "f",
+            "expressions": [
+              "être allée"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "être allées",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "WP",
+            "person": null,
+            "number": null,
+            "gender": "f",
+            "expressions": [
+              "être allées"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "être allé",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "WP",
+            "person": null,
+            "number": null,
+            "gender": "m",
+            "expressions": [
+              "être allé"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "être allés",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "WP",
+            "person": null,
+            "number": null,
+            "gender": "m",
+            "expressions": [
+              "être allés"
+            ]
+          },
+          {
+            "source_line": 67138,
+            "form": "allons",
+            "lemma": "aller",
+            "raw_tag": "Y1p",
+            "tense": "Y",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "allons"
+            ]
+          },
+          {
+            "source_line": 66924,
+            "form": "allez",
+            "lemma": "aller",
+            "raw_tag": "Y2p",
+            "tense": "Y",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "allez"
+            ]
+          },
+          {
+            "source_line": 518540,
+            "form": "va",
+            "lemma": "aller",
+            "raw_tag": "Y2s",
+            "tense": "Y",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "va"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "soyons allées",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "YP",
+            "person": "1",
+            "number": "p",
+            "gender": "f",
+            "expressions": [
+              "soyons allées"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "soyons allés",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "YP",
+            "person": "1",
+            "number": "p",
+            "gender": "m",
+            "expressions": [
+              "soyons allés"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "soyez allée",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "YP",
+            "person": "2",
+            "number": "p",
+            "gender": "f",
+            "expressions": [
+              "soyez allée"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "soyez allées",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "YP",
+            "person": "2",
+            "number": "p",
+            "gender": "f",
+            "expressions": [
+              "soyez allées"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "soyez allé",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "YP",
+            "person": "2",
+            "number": "p",
+            "gender": "m",
+            "expressions": [
+              "soyez allé"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "soyez allés",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "YP",
+            "person": "2",
+            "number": "p",
+            "gender": "m",
+            "expressions": [
+              "soyez allés"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "sois allée",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "YP",
+            "person": "2",
+            "number": "s",
+            "gender": "f",
+            "expressions": [
+              "sois allée"
+            ]
+          },
+          {
+            "source_line": 64822,
+            "form": "sois allé",
+            "lemma": "aller",
+            "raw_tag": "ordinary/v1/être/ordinary active",
+            "tense": "YP",
+            "person": "2",
+            "number": "s",
+            "gender": "m",
+            "expressions": [
+              "sois allé"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "habite": {
+    "query": "habite",
+    "tables": [
+      {
+        "lemma": "habiter",
+        "verb": {
+          "group": 1,
+          "group_status": "supported",
+          "auxiliaries": [
+            {
+              "lemma": "avoir",
+              "use": "ordinary active"
+            }
+          ],
+          "auxiliary_status": "supported",
+          "ordinary_status": "supported",
+          "usage_labels": [
+            "intransitive",
+            "transitive"
+          ],
+          "source": {
+            "resource": "grammalecte-2.3.0",
+            "entry": "dVerb/habiter",
+            "raw_type": "1_it____a"
+          },
+          "correction": null,
+          "blocks": {
+            "G": "supported",
+            "K": "supported",
+            "P": "supported",
+            "I": "supported",
+            "J": "supported",
+            "F": "supported",
+            "C": "supported",
+            "S": "supported",
+            "T": "supported",
+            "Y": "supported",
+            "W": "supported",
+            "PC": "supported",
+            "PQP": "supported",
+            "PA": "supported",
+            "FA": "supported",
+            "CP": "supported",
+            "SP": "supported",
+            "SQP": "supported",
+            "YP": "supported",
+            "WP": "supported",
+            "KP": "supported",
+            "GPP": "supported",
+            "GP": "supported"
+          }
+        },
+        "cells": [
+          {
+            "source_line": 286882,
+            "form": "habiterions",
+            "lemma": "habiter",
+            "raw_tag": "C1p",
+            "tense": "C",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous habiterions"
+            ]
+          },
+          {
+            "source_line": 286877,
+            "form": "habiterais",
+            "lemma": "habiter",
+            "raw_tag": "C12s",
+            "tense": "C",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": []
+          },
+          {
+            "source_line": 286881,
+            "form": "habiteriez",
+            "lemma": "habiter",
+            "raw_tag": "C2p",
+            "tense": "C",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous habiteriez"
+            ]
+          },
+          {
+            "source_line": 286877,
+            "form": "habiterais",
+            "lemma": "habiter",
+            "raw_tag": "C12s",
+            "tense": "C",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu habiterais"
+            ]
+          },
+          {
+            "source_line": 286876,
+            "form": "habiteraient",
+            "lemma": "habiter",
+            "raw_tag": "C3p",
+            "tense": "C",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils habiteraient",
+              "elles habiteraient"
+            ]
+          },
+          {
+            "source_line": 286878,
+            "form": "habiterait",
+            "lemma": "habiter",
+            "raw_tag": "C3s",
+            "tense": "C",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il habiterait",
+              "elle habiterait",
+              "on habiterait"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "aurions habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "CP",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous aurions habité"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "aurais habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "CP",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "j’aurais habité"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "auriez habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "CP",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous auriez habité"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "aurais habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "CP",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu aurais habité"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "auraient habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "CP",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils auraient habité",
+              "elles auraient habité"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "aurait habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "CP",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il aurait habité",
+              "elle aurait habité",
+              "on aurait habité"
+            ]
+          },
+          {
+            "source_line": 286883,
+            "form": "habiterons",
+            "lemma": "habiter",
+            "raw_tag": "F1p",
+            "tense": "F",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous habiterons"
+            ]
+          },
+          {
+            "source_line": 286875,
+            "form": "habiterai",
+            "lemma": "habiter",
+            "raw_tag": "F1s",
+            "tense": "F",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": []
+          },
+          {
+            "source_line": 286880,
+            "form": "habiterez",
+            "lemma": "habiter",
+            "raw_tag": "F2p",
+            "tense": "F",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous habiterez"
+            ]
+          },
+          {
+            "source_line": 286879,
+            "form": "habiteras",
+            "lemma": "habiter",
+            "raw_tag": "F2s",
+            "tense": "F",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu habiteras"
+            ]
+          },
+          {
+            "source_line": 286884,
+            "form": "habiteront",
+            "lemma": "habiter",
+            "raw_tag": "F3p",
+            "tense": "F",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils habiteront",
+              "elles habiteront"
+            ]
+          },
+          {
+            "source_line": 286874,
+            "form": "habitera",
+            "lemma": "habiter",
+            "raw_tag": "F3s",
+            "tense": "F",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il habitera",
+              "elle habitera",
+              "on habitera"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "aurons habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "FA",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous aurons habité"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "aurai habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "FA",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "j’aurai habité"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "aurez habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "FA",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous aurez habité"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "auras habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "FA",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu auras habité"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "auront habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "FA",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils auront habité",
+              "elles auront habité"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "aura habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "FA",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il aura habité",
+              "elle aura habité",
+              "on aura habité"
+            ]
+          },
+          {
+            "source_line": 286856,
+            "form": "habitant",
+            "lemma": "habiter",
+            "raw_tag": "G",
+            "tense": "G",
+            "person": null,
+            "number": null,
+            "gender": null,
+            "expressions": [
+              "habitant"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "en habitant",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/gerund",
+            "tense": "GP",
+            "person": null,
+            "number": null,
+            "gender": null,
+            "expressions": [
+              "en habitant"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "en ayant habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "GPP",
+            "person": null,
+            "number": null,
+            "gender": null,
+            "expressions": [
+              "en ayant habité"
+            ]
+          },
+          {
+            "source_line": 286890,
+            "form": "habitions",
+            "lemma": "habiter",
+            "raw_tag": "I1p",
+            "tense": "I",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous habitions"
+            ]
+          },
+          {
+            "source_line": 286853,
+            "form": "habitais",
+            "lemma": "habiter",
+            "raw_tag": "I12s",
+            "tense": "I",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": []
+          },
+          {
+            "source_line": 286888,
+            "form": "habitiez",
+            "lemma": "habiter",
+            "raw_tag": "I2p",
+            "tense": "I",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous habitiez"
+            ]
+          },
+          {
+            "source_line": 286853,
+            "form": "habitais",
+            "lemma": "habiter",
+            "raw_tag": "I12s",
+            "tense": "I",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu habitais"
+            ]
+          },
+          {
+            "source_line": 286852,
+            "form": "habitaient",
+            "lemma": "habiter",
+            "raw_tag": "I3p",
+            "tense": "I",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils habitaient",
+              "elles habitaient"
+            ]
+          },
+          {
+            "source_line": 286854,
+            "form": "habitait",
+            "lemma": "habiter",
+            "raw_tag": "I3s",
+            "tense": "I",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il habitait",
+              "elle habitait",
+              "on habitait"
+            ]
+          },
+          {
+            "source_line": 286964,
+            "form": "habitâmes",
+            "lemma": "habiter",
+            "raw_tag": "J1p",
+            "tense": "J",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous habitâmes"
+            ]
+          },
+          {
+            "source_line": 286851,
+            "form": "habitai",
+            "lemma": "habiter",
+            "raw_tag": "J1s",
+            "tense": "J",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": []
+          },
+          {
+            "source_line": 286966,
+            "form": "habitâtes",
+            "lemma": "habiter",
+            "raw_tag": "J2p",
+            "tense": "J",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous habitâtes"
+            ]
+          },
+          {
+            "source_line": 286860,
+            "form": "habitas",
+            "lemma": "habiter",
+            "raw_tag": "J2s",
+            "tense": "J",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu habitas"
+            ]
+          },
+          {
+            "source_line": 286967,
+            "form": "habitèrent",
+            "lemma": "habiter",
+            "raw_tag": "J3p",
+            "tense": "J",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils habitèrent",
+              "elles habitèrent"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "habita",
+            "lemma": "habiter",
+            "raw_tag": "J3s",
+            "tense": "J",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il habita",
+              "elle habita",
+              "on habita"
+            ]
+          },
+          {
+            "source_line": 286976,
+            "form": "habitées",
+            "lemma": "habiter",
+            "raw_tag": "Kfp",
+            "tense": "K",
+            "person": null,
+            "number": "p",
+            "gender": "f",
+            "expressions": [
+              "habitées"
+            ]
+          },
+          {
+            "source_line": 286979,
+            "form": "habités",
+            "lemma": "habiter",
+            "raw_tag": "Kmp",
+            "tense": "K",
+            "person": null,
+            "number": "p",
+            "gender": "m",
+            "expressions": [
+              "habités"
+            ]
+          },
+          {
+            "source_line": 286973,
+            "form": "habitée",
+            "lemma": "habiter",
+            "raw_tag": "Kfs",
+            "tense": "K",
+            "person": null,
+            "number": "s",
+            "gender": "f",
+            "expressions": [
+              "habitée"
+            ]
+          },
+          {
+            "source_line": 286970,
+            "form": "habité",
+            "lemma": "habiter",
+            "raw_tag": "Kms",
+            "tense": "K",
+            "person": null,
+            "number": "s",
+            "gender": "m",
+            "expressions": [
+              "habité"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "ayant habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "KP",
+            "person": null,
+            "number": null,
+            "gender": null,
+            "expressions": [
+              "ayant habité"
+            ]
+          },
+          {
+            "source_line": 286892,
+            "form": "habitons",
+            "lemma": "habiter",
+            "raw_tag": "P1p",
+            "tense": "P",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous habitons"
+            ]
+          },
+          {
+            "source_line": 286870,
+            "form": "habite",
+            "lemma": "habiter",
+            "raw_tag": "PS13s",
+            "tense": "P",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": []
+          },
+          {
+            "source_line": 286886,
+            "form": "habitez",
+            "lemma": "habiter",
+            "raw_tag": "P2p",
+            "tense": "P",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous habitez"
+            ]
+          },
+          {
+            "source_line": 286885,
+            "form": "habites",
+            "lemma": "habiter",
+            "raw_tag": "PS2s",
+            "tense": "P",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu habites"
+            ]
+          },
+          {
+            "source_line": 286872,
+            "form": "habitent",
+            "lemma": "habiter",
+            "raw_tag": "PS3p",
+            "tense": "P",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils habitent",
+              "elles habitent"
+            ]
+          },
+          {
+            "source_line": 286870,
+            "form": "habite",
+            "lemma": "habiter",
+            "raw_tag": "PS13s",
+            "tense": "P",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il habite",
+              "elle habite",
+              "on habite"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "eûmes habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "PA",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous eûmes habité"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "eus habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "PA",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "j’eus habité"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "eûtes habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "PA",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous eûtes habité"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "eus habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "PA",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu eus habité"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "eurent habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "PA",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils eurent habité",
+              "elles eurent habité"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "eut habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "PA",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il eut habité",
+              "elle eut habité",
+              "on eut habité"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "avons habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "PC",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous avons habité"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "ai habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "PC",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "j’ai habité"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "avez habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "PC",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous avez habité"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "as habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "PC",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu as habité"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "ont habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "PC",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils ont habité",
+              "elles ont habité"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "a habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "PC",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il a habité",
+              "elle a habité",
+              "on a habité"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "avions habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "PQP",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous avions habité"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "avais habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "PQP",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "j’avais habité"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "aviez habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "PQP",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous aviez habité"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "avais habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "PQP",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu avais habité"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "avaient habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "PQP",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils avaient habité",
+              "elles avaient habité"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "avait habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "PQP",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il avait habité",
+              "elle avait habité",
+              "on avait habité"
+            ]
+          },
+          {
+            "source_line": 286891,
+            "form": "habitions",
+            "lemma": "habiter",
+            "raw_tag": "S1p",
+            "tense": "S",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous habitions",
+              "que nous habitions"
+            ]
+          },
+          {
+            "source_line": 286870,
+            "form": "habite",
+            "lemma": "habiter",
+            "raw_tag": "PS13s",
+            "tense": "S",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": []
+          },
+          {
+            "source_line": 286889,
+            "form": "habitiez",
+            "lemma": "habiter",
+            "raw_tag": "S2p",
+            "tense": "S",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous habitiez",
+              "que vous habitiez"
+            ]
+          },
+          {
+            "source_line": 286885,
+            "form": "habites",
+            "lemma": "habiter",
+            "raw_tag": "PS2s",
+            "tense": "S",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu habites",
+              "que tu habites"
+            ]
+          },
+          {
+            "source_line": 286872,
+            "form": "habitent",
+            "lemma": "habiter",
+            "raw_tag": "PS3p",
+            "tense": "S",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils habitent",
+              "qu’ils habitent",
+              "elles habitent",
+              "qu’elles habitent"
+            ]
+          },
+          {
+            "source_line": 286870,
+            "form": "habite",
+            "lemma": "habiter",
+            "raw_tag": "PS13s",
+            "tense": "S",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il habite",
+              "qu’il habite",
+              "elle habite",
+              "qu’elle habite",
+              "on habite",
+              "qu’on habite"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "ayons habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "SP",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous ayons habité",
+              "que nous ayons habité"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "aie habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "SP",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "j’aie habité",
+              "que j’aie habité"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "ayez habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "SP",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous ayez habité",
+              "que vous ayez habité"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "aies habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "SP",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu aies habité",
+              "que tu aies habité"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "aient habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "SP",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils aient habité",
+              "qu’ils aient habité",
+              "elles aient habité",
+              "qu’elles aient habité"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "ait habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "SP",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il ait habité",
+              "qu’il ait habité",
+              "elle ait habité",
+              "qu’elle ait habité",
+              "on ait habité",
+              "qu’on ait habité"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "eussions habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "SQP",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous eussions habité",
+              "que nous eussions habité"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "eusse habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "SQP",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "j’eusse habité",
+              "que j’eusse habité"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "eussiez habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "SQP",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous eussiez habité",
+              "que vous eussiez habité"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "eusses habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "SQP",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu eusses habité",
+              "que tu eusses habité"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "eussent habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "SQP",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils eussent habité",
+              "qu’ils eussent habité",
+              "elles eussent habité",
+              "qu’elles eussent habité"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "eût habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "SQP",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il eût habité",
+              "qu’il eût habité",
+              "elle eût habité",
+              "qu’elle eût habité",
+              "on eût habité",
+              "qu’on eût habité"
+            ]
+          },
+          {
+            "source_line": 286865,
+            "form": "habitassions",
+            "lemma": "habiter",
+            "raw_tag": "T1p",
+            "tense": "T",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous habitassions",
+              "que nous habitassions"
+            ]
+          },
+          {
+            "source_line": 286861,
+            "form": "habitasse",
+            "lemma": "habiter",
+            "raw_tag": "T1s",
+            "tense": "T",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": []
+          },
+          {
+            "source_line": 286864,
+            "form": "habitassiez",
+            "lemma": "habiter",
+            "raw_tag": "T2p",
+            "tense": "T",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous habitassiez",
+              "que vous habitassiez"
+            ]
+          },
+          {
+            "source_line": 286863,
+            "form": "habitasses",
+            "lemma": "habiter",
+            "raw_tag": "T2s",
+            "tense": "T",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu habitasses",
+              "que tu habitasses"
+            ]
+          },
+          {
+            "source_line": 286862,
+            "form": "habitassent",
+            "lemma": "habiter",
+            "raw_tag": "T3p",
+            "tense": "T",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils habitassent",
+              "qu’ils habitassent",
+              "elles habitassent",
+              "qu’elles habitassent"
+            ]
+          },
+          {
+            "source_line": 286965,
+            "form": "habitât",
+            "lemma": "habiter",
+            "raw_tag": "T3s",
+            "tense": "T",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il habitât",
+              "qu’il habitât",
+              "elle habitât",
+              "qu’elle habitât",
+              "on habitât",
+              "qu’on habitât"
+            ]
+          },
+          {
+            "source_line": 286873,
+            "form": "habiter",
+            "lemma": "habiter",
+            "raw_tag": "W",
+            "tense": "W",
+            "person": null,
+            "number": null,
+            "gender": null,
+            "expressions": [
+              "habiter"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "avoir habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "WP",
+            "person": null,
+            "number": null,
+            "gender": null,
+            "expressions": [
+              "avoir habité"
+            ]
+          },
+          {
+            "source_line": 286893,
+            "form": "habitons",
+            "lemma": "habiter",
+            "raw_tag": "Y1p",
+            "tense": "Y",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "habitons"
+            ]
+          },
+          {
+            "source_line": 286887,
+            "form": "habitez",
+            "lemma": "habiter",
+            "raw_tag": "Y2p",
+            "tense": "Y",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "habitez"
+            ]
+          },
+          {
+            "source_line": 286871,
+            "form": "habite",
+            "lemma": "habiter",
+            "raw_tag": "Y2s",
+            "tense": "Y",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "habite"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "ayons habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "YP",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ayons habité"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "ayez habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "YP",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ayez habité"
+            ]
+          },
+          {
+            "source_line": 286844,
+            "form": "aie habité",
+            "lemma": "habiter",
+            "raw_tag": "ordinary/v1/avoir/ordinary active",
+            "tense": "YP",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "aie habité"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

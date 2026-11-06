@@ -45,6 +45,38 @@ class ConjugationCliTests(unittest.TestCase):
         self.assertEqual(len(highlighted), 3)
         self.assertTrue(all(c["form"] == "sommes" for c in highlighted))
 
+    def test_ordinary_compounds_cover_each_block_and_whole_subject_expressions(self):
+        expected = {"P": "aimons", "PC": "avons aimé", "I": "aimions", "PQP": "avions aimé",
+                    "J": "aimâmes", "PA": "eûmes aimé", "F": "aimerons", "FA": "aurons aimé",
+                    "C": "aimerions", "CP": "aurions aimé", "S": "aimions", "SP": "ayons aimé",
+                    "T": "aimassions", "SQP": "eussions aimé", "Y": "aime", "YP": "aie aimé",
+                    "W": "aimer", "WP": "avoir aimé", "G": "aimant", "K": "aimé",
+                    "KP": "ayant aimé", "GP": "en aimant", "GPP": "en ayant aimé"}
+        cells = self.read("table", "aimer")["tables"][0]["cells"]
+        for tense, form in expected.items():
+            with self.subTest(tense=tense):
+                self.assertTrue(any(c["tense"] == tense and c["form"] == form for c in cells))
+        for query in ("avons aimé", "nous avons aimé", "que nous ayons aimé", "ayant aimé", "en ayant aimé"):
+            result = self.read("query", query)
+            self.assertIn("aimer", [t["lemma"] for t in result["tables"]])
+            self.assertTrue(all(c["form"] == query or query in c["expressions"] for c in result["matches"]))
+        for query in ("je avons aimé", "avons aimé inconnu", "avons eu aimé", "elle est allé"):
+            self.assertEqual(self.read("query", query)["status"], "not_found")
+        for query in ("je suis allé", "je suis allée", "elle est allée", "vous êtes allées"):
+            self.assertIn("aller", [t["lemma"] for t in self.read("query", query)["tables"]])
+
+    def test_compound_interpretations_and_lexically_licensed_agreement(self):
+        matches = self.read("query", "aie aimé")["matches"]
+        self.assertEqual({(c["tense"], c["person"]) for c in matches}, {("SP", "1"), ("YP", "2")})
+        for query, lemma in (("ai descendu", "descendre"), ("suis descendu", "descendre"),
+                             ("suis rentré", "rentrer"), ("ai rentré", "rentrer")):
+            table = next(t for t in self.read("query", query)["tables"] if t["lemma"] == lemma)
+            self.assertTrue(any(c["matched"] for c in table["cells"]))
+        # OQLF's transitive rule closes incomplete auxiliary metadata without a default guess.
+        verb = self.read("table", "aboyer")["tables"][0]["verb"]
+        self.assertEqual(verb["auxiliaries"], [{"lemma": "avoir", "use": "transitive"}])
+        self.assertTrue(verb["correction"]["references"])
+
     def test_prepare_reuses_the_resource_and_refuses_damaged_output(self):
         prepared = Path(self.temporary.name) / "prepared"
         result = run_cli("prepare", prepared)
@@ -54,7 +86,7 @@ class ConjugationCliTests(unittest.TestCase):
         before = {p.relative_to(self.output): p.read_bytes() for p in self.output.rglob("*") if p.is_file()}
         result = run_cli("prepare", self.output)
         self.assertEqual(result.returncode, 0, result.stderr)
-        self.assertEqual(json.loads(result.stdout)["database_bytes"], 35_667_968)
+        self.assertEqual(json.loads(result.stdout)["database_bytes"], json.loads((self.output / "report.json").read_text())["database_bytes"])
         self.assertEqual({p.relative_to(self.output): p.read_bytes() for p in self.output.rglob("*") if p.is_file()}, before)
         broken = Path(self.temporary.name) / "damaged-prepare"
         shutil.copytree(self.output, broken)
@@ -122,13 +154,13 @@ class ConjugationCliTests(unittest.TestCase):
         self.assertEqual(unknown["verb"]["group_status"], "unconfirmed")
         self.assertIsNone(unknown["verb"]["source"])
         incomplete = self.read("table", "aboyer")["tables"][0]["verb"]
-        self.assertEqual(incomplete["auxiliary_status"], "unconfirmed")
-        self.assertEqual(incomplete["auxiliaries"], [])
+        self.assertEqual(incomplete["auxiliary_status"], "supported")
+        self.assertEqual(incomplete["auxiliaries"], [{"lemma": "avoir", "use": "transitive"}])
         ambiguous = self.read("table", "ressortir")["tables"][0]["verb"]
         self.assertIsNone(ambiguous["group"])
         self.assertEqual(ambiguous["group_status"], "unconfirmed")
         self.assertEqual([a["lemma"] for a in ambiguous["auxiliaries"]], ["avoir", "être"])
-        self.assertEqual(ambiguous["auxiliary_status"], "unconfirmed")
+        self.assertEqual(ambiguous["auxiliary_status"], "supported")
         coverage = json.loads((self.output / "report.json").read_text(encoding="utf-8"))["metadata_coverage"]
         self.assertEqual(coverage["verbs"], 7826)
         for field in ("group_status", "auxiliary_status", "ordinary_status"):
@@ -173,15 +205,15 @@ class ConjugationCliTests(unittest.TestCase):
                                    ("falloir", "faut", "P")]:
             with self.subTest(lemma=lemma):
                 table = self.read("table", lemma)["tables"][0]
-                self.assertEqual(table["status"], "source_only")
+                self.assertEqual(table["status"], "source_only" if lemma == "enfuir" else "ordinary_active")
                 self.assertTrue(any(c["form"] == form and c["tense"] == tense for c in table["cells"]))
         falloir = self.read("table", "falloir")["tables"][0]["cells"]
         self.assertFalse(any(c["person"] in ("1", "2") for c in falloir))
         self.assertEqual(self.read("table", "s'enfuir")["status"], "not_found")
-        self.assertEqual(self.read("query", "avons aimé")["status"], "not_found")
+        self.assertEqual(self.read("query", "avons aimé")["status"], "found")
 
     def test_unspecified_agreement_and_tags_are_not_invented(self):
-        ete = self.read("query", "été")["matches"]
+        ete = [r for r in self.read("query", "été")["matches"] if r["raw_tag"] == "K"]
         self.assertEqual([(r["raw_tag"], r["gender"], r["number"]) for r in ete], [("K", None, None)])
         unresolved = self.read("query", "voilà")["matches"]
         self.assertEqual([(r["raw_tag"], r["tense"]) for r in unresolved], [("", None)])

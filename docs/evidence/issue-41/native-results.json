@@ -1,0 +1,214 @@
+{
+  "status": "PASS",
+  "restart": true,
+  "preserved": {
+    "records": 1,
+    "cards": 2,
+    "audioFiles": 3
+  },
+  "queries": {
+    "avons aimé": [
+      {
+        "lemma": "aimer",
+        "matches": [
+          [
+            "PC",
+            "1",
+            "p",
+            null
+          ]
+        ]
+      }
+    ],
+    "aie aimé": [
+      {
+        "lemma": "aimer",
+        "matches": [
+          [
+            "SP",
+            "1",
+            "s",
+            null
+          ],
+          [
+            "YP",
+            "2",
+            "s",
+            null
+          ]
+        ]
+      }
+    ],
+    "je suis allée": [
+      {
+        "lemma": "aller",
+        "matches": [
+          [
+            "PC",
+            "1",
+            "s",
+            "f"
+          ]
+        ]
+      }
+    ],
+    "en ayant aimé": [
+      {
+        "lemma": "aimer",
+        "matches": [
+          [
+            "GPP",
+            null,
+            null,
+            null
+          ]
+        ]
+      }
+    ],
+    "je avons aimé": [],
+    "sommes": [
+      {
+        "lemma": "sommer",
+        "matches": [
+          [
+            "P",
+            "2",
+            "s",
+            null
+          ],
+          [
+            "S",
+            "2",
+            "s",
+            null
+          ]
+        ]
+      },
+      {
+        "lemma": "être",
+        "matches": [
+          [
+            "P",
+            "1",
+            "p",
+            null
+          ]
+        ]
+      }
+    ],
+    "suis": [
+      {
+        "lemma": "suivre",
+        "matches": [
+          [
+            "P",
+            "1",
+            "s",
+            null
+          ],
+          [
+            "P",
+            "2",
+            "s",
+            null
+          ],
+          [
+            "Y",
+            "2",
+            "s",
+            null
+          ]
+        ]
+      },
+      {
+        "lemma": "être",
+        "matches": [
+          [
+            "P",
+            "1",
+            "s",
+            null
+          ]
+        ]
+      }
+    ],
+    "paie": [
+      {
+        "lemma": "payer",
+        "matches": [
+          [
+            "P",
+            "1",
+            "s",
+            null
+          ],
+          [
+            "P",
+            "3",
+            "s",
+            null
+          ],
+          [
+            "S",
+            "1",
+            "s",
+            null
+          ],
+          [
+            "S",
+            "3",
+            "s",
+            null
+          ],
+          [
+            "Y",
+            "2",
+            "s",
+            null
+          ]
+        ]
+      }
+    ],
+    "falloir": [
+      {
+        "lemma": "falloir",
+        "matches": [
+          [
+            "W",
+            null,
+            null,
+            null
+          ]
+        ]
+      }
+    ],
+    "enfuir": [
+      {
+        "lemma": "enfuir",
+        "matches": [
+          [
+            "W",
+            null,
+            null,
+            null
+          ]
+        ]
+      }
+    ],
+    "voilà": [
+      {
+        "lemma": "voilà",
+        "matches": [
+          [
+            null,
+            null,
+            null,
+            null
+          ]
+        ]
+      }
+    ],
+    "SOMMES": [],
+    "' OR 1=1 --": []
+  }
+}

@@ -5,6 +5,7 @@ fn main() {
         "resources/freedict-fra-zho-2025.11.23",
         "scripts/conjugation_sample.py",
         "scripts/conjugation_metadata.py",
+        "scripts/conjugation_generation.py",
         "resources/lefff-3.4",
         "resources/grammalecte-2.3.0",
         "LICENSE",
@@ -40,7 +41,7 @@ fn main() {
             "utf8",
             "scripts/conjugation_sample.py",
             "prepare",
-            "target/desktop-conjugation",
+            "target/desktop-conjugation-v3",
         ])
         .current_dir(&root)
         .output()

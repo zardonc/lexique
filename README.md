@@ -72,7 +72,7 @@ Windows x64 语音开发小样可在构建后运行 `python -X utf8 scripts/pack
 
 变位资源入口：`pnpm conjugation:build target/conjugation-sample`、`pnpm conjugation:query target/conjugation-sample/conjugation.sqlite3 sommes`、`pnpm conjugation:table target/conjugation-sample/conjugation.sqlite3 falloir`、`pnpm test:conjugation`。固定 Lefff 3.4 原始词形（LGPL-LR）和 Grammalecte 2.3.0 元数据（GPL-3.0-only）随仓库保存。原生构建自动准备 `target/desktop-conjugation`，或先运行 `pnpm conjugation:prepare`；已有生成物须通过完整性检查，损坏则失败，移走该生成目录后可重建。构建入口把两种资源放到可执行文件旁，portable 保留原始源、许可、纠正资料和转换源码；用户学习数据不参与资源准备。
 
-桌面「动词变位」现可精确查询简单词形、选择所有候选、查看 23 个独立区块并辨认全部匹配格。可试 `sommes`、`suis`、`paie`、`falloir`。七个重点时态排在最前，未确认的结构和缺少词形明确标注；浏览器预览不模拟本机资源。复合／代词式生成、英语释义、着色及变位朗读仍属后续工单。来源与覆盖见 [#39 验证](docs/evidence/issue-39/README.md)，桌面与 Windows 原生检查见 [#40 验证](docs/evidence/issue-40/README.md)。
+桌面「动词变位」现可精确查询简单词形、选择所有候选、查看 23 个独立区块并辨认全部匹配格。可试 `sommes`、`suis`、`paie`、`falloir`。七个重点时态排在最前，未确认的结构和缺少词形明确标注；浏览器预览不模拟本机资源。普通复合／非限定表达已接入部分已验证词元，可试 avons aimé、je suis allée、en ayant aimé；全资源完整性门槛仍开放，见 [#41 证据](docs/evidence/issue-41/README.md)。代词式生成、英语释义、着色及变位朗读仍属后续工单。来源与覆盖见 [#39 验证](docs/evidence/issue-39/README.md)，桌面与 Windows 原生检查见 [#40 验证](docs/evidence/issue-40/README.md)。
 
 2026-11-05，#39 在同一 CLI 加入固定 Grammalecte 2.3.0 的传统组别、普通主动式助动词与用法元数据，保留原始标记、纠正依据及未知／不适用状态；构建报告列出全资源覆盖。数据许可分别为 Lefff 的 LGPL-LR 与元数据的 GPL-3.0-only，许可、源数据和转换材料随资源保留。新生成资源格式为 2；旧小样保持原样，使用新输出目录重新构建。查询须保留数据库旁的 `grammalecte-2.3.0/` 目录。见 [#39 证据与限制](docs/evidence/issue-39/README.md)。
 

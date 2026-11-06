@@ -12,6 +12,7 @@ import re
 import shutil
 import sqlite3
 
+from conjugation_generation import generate, query_base
 from conjugation_metadata import RESOURCE as VERB_RESOURCE, load_metadata, metadata_report, verb_metadata
 
 RESOURCE = Path(__file__).resolve().parents[1] / "resources/lefff-3.4"
@@ -22,8 +23,12 @@ TENSES = {
     "F": "indicatif futur simple", "C": "conditionnel présent", "S": "subjonctif présent",
     "T": "subjonctif imparfait", "Y": "impératif présent", "W": "infinitif présent",
     "G": "participe présent", "K": "participe passé",
+    "PC": "passé composé", "PQP": "plus-que-parfait", "PA": "passé antérieur",
+    "FA": "futur antérieur", "CP": "conditionnel passé", "SP": "subjonctif passé",
+    "SQP": "subjonctif plus-que-parfait", "YP": "impératif passé", "WP": "infinitif passé",
+    "KP": "participe composé", "GP": "gérondif présent", "GPP": "gérondif passé",
 }
-COLUMNS = "source_line, form, lemma, raw_tag, tense, person, number, gender"
+COLUMNS = "source_line, form, lemma, raw_tag, tense, person, number, gender, expressions"
 APPLICATION_ID = 0x4C58434A
 
 
@@ -56,23 +61,25 @@ def build(output, source, metadata_source=VERB_RESOURCE):
     rows, source_bytes = source_rows(source)
     linguistic_data, corrections, supplemental_provenance = load_metadata(metadata_source)
     verbs = {lemma: verb_metadata(lemma, linguistic_data, corrections) for lemma in sorted({r[2] for r in rows})}
+    source_slots = len(rows)
+    rows, block_coverage = generate(rows, verbs, linguistic_data)
     output = Path(output)
     output.mkdir(parents=True, exist_ok=False)
     database = output / "conjugation.sqlite3"
     with closing(sqlite3.connect(database)) as connection:
         connection.executescript(f"""
             PRAGMA application_id = {APPLICATION_ID};
-            PRAGMA user_version = 2;
+            PRAGMA user_version = 3;
             CREATE TABLE metadata (provenance TEXT NOT NULL, slots INTEGER NOT NULL,
                                    supplement TEXT NOT NULL, verbs INTEGER NOT NULL);
             CREATE TABLE verbs (lemma TEXT PRIMARY KEY, information TEXT NOT NULL);
             CREATE TABLE slots (
                 source_line INTEGER NOT NULL, form TEXT NOT NULL COLLATE BINARY,
                 lemma TEXT NOT NULL COLLATE BINARY, raw_tag TEXT NOT NULL,
-                tense TEXT, person TEXT, number TEXT, gender TEXT
+                tense TEXT, person TEXT, number TEXT, gender TEXT, expressions TEXT NOT NULL
             );
         """)
-        connection.executemany("INSERT INTO slots VALUES (?,?,?,?,?,?,?,?)", rows)
+        connection.executemany("INSERT INTO slots VALUES (?,?,?,?,?,?,?,?,?)", rows)
         connection.executemany("INSERT INTO verbs VALUES (?,?)",
                                [(lemma, json.dumps(info, ensure_ascii=False)) for lemma, info in verbs.items()])
         connection.execute("INSERT INTO metadata VALUES (?,?,?,?)",
@@ -93,13 +100,13 @@ def build(output, source, metadata_source=VERB_RESOURCE):
     supplement.mkdir()
     for name in (*supplemental_provenance["files"], "provenance.json"):
         shutil.copyfile(Path(metadata_source) / name, supplement / name)
-    for name in ("conjugation_sample.py", "conjugation_metadata.py"):
+    for name in ("conjugation_sample.py", "conjugation_metadata.py", "conjugation_generation.py"):
         shutil.copyfile(Path(__file__).with_name(name), output / name)
     shutil.copyfile(RESOURCE.parents[1] / "LICENSE", output / "LICENSE-MIT")
     report = {
         "sqlite_sha256": hashlib.sha256(database.read_bytes()).hexdigest(),
         "source_bytes": source_bytes, "source_gzip_bytes": Path(source).stat().st_size,
-        "source_verb_rows": len({r[0] for r in rows}), "slots": len(rows),
+        "source_verb_rows": len({r[0] for r in rows}), "slots": len(rows), "source_slots": source_slots, "block_coverage": block_coverage,
         "lemmas": len({r[2] for r in rows}), "forms": len({r[1] for r in rows}),
         "table_bytes": table_bytes, "lemma_index_bytes": lemma_bytes,
         "reverse_index_bytes": reverse_bytes, "database_bytes": database.stat().st_size,
@@ -139,7 +146,7 @@ def read_resource(database, query=None, lemma=None):
         connection.row_factory = sqlite3.Row
         connection.execute("PRAGMA trusted_schema = OFF")
         if (connection.execute("PRAGMA application_id").fetchone()[0] != APPLICATION_ID
-                or connection.execute("PRAGMA user_version").fetchone()[0] != 2):
+                or connection.execute("PRAGMA user_version").fetchone()[0] != 3):
             raise ValueError("Unsupported conjugation resource format")
         if [r[0] for r in connection.execute("PRAGMA integrity_check")] != ["ok"]:
             raise ValueError("Conjugation resource failed integrity check")
@@ -154,8 +161,11 @@ def read_resource(database, query=None, lemma=None):
         if json.loads(metadata[0][2]) != supplemental_provenance:
             raise ValueError("Conjugation supplemental provenance mismatch")
         matches = [] if query is None else [dict(r) for r in connection.execute(
-            f"SELECT {COLUMNS} FROM slots WHERE form = ? ORDER BY lemma, source_line, tense, person",
-            (query,))]
+            f"SELECT {COLUMNS} FROM slots WHERE form IN (?, ?) ORDER BY lemma, source_line, tense, person",
+            (query, query_base(query)))]
+        for cell in matches:
+            cell["expressions"] = json.loads(cell["expressions"])
+        matches = [cell for cell in matches if cell["form"] == query or query in cell["expressions"]]
         lemmas = [lemma] if lemma is not None else sorted({r["lemma"] for r in matches})
         tables = []
         for headword in lemmas:
@@ -163,16 +173,18 @@ def read_resource(database, query=None, lemma=None):
                 f"SELECT {COLUMNS} FROM slots WHERE lemma = ? ORDER BY tense, person, number, gender, source_line",
                 (headword,))]
             for cell in cells:
-                cell["matched"] = query is not None and cell["form"] == query
+                cell["expressions"] = json.loads(cell["expressions"])
+                cell["matched"] = query is not None and (cell["form"] == query or query in cell["expressions"])
             information = connection.execute("SELECT information FROM verbs WHERE lemma = ?", (headword,)).fetchone()
             verb = json.loads(information[0]) if information else None
-            if information is not None and verb != verb_metadata(headword, linguistic_data, corrections):
+            if information is not None and (not isinstance(verb, dict) or {k: v for k, v in verb.items() if k != "blocks"} != verb_metadata(headword, linguistic_data, corrections)):
                 raise ValueError("Conjugation verb metadata differs from pinned sources")
-            tables.append({"lemma": headword, "status": "source_only" if cells else "not_found",
+            table_status = "ordinary_active" if verb and verb["ordinary_status"] == "supported" else "source_only"
+            tables.append({"lemma": headword, "status": table_status if cells else "not_found",
                            "verb": verb, "cells": cells})
         return {"status": "found" if matches or any(t["cells"] for t in tables) else "not_found",
                 "query": query, "matches": matches, "tables": tables,
-                "tense_labels": TENSES, "coverage": "source_only; absent cells are not generated"}
+                "tense_labels": TENSES, "coverage": "ordinary/v1; see per-verb blocks and resource-wide block_coverage"}
 
 
 def main():

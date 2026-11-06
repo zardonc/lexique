@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 
 RESOURCE = Path(__file__).resolve().parents[1] / "resources/grammalecte-2.3.0"
+AUXILIARY_REFERENCE = "https://vitrinelinguistique.oqlf.gouv.qc.ca/24584/la-grammaire/le-verbe/auxiliaires/tableau-synthese-de-lemploi-des-auxiliaires-avoir-et-etre"
 
 
 def load_metadata(directory):
@@ -65,6 +66,20 @@ def verb_metadata(lemma, data, corrections):
                 result[key] = correction[key]
         if "auxiliaries" in correction:
             result["auxiliary_status"] = "supported"
+    if not result["auxiliaries"] and result["ordinary_status"] == "supported" and (code[3] == "t" or code[4] == "n"):
+        result["auxiliaries"] = [{"lemma": "avoir", "use": "transitive" if code[3] == "t" else "indirect_transitive"}]
+        result["auxiliary_status"] = "supported"
+        result["correction"] = {
+            "note": "Ordinary transitive constructions take avoir; other uses remain unconfirmed when upstream auxiliary flags are incomplete.",
+            "references": [AUXILIARY_REFERENCE],
+        }
+    if lemma in {"entrer", "rentrer", "retourner", "sortir", "ressortir", "tomber"}:
+        result["auxiliaries"] = [{"lemma": "avoir", "use": "indirect_transitive" if lemma == "ressortir" else "transitive"},
+                                 {"lemma": "être", "use": "intransitive"}]
+        result["auxiliary_status"] = "supported"
+        result["correction"] = {**(result["correction"] or {}),
+                                "note": "Auxiliary depends on ordinary use; avoir for transitive and être for intransitive movement.",
+                                "references": [AUXILIARY_REFERENCE]}
     return result
 
 

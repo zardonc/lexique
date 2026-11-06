@@ -9,7 +9,7 @@ import { setTimeout as delay } from 'node:timers/promises';
 import assert from 'node:assert/strict';
 
 const [resources, binary, data, destination] = process.argv.slice(2).map((path) => resolve(path));
-assert.ok(destination.startsWith(resolve('../../target/issue-40') + '\\'));
+assert.ok(['issue-40', 'issue-41'].some((issue) => destination.startsWith(resolve('../../target/' + issue) + '\\')));
 await mkdir(destination);
 for (const name of ['dictionary', 'conjugation']) await cp(join(resources, name), join(destination, name), { recursive: true });
 await cp(binary, join(destination, 'Lexique.exe'));
@@ -45,7 +45,7 @@ async function check(page) {
   assert.ok(before.records.length && before.cards.flat().length && before.audio.some((bytes) => bytes?.length) && Object.keys(audio).length, 'Use an existing learning/audio fixture');
   const results = await page.evaluate(async () => {
     const invoke = window.__TAURI_INTERNALS__.invoke, results = {};
-    for (const key of ['sommes', 'suis', 'paie', 'falloir', 'enfuir', 'voilà', 'SOMMES', "' OR 1=1 --"]) results[key] = await invoke('conjugation_lookup', { key });
+    for (const key of ['avons aimé', 'aie aimé', 'je suis allée', 'en ayant aimé', 'je avons aimé', 'sommes', 'suis', 'paie', 'falloir', 'enfuir', 'voilà', 'SOMMES', "' OR 1=1 --"]) results[key] = await invoke('conjugation_lookup', { key });
     for (const key of ['', '\u0000', 'é'.repeat(257)]) {
       try { await invoke('conjugation_lookup', { key }); throw new Error('Invalid input accepted'); }
       catch (error) { if (error.code !== 'invalid_query') throw error; }
@@ -65,6 +65,25 @@ async function check(page) {
   await expect(page.locator('.conjugation-block')).toHaveCount(23);
   await expect(page.locator('.conjugation-cell[data-matched=true]')).toHaveCount(3);
   await page.screenshot({ path: join(destination, 'conjugation.png'), fullPage: true });
+  for (const [query, count] of [['aie aimé', 2], ['je suis allée', 1]]) {
+    await page.getByLabel('法语动词或简单变位词形').fill(query);
+    await page.getByRole('button', { name: '查询变位', exact: true }).click();
+    await expect(page.locator('.conjugation-cell[data-matched=true]')).toHaveCount(count);
+    if (query === 'aie aimé') {
+      for (const [code, form] of [['KP', 'ayant aimé'], ['GP', 'en aimant'], ['GPP', 'en ayant aimé']]) {
+        await expect(page.locator(`[data-tense=${code}]`)).toContainText(form);
+      }
+    } else {
+      for (const form of ['je suis allé', 'je suis allée']) {
+        await expect(page.locator('[data-tense=PC]').getByText(form, { exact: true })).toBeVisible();
+      }
+    }
+  }
+  assert.equal(results['je avons aimé'].tables.length, 0);
+  assert.ok(results['en ayant aimé'].tables.some((table) => table.lemma === 'aimer'));
+  await page.screenshot({ path: join(destination, 'ordinary.png'), fullPage: true });
+  await page.getByLabel('法语动词或简单变位词形').fill('suis');
+  await page.getByRole('button', { name: '查询变位', exact: true }).click();
   await failures(page);
   assert.deepEqual(await snapshot(page), before);
   assert.deepEqual(await hashes(join(destination, 'Lexique-data/temp/speech')), audio);

@@ -1,4 +1,4 @@
-//! Exact source-form lookup. Missing forms are never generated or declared defective.
+//! Exact whole-expression lookup in the admitted ordinary active resource.
 use std::path::Path;
 
 use rusqlite::Connection;
@@ -29,6 +29,7 @@ pub struct Cell {
     pub person: Option<String>,
     pub number: Option<String>,
     pub gender: Option<String>,
+    pub expressions: Vec<String>,
 }
 
 pub fn lookup(path: &Path, key: &str, expected_sha256: &str) -> Result<Lookup, DictionaryError> {
@@ -39,11 +40,12 @@ pub fn lookup(path: &Path, key: &str, expected_sha256: &str) -> Result<Lookup, D
             "enter 1–512 UTF-8 bytes without control characters",
         ));
     }
-    let connection = snapshot::open(path, expected_sha256, 40 * 1024 * 1024)?;
+    let connection = snapshot::open(path, expected_sha256, 128 * 1024 * 1024)?;
+    let base = query_base(key);
     let mut statement = connection
         .prepare(
             "SELECT DISTINCT s.lemma, v.information FROM slots s JOIN verbs v ON v.lemma = s.lemma
-         WHERE s.form = ?1 COLLATE BINARY ORDER BY s.lemma COLLATE BINARY",
+         WHERE s.form IN (?1, ?2) COLLATE BINARY ORDER BY s.lemma COLLATE BINARY",
         )
         .map_err(|error| {
             failure(
@@ -53,7 +55,7 @@ pub fn lookup(path: &Path, key: &str, expected_sha256: &str) -> Result<Lookup, D
             )
         })?;
     let rows = statement
-        .query_map([key], |row| {
+        .query_map([key, base], |row| {
             Ok((row.get::<_, String>(0)?, row.get::<_, String>(1)?))
         })
         .map_err(|error| {
@@ -68,6 +70,11 @@ pub fn lookup(path: &Path, key: &str, expected_sha256: &str) -> Result<Lookup, D
         let (lemma, metadata) =
             row.map_err(|error| failure("corrupt", "Could not read conjugation metadata", error))?;
         let cells = read_cells(&connection, &lemma)?;
+        if !cells.iter().any(|cell| {
+            cell.form == key || cell.expressions.iter().any(|expression| expression == key)
+        }) {
+            continue;
+        }
         tables.push(Table {
             lemma,
             cells,
@@ -83,7 +90,7 @@ pub fn lookup(path: &Path, key: &str, expected_sha256: &str) -> Result<Lookup, D
 
 fn read_cells(connection: &Connection, lemma: &str) -> Result<Vec<Cell>, DictionaryError> {
     let mut statement = connection.prepare(
-        "SELECT source_line, form, lemma, raw_tag, tense, person, number, gender
+        "SELECT source_line, form, lemma, raw_tag, tense, person, number, gender, expressions
          FROM slots WHERE lemma = ?1 COLLATE BINARY ORDER BY tense, person, number, gender, source_line",
     ).map_err(|error| failure("query_failed", "Could not prepare conjugation table", error))?;
     let rows = statement
@@ -97,6 +104,13 @@ fn read_cells(connection: &Connection, lemma: &str) -> Result<Vec<Cell>, Diction
                 person: row.get(5)?,
                 number: row.get(6)?,
                 gender: row.get(7)?,
+                expressions: serde_json::from_str(&row.get::<_, String>(8)?).map_err(|error| {
+                    rusqlite::Error::FromSqlConversionFailure(
+                        8,
+                        rusqlite::types::Type::Text,
+                        Box::new(error),
+                    )
+                })?,
             })
         })
         .map_err(|error| failure("query_failed", "Could not query conjugation table", error))?;
@@ -104,4 +118,19 @@ fn read_cells(connection: &Connection, lemma: &str) -> Result<Vec<Cell>, Diction
         row.map_err(|error| failure("corrupt", "Could not read conjugation cell", error))
     })
     .collect()
+}
+
+fn query_base(key: &str) -> &str {
+    let verbal = key
+        .strip_prefix("que ")
+        .or_else(|| key.strip_prefix("qu’"))
+        .unwrap_or(key);
+    for subject in [
+        "je ", "j’", "tu ", "il ", "elle ", "on ", "nous ", "vous ", "ils ", "elles ",
+    ] {
+        if let Some(base) = verbal.strip_prefix(subject) {
+            return base;
+        }
+    }
+    key
 }

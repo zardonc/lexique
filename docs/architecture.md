@@ -89,3 +89,5 @@ Windows 缓存以能力目录句柄及 nofollow 打开目录／文件，写入�
 安装器、签名、公证、更新和完整默认离线资源尚未就绪，`bundle.active` 因此关闭。开发图标是随骨架提供的原创临时 L 字形，不代表最终品牌。`pnpm desktop:build` 仅编译程序，不声称生成完整可分发安装包。CI 对四个系统 / 架构做编译检查，不能替代实际安装、首装断网和 TTS 验收。
 
 依据：[Tauri Vite 配置](https://v2.tauri.app/start/frontend/vite/)、[命令调用](https://v2.tauri.app/develop/calling-rust/)、[权限能力](https://v2.tauri.app/security/capabilities/)。
+
+2026-11-06，#41 将变位资源升级为格式 3，单独准备到 `target/desktop-conjugation-v3/`，保留旧生成物。构建器物化已准入的普通复合、分词和副动词表达，附带显式主语表达与用法；原始 Lefff 行不变。原生查询先以完整词形或去除已识别主语后的完整表达查索引，再验证原输入属于该格的表达列表，不回退到单独成分。仍使用固定摘要与只读快照，资源上限按实测扩为 128 MiB；Zod 校验新增区块和表达字段。未确认的词元／助动词不补造，完整性仍未验收，见 [#41 证据](evidence/issue-41/README.md)。
