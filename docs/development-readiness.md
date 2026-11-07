@@ -61,6 +61,7 @@ FSRS 使用固定版本默认参数，不提供优化与额外间隔随机扰动
 - [Lefff 原作者](https://pauillac.inria.fr/~sagot/index.html#lefff)列出 3.4 与 LGPL-LR；[衍生数据说明](https://raw.githubusercontent.com/RosaeNLG/rosaenlg/master/packages/french-verbs-lefff/README.md)保留该数据许可，不能按外层包的 Apache 标签处理。形态反查能力不代表全部复合时态已覆盖，本轮未成功取得并校验原作者完整归档。
 - [FLELex 官方下载](https://cental.uclouvain.be/cefrlex/flelex/download/)明确 CC BY-NC-SA 4.0，不符合默认资源政策；分级语料频率不能直接当成唯一教学必背清单。本轮未找到可直接准入的替代完整 A1–B2 词表。
 - [mdictlib](https://github.com/lonelam/mdictlib)是解析器候选，不赋予第三方词典内容再分发权；声明支持的格式仍需本项目实测。
+- 2026-11-07，[#3 证据](evidence/issue-3/README.md)完成固定 `mdictlib 0.2.8 + lzo` 的 Windows x64 独立读取验证：六组原创合法配对、12 个真实 MDX 与两个同名 MDD 通过，校验／截断／大小／不支持头部失败可复现。自定义词典正式适配、外部 HTML 显示及四目标执行仍按对应门槛验收；第三方文件未准入默认包或公开夹具。
 
 ### 离线语音与系统依赖
 

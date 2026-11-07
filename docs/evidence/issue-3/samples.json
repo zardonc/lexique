@@ -1,0 +1,1726 @@
+[
+  {
+    "name": "morphology.mdx",
+    "source": "mdict-french",
+    "url": "https://mdx.mdict.org/%E6%8C%89%E8%AF%8D%E5%85%B8%E8%AF%AD%E7%A7%8D%E6%9D%A5%E5%88%86%E7%B1%BB/%E6%B3%95%E8%AF%AD/%5B%E5%85%B6%E4%BB%96%E8%AF%AD%E7%A7%8D%5D%20%E2%97%86%E6%B3%95%E8%AF%AD%E8%AF%8D%E5%BD%A2%E5%8F%98%E5%8C%96%E8%AF%8D%E5%85%B8%E3%80%90Heliknight%E5%8E%9F%E5%88%9B%E3%80%91%E3%80%90%E7%89%88%E6%9C%AC%E6%97%A5%E6%9C%9F20070325%E3%80%91.mdx",
+    "bytes": 328668,
+    "sha256": "91ca54428d5cf5cce8d91bdaae50895136ae37880549ed4ceb9fed9492b4b817",
+    "engine_version": "1.2",
+    "encoding": "UTF-8",
+    "encrypted": "No",
+    "creation_date": null,
+    "format": "Html",
+    "first_key_block_compression": "LZO",
+    "record_block_compression": {
+      "LZO": 21
+    },
+    "maximum_declared_record_block_bytes": 65528,
+    "public_fixture": false,
+    "redistribution_authorization": "unconfirmed; excluded from repository and default resources",
+    "status": "passed",
+    "probe": {
+      "decoded_body_bytes": 1353113,
+      "duplicate_entries": 0,
+      "encoding": "UTF-8",
+      "engine_version": "1.2",
+      "entries": 18085,
+      "mdd": null,
+      "queries": [
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 630,
+              "key": "être",
+              "ordinal": 18082
+            }
+          ],
+          "query": "être"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 44,
+              "key": "sommes",
+              "ordinal": 14766
+            }
+          ],
+          "query": "sommes"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "œil"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 53,
+              "key": "aujourd'hui",
+              "ordinal": 1752
+            }
+          ],
+          "query": "aujourd'hui"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "aujourd’hui"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "école"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 79,
+              "key": "chat",
+              "ordinal": 2754
+            }
+          ],
+          "query": "chat"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 46,
+              "key": "amour",
+              "ordinal": 774
+            }
+          ],
+          "query": "amour"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "cote"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "côte"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 53,
+              "key": "côté",
+              "ordinal": 4364
+            }
+          ],
+          "query": "côté"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "lexique-not-a-dictionary-word-20261107"
+        }
+      ],
+      "unique_keys": 18085
+    },
+    "wall_seconds": 0.178,
+    "source_file_name": "[其他语种] ◆法语词形变化词典【Heliknight原创】【版本日期20070325】.mdx"
+  },
+  {
+    "name": "[其他语种] ◆英法法英词典【匿名原创】【版本日期未注明】.mdx",
+    "source": "mdict-french",
+    "url": "https://mdx.mdict.org/%E6%8C%89%E8%AF%8D%E5%85%B8%E8%AF%AD%E7%A7%8D%E6%9D%A5%E5%88%86%E7%B1%BB/%E6%B3%95%E8%AF%AD/%5B%E5%85%B6%E4%BB%96%E8%AF%AD%E7%A7%8D%5D%20%E2%97%86%E8%8B%B1%E6%B3%95%E6%B3%95%E8%8B%B1%E8%AF%8D%E5%85%B8%E3%80%90%E5%8C%BF%E5%90%8D%E5%8E%9F%E5%88%9B%E3%80%91%E3%80%90%E7%89%88%E6%9C%AC%E6%97%A5%E6%9C%9F%E6%9C%AA%E6%B3%A8%E6%98%8E%E3%80%91.mdx",
+    "bytes": 978829,
+    "sha256": "6208aff290271952172ed16809c43d10d759ae152a9f09b6df318836e63337af",
+    "engine_version": "1.2",
+    "encoding": "UTF-8",
+    "encrypted": "No",
+    "creation_date": null,
+    "format": "Html",
+    "first_key_block_compression": "LZO",
+    "record_block_compression": {
+      "LZO": 29
+    },
+    "maximum_declared_record_block_bytes": 65536,
+    "public_fixture": false,
+    "redistribution_authorization": "unconfirmed; excluded from repository and default resources",
+    "status": "passed",
+    "probe": {
+      "decoded_body_bytes": 1808647,
+      "duplicate_entries": 1702,
+      "encoding": "UTF-8",
+      "engine_version": "1.2",
+      "entries": 55360,
+      "mdd": null,
+      "queries": [
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 17,
+              "key": "être",
+              "ordinal": 55357
+            }
+          ],
+          "query": "être"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 19,
+              "key": "sommes",
+              "ordinal": 46410
+            }
+          ],
+          "query": "sommes"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "œil"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 34,
+              "key": "aujourd'hui",
+              "ordinal": 5905
+            }
+          ],
+          "query": "aujourd'hui"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "aujourd’hui"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 22,
+              "key": "école",
+              "ordinal": 54264
+            }
+          ],
+          "query": "école"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 17,
+              "key": "chat",
+              "ordinal": 10118
+            },
+            {
+              "body_bytes": 32,
+              "key": "chat",
+              "ordinal": 10119
+            }
+          ],
+          "query": "chat"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 22,
+              "key": "amour",
+              "ordinal": 3431
+            },
+            {
+              "body_bytes": 19,
+              "key": "amour",
+              "ordinal": 3432
+            }
+          ],
+          "query": "amour"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 23,
+              "key": "cote",
+              "ordinal": 13624
+            }
+          ],
+          "query": "cote"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 41,
+              "key": "côte",
+              "ordinal": 14450
+            }
+          ],
+          "query": "côte"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 20,
+              "key": "côté",
+              "ordinal": 14452
+            }
+          ],
+          "query": "côté"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "lexique-not-a-dictionary-word-20261107"
+        }
+      ],
+      "unique_keys": 53658
+    },
+    "wall_seconds": 0.265,
+    "source_file_name": "[其他语种] ◆英法法英词典【匿名原创】【版本日期未注明】.mdx"
+  },
+  {
+    "name": "拉鲁斯法语词典.mdd",
+    "source": "mdict-french",
+    "url": "https://mdx.mdict.org/%E6%8C%89%E8%AF%8D%E5%85%B8%E8%AF%AD%E7%A7%8D%E6%9D%A5%E5%88%86%E7%B1%BB/%E6%B3%95%E8%AF%AD/%E6%8B%89%E9%B2%81%E6%96%AF%E6%B3%95%E8%AF%AD%E8%AF%8D%E5%85%B8.mdd",
+    "bytes": 110217,
+    "sha256": "05c76a2c842ff871e6a70a192fb1aa0aa6ac7430a09dcc86bcfc495fd3a94feb",
+    "engine_version": "2.0",
+    "encoding": "",
+    "encrypted": "0",
+    "creation_date": "2009-3-24",
+    "format": "",
+    "first_key_block_compression": "zlib",
+    "record_block_compression": {
+      "zlib": 81
+    },
+    "maximum_declared_record_block_bytes": 131478,
+    "public_fixture": false,
+    "redistribution_authorization": "unconfirmed; excluded from repository and default resources",
+    "paired_mdx": "拉鲁斯法语词典.mdx",
+    "status": "passed",
+    "probe": {
+      "decoded_body_bytes": 82846484,
+      "duplicate_entries": 0,
+      "encoding": "UTF-16",
+      "engine_version": "2.0",
+      "entries": 202172,
+      "mdd": {
+        "decoded_bytes": 4615564,
+        "engine_version": "2.0",
+        "entries": 362,
+        "queries": []
+      },
+      "queries": [
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 2354,
+              "key": "être",
+              "ordinal": 199041
+            }
+          ],
+          "query": "être"
+        }
+      ],
+      "unique_keys": 202172
+    },
+    "wall_seconds": 1.724,
+    "source_file_name": "拉鲁斯法语词典.mdd"
+  },
+  {
+    "name": "拉鲁斯法语词典.mdx",
+    "source": "mdict-french",
+    "url": "https://mdx.mdict.org/%E6%8C%89%E8%AF%8D%E5%85%B8%E8%AF%AD%E7%A7%8D%E6%9D%A5%E5%88%86%E7%B1%BB/%E6%B3%95%E8%AF%AD/%E6%8B%89%E9%B2%81%E6%96%AF%E6%B3%95%E8%AF%AD%E8%AF%8D%E5%85%B8.mdx",
+    "bytes": 21564863,
+    "sha256": "59b438ec80e54c5db6633d0b0ea1dd35861a28ade3fe3806add3dfc79d768046",
+    "engine_version": "2.0",
+    "encoding": "UTF-16",
+    "encrypted": "0",
+    "creation_date": "2009-3-24",
+    "format": "Html",
+    "first_key_block_compression": "zlib",
+    "record_block_compression": {
+      "zlib": 2554
+    },
+    "maximum_declared_record_block_bytes": 81404,
+    "public_fixture": false,
+    "redistribution_authorization": "unconfirmed; excluded from repository and default resources",
+    "status": "passed",
+    "probe": {
+      "decoded_body_bytes": 82846484,
+      "duplicate_entries": 0,
+      "encoding": "UTF-16",
+      "engine_version": "2.0",
+      "entries": 202172,
+      "mdd": null,
+      "queries": [
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 2354,
+              "key": "être",
+              "ordinal": 199041
+            }
+          ],
+          "query": "être"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "sommes"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 2598,
+              "key": "œil",
+              "ordinal": 202020
+            }
+          ],
+          "query": "œil"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 804,
+              "key": "aujourd'hui",
+              "ordinal": 14544
+            }
+          ],
+          "query": "aujourd'hui"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "aujourd’hui"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 2315,
+              "key": "école",
+              "ordinal": 195478
+            }
+          ],
+          "query": "école"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 1550,
+              "key": "chat",
+              "ordinal": 33641
+            }
+          ],
+          "query": "chat"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 1680,
+              "key": "amour",
+              "ordinal": 6910
+            }
+          ],
+          "query": "amour"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 2234,
+              "key": "cote",
+              "ordinal": 44317
+            }
+          ],
+          "query": "cote"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 2641,
+              "key": "côte",
+              "ordinal": 49004
+            }
+          ],
+          "query": "côte"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 1915,
+              "key": "côté",
+              "ordinal": 49039
+            }
+          ],
+          "query": "côté"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "lexique-not-a-dictionary-word-20261107"
+        }
+      ],
+      "unique_keys": 202172
+    },
+    "wall_seconds": 1.638,
+    "source_file_name": "拉鲁斯法语词典.mdx"
+  },
+  {
+    "name": "罗贝特法法词典.mdd",
+    "source": "mdict-french",
+    "url": "https://mdx.mdict.org/%E6%8C%89%E8%AF%8D%E5%85%B8%E8%AF%AD%E7%A7%8D%E6%9D%A5%E5%88%86%E7%B1%BB/%E6%B3%95%E8%AF%AD/%E7%BD%97%E8%B4%9D%E7%89%B9%E6%B3%95%E6%B3%95%E8%AF%8D%E5%85%B8.mdd",
+    "bytes": 206186,
+    "sha256": "99736370d37402187f332e8f525a8b20b271b418948d4f7222e6aa966ba99a35",
+    "engine_version": "2.0",
+    "encoding": "",
+    "encrypted": "0",
+    "creation_date": "2011-1-16",
+    "format": "",
+    "first_key_block_compression": "zlib",
+    "record_block_compression": {
+      "zlib": 7
+    },
+    "maximum_declared_record_block_bytes": 64565,
+    "public_fixture": false,
+    "redistribution_authorization": "unconfirmed; excluded from repository and default resources",
+    "paired_mdx": "罗贝特法法词典.mdx",
+    "status": "passed",
+    "probe": {
+      "decoded_body_bytes": 174687682,
+      "duplicate_entries": 0,
+      "encoding": "UTF-16",
+      "engine_version": "2.0",
+      "entries": 83373,
+      "mdd": {
+        "decoded_bytes": 391434,
+        "engine_version": "2.0",
+        "entries": 64,
+        "queries": []
+      },
+      "queries": [
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 78026,
+              "key": "être",
+              "ordinal": 83259
+            }
+          ],
+          "query": "être"
+        }
+      ],
+      "unique_keys": 83373
+    },
+    "wall_seconds": 1.248,
+    "source_file_name": "罗贝特法法词典.mdd"
+  },
+  {
+    "name": "罗贝特法法词典.mdx",
+    "source": "mdict-french",
+    "url": "https://mdx.mdict.org/%E6%8C%89%E8%AF%8D%E5%85%B8%E8%AF%AD%E7%A7%8D%E6%9D%A5%E5%88%86%E7%B1%BB/%E6%B3%95%E8%AF%AD/%E7%BD%97%E8%B4%9D%E7%89%B9%E6%B3%95%E6%B3%95%E8%AF%8D%E5%85%B8.mdx",
+    "bytes": 56125853,
+    "sha256": "f084c24508d1bd9dc7f5cfcc5f50f77cd5b1a8e4a3e6d17e5298a80010d2a770",
+    "engine_version": "2.0",
+    "encoding": "UTF-16",
+    "encrypted": "0",
+    "creation_date": "2011-1-16",
+    "format": "Html",
+    "first_key_block_compression": "zlib",
+    "record_block_compression": {
+      "zlib": 5659
+    },
+    "maximum_declared_record_block_bytes": 332884,
+    "public_fixture": false,
+    "redistribution_authorization": "unconfirmed; excluded from repository and default resources",
+    "status": "passed",
+    "probe": {
+      "decoded_body_bytes": 174687682,
+      "duplicate_entries": 0,
+      "encoding": "UTF-16",
+      "engine_version": "2.0",
+      "entries": 83373,
+      "mdd": null,
+      "queries": [
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 78026,
+              "key": "être",
+              "ordinal": 83259
+            }
+          ],
+          "query": "être"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "sommes"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 74346,
+              "key": "œil",
+              "ordinal": 83292
+            }
+          ],
+          "query": "œil"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 14360,
+              "key": "aujourd'hui",
+              "ordinal": 6508
+            }
+          ],
+          "query": "aujourd'hui"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "aujourd’hui"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 32034,
+              "key": "école",
+              "ordinal": 81298
+            }
+          ],
+          "query": "école"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 21698,
+              "key": "chat",
+              "ordinal": 13931
+            }
+          ],
+          "query": "chat"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 46721,
+              "key": "amour",
+              "ordinal": 2990
+            }
+          ],
+          "query": "amour"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 9904,
+              "key": "cote",
+              "ordinal": 17953
+            }
+          ],
+          "query": "cote"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 18350,
+              "key": "côte",
+              "ordinal": 19845
+            }
+          ],
+          "query": "côte"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 40904,
+              "key": "côté",
+              "ordinal": 19855
+            }
+          ],
+          "query": "côté"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "lexique-not-a-dictionary-word-20261107"
+        }
+      ],
+      "unique_keys": 83373
+    },
+    "wall_seconds": 1.243,
+    "source_file_name": "罗贝特法法词典.mdx"
+  },
+  {
+    "name": "[其他语种] XMLittré 法法词典.mdx",
+    "source": "mdict-littre",
+    "url": "https://mdx.mdict.org/%E6%8C%89%E8%AF%8D%E5%85%B8%E8%AF%AD%E7%A7%8D%E6%9D%A5%E5%88%86%E7%B1%BB/%E6%B3%95%E8%AF%AD/%5B%E5%85%B6%E4%BB%96%E8%AF%AD%E7%A7%8D%5D%20XMLittr%C3%A9%20%E6%B3%95%E6%B3%95%E8%AF%8D%E5%85%B8/%5B%E5%85%B6%E4%BB%96%E8%AF%AD%E7%A7%8D%5D%20XMLittr%C3%A9%20%E6%B3%95%E6%B3%95%E8%AF%8D%E5%85%B8.mdx",
+    "bytes": 50474738,
+    "sha256": "c6918bef92e86df1d24f58ba8e7f5e0b6b552ca3e8e5e368651a2ec6f1dddeaf",
+    "engine_version": "2.0",
+    "encoding": "UTF-16",
+    "encrypted": "0",
+    "creation_date": "2009-6-2",
+    "format": "Html",
+    "first_key_block_compression": "zlib",
+    "record_block_compression": {
+      "zlib": 4759
+    },
+    "maximum_declared_record_block_bytes": 312472,
+    "public_fixture": false,
+    "redistribution_authorization": "unconfirmed; excluded from repository and default resources",
+    "status": "passed",
+    "probe": {
+      "decoded_body_bytes": 146753253,
+      "duplicate_entries": 0,
+      "encoding": "UTF-16",
+      "engine_version": "2.0",
+      "entries": 123221,
+      "mdd": null,
+      "queries": [
+        {
+          "basis": "HeaderNormalized",
+          "matches": [
+            {
+              "body_bytes": 81356,
+              "key": "ÊTRE",
+              "ordinal": 123202
+            }
+          ],
+          "query": "être"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "sommes"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "œil"
+        },
+        {
+          "basis": "HeaderNormalized",
+          "matches": [
+            {
+              "body_bytes": 7042,
+              "key": "AUJOURD'HUI",
+              "ordinal": 7180
+            }
+          ],
+          "query": "aujourd'hui"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "aujourd’hui"
+        },
+        {
+          "basis": "HeaderNormalized",
+          "matches": [
+            {
+              "body_bytes": 16142,
+              "key": "ÉCOLE",
+              "ordinal": 120521
+            }
+          ],
+          "query": "école"
+        },
+        {
+          "basis": "HeaderNormalized",
+          "matches": [
+            {
+              "body_bytes": 20727,
+              "key": "CHAT",
+              "ordinal": 17757
+            }
+          ],
+          "query": "chat"
+        },
+        {
+          "basis": "HeaderNormalized",
+          "matches": [
+            {
+              "body_bytes": 29921,
+              "key": "AMOUR",
+              "ordinal": 3363
+            }
+          ],
+          "query": "amour"
+        },
+        {
+          "basis": "HeaderNormalized",
+          "matches": [
+            {
+              "body_bytes": 2057,
+              "key": "COTE",
+              "ordinal": 24337
+            }
+          ],
+          "query": "cote"
+        },
+        {
+          "basis": "HeaderNormalized",
+          "matches": [
+            {
+              "body_bytes": 11217,
+              "key": "CÔTE",
+              "ordinal": 27525
+            }
+          ],
+          "query": "côte"
+        },
+        {
+          "basis": "HeaderNormalized",
+          "matches": [
+            {
+              "body_bytes": 22711,
+              "key": "CÔTÉ",
+              "ordinal": 27538
+            }
+          ],
+          "query": "côté"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "lexique-not-a-dictionary-word-20261107"
+        }
+      ],
+      "unique_keys": 123221
+    },
+    "wall_seconds": 1.187,
+    "source_file_name": "[其他语种] XMLittré 法法词典.mdx",
+    "license_notice": {
+      "url": "https://mdx.mdict.org/%E6%8C%89%E8%AF%8D%E5%85%B8%E8%AF%AD%E7%A7%8D%E6%9D%A5%E5%88%86%E7%B1%BB/%E6%B3%95%E8%AF%AD/%5B%E5%85%B6%E4%BB%96%E8%AF%AD%E7%A7%8D%5D%20XMLittr%C3%A9%20%E6%B3%95%E6%B3%95%E8%AF%8D%E5%85%B8/%5B%E5%85%B6%E4%BB%96%E8%AF%AD%E7%A7%8D%5D%20XMLittr%C3%A9%20%E6%B3%95%E6%B3%95%E8%AF%8D%E5%85%B8.txt",
+      "name": "[其他语种] XMLittré 法法词典.txt",
+      "bytes": 370,
+      "sha256": "3ef88eb11279c8d46c18db7c8ed4be5a729fd3a6f199f130aa5d8a81ead43b39"
+    }
+  },
+  {
+    "name": "我爱法语词典201909.mdx",
+    "source": "freemdict-ilove",
+    "url": "https://downloads.freemdict.com/%E5%B0%9A%E6%9C%AA%E6%95%B4%E7%90%86/%E9%9B%86%E5%90%88/Other%20language%20Dictionaries/French/%E6%88%91%E7%88%B1%E6%B3%95%E8%AF%AD%E8%AF%8D%E5%85%B8201909/%E6%88%91%E7%88%B1%E6%B3%95%E8%AF%AD%E8%AF%8D%E5%85%B8201909.mdx",
+    "bytes": 1365148,
+    "sha256": "81415fdcd94d2a567e937a4b9428f77d54ddc8fc4fd91e0059cd69c9f0e1e81a",
+    "engine_version": "2.0",
+    "encoding": "UTF-8",
+    "encrypted": "2",
+    "creation_date": "2019-9-14",
+    "format": "Html",
+    "first_key_block_compression": "zlib",
+    "record_block_compression": {
+      "zlib": 38
+    },
+    "maximum_declared_record_block_bytes": 65536,
+    "public_fixture": false,
+    "redistribution_authorization": "all rights reserved; author authorization required",
+    "status": "passed",
+    "probe": {
+      "decoded_body_bytes": 2449442,
+      "duplicate_entries": 44,
+      "encoding": "UTF-8",
+      "engine_version": "2.0",
+      "entries": 33415,
+      "mdd": null,
+      "queries": [
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 366,
+              "key": "être",
+              "ordinal": 33361
+            }
+          ],
+          "query": "être"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 55,
+              "key": "sommes",
+              "ordinal": 28382
+            }
+          ],
+          "query": "sommes"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 132,
+              "key": "œil",
+              "ordinal": 33410
+            }
+          ],
+          "query": "œil"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 38,
+              "key": "aujourd'hui",
+              "ordinal": 3381
+            }
+          ],
+          "query": "aujourd'hui"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "aujourd’hui"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 170,
+              "key": "école",
+              "ordinal": 32289
+            }
+          ],
+          "query": "école"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "chat"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 223,
+              "key": "amour",
+              "ordinal": 1685
+            }
+          ],
+          "query": "amour"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 284,
+              "key": "cote",
+              "ordinal": 9577
+            }
+          ],
+          "query": "cote"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 161,
+              "key": "côte",
+              "ordinal": 10477
+            }
+          ],
+          "query": "côte"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "côté"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "lexique-not-a-dictionary-word-20261107"
+        }
+      ],
+      "unique_keys": 33371
+    },
+    "wall_seconds": 0.063,
+    "source_file_name": "我爱法语词典201909.mdx"
+  },
+  {
+    "name": "Babylon版法语-英语双向词典 (aepicure on linld97044, 2016-10-17).mdx",
+    "source": "freemdict-french",
+    "url": "https://downloads.freemdict.com/%E5%B0%9A%E6%9C%AA%E6%95%B4%E7%90%86/%E9%9B%86%E5%90%88/Other%20language%20Dictionaries/French/%E6%B3%95%E8%AF%AD/Babylon%E7%89%88%E6%B3%95%E8%AF%AD-%E8%8B%B1%E8%AF%AD%E5%8F%8C%E5%90%91%E8%AF%8D%E5%85%B8%20%28aepicure%20on%20linld97044%2C%202016-10-17%29/Babylon%E7%89%88%E6%B3%95%E8%AF%AD-%E8%8B%B1%E8%AF%AD%E5%8F%8C%E5%90%91%E8%AF%8D%E5%85%B8%20%28aepicure%20on%20linld97044%2C%202016-10-17%29.mdx",
+    "bytes": 1218371,
+    "sha256": "81bfbf0c661489e547dbcfdf4d0e2ccd0f95f89ba9c65202ec9f0bd25b7a8074",
+    "engine_version": "2.0",
+    "encoding": "UTF-8",
+    "encrypted": "2",
+    "creation_date": "2016-10-17",
+    "format": "Html",
+    "first_key_block_compression": "zlib",
+    "record_block_compression": {
+      "zlib": 102
+    },
+    "maximum_declared_record_block_bytes": 65533,
+    "public_fixture": false,
+    "redistribution_authorization": "unconfirmed; excluded from repository and default resources",
+    "status": "passed",
+    "probe": {
+      "decoded_body_bytes": 6611525,
+      "duplicate_entries": 0,
+      "encoding": "UTF-8",
+      "engine_version": "2.0",
+      "entries": 26447,
+      "mdd": null,
+      "queries": [
+        {
+          "basis": null,
+          "matches": [],
+          "query": "être"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "sommes"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "œil"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 578,
+              "key": "aujourd'hui",
+              "ordinal": 13117
+            }
+          ],
+          "query": "aujourd'hui"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "aujourd’hui"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "école"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "chat"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 551,
+              "key": "amour",
+              "ordinal": 6370
+            }
+          ],
+          "query": "amour"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "cote"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "côte"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "côté"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "lexique-not-a-dictionary-word-20261107"
+        }
+      ],
+      "unique_keys": 26447
+    },
+    "wall_seconds": 0.064,
+    "source_file_name": "Babylon版法语-英语双向词典 (aepicure on linld97044, 2016-10-17).mdx"
+  },
+  {
+    "name": "Le Grand Dictionnaire des Synonymes et Contraires, 2004.mdx",
+    "source": "freemdict-french",
+    "url": "https://downloads.freemdict.com/%E5%B0%9A%E6%9C%AA%E6%95%B4%E7%90%86/%E9%9B%86%E5%90%88/Other%20language%20Dictionaries/French/%E6%B3%95%E8%AF%AD/Le%20Grand%20Dictionnaire%20des%20Synonymes%20et%20Contraires%2C%202004/Le%20Grand%20Dictionnaire%20des%20Synonymes%20et%20Contraires%2C%202004.mdx",
+    "bytes": 1934040,
+    "sha256": "b4c39d9f12c5e493ab370030e6d79b878f82a4dcbfb4ff1b527c890a40b60ad9",
+    "engine_version": "2.0",
+    "encoding": "UTF-8",
+    "encrypted": "2",
+    "creation_date": "2019-11-27",
+    "format": "Html",
+    "first_key_block_compression": "zlib",
+    "record_block_compression": {
+      "zlib": 279
+    },
+    "maximum_declared_record_block_bytes": 65531,
+    "public_fixture": false,
+    "redistribution_authorization": "personal/academic noncommercial notice; default redistribution not admitted",
+    "status": "passed",
+    "probe": {
+      "decoded_body_bytes": 18003584,
+      "duplicate_entries": 0,
+      "encoding": "UTF-8",
+      "engine_version": "2.0",
+      "entries": 14800,
+      "mdd": null,
+      "queries": [
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 1119,
+              "key": "être",
+              "ordinal": 14794
+            }
+          ],
+          "query": "être"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "sommes"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 552,
+              "key": "œil",
+              "ordinal": 14796
+            }
+          ],
+          "query": "œil"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "aujourd'hui"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "aujourd’hui"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 555,
+              "key": "école",
+              "ordinal": 14341
+            }
+          ],
+          "query": "école"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 693,
+              "key": "chat",
+              "ordinal": 2323
+            }
+          ],
+          "query": "chat"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 2676,
+              "key": "amour",
+              "ordinal": 636
+            }
+          ],
+          "query": "amour"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 1618,
+              "key": "cote",
+              "ordinal": 3208
+            }
+          ],
+          "query": "cote"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 1320,
+              "key": "côte",
+              "ordinal": 3485
+            }
+          ],
+          "query": "côte"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 2045,
+              "key": "côté",
+              "ordinal": 3487
+            }
+          ],
+          "query": "côté"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "lexique-not-a-dictionary-word-20261107"
+        }
+      ],
+      "unique_keys": 14800
+    },
+    "wall_seconds": 0.064,
+    "source_file_name": "Le Grand Dictionnaire des Synonymes et Contraires, 2004.mdx"
+  },
+  {
+    "name": "法语语音库.mdx",
+    "source": "freemdict-french",
+    "url": "https://downloads.freemdict.com/%E5%B0%9A%E6%9C%AA%E6%95%B4%E7%90%86/%E9%9B%86%E5%90%88/Other%20language%20Dictionaries/French/%E6%B3%95%E8%AF%AD/%E8%AF%8D%E5%85%B82/%E6%B3%95%E8%AF%AD%E8%AF%AD%E9%9F%B3%E5%BA%93.mdx",
+    "bytes": 2009523,
+    "sha256": "9c8e3ef929c7033fcd924d73d0507cf866a5d128d70f75d0af8a5fd08f332a4c",
+    "engine_version": "2.0",
+    "encoding": "UTF-8",
+    "encrypted": "2",
+    "creation_date": "2013-5-27",
+    "format": "Html",
+    "first_key_block_compression": "zlib",
+    "record_block_compression": {
+      "zlib": 161
+    },
+    "maximum_declared_record_block_bytes": 131071,
+    "public_fixture": false,
+    "redistribution_authorization": "personal/academic noncommercial notice; default redistribution not admitted",
+    "status": "passed",
+    "probe": {
+      "decoded_body_bytes": 20923982,
+      "duplicate_entries": 4350,
+      "encoding": "UTF-8",
+      "engine_version": "2.0",
+      "entries": 121311,
+      "mdd": null,
+      "queries": [
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 160,
+              "key": "être",
+              "ordinal": 119493
+            }
+          ],
+          "query": "être"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "sommes"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 159,
+              "key": "œil",
+              "ordinal": 121233
+            }
+          ],
+          "query": "œil"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 172,
+              "key": "aujourd'hui",
+              "ordinal": 8638
+            }
+          ],
+          "query": "aujourd'hui"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "aujourd’hui"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 162,
+              "key": "école",
+              "ordinal": 117387
+            }
+          ],
+          "query": "école"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 158,
+              "key": "chat",
+              "ordinal": 19170
+            },
+            {
+              "body_bytes": 158,
+              "key": "chat",
+              "ordinal": 19171
+            }
+          ],
+          "query": "chat"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 160,
+              "key": "amour",
+              "ordinal": 3905
+            }
+          ],
+          "query": "amour"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 167,
+              "key": "cote",
+              "ordinal": 25208
+            },
+            {
+              "body_bytes": 165,
+              "key": "cote",
+              "ordinal": 25209
+            },
+            {
+              "body_bytes": 158,
+              "key": "cote",
+              "ordinal": 25210
+            },
+            {
+              "body_bytes": 165,
+              "key": "cote",
+              "ordinal": 25211
+            }
+          ],
+          "query": "cote"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 160,
+              "key": "côte",
+              "ordinal": 27801
+            }
+          ],
+          "query": "côte"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 162,
+              "key": "côté",
+              "ordinal": 27813
+            }
+          ],
+          "query": "côté"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "lexique-not-a-dictionary-word-20261107"
+        }
+      ],
+      "unique_keys": 116961
+    },
+    "wall_seconds": 0.183,
+    "source_file_name": "法语语音库.mdx"
+  },
+  {
+    "name": "[其他语种] 《法兰西学院法语词典》转自lingoes[31211](090428).mdx",
+    "source": "freemdict-french",
+    "url": "https://downloads.freemdict.com/%E5%B0%9A%E6%9C%AA%E6%95%B4%E7%90%86/%E9%9B%86%E5%90%88/Other%20language%20Dictionaries/French/%E6%B3%95%E8%AF%AD111/%E4%B8%80%E4%BA%9B%E6%B3%95%E8%AF%ADmdx%E8%AF%8D%E5%85%B8/%5B%E5%85%B6%E4%BB%96%E8%AF%AD%E7%A7%8D%5D%20%E3%80%8A%E6%B3%95%E5%85%B0%E8%A5%BF%E5%AD%A6%E9%99%A2%E6%B3%95%E8%AF%AD%E8%AF%8D%E5%85%B8%E3%80%8B%E8%BD%AC%E8%87%AAlingoes%5B31211%5D%28090428%29.mdx",
+    "bytes": 7227742,
+    "sha256": "6e0924ad3ef115951162d1a2373ff412d3cda0f47ee8b9c81caf59aacbe5bdec",
+    "engine_version": "1.2",
+    "encoding": "UTF-16",
+    "encrypted": "No",
+    "creation_date": null,
+    "format": "Html",
+    "first_key_block_compression": "LZO",
+    "record_block_compression": {
+      "LZO": 447
+    },
+    "maximum_declared_record_block_bytes": 65536,
+    "public_fixture": false,
+    "redistribution_authorization": "unconfirmed; excluded from repository and default resources",
+    "status": "passed",
+    "probe": {
+      "decoded_body_bytes": 14691341,
+      "duplicate_entries": 16,
+      "encoding": "UTF-16",
+      "engine_version": "1.2",
+      "entries": 31210,
+      "mdd": null,
+      "queries": [
+        {
+          "basis": null,
+          "matches": [],
+          "query": "être"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "sommes"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "œil"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "aujourd'hui"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "aujourd’hui"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "école"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "chat"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "amour"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "cote"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "côte"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "côté"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "lexique-not-a-dictionary-word-20261107"
+        }
+      ],
+      "unique_keys": 31194
+    },
+    "wall_seconds": 0.173,
+    "source_file_name": "[其他语种] 《法兰西学院法语词典》转自lingoes[31211](090428).mdx"
+  },
+  {
+    "name": "[其他语种] 法语词典Dictionnaire de l’Académie Française.mdx",
+    "source": "freemdict-french",
+    "url": "https://downloads.freemdict.com/%E5%B0%9A%E6%9C%AA%E6%95%B4%E7%90%86/%E9%9B%86%E5%90%88/Other%20language%20Dictionaries/French/%E6%B3%95%E8%AF%AD111/%E4%B8%80%E4%BA%9B%E6%B3%95%E8%AF%ADmdx%E8%AF%8D%E5%85%B8/%5B%E5%85%B6%E4%BB%96%E8%AF%AD%E7%A7%8D%5D%20%E6%B3%95%E8%AF%AD%E8%AF%8D%E5%85%B8Dictionnaire%20de%20l%E2%80%99Acad%C3%A9mie%20Fran%C3%A7aise.mdx",
+    "bytes": 6790347,
+    "sha256": "edc7dcb6af7267c248a76858a8b3ac06dc2c213cc7a8b9b51d7c2e5442a647bb",
+    "engine_version": "2.0",
+    "encoding": "UTF-16",
+    "encrypted": "2",
+    "creation_date": "2009-2-14",
+    "format": "Html",
+    "first_key_block_compression": "zlib",
+    "record_block_compression": {
+      "zlib": 593
+    },
+    "maximum_declared_record_block_bytes": 104910,
+    "public_fixture": false,
+    "redistribution_authorization": "unconfirmed; excluded from repository and default resources",
+    "status": "passed",
+    "probe": {
+      "decoded_body_bytes": 19218230,
+      "duplicate_entries": 0,
+      "encoding": "UTF-16",
+      "engine_version": "2.0",
+      "entries": 31216,
+      "mdd": null,
+      "queries": [
+        {
+          "basis": "HeaderNormalized",
+          "matches": [
+            {
+              "body_bytes": 6951,
+              "key": "ÊTRE",
+              "ordinal": 31209
+            }
+          ],
+          "query": "être"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "sommes"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "œil"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "aujourd'hui"
+        },
+        {
+          "basis": "HeaderNormalized",
+          "matches": [
+            {
+              "body_bytes": 1710,
+              "key": "AUJOURD’HUI",
+              "ordinal": 2260
+            }
+          ],
+          "query": "aujourd’hui"
+        },
+        {
+          "basis": "HeaderNormalized",
+          "matches": [
+            {
+              "body_bytes": 4499,
+              "key": "ÉCOLE",
+              "ordinal": 30333
+            }
+          ],
+          "query": "école"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "chat"
+        },
+        {
+          "basis": "HeaderNormalized",
+          "matches": [
+            {
+              "body_bytes": 5630,
+              "key": "AMOUR",
+              "ordinal": 1104
+            }
+          ],
+          "query": "amour"
+        },
+        {
+          "basis": "HeaderNormalized",
+          "matches": [
+            {
+              "body_bytes": 1351,
+              "key": "COTE",
+              "ordinal": 7067
+            }
+          ],
+          "query": "cote"
+        },
+        {
+          "basis": "HeaderNormalized",
+          "matches": [
+            {
+              "body_bytes": 3481,
+              "key": "CÔTE",
+              "ordinal": 7783
+            }
+          ],
+          "query": "côte"
+        },
+        {
+          "basis": "HeaderNormalized",
+          "matches": [
+            {
+              "body_bytes": 9006,
+              "key": "CÔTÉ",
+              "ordinal": 7789
+            }
+          ],
+          "query": "côté"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "lexique-not-a-dictionary-word-20261107"
+        }
+      ],
+      "unique_keys": 31216
+    },
+    "wall_seconds": 0.214,
+    "source_file_name": "[其他语种] 法语词典Dictionnaire de l’Académie Française.mdx"
+  },
+  {
+    "name": "spell2【法语】.mdx",
+    "source": "freemdict-french",
+    "url": "https://downloads.freemdict.com/%E5%B0%9A%E6%9C%AA%E6%95%B4%E7%90%86/%E9%9B%86%E5%90%88/Other%20language%20Dictionaries/French/%E6%B3%95%E8%AF%AD111/%E4%B8%80%E4%BA%9B%E6%B3%95%E8%AF%ADmdx%E8%AF%8D%E5%85%B8/spell2%E3%80%90%E6%B3%95%E8%AF%AD%E3%80%91.mdx",
+    "bytes": 2063810,
+    "sha256": "cd06317919f0464a8425e9b784141c9f830e58a8e571a81a5801bae54c881b08",
+    "engine_version": "2.0",
+    "encoding": "UTF-8",
+    "encrypted": "2",
+    "creation_date": "2019-5-18",
+    "format": "Html",
+    "first_key_block_compression": "zlib",
+    "record_block_compression": {
+      "zlib": 73
+    },
+    "maximum_declared_record_block_bytes": 65536,
+    "public_fixture": false,
+    "redistribution_authorization": "unconfirmed; excluded from repository and default resources",
+    "status": "passed",
+    "probe": {
+      "decoded_body_bytes": 4368731,
+      "duplicate_entries": 36912,
+      "encoding": "UTF-8",
+      "engine_version": "2.0",
+      "entries": 383977,
+      "mdd": null,
+      "queries": [
+        {
+          "basis": null,
+          "matches": [],
+          "query": "être"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 7,
+              "key": "sommes",
+              "ordinal": 326966
+            },
+            {
+              "body_bytes": 8,
+              "key": "sommes",
+              "ordinal": 326967
+            },
+            {
+              "body_bytes": 7,
+              "key": "sommes",
+              "ordinal": 326968
+            }
+          ],
+          "query": "sommes"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "œil"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "aujourd'hui"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "aujourd’hui"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "école"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "chat"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "amour"
+        },
+        {
+          "basis": "RawExact",
+          "matches": [
+            {
+              "body_bytes": 7,
+              "key": "cote",
+              "ordinal": 77439
+            }
+          ],
+          "query": "cote"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "côte"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "côté"
+        },
+        {
+          "basis": null,
+          "matches": [],
+          "query": "lexique-not-a-dictionary-word-20261107"
+        }
+      ],
+      "unique_keys": 347065
+    },
+    "wall_seconds": 0.411,
+    "source_file_name": "spell2【法语】.mdx"
+  }
+]

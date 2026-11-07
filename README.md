@@ -43,6 +43,8 @@ pnpm rust:fmt
 pnpm rust:check
 pnpm rust:test:build      # 先编译测试，避免将首次编译计入运行预算
 pnpm test:rust            # 真正执行后端测试，硬性 60 秒超时并终止进程树
+pnpm mdict:test:build     # 独立 MDX/MDD 兼容探针；预编译可公开夹具检查
+pnpm test:mdict           # 实际查询与配对媒体／失败检查，同一 60 秒硬限
 pnpm wasm:build
 node scripts/check-wasm.mjs
 pnpm scheduling:build     # 编译同一调度入口的原生 CLI 与 WASM，编译不计入执行预算
@@ -69,6 +71,8 @@ Windows ARM64 开发样例可在已配置该目标工具链时先运行 `node sc
 Windows x64 语音开发小样可在构建后运行 `python -X utf8 scripts/package_portable.py --speech-bundle <已校验的 v16-revised 目录> --speech-encoder <固定 opusenc.dll> --speech-sources <Opus 源包目录> --output-dir <新目录>`。三个语音参数必须一起提供；打包器检查固定资源哈希、保留分别许可，并生成名称带 `-speech` 的新交付。默认 portable 不含模型，加入复习时会保留两卡并明确显示语音生成失败。这些开发小样不等于 M5 完整版 / Lite 发行；复验输入、命令和试听音频见 [#15 证据](docs/evidence/issue-15/README.md)。
 
 资源独立入口：`pnpm resources:build target/dictionary-sample`、`pnpm resources:query target/dictionary-sample/dictionary.sqlite3 "œil"`、`pnpm test:resources`。源包和许可已随仓库保存，生成及查询无需联网；`build` 输出目录必须是新目录。原生构建自动准备 `target/desktop-dictionary-sample`，复用前验证内容；损坏时直接失败，人工检查后移走该生成目录再重建。可先运行 `pnpm resources:prepare`。来源、覆盖缺项、只读查询契约和体积见 [FreeDict 小样记录](resources/freedict-fra-zho-2025.11.23/README.md)。
+
+自定义 MDX/MDD 的[独立探针](tools/mdict-probe/README.md)已验证六组原创配对的查询及 CSS／PNG／WAV 读取，并通过 12 个真实 MDX 与两个同名 MDD 的 Windows x64 技术检查。格式、许可、失败路径及产品接入边界见 [#3 证据](docs/evidence/issue-3/README.md)。应用的自定义词典导入与 HTML 渲染继续分别验收。
 
 变位资源入口：`pnpm conjugation:build target/conjugation-sample`、`pnpm conjugation:query target/conjugation-sample/conjugation.sqlite3 sommes`、`pnpm conjugation:table target/conjugation-sample/conjugation.sqlite3 falloir`、`pnpm test:conjugation`。固定 Lefff 3.4 词形及句法（LGPL-LR）、Grammalecte 2.3.0 元数据（GPL-3.0-only）和 RosaeNLG 省音资料（CC BY-SA 3.0）随仓库保存。原生构建自动准备格式 6 的 `target/desktop-conjugation-v6-stats`，或先运行 `pnpm conjugation:prepare`；已有生成物须通过完整性及转换器版本检查，失败则保留原物，使用新目录重建。构建入口把两种资源放到可执行文件旁，portable 保留原始源、许可、纠正资料、八份 MIT 转换源码及 LGPL-LR 词尾规则；用户学习数据不参与资源准备。共享简单变位模型与运行时表达构造将当前数据库保持在 10.50 MiB；存储契约及格式 5 的全量等价检查见[变位存储](docs/conjugation-storage.md)。格式 6 资源须配套对应的重建 reader。
 

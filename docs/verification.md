@@ -1,5 +1,13 @@
 # 骨架验证记录
 
+## 自定义 MDX/MDD 独立兼容验证（issue #3）
+
+2026-11-07，#3 的六项独立兼容验收条件已完成，范围为 Windows x64。独立 `mdictlib 0.2.8 + lzo` 探针通过 12 个真实 MDX（1,124,587 条物理记录、43,024 条重复记录）与两个同名 MDD（362／64 项媒体）的读取。新增验证前核对 Heliknight 原文件 SHA-256，18,085 条记录与既有查询结果保持一致。六组项目 MIT 原创配对覆盖 v1/v2、UTF-8／UTF-16、无压缩／zlib 和加密索引；正文引用的 CSS、PNG、WAV 实际字节与原始文件一致。
+
+`pnpm mdict:test:build` 后 `pnpm test:mdict` 的九项公开回归通过，覆盖重复键、重音／撇号／œ、正文及媒体缺项、MDX／MDD 的截断与错误头部／记录校验和、文件与解压块上限及不支持的 v3 头部。新入口复用现有硬性 60 秒执行限制，初次编译独立进行。独立 workspace 格式、Clippy／锁定 release 编译，以及 `pnpm lint`、`pnpm typecheck`、`pnpm build`、`pnpm rust:fmt`、`pnpm rust:check` 均通过。`pnpm rust:test:build` 使用 uv 管理的 Python 3.14 与新鲜资源通过，旧生成缓存完整保留；随后 `pnpm test:rust` 的 143 项通过，执行仍受 60 秒硬限。
+
+`pnpm test:docs` 的 127 份文档及暂存差异检查通过；相对 `cb2fb9c` 的 Standards 与 Spec 审查均无发现。来源、哈希、支持矩阵、授权状态及 #9 的接入约束见 [#3 证据](evidence/issue-3/README.md)。第三方原文件／未经授权正文未提交，也未准入新的默认资源。此验证未接入生产导入、跳转链或 HTML 渲染，未验收实际媒体播放及正式发行；其他 OS／架构测试与远端 CI 本轮暂缓，浏览器／原生窗口流程未重跑；用户学习数据未改动。
+
 2026-11-07 #38 收尾：#39 的六项准入条件已逐项核对并关闭，#39–#49 的 Windows x64 变位范围完成验收。56 条用户故事与来源、完整生成、紧凑存储、显示偏好、语音、导航和学习数据保持分别对应既有公开 CLI／实际原生证据，见 [#38 收尾报告](evidence/issue-38/README.md)。#49 用户断网通过及其已验收原包保持不变；英语为部分覆盖，其他 M3 模块、其他平台实机和 M5 正式发行继续单独验收。
 
 本次重新运行既有元数据公开 CLI 个案，八个独立期待词元通过（46.340 秒）；core／storage／dictionary 的 locked 全目标 strict Clippy 通过。后端 CI 准备路径与当前 `target/desktop-conjugation-v6-stats/`、原生构建、打包及测试夹具一致。构建器使用事务内回滚页计量，支持没有可选 SQLite `dbstat` 表的环境；最终资源格式／数据和原生查询逻辑不变，原生成物与用户已验收 ZIP 保留。完整执行与审查结果见 #38 收尾。
