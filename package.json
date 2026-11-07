@@ -35,6 +35,8 @@
     "rust:fmt": "cargo fmt --all --check",
     "rust:test:build": "pnpm resources:prepare && pnpm conjugation:prepare && cargo test --locked -p lexique-core -p lexique-storage -p lexique-dictionary --no-run",
     "test:rust": "node scripts/test-rust.mjs",
+    "mdict:test:build": "cargo test --locked --manifest-path tools/mdict-probe/Cargo.toml --no-run",
+    "test:mdict": "node scripts/test-rust.mjs --mdict",
     "wasm:build": "cargo build --locked --release -p lexique-core --target wasm32-unknown-unknown",
     "scheduling:build": "cargo build --locked --release -p lexique-core --example schedule && pnpm wasm:build",
     "test:scheduling": "node scripts/check-scheduling.mjs"

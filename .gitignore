@@ -10,6 +10,8 @@ LOCAL-DEV-ENV.md
 *.sqlite*
 *.mdx
 *.mdd
+!tools/mdict-probe/tests/fixtures/*.mdx
+!tools/mdict-probe/tests/fixtures/*.mdd
 *.onnx
 *.safetensors
 test-results/

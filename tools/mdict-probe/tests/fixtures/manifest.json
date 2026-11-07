@@ -1,0 +1,128 @@
+[
+  {
+    "file": "v1-utf8-none.mdx",
+    "bytes": 1229,
+    "sha256": "095b95c5659df833fd89bf5c07f7602daa0da91a790bd7dda34571795a9529e7",
+    "version": "1.2",
+    "encoding": "utf8",
+    "compression": 0,
+    "encrypted_index": false,
+    "entries": 10
+  },
+  {
+    "file": "v1-utf8-none.mdd",
+    "bytes": 1278,
+    "sha256": "7ba6b6a58d259bc5154a6baa1809e5c05086efaaba4a8c216ed3df6def7bf4eb",
+    "version": "1.2",
+    "encoding": "UTF-16LE",
+    "compression": 0,
+    "encrypted_index": false,
+    "entries": 3
+  },
+  {
+    "file": "v1-utf16-none.mdx",
+    "bytes": 1616,
+    "sha256": "65ea82c45458d01cf7131a33f6bf162220b97b9dbe7eecf8e1b55243a9b08174",
+    "version": "1.2",
+    "encoding": "utf16",
+    "compression": 0,
+    "encrypted_index": false,
+    "entries": 10
+  },
+  {
+    "file": "v1-utf16-none.mdd",
+    "bytes": 1278,
+    "sha256": "7ba6b6a58d259bc5154a6baa1809e5c05086efaaba4a8c216ed3df6def7bf4eb",
+    "version": "1.2",
+    "encoding": "UTF-16LE",
+    "compression": 0,
+    "encrypted_index": false,
+    "entries": 3
+  },
+  {
+    "file": "v2-utf8-none.mdx",
+    "bytes": 1377,
+    "sha256": "a09421f5f4b008eb9ab2ed9e4b988405b28ae0dbaea8232e95a7762e6b9c9aee",
+    "version": "2.0",
+    "encoding": "utf8",
+    "compression": 0,
+    "encrypted_index": false,
+    "entries": 10
+  },
+  {
+    "file": "v2-utf8-none.mdd",
+    "bytes": 1376,
+    "sha256": "e2634ea9be2bb7b033ef98b68a028b084076fc64ec49bd04b95064c6c8e81b19",
+    "version": "2.0",
+    "encoding": "UTF-16LE",
+    "compression": 0,
+    "encrypted_index": false,
+    "entries": 3
+  },
+  {
+    "file": "v2-utf8-zlib.mdx",
+    "bytes": 1257,
+    "sha256": "d9475a0a7bc1d9b2be3e64f80e37227f3a84c494f73fa804946a63c67342f01f",
+    "version": "2.0",
+    "encoding": "utf8",
+    "compression": 2,
+    "encrypted_index": false,
+    "entries": 10
+  },
+  {
+    "file": "v2-utf8-zlib.mdd",
+    "bytes": 1087,
+    "sha256": "29f44dd266e3be399564d670017293ea6bd0a43f29fe8058a69df9a3fe8a5c98",
+    "version": "2.0",
+    "encoding": "UTF-16LE",
+    "compression": 2,
+    "encrypted_index": false,
+    "entries": 3
+  },
+  {
+    "file": "v2-utf16-zlib.mdx",
+    "bytes": 1476,
+    "sha256": "f445df2c3258271d195412944d477f61e88e4d540830a3479b1954ce8242b6ac",
+    "version": "2.0",
+    "encoding": "utf16",
+    "compression": 2,
+    "encrypted_index": false,
+    "entries": 10
+  },
+  {
+    "file": "v2-utf16-zlib.mdd",
+    "bytes": 1087,
+    "sha256": "29f44dd266e3be399564d670017293ea6bd0a43f29fe8058a69df9a3fe8a5c98",
+    "version": "2.0",
+    "encoding": "UTF-16LE",
+    "compression": 2,
+    "encrypted_index": false,
+    "entries": 3
+  },
+  {
+    "file": "v2-utf8-encrypted-index.mdx",
+    "bytes": 1257,
+    "sha256": "05cf19181256c7d7733e90c6e8b63b777a006c8b5444d9ff60650f44610b186c",
+    "version": "2.0",
+    "encoding": "utf8",
+    "compression": 2,
+    "encrypted_index": true,
+    "entries": 10
+  },
+  {
+    "file": "v2-utf8-encrypted-index.mdd",
+    "bytes": 1087,
+    "sha256": "dbd1a60dd2166cd445af79445f7dc5404adeaa93437d88cbfb7e3898b11bc781",
+    "version": "2.0",
+    "encoding": "UTF-16LE",
+    "compression": 2,
+    "encrypted_index": true,
+    "entries": 3
+  },
+  {
+    "file": "unsupported-v3-header.mdx",
+    "bytes": 1377,
+    "sha256": "723c2a9977c3cb26ef5cb36e347462114354b1e075390efc0ca1c6869dbc014c",
+    "expected": "reject unsupported v3 header; remaining payload is v2"
+  }
+]

@@ -58,6 +58,10 @@ jobs:
       - run: cargo clippy --locked -p lexique-core -p lexique-storage -p lexique-dictionary --all-targets -- -D warnings
       - run: cargo test --locked -p lexique-core -p lexique-storage -p lexique-dictionary --no-run
       - run: node scripts/test-rust.mjs
+      - run: cargo fmt --manifest-path tools/mdict-probe/Cargo.toml --check
+      - run: cargo clippy --locked --manifest-path tools/mdict-probe/Cargo.toml --all-targets -- -D warnings
+      - run: cargo test --locked --manifest-path tools/mdict-probe/Cargo.toml --no-run
+      - run: node scripts/test-rust.mjs --mdict
       - run: cargo build --locked --release -p lexique-core --target wasm32-unknown-unknown
       - run: node scripts/check-wasm.mjs
       - run: cargo build --locked --release -p lexique-core --example schedule
