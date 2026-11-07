@@ -1,10 +1,12 @@
 # M3 conjugation ticket breakdown
 
-Source: [specification #38](https://github.com/zardonc/lexique/issues/38), [local specification](m3-conjugation-spec.md), and [confirmed scope](m3-conjugation-scope.md). Status: user-approved and published as 11 sub-issues, with 16 native blocking relationships. All issue bodies, titles, open states, labels, parent relationships, and blocking edges were read back and verified. The parent specification's body, title, state, labels, and comment count remain unchanged.
+Source: [specification #38](https://github.com/zardonc/lexique/issues/38), [local specification](m3-conjugation-spec.md), and [confirmed scope](m3-conjugation-scope.md). Status: user-approved and published as 11 sub-issues, with 16 native blocking relationships. Publication read-back verified the issue bodies, titles, open states, labels, parent relationships, and blocking edges.
 
 T01–T11 are breakdown identifiers; the delivery table maps them to GitHub issues. Each issue is labelled `ready-for-agent`, includes its acceptance criteria and the shared requirements below, and references real issue numbers. Blocking edges use native relationships.
 
 ## Delivery order
+
+The [compact storage contract](conjugation-storage.md) precedes #44. Shared simple-form models and suffix/stem candidate lookup replace materialized tables; #38 records full format-5 equivalence and preservation requirements. #44 applies normalization at candidate lookup and complete-expression verification, #45 keeps linguistic ending spans independent of storage suffixes, and #49 packages the compact resource and measures current costs. #46–#48 retain their existing lookup/table interface and dependencies.
 
 | Slice | GitHub issue | Title | Blocked by | Independently observable result |
 | --- | --- | --- | --- | --- |
@@ -166,6 +168,7 @@ A learner types a supported form or complete expression with ordinary capitaliza
 - [ ] Accents remain significant. Typo guessing, accent removal, and matches for individual tokens cannot be reported as an exact whole-expression match. Invalid/unusable input, no-match, and resource failure remain distinct.
 - [ ] Normalization retains all candidate/cell/variant interpretations and stable candidate order, including collisions where equivalent query spellings reach several valid cells. It does not merge vocabulary identities, ordinary/pronominal uses, or rewrite existing references.
 - [ ] Boundary tests cover simple and apostrophe/space-bearing expressions available at landing, with independently expected positive and negative cases. Apply the same lookup behavior to later compound/pronominal additions; T11 verifies the combined expression set.
+- [ ] Apply normalization consistently to compact-model suffix/stem candidate lookup and complete generated-form/expression verification. Keep the format-6 table and identity contract; do not add materialized normalized expression tables.
 
 ### Blocked by
 
@@ -189,6 +192,7 @@ A learner directly chooses complete-verbal-part, main-verb-only, or main-inflect
 - [ ] Priority marking and all match highlights remain independently visible in every mode, with readable non-color cues, keyboard selection, and the existing languages/themes.
 - [ ] Persist mode across different verbs and real native restarts using existing application-preference conventions. Preference writes, unreadable/corrupt settings, and unavailable storage surface meaningful failures. Any needed incremental migration preserves existing data and rejects unsupported higher versions.
 - [ ] CLI checks prove actual resource spans and whole-category exclusion; browser checks prove exact rendering/control behavior; actual Windows execution proves persistence. Include spelling/gender alternatives and protect existing learning data.
+- [ ] Keep linguistic ending spans independent of the compact storage models. A model's cut/suffix describes compression and does not establish which characters are inflectional; validate coloring spans using the admitted linguistic rules and preserve runtime-generated forms.
 
 ### Blocked by
 
@@ -280,6 +284,7 @@ A Windows x64 learner can start a fresh prepared package offline, look up and na
 - [ ] Run the final actual resource CLI corpus against independent expectations and review resource-wide 23-block, metadata, pronominal-use, ending-span, and separate English-gloss coverage reports. Preserve traceable corrections/exclusions and resolve gaps required for the claimed scope; sample success cannot stand in for full admitted-resource coverage.
 - [ ] Record original/generated/index/package sizes and cold/warm costs against the budgets established during implementation. Run applicable frontend, locked Rust, resource, browser, and native checks, preserving separate backend precompilation and the hard execution timeout; tie evidence to the executed binary/resource versions and declare passed/failed/skipped results.
 - [ ] Update readiness evidence for Windows x64 only after the actual flow passes. Track other-platform compilation/execution gaps and M5 distribution requirements separately; this acceptance does not close unrelated M3 modules or claim four-target release readiness.
+- [ ] Package the compact model resource (format-6 baseline and subsequent admitted refinements), including all seven MIT converters, original source/licensing materials and provenance. Preserve exhaustive format-5 equivalence evidence for all 1,451,539 cells and 10,781 identities, native-runtime comparisons, and learning-data preservation. Record compact database/model/stem-index/package sizes and fresh/warm costs against the current budgets; the format-5 disk/index budgets are historical.
 
 ### Blocked by
 

@@ -1,4 +1,4 @@
-/* global process, window, fetch, setTimeout, clearTimeout, console */
+/* global process, window, fetch, setTimeout, clearTimeout, console, performance */
 import { chromium, expect } from '@playwright/test';
 import { spawn, spawnSync } from 'node:child_process';
 import { cp, mkdir, readFile, writeFile, rename, readdir, unlink, rmdir } from 'node:fs/promises';
@@ -9,7 +9,7 @@ import { setTimeout as delay } from 'node:timers/promises';
 import assert from 'node:assert/strict';
 
 const [resources, binary, data, destination] = process.argv.slice(2).map((path) => resolve(path));
-assert.ok(['issue-40', 'issue-41', 'issue-42', 'issue-43'].some((issue) => destination.startsWith(resolve('../../target/' + issue) + '\\')));
+assert.ok(['issue-40', 'issue-41', 'issue-42', 'issue-43', 'conjugation-refactor'].some((issue) => destination.startsWith(resolve('../../target/' + issue) + '\\')));
 await mkdir(destination);
 for (const name of ['dictionary', 'conjugation']) await cp(join(resources, name), join(destination, name), { recursive: true });
 await cp(binary, join(destination, 'Lexique.exe'));
@@ -43,6 +43,16 @@ async function hashes(directory) {
 async function check(page) {
   const before = await snapshot(page), audio = await hashes(join(destination, 'Lexique-data/temp/speech'));
   assert.ok(before.records.length && before.cards.flat().length && before.audio.some((bytes) => bytes?.length) && Object.keys(audio).length, 'Use an existing learning/audio fixture');
+  const timings = await page.evaluate(async () => {
+    const query = 'elles se sont abstenues', milliseconds = [];
+    for (let index = 0; index < 6; index++) {
+      const started = performance.now();
+      const result = await window.__TAURI_INTERNALS__.invoke('conjugation_lookup', { key: query });
+      milliseconds.push(performance.now() - started);
+      if (result.tables.length !== 1 || result.tables[0].lemma !== 's’abstenir') throw new Error('Timing query did not resolve');
+    }
+    return { query, first_ms: milliseconds[0], warm_ms: milliseconds.slice(1), boundary: 'native IPC; first invocation and subsequent invocations, no OS cache flush' };
+  });
   const results = await page.evaluate(async () => {
     const invoke = window.__TAURI_INTERNALS__.invoke, results = {};
     for (const key of ['avons aimé', 'aie aimé', 'je suis allée', 'en ayant aimé', 'j’ai abélisé', 'je suis monté', 'j’ai monté', 'j’habite', 'je hais', 'gésir', 'j’occirai', 'ayons chu', 'il est avenu', 'j’ai pu', 'aie occis', 'il stupéfait', 'aie stupéfait', 'aie forclos', 'j’abstiens', 'j’ai parvenu', 'je avons aimé', 'sommes', 'suis', 'paie', 'falloir', 'enfuir', 'voilà', 'SOMMES', "' OR 1=1 --"]) results[key] = await invoke('conjugation_lookup', { key });
@@ -128,7 +138,7 @@ async function check(page) {
   await failures(page);
   assert.deepEqual(await snapshot(page), before);
   assert.deepEqual(await hashes(join(destination, 'Lexique-data/temp/speech')), audio);
-  return { before, audio, results };
+  return { before, audio, results, timings };
 }
 async function failures(page) {
   const database = join(destination, 'conjugation/conjugation.sqlite3'), saved = database + '.saved';
@@ -172,7 +182,7 @@ async function start() {
   return page;
 }
 try {
-  const page = await start(), { before, audio, results } = await check(page);
+  const page = await start(), { before, audio, results, timings } = await check(page);
   await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('finish_close')).catch((error) => {
     assert.match(String(error), /closed|Target|context|session|Frame|destroy/i);
   });
@@ -182,7 +192,7 @@ try {
   const restarted = await start();
   assert.deepEqual(await snapshot(restarted), before);
   assert.deepEqual(await hashes(join(destination, 'Lexique-data/temp/speech')), audio);
-  await writeFile(join(destination, 'report.json'), JSON.stringify({ status: 'PASS', restart: true, results,
+  await writeFile(join(destination, 'report.json'), JSON.stringify({ status: 'PASS', restart: true, results, timings,
     preserved: { records: before.records.length, cards: before.cards.flat().length, audioFiles: Object.keys(audio).length } }, null, 2));
   console.log('Native conjugation check: PASS');
 } finally {

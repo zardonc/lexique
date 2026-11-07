@@ -1,0 +1,203 @@
+{
+  "date": "2026-11-06",
+  "worktree_base": "0cd76a4e26df1691e0e436b619a40b88bb7c2770",
+  "environment": {
+    "os": "Windows",
+    "architecture": "x64",
+    "python": "3.14.10",
+    "node": "24.22.1",
+    "pnpm": "11.25.0",
+    "rust": "1.99.1",
+    "runtime_dependency": "system WebView2"
+  },
+  "review": {
+    "standards_findings": 0,
+    "spec_findings": 0
+  },
+  "checks": [
+    {
+      "command": "pnpm lint",
+      "status": "passed"
+    },
+    {
+      "command": "pnpm typecheck",
+      "status": "passed"
+    },
+    {
+      "command": "pnpm build",
+      "status": "passed"
+    },
+    {
+      "command": "pnpm rust:fmt",
+      "status": "passed"
+    },
+    {
+      "command": "pnpm rust:check",
+      "status": "passed"
+    },
+    {
+      "command": "pnpm rust:test:build",
+      "status": "passed",
+      "prepares": [
+        "dictionary",
+        "format-6 conjugation"
+      ]
+    },
+    {
+      "command": "pnpm test:rust",
+      "status": "passed",
+      "tests": 142,
+      "hard_timeout_seconds": 60
+    },
+    {
+      "command": "pnpm test:conjugation",
+      "status": "passed",
+      "tests": 31,
+      "seconds": 436.196
+    },
+    {
+      "command": "python -X utf8 -m unittest discover -s scripts -p test_conjugation_sample.py -k test_compact_resource_reports_shared_models_and_preserves_expressions -v",
+      "status": "passed",
+      "tests": 1,
+      "seconds": 15.119
+    },
+    {
+      "command": "pnpm conjugation:build target/conjugation-review-20261106/fresh-v6 --equivalence-baseline target/conjugation-refactor/baseline-v5/conjugation.sqlite3",
+      "status": "passed",
+      "identities": 10781,
+      "cells": 1451539
+    },
+    {
+      "command": "pnpm desktop:build --no-bundle",
+      "status": "passed"
+    },
+    {
+      "command": "cargo build --locked --release -p lexique-dictionary --example compare_conjugation",
+      "status": "passed"
+    },
+    {
+      "command": "cargo clippy --locked -p lexique-dictionary --all-targets -- -D warnings",
+      "status": "passed"
+    },
+    {
+      "command": "python -X utf8 docs/evidence/conjugation-storage/check_native.py target/conjugation-refactor/baseline-v5/conjugation.sqlite3 target/conjugation-review-20261106/fresh-v6/conjugation.sqlite3 target/release/examples/compare_conjugation.exe target/conjugation-review-20261106/native-corpus",
+      "status": "equal",
+      "identities": 10781,
+      "cells": 1451539,
+      "lookups": 10824,
+      "batches": 28,
+      "batch_timeout_seconds": 60
+    },
+    {
+      "command": "pnpm test:tooling",
+      "status": "passed",
+      "build_argument_tests": 2,
+      "portable_tests": 8,
+      "speech_tests": 3,
+      "skipped": 0
+    },
+    {
+      "command": "node e2e/native-product-24.mjs <speech-package> <packaged-binary> <owned-fresh-destination>",
+      "status": "passed",
+      "words": 6,
+      "decoded_audio": 6,
+      "actual_playback": true,
+      "normal_shutdown": true,
+      "restart_progress_revision": 1,
+      "resident_model_processes": 1,
+      "owned_model_processes_after_shutdown": 0,
+      "execution_timeout_seconds": 60
+    },
+    {
+      "command": "node e2e/native-conjugation-check.mjs <speech-package> <packaged-binary> <fresh-synthetic-data> <owned-destination>",
+      "status": "passed",
+      "restart": true,
+      "preserved": {
+        "records": 6,
+        "cards": 12,
+        "audioFiles": 7
+      },
+      "execution_timeout_seconds": 60
+    },
+    {
+      "command": "pnpm test:docs",
+      "status": "passed",
+      "documents": 114,
+      "local_links": 682,
+      "skipped_local_evidence_links": 68
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    }
+  ],
+  "packaging": {
+    "archive": "target\\conjugation-review-20261106\\portable\\Lexique-0.1.0-windows-x64-portable-speech.zip",
+    "bytes": 177043746,
+    "sha256": "12293efefefad84dd5cb5a56c30ea6eaa722678185ebea398f6ab408b65498fd",
+    "verified_files": 1117,
+    "format": 6,
+    "binary_sha256": "611446e4a3efb2294c989b1ece8491eb97f758c7ed9f801aa40745b4f36b4139",
+    "resource_sha256": "598d88df83952c071ca69c7c2bcb2a89ed0fe926f4a831866a2d3b6e33a89147",
+    "installed_bytes": 278409926,
+    "speech_bytes": 241571209,
+    "learning_data_in_delivery": false,
+    "input_bundle": ".tooling/issue-14/supertonic-evidence-v16-revised",
+    "input_encoder": ".tooling/issue-15-opus/speech-stage/opusenc.dll",
+    "input_sources": ".tooling/issue-15-opus"
+  },
+  "cli": {
+    "query": "elles se sont abstenues",
+    "python": "3.14.10",
+    "platform": "Windows",
+    "architecture": "AMD64",
+    "samples_ms": [
+      1730.933,
+      1455.572,
+      1448.314,
+      1457.521,
+      1465.147,
+      1484.096
+    ],
+    "first_ms": 1730.933,
+    "warm_median_ms": 1457.521,
+    "warm_max_ms": 1484.096,
+    "budget_ms": 1700,
+    "within_budget": false,
+    "boundary": "six fresh CLI processes including source validation and response serialization; no OS cache flush"
+  },
+  "native_ipc": {
+    "query": "elles se sont abstenues",
+    "first_ms": 33.8,
+    "warm_median_ms": 33.3,
+    "warm_max_ms": 35.4,
+    "boundary": "first and subsequent native IPC calls; no OS cache flush"
+  },
+  "native_host_limitation": {
+    "affected_run": "target/issue-24/conjugation-format6-fresh-20261106",
+    "status": "failed",
+    "webview2_process_failed_kind": 0,
+    "exit_code": -1073741819,
+    "exception": "0xC0000005",
+    "completed_run": "target/issue-24/conjugation-format6-fresh-20261106-2",
+    "rtss_running": true,
+    "current_fault_module": "not established",
+    "compatibility_scope": "RTSS injection compatibility is excluded by the existing #24 acceptance scope",
+    "unrelated_processes_changed": false
+  },
+  "offline_acceptance": {
+    "status": "passed",
+    "reported_by": "user",
+    "report": "offline test passed",
+    "details": "Test machine/version and per-step observations were not supplied.",
+    "package": "target\\conjugation-review-20261106\\portable\\Lexique-0.1.0-windows-x64-portable-speech.zip",
+    "checklist": "target/conjugation-review-20261106/offline-checklist.md",
+    "network_denial_applied_to_native_runs": false
+  },
+  "unrun": [
+    "browser suite for this review",
+    "other OS/architecture execution",
+    "formal release acceptance"
+  ],
+  "logs": "target/conjugation-review-20261106/"
+}

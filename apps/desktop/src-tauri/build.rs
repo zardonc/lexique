@@ -9,6 +9,7 @@ fn main() {
         "scripts/conjugation_syntax.py",
         "scripts/conjugation_meanings.py",
         "scripts/conjugation_pronominal.py",
+        "scripts/conjugation_runtime.py",
         "resources/lefff-3.4",
         "resources/grammalecte-2.3.0",
         "resources/lefff-syntax",
@@ -46,7 +47,7 @@ fn main() {
             "utf8",
             "scripts/conjugation_sample.py",
             "prepare",
-            "target/desktop-conjugation-v5",
+            "target/desktop-conjugation-v6",
         ])
         .current_dir(&root)
         .output()

@@ -9,6 +9,7 @@ import shutil
 import sys
 import tempfile
 import unittest
+import zlib
 
 CLI = Path(__file__).with_name("conjugation_sample.py")
 VERB_RESOURCE = CLI.parent.parent / "resources/grammalecte-2.3.0"
@@ -34,6 +35,15 @@ class ConjugationCliTests(unittest.TestCase):
         result = run_cli(command, self.database, value)
         self.assertEqual(result.returncode, 0, result.stderr)
         return json.loads(result.stdout)
+
+    def test_compact_resource_reports_shared_models_and_preserves_expressions(self):
+        report = json.loads((self.output / "report.json").read_text(encoding="utf-8"))
+        self.assertIn("models", report, "Conjugation build must store shared simple-form models")
+        self.assertLess(report["models"], 250)
+        self.assertEqual(report["slots"], 1451539)
+        self.assertLess(report["database_bytes"], 16 * 1024 * 1024)
+        self.assertEqual(report["lemmas"], 10781)
+        self.assertEqual(self.read("query", "nous nous sommes écrites")["tables"][0]["lemma"], "s’écrire")
 
     def test_pronominal_lookup_keeps_a_distinct_identity_and_complete_simple_forms(self):
         table = self.read("query", "se laver")["tables"]
@@ -274,7 +284,9 @@ class ConjugationCliTests(unittest.TestCase):
         prepared = Path(self.temporary.name) / "prepared"
         result = run_cli("prepare", prepared)
         self.assertEqual(result.returncode, 0, result.stderr)
-        for name in ("conjugation_sample.py", "conjugation_metadata.py"):
+        for name in ("conjugation_sample.py", "conjugation_metadata.py", "conjugation_generation.py",
+                     "conjugation_syntax.py", "conjugation_meanings.py", "conjugation_pronominal.py",
+                     "conjugation_runtime.py"):
             self.assertEqual((prepared / name).read_bytes(), CLI.with_name(name).read_bytes())
         before = {p.relative_to(self.output): p.read_bytes() for p in self.output.rglob("*") if p.is_file()}
         result = run_cli("prepare", self.output)
@@ -373,8 +385,12 @@ class ConjugationCliTests(unittest.TestCase):
             for statement, parameters in [
                 ("PRAGMA user_version = 999", ()),
                 ("DELETE FROM verbs WHERE lemma = ?", ("aimer",)),
-                ("UPDATE verbs SET information = ? WHERE lemma = ?", (json.dumps(malformed), "aimer")),
+                ("UPDATE verbs SET information = ? WHERE lemma = ?", (zlib.compress(json.dumps(malformed).encode()), "aimer")),
+                ("UPDATE verbs SET information = ? WHERE lemma = ?", (zlib.compress(b"null"), "aimer")),
                 ("UPDATE verbs SET information = ? WHERE lemma = ?", ("null", "aimer")),
+                ("UPDATE verbs SET information = ? WHERE lemma = ?", (b"not zlib", "aimer")),
+                ("UPDATE verbs SET source_lines = X'' WHERE lemma = ?", ("aimer",)),
+                ("UPDATE models SET cells = 'null' WHERE id = (SELECT model FROM verbs WHERE lemma = ?)", ("aimer",)),
             ]:
                 with self.subTest(statement=statement):
                     shutil.copyfile(self.database, path)
@@ -436,7 +452,7 @@ class ConjugationCliTests(unittest.TestCase):
                 self.assertEqual(result.stdout, "")
             shutil.copyfile(self.database, path)
             with sqlite3.connect(path) as connection:
-                connection.execute("DELETE FROM slots WHERE form = 'sommes'")
+                connection.execute("UPDATE verbs SET slots = slots - 1 WHERE lemma = 'sommer'")
             connection.close()
             self.assertIn("count mismatch", run_cli("query", path, "sommes").stderr)
 

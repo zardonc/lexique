@@ -56,6 +56,56 @@ def query_base(query):
     return re.sub(r"^(?:(?:que |qu’)?(?:je |j’|tu |il |elle |on |nous |vous |ils |elles ))", "", query)
 
 
+def ordinary_constructions(rows, verb, auxiliary_form):
+    if verb["ordinary_status"] != "supported":
+        return []
+    lemma = rows[0][2]
+    seen = {(r[1], *r[4:8]) for r in rows}
+    generated = []
+    impersonal = "impersonal" in verb["usage_labels"]
+    correction = verb["correction"] or {}
+    allowed_persons = correction.get("persons", ["3s"] if impersonal else list(SUBJECTS))
+
+    def add(form, tense, person=None, number=None, gender=None, provenance="ordinary/v1/gerund"):
+        identity = (form, tense, person, number, gender)
+        if form and identity not in seen:
+            seen.add(identity)
+            generated.append((rows[0][0], form, lemma, provenance, tense, person, number, gender))
+
+    for row in rows:
+        if row[4] == "G":
+            add("en " + row[1], "GP")
+    if verb["auxiliary_status"] == "supported":
+        participles = [r for r in rows if r[4] == "K"]
+        imperative_persons = {f"{r[5]}{r[6]}" for r in rows if r[4] == "Y"}
+        for auxiliary in verb["auxiliaries"]:
+            aux = auxiliary["lemma"]
+            for tense, base in COMPOUND.items():
+                for pn in [None] if base in ("W", "G") else list(SUBJECTS):
+                    if pn and pn not in allowed_persons:
+                        continue
+                    # A missing imperative is not licensed by an auxiliary imperative.
+                    if base == "Y" and pn not in correction.get("compound_imperative_persons", []) and pn not in imperative_persons:
+                        continue
+                    prefix = auxiliary_form(aux, base, pn)
+                    if not prefix:
+                        continue
+                    for pp in participles:
+                        _, form, _, _, _, _, number, gender = pp[:8]
+                        if aux == "avoir" and (gender not in (None, "m") or number not in (None, "s")):
+                            continue
+                        if aux == "être" and pn and number != pn[1] and pn != "2p":
+                            continue
+                        # Only explicitly dimensioned agreement, never guessed from K.
+                        if aux == "être" and (gender is None or number is None):
+                            continue
+                        add(("en " if tense == "GPP" else "") + prefix + " " + form,
+                            tense, pn[0] if pn else None, pn[1] if pn else None,
+                            gender if aux == "être" else None,
+                            "ordinary/v1/" + aux + "/" + auxiliary["use"])
+    return generated
+
+
 def generate(rows, verbs, data):
     by_lemma = defaultdict(list)
     for row in rows:
@@ -102,37 +152,10 @@ def generate(rows, verbs, data):
                         if person_number in allowed_persons:
                             add(source_form(data, lemma, tense, ":" + person_number, model), tense,
                                 person_number[0], person_number[1])
-            for row in list(cells):
-                if row[4] == "G":
-                    add("en " + row[1], "GP", provenance="ordinary/v1/gerund")
-            if verb["auxiliary_status"] == "supported":
-                participles = [r for r in cells if r[4] == "K"]
-                for auxiliary in verb["auxiliaries"]:
-                    aux = auxiliary["lemma"]
-                    for tense, base in COMPOUND.items():
-                        persons = [None] if base in ("W", "G") else list(SUBJECTS)
-                        for pn in persons:
-                            if pn and pn not in allowed_persons:
-                                continue
-                            # A missing imperative is not licensed by an auxiliary imperative.
-                            if base == "Y" and pn not in correction.get("compound_imperative_persons", []) and not any(r[4] == "Y" and f"{r[5]}{r[6]}" == pn for r in cells):
-                                continue
-                            prefix = source_form(data, aux, base, ":" + pn if pn else ":P")
-                            if not prefix:
-                                continue
-                            for pp in participles:
-                                _, form, _, _, _, _, number, gender = pp
-                                if aux == "avoir" and (gender not in (None, "m") or number not in (None, "s")):
-                                    continue
-                                if aux == "être" and pn and number != pn[1] and pn != "2p":
-                                    continue
-                                # Only explicitly dimensioned agreement, never guessed from K.
-                                if aux == "être" and (gender is None or number is None):
-                                    continue
-                                add(("en " if tense == "GPP" else "") + prefix + " " + form,
-                                    tense, pn[0] if pn else None, pn[1] if pn else None,
-                                    gender if aux == "être" else None,
-                                    "ordinary/v1/" + aux + "/" + auxiliary["use"])
+            derived = ordinary_constructions(cells, verb, lambda aux, tense, pn:
+                                             source_form(data, aux, tense, ":" + pn if pn else ":P"))
+            cells.extend(derived)
+            generated.extend(derived)
         statuses = {}
         for code in BLOCKS:
             if any(r[4] == code for r in cells):

@@ -1873,6 +1873,7 @@ dependencies = [
 name = "lexique-dictionary"
 version = "0.1.0"
 dependencies = [
+ "flate2",
  "lexique-storage",
  "quick-xml",
  "rusqlite",

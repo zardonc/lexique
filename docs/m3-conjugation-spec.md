@@ -131,6 +131,14 @@ Priority marking, verb-coloring spans, and match highlighting are independent pr
 5. Verify source integrity, generated-resource integrity and format, and required metadata before relying on them. Missing/corrupt resources fail visibly. Never replace a bad resource with fabricated success or rebuild learning data as a repair.
 6. Measure original and transformed resource sizes, reverse indexes, and cold/warm lookup costs on a declared dataset and environment. Set implementation budgets from those measurements; this specification does not assert unmeasured latency or package-size limits.
 
+### Compact conjugation storage
+
+Store shared simple-form conjugation models with per-verb model references, source-line anchors, compressed metadata and lexical flags. Pronominal identities refer to their ordinary base. Construct compounds, subjects, reflexives, gerunds and agreement alternatives at runtime using the admitted rules; keep spelling variants and source exceptions. Do not materialize the complete tables or an expression index.
+
+Reverse lookup strips compatible model suffixes, finds candidate stems, then verifies the complete generated form or expression. Preserve all identities, interpretations, source fields, duplicates, ordered alternatives and stable table order through the existing lookup interface. Before continuing #44, regenerate and compare all 1,451,539 cells and 10,781 identities with the preserved format-5 database, and verify the native runtime through that same interface. Keep the old resource and all learning data.
+
+The format-6 baseline is prepared in `target/desktop-conjugation-v6/`; its contract is recorded in `docs/conjugation-storage.md`. Storage cuts and suffixes are compression artifacts, not linguistic ending spans for #45. Measure the compact database, models, stem index, package and cold/warm costs; earlier format-5 budgets are historical.
+
 ### Application boundaries, speech, and data preservation
 
 1. Extend the existing injected runtime adapter for conjugation lookup, selected-table access, and display preferences. Keep platform file access, resource paths, speech scheduling, and native storage at the established desktop boundary. Reuse resource-reading modules and persistence conventions before introducing another abstraction or dependency.
@@ -162,7 +170,7 @@ Required coverage:
 
 ### Boundary 2: public resource build/query CLI
 
-Extend the real-source CLI behavior proven by #4. Validate the actual admitted resource, generated/loaded tables, expression index, metadata, and supported ending spans through public inputs/outputs. Maintain independent literal or source-cited expected results rather than deriving expected forms with the same generation logic. Product and CLI outputs must exercise the admitted representation/generation decisions; an unrelated successful demo is insufficient.
+Extend the real-source CLI behavior proven by #4. Validate the actual admitted resource, runtime-generated tables, suffix candidate lookup, metadata, and supported ending spans through public inputs/outputs. Maintain independent literal or source-cited expected results rather than deriving expected forms with the same generation logic. Product and CLI outputs must exercise the admitted representation/generation decisions; an unrelated successful demo is insufficient.
 
 Required coverage:
 

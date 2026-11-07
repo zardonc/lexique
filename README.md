@@ -70,7 +70,7 @@ Windows x64 语音开发小样可在构建后运行 `python -X utf8 scripts/pack
 
 资源独立入口：`pnpm resources:build target/dictionary-sample`、`pnpm resources:query target/dictionary-sample/dictionary.sqlite3 "œil"`、`pnpm test:resources`。源包和许可已随仓库保存，生成及查询无需联网；`build` 输出目录必须是新目录。原生构建自动准备 `target/desktop-dictionary-sample`，复用前验证内容；损坏时直接失败，人工检查后移走该生成目录再重建。可先运行 `pnpm resources:prepare`。来源、覆盖缺项、只读查询契约和体积见 [FreeDict 小样记录](resources/freedict-fra-zho-2025.11.23/README.md)。
 
-变位资源入口：`pnpm conjugation:build target/conjugation-sample`、`pnpm conjugation:query target/conjugation-sample/conjugation.sqlite3 sommes`、`pnpm conjugation:table target/conjugation-sample/conjugation.sqlite3 falloir`、`pnpm test:conjugation`。固定 Lefff 3.4 词形及句法（LGPL-LR）、Grammalecte 2.3.0 元数据（GPL-3.0-only）和 RosaeNLG 省音资料（CC BY-SA 3.0）随仓库保存。原生构建自动准备格式 5 的 `target/desktop-conjugation-v5`，或先运行 `pnpm conjugation:prepare`；已有生成物须通过完整性及转换器版本检查，失败则保留原物，使用新目录重建。构建入口把两种资源放到可执行文件旁，portable 保留原始源、许可、纠正资料和六份转换源码；用户学习数据不参与资源准备。
+变位资源入口：`pnpm conjugation:build target/conjugation-sample`、`pnpm conjugation:query target/conjugation-sample/conjugation.sqlite3 sommes`、`pnpm conjugation:table target/conjugation-sample/conjugation.sqlite3 falloir`、`pnpm test:conjugation`。固定 Lefff 3.4 词形及句法（LGPL-LR）、Grammalecte 2.3.0 元数据（GPL-3.0-only）和 RosaeNLG 省音资料（CC BY-SA 3.0）随仓库保存。原生构建自动准备格式 6 的 `target/desktop-conjugation-v6`，或先运行 `pnpm conjugation:prepare`；已有生成物须通过完整性及转换器版本检查，失败则保留原物，使用新目录重建。构建入口把两种资源放到可执行文件旁，portable 保留原始源、许可、纠正资料和七份转换源码；用户学习数据不参与资源准备。共享简单变位模型与运行时表达构造将数据库缩为 10.46 MiB；存储契约及格式 5 的全量等价检查见[变位存储](docs/conjugation-storage.md)。
 
 #43 准入 2,955 个独立代词式身份，支持 `se laver`、`je me lave`、`elles se sont abstenues`、`va-t’en` 等完整表达及适用的 23 区块。普通用法、代词用法、依语境配合和不变分词分别展示；性数备选保持可单独匹配，不推测缺少的宾语。来源、覆盖、实际 Windows 检查及成本见 [#43 证据](docs/evidence/issue-43/README.md)。
 
