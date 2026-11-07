@@ -16,6 +16,7 @@ import { ReviewQueuePanel } from './review-queue';
 import { useBatchReview } from './use-batch-review';
 import { BatchProgress } from './batch-progress';
 import { ConjugationPanel } from './conjugation';
+import { useLookupNavigation } from './conjugation-navigation';
 
 const themes: readonly Theme[] = ['white', 'sepia', 'dark'];
 const locales: readonly Locale[] = ['zh', 'en', 'fr'];
@@ -54,7 +55,6 @@ function pageTitleId(page: number) { return page === 3 || page === 1 ? 'main-pag
 export function App({ runtime }: { readonly runtime: RuntimeAdapter }) {
   const [locale, setLocale] = useState<Locale>('zh');
   const [theme, setTheme] = useState<Theme>('white');
-  const [page, setPage] = useState(0);
   const [collapsed, setCollapsed] = useState(false);
   const batch = useBatchReview(runtime);
   const [reviewVersion, setReviewVersion] = useState(0);
@@ -63,20 +63,23 @@ export function App({ runtime }: { readonly runtime: RuntimeAdapter }) {
   const notebookText = notebookMessages[locale];
   const notebook = useNotebook(runtime);
   const guard = useLeaveGuard(runtime, notebook, false);
-  function changePage(next: number) { guard.request(() => { notebook.clear(); setPage(next); }); }
+  const navigation = useLookupNavigation((action) => guard.request(() => { notebook.clear(); action(); }));
+  const page = navigation.page;
   useEffect(() => { document.documentElement.lang = languageTags[locale]; }, [locale]);
   return <div className="app" data-theme={theme} data-collapsed={collapsed}>
     <a className="skip-link" href="#main-content">{text.skip}</a>
-    <Navigation text={text} selected={page} collapsed={collapsed} disabled={false} onSelect={changePage} onToggle={() => setCollapsed((value) => !value)} />
+    <Navigation text={text} selected={page} collapsed={collapsed} disabled={false} onSelect={navigation.changePage} onToggle={() => setCollapsed((value) => !value)} />
     <div className="workspace"><Header text={text} locale={locale} theme={theme} onLocale={setLocale} onTheme={setTheme} />
       <main id="main-content" tabIndex={-1}>
         <p className="eyebrow">{text.eyebrow}</p><h1 id="main-page-heading">{text.modules[page]}</h1>
         <section className="page-content" aria-labelledby={pageTitleId(page)}>
           <PageIntroduction page={page} text={text} />
           {page === 0 ? <DictionaryPanel runtime={runtime} text={text.dictionary} notebookText={notebookText} version={notebook.version}
+            locale={locale} initial={navigation.dictionary} onConjugation={navigation.openConjugation}
             onCollect={(result) => guard.request(() => notebook.collect(result))}
             onOpen={(record) => guard.request(() => notebook.open(record))}
-            beforeSearch={(action) => guard.request(() => { notebook.clear(); action(); })} /> : page === 1 ? <ConjugationPanel runtime={runtime} locale={locale} /> : page === 2 ?
+            beforeSearch={(action) => guard.request(() => { notebook.clear(); action(); })} /> : page === 1 ?
+            <ConjugationPanel runtime={runtime} locale={locale} initial={navigation.conjugation} onChange={navigation.setConjugation} onDictionary={navigation.openDictionary} /> : page === 2 ?
             <NotebookPanel runtime={runtime} version={notebook.version + reviewVersion} text={notebookText} batch={batch}
               onOpen={(record) => guard.request(() => notebook.open(record))} /> : page === 3 ? <ReviewQueuePanel runtime={runtime} locale={locale} text={notebookText} /> : page === 7 ?
             <><ReviewSettingsPanel runtime={runtime} locale={locale} /><SpeechSettings runtime={runtime} locale={locale} /></> :

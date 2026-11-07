@@ -8,8 +8,10 @@ import { createHash } from 'node:crypto';
 import { setTimeout as delay } from 'node:timers/promises';
 import assert from 'node:assert/strict';
 
-const [resources, binary, data, destination] = process.argv.slice(2).map((path) => resolve(path));
-assert.ok(['issue-40', 'issue-41', 'issue-42', 'issue-43', 'issue-44', 'issue-45', 'issue-46', 'conjugation-refactor'].some((issue) => destination.startsWith(resolve('../../target/' + issue) + '\\')));
+const [resources, binary, data, destination] = process.argv.slice(2, 6).map((path) => resolve(path));
+const navigationOnly = process.argv[6] === '--navigation';
+assert.ok(process.argv.length === 6 || (process.argv.length === 7 && navigationOnly), 'Four paths and optional --navigation are required');
+assert.ok(['issue-40', 'issue-41', 'issue-42', 'issue-43', 'issue-44', 'issue-45', 'issue-46', 'issue-47', 'conjugation-refactor'].some((issue) => destination.startsWith(resolve('../../target/' + issue) + '\\')));
 const defaultOrder = ['P', 'PC', 'I', 'F', 'C', 'S', 'PQP', 'J', 'PA', 'FA', 'CP', 'SP', 'T', 'SQP', 'Y', 'YP', 'W', 'WP', 'G', 'K', 'KP', 'GP', 'GPP'];
 await mkdir(destination);
 for (const name of ['dictionary', 'conjugation']) await cp(join(resources, name), join(destination, name), { recursive: true });
@@ -28,7 +30,8 @@ async function snapshot(page) {
     const records = await invoke('vocabulary_list', { query: '', sort: 'headword-asc' });
     const cards = await Promise.all(records.map((record) => invoke('review_cards', { vocabularyId: record.id })));
     const progress = await Promise.all(cards.flat().map((card) => invoke('review_progress', { cardId: card.id })));
-    const audio = await Promise.all(records.map((record) => invoke('speech_cached', { vocabularyId: record.id })));
+    const audio = await Promise.all(records.map((record, index) => cards[index].some((card) => card.kind === 'listening')
+      ? invoke('speech_cached', { vocabularyId: record.id }) : null));
     return { records, cards, progress, audio, preferences: await invoke('speech_preferences', { preferences: null }) };
   });
 }
@@ -399,8 +402,156 @@ async function close(page) {
   assert.notEqual(child.exitCode, null, 'Normal close must terminate the application');
   await browser.close(); browser = undefined;
 }
+async function dictionarySearch(page, key) {
+  await page.getByRole('button', { name: 'Dictionary', exact: true }).click();
+  const input = page.getByLabel('French word or phrase'); await input.fill(key); await input.press('Enter');
+}
+async function conjugationSearch(page, key) {
+  await page.getByRole('button', { name: 'Conjugation', exact: true }).click();
+  const input = page.getByLabel('French verb or simple form'); await input.fill(key); await input.press('Enter');
+}
+async function navigationBrowse(page) {
+  await dictionarySearch(page, 'laver');
+  const forward = page.getByRole('button', { name: 'Open conjugation: laver', exact: true });
+  await forward.focus(); await forward.press('Enter');
+  await expect(page.locator('.conjugation-table h3')).toHaveText('laver');
+  await expect(page.locator('.conjugation-table h3')).toBeFocused();
+  await expect(page.locator('.conjugation-block')).toHaveCount(23);
+  await page.getByRole('button', { name: '2 · Main verb', exact: true }).click();
+  await page.getByLabel('Block to move', { exact: true }).selectOption('PQP');
+  await page.getByRole('button', { name: 'Move later', exact: true }).click();
+  const custom = ['P', 'PC', 'I', 'F', 'C', 'S', 'J', 'PQP', ...defaultOrder.slice(8)];
+  assert.deepEqual(await renderedOrder(page), custom);
+  const back = page.getByRole('button', { name: 'Open dictionary: laver', exact: true });
+  await back.focus(); await back.press('Space');
+  await expect(page.locator('.dictionary-entry h3')).toHaveText('laver');
+  await expect(page.locator('.dictionary-entry h3')).toBeFocused();
+  await page.screenshot({ path: join(destination, 'navigation-dictionary.png') });
+  await conjugationSearch(page, 'suis');
+  const choices = page.getByRole('group', { name: 'Matching verbs' });
+  await expect(choices.getByRole('button')).toHaveCount(2);
+  await expect(page.locator('.conjugation-table')).toHaveCount(0);
+  await choices.getByRole('button', { name: /^être/ }).click();
+  await page.getByRole('button', { name: 'Open dictionary: être', exact: true }).click();
+  await page.getByRole('button', { name: 'Open conjugation: être', exact: true }).click();
+  await expect(choices.getByRole('button')).toHaveCount(2);
+  await expect(page.locator('.conjugation-table h3')).toHaveText('être');
+  await expect(page.getByLabel('French verb or simple form')).toHaveValue('suis');
+  await conjugationSearch(page, " S'ADAPTER ");
+  await expect(page.locator('.conjugation-table h3')).toHaveText('s’adapter');
+  await page.getByRole('button', { name: 'Open dictionary: s’adapter', exact: true }).click();
+  await expect(page.getByLabel('French word or phrase')).toHaveValue('s’adapter');
+  await page.getByRole('button', { name: 'Open conjugation: s’adapter', exact: true }).click();
+  await expect(page.getByLabel('French verb or simple form')).toHaveValue(" S'ADAPTER ");
+  await conjugationSearch(page, 'se laver');
+  await expect(page.locator('.dictionary-link')).toHaveText('No corresponding dictionary verb entry.');
+  await expect(page.getByRole('button', { name: 'Open dictionary: laver', exact: true })).toHaveCount(0);
+  await dictionarySearch(page, 'été'); await expect(page.locator('.dictionary-entry h3')).toHaveText('été');
+  await expect(page.locator('.conjugation-link')).toHaveCount(0);
+  await dictionarySearch(page, 'faire l’amour');
+  await expect(page.locator('.conjugation-link')).toHaveText('No verified conjugation link for this dictionary verb.');
+  await dictionarySearch(page, 'laver');
+  for (const [locale, theme, open, close] of [['zh', 'white', '打开动词变位: laver', '打开词典: laver'],
+    ['fr', 'sepia', 'Ouvrir la conjugaison: laver', 'Ouvrir le dictionnaire: laver'], ['en', 'dark', 'Open conjugation: laver', 'Open dictionary: laver']]) {
+    await page.getByRole('banner').getByRole('combobox').nth(0).selectOption(locale);
+    await page.getByRole('banner').getByRole('combobox').nth(1).selectOption(theme);
+    await page.getByRole('button', { name: open, exact: true }).click();
+    assert.deepEqual(await renderedOrder(page), custom);
+    await page.getByRole('button', { name: close, exact: true }).click();
+    await expect(page.locator('.dictionary-entry h3')).toBeFocused();
+  }
+  return custom;
+}
+async function navigationResources(page) {
+  for (const resource of ['conjugation', 'dictionary']) {
+    const database = join(destination, resource, `${resource}.sqlite3`), saved = database + '.saved';
+    await rename(database, saved);
+    try {
+      for (const state of ['missing', 'corrupt']) {
+        if (state === 'corrupt') await writeFile(database, 'invalid SQLite');
+        await page.getByRole('button', { name: 'Notebook', exact: true }).click();
+        if (resource === 'conjugation') await dictionarySearch(page, 'laver');
+        else await page.getByRole('button', { name: 'Conjugation', exact: true }).click();
+        await expect(page.locator(resource === 'conjugation' ? '.dictionary-original' : '.conjugation-table').getByRole('alert')).toContainText(state);
+        await expect(page.getByRole('button', { name: resource === 'conjugation' ? 'Open conjugation: laver' : 'Open dictionary: laver', exact: true })).toHaveCount(0);
+      }
+    } finally { await unlink(database).catch((error) => { if (error.code !== 'ENOENT') throw error; }); await rename(saved, database); }
+    await dictionarySearch(page, 'laver');
+    await page.getByRole('button', { name: 'Open conjugation: laver', exact: true }).click();
+    await expect(page.getByRole('button', { name: 'Open dictionary: laver', exact: true })).toBeEnabled();
+  }
+}
+async function navigationEdits(page) {
+  const before = await snapshot(page);
+  await dictionarySearch(page, 'laver'); await page.getByRole('button', { name: 'View existing record', exact: true }).click();
+  const notes = page.getByLabel('Personal notes', { exact: true }); await notes.fill('native pending edit');
+  const link = page.getByRole('button', { name: 'Open conjugation: laver', exact: true }); await link.click();
+  const dialog = page.getByRole('dialog', { name: 'You have unsaved changes' });
+  await dialog.getByRole('button', { name: 'Keep editing' }).click();
+  await expect(notes).toHaveValue('native pending edit'); await link.click();
+  preferenceSql(`c.execute("CREATE TRIGGER issue47_save_failure BEFORE UPDATE ON vocabulary BEGIN SELECT RAISE(ABORT, 'navigation save rejected'); END")`);
+  try {
+    await dialog.getByRole('button', { name: 'Save and leave' }).click();
+    await expect(dialog).toContainText('navigation save rejected'); await expect(notes).toHaveValue('native pending edit');
+    assert.deepEqual(await snapshot(page), before);
+  } finally { preferenceSql(`c.execute('DROP TRIGGER issue47_save_failure')`); }
+  await dialog.getByRole('button', { name: 'Discard changes' }).click();
+  await expect(page.locator('.conjugation-table h3')).toHaveText('laver');
+  assert.deepEqual(await snapshot(page), before);
+  await dictionarySearch(page, 'laver'); await page.getByRole('button', { name: 'View existing record', exact: true }).click();
+  await notes.fill('native saved navigation edit'); await link.click();
+  await dialog.getByRole('button', { name: 'Save and leave' }).click();
+  await expect(dialog).toBeHidden(); await expect(page.locator('.conjugation-table h3')).toHaveText('laver');
+  return page.evaluate(() => window.__TAURI_INTERNALS__.invoke('vocabulary_find', { headword: 'laver' }));
+}
+async function navigationAcceptance(page) {
+  const original = await snapshot(page);
+  assert.ok(original.records.length && original.cards.flat().length && original.audio.some((bytes) => bytes?.length), 'Use the existing learning/audio fixture');
+  const seed = await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('vocabulary_save', { request: {
+    headword: 'laver', notes: 'native original navigation notes', example_fr: '', example_zh: '', example_sense: null, more_examples: [],
+    id: null, revision: null, operation: window.crypto.randomUUID(),
+  } }));
+  assert.equal(seed.outcome, 'created');
+  const before = await snapshot(page), audio = await hashes(join(destination, 'Lexique-data/temp/speech'));
+  assert.deepEqual(before.records.filter((record) => record.id !== seed.record.id), original.records);
+  await page.getByLabel('界面语言').selectOption('en');
+  const custom = await navigationBrowse(page);
+  await navigationResources(page);
+  assert.deepEqual(await snapshot(page), before);
+  assert.deepEqual(await hashes(join(destination, 'Lexique-data/temp/speech')), audio);
+  const edited = await navigationEdits(page), after = await snapshot(page);
+  assert.equal(edited.notes, 'native saved navigation edit'); assert.equal(edited.revision, seed.record.revision + 1);
+  assert.deepEqual({ ...edited, notes: seed.record.notes, revision: seed.record.revision, updated_at: seed.record.updated_at }, seed.record);
+  assert.deepEqual(after, { ...before, records: before.records.map((record) => record.id === edited.id ? edited : record) });
+  const outcomes = await page.evaluate(async (record) => {
+    const invoke = window.__TAURI_INTERNALS__.invoke, request = { headword: record.headword, notes: 'must not overwrite', example_fr: '', example_zh: '', example_sense: null, more_examples: [] };
+    const duplicate = await invoke('vocabulary_save', { request: { ...request, id: null, revision: null, operation: window.crypto.randomUUID() } });
+    const conflict = await invoke('vocabulary_save', { request: { ...request, id: record.id, revision: record.revision - 1, operation: window.crypto.randomUUID() } });
+    return [duplicate.outcome, conflict.outcome];
+  }, edited);
+  assert.deepEqual(outcomes, ['existing', 'conflict']); assert.deepEqual(await snapshot(page), after);
+  await page.screenshot({ path: join(destination, 'navigation-conjugation.png') });
+  await close(page); page = await start(); await page.getByLabel('界面语言').selectOption('en');
+  await dictionarySearch(page, 'laver'); await page.getByRole('button', { name: 'Open conjugation: laver', exact: true }).click();
+  await expect(page.getByRole('button', { name: '2 · Main verb', exact: true })).toHaveAttribute('aria-pressed', 'true');
+  assert.deepEqual(await renderedOrder(page), custom); assert.deepEqual(await snapshot(page), after);
+  assert.deepEqual(await hashes(join(destination, 'Lexique-data/temp/speech')), audio);
+  await page.screenshot({ path: join(destination, 'navigation-restart.png') });
+  await close(page);
+  await writeFile(join(destination, 'report.json'), JSON.stringify({ status: 'PASS', navigation: true, restart: true,
+    selected: ['laver', 'être', 's’adapter'], originalQuery: " S'ADAPTER ", ambiguousCandidates: ['suivre', 'être'],
+    unavailable: ['se laver dictionary entry', 'été noun link', 'faire l’amour conjugation link'],
+    resourceFailures: ['missing conjugation', 'corrupt conjugation', 'missing dictionary', 'corrupt dictionary'],
+    edits: ['stay', 'failed save retained', 'discard', 'save and leave', ...outcomes], mode: 'main', blockOrder: custom,
+    languages: ['zh', 'fr', 'en'], themes: ['white', 'sepia', 'dark'],
+    preserved: { preExistingRecords: original.records.length, records: after.records.length, cards: after.cards.flat().length,
+      progress: after.progress.length, audioFiles: Object.keys(audio).length, references: true, selectedAudio: true, speechPreferences: true },
+  }, null, 2));
+  console.log('Native dictionary–conjugation navigation: PASS');
+}
 try {
   let page = await start();
+  if (navigationOnly) { await navigationAcceptance(page); } else {
   const { before, audio, results, timings, coloring, blockOrder } = await check(page), modesRestored = [];
   for (const [mode, label, expected] of [['main', '2 · 主要动词', 'lavé'], ['verbal', '1 · 完整动词部分', 'avions lavé'], ['ending', '3 · 主要动词词尾', 'é']]) {
     await page.getByRole('button', { name: label, exact: true }).click();
@@ -441,6 +592,7 @@ try {
     blockOrder: { ...blockOrder, resetRestored: true, failures: ['write', 'invalid IPC', 'corrupt JSON', 'invalid saved order', 'unavailable storage'] },
     preserved: { records: before.records.length, cards: before.cards.flat().length, audioFiles: Object.keys(audio).length } }, null, 2));
   console.log('Native conjugation check: PASS');
+  }
 } finally {
   clearTimeout(timer); if (browser) await browser.close();
   if (child?.pid && child.exitCode === null) spawnSync('taskkill.exe', ['/PID', String(child.pid), '/T', '/F'], { windowsHide: true });
