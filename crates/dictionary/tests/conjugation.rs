@@ -5,7 +5,7 @@ use sha2::{Digest, Sha256};
 
 fn resource() -> (PathBuf, String) {
     let directory =
-        PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("../../target/desktop-conjugation-v6-cli");
+        PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("../../target/desktop-conjugation-v6-stats");
     let report: serde_json::Value =
         serde_json::from_slice(&std::fs::read(directory.join("report.json")).unwrap()).unwrap();
     (

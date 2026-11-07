@@ -8,6 +8,7 @@ import sqlite3
 import shutil
 import sys
 import tempfile
+import textwrap
 import unittest
 import zlib
 
@@ -579,7 +580,23 @@ class ConjugationCliTests(unittest.TestCase):
     def test_rebuild_is_reproducible_and_contains_complete_redistribution_materials(self):
         with tempfile.TemporaryDirectory() as temporary:
             output = Path(temporary) / "rebuilt"
-            result = run_cli("build", output)
+            # Exercise the public CLI with optional SQLite dbstat access unavailable.
+            bootstrap = textwrap.dedent("""
+                import runpy, sqlite3, sys
+                from pathlib import Path
+                original_connect = sqlite3.connect
+                def connect(*args, **kwargs):
+                    connection = original_connect(*args, **kwargs)
+                    connection.set_authorizer(lambda action, name, *_: sqlite3.SQLITE_DENY
+                        if action == sqlite3.SQLITE_READ and name == 'dbstat' else sqlite3.SQLITE_OK)
+                    return connection
+                sqlite3.connect = connect
+                sys.argv = sys.argv[1:]
+                sys.path.insert(0, str(Path(sys.argv[0]).parent))
+                runpy.run_path(sys.argv[0], run_name='__main__')
+            """)
+            result = subprocess.run([sys.executable, "-X", "utf8", "-c", bootstrap, str(CLI), "build", str(output)],
+                                    capture_output=True, text=True, encoding="utf-8", timeout=60)
             self.assertEqual(result.returncode, 0, result.stderr)
             self.assertEqual((output / "conjugation.sqlite3").read_bytes(), self.database.read_bytes())
             self.assertEqual(json.loads(result.stdout), json.loads((self.output / "report.json").read_text(encoding="utf-8")))

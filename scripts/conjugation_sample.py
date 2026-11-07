@@ -150,12 +150,19 @@ def build(output, source, metadata_source=VERB_RESOURCE, syntax_source=SYNTAX_RE
                             json.dumps(supplemental_provenance, ensure_ascii=False), len(verbs),
                             json.dumps(english_provenance, ensure_ascii=False),
                             json.dumps(construction_forms(linguistic_data), ensure_ascii=False, separators=(",", ":"))))
+        # Rollback-only page accounting works on SQLite builds without dbstat.
+        connection.execute("SAVEPOINT stem_size")
+        free_pages = connection.execute("PRAGMA freelist_count").fetchone()[0]
+        connection.execute("DROP TABLE stems")
+        reverse_bytes = ((connection.execute("PRAGMA freelist_count").fetchone()[0] - free_pages)
+                         * connection.execute("PRAGMA page_size").fetchone()[0])
+        connection.execute("ROLLBACK TO stem_size")
+        connection.execute("RELEASE stem_size")
         connection.commit()
         table_bytes = database.stat().st_size
         connection.execute("CREATE INDEX verbs_base ON verbs(base)")
         connection.commit()
         lemma_bytes = database.stat().st_size - table_bytes
-        reverse_bytes = connection.execute("SELECT sum(pgsize) FROM dbstat WHERE name = 'stems'").fetchone()[0]
         table_bytes -= reverse_bytes
     for name in (SOURCE.name, "LICENSE-LGPLLR", "provenance.json", "README.md"):
         shutil.copyfile(RESOURCE / name, output / name)

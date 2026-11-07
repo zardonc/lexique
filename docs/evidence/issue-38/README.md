@@ -57,8 +57,17 @@ The [storage contract](../../conjugation-storage.md) and preserved exhaustive
 format-5 comparison retain every cell and identity and the learning-data
 boundary. Format 6 requires the matching rebuilt reader. Current preparation,
 native builds, release copying, Tauri packaging, fixtures and backend CI use
-`target/desktop-conjugation-v6-cli/`; earlier generated resources remain intact.
+`target/desktop-conjugation-v6-stats/`; earlier generated resources remain intact.
 The optimized preparation reproduces the accepted package's database bytes.
+
+The builder measures stem pages inside a rollback-only savepoint in its
+original transaction, using standard SQLite page-size/freelist accounting.
+The [portable size results](portable-page-accounting.json) retain identical
+database bytes and the complete numeric report: 9,994,240 table bytes,
+278,528 lemma-index bytes and 733,184 reverse-index bytes. The public CLI
+rebuild test also runs with optional `dbstat` access unavailable and compares
+the completed database, report and redistribution materials. Original resources
+and the accepted ZIP remain intact.
 
 The [CLI evidence](../issue-49/cli-latency.md) retains full source/database/
 meaning validation. All six final public CLI processes passed the original
@@ -77,16 +86,21 @@ packaged-source rebuild, final extracted-resource corpus and actual fresh/full/
 speech/navigation flows passed. Backend and native execution retain their hard
 60-second limits. Detailed commands and results remain in the feature reports.
 
-This closeout reuses those unchanged runtime/resource checks. Its additional
-checks are:
+This closeout retains the native/offline acceptance and checks the builder
+and preparation configuration with:
 
 | Command or boundary | Result |
 | --- | --- |
 | Existing public CLI `test_traditional_groups_and_ordinary_auxiliaries_have_source_evidence` | PASS: fresh current build, eight independent lemmas, 46.340 seconds |
+| Public CLI rebuild with optional `dbstat` access unavailable | PASS: completed database/report/materials preserved, 41.160 seconds |
+| `pnpm conjugation:prepare`; prior resource/report comparison | PASS: byte-identical database and equal numeric report in the separate current directory |
+| `pnpm test:conjugation` | PASS: all 36 public CLI tests, 293.383 seconds |
+| `pnpm rust:fmt`; `pnpm rust:test:build`, then `pnpm test:rust` | PASS: formatting, separate compilation and 143 backend tests within the hard 60-second runner limit |
+| `pnpm test:tooling`, admitted TTS inputs and short task TEMP | PASS: 2 build-argument, 8 portable and all 3 speech-package tests; no skips |
 | `cargo clippy --locked -p lexique-core -p lexique-storage -p lexique-dictionary --all-targets -- -D warnings` | PASS: 13.17 seconds |
 | CI preparation path compared with `conjugation:prepare` | PASS: the current resource directory matches |
 | GitHub #39 body/state read-back and native child relationships | PASS: all six criteria checked; all eleven children closed |
-| `pnpm test:docs` | PASS: 124 documents, 784 local links, zero problems |
+| `pnpm test:docs` | PASS: 124 documents, 786 local links, zero problems |
 | `git diff --cached --check` | PASS: staged whitespace |
 
 Local command logs are retained under `target/issue-38/closeout-20261107/`.
@@ -96,7 +110,8 @@ links; PR CI validates the published branch separately.
 ## Review basis
 
 The requested review point is `38ae2ae`. Independent Standards and Spec
-reviews cover the closeout documentation and CI preparation change with:
+reviews cover the closeout documentation, portable builder page accounting,
+public CLI regression and aligned preparation/build/package paths with:
 
 ```powershell
 $closeoutBase = (git merge-base 38ae2ae HEAD).Trim()
@@ -108,8 +123,10 @@ git log 38ae2ae..HEAD --oneline
 
 PASS: zero documented violations and zero baseline smells. The documentation
 keeps resource admission, native/offline acceptance and formal distribution
-gates separate. The CI change reuses the established preparation command and
-preserves the backend runner's hard 60-second execution limit.
+gates separate. Rollback-only page accounting uses the existing build
+transaction, and preparation, native builds, packaging and fixtures share the
+matching resource directory. The backend runner keeps its hard 60-second
+execution limit.
 
 ## Spec
 
@@ -117,6 +134,9 @@ PASS: zero actionable findings. All 56 stories map to feature and combined
 evidence; resource counts, explicit unknowns, partial English coverage and the
 matching format-6 reader agree with the confirmed specification. The retained
 pre-acceptance snapshots and final user-reported offline pass are distinguished.
+The rebuilt database matches the prior resource and accepted ZIP byte for byte;
+the complete size report is unchanged. The public CLI regression denies
+optional `dbstat` access and verifies the database, report and notices.
 
 Standards: 0 violations, 0 smells, no worst issue. Spec: 0 findings, no worst
 issue. Both reviews were read-only; tests and remote CI were not rerun by the

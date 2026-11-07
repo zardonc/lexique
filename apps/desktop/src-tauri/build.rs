@@ -49,7 +49,7 @@ fn main() {
             "utf8",
             "scripts/conjugation_sample.py",
             "prepare",
-            "target/desktop-conjugation-v6-cli",
+            "target/desktop-conjugation-v6-stats",
         ])
         .current_dir(&root)
         .output()
