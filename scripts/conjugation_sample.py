@@ -310,9 +310,10 @@ def read_resource(database, query=None, lemma=None):
                                         or not isinstance(info["pronominal"].get("base"), str)
                                         or not isinstance(info["pronominal"].get("with_en"), bool)):
                 raise ValueError("Invalid pronominal metadata")
-            if json.loads(meaning) != verb_meanings(headword, info, english):
+            meanings = json.loads(meaning)
+            if meanings != verb_meanings(headword, info, english):
                 raise ValueError("Conjugation English meanings differ from pinned source")
-            information_by_lemma[headword] = (info, json.loads(meaning))
+            information_by_lemma[headword] = (info, meanings)
         cache = {}
         generated = {headword: table_cells(connection, headword, models, construction, cache)
                      for headword in ([] if query is None else candidate_lemmas(connection, normalized, models))}

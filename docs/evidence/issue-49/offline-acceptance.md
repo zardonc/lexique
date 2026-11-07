@@ -3,7 +3,7 @@
 Use the untouched [speech package](../../../target/issue-49/offline-package-20261107/Lexique-0.1.0-windows-x64-portable-speech.zip),
 177,115,811 bytes, with its [transfer checksum](../../../target/issue-49/offline-package-20261107/Lexique-0.1.0-windows-x64-portable-speech.zip.sha256).
 Package identity and included dependencies are recorded in [the inventory](package-inventory.json).
-Fresh network-blocked acceptance is pending your test.
+2026-11-07: the user reported that this package's offline acceptance passed.
 
 ## First launch
 
@@ -49,6 +49,9 @@ For `nous avions lavé`, the three color modes select `avions lavé`, `lavé` an
 
 ## Result
 
-Report pass/fail, Windows/WebView2 versions, how the network was blocked, and any failed query, playback, restart or preservation step. Two local WebView2 process access violations were located at `RTSSHooks64.dll + 0x1490af`; RTSS compatibility remains unresolved. Record any crash observed in your offline run.
+2026-11-07 user result: "offline test passed" for the package identified above.
+The user did not supply Windows/WebView2 versions, the network-block method or
+per-step logs. The result is recorded as user-reported acceptance alongside the
+independent local native evidence. The accepted archive remains unchanged.
 
 This acceptance covers Windows x64 and the admitted reference resource. English coverage is partial. Other-platform execution, missing-dependency clean-machine installation and M5 distribution remain separate gates.

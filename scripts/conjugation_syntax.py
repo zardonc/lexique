@@ -45,7 +45,7 @@ def load_syntax(directory):
             result.update(inherited)
         for form in table.iter("form"):
             result.update(slots(form.attrib.get("tag", "")))
-        return result
+        return sorted(result, key=str)
 
     manual = defaultdict(set)
     for line in (directory / "v_new.mf").read_text(encoding="utf-8").splitlines():
@@ -73,11 +73,11 @@ def load_syntax(directory):
             impersonal = any(c.startswith("%actif_impersonnel") for c in active) and "%actif" not in active
             aux = ["avoir", "être"] if "@être_possible" in flags else ["être"] if "@être" in flags else ["avoir"]
             use = "transitive" if re.search(r"[,<]Obj:", frame) else "indirect_transitive" if re.search(r"[,<]Obj[àde]+:", frame) else "intransitive"
-            defined = manual[lemma] if pattern == "0" else available(pattern)
+            defined = sorted(manual[lemma], key=str) if pattern == "0" else available(pattern)
             entries[lemma].append({"file": name, "line": line_number, "entry": entry, "pattern": pattern,
                                    "frame": frame, "macros": macros, "constructions": constructions,
                                    "ordinary": ordinary, "impersonal": impersonal, "auxiliaries": aux,
-                                   "use": use, "slots": sorted(defined, key=str)})
+                                   "use": use, "slots": defined})
     for frames in entries.values():
         # Prefer current ordinary frames; absence of that use permits older positive evidence.
         ordinary_file = next((e["file"] for e in frames if e["ordinary"]), None)

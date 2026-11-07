@@ -26,3 +26,4 @@ report = {"query": query, "python": sys.version.split()[0], "platform": platform
           "boundary": "six fresh CLI processes including source validation and response serialization; no OS cache flush"}
 output.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
 print(json.dumps(report))
+sys.exit(0 if report["within_budget"] else 1)

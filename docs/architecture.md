@@ -49,6 +49,8 @@ M1 请求由 Rust 严格反序列化，前端请求 / 响应由 Zod 校验。标
 
 #45 在完整生成形式和表达上返回 `coloring`：`verbal`、`main` 与可空的 `ending` 范围按原始文字的 Unicode 字符计数，终点不包含在范围内。Python 与 Rust 使用独立的 `scripts/conjugation_endings.json`，不从压缩模型的 cut／suffix 推断词尾；第三组及未确认组别的所有词尾均为空。Zod 校验范围、表达键及整类排除。资源准备改用 `target/desktop-conjugation-v6-color/`，对应资源和 reader 一起重建，旧目录保留。
 
+2026-11-07 CLI 校验在既有单次加载缓存内复用已排序形态槽，每条释义解析一次，保留全部来源、数据库和释义校验。新准备目录为 `target/desktop-conjugation-v6-cli/`，数据库与 #49 已验收包逐字节相同；此前生成目录与交付包保留。完整时序与边界见 [CLI 延迟验证](evidence/issue-49/cli-latency.md)。
+
 受限 `conjugation_preferences` 命令复用 `RuntimeAdapter` 与现有 SQLite `app_metadata` JSON 偏好，键为 `conjugation-preferences`，只接受 `verbal`／`main`／`ending`。仅配置不存在时使用默认 `ending`；损坏配置、读写和存储失败明确返回错误。前端保存成功才切换模式，读取失败禁用选择并提供重读，浏览器预览显示不保存提示。偏好不提高 schema 17，也不修改词汇、卡片、进度或音频；详见 [#45 证据](evidence/issue-45/README.md)。
 
 #46 的受限 `conjugation_block_order` 命令沿用同一数据库边界，将完整 23 区块代码数组保存到独立的 `app_metadata['conjugation-block-order']`。Rust 反序列化和前端 Zod 均要求每个已约定代码恰好一次；只有偏好不存在时返回默认顺序，非法或损坏设置明确失败。着色的原有 JSON 契约和键保持不变，两项保存互不覆盖，schema 17 不变。前端按已保存顺序排列完整表，不丢弃缺陷动词的不适用区块；七个重点标记绑定时态身份，匹配及着色仍绑定原格与表达。浏览器预览明确不保存，原生重启、重置及故障恢复见 [#46 证据](evidence/issue-46/README.md)。

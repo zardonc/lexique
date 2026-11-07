@@ -1,17 +1,18 @@
-# Fresh Windows conjugation package preparation (#49)
+# Fresh offline Windows conjugation acceptance (#49)
 
-2026-11-07: the prepared Windows x64 speech package passes local fresh launch,
-complete conjugation lookup, expression generation/playback, display restoration,
-dictionary navigation and learning-data preservation. Fresh network-blocked
-acceptance remains the user's next step for [#49](https://github.com/zardonc/lexique/issues/49).
+2026-11-07: the user reported that fresh offline acceptance passed for the
+prepared Windows x64 speech package. Local checks cover fresh launch, complete
+conjugation lookup, expression generation/playback, display restoration,
+dictionary navigation and learning-data preservation for
+[#49](https://github.com/zardonc/lexique/issues/49).
 [#42](https://github.com/zardonc/lexique/issues/42) and
 [#43](https://github.com/zardonc/lexique/issues/43) were checked against their
 committed feature evidence, updated and closed before this preparation.
 
-Use the untouched [ZIP](../../../target/issue-49/offline-package-20261107/Lexique-0.1.0-windows-x64-portable-speech.zip)
-and [offline acceptance guide](offline-acceptance.md). The ZIP and original
-delivery directory have never been launched and contain no `Lexique-data/`.
-Testing used separate copies extracted from the verified ZIP.
+The accepted [ZIP](../../../target/issue-49/offline-package-20261107/Lexique-0.1.0-windows-x64-portable-speech.zip)
+is described in the [offline acceptance guide](offline-acceptance.md). The ZIP
+and original delivery directory remain preserved and contain no `Lexique-data/`.
+Local testing used separate copies extracted from the verified ZIP.
 
 ## Package and resources
 
@@ -74,7 +75,7 @@ output remains in [the task logs](../../../target/issue-49/logs).
 | Final extracted-resource CLI corpus | PASS: 7 existing independent public CLI cases using only the packaged converters and inputs |
 | Native fresh, full, speech and navigation flows | PASS: actual extracted reader/resource, each retaining the hard 60-second limit |
 | `pnpm test:docs`; `node --check apps/desktop/e2e/native-conjugation-check.mjs`; `git diff --cached --check` | PASS: 122 documents, links and syntax/whitespace checks |
-| Fresh network-blocked package acceptance | PENDING: prepared for the user's test |
+| Fresh network-blocked package acceptance | PASS: user reported "offline test passed"; see the recorded result in the acceptance guide |
 
 The [final package CLI results](cli-results.json) cover every ordinary block,
 ambiguity, original query preservation, normalization, present/missing English
@@ -110,6 +111,18 @@ and response serialization, took 1,790.1 ms first, 1,377.7 ms warm median and
 2,811.9 ms warm maximum. The first and maximum CLI samples miss the existing
 1,700 ms evidence budget. These are first/subsequent process measurements;
 OS caches were not flushed.
+
+The [CLI latency follow-up](cli-latency.md) reuses sorted syntax slots in the
+existing per-load cache and parses each verb's meanings once. All source,
+database and meaning checks remain active. The new preparation directory is
+`target/desktop-conjugation-v6-cli/`; its database is byte-identical to this
+accepted package. Six fresh CLI processes subsequently measured 965.0 ms first,
+947.5 ms warm median and 980.1 ms maximum, all within the original 1,700 ms
+budget. The timing command now returns failure on a budget miss while retaining
+the complete measurement report.
+
+The final check against the newly prepared resource also passed all six
+processes: 1,100.1 ms first, 936.2 ms warm median and 1,096.7 ms warm maximum.
 
 ## Reproduction
 
@@ -164,18 +177,20 @@ preparation requirement, scope creep or incorrect implementation identified.
 The harness uses packaged TTS, native playback, empty initial learning data and
 existing preference/navigation/preservation checks. Evidence separately covers
 the full admitted resource, independent CLI expectations, reproducible sources
-and retained format-5 equivalence. The user's offline test remains the final
-acceptance step for the open issue.
+and retained format-5 equivalence. The user has now reported that the package's
+offline acceptance passed.
 
 Standards: 0 findings, no worst issue. Spec: 0 findings, no worst issue.
 
 ## Limitations
 
-Fresh network-blocked acceptance is pending. Local native checks ran on
+The user supplied an offline pass without machine/runtime versions, network
+block details or per-step logs. Local native checks ran on
 Windows 11 Home 10.0.26300 x64 with WebView2 157.0.4341.42 and networking
 available. Two local WebView2 process access violations were located by their
 owned minidumps at `RTSSHooks64.dll + 0x1490af` (`0xC0000005`); RTSS remained
 running, and its existing compatibility limitation is unresolved. The passing
-isolated flows do not establish RTSS compatibility. CLI latency has the budget
-misses recorded above. Other-platform compilation/execution, missing-WebView2
+isolated flows do not establish RTSS compatibility. Original CLI budget misses
+and current passing measurements are retained separately. Other-platform
+compilation/execution, missing-WebView2
 clean-machine setup and M5 formal distribution were not run.

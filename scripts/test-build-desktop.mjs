@@ -12,7 +12,7 @@ function fixture(run) {
   const directory = mkdtempSync(join(tmpdir(), 'lexique-build-'));
   try {
     mkdirSync(join(directory, 'scripts'));
-    for (const name of ['desktop-dictionary-sample', 'desktop-conjugation-v6-color']) {
+    for (const name of ['desktop-dictionary-sample', 'desktop-conjugation-v6-cli']) {
       mkdirSync(join(directory, 'target', name), { recursive: true });
       writeFileSync(join(directory, 'target', name, 'resource.txt'), name);
     }
@@ -35,7 +35,7 @@ test('public pnpm build preserves spaced arguments and sends locked to Cargo', (
   assert.equal(result.status, 0, result.stdout + result.stderr);
   assert.deepEqual(JSON.parse(readFileSync(join(directory, 'received.json'), 'utf8')),
     ['build', '--debug', '--no-bundle', '--config', 'config with spaces.json', '--', '--locked']);
-  assert.equal(readFileSync(join(directory, 'target/debug/conjugation/resource.txt'), 'utf8'), 'desktop-conjugation-v6-color');
+  assert.equal(readFileSync(join(directory, 'target/debug/conjugation/resource.txt'), 'utf8'), 'desktop-conjugation-v6-cli');
 }));
 
 test('CLI failure remains a failed build', () => fixture((directory, cli) => {

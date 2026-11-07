@@ -28,7 +28,7 @@ class PortableTests(unittest.TestCase):
         self.write("target/release/conjugation/conjugation.sqlite3", b"verified conjugation")
         self.write("target/release/conjugation/LICENSE-LGPLLR", b"source forms license")
         self.write("target/release/conjugation/grammalecte-2.3.0/LICENSE-GPL3", b"metadata license")
-        self.write("target/desktop-conjugation-v6-color/report.json", json.dumps({
+        self.write("target/desktop-conjugation-v6-cli/report.json", json.dumps({
             "sqlite_sha256": hashlib.sha256(b"verified conjugation").hexdigest(),
         }).encode())
         self.write("target/desktop-dictionary-sample/report.json", json.dumps({
