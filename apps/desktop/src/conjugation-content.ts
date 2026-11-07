@@ -1,6 +1,6 @@
 const en = {
   label: 'French verb or simple form', search: 'Look up conjugation', loading: 'Looking up…',
-  hint: 'Exact spelling · Try sommes, suis, paie or falloir. Try avons aimé, je suis allée or en ayant aimé. Try se laver, je me lave or elles se sont abstenues.',
+  hint: 'Accents matter; case, apostrophe style and spacing may vary. Try sommes, suis, paie or falloir. Try avons aimé, je suis allée or en ayant aimé. Try se laver, je me lave or elles se sont abstenues.',
   preview: 'Browser preview cannot read bundled conjugation data. Open the desktop app.',
   noMatch: 'No exact source form found.', verbs: 'verbs', matches: 'matching cells', choices: 'Matching verbs',
   choose: 'Choose a verb to open its table.', group: 'Group', irregular: 'irregular', auxiliary: 'Auxiliary',
@@ -27,7 +27,7 @@ const en = {
 };
 const fr: typeof en = {
   label: 'Verbe français ou forme simple', search: 'Chercher la conjugaison', loading: 'Recherche…',
-  hint: 'Graphie exacte · Essayez sommes, suis, paie ou falloir. Essayez avons aimé, je suis allée ou en ayant aimé. Essayez se laver, je me lave ou elles se sont abstenues.',
+  hint: 'Les accents comptent ; majuscules, apostrophes droites ou courbes et espaces sont acceptés. Essayez sommes, suis, paie ou falloir. Essayez avons aimé, je suis allée ou en ayant aimé. Essayez se laver, je me lave ou elles se sont abstenues.',
   preview: 'L’aperçu navigateur ne peut pas lire les conjugaisons intégrées. Ouvrez l’application de bureau.',
   noMatch: 'Aucune forme source exacte trouvée.', verbs: 'verbes', matches: 'cellules correspondantes', choices: 'Verbes correspondants',
   choose: 'Choisissez un verbe pour ouvrir son tableau.', group: 'Groupe', irregular: 'irrégulier', auxiliary: 'Auxiliaire',
@@ -54,7 +54,7 @@ const fr: typeof en = {
 };
 const zh: typeof en = {
   label: '法语动词或简单变位词形', search: '查询变位', loading: '正在查询…',
-  hint: '完全匹配原始拼写 · 可试 sommes、suis、paie、falloir。可试 avons aimé、je suis allée、en ayant aimé。可试 se laver、je me lave、elles se sont abstenues。',
+  hint: '保留重音；大小写、撇号样式和空格差异不影响查询。可试 sommes、suis、paie、falloir。可试 avons aimé、je suis allée、en ayant aimé。可试 se laver、je me lave、elles se sont abstenues。',
   preview: '浏览器预览无法读取内置变位数据，请打开桌面应用。',
   noMatch: '未找到完全匹配的源词形。', verbs: '个动词', matches: '个匹配单元格', choices: '匹配动词',
   choose: '选择动词以打开变位表。', group: '动词组', irregular: '不规则', auxiliary: '助动词',

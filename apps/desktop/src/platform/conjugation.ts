@@ -53,5 +53,13 @@ export function cellKey(cell: ConjugationCell): string {
 }
 
 export function cellMatches(cell: ConjugationCell, query: string): boolean {
-  return cell.form === query || (cell.expressions?.includes(query) ?? false);
+  return expressionMatches(cell.form, query) || (cell.expressions?.some((expression) => expressionMatches(expression, query)) ?? false);
+}
+
+export function expressionMatches(expression: string, query: string): boolean {
+  return normalizeQuery(expression) === normalizeQuery(query);
+}
+
+function normalizeQuery(query: string): string {
+  return query.normalize('NFC').toLowerCase().replaceAll("'", '’').split(/\p{White_Space}+/u).filter(Boolean).join(' ');
 }

@@ -8,6 +8,7 @@ use std::{
 use flate2::read::ZlibDecoder;
 use rusqlite::Connection;
 use serde::{Deserialize, Serialize};
+use unicode_normalization::UnicodeNormalization;
 
 use crate::{DictionaryError, failure, snapshot};
 
@@ -68,8 +69,9 @@ pub fn lookup(path: &Path, key: &str, expected_sha256: &str) -> Result<Lookup, D
         .map_err(|error| failure("corrupt", "Could not read construction forms", error))?;
     let construction: generation::Construction = serde_json::from_str(&construction)
         .map_err(|error| failure("corrupt", "Invalid construction forms", error))?;
+    let normalized = normalize_query(key);
     let mut tables = Vec::new();
-    for base in candidates(&connection, key, &models)? {
+    for base in candidates(&connection, &normalized, &models)? {
         let mut identities = read_identities(&connection, &base)?;
         let position = identities
             .iter()
@@ -103,15 +105,26 @@ pub fn lookup(path: &Path, key: &str, expected_sha256: &str) -> Result<Lookup, D
                 ordinary.h_aspire,
                 &construction,
             )?;
-            append_table(&mut tables, identity, expanded, key)?;
+            append_table(&mut tables, identity, expanded, &normalized)?;
         }
-        append_table(&mut tables, ordinary, cells, key)?;
+        append_table(&mut tables, ordinary, cells, &normalized)?;
     }
     tables.sort_by(|a, b| a.lemma.cmp(&b.lemma));
     Ok(Lookup {
         query: key.to_owned(),
         tables,
     })
+}
+
+fn normalize_query(query: &str) -> String {
+    query
+        .nfc()
+        .collect::<String>()
+        .to_lowercase()
+        .replace('\'', "’")
+        .split_whitespace()
+        .collect::<Vec<_>>()
+        .join(" ")
 }
 
 fn read_models(
@@ -149,11 +162,11 @@ fn candidates(
     key: &str,
     models: &BTreeMap<i64, Vec<generation::Pattern>>,
 ) -> Result<BTreeSet<String>, DictionaryError> {
-    let mut suffixes: HashMap<&str, HashSet<(i64, u32)>> = HashMap::new();
+    let mut suffixes: HashMap<String, HashSet<(i64, u32)>> = HashMap::new();
     for (&model, cells) in models {
         for cell in cells {
             suffixes
-                .entry(&cell.suffix)
+                .entry(normalize_query(&cell.suffix))
                 .or_default()
                 .insert((model, cell.cut));
         }
@@ -304,10 +317,13 @@ fn append_table(
             &identity.lemma,
         ));
     }
-    if cells
-        .iter()
-        .any(|cell| cell.form == key || cell.expressions.iter().any(|expression| expression == key))
-    {
+    if cells.iter().any(|cell| {
+        normalize_query(&cell.form) == key
+            || cell
+                .expressions
+                .iter()
+                .any(|expression| normalize_query(expression) == key)
+    }) {
         cells.sort_by(|a, b| {
             a.tense
                 .cmp(&b.tense)

@@ -1,5 +1,7 @@
 # Desktop simple-form conjugation lookup
 
+The Windows x64 #40 slice is accepted and the issue is closed. All seven acceptance criteria are checked against the browser/native evidence below and the current [Format 6 verification](../conjugation-storage/README.md); #44's native blocking relationship now points to a completed prerequisite.
+
 [Issue #40](https://github.com/zardonc/lexique/issues/40) connects the admitted [#39 resource](../issue-39/README.md) to the desktop through `RuntimeAdapter`. Exact source forms resolve to all matching verbs. One verb opens automatically; ambiguous results retain French-sorted, keyboard-accessible choices after selection. Candidate counts and logical matching-cell counts are separate; each candidate also shows its own matching-cell count. Every matching cell has a checkmark, text label, border and underlined matching expressions, including nonpriority tenses. Spelling alternatives stay together without marking unrelated forms.
 
 Each verb has 23 separate blocks. The seven confirmed priority tenses come first, followed by the remaining mood/tense matrix order. Headers retain group, auxiliary/use metadata and explicit unavailable English meaning. Source absence is unconfirmed, independently of verified ordinary-use inapplicability. Compound/pronominal constructions, h/y subject elision without supporting information, unspecified source identities and raw anomalies remain unconfirmed. The historical second conditional-past name refers to the subjunctive block without duplicating forms.

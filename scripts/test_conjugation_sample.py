@@ -36,6 +36,33 @@ class ConjugationCliTests(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stderr)
         return json.loads(result.stdout)
 
+    def test_case_variations_preserve_every_match_and_query(self):
+        result = self.read("query", "SOMMES")
+        self.assertEqual(result["status"], "found")
+        self.assertEqual(result["query"], "SOMMES")
+        self.assertEqual([table["lemma"] for table in result["tables"]], ["sommer", "être"])
+        self.assertEqual([(cell["lemma"], cell["tense"], cell["person"], cell["number"])
+                          for cell in result["matches"]],
+                         [("sommer", "P", "2", "s"), ("sommer", "S", "2", "s"), ("être", "P", "1", "p")])
+        self.assertTrue(all(cell["form"] == "sommes" for cell in result["matches"]))
+
+    def test_typographic_expressions_preserve_original_forms_and_identities(self):
+        for entered, lemma, expression in (
+                ("\u00a0E\u0302TRE\u202f", "être", "être"),
+                ("  J'AI  AIME\u0301  ", "aimer", "j’ai aimé"),
+                (" QUE  J'AIME ", "aimer", "que j’aime"),
+                (" ELLES\u00a0SE   SONT ABSTENUES ", "s’abstenir", "elles se sont abstenues"),
+                (" VA-T'EN ", "s’en aller", "va-t’en"),
+                (" S'ABSTENIR ", "s’abstenir", "s’abstenir"),
+                ("V’LÀ", "voilà", "v'là")):
+            with self.subTest(query=entered):
+                result = self.read("query", entered)
+                self.assertEqual(result["query"], entered)
+                self.assertEqual([table["lemma"] for table in result["tables"]], [lemma])
+                self.assertTrue(any(expression in cell["expressions"] for cell in result["matches"]))
+                self.assertTrue(any(cell["matched"] and expression in cell["expressions"]
+                                    for cell in result["tables"][0]["cells"]))
+
     def test_compact_resource_reports_shared_models_and_preserves_expressions(self):
         report = json.loads((self.output / "report.json").read_text(encoding="utf-8"))
         self.assertIn("models", report, "Conjugation build must store shared simple-form models")
@@ -434,11 +461,24 @@ class ConjugationCliTests(unittest.TestCase):
         self.assertEqual([c["form"] for c in table if c["tense"] == "P"
                           and c["person"] == "1" and c["number"] == "s"], ["paie", "paye"])
 
-    def test_missing_form_and_exact_spelling(self):
-        for form in ("lexique-inexistant", "SOMMES", "ete", "x' OR 1=1 --"):
+    def test_missing_forms_and_accent_distinctions(self):
+        for form in ("lexique-inexistant", "ete", "x' OR 1=1 --", "  J'AI  AIME  ",
+                     " JE  AVONS AIMÉ ", " JE SE LAVE ", "ELLES SE SONT ABSTENUS", " AIMÉ AVONS "):
             result = self.read("query", form)
             self.assertEqual(result["status"], "not_found")
+            self.assertEqual(result["query"], form)
             self.assertEqual(result["matches"], [])
+
+    def test_invalid_queries_are_rejected_before_resource_lookup(self):
+        for entered in ("", " ", "\u00a0\u202f", "a\n", "a\x7f", "a\u0085", "a" * 513, "é" * 257):
+            with self.subTest(query=entered):
+                result = run_cli("query", self.output / "missing.sqlite3", entered)
+                self.assertNotEqual(result.returncode, 0)
+                self.assertIn("Lookup must", result.stderr)
+        entered = "é" * 256
+        result = self.read("query", entered)
+        self.assertEqual(result["status"], "not_found")
+        self.assertEqual(result["query"], entered)
 
     def test_missing_corrupt_and_truncated_resources_fail(self):
         with tempfile.TemporaryDirectory() as temporary:

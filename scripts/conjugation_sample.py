@@ -12,6 +12,7 @@ import re
 import shutil
 import sqlite3
 import struct
+import unicodedata
 import zlib
 
 from conjugation_generation import SIMPLE, SUBJECTS, generate, source_form
@@ -266,8 +267,9 @@ def verify_equivalence(database, baseline):
 
 
 def read_resource(database, query=None, lemma=None):
-    from conjugation_runtime import candidate_lemmas, load_models, table_cells
+    from conjugation_runtime import candidate_lemmas, load_models, matches_query, normalize_query, table_cells
 
+    normalized = normalize_query(query) if query is not None else None
     uri = Path(database).resolve().as_uri() + "?mode=ro"
     with closing(sqlite3.connect(uri, uri=True)) as connection:
         connection.row_factory = sqlite3.Row
@@ -310,9 +312,9 @@ def read_resource(database, query=None, lemma=None):
             information_by_lemma[headword] = (info, json.loads(meaning))
         cache = {}
         generated = {headword: table_cells(connection, headword, models, construction, cache)
-                     for headword in ([] if query is None else candidate_lemmas(connection, query, models))}
+                     for headword in ([] if query is None else candidate_lemmas(connection, normalized, models))}
         matched = sorted((row for rows in generated.values() for row in rows
-                          if row[1] == query or query in json.loads(row[8])),
+                          if matches_query(row[1], json.loads(row[8]), normalized)),
                          key=lambda row: cell_order(row, (2, 0, 4, 5)))
         matches = [dict(zip(COLUMNS.split(", "), row)) for row in matched]
         for cell in matches:
@@ -326,7 +328,7 @@ def read_resource(database, query=None, lemma=None):
             cells = [dict(zip(COLUMNS.split(", "), row)) for row in sorted(rows, key=lambda row: cell_order(row, (4, 5, 6, 7, 0)))]
             for cell in cells:
                 cell["expressions"] = json.loads(cell["expressions"])
-                cell["matched"] = query is not None and (cell["form"] == query or query in cell["expressions"])
+                cell["matched"] = query is not None and matches_query(cell["form"], cell["expressions"], normalized)
             information = information_by_lemma.get(headword)
             verb = information[0] if information else None
             base = verb.get("pronominal", {}).get("base", headword) if isinstance(verb, dict) else headword
@@ -368,8 +370,8 @@ def main():
                            args.equivalence_baseline)
         else:
             value = args.form if args.command == "query" else args.lemma
-            if not value or any(ord(c) < 32 for c in value):
-                raise ValueError("Lookup must be nonempty and contain no control characters")
+            if not value.strip() or len(value.encode("utf-8")) > 512 or any(unicodedata.category(c) == "Cc" for c in value):
+                raise ValueError("Lookup must contain 1–512 UTF-8 bytes without control characters")
             result = read_resource(args.database, query=value if args.command == "query" else None,
                                    lemma=value if args.command == "table" else None)
     except (OSError, ValueError, sqlite3.Error, EOFError, zlib.error) as error:

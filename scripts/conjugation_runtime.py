@@ -2,10 +2,19 @@
 
 import json
 import struct
+import unicodedata
 import zlib
 
 from conjugation_generation import BLOCKS, COMPOUND, SIMPLE, SUBJECTS, expressions, ordinary_constructions, query_base
 from conjugation_pronominal import pronominal_cells
+
+
+def normalize_query(query):
+    return " ".join(unicodedata.normalize("NFC", query).lower().replace("'", "’").split())
+
+
+def matches_query(form, expressions, query):
+    return any(normalize_query(expression) == query for expression in (form, *expressions))
 
 
 def load_models(connection):
@@ -45,7 +54,7 @@ def candidate_lemmas(connection, query, models):
     compatible = set()
     model_cuts = {}
     for model, cells in models.items():
-        suffixes = {(cell[0], cell[1]) for cell in cells}
+        suffixes = {(cell[0], normalize_query(cell[1])) for cell in cells}
         model_cuts[model] = {cut for cut, _ in suffixes}
         for cut, suffix in suffixes:
             for probe in probes:

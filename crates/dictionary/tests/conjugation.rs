@@ -5,7 +5,7 @@ use sha2::{Digest, Sha256};
 
 fn resource() -> (PathBuf, String) {
     let directory =
-        PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("../../target/desktop-conjugation-v6");
+        PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("../../target/desktop-conjugation-v6-query");
     let report: serde_json::Value =
         serde_json::from_slice(&std::fs::read(directory.join("report.json")).unwrap()).unwrap();
     (
@@ -318,6 +318,84 @@ fn pronominal_constructions_preserve_agreement_restrictions_and_elision() {
 }
 
 #[test]
+fn normalized_queries_preserve_identities_forms_and_whole_expression_matches() {
+    let result = query(" SOMMES ");
+    assert_eq!(result.query, " SOMMES ");
+    assert_eq!(
+        result
+            .tables
+            .iter()
+            .map(|table| table.lemma.as_str())
+            .collect::<Vec<_>>(),
+        ["sommer", "être"]
+    );
+    assert_eq!(matched(table(&result, "sommer"), "sommes").len(), 2);
+    assert_eq!(matched(table(&result, "être"), "sommes").len(), 1);
+    let result = query(" ABSTENUES ");
+    assert_eq!(
+        result
+            .tables
+            .iter()
+            .map(|table| table.lemma.as_str())
+            .collect::<Vec<_>>(),
+        ["abstenir", "s’abstenir"]
+    );
+    for (entered, lemma, expression) in [
+        ("\u{a0}E\u{302}TRE\u{202f}", "être", "être"),
+        (" E\u{301}TE\u{301} ", "être", "été"),
+        ("  J'AI  AIME\u{301}  ", "aimer", "j’ai aimé"),
+        (" QUE  J'AIME ", "aimer", "que j’aime"),
+        (
+            " ELLES\u{a0}SE   SONT ABSTENUES ",
+            "s’abstenir",
+            "elles se sont abstenues",
+        ),
+        (" VA-T'EN ", "s’en aller", "va-t’en"),
+        (" S'ABSTENIR ", "s’abstenir", "s’abstenir"),
+        ("V’LÀ", "voilà", "v'là"),
+    ] {
+        let result = query(entered);
+        assert_eq!(result.query, entered);
+        assert_eq!(
+            result
+                .tables
+                .iter()
+                .map(|table| table.lemma.as_str())
+                .collect::<Vec<_>>(),
+            [lemma],
+            "{entered}"
+        );
+        assert!(
+            matched(&result.tables[0], expression)
+                .iter()
+                .any(|cell| { cell.expressions.iter().any(|value| value == expression) }),
+            "{entered}"
+        );
+    }
+    let result = query(" J'AI PU ");
+    assert_eq!(
+        result
+            .tables
+            .iter()
+            .map(|table| table.lemma.as_str())
+            .collect::<Vec<_>>(),
+        ["paître", "pouvoir"]
+    );
+    for entered in [
+        "ETE",
+        " J'AI AIME ",
+        " JE AVONS AIMÉ ",
+        " JE SE LAVE ",
+        "ELLES SE SONT ABSTENUS",
+        " AIMÉ AVONS ",
+    ] {
+        let result = query(entered);
+        assert_eq!(result.query, entered);
+        assert!(result.tables.is_empty(), "{entered}");
+    }
+}
+
+#[test]
 fn missing_corrupt_and_unsupported_resources_fail_without_writes() {
     let (source, expected) = resource();
     let directory = source
@@ -330,7 +408,16 @@ fn missing_corrupt_and_unsupported_resources_fail_without_writes() {
         lookup(&path, "aimer", &expected).unwrap_err().code,
         "missing"
     );
-    for key in ["", " ", "a\n", &"a".repeat(513)] {
+    for key in [
+        "",
+        " ",
+        "\u{a0}\u{202f}",
+        "a\n",
+        "a\u{7f}",
+        "a\u{85}",
+        &"a".repeat(513),
+        &"é".repeat(257),
+    ] {
         assert_eq!(
             lookup(&path, key, &expected).unwrap_err().code,
             "invalid_query"

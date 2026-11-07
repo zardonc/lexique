@@ -70,11 +70,13 @@ Windows x64 语音开发小样可在构建后运行 `python -X utf8 scripts/pack
 
 资源独立入口：`pnpm resources:build target/dictionary-sample`、`pnpm resources:query target/dictionary-sample/dictionary.sqlite3 "œil"`、`pnpm test:resources`。源包和许可已随仓库保存，生成及查询无需联网；`build` 输出目录必须是新目录。原生构建自动准备 `target/desktop-dictionary-sample`，复用前验证内容；损坏时直接失败，人工检查后移走该生成目录再重建。可先运行 `pnpm resources:prepare`。来源、覆盖缺项、只读查询契约和体积见 [FreeDict 小样记录](resources/freedict-fra-zho-2025.11.23/README.md)。
 
-变位资源入口：`pnpm conjugation:build target/conjugation-sample`、`pnpm conjugation:query target/conjugation-sample/conjugation.sqlite3 sommes`、`pnpm conjugation:table target/conjugation-sample/conjugation.sqlite3 falloir`、`pnpm test:conjugation`。固定 Lefff 3.4 词形及句法（LGPL-LR）、Grammalecte 2.3.0 元数据（GPL-3.0-only）和 RosaeNLG 省音资料（CC BY-SA 3.0）随仓库保存。原生构建自动准备格式 6 的 `target/desktop-conjugation-v6`，或先运行 `pnpm conjugation:prepare`；已有生成物须通过完整性及转换器版本检查，失败则保留原物，使用新目录重建。构建入口把两种资源放到可执行文件旁，portable 保留原始源、许可、纠正资料和七份转换源码；用户学习数据不参与资源准备。共享简单变位模型与运行时表达构造将数据库缩为 10.46 MiB；存储契约及格式 5 的全量等价检查见[变位存储](docs/conjugation-storage.md)。
+变位资源入口：`pnpm conjugation:build target/conjugation-sample`、`pnpm conjugation:query target/conjugation-sample/conjugation.sqlite3 sommes`、`pnpm conjugation:table target/conjugation-sample/conjugation.sqlite3 falloir`、`pnpm test:conjugation`。固定 Lefff 3.4 词形及句法（LGPL-LR）、Grammalecte 2.3.0 元数据（GPL-3.0-only）和 RosaeNLG 省音资料（CC BY-SA 3.0）随仓库保存。原生构建自动准备格式 6 的 `target/desktop-conjugation-v6-query`，或先运行 `pnpm conjugation:prepare`；已有生成物须通过完整性及转换器版本检查，失败则保留原物，使用新目录重建。构建入口把两种资源放到可执行文件旁，portable 保留原始源、许可、纠正资料和七份转换源码；用户学习数据不参与资源准备。共享简单变位模型与运行时表达构造将数据库缩为 10.46 MiB；存储契约及格式 5 的全量等价检查见[变位存储](docs/conjugation-storage.md)。
 
 #43 准入 2,955 个独立代词式身份，支持 `se laver`、`je me lave`、`elles se sont abstenues`、`va-t’en` 等完整表达及适用的 23 区块。普通用法、代词用法、依语境配合和不变分词分别展示；性数备选保持可单独匹配，不推测缺少的宾语。来源、覆盖、实际 Windows 检查及成本见 [#43 证据](docs/evidence/issue-43/README.md)。
 
 桌面「动词变位」现可精确查询简单词形、选择所有候选、查看 23 个独立区块并辨认全部匹配格。可试 `sommes`、`suis`、`paie`、`falloir`。七个重点时态排在最前，未确认的结构和缺少词形明确标注；浏览器预览不模拟本机资源。普通复合／非限定表达覆盖全部已准入普通动词，23 区块报告无缺失或未确认状态；缺陷、代词专用及罕见／历史用法单独标明。可试 `avons aimé`、`je suis allée`、`en ayant aimé`、`j’habite`、`j’occirai`；来源策略、Windows 验证及首进程 CLI 延迟超预算见 [#41 证据](docs/evidence/issue-41/README.md)。英文释义已以独立字段接入词头和候选项：固定 FreeDict fra-eng 0.4.1（GPL-2.0-or-later），覆盖 1,377 个身份，其余显示暂缺；来源用法与代词式义项分别标明，见 [#42 证据](docs/evidence/issue-42/README.md)。代词式生成、着色及变位朗读仍属后续工单。来源与覆盖见 [#39 验证](docs/evidence/issue-39/README.md)，桌面与 Windows 原生检查见 [#40 验证](docs/evidence/issue-40/README.md)。
+
+CLI 与桌面变位查询接受大小写、Unicode 等价写法、直／弯撇号及首尾／重复空白差异，保留重音、原始显示拼写、完整表达匹配和全部解释。可试 `SOMMES`、` J'AI  AIMÉ `、` VA-T'EN `；实现与 Windows 原生验证见 [#44 证据](docs/evidence/issue-44/README.md)。
 
 2026-11-05，#39 在同一 CLI 加入固定 Grammalecte 2.3.0 的传统组别、普通主动式助动词与用法元数据，保留原始标记、纠正依据及未知／不适用状态；构建报告列出全资源覆盖。数据许可分别为 Lefff 的 LGPL-LR 与元数据的 GPL-3.0-only，许可、源数据和转换材料随资源保留。新生成资源格式为 2；旧小样保持原样，使用新输出目录重新构建。查询须保留数据库旁的 `grammalecte-2.3.0/` 目录。见 [#39 证据与限制](docs/evidence/issue-39/README.md)。
 

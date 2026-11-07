@@ -9,7 +9,7 @@ import { setTimeout as delay } from 'node:timers/promises';
 import assert from 'node:assert/strict';
 
 const [resources, binary, data, destination] = process.argv.slice(2).map((path) => resolve(path));
-assert.ok(['issue-40', 'issue-41', 'issue-42', 'issue-43', 'conjugation-refactor'].some((issue) => destination.startsWith(resolve('../../target/' + issue) + '\\')));
+assert.ok(['issue-40', 'issue-41', 'issue-42', 'issue-43', 'issue-44', 'conjugation-refactor'].some((issue) => destination.startsWith(resolve('../../target/' + issue) + '\\')));
 await mkdir(destination);
 for (const name of ['dictionary', 'conjugation']) await cp(join(resources, name), join(destination, name), { recursive: true });
 await cp(binary, join(destination, 'Lexique.exe'));
@@ -68,7 +68,7 @@ async function check(page) {
   assert.equal(results.suis.tables.flatMap((table) => table.cells.filter((cell) => cell.form === 'suis')).length, 4);
   const payer = results.paie.tables[0];
   assert.deepEqual(payer.cells.filter((cell) => cell.tense === 'P' && cell.person === '1' && cell.number === 's').map((cell) => cell.form), ['paie', 'paye']);
-  assert.equal(results['SOMMES'].tables.length, 0);
+  assert.deepEqual(results['SOMMES'].tables, results.sommes.tables);
   assert.equal(results["' OR 1=1 --"].tables.length, 0);
   await page.getByRole('button', { name: '动词变位', exact: true }).click();
   await page.getByLabel('法语动词或简单变位词形').fill('suis'); await page.getByRole('button', { name: '查询变位', exact: true }).click();
@@ -133,6 +133,40 @@ async function check(page) {
     }
     if (query === 'elles se sont parlé') await expect(page.locator('[data-tense=PC]')).not.toContainText('parlées');
   }
+  for (const [query, lemmas, expression, count] of [
+    [' SOMMES ', ['sommer', 'être'], 'sommes', 2],
+    [' ABSTENUES ', ['abstenir', 's’abstenir'], 'abstenues', 1],
+    ['\u00a0E\u0302TRE\u202f', ['être'], 'être', 1],
+    ["  J'AI  ABE\u0301LISE\u0301  ", ['abéliser'], 'j’ai abélisé', 1],
+    [" QUE  J'AIME ", ['aimer'], 'que j’aime', 1],
+    [' ELLES\u00a0SE  SONT ABSTENUES ', ['s’abstenir'], 'elles se sont abstenues', 1],
+    [" VA-T'EN ", ['s’en aller'], 'va-t’en', 1],
+    [" S'ABSTENIR ", ['s’abstenir'], 's’abstenir', 1],
+    ['V’LÀ', ['voilà'], "v'là", 1],
+  ]) {
+    const result = await page.evaluate((key) => window.__TAURI_INTERNALS__.invoke('conjugation_lookup', { key }), query);
+    results[query] = result;
+    assert.equal(result.query, query);
+    assert.deepEqual(result.tables.map((table) => table.lemma), lemmas);
+    await page.getByLabel('法语动词或简单变位词形').fill(query);
+    await page.getByRole('button', { name: '查询变位', exact: true }).click();
+    await expect(page.getByLabel('法语动词或简单变位词形')).toHaveValue(query);
+    if (lemmas.length > 1) await page.getByRole('button', { name: new RegExp(`^${lemmas[0]}`, 'u') }).click();
+    await expect(page.locator('.conjugation-table h3')).toHaveText(lemmas[0]);
+    await expect(page.locator('.conjugation-cell[data-matched=true]')).toHaveCount(count);
+    if (/[ ’']/u.test(expression)) await expect(page.locator('.conjugation-expression[data-matched=true]')).toHaveText([expression]);
+  }
+  await page.screenshot({ path: join(destination, 'typographic.png') });
+  for (const query of ['ETE', " J'AI AIME ", ' JE AVONS AIMÉ ', ' JE SE LAVE ', 'ELLES SE SONT ABSTENUS', ' AIMÉ AVONS ']) {
+    const result = await page.evaluate((key) => window.__TAURI_INTERNALS__.invoke('conjugation_lookup', { key }), query);
+    results[query] = result;
+    assert.equal(result.query, query); assert.equal(result.tables.length, 0);
+    await page.getByLabel('法语动词或简单变位词形').fill(query);
+    await page.getByRole('button', { name: '查询变位', exact: true }).click();
+    await expect(page.getByLabel('法语动词或简单变位词形')).toHaveValue(query);
+    await expect(page.locator('.conjugation').getByRole('status')).toBeVisible();
+    await expect(page.locator('.conjugation-table')).toHaveCount(0);
+  }
   await page.getByLabel('法语动词或简单变位词形').fill('suis');
   await page.getByRole('button', { name: '查询变位', exact: true }).click();
   await failures(page);
@@ -141,25 +175,30 @@ async function check(page) {
   return { before, audio, results, timings };
 }
 async function failures(page) {
+  const query = '  SUIS  ';
+  await page.getByLabel('法语动词或简单变位词形').fill(query);
   const database = join(destination, 'conjugation/conjugation.sqlite3'), saved = database + '.saved';
   await rename(database, saved);
   try {
-    const error = await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('conjugation_lookup', { key: 'suis' }).catch((error) => error));
+    const error = await page.evaluate((key) => window.__TAURI_INTERNALS__.invoke('conjugation_lookup', { key }).catch((error) => error), query);
     assert.equal(error.code, 'missing');
     await page.getByRole('button', { name: '查询变位', exact: true }).click();
     await expect(page.locator('.conjugation')).toContainText('内置变位资源不存在');
-    await expect(page.getByLabel('法语动词或简单变位词形')).toHaveValue('suis');
+    await expect(page.getByLabel('法语动词或简单变位词形')).toHaveValue(query);
     await writeFile(database, 'invalid SQLite');
     try {
-      const corrupt = await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('conjugation_lookup', { key: 'suis' }).catch((error) => error));
+      const corrupt = await page.evaluate((key) => window.__TAURI_INTERNALS__.invoke('conjugation_lookup', { key }).catch((error) => error), query);
       assert.equal(corrupt.code, 'corrupt');
       await page.getByRole('button', { name: '查询变位', exact: true }).click();
       await expect(page.locator('.conjugation')).toContainText('内置变位资源已损坏');
     } finally { await unlink(database); }
     await mkdir(database);
     try {
-      const failed = await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('conjugation_lookup', { key: 'suis' }).catch((error) => error));
+      const failed = await page.evaluate((key) => window.__TAURI_INTERNALS__.invoke('conjugation_lookup', { key }).catch((error) => error), query);
       assert.equal(failed.code, 'query_failed');
+      await page.getByRole('button', { name: '查询变位', exact: true }).click();
+      await expect(page.locator('.conjugation').getByRole('alert')).toBeVisible();
+      await expect(page.getByLabel('法语动词或简单变位词形')).toHaveValue(query);
     } finally { await rmdir(database); }
   } finally { await rename(saved, database); }
 }
@@ -190,9 +229,13 @@ try {
   assert.notEqual(child.exitCode, null, 'Normal close must terminate the application');
   await browser.close(); browser = undefined;
   const restarted = await start();
+  const restartedQuery = " VA-T'EN ";
+  const restartedResult = await restarted.evaluate((key) => window.__TAURI_INTERNALS__.invoke('conjugation_lookup', { key }), restartedQuery);
+  assert.equal(restartedResult.query, restartedQuery);
+  assert.deepEqual(restartedResult.tables.map((table) => table.lemma), ['s’en aller']);
   assert.deepEqual(await snapshot(restarted), before);
   assert.deepEqual(await hashes(join(destination, 'Lexique-data/temp/speech')), audio);
-  await writeFile(join(destination, 'report.json'), JSON.stringify({ status: 'PASS', restart: true, results, timings,
+  await writeFile(join(destination, 'report.json'), JSON.stringify({ status: 'PASS', restart: true, normalized_restart: true, results, timings,
     preserved: { records: before.records.length, cards: before.cards.flat().length, audioFiles: Object.keys(audio).length } }, null, 2));
   console.log('Native conjugation check: PASS');
 } finally {

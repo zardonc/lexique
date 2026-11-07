@@ -3,6 +3,53 @@ import fixtures from './fixtures/conjugation.json' with { type: 'json' };
 import ordinary from './fixtures/conjugation-ordinary.json' with { type: 'json' };
 import pronominal from './fixtures/conjugation-pronominal.json' with { type: 'json' };
 
+test('typographic queries retain interpretations, entered text and original expression highlights', async ({ page }) => {
+  const compound = "  J'AI  ABE\u0301LISE\u0301  ";
+  const reflexive = ' ELLES\u00a0SE  SONT ABSTENUES ';
+  await page.addInitScript((data) => {
+    Object.defineProperty(window, 'isTauri', { value: true });
+    Object.defineProperty(window, '__TAURI_INTERNALS__', { value: { invoke: async (command: string, args?: { key: string }) => {
+      if (command === 'runtime_status') return { version: '0.1.0', schemaVersion: 1, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } };
+      if (command !== 'conjugation_lookup') return null;
+      if (args?.key === '  SUIS  ') throw { code: 'corrupt', message: 'Conjugation resource is corrupt' };
+      return data[args?.key as keyof typeof data] ?? { query: args?.key, tables: [] };
+    } } });
+  }, {
+    SOMMES: { ...fixtures.sommes, query: 'SOMMES' },
+    [compound]: { ...ordinary['j’ai abélisé'], query: compound },
+    [reflexive]: { ...pronominal['elles se sont abstenues'], query: reflexive },
+    " VA-T'EN ": { ...pronominal['va-t’en'], query: " VA-T'EN " },
+  });
+  await page.goto('/'); await page.getByLabel('界面语言').selectOption('en');
+  await page.getByRole('button', { name: 'Conjugation', exact: true }).click();
+  const input = page.getByLabel('French verb or simple form');
+  await input.fill('SOMMES'); await input.press('Enter');
+  await expect(input).toHaveValue('SOMMES');
+  await expect(page.getByRole('status')).toHaveText('2 verbs · 3 matching cells');
+  await expect(page.locator('.conjugation-choices strong')).toHaveText(['être', 'sommer']);
+  await page.getByRole('button', { name: /^sommer/ }).click();
+  await expect(page.locator('.conjugation-cell[data-matched=true]')).toHaveCount(2);
+  for (const code of ['P', 'S']) await expect(page.locator(`[data-tense=${code}] .conjugation-expression[data-matched=true]`)).toHaveCount(1);
+  for (const [entered, lemma, expression] of [
+    [compound, 'abéliser', 'j’ai abélisé'], [reflexive, 's’abstenir', 'elles se sont abstenues'],
+    [" VA-T'EN ", 's’en aller', 'va-t’en'],
+  ] as const) {
+    await input.fill(entered); await input.press('Enter');
+    await expect(input).toHaveValue(entered);
+    await expect(page.locator('.conjugation-table h3')).toHaveText(lemma);
+    await expect(page.locator('.conjugation-expression[data-matched=true]')).toHaveText([expression]);
+  }
+  for (const entered of ['ETE', ' JE  AVONS AIMÉ ']) {
+    await input.fill(entered); await input.press('Enter');
+    await expect(input).toHaveValue(entered);
+    await expect(page.getByRole('status')).toHaveText('No exact source form found.');
+    await expect(page.locator('.conjugation-table')).toHaveCount(0);
+  }
+  await input.fill('  SUIS  '); await input.press('Enter');
+  await expect(page.locator('.conjugation').getByRole('alert')).toContainText('Bundled conjugation resource is corrupt.');
+  await expect(input).toHaveValue('  SUIS  ');
+});
+
 test('pronominal expressions retain their identity, agreement labels and every alternative', async ({ page }) => {
   await page.addInitScript((data) => {
     Object.defineProperty(window, 'isTauri', { value: true });

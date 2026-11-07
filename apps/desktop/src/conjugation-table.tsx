@@ -1,4 +1,4 @@
-import { cellKey, cellMatches } from './platform/conjugation';
+import { cellKey, cellMatches, expressionMatches } from './platform/conjugation';
 import type { ConjugationCell, ConjugationTable } from './platform/conjugation';
 import { conjugationUse, type ConjugationText } from './conjugation-content';
 
@@ -52,7 +52,7 @@ function SourceCell({ cells, query, text, raw, impersonal = false }: {
       {cell.raw_tag.startsWith('ordinary/v1/') && cell.raw_tag.split('/')[2] !== 'gerund' && <small>{conjugationUse(text, cell.raw_tag.split('/').slice(3).join('/'))}</small>}
       {cell.raw_tag.startsWith('reference/') && <small>{conjugationUse(text, cell.raw_tag.slice(10))}</small>}
       {(raw || elision ? [cell.form] : expressions(cell, impersonal)).map((expression) => <span className="conjugation-expression" lang="fr"
-        key={expression} data-matched={cell.form === query || expression === query}>{expression}</span>)}
+        key={expression} data-matched={expressionMatches(cell.form, query) || expressionMatches(expression, query)}>{expression}</span>)}
     </div>)}
   </div>;
 }
