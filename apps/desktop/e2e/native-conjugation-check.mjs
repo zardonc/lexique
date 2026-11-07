@@ -1,4 +1,4 @@
-/* global process, window, fetch, setTimeout, clearTimeout, console, performance */
+/* global process, window, fetch, setTimeout, clearTimeout, console, performance, HTMLMediaElement, URL */
 import { chromium, expect } from '@playwright/test';
 import { spawn, spawnSync } from 'node:child_process';
 import { cp, mkdir, readFile, writeFile, rename, readdir, unlink, rmdir } from 'node:fs/promises';
@@ -10,13 +10,15 @@ import assert from 'node:assert/strict';
 
 const [resources, binary, data, destination] = process.argv.slice(2, 6).map((path) => resolve(path));
 const navigationOnly = process.argv[6] === '--navigation';
-assert.ok(process.argv.length === 6 || (process.argv.length === 7 && navigationOnly), 'Four paths and optional --navigation are required');
-assert.ok(['issue-40', 'issue-41', 'issue-42', 'issue-43', 'issue-44', 'issue-45', 'issue-46', 'issue-47', 'conjugation-refactor'].some((issue) => destination.startsWith(resolve('../../target/' + issue) + '\\')));
+const speechOnly = process.argv[6] === '--speech';
+assert.ok(process.argv.length === 6 || (process.argv.length === 7 && (navigationOnly || speechOnly)), 'Four paths and optional --navigation or --speech are required');
+assert.ok(['issue-40', 'issue-41', 'issue-42', 'issue-43', 'issue-44', 'issue-45', 'issue-46', 'issue-47', 'issue-48', 'conjugation-refactor'].some((issue) => destination.startsWith(resolve('../../target/' + issue) + '\\')));
 const defaultOrder = ['P', 'PC', 'I', 'F', 'C', 'S', 'PQP', 'J', 'PA', 'FA', 'CP', 'SP', 'T', 'SQP', 'Y', 'YP', 'W', 'WP', 'G', 'K', 'KP', 'GP', 'GPP'];
 await mkdir(destination);
 for (const name of ['dictionary', 'conjugation']) await cp(join(resources, name), join(destination, name), { recursive: true });
 await cp(binary, join(destination, 'Lexique.exe'));
 for (const name of ['data', 'temp/speech']) await cp(join(data, name), join(destination, 'Lexique-data', name), { recursive: true });
+if (speechOnly) await cp(resolve(data, '../speech'), join(destination, 'speech'), { recursive: true });
 const server = createServer(); await new Promise((done) => server.listen(0, '127.0.0.1', done));
 const port = server.address().port; await new Promise((done) => server.close(done));
 let child, browser;
@@ -302,10 +304,11 @@ async function checkColoring(page) {
   await page.screenshot({ path: join(destination, 'coloring.png') });
   return checks;
 }
-function preferenceSql(source) {
+function preferenceSql(source, ...parameters) {
   const result = spawnSync('python', ['-X', 'utf8', '-c', `import sqlite3,sys,json\nc=sqlite3.connect(sys.argv[1])\n${source}\nc.commit()`,
-    join(destination, 'Lexique-data/data/lexique.sqlite3')], { windowsHide: true, encoding: 'utf8', timeout: 5000 });
+    join(destination, 'Lexique-data/data/lexique.sqlite3'), ...parameters], { windowsHide: true, encoding: 'utf8', timeout: 5000 });
   assert.equal(result.status, 0, result.stderr);
+  return result.stdout;
 }
 async function preferenceFailures(page) {
   const controls = page.locator('.conjugation-coloring');
@@ -549,9 +552,129 @@ async function navigationAcceptance(page) {
   }, null, 2));
   console.log('Native dictionary–conjugation navigation: PASS');
 }
+async function trackExpressionSpeech(page) {
+  await page.evaluate(() => {
+    const players = [], copies = new Map(), create = URL.createObjectURL;
+    Reflect.set(window, 'expressionPlayers', players);
+    URL.createObjectURL = function (blob) {
+      const url = create.call(URL, blob); copies.set(url, blob.arrayBuffer().then((buffer) => [...new Uint8Array(buffer)])); return url;
+    };
+    const play = HTMLMediaElement.prototype.play;
+    HTMLMediaElement.prototype.play = function () {
+      this.loop = true;
+      players.push({ element: this, bytes: copies.get(this.src) });
+      return play.call(this);
+    };
+  });
+}
+function expressionAsset(text, voice = 'female') {
+  return JSON.parse(preferenceSql(`row=c.execute("SELECT a.spec,v.generated_at,v.expires_at,v.locator,v.byte_length FROM speech_assets a JOIN speech_versions v ON v.locator=a.current_version WHERE json_extract(a.spec,'$.text')=? AND json_extract(a.spec,'$.voice')=?",sys.argv[2:]).fetchone()
+print(json.dumps(dict(spec=json.loads(row[0]),generatedAt=row[1],expiresAt=row[2],version=row[3],bytes=row[4]) if row else None))`, text, voice));
+}
+async function playNativeExpression(page, expression, rate = 1) {
+  const expected = await page.evaluate(() => Reflect.get(window, 'expressionPlayers').length);
+  const preferences = await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('speech_preferences', { preferences: null }));
+  const play = page.getByRole('button', { name: `Play expression: ${expression} (Machine-generated speech)`, exact: true }).first();
+  await play.focus(); await play.press('Space');
+  await expect.poll(() => page.evaluate((index) => Reflect.get(window, 'expressionPlayers')[index]?.element.currentTime ?? 0, expected), { timeout: 20_000 }).toBeGreaterThan(0);
+  const result = await page.evaluate(async (index) => {
+    const player = Reflect.get(window, 'expressionPlayers')[index], bytes = await player.bytes;
+    return { bytes: bytes.length, ogg: bytes.slice(0, 4), rate: player.element.playbackRate, currentTime: player.element.currentTime };
+  }, expected);
+  const asset = expressionAsset(expression, preferences.voice); assert.ok(asset);
+  assert.equal(asset.spec.text, expression); assert.equal(asset.bytes, result.bytes); assert.deepEqual(result.ogg, [79, 103, 103, 83]);
+  assert.ok(result.bytes > 128 && result.currentTime > 0); assert.equal(result.rate, rate);
+  await expect(play).toBeEnabled();
+  if (expected > 0) assert.equal(await page.evaluate((index) => Reflect.get(window, 'expressionPlayers')[index - 1].element.paused, expected), true, 'Choosing another expression must pause the previous clip');
+  return { text: asset.spec.text, voice: asset.spec.voice, version: asset.version, ...result };
+}
+function expressionSelections() {
+  return JSON.parse(preferenceSql('print(json.dumps(c.execute("SELECT vocabulary_id,current_version,previous_version,previous_until,current_generation FROM word_audio_selections ORDER BY vocabulary_id").fetchall()))'));
+}
+async function expressionAlternatives(page) {
+  const played = [], displayed = [];
+  for (const [query, expressions] of [['paie', ['je paie', 'je paye']], ['je suis allée', ['je suis allé', 'je suis allée']],
+    ['je me lave', ['je me lave', 'lave-toi']], ['elles se sont abstenues', ['elles se sont abstenues']], ['va-t’en', ['va-t’en']]]) {
+    await conjugationSearch(page, query);
+    const source = await page.evaluate((key) => window.__TAURI_INTERNALS__.invoke('conjugation_lookup', { key }), query);
+    const texts = await page.locator('.conjugation-expression').allTextContents();
+    assert.ok(texts.length && texts.every((text) => text.trim() && [...text.normalize('NFC')].length <= 200 && !/[\p{Cc}/]/u.test(text)), 'Every displayed expression must fit the speech input boundary without slash notation');
+    await expect(page.locator('.conjugation-expression button')).toHaveCount(texts.length); displayed.push({ query, count: texts.length, maxCharacters: Math.max(...texts.map((text) => [...text.normalize('NFC')].length)) });
+    for (const expression of expressions) {
+      assert.ok(source.tables.some((table) => table.cells.some((cell) => cell.form === expression || cell.expressions?.includes(expression))), 'Expected speech text must be source backed');
+      played.push(await playNativeExpression(page, expression));
+    }
+  }
+  return { played, displayed };
+}
+async function expressionResourceRecovery(page) {
+  const speech = join(destination, 'speech'), saved = join(destination, 'speech-unavailable');
+  await close(page); await rename(speech, saved);
+  try {
+    page = await start(); await trackExpressionSpeech(page); await page.getByLabel('界面语言').selectOption('en');
+    await conjugationSearch(page, 'en ayant parlé');
+    const play = page.getByRole('button', { name: 'Play expression: en ayant parlé (Machine-generated speech)', exact: true });
+    await play.click(); await expect(page.locator('.conjugation').getByRole('alert')).toBeVisible(); await expect(play).toBeEnabled();
+    assert.equal(await page.evaluate(() => Reflect.get(window, 'expressionPlayers').length), 0);
+    const failure = await page.locator('.conjugation').getByRole('alert').textContent(); assert.ok(failure);
+    assert.ok((await readFile(join(destination, 'Lexique-data/logs/speech-cache.log'), 'utf8')).length);
+    await page.screenshot({ path: join(destination, 'expression-speech-unavailable.png') }); await close(page);
+  } finally { await rename(saved, speech); }
+  page = await start(); await trackExpressionSpeech(page); await page.getByLabel('界面语言').selectOption('en');
+  await conjugationSearch(page, 'en ayant parlé');
+  const recovered = await playNativeExpression(page, 'en ayant parlé');
+  await expect(page.locator('.conjugation').getByRole('alert')).toHaveCount(0);
+  return { page, recovered };
+}
+function expressionRetention(texts) {
+  const result = JSON.parse(preferenceSql(`texts=${JSON.stringify(texts)}
+rows=c.execute("SELECT a.spec,v.generated_at,v.expires_at,v.owned,v.publishing,v.gc_state FROM speech_assets a JOIN audio_version_protection v ON v.locator=a.current_version WHERE json_extract(a.spec,'$.text') IN ("+','.join('?' for _ in texts)+")",texts).fetchall()
+print(json.dumps([dict(spec=json.loads(row[0]),generatedAt=row[1],expiresAt=row[2],owned=row[3],publishing=row[4],gcState=row[5]) for row in rows]))`));
+  assert.ok(result.length >= texts.length);
+  for (const row of result) { assert.equal(row.expiresAt, row.generatedAt + 604800); assert.equal(row.owned, 0); assert.equal(row.publishing, 0); assert.equal(row.gcState, 'live'); }
+  assert.ok(result.some((row) => row.spec.voice === 'male') && result.some((row) => row.spec.voice === 'female'));
+  assert.ok(result.every((row) => row.spec.speed === 1 && row.spec.bitrate === 48000));
+  return result;
+}
+async function speechAcceptance(page) {
+  const before = await snapshot(page), selections = expressionSelections(), audio = await hashes(join(destination, 'Lexique-data/temp/speech'));
+  assert.ok(before.records.length && before.cards.flat().length && Object.keys(audio).length, 'Use existing learning records, review state and selected audio');
+  const preferences = await page.evaluate(async () => ({ coloring: await window.__TAURI_INTERNALS__.invoke('conjugation_preferences', { preferences: null }), order: await window.__TAURI_INTERNALS__.invoke('conjugation_block_order', { order: null }) }));
+  await trackExpressionSpeech(page); await page.getByLabel('界面语言').selectOption('en');
+  await conjugationSearch(page, 'nous avions lavé');
+  assert.equal(expressionAsset('nous avions lavé'), null, 'Opening a table must not generate speech');
+  const pending = page.getByRole('button', { name: 'Play expression: nous avions lavé (Machine-generated speech)', exact: true });
+  await pending.click(); await expect(pending).toBeDisabled(); await dictionarySearch(page, 'école');
+  await page.getByRole('button', { name: 'Play word: école (Machine-generated speech)', exact: true }).click();
+  await expect.poll(() => page.evaluate(() => Reflect.get(window, 'expressionPlayers')[0]?.element.currentTime ?? 0), { timeout: 20_000 }).toBeGreaterThan(0);
+  await expect.poll(() => expressionAsset('nous avions lavé')?.generatedAt, { timeout: 20_000 }).toBeGreaterThan(0);
+  assert.equal(await page.evaluate(() => Reflect.get(window, 'expressionPlayers').length), 1, 'A cancelled table response cannot interrupt concurrent word playback');
+  const alternatives = await expressionAlternatives(page);
+  await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('speech_preferences', { preferences: { voice: 'male', speed: 'slow' } }));
+  await conjugationSearch(page, 'paie'); const slow = await playNativeExpression(page, 'je paie', 0.6);
+  await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('speech_preferences', { preferences: { voice: 'male', speed: 'normal' } }));
+  const normal = await playNativeExpression(page, 'je paie');
+  assert.equal(normal.version, slow.version, 'Changing speed must reuse the same audio version');
+  assert.equal(await page.evaluate(async () => { const players = Reflect.get(window, 'expressionPlayers'); return JSON.stringify(await players.at(-1).bytes) === JSON.stringify(await players.at(-2).bytes); }), true, 'Changing speed must reuse the same audio bytes');
+  await page.evaluate((preferences) => window.__TAURI_INTERNALS__.invoke('speech_preferences', { preferences }), before.preferences);
+  assert.deepEqual(await snapshot(page), before); assert.deepEqual(expressionSelections(), selections);
+  const recovery = await expressionResourceRecovery(page); page = recovery.page;
+  assert.deepEqual(await snapshot(page), before); assert.deepEqual(expressionSelections(), selections);
+  assert.deepEqual(await page.evaluate(async () => ({ coloring: await window.__TAURI_INTERNALS__.invoke('conjugation_preferences', { preferences: null }), order: await window.__TAURI_INTERNALS__.invoke('conjugation_block_order', { order: null }) })), preferences);
+  const afterAudio = await hashes(join(destination, 'Lexique-data/temp/speech'));
+  for (const [path, checksum] of Object.entries(audio)) assert.equal(afterAudio[path], checksum, 'Existing audio files must remain unchanged');
+  const retention = expressionRetention(['nous avions lavé', ...alternatives.played.map((row) => row.text), recovery.recovered.text].filter((text, index, values) => values.indexOf(text) === index));
+  await page.screenshot({ path: join(destination, 'expression-speech-recovered.png') });
+  await writeFile(join(destination, 'report.json'), JSON.stringify({ status: 'PASS', speech: true, restart: true, cancellation: 'previous clip paused; pending table response ignored; concurrent dictionary playback retained',
+    ...alternatives, preferences: { slow, normal, sameAudio: true, restored: before.preferences, coloring: preferences.coloring, order: preferences.order },
+    resourceFailure: 'missing speech bundle; visible failure and successful retry after restoration', recovered: recovery.recovered, retention,
+    preserved: { records: before.records.length, cards: before.cards.flat().length, progress: before.progress.length, existingAudioFiles: Object.keys(audio).length, references: true, selectedAudioVersions: true, notes: true },
+    limits: ['No fresh disconnected-system acceptance', 'No other-platform execution', 'No additional voice-quality admission'] }, null, 2));
+  await close(page); console.log('Native complete-expression speech: PASS');
+}
 try {
   let page = await start();
-  if (navigationOnly) { await navigationAcceptance(page); } else {
+  if (speechOnly) { await speechAcceptance(page); } else if (navigationOnly) { await navigationAcceptance(page); } else {
   const { before, audio, results, timings, coloring, blockOrder } = await check(page), modesRestored = [];
   for (const [mode, label, expected] of [['main', '2 · 主要动词', 'lavé'], ['verbal', '1 · 完整动词部分', 'avions lavé'], ['ending', '3 · 主要动词词尾', 'é']]) {
     await page.getByRole('button', { name: label, exact: true }).click();

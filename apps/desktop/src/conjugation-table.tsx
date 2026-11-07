@@ -1,7 +1,12 @@
+import { useRef } from 'react';
 import { cellKey, cellMatches, expressionMatches, defaultConjugationOrder } from './platform/conjugation';
 import type { ConjugationCell, ConjugationTable, ConjugationMode, ConjugationOrder, ConjugationTense } from './platform/conjugation';
 import { conjugationUse, type ConjugationText } from './conjugation-content';
 import { ColoredExpression } from './conjugation-coloring';
+import type { Locale } from './content';
+import type { RuntimeAdapter } from './platform/runtime';
+import { notebookMessages } from './notebook-content';
+import { SpeechButton } from './speech-button';
 
 export const conjugationTitles: Readonly<Record<ConjugationTense, string>> = {
   P: 'Présent de l’indicatif', PC: 'Passé composé', I: 'Imparfait', F: 'Futur simple',
@@ -38,31 +43,37 @@ function expressions(cell: ConjugationCell, impersonal: boolean): readonly strin
   });
 }
 
-function SourceCell({ cells, query, text, raw, mode, impersonal = false }: {
+function SourceCell({ cells, query, text, raw, mode, runtime, locale, onStart, impersonal = false }: {
   readonly cells: readonly ConjugationCell[]; readonly query: string; readonly text: ConjugationText; readonly raw: boolean; readonly impersonal?: boolean;
   readonly mode: ConjugationMode;
+  readonly runtime: RuntimeAdapter; readonly locale: Locale;
+  readonly onStart: (cancel: () => void) => void;
 }) {
   const first = cells[0];
   if (!first) return <span>{text.unconfirmed} · {text.absent}</span>;
   const variants = [...new Map(cells.map((cell) => [cell.form, cell])).values()];
   const matched = variants.some((cell) => cellMatches(cell, query));
   const elision = first.person === '1' && first.number === 's' && variants.some((cell) => !cell.expressions?.length && /^[hy]/iu.test(cell.form));
+  const speechText = { ...notebookMessages[locale], playWord: text.playExpression, preview: text.speechPreview };
   return <div className="conjugation-cell" data-matched={matched} data-person={`${first.person}${first.number}`}>
     {matched && <strong className="conjugation-match">✓ {text.exact}</strong>}
     {(raw || elision) && <small>{text.unconfirmed} · {raw ? text.expression : text.elision}</small>}
     {variants.map((cell) => <div className="conjugation-variant" key={cell.form}>
       {cell.raw_tag.startsWith('ordinary/v1/') && cell.raw_tag.split('/')[2] !== 'gerund' && <small>{conjugationUse(text, cell.raw_tag.split('/').slice(3).join('/'))}</small>}
       {cell.raw_tag.startsWith('reference/') && <small>{conjugationUse(text, cell.raw_tag.slice(10))}</small>}
-      {(raw || elision ? [cell.form] : expressions(cell, impersonal)).map((expression) => <span className="conjugation-expression" lang="fr"
+      {(raw || elision ? [cell.form] : expressions(cell, impersonal)).map((expression) => <span className="conjugation-expression"
         key={expression} data-matched={expressionMatches(cell.form, query) || expressionMatches(expression, query)}>
-        <ColoredExpression expression={expression} spans={cell.coloring[expression]} mode={mode} /></span>)}
+        <span lang="fr"><ColoredExpression expression={expression} spans={cell.coloring[expression]} mode={mode} /></span>
+        <SpeechButton word={expression} runtime={runtime} text={speechText} onStart={onStart} /></span>)}
     </div>)}
   </div>;
 }
 
-function Block({ code, table, query, text, mode }: {
+function Block({ code, table, query, text, mode, runtime, locale, onStart }: {
   readonly code: string; readonly table: ConjugationTable; readonly query: string; readonly text: ConjugationText;
   readonly mode: ConjugationMode;
+  readonly runtime: RuntimeAdapter; readonly locale: Locale;
+  readonly onStart: (cancel: () => void) => void;
 }) {
   const cells = table.cells.filter((cell) => cell.tense === code);
   const raw = table.verb.ordinary_status === 'not_applicable' && !table.verb.pronominal;
@@ -73,26 +84,30 @@ function Block({ code, table, query, text, mode }: {
     const unassigned = cells.filter((cell) => !rows.includes(`${cell.person}${cell.number}`));
     return <><dl>{rows.map((person) => <div key={person}><dt lang="fr">{impersonal && person === '3s' ? 'il' : subjects[person]?.join(' / ')}</dt>
       <dd>{table.verb.blocks?.[`${code}/${person}`] === 'not_applicable' ? text.notApplicable
-        : <SourceCell cells={cells.filter((cell) => `${cell.person}${cell.number}` === person)} query={query} text={text} raw={raw} impersonal={impersonal} mode={mode} />}</dd></div>)}</dl>
-      {groupCells(unassigned).map(([key, values]) => <SourceCell key={key} cells={values} query={query} text={text} raw mode={mode} />)}</>;
+        : <SourceCell cells={cells.filter((cell) => `${cell.person}${cell.number}` === person)} query={query} text={text} raw={raw} impersonal={impersonal} mode={mode} runtime={runtime} locale={locale} onStart={onStart} />}</dd></div>)}</dl>
+      {groupCells(unassigned).map(([key, values]) => <SourceCell key={key} cells={values} query={query} text={text} raw mode={mode} runtime={runtime} locale={locale} onStart={onStart} />)}</>;
   }
   const groups = groupCells(cells);
   return groups.length ? <dl>{groups.map(([key, values]) => <div key={key}><dt>{code === 'K'
     ? [values[0]?.gender, values[0]?.number].filter(Boolean).join(' · ') || text.gender : '—'}</dt>
-    <dd><SourceCell cells={values} query={query} text={text} raw={raw} mode={mode} /></dd></div>)}</dl>
+    <dd><SourceCell cells={values} query={query} text={text} raw={raw} mode={mode} runtime={runtime} locale={locale} onStart={onStart} /></dd></div>)}</dl>
     : <p>{table.verb.blocks?.[code] === 'missing' ? text.absent : text.unconfirmed}</p>;
 }
 
-export function ConjugationBlocks({ table, query, text, mode, order }: {
+export function ConjugationBlocks({ table, query, text, mode, order, runtime, locale }: {
   readonly table: ConjugationTable; readonly query: string; readonly text: ConjugationText;
   readonly mode: ConjugationMode; readonly order: ConjugationOrder;
+  readonly runtime: RuntimeAdapter; readonly locale: Locale;
 }) {
+  const activeSpeech = useRef<(() => void) | null>(null);
+  function startSpeech(cancel: () => void) { activeSpeech.current?.(); activeSpeech.current = cancel; }
   const other = table.cells.filter((cell) => cell.tense === null);
-  return <><div className="conjugation-blocks">{order.map((code) => <section className="conjugation-block"
+  return <><p className="dictionary-hint">{notebookMessages[locale].machineVoice} · Supertonic 3</p>
+    <div className="conjugation-blocks">{order.map((code) => <section className="conjugation-block"
     key={code} data-tense={code} data-priority={priority.has(code)} aria-labelledby={`tense-${code}`}>
     <header><h4 lang="fr" id={`tense-${code}`}>{conjugationTitles[code]}</h4>{priority.has(code) && <small>★ {text.priority}</small>}</header>
-    <Block code={code} table={table} query={query} text={text} mode={mode} />
+    <Block code={code} table={table} query={query} text={text} mode={mode} runtime={runtime} locale={locale} onStart={startSpeech} />
   </section>)}</div>{other.length > 0 && <section><h4>{text.other}</h4>{groupCells(other).map(([key, values]) =>
-    <SourceCell key={key} cells={values} query={query} text={text} raw mode={mode} />)}</section>}
+    <SourceCell key={key} cells={values} query={query} text={text} raw mode={mode} runtime={runtime} locale={locale} onStart={startSpeech} />)}</section>}
   {!table.verb.pronominal && <p className="dictionary-hint">{text.agreement}</p>}<p className="dictionary-hint">{text.historical}</p></>;
 }

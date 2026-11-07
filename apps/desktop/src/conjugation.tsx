@@ -55,7 +55,7 @@ function Results({ result, selected, onSelect, text, mode, order, runtime, local
     {table && <article className="conjugation-table"><h3 lang="fr" tabIndex={-1}>{table.lemma}</h3><VerbMetadata table={table} text={text} />
       <ConjugationDictionary runtime={runtime} locale={locale} lemma={table.lemma} dictionaryKey={dictionaryKey} onOpen={onDictionary} />
       <ColoringNotice table={table} mode={mode} text={text} />
-      <ConjugationBlocks table={table} query={result.query} text={text} mode={mode} order={order} />
+      <ConjugationBlocks key={table.lemma} table={table} query={result.query} text={text} mode={mode} order={order} runtime={runtime} locale={locale} />
       <details><summary>{text.source}</summary><pre>{JSON.stringify(table, null, 2)}</pre></details></article>}
     <footer className="dictionary-source"><p>{text.sourceOnly}</p>
       <p>Lefff © Benoît Sagot · LGPL-LR · <a href="https://pauillac.inria.fr/~sagot/index.html#lefff">Lefff 3.4</a></p>

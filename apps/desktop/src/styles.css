@@ -13,6 +13,7 @@
 .conjugation-cell[data-matched='true'] { border-inline-start: 3px solid var(--ink); padding-inline-start: 10px; }
 .conjugation-cell small, .conjugation-match { display: block; font-size: 12px; margin-bottom: 6px; }
 .conjugation-expression { display: block; overflow-wrap: anywhere; line-height: 1.7; }
+.conjugation-expression button { margin-inline-start: 8px; vertical-align: middle; min-width: 44px; min-height: 44px; }
 .conjugation-expression[data-matched='true'] { font-weight: 600; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
 .conjugation-colored { color: var(--verb-color); font-style: italic; }
 .conjugation-coloring, .conjugation-order { margin: 18px 0; }
