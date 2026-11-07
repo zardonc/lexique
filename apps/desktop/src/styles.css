@@ -15,10 +15,10 @@
 .conjugation-expression { display: block; overflow-wrap: anywhere; line-height: 1.7; }
 .conjugation-expression[data-matched='true'] { font-weight: 600; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
 .conjugation-colored { color: var(--verb-color); font-style: italic; }
-.conjugation-coloring { margin: 18px 0; }
-.conjugation-coloring button { min-height: 44px; }
+.conjugation-coloring, .conjugation-order { margin: 18px 0; }
+.conjugation-coloring button, .conjugation-order button, .conjugation-order select { min-height: 44px; }
 .conjugation-coloring button[aria-pressed='true'] { outline: 2px solid var(--ink); outline-offset: 2px; }
-.conjugation-coloring p { font-size: 13px; color: var(--muted); }
+.conjugation-coloring p, .conjugation-order p { font-size: 13px; color: var(--muted); }
 .app { --verb-color: #005b56; }
 .app[data-theme='sepia'] { --verb-color: #095e4a; }
 .app[data-theme='dark'] { --verb-color: #78d8c1; }

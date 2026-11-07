@@ -41,3 +41,21 @@ pub async fn conjugation_preferences(
     .await
     .map_err(|error| format!("Conjugation preference task failed: {error}"))?
 }
+
+#[tauri::command]
+pub async fn conjugation_block_order(
+    path: State<'_, DatabasePath>,
+    order: Option<lexique_storage::ConjugationBlockOrder>,
+) -> Result<lexique_storage::ConjugationBlockOrder, String> {
+    let path = DatabasePath(path.0.clone());
+    tauri::async_runtime::spawn_blocking(move || {
+        let connection = open(&path)?;
+        if let Some(order) = order {
+            lexique_storage::set_conjugation_block_order(&connection, &order)
+                .map_err(|error| error.to_string())?;
+        }
+        lexique_storage::conjugation_block_order(&connection).map_err(|error| error.to_string())
+    })
+    .await
+    .map_err(|error| format!("Conjugation block order task failed: {error}"))?
+}

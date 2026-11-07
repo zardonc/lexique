@@ -3,9 +3,10 @@ import coloring from './fixtures/conjugation-coloring.json' with { type: 'json' 
 import pronominal from './fixtures/conjugation-pronominal.json' with { type: 'json' };
 import simple from './fixtures/conjugation.json' with { type: 'json' };
 import ordinary from './fixtures/conjugation-ordinary.json' with { type: 'json' };
+import defaultOrder from './fixtures/conjugation-order.json' with { type: 'json' };
 
 test.beforeEach(async ({ page }) => {
-  await page.addInitScript((data) => {
+  await page.addInitScript(({ data, order }) => {
     function preferences(choice?: { mode: string }) {
       const failure = localStorage.getItem('conjugation-failure');
       if (choice) {
@@ -19,17 +20,18 @@ test.beforeEach(async ({ page }) => {
     Object.defineProperty(window, '__TAURI_INTERNALS__', { value: { invoke: async (command: string, args?: { key?: string; preferences?: { mode: string } }) => {
       if (command === 'runtime_status') return { version: '0.1.0', schemaVersion: 17, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } };
       if (command === 'conjugation_preferences') return preferences(args?.preferences);
+      if (command === 'conjugation_block_order') return order;
       const table = data[args?.key as keyof typeof data];
       return command === 'conjugation_lookup' ? { query: args?.key, tables: table ? [table] : [] } : null;
     } } });
-  }, {
+  }, { data: {
     'nous avions lavé': coloring.laver, lavais: coloring.laver, finir: coloring.finir,
     'se laver': pronominal['se laver'].tables[0], 'lave-toi': pronominal['se laver'].tables[0],
     'sois-toi lavé': pronominal['se laver'].tables[0], 'nous nous étions lavées': pronominal['se laver'].tables[0],
     'en se lavant': pronominal['se laver'].tables[0], 'que je me lave': pronominal['se laver'].tables[0],
     'va-t’en': pronominal['va-t’en'].tables[0],
     paie: simple.paie.tables[0], 'je suis allée': ordinary['je suis allée'].tables[0],
-  });
+  }, order: defaultOrder });
   await page.goto('/'); await page.getByLabel('界面语言').selectOption('en');
   await page.getByRole('button', { name: 'Conjugation', exact: true }).click();
 });

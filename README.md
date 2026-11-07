@@ -74,9 +74,11 @@ Windows x64 语音开发小样可在构建后运行 `python -X utf8 scripts/pack
 
 #43 准入 2,955 个独立代词式身份，支持 `se laver`、`je me lave`、`elles se sont abstenues`、`va-t’en` 等完整表达及适用的 23 区块。普通用法、代词用法、依语境配合和不变分词分别展示；性数备选保持可单独匹配，不推测缺少的宾语。来源、覆盖、实际 Windows 检查及成本见 [#43 证据](docs/evidence/issue-43/README.md)。
 
-桌面「动词变位」现可精确查询简单词形、选择所有候选、查看 23 个独立区块并辨认全部匹配格。可试 `sommes`、`suis`、`paie`、`falloir`。七个重点时态排在最前，未确认的结构和缺少词形明确标注；浏览器预览不模拟本机资源。普通复合／非限定表达覆盖全部已准入普通动词，23 区块报告无缺失或未确认状态；缺陷、代词专用及罕见／历史用法单独标明。可试 `avons aimé`、`je suis allée`、`en ayant aimé`、`j’habite`、`j’occirai`；来源策略、Windows 验证及首进程 CLI 延迟超预算见 [#41 证据](docs/evidence/issue-41/README.md)。英文释义已以独立字段接入词头和候选项：固定 FreeDict fra-eng 0.4.1（GPL-2.0-or-later），覆盖 1,377 个身份，其余显示暂缺；来源用法与代词式义项分别标明，见 [#42 证据](docs/evidence/issue-42/README.md)。变位朗读仍属后续工单。来源与覆盖见 [#39 验证](docs/evidence/issue-39/README.md)，桌面与 Windows 原生检查见 [#40 验证](docs/evidence/issue-40/README.md)。
+桌面「动词变位」现可精确查询简单词形、选择所有候选、查看 23 个独立区块并辨认全部匹配格。可试 `sommes`、`suis`、`paie`、`falloir`。默认将七个重点时态排在最前，未确认的结构和缺少词形明确标注；浏览器预览不模拟本机资源。普通复合／非限定表达覆盖全部已准入普通动词，23 区块报告无缺失或未确认状态；缺陷、代词专用及罕见／历史用法单独标明。可试 `avons aimé`、`je suis allée`、`en ayant aimé`、`j’habite`、`j’occirai`；来源策略、Windows 验证及首进程 CLI 延迟超预算见 [#41 证据](docs/evidence/issue-41/README.md)。英文释义已以独立字段接入词头和候选项：固定 FreeDict fra-eng 0.4.1（GPL-2.0-or-later），覆盖 1,377 个身份，其余显示暂缺；来源用法与代词式义项分别标明，见 [#42 证据](docs/evidence/issue-42/README.md)。变位朗读仍属后续工单。来源与覆盖见 [#39 验证](docs/evidence/issue-39/README.md)，桌面与 Windows 原生检查见 [#40 验证](docs/evidence/issue-40/README.md)。
 
 三种着色可直接选择：完整动词部分、主要动词、主要动词词尾，默认模式 3。`nous avions lavé` 分别标出 `avions lavé`、`lavé`、`é`；`lavais` 的词尾为 `ais`。代词保持普通文字，第三组在模式 3 中整类不着色。斜体、匹配下划线和七个重点时态标记分别可辨；偏好保存到现有用户库，跨动词和原生重启恢复，失败明确显示。独立词尾规则及验证见 [#45 证据](docs/evidence/issue-45/README.md)。浏览器预览明确提示着色更改不会保存。
+
+全部 23 时态区块可通过「要移动的区块」及「向前移动／向后移动」调整顺序，支持键盘，并显示当前位置。自定义顺序跨动词及原生重启保留，缺陷动词的不适用区块不会被丢弃；「重置区块顺序」恢复准确的默认重点时态顺序及其余区块。重点标记随时态身份保留，匹配和着色不受移动影响；排序与着色偏好独立保存，错误明确显示。实际 Windows 重启、重置、故障恢复及数据保留见 [#46 证据](docs/evidence/issue-46/README.md)。浏览器预览明确提示排序更改不会保存。
 
 CLI 与桌面变位查询接受大小写、Unicode 等价写法、直／弯撇号及首尾／重复空白差异，保留重音、原始显示拼写、完整表达匹配和全部解释。可试 `SOMMES`、` J'AI  AIMÉ `、` VA-T'EN `；实现与 Windows 原生验证见 [#44 证据](docs/evidence/issue-44/README.md)。
 

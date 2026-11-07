@@ -73,6 +73,7 @@ fn main() {
             "dictionary_lookup",
             "conjugation_lookup",
             "conjugation_preferences",
+            "conjugation_block_order",
             "vocabulary_find",
             "vocabulary_list",
             "vocabulary_save",

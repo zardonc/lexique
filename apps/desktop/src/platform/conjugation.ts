@@ -4,6 +4,15 @@ export const conjugationModeSchema = z.enum(['verbal', 'main', 'ending']);
 export const conjugationPreferencesSchema = z.object({ mode: conjugationModeSchema }).strict().readonly();
 export type ConjugationMode = z.infer<typeof conjugationModeSchema>;
 export type ConjugationPreferences = z.infer<typeof conjugationPreferencesSchema>;
+export const defaultConjugationOrder = [
+  'P', 'PC', 'I', 'F', 'C', 'S', 'PQP', 'J', 'PA', 'FA', 'CP', 'SP', 'T', 'SQP',
+  'Y', 'YP', 'W', 'WP', 'G', 'K', 'KP', 'GP', 'GPP',
+] as const;
+export const conjugationTenseSchema = z.enum(defaultConjugationOrder);
+export const conjugationOrderSchema = z.array(conjugationTenseSchema).length(defaultConjugationOrder.length)
+  .refine((order) => new Set(order).size === order.length, 'Block order must contain all 23 tense blocks exactly once').readonly();
+export type ConjugationTense = z.infer<typeof conjugationTenseSchema>;
+export type ConjugationOrder = z.infer<typeof conjugationOrderSchema>;
 const rangeSchema = z.tuple([z.number().int().nonnegative().safe(), z.number().int().positive().safe()]).readonly();
 const spansSchema = z.object({ verbal: z.array(rangeSchema).min(1).max(2).readonly(), main: rangeSchema, ending: rangeSchema.nullable() }).strict().readonly();
 export type ConjugationSpans = z.infer<typeof spansSchema>;
@@ -20,7 +29,7 @@ const coloringSchema = z.record(z.string().min(1), spansSchema).readonly()
 const status = z.enum(['supported', 'unconfirmed', 'not_applicable']);
 const slotSchema = z.object({
   source_line: z.number().int().positive(), form: z.string().min(1), lemma: z.string().min(1),
-  raw_tag: z.string(), tense: z.enum(['P', 'I', 'J', 'F', 'C', 'S', 'T', 'Y', 'W', 'G', 'K', 'PC', 'PQP', 'PA', 'FA', 'CP', 'SP', 'SQP', 'YP', 'WP', 'KP', 'GP', 'GPP']).nullable(),
+  raw_tag: z.string(), tense: conjugationTenseSchema.nullable(),
   person: z.enum(['1', '2', '3']).nullable(), number: z.enum(['s', 'p']).nullable(),
   gender: z.enum(['m', 'f']).nullable(), expressions: z.array(z.string().min(1)).readonly().optional(),
   coloring: coloringSchema,

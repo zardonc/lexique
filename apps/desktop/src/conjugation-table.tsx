@@ -1,18 +1,18 @@
-import { cellKey, cellMatches, expressionMatches } from './platform/conjugation';
-import type { ConjugationCell, ConjugationTable, ConjugationMode } from './platform/conjugation';
+import { cellKey, cellMatches, expressionMatches, defaultConjugationOrder } from './platform/conjugation';
+import type { ConjugationCell, ConjugationTable, ConjugationMode, ConjugationOrder, ConjugationTense } from './platform/conjugation';
 import { conjugationUse, type ConjugationText } from './conjugation-content';
 import { ColoredExpression } from './conjugation-coloring';
 
-// Priority order, then the remaining mood families in the confirmed M3 matrix.
-const blocks = [
-  ['P', 'Présent de l’indicatif'], ['PC', 'Passé composé'], ['I', 'Imparfait'], ['F', 'Futur simple'],
-  ['C', 'Conditionnel présent'], ['S', 'Subjonctif présent'], ['PQP', 'Plus-que-parfait'],
-  ['J', 'Passé simple'], ['PA', 'Passé antérieur'], ['FA', 'Futur antérieur'], ['CP', 'Conditionnel passé'],
-  ['SP', 'Subjonctif passé'], ['T', 'Subjonctif imparfait'], ['SQP', 'Subjonctif plus-que-parfait'],
-  ['Y', 'Impératif présent'], ['YP', 'Impératif passé'], ['W', 'Infinitif présent'], ['WP', 'Infinitif passé'],
-  ['G', 'Participe présent'], ['K', 'Participe passé'], ['KP', 'Participe composé'],
-  ['GP', 'Gérondif présent'], ['GPP', 'Gérondif passé'],
-] as const;
+export const conjugationTitles: Readonly<Record<ConjugationTense, string>> = {
+  P: 'Présent de l’indicatif', PC: 'Passé composé', I: 'Imparfait', F: 'Futur simple',
+  C: 'Conditionnel présent', S: 'Subjonctif présent', PQP: 'Plus-que-parfait',
+  J: 'Passé simple', PA: 'Passé antérieur', FA: 'Futur antérieur', CP: 'Conditionnel passé',
+  SP: 'Subjonctif passé', T: 'Subjonctif imparfait', SQP: 'Subjonctif plus-que-parfait',
+  Y: 'Impératif présent', YP: 'Impératif passé', W: 'Infinitif présent', WP: 'Infinitif passé',
+  G: 'Participe présent', K: 'Participe passé', KP: 'Participe composé',
+  GP: 'Gérondif présent', GPP: 'Gérondif passé',
+};
+const priority = new Set<ConjugationTense>(defaultConjugationOrder.slice(0, 7));
 const persons = ['1s', '2s', '3s', '1p', '2p', '3p'] as const;
 const subjects: Readonly<Record<string, readonly string[]>> = {
   '1s': ['je'], '2s': ['tu'], '3s': ['il', 'elle', 'on'], '1p': ['nous'], '2p': ['vous'], '3p': ['ils', 'elles'],
@@ -83,14 +83,14 @@ function Block({ code, table, query, text, mode }: {
     : <p>{table.verb.blocks?.[code] === 'missing' ? text.absent : text.unconfirmed}</p>;
 }
 
-export function ConjugationBlocks({ table, query, text, mode }: {
+export function ConjugationBlocks({ table, query, text, mode, order }: {
   readonly table: ConjugationTable; readonly query: string; readonly text: ConjugationText;
-  readonly mode: ConjugationMode;
+  readonly mode: ConjugationMode; readonly order: ConjugationOrder;
 }) {
   const other = table.cells.filter((cell) => cell.tense === null);
-  return <><div className="conjugation-blocks">{blocks.map(([code, title], index) => <section className="conjugation-block"
-    key={code} data-tense={code} data-priority={index < 7} aria-labelledby={`tense-${code}`}>
-    <header><h4 lang="fr" id={`tense-${code}`}>{title}</h4>{index < 7 && <small>★ {text.priority}</small>}</header>
+  return <><div className="conjugation-blocks">{order.map((code) => <section className="conjugation-block"
+    key={code} data-tense={code} data-priority={priority.has(code)} aria-labelledby={`tense-${code}`}>
+    <header><h4 lang="fr" id={`tense-${code}`}>{conjugationTitles[code]}</h4>{priority.has(code) && <small>★ {text.priority}</small>}</header>
     <Block code={code} table={table} query={query} text={text} mode={mode} />
   </section>)}</div>{other.length > 0 && <section><h4>{text.other}</h4>{groupCells(other).map(([key, values]) =>
     <SourceCell key={key} cells={values} query={query} text={text} raw mode={mode} />)}</section>}

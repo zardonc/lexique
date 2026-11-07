@@ -9,7 +9,8 @@ import { setTimeout as delay } from 'node:timers/promises';
 import assert from 'node:assert/strict';
 
 const [resources, binary, data, destination] = process.argv.slice(2).map((path) => resolve(path));
-assert.ok(['issue-40', 'issue-41', 'issue-42', 'issue-43', 'issue-44', 'issue-45', 'conjugation-refactor'].some((issue) => destination.startsWith(resolve('../../target/' + issue) + '\\')));
+assert.ok(['issue-40', 'issue-41', 'issue-42', 'issue-43', 'issue-44', 'issue-45', 'issue-46', 'conjugation-refactor'].some((issue) => destination.startsWith(resolve('../../target/' + issue) + '\\')));
+const defaultOrder = ['P', 'PC', 'I', 'F', 'C', 'S', 'PQP', 'J', 'PA', 'FA', 'CP', 'SP', 'T', 'SQP', 'Y', 'YP', 'W', 'WP', 'G', 'K', 'KP', 'GP', 'GPP'];
 await mkdir(destination);
 for (const name of ['dictionary', 'conjugation']) await cp(join(resources, name), join(destination, name), { recursive: true });
 await cp(binary, join(destination, 'Lexique.exe'));
@@ -43,6 +44,7 @@ async function hashes(directory) {
 async function check(page) {
   const before = await snapshot(page), audio = await hashes(join(destination, 'Lexique-data/temp/speech'));
   assert.deepEqual(await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('conjugation_preferences', { preferences: null })), { mode: 'ending' });
+  assert.deepEqual(await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('conjugation_block_order', { order: null })), defaultOrder);
   assert.ok(before.records.length && before.cards.flat().length && before.audio.some((bytes) => bytes?.length) && Object.keys(audio).length, 'Use an existing learning/audio fixture');
   const timings = await page.evaluate(async () => {
     const query = 'elles se sont abstenues', milliseconds = [];
@@ -173,9 +175,94 @@ async function check(page) {
   const coloring = await checkColoring(page);
   await preferenceFailures(page);
   await failures(page);
+  const blockOrder = await checkOrder(page);
+  await orderFailures(page, blockOrder.custom);
   assert.deepEqual(await snapshot(page), before);
   assert.deepEqual(await hashes(join(destination, 'Lexique-data/temp/speech')), audio);
-  return { before, audio, results, timings, coloring };
+  return { before, audio, results, timings, coloring, blockOrder };
+}
+async function renderedOrder(page) {
+  return page.locator('.conjugation-block').evaluateAll((elements) => elements.map((element) => element.getAttribute('data-tense')));
+}
+async function checkOrder(page) {
+  const custom = ['P', 'PC', 'I', 'F', 'C', 'S', 'J', 'PQP', 'PA', 'FA', 'CP', 'SP', 'T', 'SQP', 'Y', 'YP', 'W', 'WP', 'G', 'K', 'KP', 'GP', 'GPP'];
+  const controls = page.locator('.conjugation-order');
+  const input = page.getByLabel('法语动词或简单变位词形');
+  await input.fill('nous avions lavé'); await input.press('Enter');
+  await expect(page.locator('.conjugation-table h3')).toHaveText('laver');
+  assert.deepEqual(await renderedOrder(page), defaultOrder);
+  await controls.getByLabel('要移动的区块', { exact: true }).selectOption('PQP');
+  const later = controls.getByRole('button', { name: '向后移动', exact: true });
+  await later.focus(); await later.press('Space');
+  await expect(page.locator('.conjugation-block').nth(7)).toHaveAttribute('data-tense', 'PQP');
+  await expect(later).toBeFocused();
+  assert.deepEqual(await renderedOrder(page), custom);
+  assert.deepEqual(await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('conjugation_block_order', { order: null })), custom);
+  assert.deepEqual(await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('conjugation_preferences', { preferences: null })), { mode: 'main' });
+  const priority = await page.locator('.conjugation-block[data-priority=true]').evaluateAll((elements) => elements.map((element) => element.getAttribute('data-tense')));
+  assert.deepEqual(priority, ['P', 'PC', 'I', 'F', 'C', 'S', 'PQP']);
+  const match = page.locator('[data-tense=PQP] .conjugation-expression[data-matched=true]');
+  await expect(match).toHaveText(['nous avions lavé']);
+  await expect(match.locator('.conjugation-colored')).toHaveText(['lavé']);
+  await expect(match).toHaveCSS('text-decoration-line', 'underline');
+  for (const query of ['falloir', 'se laver']) {
+    await input.fill(query); await input.press('Enter');
+    await expect(page.locator('.conjugation-table h3')).toHaveText(query);
+    await expect(page.locator('.conjugation-block')).toHaveCount(23);
+    assert.deepEqual(await renderedOrder(page), custom);
+    if (query === 'falloir') await expect(page.locator('[data-tense=Y]')).toContainText('不适用（已验证）');
+    await expect(page.getByRole('button', { name: '2 · 主要动词', exact: true })).toHaveAttribute('aria-pressed', 'true');
+  }
+  await page.screenshot({ path: join(destination, 'block-order.png') });
+  return { custom, priority, verbs: ['laver', 'falloir', 'se laver'], keyboard: true };
+}
+async function orderFailures(page, custom) {
+  const controls = page.locator('.conjugation-order');
+  const reset = controls.getByRole('button', { name: '重置区块顺序', exact: true });
+  preferenceSql(`c.execute("CREATE TRIGGER issue46_order_write_failure BEFORE INSERT ON app_metadata WHEN NEW.key='conjugation-block-order' BEGIN SELECT RAISE(ABORT, 'Block order storage is read-only'); END")`);
+  try {
+    await reset.click();
+    await expect(controls.getByRole('alert')).toContainText('read-only');
+    assert.deepEqual(await renderedOrder(page), custom);
+    assert.deepEqual(await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('conjugation_block_order', { order: null })), custom);
+  } finally { preferenceSql(`c.execute('DROP TRIGGER issue46_order_write_failure')`); }
+  for (const order of [defaultOrder.slice(1), ['P', ...defaultOrder.slice(1, -1), 'P'],
+    [...defaultOrder.slice(0, -1), 'unknown'], [...defaultOrder.slice(0, -1), 23], { order: defaultOrder }]) {
+    const error = await page.evaluate((order) => window.__TAURI_INTERNALS__.invoke('conjugation_block_order', { order }).catch(String), order);
+    assert.match(error, /23 tense blocks|invalid|expected/i);
+  }
+  for (const saved of ['not-json', '[]']) {
+    preferenceSql(`c.execute("UPDATE app_metadata SET value=? WHERE key='conjugation-block-order'", (${JSON.stringify(saved)},))`);
+    try {
+      const error = await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('conjugation_block_order', { order: null }).catch(String));
+      assert.match(error, /Invalid saved conjugation block order/);
+      await page.reload(); await page.getByRole('button', { name: '动词变位', exact: true }).click();
+      await expect(controls.getByRole('alert')).toContainText('Invalid saved conjugation block order');
+      await expect(controls.getByRole('combobox')).toBeDisabled();
+      await expect(reset).toBeDisabled();
+      await expect(page.getByRole('button', { name: '2 · 主要动词', exact: true })).toHaveAttribute('aria-pressed', 'true');
+    } finally {
+      preferenceSql(`c.execute("UPDATE app_metadata SET value=? WHERE key='conjugation-block-order'", (json.dumps(${JSON.stringify(custom)}),))`);
+    }
+    await controls.getByRole('button', { name: '重新读取区块顺序', exact: true }).click();
+    await expect(controls.getByRole('combobox')).toBeEnabled();
+    await expect(controls.getByRole('alert')).toHaveCount(0);
+  }
+  preferenceSql(`c.execute('ALTER TABLE app_metadata RENAME TO issue46_unavailable_preferences')`);
+  try {
+    await reset.click();
+    await expect(controls.getByRole('alert')).toContainText('no such table: app_metadata');
+    await page.reload(); await page.getByRole('button', { name: '动词变位', exact: true }).click();
+    await expect(controls.getByRole('alert')).toContainText('no such table: app_metadata');
+    await expect(page.locator('.conjugation-coloring').getByRole('alert')).toContainText('no such table: app_metadata');
+    await expect(reset).toBeDisabled();
+  } finally { preferenceSql(`c.execute('ALTER TABLE issue46_unavailable_preferences RENAME TO app_metadata')`); }
+  await controls.getByRole('button', { name: '重新读取区块顺序', exact: true }).click();
+  await page.locator('.conjugation-coloring').getByRole('button', { name: '重新读取着色偏好', exact: true }).click();
+  await expect(controls.getByRole('alert')).toHaveCount(0);
+  await expect(page.getByRole('button', { name: '2 · 主要动词', exact: true })).toHaveAttribute('aria-pressed', 'true');
+  assert.deepEqual(await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('conjugation_block_order', { order: null })), custom);
+  assert.deepEqual(await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('conjugation_preferences', { preferences: null })), { mode: 'main' });
 }
 async function checkColoring(page) {
   const input = page.getByLabel('法语动词或简单变位词形');
@@ -213,7 +300,7 @@ async function checkColoring(page) {
   return checks;
 }
 function preferenceSql(source) {
-  const result = spawnSync('python', ['-X', 'utf8', '-c', `import sqlite3,sys\nc=sqlite3.connect(sys.argv[1])\n${source}\nc.commit()`,
+  const result = spawnSync('python', ['-X', 'utf8', '-c', `import sqlite3,sys,json\nc=sqlite3.connect(sys.argv[1])\n${source}\nc.commit()`,
     join(destination, 'Lexique-data/data/lexique.sqlite3')], { windowsHide: true, encoding: 'utf8', timeout: 5000 });
   assert.equal(result.status, 0, result.stderr);
 }
@@ -249,11 +336,14 @@ async function preferenceFailures(page) {
     await expect(main).toHaveAttribute('aria-pressed', 'true');
     await page.reload(); await page.getByRole('button', { name: '动词变位', exact: true }).click();
     await expect(controls.getByRole('alert')).toContainText('no such table: app_metadata');
+    await expect(page.locator('.conjugation-order').getByRole('alert')).toContainText('no such table: app_metadata');
     await expect(main).toBeDisabled();
   } finally { preferenceSql(`c.execute('ALTER TABLE issue45_unavailable_preferences RENAME TO app_metadata')`); }
   await controls.getByRole('button', { name: '重新读取着色偏好', exact: true }).click();
+  await page.locator('.conjugation-order').getByRole('button', { name: '重新读取区块顺序', exact: true }).click();
   await expect(main).toHaveAttribute('aria-pressed', 'true');
   await expect(controls.getByRole('alert')).toHaveCount(0);
+  await expect(page.locator('.conjugation-order').getByRole('alert')).toHaveCount(0);
 }
 async function failures(page) {
   const query = '  SUIS  ';
@@ -311,19 +401,34 @@ async function close(page) {
 }
 try {
   let page = await start();
-  const { before, audio, results, timings, coloring } = await check(page), modesRestored = [];
+  const { before, audio, results, timings, coloring, blockOrder } = await check(page), modesRestored = [];
   for (const [mode, label, expected] of [['main', '2 · 主要动词', 'lavé'], ['verbal', '1 · 完整动词部分', 'avions lavé'], ['ending', '3 · 主要动词词尾', 'é']]) {
     await page.getByRole('button', { name: label, exact: true }).click();
     await expect(page.getByRole('button', { name: label, exact: true })).toHaveAttribute('aria-pressed', 'true');
     await close(page); page = await start();
     assert.deepEqual(await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('conjugation_preferences', { preferences: null })), { mode });
+    assert.deepEqual(await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('conjugation_block_order', { order: null })), blockOrder.custom);
     await page.getByRole('button', { name: '动词变位', exact: true }).click();
     await expect(page.getByRole('button', { name: label, exact: true })).toHaveAttribute('aria-pressed', 'true');
     await page.getByLabel('法语动词或简单变位词形').fill('nous avions lavé');
     await page.getByRole('button', { name: '查询变位', exact: true }).click();
     await expect(page.locator('[data-tense=PQP] .conjugation-expression[data-matched=true] .conjugation-colored')).toHaveText([expected]);
+    assert.deepEqual(await renderedOrder(page), blockOrder.custom);
     modesRestored.push(mode);
   }
+  const reset = page.locator('.conjugation-order').getByRole('button', { name: '重置区块顺序', exact: true });
+  await reset.focus(); await reset.press('Space');
+  await expect(page.locator('.conjugation-block').nth(6)).toHaveAttribute('data-tense', 'PQP');
+  assert.deepEqual(await renderedOrder(page), defaultOrder);
+  await close(page); page = await start();
+  assert.deepEqual(await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('conjugation_block_order', { order: null })), defaultOrder);
+  assert.deepEqual(await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('conjugation_preferences', { preferences: null })), { mode: 'ending' });
+  await page.getByRole('button', { name: '动词变位', exact: true }).click();
+  await page.getByLabel('法语动词或简单变位词形').fill('falloir');
+  await page.getByRole('button', { name: '查询变位', exact: true }).click();
+  await expect(page.locator('.conjugation-table h3')).toHaveText('falloir');
+  assert.deepEqual(await renderedOrder(page), defaultOrder);
+  await page.screenshot({ path: join(destination, 'block-order-reset-restart.png') });
   const restarted = page;
   const restartedQuery = " VA-T'EN ";
   const restartedResult = await restarted.evaluate((key) => window.__TAURI_INTERNALS__.invoke('conjugation_lookup', { key }), restartedQuery);
@@ -333,6 +438,7 @@ try {
   assert.deepEqual(await hashes(join(destination, 'Lexique-data/temp/speech')), audio);
   await writeFile(join(destination, 'report.json'), JSON.stringify({ status: 'PASS', restart: true, normalized_restart: true, results, timings,
     coloring, modesRestored, preferenceFailures: ['write', 'invalid IPC', 'corrupt settings', 'unavailable storage'],
+    blockOrder: { ...blockOrder, resetRestored: true, failures: ['write', 'invalid IPC', 'corrupt JSON', 'invalid saved order', 'unavailable storage'] },
     preserved: { records: before.records.length, cards: before.cards.flat().length, audioFiles: Object.keys(audio).length } }, null, 2));
   console.log('Native conjugation check: PASS');
 } finally {

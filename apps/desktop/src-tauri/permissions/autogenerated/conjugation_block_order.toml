@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-conjugation-block-order"
+description = "Enables the conjugation_block_order command without any pre-configured scope."
+commands.allow = ["conjugation_block_order"]
+
+[[permission]]
+identifier = "deny-conjugation-block-order"
+description = "Denies the conjugation_block_order command without any pre-configured scope."
+commands.deny = ["conjugation_block_order"]

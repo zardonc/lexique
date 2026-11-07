@@ -51,6 +51,8 @@ M1 请求由 Rust 严格反序列化，前端请求 / 响应由 Zod 校验。标
 
 受限 `conjugation_preferences` 命令复用 `RuntimeAdapter` 与现有 SQLite `app_metadata` JSON 偏好，键为 `conjugation-preferences`，只接受 `verbal`／`main`／`ending`。仅配置不存在时使用默认 `ending`；损坏配置、读写和存储失败明确返回错误。前端保存成功才切换模式，读取失败禁用选择并提供重读，浏览器预览显示不保存提示。偏好不提高 schema 17，也不修改词汇、卡片、进度或音频；详见 [#45 证据](evidence/issue-45/README.md)。
 
+#46 的受限 `conjugation_block_order` 命令沿用同一数据库边界，将完整 23 区块代码数组保存到独立的 `app_metadata['conjugation-block-order']`。Rust 反序列化和前端 Zod 均要求每个已约定代码恰好一次；只有偏好不存在时返回默认顺序，非法或损坏设置明确失败。着色的原有 JSON 契约和键保持不变，两项保存互不覆盖，schema 17 不变。前端按已保存顺序排列完整表，不丢弃缺陷动词的不适用区块；七个重点标记绑定时态身份，匹配及着色仍绑定原格与表达。浏览器预览明确不保存，原生重启、重置及故障恢复见 [#46 证据](evidence/issue-46/README.md)。
+
 #13 在共享核心提供 `scheduling::schedule` 及严格 JSON 入口 `schedule_json`，接收卡片、评分、Unix 秒时间与 IANA 时区，不读取设备时钟。输出记忆状态、阶段、完整步骤秒数或取整天数、绝对到期时间、经过学习日、模型参数和时区库版本；调用方须保存完整请求和结果作为历史，不以最新设置重建旧请求。固定 FSRS 6.6.2 的标量调度数学使用显式 vendored 兼容补丁，统一调用关闭默认 features 的 libm 0.2.16；公式、官方参数、步骤及取整不变。历史标识 `fsrs-rs/6.6.2+libm-0.2.16` 与未修改上游包区分，拒绝混用。Windows x64 native / 实际 WASM 对照通过，其他平台实际执行另验。此票不迁移用户库、不添加 IPC 或评分 UI。原生 CLI 与 WASM 的有界输入缓冲区调用同一 JSON 入口；缓冲区 ABI 为同步调用，下一次请求使旧指针失效。详见 [#13 验证](evidence/issue-13/README.md)。
 
 | 能力 | 建议实现位置 | 先决条件 |

@@ -2,25 +2,27 @@ import { expect, test } from '@playwright/test';
 import fixtures from './fixtures/conjugation.json' with { type: 'json' };
 import ordinary from './fixtures/conjugation-ordinary.json' with { type: 'json' };
 import pronominal from './fixtures/conjugation-pronominal.json' with { type: 'json' };
+import defaultOrder from './fixtures/conjugation-order.json' with { type: 'json' };
 
 test('typographic queries retain interpretations, entered text and original expression highlights', async ({ page }) => {
   const compound = "  J'AI  ABE\u0301LISE\u0301  ";
   const reflexive = ' ELLES\u00a0SE  SONT ABSTENUES ';
-  await page.addInitScript((data) => {
+  await page.addInitScript(({ data, order }) => {
     Object.defineProperty(window, 'isTauri', { value: true });
     Object.defineProperty(window, '__TAURI_INTERNALS__', { value: { invoke: async (command: string, args?: { key: string }) => {
       if (command === 'runtime_status') return { version: '0.1.0', schemaVersion: 1, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } };
       if (command === 'conjugation_preferences') return { mode: 'ending' };
+      if (command === 'conjugation_block_order') return order;
       if (command !== 'conjugation_lookup') return null;
       if (args?.key === '  SUIS  ') throw { code: 'corrupt', message: 'Conjugation resource is corrupt' };
       return data[args?.key as keyof typeof data] ?? { query: args?.key, tables: [] };
     } } });
-  }, {
+  }, { data: {
     SOMMES: { ...fixtures.sommes, query: 'SOMMES' },
     [compound]: { ...ordinary['j’ai abélisé'], query: compound },
     [reflexive]: { ...pronominal['elles se sont abstenues'], query: reflexive },
     " VA-T'EN ": { ...pronominal['va-t’en'], query: " VA-T'EN " },
-  });
+  }, order: defaultOrder });
   await page.goto('/'); await page.getByLabel('界面语言').selectOption('en');
   await page.getByRole('button', { name: 'Conjugation', exact: true }).click();
   const input = page.getByLabel('French verb or simple form');
@@ -53,14 +55,15 @@ test('typographic queries retain interpretations, entered text and original expr
 });
 
 test('pronominal expressions retain their identity, agreement labels and every alternative', async ({ page }) => {
-  await page.addInitScript((data) => {
+  await page.addInitScript(({ data, order }) => {
     Object.defineProperty(window, 'isTauri', { value: true });
     Object.defineProperty(window, '__TAURI_INTERNALS__', { value: { invoke: async (command: string, args?: { key: string }) => {
       if (command === 'runtime_status') return { version: '0.1.0', schemaVersion: 1, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } };
       if (command === 'conjugation_preferences') return { mode: 'ending' };
+      if (command === 'conjugation_block_order') return order;
       return command === 'conjugation_lookup' ? data[args?.key as keyof typeof data] ?? { query: args?.key, tables: [] } : null;
     } } });
-  }, pronominal);
+  }, { data: pronominal, order: defaultOrder });
   await page.goto('/'); await page.getByLabel('界面语言').selectOption('en');
   await page.getByRole('button', { name: 'Conjugation', exact: true }).click();
   const input = page.getByLabel('French verb or simple form');
@@ -100,14 +103,15 @@ test('pronominal expressions retain their identity, agreement labels and every a
 });
 
 test('ordinary compounds expose every interpretation and complete agreement alternative', async ({ page }) => {
-  await page.addInitScript((data) => {
+  await page.addInitScript(({ data, order }) => {
     Object.defineProperty(window, 'isTauri', { value: true });
     Object.defineProperty(window, '__TAURI_INTERNALS__', { value: { invoke: async (command: string, args?: { key: string }) => {
       if (command === 'runtime_status') return { version: '0.1.0', schemaVersion: 1, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } };
       if (command === 'conjugation_preferences') return { mode: 'ending' };
+      if (command === 'conjugation_block_order') return order;
       return command === 'conjugation_lookup' ? data[args?.key as keyof typeof data] ?? { query: args?.key, tables: [] } : null;
     } } });
-  }, ordinary);
+  }, { data: ordinary, order: defaultOrder });
   await page.goto('/'); await page.getByRole('button', { name: '动词变位', exact: true }).click();
   const input = page.getByLabel('法语动词或简单变位词形');
   await input.fill('aie aimé'); await input.press('Enter');
@@ -149,19 +153,19 @@ test('ordinary compounds expose every interpretation and complete agreement alte
 });
 
 test('simple lookup keeps all candidates, cells and spelling alternatives accessible', async ({ page }) => {
-  await page.addInitScript((data) => {
+  await page.addInitScript(({ data, order }) => {
     Object.defineProperty(window, 'isTauri', { value: true });
     Object.defineProperty(window, '__TAURI_INTERNALS__', { value: { invoke: async (command: string, args?: { key: string }) => {
       if (command === 'runtime_status') return { version: '0.1.0', schemaVersion: 1, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } };
       if (command === 'conjugation_preferences') return { mode: 'ending' };
+      if (command === 'conjugation_block_order') return order;
       if (command === 'conjugation_lookup') return data[args?.key as keyof typeof data];
       return null;
     } } });
-  }, fixtures);
+  }, { data: fixtures, order: defaultOrder });
   await page.goto('/'); await page.getByLabel('界面语言').selectOption('en');
   await page.getByRole('button', { name: 'Conjugation', exact: true }).click();
-  const input = page.getByLabel('French verb or simple form');
-  const search = page.getByRole('button', { name: 'Look up conjugation', exact: true });
+  const input = page.getByLabel('French verb or simple form'), search = page.getByRole('button', { name: 'Look up conjugation', exact: true });
   await input.fill('sommes'); await search.click();
   await expect(page.getByRole('status').filter({ hasText: '2 verbs · 3 matching cells' })).toBeVisible();
   const choices = page.getByRole('group', { name: 'Matching verbs' });
@@ -204,11 +208,13 @@ test('preview and failures keep the query and never retain an earlier table', as
   await page.getByLabel('法语动词或简单变位词形').fill('suis'); await page.getByRole('button', { name: '查询变位', exact: true }).click();
   await expect(page.locator('.conjugation')).toContainText('浏览器预览无法读取内置变位数据');
   await expect(page.locator('.conjugation-coloring')).toContainText('浏览器预览：着色更改不会保存');
-  await page.addInitScript((data) => {
+  await expect(page.locator('.conjugation-order')).toContainText('浏览器预览：区块顺序更改不会保存');
+  await page.addInitScript(({ data, order }) => {
     Object.defineProperty(window, 'isTauri', { value: true });
     Object.defineProperty(window, '__TAURI_INTERNALS__', { value: { invoke: async (command: string, args?: { key: string }) => {
       if (command === 'runtime_status') return { version: '0.1.0', schemaVersion: 1, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } };
-      if (command === 'conjugation_preferences') return { mode: 'ending' };
+      const preferences = { conjugation_preferences: { mode: 'ending' }, conjugation_block_order: order };
+      if (Object.hasOwn(preferences, command)) return Reflect.get(preferences, command);
       if (command !== 'conjugation_lookup') return null;
       const key = args?.key;
       if (['missing', 'corrupt', 'query_failed'].includes(key ?? '')) throw { code: key, message: 'Test resource error' };
@@ -216,7 +222,7 @@ test('preview and failures keep the query and never retain an earlier table', as
       if (key === 'wrong') return data.paie;
       return data[key as keyof typeof data] ?? { query: key, tables: [] };
     } } });
-  }, fixtures);
+  }, { data: fixtures, order: defaultOrder });
   await page.reload(); await page.getByRole('button', { name: '动词变位', exact: true }).click();
   const input = page.getByLabel('法语动词或简单变位词形'), submit = page.getByRole('button', { name: '查询变位', exact: true });
   for (const [query, expected] of [['unknown', '未找到完全匹配'], ['missing', '内置变位资源不存在'], ['corrupt', '内置变位资源已损坏'],
@@ -229,14 +235,15 @@ test('preview and failures keep the query and never retain an earlier table', as
 });
 
 test('source gaps, pronominal-only uses, themes and languages stay explicit', async ({ page }) => {
-  await page.addInitScript((data) => {
+  await page.addInitScript(({ data, order }) => {
     Object.defineProperty(window, 'isTauri', { value: true });
     Object.defineProperty(window, '__TAURI_INTERNALS__', { value: { invoke: async (command: string, args?: { key: string }) => {
       if (command === 'runtime_status') return { version: '0.1.0', schemaVersion: 1, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } };
       if (command === 'conjugation_preferences') return { mode: 'ending' };
+      if (command === 'conjugation_block_order') return order;
       return command === 'conjugation_lookup' ? data[args?.key as keyof typeof data] : null;
     } } });
-  }, fixtures);
+  }, { data: fixtures, order: defaultOrder });
   await page.goto('/'); await page.getByRole('button', { name: '动词变位', exact: true }).click();
   await page.getByLabel('法语动词或简单变位词形').fill('falloir'); await page.getByRole('button', { name: '查询变位', exact: true }).click();
   await expect(page.locator('[data-tense=P]')).toContainText('没有已确认的源词形');
