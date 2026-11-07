@@ -1,0 +1,33 @@
+{
+  "license": "LGPL-LR",
+  "source": "Lefff morpho.fr: v-er and v-ir2; docs/evidence/issue-45/linguistic-rules.md",
+  "source_only_participles": {"courbaturer": ["courbatu", "courbatue", "courbatus", "courbatues"]},
+  "lexical": {
+    "rassir": {"K": {"ms": ["is", "i"], "fs": ["ise", "ie"], "mp": ["is"], "fp": ["ises", "ies"], "_": ["ises", "ies", "ise", "ie", "is", "i"]}}
+  },
+  "common": {
+    "I": {"1s": ["ais"], "2s": ["ais"], "3s": ["ait"], "1p": ["ions"], "2p": ["iez"], "3p": ["aient"]},
+    "F": {"1s": ["rai"], "2s": ["ras"], "3s": ["ra"], "1p": ["rons"], "2p": ["rez"], "3p": ["ront"]},
+    "C": {"1s": ["rais"], "2s": ["rais"], "3s": ["rait"], "1p": ["rions"], "2p": ["riez"], "3p": ["raient"]},
+    "S": {"1s": ["e"], "2s": ["es"], "3s": ["e"], "1p": ["ions"], "2p": ["iez"], "3p": ["ent"]},
+    "G": {"_": ["ant"]}
+  },
+  "groups": {
+    "1": {
+      "P": {"1s": ["e"], "2s": ["es"], "3s": ["e"], "1p": ["ons"], "2p": ["ez"], "3p": ["ent"]},
+      "J": {"1s": ["ai"], "2s": ["as"], "3s": ["a"], "1p": ["âmes"], "2p": ["âtes"], "3p": ["èrent"]},
+      "T": {"1s": ["asse"], "2s": ["asses"], "3s": ["ât"], "1p": ["assions"], "2p": ["assiez"], "3p": ["assent"]},
+      "Y": {"2s": ["e"], "1p": ["ons"], "2p": ["ez"]},
+      "W": {"_": ["er"]},
+      "K": {"ms": ["é"], "fs": ["ée"], "mp": ["és"], "fp": ["ées"], "_": ["ées", "és", "ée", "é"]}
+    },
+    "2": {
+      "P": {"1s": ["s"], "2s": ["s"], "3s": ["t"], "1p": ["ons"], "2p": ["ez"], "3p": ["ent"]},
+      "J": {"1s": ["is", "ïs"], "2s": ["is", "ïs"], "3s": ["it", "ït"], "1p": ["îmes", "ïmes"], "2p": ["îtes", "ïtes"], "3p": ["irent", "ïrent"]},
+      "T": {"1s": ["isse", "ïsse"], "2s": ["isses", "ïsses"], "3s": ["ît", "ït"], "1p": ["issions", "ïssions"], "2p": ["issiez", "ïssiez"], "3p": ["issent", "ïssent"]},
+      "Y": {"2s": ["s"], "1p": ["ons"], "2p": ["ez"]},
+      "W": {"_": ["ir", "ïr"]},
+      "K": {"ms": ["i", "ï"], "fs": ["ie", "ïe"], "mp": ["is", "ïs"], "fp": ["ies", "ïes"], "_": ["ies", "ïes", "is", "ïs", "ie", "ïe", "i", "ï"]}
+    }
+  }
+}

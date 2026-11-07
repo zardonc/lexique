@@ -62,7 +62,7 @@ pnpm test:desktop:lib    # 原生桌面库测试；执行硬限 60 秒
 
 Windows ARM64 开发样例可在已配置该目标工具链时先运行 `node scripts/build-desktop.mjs --no-bundle --target aarch64-pc-windows-msvc`，再运行 `python -X utf8 scripts/package_portable.py --architecture arm64`。打包器检查可执行文件的 PE 架构并保留已有交付；它不构成 ARM64 实机或正式发行验收。
 
-便携交付默认位于 `target/portable/Lexique-0.1.0-windows-x64-portable.zip`，附带 `.zip.sha256`。解压整个 ZIP 到可写目录，保持 `dictionary/` 与 `Lexique.exe` 同级；首次启动生成 `Lexique-data/`，退出后可将整个目录一起移动或备份。更新时保留 `Lexique-data/`。打包命令拒绝覆盖同名交付目录或 ZIP；重复交付使用新的 `--output-dir`，保留使用中的旧目录。CI 产物 `windows-x64-portable` 提供相同布局。
+便携交付默认位于 `target/portable/Lexique-0.1.0-windows-x64-portable.zip`，附带 `.zip.sha256`。解压整个 ZIP 到可写目录，保持 `dictionary/`、`conjugation/` 与 `Lexique.exe` 同级；首次启动生成 `Lexique-data/`，退出后可将整个目录一起移动或备份。更新时保留 `Lexique-data/`。打包命令拒绝覆盖同名交付目录或 ZIP；重复交付使用新的 `--output-dir`，保留使用中的旧目录。CI 产物 `windows-x64-portable` 提供相同布局。
 
 当前便携包是未签名的 Windows 11 x64 开发小样，需要系统已有 WebView2；不启动依赖安装器、不联网补下载。无 WebView2 的干净机器和 ARM64 / macOS 发行尚未验收，完整离线依赖交付仍属于后续发行门槛。
 
@@ -70,7 +70,25 @@ Windows x64 语音开发小样可在构建后运行 `python -X utf8 scripts/pack
 
 资源独立入口：`pnpm resources:build target/dictionary-sample`、`pnpm resources:query target/dictionary-sample/dictionary.sqlite3 "œil"`、`pnpm test:resources`。源包和许可已随仓库保存，生成及查询无需联网；`build` 输出目录必须是新目录。原生构建自动准备 `target/desktop-dictionary-sample`，复用前验证内容；损坏时直接失败，人工检查后移走该生成目录再重建。可先运行 `pnpm resources:prepare`。来源、覆盖缺项、只读查询契约和体积见 [FreeDict 小样记录](resources/freedict-fra-zho-2025.11.23/README.md)。
 
-变位 M0 独立验证：`pnpm conjugation:build target/conjugation-sample`、`pnpm conjugation:query target/conjugation-sample/conjugation.sqlite3 sommes`、`pnpm conjugation:table target/conjugation-sample/conjugation.sqlite3 falloir`、`pnpm test:conjugation`。固定 Lefff 3.4 原始数据及 LGPL-LR 随仓库保存，离线构建、精确反查全部匹配并读取源表；输出目录必须是新目录。来源、许可、实际输出、体积及待确认的复合时态／代词式边界见 [#4 验证](docs/evidence/issue-4/README.md)。此工具尚未接入桌面变位页。
+变位资源入口：`pnpm conjugation:build target/conjugation-sample`、`pnpm conjugation:query target/conjugation-sample/conjugation.sqlite3 sommes`、`pnpm conjugation:table target/conjugation-sample/conjugation.sqlite3 falloir`、`pnpm test:conjugation`。固定 Lefff 3.4 词形及句法（LGPL-LR）、Grammalecte 2.3.0 元数据（GPL-3.0-only）和 RosaeNLG 省音资料（CC BY-SA 3.0）随仓库保存。原生构建自动准备格式 6 的 `target/desktop-conjugation-v6-stats`，或先运行 `pnpm conjugation:prepare`；已有生成物须通过完整性及转换器版本检查，失败则保留原物，使用新目录重建。构建入口把两种资源放到可执行文件旁，portable 保留原始源、许可、纠正资料、八份 MIT 转换源码及 LGPL-LR 词尾规则；用户学习数据不参与资源准备。共享简单变位模型与运行时表达构造将当前数据库保持在 10.50 MiB；存储契约及格式 5 的全量等价检查见[变位存储](docs/conjugation-storage.md)。格式 6 资源须配套对应的重建 reader。
+
+#43 准入 2,955 个独立代词式身份，支持 `se laver`、`je me lave`、`elles se sont abstenues`、`va-t’en` 等完整表达及适用的 23 区块。普通用法、代词用法、依语境配合和不变分词分别展示；性数备选保持可单独匹配，不推测缺少的宾语。来源、覆盖、实际 Windows 检查及成本见 [#43 证据](docs/evidence/issue-43/README.md)。
+
+桌面「动词变位」现可精确查询简单词形、选择所有候选、查看 23 个独立区块并辨认全部匹配格。可试 `sommes`、`suis`、`paie`、`falloir`。默认将七个重点时态排在最前，未确认的结构和缺少词形明确标注；浏览器预览不模拟本机资源。普通复合／非限定表达覆盖全部已准入普通动词，23 区块报告无缺失或未确认状态；缺陷、代词专用及罕见／历史用法单独标明。可试 `avons aimé`、`je suis allée`、`en ayant aimé`、`j’habite`、`j’occirai`；来源策略、Windows 验证及首进程 CLI 延迟超预算见 [#41 证据](docs/evidence/issue-41/README.md)。英文释义已以独立字段接入词头和候选项：固定 FreeDict fra-eng 0.4.1（GPL-2.0-or-later），覆盖 1,377 个身份，其余显示暂缺；来源用法与代词式义项分别标明，见 [#42 证据](docs/evidence/issue-42/README.md)。来源与覆盖见 [#39 验证](docs/evidence/issue-39/README.md)，桌面与 Windows 原生检查见 [#40 验证](docs/evidence/issue-40/README.md)。
+
+三种着色可直接选择：完整动词部分、主要动词、主要动词词尾，默认模式 3。`nous avions lavé` 分别标出 `avions lavé`、`lavé`、`é`；`lavais` 的词尾为 `ais`。代词保持普通文字，第三组在模式 3 中整类不着色。斜体、匹配下划线和七个重点时态标记分别可辨；偏好保存到现有用户库，跨动词和原生重启恢复，失败明确显示。独立词尾规则及验证见 [#45 证据](docs/evidence/issue-45/README.md)。浏览器预览明确提示着色更改不会保存。
+
+全部 23 时态区块可通过「要移动的区块」及「向前移动／向后移动」调整顺序，支持键盘，并显示当前位置。自定义顺序跨动词及原生重启保留，缺陷动词的不适用区块不会被丢弃；「重置区块顺序」恢复准确的默认重点时态顺序及其余区块。重点标记随时态身份保留，匹配和着色不受移动影响；排序与着色偏好独立保存，错误明确显示。实际 Windows 重启、重置、故障恢复及数据保留见 [#46 证据](docs/evidence/issue-46/README.md)。浏览器预览明确提示排序更改不会保存。
+
+词典的明确动词词条现可打开同一变位视图，再返回对应词条。关联要求词典的 `v` 标记及完整原形匹配；缺项和歧义明确显示，需选择时不代选。返回后的词典入口保留原查询、所选身份和其他候选，同时重新读取资源；直／弯撇号词条分别选择，保留原词头及既有大小写／撇号记录区别。普通／代词式不混同，浏览和导航不自动收藏或加入复习。未保存修改仍须选择保存、放弃或继续编辑，失败和冲突保留输入；键盘焦点到达对应标题。三语／主题、着色和排序、实际 Windows 资源故障恢复及学习数据保留见 [#47 证据](docs/evidence/issue-47/README.md)。
+
+每个显示的变位表达均有独立「播放表达」按钮，完整朗读该项主语、反身代词和动词部分。拼写与性数备选分别播放，不向语音发送斜杠并列。沿用 CPU 离线 Supertonic 3、已保存的女／男声及常速／0.6 倍慢速，界面明确标示机器语音；资源、生成、偏好与播放失败可见并可重试。选择另一表达、切换词元、重新查询或离开页面释放播放并忽略迟到响应，已提交的共享合成工作继续沿用现有生命周期。不会整表预生成、保存笔记、建卡、重置进度或替换选定单词音频。三语／主题、逐项文本、真实 Windows 合成／播放、资源恢复及七天临时保留见 [#48 证据](docs/evidence/issue-48/README.md)。
+
+CLI 与桌面变位查询接受大小写、Unicode 等价写法、直／弯撇号及首尾／重复空白差异，保留重音、原始显示拼写、完整表达匹配和全部解释。可试 `SOMMES`、` J'AI  AIMÉ `、` VA-T'EN `；实现与 Windows 原生验证见 [#44 证据](docs/evidence/issue-44/README.md)。
+
+2026-11-07，#38 的 Windows x64 变位范围通过 #39–#49 及用户新鲜完整语音包断网验收。匹配格式 6 的资源／reader、全资源覆盖、逐表达实播、显示恢复、词典往返、学习数据保持及 CLI 预算见 [#38 收尾](docs/evidence/issue-38/README.md)。英语释义仍为明确标注缺项的部分覆盖；其他 M3 模块、其他平台实机和 M5 正式发行继续分别验收。
+
+2026-11-05，#39 在同一 CLI 加入固定 Grammalecte 2.3.0 的传统组别、普通主动式助动词与用法元数据，保留原始标记、纠正依据及未知／不适用状态；构建报告列出全资源覆盖。数据许可分别为 Lefff 的 LGPL-LR 与元数据的 GPL-3.0-only，许可、源数据和转换材料随资源保留。新生成资源格式为 2；旧小样保持原样，使用新输出目录重新构建。查询须保留数据库旁的 `grammalecte-2.3.0/` 目录。见 [#39 证据与限制](docs/evidence/issue-39/README.md)。
 
 E2E 结束后在 `apps/desktop/test-results/` 产生桌面 / 手机截图，在 `apps/desktop/playwright-report/` 产生报告。若使用已安装浏览器，可设置 `PLAYWRIGHT_EXECUTABLE_PATH` 为其可执行文件路径。测试自己的服务由 Playwright 启动与关闭，不复用其他开发服务。
 
@@ -86,7 +104,7 @@ M1 生词本支持同词一份的逻辑引用、收藏时只读摘要与独立�
 
 #15 已接入生词详情的单个“加入复习”、识义卡与听音卡、真实错误及重启恢复。schema 3 增量保留 M1 内容；再次加入保持两卡身份，仅对缺失或失败音频重试。语音开发包使用 Supertonic 3 本地资源生成目标 48 kbit/s 的 Ogg Opus；听音卡进入播放一次、翻面不自动播放，重播读取正常 / 0.6 倍速偏好，正面不显示词头。音频位于 `Lexique-data/temp/speech/`，错误保存在 `Lexique-data/logs/speech-cache.log`。#24 已用绝对期限和选定内容保护取代早期“七天未使用”规则，具体保留及维护边界见[架构](docs/architecture.md)。Windows x64 的 #15 实播和重启检查属于历史证据；新构建及长期维护分别验收。
 
-完整词典 / MDX / MDD、完整变位及例句朗读、语法笔记与分类、Drive / OneDrive 文件同步、翻译与 AI、练习、浏览器复习与 BFF 尚未实现。原型的演示数据、密钥表单和伪同步没有被搬进生产代码。
+完整词典 / MDX / MDD、例句朗读、语法笔记与分类、Drive / OneDrive 文件同步、翻译与 AI、练习、浏览器复习与 BFF 尚未实现。原型的演示数据、密钥表单和伪同步没有被搬进生产代码。
 
 2026-11-02 同步规划已改为应用内管理数据与跨云后台批量文件同步；桌面 SQLite + 事务 outbox、不可变 JSONL、浏览器 IndexedDB 宿主及安全清理仍是待验证设计。见[综合评估](docs/sync-design.md)和[M4 / M6 规划](docs/roadmap.md)，不表示已接入云服务或浏览器持久化。
 

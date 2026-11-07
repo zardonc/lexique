@@ -6,7 +6,9 @@ use tauri::{Emitter, Manager, State};
 
 #[cfg(windows)]
 mod audio_maintenance;
+mod conjugation;
 mod review_window;
+use conjugation::{conjugation_block_order, conjugation_lookup, conjugation_preferences};
 mod speech_cache;
 mod speech_tasks;
 mod vocabulary;
@@ -123,6 +125,9 @@ pub fn run() {
         .invoke_handler(tauri::generate_handler![
             runtime_status,
             dictionary_lookup,
+            conjugation_lookup,
+            conjugation_preferences,
+            conjugation_block_order,
             vocabulary_find,
             vocabulary_list,
             vocabulary_save,

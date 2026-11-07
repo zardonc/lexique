@@ -1,4 +1,6 @@
 import { invoke, isTauri } from '@tauri-apps/api/core';
+import { conjugationQuery, conjugationSchema, conjugationPreferencesSchema, conjugationOrderSchema } from './conjugation';
+import type { ConjugationLookup, ConjugationPreferences, ConjugationOrder } from './conjugation';
 import { z } from 'zod';
 import { listen } from '@tauri-apps/api/event';
 import { recordSchema, saveRequestSchema, saveResultSchema, sortSchema } from './vocabulary';
@@ -115,6 +117,9 @@ export type BatchStatus = z.infer<typeof batchSchema>;
 export interface RuntimeAdapter {
   readonly getStatus: () => Promise<RuntimeStatus | null>;
   readonly lookupDictionary: (key: string) => Promise<DictionaryLookup | null>;
+  readonly lookupConjugation: (key: string) => Promise<ConjugationLookup | null>;
+  readonly conjugationPreferences: (preferences?: ConjugationPreferences) => Promise<ConjugationPreferences | null>;
+  readonly conjugationBlockOrder: (order?: ConjugationOrder) => Promise<ConjugationOrder | null>;
   readonly findVocabulary: (headword: string) => Promise<VocabularyRecord | null>;
   readonly listVocabulary: (query: string, sort: VocabularySort) => Promise<readonly VocabularyRecord[] | null>;
   readonly saveVocabulary: (request: SaveRequest) => Promise<SaveResult | null>;
@@ -174,6 +179,27 @@ export const runtime: RuntimeAdapter = {
   async lookupDictionary(key) {
     if (!isTauri()) return null;
     return dictionarySchema.parse(await invoke('dictionary_lookup', { key }));
+  },
+  async lookupConjugation(key) {
+    if (!isTauri()) return null;
+    if (!conjugationQuery.safeParse(key).success) throw { code: 'invalid_query', message: 'Enter 1–512 UTF-8 bytes without control characters' };
+    const result = conjugationSchema.parse(await invoke('conjugation_lookup', { key }));
+    if (result.query !== key) throw new Error('Conjugation response query differs from the request');
+    return result;
+  },
+  async conjugationPreferences(preferences) {
+    if (!isTauri()) return null;
+    const valid = preferences === undefined ? null : conjugationPreferencesSchema.parse(preferences);
+    const result = conjugationPreferencesSchema.parse(await invoke('conjugation_preferences', { preferences: valid }));
+    if (valid && result.mode !== valid.mode) throw new Error('Saved conjugation mode differs from the request');
+    return result;
+  },
+  async conjugationBlockOrder(order) {
+    if (!isTauri()) return null;
+    const valid = order === undefined ? null : conjugationOrderSchema.parse(order);
+    const result = conjugationOrderSchema.parse(await invoke('conjugation_block_order', { order: valid }));
+    if (valid && result.some((code, index) => code !== valid[index])) throw new Error('Saved conjugation block order differs from the request');
+    return result;
   },
   async findVocabulary(headword) {
     if (!isTauri()) return null;

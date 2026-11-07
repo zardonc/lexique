@@ -77,6 +77,14 @@ class SpeechPortableTest(unittest.TestCase):
                                "speech/libopusenc-0.3.tar.gz.LICENSE",
                                "speech/docs/evidence/issue-14/supertonic-licenses/LICENSE-SUPERTONE-model-OpenRAIL-M.txt"):
                     self.assertTrue(any(name.endswith("/" + suffix) for name in names), suffix)
+                for suffix in ("conjugation.sqlite3", "conjugation_endings.json", "LICENSE-LGPLLR", "LICENSE-MIT",
+                               "conjugation_sample.py", "conjugation_metadata.py", "conjugation_syntax.py",
+                               "conjugation_generation.py", "conjugation_meanings.py", "conjugation_pronominal.py",
+                               "conjugation_runtime.py", "conjugation_coloring.py",
+                               "freedict-fra-eng-0.4.1/COPYING", "freedict-fra-eng-0.4.1/AUTHORS",
+                               "freedict-fra-eng-0.4.1/freedict-fra-eng-0.4.1.src.tar.xz",
+                               "grammalecte-2.3.0/LICENSE-GPL3", "lefff-syntax/provenance.json"):
+                    self.assertTrue(any(name.endswith("/conjugation/" + suffix) for name in names), suffix)
                 self.assertFalse(any("/Lexique-data/" in name for name in names))
                 self.assertIsNone(archive.testzip())
 

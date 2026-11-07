@@ -1873,12 +1873,14 @@ dependencies = [
 name = "lexique-dictionary"
 version = "0.1.0"
 dependencies = [
+ "flate2",
  "lexique-storage",
  "quick-xml",
  "rusqlite",
  "serde",
  "serde_json",
  "sha2",
+ "unicode-normalization",
 ]
 
 [[package]]

@@ -1,0 +1,219 @@
+{
+  "sqlite_sha256": "b0f3edaf68e1b31bcfd868884a9f25d4bcccf7fa952a2e756ffcb85128002aff",
+  "source_bytes": 15677049,
+  "source_gzip_bytes": 2843158,
+  "source_verb_rows": 342771,
+  "slots": 780818,
+  "source_slots": 397413,
+  "block_coverage": {
+    "G": {
+      "not_applicable": 17,
+      "supported": 7809
+    },
+    "K": {
+      "supported": 7814,
+      "not_applicable": 12
+    },
+    "P": {
+      "supported": 7813,
+      "not_applicable": 13
+    },
+    "I": {
+      "supported": 7806,
+      "not_applicable": 20
+    },
+    "J": {
+      "supported": 7795,
+      "not_applicable": 31
+    },
+    "F": {
+      "supported": 7810,
+      "not_applicable": 16
+    },
+    "C": {
+      "supported": 7810,
+      "not_applicable": 16
+    },
+    "S": {
+      "supported": 7809,
+      "not_applicable": 17
+    },
+    "T": {
+      "supported": 7794,
+      "not_applicable": 32
+    },
+    "Y": {
+      "supported": 7782,
+      "not_applicable": 44
+    },
+    "W": {
+      "supported": 7820,
+      "not_applicable": 6
+    },
+    "PC": {
+      "not_applicable": 145,
+      "supported": 7681
+    },
+    "PQP": {
+      "not_applicable": 145,
+      "supported": 7681
+    },
+    "PA": {
+      "not_applicable": 145,
+      "supported": 7681
+    },
+    "FA": {
+      "not_applicable": 145,
+      "supported": 7681
+    },
+    "CP": {
+      "not_applicable": 145,
+      "supported": 7681
+    },
+    "SP": {
+      "not_applicable": 145,
+      "supported": 7681
+    },
+    "SQP": {
+      "not_applicable": 145,
+      "supported": 7681
+    },
+    "YP": {
+      "not_applicable": 173,
+      "supported": 7653
+    },
+    "WP": {
+      "not_applicable": 145,
+      "supported": 7681
+    },
+    "KP": {
+      "not_applicable": 145,
+      "supported": 7681
+    },
+    "GPP": {
+      "not_applicable": 145,
+      "supported": 7681
+    },
+    "GP": {
+      "not_applicable": 148,
+      "supported": 7678
+    }
+  },
+  "lemmas": 7826,
+  "forms": 637206,
+  "table_bytes": 92246016,
+  "lemma_index_bytes": 14376960,
+  "reverse_index_bytes": 17252352,
+  "database_bytes": 123875328,
+  "database_gzip_bytes": 26482276,
+  "slots_by_tense": {
+    "C": 47020,
+    "CP": 46793,
+    "F": 47014,
+    "FA": 46793,
+    "G": 7817,
+    "GP": 7686,
+    "GPP": 7918,
+    "I": 46746,
+    "J": 46666,
+    "K": 31264,
+    "KP": 7918,
+    "P": 47003,
+    "PA": 46793,
+    "PC": 46793,
+    "PQP": 46793,
+    "S": 46967,
+    "SP": 46793,
+    "SQP": 46793,
+    "T": 46663,
+    "W": 7821,
+    "WP": 7918,
+    "Y": 23415,
+    "YP": 23423,
+    "unspecified": 8
+  },
+  "unspecified_finite_slots": 26,
+  "data_license": "LGPL-LR",
+  "modification": "2026-11-05: lossless gzip packaging; generated SQLite selects verb rows and expands explicit tags; no invented forms",
+  "metadata_license": "GPL-3.0-only",
+  "syntax_provenance": {
+    "upstream": "https://gitlab.inria.fr/almanach/alexina/lefff",
+    "commit": "a0feecc2bb09730601fee0213e804fb03143f7b5",
+    "license": "LGPL-LR",
+    "modified": "2026-11-06: lossless gzip packaging; ordinary syntactic frames, auxiliary macros and explicit morphology availability projected by Lexique; original forms retained",
+    "files": {
+      "constructions": "116a4c543ed8ee4be918c8b745e9a347056a9d1b1873dcedd8e21301e1b3e008",
+      "LICENSE": "ceeadf7ad27f70420fba9797486e4b295713610a4624cc3523f02a9126ce38ff",
+      "morpho.fr": "9b09339565e4a64bace74617c14a3350eaa4a4395a9a2a7f146532c489e74eee",
+      "README": "bfe8920b81536610562ed0e7e82b211f58dc57b314cbcc323aaf16951113d6eb",
+      "rosaenlg-CC_BY-SA_3.0.html": "a8da924a28611d26f84e2ca9dffc651bf6e995167ef80368a4dcdbf954ac078c",
+      "rosaenlg-hmuet.ts": "13077ee0bda211d62a394957e482fd629ae0bbdf077be222310a9627f10ce816",
+      "rosaenlg-index.ts": "64aa9094cd86a5e6a7a92e209ae15bc9132165e30bdde5b348e49d87a72e29ae",
+      "rosaenlg-LICENSE": "ec8a72fcab6d0df9596634efe03fda1551368dd724a79549249a30bf08f6fbbc",
+      "rosaenlg-README.md": "1dc98b5fb3961aa1e419212726f3fbbf1effc91819ee6500f529b96cdafdd7aa",
+      "rosaenlg-vowel.ts": "509b58160c78e685d6a1fd4b683389ab130fcf5fa3f78eb8e91c8b79f0a1c214",
+      "templates": "745e8e28fa9eade2e26e27cfb6c79d664a28ab51d124c0a7aa8aad46708a191a",
+      "v-phd.ilex.gz": "d6b3c9ffd20f10c2e914d61d48fbcb2e4c46dfc20b667b93197ced041b99a65c",
+      "v.ilex.gz": "cc759f1bd18e42146dafe35aa16ba2ea9c62de1a8cc83ab889d46b71dfe97c4b",
+      "v_new.ilex.gz": "419d4190bdebc08e99186f2fb2e682256e60af88cc2010ab64a78dd158abee13",
+      "v_new.mf": "f6aedecadca2272a0429e34b4d26a19df485c509509f8dd919eecec428c4db2e",
+      "README.md": "036413f4d380411a723191d0a7369b840cc1d9b6cca3e0319b6b2bfa0e9c8f45"
+    },
+    "elision": {
+      "upstream": "https://github.com/RosaeNLG/rosaenlg",
+      "commit": "ff38d3275e86567142506592d6e14ce679bf70e3",
+      "path": "packages/french-contractions",
+      "license": "CC-BY-SA-3.0 (h list); Apache-2.0 (reference code); CC-BY-4.0 (upstream README)",
+      "modification": "2026-11-06: lexical h-aspire list read as data, by lemma so inflected aspirated-h forms retain their lexical behavior; y contraction rule projected independently; original reference code is not executed"
+    }
+  },
+  "metadata_source_bytes": 367485,
+  "metadata_gzip_bytes": 76393,
+  "metadata_coverage": {
+    "verbs": 7826,
+    "group_status": {
+      "supported": 7806,
+      "unconfirmed": 20
+    },
+    "auxiliary_status": {
+      "not_applicable": 139,
+      "supported": 7687
+    },
+    "ordinary_status": {
+      "not_applicable": 139,
+      "supported": 7687
+    },
+    "groups": {
+      "1": 7097,
+      "2": 313,
+      "3": 396,
+      "None": 20
+    },
+    "missing_lemmas": [
+      "_error",
+      "revoici",
+      "revoilà",
+      "uw",
+      "uwSe",
+      "voici",
+      "voilà"
+    ],
+    "unconfirmed_auxiliary_lemmas": [],
+    "corrections": [
+      "accourir",
+      "aller",
+      "avenir",
+      "choir",
+      "demeurer",
+      "descendre",
+      "forclore",
+      "occire",
+      "paître",
+      "ressortir",
+      "rester",
+      "stupéfaire"
+    ],
+    "excluded_source_rows": 0,
+    "forms": "Unfiltered Lefff source rows; unresolved or malformed-looking forms retain provenance."
+  }
+}

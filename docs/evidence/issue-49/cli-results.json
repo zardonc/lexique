@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "cases": [
+    "test_sommes_preserves_both_lemmas_and_all_slots",
+    "test_typographic_expressions_preserve_original_forms_and_identities",
+    "test_english_meanings_preserve_source_senses_and_missing_tables",
+    "test_pronominal_compounds_label_agreement_and_preserve_whole_expressions",
+    "test_regular_coloring_spans_follow_the_spec_independently_of_storage_cuts",
+    "test_missing_forms_and_accent_distinctions",
+    "test_ordinary_compounds_cover_each_block_and_whole_subject_expressions"
+  ],
+  "tests": 7,
+  "resource": "target\\issue-49\\package-extracted-20261107\\Lexique-0.1.0-windows-x64-portable-speech\\conjugation\\conjugation.sqlite3",
+  "cli": "target\\issue-49\\package-resource-rebuild-20261107\\scripts\\conjugation_sample.py",
+  "boundary": "existing independent public CLI assertions on the extracted database using only converters and inputs rebuilt from the package",
+  "failures": []
+}

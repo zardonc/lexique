@@ -25,6 +25,12 @@ class PortableTests(unittest.TestCase):
         struct.pack_into("<H", binary, 0x84, 0x8664)
         self.write("target/release/lexique-desktop.exe", binary)
         self.write("target/release/dictionary/dictionary.sqlite3", b"verified dictionary")
+        self.write("target/release/conjugation/conjugation.sqlite3", b"verified conjugation")
+        self.write("target/release/conjugation/LICENSE-LGPLLR", b"source forms license")
+        self.write("target/release/conjugation/grammalecte-2.3.0/LICENSE-GPL3", b"metadata license")
+        self.write("target/desktop-conjugation-v6-stats/report.json", json.dumps({
+            "sqlite_sha256": hashlib.sha256(b"verified conjugation").hexdigest(),
+        }).encode())
         self.write("target/desktop-dictionary-sample/report.json", json.dumps({
             "sqlite_sha256": hashlib.sha256(b"verified dictionary").hexdigest(),
         }).encode())
@@ -56,6 +62,8 @@ class PortableTests(unittest.TestCase):
             for path, digest in checksums.items():
                 self.assertEqual(hashlib.sha256(zipped.read(prefix + path)).hexdigest(), digest)
             self.assertEqual(zipped.read(prefix + "dictionary/COPYING"), b"original resource license")
+            self.assertEqual(zipped.read(prefix + "conjugation/conjugation.sqlite3"), b"verified conjugation")
+            self.assertEqual(zipped.read(prefix + "conjugation/grammalecte-2.3.0/LICENSE-GPL3"), b"metadata license")
             self.assertEqual(zipped.read(prefix + "LICENSE"), b"project license")
             self.assertFalse(any("Lexique-data" in path for path in zipped.namelist()))
             description = zipped.read(prefix + "README.txt").decode("utf-8")
@@ -88,6 +96,13 @@ class PortableTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "dictionary"):
             package(self.root)
         self.assertEqual(self.files(), before)
+
+    def test_mismatched_conjugation_fails_before_creating_delivery(self):
+        self.write("target/release/conjugation/conjugation.sqlite3", b"changed conjugation")
+        before = self.files()
+        with self.assertRaisesRegex(ValueError, "conjugation"):
+            package(self.root)
+        self.assertEqual(self.files(), before)
         self.assertFalse(self.output.exists())
 
     def test_invalid_executable_and_wrong_architecture_preserve_inputs(self):
@@ -115,6 +130,9 @@ class PortableTests(unittest.TestCase):
         struct.pack_into("<H", binary, 0x84, 0xAA64)
         self.write("target/aarch64-pc-windows-msvc/release/lexique-desktop.exe", binary)
         self.write("target/aarch64-pc-windows-msvc/release/dictionary/dictionary.sqlite3", b"verified dictionary")
+        self.write("target/aarch64-pc-windows-msvc/release/conjugation/conjugation.sqlite3", b"verified conjugation")
+        self.write("target/aarch64-pc-windows-msvc/release/conjugation/LICENSE-LGPLLR", b"source forms license")
+        self.write("target/aarch64-pc-windows-msvc/release/conjugation/grammalecte-2.3.0/LICENSE-GPL3", b"metadata license")
         result = package(self.root, architecture="arm64")
         with zipfile.ZipFile(result["archive"]) as zipped:
             prefix = "Lexique-0.1.0-windows-arm64-portable/"

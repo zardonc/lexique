@@ -1,10 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
 import { Volume2 } from 'lucide-react';
 import type { RuntimeAdapter } from './platform/runtime';
-import type { NotebookText } from './notebook-content';
 import { errorMessage } from './platform/vocabulary';
 
-export function SpeechButton({ word, runtime, text }: { readonly word: string; readonly runtime: RuntimeAdapter; readonly text: NotebookText }) {
+export function SpeechButton({ word, runtime, text, onStart }: {
+  readonly word: string; readonly runtime: RuntimeAdapter;
+  readonly text: { readonly playWord: string; readonly machineVoice: string; readonly preview: string; readonly playbackError: string };
+  readonly onStart?: (cancel: () => void) => void;
+}) {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState('');
   const player = useRef<HTMLAudioElement | null>(null);
@@ -31,6 +34,8 @@ export function SpeechButton({ word, runtime, text }: { readonly word: string; r
     finally { if (current === request.current) setBusy(false); }
   }
   return <span><button type="button" title={`${text.playWord} (${text.machineVoice})`} aria-label={`${text.playWord}: ${word} (${text.machineVoice})`} disabled={busy}
-    onClick={() => { release(); void play(); }}><Volume2 size={18} aria-hidden="true" /></button>
+    onClick={() => {
+      onStart?.(() => { request.current += 1; release(); setBusy(false); }); release(); void play();
+    }}><Volume2 size={18} aria-hidden="true" /></button>
     {error && <span role="alert">{text.playbackError}: {error}</span>}</span>;
 }

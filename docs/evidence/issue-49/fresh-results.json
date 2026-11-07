@@ -1,0 +1,413 @@
+{
+  "status": "PASS",
+  "freshPackage": true,
+  "firstLaunchMs": 1068.2551999999998,
+  "webview": "157.0.4341.42",
+  "firstLaunchLearningRecords": 0,
+  "played": [
+    {
+      "text": "je paie",
+      "voice": "female",
+      "version": "cff3170d418f38b05e77000d4659ccaa9b45add9186466f470bf911c6e424e7a",
+      "bytes": 8312,
+      "ogg": [
+        79,
+        103,
+        103,
+        83
+      ],
+      "rate": 1,
+      "currentTime": 0.088812
+    },
+    {
+      "text": "je paye",
+      "voice": "female",
+      "version": "9dc1d0b21a058b29e537bb7f25a63886740936dbe952edbf08ab4fa1474e7c54",
+      "bytes": 9507,
+      "ogg": [
+        79,
+        103,
+        103,
+        83
+      ],
+      "rate": 1,
+      "currentTime": 0.297975
+    },
+    {
+      "text": "je suis allé",
+      "voice": "female",
+      "version": "be6862c618b299e63f1a82aec432e87cd9fa32435ed0da3aa362947cd5ee6d6c",
+      "bytes": 11101,
+      "ogg": [
+        79,
+        103,
+        103,
+        83
+      ],
+      "rate": 1,
+      "currentTime": 0.272101
+    },
+    {
+      "text": "je suis allée",
+      "voice": "female",
+      "version": "f9127c0bcee34ed496758c37ac512288d0e5fec6a06d16943e4f0d16fc0b235f",
+      "bytes": 11507,
+      "ogg": [
+        79,
+        103,
+        103,
+        83
+      ],
+      "rate": 1,
+      "currentTime": 0.262419
+    },
+    {
+      "text": "je me lave",
+      "voice": "female",
+      "version": "623bec384b7cd579bb5f6637502a82973254d1f281bbf80bcffde5c5ccab4cee",
+      "bytes": 7461,
+      "ogg": [
+        79,
+        103,
+        103,
+        83
+      ],
+      "rate": 1,
+      "currentTime": 0.252402
+    },
+    {
+      "text": "lave-toi",
+      "voice": "female",
+      "version": "1417518017317f792c625a6061e355b85fc082da9c84617182dc8120907c9517",
+      "bytes": 7242,
+      "ogg": [
+        79,
+        103,
+        103,
+        83
+      ],
+      "rate": 1,
+      "currentTime": 0.245429
+    },
+    {
+      "text": "elles se sont abstenues",
+      "voice": "female",
+      "version": "10f0d0e20e6e1292fc490e461bb5b837b9d74278184f5ad4ff17192459433fc3",
+      "bytes": 11975,
+      "ogg": [
+        79,
+        103,
+        103,
+        83
+      ],
+      "rate": 1,
+      "currentTime": 0.228483
+    },
+    {
+      "text": "va-t’en",
+      "voice": "female",
+      "version": "85c6babab9b83373556b27516462c21277661323b45740a0ad404dfff7f297af",
+      "bytes": 9419,
+      "ogg": [
+        79,
+        103,
+        103,
+        83
+      ],
+      "rate": 1,
+      "currentTime": 0.250286
+    }
+  ],
+  "displayed": [
+    {
+      "query": "paie",
+      "count": 218,
+      "maxCharacters": 22
+    },
+    {
+      "query": "je suis allée",
+      "count": 255,
+      "maxCharacters": 24
+    },
+    {
+      "query": "je me lave",
+      "count": 439,
+      "maxCharacters": 29
+    },
+    {
+      "query": "elles se sont abstenues",
+      "count": 273,
+      "maxCharacters": 32
+    },
+    {
+      "query": "va-t’en",
+      "count": 273,
+      "maxCharacters": 32
+    }
+  ],
+  "voiceSpeed": {
+    "slow": {
+      "text": "je paie",
+      "voice": "male",
+      "version": "1c818c1e7bd18825ee9d37587f53e1ea70234042b2bec1e0f01df75e04322db8",
+      "bytes": 8891,
+      "ogg": [
+        79,
+        103,
+        103,
+        83
+      ],
+      "rate": 0.6,
+      "currentTime": 0.14209
+    },
+    "normal": {
+      "text": "je paie",
+      "voice": "male",
+      "version": "1c818c1e7bd18825ee9d37587f53e1ea70234042b2bec1e0f01df75e04322db8",
+      "bytes": 8891,
+      "ogg": [
+        79,
+        103,
+        103,
+        83
+      ],
+      "rate": 1,
+      "currentTime": 0.03188
+    },
+    "sameAudio": true,
+    "restored": {
+      "voice": "female",
+      "speed": "normal"
+    }
+  },
+  "navigation": [
+    "dictionary to conjugation",
+    "conjugation to dictionary"
+  ],
+  "languages": [
+    "zh",
+    "fr",
+    "en"
+  ],
+  "themes": [
+    "white",
+    "sepia",
+    "dark"
+  ],
+  "preferences": {
+    "mode": "ending",
+    "customOrder": [
+      "P",
+      "PC",
+      "I",
+      "F",
+      "C",
+      "S",
+      "J",
+      "PQP",
+      "PA",
+      "FA",
+      "CP",
+      "SP",
+      "T",
+      "SQP",
+      "Y",
+      "YP",
+      "W",
+      "WP",
+      "G",
+      "K",
+      "KP",
+      "GP",
+      "GPP"
+    ],
+    "restoredAcrossVerbs": true,
+    "thirdGroupUncolored": true,
+    "resetRestored": true
+  },
+  "retention": [
+    {
+      "spec": {
+        "text": "je paie",
+        "context": "word",
+        "language": "fr",
+        "engine": "sherpa-onnx/2.0.1+ort/1.28.2",
+        "model": "supertonic-3/int8/c3eb91414d5ff8a7a239b7fe9e34e7e2bf8a8140d8375ffb14718b1c639325db/c7befd5ea8c3119769e8a6c1486c4edc6a3bc8365c67621c881bbb774b9902ff/20cd86fa5c6effedfda0e7cffe5b0569ca401c440a0c3a1d72bf39286c0db3fd/e923d60f53f95eb1ce235f1dc33ec56d9c057823c96fa6f8acf98f32b0da6152/42078d3aef1cd43ab43021f3c54f47d2d75ceb4e75f627f118890128b06a0d09/8402ca48e5189a8950138580b0fff64db6f072f24ac07cd54ba8b2fbb9883b30/67d5209b0ee8ce6c74105ffbe12fe6a7628aea3b4ba2fcb308a4a67938a93ce8",
+        "preprocessing": "nfc/y-i-grec/v1",
+        "voice": "female",
+        "speed": 1,
+        "steps": 8,
+        "encoding": "ogg-opus/opus-1.6.1+libopusenc-0.3",
+        "bitrate": 48000
+      },
+      "generatedAt": 1794069856,
+      "expiresAt": 1794674656,
+      "owned": 0,
+      "publishing": 0,
+      "gcState": "live"
+    },
+    {
+      "spec": {
+        "text": "je paye",
+        "context": "word",
+        "language": "fr",
+        "engine": "sherpa-onnx/2.0.1+ort/1.28.2",
+        "model": "supertonic-3/int8/c3eb91414d5ff8a7a239b7fe9e34e7e2bf8a8140d8375ffb14718b1c639325db/c7befd5ea8c3119769e8a6c1486c4edc6a3bc8365c67621c881bbb774b9902ff/20cd86fa5c6effedfda0e7cffe5b0569ca401c440a0c3a1d72bf39286c0db3fd/e923d60f53f95eb1ce235f1dc33ec56d9c057823c96fa6f8acf98f32b0da6152/42078d3aef1cd43ab43021f3c54f47d2d75ceb4e75f627f118890128b06a0d09/8402ca48e5189a8950138580b0fff64db6f072f24ac07cd54ba8b2fbb9883b30/67d5209b0ee8ce6c74105ffbe12fe6a7628aea3b4ba2fcb308a4a67938a93ce8",
+        "preprocessing": "nfc/y-i-grec/v1",
+        "voice": "female",
+        "speed": 1,
+        "steps": 8,
+        "encoding": "ogg-opus/opus-1.6.1+libopusenc-0.3",
+        "bitrate": 48000
+      },
+      "generatedAt": 1794069858,
+      "expiresAt": 1794674658,
+      "owned": 0,
+      "publishing": 0,
+      "gcState": "live"
+    },
+    {
+      "spec": {
+        "text": "je suis allé",
+        "context": "word",
+        "language": "fr",
+        "engine": "sherpa-onnx/2.0.1+ort/1.28.2",
+        "model": "supertonic-3/int8/c3eb91414d5ff8a7a239b7fe9e34e7e2bf8a8140d8375ffb14718b1c639325db/c7befd5ea8c3119769e8a6c1486c4edc6a3bc8365c67621c881bbb774b9902ff/20cd86fa5c6effedfda0e7cffe5b0569ca401c440a0c3a1d72bf39286c0db3fd/e923d60f53f95eb1ce235f1dc33ec56d9c057823c96fa6f8acf98f32b0da6152/42078d3aef1cd43ab43021f3c54f47d2d75ceb4e75f627f118890128b06a0d09/8402ca48e5189a8950138580b0fff64db6f072f24ac07cd54ba8b2fbb9883b30/67d5209b0ee8ce6c74105ffbe12fe6a7628aea3b4ba2fcb308a4a67938a93ce8",
+        "preprocessing": "nfc/y-i-grec/v1",
+        "voice": "female",
+        "speed": 1,
+        "steps": 8,
+        "encoding": "ogg-opus/opus-1.6.1+libopusenc-0.3",
+        "bitrate": 48000
+      },
+      "generatedAt": 1794069859,
+      "expiresAt": 1794674659,
+      "owned": 0,
+      "publishing": 0,
+      "gcState": "live"
+    },
+    {
+      "spec": {
+        "text": "je suis allée",
+        "context": "word",
+        "language": "fr",
+        "engine": "sherpa-onnx/2.0.1+ort/1.28.2",
+        "model": "supertonic-3/int8/c3eb91414d5ff8a7a239b7fe9e34e7e2bf8a8140d8375ffb14718b1c639325db/c7befd5ea8c3119769e8a6c1486c4edc6a3bc8365c67621c881bbb774b9902ff/20cd86fa5c6effedfda0e7cffe5b0569ca401c440a0c3a1d72bf39286c0db3fd/e923d60f53f95eb1ce235f1dc33ec56d9c057823c96fa6f8acf98f32b0da6152/42078d3aef1cd43ab43021f3c54f47d2d75ceb4e75f627f118890128b06a0d09/8402ca48e5189a8950138580b0fff64db6f072f24ac07cd54ba8b2fbb9883b30/67d5209b0ee8ce6c74105ffbe12fe6a7628aea3b4ba2fcb308a4a67938a93ce8",
+        "preprocessing": "nfc/y-i-grec/v1",
+        "voice": "female",
+        "speed": 1,
+        "steps": 8,
+        "encoding": "ogg-opus/opus-1.6.1+libopusenc-0.3",
+        "bitrate": 48000
+      },
+      "generatedAt": 1794069860,
+      "expiresAt": 1794674660,
+      "owned": 0,
+      "publishing": 0,
+      "gcState": "live"
+    },
+    {
+      "spec": {
+        "text": "je me lave",
+        "context": "word",
+        "language": "fr",
+        "engine": "sherpa-onnx/2.0.1+ort/1.28.2",
+        "model": "supertonic-3/int8/c3eb91414d5ff8a7a239b7fe9e34e7e2bf8a8140d8375ffb14718b1c639325db/c7befd5ea8c3119769e8a6c1486c4edc6a3bc8365c67621c881bbb774b9902ff/20cd86fa5c6effedfda0e7cffe5b0569ca401c440a0c3a1d72bf39286c0db3fd/e923d60f53f95eb1ce235f1dc33ec56d9c057823c96fa6f8acf98f32b0da6152/42078d3aef1cd43ab43021f3c54f47d2d75ceb4e75f627f118890128b06a0d09/8402ca48e5189a8950138580b0fff64db6f072f24ac07cd54ba8b2fbb9883b30/67d5209b0ee8ce6c74105ffbe12fe6a7628aea3b4ba2fcb308a4a67938a93ce8",
+        "preprocessing": "nfc/y-i-grec/v1",
+        "voice": "female",
+        "speed": 1,
+        "steps": 8,
+        "encoding": "ogg-opus/opus-1.6.1+libopusenc-0.3",
+        "bitrate": 48000
+      },
+      "generatedAt": 1794069861,
+      "expiresAt": 1794674661,
+      "owned": 0,
+      "publishing": 0,
+      "gcState": "live"
+    },
+    {
+      "spec": {
+        "text": "lave-toi",
+        "context": "word",
+        "language": "fr",
+        "engine": "sherpa-onnx/2.0.1+ort/1.28.2",
+        "model": "supertonic-3/int8/c3eb91414d5ff8a7a239b7fe9e34e7e2bf8a8140d8375ffb14718b1c639325db/c7befd5ea8c3119769e8a6c1486c4edc6a3bc8365c67621c881bbb774b9902ff/20cd86fa5c6effedfda0e7cffe5b0569ca401c440a0c3a1d72bf39286c0db3fd/e923d60f53f95eb1ce235f1dc33ec56d9c057823c96fa6f8acf98f32b0da6152/42078d3aef1cd43ab43021f3c54f47d2d75ceb4e75f627f118890128b06a0d09/8402ca48e5189a8950138580b0fff64db6f072f24ac07cd54ba8b2fbb9883b30/67d5209b0ee8ce6c74105ffbe12fe6a7628aea3b4ba2fcb308a4a67938a93ce8",
+        "preprocessing": "nfc/y-i-grec/v1",
+        "voice": "female",
+        "speed": 1,
+        "steps": 8,
+        "encoding": "ogg-opus/opus-1.6.1+libopusenc-0.3",
+        "bitrate": 48000
+      },
+      "generatedAt": 1794069862,
+      "expiresAt": 1794674662,
+      "owned": 0,
+      "publishing": 0,
+      "gcState": "live"
+    },
+    {
+      "spec": {
+        "text": "elles se sont abstenues",
+        "context": "word",
+        "language": "fr",
+        "engine": "sherpa-onnx/2.0.1+ort/1.28.2",
+        "model": "supertonic-3/int8/c3eb91414d5ff8a7a239b7fe9e34e7e2bf8a8140d8375ffb14718b1c639325db/c7befd5ea8c3119769e8a6c1486c4edc6a3bc8365c67621c881bbb774b9902ff/20cd86fa5c6effedfda0e7cffe5b0569ca401c440a0c3a1d72bf39286c0db3fd/e923d60f53f95eb1ce235f1dc33ec56d9c057823c96fa6f8acf98f32b0da6152/42078d3aef1cd43ab43021f3c54f47d2d75ceb4e75f627f118890128b06a0d09/8402ca48e5189a8950138580b0fff64db6f072f24ac07cd54ba8b2fbb9883b30/67d5209b0ee8ce6c74105ffbe12fe6a7628aea3b4ba2fcb308a4a67938a93ce8",
+        "preprocessing": "nfc/y-i-grec/v1",
+        "voice": "female",
+        "speed": 1,
+        "steps": 8,
+        "encoding": "ogg-opus/opus-1.6.1+libopusenc-0.3",
+        "bitrate": 48000
+      },
+      "generatedAt": 1794069863,
+      "expiresAt": 1794674663,
+      "owned": 0,
+      "publishing": 0,
+      "gcState": "live"
+    },
+    {
+      "spec": {
+        "text": "va-t’en",
+        "context": "word",
+        "language": "fr",
+        "engine": "sherpa-onnx/2.0.1+ort/1.28.2",
+        "model": "supertonic-3/int8/c3eb91414d5ff8a7a239b7fe9e34e7e2bf8a8140d8375ffb14718b1c639325db/c7befd5ea8c3119769e8a6c1486c4edc6a3bc8365c67621c881bbb774b9902ff/20cd86fa5c6effedfda0e7cffe5b0569ca401c440a0c3a1d72bf39286c0db3fd/e923d60f53f95eb1ce235f1dc33ec56d9c057823c96fa6f8acf98f32b0da6152/42078d3aef1cd43ab43021f3c54f47d2d75ceb4e75f627f118890128b06a0d09/8402ca48e5189a8950138580b0fff64db6f072f24ac07cd54ba8b2fbb9883b30/67d5209b0ee8ce6c74105ffbe12fe6a7628aea3b4ba2fcb308a4a67938a93ce8",
+        "preprocessing": "nfc/y-i-grec/v1",
+        "voice": "female",
+        "speed": 1,
+        "steps": 8,
+        "encoding": "ogg-opus/opus-1.6.1+libopusenc-0.3",
+        "bitrate": 48000
+      },
+      "generatedAt": 1794069864,
+      "expiresAt": 1794674664,
+      "owned": 0,
+      "publishing": 0,
+      "gcState": "live"
+    },
+    {
+      "spec": {
+        "text": "je paie",
+        "context": "word",
+        "language": "fr",
+        "engine": "sherpa-onnx/2.0.1+ort/1.28.2",
+        "model": "supertonic-3/int8/c3eb91414d5ff8a7a239b7fe9e34e7e2bf8a8140d8375ffb14718b1c639325db/c7befd5ea8c3119769e8a6c1486c4edc6a3bc8365c67621c881bbb774b9902ff/20cd86fa5c6effedfda0e7cffe5b0569ca401c440a0c3a1d72bf39286c0db3fd/e923d60f53f95eb1ce235f1dc33ec56d9c057823c96fa6f8acf98f32b0da6152/42078d3aef1cd43ab43021f3c54f47d2d75ceb4e75f627f118890128b06a0d09/8402ca48e5189a8950138580b0fff64db6f072f24ac07cd54ba8b2fbb9883b30/67d5209b0ee8ce6c74105ffbe12fe6a7628aea3b4ba2fcb308a4a67938a93ce8",
+        "preprocessing": "nfc/y-i-grec/v1",
+        "voice": "male",
+        "speed": 1,
+        "steps": 8,
+        "encoding": "ogg-opus/opus-1.6.1+libopusenc-0.3",
+        "bitrate": 48000
+      },
+      "generatedAt": 1794069865,
+      "expiresAt": 1794674665,
+      "owned": 0,
+      "publishing": 0,
+      "gcState": "live"
+    }
+  ],
+  "implicitSaves": 0,
+  "implicitCards": 0,
+  "offlineAcceptance": "Pending user test with network blocked"
+}

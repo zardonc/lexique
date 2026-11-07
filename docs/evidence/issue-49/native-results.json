@@ -1,0 +1,1180 @@
+{
+  "functional_status": "PASS",
+  "date": "2026-11-07",
+  "windows": "Windows 11 Home 10.0.26300 x64",
+  "webview": "157.0.4341.42",
+  "reader_sha256": "a0433d9b42179fd087c4d546b4233b7c4c0365d85810a5fec410cddf103d966e",
+  "resource_sha256": "336c89ed51b214389d925b9091b78ed03d075fa64b45d876b3bfd85b9207a3df",
+  "flow": {
+    "status": "PASS",
+    "restart": true,
+    "normalized_restart": true,
+    "timings": {
+      "query": "elles se sont abstenues",
+      "first_ms": 52.400000005960464,
+      "warm_ms": [
+        64,
+        65,
+        53.20000001788139,
+        50.69999998807907,
+        48.5
+      ],
+      "boundary": "native IPC; first invocation and subsequent invocations, no OS cache flush"
+    },
+    "coloring": [
+      {
+        "query": "nous avions lavé",
+        "verbal": [
+          "avions lavé"
+        ],
+        "main": [
+          "lavé"
+        ],
+        "ending": [
+          "é"
+        ]
+      },
+      {
+        "query": "lavais",
+        "verbal": [
+          "lavais"
+        ],
+        "main": [
+          "lavais"
+        ],
+        "ending": [
+          "ais"
+        ]
+      },
+      {
+        "query": "sois-toi lavé",
+        "verbal": [
+          "sois",
+          "lavé"
+        ],
+        "main": [
+          "lavé"
+        ],
+        "ending": [
+          "é"
+        ]
+      },
+      {
+        "query": "en se lavant",
+        "verbal": [
+          "lavant"
+        ],
+        "main": [
+          "lavant"
+        ],
+        "ending": [
+          "ant"
+        ]
+      },
+      {
+        "query": "va-t’en",
+        "verbal": [
+          "va"
+        ],
+        "main": [
+          "va"
+        ],
+        "ending": []
+      }
+    ],
+    "modesRestored": [
+      "main",
+      "verbal",
+      "ending"
+    ],
+    "preferenceFailures": [
+      "write",
+      "invalid IPC",
+      "corrupt settings",
+      "unavailable storage"
+    ],
+    "blockOrder": {
+      "custom": [
+        "P",
+        "PC",
+        "I",
+        "F",
+        "C",
+        "S",
+        "J",
+        "PQP",
+        "PA",
+        "FA",
+        "CP",
+        "SP",
+        "T",
+        "SQP",
+        "Y",
+        "YP",
+        "W",
+        "WP",
+        "G",
+        "K",
+        "KP",
+        "GP",
+        "GPP"
+      ],
+      "priority": [
+        "P",
+        "PC",
+        "I",
+        "F",
+        "C",
+        "S",
+        "PQP"
+      ],
+      "verbs": [
+        "laver",
+        "falloir",
+        "se laver"
+      ],
+      "keyboard": true,
+      "resetRestored": true,
+      "failures": [
+        "write",
+        "invalid IPC",
+        "corrupt JSON",
+        "invalid saved order",
+        "unavailable storage"
+      ]
+    },
+    "preserved": {
+      "records": 6,
+      "cards": 12,
+      "audioFiles": 7
+    },
+    "queries": [
+      {
+        "query": "avons aimé",
+        "candidates": [
+          {
+            "lemma": "aimer",
+            "cells": 100,
+            "meaning_status": "available"
+          }
+        ]
+      },
+      {
+        "query": "aie aimé",
+        "candidates": [
+          {
+            "lemma": "aimer",
+            "cells": 100,
+            "meaning_status": "available"
+          }
+        ]
+      },
+      {
+        "query": "je suis allée",
+        "candidates": [
+          {
+            "lemma": "aller",
+            "cells": 170,
+            "meaning_status": "available"
+          }
+        ]
+      },
+      {
+        "query": "en ayant aimé",
+        "candidates": [
+          {
+            "lemma": "aimer",
+            "cells": 100,
+            "meaning_status": "available"
+          }
+        ]
+      },
+      {
+        "query": "j’ai abélisé",
+        "candidates": [
+          {
+            "lemma": "abéliser",
+            "cells": 100,
+            "meaning_status": "unavailable"
+          }
+        ]
+      },
+      {
+        "query": "je suis monté",
+        "candidates": [
+          {
+            "lemma": "monter",
+            "cells": 218,
+            "meaning_status": "available"
+          }
+        ]
+      },
+      {
+        "query": "j’ai monté",
+        "candidates": [
+          {
+            "lemma": "monter",
+            "cells": 218,
+            "meaning_status": "available"
+          }
+        ]
+      },
+      {
+        "query": "j’habite",
+        "candidates": [
+          {
+            "lemma": "habiter",
+            "cells": 100,
+            "meaning_status": "available"
+          }
+        ]
+      },
+      {
+        "query": "je hais",
+        "candidates": [
+          {
+            "lemma": "haïr",
+            "cells": 100,
+            "meaning_status": "available"
+          }
+        ]
+      },
+      {
+        "query": "gésir",
+        "candidates": [
+          {
+            "lemma": "gésir",
+            "cells": 27,
+            "meaning_status": "unavailable"
+          }
+        ]
+      },
+      {
+        "query": "j’occirai",
+        "candidates": [
+          {
+            "lemma": "occire",
+            "cells": 65,
+            "meaning_status": "unavailable"
+          }
+        ]
+      },
+      {
+        "query": "ayons chu",
+        "candidates": [
+          {
+            "lemma": "choir",
+            "cells": 210,
+            "meaning_status": "unavailable"
+          }
+        ]
+      },
+      {
+        "query": "il est avenu",
+        "candidates": [
+          {
+            "lemma": "avenir",
+            "cells": 63,
+            "meaning_status": "unavailable"
+          }
+        ]
+      },
+      {
+        "query": "j’ai pu",
+        "candidates": [
+          {
+            "lemma": "paître",
+            "cells": 88,
+            "meaning_status": "unavailable"
+          },
+          {
+            "lemma": "pouvoir",
+            "cells": 93,
+            "meaning_status": "available"
+          }
+        ]
+      },
+      {
+        "query": "aie occis",
+        "candidates": [
+          {
+            "lemma": "occire",
+            "cells": 65,
+            "meaning_status": "unavailable"
+          }
+        ]
+      },
+      {
+        "query": "il stupéfait",
+        "candidates": [
+          {
+            "lemma": "stupéfaire",
+            "cells": 56,
+            "meaning_status": "unavailable"
+          }
+        ]
+      },
+      {
+        "query": "aie stupéfait",
+        "candidates": [
+          {
+            "lemma": "stupéfaire",
+            "cells": 56,
+            "meaning_status": "unavailable"
+          }
+        ]
+      },
+      {
+        "query": "aie forclos",
+        "candidates": [
+          {
+            "lemma": "forclore",
+            "cells": 53,
+            "meaning_status": "unavailable"
+          }
+        ]
+      },
+      {
+        "query": "j’abstiens",
+        "candidates": []
+      },
+      {
+        "query": "j’ai parvenu",
+        "candidates": []
+      },
+      {
+        "query": "je avons aimé",
+        "candidates": []
+      },
+      {
+        "query": "sommes",
+        "candidates": [
+          {
+            "lemma": "sommer",
+            "cells": 100,
+            "meaning_status": "available"
+          },
+          {
+            "lemma": "être",
+            "cells": 99,
+            "meaning_status": "available"
+          }
+        ]
+      },
+      {
+        "query": "suis",
+        "candidates": [
+          {
+            "lemma": "suivre",
+            "cells": 108,
+            "meaning_status": "available"
+          },
+          {
+            "lemma": "être",
+            "cells": 99,
+            "meaning_status": "available"
+          }
+        ]
+      },
+      {
+        "query": "paie",
+        "candidates": [
+          {
+            "lemma": "payer",
+            "cells": 121,
+            "meaning_status": "available"
+          }
+        ]
+      },
+      {
+        "query": "falloir",
+        "candidates": [
+          {
+            "lemma": "falloir",
+            "cells": 20,
+            "meaning_status": "unavailable"
+          }
+        ]
+      },
+      {
+        "query": "enfuir",
+        "candidates": [
+          {
+            "lemma": "enfuir",
+            "cells": 51,
+            "meaning_status": "available"
+          }
+        ]
+      },
+      {
+        "query": "voilà",
+        "candidates": [
+          {
+            "lemma": "voilà",
+            "cells": 2,
+            "meaning_status": "unavailable"
+          }
+        ]
+      },
+      {
+        "query": "SOMMES",
+        "candidates": [
+          {
+            "lemma": "sommer",
+            "cells": 100,
+            "meaning_status": "available"
+          },
+          {
+            "lemma": "être",
+            "cells": 99,
+            "meaning_status": "available"
+          }
+        ]
+      },
+      {
+        "query": "' OR 1=1 --",
+        "candidates": []
+      },
+      {
+        "query": "se laver",
+        "candidates": [
+          {
+            "lemma": "se laver",
+            "cells": 244,
+            "meaning_status": "unavailable"
+          }
+        ]
+      },
+      {
+        "query": "elles se sont abstenues",
+        "candidates": [
+          {
+            "lemma": "s’abstenir",
+            "cells": 184,
+            "meaning_status": "available"
+          }
+        ]
+      },
+      {
+        "query": "elles se sont parlé",
+        "candidates": [
+          {
+            "lemma": "se parler",
+            "cells": 97,
+            "meaning_status": "available"
+          }
+        ]
+      },
+      {
+        "query": "va-t’en",
+        "candidates": [
+          {
+            "lemma": "s’en aller",
+            "cells": 184,
+            "meaning_status": "available"
+          }
+        ]
+      },
+      {
+        "query": " SOMMES ",
+        "candidates": [
+          {
+            "lemma": "sommer",
+            "cells": 100,
+            "meaning_status": "available"
+          },
+          {
+            "lemma": "être",
+            "cells": 99,
+            "meaning_status": "available"
+          }
+        ]
+      },
+      {
+        "query": " ABSTENUES ",
+        "candidates": [
+          {
+            "lemma": "abstenir",
+            "cells": 51,
+            "meaning_status": "available"
+          },
+          {
+            "lemma": "s’abstenir",
+            "cells": 184,
+            "meaning_status": "available"
+          }
+        ]
+      },
+      {
+        "query": " ÊTRE ",
+        "candidates": [
+          {
+            "lemma": "être",
+            "cells": 99,
+            "meaning_status": "available"
+          }
+        ]
+      },
+      {
+        "query": "  J'AI  ABÉLISÉ  ",
+        "candidates": [
+          {
+            "lemma": "abéliser",
+            "cells": 100,
+            "meaning_status": "unavailable"
+          }
+        ]
+      },
+      {
+        "query": " QUE  J'AIME ",
+        "candidates": [
+          {
+            "lemma": "aimer",
+            "cells": 100,
+            "meaning_status": "available"
+          }
+        ]
+      },
+      {
+        "query": " ELLES SE  SONT ABSTENUES ",
+        "candidates": [
+          {
+            "lemma": "s’abstenir",
+            "cells": 184,
+            "meaning_status": "available"
+          }
+        ]
+      },
+      {
+        "query": " VA-T'EN ",
+        "candidates": [
+          {
+            "lemma": "s’en aller",
+            "cells": 184,
+            "meaning_status": "available"
+          }
+        ]
+      },
+      {
+        "query": " S'ABSTENIR ",
+        "candidates": [
+          {
+            "lemma": "s’abstenir",
+            "cells": 184,
+            "meaning_status": "available"
+          }
+        ]
+      },
+      {
+        "query": "V’LÀ",
+        "candidates": [
+          {
+            "lemma": "voilà",
+            "cells": 2,
+            "meaning_status": "unavailable"
+          }
+        ]
+      },
+      {
+        "query": "ETE",
+        "candidates": []
+      },
+      {
+        "query": " J'AI AIME ",
+        "candidates": []
+      },
+      {
+        "query": " JE AVONS AIMÉ ",
+        "candidates": []
+      },
+      {
+        "query": " JE SE LAVE ",
+        "candidates": []
+      },
+      {
+        "query": "ELLES SE SONT ABSTENUS",
+        "candidates": []
+      },
+      {
+        "query": " AIMÉ AVONS ",
+        "candidates": []
+      }
+    ]
+  },
+  "speech": {
+    "status": "PASS",
+    "speech": true,
+    "restart": true,
+    "cancellation": "previous clip paused; pending table response ignored; concurrent dictionary playback retained",
+    "played": [
+      {
+        "text": "je paie",
+        "voice": "female",
+        "version": "bf32b29ebd879106fd3dfdb641b3ac31cb490081760db307b9f6d4ae59f736c9",
+        "bytes": 9555,
+        "ogg": [
+          79,
+          103,
+          103,
+          83
+        ],
+        "rate": 1,
+        "currentTime": 0.011363
+      },
+      {
+        "text": "je paye",
+        "voice": "female",
+        "version": "e73bd6f15f3de3f4ab478c92df0e2562e2f689a0d60a6c3fe0cefc9c961d6ede",
+        "bytes": 9109,
+        "ogg": [
+          79,
+          103,
+          103,
+          83
+        ],
+        "rate": 1,
+        "currentTime": 0.01166
+      },
+      {
+        "text": "je suis allé",
+        "voice": "female",
+        "version": "c7e45bcc11ec7ea835570c0b49ae750abc1286c4dfa269f1c367ba5a2d580bbb",
+        "bytes": 9219,
+        "ogg": [
+          79,
+          103,
+          103,
+          83
+        ],
+        "rate": 1,
+        "currentTime": 0.007575
+      },
+      {
+        "text": "je suis allée",
+        "voice": "female",
+        "version": "f153ddd831ed68e5842296db6d2404d8286c7bac6a4935206e5225d79a1a730e",
+        "bytes": 10075,
+        "ogg": [
+          79,
+          103,
+          103,
+          83
+        ],
+        "rate": 1,
+        "currentTime": 0.008337
+      },
+      {
+        "text": "je me lave",
+        "voice": "female",
+        "version": "554f4b42351c491c56ccc7681d48eff584876a6587e3c9682a2dd8fe3249c1e1",
+        "bytes": 7418,
+        "ogg": [
+          79,
+          103,
+          103,
+          83
+        ],
+        "rate": 1,
+        "currentTime": 0.017283
+      },
+      {
+        "text": "lave-toi",
+        "voice": "female",
+        "version": "52247ba2e948ecc2a07282980fa064e3b667a8b76ac3697e6607dc6e80e9d533",
+        "bytes": 8704,
+        "ogg": [
+          79,
+          103,
+          103,
+          83
+        ],
+        "rate": 1,
+        "currentTime": 0.599982
+      },
+      {
+        "text": "elles se sont abstenues",
+        "voice": "female",
+        "version": "90e5dca523a8f97e8fa8b4609505dcf5e15061321f5ef2d61ebbbd8b87383ad9",
+        "bytes": 12504,
+        "ogg": [
+          79,
+          103,
+          103,
+          83
+        ],
+        "rate": 1,
+        "currentTime": 0.601029
+      },
+      {
+        "text": "va-t’en",
+        "voice": "female",
+        "version": "c9b21777d7bc4539758b72506dffd2618f80bd66eef603f91933e285b045b062",
+        "bytes": 9357,
+        "ogg": [
+          79,
+          103,
+          103,
+          83
+        ],
+        "rate": 1,
+        "currentTime": 0.014881
+      }
+    ],
+    "displayed": [
+      {
+        "query": "paie",
+        "count": 218,
+        "maxCharacters": 22
+      },
+      {
+        "query": "je suis allée",
+        "count": 255,
+        "maxCharacters": 24
+      },
+      {
+        "query": "je me lave",
+        "count": 439,
+        "maxCharacters": 29
+      },
+      {
+        "query": "elles se sont abstenues",
+        "count": 273,
+        "maxCharacters": 32
+      },
+      {
+        "query": "va-t’en",
+        "count": 273,
+        "maxCharacters": 32
+      }
+    ],
+    "preferences": {
+      "slow": {
+        "text": "je paie",
+        "voice": "male",
+        "version": "87adf169e08d0dd9ae1543baee79b3415e2fc219e77170e8e3a7a2e5e4ccae6a",
+        "bytes": 8273,
+        "ogg": [
+          79,
+          103,
+          103,
+          83
+        ],
+        "rate": 0.6,
+        "currentTime": 0.003401
+      },
+      "normal": {
+        "text": "je paie",
+        "voice": "male",
+        "version": "87adf169e08d0dd9ae1543baee79b3415e2fc219e77170e8e3a7a2e5e4ccae6a",
+        "bytes": 8273,
+        "ogg": [
+          79,
+          103,
+          103,
+          83
+        ],
+        "rate": 1,
+        "currentTime": 0.014552
+      },
+      "sameAudio": true,
+      "restored": {
+        "voice": "female",
+        "speed": "normal"
+      },
+      "coloring": {
+        "mode": "ending"
+      },
+      "order": [
+        "P",
+        "PC",
+        "I",
+        "F",
+        "C",
+        "S",
+        "PQP",
+        "J",
+        "PA",
+        "FA",
+        "CP",
+        "SP",
+        "T",
+        "SQP",
+        "Y",
+        "YP",
+        "W",
+        "WP",
+        "G",
+        "K",
+        "KP",
+        "GP",
+        "GPP"
+      ]
+    },
+    "resourceFailure": "missing speech bundle; visible failure and successful retry after restoration",
+    "recovered": {
+      "text": "en ayant parlé",
+      "voice": "female",
+      "version": "56302a2424ee859f095cef126479387ce1b58f672de13af07e1e0e3d42397322",
+      "bytes": 8570,
+      "ogg": [
+        79,
+        103,
+        103,
+        83
+      ],
+      "rate": 1,
+      "currentTime": 0.424014
+    },
+    "retention": [
+      {
+        "spec": {
+          "text": "nous avions lavé",
+          "context": "word",
+          "language": "fr",
+          "engine": "sherpa-onnx/2.0.1+ort/1.28.2",
+          "model": "supertonic-3/int8/c3eb91414d5ff8a7a239b7fe9e34e7e2bf8a8140d8375ffb14718b1c639325db/c7befd5ea8c3119769e8a6c1486c4edc6a3bc8365c67621c881bbb774b9902ff/20cd86fa5c6effedfda0e7cffe5b0569ca401c440a0c3a1d72bf39286c0db3fd/e923d60f53f95eb1ce235f1dc33ec56d9c057823c96fa6f8acf98f32b0da6152/42078d3aef1cd43ab43021f3c54f47d2d75ceb4e75f627f118890128b06a0d09/8402ca48e5189a8950138580b0fff64db6f072f24ac07cd54ba8b2fbb9883b30/67d5209b0ee8ce6c74105ffbe12fe6a7628aea3b4ba2fcb308a4a67938a93ce8",
+          "preprocessing": "nfc/y-i-grec/v1",
+          "voice": "female",
+          "speed": 1,
+          "steps": 8,
+          "encoding": "ogg-opus/opus-1.6.1+libopusenc-0.3",
+          "bitrate": 48000
+        },
+        "generatedAt": 1794070857,
+        "expiresAt": 1794675657,
+        "owned": 0,
+        "publishing": 0,
+        "gcState": "live"
+      },
+      {
+        "spec": {
+          "text": "je paie",
+          "context": "word",
+          "language": "fr",
+          "engine": "sherpa-onnx/2.0.1+ort/1.28.2",
+          "model": "supertonic-3/int8/c3eb91414d5ff8a7a239b7fe9e34e7e2bf8a8140d8375ffb14718b1c639325db/c7befd5ea8c3119769e8a6c1486c4edc6a3bc8365c67621c881bbb774b9902ff/20cd86fa5c6effedfda0e7cffe5b0569ca401c440a0c3a1d72bf39286c0db3fd/e923d60f53f95eb1ce235f1dc33ec56d9c057823c96fa6f8acf98f32b0da6152/42078d3aef1cd43ab43021f3c54f47d2d75ceb4e75f627f118890128b06a0d09/8402ca48e5189a8950138580b0fff64db6f072f24ac07cd54ba8b2fbb9883b30/67d5209b0ee8ce6c74105ffbe12fe6a7628aea3b4ba2fcb308a4a67938a93ce8",
+          "preprocessing": "nfc/y-i-grec/v1",
+          "voice": "female",
+          "speed": 1,
+          "steps": 8,
+          "encoding": "ogg-opus/opus-1.6.1+libopusenc-0.3",
+          "bitrate": 48000
+        },
+        "generatedAt": 1794070858,
+        "expiresAt": 1794675658,
+        "owned": 0,
+        "publishing": 0,
+        "gcState": "live"
+      },
+      {
+        "spec": {
+          "text": "je paye",
+          "context": "word",
+          "language": "fr",
+          "engine": "sherpa-onnx/2.0.1+ort/1.28.2",
+          "model": "supertonic-3/int8/c3eb91414d5ff8a7a239b7fe9e34e7e2bf8a8140d8375ffb14718b1c639325db/c7befd5ea8c3119769e8a6c1486c4edc6a3bc8365c67621c881bbb774b9902ff/20cd86fa5c6effedfda0e7cffe5b0569ca401c440a0c3a1d72bf39286c0db3fd/e923d60f53f95eb1ce235f1dc33ec56d9c057823c96fa6f8acf98f32b0da6152/42078d3aef1cd43ab43021f3c54f47d2d75ceb4e75f627f118890128b06a0d09/8402ca48e5189a8950138580b0fff64db6f072f24ac07cd54ba8b2fbb9883b30/67d5209b0ee8ce6c74105ffbe12fe6a7628aea3b4ba2fcb308a4a67938a93ce8",
+          "preprocessing": "nfc/y-i-grec/v1",
+          "voice": "female",
+          "speed": 1,
+          "steps": 8,
+          "encoding": "ogg-opus/opus-1.6.1+libopusenc-0.3",
+          "bitrate": 48000
+        },
+        "generatedAt": 1794070860,
+        "expiresAt": 1794675660,
+        "owned": 0,
+        "publishing": 0,
+        "gcState": "live"
+      },
+      {
+        "spec": {
+          "text": "je suis allé",
+          "context": "word",
+          "language": "fr",
+          "engine": "sherpa-onnx/2.0.1+ort/1.28.2",
+          "model": "supertonic-3/int8/c3eb91414d5ff8a7a239b7fe9e34e7e2bf8a8140d8375ffb14718b1c639325db/c7befd5ea8c3119769e8a6c1486c4edc6a3bc8365c67621c881bbb774b9902ff/20cd86fa5c6effedfda0e7cffe5b0569ca401c440a0c3a1d72bf39286c0db3fd/e923d60f53f95eb1ce235f1dc33ec56d9c057823c96fa6f8acf98f32b0da6152/42078d3aef1cd43ab43021f3c54f47d2d75ceb4e75f627f118890128b06a0d09/8402ca48e5189a8950138580b0fff64db6f072f24ac07cd54ba8b2fbb9883b30/67d5209b0ee8ce6c74105ffbe12fe6a7628aea3b4ba2fcb308a4a67938a93ce8",
+          "preprocessing": "nfc/y-i-grec/v1",
+          "voice": "female",
+          "speed": 1,
+          "steps": 8,
+          "encoding": "ogg-opus/opus-1.6.1+libopusenc-0.3",
+          "bitrate": 48000
+        },
+        "generatedAt": 1794070861,
+        "expiresAt": 1794675661,
+        "owned": 0,
+        "publishing": 0,
+        "gcState": "live"
+      },
+      {
+        "spec": {
+          "text": "je suis allée",
+          "context": "word",
+          "language": "fr",
+          "engine": "sherpa-onnx/2.0.1+ort/1.28.2",
+          "model": "supertonic-3/int8/c3eb91414d5ff8a7a239b7fe9e34e7e2bf8a8140d8375ffb14718b1c639325db/c7befd5ea8c3119769e8a6c1486c4edc6a3bc8365c67621c881bbb774b9902ff/20cd86fa5c6effedfda0e7cffe5b0569ca401c440a0c3a1d72bf39286c0db3fd/e923d60f53f95eb1ce235f1dc33ec56d9c057823c96fa6f8acf98f32b0da6152/42078d3aef1cd43ab43021f3c54f47d2d75ceb4e75f627f118890128b06a0d09/8402ca48e5189a8950138580b0fff64db6f072f24ac07cd54ba8b2fbb9883b30/67d5209b0ee8ce6c74105ffbe12fe6a7628aea3b4ba2fcb308a4a67938a93ce8",
+          "preprocessing": "nfc/y-i-grec/v1",
+          "voice": "female",
+          "speed": 1,
+          "steps": 8,
+          "encoding": "ogg-opus/opus-1.6.1+libopusenc-0.3",
+          "bitrate": 48000
+        },
+        "generatedAt": 1794070862,
+        "expiresAt": 1794675662,
+        "owned": 0,
+        "publishing": 0,
+        "gcState": "live"
+      },
+      {
+        "spec": {
+          "text": "je me lave",
+          "context": "word",
+          "language": "fr",
+          "engine": "sherpa-onnx/2.0.1+ort/1.28.2",
+          "model": "supertonic-3/int8/c3eb91414d5ff8a7a239b7fe9e34e7e2bf8a8140d8375ffb14718b1c639325db/c7befd5ea8c3119769e8a6c1486c4edc6a3bc8365c67621c881bbb774b9902ff/20cd86fa5c6effedfda0e7cffe5b0569ca401c440a0c3a1d72bf39286c0db3fd/e923d60f53f95eb1ce235f1dc33ec56d9c057823c96fa6f8acf98f32b0da6152/42078d3aef1cd43ab43021f3c54f47d2d75ceb4e75f627f118890128b06a0d09/8402ca48e5189a8950138580b0fff64db6f072f24ac07cd54ba8b2fbb9883b30/67d5209b0ee8ce6c74105ffbe12fe6a7628aea3b4ba2fcb308a4a67938a93ce8",
+          "preprocessing": "nfc/y-i-grec/v1",
+          "voice": "female",
+          "speed": 1,
+          "steps": 8,
+          "encoding": "ogg-opus/opus-1.6.1+libopusenc-0.3",
+          "bitrate": 48000
+        },
+        "generatedAt": 1794070863,
+        "expiresAt": 1794675663,
+        "owned": 0,
+        "publishing": 0,
+        "gcState": "live"
+      },
+      {
+        "spec": {
+          "text": "lave-toi",
+          "context": "word",
+          "language": "fr",
+          "engine": "sherpa-onnx/2.0.1+ort/1.28.2",
+          "model": "supertonic-3/int8/c3eb91414d5ff8a7a239b7fe9e34e7e2bf8a8140d8375ffb14718b1c639325db/c7befd5ea8c3119769e8a6c1486c4edc6a3bc8365c67621c881bbb774b9902ff/20cd86fa5c6effedfda0e7cffe5b0569ca401c440a0c3a1d72bf39286c0db3fd/e923d60f53f95eb1ce235f1dc33ec56d9c057823c96fa6f8acf98f32b0da6152/42078d3aef1cd43ab43021f3c54f47d2d75ceb4e75f627f118890128b06a0d09/8402ca48e5189a8950138580b0fff64db6f072f24ac07cd54ba8b2fbb9883b30/67d5209b0ee8ce6c74105ffbe12fe6a7628aea3b4ba2fcb308a4a67938a93ce8",
+          "preprocessing": "nfc/y-i-grec/v1",
+          "voice": "female",
+          "speed": 1,
+          "steps": 8,
+          "encoding": "ogg-opus/opus-1.6.1+libopusenc-0.3",
+          "bitrate": 48000
+        },
+        "generatedAt": 1794070865,
+        "expiresAt": 1794675665,
+        "owned": 0,
+        "publishing": 0,
+        "gcState": "live"
+      },
+      {
+        "spec": {
+          "text": "elles se sont abstenues",
+          "context": "word",
+          "language": "fr",
+          "engine": "sherpa-onnx/2.0.1+ort/1.28.2",
+          "model": "supertonic-3/int8/c3eb91414d5ff8a7a239b7fe9e34e7e2bf8a8140d8375ffb14718b1c639325db/c7befd5ea8c3119769e8a6c1486c4edc6a3bc8365c67621c881bbb774b9902ff/20cd86fa5c6effedfda0e7cffe5b0569ca401c440a0c3a1d72bf39286c0db3fd/e923d60f53f95eb1ce235f1dc33ec56d9c057823c96fa6f8acf98f32b0da6152/42078d3aef1cd43ab43021f3c54f47d2d75ceb4e75f627f118890128b06a0d09/8402ca48e5189a8950138580b0fff64db6f072f24ac07cd54ba8b2fbb9883b30/67d5209b0ee8ce6c74105ffbe12fe6a7628aea3b4ba2fcb308a4a67938a93ce8",
+          "preprocessing": "nfc/y-i-grec/v1",
+          "voice": "female",
+          "speed": 1,
+          "steps": 8,
+          "encoding": "ogg-opus/opus-1.6.1+libopusenc-0.3",
+          "bitrate": 48000
+        },
+        "generatedAt": 1794070867,
+        "expiresAt": 1794675667,
+        "owned": 0,
+        "publishing": 0,
+        "gcState": "live"
+      },
+      {
+        "spec": {
+          "text": "va-t’en",
+          "context": "word",
+          "language": "fr",
+          "engine": "sherpa-onnx/2.0.1+ort/1.28.2",
+          "model": "supertonic-3/int8/c3eb91414d5ff8a7a239b7fe9e34e7e2bf8a8140d8375ffb14718b1c639325db/c7befd5ea8c3119769e8a6c1486c4edc6a3bc8365c67621c881bbb774b9902ff/20cd86fa5c6effedfda0e7cffe5b0569ca401c440a0c3a1d72bf39286c0db3fd/e923d60f53f95eb1ce235f1dc33ec56d9c057823c96fa6f8acf98f32b0da6152/42078d3aef1cd43ab43021f3c54f47d2d75ceb4e75f627f118890128b06a0d09/8402ca48e5189a8950138580b0fff64db6f072f24ac07cd54ba8b2fbb9883b30/67d5209b0ee8ce6c74105ffbe12fe6a7628aea3b4ba2fcb308a4a67938a93ce8",
+          "preprocessing": "nfc/y-i-grec/v1",
+          "voice": "female",
+          "speed": 1,
+          "steps": 8,
+          "encoding": "ogg-opus/opus-1.6.1+libopusenc-0.3",
+          "bitrate": 48000
+        },
+        "generatedAt": 1794070869,
+        "expiresAt": 1794675669,
+        "owned": 0,
+        "publishing": 0,
+        "gcState": "live"
+      },
+      {
+        "spec": {
+          "text": "je paie",
+          "context": "word",
+          "language": "fr",
+          "engine": "sherpa-onnx/2.0.1+ort/1.28.2",
+          "model": "supertonic-3/int8/c3eb91414d5ff8a7a239b7fe9e34e7e2bf8a8140d8375ffb14718b1c639325db/c7befd5ea8c3119769e8a6c1486c4edc6a3bc8365c67621c881bbb774b9902ff/20cd86fa5c6effedfda0e7cffe5b0569ca401c440a0c3a1d72bf39286c0db3fd/e923d60f53f95eb1ce235f1dc33ec56d9c057823c96fa6f8acf98f32b0da6152/42078d3aef1cd43ab43021f3c54f47d2d75ceb4e75f627f118890128b06a0d09/8402ca48e5189a8950138580b0fff64db6f072f24ac07cd54ba8b2fbb9883b30/67d5209b0ee8ce6c74105ffbe12fe6a7628aea3b4ba2fcb308a4a67938a93ce8",
+          "preprocessing": "nfc/y-i-grec/v1",
+          "voice": "male",
+          "speed": 1,
+          "steps": 8,
+          "encoding": "ogg-opus/opus-1.6.1+libopusenc-0.3",
+          "bitrate": 48000
+        },
+        "generatedAt": 1794070871,
+        "expiresAt": 1794675671,
+        "owned": 0,
+        "publishing": 0,
+        "gcState": "live"
+      },
+      {
+        "spec": {
+          "text": "en ayant parlé",
+          "context": "word",
+          "language": "fr",
+          "engine": "sherpa-onnx/2.0.1+ort/1.28.2",
+          "model": "supertonic-3/int8/c3eb91414d5ff8a7a239b7fe9e34e7e2bf8a8140d8375ffb14718b1c639325db/c7befd5ea8c3119769e8a6c1486c4edc6a3bc8365c67621c881bbb774b9902ff/20cd86fa5c6effedfda0e7cffe5b0569ca401c440a0c3a1d72bf39286c0db3fd/e923d60f53f95eb1ce235f1dc33ec56d9c057823c96fa6f8acf98f32b0da6152/42078d3aef1cd43ab43021f3c54f47d2d75ceb4e75f627f118890128b06a0d09/8402ca48e5189a8950138580b0fff64db6f072f24ac07cd54ba8b2fbb9883b30/67d5209b0ee8ce6c74105ffbe12fe6a7628aea3b4ba2fcb308a4a67938a93ce8",
+          "preprocessing": "nfc/y-i-grec/v1",
+          "voice": "female",
+          "speed": 1,
+          "steps": 8,
+          "encoding": "ogg-opus/opus-1.6.1+libopusenc-0.3",
+          "bitrate": 48000
+        },
+        "generatedAt": 1794070883,
+        "expiresAt": 1794675683,
+        "owned": 0,
+        "publishing": 0,
+        "gcState": "live"
+      }
+    ],
+    "review": {
+      "word": "école",
+      "recognition": true,
+      "listening": true,
+      "selectedAudioBytes": true,
+      "progressUnchanged": true
+    },
+    "preserved": {
+      "records": 6,
+      "cards": 12,
+      "progress": 12,
+      "existingAudioFiles": 7,
+      "references": true,
+      "selectedAudioVersions": true,
+      "notes": true
+    },
+    "limits": [
+      "No fresh disconnected-system acceptance",
+      "No other-platform execution",
+      "No additional voice-quality admission"
+    ]
+  },
+  "navigation": {
+    "status": "PASS",
+    "navigation": true,
+    "restart": true,
+    "selected": [
+      "laver",
+      "être",
+      "s’adapter"
+    ],
+    "originalQuery": " S'ADAPTER ",
+    "ambiguousCandidates": [
+      "suivre",
+      "être"
+    ],
+    "unavailable": [
+      "se laver dictionary entry",
+      "été noun link",
+      "faire l’amour conjugation link"
+    ],
+    "resourceFailures": [
+      "missing conjugation",
+      "corrupt conjugation",
+      "missing dictionary",
+      "corrupt dictionary"
+    ],
+    "edits": [
+      "stay",
+      "failed save retained",
+      "discard",
+      "save and leave",
+      "existing",
+      "conflict"
+    ],
+    "mode": "main",
+    "blockOrder": [
+      "P",
+      "PC",
+      "I",
+      "F",
+      "C",
+      "S",
+      "J",
+      "PQP",
+      "PA",
+      "FA",
+      "CP",
+      "SP",
+      "T",
+      "SQP",
+      "Y",
+      "YP",
+      "W",
+      "WP",
+      "G",
+      "K",
+      "KP",
+      "GP",
+      "GPP"
+    ],
+    "languages": [
+      "zh",
+      "fr",
+      "en"
+    ],
+    "themes": [
+      "white",
+      "sepia",
+      "dark"
+    ],
+    "preserved": {
+      "preExistingRecords": 6,
+      "records": 7,
+      "cards": 12,
+      "progress": 12,
+      "audioFiles": 7,
+      "references": true,
+      "selectedAudio": true,
+      "speechPreferences": true
+    }
+  },
+  "crashes": {
+    "method": "MINIDUMP_EXCEPTION_STREAM and module address ranges; no dump memory published",
+    "reports": [
+      {
+        "run": "native-fresh-20261107-2",
+        "exceptionCode": "0xc0000005",
+        "fault": {
+          "module": "RTSSHooks64.dll",
+          "offset": "0x1490af"
+        }
+      },
+      {
+        "run": "native-speech-20261107",
+        "exceptionCode": "0xc0000005",
+        "fault": {
+          "module": "RTSSHooks64.dll",
+          "offset": "0x1490af"
+        }
+      }
+    ]
+  },
+  "offline_acceptance": "Pending user network-blocked test",
+  "raw_reports": [
+    "target/issue-49/native-flow-20261107/report.json",
+    "target/issue-49/native-fresh-20261107-3/report.json",
+    "target/issue-49/native-speech-20261107-2/report.json",
+    "target/issue-49/native-navigation-20261107/report.json"
+  ]
+}

@@ -1,0 +1,578 @@
+{
+  "status": "PASS",
+  "restart": true,
+  "preserved": {
+    "records": 1,
+    "cards": 2,
+    "audioFiles": 3
+  },
+  "binary_sha256": "ec4e16e5d7d7479a404f12d663599a500dc8231b3de8f0de459f84129bcad6f3",
+  "resource_sha256": "230a9449b4d5042765c98f5a9fd24b1fa49745a0e46bd2dec354148dad31a3c9",
+  "checks": [
+    "English meanings in candidate choices and selected header",
+    "Unavailable meaning leaves 23 blocks and existing highlights usable",
+    "Explicit pronominal source headword and English sense",
+    "Normal shutdown/restart preserves records, cards, progress, speech preferences and selected audio bytes",
+    "Missing, corrupt and invalid resource errors stay visible"
+  ],
+  "queries": {
+    "avons aimé": [
+      {
+        "lemma": "aimer",
+        "meanings": {
+          "senses": [
+            {
+              "glosses": [
+                "love"
+              ],
+              "headword": "aimer",
+              "labels": [],
+              "source_entry": 1264,
+              "source_sense": 1,
+              "use": "ordinary"
+            },
+            {
+              "glosses": [
+                "appreciate",
+                "like"
+              ],
+              "headword": "aimer",
+              "labels": [],
+              "source_entry": 1264,
+              "source_sense": 2,
+              "use": "ordinary"
+            }
+          ],
+          "status": "available"
+        },
+        "matched_count": 1
+      }
+    ],
+    "aie aimé": [
+      {
+        "lemma": "aimer",
+        "meanings": {
+          "senses": [
+            {
+              "glosses": [
+                "love"
+              ],
+              "headword": "aimer",
+              "labels": [],
+              "source_entry": 1264,
+              "source_sense": 1,
+              "use": "ordinary"
+            },
+            {
+              "glosses": [
+                "appreciate",
+                "like"
+              ],
+              "headword": "aimer",
+              "labels": [],
+              "source_entry": 1264,
+              "source_sense": 2,
+              "use": "ordinary"
+            }
+          ],
+          "status": "available"
+        },
+        "matched_count": 2
+      }
+    ],
+    "je suis allée": [
+      {
+        "lemma": "aller",
+        "meanings": {
+          "senses": [
+            {
+              "glosses": [
+                "fare"
+              ],
+              "headword": "aller",
+              "labels": [],
+              "source_entry": 1313,
+              "source_sense": 1,
+              "use": "ordinary"
+            },
+            {
+              "glosses": [
+                "go",
+                "ride",
+                "travel"
+              ],
+              "headword": "aller",
+              "labels": [],
+              "source_entry": 1313,
+              "source_sense": 2,
+              "use": "ordinary"
+            }
+          ],
+          "status": "available"
+        },
+        "matched_count": 1
+      }
+    ],
+    "en ayant aimé": [
+      {
+        "lemma": "aimer",
+        "meanings": {
+          "senses": [
+            {
+              "glosses": [
+                "love"
+              ],
+              "headword": "aimer",
+              "labels": [],
+              "source_entry": 1264,
+              "source_sense": 1,
+              "use": "ordinary"
+            },
+            {
+              "glosses": [
+                "appreciate",
+                "like"
+              ],
+              "headword": "aimer",
+              "labels": [],
+              "source_entry": 1264,
+              "source_sense": 2,
+              "use": "ordinary"
+            }
+          ],
+          "status": "available"
+        },
+        "matched_count": 1
+      }
+    ],
+    "j’ai abélisé": [
+      {
+        "lemma": "abéliser",
+        "meanings": {
+          "senses": [],
+          "status": "unavailable"
+        },
+        "matched_count": 1
+      }
+    ],
+    "je suis monté": [
+      {
+        "lemma": "monter",
+        "meanings": {
+          "senses": [
+            {
+              "glosses": [
+                "get in",
+                "get into a car"
+              ],
+              "headword": "monter",
+              "labels": [],
+              "source_entry": 5371,
+              "source_sense": 1,
+              "use": "ordinary"
+            },
+            {
+              "glosses": [
+                "assemble",
+                "link",
+                "mount"
+              ],
+              "headword": "monter",
+              "labels": [],
+              "source_entry": 5371,
+              "source_sense": 2,
+              "use": "ordinary"
+            },
+            {
+              "glosses": [
+                "ascend",
+                "climb",
+                "scale"
+              ],
+              "headword": "monter",
+              "labels": [],
+              "source_entry": 5371,
+              "source_sense": 3,
+              "use": "ordinary"
+            }
+          ],
+          "status": "available"
+        },
+        "matched_count": 1
+      }
+    ],
+    "j’ai monté": [
+      {
+        "lemma": "monter",
+        "meanings": {
+          "senses": [
+            {
+              "glosses": [
+                "get in",
+                "get into a car"
+              ],
+              "headword": "monter",
+              "labels": [],
+              "source_entry": 5371,
+              "source_sense": 1,
+              "use": "ordinary"
+            },
+            {
+              "glosses": [
+                "assemble",
+                "link",
+                "mount"
+              ],
+              "headword": "monter",
+              "labels": [],
+              "source_entry": 5371,
+              "source_sense": 2,
+              "use": "ordinary"
+            },
+            {
+              "glosses": [
+                "ascend",
+                "climb",
+                "scale"
+              ],
+              "headword": "monter",
+              "labels": [],
+              "source_entry": 5371,
+              "source_sense": 3,
+              "use": "ordinary"
+            }
+          ],
+          "status": "available"
+        },
+        "matched_count": 1
+      }
+    ],
+    "j’habite": [
+      {
+        "lemma": "habiter",
+        "meanings": {
+          "senses": [
+            {
+              "glosses": [
+                "dwell",
+                "live"
+              ],
+              "headword": "habiter",
+              "labels": [],
+              "source_entry": 4385,
+              "source_sense": 1,
+              "use": "ordinary"
+            }
+          ],
+          "status": "available"
+        },
+        "matched_count": 2
+      }
+    ],
+    "je hais": [
+      {
+        "lemma": "haïr",
+        "meanings": {
+          "senses": [
+            {
+              "glosses": [
+                "abhor",
+                "abominate",
+                "loathe"
+              ],
+              "headword": "haïr",
+              "labels": [],
+              "source_entry": 4416,
+              "source_sense": 1,
+              "use": "ordinary"
+            },
+            {
+              "glosses": [
+                "hate"
+              ],
+              "headword": "haïr",
+              "labels": [],
+              "source_entry": 4416,
+              "source_sense": 2,
+              "use": "ordinary"
+            }
+          ],
+          "status": "available"
+        },
+        "matched_count": 1
+      }
+    ],
+    "gésir": [
+      {
+        "lemma": "gésir",
+        "meanings": {
+          "senses": [],
+          "status": "unavailable"
+        },
+        "matched_count": 1
+      }
+    ],
+    "j’occirai": [
+      {
+        "lemma": "occire",
+        "meanings": {
+          "senses": [],
+          "status": "unavailable"
+        },
+        "matched_count": 1
+      }
+    ],
+    "ayons chu": [
+      {
+        "lemma": "choir",
+        "meanings": {
+          "senses": [],
+          "status": "unavailable"
+        },
+        "matched_count": 2
+      }
+    ],
+    "il est avenu": [
+      {
+        "lemma": "avenir",
+        "meanings": {
+          "senses": [],
+          "status": "unavailable"
+        },
+        "matched_count": 1
+      }
+    ],
+    "j’ai pu": [
+      {
+        "lemma": "paître",
+        "meanings": {
+          "senses": [],
+          "status": "unavailable"
+        },
+        "matched_count": 1
+      },
+      {
+        "lemma": "pouvoir",
+        "meanings": {
+          "senses": [
+            {
+              "glosses": [
+                "be able to"
+              ],
+              "headword": "pouvoir",
+              "labels": [],
+              "source_entry": 6264,
+              "source_sense": 1,
+              "use": "ordinary"
+            }
+          ],
+          "status": "available"
+        },
+        "matched_count": 1
+      }
+    ],
+    "aie occis": [
+      {
+        "lemma": "occire",
+        "meanings": {
+          "senses": [],
+          "status": "unavailable"
+        },
+        "matched_count": 2
+      }
+    ],
+    "il stupéfait": [
+      {
+        "lemma": "stupéfaire",
+        "meanings": {
+          "senses": [],
+          "status": "unavailable"
+        },
+        "matched_count": 1
+      }
+    ],
+    "aie stupéfait": [
+      {
+        "lemma": "stupéfaire",
+        "meanings": {
+          "senses": [],
+          "status": "unavailable"
+        },
+        "matched_count": 2
+      }
+    ],
+    "aie forclos": [
+      {
+        "lemma": "forclore",
+        "meanings": {
+          "senses": [],
+          "status": "unavailable"
+        },
+        "matched_count": 2
+      }
+    ],
+    "j’abstiens": [],
+    "j’ai parvenu": [],
+    "je avons aimé": [],
+    "sommes": [
+      {
+        "lemma": "sommer",
+        "meanings": {
+          "senses": [
+            {
+              "glosses": [
+                "admonish",
+                "scold"
+              ],
+              "headword": "sommer",
+              "labels": [],
+              "source_entry": 7492,
+              "source_sense": 1,
+              "use": "ordinary"
+            },
+            {
+              "glosses": [
+                "command",
+                "order",
+                "tell"
+              ],
+              "headword": "sommer",
+              "labels": [],
+              "source_entry": 7492,
+              "source_sense": 2,
+              "use": "ordinary"
+            }
+          ],
+          "status": "available"
+        },
+        "matched_count": 2
+      },
+      {
+        "lemma": "être",
+        "meanings": {
+          "senses": [
+            {
+              "glosses": [
+                "be"
+              ],
+              "headword": "être",
+              "labels": [],
+              "source_entry": 8471,
+              "source_sense": 1,
+              "use": "ordinary"
+            }
+          ],
+          "status": "available"
+        },
+        "matched_count": 1
+      }
+    ],
+    "suis": [
+      {
+        "lemma": "suivre",
+        "meanings": {
+          "senses": [
+            {
+              "glosses": [
+                "act on",
+                "act upon",
+                "follow",
+                "observe"
+              ],
+              "headword": "suivre",
+              "labels": [],
+              "source_entry": 7651,
+              "source_sense": 1,
+              "use": "ordinary"
+            }
+          ],
+          "status": "available"
+        },
+        "matched_count": 3
+      },
+      {
+        "lemma": "être",
+        "meanings": {
+          "senses": [
+            {
+              "glosses": [
+                "be"
+              ],
+              "headword": "être",
+              "labels": [],
+              "source_entry": 8471,
+              "source_sense": 1,
+              "use": "ordinary"
+            }
+          ],
+          "status": "available"
+        },
+        "matched_count": 1
+      }
+    ],
+    "paie": [
+      {
+        "lemma": "payer",
+        "meanings": {
+          "senses": [
+            {
+              "glosses": [
+                "pay"
+              ],
+              "headword": "payer",
+              "labels": [],
+              "source_entry": 5932,
+              "source_sense": 1,
+              "use": "ordinary"
+            }
+          ],
+          "status": "available"
+        },
+        "matched_count": 5
+      }
+    ],
+    "falloir": [
+      {
+        "lemma": "falloir",
+        "meanings": {
+          "senses": [],
+          "status": "unavailable"
+        },
+        "matched_count": 1
+      }
+    ],
+    "enfuir": [
+      {
+        "lemma": "enfuir",
+        "meanings": {
+          "senses": [
+            {
+              "glosses": [
+                "abscond"
+              ],
+              "headword": "s'enfuir",
+              "labels": [],
+              "source_entry": 7142,
+              "source_sense": 1,
+              "use": "pronominal"
+            }
+          ],
+          "status": "available"
+        },
+        "matched_count": 1
+      }
+    ],
+    "voilà": [
+      {
+        "lemma": "voilà",
+        "meanings": {
+          "senses": [],
+          "status": "unavailable"
+        },
+        "matched_count": 1
+      }
+    ],
+    "SOMMES": [],
+    "' OR 1=1 --": []
+  }
+}

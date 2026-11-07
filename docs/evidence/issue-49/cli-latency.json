@@ -1,0 +1,162 @@
+{
+  "date": "2026-11-07",
+  "baseline_commit": "d0dd143",
+  "review_fixed_point": "88d628e",
+  "before": {
+    "query": "elles se sont abstenues",
+    "python": "3.14.10",
+    "platform": "Windows",
+    "architecture": "AMD64",
+    "samples_ms": [
+      3871.236,
+      1106.367,
+      1263.053,
+      1247.516,
+      1206.244,
+      1114.682
+    ],
+    "first_ms": 3871.236,
+    "warm_median_ms": 1206.244,
+    "warm_max_ms": 1263.053,
+    "budget_ms": 1700,
+    "within_budget": false,
+    "boundary": "six fresh CLI processes including source validation and response serialization; no OS cache flush"
+  },
+  "after": {
+    "query": "elles se sont abstenues",
+    "python": "3.14.10",
+    "platform": "Windows",
+    "architecture": "AMD64",
+    "samples_ms": [
+      965.009,
+      980.102,
+      892.163,
+      928.43,
+      947.487,
+      975.212
+    ],
+    "first_ms": 965.009,
+    "warm_median_ms": 947.487,
+    "warm_max_ms": 980.102,
+    "budget_ms": 1700,
+    "within_budget": true,
+    "boundary": "six fresh CLI processes including source validation and response serialization; no OS cache flush"
+  },
+  "profiles": {
+    "before": {
+      "total_seconds": 1.586497,
+      "resource_validation_seconds": 1.421207,
+      "syntax_loading_seconds": 0.49039,
+      "syntax_sort_calls": 19782,
+      "syntax_sort_seconds": 0.238108,
+      "json_loads_calls": 32949
+    },
+    "after": {
+      "total_seconds": 1.057987,
+      "resource_validation_seconds": 0.952921,
+      "syntax_loading_seconds": 0.18476,
+      "syntax_sort_calls": 125,
+      "syntax_sort_seconds": 0.000937,
+      "json_loads_calls": 22168
+    }
+  },
+  "resource": {
+    "prepared_directory": "target/desktop-conjugation-v6-cli",
+    "database_bytes": 11005952,
+    "sqlite_sha256": "336c89ed51b214389d925b9091b78ed03d075fa64b45d876b3bfd85b9207a3df",
+    "byte_identical_to_accepted_package": true,
+    "cells": 1451539,
+    "identities": 10781,
+    "models": 170,
+    "stem_references": 24307
+  },
+  "offline_acceptance": {
+    "status": "user_reported_pass",
+    "date": "2026-11-07",
+    "reported_result": "offline test passed",
+    "archive": "target/issue-49/offline-package-20261107/Lexique-0.1.0-windows-x64-portable-speech.zip",
+    "archive_sha256": "b606daccccd357f58ccc97d9dec24a9116feba2dd080df58f7a8a55ebbfc8c6e",
+    "machine_runtime_versions": null,
+    "network_block_method": null,
+    "per_step_logs": null
+  },
+  "reader_rebuild": {
+    "sha256": "3b7d7acfa43c16e09a8d9acf8564ecea83c98e289b3f61abc52b06102a000045",
+    "resource_sha256": "336c89ed51b214389d925b9091b78ed03d075fa64b45d876b3bfd85b9207a3df",
+    "accepted_reader_sha256": "a0433d9b42179fd087c4d546b4233b7c4c0365d85810a5fec410cddf103d966e",
+    "acceptance_applies_to_preserved_package": true
+  },
+  "final_prepared_resource": {
+    "query": "elles se sont abstenues",
+    "python": "3.14.10",
+    "platform": "Windows",
+    "architecture": "AMD64",
+    "samples_ms": [
+      1100.073,
+      1031.454,
+      855.563,
+      906.2,
+      1096.71,
+      936.198
+    ],
+    "first_ms": 1100.073,
+    "warm_median_ms": 936.198,
+    "warm_max_ms": 1096.71,
+    "budget_ms": 1700,
+    "within_budget": true,
+    "boundary": "six fresh CLI processes including source validation and response serialization; no OS cache flush"
+  },
+  "checks": [
+    {
+      "command": "pnpm test:conjugation",
+      "result": "passed",
+      "tests": 36,
+      "seconds": 324.138
+    },
+    {
+      "command": "pnpm rust:fmt",
+      "result": "passed"
+    },
+    {
+      "command": "pnpm rust:check",
+      "result": "passed",
+      "locked": true
+    },
+    {
+      "command": "pnpm rust:test:build; pnpm test:rust",
+      "result": "passed",
+      "tests": 143,
+      "separate_precompilation": true,
+      "execution_timeout_seconds": 60
+    },
+    {
+      "command": "pnpm desktop:build --no-bundle",
+      "result": "passed",
+      "target": "Windows x64",
+      "includes_production_frontend": true
+    },
+    {
+      "command": "pnpm test:build-args",
+      "result": "passed",
+      "tests": 2
+    },
+    {
+      "command": "python -X utf8 -m unittest discover -s scripts -p test_package_portable.py -v",
+      "result": "passed",
+      "tests": 8
+    },
+    {
+      "command": "pnpm test:speech:portable",
+      "environment": "TEMP=target/issue-49/cli-diagnosis-20261107/speech-package-tmp",
+      "result": "failed",
+      "reason": "Windows path-length limit in deep temporary output"
+    },
+    {
+      "command": "pnpm test:speech:portable",
+      "environment": "TEMP=target/i49tts-1107",
+      "result": "passed",
+      "tests": 3,
+      "skipped": 0
+    }
+  ]
+}

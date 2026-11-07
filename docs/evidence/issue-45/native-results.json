@@ -1,0 +1,96 @@
+{
+  "status": "PASS",
+  "restart": true,
+  "normalized_restart": true,
+  "timings": {
+    "query": "elles se sont abstenues",
+    "first_ms": 26.5,
+    "warm_ms": [
+      26.5,
+      28.399999991059303,
+      31.399999991059303,
+      30.600000008940697,
+      25.799999997019768
+    ],
+    "boundary": "native IPC; first invocation and subsequent invocations, no OS cache flush"
+  },
+  "coloring": [
+    {
+      "query": "nous avions lavé",
+      "verbal": [
+        "avions lavé"
+      ],
+      "main": [
+        "lavé"
+      ],
+      "ending": [
+        "é"
+      ]
+    },
+    {
+      "query": "lavais",
+      "verbal": [
+        "lavais"
+      ],
+      "main": [
+        "lavais"
+      ],
+      "ending": [
+        "ais"
+      ]
+    },
+    {
+      "query": "sois-toi lavé",
+      "verbal": [
+        "sois",
+        "lavé"
+      ],
+      "main": [
+        "lavé"
+      ],
+      "ending": [
+        "é"
+      ]
+    },
+    {
+      "query": "en se lavant",
+      "verbal": [
+        "lavant"
+      ],
+      "main": [
+        "lavant"
+      ],
+      "ending": [
+        "ant"
+      ]
+    },
+    {
+      "query": "va-t’en",
+      "verbal": [
+        "va"
+      ],
+      "main": [
+        "va"
+      ],
+      "ending": []
+    }
+  ],
+  "modesRestored": [
+    "main",
+    "verbal",
+    "ending"
+  ],
+  "preferenceFailures": [
+    "write",
+    "invalid IPC",
+    "corrupt settings",
+    "unavailable storage"
+  ],
+  "preserved": {
+    "records": 6,
+    "cards": 12,
+    "audioFiles": 7
+  },
+  "source_report": "target/issue-45/native-color-20261106-2/report.json",
+  "unavailable_storage_fixture": "app_metadata temporarily renamed in copied synthetic data; restored before restart"
+}

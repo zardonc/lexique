@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-06",
+  "environment": {
+    "os": "Windows-11-10.0.26300-SP0",
+    "processor": "AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD",
+    "python": "3.14.10",
+    "node": "24.22.1",
+    "pnpm": "11.25.0"
+  },
+  "command": "python -X utf8 scripts/conjugation_sample.py query target/desktop-conjugation-v5/conjugation.sqlite3 \"elles se sont abstenues\"",
+  "sampling": "Six fresh CLI processes following completed builds/tests; warm filesystem, not OS-cold disk or native IPC latency",
+  "sqlite_sha256": "16de3c23525ab1b9e6739f322e097557506c1066598289ce736d41a069abb489",
+  "build_ms": 20563,
+  "query_ms": [
+    10333,
+    2513,
+    2477,
+    2483,
+    2546,
+    2485
+  ],
+  "first_ms": 10333,
+  "warm_median_ms": 2485,
+  "warm_max_ms": 2546,
+  "budgets": {
+    "query_ms": 1700,
+    "native_snapshot_bytes": 268435456,
+    "reverse_index_bytes": 37748736
+  },
+  "results": {
+    "all_queries_within_budget": false,
+    "native_snapshot_within_bound": true,
+    "reverse_index_within_budget": true
+  }
+}

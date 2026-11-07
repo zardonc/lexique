@@ -1,0 +1,18 @@
+{
+  "resource": "freedict-fra-eng-0.4.1",
+  "source_file": "freedict-fra-eng-0.4.1.src.tar.xz",
+  "source_url": "https://download.freedict.org/dictionaries/fra-eng/0.4.1/freedict-fra-eng-0.4.1.src.tar.xz",
+  "source_sha512": "bf234cfc9aedea3e322ee9bc518f6b1addfcc4a96c6b9c42d2bd1de765ae2011b057888134c9c4361422d4632e289455c92c6c429fcfab566a95cdc49ac2a2fb",
+  "license": "GPL-2.0-or-later",
+  "entries": 8505,
+  "upstream": "https://github.com/freedict/fd-dictionaries",
+  "reference_commit": "5bdceeac8d0dba3298c1bebe734f60d54dad30f7",
+  "modified": "2026-11-06: verb-only English translation senses projected into a separate conjugation meaning field; exact headwords and source entry/sense ordinals retained",
+  "files": {
+    "freedict-fra-eng-0.4.1.src.tar.xz": "8c0a93910929c550acd5a6e0d8068561132f2fd0128a913aa72953f86d94810f",
+    "freedict-fra-eng-0.4.1.src.tar.xz.sha512": "51d2d6647c15d8ee0d010bc9cb70c859093122b5ca8138c8e2ab7fbaf3b0200b",
+    "COPYING": "91df39d1816bfb17a4dda2d3d2c83b1f6f2d38d53e53e41e8f97ad5ac46a0cad",
+    "AUTHORS": "ee9650f8397b65ef144eea5b9b95f7d8c1cae3548bc2449d3cdded35afb1a30f",
+    "README.md": "62fb2bf4331a0b2fbe8ce325e781fff3c06c7922a9045d284cc3312c3b29072f"
+  }
+}

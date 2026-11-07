@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import type { FormEvent } from 'react';
-import type { Messages } from './content';
+import type { Locale, Messages } from './content';
 import { dictionaryFailure } from './platform/dictionary';
 import type { DictionaryFailure, DictionaryLookup, DictionarySense } from './platform/dictionary';
 import type { RuntimeAdapter } from './platform/runtime';
@@ -9,6 +9,8 @@ import { errorMessage, snapshotFromLookup } from './platform/vocabulary';
 import type { VocabularyRecord } from './platform/vocabulary';
 import { VocabularySummary } from './vocabulary-view';
 import { SpeechButton } from './speech-button';
+import { DictionaryConjugation } from './conjugation-navigation';
+import type { ConjugationView, DictionaryView } from './conjugation-navigation';
 
 function Senses({ senses }: { readonly senses: readonly DictionarySense[] }) {
   return <ol className="dictionary-senses">{senses.map((sense, index) => <li key={index}>
@@ -18,13 +20,18 @@ function Senses({ senses }: { readonly senses: readonly DictionarySense[] }) {
   </li>)}</ol>;
 }
 
-export function DictionaryResults({ result, text }: { readonly result: DictionaryLookup; readonly text: Messages['dictionary'] }) {
+export function DictionaryResults({ result, text, navigation }: {
+  readonly result: DictionaryLookup; readonly text: Messages['dictionary'];
+  readonly navigation?: { readonly runtime: RuntimeAdapter; readonly locale: Locale; readonly previous?: ConjugationView; readonly onOpen: (view: ConjugationView) => void };
+}) {
   return <>
     <p role="status">{result.entries.length === 0 ? text.noMatch : `${text.records}: ${result.entries.length}`}</p>
-    {result.entries.map((entry) => <article className="dictionary-entry" key={entry.ordinal}>
-      <h3 lang="fr">{entry.key}</h3>
+    {result.entries.map((entry) => <article className="dictionary-entry" key={entry.ordinal} data-ordinal={entry.ordinal}>
+      <h3 lang="fr" tabIndex={-1}>{entry.key}</h3>
       <p className="dictionary-grammar">{entry.pronunciations.join(' · ')} {entry.grammar.join(' · ')}</p>
       <Senses senses={entry.senses} />
+      {navigation && entry.grammar.includes('v') && <DictionaryConjugation runtime={navigation.runtime} locale={navigation.locale}
+        dictionaryKey={entry.key} previous={navigation.previous} onOpen={navigation.onOpen} />}
     </article>)}
     <footer className="dictionary-source">
       <p>{text.source}: {result.source.title} · {result.source.version}</p>
@@ -79,24 +86,28 @@ export function RecordOriginal({ headword, runtime, text, title }: {
   </section>;
 }
 
-export function DictionaryPanel({ runtime, text, notebookText, version, onCollect, onOpen, beforeSearch }: {
+export function DictionaryPanel({ runtime, text, notebookText, version, onCollect, onOpen, beforeSearch, locale, initial, onConjugation }: {
   readonly runtime: RuntimeAdapter; readonly text: Messages['dictionary'];
   readonly notebookText: NotebookText; readonly version: number;
   readonly onCollect: (result: DictionaryLookup) => void; readonly onOpen: (record: VocabularyRecord) => void;
   readonly beforeSearch: (action: () => void) => void;
+  readonly locale: Locale; readonly initial?: DictionaryView; readonly onConjugation: (view: ConjugationView) => void;
 }) {
-  const [key, setKey] = useState('');
+  const [key, setKey] = useState(initial?.result.entries.find((entry) => entry.ordinal === initial.ordinal)?.key ?? '');
   const [loading, setLoading] = useState(false);
-  const [result, setResult] = useState<DictionaryLookup | null | undefined>();
+  const [result, setResult] = useState<DictionaryLookup | null | undefined>(initial?.result);
+  const [previous, setPrevious] = useState(() => initial?.conjugation);
   const [error, setError] = useState<DictionaryFailure>();
+  const panel = useRef<HTMLDivElement>(null);
+  useEffect(() => { if (initial) panel.current?.querySelector<HTMLHeadingElement>(`[data-ordinal="${initial.ordinal}"] h3`)?.focus(); }, [initial]);
   async function search(event: FormEvent) {
     event.preventDefault();
-    setLoading(true); setResult(undefined); setError(undefined);
+    setLoading(true); setResult(undefined); setPrevious(undefined); setError(undefined);
     try { setResult(await runtime.lookupDictionary(key)); }
     catch (cause) { setError(dictionaryFailure(cause)); }
     finally { setLoading(false); }
   }
-  return <div className="dictionary">
+  return <div className="dictionary" ref={panel}>
     <form onSubmit={(event) => { event.preventDefault(); beforeSearch(() => { void search(event); }); }}>
       <label htmlFor="dictionary-key">{text.label}</label>
       <div className="dictionary-search"><input id="dictionary-key" lang="fr" value={key} required maxLength={512}
@@ -112,7 +123,8 @@ export function DictionaryPanel({ runtime, text, notebookText, version, onCollec
     {result && <><Collection result={result} runtime={runtime} text={notebookText} version={version}
       onCollect={onCollect} onOpen={onOpen} />
       <section className="dictionary-original" aria-label={notebookText.original}>
-        <h3>{notebookText.original}</h3><DictionaryResults result={result} text={text} />
+        <h3>{notebookText.original}</h3><DictionaryResults result={result} text={text}
+          navigation={{ runtime, locale, previous, onOpen: onConjugation }} />
       </section></>}
   </div>;
 }

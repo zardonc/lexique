@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "date": "2026-11-06",
+  "input": "Git index bytes exported to a fresh task-owned workspace",
+  "files": 42,
+  "pinned_source_hash_validation": "PASS",
+  "sqlite_sha256": "16de3c23525ab1b9e6739f322e097557506c1066598289ce736d41a069abb489",
+  "command": "python -X utf8 scripts/conjugation_sample.py build <fresh-output>",
+  "timeout_seconds": 60
+}

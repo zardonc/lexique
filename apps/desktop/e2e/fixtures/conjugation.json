@@ -1,0 +1,5333 @@
+{
+  "sommes": {
+    "query": "sommes",
+    "tables": [
+      {
+        "lemma": "sommer",
+        "verb": {
+          "group": 1,
+          "group_status": "supported",
+          "auxiliaries": [
+            {
+              "lemma": "avoir",
+              "use": "ordinary active"
+            }
+          ],
+          "auxiliary_status": "supported",
+          "ordinary_status": "supported",
+          "usage_labels": [
+            "transitive"
+          ],
+          "source": {
+            "resource": "grammalecte-2.3.0",
+            "entry": "dVerb/sommer",
+            "raw_type": "1__t____a"
+          },
+          "correction": null
+        },
+        "cells": [
+          {
+            "source_line": 475035,
+            "form": "sommerions",
+            "lemma": "sommer",
+            "raw_tag": "C1p",
+            "tense": "C",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous sommerions"
+            ],
+            "coloring": {"sommerions":{"verbal":[[0,10]],"main":[0,10],"ending":[5,10]},"nous sommerions":{"verbal":[[5,15]],"main":[5,15],"ending":[10,15]}}
+          },
+          {
+            "source_line": 475030,
+            "form": "sommerais",
+            "lemma": "sommer",
+            "raw_tag": "C12s",
+            "tense": "C",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "je sommerais"
+            ],
+            "coloring": {"sommerais":{"verbal":[[0,9]],"main":[0,9],"ending":[5,9]},"je sommerais":{"verbal":[[3,12]],"main":[3,12],"ending":[8,12]}}
+          },
+          {
+            "source_line": 475034,
+            "form": "sommeriez",
+            "lemma": "sommer",
+            "raw_tag": "C2p",
+            "tense": "C",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous sommeriez"
+            ],
+            "coloring": {"sommeriez":{"verbal":[[0,9]],"main":[0,9],"ending":[5,9]},"vous sommeriez":{"verbal":[[5,14]],"main":[5,14],"ending":[10,14]}}
+          },
+          {
+            "source_line": 475030,
+            "form": "sommerais",
+            "lemma": "sommer",
+            "raw_tag": "C12s",
+            "tense": "C",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu sommerais"
+            ],
+            "coloring": {"sommerais":{"verbal":[[0,9]],"main":[0,9],"ending":[5,9]},"tu sommerais":{"verbal":[[3,12]],"main":[3,12],"ending":[8,12]}}
+          },
+          {
+            "source_line": 475029,
+            "form": "sommeraient",
+            "lemma": "sommer",
+            "raw_tag": "C3p",
+            "tense": "C",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils sommeraient",
+              "elles sommeraient"
+            ],
+            "coloring": {"sommeraient":{"verbal":[[0,11]],"main":[0,11],"ending":[5,11]},"ils sommeraient":{"verbal":[[4,15]],"main":[4,15],"ending":[9,15]},"elles sommeraient":{"verbal":[[6,17]],"main":[6,17],"ending":[11,17]}}
+          },
+          {
+            "source_line": 475031,
+            "form": "sommerait",
+            "lemma": "sommer",
+            "raw_tag": "C3s",
+            "tense": "C",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il sommerait",
+              "elle sommerait",
+              "on sommerait"
+            ],
+            "coloring": {"sommerait":{"verbal":[[0,9]],"main":[0,9],"ending":[5,9]},"il sommerait":{"verbal":[[3,12]],"main":[3,12],"ending":[8,12]},"elle sommerait":{"verbal":[[5,14]],"main":[5,14],"ending":[10,14]},"on sommerait":{"verbal":[[3,12]],"main":[3,12],"ending":[8,12]}}
+          },
+          {
+            "source_line": 475036,
+            "form": "sommerons",
+            "lemma": "sommer",
+            "raw_tag": "F1p",
+            "tense": "F",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous sommerons"
+            ],
+            "coloring": {"sommerons":{"verbal":[[0,9]],"main":[0,9],"ending":[5,9]},"nous sommerons":{"verbal":[[5,14]],"main":[5,14],"ending":[10,14]}}
+          },
+          {
+            "source_line": 475028,
+            "form": "sommerai",
+            "lemma": "sommer",
+            "raw_tag": "F1s",
+            "tense": "F",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "je sommerai"
+            ],
+            "coloring": {"sommerai":{"verbal":[[0,8]],"main":[0,8],"ending":[5,8]},"je sommerai":{"verbal":[[3,11]],"main":[3,11],"ending":[8,11]}}
+          },
+          {
+            "source_line": 475033,
+            "form": "sommerez",
+            "lemma": "sommer",
+            "raw_tag": "F2p",
+            "tense": "F",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous sommerez"
+            ],
+            "coloring": {"sommerez":{"verbal":[[0,8]],"main":[0,8],"ending":[5,8]},"vous sommerez":{"verbal":[[5,13]],"main":[5,13],"ending":[10,13]}}
+          },
+          {
+            "source_line": 475032,
+            "form": "sommeras",
+            "lemma": "sommer",
+            "raw_tag": "F2s",
+            "tense": "F",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu sommeras"
+            ],
+            "coloring": {"sommeras":{"verbal":[[0,8]],"main":[0,8],"ending":[5,8]},"tu sommeras":{"verbal":[[3,11]],"main":[3,11],"ending":[8,11]}}
+          },
+          {
+            "source_line": 475037,
+            "form": "sommeront",
+            "lemma": "sommer",
+            "raw_tag": "F3p",
+            "tense": "F",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils sommeront",
+              "elles sommeront"
+            ],
+            "coloring": {"sommeront":{"verbal":[[0,9]],"main":[0,9],"ending":[5,9]},"ils sommeront":{"verbal":[[4,13]],"main":[4,13],"ending":[9,13]},"elles sommeront":{"verbal":[[6,15]],"main":[6,15],"ending":[11,15]}}
+          },
+          {
+            "source_line": 475027,
+            "form": "sommera",
+            "lemma": "sommer",
+            "raw_tag": "F3s",
+            "tense": "F",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il sommera",
+              "elle sommera",
+              "on sommera"
+            ],
+            "coloring": {"sommera":{"verbal":[[0,7]],"main":[0,7],"ending":[5,7]},"il sommera":{"verbal":[[3,10]],"main":[3,10],"ending":[8,10]},"elle sommera":{"verbal":[[5,12]],"main":[5,12],"ending":[10,12]},"on sommera":{"verbal":[[3,10]],"main":[3,10],"ending":[8,10]}}
+          },
+          {
+            "source_line": 474959,
+            "form": "sommant",
+            "lemma": "sommer",
+            "raw_tag": "G",
+            "tense": "G",
+            "person": null,
+            "number": null,
+            "gender": null,
+            "expressions": [
+              "sommant"
+            ],
+            "coloring": {"sommant":{"verbal":[[0,7]],"main":[0,7],"ending":[4,7]}}
+          },
+          {
+            "source_line": 475050,
+            "form": "sommions",
+            "lemma": "sommer",
+            "raw_tag": "I1p",
+            "tense": "I",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous sommions"
+            ],
+            "coloring": {"sommions":{"verbal":[[0,8]],"main":[0,8],"ending":[4,8]},"nous sommions":{"verbal":[[5,13]],"main":[5,13],"ending":[9,13]}}
+          },
+          {
+            "source_line": 474957,
+            "form": "sommais",
+            "lemma": "sommer",
+            "raw_tag": "I12s",
+            "tense": "I",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "je sommais"
+            ],
+            "coloring": {"sommais":{"verbal":[[0,7]],"main":[0,7],"ending":[4,7]},"je sommais":{"verbal":[[3,10]],"main":[3,10],"ending":[7,10]}}
+          },
+          {
+            "source_line": 475048,
+            "form": "sommiez",
+            "lemma": "sommer",
+            "raw_tag": "I2p",
+            "tense": "I",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous sommiez"
+            ],
+            "coloring": {"sommiez":{"verbal":[[0,7]],"main":[0,7],"ending":[4,7]},"vous sommiez":{"verbal":[[5,12]],"main":[5,12],"ending":[9,12]}}
+          },
+          {
+            "source_line": 474957,
+            "form": "sommais",
+            "lemma": "sommer",
+            "raw_tag": "I12s",
+            "tense": "I",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu sommais"
+            ],
+            "coloring": {"sommais":{"verbal":[[0,7]],"main":[0,7],"ending":[4,7]},"tu sommais":{"verbal":[[3,10]],"main":[3,10],"ending":[7,10]}}
+          },
+          {
+            "source_line": 474951,
+            "form": "sommaient",
+            "lemma": "sommer",
+            "raw_tag": "I3p",
+            "tense": "I",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils sommaient",
+              "elles sommaient"
+            ],
+            "coloring": {"sommaient":{"verbal":[[0,9]],"main":[0,9],"ending":[4,9]},"ils sommaient":{"verbal":[[4,13]],"main":[4,13],"ending":[8,13]},"elles sommaient":{"verbal":[[6,15]],"main":[6,15],"ending":[10,15]}}
+          },
+          {
+            "source_line": 474958,
+            "form": "sommait",
+            "lemma": "sommer",
+            "raw_tag": "I3s",
+            "tense": "I",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il sommait",
+              "elle sommait",
+              "on sommait"
+            ],
+            "coloring": {"sommait":{"verbal":[[0,7]],"main":[0,7],"ending":[4,7]},"il sommait":{"verbal":[[3,10]],"main":[3,10],"ending":[7,10]},"elle sommait":{"verbal":[[5,12]],"main":[5,12],"ending":[9,12]},"on sommait":{"verbal":[[3,10]],"main":[3,10],"ending":[7,10]}}
+          },
+          {
+            "source_line": 475056,
+            "form": "sommâmes",
+            "lemma": "sommer",
+            "raw_tag": "J1p",
+            "tense": "J",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous sommâmes"
+            ],
+            "coloring": {"sommâmes":{"verbal":[[0,8]],"main":[0,8],"ending":[4,8]},"nous sommâmes":{"verbal":[[5,13]],"main":[5,13],"ending":[9,13]}}
+          },
+          {
+            "source_line": 474950,
+            "form": "sommai",
+            "lemma": "sommer",
+            "raw_tag": "J1s",
+            "tense": "J",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "je sommai"
+            ],
+            "coloring": {"sommai":{"verbal":[[0,6]],"main":[0,6],"ending":[4,6]},"je sommai":{"verbal":[[3,9]],"main":[3,9],"ending":[7,9]}}
+          },
+          {
+            "source_line": 475058,
+            "form": "sommâtes",
+            "lemma": "sommer",
+            "raw_tag": "J2p",
+            "tense": "J",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous sommâtes"
+            ],
+            "coloring": {"sommâtes":{"verbal":[[0,8]],"main":[0,8],"ending":[4,8]},"vous sommâtes":{"verbal":[[5,13]],"main":[5,13],"ending":[9,13]}}
+          },
+          {
+            "source_line": 474960,
+            "form": "sommas",
+            "lemma": "sommer",
+            "raw_tag": "J2s",
+            "tense": "J",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu sommas"
+            ],
+            "coloring": {"sommas":{"verbal":[[0,6]],"main":[0,6],"ending":[4,6]},"tu sommas":{"verbal":[[3,9]],"main":[3,9],"ending":[7,9]}}
+          },
+          {
+            "source_line": 475059,
+            "form": "sommèrent",
+            "lemma": "sommer",
+            "raw_tag": "J3p",
+            "tense": "J",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils sommèrent",
+              "elles sommèrent"
+            ],
+            "coloring": {"sommèrent":{"verbal":[[0,9]],"main":[0,9],"ending":[4,9]},"ils sommèrent":{"verbal":[[4,13]],"main":[4,13],"ending":[8,13]},"elles sommèrent":{"verbal":[[6,15]],"main":[6,15],"ending":[10,15]}}
+          },
+          {
+            "source_line": 474949,
+            "form": "somma",
+            "lemma": "sommer",
+            "raw_tag": "J3s",
+            "tense": "J",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il somma",
+              "elle somma",
+              "on somma"
+            ],
+            "coloring": {"somma":{"verbal":[[0,5]],"main":[0,5],"ending":[4,5]},"il somma":{"verbal":[[3,8]],"main":[3,8],"ending":[7,8]},"elle somma":{"verbal":[[5,10]],"main":[5,10],"ending":[9,10]},"on somma":{"verbal":[[3,8]],"main":[3,8],"ending":[7,8]}}
+          },
+          {
+            "source_line": 475065,
+            "form": "sommées",
+            "lemma": "sommer",
+            "raw_tag": "Kfp",
+            "tense": "K",
+            "person": null,
+            "number": "p",
+            "gender": "f",
+            "expressions": [
+              "sommées"
+            ],
+            "coloring": {"sommées":{"verbal":[[0,7]],"main":[0,7],"ending":[4,7]}}
+          },
+          {
+            "source_line": 475067,
+            "form": "sommés",
+            "lemma": "sommer",
+            "raw_tag": "Kmp",
+            "tense": "K",
+            "person": null,
+            "number": "p",
+            "gender": "m",
+            "expressions": [
+              "sommés"
+            ],
+            "coloring": {"sommés":{"verbal":[[0,6]],"main":[0,6],"ending":[4,6]}}
+          },
+          {
+            "source_line": 475063,
+            "form": "sommée",
+            "lemma": "sommer",
+            "raw_tag": "Kfs",
+            "tense": "K",
+            "person": null,
+            "number": "s",
+            "gender": "f",
+            "expressions": [
+              "sommée"
+            ],
+            "coloring": {"sommée":{"verbal":[[0,6]],"main":[0,6],"ending":[4,6]}}
+          },
+          {
+            "source_line": 475061,
+            "form": "sommé",
+            "lemma": "sommer",
+            "raw_tag": "Kms",
+            "tense": "K",
+            "person": null,
+            "number": "s",
+            "gender": "m",
+            "expressions": [
+              "sommé"
+            ],
+            "coloring": {"sommé":{"verbal":[[0,5]],"main":[0,5],"ending":[4,5]}}
+          },
+          {
+            "source_line": 475054,
+            "form": "sommons",
+            "lemma": "sommer",
+            "raw_tag": "P1p",
+            "tense": "P",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous sommons"
+            ],
+            "coloring": {"sommons":{"verbal":[[0,7]],"main":[0,7],"ending":[4,7]},"nous sommons":{"verbal":[[5,12]],"main":[5,12],"ending":[9,12]}}
+          },
+          {
+            "source_line": 474969,
+            "form": "somme",
+            "lemma": "sommer",
+            "raw_tag": "PS13s",
+            "tense": "P",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "je somme"
+            ],
+            "coloring": {"somme":{"verbal":[[0,5]],"main":[0,5],"ending":[4,5]},"je somme":{"verbal":[[3,8]],"main":[3,8],"ending":[7,8]}}
+          },
+          {
+            "source_line": 475044,
+            "form": "sommez",
+            "lemma": "sommer",
+            "raw_tag": "P2p",
+            "tense": "P",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous sommez"
+            ],
+            "coloring": {"sommez":{"verbal":[[0,6]],"main":[0,6],"ending":[4,6]},"vous sommez":{"verbal":[[5,11]],"main":[5,11],"ending":[9,11]}}
+          },
+          {
+            "source_line": 475040,
+            "form": "sommes",
+            "lemma": "sommer",
+            "raw_tag": "PS2s",
+            "tense": "P",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu sommes"
+            ],
+            "coloring": {"sommes":{"verbal":[[0,6]],"main":[0,6],"ending":[4,6]},"tu sommes":{"verbal":[[3,9]],"main":[3,9],"ending":[7,9]}}
+          },
+          {
+            "source_line": 475025,
+            "form": "somment",
+            "lemma": "sommer",
+            "raw_tag": "PS3p",
+            "tense": "P",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils somment",
+              "elles somment"
+            ],
+            "coloring": {"somment":{"verbal":[[0,7]],"main":[0,7],"ending":[4,7]},"ils somment":{"verbal":[[4,11]],"main":[4,11],"ending":[8,11]},"elles somment":{"verbal":[[6,13]],"main":[6,13],"ending":[10,13]}}
+          },
+          {
+            "source_line": 474969,
+            "form": "somme",
+            "lemma": "sommer",
+            "raw_tag": "PS13s",
+            "tense": "P",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il somme",
+              "elle somme",
+              "on somme"
+            ],
+            "coloring": {"somme":{"verbal":[[0,5]],"main":[0,5],"ending":[4,5]},"il somme":{"verbal":[[3,8]],"main":[3,8],"ending":[7,8]},"elle somme":{"verbal":[[5,10]],"main":[5,10],"ending":[9,10]},"on somme":{"verbal":[[3,8]],"main":[3,8],"ending":[7,8]}}
+          },
+          {
+            "source_line": 475051,
+            "form": "sommions",
+            "lemma": "sommer",
+            "raw_tag": "S1p",
+            "tense": "S",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous sommions",
+              "que nous sommions"
+            ],
+            "coloring": {"sommions":{"verbal":[[0,8]],"main":[0,8],"ending":[4,8]},"nous sommions":{"verbal":[[5,13]],"main":[5,13],"ending":[9,13]},"que nous sommions":{"verbal":[[9,17]],"main":[9,17],"ending":[13,17]}}
+          },
+          {
+            "source_line": 474969,
+            "form": "somme",
+            "lemma": "sommer",
+            "raw_tag": "PS13s",
+            "tense": "S",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "je somme",
+              "que je somme"
+            ],
+            "coloring": {"somme":{"verbal":[[0,5]],"main":[0,5],"ending":[4,5]},"je somme":{"verbal":[[3,8]],"main":[3,8],"ending":[7,8]},"que je somme":{"verbal":[[7,12]],"main":[7,12],"ending":[11,12]}}
+          },
+          {
+            "source_line": 475049,
+            "form": "sommiez",
+            "lemma": "sommer",
+            "raw_tag": "S2p",
+            "tense": "S",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous sommiez",
+              "que vous sommiez"
+            ],
+            "coloring": {"sommiez":{"verbal":[[0,7]],"main":[0,7],"ending":[4,7]},"vous sommiez":{"verbal":[[5,12]],"main":[5,12],"ending":[9,12]},"que vous sommiez":{"verbal":[[9,16]],"main":[9,16],"ending":[13,16]}}
+          },
+          {
+            "source_line": 475040,
+            "form": "sommes",
+            "lemma": "sommer",
+            "raw_tag": "PS2s",
+            "tense": "S",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu sommes",
+              "que tu sommes"
+            ],
+            "coloring": {"sommes":{"verbal":[[0,6]],"main":[0,6],"ending":[4,6]},"tu sommes":{"verbal":[[3,9]],"main":[3,9],"ending":[7,9]},"que tu sommes":{"verbal":[[7,13]],"main":[7,13],"ending":[11,13]}}
+          },
+          {
+            "source_line": 475025,
+            "form": "somment",
+            "lemma": "sommer",
+            "raw_tag": "PS3p",
+            "tense": "S",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils somment",
+              "qu’ils somment",
+              "elles somment",
+              "qu’elles somment"
+            ],
+            "coloring": {"somment":{"verbal":[[0,7]],"main":[0,7],"ending":[4,7]},"ils somment":{"verbal":[[4,11]],"main":[4,11],"ending":[8,11]},"qu’ils somment":{"verbal":[[7,14]],"main":[7,14],"ending":[11,14]},"elles somment":{"verbal":[[6,13]],"main":[6,13],"ending":[10,13]},"qu’elles somment":{"verbal":[[9,16]],"main":[9,16],"ending":[13,16]}}
+          },
+          {
+            "source_line": 474969,
+            "form": "somme",
+            "lemma": "sommer",
+            "raw_tag": "PS13s",
+            "tense": "S",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il somme",
+              "qu’il somme",
+              "elle somme",
+              "qu’elle somme",
+              "on somme",
+              "qu’on somme"
+            ],
+            "coloring": {"somme":{"verbal":[[0,5]],"main":[0,5],"ending":[4,5]},"il somme":{"verbal":[[3,8]],"main":[3,8],"ending":[7,8]},"qu’il somme":{"verbal":[[6,11]],"main":[6,11],"ending":[10,11]},"elle somme":{"verbal":[[5,10]],"main":[5,10],"ending":[9,10]},"qu’elle somme":{"verbal":[[8,13]],"main":[8,13],"ending":[12,13]},"on somme":{"verbal":[[3,8]],"main":[3,8],"ending":[7,8]},"qu’on somme":{"verbal":[[6,11]],"main":[6,11],"ending":[10,11]}}
+          },
+          {
+            "source_line": 474965,
+            "form": "sommassions",
+            "lemma": "sommer",
+            "raw_tag": "T1p",
+            "tense": "T",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous sommassions",
+              "que nous sommassions"
+            ],
+            "coloring": {"sommassions":{"verbal":[[0,11]],"main":[0,11],"ending":[4,11]},"nous sommassions":{"verbal":[[5,16]],"main":[5,16],"ending":[9,16]},"que nous sommassions":{"verbal":[[9,20]],"main":[9,20],"ending":[13,20]}}
+          },
+          {
+            "source_line": 474961,
+            "form": "sommasse",
+            "lemma": "sommer",
+            "raw_tag": "T1s",
+            "tense": "T",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "je sommasse",
+              "que je sommasse"
+            ],
+            "coloring": {"sommasse":{"verbal":[[0,8]],"main":[0,8],"ending":[4,8]},"je sommasse":{"verbal":[[3,11]],"main":[3,11],"ending":[7,11]},"que je sommasse":{"verbal":[[7,15]],"main":[7,15],"ending":[11,15]}}
+          },
+          {
+            "source_line": 474964,
+            "form": "sommassiez",
+            "lemma": "sommer",
+            "raw_tag": "T2p",
+            "tense": "T",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous sommassiez",
+              "que vous sommassiez"
+            ],
+            "coloring": {"sommassiez":{"verbal":[[0,10]],"main":[0,10],"ending":[4,10]},"vous sommassiez":{"verbal":[[5,15]],"main":[5,15],"ending":[9,15]},"que vous sommassiez":{"verbal":[[9,19]],"main":[9,19],"ending":[13,19]}}
+          },
+          {
+            "source_line": 474963,
+            "form": "sommasses",
+            "lemma": "sommer",
+            "raw_tag": "T2s",
+            "tense": "T",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu sommasses",
+              "que tu sommasses"
+            ],
+            "coloring": {"sommasses":{"verbal":[[0,9]],"main":[0,9],"ending":[4,9]},"tu sommasses":{"verbal":[[3,12]],"main":[3,12],"ending":[7,12]},"que tu sommasses":{"verbal":[[7,16]],"main":[7,16],"ending":[11,16]}}
+          },
+          {
+            "source_line": 474962,
+            "form": "sommassent",
+            "lemma": "sommer",
+            "raw_tag": "T3p",
+            "tense": "T",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils sommassent",
+              "qu’ils sommassent",
+              "elles sommassent",
+              "qu’elles sommassent"
+            ],
+            "coloring": {"sommassent":{"verbal":[[0,10]],"main":[0,10],"ending":[4,10]},"ils sommassent":{"verbal":[[4,14]],"main":[4,14],"ending":[8,14]},"qu’ils sommassent":{"verbal":[[7,17]],"main":[7,17],"ending":[11,17]},"elles sommassent":{"verbal":[[6,16]],"main":[6,16],"ending":[10,16]},"qu’elles sommassent":{"verbal":[[9,19]],"main":[9,19],"ending":[13,19]}}
+          },
+          {
+            "source_line": 475057,
+            "form": "sommât",
+            "lemma": "sommer",
+            "raw_tag": "T3s",
+            "tense": "T",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il sommât",
+              "qu’il sommât",
+              "elle sommât",
+              "qu’elle sommât",
+              "on sommât",
+              "qu’on sommât"
+            ],
+            "coloring": {"sommât":{"verbal":[[0,6]],"main":[0,6],"ending":[4,6]},"il sommât":{"verbal":[[3,9]],"main":[3,9],"ending":[7,9]},"qu’il sommât":{"verbal":[[6,12]],"main":[6,12],"ending":[10,12]},"elle sommât":{"verbal":[[5,11]],"main":[5,11],"ending":[9,11]},"qu’elle sommât":{"verbal":[[8,14]],"main":[8,14],"ending":[12,14]},"on sommât":{"verbal":[[3,9]],"main":[3,9],"ending":[7,9]},"qu’on sommât":{"verbal":[[6,12]],"main":[6,12],"ending":[10,12]}}
+          },
+          {
+            "source_line": 475026,
+            "form": "sommer",
+            "lemma": "sommer",
+            "raw_tag": "W",
+            "tense": "W",
+            "person": null,
+            "number": null,
+            "gender": null,
+            "expressions": [
+              "sommer"
+            ],
+            "coloring": {"sommer":{"verbal":[[0,6]],"main":[0,6],"ending":[4,6]}}
+          },
+          {
+            "source_line": 475055,
+            "form": "sommons",
+            "lemma": "sommer",
+            "raw_tag": "Y1p",
+            "tense": "Y",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "sommons"
+            ],
+            "coloring": {"sommons":{"verbal":[[0,7]],"main":[0,7],"ending":[4,7]}}
+          },
+          {
+            "source_line": 475045,
+            "form": "sommez",
+            "lemma": "sommer",
+            "raw_tag": "Y2p",
+            "tense": "Y",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "sommez"
+            ],
+            "coloring": {"sommez":{"verbal":[[0,6]],"main":[0,6],"ending":[4,6]}}
+          },
+          {
+            "source_line": 474970,
+            "form": "somme",
+            "lemma": "sommer",
+            "raw_tag": "Y2s",
+            "tense": "Y",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "somme"
+            ],
+            "coloring": {"somme":{"verbal":[[0,5]],"main":[0,5],"ending":[4,5]}}
+          }
+        ],
+        "meanings": {
+          "status": "available",
+          "senses": [
+            {
+              "source_entry": 7492,
+              "source_sense": 1,
+              "headword": "sommer",
+              "use": "ordinary",
+              "labels": [],
+              "glosses": [
+                "admonish",
+                "scold"
+              ]
+            },
+            {
+              "source_entry": 7492,
+              "source_sense": 2,
+              "headword": "sommer",
+              "use": "ordinary",
+              "labels": [],
+              "glosses": [
+                "command",
+                "order",
+                "tell"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "lemma": "être",
+        "verb": {
+          "group": 3,
+          "group_status": "supported",
+          "auxiliaries": [
+            {
+              "lemma": "avoir",
+              "use": "ordinary active"
+            }
+          ],
+          "auxiliary_status": "supported",
+          "ordinary_status": "supported",
+          "usage_labels": [
+            "intransitive"
+          ],
+          "source": {
+            "resource": "grammalecte-2.3.0",
+            "entry": "dVerb/être",
+            "raw_type": "0ei_____a"
+          },
+          "correction": null
+        },
+        "cells": [
+          {
+            "source_line": 470087,
+            "form": "serions",
+            "lemma": "être",
+            "raw_tag": "C1p",
+            "tense": "C",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous serions"
+            ],
+            "coloring": {"serions":{"verbal":[[0,7]],"main":[0,7],"ending":null},"nous serions":{"verbal":[[5,12]],"main":[5,12],"ending":null}}
+          },
+          {
+            "source_line": 469832,
+            "form": "serais",
+            "lemma": "être",
+            "raw_tag": "C12s",
+            "tense": "C",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "je serais"
+            ],
+            "coloring": {"serais":{"verbal":[[0,6]],"main":[0,6],"ending":null},"je serais":{"verbal":[[3,9]],"main":[3,9],"ending":null}}
+          },
+          {
+            "source_line": 469967,
+            "form": "seriez",
+            "lemma": "être",
+            "raw_tag": "C2p",
+            "tense": "C",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous seriez"
+            ],
+            "coloring": {"seriez":{"verbal":[[0,6]],"main":[0,6],"ending":null},"vous seriez":{"verbal":[[5,11]],"main":[5,11],"ending":null}}
+          },
+          {
+            "source_line": 469832,
+            "form": "serais",
+            "lemma": "être",
+            "raw_tag": "C12s",
+            "tense": "C",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu serais"
+            ],
+            "coloring": {"serais":{"verbal":[[0,6]],"main":[0,6],"ending":null},"tu serais":{"verbal":[[3,9]],"main":[3,9],"ending":null}}
+          },
+          {
+            "source_line": 469830,
+            "form": "seraient",
+            "lemma": "être",
+            "raw_tag": "C3p",
+            "tense": "C",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils seraient",
+              "elles seraient"
+            ],
+            "coloring": {"seraient":{"verbal":[[0,8]],"main":[0,8],"ending":null},"ils seraient":{"verbal":[[4,12]],"main":[4,12],"ending":null},"elles seraient":{"verbal":[[6,14]],"main":[6,14],"ending":null}}
+          },
+          {
+            "source_line": 469834,
+            "form": "serait",
+            "lemma": "être",
+            "raw_tag": "C3s",
+            "tense": "C",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il serait",
+              "elle serait",
+              "on serait"
+            ],
+            "coloring": {"serait":{"verbal":[[0,6]],"main":[0,6],"ending":null},"il serait":{"verbal":[[3,9]],"main":[3,9],"ending":null},"elle serait":{"verbal":[[5,11]],"main":[5,11],"ending":null},"on serait":{"verbal":[[3,9]],"main":[3,9],"ending":null}}
+          },
+          {
+            "source_line": 470153,
+            "form": "serons",
+            "lemma": "être",
+            "raw_tag": "F1p",
+            "tense": "F",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous serons"
+            ],
+            "coloring": {"serons":{"verbal":[[0,6]],"main":[0,6],"ending":null},"nous serons":{"verbal":[[5,11]],"main":[5,11],"ending":null}}
+          },
+          {
+            "source_line": 469828,
+            "form": "serai",
+            "lemma": "être",
+            "raw_tag": "F1s",
+            "tense": "F",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "je serai"
+            ],
+            "coloring": {"serai":{"verbal":[[0,5]],"main":[0,5],"ending":null},"je serai":{"verbal":[[3,8]],"main":[3,8],"ending":null}}
+          },
+          {
+            "source_line": 469902,
+            "form": "serez",
+            "lemma": "être",
+            "raw_tag": "F2p",
+            "tense": "F",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous serez"
+            ],
+            "coloring": {"serez":{"verbal":[[0,5]],"main":[0,5],"ending":null},"vous serez":{"verbal":[[5,10]],"main":[5,10],"ending":null}}
+          },
+          {
+            "source_line": 469836,
+            "form": "seras",
+            "lemma": "être",
+            "raw_tag": "F2s",
+            "tense": "F",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu seras"
+            ],
+            "coloring": {"seras":{"verbal":[[0,5]],"main":[0,5],"ending":null},"tu seras":{"verbal":[[3,8]],"main":[3,8],"ending":null}}
+          },
+          {
+            "source_line": 470155,
+            "form": "seront",
+            "lemma": "être",
+            "raw_tag": "F3p",
+            "tense": "F",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils seront",
+              "elles seront"
+            ],
+            "coloring": {"seront":{"verbal":[[0,6]],"main":[0,6],"ending":null},"ils seront":{"verbal":[[4,10]],"main":[4,10],"ending":null},"elles seront":{"verbal":[[6,12]],"main":[6,12],"ending":null}}
+          },
+          {
+            "source_line": 469826,
+            "form": "sera",
+            "lemma": "être",
+            "raw_tag": "F3s",
+            "tense": "F",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il sera",
+              "elle sera",
+              "on sera"
+            ],
+            "coloring": {"sera":{"verbal":[[0,4]],"main":[0,4],"ending":null},"il sera":{"verbal":[[3,7]],"main":[3,7],"ending":null},"elle sera":{"verbal":[[5,9]],"main":[5,9],"ending":null},"on sera":{"verbal":[[3,7]],"main":[3,7],"ending":null}}
+          },
+          {
+            "source_line": 546001,
+            "form": "étant",
+            "lemma": "être",
+            "raw_tag": "G",
+            "tense": "G",
+            "person": null,
+            "number": null,
+            "gender": null,
+            "expressions": [
+              "étant"
+            ],
+            "coloring": {"étant":{"verbal":[[0,5]],"main":[0,5],"ending":null}}
+          },
+          {
+            "source_line": 546788,
+            "form": "étions",
+            "lemma": "être",
+            "raw_tag": "I1p",
+            "tense": "I",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous étions"
+            ],
+            "coloring": {"étions":{"verbal":[[0,6]],"main":[0,6],"ending":null},"nous étions":{"verbal":[[5,11]],"main":[5,11],"ending":null}}
+          },
+          {
+            "source_line": 545548,
+            "form": "étais",
+            "lemma": "être",
+            "raw_tag": "I12s",
+            "tense": "I",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "j’étais"
+            ],
+            "coloring": {"étais":{"verbal":[[0,5]],"main":[0,5],"ending":null},"j’étais":{"verbal":[[2,7]],"main":[2,7],"ending":null}}
+          },
+          {
+            "source_line": 546672,
+            "form": "étiez",
+            "lemma": "être",
+            "raw_tag": "I2p",
+            "tense": "I",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous étiez"
+            ],
+            "coloring": {"étiez":{"verbal":[[0,5]],"main":[0,5],"ending":null},"vous étiez":{"verbal":[[5,10]],"main":[5,10],"ending":null}}
+          },
+          {
+            "source_line": 545548,
+            "form": "étais",
+            "lemma": "être",
+            "raw_tag": "I12s",
+            "tense": "I",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu étais"
+            ],
+            "coloring": {"étais":{"verbal":[[0,5]],"main":[0,5],"ending":null},"tu étais":{"verbal":[[3,8]],"main":[3,8],"ending":null}}
+          },
+          {
+            "source_line": 545531,
+            "form": "étaient",
+            "lemma": "être",
+            "raw_tag": "I3p",
+            "tense": "I",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils étaient",
+              "elles étaient"
+            ],
+            "coloring": {"étaient":{"verbal":[[0,7]],"main":[0,7],"ending":null},"ils étaient":{"verbal":[[4,11]],"main":[4,11],"ending":null},"elles étaient":{"verbal":[[6,13]],"main":[6,13],"ending":null}}
+          },
+          {
+            "source_line": 545550,
+            "form": "était",
+            "lemma": "être",
+            "raw_tag": "I3s",
+            "tense": "I",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il était",
+              "elle était",
+              "on était"
+            ],
+            "coloring": {"était":{"verbal":[[0,5]],"main":[0,5],"ending":null},"il était":{"verbal":[[3,8]],"main":[3,8],"ending":null},"elle était":{"verbal":[[5,10]],"main":[5,10],"ending":null},"on était":{"verbal":[[3,8]],"main":[3,8],"ending":null}}
+          },
+          {
+            "source_line": 271669,
+            "form": "fûmes",
+            "lemma": "être",
+            "raw_tag": "J1p",
+            "tense": "J",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous fûmes"
+            ],
+            "coloring": {"fûmes":{"verbal":[[0,5]],"main":[0,5],"ending":null},"nous fûmes":{"verbal":[[5,10]],"main":[5,10],"ending":null}}
+          },
+          {
+            "source_line": 270308,
+            "form": "fus",
+            "lemma": "être",
+            "raw_tag": "J12s",
+            "tense": "J",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "je fus"
+            ],
+            "coloring": {"fus":{"verbal":[[0,3]],"main":[0,3],"ending":null},"je fus":{"verbal":[[3,6]],"main":[3,6],"ending":null}}
+          },
+          {
+            "source_line": 271674,
+            "form": "fûtes",
+            "lemma": "être",
+            "raw_tag": "J2p",
+            "tense": "J",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous fûtes"
+            ],
+            "coloring": {"fûtes":{"verbal":[[0,5]],"main":[0,5],"ending":null},"vous fûtes":{"verbal":[[5,10]],"main":[5,10],"ending":null}}
+          },
+          {
+            "source_line": 270308,
+            "form": "fus",
+            "lemma": "être",
+            "raw_tag": "J12s",
+            "tense": "J",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu fus"
+            ],
+            "coloring": {"fus":{"verbal":[[0,3]],"main":[0,3],"ending":null},"tu fus":{"verbal":[[3,6]],"main":[3,6],"ending":null}}
+          },
+          {
+            "source_line": 270195,
+            "form": "furent",
+            "lemma": "être",
+            "raw_tag": "J3p",
+            "tense": "J",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils furent",
+              "elles furent"
+            ],
+            "coloring": {"furent":{"verbal":[[0,6]],"main":[0,6],"ending":null},"ils furent":{"verbal":[[4,10]],"main":[4,10],"ending":null},"elles furent":{"verbal":[[6,12]],"main":[6,12],"ending":null}}
+          },
+          {
+            "source_line": 270621,
+            "form": "fut",
+            "lemma": "être",
+            "raw_tag": "J3s",
+            "tense": "J",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il fut",
+              "elle fut",
+              "on fut"
+            ],
+            "coloring": {"fut":{"verbal":[[0,3]],"main":[0,3],"ending":null},"il fut":{"verbal":[[3,6]],"main":[3,6],"ending":null},"elle fut":{"verbal":[[5,8]],"main":[5,8],"ending":null},"on fut":{"verbal":[[3,6]],"main":[3,6],"ending":null}}
+          },
+          {
+            "source_line": 548089,
+            "form": "été",
+            "lemma": "être",
+            "raw_tag": "K",
+            "tense": "K",
+            "person": null,
+            "number": null,
+            "gender": null,
+            "expressions": [
+              "été"
+            ],
+            "coloring": {"été":{"verbal":[[0,3]],"main":[0,3],"ending":null}}
+          },
+          {
+            "source_line": 475041,
+            "form": "sommes",
+            "lemma": "être",
+            "raw_tag": "P1p",
+            "tense": "P",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous sommes"
+            ],
+            "coloring": {"sommes":{"verbal":[[0,6]],"main":[0,6],"ending":null},"nous sommes":{"verbal":[[5,11]],"main":[5,11],"ending":null}}
+          },
+          {
+            "source_line": 484866,
+            "form": "suis",
+            "lemma": "être",
+            "raw_tag": "P1s",
+            "tense": "P",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "je suis"
+            ],
+            "coloring": {"suis":{"verbal":[[0,4]],"main":[0,4],"ending":null},"je suis":{"verbal":[[3,7]],"main":[3,7],"ending":null}}
+          },
+          {
+            "source_line": 549181,
+            "form": "êtes",
+            "lemma": "être",
+            "raw_tag": "P2p",
+            "tense": "P",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous êtes"
+            ],
+            "coloring": {"êtes":{"verbal":[[0,4]],"main":[0,4],"ending":null},"vous êtes":{"verbal":[[5,9]],"main":[5,9],"ending":null}}
+          },
+          {
+            "source_line": 245111,
+            "form": "es",
+            "lemma": "être",
+            "raw_tag": "P2s",
+            "tense": "P",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu es"
+            ],
+            "coloring": {"es":{"verbal":[[0,2]],"main":[0,2],"ending":null},"tu es":{"verbal":[[3,5]],"main":[3,5],"ending":null}}
+          },
+          {
+            "source_line": 475459,
+            "form": "sont",
+            "lemma": "être",
+            "raw_tag": "P3p",
+            "tense": "P",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils sont",
+              "elles sont"
+            ],
+            "coloring": {"sont":{"verbal":[[0,4]],"main":[0,4],"ending":null},"ils sont":{"verbal":[[4,8]],"main":[4,8],"ending":null},"elles sont":{"verbal":[[6,10]],"main":[6,10],"ending":null}}
+          },
+          {
+            "source_line": 479877,
+            "form": "st",
+            "lemma": "être",
+            "raw_tag": "P3p",
+            "tense": "P",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils st",
+              "elles st"
+            ],
+            "coloring": {"st":{"verbal":[[0,2]],"main":[0,2],"ending":null},"ils st":{"verbal":[[4,6]],"main":[4,6],"ending":null},"elles st":{"verbal":[[6,8]],"main":[6,8],"ending":null}}
+          },
+          {
+            "source_line": 247107,
+            "form": "est",
+            "lemma": "être",
+            "raw_tag": "P3s",
+            "tense": "P",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il est",
+              "elle est",
+              "on est"
+            ],
+            "coloring": {"est":{"verbal":[[0,3]],"main":[0,3],"ending":null},"il est":{"verbal":[[3,6]],"main":[3,6],"ending":null},"elle est":{"verbal":[[5,8]],"main":[5,8],"ending":null},"on est":{"verbal":[[3,6]],"main":[3,6],"ending":null}}
+          },
+          {
+            "source_line": 478187,
+            "form": "soyons",
+            "lemma": "être",
+            "raw_tag": "S1p",
+            "tense": "S",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous soyons",
+              "que nous soyons"
+            ],
+            "coloring": {"soyons":{"verbal":[[0,6]],"main":[0,6],"ending":null},"nous soyons":{"verbal":[[5,11]],"main":[5,11],"ending":null},"que nous soyons":{"verbal":[[9,15]],"main":[9,15],"ending":null}}
+          },
+          {
+            "source_line": 473966,
+            "form": "sois",
+            "lemma": "être",
+            "raw_tag": "S1s",
+            "tense": "S",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "je sois",
+              "que je sois"
+            ],
+            "coloring": {"sois":{"verbal":[[0,4]],"main":[0,4],"ending":null},"je sois":{"verbal":[[3,7]],"main":[3,7],"ending":null},"que je sois":{"verbal":[[7,11]],"main":[7,11],"ending":null}}
+          },
+          {
+            "source_line": 478183,
+            "form": "soyez",
+            "lemma": "être",
+            "raw_tag": "S2p",
+            "tense": "S",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous soyez",
+              "que vous soyez"
+            ],
+            "coloring": {"soyez":{"verbal":[[0,5]],"main":[0,5],"ending":null},"vous soyez":{"verbal":[[5,10]],"main":[5,10],"ending":null},"que vous soyez":{"verbal":[[9,14]],"main":[9,14],"ending":null}}
+          },
+          {
+            "source_line": 473967,
+            "form": "sois",
+            "lemma": "être",
+            "raw_tag": "S2s",
+            "tense": "S",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu sois",
+              "que tu sois"
+            ],
+            "coloring": {"sois":{"verbal":[[0,4]],"main":[0,4],"ending":null},"tu sois":{"verbal":[[3,7]],"main":[3,7],"ending":null},"que tu sois":{"verbal":[[7,11]],"main":[7,11],"ending":null}}
+          },
+          {
+            "source_line": 473881,
+            "form": "soient",
+            "lemma": "être",
+            "raw_tag": "S3p",
+            "tense": "S",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils soient",
+              "qu’ils soient",
+              "elles soient",
+              "qu’elles soient"
+            ],
+            "coloring": {"soient":{"verbal":[[0,6]],"main":[0,6],"ending":null},"ils soient":{"verbal":[[4,10]],"main":[4,10],"ending":null},"qu’ils soient":{"verbal":[[7,13]],"main":[7,13],"ending":null},"elles soient":{"verbal":[[6,12]],"main":[6,12],"ending":null},"qu’elles soient":{"verbal":[[9,15]],"main":[9,15],"ending":null}}
+          },
+          {
+            "source_line": 473972,
+            "form": "soit",
+            "lemma": "être",
+            "raw_tag": "S3s",
+            "tense": "S",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il soit",
+              "qu’il soit",
+              "elle soit",
+              "qu’elle soit",
+              "on soit",
+              "qu’on soit"
+            ],
+            "coloring": {"soit":{"verbal":[[0,4]],"main":[0,4],"ending":null},"il soit":{"verbal":[[3,7]],"main":[3,7],"ending":null},"qu’il soit":{"verbal":[[6,10]],"main":[6,10],"ending":null},"elle soit":{"verbal":[[5,9]],"main":[5,9],"ending":null},"qu’elle soit":{"verbal":[[8,12]],"main":[8,12],"ending":null},"on soit":{"verbal":[[3,7]],"main":[3,7],"ending":null},"qu’on soit":{"verbal":[[6,10]],"main":[6,10],"ending":null}}
+          },
+          {
+            "source_line": 270557,
+            "form": "fussions",
+            "lemma": "être",
+            "raw_tag": "T1p",
+            "tense": "T",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous fussions",
+              "que nous fussions"
+            ],
+            "coloring": {"fussions":{"verbal":[[0,8]],"main":[0,8],"ending":null},"nous fussions":{"verbal":[[5,13]],"main":[5,13],"ending":null},"que nous fussions":{"verbal":[[9,17]],"main":[9,17],"ending":null}}
+          },
+          {
+            "source_line": 270549,
+            "form": "fusse",
+            "lemma": "être",
+            "raw_tag": "T1s",
+            "tense": "T",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "je fusse",
+              "que je fusse"
+            ],
+            "coloring": {"fusse":{"verbal":[[0,5]],"main":[0,5],"ending":null},"je fusse":{"verbal":[[3,8]],"main":[3,8],"ending":null},"que je fusse":{"verbal":[[7,12]],"main":[7,12],"ending":null}}
+          },
+          {
+            "source_line": 270555,
+            "form": "fussiez",
+            "lemma": "être",
+            "raw_tag": "T2p",
+            "tense": "T",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous fussiez",
+              "que vous fussiez"
+            ],
+            "coloring": {"fussiez":{"verbal":[[0,7]],"main":[0,7],"ending":null},"vous fussiez":{"verbal":[[5,12]],"main":[5,12],"ending":null},"que vous fussiez":{"verbal":[[9,16]],"main":[9,16],"ending":null}}
+          },
+          {
+            "source_line": 270553,
+            "form": "fusses",
+            "lemma": "être",
+            "raw_tag": "T2s",
+            "tense": "T",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu fusses",
+              "que tu fusses"
+            ],
+            "coloring": {"fusses":{"verbal":[[0,6]],"main":[0,6],"ending":null},"tu fusses":{"verbal":[[3,9]],"main":[3,9],"ending":null},"que tu fusses":{"verbal":[[7,13]],"main":[7,13],"ending":null}}
+          },
+          {
+            "source_line": 270551,
+            "form": "fussent",
+            "lemma": "être",
+            "raw_tag": "T3p",
+            "tense": "T",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils fussent",
+              "qu’ils fussent",
+              "elles fussent",
+              "qu’elles fussent"
+            ],
+            "coloring": {"fussent":{"verbal":[[0,7]],"main":[0,7],"ending":null},"ils fussent":{"verbal":[[4,11]],"main":[4,11],"ending":null},"qu’ils fussent":{"verbal":[[7,14]],"main":[7,14],"ending":null},"elles fussent":{"verbal":[[6,13]],"main":[6,13],"ending":null},"qu’elles fussent":{"verbal":[[9,16]],"main":[9,16],"ending":null}}
+          },
+          {
+            "source_line": 271672,
+            "form": "fût",
+            "lemma": "être",
+            "raw_tag": "T3s",
+            "tense": "T",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il fût",
+              "qu’il fût",
+              "elle fût",
+              "qu’elle fût",
+              "on fût",
+              "qu’on fût"
+            ],
+            "coloring": {"fût":{"verbal":[[0,3]],"main":[0,3],"ending":null},"il fût":{"verbal":[[3,6]],"main":[3,6],"ending":null},"qu’il fût":{"verbal":[[6,9]],"main":[6,9],"ending":null},"elle fût":{"verbal":[[5,8]],"main":[5,8],"ending":null},"qu’elle fût":{"verbal":[[8,11]],"main":[8,11],"ending":null},"on fût":{"verbal":[[3,6]],"main":[3,6],"ending":null},"qu’on fût":{"verbal":[[6,9]],"main":[6,9],"ending":null}}
+          },
+          {
+            "source_line": 549184,
+            "form": "être",
+            "lemma": "être",
+            "raw_tag": "W",
+            "tense": "W",
+            "person": null,
+            "number": null,
+            "gender": null,
+            "expressions": [
+              "être"
+            ],
+            "coloring": {"être":{"verbal":[[0,4]],"main":[0,4],"ending":null}}
+          },
+          {
+            "source_line": 478188,
+            "form": "soyons",
+            "lemma": "être",
+            "raw_tag": "Y1p",
+            "tense": "Y",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "soyons"
+            ],
+            "coloring": {"soyons":{"verbal":[[0,6]],"main":[0,6],"ending":null}}
+          },
+          {
+            "source_line": 478184,
+            "form": "soyez",
+            "lemma": "être",
+            "raw_tag": "Y2p",
+            "tense": "Y",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "soyez"
+            ],
+            "coloring": {"soyez":{"verbal":[[0,5]],"main":[0,5],"ending":null}}
+          },
+          {
+            "source_line": 473968,
+            "form": "sois",
+            "lemma": "être",
+            "raw_tag": "Y2s",
+            "tense": "Y",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "sois"
+            ],
+            "coloring": {"sois":{"verbal":[[0,4]],"main":[0,4],"ending":null}}
+          }
+        ],
+        "meanings": {
+          "status": "available",
+          "senses": [
+            {
+              "source_entry": 8471,
+              "source_sense": 1,
+              "headword": "être",
+              "use": "ordinary",
+              "labels": [],
+              "glosses": [
+                "be"
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "suis": {
+    "query": "suis",
+    "tables": [
+      {
+        "lemma": "suivre",
+        "verb": {
+          "group": 3,
+          "group_status": "supported",
+          "auxiliaries": [
+            {
+              "lemma": "avoir",
+              "use": "ordinary active"
+            }
+          ],
+          "auxiliary_status": "supported",
+          "ordinary_status": "supported",
+          "usage_labels": [
+            "intransitive",
+            "transitive"
+          ],
+          "source": {
+            "resource": "grammalecte-2.3.0",
+            "entry": "dVerb/suivre",
+            "raw_type": "3_it_x__a"
+          },
+          "correction": null
+        },
+        "cells": [
+          {
+            "source_line": 484950,
+            "form": "suivrions",
+            "lemma": "suivre",
+            "raw_tag": "C1p",
+            "tense": "C",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous suivrions"
+            ],
+            "coloring": {"suivrions":{"verbal":[[0,9]],"main":[0,9],"ending":null},"nous suivrions":{"verbal":[[5,14]],"main":[5,14],"ending":null}}
+          },
+          {
+            "source_line": 484944,
+            "form": "suivrais",
+            "lemma": "suivre",
+            "raw_tag": "C12s",
+            "tense": "C",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "je suivrais"
+            ],
+            "coloring": {"suivrais":{"verbal":[[0,8]],"main":[0,8],"ending":null},"je suivrais":{"verbal":[[3,11]],"main":[3,11],"ending":null}}
+          },
+          {
+            "source_line": 484949,
+            "form": "suivriez",
+            "lemma": "suivre",
+            "raw_tag": "C2p",
+            "tense": "C",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous suivriez"
+            ],
+            "coloring": {"suivriez":{"verbal":[[0,8]],"main":[0,8],"ending":null},"vous suivriez":{"verbal":[[5,13]],"main":[5,13],"ending":null}}
+          },
+          {
+            "source_line": 484944,
+            "form": "suivrais",
+            "lemma": "suivre",
+            "raw_tag": "C12s",
+            "tense": "C",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu suivrais"
+            ],
+            "coloring": {"suivrais":{"verbal":[[0,8]],"main":[0,8],"ending":null},"tu suivrais":{"verbal":[[3,11]],"main":[3,11],"ending":null}}
+          },
+          {
+            "source_line": 484943,
+            "form": "suivraient",
+            "lemma": "suivre",
+            "raw_tag": "C3p",
+            "tense": "C",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils suivraient",
+              "elles suivraient"
+            ],
+            "coloring": {"suivraient":{"verbal":[[0,10]],"main":[0,10],"ending":null},"ils suivraient":{"verbal":[[4,14]],"main":[4,14],"ending":null},"elles suivraient":{"verbal":[[6,16]],"main":[6,16],"ending":null}}
+          },
+          {
+            "source_line": 484945,
+            "form": "suivrait",
+            "lemma": "suivre",
+            "raw_tag": "C3s",
+            "tense": "C",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il suivrait",
+              "elle suivrait",
+              "on suivrait"
+            ],
+            "coloring": {"suivrait":{"verbal":[[0,8]],"main":[0,8],"ending":null},"il suivrait":{"verbal":[[3,11]],"main":[3,11],"ending":null},"elle suivrait":{"verbal":[[5,13]],"main":[5,13],"ending":null},"on suivrait":{"verbal":[[3,11]],"main":[3,11],"ending":null}}
+          },
+          {
+            "source_line": 484951,
+            "form": "suivrons",
+            "lemma": "suivre",
+            "raw_tag": "F1p",
+            "tense": "F",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous suivrons"
+            ],
+            "coloring": {"suivrons":{"verbal":[[0,8]],"main":[0,8],"ending":null},"nous suivrons":{"verbal":[[5,13]],"main":[5,13],"ending":null}}
+          },
+          {
+            "source_line": 484942,
+            "form": "suivrai",
+            "lemma": "suivre",
+            "raw_tag": "F1s",
+            "tense": "F",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "je suivrai"
+            ],
+            "coloring": {"suivrai":{"verbal":[[0,7]],"main":[0,7],"ending":null},"je suivrai":{"verbal":[[3,10]],"main":[3,10],"ending":null}}
+          },
+          {
+            "source_line": 484948,
+            "form": "suivrez",
+            "lemma": "suivre",
+            "raw_tag": "F2p",
+            "tense": "F",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous suivrez"
+            ],
+            "coloring": {"suivrez":{"verbal":[[0,7]],"main":[0,7],"ending":null},"vous suivrez":{"verbal":[[5,12]],"main":[5,12],"ending":null}}
+          },
+          {
+            "source_line": 484946,
+            "form": "suivras",
+            "lemma": "suivre",
+            "raw_tag": "F2s",
+            "tense": "F",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu suivras"
+            ],
+            "coloring": {"suivras":{"verbal":[[0,7]],"main":[0,7],"ending":null},"tu suivras":{"verbal":[[3,10]],"main":[3,10],"ending":null}}
+          },
+          {
+            "source_line": 484952,
+            "form": "suivront",
+            "lemma": "suivre",
+            "raw_tag": "F3p",
+            "tense": "F",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils suivront",
+              "elles suivront"
+            ],
+            "coloring": {"suivront":{"verbal":[[0,8]],"main":[0,8],"ending":null},"ils suivront":{"verbal":[[4,12]],"main":[4,12],"ending":null},"elles suivront":{"verbal":[[6,14]],"main":[6,14],"ending":null}}
+          },
+          {
+            "source_line": 484941,
+            "form": "suivra",
+            "lemma": "suivre",
+            "raw_tag": "F3s",
+            "tense": "F",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il suivra",
+              "elle suivra",
+              "on suivra"
+            ],
+            "coloring": {"suivra":{"verbal":[[0,6]],"main":[0,6],"ending":null},"il suivra":{"verbal":[[3,9]],"main":[3,9],"ending":null},"elle suivra":{"verbal":[[5,11]],"main":[5,11],"ending":null},"on suivra":{"verbal":[[3,9]],"main":[3,9],"ending":null}}
+          },
+          {
+            "source_line": 484894,
+            "form": "suivant",
+            "lemma": "suivre",
+            "raw_tag": "G",
+            "tense": "G",
+            "person": null,
+            "number": null,
+            "gender": null,
+            "expressions": [
+              "suivant"
+            ],
+            "coloring": {"suivant":{"verbal":[[0,7]],"main":[0,7],"ending":null}}
+          },
+          {
+            "source_line": 484922,
+            "form": "suivions",
+            "lemma": "suivre",
+            "raw_tag": "I1p",
+            "tense": "I",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous suivions"
+            ],
+            "coloring": {"suivions":{"verbal":[[0,8]],"main":[0,8],"ending":null},"nous suivions":{"verbal":[[5,13]],"main":[5,13],"ending":null}}
+          },
+          {
+            "source_line": 484887,
+            "form": "suivais",
+            "lemma": "suivre",
+            "raw_tag": "I12s",
+            "tense": "I",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "je suivais"
+            ],
+            "coloring": {"suivais":{"verbal":[[0,7]],"main":[0,7],"ending":null},"je suivais":{"verbal":[[3,10]],"main":[3,10],"ending":null}}
+          },
+          {
+            "source_line": 484920,
+            "form": "suiviez",
+            "lemma": "suivre",
+            "raw_tag": "I2p",
+            "tense": "I",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous suiviez"
+            ],
+            "coloring": {"suiviez":{"verbal":[[0,7]],"main":[0,7],"ending":null},"vous suiviez":{"verbal":[[5,12]],"main":[5,12],"ending":null}}
+          },
+          {
+            "source_line": 484887,
+            "form": "suivais",
+            "lemma": "suivre",
+            "raw_tag": "I12s",
+            "tense": "I",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu suivais"
+            ],
+            "coloring": {"suivais":{"verbal":[[0,7]],"main":[0,7],"ending":null},"tu suivais":{"verbal":[[3,10]],"main":[3,10],"ending":null}}
+          },
+          {
+            "source_line": 484886,
+            "form": "suivaient",
+            "lemma": "suivre",
+            "raw_tag": "I3p",
+            "tense": "I",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils suivaient",
+              "elles suivaient"
+            ],
+            "coloring": {"suivaient":{"verbal":[[0,9]],"main":[0,9],"ending":null},"ils suivaient":{"verbal":[[4,13]],"main":[4,13],"ending":null},"elles suivaient":{"verbal":[[6,15]],"main":[6,15],"ending":null}}
+          },
+          {
+            "source_line": 484888,
+            "form": "suivait",
+            "lemma": "suivre",
+            "raw_tag": "I3s",
+            "tense": "I",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il suivait",
+              "elle suivait",
+              "on suivait"
+            ],
+            "coloring": {"suivait":{"verbal":[[0,7]],"main":[0,7],"ending":null},"il suivait":{"verbal":[[3,10]],"main":[3,10],"ending":null},"elle suivait":{"verbal":[[5,12]],"main":[5,12],"ending":null},"on suivait":{"verbal":[[3,10]],"main":[3,10],"ending":null}}
+          },
+          {
+            "source_line": 484953,
+            "form": "suivîmes",
+            "lemma": "suivre",
+            "raw_tag": "J1p",
+            "tense": "J",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous suivîmes"
+            ],
+            "coloring": {"suivîmes":{"verbal":[[0,8]],"main":[0,8],"ending":null},"nous suivîmes":{"verbal":[[5,13]],"main":[5,13],"ending":null}}
+          },
+          {
+            "source_line": 484927,
+            "form": "suivis",
+            "lemma": "suivre",
+            "raw_tag": "J12s",
+            "tense": "J",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "je suivis"
+            ],
+            "coloring": {"suivis":{"verbal":[[0,6]],"main":[0,6],"ending":null},"je suivis":{"verbal":[[3,9]],"main":[3,9],"ending":null}}
+          },
+          {
+            "source_line": 484955,
+            "form": "suivîtes",
+            "lemma": "suivre",
+            "raw_tag": "J2p",
+            "tense": "J",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous suivîtes"
+            ],
+            "coloring": {"suivîtes":{"verbal":[[0,8]],"main":[0,8],"ending":null},"vous suivîtes":{"verbal":[[5,13]],"main":[5,13],"ending":null}}
+          },
+          {
+            "source_line": 484927,
+            "form": "suivis",
+            "lemma": "suivre",
+            "raw_tag": "J12s",
+            "tense": "J",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu suivis"
+            ],
+            "coloring": {"suivis":{"verbal":[[0,6]],"main":[0,6],"ending":null},"tu suivis":{"verbal":[[3,9]],"main":[3,9],"ending":null}}
+          },
+          {
+            "source_line": 484924,
+            "form": "suivirent",
+            "lemma": "suivre",
+            "raw_tag": "J3p",
+            "tense": "J",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils suivirent",
+              "elles suivirent"
+            ],
+            "coloring": {"suivirent":{"verbal":[[0,9]],"main":[0,9],"ending":null},"ils suivirent":{"verbal":[[4,13]],"main":[4,13],"ending":null},"elles suivirent":{"verbal":[[6,15]],"main":[6,15],"ending":null}}
+          },
+          {
+            "source_line": 484938,
+            "form": "suivit",
+            "lemma": "suivre",
+            "raw_tag": "J3s",
+            "tense": "J",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il suivit",
+              "elle suivit",
+              "on suivit"
+            ],
+            "coloring": {"suivit":{"verbal":[[0,6]],"main":[0,6],"ending":null},"il suivit":{"verbal":[[3,9]],"main":[3,9],"ending":null},"elle suivit":{"verbal":[[5,11]],"main":[5,11],"ending":null},"on suivit":{"verbal":[[3,9]],"main":[3,9],"ending":null}}
+          },
+          {
+            "source_line": 484919,
+            "form": "suivies",
+            "lemma": "suivre",
+            "raw_tag": "Kfp",
+            "tense": "K",
+            "person": null,
+            "number": "p",
+            "gender": "f",
+            "expressions": [
+              "suivies"
+            ],
+            "coloring": {"suivies":{"verbal":[[0,7]],"main":[0,7],"ending":null}}
+          },
+          {
+            "source_line": 484928,
+            "form": "suivis",
+            "lemma": "suivre",
+            "raw_tag": "Kmp",
+            "tense": "K",
+            "person": null,
+            "number": "p",
+            "gender": "m",
+            "expressions": [
+              "suivis"
+            ],
+            "coloring": {"suivis":{"verbal":[[0,6]],"main":[0,6],"ending":null}}
+          },
+          {
+            "source_line": 484917,
+            "form": "suivie",
+            "lemma": "suivre",
+            "raw_tag": "Kfs",
+            "tense": "K",
+            "person": null,
+            "number": "s",
+            "gender": "f",
+            "expressions": [
+              "suivie"
+            ],
+            "coloring": {"suivie":{"verbal":[[0,6]],"main":[0,6],"ending":null}}
+          },
+          {
+            "source_line": 484915,
+            "form": "suivi",
+            "lemma": "suivre",
+            "raw_tag": "Kms",
+            "tense": "K",
+            "person": null,
+            "number": "s",
+            "gender": "m",
+            "expressions": [
+              "suivi"
+            ],
+            "coloring": {"suivi":{"verbal":[[0,5]],"main":[0,5],"ending":null}}
+          },
+          {
+            "source_line": 484939,
+            "form": "suivons",
+            "lemma": "suivre",
+            "raw_tag": "P1p",
+            "tense": "P",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous suivons"
+            ],
+            "coloring": {"suivons":{"verbal":[[0,7]],"main":[0,7],"ending":null},"nous suivons":{"verbal":[[5,12]],"main":[5,12],"ending":null}}
+          },
+          {
+            "source_line": 484864,
+            "form": "suis",
+            "lemma": "suivre",
+            "raw_tag": "P12s",
+            "tense": "P",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "je suis"
+            ],
+            "coloring": {"suis":{"verbal":[[0,4]],"main":[0,4],"ending":null},"je suis":{"verbal":[[3,7]],"main":[3,7],"ending":null}}
+          },
+          {
+            "source_line": 484910,
+            "form": "suivez",
+            "lemma": "suivre",
+            "raw_tag": "P2p",
+            "tense": "P",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous suivez"
+            ],
+            "coloring": {"suivez":{"verbal":[[0,6]],"main":[0,6],"ending":null},"vous suivez":{"verbal":[[5,11]],"main":[5,11],"ending":null}}
+          },
+          {
+            "source_line": 484864,
+            "form": "suis",
+            "lemma": "suivre",
+            "raw_tag": "P12s",
+            "tense": "P",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu suis"
+            ],
+            "coloring": {"suis":{"verbal":[[0,4]],"main":[0,4],"ending":null},"tu suis":{"verbal":[[3,7]],"main":[3,7],"ending":null}}
+          },
+          {
+            "source_line": 12,
+            "form": "&gt;",
+            "lemma": "suivre",
+            "raw_tag": "PS3",
+            "tense": "P",
+            "person": "3",
+            "number": null,
+            "gender": null,
+            "expressions": [],
+            "coloring": {"&gt;":{"verbal":[[0,4]],"main":[0,4],"ending":null}}
+          },
+          {
+            "source_line": 13,
+            "form": "&gt;&gt;",
+            "lemma": "suivre",
+            "raw_tag": "PS3",
+            "tense": "P",
+            "person": "3",
+            "number": null,
+            "gender": null,
+            "expressions": [],
+            "coloring": {"&gt;&gt;":{"verbal":[[0,8]],"main":[0,8],"ending":null}}
+          },
+          {
+            "source_line": 94,
+            "form": ">",
+            "lemma": "suivre",
+            "raw_tag": "PS3",
+            "tense": "P",
+            "person": "3",
+            "number": null,
+            "gender": null,
+            "expressions": [],
+            "coloring": {">":{"verbal":[[0,1]],"main":[0,1],"ending":null}}
+          },
+          {
+            "source_line": 95,
+            "form": ">>",
+            "lemma": "suivre",
+            "raw_tag": "PS3",
+            "tense": "P",
+            "person": "3",
+            "number": null,
+            "gender": null,
+            "expressions": [],
+            "coloring": {">>":{"verbal":[[0,2]],"main":[0,2],"ending":null}}
+          },
+          {
+            "source_line": 484904,
+            "form": "suivent",
+            "lemma": "suivre",
+            "raw_tag": "PS3p",
+            "tense": "P",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils suivent",
+              "elles suivent"
+            ],
+            "coloring": {"suivent":{"verbal":[[0,7]],"main":[0,7],"ending":null},"ils suivent":{"verbal":[[4,11]],"main":[4,11],"ending":null},"elles suivent":{"verbal":[[6,13]],"main":[6,13],"ending":null}}
+          },
+          {
+            "source_line": 484878,
+            "form": "suit",
+            "lemma": "suivre",
+            "raw_tag": "P3s",
+            "tense": "P",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il suit",
+              "elle suit",
+              "on suit"
+            ],
+            "coloring": {"suit":{"verbal":[[0,4]],"main":[0,4],"ending":null},"il suit":{"verbal":[[3,7]],"main":[3,7],"ending":null},"elle suit":{"verbal":[[5,9]],"main":[5,9],"ending":null},"on suit":{"verbal":[[3,7]],"main":[3,7],"ending":null}}
+          },
+          {
+            "source_line": 484923,
+            "form": "suivions",
+            "lemma": "suivre",
+            "raw_tag": "S1p",
+            "tense": "S",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous suivions",
+              "que nous suivions"
+            ],
+            "coloring": {"suivions":{"verbal":[[0,8]],"main":[0,8],"ending":null},"nous suivions":{"verbal":[[5,13]],"main":[5,13],"ending":null},"que nous suivions":{"verbal":[[9,17]],"main":[9,17],"ending":null}}
+          },
+          {
+            "source_line": 484903,
+            "form": "suive",
+            "lemma": "suivre",
+            "raw_tag": "S13s",
+            "tense": "S",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "je suive",
+              "que je suive"
+            ],
+            "coloring": {"suive":{"verbal":[[0,5]],"main":[0,5],"ending":null},"je suive":{"verbal":[[3,8]],"main":[3,8],"ending":null},"que je suive":{"verbal":[[7,12]],"main":[7,12],"ending":null}}
+          },
+          {
+            "source_line": 484921,
+            "form": "suiviez",
+            "lemma": "suivre",
+            "raw_tag": "S2p",
+            "tense": "S",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous suiviez",
+              "que vous suiviez"
+            ],
+            "coloring": {"suiviez":{"verbal":[[0,7]],"main":[0,7],"ending":null},"vous suiviez":{"verbal":[[5,12]],"main":[5,12],"ending":null},"que vous suiviez":{"verbal":[[9,16]],"main":[9,16],"ending":null}}
+          },
+          {
+            "source_line": 484905,
+            "form": "suives",
+            "lemma": "suivre",
+            "raw_tag": "S2s",
+            "tense": "S",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu suives",
+              "que tu suives"
+            ],
+            "coloring": {"suives":{"verbal":[[0,6]],"main":[0,6],"ending":null},"tu suives":{"verbal":[[3,9]],"main":[3,9],"ending":null},"que tu suives":{"verbal":[[7,13]],"main":[7,13],"ending":null}}
+          },
+          {
+            "source_line": 12,
+            "form": "&gt;",
+            "lemma": "suivre",
+            "raw_tag": "PS3",
+            "tense": "S",
+            "person": "3",
+            "number": null,
+            "gender": null,
+            "expressions": [],
+            "coloring": {"&gt;":{"verbal":[[0,4]],"main":[0,4],"ending":null}}
+          },
+          {
+            "source_line": 13,
+            "form": "&gt;&gt;",
+            "lemma": "suivre",
+            "raw_tag": "PS3",
+            "tense": "S",
+            "person": "3",
+            "number": null,
+            "gender": null,
+            "expressions": [],
+            "coloring": {"&gt;&gt;":{"verbal":[[0,8]],"main":[0,8],"ending":null}}
+          },
+          {
+            "source_line": 94,
+            "form": ">",
+            "lemma": "suivre",
+            "raw_tag": "PS3",
+            "tense": "S",
+            "person": "3",
+            "number": null,
+            "gender": null,
+            "expressions": [],
+            "coloring": {">":{"verbal":[[0,1]],"main":[0,1],"ending":null}}
+          },
+          {
+            "source_line": 95,
+            "form": ">>",
+            "lemma": "suivre",
+            "raw_tag": "PS3",
+            "tense": "S",
+            "person": "3",
+            "number": null,
+            "gender": null,
+            "expressions": [],
+            "coloring": {">>":{"verbal":[[0,2]],"main":[0,2],"ending":null}}
+          },
+          {
+            "source_line": 484904,
+            "form": "suivent",
+            "lemma": "suivre",
+            "raw_tag": "PS3p",
+            "tense": "S",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils suivent",
+              "qu’ils suivent",
+              "elles suivent",
+              "qu’elles suivent"
+            ],
+            "coloring": {"suivent":{"verbal":[[0,7]],"main":[0,7],"ending":null},"ils suivent":{"verbal":[[4,11]],"main":[4,11],"ending":null},"qu’ils suivent":{"verbal":[[7,14]],"main":[7,14],"ending":null},"elles suivent":{"verbal":[[6,13]],"main":[6,13],"ending":null},"qu’elles suivent":{"verbal":[[9,16]],"main":[9,16],"ending":null}}
+          },
+          {
+            "source_line": 484903,
+            "form": "suive",
+            "lemma": "suivre",
+            "raw_tag": "S13s",
+            "tense": "S",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il suive",
+              "qu’il suive",
+              "elle suive",
+              "qu’elle suive",
+              "on suive",
+              "qu’on suive"
+            ],
+            "coloring": {"suive":{"verbal":[[0,5]],"main":[0,5],"ending":null},"il suive":{"verbal":[[3,8]],"main":[3,8],"ending":null},"qu’il suive":{"verbal":[[6,11]],"main":[6,11],"ending":null},"elle suive":{"verbal":[[5,10]],"main":[5,10],"ending":null},"qu’elle suive":{"verbal":[[8,13]],"main":[8,13],"ending":null},"on suive":{"verbal":[[3,8]],"main":[3,8],"ending":null},"qu’on suive":{"verbal":[[6,11]],"main":[6,11],"ending":null}}
+          },
+          {
+            "source_line": 484935,
+            "form": "suivissions",
+            "lemma": "suivre",
+            "raw_tag": "T1p",
+            "tense": "T",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous suivissions",
+              "que nous suivissions"
+            ],
+            "coloring": {"suivissions":{"verbal":[[0,11]],"main":[0,11],"ending":null},"nous suivissions":{"verbal":[[5,16]],"main":[5,16],"ending":null},"que nous suivissions":{"verbal":[[9,20]],"main":[9,20],"ending":null}}
+          },
+          {
+            "source_line": 484931,
+            "form": "suivisse",
+            "lemma": "suivre",
+            "raw_tag": "T1s",
+            "tense": "T",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "je suivisse",
+              "que je suivisse"
+            ],
+            "coloring": {"suivisse":{"verbal":[[0,8]],"main":[0,8],"ending":null},"je suivisse":{"verbal":[[3,11]],"main":[3,11],"ending":null},"que je suivisse":{"verbal":[[7,15]],"main":[7,15],"ending":null}}
+          },
+          {
+            "source_line": 484934,
+            "form": "suivissiez",
+            "lemma": "suivre",
+            "raw_tag": "T2p",
+            "tense": "T",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous suivissiez",
+              "que vous suivissiez"
+            ],
+            "coloring": {"suivissiez":{"verbal":[[0,10]],"main":[0,10],"ending":null},"vous suivissiez":{"verbal":[[5,15]],"main":[5,15],"ending":null},"que vous suivissiez":{"verbal":[[9,19]],"main":[9,19],"ending":null}}
+          },
+          {
+            "source_line": 484933,
+            "form": "suivisses",
+            "lemma": "suivre",
+            "raw_tag": "T2s",
+            "tense": "T",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu suivisses",
+              "que tu suivisses"
+            ],
+            "coloring": {"suivisses":{"verbal":[[0,9]],"main":[0,9],"ending":null},"tu suivisses":{"verbal":[[3,12]],"main":[3,12],"ending":null},"que tu suivisses":{"verbal":[[7,16]],"main":[7,16],"ending":null}}
+          },
+          {
+            "source_line": 484932,
+            "form": "suivissent",
+            "lemma": "suivre",
+            "raw_tag": "T3p",
+            "tense": "T",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils suivissent",
+              "qu’ils suivissent",
+              "elles suivissent",
+              "qu’elles suivissent"
+            ],
+            "coloring": {"suivissent":{"verbal":[[0,10]],"main":[0,10],"ending":null},"ils suivissent":{"verbal":[[4,14]],"main":[4,14],"ending":null},"qu’ils suivissent":{"verbal":[[7,17]],"main":[7,17],"ending":null},"elles suivissent":{"verbal":[[6,16]],"main":[6,16],"ending":null},"qu’elles suivissent":{"verbal":[[9,19]],"main":[9,19],"ending":null}}
+          },
+          {
+            "source_line": 484954,
+            "form": "suivît",
+            "lemma": "suivre",
+            "raw_tag": "T3s",
+            "tense": "T",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il suivît",
+              "qu’il suivît",
+              "elle suivît",
+              "qu’elle suivît",
+              "on suivît",
+              "qu’on suivît"
+            ],
+            "coloring": {"suivît":{"verbal":[[0,6]],"main":[0,6],"ending":null},"il suivît":{"verbal":[[3,9]],"main":[3,9],"ending":null},"qu’il suivît":{"verbal":[[6,12]],"main":[6,12],"ending":null},"elle suivît":{"verbal":[[5,11]],"main":[5,11],"ending":null},"qu’elle suivît":{"verbal":[[8,14]],"main":[8,14],"ending":null},"on suivît":{"verbal":[[3,9]],"main":[3,9],"ending":null},"qu’on suivît":{"verbal":[[6,12]],"main":[6,12],"ending":null}}
+          },
+          {
+            "source_line": 484947,
+            "form": "suivre",
+            "lemma": "suivre",
+            "raw_tag": "W",
+            "tense": "W",
+            "person": null,
+            "number": null,
+            "gender": null,
+            "expressions": [
+              "suivre"
+            ],
+            "coloring": {"suivre":{"verbal":[[0,6]],"main":[0,6],"ending":null}}
+          },
+          {
+            "source_line": 484940,
+            "form": "suivons",
+            "lemma": "suivre",
+            "raw_tag": "Y1p",
+            "tense": "Y",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "suivons"
+            ],
+            "coloring": {"suivons":{"verbal":[[0,7]],"main":[0,7],"ending":null}}
+          },
+          {
+            "source_line": 484911,
+            "form": "suivez",
+            "lemma": "suivre",
+            "raw_tag": "Y2p",
+            "tense": "Y",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "suivez"
+            ],
+            "coloring": {"suivez":{"verbal":[[0,6]],"main":[0,6],"ending":null}}
+          },
+          {
+            "source_line": 484865,
+            "form": "suis",
+            "lemma": "suivre",
+            "raw_tag": "Y2s",
+            "tense": "Y",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "suis"
+            ],
+            "coloring": {"suis":{"verbal":[[0,4]],"main":[0,4],"ending":null}}
+          }
+        ],
+        "meanings": {
+          "status": "available",
+          "senses": [
+            {
+              "source_entry": 7651,
+              "source_sense": 1,
+              "headword": "suivre",
+              "use": "ordinary",
+              "labels": [],
+              "glosses": [
+                "act on",
+                "act upon",
+                "follow",
+                "observe"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "lemma": "être",
+        "verb": {
+          "group": 3,
+          "group_status": "supported",
+          "auxiliaries": [
+            {
+              "lemma": "avoir",
+              "use": "ordinary active"
+            }
+          ],
+          "auxiliary_status": "supported",
+          "ordinary_status": "supported",
+          "usage_labels": [
+            "intransitive"
+          ],
+          "source": {
+            "resource": "grammalecte-2.3.0",
+            "entry": "dVerb/être",
+            "raw_type": "0ei_____a"
+          },
+          "correction": null
+        },
+        "cells": [
+          {
+            "source_line": 470087,
+            "form": "serions",
+            "lemma": "être",
+            "raw_tag": "C1p",
+            "tense": "C",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous serions"
+            ],
+            "coloring": {"serions":{"verbal":[[0,7]],"main":[0,7],"ending":null},"nous serions":{"verbal":[[5,12]],"main":[5,12],"ending":null}}
+          },
+          {
+            "source_line": 469832,
+            "form": "serais",
+            "lemma": "être",
+            "raw_tag": "C12s",
+            "tense": "C",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "je serais"
+            ],
+            "coloring": {"serais":{"verbal":[[0,6]],"main":[0,6],"ending":null},"je serais":{"verbal":[[3,9]],"main":[3,9],"ending":null}}
+          },
+          {
+            "source_line": 469967,
+            "form": "seriez",
+            "lemma": "être",
+            "raw_tag": "C2p",
+            "tense": "C",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous seriez"
+            ],
+            "coloring": {"seriez":{"verbal":[[0,6]],"main":[0,6],"ending":null},"vous seriez":{"verbal":[[5,11]],"main":[5,11],"ending":null}}
+          },
+          {
+            "source_line": 469832,
+            "form": "serais",
+            "lemma": "être",
+            "raw_tag": "C12s",
+            "tense": "C",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu serais"
+            ],
+            "coloring": {"serais":{"verbal":[[0,6]],"main":[0,6],"ending":null},"tu serais":{"verbal":[[3,9]],"main":[3,9],"ending":null}}
+          },
+          {
+            "source_line": 469830,
+            "form": "seraient",
+            "lemma": "être",
+            "raw_tag": "C3p",
+            "tense": "C",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils seraient",
+              "elles seraient"
+            ],
+            "coloring": {"seraient":{"verbal":[[0,8]],"main":[0,8],"ending":null},"ils seraient":{"verbal":[[4,12]],"main":[4,12],"ending":null},"elles seraient":{"verbal":[[6,14]],"main":[6,14],"ending":null}}
+          },
+          {
+            "source_line": 469834,
+            "form": "serait",
+            "lemma": "être",
+            "raw_tag": "C3s",
+            "tense": "C",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il serait",
+              "elle serait",
+              "on serait"
+            ],
+            "coloring": {"serait":{"verbal":[[0,6]],"main":[0,6],"ending":null},"il serait":{"verbal":[[3,9]],"main":[3,9],"ending":null},"elle serait":{"verbal":[[5,11]],"main":[5,11],"ending":null},"on serait":{"verbal":[[3,9]],"main":[3,9],"ending":null}}
+          },
+          {
+            "source_line": 470153,
+            "form": "serons",
+            "lemma": "être",
+            "raw_tag": "F1p",
+            "tense": "F",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous serons"
+            ],
+            "coloring": {"serons":{"verbal":[[0,6]],"main":[0,6],"ending":null},"nous serons":{"verbal":[[5,11]],"main":[5,11],"ending":null}}
+          },
+          {
+            "source_line": 469828,
+            "form": "serai",
+            "lemma": "être",
+            "raw_tag": "F1s",
+            "tense": "F",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "je serai"
+            ],
+            "coloring": {"serai":{"verbal":[[0,5]],"main":[0,5],"ending":null},"je serai":{"verbal":[[3,8]],"main":[3,8],"ending":null}}
+          },
+          {
+            "source_line": 469902,
+            "form": "serez",
+            "lemma": "être",
+            "raw_tag": "F2p",
+            "tense": "F",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous serez"
+            ],
+            "coloring": {"serez":{"verbal":[[0,5]],"main":[0,5],"ending":null},"vous serez":{"verbal":[[5,10]],"main":[5,10],"ending":null}}
+          },
+          {
+            "source_line": 469836,
+            "form": "seras",
+            "lemma": "être",
+            "raw_tag": "F2s",
+            "tense": "F",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu seras"
+            ],
+            "coloring": {"seras":{"verbal":[[0,5]],"main":[0,5],"ending":null},"tu seras":{"verbal":[[3,8]],"main":[3,8],"ending":null}}
+          },
+          {
+            "source_line": 470155,
+            "form": "seront",
+            "lemma": "être",
+            "raw_tag": "F3p",
+            "tense": "F",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils seront",
+              "elles seront"
+            ],
+            "coloring": {"seront":{"verbal":[[0,6]],"main":[0,6],"ending":null},"ils seront":{"verbal":[[4,10]],"main":[4,10],"ending":null},"elles seront":{"verbal":[[6,12]],"main":[6,12],"ending":null}}
+          },
+          {
+            "source_line": 469826,
+            "form": "sera",
+            "lemma": "être",
+            "raw_tag": "F3s",
+            "tense": "F",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il sera",
+              "elle sera",
+              "on sera"
+            ],
+            "coloring": {"sera":{"verbal":[[0,4]],"main":[0,4],"ending":null},"il sera":{"verbal":[[3,7]],"main":[3,7],"ending":null},"elle sera":{"verbal":[[5,9]],"main":[5,9],"ending":null},"on sera":{"verbal":[[3,7]],"main":[3,7],"ending":null}}
+          },
+          {
+            "source_line": 546001,
+            "form": "étant",
+            "lemma": "être",
+            "raw_tag": "G",
+            "tense": "G",
+            "person": null,
+            "number": null,
+            "gender": null,
+            "expressions": [
+              "étant"
+            ],
+            "coloring": {"étant":{"verbal":[[0,5]],"main":[0,5],"ending":null}}
+          },
+          {
+            "source_line": 546788,
+            "form": "étions",
+            "lemma": "être",
+            "raw_tag": "I1p",
+            "tense": "I",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous étions"
+            ],
+            "coloring": {"étions":{"verbal":[[0,6]],"main":[0,6],"ending":null},"nous étions":{"verbal":[[5,11]],"main":[5,11],"ending":null}}
+          },
+          {
+            "source_line": 545548,
+            "form": "étais",
+            "lemma": "être",
+            "raw_tag": "I12s",
+            "tense": "I",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "j’étais"
+            ],
+            "coloring": {"étais":{"verbal":[[0,5]],"main":[0,5],"ending":null},"j’étais":{"verbal":[[2,7]],"main":[2,7],"ending":null}}
+          },
+          {
+            "source_line": 546672,
+            "form": "étiez",
+            "lemma": "être",
+            "raw_tag": "I2p",
+            "tense": "I",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous étiez"
+            ],
+            "coloring": {"étiez":{"verbal":[[0,5]],"main":[0,5],"ending":null},"vous étiez":{"verbal":[[5,10]],"main":[5,10],"ending":null}}
+          },
+          {
+            "source_line": 545548,
+            "form": "étais",
+            "lemma": "être",
+            "raw_tag": "I12s",
+            "tense": "I",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu étais"
+            ],
+            "coloring": {"étais":{"verbal":[[0,5]],"main":[0,5],"ending":null},"tu étais":{"verbal":[[3,8]],"main":[3,8],"ending":null}}
+          },
+          {
+            "source_line": 545531,
+            "form": "étaient",
+            "lemma": "être",
+            "raw_tag": "I3p",
+            "tense": "I",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils étaient",
+              "elles étaient"
+            ],
+            "coloring": {"étaient":{"verbal":[[0,7]],"main":[0,7],"ending":null},"ils étaient":{"verbal":[[4,11]],"main":[4,11],"ending":null},"elles étaient":{"verbal":[[6,13]],"main":[6,13],"ending":null}}
+          },
+          {
+            "source_line": 545550,
+            "form": "était",
+            "lemma": "être",
+            "raw_tag": "I3s",
+            "tense": "I",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il était",
+              "elle était",
+              "on était"
+            ],
+            "coloring": {"était":{"verbal":[[0,5]],"main":[0,5],"ending":null},"il était":{"verbal":[[3,8]],"main":[3,8],"ending":null},"elle était":{"verbal":[[5,10]],"main":[5,10],"ending":null},"on était":{"verbal":[[3,8]],"main":[3,8],"ending":null}}
+          },
+          {
+            "source_line": 271669,
+            "form": "fûmes",
+            "lemma": "être",
+            "raw_tag": "J1p",
+            "tense": "J",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous fûmes"
+            ],
+            "coloring": {"fûmes":{"verbal":[[0,5]],"main":[0,5],"ending":null},"nous fûmes":{"verbal":[[5,10]],"main":[5,10],"ending":null}}
+          },
+          {
+            "source_line": 270308,
+            "form": "fus",
+            "lemma": "être",
+            "raw_tag": "J12s",
+            "tense": "J",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "je fus"
+            ],
+            "coloring": {"fus":{"verbal":[[0,3]],"main":[0,3],"ending":null},"je fus":{"verbal":[[3,6]],"main":[3,6],"ending":null}}
+          },
+          {
+            "source_line": 271674,
+            "form": "fûtes",
+            "lemma": "être",
+            "raw_tag": "J2p",
+            "tense": "J",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous fûtes"
+            ],
+            "coloring": {"fûtes":{"verbal":[[0,5]],"main":[0,5],"ending":null},"vous fûtes":{"verbal":[[5,10]],"main":[5,10],"ending":null}}
+          },
+          {
+            "source_line": 270308,
+            "form": "fus",
+            "lemma": "être",
+            "raw_tag": "J12s",
+            "tense": "J",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu fus"
+            ],
+            "coloring": {"fus":{"verbal":[[0,3]],"main":[0,3],"ending":null},"tu fus":{"verbal":[[3,6]],"main":[3,6],"ending":null}}
+          },
+          {
+            "source_line": 270195,
+            "form": "furent",
+            "lemma": "être",
+            "raw_tag": "J3p",
+            "tense": "J",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils furent",
+              "elles furent"
+            ],
+            "coloring": {"furent":{"verbal":[[0,6]],"main":[0,6],"ending":null},"ils furent":{"verbal":[[4,10]],"main":[4,10],"ending":null},"elles furent":{"verbal":[[6,12]],"main":[6,12],"ending":null}}
+          },
+          {
+            "source_line": 270621,
+            "form": "fut",
+            "lemma": "être",
+            "raw_tag": "J3s",
+            "tense": "J",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il fut",
+              "elle fut",
+              "on fut"
+            ],
+            "coloring": {"fut":{"verbal":[[0,3]],"main":[0,3],"ending":null},"il fut":{"verbal":[[3,6]],"main":[3,6],"ending":null},"elle fut":{"verbal":[[5,8]],"main":[5,8],"ending":null},"on fut":{"verbal":[[3,6]],"main":[3,6],"ending":null}}
+          },
+          {
+            "source_line": 548089,
+            "form": "été",
+            "lemma": "être",
+            "raw_tag": "K",
+            "tense": "K",
+            "person": null,
+            "number": null,
+            "gender": null,
+            "expressions": [
+              "été"
+            ],
+            "coloring": {"été":{"verbal":[[0,3]],"main":[0,3],"ending":null}}
+          },
+          {
+            "source_line": 475041,
+            "form": "sommes",
+            "lemma": "être",
+            "raw_tag": "P1p",
+            "tense": "P",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous sommes"
+            ],
+            "coloring": {"sommes":{"verbal":[[0,6]],"main":[0,6],"ending":null},"nous sommes":{"verbal":[[5,11]],"main":[5,11],"ending":null}}
+          },
+          {
+            "source_line": 484866,
+            "form": "suis",
+            "lemma": "être",
+            "raw_tag": "P1s",
+            "tense": "P",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "je suis"
+            ],
+            "coloring": {"suis":{"verbal":[[0,4]],"main":[0,4],"ending":null},"je suis":{"verbal":[[3,7]],"main":[3,7],"ending":null}}
+          },
+          {
+            "source_line": 549181,
+            "form": "êtes",
+            "lemma": "être",
+            "raw_tag": "P2p",
+            "tense": "P",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous êtes"
+            ],
+            "coloring": {"êtes":{"verbal":[[0,4]],"main":[0,4],"ending":null},"vous êtes":{"verbal":[[5,9]],"main":[5,9],"ending":null}}
+          },
+          {
+            "source_line": 245111,
+            "form": "es",
+            "lemma": "être",
+            "raw_tag": "P2s",
+            "tense": "P",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu es"
+            ],
+            "coloring": {"es":{"verbal":[[0,2]],"main":[0,2],"ending":null},"tu es":{"verbal":[[3,5]],"main":[3,5],"ending":null}}
+          },
+          {
+            "source_line": 475459,
+            "form": "sont",
+            "lemma": "être",
+            "raw_tag": "P3p",
+            "tense": "P",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils sont",
+              "elles sont"
+            ],
+            "coloring": {"sont":{"verbal":[[0,4]],"main":[0,4],"ending":null},"ils sont":{"verbal":[[4,8]],"main":[4,8],"ending":null},"elles sont":{"verbal":[[6,10]],"main":[6,10],"ending":null}}
+          },
+          {
+            "source_line": 479877,
+            "form": "st",
+            "lemma": "être",
+            "raw_tag": "P3p",
+            "tense": "P",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils st",
+              "elles st"
+            ],
+            "coloring": {"st":{"verbal":[[0,2]],"main":[0,2],"ending":null},"ils st":{"verbal":[[4,6]],"main":[4,6],"ending":null},"elles st":{"verbal":[[6,8]],"main":[6,8],"ending":null}}
+          },
+          {
+            "source_line": 247107,
+            "form": "est",
+            "lemma": "être",
+            "raw_tag": "P3s",
+            "tense": "P",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il est",
+              "elle est",
+              "on est"
+            ],
+            "coloring": {"est":{"verbal":[[0,3]],"main":[0,3],"ending":null},"il est":{"verbal":[[3,6]],"main":[3,6],"ending":null},"elle est":{"verbal":[[5,8]],"main":[5,8],"ending":null},"on est":{"verbal":[[3,6]],"main":[3,6],"ending":null}}
+          },
+          {
+            "source_line": 478187,
+            "form": "soyons",
+            "lemma": "être",
+            "raw_tag": "S1p",
+            "tense": "S",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous soyons",
+              "que nous soyons"
+            ],
+            "coloring": {"soyons":{"verbal":[[0,6]],"main":[0,6],"ending":null},"nous soyons":{"verbal":[[5,11]],"main":[5,11],"ending":null},"que nous soyons":{"verbal":[[9,15]],"main":[9,15],"ending":null}}
+          },
+          {
+            "source_line": 473966,
+            "form": "sois",
+            "lemma": "être",
+            "raw_tag": "S1s",
+            "tense": "S",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "je sois",
+              "que je sois"
+            ],
+            "coloring": {"sois":{"verbal":[[0,4]],"main":[0,4],"ending":null},"je sois":{"verbal":[[3,7]],"main":[3,7],"ending":null},"que je sois":{"verbal":[[7,11]],"main":[7,11],"ending":null}}
+          },
+          {
+            "source_line": 478183,
+            "form": "soyez",
+            "lemma": "être",
+            "raw_tag": "S2p",
+            "tense": "S",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous soyez",
+              "que vous soyez"
+            ],
+            "coloring": {"soyez":{"verbal":[[0,5]],"main":[0,5],"ending":null},"vous soyez":{"verbal":[[5,10]],"main":[5,10],"ending":null},"que vous soyez":{"verbal":[[9,14]],"main":[9,14],"ending":null}}
+          },
+          {
+            "source_line": 473967,
+            "form": "sois",
+            "lemma": "être",
+            "raw_tag": "S2s",
+            "tense": "S",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu sois",
+              "que tu sois"
+            ],
+            "coloring": {"sois":{"verbal":[[0,4]],"main":[0,4],"ending":null},"tu sois":{"verbal":[[3,7]],"main":[3,7],"ending":null},"que tu sois":{"verbal":[[7,11]],"main":[7,11],"ending":null}}
+          },
+          {
+            "source_line": 473881,
+            "form": "soient",
+            "lemma": "être",
+            "raw_tag": "S3p",
+            "tense": "S",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils soient",
+              "qu’ils soient",
+              "elles soient",
+              "qu’elles soient"
+            ],
+            "coloring": {"soient":{"verbal":[[0,6]],"main":[0,6],"ending":null},"ils soient":{"verbal":[[4,10]],"main":[4,10],"ending":null},"qu’ils soient":{"verbal":[[7,13]],"main":[7,13],"ending":null},"elles soient":{"verbal":[[6,12]],"main":[6,12],"ending":null},"qu’elles soient":{"verbal":[[9,15]],"main":[9,15],"ending":null}}
+          },
+          {
+            "source_line": 473972,
+            "form": "soit",
+            "lemma": "être",
+            "raw_tag": "S3s",
+            "tense": "S",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il soit",
+              "qu’il soit",
+              "elle soit",
+              "qu’elle soit",
+              "on soit",
+              "qu’on soit"
+            ],
+            "coloring": {"soit":{"verbal":[[0,4]],"main":[0,4],"ending":null},"il soit":{"verbal":[[3,7]],"main":[3,7],"ending":null},"qu’il soit":{"verbal":[[6,10]],"main":[6,10],"ending":null},"elle soit":{"verbal":[[5,9]],"main":[5,9],"ending":null},"qu’elle soit":{"verbal":[[8,12]],"main":[8,12],"ending":null},"on soit":{"verbal":[[3,7]],"main":[3,7],"ending":null},"qu’on soit":{"verbal":[[6,10]],"main":[6,10],"ending":null}}
+          },
+          {
+            "source_line": 270557,
+            "form": "fussions",
+            "lemma": "être",
+            "raw_tag": "T1p",
+            "tense": "T",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous fussions",
+              "que nous fussions"
+            ],
+            "coloring": {"fussions":{"verbal":[[0,8]],"main":[0,8],"ending":null},"nous fussions":{"verbal":[[5,13]],"main":[5,13],"ending":null},"que nous fussions":{"verbal":[[9,17]],"main":[9,17],"ending":null}}
+          },
+          {
+            "source_line": 270549,
+            "form": "fusse",
+            "lemma": "être",
+            "raw_tag": "T1s",
+            "tense": "T",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "je fusse",
+              "que je fusse"
+            ],
+            "coloring": {"fusse":{"verbal":[[0,5]],"main":[0,5],"ending":null},"je fusse":{"verbal":[[3,8]],"main":[3,8],"ending":null},"que je fusse":{"verbal":[[7,12]],"main":[7,12],"ending":null}}
+          },
+          {
+            "source_line": 270555,
+            "form": "fussiez",
+            "lemma": "être",
+            "raw_tag": "T2p",
+            "tense": "T",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous fussiez",
+              "que vous fussiez"
+            ],
+            "coloring": {"fussiez":{"verbal":[[0,7]],"main":[0,7],"ending":null},"vous fussiez":{"verbal":[[5,12]],"main":[5,12],"ending":null},"que vous fussiez":{"verbal":[[9,16]],"main":[9,16],"ending":null}}
+          },
+          {
+            "source_line": 270553,
+            "form": "fusses",
+            "lemma": "être",
+            "raw_tag": "T2s",
+            "tense": "T",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu fusses",
+              "que tu fusses"
+            ],
+            "coloring": {"fusses":{"verbal":[[0,6]],"main":[0,6],"ending":null},"tu fusses":{"verbal":[[3,9]],"main":[3,9],"ending":null},"que tu fusses":{"verbal":[[7,13]],"main":[7,13],"ending":null}}
+          },
+          {
+            "source_line": 270551,
+            "form": "fussent",
+            "lemma": "être",
+            "raw_tag": "T3p",
+            "tense": "T",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils fussent",
+              "qu’ils fussent",
+              "elles fussent",
+              "qu’elles fussent"
+            ],
+            "coloring": {"fussent":{"verbal":[[0,7]],"main":[0,7],"ending":null},"ils fussent":{"verbal":[[4,11]],"main":[4,11],"ending":null},"qu’ils fussent":{"verbal":[[7,14]],"main":[7,14],"ending":null},"elles fussent":{"verbal":[[6,13]],"main":[6,13],"ending":null},"qu’elles fussent":{"verbal":[[9,16]],"main":[9,16],"ending":null}}
+          },
+          {
+            "source_line": 271672,
+            "form": "fût",
+            "lemma": "être",
+            "raw_tag": "T3s",
+            "tense": "T",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il fût",
+              "qu’il fût",
+              "elle fût",
+              "qu’elle fût",
+              "on fût",
+              "qu’on fût"
+            ],
+            "coloring": {"fût":{"verbal":[[0,3]],"main":[0,3],"ending":null},"il fût":{"verbal":[[3,6]],"main":[3,6],"ending":null},"qu’il fût":{"verbal":[[6,9]],"main":[6,9],"ending":null},"elle fût":{"verbal":[[5,8]],"main":[5,8],"ending":null},"qu’elle fût":{"verbal":[[8,11]],"main":[8,11],"ending":null},"on fût":{"verbal":[[3,6]],"main":[3,6],"ending":null},"qu’on fût":{"verbal":[[6,9]],"main":[6,9],"ending":null}}
+          },
+          {
+            "source_line": 549184,
+            "form": "être",
+            "lemma": "être",
+            "raw_tag": "W",
+            "tense": "W",
+            "person": null,
+            "number": null,
+            "gender": null,
+            "expressions": [
+              "être"
+            ],
+            "coloring": {"être":{"verbal":[[0,4]],"main":[0,4],"ending":null}}
+          },
+          {
+            "source_line": 478188,
+            "form": "soyons",
+            "lemma": "être",
+            "raw_tag": "Y1p",
+            "tense": "Y",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "soyons"
+            ],
+            "coloring": {"soyons":{"verbal":[[0,6]],"main":[0,6],"ending":null}}
+          },
+          {
+            "source_line": 478184,
+            "form": "soyez",
+            "lemma": "être",
+            "raw_tag": "Y2p",
+            "tense": "Y",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "soyez"
+            ],
+            "coloring": {"soyez":{"verbal":[[0,5]],"main":[0,5],"ending":null}}
+          },
+          {
+            "source_line": 473968,
+            "form": "sois",
+            "lemma": "être",
+            "raw_tag": "Y2s",
+            "tense": "Y",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "sois"
+            ],
+            "coloring": {"sois":{"verbal":[[0,4]],"main":[0,4],"ending":null}}
+          }
+        ],
+        "meanings": {
+          "status": "available",
+          "senses": [
+            {
+              "source_entry": 8471,
+              "source_sense": 1,
+              "headword": "être",
+              "use": "ordinary",
+              "labels": [],
+              "glosses": [
+                "be"
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "paie": {
+    "query": "paie",
+    "tables": [
+      {
+        "lemma": "payer",
+        "verb": {
+          "group": 1,
+          "group_status": "supported",
+          "auxiliaries": [
+            {
+              "lemma": "avoir",
+              "use": "ordinary active"
+            }
+          ],
+          "auxiliary_status": "supported",
+          "ordinary_status": "supported",
+          "usage_labels": [
+            "intransitive",
+            "transitive",
+            "indirect_transitive"
+          ],
+          "source": {
+            "resource": "grammalecte-2.3.0",
+            "entry": "dVerb/payer",
+            "raw_type": "1_itnq__a"
+          },
+          "correction": null
+        },
+        "cells": [
+          {
+            "source_line": 367154,
+            "form": "paierions",
+            "lemma": "payer",
+            "raw_tag": "C1p",
+            "tense": "C",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous paierions"
+            ],
+            "coloring": {"paierions":{"verbal":[[0,9]],"main":[0,9],"ending":[4,9]},"nous paierions":{"verbal":[[5,14]],"main":[5,14],"ending":[9,14]}}
+          },
+          {
+            "source_line": 374276,
+            "form": "payerions",
+            "lemma": "payer",
+            "raw_tag": "C1p",
+            "tense": "C",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous payerions"
+            ],
+            "coloring": {"payerions":{"verbal":[[0,9]],"main":[0,9],"ending":[4,9]},"nous payerions":{"verbal":[[5,14]],"main":[5,14],"ending":[9,14]}}
+          },
+          {
+            "source_line": 367147,
+            "form": "paierais",
+            "lemma": "payer",
+            "raw_tag": "C12s",
+            "tense": "C",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "je paierais"
+            ],
+            "coloring": {"paierais":{"verbal":[[0,8]],"main":[0,8],"ending":[4,8]},"je paierais":{"verbal":[[3,11]],"main":[3,11],"ending":[7,11]}}
+          },
+          {
+            "source_line": 374271,
+            "form": "payerais",
+            "lemma": "payer",
+            "raw_tag": "C12s",
+            "tense": "C",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "je payerais"
+            ],
+            "coloring": {"payerais":{"verbal":[[0,8]],"main":[0,8],"ending":[4,8]},"je payerais":{"verbal":[[3,11]],"main":[3,11],"ending":[7,11]}}
+          },
+          {
+            "source_line": 367153,
+            "form": "paieriez",
+            "lemma": "payer",
+            "raw_tag": "C2p",
+            "tense": "C",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous paieriez"
+            ],
+            "coloring": {"paieriez":{"verbal":[[0,8]],"main":[0,8],"ending":[4,8]},"vous paieriez":{"verbal":[[5,13]],"main":[5,13],"ending":[9,13]}}
+          },
+          {
+            "source_line": 374275,
+            "form": "payeriez",
+            "lemma": "payer",
+            "raw_tag": "C2p",
+            "tense": "C",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous payeriez"
+            ],
+            "coloring": {"payeriez":{"verbal":[[0,8]],"main":[0,8],"ending":[4,8]},"vous payeriez":{"verbal":[[5,13]],"main":[5,13],"ending":[9,13]}}
+          },
+          {
+            "source_line": 367147,
+            "form": "paierais",
+            "lemma": "payer",
+            "raw_tag": "C12s",
+            "tense": "C",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu paierais"
+            ],
+            "coloring": {"paierais":{"verbal":[[0,8]],"main":[0,8],"ending":[4,8]},"tu paierais":{"verbal":[[3,11]],"main":[3,11],"ending":[7,11]}}
+          },
+          {
+            "source_line": 374271,
+            "form": "payerais",
+            "lemma": "payer",
+            "raw_tag": "C12s",
+            "tense": "C",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu payerais"
+            ],
+            "coloring": {"payerais":{"verbal":[[0,8]],"main":[0,8],"ending":[4,8]},"tu payerais":{"verbal":[[3,11]],"main":[3,11],"ending":[7,11]}}
+          },
+          {
+            "source_line": 367146,
+            "form": "paieraient",
+            "lemma": "payer",
+            "raw_tag": "C3p",
+            "tense": "C",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils paieraient",
+              "elles paieraient"
+            ],
+            "coloring": {"paieraient":{"verbal":[[0,10]],"main":[0,10],"ending":[4,10]},"ils paieraient":{"verbal":[[4,14]],"main":[4,14],"ending":[8,14]},"elles paieraient":{"verbal":[[6,16]],"main":[6,16],"ending":[10,16]}}
+          },
+          {
+            "source_line": 374270,
+            "form": "payeraient",
+            "lemma": "payer",
+            "raw_tag": "C3p",
+            "tense": "C",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils payeraient",
+              "elles payeraient"
+            ],
+            "coloring": {"payeraient":{"verbal":[[0,10]],"main":[0,10],"ending":[4,10]},"ils payeraient":{"verbal":[[4,14]],"main":[4,14],"ending":[8,14]},"elles payeraient":{"verbal":[[6,16]],"main":[6,16],"ending":[10,16]}}
+          },
+          {
+            "source_line": 367148,
+            "form": "paierait",
+            "lemma": "payer",
+            "raw_tag": "C3s",
+            "tense": "C",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il paierait",
+              "elle paierait",
+              "on paierait"
+            ],
+            "coloring": {"paierait":{"verbal":[[0,8]],"main":[0,8],"ending":[4,8]},"il paierait":{"verbal":[[3,11]],"main":[3,11],"ending":[7,11]},"elle paierait":{"verbal":[[5,13]],"main":[5,13],"ending":[9,13]},"on paierait":{"verbal":[[3,11]],"main":[3,11],"ending":[7,11]}}
+          },
+          {
+            "source_line": 374272,
+            "form": "payerait",
+            "lemma": "payer",
+            "raw_tag": "C3s",
+            "tense": "C",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il payerait",
+              "elle payerait",
+              "on payerait"
+            ],
+            "coloring": {"payerait":{"verbal":[[0,8]],"main":[0,8],"ending":[4,8]},"il payerait":{"verbal":[[3,11]],"main":[3,11],"ending":[7,11]},"elle payerait":{"verbal":[[5,13]],"main":[5,13],"ending":[9,13]},"on payerait":{"verbal":[[3,11]],"main":[3,11],"ending":[7,11]}}
+          },
+          {
+            "source_line": 367155,
+            "form": "paierons",
+            "lemma": "payer",
+            "raw_tag": "F1p",
+            "tense": "F",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous paierons"
+            ],
+            "coloring": {"paierons":{"verbal":[[0,8]],"main":[0,8],"ending":[4,8]},"nous paierons":{"verbal":[[5,13]],"main":[5,13],"ending":[9,13]}}
+          },
+          {
+            "source_line": 374277,
+            "form": "payerons",
+            "lemma": "payer",
+            "raw_tag": "F1p",
+            "tense": "F",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous payerons"
+            ],
+            "coloring": {"payerons":{"verbal":[[0,8]],"main":[0,8],"ending":[4,8]},"nous payerons":{"verbal":[[5,13]],"main":[5,13],"ending":[9,13]}}
+          },
+          {
+            "source_line": 367145,
+            "form": "paierai",
+            "lemma": "payer",
+            "raw_tag": "F1s",
+            "tense": "F",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "je paierai"
+            ],
+            "coloring": {"paierai":{"verbal":[[0,7]],"main":[0,7],"ending":[4,7]},"je paierai":{"verbal":[[3,10]],"main":[3,10],"ending":[7,10]}}
+          },
+          {
+            "source_line": 374269,
+            "form": "payerai",
+            "lemma": "payer",
+            "raw_tag": "F1s",
+            "tense": "F",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "je payerai"
+            ],
+            "coloring": {"payerai":{"verbal":[[0,7]],"main":[0,7],"ending":[4,7]},"je payerai":{"verbal":[[3,10]],"main":[3,10],"ending":[7,10]}}
+          },
+          {
+            "source_line": 367150,
+            "form": "paierez",
+            "lemma": "payer",
+            "raw_tag": "F2p",
+            "tense": "F",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous paierez"
+            ],
+            "coloring": {"paierez":{"verbal":[[0,7]],"main":[0,7],"ending":[4,7]},"vous paierez":{"verbal":[[5,12]],"main":[5,12],"ending":[9,12]}}
+          },
+          {
+            "source_line": 374274,
+            "form": "payerez",
+            "lemma": "payer",
+            "raw_tag": "F2p",
+            "tense": "F",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous payerez"
+            ],
+            "coloring": {"payerez":{"verbal":[[0,7]],"main":[0,7],"ending":[4,7]},"vous payerez":{"verbal":[[5,12]],"main":[5,12],"ending":[9,12]}}
+          },
+          {
+            "source_line": 367149,
+            "form": "paieras",
+            "lemma": "payer",
+            "raw_tag": "F2s",
+            "tense": "F",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu paieras"
+            ],
+            "coloring": {"paieras":{"verbal":[[0,7]],"main":[0,7],"ending":[4,7]},"tu paieras":{"verbal":[[3,10]],"main":[3,10],"ending":[7,10]}}
+          },
+          {
+            "source_line": 374273,
+            "form": "payeras",
+            "lemma": "payer",
+            "raw_tag": "F2s",
+            "tense": "F",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu payeras"
+            ],
+            "coloring": {"payeras":{"verbal":[[0,7]],"main":[0,7],"ending":[4,7]},"tu payeras":{"verbal":[[3,10]],"main":[3,10],"ending":[7,10]}}
+          },
+          {
+            "source_line": 367156,
+            "form": "paieront",
+            "lemma": "payer",
+            "raw_tag": "F3p",
+            "tense": "F",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils paieront",
+              "elles paieront"
+            ],
+            "coloring": {"paieront":{"verbal":[[0,8]],"main":[0,8],"ending":[4,8]},"ils paieront":{"verbal":[[4,12]],"main":[4,12],"ending":[8,12]},"elles paieront":{"verbal":[[6,14]],"main":[6,14],"ending":[10,14]}}
+          },
+          {
+            "source_line": 374278,
+            "form": "payeront",
+            "lemma": "payer",
+            "raw_tag": "F3p",
+            "tense": "F",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils payeront",
+              "elles payeront"
+            ],
+            "coloring": {"payeront":{"verbal":[[0,8]],"main":[0,8],"ending":[4,8]},"ils payeront":{"verbal":[[4,12]],"main":[4,12],"ending":[8,12]},"elles payeront":{"verbal":[[6,14]],"main":[6,14],"ending":[10,14]}}
+          },
+          {
+            "source_line": 367144,
+            "form": "paiera",
+            "lemma": "payer",
+            "raw_tag": "F3s",
+            "tense": "F",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il paiera",
+              "elle paiera",
+              "on paiera"
+            ],
+            "coloring": {"paiera":{"verbal":[[0,6]],"main":[0,6],"ending":[4,6]},"il paiera":{"verbal":[[3,9]],"main":[3,9],"ending":[7,9]},"elle paiera":{"verbal":[[5,11]],"main":[5,11],"ending":[9,11]},"on paiera":{"verbal":[[3,9]],"main":[3,9],"ending":[7,9]}}
+          },
+          {
+            "source_line": 374268,
+            "form": "payera",
+            "lemma": "payer",
+            "raw_tag": "F3s",
+            "tense": "F",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il payera",
+              "elle payera",
+              "on payera"
+            ],
+            "coloring": {"payera":{"verbal":[[0,6]],"main":[0,6],"ending":[4,6]},"il payera":{"verbal":[[3,9]],"main":[3,9],"ending":[7,9]},"elle payera":{"verbal":[[5,11]],"main":[5,11],"ending":[9,11]},"on payera":{"verbal":[[3,9]],"main":[3,9],"ending":[7,9]}}
+          },
+          {
+            "source_line": 374250,
+            "form": "payant",
+            "lemma": "payer",
+            "raw_tag": "G",
+            "tense": "G",
+            "person": null,
+            "number": null,
+            "gender": null,
+            "expressions": [
+              "payant"
+            ],
+            "coloring": {"payant":{"verbal":[[0,6]],"main":[0,6],"ending":[3,6]}}
+          },
+          {
+            "source_line": 374289,
+            "form": "payions",
+            "lemma": "payer",
+            "raw_tag": "I1p",
+            "tense": "I",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous payions"
+            ],
+            "coloring": {"payions":{"verbal":[[0,7]],"main":[0,7],"ending":[3,7]},"nous payions":{"verbal":[[5,12]],"main":[5,12],"ending":[8,12]}}
+          },
+          {
+            "source_line": 374246,
+            "form": "payais",
+            "lemma": "payer",
+            "raw_tag": "I12s",
+            "tense": "I",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "je payais"
+            ],
+            "coloring": {"payais":{"verbal":[[0,6]],"main":[0,6],"ending":[3,6]},"je payais":{"verbal":[[3,9]],"main":[3,9],"ending":[6,9]}}
+          },
+          {
+            "source_line": 374287,
+            "form": "payiez",
+            "lemma": "payer",
+            "raw_tag": "I2p",
+            "tense": "I",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous payiez"
+            ],
+            "coloring": {"payiez":{"verbal":[[0,6]],"main":[0,6],"ending":[3,6]},"vous payiez":{"verbal":[[5,11]],"main":[5,11],"ending":[8,11]}}
+          },
+          {
+            "source_line": 374246,
+            "form": "payais",
+            "lemma": "payer",
+            "raw_tag": "I12s",
+            "tense": "I",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu payais"
+            ],
+            "coloring": {"payais":{"verbal":[[0,6]],"main":[0,6],"ending":[3,6]},"tu payais":{"verbal":[[3,9]],"main":[3,9],"ending":[6,9]}}
+          },
+          {
+            "source_line": 374245,
+            "form": "payaient",
+            "lemma": "payer",
+            "raw_tag": "I3p",
+            "tense": "I",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils payaient",
+              "elles payaient"
+            ],
+            "coloring": {"payaient":{"verbal":[[0,8]],"main":[0,8],"ending":[3,8]},"ils payaient":{"verbal":[[4,12]],"main":[4,12],"ending":[7,12]},"elles payaient":{"verbal":[[6,14]],"main":[6,14],"ending":[9,14]}}
+          },
+          {
+            "source_line": 374247,
+            "form": "payait",
+            "lemma": "payer",
+            "raw_tag": "I3s",
+            "tense": "I",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il payait",
+              "elle payait",
+              "on payait"
+            ],
+            "coloring": {"payait":{"verbal":[[0,6]],"main":[0,6],"ending":[3,6]},"il payait":{"verbal":[[3,9]],"main":[3,9],"ending":[6,9]},"elle payait":{"verbal":[[5,11]],"main":[5,11],"ending":[8,11]},"on payait":{"verbal":[[3,9]],"main":[3,9],"ending":[6,9]}}
+          },
+          {
+            "source_line": 374367,
+            "form": "payâmes",
+            "lemma": "payer",
+            "raw_tag": "J1p",
+            "tense": "J",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous payâmes"
+            ],
+            "coloring": {"payâmes":{"verbal":[[0,7]],"main":[0,7],"ending":[3,7]},"nous payâmes":{"verbal":[[5,12]],"main":[5,12],"ending":[8,12]}}
+          },
+          {
+            "source_line": 374244,
+            "form": "payai",
+            "lemma": "payer",
+            "raw_tag": "J1s",
+            "tense": "J",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "je payai"
+            ],
+            "coloring": {"payai":{"verbal":[[0,5]],"main":[0,5],"ending":[3,5]},"je payai":{"verbal":[[3,8]],"main":[3,8],"ending":[6,8]}}
+          },
+          {
+            "source_line": 374369,
+            "form": "payâtes",
+            "lemma": "payer",
+            "raw_tag": "J2p",
+            "tense": "J",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous payâtes"
+            ],
+            "coloring": {"payâtes":{"verbal":[[0,7]],"main":[0,7],"ending":[3,7]},"vous payâtes":{"verbal":[[5,12]],"main":[5,12],"ending":[8,12]}}
+          },
+          {
+            "source_line": 374255,
+            "form": "payas",
+            "lemma": "payer",
+            "raw_tag": "J2s",
+            "tense": "J",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu payas"
+            ],
+            "coloring": {"payas":{"verbal":[[0,5]],"main":[0,5],"ending":[3,5]},"tu payas":{"verbal":[[3,8]],"main":[3,8],"ending":[6,8]}}
+          },
+          {
+            "source_line": 374370,
+            "form": "payèrent",
+            "lemma": "payer",
+            "raw_tag": "J3p",
+            "tense": "J",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils payèrent",
+              "elles payèrent"
+            ],
+            "coloring": {"payèrent":{"verbal":[[0,8]],"main":[0,8],"ending":[3,8]},"ils payèrent":{"verbal":[[4,12]],"main":[4,12],"ending":[7,12]},"elles payèrent":{"verbal":[[6,14]],"main":[6,14],"ending":[9,14]}}
+          },
+          {
+            "source_line": 374241,
+            "form": "paya",
+            "lemma": "payer",
+            "raw_tag": "J3s",
+            "tense": "J",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il paya",
+              "elle paya",
+              "on paya"
+            ],
+            "coloring": {"paya":{"verbal":[[0,4]],"main":[0,4],"ending":[3,4]},"il paya":{"verbal":[[3,7]],"main":[3,7],"ending":[6,7]},"elle paya":{"verbal":[[5,9]],"main":[5,9],"ending":[8,9]},"on paya":{"verbal":[[3,7]],"main":[3,7],"ending":[6,7]}}
+          },
+          {
+            "source_line": 374376,
+            "form": "payées",
+            "lemma": "payer",
+            "raw_tag": "Kfp",
+            "tense": "K",
+            "person": null,
+            "number": "p",
+            "gender": "f",
+            "expressions": [
+              "payées"
+            ],
+            "coloring": {"payées":{"verbal":[[0,6]],"main":[0,6],"ending":[3,6]}}
+          },
+          {
+            "source_line": 374378,
+            "form": "payés",
+            "lemma": "payer",
+            "raw_tag": "Kmp",
+            "tense": "K",
+            "person": null,
+            "number": "p",
+            "gender": "m",
+            "expressions": [
+              "payés"
+            ],
+            "coloring": {"payés":{"verbal":[[0,5]],"main":[0,5],"ending":[3,5]}}
+          },
+          {
+            "source_line": 374374,
+            "form": "payée",
+            "lemma": "payer",
+            "raw_tag": "Kfs",
+            "tense": "K",
+            "person": null,
+            "number": "s",
+            "gender": "f",
+            "expressions": [
+              "payée"
+            ],
+            "coloring": {"payée":{"verbal":[[0,5]],"main":[0,5],"ending":[3,5]}}
+          },
+          {
+            "source_line": 374372,
+            "form": "payé",
+            "lemma": "payer",
+            "raw_tag": "Kms",
+            "tense": "K",
+            "person": null,
+            "number": "s",
+            "gender": "m",
+            "expressions": [
+              "payé"
+            ],
+            "coloring": {"payé":{"verbal":[[0,4]],"main":[0,4],"ending":[3,4]}}
+          },
+          {
+            "source_line": 374291,
+            "form": "payons",
+            "lemma": "payer",
+            "raw_tag": "P1p",
+            "tense": "P",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous payons"
+            ],
+            "coloring": {"payons":{"verbal":[[0,6]],"main":[0,6],"ending":[3,6]},"nous payons":{"verbal":[[5,11]],"main":[5,11],"ending":[8,11]}}
+          },
+          {
+            "source_line": 367139,
+            "form": "paie",
+            "lemma": "payer",
+            "raw_tag": "PS13s",
+            "tense": "P",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "je paie"
+            ],
+            "coloring": {"paie":{"verbal":[[0,4]],"main":[0,4],"ending":[3,4]},"je paie":{"verbal":[[3,7]],"main":[3,7],"ending":[6,7]}}
+          },
+          {
+            "source_line": 374262,
+            "form": "paye",
+            "lemma": "payer",
+            "raw_tag": "PS13s",
+            "tense": "P",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "je paye"
+            ],
+            "coloring": {"paye":{"verbal":[[0,4]],"main":[0,4],"ending":[3,4]},"je paye":{"verbal":[[3,7]],"main":[3,7],"ending":[6,7]}}
+          },
+          {
+            "source_line": 374285,
+            "form": "payez",
+            "lemma": "payer",
+            "raw_tag": "P2p",
+            "tense": "P",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous payez"
+            ],
+            "coloring": {"payez":{"verbal":[[0,5]],"main":[0,5],"ending":[3,5]},"vous payez":{"verbal":[[5,10]],"main":[5,10],"ending":[8,10]}}
+          },
+          {
+            "source_line": 367158,
+            "form": "paies",
+            "lemma": "payer",
+            "raw_tag": "PS2s",
+            "tense": "P",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu paies"
+            ],
+            "coloring": {"paies":{"verbal":[[0,5]],"main":[0,5],"ending":[3,5]},"tu paies":{"verbal":[[3,8]],"main":[3,8],"ending":[6,8]}}
+          },
+          {
+            "source_line": 374280,
+            "form": "payes",
+            "lemma": "payer",
+            "raw_tag": "PS2s",
+            "tense": "P",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu payes"
+            ],
+            "coloring": {"payes":{"verbal":[[0,5]],"main":[0,5],"ending":[3,5]},"tu payes":{"verbal":[[3,8]],"main":[3,8],"ending":[6,8]}}
+          },
+          {
+            "source_line": 367143,
+            "form": "paient",
+            "lemma": "payer",
+            "raw_tag": "PS3p",
+            "tense": "P",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils paient",
+              "elles paient"
+            ],
+            "coloring": {"paient":{"verbal":[[0,6]],"main":[0,6],"ending":[3,6]},"ils paient":{"verbal":[[4,10]],"main":[4,10],"ending":[7,10]},"elles paient":{"verbal":[[6,12]],"main":[6,12],"ending":[9,12]}}
+          },
+          {
+            "source_line": 374266,
+            "form": "payent",
+            "lemma": "payer",
+            "raw_tag": "PS3p",
+            "tense": "P",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils payent",
+              "elles payent"
+            ],
+            "coloring": {"payent":{"verbal":[[0,6]],"main":[0,6],"ending":[3,6]},"ils payent":{"verbal":[[4,10]],"main":[4,10],"ending":[7,10]},"elles payent":{"verbal":[[6,12]],"main":[6,12],"ending":[9,12]}}
+          },
+          {
+            "source_line": 367139,
+            "form": "paie",
+            "lemma": "payer",
+            "raw_tag": "PS13s",
+            "tense": "P",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il paie",
+              "elle paie",
+              "on paie"
+            ],
+            "coloring": {"paie":{"verbal":[[0,4]],"main":[0,4],"ending":[3,4]},"il paie":{"verbal":[[3,7]],"main":[3,7],"ending":[6,7]},"elle paie":{"verbal":[[5,9]],"main":[5,9],"ending":[8,9]},"on paie":{"verbal":[[3,7]],"main":[3,7],"ending":[6,7]}}
+          },
+          {
+            "source_line": 374262,
+            "form": "paye",
+            "lemma": "payer",
+            "raw_tag": "PS13s",
+            "tense": "P",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il paye",
+              "elle paye",
+              "on paye"
+            ],
+            "coloring": {"paye":{"verbal":[[0,4]],"main":[0,4],"ending":[3,4]},"il paye":{"verbal":[[3,7]],"main":[3,7],"ending":[6,7]},"elle paye":{"verbal":[[5,9]],"main":[5,9],"ending":[8,9]},"on paye":{"verbal":[[3,7]],"main":[3,7],"ending":[6,7]}}
+          },
+          {
+            "source_line": 374290,
+            "form": "payions",
+            "lemma": "payer",
+            "raw_tag": "S1p",
+            "tense": "S",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous payions",
+              "que nous payions"
+            ],
+            "coloring": {"payions":{"verbal":[[0,7]],"main":[0,7],"ending":[3,7]},"nous payions":{"verbal":[[5,12]],"main":[5,12],"ending":[8,12]},"que nous payions":{"verbal":[[9,16]],"main":[9,16],"ending":[12,16]}}
+          },
+          {
+            "source_line": 367139,
+            "form": "paie",
+            "lemma": "payer",
+            "raw_tag": "PS13s",
+            "tense": "S",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "je paie",
+              "que je paie"
+            ],
+            "coloring": {"paie":{"verbal":[[0,4]],"main":[0,4],"ending":[3,4]},"je paie":{"verbal":[[3,7]],"main":[3,7],"ending":[6,7]},"que je paie":{"verbal":[[7,11]],"main":[7,11],"ending":[10,11]}}
+          },
+          {
+            "source_line": 374262,
+            "form": "paye",
+            "lemma": "payer",
+            "raw_tag": "PS13s",
+            "tense": "S",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "je paye",
+              "que je paye"
+            ],
+            "coloring": {"paye":{"verbal":[[0,4]],"main":[0,4],"ending":[3,4]},"je paye":{"verbal":[[3,7]],"main":[3,7],"ending":[6,7]},"que je paye":{"verbal":[[7,11]],"main":[7,11],"ending":[10,11]}}
+          },
+          {
+            "source_line": 374288,
+            "form": "payiez",
+            "lemma": "payer",
+            "raw_tag": "S2p",
+            "tense": "S",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous payiez",
+              "que vous payiez"
+            ],
+            "coloring": {"payiez":{"verbal":[[0,6]],"main":[0,6],"ending":[3,6]},"vous payiez":{"verbal":[[5,11]],"main":[5,11],"ending":[8,11]},"que vous payiez":{"verbal":[[9,15]],"main":[9,15],"ending":[12,15]}}
+          },
+          {
+            "source_line": 367158,
+            "form": "paies",
+            "lemma": "payer",
+            "raw_tag": "PS2s",
+            "tense": "S",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu paies",
+              "que tu paies"
+            ],
+            "coloring": {"paies":{"verbal":[[0,5]],"main":[0,5],"ending":[3,5]},"tu paies":{"verbal":[[3,8]],"main":[3,8],"ending":[6,8]},"que tu paies":{"verbal":[[7,12]],"main":[7,12],"ending":[10,12]}}
+          },
+          {
+            "source_line": 374280,
+            "form": "payes",
+            "lemma": "payer",
+            "raw_tag": "PS2s",
+            "tense": "S",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu payes",
+              "que tu payes"
+            ],
+            "coloring": {"payes":{"verbal":[[0,5]],"main":[0,5],"ending":[3,5]},"tu payes":{"verbal":[[3,8]],"main":[3,8],"ending":[6,8]},"que tu payes":{"verbal":[[7,12]],"main":[7,12],"ending":[10,12]}}
+          },
+          {
+            "source_line": 367143,
+            "form": "paient",
+            "lemma": "payer",
+            "raw_tag": "PS3p",
+            "tense": "S",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils paient",
+              "qu’ils paient",
+              "elles paient",
+              "qu’elles paient"
+            ],
+            "coloring": {"paient":{"verbal":[[0,6]],"main":[0,6],"ending":[3,6]},"ils paient":{"verbal":[[4,10]],"main":[4,10],"ending":[7,10]},"qu’ils paient":{"verbal":[[7,13]],"main":[7,13],"ending":[10,13]},"elles paient":{"verbal":[[6,12]],"main":[6,12],"ending":[9,12]},"qu’elles paient":{"verbal":[[9,15]],"main":[9,15],"ending":[12,15]}}
+          },
+          {
+            "source_line": 374266,
+            "form": "payent",
+            "lemma": "payer",
+            "raw_tag": "PS3p",
+            "tense": "S",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils payent",
+              "qu’ils payent",
+              "elles payent",
+              "qu’elles payent"
+            ],
+            "coloring": {"payent":{"verbal":[[0,6]],"main":[0,6],"ending":[3,6]},"ils payent":{"verbal":[[4,10]],"main":[4,10],"ending":[7,10]},"qu’ils payent":{"verbal":[[7,13]],"main":[7,13],"ending":[10,13]},"elles payent":{"verbal":[[6,12]],"main":[6,12],"ending":[9,12]},"qu’elles payent":{"verbal":[[9,15]],"main":[9,15],"ending":[12,15]}}
+          },
+          {
+            "source_line": 367139,
+            "form": "paie",
+            "lemma": "payer",
+            "raw_tag": "PS13s",
+            "tense": "S",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il paie",
+              "qu’il paie",
+              "elle paie",
+              "qu’elle paie",
+              "on paie",
+              "qu’on paie"
+            ],
+            "coloring": {"paie":{"verbal":[[0,4]],"main":[0,4],"ending":[3,4]},"il paie":{"verbal":[[3,7]],"main":[3,7],"ending":[6,7]},"qu’il paie":{"verbal":[[6,10]],"main":[6,10],"ending":[9,10]},"elle paie":{"verbal":[[5,9]],"main":[5,9],"ending":[8,9]},"qu’elle paie":{"verbal":[[8,12]],"main":[8,12],"ending":[11,12]},"on paie":{"verbal":[[3,7]],"main":[3,7],"ending":[6,7]},"qu’on paie":{"verbal":[[6,10]],"main":[6,10],"ending":[9,10]}}
+          },
+          {
+            "source_line": 374262,
+            "form": "paye",
+            "lemma": "payer",
+            "raw_tag": "PS13s",
+            "tense": "S",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il paye",
+              "qu’il paye",
+              "elle paye",
+              "qu’elle paye",
+              "on paye",
+              "qu’on paye"
+            ],
+            "coloring": {"paye":{"verbal":[[0,4]],"main":[0,4],"ending":[3,4]},"il paye":{"verbal":[[3,7]],"main":[3,7],"ending":[6,7]},"qu’il paye":{"verbal":[[6,10]],"main":[6,10],"ending":[9,10]},"elle paye":{"verbal":[[5,9]],"main":[5,9],"ending":[8,9]},"qu’elle paye":{"verbal":[[8,12]],"main":[8,12],"ending":[11,12]},"on paye":{"verbal":[[3,7]],"main":[3,7],"ending":[6,7]},"qu’on paye":{"verbal":[[6,10]],"main":[6,10],"ending":[9,10]}}
+          },
+          {
+            "source_line": 374260,
+            "form": "payassions",
+            "lemma": "payer",
+            "raw_tag": "T1p",
+            "tense": "T",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "nous payassions",
+              "que nous payassions"
+            ],
+            "coloring": {"payassions":{"verbal":[[0,10]],"main":[0,10],"ending":[3,10]},"nous payassions":{"verbal":[[5,15]],"main":[5,15],"ending":[8,15]},"que nous payassions":{"verbal":[[9,19]],"main":[9,19],"ending":[12,19]}}
+          },
+          {
+            "source_line": 374256,
+            "form": "payasse",
+            "lemma": "payer",
+            "raw_tag": "T1s",
+            "tense": "T",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "je payasse",
+              "que je payasse"
+            ],
+            "coloring": {"payasse":{"verbal":[[0,7]],"main":[0,7],"ending":[3,7]},"je payasse":{"verbal":[[3,10]],"main":[3,10],"ending":[6,10]},"que je payasse":{"verbal":[[7,14]],"main":[7,14],"ending":[10,14]}}
+          },
+          {
+            "source_line": 374259,
+            "form": "payassiez",
+            "lemma": "payer",
+            "raw_tag": "T2p",
+            "tense": "T",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "vous payassiez",
+              "que vous payassiez"
+            ],
+            "coloring": {"payassiez":{"verbal":[[0,9]],"main":[0,9],"ending":[3,9]},"vous payassiez":{"verbal":[[5,14]],"main":[5,14],"ending":[8,14]},"que vous payassiez":{"verbal":[[9,18]],"main":[9,18],"ending":[12,18]}}
+          },
+          {
+            "source_line": 374258,
+            "form": "payasses",
+            "lemma": "payer",
+            "raw_tag": "T2s",
+            "tense": "T",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "tu payasses",
+              "que tu payasses"
+            ],
+            "coloring": {"payasses":{"verbal":[[0,8]],"main":[0,8],"ending":[3,8]},"tu payasses":{"verbal":[[3,11]],"main":[3,11],"ending":[6,11]},"que tu payasses":{"verbal":[[7,15]],"main":[7,15],"ending":[10,15]}}
+          },
+          {
+            "source_line": 374257,
+            "form": "payassent",
+            "lemma": "payer",
+            "raw_tag": "T3p",
+            "tense": "T",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "ils payassent",
+              "qu’ils payassent",
+              "elles payassent",
+              "qu’elles payassent"
+            ],
+            "coloring": {"payassent":{"verbal":[[0,9]],"main":[0,9],"ending":[3,9]},"ils payassent":{"verbal":[[4,13]],"main":[4,13],"ending":[7,13]},"qu’ils payassent":{"verbal":[[7,16]],"main":[7,16],"ending":[10,16]},"elles payassent":{"verbal":[[6,15]],"main":[6,15],"ending":[9,15]},"qu’elles payassent":{"verbal":[[9,18]],"main":[9,18],"ending":[12,18]}}
+          },
+          {
+            "source_line": 374368,
+            "form": "payât",
+            "lemma": "payer",
+            "raw_tag": "T3s",
+            "tense": "T",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il payât",
+              "qu’il payât",
+              "elle payât",
+              "qu’elle payât",
+              "on payât",
+              "qu’on payât"
+            ],
+            "coloring": {"payât":{"verbal":[[0,5]],"main":[0,5],"ending":[3,5]},"il payât":{"verbal":[[3,8]],"main":[3,8],"ending":[6,8]},"qu’il payât":{"verbal":[[6,11]],"main":[6,11],"ending":[9,11]},"elle payât":{"verbal":[[5,10]],"main":[5,10],"ending":[8,10]},"qu’elle payât":{"verbal":[[8,13]],"main":[8,13],"ending":[11,13]},"on payât":{"verbal":[[3,8]],"main":[3,8],"ending":[6,8]},"qu’on payât":{"verbal":[[6,11]],"main":[6,11],"ending":[9,11]}}
+          },
+          {
+            "source_line": 374267,
+            "form": "payer",
+            "lemma": "payer",
+            "raw_tag": "W",
+            "tense": "W",
+            "person": null,
+            "number": null,
+            "gender": null,
+            "expressions": [
+              "payer"
+            ],
+            "coloring": {"payer":{"verbal":[[0,5]],"main":[0,5],"ending":[3,5]}}
+          },
+          {
+            "source_line": 374292,
+            "form": "payons",
+            "lemma": "payer",
+            "raw_tag": "Y1p",
+            "tense": "Y",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "payons"
+            ],
+            "coloring": {"payons":{"verbal":[[0,6]],"main":[0,6],"ending":[3,6]}}
+          },
+          {
+            "source_line": 374286,
+            "form": "payez",
+            "lemma": "payer",
+            "raw_tag": "Y2p",
+            "tense": "Y",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "payez"
+            ],
+            "coloring": {"payez":{"verbal":[[0,5]],"main":[0,5],"ending":[3,5]}}
+          },
+          {
+            "source_line": 367140,
+            "form": "paie",
+            "lemma": "payer",
+            "raw_tag": "Y2s",
+            "tense": "Y",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "paie"
+            ],
+            "coloring": {"paie":{"verbal":[[0,4]],"main":[0,4],"ending":[3,4]}}
+          },
+          {
+            "source_line": 374263,
+            "form": "paye",
+            "lemma": "payer",
+            "raw_tag": "Y2s",
+            "tense": "Y",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "paye"
+            ],
+            "coloring": {"paye":{"verbal":[[0,4]],"main":[0,4],"ending":[3,4]}}
+          }
+        ],
+        "meanings": {
+          "status": "available",
+          "senses": [
+            {
+              "source_entry": 5932,
+              "source_sense": 1,
+              "headword": "payer",
+              "use": "ordinary",
+              "labels": [],
+              "glosses": [
+                "pay"
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "falloir": {
+    "query": "falloir",
+    "tables": [
+      {
+        "lemma": "falloir",
+        "verb": {
+          "group": 3,
+          "group_status": "supported",
+          "auxiliaries": [
+            {
+              "lemma": "avoir",
+              "use": "ordinary active"
+            }
+          ],
+          "auxiliary_status": "supported",
+          "ordinary_status": "supported",
+          "usage_labels": [
+            "transitive",
+            "indirect_transitive",
+            "impersonal"
+          ],
+          "source": {
+            "resource": "grammalecte-2.3.0",
+            "entry": "dVerb/falloir",
+            "raw_type": "3__tnem_a"
+          },
+          "correction": null
+        },
+        "cells": [
+          {
+            "source_line": 255918,
+            "form": "faudrait",
+            "lemma": "falloir",
+            "raw_tag": "C3s",
+            "tense": "C",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il faudrait"
+            ],
+            "coloring": {"faudrait":{"verbal":[[0,8]],"main":[0,8],"ending":null},"il faudrait":{"verbal":[[3,11]],"main":[3,11],"ending":null}}
+          },
+          {
+            "source_line": 255917,
+            "form": "faudra",
+            "lemma": "falloir",
+            "raw_tag": "F3s",
+            "tense": "F",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il faudra"
+            ],
+            "coloring": {"faudra":{"verbal":[[0,6]],"main":[0,6],"ending":null},"il faudra":{"verbal":[[3,9]],"main":[3,9],"ending":null}}
+          },
+          {
+            "source_line": 254496,
+            "form": "fallait",
+            "lemma": "falloir",
+            "raw_tag": "I3s",
+            "tense": "I",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il fallait"
+            ],
+            "coloring": {"fallait":{"verbal":[[0,7]],"main":[0,7],"ending":null},"il fallait":{"verbal":[[3,10]],"main":[3,10],"ending":null}}
+          },
+          {
+            "source_line": 254499,
+            "form": "fallut",
+            "lemma": "falloir",
+            "raw_tag": "J3s",
+            "tense": "J",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il fallut"
+            ],
+            "coloring": {"fallut":{"verbal":[[0,6]],"main":[0,6],"ending":null},"il fallut":{"verbal":[[3,9]],"main":[3,9],"ending":null}}
+          },
+          {
+            "source_line": 254498,
+            "form": "fallu",
+            "lemma": "falloir",
+            "raw_tag": "K",
+            "tense": "K",
+            "person": null,
+            "number": null,
+            "gender": null,
+            "expressions": [
+              "fallu"
+            ],
+            "coloring": {"fallu":{"verbal":[[0,5]],"main":[0,5],"ending":null}}
+          },
+          {
+            "source_line": 256054,
+            "form": "faut",
+            "lemma": "falloir",
+            "raw_tag": "P3s",
+            "tense": "P",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il faut"
+            ],
+            "coloring": {"faut":{"verbal":[[0,4]],"main":[0,4],"ending":null},"il faut":{"verbal":[[3,7]],"main":[3,7],"ending":null}}
+          },
+          {
+            "source_line": 254234,
+            "form": "faille",
+            "lemma": "falloir",
+            "raw_tag": "S3s",
+            "tense": "S",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il faille",
+              "qu’il faille"
+            ],
+            "coloring": {"faille":{"verbal":[[0,6]],"main":[0,6],"ending":null},"il faille":{"verbal":[[3,9]],"main":[3,9],"ending":null},"qu’il faille":{"verbal":[[6,12]],"main":[6,12],"ending":null}}
+          },
+          {
+            "source_line": 254500,
+            "form": "fallût",
+            "lemma": "falloir",
+            "raw_tag": "T3s",
+            "tense": "T",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "il fallût",
+              "qu’il fallût"
+            ],
+            "coloring": {"fallût":{"verbal":[[0,6]],"main":[0,6],"ending":null},"il fallût":{"verbal":[[3,9]],"main":[3,9],"ending":null},"qu’il fallût":{"verbal":[[6,12]],"main":[6,12],"ending":null}}
+          },
+          {
+            "source_line": 254497,
+            "form": "falloir",
+            "lemma": "falloir",
+            "raw_tag": "W",
+            "tense": "W",
+            "person": null,
+            "number": null,
+            "gender": null,
+            "expressions": [
+              "falloir"
+            ],
+            "coloring": {"falloir":{"verbal":[[0,7]],"main":[0,7],"ending":null}}
+          }
+        ],
+        "meanings": {
+          "status": "unavailable",
+          "senses": []
+        }
+      }
+    ]
+  },
+  "enfuir": {
+    "query": "enfuir",
+    "tables": [
+      {
+        "lemma": "enfuir",
+        "verb": {
+          "group": 3,
+          "group_status": "supported",
+          "auxiliaries": [],
+          "auxiliary_status": "not_applicable",
+          "ordinary_status": "not_applicable",
+          "usage_labels": [
+            "pronominal_only"
+          ],
+          "source": {
+            "resource": "grammalecte-2.3.0",
+            "entry": "dVerb/enfuir",
+            "raw_type": "3____p_e_"
+          },
+          "correction": null
+        },
+        "cells": [
+          {
+            "source_line": 236894,
+            "form": "enfuirions",
+            "lemma": "enfuir",
+            "raw_tag": "C1p",
+            "tense": "C",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "enfuirions"
+            ],
+            "coloring": {"enfuirions":{"verbal":[[0,10]],"main":[0,10],"ending":null}}
+          },
+          {
+            "source_line": 236888,
+            "form": "enfuirais",
+            "lemma": "enfuir",
+            "raw_tag": "C12s",
+            "tense": "C",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "enfuirais"
+            ],
+            "coloring": {"enfuirais":{"verbal":[[0,9]],"main":[0,9],"ending":null}}
+          },
+          {
+            "source_line": 236893,
+            "form": "enfuiriez",
+            "lemma": "enfuir",
+            "raw_tag": "C2p",
+            "tense": "C",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "enfuiriez"
+            ],
+            "coloring": {"enfuiriez":{"verbal":[[0,9]],"main":[0,9],"ending":null}}
+          },
+          {
+            "source_line": 236888,
+            "form": "enfuirais",
+            "lemma": "enfuir",
+            "raw_tag": "C12s",
+            "tense": "C",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "enfuirais"
+            ],
+            "coloring": {"enfuirais":{"verbal":[[0,9]],"main":[0,9],"ending":null}}
+          },
+          {
+            "source_line": 236887,
+            "form": "enfuiraient",
+            "lemma": "enfuir",
+            "raw_tag": "C3p",
+            "tense": "C",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "enfuiraient"
+            ],
+            "coloring": {"enfuiraient":{"verbal":[[0,11]],"main":[0,11],"ending":null}}
+          },
+          {
+            "source_line": 236889,
+            "form": "enfuirait",
+            "lemma": "enfuir",
+            "raw_tag": "C3s",
+            "tense": "C",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "enfuirait"
+            ],
+            "coloring": {"enfuirait":{"verbal":[[0,9]],"main":[0,9],"ending":null}}
+          },
+          {
+            "source_line": 236895,
+            "form": "enfuirons",
+            "lemma": "enfuir",
+            "raw_tag": "F1p",
+            "tense": "F",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "enfuirons"
+            ],
+            "coloring": {"enfuirons":{"verbal":[[0,9]],"main":[0,9],"ending":null}}
+          },
+          {
+            "source_line": 236886,
+            "form": "enfuirai",
+            "lemma": "enfuir",
+            "raw_tag": "F1s",
+            "tense": "F",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "enfuirai"
+            ],
+            "coloring": {"enfuirai":{"verbal":[[0,8]],"main":[0,8],"ending":null}}
+          },
+          {
+            "source_line": 236892,
+            "form": "enfuirez",
+            "lemma": "enfuir",
+            "raw_tag": "F2p",
+            "tense": "F",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "enfuirez"
+            ],
+            "coloring": {"enfuirez":{"verbal":[[0,8]],"main":[0,8],"ending":null}}
+          },
+          {
+            "source_line": 236890,
+            "form": "enfuiras",
+            "lemma": "enfuir",
+            "raw_tag": "F2s",
+            "tense": "F",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "enfuiras"
+            ],
+            "coloring": {"enfuiras":{"verbal":[[0,8]],"main":[0,8],"ending":null}}
+          },
+          {
+            "source_line": 236896,
+            "form": "enfuiront",
+            "lemma": "enfuir",
+            "raw_tag": "F3p",
+            "tense": "F",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "enfuiront"
+            ],
+            "coloring": {"enfuiront":{"verbal":[[0,9]],"main":[0,9],"ending":null}}
+          },
+          {
+            "source_line": 236885,
+            "form": "enfuira",
+            "lemma": "enfuir",
+            "raw_tag": "F3s",
+            "tense": "F",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "enfuira"
+            ],
+            "coloring": {"enfuira":{"verbal":[[0,7]],"main":[0,7],"ending":null}}
+          },
+          {
+            "source_line": 237012,
+            "form": "enfuyant",
+            "lemma": "enfuir",
+            "raw_tag": "G",
+            "tense": "G",
+            "person": null,
+            "number": null,
+            "gender": null,
+            "expressions": [
+              "enfuyant"
+            ],
+            "coloring": {"enfuyant":{"verbal":[[0,8]],"main":[0,8],"ending":null}}
+          },
+          {
+            "source_line": 237017,
+            "form": "enfuyions",
+            "lemma": "enfuir",
+            "raw_tag": "I1p",
+            "tense": "I",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "enfuyions"
+            ],
+            "coloring": {"enfuyions":{"verbal":[[0,9]],"main":[0,9],"ending":null}}
+          },
+          {
+            "source_line": 237010,
+            "form": "enfuyais",
+            "lemma": "enfuir",
+            "raw_tag": "I12s",
+            "tense": "I",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "enfuyais"
+            ],
+            "coloring": {"enfuyais":{"verbal":[[0,8]],"main":[0,8],"ending":null}}
+          },
+          {
+            "source_line": 237015,
+            "form": "enfuyiez",
+            "lemma": "enfuir",
+            "raw_tag": "I2p",
+            "tense": "I",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "enfuyiez"
+            ],
+            "coloring": {"enfuyiez":{"verbal":[[0,8]],"main":[0,8],"ending":null}}
+          },
+          {
+            "source_line": 237010,
+            "form": "enfuyais",
+            "lemma": "enfuir",
+            "raw_tag": "I12s",
+            "tense": "I",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "enfuyais"
+            ],
+            "coloring": {"enfuyais":{"verbal":[[0,8]],"main":[0,8],"ending":null}}
+          },
+          {
+            "source_line": 237009,
+            "form": "enfuyaient",
+            "lemma": "enfuir",
+            "raw_tag": "I3p",
+            "tense": "I",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "enfuyaient"
+            ],
+            "coloring": {"enfuyaient":{"verbal":[[0,10]],"main":[0,10],"ending":null}}
+          },
+          {
+            "source_line": 237011,
+            "form": "enfuyait",
+            "lemma": "enfuir",
+            "raw_tag": "I3s",
+            "tense": "I",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "enfuyait"
+            ],
+            "coloring": {"enfuyait":{"verbal":[[0,8]],"main":[0,8],"ending":null}}
+          },
+          {
+            "source_line": 237021,
+            "form": "enfuîmes",
+            "lemma": "enfuir",
+            "raw_tag": "J1p",
+            "tense": "J",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "enfuîmes"
+            ],
+            "coloring": {"enfuîmes":{"verbal":[[0,8]],"main":[0,8],"ending":null}}
+          },
+          {
+            "source_line": 236898,
+            "form": "enfuis",
+            "lemma": "enfuir",
+            "raw_tag": "PJ12s",
+            "tense": "J",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "enfuis"
+            ],
+            "coloring": {"enfuis":{"verbal":[[0,6]],"main":[0,6],"ending":null}}
+          },
+          {
+            "source_line": 237023,
+            "form": "enfuîtes",
+            "lemma": "enfuir",
+            "raw_tag": "J2p",
+            "tense": "J",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "enfuîtes"
+            ],
+            "coloring": {"enfuîtes":{"verbal":[[0,8]],"main":[0,8],"ending":null}}
+          },
+          {
+            "source_line": 236898,
+            "form": "enfuis",
+            "lemma": "enfuir",
+            "raw_tag": "PJ12s",
+            "tense": "J",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "enfuis"
+            ],
+            "coloring": {"enfuis":{"verbal":[[0,6]],"main":[0,6],"ending":null}}
+          },
+          {
+            "source_line": 236891,
+            "form": "enfuirent",
+            "lemma": "enfuir",
+            "raw_tag": "J3p",
+            "tense": "J",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "enfuirent"
+            ],
+            "coloring": {"enfuirent":{"verbal":[[0,9]],"main":[0,9],"ending":null}}
+          },
+          {
+            "source_line": 236905,
+            "form": "enfuit",
+            "lemma": "enfuir",
+            "raw_tag": "J3s",
+            "tense": "J",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "enfuit"
+            ],
+            "coloring": {"enfuit":{"verbal":[[0,6]],"main":[0,6],"ending":null}}
+          },
+          {
+            "source_line": 236882,
+            "form": "enfuies",
+            "lemma": "enfuir",
+            "raw_tag": "Kfp",
+            "tense": "K",
+            "person": null,
+            "number": "p",
+            "gender": "f",
+            "expressions": [
+              "enfuies"
+            ],
+            "coloring": {"enfuies":{"verbal":[[0,7]],"main":[0,7],"ending":null}}
+          },
+          {
+            "source_line": 236897,
+            "form": "enfuis",
+            "lemma": "enfuir",
+            "raw_tag": "Kmp",
+            "tense": "K",
+            "person": null,
+            "number": "p",
+            "gender": "m",
+            "expressions": [
+              "enfuis"
+            ],
+            "coloring": {"enfuis":{"verbal":[[0,6]],"main":[0,6],"ending":null}}
+          },
+          {
+            "source_line": 236879,
+            "form": "enfuie",
+            "lemma": "enfuir",
+            "raw_tag": "Kfs",
+            "tense": "K",
+            "person": null,
+            "number": "s",
+            "gender": "f",
+            "expressions": [
+              "enfuie"
+            ],
+            "coloring": {"enfuie":{"verbal":[[0,6]],"main":[0,6],"ending":null}}
+          },
+          {
+            "source_line": 236878,
+            "form": "enfui",
+            "lemma": "enfuir",
+            "raw_tag": "Kms",
+            "tense": "K",
+            "person": null,
+            "number": "s",
+            "gender": "m",
+            "expressions": [
+              "enfui"
+            ],
+            "coloring": {"enfui":{"verbal":[[0,5]],"main":[0,5],"ending":null}}
+          },
+          {
+            "source_line": 237019,
+            "form": "enfuyons",
+            "lemma": "enfuir",
+            "raw_tag": "P1p",
+            "tense": "P",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "enfuyons"
+            ],
+            "coloring": {"enfuyons":{"verbal":[[0,8]],"main":[0,8],"ending":null}}
+          },
+          {
+            "source_line": 236898,
+            "form": "enfuis",
+            "lemma": "enfuir",
+            "raw_tag": "PJ12s",
+            "tense": "P",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "enfuis"
+            ],
+            "coloring": {"enfuis":{"verbal":[[0,6]],"main":[0,6],"ending":null}}
+          },
+          {
+            "source_line": 237013,
+            "form": "enfuyez",
+            "lemma": "enfuir",
+            "raw_tag": "P2p",
+            "tense": "P",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "enfuyez"
+            ],
+            "coloring": {"enfuyez":{"verbal":[[0,7]],"main":[0,7],"ending":null}}
+          },
+          {
+            "source_line": 236898,
+            "form": "enfuis",
+            "lemma": "enfuir",
+            "raw_tag": "PJ12s",
+            "tense": "P",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "enfuis"
+            ],
+            "coloring": {"enfuis":{"verbal":[[0,6]],"main":[0,6],"ending":null}}
+          },
+          {
+            "source_line": 236881,
+            "form": "enfuient",
+            "lemma": "enfuir",
+            "raw_tag": "PS3p",
+            "tense": "P",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "enfuient"
+            ],
+            "coloring": {"enfuient":{"verbal":[[0,8]],"main":[0,8],"ending":null}}
+          },
+          {
+            "source_line": 236906,
+            "form": "enfuit",
+            "lemma": "enfuir",
+            "raw_tag": "P3s",
+            "tense": "P",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "enfuit"
+            ],
+            "coloring": {"enfuit":{"verbal":[[0,6]],"main":[0,6],"ending":null}}
+          },
+          {
+            "source_line": 237018,
+            "form": "enfuyions",
+            "lemma": "enfuir",
+            "raw_tag": "S1p",
+            "tense": "S",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "enfuyions"
+            ],
+            "coloring": {"enfuyions":{"verbal":[[0,9]],"main":[0,9],"ending":null}}
+          },
+          {
+            "source_line": 236880,
+            "form": "enfuie",
+            "lemma": "enfuir",
+            "raw_tag": "S13s",
+            "tense": "S",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "enfuie"
+            ],
+            "coloring": {"enfuie":{"verbal":[[0,6]],"main":[0,6],"ending":null}}
+          },
+          {
+            "source_line": 237016,
+            "form": "enfuyiez",
+            "lemma": "enfuir",
+            "raw_tag": "S2p",
+            "tense": "S",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "enfuyiez"
+            ],
+            "coloring": {"enfuyiez":{"verbal":[[0,8]],"main":[0,8],"ending":null}}
+          },
+          {
+            "source_line": 236883,
+            "form": "enfuies",
+            "lemma": "enfuir",
+            "raw_tag": "S2s",
+            "tense": "S",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "enfuies"
+            ],
+            "coloring": {"enfuies":{"verbal":[[0,7]],"main":[0,7],"ending":null}}
+          },
+          {
+            "source_line": 236881,
+            "form": "enfuient",
+            "lemma": "enfuir",
+            "raw_tag": "PS3p",
+            "tense": "S",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "enfuient"
+            ],
+            "coloring": {"enfuient":{"verbal":[[0,8]],"main":[0,8],"ending":null}}
+          },
+          {
+            "source_line": 236880,
+            "form": "enfuie",
+            "lemma": "enfuir",
+            "raw_tag": "S13s",
+            "tense": "S",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "enfuie"
+            ],
+            "coloring": {"enfuie":{"verbal":[[0,6]],"main":[0,6],"ending":null}}
+          },
+          {
+            "source_line": 236904,
+            "form": "enfuissions",
+            "lemma": "enfuir",
+            "raw_tag": "T1p",
+            "tense": "T",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "enfuissions"
+            ],
+            "coloring": {"enfuissions":{"verbal":[[0,11]],"main":[0,11],"ending":null}}
+          },
+          {
+            "source_line": 236900,
+            "form": "enfuisse",
+            "lemma": "enfuir",
+            "raw_tag": "T1s",
+            "tense": "T",
+            "person": "1",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "enfuisse"
+            ],
+            "coloring": {"enfuisse":{"verbal":[[0,8]],"main":[0,8],"ending":null}}
+          },
+          {
+            "source_line": 236903,
+            "form": "enfuissiez",
+            "lemma": "enfuir",
+            "raw_tag": "T2p",
+            "tense": "T",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "enfuissiez"
+            ],
+            "coloring": {"enfuissiez":{"verbal":[[0,10]],"main":[0,10],"ending":null}}
+          },
+          {
+            "source_line": 236902,
+            "form": "enfuisses",
+            "lemma": "enfuir",
+            "raw_tag": "T2s",
+            "tense": "T",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "enfuisses"
+            ],
+            "coloring": {"enfuisses":{"verbal":[[0,9]],"main":[0,9],"ending":null}}
+          },
+          {
+            "source_line": 236901,
+            "form": "enfuissent",
+            "lemma": "enfuir",
+            "raw_tag": "T3p",
+            "tense": "T",
+            "person": "3",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "enfuissent"
+            ],
+            "coloring": {"enfuissent":{"verbal":[[0,10]],"main":[0,10],"ending":null}}
+          },
+          {
+            "source_line": 237022,
+            "form": "enfuît",
+            "lemma": "enfuir",
+            "raw_tag": "T3s",
+            "tense": "T",
+            "person": "3",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "enfuît"
+            ],
+            "coloring": {"enfuît":{"verbal":[[0,6]],"main":[0,6],"ending":null}}
+          },
+          {
+            "source_line": 236884,
+            "form": "enfuir",
+            "lemma": "enfuir",
+            "raw_tag": "W",
+            "tense": "W",
+            "person": null,
+            "number": null,
+            "gender": null,
+            "expressions": [
+              "enfuir"
+            ],
+            "coloring": {"enfuir":{"verbal":[[0,6]],"main":[0,6],"ending":null}}
+          },
+          {
+            "source_line": 237020,
+            "form": "enfuyons",
+            "lemma": "enfuir",
+            "raw_tag": "Y1p",
+            "tense": "Y",
+            "person": "1",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "enfuyons"
+            ],
+            "coloring": {"enfuyons":{"verbal":[[0,8]],"main":[0,8],"ending":null}}
+          },
+          {
+            "source_line": 237014,
+            "form": "enfuyez",
+            "lemma": "enfuir",
+            "raw_tag": "Y2p",
+            "tense": "Y",
+            "person": "2",
+            "number": "p",
+            "gender": null,
+            "expressions": [
+              "enfuyez"
+            ],
+            "coloring": {"enfuyez":{"verbal":[[0,7]],"main":[0,7],"ending":null}}
+          },
+          {
+            "source_line": 236899,
+            "form": "enfuis",
+            "lemma": "enfuir",
+            "raw_tag": "Y2s",
+            "tense": "Y",
+            "person": "2",
+            "number": "s",
+            "gender": null,
+            "expressions": [
+              "enfuis"
+            ],
+            "coloring": {"enfuis":{"verbal":[[0,6]],"main":[0,6],"ending":null}}
+          }
+        ],
+        "meanings": {
+          "status": "available",
+          "senses": [
+            {
+              "source_entry": 7142,
+              "source_sense": 1,
+              "headword": "s'enfuir",
+              "use": "pronominal",
+              "labels": [],
+              "glosses": [
+                "abscond"
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "voilà": {
+    "query": "voilà",
+    "tables": [
+      {
+        "lemma": "voilà",
+        "verb": {
+          "group": null,
+          "group_status": "unconfirmed",
+          "auxiliaries": [],
+          "auxiliary_status": "unconfirmed",
+          "ordinary_status": "unconfirmed",
+          "usage_labels": [],
+          "source": null,
+          "correction": null
+        },
+        "cells": [
+          {
+            "source_line": 518536,
+            "form": "v'là",
+            "lemma": "voilà",
+            "raw_tag": "",
+            "tense": null,
+            "person": null,
+            "number": null,
+            "gender": null,
+            "expressions": [
+              "v'là"
+            ],
+            "coloring": {"v'là":{"verbal":[[0,4]],"main":[0,4],"ending":null}}
+          },
+          {
+            "source_line": 526286,
+            "form": "voilà",
+            "lemma": "voilà",
+            "raw_tag": "",
+            "tense": null,
+            "person": null,
+            "number": null,
+            "gender": null,
+            "expressions": [
+              "voilà"
+            ],
+            "coloring": {"voilà":{"verbal":[[0,5]],"main":[0,5],"ending":null}}
+          }
+        ],
+        "meanings": {
+          "status": "unavailable",
+          "senses": []
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "status": "PASS",
+  "navigation": true,
+  "restart": true,
+  "selected": [
+    "laver",
+    "être",
+    "s’adapter"
+  ],
+  "originalQuery": " S'ADAPTER ",
+  "ambiguousCandidates": [
+    "suivre",
+    "être"
+  ],
+  "unavailable": [
+    "se laver dictionary entry",
+    "été noun link",
+    "faire l’amour conjugation link"
+  ],
+  "resourceFailures": [
+    "missing conjugation",
+    "corrupt conjugation",
+    "missing dictionary",
+    "corrupt dictionary"
+  ],
+  "edits": [
+    "stay",
+    "failed save retained",
+    "discard",
+    "save and leave",
+    "existing",
+    "conflict"
+  ],
+  "mode": "main",
+  "blockOrder": [
+    "P",
+    "PC",
+    "I",
+    "F",
+    "C",
+    "S",
+    "J",
+    "PQP",
+    "PA",
+    "FA",
+    "CP",
+    "SP",
+    "T",
+    "SQP",
+    "Y",
+    "YP",
+    "W",
+    "WP",
+    "G",
+    "K",
+    "KP",
+    "GP",
+    "GPP"
+  ],
+  "languages": [
+    "zh",
+    "fr",
+    "en"
+  ],
+  "themes": [
+    "white",
+    "sepia",
+    "dark"
+  ],
+  "preserved": {
+    "preExistingRecords": 6,
+    "records": 7,
+    "cards": 12,
+    "progress": 12,
+    "audioFiles": 7,
+    "references": true,
+    "selectedAudio": true,
+    "speechPreferences": true
+  }
+}
