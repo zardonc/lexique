@@ -47,7 +47,7 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
     dictionary = release / "dictionary/dictionary.sqlite3"
     if hashlib.sha256(dictionary.read_bytes()).hexdigest() != report["sqlite_sha256"]:
         raise ValueError("Release dictionary does not match the prepared resource")
-    conjugation_report = json.loads((root / "target/desktop-conjugation-v6-query/report.json").read_text())
+    conjugation_report = json.loads((root / "target/desktop-conjugation-v6-color/report.json").read_text())
     conjugation = release / "conjugation"
     if hashlib.sha256((conjugation / "conjugation.sqlite3").read_bytes()).hexdigest() != conjugation_report["sqlite_sha256"]:
         raise ValueError("Release conjugation does not match the prepared resource")

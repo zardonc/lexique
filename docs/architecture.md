@@ -45,7 +45,11 @@ M1 请求由 Rust 严格反序列化，前端请求 / 响应由 Zod 校验。标
 
 ## 后续模块放置
 
-变位查询复用 `RuntimeAdapter` 和 `lexique-dictionary` 资源 crate，通过仅授予本地 main 窗口的 `conjugation_lookup` 读取固定 `conjugation/conjugation.sqlite3`；请求只接受 1–512 UTF-8 字节的非空、无控制字符原始词形，不接受路径。构建时验证格式 6 的资源并固定摘要；运行时与词典共用校验字节、只读 SQLite 快照和参数化查询，在资源模块内展开共享简单变位模型，再按已准入规则构造复合／代词式、主语、省音和配合表达。CLI、原生和前端统一按 NFC、小写、直撇号转弯撇号及 Unicode 空白折叠比较查询，保留重音和原始查询；反查先以归一后的模型后缀寻找兼容词干，最终比较完整生成形式／表达。前端的响应校验、匹配数和逐表达高亮使用同一比较规则；没有物化表达索引。返回全部候选的源格与元数据，前端用 Zod 校验身份和结构。此命令不打开用户库。前端按法语词元排序并独立计算候选数和逻辑匹配格数，保留源拼写、标签及不确定状态。10.46 MiB 数据库使用 16 MiB 原生快照上限；170 个模型、源行锚点及 zlib 元数据保留全部 10,781 个普通／代词式身份。两种资源通过构建入口与 portable 打包一起放到可执行文件旁，保留各自许可及七份转换源码。格式 5 原物及用户学习数据均保留；全量等价和存储契约见[变位存储](conjugation-storage.md)，查询验证见 [#44 证据](evidence/issue-44/README.md)。
+变位查询复用 `RuntimeAdapter` 和 `lexique-dictionary` 资源 crate，通过仅授予本地 main 窗口的 `conjugation_lookup` 读取固定 `conjugation/conjugation.sqlite3`；请求只接受 1–512 UTF-8 字节的非空、无控制字符原始词形，不接受路径。构建时验证格式 6 的资源并固定摘要；运行时与词典共用校验字节、只读 SQLite 快照和参数化查询，在资源模块内展开共享简单变位模型，再按已准入规则构造复合／代词式、主语、省音和配合表达。CLI、原生和前端统一按 NFC、小写、直撇号转弯撇号及 Unicode 空白折叠比较查询，保留重音和原始查询；反查先以归一后的模型后缀寻找兼容词干，最终比较完整生成形式／表达。前端的响应校验、匹配数和逐表达高亮使用同一比较规则；没有物化表达索引。返回全部候选的源格与元数据，前端用 Zod 校验身份和结构。此命令不打开用户库。前端按法语词元排序并独立计算候选数和逻辑匹配格数，保留源拼写、标签及不确定状态。10.50 MiB 数据库使用 16 MiB 原生快照上限；170 个模型、源行锚点及 zlib 元数据保留全部 10,781 个普通／代词式身份。两种资源通过构建入口与 portable 打包一起放到可执行文件旁，保留各自许可、八份 MIT 转换源码及 LGPL-LR 词尾规则。格式 5 原物及用户学习数据均保留；全量等价和存储契约见[变位存储](conjugation-storage.md)，查询验证见 [#44 证据](evidence/issue-44/README.md)。
+
+#45 在完整生成形式和表达上返回 `coloring`：`verbal`、`main` 与可空的 `ending` 范围按原始文字的 Unicode 字符计数，终点不包含在范围内。Python 与 Rust 使用独立的 `scripts/conjugation_endings.json`，不从压缩模型的 cut／suffix 推断词尾；第三组及未确认组别的所有词尾均为空。Zod 校验范围、表达键及整类排除。资源准备改用 `target/desktop-conjugation-v6-color/`，对应资源和 reader 一起重建，旧目录保留。
+
+受限 `conjugation_preferences` 命令复用 `RuntimeAdapter` 与现有 SQLite `app_metadata` JSON 偏好，键为 `conjugation-preferences`，只接受 `verbal`／`main`／`ending`。仅配置不存在时使用默认 `ending`；损坏配置、读写和存储失败明确返回错误。前端保存成功才切换模式，读取失败禁用选择并提供重读，浏览器预览显示不保存提示。偏好不提高 schema 17，也不修改词汇、卡片、进度或音频；详见 [#45 证据](evidence/issue-45/README.md)。
 
 #13 在共享核心提供 `scheduling::schedule` 及严格 JSON 入口 `schedule_json`，接收卡片、评分、Unix 秒时间与 IANA 时区，不读取设备时钟。输出记忆状态、阶段、完整步骤秒数或取整天数、绝对到期时间、经过学习日、模型参数和时区库版本；调用方须保存完整请求和结果作为历史，不以最新设置重建旧请求。固定 FSRS 6.6.2 的标量调度数学使用显式 vendored 兼容补丁，统一调用关闭默认 features 的 libm 0.2.16；公式、官方参数、步骤及取整不变。历史标识 `fsrs-rs/6.6.2+libm-0.2.16` 与未修改上游包区分，拒绝混用。Windows x64 native / 实际 WASM 对照通过，其他平台实际执行另验。此票不迁移用户库、不添加 IPC 或评分 UI。原生 CLI 与 WASM 的有界输入缓冲区调用同一 JSON 入口；缓冲区 ABI 为同步调用，下一次请求使旧指针失效。详见 [#13 验证](evidence/issue-13/README.md)。
 

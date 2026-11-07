@@ -1,4 +1,19 @@
 {
+  "mûrir": {
+    "group": 2,
+    "note": "Traditional group 2, finir pattern; the original internal group 1 flag is retained in source metadata.",
+    "references": ["https://www.dictionnaire-academie.fr/conjuguer/A9M3201", "../lefff-syntax/v_new.ilex.gz:8934-8936 (v-ir2)"]
+  },
+  "messeoir": {
+    "group": 3,
+    "note": "Traditional group 3, seoir pattern; the original internal group 1 flag is retained. This correction changes classification only.",
+    "references": ["https://www.larousse.fr/conjugaison/francais/messeoir/11745", "../lefff-syntax/morpho.fr:v47"]
+  },
+  "reparcourir": {
+    "group": 3,
+    "note": "The admitted Lefff v-courir pattern and reparcourons/reparcouru forms establish group 3, rather than the original internal group 2 flag.",
+    "references": ["../lefff-syntax/v_new.ilex.gz:5512 (v-courir)", "https://www.scholingua.com/fr/fr/conjugaison/reparcourir"]
+  },
   "aller": {
     "group": 3,
     "note": "Traditional group 3; the upstream conjugator's internal group 1 is not the requested pedagogical classification.",

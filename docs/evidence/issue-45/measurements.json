@@ -1,0 +1,29 @@
+{
+  "database_bytes": 11005952,
+  "cli": {
+    "query": "elles se sont abstenues",
+    "first_ms": 1436.4822000061395,
+    "warm_ms": [
+      1385.6815999897663,
+      1385.4218999913428,
+      1359.0436999947997,
+      1362.9355000011856,
+      1381.8745000025956
+    ],
+    "warm_median_ms": 1381.8745000025956,
+    "budget_ms": 1700,
+    "boundary": "six fresh CLI processes including resource verification; no OS cache flush"
+  },
+  "native": {
+    "query": "elles se sont abstenues",
+    "first_ms": 26.5,
+    "warm_ms": [
+      26.5,
+      28.399999991059303,
+      31.399999991059303,
+      30.600000008940697,
+      25.799999997019768
+    ],
+    "boundary": "native IPC; first invocation and subsequent invocations, no OS cache flush"
+  }
+}

@@ -1,5 +1,7 @@
 # Ordinary active expressions and reference tables
 
+2026-11-06 status: all seven #41 acceptance criteria were checked against the retained coverage, CLI/browser/native, reproducibility and current Format 6 equivalence evidence. The completed Windows x64 slice is closed in GitHub; the first-process CLI latency limitation and combined #49 acceptance remain separately recorded.
+
 [Issue #41](https://github.com/zardonc/lexique/issues/41) supplies all 23 ordinary active block identities through the public resource CLI and desktop. Exact expressions resolve with or without an appropriate subject, including subjunctive clauses. Every candidate and matching cell remains accessible; an unmatched expression never falls back to its component words. Surcomposés are excluded; the historical second conditional past appears only as subjunctive pluperfect.
 
 The follow-up closes the previous 1,890 unresolved and 13 missing passé-composé admissions. All 7,826 source identities are accounted for in each block, with **zero missing or unconfirmed block statuses**. There are 7,687 admitted ordinary verbs and 139 source-only identities: 132 obligatory pronominal identities and seven presentatives/source sentinels. Passé composé is supported for 7,681 identities and unavailable for 145, including six admitted defective verbs without a past participle. There is no frequency cap. See the [full report](resource-report.json) and [explicit unavailable/excluded identities](unavailable-blocks.json).

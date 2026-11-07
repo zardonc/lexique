@@ -10,6 +10,7 @@ test('typographic queries retain interpretations, entered text and original expr
     Object.defineProperty(window, 'isTauri', { value: true });
     Object.defineProperty(window, '__TAURI_INTERNALS__', { value: { invoke: async (command: string, args?: { key: string }) => {
       if (command === 'runtime_status') return { version: '0.1.0', schemaVersion: 1, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } };
+      if (command === 'conjugation_preferences') return { mode: 'ending' };
       if (command !== 'conjugation_lookup') return null;
       if (args?.key === '  SUIS  ') throw { code: 'corrupt', message: 'Conjugation resource is corrupt' };
       return data[args?.key as keyof typeof data] ?? { query: args?.key, tables: [] };
@@ -29,7 +30,8 @@ test('typographic queries retain interpretations, entered text and original expr
   await expect(page.locator('.conjugation-choices strong')).toHaveText(['être', 'sommer']);
   await page.getByRole('button', { name: /^sommer/ }).click();
   await expect(page.locator('.conjugation-cell[data-matched=true]')).toHaveCount(2);
-  for (const code of ['P', 'S']) await expect(page.locator(`[data-tense=${code}] .conjugation-expression[data-matched=true]`)).toHaveCount(1);
+  await expect(page.locator('[data-tense=P] .conjugation-expression[data-matched=true]')).toHaveText(['tu sommes']);
+  await expect(page.locator('[data-tense=S] .conjugation-expression[data-matched=true]')).toHaveText(['tu sommes', 'que tu sommes']);
   for (const [entered, lemma, expression] of [
     [compound, 'abéliser', 'j’ai abélisé'], [reflexive, 's’abstenir', 'elles se sont abstenues'],
     [" VA-T'EN ", 's’en aller', 'va-t’en'],
@@ -55,6 +57,7 @@ test('pronominal expressions retain their identity, agreement labels and every a
     Object.defineProperty(window, 'isTauri', { value: true });
     Object.defineProperty(window, '__TAURI_INTERNALS__', { value: { invoke: async (command: string, args?: { key: string }) => {
       if (command === 'runtime_status') return { version: '0.1.0', schemaVersion: 1, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } };
+      if (command === 'conjugation_preferences') return { mode: 'ending' };
       return command === 'conjugation_lookup' ? data[args?.key as keyof typeof data] ?? { query: args?.key, tables: [] } : null;
     } } });
   }, pronominal);
@@ -101,6 +104,7 @@ test('ordinary compounds expose every interpretation and complete agreement alte
     Object.defineProperty(window, 'isTauri', { value: true });
     Object.defineProperty(window, '__TAURI_INTERNALS__', { value: { invoke: async (command: string, args?: { key: string }) => {
       if (command === 'runtime_status') return { version: '0.1.0', schemaVersion: 1, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } };
+      if (command === 'conjugation_preferences') return { mode: 'ending' };
       return command === 'conjugation_lookup' ? data[args?.key as keyof typeof data] ?? { query: args?.key, tables: [] } : null;
     } } });
   }, ordinary);
@@ -149,12 +153,12 @@ test('simple lookup keeps all candidates, cells and spelling alternatives access
     Object.defineProperty(window, 'isTauri', { value: true });
     Object.defineProperty(window, '__TAURI_INTERNALS__', { value: { invoke: async (command: string, args?: { key: string }) => {
       if (command === 'runtime_status') return { version: '0.1.0', schemaVersion: 1, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } };
+      if (command === 'conjugation_preferences') return { mode: 'ending' };
       if (command === 'conjugation_lookup') return data[args?.key as keyof typeof data];
       return null;
     } } });
   }, fixtures);
-  await page.goto('/');
-  await page.getByLabel('界面语言').selectOption('en');
+  await page.goto('/'); await page.getByLabel('界面语言').selectOption('en');
   await page.getByRole('button', { name: 'Conjugation', exact: true }).click();
   const input = page.getByLabel('French verb or simple form');
   const search = page.getByRole('button', { name: 'Look up conjugation', exact: true });
@@ -199,13 +203,15 @@ test('preview and failures keep the query and never retain an earlier table', as
   await page.goto('/'); await page.getByRole('button', { name: '动词变位', exact: true }).click();
   await page.getByLabel('法语动词或简单变位词形').fill('suis'); await page.getByRole('button', { name: '查询变位', exact: true }).click();
   await expect(page.locator('.conjugation')).toContainText('浏览器预览无法读取内置变位数据');
+  await expect(page.locator('.conjugation-coloring')).toContainText('浏览器预览：着色更改不会保存');
   await page.addInitScript((data) => {
     Object.defineProperty(window, 'isTauri', { value: true });
     Object.defineProperty(window, '__TAURI_INTERNALS__', { value: { invoke: async (command: string, args?: { key: string }) => {
       if (command === 'runtime_status') return { version: '0.1.0', schemaVersion: 1, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } };
+      if (command === 'conjugation_preferences') return { mode: 'ending' };
       if (command !== 'conjugation_lookup') return null;
       const key = args?.key;
-      if (key === 'missing' || key === 'corrupt' || key === 'query_failed') throw { code: key, message: 'Test resource error' };
+      if (['missing', 'corrupt', 'query_failed'].includes(key ?? '')) throw { code: key, message: 'Test resource error' };
       if (key === 'invalid') return { query: key, tables: 'invalid response' };
       if (key === 'wrong') return data.paie;
       return data[key as keyof typeof data] ?? { query: key, tables: [] };
@@ -227,6 +233,7 @@ test('source gaps, pronominal-only uses, themes and languages stay explicit', as
     Object.defineProperty(window, 'isTauri', { value: true });
     Object.defineProperty(window, '__TAURI_INTERNALS__', { value: { invoke: async (command: string, args?: { key: string }) => {
       if (command === 'runtime_status') return { version: '0.1.0', schemaVersion: 1, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } };
+      if (command === 'conjugation_preferences') return { mode: 'ending' };
       return command === 'conjugation_lookup' ? data[args?.key as keyof typeof data] : null;
     } } });
   }, fixtures);

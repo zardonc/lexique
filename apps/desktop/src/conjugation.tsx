@@ -5,8 +5,9 @@ import type { RuntimeAdapter } from './platform/runtime';
 import { dictionaryFailure } from './platform/dictionary';
 import type { DictionaryFailure } from './platform/dictionary';
 import { matchingCells } from './platform/conjugation';
-import type { ConjugationLookup, ConjugationTable } from './platform/conjugation';
+import type { ConjugationLookup, ConjugationTable, ConjugationMode } from './platform/conjugation';
 import { ConjugationBlocks } from './conjugation-table';
+import { ColoringControls, ColoringNotice } from './conjugation-coloring';
 import { conjugationMessages, conjugationUse } from './conjugation-content';
 import type { ConjugationText } from './conjugation-content';
 
@@ -31,8 +32,9 @@ function VerbMetadata({ table, text }: { readonly table: ConjugationTable; reado
     {verb.ordinary_status === 'not_applicable' && !verb.pronominal && <p>{text.rawOnly}</p>}</>;
 }
 
-function Results({ result, selected, onSelect, text }: {
+function Results({ result, selected, onSelect, text, mode }: {
   readonly result: ConjugationLookup; readonly selected: string; readonly onSelect: (lemma: string) => void; readonly text: ConjugationText;
+  readonly mode: ConjugationMode;
 }) {
   const tables = [...result.tables].sort((a, b) => a.lemma.localeCompare(b.lemma, 'fr') || (a.lemma < b.lemma ? -1 : 1));
   const table = tables.find((candidate) => candidate.lemma === selected);
@@ -46,7 +48,8 @@ function Results({ result, selected, onSelect, text }: {
       </button>)}</div>}
     {tables.length > 1 && !table && <p>{text.choose}</p>}
     {table && <article className="conjugation-table"><h3 lang="fr">{table.lemma}</h3><VerbMetadata table={table} text={text} />
-      <ConjugationBlocks table={table} query={result.query} text={text} />
+      <ColoringNotice table={table} mode={mode} text={text} />
+      <ConjugationBlocks table={table} query={result.query} text={text} mode={mode} />
       <details><summary>{text.source}</summary><pre>{JSON.stringify(table, null, 2)}</pre></details></article>}
     <footer className="dictionary-source"><p>{text.sourceOnly}</p>
       <p>Lefff © Benoît Sagot · LGPL-LR · <a href="https://pauillac.inria.fr/~sagot/index.html#lefff">Lefff 3.4</a></p>
@@ -61,6 +64,7 @@ export function ConjugationPanel({ runtime, locale }: { readonly runtime: Runtim
   const [result, setResult] = useState<ConjugationLookup | null>();
   const [selected, setSelected] = useState('');
   const [error, setError] = useState<DictionaryFailure>();
+  const [mode, setMode] = useState<ConjugationMode>('ending');
   async function search(event: FormEvent) {
     event.preventDefault(); setLoading(true); setResult(undefined); setError(undefined); setSelected('');
     try {
@@ -75,9 +79,10 @@ export function ConjugationPanel({ runtime, locale }: { readonly runtime: Runtim
         disabled={loading} onChange={(event) => setKey(event.target.value)} />
       <button type="submit" disabled={loading}>{loading ? text.loading : text.search}</button></div></form>
     <p className="dictionary-hint">{text.hint}</p>
+    <ColoringControls runtime={runtime} text={text} mode={mode} onChange={setMode} />
     {loading && <p role="status">{text.loading}</p>}
     {result === null && <p role="status">{text.preview}</p>}
     {error && <div role="alert"><p>{text[error.code]}</p><details><summary>{text.source}</summary><p>{error.message}</p></details></div>}
-    {result && <Results result={result} selected={selected} onSelect={setSelected} text={text} />}
+    {result && <Results result={result} selected={selected} onSelect={setSelected} text={text} mode={mode} />}
   </div>;
 }

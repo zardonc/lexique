@@ -12,6 +12,7 @@ use unicode_normalization::UnicodeNormalization;
 
 use crate::{DictionaryError, failure, snapshot};
 
+mod coloring;
 mod generation;
 
 #[derive(Debug, Serialize)]
@@ -39,6 +40,14 @@ pub struct Cell {
     pub number: Option<String>,
     pub gender: Option<String>,
     pub expressions: Vec<String>,
+    pub coloring: BTreeMap<String, Coloring>,
+}
+
+#[derive(Debug, Serialize)]
+pub struct Coloring {
+    pub verbal: Vec<[usize; 2]>,
+    pub main: [usize; 2],
+    pub ending: Option<[usize; 2]>,
 }
 
 pub fn lookup(path: &Path, key: &str, expected_sha256: &str) -> Result<Lookup, DictionaryError> {
@@ -332,6 +341,9 @@ fn append_table(
                 .then(a.gender.cmp(&b.gender))
                 .then(a.source_line.cmp(&b.source_line))
         });
+        for cell in &mut cells {
+            coloring::apply(cell, &identity.verb)?;
+        }
         tables.push(Table {
             lemma: identity.lemma,
             verb: identity.verb,

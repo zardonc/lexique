@@ -9,7 +9,7 @@ import { setTimeout as delay } from 'node:timers/promises';
 import assert from 'node:assert/strict';
 
 const [resources, binary, data, destination] = process.argv.slice(2).map((path) => resolve(path));
-assert.ok(['issue-40', 'issue-41', 'issue-42', 'issue-43', 'issue-44', 'conjugation-refactor'].some((issue) => destination.startsWith(resolve('../../target/' + issue) + '\\')));
+assert.ok(['issue-40', 'issue-41', 'issue-42', 'issue-43', 'issue-44', 'issue-45', 'conjugation-refactor'].some((issue) => destination.startsWith(resolve('../../target/' + issue) + '\\')));
 await mkdir(destination);
 for (const name of ['dictionary', 'conjugation']) await cp(join(resources, name), join(destination, name), { recursive: true });
 await cp(binary, join(destination, 'Lexique.exe'));
@@ -42,6 +42,7 @@ async function hashes(directory) {
 }
 async function check(page) {
   const before = await snapshot(page), audio = await hashes(join(destination, 'Lexique-data/temp/speech'));
+  assert.deepEqual(await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('conjugation_preferences', { preferences: null })), { mode: 'ending' });
   assert.ok(before.records.length && before.cards.flat().length && before.audio.some((bytes) => bytes?.length) && Object.keys(audio).length, 'Use an existing learning/audio fixture');
   const timings = await page.evaluate(async () => {
     const query = 'elles se sont abstenues', milliseconds = [];
@@ -169,10 +170,90 @@ async function check(page) {
   }
   await page.getByLabel('法语动词或简单变位词形').fill('suis');
   await page.getByRole('button', { name: '查询变位', exact: true }).click();
+  const coloring = await checkColoring(page);
+  await preferenceFailures(page);
   await failures(page);
   assert.deepEqual(await snapshot(page), before);
   assert.deepEqual(await hashes(join(destination, 'Lexique-data/temp/speech')), audio);
-  return { before, audio, results, timings };
+  return { before, audio, results, timings, coloring };
+}
+async function checkColoring(page) {
+  const input = page.getByLabel('法语动词或简单变位词形');
+  const modes = ['1 · 完整动词部分', '2 · 主要动词', '3 · 主要动词词尾'];
+  const checks = [];
+  for (const [query, expected] of [
+    ['nous avions lavé', [['avions lavé'], ['lavé'], ['é']]],
+    ['lavais', [['lavais'], ['lavais'], ['ais']]],
+    ['sois-toi lavé', [['sois', 'lavé'], ['lavé'], ['é']]],
+    ['en se lavant', [['lavant'], ['lavant'], ['ant']]],
+    ['va-t’en', [['va'], ['va'], []]],
+  ]) {
+    await input.fill(query); await input.press('Enter');
+    const match = page.locator('.conjugation-expression[data-matched=true]').first();
+    await expect(match).toHaveText(query === 'lavais' ? 'je lavais' : query);
+    for (let index = 0; index < modes.length; index++) {
+      const choice = page.getByRole('button', { name: modes[index], exact: true });
+      await choice.focus(); await choice.press('Space');
+      await expect(choice).toHaveAttribute('aria-pressed', 'true');
+      await expect(match.locator('.conjugation-colored')).toHaveText(expected[index]);
+      await expect(match).toHaveCSS('text-decoration-line', 'underline');
+      await expect(page.locator('.conjugation-block[data-priority=true]')).toHaveCount(7);
+    }
+    if (query === 'va-t’en') await expect(page.locator('.conjugation-table .conjugation-colored')).toHaveCount(0);
+    checks.push({ query, verbal: expected[0], main: expected[1], ending: expected[2] });
+  }
+  await input.fill('se laver'); await input.press('Enter');
+  const variants = page.locator('[data-tense=PC] [data-person="1s"] .conjugation-expression');
+  await expect(variants).toHaveText(['je me suis lavée', 'je me suis lavées', 'je me suis lavé', 'je me suis lavés']);
+  await expect(variants.locator('.conjugation-colored')).toHaveText(['ée', 'ées', 'é', 'és']);
+  await page.getByRole('button', { name: modes[1], exact: true }).click();
+  await input.fill('finir'); await input.press('Enter');
+  await expect(page.locator('.conjugation-expression[data-matched=true] .conjugation-colored')).toHaveText(['finir']);
+  await page.screenshot({ path: join(destination, 'coloring.png') });
+  return checks;
+}
+function preferenceSql(source) {
+  const result = spawnSync('python', ['-X', 'utf8', '-c', `import sqlite3,sys\nc=sqlite3.connect(sys.argv[1])\n${source}\nc.commit()`,
+    join(destination, 'Lexique-data/data/lexique.sqlite3')], { windowsHide: true, encoding: 'utf8', timeout: 5000 });
+  assert.equal(result.status, 0, result.stderr);
+}
+async function preferenceFailures(page) {
+  const controls = page.locator('.conjugation-coloring');
+  const main = page.getByRole('button', { name: '2 · 主要动词', exact: true });
+  preferenceSql(`c.execute("CREATE TRIGGER issue45_preference_write_failure BEFORE INSERT ON app_metadata WHEN NEW.key='conjugation-preferences' BEGIN SELECT RAISE(ABORT, 'Coloring preference storage is read-only'); END")`);
+  try {
+    await page.getByRole('button', { name: '1 · 完整动词部分', exact: true }).click();
+    await expect(controls.getByRole('alert')).toContainText('read-only');
+    await expect(main).toHaveAttribute('aria-pressed', 'true');
+    assert.deepEqual(await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('conjugation_preferences', { preferences: null })), { mode: 'main' });
+  } finally { preferenceSql(`c.execute('DROP TRIGGER issue45_preference_write_failure')`); }
+  for (const preferences of [{ mode: 'invalid' }, { mode: 'main', unknown: true }]) {
+    const error = await page.evaluate((preferences) => window.__TAURI_INTERNALS__.invoke('conjugation_preferences', { preferences }).catch(String), preferences);
+    assert.match(error, /invalid|unknown|expected/i);
+  }
+  preferenceSql(`c.execute("UPDATE app_metadata SET value=? WHERE key='conjugation-preferences'", ('{"mode":"broken"}',))`);
+  try {
+    const error = await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('conjugation_preferences', { preferences: null }).catch(String));
+    assert.match(error, /Invalid saved conjugation preferences/);
+    await page.reload(); await page.getByRole('button', { name: '动词变位', exact: true }).click();
+    await expect(controls.getByRole('alert')).toContainText('Invalid saved conjugation preferences');
+    await expect(main).toBeDisabled();
+  } finally { preferenceSql(`c.execute("UPDATE app_metadata SET value=? WHERE key='conjugation-preferences'", ('{"mode":"main"}',))`); }
+  await controls.getByRole('button', { name: '重新读取着色偏好', exact: true }).click();
+  await expect(main).toHaveAttribute('aria-pressed', 'true');
+  await expect(controls.getByRole('alert')).toHaveCount(0);
+  preferenceSql(`c.execute('ALTER TABLE app_metadata RENAME TO issue45_unavailable_preferences')`);
+  try {
+    await page.getByRole('button', { name: '1 · 完整动词部分', exact: true }).click();
+    await expect(controls.getByRole('alert')).toContainText('no such table: app_metadata');
+    await expect(main).toHaveAttribute('aria-pressed', 'true');
+    await page.reload(); await page.getByRole('button', { name: '动词变位', exact: true }).click();
+    await expect(controls.getByRole('alert')).toContainText('no such table: app_metadata');
+    await expect(main).toBeDisabled();
+  } finally { preferenceSql(`c.execute('ALTER TABLE issue45_unavailable_preferences RENAME TO app_metadata')`); }
+  await controls.getByRole('button', { name: '重新读取着色偏好', exact: true }).click();
+  await expect(main).toHaveAttribute('aria-pressed', 'true');
+  await expect(controls.getByRole('alert')).toHaveCount(0);
 }
 async function failures(page) {
   const query = '  SUIS  ';
@@ -220,15 +301,30 @@ async function start() {
   assert.ok(page && await page.evaluate(() => Boolean(window.__TAURI_INTERNALS__) && window.location.origin !== 'null'), `Owned native page unavailable: ${page?.url()}`);
   return page;
 }
-try {
-  const page = await start(), { before, audio, results, timings } = await check(page);
+async function close(page) {
   await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('finish_close')).catch((error) => {
     assert.match(String(error), /closed|Target|context|session|Frame|destroy/i);
   });
   for (let i = 0; child.exitCode === null && i < 50; i++) await delay(100);
   assert.notEqual(child.exitCode, null, 'Normal close must terminate the application');
   await browser.close(); browser = undefined;
-  const restarted = await start();
+}
+try {
+  let page = await start();
+  const { before, audio, results, timings, coloring } = await check(page), modesRestored = [];
+  for (const [mode, label, expected] of [['main', '2 · 主要动词', 'lavé'], ['verbal', '1 · 完整动词部分', 'avions lavé'], ['ending', '3 · 主要动词词尾', 'é']]) {
+    await page.getByRole('button', { name: label, exact: true }).click();
+    await expect(page.getByRole('button', { name: label, exact: true })).toHaveAttribute('aria-pressed', 'true');
+    await close(page); page = await start();
+    assert.deepEqual(await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('conjugation_preferences', { preferences: null })), { mode });
+    await page.getByRole('button', { name: '动词变位', exact: true }).click();
+    await expect(page.getByRole('button', { name: label, exact: true })).toHaveAttribute('aria-pressed', 'true');
+    await page.getByLabel('法语动词或简单变位词形').fill('nous avions lavé');
+    await page.getByRole('button', { name: '查询变位', exact: true }).click();
+    await expect(page.locator('[data-tense=PQP] .conjugation-expression[data-matched=true] .conjugation-colored')).toHaveText([expected]);
+    modesRestored.push(mode);
+  }
+  const restarted = page;
   const restartedQuery = " VA-T'EN ";
   const restartedResult = await restarted.evaluate((key) => window.__TAURI_INTERNALS__.invoke('conjugation_lookup', { key }), restartedQuery);
   assert.equal(restartedResult.query, restartedQuery);
@@ -236,6 +332,7 @@ try {
   assert.deepEqual(await snapshot(restarted), before);
   assert.deepEqual(await hashes(join(destination, 'Lexique-data/temp/speech')), audio);
   await writeFile(join(destination, 'report.json'), JSON.stringify({ status: 'PASS', restart: true, normalized_restart: true, results, timings,
+    coloring, modesRestored, preferenceFailures: ['write', 'invalid IPC', 'corrupt settings', 'unavailable storage'],
     preserved: { records: before.records.length, cards: before.cards.flat().length, audioFiles: Object.keys(audio).length } }, null, 2));
   console.log('Native conjugation check: PASS');
 } finally {

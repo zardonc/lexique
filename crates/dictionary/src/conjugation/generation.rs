@@ -59,7 +59,7 @@ enum Agreement {
 }
 
 const PERSONS: [&str; 6] = ["1s", "2s", "3s", "1p", "2p", "3p"];
-const COMPOUND: [(&str, &str); 11] = [
+pub(super) const COMPOUND: [(&str, &str); 11] = [
     ("PC", "P"),
     ("PQP", "I"),
     ("PA", "J"),
@@ -115,6 +115,7 @@ pub(super) fn ordinary(
             number: pattern.number.clone(),
             gender: pattern.gender.clone(),
             expressions: Vec::new(),
+            coloring: Default::default(),
         });
     }
     let admitted = verb.ordinary_status == "supported";
@@ -281,6 +282,7 @@ pub(super) fn pronominal(
             number: row.number.clone(),
             gender: row.gender.clone(),
             expressions: Vec::new(),
+            coloring: Default::default(),
         };
         pronominal_expressions(&mut cell, info, false, false);
         let gerund = (tense == "G").then(|| format!("en {}", cell.form));
@@ -401,6 +403,7 @@ fn constructed(
             .map(|number| number.to_string()),
         gender: gender.map(str::to_owned),
         expressions: Vec::new(),
+        coloring: Default::default(),
     }
 }
 

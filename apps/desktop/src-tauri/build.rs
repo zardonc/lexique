@@ -10,6 +10,8 @@ fn main() {
         "scripts/conjugation_meanings.py",
         "scripts/conjugation_pronominal.py",
         "scripts/conjugation_runtime.py",
+        "scripts/conjugation_coloring.py",
+        "scripts/conjugation_endings.json",
         "resources/lefff-3.4",
         "resources/grammalecte-2.3.0",
         "resources/lefff-syntax",
@@ -47,7 +49,7 @@ fn main() {
             "utf8",
             "scripts/conjugation_sample.py",
             "prepare",
-            "target/desktop-conjugation-v6-query",
+            "target/desktop-conjugation-v6-color",
         ])
         .current_dir(&root)
         .output()
@@ -70,6 +72,7 @@ fn main() {
             "runtime_status",
             "dictionary_lookup",
             "conjugation_lookup",
+            "conjugation_preferences",
             "vocabulary_find",
             "vocabulary_list",
             "vocabulary_save",

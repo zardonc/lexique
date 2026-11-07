@@ -1,6 +1,7 @@
 import { cellKey, cellMatches, expressionMatches } from './platform/conjugation';
-import type { ConjugationCell, ConjugationTable } from './platform/conjugation';
+import type { ConjugationCell, ConjugationTable, ConjugationMode } from './platform/conjugation';
 import { conjugationUse, type ConjugationText } from './conjugation-content';
+import { ColoredExpression } from './conjugation-coloring';
 
 // Priority order, then the remaining mood families in the confirmed M3 matrix.
 const blocks = [
@@ -37,8 +38,9 @@ function expressions(cell: ConjugationCell, impersonal: boolean): readonly strin
   });
 }
 
-function SourceCell({ cells, query, text, raw, impersonal = false }: {
+function SourceCell({ cells, query, text, raw, mode, impersonal = false }: {
   readonly cells: readonly ConjugationCell[]; readonly query: string; readonly text: ConjugationText; readonly raw: boolean; readonly impersonal?: boolean;
+  readonly mode: ConjugationMode;
 }) {
   const first = cells[0];
   if (!first) return <span>{text.unconfirmed} · {text.absent}</span>;
@@ -52,13 +54,15 @@ function SourceCell({ cells, query, text, raw, impersonal = false }: {
       {cell.raw_tag.startsWith('ordinary/v1/') && cell.raw_tag.split('/')[2] !== 'gerund' && <small>{conjugationUse(text, cell.raw_tag.split('/').slice(3).join('/'))}</small>}
       {cell.raw_tag.startsWith('reference/') && <small>{conjugationUse(text, cell.raw_tag.slice(10))}</small>}
       {(raw || elision ? [cell.form] : expressions(cell, impersonal)).map((expression) => <span className="conjugation-expression" lang="fr"
-        key={expression} data-matched={expressionMatches(cell.form, query) || expressionMatches(expression, query)}>{expression}</span>)}
+        key={expression} data-matched={expressionMatches(cell.form, query) || expressionMatches(expression, query)}>
+        <ColoredExpression expression={expression} spans={cell.coloring[expression]} mode={mode} /></span>)}
     </div>)}
   </div>;
 }
 
-function Block({ code, table, query, text }: {
+function Block({ code, table, query, text, mode }: {
   readonly code: string; readonly table: ConjugationTable; readonly query: string; readonly text: ConjugationText;
+  readonly mode: ConjugationMode;
 }) {
   const cells = table.cells.filter((cell) => cell.tense === code);
   const raw = table.verb.ordinary_status === 'not_applicable' && !table.verb.pronominal;
@@ -69,25 +73,26 @@ function Block({ code, table, query, text }: {
     const unassigned = cells.filter((cell) => !rows.includes(`${cell.person}${cell.number}`));
     return <><dl>{rows.map((person) => <div key={person}><dt lang="fr">{impersonal && person === '3s' ? 'il' : subjects[person]?.join(' / ')}</dt>
       <dd>{table.verb.blocks?.[`${code}/${person}`] === 'not_applicable' ? text.notApplicable
-        : <SourceCell cells={cells.filter((cell) => `${cell.person}${cell.number}` === person)} query={query} text={text} raw={raw} impersonal={impersonal} />}</dd></div>)}</dl>
-      {groupCells(unassigned).map(([key, values]) => <SourceCell key={key} cells={values} query={query} text={text} raw />)}</>;
+        : <SourceCell cells={cells.filter((cell) => `${cell.person}${cell.number}` === person)} query={query} text={text} raw={raw} impersonal={impersonal} mode={mode} />}</dd></div>)}</dl>
+      {groupCells(unassigned).map(([key, values]) => <SourceCell key={key} cells={values} query={query} text={text} raw mode={mode} />)}</>;
   }
   const groups = groupCells(cells);
   return groups.length ? <dl>{groups.map(([key, values]) => <div key={key}><dt>{code === 'K'
     ? [values[0]?.gender, values[0]?.number].filter(Boolean).join(' · ') || text.gender : '—'}</dt>
-    <dd><SourceCell cells={values} query={query} text={text} raw={raw} /></dd></div>)}</dl>
+    <dd><SourceCell cells={values} query={query} text={text} raw={raw} mode={mode} /></dd></div>)}</dl>
     : <p>{table.verb.blocks?.[code] === 'missing' ? text.absent : text.unconfirmed}</p>;
 }
 
-export function ConjugationBlocks({ table, query, text }: {
+export function ConjugationBlocks({ table, query, text, mode }: {
   readonly table: ConjugationTable; readonly query: string; readonly text: ConjugationText;
+  readonly mode: ConjugationMode;
 }) {
   const other = table.cells.filter((cell) => cell.tense === null);
   return <><div className="conjugation-blocks">{blocks.map(([code, title], index) => <section className="conjugation-block"
     key={code} data-tense={code} data-priority={index < 7} aria-labelledby={`tense-${code}`}>
     <header><h4 lang="fr" id={`tense-${code}`}>{title}</h4>{index < 7 && <small>★ {text.priority}</small>}</header>
-    <Block code={code} table={table} query={query} text={text} />
+    <Block code={code} table={table} query={query} text={text} mode={mode} />
   </section>)}</div>{other.length > 0 && <section><h4>{text.other}</h4>{groupCells(other).map(([key, values]) =>
-    <SourceCell key={key} cells={values} query={query} text={text} raw />)}</section>}
+    <SourceCell key={key} cells={values} query={query} text={text} raw mode={mode} />)}</section>}
   {!table.verb.pronominal && <p className="dictionary-hint">{text.agreement}</p>}<p className="dictionary-hint">{text.historical}</p></>;
 }

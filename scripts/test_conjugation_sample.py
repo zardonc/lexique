@@ -36,6 +36,64 @@ class ConjugationCliTests(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stderr)
         return json.loads(result.stdout)
 
+    def test_regular_coloring_spans_follow_the_spec_independently_of_storage_cuts(self):
+        for query, form, expected in (
+                ("nous avions lavé", "avions lavé", {"verbal": [[5, 16]], "main": [12, 16], "ending": [15, 16]}),
+                ("lavais", "lavais", {"verbal": [[0, 6]], "main": [0, 6], "ending": [3, 6]})):
+            with self.subTest(query=query):
+                table = self.read("query", query)["tables"][0]
+                cell = next(cell for cell in table["cells"] if cell["form"] == form and cell["matched"])
+                self.assertEqual(cell["coloring"][query], expected)
+                self.assertEqual(cell["form"], form)
+
+    def test_coloring_validates_regular_families_variants_and_pronoun_boundaries(self):
+        expectations = {
+            "laver": [("P", "lave", "e"), ("I", "lavais", "ais"), ("J", "lavâmes", "âmes"),
+                      ("F", "laverai", "rai"), ("C", "laverions", "rions"), ("S", "laviez", "iez"),
+                      ("T", "lavassions", "assions"), ("Y", "lavez", "ez"), ("W", "laver", "er"),
+                      ("G", "lavant", "ant"), ("K", "lavées", "ées"), ("PQP", "avions lavé", "é")],
+            "finir": [("P", "finis", "s"), ("P", "finissons", "ons"), ("I", "finissais", "ais"),
+                      ("J", "finîmes", "îmes"), ("F", "finirai", "rai"), ("C", "finirions", "rions"),
+                      ("S", "finisse", "e"), ("T", "finît", "ît"), ("Y", "finissez", "ez"),
+                      ("W", "finir", "ir"), ("G", "finissant", "ant"), ("K", "finies", "ies")],
+            "haïr": [("P", "hais", "s"), ("J", "haïmes", "ïmes"), ("W", "haïr", "ïr"), ("K", "haï", "ï")],
+            "payer": [("P", "paie", "e"), ("P", "paye", "e"), ("F", "paierai", "rai"), ("F", "payerai", "rai")],
+            "manger": [("I", "mangeais", "ais"), ("P", "mangeons", "ons")],
+            "placer": [("I", "plaçais", "ais")],
+            "mûrir": [("P", "mûris", "s"), ("K", "mûri", "i")],
+            "rassir": [("K", "rassise", "ise"), ("K", "rassis", "is")],
+        }
+        for lemma, cases in expectations.items():
+            table = self.read("table", lemma)["tables"][0]
+            for tense, form, ending in cases:
+                with self.subTest(lemma=lemma, tense=tense, form=form):
+                    cells = [cell for cell in table["cells"] if (cell["tense"], cell["form"]) == (tense, form)]
+                    self.assertTrue(cells)
+                    for cell in cells:
+                        start, end = cell["coloring"][form]["ending"]
+                        self.assertEqual(form[start:end], ending)
+        pron = self.read("table", "se laver")["tables"][0]
+        for form, expected in (
+                ("lave-toi", {"verbal": [[0, 4]], "main": [0, 4], "ending": [3, 4]}),
+                ("en se lavant", {"verbal": [[6, 12]], "main": [6, 12], "ending": [9, 12]}),
+                ("sois-toi lavé", {"verbal": [[0, 4], [9, 13]], "main": [9, 13], "ending": [12, 13]})):
+            self.assertEqual(next(cell for cell in pron["cells"] if cell["form"] == form)["coloring"][form], expected)
+        irregular = self.read("table", "s’en aller")["tables"][0]
+        cell = next(cell for cell in irregular["cells"] if cell["form"] == "va-t’en")
+        self.assertEqual(cell["coloring"]["va-t’en"], {"verbal": [[0, 2]], "main": [0, 2], "ending": None})
+        self.assertTrue(all(span["ending"] is None for cell in irregular["cells"] for span in cell["coloring"].values()))
+        coverage = json.loads((self.output / "report.json").read_text(encoding="utf-8"))["coloring_coverage"]
+        self.assertEqual(coverage["regular_unconfirmed"], [])
+        self.assertGreater(coverage["groups"]["2"]["endings"], 1000)
+        self.assertGreater(coverage["groups"]["3"]["cells"], 1000)
+        self.assertEqual(coverage["groups"]["3"]["endings"], 0)
+        self.assertEqual({row[0] for row in coverage["retained_source_only"]}, {"courbaturer", "précéder", "égaler"})
+        self.assertEqual(self.read("table", "mûrir")["tables"][0]["verb"]["group"], 2)
+        for lemma in ("messeoir", "reparcourir"):
+            table = self.read("table", lemma)["tables"][0]
+            self.assertEqual(table["verb"]["group"], 3)
+            self.assertTrue(all(span["ending"] is None for cell in table["cells"] for span in cell["coloring"].values()))
+
     def test_case_variations_preserve_every_match_and_query(self):
         result = self.read("query", "SOMMES")
         self.assertEqual(result["status"], "found")

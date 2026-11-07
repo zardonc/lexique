@@ -40,3 +40,8 @@ original factual summaries, not copied dictionary definitions or tables.
 Dual auxiliaries without validated sense mappings remain labelled unconfirmed.
 Admission does not certify unresolved source claims or a complete paradigm;
 the build reports unresolved coverage separately.
+
+2026-11-06: cited classification corrections identify mûrir as group 2 and
+messeoir/reparcourir as group 3 for regular-ending coloring. Original raw flags,
+forms and the pinned source archive remain intact. The corrections apply to
+metadata only; they do not change the admitted forms or generation rules.

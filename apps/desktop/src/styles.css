@@ -14,6 +14,14 @@
 .conjugation-cell small, .conjugation-match { display: block; font-size: 12px; margin-bottom: 6px; }
 .conjugation-expression { display: block; overflow-wrap: anywhere; line-height: 1.7; }
 .conjugation-expression[data-matched='true'] { font-weight: 600; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.conjugation-colored { color: var(--verb-color); font-style: italic; }
+.conjugation-coloring { margin: 18px 0; }
+.conjugation-coloring button { min-height: 44px; }
+.conjugation-coloring button[aria-pressed='true'] { outline: 2px solid var(--ink); outline-offset: 2px; }
+.conjugation-coloring p { font-size: 13px; color: var(--muted); }
+.app { --verb-color: #005b56; }
+.app[data-theme='sepia'] { --verb-color: #095e4a; }
+.app[data-theme='dark'] { --verb-color: #78d8c1; }
 .conjugation pre { overflow: auto; max-height: 350px; font-size: 12px; }
 * { box-sizing: border-box; }
 body { margin: 0; }

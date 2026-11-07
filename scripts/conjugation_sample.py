@@ -20,6 +20,7 @@ from conjugation_metadata import RESOURCE as VERB_RESOURCE, load_metadata, metad
 from conjugation_syntax import RESOURCE as SYNTAX_RESOURCE
 from conjugation_meanings import RESOURCE as MEANING_RESOURCE, load_meanings, verb_meanings
 from conjugation_pronominal import generate_pronominal, pronominal_metadata
+from conjugation_coloring import coloring, coloring_report
 
 RESOURCE = Path(__file__).resolve().parents[1] / "resources/lefff-3.4"
 PROVENANCE = json.loads((RESOURCE / "provenance.json").read_text(encoding="utf-8"))
@@ -39,7 +40,7 @@ APPLICATION_ID = 0x4C58434A
 FORMAT_VERSION = 6
 CONVERTERS = ("conjugation_sample.py", "conjugation_metadata.py", "conjugation_generation.py",
               "conjugation_syntax.py", "conjugation_meanings.py", "conjugation_pronominal.py",
-              "conjugation_runtime.py")
+              "conjugation_runtime.py", "conjugation_coloring.py", "conjugation_endings.json")
 
 
 def construction_forms(data):
@@ -124,6 +125,7 @@ def build(output, source, metadata_source=VERB_RESOURCE, syntax_source=SYNTAX_RE
     pronominal_rows, pronominal_verbs, pronominal_coverage = generate_pronominal(rows, verbs, linguistic_data)
     rows.extend(pronominal_rows)
     verbs.update(pronominal_verbs)
+    coloring_coverage = coloring_report(rows, verbs)
     meanings = {lemma: verb_meanings(lemma, verb, english) for lemma, verb in verbs.items()}
     output = Path(output)
     output.mkdir(parents=True, exist_ok=False)
@@ -178,6 +180,7 @@ def build(output, source, metadata_source=VERB_RESOURCE, syntax_source=SYNTAX_RE
         "source_bytes": source_bytes, "source_gzip_bytes": Path(source).stat().st_size,
         "source_verb_rows": len({r[0] for r in rows}), "slots": len(rows), "source_slots": source_slots, "block_coverage": block_coverage,
         "lemmas": len({r[2] for r in rows}), "ordinary_lemmas": len(ordinary_verbs), "pronominal_coverage": pronominal_coverage,
+        "coloring_coverage": coloring_coverage,
         "forms": len({r[1] for r in rows}),
         "table_bytes": table_bytes, "lemma_index_bytes": lemma_bytes,
         "reverse_index_bytes": reverse_bytes, "database_bytes": database.stat().st_size,
@@ -337,9 +340,13 @@ def read_resource(database, query=None, lemma=None):
                 expected = pronominal_metadata(base, expected, linguistic_data, verb["pronominal"]["with_en"])
             if information is not None and (not isinstance(verb, dict) or {k: v for k, v in verb.items() if k != "blocks"} != expected):
                 raise ValueError("Conjugation verb metadata differs from pinned sources")
+            for cell in cells:
+                cell["coloring"] = coloring(cell, verb)
             table_status = "pronominal" if verb and "pronominal" in verb else "ordinary_active" if verb and verb["ordinary_status"] == "supported" else "source_only"
             tables.append({"lemma": headword, "status": table_status if cells else "not_found",
                            "verb": verb, "meanings": information[1] if information else {"status": "unavailable", "senses": []}, "cells": cells})
+        for cell in matches:
+            cell["coloring"] = coloring(cell, information_by_lemma[cell["lemma"]][0])
         return {"status": "found" if matches or any(t["cells"] for t in tables) else "not_found",
                 "query": query, "matches": matches, "tables": tables,
                 "tense_labels": TENSES, "coverage": "ordinary/v1; see per-verb blocks and resource-wide block_coverage"}

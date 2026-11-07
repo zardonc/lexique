@@ -1,4 +1,5 @@
-use tauri::Manager;
+use crate::vocabulary::{DatabasePath, open};
+use tauri::{Manager, State};
 
 #[tauri::command]
 pub async fn conjugation_lookup(
@@ -21,4 +22,22 @@ pub async fn conjugation_lookup(
         code: "query_failed",
         message: format!("Conjugation query task failed: {error}"),
     })?
+}
+
+#[tauri::command]
+pub async fn conjugation_preferences(
+    path: State<'_, DatabasePath>,
+    preferences: Option<lexique_storage::ConjugationPreferences>,
+) -> Result<lexique_storage::ConjugationPreferences, String> {
+    let path = DatabasePath(path.0.clone());
+    tauri::async_runtime::spawn_blocking(move || {
+        let connection = open(&path)?;
+        if let Some(preferences) = preferences {
+            lexique_storage::set_conjugation_preferences(&connection, &preferences)
+                .map_err(|error| error.to_string())?;
+        }
+        lexique_storage::conjugation_preferences(&connection).map_err(|error| error.to_string())
+    })
+    .await
+    .map_err(|error| format!("Conjugation preference task failed: {error}"))?
 }

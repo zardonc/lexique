@@ -1,12 +1,33 @@
 import { z } from 'zod';
 
+export const conjugationModeSchema = z.enum(['verbal', 'main', 'ending']);
+export const conjugationPreferencesSchema = z.object({ mode: conjugationModeSchema }).strict().readonly();
+export type ConjugationMode = z.infer<typeof conjugationModeSchema>;
+export type ConjugationPreferences = z.infer<typeof conjugationPreferencesSchema>;
+const rangeSchema = z.tuple([z.number().int().nonnegative().safe(), z.number().int().positive().safe()]).readonly();
+const spansSchema = z.object({ verbal: z.array(rangeSchema).min(1).max(2).readonly(), main: rangeSchema, ending: rangeSchema.nullable() }).strict().readonly();
+export type ConjugationSpans = z.infer<typeof spansSchema>;
+function validSpans(text: string, spans: ConjugationSpans): boolean {
+  const length = [...text].length;
+  const ranges = [...spans.verbal, spans.main, ...(spans.ending ? [spans.ending] : [])];
+  if (ranges.some(([start, end]) => start >= end || end > length)) return false;
+  if (!spans.verbal.some(([start, end]) => start <= spans.main[0] && end >= spans.main[1])) return false;
+  if (spans.ending && (spans.ending[0] < spans.main[0] || spans.ending[1] !== spans.main[1])) return false;
+  return spans.verbal.every(([start], index) => index === 0 || start >= (spans.verbal[index - 1]?.[1] ?? length));
+}
+const coloringSchema = z.record(z.string().min(1), spansSchema).readonly()
+  .refine((value) => Object.entries(value).every(([text, spans]) => validSpans(text, spans)), 'Invalid conjugation coloring spans');
 const status = z.enum(['supported', 'unconfirmed', 'not_applicable']);
 const slotSchema = z.object({
   source_line: z.number().int().positive(), form: z.string().min(1), lemma: z.string().min(1),
   raw_tag: z.string(), tense: z.enum(['P', 'I', 'J', 'F', 'C', 'S', 'T', 'Y', 'W', 'G', 'K', 'PC', 'PQP', 'PA', 'FA', 'CP', 'SP', 'SQP', 'YP', 'WP', 'KP', 'GP', 'GPP']).nullable(),
   person: z.enum(['1', '2', '3']).nullable(), number: z.enum(['s', 'p']).nullable(),
   gender: z.enum(['m', 'f']).nullable(), expressions: z.array(z.string().min(1)).readonly().optional(),
-}).strict().readonly();
+  coloring: coloringSchema,
+}).strict().readonly().refine((cell) => {
+  const texts = new Set([cell.form, ...(cell.expressions ?? [])]);
+  return Object.keys(cell.coloring).length === texts.size && Object.keys(cell.coloring).every((text) => texts.has(text));
+}, 'Conjugation coloring differs from original expressions');
 const verbSchema = z.object({
   blocks: z.record(z.string(), z.enum(['supported', 'unconfirmed', 'not_applicable', 'missing'])).readonly().optional(),
   group: z.union([z.literal(1), z.literal(2), z.literal(3)]).nullable(),
@@ -36,6 +57,9 @@ export const conjugationSchema = z.object({
   for (const table of result.tables) {
     if (lemmas.has(table.lemma) || table.cells.length === 0 || !table.cells.some((cell) => cellMatches(cell, result.query))
       || table.cells.some((cell) => cell.lemma !== table.lemma)) context.addIssue({ code: 'custom', message: 'Invalid conjugation table identity' });
+    if (table.verb.group_status !== 'supported' || ![1, 2].includes(table.verb.group ?? 0)) {
+      if (table.cells.some((cell) => Object.values(cell.coloring).some((spans) => spans.ending !== null))) context.addIssue({ code: 'custom', message: 'Irregular conjugation cannot have a regular ending' });
+    }
     lemmas.add(table.lemma);
   }
 });

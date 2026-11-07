@@ -8,7 +8,7 @@ use tauri::{Emitter, Manager, State};
 mod audio_maintenance;
 mod conjugation;
 mod review_window;
-use conjugation::conjugation_lookup;
+use conjugation::{conjugation_lookup, conjugation_preferences};
 mod speech_cache;
 mod speech_tasks;
 mod vocabulary;
@@ -126,6 +126,7 @@ pub fn run() {
             runtime_status,
             dictionary_lookup,
             conjugation_lookup,
+            conjugation_preferences,
             vocabulary_find,
             vocabulary_list,
             vocabulary_save,
