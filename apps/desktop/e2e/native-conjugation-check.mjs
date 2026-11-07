@@ -11,14 +11,21 @@ import assert from 'node:assert/strict';
 const [resources, binary, data, destination] = process.argv.slice(2, 6).map((path) => resolve(path));
 const navigationOnly = process.argv[6] === '--navigation';
 const speechOnly = process.argv[6] === '--speech';
-assert.ok(process.argv.length === 6 || (process.argv.length === 7 && (navigationOnly || speechOnly)), 'Four paths and optional --navigation or --speech are required');
-assert.ok(['issue-40', 'issue-41', 'issue-42', 'issue-43', 'issue-44', 'issue-45', 'issue-46', 'issue-47', 'issue-48', 'conjugation-refactor'].some((issue) => destination.startsWith(resolve('../../target/' + issue) + '\\')));
+const freshPackage = process.argv[6] === '--fresh-package';
+assert.ok(process.argv.length === 6 || (process.argv.length === 7 && (navigationOnly || speechOnly || freshPackage)), 'Four paths and optional --navigation, --speech or --fresh-package are required');
+assert.ok(['issue-40', 'issue-41', 'issue-42', 'issue-43', 'issue-44', 'issue-45', 'issue-46', 'issue-47', 'issue-48', 'issue-49', 'conjugation-refactor'].some((issue) => destination.startsWith(resolve('../../target/' + issue) + '\\')));
 const defaultOrder = ['P', 'PC', 'I', 'F', 'C', 'S', 'PQP', 'J', 'PA', 'FA', 'CP', 'SP', 'T', 'SQP', 'Y', 'YP', 'W', 'WP', 'G', 'K', 'KP', 'GP', 'GPP'];
 await mkdir(destination);
 for (const name of ['dictionary', 'conjugation']) await cp(join(resources, name), join(destination, name), { recursive: true });
 await cp(binary, join(destination, 'Lexique.exe'));
-for (const name of ['data', 'temp/speech']) await cp(join(data, name), join(destination, 'Lexique-data', name), { recursive: true });
-if (speechOnly) await cp(resolve(data, '../speech'), join(destination, 'speech'), { recursive: true });
+if (!freshPackage) for (const name of ['data', 'temp/speech']) await cp(join(data, name), join(destination, 'Lexique-data', name), { recursive: true });
+const packagedSpeech = (await readdir(resources)).includes('speech');
+if (packagedSpeech) await cp(join(resources, 'speech'), join(destination, 'speech'), { recursive: true });
+else if (speechOnly) await cp(resolve(data, '../speech'), join(destination, 'speech'), { recursive: true });
+if (freshPackage) {
+  assert.ok(packagedSpeech, 'The fresh package must include speech resources');
+  assert.equal((await readdir(destination)).includes('Lexique-data'), false);
+}
 const server = createServer(); await new Promise((done) => server.listen(0, '127.0.0.1', done));
 const port = server.address().port; await new Promise((done) => server.close(done));
 let child, browser;
@@ -636,6 +643,29 @@ print(json.dumps([dict(spec=json.loads(row[0]),generatedAt=row[1],expiresAt=row[
   assert.ok(result.every((row) => row.spec.speed === 1 && row.spec.bitrate === 48000));
   return result;
 }
+async function reviewPreservation(page, before) {
+  const index = before.records.findIndex((record) => record.headword === 'école');
+  assert.ok(index >= 0 && before.audio[index]?.length, 'Use the existing selected école audio');
+  await dictionarySearch(page, 'école');
+  await page.getByRole('button', { name: 'View existing record', exact: true }).click();
+  await page.getByRole('button', { name: 'Open recognition card', exact: true }).click();
+  const recognition = page.getByRole('dialog', { name: 'Recognition card', exact: true });
+  await recognition.getByRole('button', { name: 'Show answer', exact: true }).click();
+  await expect(recognition.locator('h3')).toHaveText('école');
+  await recognition.getByRole('button', { name: 'Close card', exact: true }).click();
+  const player = await page.evaluate(() => Reflect.get(window, 'expressionPlayers').length);
+  await page.getByRole('button', { name: 'Open listening card', exact: true }).click();
+  const listening = page.getByRole('dialog', { name: 'Listening card', exact: true });
+  await expect(listening.locator('h3')).toHaveCount(0);
+  await expect.poll(() => page.evaluate((index) => Reflect.get(window, 'expressionPlayers')[index]?.element.currentTime ?? 0, player), { timeout: 20_000 }).toBeGreaterThan(0);
+  assert.deepEqual(await page.evaluate((index) => Reflect.get(window, 'expressionPlayers')[index].bytes, player), before.audio[index]);
+  await listening.getByRole('button', { name: 'Show answer', exact: true }).click();
+  await expect(listening.locator('h3')).toHaveText('école');
+  await expect(listening.getByRole('alert')).toHaveCount(0);
+  await listening.getByRole('button', { name: 'Skip', exact: true }).click();
+  assert.deepEqual(await snapshot(page), before);
+  return { word: 'école', recognition: true, listening: true, selectedAudioBytes: true, progressUnchanged: true };
+}
 async function speechAcceptance(page) {
   const before = await snapshot(page), selections = expressionSelections(), audio = await hashes(join(destination, 'Lexique-data/temp/speech'));
   assert.ok(before.records.length && before.cards.flat().length && Object.keys(audio).length, 'Use existing learning records, review state and selected audio');
@@ -661,20 +691,77 @@ async function speechAcceptance(page) {
   const recovery = await expressionResourceRecovery(page); page = recovery.page;
   assert.deepEqual(await snapshot(page), before); assert.deepEqual(expressionSelections(), selections);
   assert.deepEqual(await page.evaluate(async () => ({ coloring: await window.__TAURI_INTERNALS__.invoke('conjugation_preferences', { preferences: null }), order: await window.__TAURI_INTERNALS__.invoke('conjugation_block_order', { order: null }) })), preferences);
+  const review = await reviewPreservation(page, before);
   const afterAudio = await hashes(join(destination, 'Lexique-data/temp/speech'));
   for (const [path, checksum] of Object.entries(audio)) assert.equal(afterAudio[path], checksum, 'Existing audio files must remain unchanged');
   const retention = expressionRetention(['nous avions lavé', ...alternatives.played.map((row) => row.text), recovery.recovered.text].filter((text, index, values) => values.indexOf(text) === index));
   await page.screenshot({ path: join(destination, 'expression-speech-recovered.png') });
   await writeFile(join(destination, 'report.json'), JSON.stringify({ status: 'PASS', speech: true, restart: true, cancellation: 'previous clip paused; pending table response ignored; concurrent dictionary playback retained',
     ...alternatives, preferences: { slow, normal, sameAudio: true, restored: before.preferences, coloring: preferences.coloring, order: preferences.order },
-    resourceFailure: 'missing speech bundle; visible failure and successful retry after restoration', recovered: recovery.recovered, retention,
+    resourceFailure: 'missing speech bundle; visible failure and successful retry after restoration', recovered: recovery.recovered, retention, review,
     preserved: { records: before.records.length, cards: before.cards.flat().length, progress: before.progress.length, existingAudioFiles: Object.keys(audio).length, references: true, selectedAudioVersions: true, notes: true },
     limits: ['No fresh disconnected-system acceptance', 'No other-platform execution', 'No additional voice-quality admission'] }, null, 2));
   await close(page); console.log('Native complete-expression speech: PASS');
 }
+async function freshPackageAcceptance(page, firstLaunchMs) {
+  const before = await snapshot(page);
+  const webview = await browser.version();
+  assert.deepEqual(before.records, [], 'First launch must start without learning data');
+  assert.deepEqual(before.cards, []); assert.deepEqual(before.progress, []); assert.deepEqual(before.audio, []);
+  assert.equal(expressionAsset('je me lave'), null, 'First launch must not contain generated expression audio');
+  await page.getByRole('banner').getByRole('combobox').nth(0).selectOption('en');
+  const custom = await navigationBrowse(page);
+  await trackExpressionSpeech(page);
+  const alternatives = await expressionAlternatives(page);
+  await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('speech_preferences', { preferences: { voice: 'male', speed: 'slow' } }));
+  await conjugationSearch(page, 'paie'); const slow = await playNativeExpression(page, 'je paie', 0.6);
+  await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('speech_preferences', { preferences: { voice: 'male', speed: 'normal' } }));
+  const normal = await playNativeExpression(page, 'je paie');
+  assert.equal(normal.version, slow.version);
+  assert.equal(await page.evaluate(async () => { const players = Reflect.get(window, 'expressionPlayers'); return JSON.stringify(await players.at(-1).bytes) === JSON.stringify(await players.at(-2).bytes); }), true);
+  await page.evaluate((preferences) => window.__TAURI_INTERNALS__.invoke('speech_preferences', { preferences }), before.preferences);
+  const ending = page.getByRole('button', { name: '3 · Main verb ending', exact: true });
+  await ending.focus(); await ending.press('Space');
+  await expect(ending).toHaveAttribute('aria-pressed', 'true');
+  await conjugationSearch(page, 'nous avions lavé');
+  await expect(page.locator('.conjugation-expression[data-matched=true] .conjugation-colored')).toHaveText(['é']);
+  await expect(page.locator('.conjugation-block[data-priority=true]')).toHaveCount(7);
+  assert.deepEqual(await renderedOrder(page), custom);
+  assert.deepEqual(await snapshot(page), before); assert.deepEqual(expressionSelections(), []);
+  const retention = expressionRetention(alternatives.played.map((clip) => clip.text));
+  await page.screenshot({ path: join(destination, 'fresh-package.png') });
+  await close(page); page = await start();
+  await page.getByRole('banner').getByRole('combobox').nth(0).selectOption('en');
+  await conjugationSearch(page, 'finir');
+  await expect(page.getByRole('button', { name: '3 · Main verb ending', exact: true })).toHaveAttribute('aria-pressed', 'true');
+  await expect(page.locator('.conjugation-expression[data-matched=true] .conjugation-colored')).toHaveText(['ir']);
+  assert.deepEqual(await renderedOrder(page), custom);
+  await conjugationSearch(page, 'aller');
+  await expect(page.locator('.conjugation-table h3')).toHaveText('aller');
+  await expect(page.locator('.conjugation-table .conjugation-colored')).toHaveCount(0);
+  await expect(page.getByRole('button', { name: '3 · Main verb ending', exact: true })).toHaveAttribute('aria-pressed', 'true');
+  const reset = page.getByRole('button', { name: 'Reset block order', exact: true });
+  await reset.focus(); await reset.press('Space');
+  await expect(page.locator('.conjugation-block').nth(6)).toHaveAttribute('data-tense', 'PQP');
+  assert.deepEqual(await renderedOrder(page), defaultOrder);
+  await close(page); page = await start();
+  await page.getByRole('banner').getByRole('combobox').nth(0).selectOption('en');
+  await conjugationSearch(page, 'va-t’en');
+  await expect(page.locator('.conjugation-table h3')).toHaveText('s’en aller');
+  assert.deepEqual(await renderedOrder(page), defaultOrder);
+  assert.deepEqual(await snapshot(page), before); assert.deepEqual(expressionSelections(), []);
+  await page.screenshot({ path: join(destination, 'fresh-package-restart.png') });
+  await writeFile(join(destination, 'report.json'), JSON.stringify({ status: 'PASS', freshPackage: true, firstLaunchMs, webview,
+    firstLaunchLearningRecords: 0, ...alternatives, voiceSpeed: { slow, normal, sameAudio: true, restored: before.preferences },
+    navigation: ['dictionary to conjugation', 'conjugation to dictionary'], languages: ['zh', 'fr', 'en'], themes: ['white', 'sepia', 'dark'],
+    preferences: { mode: 'ending', customOrder: custom, restoredAcrossVerbs: true, thirdGroupUncolored: true, resetRestored: true },
+    retention, implicitSaves: 0, implicitCards: 0, offlineAcceptance: 'Pending user test with network blocked' }, null, 2));
+  await close(page); console.log('Native fresh package: PASS');
+}
 try {
+  const started = performance.now();
   let page = await start();
-  if (speechOnly) { await speechAcceptance(page); } else if (navigationOnly) { await navigationAcceptance(page); } else {
+  if (freshPackage) { await freshPackageAcceptance(page, performance.now() - started); } else if (speechOnly) { await speechAcceptance(page); } else if (navigationOnly) { await navigationAcceptance(page); } else {
   const { before, audio, results, timings, coloring, blockOrder } = await check(page), modesRestored = [];
   for (const [mode, label, expected] of [['main', '2 · 主要动词', 'lavé'], ['verbal', '1 · 完整动词部分', 'avions lavé'], ['ending', '3 · 主要动词词尾', 'é']]) {
     await page.getByRole('button', { name: label, exact: true }).click();
