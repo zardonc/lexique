@@ -1,0 +1,2604 @@
+{
+  "status": "PASS",
+  "restart": true,
+  "results": {
+    "avons aimé": {
+      "query": "avons aimé",
+      "tables": [
+        {
+          "lemma": "aimer",
+          "meanings": {
+            "senses": [
+              {
+                "glosses": [
+                  "love"
+                ],
+                "headword": "aimer",
+                "labels": [],
+                "source_entry": 1264,
+                "source_sense": 1,
+                "use": "ordinary"
+              },
+              {
+                "glosses": [
+                  "appreciate",
+                  "like"
+                ],
+                "headword": "aimer",
+                "labels": [],
+                "source_entry": 1264,
+                "source_sense": 2,
+                "use": "ordinary"
+              }
+            ],
+            "status": "available"
+          },
+          "matchingCells": [
+            {
+              "tense": "PC",
+              "person": "1",
+              "number": "p",
+              "gender": null,
+              "form": "avons aimé",
+              "expressions": [
+                "nous avons aimé"
+              ]
+            }
+          ],
+          "metadata": {
+            "blocks": {
+              "C": "supported",
+              "CP": "supported",
+              "F": "supported",
+              "FA": "supported",
+              "G": "supported",
+              "GP": "supported",
+              "GPP": "supported",
+              "I": "supported",
+              "J": "supported",
+              "K": "supported",
+              "KP": "supported",
+              "P": "supported",
+              "PA": "supported",
+              "PC": "supported",
+              "PQP": "supported",
+              "S": "supported",
+              "SP": "supported",
+              "SQP": "supported",
+              "T": "supported",
+              "W": "supported",
+              "WP": "supported",
+              "Y": "supported",
+              "YP": "supported"
+            },
+            "usage_labels": [
+              "intransitive",
+              "transitive"
+            ],
+            "auxiliaries": [
+              {
+                "lemma": "avoir",
+                "use": "transitive"
+              }
+            ],
+            "ordinary_status": "supported"
+          }
+        }
+      ]
+    },
+    "aie aimé": {
+      "query": "aie aimé",
+      "tables": [
+        {
+          "lemma": "aimer",
+          "meanings": {
+            "senses": [
+              {
+                "glosses": [
+                  "love"
+                ],
+                "headword": "aimer",
+                "labels": [],
+                "source_entry": 1264,
+                "source_sense": 1,
+                "use": "ordinary"
+              },
+              {
+                "glosses": [
+                  "appreciate",
+                  "like"
+                ],
+                "headword": "aimer",
+                "labels": [],
+                "source_entry": 1264,
+                "source_sense": 2,
+                "use": "ordinary"
+              }
+            ],
+            "status": "available"
+          },
+          "matchingCells": [
+            {
+              "tense": "SP",
+              "person": "1",
+              "number": "s",
+              "gender": null,
+              "form": "aie aimé",
+              "expressions": [
+                "j’aie aimé",
+                "que j’aie aimé"
+              ]
+            },
+            {
+              "tense": "YP",
+              "person": "2",
+              "number": "s",
+              "gender": null,
+              "form": "aie aimé",
+              "expressions": [
+                "aie aimé"
+              ]
+            }
+          ],
+          "metadata": {
+            "blocks": {
+              "C": "supported",
+              "CP": "supported",
+              "F": "supported",
+              "FA": "supported",
+              "G": "supported",
+              "GP": "supported",
+              "GPP": "supported",
+              "I": "supported",
+              "J": "supported",
+              "K": "supported",
+              "KP": "supported",
+              "P": "supported",
+              "PA": "supported",
+              "PC": "supported",
+              "PQP": "supported",
+              "S": "supported",
+              "SP": "supported",
+              "SQP": "supported",
+              "T": "supported",
+              "W": "supported",
+              "WP": "supported",
+              "Y": "supported",
+              "YP": "supported"
+            },
+            "usage_labels": [
+              "intransitive",
+              "transitive"
+            ],
+            "auxiliaries": [
+              {
+                "lemma": "avoir",
+                "use": "transitive"
+              }
+            ],
+            "ordinary_status": "supported"
+          }
+        }
+      ]
+    },
+    "je suis allée": {
+      "query": "je suis allée",
+      "tables": [
+        {
+          "lemma": "aller",
+          "meanings": {
+            "senses": [
+              {
+                "glosses": [
+                  "fare"
+                ],
+                "headword": "aller",
+                "labels": [],
+                "source_entry": 1313,
+                "source_sense": 1,
+                "use": "ordinary"
+              },
+              {
+                "glosses": [
+                  "go",
+                  "ride",
+                  "travel"
+                ],
+                "headword": "aller",
+                "labels": [],
+                "source_entry": 1313,
+                "source_sense": 2,
+                "use": "ordinary"
+              }
+            ],
+            "status": "available"
+          },
+          "matchingCells": [
+            {
+              "tense": "PC",
+              "person": "1",
+              "number": "s",
+              "gender": "f",
+              "form": "suis allée",
+              "expressions": [
+                "je suis allée"
+              ]
+            }
+          ],
+          "metadata": {
+            "blocks": {
+              "C": "supported",
+              "CP": "supported",
+              "F": "supported",
+              "FA": "supported",
+              "G": "supported",
+              "GP": "supported",
+              "GPP": "supported",
+              "I": "supported",
+              "J": "supported",
+              "K": "supported",
+              "KP": "supported",
+              "P": "supported",
+              "PA": "supported",
+              "PC": "supported",
+              "PQP": "supported",
+              "S": "supported",
+              "SP": "supported",
+              "SQP": "supported",
+              "T": "supported",
+              "W": "supported",
+              "WP": "supported",
+              "Y": "supported",
+              "YP": "supported"
+            },
+            "usage_labels": [
+              "indirect_transitive",
+              "intransitive"
+            ],
+            "auxiliaries": [
+              {
+                "lemma": "être",
+                "use": "indirect_transitive; intransitive"
+              }
+            ],
+            "ordinary_status": "supported"
+          }
+        }
+      ]
+    },
+    "en ayant aimé": {
+      "query": "en ayant aimé",
+      "tables": [
+        {
+          "lemma": "aimer",
+          "meanings": {
+            "senses": [
+              {
+                "glosses": [
+                  "love"
+                ],
+                "headword": "aimer",
+                "labels": [],
+                "source_entry": 1264,
+                "source_sense": 1,
+                "use": "ordinary"
+              },
+              {
+                "glosses": [
+                  "appreciate",
+                  "like"
+                ],
+                "headword": "aimer",
+                "labels": [],
+                "source_entry": 1264,
+                "source_sense": 2,
+                "use": "ordinary"
+              }
+            ],
+            "status": "available"
+          },
+          "matchingCells": [
+            {
+              "tense": "GPP",
+              "person": null,
+              "number": null,
+              "gender": null,
+              "form": "en ayant aimé",
+              "expressions": [
+                "en ayant aimé"
+              ]
+            }
+          ],
+          "metadata": {
+            "blocks": {
+              "C": "supported",
+              "CP": "supported",
+              "F": "supported",
+              "FA": "supported",
+              "G": "supported",
+              "GP": "supported",
+              "GPP": "supported",
+              "I": "supported",
+              "J": "supported",
+              "K": "supported",
+              "KP": "supported",
+              "P": "supported",
+              "PA": "supported",
+              "PC": "supported",
+              "PQP": "supported",
+              "S": "supported",
+              "SP": "supported",
+              "SQP": "supported",
+              "T": "supported",
+              "W": "supported",
+              "WP": "supported",
+              "Y": "supported",
+              "YP": "supported"
+            },
+            "usage_labels": [
+              "intransitive",
+              "transitive"
+            ],
+            "auxiliaries": [
+              {
+                "lemma": "avoir",
+                "use": "transitive"
+              }
+            ],
+            "ordinary_status": "supported"
+          }
+        }
+      ]
+    },
+    "j’ai abélisé": {
+      "query": "j’ai abélisé",
+      "tables": [
+        {
+          "lemma": "abéliser",
+          "meanings": {
+            "senses": [],
+            "status": "unavailable"
+          },
+          "matchingCells": [
+            {
+              "tense": "PC",
+              "person": "1",
+              "number": "s",
+              "gender": null,
+              "form": "ai abélisé",
+              "expressions": [
+                "j’ai abélisé"
+              ]
+            }
+          ],
+          "metadata": {
+            "blocks": {
+              "C": "supported",
+              "CP": "supported",
+              "F": "supported",
+              "FA": "supported",
+              "G": "supported",
+              "GP": "supported",
+              "GPP": "supported",
+              "I": "supported",
+              "J": "supported",
+              "K": "supported",
+              "KP": "supported",
+              "P": "supported",
+              "PA": "supported",
+              "PC": "supported",
+              "PQP": "supported",
+              "S": "supported",
+              "SP": "supported",
+              "SQP": "supported",
+              "T": "supported",
+              "W": "supported",
+              "WP": "supported",
+              "Y": "supported",
+              "YP": "supported"
+            },
+            "usage_labels": [
+              "transitive"
+            ],
+            "auxiliaries": [
+              {
+                "lemma": "avoir",
+                "use": "transitive"
+              }
+            ],
+            "ordinary_status": "supported"
+          }
+        }
+      ]
+    },
+    "je suis monté": {
+      "query": "je suis monté",
+      "tables": [
+        {
+          "lemma": "monter",
+          "meanings": {
+            "senses": [
+              {
+                "glosses": [
+                  "get in",
+                  "get into a car"
+                ],
+                "headword": "monter",
+                "labels": [],
+                "source_entry": 5371,
+                "source_sense": 1,
+                "use": "ordinary"
+              },
+              {
+                "glosses": [
+                  "assemble",
+                  "link",
+                  "mount"
+                ],
+                "headword": "monter",
+                "labels": [],
+                "source_entry": 5371,
+                "source_sense": 2,
+                "use": "ordinary"
+              },
+              {
+                "glosses": [
+                  "ascend",
+                  "climb",
+                  "scale"
+                ],
+                "headword": "monter",
+                "labels": [],
+                "source_entry": 5371,
+                "source_sense": 3,
+                "use": "ordinary"
+              }
+            ],
+            "status": "available"
+          },
+          "matchingCells": [
+            {
+              "tense": "PC",
+              "person": "1",
+              "number": "s",
+              "gender": "m",
+              "form": "suis monté",
+              "expressions": [
+                "je suis monté"
+              ]
+            }
+          ],
+          "metadata": {
+            "blocks": {
+              "C": "supported",
+              "CP": "supported",
+              "F": "supported",
+              "FA": "supported",
+              "G": "supported",
+              "GP": "supported",
+              "GPP": "supported",
+              "I": "supported",
+              "J": "supported",
+              "K": "supported",
+              "KP": "supported",
+              "P": "supported",
+              "PA": "supported",
+              "PC": "supported",
+              "PQP": "supported",
+              "S": "supported",
+              "SP": "supported",
+              "SQP": "supported",
+              "T": "supported",
+              "W": "supported",
+              "WP": "supported",
+              "Y": "supported",
+              "YP": "supported"
+            },
+            "usage_labels": [
+              "indirect_transitive",
+              "intransitive",
+              "transitive"
+            ],
+            "auxiliaries": [
+              {
+                "lemma": "avoir",
+                "use": "intransitive; transitive"
+              },
+              {
+                "lemma": "être",
+                "use": "indirect_transitive; intransitive"
+              }
+            ],
+            "ordinary_status": "supported"
+          }
+        }
+      ]
+    },
+    "j’ai monté": {
+      "query": "j’ai monté",
+      "tables": [
+        {
+          "lemma": "monter",
+          "meanings": {
+            "senses": [
+              {
+                "glosses": [
+                  "get in",
+                  "get into a car"
+                ],
+                "headword": "monter",
+                "labels": [],
+                "source_entry": 5371,
+                "source_sense": 1,
+                "use": "ordinary"
+              },
+              {
+                "glosses": [
+                  "assemble",
+                  "link",
+                  "mount"
+                ],
+                "headword": "monter",
+                "labels": [],
+                "source_entry": 5371,
+                "source_sense": 2,
+                "use": "ordinary"
+              },
+              {
+                "glosses": [
+                  "ascend",
+                  "climb",
+                  "scale"
+                ],
+                "headword": "monter",
+                "labels": [],
+                "source_entry": 5371,
+                "source_sense": 3,
+                "use": "ordinary"
+              }
+            ],
+            "status": "available"
+          },
+          "matchingCells": [
+            {
+              "tense": "PC",
+              "person": "1",
+              "number": "s",
+              "gender": null,
+              "form": "ai monté",
+              "expressions": [
+                "j’ai monté"
+              ]
+            }
+          ],
+          "metadata": {
+            "blocks": {
+              "C": "supported",
+              "CP": "supported",
+              "F": "supported",
+              "FA": "supported",
+              "G": "supported",
+              "GP": "supported",
+              "GPP": "supported",
+              "I": "supported",
+              "J": "supported",
+              "K": "supported",
+              "KP": "supported",
+              "P": "supported",
+              "PA": "supported",
+              "PC": "supported",
+              "PQP": "supported",
+              "S": "supported",
+              "SP": "supported",
+              "SQP": "supported",
+              "T": "supported",
+              "W": "supported",
+              "WP": "supported",
+              "Y": "supported",
+              "YP": "supported"
+            },
+            "usage_labels": [
+              "indirect_transitive",
+              "intransitive",
+              "transitive"
+            ],
+            "auxiliaries": [
+              {
+                "lemma": "avoir",
+                "use": "intransitive; transitive"
+              },
+              {
+                "lemma": "être",
+                "use": "indirect_transitive; intransitive"
+              }
+            ],
+            "ordinary_status": "supported"
+          }
+        }
+      ]
+    },
+    "j’habite": {
+      "query": "j’habite",
+      "tables": [
+        {
+          "lemma": "habiter",
+          "meanings": {
+            "senses": [
+              {
+                "glosses": [
+                  "dwell",
+                  "live"
+                ],
+                "headword": "habiter",
+                "labels": [],
+                "source_entry": 4385,
+                "source_sense": 1,
+                "use": "ordinary"
+              }
+            ],
+            "status": "available"
+          },
+          "matchingCells": [
+            {
+              "tense": "P",
+              "person": "1",
+              "number": "s",
+              "gender": null,
+              "form": "habite",
+              "expressions": [
+                "j’habite"
+              ]
+            },
+            {
+              "tense": "S",
+              "person": "1",
+              "number": "s",
+              "gender": null,
+              "form": "habite",
+              "expressions": [
+                "j’habite",
+                "que j’habite"
+              ]
+            }
+          ],
+          "metadata": {
+            "blocks": {
+              "C": "supported",
+              "CP": "supported",
+              "F": "supported",
+              "FA": "supported",
+              "G": "supported",
+              "GP": "supported",
+              "GPP": "supported",
+              "I": "supported",
+              "J": "supported",
+              "K": "supported",
+              "KP": "supported",
+              "P": "supported",
+              "PA": "supported",
+              "PC": "supported",
+              "PQP": "supported",
+              "S": "supported",
+              "SP": "supported",
+              "SQP": "supported",
+              "T": "supported",
+              "W": "supported",
+              "WP": "supported",
+              "Y": "supported",
+              "YP": "supported"
+            },
+            "usage_labels": [
+              "intransitive",
+              "transitive"
+            ],
+            "auxiliaries": [
+              {
+                "lemma": "avoir",
+                "use": "intransitive; transitive"
+              }
+            ],
+            "ordinary_status": "supported"
+          }
+        }
+      ]
+    },
+    "je hais": {
+      "query": "je hais",
+      "tables": [
+        {
+          "lemma": "haïr",
+          "meanings": {
+            "senses": [
+              {
+                "glosses": [
+                  "abhor",
+                  "abominate",
+                  "loathe"
+                ],
+                "headword": "haïr",
+                "labels": [],
+                "source_entry": 4416,
+                "source_sense": 1,
+                "use": "ordinary"
+              },
+              {
+                "glosses": [
+                  "hate"
+                ],
+                "headword": "haïr",
+                "labels": [],
+                "source_entry": 4416,
+                "source_sense": 2,
+                "use": "ordinary"
+              }
+            ],
+            "status": "available"
+          },
+          "matchingCells": [
+            {
+              "tense": "P",
+              "person": "1",
+              "number": "s",
+              "gender": null,
+              "form": "hais",
+              "expressions": [
+                "je hais"
+              ]
+            }
+          ],
+          "metadata": {
+            "blocks": {
+              "C": "supported",
+              "CP": "supported",
+              "F": "supported",
+              "FA": "supported",
+              "G": "supported",
+              "GP": "supported",
+              "GPP": "supported",
+              "I": "supported",
+              "J": "supported",
+              "K": "supported",
+              "KP": "supported",
+              "P": "supported",
+              "PA": "supported",
+              "PC": "supported",
+              "PQP": "supported",
+              "S": "supported",
+              "SP": "supported",
+              "SQP": "supported",
+              "T": "supported",
+              "W": "supported",
+              "WP": "supported",
+              "Y": "supported",
+              "YP": "supported"
+            },
+            "usage_labels": [
+              "intransitive",
+              "transitive"
+            ],
+            "auxiliaries": [
+              {
+                "lemma": "avoir",
+                "use": "transitive"
+              }
+            ],
+            "ordinary_status": "supported"
+          }
+        }
+      ]
+    },
+    "gésir": {
+      "query": "gésir",
+      "tables": [
+        {
+          "lemma": "gésir",
+          "meanings": {
+            "senses": [],
+            "status": "unavailable"
+          },
+          "matchingCells": [
+            {
+              "tense": "W",
+              "person": null,
+              "number": null,
+              "gender": null,
+              "form": "gésir",
+              "expressions": [
+                "gésir"
+              ]
+            }
+          ],
+          "metadata": {
+            "blocks": {
+              "C": "not_applicable",
+              "CP": "not_applicable",
+              "F": "not_applicable",
+              "FA": "not_applicable",
+              "G": "supported",
+              "GP": "supported",
+              "GPP": "not_applicable",
+              "I": "supported",
+              "J": "not_applicable",
+              "K": "not_applicable",
+              "KP": "not_applicable",
+              "P": "supported",
+              "PA": "not_applicable",
+              "PC": "not_applicable",
+              "PQP": "not_applicable",
+              "S": "not_applicable",
+              "SP": "not_applicable",
+              "SQP": "not_applicable",
+              "T": "not_applicable",
+              "W": "supported",
+              "WP": "not_applicable",
+              "Y": "not_applicable",
+              "YP": "not_applicable"
+            },
+            "usage_labels": [
+              "intransitive"
+            ],
+            "auxiliaries": [
+              {
+                "lemma": "avoir",
+                "use": "intransitive"
+              }
+            ],
+            "ordinary_status": "supported"
+          }
+        }
+      ]
+    },
+    "j’occirai": {
+      "query": "j’occirai",
+      "tables": [
+        {
+          "lemma": "occire",
+          "meanings": {
+            "senses": [],
+            "status": "unavailable"
+          },
+          "matchingCells": [
+            {
+              "tense": "F",
+              "person": "1",
+              "number": "s",
+              "gender": null,
+              "form": "occirai",
+              "expressions": [
+                "j’occirai"
+              ]
+            }
+          ],
+          "metadata": {
+            "blocks": {
+              "C": "supported",
+              "CP": "supported",
+              "F": "supported",
+              "FA": "supported",
+              "G": "not_applicable",
+              "GP": "not_applicable",
+              "GPP": "supported",
+              "I": "not_applicable",
+              "J": "not_applicable",
+              "K": "supported",
+              "KP": "supported",
+              "P": "not_applicable",
+              "PA": "supported",
+              "PC": "supported",
+              "PQP": "supported",
+              "S": "not_applicable",
+              "SP": "supported",
+              "SQP": "supported",
+              "T": "not_applicable",
+              "W": "supported",
+              "WP": "supported",
+              "Y": "not_applicable",
+              "YP": "supported"
+            },
+            "usage_labels": [
+              "transitive"
+            ],
+            "auxiliaries": [
+              {
+                "lemma": "avoir",
+                "use": "transitive"
+              }
+            ],
+            "ordinary_status": "supported"
+          }
+        }
+      ]
+    },
+    "ayons chu": {
+      "query": "ayons chu",
+      "tables": [
+        {
+          "lemma": "choir",
+          "meanings": {
+            "senses": [],
+            "status": "unavailable"
+          },
+          "matchingCells": [
+            {
+              "tense": "SP",
+              "person": "1",
+              "number": "p",
+              "gender": null,
+              "form": "ayons chu",
+              "expressions": [
+                "nous ayons chu",
+                "que nous ayons chu"
+              ]
+            },
+            {
+              "tense": "YP",
+              "person": "1",
+              "number": "p",
+              "gender": null,
+              "form": "ayons chu",
+              "expressions": [
+                "ayons chu"
+              ]
+            }
+          ],
+          "metadata": {
+            "blocks": {
+              "C": "supported",
+              "CP": "supported",
+              "F": "supported",
+              "FA": "supported",
+              "G": "supported",
+              "GP": "supported",
+              "GPP": "supported",
+              "I": "not_applicable",
+              "J": "supported",
+              "K": "supported",
+              "KP": "supported",
+              "P": "supported",
+              "PA": "supported",
+              "PC": "supported",
+              "PQP": "supported",
+              "S": "supported",
+              "SP": "supported",
+              "SQP": "supported",
+              "T": "supported",
+              "W": "supported",
+              "WP": "supported",
+              "Y": "supported",
+              "Y/1p": "not_applicable",
+              "Y/2p": "not_applicable",
+              "YP": "supported"
+            },
+            "usage_labels": [
+              "intransitive"
+            ],
+            "auxiliaries": [
+              {
+                "lemma": "avoir",
+                "use": "intransitive"
+              },
+              {
+                "lemma": "être",
+                "use": "intransitive"
+              }
+            ],
+            "ordinary_status": "supported"
+          }
+        }
+      ]
+    },
+    "il est avenu": {
+      "query": "il est avenu",
+      "tables": [
+        {
+          "lemma": "avenir",
+          "meanings": {
+            "senses": [],
+            "status": "unavailable"
+          },
+          "matchingCells": [
+            {
+              "tense": "PC",
+              "person": "3",
+              "number": "s",
+              "gender": "m",
+              "form": "est avenu",
+              "expressions": [
+                "il est avenu",
+                "on est avenu"
+              ]
+            }
+          ],
+          "metadata": {
+            "blocks": {
+              "C": "supported",
+              "C/1p": "not_applicable",
+              "C/1s": "not_applicable",
+              "C/2p": "not_applicable",
+              "C/2s": "not_applicable",
+              "CP": "supported",
+              "CP/1p": "not_applicable",
+              "CP/1s": "not_applicable",
+              "CP/2p": "not_applicable",
+              "CP/2s": "not_applicable",
+              "F": "supported",
+              "F/1p": "not_applicable",
+              "F/1s": "not_applicable",
+              "F/2p": "not_applicable",
+              "F/2s": "not_applicable",
+              "FA": "supported",
+              "FA/1p": "not_applicable",
+              "FA/1s": "not_applicable",
+              "FA/2p": "not_applicable",
+              "FA/2s": "not_applicable",
+              "G": "supported",
+              "GP": "supported",
+              "GPP": "supported",
+              "I": "supported",
+              "I/1p": "not_applicable",
+              "I/1s": "not_applicable",
+              "I/2p": "not_applicable",
+              "I/2s": "not_applicable",
+              "J": "supported",
+              "J/1p": "not_applicable",
+              "J/1s": "not_applicable",
+              "J/2p": "not_applicable",
+              "J/2s": "not_applicable",
+              "K": "supported",
+              "KP": "supported",
+              "P": "supported",
+              "P/1p": "not_applicable",
+              "P/1s": "not_applicable",
+              "P/2p": "not_applicable",
+              "P/2s": "not_applicable",
+              "PA": "supported",
+              "PA/1p": "not_applicable",
+              "PA/1s": "not_applicable",
+              "PA/2p": "not_applicable",
+              "PA/2s": "not_applicable",
+              "PC": "supported",
+              "PC/1p": "not_applicable",
+              "PC/1s": "not_applicable",
+              "PC/2p": "not_applicable",
+              "PC/2s": "not_applicable",
+              "PQP": "supported",
+              "PQP/1p": "not_applicable",
+              "PQP/1s": "not_applicable",
+              "PQP/2p": "not_applicable",
+              "PQP/2s": "not_applicable",
+              "S": "supported",
+              "S/1p": "not_applicable",
+              "S/1s": "not_applicable",
+              "S/2p": "not_applicable",
+              "S/2s": "not_applicable",
+              "SP": "supported",
+              "SP/1p": "not_applicable",
+              "SP/1s": "not_applicable",
+              "SP/2p": "not_applicable",
+              "SP/2s": "not_applicable",
+              "SQP": "supported",
+              "SQP/1p": "not_applicable",
+              "SQP/1s": "not_applicable",
+              "SQP/2p": "not_applicable",
+              "SQP/2s": "not_applicable",
+              "T": "supported",
+              "T/1p": "not_applicable",
+              "T/1s": "not_applicable",
+              "T/2p": "not_applicable",
+              "T/2s": "not_applicable",
+              "W": "supported",
+              "WP": "supported",
+              "Y": "not_applicable",
+              "YP": "not_applicable"
+            },
+            "usage_labels": [
+              "intransitive",
+              "transitive",
+              "historical"
+            ],
+            "auxiliaries": [
+              {
+                "lemma": "être",
+                "use": "historical"
+              }
+            ],
+            "ordinary_status": "supported"
+          }
+        }
+      ]
+    },
+    "j’ai pu": {
+      "query": "j’ai pu",
+      "tables": [
+        {
+          "lemma": "paître",
+          "meanings": {
+            "senses": [],
+            "status": "unavailable"
+          },
+          "matchingCells": [
+            {
+              "tense": "PC",
+              "person": "1",
+              "number": "s",
+              "gender": null,
+              "form": "ai pu",
+              "expressions": [
+                "j’ai pu"
+              ]
+            }
+          ],
+          "metadata": {
+            "blocks": {
+              "C": "supported",
+              "CP": "supported",
+              "F": "supported",
+              "FA": "supported",
+              "G": "supported",
+              "GP": "supported",
+              "GPP": "supported",
+              "I": "supported",
+              "J": "not_applicable",
+              "K": "supported",
+              "KP": "supported",
+              "P": "supported",
+              "PA": "supported",
+              "PC": "supported",
+              "PQP": "supported",
+              "S": "supported",
+              "SP": "supported",
+              "SQP": "supported",
+              "T": "not_applicable",
+              "W": "supported",
+              "WP": "supported",
+              "Y": "supported",
+              "YP": "supported"
+            },
+            "usage_labels": [
+              "intransitive",
+              "transitive",
+              "falconry_participle"
+            ],
+            "auxiliaries": [
+              {
+                "lemma": "avoir",
+                "use": "falconry"
+              }
+            ],
+            "ordinary_status": "supported"
+          }
+        },
+        {
+          "lemma": "pouvoir",
+          "meanings": {
+            "senses": [
+              {
+                "glosses": [
+                  "be able to"
+                ],
+                "headword": "pouvoir",
+                "labels": [],
+                "source_entry": 6264,
+                "source_sense": 1,
+                "use": "ordinary"
+              }
+            ],
+            "status": "available"
+          },
+          "matchingCells": [
+            {
+              "tense": "PC",
+              "person": "1",
+              "number": "s",
+              "gender": null,
+              "form": "ai pu",
+              "expressions": [
+                "j’ai pu"
+              ]
+            }
+          ],
+          "metadata": {
+            "blocks": {
+              "C": "supported",
+              "CP": "supported",
+              "F": "supported",
+              "FA": "supported",
+              "G": "supported",
+              "GP": "supported",
+              "GPP": "supported",
+              "I": "supported",
+              "J": "supported",
+              "K": "supported",
+              "KP": "supported",
+              "P": "supported",
+              "PA": "supported",
+              "PC": "supported",
+              "PQP": "supported",
+              "S": "supported",
+              "SP": "supported",
+              "SQP": "supported",
+              "T": "supported",
+              "W": "supported",
+              "WP": "supported",
+              "Y": "not_applicable",
+              "YP": "not_applicable"
+            },
+            "usage_labels": [
+              "intransitive",
+              "transitive"
+            ],
+            "auxiliaries": [
+              {
+                "lemma": "avoir",
+                "use": "transitive"
+              }
+            ],
+            "ordinary_status": "supported"
+          }
+        }
+      ]
+    },
+    "aie occis": {
+      "query": "aie occis",
+      "tables": [
+        {
+          "lemma": "occire",
+          "meanings": {
+            "senses": [],
+            "status": "unavailable"
+          },
+          "matchingCells": [
+            {
+              "tense": "SP",
+              "person": "1",
+              "number": "s",
+              "gender": null,
+              "form": "aie occis",
+              "expressions": [
+                "j’aie occis",
+                "que j’aie occis"
+              ]
+            },
+            {
+              "tense": "YP",
+              "person": "2",
+              "number": "s",
+              "gender": null,
+              "form": "aie occis",
+              "expressions": [
+                "aie occis"
+              ]
+            }
+          ],
+          "metadata": {
+            "blocks": {
+              "C": "supported",
+              "CP": "supported",
+              "F": "supported",
+              "FA": "supported",
+              "G": "not_applicable",
+              "GP": "not_applicable",
+              "GPP": "supported",
+              "I": "not_applicable",
+              "J": "not_applicable",
+              "K": "supported",
+              "KP": "supported",
+              "P": "not_applicable",
+              "PA": "supported",
+              "PC": "supported",
+              "PQP": "supported",
+              "S": "not_applicable",
+              "SP": "supported",
+              "SQP": "supported",
+              "T": "not_applicable",
+              "W": "supported",
+              "WP": "supported",
+              "Y": "not_applicable",
+              "YP": "supported"
+            },
+            "usage_labels": [
+              "transitive"
+            ],
+            "auxiliaries": [
+              {
+                "lemma": "avoir",
+                "use": "transitive"
+              }
+            ],
+            "ordinary_status": "supported"
+          }
+        }
+      ]
+    },
+    "il stupéfait": {
+      "query": "il stupéfait",
+      "tables": [
+        {
+          "lemma": "stupéfaire",
+          "meanings": {
+            "senses": [],
+            "status": "unavailable"
+          },
+          "matchingCells": [
+            {
+              "tense": "P",
+              "person": "3",
+              "number": "s",
+              "gender": null,
+              "form": "stupéfait",
+              "expressions": [
+                "il stupéfait",
+                "elle stupéfait",
+                "on stupéfait"
+              ]
+            }
+          ],
+          "metadata": {
+            "blocks": {
+              "C": "not_applicable",
+              "CP": "supported",
+              "F": "not_applicable",
+              "FA": "supported",
+              "G": "supported",
+              "GP": "supported",
+              "GPP": "supported",
+              "I": "not_applicable",
+              "J": "not_applicable",
+              "K": "supported",
+              "KP": "supported",
+              "P": "supported",
+              "PA": "supported",
+              "PC": "supported",
+              "PQP": "supported",
+              "S": "not_applicable",
+              "SP": "supported",
+              "SQP": "supported",
+              "T": "not_applicable",
+              "W": "supported",
+              "WP": "supported",
+              "Y": "not_applicable",
+              "YP": "supported"
+            },
+            "usage_labels": [
+              "intransitive",
+              "transitive"
+            ],
+            "auxiliaries": [
+              {
+                "lemma": "avoir",
+                "use": "transitive"
+              }
+            ],
+            "ordinary_status": "supported"
+          }
+        }
+      ]
+    },
+    "aie stupéfait": {
+      "query": "aie stupéfait",
+      "tables": [
+        {
+          "lemma": "stupéfaire",
+          "meanings": {
+            "senses": [],
+            "status": "unavailable"
+          },
+          "matchingCells": [
+            {
+              "tense": "SP",
+              "person": "1",
+              "number": "s",
+              "gender": null,
+              "form": "aie stupéfait",
+              "expressions": [
+                "j’aie stupéfait",
+                "que j’aie stupéfait"
+              ]
+            },
+            {
+              "tense": "YP",
+              "person": "2",
+              "number": "s",
+              "gender": null,
+              "form": "aie stupéfait",
+              "expressions": [
+                "aie stupéfait"
+              ]
+            }
+          ],
+          "metadata": {
+            "blocks": {
+              "C": "not_applicable",
+              "CP": "supported",
+              "F": "not_applicable",
+              "FA": "supported",
+              "G": "supported",
+              "GP": "supported",
+              "GPP": "supported",
+              "I": "not_applicable",
+              "J": "not_applicable",
+              "K": "supported",
+              "KP": "supported",
+              "P": "supported",
+              "PA": "supported",
+              "PC": "supported",
+              "PQP": "supported",
+              "S": "not_applicable",
+              "SP": "supported",
+              "SQP": "supported",
+              "T": "not_applicable",
+              "W": "supported",
+              "WP": "supported",
+              "Y": "not_applicable",
+              "YP": "supported"
+            },
+            "usage_labels": [
+              "intransitive",
+              "transitive"
+            ],
+            "auxiliaries": [
+              {
+                "lemma": "avoir",
+                "use": "transitive"
+              }
+            ],
+            "ordinary_status": "supported"
+          }
+        }
+      ]
+    },
+    "aie forclos": {
+      "query": "aie forclos",
+      "tables": [
+        {
+          "lemma": "forclore",
+          "meanings": {
+            "senses": [],
+            "status": "unavailable"
+          },
+          "matchingCells": [
+            {
+              "tense": "SP",
+              "person": "1",
+              "number": "s",
+              "gender": null,
+              "form": "aie forclos",
+              "expressions": [
+                "j’aie forclos",
+                "que j’aie forclos"
+              ]
+            },
+            {
+              "tense": "YP",
+              "person": "2",
+              "number": "s",
+              "gender": null,
+              "form": "aie forclos",
+              "expressions": [
+                "aie forclos"
+              ]
+            }
+          ],
+          "metadata": {
+            "blocks": {
+              "C": "not_applicable",
+              "CP": "supported",
+              "F": "not_applicable",
+              "FA": "supported",
+              "G": "not_applicable",
+              "GP": "not_applicable",
+              "GPP": "supported",
+              "I": "not_applicable",
+              "J": "not_applicable",
+              "K": "supported",
+              "KP": "supported",
+              "P": "not_applicable",
+              "PA": "supported",
+              "PC": "supported",
+              "PQP": "supported",
+              "S": "not_applicable",
+              "SP": "supported",
+              "SQP": "supported",
+              "T": "not_applicable",
+              "W": "supported",
+              "WP": "supported",
+              "Y": "not_applicable",
+              "YP": "supported"
+            },
+            "usage_labels": [
+              "intransitive",
+              "transitive"
+            ],
+            "auxiliaries": [
+              {
+                "lemma": "avoir",
+                "use": "intransitive; transitive"
+              }
+            ],
+            "ordinary_status": "supported"
+          }
+        }
+      ]
+    },
+    "j’abstiens": {
+      "query": "j’abstiens",
+      "tables": []
+    },
+    "j’ai parvenu": {
+      "query": "j’ai parvenu",
+      "tables": []
+    },
+    "je avons aimé": {
+      "query": "je avons aimé",
+      "tables": []
+    },
+    "sommes": {
+      "query": "sommes",
+      "tables": [
+        {
+          "lemma": "sommer",
+          "meanings": {
+            "senses": [
+              {
+                "glosses": [
+                  "admonish",
+                  "scold"
+                ],
+                "headword": "sommer",
+                "labels": [],
+                "source_entry": 7492,
+                "source_sense": 1,
+                "use": "ordinary"
+              },
+              {
+                "glosses": [
+                  "command",
+                  "order",
+                  "tell"
+                ],
+                "headword": "sommer",
+                "labels": [],
+                "source_entry": 7492,
+                "source_sense": 2,
+                "use": "ordinary"
+              }
+            ],
+            "status": "available"
+          },
+          "matchingCells": [
+            {
+              "tense": "P",
+              "person": "2",
+              "number": "s",
+              "gender": null,
+              "form": "sommes",
+              "expressions": [
+                "tu sommes"
+              ]
+            },
+            {
+              "tense": "S",
+              "person": "2",
+              "number": "s",
+              "gender": null,
+              "form": "sommes",
+              "expressions": [
+                "tu sommes",
+                "que tu sommes"
+              ]
+            }
+          ],
+          "metadata": {
+            "blocks": {
+              "C": "supported",
+              "CP": "supported",
+              "F": "supported",
+              "FA": "supported",
+              "G": "supported",
+              "GP": "supported",
+              "GPP": "supported",
+              "I": "supported",
+              "J": "supported",
+              "K": "supported",
+              "KP": "supported",
+              "P": "supported",
+              "PA": "supported",
+              "PC": "supported",
+              "PQP": "supported",
+              "S": "supported",
+              "SP": "supported",
+              "SQP": "supported",
+              "T": "supported",
+              "W": "supported",
+              "WP": "supported",
+              "Y": "supported",
+              "YP": "supported"
+            },
+            "usage_labels": [
+              "transitive"
+            ],
+            "auxiliaries": [
+              {
+                "lemma": "avoir",
+                "use": "transitive"
+              }
+            ],
+            "ordinary_status": "supported"
+          }
+        },
+        {
+          "lemma": "être",
+          "meanings": {
+            "senses": [
+              {
+                "glosses": [
+                  "be"
+                ],
+                "headword": "être",
+                "labels": [],
+                "source_entry": 8471,
+                "source_sense": 1,
+                "use": "ordinary"
+              }
+            ],
+            "status": "available"
+          },
+          "matchingCells": [
+            {
+              "tense": "P",
+              "person": "1",
+              "number": "p",
+              "gender": null,
+              "form": "sommes",
+              "expressions": [
+                "nous sommes"
+              ]
+            }
+          ],
+          "metadata": {
+            "blocks": {
+              "C": "supported",
+              "CP": "supported",
+              "F": "supported",
+              "FA": "supported",
+              "G": "supported",
+              "GP": "supported",
+              "GPP": "supported",
+              "I": "supported",
+              "J": "supported",
+              "K": "supported",
+              "KP": "supported",
+              "P": "supported",
+              "PA": "supported",
+              "PC": "supported",
+              "PQP": "supported",
+              "S": "supported",
+              "SP": "supported",
+              "SQP": "supported",
+              "T": "supported",
+              "W": "supported",
+              "WP": "supported",
+              "Y": "supported",
+              "YP": "supported"
+            },
+            "usage_labels": [
+              "intransitive",
+              "transitive"
+            ],
+            "auxiliaries": [
+              {
+                "lemma": "avoir",
+                "use": "intransitive; transitive"
+              }
+            ],
+            "ordinary_status": "supported"
+          }
+        }
+      ]
+    },
+    "suis": {
+      "query": "suis",
+      "tables": [
+        {
+          "lemma": "suivre",
+          "meanings": {
+            "senses": [
+              {
+                "glosses": [
+                  "act on",
+                  "act upon",
+                  "follow",
+                  "observe"
+                ],
+                "headword": "suivre",
+                "labels": [],
+                "source_entry": 7651,
+                "source_sense": 1,
+                "use": "ordinary"
+              }
+            ],
+            "status": "available"
+          },
+          "matchingCells": [
+            {
+              "tense": "P",
+              "person": "1",
+              "number": "s",
+              "gender": null,
+              "form": "suis",
+              "expressions": [
+                "je suis"
+              ]
+            },
+            {
+              "tense": "P",
+              "person": "2",
+              "number": "s",
+              "gender": null,
+              "form": "suis",
+              "expressions": [
+                "tu suis"
+              ]
+            },
+            {
+              "tense": "Y",
+              "person": "2",
+              "number": "s",
+              "gender": null,
+              "form": "suis",
+              "expressions": [
+                "suis"
+              ]
+            }
+          ],
+          "metadata": {
+            "blocks": {
+              "C": "supported",
+              "CP": "supported",
+              "F": "supported",
+              "FA": "supported",
+              "G": "supported",
+              "GP": "supported",
+              "GPP": "supported",
+              "I": "supported",
+              "J": "supported",
+              "K": "supported",
+              "KP": "supported",
+              "P": "supported",
+              "PA": "supported",
+              "PC": "supported",
+              "PQP": "supported",
+              "S": "supported",
+              "SP": "supported",
+              "SQP": "supported",
+              "T": "supported",
+              "W": "supported",
+              "WP": "supported",
+              "Y": "supported",
+              "YP": "supported"
+            },
+            "usage_labels": [
+              "intransitive",
+              "transitive"
+            ],
+            "auxiliaries": [
+              {
+                "lemma": "avoir",
+                "use": "intransitive; transitive"
+              }
+            ],
+            "ordinary_status": "supported"
+          }
+        },
+        {
+          "lemma": "être",
+          "meanings": {
+            "senses": [
+              {
+                "glosses": [
+                  "be"
+                ],
+                "headword": "être",
+                "labels": [],
+                "source_entry": 8471,
+                "source_sense": 1,
+                "use": "ordinary"
+              }
+            ],
+            "status": "available"
+          },
+          "matchingCells": [
+            {
+              "tense": "P",
+              "person": "1",
+              "number": "s",
+              "gender": null,
+              "form": "suis",
+              "expressions": [
+                "je suis"
+              ]
+            }
+          ],
+          "metadata": {
+            "blocks": {
+              "C": "supported",
+              "CP": "supported",
+              "F": "supported",
+              "FA": "supported",
+              "G": "supported",
+              "GP": "supported",
+              "GPP": "supported",
+              "I": "supported",
+              "J": "supported",
+              "K": "supported",
+              "KP": "supported",
+              "P": "supported",
+              "PA": "supported",
+              "PC": "supported",
+              "PQP": "supported",
+              "S": "supported",
+              "SP": "supported",
+              "SQP": "supported",
+              "T": "supported",
+              "W": "supported",
+              "WP": "supported",
+              "Y": "supported",
+              "YP": "supported"
+            },
+            "usage_labels": [
+              "intransitive",
+              "transitive"
+            ],
+            "auxiliaries": [
+              {
+                "lemma": "avoir",
+                "use": "intransitive; transitive"
+              }
+            ],
+            "ordinary_status": "supported"
+          }
+        }
+      ]
+    },
+    "paie": {
+      "query": "paie",
+      "tables": [
+        {
+          "lemma": "payer",
+          "meanings": {
+            "senses": [
+              {
+                "glosses": [
+                  "pay"
+                ],
+                "headword": "payer",
+                "labels": [],
+                "source_entry": 5932,
+                "source_sense": 1,
+                "use": "ordinary"
+              }
+            ],
+            "status": "available"
+          },
+          "matchingCells": [
+            {
+              "tense": "P",
+              "person": "1",
+              "number": "s",
+              "gender": null,
+              "form": "paie",
+              "expressions": [
+                "je paie"
+              ]
+            },
+            {
+              "tense": "P",
+              "person": "3",
+              "number": "s",
+              "gender": null,
+              "form": "paie",
+              "expressions": [
+                "il paie",
+                "elle paie",
+                "on paie"
+              ]
+            },
+            {
+              "tense": "S",
+              "person": "1",
+              "number": "s",
+              "gender": null,
+              "form": "paie",
+              "expressions": [
+                "je paie",
+                "que je paie"
+              ]
+            },
+            {
+              "tense": "S",
+              "person": "3",
+              "number": "s",
+              "gender": null,
+              "form": "paie",
+              "expressions": [
+                "il paie",
+                "qu’il paie",
+                "elle paie",
+                "qu’elle paie",
+                "on paie",
+                "qu’on paie"
+              ]
+            },
+            {
+              "tense": "Y",
+              "person": "2",
+              "number": "s",
+              "gender": null,
+              "form": "paie",
+              "expressions": [
+                "paie"
+              ]
+            }
+          ],
+          "metadata": {
+            "blocks": {
+              "C": "supported",
+              "CP": "supported",
+              "F": "supported",
+              "FA": "supported",
+              "G": "supported",
+              "GP": "supported",
+              "GPP": "supported",
+              "I": "supported",
+              "J": "supported",
+              "K": "supported",
+              "KP": "supported",
+              "P": "supported",
+              "PA": "supported",
+              "PC": "supported",
+              "PQP": "supported",
+              "S": "supported",
+              "SP": "supported",
+              "SQP": "supported",
+              "T": "supported",
+              "W": "supported",
+              "WP": "supported",
+              "Y": "supported",
+              "YP": "supported"
+            },
+            "usage_labels": [
+              "indirect_transitive",
+              "intransitive",
+              "transitive"
+            ],
+            "auxiliaries": [
+              {
+                "lemma": "avoir",
+                "use": "indirect_transitive; intransitive; transitive"
+              }
+            ],
+            "ordinary_status": "supported"
+          }
+        }
+      ]
+    },
+    "falloir": {
+      "query": "falloir",
+      "tables": [
+        {
+          "lemma": "falloir",
+          "meanings": {
+            "senses": [],
+            "status": "unavailable"
+          },
+          "matchingCells": [
+            {
+              "tense": "W",
+              "person": null,
+              "number": null,
+              "gender": null,
+              "form": "falloir",
+              "expressions": [
+                "falloir"
+              ]
+            }
+          ],
+          "metadata": {
+            "blocks": {
+              "C": "supported",
+              "C/1p": "not_applicable",
+              "C/1s": "not_applicable",
+              "C/2p": "not_applicable",
+              "C/2s": "not_applicable",
+              "C/3p": "not_applicable",
+              "CP": "supported",
+              "CP/1p": "not_applicable",
+              "CP/1s": "not_applicable",
+              "CP/2p": "not_applicable",
+              "CP/2s": "not_applicable",
+              "CP/3p": "not_applicable",
+              "F": "supported",
+              "F/1p": "not_applicable",
+              "F/1s": "not_applicable",
+              "F/2p": "not_applicable",
+              "F/2s": "not_applicable",
+              "F/3p": "not_applicable",
+              "FA": "supported",
+              "FA/1p": "not_applicable",
+              "FA/1s": "not_applicable",
+              "FA/2p": "not_applicable",
+              "FA/2s": "not_applicable",
+              "FA/3p": "not_applicable",
+              "G": "not_applicable",
+              "GP": "not_applicable",
+              "GPP": "supported",
+              "I": "supported",
+              "I/1p": "not_applicable",
+              "I/1s": "not_applicable",
+              "I/2p": "not_applicable",
+              "I/2s": "not_applicable",
+              "I/3p": "not_applicable",
+              "J": "supported",
+              "J/1p": "not_applicable",
+              "J/1s": "not_applicable",
+              "J/2p": "not_applicable",
+              "J/2s": "not_applicable",
+              "J/3p": "not_applicable",
+              "K": "supported",
+              "KP": "supported",
+              "P": "supported",
+              "P/1p": "not_applicable",
+              "P/1s": "not_applicable",
+              "P/2p": "not_applicable",
+              "P/2s": "not_applicable",
+              "P/3p": "not_applicable",
+              "PA": "supported",
+              "PA/1p": "not_applicable",
+              "PA/1s": "not_applicable",
+              "PA/2p": "not_applicable",
+              "PA/2s": "not_applicable",
+              "PA/3p": "not_applicable",
+              "PC": "supported",
+              "PC/1p": "not_applicable",
+              "PC/1s": "not_applicable",
+              "PC/2p": "not_applicable",
+              "PC/2s": "not_applicable",
+              "PC/3p": "not_applicable",
+              "PQP": "supported",
+              "PQP/1p": "not_applicable",
+              "PQP/1s": "not_applicable",
+              "PQP/2p": "not_applicable",
+              "PQP/2s": "not_applicable",
+              "PQP/3p": "not_applicable",
+              "S": "supported",
+              "S/1p": "not_applicable",
+              "S/1s": "not_applicable",
+              "S/2p": "not_applicable",
+              "S/2s": "not_applicable",
+              "S/3p": "not_applicable",
+              "SP": "supported",
+              "SP/1p": "not_applicable",
+              "SP/1s": "not_applicable",
+              "SP/2p": "not_applicable",
+              "SP/2s": "not_applicable",
+              "SP/3p": "not_applicable",
+              "SQP": "supported",
+              "SQP/1p": "not_applicable",
+              "SQP/1s": "not_applicable",
+              "SQP/2p": "not_applicable",
+              "SQP/2s": "not_applicable",
+              "SQP/3p": "not_applicable",
+              "T": "supported",
+              "T/1p": "not_applicable",
+              "T/1s": "not_applicable",
+              "T/2p": "not_applicable",
+              "T/2s": "not_applicable",
+              "T/3p": "not_applicable",
+              "W": "supported",
+              "WP": "supported",
+              "Y": "not_applicable",
+              "Y/1p": "not_applicable",
+              "Y/1s": "not_applicable",
+              "Y/2p": "not_applicable",
+              "Y/2s": "not_applicable",
+              "Y/3p": "not_applicable",
+              "YP": "not_applicable",
+              "YP/1p": "not_applicable",
+              "YP/1s": "not_applicable",
+              "YP/2p": "not_applicable",
+              "YP/2s": "not_applicable",
+              "YP/3p": "not_applicable"
+            },
+            "usage_labels": [
+              "indirect_transitive",
+              "transitive",
+              "impersonal"
+            ],
+            "auxiliaries": [
+              {
+                "lemma": "avoir",
+                "use": "indirect_transitive; transitive"
+              }
+            ],
+            "ordinary_status": "supported"
+          }
+        }
+      ]
+    },
+    "enfuir": {
+      "query": "enfuir",
+      "tables": [
+        {
+          "lemma": "enfuir",
+          "meanings": {
+            "senses": [
+              {
+                "glosses": [
+                  "abscond"
+                ],
+                "headword": "s'enfuir",
+                "labels": [],
+                "source_entry": 7142,
+                "source_sense": 1,
+                "use": "pronominal"
+              }
+            ],
+            "status": "available"
+          },
+          "matchingCells": [
+            {
+              "tense": "W",
+              "person": null,
+              "number": null,
+              "gender": null,
+              "form": "enfuir",
+              "expressions": [
+                "enfuir"
+              ]
+            }
+          ],
+          "metadata": {
+            "blocks": {
+              "C": "supported",
+              "CP": "not_applicable",
+              "F": "supported",
+              "FA": "not_applicable",
+              "G": "supported",
+              "GP": "not_applicable",
+              "GPP": "not_applicable",
+              "I": "supported",
+              "J": "supported",
+              "K": "supported",
+              "KP": "not_applicable",
+              "P": "supported",
+              "PA": "not_applicable",
+              "PC": "not_applicable",
+              "PQP": "not_applicable",
+              "S": "supported",
+              "SP": "not_applicable",
+              "SQP": "not_applicable",
+              "T": "supported",
+              "W": "supported",
+              "WP": "not_applicable",
+              "Y": "supported",
+              "YP": "not_applicable"
+            },
+            "usage_labels": [
+              "pronominal_only"
+            ],
+            "auxiliaries": [],
+            "ordinary_status": "not_applicable"
+          }
+        }
+      ]
+    },
+    "voilà": {
+      "query": "voilà",
+      "tables": [
+        {
+          "lemma": "voilà",
+          "meanings": {
+            "senses": [],
+            "status": "unavailable"
+          },
+          "matchingCells": [
+            {
+              "tense": null,
+              "person": null,
+              "number": null,
+              "gender": null,
+              "form": "voilà",
+              "expressions": [
+                "voilà"
+              ]
+            }
+          ],
+          "metadata": {
+            "blocks": {
+              "C": "not_applicable",
+              "CP": "not_applicable",
+              "F": "not_applicable",
+              "FA": "not_applicable",
+              "G": "not_applicable",
+              "GP": "not_applicable",
+              "GPP": "not_applicable",
+              "I": "not_applicable",
+              "J": "not_applicable",
+              "K": "not_applicable",
+              "KP": "not_applicable",
+              "P": "not_applicable",
+              "PA": "not_applicable",
+              "PC": "not_applicable",
+              "PQP": "not_applicable",
+              "S": "not_applicable",
+              "SP": "not_applicable",
+              "SQP": "not_applicable",
+              "T": "not_applicable",
+              "W": "not_applicable",
+              "WP": "not_applicable",
+              "Y": "not_applicable",
+              "YP": "not_applicable"
+            },
+            "usage_labels": [
+              "non_ordinary_source_identity"
+            ],
+            "auxiliaries": [],
+            "ordinary_status": "not_applicable"
+          }
+        }
+      ]
+    },
+    "SOMMES": {
+      "query": "SOMMES",
+      "tables": []
+    },
+    "' OR 1=1 --": {
+      "query": "' OR 1=1 --",
+      "tables": []
+    },
+    "se laver": {
+      "query": "se laver",
+      "tables": [
+        {
+          "lemma": "se laver",
+          "meanings": {
+            "senses": [],
+            "status": "unavailable"
+          },
+          "matchingCells": [
+            {
+              "tense": "W",
+              "person": null,
+              "number": null,
+              "gender": null,
+              "form": "se laver",
+              "expressions": [
+                "se laver"
+              ]
+            }
+          ],
+          "metadata": {
+            "blocks": {
+              "C": "supported",
+              "CP": "supported",
+              "F": "supported",
+              "FA": "supported",
+              "G": "supported",
+              "GP": "supported",
+              "GPP": "supported",
+              "I": "supported",
+              "J": "supported",
+              "K": "supported",
+              "KP": "supported",
+              "P": "supported",
+              "PA": "supported",
+              "PC": "supported",
+              "PQP": "supported",
+              "S": "supported",
+              "SP": "supported",
+              "SQP": "supported",
+              "T": "supported",
+              "W": "supported",
+              "WP": "supported",
+              "Y": "supported",
+              "YP": "supported"
+            },
+            "usage_labels": [
+              "pronominal"
+            ],
+            "auxiliaries": [
+              {
+                "lemma": "être",
+                "use": "pronominal"
+              }
+            ],
+            "ordinary_status": "supported",
+            "pronominal": {
+              "agreement": "contextual",
+              "base": "laver",
+              "persons": [
+                "1s",
+                "2s",
+                "3s",
+                "1p",
+                "2p",
+                "3p"
+              ],
+              "reciprocal": false,
+              "with_en": false
+            }
+          }
+        }
+      ]
+    },
+    "elles se sont abstenues": {
+      "query": "elles se sont abstenues",
+      "tables": [
+        {
+          "lemma": "s’abstenir",
+          "meanings": {
+            "senses": [
+              {
+                "glosses": [
+                  "abstain"
+                ],
+                "headword": "s'abstenir",
+                "labels": [],
+                "source_entry": 7107,
+                "source_sense": 1,
+                "use": "pronominal"
+              }
+            ],
+            "status": "available"
+          },
+          "matchingCells": [
+            {
+              "tense": "PC",
+              "person": "3",
+              "number": "p",
+              "gender": "f",
+              "form": "se sont abstenues",
+              "expressions": [
+                "elles se sont abstenues"
+              ]
+            }
+          ],
+          "metadata": {
+            "blocks": {
+              "C": "supported",
+              "CP": "supported",
+              "F": "supported",
+              "FA": "supported",
+              "G": "supported",
+              "GP": "supported",
+              "GPP": "supported",
+              "I": "supported",
+              "J": "supported",
+              "K": "supported",
+              "KP": "supported",
+              "P": "supported",
+              "PA": "supported",
+              "PC": "supported",
+              "PQP": "supported",
+              "S": "supported",
+              "SP": "supported",
+              "SQP": "supported",
+              "T": "supported",
+              "W": "supported",
+              "WP": "supported",
+              "Y": "supported",
+              "YP": "supported"
+            },
+            "usage_labels": [
+              "pronominal"
+            ],
+            "auxiliaries": [
+              {
+                "lemma": "être",
+                "use": "pronominal"
+              }
+            ],
+            "ordinary_status": "not_applicable",
+            "pronominal": {
+              "agreement": "subject",
+              "base": "abstenir",
+              "persons": [
+                "1s",
+                "2s",
+                "3s",
+                "1p",
+                "2p",
+                "3p"
+              ],
+              "reciprocal": false,
+              "with_en": false
+            }
+          }
+        }
+      ]
+    },
+    "elles se sont parlé": {
+      "query": "elles se sont parlé",
+      "tables": [
+        {
+          "lemma": "se parler",
+          "meanings": {
+            "senses": [
+              {
+                "glosses": [
+                  "have a conversation",
+                  "converse"
+                ],
+                "headword": "se parler",
+                "labels": [],
+                "source_entry": 7306,
+                "source_sense": 1,
+                "use": "pronominal"
+              }
+            ],
+            "status": "available"
+          },
+          "matchingCells": [
+            {
+              "tense": "PC",
+              "person": "3",
+              "number": "p",
+              "gender": null,
+              "form": "se sont parlé",
+              "expressions": [
+                "ils se sont parlé",
+                "elles se sont parlé"
+              ]
+            }
+          ],
+          "metadata": {
+            "blocks": {
+              "C": "supported",
+              "CP": "supported",
+              "F": "supported",
+              "FA": "supported",
+              "G": "supported",
+              "GP": "supported",
+              "GPP": "supported",
+              "I": "supported",
+              "J": "supported",
+              "K": "supported",
+              "KP": "supported",
+              "P": "supported",
+              "PA": "supported",
+              "PC": "supported",
+              "PQP": "supported",
+              "S": "supported",
+              "SP": "supported",
+              "SQP": "supported",
+              "T": "supported",
+              "W": "supported",
+              "WP": "supported",
+              "Y": "supported",
+              "YP": "supported"
+            },
+            "usage_labels": [
+              "pronominal"
+            ],
+            "auxiliaries": [
+              {
+                "lemma": "être",
+                "use": "pronominal"
+              }
+            ],
+            "ordinary_status": "supported",
+            "pronominal": {
+              "agreement": "invariable",
+              "base": "parler",
+              "persons": [
+                "1s",
+                "2s",
+                "3s",
+                "1p",
+                "2p",
+                "3p"
+              ],
+              "reciprocal": false,
+              "with_en": false
+            }
+          }
+        }
+      ]
+    },
+    "va-t’en": {
+      "query": "va-t’en",
+      "tables": [
+        {
+          "lemma": "s’en aller",
+          "meanings": {
+            "senses": [
+              {
+                "glosses": [
+                  "absent onself",
+                  "depart",
+                  "go away",
+                  "leave"
+                ],
+                "headword": "s'en aller",
+                "labels": [],
+                "source_entry": 7141,
+                "source_sense": 1,
+                "use": "pronominal"
+              }
+            ],
+            "status": "available"
+          },
+          "matchingCells": [
+            {
+              "tense": "Y",
+              "person": "2",
+              "number": "s",
+              "gender": null,
+              "form": "va-t’en",
+              "expressions": [
+                "va-t’en"
+              ]
+            }
+          ],
+          "metadata": {
+            "blocks": {
+              "C": "supported",
+              "CP": "supported",
+              "F": "supported",
+              "FA": "supported",
+              "G": "supported",
+              "GP": "supported",
+              "GPP": "supported",
+              "I": "supported",
+              "J": "supported",
+              "K": "supported",
+              "KP": "supported",
+              "P": "supported",
+              "PA": "supported",
+              "PC": "supported",
+              "PQP": "supported",
+              "S": "supported",
+              "SP": "supported",
+              "SQP": "supported",
+              "T": "supported",
+              "W": "supported",
+              "WP": "supported",
+              "Y": "supported",
+              "YP": "supported"
+            },
+            "usage_labels": [
+              "pronominal"
+            ],
+            "auxiliaries": [
+              {
+                "lemma": "être",
+                "use": "pronominal"
+              }
+            ],
+            "ordinary_status": "supported",
+            "pronominal": {
+              "agreement": "subject",
+              "base": "aller",
+              "persons": [
+                "1s",
+                "2s",
+                "3s",
+                "1p",
+                "2p",
+                "3p"
+              ],
+              "reciprocal": false,
+              "with_en": true
+            }
+          }
+        }
+      ]
+    }
+  },
+  "preserved": {
+    "records": 1,
+    "cards": 2,
+    "audioFiles": 3
+  },
+  "representation": "Native lookup results summarized to metadata, meanings and exact matching cells; raw output retained in the task-owned native run."
+}

@@ -1,0 +1,280 @@
+{
+  "status": "PASS",
+  "boundary": "Windows x64 rebuilt release, existing conjugation_lookup and desktop flow",
+  "raw_report": "target/issue-44/native-reviewed/report.json",
+  "restart": true,
+  "normalized_restart": true,
+  "preserved": {
+    "records": 6,
+    "cards": 12,
+    "audioFiles": 7
+  },
+  "timings": {
+    "query": "elles se sont abstenues",
+    "first_ms": 23.099999994039536,
+    "warm_ms": [
+      21.799999997019768,
+      21.100000008940697,
+      23.599999994039536,
+      21,
+      21.299999997019768
+    ],
+    "boundary": "native IPC; first invocation and subsequent invocations, no OS cache flush"
+  },
+  "resource": {
+    "directory": "target/desktop-conjugation-v6-query",
+    "format": 6,
+    "sqlite_sha256": "598d88df83952c071ca69c7c2bcb2a89ed0fe926f4a831866a2d3b6e33a89147",
+    "database_bytes": 10969088,
+    "models": 170,
+    "stems": 24307,
+    "identities": 10781,
+    "slots": 1451539,
+    "reverse_index_bytes": 733184
+  },
+  "normalized_queries": [
+    {
+      "query": " SOMMES ",
+      "source_expression": "sommes",
+      "tables": [
+        {
+          "lemma": "sommer",
+          "matches": [
+            {
+              "source_line": 475040,
+              "form": "sommes",
+              "raw_tag": "PS2s",
+              "tense": "P",
+              "person": "2",
+              "number": "s",
+              "gender": null
+            },
+            {
+              "source_line": 475040,
+              "form": "sommes",
+              "raw_tag": "PS2s",
+              "tense": "S",
+              "person": "2",
+              "number": "s",
+              "gender": null
+            }
+          ]
+        },
+        {
+          "lemma": "être",
+          "matches": [
+            {
+              "source_line": 475041,
+              "form": "sommes",
+              "raw_tag": "P1p",
+              "tense": "P",
+              "person": "1",
+              "number": "p",
+              "gender": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "query": " ABSTENUES ",
+      "source_expression": "abstenues",
+      "tables": [
+        {
+          "lemma": "abstenir",
+          "matches": [
+            {
+              "source_line": 54573,
+              "form": "abstenues",
+              "raw_tag": "Kfp",
+              "tense": "K",
+              "person": null,
+              "number": "p",
+              "gender": "f"
+            }
+          ]
+        },
+        {
+          "lemma": "s’abstenir",
+          "matches": [
+            {
+              "source_line": 54573,
+              "form": "abstenues",
+              "raw_tag": "pronominal/v1/subject",
+              "tense": "K",
+              "person": null,
+              "number": "p",
+              "gender": "f"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "query": " ÊTRE ",
+      "source_expression": "être",
+      "tables": [
+        {
+          "lemma": "être",
+          "matches": [
+            {
+              "source_line": 549184,
+              "form": "être",
+              "raw_tag": "W",
+              "tense": "W",
+              "person": null,
+              "number": null,
+              "gender": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "query": "  J'AI  ABÉLISÉ  ",
+      "source_expression": "j’ai abélisé",
+      "tables": [
+        {
+          "lemma": "abéliser",
+          "matches": [
+            {
+              "source_line": 54834,
+              "form": "ai abélisé",
+              "raw_tag": "ordinary/v1/avoir/transitive",
+              "tense": "PC",
+              "person": "1",
+              "number": "s",
+              "gender": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "query": " QUE  J'AIME ",
+      "source_expression": "que j’aime",
+      "tables": [
+        {
+          "lemma": "aimer",
+          "matches": [
+            {
+              "source_line": 64994,
+              "form": "aime",
+              "raw_tag": "PS13s",
+              "tense": "S",
+              "person": "1",
+              "number": "s",
+              "gender": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "query": " ELLES SE  SONT ABSTENUES ",
+      "source_expression": "elles se sont abstenues",
+      "tables": [
+        {
+          "lemma": "s’abstenir",
+          "matches": [
+            {
+              "source_line": 54573,
+              "form": "se sont abstenues",
+              "raw_tag": "pronominal/v1/subject",
+              "tense": "PC",
+              "person": "3",
+              "number": "p",
+              "gender": "f"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "query": " VA-T'EN ",
+      "source_expression": "va-t’en",
+      "tables": [
+        {
+          "lemma": "s’en aller",
+          "matches": [
+            {
+              "source_line": 518540,
+              "form": "va-t’en",
+              "raw_tag": "pronominal/v1/subject",
+              "tense": "Y",
+              "person": "2",
+              "number": "s",
+              "gender": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "query": " S'ABSTENIR ",
+      "source_expression": "s’abstenir",
+      "tables": [
+        {
+          "lemma": "s’abstenir",
+          "matches": [
+            {
+              "source_line": 54560,
+              "form": "s’abstenir",
+              "raw_tag": "pronominal/v1/subject",
+              "tense": "W",
+              "person": null,
+              "number": null,
+              "gender": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "query": "V’LÀ",
+      "source_expression": "v'là",
+      "tables": [
+        {
+          "lemma": "voilà",
+          "matches": [
+            {
+              "source_line": 518536,
+              "form": "v'là",
+              "raw_tag": "",
+              "tense": null,
+              "person": null,
+              "number": null,
+              "gender": null
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "negative_queries": [
+    {
+      "query": "ETE",
+      "tables": []
+    },
+    {
+      "query": " J'AI AIME ",
+      "tables": []
+    },
+    {
+      "query": " JE AVONS AIMÉ ",
+      "tables": []
+    },
+    {
+      "query": " JE SE LAVE ",
+      "tables": []
+    },
+    {
+      "query": "ELLES SE SONT ABSTENUS",
+      "tables": []
+    },
+    {
+      "query": " AIMÉ AVONS ",
+      "tables": []
+    }
+  ]
+}

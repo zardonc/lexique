@@ -1,0 +1,787 @@
+{
+  "resource_sha256": "b0f3edaf68e1b31bcfd868884a9f25d4bcccf7fa952a2e756ffcb85128002aff",
+  "policy": "Pinned positive ordinary frames and explicit morphology availability; cited positive rare/historical forms override omissions. Source-only rows stay queryable. See README.md for the scope of supported and unavailable statuses.",
+  "ordinary_verbs": 7687,
+  "excluded_ordinary": {
+    "_error": [
+      "non_ordinary_source_identity"
+    ],
+    "absenter": [
+      "pronominal_only"
+    ],
+    "abstenir": [
+      "pronominal_only"
+    ],
+    "accouder": [
+      "pronominal_only"
+    ],
+    "accroupir": [
+      "pronominal_only"
+    ],
+    "acoquiner": [
+      "pronominal_only"
+    ],
+    "adonner": [
+      "pronominal_only"
+    ],
+    "affairer": [
+      "pronominal_only"
+    ],
+    "agenouiller": [
+      "pronominal_only"
+    ],
+    "amouracher": [
+      "pronominal_only"
+    ],
+    "arroger": [
+      "pronominal_only"
+    ],
+    "arsouiller": [
+      "pronominal_only"
+    ],
+    "autocensurer": [
+      "pronominal_only"
+    ],
+    "autocentrer": [
+      "pronominal_only"
+    ],
+    "autoconsommer": [
+      "pronominal_only"
+    ],
+    "autocontrôler": [
+      "pronominal_only"
+    ],
+    "autocritiquer": [
+      "pronominal_only"
+    ],
+    "autodésigner": [
+      "pronominal_only"
+    ],
+    "autodéterminer": [
+      "pronominal_only"
+    ],
+    "autodétruire": [
+      "pronominal_only"
+    ],
+    "autofinancer": [
+      "pronominal_only"
+    ],
+    "autogouverner": [
+      "pronominal_only"
+    ],
+    "autoguider": [
+      "pronominal_only"
+    ],
+    "autogérer": [
+      "pronominal_only"
+    ],
+    "autolimiter": [
+      "pronominal_only"
+    ],
+    "autoproclamer": [
+      "pronominal_only"
+    ],
+    "autoproduire": [
+      "pronominal_only"
+    ],
+    "autopropulser": [
+      "pronominal_only"
+    ],
+    "autoreproduire": [
+      "pronominal_only"
+    ],
+    "autoréguler": [
+      "pronominal_only"
+    ],
+    "autosaisir": [
+      "pronominal_only"
+    ],
+    "avérer": [
+      "pronominal_only"
+    ],
+    "bauger": [
+      "pronominal_only"
+    ],
+    "biler": [
+      "pronominal_only"
+    ],
+    "blottir": [
+      "pronominal_only"
+    ],
+    "castagner": [
+      "pronominal_only"
+    ],
+    "chamailler": [
+      "pronominal_only"
+    ],
+    "débrailler": [
+      "pronominal_only"
+    ],
+    "déjuger": [
+      "pronominal_only"
+    ],
+    "démener": [
+      "pronominal_only"
+    ],
+    "démerder": [
+      "pronominal_only"
+    ],
+    "démoder": [
+      "pronominal_only"
+    ],
+    "dénuer": [
+      "pronominal_only"
+    ],
+    "dépatouiller": [
+      "pronominal_only"
+    ],
+    "désincarner": [
+      "pronominal_only"
+    ],
+    "désister": [
+      "pronominal_only"
+    ],
+    "désopiler": [
+      "pronominal_only"
+    ],
+    "dévergonder": [
+      "pronominal_only"
+    ],
+    "efforcer": [
+      "pronominal_only"
+    ],
+    "emparer": [
+      "pronominal_only"
+    ],
+    "empiffrer": [
+      "pronominal_only"
+    ],
+    "empresser": [
+      "pronominal_only"
+    ],
+    "enfuir": [
+      "pronominal_only"
+    ],
+    "engouer": [
+      "pronominal_only"
+    ],
+    "enkyster": [
+      "pronominal_only"
+    ],
+    "enquérir": [
+      "pronominal_only"
+    ],
+    "ensuivre": [
+      "pronominal_only"
+    ],
+    "enticher": [
+      "pronominal_only"
+    ],
+    "entraider": [
+      "pronominal_only"
+    ],
+    "entre-déchirer": [
+      "pronominal_only"
+    ],
+    "entre-dévorer": [
+      "pronominal_only"
+    ],
+    "entrebattre": [
+      "pronominal_only"
+    ],
+    "entredéchirer": [
+      "pronominal_only"
+    ],
+    "entredétruire": [
+      "pronominal_only"
+    ],
+    "entremettre": [
+      "pronominal_only"
+    ],
+    "entretuer": [
+      "pronominal_only"
+    ],
+    "envoler": [
+      "pronominal_only"
+    ],
+    "esbaudir": [
+      "pronominal_only"
+    ],
+    "esclaffer": [
+      "pronominal_only"
+    ],
+    "escrimer": [
+      "pronominal_only"
+    ],
+    "essoufler": [
+      "pronominal_only"
+    ],
+    "exclamer": [
+      "pronominal_only"
+    ],
+    "exonder": [
+      "pronominal_only"
+    ],
+    "extasier": [
+      "pronominal_only"
+    ],
+    "fier": [
+      "pronominal_only"
+    ],
+    "gendarmer": [
+      "pronominal_only"
+    ],
+    "goberger": [
+      "pronominal_only"
+    ],
+    "gominer": [
+      "pronominal_only"
+    ],
+    "grumeler": [
+      "pronominal_only"
+    ],
+    "hypertrophier": [
+      "pronominal_only"
+    ],
+    "immiscer": [
+      "pronominal_only"
+    ],
+    "ingénier": [
+      "pronominal_only"
+    ],
+    "insurger": [
+      "pronominal_only"
+    ],
+    "interpénétrer": [
+      "pronominal_only"
+    ],
+    "invétérer": [
+      "pronominal_only"
+    ],
+    "lamenter": [
+      "pronominal_only"
+    ],
+    "magner": [
+      "pronominal_only"
+    ],
+    "marrer": [
+      "pronominal_only"
+    ],
+    "morfondre": [
+      "pronominal_only"
+    ],
+    "motter": [
+      "pronominal_only"
+    ],
+    "mutiner": [
+      "pronominal_only"
+    ],
+    "méfier": [
+      "pronominal_only"
+    ],
+    "méprendre": [
+      "pronominal_only"
+    ],
+    "obstiner": [
+      "pronominal_only"
+    ],
+    "opiniâtrer": [
+      "pronominal_only"
+    ],
+    "parjurer": [
+      "pronominal_only"
+    ],
+    "pavaner": [
+      "pronominal_only"
+    ],
+    "pistacher": [
+      "pronominal_only"
+    ],
+    "pourprer": [
+      "pronominal_only"
+    ],
+    "prosterner": [
+      "pronominal_only"
+    ],
+    "prélasser": [
+      "pronominal_only"
+    ],
+    "raviser": [
+      "pronominal_only"
+    ],
+    "rebeller": [
+      "pronominal_only"
+    ],
+    "rebiffer": [
+      "pronominal_only"
+    ],
+    "renfrogner": [
+      "pronominal_only"
+    ],
+    "rengorger": [
+      "pronominal_only"
+    ],
+    "repentir": [
+      "pronominal_only"
+    ],
+    "ressourcer": [
+      "pronominal_only"
+    ],
+    "revancher": [
+      "pronominal_only"
+    ],
+    "revoici": [
+      "non_ordinary_source_identity"
+    ],
+    "revoilà": [
+      "non_ordinary_source_identity"
+    ],
+    "revéler": [
+      "pronominal_only"
+    ],
+    "réfugier": [
+      "pronominal_only"
+    ],
+    "soucier": [
+      "pronominal_only"
+    ],
+    "suicider": [
+      "pronominal_only"
+    ],
+    "tapir": [
+      "pronominal_only"
+    ],
+    "targuer": [
+      "pronominal_only"
+    ],
+    "trémousser": [
+      "pronominal_only"
+    ],
+    "uw": [
+      "non_ordinary_source_identity"
+    ],
+    "uwSe": [
+      "non_ordinary_source_identity"
+    ],
+    "vallonner": [
+      "pronominal_only"
+    ],
+    "vautrer": [
+      "pronominal_only"
+    ],
+    "voici": [
+      "non_ordinary_source_identity"
+    ],
+    "voilà": [
+      "non_ordinary_source_identity"
+    ],
+    "ébattre": [
+      "pronominal_only"
+    ],
+    "ébaudir": [
+      "pronominal_only"
+    ],
+    "ébrouer": [
+      "pronominal_only"
+    ],
+    "écrier": [
+      "pronominal_only"
+    ],
+    "écrouler": [
+      "pronominal_only"
+    ],
+    "égailler": [
+      "pronominal_only"
+    ],
+    "égosiller": [
+      "pronominal_only"
+    ],
+    "émacier": [
+      "pronominal_only"
+    ],
+    "émécher": [
+      "pronominal_only"
+    ],
+    "énamourer": [
+      "pronominal_only"
+    ],
+    "éperdre": [
+      "pronominal_only"
+    ],
+    "éprendre": [
+      "pronominal_only"
+    ],
+    "évader": [
+      "pronominal_only"
+    ],
+    "évanouir": [
+      "pronominal_only"
+    ],
+    "évertuer": [
+      "pronominal_only"
+    ]
+  },
+  "ordinary_unavailable_blocks": {
+    "abstraire": {
+      "J": "not_applicable",
+      "T": "not_applicable"
+    },
+    "accroire": {
+      "G": "not_applicable",
+      "K": "not_applicable",
+      "P": "not_applicable",
+      "I": "not_applicable",
+      "J": "not_applicable",
+      "F": "not_applicable",
+      "C": "not_applicable",
+      "S": "not_applicable",
+      "T": "not_applicable",
+      "Y": "not_applicable",
+      "PC": "not_applicable",
+      "PQP": "not_applicable",
+      "PA": "not_applicable",
+      "FA": "not_applicable",
+      "CP": "not_applicable",
+      "SP": "not_applicable",
+      "SQP": "not_applicable",
+      "YP": "not_applicable",
+      "WP": "not_applicable",
+      "KP": "not_applicable",
+      "GPP": "not_applicable",
+      "GP": "not_applicable"
+    },
+    "avenir": {
+      "Y": "not_applicable",
+      "YP": "not_applicable"
+    },
+    "braire": {
+      "J": "not_applicable",
+      "T": "not_applicable"
+    },
+    "brouillasser": {
+      "Y": "not_applicable",
+      "YP": "not_applicable"
+    },
+    "bruiner": {
+      "Y": "not_applicable",
+      "YP": "not_applicable"
+    },
+    "bruire": {
+      "T": "not_applicable",
+      "Y": "not_applicable",
+      "YP": "not_applicable"
+    },
+    "brumasser": {
+      "Y": "not_applicable",
+      "YP": "not_applicable"
+    },
+    "brumer": {
+      "Y": "not_applicable",
+      "YP": "not_applicable"
+    },
+    "chaloir": {
+      "G": "not_applicable",
+      "K": "not_applicable",
+      "I": "not_applicable",
+      "J": "not_applicable",
+      "F": "not_applicable",
+      "C": "not_applicable",
+      "S": "not_applicable",
+      "T": "not_applicable",
+      "Y": "not_applicable",
+      "PC": "not_applicable",
+      "PQP": "not_applicable",
+      "PA": "not_applicable",
+      "FA": "not_applicable",
+      "CP": "not_applicable",
+      "SP": "not_applicable",
+      "SQP": "not_applicable",
+      "YP": "not_applicable",
+      "WP": "not_applicable",
+      "KP": "not_applicable",
+      "GPP": "not_applicable",
+      "GP": "not_applicable"
+    },
+    "choir": {
+      "I": "not_applicable"
+    },
+    "clore": {
+      "I": "not_applicable",
+      "J": "not_applicable",
+      "T": "not_applicable"
+    },
+    "crachiner": {
+      "Y": "not_applicable",
+      "YP": "not_applicable"
+    },
+    "distraire": {
+      "J": "not_applicable",
+      "T": "not_applicable"
+    },
+    "déluger": {
+      "Y": "not_applicable",
+      "YP": "not_applicable"
+    },
+    "enclore": {
+      "I": "not_applicable",
+      "J": "not_applicable",
+      "T": "not_applicable"
+    },
+    "extraire": {
+      "J": "not_applicable",
+      "T": "not_applicable"
+    },
+    "falloir": {
+      "G": "not_applicable",
+      "Y": "not_applicable",
+      "YP": "not_applicable",
+      "GP": "not_applicable"
+    },
+    "floconner": {
+      "Y": "not_applicable",
+      "YP": "not_applicable"
+    },
+    "forclore": {
+      "G": "not_applicable",
+      "P": "not_applicable",
+      "I": "not_applicable",
+      "J": "not_applicable",
+      "F": "not_applicable",
+      "C": "not_applicable",
+      "S": "not_applicable",
+      "T": "not_applicable",
+      "Y": "not_applicable",
+      "GP": "not_applicable"
+    },
+    "forfaire": {
+      "I": "not_applicable",
+      "J": "not_applicable",
+      "F": "not_applicable",
+      "C": "not_applicable",
+      "S": "not_applicable",
+      "T": "not_applicable"
+    },
+    "frimasser": {
+      "Y": "not_applicable",
+      "YP": "not_applicable"
+    },
+    "férir": {
+      "G": "not_applicable",
+      "P": "not_applicable",
+      "I": "not_applicable",
+      "J": "not_applicable",
+      "F": "not_applicable",
+      "C": "not_applicable",
+      "S": "not_applicable",
+      "T": "not_applicable",
+      "Y": "not_applicable",
+      "YP": "not_applicable",
+      "GP": "not_applicable"
+    },
+    "grêler": {
+      "Y": "not_applicable",
+      "YP": "not_applicable"
+    },
+    "gésir": {
+      "K": "not_applicable",
+      "J": "not_applicable",
+      "F": "not_applicable",
+      "C": "not_applicable",
+      "S": "not_applicable",
+      "T": "not_applicable",
+      "Y": "not_applicable",
+      "PC": "not_applicable",
+      "PQP": "not_applicable",
+      "PA": "not_applicable",
+      "FA": "not_applicable",
+      "CP": "not_applicable",
+      "SP": "not_applicable",
+      "SQP": "not_applicable",
+      "YP": "not_applicable",
+      "WP": "not_applicable",
+      "KP": "not_applicable",
+      "GPP": "not_applicable"
+    },
+    "issir": {
+      "G": "not_applicable",
+      "P": "not_applicable",
+      "I": "not_applicable",
+      "J": "not_applicable",
+      "F": "not_applicable",
+      "C": "not_applicable",
+      "S": "not_applicable",
+      "T": "not_applicable",
+      "Y": "not_applicable",
+      "YP": "not_applicable",
+      "GP": "not_applicable"
+    },
+    "messeoir": {
+      "J": "not_applicable",
+      "T": "not_applicable",
+      "Y": "not_applicable",
+      "YP": "not_applicable"
+    },
+    "mouillasser": {
+      "Y": "not_applicable",
+      "YP": "not_applicable"
+    },
+    "neiger": {
+      "Y": "not_applicable",
+      "YP": "not_applicable"
+    },
+    "occire": {
+      "G": "not_applicable",
+      "P": "not_applicable",
+      "I": "not_applicable",
+      "J": "not_applicable",
+      "S": "not_applicable",
+      "T": "not_applicable",
+      "Y": "not_applicable",
+      "GP": "not_applicable"
+    },
+    "paître": {
+      "J": "not_applicable",
+      "T": "not_applicable"
+    },
+    "pleuvasser": {
+      "Y": "not_applicable",
+      "YP": "not_applicable"
+    },
+    "pleuviner": {
+      "Y": "not_applicable",
+      "YP": "not_applicable"
+    },
+    "pleuvoter": {
+      "Y": "not_applicable",
+      "YP": "not_applicable"
+    },
+    "pluviner": {
+      "Y": "not_applicable",
+      "YP": "not_applicable"
+    },
+    "pluvioter": {
+      "Y": "not_applicable",
+      "YP": "not_applicable"
+    },
+    "pouvoir": {
+      "Y": "not_applicable",
+      "YP": "not_applicable"
+    },
+    "quérir": {
+      "G": "not_applicable",
+      "K": "not_applicable",
+      "P": "not_applicable",
+      "I": "not_applicable",
+      "J": "not_applicable",
+      "F": "not_applicable",
+      "C": "not_applicable",
+      "S": "not_applicable",
+      "T": "not_applicable",
+      "Y": "not_applicable",
+      "PC": "not_applicable",
+      "PQP": "not_applicable",
+      "PA": "not_applicable",
+      "FA": "not_applicable",
+      "CP": "not_applicable",
+      "SP": "not_applicable",
+      "SQP": "not_applicable",
+      "YP": "not_applicable",
+      "WP": "not_applicable",
+      "KP": "not_applicable",
+      "GPP": "not_applicable",
+      "GP": "not_applicable"
+    },
+    "raire": {
+      "J": "not_applicable",
+      "T": "not_applicable"
+    },
+    "ravoir": {
+      "G": "not_applicable",
+      "K": "not_applicable",
+      "P": "not_applicable",
+      "I": "not_applicable",
+      "J": "not_applicable",
+      "F": "not_applicable",
+      "C": "not_applicable",
+      "S": "not_applicable",
+      "T": "not_applicable",
+      "Y": "not_applicable",
+      "PC": "not_applicable",
+      "PQP": "not_applicable",
+      "PA": "not_applicable",
+      "FA": "not_applicable",
+      "CP": "not_applicable",
+      "SP": "not_applicable",
+      "SQP": "not_applicable",
+      "YP": "not_applicable",
+      "WP": "not_applicable",
+      "KP": "not_applicable",
+      "GPP": "not_applicable",
+      "GP": "not_applicable"
+    },
+    "rentraire": {
+      "J": "not_applicable",
+      "T": "not_applicable"
+    },
+    "seoir": {
+      "J": "not_applicable",
+      "T": "not_applicable",
+      "Y": "not_applicable",
+      "YP": "not_applicable"
+    },
+    "sourdre": {
+      "K": "not_applicable",
+      "Y": "not_applicable",
+      "PC": "not_applicable",
+      "PQP": "not_applicable",
+      "PA": "not_applicable",
+      "FA": "not_applicable",
+      "CP": "not_applicable",
+      "SP": "not_applicable",
+      "SQP": "not_applicable",
+      "YP": "not_applicable",
+      "WP": "not_applicable",
+      "KP": "not_applicable",
+      "GPP": "not_applicable"
+    },
+    "soustraire": {
+      "J": "not_applicable",
+      "T": "not_applicable"
+    },
+    "souvenir": {
+      "Y": "not_applicable",
+      "YP": "not_applicable"
+    },
+    "stupéfaire": {
+      "I": "not_applicable",
+      "J": "not_applicable",
+      "F": "not_applicable",
+      "C": "not_applicable",
+      "S": "not_applicable",
+      "T": "not_applicable",
+      "Y": "not_applicable"
+    },
+    "traire": {
+      "J": "not_applicable",
+      "T": "not_applicable"
+    },
+    "vaser": {
+      "Y": "not_applicable",
+      "YP": "not_applicable"
+    },
+    "venter": {
+      "Y": "not_applicable",
+      "YP": "not_applicable"
+    },
+    "échoir": {
+      "Y": "not_applicable",
+      "YP": "not_applicable"
+    },
+    "éclore": {
+      "I": "not_applicable",
+      "J": "not_applicable",
+      "T": "not_applicable"
+    }
+  },
+  "gaps": {}
+}

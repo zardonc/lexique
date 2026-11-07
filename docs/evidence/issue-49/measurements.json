@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-07",
+  "first_launch": {
+    "milliseconds": 1068.2551999999998,
+    "boundary": "first launch of an isolated extracted package to native IPC availability; no OS cache flush"
+  },
+  "cli": {
+    "query": "elles se sont abstenues",
+    "python": "3.14.10",
+    "platform": "Windows",
+    "architecture": "AMD64",
+    "samples_ms": [
+      1790.134,
+      1348.518,
+      1377.705,
+      1328.85,
+      1580.389,
+      2811.857
+    ],
+    "first_ms": 1790.134,
+    "warm_median_ms": 1377.705,
+    "warm_max_ms": 2811.857,
+    "budget_ms": 1700,
+    "within_budget": false,
+    "boundary": "six fresh CLI processes including source validation and response serialization; no OS cache flush"
+  },
+  "native": {
+    "query": "elles se sont abstenues",
+    "first_ms": 52.400000005960464,
+    "warm_ms": [
+      64,
+      65,
+      53.20000001788139,
+      50.69999998807907,
+      48.5
+    ],
+    "boundary": "native IPC; first invocation and subsequent invocations, no OS cache flush",
+    "warm_median_ms": 53.20000001788139,
+    "warm_max_ms": 65
+  }
+}

@@ -1,0 +1,3207 @@
+{
+  "laver": {
+    "lemma": "laver",
+    "verb": {
+      "group": 1,
+      "group_status": "supported",
+      "auxiliaries": [
+        {
+          "lemma": "avoir",
+          "use": "intransitive; transitive"
+        }
+      ],
+      "auxiliary_status": "supported",
+      "ordinary_status": "supported",
+      "usage_labels": [
+        "intransitive",
+        "transitive"
+      ],
+      "source": {
+        "resource": "grammalecte-2.3.0",
+        "entry": "dVerb/laver",
+        "raw_type": "1__t_q_zz",
+        "syntax": {
+          "resource": "lefff-syntax",
+          "entries": [
+            {
+              "file": "v_new.ilex",
+              "line": 8904,
+              "entry": "laver",
+              "pattern": "v-er:std",
+              "frame": "<Suj:cln|sn,Obj:cla|seréc|sn|seréfl,Objde:en|de-sn>",
+              "macros": "cat=v",
+              "constructions": "%actif,%passif,%ppp_employé_comme_adj"
+            },
+            {
+              "file": "v_new.ilex",
+              "line": 8905,
+              "entry": "laver",
+              "pattern": "v-er:std",
+              "frame": "<Suj:cln|sn>",
+              "macros": "cat=v",
+              "constructions": "%actif"
+            },
+            {
+              "file": "v_new.ilex",
+              "line": 8906,
+              "entry": "laver",
+              "pattern": "v-er:std",
+              "frame": "<Suj:cln|sn,Obj:(cla|seréc|sn|seréfl)>",
+              "macros": "cat=v",
+              "constructions": "%actif,%passif,%ppp_employé_comme_adj,%se_moyen"
+            },
+            {
+              "file": "v.ilex",
+              "line": 3063,
+              "entry": "laver",
+              "pattern": "v-er:std",
+              "frame": "<Suj:cln|scompl|sinf|sn,Obj:(cla|sn)>",
+              "macros": "cat=v",
+              "constructions": "%actif,%passif,%ppp_employé_comme_adj"
+            }
+          ]
+        }
+      },
+      "correction": null,
+      "blocks": {
+        "G": "supported",
+        "K": "supported",
+        "P": "supported",
+        "I": "supported",
+        "J": "supported",
+        "F": "supported",
+        "C": "supported",
+        "S": "supported",
+        "T": "supported",
+        "Y": "supported",
+        "W": "supported",
+        "PC": "supported",
+        "PQP": "supported",
+        "PA": "supported",
+        "FA": "supported",
+        "CP": "supported",
+        "SP": "supported",
+        "SQP": "supported",
+        "YP": "supported",
+        "WP": "supported",
+        "KP": "supported",
+        "GPP": "supported",
+        "GP": "supported"
+      }
+    },
+    "meanings": {
+      "status": "available",
+      "senses": [
+        {
+          "source_entry": 4904,
+          "source_sense": 1,
+          "headword": "laver",
+          "use": "ordinary",
+          "labels": [],
+          "glosses": [
+            "wash"
+          ]
+        }
+      ]
+    },
+    "cells": [
+      {
+        "source_line": 322303,
+        "form": "laverions",
+        "lemma": "laver",
+        "raw_tag": "C1p",
+        "tense": "C",
+        "person": "1",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "nous laverions"
+        ],
+        "coloring": {"laverions":{"verbal":[[0,9]],"main":[0,9],"ending":[4,9]},"nous laverions":{"verbal":[[5,14]],"main":[5,14],"ending":[9,14]}}
+      },
+      {
+        "source_line": 322296,
+        "form": "laverais",
+        "lemma": "laver",
+        "raw_tag": "C12s",
+        "tense": "C",
+        "person": "1",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "je laverais"
+        ],
+        "coloring": {"laverais":{"verbal":[[0,8]],"main":[0,8],"ending":[4,8]},"je laverais":{"verbal":[[3,11]],"main":[3,11],"ending":[7,11]}}
+      },
+      {
+        "source_line": 322302,
+        "form": "laveriez",
+        "lemma": "laver",
+        "raw_tag": "C2p",
+        "tense": "C",
+        "person": "2",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "vous laveriez"
+        ],
+        "coloring": {"laveriez":{"verbal":[[0,8]],"main":[0,8],"ending":[4,8]},"vous laveriez":{"verbal":[[5,13]],"main":[5,13],"ending":[9,13]}}
+      },
+      {
+        "source_line": 322296,
+        "form": "laverais",
+        "lemma": "laver",
+        "raw_tag": "C12s",
+        "tense": "C",
+        "person": "2",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "tu laverais"
+        ],
+        "coloring": {"laverais":{"verbal":[[0,8]],"main":[0,8],"ending":[4,8]},"tu laverais":{"verbal":[[3,11]],"main":[3,11],"ending":[7,11]}}
+      },
+      {
+        "source_line": 322295,
+        "form": "laveraient",
+        "lemma": "laver",
+        "raw_tag": "C3p",
+        "tense": "C",
+        "person": "3",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "ils laveraient",
+          "elles laveraient"
+        ],
+        "coloring": {"laveraient":{"verbal":[[0,10]],"main":[0,10],"ending":[4,10]},"ils laveraient":{"verbal":[[4,14]],"main":[4,14],"ending":[8,14]},"elles laveraient":{"verbal":[[6,16]],"main":[6,16],"ending":[10,16]}}
+      },
+      {
+        "source_line": 322297,
+        "form": "laverait",
+        "lemma": "laver",
+        "raw_tag": "C3s",
+        "tense": "C",
+        "person": "3",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "il laverait",
+          "elle laverait",
+          "on laverait"
+        ],
+        "coloring": {"laverait":{"verbal":[[0,8]],"main":[0,8],"ending":[4,8]},"il laverait":{"verbal":[[3,11]],"main":[3,11],"ending":[7,11]},"elle laverait":{"verbal":[[5,13]],"main":[5,13],"ending":[9,13]},"on laverait":{"verbal":[[3,11]],"main":[3,11],"ending":[7,11]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "aurions lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "CP",
+        "person": "1",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "nous aurions lavé"
+        ],
+        "coloring": {"aurions lavé":{"verbal":[[0,12]],"main":[8,12],"ending":[11,12]},"nous aurions lavé":{"verbal":[[5,17]],"main":[13,17],"ending":[16,17]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "aurais lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "CP",
+        "person": "1",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "j’aurais lavé"
+        ],
+        "coloring": {"aurais lavé":{"verbal":[[0,11]],"main":[7,11],"ending":[10,11]},"j’aurais lavé":{"verbal":[[2,13]],"main":[9,13],"ending":[12,13]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "auriez lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "CP",
+        "person": "2",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "vous auriez lavé"
+        ],
+        "coloring": {"auriez lavé":{"verbal":[[0,11]],"main":[7,11],"ending":[10,11]},"vous auriez lavé":{"verbal":[[5,16]],"main":[12,16],"ending":[15,16]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "aurais lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "CP",
+        "person": "2",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "tu aurais lavé"
+        ],
+        "coloring": {"aurais lavé":{"verbal":[[0,11]],"main":[7,11],"ending":[10,11]},"tu aurais lavé":{"verbal":[[3,14]],"main":[10,14],"ending":[13,14]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "auraient lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "CP",
+        "person": "3",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "ils auraient lavé",
+          "elles auraient lavé"
+        ],
+        "coloring": {"auraient lavé":{"verbal":[[0,13]],"main":[9,13],"ending":[12,13]},"ils auraient lavé":{"verbal":[[4,17]],"main":[13,17],"ending":[16,17]},"elles auraient lavé":{"verbal":[[6,19]],"main":[15,19],"ending":[18,19]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "aurait lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "CP",
+        "person": "3",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "il aurait lavé",
+          "elle aurait lavé",
+          "on aurait lavé"
+        ],
+        "coloring": {"aurait lavé":{"verbal":[[0,11]],"main":[7,11],"ending":[10,11]},"il aurait lavé":{"verbal":[[3,14]],"main":[10,14],"ending":[13,14]},"elle aurait lavé":{"verbal":[[5,16]],"main":[12,16],"ending":[15,16]},"on aurait lavé":{"verbal":[[3,14]],"main":[10,14],"ending":[13,14]}}
+      },
+      {
+        "source_line": 322304,
+        "form": "laverons",
+        "lemma": "laver",
+        "raw_tag": "F1p",
+        "tense": "F",
+        "person": "1",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "nous laverons"
+        ],
+        "coloring": {"laverons":{"verbal":[[0,8]],"main":[0,8],"ending":[4,8]},"nous laverons":{"verbal":[[5,13]],"main":[5,13],"ending":[9,13]}}
+      },
+      {
+        "source_line": 322294,
+        "form": "laverai",
+        "lemma": "laver",
+        "raw_tag": "F1s",
+        "tense": "F",
+        "person": "1",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "je laverai"
+        ],
+        "coloring": {"laverai":{"verbal":[[0,7]],"main":[0,7],"ending":[4,7]},"je laverai":{"verbal":[[3,10]],"main":[3,10],"ending":[7,10]}}
+      },
+      {
+        "source_line": 322299,
+        "form": "laverez",
+        "lemma": "laver",
+        "raw_tag": "F2p",
+        "tense": "F",
+        "person": "2",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "vous laverez"
+        ],
+        "coloring": {"laverez":{"verbal":[[0,7]],"main":[0,7],"ending":[4,7]},"vous laverez":{"verbal":[[5,12]],"main":[5,12],"ending":[9,12]}}
+      },
+      {
+        "source_line": 322298,
+        "form": "laveras",
+        "lemma": "laver",
+        "raw_tag": "F2s",
+        "tense": "F",
+        "person": "2",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "tu laveras"
+        ],
+        "coloring": {"laveras":{"verbal":[[0,7]],"main":[0,7],"ending":[4,7]},"tu laveras":{"verbal":[[3,10]],"main":[3,10],"ending":[7,10]}}
+      },
+      {
+        "source_line": 322305,
+        "form": "laveront",
+        "lemma": "laver",
+        "raw_tag": "F3p",
+        "tense": "F",
+        "person": "3",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "ils laveront",
+          "elles laveront"
+        ],
+        "coloring": {"laveront":{"verbal":[[0,8]],"main":[0,8],"ending":[4,8]},"ils laveront":{"verbal":[[4,12]],"main":[4,12],"ending":[8,12]},"elles laveront":{"verbal":[[6,14]],"main":[6,14],"ending":[10,14]}}
+      },
+      {
+        "source_line": 322293,
+        "form": "lavera",
+        "lemma": "laver",
+        "raw_tag": "F3s",
+        "tense": "F",
+        "person": "3",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "il lavera",
+          "elle lavera",
+          "on lavera"
+        ],
+        "coloring": {"lavera":{"verbal":[[0,6]],"main":[0,6],"ending":[4,6]},"il lavera":{"verbal":[[3,9]],"main":[3,9],"ending":[7,9]},"elle lavera":{"verbal":[[5,11]],"main":[5,11],"ending":[9,11]},"on lavera":{"verbal":[[3,9]],"main":[3,9],"ending":[7,9]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "aurons lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "FA",
+        "person": "1",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "nous aurons lavé"
+        ],
+        "coloring": {"aurons lavé":{"verbal":[[0,11]],"main":[7,11],"ending":[10,11]},"nous aurons lavé":{"verbal":[[5,16]],"main":[12,16],"ending":[15,16]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "aurai lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "FA",
+        "person": "1",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "j’aurai lavé"
+        ],
+        "coloring": {"aurai lavé":{"verbal":[[0,10]],"main":[6,10],"ending":[9,10]},"j’aurai lavé":{"verbal":[[2,12]],"main":[8,12],"ending":[11,12]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "aurez lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "FA",
+        "person": "2",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "vous aurez lavé"
+        ],
+        "coloring": {"aurez lavé":{"verbal":[[0,10]],"main":[6,10],"ending":[9,10]},"vous aurez lavé":{"verbal":[[5,15]],"main":[11,15],"ending":[14,15]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "auras lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "FA",
+        "person": "2",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "tu auras lavé"
+        ],
+        "coloring": {"auras lavé":{"verbal":[[0,10]],"main":[6,10],"ending":[9,10]},"tu auras lavé":{"verbal":[[3,13]],"main":[9,13],"ending":[12,13]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "auront lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "FA",
+        "person": "3",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "ils auront lavé",
+          "elles auront lavé"
+        ],
+        "coloring": {"auront lavé":{"verbal":[[0,11]],"main":[7,11],"ending":[10,11]},"ils auront lavé":{"verbal":[[4,15]],"main":[11,15],"ending":[14,15]},"elles auront lavé":{"verbal":[[6,17]],"main":[13,17],"ending":[16,17]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "aura lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "FA",
+        "person": "3",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "il aura lavé",
+          "elle aura lavé",
+          "on aura lavé"
+        ],
+        "coloring": {"aura lavé":{"verbal":[[0,9]],"main":[5,9],"ending":[8,9]},"il aura lavé":{"verbal":[[3,12]],"main":[8,12],"ending":[11,12]},"elle aura lavé":{"verbal":[[5,14]],"main":[10,14],"ending":[13,14]},"on aura lavé":{"verbal":[[3,12]],"main":[8,12],"ending":[11,12]}}
+      },
+      {
+        "source_line": 322265,
+        "form": "lavant",
+        "lemma": "laver",
+        "raw_tag": "G",
+        "tense": "G",
+        "person": null,
+        "number": null,
+        "gender": null,
+        "expressions": [
+          "lavant"
+        ],
+        "coloring": {"lavant":{"verbal":[[0,6]],"main":[0,6],"ending":[3,6]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "en lavant",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/gerund",
+        "tense": "GP",
+        "person": null,
+        "number": null,
+        "gender": null,
+        "expressions": [
+          "en lavant"
+        ],
+        "coloring": {"en lavant":{"verbal":[[3,9]],"main":[3,9],"ending":[6,9]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "en ayant lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "GPP",
+        "person": null,
+        "number": null,
+        "gender": null,
+        "expressions": [
+          "en ayant lavé"
+        ],
+        "coloring": {"en ayant lavé":{"verbal":[[3,13]],"main":[9,13],"ending":[12,13]}}
+      },
+      {
+        "source_line": 322320,
+        "form": "lavions",
+        "lemma": "laver",
+        "raw_tag": "I1p",
+        "tense": "I",
+        "person": "1",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "nous lavions"
+        ],
+        "coloring": {"lavions":{"verbal":[[0,7]],"main":[0,7],"ending":[3,7]},"nous lavions":{"verbal":[[5,12]],"main":[5,12],"ending":[8,12]}}
+      },
+      {
+        "source_line": 322255,
+        "form": "lavais",
+        "lemma": "laver",
+        "raw_tag": "I12s",
+        "tense": "I",
+        "person": "1",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "je lavais"
+        ],
+        "coloring": {"lavais":{"verbal":[[0,6]],"main":[0,6],"ending":[3,6]},"je lavais":{"verbal":[[3,9]],"main":[3,9],"ending":[6,9]}}
+      },
+      {
+        "source_line": 322318,
+        "form": "laviez",
+        "lemma": "laver",
+        "raw_tag": "I2p",
+        "tense": "I",
+        "person": "2",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "vous laviez"
+        ],
+        "coloring": {"laviez":{"verbal":[[0,6]],"main":[0,6],"ending":[3,6]},"vous laviez":{"verbal":[[5,11]],"main":[5,11],"ending":[8,11]}}
+      },
+      {
+        "source_line": 322255,
+        "form": "lavais",
+        "lemma": "laver",
+        "raw_tag": "I12s",
+        "tense": "I",
+        "person": "2",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "tu lavais"
+        ],
+        "coloring": {"lavais":{"verbal":[[0,6]],"main":[0,6],"ending":[3,6]},"tu lavais":{"verbal":[[3,9]],"main":[3,9],"ending":[6,9]}}
+      },
+      {
+        "source_line": 322254,
+        "form": "lavaient",
+        "lemma": "laver",
+        "raw_tag": "I3p",
+        "tense": "I",
+        "person": "3",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "ils lavaient",
+          "elles lavaient"
+        ],
+        "coloring": {"lavaient":{"verbal":[[0,8]],"main":[0,8],"ending":[3,8]},"ils lavaient":{"verbal":[[4,12]],"main":[4,12],"ending":[7,12]},"elles lavaient":{"verbal":[[6,14]],"main":[6,14],"ending":[9,14]}}
+      },
+      {
+        "source_line": 322256,
+        "form": "lavait",
+        "lemma": "laver",
+        "raw_tag": "I3s",
+        "tense": "I",
+        "person": "3",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "il lavait",
+          "elle lavait",
+          "on lavait"
+        ],
+        "coloring": {"lavait":{"verbal":[[0,6]],"main":[0,6],"ending":[3,6]},"il lavait":{"verbal":[[3,9]],"main":[3,9],"ending":[6,9]},"elle lavait":{"verbal":[[5,11]],"main":[5,11],"ending":[8,11]},"on lavait":{"verbal":[[3,9]],"main":[3,9],"ending":[6,9]}}
+      },
+      {
+        "source_line": 322331,
+        "form": "lavâmes",
+        "lemma": "laver",
+        "raw_tag": "J1p",
+        "tense": "J",
+        "person": "1",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "nous lavâmes"
+        ],
+        "coloring": {"lavâmes":{"verbal":[[0,7]],"main":[0,7],"ending":[3,7]},"nous lavâmes":{"verbal":[[5,12]],"main":[5,12],"ending":[8,12]}}
+      },
+      {
+        "source_line": 322253,
+        "form": "lavai",
+        "lemma": "laver",
+        "raw_tag": "J1s",
+        "tense": "J",
+        "person": "1",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "je lavai"
+        ],
+        "coloring": {"lavai":{"verbal":[[0,5]],"main":[0,5],"ending":[3,5]},"je lavai":{"verbal":[[3,8]],"main":[3,8],"ending":[6,8]}}
+      },
+      {
+        "source_line": 322333,
+        "form": "lavâtes",
+        "lemma": "laver",
+        "raw_tag": "J2p",
+        "tense": "J",
+        "person": "2",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "vous lavâtes"
+        ],
+        "coloring": {"lavâtes":{"verbal":[[0,7]],"main":[0,7],"ending":[3,7]},"vous lavâtes":{"verbal":[[5,12]],"main":[5,12],"ending":[8,12]}}
+      },
+      {
+        "source_line": 322269,
+        "form": "lavas",
+        "lemma": "laver",
+        "raw_tag": "J2s",
+        "tense": "J",
+        "person": "2",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "tu lavas"
+        ],
+        "coloring": {"lavas":{"verbal":[[0,5]],"main":[0,5],"ending":[3,5]},"tu lavas":{"verbal":[[3,8]],"main":[3,8],"ending":[6,8]}}
+      },
+      {
+        "source_line": 322334,
+        "form": "lavèrent",
+        "lemma": "laver",
+        "raw_tag": "J3p",
+        "tense": "J",
+        "person": "3",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "ils lavèrent",
+          "elles lavèrent"
+        ],
+        "coloring": {"lavèrent":{"verbal":[[0,8]],"main":[0,8],"ending":[3,8]},"ils lavèrent":{"verbal":[[4,12]],"main":[4,12],"ending":[7,12]},"elles lavèrent":{"verbal":[[6,14]],"main":[6,14],"ending":[9,14]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "lava",
+        "lemma": "laver",
+        "raw_tag": "J3s",
+        "tense": "J",
+        "person": "3",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "il lava",
+          "elle lava",
+          "on lava"
+        ],
+        "coloring": {"lava":{"verbal":[[0,4]],"main":[0,4],"ending":[3,4]},"il lava":{"verbal":[[3,7]],"main":[3,7],"ending":[6,7]},"elle lava":{"verbal":[[5,9]],"main":[5,9],"ending":[8,9]},"on lava":{"verbal":[[3,7]],"main":[3,7],"ending":[6,7]}}
+      },
+      {
+        "source_line": 322342,
+        "form": "lavées",
+        "lemma": "laver",
+        "raw_tag": "Kfp",
+        "tense": "K",
+        "person": null,
+        "number": "p",
+        "gender": "f",
+        "expressions": [
+          "lavées"
+        ],
+        "coloring": {"lavées":{"verbal":[[0,6]],"main":[0,6],"ending":[3,6]}}
+      },
+      {
+        "source_line": 322344,
+        "form": "lavés",
+        "lemma": "laver",
+        "raw_tag": "Kmp",
+        "tense": "K",
+        "person": null,
+        "number": "p",
+        "gender": "m",
+        "expressions": [
+          "lavés"
+        ],
+        "coloring": {"lavés":{"verbal":[[0,5]],"main":[0,5],"ending":[3,5]}}
+      },
+      {
+        "source_line": 322339,
+        "form": "lavée",
+        "lemma": "laver",
+        "raw_tag": "Kfs",
+        "tense": "K",
+        "person": null,
+        "number": "s",
+        "gender": "f",
+        "expressions": [
+          "lavée"
+        ],
+        "coloring": {"lavée":{"verbal":[[0,5]],"main":[0,5],"ending":[3,5]}}
+      },
+      {
+        "source_line": 322336,
+        "form": "lavé",
+        "lemma": "laver",
+        "raw_tag": "Kms",
+        "tense": "K",
+        "person": null,
+        "number": "s",
+        "gender": "m",
+        "expressions": [
+          "lavé"
+        ],
+        "coloring": {"lavé":{"verbal":[[0,4]],"main":[0,4],"ending":[3,4]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "ayant lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "KP",
+        "person": null,
+        "number": null,
+        "gender": null,
+        "expressions": [
+          "ayant lavé"
+        ],
+        "coloring": {"ayant lavé":{"verbal":[[0,10]],"main":[6,10],"ending":[9,10]}}
+      },
+      {
+        "source_line": 322325,
+        "form": "lavons",
+        "lemma": "laver",
+        "raw_tag": "P1p",
+        "tense": "P",
+        "person": "1",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "nous lavons"
+        ],
+        "coloring": {"lavons":{"verbal":[[0,6]],"main":[0,6],"ending":[3,6]},"nous lavons":{"verbal":[[5,11]],"main":[5,11],"ending":[8,11]}}
+      },
+      {
+        "source_line": 322280,
+        "form": "lave",
+        "lemma": "laver",
+        "raw_tag": "PS13s",
+        "tense": "P",
+        "person": "1",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "je lave"
+        ],
+        "coloring": {"lave":{"verbal":[[0,4]],"main":[0,4],"ending":[3,4]},"je lave":{"verbal":[[3,7]],"main":[3,7],"ending":[6,7]}}
+      },
+      {
+        "source_line": 322316,
+        "form": "lavez",
+        "lemma": "laver",
+        "raw_tag": "P2p",
+        "tense": "P",
+        "person": "2",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "vous lavez"
+        ],
+        "coloring": {"lavez":{"verbal":[[0,5]],"main":[0,5],"ending":[3,5]},"vous lavez":{"verbal":[[5,10]],"main":[5,10],"ending":[8,10]}}
+      },
+      {
+        "source_line": 322307,
+        "form": "laves",
+        "lemma": "laver",
+        "raw_tag": "PS2s",
+        "tense": "P",
+        "person": "2",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "tu laves"
+        ],
+        "coloring": {"laves":{"verbal":[[0,5]],"main":[0,5],"ending":[3,5]},"tu laves":{"verbal":[[3,8]],"main":[3,8],"ending":[6,8]}}
+      },
+      {
+        "source_line": 322291,
+        "form": "lavent",
+        "lemma": "laver",
+        "raw_tag": "PS3p",
+        "tense": "P",
+        "person": "3",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "ils lavent",
+          "elles lavent"
+        ],
+        "coloring": {"lavent":{"verbal":[[0,6]],"main":[0,6],"ending":[3,6]},"ils lavent":{"verbal":[[4,10]],"main":[4,10],"ending":[7,10]},"elles lavent":{"verbal":[[6,12]],"main":[6,12],"ending":[9,12]}}
+      },
+      {
+        "source_line": 322280,
+        "form": "lave",
+        "lemma": "laver",
+        "raw_tag": "PS13s",
+        "tense": "P",
+        "person": "3",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "il lave",
+          "elle lave",
+          "on lave"
+        ],
+        "coloring": {"lave":{"verbal":[[0,4]],"main":[0,4],"ending":[3,4]},"il lave":{"verbal":[[3,7]],"main":[3,7],"ending":[6,7]},"elle lave":{"verbal":[[5,9]],"main":[5,9],"ending":[8,9]},"on lave":{"verbal":[[3,7]],"main":[3,7],"ending":[6,7]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "eûmes lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "PA",
+        "person": "1",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "nous eûmes lavé"
+        ],
+        "coloring": {"eûmes lavé":{"verbal":[[0,10]],"main":[6,10],"ending":[9,10]},"nous eûmes lavé":{"verbal":[[5,15]],"main":[11,15],"ending":[14,15]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "eus lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "PA",
+        "person": "1",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "j’eus lavé"
+        ],
+        "coloring": {"eus lavé":{"verbal":[[0,8]],"main":[4,8],"ending":[7,8]},"j’eus lavé":{"verbal":[[2,10]],"main":[6,10],"ending":[9,10]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "eûtes lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "PA",
+        "person": "2",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "vous eûtes lavé"
+        ],
+        "coloring": {"eûtes lavé":{"verbal":[[0,10]],"main":[6,10],"ending":[9,10]},"vous eûtes lavé":{"verbal":[[5,15]],"main":[11,15],"ending":[14,15]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "eus lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "PA",
+        "person": "2",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "tu eus lavé"
+        ],
+        "coloring": {"eus lavé":{"verbal":[[0,8]],"main":[4,8],"ending":[7,8]},"tu eus lavé":{"verbal":[[3,11]],"main":[7,11],"ending":[10,11]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "eurent lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "PA",
+        "person": "3",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "ils eurent lavé",
+          "elles eurent lavé"
+        ],
+        "coloring": {"eurent lavé":{"verbal":[[0,11]],"main":[7,11],"ending":[10,11]},"ils eurent lavé":{"verbal":[[4,15]],"main":[11,15],"ending":[14,15]},"elles eurent lavé":{"verbal":[[6,17]],"main":[13,17],"ending":[16,17]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "eut lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "PA",
+        "person": "3",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "il eut lavé",
+          "elle eut lavé",
+          "on eut lavé"
+        ],
+        "coloring": {"eut lavé":{"verbal":[[0,8]],"main":[4,8],"ending":[7,8]},"il eut lavé":{"verbal":[[3,11]],"main":[7,11],"ending":[10,11]},"elle eut lavé":{"verbal":[[5,13]],"main":[9,13],"ending":[12,13]},"on eut lavé":{"verbal":[[3,11]],"main":[7,11],"ending":[10,11]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "avons lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "PC",
+        "person": "1",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "nous avons lavé"
+        ],
+        "coloring": {"avons lavé":{"verbal":[[0,10]],"main":[6,10],"ending":[9,10]},"nous avons lavé":{"verbal":[[5,15]],"main":[11,15],"ending":[14,15]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "ai lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "PC",
+        "person": "1",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "j’ai lavé"
+        ],
+        "coloring": {"ai lavé":{"verbal":[[0,7]],"main":[3,7],"ending":[6,7]},"j’ai lavé":{"verbal":[[2,9]],"main":[5,9],"ending":[8,9]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "avez lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "PC",
+        "person": "2",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "vous avez lavé"
+        ],
+        "coloring": {"avez lavé":{"verbal":[[0,9]],"main":[5,9],"ending":[8,9]},"vous avez lavé":{"verbal":[[5,14]],"main":[10,14],"ending":[13,14]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "as lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "PC",
+        "person": "2",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "tu as lavé"
+        ],
+        "coloring": {"as lavé":{"verbal":[[0,7]],"main":[3,7],"ending":[6,7]},"tu as lavé":{"verbal":[[3,10]],"main":[6,10],"ending":[9,10]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "ont lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "PC",
+        "person": "3",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "ils ont lavé",
+          "elles ont lavé"
+        ],
+        "coloring": {"ont lavé":{"verbal":[[0,8]],"main":[4,8],"ending":[7,8]},"ils ont lavé":{"verbal":[[4,12]],"main":[8,12],"ending":[11,12]},"elles ont lavé":{"verbal":[[6,14]],"main":[10,14],"ending":[13,14]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "a lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "PC",
+        "person": "3",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "il a lavé",
+          "elle a lavé",
+          "on a lavé"
+        ],
+        "coloring": {"a lavé":{"verbal":[[0,6]],"main":[2,6],"ending":[5,6]},"il a lavé":{"verbal":[[3,9]],"main":[5,9],"ending":[8,9]},"elle a lavé":{"verbal":[[5,11]],"main":[7,11],"ending":[10,11]},"on a lavé":{"verbal":[[3,9]],"main":[5,9],"ending":[8,9]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "avions lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "PQP",
+        "person": "1",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "nous avions lavé"
+        ],
+        "coloring": {"avions lavé":{"verbal":[[0,11]],"main":[7,11],"ending":[10,11]},"nous avions lavé":{"verbal":[[5,16]],"main":[12,16],"ending":[15,16]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "avais lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "PQP",
+        "person": "1",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "j’avais lavé"
+        ],
+        "coloring": {"avais lavé":{"verbal":[[0,10]],"main":[6,10],"ending":[9,10]},"j’avais lavé":{"verbal":[[2,12]],"main":[8,12],"ending":[11,12]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "aviez lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "PQP",
+        "person": "2",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "vous aviez lavé"
+        ],
+        "coloring": {"aviez lavé":{"verbal":[[0,10]],"main":[6,10],"ending":[9,10]},"vous aviez lavé":{"verbal":[[5,15]],"main":[11,15],"ending":[14,15]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "avais lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "PQP",
+        "person": "2",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "tu avais lavé"
+        ],
+        "coloring": {"avais lavé":{"verbal":[[0,10]],"main":[6,10],"ending":[9,10]},"tu avais lavé":{"verbal":[[3,13]],"main":[9,13],"ending":[12,13]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "avaient lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "PQP",
+        "person": "3",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "ils avaient lavé",
+          "elles avaient lavé"
+        ],
+        "coloring": {"avaient lavé":{"verbal":[[0,12]],"main":[8,12],"ending":[11,12]},"ils avaient lavé":{"verbal":[[4,16]],"main":[12,16],"ending":[15,16]},"elles avaient lavé":{"verbal":[[6,18]],"main":[14,18],"ending":[17,18]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "avait lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "PQP",
+        "person": "3",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "il avait lavé",
+          "elle avait lavé",
+          "on avait lavé"
+        ],
+        "coloring": {"avait lavé":{"verbal":[[0,10]],"main":[6,10],"ending":[9,10]},"il avait lavé":{"verbal":[[3,13]],"main":[9,13],"ending":[12,13]},"elle avait lavé":{"verbal":[[5,15]],"main":[11,15],"ending":[14,15]},"on avait lavé":{"verbal":[[3,13]],"main":[9,13],"ending":[12,13]}}
+      },
+      {
+        "source_line": 322321,
+        "form": "lavions",
+        "lemma": "laver",
+        "raw_tag": "S1p",
+        "tense": "S",
+        "person": "1",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "nous lavions",
+          "que nous lavions"
+        ],
+        "coloring": {"lavions":{"verbal":[[0,7]],"main":[0,7],"ending":[3,7]},"nous lavions":{"verbal":[[5,12]],"main":[5,12],"ending":[8,12]},"que nous lavions":{"verbal":[[9,16]],"main":[9,16],"ending":[12,16]}}
+      },
+      {
+        "source_line": 322280,
+        "form": "lave",
+        "lemma": "laver",
+        "raw_tag": "PS13s",
+        "tense": "S",
+        "person": "1",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "je lave",
+          "que je lave"
+        ],
+        "coloring": {"lave":{"verbal":[[0,4]],"main":[0,4],"ending":[3,4]},"je lave":{"verbal":[[3,7]],"main":[3,7],"ending":[6,7]},"que je lave":{"verbal":[[7,11]],"main":[7,11],"ending":[10,11]}}
+      },
+      {
+        "source_line": 322319,
+        "form": "laviez",
+        "lemma": "laver",
+        "raw_tag": "S2p",
+        "tense": "S",
+        "person": "2",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "vous laviez",
+          "que vous laviez"
+        ],
+        "coloring": {"laviez":{"verbal":[[0,6]],"main":[0,6],"ending":[3,6]},"vous laviez":{"verbal":[[5,11]],"main":[5,11],"ending":[8,11]},"que vous laviez":{"verbal":[[9,15]],"main":[9,15],"ending":[12,15]}}
+      },
+      {
+        "source_line": 322307,
+        "form": "laves",
+        "lemma": "laver",
+        "raw_tag": "PS2s",
+        "tense": "S",
+        "person": "2",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "tu laves",
+          "que tu laves"
+        ],
+        "coloring": {"laves":{"verbal":[[0,5]],"main":[0,5],"ending":[3,5]},"tu laves":{"verbal":[[3,8]],"main":[3,8],"ending":[6,8]},"que tu laves":{"verbal":[[7,12]],"main":[7,12],"ending":[10,12]}}
+      },
+      {
+        "source_line": 322291,
+        "form": "lavent",
+        "lemma": "laver",
+        "raw_tag": "PS3p",
+        "tense": "S",
+        "person": "3",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "ils lavent",
+          "qu’ils lavent",
+          "elles lavent",
+          "qu’elles lavent"
+        ],
+        "coloring": {"lavent":{"verbal":[[0,6]],"main":[0,6],"ending":[3,6]},"ils lavent":{"verbal":[[4,10]],"main":[4,10],"ending":[7,10]},"qu’ils lavent":{"verbal":[[7,13]],"main":[7,13],"ending":[10,13]},"elles lavent":{"verbal":[[6,12]],"main":[6,12],"ending":[9,12]},"qu’elles lavent":{"verbal":[[9,15]],"main":[9,15],"ending":[12,15]}}
+      },
+      {
+        "source_line": 322280,
+        "form": "lave",
+        "lemma": "laver",
+        "raw_tag": "PS13s",
+        "tense": "S",
+        "person": "3",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "il lave",
+          "qu’il lave",
+          "elle lave",
+          "qu’elle lave",
+          "on lave",
+          "qu’on lave"
+        ],
+        "coloring": {"lave":{"verbal":[[0,4]],"main":[0,4],"ending":[3,4]},"il lave":{"verbal":[[3,7]],"main":[3,7],"ending":[6,7]},"qu’il lave":{"verbal":[[6,10]],"main":[6,10],"ending":[9,10]},"elle lave":{"verbal":[[5,9]],"main":[5,9],"ending":[8,9]},"qu’elle lave":{"verbal":[[8,12]],"main":[8,12],"ending":[11,12]},"on lave":{"verbal":[[3,7]],"main":[3,7],"ending":[6,7]},"qu’on lave":{"verbal":[[6,10]],"main":[6,10],"ending":[9,10]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "ayons lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "SP",
+        "person": "1",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "nous ayons lavé",
+          "que nous ayons lavé"
+        ],
+        "coloring": {"ayons lavé":{"verbal":[[0,10]],"main":[6,10],"ending":[9,10]},"nous ayons lavé":{"verbal":[[5,15]],"main":[11,15],"ending":[14,15]},"que nous ayons lavé":{"verbal":[[9,19]],"main":[15,19],"ending":[18,19]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "aie lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "SP",
+        "person": "1",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "j’aie lavé",
+          "que j’aie lavé"
+        ],
+        "coloring": {"aie lavé":{"verbal":[[0,8]],"main":[4,8],"ending":[7,8]},"j’aie lavé":{"verbal":[[2,10]],"main":[6,10],"ending":[9,10]},"que j’aie lavé":{"verbal":[[6,14]],"main":[10,14],"ending":[13,14]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "ayez lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "SP",
+        "person": "2",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "vous ayez lavé",
+          "que vous ayez lavé"
+        ],
+        "coloring": {"ayez lavé":{"verbal":[[0,9]],"main":[5,9],"ending":[8,9]},"vous ayez lavé":{"verbal":[[5,14]],"main":[10,14],"ending":[13,14]},"que vous ayez lavé":{"verbal":[[9,18]],"main":[14,18],"ending":[17,18]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "aies lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "SP",
+        "person": "2",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "tu aies lavé",
+          "que tu aies lavé"
+        ],
+        "coloring": {"aies lavé":{"verbal":[[0,9]],"main":[5,9],"ending":[8,9]},"tu aies lavé":{"verbal":[[3,12]],"main":[8,12],"ending":[11,12]},"que tu aies lavé":{"verbal":[[7,16]],"main":[12,16],"ending":[15,16]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "aient lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "SP",
+        "person": "3",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "ils aient lavé",
+          "qu’ils aient lavé",
+          "elles aient lavé",
+          "qu’elles aient lavé"
+        ],
+        "coloring": {"aient lavé":{"verbal":[[0,10]],"main":[6,10],"ending":[9,10]},"ils aient lavé":{"verbal":[[4,14]],"main":[10,14],"ending":[13,14]},"qu’ils aient lavé":{"verbal":[[7,17]],"main":[13,17],"ending":[16,17]},"elles aient lavé":{"verbal":[[6,16]],"main":[12,16],"ending":[15,16]},"qu’elles aient lavé":{"verbal":[[9,19]],"main":[15,19],"ending":[18,19]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "ait lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "SP",
+        "person": "3",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "il ait lavé",
+          "qu’il ait lavé",
+          "elle ait lavé",
+          "qu’elle ait lavé",
+          "on ait lavé",
+          "qu’on ait lavé"
+        ],
+        "coloring": {"ait lavé":{"verbal":[[0,8]],"main":[4,8],"ending":[7,8]},"il ait lavé":{"verbal":[[3,11]],"main":[7,11],"ending":[10,11]},"qu’il ait lavé":{"verbal":[[6,14]],"main":[10,14],"ending":[13,14]},"elle ait lavé":{"verbal":[[5,13]],"main":[9,13],"ending":[12,13]},"qu’elle ait lavé":{"verbal":[[8,16]],"main":[12,16],"ending":[15,16]},"on ait lavé":{"verbal":[[3,11]],"main":[7,11],"ending":[10,11]},"qu’on ait lavé":{"verbal":[[6,14]],"main":[10,14],"ending":[13,14]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "eussions lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "SQP",
+        "person": "1",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "nous eussions lavé",
+          "que nous eussions lavé"
+        ],
+        "coloring": {"eussions lavé":{"verbal":[[0,13]],"main":[9,13],"ending":[12,13]},"nous eussions lavé":{"verbal":[[5,18]],"main":[14,18],"ending":[17,18]},"que nous eussions lavé":{"verbal":[[9,22]],"main":[18,22],"ending":[21,22]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "eusse lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "SQP",
+        "person": "1",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "j’eusse lavé",
+          "que j’eusse lavé"
+        ],
+        "coloring": {"eusse lavé":{"verbal":[[0,10]],"main":[6,10],"ending":[9,10]},"j’eusse lavé":{"verbal":[[2,12]],"main":[8,12],"ending":[11,12]},"que j’eusse lavé":{"verbal":[[6,16]],"main":[12,16],"ending":[15,16]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "eussiez lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "SQP",
+        "person": "2",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "vous eussiez lavé",
+          "que vous eussiez lavé"
+        ],
+        "coloring": {"eussiez lavé":{"verbal":[[0,12]],"main":[8,12],"ending":[11,12]},"vous eussiez lavé":{"verbal":[[5,17]],"main":[13,17],"ending":[16,17]},"que vous eussiez lavé":{"verbal":[[9,21]],"main":[17,21],"ending":[20,21]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "eusses lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "SQP",
+        "person": "2",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "tu eusses lavé",
+          "que tu eusses lavé"
+        ],
+        "coloring": {"eusses lavé":{"verbal":[[0,11]],"main":[7,11],"ending":[10,11]},"tu eusses lavé":{"verbal":[[3,14]],"main":[10,14],"ending":[13,14]},"que tu eusses lavé":{"verbal":[[7,18]],"main":[14,18],"ending":[17,18]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "eussent lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "SQP",
+        "person": "3",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "ils eussent lavé",
+          "qu’ils eussent lavé",
+          "elles eussent lavé",
+          "qu’elles eussent lavé"
+        ],
+        "coloring": {"eussent lavé":{"verbal":[[0,12]],"main":[8,12],"ending":[11,12]},"ils eussent lavé":{"verbal":[[4,16]],"main":[12,16],"ending":[15,16]},"qu’ils eussent lavé":{"verbal":[[7,19]],"main":[15,19],"ending":[18,19]},"elles eussent lavé":{"verbal":[[6,18]],"main":[14,18],"ending":[17,18]},"qu’elles eussent lavé":{"verbal":[[9,21]],"main":[17,21],"ending":[20,21]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "eût lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "SQP",
+        "person": "3",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "il eût lavé",
+          "qu’il eût lavé",
+          "elle eût lavé",
+          "qu’elle eût lavé",
+          "on eût lavé",
+          "qu’on eût lavé"
+        ],
+        "coloring": {"eût lavé":{"verbal":[[0,8]],"main":[4,8],"ending":[7,8]},"il eût lavé":{"verbal":[[3,11]],"main":[7,11],"ending":[10,11]},"qu’il eût lavé":{"verbal":[[6,14]],"main":[10,14],"ending":[13,14]},"elle eût lavé":{"verbal":[[5,13]],"main":[9,13],"ending":[12,13]},"qu’elle eût lavé":{"verbal":[[8,16]],"main":[12,16],"ending":[15,16]},"on eût lavé":{"verbal":[[3,11]],"main":[7,11],"ending":[10,11]},"qu’on eût lavé":{"verbal":[[6,14]],"main":[10,14],"ending":[13,14]}}
+      },
+      {
+        "source_line": 322276,
+        "form": "lavassions",
+        "lemma": "laver",
+        "raw_tag": "T1p",
+        "tense": "T",
+        "person": "1",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "nous lavassions",
+          "que nous lavassions"
+        ],
+        "coloring": {"lavassions":{"verbal":[[0,10]],"main":[0,10],"ending":[3,10]},"nous lavassions":{"verbal":[[5,15]],"main":[5,15],"ending":[8,15]},"que nous lavassions":{"verbal":[[9,19]],"main":[9,19],"ending":[12,19]}}
+      },
+      {
+        "source_line": 322271,
+        "form": "lavasse",
+        "lemma": "laver",
+        "raw_tag": "T1s",
+        "tense": "T",
+        "person": "1",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "je lavasse",
+          "que je lavasse"
+        ],
+        "coloring": {"lavasse":{"verbal":[[0,7]],"main":[0,7],"ending":[3,7]},"je lavasse":{"verbal":[[3,10]],"main":[3,10],"ending":[6,10]},"que je lavasse":{"verbal":[[7,14]],"main":[7,14],"ending":[10,14]}}
+      },
+      {
+        "source_line": 322275,
+        "form": "lavassiez",
+        "lemma": "laver",
+        "raw_tag": "T2p",
+        "tense": "T",
+        "person": "2",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "vous lavassiez",
+          "que vous lavassiez"
+        ],
+        "coloring": {"lavassiez":{"verbal":[[0,9]],"main":[0,9],"ending":[3,9]},"vous lavassiez":{"verbal":[[5,14]],"main":[5,14],"ending":[8,14]},"que vous lavassiez":{"verbal":[[9,18]],"main":[9,18],"ending":[12,18]}}
+      },
+      {
+        "source_line": 322274,
+        "form": "lavasses",
+        "lemma": "laver",
+        "raw_tag": "T2s",
+        "tense": "T",
+        "person": "2",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "tu lavasses",
+          "que tu lavasses"
+        ],
+        "coloring": {"lavasses":{"verbal":[[0,8]],"main":[0,8],"ending":[3,8]},"tu lavasses":{"verbal":[[3,11]],"main":[3,11],"ending":[6,11]},"que tu lavasses":{"verbal":[[7,15]],"main":[7,15],"ending":[10,15]}}
+      },
+      {
+        "source_line": 322272,
+        "form": "lavassent",
+        "lemma": "laver",
+        "raw_tag": "T3p",
+        "tense": "T",
+        "person": "3",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "ils lavassent",
+          "qu’ils lavassent",
+          "elles lavassent",
+          "qu’elles lavassent"
+        ],
+        "coloring": {"lavassent":{"verbal":[[0,9]],"main":[0,9],"ending":[3,9]},"ils lavassent":{"verbal":[[4,13]],"main":[4,13],"ending":[7,13]},"qu’ils lavassent":{"verbal":[[7,16]],"main":[7,16],"ending":[10,16]},"elles lavassent":{"verbal":[[6,15]],"main":[6,15],"ending":[9,15]},"qu’elles lavassent":{"verbal":[[9,18]],"main":[9,18],"ending":[12,18]}}
+      },
+      {
+        "source_line": 322332,
+        "form": "lavât",
+        "lemma": "laver",
+        "raw_tag": "T3s",
+        "tense": "T",
+        "person": "3",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "il lavât",
+          "qu’il lavât",
+          "elle lavât",
+          "qu’elle lavât",
+          "on lavât",
+          "qu’on lavât"
+        ],
+        "coloring": {"lavât":{"verbal":[[0,5]],"main":[0,5],"ending":[3,5]},"il lavât":{"verbal":[[3,8]],"main":[3,8],"ending":[6,8]},"qu’il lavât":{"verbal":[[6,11]],"main":[6,11],"ending":[9,11]},"elle lavât":{"verbal":[[5,10]],"main":[5,10],"ending":[8,10]},"qu’elle lavât":{"verbal":[[8,13]],"main":[8,13],"ending":[11,13]},"on lavât":{"verbal":[[3,8]],"main":[3,8],"ending":[6,8]},"qu’on lavât":{"verbal":[[6,11]],"main":[6,11],"ending":[9,11]}}
+      },
+      {
+        "source_line": 322292,
+        "form": "laver",
+        "lemma": "laver",
+        "raw_tag": "W",
+        "tense": "W",
+        "person": null,
+        "number": null,
+        "gender": null,
+        "expressions": [
+          "laver"
+        ],
+        "coloring": {"laver":{"verbal":[[0,5]],"main":[0,5],"ending":[3,5]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "avoir lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "WP",
+        "person": null,
+        "number": null,
+        "gender": null,
+        "expressions": [
+          "avoir lavé"
+        ],
+        "coloring": {"avoir lavé":{"verbal":[[0,10]],"main":[6,10],"ending":[9,10]}}
+      },
+      {
+        "source_line": 322326,
+        "form": "lavons",
+        "lemma": "laver",
+        "raw_tag": "Y1p",
+        "tense": "Y",
+        "person": "1",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "lavons"
+        ],
+        "coloring": {"lavons":{"verbal":[[0,6]],"main":[0,6],"ending":[3,6]}}
+      },
+      {
+        "source_line": 322317,
+        "form": "lavez",
+        "lemma": "laver",
+        "raw_tag": "Y2p",
+        "tense": "Y",
+        "person": "2",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "lavez"
+        ],
+        "coloring": {"lavez":{"verbal":[[0,5]],"main":[0,5],"ending":[3,5]}}
+      },
+      {
+        "source_line": 322281,
+        "form": "lave",
+        "lemma": "laver",
+        "raw_tag": "Y2s",
+        "tense": "Y",
+        "person": "2",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "lave"
+        ],
+        "coloring": {"lave":{"verbal":[[0,4]],"main":[0,4],"ending":[3,4]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "ayons lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "YP",
+        "person": "1",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "ayons lavé"
+        ],
+        "coloring": {"ayons lavé":{"verbal":[[0,10]],"main":[6,10],"ending":[9,10]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "ayez lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "YP",
+        "person": "2",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "ayez lavé"
+        ],
+        "coloring": {"ayez lavé":{"verbal":[[0,9]],"main":[5,9],"ending":[8,9]}}
+      },
+      {
+        "source_line": 322244,
+        "form": "aie lavé",
+        "lemma": "laver",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "YP",
+        "person": "2",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "aie lavé"
+        ],
+        "coloring": {"aie lavé":{"verbal":[[0,8]],"main":[4,8],"ending":[7,8]}}
+      }
+    ]
+  },
+  "finir": {
+    "lemma": "finir",
+    "verb": {
+      "group": 2,
+      "group_status": "supported",
+      "auxiliaries": [
+        {
+          "lemma": "avoir",
+          "use": "intransitive; transitive"
+        }
+      ],
+      "auxiliary_status": "supported",
+      "ordinary_status": "supported",
+      "usage_labels": [
+        "intransitive",
+        "transitive"
+      ],
+      "source": {
+        "resource": "grammalecte-2.3.0",
+        "entry": "dVerb/finir",
+        "raw_type": "2_it____a",
+        "syntax": {
+          "resource": "lefff-syntax",
+          "entries": [
+            {
+              "file": "v_new.ilex",
+              "line": 9665,
+              "entry": "finir",
+              "pattern": "v-ir2",
+              "frame": "<Suj:cln|sn,Att:sn>",
+              "macros": "cat=v",
+              "constructions": "%actif"
+            },
+            {
+              "file": "v_new.ilex",
+              "line": 9666,
+              "entry": "finir",
+              "pattern": "v-ir2",
+              "frame": "<Suj:cln|sn,Obj:(cla|sn|de-sinf)>",
+              "macros": "@CtrlSujObj,cat=v",
+              "constructions": "%actif,%passif,%ppp_employé_comme_adj"
+            },
+            {
+              "file": "v_new.ilex",
+              "line": 9667,
+              "entry": "finir",
+              "pattern": "v-ir2",
+              "frame": "<Suj:cln|sn,Loc:loc-sn>",
+              "macros": "cat=v",
+              "constructions": "%actif"
+            },
+            {
+              "file": "v_new.ilex",
+              "line": 9668,
+              "entry": "finir",
+              "pattern": "v-ir2",
+              "frame": "<Suj:cln|sn,Obl:(sn)>",
+              "macros": "@pseudo-en,cat=v",
+              "constructions": "%actif"
+            },
+            {
+              "file": "v.ilex",
+              "line": 2435,
+              "entry": "finir",
+              "pattern": "v-ir2",
+              "frame": "<Suj:cln|scompl|sinf|sn,Obj:(cla|de-sinf|sn|par-sinf|en)>",
+              "macros": "@CtrlSujObj,cat=v",
+              "constructions": "%actif"
+            },
+            {
+              "file": "v.ilex",
+              "line": 2436,
+              "entry": "finir",
+              "pattern": "v-ir2",
+              "frame": "<Suj:cln|sn,Obl:(avec-sn)>",
+              "macros": "@pseudo-en,cat=v",
+              "constructions": "%actif"
+            }
+          ]
+        }
+      },
+      "correction": null,
+      "blocks": {
+        "G": "supported",
+        "K": "supported",
+        "P": "supported",
+        "I": "supported",
+        "J": "supported",
+        "F": "supported",
+        "C": "supported",
+        "S": "supported",
+        "T": "supported",
+        "Y": "supported",
+        "W": "supported",
+        "PC": "supported",
+        "PQP": "supported",
+        "PA": "supported",
+        "FA": "supported",
+        "CP": "supported",
+        "SP": "supported",
+        "SQP": "supported",
+        "YP": "supported",
+        "WP": "supported",
+        "KP": "supported",
+        "GPP": "supported",
+        "GP": "supported"
+      }
+    },
+    "meanings": {
+      "status": "available",
+      "senses": [
+        {
+          "source_entry": 3994,
+          "source_sense": 1,
+          "headword": "finir",
+          "use": "ordinary",
+          "labels": [],
+          "glosses": [
+            "accommodate",
+            "end",
+            "finish",
+            "terminate"
+          ]
+        },
+        {
+          "source_entry": 3994,
+          "source_sense": 2,
+          "headword": "finir",
+          "use": "ordinary",
+          "labels": [],
+          "glosses": [
+            "come to an end",
+            "end up",
+            "expire"
+          ]
+        }
+      ]
+    },
+    "cells": [
+      {
+        "source_line": 259749,
+        "form": "finirions",
+        "lemma": "finir",
+        "raw_tag": "C1p",
+        "tense": "C",
+        "person": "1",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "nous finirions"
+        ],
+        "coloring": {"finirions":{"verbal":[[0,9]],"main":[0,9],"ending":[4,9]},"nous finirions":{"verbal":[[5,14]],"main":[5,14],"ending":[9,14]}}
+      },
+      {
+        "source_line": 259743,
+        "form": "finirais",
+        "lemma": "finir",
+        "raw_tag": "C12s",
+        "tense": "C",
+        "person": "1",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "je finirais"
+        ],
+        "coloring": {"finirais":{"verbal":[[0,8]],"main":[0,8],"ending":[4,8]},"je finirais":{"verbal":[[3,11]],"main":[3,11],"ending":[7,11]}}
+      },
+      {
+        "source_line": 259748,
+        "form": "finiriez",
+        "lemma": "finir",
+        "raw_tag": "C2p",
+        "tense": "C",
+        "person": "2",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "vous finiriez"
+        ],
+        "coloring": {"finiriez":{"verbal":[[0,8]],"main":[0,8],"ending":[4,8]},"vous finiriez":{"verbal":[[5,13]],"main":[5,13],"ending":[9,13]}}
+      },
+      {
+        "source_line": 259743,
+        "form": "finirais",
+        "lemma": "finir",
+        "raw_tag": "C12s",
+        "tense": "C",
+        "person": "2",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "tu finirais"
+        ],
+        "coloring": {"finirais":{"verbal":[[0,8]],"main":[0,8],"ending":[4,8]},"tu finirais":{"verbal":[[3,11]],"main":[3,11],"ending":[7,11]}}
+      },
+      {
+        "source_line": 259742,
+        "form": "finiraient",
+        "lemma": "finir",
+        "raw_tag": "C3p",
+        "tense": "C",
+        "person": "3",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "ils finiraient",
+          "elles finiraient"
+        ],
+        "coloring": {"finiraient":{"verbal":[[0,10]],"main":[0,10],"ending":[4,10]},"ils finiraient":{"verbal":[[4,14]],"main":[4,14],"ending":[8,14]},"elles finiraient":{"verbal":[[6,16]],"main":[6,16],"ending":[10,16]}}
+      },
+      {
+        "source_line": 259744,
+        "form": "finirait",
+        "lemma": "finir",
+        "raw_tag": "C3s",
+        "tense": "C",
+        "person": "3",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "il finirait",
+          "elle finirait",
+          "on finirait"
+        ],
+        "coloring": {"finirait":{"verbal":[[0,8]],"main":[0,8],"ending":[4,8]},"il finirait":{"verbal":[[3,11]],"main":[3,11],"ending":[7,11]},"elle finirait":{"verbal":[[5,13]],"main":[5,13],"ending":[9,13]},"on finirait":{"verbal":[[3,11]],"main":[3,11],"ending":[7,11]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "aurions fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "CP",
+        "person": "1",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "nous aurions fini"
+        ],
+        "coloring": {"aurions fini":{"verbal":[[0,12]],"main":[8,12],"ending":[11,12]},"nous aurions fini":{"verbal":[[5,17]],"main":[13,17],"ending":[16,17]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "aurais fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "CP",
+        "person": "1",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "j’aurais fini"
+        ],
+        "coloring": {"aurais fini":{"verbal":[[0,11]],"main":[7,11],"ending":[10,11]},"j’aurais fini":{"verbal":[[2,13]],"main":[9,13],"ending":[12,13]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "auriez fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "CP",
+        "person": "2",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "vous auriez fini"
+        ],
+        "coloring": {"auriez fini":{"verbal":[[0,11]],"main":[7,11],"ending":[10,11]},"vous auriez fini":{"verbal":[[5,16]],"main":[12,16],"ending":[15,16]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "aurais fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "CP",
+        "person": "2",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "tu aurais fini"
+        ],
+        "coloring": {"aurais fini":{"verbal":[[0,11]],"main":[7,11],"ending":[10,11]},"tu aurais fini":{"verbal":[[3,14]],"main":[10,14],"ending":[13,14]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "auraient fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "CP",
+        "person": "3",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "ils auraient fini",
+          "elles auraient fini"
+        ],
+        "coloring": {"auraient fini":{"verbal":[[0,13]],"main":[9,13],"ending":[12,13]},"ils auraient fini":{"verbal":[[4,17]],"main":[13,17],"ending":[16,17]},"elles auraient fini":{"verbal":[[6,19]],"main":[15,19],"ending":[18,19]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "aurait fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "CP",
+        "person": "3",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "il aurait fini",
+          "elle aurait fini",
+          "on aurait fini"
+        ],
+        "coloring": {"aurait fini":{"verbal":[[0,11]],"main":[7,11],"ending":[10,11]},"il aurait fini":{"verbal":[[3,14]],"main":[10,14],"ending":[13,14]},"elle aurait fini":{"verbal":[[5,16]],"main":[12,16],"ending":[15,16]},"on aurait fini":{"verbal":[[3,14]],"main":[10,14],"ending":[13,14]}}
+      },
+      {
+        "source_line": 259750,
+        "form": "finirons",
+        "lemma": "finir",
+        "raw_tag": "F1p",
+        "tense": "F",
+        "person": "1",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "nous finirons"
+        ],
+        "coloring": {"finirons":{"verbal":[[0,8]],"main":[0,8],"ending":[4,8]},"nous finirons":{"verbal":[[5,13]],"main":[5,13],"ending":[9,13]}}
+      },
+      {
+        "source_line": 259741,
+        "form": "finirai",
+        "lemma": "finir",
+        "raw_tag": "F1s",
+        "tense": "F",
+        "person": "1",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "je finirai"
+        ],
+        "coloring": {"finirai":{"verbal":[[0,7]],"main":[0,7],"ending":[4,7]},"je finirai":{"verbal":[[3,10]],"main":[3,10],"ending":[7,10]}}
+      },
+      {
+        "source_line": 259747,
+        "form": "finirez",
+        "lemma": "finir",
+        "raw_tag": "F2p",
+        "tense": "F",
+        "person": "2",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "vous finirez"
+        ],
+        "coloring": {"finirez":{"verbal":[[0,7]],"main":[0,7],"ending":[4,7]},"vous finirez":{"verbal":[[5,12]],"main":[5,12],"ending":[9,12]}}
+      },
+      {
+        "source_line": 259745,
+        "form": "finiras",
+        "lemma": "finir",
+        "raw_tag": "F2s",
+        "tense": "F",
+        "person": "2",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "tu finiras"
+        ],
+        "coloring": {"finiras":{"verbal":[[0,7]],"main":[0,7],"ending":[4,7]},"tu finiras":{"verbal":[[3,10]],"main":[3,10],"ending":[7,10]}}
+      },
+      {
+        "source_line": 259751,
+        "form": "finiront",
+        "lemma": "finir",
+        "raw_tag": "F3p",
+        "tense": "F",
+        "person": "3",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "ils finiront",
+          "elles finiront"
+        ],
+        "coloring": {"finiront":{"verbal":[[0,8]],"main":[0,8],"ending":[4,8]},"ils finiront":{"verbal":[[4,12]],"main":[4,12],"ending":[8,12]},"elles finiront":{"verbal":[[6,14]],"main":[6,14],"ending":[10,14]}}
+      },
+      {
+        "source_line": 259740,
+        "form": "finira",
+        "lemma": "finir",
+        "raw_tag": "F3s",
+        "tense": "F",
+        "person": "3",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "il finira",
+          "elle finira",
+          "on finira"
+        ],
+        "coloring": {"finira":{"verbal":[[0,6]],"main":[0,6],"ending":[4,6]},"il finira":{"verbal":[[3,9]],"main":[3,9],"ending":[7,9]},"elle finira":{"verbal":[[5,11]],"main":[5,11],"ending":[9,11]},"on finira":{"verbal":[[3,9]],"main":[3,9],"ending":[7,9]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "aurons fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "FA",
+        "person": "1",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "nous aurons fini"
+        ],
+        "coloring": {"aurons fini":{"verbal":[[0,11]],"main":[7,11],"ending":[10,11]},"nous aurons fini":{"verbal":[[5,16]],"main":[12,16],"ending":[15,16]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "aurai fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "FA",
+        "person": "1",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "j’aurai fini"
+        ],
+        "coloring": {"aurai fini":{"verbal":[[0,10]],"main":[6,10],"ending":[9,10]},"j’aurai fini":{"verbal":[[2,12]],"main":[8,12],"ending":[11,12]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "aurez fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "FA",
+        "person": "2",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "vous aurez fini"
+        ],
+        "coloring": {"aurez fini":{"verbal":[[0,10]],"main":[6,10],"ending":[9,10]},"vous aurez fini":{"verbal":[[5,15]],"main":[11,15],"ending":[14,15]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "auras fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "FA",
+        "person": "2",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "tu auras fini"
+        ],
+        "coloring": {"auras fini":{"verbal":[[0,10]],"main":[6,10],"ending":[9,10]},"tu auras fini":{"verbal":[[3,13]],"main":[9,13],"ending":[12,13]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "auront fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "FA",
+        "person": "3",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "ils auront fini",
+          "elles auront fini"
+        ],
+        "coloring": {"auront fini":{"verbal":[[0,11]],"main":[7,11],"ending":[10,11]},"ils auront fini":{"verbal":[[4,15]],"main":[11,15],"ending":[14,15]},"elles auront fini":{"verbal":[[6,17]],"main":[13,17],"ending":[16,17]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "aura fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "FA",
+        "person": "3",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "il aura fini",
+          "elle aura fini",
+          "on aura fini"
+        ],
+        "coloring": {"aura fini":{"verbal":[[0,9]],"main":[5,9],"ending":[8,9]},"il aura fini":{"verbal":[[3,12]],"main":[8,12],"ending":[11,12]},"elle aura fini":{"verbal":[[5,14]],"main":[10,14],"ending":[13,14]},"on aura fini":{"verbal":[[3,12]],"main":[8,12],"ending":[11,12]}}
+      },
+      {
+        "source_line": 259766,
+        "form": "finissant",
+        "lemma": "finir",
+        "raw_tag": "G",
+        "tense": "G",
+        "person": null,
+        "number": null,
+        "gender": null,
+        "expressions": [
+          "finissant"
+        ],
+        "coloring": {"finissant":{"verbal":[[0,9]],"main":[0,9],"ending":[6,9]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "en finissant",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/gerund",
+        "tense": "GP",
+        "person": null,
+        "number": null,
+        "gender": null,
+        "expressions": [
+          "en finissant"
+        ],
+        "coloring": {"en finissant":{"verbal":[[3,12]],"main":[3,12],"ending":[9,12]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "en ayant fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "GPP",
+        "person": null,
+        "number": null,
+        "gender": null,
+        "expressions": [
+          "en ayant fini"
+        ],
+        "coloring": {"en ayant fini":{"verbal":[[3,13]],"main":[9,13],"ending":[12,13]}}
+      },
+      {
+        "source_line": 259789,
+        "form": "finissions",
+        "lemma": "finir",
+        "raw_tag": "I1p",
+        "tense": "I",
+        "person": "1",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "nous finissions"
+        ],
+        "coloring": {"finissions":{"verbal":[[0,10]],"main":[0,10],"ending":[6,10]},"nous finissions":{"verbal":[[5,15]],"main":[5,15],"ending":[11,15]}}
+      },
+      {
+        "source_line": 259762,
+        "form": "finissais",
+        "lemma": "finir",
+        "raw_tag": "I12s",
+        "tense": "I",
+        "person": "1",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "je finissais"
+        ],
+        "coloring": {"finissais":{"verbal":[[0,9]],"main":[0,9],"ending":[6,9]},"je finissais":{"verbal":[[3,12]],"main":[3,12],"ending":[9,12]}}
+      },
+      {
+        "source_line": 259786,
+        "form": "finissiez",
+        "lemma": "finir",
+        "raw_tag": "I2p",
+        "tense": "I",
+        "person": "2",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "vous finissiez"
+        ],
+        "coloring": {"finissiez":{"verbal":[[0,9]],"main":[0,9],"ending":[6,9]},"vous finissiez":{"verbal":[[5,14]],"main":[5,14],"ending":[11,14]}}
+      },
+      {
+        "source_line": 259762,
+        "form": "finissais",
+        "lemma": "finir",
+        "raw_tag": "I12s",
+        "tense": "I",
+        "person": "2",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "tu finissais"
+        ],
+        "coloring": {"finissais":{"verbal":[[0,9]],"main":[0,9],"ending":[6,9]},"tu finissais":{"verbal":[[3,12]],"main":[3,12],"ending":[9,12]}}
+      },
+      {
+        "source_line": 259761,
+        "form": "finissaient",
+        "lemma": "finir",
+        "raw_tag": "I3p",
+        "tense": "I",
+        "person": "3",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "ils finissaient",
+          "elles finissaient"
+        ],
+        "coloring": {"finissaient":{"verbal":[[0,11]],"main":[0,11],"ending":[6,11]},"ils finissaient":{"verbal":[[4,15]],"main":[4,15],"ending":[10,15]},"elles finissaient":{"verbal":[[6,17]],"main":[6,17],"ending":[12,17]}}
+      },
+      {
+        "source_line": 259763,
+        "form": "finissait",
+        "lemma": "finir",
+        "raw_tag": "I3s",
+        "tense": "I",
+        "person": "3",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "il finissait",
+          "elle finissait",
+          "on finissait"
+        ],
+        "coloring": {"finissait":{"verbal":[[0,9]],"main":[0,9],"ending":[6,9]},"il finissait":{"verbal":[[3,12]],"main":[3,12],"ending":[9,12]},"elle finissait":{"verbal":[[5,14]],"main":[5,14],"ending":[11,14]},"on finissait":{"verbal":[[3,12]],"main":[3,12],"ending":[9,12]}}
+      },
+      {
+        "source_line": 259876,
+        "form": "finîmes",
+        "lemma": "finir",
+        "raw_tag": "J1p",
+        "tense": "J",
+        "person": "1",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "nous finîmes"
+        ],
+        "coloring": {"finîmes":{"verbal":[[0,7]],"main":[0,7],"ending":[3,7]},"nous finîmes":{"verbal":[[5,12]],"main":[5,12],"ending":[8,12]}}
+      },
+      {
+        "source_line": 259756,
+        "form": "finis",
+        "lemma": "finir",
+        "raw_tag": "PJ12s",
+        "tense": "J",
+        "person": "1",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "je finis"
+        ],
+        "coloring": {"finis":{"verbal":[[0,5]],"main":[0,5],"ending":[3,5]},"je finis":{"verbal":[[3,8]],"main":[3,8],"ending":[6,8]}}
+      },
+      {
+        "source_line": 259878,
+        "form": "finîtes",
+        "lemma": "finir",
+        "raw_tag": "J2p",
+        "tense": "J",
+        "person": "2",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "vous finîtes"
+        ],
+        "coloring": {"finîtes":{"verbal":[[0,7]],"main":[0,7],"ending":[3,7]},"vous finîtes":{"verbal":[[5,12]],"main":[5,12],"ending":[8,12]}}
+      },
+      {
+        "source_line": 259756,
+        "form": "finis",
+        "lemma": "finir",
+        "raw_tag": "PJ12s",
+        "tense": "J",
+        "person": "2",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "tu finis"
+        ],
+        "coloring": {"finis":{"verbal":[[0,5]],"main":[0,5],"ending":[3,5]},"tu finis":{"verbal":[[3,8]],"main":[3,8],"ending":[6,8]}}
+      },
+      {
+        "source_line": 259746,
+        "form": "finirent",
+        "lemma": "finir",
+        "raw_tag": "J3p",
+        "tense": "J",
+        "person": "3",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "ils finirent",
+          "elles finirent"
+        ],
+        "coloring": {"finirent":{"verbal":[[0,8]],"main":[0,8],"ending":[3,8]},"ils finirent":{"verbal":[[4,12]],"main":[4,12],"ending":[7,12]},"elles finirent":{"verbal":[[6,14]],"main":[6,14],"ending":[9,14]}}
+      },
+      {
+        "source_line": 259796,
+        "form": "finit",
+        "lemma": "finir",
+        "raw_tag": "J3s",
+        "tense": "J",
+        "person": "3",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "il finit",
+          "elle finit",
+          "on finit"
+        ],
+        "coloring": {"finit":{"verbal":[[0,5]],"main":[0,5],"ending":[3,5]},"il finit":{"verbal":[[3,8]],"main":[3,8],"ending":[6,8]},"elle finit":{"verbal":[[5,10]],"main":[5,10],"ending":[8,10]},"on finit":{"verbal":[[3,8]],"main":[3,8],"ending":[6,8]}}
+      },
+      {
+        "source_line": 259738,
+        "form": "finies",
+        "lemma": "finir",
+        "raw_tag": "Kfp",
+        "tense": "K",
+        "person": null,
+        "number": "p",
+        "gender": "f",
+        "expressions": [
+          "finies"
+        ],
+        "coloring": {"finies":{"verbal":[[0,6]],"main":[0,6],"ending":[3,6]}}
+      },
+      {
+        "source_line": 259755,
+        "form": "finis",
+        "lemma": "finir",
+        "raw_tag": "Kmp",
+        "tense": "K",
+        "person": null,
+        "number": "p",
+        "gender": "m",
+        "expressions": [
+          "finis"
+        ],
+        "coloring": {"finis":{"verbal":[[0,5]],"main":[0,5],"ending":[3,5]}}
+      },
+      {
+        "source_line": 259735,
+        "form": "finie",
+        "lemma": "finir",
+        "raw_tag": "Kfs",
+        "tense": "K",
+        "person": null,
+        "number": "s",
+        "gender": "f",
+        "expressions": [
+          "finie"
+        ],
+        "coloring": {"finie":{"verbal":[[0,5]],"main":[0,5],"ending":[3,5]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "fini",
+        "lemma": "finir",
+        "raw_tag": "Kms",
+        "tense": "K",
+        "person": null,
+        "number": "s",
+        "gender": "m",
+        "expressions": [
+          "fini"
+        ],
+        "coloring": {"fini":{"verbal":[[0,4]],"main":[0,4],"ending":[3,4]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "ayant fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "KP",
+        "person": null,
+        "number": null,
+        "gender": null,
+        "expressions": [
+          "ayant fini"
+        ],
+        "coloring": {"ayant fini":{"verbal":[[0,10]],"main":[6,10],"ending":[9,10]}}
+      },
+      {
+        "source_line": 259792,
+        "form": "finissons",
+        "lemma": "finir",
+        "raw_tag": "P1p",
+        "tense": "P",
+        "person": "1",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "nous finissons"
+        ],
+        "coloring": {"finissons":{"verbal":[[0,9]],"main":[0,9],"ending":[6,9]},"nous finissons":{"verbal":[[5,14]],"main":[5,14],"ending":[11,14]}}
+      },
+      {
+        "source_line": 259756,
+        "form": "finis",
+        "lemma": "finir",
+        "raw_tag": "PJ12s",
+        "tense": "P",
+        "person": "1",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "je finis"
+        ],
+        "coloring": {"finis":{"verbal":[[0,5]],"main":[0,5],"ending":[4,5]},"je finis":{"verbal":[[3,8]],"main":[3,8],"ending":[7,8]}}
+      },
+      {
+        "source_line": 259784,
+        "form": "finissez",
+        "lemma": "finir",
+        "raw_tag": "P2p",
+        "tense": "P",
+        "person": "2",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "vous finissez"
+        ],
+        "coloring": {"finissez":{"verbal":[[0,8]],"main":[0,8],"ending":[6,8]},"vous finissez":{"verbal":[[5,13]],"main":[5,13],"ending":[11,13]}}
+      },
+      {
+        "source_line": 259756,
+        "form": "finis",
+        "lemma": "finir",
+        "raw_tag": "PJ12s",
+        "tense": "P",
+        "person": "2",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "tu finis"
+        ],
+        "coloring": {"finis":{"verbal":[[0,5]],"main":[0,5],"ending":[4,5]},"tu finis":{"verbal":[[3,8]],"main":[3,8],"ending":[7,8]}}
+      },
+      {
+        "source_line": 259777,
+        "form": "finissent",
+        "lemma": "finir",
+        "raw_tag": "PS3p",
+        "tense": "P",
+        "person": "3",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "ils finissent",
+          "elles finissent"
+        ],
+        "coloring": {"finissent":{"verbal":[[0,9]],"main":[0,9],"ending":[6,9]},"ils finissent":{"verbal":[[4,13]],"main":[4,13],"ending":[10,13]},"elles finissent":{"verbal":[[6,15]],"main":[6,15],"ending":[12,15]}}
+      },
+      {
+        "source_line": 259797,
+        "form": "finit",
+        "lemma": "finir",
+        "raw_tag": "P3s",
+        "tense": "P",
+        "person": "3",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "il finit",
+          "elle finit",
+          "on finit"
+        ],
+        "coloring": {"finit":{"verbal":[[0,5]],"main":[0,5],"ending":[4,5]},"il finit":{"verbal":[[3,8]],"main":[3,8],"ending":[7,8]},"elle finit":{"verbal":[[5,10]],"main":[5,10],"ending":[9,10]},"on finit":{"verbal":[[3,8]],"main":[3,8],"ending":[7,8]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "eûmes fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "PA",
+        "person": "1",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "nous eûmes fini"
+        ],
+        "coloring": {"eûmes fini":{"verbal":[[0,10]],"main":[6,10],"ending":[9,10]},"nous eûmes fini":{"verbal":[[5,15]],"main":[11,15],"ending":[14,15]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "eus fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "PA",
+        "person": "1",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "j’eus fini"
+        ],
+        "coloring": {"eus fini":{"verbal":[[0,8]],"main":[4,8],"ending":[7,8]},"j’eus fini":{"verbal":[[2,10]],"main":[6,10],"ending":[9,10]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "eûtes fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "PA",
+        "person": "2",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "vous eûtes fini"
+        ],
+        "coloring": {"eûtes fini":{"verbal":[[0,10]],"main":[6,10],"ending":[9,10]},"vous eûtes fini":{"verbal":[[5,15]],"main":[11,15],"ending":[14,15]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "eus fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "PA",
+        "person": "2",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "tu eus fini"
+        ],
+        "coloring": {"eus fini":{"verbal":[[0,8]],"main":[4,8],"ending":[7,8]},"tu eus fini":{"verbal":[[3,11]],"main":[7,11],"ending":[10,11]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "eurent fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "PA",
+        "person": "3",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "ils eurent fini",
+          "elles eurent fini"
+        ],
+        "coloring": {"eurent fini":{"verbal":[[0,11]],"main":[7,11],"ending":[10,11]},"ils eurent fini":{"verbal":[[4,15]],"main":[11,15],"ending":[14,15]},"elles eurent fini":{"verbal":[[6,17]],"main":[13,17],"ending":[16,17]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "eut fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "PA",
+        "person": "3",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "il eut fini",
+          "elle eut fini",
+          "on eut fini"
+        ],
+        "coloring": {"eut fini":{"verbal":[[0,8]],"main":[4,8],"ending":[7,8]},"il eut fini":{"verbal":[[3,11]],"main":[7,11],"ending":[10,11]},"elle eut fini":{"verbal":[[5,13]],"main":[9,13],"ending":[12,13]},"on eut fini":{"verbal":[[3,11]],"main":[7,11],"ending":[10,11]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "avons fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "PC",
+        "person": "1",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "nous avons fini"
+        ],
+        "coloring": {"avons fini":{"verbal":[[0,10]],"main":[6,10],"ending":[9,10]},"nous avons fini":{"verbal":[[5,15]],"main":[11,15],"ending":[14,15]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "ai fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "PC",
+        "person": "1",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "j’ai fini"
+        ],
+        "coloring": {"ai fini":{"verbal":[[0,7]],"main":[3,7],"ending":[6,7]},"j’ai fini":{"verbal":[[2,9]],"main":[5,9],"ending":[8,9]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "avez fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "PC",
+        "person": "2",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "vous avez fini"
+        ],
+        "coloring": {"avez fini":{"verbal":[[0,9]],"main":[5,9],"ending":[8,9]},"vous avez fini":{"verbal":[[5,14]],"main":[10,14],"ending":[13,14]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "as fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "PC",
+        "person": "2",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "tu as fini"
+        ],
+        "coloring": {"as fini":{"verbal":[[0,7]],"main":[3,7],"ending":[6,7]},"tu as fini":{"verbal":[[3,10]],"main":[6,10],"ending":[9,10]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "ont fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "PC",
+        "person": "3",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "ils ont fini",
+          "elles ont fini"
+        ],
+        "coloring": {"ont fini":{"verbal":[[0,8]],"main":[4,8],"ending":[7,8]},"ils ont fini":{"verbal":[[4,12]],"main":[8,12],"ending":[11,12]},"elles ont fini":{"verbal":[[6,14]],"main":[10,14],"ending":[13,14]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "a fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "PC",
+        "person": "3",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "il a fini",
+          "elle a fini",
+          "on a fini"
+        ],
+        "coloring": {"a fini":{"verbal":[[0,6]],"main":[2,6],"ending":[5,6]},"il a fini":{"verbal":[[3,9]],"main":[5,9],"ending":[8,9]},"elle a fini":{"verbal":[[5,11]],"main":[7,11],"ending":[10,11]},"on a fini":{"verbal":[[3,9]],"main":[5,9],"ending":[8,9]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "avions fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "PQP",
+        "person": "1",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "nous avions fini"
+        ],
+        "coloring": {"avions fini":{"verbal":[[0,11]],"main":[7,11],"ending":[10,11]},"nous avions fini":{"verbal":[[5,16]],"main":[12,16],"ending":[15,16]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "avais fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "PQP",
+        "person": "1",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "j’avais fini"
+        ],
+        "coloring": {"avais fini":{"verbal":[[0,10]],"main":[6,10],"ending":[9,10]},"j’avais fini":{"verbal":[[2,12]],"main":[8,12],"ending":[11,12]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "aviez fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "PQP",
+        "person": "2",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "vous aviez fini"
+        ],
+        "coloring": {"aviez fini":{"verbal":[[0,10]],"main":[6,10],"ending":[9,10]},"vous aviez fini":{"verbal":[[5,15]],"main":[11,15],"ending":[14,15]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "avais fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "PQP",
+        "person": "2",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "tu avais fini"
+        ],
+        "coloring": {"avais fini":{"verbal":[[0,10]],"main":[6,10],"ending":[9,10]},"tu avais fini":{"verbal":[[3,13]],"main":[9,13],"ending":[12,13]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "avaient fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "PQP",
+        "person": "3",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "ils avaient fini",
+          "elles avaient fini"
+        ],
+        "coloring": {"avaient fini":{"verbal":[[0,12]],"main":[8,12],"ending":[11,12]},"ils avaient fini":{"verbal":[[4,16]],"main":[12,16],"ending":[15,16]},"elles avaient fini":{"verbal":[[6,18]],"main":[14,18],"ending":[17,18]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "avait fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "PQP",
+        "person": "3",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "il avait fini",
+          "elle avait fini",
+          "on avait fini"
+        ],
+        "coloring": {"avait fini":{"verbal":[[0,10]],"main":[6,10],"ending":[9,10]},"il avait fini":{"verbal":[[3,13]],"main":[9,13],"ending":[12,13]},"elle avait fini":{"verbal":[[5,15]],"main":[11,15],"ending":[14,15]},"on avait fini":{"verbal":[[3,13]],"main":[9,13],"ending":[12,13]}}
+      },
+      {
+        "source_line": 259790,
+        "form": "finissions",
+        "lemma": "finir",
+        "raw_tag": "S1p",
+        "tense": "S",
+        "person": "1",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "nous finissions",
+          "que nous finissions"
+        ],
+        "coloring": {"finissions":{"verbal":[[0,10]],"main":[0,10],"ending":[6,10]},"nous finissions":{"verbal":[[5,15]],"main":[5,15],"ending":[11,15]},"que nous finissions":{"verbal":[[9,19]],"main":[9,19],"ending":[15,19]}}
+      },
+      {
+        "source_line": 259773,
+        "form": "finisse",
+        "lemma": "finir",
+        "raw_tag": "S13s",
+        "tense": "S",
+        "person": "1",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "je finisse",
+          "que je finisse"
+        ],
+        "coloring": {"finisse":{"verbal":[[0,7]],"main":[0,7],"ending":[6,7]},"je finisse":{"verbal":[[3,10]],"main":[3,10],"ending":[9,10]},"que je finisse":{"verbal":[[7,14]],"main":[7,14],"ending":[13,14]}}
+      },
+      {
+        "source_line": 259787,
+        "form": "finissiez",
+        "lemma": "finir",
+        "raw_tag": "S2p",
+        "tense": "S",
+        "person": "2",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "vous finissiez",
+          "que vous finissiez"
+        ],
+        "coloring": {"finissiez":{"verbal":[[0,9]],"main":[0,9],"ending":[6,9]},"vous finissiez":{"verbal":[[5,14]],"main":[5,14],"ending":[11,14]},"que vous finissiez":{"verbal":[[9,18]],"main":[9,18],"ending":[15,18]}}
+      },
+      {
+        "source_line": 259779,
+        "form": "finisses",
+        "lemma": "finir",
+        "raw_tag": "ST2s",
+        "tense": "S",
+        "person": "2",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "tu finisses",
+          "que tu finisses"
+        ],
+        "coloring": {"finisses":{"verbal":[[0,8]],"main":[0,8],"ending":[6,8]},"tu finisses":{"verbal":[[3,11]],"main":[3,11],"ending":[9,11]},"que tu finisses":{"verbal":[[7,15]],"main":[7,15],"ending":[13,15]}}
+      },
+      {
+        "source_line": 259777,
+        "form": "finissent",
+        "lemma": "finir",
+        "raw_tag": "PS3p",
+        "tense": "S",
+        "person": "3",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "ils finissent",
+          "qu’ils finissent",
+          "elles finissent",
+          "qu’elles finissent"
+        ],
+        "coloring": {"finissent":{"verbal":[[0,9]],"main":[0,9],"ending":[6,9]},"ils finissent":{"verbal":[[4,13]],"main":[4,13],"ending":[10,13]},"qu’ils finissent":{"verbal":[[7,16]],"main":[7,16],"ending":[13,16]},"elles finissent":{"verbal":[[6,15]],"main":[6,15],"ending":[12,15]},"qu’elles finissent":{"verbal":[[9,18]],"main":[9,18],"ending":[15,18]}}
+      },
+      {
+        "source_line": 259773,
+        "form": "finisse",
+        "lemma": "finir",
+        "raw_tag": "S13s",
+        "tense": "S",
+        "person": "3",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "il finisse",
+          "qu’il finisse",
+          "elle finisse",
+          "qu’elle finisse",
+          "on finisse",
+          "qu’on finisse"
+        ],
+        "coloring": {"finisse":{"verbal":[[0,7]],"main":[0,7],"ending":[6,7]},"il finisse":{"verbal":[[3,10]],"main":[3,10],"ending":[9,10]},"qu’il finisse":{"verbal":[[6,13]],"main":[6,13],"ending":[12,13]},"elle finisse":{"verbal":[[5,12]],"main":[5,12],"ending":[11,12]},"qu’elle finisse":{"verbal":[[8,15]],"main":[8,15],"ending":[14,15]},"on finisse":{"verbal":[[3,10]],"main":[3,10],"ending":[9,10]},"qu’on finisse":{"verbal":[[6,13]],"main":[6,13],"ending":[12,13]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "ayons fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "SP",
+        "person": "1",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "nous ayons fini",
+          "que nous ayons fini"
+        ],
+        "coloring": {"ayons fini":{"verbal":[[0,10]],"main":[6,10],"ending":[9,10]},"nous ayons fini":{"verbal":[[5,15]],"main":[11,15],"ending":[14,15]},"que nous ayons fini":{"verbal":[[9,19]],"main":[15,19],"ending":[18,19]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "aie fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "SP",
+        "person": "1",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "j’aie fini",
+          "que j’aie fini"
+        ],
+        "coloring": {"aie fini":{"verbal":[[0,8]],"main":[4,8],"ending":[7,8]},"j’aie fini":{"verbal":[[2,10]],"main":[6,10],"ending":[9,10]},"que j’aie fini":{"verbal":[[6,14]],"main":[10,14],"ending":[13,14]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "ayez fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "SP",
+        "person": "2",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "vous ayez fini",
+          "que vous ayez fini"
+        ],
+        "coloring": {"ayez fini":{"verbal":[[0,9]],"main":[5,9],"ending":[8,9]},"vous ayez fini":{"verbal":[[5,14]],"main":[10,14],"ending":[13,14]},"que vous ayez fini":{"verbal":[[9,18]],"main":[14,18],"ending":[17,18]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "aies fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "SP",
+        "person": "2",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "tu aies fini",
+          "que tu aies fini"
+        ],
+        "coloring": {"aies fini":{"verbal":[[0,9]],"main":[5,9],"ending":[8,9]},"tu aies fini":{"verbal":[[3,12]],"main":[8,12],"ending":[11,12]},"que tu aies fini":{"verbal":[[7,16]],"main":[12,16],"ending":[15,16]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "aient fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "SP",
+        "person": "3",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "ils aient fini",
+          "qu’ils aient fini",
+          "elles aient fini",
+          "qu’elles aient fini"
+        ],
+        "coloring": {"aient fini":{"verbal":[[0,10]],"main":[6,10],"ending":[9,10]},"ils aient fini":{"verbal":[[4,14]],"main":[10,14],"ending":[13,14]},"qu’ils aient fini":{"verbal":[[7,17]],"main":[13,17],"ending":[16,17]},"elles aient fini":{"verbal":[[6,16]],"main":[12,16],"ending":[15,16]},"qu’elles aient fini":{"verbal":[[9,19]],"main":[15,19],"ending":[18,19]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "ait fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "SP",
+        "person": "3",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "il ait fini",
+          "qu’il ait fini",
+          "elle ait fini",
+          "qu’elle ait fini",
+          "on ait fini",
+          "qu’on ait fini"
+        ],
+        "coloring": {"ait fini":{"verbal":[[0,8]],"main":[4,8],"ending":[7,8]},"il ait fini":{"verbal":[[3,11]],"main":[7,11],"ending":[10,11]},"qu’il ait fini":{"verbal":[[6,14]],"main":[10,14],"ending":[13,14]},"elle ait fini":{"verbal":[[5,13]],"main":[9,13],"ending":[12,13]},"qu’elle ait fini":{"verbal":[[8,16]],"main":[12,16],"ending":[15,16]},"on ait fini":{"verbal":[[3,11]],"main":[7,11],"ending":[10,11]},"qu’on ait fini":{"verbal":[[6,14]],"main":[10,14],"ending":[13,14]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "eussions fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "SQP",
+        "person": "1",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "nous eussions fini",
+          "que nous eussions fini"
+        ],
+        "coloring": {"eussions fini":{"verbal":[[0,13]],"main":[9,13],"ending":[12,13]},"nous eussions fini":{"verbal":[[5,18]],"main":[14,18],"ending":[17,18]},"que nous eussions fini":{"verbal":[[9,22]],"main":[18,22],"ending":[21,22]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "eusse fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "SQP",
+        "person": "1",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "j’eusse fini",
+          "que j’eusse fini"
+        ],
+        "coloring": {"eusse fini":{"verbal":[[0,10]],"main":[6,10],"ending":[9,10]},"j’eusse fini":{"verbal":[[2,12]],"main":[8,12],"ending":[11,12]},"que j’eusse fini":{"verbal":[[6,16]],"main":[12,16],"ending":[15,16]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "eussiez fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "SQP",
+        "person": "2",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "vous eussiez fini",
+          "que vous eussiez fini"
+        ],
+        "coloring": {"eussiez fini":{"verbal":[[0,12]],"main":[8,12],"ending":[11,12]},"vous eussiez fini":{"verbal":[[5,17]],"main":[13,17],"ending":[16,17]},"que vous eussiez fini":{"verbal":[[9,21]],"main":[17,21],"ending":[20,21]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "eusses fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "SQP",
+        "person": "2",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "tu eusses fini",
+          "que tu eusses fini"
+        ],
+        "coloring": {"eusses fini":{"verbal":[[0,11]],"main":[7,11],"ending":[10,11]},"tu eusses fini":{"verbal":[[3,14]],"main":[10,14],"ending":[13,14]},"que tu eusses fini":{"verbal":[[7,18]],"main":[14,18],"ending":[17,18]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "eussent fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "SQP",
+        "person": "3",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "ils eussent fini",
+          "qu’ils eussent fini",
+          "elles eussent fini",
+          "qu’elles eussent fini"
+        ],
+        "coloring": {"eussent fini":{"verbal":[[0,12]],"main":[8,12],"ending":[11,12]},"ils eussent fini":{"verbal":[[4,16]],"main":[12,16],"ending":[15,16]},"qu’ils eussent fini":{"verbal":[[7,19]],"main":[15,19],"ending":[18,19]},"elles eussent fini":{"verbal":[[6,18]],"main":[14,18],"ending":[17,18]},"qu’elles eussent fini":{"verbal":[[9,21]],"main":[17,21],"ending":[20,21]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "eût fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "SQP",
+        "person": "3",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "il eût fini",
+          "qu’il eût fini",
+          "elle eût fini",
+          "qu’elle eût fini",
+          "on eût fini",
+          "qu’on eût fini"
+        ],
+        "coloring": {"eût fini":{"verbal":[[0,8]],"main":[4,8],"ending":[7,8]},"il eût fini":{"verbal":[[3,11]],"main":[7,11],"ending":[10,11]},"qu’il eût fini":{"verbal":[[6,14]],"main":[10,14],"ending":[13,14]},"elle eût fini":{"verbal":[[5,13]],"main":[9,13],"ending":[12,13]},"qu’elle eût fini":{"verbal":[[8,16]],"main":[12,16],"ending":[15,16]},"on eût fini":{"verbal":[[3,11]],"main":[7,11],"ending":[10,11]},"qu’on eût fini":{"verbal":[[6,14]],"main":[10,14],"ending":[13,14]}}
+      },
+      {
+        "source_line": 259791,
+        "form": "finissions",
+        "lemma": "finir",
+        "raw_tag": "T1p",
+        "tense": "T",
+        "person": "1",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "nous finissions",
+          "que nous finissions"
+        ],
+        "coloring": {"finissions":{"verbal":[[0,10]],"main":[0,10],"ending":[3,10]},"nous finissions":{"verbal":[[5,15]],"main":[5,15],"ending":[8,15]},"que nous finissions":{"verbal":[[9,19]],"main":[9,19],"ending":[12,19]}}
+      },
+      {
+        "source_line": 259774,
+        "form": "finisse",
+        "lemma": "finir",
+        "raw_tag": "T1s",
+        "tense": "T",
+        "person": "1",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "je finisse",
+          "que je finisse"
+        ],
+        "coloring": {"finisse":{"verbal":[[0,7]],"main":[0,7],"ending":[3,7]},"je finisse":{"verbal":[[3,10]],"main":[3,10],"ending":[6,10]},"que je finisse":{"verbal":[[7,14]],"main":[7,14],"ending":[10,14]}}
+      },
+      {
+        "source_line": 259788,
+        "form": "finissiez",
+        "lemma": "finir",
+        "raw_tag": "T2p",
+        "tense": "T",
+        "person": "2",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "vous finissiez",
+          "que vous finissiez"
+        ],
+        "coloring": {"finissiez":{"verbal":[[0,9]],"main":[0,9],"ending":[3,9]},"vous finissiez":{"verbal":[[5,14]],"main":[5,14],"ending":[8,14]},"que vous finissiez":{"verbal":[[9,18]],"main":[9,18],"ending":[12,18]}}
+      },
+      {
+        "source_line": 259779,
+        "form": "finisses",
+        "lemma": "finir",
+        "raw_tag": "ST2s",
+        "tense": "T",
+        "person": "2",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "tu finisses",
+          "que tu finisses"
+        ],
+        "coloring": {"finisses":{"verbal":[[0,8]],"main":[0,8],"ending":[3,8]},"tu finisses":{"verbal":[[3,11]],"main":[3,11],"ending":[6,11]},"que tu finisses":{"verbal":[[7,15]],"main":[7,15],"ending":[10,15]}}
+      },
+      {
+        "source_line": 259778,
+        "form": "finissent",
+        "lemma": "finir",
+        "raw_tag": "T3p",
+        "tense": "T",
+        "person": "3",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "ils finissent",
+          "qu’ils finissent",
+          "elles finissent",
+          "qu’elles finissent"
+        ],
+        "coloring": {"finissent":{"verbal":[[0,9]],"main":[0,9],"ending":[3,9]},"ils finissent":{"verbal":[[4,13]],"main":[4,13],"ending":[7,13]},"qu’ils finissent":{"verbal":[[7,16]],"main":[7,16],"ending":[10,16]},"elles finissent":{"verbal":[[6,15]],"main":[6,15],"ending":[9,15]},"qu’elles finissent":{"verbal":[[9,18]],"main":[9,18],"ending":[12,18]}}
+      },
+      {
+        "source_line": 259877,
+        "form": "finît",
+        "lemma": "finir",
+        "raw_tag": "T3s",
+        "tense": "T",
+        "person": "3",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "il finît",
+          "qu’il finît",
+          "elle finît",
+          "qu’elle finît",
+          "on finît",
+          "qu’on finît"
+        ],
+        "coloring": {"finît":{"verbal":[[0,5]],"main":[0,5],"ending":[3,5]},"il finît":{"verbal":[[3,8]],"main":[3,8],"ending":[6,8]},"qu’il finît":{"verbal":[[6,11]],"main":[6,11],"ending":[9,11]},"elle finît":{"verbal":[[5,10]],"main":[5,10],"ending":[8,10]},"qu’elle finît":{"verbal":[[8,13]],"main":[8,13],"ending":[11,13]},"on finît":{"verbal":[[3,8]],"main":[3,8],"ending":[6,8]},"qu’on finît":{"verbal":[[6,11]],"main":[6,11],"ending":[9,11]}}
+      },
+      {
+        "source_line": 259739,
+        "form": "finir",
+        "lemma": "finir",
+        "raw_tag": "W",
+        "tense": "W",
+        "person": null,
+        "number": null,
+        "gender": null,
+        "expressions": [
+          "finir"
+        ],
+        "coloring": {"finir":{"verbal":[[0,5]],"main":[0,5],"ending":[3,5]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "avoir fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "WP",
+        "person": null,
+        "number": null,
+        "gender": null,
+        "expressions": [
+          "avoir fini"
+        ],
+        "coloring": {"avoir fini":{"verbal":[[0,10]],"main":[6,10],"ending":[9,10]}}
+      },
+      {
+        "source_line": 259793,
+        "form": "finissons",
+        "lemma": "finir",
+        "raw_tag": "Y1p",
+        "tense": "Y",
+        "person": "1",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "finissons"
+        ],
+        "coloring": {"finissons":{"verbal":[[0,9]],"main":[0,9],"ending":[6,9]}}
+      },
+      {
+        "source_line": 259785,
+        "form": "finissez",
+        "lemma": "finir",
+        "raw_tag": "Y2p",
+        "tense": "Y",
+        "person": "2",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "finissez"
+        ],
+        "coloring": {"finissez":{"verbal":[[0,8]],"main":[0,8],"ending":[6,8]}}
+      },
+      {
+        "source_line": 259757,
+        "form": "finis",
+        "lemma": "finir",
+        "raw_tag": "Y2s",
+        "tense": "Y",
+        "person": "2",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "finis"
+        ],
+        "coloring": {"finis":{"verbal":[[0,5]],"main":[0,5],"ending":[4,5]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "ayons fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "YP",
+        "person": "1",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "ayons fini"
+        ],
+        "coloring": {"ayons fini":{"verbal":[[0,10]],"main":[6,10],"ending":[9,10]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "ayez fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "YP",
+        "person": "2",
+        "number": "p",
+        "gender": null,
+        "expressions": [
+          "ayez fini"
+        ],
+        "coloring": {"ayez fini":{"verbal":[[0,9]],"main":[5,9],"ending":[8,9]}}
+      },
+      {
+        "source_line": 259732,
+        "form": "aie fini",
+        "lemma": "finir",
+        "raw_tag": "ordinary/v1/avoir/intransitive; transitive",
+        "tense": "YP",
+        "person": "2",
+        "number": "s",
+        "gender": null,
+        "expressions": [
+          "aie fini"
+        ],
+        "coloring": {"aie fini":{"verbal":[[0,8]],"main":[4,8],"ending":[7,8]}}
+      }
+    ]
+  }
+}

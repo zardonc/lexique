@@ -7,6 +7,8 @@ mod vocabulary;
 pub use vocabulary::*;
 mod speech;
 pub use speech::*;
+mod conjugation;
+pub use conjugation::*;
 mod review;
 pub use review::*;
 mod speech_work;

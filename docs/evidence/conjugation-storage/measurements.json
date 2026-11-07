@@ -1,0 +1,347 @@
+{
+  "date": "2026-11-06",
+  "environment": {
+    "os": "Windows",
+    "architecture": "x64",
+    "python": "3.14.10",
+    "node": "24.22.1",
+    "pnpm": "11.25.0",
+    "rust": "1.99.1"
+  },
+  "worktree_base": "0cd76a4e26df1691e0e436b619a40b88bb7c2770",
+  "baseline": {
+    "sqlite_sha256": "16de3c23525ab1b9e6739f322e097557506c1066598289ce736d41a069abb489",
+    "database_bytes": 250650624,
+    "database_gzip_bytes": 49581488,
+    "table_bytes": 186089472,
+    "lemma_index_bytes": 28651520,
+    "reverse_index_bytes": 35909632,
+    "slots": 1451539,
+    "lemmas": 10781,
+    "ordinary_lemmas": 7826
+  },
+  "compact": {
+    "format": 6,
+    "sqlite_sha256": "598d88df83952c071ca69c7c2bcb2a89ed0fe926f4a831866a2d3b6e33a89147",
+    "database_bytes": 10969088,
+    "database_gzip_bytes": 6139062,
+    "table_bytes": 9957376,
+    "lemma_index_bytes": 278528,
+    "reverse_index_bytes": 733184,
+    "models": 170,
+    "stems": 24307,
+    "slots": 1451539,
+    "lemmas": 10781,
+    "ordinary_lemmas": 7826,
+    "equivalence": {
+      "status": "equal",
+      "verbs": 10781,
+      "cells": 1451539,
+      "baseline_sha256": "16de3c23525ab1b9e6739f322e097557506c1066598289ce736d41a069abb489"
+    }
+  },
+  "page_bytes": {
+    "metadata": 8192,
+    "models": 335872,
+    "sqlite_schema": 4096,
+    "stems": 733184,
+    "verbs": 9609216,
+    "verbs_base": 278528
+  },
+  "anchor_bytes": 1593616,
+  "compressed_information_bytes": 5072692,
+  "meaning_bytes": 637721,
+  "model_json_bytes": 271970,
+  "resource_files_bytes": 15746014,
+  "cli": {
+    "query": "elles se sont abstenues",
+    "python": "3.14.10",
+    "platform": "Windows",
+    "architecture": "AMD64",
+    "samples_ms": [
+      1166.942,
+      1314.421,
+      1207.37,
+      1283.79,
+      1255.217,
+      1257.651
+    ],
+    "first_ms": 1166.942,
+    "warm_median_ms": 1257.651,
+    "warm_max_ms": 1314.421,
+    "budget_ms": 1700,
+    "within_budget": true,
+    "boundary": "six fresh CLI processes including source validation and response serialization; no OS cache flush"
+  },
+  "native": {
+    "status": "PASS",
+    "restart": true,
+    "preserved": {
+      "records": 1,
+      "cards": 2,
+      "audioFiles": 3
+    },
+    "timings": {
+      "query": "elles se sont abstenues",
+      "first_ms": 23.399999991059303,
+      "warm_ms": [
+        21.700000002980232,
+        21,
+        22.5,
+        21.200000002980232,
+        21.299999997019768
+      ],
+      "boundary": "native IPC; first invocation and subsequent invocations, no OS cache flush"
+    }
+  },
+  "corpus": {
+    "status": "equal",
+    "identities": 10781,
+    "cells": 1451539,
+    "lookups": 10824,
+    "resource_sha256": "598d88df83952c071ca69c7c2bcb2a89ed0fe926f4a831866a2d3b6e33a89147",
+    "batch_timeout_seconds": 60,
+    "batches": [
+      {
+        "cases": 400,
+        "milliseconds": 8566,
+        "result": "Verified 400 public conjugation lookups"
+      },
+      {
+        "cases": 400,
+        "milliseconds": 10834,
+        "result": "Verified 400 public conjugation lookups"
+      },
+      {
+        "cases": 400,
+        "milliseconds": 7932,
+        "result": "Verified 400 public conjugation lookups"
+      },
+      {
+        "cases": 400,
+        "milliseconds": 9938,
+        "result": "Verified 400 public conjugation lookups"
+      },
+      {
+        "cases": 400,
+        "milliseconds": 12027,
+        "result": "Verified 400 public conjugation lookups"
+      },
+      {
+        "cases": 400,
+        "milliseconds": 7465,
+        "result": "Verified 400 public conjugation lookups"
+      },
+      {
+        "cases": 400,
+        "milliseconds": 6836,
+        "result": "Verified 400 public conjugation lookups"
+      },
+      {
+        "cases": 400,
+        "milliseconds": 6463,
+        "result": "Verified 400 public conjugation lookups"
+      },
+      {
+        "cases": 400,
+        "milliseconds": 7154,
+        "result": "Verified 400 public conjugation lookups"
+      },
+      {
+        "cases": 400,
+        "milliseconds": 6436,
+        "result": "Verified 400 public conjugation lookups"
+      },
+      {
+        "cases": 400,
+        "milliseconds": 6784,
+        "result": "Verified 400 public conjugation lookups"
+      },
+      {
+        "cases": 400,
+        "milliseconds": 6462,
+        "result": "Verified 400 public conjugation lookups"
+      },
+      {
+        "cases": 400,
+        "milliseconds": 6651,
+        "result": "Verified 400 public conjugation lookups"
+      },
+      {
+        "cases": 400,
+        "milliseconds": 6556,
+        "result": "Verified 400 public conjugation lookups"
+      },
+      {
+        "cases": 400,
+        "milliseconds": 6710,
+        "result": "Verified 400 public conjugation lookups"
+      },
+      {
+        "cases": 400,
+        "milliseconds": 6493,
+        "result": "Verified 400 public conjugation lookups"
+      },
+      {
+        "cases": 400,
+        "milliseconds": 6846,
+        "result": "Verified 400 public conjugation lookups"
+      },
+      {
+        "cases": 400,
+        "milliseconds": 6826,
+        "result": "Verified 400 public conjugation lookups"
+      },
+      {
+        "cases": 400,
+        "milliseconds": 6796,
+        "result": "Verified 400 public conjugation lookups"
+      },
+      {
+        "cases": 400,
+        "milliseconds": 6792,
+        "result": "Verified 400 public conjugation lookups"
+      },
+      {
+        "cases": 400,
+        "milliseconds": 6879,
+        "result": "Verified 400 public conjugation lookups"
+      },
+      {
+        "cases": 400,
+        "milliseconds": 6718,
+        "result": "Verified 400 public conjugation lookups"
+      },
+      {
+        "cases": 400,
+        "milliseconds": 6677,
+        "result": "Verified 400 public conjugation lookups"
+      },
+      {
+        "cases": 400,
+        "milliseconds": 7548,
+        "result": "Verified 400 public conjugation lookups"
+      },
+      {
+        "cases": 400,
+        "milliseconds": 7011,
+        "result": "Verified 400 public conjugation lookups"
+      },
+      {
+        "cases": 400,
+        "milliseconds": 6518,
+        "result": "Verified 400 public conjugation lookups"
+      },
+      {
+        "cases": 400,
+        "milliseconds": 6402,
+        "result": "Verified 400 public conjugation lookups"
+      },
+      {
+        "cases": 24,
+        "milliseconds": 437,
+        "result": "Verified 24 public conjugation lookups"
+      }
+    ]
+  },
+  "package": {
+    "archive": "target\\conjugation-refactor\\portable\\Lexique-0.1.0-windows-x64-portable.zip",
+    "bytes": 15947978,
+    "sha256": "a46c828f6a49fdea6608ea30fc6ab6dba871f68baaedf50077282d5317e9b0bf",
+    "verified_files": 55
+  },
+  "binary_sha256": "eb75db6aea7df82a5c277c02c36f4c423ea9b413e954cf4e5aafa776a06cc2f6",
+  "build_with_comparison_ms": 56287,
+  "database_reduction_percent": 95.6,
+  "native_warm_median_ms": 21.3,
+  "issue_updates": [
+    {
+      "number": 38,
+      "url": "https://github.com/zardonc/lexique/issues/38",
+      "status": "verified",
+      "title": "M3: deliver offline conjugation tables, expression lookup, three color modes, and full-form pronunciation"
+    },
+    {
+      "number": 44,
+      "url": "https://github.com/zardonc/lexique/issues/44",
+      "status": "verified",
+      "title": "Accept typographic query variations while preserving accents and complete expression matches"
+    },
+    {
+      "number": 45,
+      "url": "https://github.com/zardonc/lexique/issues/45",
+      "status": "verified",
+      "title": "Add three verb coloring modes with validated endings and restart persistence"
+    },
+    {
+      "number": 49,
+      "url": "https://github.com/zardonc/lexique/issues/49",
+      "status": "verified",
+      "title": "Verify the complete conjugation flow in a fresh offline Windows package"
+    }
+  ],
+  "checks": [
+    {
+      "command": "pnpm test:conjugation",
+      "status": "passed",
+      "tests": 31,
+      "seconds": 383.233
+    },
+    {
+      "command": "pnpm rust:test:build",
+      "status": "passed",
+      "seconds": 17.13
+    },
+    {
+      "command": "pnpm test:rust",
+      "status": "passed",
+      "tests": 142,
+      "timeout_seconds": 60
+    },
+    {
+      "command": "cargo clippy --locked --offline -p lexique-dictionary --all-targets -- -D warnings",
+      "status": "passed"
+    },
+    {
+      "command": "pnpm rust:fmt; pnpm rust:check",
+      "status": "passed"
+    },
+    {
+      "command": "pnpm lint; pnpm typecheck; pnpm desktop:build --no-bundle",
+      "status": "passed"
+    },
+    {
+      "command": "pnpm test:e2e conjugation.spec.ts --workers=2",
+      "status": "passed",
+      "tests": 5,
+      "seconds": 7.4
+    },
+    {
+      "command": "node e2e/native-conjugation-check.mjs <resources> <binary> <fixture> <owned-destination>",
+      "status": "passed"
+    },
+    {
+      "command": "pnpm test:tooling",
+      "status": "passed",
+      "build_argument_tests": 2,
+      "portable_tests": 8,
+      "speech_failure_tests": 2,
+      "skipped": 1
+    },
+    {
+      "command": "python -X utf8 scripts/package_portable.py --output-dir target/conjugation-refactor/portable",
+      "status": "passed",
+      "verified_files": 55
+    },
+    {
+      "command": "pwsh -NoProfile -File scripts/check-docs.ps1",
+      "status": "passed",
+      "documents": 114,
+      "local_links": 681
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    }
+  ]
+}

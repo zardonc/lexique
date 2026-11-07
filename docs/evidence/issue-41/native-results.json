@@ -1,0 +1,441 @@
+{
+  "status": "PASS",
+  "restart": true,
+  "preserved": {
+    "records": 1,
+    "cards": 2,
+    "audioFiles": 3
+  },
+  "binary_sha256": "2aaf4d6dba7ca5082e4c2f12e1eecb9d974293edbe03826d1c2cd51550c982c5",
+  "resource_sha256": "b0f3edaf68e1b31bcfd868884a9f25d4bcccf7fa952a2e756ffcb85128002aff",
+  "queries": {
+    "avons aimé": [
+      {
+        "lemma": "aimer",
+        "matches": [
+          [
+            "PC",
+            "1",
+            "p",
+            null
+          ]
+        ]
+      }
+    ],
+    "aie aimé": [
+      {
+        "lemma": "aimer",
+        "matches": [
+          [
+            "SP",
+            "1",
+            "s",
+            null
+          ],
+          [
+            "YP",
+            "2",
+            "s",
+            null
+          ]
+        ]
+      }
+    ],
+    "je suis allée": [
+      {
+        "lemma": "aller",
+        "matches": [
+          [
+            "PC",
+            "1",
+            "s",
+            "f"
+          ]
+        ]
+      }
+    ],
+    "en ayant aimé": [
+      {
+        "lemma": "aimer",
+        "matches": [
+          [
+            "GPP",
+            null,
+            null,
+            null
+          ]
+        ]
+      }
+    ],
+    "j’ai abélisé": [
+      {
+        "lemma": "abéliser",
+        "matches": [
+          [
+            "PC",
+            "1",
+            "s",
+            null
+          ]
+        ]
+      }
+    ],
+    "je suis monté": [
+      {
+        "lemma": "monter",
+        "matches": [
+          [
+            "PC",
+            "1",
+            "s",
+            "m"
+          ]
+        ]
+      }
+    ],
+    "j’ai monté": [
+      {
+        "lemma": "monter",
+        "matches": [
+          [
+            "PC",
+            "1",
+            "s",
+            null
+          ]
+        ]
+      }
+    ],
+    "j’habite": [
+      {
+        "lemma": "habiter",
+        "matches": [
+          [
+            "P",
+            "1",
+            "s",
+            null
+          ],
+          [
+            "S",
+            "1",
+            "s",
+            null
+          ]
+        ]
+      }
+    ],
+    "je hais": [
+      {
+        "lemma": "haïr",
+        "matches": [
+          [
+            "P",
+            "1",
+            "s",
+            null
+          ]
+        ]
+      }
+    ],
+    "gésir": [
+      {
+        "lemma": "gésir",
+        "matches": [
+          [
+            "W",
+            null,
+            null,
+            null
+          ]
+        ]
+      }
+    ],
+    "j’occirai": [
+      {
+        "lemma": "occire",
+        "matches": [
+          [
+            "F",
+            "1",
+            "s",
+            null
+          ]
+        ]
+      }
+    ],
+    "ayons chu": [
+      {
+        "lemma": "choir",
+        "matches": [
+          [
+            "SP",
+            "1",
+            "p",
+            null
+          ],
+          [
+            "YP",
+            "1",
+            "p",
+            null
+          ]
+        ]
+      }
+    ],
+    "il est avenu": [
+      {
+        "lemma": "avenir",
+        "matches": [
+          [
+            "PC",
+            "3",
+            "s",
+            "m"
+          ]
+        ]
+      }
+    ],
+    "j’ai pu": [
+      {
+        "lemma": "paître",
+        "matches": [
+          [
+            "PC",
+            "1",
+            "s",
+            null
+          ]
+        ]
+      },
+      {
+        "lemma": "pouvoir",
+        "matches": [
+          [
+            "PC",
+            "1",
+            "s",
+            null
+          ]
+        ]
+      }
+    ],
+    "aie occis": [
+      {
+        "lemma": "occire",
+        "matches": [
+          [
+            "SP",
+            "1",
+            "s",
+            null
+          ],
+          [
+            "YP",
+            "2",
+            "s",
+            null
+          ]
+        ]
+      }
+    ],
+    "il stupéfait": [
+      {
+        "lemma": "stupéfaire",
+        "matches": [
+          [
+            "P",
+            "3",
+            "s",
+            null
+          ]
+        ]
+      }
+    ],
+    "aie stupéfait": [
+      {
+        "lemma": "stupéfaire",
+        "matches": [
+          [
+            "SP",
+            "1",
+            "s",
+            null
+          ],
+          [
+            "YP",
+            "2",
+            "s",
+            null
+          ]
+        ]
+      }
+    ],
+    "aie forclos": [
+      {
+        "lemma": "forclore",
+        "matches": [
+          [
+            "SP",
+            "1",
+            "s",
+            null
+          ],
+          [
+            "YP",
+            "2",
+            "s",
+            null
+          ]
+        ]
+      }
+    ],
+    "j’abstiens": [],
+    "j’ai parvenu": [],
+    "je avons aimé": [],
+    "sommes": [
+      {
+        "lemma": "sommer",
+        "matches": [
+          [
+            "P",
+            "2",
+            "s",
+            null
+          ],
+          [
+            "S",
+            "2",
+            "s",
+            null
+          ]
+        ]
+      },
+      {
+        "lemma": "être",
+        "matches": [
+          [
+            "P",
+            "1",
+            "p",
+            null
+          ]
+        ]
+      }
+    ],
+    "suis": [
+      {
+        "lemma": "suivre",
+        "matches": [
+          [
+            "P",
+            "1",
+            "s",
+            null
+          ],
+          [
+            "P",
+            "2",
+            "s",
+            null
+          ],
+          [
+            "Y",
+            "2",
+            "s",
+            null
+          ]
+        ]
+      },
+      {
+        "lemma": "être",
+        "matches": [
+          [
+            "P",
+            "1",
+            "s",
+            null
+          ]
+        ]
+      }
+    ],
+    "paie": [
+      {
+        "lemma": "payer",
+        "matches": [
+          [
+            "P",
+            "1",
+            "s",
+            null
+          ],
+          [
+            "P",
+            "3",
+            "s",
+            null
+          ],
+          [
+            "S",
+            "1",
+            "s",
+            null
+          ],
+          [
+            "S",
+            "3",
+            "s",
+            null
+          ],
+          [
+            "Y",
+            "2",
+            "s",
+            null
+          ]
+        ]
+      }
+    ],
+    "falloir": [
+      {
+        "lemma": "falloir",
+        "matches": [
+          [
+            "W",
+            null,
+            null,
+            null
+          ]
+        ]
+      }
+    ],
+    "enfuir": [
+      {
+        "lemma": "enfuir",
+        "matches": [
+          [
+            "W",
+            null,
+            null,
+            null
+          ]
+        ]
+      }
+    ],
+    "voilà": [
+      {
+        "lemma": "voilà",
+        "matches": [
+          [
+            null,
+            null,
+            null,
+            null
+          ]
+        ]
+      }
+    ],
+    "SOMMES": [],
+    "' OR 1=1 --": []
+  }
+}

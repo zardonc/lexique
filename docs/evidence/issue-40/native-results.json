@@ -1,0 +1,404 @@
+{
+  "status": "PASS",
+  "restart": true,
+  "results": {
+    "sommes": {
+      "query": "sommes",
+      "tables": [
+        {
+          "lemma": "sommer",
+          "verb": {
+            "auxiliaries": [
+              {
+                "lemma": "avoir",
+                "use": "ordinary active"
+              }
+            ],
+            "auxiliary_status": "supported",
+            "correction": null,
+            "group": 1,
+            "group_status": "supported",
+            "ordinary_status": "supported",
+            "source": {
+              "entry": "dVerb/sommer",
+              "raw_type": "1__t____a",
+              "resource": "grammalecte-2.3.0"
+            },
+            "usage_labels": [
+              "transitive"
+            ]
+          },
+          "source_cells": 51,
+          "matching_cells": [
+            {
+              "source_line": 475040,
+              "form": "sommes",
+              "lemma": "sommer",
+              "raw_tag": "PS2s",
+              "tense": "P",
+              "person": "2",
+              "number": "s",
+              "gender": null
+            },
+            {
+              "source_line": 475040,
+              "form": "sommes",
+              "lemma": "sommer",
+              "raw_tag": "PS2s",
+              "tense": "S",
+              "person": "2",
+              "number": "s",
+              "gender": null
+            }
+          ]
+        },
+        {
+          "lemma": "être",
+          "verb": {
+            "auxiliaries": [
+              {
+                "lemma": "avoir",
+                "use": "ordinary active"
+              }
+            ],
+            "auxiliary_status": "supported",
+            "correction": null,
+            "group": 3,
+            "group_status": "supported",
+            "ordinary_status": "supported",
+            "source": {
+              "entry": "dVerb/être",
+              "raw_type": "0ei_____a",
+              "resource": "grammalecte-2.3.0"
+            },
+            "usage_labels": [
+              "intransitive"
+            ]
+          },
+          "source_cells": 49,
+          "matching_cells": [
+            {
+              "source_line": 475041,
+              "form": "sommes",
+              "lemma": "être",
+              "raw_tag": "P1p",
+              "tense": "P",
+              "person": "1",
+              "number": "p",
+              "gender": null
+            }
+          ]
+        }
+      ]
+    },
+    "suis": {
+      "query": "suis",
+      "tables": [
+        {
+          "lemma": "suivre",
+          "verb": {
+            "auxiliaries": [
+              {
+                "lemma": "avoir",
+                "use": "ordinary active"
+              }
+            ],
+            "auxiliary_status": "supported",
+            "correction": null,
+            "group": 3,
+            "group_status": "supported",
+            "ordinary_status": "supported",
+            "source": {
+              "entry": "dVerb/suivre",
+              "raw_type": "3_it_x__a",
+              "resource": "grammalecte-2.3.0"
+            },
+            "usage_labels": [
+              "intransitive",
+              "transitive"
+            ]
+          },
+          "source_cells": 59,
+          "matching_cells": [
+            {
+              "source_line": 484864,
+              "form": "suis",
+              "lemma": "suivre",
+              "raw_tag": "P12s",
+              "tense": "P",
+              "person": "1",
+              "number": "s",
+              "gender": null
+            },
+            {
+              "source_line": 484864,
+              "form": "suis",
+              "lemma": "suivre",
+              "raw_tag": "P12s",
+              "tense": "P",
+              "person": "2",
+              "number": "s",
+              "gender": null
+            },
+            {
+              "source_line": 484865,
+              "form": "suis",
+              "lemma": "suivre",
+              "raw_tag": "Y2s",
+              "tense": "Y",
+              "person": "2",
+              "number": "s",
+              "gender": null
+            }
+          ]
+        },
+        {
+          "lemma": "être",
+          "verb": {
+            "auxiliaries": [
+              {
+                "lemma": "avoir",
+                "use": "ordinary active"
+              }
+            ],
+            "auxiliary_status": "supported",
+            "correction": null,
+            "group": 3,
+            "group_status": "supported",
+            "ordinary_status": "supported",
+            "source": {
+              "entry": "dVerb/être",
+              "raw_type": "0ei_____a",
+              "resource": "grammalecte-2.3.0"
+            },
+            "usage_labels": [
+              "intransitive"
+            ]
+          },
+          "source_cells": 49,
+          "matching_cells": [
+            {
+              "source_line": 484866,
+              "form": "suis",
+              "lemma": "être",
+              "raw_tag": "P1s",
+              "tense": "P",
+              "person": "1",
+              "number": "s",
+              "gender": null
+            }
+          ]
+        }
+      ]
+    },
+    "paie": {
+      "query": "paie",
+      "tables": [
+        {
+          "lemma": "payer",
+          "verb": {
+            "auxiliaries": [
+              {
+                "lemma": "avoir",
+                "use": "ordinary active"
+              }
+            ],
+            "auxiliary_status": "supported",
+            "correction": null,
+            "group": 1,
+            "group_status": "supported",
+            "ordinary_status": "supported",
+            "source": {
+              "entry": "dVerb/payer",
+              "raw_type": "1_itnq__a",
+              "resource": "grammalecte-2.3.0"
+            },
+            "usage_labels": [
+              "intransitive",
+              "transitive",
+              "indirect_transitive"
+            ]
+          },
+          "source_cells": 72,
+          "matching_cells": [
+            {
+              "source_line": 367139,
+              "form": "paie",
+              "lemma": "payer",
+              "raw_tag": "PS13s",
+              "tense": "P",
+              "person": "1",
+              "number": "s",
+              "gender": null
+            },
+            {
+              "source_line": 367139,
+              "form": "paie",
+              "lemma": "payer",
+              "raw_tag": "PS13s",
+              "tense": "P",
+              "person": "3",
+              "number": "s",
+              "gender": null
+            },
+            {
+              "source_line": 367139,
+              "form": "paie",
+              "lemma": "payer",
+              "raw_tag": "PS13s",
+              "tense": "S",
+              "person": "1",
+              "number": "s",
+              "gender": null
+            },
+            {
+              "source_line": 367139,
+              "form": "paie",
+              "lemma": "payer",
+              "raw_tag": "PS13s",
+              "tense": "S",
+              "person": "3",
+              "number": "s",
+              "gender": null
+            },
+            {
+              "source_line": 367140,
+              "form": "paie",
+              "lemma": "payer",
+              "raw_tag": "Y2s",
+              "tense": "Y",
+              "person": "2",
+              "number": "s",
+              "gender": null
+            }
+          ]
+        }
+      ]
+    },
+    "falloir": {
+      "query": "falloir",
+      "tables": [
+        {
+          "lemma": "falloir",
+          "verb": {
+            "auxiliaries": [
+              {
+                "lemma": "avoir",
+                "use": "ordinary active"
+              }
+            ],
+            "auxiliary_status": "supported",
+            "correction": null,
+            "group": 3,
+            "group_status": "supported",
+            "ordinary_status": "supported",
+            "source": {
+              "entry": "dVerb/falloir",
+              "raw_type": "3__tnem_a",
+              "resource": "grammalecte-2.3.0"
+            },
+            "usage_labels": [
+              "transitive",
+              "indirect_transitive",
+              "impersonal"
+            ]
+          },
+          "source_cells": 9,
+          "matching_cells": [
+            {
+              "source_line": 254497,
+              "form": "falloir",
+              "lemma": "falloir",
+              "raw_tag": "W",
+              "tense": "W",
+              "person": null,
+              "number": null,
+              "gender": null
+            }
+          ]
+        }
+      ]
+    },
+    "enfuir": {
+      "query": "enfuir",
+      "tables": [
+        {
+          "lemma": "enfuir",
+          "verb": {
+            "auxiliaries": [],
+            "auxiliary_status": "not_applicable",
+            "correction": null,
+            "group": 3,
+            "group_status": "supported",
+            "ordinary_status": "not_applicable",
+            "source": {
+              "entry": "dVerb/enfuir",
+              "raw_type": "3____p_e_",
+              "resource": "grammalecte-2.3.0"
+            },
+            "usage_labels": [
+              "pronominal_only"
+            ]
+          },
+          "source_cells": 51,
+          "matching_cells": [
+            {
+              "source_line": 236884,
+              "form": "enfuir",
+              "lemma": "enfuir",
+              "raw_tag": "W",
+              "tense": "W",
+              "person": null,
+              "number": null,
+              "gender": null
+            }
+          ]
+        }
+      ]
+    },
+    "voilà": {
+      "query": "voilà",
+      "tables": [
+        {
+          "lemma": "voilà",
+          "verb": {
+            "auxiliaries": [],
+            "auxiliary_status": "unconfirmed",
+            "correction": null,
+            "group": null,
+            "group_status": "unconfirmed",
+            "ordinary_status": "unconfirmed",
+            "source": null,
+            "usage_labels": []
+          },
+          "source_cells": 2,
+          "matching_cells": [
+            {
+              "source_line": 526286,
+              "form": "voilà",
+              "lemma": "voilà",
+              "raw_tag": "",
+              "tense": null,
+              "person": null,
+              "number": null,
+              "gender": null
+            }
+          ]
+        }
+      ]
+    },
+    "SOMMES": {
+      "query": "SOMMES",
+      "tables": []
+    },
+    "' OR 1=1 --": {
+      "query": "' OR 1=1 --",
+      "tables": []
+    }
+  },
+  "preserved": {
+    "records": 1,
+    "cards": 2,
+    "audioFiles": 3
+  }
+}

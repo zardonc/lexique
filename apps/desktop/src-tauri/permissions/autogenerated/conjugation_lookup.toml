@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-conjugation-lookup"
+description = "Enables the conjugation_lookup command without any pre-configured scope."
+commands.allow = ["conjugation_lookup"]
+
+[[permission]]
+identifier = "deny-conjugation-lookup"
+description = "Denies the conjugation_lookup command without any pre-configured scope."
+commands.deny = ["conjugation_lookup"]

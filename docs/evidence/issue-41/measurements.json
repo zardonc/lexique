@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-06",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "python": "3.14.10",
+  "scope": "Six fresh public CLI processes after all build, test and native processes completed; warm filesystem, not OS-cold storage",
+  "query": "je suis allée",
+  "command": [
+    "C:/Soft/1A-Coding/PythonPortable/python/cpython-3.14-windows-x86_64-none/python.exe",
+    "-X",
+    "utf8",
+    "scripts/conjugation_sample.py",
+    "query",
+    "target/desktop-conjugation-v3/conjugation.sqlite3",
+    "je suis allée"
+  ],
+  "query_ms": [
+    1737,
+    1416,
+    1426,
+    1453,
+    1507,
+    1592
+  ],
+  "first_process_ms": 1737,
+  "warm_median_ms": 1453,
+  "warm_maximum_ms": 1592,
+  "build_ms": 16018,
+  "query_budget_ms": 1700,
+  "snapshot_budget_bytes": 134217728,
+  "reverse_index_budget_bytes": 18874368,
+  "resource_sha256": "b0f3edaf68e1b31bcfd868884a9f25d4bcccf7fa952a2e756ffcb85128002aff",
+  "previous_measurement": {
+    "resource_sha256": "5143ccd29359932697d350541dfa3d8c034969cd3ed9307d56cc1bb13ab01c43",
+    "query_ms": [
+      3297,
+      1624,
+      1623,
+      1633,
+      1620,
+      1633
+    ],
+    "first_process_ms": 3297,
+    "warm_median_ms": 1624,
+    "warm_maximum_ms": 1633,
+    "build_ms": 14120
+  }
+}

@@ -1,0 +1,368 @@
+{
+  "date": "2026-11-06",
+  "baseline": "d01f9a4b8ea4c157b47e9971463077b17c4c7fd7",
+  "executedReader": "target/issue-48/native-speech-20261106-5/Lexique.exe",
+  "sourceReport": "target/issue-48/native-speech-20261106-5/report.json",
+  "buildCommand": "pnpm desktop:build --no-bundle",
+  "nativeCommand": "node e2e/native-conjugation-check.mjs ../../target/release ../../target/release/lexique-desktop.exe ../../target/issue-24/conjugation-format6-fresh-20261106-2/Lexique-data ../../target/issue-48/native-speech-20261106-5 --speech",
+  "status": "PASS",
+  "speech": true,
+  "restart": true,
+  "cancellation": "previous clip paused; pending table response ignored; concurrent dictionary playback retained",
+  "played": [
+    {
+      "text": "je paie",
+      "voice": "female",
+      "version": "5910f0abe6274c77eb82678aaa69182207db0daef21c3fc58e416b54b1b84a6b",
+      "bytes": 9494,
+      "ogg": [
+        79,
+        103,
+        103,
+        83
+      ],
+      "rate": 1,
+      "currentTime": 0.167867
+    },
+    {
+      "text": "je paye",
+      "voice": "female",
+      "version": "d8bdd79bd4fed3743bd94b758db0ec573d8cce37ca3a6fc1e7b86d1e95fbc94b",
+      "bytes": 7375,
+      "ogg": [
+        79,
+        103,
+        103,
+        83
+      ],
+      "rate": 1,
+      "currentTime": 0.194498
+    },
+    {
+      "text": "je suis allé",
+      "voice": "female",
+      "version": "9c5b6786422dc4c309d9878a89b5693c592bb966b05e788d106e418bdeb1c2b2",
+      "bytes": 11141,
+      "ogg": [
+        79,
+        103,
+        103,
+        83
+      ],
+      "rate": 1,
+      "currentTime": 0.193573
+    },
+    {
+      "text": "je suis allée",
+      "voice": "female",
+      "version": "89ba80cd40d5f345eabab441a9edbd931ad4811fc51638eb735e9c4846dff073",
+      "bytes": 11483,
+      "ogg": [
+        79,
+        103,
+        103,
+        83
+      ],
+      "rate": 1,
+      "currentTime": 0.223056
+    },
+    {
+      "text": "je me lave",
+      "voice": "female",
+      "version": "bfa157e2b9cfaab9ec18d87abf4cf17616b5dcc57388266a6c162d8821345bee",
+      "bytes": 7823,
+      "ogg": [
+        79,
+        103,
+        103,
+        83
+      ],
+      "rate": 1,
+      "currentTime": 0.22355
+    },
+    {
+      "text": "lave-toi",
+      "voice": "female",
+      "version": "480eff71427eec24f337935f93b3f760b6cd8a60ce293d44384b624693ea1458",
+      "bytes": 9742,
+      "ogg": [
+        79,
+        103,
+        103,
+        83
+      ],
+      "rate": 1,
+      "currentTime": 0.227329
+    },
+    {
+      "text": "elles se sont abstenues",
+      "voice": "female",
+      "version": "c0f36312fa61477ac22366cca97f9abf9583f32b0ddb840e89aebd6dd47cf145",
+      "bytes": 14204,
+      "ogg": [
+        79,
+        103,
+        103,
+        83
+      ],
+      "rate": 1,
+      "currentTime": 0.013892
+    },
+    {
+      "text": "va-t’en",
+      "voice": "female",
+      "version": "c7d25b9810ff2c95ef61797b000d8fd255dfb4564cdcbaeb751f85352be21325",
+      "bytes": 9417,
+      "ogg": [
+        79,
+        103,
+        103,
+        83
+      ],
+      "rate": 1,
+      "currentTime": 0.008804
+    }
+  ],
+  "displayed": [
+    {
+      "query": "paie",
+      "count": 218,
+      "maxCharacters": 22
+    },
+    {
+      "query": "je suis allée",
+      "count": 255,
+      "maxCharacters": 24
+    },
+    {
+      "query": "je me lave",
+      "count": 439,
+      "maxCharacters": 29
+    },
+    {
+      "query": "elles se sont abstenues",
+      "count": 273,
+      "maxCharacters": 32
+    },
+    {
+      "query": "va-t’en",
+      "count": 273,
+      "maxCharacters": 32
+    }
+  ],
+  "preferences": {
+    "slow": {
+      "text": "je paie",
+      "voice": "male",
+      "version": "da810264f1bc145c28b73a9df6619d1714f09a657475f3496be2f02820d61622",
+      "bytes": 9555,
+      "ogg": [
+        79,
+        103,
+        103,
+        83
+      ],
+      "rate": 0.6,
+      "currentTime": 0.008434
+    },
+    "normal": {
+      "text": "je paie",
+      "voice": "male",
+      "version": "da810264f1bc145c28b73a9df6619d1714f09a657475f3496be2f02820d61622",
+      "bytes": 9555,
+      "ogg": [
+        79,
+        103,
+        103,
+        83
+      ],
+      "rate": 1,
+      "currentTime": 0.027152
+    },
+    "sameAudio": true,
+    "restored": {
+      "voice": "female",
+      "speed": "normal"
+    },
+    "coloring": {
+      "mode": "ending"
+    },
+    "order": [
+      "P",
+      "PC",
+      "I",
+      "F",
+      "C",
+      "S",
+      "PQP",
+      "J",
+      "PA",
+      "FA",
+      "CP",
+      "SP",
+      "T",
+      "SQP",
+      "Y",
+      "YP",
+      "W",
+      "WP",
+      "G",
+      "K",
+      "KP",
+      "GP",
+      "GPP"
+    ]
+  },
+  "resourceFailure": "missing speech bundle; visible failure and successful retry after restoration",
+  "recovered": {
+    "text": "en ayant parlé",
+    "voice": "female",
+    "version": "bf8c3554b41fd84bcde821f37b0dac1f82cc271d11c3b5f4c89c93d14e2e6c04",
+    "bytes": 8114,
+    "ogg": [
+      79,
+      103,
+      103,
+      83
+    ],
+    "rate": 1,
+    "currentTime": 0.352978
+  },
+  "retention": [
+    {
+      "text": "nous avions lavé",
+      "voice": "female",
+      "synthesisSpeed": 1,
+      "bitrate": 48000,
+      "generatedAt": 1794030598,
+      "expiresAt": 1794635398,
+      "owned": 0,
+      "publishing": 0,
+      "gcState": "live"
+    },
+    {
+      "text": "je paie",
+      "voice": "female",
+      "synthesisSpeed": 1,
+      "bitrate": 48000,
+      "generatedAt": 1794030599,
+      "expiresAt": 1794635399,
+      "owned": 0,
+      "publishing": 0,
+      "gcState": "live"
+    },
+    {
+      "text": "je paye",
+      "voice": "female",
+      "synthesisSpeed": 1,
+      "bitrate": 48000,
+      "generatedAt": 1794030600,
+      "expiresAt": 1794635400,
+      "owned": 0,
+      "publishing": 0,
+      "gcState": "live"
+    },
+    {
+      "text": "je suis allé",
+      "voice": "female",
+      "synthesisSpeed": 1,
+      "bitrate": 48000,
+      "generatedAt": 1794030601,
+      "expiresAt": 1794635401,
+      "owned": 0,
+      "publishing": 0,
+      "gcState": "live"
+    },
+    {
+      "text": "je suis allée",
+      "voice": "female",
+      "synthesisSpeed": 1,
+      "bitrate": 48000,
+      "generatedAt": 1794030602,
+      "expiresAt": 1794635402,
+      "owned": 0,
+      "publishing": 0,
+      "gcState": "live"
+    },
+    {
+      "text": "je me lave",
+      "voice": "female",
+      "synthesisSpeed": 1,
+      "bitrate": 48000,
+      "generatedAt": 1794030604,
+      "expiresAt": 1794635404,
+      "owned": 0,
+      "publishing": 0,
+      "gcState": "live"
+    },
+    {
+      "text": "lave-toi",
+      "voice": "female",
+      "synthesisSpeed": 1,
+      "bitrate": 48000,
+      "generatedAt": 1794030605,
+      "expiresAt": 1794635405,
+      "owned": 0,
+      "publishing": 0,
+      "gcState": "live"
+    },
+    {
+      "text": "elles se sont abstenues",
+      "voice": "female",
+      "synthesisSpeed": 1,
+      "bitrate": 48000,
+      "generatedAt": 1794030606,
+      "expiresAt": 1794635406,
+      "owned": 0,
+      "publishing": 0,
+      "gcState": "live"
+    },
+    {
+      "text": "va-t’en",
+      "voice": "female",
+      "synthesisSpeed": 1,
+      "bitrate": 48000,
+      "generatedAt": 1794030607,
+      "expiresAt": 1794635407,
+      "owned": 0,
+      "publishing": 0,
+      "gcState": "live"
+    },
+    {
+      "text": "je paie",
+      "voice": "male",
+      "synthesisSpeed": 1,
+      "bitrate": 48000,
+      "generatedAt": 1794030609,
+      "expiresAt": 1794635409,
+      "owned": 0,
+      "publishing": 0,
+      "gcState": "live"
+    },
+    {
+      "text": "en ayant parlé",
+      "voice": "female",
+      "synthesisSpeed": 1,
+      "bitrate": 48000,
+      "generatedAt": 1794030614,
+      "expiresAt": 1794635414,
+      "owned": 0,
+      "publishing": 0,
+      "gcState": "live"
+    }
+  ],
+  "preserved": {
+    "records": 6,
+    "cards": 12,
+    "progress": 12,
+    "existingAudioFiles": 7,
+    "references": true,
+    "selectedAudioVersions": true,
+    "notes": true
+  },
+  "limits": [
+    "No fresh disconnected-system acceptance",
+    "No other-platform execution",
+    "No additional voice-quality admission"
+  ]
+}

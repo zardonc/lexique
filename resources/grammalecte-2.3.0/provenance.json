@@ -1,0 +1,20 @@
+{
+  "upstream": "https://grammalecte.net/",
+  "mirror": "https://github.com/Pofilo/grammalecte",
+  "commit": "08511c222029b3be20bf547563315d10fb48d44b",
+  "source_path": "gc_lang/fr/modules-js/conj_data.json",
+  "source_sha256": "6f5955673ade8d3e32d80b4a57dcff5e025bbe90f13bbb51692066a4c3c3cab3",
+  "source_bytes": 367485,
+  "verbs": 8403,
+  "license": "GPL-3.0-only",
+  "conversion_version": 1,
+  "modified": "2026-11-06: lossless original JSON packaging; metadata and explicit form projection; ordinary active compound/gerund constructions v1; cited transitive auxiliary rule; original Lefff forms preserved; cited modern rester auxiliary correction; cited choir, occire, restricted paître and historical avenir forms; cited mûrir, messeoir and reparcourir group corrections",
+  "files": {
+    "conj_data.json.gz": "ba5dcd495aea2701321f44f45dab73e86df49c8e8e1efe559cbb3364930e1169",
+    "corrections.json": "9d3631203a642c0a478f58d70acfe88472b724dc7a06339281e50280b1044705",
+    "LICENSE-GPL3": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "conj.py": "aa108c62f0362c0e03245b90b07e84fbf67fe2d892ca2c0c6ca062b5b940d923",
+    "upstream-README.txt": "6f004e19dac68638202819e882be50a21852590bbde96511bc0f6d15dcf1db80",
+    "README.md": "2716af74f0d10c982563934ede505bd11ac5d3c9cb28e9c6703ec2dc615b56d3"
+  }
+}

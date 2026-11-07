@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-06",
+  "environment": {
+    "os": "Windows-11-10.0.26300-SP0",
+    "processor": "AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD",
+    "python": "3.14.10",
+    "node": "24.22.1",
+    "pnpm": "11.25.0"
+  },
+  "command": "python -X utf8 scripts/conjugation_sample.py query target/desktop-conjugation-v4/conjugation.sqlite3 \"je suis allée\"",
+  "sampling": "Six fresh CLI processes following builds/tests; warm filesystem, not OS-cold disk or native IPC latency",
+  "sqlite_sha256": "230a9449b4d5042765c98f5a9fd24b1fa49745a0e46bd2dec354148dad31a3c9",
+  "build_ms": 13939,
+  "query_ms": [
+    1642,
+    1661,
+    1645,
+    1633,
+    1633,
+    1651
+  ],
+  "first_ms": 1642,
+  "warm_median_ms": 1645,
+  "warm_max_ms": 1661,
+  "budgets": {
+    "query_ms": 1700,
+    "native_snapshot_bytes": 134217728,
+    "reverse_index_bytes": 18874368
+  },
+  "results": {
+    "all_queries_within_budget": true,
+    "native_snapshot_within_bound": true,
+    "reverse_index_within_budget": true
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "status": "PASS",
+  "restart": true,
+  "normalized_restart": true,
+  "timings": {
+    "query": "elles se sont abstenues",
+    "first_ms": 34.29999999701977,
+    "warm_ms": [
+      35.6000000089407,
+      35.69999998807907,
+      34.900000005960464,
+      46,
+      38.79999999701977
+    ],
+    "boundary": "native IPC; first invocation and subsequent invocations, no OS cache flush"
+  },
+  "coloring": [
+    {
+      "query": "nous avions lavé",
+      "verbal": [
+        "avions lavé"
+      ],
+      "main": [
+        "lavé"
+      ],
+      "ending": [
+        "é"
+      ]
+    },
+    {
+      "query": "lavais",
+      "verbal": [
+        "lavais"
+      ],
+      "main": [
+        "lavais"
+      ],
+      "ending": [
+        "ais"
+      ]
+    },
+    {
+      "query": "sois-toi lavé",
+      "verbal": [
+        "sois",
+        "lavé"
+      ],
+      "main": [
+        "lavé"
+      ],
+      "ending": [
+        "é"
+      ]
+    },
+    {
+      "query": "en se lavant",
+      "verbal": [
+        "lavant"
+      ],
+      "main": [
+        "lavant"
+      ],
+      "ending": [
+        "ant"
+      ]
+    },
+    {
+      "query": "va-t’en",
+      "verbal": [
+        "va"
+      ],
+      "main": [
+        "va"
+      ],
+      "ending": []
+    }
+  ],
+  "modesRestored": [
+    "main",
+    "verbal",
+    "ending"
+  ],
+  "blockOrder": {
+    "custom": [
+      "P",
+      "PC",
+      "I",
+      "F",
+      "C",
+      "S",
+      "J",
+      "PQP",
+      "PA",
+      "FA",
+      "CP",
+      "SP",
+      "T",
+      "SQP",
+      "Y",
+      "YP",
+      "W",
+      "WP",
+      "G",
+      "K",
+      "KP",
+      "GP",
+      "GPP"
+    ],
+    "priority": [
+      "P",
+      "PC",
+      "I",
+      "F",
+      "C",
+      "S",
+      "PQP"
+    ],
+    "verbs": [
+      "laver",
+      "falloir",
+      "se laver"
+    ],
+    "keyboard": true,
+    "resetRestored": true,
+    "failures": [
+      "write",
+      "invalid IPC",
+      "corrupt JSON",
+      "invalid saved order",
+      "unavailable storage"
+    ]
+  },
+  "preferenceFailures": [
+    "write",
+    "invalid IPC",
+    "corrupt settings",
+    "unavailable storage"
+  ],
+  "preserved": {
+    "records": 6,
+    "cards": 12,
+    "audioFiles": 7
+  },
+  "normal_restarts": 4,
+  "source_report": "target/issue-46/native-order-20261106-2/report.json",
+  "executed_reader": "target/issue-46/native-order-20261106-2/Lexique.exe",
+  "unavailable_storage_fixture": "app_metadata temporarily renamed in copied synthetic data; restored before restart"
+}
