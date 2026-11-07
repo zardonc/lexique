@@ -86,6 +86,8 @@ Windows x64 语音开发小样可在构建后运行 `python -X utf8 scripts/pack
 
 CLI 与桌面变位查询接受大小写、Unicode 等价写法、直／弯撇号及首尾／重复空白差异，保留重音、原始显示拼写、完整表达匹配和全部解释。可试 `SOMMES`、` J'AI  AIMÉ `、` VA-T'EN `；实现与 Windows 原生验证见 [#44 证据](docs/evidence/issue-44/README.md)。
 
+2026-11-07，#38 的 Windows x64 变位范围通过 #39–#49 及用户新鲜完整语音包断网验收。匹配格式 6 的资源／reader、全资源覆盖、逐表达实播、显示恢复、词典往返、学习数据保持及 CLI 预算见 [#38 收尾](docs/evidence/issue-38/README.md)。英语释义仍为明确标注缺项的部分覆盖；其他 M3 模块、其他平台实机和 M5 正式发行继续分别验收。
+
 2026-11-05，#39 在同一 CLI 加入固定 Grammalecte 2.3.0 的传统组别、普通主动式助动词与用法元数据，保留原始标记、纠正依据及未知／不适用状态；构建报告列出全资源覆盖。数据许可分别为 Lefff 的 LGPL-LR 与元数据的 GPL-3.0-only，许可、源数据和转换材料随资源保留。新生成资源格式为 2；旧小样保持原样，使用新输出目录重新构建。查询须保留数据库旁的 `grammalecte-2.3.0/` 目录。见 [#39 证据与限制](docs/evidence/issue-39/README.md)。
 
 E2E 结束后在 `apps/desktop/test-results/` 产生桌面 / 手机截图，在 `apps/desktop/playwright-report/` 产生报告。若使用已安装浏览器，可设置 `PLAYWRIGHT_EXECUTABLE_PATH` 为其可执行文件路径。测试自己的服务由 Playwright 启动与关闭，不复用其他开发服务。

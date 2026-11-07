@@ -1,6 +1,6 @@
 # M3 conjugation ticket breakdown
 
-Source: [specification #38](https://github.com/zardonc/lexique/issues/38), [local specification](m3-conjugation-spec.md), and [confirmed scope](m3-conjugation-scope.md). Status: user-approved and published as 11 sub-issues, with 16 native blocking relationships. Publication read-back verified the issue bodies, titles, open states, labels, parent relationships, and blocking edges.
+Source: [specification #38](https://github.com/zardonc/lexique/issues/38), [local specification](m3-conjugation-spec.md), and [confirmed scope](m3-conjugation-scope.md). Current status, 2026-11-07: #39–#49 are accepted and closed for the agreed Windows x64 conjugation scope; [the closeout report](evidence/issue-38/README.md) links feature and combined offline evidence. Publication produced 11 sub-issues with 16 native blocking relationships and verified their bodies, titles, then-open states, labels, parent relationships and blocking edges.
 
 T01–T11 are breakdown identifiers; the delivery table maps them to GitHub issues. Each issue is labelled `ready-for-agent`, includes its acceptance criteria and the shared requirements below, and references real issue numbers. Blocking edges use native relationships.
 
@@ -312,4 +312,4 @@ T04, T05, T06, T07, T08, T09, T10. These include T01–T03 transitively.
 
 Published using `gh issue create --body-file` with the `ready-for-agent` label and `gh api` for native sub-issues and dependencies. Read-back verification passed for all 11 issue titles and complete bodies, labels, open states, parent links, and the exact 16 blocking edges. Body comparisons normalize Windows/Unix line endings. Parent content and state are unchanged.
 
-Only [#39](https://github.com/zardonc/lexique/issues/39) can start immediately. Implementation has not started. Documentation links and staged-diff checks validate this publication record, not the unimplemented feature.
+At publication, only [#39](https://github.com/zardonc/lexique/issues/39) was unblocked and implementation had not started. This section records publication checks; current implementation and Windows x64 acceptance are recorded in the closeout report above.

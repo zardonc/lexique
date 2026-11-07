@@ -1,5 +1,11 @@
 # M3: offline conjugation, complete tables, expression lookup, coloring, and pronunciation
 
+2026-11-07: the agreed Windows x64 conjugation scope is accepted through
+#39–#49 and the user's fresh offline package pass. The
+[closeout report](evidence/issue-38/README.md) maps all 56 stories to the
+executed evidence and retains the separate platform, resource and M5 gates.
+The specification below records the confirmed scope and implementation baseline.
+
 ## Problem Statement
 
 French learners need to identify a conjugated form, understand every valid interpretation, inspect the corresponding verb's complete agreed paradigm, and hear its forms without a network connection. A dictionary hit or an incomplete source table cannot establish that a compound or pronominal expression is supported.

@@ -1,5 +1,12 @@
 # Ordinary verb metadata validation
 
+2026-11-07: all six acceptance criteria were checked and #39 was closed.
+The original format-2 admission evidence below remains historical; the current
+format-6 resource and Windows x64 acceptance are recorded in the
+[#38 closeout](../issue-38/README.md) and [#49 resource summary](../issue-49/resource-summary.json).
+The existing public metadata test passed again against a fresh current build
+(eight independently expected lemmas, 46.340 seconds).
+
 [#39](https://github.com/zardonc/lexique/issues/39) extends the public conjugation CLI with traditional groups, ordinary auxiliary/use metadata, original raw flags, cited corrections, and explicit unresolved coverage. All Lefff forms and matches remain available. Desktop integration and complete M3 generation admission remain separate gates.
 
 ## Inputs, design, and licensing
@@ -30,6 +37,9 @@ References: [aimer](https://www.dictionnaire-academie.fr/conjuguer/A9A1016), [fi
 [Corrections](../../../resources/grammalecte-2.3.0/corrections.json) also retain source-cited auxiliary distinctions for accourir and demeurer. Homographic ressortir uses retain an unconfirmed group pending sense separation. Original flags remain visible beside corrections.
 
 ## Actual coverage and measurements
+
+These are the original format-2 measurements. Later ordinary generation,
+group corrections and compact storage retain separate current reports.
 
 [Public results](actual-results.json), the full [coverage/size report](coverage-and-sizes.json), and [samples/environment](measurements.json) are retained.
 
@@ -82,6 +92,14 @@ On this Windows sandbox, set `TEMP` and `TMP` to a writable directory beneath `t
 
 ## Limits and remaining gates
 
-Auxiliary information is unconfirmed for 6,361 lemmas, including incomplete upstream `zz` records and multiple auxiliaries without validated sense mappings. Group is unconfirmed for 1,253 lemmas. The CLI reports these gaps instead of defaulting to avoir, guessing from suffixes, hiding verbs, or claiming complete generation coverage. The ordinary generation ticket must resolve the gaps needed for its claims.
+At format-2 admission, auxiliary information was unconfirmed for 6,361 lemmas, including incomplete upstream `zz` records and multiple auxiliaries without validated sense mappings. Group was unconfirmed for 1,253 lemmas. That CLI reported these gaps instead of defaulting to avoir, guessing from suffixes, hiding verbs, or claiming complete generation coverage.
+
+The current format-6 ordinary resource has 7,806 supported and 20 explicitly
+unconfirmed group classifications, 7,687 supported auxiliaries and 139
+inapplicable ordinary uses, with no unconfirmed auxiliary entries. These
+refinements belong to [#41](../issue-41/README.md) and [#45](../issue-45/README.md).
+Source-only forms and unconfirmed dimensions remain explicit. English coverage,
+pronominal admission and combined offline acceptance remain attributed to
+their feature reports in the #38 closeout.
 
 Replaceable resource format 2 rejects old version-1 samples; existing outputs remain untouched and can be regenerated into new directories. No learning database migration or access occurs. English meanings, full compound/pronominal generation, ending spans, desktop integration, real first-launch offline package acceptance, and other-platform execution belong to later tickets.
