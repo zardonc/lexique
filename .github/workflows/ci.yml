@@ -144,6 +144,7 @@ jobs:
           arch: amd64
       - run: pnpm install --frozen-lockfile
       - run: pnpm test:tooling
+      - run: pnpm test:sherpa:smoke
       - run: pnpm desktop:portable
       - run: cargo test --locked --release -p lexique-desktop --test speech_cache --lib --no-run
       - run: pnpm test:speech:cache
