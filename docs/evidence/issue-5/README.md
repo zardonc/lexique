@@ -110,7 +110,9 @@ codex sandbox -P issue5 `
 
 输出保留 `report.json` 和八个 WAV；运行时失败保留部分报告与异常上下文，预检失败显示具体缺项或哈希错误。[CLI 回归](../../../scripts/test_sherpa_probe.py)覆盖缺资源、损坏资源、已有输出、改写统一文本及真实禁网生成与播放，并验证完整模型步幅和例句识别。两个音频回归均在修复前复现失败。ASR 只接受 `apprends` / `apprend` 的同音拼写差异，不据此证明短词音素正确。
 
-完整九项检查包括五项音频 / 输入回归及四项来源交付检查。下例复用本机 `.tooling/issue-14/asr-check`；其他环境须先按 `asr-model.json` 备齐固定 ASR 文件，测试内校验身份：
+标准入口 [check_sherpa.py](../../../scripts/check_sherpa.py)提供 `pnpm test:sherpa`（完整九项）与 `pnpm test:sherpa:smoke`（五项资源无关的失败／已有输出保护检查）。完整入口要求下例四个资源变量，任何选中检查跳过均返回失败；使用固定依赖的 Python 和禁网 Windows 环境。Smoke 入口在现有 Windows CI 中执行，保持资源相关的生成／播放与人工音质验收独立；`pnpm test:tooling`同时验证入口的资源预检和 smoke 选择。
+
+完整九项检查包括五项音频 / 输入回归及四项来源交付检查。下例使用与 pnpm 命令相同的入口及固定嵌入式 Python，复用本机 `.tooling/issue-14/asr-check`；其他环境须先按 `asr-model.json` 备齐固定 ASR 文件，测试内校验身份：
 
 ```powershell
 $env:LEXIQUE_SHERPA_ASSETS = (Resolve-Path .tooling/issue-5/windows-x64-recheck/assets).Path
@@ -124,7 +126,7 @@ codex sandbox -P issue5 `
   -c 'permissions.issue5.filesystem={":root"="read",":project_roots"="write"}' `
   -c 'permissions.issue5.network.enabled=false' -C $PWD -- `
   .tooling/issue-5/windows-x64-recheck/runtime/python.exe -B -X utf8 `
-  -m unittest discover -s .tooling/issue-5/windows-x64-recheck/scripts -p 'test_sherpa*.py' -v
+  scripts/check_sherpa.py
 
 .tooling/issue-5/windows-x64-recheck/runtime/python.exe -B -X utf8 `
   docs/evidence/issue-5/measure.py $materials .tooling/issue-5/windows-x64-recheck `

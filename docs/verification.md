@@ -2,6 +2,8 @@
 
 ## Sherpa / Piper 法语独立验证（issue #5）
 
+2026-11-08 标准检查入口：[check_sherpa.py](../scripts/check_sherpa.py)提供 `pnpm test:sherpa` 完整九项与 `pnpm test:sherpa:smoke` 五项资源无关检查。完整入口先要求四个资源变量，任何选中检查跳过均失败；在固定 v7 资源及禁网 Windows 沙箱中，九项通过（21.556 秒，无跳过）。Smoke 五项通过（0.908 秒），入口资源预检与选择的两项回归通过；每个测试子进程保持 `-B` 与 60 秒硬限。`pnpm test:tooling`通过，其中既有 `test_speech_package_contains_resources_and_licenses` 因未配置原包夹具跳过，原包验收继续沿用既有证据。现有 Windows CI 已接 smoke 入口，远端执行本轮待验证；其他平台实机与干净机器首装继续延期。
+
 2026-11-07，固定 Sherpa-ONNX 2.0.1、Piper Tom medium / 单说话人 0、piper-tts 1.8.0 外部 eSpeak NG 1.52.0.1 与官方 CPython 3.14.10，在 Windows x64 AppContainer 禁网进程生成、回读并同步调用播放八个有效、非静音的 44,100 Hz PCM WAV。前后对两个公网 IP 的四次连接均返回 WinError 10013。统一输入 `fr-common-v1` 原样保留；完整音素路径使用 `GenerationConfig.phoneme_codepoints`，并以 `silence_scale=1.0` 保留安静词尾的完整波形。
 
 九项禁网 CLI 检查全部通过（25.777 秒，无跳过）：五项音频 / 输入回归与四项来源交付检查，覆盖完整归档 / 原模型 / 双配置、同长度损坏输入、缺失材料与已有目录 / ZIP / 报告保护，保留完整模型步幅与固定句子识别回归。`pnpm typecheck` 与 `pnpm test:docs` 通过；测试子进程使用 `-B` 且保持 60 秒硬限。ONNX 1.23.2 两次生成相同模型 / 配置 / token 哈希并确认序列化图未变。v7 包内八条禁网生成与同步播放、完整测试后的运行目录 inventory 和 ZIP 校验通过。运行打包缺失来源 ZIP、测量时来源报告哈希不符的失败检查通过，均未创建输出。运行 ZIP 为 170,714,070 字节、安装逻辑体积 279,806,634 字节；来源 ZIP 为 122,375,208 字节、展开 128,126,232 字节；总获取 255,435,808 字节，两 ZIP 共 293,089,278 字节，已报告超过 200 MB。ASR 缓存不进入语音包。完整方法见 [#5 证据与测量](evidence/issue-5/README.md)。
