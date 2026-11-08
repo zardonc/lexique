@@ -66,6 +66,33 @@ pub fn content_hash(bytes: &[u8]) -> String {
     format!("{:x}", Sha256::digest(bytes))
 }
 
+pub fn speech_audio_voice(
+    connection: &Connection,
+    key: Option<&str>,
+) -> Result<Option<SpeechVoice>, StorageError> {
+    let Some(key) = key else {
+        return Ok(None);
+    };
+    let saved: String = connection.query_row(
+        "SELECT spec FROM speech_assets WHERE semantic_key=?1",
+        [key],
+        |row| row.get(0),
+    )?;
+    let spec: SpeechSpec = serde_json::from_str(&saved)?;
+    if !spec.model.starts_with("supertonic-3/int8/")
+        || spec.speed != 1
+        || spec.steps != 8
+        || spec.language != "fr"
+    {
+        return Ok(None);
+    }
+    Ok(match spec.voice.as_str() {
+        "female" => Some(SpeechVoice::Female),
+        "male" => Some(SpeechVoice::Male),
+        _ => None,
+    })
+}
+
 pub fn register_speech(connection: &Connection, spec: &SpeechSpec) -> Result<String, StorageError> {
     let key = spec.key()?;
     let serialized = serde_json::to_string(spec)?;

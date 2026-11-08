@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>法语朗读语速试听</title>
+  <style>
+    body { max-width: 760px; margin: 32px auto; padding: 0 20px; background: #f7f7f4; color: #252720; font: 16px/1.6 system-ui, sans-serif; }
+    .voices { display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 28px; }
+    figure { margin: 18px 0; } audio { width: 100%; } figcaption { margin-bottom: 6px; }
+  </style>
+</head>
+<body>
+  <h1>法语朗读语速试听</h1>
+  <p>WPM 表示每分钟朗读的词数。此处用完整句子的实测声线基准近似换算，保留句内停顿和音高。</p>
+  <p lang="fr">Aujourd’hui, nous allons au marché pour acheter du pain, des fruits et quelques légumes frais.</p>
+  <p>语音由 Supertonic 3 机器合成；F1／M1、CPU、正常合成、八步去噪、48 kbit/s Ogg Opus。</p>
+  <div class="voices">
+    <section><h2>女声 F1</h2>
+      <figure><figcaption>80 WPM</figcaption><audio controls src="female-1.ogg" data-voice="female" data-wpm="80" aria-label="女声 80 WPM"></audio></figure>
+      <figure><figcaption>180 WPM</figcaption><audio controls src="female-1.ogg" data-voice="female" data-wpm="180" aria-label="女声 180 WPM"></audio></figure>
+      <figure><figcaption>240 WPM</figcaption><audio controls src="female-1.ogg" data-voice="female" data-wpm="240" aria-label="女声 240 WPM"></audio></figure>
+    </section>
+    <section><h2>男声 M1</h2>
+      <figure><figcaption>80 WPM</figcaption><audio controls src="male-1.ogg" data-voice="male" data-wpm="80" aria-label="男声 80 WPM"></audio></figure>
+      <figure><figcaption>180 WPM</figcaption><audio controls src="male-1.ogg" data-voice="male" data-wpm="180" aria-label="男声 180 WPM"></audio></figure>
+      <figure><figcaption>240 WPM</figcaption><audio controls src="male-1.ogg" data-voice="male" data-wpm="240" aria-label="男声 240 WPM"></audio></figure>
+    </section>
+  </div>
+  <p>女声基准 149.26 WPM；男声基准 149.15 WPM。完整三句输入、词数、时长与生成记录见 <a href="calibration.json">校准数据</a>。音高与清晰度仍需人工试听判断。</p>
+  <p>资源许可与使用条件见 <a href="../issue-14/supertonic-licenses/ATTRIBUTION.md">Supertonic 许可材料</a>。</p>
+  <script>
+    const baselines = { female: 149.256686, male: 149.148901 };
+    const players = [...document.querySelectorAll('audio')];
+    for (const audio of players) {
+      const rate = Number(audio.dataset.wpm) / baselines[audio.dataset.voice];
+      audio.preservesPitch = true;
+      audio.defaultPlaybackRate = rate;
+      audio.playbackRate = rate;
+      audio.addEventListener('play', () => { for (const other of players) if (other !== audio) other.pause(); });
+    }
+  </script>
+</body>
+</html>

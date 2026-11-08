@@ -17,7 +17,7 @@ try {
     const invoke = window.__TAURI_INTERNALS__.invoke;
     const words = [];
     for (const [index, headword] of ['école', 'bonjour'].entries()) {
-      const bytes = await invoke('speech_preview', { text: headword });
+      const { bytes } = await invoke('speech_preview', { text: headword });
       const saved = await invoke('vocabulary_save', { request: { operation: `recover-version-${index}`, headword, notes: 'keep', example_fr: 'Bonjour.', example_zh: '你好。', example_sense: 0, more_examples: [], id: null, revision: null } });
       await invoke('review_add_batch', { request: { operation: `recover-cards-${index}`, vocabulary_ids: [saved.record.id] } });
       words.push({ id: saved.record.id, bytes, cards: await invoke('review_cards', { vocabularyId: saved.record.id }) });
@@ -47,7 +47,7 @@ print(json.dumps(dict(locator=locator,hash=content,missingIntents=205,ownedGcKey
     for (const word of before) {
       const restored = await page.evaluate(async (id) => {
         const invoke = window.__TAURI_INTERNALS__.invoke;
-        return { bytes: await invoke('speech_cached', { vocabularyId: id }), cards: await invoke('review_cards', { vocabularyId: id }) };
+        return { bytes: (await invoke('speech_cached', { vocabularyId: id })).bytes, cards: await invoke('review_cards', { vocabularyId: id }) };
       }, word.id);
       assert.deepEqual(restored.bytes, word.bytes); assert.deepEqual(restored.cards, word.cards);
     }

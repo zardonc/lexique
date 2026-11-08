@@ -52,7 +52,7 @@ print(json.dumps(dict(now=now,expected=expected,versions=versions,busy=busy)))`)
       for (const entry of actual.window.filter((entry) => entry.card.kind === 'listening')) {
         const version = before.versions[entry.card.vocabulary_id];
         assert.equal(entry.version, version.locator, `${name}: selected version`);
-        assert.deepEqual(Buffer.from(entry.audio), await readFile(version.path), `${name}: same selected bytes`);
+        assert.deepEqual(Buffer.from(entry.audio.bytes), await readFile(version.path), `${name}: same selected bytes`);
       }
       check.status = 'passed'; return actual;
     }
@@ -76,11 +76,11 @@ c.commit();print(json.dumps(dict(now=now,words=8,cards=16,schema=c.execute('PRAG
       const context = new AudioContext();
       try { const audio = await context.decodeAudioData(new Uint8Array(bytes).buffer); return { duration: audio.duration, audible: audio.getChannelData(0).some((value) => value !== 0) }; }
       finally { await context.close(); }
-    }, listening.audio);
+    }, listening.audio.bytes);
     assert.ok(decoded.duration > 0 && decoded.audible); report.decoded = decoded;
     const old = snapshot().versions[listening.card.vocabulary_id];
     const published = await invoke('speech_generate', { vocabularyId: listening.card.vocabulary_id, regenerate: true, operation: 'oracle-selected-replacement' });
-    assert.ok(published.length > 4);
+    assert.ok(published.bytes.length > 4);
     const replacement = await compare('native selected-version publication');
     assert.notEqual(snapshot().versions[listening.card.vocabulary_id].locator, old.locator);
     const candidate = replacement.window.find((entry) => entry.card.kind === 'listening');

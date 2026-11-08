@@ -11,12 +11,18 @@ use std::{
 
 use lexique_storage as storage;
 use rusqlite::Connection;
-use serde::Deserialize;
+use serde::{Deserialize, Serialize};
 use tauri::Emitter;
 #[cfg(windows)]
 use tauri::Manager;
 
 use crate::{speech_cache, vocabulary::DatabasePath};
+
+#[derive(Clone, Debug, Serialize)]
+pub struct SpeechAudio {
+    pub bytes: Vec<u8>,
+    pub voice: Option<storage::SpeechVoice>,
+}
 
 pub fn now() -> Result<i64, String> {
     i64::try_from(
@@ -63,20 +69,20 @@ pub fn cached_word(
     inspector: &speech_cache::Inspector,
     id: i64,
     time: i64,
-) -> Result<Option<Vec<u8>>, String> {
+) -> Result<Option<SpeechAudio>, String> {
     if let Some(version) = storage::selected_audio(connection, id).map_err(|e| e.to_string())? {
-        return read_selected(inspector, &version);
+        return read_selected_audio(connection, inspector, &version);
     }
     let pending =
         storage::pending_word_audio_versions(connection, id).map_err(|e| e.to_string())?;
     for version in &pending {
-        if read_selected(inspector, version)?.is_some() {
+        if read_selected_audio(connection, inspector, version)?.is_some() {
             storage::complete_audio_version(connection, &version.locator, time)
                 .map_err(|e| e.to_string())?;
             if let Some(selected) =
                 storage::selected_audio(connection, id).map_err(|e| e.to_string())?
             {
-                return read_selected(inspector, &selected);
+                return read_selected_audio(connection, inspector, &selected);
             }
         }
     }
@@ -102,7 +108,7 @@ pub fn cached_word(
             if let Some(version) =
                 storage::selected_audio(connection, id).map_err(|e| e.to_string())?
             {
-                return read_selected(inspector, &version);
+                return read_selected_audio(connection, inspector, &version);
             }
             return Err("Initial audio selection was superseded".into());
         }
@@ -121,12 +127,12 @@ fn select_initial(
     generated_at: Option<i64>,
     bytes: &[u8],
     time: i64,
-) -> Result<Option<Vec<u8>>, String> {
+) -> Result<Option<SpeechAudio>, String> {
     let publication =
         publish_selection(connection, inspector, id, key, generated_at, bytes, 0, time);
     // Another reader may have committed first. Always return the winning selection's bytes.
     if let Some(version) = storage::selected_audio(connection, id).map_err(|e| e.to_string())? {
-        return read_selected(inspector, &version);
+        return read_selected_audio(connection, inspector, &version);
     }
     publication?;
     Err("Initial audio selection disappeared".into())
@@ -145,6 +151,22 @@ pub fn read_selected(
         }
     }
     Ok(bytes)
+}
+
+pub fn read_selected_audio(
+    connection: &Connection,
+    inspector: &speech_cache::Inspector,
+    version: &storage::AudioVersion,
+) -> Result<Option<SpeechAudio>, String> {
+    read_selected(inspector, version)?
+        .map(|bytes| {
+            Ok(SpeechAudio {
+                bytes,
+                voice: storage::speech_audio_voice(connection, version.semantic_key.as_deref())
+                    .map_err(|e| e.to_string())?,
+            })
+        })
+        .transpose()
 }
 
 pub fn publish_selection(
@@ -1385,7 +1407,8 @@ mod tests {
         assert_eq!(
             cached_word(&connection, &inspector, 1, 1002)
                 .unwrap()
-                .unwrap(),
+                .unwrap()
+                .bytes,
             intended
         );
         assert_eq!(

@@ -2,9 +2,10 @@ import { useEffect, useRef, useState } from 'react';
 import type { RuntimeAdapter } from './platform/runtime';
 import { AudioGenerationFailed } from './platform/runtime';
 import { errorMessage } from './platform/vocabulary';
+import type { SpeechAudio } from './platform/speech';
 
 export function useQueueAudioReplacement(id: number, runtime: RuntimeAdapter) {
-  const [audio, setAudio] = useState<Uint8Array | null>(null);
+  const [audio, setAudio] = useState<SpeechAudio | null>(null);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState('');
   const request = useRef(0);

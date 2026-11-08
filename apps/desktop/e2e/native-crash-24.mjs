@@ -49,7 +49,7 @@ c.execute("INSERT INTO vocabulary(id,headword,snapshot,notes,created_at,updated_
   else if (['renamed', 'readback', 'db_complete'].includes(point)) {
     assert.ok(after.selected?.[0]); assert.equal(after.selected[1], 1);
     const bytes = await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('speech_cached', { vocabularyId: 1 }));
-    assert.deepEqual(Buffer.from(bytes), await readFile(resolve('../../docs/evidence/issue-14/supertonic-opus/female-normal-01-48k.opus')));
+    assert.deepEqual(Buffer.from(bytes.bytes), await readFile(resolve('../../docs/evidence/issue-14/supertonic-opus/female-normal-01-48k.opus')));
   } else assert.equal(after.selected?.[0] ?? null, null);
   await fixture.stop(true);
   await fixture.start(); await fixture.stop(true);

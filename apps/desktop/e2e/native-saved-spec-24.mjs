@@ -33,7 +33,7 @@ try {
   let page = await fixture.start();
   const original = await page.evaluate(async () => {
     const invoke = window.__TAURI_INTERNALS__.invoke;
-    const bytes = await invoke('speech_preview', { text: 'école' });
+    const { bytes } = await invoke('speech_preview', { text: 'école' });
     await invoke('vocabulary_save', { request: { operation: 'saved-spec-word', headword: 'école', notes: 'keep', example_fr: '', example_zh: '', example_sense: null, more_examples: [], id: null, revision: null } });
     await invoke('review_add_batch', { request: { operation: 'saved-spec-cards', vocabulary_ids: [1] } });
     await invoke('speech_cached', { vocabularyId: 1 });
@@ -59,12 +59,12 @@ try {
   assert.equal(observed.tasks.find((task) => task.spec.text === 'bonjour').state, 'ready');
   assert.deepEqual(observed.selected, before.selected, 'Failed replacement keeps the selected content and revision');
   assert.equal(observed.notes, 'keep');
-  assert.deepEqual(await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('speech_cached', { vocabularyId: 1 })), original);
+  assert.deepEqual(await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('speech_cached', { vocabularyId: 1 }).then(audio => audio.bytes)), original);
   await fixture.stop(true);
   assert.equal(fixture.workerPids().length, 0);
   page = await fixture.start();
   assert.deepEqual(inspect(), observed, 'Restart must retain terminal failures and attempt budgets');
-  assert.deepEqual(await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('speech_cached', { vocabularyId: 1 })), original);
+  assert.deepEqual(await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('speech_cached', { vocabularyId: 1 }).then(audio => audio.bytes)), original);
   assert.equal(fixture.workerPids().length, 0, 'Cache-only recovery must not restart unsupported work');
   await writeFile(join(fixture.destination, 'results.json'), JSON.stringify({ unsupportedSpecifications: unsupported.length, supportedExecution: 'ready', selectedPreserved: true, restartPreserved: true, ownedWorkersAfterExit: 0 }, null, 2));
   console.log('Persisted specification validation and recovery passed');

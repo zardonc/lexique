@@ -3,7 +3,7 @@ import { readFileSync } from 'node:fs';
 import { nativeFixture, record } from './native-fixture';
 import { notebookMessages } from '../src/notebook-content';
 
-const audio = [...readFileSync(new URL('../../../docs/evidence/issue-14/supertonic-opus/female-normal-01-48k.opus', import.meta.url))];
+const audio = { bytes: [...readFileSync(new URL('../../../docs/evidence/issue-14/supertonic-opus/female-normal-01-48k.opus', import.meta.url))], voice: 'female' };
 const progress = { revision: 0, card: { phase: 'new', memory: null, last_review_at: null, due_at: null } };
 const entry = (id: number, kind: 'recognition' | 'listening') => ({ card: { id, vocabulary_id: id, kind },
   record: { ...record, id, headword: id === 1 ? 'école' : 'bonjour' }, progress,
@@ -16,7 +16,7 @@ function payload(revision: number, changed = entries, before: number | null = nu
     summary: { admitted_count: 20 + revision, audio_pending_count: 0, missing_vocabulary_ids: [], verification_pending: false,
       learning_day: '2026-11-04', timezone: 'UTC', revision },
     delta: { before_revision: before, after_revision: revision, removed: [], order: [1, 2] },
-    metrics: { metadata_candidates: 20, strict_probes: 0, compressed_bytes: audio.length, payload_bytes: changed.reduce((sum, entry) => sum + (entry.audio?.length ?? 0), 0),
+    metrics: { metadata_candidates: 20, strict_probes: 0, compressed_bytes: audio.bytes.length, payload_bytes: changed.reduce((sum, entry) => sum + (entry.audio?.bytes.length ?? 0), 0),
       validation_wait_ms: 0, metadata_loaded_rows: 0, parsed_progress: 0, metadata_rebuilt: false, rebuild_reason: null, database_ms: 0 } };
 }
 

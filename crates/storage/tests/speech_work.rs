@@ -365,7 +365,7 @@ fn later_chunks_keep_the_committed_voice_and_cancellation_snapshot() {
                     &other,
                     &SpeechPreferences {
                         voice: SpeechVoice::Male,
-                        speed: SpeechSpeed::Normal,
+                        wpm: 180,
                     },
                 )
                 .unwrap();
@@ -566,7 +566,7 @@ fn duplicate_batches_do_not_reset_terminal_audio_or_change_voice() {
         &connection,
         &SpeechPreferences {
             voice: SpeechVoice::Male,
-            speed: SpeechSpeed::Slow,
+            wpm: 100,
         },
     )
     .unwrap();

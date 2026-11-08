@@ -7,8 +7,8 @@ import { recordSchema, saveRequestSchema, saveResultSchema, sortSchema } from '.
 import type { SaveRequest, SaveResult, VocabularyRecord, VocabularySort } from './vocabulary';
 import { dictionarySchema } from './dictionary';
 import type { DictionaryLookup } from './dictionary';
-import { speechPreferencesSchema } from './speech';
-import type { SpeechPreferences } from './speech';
+import { speechAudioSchema, speechPreferencesSchema, speechVoiceSchema } from './speech';
+import type { SpeechAudio, SpeechPreferences } from './speech';
 
 const runtimeStatusSchema = z.object({
   version: z.string().min(1),
@@ -70,7 +70,7 @@ export type ReviewSettings = z.infer<typeof reviewSettingsSchema>;
 const queueCardSchema = z.object({ id: z.number().int().positive().safe(), vocabulary_id: z.number().int().positive().safe(), kind: z.enum(['recognition', 'listening']) }).strict();
 const windowEntrySchema = z.object({ card: queueCardSchema, record: recordSchema, progress: progressSchema,
   version: z.string().regex(/^[a-f0-9]{64}$/).nullable(), content_hash: z.string().regex(/^[a-f0-9]{64}$/).nullable(),
-  audio: z.array(z.number().int().min(0).max(255)).max(10_000_000).nullable() }).strict()
+  audio: speechAudioSchema.nullable() }).strict()
   .refine((value) => value.record.id === value.card.vocabulary_id && (value.card.kind !== 'listening' || value.version !== null && value.content_hash !== null), 'Invalid verified queue entry');
 const queuePayloadSchema = z.object({ queue: z.object({ cards: z.array(queueCardSchema).max(4), reason: z.enum(['clock', 'due', 'quota', 'deferred']).nullable(), available_at: z.number().int().safe().nullable() }).strict(), record: recordSchema.nullable(), audio_pending: z.boolean(), audio_error: z.string().nullable(), audio_vocabulary_id: z.number().int().positive().safe().nullable().default(null),
   summary: z.object({ admitted_count: z.number().int().nonnegative().safe(), audio_pending_count: z.number().int().nonnegative().safe(), missing_vocabulary_ids: z.array(z.number().int().positive().safe()).max(100), verification_pending: z.boolean(), learning_day: z.string(), timezone: z.string().min(1).max(128), revision: z.number().int().nonnegative().safe(), unknown_legacy: z.boolean().default(false) }).strict(),
@@ -80,7 +80,7 @@ const queuePayloadSchema = z.object({ queue: z.object({ cards: z.array(queueCard
   .refine((value) => new Set(value.delta.order).size === value.delta.order.length && new Set(value.window.map((entry) => entry.card.id)).size === value.window.length && value.window.every((entry) => value.delta.order.includes(entry.card.id)), 'Invalid queue delta entries');
 const queueViewSchema = queuePayloadSchema
   .refine((value) => value.queue.cards.length ? value.record?.id === value.queue.cards[0]?.vocabulary_id : value.record === null, 'Invalid queue record')
-  .refine((value) => value.window.length === value.queue.cards.length && value.window.every((entry, index) => entry.card.id === value.queue.cards[index]?.id && (entry.card.kind !== 'listening' || entry.audio !== null)) && value.window.reduce((sum, entry) => sum + (entry.audio?.length ?? 0), 0) <= 33_554_432, 'Invalid queue window');
+  .refine((value) => value.window.length === value.queue.cards.length && value.window.every((entry, index) => entry.card.id === value.queue.cards[index]?.id && (entry.card.kind !== 'listening' || entry.audio !== null)) && value.window.reduce((sum, entry) => sum + (entry.audio?.bytes.length ?? 0), 0) <= 33_554_432, 'Invalid queue window');
 export type QueueView = z.infer<typeof queueViewSchema>;
 
 let receivedQueue: QueueView | null = null;
@@ -141,9 +141,9 @@ export interface RuntimeAdapter {
   readonly undoReview: (operation: string, ratingOperation: string) => Promise<{ readonly queue_rebuilt: boolean } | null>;
   readonly reviewSettings: (settings?: ReviewSettings) => Promise<ReviewSettings | null>;
   readonly reviewQueue: (skipped?: readonly number[]) => Promise<QueueView | null>;
-  readonly generateSpeech: (id: number, regenerate?: boolean, operation?: string) => Promise<Uint8Array | null>;
-  readonly previewSpeech: (text: string) => Promise<Uint8Array | null>;
-  readonly cachedSpeech: (id: number) => Promise<Uint8Array | null>;
+  readonly generateSpeech: (id: number, regenerate?: boolean, operation?: string) => Promise<SpeechAudio | null>;
+  readonly previewSpeech: (text: string, voice?: SpeechPreferences['voice']) => Promise<SpeechAudio | null>;
+  readonly cachedSpeech: (id: number) => Promise<SpeechAudio | null>;
   readonly onCloseRequested: (callback: () => void) => Promise<() => void>;
   readonly finishClose: () => Promise<void>;
 }
@@ -279,10 +279,8 @@ export const runtime: RuntimeAdapter = {
       const code = character.charCodeAt(0); return code >= 32 && (code < 127 || code > 159);
     })).parse(operation);
     try {
-      const bytes = z.array(z.number().int().min(0).max(255)).min(1).max(10_000_000)
-        .parse(await invoke('speech_generate', { vocabularyId: z.number().int().positive().safe().parse(id), operation: validOperation,
+      return speechAudioSchema.parse(await invoke('speech_generate', { vocabularyId: z.number().int().positive().safe().parse(id), operation: validOperation,
           ...(regenerate ? { regenerate: true } : {}) }));
-      return new Uint8Array(bytes);
     } catch (cause) {
       if (typeof cause === 'string' && cause.startsWith('Audio generation failed: ')) throw new AudioGenerationFailed(cause);
       throw cause;
@@ -290,15 +288,14 @@ export const runtime: RuntimeAdapter = {
   },
   async cachedSpeech(id) {
     if (!isTauri()) return null;
-    const bytes = z.array(z.number().int().min(0).max(255)).min(1).max(10_000_000).nullable()
+    return speechAudioSchema.nullable()
       .parse(await invoke('speech_cached', { vocabularyId: z.number().int().positive().safe().parse(id) }));
-    return bytes === null ? null : new Uint8Array(bytes);
   },
-  async previewSpeech(text) {
+  async previewSpeech(text, voice) {
     if (!isTauri()) return null;
-    const bytes = z.array(z.number().int().min(0).max(255)).min(1).max(10_000_000)
-      .parse(await invoke('speech_preview', { text }));
-    return new Uint8Array(bytes);
+    return speechAudioSchema.parse(await invoke('speech_preview', {
+      text, ...(voice === undefined ? {} : { voice: speechVoiceSchema.parse(voice) }),
+    }));
   },
   async onCloseRequested(callback) {
     if (!isTauri()) return () => {};

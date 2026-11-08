@@ -38,14 +38,15 @@ mod queue_audio_tests {
         assert_eq!(
             crate::speech_tasks::cached_word(&connection, &inspector, 1, 1001)
                 .unwrap()
-                .unwrap(),
+                .unwrap()
+                .bytes,
             first
         );
         lexique_storage::set_speech_preferences(
             &connection,
             &lexique_storage::SpeechPreferences {
                 voice: lexique_storage::SpeechVoice::Male,
-                speed: lexique_storage::SpeechSpeed::Normal,
+                wpm: 180,
             },
         )
         .unwrap();
@@ -54,11 +55,12 @@ mod queue_audio_tests {
         let hash = lexique_storage::content_hash(second);
         crate::speech_cache::write_asset(&path, &male, &hash, second).unwrap();
         lexique_storage::publish_speech(&connection, &male, &hash, 1002).unwrap();
+        let playable = crate::speech_tasks::cached_word(&connection, &inspector, 1, 1003)
+            .unwrap()
+            .unwrap();
+        assert_eq!(playable.voice, Some(lexique_storage::SpeechVoice::Female));
         assert_eq!(
-            crate::speech_tasks::cached_word(&connection, &inspector, 1, 1003)
-                .unwrap()
-                .unwrap(),
-            first,
+            playable.bytes, first,
             "Changing preference and saving a word must not replace its selected audio"
         );
         let selected = lexique_storage::selected_audio(&connection, 1)
@@ -70,7 +72,8 @@ mod queue_audio_tests {
         assert_eq!(
             crate::speech_tasks::cached_word(&connection, &inspector, 1, 1004)
                 .unwrap()
-                .unwrap(),
+                .unwrap()
+                .bytes,
             first,
             "Removing an unselected source preserves the selected instance"
         );
@@ -82,7 +85,8 @@ mod queue_audio_tests {
         assert_eq!(
             crate::speech_tasks::cached_word(&connection, &inspector, 1, 1005)
                 .unwrap()
-                .unwrap(),
+                .unwrap()
+                .bytes,
             first
         );
         assert_eq!(
@@ -602,7 +606,7 @@ pub async fn review_rate(
 pub async fn speech_cached(
     path: State<'_, DatabasePath>,
     vocabulary_id: i64,
-) -> Result<Option<Vec<u8>>, String> {
+) -> Result<Option<crate::speech_tasks::SpeechAudio>, String> {
     if vocabulary_id <= 0 || vocabulary_id > 9_007_199_254_740_991 {
         return Err("Invalid vocabulary ID".into());
     }
@@ -632,7 +636,7 @@ pub async fn speech_generate(
     vocabulary_id: i64,
     regenerate: Option<bool>,
     operation: Option<String>,
-) -> Result<Vec<u8>, String> {
+) -> Result<crate::speech_tasks::SpeechAudio, String> {
     if vocabulary_id <= 0 || vocabulary_id > 9_007_199_254_740_991 {
         return Err("Invalid vocabulary ID".into());
     }
@@ -703,7 +707,7 @@ pub async fn speech_generate(
         {
             return Err("Audio selection was superseded; retry".into());
         }
-        let bytes = crate::speech_tasks::read_selected(&inspector, &version)?
+        let bytes = crate::speech_tasks::read_selected_audio(&connection, &inspector, &version)?
             .ok_or("Generated audio selection is unavailable")?;
         crate::speech_tasks::changed(&app);
         Ok(bytes)
@@ -724,16 +728,20 @@ pub async fn speech_preview(
     app: tauri::AppHandle,
     path: State<'_, DatabasePath>,
     text: String,
-) -> Result<Vec<u8>, String> {
+    voice: Option<lexique_storage::SpeechVoice>,
+) -> Result<crate::speech_tasks::SpeechAudio, String> {
     let path = DatabasePath(path.0.clone());
     tauri::async_runtime::spawn_blocking(move || {
         let mut connection = open(&path)?;
-        let spec = lexique_storage::SpeechSpec::word(
-            &text,
-            lexique_storage::speech_preferences(&connection)
-                .map_err(|e| e.to_string())?
-                .voice,
-        );
+        let voice = match voice {
+            Some(voice) => voice,
+            None => {
+                lexique_storage::speech_preferences(&connection)
+                    .map_err(|e| e.to_string())?
+                    .voice
+            }
+        };
+        let spec = lexique_storage::SpeechSpec::word(&text, voice);
         let key = spec.key().map_err(|e| e.to_string())?;
         let inspector = crate::speech_cache::Inspector::new(&path.0)?;
         if let Some(bytes) = crate::speech_tasks::cached_asset(
@@ -742,7 +750,10 @@ pub async fn speech_preview(
             &key,
             crate::speech_tasks::now()?,
         )? {
-            return Ok(bytes);
+            return Ok(crate::speech_tasks::SpeechAudio {
+                bytes,
+                voice: Some(voice),
+            });
         }
         lexique_storage::request_speech(
             &mut connection,
@@ -755,7 +766,10 @@ pub async fn speech_preview(
         drop(connection);
         let tasks = app.state::<crate::speech_tasks::SpeechTasks>();
         tasks.wake()?;
-        tasks.wait(key)
+        Ok(crate::speech_tasks::SpeechAudio {
+            bytes: tasks.wait(key)?,
+            voice: Some(voice),
+        })
     })
     .await
     .map_err(|e| format!("Speech preview task failed: {e}"))?

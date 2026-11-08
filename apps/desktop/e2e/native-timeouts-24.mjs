@@ -59,7 +59,7 @@ try {
 c.execute("UPDATE speech_tasks SET state='retry_wait',attempts=3,wake_at=?,deadline_at=?,refresh_requested=1 WHERE id=(SELECT MIN(id) FROM speech_tasks)",(now,deadline));c.commit()
 print(json.dumps(dict(deadline=deadline,id=c.execute('SELECT MIN(id) FROM speech_tasks').fetchone()[0])))`);
     const recovered = await invoke('speech_preview', { text: 'bonjour' });
-    assert.ok(recovered.length > 4, 'A new request must recover after the timed-out worker exits');
+    assert.ok(recovered.bytes.length > 4, 'A new request must recover after the timed-out worker exits');
     const row = sql(`print(json.dumps(c.execute('SELECT state,attempts,deadline_at,error FROM speech_tasks WHERE id=${expected.id}').fetchone()))`);
     assert.equal(row[0], 'failed'); assert.equal(row[1], 4); assert.equal(row[2], expected.deadline);
     assert.match(row[3], /Offline synthesis execution timed out/);

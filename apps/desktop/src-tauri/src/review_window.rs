@@ -285,7 +285,7 @@ pub struct WindowEntry {
     pub progress: storage::ReviewProgress,
     pub version: Option<String>,
     pub content_hash: Option<String>,
-    pub audio: Option<Vec<u8>>,
+    pub audio: Option<crate::speech_tasks::SpeechAudio>,
 }
 #[derive(Deserialize)]
 #[serde(deny_unknown_fields)]
@@ -545,6 +545,18 @@ pub fn read(
             .progress(card.id)
             .ok_or("Queue progress disappeared")?
             .clone();
+        let audio = if let Some(bytes) = audio {
+            Some(crate::speech_tasks::SpeechAudio {
+                bytes,
+                voice: storage::speech_audio_voice(
+                    &tx,
+                    version.and_then(|v| v.semantic_key.as_deref()),
+                )
+                .map_err(|e| e.to_string())?,
+            })
+        } else {
+            None
+        };
         window.push(WindowEntry {
             card,
             record,
@@ -607,7 +619,7 @@ pub fn read(
                 entry.audio = None;
             }
         }
-        payload_bytes += entry.audio.as_ref().map_or(0, Vec::len);
+        payload_bytes += entry.audio.as_ref().map_or(0, |audio| audio.bytes.len());
         changed.push(entry);
     }
     database_ms += database_started.elapsed().as_secs_f64() * 1000.0;

@@ -2,7 +2,7 @@ import { expect, test } from '@playwright/test';
 import { readFileSync } from 'node:fs';
 import { nativeFixture, record } from './native-fixture';
 
-const audio = [...readFileSync(new URL('../../../docs/evidence/issue-14/supertonic-opus/female-normal-01-48k.opus', import.meta.url))];
+const audio = { bytes: [...readFileSync(new URL('../../../docs/evidence/issue-14/supertonic-opus/female-normal-01-48k.opus', import.meta.url))], voice: 'female' };
 const ready = { queue: { cards: [{ id: 11, vocabulary_id: 1, kind: 'listening' }], reason: null, available_at: null }, record, audio_pending: false, audio_error: null };
 
 test('failed queue audio can be regenerated in place; replacement must play before rating', async ({ page }) => {

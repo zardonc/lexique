@@ -1,5 +1,13 @@
 # 骨架验证记录
 
+## 共用朗读 WPM（issue #56）
+
+2026-11-08，语音偏好改为 80–240 WPM、步长 20，默认女声／180，提供 100／180／240 预设与短句试听。单词、听音卡和逐表达变位共用保存偏好及录制声线基准；当前播放不随保存跳速。旧 normal／slow 读取为 180／100，读取不改写记录，失败保存保留待保存选择与旧持久设置。
+
+Windows x64 的十项原生播放、真实 SQLite 旧格式／非法值／写入失败及重启恢复检查通过，保留生词、摘要、笔记、两卡进度、当前作答、选定音频与保护关系。前端整套 154 项、核心／存储／词典 145 项、桌面库 3 项、缓存 10 项通过；缓存的既有独立 crash fixture 按其要求保持 ignored，执行的 Rust runner 保留 60 秒硬限。完整命令和限制见 [#56 证据](evidence/issue-56/README.md)。
+
+两声线基准来自三条法语句子的 53 个书写词和完整音频时长。六个端点播放器的速率、时间推进及音高保持开关通过自动检查；[人工试听](evidence/issue-56/listen.html)待确认。其他平台、干净机器与正式发行门槛保持。
+
 ## Kokoro 法语独立验证（issue #6）
 
 2026-11-07（America/Vancouver），Kokoro v1.0 int8 / `ff_siwis`、kokoro-onnx 0.6.1、phonemizer 3.4.0、eSpeak NG 1.52.0、ORT 1.31.0 与官方 CPython 3.12.10，在 Windows x64 AppContainer 禁网进程中完成八条 `fr-common-v1` 独立输入的生成、WAV 回读及同步 `PlaySound` 调用。前后四次公网连接均返回 WinError 10013，八个 WAV 为非空、非静音的 24 kHz 单声道 16-bit PCM。CPU provider 显式固定为 CPU，intra-op 2 / inter-op 1 线程。六项 CLI 检查通过；官方 `ff_siwis.pt` 与运行 BIN 中的声线张量逐字节一致。

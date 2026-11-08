@@ -11,7 +11,7 @@ import assert from 'node:assert/strict';
 
 export async function native24Fixture(packagePath, binaryPath, destinationPath) {
   const destination = resolve(destinationPath);
-  assert.ok(destination.startsWith(resolve('../../target/issue-24') + '\\'));
+  assert.ok(['issue-24', 'issue-56'].some((issue) => destination.startsWith(resolve('../../target/' + issue) + '\\')));
   await mkdir(destination);
   // Reused test packages also contain old results. Only copy distribution resources:
   // a failed run must never inherit a successful report or someone else's data.
@@ -34,7 +34,7 @@ export async function native24Fixture(packagePath, binaryPath, destinationPath) 
   }
   const timer = setTimeout(() => {
     if (child?.pid) spawnSync('taskkill.exe', ['/PID', String(child.pid), '/T', '/F'], { windowsHide: true });
-    process.stderr.write('Native #24 execution exceeded the hard 60-second limit\n'); process.exit(1);
+    process.stderr.write('Native execution exceeded the hard 60-second limit\n'); process.exit(1);
   }, 60_000);
   async function start() {
     stopping = false;

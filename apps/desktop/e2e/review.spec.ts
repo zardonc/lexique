@@ -2,7 +2,23 @@ import { expect, test } from '@playwright/test';
 import { readFileSync } from 'node:fs';
 import { nativeFixture, record } from './native-fixture';
 
-const audio = [...readFileSync(new URL('../../../docs/evidence/issue-14/supertonic-opus/female-normal-01-48k.opus', import.meta.url))];
+const audio = { bytes: [...readFileSync(new URL('../../../docs/evidence/issue-14/supertonic-opus/female-normal-01-48k.opus', import.meta.url))], voice: 'female' };
+
+for (const voice of ['female', null]) {
+  test(`listening WPM uses the recorded ${voice ?? 'unknown legacy'} voice after preferences change`, async ({ page }) => {
+    await nativeFixture(page, { vocabulary_list: [{ value: [record] }],
+      review_cards: [{ value: [{ id: 10, kind: 'recognition' }, { id: 11, kind: 'listening' }] }],
+      speech_cached: [{ value: { ...audio, voice } }], speech_preferences: [{ value: { voice: 'male', wpm: 240 } }] });
+    await page.goto('/');
+    await page.getByRole('button', { name: '生词本', exact: true }).click();
+    await page.locator('.vocabulary-list button').click();
+    await page.getByRole('button', { name: '查看听音卡', exact: true }).click();
+    const card = page.getByRole('dialog', { name: '听音卡', exact: true });
+    expect(await card.locator('audio').evaluate((element: HTMLAudioElement) => element.playbackRate)).toBeCloseTo(1.607968168, 7);
+    expect(await card.locator('audio').evaluate((element: HTMLAudioElement) => element.preservesPitch)).toBe(true);
+    if (voice === null) await expect(card).toContainText('旧音频声线未知，按默认女声基准近似播放。');
+  });
+}
 
 test('both cards identify the meaning selected for an example', async ({ page }) => {
   const saved = { ...record, example_fr: 'Une école de pensée.', example_zh: '一个思想流派。', example_sense: 1, revision: 2 };

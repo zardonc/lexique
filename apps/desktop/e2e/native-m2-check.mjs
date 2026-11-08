@@ -93,7 +93,7 @@ try {
     const word = words.find((item) => item.headword === 'école');
     if (!word) throw new Error('Fixture must contain école');
     const cards = await invoke('review_add', { vocabularyId: word.id });
-    const audio = await invoke('speech_generate', { vocabularyId: word.id });
+    const { bytes: audio } = await invoke('speech_generate', { vocabularyId: word.id });
     return { word, cards, audio, progress: await Promise.all(cards.map((card) => invoke('review_progress', { cardId: card.id }))) };
   });
   assert.equal(before.cards.length, 2);
@@ -237,7 +237,7 @@ try {
       settings: await invoke('review_settings', { settings: null }),
       paused: await invoke('review_pause', { vocabularyId: id, paused: null }),
       autoEnroll: await invoke('review_auto_enroll', { enabled: null }),
-      target: await invoke('review_undo_target'), audio: await invoke('speech_cached', { vocabularyId: id }) };
+      target: await invoke('review_undo_target'), audio: (await invoke('speech_cached', { vocabularyId: id })).bytes };
   }, before.word.id);
   assert.deepEqual(restored.settings, changed.settings);
   assert.equal(restored.paused, true);

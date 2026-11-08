@@ -47,7 +47,7 @@ c.commit();print(json.dumps(dict(mode=mode,words=count,bytes=len(audio),locator=
   const page = await fixture.start();
   const view = await page.evaluate(async () => {
     const view = await window.__TAURI_INTERNALS__.invoke('review_queue', { timezone: 'UTC', skipped: [] });
-    return { summary: view.summary, cards: view.queue.cards, metrics: view.metrics, audio: view.window.map(entry => entry.audio?.length ?? 0) };
+    return { summary: view.summary, cards: view.queue.cards, metrics: view.metrics, audio: view.window.map(entry => entry.audio?.bytes.length ?? 0) };
   });
   assert.ok(view.metrics.strict_probes <= 8); assert.ok(view.metrics.compressed_bytes <= 33_554_432); assert.ok(view.metrics.payload_bytes <= 33_554_432);
   let playback;
@@ -75,7 +75,7 @@ c.commit();print(json.dumps(dict(mode=mode,words=count,bytes=len(audio),locator=
   } else {
     assert.ok(seed.bytes >= 65_536);
     playback = await page.evaluate(async () => {
-      const bytes = await window.__TAURI_INTERNALS__.invoke('speech_cached', { vocabularyId: 1 });
+      const { bytes } = await window.__TAURI_INTERNALS__.invoke('speech_cached', { vocabularyId: 1 });
       const context = new AudioContext({ sampleRate: 48000 });
       const decoded = await context.decodeAudioData(new Uint8Array(bytes).buffer);
       const audio = document.createElement('audio'); const url = URL.createObjectURL(new Blob([new Uint8Array(bytes)], { type: 'audio/ogg' }));

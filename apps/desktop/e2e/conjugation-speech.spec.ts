@@ -9,7 +9,7 @@ import ordinary from './fixtures/conjugation-ordinary.json' with { type: 'json' 
 import pronominal from './fixtures/conjugation-pronominal.json' with { type: 'json' };
 import simple from './fixtures/conjugation.json' with { type: 'json' };
 
-const audio = [...await readFile(resolve(process.cwd(), '../../docs/evidence/issue-15/audio/native-ecole-female.opus'))];
+const audio = { bytes: [...await readFile(resolve(process.cwd(), '../../docs/evidence/issue-15/audio/native-ecole-female.opus'))], voice: 'female' };
 const defaults = {
   conjugation_preferences: [{ value: { mode: 'main' } }], conjugation_block_order: [{ value: defaultOrder }],
   speech_preview: [{ value: audio }],
@@ -76,13 +76,17 @@ for (const [query, result, expressions] of [
   await expect(page.locator('.conjugation').getByRole('alert')).toHaveCount(0);
 });
 
-for (const [voice, speed, rate] of [['female', 'normal', 1], ['male', 'slow', 0.6]] as const) {
-  test(`expression playback reads saved ${voice}/${speed} preferences and stops on navigation`, async ({ page }) => {
+for (const [voice, wpm, rate] of [
+  ['female', 80, 0.535989389], ['female', 180, 1.205976126], ['female', 240, 1.607968168],
+  ['male', 80, 0.536376731], ['male', 180, 1.206847645], ['male', 240, 1.609130193],
+] as const) {
+  test(`expression playback reads saved ${voice}/${wpm} WPM and stops on navigation`, async ({ page }) => {
     await nativeFixture(page, { ...defaults, conjugation_lookup: [{ value: pronominal['elles se sont abstenues'] }],
-      speech_preferences: [{ value: { voice, speed } }] });
+      speech_preferences: [{ value: { voice, wpm } }], speech_preview: [{ value: { ...audio, voice } }] });
     await showTable(page, 'elles se sont abstenues');
     const index = await playExpression(page, 'elles se sont abstenues');
-    expect(await page.evaluate((index) => window.testExpressionAudio[index].playbackRate, index)).toBe(rate);
+    expect(await page.evaluate((index) => window.testExpressionAudio[index].playbackRate, index)).toBeCloseTo(rate, 7);
+    expect(await page.evaluate((index) => window.testExpressionAudio[index].preservesPitch, index)).toBe(true);
     expect(await page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'speech_preferences').map((call) => call.args)))
       .toEqual([{ preferences: null }]);
     await page.getByRole('button', { name: 'Dictionary', exact: true }).click();
@@ -92,7 +96,7 @@ for (const [voice, speed, rate] of [['female', 'normal', 1], ['male', 'slow', 0.
 
 test('unplayable returned audio remains visible and the same expression can retry', async ({ page }) => {
   await nativeFixture(page, { ...defaults, conjugation_lookup: [{ value: laverLookup }],
-    speech_preview: [{ value: [79, 103, 103, 83] }, { value: audio }] });
+    speech_preview: [{ value: { bytes: [79, 103, 103, 83], voice: 'female' } }, { value: audio }] });
   await showTable(page, 'nous avions lavé');
   const play = page.getByRole('button', { name: 'Play expression: nous avions lavé (Machine-generated speech)', exact: true });
   await play.click();
@@ -131,7 +135,7 @@ test('choosing another expression ignores the previous pending response on the s
 
 test('speech preference errors prevent playback and recover on retry', async ({ page }) => {
   await nativeFixture(page, { ...defaults, conjugation_lookup: [{ value: laverLookup }],
-    speech_preferences: [{ error: 'saved speech preferences corrupt' }, { value: { voice: 'female', speed: 'normal' } }] });
+    speech_preferences: [{ error: 'saved speech preferences corrupt' }, { value: { voice: 'female', wpm: 180 } }] });
   await showTable(page, 'nous avions lavé');
   const play = page.getByRole('button', { name: 'Play expression: nous avions lavé (Machine-generated speech)', exact: true });
   await play.click();

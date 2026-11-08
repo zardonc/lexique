@@ -107,7 +107,7 @@ test('save and leave completes while enrolled audio is still pending', async ({ 
 test('batch enrollment distinguishes committed cards from failed audio and retries only audio', async ({ page }) => {
   const ready = { ...failedBatch, items: [{ ...failedBatch.items[0], audio_state: 'ready', audio_error: null }] };
   await nativeFixture(page, { vocabulary_list: [{ value: [record] }], review_add_batch: [{ value: failedBatch }],
-    review_batch_status: [{ value: null }, { value: ready }], speech_generate: [{ value: [79, 103, 103, 83] }] });
+    review_batch_status: [{ value: null }, { value: ready }], speech_generate: [{ value: { bytes: [79, 103, 103, 83], voice: 'female' } }] });
   await page.goto('/'); await page.getByRole('button', { name: '生词本', exact: true }).click();
   await page.getByLabel('选择 école').check(); await page.getByRole('button', { name: '批量加入复习' }).click();
   await expect(page.getByText(/已创建卡片: 2/)).toBeVisible(); await expect(page.getByText('#1: voice unavailable')).toBeVisible();
@@ -153,7 +153,7 @@ test('review management exposes persisted auto enrollment and word pause', async
 test('retrying audio for a paused word does not resume it', async ({ page }) => {
   const cards = [{ id: 1, kind: 'recognition' }, { id: 2, kind: 'listening' }];
   await nativeFixture(page, { vocabulary_list: [{ value: [record] }], review_cards: [{ value: cards }],
-    review_pause: [{ value: true }], review_add: [{ value: cards }], speech_cached: [{ value: null }], speech_generate: [{ value: [1] }] });
+    review_pause: [{ value: true }], review_add: [{ value: cards }], speech_cached: [{ value: null }], speech_generate: [{ value: { bytes: [1], voice: 'female' } }] });
   await page.goto('/');
   await page.getByRole('button', { name: '生词本', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
