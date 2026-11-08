@@ -1,5 +1,11 @@
 # 骨架验证记录
 
+## 后续语音基线（2026-11-08）
+
+用户决定继续使用现有 Supertonic 3，停止替代 TTS 模型测试，见 [ADR 0009](adr/0009-continue-with-supertonic-3.md)。#5 保留独立可行性证据，#6 保持“Tested and does not meet requirements”，#7 按未测试、取消计划处理。现有 CPU、声线／播放速度和音频版本规则继续适用；下一步见[开发路线](roadmap.md)。停止比较不豁免 Supertonic 3 的许可、其他平台实机、干净机器、完整版／Lite 与 M5 正式发行验收。
+
+本次为文档与后续规划更新：`pwsh -NoProfile -File scripts/check-docs.ps1` 通过 133 份文档与 961 个本地链接，73 个本地材料目标按检查器规则跳过；`pwsh -NoProfile -File scripts/test-docs.ps1` 的 13 项检查通过，`git diff --cached --check` 通过。两条 PowerShell 命令分别是 `pnpm test:docs`／`pnpm test:docs:validator` 的现有脚本入口。未运行新的模型生成／试听或应用、前端、Rust、E2E 检查；下述原生及历史 E2E 结果保持各自边界。
+
 ## Kokoro 法语独立验证（issue #6）
 
 2026-11-07（America/Vancouver），Kokoro v1.0 int8 / `ff_siwis`、kokoro-onnx 0.6.1、phonemizer 3.4.0、eSpeak NG 1.52.0、ORT 1.31.0 与官方 CPython 3.12.10，在 Windows x64 AppContainer 禁网进程中完成八条 `fr-common-v1` 独立输入的生成、WAV 回读及同步 `PlaySound` 调用。前后四次公网连接均返回 WinError 10013，八个 WAV 为非空、非静音的 24 kHz 单声道 16-bit PCM。CPU provider 显式固定为 CPU，intra-op 2 / inter-op 1 线程。六项 CLI 检查通过；官方 `ff_siwis.pt` 与运行 BIN 中的声线张量逐字节一致。

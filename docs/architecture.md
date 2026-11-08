@@ -1,5 +1,7 @@
 # 架构与开发边界
 
+2026-11-08：语音路径继续使用现有 Supertonic 3 CPU 主管，停止替代 TTS 模型测试，见 [ADR 0009](adr/0009-continue-with-supertonic-3.md)。沿用女声／男声、正常合成与 0.6 倍慢速播放、既有 IPC 及音频版本／保护关系；正式许可与其他平台门槛见[准入清单](development-readiness.md)。
+
 2026-11-05，当前共享 schema 为 17。`QueueCache` 从短读快照批量读取 progress／设置／额度／位置，随后按持久修订日志只加载普通进度、音频及位置变更涉及的行；初次读取、上下文／集合改变及超过 1,024 条保留日志时重建元数据。必要日切／位置变更进入短立即事务，修订在该事务内取得，提交后更新缓存，避免自身位置写回造成下一次重建。SQLite `data_version` 变化触发有限重读，持续竞争返回真实错误；持久队列修订与连接的 `data_version` 分工明确。
 
 桌面 `WindowValidator` 持有一个元数据缓存、两个固定文件校验 worker、最多八个在途 probe；从前 50 个候选中返回最多四张可展示卡，压缩字节缓存／响应上限 32 MiB，等待起点 75 ms。文件 worker 不持数据库连接；等待后重新计算已提交资格及选定版本，不再追加 probe 批次。IPC cursor 携带上次修订及最多四张卡的指纹，响应分别返回变更项、移除 ID、顺序和总准入摘要；未改变的条目与字节省略，修订缺口明确返回全窗口。前端保留当前 presentation，并可在评分成功后先提升已加载下一卡，再补窗口。窗口外 readiness 仍仅代表候选。Windows x64 本期实现、性能及生命周期证据见[实施记录](evidence/issue-24/continuation-2026-11-04.md)与[验收清单](evidence/issue-24/acceptance-matrix-2026-11-05.md)。

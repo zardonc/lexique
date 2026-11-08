@@ -1,5 +1,7 @@
 # Windows speech source materials and build steps
 
+2026-11-08 当前决定：后续开发继续使用现有 Supertonic 3 CPU 语音，停止替代 TTS 模型测试，见 [ADR 0009](../../adr/0009-continue-with-supertonic-3.md)与[开发路线](../../roadmap.md)。本文保留历史调查、测量与未决项；当前 Windows 产品接入和离线包证据见 [#38](../issue-38/README.md)，正式许可和其他平台门槛继续适用。
+
 The separate source companion retains the full pinned software archives, original ONNX and HF configuration, the author's configuration, build controls, conversion scripts and notices. [The resource manifest](resources.json) gives exact URLs, sizes and hashes; [the source research](source-delivery-research.md) explains the GPL / AGPL delivery route and remaining model evidence gap.
 
 Run the following from the extracted source companion root in PowerShell 7. Keep the matching Windows runtime ZIP beside it. These commands use new working directories and preserve the supplied archives.

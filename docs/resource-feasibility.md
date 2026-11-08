@@ -1,8 +1,10 @@
 # M0 资源小样调查
 
+当前决定（2026-11-08）：后续开发继续使用已接入的 Supertonic 3，不再测试其他 TTS 模型，见 [ADR 0009](adr/0009-continue-with-supertonic-3.md)。#5 独立对照已完成；#6 已测试且音质不满足要求；#7 未测试、取消计划。以下保留历史调查，当前功能与发行门槛见[准入清单](development-readiness.md)和[开发路线](roadmap.md)。
+
 2026-11-07，自定义 MDX/MDD 的追加验证已在 [#3 证据](evidence/issue-3/README.md)记录：复用并核对下述 Heliknight 小样，扩展至 12 个真实 MDX、两个同名 MDD 与六组可公开的原创配对。以下保留最初资源调查，当前支持矩阵与授权限制以追加证据为准。
 
-日期：2026-10-24。来源为用户指定站点、项目默认资源政策及本次实际下载和解码。以下区分候选、局部验证和正式准入；尚未选定默认词典或 TTS。
+日期：2026-10-24。来源为用户指定站点、项目默认资源政策及当次实际下载和解码。以下区分候选、局部验证和正式准入；当时尚未选定默认词典或 TTS。
 
 ## 词典下载与实际解析
 
@@ -32,13 +34,13 @@
 
 Sherpa-ONNX 是推理引擎，Kokoro 和 Pocket TTS 是模型 / 工具生态；应比较完整可运行组合，而不是把三者视为同一层的互斥组件。
 
-| 组合 | 本次核查的具体风险 | 下一步实际验证 |
+| 组合 | 当时核查的具体风险 | 当时拟验证的工作 |
 | --- | --- | --- |
 | Sherpa-ONNX + Piper SIWIS，或能证明法语可用的其他兼容模型 | [Sherpa-ONNX v2.0.0](https://github.com/k2-fsa/sherpa-onnx/releases/tag/v2.0.0)移除内置 espeak-ng / piper-phonemize，旧示例不能直接证明新组合完整可用。[SIWIS 模型卡](https://huggingface.co/rhasspy/piper-voices/blob/main/fr/fr_FR/siwis/medium/MODEL_CARD)注明法语及数据集 CC BY 4.0；不能只按外层仓库 MIT 标签认定所有权重和配套文件许可。 | 固定引擎、模型、声线、文本前端和运行库，验证完全本地的文本到 WAV 及播放，测量全部依赖。 |
 | Kokoro 法语声线 + 经验证的运行时 | [官方声线说明](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md)列有法语，并提示短文本可能较弱。官方模型 Apache 标签不代替声线、G2P 和具体转换文件的分别核验。不能以多语言模型名称推断所选 ONNX 包含法语。 | 用单词、变位及短句测试法语发音；若通过 Sherpa-ONNX 运行，单独验证该版本的法语音素前端。 |
 | Pocket TTS 法语 + 经验证的运行时 | [官方法语目录](https://huggingface.co/kyutai/pocket-tts/tree/main/languages/french)显示 CC BY 4.0 标签、约 219 MB 主权重及访问条件。该数值不是压缩发行包体积。[官方代码库](https://github.com/kyutai-labs/pocket-tts)声明支持法语，但其他语言的小模型不能直接作为法语证据。 | 先确认实际权重 / 声线获取与发行条件；需要登录并接受条款时交由用户处理，不绕过门槛。再实测法语组合及完整体积。 |
 
-本次没有下载 TTS 权重、接受访问条件、生成或试听音频。比较任务可先推进无需新增授权的候选；Pocket 待授权不会阻塞其余组合，也不阻塞首条查词链路。进入 M3 前仍须有满足许可、法语质量、完整配套和目标架构要求的组合。
+2026-10-24 尚未下载 TTS 权重、接受访问条件、生成或试听音频，上表保留当时的候选验证计划。当前 Supertonic 3 已完成 Windows 单词／变位产品接入，替代比较已停止；其他目标及正式发行继续核验所选组合的许可、完整配套和实际运行。
 
 ## 验证范围
 
@@ -51,7 +53,7 @@ Sherpa-ONNX 是推理引擎，Kokoro 和 Pocket TTS 是模型 / 工具生态；�
 
 ## M2 单词离线语音补查
 
-2026-10-25：M2 访谈已将听音卡所需的单词离线发音提前，见[确认记录](m2-review-core.md)。本节仅核对当前官方代码、模型卡与依赖，不代表资源已准入或已实际生成声音。
+2026-10-25：M2 访谈已将听音卡所需的单词离线发音提前，见[确认记录](m2-review-core.md)。本节是当时官方代码、模型卡与依赖的历史核查，不代表当时资源已准入或已实际生成声音；当前选型与状态以文首决定及 #14／#22／#38 证据为准。
 
 - Sherpa 2 的旧 `data_dir` 路径已弃用，Piper 路径需要法语 lexicon 或外部音素输入；旧版 SIWIS 示例不足以证明新组合能完成法语文本到声音。[固定版本配置](https://raw.githubusercontent.com/k2-fsa/sherpa-onnx/v2.0.0/sherpa-onnx/csrc/offline-tts-vits-model-config.h)、[生成接口](https://raw.githubusercontent.com/k2-fsa/sherpa-onnx/v2.0.0/sherpa-onnx/c-api/c-api.h)
 - SIWIS low 单权重约 28.1 MB，但模型卡说明从 Ryan-low 微调，其来源卡标注训练数据为 CC BY-NC-SA；SIWIS medium 约 63.2 MB，从 Lessac-medium 微调，后者指向限研究用途的来源许可。训练数据条款不能直接替代对最终权重授权的判断；目前证据不足以闭合这两条权重的目标再分发授权链，不能仅凭 SIWIS 数据集的 CC BY 标签认定准入。[SIWIS low](https://huggingface.co/rhasspy/piper-voices/blob/main/fr/fr_FR/siwis/low/MODEL_CARD)、[Ryan 来源](https://huggingface.co/rhasspy/piper-voices/blob/main/en/en_US/ryan/low/MODEL_CARD)、[SIWIS medium](https://huggingface.co/rhasspy/piper-voices/blob/main/fr/fr_FR/siwis/medium/MODEL_CARD)、[Lessac 来源](https://huggingface.co/rhasspy/piper-voices/blob/main/en/en_US/lessac/medium/MODEL_CARD)、[来源许可](https://www.cstr.ed.ac.uk/projects/blizzard/2013/lessac_blizzard2013/license.html)
@@ -59,4 +61,4 @@ Sherpa-ONNX 是推理引擎，Kokoro 和 Pocket TTS 是模型 / 工具生态；�
 - Kokoro 仍需完整法语文本前端；已查 Sherpa 多语言包未证明包含可直接使用的法语 lexicon。该包模型文件约 326 MB，另有至少约 28.2 MB 声音文件；这些是文件体积，不是压缩分发包实测，也不覆盖全部依赖。短文本质量仍为单词卡的关键验证项。[包文件](https://huggingface.co/csukuangfj/kokoro-multi-lang-v1_0/tree/main)、[法语声音与短文本说明](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md)
 - Pocket 当前已有官方 Rust 独立运行时，不能沿用仅能通过 Python 的旧假设；法语权重仍约 219 MB，另需 tokenizer、声音与运行依赖，模型有访问条件。没有 Windows ARM64 的完整执行证据，也未测压缩下载总量。[官方运行时](https://github.com/kyutai-labs/pocket-tts)、[法语文件](https://huggingface.co/kyutai/pocket-tts/tree/main/languages/french)、[访问条件](https://huggingface.co/kyutai/pocket-tts/blob/main/README.md)
 
-下一步先落实具体组合与版本的许可证据，再在 Windows x64 验证代表性单词、未知词 / 音素、真实播放、首启断网、重启缓存及失败重试，测量含前端、模型、原生库和许可文件的完整压缩包。词典式前端可能跳过未知部分，须检测部分生成而非仅判断是否返回音频。本轮未下载模型、接受访问条件、安装、编译或试听；没有候选被宣称满足完整分发要求。
+当时计划先落实具体组合与版本的许可证据，再验证代表性单词、未知词 / 音素、真实播放、首启断网、重启缓存及失败重试，并测量完整压缩包。词典式前端可能跳过未知部分，须检测部分生成而非仅判断是否返回音频。该轮未下载模型、接受访问条件、安装、编译或试听；这些历史待办不构成继续比较其他模型的计划。

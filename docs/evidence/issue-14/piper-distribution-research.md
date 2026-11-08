@@ -1,6 +1,8 @@
 # Piper 法语双声线的随包分发调查
 
-后续[准入补查](replacement-admission.md)已选用从零训练的 MLS medium 双说话人，并补充 Tom 作者明确的权重及人格许可。本文保留最初 SIWIS／Tom 调查的历史判断；当前选型以补查为准。
+2026-11-08 当前决定：后续开发继续使用现有 Supertonic 3 CPU 语音，停止替代 TTS 模型测试，见 [ADR 0009](../../adr/0009-continue-with-supertonic-3.md)与[开发路线](../../roadmap.md)。本文保留历史调查、测量与未决项；当前 Windows 产品接入和离线包证据见 [#38](../issue-38/README.md)，正式许可和其他平台门槛继续适用。
+
+历史[准入补查](replacement-admission.md)曾选用从零训练的 MLS medium 双说话人，并补充 Tom 作者明确的权重及人格许可；MLS 随后被用户试听否决。本文与补查保留当时的许可判断，当前语音继续使用 Supertonic 3。
 
 调查日期：2026-10-26。对象是已试听的 `piper-tts 1.8.0`、SIWIS medium、Tom medium，
 不是对所有 Piper 声线的统一授权判断。本次只读调查及本文档，不改变产品许可、打包或准入状态。

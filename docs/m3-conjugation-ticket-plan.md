@@ -4,6 +4,8 @@ Source: [specification #38](https://github.com/zardonc/lexique/issues/38), [loca
 
 T01–T11 are breakdown identifiers; the delivery table maps them to GitHub issues. Each issue is labelled `ready-for-agent`, includes its acceptance criteria and the shared requirements below, and references real issue numbers. Blocking edges use native relationships.
 
+On 2026-11-08 the user confirmed that subsequent development keeps the existing Supertonic 3 CPU speech and stops alternative TTS model testing; see [ADR 0009](adr/0009-continue-with-supertonic-3.md). The [roadmap](roadmap.md) now prioritizes #9 specifications and the remaining offline modules; other platforms and formal release gates remain separate from this accepted Windows conjugation scope.
+
 ## Delivery order
 
 The [compact storage contract](conjugation-storage.md) precedes #44. Shared simple-form models and suffix/stem candidate lookup replace materialized tables; #38 records full format-5 equivalence and preservation requirements. #44 applies normalization at candidate lookup and complete-expression verification, #45 keeps linguistic ending spans independent of storage suffixes, and #49 packages the compact resource and measures current costs. #46–#48 retain their existing lookup/table interface and dependencies.
