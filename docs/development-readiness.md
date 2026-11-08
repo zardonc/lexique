@@ -35,7 +35,7 @@ FSRS 使用固定版本默认参数，不提供优化与额外间隔随机扰动
 
 实施先验证核心 / 实际 WASM 及离线语音可行性，再接完整存储与 UI。#13 与 #14 已按各自范围验收，语音候选的已接受缺口及实际运行证据见[准入决定](evidence/issue-14/README.md)。产品集成、正式分发义务、完整包体和其他目标实机仍待验证，不能据此宣称 M2 或 M5 完成。
 
-2026-11-07，#5 的 Sherpa 2.0.1 / 外部 eSpeak / Piper Tom 固定组合通过 Windows x64 禁网生成、同步播放与八条人工试听。独立软件来源包、原始模型 / 双配置、本次转换与构建控制脚本已准备，完整获取量 255.44 MB；[证据与门槛](evidence/issue-5/README.md)。Tom 作者的首选修改形式尚未明确，公开模型再分发与产品声线准入继续验收；源码重建及确切上游 wheel 构建来源未验证。其他平台和干净机器安装按用户要求延期。
+2026-11-07，#5 的 Sherpa 2.0.1 / 外部 eSpeak / Piper Tom 固定组合完成 Windows x64 独立可行性验收：禁网生成、同步播放与八条人工试听通过。独立软件来源包、原始模型 / 双配置、本次转换与构建控制脚本已准备，完整获取量 255.44 MB；[证据与门槛](evidence/issue-5/README.md)。应用随包语音沿用现有 Supertonic 3，其商业再分发许可与现有打包通知路径见[调查](evidence/issue-5/redistributable-french-models.md)；OpenRAIL-M 下游条款、正式完整版／Lite 交付、其他平台和干净机器首装继续在 M5 验收。Tom 的首选修改形式、源码重建及确切上游 wheel 构建来源缺口按该对照组合记录。
 
 2026-10-29 更新：#15 的单个生词建双卡、真实语音开发包、卡面与 Windows x64 重启恢复已接入并验证，见 [#15 证据](evidence/issue-15/README.md)。新生成音频由用户试听判定；本轮完整桌面实播没有施加网络限制，既有 #14 的禁网证据单独保留。完整评分 / 队列 / 撤销、连续 24 小时清理实测、其他目标及正式分发义务仍待后续，不宣称完整 M2 或 M5 通过。
 
@@ -68,7 +68,7 @@ FSRS 使用固定版本默认参数，不提供优化与额外间隔随机扰动
 ### 离线语音与系统依赖
 
 - sherpa-onnx 引擎采用 Apache-2.0。v2.0.0 移除了内置 espeak-ng / piper-phonemize；Piper 推理仍存在，法语文本到音素需外部方案或 lexicon。旧 SIWIS 示例的 `data_dir` 不能证明新版组合可运行。[版本说明](https://github.com/k2-fsa/sherpa-onnx/releases/tag/v2.0.0)、[变更 PR](https://github.com/k2-fsa/sherpa-onnx/pull/4055)。
-  2026-11-07 [#5 独立证据](evidence/issue-5/README.md)：2.0.1 + Piper Tom + 外部 eSpeak 前端在 Windows x64 禁网进程完成八条统一输入的 44,100 Hz WAV 生成、回读与播放。`silence_scale=1.0` 保留安静词尾；用户确认八条样本正确，包含 école 的 /l/。完整来源获取含准备工具为 191.78 MB，最终 ZIP 170.69 MB；音频回归和包校验通过。Tom 按作者 AGPL-3.0 与声线条件记录，本机独立试听通过；公共再分发、GPL / AGPL 对应源码交付和干净机器前提仍待核验。SIWIS 授权链未闭合，其他三目标按用户要求未测；产品默认声线准入继续单独验收。
+  2026-11-07 [#5 独立证据](evidence/issue-5/README.md)：2.0.1 + Piper Tom + 外部 eSpeak 前端在 Windows x64 禁网进程完成八条统一输入的 44,100 Hz WAV 生成、回读与播放。`silence_scale=1.0` 保留安静词尾；用户确认八条样本正确，包含 école 的 /l/。运行获取含准备工具为 191.78 MB，计入独立软件来源材料并去重后的总获取为 255.44 MB，运行 ZIP 为 170.71 MB；音频回归和包校验通过。Tom 按作者 AGPL-3.0 与声线条件记录，公开再分发该对照模型的对应源码形式仍待核验。SIWIS 授权链未闭合；应用分发采用现有 Supertonic 3 路线，模型条款交付和其他三目标／干净机器实测仍属 M5。
 - SIWIS 单个 ONNX 权重约 63.2 MB，另需配置、tokens、文本前端及运行库。总仓库标签与模型卡中的训练数据许可不等价，需固定权重并核对授权链和署名。[权重](https://huggingface.co/rhasspy/piper-voices/tree/main/fr/fr_FR/siwis/medium)、[模型卡](https://huggingface.co/rhasspy/piper-voices/blob/main/fr/fr_FR/siwis/medium/MODEL_CARD)。
 - [官方 Rust 构建脚本](https://raw.githubusercontent.com/k2-fsa/sherpa-onnx/master/sherpa-onnx/rust/sherpa-onnx-sys/build.rs)有四目标预编译归档映射，但不能代替本项目链接、启动、断网播放证据；自动下载须限定在受控构建阶段。
 - [Kokoro](https://huggingface.co/hexgrad/Kokoro-82M)有法语声音候选，仍需核验短词和完整前端；[Pocket TTS 法语权重](https://huggingface.co/kyutai/pocket-tts/tree/main/languages/french)主文件约 219 MB、尚未含其他资源，暂不作为小包默认首选。权重大小不等于压缩安装包大小。

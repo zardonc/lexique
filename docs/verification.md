@@ -6,7 +6,9 @@
 
 九项禁网 CLI 检查全部通过（25.777 秒，无跳过）：五项音频 / 输入回归与四项来源交付检查，覆盖完整归档 / 原模型 / 双配置、同长度损坏输入、缺失材料与已有目录 / ZIP / 报告保护，保留完整模型步幅与固定句子识别回归。`pnpm typecheck` 与 `pnpm test:docs` 通过；测试子进程使用 `-B` 且保持 60 秒硬限。ONNX 1.23.2 两次生成相同模型 / 配置 / token 哈希并确认序列化图未变。v7 包内八条禁网生成与同步播放、完整测试后的运行目录 inventory 和 ZIP 校验通过。运行打包缺失来源 ZIP、测量时来源报告哈希不符的失败检查通过，均未创建输出。运行 ZIP 为 170,714,070 字节、安装逻辑体积 279,806,634 字节；来源 ZIP 为 122,375,208 字节、展开 128,126,232 字节；总获取 255,435,808 字节，两 ZIP 共 293,089,278 字节，已报告超过 200 MB。ASR 缓存不进入语音包。完整方法见 [#5 证据与测量](evidence/issue-5/README.md)。
 
-用户确认最终八条[Tom 样本](evidence/issue-5/samples-tom-v2/listen.html)法语正确，école 清楚保留词尾 /l/；[通过记录](evidence/issue-5/samples-tom-v2/quality.json)固定对应文件。原 [MLS 否决](evidence/issue-5/samples/quality.json)与 [Tom 部分通过](evidence/issue-5/samples-tom/quality.json)单独保留。试听界面使用通用合成语音标签。完整 Piper / eSpeak / ucd-tools / Sonic 源集、原始模型与本项目构建 / 转换脚本进入独立来源包；[61 个原生文件导入](evidence/issue-5/native-dependencies.json)已核验，包外依赖为 Windows API 与两项 VC 前提。Tom 的 AGPL §1 首选修改形式仍待作者明确，公共模型再分发验收开放；静态依赖 / 上游精确构建来源及源码重建未验证。干净机器安装和其他三目标按用户要求延期。人工结论只适用于保存样本。#5 保持开放，产品声线准入与正式发行门槛继续单独验收。
+用户确认最终八条[Tom 样本](evidence/issue-5/samples-tom-v2/listen.html)法语正确，école 清楚保留词尾 /l/；[通过记录](evidence/issue-5/samples-tom-v2/quality.json)固定对应文件。原 [MLS 否决](evidence/issue-5/samples/quality.json)与 [Tom 部分通过](evidence/issue-5/samples-tom/quality.json)单独保留。试听界面使用通用合成语音标签。完整 Piper / eSpeak / ucd-tools / Sonic 源集、原始模型与本项目构建 / 转换脚本进入独立来源包；[61 个原生文件导入](evidence/issue-5/native-dependencies.json)已核验，包外依赖为 Windows API 与两项 VC 前提。Tom 的 AGPL §1 首选修改形式尚未从公开材料中确定，公开再分发该模型继续单独验收；静态依赖 / 上游精确构建来源及源码重建未验证。干净机器安装和其他三目标按用户要求延期。人工结论只适用于保存样本。
+
+2026-11-07，#5 的八项 Windows x64 独立可行性要求已完成。应用随包语音沿用现有 Supertonic 3；其 OpenRAIL-M 商业再分发许可与现有打包通知路径已核验，见[候选比较](evidence/issue-5/redistributable-french-models.md)。模型下游条款、完整版／Lite 正式交付、其他目标及干净机器首装继续作为 M5 发行门槛。
 
 ## 自定义 MDX/MDD 独立兼容验证（issue #3）
 

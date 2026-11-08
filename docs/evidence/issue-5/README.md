@@ -1,8 +1,10 @@
 # M0：Sherpa-ONNX 法语离线组合验证
 
-2026-11-07，GitHub [#5](https://github.com/zardonc/lexique/issues/5)。Windows x64 上，Sherpa-ONNX 2.0.1 + Piper `fr_FR-tom-medium` + 外部 eSpeak NG 前端完成八条固定输入的禁网生成、WAV 回读与同步播放。用户确认八条法语样本正确，包含 école 的词尾 /l/；该固定组合通过本机独立试听验收。
+2026-11-07，GitHub [#5](https://github.com/zardonc/lexique/issues/5)。Windows x64 上，Sherpa-ONNX 2.0.1 + Piper `fr_FR-tom-medium` + 外部 eSpeak NG 前端完成八条固定输入的禁网生成、WAV 回读与同步播放。用户确认八条法语样本正确，包含 école 的词尾 /l/；本票八项独立可行性要求在该 Windows x64 范围内完成。
 
 [试听通过的八条样本](samples-tom-v2/listen.html) · [人工通过记录](samples-tom-v2/quality.json) · [逐项原始报告](samples-tom-v2/report.json) · [资源与哈希](resources.json) · [分别许可](licenses/ATTRIBUTION.md) · [完整测量](measurements.json) · [来源包测量](source-report.json) · [构建与转换](source-build.md)
+
+应用随包分发建议沿用现有 Supertonic 3：模型的 OpenRAIL-M 允许商业再分发，法语女声／男声及 Windows x64 离线运行已有产品证据。正式分发需保留许可、署名和修改声明，并将模型使用限制纳入具有约束力的下游条款；候选比较及现有打包材料见[法语模型再分发调查](redistributable-french-models.md)。
 
 ## 组合与前端
 
@@ -160,4 +162,6 @@ codex sandbox -P issue5 `
 | 四目标获取 / 编译路线 | 路线已列；其余三目标按用户要求未执行 |
 | 可重复步骤、失败与进程 / 资源隔离 | 步骤和 CLI 检查已保存；无常驻进程，模型与工具环境独立 |
 
-人工通过适用于保存的最终八条样本；v7 包运行音频未单独试听。软件来源和本次转换输入 / 控制脚本已交付，Tom 作者的 AGPL §1 首选修改形式仍待明确；这是当前模型公开再分发的证据缺口。动态导入与固定 CMake 不能证明全部静态 / 头文件编译成分或上游 wheel 的确切构建工具链；源码编译未执行。SIWIS 的 Lessac 基础权重授权链单独保留为未通过准入。VC 安装器未执行，干净机器安装与其他三目标按用户要求延期。#5 保持开放；产品默认声线准入与正式发行继续按各自门槛验收。
+本票按 Windows x64 独立可行性范围收尾；应用随包语音沿用现有 Supertonic 3，其模型商业再分发许可及现有通知路径见[再分发调查](redistributable-french-models.md)。正式分发的 OpenRAIL-M 下游条款、完整版／Lite 交付、其他目标与干净机器首装继续在 M5 验收。
+
+人工通过适用于保存的最终八条样本；v7 包运行音频未单独试听。软件来源和本次转换输入 / 控制脚本已交付，Tom 的 AGPL §1 首选修改形式尚未从公开材料中确定，公开再分发该模型继续单独验收。动态导入与固定 CMake 不能证明全部静态 / 头文件编译成分或上游 wheel 的确切构建工具链；源码编译未执行。SIWIS 的 Lessac 基础权重授权链单独保留为未通过准入。VC 安装器未执行，干净机器安装与其他三目标按用户要求延期。
