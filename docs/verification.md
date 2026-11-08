@@ -6,7 +6,7 @@
 
 同 #5 硬件测得模型加载 1.4001283 秒、含 import / 前端的完整加载 4.3235254 秒；首条完整音频数组 0.8693316 秒，八条纯合成共 3.1157273 秒、音频共 6.72 秒，峰值工作集 266,145,792 字节。#5 使用不同 Python 版本及首个 PCM 回调边界，不能将首音数字当作相同 API 测量。完整材料获取 215,446,330 字节，已报告超过 200 MB；完整来源 / 运行 ZIP 184,562,539 字节、安装逻辑体积 300,798,267 字节。获取哈希、依赖版本、WAV、清单及 ZIP 校验通过，见 [#6 方法与证据](evidence/issue-6/README.md)。
 
-[八条样本](evidence/issue-6/samples/listen.html)供人工试听；Obscura 核对八个 HTTP 音频链接及 PCM 头，原生播放证据来自探针。法语音质仍待用户确认。转换与 wheel 构建来源、最终再分发义务、其他三目标及干净机器首装未验收；应用随包语音继续使用现有 Supertonic 3。
+[八条样本](evidence/issue-6/samples/listen.html)已于 2026-11-08 经用户试听；用户判定 Kokoro 音频质量低于当前模型，结论为“已测试，不满足要求（Tested and does not meet requirements）”，停止进一步测试并关闭 #6。Obscura 核对八个 HTTP 音频链接及 PCM 头，原生播放证据来自探针。转换与 wheel 构建来源、最终再分发义务、其他三目标及干净机器首装未验收；应用随包语音继续使用现有 Supertonic 3。
 
 2026-11-08 检查：lint、typecheck、build、文档 / 链接及 13 项文档验证器检查通过；标准 Python 全套 103 通过、10 项资源前提不足而跳过，独立禁网 Kokoro 六项通过。测量脚本的已有输出保留、缺失及同长度损坏材料五项检查通过。使用固定 Rust 1.99.1 先 `pnpm rust:test:build`，再 `pnpm test:rust`，143 项通过，60 秒运行硬限保持不变。两次完整 browser E2E 均为 145 通过、1 项在 `automatic-queue.spec.ts:37` 的 Playwright `clock.pauseAt` 设置阶段失败（`Cannot fast-forward to the past`）；该 T01 单独执行通过，完整并行套件仍未全绿。命令与结果见 [#6 检查记录](evidence/issue-6/README.md#检查记录)。
 
