@@ -2,6 +2,7 @@
 
 import argparse
 import ctypes
+from datetime import date
 import hashlib
 import importlib.metadata
 import json
@@ -43,12 +44,14 @@ def main():
     inputs = json.loads(input_bytes)
     if not isinstance(inputs, list) or len(inputs) != 8 or any(not isinstance(text, str) or not 1 <= len(text) <= 200 for text in inputs):
         raise ValueError("Invalid trial inputs")
-    config = json.loads((args.assets / "fr_FR-mls-medium.onnx.json").read_text(encoding="utf-8"))
+    config = json.loads((args.assets / "fr_FR-tom-medium.onnx.json").read_text(encoding="utf-8"))
     args.output.mkdir(parents=True)
     report = {
-        "status": "failed", "engine": "sherpa-onnx", "model": "fr_FR-mls-medium",
-        "speaker_id": manifest["speaker_id"], "source_speaker_id": "3698",
+        "status": "failed", "engine": "sherpa-onnx", "model": "fr_FR-tom-medium",
+        "speaker_id": manifest["speaker_id"],
         "frontend_voice": manifest["frontend_voice"], "threads": 2,
+        "silence_scale": 1.0,
+        "date": date.today().isoformat(), "cpu": platform.processor(), "logical_cpus": os.cpu_count(),
         "python": platform.python_version(), "platform": platform.platform(),
         "input_version": manifest["input_version"], "inputs_sha256": manifest["inputs_sha256"],
         "offline_verified": False, "quality_status": "pending human listening",
@@ -80,7 +83,7 @@ def main():
         tts = sherpa_onnx.OfflineTts(sherpa_onnx.OfflineTtsConfig(
             model=sherpa_onnx.OfflineTtsModelConfig(
                 vits=sherpa_onnx.OfflineTtsVitsModelConfig(
-                    model=str(args.assets / "fr_FR-mls-medium.onnx"),
+                    model=str(args.assets / "fr_FR-tom-medium.onnx"),
                     tokens=str(args.assets / "tokens.txt"),
                     noise_scale=config["inference"]["noise_scale"],
                     noise_scale_w=config["inference"]["noise_w"],
@@ -90,7 +93,7 @@ def main():
         ))
         report["model_load_seconds"] = time.perf_counter() - start
         report["total_load_seconds"] = time.perf_counter() - loading
-        if (tts.lang, tts.sample_rate, tts.num_speakers) != ("fr", 22050, 125):
+        if (tts.lang, tts.sample_rate, tts.num_speakers) != ("fr", 44100, 1):
             raise ValueError("unexpected Sherpa model metadata")
         for index, text in enumerate(inputs, 1):
             start = time.perf_counter()
@@ -103,6 +106,7 @@ def main():
             gen_config = sherpa_onnx.GenerationConfig()
             gen_config.sid = manifest["speaker_id"]
             gen_config.speed = 1.0
+            gen_config.silence_scale = 1.0
             gen_config.phoneme_codepoints = [[ord(phoneme) for phoneme in sentence] for sentence in phonemes]
             first_audio = []
 
@@ -115,7 +119,7 @@ def main():
             audio = tts.generate("", gen_config, receive_audio)
             generation_seconds = time.perf_counter() - generation
             samples = np.asarray(audio.samples)
-            if audio.sample_rate != 22050 or not samples.size or not np.isfinite(samples).all() or not np.any(samples):
+            if audio.sample_rate != 44100 or not samples.size or not np.isfinite(samples).all() or not np.any(samples):
                 raise ValueError(f"invalid generated audio for {text!r}")
             path = args.output / f"{index:02}.wav"
             pcm = np.rint(np.clip(samples, -1, 1) * 32767).astype("<i2").tobytes()

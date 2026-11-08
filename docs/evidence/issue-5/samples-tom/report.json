@@ -1,0 +1,326 @@
+{
+  "status": "passed",
+  "engine": "sherpa-onnx",
+  "model": "fr_FR-tom-medium",
+  "speaker_id": 0,
+  "frontend_voice": "fr",
+  "threads": 2,
+  "python": "3.14.10",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "input_version": "fr-common-v1",
+  "inputs_sha256": "9ecb2760c2fc8de956d8c080752ff18b5c196adba626fe178c6ce34004001372",
+  "offline_verified": true,
+  "quality_status": "pending human listening",
+  "assets": [
+    {
+      "file": "fr_FR-tom-medium.onnx",
+      "bytes": 63511194,
+      "sha256": "576982a23a5d3336aa2edeaaccd4b670485d5f97fb9017bf8c018d75d75d6572",
+      "license": "AGPL-3.0 with separate voice usage conditions; see licenses/TOM-README.md",
+      "source": "https://huggingface.co/rhasspy/piper-voices/tree/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/fr/fr_FR/tom/medium",
+      "modification": "Sherpa metadata added; serialized ONNX graph unchanged"
+    },
+    {
+      "file": "fr_FR-tom-medium.onnx.json",
+      "bytes": 4959,
+      "sha256": "2f7f885ad5a0aad802e3cc24e4f57239febdcb142b4876de5d238094674361cc",
+      "license": "AGPL-3.0 with separate voice usage conditions; see licenses/TOM-README.md",
+      "source": "https://huggingface.co/rhasspy/piper-voices/tree/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/fr/fr_FR/tom/medium"
+    },
+    {
+      "file": "tokens.txt",
+      "bytes": 940,
+      "sha256": "ef3a7e4a8d1af0c9d4dc45aaae1a6242ebe24a7ed6f3d025a49eb29682784c6d",
+      "license": "AGPL-3.0 with separate voice usage conditions; see licenses/TOM-README.md",
+      "source": "https://huggingface.co/rhasspy/piper-voices/tree/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/fr/fr_FR/tom/medium",
+      "modification": "Generated from the original phoneme_id_map using the pinned Sherpa format"
+    }
+  ],
+  "cases": [
+    {
+      "input": "être",
+      "phonemes": [
+        "ˈɛtʁ"
+      ],
+      "phoneme_codepoints": [
+        [
+          712,
+          603,
+          116,
+          641
+        ]
+      ],
+      "file": "01.wav",
+      "sha256": "ec451ba3d8dc29543d2b9b6906ab2d9aad5a09d93191810465a4565676c59ae4",
+      "bytes": 61484,
+      "frontend_seconds": 0.04716429999098182,
+      "generation_seconds": 0.05970670000533573,
+      "first_audio_seconds": 0.10688969999318942,
+      "audio_seconds": 0.6965986394557823,
+      "peak_amplitude": 0.2892495095729828,
+      "played": true,
+      "playback_seconds": 1.627128599997377
+    },
+    {
+      "input": "sommes",
+      "phonemes": [
+        "sˈɔm"
+      ],
+      "phoneme_codepoints": [
+        [
+          115,
+          712,
+          596,
+          109
+        ]
+      ],
+      "file": "02.wav",
+      "sha256": "0783b220d6514060b8232048836db943eee43bd6be6e01de8baedb9c975d203b",
+      "bytes": 42486,
+      "frontend_seconds": 0.0008729999826755375,
+      "generation_seconds": 0.058678200002759695,
+      "first_audio_seconds": 0.059565499977907166,
+      "audio_seconds": 0.4812018140589569,
+      "peak_amplitude": 0.2989167273044586,
+      "played": true,
+      "playback_seconds": 0.6638245999929495
+    },
+    {
+      "input": "œil",
+      "phonemes": [
+        "ˈœj"
+      ],
+      "phoneme_codepoints": [
+        [
+          712,
+          339,
+          106
+        ]
+      ],
+      "file": "03.wav",
+      "sha256": "ac79be6448b629cbc3c782a765232f22325600a6126e23bbca5d2ece171a295e",
+      "bytes": 32806,
+      "frontend_seconds": 0.0008430000161752105,
+      "generation_seconds": 0.055440700001781806,
+      "first_audio_seconds": 0.05629470001440495,
+      "audio_seconds": 0.3714512471655329,
+      "peak_amplitude": 0.08920927345752716,
+      "played": true,
+      "playback_seconds": 0.5112735999864526
+    },
+    {
+      "input": "école",
+      "phonemes": [
+        "ekˈɔl"
+      ],
+      "phoneme_codepoints": [
+        [
+          101,
+          107,
+          712,
+          596,
+          108
+        ]
+      ],
+      "file": "04.wav",
+      "sha256": "85a00bc3b0a08f3431877144c0516eb4aa4fda15fdb098c39e21b9fae468fd65",
+      "bytes": 44910,
+      "frontend_seconds": 0.0009119999886024743,
+      "generation_seconds": 0.06737890001386404,
+      "first_audio_seconds": 0.06830439998884685,
+      "audio_seconds": 0.5086848072562359,
+      "peak_amplitude": 0.16213087737560272,
+      "played": true,
+      "playback_seconds": 0.6706566000066232
+    },
+    {
+      "input": "aujourd'hui",
+      "phonemes": [
+        "oʒuʁdyˈi"
+      ],
+      "phoneme_codepoints": [
+        [
+          111,
+          658,
+          117,
+          641,
+          100,
+          121,
+          712,
+          105
+        ]
+      ],
+      "file": "05.wav",
+      "sha256": "9690812ecd7b4109cbc2bfa798da7b88c62e8e91b96caba69b9be44f4daa5aa0",
+      "bytes": 62348,
+      "frontend_seconds": 0.0008720000041648746,
+      "generation_seconds": 0.07082320001791231,
+      "first_audio_seconds": 0.07170689999475144,
+      "audio_seconds": 0.7063945578231292,
+      "peak_amplitude": 0.17491324245929718,
+      "played": true,
+      "playback_seconds": 0.8992285999993328
+    },
+    {
+      "input": "nous sommes ici",
+      "phonemes": [
+        "nu sɔmz isˈi"
+      ],
+      "phoneme_codepoints": [
+        [
+          110,
+          117,
+          32,
+          115,
+          596,
+          109,
+          122,
+          32,
+          105,
+          115,
+          712,
+          105
+        ]
+      ],
+      "file": "06.wav",
+      "sha256": "826f18881545c2969379a9a3b3b6ddb01122d3f67f003b799a9c69bdc44b28e5",
+      "bytes": 100396,
+      "frontend_seconds": 0.0010276999964844435,
+      "generation_seconds": 0.0952294000016991,
+      "first_audio_seconds": 0.09627650000038557,
+      "audio_seconds": 1.1377777777777778,
+      "peak_amplitude": 0.37867090106010437,
+      "played": true,
+      "playback_seconds": 1.2827996000123676
+    },
+    {
+      "input": "les amis arrivent",
+      "phonemes": [
+        "le-z amˈiʲ aʁˈiv"
+      ],
+      "phoneme_codepoints": [
+        [
+          108,
+          101,
+          45,
+          122,
+          32,
+          97,
+          109,
+          712,
+          105,
+          690,
+          32,
+          97,
+          641,
+          712,
+          105,
+          118
+        ]
+      ],
+      "file": "07.wav",
+      "sha256": "5226246b0a3fe54dd1889805c2b6741484ee44419f38fbae6ad1546e0e62b24e",
+      "bytes": 103380,
+      "frontend_seconds": 0.000826000003144145,
+      "generation_seconds": 0.1274237999750767,
+      "first_audio_seconds": 0.12826190001214854,
+      "audio_seconds": 1.171609977324263,
+      "peak_amplitude": 0.27980971336364746,
+      "played": true,
+      "playback_seconds": 1.3760248000035062
+    },
+    {
+      "input": "J'apprends le français tous les jours.",
+      "phonemes": [
+        "ʒapʁˈɑ̃ lə- fʁɑ̃sˈɛ tu le- ʒˈuʁ."
+      ],
+      "phoneme_codepoints": [
+        [
+          658,
+          97,
+          112,
+          641,
+          712,
+          593,
+          771,
+          32,
+          108,
+          601,
+          45,
+          32,
+          102,
+          641,
+          593,
+          771,
+          115,
+          712,
+          603,
+          32,
+          116,
+          117,
+          32,
+          108,
+          101,
+          45,
+          32,
+          658,
+          712,
+          117,
+          641,
+          46
+        ]
+      ],
+      "file": "08.wav",
+      "sha256": "4ba47621dfd3992435e472cc7adfb9e5643101879d62629c9666f4d630edc18c",
+      "bytes": 187948,
+      "frontend_seconds": 0.00099709999631159,
+      "generation_seconds": 0.17489789999672212,
+      "first_audio_seconds": 0.17590709999785759,
+      "audio_seconds": 2.1304308390022677,
+      "peak_amplitude": 0.34156134724617004,
+      "played": true,
+      "playback_seconds": 2.312761800014414
+    }
+  ],
+  "network_denials_before": [
+    {
+      "host": "1.1.1.1",
+      "port": 443,
+      "winerror": 10013
+    },
+    {
+      "host": "8.8.8.8",
+      "port": 443,
+      "winerror": 10013
+    }
+  ],
+  "runtime_import_seconds": 0.7318116000096779,
+  "packages": {
+    "flatbuffers": "25.12.19",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.1",
+    "packaging": "26.3",
+    "pathvalidate": "3.3.1",
+    "piper-tts": "1.8.0",
+    "protobuf": "7.36.2",
+    "sherpa-onnx": "2.0.1",
+    "sherpa-onnx-core": "2.0.1"
+  },
+  "espeak_version": "1.52.0.1",
+  "frontend_load_seconds": 0.03073870000662282,
+  "model_load_seconds": 1.6261321000056341,
+  "total_load_seconds": 2.4134503999957815,
+  "network_denials_after": [
+    {
+      "host": "1.1.1.1",
+      "port": 443,
+      "winerror": 10013
+    },
+    {
+      "host": "8.8.8.8",
+      "port": 443,
+      "winerror": 10013
+    }
+  ],
+  "peak_process_memory_bytes": 277475328
+}

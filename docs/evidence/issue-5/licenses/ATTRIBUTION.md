@@ -1,14 +1,22 @@
-# Sherpa / Piper MLS：来源与许可
+# Sherpa / Piper 法语组合：来源与许可
 
 2026-11-07。范围是 #5 的本地 Windows x64 验证组合。
 
-## 模型与数据
+## Tom 模型与声线
 
-Piper `fr_FR-mls-medium`，发布者 rhasspy/piper-voices；署名 Michael Hansen 与 Piper contributors。训练数据 MLS 来自 LibriVox，由 Facebook AI 发布；见 [OpenSLR SLR94](https://openslr.org/94/)。固定[模型卡](MODEL_CARD)声明法语、125 个说话人、22,050 Hz、从零训练、CC BY 4.0。
+当前验证模型为 Piper `fr_FR-tom-medium`：法语、单说话人、44,100 Hz、推理 ID `0`。HF 快照固定为 `5041a7a49ae5b3a0f30e6837769eb03fdbb231bd`；[模型卡](TOM-MODEL_CARD)、原始权重与配置的来源和哈希见[清单](../resources.json)。
 
-模型准入按[固定 Piper 声线政策](PIPER-VOICES.md)、模型卡和 MLS 数据许可共同解释为 CC BY 4.0。原始模型、配置、模型卡的来源和哈希见[清单](../resources.json)，许可全文见 [CC BY 4.0](CC-BY-4.0.txt)。这沿用 [#14 的模型准入依据](https://github.com/zardonc/lexique/blob/9698653fb2a0eb8af5de56ba7d37265d3b01d169/docs/evidence/issue-14/replacement-admission.md)，不改变其人工音质否决。
+作者在 GitHub 固定提交 `a4601a0219fa8f8cf3f330bdd818dbb37ae287ce` 的[声明](TOM-README.md)明确将权重以 [AGPL-3.0](LICENSE-TOM-AGPL-3.0.txt) 发布，并另行授权声线使用。既有[来源核验](../../issue-14/piper-distribution-research.md)将这份 HF 权重对应到作者固定仓库的 `model 3/next.onnx`：63,511,038 字节，SHA-256 `bf65074ccdeeeeaa832e75edb1c0a513c01c9a972bdf085ff8a6e71ea234fd41`；本次缓存文件与该身份相符。
 
-本次只给 ONNX 添加 Sherpa 的九项元数据；序列化图与原文件逐字节相同，权重不改、不量化、不重新训练。`tokens.txt` 从原 `phoneme_id_map` 导出，保留音素 ID。声线为 MLS 原始说话人 `3698`、女声、推理 ID `1`；该对应依据[固定 MLS metainfo](https://huggingface.co/datasets/facebook/multilingual_librispeech/resolve/2e83e61823b4c47dcbcb1980bb88601274127609/data/mls_french/metainfo.txt)。变更和源文件身份见清单；不暗示作者或发布者认可本项目。
+声线条件要求：不得把合成声音表述为真实或已识别人物，不在服务界面或向最终用户披露作者身份；文件版权、许可及来源声明仍须保留。使用权重或生成音频训练的新声线模型须 AGPL-3.0。试听页仅标示合成语音，不将其归属于真实人物。
+
+本次添加 Sherpa 的九项 ONNX 元数据，序列化图与原文件完全相同；配置不改，不量化或重训。`tokens.txt` 从原 `phoneme_id_map` 导出，保留音素 ID。转换代码是 [prepare.py](../prepare.py)，原文件的固定获取地址和身份在清单中。修改版分发仍须落实 AGPL 的声明及对应源形式义务；本地验证未完成公共分发核验。作者 README 对旧 Piper 的 MIT 说明不覆盖这里使用的 piper-tts 1.8.0 GPL 前端。
+
+## 保留的 MLS 否决证据
+
+原 Piper `fr_FR-mls-medium` 的 [MODEL_CARD](MODEL_CARD)、[CC BY 4.0](CC-BY-4.0.txt)、[Piper 声线政策](PIPER-VOICES.md)及署名保留。发布者为 rhasspy/piper-voices，署名 Michael Hansen 与 Piper contributors；MLS 数据来自 LibriVox，由 Facebook AI 发布，见 [OpenSLR SLR94](https://openslr.org/94/)。
+
+原模型和女声 source `3698` → 推理 ID `1` 的许可解释沿用 [#14 准入补查](../../issue-14/replacement-admission.md)。其原始文件身份见[保留清单](../samples/resources.json)，人工质量否决见[原记录](../samples/quality.json)。这些材料不代表 MLS 的质量准入。
 
 ## SIWIS 的独立核验
 
@@ -17,7 +25,7 @@ Piper `fr_FR-mls-medium`，发布者 rhasspy/piper-voices；署名 Michael Hanse
 - 外层 Hugging Face README 的 `license: mit` 只是一项仓库标签；[固定 README](https://huggingface.co/rhasspy/piper-voices/raw/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/README.md)不建立训练数据或派生权重的完整权利链。
 - [Lessac medium 模型卡](lessac-MODEL_CARD.txt)链接 Blizzard 2013 数据许可。[原发布条款](https://www.cstr.ed.ac.uk/projects/blizzard/2013/lessac_blizzard2013/license.html)要求实名、人工授予许可，限定 Research Purposes；该定义排除商业语音合成产品开发与商业化。
 
-这些数据条款不能直接等同于派生模型条款，但尚无材料闭合 Lessac 基础权重到 SIWIS 的授权链。SIWIS 未达到本票的资源准入门槛；法语数据的 CC BY 4.0 和外层 MIT 标签不填补这项缺口。本次实际运行 MLS 是同一 Piper 家族的独立验证，不将其重新选为产品默认模型。
+这些数据条款不能直接等同于派生模型条款，但尚无材料闭合 Lessac 基础权重到 SIWIS 的授权链。SIWIS 未达到本票的资源准入门槛；法语数据的 CC BY 4.0 和外层 MIT 标签不填补这项缺口。本次实际运行 Tom 是同一 Piper 家族的独立验证。
 
 ## 引擎、前端与运行库
 

@@ -1,0 +1,49 @@
+{
+  "date": "2026-11-07",
+  "verdict": "passed",
+  "reviewer": "user",
+  "feedback": "Pass: école ends in /l/ and the samples are correct",
+  "samples": [
+    {
+      "input": "être",
+      "file": "01.wav",
+      "sha256": "532181f9c453e15da39d42615b32ffdf7b5b1e2ae538ea838d55bea6be710ce5"
+    },
+    {
+      "input": "sommes",
+      "file": "02.wav",
+      "sha256": "5413edaa03f390e54132ac3685c0e2e06050eaed56ed3ef1dc21531e3d37e0bb"
+    },
+    {
+      "input": "œil",
+      "file": "03.wav",
+      "sha256": "47bef8108758023d1400701740d3b239681599c3c41ae7dc933d58f93907fe8e"
+    },
+    {
+      "input": "école",
+      "file": "04.wav",
+      "sha256": "a236129cffa62c8db9c55ec72396ccf26cb4820fa106648db3d08c92ef0e2c40"
+    },
+    {
+      "input": "aujourd'hui",
+      "file": "05.wav",
+      "sha256": "1dad3271921e02ce09d6578c1ab186fdc6602af4dd7ea6f294d5f3a86793b477"
+    },
+    {
+      "input": "nous sommes ici",
+      "file": "06.wav",
+      "sha256": "356f31ad395c88f18985e5814690e70ab57a3cd43c38055cbd78dea88094b5f3"
+    },
+    {
+      "input": "les amis arrivent",
+      "file": "07.wav",
+      "sha256": "f834545e536f27a5e43f1449a969dead9220ef9ee2eff4398b8d77ff4ef22c8c"
+    },
+    {
+      "input": "J'apprends le français tous les jours.",
+      "file": "08.wav",
+      "sha256": "b8f9365e5efa64de05ba065decd5e61c07bce08705ca1f039d4a5b462a96837b"
+    }
+  ],
+  "detail": "User confirmed the final /l/ in école and correct French across the replacement set."
+}

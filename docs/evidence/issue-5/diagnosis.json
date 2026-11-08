@@ -1,0 +1,104 @@
+{
+  "date": "2026-11-07",
+  "target": "Windows x64",
+  "sentence": {
+    "expected": "J'apprends le français tous les jours.",
+    "recognizer_manifest": "asr-model.json",
+    "cases": [
+      {
+        "file": "docs/evidence/issue-14/comparison/siwis/08.wav",
+        "expected": "J'apprends le français tous les jours.",
+        "actual": "J'apprends le français tous les jours"
+      },
+      {
+        "file": "docs/evidence/issue-5/samples/08.wav",
+        "expected": "J'apprends le français tous les jours.",
+        "actual": "J'ai un peu rendu que je fais de serre toutes ces beijos."
+      },
+      {
+        "file": "docs/evidence/issue-5/samples-tom-v2/08.wav",
+        "expected": "J'apprends le français tous les jours.",
+        "actual": "J'apprend le français tous les jours."
+      }
+    ],
+    "network_denials_before": [
+      {
+        "host": "1.1.1.1",
+        "port": 443,
+        "winerror": 10013
+      },
+      {
+        "host": "8.8.8.8",
+        "port": 443,
+        "winerror": 10013
+      }
+    ],
+    "network_denials_after": [
+      {
+        "host": "1.1.1.1",
+        "port": 443,
+        "winerror": 10013
+      },
+      {
+        "host": "8.8.8.8",
+        "port": 443,
+        "winerror": 10013
+      }
+    ],
+    "verdict": "Replacement sentence matches; apprends/apprend is treated as a silent-s ASR spelling variation"
+  },
+  "quiet_phonemes": {
+    "input": "école",
+    "phonemes": "ekˈɔl",
+    "piper_and_sherpa_token_ids": [
+      1,
+      0,
+      18,
+      0,
+      23,
+      0,
+      120,
+      0,
+      54,
+      0,
+      24,
+      0,
+      2
+    ],
+    "source": "https://github.com/k2-fsa/sherpa-onnx/blob/af2d8d81dbfa61c4cea4c568da78f3982edca005/sherpa-onnx/csrc/offline-tts.cc#L40",
+    "behavior": "Default silence_scale=0.2 shortens amplitude <= 0.01 intervals longer than 0.2 seconds; silence_scale=1.0 preserves model output",
+    "model_decoder_upsampling_rates": [
+      8,
+      8,
+      4
+    ],
+    "model_output_hop_samples": 256,
+    "retimed_recording": {
+      "file": "samples-tom/04.wav",
+      "frames": 22433,
+      "seconds": 0.5086848072562359,
+      "sha256": "85a00bc3b0a08f3431877144c0516eb4aa4fda15fdb098c39e21b9fae468fd65",
+      "user_verdict": "missing audible final /l/"
+    },
+    "preserved_recording": {
+      "file": "samples-tom-v2/04.wav",
+      "frames": 35072,
+      "seconds": 0.7952834467120181,
+      "sha256": "a236129cffa62c8db9c55ec72396ccf26cb4820fa106648db3d08c92ef0e2c40",
+      "user_verdict": "final /l/ accepted"
+    }
+  },
+  "regressions": {
+    "seam": "Probe CLI -> WAV and report",
+    "sentence": "Real generated sentence must be recognized; original MLS fails this check",
+    "audio": "Saved WAVs must retain full 256-sample model hops; silence shortening fails this check",
+    "subprocess_timeout_seconds": 60,
+    "environment": "Trial report records the actual date, CPU identifier and logical CPU count; measurements use the explicit report's environment"
+  },
+  "quality_record": "samples-tom-v2/quality.json",
+  "limitations": [
+    "ASR is a sentence diagnostic and cannot certify individual French phonemes; the cached short-word control was unreliable",
+    "Human listening applies to the exact sample hashes in the quality record",
+    "These results do not establish a general defect in every MLS voice or complete public binary redistribution readiness"
+  ]
+}

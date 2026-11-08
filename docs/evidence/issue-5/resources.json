@@ -2,29 +2,29 @@
   "engine_version": "2.0.1",
   "frontend_version": "1.8.0",
   "frontend_voice": "fr",
-  "speaker_id": 1,
+  "speaker_id": 0,
   "assets": [
     {
-      "file": "fr_FR-mls-medium.onnx",
-      "bytes": 76733908,
-      "sha256": "9cda0f6e1e7c4e0d69806690c7904850d0a4b216f9a178ea40c72c59389e5e33",
-      "license": "CC-BY-4.0 admission based on MLS model card and Piper voice policy",
-      "source": "https://huggingface.co/rhasspy/piper-voices/tree/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/fr/fr_FR/mls/medium",
+      "file": "fr_FR-tom-medium.onnx",
+      "bytes": 63511194,
+      "sha256": "576982a23a5d3336aa2edeaaccd4b670485d5f97fb9017bf8c018d75d75d6572",
+      "license": "AGPL-3.0 with separate voice usage conditions; see licenses/TOM-README.md",
+      "source": "https://huggingface.co/rhasspy/piper-voices/tree/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/fr/fr_FR/tom/medium",
       "modification": "Sherpa metadata added; serialized ONNX graph unchanged"
     },
     {
-      "file": "fr_FR-mls-medium.onnx.json",
-      "bytes": 7036,
-      "sha256": "252b0b0a6e4cc4949e23eccb956f9c779986c32f934f2f7e2191e5fdc2edca61",
-      "license": "CC-BY-4.0 admission based on MLS model card and Piper voice policy",
-      "source": "https://huggingface.co/rhasspy/piper-voices/tree/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/fr/fr_FR/mls/medium"
+      "file": "fr_FR-tom-medium.onnx.json",
+      "bytes": 4959,
+      "sha256": "2f7f885ad5a0aad802e3cc24e4f57239febdcb142b4876de5d238094674361cc",
+      "license": "AGPL-3.0 with separate voice usage conditions; see licenses/TOM-README.md",
+      "source": "https://huggingface.co/rhasspy/piper-voices/tree/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/fr/fr_FR/tom/medium"
     },
     {
       "file": "tokens.txt",
-      "bytes": 954,
-      "sha256": "620e1aecf1a68fea3ba5850d137b0138fa2037c9b372dad13b95a2a215d0849a",
-      "license": "CC-BY-4.0 admission based on MLS model card and Piper voice policy",
-      "source": "https://huggingface.co/rhasspy/piper-voices/tree/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/fr/fr_FR/mls/medium",
+      "bytes": 940,
+      "sha256": "ef3a7e4a8d1af0c9d4dc45aaae1a6242ebe24a7ed6f3d025a49eb29682784c6d",
+      "license": "AGPL-3.0 with separate voice usage conditions; see licenses/TOM-README.md",
+      "source": "https://huggingface.co/rhasspy/piper-voices/tree/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/fr/fr_FR/tom/medium",
       "modification": "Generated from the original phoneme_id_map using the pinned Sherpa format"
     }
   ],
@@ -135,7 +135,8 @@
     "frontend_commit": "639388b6317fc4731e91d53da42aea68fd4166ff",
     "espeak_commit": "724808c5a83f9ef95fdd0db886ba7ba537ff224a",
     "espeak_version": "1.52.0.1",
-    "model_revision": "5041a7a49ae5b3a0f30e6837769eb03fdbb231bd"
+    "model_revision": "5041a7a49ae5b3a0f30e6837769eb03fdbb231bd",
+    "model_author_revision": "a4601a0219fa8f8cf3f330bdd818dbb37ae287ce"
   },
   "python_version": "3.14.10",
   "packages": {
@@ -182,25 +183,25 @@
   ],
   "source_files": [
     {
-      "file": "fr_FR-mls-medium.onnx",
-      "url": "https://huggingface.co/rhasspy/piper-voices/resolve/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/fr/fr_FR/mls/medium/fr_FR-mls-medium.onnx",
-      "bytes": 76733750,
-      "sha256": "0ed223f78466917f2bae05ee90096ce69ab1fdeb251f55590d0e7422d234e162",
-      "license": "CC-BY-4.0 admission; see licenses/ATTRIBUTION.md"
+      "file": "fr_FR-tom-medium.onnx",
+      "url": "https://huggingface.co/rhasspy/piper-voices/resolve/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/fr/fr_FR/tom/medium/fr_FR-tom-medium.onnx",
+      "bytes": 63511038,
+      "sha256": "bf65074ccdeeeeaa832e75edb1c0a513c01c9a972bdf085ff8a6e71ea234fd41",
+      "license": "AGPL-3.0 with separate voice usage conditions; see licenses/TOM-README.md"
     },
     {
-      "file": "fr_FR-mls-medium.onnx.json",
-      "url": "https://huggingface.co/rhasspy/piper-voices/resolve/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/fr/fr_FR/mls/medium/fr_FR-mls-medium.onnx.json",
-      "bytes": 7036,
-      "sha256": "252b0b0a6e4cc4949e23eccb956f9c779986c32f934f2f7e2191e5fdc2edca61",
-      "license": "CC-BY-4.0 admission; see licenses/ATTRIBUTION.md"
+      "file": "fr_FR-tom-medium.onnx.json",
+      "url": "https://huggingface.co/rhasspy/piper-voices/resolve/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/fr/fr_FR/tom/medium/fr_FR-tom-medium.onnx.json",
+      "bytes": 4959,
+      "sha256": "2f7f885ad5a0aad802e3cc24e4f57239febdcb142b4876de5d238094674361cc",
+      "license": "AGPL-3.0 with separate voice usage conditions; see licenses/TOM-README.md"
     },
     {
       "file": "MODEL_CARD",
-      "url": "https://huggingface.co/rhasspy/piper-voices/resolve/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/fr/fr_FR/mls/medium/MODEL_CARD",
-      "bytes": 222,
-      "sha256": "443ca90f1ed8e57d9fb802da6dc19c302d5d9b51ddbfbf27a17f3fb5c37ad154",
-      "license": "CC-BY-4.0 admission; see licenses/ATTRIBUTION.md"
+      "url": "https://huggingface.co/rhasspy/piper-voices/resolve/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/fr/fr_FR/tom/medium/MODEL_CARD",
+      "bytes": 233,
+      "sha256": "ece4132df4a1ae2f90e22c9f01539aec14acb7f8dc8ded64edd2051945d0f1e9",
+      "license": "AGPL-3.0 with separate voice usage conditions; see licenses/TOM-README.md"
     }
   ]
 }

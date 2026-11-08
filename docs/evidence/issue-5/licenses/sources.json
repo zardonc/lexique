@@ -283,6 +283,13 @@
       "scope": "Dependency declared by pinned sherpa-onnx source build; wheel linkage not independently established"
     },
     {
+      "file": "LICENSE-TOM-AGPL-3.0.txt",
+      "bytes": 33943,
+      "sha256": "d24cf71f2b1428e54dae699e7a65540d3d69517e33ba2fd0213f501bd5474341",
+      "source_url": "https://raw.githubusercontent.com/tjiho/French-tts-model-piper/a4601a0219fa8f8cf3f330bdd818dbb37ae287ce/LICENSE",
+      "scope": "Tom weight licence; GPL engine obligations remain separate"
+    },
+    {
       "file": "LICENSE-UTF8PROC-2.12.0.md",
       "bytes": 5125,
       "sha256": "3b510150d34f248a221bb88e1d811238d6c6c18b51231822c42974c39bb07256",
@@ -344,6 +351,20 @@
       "sha256": "fb0af774b4d7cffc5b9d046f2aaeade2f37df2f80abf8033c95dfffcc77a8866",
       "source_url": "https://github.com/csukuangfj/onnxruntime-libs/releases/download/v1.28.2/onnxruntime-win-x64-MT-Release-1.28.2.tar.bz2",
       "scope": "ONNX Runtime Windows x64 MT Release third-party notices"
+    },
+    {
+      "file": "TOM-MODEL_CARD",
+      "bytes": 233,
+      "sha256": "ece4132df4a1ae2f90e22c9f01539aec14acb7f8dc8ded64edd2051945d0f1e9",
+      "source_url": "https://huggingface.co/rhasspy/piper-voices/raw/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/fr/fr_FR/tom/medium/MODEL_CARD",
+      "scope": "Fixed French single-speaker 44100 Hz Tom model card"
+    },
+    {
+      "file": "TOM-README.md",
+      "bytes": 4400,
+      "sha256": "2b1d00bf8dd35564075f054bd81b5c65474a9825140e20d467f6dd491aef2a53",
+      "source_url": "https://raw.githubusercontent.com/tjiho/French-tts-model-piper/a4601a0219fa8f8cf3f330bdd818dbb37ae287ce/README.md",
+      "scope": "Author's explicit weight licence and separate voice usage conditions"
     }
   ]
 }

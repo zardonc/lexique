@@ -2,11 +2,11 @@
 
 ## Sherpa / Piper 法语独立验证（issue #5）
 
-2026-11-07，固定 Sherpa-ONNX 2.0.1、Piper MLS medium / source 3698 女声、piper-tts 1.8.0 外部 eSpeak NG 1.52.0.1 与官方 CPython 3.14.10，在 Windows x64 AppContainer 禁网进程生成、回读并同步调用播放八个有效、非静音的 22,050 Hz PCM WAV。前后对两个公网 IP 的四次连接均返回 WinError 10013。统一输入 `fr-common-v1` 原样保留，未给单词补句或标点；完整音素路径使用 `GenerationConfig.phoneme_codepoints`，不设置已失效的 `data_dir`。
+2026-11-07，固定 Sherpa-ONNX 2.0.1、Piper Tom medium / 单说话人 0、piper-tts 1.8.0 外部 eSpeak NG 1.52.0.1 与官方 CPython 3.14.10，在 Windows x64 AppContainer 禁网进程生成、回读并同步调用播放八个有效、非静音的 44,100 Hz PCM WAV。前后对两个公网 IP 的四次连接均返回 WinError 10013。统一输入 `fr-common-v1` 原样保留；完整音素路径使用 `GenerationConfig.phoneme_codepoints`，并以 `silence_scale=1.0` 保留安静词尾的完整波形。
 
-五项 CLI 检查全部通过，覆盖缺失 / 损坏资源、已有输出、改写统一输入以及真实禁网生成与播放。测试子进程保持 60 秒硬限。ONNX 1.23.2 准备环境两次生成同样的模型、配置与音素表哈希，并确认序列化图未变。完整源文件获取包括模型、运行库、离线 VC 前提安装器与准备工具，共 205,006,060 字节，超过 200 MB；单独运行资源获取为 196,630,776 字节。包体、原始展开量、内存、加载与逐项耗时见 [#5 证据与测量](evidence/issue-5/README.md)。
+五项 CLI 检查全部通过（16.675 秒，无跳过），覆盖缺失 / 损坏资源、已有输出、改写统一输入以及真实禁网生成与播放；音频回归验证完整的 256 采样点模型步幅和固定例句识别，修复前均复现失败。测试子进程保持 60 秒硬限。ONNX 1.23.2 准备环境两次生成同样的模型、配置与音素表哈希，并确认序列化图未变。运行资源获取为 183,405,998 字节，计入准备工具共 191,781,282 字节；v5 ZIP 为 170,694,849 字节、安装逻辑体积 279,742,747 字节。测试用缓存 ASR 不进入语音包。包内探针禁网生成与播放、inventory 和 ZIP 校验通过；测量日期和环境引用当前报告，缺少环境字段在 ZIP 创建前失败。完整方法见 [#5 证据与测量](evidence/issue-5/README.md)。
 
-用户试听八条[新样本](evidence/issue-5/samples/listen.html)，判定“发音或音质失败”；[否决记录](evidence/issue-5/samples/quality.json)固定这些样本的哈希，保留原始 WAV。该 Sherpa / MLS 候选未通过法语质量验收。SIWIS 的 Lessac 基础权重授权链未闭合，未完成其合法组合生成。源码 / 许可和 wheel 身份已固定，完整二进制构建来源、对应源码交付、干净机器前提及其他三平台仍待验证。#5 保持开放，产品声线准入与正式发行门槛未通过。
+用户确认最终八条[Tom 样本](evidence/issue-5/samples-tom-v2/listen.html)法语正确，école 清楚保留词尾 /l/；[通过记录](evidence/issue-5/samples-tom-v2/quality.json)固定对应文件。原 [MLS 否决](evidence/issue-5/samples/quality.json)与 [Tom 部分通过](evidence/issue-5/samples-tom/quality.json)单独保留。ASR 仅作例句诊断，短词发音以人工试听为准。Tom 权重 AGPL-3.0 和声线条件、引擎 / 前端分别许可已记录；SIWIS 授权链、完整二进制来源、GPL / AGPL 对应源码交付、公共再分发和干净机器前提仍待核验，其他三目标按用户要求暂缓。人工结论不涵盖未单独试听的包运行音频。#5 保持开放，产品声线准入与正式发行门槛继续单独验收。
 
 ## 自定义 MDX/MDD 独立兼容验证（issue #3）
 

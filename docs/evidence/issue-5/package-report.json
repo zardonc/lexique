@@ -1,11 +1,14 @@
 {
   "status": "passed",
   "engine": "sherpa-onnx",
-  "model": "fr_FR-mls-medium",
-  "speaker_id": 1,
-  "source_speaker_id": "3698",
+  "model": "fr_FR-tom-medium",
+  "speaker_id": 0,
   "frontend_voice": "fr",
   "threads": 2,
+  "silence_scale": 1.0,
+  "date": "2026-11-07",
+  "cpu": "AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD",
+  "logical_cpus": 16,
   "python": "3.14.10",
   "platform": "Windows-11-10.0.26300-SP0",
   "input_version": "fr-common-v1",
@@ -14,26 +17,26 @@
   "quality_status": "pending human listening",
   "assets": [
     {
-      "file": "fr_FR-mls-medium.onnx",
-      "bytes": 76733908,
-      "sha256": "9cda0f6e1e7c4e0d69806690c7904850d0a4b216f9a178ea40c72c59389e5e33",
-      "license": "CC-BY-4.0 admission based on MLS model card and Piper voice policy",
-      "source": "https://huggingface.co/rhasspy/piper-voices/tree/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/fr/fr_FR/mls/medium",
+      "file": "fr_FR-tom-medium.onnx",
+      "bytes": 63511194,
+      "sha256": "576982a23a5d3336aa2edeaaccd4b670485d5f97fb9017bf8c018d75d75d6572",
+      "license": "AGPL-3.0 with separate voice usage conditions; see licenses/TOM-README.md",
+      "source": "https://huggingface.co/rhasspy/piper-voices/tree/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/fr/fr_FR/tom/medium",
       "modification": "Sherpa metadata added; serialized ONNX graph unchanged"
     },
     {
-      "file": "fr_FR-mls-medium.onnx.json",
-      "bytes": 7036,
-      "sha256": "252b0b0a6e4cc4949e23eccb956f9c779986c32f934f2f7e2191e5fdc2edca61",
-      "license": "CC-BY-4.0 admission based on MLS model card and Piper voice policy",
-      "source": "https://huggingface.co/rhasspy/piper-voices/tree/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/fr/fr_FR/mls/medium"
+      "file": "fr_FR-tom-medium.onnx.json",
+      "bytes": 4959,
+      "sha256": "2f7f885ad5a0aad802e3cc24e4f57239febdcb142b4876de5d238094674361cc",
+      "license": "AGPL-3.0 with separate voice usage conditions; see licenses/TOM-README.md",
+      "source": "https://huggingface.co/rhasspy/piper-voices/tree/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/fr/fr_FR/tom/medium"
     },
     {
       "file": "tokens.txt",
-      "bytes": 954,
-      "sha256": "620e1aecf1a68fea3ba5850d137b0138fa2037c9b372dad13b95a2a215d0849a",
-      "license": "CC-BY-4.0 admission based on MLS model card and Piper voice policy",
-      "source": "https://huggingface.co/rhasspy/piper-voices/tree/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/fr/fr_FR/mls/medium",
+      "bytes": 940,
+      "sha256": "ef3a7e4a8d1af0c9d4dc45aaae1a6242ebe24a7ed6f3d025a49eb29682784c6d",
+      "license": "AGPL-3.0 with separate voice usage conditions; see licenses/TOM-README.md",
+      "source": "https://huggingface.co/rhasspy/piper-voices/tree/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/fr/fr_FR/tom/medium",
       "modification": "Generated from the original phoneme_id_map using the pinned Sherpa format"
     }
   ],
@@ -52,15 +55,15 @@
         ]
       ],
       "file": "01.wav",
-      "sha256": "b5615693ff7dbef921f297a117a55977bff8edd3d82d1eef2157cfbdc381f41b",
-      "bytes": 56364,
-      "frontend_seconds": 0.057478300004731864,
-      "generation_seconds": 0.057073699979810044,
-      "first_audio_seconds": 0.11457989999325946,
-      "audio_seconds": 1.2770975056689342,
-      "peak_amplitude": 0.12171892821788788,
+      "sha256": "08d6e50fffee82812cfa65eb556251d99261709805f9ca9a3477d913c87281fc",
+      "bytes": 62508,
+      "frontend_seconds": 0.06127590002142824,
+      "generation_seconds": 0.06166619999567047,
+      "first_audio_seconds": 0.12296750000678003,
+      "audio_seconds": 0.7082086167800453,
+      "peak_amplitude": 0.2557840347290039,
       "played": true,
-      "playback_seconds": 2.254540200025076
+      "playback_seconds": 0.890047200024128
     },
     {
       "input": "sommes",
@@ -76,15 +79,15 @@
         ]
       ],
       "file": "02.wav",
-      "sha256": "2b5a13fe78fb90258b2d915063183155a348085b1609a40a6dd3eacfd28c18be",
-      "bytes": 42604,
-      "frontend_seconds": 0.000905099994270131,
-      "generation_seconds": 0.05048420000821352,
-      "first_audio_seconds": 0.05140610001399182,
-      "audio_seconds": 0.9650793650793651,
-      "peak_amplitude": 0.11736399680376053,
+      "sha256": "0752592a1693f19dcb91e657767872d6e9f7c00c8859b0a452b38553884acefe",
+      "bytes": 63532,
+      "frontend_seconds": 0.0009523000044282526,
+      "generation_seconds": 0.05880589998560026,
+      "first_audio_seconds": 0.059759700001450256,
+      "audio_seconds": 0.7198185941043084,
+      "peak_amplitude": 0.30920758843421936,
       "played": true,
-      "playback_seconds": 1.1429494000039995
+      "playback_seconds": 0.8502856999984942
     },
     {
       "input": "œil",
@@ -99,15 +102,15 @@
         ]
       ],
       "file": "03.wav",
-      "sha256": "f1fc48aa32af727c83fcc7b5ca653748375b6fdde253cdfea5e0b0c7a95b421b",
-      "bytes": 36100,
-      "frontend_seconds": 0.0008202999888453633,
-      "generation_seconds": 0.044632400007685646,
-      "first_audio_seconds": 0.045462500012945384,
-      "audio_seconds": 0.8175963718820861,
-      "peak_amplitude": 0.09177840501070023,
+      "sha256": "6232bd330705fd9e47e47c52bb3233b966a33590fbfd2760a6d9f4fb7fdacc7d",
+      "bytes": 48684,
+      "frontend_seconds": 0.0008151000074576586,
+      "generation_seconds": 0.044442699989303946,
+      "first_audio_seconds": 0.045266900007845834,
+      "audio_seconds": 0.5514739229024943,
+      "peak_amplitude": 0.10178804397583008,
       "played": true,
-      "playback_seconds": 0.9942193999886513
+      "playback_seconds": 0.6969975999963935
     },
     {
       "input": "école",
@@ -124,15 +127,15 @@
         ]
       ],
       "file": "04.wav",
-      "sha256": "50717b89c8417963b164f4b52e9f241653ed80ca3dcaa48772ab3037962c521a",
-      "bytes": 73384,
-      "frontend_seconds": 0.0009570999827701598,
-      "generation_seconds": 0.08094859999255277,
-      "first_audio_seconds": 0.08191949999309145,
-      "audio_seconds": 1.6630385487528345,
-      "peak_amplitude": 0.09244568645954132,
+      "sha256": "89fd0a87b042e0d2b4b204b7044a4c660a2ce4c13a10fe992e3f4db846511364",
+      "bytes": 81964,
+      "frontend_seconds": 0.0014835000038146973,
+      "generation_seconds": 0.07623760000569746,
+      "first_audio_seconds": 0.07775820000097156,
+      "audio_seconds": 0.9287981859410431,
+      "peak_amplitude": 0.17052802443504333,
       "played": true,
-      "playback_seconds": 1.8283201000012923
+      "playback_seconds": 1.076485199999297
     },
     {
       "input": "aujourd'hui",
@@ -152,15 +155,15 @@
         ]
       ],
       "file": "05.wav",
-      "sha256": "4331f6922fdf2a46efed37b0b463d3c6c0cacef26f3861a2b35830875e718830",
-      "bytes": 84000,
-      "frontend_seconds": 0.0011314000003039837,
-      "generation_seconds": 0.09426669997628778,
-      "first_audio_seconds": 0.0954306999919936,
-      "audio_seconds": 1.903764172335601,
-      "peak_amplitude": 0.11836135387420654,
+      "sha256": "7b2087baf80cd01a006420cf74ea9d19b42bf7d0abeee0bf772db1b2e0846397",
+      "bytes": 81452,
+      "frontend_seconds": 0.0007902999932412058,
+      "generation_seconds": 0.0702099000045564,
+      "first_audio_seconds": 0.07101189999957569,
+      "audio_seconds": 0.9229931972789116,
+      "peak_amplitude": 0.19641558825969696,
       "played": true,
-      "playback_seconds": 2.0776628000021446
+      "playback_seconds": 1.0792672999959905
     },
     {
       "input": "nous sommes ici",
@@ -184,15 +187,15 @@
         ]
       ],
       "file": "06.wav",
-      "sha256": "6a50d2d540c02c0ee0bb93ce400d81978a0ce61b3d410f14d65e8bb2d2f6f1bb",
-      "bytes": 137636,
-      "frontend_seconds": 0.0008075999794527888,
-      "generation_seconds": 0.15116239999770187,
-      "first_audio_seconds": 0.15198269998654723,
-      "audio_seconds": 3.12,
-      "peak_amplitude": 0.14863616228103638,
+      "sha256": "139553f20cdbcfda9923eeb71e65423f4ad456485c57665cfb108b5bd2ad0a9f",
+      "bytes": 96812,
+      "frontend_seconds": 0.000871100026415661,
+      "generation_seconds": 0.08648199998424388,
+      "first_audio_seconds": 0.08736670002690516,
+      "audio_seconds": 1.0971428571428572,
+      "peak_amplitude": 0.41517436504364014,
       "played": true,
-      "playback_seconds": 3.317197099997429
+      "playback_seconds": 1.2249371999932919
     },
     {
       "input": "les amis arrivent",
@@ -220,15 +223,15 @@
         ]
       ],
       "file": "07.wav",
-      "sha256": "0350fb1ea40fd5501faab39d217c873088fdc854765a382e1ece82123f39212f",
-      "bytes": 147038,
-      "frontend_seconds": 0.0009435999963898212,
-      "generation_seconds": 0.17775060000712983,
-      "first_audio_seconds": 0.17870799999218434,
-      "audio_seconds": 3.3331972789115647,
-      "peak_amplitude": 0.11929331719875336,
+      "sha256": "b6e50c5cccdf0e9dea098e30c64773be17afba5f954a4f04d29626a097412667",
+      "bytes": 148012,
+      "frontend_seconds": 0.0010239999974146485,
+      "generation_seconds": 0.1310589000058826,
+      "first_audio_seconds": 0.1320990999811329,
+      "audio_seconds": 1.677641723356009,
+      "peak_amplitude": 0.25428134202957153,
       "played": true,
-      "playback_seconds": 3.551896300021326
+      "playback_seconds": 1.776640199997928
     },
     {
       "input": "J'apprends le français tous les jours.",
@@ -272,15 +275,15 @@
         ]
       ],
       "file": "08.wav",
-      "sha256": "7424b5e202ea3ac2206994999f0765b49da64acbd3de84e443a7f445e49a5508",
-      "bytes": 165800,
-      "frontend_seconds": 0.001160499989055097,
-      "generation_seconds": 0.2239611999830231,
-      "first_audio_seconds": 0.2251397999934852,
-      "audio_seconds": 3.758639455782313,
-      "peak_amplitude": 0.12235289067029953,
+      "sha256": "4722f522d068af71c7eb31f16ad1fd884335e01ce523313ab2fd0834f5cee48d",
+      "bytes": 187436,
+      "frontend_seconds": 0.0009005999891087413,
+      "generation_seconds": 0.17688579999958165,
+      "first_audio_seconds": 0.17779599997447804,
+      "audio_seconds": 2.124625850340136,
+      "peak_amplitude": 0.36285945773124695,
       "played": true,
-      "playback_seconds": 3.9405931000073906
+      "playback_seconds": 2.252726900012931
     }
   ],
   "network_denials_before": [
@@ -295,7 +298,7 @@
       "winerror": 10013
     }
   ],
-  "runtime_import_seconds": 0.3490764999878593,
+  "runtime_import_seconds": 0.9593667000008281,
   "packages": {
     "flatbuffers": "25.12.19",
     "numpy": "2.5.4",
@@ -308,9 +311,9 @@
     "sherpa-onnx-core": "2.0.1"
   },
   "espeak_version": "1.52.0.1",
-  "frontend_load_seconds": 0.034360600024228916,
-  "model_load_seconds": 0.6938082000124268,
-  "total_load_seconds": 1.1032433999935165,
+  "frontend_load_seconds": 0.04106289998162538,
+  "model_load_seconds": 1.7569227000058163,
+  "total_load_seconds": 2.78531499998644,
   "network_denials_after": [
     {
       "host": "1.1.1.1",
@@ -323,5 +326,5 @@
       "winerror": 10013
     }
   ],
-  "peak_process_memory_bytes": 299474944
+  "peak_process_memory_bytes": 280813568
 }

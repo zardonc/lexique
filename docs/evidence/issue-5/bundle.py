@@ -55,13 +55,14 @@ def main():
     for name in ("sherpa_probe.py", "speech_probe.py", "test_sherpa_probe.py"):
         shutil.copyfile(repository / "scripts" / name, args.output / "scripts" / name)
     shutil.copytree(evidence, args.output / "docs/evidence/issue-5",
-                    ignore=shutil.ignore_patterns("__pycache__", "README.md", "measurements.json"))
+                    ignore=shutil.ignore_patterns("__pycache__", "README.md", "measurements.json", "package-report.json"))
     shutil.copyfile(repository / "LICENSE", args.output / "LICENSE")
     (args.output / "README.md").write_text(
-        "# Sherpa / MLS Windows x64 validation\n\n"
-        "Listen to all eight samples in docs/evidence/issue-5/samples/listen.html. "
-        "These samples failed the user's pronunciation or audio quality check on 2026-11-07. "
-        "This is a rejected voice candidate; successful generation does not establish French quality.\n\n"
+        "# Sherpa / Piper French Windows x64 validation\n\n"
+        "Listen to all eight approved samples in docs/evidence/issue-5/samples-tom-v2/listen.html. "
+        "Their listening verdict is recorded in samples-tom-v2/quality.json. "
+        "The original MLS recordings and the partial Tom verdict remain in samples and samples-tom. "
+        "Successful generation and sentence recognition do not establish human pronunciation approval.\n\n"
         "From this extracted directory, run in PowerShell 7 with Codex 0.167.0-alpha.3.2:\n\n"
         "```powershell\n"
         "codex sandbox -P issue5 "

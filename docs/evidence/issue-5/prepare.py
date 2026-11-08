@@ -1,4 +1,4 @@
-"""Prepare the pinned MLS model for Sherpa using its upstream metadata format."""
+"""Prepare the pinned Tom model for Sherpa using its upstream metadata format."""
 
 import argparse
 import hashlib
@@ -23,16 +23,16 @@ def main():
             digest = hashlib.file_digest(source, "sha256").hexdigest()
         if path.stat().st_size != item["bytes"] or digest != item["sha256"]:
             raise ValueError(f"source resource checksum mismatch: {path.name}")
-    name = "fr_FR-mls-medium.onnx"
+    name = "fr_FR-tom-medium.onnx"
     config = json.loads((args.source / (name + ".json")).read_text(encoding="utf-8"))
-    if (config["espeak"]["voice"], config["audio"]["sample_rate"], config["num_speakers"]) != ("fr", 22050, 125):
-        raise ValueError("unexpected MLS configuration")
+    if (config["espeak"]["voice"], config["audio"]["sample_rate"], config["num_speakers"]) != ("fr", 44100, 1):
+        raise ValueError("unexpected Tom configuration")
     model = onnx.load(args.source / name)
     original_graph = model.graph.SerializeToString()
     metadata = {
         "model_type": "vits", "comment": "piper", "language": "French",
         "voice": "fr", "version": "1", "has_espeak": "1", "has_g2pw": "0",
-        "n_speakers": "125", "sample_rate": "22050",
+        "n_speakers": "1", "sample_rate": "44100",
     }
     onnx.helper.set_model_props(model, metadata)
     args.output.mkdir(parents=True)

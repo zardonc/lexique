@@ -1,0 +1,57 @@
+{
+  "date": "2026-11-07",
+  "verdict": "failed",
+  "reviewer": "user",
+  "feedback": "word \"école\" I only hear [ekɔ] the correct pronunciation should be [ekɔl], everything else is correct.",
+  "samples": [
+    {
+      "input": "être",
+      "file": "01.wav",
+      "sha256": "ec451ba3d8dc29543d2b9b6906ab2d9aad5a09d93191810465a4565676c59ae4",
+      "verdict": "passed"
+    },
+    {
+      "input": "sommes",
+      "file": "02.wav",
+      "sha256": "0783b220d6514060b8232048836db943eee43bd6be6e01de8baedb9c975d203b",
+      "verdict": "passed"
+    },
+    {
+      "input": "œil",
+      "file": "03.wav",
+      "sha256": "ac79be6448b629cbc3c782a765232f22325600a6126e23bbca5d2ece171a295e",
+      "verdict": "passed"
+    },
+    {
+      "input": "école",
+      "file": "04.wav",
+      "sha256": "85a00bc3b0a08f3431877144c0516eb4aa4fda15fdb098c39e21b9fae468fd65",
+      "verdict": "failed"
+    },
+    {
+      "input": "aujourd'hui",
+      "file": "05.wav",
+      "sha256": "9690812ecd7b4109cbc2bfa798da7b88c62e8e91b96caba69b9be44f4daa5aa0",
+      "verdict": "passed"
+    },
+    {
+      "input": "nous sommes ici",
+      "file": "06.wav",
+      "sha256": "826f18881545c2969379a9a3b3b6ddb01122d3f67f003b799a9c69bdc44b28e5",
+      "verdict": "passed"
+    },
+    {
+      "input": "les amis arrivent",
+      "file": "07.wav",
+      "sha256": "5226246b0a3fe54dd1889805c2b6741484ee44419f38fbae6ad1546e0e62b24e",
+      "verdict": "passed"
+    },
+    {
+      "input": "J'apprends le français tous les jours.",
+      "file": "08.wav",
+      "sha256": "4ba47621dfd3992435e472cc7adfb9e5643101879d62629c9666f4d630edc18c",
+      "verdict": "passed"
+    }
+  ],
+  "detail": "User accepted seven recordings; école is missing the audible final /l/."
+}
