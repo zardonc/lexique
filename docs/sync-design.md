@@ -2,6 +2,8 @@
 
 日期：2026-11-02。状态：后续设计建议与进入门槛，尚未实现。正式规格跟踪在 [#1](https://github.com/zardonc/lexique/issues/1)；阶段安排见[开发路线](roadmap.md)。本文继续遵循 [ADR 0001](adr/0001-separate-bundled-resources-from-learning-data.md)、[ADR 0004](adr/0004-one-vocabulary-record-with-reference-digest-and-notes.md)、[ADR 0005](adr/0005-independent-progress-for-vocabulary-card-types.md) 和 [ADR 0006](adr/0006-learning-days-and-absolute-review-times.md)。
 
+2026-11-08 新增[系统选词／屏幕 OCR](translation-inputs.md)、[词频颜色](word-frequency-colors.md)和[WPM](speech-preferences.md)。原图、OCR 原文及整张词频资源／派生颜色不作为学习数据自动同步；只读资源与用户内容继续分离。WPM 仍是应用偏好，其跨设备共享范围在 M4 逐项冻结；本次未确认或实现 outbox／JSONL 协议。
+
 ## 结论与要求边界
 
 推荐保留桌面端 SQLite，采用**版本化 JSON 清单 + 不可变 JSONL 快照和操作分段**作为交换协议。浏览器端由 IndexedDB 宿主持久化，WASM 继续负责同一纯调度核心；不要求为了文件格式把浏览器改为内存 SQLite。

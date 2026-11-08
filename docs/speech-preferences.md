@@ -1,17 +1,43 @@
-# 法语语音偏好
+# 法语语音偏好与 WPM
 
-2026-11-08 用户确认后续开发继续使用已接入的 Supertonic 3，不再测试其他 TTS 模型，见 [ADR 0009](adr/0009-continue-with-supertonic-3.md)。2026-10-26 确认的“法语女声／男声”和“正常／慢速”设置继续适用，默认女声、正常。
+更新：2026-11-08。用户确认继续使用 Supertonic 3，并将播放倍率改为目标朗读速度 WPM；单词、例句与变位发音共用设置。本次冻结需求和待实施规则，当前运行时仍是正常／0.6 倍慢速。来源见 [ADR 0009](adr/0009-continue-with-supertonic-3.md)与[后续计划](lookup-notes-speech-plan.md)。
 
-- MLS medium 已因用户试听确认读音混乱、音质不佳撤回，不作为产品声线。失败组合为：女声源编号 `3698`（推理编号 `1`），男声源编号 `1840`（推理编号 `0`）；默认女声、正常语速。许可依据与边界见[替代准入记录](evidence/issue-14/replacement-admission.md)。
-- 偏好独立于学习进度，保存到现有用户库的 `app_metadata`，不增加 schema 版本。声线使用稳定的 `female`／`male`；旧 `siwis`／`tom` 分别兼容为女声／男声，保存时使用新值，不丢失原语速。
-- 设置分别保存声线与语速；保存失败保留待保存选择并显示错误，不显示保存成功。
-- 浏览器预览不冒充桌面持久化，禁用保存并说明限制。
-- Windows x64 已接入偏好持久化、CPU 离线合成、48 kbit/s Ogg Opus 编码、播放及音频版本／缓存维护，见 [#15](evidence/issue-15/README.md)、[#24](evidence/issue-24/README.md)及 [#38](evidence/issue-38/README.md)。
-- 当前使用 Supertonic 3 int8：女声 F1（`sid=0`）、男声 M1（`sid=5`），八步去噪。用户确认初次英语和法语样本可用，且[试听对照](evidence/issue-14/supertonic-slower/listen.html)的 `0.6` 倍播放清晰自然。统一以 `speed=1.0` 合成，播放时常速使用 `1.0`、慢速使用 `0.6`，共享同一音频；偏好变化不自动替换生词选定音频，保留规则见 [ADR 0008](adr/0008-selected-word-audio-content-versions.md)。
-- 用户确认单独字母 `y` 使用字母名 /iɡʁɛk/，试听候选由 `i grec` 合成。代词 `y` 的 /i/ 是不同用法，不能将字母名自动套用到代词；产品尚未实现语境选择。
-- Kokoro [#6](evidence/issue-6/README.md) 已测试，用户判定音质不满足要求；Pocket TTS #7 未测试、取消计划。历史探针、录音和许可材料保留。
-- Supertonic 3 的 OpenRAIL-M／通知义务、完整默认包体、干净机器和跨平台门槛继续按[资源准入清单](development-readiness.md)核查；继续使用不代表正式发行已通过。
+## 目标设置
 
-历史四组合样本见[Supertonic 试听页](evidence/issue-14/supertonic-samples/listen.html)，许可条件及来源见[替代调查](evidence/issue-14/replacement-options-after-mls.md)。模型与格式比较见 [#14 对比报告](evidence/issue-14/comparison.md)；这些材料不构成后续替代模型测试计划。
+实施票为 [#56](https://github.com/zardonc/lexique/issues/56)，标 `ready-for-agent`，是当前下一步；例句朗读入口接入时复用本规则。
 
-Windows / macOS 的 x64 / ARM64 各提供完整版和 Lite 版，共八种发行物，均使用 Supertonic 3。完整版内嵌模型，不受 200 MB 包体上限限制；Lite 不内嵌模型，用户可在“额外资源”主动下载后离线使用。其他内置资源不变。Lite 下载和四架构正式发行仍待实现和验收；现有 Windows x64 语音开发包不等于 M5 完成。
+| 项目 | 要求 |
+| --- | --- |
+| 单位 | WPM，每分钟朗读的书写词数；界面同时显示中文／英语／法语的单位解释 |
+| 最低／最高 | **80–240 WPM**，两端均可设置 |
+| 调整粒度 | **20 WPM**；键盘、滑动或加减均按同一档位 |
+| 默认 | 女声、**180 WPM** |
+| 便捷预设 | 慢速 100、正常 180、快速 240 WPM，并提供短句试听 |
+
+范围与档位是本产品的易用性标准。数值清楚、操作简单、慢速可听清优先于精确达到每个词的数学速率；设置界面以 WPM 为主，不再要求用户理解倍率。提供数值、端点、文字说明和可用键盘操作，保存失败保留待保存选择并显示真实错误。
+
+## 播放与近似基准
+
+仍以正常合成规格 `speed=1.0` 使用现有 Supertonic 3 F1（`sid=0`）／M1（`sid=5`）、八步去噪、CPU 和 48 kbit/s Ogg Opus。在播放阶段将目标 WPM 换算成实际播放速率；变更速度不重新合成或替换选定单词音频，不改变卡片、进度、内容版本或保留期限。
+
+实现前用一组代表性法语句子的实际词数和音频时长，分别记录两声线的基准 WPM，再按“目标 WPM ÷ 声线基准 WPM”近似换算。书写词按含字母／数字的空白分隔项计数；撇号或连字符词不再拆分，纯标点不计，正常句内停顿计入时长。单词及短变位表达沿用声线基准，不按一个短文件反推精确 WPM。
+
+现有选定版本优先使用其已知声线；旧音频声线未知时使用明确记录的默认声线基准并标注近似。播放端点、音高保持、清晰度和响应在真实设备验证；不能将未校准的固定倍率标注成实测 WPM。无需逐词对齐、高精度控制或逐文件重新测量。
+
+当前单词预览与听音卡是两处播放器，逐表达变位复用单词预览。实现时统一目标设置和换算规则，并让未来例句朗读复用同一规则；修改已保存设置后，下次播放采用新值，当前播放不突然跳速。
+
+## 保存与既有数据
+
+偏好继续独立保存在用户库 `app_metadata`，目标字段为声线 `female`／`male` 与整数 `wpm`。声线读取旧 `siwis`／`tom` 的已有规则保留。已有 `normal` 读取为 180 WPM，`slow` 读取为 100 WPM，以保留常速／慢速选择意图；这是粗粒度映射，不宣称与旧倍率完全等价。成功保存后写入新的 WPM 格式。
+
+仅无偏好时使用默认值；非法范围、非整数、不在 20 WPM 档位、未知内容及损坏配置保持错误，不覆盖成默认值。保存失败保留原持久设置。禁止为更新速度清空用户库、重建卡片或批量替换音频。浏览器预览继续明确不支持桌面持久保存。
+
+## 验收与既有语音证据
+
+新设置验收覆盖 80／180／240、档位与键盘操作、非法值、两声线试听、单词／听音卡／变位共用设置、后续例句接入、重启恢复、旧 normal／slow 读取、保存失败与现有学习／音频身份保持。80–240 是可设置范围；验收记录近似基准和听感，不要求所有短词精确达到目标值。
+
+Windows x64 已有偏好持久化、CPU 离线合成、Opus 与音频生命周期证据，见 [#15](evidence/issue-15/README.md)、[#24](evidence/issue-24/README.md)和 [#38](evidence/issue-38/README.md)。历史正常／0.6 倍[试听页](evidence/issue-14/supertonic-slower/listen.html)只证明当时播放方案；**WPM 尚未实现或校准**。
+
+MLS medium 曾因音质撤回；Kokoro [#6](evidence/issue-6/README.md)为“Tested and does not meet requirements”，Pocket TTS #7 未测试、取消计划，不再安排替代 TTS 模型测试。历史[四组合样本](evidence/issue-14/supertonic-samples/listen.html)、[#14 对比](evidence/issue-14/comparison.md)及[许可材料](evidence/issue-14/supertonic-licenses/ATTRIBUTION.md)保留。
+
+字母 `y` 的字母名 /iɡʁɛk/ 与代词 /i/ 仍是不同用法，产品尚未接入语境选择。Supertonic 3 的 OpenRAIL-M、通知和下游条款、四目标实机、干净机器及共八种完整版／Lite 发行继续按[资源准入清单](development-readiness.md)验收；Lite 下载尚未实现。
