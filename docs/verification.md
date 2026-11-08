@@ -1,5 +1,13 @@
 # 骨架验证记录
 
+## Sherpa / Piper 法语独立验证（issue #5）
+
+2026-11-07，固定 Sherpa-ONNX 2.0.1、Piper MLS medium / source 3698 女声、piper-tts 1.8.0 外部 eSpeak NG 1.52.0.1 与官方 CPython 3.14.10，在 Windows x64 AppContainer 禁网进程生成、回读并同步调用播放八个有效、非静音的 22,050 Hz PCM WAV。前后对两个公网 IP 的四次连接均返回 WinError 10013。统一输入 `fr-common-v1` 原样保留，未给单词补句或标点；完整音素路径使用 `GenerationConfig.phoneme_codepoints`，不设置已失效的 `data_dir`。
+
+五项 CLI 检查全部通过，覆盖缺失 / 损坏资源、已有输出、改写统一输入以及真实禁网生成与播放。测试子进程保持 60 秒硬限。ONNX 1.23.2 准备环境两次生成同样的模型、配置与音素表哈希，并确认序列化图未变。完整源文件获取包括模型、运行库、离线 VC 前提安装器与准备工具，共 205,006,060 字节，超过 200 MB；单独运行资源获取为 196,630,776 字节。包体、原始展开量、内存、加载与逐项耗时见 [#5 证据与测量](evidence/issue-5/README.md)。
+
+用户试听八条[新样本](evidence/issue-5/samples/listen.html)，判定“发音或音质失败”；[否决记录](evidence/issue-5/samples/quality.json)固定这些样本的哈希，保留原始 WAV。该 Sherpa / MLS 候选未通过法语质量验收。SIWIS 的 Lessac 基础权重授权链未闭合，未完成其合法组合生成。源码 / 许可和 wheel 身份已固定，完整二进制构建来源、对应源码交付、干净机器前提及其他三平台仍待验证。#5 保持开放，产品声线准入与正式发行门槛未通过。
+
 ## 自定义 MDX/MDD 独立兼容验证（issue #3）
 
 2026-11-07，#3 的六项独立兼容验收条件已完成，范围为 Windows x64。独立 `mdictlib 0.2.8 + lzo` 探针通过 12 个真实 MDX（1,124,587 条物理记录、43,024 条重复记录）与两个同名 MDD（362／64 项媒体）的读取。新增验证前核对 Heliknight 原文件 SHA-256，18,085 条记录与既有查询结果保持一致。六组项目 MIT 原创配对覆盖 v1/v2、UTF-8／UTF-16、无压缩／zlib 和加密索引；正文引用的 CSS、PNG、WAV 实际字节与原始文件一致。

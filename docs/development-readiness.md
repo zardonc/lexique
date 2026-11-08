@@ -66,6 +66,7 @@ FSRS 使用固定版本默认参数，不提供优化与额外间隔随机扰动
 ### 离线语音与系统依赖
 
 - sherpa-onnx 引擎采用 Apache-2.0。v2.0.0 移除了内置 espeak-ng / piper-phonemize；Piper 推理仍存在，法语文本到音素需外部方案或 lexicon。旧 SIWIS 示例的 `data_dir` 不能证明新版组合可运行。[版本说明](https://github.com/k2-fsa/sherpa-onnx/releases/tag/v2.0.0)、[变更 PR](https://github.com/k2-fsa/sherpa-onnx/pull/4055)。
+  2026-11-07 [#5 独立证据](evidence/issue-5/README.md)：2.0.1 + Piper MLS + 外部 eSpeak 前端在 Windows x64 禁网进程完成八条统一输入的 WAV 生成、回读与播放调用。用户试听判定发音或音质失败，该候选未获质量准入。SIWIS 的 Lessac 基础权重授权链未闭合；其他三目标按用户要求未测，产品声线保持既有选择。
 - SIWIS 单个 ONNX 权重约 63.2 MB，另需配置、tokens、文本前端及运行库。总仓库标签与模型卡中的训练数据许可不等价，需固定权重并核对授权链和署名。[权重](https://huggingface.co/rhasspy/piper-voices/tree/main/fr/fr_FR/siwis/medium)、[模型卡](https://huggingface.co/rhasspy/piper-voices/blob/main/fr/fr_FR/siwis/medium/MODEL_CARD)。
 - [官方 Rust 构建脚本](https://raw.githubusercontent.com/k2-fsa/sherpa-onnx/master/sherpa-onnx/rust/sherpa-onnx-sys/build.rs)有四目标预编译归档映射，但不能代替本项目链接、启动、断网播放证据；自动下载须限定在受控构建阶段。
 - [Kokoro](https://huggingface.co/hexgrad/Kokoro-82M)有法语声音候选，仍需核验短词和完整前端；[Pocket TTS 法语权重](https://huggingface.co/kyutai/pocket-tts/tree/main/languages/french)主文件约 219 MB、尚未含其他资源，暂不作为小包默认首选。权重大小不等于压缩安装包大小。
