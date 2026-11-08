@@ -1,5 +1,15 @@
 # 骨架验证记录
 
+## Kokoro 法语独立验证（issue #6）
+
+2026-11-07（America/Vancouver），Kokoro v1.0 int8 / `ff_siwis`、kokoro-onnx 0.6.1、phonemizer 3.4.0、eSpeak NG 1.52.0、ORT 1.31.0 与官方 CPython 3.12.10，在 Windows x64 AppContainer 禁网进程中完成八条 `fr-common-v1` 独立输入的生成、WAV 回读及同步 `PlaySound` 调用。前后四次公网连接均返回 WinError 10013，八个 WAV 为非空、非静音的 24 kHz 单声道 16-bit PCM。CPU provider 显式固定为 CPU，intra-op 2 / inter-op 1 线程。六项 CLI 检查通过；官方 `ff_siwis.pt` 与运行 BIN 中的声线张量逐字节一致。
+
+同 #5 硬件测得模型加载 1.4001283 秒、含 import / 前端的完整加载 4.3235254 秒；首条完整音频数组 0.8693316 秒，八条纯合成共 3.1157273 秒、音频共 6.72 秒，峰值工作集 266,145,792 字节。#5 使用不同 Python 版本及首个 PCM 回调边界，不能将首音数字当作相同 API 测量。完整材料获取 215,446,330 字节，已报告超过 200 MB；完整来源 / 运行 ZIP 184,562,539 字节、安装逻辑体积 300,798,267 字节。获取哈希、依赖版本、WAV、清单及 ZIP 校验通过，见 [#6 方法与证据](evidence/issue-6/README.md)。
+
+[八条样本](evidence/issue-6/samples/listen.html)供人工试听；Obscura 核对八个 HTTP 音频链接及 PCM 头，原生播放证据来自探针。法语音质仍待用户确认。转换与 wheel 构建来源、最终再分发义务、其他三目标及干净机器首装未验收；应用随包语音继续使用现有 Supertonic 3。
+
+2026-11-08 检查：lint、typecheck、build、文档 / 链接及 13 项文档验证器检查通过；标准 Python 全套 103 通过、10 项资源前提不足而跳过，独立禁网 Kokoro 六项通过。测量脚本的已有输出保留、缺失及同长度损坏材料五项检查通过。使用固定 Rust 1.99.1 先 `pnpm rust:test:build`，再 `pnpm test:rust`，143 项通过，60 秒运行硬限保持不变。两次完整 browser E2E 均为 145 通过、1 项在 `automatic-queue.spec.ts:37` 的 Playwright `clock.pauseAt` 设置阶段失败（`Cannot fast-forward to the past`）；该 T01 单独执行通过，完整并行套件仍未全绿。命令与结果见 [#6 检查记录](evidence/issue-6/README.md#检查记录)。
+
 ## Sherpa / Piper 法语独立验证（issue #5）
 
 2026-11-08 标准检查入口：[check_sherpa.py](../scripts/check_sherpa.py)提供 `pnpm test:sherpa` 完整九项与 `pnpm test:sherpa:smoke` 五项资源无关检查。完整入口先要求四个资源变量，任何选中检查跳过均失败；在固定 v7 资源及禁网 Windows 沙箱中，九项通过（21.556 秒，无跳过）。Smoke 五项通过（0.908 秒），入口资源预检与选择的两项回归通过；每个测试子进程保持 `-B` 与 60 秒硬限。`pnpm test:tooling`通过，其中既有 `test_speech_package_contains_resources_and_licenses` 因未配置原包夹具跳过，原包验收继续沿用既有证据。现有 Windows CI 已接 smoke 入口，远端执行本轮待验证；其他平台实机与干净机器首装继续延期。
