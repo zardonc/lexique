@@ -1,0 +1,69 @@
+{
+  "started_at_utc": "2026-11-08T06:33:48.466455+00:00",
+  "input_version": "fr-common-v1",
+  "inputs_sha256": "9ecb2760c2fc8de956d8c080752ff18b5c196adba626fe178c6ce34004001372",
+  "resources_manifest": "../issue-14/resources.json",
+  "acquisition_by_role": {
+    "wheel": {
+      "download_bytes": 38092084,
+      "expanded_bytes": 108471291
+    },
+    "source": {
+      "download_bytes": 19459378,
+      "expanded_bytes": 61033354
+    },
+    "model": {
+      "download_bytes": 120575669,
+      "expanded_bytes": 120575669
+    },
+    "provenance": {
+      "download_bytes": 523425,
+      "expanded_bytes": 523425
+    },
+    "python": {
+      "download_bytes": 11133606,
+      "expanded_bytes": 22501299
+    },
+    "prerequisite": {
+      "download_bytes": 25635768,
+      "expanded_bytes": 25635768
+    },
+    "notice": {
+      "download_bytes": 26400,
+      "expanded_bytes": 26400
+    }
+  },
+  "acquisition_bytes": 215446330,
+  "expanded_acquisition_bytes": 338767206,
+  "voice_tensor_matches_official": true,
+  "offline_generation_and_playback": "passed",
+  "quality_status": "pending human listening",
+  "runtime_packages": {
+    "attrs": "26.1.0",
+    "cloudpickle": "3.1.2",
+    "dlinfo": "2.0.0",
+    "espeakng-loader": "0.2.4",
+    "flatbuffers": "25.12.19",
+    "joblib": "1.6.0",
+    "kokoro-onnx": "0.6.1",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.0",
+    "packaging": "26.3",
+    "phonemizer": "3.4.0",
+    "protobuf": "7.36.2",
+    "typing_extensions": "4.16.0"
+  },
+  "package": {
+    "path": ".tooling\\issue-6\\windows-x64-v2.zip",
+    "zip_bytes": 184562539,
+    "installed_bytes": 300798267,
+    "file_count": 2220,
+    "sha256": "2a04d3ba504a0b43338eca9d826796ac378aa97b359d6c4611ea1d6d24e9ca2b"
+  },
+  "total_load_seconds": 4.323525399988284,
+  "model_load_seconds": 1.4001282999815885,
+  "first_case_audio_seconds": 0.8693315999989863,
+  "total_synthesis_seconds": 3.115727300028084,
+  "total_audio_seconds": 6.72,
+  "peak_working_set_bytes": 266145792
+}

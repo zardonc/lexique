@@ -2,6 +2,7 @@
 
 import argparse
 import ctypes
+from datetime import datetime, timezone
 import hashlib
 import json
 import os
@@ -98,7 +99,8 @@ def main():
         raise ValueError("output already exists")
     if os.environ.get("PHONEMIZER_ESPEAK_LIBRARY"):
         raise ValueError("frontend override is not allowed")
-    inputs = json.loads(args.inputs.read_text(encoding="utf-8"))
+    input_bytes = args.inputs.read_bytes()
+    inputs = json.loads(input_bytes.decode("utf-8"))
     if not isinstance(inputs, list) or not 1 <= len(inputs) <= 100:
         raise ValueError("invalid input: expected 1-100 strings")
     for text in inputs:
@@ -120,22 +122,40 @@ def main():
         raise RuntimeError("this probe measures Windows only")
     denials = network_denials() if args.require_network_denied else []
 
+    loading = time.perf_counter()
+    started_at_utc = datetime.now(timezone.utc).isoformat()
     import importlib.metadata
     import numpy as np
+    import onnxruntime as ort
     import phonemizer
     from kokoro_onnx import Kokoro
 
+    runtime_import_seconds = time.perf_counter() - loading
+    frontend_start = time.perf_counter()
     frontend_config, frontend = fixed_frontend()
+    frontend_load_seconds = time.perf_counter() - frontend_start
     start = time.perf_counter()
-    kokoro = Kokoro(str(args.assets / "kokoro-v1.0.int8.onnx"), str(args.assets / "voices-v1.0.bin"),
-                    espeak_config=frontend_config)
+    options = ort.SessionOptions()
+    options.intra_op_num_threads = 2
+    options.inter_op_num_threads = 1
+    session = ort.InferenceSession(str(args.assets / "kokoro-v1.0.int8.onnx"),
+                                   sess_options=options, providers=["CPUExecutionProvider"])
+    kokoro = Kokoro.from_session(session, str(args.assets / "voices-v1.0.bin"),
+                                 espeak_config=frontend_config)
+    load_seconds = time.perf_counter() - start
+    total_load_seconds = time.perf_counter() - loading
     report = {
+        "started_at_utc": started_at_utc,
         "platform": platform.platform(), "cpu": platform.processor(),
         "logical_cpus": os.cpu_count(), "python": platform.python_version(),
         "packages": {dist.metadata["Name"]: dist.version for dist in importlib.metadata.distributions()},
         "voice": "ff_siwis", "language": "fr-fr", "speed": 1.0,
+        "providers": session.get_providers(), "threads": session.get_session_options().intra_op_num_threads,
+        "trim_silence": True, "inputs_sha256": hashlib.sha256(input_bytes).hexdigest(),
         "frontend": frontend,
-        "load_seconds": time.perf_counter() - start, "network_denials_before": denials,
+        "runtime_import_seconds": runtime_import_seconds, "frontend_load_seconds": frontend_load_seconds,
+        "load_seconds": load_seconds, "total_load_seconds": total_load_seconds,
+        "network_denials_before": denials, "offline_verified": False,
         "cases": [],
     }
     args.output.mkdir(parents=True)
@@ -157,7 +177,12 @@ def main():
             unknown = sorted(set(phonemes) - kokoro.tokenizer.vocab.keys())
             if not phonemes or unknown:
                 raise ValueError(f"empty or unsupported phonemes: {unknown!r}")
-            audio, rate = kokoro.create(phonemes, voice="ff_siwis", is_phonemes=True)
+            frontend_seconds = time.perf_counter() - start
+            synthesis_start = time.perf_counter()
+            audio, rate = kokoro.create(phonemes, voice="ff_siwis", speed=1.0, lang="fr-fr",
+                                        is_phonemes=True, trim=True)
+            synthesis_seconds = time.perf_counter() - synthesis_start
+            first_audio_seconds = time.perf_counter() - start
             if rate != 24000 or not audio.size or not np.isfinite(audio).all() or not np.any(audio):
                 raise ValueError("invalid or silent audio")
             pcm = (np.clip(audio, -1, 1) * 32767).astype("<i2").tobytes()
@@ -170,6 +195,8 @@ def main():
                     raise ValueError("WAV read-back mismatch")
             case.update({
                 "file": path.name, "sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
+                "bytes": path.stat().st_size, "frontend_seconds": frontend_seconds,
+                "synthesis_seconds": synthesis_seconds, "first_audio_seconds": first_audio_seconds,
                 "generation_seconds": time.perf_counter() - start,
                 "audio_seconds": len(audio) / rate, "peak_amplitude": float(np.max(np.abs(audio))),
             })
@@ -186,6 +213,8 @@ def main():
         print(json.dumps(case, ensure_ascii=False), flush=True)
     report["peak_working_set_bytes"] = peak_memory()
     report["network_denials_after"] = network_denials() if args.require_network_denied else []
+    report["offline_verified"] = args.require_network_denied
+    report["status"] = "failed" if failed else "passed"
     (args.output / "report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return int(failed)
 
