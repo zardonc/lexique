@@ -10,6 +10,8 @@
 
 2026-11-07，#5 的八项 Windows x64 独立可行性要求已完成。应用随包语音沿用现有 Supertonic 3；其 OpenRAIL-M 商业再分发许可与现有打包通知路径已核验，见[候选比较](evidence/issue-5/redistributable-french-models.md)。模型下游条款、完整版／Lite 正式交付、其他目标及干净机器首装继续作为 M5 发行门槛。
 
+2026-11-08 语音文件核对：`git ls-tree -r -l HEAD` 的提交树没有模型权重／归档、Python 字节码或编译产物。检查 [#49 实际 ZIP 与清单](evidence/issue-49/package-inventory.json)的 1,119 个成员，语音资源恰为 [worker 的七项 ASSETS](../apps/desktop/src-tauri/speech_worker.py)：四个 Supertonic int8 图、`tts.json`、`unicode_indexer.bin` 和 `voice.bin`；Python 包只有 NumPy、Sherpa-ONNX 及其 core。Piper／Kokoro／MLS 资源或运行包未进入应用，独立探针和来源／许可材料按其复验用途保留。MLS 原实验生成器的[历史源码](https://github.com/zardonc/lexique/blob/6e5f364db42ad9655fd457f7b1c975bcd569da37/docs/evidence/issue-14/probe_mls.py)及本机 `.tooling/issue-14/retired-20261108/` 副本保留，当前树不含该无引用脚本。原 `a`／`à` 波形相同，对应两条不同输入的相同音素，属于配对证据。
+
 ## 自定义 MDX/MDD 独立兼容验证（issue #3）
 
 2026-11-07，#3 的六项独立兼容验收条件已完成，范围为 Windows x64。独立 `mdictlib 0.2.8 + lzo` 探针通过 12 个真实 MDX（1,124,587 条物理记录、43,024 条重复记录）与两个同名 MDD（362／64 项媒体）的读取。新增验证前核对 Heliknight 原文件 SHA-256，18,085 条记录与既有查询结果保持一致。六组项目 MIT 原创配对覆盖 v1/v2、UTF-8／UTF-16、无压缩／zlib 和加密索引；正文引用的 CSS、PNG、WAV 实际字节与原始文件一致。
