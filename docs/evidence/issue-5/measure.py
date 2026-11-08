@@ -14,6 +14,7 @@ def main():
     parser.add_argument("package", type=Path)
     parser.add_argument("report", type=Path, help="report from this packaged runtime's trial")
     parser.add_argument("archive", type=Path, help="must not exist")
+    parser.add_argument("--sources", type=Path, help="source companion measurements")
     args = parser.parse_args()
     package = args.package
     resources = json.loads((root / "resources.json").read_text(encoding="utf-8"))
@@ -21,6 +22,12 @@ def main():
     trial_date = trial["date"]
     hardware = {"cpu": trial["cpu"], "logical_processors": trial["logical_cpus"],
                 "os": trial["platform"], "python": trial["python"]}
+    sources = json.loads(args.sources.read_text(encoding="utf-8")) if args.sources else None
+    if sources:
+        source_zip = Path(sources["package"]["path"])
+        if (source_zip.stat().st_size != sources["package"]["zip_bytes"] or
+                hashlib.sha256(source_zip.read_bytes()).hexdigest() != sources["package"]["sha256"]):
+            raise ValueError(f"changed source companion: {source_zip}")
     quality = json.loads((root / "samples-tom-v2/quality.json").read_text(encoding="utf-8"))
     inventory = json.loads((package / "inventory.json").read_text(encoding="utf-8"))
     for name, item in inventory.items():
@@ -66,9 +73,9 @@ def main():
         },
         "runtime_acquisition_bytes": sum(item["bytes"] for item in resources["downloads"] + resources["source_files"]),
         "preparation_additional_download_bytes": sum(item["bytes"] for item in resources["preparation_downloads"]),
-        "complete_from_source_download_bytes": sum(item["bytes"] for item in resources["downloads"] + resources["source_files"] + resources["preparation_downloads"]),
+        "runtime_and_preparation_acquisition_bytes": sum(item["bytes"] for item in resources["downloads"] + resources["source_files"] + resources["preparation_downloads"]),
         "raw_runtime_acquisition_bytes": sum(item["raw_bytes"] for item in raw_archives[:len(resources["downloads"])]) + sum(item["bytes"] for item in resources["source_files"]),
-        "raw_complete_from_source_bytes": sum(item["raw_bytes"] for item in raw_archives) + sum(item["bytes"] for item in resources["source_files"]),
+        "raw_runtime_and_preparation_bytes": sum(item["raw_bytes"] for item in raw_archives) + sum(item["bytes"] for item in resources["source_files"]),
         "package": {"path": archive_path.as_posix(), "files": len(paths),
                     "installed_bytes": sum(path.stat().st_size for path in paths), "zip_bytes": archive_path.stat().st_size,
                     "sha256": hashlib.sha256(archive_path.read_bytes()).hexdigest(), "inventory_verified": True},
@@ -91,11 +98,19 @@ def main():
                         "The listening verdict applies to the saved replacement samples; package-run audio was not separately reviewed",
                         "VC installer was retained without execution; clean-machine dependencies are untested",
                         "Sandbox harness and existing host tools are recorded separately, not shipped as speech resources",
-                        "Other-platform execution and full binary redistribution verification remain untested"],
+                        "Other-platform execution, native source rebuilds and public redistribution clearance remain unverified"],
     }
+    if sources:
+        measurements.update({
+            "source_companion": sources["package"],
+            "source_companion_additional_download_bytes": sources["additional_download_bytes"],
+            "total_acquisition_bytes": measurements["runtime_and_preparation_acquisition_bytes"] + sources["additional_download_bytes"],
+            "raw_total_acquisition_bytes": measurements["raw_runtime_and_preparation_bytes"] + sources["raw_source_input_bytes"] - sources["original_model_download_bytes"],
+            "runtime_plus_source_zip_bytes": measurements["package"]["zip_bytes"] + sources["package"]["zip_bytes"],
+        })
     measurement_path.write_text(json.dumps(measurements, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({"package": measurements["package"], "raw_runtime_acquisition_bytes": measurements["raw_runtime_acquisition_bytes"],
-                      "raw_complete_from_source_bytes": measurements["raw_complete_from_source_bytes"],
+                      "raw_runtime_and_preparation_bytes": measurements["raw_runtime_and_preparation_bytes"],
                       "measurements": measurement_path.as_posix()}))
 
 

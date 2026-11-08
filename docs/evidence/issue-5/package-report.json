@@ -5,7 +5,7 @@
   "speaker_id": 0,
   "frontend_voice": "fr",
   "threads": 2,
-  "silence_scale": 1.0,
+  "silence_scale": 1,
   "date": "2026-11-07",
   "cpu": "AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD",
   "logical_cpus": 16,
@@ -55,15 +55,15 @@
         ]
       ],
       "file": "01.wav",
-      "sha256": "08d6e50fffee82812cfa65eb556251d99261709805f9ca9a3477d913c87281fc",
-      "bytes": 62508,
-      "frontend_seconds": 0.06127590002142824,
-      "generation_seconds": 0.06166619999567047,
-      "first_audio_seconds": 0.12296750000678003,
-      "audio_seconds": 0.7082086167800453,
-      "peak_amplitude": 0.2557840347290039,
+      "sha256": "edc44ed3e5ba9dbc0bcf05bf4f3c9db6d6fbaf10e32dde295e6c28ec9228cc7d",
+      "bytes": 64556,
+      "frontend_seconds": 0.055172899999888614,
+      "generation_seconds": 0.06294689999776892,
+      "first_audio_seconds": 0.11814810000942089,
+      "audio_seconds": 0.7314285714285714,
+      "peak_amplitude": 0.35898470878601074,
       "played": true,
-      "playback_seconds": 0.890047200024128
+      "playback_seconds": 1.7150051000062376
     },
     {
       "input": "sommes",
@@ -79,15 +79,15 @@
         ]
       ],
       "file": "02.wav",
-      "sha256": "0752592a1693f19dcb91e657767872d6e9f7c00c8859b0a452b38553884acefe",
-      "bytes": 63532,
-      "frontend_seconds": 0.0009523000044282526,
-      "generation_seconds": 0.05880589998560026,
-      "first_audio_seconds": 0.059759700001450256,
-      "audio_seconds": 0.7198185941043084,
-      "peak_amplitude": 0.30920758843421936,
+      "sha256": "ecfab1ed7afc43e0183c47cf8210f69505445c7c8e1232bfbe8c0e216a12f2ae",
+      "bytes": 65580,
+      "frontend_seconds": 0.0007799000013619661,
+      "generation_seconds": 0.06260539998766035,
+      "first_audio_seconds": 0.06336440000450239,
+      "audio_seconds": 0.7430385487528345,
+      "peak_amplitude": 0.3077159523963928,
       "played": true,
-      "playback_seconds": 0.8502856999984942
+      "playback_seconds": 0.9022440999979153
     },
     {
       "input": "œil",
@@ -102,15 +102,15 @@
         ]
       ],
       "file": "03.wav",
-      "sha256": "6232bd330705fd9e47e47c52bb3233b966a33590fbfd2760a6d9f4fb7fdacc7d",
-      "bytes": 48684,
-      "frontend_seconds": 0.0008151000074576586,
-      "generation_seconds": 0.044442699989303946,
-      "first_audio_seconds": 0.045266900007845834,
-      "audio_seconds": 0.5514739229024943,
-      "peak_amplitude": 0.10178804397583008,
+      "sha256": "0e6b472d6b728db54bc61c06c95e32ba491030b7791d83699979be07aa40edb6",
+      "bytes": 49708,
+      "frontend_seconds": 0.0013940999924670905,
+      "generation_seconds": 0.05117439999594353,
+      "first_audio_seconds": 0.05261889999383129,
+      "audio_seconds": 0.5630839002267574,
+      "peak_amplitude": 0.09745026379823685,
       "played": true,
-      "playback_seconds": 0.6969975999963935
+      "playback_seconds": 0.7642453000007663
     },
     {
       "input": "école",
@@ -127,15 +127,15 @@
         ]
       ],
       "file": "04.wav",
-      "sha256": "89fd0a87b042e0d2b4b204b7044a4c660a2ce4c13a10fe992e3f4db846511364",
-      "bytes": 81964,
-      "frontend_seconds": 0.0014835000038146973,
-      "generation_seconds": 0.07623760000569746,
-      "first_audio_seconds": 0.07775820000097156,
-      "audio_seconds": 0.9287981859410431,
-      "peak_amplitude": 0.17052802443504333,
+      "sha256": "f738956d20a4217b9cda22eeae439743e97689ec8494a2fe2a52637d5b10e927",
+      "bytes": 68652,
+      "frontend_seconds": 0.0009160999907180667,
+      "generation_seconds": 0.0665824000025168,
+      "first_audio_seconds": 0.06751149997580796,
+      "audio_seconds": 0.7778684807256235,
+      "peak_amplitude": 0.1506408303976059,
       "played": true,
-      "playback_seconds": 1.076485199999297
+      "playback_seconds": 0.9240884000028018
     },
     {
       "input": "aujourd'hui",
@@ -155,15 +155,15 @@
         ]
       ],
       "file": "05.wav",
-      "sha256": "7b2087baf80cd01a006420cf74ea9d19b42bf7d0abeee0bf772db1b2e0846397",
+      "sha256": "765ded2d4cdea4beb04218fb4719ba7786922b0b9ba384922361459a866f8bdf",
       "bytes": 81452,
-      "frontend_seconds": 0.0007902999932412058,
-      "generation_seconds": 0.0702099000045564,
-      "first_audio_seconds": 0.07101189999957569,
+      "frontend_seconds": 0.000906300003407523,
+      "generation_seconds": 0.07812819999526255,
+      "first_audio_seconds": 0.07904700000653975,
       "audio_seconds": 0.9229931972789116,
-      "peak_amplitude": 0.19641558825969696,
+      "peak_amplitude": 0.18351812660694122,
       "played": true,
-      "playback_seconds": 1.0792672999959905
+      "playback_seconds": 1.0772436000115704
     },
     {
       "input": "nous sommes ici",
@@ -187,15 +187,15 @@
         ]
       ],
       "file": "06.wav",
-      "sha256": "139553f20cdbcfda9923eeb71e65423f4ad456485c57665cfb108b5bd2ad0a9f",
-      "bytes": 96812,
-      "frontend_seconds": 0.000871100026415661,
-      "generation_seconds": 0.08648199998424388,
-      "first_audio_seconds": 0.08736670002690516,
-      "audio_seconds": 1.0971428571428572,
-      "peak_amplitude": 0.41517436504364014,
+      "sha256": "2b14d8e18613b93ded17209ddbd82d0f19799da90a1361fc3ea67bfdb43094eb",
+      "bytes": 125484,
+      "frontend_seconds": 0.0009284000261686742,
+      "generation_seconds": 0.1271308000141289,
+      "first_audio_seconds": 0.12806970000383444,
+      "audio_seconds": 1.4222222222222223,
+      "peak_amplitude": 0.3969506323337555,
       "played": true,
-      "playback_seconds": 1.2249371999932919
+      "playback_seconds": 1.6137856999994256
     },
     {
       "input": "les amis arrivent",
@@ -223,15 +223,15 @@
         ]
       ],
       "file": "07.wav",
-      "sha256": "b6e50c5cccdf0e9dea098e30c64773be17afba5f954a4f04d29626a097412667",
-      "bytes": 148012,
-      "frontend_seconds": 0.0010239999974146485,
-      "generation_seconds": 0.1310589000058826,
-      "first_audio_seconds": 0.1320990999811329,
-      "audio_seconds": 1.677641723356009,
-      "peak_amplitude": 0.25428134202957153,
+      "sha256": "a949b7f5678f19d8fd8f20d35d048c6479435fac636176a992411e2ca02557d0",
+      "bytes": 145452,
+      "frontend_seconds": 0.0009753000049386173,
+      "generation_seconds": 0.14580250001745299,
+      "first_audio_seconds": 0.1467918000125792,
+      "audio_seconds": 1.6486167800453515,
+      "peak_amplitude": 0.24839842319488525,
       "played": true,
-      "playback_seconds": 1.776640199997928
+      "playback_seconds": 1.8724912999896333
     },
     {
       "input": "J'apprends le français tous les jours.",
@@ -275,15 +275,15 @@
         ]
       ],
       "file": "08.wav",
-      "sha256": "4722f522d068af71c7eb31f16ad1fd884335e01ce523313ab2fd0834f5cee48d",
-      "bytes": 187436,
-      "frontend_seconds": 0.0009005999891087413,
-      "generation_seconds": 0.17688579999958165,
-      "first_audio_seconds": 0.17779599997447804,
-      "audio_seconds": 2.124625850340136,
-      "peak_amplitude": 0.36285945773124695,
+      "sha256": "7f887a9aa837b81518a0c151780c4ecfb98330d352e34cbf78d2514069e5cd7f",
+      "bytes": 184876,
+      "frontend_seconds": 0.0009216999751515687,
+      "generation_seconds": 0.1779711999988649,
+      "first_audio_seconds": 0.17890599998645484,
+      "audio_seconds": 2.0956009070294783,
+      "peak_amplitude": 0.39290881156921387,
       "played": true,
-      "playback_seconds": 2.252726900012931
+      "playback_seconds": 2.31648770000902
     }
   ],
   "network_denials_before": [
@@ -298,7 +298,7 @@
       "winerror": 10013
     }
   ],
-  "runtime_import_seconds": 0.9593667000008281,
+  "runtime_import_seconds": 0.956721499998821,
   "packages": {
     "flatbuffers": "25.12.19",
     "numpy": "2.5.4",
@@ -311,9 +311,9 @@
     "sherpa-onnx-core": "2.0.1"
   },
   "espeak_version": "1.52.0.1",
-  "frontend_load_seconds": 0.04106289998162538,
-  "model_load_seconds": 1.7569227000058163,
-  "total_load_seconds": 2.78531499998644,
+  "frontend_load_seconds": 0.03404679999221116,
+  "model_load_seconds": 1.7887412999989465,
+  "total_load_seconds": 2.8055288000032306,
   "network_denials_after": [
     {
       "host": "1.1.1.1",
@@ -326,5 +326,5 @@
       "winerror": 10013
     }
   ],
-  "peak_process_memory_bytes": 280813568
+  "peak_process_memory_bytes": 281075712
 }

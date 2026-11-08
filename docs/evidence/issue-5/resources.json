@@ -135,6 +135,8 @@
     "frontend_commit": "639388b6317fc4731e91d53da42aea68fd4166ff",
     "espeak_commit": "724808c5a83f9ef95fdd0db886ba7ba537ff224a",
     "espeak_version": "1.52.0.1",
+    "sonic_commit": "fbf75c3d6d846bad3bb3d456cbc5d07d9fd8c104",
+    "sherpa_native_onnxruntime_version": "1.28.2",
     "model_revision": "5041a7a49ae5b3a0f30e6837769eb03fdbb231bd",
     "model_author_revision": "a4601a0219fa8f8cf3f330bdd818dbb37ae287ce"
   },
@@ -179,6 +181,56 @@
       "sha256": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8",
       "url": "https://files.pythonhosted.org/packages/49/d3/b8441a820a491ddfc024b0b0cf0393375b75ea13866d9c66727e54c2fc80/typing_extensions-4.16.0-py3-none-any.whl",
       "license": "PSF-2.0"
+    }
+  ],
+  "source_companion_downloads": [
+    {
+      "name": "Piper complete source",
+      "file": "piper-639388b6317fc4731e91d53da42aea68fd4166ff.tar.gz",
+      "bytes": 24738952,
+      "sha256": "a7045b7ef4268d1088047c20a69ae447b552e579dacb42d3dc18f53576aa54ce",
+      "url": "https://github.com/OHF-Voice/piper1-gpl/archive/639388b6317fc4731e91d53da42aea68fd4166ff.tar.gz",
+      "license": "GPL-3.0-or-later and preserved per-file notices"
+    },
+    {
+      "name": "eSpeak NG and vendored ucd-tools complete source",
+      "file": "espeak-ng-724808c5a83f9ef95fdd0db886ba7ba537ff224a.tar.gz",
+      "bytes": 18647838,
+      "sha256": "7d8ebd78201923a443245362a928999977d1721c3eeba596eafc6ea8db7e243c",
+      "url": "https://github.com/espeak-ng/espeak-ng/archive/724808c5a83f9ef95fdd0db886ba7ba537ff224a.tar.gz",
+      "license": "GPL-3.0-or-later, Unicode and preserved per-file notices"
+    },
+    {
+      "name": "Sonic source used by eSpeak configuration",
+      "file": "sonic-fbf75c3d6d846bad3bb3d456cbc5d07d9fd8c104.tar.gz",
+      "bytes": 5361159,
+      "sha256": "715827b5a39b79e56e44397d7b845910df996d4cca74777b3b61629b1ddc98c1",
+      "url": "https://github.com/waywardgeek/sonic/archive/fbf75c3d6d846bad3bb3d456cbc5d07d9fd8c104.tar.gz",
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "Sherpa-ONNX complete source",
+      "file": "sherpa-onnx-af2d8d81dbfa61c4cea4c568da78f3982edca005.tar.gz",
+      "bytes": 11932226,
+      "sha256": "afcafe3c34bc2f15a363ad791fa1644a69bf0977a58c1b4f617468976c2faeb5",
+      "url": "https://github.com/k2-fsa/sherpa-onnx/archive/af2d8d81dbfa61c4cea4c568da78f3982edca005.tar.gz",
+      "license": "Apache-2.0 and preserved per-file notices"
+    },
+    {
+      "name": "Eigen source pinned by Sherpa CMake",
+      "file": "eigen-5.0.1.tar.gz",
+      "bytes": 2967272,
+      "sha256": "e9c326dc8c05cd1e044c71f30f1b2e34a6161a3b6ecf445d56b53ff1669e3dec",
+      "url": "https://gitlab.com/libeigen/eigen/-/archive/5.0.1/eigen-5.0.1.tar.gz",
+      "license": "MPL-2.0, BSD, Apache-2.0 and preserved per-file notices"
+    },
+    {
+      "name": "Tom author's original model 3 configuration",
+      "file": "fr_FR-tom-author.onnx.json",
+      "bytes": 7079,
+      "sha256": "f2d6931dc3c3eb314924dff457c929214ac354a1b4954c1a83f57d9ffd058811",
+      "url": "https://raw.githubusercontent.com/tjiho/French-tts-model-piper/a4601a0219fa8f8cf3f330bdd818dbb37ae287ce/model%203/next.onnx.json",
+      "license": "AGPL-3.0 with separate voice usage conditions; see licenses/TOM-README.md"
     }
   ],
   "source_files": [

@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-07",
+  "additional_download_bytes": 63654526,
+  "original_model_download_bytes": 63516230,
+  "raw_source_input_bytes": 211937372,
+  "methods": {
+    "download": "Distinct pinned source artifact bytes; original model inputs are already counted in runtime acquisition",
+    "raw": "Regular-file sizes in the five source tar archives, plus both original configs, ONNX and model card",
+    "installed": "Actual companion file logical sizes, including original archives, scripts, notices and inventory",
+    "compressed": "Whole companion ZIP_DEFLATED level 9; exact member set and CRC verified"
+  },
+  "package": {
+    "path": ".tooling/issue-5/windows-x64-sources-v3.zip",
+    "files": 83,
+    "installed_bytes": 128126232,
+    "zip_bytes": 122375208,
+    "sha256": "a17c670d44030aa9cfc3237065422296359bed38d9caaf31f2c1db8970a801bf",
+    "inventory_verified": true
+  },
+  "limitations": [
+    "The publisher's preferred model source form is unconfirmed",
+    "Native source rebuilds and public redistribution clearance are unverified"
+  ]
+}

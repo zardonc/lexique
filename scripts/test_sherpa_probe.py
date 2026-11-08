@@ -21,7 +21,7 @@ SCRIPT = Path(__file__).with_name("sherpa_probe.py")
 class SherpaProbeTests(unittest.TestCase):
     def run_probe(self, assets, output, *options):
         return subprocess.run(
-            [sys.executable, "-X", "utf8", str(SCRIPT), str(assets), str(output), *options],
+            [sys.executable, "-B", "-X", "utf8", str(SCRIPT), str(assets), str(output), *options],
             capture_output=True, text=True, encoding="utf-8", timeout=60,
         )
 
@@ -128,7 +128,7 @@ class SherpaProbeTests(unittest.TestCase):
             (evidence / "inputs.json").write_text(json.dumps(inputs), encoding="utf-8")
             output = root / "output"
             result = subprocess.run(
-                [sys.executable, "-X", "utf8", str(scripts / "sherpa_probe.py"),
+                [sys.executable, "-B", "-X", "utf8", str(scripts / "sherpa_probe.py"),
                  os.environ["LEXIQUE_SHERPA_ASSETS"], str(output)],
                 capture_output=True, text=True, encoding="utf-8", timeout=60,
             )

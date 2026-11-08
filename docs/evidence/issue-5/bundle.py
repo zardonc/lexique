@@ -18,9 +18,12 @@ def main():
     parser.add_argument("downloads", type=Path)
     parser.add_argument("assets", type=Path)
     parser.add_argument("output", type=Path, help="must not exist")
+    parser.add_argument("--sources", type=Path, help="matching source companion ZIP delivered alongside runtime")
     args = parser.parse_args()
     if args.output.exists():
         raise FileExistsError(f"Preserving evidence package: {args.output}")
+    if args.sources and not args.sources.is_file():
+        raise FileNotFoundError(f"missing source companion: {args.sources}")
     evidence = Path(__file__).resolve().parent
     repository = evidence.parents[2]
     manifest = json.loads((evidence / "resources.json").read_text(encoding="utf-8"))
@@ -52,11 +55,13 @@ def main():
     for item in manifest["assets"]:
         shutil.copyfile(args.assets / item["file"], args.output / "assets" / item["file"])
     (args.output / "scripts").mkdir()
-    for name in ("sherpa_probe.py", "speech_probe.py", "test_sherpa_probe.py"):
+    for name in ("sherpa_probe.py", "speech_probe.py", "test_sherpa_probe.py", "test_sherpa_sources.py"):
         shutil.copyfile(repository / "scripts" / name, args.output / "scripts" / name)
     shutil.copytree(evidence, args.output / "docs/evidence/issue-5",
                     ignore=shutil.ignore_patterns("__pycache__", "README.md", "measurements.json", "package-report.json"))
     shutil.copyfile(repository / "LICENSE", args.output / "LICENSE")
+    source_notice = (f"The source companion is supplied as [{args.sources.name}](../{args.sources.name}) "
+                     "alongside this runtime ZIP. " if args.sources else "")
     (args.output / "README.md").write_text(
         "# Sherpa / Piper French Windows x64 validation\n\n"
         "Listen to all eight approved samples in docs/evidence/issue-5/samples-tom-v2/listen.html. "
@@ -71,7 +76,10 @@ def main():
         "runtime/python.exe -B -X utf8 scripts/sherpa_probe.py assets recordings "
         "--require-network-denied --play\n```\n\n"
         "The output directory must not exist. Licenses are in docs/evidence/issue-5/licenses. "
-        "The offline VC prerequisite installer is retained in prerequisites and has not been executed.\n",
+        "The offline VC prerequisite installer is retained in prerequisites and has not been executed.\n\n"
+        + source_notice + "Build and conversion steps are in "
+        "[source-build.md](docs/evidence/issue-5/source-build.md). "
+        "The model publisher's preferred source form and public redistribution clearance remain unconfirmed.\n",
         encoding="utf-8",
     )
     inventory = {path.relative_to(args.output).as_posix(): {"bytes": path.stat().st_size, "sha256": digest(path)}

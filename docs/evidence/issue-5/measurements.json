@@ -18,23 +18,23 @@
   },
   "runtime_acquisition_bytes": 183405998,
   "preparation_additional_download_bytes": 8375284,
-  "complete_from_source_download_bytes": 191781282,
+  "runtime_and_preparation_acquisition_bytes": 191781282,
   "raw_runtime_acquisition_bytes": 298998698,
-  "raw_complete_from_source_bytes": 321382595,
+  "raw_runtime_and_preparation_bytes": 321382595,
   "package": {
-    "path": ".tooling/issue-5/windows-x64-v5.zip",
-    "files": 1996,
-    "installed_bytes": 279742747,
-    "zip_bytes": 170694849,
-    "sha256": "c184f1b541c250a7d5759b50bddf0af3a44de2c3b7a855b98903ff4dffe868f0",
+    "path": ".tooling/issue-5/windows-x64-v7.zip",
+    "files": 2003,
+    "installed_bytes": 279806634,
+    "zip_bytes": 170714070,
+    "sha256": "a7698158e43fd8fcfe768c6b5aecf919135da6ec3332609660a20c8a18592674",
     "inventory_verified": true
   },
   "installed_components": {
     "runtime": 187202553,
     "assets": 63517093,
     "prerequisites": 25635768,
-    "docs": 3004009,
-    "scripts": 25181
+    "docs": 3060267,
+    "scripts": 31387
   },
   "archives": [
     {
@@ -109,25 +109,37 @@
     }
   ],
   "performance": {
-    "raw_report": "docs/evidence/issue-5/package-report.json",
-    "measured_package": ".tooling/issue-5/windows-x64-v5",
-    "total_load_seconds": 2.78531499998644,
-    "model_load_seconds": 1.7569227000058163,
-    "first_input_to_pcm_seconds": 0.12296750000678003,
-    "generation_seconds": 0.7057889999705367,
-    "audio_seconds": 8.730702947845804,
-    "peak_process_memory_bytes": 280813568
+    "raw_report": ".tooling/issue-5/recordings-v7/report.json",
+    "measured_package": ".tooling/issue-5/windows-x64-v7",
+    "total_load_seconds": 2.8055288000032306,
+    "model_load_seconds": 1.7887412999989465,
+    "first_input_to_pcm_seconds": 0.11814810000942089,
+    "generation_seconds": 0.772341800009599,
+    "audio_seconds": 8.904852607709751,
+    "peak_process_memory_bytes": 281075712
   },
   "quality": {
     "record": "samples-tom-v2/quality.json",
     "verdict": "passed",
-    "feedback": "Pass: \u00e9cole ends in /l/ and the samples are correct"
+    "feedback": "Pass: école ends in /l/ and the samples are correct"
   },
   "limitations": [
     "OS caches were not cleared; these are fresh processes, not certified cold starts",
     "The listening verdict applies to the saved replacement samples; package-run audio was not separately reviewed",
     "VC installer was retained without execution; clean-machine dependencies are untested",
     "Sandbox harness and existing host tools are recorded separately, not shipped as speech resources",
-    "Other-platform execution and full binary redistribution verification remain untested"
-  ]
+    "Other-platform execution, native source rebuilds and public redistribution clearance remain unverified"
+  ],
+  "source_companion": {
+    "path": ".tooling/issue-5/windows-x64-sources-v3.zip",
+    "files": 83,
+    "installed_bytes": 128126232,
+    "zip_bytes": 122375208,
+    "sha256": "a17c670d44030aa9cfc3237065422296359bed38d9caaf31f2c1db8970a801bf",
+    "inventory_verified": true
+  },
+  "source_companion_additional_download_bytes": 63654526,
+  "total_acquisition_bytes": 255435808,
+  "raw_total_acquisition_bytes": 469803737,
+  "runtime_plus_source_zip_bytes": 293089278
 }
