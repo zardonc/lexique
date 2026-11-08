@@ -2,7 +2,7 @@
 
 2026-11-07（America/Vancouver），GitHub [#6](https://github.com/zardonc/lexique/issues/6)。Windows x64 上，Kokoro v1.0 int8 + `ff_siwis` + kokoro-onnx 0.6.1 + eSpeak NG 1.52.0 完成八条独立法语输入的禁网生成、有效 WAV 回读与同步播放调用。
 
-离线运行通过；法语音质待用户逐项试听；正式再分发仍需核对转换和二进制构建来源及许可义务。应用随包语音继续采用现有 Supertonic 3，见 [#5 的候选比较](../issue-5/redistributable-french-models.md)。
+离线运行通过；2026-11-08 用户试听结论为**已测试，不满足要求（Tested and does not meet requirements）**：Kokoro 音频质量低于当前模型，停止进一步测试。应用随包语音继续采用现有 Supertonic 3，见 [#5 的候选比较](../issue-5/redistributable-french-models.md)。
 
 [八条试听样本](samples/listen.html) · [逐项原始报告](samples/report.json) · [完整测量](measurements.json) · [硬件与环境](environment.json) · [26 项获取材料及分别许可](../issue-14/resources.json) · [探针源码](../../../scripts/speech_probe.py)
 
@@ -58,7 +58,7 @@ ZIP 保存在本机忽略目录 `.tooling/issue-6/windows-x64-v2.zip`，SHA-256 
 
 ## 样本与试听重点
 
-统一输入 [`fr-common-v1`](../issue-5/inputs.json) 原字节 SHA-256 为 `9ecb2760c2fc8de956d8c080752ff18b5c196adba626fe178c6ce34004001372`。每项独立生成，不补句、不补标点、不复用已有音频。八个文件均有效、非空、非静音；前后两组网络连接得到 10013，八次 Windows `PlaySound` 同步调用完成。法语音质均为**待人工试听**。
+统一输入 [`fr-common-v1`](../issue-5/inputs.json) 原字节 SHA-256 为 `9ecb2760c2fc8de956d8c080752ff18b5c196adba626fe178c6ce34004001372`。每项独立生成，不补句、不补标点、不复用已有音频。八个文件均有效、非空、非静音；前后两组网络连接得到 10013，八次 Windows `PlaySound` 同步调用完成。用户试听判定整体音质低于当前模型，**不满足要求**；未提供逐项音质评分。
 
 | 输入 / WAV | 秒 | 试听重点 |
 | --- | ---: | --- |
@@ -71,7 +71,7 @@ ZIP 保存在本机忽略目录 `.tooling/issue-6/windows-x64-v2.zip`，SHA-256 
 | [les amis arrivent](samples/07.wav) | 1.088 | les amis 的 /z/ 连读与整句衔接 |
 | [J'apprends le français tous les jours.](samples/08.wav) | 1.749 | 鼻化元音、重音与句末语调 |
 
-[试听页](samples/listen.html)显示通用合成语音说明及待测状态；Obscura 验证八个音频链接均返回 HTTP 200，WAV 头均为单声道 24 kHz / 16-bit PCM。实际播放证据来自原生探针。官方声线说明提示短文本可能较弱，长句生成成功不能代替前五个孤立词的质量验收。
+[试听页](samples/listen.html)显示通用合成语音说明及用户音质结论；Obscura 验证八个音频链接均返回 HTTP 200，WAV 头均为单声道 24 kHz / 16-bit PCM。实际播放证据来自原生探针。官方声线说明提示短文本可能较弱，长句生成成功不能代替前五个孤立词的质量验收。
 
 ## 复验
 
@@ -161,13 +161,13 @@ Remove-Item Env:LEXIQUE_SPEECH_BUNDLE
 
 | 目标 | 获取 / 编译路线 | 实机状态 |
 | --- | --- | --- |
-| Windows x64 | 本次固定官方 CPython amd64 嵌入包、PyPI win_amd64 wheels 与 loader 0.2.4；也可按固定源码使用 VS C++ / Windows SDK 构建 | 八条禁网生成、WAV 回读与同步播放调用通过；音质待试听 |
+| Windows x64 | 本次固定官方 CPython amd64 嵌入包、PyPI win_amd64 wheels 与 loader 0.2.4；也可按固定源码使用 VS C++ / Windows SDK 构建 | 八条禁网生成、WAV 回读与同步播放调用通过；用户试听音质不满足要求 |
 | Windows ARM64 | 获取相同版本的原生 ARM64 Python / NumPy / ORT 运行依赖；缺 wheel 时按对应源码构建。loader 工作流以 CMake `-A ARM64` 构建 eSpeak 和数据，保留 ARM64 VC 前提 | 路线有上游配置；完整包获取、编译、链接、禁网生成与播放未实机验证 |
 | macOS x64 | 匹配 CPython 3.12、NumPy / ORT wheels 或源码；固定 loader 工作流设置 `CMAKE_OSX_ARCHITECTURES=x86_64` 构建 eSpeak；系统播放入口可用 `afplay` | 未实机验证 |
 | macOS ARM64 | 匹配原生 ARM64 Python / NumPy / ORT；固定 loader 工作流设置 `CMAKE_OSX_ARCHITECTURES=arm64`，原生构建前端；播放入口可用 `afplay` | 未实机验证 |
 
-## 限制与剩余验收
+## 限制与未验证项
 
-人工质量尚未通过，尤其是孤立短词、变位、重音和连读。`PlaySound` 返回成功证明原生播放调用完成，不证明扬声器听感；浏览器音频解码未在完整媒体运行时验证。其余三个目标需要各自的平台播放、内存测量与禁网环境；当前 CLI 的这些 API 仅支持 Windows。
+用户试听确认整体音质不满足要求，本票停止进一步测试，未收集孤立短词、变位、重音与连读的逐项评分。`PlaySound` 返回成功证明原生播放调用完成，不证明扬声器听感；浏览器音频解码未在完整媒体运行时验证。其余三个目标的平台播放、内存测量与禁网环境未验证；当前 CLI 的这些 API 仅支持 Windows。
 
-官方声线字节身份已证实，但 int8 ONNX 的量化 / 校准过程未独立复现；固定 wheel 与上游源码的精确构建对应、完整静态编译成分及最终 GPL / 数据 / 模型再分发义务仍待发行核验。GPL 前端使整个组合不能笼统标为 MIT。VC 安装器未执行，干净机器首次运行未验证。独立包不含桌面应用和 WebView2，不能用其 ZIP 体积证明产品 M5 下载量；#6 保留待试听状态，其他 TTS 候选及 M1 可独立推进。
+官方声线字节身份已证实，但 int8 ONNX 的量化 / 校准过程未独立复现；固定 wheel 与上游源码的精确构建对应、完整静态编译成分及最终 GPL / 数据 / 模型再分发义务未完成发行核验。GPL 前端使整个组合不能笼统标为 MIT。VC 安装器未执行，干净机器首次运行未验证。独立包不含桌面应用和 WebView2，不能用其 ZIP 体积证明产品 M5 下载量；#6 以“已测试，不满足要求”关闭，其他 TTS 候选及 M1 可独立推进。
