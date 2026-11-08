@@ -1,0 +1,145 @@
+{
+  "date": "2026-11-07",
+  "target": "Windows x64",
+  "hardware": {
+    "cpu": "AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD",
+    "logical_processors": 16,
+    "os": "Windows-11-10.0.26300-SP0",
+    "python": "3.14.10"
+  },
+  "methods": {
+    "hardware": "Trial process: platform.processor, os.cpu_count and platform.platform; exact CPU model, physical cores and RAM recorded separately in README using Get-CimInstance",
+    "times": "Python perf_counter; total_load includes Python package imports, frontend init and model init, excludes process startup and asset checksum preflight; first PCM is from input frontend start; generation and synchronous playback timed separately",
+    "memory": "Windows GetProcessMemoryInfo PeakWorkingSetSize for the full process",
+    "raw": "Sum ZIP/wheel uncompressed member sizes plus original ONNX/config/model card and the unopened VC installer; preserves upstream duplicate members",
+    "download": "Sum distinct pinned artifact file bytes; no estimate of HTTP/TLS traffic",
+    "installed": "Sum actual package file logical sizes, including evidence, inventory and the retained VC prerequisite installer; excludes filesystem allocation slack",
+    "compressed": "Actual whole-package ZIP_DEFLATED level 9, CRC, exact member set and SHA-256 against every inventory entry"
+  },
+  "runtime_acquisition_bytes": 183405998,
+  "preparation_additional_download_bytes": 8375284,
+  "runtime_and_preparation_acquisition_bytes": 191781282,
+  "raw_runtime_acquisition_bytes": 298998698,
+  "raw_runtime_and_preparation_bytes": 321382595,
+  "package": {
+    "path": ".tooling/issue-5/windows-x64-v7.zip",
+    "files": 2003,
+    "installed_bytes": 279806634,
+    "zip_bytes": 170714070,
+    "sha256": "a7698158e43fd8fcfe768c6b5aecf919135da6ec3332609660a20c8a18592674",
+    "inventory_verified": true
+  },
+  "installed_components": {
+    "runtime": 187202553,
+    "assets": 63517093,
+    "prerequisites": 25635768,
+    "docs": 3060267,
+    "scripts": 31387
+  },
+  "archives": [
+    {
+      "file": "python-3.14.10-embed-amd64.zip",
+      "download_bytes": 12619664,
+      "raw_bytes": 24450611
+    },
+    {
+      "file": "flatbuffers-25.12.19-py2.py3-none-any.whl",
+      "download_bytes": 26661,
+      "raw_bytes": 87988
+    },
+    {
+      "file": "numpy-2.5.4-cp314-cp314-win_amd64.whl",
+      "download_bytes": 12703552,
+      "raw_bytes": 41985082
+    },
+    {
+      "file": "onnxruntime-1.31.1-cp314-cp314-win_amd64.whl",
+      "download_bytes": 15268752,
+      "raw_bytes": 43615064
+    },
+    {
+      "file": "packaging-26.3-py3-none-any.whl",
+      "download_bytes": 129956,
+      "raw_bytes": 499179
+    },
+    {
+      "file": "pathvalidate-3.3.1-py3-none-any.whl",
+      "download_bytes": 24305,
+      "raw_bytes": 84129
+    },
+    {
+      "file": "piper_tts-1.8.0-cp39-abi3-win_amd64.whl",
+      "download_bytes": 34119688,
+      "raw_bytes": 46160402
+    },
+    {
+      "file": "protobuf-7.36.2-cp310-abi3-win_amd64.whl",
+      "download_bytes": 456514,
+      "raw_bytes": 1711365
+    },
+    {
+      "file": "sherpa_onnx-2.0.1-cp314-cp314-win_amd64.whl",
+      "download_bytes": 2241664,
+      "raw_bytes": 5708858
+    },
+    {
+      "file": "sherpa_onnx_core-2.0.1-py3-none-win_amd64.whl",
+      "download_bytes": 16663244,
+      "raw_bytes": 45544022
+    },
+    {
+      "file": "VC_redist.x64.exe",
+      "download_bytes": 25635768,
+      "raw_bytes": 25635768
+    },
+    {
+      "file": "onnx-1.23.2-cp312-abi3-win_amd64.whl",
+      "download_bytes": 7872489,
+      "raw_bytes": 20514631
+    },
+    {
+      "file": "ml_dtypes-0.6.0-cp314-cp314-win_amd64.whl",
+      "download_bytes": 457224,
+      "raw_bytes": 1686499
+    },
+    {
+      "file": "typing_extensions-4.16.0-py3-none-any.whl",
+      "download_bytes": 45571,
+      "raw_bytes": 182767
+    }
+  ],
+  "performance": {
+    "raw_report": ".tooling/issue-5/recordings-v7/report.json",
+    "measured_package": ".tooling/issue-5/windows-x64-v7",
+    "total_load_seconds": 2.8055288000032306,
+    "model_load_seconds": 1.7887412999989465,
+    "first_input_to_pcm_seconds": 0.11814810000942089,
+    "generation_seconds": 0.772341800009599,
+    "audio_seconds": 8.904852607709751,
+    "peak_process_memory_bytes": 281075712
+  },
+  "quality": {
+    "record": "samples-tom-v2/quality.json",
+    "verdict": "passed",
+    "feedback": "Pass: école ends in /l/ and the samples are correct"
+  },
+  "limitations": [
+    "OS caches were not cleared; these are fresh processes, not certified cold starts",
+    "The listening verdict applies to the saved replacement samples; package-run audio was not separately reviewed",
+    "VC installer was retained without execution; clean-machine dependencies are untested",
+    "Sandbox harness and existing host tools are recorded separately, not shipped as speech resources",
+    "Other-platform execution, native source rebuilds and public redistribution clearance remain unverified"
+  ],
+  "source_companion": {
+    "path": ".tooling/issue-5/windows-x64-sources-v3.zip",
+    "files": 83,
+    "installed_bytes": 128126232,
+    "zip_bytes": 122375208,
+    "sha256": "a17c670d44030aa9cfc3237065422296359bed38d9caaf31f2c1db8970a801bf",
+    "inventory_verified": true
+  },
+  "source_companion_additional_download_bytes": 63654526,
+  "total_acquisition_bytes": 255435808,
+  "raw_total_acquisition_bytes": 469803737,
+  "runtime_plus_source_zip_bytes": 293089278
+}

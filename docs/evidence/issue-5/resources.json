@@ -1,0 +1,259 @@
+{
+  "engine_version": "2.0.1",
+  "frontend_version": "1.8.0",
+  "frontend_voice": "fr",
+  "speaker_id": 0,
+  "assets": [
+    {
+      "file": "fr_FR-tom-medium.onnx",
+      "bytes": 63511194,
+      "sha256": "576982a23a5d3336aa2edeaaccd4b670485d5f97fb9017bf8c018d75d75d6572",
+      "license": "AGPL-3.0 with separate voice usage conditions; see licenses/TOM-README.md",
+      "source": "https://huggingface.co/rhasspy/piper-voices/tree/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/fr/fr_FR/tom/medium",
+      "modification": "Sherpa metadata added; serialized ONNX graph unchanged"
+    },
+    {
+      "file": "fr_FR-tom-medium.onnx.json",
+      "bytes": 4959,
+      "sha256": "2f7f885ad5a0aad802e3cc24e4f57239febdcb142b4876de5d238094674361cc",
+      "license": "AGPL-3.0 with separate voice usage conditions; see licenses/TOM-README.md",
+      "source": "https://huggingface.co/rhasspy/piper-voices/tree/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/fr/fr_FR/tom/medium"
+    },
+    {
+      "file": "tokens.txt",
+      "bytes": 940,
+      "sha256": "ef3a7e4a8d1af0c9d4dc45aaae1a6242ebe24a7ed6f3d025a49eb29682784c6d",
+      "license": "AGPL-3.0 with separate voice usage conditions; see licenses/TOM-README.md",
+      "source": "https://huggingface.co/rhasspy/piper-voices/tree/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/fr/fr_FR/tom/medium",
+      "modification": "Generated from the original phoneme_id_map using the pinned Sherpa format"
+    }
+  ],
+  "downloads": [
+    {
+      "name": "CPython",
+      "version": "3.14.10",
+      "file": "python-3.14.10-embed-amd64.zip",
+      "bytes": 12619664,
+      "sha256": "90905e64a840557d8c1bc4f5b74db3d7ee85e3ffb217611cac1c7813acea4159",
+      "url": "https://www.python.org/ftp/python/3.14.10/python-3.14.10-embed-amd64.zip",
+      "license": "PSF-2.0 and bundled third-party notices"
+    },
+    {
+      "name": "flatbuffers",
+      "version": "25.12.19",
+      "file": "flatbuffers-25.12.19-py2.py3-none-any.whl",
+      "bytes": 26661,
+      "sha256": "7634f50c427838bb021c2d66a3d1168e9d199b0607e6329399f04846d42e20b4",
+      "url": "https://files.pythonhosted.org/packages/e8/2d/d2a548598be01649e2d46231d151a6c56d10b964d94043a335ae56ea2d92/flatbuffers-25.12.19-py2.py3-none-any.whl",
+      "license": "Apache 2.0"
+    },
+    {
+      "name": "numpy",
+      "version": "2.5.4",
+      "file": "numpy-2.5.4-cp314-cp314-win_amd64.whl",
+      "bytes": 12703552,
+      "sha256": "2ca144f15135b6212a5c47b1e2aeca6e412f102f95a2d5d88d8aec77eb255de3",
+      "url": "https://files.pythonhosted.org/packages/52/9a/e1e512ebc948d5b9dd33b08736760f0ebbed2848fd4eda1f553088a6dcee/numpy-2.5.4-cp314-cp314-win_amd64.whl",
+      "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0"
+    },
+    {
+      "name": "onnxruntime",
+      "version": "1.31.1",
+      "file": "onnxruntime-1.31.1-cp314-cp314-win_amd64.whl",
+      "bytes": 15268752,
+      "sha256": "0a3998e18cb667ef54287556bd62291a788ed235723dd90c83b2294b24e71d81",
+      "url": "https://files.pythonhosted.org/packages/e5/e9/9112e9322aef42bff80e805915b61cdcbb82577589bdd42dedf73a5ff9b6/onnxruntime-1.31.1-cp314-cp314-win_amd64.whl",
+      "license": "MIT License"
+    },
+    {
+      "name": "packaging",
+      "version": "26.3",
+      "file": "packaging-26.3-py3-none-any.whl",
+      "bytes": 129956,
+      "sha256": "d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c",
+      "url": "https://files.pythonhosted.org/packages/63/34/ba1c580383c9eada3711951fef0795c80b829a078d72188184bcab9dd527/packaging-26.3-py3-none-any.whl",
+      "license": "Apache-2.0 OR BSD-2-Clause"
+    },
+    {
+      "name": "pathvalidate",
+      "version": "3.3.1",
+      "file": "pathvalidate-3.3.1-py3-none-any.whl",
+      "bytes": 24305,
+      "sha256": "5263baab691f8e1af96092fa5137ee17df5bdfbd6cff1fcac4d6ef4bc2e1735f",
+      "url": "https://files.pythonhosted.org/packages/9a/70/875f4a23bfc4731703a5835487d0d2fb999031bd415e7d17c0ae615c18b7/pathvalidate-3.3.1-py3-none-any.whl",
+      "license": "MIT License"
+    },
+    {
+      "name": "piper-tts",
+      "version": "1.8.0",
+      "file": "piper_tts-1.8.0-cp39-abi3-win_amd64.whl",
+      "bytes": 34119688,
+      "sha256": "5da9bfdb05dfe15da3536859d422e605483ffa6d2b3ec2c5b9593bae6b5aa6a4",
+      "url": "https://files.pythonhosted.org/packages/12/9c/c736d1961cf9ce0655278731b9430df41892ca2ded7b09dabcb340612158/piper_tts-1.8.0-cp39-abi3-win_amd64.whl",
+      "license": "GPL-3.0-or-later"
+    },
+    {
+      "name": "protobuf",
+      "version": "7.36.2",
+      "file": "protobuf-7.36.2-cp310-abi3-win_amd64.whl",
+      "bytes": 456514,
+      "sha256": "a300819d441e078a5608c0d3c709796bb548136058fda017ae51d425b44fd353",
+      "url": "https://files.pythonhosted.org/packages/8a/55/b77bda4e5e5f5971fb51b07663694690e9afdb9402136c16a522bd621cad/protobuf-7.36.2-cp310-abi3-win_amd64.whl",
+      "license": "3-Clause BSD License"
+    },
+    {
+      "name": "sherpa-onnx",
+      "version": "2.0.1",
+      "file": "sherpa_onnx-2.0.1-cp314-cp314-win_amd64.whl",
+      "bytes": 2241664,
+      "sha256": "4aa2668fa24aa3223bae9d1363aa3274ef2201f2f1560542b6d3c282130a3831",
+      "url": "https://files.pythonhosted.org/packages/26/b0/0d0609ef69dfd690b9b470024eedf0b418262b0d0ef465b98504854e4316/sherpa_onnx-2.0.1-cp314-cp314-win_amd64.whl",
+      "license": "Apache licensed, as found in the LICENSE file"
+    },
+    {
+      "name": "sherpa-onnx-core",
+      "version": "2.0.1",
+      "file": "sherpa_onnx_core-2.0.1-py3-none-win_amd64.whl",
+      "bytes": 16663244,
+      "sha256": "08890e9ea23ed2f59f81d5840c63b6b5cc8674d0f6e48d9069126a848aa0e022",
+      "url": "https://files.pythonhosted.org/packages/68/ea/8f02cc34c19d956697dda2f2c470c14cd6b7af77f3ae855c514a86039b68/sherpa_onnx_core-2.0.1-py3-none-win_amd64.whl",
+      "license": "Apache-2.0"
+    },
+    {
+      "file": "VC_redist.x64.exe",
+      "version": "14.44.35211.0",
+      "bytes": 25635768,
+      "sha256": "cc0ff0eb1dc3f5188ae6300faef32bf5beeba4bdd6e8e445a9184072096b713b",
+      "signature": "Valid",
+      "name": "Microsoft Visual C++ redistributable",
+      "url": "https://download.visualstudio.microsoft.com/download/pr/990c720a-46ce-4dc7-87b9-c2eb615d34b9/CC0FF0EB1DC3F5188AE6300FAEF32BF5BEEBA4BDD6E8E445A9184072096B713B/VC_redist.x64.exe",
+      "license": "Microsoft Visual C++ runtime redistribution terms; installer retained, not executed"
+    }
+  ],
+  "source": {
+    "engine_commit": "af2d8d81dbfa61c4cea4c568da78f3982edca005",
+    "frontend_commit": "639388b6317fc4731e91d53da42aea68fd4166ff",
+    "espeak_commit": "724808c5a83f9ef95fdd0db886ba7ba537ff224a",
+    "espeak_version": "1.52.0.1",
+    "sonic_commit": "fbf75c3d6d846bad3bb3d456cbc5d07d9fd8c104",
+    "sherpa_native_onnxruntime_version": "1.28.2",
+    "model_revision": "5041a7a49ae5b3a0f30e6837769eb03fdbb231bd",
+    "model_author_revision": "a4601a0219fa8f8cf3f330bdd818dbb37ae287ce"
+  },
+  "python_version": "3.14.10",
+  "packages": {
+    "flatbuffers": "25.12.19",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.1",
+    "packaging": "26.3",
+    "pathvalidate": "3.3.1",
+    "piper-tts": "1.8.0",
+    "protobuf": "7.36.2",
+    "sherpa-onnx": "2.0.1",
+    "sherpa-onnx-core": "2.0.1"
+  },
+  "input_version": "fr-common-v1",
+  "inputs_sha256": "9ecb2760c2fc8de956d8c080752ff18b5c196adba626fe178c6ce34004001372",
+  "preparation_downloads": [
+    {
+      "name": "onnx",
+      "version": "1.23.2",
+      "file": "onnx-1.23.2-cp312-abi3-win_amd64.whl",
+      "bytes": 7872489,
+      "sha256": "9b382ba898a7c142a0801d03cf04ecabced96c1543c7b643a86f0928143802de",
+      "url": "https://files.pythonhosted.org/packages/38/ce/102fd4a0b2a6d111a9c86745e084c4c68c0ee020eaa359a03a8d43e4646f/onnx-1.23.2-cp312-abi3-win_amd64.whl",
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "ml-dtypes",
+      "version": "0.6.0",
+      "file": "ml_dtypes-0.6.0-cp314-cp314-win_amd64.whl",
+      "bytes": 457224,
+      "sha256": "d574c2b28921dc72e869df248f1a278f6eee176a1f237c8642e1a71eb15f3977",
+      "url": "https://files.pythonhosted.org/packages/ff/ad/9c32c53f823dda3742df19a79c10bc198365937873ea125ba65747440c23/ml_dtypes-0.6.0-cp314-cp314-win_amd64.whl",
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "typing-extensions",
+      "version": "4.16.0",
+      "file": "typing_extensions-4.16.0-py3-none-any.whl",
+      "bytes": 45571,
+      "sha256": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8",
+      "url": "https://files.pythonhosted.org/packages/49/d3/b8441a820a491ddfc024b0b0cf0393375b75ea13866d9c66727e54c2fc80/typing_extensions-4.16.0-py3-none-any.whl",
+      "license": "PSF-2.0"
+    }
+  ],
+  "source_companion_downloads": [
+    {
+      "name": "Piper complete source",
+      "file": "piper-639388b6317fc4731e91d53da42aea68fd4166ff.tar.gz",
+      "bytes": 24738952,
+      "sha256": "a7045b7ef4268d1088047c20a69ae447b552e579dacb42d3dc18f53576aa54ce",
+      "url": "https://github.com/OHF-Voice/piper1-gpl/archive/639388b6317fc4731e91d53da42aea68fd4166ff.tar.gz",
+      "license": "GPL-3.0-or-later and preserved per-file notices"
+    },
+    {
+      "name": "eSpeak NG and vendored ucd-tools complete source",
+      "file": "espeak-ng-724808c5a83f9ef95fdd0db886ba7ba537ff224a.tar.gz",
+      "bytes": 18647838,
+      "sha256": "7d8ebd78201923a443245362a928999977d1721c3eeba596eafc6ea8db7e243c",
+      "url": "https://github.com/espeak-ng/espeak-ng/archive/724808c5a83f9ef95fdd0db886ba7ba537ff224a.tar.gz",
+      "license": "GPL-3.0-or-later, Unicode and preserved per-file notices"
+    },
+    {
+      "name": "Sonic source used by eSpeak configuration",
+      "file": "sonic-fbf75c3d6d846bad3bb3d456cbc5d07d9fd8c104.tar.gz",
+      "bytes": 5361159,
+      "sha256": "715827b5a39b79e56e44397d7b845910df996d4cca74777b3b61629b1ddc98c1",
+      "url": "https://github.com/waywardgeek/sonic/archive/fbf75c3d6d846bad3bb3d456cbc5d07d9fd8c104.tar.gz",
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "Sherpa-ONNX complete source",
+      "file": "sherpa-onnx-af2d8d81dbfa61c4cea4c568da78f3982edca005.tar.gz",
+      "bytes": 11932226,
+      "sha256": "afcafe3c34bc2f15a363ad791fa1644a69bf0977a58c1b4f617468976c2faeb5",
+      "url": "https://github.com/k2-fsa/sherpa-onnx/archive/af2d8d81dbfa61c4cea4c568da78f3982edca005.tar.gz",
+      "license": "Apache-2.0 and preserved per-file notices"
+    },
+    {
+      "name": "Eigen source pinned by Sherpa CMake",
+      "file": "eigen-5.0.1.tar.gz",
+      "bytes": 2967272,
+      "sha256": "e9c326dc8c05cd1e044c71f30f1b2e34a6161a3b6ecf445d56b53ff1669e3dec",
+      "url": "https://gitlab.com/libeigen/eigen/-/archive/5.0.1/eigen-5.0.1.tar.gz",
+      "license": "MPL-2.0, BSD, Apache-2.0 and preserved per-file notices"
+    },
+    {
+      "name": "Tom author's original model 3 configuration",
+      "file": "fr_FR-tom-author.onnx.json",
+      "bytes": 7079,
+      "sha256": "f2d6931dc3c3eb314924dff457c929214ac354a1b4954c1a83f57d9ffd058811",
+      "url": "https://raw.githubusercontent.com/tjiho/French-tts-model-piper/a4601a0219fa8f8cf3f330bdd818dbb37ae287ce/model%203/next.onnx.json",
+      "license": "AGPL-3.0 with separate voice usage conditions; see licenses/TOM-README.md"
+    }
+  ],
+  "source_files": [
+    {
+      "file": "fr_FR-tom-medium.onnx",
+      "url": "https://huggingface.co/rhasspy/piper-voices/resolve/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/fr/fr_FR/tom/medium/fr_FR-tom-medium.onnx",
+      "bytes": 63511038,
+      "sha256": "bf65074ccdeeeeaa832e75edb1c0a513c01c9a972bdf085ff8a6e71ea234fd41",
+      "license": "AGPL-3.0 with separate voice usage conditions; see licenses/TOM-README.md"
+    },
+    {
+      "file": "fr_FR-tom-medium.onnx.json",
+      "url": "https://huggingface.co/rhasspy/piper-voices/resolve/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/fr/fr_FR/tom/medium/fr_FR-tom-medium.onnx.json",
+      "bytes": 4959,
+      "sha256": "2f7f885ad5a0aad802e3cc24e4f57239febdcb142b4876de5d238094674361cc",
+      "license": "AGPL-3.0 with separate voice usage conditions; see licenses/TOM-README.md"
+    },
+    {
+      "file": "MODEL_CARD",
+      "url": "https://huggingface.co/rhasspy/piper-voices/resolve/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/fr/fr_FR/tom/medium/MODEL_CARD",
+      "bytes": 233,
+      "sha256": "ece4132df4a1ae2f90e22c9f01539aec14acb7f8dc8ded64edd2051945d0f1e9",
+      "license": "AGPL-3.0 with separate voice usage conditions; see licenses/TOM-README.md"
+    }
+  ]
+}

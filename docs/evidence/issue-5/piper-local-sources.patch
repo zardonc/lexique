@@ -1,0 +1,21 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -27,6 +27,7 @@
+ ExternalProject_Add(espeak_ng_external
+-    GIT_REPOSITORY https://github.com/espeak-ng/espeak-ng.git
+-    GIT_TAG 724808c  # 2026-Apr-06
++    # Local source acquisition for the Windows evidence companion, 2026-11-07.
++    URL "${CMAKE_CURRENT_SOURCE_DIR}/../espeak-ng-724808c5a83f9ef95fdd0db886ba7ba537ff224a.tar.gz"
++    URL_HASH SHA256=7d8ebd78201923a443245362a928999977d1721c3eeba596eafc6ea8db7e243c
+     PREFIX ${ESPEAKNG_BUILD_DIR}
+     CMAKE_ARGS
+         -DCMAKE_INSTALL_PREFIX=${ESPEAKNG_INSTALL_DIR}
+@@ -42,6 +43,7 @@ ExternalProject_Add(espeak_ng_external
+         -DUSE_SPEECHPLAYER:BOOL=OFF
+         -DEXTRA_cmn:BOOL=ON
+         -DEXTRA_ru:BOOL=ON
++        "-DFETCHCONTENT_SOURCE_DIR_SONIC-GIT=${CMAKE_CURRENT_SOURCE_DIR}/../sonic-fbf75c3d6d846bad3bb3d456cbc5d07d9fd8c104"
+         # Need to explicitly add ucd include directory for CI
+         "-DCMAKE_C_FLAGS=-D_FILE_OFFSET_BITS=64 -I${ESPEAKNG_BUILD_DIR}/src/espeak_ng_external/src/ucd-tools/src/include"
+         "-DCMAKE_CXX_FLAGS=-D_FILE_OFFSET_BITS=64 -I${ESPEAKNG_BUILD_DIR}/src/espeak_ng_external/src/ucd-tools/src/include"

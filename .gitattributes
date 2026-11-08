@@ -5,6 +5,8 @@ tools/mdict-probe/tests/fixtures/*.mdx binary
 tools/mdict-probe/tests/fixtures/*.mdd binary
 tools/mdict-probe/tests/fixtures/*.wav binary
 docs/evidence/issue-14/supertonic-licenses/** -text
+docs/evidence/issue-5/licenses/** -text -whitespace
+docs/evidence/issue-5/samples/*.wav binary
 docs/evidence/issue-14/mls-licenses/PIPER-VOICES.md -text
 resources/lefff-3.4/LICENSE-LGPLLR -text
 resources/grammalecte-2.3.0/LICENSE-GPL3 -text

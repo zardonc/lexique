@@ -1,0 +1,49 @@
+{
+  "date": "2026-11-07",
+  "verdict": "failed",
+  "reviewer": "user",
+  "feedback": "Fail: pronunciation or audio quality",
+  "samples": [
+    {
+      "input": "être",
+      "file": "01.wav",
+      "sha256": "9fe2e863cdc2bad80f63aff3bf55c2cf6444b97498b0f16df829d3afc2228172"
+    },
+    {
+      "input": "sommes",
+      "file": "02.wav",
+      "sha256": "33daf1e84b04b57625c22cfba7ae91a5b2e35312c9444c0237e38c086a2160f6"
+    },
+    {
+      "input": "œil",
+      "file": "03.wav",
+      "sha256": "5498e0e6824b8e17d1c8ecf96d2995636c7ef3523bfb906311eae72155c08c9b"
+    },
+    {
+      "input": "école",
+      "file": "04.wav",
+      "sha256": "6143cf946d27fd304687123eae543d20079e4e8158f450fcb96852e99ab66b90"
+    },
+    {
+      "input": "aujourd'hui",
+      "file": "05.wav",
+      "sha256": "40c34ab9f136b29d679ac624ae694a157030717112fe6444963110a85fe26efb"
+    },
+    {
+      "input": "nous sommes ici",
+      "file": "06.wav",
+      "sha256": "0f0dfe74444902d3372b9d9e39d5598c3b4ffc831bb186eb1938807e31c6339e"
+    },
+    {
+      "input": "les amis arrivent",
+      "file": "07.wav",
+      "sha256": "f0e07b926ec82c31e87765db71828efe9f7eeb144361500d8caa331b60970789"
+    },
+    {
+      "input": "J'apprends le français tous les jours.",
+      "file": "08.wav",
+      "sha256": "8752a66687d922d7ebfb59ac7154ad1eb7e53bfaa88ef36ad31f5cef0c039941"
+    }
+  ],
+  "detail": "The feedback did not identify individual errors or a playback device."
+}
