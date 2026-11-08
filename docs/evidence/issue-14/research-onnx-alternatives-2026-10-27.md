@@ -1,5 +1,7 @@
 # 两份 ONNX 语音调研报告的复核
 
+2026-11-08 当前决定：后续开发继续使用现有 Supertonic 3 CPU 语音，停止替代 TTS 模型测试，见 [ADR 0009](../../adr/0009-continue-with-supertonic-3.md)与[开发路线](../../roadmap.md)。本文保留历史调查、测量与未决项；当前 Windows 产品接入和离线包证据见 [#38](../issue-38/README.md)，正式许可和其他平台门槛继续适用。
+
 日期：2026-10-27。输入为用户提供的 `C:\Users\inthe\IdeaProjects\Notes-sur-l-IA\Projects\FR-dictionary\Requirements-ONNX.md`，其中分别称为 Research 1 和 Research 2。本文只审阅公开资料与本项目已有证据；没有下载、运行或更换模型。公开仓库可变，发行前须固定版本并复核。许可证描述是技术准入分析，不代替最终法律审查。
 
 ## 结论

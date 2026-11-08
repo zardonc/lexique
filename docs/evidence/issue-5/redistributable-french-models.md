@@ -1,10 +1,12 @@
 # 法语离线 TTS 的商业再分发替代候选
 
+2026-11-08 当前决定：后续开发继续使用现有 Supertonic 3 CPU 语音，停止替代 TTS 模型测试，见 [ADR 0009](../../adr/0009-continue-with-supertonic-3.md)与[开发路线](../../roadmap.md)。本文保留历史调查、测量与未决项；当前 Windows 产品接入和离线包证据见 [#38](../issue-38/README.md)，正式许可和其他平台门槛继续适用。
+
 2026-11-07。目标是 Windows portable 完整版随包提供、CPU 离线生成法语单词和句子；完整版不受 200 MB 上限限制。默认女声、男女声选择及正常／慢速的产品要求见[产品基线](../../product.md)。
 
-排序：**现有 Supertonic 3 保留首选；Kokoro 是权重许可最明确的女声回退；Pocket TTS 是有条件的替代引擎；MeloTTS 和当前 Piper Gilles／SIWIS 不作为本次默认替换建议。** 既有 Supertonic 3 已有男女声及 Windows CPU 试听／离线证据，见[#14 准入记录](../issue-14/README.md)。替换 Tom 对照模型与替换产品默认引擎是两个不同决定。
+2026-11-07 历史排序：**现有 Supertonic 3 保留首选；Kokoro 是权重许可最明确的女声回退；Pocket TTS 是有条件的替代引擎；MeloTTS 和当前 Piper Gilles／SIWIS 不作为本次默认替换建议。** 既有 Supertonic 3 已有男女声及 Windows CPU 试听／离线证据，见[#14 准入记录](../issue-14/README.md)。替换 Tom 对照模型与替换产品默认引擎是两个不同决定。
 
-## Supertonic 3：现有产品首选
+## Supertonic 3：继续使用的产品模型
 
 发布者在固定版本 `3cadd1ee6394adea1bd021217a0e650ede09a323` 的[模型许可](https://huggingface.co/Supertone/supertonic-3/resolve/3cadd1ee6394adea1bd021217a0e650ede09a323/LICENSE)明确采用 OpenRAIL-M：§2 允许复制、修改和分发，§4 允许在任何介质分发原模型及其衍生模型。许可允许商业用途，但 §5／Attachment A 的使用限制继续适用。该模型许可没有 AGPL 式对应源码交付义务；按其条款分发已有授权，不需要等待发布者回复。模型及声线资产、MIT 示例代码和 Apache-2.0 Sherpa 引擎的许可分别保留，原文及固定来源见[许可证据](../issue-14/supertonic-licenses/ATTRIBUTION.md)。
 

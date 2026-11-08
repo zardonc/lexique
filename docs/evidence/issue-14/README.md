@@ -2,12 +2,14 @@
 
 ## 当前准入决定
 
+2026-11-08 用户确认后续开发继续使用现有 Supertonic 3 CPU 语音，停止替代模型测试，见 [ADR 0009](../../adr/0009-continue-with-supertonic-3.md)。Windows 产品的合成、48 kbit/s Opus、播放与缓存已在 [#15](../issue-15/README.md)接入，音频版本维护见 [#24](../issue-24/README.md)，完整变位及新鲜离线包见 [#38](../issue-38/README.md)。下述独立测量与上游限制保留；其他平台、干净机器及正式完整版／Lite 仍按 M5 验收。
+
 2026-10-28 收尾复验：v16-revised 六项打包 / 清单检查、四项无音频探针检查和五项静态比较测试通过；探针真实生成项按既有用户要求跳过。试听材料 38 条完整样本、32 条历史慢速样本和 76 条 Opus 的报告哈希均匹配，39 份许可材料的 Git 暂存内容与来源清单哈希一致。前端 lint、typecheck、build 和 Edge 的五项语音设置 / 试听页测试通过；构建保留依赖注释的 Rollup 警告。本次未重新合成或进行人工试听。
 
 - 已有证据：Windows x86-64 受限网络进程实际生成并调用播放；用户确认 v9 声音正确，并接受此前完整样本及 48 kbit/s Opus 的听感。反馈未逐项列出试听文件、设备或播放速度。
 - 用户决定接受 v9 Windows x64 候选的上游证据边界：PyPI wheel 没有对应的签名构建证明，两个量化 ONNX 图的校准过程未独立复现。使用保守通知归档已知及候选依赖；这些事实不视为 #14 的阻塞，但不代表完整二进制依赖或最终分发义务已被证明。
 - 已测候选体积及待核系统依赖：v16-revised 独立语音验证包压缩 159,725,647 字节、解压 241,177,527 字节；模型和运行时与已试听的 v9 哈希相同。Windows 系统及 VC 运行依赖尚未通过干净机器核验。完整桌面应用、默认资源和 WebView2 不包含在该测量中，最终产品下载量与安装占用留待发行验收。
-- 后续产品工作：接入真实 TTS、默认 48 kbit/s Opus、应用目录下临时音频和安全定期清理；实现完整版和 Lite 版、Lite 的“额外资源”模型下载以及最终完整包体与许可验收。这些不是现有独立探针已实现的功能。
+- 剩余发行工作：使用同一 Supertonic 3 交付完整版和 Lite 版，实现 Lite 的“额外资源”模型下载，并完成最终完整包体、许可及依赖验收。已有产品合成、Opus、播放和缓存证据由 #15／#24／#38 记录，不以本独立探针证明这些能力。
 - Windows ARM64、macOS x86-64 和 macOS ARM64 的构建及实机验证仍待后续进行；按用户确认，不阻塞 #14。
 
 详细测量、各版本的试验和限制见[独立验证包与复测](supertonic-trial.md)，二进制来源和许可待核项见[许可证据](supertonic-licenses/ATTRIBUTION.md)，部分模型权重比较见[静态比较](supertonic-static-comparison.md)。
@@ -16,7 +18,7 @@
 
 用户选择继续保留 v9 的模型与 wheel，并对已知及候选依赖准备[保守通知](supertonic-licenses/NOTICE-CONSERVATIVE.md)，记录 wheel 构建来源和两个模型图转换链的缺口。这是候选选择及证据边界，不代表已证明完整依赖清单或完成正式发行许可审查。
 
-新替代试验：[Supertonic 3 四组合试听](supertonic-samples/listen.html)、[较慢速度和字母名对照](supertonic-slower/listen.html)、[许可与来源](replacement-options-after-mls.md)、[模型哈希](supertonic3-model.json)。用户确认完整样本和 Opus 对照可用、0.6 倍播放清晰自然，且单独字母 `y` 使用 `i grec`。本地 ASR 只是对照，不作音质准入结论；[独立验证包与复测](supertonic-trial.md)不等同于产品发行准入。
+历史替代试验：[Supertonic 3 四组合试听](supertonic-samples/listen.html)、[较慢速度和字母名对照](supertonic-slower/listen.html)、[许可与来源](replacement-options-after-mls.md)、[模型哈希](supertonic3-model.json)。用户确认完整样本和 Opus 对照可用、0.6 倍播放清晰自然，且单独字母 `y` 使用 `i grec`。本地 ASR 只是对照，不作音质准入结论；[独立验证包与复测](supertonic-trial.md)不等同于产品发行准入。
 
 Piper MLS medium 双说话人已因用户反馈读音混乱及音质不佳撤回，不作为当前候选。失败记录详见[准入补查](replacement-admission.md)、[模型清单](mls-model.json)和[女声／男声 × 正常／慢速试听](mls-samples/listen.html)。下文保留早期 Kokoro 探针的历史证据，不代表当前默认模型。
 

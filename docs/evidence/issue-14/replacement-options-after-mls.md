@@ -1,5 +1,7 @@
 # MLS 试听失败后的法语 TTS 替代调查
 
+2026-11-08 当前决定：后续开发继续使用现有 Supertonic 3 CPU 语音，停止替代 TTS 模型测试，见 [ADR 0009](../../adr/0009-continue-with-supertonic-3.md)与[开发路线](../../roadmap.md)。本文保留历史调查、测量与未决项；当前 Windows 产品接入和离线包证据见 [#38](../issue-38/README.md)，正式许可和其他平台门槛继续适用。
+
 日期：2026-10-26。用户反馈全部 MLS 样本混乱、难懂，**MLS 不再作为音质合格候选**。原准入材料仅保留历史证据，不构成继续选用它的理由。本文主体记录执行前的替代研究，调查代理当时未下载大权重。随后已完成资源下载及小批禁网生成，详见[执行记录](supertonic-trial.md)与[试听页](supertonic-samples/listen.html)；尚未宣称人工试听通过。
 
 ## 优先候选：Supertonic 3 的维护者 int8 包
