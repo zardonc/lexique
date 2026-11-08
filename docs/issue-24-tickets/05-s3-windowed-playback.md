@@ -1,5 +1,7 @@
 # B05／S3：有界校验近期听音窗口并播放同一份字节
 
+2026-11-08 后续播放目标为[80–240 WPM](../speech-preferences.md)，尚未接入。仍播放同一份已校验字节、保留窗口与当前作答；新设置的端点、两声线及旧偏好回归见[独立计划](../lookup-notes-speech-plan.md)。
+
 ## Parent
 
 [#24 复习队列、选定单词音频与安全清理规格](https://github.com/zardonc/lexique/issues/24)。

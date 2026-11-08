@@ -2,7 +2,9 @@
 
 日期：2026-10-25。用户在 M1 规则访谈 Q20 明确要求：本轮先用已有 FreeDict 小样完成最小三层链路，其余在资源测试后补足，暂存避免遗漏。本文是后续需求索引，不是已冻结的实现规格，也不自动触发实施；正式跟踪按[任务规则](agents/issue-tracker.md)进入 GitHub Issues。
 
-跟踪状态：已发布 [GitHub 暂存票 #9](https://github.com/zardonc/lexique/issues/9)，标签为 `needs-triage`，已建立到[总规格 #1](https://github.com/zardonc/lexique/issues/1) 的原生父子关系。2026-11-08 后续规划将 D1–D3 的有界规格列为下一步，见[开发路线](roadmap.md)；确认未决行为、资源门槛和预算后再拆实施票。
+跟踪状态：已发布 [GitHub 暂存票 #9](https://github.com/zardonc/lexique/issues/9)，标签为 `needs-triage`，已建立到[总规格 #1](https://github.com/zardonc/lexique/issues/1) 的原生父子关系。2026-11-08 新增系统选词／屏幕 OCR、词频颜色及 WPM 在 #1 下独立跟踪；先按[新增交付计划](lookup-notes-speech-plan.md)推进，再将 D1–D3 转为有界切片。确认未决行为、资源门槛和预算后再拆实施票，见[开发路线](roadmap.md)。
+
+新增需求分别见[翻译输入](translation-inputs.md)、[词频标准](word-frequency-colors.md)及[语音偏好](speech-preferences.md)，不改变本票 D1–D4 或既有 M1 保存模型；词频数据不代替 D2 的 CEFR 来源，可靠词形关联继续复用 D3 的已确认范围。
 
 ## 已确认的后续方向
 

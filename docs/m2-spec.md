@@ -2,6 +2,8 @@
 
 当前状态（2026-11-08）：Windows x64／实际 WASM 的约定 M2 在 [#22](evidence/issue-22/review-2026-11-01.md)完成，队列／音频优化见 [#24](evidence/issue-24/README.md)。语音继续使用已接入的 Supertonic 3，停止替代模型测试，见 [ADR 0009](adr/0009-continue-with-supertonic-3.md)；以下保留实施规格，其他平台及 M5 正式发行继续分别验收。
 
+2026-11-08 后续播放设置改为[80–240 WPM](speech-preferences.md)，步长 20、默认 180；所有已接入发音入口共用设置，保持选定音频和双卡进度。WPM 尚未接入，[词频颜色](word-frequency-colors.md)在生词本独立交付；实施顺序见[新计划](lookup-notes-speech-plan.md)。
+
 ## Problem Statement
 
 学习者已经能在桌面查词、保存生词记录并在重启后恢复，但无法把保存的内容转为真实复习。识义与听音能力需要分别巩固；没有可靠调度、离线音频、每日额度和可恢复进度时，收藏不能形成持续学习闭环。

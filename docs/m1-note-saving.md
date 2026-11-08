@@ -2,6 +2,8 @@
 
 日期：2026-10-25。状态：Q1–Q29 已逐项确认，正式实施规格已按[任务跟踪规则](agents/issue-tracker.md)发布为 [#10](https://github.com/zardonc/lexique/issues/10)。Windows x64 的 M1 链路及 release portable 已验证；macOS 仍为 **blocked — 等待 macOS 执行环境**。本文保留访谈规则与历史检查记录，当前平台边界见下文。
 
+2026-11-08 新增[词频颜色](word-frequency-colors.md)、[系统选词／屏幕 OCR](translation-inputs.md)与[WPM](speech-preferences.md)在[新计划](lookup-notes-speech-plan.md)及 #1 下独立交付；本 M1 保存模型、只读兜底摘要及历史验收保持。
+
 ## 已确认规则
 
 以下按最新用户答复维护；Q17 的新方向替代早先“整条内容快照、同词多笔记”的决定。附件仅为设计参考，不自动成为全部已确认需求。

@@ -1,5 +1,7 @@
 # #24 复习队列与音频资产优化方案
 
+当前 #24 已于 2026-11-05 完成约定 Windows x64 验收，见[验收清单](evidence/issue-24/acceptance-matrix-2026-11-05.md)。2026-11-08 新增[WPM](speech-preferences.md)尚未接入，按[独立切片](lookup-notes-speech-plan.md)替代正常／0.6 倍设置并保持内容版本、保护与队列规则；下文保留原设计记录。
+
 设计确认：2026-11-03；状态核对：2026-11-04。Q1–Q9已逐项确认，Q10已共同确认整份设计与测试基线。本文的设计目标继续有效；批量快照及部分选定版本已进入工作区，完整验收待完成，见[架构核对](evidence/issue-24/architecture-reconciliation-2026-11-04.md)。同步仍未实现。
 
 ## 目标与依据

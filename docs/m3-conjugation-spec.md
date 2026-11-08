@@ -1,5 +1,12 @@
 # M3: offline conjugation, complete tables, expression lookup, coloring, and pronunciation
 
+2026-11-08: the shared playback target is [80–240 WPM](speech-preferences.md),
+in 20 WPM steps with 180 as the default; it is pending implementation for
+word, example and conjugation pronunciation. [Vocabulary frequency colors](word-frequency-colors.md)
+have their own statistical standard. [System selection and screen OCR](translation-inputs.md)
+are required in the first M3 delivery; the [updated plan](lookup-notes-speech-plan.md)
+preserves the accepted Windows conjugation evidence below.
+
 2026-11-07: the agreed Windows x64 conjugation scope is accepted through
 #39–#49 and the user's fresh offline package pass. The
 [closeout report](evidence/issue-38/README.md) maps all 56 stories to the

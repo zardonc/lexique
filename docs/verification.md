@@ -1,5 +1,13 @@
 # 骨架验证记录
 
+## 选词、OCR、词频及 WPM 需求更新（2026-11-08）
+
+用户确认首期支持其他应用选词和屏幕区域 OCR；WPM 表示朗读语速，由单词、例句与变位共用。[新增计划](lookup-notes-speech-plan.md)按 WPM → 词频颜色 → 系统选词 → 屏幕 OCR → 其余离线核心推进，当前代码与 schema 未改变。新能力尚未实现；既有正常／0.6 倍、系统／架构及学习数据验收保持原边界。
+
+[词频来源调查](evidence/french-word-frequency/README.md)核实 Lexique 3.83 数据 CC BY-SA 4.0、原始列、词元／词性去重和样本合计。全量转换、完整许可通知及随包尚未验收；[WPM](speech-preferences.md)的 80–240、步长 20、默认 180 是待实施产品标准，尚无新基准／试听。系统选择、屏幕权限、OCR 运行库及四目标执行按[输入规格](translation-inputs.md)另行验证。
+
+本次文档验证：`pwsh -NoProfile -File scripts/check-docs.ps1` 通过 137 份文档、1,038 个本地链接，73 个本地材料目标按现有规则跳过；`pwsh -NoProfile -File scripts/test-docs.ps1` 的 13 项检查通过，`git diff --cached --check` 通过。新工单 #56／#57 为 `ready-for-agent`，#58／#59 为 `needs-triage`，均是 #1 原生子票，#59 原生依赖 #58；正文、标题与标签已回读。应用／前端／Rust／原生、OCR 识别及新的 TTS 生成／试听未运行，本轮仅更新需求、来源和计划。
+
 ## 后续语音基线（2026-11-08）
 
 用户决定继续使用现有 Supertonic 3，停止替代 TTS 模型测试，见 [ADR 0009](adr/0009-continue-with-supertonic-3.md)。#5 保留独立可行性证据，#6 保持“Tested and does not meet requirements”，#7 按未测试、取消计划处理。现有 CPU、声线／播放速度和音频版本规则继续适用；下一步见[开发路线](roadmap.md)。停止比较不豁免 Supertonic 3 的许可、其他平台实机、干净机器、完整版／Lite 与 M5 正式发行验收。
