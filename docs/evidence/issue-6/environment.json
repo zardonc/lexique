@@ -1,0 +1,14 @@
+{
+  "capture_date": "2026-11-07",
+  "date_timezone": "America/Vancouver",
+  "cpu": "AMD Ryzen 9 8945HS w/ Radeon 780M Graphics",
+  "physical_cores": 8,
+  "logical_processors": 16,
+  "ram_bytes": 33555279872,
+  "os": "Microsoft Windows 11 Home",
+  "os_version": "10.0.26300",
+  "source": "Get-CimInstance Win32_Processor, Win32_ComputerSystem, Win32_OperatingSystem",
+  "codex_cli": "0.167.0-alpha.3.2",
+  "sandbox": "Windows AppContainer; per-process network disabled",
+  "comparison": "same Windows x64 hardware as issue #5; CPython 3.12.10 here versus 3.14.10 for Sherpa/Piper Tom"
+}
