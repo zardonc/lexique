@@ -48,9 +48,17 @@ Piper 传入 `BUILD_SHARED_LIBS=OFF`，以及 `USE_ASYNC/MBROLA/LIBSONIC/LIBPCAU
 
 当前运行包的试听页披露“以下语音为机器合成”，使用通用法语单声线标签。作者和精确模型身份留在许可／来源文件中。此组合只提供本机离线试听；[AGPL §13][tom-license]关于修改版本的远程交互源码入口，没有当前可触发的网络服务界面。对象形式的再分发仍适用 §4–6。
 
+## 本地验证、模型再分发与作者回复
+
+**已有授权：** [AGPL §2][agpl-official]允许运行原版，以及在不向他人交付时制作、运行和修改作品；[GNU FAQ][gnu-private]也明确允许不公开的内部修改。作者 [README][tom-readme]已经授予权重的 AGPL 许可和符合所列条件的免费声线使用授权。本票的本机离线验证不需要另获作者同意，也不以回信为完成条件。
+
+**再分发条件：** AGPL 已经允许符合条款的交付；§1、§6 要求的是对应源码，不是作者签发的证明。作者说明是确认首选修改形式的一种证据，实际工作流、公开训练／导出材料也可提供证据。[GNU 对非软件作品的解释][gnu-nonsoftware]仍使用“首选修改形式”，没有按 ONNX、checkpoint 或数据集文件类型列出一律必须交付的清单。如果 ONNX 本身就是该作品的首选修改形式，§1 将同一作品视为其对应源码；如果不是，须交付实际所需的源形式和控制脚本。本次公开材料尚不能确定哪种情形成立，不能因此断言 ONNX 必定不足。
+
+**无回复时的路径（交付判断）：** 保留已完成的本地验证；可提供本项目代码和复现说明，让使用者自行从上游取得模型，暂不把该权重纳入本项目的公开下载包。这条路径不声称上游的源形式问题已解决。以后若可信公开材料足以确定首选修改形式并取得对应源集，就可按既有许可交付，无需等待作者回信；不兼容声线条件的用途才需另谈授权。作者沉默既不撤销已有许可，也不补足缺失的源材料或授予例外。
+
 ## 未闭合事实与验证范围
 
-- **模型首选源形式：** [作者固定完整树][tom-tree]只有三个 ONNX／配置对、README、LICENSE 和试听 WAV，没有 checkpoint、训练程序、导出配方或“ONNX 是首选修改形式”的声明。[GitHub releases][tom-releases]和[原作者站点 releases][tom-gitea-releases]均为空。作者 README 说明第三套是在第二套上继续训练 300 epochs，但未提供该训练的源形式。AGPL §1 的“preferred form … for making modifications”是这项缺口的依据；公开 ONNX 可修改与本次转换可重现，不能替作者确定其首选源形式。闭合需要作者已有的明确源形式说明，或该精确模型实际首选的源材料；本研究没有找到前者或后者。条文没有按文件类型要求所有训练数据或全部历史 checkpoint，不由此扩张交付范围。
+- **模型首选源形式：** [作者固定完整树][tom-tree]只有三个 ONNX／配置对、README、LICENSE 和试听 WAV，没有 checkpoint、训练程序、导出配方或“ONNX 是首选修改形式”的声明。2026-11-07 查验的[当前 GitHub 树][tom-current-tree]与固定树一致；[固定 HF 目录][tom-hf-tree]提供 ONNX、配置、模型卡及试听子目录，模型卡的 Training 仅指回作者仓库。[GitHub releases][tom-releases]和[原作者站点 releases][tom-gitea-releases]均为空。作者 README 说明第三套是在第二套上继续训练 300 epochs，但未提供该训练的源形式。AGPL §1 的“preferred form … for making modifications”是这项缺口的依据；公开 ONNX 可修改与本次转换可重现，尚不能单独证明该精确作品的首选修改形式。闭合可由能够明确该事实的可信公开材料及对应源集完成，并不限定为作者回信。条文没有按文件类型要求所有训练数据或全部历史 checkpoint，不由此扩张交付范围。
 - 未执行源码编译或安装；来源和脚本存在不等于已从源重建 Windows bridge。干净机器安装和其他三个平台实际执行按本次范围延期。
 
 [piper-archive]: https://github.com/OHF-Voice/piper1-gpl/archive/639388b6317fc4731e91d53da42aea68fd4166ff.tar.gz
@@ -60,6 +68,9 @@ Piper 传入 `BUILD_SHARED_LIBS=OFF`，以及 `USE_ASYNC/MBROLA/LIBSONIC/LIBPCAU
 [piper-sdist]: https://files.pythonhosted.org/packages/02/cc/95b18b58d9c235d8e0bcece7321b7a7347873c14f9fea2c734b31ef04ff2/piper_tts-1.8.0.tar.gz
 [pypi]: https://pypi.org/pypi/piper-tts/1.8.0/json
 [gpl]: https://raw.githubusercontent.com/OHF-Voice/piper1-gpl/639388b6317fc4731e91d53da42aea68fd4166ff/COPYING
+[agpl-official]: https://www.gnu.org/licenses/agpl-3.0.en.html
+[gnu-private]: https://www.gnu.org/licenses/gpl-faq.en.html#GPLRequireSourcePostedPublic
+[gnu-nonsoftware]: https://www.gnu.org/licenses/gpl-faq.en.html#GPLOtherThanSoftware
 [espeak-archive]: https://github.com/espeak-ng/espeak-ng/archive/724808c5a83f9ef95fdd0db886ba7ba537ff224a.tar.gz
 [espeak-tree]: https://api.github.com/repos/espeak-ng/espeak-ng/git/trees/724808c5a83f9ef95fdd0db886ba7ba537ff224a?recursive=1
 [espeak-cmake]: https://raw.githubusercontent.com/espeak-ng/espeak-ng/724808c5a83f9ef95fdd0db886ba7ba537ff224a/CMakeLists.txt
@@ -71,6 +82,8 @@ Piper 传入 `BUILD_SHARED_LIBS=OFF`，以及 `USE_ASYNC/MBROLA/LIBSONIC/LIBPCAU
 [sonic-archive]: https://github.com/waywardgeek/sonic/archive/fbf75c3d6d846bad3bb3d456cbc5d07d9fd8c104.tar.gz
 [sonic-source]: https://raw.githubusercontent.com/waywardgeek/sonic/fbf75c3d6d846bad3bb3d456cbc5d07d9fd8c104/sonic.c
 [tom-tree]: https://api.github.com/repos/tjiho/French-tts-model-piper/git/trees/a4601a0219fa8f8cf3f330bdd818dbb37ae287ce?recursive=1
+[tom-current-tree]: https://api.github.com/repos/tjiho/French-tts-model-piper/git/trees/HEAD?recursive=1
+[tom-hf-tree]: https://huggingface.co/api/models/rhasspy/piper-voices/tree/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/fr/fr_FR/tom/medium
 [tom-readme]: https://raw.githubusercontent.com/tjiho/French-tts-model-piper/a4601a0219fa8f8cf3f330bdd818dbb37ae287ce/README.md
 [tom-license]: https://raw.githubusercontent.com/tjiho/French-tts-model-piper/a4601a0219fa8f8cf3f330bdd818dbb37ae287ce/LICENSE
 [tom-onnx]: https://huggingface.co/rhasspy/piper-voices/resolve/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/fr/fr_FR/tom/medium/fr_FR-tom-medium.onnx
