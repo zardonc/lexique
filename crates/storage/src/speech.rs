@@ -51,7 +51,7 @@ impl Default for SpeechPreferences {
 
 impl SpeechPreferences {
     fn validate(&self) -> Result<(), StorageError> {
-        if !(80..=240).contains(&self.wpm) || self.wpm % 20 != 0 {
+        if !(80..=240).contains(&self.wpm) || !self.wpm.is_multiple_of(20) {
             return Err(StorageError::Invalid(
                 "Speech WPM must be 80–240 in steps of 20".into(),
             ));

@@ -2,3 +2,4 @@ packages:
   - apps/desktop
 allowBuilds:
   esbuild: true
+  tesseract.js: false
