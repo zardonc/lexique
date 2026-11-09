@@ -109,6 +109,20 @@ button:disabled { cursor: default; opacity: 0.6; }
 .vocabulary-list button { display: grid; gap: 8px; text-align: left; width: 100%; overflow-wrap: anywhere; }
 .vocabulary-list strong { font-family: Georgia, serif; font-size: 22px; font-weight: 400; }
 .vocabulary-list span { font-size: 13px; color: var(--muted); }
+.headword-line { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.frequency-badge { display: inline-block; font: 12px 'Segoe UI', sans-serif; border: 1px solid currentColor; border-radius: 4px; padding: 3px 7px; vertical-align: middle; }
+.frequency-badge[data-band='high'] { color: #145c38; }
+.frequency-badge[data-band='medium'] { color: #1555a1; }
+.frequency-badge[data-band='low'] { color: #8a420b; }
+.frequency-badge[data-band='unknown'] { color: #595955; }
+.app[data-theme='dark'] .frequency-badge[data-band='high'] { color: #8bd5a4; }
+.app[data-theme='dark'] .frequency-badge[data-band='medium'] { color: #92bfff; }
+.app[data-theme='dark'] .frequency-badge[data-band='low'] { color: #edb278; }
+.app[data-theme='dark'] .frequency-badge[data-band='unknown'] { color: #afada5; }
+.frequency-details { margin: 16px 0; overflow-wrap: anywhere; }
+.frequency-details table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.frequency-details th, .frequency-details td { padding: 8px; text-align: start; border-bottom: 1px solid var(--line); }
+.frequency-details caption { text-align: start; margin-bottom: 8px; }
 .note-excerpt { white-space: pre-wrap; max-height: 3.5em; overflow: hidden; }
 .speech-settings { border-top: 1px solid var(--line); padding-top: 20px; }
 .speech-wpm { display: grid; gap: 8px; flex: 1; min-width: 180px; }

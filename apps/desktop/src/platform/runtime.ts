@@ -7,6 +7,8 @@ import { recordSchema, saveRequestSchema, saveResultSchema, sortSchema } from '.
 import type { SaveRequest, SaveResult, VocabularyRecord, VocabularySort } from './vocabulary';
 import { dictionarySchema } from './dictionary';
 import type { DictionaryLookup } from './dictionary';
+import { frequencyQuery, frequencySchema } from './frequency';
+import type { FrequencyLookup } from './frequency';
 import { speechAudioSchema, speechPreferencesSchema, speechVoiceSchema } from './speech';
 import type { SpeechAudio, SpeechPreferences } from './speech';
 
@@ -117,6 +119,7 @@ export type BatchStatus = z.infer<typeof batchSchema>;
 export interface RuntimeAdapter {
   readonly getStatus: () => Promise<RuntimeStatus | null>;
   readonly lookupDictionary: (key: string) => Promise<DictionaryLookup | null>;
+  readonly lookupFrequency: (keys: readonly string[]) => Promise<FrequencyLookup | null>;
   readonly lookupConjugation: (key: string) => Promise<ConjugationLookup | null>;
   readonly conjugationPreferences: (preferences?: ConjugationPreferences) => Promise<ConjugationPreferences | null>;
   readonly conjugationBlockOrder: (order?: ConjugationOrder) => Promise<ConjugationOrder | null>;
@@ -179,6 +182,14 @@ export const runtime: RuntimeAdapter = {
   async lookupDictionary(key) {
     if (!isTauri()) return null;
     return dictionarySchema.parse(await invoke('dictionary_lookup', { key }));
+  },
+  async lookupFrequency(keys) {
+    if (!isTauri()) return null;
+    const valid = frequencyQuery.parse(keys);
+    const result = frequencySchema.parse(await invoke('frequency_lookup', { keys: valid }));
+    if (result.entries.length !== valid.length || result.entries.some((entry, index) => entry.key !== valid[index]))
+      throw new Error('Frequency response queries differ from the request');
+    return result;
   },
   async lookupConjugation(key) {
     if (!isTauri()) return null;

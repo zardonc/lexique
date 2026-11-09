@@ -1,0 +1,28 @@
+{
+  "ids": [
+    1,
+    2
+  ],
+  "schema": 17,
+  "network": "WebView denies external requests; native frequency reads bundled files",
+  "results": [
+    {
+      "check": "native values, notebook, provenance and 100-word batch",
+      "passed": true,
+      "query_ms": 16.69999998807907,
+      "batch_ms": 19.599999994039536
+    },
+    {
+      "check": "missing resource after restart preserves notes, progress and selected audio",
+      "passed": true
+    },
+    {
+      "check": "corrupt resource and restored read-only resource",
+      "passed": true
+    },
+    {
+      "check": "normal restart preserves all learning state",
+      "passed": true
+    }
+  ]
+}

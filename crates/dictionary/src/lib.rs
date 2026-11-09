@@ -7,6 +7,7 @@ use serde::{Deserialize, Serialize};
 
 pub mod conjugation;
 mod entry;
+pub mod frequency;
 mod snapshot;
 pub use entry::{Entry, Sense};
 

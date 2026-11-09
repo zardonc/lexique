@@ -28,6 +28,14 @@ class PortableTests(unittest.TestCase):
         self.write("target/release/conjugation/conjugation.sqlite3", b"verified conjugation")
         self.write("target/release/conjugation/LICENSE-LGPLLR", b"source forms license")
         self.write("target/release/conjugation/grammalecte-2.3.0/LICENSE-GPL3", b"metadata license")
+        self.write("target/release/frequency/frequency.sqlite3", b"verified frequency")
+        self.write("target/release/frequency/COPYING", b"frequency data license")
+        self.write("target/release/frequency/frequency_sample.py", b"frequency converter source")
+        self.write("target/desktop-frequency-v1/report.json", json.dumps({
+            "sqlite_sha256": hashlib.sha256(b"verified frequency").hexdigest(),
+            "inputs": {"COPYING": hashlib.sha256(b"frequency data license").hexdigest(),
+                       "frequency_sample.py": hashlib.sha256(b"frequency converter source").hexdigest()},
+        }).encode())
         self.write("target/desktop-conjugation-v6-stats/report.json", json.dumps({
             "sqlite_sha256": hashlib.sha256(b"verified conjugation").hexdigest(),
         }).encode())
@@ -64,6 +72,9 @@ class PortableTests(unittest.TestCase):
             self.assertEqual(zipped.read(prefix + "dictionary/COPYING"), b"original resource license")
             self.assertEqual(zipped.read(prefix + "conjugation/conjugation.sqlite3"), b"verified conjugation")
             self.assertEqual(zipped.read(prefix + "conjugation/grammalecte-2.3.0/LICENSE-GPL3"), b"metadata license")
+            self.assertEqual(zipped.read(prefix + "frequency/frequency.sqlite3"), b"verified frequency")
+            self.assertEqual(zipped.read(prefix + "frequency/COPYING"), b"frequency data license")
+            self.assertEqual(zipped.read(prefix + "frequency/frequency_sample.py"), b"frequency converter source")
             self.assertEqual(zipped.read(prefix + "LICENSE"), b"project license")
             self.assertFalse(any("Lexique-data" in path for path in zipped.namelist()))
             description = zipped.read(prefix + "README.txt").decode("utf-8")
@@ -119,6 +130,19 @@ class PortableTests(unittest.TestCase):
                 self.assertEqual(self.files(), before)
                 self.assertFalse(self.output.exists())
 
+    def test_mismatched_frequency_or_notice_fails_before_creating_delivery(self):
+        for name in ("frequency.sqlite3", "COPYING", "frequency_sample.py"):
+            with self.subTest(name=name):
+                path = self.root / "target/release/frequency" / name
+                original = path.read_bytes()
+                path.write_bytes(b"changed frequency resource")
+                before = self.files()
+                with self.assertRaisesRegex(ValueError, "frequency"):
+                    package(self.root)
+                self.assertEqual(self.files(), before)
+                self.assertFalse(self.output.exists())
+                path.write_bytes(original)
+
     def test_separate_output_keeps_default_delivery(self):
         self.write("target/portable/" + self.name + ".zip", b"old delivery")
         result = package(self.root, self.root / "new delivery")
@@ -133,6 +157,9 @@ class PortableTests(unittest.TestCase):
         self.write("target/aarch64-pc-windows-msvc/release/conjugation/conjugation.sqlite3", b"verified conjugation")
         self.write("target/aarch64-pc-windows-msvc/release/conjugation/LICENSE-LGPLLR", b"source forms license")
         self.write("target/aarch64-pc-windows-msvc/release/conjugation/grammalecte-2.3.0/LICENSE-GPL3", b"metadata license")
+        self.write("target/aarch64-pc-windows-msvc/release/frequency/frequency.sqlite3", b"verified frequency")
+        self.write("target/aarch64-pc-windows-msvc/release/frequency/COPYING", b"frequency data license")
+        self.write("target/aarch64-pc-windows-msvc/release/frequency/frequency_sample.py", b"frequency converter source")
         result = package(self.root, architecture="arm64")
         with zipfile.ZipFile(result["archive"]) as zipped:
             prefix = "Lexique-0.1.0-windows-arm64-portable/"

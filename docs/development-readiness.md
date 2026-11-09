@@ -10,7 +10,7 @@
 4. 项目自有源码采用 MIT，第三方内容不因此改为 MIT。
 5. 每个平台 / 架构分别提供完整版与 Lite 版。完整版内嵌 TTS 模型，不受 200 MB 安装包上限限制，仍应尽量减少磁盘占用；Lite 版不内嵌 TTS 模型，由用户通过“额外资源”主动下载，保留既有包体目标。默认词典、变位及其他资源不变。分别报告压缩包、安装占用、模型下载及系统运行依赖；两版与下载功能尚未实现。
 6. Windows 11 主包优先使用已有 WebView2；为缺少运行时的机器提供微软官方离线依赖包与检测提示。分别报告主包、依赖包和缺依赖机器的完整离线下载总量。
-7. 首期 M3 纳入其他应用选词、屏幕区域 OCR、词频颜色和 WPM；词频采用 Lexique 3.83 的字幕词元频率及产品 100／10 分档。WPM 为朗读速度，范围 80–240、步长 20、默认 180；均待实施，见[新增交付计划](lookup-notes-speech-plan.md)。
+7. 首期 M3 纳入其他应用选词、屏幕区域 OCR、词频颜色和 WPM；词频采用 Lexique 3.83 字幕词元频率及产品 100／10 分档。WPM 为朗读速度，范围 80–240、步长 20、默认 180。词频及 WPM 已完成 Windows x64 检查，系统选词／OCR 继续按[新增交付计划](lookup-notes-speech-plan.md)实施；其他平台测试按用户要求暂缓。
 
 相关决策见 [资源与学习数据分离](adr/0001-separate-bundled-resources-from-learning-data.md)、[源码与资源许可](adr/0002-source-and-resource-licensing.md)。
 
@@ -61,7 +61,7 @@ FSRS 使用固定版本默认参数，不提供优化与额外间隔随机扰动
 | 法法、法英、法中词典 | Kaikki / Wiktionary 三种释义语言均有可评估来源 | 固定快照、许可及署名；分别核验释义语言、常用词覆盖、例句、词形 / 词义去重与转换后体积 | M1 前至少准入一个真实小样；完整三语内容在词典模块及 M5 验收 |
 | 完整变位与反查 | Lefff 3.4、RosaeNLG 的 Lefff 衍生数据与离线生成方案 | 数据 LGPL-LR 条款、语式 / 时态矩阵、助动词、代词式、缺陷动词、多匹配及生成样例 | M3 开发前确认覆盖与生成路径；M5 全量验收 |
 | A1–B2 分级词表 | 尚无符合当前政策且已准入的完整来源；FLELex 为 CC BY-NC-SA 4.0 | 允许目标发行的来源或额外授权；词元 / 多词表达、分级依据、数量与质量 | 分级模块开发前；不阻塞 M1，仍是默认词库发行门槛 |
-| 生词词频颜色 | [Lexique 3.83 原作者版本](https://chrplr.github.io/openlexicon/datasets-info/Lexique383/README-Lexique.html)，数据 CC BY-SA 4.0；选择 `freqlemfilms2` | 版本／原始列、词元与词性去重合计、产品 100／10 分档、缺项／冲突、衍生数据许可通知、覆盖及体积，见[来源核查](evidence/french-word-frequency/README.md) | 来源已选；转换、界面及随包准入在 M3 切片验收，不代替分级词表 |
+| 生词词频颜色 | [Lexique 3.83 原作者版本](https://chrplr.github.io/openlexicon/datasets-info/Lexique383/README-Lexique.html)，数据 CC BY-SA 4.0；选择 `freqlemfilms2` | 完整源、词元／词性去重合计、100／10 及未知、通知、覆盖、体积和原生恢复见 [#57](evidence/issue-57/README.md) | Windows x64 转换／界面／开发包已验收；不代替分级词表，其他平台与 M5 另验 |
 | 屏幕／图片 OCR | [Tesseract](https://github.com/tesseract-ocr/tesseract)／[tessdata_fast](https://github.com/tesseract-ocr/tessdata_fast) 法语数据，Apache-2.0；绑定待验证 | 完整离线运行库与 `fra`、许可／通知、CPU／内存、输入上限、法语重音质量及四目标执行 | M3 OCR 接入前准入；首期必须有系统框选，M5 验收完整依赖与首装禁网 |
 | 自定义 MDX/MDD | `mdictlib` 0.2.8，MIT；声明支持 v1/v2、MDX/MDD，LZO 可选，v3 未支持 | 合法样本、版本 / 编码 / 压缩矩阵、MDD 媒体、HTML 隔离、四架构链接及依赖许可 | 自定义词典模块开发前；结构化内置小样可先完成 M1 |
 | 离线 TTS | 继续使用已接入的 Supertonic 3，不再测试替代模型；范围及上游证据缺口见[准入决定](evidence/issue-14/README.md) | 现有单词／变位证据保留；例句接入、正式发行许可、四架构实机、干净机器、体积和启动成本 | Windows M2 单词与 M3 变位已验收；例句按剩余 M3 范围、成品按 M5 验收 |
@@ -104,7 +104,7 @@ FSRS 使用固定版本默认参数，不提供优化与额外间隔随机扰动
 
 [系统选词与屏幕 OCR](translation-inputs.md)按 Windows／macOS 独立验证：焦点切换前的选择获取、快捷键注册与冲突、支持应用、macOS 辅助功能／屏幕录制权限、取消／撤销／恢复、多屏与缩放、资源失败及未保存笔记保护。截图及 OCR 原文仅供主动操作，不自动写日志或云同步。浏览器预览不能替代原生证据。
 
-[词频颜色](word-frequency-colors.md)先固定 Lexique 3.83 来源与列，原始样本核对去重及词性合计，再验收只读资源、100／10 与未知边界、覆盖、通知和三主题可读性。CC BY-SA 4.0 已有作者声明；归档通知及转换交付仍须核实，不能将来源研究当作资源已打包。
+[词频颜色](word-frequency-colors.md)已固定完整 Lexique 3.83 源、法律原文和转换来源；原始样本、只读资源、100／10 与未知、三语／三主题及原生资源故障恢复检查通过。46,947 个词元的 SQLite 为 10,424,320 字节；普通及含语音开发包均验证完整通知，见 [#57](evidence/issue-57/README.md)。其他平台与 M5 正式发行按各自门槛验收。
 
 [WPM](speech-preferences.md)复用已选 Supertonic 3，不再比较其他 TTS 模型。分别记录两声线的代表性法语基准，实际试听最低 80、默认 180、最高 240；保存及旧偏好读取、所有现有播放器和重启恢复使用同一规则。目标是粗粒度、易用、清晰的朗读设置，短词不承诺逐项精确 WPM，速度变化不重写选定音频或学习进度。
 

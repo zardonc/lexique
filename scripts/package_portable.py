@@ -51,6 +51,13 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
     conjugation = release / "conjugation"
     if hashlib.sha256((conjugation / "conjugation.sqlite3").read_bytes()).hexdigest() != conjugation_report["sqlite_sha256"]:
         raise ValueError("Release conjugation does not match the prepared resource")
+    frequency_report = json.loads((root / "target/desktop-frequency-v1/report.json").read_text())
+    frequency = release / "frequency"
+    if hashlib.sha256((frequency / "frequency.sqlite3").read_bytes()).hexdigest() != frequency_report["sqlite_sha256"]:
+        raise ValueError("Release frequency does not match the prepared resource")
+    for filename, expected in frequency_report["inputs"].items():
+        if hashlib.sha256((frequency / filename).read_bytes()).hexdigest() != expected:
+            raise ValueError(f"Release frequency source or notice differs: {filename}")
     if all(speech_inputs):
         with tempfile.TemporaryDirectory(prefix="lexique-speech-stage-") as temporary:
             staged = Path(temporary) / "speech"
@@ -63,11 +70,12 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
     shutil.copytree(root / "resources/freedict-fra-zho-2025.11.23", output / "dictionary")
     shutil.copy2(dictionary, output / "dictionary/dictionary.sqlite3")
     shutil.copytree(conjugation, output / "conjugation")
+    shutil.copytree(frequency, output / "frequency")
     shutil.copy2(root / "LICENSE", output / "LICENSE")
     (output / "README.txt").write_text(
         f"Lexique {config['version']} - Windows 11 {architecture.upper()} portable development sample\n\n"
         "Extract the entire ZIP into a writable folder, then open Lexique.exe.\n"
-        "Keep dictionary/ and conjugation/ beside the executable. No installer or first-run download is used.\n"
+        "Keep dictionary/, conjugation/ and frequency/ beside the executable. No installer or first-run download is used.\n"
         "Requires an existing Microsoft Edge WebView2 runtime (normally present on Windows 11).\n"
         "If Lexique cannot open because WebView2 is missing, install the Microsoft Edge\n"
         "WebView2 Evergreen Runtime from https://developer.microsoft.com/microsoft-edge/webview2/\n"
@@ -100,6 +108,13 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
         "notices in conjugation/freedict-fra-eng-0.4.1/. Missing meanings leave tables usable.\n"
         "Raw sources, provenance, corrections, decoder, LGPL-LR ending rules and eight MIT converters\n"
         "accompany the resource.\n\n"
+        "Notebook frequency labels use Lexique 3.83 subtitle lemma/POS statistics.\n"
+        "Frequency data and its derived database: CC BY-SA 4.0 (frequency/COPYING).\n"
+        "Original source, attribution, provenance and the MIT converter accompany frequency/.\n"
+        "Rebuild frequency: copy frequency/Lexique383.tsv.gz, COPYING, UPSTREAM-README.txt,\n"
+        "README.md and provenance.json into resources/lexique-3.83/ in a new workspace;\n"
+        "copy frequency/frequency_sample.py into scripts/ and LICENSE-MIT into LICENSE.\n"
+        "Run python -B -X utf8 scripts/frequency_sample.py target/rebuilt-frequency.\n\n"
         "Rebuild conjugation with Python 3.12+ (standard library only): in a new workspace,\n"
         "copy conjugation/conjugation_*.py and conjugation/conjugation_endings.json into scripts/,\n"
         "LICENSE into the workspace root,\n"

@@ -1,0 +1,29 @@
+{
+  "rows": 142694,
+  "lemmas": 46947,
+  "lemma_pos_groups": 51126,
+  "surface_keys": 125653,
+  "surface_links": 135267,
+  "ambiguous_surface_keys": 9436,
+  "lemmas_without_islem": 3385,
+  "unknown_lemmas": 8,
+  "zero_frequency_lemmas": 9316,
+  "missing_part_of_speech_groups": 8,
+  "missing_groups": 0,
+  "invalid_groups": 0,
+  "conflicting_groups": 0,
+  "source_bytes": 25850780,
+  "source_sha256": "637ba37a767a66679c48371d673ece50cbf541b49a4e40e598963d4f3fbce52b",
+  "sqlite_bytes": 10424320,
+  "sqlite_sha256": "2244fb92fc864c660eb66adc687615a29b0d85f5f82b8b50e3b41ff775944b23",
+  "conversion_seconds": 1.657327399996575,
+  "inputs": {
+    "Lexique383.tsv.gz": "9bb0eef59aca467d22e75bf73a936cba31832719045274e5188586f8c8ba76ef",
+    "COPYING": "28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5",
+    "UPSTREAM-README.txt": "7b81a2185be8675220b9050fb50e05122e17b49775b0f5f64d83e2f812282822",
+    "README.md": "5a0a2bcc8ade6361732042661a5625beaace26c637a05bad80ccff032e6f7b94",
+    "provenance.json": "c016a512ce284bd787e0da3061e5868c5d280d5c7d7d955b0af65d5f9df52cd2",
+    "frequency_sample.py": "e5a09f11a6e068d453f867a439fa17fc8fa905c5895196ef8a86af3d886784e7",
+    "LICENSE-MIT": "034800ed68a66e189bc4a0cdbc9626707c32743c3215dd488028fb8228860459"
+  }
+}

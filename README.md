@@ -4,7 +4,7 @@
 
 基于 2026-10-24 的需求基线与最新原型调整：Tauri 2、React、TypeScript、Rust、SQLite。第一阶段面向 Windows 11 / macOS 的 x64 与 ARM64，第二阶段为包含实际 WASM 的自部署复习应用。
 
-2026-11-08：后续开发继续使用已接入的 Supertonic 3 CPU 语音，停止其他 TTS 模型测试；#6 已测试且音质不满足要求，#7 未测试、取消计划。新增首期需求为其他应用选词、屏幕区域 OCR、生词词频颜色及 80–240 WPM 朗读速度，均尚未接入。下一步按 WPM → 词频 → 系统选词 → 屏幕 OCR → #9 与剩余离线核心推进，再到 M4 服务／文件同步、M5 八种发行物及 M6 浏览器复习，见[交付计划](docs/lookup-notes-speech-plan.md)、[开发路线](docs/roadmap.md)和 [ADR 0009](docs/adr/0009-continue-with-supertonic-3.md)。历史证据、Supertonic 3 许可、干净机器及其他平台发行门槛继续适用。
+2026-11-08：80–240 WPM 共用朗读速度和 Lexique 3.83 生词词频标记已接入并通过 Windows x64 检查，见 [#56](docs/evidence/issue-56/README.md)与 [#57](docs/evidence/issue-57/README.md)。继续使用 Supertonic 3 CPU；其他 TTS 模型测试已停止。下一步为系统选词 → 屏幕 OCR → #9 与剩余离线核心，再到 M4 服务／文件同步、M5 八种发行物及 M6 浏览器复习，见[交付计划](docs/lookup-notes-speech-plan.md)和[开发路线](docs/roadmap.md)。用户报告干净系统测试通过；其他平台测试按用户要求暂缓，正式发行门槛继续适用。
 
 ## 开始开发
 
@@ -66,7 +66,7 @@ pnpm test:desktop:lib    # 原生桌面库测试；执行硬限 60 秒
 
 Windows ARM64 开发样例可在已配置该目标工具链时先运行 `node scripts/build-desktop.mjs --no-bundle --target aarch64-pc-windows-msvc`，再运行 `python -X utf8 scripts/package_portable.py --architecture arm64`。打包器检查可执行文件的 PE 架构并保留已有交付；它不构成 ARM64 实机或正式发行验收。
 
-便携交付默认位于 `target/portable/Lexique-0.1.0-windows-x64-portable.zip`，附带 `.zip.sha256`。解压整个 ZIP 到可写目录，保持 `dictionary/`、`conjugation/` 与 `Lexique.exe` 同级；首次启动生成 `Lexique-data/`，退出后可将整个目录一起移动或备份。更新时保留 `Lexique-data/`。打包命令拒绝覆盖同名交付目录或 ZIP；重复交付使用新的 `--output-dir`，保留使用中的旧目录。CI 产物 `windows-x64-portable` 提供相同布局。
+便携交付默认位于 `target/portable/Lexique-0.1.0-windows-x64-portable.zip`，附带 `.zip.sha256`。解压整个 ZIP 到可写目录，保持 `dictionary/`、`conjugation/`、`frequency/` 与 `Lexique.exe` 同级；首次启动生成 `Lexique-data/`，退出后可将整个目录一起移动或备份。更新时保留 `Lexique-data/`。打包命令拒绝覆盖同名交付目录或 ZIP；重复交付使用新的 `--output-dir`，保留使用中的旧目录。CI 产物 `windows-x64-portable` 提供相同布局。
 
 当前便携包是未签名的 Windows 11 x64 开发小样，需要系统已有 WebView2；不启动依赖安装器、不联网补下载。无 WebView2 的干净机器和 ARM64 / macOS 发行尚未验收，完整离线依赖交付仍属于后续发行门槛。
 
@@ -75,6 +75,8 @@ Windows x64 语音开发小样可在构建后运行 `python -X utf8 scripts/pack
 资源独立入口：`pnpm resources:build target/dictionary-sample`、`pnpm resources:query target/dictionary-sample/dictionary.sqlite3 "œil"`、`pnpm test:resources`。源包和许可已随仓库保存，生成及查询无需联网；`build` 输出目录必须是新目录。原生构建自动准备 `target/desktop-dictionary-sample`，复用前验证内容；损坏时直接失败，人工检查后移走该生成目录再重建。可先运行 `pnpm resources:prepare`。来源、覆盖缺项、只读查询契约和体积见 [FreeDict 小样记录](resources/freedict-fra-zho-2025.11.23/README.md)。
 
 自定义 MDX/MDD 的[独立探针](tools/mdict-probe/README.md)已验证六组原创配对的查询及 CSS／PNG／WAV 读取，并通过 12 个真实 MDX 与两个同名 MDD 的 Windows x64 技术检查。格式、许可、失败路径及产品接入边界见 [#3 证据](docs/evidence/issue-3/README.md)。应用的自定义词典导入与 HTML 渲染继续分别验收。
+
+词频入口：`pnpm frequency:prepare`、`pnpm test:frequency`。固定 Lexique 3.83 完整源、CC BY-SA 4.0 法律原文及署名随仓库保存；准备到 `target/desktop-frequency-v1/`，缓存复用前验证输入、数据库和通知。生词本当前页批量读取最多 100 个词头，详情显示字幕词元／词性数值与来源；高／中／低／未知均有文字标签，资源失败保留笔记编辑及重试。词频不改变记录、FSRS 或选定音频，详见 [#57 证据](docs/evidence/issue-57/README.md)。
 
 变位资源入口：`pnpm conjugation:build target/conjugation-sample`、`pnpm conjugation:query target/conjugation-sample/conjugation.sqlite3 sommes`、`pnpm conjugation:table target/conjugation-sample/conjugation.sqlite3 falloir`、`pnpm test:conjugation`。固定 Lefff 3.4 词形及句法（LGPL-LR）、Grammalecte 2.3.0 元数据（GPL-3.0-only）和 RosaeNLG 省音资料（CC BY-SA 3.0）随仓库保存。原生构建自动准备格式 6 的 `target/desktop-conjugation-v6-stats`，或先运行 `pnpm conjugation:prepare`；已有生成物须通过完整性及转换器版本检查，失败则保留原物，使用新目录重建。构建入口把两种资源放到可执行文件旁，portable 保留原始源、许可、纠正资料、八份 MIT 转换源码及 LGPL-LR 词尾规则；用户学习数据不参与资源准备。共享简单变位模型与运行时表达构造将当前数据库保持在 10.50 MiB；存储契约及格式 5 的全量等价检查见[变位存储](docs/conjugation-storage.md)。格式 6 资源须配套对应的重建 reader。
 
@@ -88,7 +90,7 @@ Windows x64 语音开发小样可在构建后运行 `python -X utf8 scripts/pack
 
 词典的明确动词词条现可打开同一变位视图，再返回对应词条。关联要求词典的 `v` 标记及完整原形匹配；缺项和歧义明确显示，需选择时不代选。返回后的词典入口保留原查询、所选身份和其他候选，同时重新读取资源；直／弯撇号词条分别选择，保留原词头及既有大小写／撇号记录区别。普通／代词式不混同，浏览和导航不自动收藏或加入复习。未保存修改仍须选择保存、放弃或继续编辑，失败和冲突保留输入；键盘焦点到达对应标题。三语／主题、着色和排序、实际 Windows 资源故障恢复及学习数据保留见 [#47 证据](docs/evidence/issue-47/README.md)。
 
-每个显示的变位表达均有独立「播放表达」按钮，完整朗读该项主语、反身代词和动词部分。拼写与性数备选分别播放，不向语音发送斜杠并列。沿用 CPU 离线 Supertonic 3、已保存的女／男声及常速／0.6 倍慢速，界面明确标示机器语音；资源、生成、偏好与播放失败可见并可重试。选择另一表达、切换词元、重新查询或离开页面释放播放并忽略迟到响应，已提交的共享合成工作继续沿用现有生命周期。不会整表预生成、保存笔记、建卡、重置进度或替换选定单词音频。三语／主题、逐项文本、真实 Windows 合成／播放、资源恢复及七天临时保留见 [#48 证据](docs/evidence/issue-48/README.md)。
+每个显示的变位表达均有独立「播放表达」按钮，完整朗读该项主语、反身代词和动词部分。拼写与性数备选分别播放，不向语音发送斜杠并列。沿用 CPU 离线 Supertonic 3、已保存的女／男声及共用 80–240 WPM，界面明确标示机器语音；资源、生成、偏好与播放失败可见并可重试。选择另一表达、切换词元、重新查询或离开页面释放播放并忽略迟到响应，已提交的共享合成工作继续沿用现有生命周期。不会整表预生成、保存笔记、建卡、重置进度或替换选定单词音频。三语／主题、逐项文本、真实 Windows 合成／播放、资源恢复及七天临时保留见 [#48 证据](docs/evidence/issue-48/README.md)；当前 WPM 规则见 [#56](docs/evidence/issue-56/README.md)。
 
 CLI 与桌面变位查询接受大小写、Unicode 等价写法、直／弯撇号及首尾／重复空白差异，保留重音、原始显示拼写、完整表达匹配和全部解释。可试 `SOMMES`、` J'AI  AIMÉ `、` VA-T'EN `；实现与 Windows 原生验证见 [#44 证据](docs/evidence/issue-44/README.md)。
 
@@ -108,7 +110,7 @@ M1 生词本支持同词一份的逻辑引用、收藏时只读摘要与独立�
 
 共享核心使用 `fsrs-rs 6.6.2` 官方默认参数及显式的 `libm 0.2.16` 数学兼容补丁，修订标识为 `fsrs-rs/6.6.2+libm-0.2.16`。Windows x64 原生／实际 WASM 的 71+4,096 向量严格排程一致，包含原先相差一天的两个反例，见 [#13 证据](docs/evidence/issue-13/README.md)。M2 已接入用户库、评分、队列及一级撤销，并在 [#22](docs/evidence/issue-22/review-2026-11-01.md) 收尾；浏览器持久复习仍未实现。
 
-#15 已接入生词详情的单个“加入复习”、识义卡与听音卡、真实错误及重启恢复。schema 3 增量保留 M1 内容；再次加入保持两卡身份，仅对缺失或失败音频重试。语音开发包使用 Supertonic 3 本地资源生成目标 48 kbit/s 的 Ogg Opus；听音卡进入播放一次、翻面不自动播放，重播读取正常 / 0.6 倍速偏好，正面不显示词头。音频位于 `Lexique-data/temp/speech/`，错误保存在 `Lexique-data/logs/speech-cache.log`。#24 已用绝对期限和选定内容保护取代早期“七天未使用”规则，具体保留及维护边界见[架构](docs/architecture.md)。Windows x64 的 #15 实播和重启检查属于历史证据；新构建及长期维护分别验收。
+#15 已接入生词详情的单个“加入复习”、识义卡与听音卡、真实错误及重启恢复。schema 3 增量保留 M1 内容；再次加入保持两卡身份，仅对缺失或失败音频重试。语音开发包使用 Supertonic 3 本地资源生成目标 48 kbit/s 的 Ogg Opus；听音卡进入播放一次、翻面不自动播放，重播读取当前 WPM 偏好，正面不显示词头。音频位于 `Lexique-data/temp/speech/`，错误保存在 `Lexique-data/logs/speech-cache.log`。#24 已用绝对期限和选定内容保护取代早期“七天未使用”规则，具体保留及维护边界见[架构](docs/architecture.md)。Windows x64 的 #15 实播和重启检查属于历史证据；新构建及长期维护分别验收。
 
 完整词典 / MDX / MDD、例句朗读、语法笔记与分类、Drive / OneDrive 文件同步、翻译与 AI、练习、浏览器复习与 BFF 尚未实现。原型的演示数据、密钥表单和伪同步没有被搬进生产代码。
 

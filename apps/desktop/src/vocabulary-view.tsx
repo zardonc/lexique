@@ -1,4 +1,6 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
+import type { ReactNode } from 'react';
+import { FrequencyBadge, FrequencyDetails, FrequencyState, useFrequency } from './frequency';
 import type { NotebookText } from './notebook-content';
 import { characterCount } from './platform/vocabulary';
 import type { VocabularySnapshot } from './platform/vocabulary';
@@ -7,15 +9,27 @@ import type { RuntimeAdapter } from './platform/runtime';
 import { ReviewCards } from './review-cards';
 import { SpeechButton } from './speech-button';
 
-export function VocabularySummary({ snapshot, text }: { readonly snapshot: VocabularySnapshot; readonly text: NotebookText }) {
+export function VocabularySummary({ snapshot, text, frequency }: { readonly snapshot: VocabularySnapshot; readonly text: NotebookText; readonly frequency?: ReactNode }) {
   return <section className="vocabulary-summary" aria-label={text.summary}>
-    <h3 lang="fr">{snapshot.headword}</h3>
+    <h3><span lang="fr">{snapshot.headword}</span> {frequency}</h3>
     {snapshot.digest.map((entry, index) => <dl key={index}>
       <dt>{text.pronunciation}</dt><dd lang="fr">{entry.pronunciations.join(' · ') || text.missing}</dd>
       <dt>{text.grammar}</dt><dd>{entry.grammar.join(' · ') || text.missing}</dd>
       <dt>{text.translation}</dt><dd lang="zh">{entry.translation || text.missing}</dd>
     </dl>)}
   </section>;
+}
+
+function SavedVocabularySummary({ snapshot, text, runtime }: {
+  readonly snapshot: VocabularySnapshot; readonly text: NotebookText; readonly runtime: RuntimeAdapter;
+}) {
+  const keys = useMemo(() => [snapshot.headword], [snapshot.headword]);
+  const frequencies = useFrequency(runtime, keys);
+  const frequency = frequencies.lookup?.entries.find((entry) => entry.key === snapshot.headword);
+  return <><VocabularySummary snapshot={snapshot} text={text} frequency={<FrequencyBadge entry={frequency} text={text.frequency} />} />
+    <FrequencyState state={frequencies} text={text.frequency} />
+    {frequencies.lookup && frequency && <FrequencyDetails lookup={frequencies.lookup} entry={frequency} text={text.frequency} />}
+  </>;
 }
 
 function SavedSource({ snapshot, text }: { readonly snapshot: VocabularySnapshot; readonly text: NotebookText }) {
@@ -83,7 +97,8 @@ export function VocabularyEditor({ notebook, text, viewExisting, runtime, onRevi
   const exampleOverLimit = exampleTooLong(notebook.editor);
   const overLimit = characterCount(notes) > 20_000 || exampleOverLimit;
   return <section className="vocabulary-editor" aria-label={text.edit}>
-    <p className="eyebrow">{text.fallback}</p><VocabularySummary snapshot={snapshot} text={text} />
+    <p className="eyebrow">{text.fallback}</p>{notebook.editor.record
+      ? <SavedVocabularySummary snapshot={snapshot} text={text} runtime={runtime} /> : <VocabularySummary snapshot={snapshot} text={text} />}
     <SpeechButton key={snapshot.headword} word={snapshot.headword} runtime={runtime} text={text} />
     <label htmlFor="personal-notes">{text.notes}</label>
     <textarea ref={textarea} id="personal-notes" value={notes} disabled={notebook.busy} rows={8} spellCheck={false}

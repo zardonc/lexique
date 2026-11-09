@@ -65,6 +65,9 @@ class NativeFixture {
     if (booleanKey && typeof args?.[booleanKey] === 'boolean') this.defaults[command] = args[booleanKey];
   }
   private defaultReply(command: string, args?: Record<string, unknown>) {
+    if (command === 'frequency_lookup') return { source: { title: 'Lexique 3.83', version: '3.83', attribution: 'Boris New; Christophe Pallier',
+      license: 'CC BY-SA 4.0', source_url: 'https://www.lexique.org/databases/Lexique383/Lexique383.tsv', license_url: 'https://creativecommons.org/licenses/by-sa/4.0/' },
+      metric: 'freqlemfilms2', entries: (args?.keys as string[]).map((key) => ({ key, lemma: null, per_million: null, reason: 'not_found', parts: [], candidates: [] })) };
     if (command === 'review_add_batch') return this.batch(args);
     this.settings(command, args);
     if (command === 'review_availability') return this.availability();

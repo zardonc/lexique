@@ -1,6 +1,6 @@
 # 选词、OCR、词频与 WPM 的后续交付计划
 
-日期：2026-11-08。来源：[总规格 #1](https://github.com/zardonc/lexique/issues/1)、本次新增需求及用户确认的系统选词／屏幕框选范围与 WPM 含义。本文是待实施计划；现有 Windows x64 M1、M2、#24 与 M3 变位验收继续保留。
+日期：2026-11-08。来源：[总规格 #1](https://github.com/zardonc/lexique/issues/1)、新增需求及用户确认的系统选词／屏幕框选范围与 WPM 含义。S1／WPM 与 S2／词频已完成 Windows x64 检查，见 [#56](evidence/issue-56/README.md)和 [#57](evidence/issue-57/README.md)；其余切片继续实施。现有 M1、M2、#24 与 M3 变位验收保留，其他平台测试按用户要求暂缓。
 
 ## 固定边界
 
@@ -24,8 +24,8 @@
 | S7：M5 | 四目标完整版／Lite 共八种成品 | S1–S5 的首期能力、完整资源、干净机器首装断网、Lite 模型下载后断网、许可、依赖、签名／公证及实机验收 |
 | S8：M6 | 实际 WASM／IndexedDB 浏览器复习及同一同步协议 | 持久化、强关、配额、多标签页和跨端会合；桌面系统选词／截屏的验收不能直接转称浏览器支持 |
 
-S1／#56 与 S2／#57 已标 `ready-for-agent`，可独立领取；S3／#58 与 S4／#59 保持 `needs-triage`，先关闭平台／资源规格门槛，#59 原生依赖 #58。四票均已建立到 #1 的原生子票关系。每片包含真实资源／平台边界、UI、错误与持久性验收，不先交空接口。当前下一步是 #56；系统选词及屏幕框选不能延后为可选项。
+S1／#56 与 S2／#57 的 Windows x64 验收完成；S3／#58 与 S4／#59 先关闭平台／资源规格门槛，#59 原生依赖 #58。四票均已建立到 #1 的原生子票关系。每片包含真实资源／平台边界、UI、错误与持久性验收。当前下一步是 #58；系统选词及屏幕框选均为首期必交付范围。
 
 ## 文档与验证入口
 
-需求细节见[选词与 OCR](translation-inputs.md)、[词频颜色](word-frequency-colors.md)、[语音偏好](speech-preferences.md)，全局安排见[路线](roadmap.md)、[资源准入](development-readiness.md)和[架构](architecture.md)。实现时按变更边界运行 README 中的前端、Rust 与原生检查，后端测试先编译并保持执行阶段 60 秒硬超时。记录 passed／failed／skipped；本次文档更新只执行文档与链接检查，不新增模型试听或运行通过声明。
+需求细节见[选词与 OCR](translation-inputs.md)、[词频颜色](word-frequency-colors.md)、[语音偏好](speech-preferences.md)，全局安排见[路线](roadmap.md)、[资源准入](development-readiness.md)和[架构](architecture.md)。按变更边界运行 README 中的前端、Rust 与原生检查；后端测试先编译并保持执行阶段 60 秒硬超时。各切片的命令、passed／failed／skipped 与限制记录在对应证据页。

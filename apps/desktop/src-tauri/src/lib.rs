@@ -50,6 +50,29 @@ async fn dictionary_lookup(
 }
 
 #[tauri::command]
+async fn frequency_lookup(
+    app: tauri::AppHandle,
+    keys: Vec<String>,
+) -> Result<lexique_dictionary::frequency::Lookup, lexique_dictionary::DictionaryError> {
+    let path = app
+        .path()
+        .resource_dir()
+        .map_err(|error| lexique_dictionary::DictionaryError {
+            code: "query_failed",
+            message: format!("Could not resolve frequency resources: {error}"),
+        })?
+        .join("frequency/frequency.sqlite3");
+    tauri::async_runtime::spawn_blocking(move || {
+        lexique_dictionary::frequency::lookup(&path, &keys, env!("LEXIQUE_FREQUENCY_SHA256"))
+    })
+    .await
+    .map_err(|error| lexique_dictionary::DictionaryError {
+        code: "query_failed",
+        message: format!("Frequency query task failed: {error}"),
+    })?
+}
+
+#[tauri::command]
 async fn runtime_status(
     status: State<'_, RuntimeStatus>,
     path: State<'_, DatabasePath>,
@@ -125,6 +148,7 @@ pub fn run() {
         .invoke_handler(tauri::generate_handler![
             runtime_status,
             dictionary_lookup,
+            frequency_lookup,
             conjugation_lookup,
             conjugation_preferences,
             conjugation_block_order,
