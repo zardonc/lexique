@@ -38,7 +38,7 @@ class NativeFixture {
 
   constructor(private readonly responses: Readonly<Record<string, readonly Reply[]>>, lookup: typeof dictionary) {
     this.defaults = { runtime_status: { version: '0.1.0', schemaVersion: 17, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } },
-      dictionary_lookup: lookup, vocabulary_find: null, vocabulary_list: [], vocabulary_sort: 'updated-desc', finish_close: null,
+      dictionary_lookup: lookup, dictionary_settings: [{ id: 'builtin', title: 'FreeDict fra-zho' }], vocabulary_find: null, vocabulary_list: [], vocabulary_sort: 'updated-desc', finish_close: null,
       speech_preferences: { voice: 'female', wpm: 180 }, review_settings: { retention_percent: 90, new_limit: 20, review_limit: 50, new_cards_ignore_review_limit: false },
       review_queue: { queue: { cards: [], reason: null, available_at: null }, record: null, audio_pending: false, audio_error: null }, review_cards: [], speech_cached: null,
       review_undo_target: null, review_undo: { status: 'committed', queue_rebuilt: false }, review_auto_enroll: false, review_pause: false,
@@ -73,11 +73,16 @@ class NativeFixture {
     this.emit('selection-input', { kind: 'captured', request, text: args?.text ?? '' });
     return null;
   }
-  private defaultReply(command: string, args?: Record<string, unknown>) {
-    if (command === 'selection_capture') return this.capture(args);
+  private lookupReply(command: string, args?: Record<string, unknown>) {
+    if (command === 'conjugation_lookup') return { query: args?.key, tables: [] };
     if (command === 'frequency_lookup') return { source: { title: 'Lexique 3.83', version: '3.83', attribution: 'Boris New; Christophe Pallier',
       license: 'CC BY-SA 4.0', source_url: 'https://www.lexique.org/databases/Lexique383/Lexique383.tsv', license_url: 'https://creativecommons.org/licenses/by-sa/4.0/' },
       metric: 'freqlemfilms2', entries: (args?.keys as string[]).map((key) => ({ key, lemma: null, per_million: null, reason: 'not_found', parts: [], candidates: [] })) };
+  }
+  private defaultReply(command: string, args?: Record<string, unknown>) {
+    const lookup = this.lookupReply(command, args);
+    if (lookup) return lookup;
+    if (command === 'selection_capture') return this.capture(args);
     if (command === 'review_add_batch') return this.batch(args);
     this.settings(command, args);
     if (command === 'review_availability') return this.availability();

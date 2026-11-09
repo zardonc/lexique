@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import type { DictionaryLookup, DictionarySense } from './dictionary';
+import { dictionaryId } from './dictionary';
 
 export const characterCount = (value: string) => Array.from(value).length;
 const headword = z.string().refine((value) => value.trim().length > 0 && characterCount(value) <= 200
@@ -15,9 +16,10 @@ const digestEntry = z.object({
   translation: z.string().nullable(),
 }).strict().readonly();
 const reference = z.object({
-  dictionary: z.string().min(1), version: z.string().min(1), attribution: z.string().min(1),
+  dictionary_id: dictionaryId.optional(),
+  dictionary: z.string().min(1), version: z.string().min(1), attribution: z.string().min(1).nullable(),
   lookup_key: z.string().min(1),
-  license: z.string().min(1), source_url: z.url(), license_url: z.url(),
+  license: z.string().min(1).nullable(), source_url: z.url().nullable(), license_url: z.url().nullable(),
   sha256: z.string().regex(/^[a-f0-9]{64}$/),
 }).strict().readonly();
 export const recordSchema = z.object({
@@ -51,7 +53,7 @@ export function snapshotFromLookup(lookup: DictionaryLookup): VocabularySnapshot
   if (!first) throw new Error('Dictionary has no matching headword');
   return {
     headword: first.key,
-    reference: { dictionary: lookup.source.title, lookup_key: first.key, version: lookup.source.version,
+    reference: { dictionary_id: lookup.dictionary_id, dictionary: lookup.source.title, lookup_key: first.key, version: lookup.source.version,
       attribution: lookup.source.attribution, license: lookup.source.license,
       source_url: lookup.source.source_url, license_url: lookup.source.license_url, sha256: lookup.sha256 },
     digest: lookup.entries.map((entry) => ({ pronunciations: entry.pronunciations,

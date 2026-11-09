@@ -223,7 +223,7 @@ test('empty notes save, existing records can be cleared, and resource failures p
   await page.goto('/'); await page.getByRole('button', { name: '生词本', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
   await expect(page.getByLabel('独立笔记', { exact: true })).toHaveValue('old notes');
-  await expect(page.locator('.dictionary-original')).toContainText('内置词典资源不存在');
+  await expect(page.locator('.dictionary-original')).toContainText('词典资源不存在');
   await expect(page.locator('.vocabulary-editor')).toContainText('学校');
   await page.getByLabel('独立笔记', { exact: true }).fill('');
   await page.getByRole('button', { name: '保存', exact: true }).click();

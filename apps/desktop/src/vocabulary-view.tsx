@@ -35,8 +35,8 @@ function SavedVocabularySummary({ snapshot, text, runtime }: {
 function SavedSource({ snapshot, text }: { readonly snapshot: VocabularySnapshot; readonly text: NotebookText }) {
   const source = snapshot.reference;
   return <footer className="dictionary-source"><h4>{text.source}</h4>
-    <p>{source.dictionary} · {source.version}</p><p>{source.attribution} · {source.license}</p>
-    <p>{source.source_url}</p><p>{source.license_url}</p>
+    <p>{source.dictionary} · {source.version}</p><p>{source.attribution ?? text.missing} · {source.license ?? text.missing}</p>
+    <p>{source.source_url ?? text.missing}</p><p>{source.license_url ?? text.missing}</p>
   </footer>;
 }
 

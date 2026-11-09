@@ -4,7 +4,9 @@
 
 基于 2026-10-24 的需求基线与最新原型调整：Tauri 2、React、TypeScript、Rust、SQLite。第一阶段面向 Windows 11 / macOS 的 x64 与 ARM64，第二阶段为包含实际 WASM 的自部署复习应用。
 
-2026-11-09：共用 WPM、Lexique 3.83 词频、系统取词和屏幕 OCR 已接入并通过 Windows x64 检查，见 [#56](docs/evidence/issue-56/README.md)、[#57](docs/evidence/issue-57/README.md)、[#58](docs/evidence/issue-58/README.md)和 [#59](docs/evidence/issue-59/README.md)。取词与 OCR 使用独立自定义快捷键，结果进入翻译原文并保留前 5,000 字；框选后自动离线识别。继续使用 Supertonic 3 CPU。后续为 #9 与剩余离线核心，再到 M4／M5／M6，见[开发路线](docs/roadmap.md)。其他平台测试按用户要求暂缓，正式发行门槛继续适用。
+2026-11-09：共用 WPM、Lexique 3.83 词频、系统取词和屏幕 OCR 已接入并通过 Windows x64 检查，见 [#56](docs/evidence/issue-56/README.md)、[#57](docs/evidence/issue-57/README.md)、[#58](docs/evidence/issue-58/README.md)和 [#59](docs/evidence/issue-59/README.md)。取词与 OCR 使用独立自定义快捷键，结果进入翻译原文并保留前 5,000 字；框选后自动离线识别。继续使用 Supertonic 3 CPU。
+
+自定义 MDX 多标签、按需正文与已有动词的显式原形选择已完成 Windows x64 验收，见 [#9 D1／D3](docs/evidence/issue-9/README.md)。后续为完整词典／分级与剩余离线核心，再到 M4／M5／M6，见[开发路线](docs/roadmap.md)。其他平台测试按用户要求暂缓，正式发行门槛继续适用。
 
 ## 开始开发
 
@@ -25,7 +27,7 @@ apps/desktop/             React 界面、运行时适配器与浏览器 E2E
   src-tauri/              Tauri 入口、状态 / 查词 / 生词本 / 建卡及语音命令
 crates/core/              可编译为 WASM 的共享 Rust 核心入口
 crates/storage/           SQLite 迁移、生词记录、幂等保存及双卡身份
-crates/dictionary/        校验内置资源、只读 SQLite 快照查询、TEI 文本解析
+crates/dictionary/        校验内置资源、只读 SQLite 快照查询、TEI 文本及有界 MDX 读取
 docs/                     产品基线、模块职责、开发顺序与验证记录
 scripts/                  60 秒后端测试限制、WASM 实际执行检查
 .github/workflows/        前端、存储、WASM 及四目标原生编译检查
@@ -74,7 +76,7 @@ Windows x64 语音开发小样可在构建后运行 `python -X utf8 scripts/pack
 
 资源独立入口：`pnpm resources:build target/dictionary-sample`、`pnpm resources:query target/dictionary-sample/dictionary.sqlite3 "œil"`、`pnpm test:resources`。源包和许可已随仓库保存，生成及查询无需联网；`build` 输出目录必须是新目录。原生构建自动准备 `target/desktop-dictionary-sample`，复用前验证内容；损坏时直接失败，人工检查后移走该生成目录再重建。可先运行 `pnpm resources:prepare`。来源、覆盖缺项、只读查询契约和体积见 [FreeDict 小样记录](resources/freedict-fra-zho-2025.11.23/README.md)。
 
-自定义 MDX/MDD 的[独立探针](tools/mdict-probe/README.md)已验证六组原创配对的查询及 CSS／PNG／WAV 读取，并通过 12 个真实 MDX 与两个同名 MDD 的 Windows x64 技术检查。格式、许可、失败路径及产品接入边界见 [#3 证据](docs/evidence/issue-3/README.md)。应用的自定义词典导入与 HTML 渲染继续分别验收。
+应用支持 MDX 导入、持久顺序、多标签与按需正文。文件复制到 `Lexique-data/data/dictionaries/`，移出列表保留文件及学习记录；首个读取成功的词典默认选中，其他标签点击后读取。HTML 在无脚本、无同源权限的 iframe 中隔离显示，来源与同键记录分别保留，见 [#9 D1／D3 证据](docs/evidence/issue-9/README.md)。MDX/MDD 的[独立探针](tools/mdict-probe/README.md)及 [#3 支持矩阵](docs/evidence/issue-3/README.md)继续约束格式与许可；MDD 媒体和正文跳转尚未接入。
 
 词频入口：`pnpm frequency:prepare`、`pnpm test:frequency`。固定 Lexique 3.83 完整源、CC BY-SA 4.0 法律原文及署名随仓库保存；准备到 `target/desktop-frequency-v1/`，缓存复用前验证输入、数据库和通知。生词本当前页批量读取最多 100 个词头，详情显示字幕词元／词性数值与来源；高／中／低／未知均有文字标签，资源失败保留笔记编辑及重试。词频不改变记录、FSRS 或选定音频，详见 [#57 证据](docs/evidence/issue-57/README.md)。
 
@@ -89,6 +91,8 @@ Windows x64 语音开发小样可在构建后运行 `python -X utf8 scripts/pack
 全部 23 时态区块可通过「要移动的区块」及「向前移动／向后移动」调整顺序，支持键盘，并显示当前位置。自定义顺序跨动词及原生重启保留，缺陷动词的不适用区块不会被丢弃；「重置区块顺序」恢复准确的默认重点时态顺序及其余区块。重点标记随时态身份保留，匹配和着色不受移动影响；排序与着色偏好独立保存，错误明确显示。实际 Windows 重启、重置、故障恢复及数据保留见 [#46 证据](docs/evidence/issue-46/README.md)。浏览器预览明确提示排序更改不会保存。
 
 词典的明确动词词条现可打开同一变位视图，再返回对应词条。关联要求词典的 `v` 标记及完整原形匹配；缺项和歧义明确显示，需选择时不代选。返回后的词典入口保留原查询、所选身份和其他候选，同时重新读取资源；直／弯撇号词条分别选择，保留原词头及既有大小写／撇号记录区别。普通／代词式不混同，浏览和导航不自动收藏或加入复习。未保存修改仍须选择保存、放弃或继续编辑，失败和冲突保留输入；键盘焦点到达对应标题。三语／主题、着色和排序、实际 Windows 资源故障恢复及学习数据保留见 [#47 证据](docs/evidence/issue-47/README.md)。
+
+输入已收录动词的形式时，可明确选择资源给出的普通／代词式原形；每个目标先在当前词典核对，保留词典实际拼写、来源和全部歧义。缺失目标保留原查询，选择原形仍经过未保存笔记保护。名词／形容词屈折与新增异写来源另行准入。
 
 每个显示的变位表达均有独立「播放表达」按钮，完整朗读该项主语、反身代词和动词部分。拼写与性数备选分别播放，不向语音发送斜杠并列。沿用 CPU 离线 Supertonic 3、已保存的女／男声及共用 80–240 WPM，界面明确标示机器语音；资源、生成、偏好与播放失败可见并可重试。选择另一表达、切换词元、重新查询或离开页面释放播放并忽略迟到响应，已提交的共享合成工作继续沿用现有生命周期。不会整表预生成、保存笔记、建卡、重置进度或替换选定单词音频。三语／主题、逐项文本、真实 Windows 合成／播放、资源恢复及七天临时保留见 [#48 证据](docs/evidence/issue-48/README.md)；当前 WPM 规则见 [#56](docs/evidence/issue-56/README.md)。
 
@@ -112,7 +116,7 @@ M1 生词本支持同词一份的逻辑引用、收藏时只读摘要与独立�
 
 #15 已接入生词详情的单个“加入复习”、识义卡与听音卡、真实错误及重启恢复。schema 3 增量保留 M1 内容；再次加入保持两卡身份，仅对缺失或失败音频重试。语音开发包使用 Supertonic 3 本地资源生成目标 48 kbit/s 的 Ogg Opus；听音卡进入播放一次、翻面不自动播放，重播读取当前 WPM 偏好，正面不显示词头。音频位于 `Lexique-data/temp/speech/`，错误保存在 `Lexique-data/logs/speech-cache.log`。#24 已用绝对期限和选定内容保护取代早期“七天未使用”规则，具体保留及维护边界见[架构](docs/architecture.md)。Windows x64 的 #15 实播和重启检查属于历史证据；新构建及长期维护分别验收。
 
-完整词典 / MDX / MDD、例句朗读、语法笔记与分类、Drive / OneDrive 文件同步、翻译与 AI、练习、浏览器复习与 BFF 尚未实现。原型的演示数据、密钥表单和伪同步没有被搬进生产代码。
+完整默认词典／CEFR 分级、MDD 媒体与词条跳转、例句朗读、语法笔记与分类、Drive / OneDrive 文件同步、在线翻译与 AI、练习、浏览器复习与 BFF 尚未实现。原型的演示数据、密钥表单和伪同步没有被搬进生产代码。
 
 2026-11-02 同步规划已改为应用内管理数据与跨云后台批量文件同步；桌面 SQLite + 事务 outbox、不可变 JSONL、浏览器 IndexedDB 宿主及安全清理仍是待验证设计。见[综合评估](docs/sync-design.md)和[M4 / M6 规划](docs/roadmap.md)，不表示已接入云服务或浏览器持久化。
 

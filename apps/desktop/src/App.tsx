@@ -21,6 +21,7 @@ import { LookupInputPanel } from './lookup-input';
 import { useSelectionInput } from './use-selection-input';
 import { SelectionSettings } from './selection-settings';
 import { lookupInputMessages } from './lookup-input-content';
+import { DictionarySettings } from './dictionary-settings';
 
 const themes: readonly Theme[] = ['white', 'sepia', 'dark'];
 const locales: readonly Locale[] = ['zh', 'en', 'fr'];
@@ -86,19 +87,19 @@ export function App({ runtime }: { readonly runtime: RuntimeAdapter }) {
             locale={locale} initial={navigation.dictionary} onConjugation={navigation.openConjugation}
             onCollect={(result) => guard.request(() => notebook.collect(result))}
             onOpen={(record) => guard.request(() => notebook.open(record))}
-            beforeSearch={(action) => guard.request(() => { notebook.clear(); action(); })} /> : page === 1 ?
+            beforeSearch={navigation.beforeSearch} /> : page === 1 ?
             <ConjugationPanel runtime={runtime} locale={locale} initial={navigation.conjugation} onChange={navigation.setConjugation} onDictionary={navigation.openDictionary} /> : page === 2 ?
             <NotebookPanel runtime={runtime} version={notebook.version + reviewVersion} text={notebookText} batch={batch}
               onOpen={(record) => guard.request(() => notebook.open(record))} /> : page === 3 ? <ReviewQueuePanel runtime={runtime} locale={locale} text={notebookText} /> : page === 5 ?
             <LookupInputPanel runtime={runtime} locale={locale} selection={selection.input} onCancel={selection.cancel}
               onDictionary={navigation.openDictionaryResult} /> : page === 7 ?
             <><ReviewSettingsPanel runtime={runtime} locale={locale} /><SpeechSettings runtime={runtime} locale={locale} />
-              <SelectionSettings runtime={runtime} locale={locale} /><SelectionSettings runtime={runtime} locale={locale} ocr /></> :
+              <SelectionSettings runtime={runtime} locale={locale} /><SelectionSettings runtime={runtime} locale={locale} ocr /><DictionarySettings runtime={runtime} locale={locale} /></> :
             <div className="empty-state"><p>{text.pending[page]}</p><small>{text.scaffold}</small></div>}
           <VocabularyEditor notebook={notebook} text={notebookText} runtime={runtime} onReviewChanged={reviewChanged} viewExisting={() => {
             if (notebook.existing) { const record = notebook.existing; guard.request(() => notebook.open(record)); }
           }} />
-          {page === 2 && notebook.editor && <RecordOriginal headword={notebook.editor.snapshot.reference.lookup_key}
+          {page === 2 && notebook.editor && <RecordOriginal reference={notebook.editor.snapshot.reference}
             runtime={runtime} text={text.dictionary} title={notebookText.original} />}
           {guard.error && <p role="alert">{notebookText.closeError}: {guard.error}</p>}
           <BatchProgress batch={batch} text={notebookText} />

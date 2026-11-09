@@ -7,12 +7,14 @@ use tauri::{Manager, State};
 #[cfg(windows)]
 mod audio_maintenance;
 mod conjugation;
+mod dictionaries;
 mod ocr;
 mod ocr_capture;
 mod review_window;
 mod selection;
 mod selection_shortcut;
 use conjugation::{conjugation_block_order, conjugation_lookup, conjugation_preferences};
+use dictionaries::{dictionary_import, dictionary_lookup, dictionary_remove, dictionary_settings};
 mod speech_cache;
 mod speech_tasks;
 mod vocabulary;
@@ -29,29 +31,6 @@ mod status;
 use status::{RuntimeStatus, StorageKind};
 
 const DATABASE_FILENAME: &str = "lexique.sqlite3";
-
-#[tauri::command]
-async fn dictionary_lookup(
-    app: tauri::AppHandle,
-    key: String,
-) -> Result<lexique_dictionary::Lookup, lexique_dictionary::DictionaryError> {
-    let path = app
-        .path()
-        .resource_dir()
-        .map_err(|error| lexique_dictionary::DictionaryError {
-            code: "query_failed",
-            message: format!("Could not resolve dictionary resources: {error}"),
-        })?
-        .join("dictionary/dictionary.sqlite3");
-    tauri::async_runtime::spawn_blocking(move || {
-        lexique_dictionary::lookup(&path, &key, env!("LEXIQUE_DICTIONARY_SHA256"))
-    })
-    .await
-    .map_err(|error| lexique_dictionary::DictionaryError {
-        code: "query_failed",
-        message: format!("Dictionary query task failed: {error}"),
-    })?
-}
 
 #[tauri::command]
 async fn frequency_lookup(
@@ -107,6 +86,7 @@ async fn runtime_status(
 pub fn run() {
     tauri::Builder::default()
         .manage(vocabulary::CloseAuthorization::default())
+        .manage(dictionaries::Registry::default())
         .plugin(
             tauri_plugin_global_shortcut::Builder::new()
                 .with_handler(|app, shortcut, event| {
@@ -183,6 +163,9 @@ pub fn run() {
         .invoke_handler(tauri::generate_handler![
             runtime_status,
             dictionary_lookup,
+            dictionary_settings,
+            dictionary_import,
+            dictionary_remove,
             frequency_lookup,
             selection::selection_capture,
             selection::selection_cancel,

@@ -73,6 +73,7 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
     shutil.copytree(frequency, output / "frequency")
     shutil.copytree(root / "resources/tesseract-fra/licenses", output / "ocr-notices/licenses")
     shutil.copy2(root / "resources/tesseract-fra/README.md", output / "ocr-notices/README.md")
+    shutil.copytree(root / "resources/mdictlib-0.2.8", output / "mdx-notices")
     shutil.copy2(root / "LICENSE", output / "LICENSE")
     (output / "README.txt").write_text(
         f"Lexique {config['version']} - Windows 11 {architecture.upper()} portable development sample\n\n"
@@ -97,6 +98,8 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
         "Both shortcuts can be changed in Settings. Selection and OCR enter the Translation\n"
         "input, retaining the first 5,000 Unicode characters; dictionary lookup is explicit.\n"
         "Offline French OCR runtime and model are embedded. Licenses and sources: ocr-notices/.\n"
+        "Add MDX dictionaries in Settings. Imported copies stay in Lexique-data/.\n"
+        "Dictionary order is saved; other tab bodies load on selection. Parser licenses: mdx-notices/.\n"
         "Conjugation uses the compact format-6 resource with 23 ordinary/pronominal reference blocks.\n"
         "Query normalization, three color modes, saved block order and dictionary navigation are included.\n"
         "Keep the format-6 resource with its matching rebuilt reader when updating.\n"
@@ -135,7 +138,7 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
     checksums = {path.relative_to(output).as_posix(): hashlib.sha256(path.read_bytes()).hexdigest()
                  for path in files}
     (output / "SHA256SUMS.json").write_text(json.dumps(checksums, indent=2) + "\n")
-    with zipfile.ZipFile(archive, "x", zipfile.ZIP_DEFLATED, compresslevel=9) as zipped:
+    with zipfile.ZipFile(archive, "x", zipfile.ZIP_DEFLATED, compresslevel=9, strict_timestamps=False) as zipped:
         for path in sorted(output.rglob("*")):
             if path.is_file():
                 zipped.write(path, path.relative_to(output.parent))

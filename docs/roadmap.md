@@ -12,12 +12,12 @@
 | 2：Windows x64 已验收 | Lexique 3.83 `freqlemfilms2` 词性去重合计 → 生词列表及详情颜色／标签 | 完整来源／CC BY-SA 4.0 通知、原始样本、100／10 及未知状态、原生恢复与开发包通过，见 [#57](evidence/issue-57/README.md)；不代替 CEFR |
 | 3：Windows x64 已验收，系统选词 | 应用内及其他应用选区 → 翻译模块核对 → 明确离线查词；前 5,000 字截断 | [#58 证据](evidence/issue-58/README.md)：真实全局键、网页／编辑器、焦点／保存保护及恢复；PDF API 不支持明确列出，其他平台执行暂缓 |
 | 4：Windows x64 已验收，屏幕 OCR | 其他应用框选 → 自动本地 OCR／预览 → 可编辑原文／选词 → 同一查词链路；图片导入／粘贴 | [#59 证据](evidence/issue-59/README.md)：固定完整运行库／法语数据、125%／175% 双屏与负坐标、禁网、错误／取消、快捷键保存及学习数据保持；其他平台暂缓 |
-| 5：剩余离线核心 | 将 [#9](https://github.com/zardonc/lexique/issues/9) D1 多 MDX、D2 完整摘要／分级、D3 可靠词形关联转为有界切片；另跟踪语法、分类、导入导出与例句朗读 | #3 支持矩阵、资源准入、未决行为与预算；#9 保持 `needs-triage`，D4 已由 #21／#22 接入，C1–C4 未整体批准；例句共用 WPM |
+| 5：D1／D3 Windows x64 已验收，剩余离线核心 | [#9 D1／D3](evidence/issue-9/README.md)：多 MDX 标签／按需正文、当前词典的显式动词原形选择；继续 D2 完整摘要／分级、语法、分类、导入导出与例句朗读 | D2 默认词典／CEFR 来源仍须准入；#9 保持 `needs-triage`，D4 已由 #21／#22 接入，C1–C4 未整体批准；例句共用 WPM |
 | 6：M4 | 普通翻译与 OpenAI 兼容服务；另行冻结同步协议，再接本地原子 outbox、Drive、OneDrive | 服务与同步可独立交付；JSONL／outbox 细节仍是提案，按下述 S0–S5 冻结和验证，应用内管理数据取代可人工编辑 Sheets |
 | 7：M5 | Windows／macOS × x64／ARM64 × 完整版／Lite 共八种发行物，统一使用 Supertonic 3 | 本次首期输入、词频与 WPM 各目标实际验收；模型许可、完整资源、干净机器首装禁网、Lite 下载后禁网、签名／公证及依赖门槛 |
 | 8：M6 | 浏览器复习、实际 WASM／IndexedDB 持久化，再接同一同步协议 | 依赖桌面业务与已冻结协议；验证事务确认、强关恢复、配额、多标签页、OAuth／BFF 及跨端会合 |
 
-新增范围及每片退出条件见[选词、OCR、词频与 WPM 交付计划](lookup-notes-speech-plan.md)。WPM、词频、系统选词及 OCR 已完成 Windows x64 检查，接下来推进 #9 的[有界切片草案](lookup-enhancement-slices.md)。其他平台测试按用户要求暂缓；此前 M1／M2／#24／变位 Windows 验收不变。
+新增范围及每片退出条件见[选词、OCR、词频与 WPM 交付计划](lookup-notes-speech-plan.md)。WPM、词频、系统选词、OCR 及 #9 D1／D3 已完成 Windows x64 检查；查词的当前边界见[有界切片](lookup-enhancement-slices.md)。D2 继续保留资源准入门槛。其他平台测试按用户要求暂缓；此前 M1／M2／#24／变位 Windows 验收不变。
 
 ## 阶段范围
 

@@ -69,7 +69,7 @@ export function useNotebook(runtime: RuntimeAdapter) {
     }
     saving.current = true; setBusy(true); setError(''); setSaved(false);
     try {
-      const result = await runtime.saveVocabulary(operation.current!);
+      const result = await runtime.saveVocabulary(operation.current!, editor.snapshot.reference.dictionary_id ?? 'builtin');
       if (!result) throw new Error('Native notebook storage unavailable');
       const accepted = applyResult(result, payload);
       return accepted;

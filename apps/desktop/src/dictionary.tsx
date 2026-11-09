@@ -1,16 +1,19 @@
 import { useEffect, useRef, useState } from 'react';
-import type { FormEvent } from 'react';
+import type { KeyboardEvent, ReactNode } from 'react';
 import type { Locale, Messages } from './content';
 import { dictionaryFailure } from './platform/dictionary';
-import type { DictionaryFailure, DictionaryLookup, DictionarySense } from './platform/dictionary';
+import type { DictionaryFailure, DictionaryLookup, DictionarySense, DictionaryCatalog } from './platform/dictionary';
 import type { RuntimeAdapter } from './platform/runtime';
 import type { NotebookText } from './notebook-content';
 import { errorMessage, snapshotFromLookup } from './platform/vocabulary';
-import type { VocabularyRecord } from './platform/vocabulary';
+import type { VocabularyRecord, VocabularySnapshot } from './platform/vocabulary';
 import { VocabularySummary } from './vocabulary-view';
 import { SpeechButton } from './speech-button';
-import { DictionaryConjugation } from './conjugation-navigation';
+import { DictionaryConjugation, DictionaryLemmas } from './conjugation-navigation';
 import type { ConjugationView, DictionaryView } from './conjugation-navigation';
+import { DictionaryHtml } from './dictionary-html';
+import { useDictionaryTabs } from './use-dictionary-tabs';
+import { expressionMatches } from './platform/conjugation';
 
 function Senses({ senses }: { readonly senses: readonly DictionarySense[] }) {
   return <ol className="dictionary-senses">{senses.map((sense, index) => <li key={index}>
@@ -18,6 +21,12 @@ function Senses({ senses }: { readonly senses: readonly DictionarySense[] }) {
     {sense.definitions.map((definition, item) => <p key={`d${item}`} lang="fr">{definition}</p>)}
     {sense.senses.length > 0 && <Senses senses={sense.senses} />}
   </li>)}</ol>;
+}
+
+function linkedVerb(entry: DictionaryLookup['entries'][number], result: DictionaryLookup, previous?: ConjugationView) {
+  if (entry.grammar.includes('v')) return true;
+  return entry.html !== undefined && (previous?.dictionaryId ?? 'builtin') === (result.dictionary_id ?? 'builtin')
+    && (previous?.result?.tables.some((table) => table.lemma === previous.selected && expressionMatches(table.lemma, entry.key)) ?? false);
 }
 
 export function DictionaryResults({ result, text, navigation }: {
@@ -29,14 +38,14 @@ export function DictionaryResults({ result, text, navigation }: {
     {result.entries.map((entry) => <article className="dictionary-entry" key={entry.ordinal} data-ordinal={entry.ordinal}>
       <h3 lang="fr" tabIndex={-1}>{entry.key}</h3>
       <p className="dictionary-grammar">{entry.pronunciations.join(' · ')} {entry.grammar.join(' · ')}</p>
-      <Senses senses={entry.senses} />
-      {navigation && entry.grammar.includes('v') && <DictionaryConjugation runtime={navigation.runtime} locale={navigation.locale}
-        dictionaryKey={entry.key} previous={navigation.previous} onOpen={navigation.onOpen} />}
+      {entry.html === undefined ? <Senses senses={entry.senses} /> : <DictionaryHtml html={entry.html} title={result.source.title} />}
+      {navigation && linkedVerb(entry, result, navigation.previous) && <DictionaryConjugation runtime={navigation.runtime} locale={navigation.locale}
+        dictionaryKey={entry.key} dictionaryId={result.dictionary_id} previous={navigation.previous} posUnknown={!entry.grammar.includes('v')} onOpen={navigation.onOpen} />}
     </article>)}
     <footer className="dictionary-source">
       <p>{text.source}: {result.source.title} · {result.source.version}</p>
-      <p>{result.source.attribution} · {result.source.license}</p>
-      <p>{result.source.source_url}</p><p>{result.source.license_url}</p>
+      <p>{result.source.attribution ?? text.unknown} · {result.source.license ?? text.unknown}</p>
+      <p>{result.source.source_url ?? text.unknown}</p><p>{result.source.license_url ?? text.unknown}</p>
     </footer>
   </>;
 }
@@ -66,24 +75,59 @@ function Collection({ result, runtime, text, version, onCollect, onOpen }: {
         : <button disabled={record === undefined} onClick={() => onCollect(result)}>{text.collect}</button>}</>;
 }
 
-export function RecordOriginal({ headword, runtime, text, title }: {
-  readonly headword: string; readonly runtime: RuntimeAdapter; readonly text: Messages['dictionary']; readonly title: string;
+export function RecordOriginal({ reference, runtime, text, title }: {
+  readonly reference: VocabularySnapshot['reference']; readonly runtime: RuntimeAdapter; readonly text: Messages['dictionary']; readonly title: string;
 }) {
   const [result, setResult] = useState<DictionaryLookup | null>();
   const [error, setError] = useState<DictionaryFailure>();
   useEffect(() => {
     let cancelled = false;
     setResult(undefined); setError(undefined);
-    void runtime.lookupDictionary(headword).then((value) => { if (!cancelled) setResult(value); })
+    void runtime.lookupDictionary(reference.lookup_key, reference.dictionary_id ?? 'builtin').then((value) => { if (!cancelled) setResult(value); })
       .catch((cause: unknown) => { if (!cancelled) setError(dictionaryFailure(cause)); });
     return () => { cancelled = true; };
-  }, [runtime, headword]);
+  }, [runtime, reference.lookup_key, reference.dictionary_id]);
   return <section className="dictionary-original" aria-label={title}><h3>{title}</h3>
     {error && <p role="alert">{text[error.code]} {error.message}</p>}
     {result === undefined && !error && <p role="status">{text.loading}</p>}
     {result === null && <p role="status">{text.preview}</p>}
-    {result && <DictionaryResults result={result} text={text} />}
+    {result && <>{result.sha256 !== reference.sha256 && <p role="status">{text.changedSource}</p>}<DictionaryResults result={result} text={text} /></>}
   </section>;
+}
+
+function tabKey(event: KeyboardEvent<HTMLDivElement>, catalog: DictionaryCatalog, onSelect: (id: string) => void) {
+  if (event.altKey || event.ctrlKey || event.metaKey) return;
+  let index = catalog.findIndex((item) => `dictionary-tab-${item.id}` === (event.target as HTMLElement).id);
+  if (index < 0) return;
+  switch (event.key) {
+    case 'ArrowRight': index = (index + 1) % catalog.length; break;
+    case 'ArrowLeft': index = (index + catalog.length - 1) % catalog.length; break;
+    case 'Home': index = 0; break;
+    case 'End': index = catalog.length - 1; break;
+    default: return;
+  }
+  event.preventDefault();
+  const id = catalog[index].id;
+  document.getElementById(`dictionary-tab-${id}`)?.focus(); onSelect(id);
+}
+
+function DictionaryTabStatus({ tabs, text, onSelect, children }: {
+  readonly tabs: ReturnType<typeof useDictionaryTabs>; readonly text: Messages['dictionary']; readonly onSelect: (id: string) => void;
+  readonly children: ReactNode;
+}) {
+  return <>
+    {tabs.catalogError && <p role="alert">{text[tabs.catalogError.code]} {tabs.catalogError.message} <button onClick={tabs.reload}>{text.retry}</button></p>}
+    {tabs.query && <div role="tablist" aria-label={text.tabs} onKeyDown={(event) => tabKey(event, tabs.catalog, onSelect)}>{tabs.catalog.map((item) => <button type="button" role="tab"
+      id={`dictionary-tab-${item.id}`} aria-controls="dictionary-body" aria-selected={tabs.selected === item.id} key={item.id}
+      tabIndex={tabs.selected === item.id ? 0 : -1} data-error={!!tabs.visits[item.id]?.error} onClick={() => onSelect(item.id)}>{item.title}</button>)}</div>}
+    {tabs.query && <div id="dictionary-body" role="tabpanel" tabIndex={0} aria-labelledby={`dictionary-tab-${tabs.selected}`}>
+      {Object.values(tabs.visits).some((visit) => visit.error) && <p role="status">{text.failedSources}</p>}
+    {tabs.loading && <><p role="status">{text.loading}</p><button type="button" onClick={tabs.cancel}>{text.cancel}</button></>}
+    {tabs.result === null && <p role="status">{text.preview}</p>}
+    {tabs.error && <div className="runtime-error" role="alert"><p>{text[tabs.error.code]}</p><details>
+      <summary>{text.details}</summary><p>{tabs.error.message}</p></details><button onClick={() => { void tabs.select(tabs.selected, true); }}>{text.retry}</button></div>}
+      {children}</div>}
+  </>;
 }
 
 export function DictionaryPanel({ runtime, text, notebookText, version, onCollect, onOpen, beforeSearch, locale, initial, onConjugation }: {
@@ -93,38 +137,31 @@ export function DictionaryPanel({ runtime, text, notebookText, version, onCollec
   readonly beforeSearch: (action: () => void) => void;
   readonly locale: Locale; readonly initial?: DictionaryView; readonly onConjugation: (view: ConjugationView) => void;
 }) {
-  const [key, setKey] = useState(initial?.result.entries.find((entry) => entry.ordinal === initial.ordinal)?.key ?? '');
-  const [loading, setLoading] = useState(false);
-  const [result, setResult] = useState<DictionaryLookup | null | undefined>(initial?.result);
+  const tabs = useDictionaryTabs(runtime, initial);
+  const [key, setKey] = useState(tabs.query);
+  const { result, loading } = tabs;
   const [previous, setPrevious] = useState(() => initial?.conjugation);
-  const [error, setError] = useState<DictionaryFailure>();
   const panel = useRef<HTMLDivElement>(null);
   useEffect(() => { if (initial) panel.current?.querySelector<HTMLHeadingElement>(`[data-ordinal="${initial.ordinal}"] h3`)?.focus(); }, [initial]);
-  async function search(event: FormEvent) {
-    event.preventDefault();
-    setLoading(true); setResult(undefined); setPrevious(undefined); setError(undefined);
-    try { setResult(await runtime.lookupDictionary(key)); }
-    catch (cause) { setError(dictionaryFailure(cause)); }
-    finally { setLoading(false); }
-  }
   return <div className="dictionary" ref={panel}>
-    <form onSubmit={(event) => { event.preventDefault(); beforeSearch(() => { void search(event); }); }}>
+    <form onSubmit={(event) => { event.preventDefault(); beforeSearch(() => { setPrevious(undefined); void tabs.search(key); }); }}>
       <label htmlFor="dictionary-key">{text.label}</label>
       <div className="dictionary-search"><input id="dictionary-key" lang="fr" value={key} required maxLength={512}
         autoCapitalize="none" autoCorrect="off" spellCheck={false} disabled={loading}
         onChange={(event) => setKey(event.target.value)} />
-      <button type="submit" disabled={loading}>{loading ? text.loading : text.search}</button></div>
+      <button type="submit" disabled={loading || tabs.catalogLoading || !!tabs.catalogError}>{loading ? text.loading : text.search}</button></div>
     </form>
     <p className="dictionary-hint">{text.hint}</p>
-    {loading && <p role="status">{text.loading}</p>}
-    {result === null && <p role="status">{text.preview}</p>}
-    {error && <div className="runtime-error" role="alert"><p>{text[error.code]}</p><details>
-      <summary>{text.details}</summary><p>{error.message}</p></details></div>}
-    {result && <><Collection result={result} runtime={runtime} text={notebookText} version={version}
+    <DictionaryTabStatus tabs={tabs} text={text} onSelect={(id) => beforeSearch(() => { void tabs.select(id); })}>
+    {result && <>
+      <DictionaryLemmas runtime={runtime} locale={locale} query={tabs.query} dictionaryId={tabs.selected} sourceVersion={result.sha256}
+        onChoose={(headword, view) => beforeSearch(() => { setKey(headword); setPrevious(view); void tabs.search(headword, tabs.selected); })} />
+      <Collection key={`${tabs.query}:${tabs.selected}`} result={result} runtime={runtime} text={notebookText} version={version}
       onCollect={onCollect} onOpen={onOpen} />
       <section className="dictionary-original" aria-label={notebookText.original}>
         <h3>{notebookText.original}</h3><DictionaryResults result={result} text={text}
           navigation={{ runtime, locale, previous, onOpen: onConjugation }} />
       </section></>}
+    </DictionaryTabStatus>
   </div>;
 }

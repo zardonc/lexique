@@ -12,6 +12,7 @@ LOCAL-DEV-ENV.md
 *.mdd
 !tools/mdict-probe/tests/fixtures/*.mdx
 !tools/mdict-probe/tests/fixtures/*.mdd
+!apps/desktop/e2e/fixtures/mdx/*.mdx
 *.onnx
 *.safetensors
 test-results/

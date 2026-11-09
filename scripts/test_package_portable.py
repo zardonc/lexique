@@ -2,6 +2,7 @@
 
 import hashlib
 import json
+import os
 from pathlib import Path
 import struct
 import tempfile
@@ -48,6 +49,8 @@ class PortableTests(unittest.TestCase):
         self.write("resources/tesseract-fra/licenses/tessdata-fast.txt", b"French OCR model license")
         self.write("resources/tesseract-fra/licenses/native/image.txt", b"native image license")
         self.write("resources/tesseract-fra/fra.traineddata", b"model embedded in the executable")
+        self.write("resources/mdictlib-0.2.8/README.md", b"fixed MDX parser sources")
+        self.write("resources/mdictlib-0.2.8/licenses/mdictlib-0.2.8.txt", b"MDX parser license")
         self.write("LICENSE", b"project license")
 
     def write(self, name, content):
@@ -82,6 +85,8 @@ class PortableTests(unittest.TestCase):
             self.assertEqual(zipped.read(prefix + "ocr-notices/README.md"), b"fixed offline OCR sources")
             self.assertEqual(zipped.read(prefix + "ocr-notices/licenses/tessdata-fast.txt"), b"French OCR model license")
             self.assertEqual(zipped.read(prefix + "ocr-notices/licenses/native/image.txt"), b"native image license")
+            self.assertEqual(zipped.read(prefix + "mdx-notices/README.md"), b"fixed MDX parser sources")
+            self.assertEqual(zipped.read(prefix + "mdx-notices/licenses/mdictlib-0.2.8.txt"), b"MDX parser license")
             self.assertFalse(any(path.endswith("fra.traineddata") for path in zipped.namelist()))
             self.assertEqual(zipped.read(prefix + "LICENSE"), b"project license")
             self.assertFalse(any("Lexique-data" in path for path in zipped.namelist()))
@@ -95,6 +100,18 @@ class PortableTests(unittest.TestCase):
             self.assertNotIn("Scoring and a full dictionary are not included", description)
         after = self.files()
         self.assertTrue(all(after[path] == content for path, content in before.items()))
+
+    def test_pre_1980_notice_is_packaged_without_changing_source(self):
+        notice = self.root / "resources/mdictlib-0.2.8/licenses/mdictlib-0.2.8.txt"
+        os.utime(notice, (0, 0))
+        timestamp = notice.stat().st_mtime_ns
+        result = package(self.root)
+        with zipfile.ZipFile(result["archive"]) as zipped:
+            path = self.name + "/mdx-notices/licenses/mdictlib-0.2.8.txt"
+            self.assertEqual(zipped.read(path), b"MDX parser license")
+            self.assertEqual(zipped.getinfo(path).date_time, (1980, 1, 1, 0, 0, 0))
+        self.assertEqual(notice.read_bytes(), b"MDX parser license")
+        self.assertEqual(notice.stat().st_mtime_ns, timestamp)
 
     def test_existing_delivery_archive_or_checksum_is_preserved(self):
         for suffix in ["/keep.txt", ".zip", ".zip.sha256"]:

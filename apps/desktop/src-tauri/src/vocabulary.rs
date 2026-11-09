@@ -238,6 +238,7 @@ fn snapshot(lookup: Lookup) -> Snapshot {
     let source = lookup.source;
     Snapshot {
         reference: Reference {
+            dictionary_id: lookup.dictionary_id,
             dictionary: source.title,
             lookup_key: lookup.entries[0].key.clone(),
             version: source.version,
@@ -259,13 +260,13 @@ fn snapshot(lookup: Lookup) -> Snapshot {
     }
 }
 
-#[tauri::command]
+#[tauri::command(rename_all = "snake_case")]
 pub async fn vocabulary_save(
     app: tauri::AppHandle,
-    path: State<'_, DatabasePath>,
     request: SaveRequest,
+    dictionary_id: Option<String>,
 ) -> Result<SaveResult, String> {
-    let path = DatabasePath(path.0.clone());
+    let path = DatabasePath(app.state::<DatabasePath>().0.clone());
     tauri::async_runtime::spawn_blocking(move || {
         lexique_storage::validate(&request).map_err(|error| error.to_string())?;
         let mut connection = open(&path)?;
@@ -276,15 +277,10 @@ pub async fn vocabulary_save(
             return Ok(result);
         }
         let content = if request.id.is_none() {
-            let resource = app
-                .path()
-                .resource_dir()
-                .map_err(|error| error.to_string())?
-                .join("dictionary/dictionary.sqlite3");
-            let lookup = lexique_dictionary::lookup(
-                &resource,
+            let lookup = crate::dictionaries::lookup_from_app(
+                &app,
                 &request.headword,
-                env!("LEXIQUE_DICTIONARY_SHA256"),
+                dictionary_id.as_deref().or(Some("builtin")),
             )
             .map_err(|error| error.to_string())?;
             if lookup.entries.is_empty() {

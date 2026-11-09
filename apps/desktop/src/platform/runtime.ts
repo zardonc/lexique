@@ -5,8 +5,8 @@ import { z } from 'zod';
 import { listen } from '@tauri-apps/api/event';
 import { recordSchema, saveRequestSchema, saveResultSchema, sortSchema } from './vocabulary';
 import type { SaveRequest, SaveResult, VocabularyRecord, VocabularySort } from './vocabulary';
-import { dictionarySchema } from './dictionary';
-import type { DictionaryLookup } from './dictionary';
+import { dictionarySchema, dictionaryQuery, dictionaryId, dictionaryCatalog, dictionaryOrder } from './dictionary';
+import type { DictionaryLookup, DictionaryCatalog } from './dictionary';
 import { frequencyQuery, frequencySchema } from './frequency';
 import type { FrequencyLookup } from './frequency';
 import { speechAudioSchema, speechPreferencesSchema, speechVoiceSchema } from './speech';
@@ -121,7 +121,10 @@ export type BatchStatus = z.infer<typeof batchSchema>;
 
 export interface RuntimeAdapter {
   readonly getStatus: () => Promise<RuntimeStatus | null>;
-  readonly lookupDictionary: (key: string) => Promise<DictionaryLookup | null>;
+  readonly lookupDictionary: (key: string, dictionaryId?: string) => Promise<DictionaryLookup | null>;
+  readonly dictionarySettings: (order?: readonly string[]) => Promise<DictionaryCatalog | null>;
+  readonly importDictionary: (file: File) => Promise<DictionaryCatalog | null>;
+  readonly removeDictionary: (id: string) => Promise<DictionaryCatalog | null>;
   readonly lookupFrequency: (keys: readonly string[]) => Promise<FrequencyLookup | null>;
   readonly onSelectionInput: (callback: (event: SelectionEvent) => void) => Promise<() => void>;
   readonly captureSelection: (text?: string) => Promise<void>;
@@ -136,7 +139,7 @@ export interface RuntimeAdapter {
   readonly conjugationBlockOrder: (order?: ConjugationOrder) => Promise<ConjugationOrder | null>;
   readonly findVocabulary: (headword: string) => Promise<VocabularyRecord | null>;
   readonly listVocabulary: (query: string, sort: VocabularySort) => Promise<readonly VocabularyRecord[] | null>;
-  readonly saveVocabulary: (request: SaveRequest) => Promise<SaveResult | null>;
+  readonly saveVocabulary: (request: SaveRequest, dictionaryId?: string) => Promise<SaveResult | null>;
   readonly vocabularySort: (sort?: VocabularySort) => Promise<VocabularySort | null>;
   readonly speechPreferences: (preferences?: SpeechPreferences) => Promise<SpeechPreferences | null>;
   readonly addReview: (id: number) => Promise<readonly ReviewCard[] | null>;
@@ -221,9 +224,29 @@ export const runtime: RuntimeAdapter = {
     if (!isTauri()) return null;
     return runtimeStatusSchema.parse(await invoke('runtime_status'));
   },
-  async lookupDictionary(key) {
+  async dictionarySettings(order) {
     if (!isTauri()) return null;
-    return dictionarySchema.parse(await invoke('dictionary_lookup', { key }));
+    const valid = order === undefined ? null : dictionaryOrder.parse(order);
+    const result = dictionaryCatalog.parse(await invoke('dictionary_settings', { order: valid }));
+    if (valid && result.some((item, index) => item.id !== valid[index])) throw new Error('Saved dictionary order differs from the request');
+    return result;
+  },
+  async importDictionary(file) {
+    if (!isTauri()) return null;
+    if (!/\.mdx$/i.test(file.name) || !file.size || file.size > 128 * 1024 * 1024) throw { code: 'limit', message: 'MDX: non-empty, at most 128 MiB' };
+    const name = btoa(Array.from(new TextEncoder().encode(file.name), (byte) => String.fromCharCode(byte)).join(''));
+    return dictionaryCatalog.parse(await invoke('dictionary_import', new Uint8Array(await file.arrayBuffer()), { headers: { 'x-lexique-dictionary-name': name } }));
+  },
+  async removeDictionary(id) {
+    if (!isTauri()) return null;
+    return dictionaryCatalog.parse(await invoke('dictionary_remove', { id: dictionaryId.parse(id) }));
+  },
+  async lookupDictionary(key, id) {
+    if (!isTauri()) return null;
+    if (!dictionaryQuery.safeParse(key).success) throw { code: 'invalid_query', message: 'Enter 1–512 UTF-8 bytes without control characters' };
+    const result = dictionarySchema.parse(await invoke('dictionary_lookup', { key, dictionary_id: id === undefined ? null : dictionaryId.parse(id) }));
+    if (id !== undefined && (result.dictionary_id ?? 'builtin') !== id) throw new Error('Dictionary response source differs from the request');
+    return result;
   },
   async lookupFrequency(keys) {
     if (!isTauri()) return null;
@@ -262,9 +285,9 @@ export const runtime: RuntimeAdapter = {
     if (!isTauri()) return null;
     return recordSchema.array().readonly().parse(await invoke('vocabulary_list', { query, sort: sortSchema.parse(sort) }));
   },
-  async saveVocabulary(request) {
+  async saveVocabulary(request, id) {
     if (!isTauri()) return null;
-    return saveResultSchema.parse(await invoke('vocabulary_save', { request: saveRequestSchema.parse(request) }));
+    return saveResultSchema.parse(await invoke('vocabulary_save', { request: saveRequestSchema.parse(request), dictionary_id: id === undefined ? null : dictionaryId.parse(id) }));
   },
   async vocabularySort(sort) {
     if (!isTauri()) return null;

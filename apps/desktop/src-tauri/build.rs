@@ -97,6 +97,9 @@ fn main() {
         tauri_build::AppManifest::new().commands(&[
             "runtime_status",
             "dictionary_lookup",
+            "dictionary_settings",
+            "dictionary_import",
+            "dictionary_remove",
             "frequency_lookup",
             "selection_capture",
             "selection_cancel",
