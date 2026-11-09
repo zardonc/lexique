@@ -15,6 +15,8 @@ Windows x64，AMD Ryzen 9 8945HS，8 核／16 线程。沿用 Supertonic 3 int8 
 
 运行时基准保留六位小数。完整输入、帧数、时长和生成耗时见 [calibration.json](calibration.json)，测量入口见 [calibrate.py](calibrate.py)。[试听页](listen.html)在同一份正常合成音频上播放六个端点并开启音高保持；六个 Ogg 文件均通过编码时长检查。
 
+2026-11-08，用户试听女声／男声的 80／180／240 WPM 后确认：“Clear and natural at all speeds”。这六个端点的清晰度与自然音高通过人工听感确认。
+
 复测从仓库根目录执行，输出目录必须不存在：
 
 ```powershell
@@ -60,6 +62,5 @@ node e2e/native-wpm-check.mjs ../../target/pr23-native-speech-20261101 ../../tar
 
 ## 限制
 
-- 两声线在 80／180／240 的清晰度与自然音高仍待人工试听；开关与时间推进不替代听感。
 - WPM 是完整句子基准的近似换算，单个短词不保证精确达到目标词数。
 - 本次未重新执行 #24 的独立强关 fixture，也未验收其他平台、干净机器、Lite 下载或八种正式发行物。例句朗读入口仍未接入。
