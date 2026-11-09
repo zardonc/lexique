@@ -51,7 +51,7 @@ nav button[aria-current='page'] { font-weight: 600; }
 .workspace { min-width: 0; }
 .topbar { display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 76px; padding: 16px 40px; border-bottom: 1px solid var(--line); }
 .preview-label { color: var(--muted); font-size: 12px; }
-.preferences { display: flex; gap: 10px; }
+.preferences { display: flex; flex-wrap: wrap; justify-content: flex-end; min-width: 0; gap: 10px; }
 select { max-width: 128px; min-height: 36px; padding: 6px 8px; border: 1px solid var(--line); border-radius: 4px; background: var(--surface); font-size: 12px; }
 main { max-width: 1120px; padding: 34px 40px 24px; background: var(--paper); }
 .eyebrow { color: var(--muted); font-size: 12px; letter-spacing: 1px; margin: 0 0 8px; }
@@ -155,3 +155,8 @@ dialog.review-card { width: min(480px, 90vw); overflow-wrap: anywhere; }
   h1 { font-size: 25px; }
   .intro { margin-bottom: 24px; }
 }
+.lookup-input label { display: block; margin-bottom: .4rem; }
+.lookup-input textarea { display: block; width: 100%; }
+.selection-settings { border-top: 1px solid var(--line); margin-top: 20px; padding-top: 20px; overflow-wrap: anywhere; }
+.selection-settings label { display: grid; gap: 8px; margin-bottom: 12px; }
+.selection-settings input { width: 100%; min-width: 0; }

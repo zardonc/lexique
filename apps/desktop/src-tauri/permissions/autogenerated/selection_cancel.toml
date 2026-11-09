@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-selection-cancel"
+description = "Enables the selection_cancel command without any pre-configured scope."
+commands.allow = ["selection_cancel"]
+
+[[permission]]
+identifier = "deny-selection-cancel"
+description = "Denies the selection_cancel command without any pre-configured scope."
+commands.deny = ["selection_cancel"]

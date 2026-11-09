@@ -70,7 +70,7 @@ test('invalid saved preferences stay visible as an error and can be reloaded', a
   await page.getByRole('button', { name: '设置', exact: true }).click();
   await expect(page.getByRole('alert')).toContainText('语音偏好操作失败');
   await expect(page.getByRole('button', { name: '保存语音偏好' })).toBeDisabled();
-  await page.getByRole('button', { name: '重新读取' }).click();
+  await page.locator('.speech-settings').getByRole('button', { name: '重新读取' }).click();
   await expect(page.getByLabel('法语声线')).toHaveValue('male');
   await expect(page.getByLabel('朗读语速')).toBeEnabled();
 });

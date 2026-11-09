@@ -11,7 +11,7 @@ import assert from 'node:assert/strict';
 
 export async function native24Fixture(packagePath, binaryPath, destinationPath) {
   const destination = resolve(destinationPath);
-  assert.ok(['issue-24', 'issue-56', 'issue-57'].some((issue) => destination.startsWith(resolve('../../target/' + issue) + '\\')));
+  assert.ok(['issue-24', 'issue-56', 'issue-57', 'issue-58', 'issue-59'].some((issue) => destination.startsWith(resolve('../../target/' + issue) + '\\')));
   await mkdir(destination);
   // Reused test packages also contain old results. Only copy distribution resources:
   // a failed run must never inherit a successful report or someone else's data.
@@ -36,10 +36,10 @@ export async function native24Fixture(packagePath, binaryPath, destinationPath) 
     if (child?.pid) spawnSync('taskkill.exe', ['/PID', String(child.pid), '/T', '/F'], { windowsHide: true });
     process.stderr.write('Native execution exceeded the hard 60-second limit\n'); process.exit(1);
   }, 60_000);
-  async function start() {
+  async function start(additionalBrowserArguments = '') {
     stopping = false;
     child = spawn(join(destination, 'Lexique.exe'), [], { cwd: destination, windowsHide: true,
-      env: { ...process.env, WEBVIEW2_ADDITIONAL_BROWSER_ARGUMENTS: `--disable-gpu --autoplay-policy=no-user-gesture-required --remote-debugging-port=${port}` } });
+      env: { ...process.env, WEBVIEW2_ADDITIONAL_BROWSER_ARGUMENTS: `--disable-gpu --autoplay-policy=no-user-gesture-required --remote-debugging-port=${port} ${additionalBrowserArguments}` } });
     diagnostic('host-start', { pid: child.pid });
     child.stderr.on('data', (bytes) => diagnostic('host-stderr', { message: bytes.toString().slice(0, 4096) }));
     child.on('error', (error) => { diagnostic('host-error', { message: String(error) }); process.stderr.write(String(error)); });
@@ -80,5 +80,5 @@ export async function native24Fixture(packagePath, binaryPath, destinationPath) 
     assert.equal(result.status, 0, result.stderr);
     return JSON.parse(result.stdout);
   }
-  return { destination, start, stop, workerPids, finish: async () => { clearTimeout(timer); await stop(); } };
+  return { destination, start, stop, workerPids, hostPid: () => child?.pid, finish: async () => { clearTimeout(timer); await stop(); } };
 }

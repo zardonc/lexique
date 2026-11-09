@@ -29,6 +29,8 @@ export function useLookupNavigation(beforeLeave: (action: () => void) => void) {
     changePage: (next: number) => open(next, () => setDictionary(undefined)),
     openConjugation: (view: ConjugationView) => open(1, () => setConjugation(view)),
     openDictionary: (view: DictionaryView) => open(0, () => setDictionary({ ...view, conjugation })),
+    openDictionaryResult: (view: DictionaryView) => open(0, () => setDictionary(view)),
+    openInput: (action: () => void) => open(5, action),
   };
 }
 

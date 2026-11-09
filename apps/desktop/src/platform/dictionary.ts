@@ -1,5 +1,8 @@
 import { z } from 'zod';
 
+export const dictionaryQuery = z.string().min(1).refine((value) =>
+  new TextEncoder().encode(value).length <= 512 && !/\p{Cc}/u.test(value));
+
 export interface DictionarySense {
   readonly translations: readonly string[];
   readonly definitions: readonly string[];

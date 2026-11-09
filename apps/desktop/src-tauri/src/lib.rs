@@ -8,6 +8,8 @@ use tauri::{Emitter, Manager, State};
 mod audio_maintenance;
 mod conjugation;
 mod review_window;
+mod selection;
+mod selection_shortcut;
 use conjugation::{conjugation_block_order, conjugation_lookup, conjugation_preferences};
 mod speech_cache;
 mod speech_tasks;
@@ -102,6 +104,17 @@ async fn runtime_status(
 
 pub fn run() {
     tauri::Builder::default()
+        .plugin(
+            tauri_plugin_global_shortcut::Builder::new()
+                .with_handler(|app, _, event| {
+                    if event.state() == tauri_plugin_global_shortcut::ShortcutState::Pressed {
+                        if let Err(error) = selection::start(app, None) {
+                            eprintln!("{error}");
+                        }
+                    }
+                })
+                .build(),
+        )
         .setup(|app| {
             #[cfg(target_os = "macos")]
             vocabulary::coordinate_quit(app)?;
@@ -124,6 +137,8 @@ pub fn run() {
                 database_path.clone(),
             ));
             app.manage(DatabasePath(database_path));
+            app.manage(selection::SelectionState::default());
+            selection_shortcut::setup(app.handle());
             app.manage(RuntimeStatus {
                 version: app.package_info().version.to_string(),
                 schema_version,
@@ -149,6 +164,9 @@ pub fn run() {
             runtime_status,
             dictionary_lookup,
             frequency_lookup,
+            selection::selection_capture,
+            selection::selection_cancel,
+            selection_shortcut::selection_shortcut,
             conjugation_lookup,
             conjugation_preferences,
             conjugation_block_order,

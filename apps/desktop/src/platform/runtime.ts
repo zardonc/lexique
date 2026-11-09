@@ -11,6 +11,8 @@ import { frequencyQuery, frequencySchema } from './frequency';
 import type { FrequencyLookup } from './frequency';
 import { speechAudioSchema, speechPreferencesSchema, speechVoiceSchema } from './speech';
 import type { SpeechAudio, SpeechPreferences } from './speech';
+import { readSelectionEvent, selectionText, shortcutStatusSchema, shortcutText } from './selection';
+import type { SelectionEvent, ShortcutStatus } from './selection';
 
 const runtimeStatusSchema = z.object({
   version: z.string().min(1),
@@ -120,6 +122,10 @@ export interface RuntimeAdapter {
   readonly getStatus: () => Promise<RuntimeStatus | null>;
   readonly lookupDictionary: (key: string) => Promise<DictionaryLookup | null>;
   readonly lookupFrequency: (keys: readonly string[]) => Promise<FrequencyLookup | null>;
+  readonly onSelectionInput: (callback: (event: SelectionEvent) => void) => Promise<() => void>;
+  readonly captureSelection: (text?: string) => Promise<void>;
+  readonly cancelSelection: () => Promise<void>;
+  readonly selectionShortcut: (shortcut?: string) => Promise<ShortcutStatus | null>;
   readonly lookupConjugation: (key: string) => Promise<ConjugationLookup | null>;
   readonly conjugationPreferences: (preferences?: ConjugationPreferences) => Promise<ConjugationPreferences | null>;
   readonly conjugationBlockOrder: (order?: ConjugationOrder) => Promise<ConjugationOrder | null>;
@@ -152,6 +158,22 @@ export interface RuntimeAdapter {
 }
 
 export const runtime: RuntimeAdapter = {
+  async onSelectionInput(callback) {
+    if (!isTauri()) return () => {};
+    return listen('selection-input', (event) => callback(readSelectionEvent(event.payload)));
+  },
+  async captureSelection(text) {
+    if (!isTauri()) throw new Error('Selection capture is available in the desktop app');
+    await invoke('selection_capture', { text: text === undefined ? null : selectionText.parse(text) });
+  },
+  async cancelSelection() { if (isTauri()) await invoke('selection_cancel'); },
+  async selectionShortcut(shortcut) {
+    if (!isTauri()) return null;
+    const valid = shortcut === undefined ? null : shortcutText.parse(shortcut);
+    const result = shortcutStatusSchema.parse(await invoke('selection_shortcut', { shortcut: valid }));
+    if (valid !== null && result.shortcut !== valid) throw new Error('Saved shortcut differs from the request');
+    return result;
+  },
   async addReviewBatch(request) {
     if (!isTauri()) return null;
     const valid = batchRequestSchema.parse(request);

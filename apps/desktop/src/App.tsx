@@ -17,6 +17,10 @@ import { useBatchReview } from './use-batch-review';
 import { BatchProgress } from './batch-progress';
 import { ConjugationPanel } from './conjugation';
 import { useLookupNavigation } from './conjugation-navigation';
+import { LookupInputPanel } from './lookup-input';
+import { useSelectionInput } from './use-selection-input';
+import { SelectionSettings } from './selection-settings';
+import { lookupInputMessages } from './lookup-input-content';
 
 const themes: readonly Theme[] = ['white', 'sepia', 'dark'];
 const locales: readonly Locale[] = ['zh', 'en', 'fr'];
@@ -29,10 +33,13 @@ interface HeaderProps {
   readonly theme: Theme;
   readonly onLocale: (locale: Locale) => void;
   readonly onTheme: (theme: Theme) => void;
+  readonly onLocal: () => void;
+  readonly selectionError: string;
 }
 
-function Header({ text, locale, theme, onLocale, onTheme }: HeaderProps) {
+function Header({ text, locale, theme, onLocale, onTheme, onLocal, selectionError }: HeaderProps) {
   return <header className="topbar"><span className="preview-label">{text.preview}</span><div className="preferences">
+    <button type="button" onMouseDown={(event) => event.preventDefault()} onClick={onLocal}>{lookupInputMessages[locale].local}</button>
     <select aria-label={text.language} value={locale} onChange={(event) => {
       const value = locales.find((candidate) => candidate === event.target.value);
       if (value) onLocale(value);
@@ -41,7 +48,7 @@ function Header({ text, locale, theme, onLocale, onTheme }: HeaderProps) {
       const value = themes.find((candidate) => candidate === event.target.value);
       if (value) onTheme(value);
     }}>{themes.map((value, index) => <option key={value} value={value}>{text.themes[index]}</option>)}</select>
-  </div></header>;
+  </div>{selectionError && <p role="alert">{selectionError}</p>}</header>;
 }
 
 function PageIntroduction({ page, text }: { readonly page: number; readonly text: Messages }) {
@@ -65,11 +72,12 @@ export function App({ runtime }: { readonly runtime: RuntimeAdapter }) {
   const guard = useLeaveGuard(runtime, notebook, false);
   const navigation = useLookupNavigation((action) => guard.request(() => { notebook.clear(); action(); }));
   const page = navigation.page;
+  const selection = useSelectionInput(runtime, page, navigation.openInput);
   useEffect(() => { document.documentElement.lang = languageTags[locale]; }, [locale]);
   return <div className="app" data-theme={theme} data-collapsed={collapsed}>
     <a className="skip-link" href="#main-content">{text.skip}</a>
     <Navigation text={text} selected={page} collapsed={collapsed} disabled={false} onSelect={navigation.changePage} onToggle={() => setCollapsed((value) => !value)} />
-    <div className="workspace"><Header text={text} locale={locale} theme={theme} onLocale={setLocale} onTheme={setTheme} />
+    <div className="workspace"><Header text={text} locale={locale} theme={theme} onLocale={setLocale} onTheme={setTheme} onLocal={selection.local} selectionError={selection.error} />
       <main id="main-content" tabIndex={-1}>
         <p className="eyebrow">{text.eyebrow}</p><h1 id="main-page-heading">{text.modules[page]}</h1>
         <section className="page-content" aria-labelledby={pageTitleId(page)}>
@@ -81,8 +89,11 @@ export function App({ runtime }: { readonly runtime: RuntimeAdapter }) {
             beforeSearch={(action) => guard.request(() => { notebook.clear(); action(); })} /> : page === 1 ?
             <ConjugationPanel runtime={runtime} locale={locale} initial={navigation.conjugation} onChange={navigation.setConjugation} onDictionary={navigation.openDictionary} /> : page === 2 ?
             <NotebookPanel runtime={runtime} version={notebook.version + reviewVersion} text={notebookText} batch={batch}
-              onOpen={(record) => guard.request(() => notebook.open(record))} /> : page === 3 ? <ReviewQueuePanel runtime={runtime} locale={locale} text={notebookText} /> : page === 7 ?
-            <><ReviewSettingsPanel runtime={runtime} locale={locale} /><SpeechSettings runtime={runtime} locale={locale} /></> :
+              onOpen={(record) => guard.request(() => notebook.open(record))} /> : page === 3 ? <ReviewQueuePanel runtime={runtime} locale={locale} text={notebookText} /> : page === 5 ?
+            <LookupInputPanel runtime={runtime} locale={locale} selection={selection.input} onCancel={selection.cancel}
+              onDictionary={navigation.openDictionaryResult} /> : page === 7 ?
+            <><ReviewSettingsPanel runtime={runtime} locale={locale} /><SpeechSettings runtime={runtime} locale={locale} />
+              <SelectionSettings runtime={runtime} locale={locale} /></> :
             <div className="empty-state"><p>{text.pending[page]}</p><small>{text.scaffold}</small></div>}
           <VocabularyEditor notebook={notebook} text={notebookText} runtime={runtime} onReviewChanged={reviewChanged} viewExisting={() => {
             if (notebook.existing) { const record = notebook.existing; guard.request(() => notebook.open(record)); }
