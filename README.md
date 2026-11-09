@@ -4,7 +4,7 @@
 
 基于 2026-10-24 的需求基线与最新原型调整：Tauri 2、React、TypeScript、Rust、SQLite。第一阶段面向 Windows 11 / macOS 的 x64 与 ARM64，第二阶段为包含实际 WASM 的自部署复习应用。
 
-2026-11-08：80–240 WPM 共用朗读速度和 Lexique 3.83 生词词频标记已接入并通过 Windows x64 检查，见 [#56](docs/evidence/issue-56/README.md)与 [#57](docs/evidence/issue-57/README.md)。继续使用 Supertonic 3 CPU；其他 TTS 模型测试已停止。下一步为系统选词 → 屏幕 OCR → #9 与剩余离线核心，再到 M4 服务／文件同步、M5 八种发行物及 M6 浏览器复习，见[交付计划](docs/lookup-notes-speech-plan.md)和[开发路线](docs/roadmap.md)。用户报告干净系统测试通过；其他平台测试按用户要求暂缓，正式发行门槛继续适用。
+2026-11-09：共用 WPM、Lexique 3.83 词频、系统取词和屏幕 OCR 已接入并通过 Windows x64 检查，见 [#56](docs/evidence/issue-56/README.md)、[#57](docs/evidence/issue-57/README.md)、[#58](docs/evidence/issue-58/README.md)和 [#59](docs/evidence/issue-59/README.md)。取词与 OCR 使用独立自定义快捷键，结果进入翻译原文并保留前 5,000 字；框选后自动离线识别。继续使用 Supertonic 3 CPU。后续为 #9 与剩余离线核心，再到 M4／M5／M6，见[开发路线](docs/roadmap.md)。其他平台测试按用户要求暂缓，正式发行门槛继续适用。
 
 ## 开始开发
 

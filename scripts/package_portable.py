@@ -71,6 +71,8 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
     shutil.copy2(dictionary, output / "dictionary/dictionary.sqlite3")
     shutil.copytree(conjugation, output / "conjugation")
     shutil.copytree(frequency, output / "frequency")
+    shutil.copytree(root / "resources/tesseract-fra/licenses", output / "ocr-notices/licenses")
+    shutil.copy2(root / "resources/tesseract-fra/README.md", output / "ocr-notices/README.md")
     shutil.copy2(root / "LICENSE", output / "LICENSE")
     (output / "README.txt").write_text(
         f"Lexique {config['version']} - Windows 11 {architecture.upper()} portable development sample\n\n"
@@ -91,6 +93,10 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
         "This sample provides FreeDict fra-zho lookup and M1 vocabulary notes with explicit save,\n"
         "search, sorting and restart recovery. Saved words can be added to two review cards;\n"
         "review scoring and card progress survive restart. A full dictionary is not included.\n"
+        "Selection shortcut: Ctrl+Alt+Shift+D. Screen OCR shortcut: Ctrl+Alt+Shift+O.\n"
+        "Both shortcuts can be changed in Settings. Selection and OCR enter the Translation\n"
+        "input, retaining the first 5,000 Unicode characters; dictionary lookup is explicit.\n"
+        "Offline French OCR runtime and model are embedded. Licenses and sources: ocr-notices/.\n"
         "Conjugation uses the compact format-6 resource with 23 ordinary/pronominal reference blocks.\n"
         "Query normalization, three color modes, saved block order and dictionary navigation are included.\n"
         "Keep the format-6 resource with its matching rebuilt reader when updating.\n"

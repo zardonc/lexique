@@ -39,13 +39,21 @@ impl SelectionError {
 
 #[derive(Clone, Serialize)]
 #[serde(tag = "kind", rename_all = "snake_case")]
-enum SelectionEvent {
+pub enum SelectionEvent {
     Pending {
+        request: u64,
+    },
+    Cancelled {
         request: u64,
     },
     Captured {
         request: u64,
         text: String,
+    },
+    Image {
+        request: u64,
+        image: crate::ocr::OcrImage,
+        recognize: bool,
     },
     Failed {
         request: u64,
@@ -62,27 +70,49 @@ pub fn validate(text: String) -> Result<String, SelectionError> {
     Ok(text)
 }
 
-fn finish(
-    app: &tauri::AppHandle,
-    request: u64,
-    result: Result<String, SelectionError>,
-) -> Result<(), String> {
+pub fn current(app: &tauri::AppHandle, request: u64) -> bool {
+    !app.state::<crate::vocabulary::CloseAuthorization>()
+        .permits_exit()
+        && app
+            .state::<SelectionState>()
+            .sequence
+            .load(Ordering::SeqCst)
+            == request
+}
+
+pub fn begin(app: &tauri::AppHandle) -> Result<u64, String> {
     if app
+        .state::<crate::vocabulary::CloseAuthorization>()
+        .permits_exit()
+    {
+        return Err("Application is closing".into());
+    }
+    crate::ocr_capture::clear(app)?;
+    let request = app
         .state::<SelectionState>()
         .sequence
-        .load(Ordering::SeqCst)
-        != request
-    {
+        .fetch_add(1, Ordering::SeqCst)
+        + 1;
+    app.emit_to(
+        "main",
+        "selection-input",
+        SelectionEvent::Pending { request },
+    )
+    .map_err(|error| error.to_string())?;
+    Ok(request)
+}
+
+pub fn deliver(app: &tauri::AppHandle, event: SelectionEvent) -> Result<(), String> {
+    let request = match &event {
+        SelectionEvent::Pending { request }
+        | SelectionEvent::Cancelled { request }
+        | SelectionEvent::Captured { request, .. }
+        | SelectionEvent::Image { request, .. }
+        | SelectionEvent::Failed { request, .. } => *request,
+    };
+    if !current(app, request) {
         return Ok(());
     }
-    let event = match result {
-        Ok(text) => SelectionEvent::Captured { request, text },
-        Err(error) => SelectionEvent::Failed {
-            request,
-            code: error.code,
-            message: error.message,
-        },
-    };
     let window = app
         .get_webview_window("main")
         .ok_or("Main window is unavailable")?;
@@ -95,19 +125,29 @@ fn finish(
                 .map_err(|error| format!("Could not focus input: {error}"))
         });
     app.emit_to("main", "selection-input", event)
-        .map_err(|error| format!("Could not deliver selection: {error}"))?;
+        .map_err(|error| format!("Could not deliver input: {error}"))?;
     focus
+}
+
+pub fn finish(
+    app: &tauri::AppHandle,
+    request: u64,
+    result: Result<String, SelectionError>,
+) -> Result<(), String> {
+    let event = match result {
+        Ok(text) => SelectionEvent::Captured { request, text },
+        Err(error) => SelectionEvent::Failed {
+            request,
+            code: error.code,
+            message: error.message,
+        },
+    };
+    deliver(app, event)
 }
 
 pub fn start(app: &tauri::AppHandle, text: Option<String>) -> Result<(), String> {
     let state = app.state::<SelectionState>();
-    let request = state.sequence.fetch_add(1, Ordering::SeqCst) + 1;
-    app.emit_to(
-        "main",
-        "selection-input",
-        SelectionEvent::Pending { request },
-    )
-    .map_err(|error| error.to_string())?;
+    let request = begin(app)?;
     if let Some(text) = text {
         return finish(app, request, validate(text));
     }
@@ -170,8 +210,20 @@ pub fn selection_capture(app: tauri::AppHandle, text: Option<String>) -> Result<
 }
 
 #[tauri::command]
-pub fn selection_cancel(state: tauri::State<'_, SelectionState>) {
-    state.sequence.fetch_add(1, Ordering::SeqCst);
+pub fn selection_cancel(app: tauri::AppHandle) -> Result<(), String> {
+    app.state::<SelectionState>()
+        .sequence
+        .fetch_add(1, Ordering::SeqCst);
+    crate::ocr_capture::clear(&app)
+}
+
+pub fn invalidate_request(app: &tauri::AppHandle, request: u64) {
+    let _ = app.state::<SelectionState>().sequence.compare_exchange(
+        request,
+        request + 1,
+        Ordering::SeqCst,
+        Ordering::SeqCst,
+    );
 }
 
 #[cfg(test)]

@@ -2,12 +2,14 @@ import { useEffect, useRef, useState } from 'react';
 import type { RuntimeAdapter } from './platform/runtime';
 import type { SelectionEvent } from './platform/selection';
 import { errorMessage } from './platform/vocabulary';
+import type { Locale } from './content';
 
-export function useSelectionInput(runtime: RuntimeAdapter, page: number, open: (action: () => void) => void) {
+export function useSelectionInput(runtime: RuntimeAdapter, { page, locale }: { readonly page: number; readonly locale: Locale }, open: (action: () => void) => void) {
   const [input, setInput] = useState<SelectionEvent>();
   const [error, setError] = useState('');
   const latest = useRef<SelectionEvent | undefined>(undefined);
   const accepted = useRef(0), ignored = useRef(0), beforeOpen = useRef(open);
+  useEffect(() => { void runtime.setCaptureLocale(locale).catch((cause: unknown) => setError(errorMessage(cause))); }, [runtime, locale]);
   useEffect(() => { beforeOpen.current = open; });
   function cancel() {
     ignored.current = latest.current?.request ?? ignored.current;

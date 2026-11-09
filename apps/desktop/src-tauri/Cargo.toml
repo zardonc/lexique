@@ -24,6 +24,11 @@ cap-std = "4.0.3"
 cap-primitives = "4.0.3"
 cap-fs-ext = "=4.0.3"
 tauri-plugin-global-shortcut = "=2.4.1"
+image = { version = "=0.25.10", default-features = false, features = ["png", "jpeg"] }
+base64 = "=0.23.1"
+
+[target.'cfg(any(windows, target_os = "macos"))'.dependencies]
+xcap = { version = "=0.9.9", default-features = false }
 
 [target.'cfg(windows)'.dependencies]
 webview2-com = "=0.39.1"

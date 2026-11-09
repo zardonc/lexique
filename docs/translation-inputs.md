@@ -1,6 +1,6 @@
 # 翻译模块的选中文本与 OCR 查词
 
-日期：2026-11-08。系统取词已完成 Windows x64 检查，见 [#58 证据](evidence/issue-58/README.md)；屏幕 OCR 继续接入。用户已明确首期包含其他应用选词及屏幕框选 OCR；它们属于 M3 离线输入能力，在线翻译服务仍按 M4 独立接入。正式跟踪见[后续计划](lookup-notes-speech-plan.md)与[总规格 #1](https://github.com/zardonc/lexique/issues/1)。
+日期：2026-11-09。系统取词与屏幕 OCR 已完成 Windows x64 检查，见 [#58](evidence/issue-58/README.md)和 [#59](evidence/issue-59/README.md)。它们属于 M3 离线输入能力，在线翻译服务仍按 M4 独立接入。其他平台执行按用户要求暂缓，正式跟踪见[后续计划](lookup-notes-speech-plan.md)与[总规格 #1](https://github.com/zardonc/lexique/issues/1)。
 
 ## 选中文本查词
 
@@ -9,28 +9,28 @@
 - 首期桌面范围为 Windows 11／macOS 的 x64／ARM64；其他应用选词是必交付范围。支持矩阵至少覆盖浏览器网页、文本编辑器及可选文字 PDF，并逐平台列出实测应用与版本。
 - 获取选择必须发生在切换焦点前。优先使用系统提供的选中文字能力；无法获取、未选中文字、权限被拒及来源应用不支持时分别显示真实状态，提供主动粘贴或 OCR 入口。
 - 保留重音、大小写、撇号、连字及原始拼写；翻译输入和取词结果最多保留前 5,000 个 Unicode 字符，超过部分截断。词典查询仍沿用非空、无控制字符及 1–512 UTF-8 字节边界；可在原文中选取单词或短语查询。
-- 系统取词默认 `Ctrl+Alt+Shift+D`；屏幕 OCR 的默认键位由接入规格列明，两者均允许更改。注册冲突须显示并允许更换，不阻止其他查词入口；已保存的自定义键位保留。
+- 系统取词默认 `Ctrl+Alt+Shift+D`，屏幕 OCR 默认 `Ctrl+Alt+Shift+O`，两者均可在设置中独立更改并跨重启保存。注册冲突显示错误并保留此前注册，不阻止其他查词入口。
 - 查词只读取资源；保存生词继续经过既有明确收藏与保存流程。打开结果、切换页面及迟到响应均沿用未保存笔记保护和当前查询生命周期。
 
 ## 屏幕区域 OCR 查词
 
-用户主动触发“截图查词”，框选屏幕区域后预览截图，执行本地 OCR，核对或修改识别文字，再选中其中的词语查词。图片文件导入及粘贴截图复用同一识别与核对流程。
+用户按截图快捷键或点击“截图查词”，在冻结的显示器上框选区域；选定后自动返回翻译模块、保留截图预览并启动本地 OCR。识别文字进入可编辑原文框，用户核对后再明确选择词语查询。图片文件导入及粘贴截图保留预览，由用户点击“识别文字”，随后复用同一输入与核对流程。
 
 - 首期必须包含其他应用上方的屏幕区域框选，不能以图片导入替代。验证多显示器、不同缩放比例、区域坐标与取消框选。
 - 默认识别法语，保留法语重音、撇号与换行；识别文本可编辑，未识别到文字及明显不确定的结果可纠正。整段 OCR 结果不自动转换成生词记录。
 - 默认离线、CPU 识别；已准入的运行库和法语语言数据随完整版及 Lite 提供，备齐文件后首次禁网可用。OCR 不依赖翻译／AI 服务账户；用户主动发送文本进行在线翻译时使用 M4 的服务与数据去向规则。
-- 图片解码、识别输入及结果长度在接入规格中给出真实屏幕样本支持的上限，并覆盖损坏图片、过大输入、资源缺失及识别失败；不以空文本表示识别成功。
+- 仅接收 PNG／JPEG；图片最多 16 MiB、4,096×4,096，原生入口先解码校验。各显示器快照最多 8,192×8,192、合计最多 64 百万像素；框选结果沿用图片上限。识别文字保留前 5,000 个 Unicode 字符，多余部分截断。损坏／超限图片、缺资源、识别失败、空文字及低置信度各有可见状态与重试／纠正入口。
 - 可取消识别和重试；离开页面或开始新请求后，旧请求不得覆盖当前输入。截图及识别原文只用于本次操作，不自动写入日志、笔记或云同步。
 
 ## 平台与资源准入
 
-系统选词跟踪于 [#58](https://github.com/zardonc/lexique/issues/58)，OCR 跟踪于 [#59](https://github.com/zardonc/lexique/issues/59)，均为 `needs-triage`；#59 原生依赖 #58，先形成平台／资源规格，再进入实现。两票均为 #1 的子票。
+系统选词跟踪于 [#58](https://github.com/zardonc/lexique/issues/58)，OCR 跟踪于 [#59](https://github.com/zardonc/lexique/issues/59)；#59 复用 #58 的原文、请求编号与明确查词链路，两票均为 #1 的子票。Windows 已验收网页／RichEdit 系统选区和双屏 OCR；WebView2 PDF 查看器不提供可读取的 TextPattern 选择，可改用主动粘贴或 OCR。
 
 Windows 的选择获取、快捷键和区域截屏通过桌面平台边界接入；macOS 单独接入并验收辅助功能／屏幕录制权限的授权、拒绝、撤销与恢复。只在用户触发对应操作时请求所需权限。受保护内容和无法提供选择的应用须列明实际限制。
 
 参考维护中的 [STranslate](https://github.com/STranslate/STranslate)（MIT；2026-11-06 有更新）和 [Easydict](https://github.com/tisfeng/Easydict)（GPL-3.0；2026-11-08 有更新）的系统选词、截图与焦点交互设计。参考日期为 2026-11-08；Easydict 的设计参考不改变本项目 MIT 许可，代码复用仍须单独核对许可。
 
-OCR 首选验证 [Tesseract](https://github.com/tesseract-ocr/tesseract) 与 [tessdata_fast](https://github.com/tesseract-ocr/tessdata_fast) 的法语 `fra` 数据；两者上游均列 Apache-2.0。[Tesseract.js](https://github.com/naptha/tesseract.js) 提供 Apache-2.0 的浏览器／WASM 包装，可作为现有 TypeScript 宿主的接入参考。实际绑定方式、固定版本、完整法语数据、通知、CPU 成本及四目标随包执行仍须按[资源准入清单](development-readiness.md)验收；本次未新增依赖或资源。
+固定 Tesseract.js／core 7.0.0、tessdata_fast 法语 `fra` 与 XCap 0.9.9，来源、完整语言数据及法律原文见[资源目录](../resources/tesseract-fra/README.md)。六份 WASM 核心随程序提供，由上游能力探测选择；本地 worker、模型与解码边界已在实际 Windows WebView2 禁网检查。平台专属执行和 M5 完整发行仍按[资源准入清单](development-readiness.md)分别验收。
 
 ## 验收边界
 

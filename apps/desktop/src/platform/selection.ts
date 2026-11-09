@@ -2,11 +2,16 @@ import { z } from 'zod';
 
 const request = z.number().int().positive().safe();
 export const selectionText = z.string().transform((value) => Array.from(value).slice(0, 5_000).join(''));
+export const ocrImageSchema = z.object({ width: z.number().int().min(1).max(4096), height: z.number().int().min(1).max(4096),
+  data_url: z.string().max(22_369_650).regex(/^data:image\/png;base64,[A-Za-z0-9+/]+={0,2}$/) }).strict().readonly();
+export type OcrImage = z.infer<typeof ocrImageSchema>;
 export const selectionEventSchema = z.discriminatedUnion('kind', [
   z.object({ kind: z.literal('pending'), request }).strict(),
+  z.object({ kind: z.literal('cancelled'), request }).strict(),
   z.object({ kind: z.literal('captured'), request, text: selectionText }).strict(),
+  z.object({ kind: z.literal('image'), request, image: ocrImageSchema, recognize: z.boolean().default(false) }).strict(),
   z.object({ kind: z.literal('failed'), request,
-    code: z.enum(['no_selection', 'unsupported', 'permission', 'read_failed', 'busy', 'invalid_response']),
+    code: z.enum(['no_selection', 'unsupported', 'permission', 'read_failed', 'busy', 'invalid_response', 'image_invalid', 'image_limit', 'capture_failed', 'screen_permission']),
     message: z.string().max(2000) }).strict(),
 ]);
 export type SelectionEvent = z.infer<typeof selectionEventSchema>;

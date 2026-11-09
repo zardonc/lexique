@@ -72,7 +72,7 @@ export function App({ runtime }: { readonly runtime: RuntimeAdapter }) {
   const guard = useLeaveGuard(runtime, notebook, false);
   const navigation = useLookupNavigation((action) => guard.request(() => { notebook.clear(); action(); }));
   const page = navigation.page;
-  const selection = useSelectionInput(runtime, page, navigation.openInput);
+  const selection = useSelectionInput(runtime, { page, locale }, navigation.openInput);
   useEffect(() => { document.documentElement.lang = languageTags[locale]; }, [locale]);
   return <div className="app" data-theme={theme} data-collapsed={collapsed}>
     <a className="skip-link" href="#main-content">{text.skip}</a>
@@ -93,7 +93,7 @@ export function App({ runtime }: { readonly runtime: RuntimeAdapter }) {
             <LookupInputPanel runtime={runtime} locale={locale} selection={selection.input} onCancel={selection.cancel}
               onDictionary={navigation.openDictionaryResult} /> : page === 7 ?
             <><ReviewSettingsPanel runtime={runtime} locale={locale} /><SpeechSettings runtime={runtime} locale={locale} />
-              <SelectionSettings runtime={runtime} locale={locale} /></> :
+              <SelectionSettings runtime={runtime} locale={locale} /><SelectionSettings runtime={runtime} locale={locale} ocr /></> :
             <div className="empty-state"><p>{text.pending[page]}</p><small>{text.scaffold}</small></div>}
           <VocabularyEditor notebook={notebook} text={notebookText} runtime={runtime} onReviewChanged={reviewChanged} viewExisting={() => {
             if (notebook.existing) { const record = notebook.existing; guard.request(() => notebook.open(record)); }

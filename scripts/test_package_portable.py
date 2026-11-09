@@ -44,6 +44,10 @@ class PortableTests(unittest.TestCase):
         }).encode())
         self.write("apps/desktop/src-tauri/tauri.conf.json", b'{"version":"0.1.0"}')
         self.write("resources/freedict-fra-zho-2025.11.23/COPYING", b"original resource license")
+        self.write("resources/tesseract-fra/README.md", b"fixed offline OCR sources")
+        self.write("resources/tesseract-fra/licenses/tessdata-fast.txt", b"French OCR model license")
+        self.write("resources/tesseract-fra/licenses/native/image.txt", b"native image license")
+        self.write("resources/tesseract-fra/fra.traineddata", b"model embedded in the executable")
         self.write("LICENSE", b"project license")
 
     def write(self, name, content):
@@ -75,6 +79,10 @@ class PortableTests(unittest.TestCase):
             self.assertEqual(zipped.read(prefix + "frequency/frequency.sqlite3"), b"verified frequency")
             self.assertEqual(zipped.read(prefix + "frequency/COPYING"), b"frequency data license")
             self.assertEqual(zipped.read(prefix + "frequency/frequency_sample.py"), b"frequency converter source")
+            self.assertEqual(zipped.read(prefix + "ocr-notices/README.md"), b"fixed offline OCR sources")
+            self.assertEqual(zipped.read(prefix + "ocr-notices/licenses/tessdata-fast.txt"), b"French OCR model license")
+            self.assertEqual(zipped.read(prefix + "ocr-notices/licenses/native/image.txt"), b"native image license")
+            self.assertFalse(any(path.endswith("fra.traineddata") for path in zipped.namelist()))
             self.assertEqual(zipped.read(prefix + "LICENSE"), b"project license")
             self.assertFalse(any("Lexique-data" in path for path in zipped.namelist()))
             description = zipped.read(prefix + "README.txt").decode("utf-8")

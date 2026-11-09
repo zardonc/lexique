@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-ocr-shortcut"
+description = "Enables the ocr_shortcut command without any pre-configured scope."
+commands.allow = ["ocr_shortcut"]
+
+[[permission]]
+identifier = "deny-ocr-shortcut"
+description = "Denies the ocr_shortcut command without any pre-configured scope."
+commands.deny = ["ocr_shortcut"]

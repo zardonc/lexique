@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-ocr-locale"
+description = "Enables the ocr_locale command without any pre-configured scope."
+commands.allow = ["ocr_locale"]
+
+[[permission]]
+identifier = "deny-ocr-locale"
+description = "Denies the ocr_locale command without any pre-configured scope."
+commands.deny = ["ocr_locale"]

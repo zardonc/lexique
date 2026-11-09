@@ -2,11 +2,13 @@ use std::fs::create_dir_all;
 
 use lexique_storage::initialize;
 use rusqlite::Connection;
-use tauri::{Emitter, Manager, State};
+use tauri::{Manager, State};
 
 #[cfg(windows)]
 mod audio_maintenance;
 mod conjugation;
+mod ocr;
+mod ocr_capture;
 mod review_window;
 mod selection;
 mod selection_shortcut;
@@ -104,13 +106,18 @@ async fn runtime_status(
 
 pub fn run() {
     tauri::Builder::default()
+        .manage(vocabulary::CloseAuthorization::default())
         .plugin(
             tauri_plugin_global_shortcut::Builder::new()
-                .with_handler(|app, _, event| {
+                .with_handler(|app, shortcut, event| {
                     if event.state() == tauri_plugin_global_shortcut::ShortcutState::Pressed {
-                        if let Err(error) = selection::start(app, None) {
-                            eprintln!("{error}");
-                        }
+                        let app = app.clone();
+                        let shortcut = *shortcut;
+                        tauri::async_runtime::spawn_blocking(move || {
+                            if let Err(error) = selection_shortcut::dispatch(&app, &shortcut) {
+                                eprintln!("{error}");
+                            }
+                        });
                     }
                 })
                 .build(),
@@ -138,6 +145,7 @@ pub fn run() {
             ));
             app.manage(DatabasePath(database_path));
             app.manage(selection::SelectionState::default());
+            app.manage(ocr_capture::CaptureState::default());
             selection_shortcut::setup(app.handle());
             app.manage(RuntimeStatus {
                 version: app.package_info().version.to_string(),
@@ -150,12 +158,24 @@ pub fn run() {
         })
         .on_window_event(|window, event| {
             if let tauri::WindowEvent::CloseRequested { api, .. } = event {
+                if let Some(request) = window
+                    .label()
+                    .strip_prefix("ocr-")
+                    .and_then(|label| label.split('-').next())
+                    .and_then(|value| value.parse::<u64>().ok())
+                {
+                    api.prevent_close();
+                    if let Err(error) = ocr_capture::abort(window.app_handle(), request) {
+                        eprintln!("{error}");
+                    }
+                    return;
+                }
                 speech_cache::report_error(
                     &window.state::<DatabasePath>().0,
                     "[native-lifecycle] Window CloseRequested",
                 );
                 api.prevent_close();
-                if let Err(error) = window.emit("lexique-close-requested", ()) {
+                if let Err(error) = vocabulary::request_close(window.app_handle()) {
                     eprintln!("Could not coordinate window close: {error}");
                 }
             }
@@ -167,6 +187,13 @@ pub fn run() {
             selection::selection_capture,
             selection::selection_cancel,
             selection_shortcut::selection_shortcut,
+            selection_shortcut::ocr_shortcut,
+            ocr::ocr_image,
+            ocr_capture::ocr_capture,
+            ocr_capture::ocr_locale,
+            ocr_capture::ocr_screen,
+            ocr_capture::ocr_region,
+            ocr_capture::ocr_abort,
             conjugation_lookup,
             conjugation_preferences,
             conjugation_block_order,
@@ -195,6 +222,18 @@ pub fn run() {
             speech_preferences,
             finish_close
         ])
-        .run(tauri::generate_context!())
-        .expect("Lexique could not start; check native initialization errors");
+        .build(tauri::generate_context!())
+        .expect("Lexique could not start; check native initialization errors")
+        .run(|app, event| {
+            if let tauri::RunEvent::ExitRequested { api, .. } = event {
+                if app.get_webview_window("main").is_some()
+                    && !app.state::<vocabulary::CloseAuthorization>().permits_exit()
+                {
+                    api.prevent_exit();
+                    if let Err(error) = vocabulary::request_close(app) {
+                        eprintln!("Could not coordinate application exit: {error}");
+                    }
+                }
+            }
+        });
 }

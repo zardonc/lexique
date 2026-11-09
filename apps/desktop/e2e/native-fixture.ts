@@ -44,6 +44,7 @@ class NativeFixture {
       review_undo_target: null, review_undo: { status: 'committed', queue_rebuilt: false }, review_auto_enroll: false, review_pause: false,
       review_batch_status: null, speech_retry_missing: 1, review_cancel_batch: null,
       selection_cancel: null, selection_shortcut: { shortcut: 'Ctrl+Alt+Shift+D', registered: true, error: null },
+      ocr_locale: null, ocr_shortcut: { shortcut: 'Ctrl+Alt+Shift+O', registered: true, error: null },
       review_progress: { revision: 0, card: { phase: 'new', memory: null, last_review_at: null, due_at: null } } };
   }
   private emit(event: string, payload: unknown = null) {
@@ -100,9 +101,13 @@ class NativeFixture {
     if (response.gate) await new Promise<void>((resolve) => { this.gates.set(response.gate!, resolve); });
     else if (response.delay) await new Promise((resolve) => setTimeout(resolve, response.delay));
     if (response.error !== undefined) throw response.error;
-    if (command === 'vocabulary_save') this.defaults.vocabulary_find = (response.value as { record: unknown }).record;
-    if (command === 'review_add_batch') return this.batchResponse(response.value, args);
-    return command === 'review_queue' ? this.queueResponse(response.value) : response.value;
+    return this.response(command, response.value, args);
+  }
+  private response(command: string, value: unknown, args?: Record<string, unknown>) {
+    if (command === 'ocr_image') { this.emit('selection-input', value); return null; }
+    if (command === 'vocabulary_save') this.defaults.vocabulary_find = (value as { record: unknown }).record;
+    if (command === 'review_add_batch') return this.batchResponse(value, args);
+    return command === 'review_queue' ? this.queueResponse(value) : value;
   }
   private queueResponse(value: unknown) {
     const view=value as { queue: { cards: { id:number; vocabulary_id:number; kind:string }[] }; record:typeof record|null; audio_pending:boolean; window?:unknown };

@@ -7,7 +7,8 @@ use tauri_plugin_global_shortcut::{GlobalShortcutExt, Modifiers, Shortcut};
 
 use crate::vocabulary::{DatabasePath, open};
 
-const DEFAULT_SHORTCUT: &str = "Ctrl+Alt+Shift+D";
+const DEFAULT_SHORTCUTS: [&str; 2] = ["Ctrl+Alt+Shift+D", "Ctrl+Alt+Shift+O"];
+const KEYS: [&str; 2] = ["selection-shortcut", "ocr-shortcut"];
 
 #[derive(Clone, Serialize)]
 pub struct ShortcutStatus {
@@ -16,7 +17,7 @@ pub struct ShortcutStatus {
     error: Option<String>,
 }
 
-pub struct ShortcutSettings(Mutex<ShortcutStatus>);
+pub struct ShortcutSettings(Mutex<[ShortcutStatus; 2]>);
 
 fn parse(value: &str) -> Result<Shortcut, String> {
     if value.is_empty() || value.len() > 128 || value.chars().any(char::is_control) {
@@ -34,11 +35,11 @@ fn parse(value: &str) -> Result<Shortcut, String> {
     Ok(shortcut)
 }
 
-fn load(connection: &Connection) -> Result<String, String> {
+fn load(connection: &Connection, index: usize) -> Result<String, String> {
     let raw: Option<String> = connection
         .query_row(
-            "SELECT value FROM app_metadata WHERE key = 'selection-shortcut'",
-            [],
+            "SELECT value FROM app_metadata WHERE key = ?1",
+            [KEYS[index]],
             |row| row.get(0),
         )
         .optional()
@@ -46,51 +47,64 @@ fn load(connection: &Connection) -> Result<String, String> {
     let value = match raw {
         Some(raw) => serde_json::from_str(&raw)
             .map_err(|error| format!("Invalid saved shortcut: {error}"))?,
-        None => DEFAULT_SHORTCUT.to_owned(),
+        None => DEFAULT_SHORTCUTS[index].to_owned(),
     };
     parse(&value)?;
     Ok(value)
 }
 
-fn save(connection: &Connection, value: &str) -> Result<(), String> {
+fn save(connection: &Connection, index: usize, value: &str) -> Result<(), String> {
     connection
         .execute(
-            "INSERT INTO app_metadata (key, value) VALUES ('selection-shortcut', ?1)
+            "INSERT INTO app_metadata (key, value) VALUES (?1, ?2)
         ON CONFLICT(key) DO UPDATE SET value = excluded.value",
-            [serde_json::to_string(value).map_err(|error| error.to_string())?],
+            rusqlite::params![
+                KEYS[index],
+                serde_json::to_string(value).map_err(|error| error.to_string())?
+            ],
         )
         .map_err(|error| format!("Could not save shortcut: {error}"))?;
     Ok(())
 }
 
 pub fn setup(app: &tauri::AppHandle) {
-    let mut status = ShortcutStatus {
-        shortcut: DEFAULT_SHORTCUT.into(),
+    let mut statuses = DEFAULT_SHORTCUTS.map(|shortcut| ShortcutStatus {
+        shortcut: shortcut.into(),
         registered: false,
         error: None,
-    };
-    let result = open(&app.state::<DatabasePath>())
-        .and_then(|connection| load(&connection))
-        .and_then(|value| {
-            status.shortcut = value;
-            app.global_shortcut()
-                .register(parse(&status.shortcut)?)
-                .map_err(|error| format!("Could not register shortcut: {error}"))
-        });
-    match result {
-        Ok(()) => status.registered = true,
-        Err(error) => status.error = Some(error),
+    });
+    for (index, status) in statuses.iter_mut().enumerate() {
+        let result = open(&app.state::<DatabasePath>())
+            .and_then(|connection| load(&connection, index))
+            .and_then(|value| {
+                status.shortcut = value;
+                app.global_shortcut()
+                    .register(parse(&status.shortcut)?)
+                    .map_err(|error| format!("Could not register shortcut: {error}"))
+            });
+        match result {
+            Ok(()) => status.registered = true,
+            Err(error) => status.error = Some(error),
+        }
     }
-    app.manage(ShortcutSettings(Mutex::new(status)));
+    app.manage(ShortcutSettings(Mutex::new(statuses)));
 }
 
-fn replace(app: &tauri::AppHandle, value: String) -> Result<ShortcutStatus, String> {
+fn replace(app: &tauri::AppHandle, index: usize, value: String) -> Result<ShortcutStatus, String> {
     let next = parse(&value)?;
     let state = app.state::<ShortcutSettings>();
-    let mut current = state
+    let mut settings = state
         .0
         .lock()
         .map_err(|error| format!("Shortcut state unavailable: {error}"))?;
+    if settings.iter().enumerate().any(|(slot, status)| {
+        slot != index && status.registered && parse(&status.shortcut).ok() == Some(next)
+    }) {
+        return Err(
+            "This shortcut is already used by another Lexique action; choose another".into(),
+        );
+    }
+    let current = &mut settings[index];
     let previous = parse(&current.shortcut)?;
     let changed = !current.registered || previous != next;
     let connection = open(&app.state::<DatabasePath>())?;
@@ -107,7 +121,7 @@ fn replace(app: &tauri::AppHandle, value: String) -> Result<ShortcutStatus, Stri
             }
         }
     }
-    if let Err(error) = save(&connection, &value) {
+    if let Err(error) = save(&connection, index, &value) {
         if changed {
             let restore = if current.registered {
                 app.global_shortcut().register(previous)
@@ -131,23 +145,56 @@ fn replace(app: &tauri::AppHandle, value: String) -> Result<ShortcutStatus, Stri
     Ok(current.clone())
 }
 
+async fn preference(
+    app: tauri::AppHandle,
+    index: usize,
+    shortcut: Option<String>,
+) -> Result<ShortcutStatus, String> {
+    tauri::async_runtime::spawn_blocking(move || {
+        if let Some(shortcut) = shortcut {
+            return replace(&app, index, shortcut);
+        }
+        app.state::<ShortcutSettings>()
+            .0
+            .lock()
+            .map(|value| value[index].clone())
+            .map_err(|error| format!("Shortcut state unavailable: {error}"))
+    })
+    .await
+    .map_err(|error| format!("Shortcut preference task failed: {error}"))?
+}
+
 #[tauri::command]
 pub async fn selection_shortcut(
     app: tauri::AppHandle,
     shortcut: Option<String>,
 ) -> Result<ShortcutStatus, String> {
-    tauri::async_runtime::spawn_blocking(move || {
-        if let Some(shortcut) = shortcut {
-            return replace(&app, shortcut);
-        }
-        app.state::<ShortcutSettings>()
-            .0
-            .lock()
-            .map(|value| value.clone())
-            .map_err(|error| format!("Shortcut state unavailable: {error}"))
-    })
-    .await
-    .map_err(|error| format!("Shortcut preference task failed: {error}"))?
+    preference(app, 0, shortcut).await
+}
+
+#[tauri::command]
+pub async fn ocr_shortcut(
+    app: tauri::AppHandle,
+    shortcut: Option<String>,
+) -> Result<ShortcutStatus, String> {
+    preference(app, 1, shortcut).await
+}
+
+pub fn dispatch(app: &tauri::AppHandle, shortcut: &Shortcut) -> Result<(), String> {
+    let state = app.state::<ShortcutSettings>();
+    let settings = state
+        .0
+        .lock()
+        .map_err(|error| format!("Shortcut state unavailable: {error}"))?;
+    let action = settings.iter().position(|status| {
+        status.registered && parse(&status.shortcut).ok().as_ref() == Some(shortcut)
+    });
+    drop(settings);
+    match action {
+        Some(0) => crate::selection::start(app, None),
+        Some(1) => crate::ocr_capture::start(app),
+        _ => Ok(()),
+    }
 }
 
 #[cfg(test)]
@@ -165,13 +212,16 @@ mod tests {
         connection
             .execute_batch("CREATE TABLE app_metadata (key TEXT PRIMARY KEY, value TEXT NOT NULL)")
             .unwrap();
-        assert_eq!(load(&connection).unwrap(), "Ctrl+Alt+Shift+D");
-        save(&connection, "Ctrl+Alt+K").unwrap();
-        assert_eq!(load(&connection).unwrap(), "Ctrl+Alt+K");
+        assert_eq!(load(&connection, 0).unwrap(), "Ctrl+Alt+Shift+D");
+        assert_eq!(load(&connection, 1).unwrap(), "Ctrl+Alt+Shift+O");
+        save(&connection, 0, "Ctrl+Alt+K").unwrap();
+        save(&connection, 1, "Ctrl+Alt+J").unwrap();
+        assert_eq!(load(&connection, 0).unwrap(), "Ctrl+Alt+K");
+        assert_eq!(load(&connection, 1).unwrap(), "Ctrl+Alt+J");
         connection
             .execute("UPDATE app_metadata SET value = 'broken'", [])
             .unwrap();
-        assert!(load(&connection).is_err());
+        assert!(load(&connection, 0).is_err());
         assert_eq!(
             connection
                 .query_row("SELECT value FROM app_metadata", [], |row| row

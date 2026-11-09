@@ -1,0 +1,14 @@
+{
+  "startedAt": "2026-11-09T18:01:56.306Z",
+  "binarySha256": "fad9adf0797e47c26ffc0196bffc77b2ccbb57698cef5be3d38a67e63eaaab5b",
+  "command": [
+    "C:\\Users\\inthe\\IdeaProjects\\lexique-complete-issues\\apps\\desktop\\e2e\\native-ocr-check.mjs",
+    "../../target/pr23-native-speech-20261101",
+    "../../target/release/lexique-desktop.exe",
+    "../../target/desktop-conjugation-v6-stats",
+    "../../target/desktop-frequency-v1",
+    "../../target/issue-57/native-2/Lexique-data",
+    "../../target/issue-59/native-16"
+  ],
+  "hardTimeoutSeconds": 60
+}

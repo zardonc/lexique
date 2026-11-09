@@ -13,6 +13,7 @@ import { speechAudioSchema, speechPreferencesSchema, speechVoiceSchema } from '.
 import type { SpeechAudio, SpeechPreferences } from './speech';
 import { readSelectionEvent, selectionText, shortcutStatusSchema, shortcutText } from './selection';
 import type { SelectionEvent, ShortcutStatus } from './selection';
+import type { Locale } from '../content';
 
 const runtimeStatusSchema = z.object({
   version: z.string().min(1),
@@ -126,6 +127,10 @@ export interface RuntimeAdapter {
   readonly captureSelection: (text?: string) => Promise<void>;
   readonly cancelSelection: () => Promise<void>;
   readonly selectionShortcut: (shortcut?: string) => Promise<ShortcutStatus | null>;
+  readonly importOcrImage: (bytes: Uint8Array) => Promise<void>;
+  readonly captureScreen: () => Promise<void>;
+  readonly setCaptureLocale: (locale: Locale) => Promise<void>;
+  readonly ocrShortcut: (shortcut?: string) => Promise<ShortcutStatus | null>;
   readonly lookupConjugation: (key: string) => Promise<ConjugationLookup | null>;
   readonly conjugationPreferences: (preferences?: ConjugationPreferences) => Promise<ConjugationPreferences | null>;
   readonly conjugationBlockOrder: (order?: ConjugationOrder) => Promise<ConjugationOrder | null>;
@@ -157,7 +162,25 @@ export interface RuntimeAdapter {
   readonly finishClose: () => Promise<void>;
 }
 
+async function readShortcut(command: string, shortcut?: string) {
+  if (!isTauri()) return null;
+  const valid = shortcut === undefined ? null : shortcutText.parse(shortcut);
+  const result = shortcutStatusSchema.parse(await invoke(command, { shortcut: valid }));
+  if (valid !== null && result.shortcut !== valid) throw new Error('Saved shortcut differs from the request');
+  return result;
+}
+
 export const runtime: RuntimeAdapter = {
+  async setCaptureLocale(locale) { if (isTauri()) await invoke('ocr_locale', { locale }); },
+  async captureScreen() {
+    if (!isTauri()) throw new Error('Screen capture is available in the desktop app');
+    await invoke('ocr_capture');
+  },
+  async importOcrImage(bytes) {
+    if (!isTauri()) throw new Error('Image import is available in the desktop app');
+    if (!bytes.length || bytes.length > 16 * 1024 * 1024) throw new Error('PNG/JPEG: 1–16 MiB');
+    await invoke('ocr_image', bytes);
+  },
   async onSelectionInput(callback) {
     if (!isTauri()) return () => {};
     return listen('selection-input', (event) => callback(readSelectionEvent(event.payload)));
@@ -168,12 +191,9 @@ export const runtime: RuntimeAdapter = {
   },
   async cancelSelection() { if (isTauri()) await invoke('selection_cancel'); },
   async selectionShortcut(shortcut) {
-    if (!isTauri()) return null;
-    const valid = shortcut === undefined ? null : shortcutText.parse(shortcut);
-    const result = shortcutStatusSchema.parse(await invoke('selection_shortcut', { shortcut: valid }));
-    if (valid !== null && result.shortcut !== valid) throw new Error('Saved shortcut differs from the request');
-    return result;
+    return readShortcut('selection_shortcut', shortcut);
   },
+  async ocrShortcut(shortcut) { return readShortcut('ocr_shortcut', shortcut); },
   async addReviewBatch(request) {
     if (!isTauri()) return null;
     const valid = batchRequestSchema.parse(request);

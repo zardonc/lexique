@@ -1,13 +1,54 @@
-use std::{path::PathBuf, time::Duration};
+use std::{
+    path::PathBuf,
+    sync::atomic::{AtomicBool, Ordering},
+    time::Duration,
+};
 
 use lexique_dictionary::{Lookup, Sense};
 use lexique_storage::{
     DigestEntry, Reference, SaveRequest, SaveResult, Snapshot, VocabularyRecord,
 };
 use rusqlite::Connection;
-use tauri::{Manager, State};
+use tauri::{Emitter, Manager, State};
 
 pub struct DatabasePath(pub PathBuf);
+
+#[derive(Default)]
+pub(crate) struct CloseAuthorization(AtomicBool);
+
+impl CloseAuthorization {
+    pub(crate) fn permits_exit(&self) -> bool {
+        self.0.load(Ordering::SeqCst)
+    }
+
+    fn finish(&self, close: impl FnOnce() -> Result<(), String>) -> Result<(), String> {
+        self.0.store(true, Ordering::SeqCst);
+        let result = close();
+        if result.is_err() {
+            self.0.store(false, Ordering::SeqCst);
+        }
+        result
+    }
+}
+
+#[cfg(test)]
+mod close_tests {
+    use super::*;
+
+    #[test]
+    fn failed_close_preserves_exit_guard_until_authorized_close_succeeds() {
+        let authorization = CloseAuthorization::default();
+        assert!(!authorization.permits_exit());
+        let result = authorization.finish(|| {
+            assert!(authorization.permits_exit());
+            Err("Window destruction failed".into())
+        });
+        assert_eq!(result, Err("Window destruction failed".into()));
+        assert!(!authorization.permits_exit());
+        authorization.finish(|| Ok(())).unwrap();
+        assert!(authorization.permits_exit());
+    }
+}
 
 #[cfg(all(test, windows))]
 mod queue_audio_tests {
@@ -125,7 +166,6 @@ mod queue_audio_tests {
 }
 
 #[cfg(target_os = "macos")]
-// shortcut: Dock Quit bypasses this guard; cover it before macOS acceptance.
 pub fn coordinate_quit(app: &tauri::App) -> Result<(), Box<dyn std::error::Error>> {
     let menu = app.menu().ok_or("Default macOS menu unavailable")?;
     let app_menu = menu
@@ -148,14 +188,29 @@ pub fn coordinate_quit(app: &tauri::App) -> Result<(), Box<dyn std::error::Error
     app_menu.append(&replacement)?;
     app.on_menu_event(|app, event| {
         if event.id() == "lexique-quit" {
-            if let Some(window) = app.get_webview_window("main") {
-                if let Err(error) = window.close() {
-                    eprintln!("Could not request window close: {error}");
-                }
+            if let Err(error) = request_close(app) {
+                eprintln!("Could not request application close: {error}");
             }
         }
     });
     Ok(())
+}
+
+pub(crate) fn request_close(app: &tauri::AppHandle) -> Result<(), String> {
+    let window = app
+        .get_webview_window("main")
+        .ok_or("Main window unavailable")?;
+    let cancellation = crate::selection::selection_cancel(app.clone());
+    window
+        .show()
+        .map_err(|error| format!("Could not show close confirmation: {error}"))?;
+    window
+        .set_focus()
+        .map_err(|error| format!("Could not focus close confirmation: {error}"))?;
+    window
+        .emit("lexique-close-requested", ())
+        .map_err(|error| format!("Could not coordinate application close: {error}"))?;
+    cancellation
 }
 
 pub(crate) fn open(path: &DatabasePath) -> Result<Connection, String> {
@@ -970,11 +1025,14 @@ pub fn finish_close(app: tauri::AppHandle) -> Result<(), String> {
         &app.state::<DatabasePath>().0,
         "[native-lifecycle] finish_close accepted",
     );
-    app.state::<crate::speech_tasks::SpeechTasks>().shutdown()?;
-    app.state::<std::sync::Arc<crate::review_window::WindowValidator>>()
-        .stop();
-    app.get_webview_window("main")
-        .ok_or("Main window unavailable")?
-        .destroy()
-        .map_err(|error| format!("Could not close window: {error}"))
+    app.state::<CloseAuthorization>().finish(|| {
+        crate::selection::selection_cancel(app.clone())?;
+        app.state::<crate::speech_tasks::SpeechTasks>().shutdown()?;
+        app.state::<std::sync::Arc<crate::review_window::WindowValidator>>()
+            .stop();
+        app.get_webview_window("main")
+            .ok_or("Main window unavailable")?
+            .destroy()
+            .map_err(|error| format!("Could not close window: {error}"))
+    })
 }

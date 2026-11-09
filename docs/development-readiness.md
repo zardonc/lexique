@@ -1,6 +1,6 @@
 # 开发链路与外部资源准入清单
 
-更新：2026-11-08。依据：`Requirements-Consolidated.md` v1.0、当前仓库及用户确认。需求材料中的建议与网页示例不自动成为已确认选型；外部资料不能代替本项目运行验收。
+更新：2026-11-09。依据：`Requirements-Consolidated.md` v1.0、当前仓库及用户确认。需求材料中的建议与网页示例不自动成为已确认选型；外部资料不能代替本项目运行验收。
 
 ## 已确认的边界
 
@@ -10,7 +10,7 @@
 4. 项目自有源码采用 MIT，第三方内容不因此改为 MIT。
 5. 每个平台 / 架构分别提供完整版与 Lite 版。完整版内嵌 TTS 模型，不受 200 MB 安装包上限限制，仍应尽量减少磁盘占用；Lite 版不内嵌 TTS 模型，由用户通过“额外资源”主动下载，保留既有包体目标。默认词典、变位及其他资源不变。分别报告压缩包、安装占用、模型下载及系统运行依赖；两版与下载功能尚未实现。
 6. Windows 11 主包优先使用已有 WebView2；为缺少运行时的机器提供微软官方离线依赖包与检测提示。分别报告主包、依赖包和缺依赖机器的完整离线下载总量。
-7. 首期 M3 纳入其他应用选词、屏幕区域 OCR、词频颜色和 WPM；词频采用 Lexique 3.83 字幕词元频率及产品 100／10 分档。WPM 为朗读速度，范围 80–240、步长 20、默认 180。词频及 WPM 已完成 Windows x64 检查，系统选词／OCR 继续按[新增交付计划](lookup-notes-speech-plan.md)实施；其他平台测试按用户要求暂缓。
+7. 首期 M3 纳入其他应用选词、屏幕区域 OCR、词频颜色和 WPM；词频采用 Lexique 3.83 字幕词元频率及产品 100／10 分档。WPM 为朗读速度，范围 80–240、步长 20、默认 180。四项已完成 Windows x64 检查，见[新增交付计划](lookup-notes-speech-plan.md)；其他平台测试按用户要求暂缓。
 
 相关决策见 [资源与学习数据分离](adr/0001-separate-bundled-resources-from-learning-data.md)、[源码与资源许可](adr/0002-source-and-resource-licensing.md)。
 
@@ -62,7 +62,7 @@ FSRS 使用固定版本默认参数，不提供优化与额外间隔随机扰动
 | 完整变位与反查 | Lefff 3.4、RosaeNLG 的 Lefff 衍生数据与离线生成方案 | 数据 LGPL-LR 条款、语式 / 时态矩阵、助动词、代词式、缺陷动词、多匹配及生成样例 | M3 开发前确认覆盖与生成路径；M5 全量验收 |
 | A1–B2 分级词表 | 尚无符合当前政策且已准入的完整来源；FLELex 为 CC BY-NC-SA 4.0 | 允许目标发行的来源或额外授权；词元 / 多词表达、分级依据、数量与质量 | 分级模块开发前；不阻塞 M1，仍是默认词库发行门槛 |
 | 生词词频颜色 | [Lexique 3.83 原作者版本](https://chrplr.github.io/openlexicon/datasets-info/Lexique383/README-Lexique.html)，数据 CC BY-SA 4.0；选择 `freqlemfilms2` | 完整源、词元／词性去重合计、100／10 及未知、通知、覆盖、体积和原生恢复见 [#57](evidence/issue-57/README.md) | Windows x64 转换／界面／开发包已验收；不代替分级词表，其他平台与 M5 另验 |
-| 屏幕／图片 OCR | [Tesseract](https://github.com/tesseract-ocr/tesseract)／[tessdata_fast](https://github.com/tesseract-ocr/tessdata_fast) 法语数据，Apache-2.0；绑定待验证 | 完整离线运行库与 `fra`、许可／通知、CPU／内存、输入上限、法语重音质量及四目标执行 | M3 OCR 接入前准入；首期必须有系统框选，M5 验收完整依赖与首装禁网 |
+| 屏幕／图片 OCR | 固定 Tesseract.js／core 7.0.0、tessdata_fast 法语 `fra`、XCap 0.9.9；来源与法律原文见[资源目录](../resources/tesseract-fra/README.md) | 完整本地运行库、输入上限、重音／撇号、125%／175% 负坐标双屏和开发包通知通过，见 [#59](evidence/issue-59/README.md) | Windows x64 准入及产品流已验收；其他平台实际执行、M5 完整发行与首装禁网另验 |
 | 自定义 MDX/MDD | `mdictlib` 0.2.8，MIT；声明支持 v1/v2、MDX/MDD，LZO 可选，v3 未支持 | 合法样本、版本 / 编码 / 压缩矩阵、MDD 媒体、HTML 隔离、四架构链接及依赖许可 | 自定义词典模块开发前；结构化内置小样可先完成 M1 |
 | 离线 TTS | 继续使用已接入的 Supertonic 3，不再测试替代模型；范围及上游证据缺口见[准入决定](evidence/issue-14/README.md) | 现有单词／变位证据保留；例句接入、正式发行许可、四架构实机、干净机器、体积和启动成本 | Windows M2 单词与 M3 变位已验收；例句按剩余 M3 范围、成品按 M5 验收 |
 | FSRS | 官方 `fsrs-rs v6.6.2` 已选为首选验证候选，BSD-3-Clause；有同一 Rust 核心的浏览器 WASM 方案 | 固定核心版本、模式、参数、时间规则与固定向量；算法升级边界；优化器依赖的实际体积 | M2 开发前完成候选验证并锁定调度规则；现有版本 ABI 不代表学习逻辑验收 |
@@ -120,6 +120,8 @@ FSRS 使用固定版本默认参数，不提供优化与额外间隔随机扰动
 - 样本、环境、通过 / 失败 / 未测结果，以及依赖它的里程碑。
 
 仅有网页、包标签、下载链接或模型参数量时，状态仍为“候选”。首个词典样本需覆盖重音、撇号、`œ`、同形多义及屈折形式；完整三语覆盖与默认全量包另行验收。
+
+2026-11-09，固定 Tesseract.js／core 7.0.0、完整 `fra` 和 XCap 0.9.9 已完成 Windows x64 本地 OCR 准入与双屏框选验收。语言数据为 1,130,365 字节，六份内嵌 WASM 核心由上游能力探测选择；法律原文覆盖 core 编解码依赖、42 份固定原生依赖及浏览器 worker／Buffer／ieee754 等材料。完整来源与[本地性能样本](evidence/issue-59/resource-probe.md)、原生结果及含语音开发包体积见 [#59 证据](evidence/issue-59/README.md)。其他平台、系统权限恢复和 M5 完整发行按各自门槛验收。
 
 ## M1 实现前的工程证据与计划（历史）
 

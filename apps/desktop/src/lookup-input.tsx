@@ -8,6 +8,8 @@ import { dictionaryFailure, dictionaryQuery } from './platform/dictionary';
 import type { DictionaryFailure, DictionaryLookup } from './platform/dictionary';
 import type { RuntimeAdapter } from './platform/runtime';
 import { selectionText, type SelectionEvent } from './platform/selection';
+import { useOcrInput } from './use-ocr-input';
+import { OcrInput } from './ocr-input';
 
 function useInputLookup(runtime: RuntimeAdapter, selection?: SelectionEvent) {
   const [raw, setRaw] = useState('');
@@ -36,7 +38,7 @@ function useInputLookup(runtime: RuntimeAdapter, selection?: SelectionEvent) {
     cancel(); setResult(undefined); setError(undefined); setFailure(undefined);
     if (selection.kind === 'pending') setRaw('');
     else if (selection.kind === 'failed') setFailure(selection);
-    else setRaw(selection.text);
+    else setRaw(selection.kind === 'captured' ? selection.text : '');
   }, [selection, runtime]);
   useEffect(() => () => { request.current++; }, []);
   return { raw, loading, result, error, failure, edit, lookup, cancel };
@@ -64,15 +66,20 @@ export function LookupInputPanel({ runtime, locale, selection, onCancel, onDicti
 }) {
   const text = lookupInputMessages[locale], dictionaryText = messages[locale].dictionary;
   const input = useInputLookup(runtime, selection), field = useRef<HTMLTextAreaElement>(null);
+  const ocr = useOcrInput(runtime, selection, input.edit);
   const raw = input.raw;
   const capturing = selection?.kind === 'pending';
   function selected() { const node = field.current; return node && node.selectionEnd > node.selectionStart ? raw.slice(node.selectionStart, node.selectionEnd) : raw; }
-  return <div className="lookup-input">
+  return <div className="lookup-input" onPaste={(event) => {
+    const file = event.clipboardData.files[0];
+    if (file) { event.preventDefault(); void ocr.importImage(file); }
+  }}>
+    <OcrInput ocr={ocr} locale={locale} onCancel={onCancel} />
     <form onSubmit={(event) => { event.preventDefault(); void input.lookup(selected()); }}>
       <label htmlFor="lookup-input-raw">{text.raw}</label>
       <textarea ref={field} id="lookup-input-raw" lang="fr" rows={4} value={raw} required
         autoCapitalize="none" autoCorrect="off" spellCheck={false}
-        onChange={(event) => { if (selection) onCancel(); input.edit(event.target.value); }} />
+        onChange={(event) => { ocr.stop(); if (selection) onCancel(); input.edit(event.target.value); }} />
       <p className="dictionary-hint">{text.hint}</p>
       {raw && !dictionaryQuery.safeParse(raw.trim()).success && <p>{text.long}</p>}
       <div className="actions"><button type="submit" disabled={input.loading || capturing}>{input.loading ? dictionaryText.loading : text.query}</button>
