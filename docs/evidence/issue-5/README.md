@@ -4,7 +4,7 @@
 
 [试听通过的八条样本](samples-tom-v2/listen.html) · [人工通过记录](samples-tom-v2/quality.json) · [逐项原始报告](samples-tom-v2/report.json) · [资源与哈希](resources.json) · [分别许可](licenses/ATTRIBUTION.md) · [完整测量](measurements.json) · [来源包测量](source-report.json) · [构建与转换](source-build.md)
 
-应用随包分发建议沿用现有 Supertonic 3：模型的 OpenRAIL-M 允许商业再分发，法语女声／男声及 Windows x64 离线运行已有产品证据。正式分发需保留许可、署名和修改声明，并将模型使用限制纳入具有约束力的下游条款；候选比较及现有打包材料见[法语模型再分发调查](redistributable-french-models.md)。
+2026-11-08 用户确认应用继续使用现有 Supertonic 3，停止替代模型测试，见 [ADR 0009](../../adr/0009-continue-with-supertonic-3.md)。本票保留已完成的独立对照；模型的 OpenRAIL-M 允许商业再分发，法语女声／男声及 Windows x64 离线运行已有产品证据。正式分发需保留许可、署名和修改声明，并将模型使用限制纳入具有约束力的下游条款；历史比较及现有打包材料见[法语模型再分发调查](redistributable-french-models.md)。
 
 ## 组合与前端
 

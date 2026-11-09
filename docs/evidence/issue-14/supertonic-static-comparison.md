@@ -1,5 +1,7 @@
 # Supertonic static model comparison
 
+Current decision, 2026-11-08: continue with the existing Supertonic 3 CPU speech and stop alternative TTS model testing; see [ADR 0009](../../adr/0009-continue-with-supertonic-3.md) and the [roadmap](../../roadmap.md). This report preserves historical evidence. Current Windows integration is recorded in [#38](../issue-38/README.md); licensing and remaining platform and release gates still apply.
+
 On 2026-10-27, the fixed initial [Supertone model snapshot](https://huggingface.co/Supertone/supertonic-3/tree/724fb5abbf5502583fb520898d45929e62f02c0b/onnx) was compared with the published sherpa-onnx assets without inference or audio generation. The comparator checks SHA-256 before parsing and rejects external tensor data.
 
 | File | Original SHA-256 | Published int8 SHA-256 |

@@ -6,7 +6,20 @@
 
 Windows x64 的十项原生播放、真实 SQLite 旧格式／非法值／写入失败及重启恢复检查通过，保留生词、摘要、笔记、两卡进度、当前作答、选定音频与保护关系。前端整套 154 项、核心／存储／词典 145 项、桌面库 3 项、缓存 10 项通过；缓存的既有独立 crash fixture 按其要求保持 ignored，执行的 Rust runner 保留 60 秒硬限。完整命令和限制见 [#56 证据](evidence/issue-56/README.md)。
 
-两声线基准来自三条法语句子的 53 个书写词和完整音频时长。六个端点播放器的速率、时间推进及音高保持开关通过自动检查；2026-11-08 用户确认[人工试听](evidence/issue-56/listen.html)中的女声／男声在 80／180／240 WPM 均清晰、音高自然。其他平台、干净机器与正式发行门槛保持。
+两声线基准来自三条法语句子的 53 个书写词和完整音频时长。六个端点播放器的速率、时间推进及音高保持开关通过自动检查；2026-11-08 用户确认[人工试听](evidence/issue-56/listen.html)中的女声／男声在 80／180／240 WPM 均清晰、音高自然。2026-11-08 用户报告干净系统测试通过，其他平台测试按用户要求暂缓；正式发行包仍按各自门槛验收。
+## 选词、OCR、词频及 WPM 需求更新（2026-11-08）
+
+用户确认首期支持其他应用选词和屏幕区域 OCR；WPM 表示朗读语速，由单词、例句与变位共用。[新增计划](lookup-notes-speech-plan.md)按 WPM → 词频颜色 → 系统选词 → 屏幕 OCR → 其余离线核心推进，当前代码与 schema 未改变。新能力尚未实现；既有正常／0.6 倍、系统／架构及学习数据验收保持原边界。
+
+[词频来源调查](evidence/french-word-frequency/README.md)核实 Lexique 3.83 数据 CC BY-SA 4.0、原始列、词元／词性去重和样本合计。全量转换、完整许可通知及随包尚未验收；[WPM](speech-preferences.md)的 80–240、步长 20、默认 180 是待实施产品标准，尚无新基准／试听。系统选择、屏幕权限、OCR 运行库及四目标执行按[输入规格](translation-inputs.md)另行验证。
+
+本次文档验证：`pwsh -NoProfile -File scripts/check-docs.ps1` 通过 137 份文档、1,038 个本地链接，73 个本地材料目标按现有规则跳过；`pwsh -NoProfile -File scripts/test-docs.ps1` 的 13 项检查通过，`git diff --cached --check` 通过。新工单 #56／#57 为 `ready-for-agent`，#58／#59 为 `needs-triage`，均是 #1 原生子票，#59 原生依赖 #58；正文、标题与标签已回读。应用／前端／Rust／原生、OCR 识别及新的 TTS 生成／试听未运行，本轮仅更新需求、来源和计划。
+
+## 后续语音基线（2026-11-08）
+
+用户决定继续使用现有 Supertonic 3，停止替代 TTS 模型测试，见 [ADR 0009](adr/0009-continue-with-supertonic-3.md)。#5 保留独立可行性证据，#6 保持“Tested and does not meet requirements”，#7 按未测试、取消计划处理。现有 CPU、声线／播放速度和音频版本规则继续适用；下一步见[开发路线](roadmap.md)。停止比较不豁免 Supertonic 3 的许可、其他平台实机、干净机器、完整版／Lite 与 M5 正式发行验收。
+
+本次为文档与后续规划更新：`pwsh -NoProfile -File scripts/check-docs.ps1` 通过 133 份文档与 961 个本地链接，73 个本地材料目标按检查器规则跳过；`pwsh -NoProfile -File scripts/test-docs.ps1` 的 13 项检查通过，`git diff --cached --check` 通过。两条 PowerShell 命令分别是 `pnpm test:docs`／`pnpm test:docs:validator` 的现有脚本入口。未运行新的模型生成／试听或应用、前端、Rust、E2E 检查；下述原生及历史 E2E 结果保持各自边界。
 
 ## Kokoro 法语独立验证（issue #6）
 

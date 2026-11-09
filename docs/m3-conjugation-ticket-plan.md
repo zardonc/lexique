@@ -1,8 +1,15 @@
 # M3 conjugation ticket breakdown
 
+2026-11-08: [shared WPM settings](speech-preferences.md), [vocabulary frequency colors](word-frequency-colors.md),
+and [system selection / screen OCR](translation-inputs.md) have separate slices in the
+[updated plan](lookup-notes-speech-plan.md). WPM is pending implementation; the
+accepted #39–#49 pronunciation evidence retains its original playback conditions.
+
 Source: [specification #38](https://github.com/zardonc/lexique/issues/38), [local specification](m3-conjugation-spec.md), and [confirmed scope](m3-conjugation-scope.md). Current status, 2026-11-07: #39–#49 are accepted and closed for the agreed Windows x64 conjugation scope; [the closeout report](evidence/issue-38/README.md) links feature and combined offline evidence. Publication produced 11 sub-issues with 16 native blocking relationships and verified their bodies, titles, then-open states, labels, parent relationships and blocking edges.
 
 T01–T11 are breakdown identifiers; the delivery table maps them to GitHub issues. Each issue is labelled `ready-for-agent`, includes its acceptance criteria and the shared requirements below, and references real issue numbers. Blocking edges use native relationships.
+
+On 2026-11-08 the user confirmed that subsequent development keeps the existing Supertonic 3 CPU speech and stops alternative TTS model testing; see [ADR 0009](adr/0009-continue-with-supertonic-3.md). The [roadmap](roadmap.md) now prioritizes #9 specifications and the remaining offline modules; other platforms and formal release gates remain separate from this accepted Windows conjugation scope.
 
 ## Delivery order
 

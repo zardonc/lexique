@@ -1,5 +1,7 @@
 # B03／S2a：安全升级并选定现有单词音频，统一归属与删除保护
 
+2026-11-08 后续播放目标为[80–240 WPM](../speech-preferences.md)，尚未接入。速度仍不是内容版本；本票已验收的归属与保留规则保持，新设置见[独立计划](../lookup-notes-speech-plan.md)。
+
 ## Parent
 
 [#24 复习队列、选定单词音频与安全清理规格](https://github.com/zardonc/lexique/issues/24)。

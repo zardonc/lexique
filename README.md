@@ -1,8 +1,10 @@
 # Lexique
 
-法语离线词典与复习应用的开发骨架。Lexique 是暂定工作名，当前版本为 `0.1.0`，不是可用的学习产品。
+法语离线词典与复习应用的开发版。Lexique 是暂定工作名，当前版本为 `0.1.0`，尚未正式发行。
 
 基于 2026-10-24 的需求基线与最新原型调整：Tauri 2、React、TypeScript、Rust、SQLite。第一阶段面向 Windows 11 / macOS 的 x64 与 ARM64，第二阶段为包含实际 WASM 的自部署复习应用。
+
+2026-11-08：后续开发继续使用已接入的 Supertonic 3 CPU 语音，停止其他 TTS 模型测试；#6 已测试且音质不满足要求，#7 未测试、取消计划。新增首期需求为其他应用选词、屏幕区域 OCR、生词词频颜色及 80–240 WPM 朗读速度，均尚未接入。下一步按 WPM → 词频 → 系统选词 → 屏幕 OCR → #9 与剩余离线核心推进，再到 M4 服务／文件同步、M5 八种发行物及 M6 浏览器复习，见[交付计划](docs/lookup-notes-speech-plan.md)、[开发路线](docs/roadmap.md)和 [ADR 0009](docs/adr/0009-continue-with-supertonic-3.md)。历史证据、Supertonic 3 许可、干净机器及其他平台发行门槛继续适用。
 
 ## 开始开发
 

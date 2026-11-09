@@ -1,6 +1,6 @@
 # 法语语音偏好与 WPM
 
-更新：2026-11-08。[#56](https://github.com/zardonc/lexique/issues/56)已接入共用朗读语速。Windows x64 的真实 SQLite、原生重启、播放及学习数据保持检查通过；端点清晰度与音高的人工试听待确认。命令、校准和限制见 [#56 证据](evidence/issue-56/README.md)。
+更新：2026-11-08。[#56](https://github.com/zardonc/lexique/issues/56)已接入共用朗读语速。Windows x64 的真实 SQLite、原生重启、播放及学习数据保持检查通过；端点清晰度与音高的人工试听获用户确认。用户报告本次干净系统测试通过，其他平台测试按用户要求暂缓；语音路线见 [ADR 0009](adr/0009-continue-with-supertonic-3.md)。命令、校准和限制见 [#56 证据](evidence/issue-56/README.md)。
 
 ## 设置与播放
 

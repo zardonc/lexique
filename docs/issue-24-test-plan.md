@@ -1,5 +1,7 @@
 # #24 优化测试计划
 
+2026-11-08 的[WPM 需求](speech-preferences.md)尚未接入。新设置须补充两声线基准、80／180／240、旧 normal／slow 读取、共用播放器与数据保持检查；下述 #24 测试和历史倍率结果继续作为原验收证据，新增执行安排见[后续计划](lookup-notes-speech-plan.md)。
+
 当前实现与验收结果见[#24实施记录](evidence/issue-24/continuation-2026-11-04.md)和[逐项覆盖](evidence/issue-24/acceptance-matrix-2026-11-05.md)；用户于2026-11-05确认干净系统离线测试通过，#24本期验收完成。下文保留规格／发布阶段的计划与状态记录。
 
 设计确认：2026-11-03；状态核对：2026-11-04。Q10已共同确认的测试设计继续作为完整验收基线；部分存储、UI 和原生回归已执行，逐项结果以[专项证据](evidence/issue-24/README.md)及[架构核对](evidence/issue-24/architecture-reconciliation-2026-11-04.md)为准，不能由此认定全部 50 项或父票通过。
