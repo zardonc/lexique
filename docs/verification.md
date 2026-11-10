@@ -1,5 +1,13 @@
 # 骨架验证记录
 
+## #56–#59 与 #9 D1／D3 的合并验收
+
+2026-11-09，[PR #61](https://github.com/zardonc/lexique/pull/61) 已合并至 `main`，合并提交为 [1d5934d](https://github.com/zardonc/lexique/commit/1d5934d34c182a3edebebc96d83196a5a0ff5c55)。[共用 WPM](evidence/issue-56/README.md)、[词频标记](evidence/issue-57/README.md)、[系统取词](evidence/issue-58/README.md)与[屏幕／图片 OCR](evidence/issue-59/README.md)已交付并关闭 #56–#59；[D1／D3 证据](evidence/issue-9/README.md)记录最终包的多 MDX、已有动词原形及实际 IPC 验收。
+
+合并前提交 `0c537de` 的 [push](https://github.com/zardonc/lexique/actions/runs/42724245839)／[PR](https://github.com/zardonc/lexique/actions/runs/42724252432) 两轮 22 项检查全部通过，合并后的 [main CI](https://github.com/zardonc/lexique/actions/runs/42725581958) 也通过。合并树与该验收提交相同，包含四目标原生编译、前端、后端、资源、文档与 Windows 便携包检查。
+
+#9 保持开放：D1 与 D3 的[已批准范围](lookup-enhancement-slices.md)完成，D4 的 #21／#22 完成状态保持；D2 完整词典／CEFR、C1–C4、其他平台实机及 M5 正式发行门槛继续保留。各项原生证据的适用范围不因编译或 CI 通过扩大。
+
 ## 多 MDX 与已有动词原形（issue #9 D1／D3）
 
 2026-11-09，用户批准的两片已完成 Windows x64 产品验收。MDX 导入与顺序保存、按需标签、独立错误及隔离正文接入真实原生 IPC；词形关联复用已有普通／代词式动词资源，候选须在当前词典核对并明确选择。文件与学习库分开管理，移出列表保留文件；收藏复查来源，操作重放及旧内置引用保持兼容，schema 仍为 17。
