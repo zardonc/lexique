@@ -299,13 +299,14 @@ fn saved_word(connection: &mut Connection) -> i64 {
     };
     let snapshot = Snapshot {
         reference: Reference {
+            dictionary_id: None,
             dictionary: "FreeDict".into(),
             lookup_key: "école".into(),
             version: "1".into(),
-            attribution: "source".into(),
-            license: "CC-BY-SA-3.0".into(),
-            source_url: "https://example.org".into(),
-            license_url: "https://example.org".into(),
+            attribution: Some("source".into()),
+            license: Some("CC-BY-SA-3.0".into()),
+            source_url: Some("https://example.org".into()),
+            license_url: Some("https://example.org".into()),
             sha256: "a".repeat(64),
         },
         digest: vec![DigestEntry {

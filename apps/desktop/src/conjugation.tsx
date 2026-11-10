@@ -35,11 +35,12 @@ function VerbMetadata({ table, text }: { readonly table: ConjugationTable; reado
     {verb.ordinary_status === 'not_applicable' && !verb.pronominal && <p>{text.rawOnly}</p>}</>;
 }
 
-function Results({ result, selected, onSelect, text, mode, order, runtime, locale, dictionaryKey, onDictionary }: {
+function Results({ result, selected, onSelect, text, mode, order, runtime, locale, dictionaryKey, dictionaryId, onDictionary }: {
   readonly result: ConjugationLookup; readonly selected: string; readonly onSelect: (lemma: string) => void; readonly text: ConjugationText;
   readonly mode: ConjugationMode; readonly order: ConjugationOrder;
   readonly runtime: RuntimeAdapter; readonly locale: Locale; readonly dictionaryKey?: string;
   readonly onDictionary: (view: DictionaryView) => void;
+  readonly dictionaryId?: string;
 }) {
   const tables = [...result.tables].sort((a, b) => a.lemma.localeCompare(b.lemma, 'fr') || (a.lemma < b.lemma ? -1 : 1));
   const table = tables.find((candidate) => candidate.lemma === selected);
@@ -53,7 +54,7 @@ function Results({ result, selected, onSelect, text, mode, order, runtime, local
       </button>)}</div>}
     {tables.length > 1 && !table && <p>{text.choose}</p>}
     {table && <article className="conjugation-table"><h3 lang="fr" tabIndex={-1}>{table.lemma}</h3><VerbMetadata table={table} text={text} />
-      <ConjugationDictionary runtime={runtime} locale={locale} lemma={table.lemma} dictionaryKey={dictionaryKey} onOpen={onDictionary} />
+      <ConjugationDictionary runtime={runtime} locale={locale} lemma={table.lemma} dictionaryKey={dictionaryKey} dictionaryId={dictionaryId} onOpen={onDictionary} />
       <ColoringNotice table={table} mode={mode} text={text} />
       <ConjugationBlocks key={table.lemma} table={table} query={result.query} text={text} mode={mode} order={order} runtime={runtime} locale={locale} />
       <details><summary>{text.source}</summary><pre>{JSON.stringify(table, null, 2)}</pre></details></article>}
@@ -76,7 +77,7 @@ export function ConjugationPanel({ runtime, locale, initial, onChange, onDiction
   const [mode, setMode] = useState<ConjugationMode>('ending');
   const [order, setOrder] = useState<ConjugationOrder>(defaultConjugationOrder);
   const panel = useRef<HTMLDivElement>(null);
-  useEffect(() => { onChange({ key, result, selected, dictionaryKey: initial.dictionaryKey }); }, [key, result, selected, initial.dictionaryKey, onChange]);
+  useEffect(() => { onChange({ key, result, selected, dictionaryKey: initial.dictionaryKey, dictionaryId: initial.dictionaryId }); }, [key, result, selected, initial.dictionaryKey, initial.dictionaryId, onChange]);
   // Restore focus on entry while leaving preference controls in charge afterward.
   useEffect(() => { if (initial.selected) panel.current?.querySelector<HTMLHeadingElement>('.conjugation-table h3')?.focus(); }, []);
   async function search(event: FormEvent) {
@@ -99,6 +100,6 @@ export function ConjugationPanel({ runtime, locale, initial, onChange, onDiction
     {result === null && <p role="status">{text.preview}</p>}
     {error && <div role="alert"><p>{text[error.code]}</p><details><summary>{text.source}</summary><p>{error.message}</p></details></div>}
     {result && <Results result={result} selected={selected} onSelect={setSelected} text={text} mode={mode} order={order}
-      runtime={runtime} locale={locale} dictionaryKey={initial.dictionaryKey} onDictionary={onDictionary} />}
+      runtime={runtime} locale={locale} dictionaryKey={initial.dictionaryKey} dictionaryId={initial.dictionaryId} onDictionary={onDictionary} />}
   </div>;
 }

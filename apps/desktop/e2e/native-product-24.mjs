@@ -33,15 +33,15 @@ try {
     for (let attempt = 0; attempt < 150; attempt++) { status = await invoke('review_batch_status', { operation: 'product-six' }); if (status.items.every((item) => ['ready', 'failed', 'cancelled'].includes(item.audio_state))) break; await new Promise((done) => setTimeout(done, 50)); }
     const decoded = [];
     for (const id of ids) {
-      const bytes = await measured('speech_cached', { vocabularyId: id });
+      const { bytes } = await measured('speech_cached', { vocabularyId: id });
       const context = new AudioContext({ sampleRate: 48000 });
       try { const audio = await context.decodeAudioData(new Uint8Array(bytes).buffer); decoded.push({ channels: audio.numberOfChannels, duration: audio.duration, finite: audio.getChannelData(0).every(Number.isFinite), audible: audio.getChannelData(0).some((sample) => sample !== 0) }); } finally { await context.close(); }
     }
-    const bytes = await invoke('speech_cached', { vocabularyId: ids[0] });
+    const { bytes } = await invoke('speech_cached', { vocabularyId: ids[0] });
     const audio = document.createElement('audio'); const url = URL.createObjectURL(new Blob([new Uint8Array(bytes)], { type: 'audio/ogg' })); audio.src = url;
     const start = performance.now(); await audio.play(); metrics.push({ command: 'actual-play-start', ms: performance.now() - start });
     await new Promise((done, reject) => { audio.onended = done; audio.onerror = reject; }); URL.revokeObjectURL(url);
-    return { metrics, ids, batch, duringCardCount: during.queue.cards.length, duringAdmittedCount: during.summary.admitted_count, status, decoded, interactiveBytes: interactive.length, dictionaryCount: dictionary.entries.length, edited: edited.record.notes, rated: rated.status };
+    return { metrics, ids, batch, duringCardCount: during.queue.cards.length, duringAdmittedCount: during.summary.admitted_count, status, decoded, interactiveBytes: interactive.bytes.length, dictionaryCount: dictionary.entries.length, edited: edited.record.notes, rated: rated.status };
   });
   assert.ok(result.batch.items.every((item) => item.created_cards === 2));
   assert.ok(result.duringCardCount <= 4);
@@ -56,7 +56,7 @@ try {
   const restored = await page.evaluate(async (ids) => {
     const invoke = window.__TAURI_INTERNALS__.invoke;
     const status = await invoke('review_batch_status', { operation: 'product-six' });
-    const cached = await invoke('speech_cached', { vocabularyId: ids[0] });
+    const { bytes: cached } = await invoke('speech_cached', { vocabularyId: ids[0] });
     const cards = await invoke('review_cards', { vocabularyId: ids[0] });
     return { status, cachedBytes: cached.length, progress: await invoke('review_progress', { cardId: cards[0].id }) };
   }, result.ids);

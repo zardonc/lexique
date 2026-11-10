@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-ocr-abort"
+description = "Enables the ocr_abort command without any pre-configured scope."
+commands.allow = ["ocr_abort"]
+
+[[permission]]
+identifier = "deny-ocr-abort"
+description = "Denies the ocr_abort command without any pre-configured scope."
+commands.deny = ["ocr_abort"]

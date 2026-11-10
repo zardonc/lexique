@@ -15,7 +15,7 @@ try {
   let page = await fixture.start();
   const before = await page.evaluate(async () => {
     const invoke = window.__TAURI_INTERNALS__.invoke;
-    const bytes = await invoke('speech_preview', { text: 'école' });
+    const { bytes } = await invoke('speech_preview', { text: 'école' });
     const saved = await invoke('vocabulary_save', { request: { operation: 'recovery-save', headword: 'école', notes: 'keep', example_fr: '', example_zh: '', example_sense: null, more_examples: [], id: null, revision: null } });
     await invoke('review_add_batch', { request: { operation: 'recovery-batch', vocabulary_ids: [saved.record.id] } });
     await invoke('review_pause', { vocabularyId: saved.record.id, paused: true });
@@ -34,7 +34,7 @@ print(json.dumps(dict(semantic_key=key,spec=spec,context=context,content_hash=co
   page = await fixture.start();
   const restored = await page.evaluate(async (id) => {
     const invoke = window.__TAURI_INTERNALS__.invoke;
-    return { bytes: await invoke('speech_cached', { vocabularyId: id }), cards: await invoke('review_cards', { vocabularyId: id }), paused: await invoke('review_pause', { vocabularyId: id, paused: null }), schema: (await invoke('runtime_status')).schemaVersion };
+    return { bytes: (await invoke('speech_cached', { vocabularyId: id })).bytes, cards: await invoke('review_cards', { vocabularyId: id }), paused: await invoke('review_pause', { vocabularyId: id, paused: null }), schema: (await invoke('runtime_status')).schemaVersion };
   }, before.id);
   assert.equal(restored.schema, 17); assert.deepEqual(restored.bytes, before.bytes); assert.deepEqual(restored.cards, before.cards); assert.equal(restored.paused, true);
   assert.equal(fixture.workerPids().length, 0);
@@ -48,7 +48,7 @@ c.execute("INSERT INTO speech_versions(locator,semantic_key,content_hash,generat
 c.execute('UPDATE speech_assets SET current_version=?',('e'*64,));c.commit()
 print(json.dumps({'legacy_registered':True,'gc_gap_prepared':True}))`);
   page = await fixture.start();
-  assert.deepEqual(await page.evaluate((id) => window.__TAURI_INTERNALS__.invoke('speech_cached', { vocabularyId: id }), before.id), before.bytes);
+  assert.deepEqual(await page.evaluate((id) => window.__TAURI_INTERNALS__.invoke('speech_cached', { vocabularyId: id }).then(audio => audio.bytes), before.id), before.bytes);
   await fixture.stop(true);
   const gc = inject(`import json,sqlite3,sys
 from pathlib import Path

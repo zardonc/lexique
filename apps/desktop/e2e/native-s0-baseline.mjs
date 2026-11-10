@@ -129,7 +129,7 @@ print(json.dumps({'words':count,'cards':count*2,'missing':missing,'audio':'heade
           example_fr: '', example_zh: '', example_sense: null, more_examples: [], id: null, revision: null } }, 'setup');
         ids.push(saved.record.id);
       }
-      const cache = await measured('speech_preview', { text: 'école' }, 'first-model-and-word');
+      const { bytes: cache } = await measured('speech_preview', { text: 'école' }, 'first-model-and-word');
       await measured('review_add', { vocabularyId: ids[0] }, 'setup');
       await measured('dictionary_lookup', { key: 'école' }, 'idle');
       await measured('speech_cached', { vocabularyId: ids[0] }, 'idle');

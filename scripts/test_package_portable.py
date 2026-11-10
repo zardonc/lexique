@@ -2,6 +2,7 @@
 
 import hashlib
 import json
+import os
 from pathlib import Path
 import struct
 import tempfile
@@ -28,6 +29,14 @@ class PortableTests(unittest.TestCase):
         self.write("target/release/conjugation/conjugation.sqlite3", b"verified conjugation")
         self.write("target/release/conjugation/LICENSE-LGPLLR", b"source forms license")
         self.write("target/release/conjugation/grammalecte-2.3.0/LICENSE-GPL3", b"metadata license")
+        self.write("target/release/frequency/frequency.sqlite3", b"verified frequency")
+        self.write("target/release/frequency/COPYING", b"frequency data license")
+        self.write("target/release/frequency/frequency_sample.py", b"frequency converter source")
+        self.write("target/desktop-frequency-v1/report.json", json.dumps({
+            "sqlite_sha256": hashlib.sha256(b"verified frequency").hexdigest(),
+            "inputs": {"COPYING": hashlib.sha256(b"frequency data license").hexdigest(),
+                       "frequency_sample.py": hashlib.sha256(b"frequency converter source").hexdigest()},
+        }).encode())
         self.write("target/desktop-conjugation-v6-stats/report.json", json.dumps({
             "sqlite_sha256": hashlib.sha256(b"verified conjugation").hexdigest(),
         }).encode())
@@ -36,6 +45,12 @@ class PortableTests(unittest.TestCase):
         }).encode())
         self.write("apps/desktop/src-tauri/tauri.conf.json", b'{"version":"0.1.0"}')
         self.write("resources/freedict-fra-zho-2025.11.23/COPYING", b"original resource license")
+        self.write("resources/tesseract-fra/README.md", b"fixed offline OCR sources")
+        self.write("resources/tesseract-fra/licenses/tessdata-fast.txt", b"French OCR model license")
+        self.write("resources/tesseract-fra/licenses/native/image.txt", b"native image license")
+        self.write("resources/tesseract-fra/fra.traineddata", b"model embedded in the executable")
+        self.write("resources/mdictlib-0.2.8/README.md", b"fixed MDX parser sources")
+        self.write("resources/mdictlib-0.2.8/licenses/mdictlib-0.2.8.txt", b"MDX parser license")
         self.write("LICENSE", b"project license")
 
     def write(self, name, content):
@@ -64,6 +79,15 @@ class PortableTests(unittest.TestCase):
             self.assertEqual(zipped.read(prefix + "dictionary/COPYING"), b"original resource license")
             self.assertEqual(zipped.read(prefix + "conjugation/conjugation.sqlite3"), b"verified conjugation")
             self.assertEqual(zipped.read(prefix + "conjugation/grammalecte-2.3.0/LICENSE-GPL3"), b"metadata license")
+            self.assertEqual(zipped.read(prefix + "frequency/frequency.sqlite3"), b"verified frequency")
+            self.assertEqual(zipped.read(prefix + "frequency/COPYING"), b"frequency data license")
+            self.assertEqual(zipped.read(prefix + "frequency/frequency_sample.py"), b"frequency converter source")
+            self.assertEqual(zipped.read(prefix + "ocr-notices/README.md"), b"fixed offline OCR sources")
+            self.assertEqual(zipped.read(prefix + "ocr-notices/licenses/tessdata-fast.txt"), b"French OCR model license")
+            self.assertEqual(zipped.read(prefix + "ocr-notices/licenses/native/image.txt"), b"native image license")
+            self.assertEqual(zipped.read(prefix + "mdx-notices/README.md"), b"fixed MDX parser sources")
+            self.assertEqual(zipped.read(prefix + "mdx-notices/licenses/mdictlib-0.2.8.txt"), b"MDX parser license")
+            self.assertFalse(any(path.endswith("fra.traineddata") for path in zipped.namelist()))
             self.assertEqual(zipped.read(prefix + "LICENSE"), b"project license")
             self.assertFalse(any("Lexique-data" in path for path in zipped.namelist()))
             description = zipped.read(prefix + "README.txt").decode("utf-8")
@@ -76,6 +100,18 @@ class PortableTests(unittest.TestCase):
             self.assertNotIn("Scoring and a full dictionary are not included", description)
         after = self.files()
         self.assertTrue(all(after[path] == content for path, content in before.items()))
+
+    def test_pre_1980_notice_is_packaged_without_changing_source(self):
+        notice = self.root / "resources/mdictlib-0.2.8/licenses/mdictlib-0.2.8.txt"
+        os.utime(notice, (0, 0))
+        timestamp = notice.stat().st_mtime_ns
+        result = package(self.root)
+        with zipfile.ZipFile(result["archive"]) as zipped:
+            path = self.name + "/mdx-notices/licenses/mdictlib-0.2.8.txt"
+            self.assertEqual(zipped.read(path), b"MDX parser license")
+            self.assertEqual(zipped.getinfo(path).date_time, (1980, 1, 1, 0, 0, 0))
+        self.assertEqual(notice.read_bytes(), b"MDX parser license")
+        self.assertEqual(notice.stat().st_mtime_ns, timestamp)
 
     def test_existing_delivery_archive_or_checksum_is_preserved(self):
         for suffix in ["/keep.txt", ".zip", ".zip.sha256"]:
@@ -119,6 +155,19 @@ class PortableTests(unittest.TestCase):
                 self.assertEqual(self.files(), before)
                 self.assertFalse(self.output.exists())
 
+    def test_mismatched_frequency_or_notice_fails_before_creating_delivery(self):
+        for name in ("frequency.sqlite3", "COPYING", "frequency_sample.py"):
+            with self.subTest(name=name):
+                path = self.root / "target/release/frequency" / name
+                original = path.read_bytes()
+                path.write_bytes(b"changed frequency resource")
+                before = self.files()
+                with self.assertRaisesRegex(ValueError, "frequency"):
+                    package(self.root)
+                self.assertEqual(self.files(), before)
+                self.assertFalse(self.output.exists())
+                path.write_bytes(original)
+
     def test_separate_output_keeps_default_delivery(self):
         self.write("target/portable/" + self.name + ".zip", b"old delivery")
         result = package(self.root, self.root / "new delivery")
@@ -133,6 +182,9 @@ class PortableTests(unittest.TestCase):
         self.write("target/aarch64-pc-windows-msvc/release/conjugation/conjugation.sqlite3", b"verified conjugation")
         self.write("target/aarch64-pc-windows-msvc/release/conjugation/LICENSE-LGPLLR", b"source forms license")
         self.write("target/aarch64-pc-windows-msvc/release/conjugation/grammalecte-2.3.0/LICENSE-GPL3", b"metadata license")
+        self.write("target/aarch64-pc-windows-msvc/release/frequency/frequency.sqlite3", b"verified frequency")
+        self.write("target/aarch64-pc-windows-msvc/release/frequency/COPYING", b"frequency data license")
+        self.write("target/aarch64-pc-windows-msvc/release/frequency/frequency_sample.py", b"frequency converter source")
         result = package(self.root, architecture="arm64")
         with zipfile.ZipFile(result["archive"]) as zipped:
             prefix = "Lexique-0.1.0-windows-arm64-portable/"

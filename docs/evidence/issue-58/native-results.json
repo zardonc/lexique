@@ -1,0 +1,50 @@
+{
+  "initial": {
+    "shortcut": "Ctrl+Alt+Shift+D",
+    "registered": true,
+    "error": null
+  },
+  "saved": {
+    "shortcut": "Ctrl+Alt+K",
+    "registered": true,
+    "error": null
+  },
+  "retained": {
+    "vocabulary": 2,
+    "review_cards": 2,
+    "review_progress": 1,
+    "review_ratings": 1,
+    "word_audio_selections": 1,
+    "protected": 1
+  },
+  "results": [
+    {
+      "check": "default Ctrl+Alt+Shift+D → translation input → explicit offline dictionary lookup",
+      "passed": true
+    },
+    {
+      "check": "separate WebView2 browser webpage → custom shortcut → translation input → explicit dictionary lookup",
+      "passed": true
+    },
+    {
+      "check": "native capture truncates at 5,000 Unicode characters and preserves the last character",
+      "passed": true
+    },
+    {
+      "check": "Win32 RichEdit → custom shortcut → translation input → explicit dictionary lookup",
+      "passed": true
+    },
+    {
+      "check": "native unsaved-note guard preserves learning and selected audio",
+      "passed": true
+    },
+    {
+      "check": "missing dictionary keeps captured input; restoration permits retry",
+      "passed": true
+    },
+    {
+      "check": "shortcut registration and setting survive normal restart",
+      "passed": true
+    }
+  ]
+}

@@ -17,7 +17,7 @@ test('queue shows one combined count and applies new eligibility after advancing
 test('skipping recognition opens the queued listening card without rating', async ({ page }) => {
   const recognition = { queue: { cards: [{ id: 1, vocabulary_id: 1, kind: 'recognition' }, { id: 2, vocabulary_id: 1, kind: 'listening' }], reason: null, available_at: null }, record, audio_pending: false, audio_error: null };
   const listening = { queue: { cards: [{ id: 2, vocabulary_id: 1, kind: 'listening' }], reason: null, available_at: null }, record, audio_pending: false, audio_error: null };
-  await nativeFixture(page, { review_queue: [{ value: recognition }, { value: listening }], speech_cached: [{ value: [79, 103, 103, 83] }] });
+  await nativeFixture(page, { review_queue: [{ value: recognition }, { value: listening }], speech_cached: [{ value: { bytes: [79, 103, 103, 83], voice: 'female' } }] });
   await page.goto('/');
   await page.getByRole('button', { name: '闪卡复习', exact: true }).click();
   await page.getByRole('region', { name: '复习卡片' }).getByRole('button', { name: '跳过', exact: true }).click();
@@ -127,7 +127,7 @@ test('skipping failed listening playback advances without rating', async ({ page
   await page.addInitScript(() => { HTMLMediaElement.prototype.play = () => Promise.reject(new Error('speaker unavailable')); });
   const listening = { queue: { cards: [{ id: 2, vocabulary_id: 1, kind: 'listening' }], reason: null, available_at: null }, record, audio_pending: false, audio_error: null };
   const recognition = { queue: { cards: [{ id: 1, vocabulary_id: 1, kind: 'recognition' }], reason: null, available_at: null }, record, audio_pending: false, audio_error: null };
-  await nativeFixture(page, { review_queue: [{ value: listening }, { value: recognition }], speech_cached: [{ value: [79, 103, 103, 83] }] });
+  await nativeFixture(page, { review_queue: [{ value: listening }, { value: recognition }], speech_cached: [{ value: { bytes: [79, 103, 103, 83], voice: 'female' } }] });
   await page.goto('/');
   await page.getByRole('button', { name: '闪卡复习', exact: true }).click();
   await expect(page.getByRole('alert')).toContainText('speaker unavailable');

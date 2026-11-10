@@ -4,6 +4,7 @@ import type { QueueView, RuntimeAdapter } from './platform/runtime';
 import { errorMessage } from './platform/vocabulary';
 import { nextQueueWake, QueueRefresh, readQueue } from './queue-refresh';
 import { subscribeReviewEvents } from './review-events';
+import type { SpeechAudio } from './platform/speech';
 
 type Status = 'loading' | 'ready' | 'preview' | 'error';
 interface Subscription {
@@ -12,7 +13,7 @@ interface Subscription {
   readonly latest: RefObject<QueueView | null>;
   readonly pendingMessage: RefObject<string>; readonly setWakeAt: (value: number | undefined) => void;
   readonly setError: (value: string) => void; readonly setStatus: (value: Status) => void;
-  readonly setView: (value: QueueView | null) => void; readonly setAudio: (value: Uint8Array | null) => void;
+  readonly setView: (value: QueueView | null) => void; readonly setAudio: (value: SpeechAudio | null) => void;
 }
 
 function preservePresentation(current: QueueView | null, result: QueueView | null) {
@@ -34,7 +35,7 @@ function queueAudio(result: QueueView | null, pending: string) {
   const card = result?.queue.cards[0];
   if (card?.kind !== 'listening') return null;
   const entry = result?.window.find((entry) => entry.card.id === card.id);
-  const bytes = entry?.audio ? Uint8Array.from(entry.audio) : null;
+  const bytes = entry?.audio ?? null;
   if (!bytes) throw new Error(pending);
   return bytes;
 }
@@ -70,7 +71,7 @@ function useQueueEvents(options: Subscription) {
 
 export function useReviewQueue(runtime: RuntimeAdapter, pending: string) {
   const [view, setView] = useState<QueueView | null>(null);
-  const [audio, setAudio] = useState<Uint8Array | null>(null);
+  const [audio, setAudio] = useState<SpeechAudio | null>(null);
   const [status, setStatus] = useState<Status>('loading');
   const [error, setError] = useState('');
   const [wakeAt, setWakeAt] = useState<number>();

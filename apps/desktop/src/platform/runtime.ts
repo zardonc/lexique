@@ -5,10 +5,15 @@ import { z } from 'zod';
 import { listen } from '@tauri-apps/api/event';
 import { recordSchema, saveRequestSchema, saveResultSchema, sortSchema } from './vocabulary';
 import type { SaveRequest, SaveResult, VocabularyRecord, VocabularySort } from './vocabulary';
-import { dictionarySchema } from './dictionary';
-import type { DictionaryLookup } from './dictionary';
-import { speechPreferencesSchema } from './speech';
-import type { SpeechPreferences } from './speech';
+import { dictionarySchema, dictionaryQuery, dictionaryId, dictionaryCatalog, dictionaryOrder } from './dictionary';
+import type { DictionaryLookup, DictionaryCatalog } from './dictionary';
+import { frequencyQuery, frequencySchema } from './frequency';
+import type { FrequencyLookup } from './frequency';
+import { speechAudioSchema, speechPreferencesSchema, speechVoiceSchema } from './speech';
+import type { SpeechAudio, SpeechPreferences } from './speech';
+import { readSelectionEvent, selectionText, shortcutStatusSchema, shortcutText } from './selection';
+import type { SelectionEvent, ShortcutStatus } from './selection';
+import type { Locale } from '../content';
 
 const runtimeStatusSchema = z.object({
   version: z.string().min(1),
@@ -70,7 +75,7 @@ export type ReviewSettings = z.infer<typeof reviewSettingsSchema>;
 const queueCardSchema = z.object({ id: z.number().int().positive().safe(), vocabulary_id: z.number().int().positive().safe(), kind: z.enum(['recognition', 'listening']) }).strict();
 const windowEntrySchema = z.object({ card: queueCardSchema, record: recordSchema, progress: progressSchema,
   version: z.string().regex(/^[a-f0-9]{64}$/).nullable(), content_hash: z.string().regex(/^[a-f0-9]{64}$/).nullable(),
-  audio: z.array(z.number().int().min(0).max(255)).max(10_000_000).nullable() }).strict()
+  audio: speechAudioSchema.nullable() }).strict()
   .refine((value) => value.record.id === value.card.vocabulary_id && (value.card.kind !== 'listening' || value.version !== null && value.content_hash !== null), 'Invalid verified queue entry');
 const queuePayloadSchema = z.object({ queue: z.object({ cards: z.array(queueCardSchema).max(4), reason: z.enum(['clock', 'due', 'quota', 'deferred']).nullable(), available_at: z.number().int().safe().nullable() }).strict(), record: recordSchema.nullable(), audio_pending: z.boolean(), audio_error: z.string().nullable(), audio_vocabulary_id: z.number().int().positive().safe().nullable().default(null),
   summary: z.object({ admitted_count: z.number().int().nonnegative().safe(), audio_pending_count: z.number().int().nonnegative().safe(), missing_vocabulary_ids: z.array(z.number().int().positive().safe()).max(100), verification_pending: z.boolean(), learning_day: z.string(), timezone: z.string().min(1).max(128), revision: z.number().int().nonnegative().safe(), unknown_legacy: z.boolean().default(false) }).strict(),
@@ -80,7 +85,7 @@ const queuePayloadSchema = z.object({ queue: z.object({ cards: z.array(queueCard
   .refine((value) => new Set(value.delta.order).size === value.delta.order.length && new Set(value.window.map((entry) => entry.card.id)).size === value.window.length && value.window.every((entry) => value.delta.order.includes(entry.card.id)), 'Invalid queue delta entries');
 const queueViewSchema = queuePayloadSchema
   .refine((value) => value.queue.cards.length ? value.record?.id === value.queue.cards[0]?.vocabulary_id : value.record === null, 'Invalid queue record')
-  .refine((value) => value.window.length === value.queue.cards.length && value.window.every((entry, index) => entry.card.id === value.queue.cards[index]?.id && (entry.card.kind !== 'listening' || entry.audio !== null)) && value.window.reduce((sum, entry) => sum + (entry.audio?.length ?? 0), 0) <= 33_554_432, 'Invalid queue window');
+  .refine((value) => value.window.length === value.queue.cards.length && value.window.every((entry, index) => entry.card.id === value.queue.cards[index]?.id && (entry.card.kind !== 'listening' || entry.audio !== null)) && value.window.reduce((sum, entry) => sum + (entry.audio?.bytes.length ?? 0), 0) <= 33_554_432, 'Invalid queue window');
 export type QueueView = z.infer<typeof queueViewSchema>;
 
 let receivedQueue: QueueView | null = null;
@@ -116,13 +121,25 @@ export type BatchStatus = z.infer<typeof batchSchema>;
 
 export interface RuntimeAdapter {
   readonly getStatus: () => Promise<RuntimeStatus | null>;
-  readonly lookupDictionary: (key: string) => Promise<DictionaryLookup | null>;
+  readonly lookupDictionary: (key: string, dictionaryId?: string) => Promise<DictionaryLookup | null>;
+  readonly dictionarySettings: (order?: readonly string[]) => Promise<DictionaryCatalog | null>;
+  readonly importDictionary: (file: File) => Promise<DictionaryCatalog | null>;
+  readonly removeDictionary: (id: string) => Promise<DictionaryCatalog | null>;
+  readonly lookupFrequency: (keys: readonly string[]) => Promise<FrequencyLookup | null>;
+  readonly onSelectionInput: (callback: (event: SelectionEvent) => void) => Promise<() => void>;
+  readonly captureSelection: (text?: string) => Promise<void>;
+  readonly cancelSelection: () => Promise<void>;
+  readonly selectionShortcut: (shortcut?: string) => Promise<ShortcutStatus | null>;
+  readonly importOcrImage: (bytes: Uint8Array) => Promise<void>;
+  readonly captureScreen: () => Promise<void>;
+  readonly setCaptureLocale: (locale: Locale) => Promise<void>;
+  readonly ocrShortcut: (shortcut?: string) => Promise<ShortcutStatus | null>;
   readonly lookupConjugation: (key: string) => Promise<ConjugationLookup | null>;
   readonly conjugationPreferences: (preferences?: ConjugationPreferences) => Promise<ConjugationPreferences | null>;
   readonly conjugationBlockOrder: (order?: ConjugationOrder) => Promise<ConjugationOrder | null>;
   readonly findVocabulary: (headword: string) => Promise<VocabularyRecord | null>;
   readonly listVocabulary: (query: string, sort: VocabularySort) => Promise<readonly VocabularyRecord[] | null>;
-  readonly saveVocabulary: (request: SaveRequest) => Promise<SaveResult | null>;
+  readonly saveVocabulary: (request: SaveRequest, dictionaryId?: string) => Promise<SaveResult | null>;
   readonly vocabularySort: (sort?: VocabularySort) => Promise<VocabularySort | null>;
   readonly speechPreferences: (preferences?: SpeechPreferences) => Promise<SpeechPreferences | null>;
   readonly addReview: (id: number) => Promise<readonly ReviewCard[] | null>;
@@ -141,14 +158,45 @@ export interface RuntimeAdapter {
   readonly undoReview: (operation: string, ratingOperation: string) => Promise<{ readonly queue_rebuilt: boolean } | null>;
   readonly reviewSettings: (settings?: ReviewSettings) => Promise<ReviewSettings | null>;
   readonly reviewQueue: (skipped?: readonly number[]) => Promise<QueueView | null>;
-  readonly generateSpeech: (id: number, regenerate?: boolean, operation?: string) => Promise<Uint8Array | null>;
-  readonly previewSpeech: (text: string) => Promise<Uint8Array | null>;
-  readonly cachedSpeech: (id: number) => Promise<Uint8Array | null>;
+  readonly generateSpeech: (id: number, regenerate?: boolean, operation?: string) => Promise<SpeechAudio | null>;
+  readonly previewSpeech: (text: string, voice?: SpeechPreferences['voice']) => Promise<SpeechAudio | null>;
+  readonly cachedSpeech: (id: number) => Promise<SpeechAudio | null>;
   readonly onCloseRequested: (callback: () => void) => Promise<() => void>;
   readonly finishClose: () => Promise<void>;
 }
 
+async function readShortcut(command: string, shortcut?: string) {
+  if (!isTauri()) return null;
+  const valid = shortcut === undefined ? null : shortcutText.parse(shortcut);
+  const result = shortcutStatusSchema.parse(await invoke(command, { shortcut: valid }));
+  if (valid !== null && result.shortcut !== valid) throw new Error('Saved shortcut differs from the request');
+  return result;
+}
+
 export const runtime: RuntimeAdapter = {
+  async setCaptureLocale(locale) { if (isTauri()) await invoke('ocr_locale', { locale }); },
+  async captureScreen() {
+    if (!isTauri()) throw new Error('Screen capture is available in the desktop app');
+    await invoke('ocr_capture');
+  },
+  async importOcrImage(bytes) {
+    if (!isTauri()) throw new Error('Image import is available in the desktop app');
+    if (!bytes.length || bytes.length > 16 * 1024 * 1024) throw new Error('PNG/JPEG: 1–16 MiB');
+    await invoke('ocr_image', bytes);
+  },
+  async onSelectionInput(callback) {
+    if (!isTauri()) return () => {};
+    return listen('selection-input', (event) => callback(readSelectionEvent(event.payload)));
+  },
+  async captureSelection(text) {
+    if (!isTauri()) throw new Error('Selection capture is available in the desktop app');
+    await invoke('selection_capture', { text: text === undefined ? null : selectionText.parse(text) });
+  },
+  async cancelSelection() { if (isTauri()) await invoke('selection_cancel'); },
+  async selectionShortcut(shortcut) {
+    return readShortcut('selection_shortcut', shortcut);
+  },
+  async ocrShortcut(shortcut) { return readShortcut('ocr_shortcut', shortcut); },
   async addReviewBatch(request) {
     if (!isTauri()) return null;
     const valid = batchRequestSchema.parse(request);
@@ -176,9 +224,37 @@ export const runtime: RuntimeAdapter = {
     if (!isTauri()) return null;
     return runtimeStatusSchema.parse(await invoke('runtime_status'));
   },
-  async lookupDictionary(key) {
+  async dictionarySettings(order) {
     if (!isTauri()) return null;
-    return dictionarySchema.parse(await invoke('dictionary_lookup', { key }));
+    const valid = order === undefined ? null : dictionaryOrder.parse(order);
+    const result = dictionaryCatalog.parse(await invoke('dictionary_settings', { order: valid }));
+    if (valid && result.some((item, index) => item.id !== valid[index])) throw new Error('Saved dictionary order differs from the request');
+    return result;
+  },
+  async importDictionary(file) {
+    if (!isTauri()) return null;
+    if (!/\.mdx$/i.test(file.name) || !file.size || file.size > 128 * 1024 * 1024) throw { code: 'limit', message: 'MDX: non-empty, at most 128 MiB' };
+    const name = btoa(Array.from(new TextEncoder().encode(file.name), (byte) => String.fromCharCode(byte)).join(''));
+    return dictionaryCatalog.parse(await invoke('dictionary_import', new Uint8Array(await file.arrayBuffer()), { headers: { 'x-lexique-dictionary-name': name } }));
+  },
+  async removeDictionary(id) {
+    if (!isTauri()) return null;
+    return dictionaryCatalog.parse(await invoke('dictionary_remove', { id: dictionaryId.parse(id) }));
+  },
+  async lookupDictionary(key, id) {
+    if (!isTauri()) return null;
+    if (!dictionaryQuery.safeParse(key).success) throw { code: 'invalid_query', message: 'Enter 1–512 UTF-8 bytes without control characters' };
+    const result = dictionarySchema.parse(await invoke('dictionary_lookup', { key, dictionary_id: id === undefined ? null : dictionaryId.parse(id) }));
+    if (id !== undefined && (result.dictionary_id ?? 'builtin') !== id) throw new Error('Dictionary response source differs from the request');
+    return result;
+  },
+  async lookupFrequency(keys) {
+    if (!isTauri()) return null;
+    const valid = frequencyQuery.parse(keys);
+    const result = frequencySchema.parse(await invoke('frequency_lookup', { keys: valid }));
+    if (result.entries.length !== valid.length || result.entries.some((entry, index) => entry.key !== valid[index]))
+      throw new Error('Frequency response queries differ from the request');
+    return result;
   },
   async lookupConjugation(key) {
     if (!isTauri()) return null;
@@ -209,9 +285,9 @@ export const runtime: RuntimeAdapter = {
     if (!isTauri()) return null;
     return recordSchema.array().readonly().parse(await invoke('vocabulary_list', { query, sort: sortSchema.parse(sort) }));
   },
-  async saveVocabulary(request) {
+  async saveVocabulary(request, id) {
     if (!isTauri()) return null;
-    return saveResultSchema.parse(await invoke('vocabulary_save', { request: saveRequestSchema.parse(request) }));
+    return saveResultSchema.parse(await invoke('vocabulary_save', { request: saveRequestSchema.parse(request), dictionary_id: id === undefined ? null : dictionaryId.parse(id) }));
   },
   async vocabularySort(sort) {
     if (!isTauri()) return null;
@@ -279,10 +355,8 @@ export const runtime: RuntimeAdapter = {
       const code = character.charCodeAt(0); return code >= 32 && (code < 127 || code > 159);
     })).parse(operation);
     try {
-      const bytes = z.array(z.number().int().min(0).max(255)).min(1).max(10_000_000)
-        .parse(await invoke('speech_generate', { vocabularyId: z.number().int().positive().safe().parse(id), operation: validOperation,
+      return speechAudioSchema.parse(await invoke('speech_generate', { vocabularyId: z.number().int().positive().safe().parse(id), operation: validOperation,
           ...(regenerate ? { regenerate: true } : {}) }));
-      return new Uint8Array(bytes);
     } catch (cause) {
       if (typeof cause === 'string' && cause.startsWith('Audio generation failed: ')) throw new AudioGenerationFailed(cause);
       throw cause;
@@ -290,15 +364,14 @@ export const runtime: RuntimeAdapter = {
   },
   async cachedSpeech(id) {
     if (!isTauri()) return null;
-    const bytes = z.array(z.number().int().min(0).max(255)).min(1).max(10_000_000).nullable()
+    return speechAudioSchema.nullable()
       .parse(await invoke('speech_cached', { vocabularyId: z.number().int().positive().safe().parse(id) }));
-    return bytes === null ? null : new Uint8Array(bytes);
   },
-  async previewSpeech(text) {
+  async previewSpeech(text, voice) {
     if (!isTauri()) return null;
-    const bytes = z.array(z.number().int().min(0).max(255)).min(1).max(10_000_000)
-      .parse(await invoke('speech_preview', { text }));
-    return new Uint8Array(bytes);
+    return speechAudioSchema.parse(await invoke('speech_preview', {
+      text, ...(voice === undefined ? {} : { voice: speechVoiceSchema.parse(voice) }),
+    }));
   },
   async onCloseRequested(callback) {
     if (!isTauri()) return () => {};

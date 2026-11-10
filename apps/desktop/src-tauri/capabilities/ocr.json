@@ -1,0 +1,7 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "ocr",
+  "description": "Frozen screen windows may read their own screenshot, select a region or cancel.",
+  "windows": ["ocr-*"],
+  "permissions": ["allow-ocr-screen", "allow-ocr-region", "allow-ocr-abort"]
+}

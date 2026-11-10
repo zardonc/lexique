@@ -2,6 +2,13 @@ import type { Locale } from './content';
 
 export const notebookMessages = {
   zh: {
+    frequency: { locale: 'zh-CN', high: '高频', medium: '中频', low: '低频', unknown: '暂无词频', details: '词频数值与来源',
+      corpus: '电影／电视剧字幕', lemma: '词元', total: '词性合计', units: '次／百万词', parts: '去重后的词性频率', pos: '词性', reason: '统计状态',
+      missingPos: '未记录词性', candidates: '可能的词元', loading: '正在读取词频…', readError: '词频读取失败', retry: '重试词频',
+      preview: '浏览器预览无法读取内置词频。', standard: '产品分档：高频 ≥100，中频 ≥10，低频 ≥0 次／百万词。词频不推导 CEFR 等级。',
+      reasons: { missing: '来源缺少频率', invalid: '来源数值无效', conflict: '同词元／词性数值冲突', missing_pos: '来源未记录词性，合计暂不可用',
+        ambiguous: '词形对应多个词元，无法可靠确定词频', not_found: '来源未收录该词头或可靠词元' } },
+    approximateSpeed: '旧音频声线未知，按默认女声基准近似播放。',
     regenerateSpeech: '重新生成语音',
     batchProgress: '批量任务', cardsCreated: '已创建卡片', audioProgress: '音频完成', stopAudio: '停止剩余音频生成', audioCancelled: '已停止剩余生成；卡片与完成音频保留',
     pageSize: '每页词数', previousPage: '上一页', nextPage: '下一页',
@@ -30,6 +37,13 @@ export const notebookMessages = {
     availability: { due: '尚未到期', quota: '今日额度已用完', deferred: '同词卡片暂缓', paused: '复习已暂停', clock: '设备时间早于最近评分，请检查时间', conflict: '卡片已被其他操作修改', invalid: '评分请求无效' },
   },
   en: {
+    frequency: { locale: 'en', high: 'High frequency', medium: 'Medium frequency', low: 'Low frequency', unknown: 'Frequency unavailable', details: 'Frequency values and source',
+      corpus: 'Film/television subtitles', lemma: 'Lemma', total: 'POS total', units: 'per million words', parts: 'Distinct POS frequencies', pos: 'Part of speech', reason: 'Status',
+      missingPos: 'Unrecorded POS', candidates: 'Possible lemmas', loading: 'Loading frequency…', readError: 'Could not read frequency', retry: 'Retry frequency',
+      preview: 'Browser preview cannot read bundled frequency data.', standard: 'Product bands: high ≥100, medium ≥10, low ≥0 per million words. Frequency does not determine CEFR levels.',
+      reasons: { missing: 'Source frequency is missing', invalid: 'Source value is invalid', conflict: 'Conflicting values for this lemma/POS', missing_pos: 'Source POS is missing; total is unavailable',
+        ambiguous: 'The form has multiple possible lemmas; frequency is uncertain', not_found: 'No recorded headword or reliable lemma in this source' } },
+    approximateSpeed: 'Unknown legacy voice; speed is approximate using the default female voice.',
     regenerateSpeech: 'Regenerate audio',
     batchProgress: 'Batch tasks', cardsCreated: 'Cards created', audioProgress: 'Audio complete', stopAudio: 'Stop remaining audio', audioCancelled: 'Remaining generation stopped; cards and completed audio kept',
     pageSize: 'Words per page', previousPage: 'Previous page', nextPage: 'Next page',
@@ -58,6 +72,13 @@ export const notebookMessages = {
     availability: { due: 'Not due yet', quota: 'Daily limit reached', deferred: 'Other card deferred', paused: 'Review paused', clock: 'Device time is before the last rating; check the clock', conflict: 'Card changed in another operation', invalid: 'Invalid rating request' },
   },
   fr: {
+    frequency: { locale: 'fr', high: 'Fréquence élevée', medium: 'Fréquence moyenne', low: 'Fréquence faible', unknown: 'Fréquence indisponible', details: 'Valeurs et source de fréquence',
+      corpus: 'Sous-titres de films et de séries', lemma: 'Lemme', total: 'Total des catégories', units: 'par million de mots', parts: 'Fréquences par catégorie distincte', pos: 'Catégorie', reason: 'État',
+      missingPos: 'Catégorie non renseignée', candidates: 'Lemmes possibles', loading: 'Chargement de la fréquence…', readError: 'Lecture de fréquence impossible', retry: 'Réessayer la fréquence',
+      preview: 'L’aperçu web ne peut pas lire les fréquences intégrées.', standard: 'Seuils du produit : élevée ≥100, moyenne ≥10, faible ≥0 par million de mots. La fréquence ne détermine pas le niveau CECR.',
+      reasons: { missing: 'Fréquence absente de la source', invalid: 'Valeur source invalide', conflict: 'Valeurs contradictoires pour ce lemme et cette catégorie', missing_pos: 'Catégorie absente ; total indisponible',
+        ambiguous: 'Plusieurs lemmes possibles ; fréquence incertaine', not_found: 'Mot ou lemme fiable absent de cette source' } },
+    approximateSpeed: 'Ancienne voix inconnue : vitesse approximative basée sur la voix féminine par défaut.',
     regenerateSpeech: 'Régénérer l’audio',
     batchProgress: 'Tâches du lot', cardsCreated: 'Cartes créées', audioProgress: 'Audio terminé', stopAudio: 'Arrêter les audios restants', audioCancelled: 'Génération restante arrêtée ; cartes et audios terminés conservés',
     pageSize: 'Mots par page', previousPage: 'Page précédente', nextPage: 'Page suivante',

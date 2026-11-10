@@ -51,6 +51,13 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
     conjugation = release / "conjugation"
     if hashlib.sha256((conjugation / "conjugation.sqlite3").read_bytes()).hexdigest() != conjugation_report["sqlite_sha256"]:
         raise ValueError("Release conjugation does not match the prepared resource")
+    frequency_report = json.loads((root / "target/desktop-frequency-v1/report.json").read_text())
+    frequency = release / "frequency"
+    if hashlib.sha256((frequency / "frequency.sqlite3").read_bytes()).hexdigest() != frequency_report["sqlite_sha256"]:
+        raise ValueError("Release frequency does not match the prepared resource")
+    for filename, expected in frequency_report["inputs"].items():
+        if hashlib.sha256((frequency / filename).read_bytes()).hexdigest() != expected:
+            raise ValueError(f"Release frequency source or notice differs: {filename}")
     if all(speech_inputs):
         with tempfile.TemporaryDirectory(prefix="lexique-speech-stage-") as temporary:
             staged = Path(temporary) / "speech"
@@ -63,11 +70,15 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
     shutil.copytree(root / "resources/freedict-fra-zho-2025.11.23", output / "dictionary")
     shutil.copy2(dictionary, output / "dictionary/dictionary.sqlite3")
     shutil.copytree(conjugation, output / "conjugation")
+    shutil.copytree(frequency, output / "frequency")
+    shutil.copytree(root / "resources/tesseract-fra/licenses", output / "ocr-notices/licenses")
+    shutil.copy2(root / "resources/tesseract-fra/README.md", output / "ocr-notices/README.md")
+    shutil.copytree(root / "resources/mdictlib-0.2.8", output / "mdx-notices")
     shutil.copy2(root / "LICENSE", output / "LICENSE")
     (output / "README.txt").write_text(
         f"Lexique {config['version']} - Windows 11 {architecture.upper()} portable development sample\n\n"
         "Extract the entire ZIP into a writable folder, then open Lexique.exe.\n"
-        "Keep dictionary/ and conjugation/ beside the executable. No installer or first-run download is used.\n"
+        "Keep dictionary/, conjugation/ and frequency/ beside the executable. No installer or first-run download is used.\n"
         "Requires an existing Microsoft Edge WebView2 runtime (normally present on Windows 11).\n"
         "If Lexique cannot open because WebView2 is missing, install the Microsoft Edge\n"
         "WebView2 Evergreen Runtime from https://developer.microsoft.com/microsoft-edge/webview2/\n"
@@ -83,6 +94,12 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
         "This sample provides FreeDict fra-zho lookup and M1 vocabulary notes with explicit save,\n"
         "search, sorting and restart recovery. Saved words can be added to two review cards;\n"
         "review scoring and card progress survive restart. A full dictionary is not included.\n"
+        "Selection shortcut: Ctrl+Alt+Shift+D. Screen OCR shortcut: Ctrl+Alt+Shift+O.\n"
+        "Both shortcuts can be changed in Settings. Selection and OCR enter the Translation\n"
+        "input, retaining the first 5,000 Unicode characters; dictionary lookup is explicit.\n"
+        "Offline French OCR runtime and model are embedded. Licenses and sources: ocr-notices/.\n"
+        "Add MDX dictionaries in Settings. Imported copies stay in Lexique-data/.\n"
+        "Dictionary order is saved; other tab bodies load on selection. Parser licenses: mdx-notices/.\n"
         "Conjugation uses the compact format-6 resource with 23 ordinary/pronominal reference blocks.\n"
         "Query normalization, three color modes, saved block order and dictionary navigation are included.\n"
         "Keep the format-6 resource with its matching rebuilt reader when updating.\n"
@@ -100,6 +117,13 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
         "notices in conjugation/freedict-fra-eng-0.4.1/. Missing meanings leave tables usable.\n"
         "Raw sources, provenance, corrections, decoder, LGPL-LR ending rules and eight MIT converters\n"
         "accompany the resource.\n\n"
+        "Notebook frequency labels use Lexique 3.83 subtitle lemma/POS statistics.\n"
+        "Frequency data and its derived database: CC BY-SA 4.0 (frequency/COPYING).\n"
+        "Original source, attribution, provenance and the MIT converter accompany frequency/.\n"
+        "Rebuild frequency: copy frequency/Lexique383.tsv.gz, COPYING, UPSTREAM-README.txt,\n"
+        "README.md and provenance.json into resources/lexique-3.83/ in a new workspace;\n"
+        "copy frequency/frequency_sample.py into scripts/ and LICENSE-MIT into LICENSE.\n"
+        "Run python -B -X utf8 scripts/frequency_sample.py target/rebuilt-frequency.\n\n"
         "Rebuild conjugation with Python 3.12+ (standard library only): in a new workspace,\n"
         "copy conjugation/conjugation_*.py and conjugation/conjugation_endings.json into scripts/,\n"
         "LICENSE into the workspace root,\n"
@@ -114,7 +138,7 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
     checksums = {path.relative_to(output).as_posix(): hashlib.sha256(path.read_bytes()).hexdigest()
                  for path in files}
     (output / "SHA256SUMS.json").write_text(json.dumps(checksums, indent=2) + "\n")
-    with zipfile.ZipFile(archive, "x", zipfile.ZIP_DEFLATED, compresslevel=9) as zipped:
+    with zipfile.ZipFile(archive, "x", zipfile.ZIP_DEFLATED, compresslevel=9, strict_timestamps=False) as zipped:
         for path in sorted(output.rglob("*")):
             if path.is_file():
                 zipped.write(path, path.relative_to(output.parent))

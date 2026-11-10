@@ -1,0 +1,14 @@
+{"ms":2397,"event":"host-start","stopping":false,"pid":2316}
+{"ms":3411,"event":"navigation-ready","stopping":false}
+{"ms":25712,"event":"host-stderr","stopping":false,"message":"[native-lifecycle] Window CloseRequested\n"}
+{"ms":28336,"event":"stop-request","stopping":true,"normal":true}
+{"ms":28339,"event":"host-stderr","stopping":true,"message":"[native-lifecycle] finish_close accepted\n"}
+{"ms":28404,"event":"page-closed","stopping":true}
+{"ms":28478,"event":"cdp-disconnected","stopping":true}
+{"ms":28480,"event":"host-exit","stopping":true,"code":0,"signal":null}
+{"ms":28781,"event":"host-start","stopping":false,"pid":25536}
+{"ms":29464,"event":"navigation-ready","stopping":false}
+{"ms":29772,"event":"stop-request","stopping":true,"normal":false}
+{"ms":29776,"event":"page-closed","stopping":true}
+{"ms":29777,"event":"cdp-disconnected","stopping":true}
+{"ms":30046,"event":"host-exit","stopping":true,"code":1,"signal":null}

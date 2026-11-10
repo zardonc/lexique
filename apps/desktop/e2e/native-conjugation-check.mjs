@@ -40,7 +40,7 @@ async function snapshot(page) {
     const cards = await Promise.all(records.map((record) => invoke('review_cards', { vocabularyId: record.id })));
     const progress = await Promise.all(cards.flat().map((card) => invoke('review_progress', { cardId: card.id })));
     const audio = await Promise.all(records.map((record, index) => cards[index].some((card) => card.kind === 'listening')
-      ? invoke('speech_cached', { vocabularyId: record.id }) : null));
+      ? invoke('speech_cached', { vocabularyId: record.id }).then(audio => audio.bytes) : null));
     return { records, cards, progress, audio, preferences: await invoke('speech_preferences', { preferences: null }) };
   });
 }
@@ -578,7 +578,7 @@ function expressionAsset(text, voice = 'female') {
   return JSON.parse(preferenceSql(`row=c.execute("SELECT a.spec,v.generated_at,v.expires_at,v.locator,v.byte_length FROM speech_assets a JOIN speech_versions v ON v.locator=a.current_version WHERE json_extract(a.spec,'$.text')=? AND json_extract(a.spec,'$.voice')=?",sys.argv[2:]).fetchone()
 print(json.dumps(dict(spec=json.loads(row[0]),generatedAt=row[1],expiresAt=row[2],version=row[3],bytes=row[4]) if row else None))`, text, voice));
 }
-async function playNativeExpression(page, expression, rate = 1) {
+async function playNativeExpression(page, expression, rate) {
   const expected = await page.evaluate(() => Reflect.get(window, 'expressionPlayers').length);
   const preferences = await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('speech_preferences', { preferences: null }));
   const play = page.getByRole('button', { name: `Play expression: ${expression} (Machine-generated speech)`, exact: true }).first();
@@ -590,7 +590,8 @@ async function playNativeExpression(page, expression, rate = 1) {
   }, expected);
   const asset = expressionAsset(expression, preferences.voice); assert.ok(asset);
   assert.equal(asset.spec.text, expression); assert.equal(asset.bytes, result.bytes); assert.deepEqual(result.ogg, [79, 103, 103, 83]);
-  assert.ok(result.bytes > 128 && result.currentTime > 0); assert.equal(result.rate, rate);
+  assert.ok(result.bytes > 128 && result.currentTime > 0);
+  assert.equal(result.rate, rate ?? preferences.wpm / (preferences.voice === 'male' ? 149.148901 : 149.256686));
   await expect(play).toBeEnabled();
   if (expected > 0) assert.equal(await page.evaluate((index) => Reflect.get(window, 'expressionPlayers')[index - 1].element.paused, expected), true, 'Choosing another expression must pause the previous clip');
   return { text: asset.spec.text, voice: asset.spec.voice, version: asset.version, ...result };
@@ -680,9 +681,9 @@ async function speechAcceptance(page) {
   await expect.poll(() => expressionAsset('nous avions lavé')?.generatedAt, { timeout: 20_000 }).toBeGreaterThan(0);
   assert.equal(await page.evaluate(() => Reflect.get(window, 'expressionPlayers').length), 1, 'A cancelled table response cannot interrupt concurrent word playback');
   const alternatives = await expressionAlternatives(page);
-  await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('speech_preferences', { preferences: { voice: 'male', speed: 'slow' } }));
-  await conjugationSearch(page, 'paie'); const slow = await playNativeExpression(page, 'je paie', 0.6);
-  await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('speech_preferences', { preferences: { voice: 'male', speed: 'normal' } }));
+  await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('speech_preferences', { preferences: { voice: 'male', wpm: 100 } }));
+  await conjugationSearch(page, 'paie'); const slow = await playNativeExpression(page, 'je paie', 100 / 149.148901);
+  await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('speech_preferences', { preferences: { voice: 'male', wpm: 180 } }));
   const normal = await playNativeExpression(page, 'je paie');
   assert.equal(normal.version, slow.version, 'Changing speed must reuse the same audio version');
   assert.equal(await page.evaluate(async () => { const players = Reflect.get(window, 'expressionPlayers'); return JSON.stringify(await players.at(-1).bytes) === JSON.stringify(await players.at(-2).bytes); }), true, 'Changing speed must reuse the same audio bytes');
@@ -713,9 +714,9 @@ async function freshPackageAcceptance(page, firstLaunchMs) {
   const custom = await navigationBrowse(page);
   await trackExpressionSpeech(page);
   const alternatives = await expressionAlternatives(page);
-  await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('speech_preferences', { preferences: { voice: 'male', speed: 'slow' } }));
-  await conjugationSearch(page, 'paie'); const slow = await playNativeExpression(page, 'je paie', 0.6);
-  await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('speech_preferences', { preferences: { voice: 'male', speed: 'normal' } }));
+  await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('speech_preferences', { preferences: { voice: 'male', wpm: 100 } }));
+  await conjugationSearch(page, 'paie'); const slow = await playNativeExpression(page, 'je paie', 100 / 149.148901);
+  await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('speech_preferences', { preferences: { voice: 'male', wpm: 180 } }));
   const normal = await playNativeExpression(page, 'je paie');
   assert.equal(normal.version, slow.version);
   assert.equal(await page.evaluate(async () => { const players = Reflect.get(window, 'expressionPlayers'); return JSON.stringify(await players.at(-1).bytes) === JSON.stringify(await players.at(-2).bytes); }), true);

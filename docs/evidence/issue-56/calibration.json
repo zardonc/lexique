@@ -1,0 +1,73 @@
+{
+  "engine": "Supertonic 3 int8",
+  "cpu": true,
+  "speed": 1.0,
+  "steps": 8,
+  "bitrate": 48000,
+  "baselines_wpm": {
+    "female": 149.25668599453368,
+    "male": 149.14890109597928
+  },
+  "samples": [
+    {
+      "voice": "female",
+      "text": "Aujourd’hui, nous allons au marché pour acheter du pain, des fruits et quelques légumes frais.",
+      "words": 15,
+      "frames": 277489,
+      "sample_rate": 44100,
+      "duration_seconds": 6.2922675736961455,
+      "generation_seconds": 1.1393048999889288,
+      "file": "female-1.ogg"
+    },
+    {
+      "voice": "female",
+      "text": "Après le petit-déjeuner, Marie prend le train de huit heures et retrouve ses amis devant la bibliothèque.",
+      "words": 17,
+      "frames": 327370,
+      "sample_rate": 44100,
+      "duration_seconds": 7.423356009070295,
+      "generation_seconds": 2.3288467999955174,
+      "file": "female-2.ogg"
+    },
+    {
+      "voice": "female",
+      "text": "Quand il fait beau, les enfants jouent dans le jardin, puis toute la famille se promène au bord de la rivière.",
+      "words": 21,
+      "frames": 334717,
+      "sample_rate": 44100,
+      "duration_seconds": 7.589954648526077,
+      "generation_seconds": 2.672250899981009,
+      "file": "female-3.ogg"
+    },
+    {
+      "voice": "male",
+      "text": "Aujourd’hui, nous allons au marché pour acheter du pain, des fruits et quelques légumes frais.",
+      "words": 15,
+      "frames": 277689,
+      "sample_rate": 44100,
+      "duration_seconds": 6.296802721088436,
+      "generation_seconds": 2.212249200005317,
+      "file": "male-1.ogg"
+    },
+    {
+      "voice": "male",
+      "text": "Après le petit-déjeuner, Marie prend le train de huit heures et retrouve ses amis devant la bibliothèque.",
+      "words": 17,
+      "frames": 327607,
+      "sample_rate": 44100,
+      "duration_seconds": 7.428730158730159,
+      "generation_seconds": 2.599422200000845,
+      "file": "male-2.ogg"
+    },
+    {
+      "voice": "male",
+      "text": "Quand il fait beau, les enfants jouent dans le jardin, puis toute la famille se promène au bord de la rivière.",
+      "words": 21,
+      "frames": 334959,
+      "sample_rate": 44100,
+      "duration_seconds": 7.5954421768707485,
+      "generation_seconds": 2.582325299998047,
+      "file": "male-3.ogg"
+    }
+  ]
+}

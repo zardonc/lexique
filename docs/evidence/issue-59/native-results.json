@@ -1,0 +1,183 @@
+{
+  "initial": {
+    "shortcut": "Ctrl+Alt+Shift+O",
+    "registered": true,
+    "error": null
+  },
+  "restored": {
+    "shortcut": "Ctrl+Alt+Shift+P",
+    "registered": true,
+    "error": null
+  },
+  "blocked": [],
+  "monitors": [
+    {
+      "x": 0,
+      "y": 0,
+      "width": 1920,
+      "height": 1080,
+      "primary": true
+    },
+    {
+      "x": -2520,
+      "y": 0,
+      "width": 2520,
+      "height": 1680,
+      "primary": false
+    }
+  ],
+  "retained": {
+    "vocabulary": 2,
+    "review_cards": 2,
+    "review_progress": 1,
+    "review_ratings": 1,
+    "word_audio_selections": 1,
+    "protected": 1
+  },
+  "results": [
+    {
+      "check": "packaged local WASM and French model recognize imported PNG with external requests blocked",
+      "passed": true
+    },
+    {
+      "check": "screen button carries the French interface language to every overlay and native title; localized cancel closes all overlays",
+      "passed": true
+    },
+    {
+      "check": "primary-default: localized real global shortcut → physical screen region → automatic offline OCR → explicit dictionary lookup",
+      "passed": true,
+      "locale": "en",
+      "source": {
+        "x": 101,
+        "y": 130,
+        "width": 846,
+        "height": 346,
+        "outerX": 80,
+        "outerY": 80,
+        "outerWidth": 900,
+        "outerHeight": 430,
+        "dpi": 120
+      },
+      "bounds": [
+        {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080,
+          "outerX": 0,
+          "outerY": 0,
+          "outerWidth": 1920,
+          "outerHeight": 1080,
+          "dpi": 120
+        },
+        {
+          "x": -2520,
+          "y": 0,
+          "width": 2520,
+          "height": 1680,
+          "outerX": -2520,
+          "outerY": 0,
+          "outerWidth": 2520,
+          "outerHeight": 1680,
+          "dpi": 168
+        }
+      ],
+      "viewports": [
+        {
+          "width": 1536,
+          "height": 864,
+          "scale": 1.25,
+          "bitmapWidth": 1920,
+          "bitmapHeight": 1080
+        },
+        {
+          "width": 1441,
+          "height": 961,
+          "scale": 1.75,
+          "bitmapWidth": 2520,
+          "bitmapHeight": 1680
+        }
+      ],
+      "dimensions": [
+        820,
+        221
+      ]
+    },
+    {
+      "check": "selection and OCR shortcut conflict is visible and keeps the previous registration",
+      "passed": true
+    },
+    {
+      "check": "secondary-0: localized real global shortcut → physical screen region → automatic offline OCR → explicit dictionary lookup",
+      "passed": true,
+      "locale": "fr",
+      "source": {
+        "x": -2416,
+        "y": 144,
+        "width": 846,
+        "height": 346,
+        "outerX": -2440,
+        "outerY": 80,
+        "outerWidth": 900,
+        "outerHeight": 430,
+        "dpi": 168
+      },
+      "bounds": [
+        {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080,
+          "outerX": 0,
+          "outerY": 0,
+          "outerWidth": 1920,
+          "outerHeight": 1080,
+          "dpi": 120
+        },
+        {
+          "x": -2520,
+          "y": 0,
+          "width": 2520,
+          "height": 1680,
+          "outerX": -2520,
+          "outerY": 0,
+          "outerWidth": 2520,
+          "outerHeight": 1680,
+          "dpi": 168
+        }
+      ],
+      "viewports": [
+        {
+          "width": 1536,
+          "height": 864,
+          "scale": 1.25,
+          "bitmapWidth": 1920,
+          "bitmapHeight": 1080
+        },
+        {
+          "width": 1441,
+          "height": 961,
+          "scale": 1.75,
+          "bitmapWidth": 2520,
+          "bitmapHeight": 1680
+        }
+      ],
+      "dimensions": [
+        821,
+        221
+      ]
+    },
+    {
+      "check": "Escape closes both capture windows and cancels the request",
+      "passed": true
+    },
+    {
+      "check": "native close cancels capture, reveals the main save dialog and preserves an unsaved note when editing continues",
+      "passed": true
+    },
+    {
+      "check": "authorized close terminates all capture windows; OCR shortcut, learning and audio relationships survive restart",
+      "passed": true
+    }
+  ]
+}

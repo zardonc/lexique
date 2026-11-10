@@ -19,3 +19,9 @@ resources/lefff-syntax/pronominal-rules.md text eol=lf
 resources/freedict-fra-eng-0.4.1/** -text -whitespace
 resources/freedict-fra-eng-0.4.1/provenance.json text eol=lf
 resources/freedict-fra-eng-0.4.1/README.md text eol=lf
+resources/lexique-3.83/COPYING -text -whitespace
+resources/lexique-3.83/UPSTREAM-README.txt -text -whitespace
+resources/lexique-3.83/Lexique383.tsv.gz binary
+resources/tesseract-fra/licenses/**/*.txt -text -whitespace
+resources/mdictlib-0.2.8/licenses/*.txt -text -whitespace
+apps/desktop/e2e/fixtures/mdx/*.mdx binary

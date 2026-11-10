@@ -24,7 +24,7 @@ export const record = {
 interface Reply { readonly value?: unknown; readonly error?: unknown; readonly delay?: number; readonly gate?: string }
 interface Call { readonly command: string; readonly args?: Record<string, unknown> }
 declare global {
-  interface Window { testNative: { calls: Call[]; close: () => void; emit: (event: string) => void; release: (gate: string) => void } }
+  interface Window { testNative: { calls: Call[]; close: () => void; emit: (event: string, payload?: unknown) => void; release: (gate: string) => void } }
 }
 
 class NativeFixture {
@@ -33,19 +33,22 @@ class NativeFixture {
   private readonly gates = new Map<string, () => void>();
   private readonly listeners = new Map<number, { event: string; handler: number }>();
   private readonly calls: Call[] = [];
+  private captureRequest = 0;
   private readonly defaults: Record<string, unknown>;
 
   constructor(private readonly responses: Readonly<Record<string, readonly Reply[]>>, lookup: typeof dictionary) {
     this.defaults = { runtime_status: { version: '0.1.0', schemaVersion: 17, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } },
-      dictionary_lookup: lookup, vocabulary_find: null, vocabulary_list: [], vocabulary_sort: 'updated-desc', finish_close: null,
-      speech_preferences: { voice: 'female', speed: 'normal' }, review_settings: { retention_percent: 90, new_limit: 20, review_limit: 50, new_cards_ignore_review_limit: false },
+      dictionary_lookup: lookup, dictionary_settings: [{ id: 'builtin', title: 'FreeDict fra-zho' }], vocabulary_find: null, vocabulary_list: [], vocabulary_sort: 'updated-desc', finish_close: null,
+      speech_preferences: { voice: 'female', wpm: 180 }, review_settings: { retention_percent: 90, new_limit: 20, review_limit: 50, new_cards_ignore_review_limit: false },
       review_queue: { queue: { cards: [], reason: null, available_at: null }, record: null, audio_pending: false, audio_error: null }, review_cards: [], speech_cached: null,
       review_undo_target: null, review_undo: { status: 'committed', queue_rebuilt: false }, review_auto_enroll: false, review_pause: false,
       review_batch_status: null, speech_retry_missing: 1, review_cancel_batch: null,
+      selection_cancel: null, selection_shortcut: { shortcut: 'Ctrl+Alt+Shift+D', registered: true, error: null },
+      ocr_locale: null, ocr_shortcut: { shortcut: 'Ctrl+Alt+Shift+O', registered: true, error: null },
       review_progress: { revision: 0, card: { phase: 'new', memory: null, last_review_at: null, due_at: null } } };
   }
-  private emit(event: string) {
-    for (const [id, listener] of this.listeners) if (listener.event === event) this.callbacks.get(listener.handler)?.({ event, id, payload: null });
+  private emit(event: string, payload: unknown = null) {
+    for (const [id, listener] of this.listeners) if (listener.event === event) this.callbacks.get(listener.handler)?.({ event, id, payload });
   }
   private availability() {
     const progress = (this.responses.review_progress?.[0]?.value ?? this.defaults.review_progress) as { card: { due_at: number | null } };
@@ -64,7 +67,22 @@ class NativeFixture {
     const booleanKey = { review_auto_enroll: 'enabled', review_pause: 'paused' }[command];
     if (booleanKey && typeof args?.[booleanKey] === 'boolean') this.defaults[command] = args[booleanKey];
   }
+  private capture(args?: Record<string, unknown>) {
+    const request = ++this.captureRequest;
+    this.emit('selection-input', { kind: 'pending', request });
+    this.emit('selection-input', { kind: 'captured', request, text: args?.text ?? '' });
+    return null;
+  }
+  private lookupReply(command: string, args?: Record<string, unknown>) {
+    if (command === 'conjugation_lookup') return { query: args?.key, tables: [] };
+    if (command === 'frequency_lookup') return { source: { title: 'Lexique 3.83', version: '3.83', attribution: 'Boris New; Christophe Pallier',
+      license: 'CC BY-SA 4.0', source_url: 'https://www.lexique.org/databases/Lexique383/Lexique383.tsv', license_url: 'https://creativecommons.org/licenses/by-sa/4.0/' },
+      metric: 'freqlemfilms2', entries: (args?.keys as string[]).map((key) => ({ key, lemma: null, per_million: null, reason: 'not_found', parts: [], candidates: [] })) };
+  }
   private defaultReply(command: string, args?: Record<string, unknown>) {
+    const lookup = this.lookupReply(command, args);
+    if (lookup) return lookup;
+    if (command === 'selection_capture') return this.capture(args);
     if (command === 'review_add_batch') return this.batch(args);
     this.settings(command, args);
     if (command === 'review_availability') return this.availability();
@@ -88,14 +106,18 @@ class NativeFixture {
     if (response.gate) await new Promise<void>((resolve) => { this.gates.set(response.gate!, resolve); });
     else if (response.delay) await new Promise((resolve) => setTimeout(resolve, response.delay));
     if (response.error !== undefined) throw response.error;
-    if (command === 'vocabulary_save') this.defaults.vocabulary_find = (response.value as { record: unknown }).record;
-    if (command === 'review_add_batch') return this.batchResponse(response.value, args);
-    return command === 'review_queue' ? this.queueResponse(response.value) : response.value;
+    return this.response(command, response.value, args);
+  }
+  private response(command: string, value: unknown, args?: Record<string, unknown>) {
+    if (command === 'ocr_image') { this.emit('selection-input', value); return null; }
+    if (command === 'vocabulary_save') this.defaults.vocabulary_find = (value as { record: unknown }).record;
+    if (command === 'review_add_batch') return this.batchResponse(value, args);
+    return command === 'review_queue' ? this.queueResponse(value) : value;
   }
   private queueResponse(value: unknown) {
     const view=value as { queue: { cards: { id:number; vocabulary_id:number; kind:string }[] }; record:typeof record|null; audio_pending:boolean; window?:unknown };
     if (!view || view.window !== undefined) return value;
-    const audio=this.responses.speech_cached?.[0]?.value ?? [79,103,103,83];
+    const audio=this.responses.speech_cached?.[0]?.value ?? { bytes: [79,103,103,83], voice: 'female' };
     return { ...view, summary: { admitted_count:view.queue.cards.length,audio_pending_count:view.audio_pending?1:0,missing_vocabulary_ids:[],verification_pending:false,learning_day:'2026-11-04',timezone:'UTC',revision:0,unknown_legacy:false },
       window:view.queue.cards.map((card)=>({ card,record:{...view.record,id:card.vocabulary_id},progress:this.responses.review_progress?.[0]?.value ?? this.defaults.review_progress,
         version:card.kind==='listening'?'a'.repeat(64):null,content_hash:card.kind==='listening'?'b'.repeat(64):null,audio:card.kind==='listening'?audio:null })),
@@ -108,7 +130,7 @@ class NativeFixture {
     return this.defaults.review_batch_status = batch.operation === 'fixture' ? { ...batch, operation: request.operation } : batch;
   }
   install() {
-    window.testNative = { calls: this.calls, close: () => this.emit('lexique-close-requested'), emit: (event) => this.emit(event),
+    window.testNative = { calls: this.calls, close: () => this.emit('lexique-close-requested'), emit: (event, payload) => this.emit(event, payload),
       release: (gate) => { this.gates.get(gate)?.(); this.gates.delete(gate); } };
     Object.defineProperty(window, 'isTauri', { value: true });
     Object.defineProperty(window, '__TAURI_INTERNALS__', { value: {

@@ -12,11 +12,13 @@ LOCAL-DEV-ENV.md
 *.mdd
 !tools/mdict-probe/tests/fixtures/*.mdx
 !tools/mdict-probe/tests/fixtures/*.mdd
+!apps/desktop/e2e/fixtures/mdx/*.mdx
 *.onnx
 *.safetensors
 test-results/
 playwright-report/
 apps/desktop/src-tauri/gen/
+apps/desktop/public/ocr/
 .DS_Store
 Thumbs.db
 .idea/

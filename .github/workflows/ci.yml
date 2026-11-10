@@ -55,6 +55,7 @@ jobs:
       - run: cargo fmt --all --check
       - run: python -X utf8 scripts/dictionary_sample.py prepare target/desktop-dictionary-sample
       - run: python -X utf8 scripts/conjugation_sample.py prepare target/desktop-conjugation-v6-stats
+      - run: python -B -X utf8 scripts/frequency_sample.py target/desktop-frequency-v1
       - run: cargo clippy --locked -p lexique-core -p lexique-storage -p lexique-dictionary --all-targets -- -D warnings
       - run: cargo test --locked -p lexique-core -p lexique-storage -p lexique-dictionary --no-run
       - run: node scripts/test-rust.mjs

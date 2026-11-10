@@ -59,7 +59,7 @@ async function baseline(page) {
     const cards = await measured('review_add', { vocabularyId: id });
     const cold = await measured('speech_generate', { vocabularyId: id });
     await measured('review_queue', { timezone: 'UTC', skipped: [] });
-    const cached = await measured('speech_cached', { vocabularyId: id });
+    const { bytes: cached } = await measured('speech_cached', { vocabularyId: id });
     const audio = document.createElement('audio');
     audio.src = URL.createObjectURL(new Blob([new Uint8Array(cached)], { type: 'audio/ogg' }));
     const start = performance.now(); await audio.play();
@@ -73,7 +73,7 @@ async function baseline(page) {
     const notes = measured('vocabulary_save', { request: { ...request, operation: 'preflight-edit', id, revision: 1, notes: 'concurrent note' } });
     const rating = measured('review_rate', { request: { operation: 'preflight-rate', card_id: cards[0].id, expected_revision: 0, rating: 'good', timezone: 'UTC' } });
     const [regenerated, interactive, lookup, edited, rated] = await Promise.all([generating, preview, queries, notes, rating]);
-    return { metrics, coldBytes: cold.length, regeneratedBytes: regenerated.length, interactiveBytes: interactive.length,
+    return { metrics, coldBytes: cold.bytes.length, regeneratedBytes: regenerated.bytes.length, interactiveBytes: interactive.bytes.length,
       dictionaryCount: lookup.entries.length, notes: edited.record.notes, rated: rated.status };
   });
 }

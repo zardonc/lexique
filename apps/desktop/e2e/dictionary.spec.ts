@@ -26,6 +26,7 @@ test('native adapter displays results, no match and resource errors', async ({ p
     Object.defineProperty(window, '__TAURI_INTERNALS__', { value: {
       invoke: async (command: string, args?: { key: string }) => {
         if (command === 'runtime_status') return { version: '0.1.0', schemaVersion: 1, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } };
+        if (command === 'dictionary_settings') return [{ id: 'builtin', title: fixture.source.title }];
         const key = args?.key;
         const errors: Record<string, { code: string; message: string }> = {
           missing: { code: 'missing', message: 'Dictionary file not found' },
@@ -44,8 +45,8 @@ test('native adapter displays results, no match and resource errors', async ({ p
   await expect(page.locator('.dictionary-entry').getByText('学校', { exact: true })).toBeVisible();
   await expect(page.getByText('Lieu dédié à l’apprentissage', { exact: true })).toBeVisible();
   await expect(page.locator('.dictionary-source')).toContainText('CC-BY-SA-3.0');
-  for (const [key, message] of [['sommes', '未找到完全匹配的词条'], ['missing', '内置词典资源不存在'],
-    ['broken', '内置词典资源已损坏'], ['failed', '词典查询失败'], ['invalid', '词典查询失败']]) {
+  for (const [key, message] of [['sommes', '未找到完全匹配的词条'], ['missing', '词典资源不存在'],
+    ['broken', '词典资源已损坏'], ['failed', '词典查询失败'], ['invalid', '词典查询失败']]) {
     await page.getByLabel('法语词或词组').fill(key);
     await page.getByRole('button', { name: '查词', exact: true }).click();
     await expect(page.locator('.dictionary')).toContainText(message);

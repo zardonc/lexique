@@ -1,13 +1,54 @@
-use std::{path::PathBuf, time::Duration};
+use std::{
+    path::PathBuf,
+    sync::atomic::{AtomicBool, Ordering},
+    time::Duration,
+};
 
 use lexique_dictionary::{Lookup, Sense};
 use lexique_storage::{
     DigestEntry, Reference, SaveRequest, SaveResult, Snapshot, VocabularyRecord,
 };
 use rusqlite::Connection;
-use tauri::{Manager, State};
+use tauri::{Emitter, Manager, State};
 
 pub struct DatabasePath(pub PathBuf);
+
+#[derive(Default)]
+pub(crate) struct CloseAuthorization(AtomicBool);
+
+impl CloseAuthorization {
+    pub(crate) fn permits_exit(&self) -> bool {
+        self.0.load(Ordering::SeqCst)
+    }
+
+    fn finish(&self, close: impl FnOnce() -> Result<(), String>) -> Result<(), String> {
+        self.0.store(true, Ordering::SeqCst);
+        let result = close();
+        if result.is_err() {
+            self.0.store(false, Ordering::SeqCst);
+        }
+        result
+    }
+}
+
+#[cfg(test)]
+mod close_tests {
+    use super::*;
+
+    #[test]
+    fn failed_close_preserves_exit_guard_until_authorized_close_succeeds() {
+        let authorization = CloseAuthorization::default();
+        assert!(!authorization.permits_exit());
+        let result = authorization.finish(|| {
+            assert!(authorization.permits_exit());
+            Err("Window destruction failed".into())
+        });
+        assert_eq!(result, Err("Window destruction failed".into()));
+        assert!(!authorization.permits_exit());
+        authorization.finish(|| Ok(())).unwrap();
+        assert!(authorization.permits_exit());
+    }
+}
 
 #[cfg(all(test, windows))]
 mod queue_audio_tests {
@@ -38,14 +79,15 @@ mod queue_audio_tests {
         assert_eq!(
             crate::speech_tasks::cached_word(&connection, &inspector, 1, 1001)
                 .unwrap()
-                .unwrap(),
+                .unwrap()
+                .bytes,
             first
         );
         lexique_storage::set_speech_preferences(
             &connection,
             &lexique_storage::SpeechPreferences {
                 voice: lexique_storage::SpeechVoice::Male,
-                speed: lexique_storage::SpeechSpeed::Normal,
+                wpm: 180,
             },
         )
         .unwrap();
@@ -54,11 +96,12 @@ mod queue_audio_tests {
         let hash = lexique_storage::content_hash(second);
         crate::speech_cache::write_asset(&path, &male, &hash, second).unwrap();
         lexique_storage::publish_speech(&connection, &male, &hash, 1002).unwrap();
+        let playable = crate::speech_tasks::cached_word(&connection, &inspector, 1, 1003)
+            .unwrap()
+            .unwrap();
+        assert_eq!(playable.voice, Some(lexique_storage::SpeechVoice::Female));
         assert_eq!(
-            crate::speech_tasks::cached_word(&connection, &inspector, 1, 1003)
-                .unwrap()
-                .unwrap(),
-            first,
+            playable.bytes, first,
             "Changing preference and saving a word must not replace its selected audio"
         );
         let selected = lexique_storage::selected_audio(&connection, 1)
@@ -70,7 +113,8 @@ mod queue_audio_tests {
         assert_eq!(
             crate::speech_tasks::cached_word(&connection, &inspector, 1, 1004)
                 .unwrap()
-                .unwrap(),
+                .unwrap()
+                .bytes,
             first,
             "Removing an unselected source preserves the selected instance"
         );
@@ -82,7 +126,8 @@ mod queue_audio_tests {
         assert_eq!(
             crate::speech_tasks::cached_word(&connection, &inspector, 1, 1005)
                 .unwrap()
-                .unwrap(),
+                .unwrap()
+                .bytes,
             first
         );
         assert_eq!(
@@ -121,7 +166,6 @@ mod queue_audio_tests {
 }
 
 #[cfg(target_os = "macos")]
-// shortcut: Dock Quit bypasses this guard; cover it before macOS acceptance.
 pub fn coordinate_quit(app: &tauri::App) -> Result<(), Box<dyn std::error::Error>> {
     let menu = app.menu().ok_or("Default macOS menu unavailable")?;
     let app_menu = menu
@@ -144,14 +188,29 @@ pub fn coordinate_quit(app: &tauri::App) -> Result<(), Box<dyn std::error::Error
     app_menu.append(&replacement)?;
     app.on_menu_event(|app, event| {
         if event.id() == "lexique-quit" {
-            if let Some(window) = app.get_webview_window("main") {
-                if let Err(error) = window.close() {
-                    eprintln!("Could not request window close: {error}");
-                }
+            if let Err(error) = request_close(app) {
+                eprintln!("Could not request application close: {error}");
             }
         }
     });
     Ok(())
+}
+
+pub(crate) fn request_close(app: &tauri::AppHandle) -> Result<(), String> {
+    let window = app
+        .get_webview_window("main")
+        .ok_or("Main window unavailable")?;
+    let cancellation = crate::selection::selection_cancel(app.clone());
+    window
+        .show()
+        .map_err(|error| format!("Could not show close confirmation: {error}"))?;
+    window
+        .set_focus()
+        .map_err(|error| format!("Could not focus close confirmation: {error}"))?;
+    window
+        .emit("lexique-close-requested", ())
+        .map_err(|error| format!("Could not coordinate application close: {error}"))?;
+    cancellation
 }
 
 pub(crate) fn open(path: &DatabasePath) -> Result<Connection, String> {
@@ -179,6 +238,7 @@ fn snapshot(lookup: Lookup) -> Snapshot {
     let source = lookup.source;
     Snapshot {
         reference: Reference {
+            dictionary_id: lookup.dictionary_id,
             dictionary: source.title,
             lookup_key: lookup.entries[0].key.clone(),
             version: source.version,
@@ -200,13 +260,13 @@ fn snapshot(lookup: Lookup) -> Snapshot {
     }
 }
 
-#[tauri::command]
+#[tauri::command(rename_all = "snake_case")]
 pub async fn vocabulary_save(
     app: tauri::AppHandle,
-    path: State<'_, DatabasePath>,
     request: SaveRequest,
+    dictionary_id: Option<String>,
 ) -> Result<SaveResult, String> {
-    let path = DatabasePath(path.0.clone());
+    let path = DatabasePath(app.state::<DatabasePath>().0.clone());
     tauri::async_runtime::spawn_blocking(move || {
         lexique_storage::validate(&request).map_err(|error| error.to_string())?;
         let mut connection = open(&path)?;
@@ -217,15 +277,10 @@ pub async fn vocabulary_save(
             return Ok(result);
         }
         let content = if request.id.is_none() {
-            let resource = app
-                .path()
-                .resource_dir()
-                .map_err(|error| error.to_string())?
-                .join("dictionary/dictionary.sqlite3");
-            let lookup = lexique_dictionary::lookup(
-                &resource,
+            let lookup = crate::dictionaries::lookup_from_app(
+                &app,
                 &request.headword,
-                env!("LEXIQUE_DICTIONARY_SHA256"),
+                dictionary_id.as_deref().or(Some("builtin")),
             )
             .map_err(|error| error.to_string())?;
             if lookup.entries.is_empty() {
@@ -602,7 +657,7 @@ pub async fn review_rate(
 pub async fn speech_cached(
     path: State<'_, DatabasePath>,
     vocabulary_id: i64,
-) -> Result<Option<Vec<u8>>, String> {
+) -> Result<Option<crate::speech_tasks::SpeechAudio>, String> {
     if vocabulary_id <= 0 || vocabulary_id > 9_007_199_254_740_991 {
         return Err("Invalid vocabulary ID".into());
     }
@@ -632,7 +687,7 @@ pub async fn speech_generate(
     vocabulary_id: i64,
     regenerate: Option<bool>,
     operation: Option<String>,
-) -> Result<Vec<u8>, String> {
+) -> Result<crate::speech_tasks::SpeechAudio, String> {
     if vocabulary_id <= 0 || vocabulary_id > 9_007_199_254_740_991 {
         return Err("Invalid vocabulary ID".into());
     }
@@ -703,7 +758,7 @@ pub async fn speech_generate(
         {
             return Err("Audio selection was superseded; retry".into());
         }
-        let bytes = crate::speech_tasks::read_selected(&inspector, &version)?
+        let bytes = crate::speech_tasks::read_selected_audio(&connection, &inspector, &version)?
             .ok_or("Generated audio selection is unavailable")?;
         crate::speech_tasks::changed(&app);
         Ok(bytes)
@@ -724,16 +779,20 @@ pub async fn speech_preview(
     app: tauri::AppHandle,
     path: State<'_, DatabasePath>,
     text: String,
-) -> Result<Vec<u8>, String> {
+    voice: Option<lexique_storage::SpeechVoice>,
+) -> Result<crate::speech_tasks::SpeechAudio, String> {
     let path = DatabasePath(path.0.clone());
     tauri::async_runtime::spawn_blocking(move || {
         let mut connection = open(&path)?;
-        let spec = lexique_storage::SpeechSpec::word(
-            &text,
-            lexique_storage::speech_preferences(&connection)
-                .map_err(|e| e.to_string())?
-                .voice,
-        );
+        let voice = match voice {
+            Some(voice) => voice,
+            None => {
+                lexique_storage::speech_preferences(&connection)
+                    .map_err(|e| e.to_string())?
+                    .voice
+            }
+        };
+        let spec = lexique_storage::SpeechSpec::word(&text, voice);
         let key = spec.key().map_err(|e| e.to_string())?;
         let inspector = crate::speech_cache::Inspector::new(&path.0)?;
         if let Some(bytes) = crate::speech_tasks::cached_asset(
@@ -742,7 +801,10 @@ pub async fn speech_preview(
             &key,
             crate::speech_tasks::now()?,
         )? {
-            return Ok(bytes);
+            return Ok(crate::speech_tasks::SpeechAudio {
+                bytes,
+                voice: Some(voice),
+            });
         }
         lexique_storage::request_speech(
             &mut connection,
@@ -755,7 +817,10 @@ pub async fn speech_preview(
         drop(connection);
         let tasks = app.state::<crate::speech_tasks::SpeechTasks>();
         tasks.wake()?;
-        tasks.wait(key)
+        Ok(crate::speech_tasks::SpeechAudio {
+            bytes: tasks.wait(key)?,
+            voice: Some(voice),
+        })
     })
     .await
     .map_err(|e| format!("Speech preview task failed: {e}"))?
@@ -956,11 +1021,14 @@ pub fn finish_close(app: tauri::AppHandle) -> Result<(), String> {
         &app.state::<DatabasePath>().0,
         "[native-lifecycle] finish_close accepted",
     );
-    app.state::<crate::speech_tasks::SpeechTasks>().shutdown()?;
-    app.state::<std::sync::Arc<crate::review_window::WindowValidator>>()
-        .stop();
-    app.get_webview_window("main")
-        .ok_or("Main window unavailable")?
-        .destroy()
-        .map_err(|error| format!("Could not close window: {error}"))
+    app.state::<CloseAuthorization>().finish(|| {
+        crate::selection::selection_cancel(app.clone())?;
+        app.state::<crate::speech_tasks::SpeechTasks>().shutdown()?;
+        app.state::<std::sync::Arc<crate::review_window::WindowValidator>>()
+            .stop();
+        app.get_webview_window("main")
+            .ok_or("Main window unavailable")?
+            .destroy()
+            .map_err(|error| format!("Could not close window: {error}"))
+    })
 }

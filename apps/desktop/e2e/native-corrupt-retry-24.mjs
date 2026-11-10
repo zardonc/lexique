@@ -24,7 +24,7 @@ c=sqlite3.connect(sys.argv[1]);c.execute("UPDATE speech_tasks SET state='queued'
   const result = await page.evaluate(async (id) => {
     const invoke = window.__TAURI_INTERNALS__.invoke;
     const retried = await invoke('speech_retry_missing', { vocabularyId: id });
-    const audio = await invoke('speech_preview', { text: 'bonjour' });
+    const { bytes: audio } = await invoke('speech_preview', { text: 'bonjour' });
     return { retried, header: audio.slice(0, 4), bytes: audio.length };
   }, id);
   assert.equal(result.retried, 1, 'Corrupt legacy cache must not terminate the supervisor');

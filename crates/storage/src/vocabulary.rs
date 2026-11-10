@@ -7,13 +7,15 @@ use crate::StorageError;
 #[derive(Debug, Clone, Deserialize, Serialize, PartialEq)]
 #[serde(deny_unknown_fields)]
 pub struct Reference {
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub dictionary_id: Option<String>,
     pub dictionary: String,
     pub lookup_key: String,
     pub version: String,
-    pub attribution: String,
-    pub license: String,
-    pub source_url: String,
-    pub license_url: String,
+    pub attribution: Option<String>,
+    pub license: Option<String>,
+    pub source_url: Option<String>,
+    pub license_url: Option<String>,
     pub sha256: String,
 }
 

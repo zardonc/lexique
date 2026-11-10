@@ -7,6 +7,8 @@ pub struct Entry {
     pub pronunciations: Vec<String>,
     pub grammar: Vec<String>,
     pub senses: Vec<Sense>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub html: Option<String>,
 }
 
 #[derive(Debug, Default, Deserialize, Serialize)]
@@ -82,5 +84,6 @@ pub(crate) fn parse(ordinal: u32, key: String, xml: &str) -> Result<Entry, Strin
             .chain(raw.grammar.gender)
             .collect(),
         senses: raw.senses,
+        html: None,
     })
 }

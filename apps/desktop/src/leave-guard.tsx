@@ -7,11 +7,16 @@ import type { NotebookText } from './notebook-content';
 export function useLeaveGuard(runtime: RuntimeAdapter, notebook: Notebook, batchBusy: boolean) {
   const [pending, setPending] = useState<(() => void) | null>(null);
   const [error, setError] = useState('');
+  const deferred = useRef<(() => void) | null>(null);
   function request(action: () => void) {
-    if (notebook.busy || batchBusy) return;
+    if (notebook.busy || batchBusy) { deferred.current = action; return; }
     if (notebook.dirty) setPending(() => action);
     else action();
   }
+  useEffect(() => {
+    if (notebook.busy || batchBusy || !deferred.current) return;
+    const action = deferred.current; deferred.current = null; request(action);
+  }, [notebook.busy, batchBusy]);
   const latest = useRef({ request, notebook });
   useEffect(() => { latest.current = { request, notebook }; });
   useEffect(() => {

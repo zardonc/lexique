@@ -5,13 +5,14 @@ use rusqlite::Connection;
 fn snapshot() -> Snapshot {
     Snapshot {
         reference: Reference {
+            dictionary_id: None,
             dictionary: "FreeDict".into(),
             lookup_key: "école".into(),
             version: "2025.11.23".into(),
-            attribution: "Wiktionary contributors".into(),
-            license: "CC-BY-SA-3.0".into(),
-            source_url: "https://download.freedict.org/".into(),
-            license_url: "https://creativecommons.org/licenses/by-sa/3.0/".into(),
+            attribution: Some("Wiktionary contributors".into()),
+            license: Some("CC-BY-SA-3.0".into()),
+            source_url: Some("https://download.freedict.org/".into()),
+            license_url: Some("https://creativecommons.org/licenses/by-sa/3.0/".into()),
             sha256: "a".repeat(64),
         },
         digest: vec![DigestEntry {

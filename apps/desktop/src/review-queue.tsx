@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useReviewQueue } from './use-review-queue';
 import type { Locale } from './content';
+import type { SpeechAudio } from './platform/speech';
 import type { NotebookText } from './notebook-content';
 import type { QueueView, RuntimeAdapter } from './platform/runtime';
 import { UndoRejected } from './platform/runtime';
@@ -14,7 +15,7 @@ const messages = {
 } as const;
 
 
-function QueueCard({ view, audio, runtime, text, refresh, skip }: { readonly view: QueueView; readonly audio: Uint8Array | null; readonly runtime: RuntimeAdapter; readonly text: NotebookText; readonly refresh: () => Promise<void>; readonly skip: (id: number) => void }) {
+function QueueCard({ view, audio, runtime, text, refresh, skip }: { readonly view: QueueView; readonly audio: SpeechAudio | null; readonly runtime: RuntimeAdapter; readonly text: NotebookText; readonly refresh: () => Promise<void>; readonly skip: (id: number) => void }) {
   const card = view.queue.cards[0];
   const record = view.record;
   if (!card || !record) return null;
@@ -38,7 +39,7 @@ function showVerificationNotice(view: QueueView) {
   return view.summary.verification_pending && Boolean(view.queue.cards.length > 0 || view.summary.audio_pending_count > 0 || view.queue.reason || view.audio_error);
 }
 
-function ReadyQueue({ view, audio, runtime, text, refresh, labels, skip }: { readonly view: QueueView; readonly audio: Uint8Array | null; readonly runtime: RuntimeAdapter; readonly text: NotebookText; readonly refresh: () => Promise<void>; readonly labels: (typeof messages)[Locale]; readonly skip: (id: number) => void }) {
+function ReadyQueue({ view, audio, runtime, text, refresh, labels, skip }: { readonly view: QueueView; readonly audio: SpeechAudio | null; readonly runtime: RuntimeAdapter; readonly text: NotebookText; readonly refresh: () => Promise<void>; readonly labels: (typeof messages)[Locale]; readonly skip: (id: number) => void }) {
   return <>{view.audio_error && <p role="alert">{text.playbackError}: {view.audio_error}</p>}
     {view.summary.unknown_legacy && <p role="status">{text.unknownLegacyRepair}</p>}
     {showVerificationNotice(view) && <p role="status">{labels.verifying}</p>}

@@ -108,7 +108,7 @@ try {
     window.__TAURI_INTERNALS__.invoke('speech_generate', { vocabularyId: 1 }),
   ]));
   assert.deepEqual(generated[0], generated[1]);
-  assert.equal(Buffer.from(generated[0]).subarray(0, 4).toString(), 'OggS');
+  assert.equal(Buffer.from(generated[0].bytes).subarray(0, 4).toString(), 'OggS');
   const before = await readFile(join(cache, '1.ogg'));
   const python = join(destination, 'speech', 'runtime', 'python.exe');
   await rename(python, `${python}.disabled`);
@@ -181,15 +181,15 @@ try {
   await expect(listening.locator('details')).toContainText(result.words.find((word) => word.id === 1).reference.dictionary);
   await page.screenshot({ path: join(destination, 'listening-back.png') });
   await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('speech_preferences', {
-    preferences: { voice: 'female', speed: 'slow' },
+    preferences: { voice: 'female', wpm: 100 },
   }));
   await listening.getByRole('button', { name: '重播' }).click();
   await expect.poll(() => page.evaluate(() => Reflect.get(window, 'nativePlayCount'))).toBe(2);
-  assert.equal(await listening.locator('audio').evaluate((audio) => audio.playbackRate), 0.6);
+  assert.equal(await listening.locator('audio').evaluate((audio) => audio.playbackRate), 100 / 149.256686);
   await listening.getByRole('button', { name: '跳过' }).click();
   await expect(listening).not.toBeVisible();
   assert.deepEqual(await readFile(join(cache, '1.ogg')), await page.evaluate(async () =>
-    window.__TAURI_INTERNALS__.invoke('speech_cached', { vocabularyId: 1 })).then((bytes) => Buffer.from(bytes)));
+    window.__TAURI_INTERNALS__.invoke('speech_cached', { vocabularyId: 1 })).then((audio) => Buffer.from(audio.bytes)));
   const savedAudio = await readFile(join(cache, '1.ogg'));
   await stop();
   const reopened = await start();
@@ -200,7 +200,7 @@ try {
   }));
   assert.deepEqual(restored.words, result.words);
   assert.deepEqual(restored.cards, result.cards);
-  assert.deepEqual(Buffer.from(restored.audio), savedAudio);
+  assert.deepEqual(Buffer.from(restored.audio.bytes), savedAudio);
   await reopened.getByRole('button', { name: '生词本', exact: true }).click();
   await reopened.locator('.vocabulary-list button').filter({ hasText: 'école' }).click();
   await expect(reopened.getByText('听音卡：语音已生成', { exact: true })).toBeVisible();

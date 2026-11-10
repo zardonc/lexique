@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-frequency-lookup"
+description = "Enables the frequency_lookup command without any pre-configured scope."
+commands.allow = ["frequency_lookup"]
+
+[[permission]]
+identifier = "deny-frequency-lookup"
+description = "Denies the frequency_lookup command without any pre-configured scope."
+commands.deny = ["frequency_lookup"]

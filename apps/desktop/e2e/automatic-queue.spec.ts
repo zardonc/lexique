@@ -31,7 +31,7 @@ test('T01: events during a blocked read yield one trailing read and latest state
 });
 
 test('T01: a continuous event stream cannot postpone refresh past the maximum wait', async ({ page }) => {
-  await page.clock.install({ time: new Date('2026-11-05T10:00:00Z') });
+  await page.clock.install({ time: new Date('2026-11-05T09:59:00Z') });
   await nativeFixture(page, { review_queue: [{ value: empty }, { value: empty }, { value: other }] });
   await open(page); await expect(page.getByText('本轮完成', { exact: true })).toBeVisible();
   await page.clock.pauseAt(new Date('2026-11-05T10:00:01Z'));

@@ -11,7 +11,7 @@ import assert from 'node:assert/strict';
 
 export async function native24Fixture(packagePath, binaryPath, destinationPath) {
   const destination = resolve(destinationPath);
-  assert.ok(destination.startsWith(resolve('../../target/issue-24') + '\\'));
+  assert.ok(['issue-9', 'issue-24', 'issue-56', 'issue-57', 'issue-58', 'issue-59'].some((issue) => destination.startsWith(resolve('../../target/' + issue) + '\\')));
   await mkdir(destination);
   // Reused test packages also contain old results. Only copy distribution resources:
   // a failed run must never inherit a successful report or someone else's data.
@@ -34,12 +34,12 @@ export async function native24Fixture(packagePath, binaryPath, destinationPath) 
   }
   const timer = setTimeout(() => {
     if (child?.pid) spawnSync('taskkill.exe', ['/PID', String(child.pid), '/T', '/F'], { windowsHide: true });
-    process.stderr.write('Native #24 execution exceeded the hard 60-second limit\n'); process.exit(1);
+    process.stderr.write('Native execution exceeded the hard 60-second limit\n'); process.exit(1);
   }, 60_000);
-  async function start() {
+  async function startHost(additionalBrowserArguments = '') {
     stopping = false;
     child = spawn(join(destination, 'Lexique.exe'), [], { cwd: destination, windowsHide: true,
-      env: { ...process.env, WEBVIEW2_ADDITIONAL_BROWSER_ARGUMENTS: `--disable-gpu --autoplay-policy=no-user-gesture-required --remote-debugging-port=${port}` } });
+      env: { ...process.env, WEBVIEW2_ADDITIONAL_BROWSER_ARGUMENTS: `--disable-gpu --autoplay-policy=no-user-gesture-required --remote-debugging-port=${port} ${additionalBrowserArguments}` } });
     diagnostic('host-start', { pid: child.pid });
     child.stderr.on('data', (bytes) => diagnostic('host-stderr', { message: bytes.toString().slice(0, 4096) }));
     child.on('error', (error) => { diagnostic('host-error', { message: String(error) }); process.stderr.write(String(error)); });
@@ -51,6 +51,10 @@ export async function native24Fixture(packagePath, binaryPath, destinationPath) 
       await delay(100);
     }
     assert.ok(endpoint, 'Own WebView2 endpoint unavailable');
+    return endpoint;
+  }
+  async function start(additionalBrowserArguments = '') {
+    const endpoint = await startHost(additionalBrowserArguments);
     browser = await chromium.connectOverCDP(endpoint); page = browser.contexts()[0].pages()[0];
     browser.on('disconnected', () => diagnostic('cdp-disconnected'));
     page.on('crash', () => diagnostic('renderer-crash'));
@@ -64,11 +68,13 @@ export async function native24Fixture(packagePath, binaryPath, destinationPath) 
   }
   async function stop(normal = false) {
     stopping = true; diagnostic('stop-request', { normal });
-    if (normal && page) {
-      try { await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('finish_close')); }
-      catch (error) { assert.match(String(error), /closed|Target|context|session|Frame|destroy/i); }
+    if (normal) {
+      if (page) {
+        try { await page.evaluate(() => window.__TAURI_INTERNALS__.invoke('finish_close')); }
+        catch (error) { assert.match(String(error), /closed|Target|context|session|Frame|destroy/i); }
+      }
       for (let i = 0; child?.exitCode === null && i < 50; i++) await delay(100);
-      assert.notEqual(child?.exitCode, null, 'Normal exit must terminate the application');
+      assert.equal(child?.exitCode, 0, 'Normal exit must terminate the application successfully');
     }
     if (browser) await browser.close(); browser = undefined; page = undefined;
     if (child?.pid && child.exitCode === null) spawnSync('taskkill.exe', ['/PID', String(child.pid), '/T', '/F'], { windowsHide: true });
@@ -80,5 +86,5 @@ export async function native24Fixture(packagePath, binaryPath, destinationPath) 
     assert.equal(result.status, 0, result.stderr);
     return JSON.parse(result.stdout);
   }
-  return { destination, start, stop, workerPids, finish: async () => { clearTimeout(timer); await stop(); } };
+  return { destination, start, startHost, stop, workerPids, hostPid: () => child?.pid, finish: async () => { clearTimeout(timer); await stop(); } };
 }

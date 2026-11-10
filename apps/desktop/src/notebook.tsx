@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+import { FrequencyBadge, FrequencyState, useFrequency } from './frequency';
 import type { RuntimeAdapter } from './platform/runtime';
 import { errorMessage, sortSchema } from './platform/vocabulary';
 import type { VocabularyRecord, VocabularySort } from './platform/vocabulary';
@@ -90,7 +91,9 @@ export function NotebookPanel({ runtime, version, text, onOpen, batch }: {
   const [capacity, setCapacity] = useState(20);
   useEffect(() => { setSelected([]); }, [list.records]);
   const currentPage = visiblePage(page, capacity, list.records);
-  const records = list.records?.slice(currentPage * capacity, (currentPage + 1) * capacity) ?? [];
+  const records = useMemo(() => list.records?.slice(currentPage * capacity, (currentPage + 1) * capacity) ?? [], [list.records, currentPage, capacity]);
+  const keys = useMemo(() => records.map((record) => record.headword), [records]);
+  const frequencies = useFrequency(runtime, keys);
   function reset() { setSelected([]); setPage(0); }
   if (list.records === null) return <p role="status">{text.preview}</p>;
   return <section className="notebook" aria-label={text.search}>
@@ -101,13 +104,15 @@ export function NotebookPanel({ runtime, version, text, onOpen, batch }: {
         {sortSchema.options.map((value, index) => <option key={value} value={value}>{text.sorts[index]}</option>)}
       </select></label></div>
     <ReadingState list={list} text={text} />
+    {!!records.length && <FrequencyState state={frequencies} text={text.frequency} />}
     <PageControls page={currentPage} count={list.records?.length ?? 0} capacity={capacity} text={text}
       changePage={(value) => { setSelected([]); setPage(value); }} changeCapacity={(value) => { reset(); setCapacity(value); }} />
     <BatchControls records={records} selected={selected} setSelected={setSelected} batch={batch} text={text} />
     {!list.error && <ul className="vocabulary-list">{records.map((record) => <li key={record.id}>
       <label><input type="checkbox" aria-label={`${text.select} ${record.headword}`} checked={selected.includes(record.id)}
         onChange={(event) => { const checked = event.target.checked; setSelected((current) => toggleSelection(current, record.id, checked)); }} /></label>
-      <button onClick={() => onOpen(record)}><strong lang="fr">{record.headword}</strong>
+      <button onClick={() => onOpen(record)}><span className="headword-line"><strong lang="fr">{record.headword}</strong>
+        <FrequencyBadge entry={frequencies.lookup?.entries.find((entry) => entry.key === record.headword)} text={text.frequency} /></span>
         <span>{record.digest.map((entry) => entry.translation || text.missing).join(' · ')}</span>
         <span className="note-excerpt">{record.notes}</span></button>
     </li>)}</ul>}

@@ -187,7 +187,7 @@ fn automatic_repair_keeps_known_voice_and_reports_unsupported_specs() {
         &connection,
         &SpeechPreferences {
             voice: SpeechVoice::Male,
-            speed: SpeechSpeed::Normal,
+            wpm: 180,
         },
     )
     .unwrap();

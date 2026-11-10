@@ -5,6 +5,8 @@ import { errorMessage } from './platform/vocabulary';
 import type { VocabularyRecord } from './platform/vocabulary';
 import { ReviewRating } from './review-rating';
 import { useQueueAudioReplacement } from './use-queue-audio-replacement';
+import { speechPlaybackRate } from './platform/speech';
+import type { SpeechAudio } from './platform/speech';
 
 function ExampleSense({ record, text }: { readonly record: VocabularyRecord; readonly text: NotebookText }) {
   const meaning = record.example_sense === null ? text.exampleSenseUnspecified : record.digest[record.example_sense]?.translation || text.missing;
@@ -35,22 +37,27 @@ function Answer({ record, text }: { readonly record: VocabularyRecord; readonly 
   </>;
 }
 
+function MachineVoiceNotice({ audio, text }: { readonly audio: SpeechAudio; readonly text: NotebookText }) {
+  return <p>{text.machineVoice}{audio.voice === null && <> · {text.approximateSpeed}</>}</p>;
+}
+
 export function QueueReviewCard({ record, text, runtime, card, audio, onRated, onSkip, enabled = true, progressRevision }: {
   readonly record: VocabularyRecord; readonly text: NotebookText; readonly runtime: RuntimeAdapter;
-  readonly card: ReviewCard; readonly audio: Uint8Array | null; readonly onRated: () => void; readonly onSkip: () => void;
+  readonly card: ReviewCard; readonly audio: SpeechAudio | null; readonly onRated: () => void; readonly onSkip: () => void;
   readonly enabled?: boolean;
   readonly progressRevision: number;
 }) {
   const [revealed, setRevealed] = useState(false);
   const [busy, setBusy] = useState(false);
   const replacement = useQueueAudioReplacement(record.id, runtime);
-  const { player, played, error, play, cancel, mediaError } = useListeningAudio({ audio: replacement.audio ?? audio, runtime, autoPlay: true });
+  const listeningAudio = replacement.audio ?? audio;
+  const { player, played, error, play, cancel, mediaError } = useListeningAudio({ audio: listeningAudio, runtime, autoPlay: true });
   return <section className="queue-review-card" aria-label={text.queueCard}>
-    {audio ? <><p>{text.machineVoice}</p><audio ref={player} onError={() => mediaError(text.playbackError)} />
+    {listeningAudio ? <><MachineVoiceNotice audio={listeningAudio} text={text} /><audio ref={player} onError={() => mediaError(text.playbackError)} />
       <button disabled={replacement.busy} onClick={() => { void play(); }}>{text.replay}</button></> : <h3 lang="fr">{record.headword}</h3>}
     <QueuePlaybackRecovery text={text} error={error} replacement={replacement} cancel={cancel} />
-    {revealed && <>{audio && <h3 lang="fr">{record.headword}</h3>}<Answer record={record} text={text} />
-      <ReviewRating id={card.id} runtime={runtime} text={text} enabled={enabled && (!audio || (played && !replacement.busy))} presentationRevision={progressRevision} onBusyChange={setBusy} onSuccess={onRated} /></>}
+    {revealed && <>{listeningAudio && <h3 lang="fr">{record.headword}</h3>}<Answer record={record} text={text} />
+      <ReviewRating id={card.id} runtime={runtime} text={text} enabled={enabled && (!listeningAudio || (played && !replacement.busy))} presentationRevision={progressRevision} onBusyChange={setBusy} onSuccess={onRated} /></>}
     <div className="actions">{!revealed && <button onClick={() => setRevealed(true)}>{text.reveal}</button>}
       <button disabled={busy} onClick={onSkip}>{text.skip}</button></div>
   </section>;
@@ -89,7 +96,7 @@ export function RecognitionCard({ record, text, runtime, card, onRated, onSkip }
 }
 
 function useListeningAudio({ audio, runtime, autoPlay, onPlayback }: {
-  readonly audio: Uint8Array | null; readonly runtime: RuntimeAdapter; readonly autoPlay: boolean;
+  readonly audio: SpeechAudio | null; readonly runtime: RuntimeAdapter; readonly autoPlay: boolean;
   readonly onPlayback?: (failed: boolean) => void;
 }) {
   const dialog = useRef<HTMLDialogElement>(null);
@@ -110,7 +117,8 @@ function useListeningAudio({ audio, runtime, autoPlay, onPlayback }: {
       const preferences = await runtime.speechPreferences();
       if (!current(request)) return;
       if (!preferences || !player.current) throw new Error('Speech preferences unavailable');
-      player.current.playbackRate = preferences.speed === 'slow' ? 0.6 : 1;
+      player.current.preservesPitch = true;
+      player.current.playbackRate = speechPlaybackRate(preferences.wpm, audio?.voice ?? null);
       player.current.currentTime = 0;
       await player.current.play();
       if (current(request) && failedPlayback.current !== request) { setPlayed(true); onPlaybackRef.current(false); }
@@ -119,10 +127,10 @@ function useListeningAudio({ audio, runtime, autoPlay, onPlayback }: {
         setError(errorMessage(cause)); onPlaybackRef.current(true);
       }
     }
-  }, [runtime, current]);
+  }, [runtime, current, audio?.voice]);
   useEffect(() => {
     if (!audio) return;
-    const objectUrl = URL.createObjectURL(new Blob([audio.slice().buffer as ArrayBuffer], { type: 'audio/ogg; codecs=opus' }));
+    const objectUrl = URL.createObjectURL(new Blob([new Uint8Array(audio.bytes).buffer], { type: 'audio/ogg; codecs=opus' }));
     setUrl(objectUrl);
     if (autoPlay && player.current) { player.current.src = objectUrl; void play(); }
     return () => { cancel(); URL.revokeObjectURL(objectUrl); };
@@ -137,7 +145,7 @@ function useListeningAudio({ audio, runtime, autoPlay, onPlayback }: {
 }
 
 export function ListeningCard({ record, text, runtime, audio, onPlayback, card, onRated, onSkip }: {
-  readonly record: VocabularyRecord; readonly text: NotebookText; readonly runtime: RuntimeAdapter; readonly audio: Uint8Array;
+  readonly record: VocabularyRecord; readonly text: NotebookText; readonly runtime: RuntimeAdapter; readonly audio: SpeechAudio;
   readonly card: ReviewCard;
   readonly onPlayback: (failed: boolean) => void;
   readonly onRated?: () => void;
@@ -152,7 +160,7 @@ export function ListeningCard({ record, text, runtime, audio, onPlayback, card, 
     }}>{text.openListening}</button></div>
     <dialog ref={dialog} className="review-card" aria-label={text.listening} onCancel={(event) => { if (ratingBusy) event.preventDefault(); else cancel(); }}>
       <section aria-label={text.listening}>
-        <p>{text.machineVoice}</p><audio ref={player} src={url} onError={() => mediaError(text.playbackError)} />
+        <MachineVoiceNotice audio={audio} text={text} /><audio ref={player} src={url} onError={() => mediaError(text.playbackError)} />
         {error && <p role="alert">{text.playbackError}: {error}</p>}
         {revealed && <><h3 lang="fr">{record.headword}</h3><Answer record={record} text={text} /></>}
         {revealed && <ReviewRating id={card.id} runtime={runtime} text={text} enabled={played} onBusyChange={setRatingBusy} onSuccess={() => { close(); onRated?.(); }} />}
@@ -192,7 +200,7 @@ function useReviewCards({ id, runtime, text, onChanged }: {
   const [error, setError] = useState('');
   const [busy, setBusy] = useState(false);
   const [loading, setLoading] = useState(true);
-  const [audio, setAudio] = useState<Uint8Array | null>(null);
+  const [audio, setAudio] = useState<SpeechAudio | null>(null);
   const [playbackFailed, setPlaybackFailed] = useState(false);
   const mounted = useRef(true);
   useEffect(() => { mounted.current = true; return () => { mounted.current = false; }; }, [id]);

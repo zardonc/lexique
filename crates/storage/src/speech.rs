@@ -3,7 +3,7 @@ use serde::{Deserialize, Serialize};
 
 use crate::StorageError;
 
-#[derive(Debug, Default, Deserialize, Serialize)]
+#[derive(Clone, Copy, Debug, Default, Deserialize, Serialize, PartialEq, Eq)]
 #[serde(rename_all = "snake_case")]
 pub enum SpeechVoice {
     #[default]
@@ -13,19 +13,70 @@ pub enum SpeechVoice {
     Male,
 }
 
-#[derive(Debug, Default, Deserialize, Serialize)]
+#[derive(Debug, Deserialize)]
 #[serde(rename_all = "snake_case")]
-pub enum SpeechSpeed {
-    #[default]
+enum SpeechSpeed {
     Normal,
     Slow,
 }
 
-#[derive(Debug, Default, Deserialize, Serialize)]
-#[serde(deny_unknown_fields)]
+#[derive(Debug, Deserialize, Serialize)]
+#[serde(try_from = "SavedSpeechPreferences")]
 pub struct SpeechPreferences {
     pub voice: SpeechVoice,
-    pub speed: SpeechSpeed,
+    pub wpm: u16,
+}
+
+#[derive(Deserialize)]
+#[serde(untagged, deny_unknown_fields)]
+enum SavedSpeechPreferences {
+    Wpm {
+        voice: SpeechVoice,
+        wpm: u16,
+    },
+    Legacy {
+        voice: SpeechVoice,
+        speed: SpeechSpeed,
+    },
+}
+
+impl Default for SpeechPreferences {
+    fn default() -> Self {
+        Self {
+            voice: SpeechVoice::Female,
+            wpm: 180,
+        }
+    }
+}
+
+impl SpeechPreferences {
+    fn validate(&self) -> Result<(), StorageError> {
+        if !(80..=240).contains(&self.wpm) || !self.wpm.is_multiple_of(20) {
+            return Err(StorageError::Invalid(
+                "Speech WPM must be 80–240 in steps of 20".into(),
+            ));
+        }
+        Ok(())
+    }
+}
+
+impl TryFrom<SavedSpeechPreferences> for SpeechPreferences {
+    type Error = StorageError;
+
+    fn try_from(saved: SavedSpeechPreferences) -> Result<Self, Self::Error> {
+        let preferences = match saved {
+            SavedSpeechPreferences::Wpm { voice, wpm } => Self { voice, wpm },
+            SavedSpeechPreferences::Legacy { voice, speed } => Self {
+                voice,
+                wpm: match speed {
+                    SpeechSpeed::Normal => 180,
+                    SpeechSpeed::Slow => 100,
+                },
+            },
+        };
+        preferences.validate()?;
+        Ok(preferences)
+    }
 }
 
 pub fn speech_preferences(connection: &Connection) -> Result<SpeechPreferences, StorageError> {
@@ -48,6 +99,7 @@ pub fn set_speech_preferences(
     connection: &Connection,
     preferences: &SpeechPreferences,
 ) -> Result<(), StorageError> {
+    preferences.validate()?;
     connection.execute(
         "INSERT INTO app_metadata (key, value) VALUES ('speech-preferences', ?1)
          ON CONFLICT(key) DO UPDATE SET value = excluded.value",

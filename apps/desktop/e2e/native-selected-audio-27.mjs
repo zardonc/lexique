@@ -23,17 +23,17 @@ try {
   let page = await fixture.start();
   const original = await page.evaluate(async () => {
     const invoke = window.__TAURI_INTERNALS__.invoke;
-    const bytes = await invoke('speech_preview', { text: 'école' });
+    const { bytes } = await invoke('speech_preview', { text: 'école' });
     const request = { operation: 'selected-save', headword: 'école', notes: 'original', example_fr: '', example_zh: '', example_sense: null, more_examples: [], id: null, revision: null };
     const saved = await invoke('vocabulary_save', { request });
     await invoke('review_add_batch', { request: { operation: 'selected-cards', vocabulary_ids: [saved.record.id] } });
     const cards = await invoke('review_cards', { vocabularyId: saved.record.id });
     await invoke('review_rate', { request: { operation: 'selected-rate', card_id: cards[0].id, expected_revision: 0, rating: 'good', timezone: 'UTC' } });
     const progress = await invoke('review_progress', { cardId: cards[0].id });
-    await invoke('speech_preferences', { preferences: { voice: 'male', speed: 'slow' } });
-    const male = await invoke('speech_preview', { text: 'école' });
+    await invoke('speech_preferences', { preferences: { voice: 'male', wpm: 100 } });
+    const { bytes: male } = await invoke('speech_preview', { text: 'école' });
     await invoke('vocabulary_save', { request: { ...request, operation: 'selected-edit', id: saved.record.id, revision: 1, notes: 'keep after repair' } });
-    return { bytes, male, cached: await invoke('speech_cached', { vocabularyId: saved.record.id }), id: saved.record.id, cards, progress };
+    return { bytes, male, cached: (await invoke('speech_cached', { vocabularyId: saved.record.id })).bytes, id: saved.record.id, cards, progress };
   });
   assert.deepEqual(original.cached, original.bytes);
   assert.notDeepEqual(original.male, original.bytes, 'The alternate voice must be a distinct real output');
@@ -43,7 +43,7 @@ try {
   page = await fixture.start();
   const restored = await page.evaluate(async ({ id, cardId }) => {
     const invoke = window.__TAURI_INTERNALS__.invoke;
-    const bytes = await invoke('speech_cached', { vocabularyId: id });
+    const { bytes } = await invoke('speech_cached', { vocabularyId: id });
     const context = new AudioContext({ sampleRate: 48000 });
     const decoded = await context.decodeAudioData(new Uint8Array(bytes).buffer);
     const audio = document.createElement('audio');
@@ -71,7 +71,7 @@ try {
     const queued = await invoke('speech_retry_missing', { vocabularyId: id });
     let bytes;
     for (let attempt = 0; attempt < 200; attempt++) {
-      try { bytes = await invoke('speech_cached', { vocabularyId: id }); if (bytes) break; } catch { /* The old selected copy remains visibly damaged until commit. */ }
+      try { ({ bytes } = await invoke('speech_cached', { vocabularyId: id })); if (bytes) break; } catch { /* The old selected copy remains visibly damaged until commit. */ }
       await new Promise((done) => setTimeout(done, 50));
     }
     return { error, queued, bytes, cards: await invoke('review_cards', { vocabularyId: id }) };

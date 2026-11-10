@@ -7,6 +7,8 @@ use serde::{Deserialize, Serialize};
 
 pub mod conjugation;
 mod entry;
+pub mod frequency;
+pub mod mdx;
 mod snapshot;
 pub use entry::{Entry, Sense};
 
@@ -17,17 +19,28 @@ const PROVENANCE: &str =
 pub struct Source {
     pub title: String,
     pub version: String,
-    pub attribution: String,
-    pub license: String,
-    pub source_url: String,
-    pub license_url: String,
+    pub attribution: Option<String>,
+    pub license: Option<String>,
+    pub source_url: Option<String>,
+    pub license_url: Option<String>,
 }
 
 #[derive(Debug, Serialize)]
 pub struct Lookup {
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub dictionary_id: Option<String>,
     pub source: Source,
     pub sha256: String,
     pub entries: Vec<Entry>,
+    #[serde(skip_serializing_if = "Vec::is_empty")]
+    pub warnings: Vec<LookupWarning>,
+}
+
+#[derive(Debug, Serialize)]
+pub struct LookupWarning {
+    pub dictionary_id: String,
+    pub code: &'static str,
+    pub message: String,
 }
 
 #[derive(Debug, Serialize)]
@@ -51,7 +64,7 @@ fn failure(code: &'static str, context: &str, cause: impl std::fmt::Display) -> 
     }
 }
 
-pub fn lookup(path: &Path, key: &str, expected_sha256: &str) -> Result<Lookup, DictionaryError> {
+fn validate_query(key: &str) -> Result<(), DictionaryError> {
     if key.trim().is_empty() || key.len() > 512 || key.chars().any(char::is_control) {
         return Err(failure(
             "invalid_query",
@@ -59,13 +72,20 @@ pub fn lookup(path: &Path, key: &str, expected_sha256: &str) -> Result<Lookup, D
             "enter 1–512 UTF-8 bytes without control characters",
         ));
     }
+    Ok(())
+}
+
+pub fn lookup(path: &Path, key: &str, expected_sha256: &str) -> Result<Lookup, DictionaryError> {
+    validate_query(key)?;
     let connection = snapshot::open(path, expected_sha256, 16_000_000)?;
     let entries = read_entries(&connection, key)?;
     Ok(Lookup {
+        dictionary_id: None,
         source: serde_json::from_str(PROVENANCE)
             .map_err(|error| failure("corrupt", "Invalid source attribution", error))?,
         sha256: expected_sha256.to_owned(),
         entries,
+        warnings: Vec::new(),
     })
 }
 

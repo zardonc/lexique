@@ -3,6 +3,8 @@ fn main() {
     for source in [
         "scripts/dictionary_sample.py",
         "resources/freedict-fra-zho-2025.11.23",
+        "scripts/frequency_sample.py",
+        "resources/lexique-3.83",
         "scripts/conjugation_sample.py",
         "scripts/conjugation_metadata.py",
         "scripts/conjugation_generation.py",
@@ -67,10 +69,48 @@ fn main() {
             .as_str()
             .expect("Missing conjugation hash")
     );
+    let prepared = std::process::Command::new("python")
+        .args([
+            "-B",
+            "-X",
+            "utf8",
+            "scripts/frequency_sample.py",
+            "target/desktop-frequency-v1",
+        ])
+        .current_dir(&root)
+        .output()
+        .expect("Python 3.12+ is required to prepare bundled frequencies");
+    assert!(
+        prepared.status.success(),
+        "Bundled frequency preparation failed: {}",
+        String::from_utf8_lossy(&prepared.stderr)
+    );
+    let frequency: serde_json::Value =
+        serde_json::from_slice(&prepared.stdout).expect("Invalid frequency report");
+    println!(
+        "cargo:rustc-env=LEXIQUE_FREQUENCY_SHA256={}",
+        frequency["sqlite_sha256"]
+            .as_str()
+            .expect("Missing frequency hash")
+    );
     tauri_build::try_build(tauri_build::Attributes::new().app_manifest(
         tauri_build::AppManifest::new().commands(&[
             "runtime_status",
             "dictionary_lookup",
+            "dictionary_settings",
+            "dictionary_import",
+            "dictionary_remove",
+            "frequency_lookup",
+            "selection_capture",
+            "selection_cancel",
+            "selection_shortcut",
+            "ocr_shortcut",
+            "ocr_image",
+            "ocr_capture",
+            "ocr_locale",
+            "ocr_screen",
+            "ocr_region",
+            "ocr_abort",
             "conjugation_lookup",
             "conjugation_preferences",
             "conjugation_block_order",
