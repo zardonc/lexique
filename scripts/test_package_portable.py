@@ -4,6 +4,7 @@ import hashlib
 import json
 import os
 from pathlib import Path
+import shutil
 import struct
 import tempfile
 import unittest
@@ -51,6 +52,12 @@ class PortableTests(unittest.TestCase):
         self.write("resources/tesseract-fra/fra.traineddata", b"model embedded in the executable")
         self.write("resources/mdictlib-0.2.8/README.md", b"fixed MDX parser sources")
         self.write("resources/mdictlib-0.2.8/licenses/mdictlib-0.2.8.txt", b"MDX parser license")
+        repository = Path(__file__).resolve().parents[1]
+        for name in ("freedict-fra-eng-mdx-0.4.1", "freedict-fra-eng-0.4.1"):
+            shutil.copytree(repository / "resources" / name, self.root / "resources" / name)
+        shutil.copytree(repository / "resources/freedict-fra-eng-0.4.1",
+                        self.root / "target/release/conjugation/freedict-fra-eng-0.4.1")
+        self.write("scripts/freedict_mdx.py", (repository / "scripts/freedict_mdx.py").read_bytes())
         self.write("LICENSE", b"project license")
 
     def write(self, name, content):
@@ -87,6 +94,15 @@ class PortableTests(unittest.TestCase):
             self.assertEqual(zipped.read(prefix + "ocr-notices/licenses/native/image.txt"), b"native image license")
             self.assertEqual(zipped.read(prefix + "mdx-notices/README.md"), b"fixed MDX parser sources")
             self.assertEqual(zipped.read(prefix + "mdx-notices/licenses/mdictlib-0.2.8.txt"), b"MDX parser license")
+            bundled = "dictionary/freedict-fra-eng-mdx/"
+            metadata = json.loads(zipped.read(prefix + bundled + "manifest.json"))
+            self.assertEqual(hashlib.sha256(zipped.read(prefix + bundled + metadata["file"])).hexdigest(), metadata["sha256"])
+            self.assertEqual([name for name in zipped.namelist() if name.endswith(".mdx")], [prefix + bundled + metadata["file"]])
+            self.assertEqual(zipped.read(prefix + bundled + "COPYING"), zipped.read(prefix + "conjugation/freedict-fra-eng-0.4.1/COPYING"))
+            self.assertEqual(zipped.read(prefix + bundled + "AUTHORS"), zipped.read(prefix + "conjugation/freedict-fra-eng-0.4.1/AUTHORS"))
+            self.assertIn(prefix + bundled + "README.md", zipped.namelist())
+            self.assertIn(prefix + bundled + "freedict_mdx.py", zipped.namelist())
+            self.assertEqual(zipped.read(prefix + bundled + "LICENSE-MIT"), b"project license")
             self.assertFalse(any(path.endswith("fra.traineddata") for path in zipped.namelist()))
             self.assertEqual(zipped.read(prefix + "LICENSE"), b"project license")
             self.assertFalse(any("Lexique-data" in path for path in zipped.namelist()))
@@ -141,6 +157,28 @@ class PortableTests(unittest.TestCase):
         self.assertEqual(self.files(), before)
         self.assertFalse(self.output.exists())
 
+    def test_mismatched_bundled_mdx_fails_before_creating_delivery(self):
+        self.write("resources/freedict-fra-eng-mdx-0.4.1/freedict-fra-eng-0.4.1.mdx", b"changed MDX")
+        before = self.files()
+        with self.assertRaisesRegex(ValueError, "FreeDict MDX"):
+            package(self.root)
+        self.assertEqual(self.files(), before)
+        self.assertFalse(self.output.exists())
+
+    def test_mismatched_bundled_notice_or_corresponding_source_preserves_inputs(self):
+        for name in ("resources/freedict-fra-eng-mdx-0.4.1/COPYING",
+                     "target/release/conjugation/freedict-fra-eng-0.4.1/AUTHORS"):
+            with self.subTest(name=name):
+                path = self.root / name
+                original = path.read_bytes()
+                path.write_bytes(b"changed notice")
+                before = self.files()
+                with self.assertRaises(ValueError):
+                    package(self.root)
+                self.assertEqual(self.files(), before)
+                self.assertFalse(self.output.exists())
+                path.write_bytes(original)
+
     def test_invalid_executable_and_wrong_architecture_preserve_inputs(self):
         executable = self.root / "target/release/lexique-desktop.exe"
         original = executable.read_bytes()
@@ -182,6 +220,8 @@ class PortableTests(unittest.TestCase):
         self.write("target/aarch64-pc-windows-msvc/release/conjugation/conjugation.sqlite3", b"verified conjugation")
         self.write("target/aarch64-pc-windows-msvc/release/conjugation/LICENSE-LGPLLR", b"source forms license")
         self.write("target/aarch64-pc-windows-msvc/release/conjugation/grammalecte-2.3.0/LICENSE-GPL3", b"metadata license")
+        shutil.copytree(self.root / "resources/freedict-fra-eng-0.4.1",
+                        self.root / "target/aarch64-pc-windows-msvc/release/conjugation/freedict-fra-eng-0.4.1")
         self.write("target/aarch64-pc-windows-msvc/release/frequency/frequency.sqlite3", b"verified frequency")
         self.write("target/aarch64-pc-windows-msvc/release/frequency/COPYING", b"frequency data license")
         self.write("target/aarch64-pc-windows-msvc/release/frequency/frequency_sample.py", b"frequency converter source")

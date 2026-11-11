@@ -10,7 +10,7 @@ import { native24Fixture } from './native-24-harness.mjs';
 
 assert.ok(process.argv.length >= 8, 'Expected mode, package, binary, conjugation, frequency and new destination');
 const [mode, ...paths] = process.argv.slice(2);
-assert.ok(['tabs', 'lemmas'].includes(mode));
+assert.ok(['tabs', 'lemmas', 'bundle', 'links'].includes(mode));
 const [resources, binary, conjugation, frequency, destination] = paths.map((path) => resolve(path));
 const fixture = await native24Fixture(resources, binary, destination);
 await cp(conjugation, join(destination, 'conjugation'), { recursive: true });
@@ -71,7 +71,7 @@ print(json.dumps(r))`, database], { encoding: 'utf8', windowsHide: true, timeout
 }
 
 async function tabs() {
-  assert.deepEqual((await invoke('dictionary_settings')).map((item) => item.id), ['builtin']);
+  assert.deepEqual((await invoke('dictionary_settings')).map((item) => item.id), ['builtin', 'builtin-fra-eng']);
   await page.getByRole('button', { name: '设置', exact: true }).click();
   for (const file of ['verbs.mdx', 'other.mdx', 'formatting.mdx']) {
     await page.getByLabel('添加 MDX 词典', { exact: true }).setInputFiles(join(originals, file));
@@ -84,7 +84,7 @@ async function tabs() {
   const first = imported.find((item) => item.title === 'verbs.mdx');
   const second = imported.find((item) => item.title === 'other.mdx');
   const formatting = imported.find((item) => item.title === 'formatting.mdx');
-  const order = [first.id, second.id, 'builtin', formatting.id];
+  const order = [first.id, second.id, 'builtin', formatting.id, 'builtin-fra-eng'];
   await invoke('dictionary_settings', { order });
   const firstPath = join(copies, `${first.id}.mdx`), secondPath = join(copies, `${second.id}.mdx`);
   await query('double');
@@ -167,7 +167,7 @@ async function tabs() {
 async function lemmas() {
   await page.getByRole('button', { name: '设置', exact: true }).click();
   const source = await importMdx(join(originals, 'verbs.mdx'));
-  await invoke('dictionary_settings', { order: [source.id, 'builtin'] });
+  await invoke('dictionary_settings', { order: [source.id, 'builtin', 'builtin-fra-eng'] });
   const request = { operation: 'native-d9-save', headword: 'être', notes: 'Note conservée : être.', example_fr: '', example_zh: '',
     example_sense: null, more_examples: [], id: null, revision: null };
   const saved = await invoke('vocabulary_save', { request, dictionary_id: source.id });
@@ -182,11 +182,11 @@ async function lemmas() {
   await query('être');
   await page.getByRole('button', { name: '查看现有记录', exact: true }).click();
   await page.getByLabel('独立笔记', { exact: true }).fill('unsaved native note');
-  await page.getByRole('tab', { name: /FreeDict/ }).click();
+  await page.getByRole('tab', { name: 'FreeDict fra-zho', exact: true }).click();
   await page.getByRole('dialog').getByRole('button', { name: '继续编辑', exact: true }).click();
   await expect(page.getByLabel('独立笔记', { exact: true })).toHaveValue('unsaved native note');
   await expect(page.getByRole('tab', { name: 'verbs.mdx', exact: true })).toHaveAttribute('aria-selected', 'true');
-  await page.getByRole('tab', { name: /FreeDict/ }).click();
+  await page.getByRole('tab', { name: 'FreeDict fra-zho', exact: true }).click();
   await page.getByRole('dialog').getByRole('button', { name: '放弃修改', exact: true }).click();
   assert.deepEqual(snapshot(), before);
 
@@ -236,9 +236,79 @@ async function lemmas() {
   results.push({ check: 'source upgrade, restart and replay with an unregistered source preserve learning snapshots', status: 'passed' });
 }
 
+async function bundle() {
+  const id = 'builtin-fra-eng', title = 'FreeDict fra-eng 0.4.1';
+  assert.deepEqual((await invoke('dictionary_settings')).map((item) => item.id), ['builtin', id]);
+  const lookup = await invoke('dictionary_lookup', { key: 'école', dictionary_id: id });
+  assert.equal(lookup.source.license, 'GPL-2.0-or-later');
+  assert.equal(lookup.source.version, '0.4.1');
+  assert.ok(lookup.entries.some((entry) => entry.html.includes('school')));
+  await query('école');
+  await page.getByRole('tab', { name: title, exact: true }).click();
+  await expect(page.locator('iframe.dictionary-html').first().contentFrame().getByRole('heading', { name: 'école', exact: true })).toBeVisible();
+  await expect(page.locator('.dictionary-source')).toContainText('GPL-2.0-or-later');
+  results.push({ check: 'fresh bundled FreeDict lookup, real HTML and verified provenance', status: 'passed' });
+
+  const request = { operation: 'native-mdx-bundle-save', headword: 'école', notes: 'Note conservée : école.', example_fr: '', example_zh: '',
+    example_sense: null, more_examples: [], id: null, revision: null };
+  const saved = await invoke('vocabulary_save', { request, dictionary_id: id });
+  assert.equal(saved.record.reference.dictionary_id, id);
+  assert.equal(saved.record.reference.license, 'GPL-2.0-or-later');
+  const cards = await invoke('review_add', { vocabularyId: saved.record.id });
+  await invoke('speech_generate', { vocabularyId: saved.record.id });
+  const recognition = cards.find((card) => card.kind === 'recognition');
+  await invoke('review_rate', { request: { operation: 'native-mdx-bundle-rating', card_id: recognition.id,
+    expected_revision: 0, rating: 'good', timezone: 'UTC' } });
+  const custom = await importMdx(join(originals, 'verbs.mdx'));
+  const before = snapshot();
+  assert.equal(before.word_audio_selections.length, 1);
+  const legacy = [{ id: custom.id, title: custom.title }, { id: 'builtin', title: 'FreeDict fra-zho' }];
+  await fixture.stop(true);
+  const changed = spawnSync(join(destination, 'speech/runtime/python.exe'), ['-B', '-X', 'utf8', '-c',
+    "import sqlite3,sys; c=sqlite3.connect(sys.argv[1]); c.execute('UPDATE app_metadata SET value=? WHERE key=?',(sys.argv[2],'dictionary-settings')); c.commit()",
+    database, JSON.stringify({ next_id: 2, dictionaries: legacy })], { encoding: 'utf8', windowsHide: true, timeout: 10_000 });
+  assert.equal(changed.status, 0, changed.stderr);
+  await start();
+  assert.deepEqual((await invoke('dictionary_settings')).map((item) => item.id), [custom.id, 'builtin', id]);
+  assert.deepEqual(await readFile(join(copies, `${custom.id}.mdx`)), await readFile(join(originals, 'verbs.mdx')));
+  assert.deepEqual(snapshot(), before);
+  results.push({ check: 'legacy order upgrades on restart while user MDX, notes, FSRS and selected audio remain intact', status: 'passed' });
+
+  const mdx = join(destination, 'dictionary/freedict-fra-eng-mdx/freedict-fra-eng-0.4.1.mdx');
+  await rename(mdx, `${mdx}.retained`);
+  assert.equal((await lookupFailure('école', id)).code, 'missing');
+  await query('école');
+  await page.getByRole('tab', { name: title, exact: true }).click();
+  await expect(page.getByRole('tabpanel')).toContainText('词典资源不存在');
+  await rename(`${mdx}.retained`, mdx);
+  await page.getByRole('tabpanel').getByRole('button', { name: '重新读取', exact: true }).click();
+  await expect(page.locator('iframe.dictionary-html').first().contentFrame().getByRole('heading', { name: 'école', exact: true })).toBeVisible();
+  assert.deepEqual(snapshot(), before);
+  await page.getByRole('button', { name: '设置', exact: true }).click();
+  const settings = page.locator('.dictionary-settings');
+  await expect(settings.locator('li').filter({ hasText: title }).getByRole('button', { name: '移出词典列表', exact: true })).toHaveCount(0);
+  await expect(page.locator('.dictionary-resources details')).toHaveCount(8);
+  const invalid = await page.evaluate(async () => {
+    try { await window.__TAURI_INTERNALS__.invoke('dictionary_resource_open', { id: 'https://example.org' }); return null; }
+    catch (error) { return error.code; }
+  });
+  assert.equal(invalid, 'invalid_query');
+  assert.deepEqual(externalRequests, []);
+  await page.locator('.dictionary-resources').screenshot({ path: join(destination, 'dictionary-resources.png') });
+  results.push({ check: 'resource failure/recovery, protected bundle, eight optional categories and ID-only native link command', status: 'passed' });
+}
+
+async function links() {
+  const before = snapshot();
+  await invoke('dictionary_resource_open', { id: 'larousse-synonyms' });
+  assert.deepEqual(snapshot(), before);
+  results.push({ check: 'native allowlisted resource launch preserves learning data', status: 'passed',
+    resource_id: 'larousse-synonyms', url: 'https://www.larousse.fr/dictionnaires/synonymes' });
+}
+
 try {
   await start();
-  await ({ tabs, lemmas }[mode])();
+  await ({ tabs, lemmas, bundle, links }[mode])();
   await fixture.stop(true);
   await writeFile(join(destination, 'result.json'), JSON.stringify({ mode, results, externalRequests }, null, 2));
   process.stdout.write(JSON.stringify({ mode, results, externalRequests }) + '\n');

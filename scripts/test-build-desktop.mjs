@@ -12,10 +12,12 @@ function fixture(run) {
   const directory = mkdtempSync(join(tmpdir(), 'lexique-build-'));
   try {
     mkdirSync(join(directory, 'scripts'));
-    for (const name of ['desktop-dictionary-sample', 'desktop-conjugation-v6-stats']) {
+    for (const name of ['desktop-dictionary-sample', 'desktop-conjugation-v6-stats', 'desktop-frequency-v1']) {
       mkdirSync(join(directory, 'target', name), { recursive: true });
       writeFileSync(join(directory, 'target', name, 'resource.txt'), name);
     }
+    mkdirSync(join(directory, 'resources/freedict-fra-eng-mdx-0.4.1'), { recursive: true });
+    writeFileSync(join(directory, 'resources/freedict-fra-eng-mdx-0.4.1/freedict-fra-eng-0.4.1.mdx'), 'FreeDict MDX fixture');
     copyFileSync(join(root, 'scripts/build-desktop.mjs'), join(directory, 'scripts/build-desktop.mjs'));
     const config = JSON.parse(readFileSync(join(root, 'package.json'), 'utf8'));
     writeFileSync(join(directory, 'package.json'), JSON.stringify(config));
@@ -36,6 +38,8 @@ test('public pnpm build preserves spaced arguments and sends locked to Cargo', (
   assert.deepEqual(JSON.parse(readFileSync(join(directory, 'received.json'), 'utf8')),
     ['build', '--debug', '--no-bundle', '--config', 'config with spaces.json', '--', '--locked']);
   assert.equal(readFileSync(join(directory, 'target/debug/conjugation/resource.txt'), 'utf8'), 'desktop-conjugation-v6-stats');
+  assert.equal(readFileSync(join(directory, 'target/debug/frequency/resource.txt'), 'utf8'), 'desktop-frequency-v1');
+  assert.equal(readFileSync(join(directory, 'target/debug/dictionary/freedict-fra-eng-mdx/freedict-fra-eng-0.4.1.mdx'), 'utf8'), 'FreeDict MDX fixture');
 }));
 
 test('CLI failure remains a failed build', () => fixture((directory, cli) => {

@@ -18,6 +18,8 @@ fn main() {
         "resources/grammalecte-2.3.0",
         "resources/lefff-syntax",
         "resources/freedict-fra-eng-0.4.1",
+        "resources/freedict-fra-eng-mdx-0.4.1",
+        "scripts/freedict_mdx.py",
         "LICENSE",
     ] {
         println!("cargo:rerun-if-changed={}", root.join(source).display());
@@ -34,6 +36,16 @@ fn main() {
         .status()
         .expect("Python 3.12+ is required to prepare the bundled dictionary");
     assert!(status.success(), "Bundled dictionary preparation failed");
+    let verified = std::process::Command::new("python")
+        .args(["-B", "-X", "utf8", "scripts/freedict_mdx.py"])
+        .current_dir(&root)
+        .output()
+        .expect("Python 3.12+ is required to verify the bundled MDX");
+    assert!(
+        verified.status.success(),
+        "Bundled MDX verification failed: {}",
+        String::from_utf8_lossy(&verified.stderr)
+    );
     let report: serde_json::Value = serde_json::from_slice(
         &std::fs::read(root.join("target/desktop-dictionary-sample/report.json"))
             .expect("Missing dictionary report"),
@@ -100,6 +112,7 @@ fn main() {
             "dictionary_settings",
             "dictionary_import",
             "dictionary_remove",
+            "dictionary_resource_open",
             "frequency_lookup",
             "selection_capture",
             "selection_cancel",

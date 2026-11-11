@@ -51,9 +51,13 @@ M1 请求由 Rust 严格反序列化，前端请求 / 响应由 Zod 校验。标
 
 ### 多词典与动词原形（issue #9 D1／D3）
 
-`dictionary_settings`、`dictionary_import`、`dictionary_remove` 与扩展的 `dictionary_lookup` 继续只授予本地 main 窗口。查询接受既有有界词形及可选的稳定词典 ID，不接受路径；导入接受非空且至多 128 MiB 的原始字节和 `x-lexique-dictionary-name` 中的 base64 UTF-8 文件名。最多 16 个词典，内置 FreeDict 保持注册。平台将用户 MDX 复制到学习库旁的 `dictionaries/mdx-N.mdx`，先持久预留编号，以 `create_new` 保留已有文件；移出列表只取消注册。
+`dictionary_settings`、`dictionary_import`、`dictionary_remove` 与扩展的 `dictionary_lookup` 继续只授予本地 main 窗口。查询接受既有有界词形及可选的稳定词典 ID，不接受路径；导入接受非空且至多 128 MiB 的原始字节和 `x-lexique-dictionary-name` 中的 base64 UTF-8 文件名。最多 17 个词典，内置法中小样 `builtin` 与法英补充 MDX `builtin-fra-eng` 保持注册，15 份自定义 MDX 的容量不变。平台将用户 MDX 复制到学习库旁的 `dictionaries/mdx-N.mdx`，先持久预留编号，以 `create_new` 保留已有文件；移出列表只取消自定义词典的注册。
 
 注册表和顺序保存于独立 `app_metadata['dictionary-settings']`，不提高 schema 17。初次按用户顺序选中首个读取成功的词典，空结果仍保持该词典；失败来源独立显示，其他正文点击标签后才读取。原生最多保留两个 `mdictlib 0.2.8 + lzo` 解析器，以文件长度／修改时间变化使缓存失效，每次打开只计算一次来源摘要；文件、块、单条、记录数及解析器内存沿用 #3 上限。单响应最多 200 条／4 MiB 正文，超限明确失败。前端只保留当前查询的已访问正文，换查询或离开页面释放；请求身份阻止迟到结果覆盖当前查询。
+
+2026-11-11，旧目录读取时在末尾补入 `builtin-fra-eng`，保留原顺序和用户文件；原目录满额 16 项可升级为 17 项。该文件来自固定 `dictionary/freedict-fra-eng-mdx/freedict-fra-eng-0.4.1.mdx`，复用同一 MDX 解析器；只在已有文件摘要与编译时 manifest 一致时赋予已核实的 FreeDict／GPL 来源信息，否则返回损坏错误。用户库、原法中小样及变位来源保持独立。
+
+`dictionary_resource_open` 只授予本地 main，接受至多 64 字节且存在于内置链接目录的资源 ID；前端不传 URL 或路径。原生与界面使用同一 JSON 目录，Windows 通过已安装的 Windows API 调用 Shell，macOS 使用参数数组调用 `open`；浏览器预览直接打开同一来源链接。打开错误可见，不自动下载或导入。Windows Shell 的 COM 初始化和返回值按[官方说明](https://learn.microsoft.com/en-us/windows/win32/api/shellapi/nf-shellapi-shellexecutew)处理；实际检查范围见[证据](evidence/d2-mdx/README.md)。
 
 MDX 原拼写、重复物理记录及从一开始的 ordinal 保留，未经独立提取的许可、音标、词性和释义字段保持未知。正文用 inert template 去除活动内容、跳转、媒体和事件属性，保留允许的格式与内联 CSS，再显示于无脚本、无同源权限的 sandbox iframe；正文 CSP 禁止外部资源。MDD 媒体、重定向及词条内导航仍按 C1 单独接入。固定解析器法律原文随包保留于 `mdx-notices/`。
 

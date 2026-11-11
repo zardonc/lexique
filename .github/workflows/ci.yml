@@ -101,14 +101,20 @@ jobs:
           - os: windows-latest
             target: x86_64-pc-windows-msvc
             arch: amd64
-          - os: windows-latest
+          - os: windows-11-arm
             target: aarch64-pc-windows-msvc
             arch: amd64_arm64
-          - os: macos-latest
+          - os: macos-15-intel
             target: x86_64-apple-darwin
           - os: macos-latest
             target: aarch64-apple-darwin
     runs-on: ${{ matrix.os }}
+    env:
+      CARGO_BUILD_TARGET: ${{ matrix.target }}
+      # Resource-heavy tests must fit the existing 60-second execution limit.
+      CARGO_PROFILE_TEST_OPT_LEVEL: '1'
+      # Keep unrelated fixture writes out of the SQLite timing measurement.
+      RUST_TEST_THREADS: '1'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -127,6 +133,10 @@ jobs:
       - run: pnpm build
       - run: rustup target add ${{ matrix.target }}
       - run: cargo check --locked --workspace --target ${{ matrix.target }}
+      - run: cargo test --locked -p lexique-core -p lexique-storage -p lexique-dictionary --no-run
+      - run: pnpm test:rust
+      - run: cargo test --locked --release -p lexique-desktop --lib --no-run
+      - run: pnpm test:desktop:lib
 
   windows-portable:
     runs-on: windows-latest

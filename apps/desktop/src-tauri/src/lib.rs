@@ -8,6 +8,7 @@ use tauri::{Manager, State};
 mod audio_maintenance;
 mod conjugation;
 mod dictionaries;
+mod dictionary_links;
 mod ocr;
 mod ocr_capture;
 mod review_window;
@@ -166,6 +167,7 @@ pub fn run() {
             dictionary_settings,
             dictionary_import,
             dictionary_remove,
+            dictionary_links::dictionary_resource_open,
             frequency_lookup,
             selection::selection_capture,
             selection::selection_cancel,

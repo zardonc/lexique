@@ -7,7 +7,7 @@ use std::{
 };
 
 use base64::{Engine, engine::general_purpose::STANDARD};
-use lexique_dictionary::{DictionaryError, Lookup, LookupWarning, mdx};
+use lexique_dictionary::{DictionaryError, Lookup, LookupWarning, Source, mdx};
 use rusqlite::{Connection, OptionalExtension, TransactionBehavior};
 use serde::{Deserialize, Serialize};
 use tauri::{Manager, State};
@@ -15,7 +15,14 @@ use tauri::{Manager, State};
 use crate::vocabulary::{DatabasePath, open};
 
 const KEY: &str = "dictionary-settings";
-const MAX_DICTIONARIES: usize = 16;
+const MAX_DICTIONARIES: usize = 17;
+const BUNDLED_MDX_ID: &str = "builtin-fra-eng";
+
+#[derive(Deserialize)]
+struct BundledSource {
+    source: Source,
+    sha256: String,
+}
 
 #[derive(Clone, Debug, Deserialize, Serialize, PartialEq)]
 #[serde(deny_unknown_fields)]
@@ -39,7 +46,7 @@ fn failure(code: &'static str, message: impl std::fmt::Display) -> DictionaryErr
 }
 
 fn valid_id(id: &str) -> bool {
-    id == "builtin"
+    matches!(id, "builtin" | BUNDLED_MDX_ID)
         || id
             .strip_prefix("mdx-")
             .and_then(|value| value.parse::<u32>().ok())
@@ -55,7 +62,7 @@ fn read(connection: &Connection) -> Result<Settings, DictionaryError> {
         )
         .optional()
         .map_err(|error| failure("query_failed", error))?;
-    let settings: Settings = match json {
+    let mut settings: Settings = match json {
         Some(json) => serde_json::from_str(&json)
             .map_err(|error| failure("corrupt", format!("Invalid dictionary settings: {error}")))?,
         None => Settings {
@@ -66,6 +73,16 @@ fn read(connection: &Connection) -> Result<Settings, DictionaryError> {
             }],
         },
     };
+    if !settings
+        .dictionaries
+        .iter()
+        .any(|item| item.id == BUNDLED_MDX_ID)
+    {
+        settings.dictionaries.push(DictionaryConfig {
+            id: BUNDLED_MDX_ID.into(),
+            title: "FreeDict fra-eng 0.4.1".into(),
+        });
+    }
     let items = &settings.dictionaries;
     if items.is_empty()
         || items.len() > MAX_DICTIONARIES
@@ -126,7 +143,7 @@ fn settings(
 }
 
 fn custom_path(path: &DatabasePath, id: &str) -> Result<PathBuf, DictionaryError> {
-    if !valid_id(id) || id == "builtin" {
+    if !valid_id(id) || !id.starts_with("mdx-") {
         return Err(failure("invalid_query", "Invalid custom dictionary ID"));
     }
     Ok(path
@@ -164,7 +181,10 @@ fn import(
         .map_err(|error| failure("query_failed", error))?;
     let mut preferences = read(&transaction)?;
     if preferences.dictionaries.len() >= MAX_DICTIONARIES {
-        return Err(failure("limit", "Maximum 16 dictionaries"));
+        return Err(failure(
+            "limit",
+            "Maximum 17 dictionaries, including two bundled dictionaries",
+        ));
     }
     let id = format!("mdx-{}", preferences.next_id);
     preferences.next_id = preferences
@@ -196,7 +216,10 @@ fn import(
             .map_err(|error| failure("query_failed", error))?;
         let mut preferences = read(&transaction)?;
         if preferences.dictionaries.len() >= MAX_DICTIONARIES {
-            return Err(failure("limit", "Maximum 16 dictionaries"));
+            return Err(failure(
+                "limit",
+                "Maximum 17 dictionaries, including two bundled dictionaries",
+            ));
         }
         preferences.dictionaries.push(DictionaryConfig {
             id,
@@ -264,7 +287,13 @@ impl Registry {
             result.dictionary_id = Some("builtin".into());
             return Ok(result);
         }
-        let file_path = custom_path(path, &config.id)?;
+        let file_path = if config.id == BUNDLED_MDX_ID {
+            builtin
+                .with_file_name("freedict-fra-eng-mdx")
+                .join("freedict-fra-eng-0.4.1.mdx")
+        } else {
+            custom_path(path, &config.id)?
+        };
         let mut cache = self
             .0
             .lock()
@@ -304,7 +333,21 @@ impl Registry {
         };
         let result = cached.dictionary.lookup(key);
         cache.push(cached);
-        result
+        let mut result = result?;
+        if config.id == BUNDLED_MDX_ID {
+            let provenance: BundledSource = serde_json::from_str(include_str!(
+                "../../../../resources/freedict-fra-eng-mdx-0.4.1/manifest.json"
+            ))
+            .map_err(|error| failure("corrupt", error))?;
+            if result.sha256 != provenance.sha256 {
+                return Err(failure(
+                    "corrupt",
+                    "Bundled FreeDict MDX differs from its admitted source",
+                ));
+            }
+            result.source = provenance.source;
+        }
+        Ok(result)
     }
 
     fn lookup(
@@ -455,6 +498,7 @@ pub async fn dictionary_remove(
 #[cfg(test)]
 mod tests {
     use super::*;
+    use std::sync::atomic::{AtomicU64, Ordering};
 
     fn fixture(name: &str) -> Vec<u8> {
         fs::read(
@@ -465,17 +509,25 @@ mod tests {
         .unwrap()
     }
 
-    fn database() -> DatabasePath {
-        let root = Path::new(env!("CARGO_MANIFEST_DIR"))
+    fn database_root(nonce: u128) -> PathBuf {
+        static NEXT_DATABASE_ID: AtomicU64 = AtomicU64::new(0);
+        let id = NEXT_DATABASE_ID.fetch_add(1, Ordering::Relaxed);
+        Path::new(env!("CARGO_MANIFEST_DIR"))
             .join("../../../target/issue-9/registry-tests")
-            .join(format!(
-                "{}-{}",
-                std::process::id(),
-                SystemTime::now()
-                    .duration_since(SystemTime::UNIX_EPOCH)
-                    .unwrap()
-                    .as_nanos()
-            ));
+            .join(format!("{}-{nonce}-{id}", std::process::id()))
+    }
+
+    #[test]
+    fn database_roots_stay_unique_when_clock_values_repeat() {
+        assert_ne!(database_root(0), database_root(0));
+    }
+
+    fn database() -> DatabasePath {
+        let nonce = SystemTime::now()
+            .duration_since(SystemTime::UNIX_EPOCH)
+            .unwrap()
+            .as_nanos();
+        let root = database_root(nonce);
         fs::create_dir_all(&root).unwrap();
         let path = DatabasePath(root.join("lexique.sqlite3"));
         lexique_storage::initialize(&Connection::open(&path.0).unwrap()).unwrap();
@@ -499,11 +551,16 @@ mod tests {
         let second = fixture("v1-utf16-none.mdx");
         import(&path, "first.mdx", &first).unwrap();
         import(&path, "第二本.mdx", &second).unwrap();
-        let order = vec!["mdx-1".into(), "mdx-2".into(), "builtin".into()];
+        let order = vec![
+            "mdx-1".into(),
+            "mdx-2".into(),
+            "builtin".into(),
+            BUNDLED_MDX_ID.into(),
+        ];
         let catalog = settings(&path, Some(order.clone())).unwrap();
         assert_eq!(settings(&path, None).unwrap(), catalog);
         assert_eq!(
-            settings(&path, Some(vec!["mdx-1".into(); 3]))
+            settings(&path, Some(vec!["mdx-1".into(); 4]))
                 .unwrap_err()
                 .code,
             "invalid_query"
@@ -566,6 +623,128 @@ mod tests {
     }
 
     #[test]
+    fn a_full_legacy_catalog_keeps_fifteen_custom_dictionaries_and_their_order() {
+        let path = database();
+        let connection = open(&path).unwrap();
+        let bytes = fixture("v2-utf8-none.mdx");
+        let mut original: Vec<_> = (1..=15)
+            .map(|index| DictionaryConfig {
+                id: format!("mdx-{index}"),
+                title: format!("{index}.mdx"),
+            })
+            .collect();
+        original.insert(
+            7,
+            DictionaryConfig {
+                id: "builtin".into(),
+                title: "FreeDict fra-zho".into(),
+            },
+        );
+        fs::create_dir_all(custom_path(&path, "mdx-1").unwrap().parent().unwrap()).unwrap();
+        for item in original.iter().filter(|item| item.id.starts_with("mdx-")) {
+            fs::write(custom_path(&path, &item.id).unwrap(), &bytes).unwrap();
+        }
+        write(
+            &connection,
+            &Settings {
+                next_id: 16,
+                dictionaries: original.clone(),
+            },
+        )
+        .unwrap();
+        let upgraded = settings(&path, None).unwrap();
+        assert_eq!(&upgraded[..16], &original);
+        assert_eq!(upgraded[16].id, BUNDLED_MDX_ID);
+        assert_eq!(
+            import(&path, "over-limit.mdx", &bytes).unwrap_err().code,
+            "limit"
+        );
+        let order = upgraded.iter().map(|item| item.id.clone()).rev().collect();
+        let reordered = settings(&path, Some(order)).unwrap();
+        assert_eq!(settings(&path, None).unwrap(), reordered);
+        for item in original.iter().filter(|item| item.id.starts_with("mdx-")) {
+            assert_eq!(
+                fs::read(custom_path(&path, &item.id).unwrap()).unwrap(),
+                bytes
+            );
+        }
+        assert_eq!(lexique_storage::initialize(&connection).unwrap(), 17);
+    }
+
+    #[test]
+    fn bundled_lookup_checks_bytes_before_assigning_freedict_provenance() {
+        let path = database();
+        let builtin = path
+            .0
+            .parent()
+            .unwrap()
+            .join("dictionary/dictionary.sqlite3");
+        let mdx_path = builtin
+            .with_file_name("freedict-fra-eng-mdx")
+            .join("freedict-fra-eng-0.4.1.mdx");
+        fs::create_dir_all(mdx_path.parent().unwrap()).unwrap();
+        let original = fs::read(
+            Path::new(env!("CARGO_MANIFEST_DIR"))
+                .join("../../../resources/freedict-fra-eng-mdx-0.4.1/freedict-fra-eng-0.4.1.mdx"),
+        )
+        .unwrap();
+        fs::write(&mdx_path, &original).unwrap();
+        let registry = Registry::default();
+        let lookup = registry
+            .lookup(&path, &builtin, "école", Some(BUNDLED_MDX_ID))
+            .unwrap();
+        assert_eq!(lookup.dictionary_id.as_deref(), Some(BUNDLED_MDX_ID));
+        assert_eq!(lookup.source.version, "0.4.1");
+        assert_eq!(lookup.source.license.as_deref(), Some("GPL-2.0-or-later"));
+        assert!(lookup.entries.iter().any(|entry| {
+            entry
+                .html
+                .as_deref()
+                .is_some_and(|html| html.contains("school"))
+        }));
+        fs::write(&mdx_path, b"damaged MDX").unwrap();
+        assert_eq!(
+            registry
+                .lookup(&path, &builtin, "école", Some(BUNDLED_MDX_ID))
+                .unwrap_err()
+                .code,
+            "corrupt"
+        );
+        fs::remove_file(&mdx_path).unwrap();
+        assert_eq!(
+            registry
+                .lookup(&path, &builtin, "école", Some(BUNDLED_MDX_ID))
+                .unwrap_err()
+                .code,
+            "missing"
+        );
+        fs::write(&mdx_path, fixture("v2-utf8-none.mdx")).unwrap();
+        let replaced = registry
+            .lookup(&path, &builtin, "double", Some(BUNDLED_MDX_ID))
+            .unwrap_err();
+        assert_eq!(replaced.code, "corrupt");
+        assert!(replaced.message.contains("admitted source"));
+        fs::write(&mdx_path, &original).unwrap();
+        let restored = Registry::default()
+            .lookup(&path, &builtin, "école", Some(BUNDLED_MDX_ID))
+            .unwrap();
+        assert_eq!(
+            serde_json::to_value(restored.source).unwrap(),
+            serde_json::to_value(lookup.source).unwrap()
+        );
+    }
+
+    #[test]
+    fn bundled_dictionaries_cannot_be_removed() {
+        let path = database();
+        let before = settings(&path, None).unwrap();
+        for id in ["builtin", BUNDLED_MDX_ID] {
+            assert_eq!(remove(&path, id).unwrap_err().code, "invalid_query");
+        }
+        assert_eq!(settings(&path, None).unwrap(), before);
+    }
+
+    #[test]
     fn import_limits_and_invalid_filenames_leave_the_catalog_unchanged() {
         let path = database();
         let bytes = fixture("v2-utf8-none.mdx");
@@ -579,7 +758,7 @@ mod tests {
             import(&path, &format!("{index}.mdx"), &bytes).unwrap();
         }
         let before = settings(&path, None).unwrap();
-        assert_eq!(before.len(), 16);
+        assert_eq!(before.len(), 17);
         assert_eq!(
             import(&path, "too-many.mdx", &bytes).unwrap_err().code,
             "limit"
