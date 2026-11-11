@@ -1,5 +1,9 @@
 //! V03 isolated candidate. Product callers and schema remain unchanged.
-use std::{path::PathBuf, time::Instant};
+use std::{
+    path::PathBuf,
+    sync::atomic::{AtomicU64, Ordering},
+    time::Instant,
+};
 
 use candidate as review;
 pub use candidate::{QueueAudioMetadata, QueueCard, ReviewProgress};
@@ -42,14 +46,28 @@ mod candidate {
     }
 }
 
+fn database_root(nonce: u128) -> PathBuf {
+    static NEXT_DATABASE_ID: AtomicU64 = AtomicU64::new(0);
+    let id = NEXT_DATABASE_ID.fetch_add(1, Ordering::Relaxed);
+    PathBuf::from(env!("CARGO_MANIFEST_DIR"))
+        .join("../../target/issue-24")
+        .join(format!(
+            "preflight-sqlite-{}-{nonce}-{id}",
+            std::process::id()
+        ))
+}
+
+#[test]
+fn database_roots_stay_unique_when_clock_values_repeat() {
+    assert_ne!(database_root(0), database_root(0));
+}
+
 fn database(count: i64) -> (PathBuf, Connection) {
     let nonce = std::time::SystemTime::now()
         .duration_since(std::time::UNIX_EPOCH)
         .unwrap()
         .as_nanos();
-    let root = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
-        .join("../../target/issue-24")
-        .join(format!("preflight-sqlite-{}-{nonce}", std::process::id()));
+    let root = database_root(nonce);
     std::fs::create_dir_all(&root).unwrap();
     let path = root.join("test.sqlite3");
     let connection = Connection::open(&path).unwrap();

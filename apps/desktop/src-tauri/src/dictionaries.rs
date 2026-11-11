@@ -498,6 +498,7 @@ pub async fn dictionary_remove(
 #[cfg(test)]
 mod tests {
     use super::*;
+    use std::sync::atomic::{AtomicU64, Ordering};
 
     fn fixture(name: &str) -> Vec<u8> {
         fs::read(
@@ -508,17 +509,25 @@ mod tests {
         .unwrap()
     }
 
-    fn database() -> DatabasePath {
-        let root = Path::new(env!("CARGO_MANIFEST_DIR"))
+    fn database_root(nonce: u128) -> PathBuf {
+        static NEXT_DATABASE_ID: AtomicU64 = AtomicU64::new(0);
+        let id = NEXT_DATABASE_ID.fetch_add(1, Ordering::Relaxed);
+        Path::new(env!("CARGO_MANIFEST_DIR"))
             .join("../../../target/issue-9/registry-tests")
-            .join(format!(
-                "{}-{}",
-                std::process::id(),
-                SystemTime::now()
-                    .duration_since(SystemTime::UNIX_EPOCH)
-                    .unwrap()
-                    .as_nanos()
-            ));
+            .join(format!("{}-{nonce}-{id}", std::process::id()))
+    }
+
+    #[test]
+    fn database_roots_stay_unique_when_clock_values_repeat() {
+        assert_ne!(database_root(0), database_root(0));
+    }
+
+    fn database() -> DatabasePath {
+        let nonce = SystemTime::now()
+            .duration_since(SystemTime::UNIX_EPOCH)
+            .unwrap()
+            .as_nanos();
+        let root = database_root(nonce);
         fs::create_dir_all(&root).unwrap();
         let path = DatabasePath(root.join("lexique.sqlite3"));
         lexique_storage::initialize(&Connection::open(&path.0).unwrap()).unwrap();
