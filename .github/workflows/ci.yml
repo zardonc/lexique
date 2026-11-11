@@ -111,6 +111,8 @@ jobs:
     runs-on: ${{ matrix.os }}
     env:
       CARGO_BUILD_TARGET: ${{ matrix.target }}
+      # Resource-heavy tests must fit the existing 60-second execution limit.
+      CARGO_PROFILE_TEST_OPT_LEVEL: '1'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
