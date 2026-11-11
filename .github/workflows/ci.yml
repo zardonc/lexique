@@ -106,7 +106,7 @@ jobs:
             arch: amd64_arm64
           - os: macos-15-intel
             target: x86_64-apple-darwin
-          - os: macos-15
+          - os: macos-latest
             target: aarch64-apple-darwin
     runs-on: ${{ matrix.os }}
     env:

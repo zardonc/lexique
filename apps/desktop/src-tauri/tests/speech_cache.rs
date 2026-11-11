@@ -4,7 +4,10 @@
 #[allow(dead_code)]
 mod speech_cache;
 
-use std::path::PathBuf;
+use std::{
+    path::PathBuf,
+    sync::atomic::{AtomicU64, Ordering},
+};
 
 /// Executed explicitly by native-crash-24.mjs after precompilation. The native
 /// application performs the restart/recovery assertions against these real files.
@@ -85,6 +88,19 @@ fn publication_crash_fixture() {
     panic!("unknown/unreached crash point: {point}");
 }
 
+fn cache_root(nonce: u128) -> PathBuf {
+    static NEXT_CACHE_ID: AtomicU64 = AtomicU64::new(0);
+    let id = NEXT_CACHE_ID.fetch_add(1, Ordering::Relaxed);
+    PathBuf::from(env!("CARGO_MANIFEST_DIR"))
+        .join("../../../target/speech-cache-tests")
+        .join(format!("{}-{nonce}-{id}", std::process::id()))
+}
+
+#[test]
+fn cache_roots_stay_unique_when_clock_values_repeat() {
+    assert_ne!(cache_root(0), cache_root(0));
+}
+
 struct Cache(PathBuf);
 
 impl Cache {
@@ -93,9 +109,7 @@ impl Cache {
             .duration_since(std::time::UNIX_EPOCH)
             .unwrap()
             .as_nanos();
-        let root = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
-            .join("../../../target/speech-cache-tests")
-            .join(format!("{}-{nonce}", std::process::id()));
+        let root = cache_root(nonce);
         std::fs::create_dir_all(root.join("Lexique-data/data")).unwrap();
         Self(root.canonicalize().unwrap())
     }
