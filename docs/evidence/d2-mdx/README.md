@@ -27,15 +27,15 @@
 | 上述入口加 `--output target/d2-research/mdx/freedict-rebuild-2026-11-10 --writer target/d2-research/mdx/french-bundle-proof/writer_support/writemdict.py` | 通过；由完整 TEI 重建、全部记录及 MDX 字节一致 |
 | `pnpm lint`、`pnpm typecheck`、`pnpm build` | 通过 |
 | `pnpm rust:fmt` | 通过 |
-| `pnpm rust:test:build` → `pnpm test:rust` | 预编译通过；执行阶段硬性 60 秒，151 项通过 |
-| `cargo test --locked --release -p lexique-desktop --lib --no-run` → `pnpm test:desktop:lib` | 14 项通过；移出保护、满额旧目录、合法文件替换及真实 FreeDict 查词覆盖 |
+| `pnpm rust:test:build` → `pnpm test:rust` | 预编译通过；执行阶段硬性 60 秒，152 项通过 |
+| `cargo test --locked --release -p lexique-desktop --lib --no-run` → `pnpm test:desktop:lib` | 15 项通过；移出保护、满额旧目录、合法文件替换及真实 FreeDict 查词覆盖 |
 | `pnpm --filter @lexique/desktop exec playwright test dictionary-resources.spec.ts dictionary-tabs.spec.ts` | 9 项通过；三语、640 px、八类／12 项、容量、正文隔离、迟到查询、ID-only 链接及可见失败 |
 | `pnpm test:e2e --workers=4 --output <独立结果目录>` | 211 项通过；26 个测试文件，Playwright 自带无头 Chromium；查词、资源目录、设置、生词本、复习、变位、取词／OCR 及语音界面回归 |
 | `python -B -X utf8 -m unittest discover -s scripts -p test_package_portable.py -v` | 12 项通过；唯一随包 MDX、原始源码／通知、坏资源拒绝、旧交付与用户数据保持、ARM64 打包夹具 |
 | `pnpm test:build-args` | 两项通过；公开构建入口复制 MDX／词典／变位／词频，失败保留失败状态 |
 | `pnpm desktop:build --no-bundle` | Windows x64 release 构建通过 |
 | `python -B -X utf8 scripts/package_portable.py --output-dir target/d2-research/mdx/portable-freedict-20261110` | 33,998,493 字节、151 文件；逐文件及 ZIP 回读通过，一份法语 MDX、无用户数据 |
-| `pnpm test:docs`、`git diff --check` | 通过；155 份文档、1,268 个本地链接、82 个忽略目录／外部链接跳过。文档检查使用独立临时 Git index 纳入本次新文件，原暂存状态保持 |
+| `pnpm test:docs`、`git diff --check` | 通过；155 份文档、1,269 个本地链接、86 个忽略目录／外部链接跳过。文档检查使用独立临时 Git index 纳入本次新文件，原暂存状态保持 |
 
 完整界面回归的[日志](../../../target/d2-research/mdx/continuation-e2e-20261111T092358320/frontend-e2e.log)与[HTML 报告](../../../target/d2-research/mdx/continuation-e2e-20261111T092358320/playwright-report/index.html)保存在独立目录；通过 `PLAYWRIGHT_HTML_OUTPUT_DIR` 和 `--output` 指定报告与截图位置。
 
@@ -62,8 +62,33 @@ node e2e/native-dictionary-check.mjs MODE ../../target/d2-research/mdx/native-re
 
 整机离线辅助入口为 [native-offline-dictionary-check.ps1](../../../apps/desktop/e2e/native-offline-dictionary-check.ps1)：等待物理网卡离线、确认 HTTPS 探测失败，再运行已有 `bundle` 检查并回读网络状态。脚本不修改网络设置；语法与既有证据目录拒绝／保持检查通过，实际断网执行按用户选择暂缓。
 
+## 四平台库测试与远端构建
+
+2026-11-11，[验证提交 e97a77f](https://github.com/zardonc/lexique/commit/e97a77f588c7d7b562251fe7d9d07b9b6fe8dd8b) 的 [CI](https://github.com/zardonc/lexique/actions/runs/43085339848) 11 项任务全部通过。四目标均先 `cargo check --locked --workspace`，预编译测试后执行 `pnpm test:rust`，另预编译 release 桌面库后执行 `pnpm test:desktop:lib`。
+
+| 平台／原生目标 | 核心／词典／存储 | 桌面库 | 后端执行步骤 |
+| --- | --- | --- | --- |
+| Windows x64／`x86_64-pc-windows-msvc` | 152 通过 | 15 通过 | 17 秒 |
+| Windows ARM64／`aarch64-pc-windows-msvc` | 152 通过 | 15 通过 | 40 秒 |
+| macOS 15 Intel／`x86_64-apple-darwin` | 152 通过 | 13 通过 | 28 秒 |
+| macOS 26 Apple Silicon／`aarch64-apple-darwin` | 152 通过 | 13 通过 | 28 秒 |
+
+native job 使用 `CARGO_PROFILE_TEST_OPT_LEVEL=1`，保留调试断言；`RUST_TEST_THREADS=1` 隔离无关夹具写入，各用例内部的并发仍照常执行。存储、词典注册与语音缓存夹具的目录名包含进程内序号，固定重复时钟值的回归检查通过。原 `scripts/test-rust.mjs` 的硬性 60 秒执行上限保持不变，首次编译单独进行；表中时间来自 CI 步骤起止时间。
+
+同一提交的前端 lint／typecheck／build、211 项 Playwright 回归、Linux 后端／MDict／WASM 排程校准，以及三个系统的词典 7 项、变位资源 36 项、便携打包 12 项检查均通过。三系统资源任务及 Windows portable 的 `test:tooling` 步骤，语音打包检查各有两项因缺少编译产物／模型夹具而跳过；Windows portable 任务的缓存检查 11 项通过，崩溃子进程专用夹具一项按设计忽略，桌面库 15 项通过。
+
+CI 便携 ZIP 为 34,006,635 字节、151 个文件，仅含一份 FreeDict 法英 MDX；归档完整性、MDX、对应源码与许可及已发布校验值全部回读通过。结果见[四平台摘要与日志](../../../target/d2-research/mdx/verification-43085339848/ci-summary.json)和[归档回读](../../../target/d2-research/mdx/verification-43085339848/final-artifact-result.json)。
+
+## 合并前复核
+
+2026-11-11，相对 `origin/main`（`ea2c95e`）完成 Standards 与 Spec 双轴审查，两轴均为零项发现。当前范围、来源页 IPC、内置保护、旧目录容量、资源源码／通知和学习数据保持符合仓库规范及随包规格。
+
+本地重新执行 `pnpm lint`、`pnpm typecheck`、`pnpm build`、`pnpm test:build-args`、`pnpm test:docs`、`pnpm rust:fmt`、`pnpm rust:check`，全部通过。按上表入口重新校验 FreeDict 与便携打包，12 项打包测试通过；预编译后 152 项核心／词典／存储和 15 项桌面库测试通过，60 秒执行上限保持；211 项 Playwright 用例全部通过。完整日志保存在 `target/pr-review-20261111/`。
+
+已从 GitHub 当前代码提交的 check-runs 回读确认，上述四平台 CI 的 11 项任务全部成功。此次本地检查沿用前述原生与发行验收边界。
+
 ## 尚未验收的范围
 
-Windows 系统浏览器启动已验证；macOS 的 `open` 仍需实际操作验证。四平台编译与库测试的远端 CI 待执行；整机断网、缺 WebView2 的干净机器首装、macOS／ARM64 的 GUI 实机与 M5 完整版／Lite 正式发行未执行。
+Windows 系统浏览器启动已验证；macOS 的 `open` 仍需实际操作验证。整机断网、缺 WebView2 的干净机器首装、macOS／Windows ARM64 的 GUI 实机与 M5 完整版／Lite 正式发行未执行。
 
 WikDict 部分原作表达的目标再分发依据仍未闭合，只提供原格式来源链接；其他候选文件未下载到分发包，大小或版次未知均在目录注明。MDD 媒体、独立脚本／样式、TSV／StarDict 直接导入和完整 D2／CEFR 未接入，详见[研究报告](../../d2-resource-admission-research.md#法语随包范围与用户自选链接)。

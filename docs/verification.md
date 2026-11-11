@@ -4,9 +4,11 @@
 
 2026-11-11，Windows x64 开发包接入一份 FreeDict 法英 0.4.1 补充 MDX：原内容 2018-08-11，273,758 字节、8,505 条、8,417 个键，GPL-2.0-or-later。原始源、作者、许可和转换说明随包保留；从固定 TEI 重建与随包文件逐字节一致。设置提供八类、12 项自选链接，目录／导入保留 15 份自定义 MDX 容量；两项内置词典的注册受保护，schema 保持 17。
 
-lint、typecheck、前端构建、Rust 格式、预编译后 151 项核心／存储测试、14 项桌面库测试、Playwright 无头 Chromium 的 211 项完整界面用例（含 9 项词典目录／标签用例）、12 项打包与两项构建入口回归通过。真实 Windows WebView2／IPC 检查覆盖随包首次查询、HTML 与 GPL 来源、收藏、旧目录重启升级、资源失败恢复及用户 MDX／独立笔记／FSRS／选定音频保持，宿主正常退出。真实目录 ID 启动 Microsoft Edge 的 Larousse 页面通过，用户确认 URL 与正常加载，学习数据保持。测试中拦截外部 WebView 请求，未观察到外部 WebView 请求；整机断网按用户选择暂缓，干净机器首装未测。
+lint、typecheck、前端构建、Rust 格式、预编译后 152 项核心／存储测试、Windows 15 项／macOS 13 项桌面库测试、Playwright 无头 Chromium 的 211 项完整界面用例（含 9 项词典目录／标签用例）、12 项打包与两项构建入口回归通过。真实 Windows WebView2／IPC 检查覆盖随包首次查询、HTML 与 GPL 来源、收藏、旧目录重启升级、资源失败恢复及用户 MDX／独立笔记／FSRS／选定音频保持，宿主正常退出。真实目录 ID 启动 Microsoft Edge 的 Larousse 页面通过，用户确认 URL 与正常加载，学习数据保持。测试中拦截外部 WebView 请求，未观察到外部 WebView 请求；整机断网按用户选择暂缓，干净机器首装未测。
 
-新便携开发包为 33,998,493 字节、151 个文件，归档逐项回读通过，仅含这一份法语 MDX，不含用户数据或其他候选词典。完整命令、原生结果与边界见[接入证据](evidence/d2-mdx/README.md)。WikDict 授权、完整 D2／CEFR、MDD、其他平台及 M5 正式发行门槛继续保留。
+[验证提交 e97a77f](https://github.com/zardonc/lexique/commit/e97a77f588c7d7b562251fe7d9d07b9b6fe8dd8b) 的[远端 CI](https://github.com/zardonc/lexique/actions/runs/43085339848) 11 项任务全部通过。Windows x64／ARM64 与 macOS Intel／Apple Silicon 均实际执行 152 项核心／词典／存储测试，桌面库分别为 Windows 15 项、macOS 13 项；后端执行步骤为 17／40／28／28 秒，硬性 60 秒上限不变。固定重复时钟的测试目录隔离回归通过；Windows 缓存 11 项通过，崩溃子进程专用夹具一项忽略。三系统语音打包检查各两项缺少专用夹具而跳过，完整语音包沿用既有验收边界。
+
+本机便携开发包为 33,998,493 字节、151 个文件，归档逐项回读通过，仅含这一份法语 MDX，不含用户数据或其他候选词典。同一提交的 CI 便携包为 34,006,635 字节、151 个文件，唯一 MDX、对应源码／许可及已发布校验值回读通过。完整命令、原生结果与边界见[接入证据](evidence/d2-mdx/README.md)。WikDict 授权、完整 D2／CEFR、MDD、macOS／Windows ARM64 GUI 及 M5 正式发行门槛继续保留。
 
 ## #56–#59 与 #9 D1／D3 的合并验收
 
