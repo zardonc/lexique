@@ -1,5 +1,13 @@
 # 骨架验证记录
 
+## 法英补充 MDX 与自选资源链接
+
+2026-11-11，Windows x64 开发包接入一份 FreeDict 法英 0.4.1 补充 MDX：原内容 2018-08-11，273,758 字节、8,505 条、8,417 个键，GPL-2.0-or-later。原始源、作者、许可和转换说明随包保留；从固定 TEI 重建与随包文件逐字节一致。设置提供八类、12 项自选链接，目录／导入保留 15 份自定义 MDX 容量；两项内置词典的注册受保护，schema 保持 17。
+
+lint、typecheck、前端构建、Rust 格式、预编译后 151 项核心／存储测试、14 项桌面库测试、Playwright 无头 Chromium 的 211 项完整界面用例（含 9 项词典目录／标签用例）、12 项打包与两项构建入口回归通过。真实 Windows WebView2／IPC 检查覆盖随包首次查询、HTML 与 GPL 来源、收藏、旧目录重启升级、资源失败恢复及用户 MDX／独立笔记／FSRS／选定音频保持，宿主正常退出。真实目录 ID 启动 Microsoft Edge 的 Larousse 页面通过，用户确认 URL 与正常加载，学习数据保持。测试中拦截外部 WebView 请求，未观察到外部 WebView 请求；整机断网按用户选择暂缓，干净机器首装未测。
+
+新便携开发包为 33,998,493 字节、151 个文件，归档逐项回读通过，仅含这一份法语 MDX，不含用户数据或其他候选词典。完整命令、原生结果与边界见[接入证据](evidence/d2-mdx/README.md)。WikDict 授权、完整 D2／CEFR、MDD、其他平台及 M5 正式发行门槛继续保留。
+
 ## #56–#59 与 #9 D1／D3 的合并验收
 
 2026-11-09，[PR #61](https://github.com/zardonc/lexique/pull/61) 已合并至 `main`，合并提交为 [1d5934d](https://github.com/zardonc/lexique/commit/1d5934d34c182a3edebebc96d83196a5a0ff5c55)。[共用 WPM](evidence/issue-56/README.md)、[词频标记](evidence/issue-57/README.md)、[系统取词](evidence/issue-58/README.md)与[屏幕／图片 OCR](evidence/issue-59/README.md)已交付并关闭 #56–#59；[D1／D3 证据](evidence/issue-9/README.md)记录最终包的多 MDX、已有动词原形及实际 IPC 验收。

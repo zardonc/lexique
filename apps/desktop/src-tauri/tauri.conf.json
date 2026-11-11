@@ -22,6 +22,7 @@
     "resources": {
       "../../../target/desktop-dictionary-sample/dictionary.sqlite3": "dictionary/dictionary.sqlite3",
       "../../../resources/freedict-fra-zho-2025.11.23/": "dictionary/",
+      "../../../resources/freedict-fra-eng-mdx-0.4.1/": "dictionary/freedict-fra-eng-mdx/",
       "../../../target/desktop-conjugation-v6-stats/": "conjugation/",
       "../../../target/desktop-frequency-v1/": "frequency/"
     },

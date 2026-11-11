@@ -22,6 +22,7 @@ import { useSelectionInput } from './use-selection-input';
 import { SelectionSettings } from './selection-settings';
 import { lookupInputMessages } from './lookup-input-content';
 import { DictionarySettings } from './dictionary-settings';
+import { DictionaryResources } from './dictionary-resources';
 
 const themes: readonly Theme[] = ['white', 'sepia', 'dark'];
 const locales: readonly Locale[] = ['zh', 'en', 'fr'];
@@ -94,7 +95,7 @@ export function App({ runtime }: { readonly runtime: RuntimeAdapter }) {
             <LookupInputPanel runtime={runtime} locale={locale} selection={selection.input} onCancel={selection.cancel}
               onDictionary={navigation.openDictionaryResult} /> : page === 7 ?
             <><ReviewSettingsPanel runtime={runtime} locale={locale} /><SpeechSettings runtime={runtime} locale={locale} />
-              <SelectionSettings runtime={runtime} locale={locale} /><SelectionSettings runtime={runtime} locale={locale} ocr /><DictionarySettings runtime={runtime} locale={locale} /></> :
+              <SelectionSettings runtime={runtime} locale={locale} /><SelectionSettings runtime={runtime} locale={locale} ocr /><DictionarySettings runtime={runtime} locale={locale} /><DictionaryResources runtime={runtime} locale={locale} /></> :
             <div className="empty-state"><p>{text.pending[page]}</p><small>{text.scaffold}</small></div>}
           <VocabularyEditor notebook={notebook} text={notebookText} runtime={runtime} onReviewChanged={reviewChanged} viewExisting={() => {
             if (notebook.existing) { const record = notebook.existing; guard.request(() => notebook.open(record)); }

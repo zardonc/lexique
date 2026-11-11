@@ -25,3 +25,6 @@ resources/lexique-3.83/Lexique383.tsv.gz binary
 resources/tesseract-fra/licenses/**/*.txt -text -whitespace
 resources/mdictlib-0.2.8/licenses/*.txt -text -whitespace
 apps/desktop/e2e/fixtures/mdx/*.mdx binary
+resources/freedict-fra-eng-mdx-0.4.1/*.mdx binary
+resources/freedict-fra-eng-mdx-0.4.1/COPYING -text -whitespace
+resources/freedict-fra-eng-mdx-0.4.1/AUTHORS -text -whitespace

@@ -1,4 +1,5 @@
 import { invoke, isTauri } from '@tauri-apps/api/core';
+import dictionaryResources from '../dictionary-resources.json';
 import { conjugationQuery, conjugationSchema, conjugationPreferencesSchema, conjugationOrderSchema } from './conjugation';
 import type { ConjugationLookup, ConjugationPreferences, ConjugationOrder } from './conjugation';
 import { z } from 'zod';
@@ -125,6 +126,7 @@ export interface RuntimeAdapter {
   readonly dictionarySettings: (order?: readonly string[]) => Promise<DictionaryCatalog | null>;
   readonly importDictionary: (file: File) => Promise<DictionaryCatalog | null>;
   readonly removeDictionary: (id: string) => Promise<DictionaryCatalog | null>;
+  readonly openDictionaryResource: (id: string) => Promise<void>;
   readonly lookupFrequency: (keys: readonly string[]) => Promise<FrequencyLookup | null>;
   readonly onSelectionInput: (callback: (event: SelectionEvent) => void) => Promise<() => void>;
   readonly captureSelection: (text?: string) => Promise<void>;
@@ -230,6 +232,12 @@ export const runtime: RuntimeAdapter = {
     const result = dictionaryCatalog.parse(await invoke('dictionary_settings', { order: valid }));
     if (valid && result.some((item, index) => item.id !== valid[index])) throw new Error('Saved dictionary order differs from the request');
     return result;
+  },
+  async openDictionaryResource(id) {
+    const resource = dictionaryResources.find((item) => item.id === id);
+    if (!resource) throw { code: 'invalid_query', message: 'Unknown dictionary resource' };
+    if (isTauri()) await invoke('dictionary_resource_open', { id });
+    else window.open(resource.url, '_blank', 'noopener,noreferrer');
   },
   async importDictionary(file) {
     if (!isTauri()) return null;

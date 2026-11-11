@@ -3,11 +3,12 @@ import { z } from 'zod';
 export const dictionaryQuery = z.string().min(1).refine((value) =>
   value.trim().length > 0 && new TextEncoder().encode(value).length <= 512 && !/\p{Cc}/u.test(value));
 
-export const dictionaryId = z.string().regex(/^(builtin|mdx-[1-9]\d*)$/);
-export const dictionaryOrder = z.array(dictionaryId).min(1).max(16).readonly()
+export const dictionaryId = z.string().regex(/^(builtin|builtin-fra-eng|mdx-[1-9]\d*)$/);
+export const MAX_DICTIONARIES = 17;
+export const dictionaryOrder = z.array(dictionaryId).min(1).max(MAX_DICTIONARIES).readonly()
   .refine((ids) => new Set(ids).size === ids.length && ids.includes('builtin'));
 export const dictionaryCatalog = z.array(z.object({ id: dictionaryId, title: z.string().min(1) }).strict().readonly())
-  .min(1).max(16).readonly().refine((items) => dictionaryOrder.safeParse(items.map((item) => item.id)).success);
+  .min(1).max(MAX_DICTIONARIES).readonly().refine((items) => dictionaryOrder.safeParse(items.map((item) => item.id)).success);
 export type DictionaryCatalog = z.infer<typeof dictionaryCatalog>;
 
 export interface DictionarySense {

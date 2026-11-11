@@ -15,8 +15,9 @@ if (result.status === 0) {
   const target = targetIndex < 0 ? args.find((arg) => arg.startsWith('--target='))?.slice(9) : args[targetIndex + 1];
   const profile = args.includes('--debug') ? 'debug' : 'release';
   const output = new URL(`target/${target ? `${target}/` : ''}${profile}/`, root);
-  for (const [prepared, destination] of [['desktop-dictionary-sample', 'dictionary'], ['desktop-conjugation-v6-stats', 'conjugation']]) {
+  for (const [prepared, destination] of [['desktop-dictionary-sample', 'dictionary'], ['desktop-conjugation-v6-stats', 'conjugation'], ['desktop-frequency-v1', 'frequency']]) {
     cpSync(new URL(`target/${prepared}/`, root), new URL(`${destination}/`, output), { recursive: true });
   }
+  cpSync(new URL('resources/freedict-fra-eng-mdx-0.4.1/', root), new URL('dictionary/freedict-fra-eng-mdx/', output), { recursive: true });
 }
 process.exitCode = result.status ?? 1;

@@ -78,6 +78,8 @@ Windows x64 语音开发小样可在构建后运行 `python -X utf8 scripts/pack
 
 应用支持 MDX 导入、持久顺序、多标签与按需正文。文件复制到 `Lexique-data/data/dictionaries/`，移出列表保留文件及学习记录；首个读取成功的词典默认选中，其他标签点击后读取。HTML 在无脚本、无同源权限的 iframe 中隔离显示，来源与同键记录分别保留，见 [#9 D1／D3 证据](docs/evidence/issue-9/README.md)。MDX/MDD 的[独立探针](tools/mdict-probe/README.md)及 [#3 支持矩阵](docs/evidence/issue-3/README.md)继续约束格式与许可；MDD 媒体和正文跳转尚未接入。
 
+Windows x64 开发包随包提供一份 [FreeDict 法英 0.4.1 MDX](resources/freedict-fra-eng-mdx-0.4.1/README.md)：原内容日期 2018-08-11，273,758 字节、8,505 条记录，GPL-2.0-or-later。它是有缺项的补充词典；内置法中小样及两项内置词典的注册保持。设置中另有八类、12 项自选来源／下载页链接，其他词典不随包或自动下载。两项内置词典可排序，15 份自定义 MDX 的容量保持；移出只适用于自定义词典。校验与重建入口为 `python -B -X utf8 scripts/freedict_mdx.py`，对应原始源、许可、作者和修改说明随包保留；[原生接入与打包证据](docs/evidence/d2-mdx/README.md)记录实际范围。完整默认词典／CEFR 继续按 D2 准入。
+
 词频入口：`pnpm frequency:prepare`、`pnpm test:frequency`。固定 Lexique 3.83 完整源、CC BY-SA 4.0 法律原文及署名随仓库保存；准备到 `target/desktop-frequency-v1/`，缓存复用前验证输入、数据库和通知。生词本当前页批量读取最多 100 个词头，详情显示字幕词元／词性数值与来源；高／中／低／未知均有文字标签，资源失败保留笔记编辑及重试。词频不改变记录、FSRS 或选定音频，详见 [#57 证据](docs/evidence/issue-57/README.md)。
 
 变位资源入口：`pnpm conjugation:build target/conjugation-sample`、`pnpm conjugation:query target/conjugation-sample/conjugation.sqlite3 sommes`、`pnpm conjugation:table target/conjugation-sample/conjugation.sqlite3 falloir`、`pnpm test:conjugation`。固定 Lefff 3.4 词形及句法（LGPL-LR）、Grammalecte 2.3.0 元数据（GPL-3.0-only）和 RosaeNLG 省音资料（CC BY-SA 3.0）随仓库保存。原生构建自动准备格式 6 的 `target/desktop-conjugation-v6-stats`，或先运行 `pnpm conjugation:prepare`；已有生成物须通过完整性及转换器版本检查，失败则保留原物，使用新目录重建。构建入口把两种资源放到可执行文件旁，portable 保留原始源、许可、纠正资料、八份 MIT 转换源码及 LGPL-LR 词尾规则；用户学习数据不参与资源准备。共享简单变位模型与运行时表达构造将当前数据库保持在 10.50 MiB；存储契约及格式 5 的全量等价检查见[变位存储](docs/conjugation-storage.md)。格式 6 资源须配套对应的重建 reader。

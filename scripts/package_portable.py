@@ -12,6 +12,7 @@ import zipfile
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from prepare_speech import stage
+from freedict_mdx import verify
 
 
 def package(root: Path, output_directory: Path | None = None, architecture: str = "x64",
@@ -58,6 +59,7 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
     for filename, expected in frequency_report["inputs"].items():
         if hashlib.sha256((frequency / filename).read_bytes()).hexdigest() != expected:
             raise ValueError(f"Release frequency source or notice differs: {filename}")
+    verify(root, conjugation / "freedict-fra-eng-0.4.1")
     if all(speech_inputs):
         with tempfile.TemporaryDirectory(prefix="lexique-speech-stage-") as temporary:
             staged = Path(temporary) / "speech"
@@ -69,6 +71,11 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
     shutil.copy2(executable, output / "Lexique.exe")
     shutil.copytree(root / "resources/freedict-fra-zho-2025.11.23", output / "dictionary")
     shutil.copy2(dictionary, output / "dictionary/dictionary.sqlite3")
+    shutil.copytree(root / "resources/freedict-fra-eng-mdx-0.4.1",
+                    output / "dictionary/freedict-fra-eng-mdx")
+    shutil.copy2(root / "scripts/freedict_mdx.py",
+                 output / "dictionary/freedict-fra-eng-mdx/freedict_mdx.py")
+    shutil.copy2(root / "LICENSE", output / "dictionary/freedict-fra-eng-mdx/LICENSE-MIT")
     shutil.copytree(conjugation, output / "conjugation")
     shutil.copytree(frequency, output / "frequency")
     shutil.copytree(root / "resources/tesseract-fra/licenses", output / "ocr-notices/licenses")
@@ -100,6 +107,11 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
         "Offline French OCR runtime and model are embedded. Licenses and sources: ocr-notices/.\n"
         "Add MDX dictionaries in Settings. Imported copies stay in Lexique-data/.\n"
         "Dictionary order is saved; other tab bodies load on selection. Parser licenses: mdx-notices/.\n"
+        "One supplemental French-English MDX is bundled: FreeDict 0.4.1 (original content 2018-08-11).\n"
+        "Its GPL-2.0-or-later notices, provenance and MIT converter are in dictionary/freedict-fra-eng-mdx/.\n"
+        "Complete corresponding FreeDict source is in conjugation/freedict-fra-eng-0.4.1/; see the MDX README.md to rebuild.\n"
+        "Settings includes optional source/download links. Other dictionaries are not bundled or downloaded automatically.\n"
+        "MDX imports are limited to 128 MiB each and 15 custom entries; MDD media are unavailable.\n"
         "Conjugation uses the compact format-6 resource with 23 ordinary/pronominal reference blocks.\n"
         "Query normalization, three color modes, saved block order and dictionary navigation are included.\n"
         "Keep the format-6 resource with its matching rebuilt reader when updating.\n"
