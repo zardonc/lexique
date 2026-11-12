@@ -1,14 +1,15 @@
 /* global process, window, HTMLMediaElement, console */
 import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
-import { rename, writeFile } from 'node:fs/promises';
-import { join, resolve } from 'node:path';
+import { cp, rename, writeFile } from 'node:fs/promises';
+import { dirname, join, resolve } from 'node:path';
 import { expect } from '@playwright/test';
 import { native24Fixture } from './native-24-harness.mjs';
 
 assert.equal(process.argv.length, 5, 'Expected package, binary and new destination');
 const [resources, binary, destination] = process.argv.slice(2).map((value) => resolve(value));
 const fixture = await native24Fixture(resources, binary, destination);
+await cp(join(dirname(binary), 'dictionary'), join(destination, 'dictionary'), { recursive: true });
 const model = join(destination, 'speech/assets/text_encoder.int8.onnx');
 let hidden = false;
 function snapshot() {
