@@ -1,3 +1,4 @@
+import { ExampleSource } from './example-source';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { NotebookText } from './notebook-content';
 import type { ReviewCard, RuntimeAdapter } from './platform/runtime';
@@ -16,15 +17,15 @@ function ExampleSense({ record, text }: { readonly record: VocabularyRecord; rea
 
 function Examples({ record, text, runtime }: { readonly record: VocabularyRecord; readonly text: NotebookText; readonly runtime: RuntimeAdapter }) {
   const [expanded, setExpanded] = useState(false);
-  const examples = [{ fr: record.example_fr, zh: record.example_zh }, ...record.more_examples]
+  const examples = [{ fr: record.example_fr, zh: record.example_zh, source: record.example_source }, ...record.more_examples]
     .filter((example) => example.fr.trim() || example.zh.trim());
   const [first, ...rest] = examples;
   return <>
     {first && <section aria-label={text.exampleUser}><p>{text.exampleUser}</p>
-      {first.fr.trim() && <p lang="fr">{first.fr}</p>}<ExampleSpeech value={first.fr} runtime={runtime} text={text} />{first.zh.trim() && <p lang="zh">{first.zh}</p>}</section>}
+      {first.fr.trim() && <p lang="fr">{first.fr}</p>}<ExampleSpeech value={first.fr} runtime={runtime} text={text} />{first.zh.trim() && <p lang="zh">{first.zh}</p>}<ExampleSource source={first.source} text={text} runtime={runtime} /></section>}
     {(!first?.fr.trim() || !first?.zh.trim()) && <p>{text.exampleMissing}</p>}
     {rest.length > 0 && <details onToggle={(event) => setExpanded(event.currentTarget.open)}><summary>{text.moreExamples}</summary>{expanded && rest.map((example, index) => <section key={index}>
-      <p lang="fr">{example.fr}</p><ExampleSpeech value={example.fr} runtime={runtime} text={text} /><p lang="zh">{example.zh}</p>{(!example.fr.trim() || !example.zh.trim()) && <p>{text.exampleMissing}</p>}</section>)}</details>}
+      <p lang="fr">{example.fr}</p><ExampleSpeech value={example.fr} runtime={runtime} text={text} /><p lang="zh">{example.zh}</p><ExampleSource source={example.source} text={text} runtime={runtime} />{(!example.fr.trim() || !example.zh.trim()) && <p>{text.exampleMissing}</p>}</section>)}</details>}
   </>;
 }
 

@@ -86,8 +86,8 @@ export function App({ runtime }: { readonly runtime: RuntimeAdapter }) {
         <section className="page-content" aria-labelledby={pageTitleId(page)}>
           <PageIntroduction page={page} text={text} />
           {page === 0 ? <DictionaryPanel runtime={runtime} text={text.dictionary} notebookText={notebookText} version={notebook.version}
-            locale={locale} initial={navigation.dictionary} onConjugation={navigation.openConjugation}
-            onCollect={(result) => guard.request(() => notebook.collect(result))}
+            preserveExcerpt={notebook.preservesExcerpt} locale={locale} initial={navigation.dictionary} onConjugation={navigation.openConjugation}
+            onExcerpt={(result, record) => { const start = () => notebook.beginExcerpt(result, record); if (notebook.editor?.snapshot.headword === result.entries[0]?.key && !notebook.excerpt && !notebook.busy) start(); else guard.request(start); }} onCollect={(result) => guard.request(() => notebook.collect(result))}
             onOpen={(record) => guard.request(() => notebook.open(record))}
             beforeSearch={navigation.beforeSearch} /> : page === 1 ?
             <ConjugationPanel runtime={runtime} locale={locale} initial={navigation.conjugation} onChange={navigation.setConjugation} onDictionary={navigation.openDictionary} /> : page === 2 ?

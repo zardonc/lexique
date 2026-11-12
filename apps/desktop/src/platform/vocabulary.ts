@@ -9,7 +9,6 @@ const headword = z.string().refine((value) => value.trim().length > 0 && charact
     return code < 32 || (code >= 127 && code <= 159);
   }), 'Headword must be 1–200 characters on one line');
 const notes = z.string().refine((value) => characterCount(value) <= 20_000, 'Notes exceed 20,000 Unicode characters');
-const moreExamples = z.array(z.object({ fr: notes, zh: notes }).strict().readonly()).max(100).readonly();
 const positiveId = z.number().int().positive().max(Number.MAX_SAFE_INTEGER);
 const digestEntry = z.object({
   pronunciations: z.array(z.string()).readonly(), grammar: z.array(z.string()).readonly(),
@@ -22,12 +21,14 @@ const reference = z.object({
   license: z.string().min(1).nullable(), source_url: z.url().nullable(), license_url: z.url().nullable(),
   sha256: z.string().regex(/^[a-f0-9]{64}$/),
 }).strict().readonly();
+const exampleSource = reference.nullable().optional();
+const moreExamples = z.array(z.object({ fr: notes, zh: notes, source: exampleSource }).strict().readonly()).max(100).readonly();
 export const recordSchema = z.object({
-  id: positiveId, headword, reference, digest: z.array(digestEntry).min(1).readonly(), notes, example_fr: notes, example_zh: notes, example_sense: z.number().int().nonnegative().safe().nullable(), more_examples: moreExamples,
+  id: positiveId, headword, reference, digest: z.array(digestEntry).min(1).readonly(), notes, example_fr: notes, example_zh: notes, example_source: exampleSource, example_sense: z.number().int().nonnegative().safe().nullable(), more_examples: moreExamples,
   revision: positiveId, created_at: positiveId, updated_at: positiveId,
 }).strict().readonly();
 export const saveRequestSchema = z.object({
-  operation: z.string().min(1).max(128).regex(/^[a-zA-Z0-9-]+$/), headword, notes, example_fr: notes, example_zh: notes, example_sense: z.number().int().nonnegative().safe().nullable(), more_examples: moreExamples,
+  operation: z.string().min(1).max(128).regex(/^[a-zA-Z0-9-]+$/), headword, notes, example_fr: notes, example_zh: notes, example_source: exampleSource, example_sense: z.number().int().nonnegative().safe().nullable(), more_examples: moreExamples,
   id: positiveId.nullable(), revision: positiveId.nullable(),
 }).strict().readonly().refine((value) => (value.id === null) === (value.revision === null));
 export const saveResultSchema = z.object({
@@ -53,7 +54,7 @@ export function snapshotFromLookup(lookup: DictionaryLookup): VocabularySnapshot
   if (!first) throw new Error('Dictionary has no matching headword');
   return {
     headword: first.key,
-    reference: { dictionary_id: lookup.dictionary_id, dictionary: lookup.source.title, lookup_key: first.key, version: lookup.source.version,
+    reference: { dictionary_id: lookup.dictionary_id ?? 'builtin', dictionary: lookup.source.title, lookup_key: first.key, version: lookup.source.version,
       attribution: lookup.source.attribution, license: lookup.source.license,
       source_url: lookup.source.source_url, license_url: lookup.source.license_url, sha256: lookup.sha256 },
     digest: lookup.entries.map((entry) => ({ pronunciations: entry.pronunciations,

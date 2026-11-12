@@ -11,7 +11,7 @@ import assert from 'node:assert/strict';
 
 export async function native24Fixture(packagePath, binaryPath, destinationPath) {
   const destination = resolve(destinationPath);
-  assert.ok(['issue-9', 'issue-24', 'issue-56', 'issue-57', 'issue-58', 'issue-59', 'issue-65'].some((issue) => destination.startsWith(resolve('../../target/' + issue) + '\\')));
+  assert.ok(['issue-9', 'issue-24', 'issue-56', 'issue-57', 'issue-58', 'issue-59', 'issue-65', 'issue-66'].some((issue) => destination.startsWith(resolve('../../target/' + issue) + '\\')));
   await mkdir(destination);
   // Reused test packages also contain old results. Only copy distribution resources:
   // a failed run must never inherit a successful report or someone else's data.

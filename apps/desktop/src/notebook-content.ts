@@ -2,6 +2,7 @@ import type { Locale } from './content';
 
 export const notebookMessages = {
   zh: {
+    excerpt: '摘录例句', excerptFr: '摘录法语', excerptZh: '摘录中文', transferExcerpt: '加入草稿', cancelExcerpt: '取消摘录', duplicateExcerpt: '例句已存在，已定位原例句。', capacityExcerpt: '更多例句已达 100 组，摘录内容已保留。', unknownSource: '出处未知', reopenExample: '查看例句原文',
     frequency: { locale: 'zh-CN', high: '高频', medium: '中频', low: '低频', unknown: '暂无词频', details: '词频数值与来源',
       corpus: '电影／电视剧字幕', lemma: '词元', total: '词性合计', units: '次／百万词', parts: '去重后的词性频率', pos: '词性', reason: '统计状态',
       missingPos: '未记录词性', candidates: '可能的词元', loading: '正在读取词频…', readError: '词频读取失败', retry: '重试词频',
@@ -37,6 +38,7 @@ export const notebookMessages = {
     availability: { due: '尚未到期', quota: '今日额度已用完', deferred: '同词卡片暂缓', paused: '复习已暂停', clock: '设备时间早于最近评分，请检查时间', conflict: '卡片已被其他操作修改', invalid: '评分请求无效' },
   },
   en: {
+    excerpt: 'Excerpt example', excerptFr: 'Excerpt French', excerptZh: 'Excerpt Chinese', transferExcerpt: 'Add to draft', cancelExcerpt: 'Cancel excerpt', duplicateExcerpt: 'Example already exists; focused the original.', capacityExcerpt: 'The 100 extra examples limit is reached. Your excerpt is retained.', unknownSource: 'Unknown source', reopenExample: 'View example original',
     frequency: { locale: 'en', high: 'High frequency', medium: 'Medium frequency', low: 'Low frequency', unknown: 'Frequency unavailable', details: 'Frequency values and source',
       corpus: 'Film/television subtitles', lemma: 'Lemma', total: 'POS total', units: 'per million words', parts: 'Distinct POS frequencies', pos: 'Part of speech', reason: 'Status',
       missingPos: 'Unrecorded POS', candidates: 'Possible lemmas', loading: 'Loading frequency…', readError: 'Could not read frequency', retry: 'Retry frequency',
@@ -72,6 +74,7 @@ export const notebookMessages = {
     availability: { due: 'Not due yet', quota: 'Daily limit reached', deferred: 'Other card deferred', paused: 'Review paused', clock: 'Device time is before the last rating; check the clock', conflict: 'Card changed in another operation', invalid: 'Invalid rating request' },
   },
   fr: {
+    excerpt: 'Extraire un exemple', excerptFr: 'Extrait français', excerptZh: 'Extrait chinois', transferExcerpt: 'Ajouter au brouillon', cancelExcerpt: 'Annuler l’extrait', duplicateExcerpt: 'Cet exemple existe déjà ; l’original est sélectionné.', capacityExcerpt: 'La limite de 100 exemples supplémentaires est atteinte. L’extrait est conservé.', unknownSource: 'Source inconnue', reopenExample: 'Voir l’original de l’exemple',
     frequency: { locale: 'fr', high: 'Fréquence élevée', medium: 'Fréquence moyenne', low: 'Fréquence faible', unknown: 'Fréquence indisponible', details: 'Valeurs et source de fréquence',
       corpus: 'Sous-titres de films et de séries', lemma: 'Lemme', total: 'Total des catégories', units: 'par million de mots', parts: 'Fréquences par catégorie distincte', pos: 'Catégorie', reason: 'État',
       missingPos: 'Catégorie non renseignée', candidates: 'Lemmes possibles', loading: 'Chargement de la fréquence…', readError: 'Lecture de fréquence impossible', retry: 'Réessayer la fréquence',

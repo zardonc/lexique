@@ -50,10 +50,10 @@ export function DictionaryResults({ result, text, navigation }: {
   </>;
 }
 
-function Collection({ result, runtime, text, version, onCollect, onOpen }: {
+function Collection({ result, runtime, text, version, onCollect, onOpen, onExcerpt }: {
   readonly result: DictionaryLookup; readonly runtime: RuntimeAdapter; readonly text: NotebookText;
   readonly version: number; readonly onCollect: (result: DictionaryLookup) => void;
-  readonly onOpen: (record: VocabularyRecord) => void;
+  readonly onOpen: (record: VocabularyRecord) => void; readonly onExcerpt: (result: DictionaryLookup, record: VocabularyRecord | null) => void;
 }) {
   const [record, setRecord] = useState<VocabularyRecord | null>();
   const [error, setError] = useState('');
@@ -72,7 +72,8 @@ function Collection({ result, runtime, text, version, onCollect, onOpen }: {
     <SpeechButton key={headword} word={headword} runtime={runtime} text={text} />
     {error ? <p role="alert">{text.readError}: {error} <button onClick={() => setRetry((value) => value + 1)}>{text.retry}</button></p>
       : record ? <p role="status">{text.existing} <button onClick={() => onOpen(record)}>{text.view}</button></p>
-        : <button disabled={record === undefined} onClick={() => onCollect(result)}>{text.collect}</button>}</>;
+        : <button disabled={record === undefined} onClick={() => onCollect(result)}>{text.collect}</button>}
+    <button disabled={record === undefined || !!error} onClick={() => onExcerpt(result, record ?? null)}>{text.excerpt}</button></>;
 }
 
 export function RecordOriginal({ reference, runtime, text, title }: {
@@ -130,11 +131,11 @@ function DictionaryTabStatus({ tabs, text, onSelect, children }: {
   </>;
 }
 
-export function DictionaryPanel({ runtime, text, notebookText, version, onCollect, onOpen, beforeSearch, locale, initial, onConjugation }: {
+export function DictionaryPanel({ runtime, text, notebookText, version, onCollect, onOpen, onExcerpt, beforeSearch, preserveExcerpt, locale, initial, onConjugation }: {
   readonly runtime: RuntimeAdapter; readonly text: Messages['dictionary'];
   readonly notebookText: NotebookText; readonly version: number;
-  readonly onCollect: (result: DictionaryLookup) => void; readonly onOpen: (record: VocabularyRecord) => void;
-  readonly beforeSearch: (action: () => void) => void;
+  readonly onCollect: (result: DictionaryLookup) => void; readonly onOpen: (record: VocabularyRecord) => void; readonly onExcerpt: (result: DictionaryLookup, record: VocabularyRecord | null) => void;
+  readonly beforeSearch: (action: () => void) => void; readonly preserveExcerpt: boolean;
   readonly locale: Locale; readonly initial?: DictionaryView; readonly onConjugation: (view: ConjugationView) => void;
 }) {
   const tabs = useDictionaryTabs(runtime, initial);
@@ -152,12 +153,12 @@ export function DictionaryPanel({ runtime, text, notebookText, version, onCollec
       <button type="submit" disabled={loading || tabs.catalogLoading || !!tabs.catalogError}>{loading ? text.loading : text.search}</button></div>
     </form>
     <p className="dictionary-hint">{text.hint}</p>
-    <DictionaryTabStatus tabs={tabs} text={text} onSelect={(id) => beforeSearch(() => { void tabs.select(id); })}>
+    <DictionaryTabStatus tabs={tabs} text={text} onSelect={(id) => { const select = () => { void tabs.select(id); }; if (preserveExcerpt) select(); else beforeSearch(select); }}>
     {result && <>
       <DictionaryLemmas runtime={runtime} locale={locale} query={tabs.query} dictionaryId={tabs.selected} sourceVersion={result.sha256}
         onChoose={(headword, view) => beforeSearch(() => { setKey(headword); setPrevious(view); void tabs.search(headword, tabs.selected); })} />
       <Collection key={`${tabs.query}:${tabs.selected}`} result={result} runtime={runtime} text={notebookText} version={version}
-      onCollect={onCollect} onOpen={onOpen} />
+      onCollect={onCollect} onOpen={onOpen} onExcerpt={onExcerpt} />
       <section className="dictionary-original" aria-label={notebookText.original}>
         <h3>{notebookText.original}</h3><DictionaryResults result={result} text={text}
           navigation={{ runtime, locale, previous, onOpen: onConjugation }} />
