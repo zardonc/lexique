@@ -39,6 +39,8 @@ pub struct Snapshot {
 pub struct Example {
     pub fr: String,
     pub zh: String,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub source: Option<Reference>,
 }
 
 #[derive(Debug, Deserialize, Serialize, PartialEq)]
@@ -49,6 +51,8 @@ pub struct SaveRequest {
     pub notes: String,
     pub example_fr: String,
     pub example_zh: String,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub example_source: Option<Reference>,
     #[serde(deserialize_with = "Option::deserialize")]
     pub example_sense: Option<u32>,
     pub more_examples: Vec<Example>,
@@ -65,6 +69,8 @@ pub struct VocabularyRecord {
     pub notes: String,
     pub example_fr: String,
     pub example_zh: String,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub example_source: Option<Reference>,
     pub example_sense: Option<u32>,
     pub more_examples: Vec<Example>,
     pub revision: i64,
@@ -146,6 +152,17 @@ fn row_record(row: &rusqlite::Row<'_>) -> rusqlite::Result<VocabularyRecord> {
         example_fr: row.get(7)?,
         example_zh: row.get(8)?,
         example_sense: row.get(10)?,
+        example_source: row
+            .get::<_, Option<String>>(11)?
+            .map(|json| serde_json::from_str(&json))
+            .transpose()
+            .map_err(|error| {
+                rusqlite::Error::FromSqlConversionFailure(
+                    11,
+                    rusqlite::types::Type::Text,
+                    Box::new(error),
+                )
+            })?,
         more_examples: serde_json::from_str(&row.get::<_, String>(9)?).map_err(|error| {
             rusqlite::Error::FromSqlConversionFailure(
                 9,
@@ -156,7 +173,7 @@ fn row_record(row: &rusqlite::Row<'_>) -> rusqlite::Result<VocabularyRecord> {
     })
 }
 
-const COLUMNS: &str = "id, headword, snapshot, notes, revision, created_at, updated_at, example_fr, example_zh, more_examples, example_sense";
+const COLUMNS: &str = "id, headword, snapshot, notes, revision, created_at, updated_at, example_fr, example_zh, more_examples, example_sense, example_source";
 
 pub fn get(connection: &Connection, id: i64) -> Result<VocabularyRecord, StorageError> {
     Ok(connection.query_row(
@@ -292,9 +309,9 @@ pub fn save(
             ));
         }
         transaction.execute(
-            "UPDATE vocabulary SET notes = ?1, example_fr = ?2, example_zh = ?3, more_examples = ?4, example_sense = ?5, revision = revision + 1,
+            "UPDATE vocabulary SET notes = ?1, example_fr = ?2, example_zh = ?3, more_examples = ?4, example_sense = ?5, example_source = ?7, revision = revision + 1,
              updated_at = MAX(updated_at + 1, CAST(unixepoch('subsec') * 1000 AS INTEGER)) WHERE id = ?6",
-            params![request.notes, request.example_fr, request.example_zh, serde_json::to_string(&request.more_examples)?, request.example_sense, id],
+            params![request.notes, request.example_fr, request.example_zh, serde_json::to_string(&request.more_examples)?, request.example_sense, id, request.example_source.as_ref().map(serde_json::to_string).transpose()?],
         )?;
         ("updated", get(&transaction, id)?)
     } else if let Some(existing) = find(&transaction, &headword)? {
@@ -319,9 +336,9 @@ pub fn save(
             ));
         }
         transaction.execute(
-            "INSERT INTO vocabulary (headword, snapshot, notes, example_fr, example_zh, more_examples, example_sense, created_at, updated_at)
-             VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, CAST(unixepoch('subsec') * 1000 AS INTEGER), CAST(unixepoch('subsec') * 1000 AS INTEGER))",
-            params![headword, serde_json::to_string(&snapshot)?, request.notes, request.example_fr, request.example_zh, serde_json::to_string(&request.more_examples)?, request.example_sense],
+            "INSERT INTO vocabulary (headword, snapshot, notes, example_fr, example_zh, more_examples, example_sense, example_source, created_at, updated_at)
+             VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, CAST(unixepoch('subsec') * 1000 AS INTEGER), CAST(unixepoch('subsec') * 1000 AS INTEGER))",
+            params![headword, serde_json::to_string(&snapshot)?, request.notes, request.example_fr, request.example_zh, serde_json::to_string(&request.more_examples)?, request.example_sense, request.example_source.as_ref().map(serde_json::to_string).transpose()?],
         )?;
         let id = transaction.last_insert_rowid();
         if crate::auto_enroll(&transaction)? {
