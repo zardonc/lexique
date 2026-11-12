@@ -27,4 +27,8 @@ node e2e/native-example-excerpts-check.mjs <speech-package> <fresh-executable> <
 
 该脚本仅创建独立目录和合成数据，使用真实 IPC／SQLite；从新可执行文件旁复制配套词典，构建已有卡片、评分历史和选定语音。接着降为 schema 17 后重启、执行两个词典的摘录与明确保存／重复定位、拒绝伪造新出处、修订冲突及旧操作回放；关闭后移除资源，再次打开／编辑／保存及重启回读，并比较学习与选定语音表。执行阶段保留既有 60 秒硬上限。
 
-原生实际执行由最终集成验收记录；本记录不以浏览器模拟替代原生重启，也不声明其他平台或正式发行通过。
+集成分支 Windows x64 使用 `pnpm desktop:build --no-bundle` 新构建，以上入口以既有 `target/pr23-native-speech-20261101` 语音资源和全新 `target/issue-66/native-1` 执行：passed。schema 17 升级、两词典来源、明确保存／重复定位、伪造出处拒绝、修订冲突、旧操作回放、资源移除后的编辑和多次正常退出重启回读均通过；双卡、评分历史、进度及选定音频的真实 SQLite 快照保持。完整日志和结果在忽略的 `target/`。
+
+完整集成浏览器 E2E：`pnpm test:e2e`，225 passed。同一新构建以 `target/issue-66/native-combined-2` 再次执行上述入口：passed，新增「摘录 → 明确保存 → 共用入口实际播放」检查；播放前后保存内容及学习快照保持。schema 18 的朗读缓存／缺模型检查也以 `target/issue-65/native-combined` 通过。
+
+原生检查使用 WebView offline 和本地合成；本次未执行整机禁网、其他平台实机或正式发行验收。

@@ -1,4 +1,4 @@
-/* global process, window, console */
+/* global process, window, HTMLMediaElement, console */
 import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
 import { cp, rename, writeFile } from 'node:fs/promises';
@@ -48,6 +48,14 @@ try {
   await excerpt(page, 'Une école.', '学校'); await page.getByRole('button', { name: '保存', exact: true }).click();
   await expect(page.getByRole('status').filter({ hasText: '已保存' })).toBeVisible();
   const first = (await records(page))[0]; assert.equal(first.example_source.dictionary_id, 'builtin');
+  await page.evaluate(() => {
+    Reflect.set(window, 'excerptPlayers', []);
+    const play = HTMLMediaElement.prototype.play;
+    HTMLMediaElement.prototype.play = function () { Reflect.get(window, 'excerptPlayers').push(this); return play.call(this); };
+  });
+  await page.getByRole('button', { name: /^播放例句: Une école\./ }).click();
+  await expect.poll(() => page.evaluate(() => Reflect.get(window, 'excerptPlayers').at(-1)?.currentTime ?? 0)).toBeGreaterThan(0);
+  assert.deepEqual((await records(page))[0], first); assert.deepEqual(learning(), before);
   await page.getByRole('tab').filter({ hasText: /English|anglais|fra-eng|法英/i }).click();
   await excerpt(page, 'Une école.', '学校'); await page.getByRole('button', { name: '保存', exact: true }).click();
   await expect(page.getByRole('status').filter({ hasText: '已保存' })).toBeVisible();
@@ -80,7 +88,7 @@ try {
   await fixture.stop(true); page = await fixture.start(); assert.deepEqual((await records(page))[0], edited);
   assert.deepEqual(learning(), before);
   await writeFile(join(destination, 'example-excerpt-results.json'), JSON.stringify({ status: 'passed', legacyUpgrade: 'passed',
-    sources: 'builtin and builtin-fra-eng', explicitSaveAndDuplicate: 'passed', resourceRemovalAndEdit: 'passed', restart: 'passed', learningAndSelectedAudio: 'preserved' }, null, 2));
+    sources: 'builtin and builtin-fra-eng', excerptPlayback: 'passed', explicitSaveAndDuplicate: 'passed', resourceRemovalAndEdit: 'passed', restart: 'passed', learningAndSelectedAudio: 'preserved' }, null, 2));
   console.log('Native excerpt provenance, legacy upgrade, resource removal and restart passed');
 } finally {
   await fixture.finish(); if (hidden) await rename(join(destination, 'dictionary.unavailable'), join(destination, 'dictionary'));
