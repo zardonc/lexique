@@ -1,3 +1,4 @@
+import { ExampleSource } from './example-source';
 import { useEffect, useMemo, useRef } from 'react';
 import type { ReactNode } from 'react';
 import { FrequencyBadge, FrequencyDetails, FrequencyState, useFrequency } from './frequency';
@@ -7,6 +8,7 @@ import type { VocabularySnapshot } from './platform/vocabulary';
 import type { Notebook } from './use-notebook';
 import type { RuntimeAdapter } from './platform/runtime';
 import { ReviewCards } from './review-cards';
+import { ExampleSpeech } from './example-speech';
 import { SpeechButton } from './speech-button';
 
 export function VocabularySummary({ snapshot, text, frequency }: { readonly snapshot: VocabularySnapshot; readonly text: NotebookText; readonly frequency?: ReactNode }) {
@@ -40,14 +42,14 @@ function SavedSource({ snapshot, text }: { readonly snapshot: VocabularySnapshot
   </footer>;
 }
 
-function Conflict({ notebook, text }: { readonly notebook: Notebook; readonly text: NotebookText }) {
+function Conflict({ notebook, text, runtime }: { readonly notebook: Notebook; readonly text: NotebookText; readonly runtime: RuntimeAdapter }) {
   if (!notebook.conflict) return null;
   return <section role="alert" className="runtime-error" aria-label={text.conflict}>
     <h4>{text.conflict}</h4><p>{text.current}</p><pre>{notebook.conflict.notes || '∅'}</pre>
     <p>{text.exampleFr}</p><pre>{notebook.conflict.example_fr || '∅'}</pre>
-    <p>{text.exampleZh}</p><pre>{notebook.conflict.example_zh || '∅'}</pre>
+    <p>{text.exampleZh}</p><pre>{notebook.conflict.example_zh || '∅'}</pre><ExampleSource source={notebook.conflict.example_source} text={text} runtime={runtime} />
     <p>{text.exampleSense}</p><pre>{notebook.conflict.example_sense === null ? text.exampleSenseUnspecified : notebook.conflict.digest[notebook.conflict.example_sense]?.translation || text.missing}</pre>
-    {notebook.conflict.more_examples.map((example, index) => <pre key={index}>{example.fr}{'\n'}{example.zh}</pre>)}
+    {notebook.conflict.more_examples.map((example, index) => <div key={index}><pre>{example.fr}{'\n'}{example.zh}</pre><ExampleSource source={example.source} text={text} runtime={runtime} /></div>)}
     <p>{text.discardWarning}</p><div className="actions">
       <button disabled={notebook.busy} onClick={notebook.adopt}>{text.adopt}</button>
       <button disabled={notebook.busy} onClick={notebook.back}>{text.back}</button>
@@ -58,7 +60,7 @@ function Conflict({ notebook, text }: { readonly notebook: Notebook; readonly te
 function SaveActions({ notebook, text, overLimit }: {
   readonly notebook: Notebook; readonly text: NotebookText; readonly overLimit: boolean;
 }) {
-  return <div className="actions"><button disabled={overLimit || notebook.meaningRequired || notebook.busy || !notebook.dirty}
+  return <div className="actions"><button disabled={notebook.excerptPending || overLimit || notebook.meaningRequired || notebook.busy || !notebook.dirty}
     onClick={() => { void notebook.save(); }}>{notebook.busy ? text.saving : text.save}</button>
     <span role="status">{notebook.saved ? text.saved : notebook.dirty ? text.unsaved : ''}</span>
     {notebook.meaningRequired && <p role="alert" className="runtime-error">{text.exampleSenseRequired}</p>}</div>;
@@ -68,22 +70,40 @@ function exampleTooLong(editor: NonNullable<Notebook['editor']>) {
   return [editor.example_fr, editor.example_zh, ...editor.more_examples.flatMap((e) => [e.fr, e.zh])].some((value) => characterCount(value) > 20_000);
 }
 
-function ExampleEditor({ notebook, text }: { readonly notebook: Notebook; readonly text: NotebookText }) {
+function ExampleEditor({ notebook, text, runtime }: { readonly notebook: Notebook; readonly text: NotebookText; readonly runtime: RuntimeAdapter }) {
   const editor = notebook.editor!;
   const overLimit = exampleTooLong(editor);
+  useEffect(() => { if (notebook.focusExample) document.getElementById(notebook.focusExample)?.focus(); }, [notebook.focusExample, notebook.excerptStatus]);
   return <><h4>{text.exampleUser}</h4>
     <label htmlFor="example-sense">{text.exampleSense}</label><select id="example-sense" disabled={notebook.busy} aria-invalid={notebook.meaningRequired} aria-describedby={notebook.meaningRequired ? 'example-sense-required' : undefined} value={editor.example_sense === null ? '' : String(editor.example_sense)} onChange={(event) => notebook.editSense(event.target.value === '' ? null : Number(event.target.value))}>
       <option value="">{text.exampleSenseUnspecified}</option>{editor.snapshot.digest.map((entry, index) => <option key={index} value={index}>{entry.translation || text.missing}</option>)}
     </select>
     {notebook.meaningRequired && <p id="example-sense-required" className="runtime-error">{text.exampleSenseRequired}</p>}
+    <ExampleSource source={editor.example_source} text={text} runtime={runtime} />
     <label htmlFor="example-fr">{text.exampleFr}</label><textarea id="example-fr" lang="fr" value={editor.example_fr} disabled={notebook.busy} rows={3} aria-invalid={characterCount(editor.example_fr) > 20_000} aria-describedby={overLimit ? 'example-limit' : undefined} onChange={(event) => notebook.editExample('example_fr', event.target.value)} />
+    <ExampleSpeech value={editor.example_fr} runtime={runtime} text={text} />
     <label htmlFor="example-zh">{text.exampleZh}</label><textarea id="example-zh" lang="zh" value={editor.example_zh} disabled={notebook.busy} rows={3} aria-invalid={characterCount(editor.example_zh) > 20_000} aria-describedby={overLimit ? 'example-limit' : undefined} onChange={(event) => notebook.editExample('example_zh', event.target.value)} />
     {editor.more_examples.map((example, index) => <fieldset key={index}><legend>{text.exampleUser} {index + 2}</legend>
+      <ExampleSource source={example.source} text={text} runtime={runtime} />
       <label htmlFor={`example-fr-${index}`}>{text.exampleFr}</label><textarea id={`example-fr-${index}`} lang="fr" value={example.fr} disabled={notebook.busy} aria-invalid={characterCount(example.fr) > 20_000} aria-describedby={overLimit ? 'example-limit' : undefined} onChange={(event) => notebook.editMore(editor.more_examples.map((item, i) => i === index ? { ...item, fr: event.target.value } : item))} />
+      <ExampleSpeech value={example.fr} runtime={runtime} text={text} />
       <label htmlFor={`example-zh-${index}`}>{text.exampleZh}</label><textarea id={`example-zh-${index}`} lang="zh" value={example.zh} disabled={notebook.busy} aria-invalid={characterCount(example.zh) > 20_000} aria-describedby={overLimit ? 'example-limit' : undefined} onChange={(event) => notebook.editMore(editor.more_examples.map((item, i) => i === index ? { ...item, zh: event.target.value } : item))} />
       <button disabled={notebook.busy} onClick={() => notebook.editMore(editor.more_examples.filter((_, i) => i !== index))}>{text.removeExample}</button></fieldset>)}
     <button disabled={notebook.busy || editor.more_examples.length >= 100} onClick={() => notebook.editMore([...editor.more_examples, { fr: '', zh: '' }])}>{text.addExample}</button>
     {overLimit && <p id="example-limit" role="alert">{text.exampleLimit}</p>}</>;
+}
+
+function ExcerptEditor({ notebook, text, runtime }: { readonly notebook: Notebook; readonly text: NotebookText; readonly runtime: RuntimeAdapter }) {
+  if (!notebook.excerpt) return null;
+  return (<fieldset><legend>{text.excerpt}</legend>
+      <ExampleSource source={notebook.excerpt.source} text={text} runtime={runtime} />
+      <label htmlFor="excerpt-fr">{text.excerptFr}</label><textarea id="excerpt-fr" lang="fr" disabled={notebook.busy} value={notebook.excerpt.fr} onChange={(event) => notebook.editExcerpt('fr', event.target.value)} />
+      <ExampleSpeech value={notebook.excerpt.fr} runtime={runtime} text={text} />
+      <label htmlFor="excerpt-zh">{text.excerptZh}</label><textarea id="excerpt-zh" lang="zh" disabled={notebook.busy} value={notebook.excerpt.zh} onChange={(event) => notebook.editExcerpt('zh', event.target.value)} />
+      <button disabled={notebook.busy || (!notebook.excerpt.fr && !notebook.excerpt.zh)} onClick={notebook.transferExcerpt}>{text.transferExcerpt}</button>
+      <button disabled={notebook.busy} onClick={notebook.cancelExcerpt}>{text.cancelExcerpt}</button>
+      {notebook.excerptStatus && <p role="alert">{notebook.excerptStatus === 'duplicate' ? text.duplicateExcerpt : notebook.excerptStatus === 'capacity' ? text.capacityExcerpt : text.exampleLimit}</p>}
+    </fieldset>);
 }
 
 export function VocabularyEditor({ notebook, text, viewExisting, runtime, onReviewChanged }: {
@@ -105,12 +125,13 @@ export function VocabularyEditor({ notebook, text, viewExisting, runtime, onRevi
       aria-invalid={characterCount(notes) > 20_000} aria-describedby="note-count" onChange={(event) => notebook.edit(event.target.value)} />
     <p id="note-count">{characterCount(notes).toLocaleString()} / 20,000 {text.count}</p>
     {characterCount(notes) > 20_000 && <p role="alert">{text.limit}</p>}
-    <ExampleEditor notebook={notebook} text={text} />
+    <ExcerptEditor notebook={notebook} text={text} runtime={runtime} />
+    <ExampleEditor key={snapshot.headword} notebook={notebook} text={text} runtime={runtime} />
     {notebook.error && <p role="alert">{text.saveError}: {notebook.error}</p>}
     {notebook.audioError && <p role="alert">{text.listeningPending}: {notebook.audioError}</p>}
     <SaveActions notebook={notebook} text={text} overLimit={overLimit} />
     {notebook.editor.record && <ReviewCards key={`${notebook.editor.record.id}-${notebook.version}`} record={notebook.editor.record} runtime={runtime} text={text} onChanged={onReviewChanged} />}
     {notebook.existing && <p role="status">{text.existing} <button onClick={viewExisting}>{text.view}</button></p>}
-    <Conflict notebook={notebook} text={text} /><SavedSource snapshot={snapshot} text={text} />
+    <Conflict notebook={notebook} text={text} runtime={runtime} /><SavedSource snapshot={snapshot} text={text} />
   </section>;
 }

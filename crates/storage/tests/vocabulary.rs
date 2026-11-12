@@ -30,6 +30,7 @@ fn create(operation: &str, headword: &str, notes: &str) -> SaveRequest {
         notes: notes.into(),
         example_fr: String::new(),
         example_zh: String::new(),
+        example_source: None,
         example_sense: None,
         more_examples: vec![],
         id: None,
@@ -105,6 +106,7 @@ fn update(operation: &str, record: &lexique_storage::VocabularyRecord, notes: &s
         notes: notes.into(),
         example_fr: record.example_fr.clone(),
         example_zh: record.example_zh.clone(),
+        example_source: record.example_source.clone(),
         example_sense: record.example_sense,
         more_examples: record.more_examples.clone(),
         id: Some(record.id),
@@ -193,7 +195,7 @@ fn example_meaning_survives_upgrade_and_rejects_out_of_range() {
             .unwrap();
     }
     connection
-        .execute_batch("DROP VIEW audio_version_protection; DROP TABLE review_queue_changes; DROP TABLE word_audio_repairs; DROP TABLE word_audio_operations; DROP TABLE word_audio_publications; DROP TABLE word_audio_imports; DROP TABLE word_audio_selections; DROP TABLE speech_versions; DROP TABLE review_batch_items; DROP TABLE review_batches; DROP TABLE speech_tasks; DROP TABLE speech_owners; DROP TABLE legacy_speech; DROP TABLE speech_assets; ALTER TABLE vocabulary DROP COLUMN example_sense; PRAGMA user_version = 9;")
+        .execute_batch("DROP VIEW audio_version_protection; DROP TABLE review_queue_changes; DROP TABLE word_audio_repairs; DROP TABLE word_audio_operations; DROP TABLE word_audio_publications; DROP TABLE word_audio_imports; DROP TABLE word_audio_selections; DROP TABLE speech_versions; DROP TABLE review_batch_items; DROP TABLE review_batches; DROP TABLE speech_tasks; DROP TABLE speech_owners; DROP TABLE legacy_speech; DROP TABLE speech_assets; ALTER TABLE vocabulary DROP COLUMN example_sense; ALTER TABLE vocabulary DROP COLUMN example_source; PRAGMA user_version = 9;")
         .unwrap();
     initialize(&connection).unwrap();
     let migrated = get(&connection, original.id).unwrap();
@@ -483,10 +485,15 @@ fn file_database_reopens_with_record_identity_content_and_sort_preference() {
         .unwrap()
         .record;
         let mut request = update("persistent-example", &created, &created.notes);
+        request.example_source = Some(snapshot().reference);
         request.example_fr = "Je vais à l'école.".into();
         request.example_zh = "我去学校。".into();
         request.example_sense = Some(0);
         request.more_examples.push(lexique_storage::Example {
+            source: Some(Reference {
+                dictionary: "Another dictionary".into(),
+                ..snapshot().reference
+            }),
             fr: "Une autre phrase.".into(),
             zh: "另一句话。".into(),
         });
@@ -728,4 +735,48 @@ fn review_due_sort_uses_earliest_card_and_survives_reopen_and_pause() {
         std::io::copy(&mut std::fs::File::open(&path).unwrap(), &mut output).unwrap();
     }
     std::fs::remove_file(path).unwrap();
+}
+
+#[test]
+fn legacy_examples_gain_no_source_on_upgrade_and_source_is_part_of_retry_identity() {
+    let mut connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    let mut request = create("legacy-source", "école", "keep notes");
+    request.example_fr = "Legacy French".into();
+    request.example_sense = Some(0);
+    request.more_examples.push(lexique_storage::Example {
+        fr: String::new(),
+        zh: "旧译文".into(),
+        source: None,
+    });
+    let original = save(&mut connection, &request, Some(snapshot()))
+        .unwrap()
+        .record;
+    connection
+        .execute_batch(
+            "ALTER TABLE vocabulary DROP COLUMN example_source; PRAGMA user_version = 17;",
+        )
+        .unwrap();
+    initialize(&connection).unwrap();
+    let migrated = get(&connection, original.id).unwrap();
+    assert!(migrated.example_source.is_none());
+    assert!(migrated.more_examples[0].source.is_none());
+    assert_eq!(
+        serde_json::to_value(&migrated).unwrap(),
+        serde_json::to_value(&original).unwrap()
+    );
+    let mut edit = update("add-source", &migrated, "keep notes");
+    edit.example_source = Some(snapshot().reference);
+    let saved = save(&mut connection, &edit, None).unwrap().record;
+    assert_eq!(saved.example_source, edit.example_source);
+    assert_eq!(
+        save(&mut connection, &edit, None).unwrap().outcome,
+        "replayed"
+    );
+    edit.example_source.as_mut().unwrap().version = "changed".into();
+    assert!(save(&mut connection, &edit, None).is_err());
+    assert_eq!(
+        get(&connection, saved.id).unwrap().example_source,
+        saved.example_source
+    );
 }

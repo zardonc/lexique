@@ -1,3 +1,4 @@
+import { ExampleSpeechGroup } from './example-speech';
 import { useEffect, useState } from 'react';
 import { messages } from './content';
 import type { Locale, Messages, Theme } from './content';
@@ -76,7 +77,7 @@ export function App({ runtime }: { readonly runtime: RuntimeAdapter }) {
   const page = navigation.page;
   const selection = useSelectionInput(runtime, { page, locale }, navigation.openInput);
   useEffect(() => { document.documentElement.lang = languageTags[locale]; }, [locale]);
-  return <div className="app" data-theme={theme} data-collapsed={collapsed}>
+  return <ExampleSpeechGroup><div className="app" data-theme={theme} data-collapsed={collapsed}>
     <a className="skip-link" href="#main-content">{text.skip}</a>
     <Navigation text={text} selected={page} collapsed={collapsed} disabled={false} onSelect={navigation.changePage} onToggle={() => setCollapsed((value) => !value)} />
     <div className="workspace"><Header text={text} locale={locale} theme={theme} onLocale={setLocale} onTheme={setTheme} onLocal={selection.local} selectionError={selection.error} />
@@ -85,8 +86,8 @@ export function App({ runtime }: { readonly runtime: RuntimeAdapter }) {
         <section className="page-content" aria-labelledby={pageTitleId(page)}>
           <PageIntroduction page={page} text={text} />
           {page === 0 ? <DictionaryPanel runtime={runtime} text={text.dictionary} notebookText={notebookText} version={notebook.version}
-            locale={locale} initial={navigation.dictionary} onConjugation={navigation.openConjugation}
-            onCollect={(result) => guard.request(() => notebook.collect(result))}
+            preserveExcerpt={notebook.preservesExcerpt} locale={locale} initial={navigation.dictionary} onConjugation={navigation.openConjugation}
+            onExcerpt={(result, record) => { const start = () => notebook.beginExcerpt(result, record); if (notebook.editor?.snapshot.headword === result.entries[0]?.key && !notebook.excerpt && !notebook.busy) start(); else guard.request(start); }} onCollect={(result) => guard.request(() => notebook.collect(result))}
             onOpen={(record) => guard.request(() => notebook.open(record))}
             beforeSearch={navigation.beforeSearch} /> : page === 1 ?
             <ConjugationPanel runtime={runtime} locale={locale} initial={navigation.conjugation} onChange={navigation.setConjugation} onDictionary={navigation.openDictionary} /> : page === 2 ?
@@ -109,5 +110,5 @@ export function App({ runtime }: { readonly runtime: RuntimeAdapter }) {
       </main>
     </div>
     <LeaveDialog guard={guard} notebook={notebook} text={notebookText} />
-  </div>;
+  </div></ExampleSpeechGroup>;
 }

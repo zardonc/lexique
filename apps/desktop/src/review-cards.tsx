@@ -1,3 +1,4 @@
+import { ExampleSource } from './example-source';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { NotebookText } from './notebook-content';
 import type { ReviewCard, RuntimeAdapter } from './platform/runtime';
@@ -6,6 +7,7 @@ import type { VocabularyRecord } from './platform/vocabulary';
 import { ReviewRating } from './review-rating';
 import { useQueueAudioReplacement } from './use-queue-audio-replacement';
 import { speechPlaybackRate } from './platform/speech';
+import { ExampleSpeech } from './example-speech';
 import type { SpeechAudio } from './platform/speech';
 
 function ExampleSense({ record, text }: { readonly record: VocabularyRecord; readonly text: NotebookText }) {
@@ -13,24 +15,25 @@ function ExampleSense({ record, text }: { readonly record: VocabularyRecord; rea
   return <p>{text.exampleSense}：{meaning}</p>;
 }
 
-function Examples({ record, text }: { readonly record: VocabularyRecord; readonly text: NotebookText }) {
-  const examples = [{ fr: record.example_fr, zh: record.example_zh }, ...record.more_examples]
+function Examples({ record, text, runtime }: { readonly record: VocabularyRecord; readonly text: NotebookText; readonly runtime: RuntimeAdapter }) {
+  const [expanded, setExpanded] = useState(false);
+  const examples = [{ fr: record.example_fr, zh: record.example_zh, source: record.example_source }, ...record.more_examples]
     .filter((example) => example.fr.trim() || example.zh.trim());
   const [first, ...rest] = examples;
   return <>
     {first && <section aria-label={text.exampleUser}><p>{text.exampleUser}</p>
-      {first.fr.trim() && <p lang="fr">{first.fr}</p>}{first.zh.trim() && <p lang="zh">{first.zh}</p>}</section>}
+      {first.fr.trim() && <p lang="fr">{first.fr}</p>}<ExampleSpeech value={first.fr} runtime={runtime} text={text} />{first.zh.trim() && <p lang="zh">{first.zh}</p>}<ExampleSource source={first.source} text={text} runtime={runtime} /></section>}
     {(!first?.fr.trim() || !first?.zh.trim()) && <p>{text.exampleMissing}</p>}
-    {rest.length > 0 && <details><summary>{text.moreExamples}</summary>{rest.map((example, index) => <section key={index}>
-      <p lang="fr">{example.fr}</p><p lang="zh">{example.zh}</p>{(!example.fr.trim() || !example.zh.trim()) && <p>{text.exampleMissing}</p>}</section>)}</details>}
+    {rest.length > 0 && <details onToggle={(event) => setExpanded(event.currentTarget.open)}><summary>{text.moreExamples}</summary>{expanded && rest.map((example, index) => <section key={index}>
+      <p lang="fr">{example.fr}</p><ExampleSpeech value={example.fr} runtime={runtime} text={text} /><p lang="zh">{example.zh}</p><ExampleSource source={example.source} text={text} runtime={runtime} />{(!example.fr.trim() || !example.zh.trim()) && <p>{text.exampleMissing}</p>}</section>)}</details>}
   </>;
 }
 
-function Answer({ record, text }: { readonly record: VocabularyRecord; readonly text: NotebookText }) {
+function Answer({ record, text, runtime }: { readonly record: VocabularyRecord; readonly text: NotebookText; readonly runtime: RuntimeAdapter }) {
   return <>
     <p>{record.digest.map((entry) => entry.translation || text.missing).join(' · ')}</p>
     <ExampleSense record={record} text={text} />
-    <Examples record={record} text={text} />
+    <Examples record={record} text={text} runtime={runtime} />
     <details><summary>{text.more}</summary><p>{record.notes || text.missing}</p>
       <p>{record.reference.dictionary} · {record.reference.version} · {record.reference.attribution} · {record.reference.license}</p>
       <p>{record.reference.source_url}</p><p>{record.reference.license_url}</p></details>
@@ -56,7 +59,7 @@ export function QueueReviewCard({ record, text, runtime, card, audio, onRated, o
     {listeningAudio ? <><MachineVoiceNotice audio={listeningAudio} text={text} /><audio ref={player} onError={() => mediaError(text.playbackError)} />
       <button disabled={replacement.busy} onClick={() => { void play(); }}>{text.replay}</button></> : <h3 lang="fr">{record.headword}</h3>}
     <QueuePlaybackRecovery text={text} error={error} replacement={replacement} cancel={cancel} />
-    {revealed && <>{listeningAudio && <h3 lang="fr">{record.headword}</h3>}<Answer record={record} text={text} />
+    {revealed && <>{listeningAudio && <h3 lang="fr">{record.headword}</h3>}<Answer record={record} text={text} runtime={runtime} />
       <ReviewRating id={card.id} runtime={runtime} text={text} enabled={enabled && (!listeningAudio || (played && !replacement.busy))} presentationRevision={progressRevision} onBusyChange={setBusy} onSuccess={onRated} /></>}
     <div className="actions">{!revealed && <button onClick={() => setRevealed(true)}>{text.reveal}</button>}
       <button disabled={busy} onClick={onSkip}>{text.skip}</button></div>
@@ -80,10 +83,10 @@ export function RecognitionCard({ record, text, runtime, card, onRated, onSkip }
   return <>
     <p>{text.recognition}</p>
     <div className="actions"><button onClick={() => { setRevealed(false); dialog.current?.showModal(); }}>{text.openRecognition}</button></div>
-    <dialog ref={dialog} className="review-card" aria-label={text.recognition} onCancel={(event) => { if (ratingBusy) event.preventDefault(); }}>
+    <dialog ref={dialog} className="review-card" aria-label={text.recognition} onClose={() => setRevealed(false)} onCancel={(event) => { if (ratingBusy) event.preventDefault(); }}>
       <section aria-label={text.recognition}>
         <h3 lang="fr">{record.headword}</h3>
-        {revealed && <Answer record={record} text={text} />}
+        {revealed && <Answer record={record} text={text} runtime={runtime} />}
         {revealed && <ReviewRating id={card.id} runtime={runtime} text={text} enabled onBusyChange={setRatingBusy} onSuccess={() => { dialog.current?.close(); onRated?.(); }} />}
         <div className="actions">
           {!revealed && <button onClick={() => setRevealed(true)}>{text.reveal}</button>}
@@ -158,11 +161,11 @@ export function ListeningCard({ record, text, runtime, audio, onPlayback, card, 
     <div className="actions"><button disabled={!url} onClick={() => {
       setRevealed(false); dialog.current?.showModal(); void play();
     }}>{text.openListening}</button></div>
-    <dialog ref={dialog} className="review-card" aria-label={text.listening} onCancel={(event) => { if (ratingBusy) event.preventDefault(); else cancel(); }}>
+    <dialog ref={dialog} className="review-card" aria-label={text.listening} onClose={() => setRevealed(false)} onCancel={(event) => { if (ratingBusy) event.preventDefault(); else cancel(); }}>
       <section aria-label={text.listening}>
         <MachineVoiceNotice audio={audio} text={text} /><audio ref={player} src={url} onError={() => mediaError(text.playbackError)} />
         {error && <p role="alert">{text.playbackError}: {error}</p>}
-        {revealed && <><h3 lang="fr">{record.headword}</h3><Answer record={record} text={text} /></>}
+        {revealed && <><h3 lang="fr">{record.headword}</h3><Answer record={record} text={text} runtime={runtime} /></>}
         {revealed && <ReviewRating id={card.id} runtime={runtime} text={text} enabled={played} onBusyChange={setRatingBusy} onSuccess={() => { close(); onRated?.(); }} />}
         <div className="actions"><button onClick={() => { void play(); }}>{text.replay}</button>
           {!revealed && <button onClick={() => setRevealed(true)}>{text.reveal}</button>}

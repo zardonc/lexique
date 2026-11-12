@@ -276,6 +276,16 @@ pub async fn vocabulary_save(
         {
             return Ok(result);
         }
+        let current = request.id.map(|id| lexique_storage::get(&connection, id)).transpose().map_err(|error| error.to_string())?;
+        let retained: Vec<&Reference> = current.as_ref().map(|record| record.example_source.iter().chain(record.more_examples.iter().filter_map(|example| example.source.as_ref())).collect()).unwrap_or_default();
+        for source in request.example_source.iter().chain(request.more_examples.iter().filter_map(|example| example.source.as_ref())) {
+            if retained.contains(&source) { continue; }
+            let dictionary = source.dictionary_id.as_deref().ok_or("Excerpt dictionary identity is missing")?;
+            let lookup = crate::dictionaries::lookup_from_app(&app, &source.lookup_key, Some(dictionary)).map_err(|error| error.to_string())?;
+            if lookup.entries.is_empty() || snapshot(lookup).reference != *source {
+                return Err("Excerpt source changed or does not match the dictionary; start the excerpt again".into());
+            }
+        }
         let content = if request.id.is_none() {
             let lookup = crate::dictionaries::lookup_from_app(
                 &app,

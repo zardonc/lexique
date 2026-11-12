@@ -44,12 +44,13 @@ export function LeaveDialog({ guard, notebook, text }: {
   useEffect(() => { if (guard.pending) dialog.current?.showModal(); else dialog.current?.close(); }, [guard.pending]);
   return <dialog ref={dialog} aria-labelledby="leave-heading" onCancel={(event) => { event.preventDefault(); guard.stay(); }}>
     <h3 id="leave-heading">{text.leave}</h3>
+    {notebook.excerptPending && <p role="alert">{text.pendingExcerpt}</p>}
     {notebook.meaningRequired && <p role="alert">{text.exampleSenseRequired}</p>}
     {notebook.error && <p role="alert">{text.saveError}: {notebook.error}</p>}
     {notebook.audioError && <p role="alert">{text.saved}. {text.listeningPending}: {notebook.audioError}</p>}
     {notebook.conflict && <p role="alert">{text.conflict}</p>}
     {notebook.existing && <p role="alert">{text.existing}</p>}
-    <div className="actions"><button disabled={notebook.busy} onClick={() => { void guard.saveLeave(); }}>{text.saveLeave}</button>
+    <div className="actions"><button disabled={notebook.busy || notebook.excerptPending} onClick={() => { void guard.saveLeave(); }}>{text.saveLeave}</button>
       <button disabled={notebook.busy} onClick={guard.leave}>{text.discard}</button>
       <button disabled={notebook.busy} onClick={guard.stay}>{text.stay}</button></div>
   </dialog>;

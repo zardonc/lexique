@@ -156,6 +156,9 @@ fn migrate(connection: &Connection, version: u32) -> Result<u32, StorageError> {
     if version < 17 {
         transaction.execute_batch(include_str!("../migrations/0017_audio_demands.sql"))?;
     }
+    if version < 18 {
+        transaction.execute_batch(include_str!("../migrations/0018_example_sources.sql"))?;
+    }
     if transaction
         .prepare("PRAGMA foreign_key_check")?
         .exists([])?
