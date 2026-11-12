@@ -1,6 +1,29 @@
 import { expect, test } from '@playwright/test';
 import { dictionary, nativeFixture, record } from './native-fixture';
 
+test('pending excerpt explains why save-and-leave is unavailable and preserves input', async ({ page }) => {
+  const saved = { ...record, example_fr: 'Une école.', example_source: { ...record.reference, dictionary_id: 'builtin' }, example_sense: 0 };
+  await nativeFixture(page, { vocabulary_find: [{ value: record }], vocabulary_save: [{ value: { outcome: 'updated', record: saved } }] });
+  await page.goto('/');
+  await page.getByLabel('法语词或词组').fill('école');
+  await page.getByRole('button', { name: '查词', exact: true }).click();
+  await page.getByRole('button', { name: '摘录例句', exact: true }).click();
+  await page.getByLabel('摘录法语').fill('Une école.');
+  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  const dialog = page.getByRole('dialog');
+  await expect(dialog.getByRole('button', { name: /保存/ })).toBeDisabled();
+  await expect(dialog.getByRole('alert')).toContainText('请先将摘录加入草稿或取消摘录');
+  expect(await page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'vocabulary_save'))).toEqual([]);
+  await dialog.getByRole('button', { name: /继续编辑/ }).click();
+  await expect(page.getByLabel('摘录法语')).toHaveValue('Une école.');
+  await page.getByRole('button', { name: '加入草稿', exact: true }).click();
+  await page.getByLabel('例句对应释义').selectOption('0');
+  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await dialog.getByRole('button', { name: '保存后离开', exact: true }).click();
+  await expect(dialog).not.toBeVisible();
+  expect(await page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'vocabulary_save'))).toHaveLength(1);
+});
+
 test('dictionary excerpt freezes source and enters the shared draft only on transfer', async ({ page }) => {
   await nativeFixture(page, { vocabulary_find: [{ value: record }] });
   await page.goto('/');

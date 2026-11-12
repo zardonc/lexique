@@ -32,3 +32,9 @@ node e2e/native-example-excerpts-check.mjs <speech-package> <fresh-executable> <
 完整集成浏览器 E2E：`pnpm test:e2e`，225 passed。同一新构建以 `target/issue-66/native-combined-2` 再次执行上述入口：passed，新增「摘录 → 明确保存 → 共用入口实际播放」检查；播放前后保存内容及学习快照保持。schema 18 的朗读缓存／缺模型检查也以 `target/issue-65/native-combined` 通过。
 
 原生检查使用 WebView offline 和本地合成；本次未执行整机禁网、其他平台实机或正式发行验收。
+
+## 待加入草稿的摘录与离开保护
+
+摘录仍有待加入草稿的输入时，离开对话框禁用「保存后离开」并显示中英法处理提示；「继续编辑」保留粘贴内容，加入草稿后可正常保存并离开。普通编辑与离开对话框使用同一个 `excerptPending` 状态，避免可点击的保存操作被保存边界静默拒绝。
+
+回归命令 `pnpm test:e2e example-excerpts.spec.ts notebook.spec.ts --workers=2`：31 passed，包含输入保持及加入草稿后保存离开的完整恢复路径。`pnpm test:e2e`：226 passed。桌面库两处词典测试使用当前 schema 18，独立 `cargo test --locked --release -p lexique-desktop --lib --no-run` 后执行 `pnpm test:desktop:lib`：15 passed，执行阶段 60 秒硬限保持。

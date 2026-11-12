@@ -619,7 +619,7 @@ mod tests {
                 .unwrap(),
             preserved
         );
-        assert_eq!(lexique_storage::initialize(&connection).unwrap(), 17);
+        assert_eq!(lexique_storage::initialize(&connection).unwrap(), 18);
     }
 
     #[test]
@@ -668,7 +668,7 @@ mod tests {
                 bytes
             );
         }
-        assert_eq!(lexique_storage::initialize(&connection).unwrap(), 17);
+        assert_eq!(lexique_storage::initialize(&connection).unwrap(), 18);
     }
 
     #[test]
