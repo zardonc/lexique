@@ -16,4 +16,6 @@
 
 从 `apps/desktop` 执行 `node e2e/native-example-speech-check.mjs <语音资源包目录> <新构建的 Lexique.exe> <仓库 target/issue-65/新目录>`。复用既有原生夹具和 60 秒硬限；以全新用户库生成单词和双卡后，比对例句首次合成／播放前后的学习及选定单词音频，重启并隐藏模型后验证缓存播放，新句无缓存时验证真实错误。WebView 置为 offline，原生语音使用本地资源。
 
-此实现分支未执行新构建的原生检查，由集成分支单独记录结果。浏览器测试注入 RuntimeAdapter 的 IPC 响应，不证明原生合成、缓存或实播。未更改 Rust、IPC、schema、持久化或语音模型；其他平台实机、整机禁网、人工音质及正式发行分别验收。
+集成分支 Windows x64 检查：`pnpm desktop:build --no-bundle` passed；上述原生入口使用既有 `target/pr23-native-speech-20261101` 语音包、本次 `target/release/lexique-desktop.exe` 和全新 `target/issue-65/native-2`，结果 passed。首次无缓存合成与真实播放、正常退出重启、隐藏模型后的缓存播放及新句缺模型错误均通过；真实 SQLite 学习内容、双卡、进度、评分和选定音频快照保持。检查使用新可执行文件旁的配套词典；完整日志与结果保留于忽略的 `target/`。
+
+浏览器测试注入 RuntimeAdapter 的 IPC 响应，不证明原生合成、缓存或实播。本票未更改 Rust、IPC、schema、持久化或语音模型；其他平台实机、整机禁网、人工音质及正式发行分别验收。
