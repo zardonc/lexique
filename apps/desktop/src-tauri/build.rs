@@ -126,6 +126,7 @@ fn main() {
             "ocr_abort",
             "conjugation_lookup",
             "conjugation_preferences",
+            "interface_preferences",
             "conjugation_block_order",
             "vocabulary_find",
             "vocabulary_list",

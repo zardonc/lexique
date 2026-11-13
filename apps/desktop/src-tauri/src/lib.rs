@@ -9,6 +9,8 @@ mod audio_maintenance;
 mod conjugation;
 mod dictionaries;
 mod dictionary_links;
+mod interface;
+use interface::interface_preferences;
 mod ocr;
 mod ocr_capture;
 mod review_window;
@@ -181,6 +183,7 @@ pub fn run() {
             ocr_capture::ocr_abort,
             conjugation_lookup,
             conjugation_preferences,
+            interface_preferences,
             conjugation_block_order,
             vocabulary_find,
             vocabulary_list,

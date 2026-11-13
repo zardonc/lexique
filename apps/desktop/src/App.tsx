@@ -24,6 +24,7 @@ import { SelectionSettings } from './selection-settings';
 import { lookupInputMessages } from './lookup-input-content';
 import { DictionarySettings } from './dictionary-settings';
 import { DictionaryResources } from './dictionary-resources';
+import { useInterfacePreferences } from './use-interface-preferences';
 
 const themes: readonly Theme[] = ['white', 'sepia', 'dark'];
 const locales: readonly Locale[] = ['zh', 'en', 'fr'];
@@ -32,26 +33,29 @@ const languageTags = { zh: 'zh-CN', en: 'en', fr: 'fr' } as const;
 
 interface HeaderProps {
   readonly text: Messages;
-  readonly locale: Locale;
-  readonly theme: Theme;
-  readonly onLocale: (locale: Locale) => void;
-  readonly onTheme: (theme: Theme) => void;
+  readonly preferences: ReturnType<typeof useInterfacePreferences>;
   readonly onLocal: () => void;
   readonly selectionError: string;
 }
 
-function Header({ text, locale, theme, onLocale, onTheme, onLocal, selectionError }: HeaderProps) {
+function Header({ text, preferences, onLocal, selectionError }: HeaderProps) {
+  const { locale, theme } = preferences.value;
+  const description = preferences.message || preferences.error ? 'interface-preferences-state' : undefined;
   return <header className="topbar"><span className="preview-label">{text.preview}</span><div className="preferences">
     <button type="button" onMouseDown={(event) => event.preventDefault()} onClick={onLocal}>{lookupInputMessages[locale].local}</button>
-    <select aria-label={text.language} value={locale} onChange={(event) => {
+    <select aria-label={text.language} aria-describedby={description} value={locale} disabled={preferences.disabled} onChange={(event) => {
       const value = locales.find((candidate) => candidate === event.target.value);
-      if (value) onLocale(value);
+      if (value) void preferences.choose({ ...preferences.value, locale: value });
     }}>{locales.map((value, index) => <option key={value} value={value}>{localeNames[index]}</option>)}</select>
-    <select aria-label={text.theme} value={theme} onChange={(event) => {
+    <select aria-label={text.theme} aria-describedby={description} value={theme} disabled={preferences.disabled} onChange={(event) => {
       const value = themes.find((candidate) => candidate === event.target.value);
-      if (value) onTheme(value);
+      if (value) void preferences.choose({ ...preferences.value, theme: value });
     }}>{themes.map((value, index) => <option key={value} value={value}>{text.themes[index]}</option>)}</select>
-  </div>{selectionError && <p role="alert">{selectionError}</p>}</header>;
+  </div>{(preferences.message || preferences.error) && <div className="interface-preferences-state" id="interface-preferences-state">
+    <p aria-live="polite">{preferences.message}</p>
+    {preferences.error && <div role="alert">{preferences.text.failed}: {preferences.error}
+      <button disabled={preferences.busy} onClick={preferences.retry}>{preferences.text.retry}</button></div>}
+  </div>}{selectionError && <p role="alert">{selectionError}</p>}</header>;
 }
 
 function PageIntroduction({ page, text }: { readonly page: number; readonly text: Messages }) {
@@ -63,8 +67,8 @@ function PageIntroduction({ page, text }: { readonly page: number; readonly text
 function pageTitleId(page: number) { return page === 3 || page === 1 ? 'main-page-heading' : 'page-title'; }
 
 export function App({ runtime }: { readonly runtime: RuntimeAdapter }) {
-  const [locale, setLocale] = useState<Locale>('zh');
-  const [theme, setTheme] = useState<Theme>('white');
+  const preferences = useInterfacePreferences(runtime);
+  const { locale, theme } = preferences.value;
   const [collapsed, setCollapsed] = useState(false);
   const batch = useBatchReview(runtime);
   const [reviewVersion, setReviewVersion] = useState(0);
@@ -80,7 +84,7 @@ export function App({ runtime }: { readonly runtime: RuntimeAdapter }) {
   return <ExampleSpeechGroup><div className="app" data-theme={theme} data-collapsed={collapsed}>
     <a className="skip-link" href="#main-content">{text.skip}</a>
     <Navigation text={text} selected={page} collapsed={collapsed} disabled={false} onSelect={navigation.changePage} onToggle={() => setCollapsed((value) => !value)} />
-    <div className="workspace"><Header text={text} locale={locale} theme={theme} onLocale={setLocale} onTheme={setTheme} onLocal={selection.local} selectionError={selection.error} />
+    <div className="workspace"><Header text={text} preferences={preferences} onLocal={selection.local} selectionError={selection.error} />
       <main id="main-content" tabIndex={-1}>
         <p className="eyebrow">{text.eyebrow}</p><h1 id="main-page-heading">{text.modules[page]}</h1>
         <section className="page-content" aria-labelledby={pageTitleId(page)}>

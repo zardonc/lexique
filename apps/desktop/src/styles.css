@@ -49,7 +49,8 @@ nav button[aria-current='page'] { font-weight: 600; }
 .collapse { margin-top: auto; padding-top: 18px; color: var(--muted); }
 [data-collapsed='true'] .nav-label, [data-collapsed='true'] .brand-copy { display: none; }
 .workspace { min-width: 0; }
-.topbar { display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 76px; padding: 16px 40px; border-bottom: 1px solid var(--line); }
+.topbar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; min-height: 76px; padding: 16px 40px; border-bottom: 1px solid var(--line); }
+.interface-preferences-state { flex-basis: 100%; color: var(--muted); font-size: 12px; }
 .preview-label { color: var(--muted); font-size: 12px; }
 .preferences { display: flex; flex-wrap: wrap; justify-content: flex-end; min-width: 0; gap: 10px; }
 select { max-width: 128px; min-height: 36px; padding: 6px 8px; border: 1px solid var(--line); border-radius: 4px; background: var(--surface); font-size: 12px; }

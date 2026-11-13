@@ -39,6 +39,7 @@ class NativeFixture {
   constructor(private readonly responses: Readonly<Record<string, readonly Reply[]>>, lookup: typeof dictionary) {
     this.defaults = { runtime_status: { version: '0.1.0', schemaVersion: 18, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } },
       dictionary_lookup: lookup, dictionary_settings: [{ id: 'builtin', title: 'FreeDict fra-zho' }], vocabulary_find: null, vocabulary_list: [], vocabulary_sort: 'updated-desc', finish_close: null,
+      interface_preferences: { locale: 'zh', theme: 'white' },
       speech_preferences: { voice: 'female', wpm: 180 }, review_settings: { retention_percent: 90, new_limit: 20, review_limit: 50, new_cards_ignore_review_limit: false },
       review_queue: { queue: { cards: [], reason: null, available_at: null }, record: null, audio_pending: false, audio_error: null }, review_cards: [], speech_cached: null,
       review_undo_target: null, review_undo: { status: 'committed', queue_rebuilt: false }, review_auto_enroll: false, review_pause: false,
@@ -62,8 +63,8 @@ class NativeFixture {
       items: request.vocabulary_ids.map((vocabulary_id) => ({ vocabulary_id, created_cards: 2, error: null, audio_state: 'queued', audio_error: null })) };
   }
   private settings(command: string, args?: Record<string, unknown>) {
-    const settingKey = command === 'speech_preferences' ? 'preferences' : 'settings';
-    if ((command === 'speech_preferences' || command === 'review_settings') && args?.[settingKey]) this.defaults[command] = args[settingKey];
+    const settingKey = command === 'speech_preferences' || command === 'interface_preferences' ? 'preferences' : 'settings';
+    if (['speech_preferences', 'interface_preferences', 'review_settings'].includes(command) && args?.[settingKey]) this.defaults[command] = args[settingKey];
     const booleanKey = { review_auto_enroll: 'enabled', review_pause: 'paused' }[command];
     if (booleanKey && typeof args?.[booleanKey] === 'boolean') this.defaults[command] = args[booleanKey];
   }
