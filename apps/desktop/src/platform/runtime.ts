@@ -6,8 +6,8 @@ import { z } from 'zod';
 import { listen } from '@tauri-apps/api/event';
 import { recordSchema, saveRequestSchema, saveResultSchema, sortSchema } from './vocabulary';
 import type { SaveRequest, SaveResult, VocabularyRecord, VocabularySort } from './vocabulary';
-import { dictionarySchema, dictionaryQuery, dictionaryId, dictionaryCatalog, dictionaryOrder } from './dictionary';
-import type { DictionaryLookup, DictionaryCatalog } from './dictionary';
+import { dictionarySchema, dictionaryQuery, dictionaryId, dictionaryCatalog, dictionaryOrder, dictionaryContentHash, dictionaryRelink } from './dictionary';
+import type { DictionaryLookup, DictionaryCatalog, DictionaryRelink } from './dictionary';
 import { frequencyQuery, frequencySchema } from './frequency';
 import type { FrequencyLookup } from './frequency';
 import { speechAudioSchema, speechPreferencesSchema, speechVoiceSchema } from './speech';
@@ -17,6 +17,12 @@ import type { SelectionEvent, ShortcutStatus } from './selection';
 import type { Locale } from '../content';
 import { interfacePreferencesSchema } from './interface';
 import type { InterfacePreferences } from './interface';
+
+async function dictionaryUpload(file: File) {
+  if (!/\.mdx$/i.test(file.name) || !file.size || file.size > 128 * 1024 * 1024) throw { code: 'limit', message: 'MDX: non-empty, at most 128 MiB' };
+  const name = btoa(Array.from(new TextEncoder().encode(file.name), (byte) => String.fromCharCode(byte)).join(''));
+  return { bytes: new Uint8Array(await file.arrayBuffer()), headers: { 'x-lexique-dictionary-name': name } };
+}
 
 const runtimeStatusSchema = z.object({
   version: z.string().min(1),
@@ -128,6 +134,7 @@ export interface RuntimeAdapter {
   readonly lookupDictionary: (key: string, dictionaryId?: string) => Promise<DictionaryLookup | null>;
   readonly dictionarySettings: (order?: readonly string[]) => Promise<DictionaryCatalog | null>;
   readonly importDictionary: (file: File) => Promise<DictionaryCatalog | null>;
+  readonly relinkDictionary: (id: string, file: File, confirmedHash?: string) => Promise<DictionaryRelink | null>;
   readonly removeDictionary: (id: string) => Promise<DictionaryCatalog | null>;
   readonly openDictionaryResource: (id: string) => Promise<void>;
   readonly lookupFrequency: (keys: readonly string[]) => Promise<FrequencyLookup | null>;
@@ -251,9 +258,21 @@ export const runtime: RuntimeAdapter = {
   },
   async importDictionary(file) {
     if (!isTauri()) return null;
-    if (!/\.mdx$/i.test(file.name) || !file.size || file.size > 128 * 1024 * 1024) throw { code: 'limit', message: 'MDX: non-empty, at most 128 MiB' };
-    const name = btoa(Array.from(new TextEncoder().encode(file.name), (byte) => String.fromCharCode(byte)).join(''));
-    return dictionaryCatalog.parse(await invoke('dictionary_import', new Uint8Array(await file.arrayBuffer()), { headers: { 'x-lexique-dictionary-name': name } }));
+    const upload = await dictionaryUpload(file);
+    return dictionaryCatalog.parse(await invoke('dictionary_import', upload.bytes, { headers: upload.headers }));
+  },
+  async relinkDictionary(id, file, confirmedHash) {
+    if (!isTauri()) return null;
+    const validId = dictionaryId.refine((value) => value.startsWith('mdx-')).parse(id);
+    const upload = await dictionaryUpload(file);
+    const headers = { ...upload.headers, 'x-lexique-dictionary-id': validId,
+      ...(confirmedHash === undefined ? {} : { 'x-lexique-dictionary-confirmed-hash': dictionaryContentHash.parse(confirmedHash) }) };
+    const result = dictionaryRelink.parse(await invoke('dictionary_relink', upload.bytes, { headers }));
+    const linked = result.status === 'linked' ? result.catalog.find((item) => item.id === validId) : null;
+    if (result.status === 'confirmation_required' ? result.dictionary_id !== validId : linked?.availability !== 'available')
+      throw new Error('Dictionary reattachment response differs from the request');
+    if (linked && confirmedHash !== undefined && linked.content_hash !== confirmedHash) throw new Error('Confirmed dictionary content differs from the response');
+    return result;
   },
   async removeDictionary(id) {
     if (!isTauri()) return null;

@@ -47,7 +47,10 @@ test('ambiguous forms only offer lemmas present in the active target dictionary'
   const source = { ...dictionary, dictionary_id: 'mdx-1', entries: [] };
   const suivre = { ...source, entries: [{ ordinal: 2, key: 'suivre', pronunciations: [], grammar: [], senses: [], html: '<p>to follow</p>' }] };
   const etre = { ...payer, dictionary_id: 'mdx-2', entries: [{ ...payer.entries[0], key: 'être' }] };
-  await nativeFixture(page, { dictionary_settings: [{ value: [{ id: 'mdx-1', title: 'first.mdx' }, { id: 'mdx-2', title: 'second.mdx' }, { id: 'builtin', title: 'FreeDict' }] }] });
+  await nativeFixture(page, { dictionary_settings: [{ value: [{ id: 'mdx-1', title: 'first.mdx', content_hash: 'a'.repeat(64), availability: 'available' },
+    { id: 'mdx-2', title: 'second.mdx', content_hash: 'b'.repeat(64), availability: 'available' },
+    { id: 'builtin', title: 'FreeDict', content_hash: null, availability: 'available' },
+    { id: 'builtin-fra-eng', title: 'FreeDict fra-eng 0.4.1', content_hash: null, availability: 'available' }] }] });
   await lookups(page, { 'mdx-1/suis': source, 'mdx-1/suivre': suivre, 'mdx-2/être': etre }, { suis: simple.suis });
   await page.goto('/');
   await page.getByLabel('法语词或词组', { exact: true }).fill('suis');

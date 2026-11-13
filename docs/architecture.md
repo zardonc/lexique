@@ -51,9 +51,11 @@ M1 请求由 Rust 严格反序列化，前端请求 / 响应由 Zod 校验。标
 
 ### 多词典与动词原形（issue #9 D1／D3）
 
-`dictionary_settings`、`dictionary_import`、`dictionary_remove` 与扩展的 `dictionary_lookup` 继续只授予本地 main 窗口。查询接受既有有界词形及可选的稳定词典 ID，不接受路径；导入接受非空且至多 128 MiB 的原始字节和 `x-lexique-dictionary-name` 中的 base64 UTF-8 文件名。最多 17 个词典，内置法中小样 `builtin` 与法英补充 MDX `builtin-fra-eng` 保持注册，15 份自定义 MDX 的容量不变。平台将用户 MDX 复制到学习库旁的 `dictionaries/mdx-N.mdx`，先持久预留编号，以 `create_new` 保留已有文件；移出列表只取消自定义词典的注册。
+`dictionary_settings`、`dictionary_import`、`dictionary_relink`、`dictionary_remove` 与扩展的 `dictionary_lookup` 继续只授予本地 main 窗口。查询接受既有有界词形及可选的稳定词典 ID，不接受路径；导入／补齐接受非空且至多 128 MiB 的原始字节和 `x-lexique-dictionary-name` 中的 base64 UTF-8 文件名。补齐另外接受原逻辑 ID，以及需要确认时的已验证内容身份。最多 17 个词典，内置法中小样 `builtin` 与法英补充 MDX `builtin-fra-eng` 保持注册，15 份自定义 MDX 的容量不变。平台将用户 MDX 复制到学习库旁的 `dictionaries/mdx-N.mdx`，先持久预留物理编号，以 `create_new` 保留已有文件；移出列表只取消自定义词典的注册。
 
-注册表和顺序保存于独立 `app_metadata['dictionary-settings']`，不提高 schema 17。初次按用户顺序选中首个读取成功的词典，空结果仍保持该词典；失败来源独立显示，其他正文点击标签后才读取。原生最多保留两个 `mdictlib 0.2.8 + lzo` 解析器，以文件长度／修改时间变化使缓存失效，每次打开只计算一次来源摘要；文件、块、单条、记录数及解析器内存沿用 #3 上限。单响应最多 200 条／4 MiB 正文，超限明确失败。前端只保留当前查询的已访问正文，换查询或离开页面释放；请求身份阻止迟到结果覆盖当前查询。
+逻辑身份、标题、顺序、已核实或未知的内容身份及下一编号保存于 `app_metadata['dictionary-settings']`；本机物理文件、保留编号与关联单独保存于 `dictionary-files`，不新增 schema 迁移。旧清单读取时保留顺序并核实已关联文件的内容。文件缺失保留原清单并显示补齐入口，同内容直接接回，不同／未知内容需明确确认；关联更新使用新托管副本，旧文件与学习记录保留。恢复清单只按已核实内容匹配保留文件，普通新增避开已注册、冻结收藏／例句出处、历史操作及本机保留的身份／文件编号。
+
+初次按用户顺序选中首个读取成功的词典，空结果仍保持该词典；失败来源独立显示，其他正文点击标签后才读取。原生最多保留两个 `mdictlib 0.2.8 + lzo` 解析器，以物理路径、文件长度／修改时间变化使缓存失效，打开时核对内容身份；文件、块、单条、记录数及解析器内存沿用 #3 上限。单响应最多 200 条／4 MiB 正文，超限明确失败。前端只保留当前查询的已访问正文，换查询或离开页面释放；请求身份阻止迟到结果覆盖当前查询。
 
 2026-11-11，旧目录读取时在末尾补入 `builtin-fra-eng`，保留原顺序和用户文件；原目录满额 16 项可升级为 17 项。该文件来自固定 `dictionary/freedict-fra-eng-mdx/freedict-fra-eng-0.4.1.mdx`，复用同一 MDX 解析器；只在已有文件摘要与编译时 manifest 一致时赋予已核实的 FreeDict／GPL 来源信息，否则返回损坏错误。用户库、原法中小样及变位来源保持独立。
 
