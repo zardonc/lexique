@@ -26,17 +26,31 @@ fn open_child(parent: &Dir, name: &Path) -> Result<Dir, String> {
 }
 
 fn data_directory(database: &Path) -> Result<Dir, String> {
-    if !cfg!(target_os = "windows") {
-        return Err("Speech cache is not available on this platform".into());
-    }
-    let data = database
-        .parent()
-        .and_then(Path::parent)
-        .ok_or("Invalid data path")?;
+    let data = data_directory_path(database)?;
     let parent = data.parent().ok_or("Invalid portable data path")?;
     let name = data.file_name().ok_or("Invalid portable data path")?;
     let portable = Dir::open_ambient_dir(parent, ambient_authority()).map_err(|e| e.to_string())?;
     open_child(&portable, Path::new(name))
+}
+
+fn data_directory_path(database: &Path) -> Result<&Path, String> {
+    if cfg!(windows) {
+        database
+            .parent()
+            .and_then(Path::parent)
+            .ok_or_else(|| "Invalid portable data path".into())
+    } else if cfg!(target_os = "macos") {
+        database
+            .parent()
+            .ok_or_else(|| "Invalid application data path".into())
+    } else {
+        Err("Speech cache is not available on this platform".into())
+    }
+}
+
+/// Only this dedicated component contains managed audio; the database parent may also contain dictionaries.
+pub fn managed_audio_directory(database: &Path) -> Result<PathBuf, String> {
+    Ok(data_directory_path(database)?.join("temp").join("speech"))
 }
 
 fn create_child(parent: &Dir, name: &str) -> Result<Dir, String> {
@@ -134,6 +148,24 @@ fn read_inner(database: &Path, id: i64, touch: bool) -> Result<Option<Vec<u8>>, 
 
 pub struct Inspector(Dir, PathBuf);
 
+pub enum AudioInspection {
+    Present(Vec<u8>),
+    Missing,
+    Invalid {
+        error: String,
+        observed_hash: Option<String>,
+    },
+}
+
+impl AudioInspection {
+    fn invalid(error: &str) -> Self {
+        Self::Invalid {
+            error: error.into(),
+            observed_hash: None,
+        }
+    }
+}
+
 impl Inspector {
     pub fn new(database: &Path) -> Result<Self, String> {
         Ok(Self(directory(database)?, database.to_path_buf()))
@@ -143,6 +175,29 @@ impl Inspector {
     }
     pub fn read_asset(&self, key: &str, hash: &str) -> Result<Option<Vec<u8>>, String> {
         read_named(&self.0, &asset_name(key, hash)?, false)
+    }
+    pub fn collect_legacy(&self, id: i64) -> Result<AudioInspection, String> {
+        read_named_audio(&self.0, &format!("{id}.ogg"), false)
+    }
+    pub fn collect_version(
+        &self,
+        key: &str,
+        hash: &str,
+        length: Option<i64>,
+    ) -> Result<AudioInspection, String> {
+        let result = read_named_audio(&self.0, &asset_name(key, hash)?, false)?;
+        match result {
+            AudioInspection::Present(bytes)
+                if lexique_storage::content_hash(&bytes) != hash
+                    || length.is_some_and(|length| length != bytes.len() as i64) =>
+            {
+                Ok(AudioInspection::Invalid {
+                    error: "Selected audio integrity check failed".into(),
+                    observed_hash: Some(lexique_storage::content_hash(&bytes)),
+                })
+            }
+            result => Ok(result),
+        }
     }
     pub fn publish_version(&self, locator: &str, hash: &str, bytes: &[u8]) -> Result<(), String> {
         if lexique_storage::content_hash(bytes) != hash {
@@ -176,29 +231,53 @@ fn asset_name(key: &str, hash: &str) -> Result<String, String> {
 }
 
 fn read_named(dir: &Dir, name: &str, touch: bool) -> Result<Option<Vec<u8>>, String> {
+    match read_named_audio(dir, name, touch)? {
+        AudioInspection::Present(bytes) => Ok(Some(bytes)),
+        AudioInspection::Missing => Ok(None),
+        AudioInspection::Invalid { error, .. } => Err(error),
+    }
+}
+
+fn read_named_audio(dir: &Dir, name: &str, touch: bool) -> Result<AudioInspection, String> {
+    let path_metadata = match dir.symlink_metadata(name) {
+        Ok(metadata) => metadata,
+        Err(error) if error.kind() == std::io::ErrorKind::NotFound => {
+            return Ok(AudioInspection::Missing);
+        }
+        Err(error) => return Err(error.to_string()),
+    };
+    if !path_metadata.is_file() || path_metadata.file_type().is_symlink() {
+        return Ok(AudioInspection::invalid("Invalid cached speech file"));
+    }
+    #[cfg(windows)]
+    if path_metadata.file_attributes() & 0x400 != 0 {
+        return Ok(AudioInspection::invalid("Invalid cached speech file"));
+    }
     let mut options = OpenOptions::new();
     options.read(true).write(true).follow(FollowSymlinks::No);
     #[cfg(windows)]
     options.share_mode(3);
     let file = match dir.open_with(name, &options) {
         Ok(file) => file.into_std(),
-        Err(error) if error.kind() == std::io::ErrorKind::NotFound => return Ok(None),
+        Err(error) if error.kind() == std::io::ErrorKind::NotFound => {
+            return Ok(AudioInspection::Missing);
+        }
         Err(error) => return Err(error.to_string()),
     };
     // Validate the nofollow handle we actually read, avoiding a second path open and its race.
     let metadata = file.metadata().map_err(|e| e.to_string())?;
     if !metadata.is_file() {
-        return Err("Invalid cached speech file".into());
+        return Ok(AudioInspection::invalid("Invalid cached speech file"));
     }
     #[cfg(windows)]
     {
         use std::os::windows::fs::MetadataExt as _;
         if metadata.file_attributes() & 0x400 != 0 {
-            return Err("Invalid cached speech file".into());
+            return Ok(AudioInspection::invalid("Invalid cached speech file"));
         }
     }
     if metadata.len() > 10_000_000 {
-        return Err("Invalid cached speech audio".into());
+        return Ok(AudioInspection::invalid("Invalid cached speech audio"));
     }
     // Take<File> cannot use File's length hint; reserve it to avoid many tiny reads.
     let mut bytes = Vec::with_capacity(metadata.len() as usize + 1);
@@ -235,14 +314,20 @@ fn read_named(dir: &Dir, name: &str, touch: bool) -> Result<Option<Vec<u8>>, Str
         .take(10_000_001)
         .read_to_end(&mut bytes)
         .map_err(|e| e.to_string())?;
-    if bytes.len() > 10_000_000 || !bytes.starts_with(b"OggS") {
-        return Err("Invalid cached speech audio".into());
+    if bytes.len() > 10_000_000 {
+        return Ok(AudioInspection::invalid("Invalid cached speech audio"));
+    }
+    if !bytes.starts_with(b"OggS") {
+        return Ok(AudioInspection::Invalid {
+            error: "Invalid cached speech audio".into(),
+            observed_hash: Some(lexique_storage::content_hash(&bytes)),
+        });
     }
     if touch {
         file.set_times(std::fs::FileTimes::new().set_accessed(std::time::SystemTime::now()))
             .map_err(|e| format!("Could not update speech access time: {e}"))?;
     }
-    Ok(Some(bytes))
+    Ok(AudioInspection::Present(bytes))
 }
 
 #[cfg(windows)]

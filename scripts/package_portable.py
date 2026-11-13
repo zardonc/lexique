@@ -81,6 +81,7 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
     shutil.copytree(root / "resources/tesseract-fra/licenses", output / "ocr-notices/licenses")
     shutil.copy2(root / "resources/tesseract-fra/README.md", output / "ocr-notices/README.md")
     shutil.copytree(root / "resources/mdictlib-0.2.8", output / "mdx-notices")
+    shutil.copytree(root / "resources/backup-dependencies", output / "backup-notices")
     shutil.copy2(root / "LICENSE", output / "LICENSE")
     (output / "README.txt").write_text(
         f"Lexique {config['version']} - Windows 11 {architecture.upper()} portable development sample\n\n"
@@ -107,6 +108,7 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
         "Offline French OCR runtime and model are embedded. Licenses and sources: ocr-notices/.\n"
         "Add MDX dictionaries in Settings. Imported copies stay in Lexique-data/.\n"
         "Dictionary order is saved; other tab bodies load on selection. Parser licenses: mdx-notices/.\n"
+        "Manual backup uses a native file picker. ZIP/dialog dependency notices: backup-notices/.\n"
         "One supplemental French-English MDX is bundled: FreeDict 0.4.1 (original content 2018-08-11).\n"
         "Its GPL-2.0-or-later notices, provenance and MIT converter are in dictionary/freedict-fra-eng-mdx/.\n"
         "Complete corresponding FreeDict source is in conjugation/freedict-fra-eng-0.4.1/; see the MDX README.md to rebuild.\n"

@@ -19,6 +19,7 @@ fn main() {
         "resources/lefff-syntax",
         "resources/freedict-fra-eng-0.4.1",
         "resources/freedict-fra-eng-mdx-0.4.1",
+        "resources/backup-dependencies",
         "scripts/freedict_mdx.py",
         "LICENSE",
     ] {
@@ -152,6 +153,9 @@ fn main() {
             "speech_generate",
             "speech_preview",
             "speech_preferences",
+            "backup_export_start",
+            "backup_operation_status",
+            "backup_operation_cancel",
             "finish_close",
         ]),
     ))

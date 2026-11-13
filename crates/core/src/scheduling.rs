@@ -80,7 +80,8 @@ pub struct ScheduleRequest {
     pub model: Model,
 }
 
-#[derive(Debug, Serialize)]
+#[derive(Debug, Deserialize, Serialize)]
+#[serde(deny_unknown_fields)]
 pub struct Scheduled {
     pub card: Card,
     pub elapsed_days: u32,
@@ -110,6 +111,14 @@ fn learning_day(timestamp: i64, zone: Tz) -> Result<NaiveDate, String> {
 pub fn learning_day_for(timestamp: i64, timezone: &str) -> Result<String, String> {
     let zone: Tz = timezone.parse().map_err(|_| "unknown timezone")?;
     Ok(learning_day(timestamp, zone)?.to_string())
+}
+
+pub fn validate_learning_day(day: &str) -> Result<(), String> {
+    let date = NaiveDate::parse_from_str(day, "%Y-%m-%d").map_err(|error| error.to_string())?;
+    if date.to_string() != day || !(1..=9999).contains(&date.year()) {
+        return Err("learning day must be YYYY-MM-DD between years 1 and 9999".into());
+    }
+    Ok(())
 }
 
 pub fn next_learning_day_at(timestamp: i64, timezone: &str) -> Result<i64, String> {

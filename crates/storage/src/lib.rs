@@ -25,6 +25,12 @@ mod queue_cache;
 pub use queue_cache::*;
 mod dictionary_catalog;
 pub use dictionary_catalog::*;
+mod learning_snapshot;
+pub use learning_snapshot::*;
+mod snapshot_export;
+pub use snapshot_export::*;
+mod snapshot_validation;
+pub use snapshot_validation::{read_learning_snapshot, validate_learning_snapshot};
 
 const INITIAL_SCHEMA: &str = include_str!("../migrations/0001_initial.sql");
 

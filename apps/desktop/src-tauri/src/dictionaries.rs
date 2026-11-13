@@ -770,7 +770,10 @@ pub async fn dictionary_lookup(
     key: String,
     dictionary_id: Option<String>,
 ) -> Result<Lookup, DictionaryError> {
+    let admission =
+        crate::maintenance::admit_app(&app).map_err(|error| failure("maintenance_busy", error))?;
     tauri::async_runtime::spawn_blocking(move || {
+        let _admission = admission;
         lookup_from_app(&app, &key, dictionary_id.as_deref())
     })
     .await
@@ -780,12 +783,19 @@ pub async fn dictionary_lookup(
 #[tauri::command]
 pub async fn dictionary_settings(
     path: State<'_, DatabasePath>,
+    maintenance: State<'_, crate::maintenance::MaintenanceCoordinator>,
     order: Option<Vec<String>>,
 ) -> Result<Vec<DictionaryConfig>, DictionaryError> {
+    let admission = maintenance
+        .admit()
+        .map_err(|error| failure("maintenance_busy", error))?;
     let path = DatabasePath(path.0.clone());
-    tauri::async_runtime::spawn_blocking(move || settings(&path, order))
-        .await
-        .map_err(|error| failure("query_failed", error))?
+    tauri::async_runtime::spawn_blocking(move || {
+        let _admission = admission;
+        settings(&path, order)
+    })
+    .await
+    .map_err(|error| failure("query_failed", error))?
 }
 
 #[tauri::command]
@@ -793,9 +803,12 @@ pub async fn dictionary_import(
     app: tauri::AppHandle,
     request: tauri::ipc::Request<'_>,
 ) -> Result<Vec<DictionaryConfig>, DictionaryError> {
+    let admission =
+        crate::maintenance::admit_app(&app).map_err(|error| failure("maintenance_busy", error))?;
     let (title, bytes) = uploaded_file(&request)?;
     let path = DatabasePath(app.state::<DatabasePath>().0.clone());
     tauri::async_runtime::spawn_blocking(move || {
+        let _admission = admission;
         let registry = app.state::<Registry>();
         let mut cache = registry
             .0
@@ -840,6 +853,8 @@ pub async fn dictionary_relink(
     app: tauri::AppHandle,
     request: tauri::ipc::Request<'_>,
 ) -> Result<RelinkResult, DictionaryError> {
+    let admission =
+        crate::maintenance::admit_app(&app).map_err(|error| failure("maintenance_busy", error))?;
     let id = request
         .headers()
         .get("x-lexique-dictionary-id")
@@ -856,6 +871,7 @@ pub async fn dictionary_relink(
     let (title, bytes) = uploaded_file(&request)?;
     let path = DatabasePath(app.state::<DatabasePath>().0.clone());
     tauri::async_runtime::spawn_blocking(move || {
+        let _admission = admission;
         let registry = app.state::<Registry>();
         let mut cache = registry
             .0
@@ -879,8 +895,11 @@ pub async fn dictionary_remove(
     app: tauri::AppHandle,
     id: String,
 ) -> Result<Vec<DictionaryConfig>, DictionaryError> {
+    let admission =
+        crate::maintenance::admit_app(&app).map_err(|error| failure("maintenance_busy", error))?;
     let path = DatabasePath(app.state::<DatabasePath>().0.clone());
     tauri::async_runtime::spawn_blocking(move || {
+        let _admission = admission;
         let result = remove(&path, &id)?;
         app.state::<Registry>()
             .0

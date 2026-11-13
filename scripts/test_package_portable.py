@@ -52,6 +52,9 @@ class PortableTests(unittest.TestCase):
         self.write("resources/tesseract-fra/fra.traineddata", b"model embedded in the executable")
         self.write("resources/mdictlib-0.2.8/README.md", b"fixed MDX parser sources")
         self.write("resources/mdictlib-0.2.8/licenses/mdictlib-0.2.8.txt", b"MDX parser license")
+        self.write("resources/backup-dependencies/README.md", b"Pinned backup dependency provenance")
+        self.write("resources/backup-dependencies/zip-9.5.1/LICENSE", b"Original ZIP license")
+        self.write("resources/backup-dependencies/cfg_aliases-0.2.2/NOTICES.md", b"Original transitive notices")
         repository = Path(__file__).resolve().parents[1]
         for name in ("freedict-fra-eng-mdx-0.4.1", "freedict-fra-eng-0.4.1"):
             shutil.copytree(repository / "resources" / name, self.root / "resources" / name)
@@ -68,6 +71,14 @@ class PortableTests(unittest.TestCase):
     def files(self):
         return {p.relative_to(self.root).as_posix(): p.read_bytes()
                 for p in self.root.rglob("*") if p.is_file()}
+
+    def test_backup_dependency_notices_are_delivered_unchanged(self):
+        result = package(self.root)
+        with zipfile.ZipFile(result["archive"]) as zipped:
+            prefix = self.name + "/backup-notices/"
+            self.assertEqual(zipped.read(prefix + "README.md"), b"Pinned backup dependency provenance")
+            self.assertEqual(zipped.read(prefix + "zip-9.5.1/LICENSE"), b"Original ZIP license")
+            self.assertEqual(zipped.read(prefix + "cfg_aliases-0.2.2/NOTICES.md"), b"Original transitive notices")
 
     def test_archive_hashes_licenses_notes_description_and_excludes_runtime_data(self):
         self.write("target/release/Lexique-data/data/lexique.sqlite3", b"private learning data")
