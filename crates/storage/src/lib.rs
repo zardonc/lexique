@@ -23,6 +23,8 @@ mod audio_lifecycle;
 pub use audio_lifecycle::*;
 mod queue_cache;
 pub use queue_cache::*;
+mod dictionary_catalog;
+pub use dictionary_catalog::*;
 
 const INITIAL_SCHEMA: &str = include_str!("../migrations/0001_initial.sql");
 

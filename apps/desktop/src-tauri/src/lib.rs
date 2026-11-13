@@ -17,7 +17,9 @@ mod review_window;
 mod selection;
 mod selection_shortcut;
 use conjugation::{conjugation_block_order, conjugation_lookup, conjugation_preferences};
-use dictionaries::{dictionary_import, dictionary_lookup, dictionary_remove, dictionary_settings};
+use dictionaries::{
+    dictionary_import, dictionary_lookup, dictionary_relink, dictionary_remove, dictionary_settings,
+};
 mod speech_cache;
 mod speech_tasks;
 mod vocabulary;
@@ -168,6 +170,7 @@ pub fn run() {
             dictionary_lookup,
             dictionary_settings,
             dictionary_import,
+            dictionary_relink,
             dictionary_remove,
             dictionary_links::dictionary_resource_open,
             frequency_lookup,

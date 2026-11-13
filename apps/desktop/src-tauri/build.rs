@@ -111,6 +111,7 @@ fn main() {
             "dictionary_lookup",
             "dictionary_settings",
             "dictionary_import",
+            "dictionary_relink",
             "dictionary_remove",
             "dictionary_resource_open",
             "frequency_lookup",
