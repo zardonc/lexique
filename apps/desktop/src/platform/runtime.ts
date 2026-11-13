@@ -17,6 +17,8 @@ import type { SelectionEvent, ShortcutStatus } from './selection';
 import type { Locale } from '../content';
 import { interfacePreferencesSchema } from './interface';
 import type { InterfacePreferences } from './interface';
+import { backupStatusSchema } from './backup';
+import type { BackupStatus } from './backup';
 
 async function dictionaryUpload(file: File) {
   if (!/\.mdx$/i.test(file.name) || !file.size || file.size > 128 * 1024 * 1024) throw { code: 'limit', message: 'MDX: non-empty, at most 128 MiB' };
@@ -129,6 +131,11 @@ export type BatchRequest = z.infer<typeof batchRequestSchema>;
 export type BatchStatus = z.infer<typeof batchSchema>;
 
 export interface RuntimeAdapter {
+  readonly backupAvailable: () => boolean;
+  readonly startBackup: () => Promise<BackupStatus>;
+  readonly backupStatus: (operation: string) => Promise<BackupStatus>;
+  readonly cancelBackup: (operation: string) => Promise<BackupStatus>;
+  readonly onBackupProgress: (callback: (status: BackupStatus) => void, failed: (cause: unknown) => void) => Promise<() => void>;
   readonly getStatus: () => Promise<RuntimeStatus | null>;
   readonly interfacePreferences: (preferences?: InterfacePreferences) => Promise<InterfacePreferences | null>;
   readonly lookupDictionary: (key: string, dictionaryId?: string) => Promise<DictionaryLookup | null>;
@@ -186,6 +193,32 @@ async function readShortcut(command: string, shortcut?: string) {
 }
 
 export const runtime: RuntimeAdapter = {
+  backupAvailable: isTauri,
+  async startBackup() {
+    if (!isTauri()) throw new Error('Backups are available in the desktop app only');
+    return backupStatusSchema.parse(await invoke('backup_export_start'));
+  },
+  async backupStatus(operation) {
+    if (!isTauri()) throw new Error('Backups are available in the desktop app only');
+    const id = z.string().min(1).max(128).parse(operation);
+    const value = backupStatusSchema.parse(await invoke('backup_operation_status', { operation: id }));
+    if (value.operation !== id) throw new Error('Backup response identity differs from the request');
+    return value;
+  },
+  async cancelBackup(operation) {
+    if (!isTauri()) throw new Error('Backups are available in the desktop app only');
+    const id = z.string().min(1).max(128).parse(operation);
+    const value = backupStatusSchema.parse(await invoke('backup_operation_cancel', { operation: id }));
+    if (value.operation !== id) throw new Error('Backup response identity differs from the request');
+    return value;
+  },
+  async onBackupProgress(callback, failed) {
+    if (!isTauri()) return () => {};
+    return listen('lexique-backup-progress', (event) => {
+      const value = backupStatusSchema.safeParse(event.payload);
+      if (value.success) callback(value.data); else failed(value.error);
+    });
+  },
   async interfacePreferences(preferences) {
     const valid = preferences === undefined ? null : interfacePreferencesSchema.parse(preferences);
     if (!isTauri()) return null;
@@ -221,12 +254,15 @@ export const runtime: RuntimeAdapter = {
     const valid = batchRequestSchema.parse(request);
     const result = batchSchema.parse(await invoke('review_add_batch', { request: valid }));
     const ids = new Set(valid.vocabulary_ids);
-    if (result.operation !== valid.operation || result.items.length !== ids.size || !result.items.every((item) => ids.delete(item.vocabulary_id))) throw new Error('Invalid batch response identity');
+    if (result.operation !== valid.operation || (!result.cancelled && result.items.length !== ids.size) || !result.items.every((item) => ids.delete(item.vocabulary_id))) throw new Error('Invalid batch response identity');
     return result;
   },
   async reviewBatchStatus(operation) {
     if (!isTauri()) return null;
-    return batchSchema.nullable().parse(await invoke('review_batch_status', { operation: operation === undefined ? null : z.string().min(1).max(128).parse(operation) }));
+    const id = operation === undefined ? null : z.string().min(1).max(128).parse(operation);
+    const result = batchSchema.nullable().parse(await invoke('review_batch_status', { operation: id }));
+    if (id !== null && result !== null && result.operation !== id) throw new Error('Invalid batch response identity');
+    return result;
   },
   async cancelReviewBatch(operation) {
     if (isTauri()) await invoke('review_cancel_batch', { operation: z.string().min(1).max(128).parse(operation) });

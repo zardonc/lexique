@@ -61,6 +61,7 @@ pub struct SaveRequest {
 }
 
 #[derive(Clone, Debug, Deserialize, Serialize)]
+#[serde(deny_unknown_fields)]
 pub struct VocabularyRecord {
     pub id: i64,
     pub headword: String,
@@ -236,16 +237,7 @@ pub fn replay(
         None => Ok(None),
         Some((payload, id, outcome)) => {
             let mut stored: serde_json::Value = serde_json::from_str(&payload)?;
-            if let Some(fields) = stored.as_object_mut() {
-                fields.entry("example_fr").or_insert_with(|| "".into());
-                fields.entry("example_zh").or_insert_with(|| "".into());
-                fields
-                    .entry("example_sense")
-                    .or_insert(serde_json::Value::Null);
-                fields
-                    .entry("more_examples")
-                    .or_insert_with(|| serde_json::json!([]));
-            }
+            normalize_save_request_fields(&mut stored);
             if serde_json::from_value::<SaveRequest>(stored)? != *request {
                 return Err(StorageError::Invalid(
                     "Save identifier reused with different content".into(),
@@ -260,6 +252,22 @@ pub fn replay(
                 record: get(connection, id)?,
             }))
         }
+    }
+}
+
+pub(crate) fn normalize_save_request_fields(value: &mut serde_json::Value) {
+    if let Some(fields) = value.as_object_mut() {
+        fields.entry("example_fr").or_insert_with(|| "".into());
+        fields.entry("example_zh").or_insert_with(|| "".into());
+        fields
+            .entry("example_source")
+            .or_insert(serde_json::Value::Null);
+        fields
+            .entry("example_sense")
+            .or_insert(serde_json::Value::Null);
+        fields
+            .entry("more_examples")
+            .or_insert_with(|| serde_json::json!([]));
     }
 }
 

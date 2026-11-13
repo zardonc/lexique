@@ -11,6 +11,9 @@ mod dictionaries;
 mod dictionary_links;
 mod interface;
 use interface::interface_preferences;
+mod backup;
+mod backup_operations;
+mod maintenance;
 mod ocr;
 mod ocr_capture;
 mod review_window;
@@ -91,7 +94,10 @@ async fn runtime_status(
 pub fn run() {
     tauri::Builder::default()
         .manage(vocabulary::CloseAuthorization::default())
+        .manage(maintenance::MaintenanceCoordinator::default())
+        .manage(backup_operations::BackupOperations::default())
         .manage(dictionaries::Registry::default())
+        .plugin(tauri_plugin_dialog::init())
         .plugin(
             tauri_plugin_global_shortcut::Builder::new()
                 .with_handler(|app, shortcut, event| {
@@ -211,6 +217,9 @@ pub fn run() {
             speech_generate,
             speech_preview,
             speech_preferences,
+            backup_operations::backup_export_start,
+            backup_operations::backup_operation_status,
+            backup_operations::backup_operation_cancel,
             finish_close
         ])
         .build(tauri::generate_context!())
