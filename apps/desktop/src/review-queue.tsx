@@ -7,6 +7,7 @@ import type { QueueView, RuntimeAdapter } from './platform/runtime';
 import { UndoRejected } from './platform/runtime';
 import { errorMessage } from './platform/vocabulary';
 import { QueueReviewCard } from './review-cards';
+import { pendingUndoKey, readPendingUndo } from './pending-review-requests';
 
 const messages = {
   zh: { loading: '正在读取复习队列', preview: '浏览器预览无法读取复习队列。', done: '本轮完成', waiting: '尚未到期', quota: '今日额度已用完', verifying: '听音待校验', error: '队列读取失败', retry: '刷新队列', undo: '撤销最近评分', undoError: '撤销失败', rebuilt: '旧版评分已撤销，队列顺序可能变化。', counts: (count: number) => `待复习：${count} 张` },
@@ -89,13 +90,6 @@ function MissingAudio({ runtime, text, id }: { readonly runtime: RuntimeAdapter;
   return <>{error && <p role="alert">{error}</p>}<button disabled={busy} onClick={() => { void retry(); }}>{text.retry} · {text.listeningPending}</button></>;
 }
 
-function undoRequest(target: string | null) {
-  const saved = localStorage.getItem('lexique-pending-undo');
-  const pending: unknown = saved ? JSON.parse(saved) : { operation: crypto.randomUUID(), ratingOperation: target };
-  if (!pending || typeof pending !== 'object' || !('operation' in pending) || typeof pending.operation !== 'string' || !('ratingOperation' in pending) || typeof pending.ratingOperation !== 'string') throw new Error('Invalid pending undo');
-  return { operation: pending.operation, ratingOperation: pending.ratingOperation };
-}
-
 function UndoRating({ runtime, labels, refresh, onRebuilt, ratingVersion }: { readonly runtime: RuntimeAdapter; readonly labels: (typeof messages)[Locale]; readonly refresh: () => Promise<void>; readonly onRebuilt: (value: boolean) => void; readonly ratingVersion: number }) {
   const [target, setTarget] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
@@ -103,7 +97,7 @@ function UndoRating({ runtime, labels, refresh, onRebuilt, ratingVersion }: { re
   const [pending, setPending] = useState(false);
   useEffect(() => {
     let active = true;
-    try { setPending(localStorage.getItem('lexique-pending-undo') !== null); }
+    try { setPending(localStorage.getItem(pendingUndoKey) !== null); }
     catch (cause) { setError(errorMessage(cause)); }
     void runtime.undoTarget().then((value) => { if (active) setTarget(value); }).catch((cause: unknown) => { if (active) setError(errorMessage(cause)); });
     return () => { active = false; };
@@ -111,8 +105,8 @@ function UndoRating({ runtime, labels, refresh, onRebuilt, ratingVersion }: { re
   async function undo() {
     setBusy(true); setError('');
     try {
-      const key = 'lexique-pending-undo';
-      const pending = undoRequest(target);
+      const key = pendingUndoKey;
+      const pending = readPendingUndo(target);
       localStorage.setItem(key, JSON.stringify(pending));
       setPending(true);
       const result = await runtime.undoReview(pending.operation, pending.ratingOperation);
@@ -125,7 +119,7 @@ function UndoRating({ runtime, labels, refresh, onRebuilt, ratingVersion }: { re
     } catch (cause) {
       setError(errorMessage(cause));
       if (cause instanceof UndoRejected) {
-        try { localStorage.removeItem('lexique-pending-undo'); setPending(false); setTarget(await runtime.undoTarget()); }
+        try { localStorage.removeItem(pendingUndoKey); setPending(false); setTarget(await runtime.undoTarget()); }
         catch (readError) { setError(errorMessage(readError)); }
       }
     }
