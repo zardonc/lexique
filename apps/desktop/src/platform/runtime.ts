@@ -15,6 +15,8 @@ import type { SpeechAudio, SpeechPreferences } from './speech';
 import { readSelectionEvent, selectionText, shortcutStatusSchema, shortcutText } from './selection';
 import type { SelectionEvent, ShortcutStatus } from './selection';
 import type { Locale } from '../content';
+import { interfacePreferencesSchema } from './interface';
+import type { InterfacePreferences } from './interface';
 
 const runtimeStatusSchema = z.object({
   version: z.string().min(1),
@@ -122,6 +124,7 @@ export type BatchStatus = z.infer<typeof batchSchema>;
 
 export interface RuntimeAdapter {
   readonly getStatus: () => Promise<RuntimeStatus | null>;
+  readonly interfacePreferences: (preferences?: InterfacePreferences) => Promise<InterfacePreferences | null>;
   readonly lookupDictionary: (key: string, dictionaryId?: string) => Promise<DictionaryLookup | null>;
   readonly dictionarySettings: (order?: readonly string[]) => Promise<DictionaryCatalog | null>;
   readonly importDictionary: (file: File) => Promise<DictionaryCatalog | null>;
@@ -176,6 +179,13 @@ async function readShortcut(command: string, shortcut?: string) {
 }
 
 export const runtime: RuntimeAdapter = {
+  async interfacePreferences(preferences) {
+    const valid = preferences === undefined ? null : interfacePreferencesSchema.parse(preferences);
+    if (!isTauri()) return null;
+    const result = interfacePreferencesSchema.parse(await invoke('interface_preferences', { preferences: valid }));
+    if (valid && (result.locale !== valid.locale || result.theme !== valid.theme)) throw new Error('Saved interface preferences differ from the request');
+    return result;
+  },
   async setCaptureLocale(locale) { if (isTauri()) await invoke('ocr_locale', { locale }); },
   async captureScreen() {
     if (!isTauri()) throw new Error('Screen capture is available in the desktop app');

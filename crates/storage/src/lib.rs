@@ -9,6 +9,8 @@ mod speech;
 pub use speech::*;
 mod conjugation;
 pub use conjugation::*;
+mod interface;
+pub use interface::*;
 mod review;
 pub use review::*;
 mod speech_work;

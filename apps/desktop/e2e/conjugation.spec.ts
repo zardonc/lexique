@@ -10,7 +10,8 @@ test('typographic queries retain interpretations, entered text and original expr
   await page.addInitScript(({ data, order }) => {
     Object.defineProperty(window, 'isTauri', { value: true });
     Object.defineProperty(window, '__TAURI_INTERNALS__', { value: { invoke: async (command: string, args?: { key: string }) => {
-      if (command === 'runtime_status') return { version: '0.1.0', schemaVersion: 1, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } };
+      const systemReplies = { runtime_status: () => ({ version: '0.1.0', schemaVersion: 1, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } }),
+        interface_preferences: () => Reflect.get(args ?? {}, 'preferences') ?? { locale: 'zh', theme: 'white' } }; if (Object.hasOwn(systemReplies, command)) return Reflect.get(systemReplies, command)();
       if (command === 'conjugation_preferences') return { mode: 'ending' };
       if (command === 'conjugation_block_order') return order;
       if (command !== 'conjugation_lookup') return null;
@@ -58,7 +59,8 @@ test('pronominal expressions retain their identity, agreement labels and every a
   await page.addInitScript(({ data, order }) => {
     Object.defineProperty(window, 'isTauri', { value: true });
     Object.defineProperty(window, '__TAURI_INTERNALS__', { value: { invoke: async (command: string, args?: { key: string }) => {
-      if (command === 'runtime_status') return { version: '0.1.0', schemaVersion: 1, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } };
+      const systemReplies = { runtime_status: () => ({ version: '0.1.0', schemaVersion: 1, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } }),
+        interface_preferences: () => Reflect.get(args ?? {}, 'preferences') ?? { locale: 'zh', theme: 'white' } }; if (Object.hasOwn(systemReplies, command)) return Reflect.get(systemReplies, command)();
       if (command === 'conjugation_preferences') return { mode: 'ending' };
       if (command === 'conjugation_block_order') return order;
       return command === 'conjugation_lookup' ? data[args?.key as keyof typeof data] ?? { query: args?.key, tables: [] } : null;
@@ -106,7 +108,8 @@ test('ordinary compounds expose every interpretation and complete agreement alte
   await page.addInitScript(({ data, order }) => {
     Object.defineProperty(window, 'isTauri', { value: true });
     Object.defineProperty(window, '__TAURI_INTERNALS__', { value: { invoke: async (command: string, args?: { key: string }) => {
-      if (command === 'runtime_status') return { version: '0.1.0', schemaVersion: 1, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } };
+      const systemReplies = { runtime_status: () => ({ version: '0.1.0', schemaVersion: 1, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } }),
+        interface_preferences: () => Reflect.get(args ?? {}, 'preferences') ?? { locale: 'zh', theme: 'white' } }; if (Object.hasOwn(systemReplies, command)) return Reflect.get(systemReplies, command)();
       if (command === 'conjugation_preferences') return { mode: 'ending' };
       if (command === 'conjugation_block_order') return order;
       return command === 'conjugation_lookup' ? data[args?.key as keyof typeof data] ?? { query: args?.key, tables: [] } : null;
@@ -156,11 +159,11 @@ test('simple lookup keeps all candidates, cells and spelling alternatives access
   await page.addInitScript(({ data, order }) => {
     Object.defineProperty(window, 'isTauri', { value: true });
     Object.defineProperty(window, '__TAURI_INTERNALS__', { value: { invoke: async (command: string, args?: { key: string }) => {
-      if (command === 'runtime_status') return { version: '0.1.0', schemaVersion: 1, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } };
+      const systemReplies = { runtime_status: () => ({ version: '0.1.0', schemaVersion: 1, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } }),
+        interface_preferences: () => Reflect.get(args ?? {}, 'preferences') ?? { locale: 'zh', theme: 'white' } }; if (Object.hasOwn(systemReplies, command)) return Reflect.get(systemReplies, command)();
       if (command === 'conjugation_preferences') return { mode: 'ending' };
       if (command === 'conjugation_block_order') return order;
-      if (command === 'conjugation_lookup') return data[args?.key as keyof typeof data];
-      return null;
+      return command === 'conjugation_lookup' ? data[args?.key as keyof typeof data] : null;
     } } });
   }, { data: fixtures, order: defaultOrder });
   await page.goto('/'); await page.getByLabel('界面语言').selectOption('en');
@@ -212,7 +215,8 @@ test('preview and failures keep the query and never retain an earlier table', as
   await page.addInitScript(({ data, order }) => {
     Object.defineProperty(window, 'isTauri', { value: true });
     Object.defineProperty(window, '__TAURI_INTERNALS__', { value: { invoke: async (command: string, args?: { key: string }) => {
-      if (command === 'runtime_status') return { version: '0.1.0', schemaVersion: 1, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } };
+      const systemReplies = { runtime_status: () => ({ version: '0.1.0', schemaVersion: 1, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } }),
+        interface_preferences: () => Reflect.get(args ?? {}, 'preferences') ?? { locale: 'zh', theme: 'white' } }; if (Object.hasOwn(systemReplies, command)) return Reflect.get(systemReplies, command)();
       const preferences = { conjugation_preferences: { mode: 'ending' }, conjugation_block_order: order };
       if (Object.hasOwn(preferences, command)) return Reflect.get(preferences, command);
       if (command !== 'conjugation_lookup') return null;
@@ -238,7 +242,8 @@ test('source gaps, pronominal-only uses, themes and languages stay explicit', as
   await page.addInitScript(({ data, order }) => {
     Object.defineProperty(window, 'isTauri', { value: true });
     Object.defineProperty(window, '__TAURI_INTERNALS__', { value: { invoke: async (command: string, args?: { key: string }) => {
-      if (command === 'runtime_status') return { version: '0.1.0', schemaVersion: 1, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } };
+      const systemReplies = { runtime_status: () => ({ version: '0.1.0', schemaVersion: 1, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } }),
+        interface_preferences: () => Reflect.get(args ?? {}, 'preferences') ?? { locale: 'zh', theme: 'white' } }; if (Object.hasOwn(systemReplies, command)) return Reflect.get(systemReplies, command)();
       if (command === 'conjugation_preferences') return { mode: 'ending' };
       if (command === 'conjugation_block_order') return order;
       return command === 'conjugation_lookup' ? data[args?.key as keyof typeof data] : null;
