@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import type { Locale } from './content';
-import type { BackupPreviewStatus, RestoreStatus, StartupStatus } from './platform/backup';
+import type { BackupPreviewStatus, RawPendingRequest, RestoreStatus, StartupStatus } from './platform/backup';
 import type { RuntimeAdapter } from './platform/runtime';
 import { errorMessage } from './platform/vocabulary';
 import { releasePendingReviews } from './pending-review-requests';
@@ -54,7 +54,7 @@ function useRestoreStart(runtime: RuntimeAdapter, operation: ReturnType<typeof u
     if (version === operation.updates.current) operation.failed(cause);
     if (operation.live.current && !operation.current.current) setRejected(typeof cause === 'string');
   }
-  async function start(id: string) {
+  async function start(id: string, pendingRequests?: readonly RawPendingRequest[]) {
     if (pending.current || operation.identity.current || !runtime.backupAvailable()) return;
     pending.current = true; setStarting(true); setRejected(false); operation.begin(id);
     let version = operation.updates.current;
@@ -62,7 +62,7 @@ function useRestoreStart(runtime: RuntimeAdapter, operation: ReturnType<typeof u
       const stop = await runtime.onRestoreProgress(operation.receive, operation.failed);
       if (!owns(id)) { stop(); return; }
       operation.unlisten.current = stop; version = operation.updates.current;
-      const value = await runtime.startRestore(id);
+      const value = await runtime.startRestore(id, pendingRequests);
       if (version === operation.updates.current) operation.receive(value);
       if (operation.current.current?.state === 'running') await operation.refresh();
     } catch (cause) { fail(cause, version); }
@@ -74,9 +74,11 @@ function useRestoreStart(runtime: RuntimeAdapter, operation: ReturnType<typeof u
 export function useFormalRestore(runtime: RuntimeAdapter, startup: ReturnType<typeof useStartup>) {
   const operation = useRestoreStatus(runtime), request = useRestoreStart(runtime, operation);
   const [locale, setLocale] = useState<Locale>('zh'), [checking, setChecking] = useState(false);
-  async function start(preview: Extract<BackupPreviewStatus, { state: 'preview_ready' }>, language: Locale) {
+  const [recovery, setRecovery] = useState(false);
+  async function start(preview: Extract<BackupPreviewStatus, { state: 'preview_ready' }>, language: Locale, pendingRequests?: readonly RawPendingRequest[]) {
     if (operation.identity.current) return;
-    setLocale(language); await request.start(preview.operation);
+    startup.expectRestore(preview.operation);
+    setLocale(language); setRecovery(pendingRequests !== undefined); await request.start(preview.operation, pendingRequests);
   }
   function canReturn() { return operation.current.current?.state === 'failed' || (request.rejected && !operation.current.current); }
   async function returnToLearning() {
@@ -84,26 +86,35 @@ export function useFormalRestore(runtime: RuntimeAdapter, startup: ReturnType<ty
     setChecking(true);
     try {
       const value = await startup.refresh();
-      if (value?.state === 'ready' && !startup.pending) operation.finish();
+      if (value && !startup.pending && (value.state === 'ready' || (recovery && value.state === 'recovery_required'))) operation.finish();
     } finally { if (operation.live.current) setChecking(false); }
   }
   useEffect(() => {
     const value = startup.status;
     if (operation.identity.current && value?.operation === operation.identity.current && value.state === 'ready' && value.restored && !value.error && !startup.error && !startup.pending) operation.finish();
   }, [startup.status, startup.error, startup.pending]);
-  return { active: operation.active, status: operation.status, error: operation.error, locale, start, refresh: operation.refresh,
+  return { active: operation.active, status: operation.status, error: operation.error, locale, recovery, start, refresh: operation.refresh,
     checking, starting: request.starting, returnToLearning, canReturn: canReturn() };
 }
 
 export type FormalRestore = ReturnType<typeof useFormalRestore>;
 
-function restoreFailure(restore: FormalRestore, startup: ReturnType<typeof useStartup>) {
+function restoreStartupError(status: RestoreStatus | null, startup: ReturnType<typeof useStartup>) {
+  if (status?.state === 'running' || status?.state === 'restart_requested') return startup.error;
   const recovery = startup.status?.state !== 'ready' ? startup.status?.error : null;
-  return startup.error || recovery || restore.error || (restore.status?.state === 'failed' ? restore.status.error : '');
+  return startup.error || recovery;
 }
-function restoreLabel(status: RestoreStatus | null, locale: Locale) {
+function currentStartupError(restore: FormalRestore, startup: ReturnType<typeof useStartup>) {
+  return startup.status?.operation === restore.status?.operation ? restoreStartupError(restore.status, startup) : null;
+}
+function restoreFailure(restore: FormalRestore, startup: ReturnType<typeof useStartup>) {
+  if (restore.starting) return restore.error || startup.error;
+  const failure = restore.status?.state === 'failed' ? restore.status.error : '';
+  return currentStartupError(restore, startup) || restore.error || failure || restoreStartupError(restore.status, startup);
+}
+function restoreLabel(status: RestoreStatus | null, locale: Locale, recovery: boolean) {
   const text = restoreMessages[locale];
-  if (status?.state === 'running') return text.phases[status.phase];
+  if (status?.state === 'running') return recovery && status.phase === 'preserving' ? text.rawPreserving : text.phases[status.phase];
   return status?.state === 'restart_requested' ? text.restarting : text.beginning;
 }
 function restoreCopies(status: RestoreStatus | null, startup: StartupStatus | null) {
@@ -113,7 +124,7 @@ function RestoreActions({ restore, startup }: { readonly restore: FormalRestore;
   const text = restoreMessages[restore.locale];
   return <div className="actions"><button disabled={restore.starting || restore.checking} onClick={() => { void restore.refresh(); }}>{text.check}</button>
     {startup.status?.state === 'recovery_required' && <button disabled={startup.pending} onClick={() => { void startup.retry(); }}>{text.retry}</button>}
-    {restore.canReturn && <button disabled={restore.starting || restore.checking || startup.pending} onClick={() => { void restore.returnToLearning(); }}>{text.back}</button>}
+    {restore.canReturn && <button disabled={restore.starting || restore.checking || startup.pending} onClick={() => { void restore.returnToLearning(); }}>{restore.recovery ? text.recoveryBack : text.back}</button>}
   </div>;
 }
 
@@ -121,7 +132,7 @@ export function RestoreScreen({ runtime, restore, startup }: {
   readonly runtime: RuntimeAdapter; readonly restore: FormalRestore; readonly startup: ReturnType<typeof useStartup>;
 }) {
   const text = restoreMessages[restore.locale], { status } = restore;
-  const failure = restoreFailure(restore, startup), label = restoreLabel(status, restore.locale);
+  const failure = restoreFailure(restore, startup), label = restoreLabel(status, restore.locale, restore.recovery);
   const copies = restoreCopies(status, startup.status);
   const heading = useRef<HTMLHeadingElement>(null);
   useEffect(() => { heading.current?.focus(); }, []);
@@ -129,6 +140,7 @@ export function RestoreScreen({ runtime, restore, startup }: {
     <h1 id="restore-heading" ref={heading} tabIndex={-1}>{failure ? text.failed : text.title}</h1>
     {failure ? <p role="alert">{failure}</p> : <><p role="status">{label}</p><progress aria-label={label} /></>}
     {status && <p>{status.preview.filename}</p>}
+    {restore.recovery && <><p>{text.rawCopy}</p><p>{text.deviceSettings}</p></>}
     <RetainedCopies runtime={runtime} copies={copies} locale={restore.locale} />
     <RestoreActions restore={restore} startup={startup} />{restore.canReturn && <p>{text.recheck}</p>}
     <RecoveryClose runtime={runtime} locale={restore.locale} />

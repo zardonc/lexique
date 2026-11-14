@@ -2,18 +2,18 @@ import { invoke, isTauri } from '@tauri-apps/api/core';
 import { listen } from '@tauri-apps/api/event';
 import { z } from 'zod';
 import { backupPreviewOperation, restoreStatusSchema, startupStatusSchema } from './backup';
-import type { RestoreStatus, StartupStatus } from './backup';
+import type { RawPendingRequest, RestoreStatus, StartupStatus } from './backup';
 
-async function restoreRequest(command: 'backup_restore_start' | 'backup_restore_status', operation: string) {
+async function restoreRequest(command: 'backup_restore_start' | 'backup_restore_status', operation: string, pendingRequests?: readonly RawPendingRequest[]) {
   if (!isTauri()) throw new Error('Restoring backups is available in the desktop app only');
   const id = backupPreviewOperation.parse(operation);
-  const value = restoreStatusSchema.parse(await invoke(command, { operation: id }));
+  const value = restoreStatusSchema.parse(await invoke(command, { operation: id, ...(pendingRequests === undefined ? {} : { pendingRequests }) }));
   if (value.operation !== id) throw new Error('Restore response identity differs from the request');
   return value;
 }
 
 export const restoreRuntime = {
-  startRestore: (operation: string) => restoreRequest('backup_restore_start', operation),
+  startRestore: (operation: string, pendingRequests?: readonly RawPendingRequest[]) => restoreRequest('backup_restore_start', operation, pendingRequests),
   restoreStatus: (operation: string) => restoreRequest('backup_restore_status', operation),
   async onRestoreProgress(callback: (status: RestoreStatus) => void, failed: (cause: unknown) => void) {
     if (!isTauri()) return () => {};

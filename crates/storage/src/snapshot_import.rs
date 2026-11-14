@@ -16,22 +16,7 @@ pub fn import_learning_snapshot(
         ));
     }
     let tx = connection.transaction_with_behavior(TransactionBehavior::Immediate)?;
-    if tx
-        .prepare(
-            "SELECT 1 FROM vocabulary UNION ALL SELECT 1 FROM save_operations
-             UNION ALL SELECT 1 FROM review_cards UNION ALL SELECT 1 FROM review_progress
-             UNION ALL SELECT 1 FROM review_ratings UNION ALL SELECT 1 FROM review_queue_state
-             UNION ALL SELECT 1 FROM review_queue_entries UNION ALL SELECT 1 FROM review_paused
-             UNION ALL SELECT 1 FROM review_batches UNION ALL SELECT 1 FROM review_batch_items
-             UNION ALL SELECT 1 FROM speech_assets UNION ALL SELECT 1 FROM speech_owners
-             UNION ALL SELECT 1 FROM speech_tasks UNION ALL SELECT 1 FROM speech_versions
-             UNION ALL SELECT 1 FROM word_audio_selections UNION ALL SELECT 1 FROM word_audio_imports
-             UNION ALL SELECT 1 FROM legacy_speech UNION ALL SELECT 1 FROM word_audio_operations
-             UNION ALL SELECT 1 FROM word_audio_publications UNION ALL SELECT 1 FROM word_audio_repairs
-             UNION ALL SELECT 1 FROM app_metadata LIMIT 1",
-        )?
-        .exists([])?
-    {
+    if tx.prepare(LEARNING_ROWS)?.exists([])? {
         return Err(StorageError::Invalid(
             "Snapshot import requires an empty destination database".into(),
         ));

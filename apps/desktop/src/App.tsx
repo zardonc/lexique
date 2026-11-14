@@ -80,7 +80,7 @@ function SettingsPanels({ runtime, locale }: { readonly runtime: RuntimeAdapter;
 export function App({ runtime }: { readonly runtime: RuntimeAdapter }) {
   const startup = useStartup(runtime), restore = useFormalRestore(runtime, startup);
   if (restore.active) return <RestoreScreen runtime={runtime} restore={restore} startup={startup} />;
-  return startup.status?.state === 'ready' && !startup.error && !startup.pending ? <LearningApp runtime={runtime} startup={startup.status} restore={restore} /> : <StartupScreen runtime={runtime} startup={startup} />;
+  return startup.status?.state === 'ready' && !startup.error && !startup.pending ? <LearningApp runtime={runtime} startup={startup.status} restore={restore} /> : <StartupScreen runtime={runtime} startup={startup} restore={restore} />;
 }
 
 function LearningApp({ runtime, startup, restore }: { readonly runtime: RuntimeAdapter; readonly startup: StartupStatus; readonly restore: FormalRestore }) {

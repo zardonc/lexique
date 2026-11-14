@@ -142,25 +142,26 @@ function BackupFeedback({ status, error, locale }: { readonly status: BackupStat
     {status?.state === 'cancelled' && <p role="status">{text.cancelled}</p>}</>;
 }
 
-export function BackupSettings({ runtime, locale, beforeStart, onPause, onResolved, visible, restore }: {
+export function BackupSettings({ runtime, locale, beforeStart, onPause, onResolved, visible, restore, recovery = false }: {
   readonly runtime: RuntimeAdapter; readonly locale: Locale; readonly beforeStart: (action: () => void) => void;
   readonly onPause: (paused: boolean) => void; readonly visible: boolean;
   readonly onResolved: (batch: BatchStatus | null) => void;
   readonly restore: FormalRestore;
+  readonly recovery?: boolean;
 }) {
   const text = messages[locale];
   const [restorePreparing, setRestorePreparing] = useState(false);
   const preview = useBackupPreview(runtime), backup = useBackupExport(runtime, onResolved, preview.reset), { status, error } = backup;
-  useEffect(() => onPause(backup.paused || restorePreparing), [backup.paused, restorePreparing, onPause]);
-  return <><section className="speech-settings backup-settings" aria-labelledby="backup-heading" hidden={!visible && !backup.paused}>
+  useEffect(() => onPause(restorePreparing || (recovery ? preview.active : backup.paused)), [backup.paused, preview.active, restorePreparing, recovery, onPause]);
+  return <>{!recovery && <section className="speech-settings backup-settings" aria-labelledby="backup-heading" hidden={!visible && !backup.paused}>
     <h3 id="backup-heading">{text.title}</h3>
     <p>{text.contents}</p><p>{text.resources}</p><p>{text.privacy}</p>
     {!runtime.backupAvailable() && <p>{text.preview}</p>}
     <fieldset className="backup-controls" disabled={!runtime.backupAvailable()}><BackupActions backup={backup} locale={locale} beforeStart={beforeStart} blocked={preview.active || restorePreparing} /></fieldset>
     <Progress status={status} preparing={backup.preparing} locale={locale} />
     <BackupFeedback status={status} error={error} locale={locale} />
-  </section><BackupPreviewSettings runtime={runtime} preview={preview} locale={locale} countsText={text.counts} visible={visible} blocked={backup.active || restorePreparing}>
+  </section>}<BackupPreviewSettings runtime={runtime} preview={preview} locale={locale} countsText={text.counts} visible={visible} blocked={backup.active || restorePreparing} recovery={recovery}>
     {runtime.backupAvailable() && <RestoreConfirmation runtime={runtime} preview={preview} restore={restore} locale={locale} beforeStart={beforeStart}
-      onResolved={onResolved} onPreparing={setRestorePreparing} preparing={restorePreparing} blocked={backup.active} />}
+      onResolved={onResolved} onPreparing={setRestorePreparing} preparing={restorePreparing} blocked={backup.active} recovery={recovery} />}
   </BackupPreviewSettings></>;
 }

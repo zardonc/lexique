@@ -7,7 +7,7 @@ use tauri::{Emitter, Manager, State};
 use crate::{
     backup_operations::{BackupOperations, CloseGuard},
     backup_preview::{BackupPreview, VerifiedBackupStage},
-    restore::{RetainedCopy, StartupPhase, StartupStatus},
+    restore::{RawPendingRequest, RetainedCopy, StartupPhase, StartupStatus},
 };
 
 const EVENT: &str = "lexique-backup-restore-progress";
@@ -48,7 +48,7 @@ impl RestoreOperations {
         &self,
         backups: &BackupOperations,
         id: &str,
-        learning_available: bool,
+        restore_available: bool,
     ) -> Result<RestoreStart, String> {
         let mut current = self.0.lock().map_err(|_| "Restore status unavailable")?;
         if let Some(status) = current.as_ref() {
@@ -59,8 +59,8 @@ impl RestoreOperations {
                 return Err("backup_busy: Another restore is active".into());
             }
         }
-        if !learning_available {
-            return Err("Learning startup must finish before normal restore".into());
+        if !restore_available {
+            return Err("The current startup state does not allow restoring a backup".into());
         }
         let (stage, close) = backups.consume_preview(id)?;
         let status = RestoreStatus {
@@ -142,53 +142,84 @@ pub fn backup_restore_start(
     operations: State<'_, RestoreOperations>,
     backups: State<'_, BackupOperations>,
     operation: String,
+    pending_requests: Option<Vec<RawPendingRequest>>,
 ) -> Result<RestoreStatus, String> {
     crate::backup_operations::main_window(&window)?;
-    let (status, work) = operations.begin(
-        &backups,
-        &operation,
-        crate::startup::learning_available(&app),
-    )?;
+    let database = crate::startup::database(&app)?;
+    if let Some(requests) = &pending_requests {
+        crate::restore::validate_pending_requests(requests)?;
+    }
+    let mode = app
+        .state::<crate::startup::StartupState>()
+        .raw_restore(pending_requests.is_some());
+    let (status, work) = operations
+        .begin(&backups, &operation, mode.is_ok())
+        .map_err(|error| mode.as_ref().err().cloned().unwrap_or(error))?;
     let Some((stage, close)) = work else {
         return Ok(status);
     };
+    let raw = mode?;
     let operations = operations.inner().clone();
     tauri::async_runtime::spawn_blocking(move || {
-        let database = app.state::<crate::vocabulary::DatabasePath>();
         let startup = app.state::<crate::startup::StartupState>();
         let result = crate::backup_operations::run_worker(|| {
-            crate::restore::prepare_normal(
-                &database,
-                &app.state::<crate::speech_tasks::SpeechTasks>(),
-                &app.state::<crate::maintenance::MaintenanceCoordinator>(),
-                stage,
-                &operation,
-                || {
+            let close_learning = || {
+                if !raw
+                    || app
+                        .try_state::<crate::speech_tasks::SpeechTasks>()
+                        .is_some()
+                {
                     startup.closed_for_restore()?;
-                    crate::selection::selection_cancel(app.clone())?;
-                    app.state::<crate::speech_tasks::SpeechTasks>().shutdown()?;
-                    if let Some(validator) =
-                        app.try_state::<Arc<crate::review_window::WindowValidator>>()
-                    {
-                        validator.stop();
-                    }
-                    Ok(())
-                },
-                |point| {
-                    let phase = match point {
-                        "preserving" => Some(RestorePhase::Preserving),
-                        "preparing" => Some(RestorePhase::Preparing),
-                        "closing" => Some(RestorePhase::Closing),
-                        _ => return Ok(()),
-                    };
-                    let status = operations.change(&operation, |status| status.phase = phase)?;
-                    emit(&app, &status);
-                    Ok(())
-                },
-            )
+                }
+                crate::selection::selection_cancel(app.clone())?;
+                if let Some(tasks) = app.try_state::<crate::speech_tasks::SpeechTasks>() {
+                    tasks.shutdown()?;
+                }
+                if let Some(validator) =
+                    app.try_state::<Arc<crate::review_window::WindowValidator>>()
+                {
+                    validator.stop();
+                }
+                app.state::<crate::maintenance::MaintenanceCoordinator>()
+                    .suspend_startup()
+            };
+            let observe = |point: &str| {
+                let phase = match point {
+                    "preserving" => Some(RestorePhase::Preserving),
+                    "preparing" => Some(RestorePhase::Preparing),
+                    "closing" => Some(RestorePhase::Closing),
+                    _ => return Ok(()),
+                };
+                let status = operations.change(&operation, |status| status.phase = phase)?;
+                emit(&app, &status);
+                Ok(())
+            };
+            if raw {
+                crate::restore::prepare_raw(
+                    &database,
+                    stage,
+                    &operation,
+                    pending_requests.as_deref().unwrap_or_default(),
+                    close_learning,
+                    observe,
+                )
+            } else {
+                crate::restore::prepare_normal(
+                    &database,
+                    &app.state::<crate::speech_tasks::SpeechTasks>(),
+                    &app.state::<crate::maintenance::MaintenanceCoordinator>(),
+                    stage,
+                    &operation,
+                    close_learning,
+                    observe,
+                )
+            }
         });
         match result {
             Ok(prepared) => {
+                if let Err(error) = startup.closed_for_restore() {
+                    eprintln!("Could not record controlled restore restart: {error}");
+                }
                 close.commit();
                 let status = operations.change(&operation, |status| {
                     status.state = RestoreState::RestartRequested;
@@ -228,7 +259,7 @@ pub fn backup_restore_start(
                 if let Ok(status) = &status {
                     emit(&app, status);
                 }
-                if closed {
+                if closed || raw {
                     if let Err(suspend_error) = app
                         .state::<crate::maintenance::MaintenanceCoordinator>()
                         .suspend_startup()
@@ -301,7 +332,7 @@ pub async fn backup_retained_directory_open(
     crate::backup_operations::main_window(&window)?;
     tauri::async_runtime::spawn_blocking(move || {
         open_directory(&crate::restore::retained_directory(
-            &app.state::<crate::vocabulary::DatabasePath>(),
+            &crate::startup::database(&app)?,
             &copy,
         )?)
     })

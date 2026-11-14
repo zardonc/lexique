@@ -7,6 +7,8 @@ import { errorMessage } from './platform/vocabulary';
 import { clearPendingReviews, releasePendingReviews } from './pending-review-requests';
 import { RetainedCopies } from './retained-copies';
 import { restoreMessages } from './restore-content';
+import { BackupSettings } from './backup-settings';
+import type { FormalRestore } from './backup-restore';
 
 const text = {
   zh: { recovery: '需要恢复学习数据', starting: '正在启动应用…', cleanup: '正在完成恢复清理…', close: '关闭应用', restored: '恢复已完成' },
@@ -16,9 +18,10 @@ const text = {
 
 function restoredSuccessfully(status: StartupStatus) { return status.state === 'ready' && status.restored !== null && status.error === null; }
 
-function acceptsStartup(previous: StartupStatus | null, value: StartupStatus) {
+function acceptsStartup(previous: StartupStatus | null, value: StartupStatus, expected: string | null = null) {
+  if (expected !== null && value.operation !== expected) return false;
   if (!previous || previous.operation === null) return true;
-  if (value.operation !== previous.operation) return previous.state === 'ready';
+  if (value.operation !== previous.operation) return expected !== null ? previous.state !== 'cleanup_required' : previous.state === 'ready';
   if (previous.state === 'cleanup_required') return value.state !== 'ready';
   return previous.state !== 'ready' || value.state !== 'cleanup_required';
 }
@@ -64,12 +67,14 @@ function useCommittedCleanup(runtime: RuntimeAdapter, status: StartupStatus | nu
   } };
 }
 
-function acceptsStartupRead(previous: StartupStatus | null, value: StartupStatus) {
-  return acceptsStartup(previous, value) || (value.state === 'ready' && value.operation === null && previous?.state !== 'cleanup_required');
+function acceptsStartupRead(previous: StartupStatus | null, value: StartupStatus, expected: string | null) {
+  return acceptsStartup(previous, value) || acceptsStartup(previous, value, expected)
+    || (value.state === 'ready' && value.operation === null && previous?.state !== 'cleanup_required');
 }
 
 function useStartupRetry(runtime: RuntimeAdapter, controller: {
   readonly current: { readonly current: StartupStatus | null }; readonly updates: { readonly current: number };
+  readonly expected: { readonly current: string | null };
   readonly connected: { readonly current: boolean }; readonly live: { readonly current: boolean };
   readonly update: (value: StartupStatus) => void; readonly failed: (cause: unknown) => void;
   readonly reconnect: () => void; readonly cleanup: ReturnType<typeof useCommittedCleanup>;
@@ -82,7 +87,7 @@ function useStartupRetry(runtime: RuntimeAdapter, controller: {
   async function receive(value: StartupStatus, version: number) {
     if (!controller.live.current) return;
     if (version !== controller.updates.current) { await continueCleanup(value); return; }
-    if (!acceptsStartupRead(controller.current.current, value)) throw new Error('Startup recovery response identity differs from the current restore');
+    if (!acceptsStartupRead(controller.current.current, value, controller.expected.current)) throw new Error('Startup recovery response identity differs from the current restore');
     controller.update(value);
     if (value.state === 'cleanup_required') await controller.cleanup.retry();
   }
@@ -103,11 +108,13 @@ function useStartupRetry(runtime: RuntimeAdapter, controller: {
 export function useStartup(runtime: RuntimeAdapter) {
   const [status, setStatus] = useState<StartupStatus | null>(null), [error, setError] = useState('');
   const current = useRef<StartupStatus | null>(null), updates = useRef(0), live = useRef(true), connected = useRef(false);
+  const expected = useRef<string | null>(null);
   const [registration, setRegistration] = useState(0);
   function update(value: StartupStatus) { if (live.current) { current.current = value; updates.current += 1; setStatus(value); setError(''); } }
   function failed(cause: unknown) { if (live.current) setError(errorMessage(cause)); }
+  function expectRestore(operation: string) { expected.current = operation; updates.current += 1; }
   function receive(value: StartupStatus) {
-    if (!acceptsStartup(current.current, value)) return;
+    if (!acceptsStartup(current.current, value, expected.current)) return;
     update(value);
   }
   async function refresh() {
@@ -115,7 +122,7 @@ export function useStartup(runtime: RuntimeAdapter) {
     try {
       const value = await runtime.startupStatus();
       if (!live.current) return null;
-      if (version === updates.current && acceptsStartupRead(current.current, value)) update(value);
+      if (version === updates.current && acceptsStartupRead(current.current, value, expected.current)) update(value);
       return current.current;
     } catch (cause) { if (version === updates.current) failed(cause); return null; }
   }
@@ -130,9 +137,9 @@ export function useStartup(runtime: RuntimeAdapter) {
     return () => { disposed = true; live.current = false; connected.current = false; updates.current += 1; stop?.(); };
   }, [runtime, registration]);
   const cleanup = useCommittedCleanup(runtime, status, { current, update });
-  const retry = useStartupRetry(runtime, { current, updates, live, connected, update, failed, cleanup,
+  const retry = useStartupRetry(runtime, { current, updates, live, connected, expected, update, failed, cleanup,
     reconnect: () => { setStatus(null); setError(''); setRegistration((value) => value + 1); } });
-  return { status, error: error || cleanup.error, pending: cleanup.pending || retry.pending, current, update, failed, refresh, retry: retry.retry };
+  return { status, error: error || cleanup.error, pending: cleanup.pending || retry.pending, current, update, failed, refresh, expectRestore, retry: retry.retry };
 }
 
 export function StartupFeedback({ runtime, status, locale }: { readonly runtime: RuntimeAdapter; readonly status: StartupStatus; readonly locale: Locale }) {
@@ -169,11 +176,18 @@ function startupLabel(status: StartupStatus | null, failure: string | null | und
   return status?.state === 'cleanup_required' ? text[locale].cleanup : text[locale].starting;
 }
 
-export function StartupScreen({ runtime, startup }: { readonly runtime: RuntimeAdapter; readonly startup: ReturnType<typeof useStartup> }) {
+const immediately = (action: () => void) => action();
+const noLearningResult = () => {};
+function recoveryAvailable(startup: ReturnType<typeof useStartup>) { return startup.status?.state === 'recovery_required' && !startup.pending; }
+
+export function StartupScreen({ runtime, startup, restore }: {
+  readonly runtime: RuntimeAdapter; readonly startup: ReturnType<typeof useStartup>; readonly restore: FormalRestore;
+}) {
   const [locale, setLocale] = useState<Locale>('zh');
   const failure = startup.error || startup.status?.error;
   const label = startupLabel(startup.status, failure, locale);
   const heading = useRef<HTMLHeadingElement>(null);
+  const [busy, setBusy] = useState(false);
   useEffect(() => { heading.current?.focus(); document.documentElement.lang = locale === 'zh' ? 'zh-CN' : locale; }, [label, locale]);
   return <div className="app startup-shell" data-theme="white"><main aria-labelledby="startup-heading">
     <select aria-label={messages[locale].language} value={locale} onChange={(event) => setLocale(event.target.value as Locale)}>
@@ -182,7 +196,9 @@ export function StartupScreen({ runtime, startup }: { readonly runtime: RuntimeA
     <h1 id="startup-heading" ref={heading} tabIndex={-1}>{label}</h1>
     {failure ? <p role="alert">{failure}</p> : <p role="status">{label}</p>}
     <RetainedCopies runtime={runtime} copies={startup.status?.retainedCopies ?? []} locale={locale} />
-    <div className="actions"><button disabled={startup.pending || !runtime.backupAvailable()} onClick={() => { void startup.retry(); }}>{restoreMessages[locale].retry}</button>
+    {recoveryAvailable(startup) && <BackupSettings recovery runtime={runtime} locale={locale} restore={restore}
+      visible beforeStart={immediately} onPause={setBusy} onResolved={noLearningResult} />}
+    <div className="actions"><button disabled={busy || startup.pending || !runtime.backupAvailable()} onClick={() => { void startup.retry(); }}>{restoreMessages[locale].retry}</button>
       <RecoveryClose runtime={runtime} locale={locale} /></div>
   </main></div>;
 }

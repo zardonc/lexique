@@ -1,6 +1,7 @@
 import { z } from 'zod';
 import { batchRequestSchema, rateRequestSchema } from './platform/runtime';
 import type { BatchRequest, BatchStatus, RuntimeAdapter } from './platform/runtime';
+import type { RawPendingRequest } from './platform/backup';
 
 const ratingPrefix = 'lexique-pending-rating-';
 export const pendingUndoKey = 'lexique-pending-undo';
@@ -24,6 +25,17 @@ export function pendingReviewKeys() {
     if (key.startsWith(ratingPrefix) || key === pendingUndoKey || key === pendingBatchKey) keys.push(key);
   }
   return keys;
+}
+
+export function capturePendingReviews(): readonly RawPendingRequest[] {
+  preserving = true; revision += 1;
+  const requests = pendingReviewKeys().map((key) => {
+    const value = localStorage.getItem(key);
+    if (value === null) throw new Error('Pending review request disappeared before raw-file preservation');
+    return { key, value };
+  });
+  confirmedKeys(new Map(requests.map(({ key, value }) => [key, value])), true);
+  return requests;
 }
 
 export function clearPendingReviews() {

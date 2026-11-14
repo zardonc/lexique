@@ -11,7 +11,7 @@ use webview2_com::{
 };
 use windows_core::Interface;
 
-pub fn attach(app: &tauri::App, database: PathBuf) -> tauri::Result<()> {
+pub fn attach(app: &tauri::AppHandle, database: PathBuf) -> tauri::Result<()> {
     if let Some(window) = app.get_webview_window("main") {
         window.with_webview(move |webview| {
             let diagnostic_path = database.clone();
