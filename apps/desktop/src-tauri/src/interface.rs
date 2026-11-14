@@ -11,9 +11,14 @@ pub async fn interface_preferences(
         .as_ref()
         .map(|_| maintenance.admit())
         .transpose()?;
+    let reader = preferences
+        .is_none()
+        .then(|| maintenance.admit_reader())
+        .transpose()?;
     let path = DatabasePath(path.0.clone());
     tauri::async_runtime::spawn_blocking(move || {
         let _admission = admission;
+        let _reader = reader;
         let connection = open(&path)?;
         if let Some(preferences) = preferences {
             lexique_storage::set_interface_preferences(&connection, &preferences)

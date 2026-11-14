@@ -1,6 +1,6 @@
 use std::{error::Error, fmt};
 
-use lexique_core::DATABASE_SCHEMA_VERSION;
+pub use lexique_core::DATABASE_SCHEMA_VERSION;
 use rusqlite::Connection;
 
 mod vocabulary;

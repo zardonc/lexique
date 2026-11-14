@@ -34,9 +34,14 @@ pub async fn conjugation_preferences(
         .as_ref()
         .map(|_| maintenance.admit())
         .transpose()?;
+    let reader = preferences
+        .is_none()
+        .then(|| maintenance.admit_reader())
+        .transpose()?;
     let path = DatabasePath(path.0.clone());
     tauri::async_runtime::spawn_blocking(move || {
         let _admission = admission;
+        let _reader = reader;
         let connection = open(&path)?;
         if let Some(preferences) = preferences {
             lexique_storage::set_conjugation_preferences(&connection, &preferences)
@@ -55,9 +60,14 @@ pub async fn conjugation_block_order(
     order: Option<lexique_storage::ConjugationBlockOrder>,
 ) -> Result<lexique_storage::ConjugationBlockOrder, String> {
     let admission = order.as_ref().map(|_| maintenance.admit()).transpose()?;
+    let reader = order
+        .is_none()
+        .then(|| maintenance.admit_reader())
+        .transpose()?;
     let path = DatabasePath(path.0.clone());
     tauri::async_runtime::spawn_blocking(move || {
         let _admission = admission;
+        let _reader = reader;
         let connection = open(&path)?;
         if let Some(order) = order {
             lexique_storage::set_conjugation_block_order(&connection, &order)

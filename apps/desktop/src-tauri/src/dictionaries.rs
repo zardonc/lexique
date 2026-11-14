@@ -502,14 +502,15 @@ fn import_file(
                 "Selected MDX differs from the confirmed file; select it again",
             ));
         }
-        if let Some(entry) = &original {
-            if entry.content_hash.as_ref() != Some(&content_hash) && confirmed_hash.is_none() {
-                return Ok(RelinkResult::ConfirmationRequired {
-                    dictionary_id: id.clone(),
-                    expected_hash: entry.content_hash.clone(),
-                    content_hash,
-                });
-            }
+        if let Some(entry) = &original
+            && entry.content_hash.as_ref() != Some(&content_hash)
+            && confirmed_hash.is_none()
+        {
+            return Ok(RelinkResult::ConfirmationRequired {
+                dictionary_id: id.clone(),
+                expected_hash: entry.content_hash.clone(),
+                content_hash,
+            });
         }
         let transaction = connection
             .transaction_with_behavior(TransactionBehavior::Immediate)
@@ -1527,3 +1528,6 @@ mod tests {
         assert_eq!(settings(&path, None).unwrap(), before);
     }
 }
+#[cfg(test)]
+#[path = "restore_domain_tests.rs"]
+mod restore_domain_tests;

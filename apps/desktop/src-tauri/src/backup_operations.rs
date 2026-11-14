@@ -453,7 +453,7 @@ impl BackupOperations {
     }
 }
 
-fn run_worker<T>(work: impl FnOnce() -> Result<T, String>) -> Result<T, String> {
+pub(crate) fn run_worker<T>(work: impl FnOnce() -> Result<T, String>) -> Result<T, String> {
     catch_unwind(AssertUnwindSafe(work)).unwrap_or_else(|panic| {
         let message = panic
             .downcast_ref::<String>()
@@ -476,7 +476,7 @@ fn emit_preview(app: &tauri::AppHandle, status: &BackupPreviewStatus) {
     }
 }
 
-fn main_window(window: &tauri::WebviewWindow) -> Result<(), String> {
+pub(crate) fn main_window(window: &tauri::WebviewWindow) -> Result<(), String> {
     if window.label() != "main" {
         return Err("Backup commands are restricted to the main window".into());
     }
@@ -951,6 +951,75 @@ mod tests {
         assert!(operations.reserve().is_err());
         drop(close);
         assert!(operations.reserve().is_ok());
+    }
+
+    #[test]
+    fn failed_restore_after_runtime_closure_releases_the_native_close_reservation() {
+        let (_directory, _source, stage) = stage_fixture();
+        let backups = BackupOperations::default();
+        let (preview, _, worker) = backups.reserve_preview().unwrap();
+        backups
+            .run_preview(&preview.operation, || Ok(stage))
+            .unwrap();
+        drop(worker);
+        let restores = crate::restore_operations::RestoreOperations::default();
+        let (_, work) = restores.begin(&backups, &preview.operation, true).unwrap();
+        let (stage, close) = work.unwrap();
+        let startup = crate::startup::StartupState::new(crate::restore::StartupStatus {
+            state: crate::restore::StartupPhase::Ready,
+            operation: None,
+            restored: None,
+            retained_copies: Vec::new(),
+            error: None,
+        });
+        let maintenance = crate::maintenance::MaintenanceCoordinator::default();
+        startup.closed_for_restore().unwrap();
+        maintenance.suspend_startup().unwrap();
+        drop(stage);
+        let failed = restores
+            .fail(
+                &preview.operation,
+                "Post-close preparation failed",
+                &[],
+                close,
+            )
+            .unwrap();
+        assert_eq!(
+            failed.state,
+            crate::restore_operations::RestoreState::Failed
+        );
+        assert!(!restores.active());
+        assert!(startup.requires_restart().unwrap());
+        assert!(maintenance.admit().is_err() && maintenance.admit_reader().is_err());
+        let close = backups
+            .begin_close()
+            .expect("recovery close/quit retained the failed restore reservation");
+        drop(close);
+        assert!(backups.begin_close().is_ok());
+    }
+
+    #[test]
+    fn repeated_restore_start_keeps_the_same_operation_after_learning_closes() {
+        let (_directory, _source, stage) = stage_fixture();
+        let backups = BackupOperations::default();
+        let (preview, _, worker) = backups.reserve_preview().unwrap();
+        backups
+            .run_preview(&preview.operation, || Ok(stage))
+            .unwrap();
+        drop(worker);
+        let restores = crate::restore_operations::RestoreOperations::default();
+        let (first, work) = restores.begin(&backups, &preview.operation, true).unwrap();
+        let (_stage, _close) = work.unwrap();
+        let (repeated, work) = restores
+            .begin(&backups, &preview.operation, false)
+            .expect("repeated native identity was rejected after formal closure");
+        assert_eq!(repeated.operation, first.operation);
+        assert_eq!(repeated.state, first.state);
+        assert!(
+            work.is_none(),
+            "a repeated identity started another component switch"
+        );
+        assert!(restores.begin(&backups, "another-restore", false).is_err());
     }
 
     #[test]
