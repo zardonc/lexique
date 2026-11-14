@@ -59,12 +59,12 @@ pnpm test:tooling        # 构建参数传递与隔离打包回归，不编译�
 pnpm test:speech:cleanup # Windows 缓存清理；需设置 LEXIQUE_TEST_EXECUTABLE
 cargo test --locked --release -p lexique-desktop --test speech_cache --lib --no-run
 pnpm test:speech:cache   # Windows 缓存发布 / 并发 / 重解析点；执行硬限 60 秒
-pnpm test:desktop:lib    # 原生桌面库全套测试；顺序两次执行，每次硬限 60 秒
+pnpm test:desktop:lib    # 原生桌面库全套测试；顺序四次执行，每次硬限 60 秒
 ```
 
 已有 portable 交付会被保留；再次交付可运行 `pnpm desktop:portable --output-dir <新目录>`。构建入口会在最终进程边界追加 Cargo 的 `--locked`，无需经 pnpm 手动传递分隔符。
 
-文档检查与 #24 设计验证共用格式及链接规则，检查 Git 跟踪的 Markdown。`vendor/` 与 `.gitattributes` 标注 `-text` 的原样许可保持上游格式；`target/`、`.tooling/` 的本机证据链接及 `AGENTS.md` 的可选环境指针单独计数。CI 独立运行文档检查及其回归；Windows portable job 预编译缓存和桌面库测试后分别执行；缓存测试有 60 秒硬限，桌面库全套分为两次顺序执行，每次保持 60 秒硬限。
+文档检查与 #24 设计验证共用格式及链接规则，检查 Git 跟踪的 Markdown。`vendor/` 与 `.gitattributes` 标注 `-text` 的原样许可保持上游格式；`target/`、`.tooling/` 的本机证据链接及 `AGENTS.md` 的可选环境指针单独计数。CI 独立运行文档检查及其回归；Windows portable job 预编译缓存和桌面库测试后分别执行；缓存测试有 60 秒硬限，桌面库全套按非恢复测试、普通恢复测试、三项强制退出循环测试及回滚强制退出循环测试分为四次顺序执行，每次显式单线程并保持 60 秒硬限。
 
 Windows ARM64 开发样例可在已配置该目标工具链时先运行 `node scripts/build-desktop.mjs --no-bundle --target aarch64-pc-windows-msvc`，再运行 `python -X utf8 scripts/package_portable.py --architecture arm64`。打包器检查可执行文件的 PE 架构并保留已有交付；它不构成 ARM64 实机或正式发行验收。
 
