@@ -17,9 +17,9 @@ use crate::{
     vocabulary::DatabasePath,
 };
 
-struct Fixture {
-    root: OwnedDirectory,
-    database: DatabasePath,
+pub(super) struct Fixture {
+    pub(super) root: OwnedDirectory,
+    pub(super) database: DatabasePath,
 }
 
 struct TestWorkers {
@@ -151,7 +151,7 @@ fn formal_preparation_waits_for_accepted_readers_and_closes_new_reader_admission
 }
 
 impl Fixture {
-    fn new() -> Self {
+    pub(super) fn new() -> Self {
         let root = OwnedDirectory::create(&std::env::temp_dir()).unwrap();
         let directory = root.0.join("Lexique-data/data");
         fs::create_dir_all(&directory).unwrap();
@@ -169,7 +169,7 @@ impl Fixture {
     }
 }
 
-fn save(connection: &mut Connection, notes: &str) -> storage::SaveResult {
+pub(super) fn save(connection: &mut Connection, notes: &str) -> storage::SaveResult {
     storage::save(
         connection,
         &storage::SaveRequest {
@@ -810,6 +810,15 @@ impl Drop for CheckpointChild {
 }
 
 fn interrupt_at(fixture: &Fixture, checkpoint: &str, action: &str) {
+    interrupt_child_at(
+        fixture,
+        checkpoint,
+        action,
+        "restore_tests::restore_interruption_child",
+    );
+}
+
+pub(super) fn interrupt_child_at(fixture: &Fixture, checkpoint: &str, action: &str, entry: &str) {
     let marker = fixture.root.0.join("interruption-ready");
     let log_path = fixture.root.0.join("interruption-child.log");
     if marker.exists() {
@@ -821,7 +830,7 @@ fn interrupt_at(fixture: &Fixture, checkpoint: &str, action: &str) {
         .args([
             "--ignored",
             "--exact",
-            "restore_tests::restore_interruption_child",
+            entry,
             "--nocapture",
             "--test-threads=1",
         ])

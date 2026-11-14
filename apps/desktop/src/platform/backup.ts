@@ -51,8 +51,10 @@ export const backupPreviewStatusSchema = z.discriminatedUnion('state', [
 export type BackupPreview = z.infer<typeof previewSchema>;
 export type BackupPreviewStatus = z.infer<typeof backupPreviewStatusSchema>;
 
+export interface RawPendingRequest { readonly key: string; readonly value: string }
+
 const retainedCopySchema = z.object({
-  id: nonblank, kind: z.enum(['logical_backup', 'original_database', 'original_audio']),
+  id: nonblank, kind: z.enum(['logical_backup', 'original_database', 'original_audio', 'raw_files']),
   path: nonblank, byte_length: count,
 }).strict().transform(({ byte_length, ...value }) => ({ ...value, byteLength: byte_length })).readonly();
 const retainedCopiesSchema = z.array(retainedCopySchema).readonly()

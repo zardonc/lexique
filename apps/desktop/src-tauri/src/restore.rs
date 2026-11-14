@@ -1,5 +1,6 @@
 //! Native-owned switch decisions are resolved before SQLite or workers can start.
 use std::{
+    collections::HashSet,
     fs::{self, File, OpenOptions},
     io::{self, Write},
     path::{Path, PathBuf},
@@ -28,6 +29,28 @@ pub enum PreservationKind {
     LogicalBackup,
     OriginalDatabase,
     OriginalAudio,
+    RawFiles,
+}
+
+#[derive(Clone, Debug, Deserialize, PartialEq, Eq, Serialize)]
+#[serde(deny_unknown_fields)]
+pub struct RawPendingRequest {
+    pub key: String,
+    pub value: String,
+}
+
+pub(crate) fn validate_pending_requests(requests: &[RawPendingRequest]) -> Result<(), String> {
+    let mut keys = HashSet::new();
+    for request in requests {
+        if !(request.key.starts_with("lexique-pending-rating-")
+            || request.key == "lexique-pending-undo"
+            || request.key == "lexique-pending-review-batch")
+            || !keys.insert(&request.key)
+        {
+            return Err("Raw pending requests must use distinct known application keys".into());
+        }
+    }
+    Ok(())
 }
 
 #[derive(Clone, Debug, Deserialize, Serialize)]
@@ -391,6 +414,7 @@ fn copies_for(database: &DatabasePath, id: &str) -> Result<Vec<RetainedCopy>, St
             PreservationKind::OriginalAudio,
             root.join("original-audio"),
         ),
+        ("raw", PreservationKind::RawFiles, root.join("raw-files")),
     ] {
         if present(&path)? {
             copies.push(RetainedCopy {
@@ -495,6 +519,94 @@ pub(crate) fn prepare_normal(
     admission.commit();
     close()?;
     drop(pause);
+    publish_prepared(
+        database,
+        stage,
+        id,
+        PreservationKind::LogicalBackup,
+        &mut observe,
+    )
+}
+
+pub(crate) fn prepare_raw(
+    database: &DatabasePath,
+    stage: VerifiedBackupStage,
+    id: &str,
+    requests: &[RawPendingRequest],
+    close: impl FnOnce() -> Result<(), String>,
+    mut observe: impl FnMut(&str) -> Result<(), String>,
+) -> Result<PreparedRestore, String> {
+    validate_pending_requests(requests)?;
+    if present(&directory(database)?.join(JOURNAL))? {
+        return Err("A restore record already requires startup recovery".into());
+    }
+    if stage.root().parent() != Some(directory(database)?) {
+        return Err("Verified restore staging is outside the application filesystem".into());
+    }
+    let root = retention(database, id)?;
+    let raw = root.join("raw-files");
+    let preserve = (|| {
+        fs::create_dir_all(root.parent().ok_or("Retained copies have no parent")?)
+            .map_err(|error| error.to_string())?;
+        fs::create_dir(&root).map_err(|error| error.to_string())?;
+        observe("preserving")?;
+        close()?;
+        fs::create_dir(&raw).map_err(|error| error.to_string())?;
+        observe("raw-preservation-created")?;
+        for kind in COMPONENTS {
+            let source = kind.path(&database.0)?;
+            if !present(&source)? {
+                continue;
+            }
+            let destination = if kind == ComponentKind::Audio {
+                raw.join("audio")
+            } else {
+                let files = raw.join("database");
+                fs::create_dir_all(&files).map_err(|error| error.to_string())?;
+                files.join(
+                    source
+                        .file_name()
+                        .ok_or("Invalid original database filename")?,
+                )
+            };
+            copy_tree(&source, &destination).map_err(|error| {
+                format!("Could not preserve original {}: {error}", source.display())
+            })?;
+        }
+        let dictionaries = directory(database)?.join("dictionaries");
+        if present(&dictionaries)? {
+            copy_tree(&dictionaries, &raw.join("dictionaries")).map_err(|error| {
+                format!(
+                    "Could not preserve original {}: {error}",
+                    dictionaries.display()
+                )
+            })?;
+        }
+        observe("raw-files-copied")?;
+        write_json(&raw.join("pending-requests.json"), &requests)?;
+        observe("raw-requests-written")?;
+        sync_tree(&raw)?;
+        observe("preparing")?;
+        observe("closing")?;
+        publish_prepared(
+            database,
+            stage,
+            id,
+            PreservationKind::RawFiles,
+            &mut observe,
+        )
+    })();
+    preserve.map_err(|error| format!("Raw-file preservation at {} failed: {error}", raw.display()))
+}
+
+fn publish_prepared(
+    database: &DatabasePath,
+    stage: VerifiedBackupStage,
+    id: &str,
+    preservation_kind: PreservationKind,
+    observe: &mut impl FnMut(&str) -> Result<(), String>,
+) -> Result<PreparedRestore, String> {
+    let root = retention(database, id)?;
     sync_tree(stage.root())?;
     sync_tree(&root)?;
     let mut components = Vec::new();
@@ -516,7 +628,7 @@ pub(crate) fn prepare_normal(
     let mut journal = RestoreJournal {
         restore_id: id.into(),
         phase: Phase::Prepared,
-        preservation_kind: PreservationKind::LogicalBackup,
+        preservation_kind,
         stage_root: stage.root().to_owned(),
         preview: stage.preview().clone(),
         components,
@@ -532,12 +644,10 @@ pub(crate) fn prepare_normal(
         let _ = stage.keep();
     }
     if let Err(error) = published.and_then(|()| observe("prepared")) {
-        return Err(
-            match abort_preparation(database, id, &error, &mut observe) {
-                Ok(()) => error,
-                Err(recovery) => format!("{error}; preparation rollback failed: {recovery}"),
-            },
-        );
+        return Err(match abort_preparation(database, id, &error, observe) {
+            Ok(()) => error,
+            Err(recovery) => format!("{error}; preparation rollback failed: {recovery}"),
+        });
     }
     Ok(PreparedRestore {
         retained_copies: journal.retained_copies,
@@ -605,28 +715,61 @@ fn rejected_path(
 }
 
 fn copy_tree(source: &Path, destination: &Path) -> Result<(), String> {
-    let metadata = fs::symlink_metadata(source).map_err(|error| error.to_string())?;
+    let metadata = fs::symlink_metadata(source).map_err(|error| {
+        format!(
+            "Could not inspect original restore component {}: {error}",
+            source.display()
+        )
+    })?;
     if metadata.file_type().is_symlink() {
-        return Err("Preserved restore component is a link".into());
+        return Err(format!(
+            "Preserved restore component is a link: {}",
+            source.display()
+        ));
     }
     if metadata.is_dir() {
-        fs::create_dir(destination)
-            .map_err(|error| format!("Could not stage rollback directory: {error}"))?;
-        for entry in fs::read_dir(source).map_err(|error| error.to_string())? {
+        fs::create_dir(destination).map_err(|error| {
+            format!(
+                "Could not create restore copy directory {}: {error}",
+                destination.display()
+            )
+        })?;
+        for entry in fs::read_dir(source).map_err(|error| {
+            format!(
+                "Could not read original restore directory {}: {error}",
+                source.display()
+            )
+        })? {
             let entry = entry.map_err(|error| error.to_string())?;
             copy_tree(&entry.path(), &destination.join(entry.file_name()))?;
         }
         sync_directory(destination)
     } else {
-        let mut input = File::open(source).map_err(|error| error.to_string())?;
+        let mut input = File::open(source).map_err(|error| {
+            format!(
+                "Could not read original restore file {}: {error}",
+                source.display()
+            )
+        })?;
         let mut output = OpenOptions::new()
             .write(true)
             .create_new(true)
             .open(destination)
-            .map_err(|error| format!("Could not stage rollback file: {error}"))?;
+            .map_err(|error| {
+                format!(
+                    "Could not create restore copy file {}: {error}",
+                    destination.display()
+                )
+            })?;
         io::copy(&mut input, &mut output)
             .and_then(|_| output.sync_all())
-            .map_err(|error| format!("Could not copy and sync rollback file: {error}"))
+            .map_err(|error| {
+                format!(
+                    "Could not copy and sync restore file {} to {}: {error}",
+                    source.display(),
+                    destination.display()
+                )
+            })
     }
 }
 
@@ -753,7 +896,9 @@ fn rollback(
     if present(&managed_audio_directory(&database.0)?)? {
         sync_tree(&managed_audio_directory(&database.0)?)?;
     }
-    validate_current(database)?;
+    if journal.preservation_kind != PreservationKind::RawFiles {
+        validate_current(database)?;
+    }
     update_copies(database, journal)?;
     write_journal(database, journal)?;
     observe("rollback-complete")?;
@@ -961,9 +1106,16 @@ pub(crate) fn recover_startup(
                 .unwrap_or_else(|| "Restore was interrupted before commitment".into());
             rollback(database, &mut journal, &mut observe)?;
             status.restored = None;
-            status.error = Some(format!(
-                "The previous learning state was restored: {failure}"
-            ));
+            if journal.preservation_kind == PreservationKind::RawFiles {
+                status.state = StartupPhase::RecoveryRequired;
+                status.error = Some(format!(
+                    "The original raw learning files were restored; recovery is still required: {failure}"
+                ));
+            } else {
+                status.error = Some(format!(
+                    "The previous learning state was restored: {failure}"
+                ));
+            }
             status.retained_copies = retained_copies(database)?;
             return Ok(());
         }
@@ -978,7 +1130,15 @@ pub(crate) fn recover_startup(
                     format!("{error}; rollback failed: {rollback_error}")
                 })?;
                 status.restored = None;
-                status.error = Some(format!("The previous learning state was restored: {error}"));
+                if visible.preservation_kind == PreservationKind::RawFiles {
+                    status.state = StartupPhase::RecoveryRequired;
+                    status.error = Some(format!(
+                        "The original raw learning files were restored; recovery is still required: {error}"
+                    ));
+                } else {
+                    status.error =
+                        Some(format!("The previous learning state was restored: {error}"));
+                }
                 status.retained_copies = retained_copies(database)?;
                 return Ok(());
             }

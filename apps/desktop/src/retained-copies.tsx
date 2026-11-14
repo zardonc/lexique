@@ -21,6 +21,7 @@ export function RetainedCopies({ runtime, copies, locale }: {
   }
   if (!copies.length) return null;
   return <section className="retained-copies" aria-label={text.copies}><h3>{text.copies}</h3>
+    {copies.some((copy) => copy.kind === 'raw_files') && <p>{text.rawCopy}</p>}
     {copies.map((copy) => <div key={copy.id}><h4>{text.kinds[copy.kind]}</h4><dl className="backup-result">
       <div><dt>{text.path}</dt><dd>{copy.path}</dd></div>
       <div><dt>{text.size}</dt><dd>{copy.byteLength.toLocaleString(language)} {text.bytes}</dd></div>

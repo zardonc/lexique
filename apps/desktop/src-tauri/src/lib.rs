@@ -1,7 +1,3 @@
-use std::fs::create_dir_all;
-
-use lexique_storage::initialize;
-use rusqlite::Connection;
 use tauri::{Manager, State};
 
 #[cfg(windows)]
@@ -17,6 +13,8 @@ mod backup_preview;
 mod maintenance;
 mod ocr;
 mod ocr_capture;
+#[cfg(test)]
+mod recovery_tests;
 mod restore;
 mod restore_operations;
 #[cfg(test)]
@@ -107,6 +105,11 @@ pub fn run() {
         .manage(backup_operations::BackupOperations::default())
         .manage(restore_operations::RestoreOperations::default())
         .manage(dictionaries::Registry::default())
+        .manage(selection::SelectionState::default())
+        .manage(ocr_capture::CaptureState::default())
+        .manage(startup::StartupState::new(startup::unavailable(
+            "Learning initialization has not completed",
+        )))
         .plugin(tauri_plugin_dialog::init())
         .plugin(
             tauri_plugin_global_shortcut::Builder::new()
@@ -124,24 +127,10 @@ pub fn run() {
                 .build(),
         )
         .setup(|app| {
-            #[cfg(target_os = "macos")]
-            vocabulary::coordinate_quit(app)?;
-            let directory = app.path().app_data_dir()?;
-            create_dir_all(&directory)?;
-            let database_path = directory.join(DATABASE_FILENAME);
-            app.manage(DatabasePath(database_path));
-            app.manage(selection::SelectionState::default());
-            app.manage(ocr_capture::CaptureState::default());
-            #[cfg(windows)]
-            webview_diagnostics::attach(app, app.state::<DatabasePath>().0.clone())?;
-            app.state::<maintenance::MaintenanceCoordinator>()
-                .suspend_startup()?;
-            let status = startup::load(
-                &app.state::<DatabasePath>(),
-                |_| Ok(()),
-                || initialize_learning(app.handle(), &app.state::<DatabasePath>()),
-            );
-            app.manage(startup::StartupState::new(status));
+            let status = startup::initialize(app.handle());
+            if let Err(error) = app.state::<startup::StartupState>().initialized(status) {
+                eprintln!("Could not publish startup failure: {error}");
+            }
             Ok(())
         })
         .on_window_event(|window, event| {
@@ -158,8 +147,8 @@ pub fn run() {
                     }
                     return;
                 }
-                speech_cache::report_error(
-                    &window.state::<DatabasePath>().0,
+                startup::report_lifecycle(
+                    window.app_handle(),
                     "[native-lifecycle] Window CloseRequested",
                 );
                 api.prevent_close();
@@ -259,9 +248,7 @@ fn initialize_learning(app: &tauri::AppHandle, database: &DatabasePath) -> Resul
     if app.try_state::<speech_tasks::SpeechTasks>().is_some() {
         return Err("Learning workers already exist; a controlled restart is required".into());
     }
-    let connection = Connection::open(&database.0).map_err(|error| error.to_string())?;
-    let schema_version = initialize(&connection).map_err(|error| error.to_string())?;
-    connection.close().map_err(|(_, error)| error.to_string())?;
+    startup::initialize_connection(&database.0)?;
     let resources = app
         .path()
         .resource_dir()
@@ -279,7 +266,7 @@ fn initialize_learning(app: &tauri::AppHandle, database: &DatabasePath) -> Resul
     selection_shortcut::setup(app);
     app.manage(RuntimeStatus {
         version: app.package_info().version.to_string(),
-        schema_version,
+        schema_version: lexique_storage::DATABASE_SCHEMA_VERSION,
         storage: StorageKind::Sqlite,
         audio_migration: lexique_storage::AudioMigrationStatus::default(),
         audio_cache: None,

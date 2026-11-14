@@ -166,7 +166,7 @@ mod queue_audio_tests {
 }
 
 #[cfg(target_os = "macos")]
-pub fn coordinate_quit(app: &tauri::App) -> Result<(), Box<dyn std::error::Error>> {
+pub fn coordinate_quit(app: &tauri::AppHandle) -> Result<(), Box<dyn std::error::Error>> {
     let menu = app.menu().ok_or("Default macOS menu unavailable")?;
     let app_menu = menu
         .items()?
@@ -174,10 +174,11 @@ pub fn coordinate_quit(app: &tauri::App) -> Result<(), Box<dyn std::error::Error
         .and_then(|item| item.as_submenu())
         .cloned()
         .ok_or("Default macOS application menu unavailable")?;
-    let quit = app_menu
-        .items()?
-        .pop()
-        .ok_or("Default macOS quit item unavailable")?;
+    let mut items = app_menu.items()?;
+    if items.iter().any(|item| item.id() == "lexique-quit") {
+        return Ok(());
+    }
+    let quit = items.pop().ok_or("Default macOS quit item unavailable")?;
     let label = quit
         .as_predefined_menuitem()
         .ok_or("Unexpected macOS quit item")?
@@ -188,7 +189,12 @@ pub fn coordinate_quit(app: &tauri::App) -> Result<(), Box<dyn std::error::Error
     app_menu.append(&replacement)?;
     app.on_menu_event(|app, event| {
         if event.id() == "lexique-quit" {
-            if let Err(error) = request_close(app) {
+            let result = if crate::startup::learning_available(app) {
+                request_close(app)
+            } else {
+                finish_close(app.clone())
+            };
+            if let Err(error) = result {
                 eprintln!("Could not request application close: {error}");
             }
         }
@@ -1121,10 +1127,7 @@ pub fn finish_close(app: tauri::AppHandle) -> Result<(), String> {
     let close = app
         .state::<crate::backup_operations::BackupOperations>()
         .begin_close()?;
-    crate::speech_cache::report_error(
-        &app.state::<DatabasePath>().0,
-        "[native-lifecycle] finish_close accepted",
-    );
+    crate::startup::report_lifecycle(&app, "[native-lifecycle] finish_close accepted");
     let result = app.state::<CloseAuthorization>().finish(|| {
         crate::selection::selection_cancel(app.clone())?;
         if let Some(tasks) = app.try_state::<crate::speech_tasks::SpeechTasks>() {

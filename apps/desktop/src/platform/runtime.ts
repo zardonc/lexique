@@ -18,7 +18,7 @@ import type { Locale } from '../content';
 import { interfacePreferencesSchema } from './interface';
 import type { InterfacePreferences } from './interface';
 import { backupStatusSchema, backupPreviewOperation, backupPreviewStatusSchema } from './backup';
-import type { BackupStatus, BackupPreviewStatus, RestoreStatus, StartupStatus } from './backup';
+import type { BackupStatus, BackupPreviewStatus, RawPendingRequest, RestoreStatus, StartupStatus } from './backup';
 import { restoreRuntime } from './restore';
 
 async function dictionaryUpload(file: File) {
@@ -132,7 +132,7 @@ export type BatchRequest = z.infer<typeof batchRequestSchema>;
 export type BatchStatus = z.infer<typeof batchSchema>;
 
 export interface RuntimeAdapter {
-  readonly startRestore: (operation: string) => Promise<RestoreStatus>;
+  readonly startRestore: (operation: string, pendingRequests?: readonly RawPendingRequest[]) => Promise<RestoreStatus>;
   readonly restoreStatus: (operation: string) => Promise<RestoreStatus>;
   readonly onRestoreProgress: (callback: (status: RestoreStatus) => void, failed: (cause: unknown) => void) => Promise<() => void>;
   readonly startupStatus: () => Promise<StartupStatus>;

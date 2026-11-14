@@ -124,9 +124,15 @@ function PreviewFacts({ preview, locale, countsText }: {
   </ul></div>}<p>{text.restart}</p></>;
 }
 
-function PreviewProgress({ preview, locale }: { readonly preview: ReturnType<typeof useBackupPreview>; readonly locale: Locale }) {
+const recoveryPhases = {
+  zh: { validating: '正在检查备份内容…', staging: '正在准备隔离学习数据和音频…' },
+  en: { validating: 'Checking the backup contents…', staging: 'Preparing isolated learning data and audio…' },
+  fr: { validating: 'Vérification du contenu de la sauvegarde…', staging: 'Préparation des données et audios isolés…' },
+} as const;
+
+function PreviewProgress({ preview, locale, recovery }: { readonly preview: ReturnType<typeof useBackupPreview>; readonly locale: Locale; readonly recovery: boolean }) {
   const text = messages[locale], { status } = preview;
-  let label = preview.starting ? text.working : status?.state === 'choosing' ? text.choosing : status?.state === 'running' ? text.phases[status.phase] : '';
+  let label = preview.starting ? text.working : status?.state === 'choosing' ? text.choosing : status?.state === 'running' ? (recovery ? recoveryPhases[locale] : text.phases)[status.phase] : '';
   if (preview.cancelling && label) label = text.cancelling;
   return label ? <><p role="status">{label}</p><progress aria-label={label} /></> : null;
 }
@@ -156,11 +162,12 @@ function PreviewActions({ preview, runtime, locale, blocked }: {
   </div>;
 }
 
-export function BackupPreviewSettings({ runtime, preview, locale, countsText, visible, blocked, children }: {
+export function BackupPreviewSettings({ runtime, preview, locale, countsText, visible, blocked, children, recovery = false }: {
   readonly runtime: RuntimeAdapter; readonly locale: Locale; readonly countsText: Readonly<Record<keyof BackupCounts, string>>;
   readonly preview: ReturnType<typeof useBackupPreview>;
   readonly visible: boolean; readonly blocked: boolean;
   readonly children?: ReactNode;
+  readonly recovery?: boolean;
 }) {
   const text = messages[locale];
   const { status } = preview;
@@ -168,7 +175,7 @@ export function BackupPreviewSettings({ runtime, preview, locale, countsText, vi
     <h3 id="backup-preview-heading">{text.title}</h3><p>{text.contents}</p><p>{text.resources}</p>
     {!runtime.backupAvailable() && <p>{text.desktop}</p>}
     <PreviewActions preview={preview} runtime={runtime} locale={locale} blocked={blocked} />
-    <PreviewProgress preview={preview} locale={locale} />
+    <PreviewProgress preview={preview} locale={locale} recovery={recovery} />
     <PreviewFeedback preview={preview} locale={locale} visible={visible} blocked={blocked} />
     {status?.state === 'preview_ready' && <PreviewFacts preview={status.preview} locale={locale} countsText={countsText} />}
     {children}
