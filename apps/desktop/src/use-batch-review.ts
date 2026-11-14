@@ -4,7 +4,7 @@ import type { VocabularyRecord } from './platform/vocabulary';
 import { errorMessage } from './platform/vocabulary';
 import { QueueRefresh } from './queue-refresh';
 import { subscribeReviewEvents } from './review-events';
-import { pendingBatchKey, readPendingBatch } from './pending-review-requests';
+import { pendingBatchKey, pendingReviewRevision, readPendingBatch, removePendingReview } from './pending-review-requests';
 
 function useBatchSubscription({ runtime, setPending, setError, setStatus }: {
   readonly runtime: RuntimeAdapter; readonly setPending: (value: BatchRequest | null) => void;
@@ -34,12 +34,14 @@ export function useBatchReview(runtime: RuntimeAdapter) {
   useBatchSubscription({ runtime, setPending, setError, setStatus });
   async function submit(request: BatchRequest) {
     if (submitting.current) return;
+    const revision = pendingReviewRevision();
     submitting.current = true; setWorking(true); setError('');
     try {
       localStorage.setItem(pendingBatchKey, JSON.stringify(request)); setPending(request);
       const value = await runtime.addReviewBatch(request);
       if (!value) throw new Error('Native review storage unavailable');
-      setStatus(value); localStorage.removeItem(pendingBatchKey); setPending(null);
+      if (!removePendingReview(pendingBatchKey, revision)) return;
+      setStatus(value); setPending(null);
     } catch (cause) { setError(errorMessage(cause)); }
     finally { submitting.current = false; setWorking(false); }
   }
@@ -57,11 +59,13 @@ export function useBatchReview(runtime: RuntimeAdapter) {
   }
   async function cancel() {
     if (!status) return;
-    try { await runtime.cancelReviewBatch(status.operation); setStatus(await runtime.reviewBatchStatus(status.operation)); }
+    const revision = pendingReviewRevision();
+    try { await runtime.cancelReviewBatch(status.operation); if (revision !== pendingReviewRevision()) return; setStatus(await runtime.reviewBatchStatus(status.operation)); }
     catch (cause) { setError(errorMessage(cause)); }
   }
   async function retryAudio(id: number) {
-    try { await runtime.generateSpeech(id, true); setStatus(await runtime.reviewBatchStatus()); }
+    const revision = pendingReviewRevision();
+    try { await runtime.generateSpeech(id, true); if (revision !== pendingReviewRevision()) return; setStatus(await runtime.reviewBatchStatus()); }
     catch (cause) { setError(errorMessage(cause)); }
   }
   function confirmPending(value: BatchStatus | null) { setPending(readPendingBatch()); setError(''); if (value) setStatus(value); }

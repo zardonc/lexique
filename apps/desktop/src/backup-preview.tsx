@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import type { ReactNode } from 'react';
 import type { Locale } from './content';
 import type { RuntimeAdapter } from './platform/runtime';
 import type { BackupCounts, BackupPreview, BackupPreviewStatus } from './platform/backup';
@@ -155,10 +156,11 @@ function PreviewActions({ preview, runtime, locale, blocked }: {
   </div>;
 }
 
-export function BackupPreviewSettings({ runtime, preview, locale, countsText, visible, blocked }: {
+export function BackupPreviewSettings({ runtime, preview, locale, countsText, visible, blocked, children }: {
   readonly runtime: RuntimeAdapter; readonly locale: Locale; readonly countsText: Readonly<Record<keyof BackupCounts, string>>;
   readonly preview: ReturnType<typeof useBackupPreview>;
   readonly visible: boolean; readonly blocked: boolean;
+  readonly children?: ReactNode;
 }) {
   const text = messages[locale];
   const { status } = preview;
@@ -169,5 +171,6 @@ export function BackupPreviewSettings({ runtime, preview, locale, countsText, vi
     <PreviewProgress preview={preview} locale={locale} />
     <PreviewFeedback preview={preview} locale={locale} visible={visible} blocked={blocked} />
     {status?.state === 'preview_ready' && <PreviewFacts preview={status.preview} locale={locale} countsText={countsText} />}
+    {children}
   </section>;
 }

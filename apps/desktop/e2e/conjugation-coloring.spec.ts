@@ -1,4 +1,5 @@
 import { expect, test } from '@playwright/test';
+import { nativeFixtureSetup } from './native-fixture';
 import coloring from './fixtures/conjugation-coloring.json' with { type: 'json' };
 import pronominal from './fixtures/conjugation-pronominal.json' with { type: 'json' };
 import simple from './fixtures/conjugation.json' with { type: 'json' };
@@ -6,7 +7,7 @@ import ordinary from './fixtures/conjugation-ordinary.json' with { type: 'json' 
 import defaultOrder from './fixtures/conjugation-order.json' with { type: 'json' };
 
 test.beforeEach(async ({ page }) => {
-  await page.addInitScript(({ data, order }) => {
+  await nativeFixtureSetup(page, ({ data, order }) => {
     function preferences(choice?: { mode: string }) {
       const failure = localStorage.getItem('conjugation-failure');
       if (choice) {
@@ -16,15 +17,15 @@ test.beforeEach(async ({ page }) => {
       } else if (failure === 'read') throw 'Saved coloring preference is unreadable';
       return { mode: localStorage.getItem('conjugation-mode') ?? 'ending' };
     }
-    Object.defineProperty(window, 'isTauri', { value: true });
-    Object.defineProperty(window, '__TAURI_INTERNALS__', { value: { invoke: async (command: string, args?: { key?: string; preferences?: { mode: string } }) => {
+    const native = Reflect.get(window, '__TAURI_INTERNALS__') as { invoke: (command: string, args?: { key?: string; preferences?: { mode: string } }) => Promise<unknown> };
+    native.invoke = async (command: string, args?: { key?: string; preferences?: { mode: string } }) => {
       const systemReplies = { runtime_status: () => ({ version: '0.1.0', schemaVersion: 17, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } }),
         interface_preferences: () => Reflect.get(args ?? {}, 'preferences') ?? { locale: 'zh', theme: 'white' } }; if (Object.hasOwn(systemReplies, command)) return Reflect.get(systemReplies, command)();
       if (command === 'conjugation_preferences') return preferences(args?.preferences);
       if (command === 'conjugation_block_order') return order;
       const table = data[args?.key as keyof typeof data];
       return command === 'conjugation_lookup' ? { query: args?.key, tables: table ? [table] : [] } : null;
-    } } });
+    };
   }, { data: {
     'nous avions lavé': coloring.laver, lavais: coloring.laver, finir: coloring.finir,
     'se laver': pronominal['se laver'].tables[0], 'lave-toi': pronominal['se laver'].tables[0],

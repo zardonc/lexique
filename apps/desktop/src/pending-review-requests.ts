@@ -7,6 +7,33 @@ export const pendingUndoKey = 'lexique-pending-undo';
 export const pendingBatchKey = 'lexique-pending-review-batch';
 export function pendingRatingKey(id: number) { return `${ratingPrefix}${id}`; }
 
+let revision = 0, preserving = false;
+export function pendingReviewRevision() { return revision; }
+export function releasePendingReviews() { preserving = false; revision += 1; }
+export function removePendingReview(key: string, requestRevision: number) {
+  if (preserving || requestRevision !== revision) return false;
+  localStorage.removeItem(key);
+  return true;
+}
+
+export function pendingReviewKeys() {
+  const keys: string[] = [];
+  for (let index = 0; index < localStorage.length; index += 1) {
+    const key = localStorage.key(index);
+    if (key === null) throw new Error('Could not enumerate pending review requests');
+    if (key.startsWith(ratingPrefix) || key === pendingUndoKey || key === pendingBatchKey) keys.push(key);
+  }
+  return keys;
+}
+
+export function clearPendingReviews() {
+  for (const key of pendingReviewKeys()) {
+    localStorage.removeItem(key);
+    if (localStorage.getItem(key) !== null) throw new Error('Pending review request removal was not confirmed');
+  }
+  if (pendingReviewKeys().length) throw new Error('Pending review requests remain after restore cleanup');
+}
+
 const undoSchema = z.object({ operation: z.string().min(1).max(128), ratingOperation: z.string().min(1).max(128) }).strict().readonly();
 
 function parseRating(saved: string, id: number) {
@@ -33,10 +60,11 @@ export function readPendingBatch(): BatchRequest | null {
   return request;
 }
 
-function confirm(key: string, saved: string) {
+interface Confirmation { readonly preserve: boolean; readonly revision: number }
+function confirm(key: string, saved: string, mode: Confirmation) {
   const current = localStorage.getItem(key);
-  if (current !== null && current !== saved) throw new Error('Pending review request changed. Try creating the backup again.');
-  localStorage.removeItem(key);
+  if (current !== saved && (mode.preserve || current !== null)) throw new Error('Pending review request changed. Confirm pending requests again.');
+  if (!mode.preserve) removePendingReview(key, mode.revision);
 }
 
 function validateBatch(request: BatchRequest, result: BatchStatus) {
@@ -44,7 +72,7 @@ function validateBatch(request: BatchRequest, result: BatchStatus) {
   if (result.operation !== request.operation || !result.items.every((item) => ids.delete(item.vocabulary_id))) throw new Error('Invalid pending batch response identity');
 }
 
-async function resolveBatch(runtime: RuntimeAdapter) {
+async function resolveBatch(runtime: RuntimeAdapter, mode: Confirmation) {
   const saved = localStorage.getItem(pendingBatchKey), request = readPendingBatch();
   if (saved === null || request === null) return null;
   let result = await runtime.reviewBatchStatus(request.operation);
@@ -52,26 +80,35 @@ async function resolveBatch(runtime: RuntimeAdapter) {
   if (!result || (!result.cancelled && result.items.length !== new Set(request.vocabulary_ids).size)) result = await runtime.addReviewBatch(request);
   if (!result) throw new Error('Native review storage unavailable');
   validateBatch(request, result);
-  confirm(pendingBatchKey, saved);
+  if (!result.cancelled && result.items.length !== new Set(request.vocabulary_ids).size) throw new Error('Pending review batch is not fully confirmed');
+  confirm(pendingBatchKey, saved, mode);
   return result;
 }
 
-export async function resolvePendingReviews(runtime: RuntimeAdapter) {
-  const keys = Object.keys(localStorage).filter((key) => key.startsWith(ratingPrefix));
-  for (const key of keys) {
-    const saved = localStorage.getItem(key);
-    if (saved === null) continue;
+function confirmedKeys(snapshot: ReadonlyMap<string, string | null>, preserve: boolean) {
+  const remaining = pendingReviewKeys();
+  const unchanged = remaining.length === snapshot.size && remaining.every((key) => snapshot.get(key) === localStorage.getItem(key));
+  if (preserve ? !unchanged : remaining.length > 0) throw new Error('Pending review requests changed. Confirm pending requests again.');
+}
+
+export async function resolvePendingReviews(runtime: RuntimeAdapter, preserve = false) {
+  if (preserve) { preserving = true; revision += 1; }
+  const mode = { preserve, revision }, keys = pendingReviewKeys();
+  const snapshot = new Map<string, string | null>(keys.map((key) => [key, localStorage.getItem(key)]));
+  for (const key of keys.filter((key) => key.startsWith(ratingPrefix))) {
+    const saved = snapshot.get(key);
+    if (saved == null) throw new Error('Pending review request changed. Confirm pending requests again.');
     const request = parseRating(saved, Number(key.slice(ratingPrefix.length)));
     if (!await runtime.rateReview(request)) throw new Error('Native review storage unavailable');
-    confirm(key, saved);
+    confirm(key, saved, mode);
   }
   const undo = localStorage.getItem(pendingUndoKey);
   if (undo !== null) {
     const request = readPendingUndo(null);
     if (!await runtime.undoReview(request.operation, request.ratingOperation)) throw new Error('Native undo unavailable');
-    confirm(pendingUndoKey, undo);
+    confirm(pendingUndoKey, undo, mode);
   }
-  const batch = await resolveBatch(runtime);
-  if (Object.keys(localStorage).some((key) => key.startsWith(ratingPrefix) || key === pendingUndoKey || key === pendingBatchKey)) throw new Error('Pending review requests changed. Try creating the backup again.');
+  const batch = await resolveBatch(runtime, mode);
+  confirmedKeys(snapshot, preserve);
   return batch;
 }

@@ -1,10 +1,11 @@
 import { expect, test } from '@playwright/test';
+import { nativeFixtureSetup } from './native-fixture';
 import coloring from './fixtures/conjugation-coloring.json' with { type: 'json' };
 import simple from './fixtures/conjugation.json' with { type: 'json' };
 import defaultOrder from './fixtures/conjugation-order.json' with { type: 'json' };
 
 test.beforeEach(async ({ page }) => {
-  await page.addInitScript(({ tables, order }) => {
+  await nativeFixtureSetup(page, ({ tables, order }) => {
     function preferences(choice?: { mode: string }) {
       if (choice) localStorage.setItem('conjugation-mode', choice.mode);
       return { mode: localStorage.getItem('conjugation-mode') ?? 'ending' };
@@ -19,8 +20,9 @@ test.beforeEach(async ({ page }) => {
       const saved = localStorage.getItem('conjugation-order');
       return saved ? JSON.parse(saved) : order;
     }
-    Object.defineProperty(window, 'isTauri', { value: true });
-    Object.defineProperty(window, '__TAURI_INTERNALS__', { value: { invoke: async (command: string,
+    const native = Reflect.get(window, '__TAURI_INTERNALS__') as { invoke: (command: string,
+      args?: { key?: string; order?: string[]; preferences?: { mode: string } }) => Promise<unknown> };
+    native.invoke = async (command: string,
       args?: { key?: string; order?: string[]; preferences?: { mode: string } }) => {
       const systemReplies = { runtime_status: () => ({ version: '0.1.0', schemaVersion: 17, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } }),
         interface_preferences: () => Reflect.get(args ?? {}, 'preferences') ?? { locale: 'zh', theme: 'white' } }; if (Object.hasOwn(systemReplies, command)) return Reflect.get(systemReplies, command)();
@@ -28,7 +30,7 @@ test.beforeEach(async ({ page }) => {
       if (command === 'conjugation_block_order') return blockOrder(args?.order);
       const table = tables[args?.key as keyof typeof tables];
       return command === 'conjugation_lookup' ? { query: args?.key, tables: table ? [table] : [] } : null;
-    } } });
+    };
   }, { tables: { 'nous avions lavé': coloring.laver,
     falloir: { ...simple.falloir.tables[0], verb: { ...simple.falloir.tables[0].verb, blocks: { Y: 'not_applicable' } } },
   }, order: defaultOrder });

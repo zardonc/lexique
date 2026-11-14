@@ -38,6 +38,8 @@ class NativeFixture {
 
   constructor(private readonly responses: Readonly<Record<string, readonly Reply[]>>, lookup: typeof dictionary) {
     this.defaults = { runtime_status: { version: '0.1.0', schemaVersion: 18, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } },
+      startup_status: { state: 'ready', operation: null, restored: null, retained_copies: [], error: null },
+      startup_retry: { state: 'ready', operation: null, restored: null, retained_copies: [], error: null },
       dictionary_lookup: lookup, dictionary_settings: [{ id: 'builtin', title: 'FreeDict fra-zho', content_hash: null, availability: 'available' },
         { id: 'builtin-fra-eng', title: 'FreeDict fra-eng 0.4.1', content_hash: null, availability: 'available' }],
       vocabulary_find: null, vocabulary_list: [], vocabulary_sort: 'updated-desc', finish_close: null,
@@ -92,7 +94,15 @@ class NativeFixture {
     const value=command === 'vocabulary_sort' ? args?.sort ?? this.defaults[command] : this.defaults[command];
     return command === 'review_queue' ? this.queueResponse(value) : value;
   }
+  private eventFailure(command: string, args?: Record<string, unknown>) {
+    const key = `${command}:${String(args?.event)}`, replies = this.responses[key];
+    if (!replies) return;
+    const index = this.indexes[key] ?? 0; this.indexes[key] = index + 1;
+    const error = replies[Math.min(index, replies.length - 1)].error;
+    if (error !== undefined) throw error;
+  }
   private event(command: string, args?: Record<string, unknown>) {
+    this.eventFailure(command, args);
     if (command === 'plugin:event|listen') {
       const id = Math.max(0, ...this.listeners.keys()) + 1;
       this.listeners.set(id, { event: String(args?.event), handler: Number(args?.handler) }); return id;
@@ -132,6 +142,12 @@ class NativeFixture {
     const request = args?.request as { operation: string };
     return this.defaults.review_batch_status = batch.operation === 'fixture' ? { ...batch, operation: request.operation } : batch;
   }
+  keepStartupBridge() {
+    const native = Reflect.get(window, '__TAURI_INTERNALS__') as { invoke: (command: string, args?: Record<string, unknown>, options?: Call['options']) => Promise<unknown> };
+    const learningInvoke = native.invoke;
+    native.invoke = (command, args, options) => command.startsWith('plugin:event|') || ['startup_status', 'startup_retry'].includes(command)
+      ? this.invoke(command, args, options) : learningInvoke(command, args, options);
+  }
   install() {
     window.testNative = { calls: this.calls, close: () => this.emit('lexique-close-requested'), emit: (event, payload) => this.emit(event, payload),
       release: (gate) => { this.gates.get(gate)?.(); this.gates.delete(gate); } };
@@ -150,6 +166,11 @@ class NativeFixture {
 export async function nativeFixture(page: Page, responses: Readonly<Record<string, readonly Reply[]>> = {}) {
   // Serialize the complete self-contained fixture, so browser callbacks share one registry.
   await page.addInitScript(`new (${NativeFixture.toString()})(${JSON.stringify(responses)}, ${JSON.stringify(dictionary)}).install();`);
+}
+
+export async function nativeFixtureSetup<Arg>(page: Page, initialize: (data: Arg) => void, data: Arg) {
+  await page.addInitScript(`const startupFixture = new (${NativeFixture.toString()})({}, ${JSON.stringify(dictionary)});
+    startupFixture.install(); (${initialize.toString()})(${JSON.stringify(data)}); startupFixture.keepStartupBridge();`);
 }
 
 export async function collect(page: Page) {
