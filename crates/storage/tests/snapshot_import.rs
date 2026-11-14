@@ -960,3 +960,132 @@ fn imported_audio_keeps_shared_selection_legacy_nulls_absolute_protection_and_un
         0
     );
 }
+
+#[test]
+fn snapshot_import_rolls_back_partial_writes_when_sqlite_runs_out_of_pages() {
+    let mut target = Connection::open_in_memory().unwrap();
+    initialize(&target).unwrap();
+    let pages: i64 = target
+        .pragma_query_value(None, "page_count", |row| row.get(0))
+        .unwrap();
+    let free_pages: i64 = target
+        .pragma_query_value(None, "freelist_count", |row| row.get(0))
+        .unwrap();
+    target.pragma_update(None, "max_page_count", pages).unwrap();
+    let changes = target.total_changes();
+
+    let mut source = Connection::open_in_memory().unwrap();
+    initialize(&source).unwrap();
+    saved_word(&mut source, "save-small", "petit");
+    for index in 0..free_pages + 2 {
+        saved_word(
+            &mut source,
+            &format!("save-large-{index}"),
+            &format!("grand-{index}"),
+        );
+    }
+    let mut snapshot = export_learning_snapshot(&mut source, CAPTURED_AT).unwrap();
+    for record in snapshot.records.iter_mut().skip(1) {
+        record.notes = "x".repeat(20_000);
+    }
+    validate_learning_snapshot(&snapshot, CAPTURED_AT).unwrap();
+    let error = import_learning_snapshot(&mut target, &snapshot, CAPTURED_AT).unwrap_err();
+    assert!(matches!(
+        error,
+        StorageError::Database(rusqlite::Error::SqliteFailure(failure, _))
+            if failure.code == rusqlite::ErrorCode::DiskFull
+    ));
+    assert!(target.total_changes() > changes);
+    assert!(target.is_autocommit());
+    assert!(list(&target, "", "headword-asc").unwrap().is_empty());
+    assert!(review_card_inventory(&target).unwrap().is_empty());
+    assert!(latest_batch(&target).unwrap().is_none());
+    assert_eq!(review_settings(&target).unwrap().retention_percent, 90);
+    assert_eq!(review_settings(&target).unwrap().new_limit, 20);
+    assert_eq!(review_settings(&target).unwrap().review_limit, 50);
+    assert!(
+        !target
+            .prepare("SELECT 1 FROM save_operations UNION ALL SELECT 1 FROM app_metadata LIMIT 1")
+            .unwrap()
+            .exists([])
+            .unwrap()
+    );
+    assert_eq!(initialize(&target).unwrap(), 18);
+    assert!(
+        !target
+            .prepare("PRAGMA foreign_key_check")
+            .unwrap()
+            .exists([])
+            .unwrap()
+    );
+}
+
+#[test]
+fn snapshot_import_rejects_populated_or_incompatible_destinations_without_writes() {
+    let mut source = Connection::open_in_memory().unwrap();
+    initialize(&source).unwrap();
+    saved_word(&mut source, "save-source", "école");
+    let snapshot = export_learning_snapshot(&mut source, CAPTURED_AT).unwrap();
+
+    let mut target = Connection::open_in_memory().unwrap();
+    initialize(&target).unwrap();
+    let preserved = saved_word(&mut target, "save-destination", "reste");
+    let changes = target.total_changes();
+    let error = import_learning_snapshot(&mut target, &snapshot, CAPTURED_AT).unwrap_err();
+    assert!(
+        matches!(error, StorageError::Invalid(message) if message.contains("empty destination"))
+    );
+    assert_eq!(target.total_changes(), changes);
+    assert_eq!(get(&target, preserved).unwrap().headword, "reste");
+    assert_eq!(list(&target, "", "headword-asc").unwrap().len(), 1);
+    assert!(target.is_autocommit());
+
+    let mut metadata_target = Connection::open_in_memory().unwrap();
+    initialize(&metadata_target).unwrap();
+    metadata_target
+        .execute(
+            "INSERT INTO app_metadata(key,value) VALUES('existing-setting','synthetic-value')",
+            [],
+        )
+        .unwrap();
+    let changes = metadata_target.total_changes();
+    let error = import_learning_snapshot(&mut metadata_target, &snapshot, CAPTURED_AT).unwrap_err();
+    assert!(
+        matches!(error, StorageError::Invalid(message) if message.contains("empty destination"))
+    );
+    assert_eq!(metadata_target.total_changes(), changes);
+    assert_eq!(
+        metadata_target
+            .query_row(
+                "SELECT value FROM app_metadata WHERE key='existing-setting'",
+                [],
+                |row| row.get::<_, String>(0),
+            )
+            .unwrap(),
+        "synthetic-value"
+    );
+
+    for schema in [0_u32, 17, 19, 99] {
+        let mut incompatible = Connection::open_in_memory().unwrap();
+        if schema != 0 {
+            initialize(&incompatible).unwrap();
+        }
+        incompatible
+            .pragma_update(None, "user_version", schema)
+            .unwrap();
+        let changes = incompatible.total_changes();
+        let error =
+            import_learning_snapshot(&mut incompatible, &snapshot, CAPTURED_AT).unwrap_err();
+        assert!(
+            matches!(error, StorageError::Invalid(message) if message.contains("initialized destination"))
+        );
+        assert_eq!(incompatible.total_changes(), changes);
+        assert_eq!(
+            incompatible
+                .pragma_query_value(None, "user_version", |row| row.get::<_, u32>(0))
+                .unwrap(),
+            schema
+        );
+        assert!(incompatible.is_autocommit());
+    }
+}
