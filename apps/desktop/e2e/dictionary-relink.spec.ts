@@ -47,6 +47,8 @@ test('different content waits for explicit confirmation and cancellation keeps t
   await expect(dialog.getByRole('button', { name: '确认使用此 MDX', exact: true })).toBeDisabled();
   await page.keyboard.press('Escape');
   await expect(dialog).toBeVisible();
+  // The busy dialog appears before the file read reaches the held IPC reply.
+  await expect.poll(() => page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'dictionary_relink').length)).toBe(3);
   await page.evaluate(() => window.testNative.release('relink-commit'));
   await expect(dialog).not.toBeVisible();
   await expect(row).not.toContainText('待补齐 MDX');
