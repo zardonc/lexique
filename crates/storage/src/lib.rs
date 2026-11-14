@@ -29,6 +29,8 @@ mod learning_snapshot;
 pub use learning_snapshot::*;
 mod snapshot_export;
 pub use snapshot_export::*;
+mod snapshot_import;
+pub use snapshot_import::import_learning_snapshot;
 mod snapshot_validation;
 pub use snapshot_validation::{read_learning_snapshot, validate_learning_snapshot};
 
