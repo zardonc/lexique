@@ -174,7 +174,7 @@ pub fn speech_asset(
     key: &str,
     now: i64,
 ) -> Result<Option<SpeechAsset>, StorageError> {
-    Ok(connection.query_row("SELECT a.semantic_key,v.content_hash,v.generated_at,v.locator,v.physical_locator FROM speech_assets a JOIN audio_version_protection v ON v.locator=a.current_version WHERE a.semantic_key=?1 AND v.gc_state='live' AND (v.expires_at>?2 OR (v.context='word' AND (v.owned OR v.migrating)))",params![key,now],|r|Ok(SpeechAsset{semantic_key:r.get(0)?,content_hash:r.get(1)?,generated_at:r.get(2)?,locator:r.get(3)?,physical_locator:r.get(4)?})).optional()?)
+    Ok(connection.query_row("SELECT a.semantic_key,v.content_hash,COALESCE(v.generated_at,0),v.locator,v.physical_locator FROM speech_assets a JOIN audio_version_protection v ON v.locator=a.current_version WHERE a.semantic_key=?1 AND v.gc_state='live' AND (v.expires_at>?2 OR (v.context='word' AND (v.owned OR v.migrating)))",params![key,now],|r|Ok(SpeechAsset{semantic_key:r.get(0)?,content_hash:r.get(1)?,generated_at:r.get(2)?,locator:r.get(3)?,physical_locator:r.get(4)?})).optional()?)
 }
 
 pub fn word_audio_keys(connection: &Connection, id: i64) -> Result<Vec<String>, StorageError> {
@@ -194,7 +194,7 @@ pub fn word_audio_assets(
     for chunk in ids.chunks(100) {
         let placeholders = vec!["?"; chunk.len()].join(",");
         let mut query = connection.prepare(&format!(
-            "WITH ranked AS (SELECT o.vocabulary_id,a.semantic_key,v.content_hash,v.generated_at,v.locator,v.physical_locator,v.gc_state,v.expires_at,v.owned,v.migrating,ROW_NUMBER() OVER(PARTITION BY o.vocabulary_id ORDER BY v.generated_at DESC,a.semantic_key) AS rank FROM speech_assets a JOIN speech_owners o USING(semantic_key) JOIN audio_version_protection v ON v.locator=a.current_version WHERE o.vocabulary_id IN ({placeholders})) SELECT vocabulary_id,semantic_key,content_hash,generated_at,locator,physical_locator FROM ranked WHERE rank<=20 AND gc_state='live' AND (expires_at>? OR owned OR migrating) ORDER BY vocabulary_id,rank"
+            "WITH ranked AS (SELECT o.vocabulary_id,a.semantic_key,v.content_hash,v.generated_at,v.locator,v.physical_locator,v.gc_state,v.expires_at,v.owned,v.migrating,ROW_NUMBER() OVER(PARTITION BY o.vocabulary_id ORDER BY v.generated_at DESC,a.semantic_key) AS rank FROM speech_assets a JOIN speech_owners o USING(semantic_key) JOIN audio_version_protection v ON v.locator=a.current_version WHERE o.vocabulary_id IN ({placeholders})) SELECT vocabulary_id,semantic_key,content_hash,COALESCE(generated_at,0),locator,physical_locator FROM ranked WHERE rank<=20 AND gc_state='live' AND (expires_at>? OR owned OR migrating) ORDER BY vocabulary_id,rank"
         ))?;
         let parameters = chunk.iter().copied().chain(std::iter::once(now));
         let rows = query.query_map(rusqlite::params_from_iter(parameters), |row| {

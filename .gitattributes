@@ -1,4 +1,6 @@
 * text=auto eol=lf
+resources/backup-dependencies/**/LICENSE* -text
+resources/backup-dependencies/**/NOTICES.md -text
 *.png binary
 *.ico binary
 tools/mdict-probe/tests/fixtures/*.mdx binary

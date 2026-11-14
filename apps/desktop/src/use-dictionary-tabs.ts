@@ -5,7 +5,7 @@ import type { RuntimeAdapter } from './platform/runtime';
 import type { DictionaryView } from './conjugation-navigation';
 
 interface Visit { readonly result?: DictionaryLookup | null; readonly error?: DictionaryFailure }
-const builtin = [{ id: 'builtin', title: 'FreeDict fra-zho' }];
+const builtin: DictionaryCatalog = [{ id: 'builtin', title: 'FreeDict fra-zho', content_hash: null, availability: 'missing' }];
 
 function initialVisits(initial?: DictionaryView): Readonly<Record<string, Visit>> {
   if (!initial) return {};

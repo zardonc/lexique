@@ -27,10 +27,16 @@ pub async fn conjugation_lookup(
 #[tauri::command]
 pub async fn conjugation_preferences(
     path: State<'_, DatabasePath>,
+    maintenance: State<'_, crate::maintenance::MaintenanceCoordinator>,
     preferences: Option<lexique_storage::ConjugationPreferences>,
 ) -> Result<lexique_storage::ConjugationPreferences, String> {
+    let admission = preferences
+        .as_ref()
+        .map(|_| maintenance.admit())
+        .transpose()?;
     let path = DatabasePath(path.0.clone());
     tauri::async_runtime::spawn_blocking(move || {
+        let _admission = admission;
         let connection = open(&path)?;
         if let Some(preferences) = preferences {
             lexique_storage::set_conjugation_preferences(&connection, &preferences)
@@ -45,10 +51,13 @@ pub async fn conjugation_preferences(
 #[tauri::command]
 pub async fn conjugation_block_order(
     path: State<'_, DatabasePath>,
+    maintenance: State<'_, crate::maintenance::MaintenanceCoordinator>,
     order: Option<lexique_storage::ConjugationBlockOrder>,
 ) -> Result<lexique_storage::ConjugationBlockOrder, String> {
+    let admission = order.as_ref().map(|_| maintenance.admit()).transpose()?;
     let path = DatabasePath(path.0.clone());
     tauri::async_runtime::spawn_blocking(move || {
+        let _admission = admission;
         let connection = open(&path)?;
         if let Some(order) = order {
             lexique_storage::set_conjugation_block_order(&connection, &order)

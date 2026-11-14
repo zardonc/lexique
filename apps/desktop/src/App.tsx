@@ -24,6 +24,8 @@ import { SelectionSettings } from './selection-settings';
 import { lookupInputMessages } from './lookup-input-content';
 import { DictionarySettings } from './dictionary-settings';
 import { DictionaryResources } from './dictionary-resources';
+import { useInterfacePreferences } from './use-interface-preferences';
+import { BackupSettings } from './backup-settings';
 
 const themes: readonly Theme[] = ['white', 'sepia', 'dark'];
 const locales: readonly Locale[] = ['zh', 'en', 'fr'];
@@ -32,26 +34,29 @@ const languageTags = { zh: 'zh-CN', en: 'en', fr: 'fr' } as const;
 
 interface HeaderProps {
   readonly text: Messages;
-  readonly locale: Locale;
-  readonly theme: Theme;
-  readonly onLocale: (locale: Locale) => void;
-  readonly onTheme: (theme: Theme) => void;
+  readonly preferences: ReturnType<typeof useInterfacePreferences>;
   readonly onLocal: () => void;
   readonly selectionError: string;
 }
 
-function Header({ text, locale, theme, onLocale, onTheme, onLocal, selectionError }: HeaderProps) {
+function Header({ text, preferences, onLocal, selectionError }: HeaderProps) {
+  const { locale, theme } = preferences.value;
+  const description = preferences.message || preferences.error ? 'interface-preferences-state' : undefined;
   return <header className="topbar"><span className="preview-label">{text.preview}</span><div className="preferences">
     <button type="button" onMouseDown={(event) => event.preventDefault()} onClick={onLocal}>{lookupInputMessages[locale].local}</button>
-    <select aria-label={text.language} value={locale} onChange={(event) => {
+    <select aria-label={text.language} aria-describedby={description} value={locale} disabled={preferences.disabled} onChange={(event) => {
       const value = locales.find((candidate) => candidate === event.target.value);
-      if (value) onLocale(value);
+      if (value) void preferences.choose({ ...preferences.value, locale: value });
     }}>{locales.map((value, index) => <option key={value} value={value}>{localeNames[index]}</option>)}</select>
-    <select aria-label={text.theme} value={theme} onChange={(event) => {
+    <select aria-label={text.theme} aria-describedby={description} value={theme} disabled={preferences.disabled} onChange={(event) => {
       const value = themes.find((candidate) => candidate === event.target.value);
-      if (value) onTheme(value);
+      if (value) void preferences.choose({ ...preferences.value, theme: value });
     }}>{themes.map((value, index) => <option key={value} value={value}>{text.themes[index]}</option>)}</select>
-  </div>{selectionError && <p role="alert">{selectionError}</p>}</header>;
+  </div>{(preferences.message || preferences.error) && <div className="interface-preferences-state" id="interface-preferences-state">
+    <p aria-live="polite">{preferences.message}</p>
+    {preferences.error && <div role="alert">{preferences.text.failed}: {preferences.error}
+      <button disabled={preferences.busy} onClick={preferences.retry}>{preferences.text.retry}</button></div>}
+  </div>}{selectionError && <p role="alert">{selectionError}</p>}</header>;
 }
 
 function PageIntroduction({ page, text }: { readonly page: number; readonly text: Messages }) {
@@ -62,28 +67,35 @@ function PageIntroduction({ page, text }: { readonly page: number; readonly text
 
 function pageTitleId(page: number) { return page === 3 || page === 1 ? 'main-page-heading' : 'page-title'; }
 
+function SettingsPanels({ runtime, locale }: { readonly runtime: RuntimeAdapter; readonly locale: Locale }) {
+  return <><ReviewSettingsPanel runtime={runtime} locale={locale} /><SpeechSettings runtime={runtime} locale={locale} />
+    <SelectionSettings runtime={runtime} locale={locale} /><SelectionSettings runtime={runtime} locale={locale} ocr />
+    <DictionarySettings runtime={runtime} locale={locale} /><DictionaryResources runtime={runtime} locale={locale} /></>;
+}
+
 export function App({ runtime }: { readonly runtime: RuntimeAdapter }) {
-  const [locale, setLocale] = useState<Locale>('zh');
-  const [theme, setTheme] = useState<Theme>('white');
-  const [collapsed, setCollapsed] = useState(false);
+  const preferences = useInterfacePreferences(runtime);
+  const { locale, theme } = preferences.value;
+  const [collapsed, setCollapsed] = useState(false), [backupPaused, setBackupPaused] = useState(false);
   const batch = useBatchReview(runtime);
   const [reviewVersion, setReviewVersion] = useState(0);
   const reviewChanged = () => setReviewVersion((value) => value + 1);
-  const text = messages[locale];
-  const notebookText = notebookMessages[locale];
+  const text = messages[locale], notebookText = notebookMessages[locale];
   const notebook = useNotebook(runtime);
-  const guard = useLeaveGuard(runtime, notebook, false);
+  const guard = useLeaveGuard(runtime, notebook, batch.working);
   const navigation = useLookupNavigation((action) => guard.request(() => { notebook.clear(); action(); }));
   const page = navigation.page;
   const selection = useSelectionInput(runtime, { page, locale }, navigation.openInput);
   useEffect(() => { document.documentElement.lang = languageTags[locale]; }, [locale]);
   return <ExampleSpeechGroup><div className="app" data-theme={theme} data-collapsed={collapsed}>
     <a className="skip-link" href="#main-content">{text.skip}</a>
-    <Navigation text={text} selected={page} collapsed={collapsed} disabled={false} onSelect={navigation.changePage} onToggle={() => setCollapsed((value) => !value)} />
-    <div className="workspace"><Header text={text} locale={locale} theme={theme} onLocale={setLocale} onTheme={setTheme} onLocal={selection.local} selectionError={selection.error} />
+    <Navigation text={text} selected={page} collapsed={collapsed} disabled={backupPaused} onSelect={navigation.changePage} onToggle={() => setCollapsed((value) => !value)} />
+    <div className="workspace"><fieldset className="backup-controls" disabled={backupPaused}><Header text={text} preferences={preferences} onLocal={selection.local} selectionError={selection.error} /></fieldset>
       <main id="main-content" tabIndex={-1}>
         <p className="eyebrow">{text.eyebrow}</p><h1 id="main-page-heading">{text.modules[page]}</h1>
         <section className="page-content" aria-labelledby={pageTitleId(page)}>
+          <BackupSettings runtime={runtime} locale={locale} beforeStart={(action) => guard.request(() => { notebook.clear(); action(); })} onPause={setBackupPaused} onResolved={batch.confirmPending} visible={page === 7} />
+          <fieldset className="backup-controls" disabled={backupPaused}>
           <PageIntroduction page={page} text={text} />
           {page === 0 ? <DictionaryPanel runtime={runtime} text={text.dictionary} notebookText={notebookText} version={notebook.version}
             preserveExcerpt={notebook.preservesExcerpt} locale={locale} initial={navigation.dictionary} onConjugation={navigation.openConjugation}
@@ -95,8 +107,7 @@ export function App({ runtime }: { readonly runtime: RuntimeAdapter }) {
               onOpen={(record) => guard.request(() => notebook.open(record))} /> : page === 3 ? <ReviewQueuePanel runtime={runtime} locale={locale} text={notebookText} /> : page === 5 ?
             <LookupInputPanel runtime={runtime} locale={locale} selection={selection.input} onCancel={selection.cancel}
               onDictionary={navigation.openDictionaryResult} /> : page === 7 ?
-            <><ReviewSettingsPanel runtime={runtime} locale={locale} /><SpeechSettings runtime={runtime} locale={locale} />
-              <SelectionSettings runtime={runtime} locale={locale} /><SelectionSettings runtime={runtime} locale={locale} ocr /><DictionarySettings runtime={runtime} locale={locale} /><DictionaryResources runtime={runtime} locale={locale} /></> :
+            <SettingsPanels runtime={runtime} locale={locale} /> :
             <div className="empty-state"><p>{text.pending[page]}</p><small>{text.scaffold}</small></div>}
           <VocabularyEditor notebook={notebook} text={notebookText} runtime={runtime} onReviewChanged={reviewChanged} viewExisting={() => {
             if (notebook.existing) { const record = notebook.existing; guard.request(() => notebook.open(record)); }
@@ -104,7 +115,7 @@ export function App({ runtime }: { readonly runtime: RuntimeAdapter }) {
           {page === 2 && notebook.editor && <RecordOriginal reference={notebook.editor.snapshot.reference}
             runtime={runtime} text={text.dictionary} title={notebookText.original} />}
           {guard.error && <p role="alert">{notebookText.closeError}: {guard.error}</p>}
-          <BatchProgress batch={batch} text={notebookText} />
+          <BatchProgress batch={batch} text={notebookText} /></fieldset>
         </section>
         <RuntimeStatusPanel runtime={runtime} text={text} />
       </main>

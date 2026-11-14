@@ -9,13 +9,21 @@ mod audio_maintenance;
 mod conjugation;
 mod dictionaries;
 mod dictionary_links;
+mod interface;
+use interface::interface_preferences;
+mod backup;
+mod backup_operations;
+mod backup_preview;
+mod maintenance;
 mod ocr;
 mod ocr_capture;
 mod review_window;
 mod selection;
 mod selection_shortcut;
 use conjugation::{conjugation_block_order, conjugation_lookup, conjugation_preferences};
-use dictionaries::{dictionary_import, dictionary_lookup, dictionary_remove, dictionary_settings};
+use dictionaries::{
+    dictionary_import, dictionary_lookup, dictionary_relink, dictionary_remove, dictionary_settings,
+};
 mod speech_cache;
 mod speech_tasks;
 mod vocabulary;
@@ -87,7 +95,10 @@ async fn runtime_status(
 pub fn run() {
     tauri::Builder::default()
         .manage(vocabulary::CloseAuthorization::default())
+        .manage(maintenance::MaintenanceCoordinator::default())
+        .manage(backup_operations::BackupOperations::default())
         .manage(dictionaries::Registry::default())
+        .plugin(tauri_plugin_dialog::init())
         .plugin(
             tauri_plugin_global_shortcut::Builder::new()
                 .with_handler(|app, shortcut, event| {
@@ -166,6 +177,7 @@ pub fn run() {
             dictionary_lookup,
             dictionary_settings,
             dictionary_import,
+            dictionary_relink,
             dictionary_remove,
             dictionary_links::dictionary_resource_open,
             frequency_lookup,
@@ -181,6 +193,7 @@ pub fn run() {
             ocr_capture::ocr_abort,
             conjugation_lookup,
             conjugation_preferences,
+            interface_preferences,
             conjugation_block_order,
             vocabulary_find,
             vocabulary_list,
@@ -205,6 +218,12 @@ pub fn run() {
             speech_generate,
             speech_preview,
             speech_preferences,
+            backup_operations::backup_export_start,
+            backup_operations::backup_operation_status,
+            backup_operations::backup_operation_cancel,
+            backup_operations::backup_preview_start,
+            backup_operations::backup_preview_status,
+            backup_operations::backup_preview_cancel,
             finish_close
         ])
         .build(tauri::generate_context!())

@@ -18,7 +18,8 @@ test.beforeEach(async ({ page }) => {
     }
     Object.defineProperty(window, 'isTauri', { value: true });
     Object.defineProperty(window, '__TAURI_INTERNALS__', { value: { invoke: async (command: string, args?: { key?: string; preferences?: { mode: string } }) => {
-      if (command === 'runtime_status') return { version: '0.1.0', schemaVersion: 17, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } };
+      const systemReplies = { runtime_status: () => ({ version: '0.1.0', schemaVersion: 17, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } }),
+        interface_preferences: () => Reflect.get(args ?? {}, 'preferences') ?? { locale: 'zh', theme: 'white' } }; if (Object.hasOwn(systemReplies, command)) return Reflect.get(systemReplies, command)();
       if (command === 'conjugation_preferences') return preferences(args?.preferences);
       if (command === 'conjugation_block_order') return order;
       const table = data[args?.key as keyof typeof data];

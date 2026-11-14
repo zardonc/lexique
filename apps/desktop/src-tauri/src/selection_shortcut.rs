@@ -150,7 +150,12 @@ async fn preference(
     index: usize,
     shortcut: Option<String>,
 ) -> Result<ShortcutStatus, String> {
+    let admission = shortcut
+        .as_ref()
+        .map(|_| crate::maintenance::admit_app(&app))
+        .transpose()?;
     tauri::async_runtime::spawn_blocking(move || {
+        let _admission = admission;
         if let Some(shortcut) = shortcut {
             return replace(&app, index, shortcut);
         }

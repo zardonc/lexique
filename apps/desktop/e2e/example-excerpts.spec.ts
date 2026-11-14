@@ -68,7 +68,8 @@ test('exact duplicate focuses original; translation and source differences survi
 
 test('switching dictionary retains frozen excerpt source and pasted input', async ({ page }) => {
   const second = { ...dictionary, dictionary_id: 'builtin-fra-eng', source: { ...dictionary.source, title: 'Second dictionary' } };
-  await nativeFixture(page, { dictionary_settings: [{ value: [{ id: 'builtin', title: 'First' }, { id: 'builtin-fra-eng', title: 'Second' }] }],
+  await nativeFixture(page, { dictionary_settings: [{ value: [{ id: 'builtin', title: 'First', content_hash: null, availability: 'available' },
+    { id: 'builtin-fra-eng', title: 'Second', content_hash: null, availability: 'available' }] }],
     dictionary_lookup: [{ value: dictionary }, { value: second }], vocabulary_find: [{ value: record }] });
   await page.goto('/'); await page.getByLabel('法语词或词组').fill('école'); await page.getByRole('button', { name: '查词', exact: true }).click();
   await page.getByRole('button', { name: '摘录例句', exact: true }).click(); await page.getByLabel('摘录法语').fill('Une école.');
