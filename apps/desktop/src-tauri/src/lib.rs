@@ -13,6 +13,7 @@ mod interface;
 use interface::interface_preferences;
 mod backup;
 mod backup_operations;
+mod backup_preview;
 mod maintenance;
 mod ocr;
 mod ocr_capture;
@@ -220,6 +221,9 @@ pub fn run() {
             backup_operations::backup_export_start,
             backup_operations::backup_operation_status,
             backup_operations::backup_operation_cancel,
+            backup_operations::backup_preview_start,
+            backup_operations::backup_preview_status,
+            backup_operations::backup_preview_cancel,
             finish_close
         ])
         .build(tauri::generate_context!())

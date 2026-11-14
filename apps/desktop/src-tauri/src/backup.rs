@@ -112,9 +112,11 @@ pub struct BackupResult {
 }
 
 pub struct ValidatedBackup {
+    pub byte_length: u64,
     pub manifest: BackupManifest,
     pub snapshot: LearningSnapshot,
     pub audio_directory: PathBuf,
+    pub audio_lengths: BTreeMap<String, u64>,
 }
 
 pub struct OwnedDirectory(pub PathBuf);
@@ -141,6 +143,12 @@ impl OwnedDirectory {
         }
         Err("Could not reserve a new backup staging directory".into())
     }
+
+    pub(crate) fn keep(mut self) -> PathBuf {
+        let path = std::mem::take(&mut self.0);
+        std::mem::forget(self);
+        path
+    }
 }
 
 impl Drop for OwnedDirectory {
@@ -159,9 +167,9 @@ fn check_cancelled(cancelled: &AtomicBool) -> Result<(), String> {
     }
 }
 
-struct CancelledReader<'a, R> {
-    reader: R,
-    cancelled: &'a AtomicBool,
+pub(crate) struct CancelledReader<'a, R> {
+    pub(crate) reader: R,
+    pub(crate) cancelled: &'a AtomicBool,
 }
 impl<R: Read> Read for CancelledReader<'_, R> {
     fn read(&mut self, bytes: &mut [u8]) -> io::Result<usize> {
@@ -445,6 +453,13 @@ pub fn validate_backup(
         return Err("Backup validation requires an empty owned staging directory".into());
     }
     let file = File::open(archive_path).map_err(|e| format!("Could not read backup: {e}"))?;
+    let byte_length = file
+        .metadata()
+        .map_err(|e| format!("Could not read backup size: {e}"))?
+        .len();
+    if !(1..=SAFE_INTEGER).contains(&byte_length) {
+        return Err("Unsupported backup file size".into());
+    }
     let mut archive =
         ZipArchive::new(BufReader::new(file)).map_err(|e| format!("Invalid backup ZIP: {e}"))?;
     if archive.has_duplicate_names() {
@@ -546,6 +561,7 @@ pub fn validate_backup(
     let audio_directory = staging.join("audio");
     fs::create_dir(&audio_directory)
         .map_err(|e| format!("Could not create validated audio directory: {e}"))?;
+    let mut audio_lengths = BTreeMap::new();
     for hash in hashes {
         check_cancelled(cancelled)?;
         let entry = archive
@@ -589,12 +605,15 @@ pub fn validate_backup(
         .write_all(&bytes)
         .and_then(|()| file.sync_all())
         .map_err(|e| format!("Could not write validated audio: {e}"))?;
+        audio_lengths.insert(hash.to_owned(), bytes.len() as u64);
     }
     check_cancelled(cancelled)?;
     Ok(ValidatedBackup {
+        byte_length,
         manifest,
         snapshot,
         audio_directory,
+        audio_lengths,
     })
 }
 
@@ -979,6 +998,502 @@ mod tests {
                 .to_string_lossy()
                 .starts_with(".lexique-backup-")
         }));
+    }
+
+    #[test]
+    fn preview_stages_empty_and_saved_learning_in_an_owned_root_without_live_changes() {
+        for vocabulary_count in [0, 1] {
+            let directory = Directory::new();
+            let database = directory.database();
+            let mut connection = rusqlite::Connection::open(&database.0).unwrap();
+            storage::initialize(&connection).unwrap();
+            let id = (vocabulary_count == 1).then(|| save_word(&mut connection, "école"));
+            let captured_at = 1_794_564_000;
+            let mut snapshot =
+                storage::export_learning_snapshot(&mut connection, captured_at).unwrap();
+            if vocabulary_count == 1 {
+                snapshot.dictionary_catalog.next_id = 2;
+                snapshot.dictionary_catalog.entries.insert(
+                    0,
+                    storage::DictionaryCatalogEntry {
+                        id: "mdx-1".into(),
+                        title: "Dictionnaire personnel".into(),
+                        content_hash: None,
+                    },
+                );
+            }
+            let manifest = BackupManifest {
+                kind: "lexique-backup".into(),
+                format_version: 1,
+                snapshot_version: 1,
+                created_at: captured_at,
+                application_version: "0.1.0".into(),
+                counts: BackupCounts::from_snapshot(&snapshot),
+            };
+            let source = directory.0.join("selected.lexique-backup");
+            fixture_archive(
+                &source,
+                &[
+                    (
+                        "manifest.json".into(),
+                        serde_json::to_vec(&manifest).unwrap(),
+                    ),
+                    (
+                        "snapshot.json".into(),
+                        serde_json::to_vec(&snapshot).unwrap(),
+                    ),
+                ],
+            );
+            let app_data = directory.0.join("app-data");
+            fs::create_dir(&app_data).unwrap();
+            let stage = crate::backup_preview::prepare_preview(
+                &source,
+                &app_data,
+                &AtomicBool::new(false),
+                |_| {},
+            )
+            .unwrap();
+            assert!(stage.root().starts_with(&app_data));
+            assert_eq!(
+                stage.database(),
+                stage.root().join("learning/lexique.sqlite3")
+            );
+            assert_eq!(
+                stage.audio_directory(),
+                crate::speech_cache::managed_audio_directory(stage.database()).unwrap()
+            );
+            assert_ne!(stage.audio_directory(), stage.database().parent().unwrap());
+            assert_eq!(stage.preview().filename, "selected.lexique-backup");
+            assert_eq!(
+                stage.preview().byte_length,
+                fs::metadata(&source).unwrap().len()
+            );
+            assert_eq!(stage.preview().created_at, captured_at);
+            assert_eq!(stage.preview().counts.vocabulary, vocabulary_count);
+            assert!(stage.preview().requires_restart);
+            assert_eq!(stage.preview().counts.custom_dictionaries, vocabulary_count);
+            assert_eq!(
+                stage.preview().pending_dictionaries.len(),
+                vocabulary_count as usize
+            );
+            if vocabulary_count == 1 {
+                assert_eq!(stage.preview().pending_dictionaries[0].id, "mdx-1");
+                assert_eq!(
+                    stage.preview().pending_dictionaries[0].title,
+                    "Dictionnaire personnel"
+                );
+            }
+            let restored = rusqlite::Connection::open_with_flags(
+                stage.database(),
+                rusqlite::OpenFlags::SQLITE_OPEN_READ_ONLY,
+            )
+            .unwrap();
+            let count: i64 = restored
+                .query_row("SELECT count(*) FROM vocabulary", [], |row| row.get(0))
+                .unwrap();
+            assert_eq!(count, vocabulary_count as i64);
+            if let Some(id) = id {
+                let record = storage::get(&restored, id).unwrap();
+                assert_eq!(record.headword, "école");
+                assert_eq!(record.notes, "Mes notes\n个人笔记");
+                assert_eq!(record.example_fr, "Une école.");
+                assert_eq!(record.example_zh, "学校");
+                assert!(record.example_source.is_none());
+                assert_eq!(storage::get(&connection, id).unwrap().notes, record.notes);
+            }
+            let integrity: String = restored
+                .query_row("PRAGMA integrity_check", [], |row| row.get(0))
+                .unwrap();
+            assert_eq!(integrity, "ok");
+            drop(restored);
+            let root = stage.root().to_path_buf();
+            drop(stage);
+            assert!(!root.exists());
+            assert!(source.is_file() && database.0.is_file());
+        }
+    }
+
+    #[test]
+    fn preview_file_staging_failures_and_phase_cancellation_leave_learning_and_source_unchanged() {
+        let directory = Directory::new();
+        let database = directory.database();
+        let mut connection = rusqlite::Connection::open(&database.0).unwrap();
+        storage::initialize(&connection).unwrap();
+        save_word(&mut connection, "école");
+        let captured_at = 1_794_564_000;
+        let snapshot = storage::export_learning_snapshot(&mut connection, captured_at).unwrap();
+        connection.close().unwrap();
+        let learning_bytes = fs::read(&database.0).unwrap();
+        let manifest = BackupManifest {
+            kind: "lexique-backup".into(),
+            format_version: 1,
+            snapshot_version: 1,
+            created_at: captured_at,
+            application_version: "0.1.0".into(),
+            counts: BackupCounts::from_snapshot(&snapshot),
+        };
+        let source = directory.0.join("selected.lexique-backup");
+        fixture_archive(
+            &source,
+            &[
+                (
+                    "manifest.json".into(),
+                    serde_json::to_vec(&manifest).unwrap(),
+                ),
+                (
+                    "snapshot.json".into(),
+                    serde_json::to_vec(&snapshot).unwrap(),
+                ),
+            ],
+        );
+        let source_bytes = fs::read(&source).unwrap();
+        let app_data = directory.0.join("app-data");
+        fs::create_dir(&app_data).unwrap();
+        let corrupt = directory.0.join("corrupt.lexique-backup");
+        fs::write(&corrupt, b"truncated corrupt backup").unwrap();
+        for invalid in [directory.0.join("missing.lexique-backup"), corrupt.clone()] {
+            assert!(
+                crate::backup_preview::prepare_preview(
+                    &invalid,
+                    &app_data,
+                    &AtomicBool::new(false),
+                    |_| {}
+                )
+                .is_err()
+            );
+            assert!(fs::read_dir(&app_data).unwrap().next().is_none());
+        }
+        assert_eq!(fs::read(&corrupt).unwrap(), b"truncated corrupt backup");
+        let unusable_parent = directory.0.join("occupied-app-data");
+        fs::write(&unusable_parent, b"existing parent file").unwrap();
+        assert!(
+            crate::backup_preview::prepare_preview(
+                &source,
+                &unusable_parent,
+                &AtomicBool::new(false),
+                |_| {}
+            )
+            .is_err()
+        );
+        assert_eq!(fs::read(&unusable_parent).unwrap(), b"existing parent file");
+        for cancel_at in [
+            crate::backup_preview::BackupPreviewPhase::Validating,
+            crate::backup_preview::BackupPreviewPhase::Staging,
+        ] {
+            let cancelled = AtomicBool::new(false);
+            let result =
+                crate::backup_preview::prepare_preview(&source, &app_data, &cancelled, |phase| {
+                    if phase == cancel_at {
+                        cancelled.store(true, Ordering::Release);
+                    }
+                });
+            assert_eq!(result.err().unwrap(), "backup_cancelled");
+            assert!(fs::read_dir(&app_data).unwrap().next().is_none());
+        }
+        assert_eq!(fs::read(&source).unwrap(), source_bytes);
+        assert_eq!(fs::read(&database.0).unwrap(), learning_bytes);
+    }
+
+    #[test]
+    fn legacy_staging_publication_checks_content_and_preserves_existing_managed_files() {
+        let directory = Directory::new();
+        let database = directory.database();
+        let connection = rusqlite::Connection::open(&database.0).unwrap();
+        storage::initialize(&connection).unwrap();
+        connection.close().unwrap();
+        let bytes = include_bytes!(
+            "../../../../docs/evidence/issue-14/supertonic-opus/female-normal-01-48k.opus"
+        );
+        let replacement = include_bytes!(
+            "../../../../docs/evidence/issue-14/supertonic-opus/female-normal-02-48k.opus"
+        );
+        let hash = storage::content_hash(bytes);
+        let inspector = crate::speech_cache::Inspector::new(&database.0).unwrap();
+        inspector.publish_legacy(6, &hash, bytes).unwrap();
+        assert!(inspector.publish_legacy(0, &hash, bytes).is_err());
+        assert!(inspector.publish_legacy(7, &"0".repeat(64), bytes).is_err());
+        assert!(
+            inspector
+                .publish_legacy(
+                    8,
+                    &storage::content_hash(b"invalid audio"),
+                    b"invalid audio"
+                )
+                .is_err()
+        );
+        inspector
+            .publish_legacy(6, &storage::content_hash(replacement), replacement)
+            .unwrap();
+        drop(inspector);
+        let managed = crate::speech_cache::managed_audio_directory(&database.0).unwrap();
+        assert!(managed.join("6.ogg").is_file());
+        assert!(!database.0.parent().unwrap().join("6.ogg").exists());
+        let readback = crate::speech_cache::Inspector::new(&database.0).unwrap();
+        let restored = readback.legacy(6).unwrap().unwrap();
+        assert_eq!(restored, bytes);
+        assert_eq!(storage::content_hash(&restored), hash);
+        for id in [0, 7, 8] {
+            assert!(readback.legacy(id).unwrap().is_none());
+        }
+    }
+
+    #[test]
+    fn preview_materializes_individual_included_audio_and_preserves_fileless_shared_metadata() {
+        let directory = Directory::new();
+        let database = directory.database();
+        let mut connection = rusqlite::Connection::open(&database.0).unwrap();
+        storage::initialize(&connection).unwrap();
+        let words = [
+            "école", "or", "oui", "abîme", "chat", "livre", "fleur", "table",
+        ];
+        let ids: Vec<_> = words
+            .iter()
+            .map(|word| save_word(&mut connection, word))
+            .collect();
+        let shared: &[u8] = include_bytes!(
+            "../../../../docs/evidence/issue-14/supertonic-opus/female-normal-01-48k.opus"
+        );
+        let other: &[u8] = include_bytes!(
+            "../../../../docs/evidence/issue-14/supertonic-opus/female-normal-02-48k.opus"
+        );
+        let shared_hash = storage::content_hash(shared);
+        let captured_at = 1_794_564_000;
+        let inspector = crate::speech_cache::Inspector::new(&database.0).unwrap();
+        let initial = selected_fixture(
+            &connection,
+            &inspector,
+            ids[0],
+            words[0],
+            shared,
+            captured_at - 50,
+        );
+        selected_fixture(
+            &connection,
+            &inspector,
+            ids[1],
+            words[1],
+            shared,
+            captured_at - 50,
+        );
+        let missing = selected_fixture(
+            &connection,
+            &inspector,
+            ids[2],
+            words[2],
+            shared,
+            captured_at - 50,
+        );
+        let invalid = selected_fixture(
+            &connection,
+            &inspector,
+            ids[3],
+            words[3],
+            shared,
+            captured_at - 50,
+        );
+        selected_fixture(
+            &connection,
+            &inspector,
+            ids[4],
+            words[4],
+            shared,
+            captured_at - 2_000_000,
+        );
+        selected_fixture(
+            &connection,
+            &inspector,
+            ids[4],
+            words[4],
+            other,
+            captured_at - 1_300_000,
+        );
+        let source_audio = crate::speech_cache::managed_audio_directory(&database.0).unwrap();
+        fs::remove_file(source_audio.join(format!(
+            "s-{}-{}.ogg",
+            missing.physical_locator, shared_hash
+        )))
+        .unwrap();
+        fs::write(
+            source_audio.join(format!(
+                "s-{}-{}.ogg",
+                invalid.physical_locator, shared_hash
+            )),
+            b"invalid original selected audio",
+        )
+        .unwrap();
+        for id in &ids[5..] {
+            storage::register_legacy_speech(&connection, *id, &shared_hash).unwrap();
+        }
+        fs::write(source_audio.join(format!("{}.ogg", ids[5])), shared).unwrap();
+        fs::write(
+            source_audio.join(format!("{}.ogg", ids[7])),
+            b"invalid original legacy",
+        )
+        .unwrap();
+        let cancelled = AtomicBool::new(false);
+        let protected = OwnedDirectory::create(&directory.0).unwrap();
+        let mut snapshot = storage::export_learning_snapshot(&mut connection, captured_at).unwrap();
+        collect_audio(
+            &connection,
+            &database,
+            &mut snapshot,
+            &protected.0,
+            captured_at,
+            &cancelled,
+        )
+        .unwrap();
+        let unknown = snapshot
+            .audio_versions
+            .iter_mut()
+            .find(|version| version.locator == initial.locator)
+            .unwrap();
+        unknown.generated_at = None;
+        unknown.verification = "unverified".into();
+        let unknown = snapshot
+            .audio_versions
+            .iter_mut()
+            .find(|version| version.locator == missing.locator)
+            .unwrap();
+        unknown.byte_length = None;
+        unknown.generated_at = None;
+        storage::validate_learning_snapshot(&snapshot, captured_at).unwrap();
+        let counts = BackupCounts::from_snapshot(&snapshot);
+        assert_eq!(counts.included_audio_versions, 3);
+        assert_eq!(counts.included_legacy_audio, 1);
+        assert_eq!(counts.audio_files, 2);
+        assert_eq!(counts.source_missing_audio, 2);
+        assert_eq!(counts.source_invalid_audio, 2);
+        let manifest = BackupManifest {
+            kind: "lexique-backup".into(),
+            format_version: 1,
+            snapshot_version: 1,
+            created_at: captured_at,
+            application_version: "0.1.0".into(),
+            counts: counts.clone(),
+        };
+        let mut entries = vec![
+            (
+                "manifest.json".into(),
+                serde_json::to_vec(&manifest).unwrap(),
+            ),
+            (
+                "snapshot.json".into(),
+                serde_json::to_vec(&snapshot).unwrap(),
+            ),
+        ];
+        for hash in included_hashes(&snapshot) {
+            entries.push((
+                format!("audio/{hash}.ogg"),
+                fs::read(protected.0.join(format!("audio/{hash}.ogg"))).unwrap(),
+            ));
+        }
+        let source = directory.0.join("scope-preview.lexique-backup");
+        fixture_archive(&source, &entries);
+        drop(inspector);
+        connection.close().unwrap();
+        let source_database_bytes = fs::read(&database.0).unwrap();
+        let source_archive_bytes = fs::read(&source).unwrap();
+        let app_data = directory.0.join("app-data");
+        fs::create_dir(&app_data).unwrap();
+        let stage =
+            crate::backup_preview::prepare_preview(&source, &app_data, &cancelled, |_| {}).unwrap();
+        let inspector = crate::speech_cache::Inspector::new(stage.database()).unwrap();
+        let mut readback = rusqlite::Connection::open_with_flags(
+            stage.database(),
+            rusqlite::OpenFlags::SQLITE_OPEN_READ_ONLY,
+        )
+        .unwrap();
+        for version in &snapshot.audio_versions {
+            let restored = storage::audio_version(&readback, &version.locator)
+                .unwrap()
+                .unwrap();
+            assert_eq!(restored.physical_locator, version.locator);
+            let bytes = if version.content_hash == shared_hash {
+                shared
+            } else {
+                other
+            };
+            let inspection = inspector
+                .collect_version(
+                    &restored.physical_locator,
+                    &version.content_hash,
+                    Some(bytes.len() as i64),
+                )
+                .unwrap();
+            if version.payload_status == AudioPayloadStatus::Included {
+                let crate::speech_cache::AudioInspection::Present(actual) = inspection else {
+                    panic!("Included reference did not receive managed audio");
+                };
+                assert_eq!(actual, bytes);
+            } else {
+                assert!(matches!(
+                    inspection,
+                    crate::speech_cache::AudioInspection::Missing
+                ));
+            }
+        }
+        for legacy in &snapshot.legacy_audio {
+            let inspection = inspector.collect_legacy(legacy.vocabulary_id).unwrap();
+            if legacy.payload_status == AudioPayloadStatus::Included {
+                let crate::speech_cache::AudioInspection::Present(actual) = inspection else {
+                    panic!("Included legacy reference did not receive managed audio");
+                };
+                assert_eq!(actual, shared);
+            } else {
+                assert!(matches!(
+                    inspection,
+                    crate::speech_cache::AudioInspection::Missing
+                ));
+            }
+        }
+        let raw: (Option<i64>, Option<i64>, bool, String) = readback
+            .query_row(
+                "SELECT byte_length,generated_at,sealed,verification FROM speech_versions WHERE locator=?1",
+                [&initial.locator],
+                |row| Ok((row.get(0)?, row.get(1)?, row.get(2)?, row.get(3)?)),
+            )
+            .unwrap();
+        assert_eq!(
+            raw,
+            (Some(shared.len() as i64), None, true, "unverified".into())
+        );
+        let raw: (Option<i64>, Option<i64>, bool, String) = readback
+            .query_row(
+                "SELECT byte_length,generated_at,sealed,verification FROM speech_versions WHERE locator=?1",
+                [&missing.locator],
+                |row| Ok((row.get(0)?, row.get(1)?, row.get(2)?, row.get(3)?)),
+            )
+            .unwrap();
+        assert_eq!(raw, (None, None, true, "missing".into()));
+        let selected = storage::selected_audio(&readback, ids[2]).unwrap().unwrap();
+        assert_eq!(selected.byte_length, 0);
+        assert!(selected.generated_at.is_none());
+        let exported = storage::export_learning_snapshot(&mut readback, captured_at).unwrap();
+        assert_eq!(
+            serde_json::to_value(&exported.audio_selections).unwrap(),
+            serde_json::to_value(&snapshot.audio_selections).unwrap()
+        );
+        assert_eq!(stage.preview().counts, counts);
+        assert!(!stage.root().join("validated").exists());
+        let managed_files = fs::read_dir(stage.audio_directory())
+            .unwrap()
+            .filter(|entry| {
+                entry
+                    .as_ref()
+                    .unwrap()
+                    .path()
+                    .extension()
+                    .is_some_and(|extension| extension == "ogg")
+            })
+            .count();
+        assert_eq!(managed_files, 4);
+        assert_eq!(fs::read(&database.0).unwrap(), source_database_bytes);
+        assert_eq!(fs::read(&source).unwrap(), source_archive_bytes);
+        drop(inspector);
+        readback.close().unwrap();
+        let root = stage.root().to_path_buf();
+        drop(stage);
+        assert!(!root.exists());
     }
 
     #[test]

@@ -156,6 +156,9 @@ fn main() {
             "backup_export_start",
             "backup_operation_status",
             "backup_operation_cancel",
+            "backup_preview_start",
+            "backup_preview_status",
+            "backup_preview_cancel",
             "finish_close",
         ]),
     ))
