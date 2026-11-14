@@ -7,7 +7,7 @@ const targets = process.argv.includes('--mdict')
   : process.argv.includes('--speech-cache')
     ? ['--release', '-p', 'lexique-desktop', '--test', 'speech_cache', '--', '--nocapture']
     : process.argv.includes('--desktop-lib')
-      ? ['--release', '-p', 'lexique-desktop', '--lib', '--', '--nocapture']
+      ? ['--release', '-p', 'lexique-desktop', '--lib', '--', '--nocapture', ...process.argv.slice(3)]
       : ['-p', 'lexique-core', '-p', 'lexique-storage', '-p', 'lexique-dictionary'];
 const child = spawn('cargo', ['test', '--locked', ...targets], {
   stdio: 'inherit',
