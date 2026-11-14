@@ -5,6 +5,7 @@ import type { BatchStatus } from './platform/runtime';
 import type { BackupCounts, BackupResult, BackupStatus } from './platform/backup';
 import { errorMessage } from './platform/vocabulary';
 import { resolvePendingReviews } from './pending-review-requests';
+import { BackupPreviewSettings, useBackupPreview } from './backup-preview';
 
 const messages = {
   zh: { title: '手动备份', create: '创建备份', saved: '备份已保存', working: '正在准备备份…', error: '备份失败', choosing: '请选择新备份文件的位置。', check: '检查备份状态', cancel: '取消备份', cancelled: '备份已取消。', cancelling: '已请求取消，正在等待备份停止…',
@@ -74,7 +75,7 @@ function useBackupStatus(runtime: RuntimeAdapter) {
   return { status, error, current, live, unlisten, update, receive, reset, refresh: () => request(runtime.backupStatus), cancel: () => request(runtime.cancelBackup), failed: (cause: unknown) => setError(errorMessage(cause)) };
 }
 
-function useBackupExport(runtime: RuntimeAdapter, onResolved: (batch: BatchStatus | null) => void) {
+function useBackupExport(runtime: RuntimeAdapter, onResolved: (batch: BatchStatus | null) => void, onStarted: () => void) {
   const operation = useBackupStatus(runtime);
   const [preparing, setPreparing] = useState(false), [cancelling, setCancelling] = useState(false), starting = useRef(false);
   async function start() {
@@ -86,6 +87,7 @@ function useBackupExport(runtime: RuntimeAdapter, onResolved: (batch: BatchStatu
       if (!operation.live.current) { stop(); return; }
       operation.unlisten.current = stop;
       const value = await runtime.startBackup();
+      onStarted();
       operation.update(value); setPreparing(false);
       if (activeBackup(value)) await operation.refresh();
     } catch (cause) {
@@ -120,11 +122,12 @@ function Result({ result, locale }: { readonly result: BackupResult; readonly lo
   </dl>;
 }
 
-function BackupActions({ backup, locale, beforeStart }: {
+function BackupActions({ backup, locale, beforeStart, blocked }: {
   readonly backup: ReturnType<typeof useBackupExport>; readonly locale: Locale; readonly beforeStart: (action: () => void) => void;
+  readonly blocked: boolean;
 }) {
   const text = messages[locale];
-  return <div className="actions"><button disabled={backup.active} onClick={() => beforeStart(() => { void backup.start(); })}>{text.create}</button>
+  return <div className="actions"><button disabled={backup.active || blocked} onClick={() => beforeStart(() => { if (!blocked) void backup.start(); })}>{text.create}</button>
     {activeBackup(backup.status) && <><button disabled={backup.cancelling} onClick={() => { void backup.refresh().catch(backup.failed); }}>{text.check}</button>
       <button disabled={backup.cancelling || backup.status?.cancel_requested} onClick={() => { void backup.cancel(); }}>{text.cancel}</button></>}</div>;
 }
@@ -135,17 +138,17 @@ export function BackupSettings({ runtime, locale, beforeStart, onPause, onResolv
   readonly onResolved: (batch: BatchStatus | null) => void;
 }) {
   const text = messages[locale];
-  const backup = useBackupExport(runtime, onResolved), { status, error } = backup;
+  const preview = useBackupPreview(runtime), backup = useBackupExport(runtime, onResolved, preview.reset), { status, error } = backup;
   useEffect(() => onPause(backup.paused), [backup.paused, onPause]);
-  return <section className="speech-settings backup-settings" aria-labelledby="backup-heading" hidden={!visible && !backup.paused}>
+  return <><section className="speech-settings backup-settings" aria-labelledby="backup-heading" hidden={!visible && !backup.paused}>
     <h3 id="backup-heading">{text.title}</h3>
     <p>{text.contents}</p><p>{text.resources}</p><p>{text.privacy}</p>
     {!runtime.backupAvailable() && <p>{text.preview}</p>}
-    <fieldset className="backup-controls" disabled={!runtime.backupAvailable()}><BackupActions backup={backup} locale={locale} beforeStart={beforeStart} /></fieldset>
+    <fieldset className="backup-controls" disabled={!runtime.backupAvailable()}><BackupActions backup={backup} locale={locale} beforeStart={beforeStart} blocked={preview.active} /></fieldset>
     <Progress status={status} preparing={backup.preparing} locale={locale} />
     {error && <p role="alert">{text.error}: {error}</p>}
     {status?.state === 'completed' && <><p role="status">{text.saved}</p><Result result={status.result} locale={locale} /></>}
     {status?.state === 'failed' && <p role="alert">{text.error}: {status.error}</p>}
     {status?.state === 'cancelled' && <p role="status">{text.cancelled}</p>}
-  </section>;
+  </section><BackupPreviewSettings runtime={runtime} preview={preview} locale={locale} countsText={text.counts} visible={visible} blocked={backup.active} /></>;
 }

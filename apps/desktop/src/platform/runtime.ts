@@ -17,8 +17,8 @@ import type { SelectionEvent, ShortcutStatus } from './selection';
 import type { Locale } from '../content';
 import { interfacePreferencesSchema } from './interface';
 import type { InterfacePreferences } from './interface';
-import { backupStatusSchema } from './backup';
-import type { BackupStatus } from './backup';
+import { backupStatusSchema, backupPreviewOperation, backupPreviewStatusSchema } from './backup';
+import type { BackupStatus, BackupPreviewStatus } from './backup';
 
 async function dictionaryUpload(file: File) {
   if (!/\.mdx$/i.test(file.name) || !file.size || file.size > 128 * 1024 * 1024) throw { code: 'limit', message: 'MDX: non-empty, at most 128 MiB' };
@@ -136,6 +136,10 @@ export interface RuntimeAdapter {
   readonly backupStatus: (operation: string) => Promise<BackupStatus>;
   readonly cancelBackup: (operation: string) => Promise<BackupStatus>;
   readonly onBackupProgress: (callback: (status: BackupStatus) => void, failed: (cause: unknown) => void) => Promise<() => void>;
+  readonly startBackupPreview: () => Promise<BackupPreviewStatus>;
+  readonly backupPreviewStatus: (operation: string) => Promise<BackupPreviewStatus>;
+  readonly cancelBackupPreview: (operation: string) => Promise<BackupPreviewStatus>;
+  readonly onBackupPreviewProgress: (callback: (status: BackupPreviewStatus) => void, failed: (cause: unknown) => void) => Promise<() => void>;
   readonly getStatus: () => Promise<RuntimeStatus | null>;
   readonly interfacePreferences: (preferences?: InterfacePreferences) => Promise<InterfacePreferences | null>;
   readonly lookupDictionary: (key: string, dictionaryId?: string) => Promise<DictionaryLookup | null>;
@@ -216,6 +220,32 @@ export const runtime: RuntimeAdapter = {
     if (!isTauri()) return () => {};
     return listen('lexique-backup-progress', (event) => {
       const value = backupStatusSchema.safeParse(event.payload);
+      if (value.success) callback(value.data); else failed(value.error);
+    });
+  },
+  async startBackupPreview() {
+    if (!isTauri()) throw new Error('Backup previews are available in the desktop app only');
+    return backupPreviewStatusSchema.parse(await invoke('backup_preview_start'));
+  },
+  async backupPreviewStatus(operation) {
+    if (!isTauri()) throw new Error('Backup previews are available in the desktop app only');
+    const id = backupPreviewOperation.parse(operation);
+    const value = backupPreviewStatusSchema.parse(await invoke('backup_preview_status', { operation: id }));
+    if (value.operation !== id) throw new Error('Backup preview response identity differs from the request');
+    return value;
+  },
+  async cancelBackupPreview(operation) {
+    if (!isTauri()) throw new Error('Backup previews are available in the desktop app only');
+    const id = backupPreviewOperation.parse(operation);
+    const value = backupPreviewStatusSchema.parse(await invoke('backup_preview_cancel', { operation: id }));
+    if (value.operation !== id) throw new Error('Backup preview response identity differs from the request');
+    if (value.state !== 'cancelled' || !value.cancel_requested) throw new Error('Backup preview cancellation was not confirmed');
+    return value;
+  },
+  async onBackupPreviewProgress(callback, failed) {
+    if (!isTauri()) return () => {};
+    return listen('lexique-backup-preview-progress', (event) => {
+      const value = backupPreviewStatusSchema.safeParse(event.payload);
       if (value.success) callback(value.data); else failed(value.error);
     });
   },
