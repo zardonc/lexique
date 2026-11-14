@@ -354,10 +354,7 @@ fn a_queue_snapshot_keeps_admission_records_and_revision_coherent_during_repair_
 
 #[test]
 fn queue_snapshots_finish_under_continuous_audio_revision_churn() {
-    use std::sync::{
-        Arc,
-        atomic::{AtomicUsize, Ordering},
-    };
+    use std::sync::mpsc;
     let path = std::env::temp_dir().join(format!(
         "lexique-churn-{}-{}.sqlite3",
         std::process::id(),
@@ -409,15 +406,25 @@ fn queue_snapshots_finish_under_continuous_audio_revision_churn() {
     writer
         .busy_timeout(std::time::Duration::from_secs(2))
         .unwrap();
-    let commits = Arc::new(AtomicUsize::new(0));
-    let observed = commits.clone();
+    let transaction = review_queue_snapshot(&reader, 1_700_000_000, "UTC", &skipped, &mut cache)
+        .unwrap()
+        .transaction;
+    let (committed, observed) = mpsc::sync_channel(0);
     let worker = std::thread::spawn(move || {
-        for _ in 0..1000 {
+        for index in 0..1000 {
             writer.execute("UPDATE speech_versions SET verification=CASE WHEN verification='missing' THEN 'invalid' ELSE 'missing' END", []).unwrap();
-            observed.fetch_add(1, Ordering::Release);
+            if index == 0 {
+                committed.send(queue_revision(&writer).unwrap()).unwrap();
+            }
             std::thread::sleep(std::time::Duration::from_millis(1));
         }
     });
+    assert!(
+        observed.recv().unwrap() > queue_revision(&transaction).unwrap(),
+        "the competing writer must commit during snapshot reads"
+    );
+    assert_eq!(queue_revision(&transaction).unwrap(), cache.revision());
+    transaction.commit().unwrap();
     for _ in 0..40 {
         let snapshot =
             review_queue_snapshot(&reader, 1_700_000_000, "UTC", &skipped, &mut cache).unwrap();
@@ -429,10 +436,6 @@ fn queue_snapshots_finish_under_continuous_audio_revision_churn() {
         assert_eq!(snapshot.demand_candidates.len(), 1000);
         snapshot.transaction.commit().unwrap();
     }
-    assert!(
-        commits.load(Ordering::Acquire) > 0,
-        "the competing writer must commit during snapshot reads"
-    );
     worker.join().unwrap();
     drop(reader);
     std::fs::remove_file(path).unwrap();
