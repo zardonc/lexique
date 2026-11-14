@@ -40,6 +40,9 @@ pub fn import_learning_snapshot(
     insert_speech_demands(&tx, snapshot)?;
     insert_review(&tx, snapshot)?;
     insert_batches(&tx, snapshot)?;
+    insert_audio_versions(&tx, snapshot, captured_at)?;
+    insert_audio_links(&tx, snapshot)?;
+    insert_audio_history(&tx, snapshot)?;
     insert_preferences(&tx, &snapshot.preferences)?;
     write_dictionary_catalog(&tx, &snapshot.dictionary_catalog)?;
     if tx.prepare("PRAGMA foreign_key_check")?.exists([])? {
@@ -55,7 +58,26 @@ pub fn import_learning_snapshot(
     }
     for record in &snapshot.records {
         get(&tx, record.id)?;
+        review_cards(&tx, record.id)?;
     }
+    let record_ids: Vec<_> = snapshot.records.iter().map(|record| record.id).collect();
+    let card_ids: Vec<_> = snapshot.cards.iter().map(|card| card.id).collect();
+    review_progress_batch(&tx, &card_ids)?;
+    selected_audio_batch(&tx, &record_ids)?;
+    word_audio_assets(&tx, &record_ids, captured_at)?;
+    for source in &snapshot.speech_sources {
+        speech_asset(&tx, &source.semantic_key, captured_at)?;
+    }
+    for batch in &snapshot.batches {
+        batch_status(&tx, &batch.operation)?;
+    }
+    review_settings(&tx)?;
+    speech_preferences(&tx)?;
+    interface_preferences(&tx)?;
+    conjugation_preferences(&tx)?;
+    conjugation_block_order(&tx)?;
+    sort_preference(&tx)?;
+    read_dictionary_catalog(&tx)?;
     tx.commit()?;
     Ok(())
 }
@@ -271,6 +293,144 @@ fn insert_batches(
                 item.error,
             ])?;
         }
+    }
+    Ok(())
+}
+
+fn insert_audio_versions(
+    connection: &Connection,
+    snapshot: &LearningSnapshot,
+    captured_at: i64,
+) -> Result<(), StorageError> {
+    let mut statement = connection.prepare(
+        "INSERT INTO speech_versions(locator,semantic_key,content_hash,byte_length,generated_at,
+         created_at,vocabulary_id,expected_revision,generation,sealed,execution_generation,
+         physical_locator,context,verification,gc_state,expires_at,orphan_until,last_used)
+         VALUES(?1,?2,?3,?4,?5,?6,?7,?8,?9,?10,?11,?1,?12,'verified',?13,?14,?15,?16)",
+    )?;
+    for version in &snapshot.audio_versions {
+        statement.execute(params![
+            version.locator,
+            version.semantic_key,
+            version.content_hash,
+            version.byte_length,
+            version.generated_at,
+            version.created_at,
+            version.origin_vocabulary_id,
+            version.expected_revision,
+            version.generation,
+            version.sealed,
+            version.execution_generation,
+            version.context,
+            version.gc_state,
+            version.expires_at,
+            version.orphan_until,
+            captured_at,
+        ])?;
+    }
+    Ok(())
+}
+
+fn insert_audio_links(
+    connection: &Connection,
+    snapshot: &LearningSnapshot,
+) -> Result<(), StorageError> {
+    let mut statement = connection.prepare(
+        "INSERT INTO word_audio_selections(vocabulary_id,current_version,previous_version,
+         previous_until,revision,desired_generation,desired_key,current_generation)
+         VALUES(?1,?2,?3,?4,?5,?6,?7,?8)",
+    )?;
+    for selection in &snapshot.audio_selections {
+        statement.execute(params![
+            selection.vocabulary_id,
+            selection.current_version,
+            selection.previous_version,
+            selection.previous_until,
+            selection.revision,
+            selection.desired_generation,
+            selection.desired_key,
+            selection.current_generation,
+        ])?;
+    }
+    // Selection triggers require verified content; restore its original state before commit.
+    let mut statement =
+        connection.prepare("UPDATE speech_versions SET verification=?1 WHERE locator=?2")?;
+    for version in &snapshot.audio_versions {
+        statement.execute(params![version.verification, version.locator])?;
+    }
+    let mut statement = connection.prepare(
+        "UPDATE speech_assets SET current_version=?1,pending_version=?2,
+         content_hash=(SELECT content_hash FROM speech_versions WHERE locator=?1),
+         generated_at=(SELECT generated_at FROM speech_versions WHERE locator=?1),
+         expires_at=(SELECT expires_at FROM speech_versions WHERE locator=?1),
+         pending_hash=(SELECT content_hash FROM speech_versions WHERE locator=?2),
+         pending_generated_at=(SELECT generated_at FROM speech_versions WHERE locator=?2),
+         pending_execution=(SELECT execution_generation FROM speech_versions WHERE locator=?2)
+         WHERE semantic_key=?3",
+    )?;
+    for source in &snapshot.speech_sources {
+        statement.execute(params![
+            source.current_version,
+            source.pending_version,
+            source.semantic_key,
+        ])?;
+    }
+    Ok(())
+}
+
+fn insert_audio_history(
+    connection: &Connection,
+    snapshot: &LearningSnapshot,
+) -> Result<(), StorageError> {
+    let mut statement = connection
+        .prepare("INSERT INTO word_audio_imports(vocabulary_id,state,error) VALUES(?1,?2,?3)")?;
+    for import in &snapshot.audio_imports {
+        statement.execute(params![import.vocabulary_id, import.state, import.error])?;
+    }
+    let mut statement = connection
+        .prepare("INSERT INTO legacy_speech(vocabulary_id,content_hash) VALUES(?1,?2)")?;
+    for legacy in &snapshot.legacy_audio {
+        statement.execute(params![legacy.vocabulary_id, legacy.content_hash])?;
+    }
+    let mut statement = connection.prepare(
+        "INSERT INTO word_audio_operations(operation,vocabulary_id,semantic_key,generation,refresh)
+         VALUES(?1,?2,?3,?4,?5)",
+    )?;
+    for operation in &snapshot.audio_operations {
+        statement.execute(params![
+            operation.operation,
+            operation.vocabulary_id,
+            operation.semantic_key,
+            operation.generation,
+            operation.refresh,
+        ])?;
+    }
+    let mut statement = connection.prepare(
+        "INSERT INTO word_audio_publications(locator,vocabulary_id,expected_revision,generation,
+         execution_generation,error) VALUES(?1,?2,?3,?4,?5,?6)",
+    )?;
+    for publication in &snapshot.audio_publications {
+        statement.execute(params![
+            publication.locator,
+            publication.vocabulary_id,
+            publication.expected_revision,
+            publication.generation,
+            publication.execution_generation,
+            publication.error,
+        ])?;
+    }
+    let mut statement = connection.prepare(
+        "INSERT INTO word_audio_repairs(vocabulary_id,failure_identity,semantic_key,generation,error)
+         VALUES(?1,?2,?3,?4,?5)",
+    )?;
+    for repair in &snapshot.audio_repairs {
+        statement.execute(params![
+            repair.vocabulary_id,
+            repair.failure_identity,
+            repair.semantic_key,
+            repair.generation,
+            repair.error,
+        ])?;
     }
     Ok(())
 }
