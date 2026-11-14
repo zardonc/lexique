@@ -26,6 +26,10 @@ import { DictionarySettings } from './dictionary-settings';
 import { DictionaryResources } from './dictionary-resources';
 import { useInterfacePreferences } from './use-interface-preferences';
 import { BackupSettings } from './backup-settings';
+import { StartupFeedback, StartupScreen, useStartup } from './startup';
+import type { StartupStatus } from './platform/backup';
+import { RestoreScreen, useFormalRestore } from './backup-restore';
+import type { FormalRestore } from './backup-restore';
 
 const themes: readonly Theme[] = ['white', 'sepia', 'dark'];
 const locales: readonly Locale[] = ['zh', 'en', 'fr'];
@@ -74,6 +78,12 @@ function SettingsPanels({ runtime, locale }: { readonly runtime: RuntimeAdapter;
 }
 
 export function App({ runtime }: { readonly runtime: RuntimeAdapter }) {
+  const startup = useStartup(runtime), restore = useFormalRestore(runtime, startup);
+  if (restore.active) return <RestoreScreen runtime={runtime} restore={restore} startup={startup} />;
+  return startup.status?.state === 'ready' && !startup.error && !startup.pending ? <LearningApp runtime={runtime} startup={startup.status} restore={restore} /> : <StartupScreen runtime={runtime} startup={startup} />;
+}
+
+function LearningApp({ runtime, startup, restore }: { readonly runtime: RuntimeAdapter; readonly startup: StartupStatus; readonly restore: FormalRestore }) {
   const preferences = useInterfacePreferences(runtime);
   const { locale, theme } = preferences.value;
   const [collapsed, setCollapsed] = useState(false), [backupPaused, setBackupPaused] = useState(false);
@@ -92,9 +102,9 @@ export function App({ runtime }: { readonly runtime: RuntimeAdapter }) {
     <Navigation text={text} selected={page} collapsed={collapsed} disabled={backupPaused} onSelect={navigation.changePage} onToggle={() => setCollapsed((value) => !value)} />
     <div className="workspace"><fieldset className="backup-controls" disabled={backupPaused}><Header text={text} preferences={preferences} onLocal={selection.local} selectionError={selection.error} /></fieldset>
       <main id="main-content" tabIndex={-1}>
-        <p className="eyebrow">{text.eyebrow}</p><h1 id="main-page-heading">{text.modules[page]}</h1>
+        <p className="eyebrow">{text.eyebrow}</p><h1 id="main-page-heading">{text.modules[page]}</h1><StartupFeedback runtime={runtime} status={startup} locale={locale} />
         <section className="page-content" aria-labelledby={pageTitleId(page)}>
-          <BackupSettings runtime={runtime} locale={locale} beforeStart={(action) => guard.request(() => { notebook.clear(); action(); })} onPause={setBackupPaused} onResolved={batch.confirmPending} visible={page === 7} />
+          <BackupSettings runtime={runtime} locale={locale} beforeStart={(action) => guard.request(() => { notebook.clear(); action(); })} onPause={setBackupPaused} onResolved={batch.confirmPending} visible={page === 7} restore={restore} />
           <fieldset className="backup-controls" disabled={backupPaused}>
           <PageIntroduction page={page} text={text} />
           {page === 0 ? <DictionaryPanel runtime={runtime} text={text.dictionary} notebookText={notebookText} version={notebook.version}

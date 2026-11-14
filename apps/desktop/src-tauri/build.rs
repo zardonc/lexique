@@ -159,6 +159,13 @@ fn main() {
             "backup_preview_start",
             "backup_preview_status",
             "backup_preview_cancel",
+            "startup_status",
+            "startup_retry",
+            "backup_restore_cleanup_begin",
+            "backup_restore_cleanup_complete",
+            "backup_restore_start",
+            "backup_restore_status",
+            "backup_retained_directory_open",
             "finish_close",
         ]),
     ))

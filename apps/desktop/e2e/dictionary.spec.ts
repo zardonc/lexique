@@ -1,4 +1,5 @@
 import { expect, test } from '@playwright/test';
+import { nativeFixtureSetup } from './native-fixture';
 
 const result = {
   source: { title: 'FreeDict+WikDict français-中文', version: '2025.11.23',
@@ -21,10 +22,9 @@ test('dictionary page keeps browser preview explicit', async ({ page }) => {
 });
 
 test('native adapter displays results, no match and resource errors', async ({ page }) => {
-  await page.addInitScript((fixture) => {
-    Object.defineProperty(window, 'isTauri', { value: true });
-    Object.defineProperty(window, '__TAURI_INTERNALS__', { value: {
-      invoke: async (command: string, args?: { key: string }) => {
+  await nativeFixtureSetup(page, (fixture) => {
+    const native = Reflect.get(window, '__TAURI_INTERNALS__') as { invoke: (command: string, args?: { key: string }) => Promise<unknown> };
+    native.invoke = async (command: string, args?: { key: string }) => {
         const systemReplies = { runtime_status: () => ({ version: '0.1.0', schemaVersion: 1, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } }),
           interface_preferences: () => Reflect.get(args ?? {}, 'preferences') ?? { locale: 'zh', theme: 'white' } }; if (Object.hasOwn(systemReplies, command)) return Reflect.get(systemReplies, command)();
         if (command === 'dictionary_settings') return [{ id: 'builtin', title: fixture.source.title, content_hash: null, availability: 'available' },
@@ -38,8 +38,7 @@ test('native adapter displays results, no match and resource errors', async ({ p
         if (key && errors[key]) throw errors[key];
         if (key === 'invalid') return { ...fixture, entries: 'invalid IPC payload' };
         return key === 'école' ? fixture : { ...fixture, entries: [] };
-      },
-    } });
+      };
   }, result);
   await page.goto('/');
   await page.getByLabel('法语词或词组').fill('école');

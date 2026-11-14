@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import type { FormalRestore } from './backup-restore';
 import type { Locale } from './content';
 import type { RuntimeAdapter } from './platform/runtime';
 import type { BatchStatus } from './platform/runtime';
@@ -6,6 +7,7 @@ import type { BackupCounts, BackupResult, BackupStatus } from './platform/backup
 import { errorMessage } from './platform/vocabulary';
 import { resolvePendingReviews } from './pending-review-requests';
 import { BackupPreviewSettings, useBackupPreview } from './backup-preview';
+import { RestoreConfirmation } from './restore-confirmation';
 
 const messages = {
   zh: { title: '手动备份', create: '创建备份', saved: '备份已保存', working: '正在准备备份…', error: '备份失败', choosing: '请选择新备份文件的位置。', check: '检查备份状态', cancel: '取消备份', cancelled: '备份已取消。', cancelling: '已请求取消，正在等待备份停止…',
@@ -132,23 +134,33 @@ function BackupActions({ backup, locale, beforeStart, blocked }: {
       <button disabled={backup.cancelling || backup.status?.cancel_requested} onClick={() => { void backup.cancel(); }}>{text.cancel}</button></>}</div>;
 }
 
-export function BackupSettings({ runtime, locale, beforeStart, onPause, onResolved, visible }: {
+function BackupFeedback({ status, error, locale }: { readonly status: BackupStatus | null; readonly error: string; readonly locale: Locale }) {
+  const text = messages[locale];
+  return <>{error && <p role="alert">{text.error}: {error}</p>}
+    {status?.state === 'completed' && <><p role="status">{text.saved}</p><Result result={status.result} locale={locale} /></>}
+    {status?.state === 'failed' && <p role="alert">{text.error}: {status.error}</p>}
+    {status?.state === 'cancelled' && <p role="status">{text.cancelled}</p>}</>;
+}
+
+export function BackupSettings({ runtime, locale, beforeStart, onPause, onResolved, visible, restore }: {
   readonly runtime: RuntimeAdapter; readonly locale: Locale; readonly beforeStart: (action: () => void) => void;
   readonly onPause: (paused: boolean) => void; readonly visible: boolean;
   readonly onResolved: (batch: BatchStatus | null) => void;
+  readonly restore: FormalRestore;
 }) {
   const text = messages[locale];
+  const [restorePreparing, setRestorePreparing] = useState(false);
   const preview = useBackupPreview(runtime), backup = useBackupExport(runtime, onResolved, preview.reset), { status, error } = backup;
-  useEffect(() => onPause(backup.paused), [backup.paused, onPause]);
+  useEffect(() => onPause(backup.paused || restorePreparing), [backup.paused, restorePreparing, onPause]);
   return <><section className="speech-settings backup-settings" aria-labelledby="backup-heading" hidden={!visible && !backup.paused}>
     <h3 id="backup-heading">{text.title}</h3>
     <p>{text.contents}</p><p>{text.resources}</p><p>{text.privacy}</p>
     {!runtime.backupAvailable() && <p>{text.preview}</p>}
-    <fieldset className="backup-controls" disabled={!runtime.backupAvailable()}><BackupActions backup={backup} locale={locale} beforeStart={beforeStart} blocked={preview.active} /></fieldset>
+    <fieldset className="backup-controls" disabled={!runtime.backupAvailable()}><BackupActions backup={backup} locale={locale} beforeStart={beforeStart} blocked={preview.active || restorePreparing} /></fieldset>
     <Progress status={status} preparing={backup.preparing} locale={locale} />
-    {error && <p role="alert">{text.error}: {error}</p>}
-    {status?.state === 'completed' && <><p role="status">{text.saved}</p><Result result={status.result} locale={locale} /></>}
-    {status?.state === 'failed' && <p role="alert">{text.error}: {status.error}</p>}
-    {status?.state === 'cancelled' && <p role="status">{text.cancelled}</p>}
-  </section><BackupPreviewSettings runtime={runtime} preview={preview} locale={locale} countsText={text.counts} visible={visible} blocked={backup.active} /></>;
+    <BackupFeedback status={status} error={error} locale={locale} />
+  </section><BackupPreviewSettings runtime={runtime} preview={preview} locale={locale} countsText={text.counts} visible={visible} blocked={backup.active || restorePreparing}>
+    {runtime.backupAvailable() && <RestoreConfirmation runtime={runtime} preview={preview} restore={restore} locale={locale} beforeStart={beforeStart}
+      onResolved={onResolved} onPreparing={setRestorePreparing} preparing={restorePreparing} blocked={backup.active} />}
+  </BackupPreviewSettings></>;
 }

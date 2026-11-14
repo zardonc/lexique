@@ -4,7 +4,7 @@ import { RatingRejected } from './platform/runtime';
 import type { RateRequest, Rating, ReviewAvailability, RuntimeAdapter } from './platform/runtime';
 import { errorMessage } from './platform/vocabulary';
 import { subscribeReviewEvents } from './review-events';
-import { pendingRatingKey, readPendingRating } from './pending-review-requests';
+import { pendingRatingKey, pendingReviewRevision, readPendingRating, removePendingReview } from './pending-review-requests';
 
 const ratings: readonly Rating[] = ['again', 'hard', 'good', 'easy'];
 
@@ -69,18 +69,20 @@ function useReviewRating({ id, runtime, text, onSuccess, onBusyChange }: {
   useAvailabilityTimer({ id, runtime, availability, setAvailability, setError });
   useAvailabilityEvents({ id, runtime, setAvailability, setError });
   async function submit(request: RateRequest) {
+    const revision = pendingReviewRevision();
     setBusy(true); onBusyChange(true); setError('');
     try {
       localStorage.setItem(key, JSON.stringify(request));
       setPending(request);
       const result = await runtime.rateReview(request);
       if (!result) throw new Error(text.ratingUnavailable);
-      localStorage.removeItem(key);
+      if (!removePendingReview(key, revision)) return;
       setPending(null); onSuccess();
     } catch (cause) {
       const message = errorMessage(cause);
       if (cause instanceof RatingRejected) {
-        localStorage.removeItem(key); setPending(null); setAvailability(null);
+        if (!removePendingReview(key, revision)) return;
+        setPending(null); setAvailability(null);
         try { setAvailability(await runtime.reviewAvailability(id)); }
         catch (readError) { setError(`${text.availability[cause.code]}: ${errorMessage(readError)}`); return; }
         setError(`${text.availability[cause.code]}: ${message}`);

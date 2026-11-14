@@ -7,7 +7,7 @@ import type { QueueView, RuntimeAdapter } from './platform/runtime';
 import { UndoRejected } from './platform/runtime';
 import { errorMessage } from './platform/vocabulary';
 import { QueueReviewCard } from './review-cards';
-import { pendingUndoKey, readPendingUndo } from './pending-review-requests';
+import { pendingReviewRevision, pendingUndoKey, readPendingUndo, removePendingReview } from './pending-review-requests';
 
 const messages = {
   zh: { loading: '正在读取复习队列', preview: '浏览器预览无法读取复习队列。', done: '本轮完成', waiting: '尚未到期', quota: '今日额度已用完', verifying: '听音待校验', error: '队列读取失败', retry: '刷新队列', undo: '撤销最近评分', undoError: '撤销失败', rebuilt: '旧版评分已撤销，队列顺序可能变化。', counts: (count: number) => `待复习：${count} 张` },
@@ -102,7 +102,12 @@ function UndoRating({ runtime, labels, refresh, onRebuilt, ratingVersion }: { re
     void runtime.undoTarget().then((value) => { if (active) setTarget(value); }).catch((cause: unknown) => { if (active) setError(errorMessage(cause)); });
     return () => { active = false; };
   }, [runtime, ratingVersion]);
+  async function clearRejected(revision: number) {
+    try { if (!removePendingReview(pendingUndoKey, revision)) return; setPending(false); setTarget(await runtime.undoTarget()); }
+    catch (cause) { setError(errorMessage(cause)); }
+  }
   async function undo() {
+    const revision = pendingReviewRevision();
     setBusy(true); setError('');
     try {
       const key = pendingUndoKey;
@@ -111,17 +116,14 @@ function UndoRating({ runtime, labels, refresh, onRebuilt, ratingVersion }: { re
       setPending(true);
       const result = await runtime.undoReview(pending.operation, pending.ratingOperation);
       if (!result) throw new Error('Native undo unavailable');
+      if (!removePendingReview(key, revision)) return;
       onRebuilt(result.queue_rebuilt);
-      localStorage.removeItem(key);
       setPending(false);
       setTarget(null);
       await refresh();
     } catch (cause) {
       setError(errorMessage(cause));
-      if (cause instanceof UndoRejected) {
-        try { localStorage.removeItem(pendingUndoKey); setPending(false); setTarget(await runtime.undoTarget()); }
-        catch (readError) { setError(errorMessage(readError)); }
-      }
+      if (cause instanceof UndoRejected) await clearRejected(revision);
     }
     finally { setBusy(false); }
   }

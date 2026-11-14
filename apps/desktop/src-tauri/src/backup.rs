@@ -384,9 +384,11 @@ fn collect_audio(
                 snapshot.legacy_audio.len() - 1
             }),
         };
-        if matches!(inspection, AudioInspection::Missing) && first_missing.is_some() {
+        if matches!(inspection, AudioInspection::Missing)
+            && let Some(index) = first_missing
+        {
             collect_version(
-                &mut snapshot.audio_versions[first_missing.unwrap()],
+                &mut snapshot.audio_versions[index],
                 AudioInspection::Missing,
                 &audio_directory,
                 &mut copied,
@@ -675,7 +677,7 @@ fn package(
 }
 
 #[cfg(windows)]
-fn publish_new(source: &Path, destination: &Path) -> io::Result<()> {
+pub(crate) fn publish_new(source: &Path, destination: &Path) -> io::Result<()> {
     use std::os::windows::ffi::OsStrExt;
     #[link(name = "kernel32")]
     unsafe extern "system" {
@@ -700,7 +702,7 @@ fn publish_new(source: &Path, destination: &Path) -> io::Result<()> {
 }
 
 #[cfg(target_os = "macos")]
-fn publish_new(source: &Path, destination: &Path) -> io::Result<()> {
+pub(crate) fn publish_new(source: &Path, destination: &Path) -> io::Result<()> {
     use std::{ffi::CString, os::unix::ffi::OsStrExt};
     unsafe extern "C" {
         fn renamex_np(
@@ -724,7 +726,7 @@ fn publish_new(source: &Path, destination: &Path) -> io::Result<()> {
 }
 
 #[cfg(not(any(windows, target_os = "macos")))]
-fn publish_new(source: &Path, destination: &Path) -> io::Result<()> {
+pub(crate) fn publish_new(source: &Path, destination: &Path) -> io::Result<()> {
     let parent = File::open(
         destination
             .parent()
@@ -747,6 +749,43 @@ pub fn export_backup_to_new_file(
     cancelled: &AtomicBool,
     phase: impl Fn(BackupPhase),
 ) -> Result<BackupResult, String> {
+    let directory = export_directory(destination)?;
+    phase(BackupPhase::Draining);
+    let admission = maintenance.begin(cancelled)?;
+    let pause = workers.pause(cancelled)?;
+    phase(BackupPhase::Collecting);
+    let (manifest, snapshot) = collect_backup(database, &directory, cancelled)?;
+    drop(pause);
+    drop(admission);
+    finish_export(
+        &directory,
+        &manifest,
+        &snapshot,
+        destination,
+        cancelled,
+        phase,
+    )
+}
+
+/// The restore coordinator holds writer admission and the worker pause for the whole operation.
+pub(crate) fn export_paused(
+    database: &DatabasePath,
+    destination: &Path,
+    cancelled: &AtomicBool,
+) -> Result<BackupResult, String> {
+    let directory = export_directory(destination)?;
+    let (manifest, snapshot) = collect_backup(database, &directory, cancelled)?;
+    finish_export(
+        &directory,
+        &manifest,
+        &snapshot,
+        destination,
+        cancelled,
+        |_| {},
+    )
+}
+
+fn export_directory(destination: &Path) -> Result<OwnedDirectory, String> {
     if !destination.is_absolute() || destination.file_name().is_none() {
         return Err("Backup destination must be an absolute new file path".into());
     }
@@ -755,15 +794,18 @@ pub fn export_backup_to_new_file(
         Err(error) if error.kind() == io::ErrorKind::NotFound => (),
         Err(error) => return Err(format!("Could not inspect backup destination: {error}")),
     }
-    let directory = OwnedDirectory::create(
+    OwnedDirectory::create(
         destination
             .parent()
             .ok_or("Backup destination has no parent")?,
-    )?;
-    phase(BackupPhase::Draining);
-    let admission = maintenance.begin(cancelled)?;
-    let pause = workers.pause(cancelled)?;
-    phase(BackupPhase::Collecting);
+    )
+}
+
+fn collect_backup(
+    database: &DatabasePath,
+    directory: &OwnedDirectory,
+    cancelled: &AtomicBool,
+) -> Result<(BackupManifest, LearningSnapshot), String> {
     check_cancelled(cancelled)?;
     let captured_at = crate::speech_tasks::now()?;
     crate::dictionaries::portable_catalog(database)
@@ -782,9 +824,6 @@ pub fn export_backup_to_new_file(
     storage::validate_learning_snapshot(&snapshot, captured_at)
         .map_err(|e| format!("Invalid collected learning state: {e}"))?;
     drop(connection);
-    drop(pause);
-    drop(admission);
-    phase(BackupPhase::Packaging);
     let manifest = BackupManifest {
         kind: "lexique-backup".into(),
         format_version: 1,
@@ -793,7 +832,19 @@ pub fn export_backup_to_new_file(
         application_version: env!("CARGO_PKG_VERSION").into(),
         counts: BackupCounts::from_snapshot(&snapshot),
     };
-    let path = package(&directory.0, &manifest, &snapshot, cancelled)?;
+    Ok((manifest, snapshot))
+}
+
+fn finish_export(
+    directory: &OwnedDirectory,
+    manifest: &BackupManifest,
+    snapshot: &LearningSnapshot,
+    destination: &Path,
+    cancelled: &AtomicBool,
+    phase: impl Fn(BackupPhase),
+) -> Result<BackupResult, String> {
+    phase(BackupPhase::Packaging);
+    let path = package(&directory.0, manifest, snapshot, cancelled)?;
     phase(BackupPhase::Validating);
     let validation = directory.0.join("validation");
     fs::create_dir(&validation).map_err(|e| format!("Could not stage backup readback: {e}"))?;
@@ -806,8 +857,8 @@ pub fn export_backup_to_new_file(
     Ok(BackupResult {
         destination: destination.to_string_lossy().into_owned(),
         byte_length,
-        created_at: captured_at,
-        counts: manifest.counts,
+        created_at: manifest.created_at,
+        counts: manifest.counts.clone(),
     })
 }
 

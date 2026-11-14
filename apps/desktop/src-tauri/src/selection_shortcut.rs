@@ -67,6 +67,16 @@ fn save(connection: &Connection, index: usize, value: &str) -> Result<(), String
     Ok(())
 }
 
+pub(crate) fn restore_device_preferences(
+    source: &Connection,
+    destination: &Connection,
+) -> Result<(), String> {
+    for index in 0..KEYS.len() {
+        save(destination, index, &load(source, index)?)?;
+    }
+    Ok(())
+}
+
 pub fn setup(app: &tauri::AppHandle) {
     let mut statuses = DEFAULT_SHORTCUTS.map(|shortcut| ShortcutStatus {
         shortcut: shortcut.into(),

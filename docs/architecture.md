@@ -175,3 +175,15 @@ storage 的 `import_learning_snapshot` 在一个立即事务中参数化写入�
 暂存只为每个 `included` 引用发布音频。共享哈希的缺失、损坏和排除引用仍分别无文件，`unpublished` 的封存意图保留原状态。发布后的托管字节独立回读并校验 Ogg／hash／长度，暂存阶段保留捕获时的可空元数据及验证／封存状态，正常运行校验可以随后补充长度。
 
 预览和导出共用 `BackupOperations`。取消立即使暂存身份失效，终态供界面继续核对；独立在途租约覆盖选择器、文件、SQLite 和清理，完成前继续阻止新操作及关闭。重新选择、开始导出或关闭会释放就绪预览，迟到工作不能恢复旧身份。就绪状态持有不可变的已核实暂存对象，`consume_preview` 按操作身份原子取得该对象和独立的 `CloseGuard`，只可取得一次，后续正式恢复直接使用已准备内容。#73 在持久 prepared journal 发布后通过 `keep()` 取得根目录清理责任；关闭保留权继续覆盖恢复交接。验证证据和后续实际平台边界见 [#72 证据](evidence/issue-72/README.md)。
+
+## 整份恢复与普通启动（#73）
+
+正式确认按 #72 的就绪身份取得唯一暂存和关闭保留权。原生先暂停写入与语音维护，完成当前状态 B 的可恢复备份，再将 A 的便携偏好和逻辑词典清单应用到暂存；目标设备快捷键保持，MDX 仅按已核实的精确内容接回。正式切换排空已接受的只读回调并终止旧 worker。进入终止关闭后，即使交接失败也保持学习入口关闭；失败释放备份关闭保留权，使恢复状态可以沿用原生关闭／退出协调，成功则提交该保留权并请求受控重启。
+
+数据库同级的 `.lexique-restore.json` 只使用 `prepared`、`swapping`、`committed`。记录保存原组件存在性、各次隔离／安装前的移动意图、回退进度和旧请求清理进度；SQLite 主库及存在的 WAL／SHM／rollback journal 为一组，托管音频为另一组。`prepared` 允许普通启动继续已确认的切换；`swapping` 重复恢复完整 B，原先不存在的组件保持不存在；`committed` 始终保留 A，并继续清理。每次移动前持久记录意图，新状态同步和校验完成后才提交。
+
+回退先将已有保留目录中的 `decision.json` 写为持久回退决定，再替换活动记录；活动记录因共享锁仍停在 `prepared` 时，普通启动也遵循匹配的回退决定。无法读取或完成任一决定时，启动保留错误及副本位置，在 SQLite 初始化、迁移、缓存和 worker 之前停止。回退复制并同步保留的原组件，可重复执行且不消耗原副本。
+
+`startup_status`／`lexique-startup-status` 在学习对象建立前提供恢复状态。已提交 A 先等待 `backup_restore_cleanup_begin`；前端只删除所有 `lexique-pending-rating-*`、确切的 `lexique-pending-undo` 和 `lexique-pending-review-batch`，验证不存在后调用 `backup_restore_cleanup_complete`。原生持久确认、完成清理并初始化学习后才返回就绪；失败和重启继续保持入口关闭。订阅和缓存重新建立，已确认语音需求按既有取消、预算和原期限规则恢复。
+
+恢复前 `.lexique-backup`、原数据库及原音频位于 `retained-restores/<native identity>/`，独立于托管音频 GC 和暂存清理。前端展示原生记录的类型、路径和大小，打开目录只接受返回的副本 ID；七项新增命令仅授予本地主窗口。行为、实际子进程中断和平台限制见 [#73 证据](evidence/issue-73/README.md)。

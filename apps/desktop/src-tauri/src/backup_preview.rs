@@ -10,7 +10,7 @@ use lexique_storage::{
     self as storage, AudioPayloadStatus, LearningSnapshot, SnapshotAudioVersion,
 };
 use rusqlite::{Connection, OpenFlags};
-use serde::Serialize;
+use serde::{Deserialize, Serialize};
 
 use crate::{
     backup::{
@@ -47,13 +47,15 @@ pub struct BackupPreviewStatus {
     pub error: Option<String>,
 }
 
-#[derive(Clone, Debug, Serialize)]
+#[derive(Clone, Debug, Deserialize, Serialize)]
+#[serde(deny_unknown_fields)]
 pub struct PendingBackupDictionary {
     pub id: String,
     pub title: String,
 }
 
-#[derive(Clone, Debug, Serialize)]
+#[derive(Clone, Debug, Deserialize, Serialize)]
+#[serde(deny_unknown_fields)]
 pub struct BackupPreview {
     pub filename: String,
     pub byte_length: u64,

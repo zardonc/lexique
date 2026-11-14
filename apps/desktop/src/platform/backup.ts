@@ -50,3 +50,29 @@ export const backupPreviewStatusSchema = z.discriminatedUnion('state', [
 
 export type BackupPreview = z.infer<typeof previewSchema>;
 export type BackupPreviewStatus = z.infer<typeof backupPreviewStatusSchema>;
+
+const retainedCopySchema = z.object({
+  id: nonblank, kind: z.enum(['logical_backup', 'original_database', 'original_audio']),
+  path: nonblank, byte_length: count,
+}).strict().transform(({ byte_length, ...value }) => ({ ...value, byteLength: byte_length })).readonly();
+const retainedCopiesSchema = z.array(retainedCopySchema).readonly()
+  .refine((copies) => new Set(copies.map((copy) => copy.id)).size === copies.length);
+
+const restoreFields = { operation: backupPreviewOperation, preview: previewSchema, retained_copies: retainedCopiesSchema };
+export const restoreStatusSchema = z.discriminatedUnion('state', [
+  z.object({ ...restoreFields, state: z.literal('running'), phase: z.enum(['preserving', 'preparing', 'closing']), error: z.null() }).strict().readonly(),
+  z.object({ ...restoreFields, state: z.literal('restart_requested'), phase: z.null(), error: z.null() }).strict().readonly(),
+  z.object({ ...restoreFields, state: z.literal('failed'), phase: z.null(), error: nonblank }).strict().readonly(),
+]).transform(({ retained_copies, ...value }) => ({ ...value, retainedCopies: retained_copies })).readonly();
+export type RestoreStatus = z.infer<typeof restoreStatusSchema>;
+
+export const startupStatusSchema = z.object({
+  state: z.enum(['ready', 'cleanup_required', 'recovery_required']), operation: backupPreviewOperation.nullable(),
+  restored: previewSchema.nullable(), retained_copies: retainedCopiesSchema, error: nonblank.nullable(),
+}).strict().refine((value) => value.state !== 'cleanup_required' || value.operation !== null)
+  .refine((value) => value.restored === null || value.operation !== null)
+  .refine((value) => value.state !== 'ready' || value.restored === null || value.error === null)
+  .transform(({ retained_copies, ...value }) => ({ ...value, retainedCopies: retained_copies })).readonly();
+
+export type StartupStatus = z.infer<typeof startupStatusSchema>;
+export type RetainedCopy = z.infer<typeof retainedCopySchema>;

@@ -18,7 +18,8 @@ import type { Locale } from '../content';
 import { interfacePreferencesSchema } from './interface';
 import type { InterfacePreferences } from './interface';
 import { backupStatusSchema, backupPreviewOperation, backupPreviewStatusSchema } from './backup';
-import type { BackupStatus, BackupPreviewStatus } from './backup';
+import type { BackupStatus, BackupPreviewStatus, RestoreStatus, StartupStatus } from './backup';
+import { restoreRuntime } from './restore';
 
 async function dictionaryUpload(file: File) {
   if (!/\.mdx$/i.test(file.name) || !file.size || file.size > 128 * 1024 * 1024) throw { code: 'limit', message: 'MDX: non-empty, at most 128 MiB' };
@@ -131,6 +132,15 @@ export type BatchRequest = z.infer<typeof batchRequestSchema>;
 export type BatchStatus = z.infer<typeof batchSchema>;
 
 export interface RuntimeAdapter {
+  readonly startRestore: (operation: string) => Promise<RestoreStatus>;
+  readonly restoreStatus: (operation: string) => Promise<RestoreStatus>;
+  readonly onRestoreProgress: (callback: (status: RestoreStatus) => void, failed: (cause: unknown) => void) => Promise<() => void>;
+  readonly startupStatus: () => Promise<StartupStatus>;
+  readonly retryStartup: () => Promise<StartupStatus>;
+  readonly onStartupStatus: (callback: (status: StartupStatus) => void, failed: (cause: unknown) => void) => Promise<() => void>;
+  readonly beginRestoreCleanup: (operation: string) => Promise<StartupStatus>;
+  readonly completeRestoreCleanup: (operation: string) => Promise<StartupStatus>;
+  readonly openRetainedDirectory: (copy: string) => Promise<void>;
   readonly backupAvailable: () => boolean;
   readonly startBackup: () => Promise<BackupStatus>;
   readonly backupStatus: (operation: string) => Promise<BackupStatus>;
@@ -197,6 +207,7 @@ async function readShortcut(command: string, shortcut?: string) {
 }
 
 export const runtime: RuntimeAdapter = {
+  ...restoreRuntime,
   backupAvailable: isTauri,
   async startBackup() {
     if (!isTauri()) throw new Error('Backups are available in the desktop app only');
