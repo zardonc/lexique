@@ -211,6 +211,15 @@ impl Inspector {
             false,
         )
     }
+    pub fn publish_legacy(&self, id: i64, hash: &str, bytes: &[u8]) -> Result<(), String> {
+        if id <= 0 {
+            return Err("Invalid legacy audio owner".into());
+        }
+        if lexique_storage::content_hash(bytes) != hash {
+            return Err("Legacy audio checksum mismatch".into());
+        }
+        write_named(&self.1, &format!("{id}.ogg"), &id.to_string(), bytes, false)
+    }
 }
 
 fn validate_hash(key: &str) -> Result<(), String> {
