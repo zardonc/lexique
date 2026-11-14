@@ -622,10 +622,10 @@ fn validate_speech(
         }
     }
     for owner in &snapshot.speech_owners {
-        if initial_snapshot_audio_allowed(snapshot, owner.vocabulary_id) {
-            if let Some(locator) = &sources[&owner.semantic_key].current_version {
-                protected.insert(locator);
-            }
+        if initial_snapshot_audio_allowed(snapshot, owner.vocabulary_id)
+            && let Some(locator) = &sources[&owner.semantic_key].current_version
+        {
+            protected.insert(locator);
         }
     }
     for version in &snapshot.audio_versions {
