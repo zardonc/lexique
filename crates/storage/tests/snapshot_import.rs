@@ -815,7 +815,16 @@ fn imported_audio_keeps_shared_selection_legacy_nulls_absolute_protection_and_un
         |row| Ok((row.get(0)?,row.get(1)?)),
     ).unwrap();
     assert_eq!(protected, (Some(previous.clone()), Some(NOW + 40)));
-    let retired: (String,i64,Option<i64>,Option<String>,Option<i64>,i64,Option<String>) = target.query_row(
+    type RetiredVersion = (
+        String,
+        i64,
+        Option<i64>,
+        Option<String>,
+        Option<i64>,
+        i64,
+        Option<String>,
+    );
+    let retired: RetiredVersion = target.query_row(
         "SELECT gc_state,gc_generation,expires_at,gc_error,vocabulary_id,last_used,import_locator
          FROM speech_versions WHERE locator=?1", [&expired],
         |row| Ok((row.get(0)?,row.get(1)?,row.get(2)?,row.get(3)?,row.get(4)?,row.get(5)?,row.get(6)?)),
@@ -837,7 +846,16 @@ fn imported_audio_keeps_shared_selection_legacy_nulls_absolute_protection_and_un
         |row| Ok((row.get(0)?,row.get(1)?,row.get(2)?,row.get(3)?)),
     ).unwrap();
     assert_eq!(raw_missing, (None, None, None, Some(NOW + 123)));
-    let source_projection: (Option<String>,Option<i64>,Option<i64>,Option<String>,Option<i64>,Option<i64>,bool) = target.query_row(
+    type SourceProjection = (
+        Option<String>,
+        Option<i64>,
+        Option<i64>,
+        Option<String>,
+        Option<i64>,
+        Option<i64>,
+        bool,
+    );
+    let source_projection: SourceProjection = target.query_row(
         "SELECT content_hash,generated_at,expires_at,pending_hash,pending_generated_at,pending_execution,retain
          FROM speech_assets WHERE semantic_key=?1", [&follow_key],
         |row| Ok((row.get(0)?,row.get(1)?,row.get(2)?,row.get(3)?,row.get(4)?,row.get(5)?,row.get(6)?)),
