@@ -135,6 +135,9 @@ class NativeFixture {
   install() {
     window.testNative = { calls: this.calls, close: () => this.emit('lexique-close-requested'), emit: (event, payload) => this.emit(event, payload),
       release: (gate) => { this.gates.get(gate)?.(); this.gates.delete(gate); } };
+    Object.defineProperty(window, '__TAURI_EVENT_PLUGIN_INTERNALS__', { value: {
+      unregisterListener: (_event: string, id: number) => { this.listeners.delete(id); },
+    } });
     Object.defineProperty(window, 'isTauri', { value: true });
     Object.defineProperty(window, '__TAURI_INTERNALS__', { value: {
       transformCallback: (callback: (event: unknown) => void) => { const id = Math.max(0, ...this.callbacks.keys()) + 1; this.callbacks.set(id, callback); return id; },
