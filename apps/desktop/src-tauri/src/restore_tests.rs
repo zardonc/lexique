@@ -802,6 +802,12 @@ fn failed_preparation_with_a_locked_journal_keeps_b_after_the_lock_is_released()
     );
 }
 
+#[test]
+fn interruption_waits_for_a_slow_child_to_reach_its_checkpoint() {
+    let fixture = Fixture::new();
+    interrupt_at(&fixture, "new-state-synced", "delayed-checkpoint");
+}
+
 struct CheckpointChild(std::process::Child);
 
 impl Drop for CheckpointChild {
@@ -854,7 +860,8 @@ pub(super) fn interrupt_child_at(fixture: &Fixture, checkpoint: &str, action: &s
         command.creation_flags(0x0800_0000);
     }
     let mut child = CheckpointChild(command.spawn().unwrap());
-    let deadline = Instant::now() + Duration::from_secs(5);
+    // Allow for child startup and durable filesystem writes on slower CI workers.
+    let deadline = Instant::now() + Duration::from_secs(15);
     while fs::read(&marker).ok().as_deref() != Some(checkpoint.as_bytes()) {
         assert!(
             child.0.try_wait().unwrap().is_none(),
@@ -901,6 +908,10 @@ fn restore_interruption_child() {
         }
         Ok(())
     };
+    if action == "delayed-checkpoint" {
+        std::thread::sleep(Duration::from_secs(6));
+        observe(&checkpoint).unwrap();
+    }
     if action == "prepare" {
         let stage = prepare_preview(
             &root.join("interruption-A.lexique-backup"),
