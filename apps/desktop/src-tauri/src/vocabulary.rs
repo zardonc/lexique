@@ -189,14 +189,7 @@ pub fn coordinate_quit(app: &tauri::AppHandle) -> Result<(), Box<dyn std::error:
     app_menu.append(&replacement)?;
     app.on_menu_event(|app, event| {
         if event.id() == "lexique-quit" {
-            let result = if crate::startup::learning_available(app) {
-                request_close(app)
-            } else {
-                finish_close(app.clone())
-            };
-            if let Err(error) = result {
-                eprintln!("Could not request application close: {error}");
-            }
+            crate::startup::coordinate_close(app.clone(), "macOS quit");
         }
     });
     Ok(())
@@ -1122,7 +1115,7 @@ pub async fn review_settings(
     .map_err(|error| format!("Review settings task failed: {error}"))?
 }
 
-#[tauri::command]
+#[tauri::command(async)]
 pub fn finish_close(app: tauri::AppHandle) -> Result<(), String> {
     let close = app
         .state::<crate::backup_operations::BackupOperations>()

@@ -57,6 +57,6 @@
 
 ## 验证范围
 
-完整浏览器记录 `final-browser-full.log` 为 374 通过／1 失败，覆盖 375 项。当前恢复／启动套件 49/49 通过；完整运行中其余 326 项通过，尚无最终源码的单次 375/375 结果。当前成功截图保留于 `target/issue-74/final-browser-restore-green-artifacts/`。原生严格 Clippy 未在本票重复执行，#73 的既有诊断与最终集成审查边界保持。
+集成提交 `ca7d31eb8caa475ac806427f5e199b0daec3b5f0` 的 [PR CI](https://github.com/zardonc/lexique/actions/runs/43654344670) 与 [push CI](https://github.com/zardonc/lexique/actions/runs/43654340882) 共 22 项检查通过。[完整前端 job](https://github.com/zardonc/lexique/actions/runs/43654344670/job/132629480751) 明确记录 375/375 浏览器测试通过（3.2 min），包含 lint、typecheck、build；[文档 job](https://github.com/zardonc/lexique/actions/runs/43654344670/job/132629480747) 通过。本票恢复／启动套件 49/49 与截图保留于原有档案。原生严格 Clippy 未在本票重复执行，#73 的既有诊断与最终集成审查边界保持。
 
-本票使用合成隔离学习数据、真实 Windows 文件／子进程、合法资源及严格浏览器 IPC 替身。实际 Windows GUI、系统选择器、受控重启、真实播放与隔离迁移由 [#75](https://github.com/zardonc/lexique/issues/75) 验收。其他 OS／架构、物理跨系统迁移、正式发行／首装／断网／签名按既有门槛分别验证。
+本票使用合成隔离学习数据、真实 Windows 文件／子进程、合法资源及严格浏览器 IPC 替身。实际 Windows GUI、系统选择器、受控重启、真实播放与独立目录迁移通过 [#68／#75 原生验收](../issue-68/README.md)。其他 OS／架构、物理跨系统迁移、正式发行／首装／断网／签名按既有门槛分别验证。

@@ -152,14 +152,7 @@ pub fn run() {
                     "[native-lifecycle] Window CloseRequested",
                 );
                 api.prevent_close();
-                let result = if startup::learning_available(window.app_handle()) {
-                    vocabulary::request_close(window.app_handle())
-                } else {
-                    vocabulary::finish_close(window.app_handle().clone())
-                };
-                if let Err(error) = result {
-                    eprintln!("Could not coordinate window close: {error}");
-                }
+                startup::coordinate_close(window.app_handle().clone(), "window close");
             }
         })
         .invoke_handler(tauri::generate_handler![
@@ -231,14 +224,7 @@ pub fn run() {
                     && !app.state::<vocabulary::CloseAuthorization>().permits_exit()
                 {
                     api.prevent_exit();
-                    let result = if startup::learning_available(app) {
-                        vocabulary::request_close(app)
-                    } else {
-                        vocabulary::finish_close(app.clone())
-                    };
-                    if let Err(error) = result {
-                        eprintln!("Could not coordinate application exit: {error}");
-                    }
+                    startup::coordinate_close(app.clone(), "application exit");
                 }
             }
         });

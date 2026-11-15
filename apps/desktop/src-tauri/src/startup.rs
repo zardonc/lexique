@@ -250,6 +250,19 @@ pub(crate) fn learning_available(app: &tauri::AppHandle) -> bool {
     })
 }
 
+pub(crate) fn coordinate_close(app: tauri::AppHandle, source: &'static str) {
+    tauri::async_runtime::spawn_blocking(move || {
+        let result = if learning_available(&app) {
+            crate::vocabulary::request_close(&app)
+        } else {
+            crate::vocabulary::finish_close(app)
+        };
+        if let Err(error) = result {
+            eprintln!("Could not coordinate {source}: {error}");
+        }
+    });
+}
+
 pub(crate) fn emit(app: &tauri::AppHandle, status: &StartupStatus) {
     if let Err(error) = app.emit_to("main", EVENT, status) {
         eprintln!("Could not notify startup status: {error}");
@@ -264,7 +277,7 @@ pub(crate) fn request_restart(app: &tauri::AppHandle) -> Result<(), String> {
         })
 }
 
-#[tauri::command]
+#[tauri::command(async)]
 pub fn startup_status(
     window: tauri::WebviewWindow,
     state: State<'_, StartupState>,
@@ -332,6 +345,9 @@ pub async fn backup_restore_cleanup_complete(
 ) -> Result<StartupStatus, String> {
     crate::backup_operations::main_window(&window)?;
     tauri::async_runtime::spawn_blocking(move || {
+        let _cleanup = app
+            .state::<crate::backup_operations::BackupOperations>()
+            .begin_close()?;
         let state = app.state::<StartupState>();
         let mut runtime = state.0.lock().map_err(|_| "Startup cleanup unavailable")?;
         if runtime.needs_restart {
