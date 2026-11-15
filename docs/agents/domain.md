@@ -20,6 +20,15 @@ Use glossary terms in issues, proposals, hypotheses, and test names.
 If a needed concept is missing, reconsider the term or note the gap
 for domain-modeling.
 
+## Import and restore reviews
+
+When reviewing learning-state import or restore, exercise normal lookup,
+editing and saved-operation replay after import. Include canonically equivalent
+Unicode headwords and verify record identity, idempotent replay, and the specified
+reference spelling and user text through those paths. Reuse the
+[snapshot import regressions](../../crates/storage/tests/snapshot_import.rs)
+for this coverage.
+
 ## Decision conflicts
 
 Explicitly identify proposals that contradict an existing ADR.

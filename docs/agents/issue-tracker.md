@@ -6,8 +6,9 @@ Use the `gh` CLI from this repository.
 ## Operations
 
 - Create: `gh issue create --title "..." --body-file <file>`.
-- Read: `gh issue view <number> --json number,title,body,labels,comments`.
-- List: `gh issue list --state open --json number,title,body,labels,assignees`.
+- Read: `gh issue view <number> --json number,title,state,body,labels`.
+- List: `gh issue list --state open --json number,title,labels,assignees`.
+- Comments, when decision history is needed: `gh issue view <number> --json comments`.
 - Comment: `gh issue comment <number> --body-file <file>`.
 - Add or remove labels: `gh issue edit <number> --add-label "..."`
   or `--remove-label "..."`.
@@ -15,6 +16,8 @@ Use the `gh` CLI from this repository.
 
 Use UTF-8 files with actual newlines for multiline bodies and comments.
 Infer the repository from the Git remote.
+
+Scope lists with `--search` or `--limit`, then fetch bodies for selected tickets.
 
 When a skill says "publish to the issue tracker", create a GitHub issue.
 When it says "fetch the relevant ticket", read the GitHub issue.
@@ -33,6 +36,22 @@ If sub-issues are unavailable, add `Part of #<parent>` to the child body
 and link the child in the parent's task list.
 If dependencies are unavailable, add `Blocked by: #<number>` to the child.
 A ticket is unblocked when all its blocking issues are closed.
+
+## Merge closeout
+
+After a referenced PR merges, read its state, final head, merge commit and check
+summaries in one compact snapshot:
+
+```sh
+gh pr view <number> --json state,headRefOid,mergeCommit,mergedAt,url,statusCheckRollup --jq '{state,headRefOid,mergeCommit:.mergeCommit.oid,mergedAt,url,checks:[.statusCheckRollup[]|{name:(.name // .context),status,conclusion:(.conclusion // .state)}]}'
+```
+
+Read each relevant CI run with
+`gh run view <run-id> --json headSha,status,conclusion,url` and match its `headSha`
+to the final head or merge commit it validates. Record those commits, run URLs
+and conclusions in linked issue bodies and relevant verification docs before
+selecting follow-up work. Keep earlier fixture and CI evidence attached to the
+commit or build actually tested; preserve outstanding work and deferred validation.
 
 ## Wayfinding
 
