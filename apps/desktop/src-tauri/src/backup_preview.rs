@@ -127,11 +127,12 @@ fn verify_database(connection: &Connection, snapshot: &LearningSnapshot) -> Resu
         return Err("Staged database foreign-key check failed".into());
     }
     for expected in &snapshot.records {
-        let record = storage::get(connection, expected.id)
-            .map_err(|e| format!("Could not read staged vocabulary: {e}"))?;
-        if serde_json::to_value(record).map_err(|e| e.to_string())?
-            != serde_json::to_value(expected).map_err(|e| e.to_string())?
-        {
+        let record = storage::find(connection, &expected.headword)
+            .map_err(|e| format!("Could not read staged vocabulary: {e}"))?
+            .ok_or_else(|| format!("Staged vocabulary {} could not be found", expected.id))?;
+        let mut expected_value = serde_json::to_value(expected).map_err(|e| e.to_string())?;
+        expected_value["headword"] = record.headword.clone().into();
+        if serde_json::to_value(record).map_err(|e| e.to_string())? != expected_value {
             return Err(format!(
                 "Staged vocabulary {} differs from the backup",
                 expected.id

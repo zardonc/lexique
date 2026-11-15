@@ -1187,16 +1187,17 @@ mod tests {
 
     #[test]
     fn preview_stages_empty_and_saved_learning_in_an_owned_root_without_live_changes() {
-        for vocabulary_count in [0, 1] {
+        for (vocabulary_count, headword) in [(0, "école"), (1, "école"), (1, "e\u{301}cole")] {
             let directory = Directory::new();
             let database = directory.database();
             let mut connection = rusqlite::Connection::open(&database.0).unwrap();
             storage::initialize(&connection).unwrap();
-            let id = (vocabulary_count == 1).then(|| save_word(&mut connection, "école"));
+            let id = (vocabulary_count == 1).then(|| save_word(&mut connection, headword));
             let captured_at = 1_794_564_000;
             let mut snapshot =
                 storage::export_learning_snapshot(&mut connection, captured_at).unwrap();
             if vocabulary_count == 1 {
+                snapshot.records[0].headword = headword.into();
                 snapshot.dictionary_catalog.next_id = 2;
                 snapshot.dictionary_catalog.entries.insert(
                     0,
@@ -1281,6 +1282,8 @@ mod tests {
             if let Some(id) = id {
                 let record = storage::get(&restored, id).unwrap();
                 assert_eq!(record.headword, "école");
+                assert_eq!(storage::find(&restored, headword).unwrap().unwrap().id, id);
+                assert_eq!(record.reference.lookup_key, headword);
                 assert_eq!(record.notes, "Mes notes\n个人笔记");
                 assert_eq!(record.example_fr, "Une école.");
                 assert_eq!(record.example_zh, "学校");

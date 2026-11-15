@@ -113,6 +113,63 @@ fn imported_record_and_preferences_are_readable_and_saved_operations_remain_idem
     );
 }
 
+#[test]
+fn imported_decomposed_headword_is_findable_editable_and_replayable() {
+    let headword = "e\u{301}te\u{301}";
+    let mut source = Connection::open_in_memory().unwrap();
+    initialize(&source).unwrap();
+    let id = saved_word(&mut source, "save-original", headword);
+    let mut snapshot = export_learning_snapshot(&mut source, CAPTURED_AT).unwrap();
+    snapshot.records[0].headword = headword.into();
+    snapshot.records[0].notes = format!("  {headword}\n");
+    validate_learning_snapshot(&snapshot, CAPTURED_AT).unwrap();
+
+    let mut target = Connection::open_in_memory().unwrap();
+    initialize(&target).unwrap();
+    import_learning_snapshot(&mut target, &snapshot, CAPTURED_AT).unwrap();
+    for query in ["été", headword] {
+        assert_eq!(
+            find(&target, query).unwrap().map(|record| record.id),
+            Some(id)
+        );
+    }
+    let record = get(&target, id).unwrap();
+    assert_eq!(record.headword, "été");
+    assert_eq!(record.reference.lookup_key, headword);
+    assert_eq!(record.notes, snapshot.records[0].notes);
+    let replayed = save(&mut target, &snapshot.save_operations[0].request, None).unwrap();
+    assert_eq!(replayed.outcome, "replayed");
+    assert_eq!(replayed.record.id, id);
+    let mut request = snapshot.save_operations.pop().unwrap().request;
+    request.operation = "edit-restored".into();
+    request.id = Some(id);
+    request.revision = Some(record.revision);
+    request.notes = "Updated after restore".into();
+    let updated = save(&mut target, &request, None).unwrap();
+    assert_eq!(updated.outcome, "updated");
+    assert_eq!(updated.record.id, id);
+    assert_eq!(updated.record.notes, "Updated after restore");
+    assert_eq!(list(&target, "", "headword-asc").unwrap().len(), 1);
+}
+
+#[test]
+fn snapshot_import_rejects_unicode_equivalent_headwords_without_writes() {
+    let mut source = Connection::open_in_memory().unwrap();
+    initialize(&source).unwrap();
+    saved_word(&mut source, "save-original", "été");
+    let mut snapshot = export_learning_snapshot(&mut source, CAPTURED_AT).unwrap();
+    let mut duplicate = snapshot.records[0].clone();
+    duplicate.id += 1;
+    duplicate.headword = "e\u{301}te\u{301}".into();
+    snapshot.records.push(duplicate);
+
+    let mut target = Connection::open_in_memory().unwrap();
+    initialize(&target).unwrap();
+    let error = import_learning_snapshot(&mut target, &snapshot, CAPTURED_AT).unwrap_err();
+    assert!(error.to_string().contains("duplicate vocabulary identity"));
+    assert!(list(&target, "", "headword-asc").unwrap().is_empty());
+}
+
 fn rate(
     connection: &mut Connection,
     operation: &str,

@@ -1,4 +1,5 @@
 use rusqlite::{Connection, TransactionBehavior, params};
+use unicode_normalization::UnicodeNormalization;
 
 use crate::*;
 
@@ -79,7 +80,7 @@ fn insert_records(
     for record in &snapshot.records {
         statement.execute(params![
             record.id,
-            record.headword,
+            record.headword.nfc().collect::<String>(),
             serde_json::to_string(&serde_json::json!({
                 "reference": record.reference, "digest": record.digest
             }))?,
