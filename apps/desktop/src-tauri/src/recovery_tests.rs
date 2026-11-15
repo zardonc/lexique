@@ -318,6 +318,179 @@ fn unreadable_restore_records_can_be_recovered_without_discarding_prior_evidence
 }
 
 #[test]
+fn failed_raw_recovery_keeps_prior_gate_until_a_fresh_recovery_commits() {
+    for prior in [
+        Some(b"{interrupted".as_slice()),
+        Some(b"\xff\0unreadable".as_slice()),
+        None,
+    ] {
+        for failure_at in ["prepared", "after-install-database"] {
+            let fixture = Fixture::new();
+            let mut connection = Connection::open(&fixture.database.0).unwrap();
+            let record = save(&mut connection, "A successful recovery").record;
+            connection.close().unwrap();
+            let archive = fixture.root.0.join("retry.lexique-backup");
+            let cancelled = AtomicBool::new(false);
+            export_paused(&fixture.database, &archive, &cancelled).unwrap();
+            let connection = Connection::open(&fixture.database.0).unwrap();
+            connection
+                .execute(
+                    "UPDATE vocabulary SET notes='B supported original' WHERE id=?1",
+                    [record.id],
+                )
+                .unwrap();
+            connection.close().unwrap();
+            let directory = fixture.database.0.parent().unwrap();
+            let stage = || prepare_preview(&archive, directory, false, &cancelled, |_| {}).unwrap();
+            let journal = directory.join(".lexique-restore.json");
+            if let Some(bytes) = prior {
+                fs::write(&journal, bytes).unwrap();
+            } else {
+                let error = crate::restore::prepare_raw(
+                    &fixture.database,
+                    stage(),
+                    "prior-unresolved",
+                    &raw_requests(),
+                    || Ok(()),
+                    |point| match point {
+                        "prepared" => Err("Prior recovery failed before commitment".into()),
+                        "rollback" => Err("Prior component rollback remains unresolved".into()),
+                        _ => Ok(()),
+                    },
+                )
+                .unwrap_err();
+                assert!(error.contains("preparation rollback failed"), "{error}");
+            }
+            let blocked = crate::startup::load(
+                &fixture.database,
+                |point| {
+                    if point == "rollback" {
+                        return Err("Prior component rollback remains unresolved".into());
+                    }
+                    Ok(())
+                },
+                || panic!("prior recovery decision admitted learning"),
+            );
+            assert_eq!(blocked.state, StartupPhase::RecoveryRequired, "{blocked:?}");
+            let connection = crate::vocabulary::open(&fixture.database).unwrap();
+            assert_eq!(
+                storage::get(&connection, record.id).unwrap().notes,
+                "B supported original"
+            );
+            connection.close().unwrap();
+            let original_database = fs::read(&fixture.database.0).unwrap();
+            let original_journal = fs::read(&journal).unwrap();
+            let previous = directory.join("retained-restores/earlier/original-database/keep.bin");
+            fs::create_dir_all(previous.parent().unwrap()).unwrap();
+            fs::write(&previous, b"earlier retained original").unwrap();
+            let old_stage = directory.join(".lexique-backup-earlier/keep.bin");
+            fs::create_dir_all(old_stage.parent().unwrap()).unwrap();
+            fs::write(&old_stage, b"earlier staged component").unwrap();
+            let raw = directory.join("retained-restores/failed-fresh/raw-files");
+            let mut rollback_complete = false;
+            let prepared = crate::restore::prepare_raw(
+                &fixture.database,
+                stage(),
+                "failed-fresh",
+                &raw_requests(),
+                || Ok(()),
+                |point| {
+                    rollback_complete |= point == "rollback-complete";
+                    if point == failure_at {
+                        return Err("Fresh recovery failed before commitment".into());
+                    }
+                    Ok(())
+                },
+            );
+            if failure_at == "prepared" {
+                let error = prepared.unwrap_err();
+                assert!(
+                    error.contains("Fresh recovery failed before commitment"),
+                    "{error}"
+                );
+            } else {
+                prepared.unwrap();
+                let status = crate::startup::load(
+                    &fixture.database,
+                    |point| {
+                        rollback_complete |= point == "rollback-complete";
+                        if point == failure_at {
+                            return Err("Fresh recovery failed before commitment".into());
+                        }
+                        Ok(())
+                    },
+                    || panic!("failed fresh recovery admitted learning"),
+                );
+                assert_eq!(status.state, StartupPhase::RecoveryRequired, "{status:?}");
+            }
+            assert!(
+                rollback_complete,
+                "fresh recovery did not complete rollback"
+            );
+            for attempt in 0..2 {
+                let status = crate::startup::load(
+                    &fixture.database,
+                    |_| Ok(()),
+                    || panic!("cold start {attempt} admitted learning after {failure_at}"),
+                );
+                assert_eq!(status.state, StartupPhase::RecoveryRequired, "{status:?}");
+                assert_eq!(fs::read(&fixture.database.0).unwrap(), original_database);
+                assert_eq!(
+                    fs::read(raw.join("database/lexique.sqlite3")).unwrap(),
+                    original_database
+                );
+                assert_eq!(
+                    fs::read(raw.join(".lexique-restore.json")).unwrap(),
+                    original_journal
+                );
+                assert_eq!(fs::read(&previous).unwrap(), b"earlier retained original");
+                assert_eq!(fs::read(&old_stage).unwrap(), b"earlier staged component");
+                let requests: Vec<RawPendingRequest> =
+                    serde_json::from_slice(&fs::read(raw.join("pending-requests.json")).unwrap())
+                        .unwrap();
+                assert_eq!(requests, raw_requests());
+            }
+            crate::restore::prepare_raw(
+                &fixture.database,
+                stage(),
+                "successful-retry",
+                &raw_requests(),
+                || Ok(()),
+                |_| Ok(()),
+            )
+            .unwrap();
+            let status = crate::startup::load(
+                &fixture.database,
+                |_| Ok(()),
+                || panic!("successful recovery skipped cleanup"),
+            );
+            assert_eq!(status.state, StartupPhase::CleanupRequired, "{status:?}");
+            crate::restore::cleanup_begin(&fixture.database, "successful-retry", |_| Ok(()))
+                .unwrap();
+            crate::restore::cleanup_complete(&fixture.database, "successful-retry", |_| Ok(()))
+                .unwrap();
+            for _ in 0..2 {
+                let status = crate::startup::load(
+                    &fixture.database,
+                    |_| Ok(()),
+                    || crate::startup::initialize_connection(&fixture.database.0),
+                );
+                assert_eq!(status.state, StartupPhase::Ready, "{status:?}");
+            }
+            let connection = crate::vocabulary::open(&fixture.database).unwrap();
+            assert_eq!(
+                storage::get(&connection, record.id).unwrap().notes,
+                "A successful recovery"
+            );
+            assert_eq!(
+                fs::read(raw.join(".lexique-restore.json")).unwrap(),
+                original_journal
+            );
+        }
+    }
+}
+
+#[test]
 fn raw_restore_retains_every_original_byte_and_pending_string_before_prepared() {
     let fixture = Fixture::new();
     let mut connection = Connection::open(&fixture.database.0).unwrap();

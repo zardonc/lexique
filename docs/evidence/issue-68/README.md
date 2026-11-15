@@ -105,7 +105,7 @@ A、B 均使用三条合成词汇、六张卡、两条进度及四张尚无进�
 | 原生 `recovery-journal` | 4 项检查、实际打开选择器；损坏日志／文件／待确认字符串逐字节保留，独立 A 读回通过 | `native/runs/recovery-journal/`、`logs/native-recovery-journal-green.log` |
 | Windows portable 进程环境 | 当前构建在临时目录被文件阻挡时，实际 `TEMP`／`TMP` 均为预期便携路径；硬限 60 秒 | `portable-final-01-result.json`、`logs/portable-environment-final.log` |
 
-| 当前桌面库分区 | 所选条目 | 通过 | 忽略 | Rust 执行时间 |
+| 该构建的桌面库分区 | 所选条目 | 通过 | 忽略 | Rust 执行时间 |
 | --- | ---: | ---: | ---: | ---: |
 | 其他桌面库／领域 | 34 | 34 | 0 | 6.45 s |
 | 备份 | 20 | 20 | 0 | 5.32 s |
@@ -118,6 +118,32 @@ A、B 均使用三条合成词汇、六张卡、两条进度及四张尚无进�
 | 合计 | 94 | 92 | 2 | |
 
 三个强制退出循环各自独立执行，原有案例、runner 与每次 60 秒硬限保持。完整名单、各分区名单、命令与实际结果见 `desktop-selection-results.json`；Windows 库存不用于推定 macOS 条目数量。原生夹具独立保留 60 秒硬限至清理结束，当前夹具自有 host／worker／helper 的清理读回均为零。
+
+## 原始恢复回退的持久门禁
+
+2026-11-15 UTC，以 `7027455941760f1f94a158ae989967ac7f5f2c50` 为基线完成恢复协调边界检查，证据位于工作树 `target/rollback-gate68/`，最终源码身份见 `commit-final.json`。原始恢复在提交前失败并成功回退时，活动回退记录继续阻止学习；之后每次普通启动仍显示恢复状态。已确认的新恢复成功提交并完成清理后才恢复就绪。既有记录、原始副本、待确认字符串和保留证据持续保存，读取／复制失败继续保持可见。
+
+[协调边界回归](../../../apps/desktop/src-tauri/src/recovery_tests.rs) `failed_raw_recovery_keeps_prior_gate_until_a_fresh_recovery_commits` 使用受支持的真实 SQLite，覆盖损坏 JSON、不可解码与未完成回退的既有记录，准备／切换失败后的完整回退、至少两次后续普通启动以及成功重试。此前 94 个 Windows 条目全部保留，仅新增此回归；当前八分区 95 个条目各选一次，93 通过，两个中断子进程入口按用途忽略。
+
+| 检查 | 结果 | `target/rollback-gate68/` 中的证据 |
+| --- | --- | --- |
+| `cargo fmt --all --check`、`cargo check --locked --workspace` | 通过 | `logs/rust-format-green.log`、`logs/rust-workspace-check.log` |
+| 桌面库 release 独立预编译、专项回归与完整八分区 | 通过；专项回归 1/1，完整分区 93 通过／2 忽略 | `logs/desktop-precompile-green.log`、`logs/rollback-gate-green.log`、`desktop-selection-results.json` |
+| `pnpm test:docs`、`git diff --check` | 通过 | `logs/docs-final.log`、`logs/diff-final.log` |
+
+| 当前 Windows 桌面库分区 | 所选条目 | 通过 | 忽略 | Rust 执行时间 |
+| --- | ---: | ---: | ---: | ---: |
+| 其他桌面库／领域 | 34 | 34 | 0 | 6.51 s |
+| 备份 | 20 | 20 | 0 | 5.01 s |
+| 普通恢复 | 18 | 17 | 1 | 8.79 s |
+| 未提交状态强制退出循环 | 1 | 1 | 0 | 10.03 s |
+| 提交后／清理强制退出循环 | 1 | 1 | 0 | 4.07 s |
+| SQLite 持久日志强制退出循环 | 1 | 1 | 0 | 6.05 s |
+| 回退强制退出循环 | 1 | 1 | 0 | 12.25 s |
+| 独立启动／原始文件恢复 | 19 | 18 | 1 | 17.92 s |
+| 合计 | 95 | 93 | 2 | |
+
+每次执行的完整命令、名单、退出码、墙钟时间与 60,000 ms 硬限均保留；初次编译独立于执行阶段。前端、MDX 和原生 GUI 验收沿用前一节的实际构建身份；当前 Windows 库存不推定 macOS 条目数量。
 
 ## 验证范围
 

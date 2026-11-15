@@ -792,8 +792,11 @@ fn archive_journal(database: &DatabasePath, journal: &RestoreJournal) -> Result<
         &retention(database, &journal.restore_id)?.join("decision.json"),
         journal,
     )?;
-    fs::remove_file(directory(database)?.join(JOURNAL))
-        .map_err(|error| format!("Could not finish restore decision: {error}"))?;
+    // Raw rollback restores a state that still requires explicit recovery.
+    if journal.preservation_kind != PreservationKind::RawFiles || !journal.rolling_back {
+        fs::remove_file(directory(database)?.join(JOURNAL))
+            .map_err(|error| format!("Could not finish restore decision: {error}"))?;
+    }
     sync_directory(directory(database)?)
 }
 

@@ -66,6 +66,8 @@ pnpm test:desktop:lib    # 原生桌面库全套测试；顺序八次执行，�
 
 文档检查与 #24 设计验证共用格式及链接规则，检查 Git 跟踪的 Markdown。`vendor/` 与 `.gitattributes` 标注 `-text` 的原样许可保持上游格式；`target/`、`.tooling/` 的本机证据链接及 `AGENTS.md` 的可选环境指针单独计数。CI 独立运行文档检查及其回归；Windows portable job 预编译缓存和桌面库测试后分别执行；缓存测试有 60 秒硬限，桌面库全套按其余测试、备份测试、普通恢复测试、三项强制退出循环测试各自独立执行、回滚强制退出循环测试及独立启动／原始文件恢复测试分为八次顺序执行，每次显式单线程并保持 60 秒硬限。
 
+2026-11-15 UTC，Windows x64 桌面库八分区共 95 个条目各选一次，93 通过，两个中断子进程入口按用途忽略；原有 94 个条目全部保留，新增原始恢复回退门禁回归。完整名单、时限与实际结果见 [#68 验证记录](docs/evidence/issue-68/README.md)。
+
 Windows ARM64 开发样例可在已配置该目标工具链时先运行 `node scripts/build-desktop.mjs --no-bundle --target aarch64-pc-windows-msvc`，再运行 `python -X utf8 scripts/package_portable.py --architecture arm64`。打包器检查可执行文件的 PE 架构并保留已有交付；它不构成 ARM64 实机或正式发行验收。
 
 便携交付默认位于 `target/portable/Lexique-0.1.0-windows-x64-portable.zip`，附带 `.zip.sha256`。解压整个 ZIP 到可写目录，保持 `dictionary/`、`conjugation/`、`frequency/` 与 `Lexique.exe` 同级；首次启动生成 `Lexique-data/`，退出后可将整个目录一起移动或备份。更新时保留 `Lexique-data/`。打包命令拒绝覆盖同名交付目录或 ZIP；重复交付使用新的 `--output-dir`，保留使用中的旧目录。CI 产物 `windows-x64-portable` 提供相同布局。
