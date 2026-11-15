@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-backup-preview-cancel"
+description = "Enables the backup_preview_cancel command without any pre-configured scope."
+commands.allow = ["backup_preview_cancel"]
+
+[[permission]]
+identifier = "deny-backup-preview-cancel"
+description = "Denies the backup_preview_cancel command without any pre-configured scope."
+commands.deny = ["backup_preview_cancel"]

@@ -3,13 +3,23 @@ import { z } from 'zod';
 export const dictionaryQuery = z.string().min(1).refine((value) =>
   value.trim().length > 0 && new TextEncoder().encode(value).length <= 512 && !/\p{Cc}/u.test(value));
 
-export const dictionaryId = z.string().regex(/^(builtin|builtin-fra-eng|mdx-[1-9]\d*)$/);
+export const dictionaryId = z.string().regex(/^(builtin|builtin-fra-eng|mdx-[1-9]\d*)$/)
+  .refine((id) => !id.startsWith('mdx-') || Number(id.slice(4)) < 0xffff_ffff);
+export const dictionaryContentHash = z.string().regex(/^[a-f0-9]{64}$/);
 export const MAX_DICTIONARIES = 17;
-export const dictionaryOrder = z.array(dictionaryId).min(1).max(MAX_DICTIONARIES).readonly()
-  .refine((ids) => new Set(ids).size === ids.length && ids.includes('builtin'));
-export const dictionaryCatalog = z.array(z.object({ id: dictionaryId, title: z.string().min(1) }).strict().readonly())
-  .min(1).max(MAX_DICTIONARIES).readonly().refine((items) => dictionaryOrder.safeParse(items.map((item) => item.id)).success);
+export const dictionaryOrder = z.array(dictionaryId).min(2).max(MAX_DICTIONARIES).readonly()
+  .refine((ids) => new Set(ids).size === ids.length && ids.includes('builtin') && ids.includes('builtin-fra-eng'));
+export const dictionaryCatalog = z.array(z.object({ id: dictionaryId, title: z.string().min(1),
+  content_hash: dictionaryContentHash.nullable(), availability: z.enum(['available', 'missing']),
+}).strict().readonly()).min(2).max(MAX_DICTIONARIES).readonly()
+  .refine((items) => dictionaryOrder.safeParse(items.map((item) => item.id)).success);
 export type DictionaryCatalog = z.infer<typeof dictionaryCatalog>;
+export const dictionaryRelink = z.discriminatedUnion('status', [
+  z.object({ status: z.literal('linked'), catalog: dictionaryCatalog }).strict().readonly(),
+  z.object({ status: z.literal('confirmation_required'), dictionary_id: dictionaryId,
+    expected_hash: dictionaryContentHash.nullable(), content_hash: dictionaryContentHash }).strict().readonly(),
+]);
+export type DictionaryRelink = z.infer<typeof dictionaryRelink>;
 
 export interface DictionarySense {
   readonly translations: readonly string[];

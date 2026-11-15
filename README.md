@@ -59,12 +59,14 @@ pnpm test:tooling        # 构建参数传递与隔离打包回归，不编译�
 pnpm test:speech:cleanup # Windows 缓存清理；需设置 LEXIQUE_TEST_EXECUTABLE
 cargo test --locked --release -p lexique-desktop --test speech_cache --lib --no-run
 pnpm test:speech:cache   # Windows 缓存发布 / 并发 / 重解析点；执行硬限 60 秒
-pnpm test:desktop:lib    # 原生桌面库测试；执行硬限 60 秒
+pnpm test:desktop:lib    # 原生桌面库全套测试；顺序八次执行，每次硬限 60 秒
 ```
 
 已有 portable 交付会被保留；再次交付可运行 `pnpm desktop:portable --output-dir <新目录>`。构建入口会在最终进程边界追加 Cargo 的 `--locked`，无需经 pnpm 手动传递分隔符。
 
-文档检查与 #24 设计验证共用格式及链接规则，检查 Git 跟踪的 Markdown。`vendor/` 与 `.gitattributes` 标注 `-text` 的原样许可保持上游格式；`target/`、`.tooling/` 的本机证据链接及 `AGENTS.md` 的可选环境指针单独计数。CI 独立运行文档检查及其回归；Windows portable job 预编译缓存和桌面库测试后分别执行，两者各有 60 秒硬限。
+文档检查与 #24 设计验证共用格式及链接规则，检查 Git 跟踪的 Markdown。`vendor/` 与 `.gitattributes` 标注 `-text` 的原样许可保持上游格式；`target/`、`.tooling/` 的本机证据链接及 `AGENTS.md` 的可选环境指针单独计数。CI 独立运行文档检查及其回归；Windows portable job 预编译缓存和桌面库测试后分别执行；缓存测试有 60 秒硬限，桌面库全套按其余测试、备份测试、普通恢复测试、三项强制退出循环测试各自独立执行、回滚强制退出循环测试及独立启动／原始文件恢复测试分为八次顺序执行，每次显式单线程并保持 60 秒硬限。
+
+2026-11-15 UTC，Windows x64 桌面库八分区共 95 个条目各选一次，93 通过，两个中断子进程入口按用途忽略；原有 94 个条目全部保留，新增原始恢复回退门禁回归。完整名单、时限与实际结果见 [#68 验证记录](docs/evidence/issue-68/README.md)。
 
 Windows ARM64 开发样例可在已配置该目标工具链时先运行 `node scripts/build-desktop.mjs --no-bundle --target aarch64-pc-windows-msvc`，再运行 `python -X utf8 scripts/package_portable.py --architecture arm64`。打包器检查可执行文件的 PE 架构并保留已有交付；它不构成 ARM64 实机或正式发行验收。
 
@@ -119,6 +121,8 @@ M1 生词本支持同词一份的逻辑引用、收藏时只读摘要与独立�
 #15 已接入生词详情的单个“加入复习”、识义卡与听音卡、真实错误及重启恢复。schema 3 增量保留 M1 内容；再次加入保持两卡身份，仅对缺失或失败音频重试。语音开发包使用 Supertonic 3 本地资源生成目标 48 kbit/s 的 Ogg Opus；听音卡进入播放一次、翻面不自动播放，重播读取当前 WPM 偏好，正面不显示词头。音频位于 `Lexique-data/temp/speech/`，错误保存在 `Lexique-data/logs/speech-cache.log`。#24 已用绝对期限和选定内容保护取代早期“七天未使用”规则，具体保留及维护边界见[架构](docs/architecture.md)。Windows x64 的 #15 实播和重启检查属于历史证据；新构建及长期维护分别验收。
 
 学习例句可在详情、编辑草稿和双卡背面手动离线播放，复用共用声线／WPM 和七天临时缓存；朗读上限为整理后 200 个 Unicode 标量，保存原文不截断。词典的「摘录例句」入口接受手动粘贴，固定逐句出处，经追加／重复提示和明确保存后可重启恢复。旧例句出处保持未知，详见 [朗读证据](docs/evidence/issue-65/README.md)和[摘录证据](docs/evidence/issue-66/README.md)。
+
+设置提供手动创建 `.lexique-backup`：先处理未保存编辑和待确认复习操作，经原生保存选择器写入新文件。备份保存完整已提交学习状态、可迁移偏好、词典身份清单和选定／未到期上一版音频；采集暂停写入及两类音频维护，打包前恢复使用，完成后显示真实位置、大小、数量和原有缺失。文件不加密，词典正文与模型需另行提供。整份恢复先验证所选备份，确认后保留当前数据并受控重启；损坏学习库可从独立恢复页面保留原始文件后恢复。Windows x64 原生导出、A／B 往返、关闭／重开、缓存播放、MDX 与独立目录迁移及验证边界见 [#68／#75 验收](docs/evidence/issue-68/README.md)。
 
 完整默认词典／CEFR 分级、MDD 媒体与词条跳转、语法笔记与分类、Drive / OneDrive 文件同步、在线翻译与 AI、练习、浏览器复习与 BFF 尚未实现。原型的演示数据、密钥表单和伪同步没有被搬进生产代码。
 

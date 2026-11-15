@@ -3,19 +3,28 @@
 fn main() {
     #[cfg(target_os = "windows")]
     {
-        let executable = std::env::current_exe().expect("Cannot locate the portable executable");
-        let data = executable
-            .parent()
-            .expect("The executable must have a parent directory")
-            .join("Lexique-data");
-        let temporary = data.join("temp");
-        std::fs::create_dir_all(&temporary)
-            .expect("Cannot create Lexique-data/temp beside the executable; use a writable folder");
-        // SAFETY: No application threads exist before Tauri starts.
-        unsafe {
-            std::env::set_var("TEMP", &temporary);
-            std::env::set_var("TMP", &temporary);
-            std::env::set_var("WEBVIEW2_USER_DATA_FOLDER", data.join("webview/EBWebView"));
+        if let Ok(executable) = std::env::current_exe()
+            && let Some(parent) = executable.parent()
+        {
+            let data = parent.join("Lexique-data");
+            let temporary = data.join("temp");
+            if let Err(error) = std::fs::create_dir_all(&temporary) {
+                eprintln!(
+                    "Could not prepare portable temp {}: {error}",
+                    temporary.display()
+                );
+            }
+            // SAFETY: No application threads exist before Tauri starts. Startup reports an
+            // unusable intended temp path before opening learning data; the shell may still run.
+            unsafe {
+                std::env::set_var("TEMP", &temporary);
+                std::env::set_var("TMP", &temporary);
+                std::env::set_var("WEBVIEW2_USER_DATA_FOLDER", data.join("webview/EBWebView"));
+            }
+        } else {
+            eprintln!(
+                "Could not locate the portable executable; startup must resolve its data directory"
+            );
         }
     }
     lexique_desktop_lib::run();

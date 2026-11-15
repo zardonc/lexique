@@ -11,10 +11,11 @@ use std::{
 };
 
 use lexique_storage as storage;
-use tauri::Emitter;
 
 use crate::{
+    maintenance::{MaintenanceGuard, WorkerGate},
     speech_cache::{self, CacheReport, Reconciler},
+    speech_tasks::Notifications,
     speech_tasks::now,
     vocabulary::{self, DatabasePath},
 };
@@ -24,18 +25,28 @@ pub struct AudioMaintenance {
     stopping: Arc<AtomicBool>,
     thread: Mutex<Option<JoinHandle<()>>>,
     report: Arc<Mutex<CacheReport>>,
+    gate: WorkerGate,
 }
 
 impl AudioMaintenance {
-    pub fn start(app: tauri::AppHandle, database: PathBuf) -> Self {
+    pub fn start(notifications: Notifications, database: PathBuf) -> Self {
         let (sender, receiver) = mpsc::sync_channel(1);
         let stopping = Arc::new(AtomicBool::new(false));
         let report = Arc::new(Mutex::new(CacheReport::default()));
         let worker_stopping = stopping.clone();
         let worker_report = report.clone();
+        let gate = WorkerGate::default();
+        let worker_gate = gate.clone();
         let thread = thread::spawn(move || {
             while !worker_stopping.load(Ordering::Relaxed) {
-                let result = maintain(&app, &database, &receiver, &worker_stopping, &worker_report);
+                let result = maintain(
+                    &notifications,
+                    &database,
+                    &receiver,
+                    &worker_stopping,
+                    &worker_report,
+                    &worker_gate,
+                );
                 if let Err(error) = result {
                     speech_cache::report_error(
                         &database,
@@ -56,6 +67,7 @@ impl AudioMaintenance {
             stopping,
             thread: Mutex::new(Some(thread)),
             report,
+            gate,
         }
     }
 
@@ -70,6 +82,11 @@ impl AudioMaintenance {
             .map_err(|_| "Audio maintenance status unavailable".into())
     }
 
+    pub fn pause(&self, cancelled: &AtomicBool) -> Result<MaintenanceGuard, String> {
+        self.wake();
+        self.gate.pause(cancelled)
+    }
+
     pub fn shutdown(&self) -> Result<(), String> {
         self.stopping.store(true, Ordering::Relaxed);
         self.wake();
@@ -81,21 +98,26 @@ impl AudioMaintenance {
 }
 
 fn maintain(
-    app: &tauri::AppHandle,
+    notifications: &Notifications,
     database: &PathBuf,
     receiver: &mpsc::Receiver<()>,
     stopping: &AtomicBool,
     shared: &Mutex<CacheReport>,
+    gate: &WorkerGate,
 ) -> Result<(), String> {
+    let Some(initializing) = gate.enter(stopping) else {
+        return Ok(());
+    };
     let connection = vocabulary::open(&DatabasePath(database.clone()))?;
     let mut cursor = String::new();
     let mut gc_pending = true;
     let mut reconciler = Reconciler::new(database)?;
     let mut gc_error = None;
+    drop(initializing);
     loop {
-        if stopping.load(Ordering::Relaxed) {
+        let Some(work) = gate.enter(stopping) else {
             return Ok(());
-        }
+        };
         let mut changed = false;
         if gc_pending {
             let mut work = storage::pending_audio_gc_after(&connection, &cursor, 100)
@@ -156,8 +178,7 @@ fn maintain(
             .lock()
             .map_err(|_| "Audio maintenance status unavailable")? = report.clone();
         if changed {
-            app.emit("lexique-review-changed", ())
-                .map_err(|e| format!("Audio maintenance notification failed: {e}"))?;
+            notifications().map_err(|e| format!("Audio maintenance notification failed: {e}"))?;
         }
         let continuing = gc_pending || report.in_progress;
         let delay = if continuing {
@@ -167,6 +188,7 @@ fn maintain(
         } else {
             Duration::from_secs(6 * 60 * 60)
         };
+        drop(work);
         let woke = match receiver.recv_timeout(delay) {
             Ok(()) => true,
             Err(mpsc::RecvTimeoutError::Timeout) => false,
@@ -175,6 +197,9 @@ fn maintain(
         if stopping.load(Ordering::Relaxed) {
             return Ok(());
         }
+        let Some(_reset) = gate.enter(stopping) else {
+            return Ok(());
+        };
         if !continuing {
             cursor.clear();
             gc_pending = true;

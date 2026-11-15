@@ -1,6 +1,6 @@
 use std::{error::Error, fmt};
 
-use lexique_core::DATABASE_SCHEMA_VERSION;
+pub use lexique_core::DATABASE_SCHEMA_VERSION;
 use rusqlite::Connection;
 
 mod vocabulary;
@@ -9,6 +9,8 @@ mod speech;
 pub use speech::*;
 mod conjugation;
 pub use conjugation::*;
+mod interface;
+pub use interface::*;
 mod review;
 pub use review::*;
 mod speech_work;
@@ -21,8 +23,46 @@ mod audio_lifecycle;
 pub use audio_lifecycle::*;
 mod queue_cache;
 pub use queue_cache::*;
+mod dictionary_catalog;
+pub use dictionary_catalog::*;
+mod learning_snapshot;
+pub use learning_snapshot::*;
+mod snapshot_export;
+pub use snapshot_export::*;
+mod snapshot_import;
+pub use snapshot_import::import_learning_snapshot;
+mod snapshot_validation;
+pub use snapshot_validation::{read_learning_snapshot, validate_learning_snapshot};
 
 const INITIAL_SCHEMA: &str = include_str!("../migrations/0001_initial.sql");
+const LEARNING_ROWS: &str = "SELECT 1 FROM vocabulary UNION ALL SELECT 1 FROM save_operations
+     UNION ALL SELECT 1 FROM review_cards UNION ALL SELECT 1 FROM review_progress
+     UNION ALL SELECT 1 FROM review_ratings UNION ALL SELECT 1 FROM review_queue_state
+     UNION ALL SELECT 1 FROM review_queue_entries UNION ALL SELECT 1 FROM review_paused
+     UNION ALL SELECT 1 FROM review_batches UNION ALL SELECT 1 FROM review_batch_items
+     UNION ALL SELECT 1 FROM speech_assets UNION ALL SELECT 1 FROM speech_owners
+     UNION ALL SELECT 1 FROM speech_tasks UNION ALL SELECT 1 FROM speech_versions
+     UNION ALL SELECT 1 FROM word_audio_selections UNION ALL SELECT 1 FROM word_audio_imports
+     UNION ALL SELECT 1 FROM legacy_speech UNION ALL SELECT 1 FROM word_audio_operations
+     UNION ALL SELECT 1 FROM word_audio_publications UNION ALL SELECT 1 FROM word_audio_repairs
+     UNION ALL SELECT 1 FROM app_metadata LIMIT 1";
+
+/// Checks storage before learning workers start; the schema version alone cannot prove health.
+pub fn validate_learning_database(connection: &Connection) -> Result<(), StorageError> {
+    connection.prepare(LEARNING_ROWS)?;
+    let integrity: String = connection.query_row("PRAGMA integrity_check", [], |row| row.get(0))?;
+    if integrity != "ok" {
+        return Err(StorageError::Invalid(format!(
+            "Learning database integrity check failed: {integrity}"
+        )));
+    }
+    if connection.prepare("PRAGMA foreign_key_check")?.exists([])? {
+        return Err(StorageError::Invalid(
+            "Learning database relationships are invalid".into(),
+        ));
+    }
+    Ok(())
+}
 
 #[derive(Debug)]
 pub enum StorageError {

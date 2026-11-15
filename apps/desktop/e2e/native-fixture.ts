@@ -22,7 +22,7 @@ export const record = {
 };
 
 interface Reply { readonly value?: unknown; readonly error?: unknown; readonly delay?: number; readonly gate?: string }
-interface Call { readonly command: string; readonly args?: Record<string, unknown> }
+interface Call { readonly command: string; readonly args?: Record<string, unknown>; readonly options?: { readonly headers?: Readonly<Record<string, string>> } }
 declare global {
   interface Window { testNative: { calls: Call[]; close: () => void; emit: (event: string, payload?: unknown) => void; release: (gate: string) => void } }
 }
@@ -38,7 +38,12 @@ class NativeFixture {
 
   constructor(private readonly responses: Readonly<Record<string, readonly Reply[]>>, lookup: typeof dictionary) {
     this.defaults = { runtime_status: { version: '0.1.0', schemaVersion: 18, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } },
-      dictionary_lookup: lookup, dictionary_settings: [{ id: 'builtin', title: 'FreeDict fra-zho' }], vocabulary_find: null, vocabulary_list: [], vocabulary_sort: 'updated-desc', finish_close: null,
+      startup_status: { state: 'ready', operation: null, restored: null, retained_copies: [], error: null },
+      startup_retry: { state: 'ready', operation: null, restored: null, retained_copies: [], error: null },
+      dictionary_lookup: lookup, dictionary_settings: [{ id: 'builtin', title: 'FreeDict fra-zho', content_hash: null, availability: 'available' },
+        { id: 'builtin-fra-eng', title: 'FreeDict fra-eng 0.4.1', content_hash: null, availability: 'available' }],
+      vocabulary_find: null, vocabulary_list: [], vocabulary_sort: 'updated-desc', finish_close: null,
+      interface_preferences: { locale: 'zh', theme: 'white' },
       speech_preferences: { voice: 'female', wpm: 180 }, review_settings: { retention_percent: 90, new_limit: 20, review_limit: 50, new_cards_ignore_review_limit: false },
       review_queue: { queue: { cards: [], reason: null, available_at: null }, record: null, audio_pending: false, audio_error: null }, review_cards: [], speech_cached: null,
       review_undo_target: null, review_undo: { status: 'committed', queue_rebuilt: false }, review_auto_enroll: false, review_pause: false,
@@ -62,8 +67,8 @@ class NativeFixture {
       items: request.vocabulary_ids.map((vocabulary_id) => ({ vocabulary_id, created_cards: 2, error: null, audio_state: 'queued', audio_error: null })) };
   }
   private settings(command: string, args?: Record<string, unknown>) {
-    const settingKey = command === 'speech_preferences' ? 'preferences' : 'settings';
-    if ((command === 'speech_preferences' || command === 'review_settings') && args?.[settingKey]) this.defaults[command] = args[settingKey];
+    const settingKey = command === 'speech_preferences' || command === 'interface_preferences' ? 'preferences' : 'settings';
+    if (['speech_preferences', 'interface_preferences', 'review_settings'].includes(command) && args?.[settingKey]) this.defaults[command] = args[settingKey];
     const booleanKey = { review_auto_enroll: 'enabled', review_pause: 'paused' }[command];
     if (booleanKey && typeof args?.[booleanKey] === 'boolean') this.defaults[command] = args[booleanKey];
   }
@@ -89,15 +94,23 @@ class NativeFixture {
     const value=command === 'vocabulary_sort' ? args?.sort ?? this.defaults[command] : this.defaults[command];
     return command === 'review_queue' ? this.queueResponse(value) : value;
   }
+  private eventFailure(command: string, args?: Record<string, unknown>) {
+    const key = `${command}:${String(args?.event)}`, replies = this.responses[key];
+    if (!replies) return;
+    const index = this.indexes[key] ?? 0; this.indexes[key] = index + 1;
+    const error = replies[Math.min(index, replies.length - 1)].error;
+    if (error !== undefined) throw error;
+  }
   private event(command: string, args?: Record<string, unknown>) {
+    this.eventFailure(command, args);
     if (command === 'plugin:event|listen') {
       const id = Math.max(0, ...this.listeners.keys()) + 1;
       this.listeners.set(id, { event: String(args?.event), handler: Number(args?.handler) }); return id;
     }
     this.listeners.delete(Number(args?.eventId)); return null;
   }
-  private async invoke(command: string, args?: Record<string, unknown>) {
-    this.calls.push({ command, args });
+  private async invoke(command: string, args?: Record<string, unknown>, options?: Call['options']) {
+    this.calls.push(options === undefined ? { command, args } : { command, args, options });
     if (command.startsWith('plugin:event|')) return this.event(command, args);
     const queue = this.responses[command];
     if (!queue) return this.defaultReply(command, args);
@@ -129,14 +142,23 @@ class NativeFixture {
     const request = args?.request as { operation: string };
     return this.defaults.review_batch_status = batch.operation === 'fixture' ? { ...batch, operation: request.operation } : batch;
   }
+  keepStartupBridge() {
+    const native = Reflect.get(window, '__TAURI_INTERNALS__') as { invoke: (command: string, args?: Record<string, unknown>, options?: Call['options']) => Promise<unknown> };
+    const learningInvoke = native.invoke;
+    native.invoke = (command, args, options) => command.startsWith('plugin:event|') || ['startup_status', 'startup_retry'].includes(command)
+      ? this.invoke(command, args, options) : learningInvoke(command, args, options);
+  }
   install() {
     window.testNative = { calls: this.calls, close: () => this.emit('lexique-close-requested'), emit: (event, payload) => this.emit(event, payload),
       release: (gate) => { this.gates.get(gate)?.(); this.gates.delete(gate); } };
+    Object.defineProperty(window, '__TAURI_EVENT_PLUGIN_INTERNALS__', { value: {
+      unregisterListener: (_event: string, id: number) => { this.listeners.delete(id); },
+    } });
     Object.defineProperty(window, 'isTauri', { value: true });
     Object.defineProperty(window, '__TAURI_INTERNALS__', { value: {
       transformCallback: (callback: (event: unknown) => void) => { const id = Math.max(0, ...this.callbacks.keys()) + 1; this.callbacks.set(id, callback); return id; },
       unregisterCallback: (id: number) => this.callbacks.delete(id),
-      invoke: (command: string, args?: Record<string, unknown>) => this.invoke(command, args),
+      invoke: (command: string, args?: Record<string, unknown>, options?: Call['options']) => this.invoke(command, args, options),
     } });
   }
 }
@@ -144,6 +166,11 @@ class NativeFixture {
 export async function nativeFixture(page: Page, responses: Readonly<Record<string, readonly Reply[]>> = {}) {
   // Serialize the complete self-contained fixture, so browser callbacks share one registry.
   await page.addInitScript(`new (${NativeFixture.toString()})(${JSON.stringify(responses)}, ${JSON.stringify(dictionary)}).install();`);
+}
+
+export async function nativeFixtureSetup<Arg>(page: Page, initialize: (data: Arg) => void, data: Arg) {
+  await page.addInitScript(`const startupFixture = new (${NativeFixture.toString()})({}, ${JSON.stringify(dictionary)});
+    startupFixture.install(); (${initialize.toString()})(${JSON.stringify(data)}); startupFixture.keepStartupBridge();`);
 }
 
 export async function collect(page: Page) {

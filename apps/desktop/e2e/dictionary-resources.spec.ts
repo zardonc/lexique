@@ -1,10 +1,11 @@
 import { expect, test } from '@playwright/test';
 import { nativeFixture } from './native-fixture';
 
-const bundled = [{ id: 'builtin', title: 'FreeDict fra-zho' }, { id: 'builtin-fra-eng', title: 'FreeDict fra-eng 0.4.1' }];
+const bundled = [{ id: 'builtin', title: 'FreeDict fra-zho', content_hash: null, availability: 'available' },
+  { id: 'builtin-fra-eng', title: 'FreeDict fra-eng 0.4.1', content_hash: null, availability: 'available' }];
 
 test('bundled dictionaries stay registered and fifteen custom MDX slots remain available', async ({ page }) => {
-  const catalog = [...bundled, ...Array.from({ length: 15 }, (_, index) => ({ id: `mdx-${index + 1}`, title: `custom-${index + 1}.mdx` }))];
+  const catalog = [...bundled, ...Array.from({ length: 15 }, (_, index) => ({ id: `mdx-${index + 1}`, title: `custom-${index + 1}.mdx`, content_hash: null, availability: 'available' }))];
   await nativeFixture(page, { dictionary_settings: [{ value: catalog }], dictionary_remove: [{ value: catalog.slice(0, -1) }] });
   await page.goto('/');
   await page.getByRole('button', { name: '设置', exact: true }).click();

@@ -58,6 +58,10 @@ fn hash(path: &Path) -> Result<String, DictionaryError> {
 }
 
 impl Dictionary {
+    pub fn content_hash(&self) -> &str {
+        &self.sha256
+    }
+
     pub fn open(path: &Path, id: &str, title: &str) -> Result<Self, DictionaryError> {
         let length = std::fs::metadata(path).map_err(io_error)?.len();
         if length == 0 || length > MAX_FILE_BYTES as u64 {

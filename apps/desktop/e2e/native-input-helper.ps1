@@ -1,5 +1,5 @@
 param(
-    [ValidateSet('editor', 'focus', 'shortcut', 'position', 'bounds', 'drag', 'monitors', 'close')] [string] $Action,
+    [ValidateSet('editor', 'focus', 'shortcut', 'position', 'bounds', 'drag', 'monitors', 'close', 'picker-windows', 'picker-controls', 'picker-select', 'picker-cancel')] [string] $Action,
     [string] $Text = 'école',
     [string] $Title = 'Lexique selection editor',
     [int] $SourcePid = 0,
@@ -9,7 +9,10 @@ param(
     [int] $X = 30,
     [int] $Y = 30,
     [int] $EndX = 0,
-    [int] $EndY = 0
+    [int] $EndY = 0,
+    [string] $SourceExecutable = '',
+    [ValidateRange(1, 6000)] [int] $WaitMs = 4000,
+    [int] $FilenameControlId = 0
 )
 $ErrorActionPreference = 'Stop'
 Add-Type -TypeDefinition @'
@@ -31,6 +34,8 @@ public static class NativeInputFixture {
     [DllImport("user32.dll", CharSet=CharSet.Unicode)] static extern IntPtr FindWindowEx(IntPtr parent, IntPtr after, string cls, string title);
     [DllImport("user32.dll")] static extern bool SetForegroundWindow(IntPtr window);
     [DllImport("user32.dll")] static extern IntPtr GetForegroundWindow();
+    [DllImport("user32.dll")] static extern IntPtr SetActiveWindow(IntPtr window);
+    [DllImport("user32.dll")] static extern IntPtr GetActiveWindow();
     [DllImport("user32.dll")] static extern IntPtr SetFocus(IntPtr window);
     [DllImport("user32.dll")] static extern bool AttachThreadInput(uint source, uint target, bool attach);
     [DllImport("user32.dll")] static extern bool PeekMessage(out Message message, IntPtr window, uint first, uint last, uint remove);
@@ -42,6 +47,14 @@ public static class NativeInputFixture {
     [DllImport("user32.dll")] static extern IntPtr GetWindow(IntPtr window, uint command);
     delegate bool WindowCallback(IntPtr window, IntPtr parameter);
     [DllImport("user32.dll")] static extern bool EnumWindows(WindowCallback callback, IntPtr parameter);
+    [DllImport("user32.dll")] static extern bool EnumChildWindows(IntPtr parent, WindowCallback callback, IntPtr parameter);
+    [DllImport("user32.dll", CharSet=CharSet.Unicode)] static extern int GetClassName(IntPtr window, StringBuilder text, int maximum);
+    [DllImport("user32.dll")] static extern int GetDlgCtrlID(IntPtr window);
+    [DllImport("user32.dll")] static extern IntPtr GetAncestor(IntPtr window, uint flags);
+    [DllImport("user32.dll")] static extern bool IsWindowEnabled(IntPtr window);
+    [DllImport("user32.dll", CharSet=CharSet.Unicode, EntryPoint="SendMessageTimeoutW")] static extern IntPtr TimedText(IntPtr window, uint message, UIntPtr w, string text, uint flags, uint timeout, out UIntPtr result);
+    [DllImport("user32.dll", CharSet=CharSet.Unicode, EntryPoint="SendMessageTimeoutW")] static extern IntPtr TimedRead(IntPtr window, uint message, UIntPtr w, StringBuilder text, uint flags, uint timeout, out UIntPtr result);
+    [DllImport("user32.dll", EntryPoint="SendMessageTimeoutW")] static extern IntPtr TimedMessage(IntPtr window, uint message, UIntPtr w, IntPtr l, uint flags, uint timeout, out UIntPtr result);
     [DllImport("user32.dll")] static extern uint GetWindowThreadProcessId(IntPtr window, out uint process);
     [DllImport("user32.dll")] static extern int GetMessage(out Message message, IntPtr window, uint min, uint max);
     [DllImport("user32.dll")] static extern bool TranslateMessage(ref Message message);
@@ -174,9 +187,118 @@ public static class NativeInputFixture {
         if(monitors.Count == 0) throw new Exception("No active monitors");
         return "[" + string.Join(",", monitors) + "]";
     }
+    static string ClassName(IntPtr window) {
+        var text = new StringBuilder(256);
+        if(GetClassName(window, text, text.Capacity) == 0) throw new Exception("Owned control class unavailable");
+        return text.ToString();
+    }
+    static void ValidatePickerProcess(int process, string executable) {
+        if(process <= 0 || String.IsNullOrEmpty(executable)) throw new Exception("Picker requires the owned PID and executable");
+        var actual = System.Diagnostics.Process.GetProcessById(process).MainModule.FileName;
+        if(!String.Equals(actual, System.IO.Path.GetFullPath(executable), StringComparison.OrdinalIgnoreCase)) throw new Exception("Picker executable mismatch");
+    }
+    static bool OwnedControl(IntPtr window, IntPtr dialog, int process) {
+        GetWindowThreadProcessId(window, out var owner);
+        return owner == process && IsWindow(window) && GetAncestor(window, 2) == dialog;
+    }
+    static IntPtr PickerControl(IntPtr dialog, int process, string cls, int id) {
+        var matches = new List<IntPtr>();
+        EnumChildWindows(dialog, (window, _) => {
+            if(OwnedControl(window, dialog, process) && IsWindowVisible(window) && IsWindowEnabled(window) && GetDlgCtrlID(window) == id && ClassName(window) == cls) matches.Add(window);
+            return true;
+        }, IntPtr.Zero);
+        if(matches.Count != 1) throw new Exception("Observed picker control is missing or ambiguous: " + cls + "/" + id);
+        return matches[0];
+    }
+    static string ReadControl(IntPtr window) {
+        var text = new StringBuilder(32768);
+        if(TimedRead(window, 0xD, new UIntPtr((uint)text.Capacity), text, 2, 500, out _) == IntPtr.Zero) throw new Exception("Owned picker read timed out");
+        return text.ToString();
+    }
+    public static Dictionary<string, object> Picker(string action, int process, string executable, string filename, int filenameId, int waitMs) {
+        ValidatePickerProcess(process, executable);
+        if(action == "picker-windows") {
+            var windows = new List<Dictionary<string, object>>();
+            EnumWindows((window, _) => {
+                GetWindowThreadProcessId(window, out var owner);
+                if(owner != process || !IsWindowVisible(window)) return true;
+                var caption = new StringBuilder(260); GetWindowText(window, caption, caption.Capacity);
+                windows.Add(new Dictionary<string, object> { {"handle", window.ToInt64()}, {"class", ClassName(window)}, {"owner", GetWindow(window, 4).ToInt64()}, {"mainCaption", caption.ToString() == "Lexique"} });
+                return true;
+            }, IntPtr.Zero);
+            return new Dictionary<string, object> { {"pid", process}, {"windows", windows} };
+        }
+        var elapsed = System.Diagnostics.Stopwatch.StartNew();
+        IntPtr main = IntPtr.Zero, dialog = IntPtr.Zero;
+        do {
+            var mains = new List<IntPtr>();
+            EnumWindows((window, _) => {
+                GetWindowThreadProcessId(window, out var owner);
+                if(owner != process || !IsWindowVisible(window) || GetWindow(window, 4) != IntPtr.Zero) return true;
+                var caption = new StringBuilder(260); GetWindowText(window, caption, caption.Capacity);
+                if(caption.ToString() == "Lexique") mains.Add(window);
+                return true;
+            }, IntPtr.Zero);
+            if(mains.Count > 1) throw new Exception("Owned main window is ambiguous");
+            if(mains.Count == 1) {
+                main = mains[0];
+                var dialogs = new List<IntPtr>();
+                EnumWindows((window, _) => {
+                    GetWindowThreadProcessId(window, out var owner);
+                    if(owner != process || !IsWindowVisible(window) || window == main) return true;
+                    var parent = GetWindow(window, 4);
+                    for(var count = 0; parent != IntPtr.Zero && count < 16; count++) {
+                        if(parent == main) { dialogs.Add(window); break; }
+                        parent = GetWindow(parent, 4);
+                    }
+                    return true;
+                }, IntPtr.Zero);
+                if(dialogs.Count > 1) throw new Exception("Owned modal window is ambiguous");
+                if(dialogs.Count == 1) { dialog = dialogs[0]; break; }
+            }
+            System.Threading.Thread.Sleep(50);
+        } while(elapsed.ElapsedMilliseconds < waitMs);
+        if(dialog == IntPtr.Zero) throw new Exception("Owned picker was not found before its deadline");
+        var controls = new List<Dictionary<string, object>>();
+        EnumChildWindows(dialog, (window, _) => {
+            if(OwnedControl(window, dialog, process)) controls.Add(new Dictionary<string, object> {
+                {"handle", window.ToInt64()}, {"parent", GetAncestor(window, 1).ToInt64()}, {"class", ClassName(window)},
+                {"id", GetDlgCtrlID(window)}, {"visible", IsWindowVisible(window)}, {"enabled", IsWindowEnabled(window)} });
+            return true;
+        }, IntPtr.Zero);
+        var result = new Dictionary<string, object> { {"pid", process}, {"main", main.ToInt64()}, {"dialog", dialog.ToInt64()}, {"class", ClassName(dialog)}, {"controls", controls} };
+        if(action == "picker-controls") return result;
+        if(ClassName(dialog) != "#32770") throw new Exception("Observed modal is not the calibrated Windows file picker");
+        ValidatePickerProcess(process, executable);
+        var button = PickerControl(dialog, process, "Button", action == "picker-cancel" ? 2 : 1);
+        result["button"] = new Dictionary<string, object> { {"handle", button.ToInt64()}, {"id", GetDlgCtrlID(button)}, {"caption", ReadControl(button)} };
+        if(action == "picker-select") {
+            if(filenameId == 0 || !System.IO.Path.IsPathFullyQualified(filename)) throw new Exception("Picker selection requires an observed filename control and absolute filename");
+            var edit = PickerControl(dialog, process, "Edit", filenameId);
+            if(TimedText(edit, 0xC, UIntPtr.Zero, filename, 2, 500, out _) == IntPtr.Zero) throw new Exception("Owned filename write timed out");
+            var readback = ReadControl(edit);
+            if(readback != filename) throw new Exception("Owned filename readback differs");
+            result["filename"] = readback; result["filenameControlId"] = filenameId;
+        }
+        PeekMessage(out _, IntPtr.Zero, 0, 0, 0);
+        var ownThread = GetCurrentThreadId(); var targetThread = GetWindowThreadProcessId(dialog, out _);
+        var attached = ownThread != targetThread;
+        if(attached && !AttachThreadInput(ownThread, targetThread, true)) throw new Exception("Could not attach owned picker input");
+        IntPtr active;
+        try { SetActiveWindow(dialog); active = GetActiveWindow(); }
+        finally { if(attached) AttachThreadInput(ownThread, targetThread, false); }
+        result["active"] = active.ToInt64();
+        if(active != dialog) throw new Exception("Owned picker is not active: expected " + dialog.ToInt64() + ", actual " + active.ToInt64());
+        if(!OwnedControl(button, dialog, process) || !IsWindowEnabled(button) || TimedMessage(button, 0xF5, UIntPtr.Zero, IntPtr.Zero, 2, 500, out _) == IntPtr.Zero) throw new Exception("Owned picker button delivery failed");
+        for(var count = 0; IsWindow(dialog) && count < 30; count++) System.Threading.Thread.Sleep(50);
+        if(IsWindow(dialog)) throw new Exception("Owned picker did not disappear");
+        result["disappeared"] = true; result["elapsedMs"] = elapsed.ElapsedMilliseconds;
+        return result;
+    }
 }
 '@
-if ($Action -eq 'editor') { [NativeInputFixture]::Editor($Title, $Text, $OcrSample) }
+if ($Action.StartsWith('picker-')) { [NativeInputFixture]::Picker($Action, $SourcePid, $SourceExecutable, $Text, $FilenameControlId, $WaitMs) | ConvertTo-Json -Depth 6 -Compress }
+elseif ($Action -eq 'editor') { [NativeInputFixture]::Editor($Title, $Text, $OcrSample) }
 elseif ($Action -eq 'focus') { [NativeInputFixture]::FocusSource($Title, $SourcePid, $OcrSample) }
 elseif ($Action -eq 'shortcut') { [NativeInputFixture]::Shortcut($Title, $Key, $SourcePid, $WithShift, $OcrSample) }
 elseif ($Action -eq 'position') { [NativeInputFixture]::Position($Title, $X, $Y) }

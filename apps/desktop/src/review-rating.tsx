@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
 import type { NotebookText } from './notebook-content';
-import { RatingRejected, rateRequestSchema } from './platform/runtime';
+import { RatingRejected } from './platform/runtime';
 import type { RateRequest, Rating, ReviewAvailability, RuntimeAdapter } from './platform/runtime';
 import { errorMessage } from './platform/vocabulary';
 import { subscribeReviewEvents } from './review-events';
+import { pendingRatingKey, pendingReviewRevision, readPendingRating, removePendingReview } from './pending-review-requests';
 
 const ratings: readonly Rating[] = ['again', 'hard', 'good', 'easy'];
 
@@ -54,16 +55,12 @@ function useReviewRating({ id, runtime, text, onSuccess, onBusyChange }: {
   const [error, setError] = useState('');
   const [busy, setBusy] = useState(false);
   const [blocked, setBlocked] = useState(false);
-  const key = `lexique-pending-rating-${id}`;
+  const key = pendingRatingKey(id);
   useEffect(() => {
     let active = true;
     try {
-      const saved = localStorage.getItem(key);
-      if (saved) {
-        const request = rateRequestSchema.parse(JSON.parse(saved));
-        if (request.card_id !== id) throw new Error('Invalid pending rating');
-        setPending(request);
-      }
+      const request = readPendingRating(id);
+      if (request) setPending(request);
     } catch (cause) { setBlocked(true); setError(errorMessage(cause)); }
     void runtime.reviewAvailability(id).then((value) => { if (active) setAvailability(value); })
       .catch((cause: unknown) => { if (active) setError(errorMessage(cause)); });
@@ -72,18 +69,20 @@ function useReviewRating({ id, runtime, text, onSuccess, onBusyChange }: {
   useAvailabilityTimer({ id, runtime, availability, setAvailability, setError });
   useAvailabilityEvents({ id, runtime, setAvailability, setError });
   async function submit(request: RateRequest) {
+    const revision = pendingReviewRevision();
     setBusy(true); onBusyChange(true); setError('');
     try {
       localStorage.setItem(key, JSON.stringify(request));
       setPending(request);
       const result = await runtime.rateReview(request);
       if (!result) throw new Error(text.ratingUnavailable);
-      localStorage.removeItem(key);
+      if (!removePendingReview(key, revision)) return;
       setPending(null); onSuccess();
     } catch (cause) {
       const message = errorMessage(cause);
       if (cause instanceof RatingRejected) {
-        localStorage.removeItem(key); setPending(null); setAvailability(null);
+        if (!removePendingReview(key, revision)) return;
+        setPending(null); setAvailability(null);
         try { setAvailability(await runtime.reviewAvailability(id)); }
         catch (readError) { setError(`${text.availability[cause.code]}: ${errorMessage(readError)}`); return; }
         setError(`${text.availability[cause.code]}: ${message}`);

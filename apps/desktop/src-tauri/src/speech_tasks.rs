@@ -1,10 +1,14 @@
 //! Application-owned, bounded CPU work. SQLite owns demand, attempts and cancellation.
 use std::{
-    collections::HashMap,
+    collections::{HashMap, VecDeque},
     io::{Read, Write},
     path::{Path, PathBuf},
     process::{Child, ChildStdin, Command, Stdio},
-    sync::{Arc, Mutex, mpsc},
+    sync::{
+        Arc, Mutex,
+        atomic::{AtomicBool, Ordering},
+        mpsc,
+    },
     thread::{self, JoinHandle},
     time::{Duration, Instant, SystemTime, UNIX_EPOCH},
 };
@@ -13,10 +17,10 @@ use lexique_storage as storage;
 use rusqlite::Connection;
 use serde::{Deserialize, Serialize};
 use tauri::Emitter;
-#[cfg(windows)]
-use tauri::Manager;
 
 use crate::{speech_cache, vocabulary::DatabasePath};
+
+pub type Notifications = Arc<dyn Fn() -> Result<(), String> + Send + Sync>;
 
 #[derive(Clone, Debug, Serialize)]
 pub struct SpeechAudio {
@@ -221,6 +225,8 @@ enum Message {
         epoch: u64,
         error: String,
     },
+    Pause(mpsc::SyncSender<()>),
+    Resume,
     Stop,
 }
 
@@ -229,14 +235,44 @@ pub struct SpeechTasks {
     thread: Mutex<Option<JoinHandle<()>>>,
     planned: Arc<Mutex<Vec<storage::WordDemand>>>,
     #[cfg(windows)]
-    maintenance: crate::audio_maintenance::AudioMaintenance,
+    maintenance: Arc<crate::audio_maintenance::AudioMaintenance>,
+}
+
+pub struct SpeechPause {
+    sender: mpsc::SyncSender<Message>,
+    #[cfg(windows)]
+    audio: Option<crate::maintenance::MaintenanceGuard>,
+}
+
+impl Drop for SpeechPause {
+    fn drop(&mut self) {
+        #[cfg(windows)]
+        self.audio.take();
+        let _ = self.sender.send(Message::Resume);
+    }
 }
 
 impl SpeechTasks {
     pub fn start(app: tauri::AppHandle, database: PathBuf, resources: PathBuf) -> Self {
+        let notifications: Notifications = Arc::new(move || {
+            app.emit("lexique-review-changed", ())
+                .map_err(|e| e.to_string())
+        });
+        Self::start_with_notifications(database, resources, notifications)
+    }
+
+    pub fn start_with_notifications(
+        database: PathBuf,
+        resources: PathBuf,
+        notifications: Notifications,
+    ) -> Self {
         #[cfg(windows)]
-        let maintenance =
-            crate::audio_maintenance::AudioMaintenance::start(app.clone(), database.clone());
+        let maintenance = Arc::new(crate::audio_maintenance::AudioMaintenance::start(
+            notifications.clone(),
+            database.clone(),
+        ));
+        #[cfg(windows)]
+        let actor_maintenance = maintenance.clone();
         let (sender, receiver) = mpsc::sync_channel(64);
         let actor_sender = sender.clone();
         let planned = Arc::new(Mutex::new(Vec::new()));
@@ -244,12 +280,14 @@ impl SpeechTasks {
         let thread = thread::spawn(move || {
             let diagnostic_path = database.clone();
             match Actor::new(
-                app,
+                notifications,
                 database,
                 resources,
                 actor_sender,
                 receiver,
                 actor_planned,
+                #[cfg(windows)]
+                actor_maintenance,
             )
             .and_then(|mut actor| actor.run())
             {
@@ -267,6 +305,35 @@ impl SpeechTasks {
             #[cfg(windows)]
             maintenance,
         }
+    }
+
+    pub fn pause(&self, cancelled: &AtomicBool) -> Result<SpeechPause, String> {
+        let mut guard = SpeechPause {
+            sender: self.sender.clone(),
+            #[cfg(windows)]
+            audio: None,
+        };
+        let (reply, receiver) = mpsc::sync_channel(1);
+        self.sender
+            .send(Message::Pause(reply))
+            .map_err(|_| "Speech supervisor unavailable for maintenance")?;
+        loop {
+            if cancelled.load(Ordering::Acquire) {
+                return Err("backup_cancelled".into());
+            }
+            match receiver.recv_timeout(Duration::from_millis(50)) {
+                Ok(()) => break,
+                Err(mpsc::RecvTimeoutError::Timeout) => (),
+                Err(mpsc::RecvTimeoutError::Disconnected) => {
+                    return Err("Speech maintenance drain failed".into());
+                }
+            }
+        }
+        #[cfg(windows)]
+        {
+            guard.audio = Some(self.maintenance.pause(cancelled)?);
+        }
+        Ok(guard)
     }
     pub fn wake(&self) -> Result<(), String> {
         match self.sender.try_send(Message::Wake) {
@@ -565,7 +632,7 @@ struct Running {
     budget: Duration,
 }
 struct Actor {
-    app: tauri::AppHandle,
+    notifications: Notifications,
     database: PathBuf,
     resources: PathBuf,
     connection: Connection,
@@ -580,20 +647,26 @@ struct Actor {
     waiters: HashMap<String, Vec<Reply>>,
     migration_pending: bool,
     planned: Arc<Mutex<Vec<storage::WordDemand>>>,
+    pause_reply: Option<mpsc::SyncSender<()>>,
+    paused: bool,
+    deferred: VecDeque<Message>,
+    #[cfg(windows)]
+    audio_maintenance: Arc<crate::audio_maintenance::AudioMaintenance>,
 }
 
 impl Actor {
     fn new(
-        app: tauri::AppHandle,
+        notifications: Notifications,
         database: PathBuf,
         resources: PathBuf,
         sender: mpsc::SyncSender<Message>,
         receiver: mpsc::Receiver<Message>,
         planned: Arc<Mutex<Vec<storage::WordDemand>>>,
+        #[cfg(windows)] audio_maintenance: Arc<crate::audio_maintenance::AudioMaintenance>,
     ) -> Result<Self, String> {
         let connection = crate::vocabulary::open(&DatabasePath(database.clone()))?;
         Ok(Self {
-            app,
+            notifications,
             database,
             resources,
             connection,
@@ -608,7 +681,17 @@ impl Actor {
             waiters: HashMap::new(),
             migration_pending: true,
             planned,
+            pause_reply: None,
+            paused: false,
+            deferred: VecDeque::new(),
+            #[cfg(windows)]
+            audio_maintenance,
         })
+    }
+    fn changed(&self) {
+        if let Err(error) = (self.notifications)() {
+            eprintln!("Could not notify review change: {error}");
+        }
     }
     fn recover(&mut self) -> Result<(), String> {
         storage::restore_owned_speech_gc(&self.connection).map_err(|e| e.to_string())?;
@@ -749,16 +832,44 @@ impl Actor {
         for key in ready {
             self.adopt_published(&key);
         }
-        changed(&self.app);
+        self.changed();
         Ok(())
     }
     fn run(&mut self) -> Result<(), String> {
         self.recover()?;
         loop {
-            self.maintenance()?;
-            self.dispatch()?;
-            match self.receiver.recv_timeout(self.timeout()?) {
+            if !self.paused {
+                self.maintenance()?;
+                if self.pause_reply.is_none() {
+                    self.dispatch()?;
+                }
+                if self.pause_reply.is_some() && self.running.is_empty() {
+                    self.paused = true;
+                    if let Some(reply) = self.pause_reply.take() {
+                        let _ = reply.send(());
+                    }
+                }
+            }
+            let message = if !self.paused {
+                self.deferred.pop_front()
+            } else {
+                None
+            };
+            let received = match message {
+                Some(message) => Ok(message),
+                None => self.receiver.recv_timeout(if self.paused {
+                    Duration::from_secs(60)
+                } else {
+                    self.timeout()?
+                }),
+            };
+            match received {
                 Ok(Message::Stop) => break,
+                Ok(Message::Resume) => {
+                    self.paused = false;
+                    self.pause_reply = None;
+                }
+                Ok(message) if self.paused => self.deferred.push_back(message),
                 Ok(message) => self.handle(message)?,
                 Err(mpsc::RecvTimeoutError::Timeout) => (),
                 Err(mpsc::RecvTimeoutError::Disconnected) => break,
@@ -779,6 +890,11 @@ impl Actor {
     }
     fn handle(&mut self, message: Message) -> Result<(), String> {
         match message {
+            Message::Pause(reply) => self.pause_reply = Some(reply),
+            Message::Resume => {
+                self.paused = false;
+                self.pause_reply = None;
+            }
             Message::Wake => self.migration_pending = true,
             Message::Prioritize => (),
             Message::Wait { key, reply } => {
@@ -846,7 +962,7 @@ impl Actor {
                             !header.retryable.unwrap_or(false),
                         )
                         .map_err(|e| e.to_string())?;
-                        changed(&self.app);
+                        self.changed();
                     } else {
                         let hash = storage::content_hash(&audio);
                         let result = (|| {
@@ -878,7 +994,7 @@ impl Actor {
                                 .map_err(|e| e.to_string())?;
                             self.adopt_published(&running.task.semantic_key);
                             #[cfg(windows)]
-                            self.app.state::<SpeechTasks>().maintenance.wake();
+                            self.audio_maintenance.wake();
                             Ok::<_, String>(())
                         })();
                         if let Err(error) = result {
@@ -891,7 +1007,7 @@ impl Actor {
                             )
                             .map_err(|e| e.to_string())?;
                         }
-                        changed(&self.app);
+                        self.changed();
                     }
                 } else {
                     self.break_worker("Unknown or repeated speech response identity", true)?;
@@ -941,7 +1057,7 @@ impl Actor {
                 Err(error) => {
                     storage::fail_speech(&self.connection, task.id, now()?, &error, true)
                         .map_err(|e| e.to_string())?;
-                    changed(&self.app);
+                    self.changed();
                     continue;
                 }
             };
@@ -953,13 +1069,13 @@ impl Actor {
                 Ok(Some(_)) => {
                     storage::ready_speech_task(&self.connection, &task.semantic_key)
                         .map_err(|e| e.to_string())?;
-                    changed(&self.app);
+                    self.changed();
                     continue;
                 }
                 Err(error) => {
                     storage::fail_speech(&self.connection, task.id, now()?, &error, true)
                         .map_err(|e| e.to_string())?;
-                    changed(&self.app);
+                    self.changed();
                     continue;
                 }
                 Ok(None) => (),
@@ -967,7 +1083,7 @@ impl Actor {
             if let Err(error) = validate_worker_spec(&task.spec) {
                 storage::fail_speech(&self.connection, task.id, now()?, &error, true)
                     .map_err(|e| e.to_string())?;
-                changed(&self.app);
+                self.changed();
                 continue;
             }
             self.request += 1;
@@ -987,7 +1103,7 @@ impl Actor {
                     started: Instant::now(),
                 },
             );
-            changed(&self.app);
+            self.changed();
             if let Err(error) = result {
                 self.break_worker(&error, false)?;
                 break;
@@ -1065,7 +1181,7 @@ impl Actor {
             if hit {
                 storage::cached_speech_task(&self.connection, &key).map_err(|e| e.to_string())?;
                 self.adopt_published(&key);
-                changed(&self.app);
+                self.changed();
             } else {
                 missing = true;
             }
@@ -1102,12 +1218,12 @@ impl Actor {
         if permanent || startup_failure {
             self.fail_backlog(&error)?;
         }
-        changed(&self.app);
+        self.changed();
         self.finish_waiters()
     }
     fn fail_backlog(&self, error: &str) -> Result<(), String> {
         self.connection.execute("UPDATE speech_tasks SET state='failed',error=?1 WHERE state IN ('queued','retry_wait')",[error.chars().take(2048).collect::<String>()]).map_err(|e|e.to_string())?;
-        changed(&self.app);
+        self.changed();
         Ok(())
     }
     fn adopt_published(&self, key: &str) {
@@ -1173,7 +1289,7 @@ impl Actor {
                     &self.database,
                     &format!("Could not open audio migration cache: {error}"),
                 );
-                changed(&self.app);
+                self.changed();
                 return Ok(());
             }
         };
@@ -1188,11 +1304,11 @@ impl Actor {
             storage::finish_audio_import(&self.connection, id, result.err().as_deref())
                 .map_err(|e| e.to_string())?;
         }
-        changed(&self.app);
+        self.changed();
         Ok(())
     }
     fn maintenance(&mut self) -> Result<(), String> {
-        if self.migration_pending {
+        if self.migration_pending && self.pause_reply.is_none() {
             self.migrate_audio()?;
         }
         let planned: Vec<_> = {
@@ -1200,7 +1316,11 @@ impl Actor {
                 .planned
                 .lock()
                 .map_err(|_| "Speech demand planner unavailable")?;
-            let count = planned.len().min(16);
+            let count = if self.pause_reply.is_none() {
+                planned.len().min(16)
+            } else {
+                0
+            };
             planned.drain(..count).collect()
         };
         let mut updated = false;
@@ -1209,7 +1329,7 @@ impl Actor {
                 .map_err(|e| e.to_string())?;
         }
         if updated {
-            changed(&self.app);
+            self.changed();
         }
         if self
             .starting

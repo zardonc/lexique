@@ -43,7 +43,7 @@ pub fn selected_audio(
     connection: &Connection,
     id: i64,
 ) -> Result<Option<AudioVersion>, StorageError> {
-    Ok(connection.query_row("SELECT v.locator,v.semantic_key,v.content_hash,v.byte_length,v.generated_at,s.vocabulary_id,s.revision,s.current_generation,v.execution_generation,v.physical_locator,v.verification,v.import_locator FROM word_audio_selections s JOIN speech_versions v ON v.locator=s.current_version WHERE s.vocabulary_id=?1 AND v.sealed=1 AND v.gc_state='live'", [id], version_row).optional()?)
+    Ok(connection.query_row("SELECT v.locator,v.semantic_key,v.content_hash,COALESCE(v.byte_length,0),v.generated_at,s.vocabulary_id,s.revision,s.current_generation,v.execution_generation,v.physical_locator,v.verification,v.import_locator FROM word_audio_selections s JOIN speech_versions v ON v.locator=s.current_version WHERE s.vocabulary_id=?1 AND v.sealed=1 AND v.gc_state='live'", [id], version_row).optional()?)
 }
 
 /// Capture ready execution and selection generations in one SQLite snapshot.
@@ -295,7 +295,7 @@ pub fn selected_audio_batch(
     let mut result = std::collections::HashMap::new();
     for chunk in ids.chunks(100) {
         let placeholders = vec!["?"; chunk.len()].join(",");
-        let mut query = connection.prepare(&format!("SELECT v.locator,v.semantic_key,v.content_hash,v.byte_length,v.generated_at,s.vocabulary_id,s.revision,s.current_generation,v.execution_generation,v.physical_locator,v.verification,v.import_locator FROM word_audio_selections s JOIN speech_versions v ON v.locator=s.current_version WHERE s.vocabulary_id IN ({placeholders}) AND v.sealed=1 AND v.gc_state='live'"))?;
+        let mut query = connection.prepare(&format!("SELECT v.locator,v.semantic_key,v.content_hash,COALESCE(v.byte_length,0),v.generated_at,s.vocabulary_id,s.revision,s.current_generation,v.execution_generation,v.physical_locator,v.verification,v.import_locator FROM word_audio_selections s JOIN speech_versions v ON v.locator=s.current_version WHERE s.vocabulary_id IN ({placeholders}) AND v.sealed=1 AND v.gc_state='live'"))?;
         for row in query.query_map(rusqlite::params_from_iter(chunk), version_row)? {
             let version = row?;
             result.insert(version.vocabulary_id, version);

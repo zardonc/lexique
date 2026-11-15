@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-backup-restore-cleanup-complete"
+description = "Enables the backup_restore_cleanup_complete command without any pre-configured scope."
+commands.allow = ["backup_restore_cleanup_complete"]
+
+[[permission]]
+identifier = "deny-backup-restore-cleanup-complete"
+description = "Denies the backup_restore_cleanup_complete command without any pre-configured scope."
+commands.deny = ["backup_restore_cleanup_complete"]

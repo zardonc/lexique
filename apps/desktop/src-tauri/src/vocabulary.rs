@@ -21,7 +21,7 @@ impl CloseAuthorization {
         self.0.load(Ordering::SeqCst)
     }
 
-    fn finish(&self, close: impl FnOnce() -> Result<(), String>) -> Result<(), String> {
+    pub(crate) fn finish(&self, close: impl FnOnce() -> Result<(), String>) -> Result<(), String> {
         self.0.store(true, Ordering::SeqCst);
         let result = close();
         if result.is_err() {
@@ -166,7 +166,7 @@ mod queue_audio_tests {
 }
 
 #[cfg(target_os = "macos")]
-pub fn coordinate_quit(app: &tauri::App) -> Result<(), Box<dyn std::error::Error>> {
+pub fn coordinate_quit(app: &tauri::AppHandle) -> Result<(), Box<dyn std::error::Error>> {
     let menu = app.menu().ok_or("Default macOS menu unavailable")?;
     let app_menu = menu
         .items()?
@@ -174,10 +174,11 @@ pub fn coordinate_quit(app: &tauri::App) -> Result<(), Box<dyn std::error::Error
         .and_then(|item| item.as_submenu())
         .cloned()
         .ok_or("Default macOS application menu unavailable")?;
-    let quit = app_menu
-        .items()?
-        .pop()
-        .ok_or("Default macOS quit item unavailable")?;
+    let mut items = app_menu.items()?;
+    if items.iter().any(|item| item.id() == "lexique-quit") {
+        return Ok(());
+    }
+    let quit = items.pop().ok_or("Default macOS quit item unavailable")?;
     let label = quit
         .as_predefined_menuitem()
         .ok_or("Unexpected macOS quit item")?
@@ -188,9 +189,7 @@ pub fn coordinate_quit(app: &tauri::App) -> Result<(), Box<dyn std::error::Error
     app_menu.append(&replacement)?;
     app.on_menu_event(|app, event| {
         if event.id() == "lexique-quit" {
-            if let Err(error) = request_close(app) {
-                eprintln!("Could not request application close: {error}");
-            }
+            crate::startup::coordinate_close(app.clone(), "macOS quit");
         }
     });
     Ok(())
@@ -266,8 +265,10 @@ pub async fn vocabulary_save(
     request: SaveRequest,
     dictionary_id: Option<String>,
 ) -> Result<SaveResult, String> {
+    let admission = crate::maintenance::admit_app(&app)?;
     let path = DatabasePath(app.state::<DatabasePath>().0.clone());
     tauri::async_runtime::spawn_blocking(move || {
+        let _admission = admission;
         lexique_storage::validate(&request).map_err(|error| error.to_string())?;
         let mut connection = open(&path)?;
         // A committed retry must work even if its original resource has since disappeared.
@@ -331,13 +332,16 @@ fn select_saved_audio(connection: &Connection, path: &DatabasePath, id: i64) {
 #[tauri::command]
 pub async fn vocabulary_find(
     path: State<'_, DatabasePath>,
+    maintenance: State<'_, crate::maintenance::MaintenanceCoordinator>,
     headword: String,
 ) -> Result<Option<VocabularyRecord>, String> {
     if headword.chars().count() > 200 {
         return Err("Headword exceeds 200 characters".into());
     }
+    let reader = maintenance.admit_reader()?;
     let path = DatabasePath(path.0.clone());
     tauri::async_runtime::spawn_blocking(move || {
+        let _reader = reader;
         lexique_storage::find(&open(&path)?, &headword).map_err(|error| error.to_string())
     })
     .await
@@ -347,11 +351,14 @@ pub async fn vocabulary_find(
 #[tauri::command]
 pub async fn vocabulary_list(
     path: State<'_, DatabasePath>,
+    maintenance: State<'_, crate::maintenance::MaintenanceCoordinator>,
     query: String,
     sort: String,
 ) -> Result<Vec<VocabularyRecord>, String> {
+    let reader = maintenance.admit_reader()?;
     let path = DatabasePath(path.0.clone());
     tauri::async_runtime::spawn_blocking(move || {
+        let _reader = reader;
         lexique_storage::list(&open(&path)?, &query, &sort).map_err(|error| error.to_string())
     })
     .await
@@ -364,11 +371,13 @@ pub async fn review_add(
     path: State<'_, DatabasePath>,
     vocabulary_id: i64,
 ) -> Result<Vec<lexique_storage::ReviewCard>, String> {
+    let admission = crate::maintenance::admit_app(&app)?;
     if vocabulary_id <= 0 || vocabulary_id > 9_007_199_254_740_991 {
         return Err("Invalid vocabulary ID".into());
     }
     let path = DatabasePath(path.0.clone());
     tauri::async_runtime::spawn_blocking(move || {
+        let _admission = admission;
         let mut connection = open(&path)?;
         let operation = format!(
             "single-{}-{}",
@@ -407,11 +416,20 @@ pub async fn review_pause(
     vocabulary_id: i64,
     paused: Option<bool>,
 ) -> Result<bool, String> {
+    let admission = paused
+        .map(|_| crate::maintenance::admit_app(&app))
+        .transpose()?;
+    let reader = paused
+        .is_none()
+        .then(|| crate::maintenance::admit_reader_app(&app))
+        .transpose()?;
     if vocabulary_id <= 0 || vocabulary_id > 9_007_199_254_740_991 {
         return Err("Invalid vocabulary ID".into());
     }
     let path = DatabasePath(path.0.clone());
     tauri::async_runtime::spawn_blocking(move || {
+        let _admission = admission;
+        let _reader = reader;
         let mut connection = open(&path)?;
         if let Some(value) = paused {
             lexique_storage::set_review_paused(&mut connection, vocabulary_id, value)
@@ -428,10 +446,18 @@ pub async fn review_pause(
 #[tauri::command]
 pub async fn review_auto_enroll(
     path: State<'_, DatabasePath>,
+    maintenance: State<'_, crate::maintenance::MaintenanceCoordinator>,
     enabled: Option<bool>,
 ) -> Result<bool, String> {
+    let admission = enabled.map(|_| maintenance.admit()).transpose()?;
+    let reader = enabled
+        .is_none()
+        .then(|| maintenance.admit_reader())
+        .transpose()?;
     let path = DatabasePath(path.0.clone());
     tauri::async_runtime::spawn_blocking(move || {
+        let _admission = admission;
+        let _reader = reader;
         let connection = open(&path)?;
         if let Some(value) = enabled {
             lexique_storage::set_auto_enroll(&connection, value)
@@ -446,13 +472,16 @@ pub async fn review_auto_enroll(
 #[tauri::command]
 pub async fn review_cards(
     path: State<'_, DatabasePath>,
+    maintenance: State<'_, crate::maintenance::MaintenanceCoordinator>,
     vocabulary_id: i64,
 ) -> Result<Vec<lexique_storage::ReviewCard>, String> {
     if vocabulary_id <= 0 || vocabulary_id > 9_007_199_254_740_991 {
         return Err("Invalid vocabulary ID".into());
     }
+    let reader = maintenance.admit_reader()?;
     let path = DatabasePath(path.0.clone());
     tauri::async_runtime::spawn_blocking(move || {
+        let _reader = reader;
         lexique_storage::review_cards(&open(&path)?, vocabulary_id)
             .map_err(|error| error.to_string())
     })
@@ -480,13 +509,16 @@ pub enum RateOutcome {
 #[tauri::command]
 pub async fn review_progress(
     path: State<'_, DatabasePath>,
+    maintenance: State<'_, crate::maintenance::MaintenanceCoordinator>,
     card_id: i64,
 ) -> Result<lexique_storage::ReviewProgress, String> {
     if card_id <= 0 || card_id > 9_007_199_254_740_991 {
         return Err("Invalid card ID".into());
     }
+    let reader = maintenance.admit_reader()?;
     let path = DatabasePath(path.0.clone());
     tauri::async_runtime::spawn_blocking(move || {
+        let _reader = reader;
         lexique_storage::review_progress(&open(&path)?, card_id).map_err(|e| e.to_string())
     })
     .await
@@ -496,14 +528,17 @@ pub async fn review_progress(
 #[tauri::command]
 pub async fn review_availability(
     path: State<'_, DatabasePath>,
+    maintenance: State<'_, crate::maintenance::MaintenanceCoordinator>,
     card_id: i64,
     timezone: String,
 ) -> Result<lexique_storage::ReviewAvailability, String> {
     if card_id <= 0 || card_id > 9_007_199_254_740_991 || timezone.len() > 128 {
         return Err("Invalid card ID or timezone".into());
     }
+    let reader = maintenance.admit_reader()?;
     let path = DatabasePath(path.0.clone());
     tauri::async_runtime::spawn_blocking(move || {
+        let _reader = reader;
         let now = std::time::SystemTime::now()
             .duration_since(std::time::UNIX_EPOCH)
             .map_err(|e| e.to_string())?
@@ -523,9 +558,14 @@ pub async fn review_availability(
 pub type QueueView = crate::review_window::QueueView;
 
 #[tauri::command]
-pub async fn review_undo_target(path: State<'_, DatabasePath>) -> Result<Option<String>, String> {
+pub async fn review_undo_target(
+    path: State<'_, DatabasePath>,
+    maintenance: State<'_, crate::maintenance::MaintenanceCoordinator>,
+) -> Result<Option<String>, String> {
+    let reader = maintenance.admit_reader()?;
     let path = DatabasePath(path.0.clone());
     tauri::async_runtime::spawn_blocking(move || {
+        let _reader = reader;
         lexique_storage::undo_target(&open(&path)?).map_err(|e| e.to_string())
     })
     .await
@@ -539,8 +579,10 @@ pub async fn review_undo(
     operation: String,
     rating_operation: String,
 ) -> Result<UndoOutcome, String> {
+    let admission = crate::maintenance::admit_app(&app)?;
     let path = DatabasePath(path.0.clone());
     tauri::async_runtime::spawn_blocking(move || {
+        let _admission = admission;
         match lexique_storage::undo_rating(&mut open(&path)?, &operation, &rating_operation) {
             Ok(queue_rebuilt) => {
                 crate::speech_tasks::changed(&app);
@@ -575,6 +617,7 @@ pub async fn review_queue(
     skipped: Vec<i64>,
     cursor: Option<crate::review_window::QueueCursor>,
 ) -> Result<QueueView, String> {
+    let admission = crate::maintenance::admit_app(&app)?;
     if timezone.is_empty()
         || timezone.len() > 128
         || skipped.len() > 10_000
@@ -588,6 +631,7 @@ pub async fn review_queue(
     let path = DatabasePath(path.0.clone());
     let validator = validator.inner().clone();
     tauri::async_runtime::spawn_blocking(move || {
+        let _admission = admission;
         let skipped = skipped.into_iter().collect();
         let view = crate::review_window::read(
             &path,
@@ -614,6 +658,7 @@ pub async fn review_rate(
     path: State<'_, DatabasePath>,
     request: RateInput,
 ) -> Result<RateOutcome, String> {
+    let admission = crate::maintenance::admit_app(&app)?;
     if request.card_id <= 0
         || request.card_id > 9_007_199_254_740_991
         || request.expected_revision > 9_007_199_254_740_991
@@ -622,6 +667,7 @@ pub async fn review_rate(
     }
     let path = DatabasePath(path.0.clone());
     tauri::async_runtime::spawn_blocking(move || {
+        let _admission = admission;
         let now = std::time::SystemTime::now()
             .duration_since(std::time::UNIX_EPOCH)
             .map_err(|e| e.to_string())?
@@ -666,13 +712,16 @@ pub async fn review_rate(
 #[tauri::command]
 pub async fn speech_cached(
     path: State<'_, DatabasePath>,
+    maintenance: State<'_, crate::maintenance::MaintenanceCoordinator>,
     vocabulary_id: i64,
 ) -> Result<Option<crate::speech_tasks::SpeechAudio>, String> {
+    let admission = maintenance.admit()?;
     if vocabulary_id <= 0 || vocabulary_id > 9_007_199_254_740_991 {
         return Err("Invalid vocabulary ID".into());
     }
     let path = DatabasePath(path.0.clone());
     tauri::async_runtime::spawn_blocking(move || {
+        let _admission = admission;
         let cards = lexique_storage::review_cards(&open(&path)?, vocabulary_id)
             .map_err(|e| e.to_string())?;
         if !cards.iter().any(|card| card.kind == "listening") {
@@ -698,11 +747,13 @@ pub async fn speech_generate(
     regenerate: Option<bool>,
     operation: Option<String>,
 ) -> Result<crate::speech_tasks::SpeechAudio, String> {
+    let admission = crate::maintenance::admit_app(&app)?;
     if vocabulary_id <= 0 || vocabulary_id > 9_007_199_254_740_991 {
         return Err("Invalid vocabulary ID".into());
     }
     let path = DatabasePath(path.0.clone());
     tauri::async_runtime::spawn_blocking(move || {
+        let _admission = admission;
         let mut connection = open(&path)?;
         let inspector = crate::speech_cache::Inspector::new(&path.0)?;
         let receipt = operation
@@ -791,8 +842,10 @@ pub async fn speech_preview(
     text: String,
     voice: Option<lexique_storage::SpeechVoice>,
 ) -> Result<crate::speech_tasks::SpeechAudio, String> {
+    let admission = crate::maintenance::admit_app(&app)?;
     let path = DatabasePath(path.0.clone());
     tauri::async_runtime::spawn_blocking(move || {
+        let _admission = admission;
         let mut connection = open(&path)?;
         let voice = match voice {
             Some(voice) => voice,
@@ -849,8 +902,10 @@ pub async fn review_add_batch(
     path: State<'_, DatabasePath>,
     request: BatchInput,
 ) -> Result<lexique_storage::BatchStatus, String> {
+    let admission = crate::maintenance::admit_app(&app)?;
     let path = DatabasePath(path.0.clone());
     tauri::async_runtime::spawn_blocking(move || {
+        let _admission = admission;
         let result = lexique_storage::add_review_batch_observed(
             &mut open(&path)?,
             &request.operation,
@@ -870,6 +925,7 @@ pub async fn review_add_batch(
 #[tauri::command]
 pub async fn review_batch_status(
     path: State<'_, DatabasePath>,
+    maintenance: State<'_, crate::maintenance::MaintenanceCoordinator>,
     operation: Option<String>,
 ) -> Result<Option<lexique_storage::BatchStatus>, String> {
     if operation
@@ -878,8 +934,10 @@ pub async fn review_batch_status(
     {
         return Err("Invalid batch operation".into());
     }
+    let reader = maintenance.admit_reader()?;
     let path = DatabasePath(path.0.clone());
     tauri::async_runtime::spawn_blocking(move || {
+        let _reader = reader;
         let connection = open(&path)?;
         match operation {
             Some(operation) => lexique_storage::batch_status(&connection, &operation)
@@ -898,11 +956,13 @@ pub async fn review_cancel_batch(
     path: State<'_, DatabasePath>,
     operation: String,
 ) -> Result<(), String> {
+    let admission = crate::maintenance::admit_app(&app)?;
     if operation.is_empty() || operation.len() > 128 {
         return Err("Invalid batch operation".into());
     }
     let path = DatabasePath(path.0.clone());
     tauri::async_runtime::spawn_blocking(move || {
+        let _admission = admission;
         lexique_storage::cancel_batch(&open(&path)?, &operation).map_err(|e| e.to_string())?;
         app.state::<crate::speech_tasks::SpeechTasks>().wake()?;
         crate::speech_tasks::changed(&app);
@@ -918,11 +978,13 @@ pub async fn speech_retry_missing(
     path: State<'_, DatabasePath>,
     vocabulary_id: i64,
 ) -> Result<u32, String> {
+    let admission = crate::maintenance::admit_app(&app)?;
     if vocabulary_id <= 0 || vocabulary_id > 9_007_199_254_740_991 {
         return Err("Invalid vocabulary ID".into());
     }
     let path = DatabasePath(path.0.clone());
     tauri::async_runtime::spawn_blocking(move || {
+        let _admission = admission;
         let mut connection = open(&path)?;
         let inspector = crate::speech_cache::Inspector::new(&path.0)?;
         let cards =
@@ -970,10 +1032,18 @@ pub async fn speech_retry_missing(
 #[tauri::command]
 pub async fn vocabulary_sort(
     path: State<'_, DatabasePath>,
+    maintenance: State<'_, crate::maintenance::MaintenanceCoordinator>,
     sort: Option<String>,
 ) -> Result<String, String> {
+    let admission = sort.as_ref().map(|_| maintenance.admit()).transpose()?;
+    let reader = sort
+        .is_none()
+        .then(|| maintenance.admit_reader())
+        .transpose()?;
     let path = DatabasePath(path.0.clone());
     tauri::async_runtime::spawn_blocking(move || {
+        let _admission = admission;
+        let _reader = reader;
         let connection = open(&path)?;
         if let Some(sort) = sort {
             lexique_storage::set_sort_preference(&connection, &sort)
@@ -991,8 +1061,18 @@ pub async fn speech_preferences(
     path: State<'_, DatabasePath>,
     preferences: Option<lexique_storage::SpeechPreferences>,
 ) -> Result<lexique_storage::SpeechPreferences, String> {
+    let admission = preferences
+        .as_ref()
+        .map(|_| crate::maintenance::admit_app(&app))
+        .transpose()?;
+    let reader = preferences
+        .is_none()
+        .then(|| crate::maintenance::admit_reader_app(&app))
+        .transpose()?;
     let path = DatabasePath(path.0.clone());
     tauri::async_runtime::spawn_blocking(move || {
+        let _admission = admission;
+        let _reader = reader;
         let connection = open(&path)?;
         if let Some(preferences) = preferences {
             lexique_storage::set_speech_preferences(&connection, &preferences)
@@ -1011,8 +1091,18 @@ pub async fn review_settings(
     path: State<'_, DatabasePath>,
     settings: Option<lexique_storage::ReviewSettings>,
 ) -> Result<lexique_storage::ReviewSettings, String> {
+    let admission = settings
+        .as_ref()
+        .map(|_| crate::maintenance::admit_app(&app))
+        .transpose()?;
+    let reader = settings
+        .is_none()
+        .then(|| crate::maintenance::admit_reader_app(&app))
+        .transpose()?;
     let path = DatabasePath(path.0.clone());
     tauri::async_runtime::spawn_blocking(move || {
+        let _admission = admission;
+        let _reader = reader;
         let connection = open(&path)?;
         if let Some(settings) = settings {
             lexique_storage::set_review_settings(&connection, &settings)
@@ -1025,20 +1115,29 @@ pub async fn review_settings(
     .map_err(|error| format!("Review settings task failed: {error}"))?
 }
 
-#[tauri::command]
+#[tauri::command(async)]
 pub fn finish_close(app: tauri::AppHandle) -> Result<(), String> {
-    crate::speech_cache::report_error(
-        &app.state::<DatabasePath>().0,
-        "[native-lifecycle] finish_close accepted",
-    );
-    app.state::<CloseAuthorization>().finish(|| {
+    let close = app
+        .state::<crate::backup_operations::BackupOperations>()
+        .begin_close()?;
+    crate::startup::report_lifecycle(&app, "[native-lifecycle] finish_close accepted");
+    let result = app.state::<CloseAuthorization>().finish(|| {
         crate::selection::selection_cancel(app.clone())?;
-        app.state::<crate::speech_tasks::SpeechTasks>().shutdown()?;
-        app.state::<std::sync::Arc<crate::review_window::WindowValidator>>()
-            .stop();
+        if let Some(tasks) = app.try_state::<crate::speech_tasks::SpeechTasks>() {
+            tasks.shutdown()?;
+        }
+        if let Some(validator) =
+            app.try_state::<std::sync::Arc<crate::review_window::WindowValidator>>()
+        {
+            validator.stop();
+        }
         app.get_webview_window("main")
             .ok_or("Main window unavailable")?
             .destroy()
             .map_err(|error| format!("Could not close window: {error}"))
-    })
+    });
+    if result.is_ok() {
+        close.commit();
+    }
+    result
 }

@@ -1,7 +1,3 @@
-use std::fs::create_dir_all;
-
-use lexique_storage::initialize;
-use rusqlite::Connection;
 use tauri::{Manager, State};
 
 #[cfg(windows)]
@@ -9,15 +5,30 @@ mod audio_maintenance;
 mod conjugation;
 mod dictionaries;
 mod dictionary_links;
+mod interface;
+use interface::interface_preferences;
+mod backup;
+mod backup_operations;
+mod backup_preview;
+mod maintenance;
 mod ocr;
 mod ocr_capture;
+#[cfg(test)]
+mod recovery_tests;
+mod restore;
+mod restore_operations;
+#[cfg(test)]
+mod restore_tests;
 mod review_window;
 mod selection;
 mod selection_shortcut;
 use conjugation::{conjugation_block_order, conjugation_lookup, conjugation_preferences};
-use dictionaries::{dictionary_import, dictionary_lookup, dictionary_remove, dictionary_settings};
+use dictionaries::{
+    dictionary_import, dictionary_lookup, dictionary_relink, dictionary_remove, dictionary_settings,
+};
 mod speech_cache;
 mod speech_tasks;
+mod startup;
 mod vocabulary;
 #[cfg(windows)]
 mod webview_diagnostics;
@@ -60,13 +71,16 @@ async fn frequency_lookup(
 async fn runtime_status(
     status: State<'_, RuntimeStatus>,
     path: State<'_, DatabasePath>,
+    maintenance: State<'_, maintenance::MaintenanceCoordinator>,
     _tasks: State<'_, speech_tasks::SpeechTasks>,
 ) -> Result<RuntimeStatus, String> {
+    let reader = maintenance.admit_reader()?;
     let mut status = status.inner().clone();
     #[cfg(windows)]
     let cache = _tasks.cache_status()?;
     let path = DatabasePath(path.0.clone());
     tauri::async_runtime::spawn_blocking(move || {
+        let _reader = reader;
         let connection = vocabulary::open(&path)?;
         status.audio_migration =
             lexique_storage::audio_migration_status(&connection).map_err(|e| e.to_string())?;
@@ -87,7 +101,16 @@ async fn runtime_status(
 pub fn run() {
     tauri::Builder::default()
         .manage(vocabulary::CloseAuthorization::default())
+        .manage(maintenance::MaintenanceCoordinator::default())
+        .manage(backup_operations::BackupOperations::default())
+        .manage(restore_operations::RestoreOperations::default())
         .manage(dictionaries::Registry::default())
+        .manage(selection::SelectionState::default())
+        .manage(ocr_capture::CaptureState::default())
+        .manage(startup::StartupState::new(startup::unavailable(
+            "Learning initialization has not completed",
+        )))
+        .plugin(tauri_plugin_dialog::init())
         .plugin(
             tauri_plugin_global_shortcut::Builder::new()
                 .with_handler(|app, shortcut, event| {
@@ -104,37 +127,10 @@ pub fn run() {
                 .build(),
         )
         .setup(|app| {
-            #[cfg(target_os = "macos")]
-            vocabulary::coordinate_quit(app)?;
-            let directory = app.path().app_data_dir()?;
-            create_dir_all(&directory)?;
-            let database_path = directory.join(DATABASE_FILENAME);
-            let connection = Connection::open(&database_path)?;
-            let schema_version = initialize(&connection)?;
-            drop(connection);
-            #[cfg(windows)]
-            webview_diagnostics::attach(app, database_path.clone())?;
-            let resources = app.path().resource_dir()?.join("speech");
-            app.manage(speech_tasks::SpeechTasks::start(
-                app.handle().clone(),
-                database_path.clone(),
-                resources,
-            ));
-            app.manage(review_window::WindowValidator::start(
-                app.handle().clone(),
-                database_path.clone(),
-            ));
-            app.manage(DatabasePath(database_path));
-            app.manage(selection::SelectionState::default());
-            app.manage(ocr_capture::CaptureState::default());
-            selection_shortcut::setup(app.handle());
-            app.manage(RuntimeStatus {
-                version: app.package_info().version.to_string(),
-                schema_version,
-                storage: StorageKind::Sqlite,
-                audio_migration: lexique_storage::AudioMigrationStatus::default(),
-                audio_cache: None,
-            });
+            let status = startup::initialize(app.handle());
+            if let Err(error) = app.state::<startup::StartupState>().initialized(status) {
+                eprintln!("Could not publish startup failure: {error}");
+            }
             Ok(())
         })
         .on_window_event(|window, event| {
@@ -151,21 +147,24 @@ pub fn run() {
                     }
                     return;
                 }
-                speech_cache::report_error(
-                    &window.state::<DatabasePath>().0,
+                startup::report_lifecycle(
+                    window.app_handle(),
                     "[native-lifecycle] Window CloseRequested",
                 );
                 api.prevent_close();
-                if let Err(error) = vocabulary::request_close(window.app_handle()) {
-                    eprintln!("Could not coordinate window close: {error}");
-                }
+                startup::coordinate_close(window.app_handle().clone(), "window close");
             }
         })
         .invoke_handler(tauri::generate_handler![
             runtime_status,
+            startup::startup_status,
+            startup::startup_retry,
+            startup::backup_restore_cleanup_begin,
+            startup::backup_restore_cleanup_complete,
             dictionary_lookup,
             dictionary_settings,
             dictionary_import,
+            dictionary_relink,
             dictionary_remove,
             dictionary_links::dictionary_resource_open,
             frequency_lookup,
@@ -181,6 +180,7 @@ pub fn run() {
             ocr_capture::ocr_abort,
             conjugation_lookup,
             conjugation_preferences,
+            interface_preferences,
             conjugation_block_order,
             vocabulary_find,
             vocabulary_list,
@@ -205,6 +205,15 @@ pub fn run() {
             speech_generate,
             speech_preview,
             speech_preferences,
+            backup_operations::backup_export_start,
+            backup_operations::backup_operation_status,
+            backup_operations::backup_operation_cancel,
+            backup_operations::backup_preview_start,
+            backup_operations::backup_preview_status,
+            backup_operations::backup_preview_cancel,
+            restore_operations::backup_restore_start,
+            restore_operations::backup_restore_status,
+            restore_operations::backup_retained_directory_open,
             finish_close
         ])
         .build(tauri::generate_context!())
@@ -215,10 +224,39 @@ pub fn run() {
                     && !app.state::<vocabulary::CloseAuthorization>().permits_exit()
                 {
                     api.prevent_exit();
-                    if let Err(error) = vocabulary::request_close(app) {
-                        eprintln!("Could not coordinate application exit: {error}");
-                    }
+                    startup::coordinate_close(app.clone(), "application exit");
                 }
             }
         });
+}
+
+fn initialize_learning(app: &tauri::AppHandle, database: &DatabasePath) -> Result<(), String> {
+    if app.try_state::<speech_tasks::SpeechTasks>().is_some() {
+        return Err("Learning workers already exist; a controlled restart is required".into());
+    }
+    startup::initialize_connection(&database.0)?;
+    let resources = app
+        .path()
+        .resource_dir()
+        .map_err(|error| error.to_string())?
+        .join("speech");
+    app.manage(speech_tasks::SpeechTasks::start(
+        app.clone(),
+        database.0.clone(),
+        resources,
+    ));
+    app.manage(review_window::WindowValidator::start(
+        app.clone(),
+        database.0.clone(),
+    ));
+    selection_shortcut::setup(app);
+    app.manage(RuntimeStatus {
+        version: app.package_info().version.to_string(),
+        schema_version: lexique_storage::DATABASE_SCHEMA_VERSION,
+        storage: StorageKind::Sqlite,
+        audio_migration: lexique_storage::AudioMigrationStatus::default(),
+        audio_cache: None,
+    });
+    app.state::<maintenance::MaintenanceCoordinator>()
+        .resume_startup()
 }

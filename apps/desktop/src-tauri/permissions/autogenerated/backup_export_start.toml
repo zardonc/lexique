@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-backup-export-start"
+description = "Enables the backup_export_start command without any pre-configured scope."
+commands.allow = ["backup_export_start"]
+
+[[permission]]
+identifier = "deny-backup-export-start"
+description = "Denies the backup_export_start command without any pre-configured scope."
+commands.deny = ["backup_export_start"]

@@ -67,6 +67,16 @@ fn save(connection: &Connection, index: usize, value: &str) -> Result<(), String
     Ok(())
 }
 
+pub(crate) fn restore_device_preferences(
+    source: &Connection,
+    destination: &Connection,
+) -> Result<(), String> {
+    for index in 0..KEYS.len() {
+        save(destination, index, &load(source, index)?)?;
+    }
+    Ok(())
+}
+
 pub fn setup(app: &tauri::AppHandle) {
     let mut statuses = DEFAULT_SHORTCUTS.map(|shortcut| ShortcutStatus {
         shortcut: shortcut.into(),
@@ -150,7 +160,12 @@ async fn preference(
     index: usize,
     shortcut: Option<String>,
 ) -> Result<ShortcutStatus, String> {
+    let admission = shortcut
+        .as_ref()
+        .map(|_| crate::maintenance::admit_app(&app))
+        .transpose()?;
     tauri::async_runtime::spawn_blocking(move || {
+        let _admission = admission;
         if let Some(shortcut) = shortcut {
             return replace(&app, index, shortcut);
         }
