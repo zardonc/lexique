@@ -53,7 +53,7 @@ A、B 均使用三条合成词汇、六张卡、两条进度及四张尚无进�
 | 持久准备／切换／回退／提交清理中断 | `restore_tests.rs` 的 `forced_exits_at_uncommitted_database_sidecar_and_audio_boundaries_restore_b`、`forced_exits_during_rollback_repeat_without_losing_b_or_the_original_copies`、`forced_exit_at_prepared_keeps_the_confirmed_stage_for_ordinary_startup`、`forced_exits_after_commit_and_during_cleanup_keep_a_and_gate_learning`、`forced_exits_at_persistent_sqlite_journal_moves_and_rollback_restore_b`；#73 的 45 次实际子进程退出档案 |
 | 原始文件恢复与确认清理中断 | [recovery_tests.rs](../../../apps/desktop/src-tauri/src/recovery_tests.rs) 的 `raw_subprocess_interruptions_recover_only_complete_original_or_verified_timelines`、`raw_subprocess_rollback_interruptions_keep_invalid_originals_and_raw_requests`、`raw_preserved_requests_survive_interrupted_acknowledged_cleanup`；#74 的准备／切换 10 次、回退 3 次及清理 2 次实际退出档案 |
 
-## 最终检查
+## 原生验收构建检查
 
 工具链为 PowerShell 7、pnpm 11.25.0、Node 24.22.1、Rust／Cargo 1.99.1 与 uv Python 3.14.10。完整命令和日志封存于 `checks/`、`logs/`；编译独立于执行，存储／缓存 runner 与桌面库各分区均保持硬性 60 秒上限。
 
@@ -145,6 +145,22 @@ A、B 均使用三条合成词汇、六张卡、两条进度及四张尚无进�
 
 每次执行的完整命令、名单、退出码、墙钟时间与 60,000 ms 硬限均保留；初次编译独立于执行阶段。前端、MDX 和原生 GUI 验收沿用前一节的实际构建身份；当前 Windows 库存不推定 macOS 条目数量。
 
+## 合并与最终提交验证
+
+2026-11-15 UTC，[PR #76](https://github.com/zardonc/lexique/pull/76) 已合并，最终 head 为 `f48477b16eec7bed7f8cc0b44d75f632cbe74bb0`，合并提交为 `429e74c2fe220a0d1d17385522945994d2a187aa`。#68–#75 均已关闭。
+
+| 验证来源 | CI 运行 | 结果 |
+| --- | --- | --- |
+| 最终 head，`pull_request` | [PR CI](https://github.com/zardonc/lexique/actions/runs/43739787828) | 11 个 job 全部通过 |
+| 最终 head，`push` | [push CI](https://github.com/zardonc/lexique/actions/runs/43739782889) | 11 个 job 全部通过 |
+| 合并提交，`main` | [main CI](https://github.com/zardonc/lexique/actions/runs/43751577579) | 11 个 job 全部通过 |
+
+三个运行的 `headSha` 分别与上述最终 head 或合并提交一致。每个运行包含文档、前端、后端、三平台词典资源、Windows x64／ARM64 与 macOS Intel／ARM64 原生检查，以及 Windows portable 构建。
+
+[导入回归](../../../crates/storage/tests/snapshot_import.rs) 覆盖分解词头的正常查找、编辑和已保存请求重放，保留引用拼写与用户文本，并拒绝 Unicode 等价重复记录。[中断回归](../../../apps/desktop/src-tauri/src/restore_tests.rs) 注入六秒子进程延迟，检查十五秒内到达持久检查点；外层 runner 的硬性 60 秒执行上限保持。这些回归对应最终 head 的跨平台 CI。
+
+本页原生夹具和本机检查继续使用各节记录的实际提交、构建与日志身份。
+
 ## 验证范围
 
-本次为 Windows x64 原生合成隔离数据验收，使用真实 SQLite、文件操作、系统选择器、自有进程重启与产品播放。独立目录迁移验证便携状态与目标设备设置；ARM／macOS GUI、物理跨 OS 迁移、整机断网、正式发行／首装／签名及资源准入继续按 [development-readiness.md](../../development-readiness.md) 的独立门槛验证。
+原生 GUI 验收使用 Windows x64 合成隔离学习数据、真实 SQLite、文件操作、系统选择器、自有进程重启与产品播放。独立目录迁移验证便携状态与目标设备设置；上述 CI 覆盖各自平台的自动化检查。ARM／macOS GUI、物理跨 OS 迁移、整机断网、正式发行／首装／签名及资源准入继续按 [development-readiness.md](../../development-readiness.md) 的独立门槛验证。
