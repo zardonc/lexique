@@ -94,6 +94,7 @@ fn recovery_interruption_child() {
         let stage = prepare_preview(
             &root.join("recovery.lexique-backup"),
             database.0.parent().unwrap(),
+            false,
             &AtomicBool::new(false),
             |_| {},
         )
@@ -228,6 +229,95 @@ fn broken_originals(fixture: &Fixture) -> Vec<(PathBuf, Vec<u8>, PathBuf)> {
 }
 
 #[test]
+fn unreadable_restore_records_can_be_recovered_without_discarding_prior_evidence() {
+    for original_journal in [b"{interrupted".as_slice(), b"\xff\0unreadable".as_slice()] {
+        let fixture = Fixture::new();
+        let mut connection = Connection::open(&fixture.database.0).unwrap();
+        let record = save(
+            &mut connection,
+            "A after recovery from an unreadable restore record",
+        )
+        .record;
+        connection.close().unwrap();
+        let archive = fixture.root.0.join("journal-recovery.lexique-backup");
+        let cancelled = AtomicBool::new(false);
+        export_paused(&fixture.database, &archive, &cancelled).unwrap();
+        let originals = broken_originals(&fixture);
+        let directory = fixture.database.0.parent().unwrap();
+        let journal = directory.join(".lexique-restore.json");
+        fs::write(&journal, original_journal).unwrap();
+        let previous = directory.join("retained-restores/earlier/original-database/keep.bin");
+        fs::create_dir_all(previous.parent().unwrap()).unwrap();
+        fs::write(&previous, b"earlier retained original").unwrap();
+        let old_stage = directory.join(".lexique-backup-earlier/keep.bin");
+        fs::create_dir_all(old_stage.parent().unwrap()).unwrap();
+        fs::write(&old_stage, b"earlier staged component").unwrap();
+        let status = crate::startup::load(
+            &fixture.database,
+            |_| Ok(()),
+            || panic!("unreadable journal admitted learning"),
+        );
+        assert_eq!(status.state, StartupPhase::RecoveryRequired);
+        assert!(status.error.unwrap().contains("restore record"));
+        let stage = prepare_preview(&archive, directory, false, &cancelled, |_| {}).unwrap();
+        let raw = directory.join("retained-restores/after-unreadable/raw-files");
+        crate::restore::prepare_raw(
+            &fixture.database,
+            stage,
+            "after-unreadable",
+            &raw_requests(),
+            || Ok(()),
+            |point| {
+                if point == "prepared" {
+                    assert_eq!(
+                        fs::read(raw.join(".lexique-restore.json")).unwrap(),
+                        original_journal
+                    );
+                    for (path, bytes, relative) in &originals {
+                        assert!(fs::read(path).unwrap() == *bytes);
+                        assert!(fs::read(raw.join(relative)).unwrap() == *bytes);
+                    }
+                    let requests: Vec<RawPendingRequest> = serde_json::from_slice(
+                        &fs::read(raw.join("pending-requests.json")).unwrap(),
+                    )
+                    .unwrap();
+                    assert_eq!(requests, raw_requests());
+                }
+                Ok(())
+            },
+        )
+        .unwrap();
+        let status = crate::startup::load(
+            &fixture.database,
+            |_| Ok(()),
+            || panic!("cleanup was skipped"),
+        );
+        assert_eq!(status.state, StartupPhase::CleanupRequired, "{status:?}");
+        crate::restore::cleanup_begin(&fixture.database, "after-unreadable", |_| Ok(())).unwrap();
+        crate::restore::cleanup_complete(&fixture.database, "after-unreadable", |_| Ok(()))
+            .unwrap();
+        let status = crate::startup::load(
+            &fixture.database,
+            |_| Ok(()),
+            || crate::startup::initialize_connection(&fixture.database.0),
+        );
+        assert_eq!(status.state, StartupPhase::Ready, "{status:?}");
+        let restored =
+            storage::get(&Connection::open(&fixture.database.0).unwrap(), record.id).unwrap();
+        assert_eq!(
+            restored.notes,
+            "A after recovery from an unreadable restore record"
+        );
+        assert_eq!(fs::read(&previous).unwrap(), b"earlier retained original");
+        assert_eq!(fs::read(&old_stage).unwrap(), b"earlier staged component");
+        assert_eq!(
+            fs::read(raw.join(".lexique-restore.json")).unwrap(),
+            original_journal
+        );
+    }
+}
+
+#[test]
 fn raw_restore_retains_every_original_byte_and_pending_string_before_prepared() {
     let fixture = Fixture::new();
     let mut connection = Connection::open(&fixture.database.0).unwrap();
@@ -240,6 +330,7 @@ fn raw_restore_retains_every_original_byte_and_pending_string_before_prepared() 
     let stage = prepare_preview(
         &archive,
         fixture.database.0.parent().unwrap(),
+        false,
         &cancelled,
         |_| {},
     )
@@ -286,6 +377,7 @@ fn raw_restore_retains_every_original_byte_and_pending_string_before_prepared() 
         prepare_preview(
             &raw.join("database/lexique.sqlite3"),
             fixture.database.0.parent().unwrap(),
+            false,
             &cancelled,
             |_| {}
         )
@@ -460,6 +552,7 @@ impl RecoveryFixture {
         prepare_preview(
             &self.archive,
             self.fixture.database.0.parent().unwrap(),
+            false,
             &AtomicBool::new(false),
             |_| {},
         )
@@ -576,9 +669,22 @@ fn unusable_retention_directory_stops_raw_restore_before_closing_or_replacing_or
 #[test]
 fn real_windows_source_read_and_copy_failures_stop_raw_preservation_before_prepared() {
     use std::{fs::OpenOptions, os::windows::fs::OpenOptionsExt};
-    for index in 0..7 {
+    for index in 0..=7 {
         let case = RecoveryFixture::new();
-        let (source, _, _) = &case.originals[index];
+        let journal = case
+            .fixture
+            .database
+            .0
+            .parent()
+            .unwrap()
+            .join(".lexique-restore.json");
+        let original_journal = b"{interrupted restore record";
+        let source = if index == 7 {
+            fs::write(&journal, original_journal).unwrap();
+            &journal
+        } else {
+            &case.originals[index].0
+        };
         let locked = OpenOptions::new()
             .read(true)
             .share_mode(0)
@@ -600,20 +706,60 @@ fn real_windows_source_read_and_copy_failures_stop_raw_preservation_before_prepa
                     .contains(&source.display().to_string().replace('\\', "/")),
             "{error}"
         );
-        assert!(
-            !case
-                .fixture
-                .database
-                .0
-                .parent()
-                .unwrap()
-                .join(".lexique-restore.json")
-                .exists()
-        );
         drop(locked);
+        if index == 7 {
+            assert_eq!(fs::read(&journal).unwrap(), original_journal);
+        } else {
+            assert!(!journal.exists());
+        }
         case.assert_originals();
         assert_recovery_retries(&case);
     }
+}
+
+#[test]
+fn restore_record_copy_failures_preserve_the_existing_recovery_decision() {
+    let case = RecoveryFixture::new();
+    let journal = case
+        .fixture
+        .database
+        .0
+        .parent()
+        .unwrap()
+        .join(".lexique-restore.json");
+    let original_journal = b"{interrupted restore record";
+    fs::write(&journal, original_journal).unwrap();
+    let stage = case.stage();
+    let staging = stage.root().to_owned();
+    let raw = case.raw("blocked-journal-copy");
+    let error = crate::restore::prepare_raw(
+        &case.fixture.database,
+        stage,
+        "blocked-journal-copy",
+        &raw_requests(),
+        || Ok(()),
+        |point| {
+            if point == "raw-preservation-created" {
+                fs::create_dir(raw.join(".lexique-restore.json"))
+                    .map_err(|error| error.to_string())?;
+            }
+            assert_ne!(
+                point, "prepared",
+                "Failed journal copy published a new decision"
+            );
+            Ok(())
+        },
+    )
+    .unwrap_err();
+    assert!(
+        error.contains("Could not preserve original restore record"),
+        "{error}"
+    );
+    assert_eq!(fs::read(&journal).unwrap(), original_journal);
+    assert!(!raw.join("pending-requests.json").exists());
+    assert!(!staging.exists());
+    case.assert_originals();
+    assert_recovery_retries(&case);
 }
 
 #[cfg(windows)]

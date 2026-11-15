@@ -213,6 +213,9 @@ async function rawFiles(root, original = false) {
   } else {
     for (const directory of ['database', 'audio', 'dictionaries']) await tree(join(root, directory), directory);
   }
+  const journalPath = original ? join(root, 'Lexique-data/data/.lexique-restore.json') : join(root, '.lexique-restore.json');
+  const journal = await readFile(journalPath).catch((error) => { if (error.code === 'ENOENT') return null; throw error; });
+  if (journal) output['.lexique-restore.json'] = journal.toString('base64');
   return Object.fromEntries(Object.entries(output).sort(([left], [right]) => left.localeCompare(right)));
 }
 async function restore(checked, recovery = false) {
@@ -471,20 +474,21 @@ print(json.dumps(value))`);
     evidence.checks.push({ originalUnavailableAudioExported: current, corruptBytesExcluded: true, learningUnchanged: true });
   } else if (scenario.startsWith('recovery-')) {
     const kind = scenario.slice('recovery-'.length);
-    assert.ok(['corrupt', 'unsupported', 'migration', 'close'].includes(kind));
+    assert.ok(['corrupt', 'unsupported', 'migration', 'close', 'journal'].includes(kind));
     await seed('B'); await importMdx('other.mdx');
     const pending = [{ key: 'lexique-pending-rating-raw75', value: '{ unparsed raw rating' },
       { key: 'lexique-pending-undo', value: ' raw undo with whitespace ' }, { key: 'lexique-pending-review-batch', value: '[unparsed batch' }];
     await page.evaluate((entries) => { for (const { key, value } of entries) localStorage.setItem(key, value); localStorage.setItem('native75-raw-control', 'preserved'); }, pending);
     await fixture.stop(true);
-    const seeded = seedStartupFailure(destination, kind === 'close' ? 'corrupt' : kind);
+    const seeded = seedStartupFailure(destination, ['close', 'journal'].includes(kind) ? 'corrupt' : kind);
+    if (kind === 'journal') await writeFile(join(destination, 'Lexique-data/data/.lexique-restore.json'), '{"stage_root":"../untrusted"');
     const original = await rawFiles(destination, true);
     await writeFile(join(destination, 'raw-before.json'), JSON.stringify(original, null, 2));
     page = await fixture.start(); page.setDefaultTimeout(8000); await page.context().setOffline(true);
     await page.getByRole('combobox').first().selectOption('en'); await observe();
     const failed = await invoke('startup_status');
     assert.equal(failed.state, 'recovery_required'); assert.ok(failed.error);
-    const error = { corrupt: /not a database|malformed/i, unsupported: /schema.*999|999.*schema/i, migration: /duplicate column|migration/i, close: /not a database|malformed/i }[kind];
+    const error = { corrupt: /not a database|malformed/i, unsupported: /schema.*999|999.*schema/i, migration: /duplicate column|migration/i, close: /not a database|malformed/i, journal: /restore record/i }[kind];
     assert.match(failed.error, error);
     assert.deepEqual(fixture.workerPids(), []);
     await assert.rejects(invoke('runtime_status'));
@@ -516,7 +520,8 @@ print(json.dumps(value))`);
   } else if (scenario === 'post-rating-restart') {
     const oracle = JSON.parse(await readFile(await artifact('oracle-A.json'), 'utf8'));
     const filename = await artifact('A.lexique-backup');
-    const checked = await preview(filename); await restore(checked);
+    const checked = await preview(filename);
+    await restore(checked);
     await verifyReplays(oracle);
     const card = (await invoke('review_cards', { vocabularyId: oracle.ids[1] })).find((entry) => entry.kind === 'recognition');
     const progress = await invoke('review_progress', { cardId: card.id });
@@ -653,7 +658,9 @@ print(json.dumps(value))`);
     const expected = JSON.parse(await readFile(await artifact('state-mdx.json'), 'utf8'));
     const oracle = JSON.parse(await readFile(await artifact('oracle-mdx.json'), 'utf8'));
     const filename = await artifact('MDX.lexique-backup');
-    const checked = await preview(filename); await restore(checked);
+    const checked = await preview(filename);
+    assert.deepEqual(checked.preview.pending_dictionaries.map((entry) => entry.id), oracle.order.filter((id) => id.startsWith('mdx-') && id !== existing.id));
+    await restore(checked);
     compareLearning(readState(destination), expected);
     assert.deepEqual(readState(destination).devices.filter((row) => row.key !== 'dictionary-files'), devices);
     assert.equal((await invoke('selection_shortcut')).shortcut, 'Ctrl+Alt+Shift+J');

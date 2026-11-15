@@ -537,9 +537,6 @@ pub(crate) fn prepare_raw(
     mut observe: impl FnMut(&str) -> Result<(), String>,
 ) -> Result<PreparedRestore, String> {
     validate_pending_requests(requests)?;
-    if present(&directory(database)?.join(JOURNAL))? {
-        return Err("A restore record already requires startup recovery".into());
-    }
     if stage.root().parent() != Some(directory(database)?) {
         return Err("Verified restore staging is outside the application filesystem".into());
     }
@@ -581,6 +578,11 @@ pub(crate) fn prepare_raw(
                     dictionaries.display()
                 )
             })?;
+        }
+        let journal = directory(database)?.join(JOURNAL);
+        if present(&journal)? {
+            copy_tree(&journal, &raw.join(JOURNAL))
+                .map_err(|error| format!("Could not preserve original restore record: {error}"))?;
         }
         observe("raw-files-copied")?;
         write_json(&raw.join("pending-requests.json"), &requests)?;
