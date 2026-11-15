@@ -10,7 +10,7 @@ use std::{
 use base64::{Engine, engine::general_purpose::STANDARD};
 use lexique_dictionary::{DictionaryError, Lookup, LookupWarning, Source, mdx};
 use lexique_storage::{DictionaryCatalog, DictionaryCatalogEntry, custom_dictionary_number};
-use rusqlite::{Connection, OptionalExtension, TransactionBehavior};
+use rusqlite::{Connection, OpenFlags, OptionalExtension, TransactionBehavior};
 use serde::{Deserialize, Serialize};
 use tauri::{Manager, State};
 
@@ -155,19 +155,15 @@ fn legacy_catalog(connection: &Connection) -> Result<bool, DictionaryError> {
     Ok(value.is_some_and(|value| value.get("dictionaries").is_some()))
 }
 
-fn ensure_device_catalog(path: &DatabasePath) -> Result<(), DictionaryError> {
-    let mut connection = open(path).map_err(|error| failure("query_failed", error))?;
-    if !legacy_catalog(&connection)? {
-        return Ok(());
+fn read_device_catalog(
+    path: &DatabasePath,
+    connection: &Connection,
+) -> Result<(DictionaryCatalog, DeviceFiles), DictionaryError> {
+    let mut catalog = read(connection)?;
+    let mut files = read_files(connection)?;
+    if !legacy_catalog(connection)? {
+        return Ok((catalog, files));
     }
-    let transaction = connection
-        .transaction_with_behavior(TransactionBehavior::Immediate)
-        .map_err(|error| failure("query_failed", error))?;
-    if !legacy_catalog(&transaction)? {
-        return Ok(());
-    }
-    let mut catalog = read(&transaction)?;
-    let mut files = read_files(&transaction)?;
     for entry in &mut catalog.entries {
         let Some(file_id) = custom_dictionary_number(&entry.id) else {
             continue;
@@ -187,6 +183,21 @@ fn ensure_device_catalog(path: &DatabasePath) -> Result<(), DictionaryError> {
             files.bindings.insert(entry.id.clone(), file_id);
         }
     }
+    Ok((catalog, files))
+}
+
+fn ensure_device_catalog(path: &DatabasePath) -> Result<(), DictionaryError> {
+    let mut connection = open(path).map_err(|error| failure("query_failed", error))?;
+    if !legacy_catalog(&connection)? {
+        return Ok(());
+    }
+    let transaction = connection
+        .transaction_with_behavior(TransactionBehavior::Immediate)
+        .map_err(|error| failure("query_failed", error))?;
+    if !legacy_catalog(&transaction)? {
+        return Ok(());
+    }
+    let (catalog, files) = read_device_catalog(path, &transaction)?;
     write_files(&transaction, &files)?;
     write(&transaction, &catalog)?;
     transaction
@@ -199,17 +210,12 @@ pub(crate) fn portable_catalog(path: &DatabasePath) -> Result<DictionaryCatalog,
     read(&open(path).map_err(|error| failure("query_failed", error))?)
 }
 
-pub(crate) fn restore_catalog(
-    connection: &mut Connection,
+fn restored_bindings(
     retained_path: &DatabasePath,
     catalog: &DictionaryCatalog,
-) -> Result<(), DictionaryError> {
-    lexique_storage::validate_dictionary_catalog(catalog)
-        .map_err(|error| failure("corrupt", error))?;
-    ensure_device_catalog(retained_path)?;
-    let mut files =
-        read_files(&open(retained_path).map_err(|error| failure("query_failed", error))?)?;
-    files.bindings.clear();
+    files: &DeviceFiles,
+) -> Result<BTreeMap<String, u32>, DictionaryError> {
+    let mut bindings = BTreeMap::new();
     for entry in &catalog.entries {
         let Some(hash) = &entry.content_hash else {
             continue;
@@ -222,11 +228,35 @@ pub(crate) fn restore_catalog(
             if mdx::Dictionary::open(&physical, &entry.id, &entry.title)
                 .is_ok_and(|dictionary| dictionary.content_hash() == hash)
             {
-                files.bindings.insert(entry.id.clone(), file.file_id);
+                bindings.insert(entry.id.clone(), file.file_id);
                 break;
             }
         }
     }
+    Ok(bindings)
+}
+
+pub(crate) fn preview_restored_bindings(
+    path: &DatabasePath,
+    catalog: &DictionaryCatalog,
+) -> Result<BTreeMap<String, u32>, DictionaryError> {
+    let connection = Connection::open_with_flags(&path.0, OpenFlags::SQLITE_OPEN_READ_ONLY)
+        .map_err(|error| failure("query_failed", error))?;
+    let (_, files) = read_device_catalog(path, &connection)?;
+    restored_bindings(path, catalog, &files)
+}
+
+pub(crate) fn restore_catalog(
+    connection: &mut Connection,
+    retained_path: &DatabasePath,
+    catalog: &DictionaryCatalog,
+) -> Result<(), DictionaryError> {
+    lexique_storage::validate_dictionary_catalog(catalog)
+        .map_err(|error| failure("corrupt", error))?;
+    ensure_device_catalog(retained_path)?;
+    let mut files =
+        read_files(&open(retained_path).map_err(|error| failure("query_failed", error))?)?;
+    files.bindings = restored_bindings(retained_path, catalog, &files)?;
     let transaction = connection
         .transaction_with_behavior(TransactionBehavior::Immediate)
         .map_err(|error| failure("query_failed", error))?;

@@ -70,6 +70,7 @@ impl Fixture {
         prepare_preview(
             archive,
             self.database.0.parent().unwrap(),
+            true,
             &AtomicBool::new(false),
             |_| {},
         )

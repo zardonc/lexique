@@ -81,6 +81,7 @@ fn formal_preparation_waits_for_accepted_readers_and_closes_new_reader_admission
     let stage = prepare_preview(
         &archive,
         fixture.database.0.parent().unwrap(),
+        true,
         &cancelled,
         |_| {},
     )
@@ -233,6 +234,7 @@ fn preparation_preserves_b_and_ordinary_startup_installs_verified_a() {
     let stage = prepare_preview(
         &archive,
         fixture.database.0.parent().unwrap(),
+        true,
         &cancelled,
         |_| {},
     )
@@ -284,6 +286,7 @@ fn preparation_preserves_b_and_ordinary_startup_installs_verified_a() {
     let preserved = prepare_preview(
         &PathBuf::from(&before.path),
         fixture.database.0.parent().unwrap(),
+        true,
         &cancelled,
         |_| {},
     )
@@ -322,6 +325,7 @@ fn uncommitted_install_failure_restores_complete_b_and_keeps_the_preserved_copie
     let stage = prepare_preview(
         &archive,
         fixture.database.0.parent().unwrap(),
+        true,
         &cancelled,
         |_| {},
     )
@@ -416,6 +420,7 @@ fn committed_restore_repeats_cleanup_without_replaying_the_import() {
     let stage = prepare_preview(
         &archive,
         fixture.database.0.parent().unwrap(),
+        true,
         &cancelled,
         |_| {},
     )
@@ -534,6 +539,7 @@ fn sync_failure_after_formal_closure_keeps_the_old_runtime_closed() {
     let stage = prepare_preview(
         &archive,
         fixture.database.0.parent().unwrap(),
+        true,
         &cancelled,
         |_| {},
     )
@@ -622,6 +628,7 @@ fn failed_prepared_handoff_keeps_b_on_ordinary_startup() {
     let stage = prepare_preview(
         &archive,
         fixture.database.0.parent().unwrap(),
+        true,
         &cancelled,
         |_| {},
     )
@@ -713,6 +720,7 @@ fn failed_preparation_with_a_locked_journal_keeps_b_after_the_lock_is_released()
     let stage = prepare_preview(
         &archive,
         fixture.database.0.parent().unwrap(),
+        true,
         &cancelled,
         |_| {},
     )
@@ -897,6 +905,7 @@ fn restore_interruption_child() {
         let stage = prepare_preview(
             &root.join("interruption-A.lexique-backup"),
             database.0.parent().unwrap(),
+            true,
             &AtomicBool::new(false),
             |_| {},
         )
@@ -1012,6 +1021,7 @@ fn interruption_fixture_with_journal(prepared: bool, journal_mode: &str) -> Inte
     let stage = prepare_preview(
         &archive,
         fixture.database.0.parent().unwrap(),
+        true,
         &cancelled,
         |_| {},
     )
@@ -1503,6 +1513,7 @@ fn genuine_preservation_read_failure_keeps_b_and_releases_normal_learning_admiss
     let stage = prepare_preview(
         &archive,
         fixture.database.0.parent().unwrap(),
+        true,
         &cancelled,
         |_| {},
     )
@@ -1651,6 +1662,145 @@ fn genuine_rollback_copy_failure_blocks_learning_until_b_can_be_completed() {
     );
     drop(locked);
     assert_recovered_b(&case);
+}
+
+#[test]
+fn raw_recovery_after_incomplete_rollback_preserves_previous_decision_and_copies() {
+    fn files(directory: &std::path::Path) -> Vec<(PathBuf, Vec<u8>)> {
+        let mut saved = Vec::new();
+        for entry in fs::read_dir(directory).unwrap() {
+            let path = entry.unwrap().path();
+            if path.is_dir() {
+                saved.extend(files(&path));
+            } else {
+                saved.push((path.clone(), fs::read(path).unwrap()));
+            }
+        }
+        saved.sort_by(|a, b| a.0.cmp(&b.0));
+        saved
+    }
+
+    let case = interruption_fixture(true);
+    let blocked = crate::startup::load(
+        &case.fixture.database,
+        |point| match point {
+            "after-install-audio" => Err("Installation failed before commitment".into()),
+            "before-rollback-install-database" => {
+                Err("Original database rollback could not finish".into())
+            }
+            _ => Ok(()),
+        },
+        || panic!("Incomplete rollback admitted learning"),
+    );
+    assert_eq!(
+        blocked.state,
+        crate::restore::StartupPhase::RecoveryRequired,
+        "{blocked:?}"
+    );
+    assert!(blocked.error.unwrap().contains("rollback failed"));
+    assert!(!case.fixture.database.0.exists());
+    let directory = case.fixture.database.0.parent().unwrap();
+    let journal = directory.join(".lexique-restore.json");
+    let original_journal = fs::read(&journal).unwrap();
+    let decision: serde_json::Value = serde_json::from_slice(&original_journal).unwrap();
+    let old_stage = PathBuf::from(decision["stage_root"].as_str().unwrap());
+    let previous = directory.join("retained-restores/restore-interruption");
+    let previous_files = files(&previous);
+    let previous_staging = files(&old_stage);
+    assert!(
+        previous_files
+            .iter()
+            .any(|(path, _)| path.ends_with("pre-restore.lexique-backup"))
+    );
+    assert!(previous_files.iter().any(|(_, bytes)| bytes == AUDIO_B));
+    for (path, bytes) in &case.raw_b {
+        assert_eq!(
+            fs::read(
+                previous
+                    .join("original-database")
+                    .join(path.file_name().unwrap())
+            )
+            .unwrap(),
+            *bytes
+        );
+    }
+    let pending = vec![crate::restore::RawPendingRequest {
+        key: "lexique-pending-rating-57".into(),
+        value: "{unfinished-save: preserve exactly}".into(),
+    }];
+    let prior_pending =
+        directory.join("retained-restores/earlier-raw/raw-files/pending-requests.json");
+    fs::create_dir_all(prior_pending.parent().unwrap()).unwrap();
+    let prior_pending_bytes = serde_json::to_vec(&pending).unwrap();
+    fs::write(&prior_pending, &prior_pending_bytes).unwrap();
+    let dictionary = directory.join("dictionaries/remaining.mdx");
+    fs::create_dir_all(dictionary.parent().unwrap()).unwrap();
+    fs::write(&dictionary, b"Remaining target custom dictionary bytes").unwrap();
+    let archive = case.fixture.root.0.join("interruption-A.lexique-backup");
+    let stage =
+        prepare_preview(&archive, directory, false, &AtomicBool::new(false), |_| {}).unwrap();
+    let raw = directory.join("retained-restores/after-incomplete/raw-files");
+    crate::restore::prepare_raw(
+        &case.fixture.database,
+        stage,
+        "after-incomplete",
+        &pending,
+        || Ok(()),
+        |point| {
+            if point == "prepared" {
+                assert_eq!(
+                    fs::read(raw.join(".lexique-restore.json")).unwrap(),
+                    original_journal
+                );
+                assert_eq!(
+                    fs::read(raw.join("dictionaries/remaining.mdx")).unwrap(),
+                    fs::read(&dictionary).unwrap()
+                );
+                assert!(!raw.join("database").exists());
+                assert!(!raw.join("audio").exists());
+            }
+            Ok(())
+        },
+    )
+    .unwrap();
+    let restored = crate::startup::load(
+        &case.fixture.database,
+        |_| Ok(()),
+        || panic!("Cleanup was skipped"),
+    );
+    assert_eq!(
+        restored.state,
+        crate::restore::StartupPhase::CleanupRequired,
+        "{restored:?}"
+    );
+    crate::restore::cleanup_begin(&case.fixture.database, "after-incomplete", |_| Ok(())).unwrap();
+    crate::restore::cleanup_complete(&case.fixture.database, "after-incomplete", |_| Ok(()))
+        .unwrap();
+    let ready = crate::startup::load(
+        &case.fixture.database,
+        |_| Ok(()),
+        || crate::startup::initialize_connection(&case.fixture.database.0),
+    );
+    assert_eq!(
+        ready.state,
+        crate::restore::StartupPhase::Ready,
+        "{ready:?}"
+    );
+    assert_timeline(&case, "A subprocess timeline", AUDIO_A);
+    assert_eq!(files(&previous), previous_files);
+    assert_eq!(files(&old_stage), previous_staging);
+    assert_eq!(fs::read(&prior_pending).unwrap(), prior_pending_bytes);
+    assert_eq!(
+        fs::read(raw.join(".lexique-restore.json")).unwrap(),
+        original_journal
+    );
+    let retained_pending: Vec<crate::restore::RawPendingRequest> =
+        serde_json::from_slice(&fs::read(raw.join("pending-requests.json")).unwrap()).unwrap();
+    assert_eq!(retained_pending, pending);
+    assert_eq!(
+        fs::read(&dictionary).unwrap(),
+        b"Remaining target custom dictionary bytes"
+    );
 }
 
 #[cfg(windows)]

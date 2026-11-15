@@ -1052,6 +1052,140 @@ mod tests {
     }
 
     #[test]
+    fn preview_reports_verified_target_dictionary_availability_without_live_changes() {
+        for (scenario, pending) in [
+            ("matching", false),
+            ("legacy", false),
+            ("missing", true),
+            ("changed", true),
+            ("unknown", true),
+            ("recovery", true),
+        ] {
+            let directory = Directory::new();
+            let database = directory.database();
+            let bytes = include_bytes!(
+                "../../../../resources/freedict-fra-eng-mdx-0.4.1/freedict-fra-eng-0.4.1.mdx"
+            );
+            let hash = storage::content_hash(bytes);
+            let mut connection = rusqlite::Connection::open(&database.0).unwrap();
+            storage::initialize(&connection).unwrap();
+            let id = save_word(&mut connection, "école");
+            connection
+                .execute(
+                    "INSERT INTO app_metadata(key,value) VALUES('dictionary-files',?1)",
+                    [serde_json::json!({
+                        "files": [{"id": "mdx-9", "file_id": 9, "content_hash": hash}],
+                        "bindings": {"mdx-9": 9}
+                    })
+                    .to_string()],
+                )
+                .unwrap();
+            let mut snapshot =
+                storage::export_learning_snapshot(&mut connection, 1_794_564_000).unwrap();
+            snapshot.dictionary_catalog.next_id = 2;
+            snapshot.dictionary_catalog.entries.insert(
+                0,
+                storage::DictionaryCatalogEntry {
+                    id: "mdx-1".into(),
+                    title: "The source dictionary".into(),
+                    content_hash: (scenario != "unknown").then_some(hash),
+                },
+            );
+            if scenario == "legacy" {
+                connection
+                    .execute("DELETE FROM app_metadata WHERE key='dictionary-files'", [])
+                    .unwrap();
+                connection
+                    .execute(
+                        "INSERT INTO app_metadata(key,value) VALUES('dictionary-settings',?1)",
+                        [serde_json::json!({
+                            "next_id": 10,
+                            "dictionaries": [
+                                {"id": "builtin", "title": "FreeDict fra-zho"},
+                                {"id": "builtin-fra-eng", "title": "FreeDict fra-eng 0.4.1"},
+                                {"id": "mdx-9", "title": "A different target title"}
+                            ]
+                        })
+                        .to_string()],
+                    )
+                    .unwrap();
+            }
+            connection.close().unwrap();
+            let dictionaries = database.0.parent().unwrap().join("dictionaries");
+            fs::create_dir(&dictionaries).unwrap();
+            let target_bytes = if scenario == "changed" {
+                include_bytes!("../../../../tools/mdict-probe/tests/fixtures/v2-utf8-none.mdx")
+                    .as_slice()
+            } else {
+                bytes.as_slice()
+            };
+            if scenario != "missing" {
+                fs::write(dictionaries.join("mdx-9.mdx"), target_bytes).unwrap();
+            }
+            if scenario == "recovery" {
+                fs::write(&database.0, b"broken original learning database").unwrap();
+            }
+            let original = fs::read(&database.0).unwrap();
+            let manifest = BackupManifest {
+                kind: "lexique-backup".into(),
+                format_version: 1,
+                snapshot_version: 1,
+                created_at: 1_794_564_000,
+                application_version: "0.1.0".into(),
+                counts: BackupCounts::from_snapshot(&snapshot),
+            };
+            let source = directory.0.join("dictionary.lexique-backup");
+            fixture_archive(
+                &source,
+                &[
+                    (
+                        "manifest.json".into(),
+                        serde_json::to_vec(&manifest).unwrap(),
+                    ),
+                    (
+                        "snapshot.json".into(),
+                        serde_json::to_vec(&snapshot).unwrap(),
+                    ),
+                ],
+            );
+            let stage = crate::backup_preview::prepare_preview(
+                &source,
+                database.0.parent().unwrap(),
+                scenario != "recovery",
+                &AtomicBool::new(false),
+                |_| {},
+            )
+            .unwrap();
+            assert_eq!(
+                stage.preview().pending_dictionaries.len(),
+                usize::from(pending),
+                "{scenario}"
+            );
+            if pending {
+                assert_eq!(stage.preview().pending_dictionaries[0].id, "mdx-1");
+                assert_eq!(
+                    stage.preview().pending_dictionaries[0].title,
+                    "The source dictionary"
+                );
+            }
+            assert_eq!(fs::read(&database.0).unwrap(), original);
+            if scenario != "recovery" {
+                let live = rusqlite::Connection::open(&database.0).unwrap();
+                assert_eq!(
+                    storage::get(&live, id).unwrap().notes,
+                    "Mes notes\n个人笔记"
+                );
+            }
+            if scenario != "missing" {
+                assert_eq!(
+                    fs::read(dictionaries.join("mdx-9.mdx")).unwrap(),
+                    target_bytes
+                );
+            }
+        }
+    }
+
+    #[test]
     fn preview_stages_empty_and_saved_learning_in_an_owned_root_without_live_changes() {
         for vocabulary_count in [0, 1] {
             let directory = Directory::new();
@@ -1100,6 +1234,7 @@ mod tests {
             let stage = crate::backup_preview::prepare_preview(
                 &source,
                 &app_data,
+                false,
                 &AtomicBool::new(false),
                 |_| {},
             )
@@ -1207,6 +1342,7 @@ mod tests {
                 crate::backup_preview::prepare_preview(
                     &invalid,
                     &app_data,
+                    false,
                     &AtomicBool::new(false),
                     |_| {}
                 )
@@ -1221,6 +1357,7 @@ mod tests {
             crate::backup_preview::prepare_preview(
                 &source,
                 &unusable_parent,
+                false,
                 &AtomicBool::new(false),
                 |_| {}
             )
@@ -1232,12 +1369,17 @@ mod tests {
             crate::backup_preview::BackupPreviewPhase::Staging,
         ] {
             let cancelled = AtomicBool::new(false);
-            let result =
-                crate::backup_preview::prepare_preview(&source, &app_data, &cancelled, |phase| {
+            let result = crate::backup_preview::prepare_preview(
+                &source,
+                &app_data,
+                false,
+                &cancelled,
+                |phase| {
                     if phase == cancel_at {
                         cancelled.store(true, Ordering::Release);
                     }
-                });
+                },
+            );
             assert_eq!(result.err().unwrap(), "backup_cancelled");
             assert!(fs::read_dir(&app_data).unwrap().next().is_none());
         }
@@ -1447,7 +1589,8 @@ mod tests {
         let app_data = directory.0.join("app-data");
         fs::create_dir(&app_data).unwrap();
         let stage =
-            crate::backup_preview::prepare_preview(&source, &app_data, &cancelled, |_| {}).unwrap();
+            crate::backup_preview::prepare_preview(&source, &app_data, false, &cancelled, |_| {})
+                .unwrap();
         let inspector = crate::speech_cache::Inspector::new(stage.database()).unwrap();
         let mut readback = rusqlite::Connection::open_with_flags(
             stage.database(),

@@ -269,6 +269,7 @@ fn verify_managed_audio(
 pub fn prepare_preview(
     archive_path: &Path,
     app_data_directory: &Path,
+    target_learning_available: bool,
     cancelled: &AtomicBool,
     phase: impl Fn(BackupPreviewPhase),
 ) -> Result<VerifiedBackupStage, String> {
@@ -318,6 +319,15 @@ pub fn prepare_preview(
         .and_then(|file| file.sync_all())
         .map_err(|e| format!("Could not sync staged learning database: {e}"))?;
     check_cancelled(cancelled)?;
+    let bindings = if target_learning_available {
+        crate::dictionaries::preview_restored_bindings(
+            &crate::vocabulary::DatabasePath(app_data_directory.join(crate::DATABASE_FILENAME)),
+            &verified.snapshot.dictionary_catalog,
+        )
+        .map_err(|error| format!("Could not verify target dictionary associations: {error}"))?
+    } else {
+        Default::default()
+    };
     let preview = BackupPreview {
         filename: archive_path
             .file_name()
@@ -333,7 +343,10 @@ pub fn prepare_preview(
             .dictionary_catalog
             .entries
             .iter()
-            .filter(|entry| storage::custom_dictionary_number(&entry.id).is_some())
+            .filter(|entry| {
+                storage::custom_dictionary_number(&entry.id).is_some()
+                    && !bindings.contains_key(&entry.id)
+            })
             .map(|entry| PendingBackupDictionary {
                 id: entry.id.clone(),
                 title: entry.title.clone(),

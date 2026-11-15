@@ -587,12 +587,16 @@ pub fn backup_preview_start(
                 .path()
                 .app_data_dir()
                 .map_err(|error| format!("Could not resolve backup staging directory: {error}"))?;
-            prepare_preview(&source, &app_data, &cancelled, |phase| {
-                match operations.preview_phase(&id, phase) {
+            prepare_preview(
+                &source,
+                &app_data,
+                crate::startup::learning_available(&app),
+                &cancelled,
+                |phase| match operations.preview_phase(&id, phase) {
                     Ok(status) => emit_preview(&app, &status),
                     Err(error) => eprintln!("Could not record backup preview progress: {error}"),
-                }
-            })
+                },
+            )
         });
         drop(worker);
         match result {
@@ -667,6 +671,7 @@ mod tests {
         let stage = crate::backup_preview::prepare_preview(
             &source,
             &app_data,
+            false,
             &AtomicBool::new(false),
             |_| {},
         )
@@ -910,6 +915,7 @@ mod tests {
                 prepare_preview(
                     &source.with_file_name("missing.lexique-backup"),
                     &app_data,
+                    false,
                     &cancelled,
                     |_| {},
                 )

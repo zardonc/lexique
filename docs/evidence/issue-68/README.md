@@ -87,6 +87,38 @@ A、B 均使用三条合成词汇、六张卡、两条进度及四张尚无进�
 
 集成基线 `ca7d31eb8caa475ac806427f5e199b0daec3b5f0` 的 [PR CI](https://github.com/zardonc/lexique/actions/runs/43654344670) 与 [push CI](https://github.com/zardonc/lexique/actions/runs/43654340882) 共 22 项检查通过。[前端 job](https://github.com/zardonc/lexique/actions/runs/43654344670/job/132629480751) 记录完整 375/375（3.2 min）及 lint／typecheck／build，[文档 job](https://github.com/zardonc/lexique/actions/runs/43654344670/job/132629480747) 通过。这些 CI 结果对应该集成 SHA；本次源码的本机检查如上。
 
+## 恢复记录、词典预览与便携路径
+
+2026-11-15 UTC，当前 Windows x64 构建的 SHA256 为 `8012803edac7648e1122f04f3d2fb0da0465036129ca3986d7030e5b8a9d8100`，集成基线为 `34040078f101d9973df93aee38e552010799fca4`。本节证据位于工作树 `target/review-fixes68/`，原生夹具的紧凑副本位于其中的 `native/runs/`；各自的 `run-metadata.json` 记录完整命令、实际输入和构建身份。上面的验收表与 CI 链接保留各自的源码与执行身份。
+
+预览与实际恢复共用目标词典内容验证；匹配条目保持可用，缺失、内容不同或来源哈希未知的自定义条目按 catalog 顺序待重连。预览只读目标库和文件；legacy 设备 catalog 在内存中归一化。独立恢复跳过失败的原学习库。恢复前已有日志以完整原始字节保留至 `raw-files/.lexique-restore.json`，与原始文件和待确认字符串同步后才能发布新的恢复记录。损坏 JSON、不可解码日志及未完成回滚均覆盖；已有保留数据库、音频、逻辑备份、决策、旧 staging 和待确认证据保持，日志复制或读取失败可见并阻止替换。Portable 启动始终将 `TEMP` 和 `TMP` 绑定到预期便携目录，目录创建失败的诊断保持。
+
+| 检查 | 结果 | `target/review-fixes68/` 中的证据 |
+| --- | --- | --- |
+| `cargo fmt --all --check`、`cargo check --locked --workspace` | 通过 | `logs/rust-format-green-check.log`、`logs/rust-workspace-check-final.log` |
+| `pnpm rust:test:build`、`pnpm test:rust` | 独立预编译后 185 通过 | `logs/storage-precompile-final.log`、`logs/storage-tests-final.log` |
+| 桌面库 release 独立预编译与完整八分区 | 94 个条目无遗漏／重复；92 通过，两个子进程入口按用途忽略 | `desktop-selection-results.json`、`logs/desktop-partition-*.log` |
+| 缓存 release 独立预编译、`pnpm test:speech:cache` | 11 通过，一个既有崩溃入口按用途忽略 | `logs/cache-precompile-final.log`、`logs/cache-tests-final.log` |
+| `pnpm lint`、`pnpm typecheck`、`pnpm desktop:build --no-bundle` | 通过；原生构建包含 `pnpm build` | `logs/lint-final.log`、`logs/typecheck-final.log`、`logs/desktop-build-final.log` |
+| 浏览器启动探针；`pnpm test:e2e backup-restore backup-recovery --workers=2` | 已核实的 Playwright headless shell；1/1、49/49 通过 | `logs/browser-startup-probe.log`、`logs/browser-recovery-final.log` |
+| 原生 `migrate-mdx` | 8 项检查、实际打开选择器；待重连列表只含未验证的自定义条目，原目标文件与冻结学习内容保持 | `native/runs/migrate-mdx/`、`logs/native-migrate-mdx-accepted.log` |
+| 原生 `recovery-journal` | 4 项检查、实际打开选择器；损坏日志／文件／待确认字符串逐字节保留，独立 A 读回通过 | `native/runs/recovery-journal/`、`logs/native-recovery-journal-green.log` |
+| Windows portable 进程环境 | 当前构建在临时目录被文件阻挡时，实际 `TEMP`／`TMP` 均为预期便携路径；硬限 60 秒 | `portable-final-01-result.json`、`logs/portable-environment-final.log` |
+
+| 当前桌面库分区 | 所选条目 | 通过 | 忽略 | Rust 执行时间 |
+| --- | ---: | ---: | ---: | ---: |
+| 其他桌面库／领域 | 34 | 34 | 0 | 6.45 s |
+| 备份 | 20 | 20 | 0 | 5.32 s |
+| 普通恢复 | 18 | 17 | 1 | 9.05 s |
+| 未提交状态强制退出循环 | 1 | 1 | 0 | 9.74 s |
+| 提交后／清理强制退出循环 | 1 | 1 | 0 | 3.91 s |
+| SQLite 持久日志强制退出循环 | 1 | 1 | 0 | 6.04 s |
+| 回退强制退出循环 | 1 | 1 | 0 | 11.91 s |
+| 独立启动／原始文件恢复 | 18 | 17 | 1 | 12.15 s |
+| 合计 | 94 | 92 | 2 | |
+
+三个强制退出循环各自独立执行，原有案例、runner 与每次 60 秒硬限保持。完整名单、各分区名单、命令与实际结果见 `desktop-selection-results.json`；Windows 库存不用于推定 macOS 条目数量。原生夹具独立保留 60 秒硬限至清理结束，当前夹具自有 host／worker／helper 的清理读回均为零。
+
 ## 验证范围
 
 本次为 Windows x64 原生合成隔离数据验收，使用真实 SQLite、文件操作、系统选择器、自有进程重启与产品播放。独立目录迁移验证便携状态与目标设备设置；ARM／macOS GUI、物理跨 OS 迁移、整机断网、正式发行／首装／签名及资源准入继续按 [development-readiness.md](../../development-readiness.md) 的独立门槛验证。

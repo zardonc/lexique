@@ -8,23 +8,17 @@ fn main() {
         {
             let data = parent.join("Lexique-data");
             let temporary = data.join("temp");
-            let usable = match std::fs::create_dir_all(&temporary) {
-                Ok(()) => true,
-                Err(error) => {
-                    eprintln!(
-                        "Could not prepare portable temp {}: {error}",
-                        temporary.display()
-                    );
-                    false
-                }
-            };
+            if let Err(error) = std::fs::create_dir_all(&temporary) {
+                eprintln!(
+                    "Could not prepare portable temp {}: {error}",
+                    temporary.display()
+                );
+            }
             // SAFETY: No application threads exist before Tauri starts. Startup reports an
             // unusable intended temp path before opening learning data; the shell may still run.
             unsafe {
-                if usable {
-                    std::env::set_var("TEMP", &temporary);
-                    std::env::set_var("TMP", &temporary);
-                }
+                std::env::set_var("TEMP", &temporary);
+                std::env::set_var("TMP", &temporary);
                 std::env::set_var("WEBVIEW2_USER_DATA_FOLDER", data.join("webview/EBWebView"));
             }
         } else {
