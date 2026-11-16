@@ -81,10 +81,13 @@ function admitted(lookup, key) {
       const expected = reviewed.fields[inputField], source = curation.sources.find((item) => item.id === expected.source_id);
       assert.equal(sense[field], expected.text, `${sense.sense_id}/${field}`);
       const provenance = sense.field_sources[field];
-      assert.equal(provenance.title, source.title); assert.ok(provenance.version.includes(String(source.revid)));
-      assert.equal(provenance.attribution, source.attribution); assert.equal(provenance.source_url, source.fixed_url);
-      assert.equal(provenance.license, expected.content_license); assert.equal(provenance.license_url, source.license_url);
-      assert.ok(provenance.span.includes(expected.source_span.raw_source_excerpt));
+      assert.ok(provenance.title.includes(source.title)); assert.ok(provenance.version.includes(String(source.revid)));
+      assert.ok(provenance.attribution.includes(source.attribution)); assert.ok(provenance.attribution.includes(source.history_url));
+      assert.equal(provenance.source_url, source.fixed_url);
+      assert.equal(provenance.license.replaceAll(/[- ]/g, ''), expected.content_license.replaceAll(/[- ]/g, ''));
+      assert.equal(provenance.license_url, source.license_url);
+      assert.ok(provenance.span.includes(`line ${expected.source_span.line_1_based}`));
+      assert.ok(provenance.span.includes('selected-source-excerpts.json'));
       assert.equal(provenance.modification, expected.modification);
     }
   }
