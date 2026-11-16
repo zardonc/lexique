@@ -1,4 +1,5 @@
 import json
+import os
 from pathlib import Path
 import shutil
 import sqlite3
@@ -13,6 +14,20 @@ FIELD_NAMES = {"french_definition": "definition_fr", "ipa": "ipa", "english": "m
 
 
 class CorePilotPreparationTests(unittest.TestCase):
+    def test_repeat_preparation_preserves_verified_resource_timestamps(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            output = Path(temporary) / "prepared"
+            first = prepare(output)
+            for path in output.iterdir():
+                os.utime(path, ns=(1_700_000_000_000_000_000, 1_700_000_000_000_000_000))
+            before = {path.name: (path.read_bytes(), path.stat().st_mtime_ns) for path in output.iterdir()}
+            self.assertEqual(prepare(output), first)
+            self.assertEqual({path.name: (path.read_bytes(), path.stat().st_mtime_ns)
+                              for path in output.iterdir()}, before)
+            (output / "core.sqlite3").write_bytes(b"damaged generated resource")
+            self.assertEqual(prepare(output), first)
+            self.assertEqual((output / "core.sqlite3").read_bytes(), before["core.sqlite3"][0])
+
     def test_preparation_is_reproducible_and_binds_all_reviewed_fields_to_frozen_groups(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)

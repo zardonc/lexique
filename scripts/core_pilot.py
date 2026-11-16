@@ -242,7 +242,9 @@ def prepare(destination, source_dir=RESOURCE, project_license=ROOT / "LICENSE"):
         (staged / "report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
         destination.mkdir(parents=True, exist_ok=True)
         for file in staged.iterdir():
-            file.replace(destination / file.name)
+            existing = destination / file.name
+            if not existing.is_file() or digest(file) != digest(existing):
+                file.replace(existing)
     return report
 
 
