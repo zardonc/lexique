@@ -25,6 +25,8 @@ pub struct DigestEntry {
     pub pronunciations: Vec<String>,
     pub grammar: Vec<String>,
     pub translation: Option<String>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub core: Option<lexique_core::dictionary::CoreSense>,
 }
 
 #[derive(Debug, Clone, Deserialize, Serialize, PartialEq)]

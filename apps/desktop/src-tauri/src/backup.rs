@@ -949,6 +949,7 @@ mod tests {
                     pronunciations: vec![],
                     grammar: vec!["n".into()],
                     translation: Some("学校".into()),
+                    core: None,
                 }],
             }),
         )

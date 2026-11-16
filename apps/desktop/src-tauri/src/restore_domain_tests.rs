@@ -167,6 +167,7 @@ fn save(connection: &mut Connection, request: &storage::SaveRequest) -> i64 {
                 pronunciations: vec!["ekɔl".into()],
                 grammar: vec!["n.f.".into()],
                 translation: Some("学校".into()),
+                core: None,
             }],
         }),
     )
@@ -1877,6 +1878,7 @@ fn ordinary_restore_binds_exact_device_mdx_keeps_shortcuts_and_frozen_sources() 
                 pronunciations: vec!["ɛtʁ".into()],
                 grammar: vec!["v.".into()],
                 translation: Some("Original to be".into()),
+                core: None,
             }],
         }),
     )
