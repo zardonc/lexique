@@ -108,7 +108,7 @@ pub fn validate_learning_snapshot(
     captured_at: i64,
 ) -> Result<(), StorageError> {
     require(
-        snapshot.snapshot_version == 1,
+        matches!(snapshot.snapshot_version, 1 | 2),
         "unsupported snapshot version",
     )?;
     timestamp(captured_at)?;
@@ -137,6 +137,32 @@ pub fn validate_learning_snapshot(
             revision: Some(record.revision),
         })?;
         reference(&record.reference)?;
+        let mut senses = HashSet::new();
+        for entry in &record.digest {
+            if let Some(core) = &entry.core {
+                require(
+                    snapshot.snapshot_version == 2,
+                    "core senses require snapshot v2",
+                )?;
+                require(
+                    record.reference.dictionary_id.as_deref()
+                        == Some(lexique_core::dictionary::CORE_DICTIONARY_ID)
+                        && core.headword.nfc().collect::<String>() == record.headword
+                        && entry.translation.is_none()
+                        && entry.pronunciations == [core.ipa.clone()]
+                        && entry.grammar == [core.pos.clone()]
+                        && senses.insert(&core.sense_id),
+                    "core sense disagrees with its frozen record or digest",
+                )?;
+                core.validate().map_err(StorageError::Invalid)?;
+            } else {
+                require(
+                    record.reference.dictionary_id.as_deref()
+                        != Some(lexique_core::dictionary::CORE_DICTIONARY_ID),
+                    "core record is missing four-field senses",
+                )?;
+            }
+        }
         for source in record.example_source.iter().chain(
             record
                 .more_examples
@@ -830,6 +856,13 @@ pub fn read_learning_snapshot(
             if let Some(digest) = record["digest"].as_array() {
                 for entry in digest {
                     required(entry, &["translation"])?;
+                    require(
+                        value["snapshot_version"] != 1
+                            || !entry
+                                .as_object()
+                                .is_some_and(|fields| fields.contains_key("core")),
+                        "core senses require snapshot v2",
+                    )?;
                 }
             }
         }

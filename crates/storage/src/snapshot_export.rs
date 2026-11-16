@@ -48,7 +48,7 @@ pub fn export_learning_snapshot(
     })?;
     let mut records = get_batch(&tx, &ids)?;
     let mut snapshot = LearningSnapshot {
-        snapshot_version: 1,
+        snapshot_version: 2,
         records: ids
             .into_iter()
             .map(|id| records.remove(&id).unwrap())

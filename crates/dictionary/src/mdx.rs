@@ -139,6 +139,7 @@ impl Dictionary {
                     pronunciations: Vec::new(),
                     grammar: Vec::new(),
                     senses: Vec::new(),
+                    core_senses: Vec::new(),
                     html: Some(entry.text().into()),
                 });
             }

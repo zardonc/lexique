@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import type { DictionaryLookup, DictionarySense } from './dictionary';
-import { dictionaryId } from './dictionary';
+import { coreSenseSchema, dictionaryId } from './dictionary';
 
 export const characterCount = (value: string) => Array.from(value).length;
 const headword = z.string().refine((value) => value.trim().length > 0 && characterCount(value) <= 200
@@ -13,7 +13,10 @@ const positiveId = z.number().int().positive().max(Number.MAX_SAFE_INTEGER);
 const digestEntry = z.object({
   pronunciations: z.array(z.string()).readonly(), grammar: z.array(z.string()).readonly(),
   translation: z.string().nullable(),
+  core: coreSenseSchema.optional(),
 }).strict().readonly();
+export type DigestEntry = z.infer<typeof digestEntry>;
+export const digestMeaning = (entry: DigestEntry) => entry.core?.meaning_zh ?? entry.translation;
 const reference = z.object({
   dictionary_id: dictionaryId.optional(),
   dictionary: z.string().min(1), version: z.string().min(1), attribution: z.string().min(1).nullable(),
@@ -57,8 +60,9 @@ export function snapshotFromLookup(lookup: DictionaryLookup): VocabularySnapshot
     reference: { dictionary_id: lookup.dictionary_id ?? 'builtin', dictionary: lookup.source.title, lookup_key: first.key, version: lookup.source.version,
       attribution: lookup.source.attribution, license: lookup.source.license,
       source_url: lookup.source.source_url, license_url: lookup.source.license_url, sha256: lookup.sha256 },
-    digest: lookup.entries.map((entry) => ({ pronunciations: entry.pronunciations,
-      grammar: entry.grammar, translation: firstTranslation(entry.senses) })),
+    digest: lookup.entries.flatMap((entry) => entry.core_senses?.length
+      ? entry.core_senses.map((core) => ({ pronunciations: [core.ipa], grammar: [core.pos], translation: null, core }))
+      : [{ pronunciations: entry.pronunciations, grammar: entry.grammar, translation: firstTranslation(entry.senses) }]),
   };
 }
 

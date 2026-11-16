@@ -19,6 +19,7 @@ fn snapshot() -> Snapshot {
             pronunciations: vec!["e.kɔl".into()],
             grammar: vec!["n".into()],
             translation: Some("学校".into()),
+            core: None,
         }],
     }
 }

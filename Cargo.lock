@@ -2246,6 +2246,7 @@ name = "lexique-dictionary"
 version = "0.1.0"
 dependencies = [
  "flate2",
+ "lexique-core",
  "lexique-storage",
  "mdictlib",
  "quick-xml 0.42.0",
