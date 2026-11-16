@@ -28,14 +28,18 @@ evidence.coreResourceBytes = (await stat(coreFile)).size;
 const model = join(destination, 'speech/assets/text_encoder.int8.onnx');
 let page;
 
-async function start() {
-  page = await fixture.start();
-  page.setDefaultTimeout(8000);
-  await page.context().route('**/*', (route) => {
+function installNetworkBoundary() {
+  return page.context().route('**/*', (route) => {
     const host = new URL(route.request().url()).hostname;
     if (['ipc.localhost', 'tauri.localhost', '127.0.0.1', 'localhost'].includes(host)) return route.continue();
     evidence.externalRequests.push(host); return route.abort();
   });
+}
+
+async function start() {
+  page = await fixture.start();
+  page.setDefaultTimeout(8000);
+  await installNetworkBoundary();
   await expect(page.getByRole('banner')).toBeVisible();
   await page.getByRole('banner').getByRole('combobox').first().selectOption('en');
 }
@@ -317,7 +321,7 @@ async function restoreBackup(legacy = false) {
   const confirm = dialog.getByRole('button', { name: 'Confirm and restore', exact: true });
   await expect(confirm).toBeDisabled(); await dialog.getByRole('checkbox').check();
   page = await fixture.followRestart(() => confirm.click());
-  await page.context().route('**/*', (route) => ['ipc.localhost', 'tauri.localhost', '127.0.0.1', 'localhost'].includes(new URL(route.request().url()).hostname) ? route.continue() : route.abort());
+  await installNetworkBoundary();
   let status;
   await expect.poll(async () => { status = await invoke('startup_status'); return status.state; }, { timeout: 12000 }).toBe('ready');
   assert.equal(status.operation, checked.operation); assert.deepEqual(status.restored.counts, checked.preview.counts);
