@@ -1,17 +1,17 @@
 /* global process, window, URL, setTimeout, clearTimeout, Buffer */
 import assert from 'node:assert/strict';
 import { spawn } from 'node:child_process';
-import { chmod, cp, readFile, rename, stat, writeFile } from 'node:fs/promises';
+import { chmod, cp, mkdir, readFile, rename, stat, writeFile } from 'node:fs/promises';
 import { join, resolve } from 'node:path';
 import { performance } from 'node:perf_hooks';
 import { expect } from '@playwright/test';
 import { native24Fixture } from './native-24-harness.mjs';
-import { compareLearning, fixtureSql, inspectPackage, readState } from './native-backup-state.mjs';
+import { compareLearning, fixtureSql, inspectPackage, readState, seedAudio } from './native-backup-state.mjs';
 
 const [scenario, resources, binary, conjugation, frequency, curationPath, destinationPath, input] = process.argv.slice(2);
 assert.ok([scenario, resources, binary, conjugation, frequency, curationPath, destinationPath].every(Boolean),
   'Expected scenario, package, binary, conjugation, frequency, reviewed curation and new destination; backup/profile scenarios also take an input');
-assert.ok(['pilot', 'review', 'no-speech', 'catalogue', 'missing', 'corrupt', 'future', 'newer', 'limit', 'export', 'restore', 'legacy', 'reject'].includes(scenario));
+assert.ok(['pilot', 'review', 'no-speech', 'catalogue', 'missing', 'corrupt', 'future', 'unsupported', 'newer', 'limit', 'export', 'restore', 'legacy', 'reject'].includes(scenario));
 const curation = JSON.parse(await readFile(resolve(curationPath), 'utf8'));
 const membership = [[1, 'être', 'AUX'], [2, 'être', 'NOM'], [3, 'être', 'VER'], [4, 'avoir', 'AUX'], [5, 'avoir', 'VER'],
   [70, 'bien', 'ADV'], [71, 'bien', 'NOM'], [360, "aujourd'hui", 'ADV'], [422, 'fort', 'ADJ'], [423, 'fort', 'ADV'],
@@ -104,9 +104,32 @@ function request(headword, suffix = headword.replaceAll(/[^a-z]/g, 'x')) {
     more_examples: [{ fr: 'Cet être a besoin d’eau.', zh: '这个生物需要水。', source: null }], id: null, revision: null };
 }
 
-function snapshotRecord(record) {
-  return { ...record, example_source: record.example_source ?? null,
-    more_examples: record.more_examples.map((example) => ({ ...example, source: example.source ?? null })) };
+function explicitExampleSources(value) {
+  return { ...value, example_source: value.example_source ?? null,
+    more_examples: value.more_examples.map((example) => ({ ...example, source: example.source ?? null })) };
+}
+
+// FSRS memory and parameters are f32; compare exact 32-bit values across JSON representations.
+function fsrsCard(card) {
+  return { ...card, memory: card.memory && { stability: Math.fround(card.memory.stability), difficulty: Math.fround(card.memory.difficulty) } };
+}
+
+function fsrsRating(rating) {
+  assert.ok([false, true, 0, 1].includes(rating.undo_queue_rebuilt));
+  return { ...rating, undo_queue_rebuilt: Boolean(rating.undo_queue_rebuilt), before_state: fsrsCard(rating.before_state),
+    result: { ...rating.result, card: fsrsCard(rating.result.card),
+      model: { ...rating.result.model, parameters: rating.result.model.parameters.map(Math.fround) } } };
+}
+
+function snapshotLearning(state, snapshot) {
+  assert.deepEqual(state.cards, snapshot.cards);
+  assert.deepEqual(state.progress, snapshot.progress.map(({ card, ...row }) => ({ ...row, state: card })));
+  assert.deepEqual(state.ratings.map(fsrsRating), snapshot.ratings.map(({ sequence, ...row }, index) => {
+    assert.equal(sequence, index + 1); return fsrsRating(row);
+  }));
+  const operations = (values) => values.map((item) => ({ ...item, request: explicitExampleSources(item.request) }));
+  assert.deepEqual(operations(state.saves), operations([...snapshot.save_operations].sort((a, b) => a.operation.localeCompare(b.operation))));
+  assert.deepEqual(state.selections, snapshot.audio_selections);
 }
 
 async function save(headword, suffix) {
@@ -120,6 +143,13 @@ async function save(headword, suffix) {
     assert.equal(item.translation, null); assert.deepEqual(item.pronunciations, [item.core.ipa]); assert.deepEqual(item.grammar, [item.core.pos]);
   }
   return { record: result.record, submitted };
+}
+
+async function sourceExamples(saved, operation) {
+  const submitted = { ...saved.submitted, operation, id: saved.record.id, revision: saved.record.revision,
+    example_source: saved.record.reference, more_examples: saved.record.more_examples.map((example) => ({ ...example, source: saved.record.reference })) };
+  const { record } = await invoke('vocabulary_save', { request: submitted, dictionary_id: 'builtin-core' });
+  return { record, submitted };
 }
 
 async function fields(scope, values) {
@@ -137,7 +167,8 @@ async function query(key) {
   await page.getByRole('button', { name: 'Dictionary', exact: true }).click();
   await page.getByLabel('French word or phrase', { exact: true }).fill(key);
   await page.getByRole('button', { name: 'Look up', exact: true }).click();
-  await expect(page.getByRole('tab', { selected: true })).toContainText('Lexique');
+  const core = page.locator('#dictionary-tab-builtin-core'); await core.click();
+  await expect(core).toHaveAttribute('aria-selected', 'true');
 }
 
 async function openRecord(record) {
@@ -151,9 +182,9 @@ async function openRecord(record) {
 async function rate(record) {
   const cards = await invoke('review_add', { vocabularyId: record.id });
   const recognition = cards.find((card) => card.kind === 'recognition');
-  const result = await invoke('review_rate', { request: { operation: 'native-79-rating', card_id: recognition.id,
+  const result = await invoke('review_rate', { request: { operation: `native-79-rating-${record.id}`, card_id: recognition.id,
     expected_revision: 0, rating: 'good', timezone: 'UTC' } });
-  assert.equal(result.status, 'committed');
+  assert.equal(result.status, 'committed', JSON.stringify(result));
 }
 
 async function pilot() {
@@ -219,7 +250,13 @@ async function review() {
   await invoke('review_add', { vocabularyId: record.id });
   const audio = await invoke('speech_generate', { vocabularyId: record.id, operation: 'native-79-speech' });
   assert.ok(audio.bytes.length > 0);
+  evidence.contentLengths = record.digest.map(({ core }) => ({ sense_id: core.sense_id,
+    fields: Object.fromEntries(['definition_fr', 'ipa', 'meaning_en', 'meaning_zh', 'usage'].map((field) => [field, [...core[field]].length])),
+    spans: Object.fromEntries(Object.entries(core.field_sources).map(([field, source]) => [field, [...source.span].length])) }));
+  await query('être'); await fields(page.locator('.dictionary-entry'), record.digest.map((item) => item.core));
+  await fixture.stop(true); await rename(coreFile, coreFile + '.unavailable'); await start();
   await openRecord(record);
+  await expect(page.locator('.dictionary-original').getByRole('alert')).toBeVisible();
   for (const kind of ['recognition', 'listening']) {
     await page.getByRole('button', { name: `Open ${kind} card`, exact: true }).click();
     const dialog = page.getByRole('dialog', { name: `${kind === 'recognition' ? 'Recognition' : 'Listening'} card`, exact: true });
@@ -236,7 +273,7 @@ async function review() {
   const cached = await invoke('speech_cached', { vocabularyId: record.id });
   assert.deepEqual(cached.bytes, audio.bytes);
   await openRecord(record);
-  evidence.checks.push({ check: 'Both native review backs, exact four-field senses, example association and selected audio after normal restart', status: 'passed' });
+  evidence.checks.push({ check: 'Complete native lookup, resource-absent fallback and both review backs retain four-field senses, example association and selected audio after normal restart', status: 'passed' });
 }
 
 async function helper(action, options = {}) {
@@ -292,7 +329,11 @@ async function backupStatus(kind, state) {
 async function exportBackup() {
   const saved = [];
   for (const [index, key] of [...new Set(curation.groups.map((group) => group.headword))].entries()) saved.push(await save(key, `export-${index}`));
+  saved[0] = await sourceExamples(saved[0], 'native-80-export-example-sources');
   await rate(saved[0].record);
+  await invoke('review_add', { vocabularyId: saved[1].record.id });
+  await seedSelectedAudio(saved.slice(0, 2).map(({ record }) => record.id)); await start();
+  const before = readState(destination); evidence.beforeState = before;
   await watchBackup();
   const filename = join(destination, 'pilot.lexique-backup');
   await picker('Create backup', filename);
@@ -301,8 +342,12 @@ async function exportBackup() {
   const archive = inspectPackage(destination, filename);
   assert.equal(archive.manifest.format_version, 1); assert.equal(archive.manifest.snapshot_version, 2); assert.equal(archive.snapshot.snapshot_version, 2);
   assert.equal(archive.snapshot.records.length, 7);
-  for (const value of saved) assert.deepEqual(archive.snapshot.records.find((record) => record.id === value.record.id), snapshotRecord(value.record));
-  evidence.checks.push({ check: 'Native export contains all 12 four-field senses/provenance with examples, cards and ratings; ZIP v1/logical v2', status: 'passed', export: status });
+  assert.equal(archive.snapshot.cards.length, 4); assert.equal(archive.snapshot.ratings.length, 1);
+  snapshotLearning(before, archive.snapshot); compareLearning(readState(destination), before);
+  assert.equal(archive.snapshot.audio_selections.length, 2);
+  assert.ok(archive.snapshot.audio_selections.every((selection) => selection.current_version && selection.previous_version));
+  for (const value of saved) assert.deepEqual(archive.snapshot.records.find((record) => record.id === value.record.id), explicitExampleSources(value.record));
+  evidence.checks.push({ check: 'Native export contains all 12 four-field senses/provenance with sourced examples, cards, ratings and selected/previous audio; ZIP v1/logical v2', status: 'passed', export: status });
 }
 
 async function restoreBackup(legacy = false) {
@@ -312,6 +357,7 @@ async function restoreBackup(legacy = false) {
   const original = await readFile(filename), archive = inspectPackage(destination, filename);
   assert.equal(archive.manifest.format_version, 1); assert.equal(archive.snapshot.snapshot_version, legacy ? 1 : 2);
   const seed = await save('bien', 'before-restore'); await rate(seed.record);
+  await seedSelectedAudio([seed.record.id]); await start();
   await watchBackup(); await picker('Choose backup', filename);
   const checked = await backupStatus('preview', 'preview_ready');
   assert.equal(checked.preview.byte_length, original.length);
@@ -319,7 +365,14 @@ async function restoreBackup(legacy = false) {
   await page.getByRole('button', { name: 'Restore the whole backup', exact: true }).click();
   const dialog = page.getByRole('dialog', { name: 'Confirm whole-backup restore', exact: true });
   const confirm = dialog.getByRole('button', { name: 'Confirm and restore', exact: true });
-  await expect(confirm).toBeDisabled(); await dialog.getByRole('checkbox').check();
+  await expect(confirm).toBeDisabled();
+  const beforeCancel = readState(destination);
+  evidence.beforeState = beforeCancel;
+  await dialog.getByRole('button', { name: 'Cancel', exact: true }).click(); await expect(dialog).toHaveCount(0);
+  const cancelled = readState(destination); compareLearning(cancelled, beforeCancel); preservedAudio(cancelled, beforeCancel);
+  assert.deepEqual(await readFile(filename), original);
+  evidence.checks.push({ check: 'Native confirmation cancellation retains current records, learning, selected/protected audio and the original backup', status: 'passed' });
+  await page.getByRole('button', { name: 'Restore the whole backup', exact: true }).click(); await dialog.getByRole('checkbox').check();
   page = await fixture.followRestart(() => confirm.click());
   await installNetworkBoundary();
   let status;
@@ -327,27 +380,28 @@ async function restoreBackup(legacy = false) {
   assert.equal(status.operation, checked.operation); assert.deepEqual(status.restored.counts, checked.preview.counts);
   assert.deepEqual(await readFile(filename), original);
   const restored = readState(destination);
+  evidence.restoredState = restored;
   assert.equal(restored.records.length, archive.snapshot.records.length);
   for (const record of archive.snapshot.records) {
     const actual = await invoke('vocabulary_find', { headword: record.headword });
-    assert.deepEqual(snapshotRecord(actual), record);
+    assert.deepEqual(explicitExampleSources(actual), record);
     const row = restored.records.find((item) => item.id === record.id);
     assert.deepEqual(row.snapshot.digest, record.digest);
   }
-  assert.deepEqual(restored.cards, archive.snapshot.cards);
-  assert.equal(restored.ratings.length, archive.snapshot.ratings.length);
-  assert.deepEqual(restored.selections, archive.snapshot.audio_selections);
+  snapshotLearning(restored, archive.snapshot);
+  for (const selection of archive.snapshot.audio_selections) {
+    if (selection.current_version) assert.ok((await invoke('speech_cached', { vocabularyId: selection.vocabulary_id })).bytes.length > 0);
+  }
+  const previousIds = archive.snapshot.dictionary_catalog.entries.map((item) => item.id);
+  const catalog = await invoke('dictionary_settings');
+  assert.deepEqual(catalog.map((item) => item.id), legacy ? [...previousIds, 'builtin-core'] : previousIds);
+  assert.deepEqual(catalog.filter((item) => item.id.startsWith('mdx-')).map((item) => [item.id, item.content_hash]),
+    archive.snapshot.dictionary_catalog.entries.filter((item) => item.id.startsWith('mdx-')).map((item) => [item.id, item.content_hash]));
   const operation = archive.snapshot.save_operations[0];
   const replay = await invoke('vocabulary_save', { request: operation.request, dictionary_id: 'builtin-core' });
   assert.equal(replay.outcome, 'replayed'); assert.equal(replay.record.id, operation.record_id);
   if (legacy) {
     for (const record of archive.snapshot.records) assert.ok(record.digest.every((item) => !item.core));
-    for (const selection of archive.snapshot.audio_selections) {
-      if (selection.current_version) assert.ok((await invoke('speech_cached', { vocabularyId: selection.vocabulary_id })).bytes.length > 0);
-    }
-    const previousIds = archive.snapshot.dictionary_catalog.entries.map((item) => item.id);
-    const catalog = await invoke('dictionary_settings');
-    assert.deepEqual(catalog.map((item) => item.id), [...previousIds, 'builtin-core']);
     const current = replay.record;
     const edited = await invoke('vocabulary_save', { request: { ...request(current.headword, 'legacy-edit'), id: current.id, revision: current.revision,
       notes: current.notes + '\nNote après restauration.', example_fr: current.example_fr, example_zh: current.example_zh,
@@ -380,19 +434,68 @@ with zipfile.ZipFile(target,'w',compression=zipfile.ZIP_STORED) as z:
   elif info.filename=='snapshot.json': data=json.dumps(snapshot,ensure_ascii=False).encode()
   z.writestr(info,data)
 print(json.dumps(str(target)))`, { source: original, variant }, true);
-  await save('être', 'preserve-on-failure');
+  const saved = await save('être', 'preserve-on-failure'); await rate(saved.record);
+  await seedSelectedAudio([saved.record.id]); await start();
   await watchBackup(); const before = readState(destination), bytes = await readFile(original);
+  evidence.beforeState = before;
   await picker('Choose backup', filename); const failure = await backupStatus('preview', 'failed');
   assert.ok(failure.error); assert.equal(failure.preview, null);
   await expect(page.getByRole('alert').last()).toContainText(failure.error);
-  compareLearning(readState(destination), before); assert.deepEqual(await readFile(original), bytes);
+  const after = readState(destination);
+  compareLearning(after, before); preservedAudio(after, before); assert.deepEqual(await readFile(original), bytes);
   evidence.checks.push({ check: `Native ${variant} backup rejection preserves current learning and existing archive`, status: 'passed', failure });
 }
 
-async function lifecycle() {
-  const { record, submitted } = await save('être', 'lifecycle'); await rate(record);
-  const before = readState(destination);
+function preservedAudio(actual, expected) {
+  for (const key of ['owners', 'versions', 'selections', 'imports', 'legacy', 'audio_operations', 'publications', 'repairs', 'protection', 'physical', 'devices']) {
+    assert.deepEqual(actual[key], expected[key], `Resource changes retain ${key}`);
+  }
+}
+
+async function seedSelectedAudio(ids) {
   await fixture.stop(true);
+  const media = join(destination, 'fixture-media'); await mkdir(media);
+  for (const [filename, source] of [['female-1.ogg', 'female-normal-01-48k.opus'], ['female-2.ogg', 'female-normal-02-48k.opus']]) {
+    await cp(new URL(`../../../docs/evidence/issue-14/supertonic-opus/${source}`, import.meta.url), join(media, filename));
+  }
+  seedAudio(destination, ids, 'A', media);
+}
+
+async function failedProvider(key, code) {
+  const failure = await rejected('dictionary_lookup', { key, dictionary_id: 'builtin-core' }, code);
+  await query(key); await expect(page.locator('.dictionary').getByRole('alert')).toContainText(failure.message);
+  const alternate = await invoke('dictionary_lookup', { key: 'école', dictionary_id: 'builtin' });
+  assert.ok(alternate.entries.length > 0);
+  await query('école'); await page.locator('#dictionary-tab-builtin').click();
+  await expect(page.locator('.dictionary-entry')).toHaveCount(alternate.entries.length);
+}
+
+async function lifecycle() {
+  const saved = await save('être', 'lifecycle');
+  assert.deepEqual((await invoke('dictionary_lookup', { key: 'mot-absent-native-80', dictionary_id: 'builtin-core' })).entries, []);
+  const { record, submitted } = await sourceExamples(saved, 'native-80-source-associations');
+  const legacyLookup = await invoke('dictionary_lookup', { key: 'école', dictionary_id: 'builtin' });
+  const legacy = await invoke('vocabulary_save', { request: { ...request('école', 'legacy-lifecycle'),
+    example_sense: legacyLookup.entries.length - 1 }, dictionary_id: 'builtin' });
+  await rate(record); await rate(legacy.record);
+  const beforeDuplicate = readState(destination);
+  const duplicate = await invoke('vocabulary_save', { request: { ...saved.submitted, operation: 'native-80-duplicate', notes: 'Must preserve the original note' }, dictionary_id: 'builtin-core' });
+  assert.equal(duplicate.outcome, 'existing'); assert.deepEqual(duplicate.record, record);
+  const afterDuplicate = readState(destination);
+  assert.equal(afterDuplicate.saves.length, beforeDuplicate.saves.length + 1);
+  compareLearning({ ...afterDuplicate, saves: afterDuplicate.saves.filter((item) => item.operation !== 'native-80-duplicate') }, beforeDuplicate);
+  await seedSelectedAudio([record.id, legacy.record.id]);
+  const before = readState(destination);
+  evidence.beforeState = before;
+  assert.equal(before.records.length, 2); assert.equal(before.cards.length, 4); assert.equal(before.ratings.length, 2);
+  assert.equal(before.selections.length, 2);
+  assert.ok(before.selections.every((selection) => selection.current_version && selection.previous_version));
+  assert.ok(before.protection.some((version) => version.owned));
+  assert.ok(before.protection.some((version) => version.protected_until));
+  const files = await Promise.all(before.physical.map(async (version) => {
+    const path = join(destination, `Lexique-data/temp/speech/s-${version.physical_locator}-${version.content_hash}.ogg`);
+    return { path, bytes: await readFile(path) };
+  }));
   if (scenario === 'missing') await rename(coreFile, coreFile + '.unavailable');
   else if (scenario === 'corrupt') { await chmod(coreFile, 0o666); await writeFile(coreFile, 'Synthetic invalid isolated core resource'); }
   else { await chmod(coreFile, 0o666); fixtureSql(destination, `
@@ -401,17 +504,28 @@ resource.execute("UPDATE metadata SET value='2' WHERE key='format_version'")
 resource.commit(); resource.close()
 print(json.dumps(True))`, { resource: coreFile }, true); }
   await start();
-  await rejected('dictionary_lookup', { key: 'être', dictionary_id: 'builtin-core' }, scenario === 'missing' ? 'missing' : 'corrupt');
-  assert.ok((await invoke('dictionary_lookup', { key: 'école', dictionary_id: 'builtin' })).entries.length > 0);
+  await failedProvider('être', scenario === 'missing' ? 'missing' : 'corrupt');
   await rejected('vocabulary_save', { request: request('bien', 'unavailable-new'), dictionary_id: 'builtin-core' });
   const replay = await invoke('vocabulary_save', { request: submitted, dictionary_id: 'builtin-core' });
   assert.equal(replay.outcome, 'replayed'); assert.deepEqual(replay.record, record);
+  const originalReplay = await invoke('vocabulary_save', { request: saved.submitted, dictionary_id: 'builtin-core' });
+  assert.equal(originalReplay.outcome, 'replayed'); assert.deepEqual(originalReplay.record, record);
+  const retained = readState(destination);
+  compareLearning(retained, before); preservedAudio(retained, before);
   const edited = await invoke('vocabulary_save', { request: { ...submitted, operation: 'native-79-unavailable-edit', id: record.id, revision: record.revision,
     notes: 'Note modifiée sans la ressource.' }, dictionary_id: 'builtin-core' });
   assert.equal(edited.outcome, 'updated'); assert.deepEqual(edited.record.digest, record.digest);
-  assert.deepEqual(readState(destination).cards, before.cards); assert.deepEqual(readState(destination).progress, before.progress);
+  const after = readState(destination);
+  assert.deepEqual(after.records, before.records.map((row) => row.id === record.id ? { ...row,
+    notes: 'Note modifiée sans la ressource.', revision: row.revision + 1, updated_at: edited.record.updated_at } : row));
+  for (const operation of before.saves) assert.deepEqual(after.saves.find((item) => item.operation === operation.operation), operation);
+  assert.equal(after.saves.length, before.saves.length + 1);
+  compareLearning({ ...after, records: before.records, saves: before.saves }, before); preservedAudio(after, before);
+  for (const file of files) assert.deepEqual(await readFile(file.path), file.bytes);
+  assert.ok((await invoke('speech_cached', { vocabularyId: record.id })).bytes.length > 0);
   await openRecord(edited.record);
-  evidence.checks.push({ check: `${scenario} resource fails visibly; other providers, committed replay, note edit and frozen content remain usable`, status: 'passed' });
+  evidence.checks.push({ check: `${scenario} resource retains core and legacy records, digest indices, source associations, history, operations and current/protected audio`, status: 'passed' });
+  evidence.before = before; evidence.after = after;
 }
 
 async function catalogue() {
@@ -454,24 +568,28 @@ async function copiedProfile() {
 
 async function replacement() {
   const previous = readState(destination), record = await invoke('vocabulary_find', { headword: 'être' });
-  if (scenario === 'limit') {
-    await rejected('dictionary_lookup', { key: 'bien', dictionary_id: 'builtin-core' }, 'limit');
+  evidence.beforeState = previous;
+  if (scenario === 'limit' || scenario === 'unsupported') {
+    await failedProvider(scenario === 'limit' ? 'bien' : 'être', scenario === 'limit' ? 'limit' : 'unsupported');
     await rejected('vocabulary_save', { request: request('bien', 'limit-new'), dictionary_id: 'builtin-core' });
     assert.ok((await invoke('dictionary_lookup', { key: 'école', dictionary_id: 'builtin' })).entries.length > 0);
   } else {
     const current = await invoke('dictionary_lookup', { key: 'être', dictionary_id: 'builtin-core' });
     assert.notEqual(current.source.version, record.reference.version);
+    assert.notEqual(senses(current).find((sense) => sense.frozen_row === 2).meaning_zh, record.digest.find((entry) => entry.core?.frozen_row === 2).core.meaning_zh);
     await query('être'); await page.getByRole('button', { name: 'View existing record', exact: true }).click();
     await openRecord(record);
     await expect(page.getByText('The dictionary version has changed. The saved digest keeps its original content.', { exact: true })).toBeVisible();
-    await save('bien', 'newer-content');
   }
   assert.deepEqual((await invoke('vocabulary_find', { headword: 'être' })).digest, record.digest);
-  assert.deepEqual(readState(destination).progress, previous.progress); assert.deepEqual(readState(destination).selections, previous.selections);
+  const preserved = readState(destination);
+  compareLearning(preserved, previous);
+  preservedAudio(preserved, previous);
   const committed = previous.saves.find((operation) => operation.record_id === record.id);
   assert.equal((await invoke('vocabulary_save', { request: committed.request, dictionary_id: 'builtin-core' })).outcome, 'replayed');
+  if (scenario === 'newer') await save('bien', 'newer-content');
   await openRecord(record);
-  evidence.checks.push({ check: scenario === 'limit' ? 'Genuine native core result limit preserves saved content and committed retry' : 'New resource version is visible while previous digest, progress and audio remain frozen', status: 'passed' });
+  evidence.checks.push({ check: scenario === 'newer' ? 'New resource version is visible while previous digest, progress and audio remain frozen' : `Native ${scenario} rejection preserves saved content and committed retry`, status: 'passed' });
 }
 
 try {
@@ -480,7 +598,7 @@ try {
     if (present) await rename(model, model + '.unavailable');
     evidence.speechModel = 'absent in isolated package';
   }
-  if (['newer', 'limit'].includes(scenario)) await copiedProfile();
+  if (['newer', 'limit', 'unsupported'].includes(scenario)) await copiedProfile();
   await start();
   if (['pilot', 'no-speech'].includes(scenario)) await pilot();
   else if (scenario === 'review') await review();

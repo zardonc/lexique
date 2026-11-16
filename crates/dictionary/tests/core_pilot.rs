@@ -126,6 +126,74 @@ fn reviewed_groups_keep_all_four_fields_frozen_pos_order_and_only_evidenced_quer
 }
 
 #[test]
+fn complete_core_fields_at_the_character_budget_are_retained_and_oversized_content_fails() {
+    let fixture = Fixture::new();
+    fixture.copy();
+    let path = fixture.database();
+    let mut connection = Connection::open(&path).unwrap();
+    let mut payload: Value = serde_json::from_str(
+        &connection
+            .query_row::<String, _, _>(
+                "SELECT payload FROM senses WHERE frozen_row=1 AND sense_index=1",
+                [],
+                |row| row.get(0),
+            )
+            .unwrap(),
+    )
+    .unwrap();
+    for (field, character) in [
+        ("definition_fr", "é"),
+        ("meaning_en", "e"),
+        ("meaning_zh", "字"),
+        ("usage", "u"),
+    ] {
+        payload[field] = json!(character.repeat(20_000));
+    }
+    payload["field_sources"]["definition_fr"]["span"] = json!("s".repeat(20_000));
+    connection
+        .execute(
+            "UPDATE senses SET payload=?1 WHERE frozen_row=1 AND sense_index=1",
+            [payload.to_string()],
+        )
+        .unwrap();
+    let lookup = core::lookup(&path, "être", &hash(&path)).unwrap();
+    assert_eq!(lookup.entries.len(), 3);
+    assert_eq!(
+        serde_json::to_value(&lookup.entries[0].core_senses[0]).unwrap(),
+        payload
+    );
+    payload["definition_fr"] = json!("é".repeat(20_001));
+    connection
+        .execute(
+            "UPDATE senses SET payload=?1 WHERE frozen_row=1 AND sense_index=1",
+            [payload.to_string()],
+        )
+        .unwrap();
+    let error = core::lookup(&path, "être", &hash(&path)).unwrap_err();
+    assert_eq!(error.code, "corrupt");
+    assert!(error.message.contains("French definition"));
+    assert!(error.message.contains("20000"));
+    payload["definition_fr"] = json!("é".repeat(20_000));
+    let transaction = connection.transaction().unwrap();
+    for index in 1..=40 {
+        payload["sense_id"] = json!(format!("byte-budget-{index}"));
+        transaction
+            .execute(
+                "INSERT OR REPLACE INTO senses VALUES(1,?1,'être',?2)",
+                params![index, payload.to_string()],
+            )
+            .unwrap();
+    }
+    transaction.commit().unwrap();
+    assert!(fs::metadata(&path).unwrap().len() < core::MAX_RESOURCE_BYTES);
+    let retained = fs::read(&path).unwrap();
+    let error = core::lookup(&path, "être", &hash(&path)).unwrap_err();
+    assert_eq!(error.code, "limit");
+    assert!(error.message.contains("4 MiB"));
+    assert_eq!(fs::read(&path).unwrap(), retained);
+}
+
+#[test]
 fn missing_corrupt_future_and_oversized_core_resources_have_explicit_errors() {
     let fixture = Fixture::new();
     let path = fixture.database();
@@ -158,7 +226,7 @@ fn missing_corrupt_future_and_oversized_core_resources_have_explicit_errors() {
         "unsupported"
     );
     fixture.copy();
-    let connection = Connection::open(&path).unwrap();
+    let mut connection = Connection::open(&path).unwrap();
     let mut payload: Value = serde_json::from_str(
         &connection
             .query_row::<String, _, _>(
@@ -169,15 +237,17 @@ fn missing_corrupt_future_and_oversized_core_resources_have_explicit_errors() {
             .unwrap(),
     )
     .unwrap();
+    let transaction = connection.transaction().unwrap();
     for index in 2..=201 {
         payload["sense_id"] = json!(format!("limit-sense-{index}"));
-        connection
+        transaction
             .execute(
                 "INSERT INTO senses VALUES(1,?1,'être',?2)",
                 params![index, payload.to_string()],
             )
             .unwrap();
     }
+    transaction.commit().unwrap();
     drop(connection);
     assert_eq!(
         core::lookup(&path, "être", &hash(&path)).unwrap_err().code,
