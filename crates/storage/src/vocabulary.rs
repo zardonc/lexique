@@ -25,6 +25,45 @@ pub struct DigestEntry {
     pub pronunciations: Vec<String>,
     pub grammar: Vec<String>,
     pub translation: Option<String>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub core: Option<lexique_core::dictionary::CoreSense>,
+}
+
+pub(crate) fn validate_core_digest(
+    headword: &str,
+    reference: &Reference,
+    digest: &[DigestEntry],
+) -> Result<(), StorageError> {
+    let is_core =
+        reference.dictionary_id.as_deref() == Some(lexique_core::dictionary::CORE_DICTIONARY_ID);
+    if is_core && (digest.is_empty() || digest.len() > 200) {
+        return Err(StorageError::Invalid(
+            "Core records require 1–200 complete senses".into(),
+        ));
+    }
+    let mut senses = std::collections::HashSet::new();
+    for entry in digest {
+        if let Some(core) = &entry.core {
+            if !is_core
+                || core.headword.nfc().collect::<String>() != headword
+                || reference.lookup_key.nfc().collect::<String>() != headword
+                || entry.translation.is_some()
+                || entry.pronunciations != [core.ipa.clone()]
+                || entry.grammar != [core.pos.clone()]
+                || !senses.insert(&core.sense_id)
+            {
+                return Err(StorageError::Invalid(
+                    "Core sense disagrees with its frozen record, provider or digest".into(),
+                ));
+            }
+            core.validate().map_err(StorageError::Invalid)?;
+        } else if is_core {
+            return Err(StorageError::Invalid(
+                "Core record is missing four-field senses".into(),
+            ));
+        }
+    }
+    Ok(())
 }
 
 #[derive(Debug, Clone, Deserialize, Serialize, PartialEq)]
@@ -335,6 +374,7 @@ pub fn save(
         if snapshot.digest.is_empty() {
             return Err(StorageError::Invalid("Dictionary digest is empty".into()));
         }
+        validate_core_digest(&headword, &snapshot.reference, &snapshot.digest)?;
         if request
             .example_sense
             .is_some_and(|index| index as usize >= snapshot.digest.len())
@@ -449,6 +489,16 @@ pub fn list(
                     .iter()
                     .chain(&entry.grammar)
                     .chain(entry.translation.iter())
+                    .chain(entry.core.iter().flat_map(|core| {
+                        [
+                            &core.definition_fr,
+                            &core.ipa,
+                            &core.meaning_en,
+                            &core.meaning_zh,
+                            &core.usage,
+                            &core.source_headword,
+                        ]
+                    }))
             })
             .cloned()
             .collect::<Vec<_>>()

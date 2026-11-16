@@ -33,6 +33,7 @@ fn saved_word(connection: &mut Connection, headword: &str) -> i64 {
                 pronunciations: vec![],
                 grammar: vec!["n".into()],
                 translation: Some("学校".into()),
+                core: None,
             }],
         }),
     )
@@ -108,7 +109,7 @@ fn empty_snapshot_contains_the_complete_portable_contract() {
         .unwrap();
     let snapshot = export_learning_snapshot(&mut connection, 1_800_000_000).unwrap();
     let value = serde_json::to_value(snapshot).unwrap();
-    assert_eq!(value["snapshot_version"], 1);
+    assert_eq!(value["snapshot_version"], 2);
     for collection in [
         "records",
         "save_operations",
@@ -149,7 +150,7 @@ fn empty_snapshot_contains_the_complete_portable_contract() {
             .as_array()
             .unwrap()
             .len(),
-        2
+        3
     );
     assert_eq!(value.as_object().unwrap().len(), 21);
     assert!(!value.to_string().contains("secret-device-path"));
@@ -197,6 +198,7 @@ fn old_save_requests_and_unknown_example_sources_keep_their_original_meaning() {
                 pronunciations: vec!["e.kɔl".into()],
                 grammar: vec!["n".into()],
                 translation: Some("学校".into()),
+                core: None,
             }],
         }),
     )
@@ -204,6 +206,11 @@ fn old_save_requests_and_unknown_example_sources_keep_their_original_meaning() {
     add_review(&mut connection, saved.record.id).unwrap();
     let snapshot = export_learning_snapshot(&mut connection, 1_800_000_000).unwrap();
     let mut value = serde_json::to_value(snapshot).unwrap();
+    value["snapshot_version"] = serde_json::json!(1);
+    value["dictionary_catalog"]["entries"]
+        .as_array_mut()
+        .unwrap()
+        .retain(|entry| entry["id"] != "builtin-core");
     assert_eq!(value["records"][0]["headword"], "école");
     assert_eq!(value["records"][0]["notes"], "Mon\n筆記");
     assert_eq!(
@@ -250,4 +257,69 @@ fn old_save_requests_and_unknown_example_sources_keep_their_original_meaning() {
     assert_eq!(decoded.save_operations[0].request.example_sense, None);
     assert_eq!(decoded.save_operations[0].request.more_examples.len(), 0);
     assert_eq!(decoded.records[0].more_examples[0].source, None);
+}
+
+#[test]
+fn v2_core_senses_keep_all_fields_and_the_example_association_through_restore() {
+    use lexique_storage::{get, import_learning_snapshot, read_learning_snapshot};
+    use serde_json::json;
+    let mut original = Connection::open_in_memory().unwrap();
+    initialize(&original).unwrap();
+    let id = saved_word(&mut original, "être");
+    let mut value =
+        serde_json::to_value(export_learning_snapshot(&mut original, 1_800_000_000).unwrap())
+            .unwrap();
+    let source = json!({
+        "title": "Contract fixture", "version": "1", "attribution": "Fixture author",
+        "source_url": "https://example.org/etre", "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "span": "selected sense 1", "modification": "Scoped fixture explanation"
+    });
+    let digest = json!([{
+        "pronunciations": ["ɛtʁ"], "grammar": ["VER"], "translation": null,
+        "core": {
+            "sense_id": "3-1", "frozen_row": 3, "headword": "être", "source_headword": "être",
+            "pos": "VER", "usage": "Verbe attributif : sujet + être + attribut.",
+            "definition_fr": "Relier le sujet à une qualité ou à une identité.",
+            "ipa": "ɛtʁ", "meaning_en": "to be, linking a subject to a quality or identity",
+            "meaning_zh": "是；将主语与性质或身份相联系。",
+            "field_sources": {"definition_fr": source, "ipa": source,
+                "meaning_en": source, "meaning_zh": source}
+        }
+    }]);
+    value["records"][0]["digest"] = digest.clone();
+    value["records"][0]["reference"]["dictionary_id"] = json!("builtin-core");
+    value["records"][0]["example_fr"] = json!("Elle est calme.");
+    value["save_operations"][0]["request"]["example_fr"] = json!("Elle est calme.");
+    let snapshot = read_learning_snapshot(
+        serde_json::to_vec(&value).unwrap().as_slice(),
+        1_800_000_000,
+    )
+    .unwrap();
+    let mut restored = Connection::open_in_memory().unwrap();
+    initialize(&restored).unwrap();
+    import_learning_snapshot(&mut restored, &snapshot, 1_800_000_000).unwrap();
+    let record = get(&restored, id).unwrap();
+    assert_eq!(serde_json::to_value(record.digest).unwrap(), digest);
+    assert_eq!(record.example_sense, Some(0));
+    assert_eq!(record.example_fr, "Elle est calme.");
+    for (path, invalid) in [
+        ("/snapshot_version", json!(1)),
+        ("/records/0/digest/0/core/meaning_zh", json!("")),
+        (
+            "/records/0/digest/0/core/field_sources/meaning_en/source_url",
+            json!("javascript:alert(1)"),
+        ),
+    ] {
+        let mut malformed = value.clone();
+        *malformed.pointer_mut(path).unwrap() = invalid;
+        assert!(
+            read_learning_snapshot(
+                serde_json::to_vec(&malformed).unwrap().as_slice(),
+                1_800_000_000
+            )
+            .is_err(),
+            "invalid core contract at {path}"
+        );
+    }
 }

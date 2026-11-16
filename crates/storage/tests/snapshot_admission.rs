@@ -49,6 +49,7 @@ fn saved_word(connection: &mut Connection, operation: &str, headword: &str) -> V
                 pronunciations: vec!["e.kɔl".into()],
                 grammar: vec!["n".into()],
                 translation: Some("学校".into()),
+                core: None,
             }],
         }),
     )
@@ -1661,6 +1662,7 @@ fn portable_preferences_and_ordered_catalog_exclude_private_device_metadata() {
         {"id":"builtin-fra-eng","title":"English builtin","content_hash":null},
         {"id":"mdx-2","title":"Unknown custom","content_hash":null},
         {"id":"builtin","title":"Chinese builtin","content_hash":null},
+        {"id":"builtin-core","title":"Lexique FR–EN–ZH","content_hash":null},
     ]});
     write_dictionary_catalog(
         &connection,
@@ -1859,7 +1861,7 @@ fn snapshot_types_domains_collections_and_identities_are_strict() {
     let baseline = strict_fixture();
     for (path, value) in [
         ("/snapshot_version", json!("1")),
-        ("/snapshot_version", json!(2)),
+        ("/snapshot_version", json!(3)),
         ("/records/0/id", json!(1.0)),
         ("/records/0/created_at", json!(9_007_199_254_740_992_i64)),
         ("/records/0/reference/sha256", json!("A".repeat(64))),

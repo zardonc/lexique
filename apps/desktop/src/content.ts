@@ -1,3 +1,5 @@
+import { coreMessages } from './core-sense';
+
 export type Locale = 'zh' | 'en' | 'fr';
 export type Theme = 'white' | 'sepia' | 'dark';
 
@@ -16,8 +18,9 @@ export const messages = {
     statusPreview: '浏览器预览：本地数据功能仅在桌面应用可用。', retry: '重试',
     scaffold: '当前为开发骨架；学习功能将按模块逐步接入。',
     dictionary: {
+      core: coreMessages.zh,
       label: '法语词或词组', search: '查词', loading: '正在查询…',
-      hint: '内置法中小样 · 完全匹配原始拼写。可试 école、œil、aujourd’hui、or、vacances；此小样不保证屈折词形覆盖。',
+      hint: '核心词典试点 · 12 / 4,087 个核心词性组。另有 FreeDict 补充词典。可试 être、avoir、bien、fort、aujourd\'hui、cœur、côte。',
       preview: '浏览器预览无法读取内置词典，请在桌面应用中查词。',
       noMatch: '未找到完全匹配的词条。', records: '词条记录', source: '来源', details: '错误详情',
       missing: '词典资源不存在。', corrupt: '词典资源已损坏。',
@@ -45,8 +48,9 @@ export const messages = {
     statusPreview: 'Browser preview: local data is available in the desktop app only.', retry: 'Retry',
     scaffold: 'This is a development scaffold. Learning features will be connected module by module.',
     dictionary: {
+      core: coreMessages.en,
       label: 'French word or phrase', search: 'Look up', loading: 'Looking up…',
-      hint: 'Bundled French–Chinese sample · Exact source spelling. Try école, œil, aujourd’hui, or, vacances. Inflected forms have limited coverage.',
+      hint: 'Core pilot · 12 / 4,087 POS groups. FreeDict supplements. Try être, avoir, bien, fort, aujourd\'hui, cœur or côte.',
       preview: 'Browser preview cannot read the bundled dictionary. Use the desktop app.',
       noMatch: 'No exact entry found.', records: 'Entry records', source: 'Source', details: 'Error details',
       missing: 'Dictionary is missing.', corrupt: 'Dictionary is corrupt.',
@@ -75,8 +79,9 @@ export const messages = {
     statusPreview: 'Aperçu web : les données locales sont disponibles uniquement dans l’application de bureau.', retry: 'Réessayer',
     scaffold: 'Il s’agit du socle de développement. Les fonctions d’apprentissage seront ajoutées progressivement.',
     dictionary: {
+      core: coreMessages.fr,
       label: 'Mot ou expression en français', search: 'Chercher', loading: 'Recherche…',
-      hint: 'Échantillon français–chinois intégré · Orthographe originale exacte. Essayez école, œil, aujourd’hui, or, vacances. Les formes fléchies sont peu couvertes.',
+      hint: 'Noyau lexical pilote · 12 / 4 087 groupes de catégories grammaticales. Compléments FreeDict. Essayez être, avoir, bien, fort, aujourd\'hui, cœur ou côte.',
       preview: 'L’aperçu web ne peut pas lire le dictionnaire intégré. Utilisez l’application de bureau.',
       noMatch: 'Aucune entrée exacte trouvée.', records: 'Entrées', source: 'Source', details: 'Détails de l’erreur',
       missing: 'Le dictionnaire est absent.', corrupt: 'Le dictionnaire est endommagé.',

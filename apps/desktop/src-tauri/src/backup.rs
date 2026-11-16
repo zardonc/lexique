@@ -525,7 +525,7 @@ pub fn validate_backup(
     .map_err(|e| format!("Invalid backup manifest: {e}"))?;
     if manifest.kind != "lexique-backup"
         || manifest.format_version != 1
-        || manifest.snapshot_version != 1
+        || !matches!(manifest.snapshot_version, 1 | 2)
         || !(0..=SAFE_INTEGER as i64).contains(&manifest.created_at)
         || manifest.application_version.trim().is_empty()
         || manifest.application_version.len() > 200
@@ -549,6 +549,9 @@ pub fn validate_backup(
         manifest.created_at,
     )
     .map_err(|e| format!("Invalid backup snapshot: {e}"))?;
+    if manifest.snapshot_version != snapshot.snapshot_version {
+        return Err("Backup snapshot version does not match the manifest".into());
+    }
     if manifest.counts != BackupCounts::from_snapshot(&snapshot) {
         return Err("Backup counts do not match the snapshot".into());
     }
@@ -827,7 +830,7 @@ fn collect_backup(
     let manifest = BackupManifest {
         kind: "lexique-backup".into(),
         format_version: 1,
-        snapshot_version: 1,
+        snapshot_version: snapshot.snapshot_version,
         created_at: captured_at,
         application_version: env!("CARGO_PKG_VERSION").into(),
         counts: BackupCounts::from_snapshot(&snapshot),
@@ -949,6 +952,7 @@ mod tests {
                     pronunciations: vec![],
                     grammar: vec!["n".into()],
                     translation: Some("学校".into()),
+                    core: None,
                 }],
             }),
         )
@@ -1129,7 +1133,7 @@ mod tests {
             let manifest = BackupManifest {
                 kind: "lexique-backup".into(),
                 format_version: 1,
-                snapshot_version: 1,
+                snapshot_version: snapshot.snapshot_version,
                 created_at: 1_794_564_000,
                 application_version: "0.1.0".into(),
                 counts: BackupCounts::from_snapshot(&snapshot),
@@ -1211,7 +1215,7 @@ mod tests {
             let manifest = BackupManifest {
                 kind: "lexique-backup".into(),
                 format_version: 1,
-                snapshot_version: 1,
+                snapshot_version: snapshot.snapshot_version,
                 created_at: captured_at,
                 application_version: "0.1.0".into(),
                 counts: BackupCounts::from_snapshot(&snapshot),
@@ -1303,6 +1307,58 @@ mod tests {
     }
 
     #[test]
+    fn logical_snapshot_versions_roundtrip_and_must_match_the_manifest() {
+        let directory = Directory::new();
+        let mut connection = rusqlite::Connection::open_in_memory().unwrap();
+        storage::initialize(&connection).unwrap();
+        let time = 1_794_564_000;
+        let snapshot = storage::export_learning_snapshot(&mut connection, time).unwrap();
+        assert_eq!(snapshot.snapshot_version, 2);
+        for version in [2, 1] {
+            let mut value = serde_json::to_value(&snapshot).unwrap();
+            value["snapshot_version"] = version.into();
+            if version == 1 {
+                value["dictionary_catalog"]["entries"]
+                    .as_array_mut()
+                    .unwrap()
+                    .retain(|entry| entry["id"] != "builtin-core");
+            }
+            let mut manifest = BackupManifest {
+                kind: "lexique-backup".into(),
+                format_version: 1,
+                snapshot_version: version,
+                created_at: time,
+                application_version: "0.1.0".into(),
+                counts: BackupCounts::from_snapshot(&snapshot),
+            };
+            let mut entries = vec![
+                (
+                    "manifest.json".into(),
+                    serde_json::to_vec(&manifest).unwrap(),
+                ),
+                ("snapshot.json".into(), serde_json::to_vec(&value).unwrap()),
+            ];
+            let file = directory
+                .0
+                .join(format!("version-{version}.lexique-backup"));
+            fixture_archive(&file, &entries);
+            let staging = OwnedDirectory::create(&directory.0).unwrap();
+            let admitted = validate_backup(&file, &staging.0, &AtomicBool::new(false)).unwrap();
+            assert_eq!(admitted.snapshot.snapshot_version, version);
+            assert_eq!(admitted.snapshot.dictionary_catalog.entries.len(), 3);
+            drop(staging);
+            manifest.snapshot_version = if version == 1 { 2 } else { 1 };
+            entries[0].1 = serde_json::to_vec(&manifest).unwrap();
+            assert_archive_rejected(
+                &directory,
+                &format!("version-disagreement-{version}"),
+                &entries,
+                |_| {},
+            );
+        }
+    }
+
+    #[test]
     fn preview_file_staging_failures_and_phase_cancellation_leave_learning_and_source_unchanged() {
         let directory = Directory::new();
         let database = directory.database();
@@ -1316,7 +1372,7 @@ mod tests {
         let manifest = BackupManifest {
             kind: "lexique-backup".into(),
             format_version: 1,
-            snapshot_version: 1,
+            snapshot_version: snapshot.snapshot_version,
             created_at: captured_at,
             application_version: "0.1.0".into(),
             counts: BackupCounts::from_snapshot(&snapshot),
@@ -1562,7 +1618,7 @@ mod tests {
         let manifest = BackupManifest {
             kind: "lexique-backup".into(),
             format_version: 1,
-            snapshot_version: 1,
+            snapshot_version: snapshot.snapshot_version,
             created_at: captured_at,
             application_version: "0.1.0".into(),
             counts: counts.clone(),
@@ -2270,7 +2326,7 @@ mod tests {
         let manifest = BackupManifest {
             kind: "lexique-backup".into(),
             format_version: 1,
-            snapshot_version: 1,
+            snapshot_version: snapshot.snapshot_version,
             created_at: time,
             application_version: "0.1.0".into(),
             counts: BackupCounts::from_snapshot(&snapshot),
@@ -2391,7 +2447,7 @@ mod tests {
         for (field, value) in [
             ("kind", serde_json::json!("other")),
             ("format_version", serde_json::json!(2)),
-            ("snapshot_version", serde_json::json!(2)),
+            ("snapshot_version", serde_json::json!(3)),
             ("created_at", serde_json::json!(9_007_199_254_740_992_i64)),
             ("application_version", serde_json::json!("")),
             ("unknown", serde_json::json!(true)),

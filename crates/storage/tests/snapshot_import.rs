@@ -39,6 +39,7 @@ fn saved_word(connection: &mut Connection, operation: &str, headword: &str) -> i
                 pronunciations: vec!["ekɔl".into()],
                 grammar: vec!["n.f.".into()],
                 translation: Some("学校".into()),
+                core: None,
             }],
         }),
     )

@@ -51,13 +51,13 @@ M1 请求由 Rust 严格反序列化，前端请求 / 响应由 Zod 校验。标
 
 ### 多词典与动词原形（issue #9 D1／D3）
 
-`dictionary_settings`、`dictionary_import`、`dictionary_relink`、`dictionary_remove` 与扩展的 `dictionary_lookup` 继续只授予本地 main 窗口。查询接受既有有界词形及可选的稳定词典 ID，不接受路径；导入／补齐接受非空且至多 128 MiB 的原始字节和 `x-lexique-dictionary-name` 中的 base64 UTF-8 文件名。补齐另外接受原逻辑 ID，以及需要确认时的已验证内容身份。最多 17 个词典，内置法中小样 `builtin` 与法英补充 MDX `builtin-fra-eng` 保持注册，15 份自定义 MDX 的容量不变。平台将用户 MDX 复制到学习库旁的 `dictionaries/mdx-N.mdx`，先持久预留物理编号，以 `create_new` 保留已有文件；移出列表只取消自定义词典的注册。
+`dictionary_settings`、`dictionary_import`、`dictionary_relink`、`dictionary_remove` 与扩展的 `dictionary_lookup` 继续只授予本地 main 窗口。查询接受既有有界词形及可选的稳定词典 ID，不接受路径；导入／补齐接受非空且至多 128 MiB 的原始字节和 `x-lexique-dictionary-name` 中的 base64 UTF-8 文件名。补齐另外接受原逻辑 ID，以及需要确认时的已验证内容身份。最多 18 个词典，内置核心 `builtin-core`、法中小样 `builtin` 与法英补充 MDX `builtin-fra-eng` 保持注册，15 份自定义 MDX 的容量不变。平台将用户 MDX 复制到学习库旁的 `dictionaries/mdx-N.mdx`，先持久预留物理编号，以 `create_new` 保留已有文件；移出列表只取消自定义词典的注册。
 
 逻辑身份、标题、顺序、已核实或未知的内容身份及下一编号保存于 `app_metadata['dictionary-settings']`；本机物理文件、保留编号与关联单独保存于 `dictionary-files`，不新增 schema 迁移。旧清单读取时保留顺序并核实已关联文件的内容。文件缺失保留原清单并显示补齐入口，同内容直接接回，不同／未知内容需明确确认；关联更新使用新托管副本，旧文件与学习记录保留。恢复清单只按已核实内容匹配保留文件，普通新增避开已注册、冻结收藏／例句出处、历史操作及本机保留的身份／文件编号。
 
 初次按用户顺序选中首个读取成功的词典，空结果仍保持该词典；失败来源独立显示，其他正文点击标签后才读取。原生最多保留两个 `mdictlib 0.2.8 + lzo` 解析器，以物理路径、文件长度／修改时间变化使缓存失效，打开时核对内容身份；文件、块、单条、记录数及解析器内存沿用 #3 上限。单响应最多 200 条／4 MiB 正文，超限明确失败。前端只保留当前查询的已访问正文，换查询或离开页面释放；请求身份阻止迟到结果覆盖当前查询。
 
-2026-11-11，旧目录读取时在末尾补入 `builtin-fra-eng`，保留原顺序和用户文件；原目录满额 16 项可升级为 17 项。该文件来自固定 `dictionary/freedict-fra-eng-mdx/freedict-fra-eng-0.4.1.mdx`，复用同一 MDX 解析器；只在已有文件摘要与编译时 manifest 一致时赋予已核实的 FreeDict／GPL 来源信息，否则返回损坏错误。用户库、原法中小样及变位来源保持独立。
+新目录依次注册 `builtin-core`、`builtin` 和 `builtin-fra-eng`；旧目录读取时保留全部既有项的顺序和用户文件，在末尾按 `builtin-fra-eng`、`builtin-core` 的顺序补入缺少项，15 份自定义 MDX 的满额目录可升级为 18 项。法英补充 MDX 来自固定 `dictionary/freedict-fra-eng-mdx/freedict-fra-eng-0.4.1.mdx`，复用同一 MDX 解析器；只在已有文件摘要与编译时 manifest 一致时赋予已核实的 FreeDict／GPL 来源信息，否则返回损坏错误。核心通过独立的 `dictionary/core-pilot-79/core.sqlite3` 提供，使用固定校验和只读快照；用户库、原法中小样及变位来源保持独立。
 
 `dictionary_resource_open` 只授予本地 main，接受至多 64 字节且存在于内置链接目录的资源 ID；前端不传 URL 或路径。原生与界面使用同一 JSON 目录，Windows 通过已安装的 Windows API 调用 Shell，macOS 使用参数数组调用 `open`；浏览器预览直接打开同一来源链接。打开错误可见，不自动下载或导入。Windows Shell 的 COM 初始化和返回值按[官方说明](https://learn.microsoft.com/en-us/windows/win32/api/shellapi/nf-shellapi-shellexecutew)处理；实际检查范围见[证据](evidence/d2-mdx/README.md)。
 
@@ -158,7 +158,7 @@ Windows 缓存以能力目录句柄及 nofollow 打开目录／文件，写入�
 
 ## 便携学习快照与原生备份（#71）
 
-[规格 #68](https://github.com/zardonc/lexique/issues/68) 的 v1 学习快照由 storage 的 `LearningSnapshot`、一致读导出及严格读取／领域校验共同拥有，与 SQLite 物理 schema 分开版本化。导出保留原始队列、未建立的进度、评分／批量提交顺序和全部幂等历史，复用现有卡片、排程结果、保存请求与 #70 词典清单。词汇创建／更新时间沿用既有毫秒单位；领域时间仍用原秒单位。历史模型参数保持 core 的原始 f32 值，不重算排程。
+[规格 #68](https://github.com/zardonc/lexique/issues/68) 的学习快照由 storage 的 `LearningSnapshot`、一致读导出及严格读取／领域校验共同拥有，与 SQLite 物理 schema 分开版本化。当前导出写入逻辑 v2，保留 #79 核心的四字段义项、字段出处及例句—摘要关联；读取仍接受既有 v1，未知高版本在恢复前拒绝。SQLite 物理 schema 保持 18，无新增迁移。导出保留原始队列、未建立的进度、评分／批量提交顺序和全部幂等历史，复用现有卡片、排程结果、保存请求与 #70 词典清单。词汇创建／更新时间沿用既有毫秒单位；领域时间仍用原秒单位。历史模型参数保持 core 的原始 f32 值，不重算排程。
 
 原生 `MaintenanceCoordinator` 在接受写入前发放覆盖完整阻塞任务与回调的租约。采集先关闭新写入并排空已接受操作，再可逆暂停合成主管和独立 GC／对账 worker，完成一致读及受保护音频复制；释放暂停与租约后才打包。队列读取中的位置写回、缓存验证／发布、批量分块、自动修复、旧音频登记和词典清单规范化均在此边界内。当前 schema 的只读命令仍可使用。
 
@@ -170,7 +170,7 @@ Windows 缓存以能力目录句柄及 nofollow 打开目录／文件，写入�
 
 `backup_preview_start`、`backup_preview_status`、`backup_preview_cancel` 和 `lexique-backup-preview-progress` 继续只开放给本地主窗口。原生选择器读取所选文件，以同一打开句柄取得大小并完成既有 ZIP／ZIP64、严格 JSON、版本、数量、关系及全部音频检查后，在应用自有隔离目录初始化当前 schema 的新 SQLite 和托管音频。前端只接收操作身份、完整状态和已核实的名称／大小／时间／版本／数量／待补齐词典及重启要求；选择和预览保留当前学习库与编辑草稿。
 
-storage 的 `import_learning_snapshot` 在一个立即事务中参数化写入全部 v1 集合，仅接受已初始化的空目标。导入保留评分／批量提交顺序、已保存结果、未建立的进度、原始队列、冻结出处、语音预算与全部原绝对保护期限；词汇时间仍为毫秒，领域时间仍为秒。版本的物理 locator 由逻辑 locator 建立，来源 hash／时间／pending 执行由版本指针投影；GC 修订／错误和访问状态重新建立。已包含版本要求已知长度，可保留 `NULL` 生成时间和未验证状态；原缺失版本可保留 `NULL` 长度／生成时间。公共长度与资产时间读接口投影为零，`AudioVersion.generated_at` 仍为可空值。选择触发器所需的验证状态在私有事务内满足并在提交前恢复原值；完整性、外键和现有领域读接口通过后才提交。
+storage 的 `import_learning_snapshot` 在一个立即事务中参数化写入全部已校验的学习快照集合，仅接受已初始化的空目标。导入保留评分／批量提交顺序、已保存结果、未建立的进度、原始队列、冻结出处、语音预算与全部原绝对保护期限；词汇时间仍为毫秒，领域时间仍为秒。版本的物理 locator 由逻辑 locator 建立，来源 hash／时间／pending 执行由版本指针投影；GC 修订／错误和访问状态重新建立。已包含版本要求已知长度，可保留 `NULL` 生成时间和未验证状态；原缺失版本可保留 `NULL` 长度／生成时间。公共长度与资产时间读接口投影为零，`AudioVersion.generated_at` 仍为可空值。选择触发器所需的验证状态在私有事务内满足并在提交前恢复原值；完整性、外键和现有领域读接口通过后才提交。
 
 暂存只为每个 `included` 引用发布音频。共享哈希的缺失、损坏和排除引用仍分别无文件，`unpublished` 的封存意图保留原状态。发布后的托管字节独立回读并校验 Ogg／hash／长度，暂存阶段保留捕获时的可空元数据及验证／封存状态，正常运行校验可以随后补充长度。
 

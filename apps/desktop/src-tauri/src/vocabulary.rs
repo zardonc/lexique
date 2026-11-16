@@ -250,10 +250,26 @@ fn snapshot(lookup: Lookup) -> Snapshot {
         digest: lookup
             .entries
             .into_iter()
-            .map(|entry| DigestEntry {
-                pronunciations: entry.pronunciations,
-                grammar: entry.grammar,
-                translation: first_translation(&entry.senses),
+            .flat_map(|entry| {
+                if entry.core_senses.is_empty() {
+                    vec![DigestEntry {
+                        pronunciations: entry.pronunciations,
+                        grammar: entry.grammar,
+                        translation: first_translation(&entry.senses),
+                        core: None,
+                    }]
+                } else {
+                    entry
+                        .core_senses
+                        .into_iter()
+                        .map(|core| DigestEntry {
+                            pronunciations: vec![core.ipa.clone()],
+                            grammar: vec![core.pos.clone()],
+                            translation: None,
+                            core: Some(core),
+                        })
+                        .collect()
+                }
             })
             .collect(),
     }

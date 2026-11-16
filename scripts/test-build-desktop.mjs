@@ -12,7 +12,7 @@ function fixture(run) {
   const directory = mkdtempSync(join(tmpdir(), 'lexique-build-'));
   try {
     mkdirSync(join(directory, 'scripts'));
-    for (const name of ['desktop-dictionary-sample', 'desktop-conjugation-v6-stats', 'desktop-frequency-v1']) {
+    for (const name of ['desktop-dictionary-sample', 'desktop-core-pilot', 'desktop-conjugation-v6-stats', 'desktop-frequency-v1']) {
       mkdirSync(join(directory, 'target', name), { recursive: true });
       writeFileSync(join(directory, 'target', name, 'resource.txt'), name);
     }
@@ -39,6 +39,7 @@ test('public pnpm build preserves spaced arguments and sends locked to Cargo', (
     ['build', '--debug', '--no-bundle', '--config', 'config with spaces.json', '--', '--locked']);
   assert.equal(readFileSync(join(directory, 'target/debug/conjugation/resource.txt'), 'utf8'), 'desktop-conjugation-v6-stats');
   assert.equal(readFileSync(join(directory, 'target/debug/frequency/resource.txt'), 'utf8'), 'desktop-frequency-v1');
+  assert.equal(readFileSync(join(directory, 'target/debug/dictionary/core-pilot-79/resource.txt'), 'utf8'), 'desktop-core-pilot');
   assert.equal(readFileSync(join(directory, 'target/debug/dictionary/freedict-fra-eng-mdx/freedict-fra-eng-0.4.1.mdx'), 'utf8'), 'FreeDict MDX fixture');
 }));
 

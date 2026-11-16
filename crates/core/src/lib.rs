@@ -1,5 +1,6 @@
 pub const DATABASE_SCHEMA_VERSION: u32 = 18;
 
+pub mod dictionary;
 pub mod scheduling;
 
 #[cfg(target_arch = "wasm32")]

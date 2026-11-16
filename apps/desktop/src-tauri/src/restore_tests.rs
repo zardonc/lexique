@@ -205,6 +205,7 @@ pub(super) fn save(connection: &mut Connection, notes: &str) -> storage::SaveRes
                 pronunciations: vec!["ekɔl".into()],
                 grammar: vec!["n.f.".into()],
                 translation: Some("学校".into()),
+                core: None,
             }],
         }),
     )

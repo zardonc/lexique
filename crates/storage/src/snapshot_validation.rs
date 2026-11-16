@@ -108,7 +108,7 @@ pub fn validate_learning_snapshot(
     captured_at: i64,
 ) -> Result<(), StorageError> {
     require(
-        snapshot.snapshot_version == 1,
+        matches!(snapshot.snapshot_version, 1 | 2),
         "unsupported snapshot version",
     )?;
     timestamp(captured_at)?;
@@ -137,6 +137,20 @@ pub fn validate_learning_snapshot(
             revision: Some(record.revision),
         })?;
         reference(&record.reference)?;
+        if record.reference.dictionary_id.as_deref()
+            == Some(lexique_core::dictionary::CORE_DICTIONARY_ID)
+            || record.digest.iter().any(|entry| entry.core.is_some())
+        {
+            require(
+                snapshot.snapshot_version == 2,
+                "core senses require snapshot v2",
+            )?;
+        }
+        crate::vocabulary::validate_core_digest(
+            &record.headword,
+            &record.reference,
+            &record.digest,
+        )?;
         for source in record.example_source.iter().chain(
             record
                 .more_examples
@@ -830,6 +844,13 @@ pub fn read_learning_snapshot(
             if let Some(digest) = record["digest"].as_array() {
                 for entry in digest {
                     required(entry, &["translation"])?;
+                    require(
+                        value["snapshot_version"] != 1
+                            || !entry
+                                .as_object()
+                                .is_some_and(|fields| fields.contains_key("core")),
+                        "core senses require snapshot v2",
+                    )?;
                 }
             }
         }
@@ -878,7 +899,10 @@ pub fn read_learning_snapshot(
         ),
         "snapshot speech voice must use its portable spelling",
     )?;
-    let snapshot: LearningSnapshot = serde_json::from_value(value)?;
+    let mut snapshot: LearningSnapshot = serde_json::from_value(value)?;
+    if snapshot.snapshot_version == 1 {
+        crate::dictionary_catalog::upgrade_dictionary_catalog(&mut snapshot.dictionary_catalog);
+    }
     validate_learning_snapshot(&snapshot, captured_at)?;
     Ok(snapshot)
 }

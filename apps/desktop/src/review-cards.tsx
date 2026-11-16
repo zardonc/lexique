@@ -9,10 +9,12 @@ import { useQueueAudioReplacement } from './use-queue-audio-replacement';
 import { speechPlaybackRate } from './platform/speech';
 import { ExampleSpeech } from './example-speech';
 import type { SpeechAudio } from './platform/speech';
+import { CoreSenseContent, digestLabel } from './core-sense';
 
 function ExampleSense({ record, text }: { readonly record: VocabularyRecord; readonly text: NotebookText }) {
-  const meaning = record.example_sense === null ? text.exampleSenseUnspecified : record.digest[record.example_sense]?.translation || text.missing;
-  return <p>{text.exampleSense}：{meaning}</p>;
+  const entry = record.example_sense === null ? undefined : record.digest[record.example_sense];
+  const meaning = record.example_sense === null ? text.exampleSenseUnspecified : digestLabel(entry, text.missing);
+  return <p>{text.exampleSense}：{entry?.core ? <span lang="zh">{meaning}</span> : meaning}</p>;
 }
 
 function Examples({ record, text, runtime }: { readonly record: VocabularyRecord; readonly text: NotebookText; readonly runtime: RuntimeAdapter }) {
@@ -31,7 +33,9 @@ function Examples({ record, text, runtime }: { readonly record: VocabularyRecord
 
 function Answer({ record, text, runtime }: { readonly record: VocabularyRecord; readonly text: NotebookText; readonly runtime: RuntimeAdapter }) {
   return <>
-    <p>{record.digest.map((entry) => entry.translation || text.missing).join(' · ')}</p>
+    {record.digest.some((entry) => entry.core) ? record.digest.map((entry, index) => entry.core
+      ? <CoreSenseContent key={index} sense={entry.core} text={text.core} /> : <p key={index}>{entry.translation || text.missing}</p>)
+      : <p>{record.digest.map((entry) => entry.translation || text.missing).join(' · ')}</p>}
     <ExampleSense record={record} text={text} />
     <Examples record={record} text={text} runtime={runtime} />
     <details><summary>{text.more}</summary><p>{record.notes || text.missing}</p>

@@ -314,6 +314,7 @@ fn saved_word(connection: &mut Connection) -> i64 {
             pronunciations: vec![],
             grammar: vec![],
             translation: Some("学校".into()),
+            core: None,
         }],
     };
     save(connection, &request, Some(snapshot))
