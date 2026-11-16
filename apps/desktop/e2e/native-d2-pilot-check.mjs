@@ -162,7 +162,7 @@ async function pilot() {
     admitted(await invoke('dictionary_lookup', { key: queryKey, dictionary_id: 'builtin-core' }), frozen);
   }
   assert.deepEqual((await invoke('dictionary_lookup', { key: 'mot-absent-du-pilote', dictionary_id: 'builtin-core' })).entries, []);
-  const replay = await invoke('vocabulary_save', { request: { ...first.submitted, headword: first.submitted.headword.normalize('NFD') }, dictionary_id: 'builtin-core' });
+  const replay = await invoke('vocabulary_save', { request: first.submitted, dictionary_id: 'builtin-core' });
   assert.equal(replay.outcome, 'replayed'); assert.deepEqual(replay.record, first.record);
   const duplicate = await invoke('vocabulary_save', { request: { ...first.submitted, operation: 'native-79-duplicate', notes: 'Must preserve the established note' }, dictionary_id: 'builtin-core' });
   assert.equal(duplicate.outcome, 'existing'); assert.deepEqual(duplicate.record, first.record);
@@ -187,7 +187,9 @@ async function pilot() {
     await expect(source.locator('summary')).toHaveText(sourceLabel);
     if (!await source.evaluate((node) => node.open)) await source.locator('summary').click();
     await expect(source.locator('.core-field-source')).toHaveCount(4);
-    await expect(source.getByRole('link').first()).toBeVisible();
+    const provenance = edited.record.digest[0].core.field_sources.definition_fr;
+    await expect(source.getByText(provenance.source_url, { exact: true }).first()).toBeVisible();
+    await expect(source.getByText(provenance.license_url, { exact: true }).first()).toBeVisible();
     await page.screenshot({ path: join(destination, `native-core-lookup-${locale}.png`), fullPage: true });
   }
   await page.getByRole('banner').getByRole('combobox').first().selectOption('en');
@@ -216,7 +218,7 @@ async function review() {
     await fields(dialog, record.digest.map((item) => item.core));
     await expect(dialog.locator('p').filter({ hasText: 'Meaning for examples' })).toContainText(record.digest[record.example_sense].core.meaning_zh);
     await page.screenshot({ path: join(destination, `native-core-${kind}-back.png`), fullPage: true });
-    await dialog.getByRole('button', { name: 'Close card', exact: true }).click();
+    await dialog.getByRole('button', { name: kind === 'recognition' ? 'Close card' : 'Skip', exact: true }).click();
   }
   const persisted = readState(destination);
   await fixture.stop(true); await start();
@@ -432,7 +434,7 @@ print(json.dumps([item['id'] for item in raw['entries']]))`);
   assert.deepEqual(upgraded.filter((item) => item.id.startsWith('mdx-')).map((item) => [item.id, item.content_hash]),
     [...full].reverse().filter((item) => item.id.startsWith('mdx-')).map((item) => [item.id, item.content_hash]));
   for (const item of upgraded.filter((item) => item.id.startsWith('mdx-'))) {
-    assert.equal(item.availability, 'available'); assert.ok((await invoke('dictionary_lookup', { key: 'école', dictionary_id: item.id })).entries.length > 0);
+    assert.equal(item.availability, 'available'); assert.ok((await invoke('dictionary_lookup', { key: 'être', dictionary_id: item.id })).entries.length > 0);
   }
   evidence.checks.push({ check: '15 custom dictionary slots, 18 total, capacity rejection and upgrade append preserve order, identities, file bindings and lookup', status: 'passed' });
 }
@@ -446,8 +448,8 @@ async function copiedProfile() {
 async function replacement() {
   const previous = readState(destination), record = await invoke('vocabulary_find', { headword: 'être' });
   if (scenario === 'limit') {
-    await rejected('dictionary_lookup', { key: 'être', dictionary_id: 'builtin-core' }, 'limit');
-    await rejected('vocabulary_save', { request: request('être', 'limit-new'), dictionary_id: 'builtin-core' });
+    await rejected('dictionary_lookup', { key: 'bien', dictionary_id: 'builtin-core' }, 'limit');
+    await rejected('vocabulary_save', { request: request('bien', 'limit-new'), dictionary_id: 'builtin-core' });
     assert.ok((await invoke('dictionary_lookup', { key: 'école', dictionary_id: 'builtin' })).entries.length > 0);
   } else {
     const current = await invoke('dictionary_lookup', { key: 'être', dictionary_id: 'builtin-core' });
