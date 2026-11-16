@@ -3,6 +3,8 @@ fn main() {
     for source in [
         "scripts/dictionary_sample.py",
         "resources/freedict-fra-zho-2025.11.23",
+        "scripts/core_pilot.py",
+        "resources/core-pilot-79",
         "scripts/frequency_sample.py",
         "resources/lexique-3.83",
         "scripts/conjugation_sample.py",
@@ -37,6 +39,22 @@ fn main() {
         .status()
         .expect("Python 3.12+ is required to prepare the bundled dictionary");
     assert!(status.success(), "Bundled dictionary preparation failed");
+    let status = std::process::Command::new("python")
+        .args([
+            "-B",
+            "-X",
+            "utf8",
+            "scripts/core_pilot.py",
+            "prepare",
+            "target/desktop-core-pilot",
+        ])
+        .current_dir(&root)
+        .status()
+        .expect("Python 3.12+ is required to prepare the bundled four-field core");
+    assert!(
+        status.success(),
+        "Bundled core preparation or admission self-check failed"
+    );
     let verified = std::process::Command::new("python")
         .args(["-B", "-X", "utf8", "scripts/freedict_mdx.py"])
         .current_dir(&root)
@@ -57,6 +75,17 @@ fn main() {
         report["sqlite_sha256"]
             .as_str()
             .expect("Missing dictionary hash")
+    );
+    let core_report: serde_json::Value = serde_json::from_slice(
+        &std::fs::read(root.join("target/desktop-core-pilot/report.json"))
+            .expect("Missing core admission report"),
+    )
+    .expect("Invalid core admission report");
+    println!(
+        "cargo:rustc-env=LEXIQUE_CORE_SHA256={}",
+        core_report["sqlite_sha256"]
+            .as_str()
+            .expect("Missing core hash")
     );
     let prepared = std::process::Command::new("python")
         .args([

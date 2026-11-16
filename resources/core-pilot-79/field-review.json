@@ -1,0 +1,1118 @@
+{
+  "schema": "lexique-core-pilot-accepted-field-review-1",
+  "date": "2026-11-15",
+  "kind": "separate_independent_field_review",
+  "independence": "Reviewer is separate from the source draft author/source explorer and application implementer.",
+  "reviewed_draft_schema": "lexique-d2-pilot-source-draft-1",
+  "resolution": "Exact independently accepted field/usage texts and metadata corrections applied.",
+  "learner_acceptance": {
+    "status": "not_run",
+    "accepted": false
+  },
+  "fields": [
+    {
+      "sense_id": "etre-aux-compound-tense",
+      "frozen_row": 1,
+      "headword": "être",
+      "pos": "AUX",
+      "field": "french_definition",
+      "language": "fr",
+      "accepted_text": "Auxiliaire employé avec un participe passé pour former les temps composés de certains verbes intransitifs, souvent de mouvement ou de changement d’état, et de tous les verbes pronominaux.",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "fr_etre",
+        "revid": 39860125,
+        "url": "https://fr.wiktionary.org/w/index.php?title=%C3%AAtre&oldid=39860125",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=%C3%AAtre&action=history",
+        "line_1_based": 53,
+        "reviewed_excerpt": "# {{auxiliaire|fr}} Verbe [[auxiliaire]] servant à former les temps composés de certains verbes intransitifs indiquant un [[mouvement]] ou un changement d’état et tous les verbes [[réflexifs]]."
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "pending"
+    },
+    {
+      "sense_id": "etre-aux-compound-tense",
+      "frozen_row": 1,
+      "headword": "être",
+      "pos": "AUX",
+      "field": "ipa",
+      "language": "und",
+      "accepted_text": "/ɛtʁ/",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "fr_etre",
+        "revid": 39860125,
+        "url": "https://fr.wiktionary.org/w/index.php?title=%C3%AAtre&oldid=39860125",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=%C3%AAtre&action=history",
+        "line_1_based": 8,
+        "reviewed_excerpt": "'''être''' {{pron|ɛtʁ|fr}} {{i|fr}} {{conjugaison|fr|groupe=3}} {{lien pronominal|'|fr}}"
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "passed"
+    },
+    {
+      "sense_id": "etre-aux-compound-tense",
+      "frozen_row": 1,
+      "headword": "être",
+      "pos": "AUX",
+      "field": "english",
+      "language": "en",
+      "accepted_text": "Auxiliary used with a past participle to form compound tenses of certain intransitive verbs, often expressing movement or a change of state, and of all pronominal verbs.",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "fr_etre",
+        "revid": 39860125,
+        "url": "https://fr.wiktionary.org/w/index.php?title=%C3%AAtre&oldid=39860125",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=%C3%AAtre&action=history",
+        "line_1_based": 53,
+        "reviewed_excerpt": "# {{auxiliaire|fr}} Verbe [[auxiliaire]] servant à former les temps composés de certains verbes intransitifs indiquant un [[mouvement]] ou un changement d’état et tous les verbes [[réflexifs]]."
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "pending"
+    },
+    {
+      "sense_id": "etre-aux-compound-tense",
+      "frozen_row": 1,
+      "headword": "être",
+      "pos": "AUX",
+      "field": "chinese",
+      "language": "zh",
+      "accepted_text": "助动词，与过去分词连用，构成某些不及物动词（常表示移动或状态变化）以及所有代词式动词的复合时态。",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "fr_etre",
+        "revid": 39860125,
+        "url": "https://fr.wiktionary.org/w/index.php?title=%C3%AAtre&oldid=39860125",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=%C3%AAtre&action=history",
+        "line_1_based": 53,
+        "reviewed_excerpt": "# {{auxiliaire|fr}} Verbe [[auxiliaire]] servant à former les temps composés de certains verbes intransitifs indiquant un [[mouvement]] ou un changement d’état et tous les verbes [[réflexifs]]."
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "pending"
+    },
+    {
+      "sense_id": "etre-noun-living-being",
+      "frozen_row": 2,
+      "headword": "être",
+      "pos": "NOM",
+      "field": "french_definition",
+      "language": "fr",
+      "accepted_text": "Organisme, créature vivante.",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "fr_etre",
+        "revid": 39860125,
+        "url": "https://fr.wiktionary.org/w/index.php?title=%C3%AAtre&oldid=39860125",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=%C3%AAtre&action=history",
+        "line_1_based": 343,
+        "reviewed_excerpt": "# [[organisme|Organisme]], [[créature]] [[vivant]]e."
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "passed"
+    },
+    {
+      "sense_id": "etre-noun-living-being",
+      "frozen_row": 2,
+      "headword": "être",
+      "pos": "NOM",
+      "field": "ipa",
+      "language": "und",
+      "accepted_text": "/ɛtʁ/",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "fr_etre",
+        "revid": 39860125,
+        "url": "https://fr.wiktionary.org/w/index.php?title=%C3%AAtre&oldid=39860125",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=%C3%AAtre&action=history",
+        "line_1_based": 335,
+        "reviewed_excerpt": "'''être''' {{pron|ɛtʁ|fr}} {{m}}"
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "passed"
+    },
+    {
+      "sense_id": "etre-noun-living-being",
+      "frozen_row": 2,
+      "headword": "être",
+      "pos": "NOM",
+      "field": "english",
+      "language": "en",
+      "accepted_text": "A living being; an organism or creature.",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "fr_etre",
+        "revid": 39860125,
+        "url": "https://fr.wiktionary.org/w/index.php?title=%C3%AAtre&oldid=39860125",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=%C3%AAtre&action=history",
+        "line_1_based": 343,
+        "reviewed_excerpt": "# [[organisme|Organisme]], [[créature]] [[vivant]]e."
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "passed"
+    },
+    {
+      "sense_id": "etre-noun-living-being",
+      "frozen_row": 2,
+      "headword": "être",
+      "pos": "NOM",
+      "field": "chinese",
+      "language": "zh",
+      "accepted_text": "生物；有生命的个体。",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "fr_etre",
+        "revid": 39860125,
+        "url": "https://fr.wiktionary.org/w/index.php?title=%C3%AAtre&oldid=39860125",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=%C3%AAtre&action=history",
+        "line_1_based": 343,
+        "reviewed_excerpt": "# [[organisme|Organisme]], [[créature]] [[vivant]]e."
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "passed"
+    },
+    {
+      "sense_id": "etre-verb-copula",
+      "frozen_row": 3,
+      "headword": "être",
+      "pos": "VER",
+      "field": "french_definition",
+      "language": "fr",
+      "accepted_text": "Définir un état, une caractéristique du sujet.",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "fr_etre",
+        "revid": 39860125,
+        "url": "https://fr.wiktionary.org/w/index.php?title=%C3%AAtre&oldid=39860125",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=%C3%AAtre&action=history",
+        "line_1_based": 9,
+        "reviewed_excerpt": "# [[définir|Définir]] un [[état]], une [[caractéristique]] du [[sujet]]."
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "passed"
+    },
+    {
+      "sense_id": "etre-verb-copula",
+      "frozen_row": 3,
+      "headword": "être",
+      "pos": "VER",
+      "field": "ipa",
+      "language": "und",
+      "accepted_text": "/ɛtʁ/",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "fr_etre",
+        "revid": 39860125,
+        "url": "https://fr.wiktionary.org/w/index.php?title=%C3%AAtre&oldid=39860125",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=%C3%AAtre&action=history",
+        "line_1_based": 8,
+        "reviewed_excerpt": "'''être''' {{pron|ɛtʁ|fr}} {{i|fr}} {{conjugaison|fr|groupe=3}} {{lien pronominal|'|fr}}"
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "passed"
+    },
+    {
+      "sense_id": "etre-verb-copula",
+      "frozen_row": 3,
+      "headword": "être",
+      "pos": "VER",
+      "field": "english",
+      "language": "en",
+      "accepted_text": "Be; used to state a property or condition of the subject.",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "fr_etre",
+        "revid": 39860125,
+        "url": "https://fr.wiktionary.org/w/index.php?title=%C3%AAtre&oldid=39860125",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=%C3%AAtre&action=history",
+        "line_1_based": 9,
+        "reviewed_excerpt": "# [[définir|Définir]] un [[état]], une [[caractéristique]] du [[sujet]]."
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "passed"
+    },
+    {
+      "sense_id": "etre-verb-copula",
+      "frozen_row": 3,
+      "headword": "être",
+      "pos": "VER",
+      "field": "chinese",
+      "language": "zh",
+      "accepted_text": "是；用于说明主语的状态或特征。",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "fr_etre",
+        "revid": 39860125,
+        "url": "https://fr.wiktionary.org/w/index.php?title=%C3%AAtre&oldid=39860125",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=%C3%AAtre&action=history",
+        "line_1_based": 9,
+        "reviewed_excerpt": "# [[définir|Définir]] un [[état]], une [[caractéristique]] du [[sujet]]."
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "passed"
+    },
+    {
+      "sense_id": "avoir-aux-compound-tense",
+      "frozen_row": 4,
+      "headword": "avoir",
+      "pos": "AUX",
+      "field": "french_definition",
+      "language": "fr",
+      "accepted_text": "Auxiliaire employé avec un participe passé pour former les temps composés, qui peuvent exprimer une action accomplie avant un moment de référence. Certains verbes demandent être comme auxiliaire.",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "fr_avoir",
+        "revid": 39879166,
+        "url": "https://fr.wiktionary.org/w/index.php?title=avoir&oldid=39879166",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=avoir&action=history",
+        "line_1_based": 107,
+        "reviewed_excerpt": "# {{auxiliaire|fr}} [[auxiliaire|Auxiliaire]] servant à former les [[temps composé]]s, signifiant le [[passé]], la [[complétion]] ou l’[[expérience]]. {{note}} Certains verbes demandent ''[[être]]'' comme auxiliaire."
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "pending"
+    },
+    {
+      "sense_id": "avoir-aux-compound-tense",
+      "frozen_row": 4,
+      "headword": "avoir",
+      "pos": "AUX",
+      "field": "ipa",
+      "language": "und",
+      "accepted_text": "/a.vwaʁ/",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "fr_avoir",
+        "revid": 39879166,
+        "url": "https://fr.wiktionary.org/w/index.php?title=avoir&oldid=39879166",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=avoir&action=history",
+        "line_1_based": 7,
+        "reviewed_excerpt": "'''avoir''' {{pron|a.vwaʁ|a.vwɑʁ|fr}} {{t|fr}}, {{tr-dir|fr}} {{conjugaison|fr|groupe=3}} {{lien pronominal|'|fr}}"
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "passed"
+    },
+    {
+      "sense_id": "avoir-aux-compound-tense",
+      "frozen_row": 4,
+      "headword": "avoir",
+      "pos": "AUX",
+      "field": "english",
+      "language": "en",
+      "accepted_text": "Auxiliary used with a past participle to form compound tenses, which can express an action completed before a reference time. Some verbs require être instead.",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "fr_avoir",
+        "revid": 39879166,
+        "url": "https://fr.wiktionary.org/w/index.php?title=avoir&oldid=39879166",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=avoir&action=history",
+        "line_1_based": 107,
+        "reviewed_excerpt": "# {{auxiliaire|fr}} [[auxiliaire|Auxiliaire]] servant à former les [[temps composé]]s, signifiant le [[passé]], la [[complétion]] ou l’[[expérience]]. {{note}} Certains verbes demandent ''[[être]]'' comme auxiliaire."
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "pending"
+    },
+    {
+      "sense_id": "avoir-aux-compound-tense",
+      "frozen_row": 4,
+      "headword": "avoir",
+      "pos": "AUX",
+      "field": "chinese",
+      "language": "zh",
+      "accepted_text": "助动词，与过去分词连用构成复合时态，可表示先于某个参照时间完成的动作。某些动词须用 être 作助动词。",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "fr_avoir",
+        "revid": 39879166,
+        "url": "https://fr.wiktionary.org/w/index.php?title=avoir&oldid=39879166",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=avoir&action=history",
+        "line_1_based": 107,
+        "reviewed_excerpt": "# {{auxiliaire|fr}} [[auxiliaire|Auxiliaire]] servant à former les [[temps composé]]s, signifiant le [[passé]], la [[complétion]] ou l’[[expérience]]. {{note}} Certains verbes demandent ''[[être]]'' comme auxiliaire."
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "pending"
+    },
+    {
+      "sense_id": "avoir-verb-possession",
+      "frozen_row": 5,
+      "headword": "avoir",
+      "pos": "VER",
+      "field": "french_definition",
+      "language": "fr",
+      "accepted_text": "Posséder quelque chose.",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "en_avoir",
+        "revid": 93678532,
+        "url": "https://en.wiktionary.org/w/index.php?title=avoir&oldid=93678532",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=avoir&action=history",
+        "line_1_based": 36,
+        "reviewed_excerpt": "# {{lb|fr|transitive}} to [[have]]; to own; to [[possess]]"
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "passed"
+    },
+    {
+      "sense_id": "avoir-verb-possession",
+      "frozen_row": 5,
+      "headword": "avoir",
+      "pos": "VER",
+      "field": "ipa",
+      "language": "und",
+      "accepted_text": "/a.vwaʁ/",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "fr_avoir",
+        "revid": 39879166,
+        "url": "https://fr.wiktionary.org/w/index.php?title=avoir&oldid=39879166",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=avoir&action=history",
+        "line_1_based": 7,
+        "reviewed_excerpt": "'''avoir''' {{pron|a.vwaʁ|a.vwɑʁ|fr}} {{t|fr}}, {{tr-dir|fr}} {{conjugaison|fr|groupe=3}} {{lien pronominal|'|fr}}"
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "passed"
+    },
+    {
+      "sense_id": "avoir-verb-possession",
+      "frozen_row": 5,
+      "headword": "avoir",
+      "pos": "VER",
+      "field": "english",
+      "language": "en",
+      "accepted_text": "Have; own or possess something.",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "en_avoir",
+        "revid": 93678532,
+        "url": "https://en.wiktionary.org/w/index.php?title=avoir&oldid=93678532",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=avoir&action=history",
+        "line_1_based": 36,
+        "reviewed_excerpt": "# {{lb|fr|transitive}} to [[have]]; to own; to [[possess]]"
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "passed"
+    },
+    {
+      "sense_id": "avoir-verb-possession",
+      "frozen_row": 5,
+      "headword": "avoir",
+      "pos": "VER",
+      "field": "chinese",
+      "language": "zh",
+      "accepted_text": "有；拥有（某物）。",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "en_avoir",
+        "revid": 93678532,
+        "url": "https://en.wiktionary.org/w/index.php?title=avoir&oldid=93678532",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=avoir&action=history",
+        "line_1_based": 36,
+        "reviewed_excerpt": "# {{lb|fr|transitive}} to [[have]]; to own; to [[possess]]"
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "passed"
+    },
+    {
+      "sense_id": "bien-adv-manner",
+      "frozen_row": 70,
+      "headword": "bien",
+      "pos": "ADV",
+      "field": "french_definition",
+      "language": "fr",
+      "accepted_text": "D’une manière satisfaisante ou correcte.",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "en_bien",
+        "revid": 92967453,
+        "url": "https://en.wiktionary.org/w/index.php?title=bien&oldid=92967453",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=bien&action=history",
+        "line_1_based": 110,
+        "reviewed_excerpt": "# [[well]]"
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "passed"
+    },
+    {
+      "sense_id": "bien-adv-manner",
+      "frozen_row": 70,
+      "headword": "bien",
+      "pos": "ADV",
+      "field": "ipa",
+      "language": "und",
+      "accepted_text": "/bjɛ̃/",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "fr_bien",
+        "revid": 39904513,
+        "url": "https://fr.wiktionary.org/w/index.php?title=bien&oldid=39904513",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=bien&action=history",
+        "line_1_based": 9,
+        "reviewed_excerpt": "'''bien''' {{pron|bjɛ̃|fr}} {{invar}} ({{comparatif}} : {{lien|mieux|fr}})"
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "passed"
+    },
+    {
+      "sense_id": "bien-adv-manner",
+      "frozen_row": 70,
+      "headword": "bien",
+      "pos": "ADV",
+      "field": "english",
+      "language": "en",
+      "accepted_text": "Well; in a satisfactory or correct manner.",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "en_bien",
+        "revid": 92967453,
+        "url": "https://en.wiktionary.org/w/index.php?title=bien&oldid=92967453",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=bien&action=history",
+        "line_1_based": 110,
+        "reviewed_excerpt": "# [[well]]"
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "passed"
+    },
+    {
+      "sense_id": "bien-adv-manner",
+      "frozen_row": 70,
+      "headword": "bien",
+      "pos": "ADV",
+      "field": "chinese",
+      "language": "zh",
+      "accepted_text": "好；以令人满意或正确的方式。",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "en_bien",
+        "revid": 92967453,
+        "url": "https://en.wiktionary.org/w/index.php?title=bien&oldid=92967453",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=bien&action=history",
+        "line_1_based": 110,
+        "reviewed_excerpt": "# [[well]]"
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "passed"
+    },
+    {
+      "sense_id": "bien-noun-possession",
+      "frozen_row": 71,
+      "headword": "bien",
+      "pos": "NOM",
+      "field": "french_definition",
+      "language": "fr",
+      "accepted_text": "Ce qu’une personne possède.",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "en_bien",
+        "revid": 92967453,
+        "url": "https://en.wiktionary.org/w/index.php?title=bien&oldid=92967453",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=bien&action=history",
+        "line_1_based": 150,
+        "reviewed_excerpt": "# a [[possession]]"
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "passed"
+    },
+    {
+      "sense_id": "bien-noun-possession",
+      "frozen_row": 71,
+      "headword": "bien",
+      "pos": "NOM",
+      "field": "ipa",
+      "language": "und",
+      "accepted_text": "/bjɛ̃/",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "fr_bien",
+        "revid": 39904513,
+        "url": "https://fr.wiktionary.org/w/index.php?title=bien&oldid=39904513",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=bien&action=history",
+        "line_1_based": 234,
+        "reviewed_excerpt": "'''bien''' {{pron|bjɛ̃|fr}} {{m}}"
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "passed"
+    },
+    {
+      "sense_id": "bien-noun-possession",
+      "frozen_row": 71,
+      "headword": "bien",
+      "pos": "NOM",
+      "field": "english",
+      "language": "en",
+      "accepted_text": "A possession; something someone owns.",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "en_bien",
+        "revid": 92967453,
+        "url": "https://en.wiktionary.org/w/index.php?title=bien&oldid=92967453",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=bien&action=history",
+        "line_1_based": 150,
+        "reviewed_excerpt": "# a [[possession]]"
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "passed"
+    },
+    {
+      "sense_id": "bien-noun-possession",
+      "frozen_row": 71,
+      "headword": "bien",
+      "pos": "NOM",
+      "field": "chinese",
+      "language": "zh",
+      "accepted_text": "个人拥有的东西；所有物。",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "en_bien",
+        "revid": 92967453,
+        "url": "https://en.wiktionary.org/w/index.php?title=bien&oldid=92967453",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=bien&action=history",
+        "line_1_based": 150,
+        "reviewed_excerpt": "# a [[possession]]"
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "passed"
+    },
+    {
+      "sense_id": "aujourdhui-adv-present-day",
+      "frozen_row": 360,
+      "headword": "aujourd'hui",
+      "pos": "ADV",
+      "field": "french_definition",
+      "language": "fr",
+      "accepted_text": "À la date présente, ce jour même.",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "fr_today",
+        "revid": 39793601,
+        "url": "https://fr.wiktionary.org/w/index.php?title=aujourd%E2%80%99hui&oldid=39793601",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=aujourd%E2%80%99hui&action=history",
+        "line_1_based": 9,
+        "reviewed_excerpt": "# À la [[date]] [[présent]]e, ce [[jour]] [[même]]."
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "passed"
+    },
+    {
+      "sense_id": "aujourdhui-adv-present-day",
+      "frozen_row": 360,
+      "headword": "aujourd'hui",
+      "pos": "ADV",
+      "field": "ipa",
+      "language": "und",
+      "accepted_text": "/o.ʒuʁ.d‿ɥi/",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "fr_today",
+        "revid": 39793601,
+        "url": "https://fr.wiktionary.org/w/index.php?title=aujourd%E2%80%99hui&oldid=39793601",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=aujourd%E2%80%99hui&action=history",
+        "line_1_based": 8,
+        "reviewed_excerpt": "'''aujourd’hui''' {{pron|o.ʒuʁ.d‿ɥi|fr}} {{invar}} {{adverbe de temps|fr}}"
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "passed"
+    },
+    {
+      "sense_id": "aujourdhui-adv-present-day",
+      "frozen_row": 360,
+      "headword": "aujourd'hui",
+      "pos": "ADV",
+      "field": "english",
+      "language": "en",
+      "accepted_text": "Today; this present day.",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "fr_today",
+        "revid": 39793601,
+        "url": "https://fr.wiktionary.org/w/index.php?title=aujourd%E2%80%99hui&oldid=39793601",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=aujourd%E2%80%99hui&action=history",
+        "line_1_based": 9,
+        "reviewed_excerpt": "# À la [[date]] [[présent]]e, ce [[jour]] [[même]]."
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "passed"
+    },
+    {
+      "sense_id": "aujourdhui-adv-present-day",
+      "frozen_row": 360,
+      "headword": "aujourd'hui",
+      "pos": "ADV",
+      "field": "chinese",
+      "language": "zh",
+      "accepted_text": "今天；当前这一天。",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "fr_today",
+        "revid": 39793601,
+        "url": "https://fr.wiktionary.org/w/index.php?title=aujourd%E2%80%99hui&oldid=39793601",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=aujourd%E2%80%99hui&action=history",
+        "line_1_based": 9,
+        "reviewed_excerpt": "# À la [[date]] [[présent]]e, ce [[jour]] [[même]]."
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "passed"
+    },
+    {
+      "sense_id": "fort-adj-physical-strength",
+      "frozen_row": 422,
+      "headword": "fort",
+      "pos": "ADJ",
+      "field": "french_definition",
+      "language": "fr",
+      "accepted_text": "Qui a beaucoup de force physique.",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "en_fort",
+        "revid": 93077866,
+        "url": "https://en.wiktionary.org/w/index.php?title=fort&oldid=93077866",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=fort&action=history",
+        "line_1_based": 360,
+        "reviewed_excerpt": "# [[strong]]; [[powerful]]"
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "passed"
+    },
+    {
+      "sense_id": "fort-adj-physical-strength",
+      "frozen_row": 422,
+      "headword": "fort",
+      "pos": "ADJ",
+      "field": "ipa",
+      "language": "und",
+      "accepted_text": "/fɔʁ/",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "fr_fort",
+        "revid": 39827775,
+        "url": "https://fr.wiktionary.org/w/index.php?title=fort&oldid=39827775",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=fort&action=history",
+        "line_1_based": 9,
+        "reviewed_excerpt": "'''fort''' {{pron|fɔʁ|fr}}"
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "passed"
+    },
+    {
+      "sense_id": "fort-adj-physical-strength",
+      "frozen_row": 422,
+      "headword": "fort",
+      "pos": "ADJ",
+      "field": "english",
+      "language": "en",
+      "accepted_text": "Physically strong; robust.",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "en_fort",
+        "revid": 93077866,
+        "url": "https://en.wiktionary.org/w/index.php?title=fort&oldid=93077866",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=fort&action=history",
+        "line_1_based": 360,
+        "reviewed_excerpt": "# [[strong]]; [[powerful]]"
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "passed"
+    },
+    {
+      "sense_id": "fort-adj-physical-strength",
+      "frozen_row": 422,
+      "headword": "fort",
+      "pos": "ADJ",
+      "field": "chinese",
+      "language": "zh",
+      "accepted_text": "强壮的；体力强的。",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "en_fort",
+        "revid": 93077866,
+        "url": "https://en.wiktionary.org/w/index.php?title=fort&oldid=93077866",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=fort&action=history",
+        "line_1_based": 360,
+        "reviewed_excerpt": "# [[strong]]; [[powerful]]"
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "passed"
+    },
+    {
+      "sense_id": "fort-adv-forceful-action",
+      "frozen_row": 423,
+      "headword": "fort",
+      "pos": "ADV",
+      "field": "french_definition",
+      "language": "fr",
+      "accepted_text": "Avec beaucoup de force, pour décrire une action.",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "en_fort",
+        "revid": 93077866,
+        "url": "https://en.wiktionary.org/w/index.php?title=fort&oldid=93077866",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=fort&action=history",
+        "line_1_based": 408,
+        "reviewed_excerpt": "# [[strongly]]"
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "passed"
+    },
+    {
+      "sense_id": "fort-adv-forceful-action",
+      "frozen_row": 423,
+      "headword": "fort",
+      "pos": "ADV",
+      "field": "ipa",
+      "language": "und",
+      "accepted_text": "/fɔʁ/",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "fr_fort",
+        "revid": 39827775,
+        "url": "https://fr.wiktionary.org/w/index.php?title=fort&oldid=39827775",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=fort&action=history",
+        "line_1_based": 298,
+        "reviewed_excerpt": "'''fort''' {{pron|fɔʁ|fr}} {{invariable|fr}} {{adverbe de manière|fr}}, {{adverbe de quantité|fr}}"
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "passed"
+    },
+    {
+      "sense_id": "fort-adv-forceful-action",
+      "frozen_row": 423,
+      "headword": "fort",
+      "pos": "ADV",
+      "field": "english",
+      "language": "en",
+      "accepted_text": "Strongly; with considerable force.",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "en_fort",
+        "revid": 93077866,
+        "url": "https://en.wiktionary.org/w/index.php?title=fort&oldid=93077866",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=fort&action=history",
+        "line_1_based": 408,
+        "reviewed_excerpt": "# [[strongly]]"
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "passed"
+    },
+    {
+      "sense_id": "fort-adv-forceful-action",
+      "frozen_row": 423,
+      "headword": "fort",
+      "pos": "ADV",
+      "field": "chinese",
+      "language": "zh",
+      "accepted_text": "用力地；很有力地。",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "en_fort",
+        "revid": 93077866,
+        "url": "https://en.wiktionary.org/w/index.php?title=fort&oldid=93077866",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=fort&action=history",
+        "line_1_based": 408,
+        "reviewed_excerpt": "# [[strongly]]"
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "passed"
+    },
+    {
+      "sense_id": "coeur-noun-heart-organ",
+      "frozen_row": 483,
+      "headword": "coeur",
+      "pos": "NOM",
+      "field": "french_definition",
+      "language": "fr",
+      "accepted_text": "Organe musculaire, creux et pulsatile assurant la circulation sanguine dans le corps humain ou animal.",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "fr_heart",
+        "revid": 39720190,
+        "url": "https://fr.wiktionary.org/w/index.php?title=c%C5%93ur&oldid=39720190",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=c%C5%93ur&action=history",
+        "line_1_based": 15,
+        "reviewed_excerpt": "# {{lexique|anatomie|fr}} [[organe|Organe]] [[musculaire]], [[creux]] et [[pulsatile]] [[assurer|assurant]] la [[circulation]] [[sanguin]]e dans le [[corps]] [[humain]] ou [[animal]]."
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "passed"
+    },
+    {
+      "sense_id": "coeur-noun-heart-organ",
+      "frozen_row": 483,
+      "headword": "coeur",
+      "pos": "NOM",
+      "field": "ipa",
+      "language": "und",
+      "accepted_text": "/kœʁ/",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "fr_heart",
+        "revid": 39720190,
+        "url": "https://fr.wiktionary.org/w/index.php?title=c%C5%93ur&oldid=39720190",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=c%C5%93ur&action=history",
+        "line_1_based": 14,
+        "reviewed_excerpt": "'''cœur''' {{pron|kœʁ|fr}} {{m}}"
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "passed"
+    },
+    {
+      "sense_id": "coeur-noun-heart-organ",
+      "frozen_row": 483,
+      "headword": "coeur",
+      "pos": "NOM",
+      "field": "english",
+      "language": "en",
+      "accepted_text": "Heart; the organ that circulates blood in a human or animal body.",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "fr_heart",
+        "revid": 39720190,
+        "url": "https://fr.wiktionary.org/w/index.php?title=c%C5%93ur&oldid=39720190",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=c%C5%93ur&action=history",
+        "line_1_based": 15,
+        "reviewed_excerpt": "# {{lexique|anatomie|fr}} [[organe|Organe]] [[musculaire]], [[creux]] et [[pulsatile]] [[assurer|assurant]] la [[circulation]] [[sanguin]]e dans le [[corps]] [[humain]] ou [[animal]]."
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "passed"
+    },
+    {
+      "sense_id": "coeur-noun-heart-organ",
+      "frozen_row": 483,
+      "headword": "coeur",
+      "pos": "NOM",
+      "field": "chinese",
+      "language": "zh",
+      "accepted_text": "心脏；推动人或动物体内血液循环的器官。",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "fr_heart",
+        "revid": 39720190,
+        "url": "https://fr.wiktionary.org/w/index.php?title=c%C5%93ur&oldid=39720190",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=c%C5%93ur&action=history",
+        "line_1_based": 15,
+        "reviewed_excerpt": "# {{lexique|anatomie|fr}} [[organe|Organe]] [[musculaire]], [[creux]] et [[pulsatile]] [[assurer|assurant]] la [[circulation]] [[sanguin]]e dans le [[corps]] [[humain]] ou [[animal]]."
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "passed"
+    },
+    {
+      "sense_id": "cote-noun-rib",
+      "frozen_row": 1911,
+      "headword": "côte",
+      "pos": "NOM",
+      "field": "french_definition",
+      "language": "fr",
+      "accepted_text": "Chacun des os qui forment la cage thoracique.",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "fr_cote",
+        "revid": 39813643,
+        "url": "https://fr.wiktionary.org/w/index.php?title=c%C3%B4te&oldid=39813643",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=c%C3%B4te&action=history",
+        "line_1_based": 22,
+        "reviewed_excerpt": "# {{lexique|anatomie|fr}} Chacun des [[os]] qui [[former|forment]] la [[cage thoracique]]."
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "passed"
+    },
+    {
+      "sense_id": "cote-noun-rib",
+      "frozen_row": 1911,
+      "headword": "côte",
+      "pos": "NOM",
+      "field": "ipa",
+      "language": "und",
+      "accepted_text": "/kot/",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "fr_cote",
+        "revid": 39813643,
+        "url": "https://fr.wiktionary.org/w/index.php?title=c%C3%B4te&oldid=39813643",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=c%C3%B4te&action=history",
+        "line_1_based": 9,
+        "reviewed_excerpt": "'''côte''' {{pron|kot|fr}} {{f}}"
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "passed"
+    },
+    {
+      "sense_id": "cote-noun-rib",
+      "frozen_row": 1911,
+      "headword": "côte",
+      "pos": "NOM",
+      "field": "english",
+      "language": "en",
+      "accepted_text": "Rib; one of the bones forming the rib cage.",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "fr_cote",
+        "revid": 39813643,
+        "url": "https://fr.wiktionary.org/w/index.php?title=c%C3%B4te&oldid=39813643",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=c%C3%B4te&action=history",
+        "line_1_based": 22,
+        "reviewed_excerpt": "# {{lexique|anatomie|fr}} Chacun des [[os]] qui [[former|forment]] la [[cage thoracique]]."
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "passed"
+    },
+    {
+      "sense_id": "cote-noun-rib",
+      "frozen_row": 1911,
+      "headword": "côte",
+      "pos": "NOM",
+      "field": "chinese",
+      "language": "zh",
+      "accepted_text": "肋骨；组成胸廓的骨头之一。",
+      "accepted_text_quality_status": "passed",
+      "exact_source": {
+        "source_id": "fr_cote",
+        "revid": 39813643,
+        "url": "https://fr.wiktionary.org/w/index.php?title=c%C3%B4te&oldid=39813643",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=c%C3%B4te&action=history",
+        "line_1_based": 22,
+        "reviewed_excerpt": "# {{lexique|anatomie|fr}} Chacun des [[os]] qui [[former|forment]] la [[cage thoracique]]."
+      },
+      "rights_eligibility_status": "passed_at_selected_text_boundary",
+      "draft_status": "passed"
+    }
+  ],
+  "usage": [
+    {
+      "sense_id": "etre-aux-compound-tense",
+      "frozen_row": 1,
+      "headword": "être",
+      "pos": "AUX",
+      "accepted_usage": "Compound-tense auxiliary used with a past participle; certain intransitive movement/change-of-state verbs and all pronominal verbs. Passive formation is a separate use.",
+      "accepted_usage_quality_status": "passed",
+      "language": "en",
+      "source_headword": "être"
+    },
+    {
+      "sense_id": "etre-noun-living-being",
+      "frozen_row": 2,
+      "headword": "être",
+      "pos": "NOM",
+      "accepted_usage": "Masculine noun: a living creature or organism.",
+      "accepted_usage_quality_status": "passed",
+      "language": "en",
+      "source_headword": "être"
+    },
+    {
+      "sense_id": "etre-verb-copula",
+      "frozen_row": 3,
+      "headword": "être",
+      "pos": "VER",
+      "accepted_usage": "Intransitive copular verb stating a subject's property or condition.",
+      "accepted_usage_quality_status": "passed",
+      "language": "en",
+      "source_headword": "être"
+    },
+    {
+      "sense_id": "avoir-aux-compound-tense",
+      "frozen_row": 4,
+      "headword": "avoir",
+      "pos": "AUX",
+      "accepted_usage": "Compound-tense auxiliary used with a past participle; can express anterior/completed actions. Some verbs require être instead.",
+      "accepted_usage_quality_status": "passed",
+      "language": "en",
+      "source_headword": "avoir"
+    },
+    {
+      "sense_id": "avoir-verb-possession",
+      "frozen_row": 5,
+      "headword": "avoir",
+      "pos": "VER",
+      "accepted_usage": "Transitive lexical verb: possessing or owning something.",
+      "accepted_usage_quality_status": "passed",
+      "language": "en",
+      "source_headword": "avoir"
+    },
+    {
+      "sense_id": "bien-adv-manner",
+      "frozen_row": 70,
+      "headword": "bien",
+      "pos": "ADV",
+      "accepted_usage": "Manner adverb: an action or result is satisfactory or correct.",
+      "accepted_usage_quality_status": "passed",
+      "language": "en",
+      "source_headword": "bien"
+    },
+    {
+      "sense_id": "bien-noun-possession",
+      "frozen_row": 71,
+      "headword": "bien",
+      "pos": "NOM",
+      "accepted_usage": "Masculine noun: a possession.",
+      "accepted_usage_quality_status": "passed",
+      "language": "en",
+      "source_headword": "bien"
+    },
+    {
+      "sense_id": "aujourdhui-adv-present-day",
+      "frozen_row": 360,
+      "headword": "aujourd'hui",
+      "pos": "ADV",
+      "accepted_usage": "Time adverb: the present calendar day.",
+      "accepted_usage_quality_status": "passed",
+      "language": "en",
+      "source_headword": "aujourd’hui"
+    },
+    {
+      "sense_id": "fort-adj-physical-strength",
+      "frozen_row": 422,
+      "headword": "fort",
+      "pos": "ADJ",
+      "accepted_usage": "Adjective: physical strength, as in strong people.",
+      "accepted_usage_quality_status": "passed",
+      "language": "en",
+      "source_headword": "fort"
+    },
+    {
+      "sense_id": "fort-adv-forceful-action",
+      "frozen_row": 423,
+      "headword": "fort",
+      "pos": "ADV",
+      "accepted_usage": "Manner adverb: an action performed with considerable force.",
+      "accepted_usage_quality_status": "passed",
+      "language": "en",
+      "source_headword": "fort"
+    },
+    {
+      "sense_id": "coeur-noun-heart-organ",
+      "frozen_row": 483,
+      "headword": "coeur",
+      "pos": "NOM",
+      "accepted_usage": "Masculine noun: the circulatory organ.",
+      "accepted_usage_quality_status": "passed",
+      "language": "en",
+      "source_headword": "cœur"
+    },
+    {
+      "sense_id": "cote-noun-rib",
+      "frozen_row": 1911,
+      "headword": "côte",
+      "pos": "NOM",
+      "accepted_usage": "Feminine noun: a rib of the rib cage.",
+      "accepted_usage_quality_status": "passed",
+      "language": "en",
+      "source_headword": "côte"
+    }
+  ],
+  "spelling_relations": [
+    {
+      "frozen_headword": "coeur",
+      "source_headword": "cœur",
+      "lexique_cgram": "NOM",
+      "source_id": "fr_coeur_relation",
+      "source_span": {
+        "line_1_based": 7,
+        "raw_source_excerpt": "# ''Variante typographique de'' [[cœur]]."
+      }
+    },
+    {
+      "frozen_headword": "aujourd'hui",
+      "source_headword": "aujourd’hui",
+      "lexique_cgram": "ADV",
+      "source_id": "fr_today_relation",
+      "source_span": {
+        "line_1_based": 1,
+        "raw_source_excerpt": "#REDIRECT [[aujourd’hui]]"
+      }
+    }
+  ]
+}

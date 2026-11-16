@@ -47,6 +47,8 @@ pnpm rust:fmt
 pnpm rust:check
 pnpm rust:test:build      # 先编译测试，避免将首次编译计入运行预算
 pnpm test:rust            # 真正执行后端测试，硬性 60 秒超时并终止进程树
+pnpm core:prepare         # 从逐字段独立复核的选编输入生成 D2 12 组只读试点及来源材料
+pnpm test:core            # 完整性、许可／署名材料、覆盖缺口及可复现转换检查
 pnpm mdict:test:build     # 独立 MDX/MDD 兼容探针；预编译可公开夹具检查
 pnpm test:mdict           # 实际查询与配对媒体／失败检查，同一 60 秒硬限
 pnpm wasm:build
@@ -80,7 +82,9 @@ Windows x64 语音开发小样可在构建后运行 `python -X utf8 scripts/pack
 
 应用支持 MDX 导入、持久顺序、多标签与按需正文。文件复制到 `Lexique-data/data/dictionaries/`，移出列表保留文件及学习记录；首个读取成功的词典默认选中，其他标签点击后读取。HTML 在无脚本、无同源权限的 iframe 中隔离显示，来源与同键记录分别保留，见 [#9 D1／D3 证据](docs/evidence/issue-9/README.md)。MDX/MDD 的[独立探针](tools/mdict-probe/README.md)及 [#3 支持矩阵](docs/evidence/issue-3/README.md)继续约束格式与许可；MDD 媒体和正文跳转尚未接入。
 
-Windows x64 开发包随包提供一份 [FreeDict 法英 0.4.1 MDX](resources/freedict-fra-eng-mdx-0.4.1/README.md)：原内容日期 2018-08-11，273,758 字节、8,505 条记录，GPL-2.0-or-later。它是有缺项的补充词典；内置法中小样及两项内置词典的注册保持。设置中另有八类、12 项自选来源／下载页链接，其他词典不随包或自动下载。两项内置词典可排序，15 份自定义 MDX 的容量保持；移出只适用于自定义词典。校验与重建入口为 `python -B -X utf8 scripts/freedict_mdx.py`，对应原始源、许可、作者和修改说明随包保留；[原生接入与打包证据](docs/evidence/d2-mdx/README.md)记录实际范围。完整默认词典／CEFR 继续按 D2 准入。
+Windows x64 开发包随包提供一份 [FreeDict 法英 0.4.1 MDX](resources/freedict-fra-eng-mdx-0.4.1/README.md)：原内容日期 2018-08-11，273,758 字节、8,505 条记录，GPL-2.0-or-later。它是有缺项的补充词典；内置法中小样的注册保持。核心、法中小样、法英补充词典均可排序，15 份自定义 MDX 的容量保持；移出只适用于自定义词典。设置中共九类、13 项来源入口，含一项随包核心材料入口及原有八类、12 项自选来源／下载页；其他词典不随包或自动下载。校验与重建入口为 `python -B -X utf8 scripts/freedict_mdx.py`，对应原始源、许可、作者和修改说明随包保留；[原生接入与打包证据](docs/evidence/d2-mdx/README.md)记录原法英接入范围。完整默认词典／CEFR 继续按 D2 准入。
+
+[Lexique FR–EN–ZH](resources/core-pilot-79/README.md) 是 D2 的 12 组试点：从冻结的 4,087 个词元／词性组中，仅完成 12 组及其 48 项法语释义、IPA、英语、中文字段；4,075 组仍有缺项，学习者验收未运行。`pnpm core:prepare` 无需联网，以逐字段独立复核的选编输入生成只读 `target/desktop-core-pilot/core.sqlite3`、完整缺项清单和哈希报告。原生构建与两种 portable 包均保留 `dictionary/core-pilot-79/` 中的真实来源节选、当前及历史署名、原始 Lexique 说明、完整 CC BY-SA 4.0 法律文本、转换器和单独 MIT 代码许可。设置中的核心来源入口打开这个固定随包目录，材料缺失会显示错误。详情及字段修改记录见[来源说明](resources/core-pilot-79/NOTICES.md)；试点不代表完整 D2、CEFR 或 M5 准入完成。
 
 词频入口：`pnpm frequency:prepare`、`pnpm test:frequency`。固定 Lexique 3.83 完整源、CC BY-SA 4.0 法律原文及署名随仓库保存；准备到 `target/desktop-frequency-v1/`，缓存复用前验证输入、数据库和通知。生词本当前页批量读取最多 100 个词头，详情显示字幕词元／词性数值与来源；高／中／低／未知均有文字标签，资源失败保留笔记编辑及重试。词频不改变记录、FSRS 或选定音频，详见 [#57 证据](docs/evidence/issue-57/README.md)。
 

@@ -6,6 +6,7 @@ use rusqlite::Connection;
 use serde::{Deserialize, Serialize};
 
 pub mod conjugation;
+pub mod core;
 mod entry;
 pub mod frequency;
 pub mod mdx;
