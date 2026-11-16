@@ -123,6 +123,15 @@ packaging passed 16 regressions and the build copier passed two. The integrated
 browser subset passed 15 checks and the full Edge suite passed **387 / 387**.
 The production native release build and both real packager deliveries passed.
 
+The native route check verifies all four allowed local hosts and records denied
+external requests both at startup and after restore. A fresh v2 preview/restore
+using runner `e4d9e73a0ade0cde7d8be744b7900107797315b2` and the production
+executable above retained the complete four-field senses and provenance. It
+passed within the unchanged 60-second limit, with no external requests and zero
+remaining owned hosts, workers or helpers. Standards and spec review reports,
+the route regression logs and restore metadata are retained in `review/final/`;
+the native run is `native/restore-review-01/`.
+
 Complete local evidence is retained in the integration worktree at
 `C:/Users/inthe/IdeaProjects/lexique/target/d2-pilot-79/integration/target/issue-79/`:
 `automated/implementation/validation.md` and its 82 logs, `automated/ui/`,
