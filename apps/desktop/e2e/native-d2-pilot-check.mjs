@@ -94,7 +94,7 @@ function admitted(lookup, key) {
 function request(headword, suffix = headword.replaceAll(/[^a-z]/g, 'x')) {
   return { operation: `native-79-${suffix}`, headword, notes: `Note conservée : ${headword}.`, example_fr: 'Cet être est vivant.',
     example_zh: '这个生物是活的。', example_source: null, example_sense: headword === 'être' ? 1 : 0,
-    more_examples: [{ fr: 'Elle est calme.', zh: '她很平静。', source: null }], id: null, revision: null };
+    more_examples: [{ fr: 'Cet être a besoin d’eau.', zh: '这个生物需要水。', source: null }], id: null, revision: null };
 }
 
 async function save(headword, suffix) {
