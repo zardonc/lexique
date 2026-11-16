@@ -22,7 +22,7 @@ const fixture = await native24Fixture(resolve(resources), resolve(binary), resol
 const { destination } = fixture;
 await cp(resolve(conjugation), join(destination, 'conjugation'), { recursive: true });
 await cp(resolve(frequency), join(destination, 'frequency'), { recursive: true });
-const coreFile = join(destination, 'dictionary/core/core.sqlite3');
+const coreFile = join(destination, 'dictionary/core-pilot-79/core.sqlite3');
 const evidence = { scenario, checks: [], calls: [], externalRequests: [], pickers: [], networkBoundary: 'External WebView routes denied after native startup; whole-machine network denial unrun' };
 evidence.coreResourceBytes = (await stat(coreFile)).size;
 const model = join(destination, 'speech/assets/text_encoder.int8.onnx');
