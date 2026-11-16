@@ -647,7 +647,7 @@ mod tests {
         let manifest = BackupManifest {
             kind: "lexique-backup".into(),
             format_version: 1,
-            snapshot_version: 1,
+            snapshot_version: snapshot.snapshot_version,
             created_at: 1_794_564_000,
             application_version: "0.1.0".into(),
             counts: BackupCounts::from_snapshot(&snapshot),

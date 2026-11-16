@@ -1822,11 +1822,23 @@ fn ordinary_restore_binds_exact_device_mdx_keeps_shortcuts_and_frozen_sources() 
     let mut source_connection = Connection::open(&source.database.0).unwrap();
     let mut catalog_a = storage::read_dictionary_catalog(&source_connection).unwrap();
     assert_eq!(
-        catalog_a.entries[2].content_hash.as_deref(),
+        catalog_a
+            .entries
+            .iter()
+            .find(|entry| entry.id == "mdx-1")
+            .unwrap()
+            .content_hash
+            .as_deref(),
         Some(verbs_hash.as_str())
     );
     assert_eq!(
-        catalog_a.entries[3].content_hash.as_deref(),
+        catalog_a
+            .entries
+            .iter()
+            .find(|entry| entry.id == "mdx-2")
+            .unwrap()
+            .content_hash
+            .as_deref(),
         Some(other_hash.as_str())
     );
     catalog_a.next_id = 5;
@@ -1850,6 +1862,7 @@ fn ordinary_restore_binds_exact_device_mdx_keeps_shortcuts_and_frozen_sources() 
         "mdx-1",
         "mdx-3",
         "builtin",
+        "builtin-core",
     ]
     .map(String::from)
     .into();
