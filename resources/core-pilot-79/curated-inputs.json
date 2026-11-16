@@ -1,0 +1,1133 @@
+{
+  "schema": "lexique-core-pilot-curation-1",
+  "status": "independently_reviewed_curated_inputs",
+  "resource_admission": "requires_produced_resource_self_check",
+  "scope_manifest": "scope-manifest.csv",
+  "scope_denominator_groups": 4087,
+  "scope_denominator_headwords": 3773,
+  "selected_groups": 12,
+  "selected_senses": 12,
+  "selected_fields": 48,
+  "remaining_groups": 4075,
+  "content_license": "CC-BY-SA-4.0",
+  "complete_legal_text": "COPYING",
+  "rights_authorities": [
+    {
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "sections": [
+        "1(a)",
+        "2(a)(1)",
+        "2(a)(4)",
+        "2(a)(5)",
+        "3(a)",
+        "3(b)",
+        "4"
+      ]
+    },
+    {
+      "url": "https://foundation.wikimedia.org/w/index.php?title=Policy:Terms_of_Use&oldid=598588",
+      "sections": [
+        "7(a) licensing",
+        "7(b) attribution",
+        "7(c) imported text",
+        "7(g) reuse and external-source notices",
+        "7(h) modifications/additions and licensing notice"
+      ]
+    },
+    {
+      "url": "https://fr.wiktionary.org/w/index.php?title=Convention%3ADroit_d%E2%80%99auteur&oldid=38903168",
+      "assessment": "French contributor text CC BY-SA 4.0, with explicit external-source exceptions; exceptions are checked at selected spans."
+    },
+    {
+      "url": "https://en.wiktionary.org/w/index.php?title=Wiktionary%3ACopyrights&oldid=87545419",
+      "assessment": "Original-entry dual licence statement; its historical interpretation warns that it is outdated, so actual CC 4.0 terms and Wikimedia Terms control this review."
+    }
+  ],
+  "sources": [
+    {
+      "id": "fr_etre",
+      "edition": "fr",
+      "entry_language": "fr",
+      "title": "être",
+      "pageid": 231574,
+      "revid": 39860125,
+      "timestamp": "2026-09-05T16:07:45Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=%C3%AAtre&oldid=39860125",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=%C3%AAtre&action=history",
+      "attribution": "Wiktionnaire contributors",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "source_frame": "frwiktionary-20261001 fixed revision; extractor 19f9a3006a405fb7bfb40193dca41c7117a009a5",
+      "selected_text_review": "passed_for_selected_spans"
+    },
+    {
+      "id": "fr_avoir",
+      "edition": "fr",
+      "entry_language": "fr",
+      "title": "avoir",
+      "pageid": 586,
+      "revid": 39879166,
+      "timestamp": "2026-09-16T16:02:21Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=avoir&oldid=39879166",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=avoir&action=history",
+      "attribution": "Wiktionnaire contributors",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "source_frame": "frwiktionary-20261001 fixed revision; extractor 19f9a3006a405fb7bfb40193dca41c7117a009a5",
+      "selected_text_review": "passed_for_selected_spans"
+    },
+    {
+      "id": "fr_bien",
+      "edition": "fr",
+      "entry_language": "fr",
+      "title": "bien",
+      "pageid": 39120,
+      "revid": 39904513,
+      "timestamp": "2026-09-26T09:30:35Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=bien&oldid=39904513",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=bien&action=history",
+      "attribution": "Wiktionnaire contributors",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "source_frame": "frwiktionary-20261001 fixed revision; extractor 19f9a3006a405fb7bfb40193dca41c7117a009a5",
+      "selected_text_review": "passed_for_selected_spans"
+    },
+    {
+      "id": "fr_today",
+      "edition": "fr",
+      "entry_language": "fr",
+      "title": "aujourd’hui",
+      "pageid": 2363,
+      "revid": 39793601,
+      "timestamp": "2026-08-10T16:21:48Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=aujourd%E2%80%99hui&oldid=39793601",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=aujourd%E2%80%99hui&action=history",
+      "attribution": "Wiktionnaire contributors",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "source_frame": "frwiktionary-20261001 fixed revision; extractor 19f9a3006a405fb7bfb40193dca41c7117a009a5",
+      "selected_text_review": "passed_for_selected_spans"
+    },
+    {
+      "id": "fr_heart",
+      "edition": "fr",
+      "entry_language": "fr",
+      "title": "cœur",
+      "pageid": 4861,
+      "revid": 39720190,
+      "timestamp": "2026-08-01T01:02:47Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=c%C5%93ur&oldid=39720190",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=c%C5%93ur&action=history",
+      "attribution": "Wiktionnaire contributors",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "source_frame": "frwiktionary-20261001 fixed revision; extractor 19f9a3006a405fb7bfb40193dca41c7117a009a5",
+      "selected_text_review": "passed_for_selected_spans"
+    },
+    {
+      "id": "fr_cote",
+      "edition": "fr",
+      "entry_language": "fr",
+      "title": "côte",
+      "pageid": 137053,
+      "revid": 39813643,
+      "timestamp": "2026-08-18T18:22:20Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=c%C3%B4te&oldid=39813643",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=c%C3%B4te&action=history",
+      "attribution": "Wiktionnaire contributors",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "source_frame": "frwiktionary-20261001 fixed revision; extractor 19f9a3006a405fb7bfb40193dca41c7117a009a5",
+      "selected_text_review": "passed_for_selected_spans"
+    },
+    {
+      "id": "en_avoir",
+      "edition": "en",
+      "entry_language": "fr",
+      "title": "avoir",
+      "pageid": 22791,
+      "revid": 93678532,
+      "timestamp": "2026-10-19T09:25:07Z",
+      "fixed_url": "https://en.wiktionary.org/w/index.php?title=avoir&oldid=93678532",
+      "history_url": "https://en.wiktionary.org/w/index.php?title=avoir&action=history",
+      "attribution": "Wiktionary contributors",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "source_frame": "Fixed existing English-source revision, 2026-11-01 supplement cutoff",
+      "selected_text_review": "passed_for_selected_spans"
+    },
+    {
+      "id": "en_bien",
+      "edition": "en",
+      "entry_language": "fr",
+      "title": "bien",
+      "pageid": 8281,
+      "revid": 92967453,
+      "timestamp": "2026-09-28T13:08:40Z",
+      "fixed_url": "https://en.wiktionary.org/w/index.php?title=bien&oldid=92967453",
+      "history_url": "https://en.wiktionary.org/w/index.php?title=bien&action=history",
+      "attribution": "Wiktionary contributors",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "source_frame": "Fixed public MediaWiki revision at or before 2026-10-01",
+      "selected_text_review": "passed_for_selected_spans"
+    },
+    {
+      "id": "en_fort",
+      "edition": "en",
+      "entry_language": "fr",
+      "title": "fort",
+      "pageid": 70792,
+      "revid": 93077866,
+      "timestamp": "2026-09-30T01:58:37Z",
+      "fixed_url": "https://en.wiktionary.org/w/index.php?title=fort&oldid=93077866",
+      "history_url": "https://en.wiktionary.org/w/index.php?title=fort&action=history",
+      "attribution": "Wiktionary contributors",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "source_frame": "Fixed public MediaWiki revision at or before 2026-10-01",
+      "selected_text_review": "passed_for_selected_spans"
+    },
+    {
+      "id": "fr_fort",
+      "edition": "fr",
+      "entry_language": "fr",
+      "title": "fort",
+      "pageid": 9056,
+      "revid": 39827775,
+      "timestamp": "2026-08-24T14:41:06Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=fort&oldid=39827775",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=fort&action=history",
+      "attribution": "Wiktionnaire contributors",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "source_frame": "Fixed public MediaWiki revision at or before 2026-10-01",
+      "selected_text_review": "passed_for_selected_spans"
+    },
+    {
+      "id": "fr_coeur_relation",
+      "edition": "fr",
+      "entry_language": "fr",
+      "title": "coeur",
+      "pageid": 10731,
+      "revid": 39039380,
+      "timestamp": "2025-11-05T20:46:45Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=coeur&oldid=39039380",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=coeur&action=history",
+      "attribution": "Wiktionnaire contributors",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "source_frame": "Fixed public MediaWiki revision at or before 2026-10-01",
+      "selected_text_review": "passed_for_selected_spans"
+    },
+    {
+      "id": "fr_today_relation",
+      "edition": "fr",
+      "entry_language": "fr",
+      "title": "aujourd'hui",
+      "pageid": 15093,
+      "revid": 22836985,
+      "timestamp": "2017-05-02T10:35:48Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=aujourd'hui&oldid=22836985",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=aujourd'hui&action=history",
+      "attribution": "Wiktionnaire contributors",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "source_frame": "Fixed public MediaWiki revision at or before 2026-10-01",
+      "selected_text_review": "passed_for_selected_spans"
+    }
+  ],
+  "groups": [
+    {
+      "frozen_row": 1,
+      "headword": "être",
+      "lexique_cgram": "AUX",
+      "subtitle_lemma_per_million": "40411.43",
+      "subtitle_pos_per_million": "8074.24",
+      "senses": [
+        {
+          "sense_id": "etre-aux-compound-tense",
+          "source_headword": "être",
+          "use": "Compound-tense auxiliary used with a past participle; certain intransitive movement/change-of-state verbs and all pronominal verbs. Passive formation is a separate use.",
+          "excluded_uses": "Passive construction is a separate sense.",
+          "independent_review": "passed_after_exact_accepted_replacements",
+          "resource_admission": "requires_produced_resource_self_check",
+          "cefr": null,
+          "fields": {
+            "french_definition": {
+              "language": "fr",
+              "text": "Auxiliaire employé avec un participe passé pour former les temps composés de certains verbes intransitifs, souvent de mouvement ou de changement d’état, et de tous les verbes pronominaux.",
+              "source_id": "fr_etre",
+              "source_span": {
+                "line_1_based": 53,
+                "raw_source_excerpt": "# {{auxiliaire|fr}} Verbe [[auxiliaire]] servant à former les temps composés de certains verbes intransitifs indiquant un [[mouvement]] ou un changement d’état et tous les verbes [[réflexifs]]."
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "Scoped French adaptation by Lexique: removed wiki markup and clarified past-participle construction and the complete pronominal class, including reciprocal and essentially pronominal forms. Grammar facts corroborated by https://vitrinelinguistique.oqlf.gouv.qc.ca/24224/la-grammaire/le-verbe/auxiliaires/emploi-des-auxiliaires-avoir-et-etre; no OQLF prose copied.",
+              "independent_review": "passed"
+            },
+            "ipa": {
+              "language": "und",
+              "text": "/ɛtʁ/",
+              "source_id": "fr_etre",
+              "source_span": {
+                "line_1_based": 8,
+                "raw_source_excerpt": "'''être''' {{pron|ɛtʁ|fr}} {{i|fr}} {{conjugaison|fr|groupe=3}} {{lien pronominal|'|fr}}"
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "Selected the recorded headword IPA and added slash delimiters.",
+              "independent_review": "passed"
+            },
+            "english": {
+              "language": "en",
+              "text": "Auxiliary used with a past participle to form compound tenses of certain intransitive verbs, often expressing movement or a change of state, and of all pronominal verbs.",
+              "source_id": "fr_etre",
+              "source_span": {
+                "line_1_based": 53,
+                "raw_source_excerpt": "# {{auxiliaire|fr}} Verbe [[auxiliaire]] servant à former les temps composés de certains verbes intransitifs indiquant un [[mouvement]] ou un changement d’état et tous les verbes [[réflexifs]]."
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "Scoped English adaptation by Lexique: removed wiki markup and clarified past-participle construction and the complete pronominal class, including reciprocal and essentially pronominal forms. Grammar facts corroborated by https://vitrinelinguistique.oqlf.gouv.qc.ca/24224/la-grammaire/le-verbe/auxiliaires/emploi-des-auxiliaires-avoir-et-etre; no OQLF prose copied.",
+              "independent_review": "passed"
+            },
+            "chinese": {
+              "language": "zh",
+              "text": "助动词，与过去分词连用，构成某些不及物动词（常表示移动或状态变化）以及所有代词式动词的复合时态。",
+              "source_id": "fr_etre",
+              "source_span": {
+                "line_1_based": 53,
+                "raw_source_excerpt": "# {{auxiliaire|fr}} Verbe [[auxiliaire]] servant à former les temps composés de certains verbes intransitifs indiquant un [[mouvement]] ou un changement d’état et tous les verbes [[réflexifs]]."
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "Scoped Chinese adaptation by Lexique: removed wiki markup and clarified past-participle construction and the complete pronominal class, including reciprocal and essentially pronominal forms. Grammar facts corroborated by https://vitrinelinguistique.oqlf.gouv.qc.ca/24224/la-grammaire/le-verbe/auxiliaires/emploi-des-auxiliaires-avoir-et-etre; no OQLF prose copied.",
+              "independent_review": "passed"
+            }
+          },
+          "use_language": "en"
+        }
+      ]
+    },
+    {
+      "frozen_row": 2,
+      "headword": "être",
+      "lexique_cgram": "NOM",
+      "subtitle_lemma_per_million": "40411.43",
+      "subtitle_pos_per_million": "100.69",
+      "senses": [
+        {
+          "sense_id": "etre-noun-living-being",
+          "source_headword": "être",
+          "use": "Masculine noun: a living creature or organism.",
+          "excluded_uses": "Abstract existence, personality and rare essence senses.",
+          "independent_review": "passed_after_exact_accepted_replacements",
+          "resource_admission": "requires_produced_resource_self_check",
+          "cefr": null,
+          "fields": {
+            "french_definition": {
+              "language": "fr",
+              "text": "Organisme, créature vivante.",
+              "source_id": "fr_etre",
+              "source_span": {
+                "line_1_based": 343,
+                "raw_source_excerpt": "# [[organisme|Organisme]], [[créature]] [[vivant]]e."
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "Removed wiki markup from the selected definition; retained its complete selected sentence.",
+              "independent_review": "passed"
+            },
+            "ipa": {
+              "language": "und",
+              "text": "/ɛtʁ/",
+              "source_id": "fr_etre",
+              "source_span": {
+                "line_1_based": 335,
+                "raw_source_excerpt": "'''être''' {{pron|ɛtʁ|fr}} {{m}}"
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "Selected the recorded headword IPA and added slash delimiters.",
+              "independent_review": "passed"
+            },
+            "english": {
+              "language": "en",
+              "text": "A living being; an organism or creature.",
+              "source_id": "fr_etre",
+              "source_span": {
+                "line_1_based": 343,
+                "raw_source_excerpt": "# [[organisme|Organisme]], [[créature]] [[vivant]]e."
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "English translation and concise scope explanation of the selected French definition by Lexique.",
+              "independent_review": "passed"
+            },
+            "chinese": {
+              "language": "zh",
+              "text": "生物；有生命的个体。",
+              "source_id": "fr_etre",
+              "source_span": {
+                "line_1_based": 343,
+                "raw_source_excerpt": "# [[organisme|Organisme]], [[créature]] [[vivant]]e."
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "Chinese translation and concise scope explanation of the selected French definition by Lexique.",
+              "independent_review": "passed"
+            }
+          },
+          "use_language": "en"
+        }
+      ]
+    },
+    {
+      "frozen_row": 3,
+      "headword": "être",
+      "lexique_cgram": "VER",
+      "subtitle_lemma_per_million": "40411.43",
+      "subtitle_pos_per_million": "32236.5",
+      "senses": [
+        {
+          "sense_id": "etre-verb-copula",
+          "source_headword": "être",
+          "use": "Intransitive copular verb stating a subject's property or condition.",
+          "excluded_uses": "Location, existence, possession and auxiliary senses.",
+          "independent_review": "passed_after_exact_accepted_replacements",
+          "resource_admission": "requires_produced_resource_self_check",
+          "cefr": null,
+          "fields": {
+            "french_definition": {
+              "language": "fr",
+              "text": "Définir un état, une caractéristique du sujet.",
+              "source_id": "fr_etre",
+              "source_span": {
+                "line_1_based": 9,
+                "raw_source_excerpt": "# [[définir|Définir]] un [[état]], une [[caractéristique]] du [[sujet]]."
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "Removed wiki markup from the selected definition; retained its complete selected sentence. The subsequent grammar note is outside the selection.",
+              "independent_review": "passed"
+            },
+            "ipa": {
+              "language": "und",
+              "text": "/ɛtʁ/",
+              "source_id": "fr_etre",
+              "source_span": {
+                "line_1_based": 8,
+                "raw_source_excerpt": "'''être''' {{pron|ɛtʁ|fr}} {{i|fr}} {{conjugaison|fr|groupe=3}} {{lien pronominal|'|fr}}"
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "Selected the recorded headword IPA and added slash delimiters.",
+              "independent_review": "passed"
+            },
+            "english": {
+              "language": "en",
+              "text": "Be; used to state a property or condition of the subject.",
+              "source_id": "fr_etre",
+              "source_span": {
+                "line_1_based": 9,
+                "raw_source_excerpt": "# [[définir|Définir]] un [[état]], une [[caractéristique]] du [[sujet]]."
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "English translation and concise scope explanation of the selected French definition by Lexique.",
+              "independent_review": "passed"
+            },
+            "chinese": {
+              "language": "zh",
+              "text": "是；用于说明主语的状态或特征。",
+              "source_id": "fr_etre",
+              "source_span": {
+                "line_1_based": 9,
+                "raw_source_excerpt": "# [[définir|Définir]] un [[état]], une [[caractéristique]] du [[sujet]]."
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "Chinese translation and concise scope explanation of the selected French definition by Lexique.",
+              "independent_review": "passed"
+            }
+          },
+          "use_language": "en"
+        }
+      ]
+    },
+    {
+      "frozen_row": 4,
+      "headword": "avoir",
+      "lexique_cgram": "AUX",
+      "subtitle_lemma_per_million": "32134.75",
+      "subtitle_pos_per_million": "18559.22",
+      "senses": [
+        {
+          "sense_id": "avoir-aux-compound-tense",
+          "source_headword": "avoir",
+          "use": "Compound-tense auxiliary used with a past participle; can express anterior/completed actions. Some verbs require être instead.",
+          "excluded_uses": "Possession, age, sensations and avoir à + infinitive.",
+          "independent_review": "passed_after_exact_accepted_replacements",
+          "resource_admission": "requires_produced_resource_self_check",
+          "cefr": null,
+          "fields": {
+            "french_definition": {
+              "language": "fr",
+              "text": "Auxiliaire employé avec un participe passé pour former les temps composés, qui peuvent exprimer une action accomplie avant un moment de référence. Certains verbes demandent être comme auxiliaire.",
+              "source_id": "fr_avoir",
+              "source_span": {
+                "line_1_based": 107,
+                "raw_source_excerpt": "# {{auxiliaire|fr}} [[auxiliaire|Auxiliaire]] servant à former les [[temps composé]]s, signifiant le [[passé]], la [[complétion]] ou l’[[expérience]]. {{note}} Certains verbes demandent ''[[être]]'' comme auxiliaire."
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "Scoped French adaptation by Lexique: removed wiki markup and clarified past-participle construction, compound-tense anteriority including future reference times, and verbs requiring être instead. Grammar facts corroborated by https://vitrinelinguistique.oqlf.gouv.qc.ca/24224/la-grammaire/le-verbe/auxiliaires/emploi-des-auxiliaires-avoir-et-etre; no OQLF prose copied.",
+              "independent_review": "passed"
+            },
+            "ipa": {
+              "language": "und",
+              "text": "/a.vwaʁ/",
+              "source_id": "fr_avoir",
+              "source_span": {
+                "line_1_based": 7,
+                "raw_source_excerpt": "'''avoir''' {{pron|a.vwaʁ|a.vwɑʁ|fr}} {{t|fr}}, {{tr-dir|fr}} {{conjugaison|fr|groupe=3}} {{lien pronominal|'|fr}}"
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "Selected the recorded headword IPA and added slash delimiters.",
+              "independent_review": "passed"
+            },
+            "english": {
+              "language": "en",
+              "text": "Auxiliary used with a past participle to form compound tenses, which can express an action completed before a reference time. Some verbs require être instead.",
+              "source_id": "fr_avoir",
+              "source_span": {
+                "line_1_based": 107,
+                "raw_source_excerpt": "# {{auxiliaire|fr}} [[auxiliaire|Auxiliaire]] servant à former les [[temps composé]]s, signifiant le [[passé]], la [[complétion]] ou l’[[expérience]]. {{note}} Certains verbes demandent ''[[être]]'' comme auxiliaire."
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "Scoped English adaptation by Lexique: removed wiki markup and clarified past-participle construction, compound-tense anteriority including future reference times, and verbs requiring être instead. Grammar facts corroborated by https://vitrinelinguistique.oqlf.gouv.qc.ca/24224/la-grammaire/le-verbe/auxiliaires/emploi-des-auxiliaires-avoir-et-etre; no OQLF prose copied.",
+              "independent_review": "passed"
+            },
+            "chinese": {
+              "language": "zh",
+              "text": "助动词，与过去分词连用构成复合时态，可表示先于某个参照时间完成的动作。某些动词须用 être 作助动词。",
+              "source_id": "fr_avoir",
+              "source_span": {
+                "line_1_based": 107,
+                "raw_source_excerpt": "# {{auxiliaire|fr}} [[auxiliaire|Auxiliaire]] servant à former les [[temps composé]]s, signifiant le [[passé]], la [[complétion]] ou l’[[expérience]]. {{note}} Certains verbes demandent ''[[être]]'' comme auxiliaire."
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "Scoped Chinese adaptation by Lexique: removed wiki markup and clarified past-participle construction, compound-tense anteriority including future reference times, and verbs requiring être instead. Grammar facts corroborated by https://vitrinelinguistique.oqlf.gouv.qc.ca/24224/la-grammaire/le-verbe/auxiliaires/emploi-des-auxiliaires-avoir-et-etre; no OQLF prose copied.",
+              "independent_review": "passed"
+            }
+          },
+          "use_language": "en"
+        }
+      ]
+    },
+    {
+      "frozen_row": 5,
+      "headword": "avoir",
+      "lexique_cgram": "VER",
+      "subtitle_lemma_per_million": "32134.75",
+      "subtitle_pos_per_million": "13572.4",
+      "senses": [
+        {
+          "sense_id": "avoir-verb-possession",
+          "source_headword": "avoir",
+          "use": "Transitive lexical verb: possessing or owning something.",
+          "excluded_uses": "Acquisition/get, age, state/sensation and auxiliary uses.",
+          "independent_review": "passed_after_exact_accepted_replacements",
+          "resource_admission": "requires_produced_resource_self_check",
+          "cefr": null,
+          "fields": {
+            "french_definition": {
+              "language": "fr",
+              "text": "Posséder quelque chose.",
+              "source_id": "en_avoir",
+              "source_span": {
+                "line_1_based": 36,
+                "raw_source_excerpt": "# {{lb|fr|transitive}} to [[have]]; to own; to [[possess]]"
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "French translation and concise scope explanation of the selected English definition by Lexique. Selected only the possession portion.",
+              "independent_review": "passed"
+            },
+            "ipa": {
+              "language": "und",
+              "text": "/a.vwaʁ/",
+              "source_id": "fr_avoir",
+              "source_span": {
+                "line_1_based": 7,
+                "raw_source_excerpt": "'''avoir''' {{pron|a.vwaʁ|a.vwɑʁ|fr}} {{t|fr}}, {{tr-dir|fr}} {{conjugaison|fr|groupe=3}} {{lien pronominal|'|fr}}"
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "Selected the recorded headword IPA and added slash delimiters.",
+              "independent_review": "passed"
+            },
+            "english": {
+              "language": "en",
+              "text": "Have; own or possess something.",
+              "source_id": "en_avoir",
+              "source_span": {
+                "line_1_based": 36,
+                "raw_source_excerpt": "# {{lb|fr|transitive}} to [[have]]; to own; to [[possess]]"
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "Removed markup and selected the have/own/possess portion, retaining the transitive-object scope.",
+              "independent_review": "passed"
+            },
+            "chinese": {
+              "language": "zh",
+              "text": "有；拥有（某物）。",
+              "source_id": "en_avoir",
+              "source_span": {
+                "line_1_based": 36,
+                "raw_source_excerpt": "# {{lb|fr|transitive}} to [[have]]; to own; to [[possess]]"
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "Chinese translation and concise scope explanation of the selected English definition by Lexique. Selected only the possession portion.",
+              "independent_review": "passed"
+            }
+          },
+          "use_language": "en"
+        }
+      ]
+    },
+    {
+      "frozen_row": 70,
+      "headword": "bien",
+      "lexique_cgram": "ADV",
+      "subtitle_lemma_per_million": "4354.67",
+      "subtitle_pos_per_million": "4213.78",
+      "senses": [
+        {
+          "sense_id": "bien-adv-manner",
+          "source_headword": "bien",
+          "use": "Manner adverb: an action or result is satisfactory or correct.",
+          "excluded_uses": "Degree/intensifier, agreement/confirmation, adjective and noun uses.",
+          "independent_review": "passed_after_exact_accepted_replacements",
+          "resource_admission": "requires_produced_resource_self_check",
+          "cefr": null,
+          "fields": {
+            "french_definition": {
+              "language": "fr",
+              "text": "D’une manière satisfaisante ou correcte.",
+              "source_id": "en_bien",
+              "source_span": {
+                "line_1_based": 110,
+                "raw_source_excerpt": "# [[well]]"
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "French translation and concise scope explanation of the selected English definition by Lexique.",
+              "independent_review": "passed"
+            },
+            "ipa": {
+              "language": "und",
+              "text": "/bjɛ̃/",
+              "source_id": "fr_bien",
+              "source_span": {
+                "line_1_based": 9,
+                "raw_source_excerpt": "'''bien''' {{pron|bjɛ̃|fr}} {{invar}} ({{comparatif}} : {{lien|mieux|fr}})"
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "Selected the recorded headword IPA and added slash delimiters.",
+              "independent_review": "passed"
+            },
+            "english": {
+              "language": "en",
+              "text": "Well; in a satisfactory or correct manner.",
+              "source_id": "en_bien",
+              "source_span": {
+                "line_1_based": 110,
+                "raw_source_excerpt": "# [[well]]"
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "Removed markup and made the selected manner sense explicit.",
+              "independent_review": "passed"
+            },
+            "chinese": {
+              "language": "zh",
+              "text": "好；以令人满意或正确的方式。",
+              "source_id": "en_bien",
+              "source_span": {
+                "line_1_based": 110,
+                "raw_source_excerpt": "# [[well]]"
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "Chinese translation and concise scope explanation of the selected English definition by Lexique.",
+              "independent_review": "passed"
+            }
+          },
+          "use_language": "en"
+        }
+      ]
+    },
+    {
+      "frozen_row": 71,
+      "headword": "bien",
+      "lexique_cgram": "NOM",
+      "subtitle_lemma_per_million": "4354.67",
+      "subtitle_pos_per_million": "106.6",
+      "senses": [
+        {
+          "sense_id": "bien-noun-possession",
+          "source_headword": "bien",
+          "use": "Masculine noun: a possession.",
+          "excluded_uses": "Moral good/evil, commodity, archaic country estate and adverb uses.",
+          "independent_review": "passed_after_exact_accepted_replacements",
+          "resource_admission": "requires_produced_resource_self_check",
+          "cefr": null,
+          "fields": {
+            "french_definition": {
+              "language": "fr",
+              "text": "Ce qu’une personne possède.",
+              "source_id": "en_bien",
+              "source_span": {
+                "line_1_based": 150,
+                "raw_source_excerpt": "# a [[possession]]"
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "French translation and concise scope explanation of the selected English definition by Lexique.",
+              "independent_review": "passed"
+            },
+            "ipa": {
+              "language": "und",
+              "text": "/bjɛ̃/",
+              "source_id": "fr_bien",
+              "source_span": {
+                "line_1_based": 234,
+                "raw_source_excerpt": "'''bien''' {{pron|bjɛ̃|fr}} {{m}}"
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "Selected the recorded headword IPA and added slash delimiters.",
+              "independent_review": "passed"
+            },
+            "english": {
+              "language": "en",
+              "text": "A possession; something someone owns.",
+              "source_id": "en_bien",
+              "source_span": {
+                "line_1_based": 150,
+                "raw_source_excerpt": "# a [[possession]]"
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "Removed markup and added a concise explanation of possession.",
+              "independent_review": "passed"
+            },
+            "chinese": {
+              "language": "zh",
+              "text": "个人拥有的东西；所有物。",
+              "source_id": "en_bien",
+              "source_span": {
+                "line_1_based": 150,
+                "raw_source_excerpt": "# a [[possession]]"
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "Chinese translation and concise scope explanation of the selected English definition by Lexique.",
+              "independent_review": "passed"
+            }
+          },
+          "use_language": "en"
+        }
+      ]
+    },
+    {
+      "frozen_row": 360,
+      "headword": "aujourd'hui",
+      "lexique_cgram": "ADV",
+      "subtitle_lemma_per_million": "360.17",
+      "subtitle_pos_per_million": "360.17",
+      "senses": [
+        {
+          "sense_id": "aujourdhui-adv-present-day",
+          "source_headword": "aujourd’hui",
+          "use": "Time adverb: the present calendar day.",
+          "excluded_uses": "Nowadays/at present era and noun senses.",
+          "independent_review": "passed_after_exact_accepted_replacements",
+          "resource_admission": "requires_produced_resource_self_check",
+          "cefr": null,
+          "fields": {
+            "french_definition": {
+              "language": "fr",
+              "text": "À la date présente, ce jour même.",
+              "source_id": "fr_today",
+              "source_span": {
+                "line_1_based": 9,
+                "raw_source_excerpt": "# À la [[date]] [[présent]]e, ce [[jour]] [[même]]."
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "Removed wiki markup from the selected definition; retained its complete selected sentence.",
+              "independent_review": "passed"
+            },
+            "ipa": {
+              "language": "und",
+              "text": "/o.ʒuʁ.d‿ɥi/",
+              "source_id": "fr_today",
+              "source_span": {
+                "line_1_based": 8,
+                "raw_source_excerpt": "'''aujourd’hui''' {{pron|o.ʒuʁ.d‿ɥi|fr}} {{invar}} {{adverbe de temps|fr}}"
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "Selected the recorded headword IPA and added slash delimiters.",
+              "independent_review": "passed"
+            },
+            "english": {
+              "language": "en",
+              "text": "Today; this present day.",
+              "source_id": "fr_today",
+              "source_span": {
+                "line_1_based": 9,
+                "raw_source_excerpt": "# À la [[date]] [[présent]]e, ce [[jour]] [[même]]."
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "English translation and concise scope explanation of the selected French definition by Lexique.",
+              "independent_review": "passed"
+            },
+            "chinese": {
+              "language": "zh",
+              "text": "今天；当前这一天。",
+              "source_id": "fr_today",
+              "source_span": {
+                "line_1_based": 9,
+                "raw_source_excerpt": "# À la [[date]] [[présent]]e, ce [[jour]] [[même]]."
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "Chinese translation and concise scope explanation of the selected French definition by Lexique.",
+              "independent_review": "passed"
+            }
+          },
+          "use_language": "en"
+        }
+      ]
+    },
+    {
+      "frozen_row": 422,
+      "headword": "fort",
+      "lexique_cgram": "ADJ",
+      "subtitle_lemma_per_million": "280.68",
+      "subtitle_pos_per_million": "95.28",
+      "senses": [
+        {
+          "sense_id": "fort-adj-physical-strength",
+          "source_headword": "fort",
+          "use": "Adjective: physical strength, as in strong people.",
+          "excluded_uses": "Skilled/fort en, supported by/fort de, intensity, size and adverb senses.",
+          "independent_review": "passed_after_exact_accepted_replacements",
+          "resource_admission": "requires_produced_resource_self_check",
+          "cefr": null,
+          "fields": {
+            "french_definition": {
+              "language": "fr",
+              "text": "Qui a beaucoup de force physique.",
+              "source_id": "en_fort",
+              "source_span": {
+                "line_1_based": 360,
+                "raw_source_excerpt": "# [[strong]]; [[powerful]]"
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "French translation and concise scope explanation of the selected English definition by Lexique. Narrowed to physical strength supported by the source's two adjacent examples.",
+              "independent_review": "passed"
+            },
+            "ipa": {
+              "language": "und",
+              "text": "/fɔʁ/",
+              "source_id": "fr_fort",
+              "source_span": {
+                "line_1_based": 9,
+                "raw_source_excerpt": "'''fort''' {{pron|fɔʁ|fr}}"
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "Selected the recorded headword IPA and added slash delimiters.",
+              "independent_review": "passed"
+            },
+            "english": {
+              "language": "en",
+              "text": "Physically strong; robust.",
+              "source_id": "en_fort",
+              "source_span": {
+                "line_1_based": 360,
+                "raw_source_excerpt": "# [[strong]]; [[powerful]]"
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "Removed markup and narrowed the strong/powerful sense to physical strength.",
+              "independent_review": "passed"
+            },
+            "chinese": {
+              "language": "zh",
+              "text": "强壮的；体力强的。",
+              "source_id": "en_fort",
+              "source_span": {
+                "line_1_based": 360,
+                "raw_source_excerpt": "# [[strong]]; [[powerful]]"
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "Chinese translation and concise scope explanation of the selected English definition by Lexique. Narrowed to physical strength.",
+              "independent_review": "passed"
+            }
+          },
+          "scope_evidence": [
+            {
+              "source_id": "en_fort",
+              "source_span": {
+                "line_1_based": 361,
+                "raw_source_excerpt": "#: {{uxi|fr|Arnie est '''fort'''.|t=Arnie is '''strong'''.}}"
+              }
+            },
+            {
+              "source_id": "en_fort",
+              "source_span": {
+                "line_1_based": 362,
+                "raw_source_excerpt": "#: {{uxi|fr|hommes '''forts'''|t='''strong''' men}}"
+              }
+            }
+          ],
+          "use_language": "en"
+        }
+      ]
+    },
+    {
+      "frozen_row": 423,
+      "headword": "fort",
+      "lexique_cgram": "ADV",
+      "subtitle_lemma_per_million": "280.68",
+      "subtitle_pos_per_million": "171.91",
+      "senses": [
+        {
+          "sense_id": "fort-adv-forceful-action",
+          "source_headword": "fort",
+          "use": "Manner adverb: an action performed with considerable force.",
+          "excluded_uses": "Much/a lot, very before adjectives/adverbs, and adjective/noun senses.",
+          "independent_review": "passed_after_exact_accepted_replacements",
+          "resource_admission": "requires_produced_resource_self_check",
+          "cefr": null,
+          "fields": {
+            "french_definition": {
+              "language": "fr",
+              "text": "Avec beaucoup de force, pour décrire une action.",
+              "source_id": "en_fort",
+              "source_span": {
+                "line_1_based": 408,
+                "raw_source_excerpt": "# [[strongly]]"
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "French translation and concise scope explanation of the selected English definition by Lexique.",
+              "independent_review": "passed"
+            },
+            "ipa": {
+              "language": "und",
+              "text": "/fɔʁ/",
+              "source_id": "fr_fort",
+              "source_span": {
+                "line_1_based": 298,
+                "raw_source_excerpt": "'''fort''' {{pron|fɔʁ|fr}} {{invariable|fr}} {{adverbe de manière|fr}}, {{adverbe de quantité|fr}}"
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "Selected the recorded headword IPA and added slash delimiters.",
+              "independent_review": "passed"
+            },
+            "english": {
+              "language": "en",
+              "text": "Strongly; with considerable force.",
+              "source_id": "en_fort",
+              "source_span": {
+                "line_1_based": 408,
+                "raw_source_excerpt": "# [[strongly]]"
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "Removed markup and made the selected forceful-action sense explicit.",
+              "independent_review": "passed"
+            },
+            "chinese": {
+              "language": "zh",
+              "text": "用力地；很有力地。",
+              "source_id": "en_fort",
+              "source_span": {
+                "line_1_based": 408,
+                "raw_source_excerpt": "# [[strongly]]"
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "Chinese translation and concise scope explanation of the selected English definition by Lexique.",
+              "independent_review": "passed"
+            }
+          },
+          "use_language": "en"
+        }
+      ]
+    },
+    {
+      "frozen_row": 483,
+      "headword": "coeur",
+      "lexique_cgram": "NOM",
+      "subtitle_lemma_per_million": "239.97",
+      "subtitle_pos_per_million": "239.97",
+      "senses": [
+        {
+          "sense_id": "coeur-noun-heart-organ",
+          "source_headword": "cœur",
+          "use": "Masculine noun: the circulatory organ.",
+          "excluded_uses": "Emotion, courage, shape, cards, center and other figurative senses.",
+          "independent_review": "passed_after_exact_accepted_replacements",
+          "resource_admission": "requires_produced_resource_self_check",
+          "cefr": null,
+          "fields": {
+            "french_definition": {
+              "language": "fr",
+              "text": "Organe musculaire, creux et pulsatile assurant la circulation sanguine dans le corps humain ou animal.",
+              "source_id": "fr_heart",
+              "source_span": {
+                "line_1_based": 15,
+                "raw_source_excerpt": "# {{lexique|anatomie|fr}} [[organe|Organe]] [[musculaire]], [[creux]] et [[pulsatile]] [[assurer|assurant]] la [[circulation]] [[sanguin]]e dans le [[corps]] [[humain]] ou [[animal]]."
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "Removed wiki markup from the selected definition; retained its complete selected sentence.",
+              "independent_review": "passed"
+            },
+            "ipa": {
+              "language": "und",
+              "text": "/kœʁ/",
+              "source_id": "fr_heart",
+              "source_span": {
+                "line_1_based": 14,
+                "raw_source_excerpt": "'''cœur''' {{pron|kœʁ|fr}} {{m}}"
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "Selected the recorded headword IPA and added slash delimiters.",
+              "independent_review": "passed"
+            },
+            "english": {
+              "language": "en",
+              "text": "Heart; the organ that circulates blood in a human or animal body.",
+              "source_id": "fr_heart",
+              "source_span": {
+                "line_1_based": 15,
+                "raw_source_excerpt": "# {{lexique|anatomie|fr}} [[organe|Organe]] [[musculaire]], [[creux]] et [[pulsatile]] [[assurer|assurant]] la [[circulation]] [[sanguin]]e dans le [[corps]] [[humain]] ou [[animal]]."
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "English translation and concise scope explanation of the selected French definition by Lexique.",
+              "independent_review": "passed"
+            },
+            "chinese": {
+              "language": "zh",
+              "text": "心脏；推动人或动物体内血液循环的器官。",
+              "source_id": "fr_heart",
+              "source_span": {
+                "line_1_based": 15,
+                "raw_source_excerpt": "# {{lexique|anatomie|fr}} [[organe|Organe]] [[musculaire]], [[creux]] et [[pulsatile]] [[assurer|assurant]] la [[circulation]] [[sanguin]]e dans le [[corps]] [[humain]] ou [[animal]]."
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "Chinese translation and concise scope explanation of the selected French definition by Lexique.",
+              "independent_review": "passed"
+            }
+          },
+          "use_language": "en"
+        }
+      ]
+    },
+    {
+      "frozen_row": 1911,
+      "headword": "côte",
+      "lexique_cgram": "NOM",
+      "subtitle_lemma_per_million": "35.16",
+      "subtitle_pos_per_million": "35.16",
+      "senses": [
+        {
+          "sense_id": "cote-noun-rib",
+          "source_headword": "côte",
+          "use": "Feminine noun: a rib of the rib cage.",
+          "excluded_uses": "Slope, coast, plant rib, fabric ridge and other senses; cote and côté remain distinct.",
+          "independent_review": "passed_after_exact_accepted_replacements",
+          "resource_admission": "requires_produced_resource_self_check",
+          "cefr": null,
+          "fields": {
+            "french_definition": {
+              "language": "fr",
+              "text": "Chacun des os qui forment la cage thoracique.",
+              "source_id": "fr_cote",
+              "source_span": {
+                "line_1_based": 22,
+                "raw_source_excerpt": "# {{lexique|anatomie|fr}} Chacun des [[os]] qui [[former|forment]] la [[cage thoracique]]."
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "Removed wiki markup from the selected definition; retained its complete selected sentence.",
+              "independent_review": "passed"
+            },
+            "ipa": {
+              "language": "und",
+              "text": "/kot/",
+              "source_id": "fr_cote",
+              "source_span": {
+                "line_1_based": 9,
+                "raw_source_excerpt": "'''côte''' {{pron|kot|fr}} {{f}}"
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "Selected the recorded headword IPA and added slash delimiters.",
+              "independent_review": "passed"
+            },
+            "english": {
+              "language": "en",
+              "text": "Rib; one of the bones forming the rib cage.",
+              "source_id": "fr_cote",
+              "source_span": {
+                "line_1_based": 22,
+                "raw_source_excerpt": "# {{lexique|anatomie|fr}} Chacun des [[os]] qui [[former|forment]] la [[cage thoracique]]."
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "English translation and concise scope explanation of the selected French definition by Lexique.",
+              "independent_review": "passed"
+            },
+            "chinese": {
+              "language": "zh",
+              "text": "肋骨；组成胸廓的骨头之一。",
+              "source_id": "fr_cote",
+              "source_span": {
+                "line_1_based": 22,
+                "raw_source_excerpt": "# {{lexique|anatomie|fr}} Chacun des [[os]] qui [[former|forment]] la [[cage thoracique]]."
+              },
+              "content_license": "CC-BY-SA-4.0",
+              "modification": "Chinese translation and concise scope explanation of the selected French definition by Lexique.",
+              "independent_review": "passed"
+            }
+          },
+          "use_language": "en"
+        }
+      ]
+    }
+  ],
+  "spelling_relations": [
+    {
+      "frozen_headword": "coeur",
+      "source_headword": "cœur",
+      "lexique_cgram": "NOM",
+      "relationship": "explicit typographic variant",
+      "source_id": "fr_coeur_relation",
+      "source_span": {
+        "line_1_based": 7,
+        "raw_source_excerpt": "# ''Variante typographique de'' [[cœur]]."
+      },
+      "independent_review": "passed_after_exact_accepted_metadata",
+      "scope": "Only the selected heart-organ NOM sense; the frozen headword remains coeur."
+    },
+    {
+      "frozen_headword": "aujourd'hui",
+      "source_headword": "aujourd’hui",
+      "lexique_cgram": "ADV",
+      "relationship": "explicit hard redirect",
+      "source_id": "fr_today_relation",
+      "source_span": {
+        "line_1_based": 1,
+        "raw_source_excerpt": "#REDIRECT [[aujourd’hui]]"
+      },
+      "independent_review": "passed_after_exact_accepted_metadata",
+      "scope": "Only the selected present-calendar-day ADV sense; the frozen ASCII-apostrophe spelling remains unchanged."
+    }
+  ],
+  "authorship_boundary_evidence": "selected-source-context.json",
+  "material_limits": [
+    "Twelve selected modern everyday senses in twelve frozen groups; 4,075 of 4,087 groups remain incomplete.",
+    "No CEFR labels, other senses, general spelling folding or whole upstream pages are admitted.",
+    "Independent field review is complete after exact accepted corrections; learner acceptance has not been run.",
+    "Preparation self-check admits only the produced pilot resource; wider D2, platform and release gates remain open."
+  ],
+  "content_version": "pilot-79-v1",
+  "independent_review": {
+    "date": "2026-11-15",
+    "kind": "separate_independent_field_review",
+    "independence": "Reviewer is separate from the source draft author/source explorer and application implementer.",
+    "accepted_fields": 48,
+    "required_exact_replacements_applied": 6,
+    "learner_acceptance": {
+      "status": "not_run",
+      "accepted": false
+    }
+  }
+}

@@ -13,6 +13,7 @@ import zipfile
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from prepare_speech import stage
 from freedict_mdx import verify
+from core_pilot import MATERIALS, read_json
 
 
 def package(root: Path, output_directory: Path | None = None, architecture: str = "x64",
@@ -48,6 +49,22 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
     dictionary = release / "dictionary/dictionary.sqlite3"
     if hashlib.sha256(dictionary.read_bytes()).hexdigest() != report["sqlite_sha256"]:
         raise ValueError("Release dictionary does not match the prepared resource")
+    core_report_path = root / "target/desktop-core-pilot/report.json"
+    core_report = read_json(core_report_path)
+    core = release / "dictionary/core-pilot-79"
+    core_names = {*MATERIALS, "input-checksums.json", "LICENSE-MIT", "core_pilot.py", "coverage.json"}
+    if (core_report.get("format_version") != 1 or core_report.get("content_version") != "pilot-79-v1"
+            or not isinstance(core_report.get("inputs"), dict) or set(core_report["inputs"]) != core_names):
+        raise ValueError("Prepared core report must name all reviewed materials")
+    if (core / "report.json").read_bytes() != core_report_path.read_bytes():
+        raise ValueError("Release core report does not match the prepared resource")
+    core_bytes = (core / "core.sqlite3").read_bytes()
+    if (hashlib.sha256(core_bytes).hexdigest() != core_report["sqlite_sha256"]
+            or len(core_bytes) != core_report["sqlite_bytes"]):
+        raise ValueError("Release core dictionary does not match the prepared resource")
+    for filename, expected in core_report["inputs"].items():
+        if hashlib.sha256((core / filename).read_bytes()).hexdigest() != expected:
+            raise ValueError(f"Release core source or notice differs: {filename}")
     conjugation_report = json.loads((root / "target/desktop-conjugation-v6-stats/report.json").read_text())
     conjugation = release / "conjugation"
     if hashlib.sha256((conjugation / "conjugation.sqlite3").read_bytes()).hexdigest() != conjugation_report["sqlite_sha256"]:
@@ -71,6 +88,10 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
     shutil.copy2(executable, output / "Lexique.exe")
     shutil.copytree(root / "resources/freedict-fra-zho-2025.11.23", output / "dictionary")
     shutil.copy2(dictionary, output / "dictionary/dictionary.sqlite3")
+    core_output = output / "dictionary/core-pilot-79"
+    core_output.mkdir()
+    for filename in ("core.sqlite3", "report.json", *sorted(core_names)):
+        shutil.copy2(core / filename, core_output / filename)
     shutil.copytree(root / "resources/freedict-fra-eng-mdx-0.4.1",
                     output / "dictionary/freedict-fra-eng-mdx")
     shutil.copy2(root / "scripts/freedict_mdx.py",
@@ -102,6 +123,11 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
         "This sample provides FreeDict fra-zho lookup and M1 vocabulary notes with explicit save,\n"
         "search, sorting and restart recovery. Saved words can be added to two review cards;\n"
         "review scoring and card progress survive restart. A full dictionary is not included.\n"
+        "Lexique FR–EN–ZH is a reviewed pilot: 12 of 4,087 frozen lemma/POS groups.\n"
+        "Its four fields and English usage notes, selected source excerpts, attribution and\n"
+        "CC BY-SA 4.0 license are in dictionary/core-pilot-79/. The converter has a separate MIT license.\n"
+        "Settings opens these bundled source materials offline. 4,075 groups remain incomplete;\n"
+        "learner acceptance and the full D2 resource are not complete.\n"
         "Selection shortcut: Ctrl+Alt+Shift+D. Screen OCR shortcut: Ctrl+Alt+Shift+O.\n"
         "Both shortcuts can be changed in Settings. Selection and OCR enter the Translation\n"
         "input, retaining the first 5,000 Unicode characters; dictionary lookup is explicit.\n"

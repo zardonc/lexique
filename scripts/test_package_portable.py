@@ -44,6 +44,24 @@ class PortableTests(unittest.TestCase):
         self.write("target/desktop-dictionary-sample/report.json", json.dumps({
             "sqlite_sha256": hashlib.sha256(b"verified dictionary").hexdigest(),
         }).encode())
+        core_materials = ("COPYING", "core_pilot.py", "coverage.json", "curated-inputs.json",
+                          "field-review.json", "input-checksums.json", "lexique-provenance.json",
+                          "LEXIQUE-UPSTREAM-README.txt", "LICENSE-MIT", "MEMBERSHIP-NOTICES.txt",
+                          "NOTICES.md", "README.md", "scope-manifest.csv",
+                          "selected-source-context.json", "selected-source-excerpts.json")
+        self.write("target/release/dictionary/core-pilot-79/core.sqlite3", b"reviewed core dictionary")
+        core_inputs = {}
+        for filename in core_materials:
+            data = f"Reviewed core material: {filename}".encode()
+            self.write(f"target/release/dictionary/core-pilot-79/{filename}", data)
+            core_inputs[filename] = hashlib.sha256(data).hexdigest()
+        core_report = json.dumps({
+            "format_version": 1, "content_version": "pilot-79-v1",
+            "sqlite_sha256": hashlib.sha256(b"reviewed core dictionary").hexdigest(),
+            "sqlite_bytes": len(b"reviewed core dictionary"), "inputs": core_inputs,
+        }).encode()
+        self.write("target/desktop-core-pilot/report.json", core_report)
+        self.write("target/release/dictionary/core-pilot-79/report.json", core_report)
         self.write("apps/desktop/src-tauri/tauri.conf.json", b'{"version":"0.1.0"}')
         self.write("resources/freedict-fra-zho-2025.11.23/COPYING", b"original resource license")
         self.write("resources/tesseract-fra/README.md", b"fixed offline OCR sources")
@@ -71,6 +89,59 @@ class PortableTests(unittest.TestCase):
     def files(self):
         return {p.relative_to(self.root).as_posix(): p.read_bytes()
                 for p in self.root.rglob("*") if p.is_file()}
+
+    def test_reviewed_core_and_offline_materials_are_delivered_without_unrelated_files(self):
+        self.write("target/release/dictionary/core-pilot-79/private-extra.txt", b"unrelated private input")
+        result = package(self.root)
+        report = json.loads((self.root / "target/desktop-core-pilot/report.json").read_text())
+        with zipfile.ZipFile(result["archive"]) as zipped:
+            prefix = self.name + "/dictionary/core-pilot-79/"
+            expected = {"core.sqlite3", "report.json", *report["inputs"]}
+            self.assertEqual({path.removeprefix(prefix) for path in zipped.namelist()
+                              if path.startswith(prefix)}, expected)
+            self.assertEqual(zipped.read(prefix + "core.sqlite3"), b"reviewed core dictionary")
+            for filename, digest in report["inputs"].items():
+                self.assertEqual(hashlib.sha256(zipped.read(prefix + filename)).hexdigest(), digest)
+            description = zipped.read(self.name + "/README.txt").decode("utf-8")
+            self.assertIn("12 of 4,087", description)
+            self.assertIn("dictionary/core-pilot-79/", description)
+
+    def test_missing_or_changed_core_resource_and_notices_prevent_delivery(self):
+        core = self.root / "target/release/dictionary/core-pilot-79"
+        for filename in ("core.sqlite3", "COPYING", "curated-inputs.json", "NOTICES.md", "report.json"):
+            path = core / filename
+            original = path.read_bytes()
+            for replacement in (None, b"unexpected core material"):
+                with self.subTest(filename=filename, missing=replacement is None):
+                    if replacement is None:
+                        path.unlink()
+                    else:
+                        path.write_bytes(replacement)
+                    before = self.files()
+                    with self.assertRaises((ValueError, FileNotFoundError)):
+                        package(self.root)
+                    self.assertEqual(self.files(), before)
+                    self.assertFalse(self.output.exists())
+                    path.write_bytes(original)
+
+    def test_core_report_cannot_omit_materials_or_select_arbitrary_paths(self):
+        prepared = self.root / "target/desktop-core-pilot/report.json"
+        bundled = self.root / "target/release/dictionary/core-pilot-79/report.json"
+        original = prepared.read_bytes()
+        for filename in ("COPYING", "../../private.txt"):
+            with self.subTest(filename=filename):
+                report = json.loads(original)
+                report["inputs"].pop("COPYING")
+                if filename != "COPYING":
+                    report["inputs"][filename] = hashlib.sha256(b"private").hexdigest()
+                data = json.dumps(report).encode()
+                prepared.write_bytes(data)
+                bundled.write_bytes(data)
+                before = self.files()
+                with self.assertRaisesRegex(ValueError, "core.*materials"):
+                    package(self.root)
+                self.assertEqual(self.files(), before)
+                self.assertFalse(self.output.exists())
 
     def test_backup_dependency_notices_are_delivered_unchanged(self):
         result = package(self.root)
@@ -228,6 +299,8 @@ class PortableTests(unittest.TestCase):
         struct.pack_into("<H", binary, 0x84, 0xAA64)
         self.write("target/aarch64-pc-windows-msvc/release/lexique-desktop.exe", binary)
         self.write("target/aarch64-pc-windows-msvc/release/dictionary/dictionary.sqlite3", b"verified dictionary")
+        shutil.copytree(self.root / "target/release/dictionary/core-pilot-79",
+                        self.root / "target/aarch64-pc-windows-msvc/release/dictionary/core-pilot-79")
         self.write("target/aarch64-pc-windows-msvc/release/conjugation/conjugation.sqlite3", b"verified conjugation")
         self.write("target/aarch64-pc-windows-msvc/release/conjugation/LICENSE-LGPLLR", b"source forms license")
         self.write("target/aarch64-pc-windows-msvc/release/conjugation/grammalecte-2.3.0/LICENSE-GPL3", b"metadata license")
@@ -240,6 +313,7 @@ class PortableTests(unittest.TestCase):
         with zipfile.ZipFile(result["archive"]) as zipped:
             prefix = "Lexique-0.1.0-windows-arm64-portable/"
             self.assertEqual(zipped.read(prefix + "dictionary/dictionary.sqlite3"), b"verified dictionary")
+            self.assertEqual(zipped.read(prefix + "dictionary/core-pilot-79/core.sqlite3"), b"reviewed core dictionary")
             self.assertIn("Windows 11 ARM64", zipped.read(prefix + "README.txt").decode("utf-8"))
             self.assertFalse(any("Lexique-data/" in name for name in zipped.namelist()))
 

@@ -45,13 +45,19 @@ test('optional links dispatch a known resource ID and leave launcher failures vi
   expect(external).toEqual([]);
 });
 
-test('the directory shows eight categories, format limits and three languages at narrow width', async ({ page }, testInfo) => {
-  await nativeFixture(page, { dictionary_settings: [{ value: bundled }] });
+test('the directory shows nine categories, bundled notices, format limits and three languages at narrow width', async ({ page }, testInfo) => {
+  await nativeFixture(page, { dictionary_settings: [{ value: bundled }], dictionary_resource_open: [{ value: null }] });
   await page.goto('/');
   await page.getByRole('button', { name: '设置', exact: true }).click();
   const directory = page.locator('.dictionary-resources');
-  await expect(directory.locator('details')).toHaveCount(8);
-  await expect(directory.locator('a')).toHaveCount(12);
+  await expect(directory.locator('details')).toHaveCount(9);
+  await expect(directory.locator('a')).toHaveCount(13);
+  const core = directory.getByRole('link', { name: '查看随包来源／许可: Lexique FR–EN–ZH', exact: true });
+  await expect(core).toBeVisible();
+  await expect(core).toHaveAttribute('href', 'https://github.com/zardonc/lexique/tree/main/resources/core-pilot-79');
+  await core.click();
+  expect(await page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'dictionary_resource_open').map((call) => call.args))).toEqual([{ id: 'builtin-core' }]);
+  await expect(directory).toContainText('4,075 组仍未完成');
   await directory.getByText('法语—中文', { exact: true }).click();
   await expect(directory).toContainText('Casio 数据的具体版次未确认');
   await expect(directory.getByText('StarDict', { exact: true })).toBeVisible();
@@ -63,9 +69,11 @@ test('the directory shows eight categories, format limits and three languages at
   await page.locator('.topbar select').first().selectOption('en');
   await expect(directory.getByRole('heading', { name: 'Additional dictionaries and examples', exact: true })).toBeVisible();
   await expect(directory).toContainText('MDD media are unavailable');
+  await expect(directory.getByRole('link', { name: 'Open bundled sources / licenses: Lexique FR–EN–ZH', exact: true })).toBeVisible();
   await page.locator('.topbar select').first().selectOption('fr');
   await expect(directory.getByRole('heading', { name: 'Dictionnaires et exemples supplémentaires', exact: true })).toBeVisible();
   await expect(directory).toContainText('médias MDD indisponibles');
+  await expect(directory.getByRole('link', { name: 'Ouvrir les sources / licences intégrées: Lexique FR–EN–ZH', exact: true })).toBeVisible();
   await page.setViewportSize({ width: 640, height: 900 });
   await expect(directory).toBeVisible();
   expect(await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth)).toBe(false);

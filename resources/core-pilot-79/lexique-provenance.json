@@ -1,0 +1,16 @@
+{
+  "title": "Lexique 3.83",
+  "version": "3.83",
+  "attribution": "Boris New and Christophe Pallier; corpus contributors and publications are listed in UPSTREAM-README.txt.",
+  "license": "CC BY-SA 4.0",
+  "source_url": "https://www.lexique.org/databases/Lexique383/Lexique383.tsv",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source_bytes": 25850780,
+  "source_sha256": "637ba37a767a66679c48371d673ece50cbf541b49a4e40e598963d4f3fbce52b",
+  "archive_sha256": "9bb0eef59aca467d22e75bf73a936cba31832719045274e5188586f8c8ba76ef",
+  "documentation_commit": "298010e765c49673317aa5b5c3b068df0351725a",
+  "metric": "freqlemfilms2",
+  "modification": "The original TSV is compressed without changes. The derived SQLite resource NFC-normalizes lemmas, deduplicates lemma/POS frequencies, sums distinct POS values, and indexes original surface-form mappings. Missing, invalid and conflicting values remain unknown. Eight source rows have no POS; their totals stay unknown while their original frequency values are retained.",
+  "derived_license": "CC BY-SA 4.0",
+  "converter_license": "MIT"
+}
