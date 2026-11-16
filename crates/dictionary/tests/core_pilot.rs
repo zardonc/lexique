@@ -130,7 +130,7 @@ fn complete_core_fields_at_the_character_budget_are_retained_and_oversized_conte
     let fixture = Fixture::new();
     fixture.copy();
     let path = fixture.database();
-    let connection = Connection::open(&path).unwrap();
+    let mut connection = Connection::open(&path).unwrap();
     let mut payload: Value = serde_json::from_str(
         &connection
             .query_row::<String, _, _>(
@@ -174,15 +174,17 @@ fn complete_core_fields_at_the_character_budget_are_retained_and_oversized_conte
     assert!(error.message.contains("French definition"));
     assert!(error.message.contains("20000"));
     payload["definition_fr"] = json!("é".repeat(20_000));
+    let transaction = connection.transaction().unwrap();
     for index in 1..=40 {
         payload["sense_id"] = json!(format!("byte-budget-{index}"));
-        connection
+        transaction
             .execute(
                 "INSERT OR REPLACE INTO senses VALUES(1,?1,'être',?2)",
                 params![index, payload.to_string()],
             )
             .unwrap();
     }
+    transaction.commit().unwrap();
     assert!(fs::metadata(&path).unwrap().len() < core::MAX_RESOURCE_BYTES);
     let retained = fs::read(&path).unwrap();
     let error = core::lookup(&path, "être", &hash(&path)).unwrap_err();
@@ -224,7 +226,7 @@ fn missing_corrupt_future_and_oversized_core_resources_have_explicit_errors() {
         "unsupported"
     );
     fixture.copy();
-    let connection = Connection::open(&path).unwrap();
+    let mut connection = Connection::open(&path).unwrap();
     let mut payload: Value = serde_json::from_str(
         &connection
             .query_row::<String, _, _>(
@@ -235,15 +237,17 @@ fn missing_corrupt_future_and_oversized_core_resources_have_explicit_errors() {
             .unwrap(),
     )
     .unwrap();
+    let transaction = connection.transaction().unwrap();
     for index in 2..=201 {
         payload["sense_id"] = json!(format!("limit-sense-{index}"));
-        connection
+        transaction
             .execute(
                 "INSERT INTO senses VALUES(1,?1,'être',?2)",
                 params![index, payload.to_string()],
             )
             .unwrap();
     }
+    transaction.commit().unwrap();
     drop(connection);
     assert_eq!(
         core::lookup(&path, "être", &hash(&path)).unwrap_err().code,

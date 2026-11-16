@@ -103,6 +103,9 @@ PowerShell 7, pnpm 11.25.0, Rust 1.99.1 and uv-selected Python 3.14.10 were used
 Backend compilation ran separately from execution. Full logs are retained under
 [target/issue-80](../../../target/issue-80).
 
+The count and byte-budget fixtures insert their 240 rows in two committed
+transactions, avoiding per-row durable writes during backend execution.
+
 | Command | Result | Log |
 | --- | --- | --- |
 | `pnpm install --frozen-lockfile` | Passed | `install-short-root.log` |
@@ -110,22 +113,23 @@ Backend compilation ran separately from execution. Full logs are retained under
 | `pnpm typecheck` | Passed | `typecheck.log` |
 | `pnpm build` | Passed | `frontend-build.log` |
 | `pnpm test:e2e` | 390 passed | `ui-full.log` |
-| `pnpm rust:fmt` | Passed | `rust-fmt.log` |
-| `pnpm rust:check` | Passed | `rust-check.log` |
-| `pnpm rust:test:build` | Passed | `rust-tests-build.log` |
+| `pnpm rust:fmt` | Passed | `ci-166/fixed-fmt.log` |
+| `pnpm rust:check` | Passed | `ci-166/fixed-check.log` |
+| `pnpm rust:test:build` | Passed | `ci-166/fixed-build.log` |
+| `cargo test --locked -p lexique-dictionary --test core_pilot` | 3 passed; 0.68 seconds execution | `ci-166/fixed-core-tests.log` |
 | `cargo test --locked --release -p lexique-desktop --test speech_cache --lib --no-run` | Passed | `desktop-tests-build-final.log` |
-| `pnpm test:rust` | 194 passed; hard 60 seconds | `rust-full.log` |
+| `pnpm test:rust` | 194 passed in 32.52 seconds; hard 60 seconds | `ci-166/fixed-tests.log` |
 | `pnpm test:desktop:lib` | Eight partitions; 96 passed, two existing ignored entries; each hard 60 seconds | `desktop-lib.log` |
 | `pnpm test:speech:cache` | 11 passed, one existing ignored entry; hard 60 seconds | `speech-cache.log` |
-| `pnpm test:docs` and `git diff --check` | Passed; 168 documents and 1,357 local links checked | `docs.log`, `diff-check.log` |
+| `pnpm test:docs` and `git diff --check` | Passed; 168 documents and 1,357 local links checked | `ci-166/docs.log`, `ci-166/diff-check.log` |
 
 ## Verification boundary
 
 The primary evidence is native Windows x64 execution and independent persisted
 state. Browser coverage uses the approved adapter seam. External WebView routes
 were denied after startup and after restore restart; whole-machine network
-denial remains deferred. Other-platform hands-on checks and new CI execution are
-unrun.
+denial remains deferred. Other-platform hands-on checks remain unrun. Current CI
+results are tracked in [PR #166](https://github.com/zardonc/lexique/pull/166).
 
 Synthetic variants remain verification fixtures. Resource coverage remains
 **12 / 4,087 groups**, with **4,075 incomplete groups**. Complete resource
