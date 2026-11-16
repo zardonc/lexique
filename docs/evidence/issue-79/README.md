@@ -123,6 +123,19 @@ packaging passed 16 regressions and the build copier passed two. The integrated
 browser subset passed 15 checks and the full Edge suite passed **387 / 387**.
 The production native release build and both real packager deliveries passed.
 
+The complete desktop library at
+`3e5337b0c30fd959948d4e72ab940bf2a1d8e658` passed **96 tests** across all eight
+existing partitions. The two existing ignored subprocess entry points are
+invoked by their parent tests. Separate
+`cargo test --release --locked -p lexique-desktop --lib --no-run` precompilation
+passed before `pnpm test:desktop:lib`; every partition retained its hard
+60-second execution limit. Focused backup-operation and MDX restore checks
+passed **10 and 1 tests**. The fixtures bind manifests to the actual exported
+snapshot version and MDX hashes to stable dictionary identities, and include
+the core in the complete requested order. Production validation and genuine
+v1 compatibility tests are unchanged. Complete commands, results and logs are
+retained in `automated/ci-fixtures/validation.md` and its `logs/` directory.
+
 The native route check verifies all four allowed local hosts and records denied
 external requests both at startup and after restore. A fresh v2 preview/restore
 using runner `e4d9e73a0ade0cde7d8be744b7900107797315b2` and the production
@@ -135,7 +148,7 @@ the native run is `native/restore-review-01/`.
 Complete local evidence is retained in the integration worktree at
 `C:/Users/inthe/IdeaProjects/lexique/target/d2-pilot-79/integration/target/issue-79/`:
 `automated/implementation/validation.md` and its 82 logs, `automated/ui/`,
-`logs/browser-full.log`, `production-build.json`, `packages/`,
+`automated/ci-fixtures/`, `logs/browser-full.log`, `production-build.json`, `packages/`,
 `resource-checks/`, `review/`, `build-fixtures/`, `native/` and
 `native-run-index.json`. These are
 machine-local artifacts; the source resource and runner are tracked above.
