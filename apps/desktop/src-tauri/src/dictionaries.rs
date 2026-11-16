@@ -650,6 +650,13 @@ impl Registry {
         config: &DictionaryCatalogEntry,
         key: &str,
     ) -> Result<Lookup, DictionaryError> {
+        if config.id == lexique_dictionary::CORE_DICTIONARY_ID {
+            return lexique_dictionary::core::lookup(
+                &builtin.with_file_name("core-pilot-79").join("core.sqlite3"),
+                key,
+                env!("LEXIQUE_CORE_SHA256"),
+            );
+        }
         if config.id == "builtin" {
             let mut result =
                 lexique_dictionary::lookup(builtin, key, env!("LEXIQUE_DICTIONARY_SHA256"))?;

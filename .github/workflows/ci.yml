@@ -55,6 +55,7 @@ jobs:
       - run: rustup show
       - run: cargo fmt --all --check
       - run: python -X utf8 scripts/dictionary_sample.py prepare target/desktop-dictionary-sample
+      - run: python -B -X utf8 scripts/core_pilot.py prepare target/desktop-core-pilot
       - run: python -X utf8 scripts/conjugation_sample.py prepare target/desktop-conjugation-v6-stats
       - run: python -B -X utf8 scripts/frequency_sample.py target/desktop-frequency-v1
       - run: cargo clippy --locked -p lexique-core -p lexique-storage -p lexique-dictionary --all-targets -- -D warnings
@@ -90,6 +91,7 @@ jobs:
         with:
           python-version: '3.14.10'
       - run: python -X utf8 -m unittest discover -s scripts -p test_dictionary_sample.py -v
+      - run: python -B -X utf8 -m unittest discover -s scripts -p test_core_pilot.py -v
       - run: python -X utf8 -m unittest discover -s scripts -p test_conjugation_sample.py -v
       - run: python -X utf8 -m unittest discover -s scripts -p test_package_portable.py -v
       - run: python -X utf8 -m unittest discover -s scripts -p test_speech_portable.py -v

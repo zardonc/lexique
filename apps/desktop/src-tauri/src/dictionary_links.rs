@@ -1,5 +1,27 @@
-use lexique_dictionary::DictionaryError;
+use lexique_dictionary::{CORE_DICTIONARY_ID, DictionaryError};
 use serde::Deserialize;
+use std::path::{Path, PathBuf};
+use tauri::Manager;
+
+const CORE_MATERIALS: &[&str] = &[
+    "core.sqlite3",
+    "report.json",
+    "COPYING",
+    "NOTICES.md",
+    "README.md",
+    "curated-inputs.json",
+    "field-review.json",
+    "scope-manifest.csv",
+    "selected-source-context.json",
+    "selected-source-excerpts.json",
+    "MEMBERSHIP-NOTICES.txt",
+    "LEXIQUE-UPSTREAM-README.txt",
+    "lexique-provenance.json",
+    "input-checksums.json",
+    "coverage.json",
+    "core_pilot.py",
+    "LICENSE-MIT",
+];
 
 #[derive(Deserialize)]
 struct Page {
@@ -26,6 +48,22 @@ fn page(id: &str) -> Result<String, DictionaryError> {
         .find(|page| page.id == id)
         .map(|page| page.url)
         .ok_or_else(|| failure("invalid_query", "Unknown dictionary resource"))
+}
+
+fn bundled_materials(resource_dir: &Path) -> Result<PathBuf, DictionaryError> {
+    let folder = resource_dir.join("dictionary/core-pilot-79");
+    for &name in CORE_MATERIALS {
+        if !folder.join(name).is_file() {
+            return Err(failure(
+                "missing",
+                format!(
+                    "Bundled core material is missing: {}",
+                    folder.join(name).display()
+                ),
+            ));
+        }
+    }
+    Ok(folder)
 }
 
 #[cfg(target_os = "windows")]
@@ -80,9 +118,25 @@ fn open(_url: &str) -> Result<(), DictionaryError> {
 }
 
 #[tauri::command]
-pub async fn dictionary_resource_open(id: String) -> Result<(), DictionaryError> {
-    let url = page(&id)?;
-    tauri::async_runtime::spawn_blocking(move || open(&url))
+pub async fn dictionary_resource_open(
+    app: tauri::AppHandle,
+    id: String,
+) -> Result<(), DictionaryError> {
+    let target = if id == CORE_DICTIONARY_ID {
+        let resource_dir = app.path().resource_dir().map_err(|error| {
+            failure(
+                "missing",
+                format!("Could not resolve bundled sources: {error}"),
+            )
+        })?;
+        bundled_materials(&resource_dir)?
+            .to_str()
+            .ok_or_else(|| failure("query_failed", "Bundled source path is not valid UTF-8"))?
+            .to_owned()
+    } else {
+        page(&id)?
+    };
+    tauri::async_runtime::spawn_blocking(move || open(&target))
         .await
         .map_err(|error| failure("query_failed", error))?
 }
@@ -107,10 +161,34 @@ mod tests {
         }
         let pages: Vec<Page> =
             serde_json::from_str(include_str!("../../src/dictionary-resources.json")).unwrap();
-        assert_eq!(pages.len(), 12);
+        assert_eq!(pages.len(), 13);
         for item in &pages {
             assert_eq!(pages.iter().filter(|other| other.id == item.id).count(), 1);
             assert!(item.url.starts_with("https://"));
         }
+    }
+
+    #[test]
+    fn core_sources_resolve_only_inside_the_bundle_and_require_real_materials() {
+        let root = std::env::temp_dir().join(format!(
+            "lexique-core-notices-{}-{}",
+            std::process::id(),
+            std::time::SystemTime::now()
+                .duration_since(std::time::UNIX_EPOCH)
+                .unwrap()
+                .as_nanos()
+        ));
+        let folder = root.join("dictionary/core-pilot-79");
+        std::fs::create_dir_all(&folder).unwrap();
+        assert_eq!(bundled_materials(&root).unwrap_err().code, "missing");
+        for name in CORE_MATERIALS {
+            std::fs::write(folder.join(name), b"bundled test material").unwrap();
+        }
+        assert_eq!(bundled_materials(&root).unwrap(), folder);
+        std::fs::remove_file(folder.join("COPYING")).unwrap();
+        let error = bundled_materials(&root).unwrap_err();
+        assert_eq!(error.code, "missing");
+        assert!(error.message.contains("COPYING"));
+        std::fs::remove_dir_all(root).unwrap();
     }
 }
