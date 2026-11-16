@@ -6,12 +6,12 @@ export const dictionaryQuery = z.string().min(1).refine((value) =>
 export const dictionaryId = z.string().regex(/^(builtin|builtin-core|builtin-fra-eng|mdx-[1-9]\d*)$/)
   .refine((id) => !id.startsWith('mdx-') || Number(id.slice(4)) < 0xffff_ffff);
 export const dictionaryContentHash = z.string().regex(/^[a-f0-9]{64}$/);
-export const MAX_DICTIONARIES = 17;
-export const dictionaryOrder = z.array(dictionaryId).min(2).max(MAX_DICTIONARIES).readonly()
-  .refine((ids) => new Set(ids).size === ids.length && ids.includes('builtin') && ids.includes('builtin-fra-eng'));
+export const MAX_DICTIONARIES = 18;
+export const dictionaryOrder = z.array(dictionaryId).min(3).max(MAX_DICTIONARIES).readonly()
+  .refine((ids) => new Set(ids).size === ids.length && ids.includes('builtin-core') && ids.includes('builtin') && ids.includes('builtin-fra-eng'));
 export const dictionaryCatalog = z.array(z.object({ id: dictionaryId, title: z.string().min(1),
   content_hash: dictionaryContentHash.nullable(), availability: z.enum(['available', 'missing']),
-}).strict().readonly()).min(2).max(MAX_DICTIONARIES).readonly()
+}).strict().readonly()).min(3).max(MAX_DICTIONARIES).readonly()
   .refine((items) => dictionaryOrder.safeParse(items.map((item) => item.id)).success);
 export type DictionaryCatalog = z.infer<typeof dictionaryCatalog>;
 export const dictionaryRelink = z.discriminatedUnion('status', [

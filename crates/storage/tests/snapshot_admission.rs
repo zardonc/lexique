@@ -1662,6 +1662,7 @@ fn portable_preferences_and_ordered_catalog_exclude_private_device_metadata() {
         {"id":"builtin-fra-eng","title":"English builtin","content_hash":null},
         {"id":"mdx-2","title":"Unknown custom","content_hash":null},
         {"id":"builtin","title":"Chinese builtin","content_hash":null},
+        {"id":"builtin-core","title":"Lexique FR–EN–ZH","content_hash":null},
     ]});
     write_dictionary_catalog(
         &connection,

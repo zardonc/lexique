@@ -1,13 +1,20 @@
 import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
-import { resolve, join, relative } from 'node:path';
+import { resolve, join, relative, isAbsolute } from 'node:path';
+
+function ownedDestination(destination) {
+  const root = resolve(destination);
+  assert.ok(['issue-75', 'issue-79'].some(issue => {
+    const owned = relative(resolve('../../target', issue), root);
+    return owned && !owned.startsWith('..') && !isAbsolute(owned);
+  }));
+  return root;
+}
 
 function packagePython(destination, source, code, extra = []) {
-  const root = resolve(destination);
-  const owned = relative(resolve('../../target/issue-75'), root);
-  assert.ok(owned && !owned.startsWith('..'));
+  const root = ownedDestination(destination);
   const input = relative(root, resolve(source));
-  assert.ok(input && !input.startsWith('..'));
+  assert.ok(input && !input.startsWith('..') && !isAbsolute(input));
   const result = spawnSync('python', ['-B', '-X', 'utf8', '-c', code, source, ...extra], { encoding: 'utf8', timeout: 5000, maxBuffer: 4 * 1024 * 1024 });
   assert.equal(result.status, 0, result.stderr || String(result.error));
   return JSON.parse(result.stdout);
@@ -38,7 +45,7 @@ elif variant=='crc':
  output[audio.header_offset+30+n+e+80]^=1
 else:
  if variant=='unsupported-format': manifest['format_version']=2
- elif variant=='unsupported-snapshot': manifest['snapshot_version']=snapshot['snapshot_version']=2
+ elif variant=='unsupported-snapshot': manifest['snapshot_version']=snapshot['snapshot_version']=3
  elif variant=='count': manifest['counts']['cards']+=1
  elif variant=='unknown-field': snapshot['unexpected']=True
  elif variant=='invalid-number': snapshot['records'][0]['id']=0
@@ -67,8 +74,7 @@ print(json.dumps({'variant':variant,'byte_length':len(output)}))`, [target, vari
 }
 
 export function fixtureSql(destination, code, parameters = {}, readOnly = false) {
-  const owned = relative(resolve('../../target/issue-75'), resolve(destination));
-  assert.ok(owned && !owned.startsWith('..') && !resolve(owned).startsWith('\\\\'));
+  ownedDestination(destination);
   const result = spawnSync('python', ['-B', '-X', 'utf8', '-c',
     `import sqlite3,json,sys,pathlib\np=json.loads(sys.argv[2])\ndb=pathlib.Path(sys.argv[1])\nc=sqlite3.connect(db.as_uri()+'?mode=ro' if ${readOnly ? 'True' : 'False'} else db,uri=${readOnly ? 'True' : 'False'})\nc.row_factory=sqlite3.Row\n` + code,
     join(destination, 'Lexique-data/data/lexique.sqlite3'), JSON.stringify(parameters)], { windowsHide: true, encoding: 'utf8', timeout: 10_000 });

@@ -150,7 +150,7 @@ fn empty_snapshot_contains_the_complete_portable_contract() {
             .as_array()
             .unwrap()
             .len(),
-        2
+        3
     );
     assert_eq!(value.as_object().unwrap().len(), 21);
     assert!(!value.to_string().contains("secret-device-path"));
@@ -207,6 +207,10 @@ fn old_save_requests_and_unknown_example_sources_keep_their_original_meaning() {
     let snapshot = export_learning_snapshot(&mut connection, 1_800_000_000).unwrap();
     let mut value = serde_json::to_value(snapshot).unwrap();
     value["snapshot_version"] = serde_json::json!(1);
+    value["dictionary_catalog"]["entries"]
+        .as_array_mut()
+        .unwrap()
+        .retain(|entry| entry["id"] != "builtin-core");
     assert_eq!(value["records"][0]["headword"], "école");
     assert_eq!(value["records"][0]["notes"], "Mon\n筆記");
     assert_eq!(

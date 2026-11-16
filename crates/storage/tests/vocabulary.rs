@@ -39,6 +39,128 @@ fn create(operation: &str, headword: &str, notes: &str) -> SaveRequest {
     }
 }
 
+fn core_snapshot() -> Snapshot {
+    let source = serde_json::json!({
+        "title": "Contract fixture", "version": "1", "attribution": "Fixture author",
+        "source_url": "https://example.org/coeur", "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "span": "selected organ sense", "modification": "Scoped fixture adaptation"
+    });
+    let mut result = snapshot();
+    result.reference.dictionary_id = Some("builtin-core".into());
+    result.reference.lookup_key = "coeur".into();
+    result.digest = serde_json::from_value(serde_json::json!([{
+        "pronunciations": ["/kœʁ/"], "grammar": ["NOM"], "translation": null,
+        "core": {
+            "sense_id": "coeur-organ", "frozen_row": 483, "headword": "coeur",
+            "source_headword": "cœur", "pos": "NOM", "usage": "Circulatory organ.",
+            "definition_fr": "Organe qui fait circuler le sang.", "ipa": "/kœʁ/",
+            "meaning_en": "heart, the organ that pumps blood", "meaning_zh": "心脏；推动血液循环的器官。",
+            "field_sources": {"definition_fr": source, "ipa": source,
+                "meaning_en": source, "meaning_zh": source}
+        }
+    }])).unwrap();
+    result
+}
+
+#[test]
+fn core_saves_validate_frozen_identities_before_creation_and_preserve_retry_branches() {
+    let mut connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    assert!(
+        save(
+            &mut connection,
+            &create("core-alias-mismatch", "cœur", ""),
+            Some(core_snapshot())
+        )
+        .is_err()
+    );
+    for (index, change) in ["missing", "duplicate", "provenance", "pronunciation"]
+        .into_iter()
+        .enumerate()
+    {
+        let mut invalid = core_snapshot();
+        match change {
+            "missing" => invalid.digest[0].core = None,
+            "duplicate" => invalid.digest.push(invalid.digest[0].clone()),
+            "provenance" => {
+                invalid.digest[0]
+                    .core
+                    .as_mut()
+                    .unwrap()
+                    .field_sources
+                    .meaning_en
+                    .source_url = "javascript:alert(1)".into()
+            }
+            _ => invalid.digest[0].pronunciations.clear(),
+        }
+        assert!(
+            save(
+                &mut connection,
+                &create(&format!("core-invalid-{index}"), "coeur", ""),
+                Some(invalid)
+            )
+            .is_err(),
+            "{change}"
+        );
+    }
+    assert!(list(&connection, "", "headword-asc").unwrap().is_empty());
+    let request = create("core-created", "coeur", "keep the frozen sense");
+    let saved = save(&mut connection, &request, Some(core_snapshot()))
+        .unwrap()
+        .record;
+    assert_eq!(
+        save(&mut connection, &request, None).unwrap().outcome,
+        "replayed"
+    );
+    let duplicate = save(
+        &mut connection,
+        &create("core-existing", "coeur", "ignored"),
+        Some(snapshot()),
+    )
+    .unwrap();
+    assert_eq!(duplicate.outcome, "existing");
+    assert_eq!(duplicate.record.digest, saved.digest);
+    let mut edit = create("core-edited", "coeur", "new personal note");
+    edit.id = Some(saved.id);
+    edit.revision = Some(saved.revision);
+    let edited = save(&mut connection, &edit, Some(snapshot()))
+        .unwrap()
+        .record;
+    assert_eq!(edited.digest, saved.digest);
+    assert_eq!(edited.notes, "new personal note");
+}
+
+#[test]
+fn vocabulary_search_finds_every_core_field_and_the_retained_source_spelling() {
+    let mut connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    let record = save(
+        &mut connection,
+        &create("core-search", "coeur", ""),
+        Some(core_snapshot()),
+    )
+    .unwrap()
+    .record;
+    for query in [
+        "心脏",
+        "circuler",
+        "pumps blood",
+        "Circulatory",
+        "cœur",
+        "/kœʁ/",
+        "NOM",
+    ] {
+        let found = list(&connection, query, "headword-asc").unwrap();
+        assert_eq!(
+            found.iter().map(|item| item.id).collect::<Vec<_>>(),
+            [record.id],
+            "{query}"
+        );
+        assert_eq!(found[0].digest, record.digest);
+    }
+}
+
 #[test]
 fn saving_a_favorite_protects_seconds_based_audio_independently_of_millisecond_note_timestamps() {
     let mut connection = Connection::open_in_memory().unwrap();
