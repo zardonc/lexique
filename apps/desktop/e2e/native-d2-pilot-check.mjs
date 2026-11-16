@@ -100,6 +100,11 @@ function request(headword, suffix = headword.replaceAll(/[^a-z]/g, 'x')) {
     more_examples: [{ fr: 'Cet être a besoin d’eau.', zh: '这个生物需要水。', source: null }], id: null, revision: null };
 }
 
+function snapshotRecord(record) {
+  return { ...record, example_source: record.example_source ?? null,
+    more_examples: record.more_examples.map((example) => ({ ...example, source: example.source ?? null })) };
+}
+
 async function save(headword, suffix) {
   const lookup = await invoke('dictionary_lookup', { key: headword, dictionary_id: 'builtin-core' });
   const expected = admitted(lookup, headword);
@@ -292,7 +297,7 @@ async function exportBackup() {
   const archive = inspectPackage(destination, filename);
   assert.equal(archive.manifest.format_version, 1); assert.equal(archive.manifest.snapshot_version, 2); assert.equal(archive.snapshot.snapshot_version, 2);
   assert.equal(archive.snapshot.records.length, 7);
-  for (const value of saved) assert.deepEqual(archive.snapshot.records.find((record) => record.id === value.record.id), value.record);
+  for (const value of saved) assert.deepEqual(archive.snapshot.records.find((record) => record.id === value.record.id), snapshotRecord(value.record));
   evidence.checks.push({ check: 'Native export contains all 12 four-field senses/provenance with examples, cards and ratings; ZIP v1/logical v2', status: 'passed', export: status });
 }
 
@@ -321,9 +326,7 @@ async function restoreBackup(legacy = false) {
   assert.equal(restored.records.length, archive.snapshot.records.length);
   for (const record of archive.snapshot.records) {
     const actual = await invoke('vocabulary_find', { headword: record.headword });
-    assert.equal(actual.id, record.id); assert.equal(actual.notes, record.notes); assert.equal(actual.revision, record.revision);
-    assert.deepEqual(actual.reference, record.reference); assert.deepEqual(actual.digest, record.digest);
-    assert.equal(actual.example_sense, record.example_sense); assert.deepEqual(actual.more_examples, record.more_examples);
+    assert.deepEqual(snapshotRecord(actual), record);
     const row = restored.records.find((item) => item.id === record.id);
     assert.deepEqual(row.snapshot.digest, record.digest);
   }
@@ -455,6 +458,7 @@ async function replacement() {
     const current = await invoke('dictionary_lookup', { key: 'être', dictionary_id: 'builtin-core' });
     assert.notEqual(current.source.version, record.reference.version);
     await query('être'); await page.getByRole('button', { name: 'View existing record', exact: true }).click();
+    await openRecord(record);
     await expect(page.getByText('The dictionary version has changed. The saved digest keeps its original content.', { exact: true })).toBeVisible();
     await save('bien', 'newer-content');
   }
