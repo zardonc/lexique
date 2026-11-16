@@ -16,7 +16,8 @@ export async function native24Fixture(packagePath, binaryPath, destinationPath) 
   // Reused test packages also contain old results. Only copy distribution resources:
   // a failed run must never inherit a successful report or someone else's data.
   for (const name of ['dictionary', 'speech', 'LICENSE', 'README.txt']) {
-    await cp(join(resolve(packagePath), name), join(destination, name), { recursive: true });
+    try { await cp(join(resolve(packagePath), name), join(destination, name), { recursive: true }); }
+    catch (error) { if (name !== 'speech' || error.code !== 'ENOENT') throw error; }
   }
   await cp(resolve(binaryPath), join(destination, 'Lexique.exe'));
   await writeFile(join(destination, 'run-metadata.json'), JSON.stringify({

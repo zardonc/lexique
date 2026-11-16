@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { spawn } from 'node:child_process';
 import { chmod, cp, readFile, rename, stat, writeFile } from 'node:fs/promises';
 import { join, resolve } from 'node:path';
+import { performance } from 'node:perf_hooks';
 import { expect } from '@playwright/test';
 import { native24Fixture } from './native-24-harness.mjs';
 import { compareLearning, fixtureSql, inspectPackage, readState } from './native-backup-state.mjs';
@@ -23,6 +24,7 @@ await cp(resolve(conjugation), join(destination, 'conjugation'), { recursive: tr
 await cp(resolve(frequency), join(destination, 'frequency'), { recursive: true });
 const coreFile = join(destination, 'dictionary/core/core.sqlite3');
 const evidence = { scenario, checks: [], calls: [], externalRequests: [], pickers: [], networkBoundary: 'External WebView routes denied after native startup; whole-machine network denial unrun' };
+evidence.coreResourceBytes = (await stat(coreFile)).size;
 const model = join(destination, 'speech/assets/text_encoder.int8.onnx');
 let page;
 
@@ -41,8 +43,14 @@ async function start() {
 async function invoke(command, args = {}) {
   const call = { command, args };
   evidence.calls.push(call);
-  try { return await page.evaluate(({ command, args }) => window.__TAURI_INTERNALS__.invoke(command, args), { command, args }); }
+  const started = performance.now();
+  try {
+    const value = await page.evaluate(({ command, args }) => window.__TAURI_INTERNALS__.invoke(command, args), { command, args });
+    if (command === 'dictionary_lookup') call.response_bytes = Buffer.byteLength(JSON.stringify(value), 'utf8');
+    return value;
+  }
   catch (error) { call.error = String(error); throw error; }
+  finally { call.round_trip_ms = performance.now() - started; }
 }
 
 async function rejected(command, args, code) {
@@ -122,9 +130,10 @@ async function query(key) {
 
 async function openRecord(record) {
   await page.getByRole('button', { name: 'Notebook', exact: true }).click();
-  await page.locator('.vocabulary-list').getByRole('button', { name: record.headword, exact: true }).click();
+  await page.locator('.vocabulary-list button').filter({ has: page.getByText(record.headword, { exact: true }) }).click();
   await fields(page.locator('.vocabulary-summary'), record.digest.map((item) => item.core));
   await expect(page.getByLabel('Personal notes', { exact: true })).toHaveValue(record.notes);
+  await expect(page.getByLabel('Meaning for examples', { exact: true })).toHaveValue(String(record.example_sense));
 }
 
 async function rate(record) {
@@ -165,12 +174,29 @@ async function pilot() {
     assert.equal(row.example_sense, value.record.example_sense); assert.deepEqual(row.more_examples, value.record.more_examples);
   }
   await query('être'); await fields(page.locator('.dictionary-entry'), edited.record.digest.map((item) => item.core));
-  await page.screenshot({ path: join(destination, 'native-core-lookup.png'), fullPage: true });
+  for (const [locale, navigation, sourceLabel, auxiliary] of [['en', 'Dictionary', 'Field sources', 'Auxiliary (AUX)'],
+    ['fr', 'Dictionnaire', 'Sources des champs', 'Auxiliaire (AUX)'], ['zh', '词典', '字段来源', '助动词 (AUX)']]) {
+    await page.getByRole('banner').getByRole('combobox').first().selectOption(locale);
+    await expect(page.getByRole('button', { name: navigation, exact: true })).toBeVisible();
+    await fields(page.locator('.dictionary-entry'), edited.record.digest.map((item) => item.core));
+    await expect(page.locator('.dictionary-entry .core-sense[data-pos="AUX"]').locator('h4').first()).toHaveText(auxiliary);
+    const source = page.locator('.dictionary-entry details.core-sources').first();
+    await expect(source.locator('summary')).toHaveText(sourceLabel);
+    if (!await source.evaluate((node) => node.open)) await source.locator('summary').click();
+    await expect(source.locator('.core-field-source')).toHaveCount(4);
+    await expect(source.getByRole('link').first()).toBeVisible();
+    await page.screenshot({ path: join(destination, `native-core-lookup-${locale}.png`), fullPage: true });
+  }
+  await page.getByRole('banner').getByRole('combobox').first().selectOption('en');
   const persisted = readState(destination);
   await fixture.stop(true); await start();
   compareLearning(readState(destination), persisted);
   assert.deepEqual(await invoke('vocabulary_find', { headword: 'e\u0302tre' }), edited.record);
   await openRecord(edited.record); await page.screenshot({ path: join(destination, 'native-core-details.png'), fullPage: true });
+  if (scenario === 'no-speech') {
+    await rejected('speech_generate', { vocabularyId: edited.record.id, operation: 'native-79-no-speech' });
+    assert.deepEqual((await invoke('vocabulary_find', { headword: 'être' })).digest, edited.record.digest);
+  }
   evidence.checks.push({ check: '12 groups / 48 reviewed fields, explicit trusted provider, spelling bindings, retry, duplicate, notes, examples, FSRS and normal restart', status: 'passed' });
 }
 
@@ -185,7 +211,7 @@ async function review() {
     const dialog = page.getByRole('dialog', { name: `${kind === 'recognition' ? 'Recognition' : 'Listening'} card`, exact: true });
     await dialog.getByRole('button', { name: 'Show answer', exact: true }).click();
     await fields(dialog, record.digest.map((item) => item.core));
-    await expect(dialog.getByText(record.digest[record.example_sense].core.meaning_zh, { exact: false }).first()).toBeVisible();
+    await expect(dialog.locator('p').filter({ hasText: 'Meaning for examples' })).toContainText(record.digest[record.example_sense].core.meaning_zh);
     await page.screenshot({ path: join(destination, `native-core-${kind}-back.png`), fullPage: true });
     await dialog.getByRole('button', { name: 'Close card', exact: true }).click();
   }
@@ -437,7 +463,9 @@ async function replacement() {
 
 try {
   if (['no-speech', 'legacy'].includes(scenario)) {
-    await rename(model, model + '.unavailable'); evidence.speechModel = 'absent in isolated package';
+    const present = await stat(model).catch((error) => { if (error.code === 'ENOENT') return null; throw error; });
+    if (present) await rename(model, model + '.unavailable');
+    evidence.speechModel = 'absent in isolated package';
   }
   if (['newer', 'limit'].includes(scenario)) await copiedProfile();
   await start();
