@@ -9,11 +9,12 @@ import { errorMessage, snapshotFromLookup } from './platform/vocabulary';
 import type { VocabularyRecord, VocabularySnapshot } from './platform/vocabulary';
 import { VocabularySummary } from './vocabulary-view';
 import { SpeechButton } from './speech-button';
-import { DictionaryConjugation, DictionaryLemmas } from './conjugation-navigation';
+import { DictionaryConjugation, DictionaryLemmas, dictionaryVerb } from './conjugation-navigation';
 import type { ConjugationView, DictionaryView } from './conjugation-navigation';
 import { DictionaryHtml } from './dictionary-html';
 import { useDictionaryTabs } from './use-dictionary-tabs';
 import { expressionMatches } from './platform/conjugation';
+import { CoreSenseContent } from './core-sense';
 
 function Senses({ senses }: { readonly senses: readonly DictionarySense[] }) {
   return <ol className="dictionary-senses">{senses.map((sense, index) => <li key={index}>
@@ -24,7 +25,7 @@ function Senses({ senses }: { readonly senses: readonly DictionarySense[] }) {
 }
 
 function linkedVerb(entry: DictionaryLookup['entries'][number], result: DictionaryLookup, previous?: ConjugationView) {
-  if (entry.grammar.includes('v')) return true;
+  if (dictionaryVerb(entry)) return true;
   return entry.html !== undefined && (previous?.dictionaryId ?? 'builtin') === (result.dictionary_id ?? 'builtin')
     && (previous?.result?.tables.some((table) => table.lemma === previous.selected && expressionMatches(table.lemma, entry.key)) ?? false);
 }
@@ -38,9 +39,10 @@ export function DictionaryResults({ result, text, navigation }: {
     {result.entries.map((entry) => <article className="dictionary-entry" key={entry.ordinal} data-ordinal={entry.ordinal}>
       <h3 lang="fr" tabIndex={-1}>{entry.key}</h3>
       <p className="dictionary-grammar">{entry.pronunciations.join(' · ')} {entry.grammar.join(' · ')}</p>
-      {entry.html === undefined ? <Senses senses={entry.senses} /> : <DictionaryHtml html={entry.html} title={result.source.title} />}
+      {entry.core_senses?.length ? entry.core_senses.map((sense) => <CoreSenseContent key={sense.sense_id} sense={sense} text={text.core} />)
+        : entry.html === undefined ? <Senses senses={entry.senses} /> : <DictionaryHtml html={entry.html} title={result.source.title} />}
       {navigation && linkedVerb(entry, result, navigation.previous) && <DictionaryConjugation runtime={navigation.runtime} locale={navigation.locale}
-        dictionaryKey={entry.key} dictionaryId={result.dictionary_id} previous={navigation.previous} posUnknown={!entry.grammar.includes('v')} onOpen={navigation.onOpen} />}
+        dictionaryKey={entry.key} dictionaryId={result.dictionary_id} previous={navigation.previous} posUnknown={!dictionaryVerb(entry)} onOpen={navigation.onOpen} />}
     </article>)}
     <footer className="dictionary-source">
       <p>{text.source}: {result.source.title} · {result.source.version}</p>

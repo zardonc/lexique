@@ -2,7 +2,8 @@ import { expect, test } from '@playwright/test';
 import { nativeFixture } from './native-fixture';
 
 const bundled = [{ id: 'builtin', title: 'FreeDict fra-zho', content_hash: null, availability: 'available' },
-  { id: 'builtin-fra-eng', title: 'FreeDict fra-eng 0.4.1', content_hash: null, availability: 'available' }];
+  { id: 'builtin-fra-eng', title: 'FreeDict fra-eng 0.4.1', content_hash: null, availability: 'available' },
+  { id: 'builtin-core', title: 'Lexique core pilot', content_hash: null, availability: 'available' }];
 
 test('bundled dictionaries stay registered and fifteen custom MDX slots remain available', async ({ page }) => {
   const catalog = [...bundled, ...Array.from({ length: 15 }, (_, index) => ({ id: `mdx-${index + 1}`, title: `custom-${index + 1}.mdx`, content_hash: null, availability: 'available' }))];
@@ -10,7 +11,7 @@ test('bundled dictionaries stay registered and fifteen custom MDX slots remain a
   await page.goto('/');
   await page.getByRole('button', { name: '设置', exact: true }).click();
   const settings = page.getByRole('region', { name: '查询词典', exact: true });
-  await expect(settings.locator('li')).toHaveCount(17);
+  await expect(settings.locator('li')).toHaveCount(18);
   await expect(settings.getByLabel('添加 MDX 词典', { exact: true })).toBeDisabled();
   await expect(settings).toContainText('2018-08-11');
   for (const resource of bundled) {
@@ -20,7 +21,7 @@ test('bundled dictionaries stay registered and fifteen custom MDX slots remain a
   }
   await settings.locator('li').filter({ hasText: 'custom-15.mdx' }).getByRole('button', { name: '移出词典列表', exact: true }).click();
   await expect(settings.getByLabel('添加 MDX 词典', { exact: true })).toBeEnabled();
-  await expect(settings.locator('li')).toHaveCount(16);
+  await expect(settings.locator('li')).toHaveCount(17);
   expect(await page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'dictionary_remove').map((call) => call.args))).toEqual([{ id: 'mdx-15' }]);
 });
 

@@ -1,7 +1,7 @@
-import { useEffect, useMemo, useState } from 'react';
+import { Fragment, useEffect, useMemo, useState } from 'react';
 import { FrequencyBadge, FrequencyState, useFrequency } from './frequency';
 import type { RuntimeAdapter } from './platform/runtime';
-import { errorMessage, sortSchema } from './platform/vocabulary';
+import { digestMeaning, errorMessage, sortSchema } from './platform/vocabulary';
 import type { VocabularyRecord, VocabularySort } from './platform/vocabulary';
 import type { NotebookText } from './notebook-content';
 import type { BatchReview } from './use-batch-review';
@@ -113,7 +113,10 @@ export function NotebookPanel({ runtime, version, text, onOpen, batch }: {
         onChange={(event) => { const checked = event.target.checked; setSelected((current) => toggleSelection(current, record.id, checked)); }} /></label>
       <button onClick={() => onOpen(record)}><span className="headword-line"><strong lang="fr">{record.headword}</strong>
         <FrequencyBadge entry={frequencies.lookup?.entries.find((entry) => entry.key === record.headword)} text={text.frequency} /></span>
-        <span>{record.digest.map((entry) => entry.translation || text.missing).join(' · ')}</span>
+        <span>{record.digest.map((entry, index) => {
+          const meaning = digestMeaning(entry) || text.missing;
+          return <Fragment key={index}>{index > 0 && ' · '}{entry.core ? <span lang="zh">{meaning}</span> : meaning}</Fragment>;
+        })}</span>
         <span className="note-excerpt">{record.notes}</span></button>
     </li>)}</ul>}
   </section>;
