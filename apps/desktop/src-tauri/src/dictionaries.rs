@@ -18,7 +18,7 @@ use crate::vocabulary::{DatabasePath, open};
 
 const KEY: &str = lexique_storage::DICTIONARY_CATALOG_KEY;
 const FILES_KEY: &str = "dictionary-files";
-const MAX_DICTIONARIES: usize = 17;
+const MAX_DICTIONARIES: usize = lexique_storage::MAX_DICTIONARIES;
 const BUNDLED_MDX_ID: &str = "builtin-fra-eng";
 
 #[derive(Deserialize)]
@@ -72,7 +72,10 @@ fn failure(code: &'static str, message: impl std::fmt::Display) -> DictionaryErr
 }
 
 fn valid_id(id: &str) -> bool {
-    matches!(id, "builtin" | BUNDLED_MDX_ID) || custom_dictionary_number(id).is_some()
+    matches!(
+        id,
+        "builtin" | BUNDLED_MDX_ID | lexique_dictionary::CORE_DICTIONARY_ID
+    ) || custom_dictionary_number(id).is_some()
 }
 
 fn read(connection: &Connection) -> Result<DictionaryCatalog, DictionaryError> {
@@ -1004,6 +1007,7 @@ mod tests {
             "mdx-2".into(),
             "builtin".into(),
             BUNDLED_MDX_ID.into(),
+            lexique_dictionary::CORE_DICTIONARY_ID.into(),
         ];
         let catalog = settings(&path, Some(order.clone())).unwrap();
         assert_eq!(settings(&path, None).unwrap(), catalog);
@@ -1119,6 +1123,7 @@ mod tests {
                 .collect::<Vec<_>>()
         );
         assert_eq!(upgraded[16].id, BUNDLED_MDX_ID);
+        assert_eq!(upgraded[17].id, lexique_dictionary::CORE_DICTIONARY_ID);
         assert_eq!(
             import(&path, "over-limit.mdx", &bytes).unwrap_err().code,
             "limit"
@@ -1202,7 +1207,11 @@ mod tests {
     fn bundled_dictionaries_cannot_be_removed() {
         let path = database();
         let before = settings(&path, None).unwrap();
-        for id in ["builtin", BUNDLED_MDX_ID] {
+        for id in [
+            "builtin",
+            BUNDLED_MDX_ID,
+            lexique_dictionary::CORE_DICTIONARY_ID,
+        ] {
             assert_eq!(remove(&path, id).unwrap_err().code, "invalid_query");
         }
         assert_eq!(settings(&path, None).unwrap(), before);
@@ -1287,7 +1296,12 @@ mod tests {
         let path = database();
         let bytes = fixture("v2-utf8-none.mdx");
         import(&path, "original.mdx", &bytes).unwrap();
-        let order = vec!["mdx-1".into(), "builtin".into(), BUNDLED_MDX_ID.into()];
+        let order = vec![
+            "mdx-1".into(),
+            "builtin".into(),
+            BUNDLED_MDX_ID.into(),
+            lexique_dictionary::CORE_DICTIONARY_ID.into(),
+        ];
         settings(&path, Some(order.clone())).unwrap();
         let registry = Registry::default();
         let builtin = path.0.with_file_name("unused");
@@ -1550,7 +1564,7 @@ mod tests {
             import(&path, &format!("{index}.mdx"), &bytes).unwrap();
         }
         let before = settings(&path, None).unwrap();
-        assert_eq!(before.len(), 17);
+        assert_eq!(before.len(), MAX_DICTIONARIES);
         assert_eq!(
             import(&path, "too-many.mdx", &bytes).unwrap_err().code,
             "limit"

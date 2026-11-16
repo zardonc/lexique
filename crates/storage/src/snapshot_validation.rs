@@ -137,32 +137,20 @@ pub fn validate_learning_snapshot(
             revision: Some(record.revision),
         })?;
         reference(&record.reference)?;
-        let mut senses = HashSet::new();
-        for entry in &record.digest {
-            if let Some(core) = &entry.core {
-                require(
-                    snapshot.snapshot_version == 2,
-                    "core senses require snapshot v2",
-                )?;
-                require(
-                    record.reference.dictionary_id.as_deref()
-                        == Some(lexique_core::dictionary::CORE_DICTIONARY_ID)
-                        && core.headword.nfc().collect::<String>() == record.headword
-                        && entry.translation.is_none()
-                        && entry.pronunciations == [core.ipa.clone()]
-                        && entry.grammar == [core.pos.clone()]
-                        && senses.insert(&core.sense_id),
-                    "core sense disagrees with its frozen record or digest",
-                )?;
-                core.validate().map_err(StorageError::Invalid)?;
-            } else {
-                require(
-                    record.reference.dictionary_id.as_deref()
-                        != Some(lexique_core::dictionary::CORE_DICTIONARY_ID),
-                    "core record is missing four-field senses",
-                )?;
-            }
+        if record.reference.dictionary_id.as_deref()
+            == Some(lexique_core::dictionary::CORE_DICTIONARY_ID)
+            || record.digest.iter().any(|entry| entry.core.is_some())
+        {
+            require(
+                snapshot.snapshot_version == 2,
+                "core senses require snapshot v2",
+            )?;
         }
+        crate::vocabulary::validate_core_digest(
+            &record.headword,
+            &record.reference,
+            &record.digest,
+        )?;
         for source in record.example_source.iter().chain(
             record
                 .more_examples
@@ -911,7 +899,10 @@ pub fn read_learning_snapshot(
         ),
         "snapshot speech voice must use its portable spelling",
     )?;
-    let snapshot: LearningSnapshot = serde_json::from_value(value)?;
+    let mut snapshot: LearningSnapshot = serde_json::from_value(value)?;
+    if snapshot.snapshot_version == 1 {
+        crate::dictionary_catalog::upgrade_dictionary_catalog(&mut snapshot.dictionary_catalog);
+    }
     validate_learning_snapshot(&snapshot, captured_at)?;
     Ok(snapshot)
 }

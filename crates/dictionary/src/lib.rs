@@ -11,6 +11,7 @@ pub mod frequency;
 pub mod mdx;
 mod snapshot;
 pub use entry::{Entry, Sense};
+pub use lexique_core::dictionary::CORE_DICTIONARY_ID;
 
 const PROVENANCE: &str =
     include_str!("../../../resources/freedict-fra-zho-2025.11.23/provenance.json");

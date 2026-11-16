@@ -3,9 +3,10 @@ use serde::{Deserialize, Serialize};
 use std::collections::BTreeSet;
 
 use crate::StorageError;
+use lexique_core::dictionary::CORE_DICTIONARY_ID;
 
 pub const DICTIONARY_CATALOG_KEY: &str = "dictionary-settings";
-pub const MAX_DICTIONARIES: usize = 17;
+pub const MAX_DICTIONARIES: usize = 18;
 
 #[derive(Clone, Debug, Deserialize, Serialize, PartialEq)]
 #[serde(deny_unknown_fields)]
@@ -28,6 +29,11 @@ impl Default for DictionaryCatalog {
         Self {
             next_id: 1,
             entries: vec![
+                DictionaryCatalogEntry {
+                    id: CORE_DICTIONARY_ID.into(),
+                    title: "Lexique FR–EN–ZH".into(),
+                    content_hash: None,
+                },
                 DictionaryCatalogEntry {
                     id: "builtin".into(),
                     title: "FreeDict fra-zho".into(),
@@ -53,12 +59,15 @@ pub fn validate_dictionary_catalog(catalog: &DictionaryCatalog) -> Result<(), St
     let entries = &catalog.entries;
     if entries.len() > MAX_DICTIONARIES
         || catalog.next_id == 0
-        || ["builtin", "builtin-fra-eng"]
+        || [CORE_DICTIONARY_ID, "builtin", "builtin-fra-eng"]
             .iter()
             .any(|id| entries.iter().filter(|entry| entry.id == *id).count() != 1)
         || entries.iter().enumerate().any(|(index, entry)| {
             let custom = custom_dictionary_number(&entry.id);
-            let builtin = matches!(entry.id.as_str(), "builtin" | "builtin-fra-eng");
+            let builtin = matches!(
+                entry.id.as_str(),
+                CORE_DICTIONARY_ID | "builtin" | "builtin-fra-eng"
+            );
             (!builtin && custom.is_none())
                 || custom.is_some_and(|number| number >= catalog.next_id)
                 || entry.title.trim().is_empty()
@@ -93,6 +102,21 @@ struct LegacyCatalog {
     dictionaries: Vec<LegacyEntry>,
 }
 
+pub(crate) fn upgrade_dictionary_catalog(catalog: &mut DictionaryCatalog) {
+    let defaults = DictionaryCatalog::default().entries;
+    for id in ["builtin-fra-eng", CORE_DICTIONARY_ID] {
+        if !catalog.entries.iter().any(|entry| entry.id == id) {
+            catalog.entries.push(
+                defaults
+                    .iter()
+                    .find(|entry| entry.id == id)
+                    .unwrap()
+                    .clone(),
+            );
+        }
+    }
+}
+
 pub fn read_dictionary_catalog(connection: &Connection) -> Result<DictionaryCatalog, StorageError> {
     let json: Option<String> = connection
         .query_row(
@@ -101,13 +125,13 @@ pub fn read_dictionary_catalog(connection: &Connection) -> Result<DictionaryCata
             |row| row.get(0),
         )
         .optional()?;
-    let catalog = match json {
+    let mut catalog = match json {
         None => DictionaryCatalog::default(),
         Some(json) => match serde_json::from_str::<DictionaryCatalog>(&json) {
             Ok(catalog) => catalog,
             Err(_) => {
                 let legacy: LegacyCatalog = serde_json::from_str(&json)?;
-                let mut entries: Vec<_> = legacy
+                let entries: Vec<_> = legacy
                     .dictionaries
                     .into_iter()
                     .map(|entry| DictionaryCatalogEntry {
@@ -116,9 +140,6 @@ pub fn read_dictionary_catalog(connection: &Connection) -> Result<DictionaryCata
                         content_hash: None,
                     })
                     .collect();
-                if !entries.iter().any(|entry| entry.id == "builtin-fra-eng") {
-                    entries.push(DictionaryCatalog::default().entries.remove(1));
-                }
                 DictionaryCatalog {
                     next_id: legacy.next_id,
                     entries,
@@ -126,6 +147,7 @@ pub fn read_dictionary_catalog(connection: &Connection) -> Result<DictionaryCata
             }
         },
     };
+    upgrade_dictionary_catalog(&mut catalog);
     validate_dictionary_catalog(&catalog)?;
     Ok(catalog)
 }
