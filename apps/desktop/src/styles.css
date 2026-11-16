@@ -112,9 +112,9 @@ h2 { max-width: 700px; font-family: Georgia, 'Songti SC', 'SimSun', serif; font-
 .dictionary summary { cursor: pointer; }
 .vocabulary-summary { margin: 24px 0; padding: 20px; background: var(--surface); border: 1px solid var(--line); border-radius: 4px; }
 .vocabulary-summary h3 { font-family: Georgia, serif; font-size: 28px; font-weight: 400; margin: 0 0 16px; overflow-wrap: anywhere; }
-.vocabulary-summary dl { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 8px 20px; font-size: 14px; line-height: 1.7; }
-.vocabulary-summary dt { color: var(--muted); }
-.vocabulary-summary dd { margin: 0; overflow-wrap: anywhere; }
+.vocabulary-summary dl, .core-sense dl { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 8px 20px; font-size: 14px; line-height: 1.7; }
+.vocabulary-summary dt, .core-sense dt { color: var(--muted); }
+.vocabulary-summary dd, .core-sense dd { margin: 0; overflow-wrap: anywhere; }
 .vocabulary-editor { margin-top: 30px; border-top: 1px solid var(--line); padding-top: 24px; }
 .vocabulary-editor label { display: block; margin-bottom: 10px; }
 .vocabulary-editor textarea { width: 100%; resize: vertical; min-height: 160px; background: var(--surface); border: 1px solid var(--line); border-radius: 4px; padding: 12px; line-height: 1.7; }

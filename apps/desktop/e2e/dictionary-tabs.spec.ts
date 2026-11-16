@@ -5,7 +5,8 @@ import type { navigationProbe } from './fixtures/navigation-probe';
 const catalog = [{ id: 'mdx-1', title: 'first.mdx', content_hash: 'a'.repeat(64), availability: 'available' },
   { id: 'mdx-2', title: 'second.mdx', content_hash: 'b'.repeat(64), availability: 'available' },
   { id: 'builtin', title: 'FreeDict fra-zho', content_hash: null, availability: 'available' },
-  { id: 'builtin-fra-eng', title: 'FreeDict fra-eng 0.4.1', content_hash: null, availability: 'available' }];
+  { id: 'builtin-fra-eng', title: 'FreeDict fra-eng 0.4.1', content_hash: null, availability: 'available' },
+  { id: 'builtin-core', title: 'Lexique core pilot', content_hash: null, availability: 'available' }];
 const first = { ...dictionary, dictionary_id: 'mdx-1', source: { ...dictionary.source, title: 'first.mdx', attribution: null, license: null, source_url: null, license_url: null },
   entries: [{ ordinal: 1, key: 'double', pronunciations: [], grammar: [], senses: [], html: '<p>first sense</p>' }] };
 

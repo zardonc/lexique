@@ -3,7 +3,8 @@ import { nativeFixture } from './native-fixture';
 
 const missing = { id: 'mdx-7', title: 'original.mdx', content_hash: 'a'.repeat(64), availability: 'missing' };
 const bundled = [{ id: 'builtin', title: 'FreeDict fra-zho', content_hash: null, availability: 'available' },
-  { id: 'builtin-fra-eng', title: 'FreeDict fra-eng 0.4.1', content_hash: null, availability: 'available' }];
+  { id: 'builtin-fra-eng', title: 'FreeDict fra-eng 0.4.1', content_hash: null, availability: 'available' },
+  { id: 'builtin-core', title: 'Lexique core pilot', content_hash: null, availability: 'available' }];
 const catalog = [missing, ...bundled];
 const restored = [{ ...missing, availability: 'available' }, ...bundled];
 const file = { name: 'same-file.mdx', mimeType: 'application/octet-stream', buffer: Buffer.from([77, 68, 88]) };
@@ -82,7 +83,7 @@ test('unknown content can be supplied at capacity and a failed confirmation keep
   await dialog.getByRole('button', { name: '取消', exact: true }).click();
   await expect(dialog).not.toBeVisible();
   await expect(row).toContainText('待补齐 MDX');
-  await expect(settings.locator('li')).toHaveCount(17);
+  await expect(settings.locator('li')).toHaveCount(18);
   await expect(picker).toBeEnabled();
   await expect(settings.getByRole('alert')).toContainText('synthetic registration failure');
 });

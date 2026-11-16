@@ -10,11 +10,12 @@ import type { RuntimeAdapter } from './platform/runtime';
 import { ReviewCards } from './review-cards';
 import { ExampleSpeech } from './example-speech';
 import { SpeechButton } from './speech-button';
+import { CoreSenseContent, digestLabel } from './core-sense';
 
 export function VocabularySummary({ snapshot, text, frequency }: { readonly snapshot: VocabularySnapshot; readonly text: NotebookText; readonly frequency?: ReactNode }) {
   return <section className="vocabulary-summary" aria-label={text.summary}>
     <h3><span lang="fr">{snapshot.headword}</span> {frequency}</h3>
-    {snapshot.digest.map((entry, index) => <dl key={index}>
+    {snapshot.digest.map((entry, index) => entry.core ? <CoreSenseContent key={index} sense={entry.core} text={text.core} /> : <dl key={index}>
       <dt>{text.pronunciation}</dt><dd lang="fr">{entry.pronunciations.join(' · ') || text.missing}</dd>
       <dt>{text.grammar}</dt><dd>{entry.grammar.join(' · ') || text.missing}</dd>
       <dt>{text.translation}</dt><dd lang="zh">{entry.translation || text.missing}</dd>
@@ -44,11 +45,12 @@ function SavedSource({ snapshot, text }: { readonly snapshot: VocabularySnapshot
 
 function Conflict({ notebook, text, runtime }: { readonly notebook: Notebook; readonly text: NotebookText; readonly runtime: RuntimeAdapter }) {
   if (!notebook.conflict) return null;
+  const entry = notebook.conflict.example_sense === null ? undefined : notebook.conflict.digest[notebook.conflict.example_sense];
   return <section role="alert" className="runtime-error" aria-label={text.conflict}>
     <h4>{text.conflict}</h4><p>{text.current}</p><pre>{notebook.conflict.notes || '∅'}</pre>
     <p>{text.exampleFr}</p><pre>{notebook.conflict.example_fr || '∅'}</pre>
     <p>{text.exampleZh}</p><pre>{notebook.conflict.example_zh || '∅'}</pre><ExampleSource source={notebook.conflict.example_source} text={text} runtime={runtime} />
-    <p>{text.exampleSense}</p><pre>{notebook.conflict.example_sense === null ? text.exampleSenseUnspecified : notebook.conflict.digest[notebook.conflict.example_sense]?.translation || text.missing}</pre>
+    <p>{text.exampleSense}</p><pre lang={entry?.core ? 'zh' : undefined}>{notebook.conflict.example_sense === null ? text.exampleSenseUnspecified : digestLabel(entry, text.missing)}</pre>
     {notebook.conflict.more_examples.map((example, index) => <div key={index}><pre>{example.fr}{'\n'}{example.zh}</pre><ExampleSource source={example.source} text={text} runtime={runtime} /></div>)}
     <p>{text.discardWarning}</p><div className="actions">
       <button disabled={notebook.busy} onClick={notebook.adopt}>{text.adopt}</button>
@@ -76,7 +78,7 @@ function ExampleEditor({ notebook, text, runtime }: { readonly notebook: Noteboo
   useEffect(() => { if (notebook.focusExample) document.getElementById(notebook.focusExample)?.focus(); }, [notebook.focusExample, notebook.excerptStatus]);
   return <><h4>{text.exampleUser}</h4>
     <label htmlFor="example-sense">{text.exampleSense}</label><select id="example-sense" disabled={notebook.busy} aria-invalid={notebook.meaningRequired} aria-describedby={notebook.meaningRequired ? 'example-sense-required' : undefined} value={editor.example_sense === null ? '' : String(editor.example_sense)} onChange={(event) => notebook.editSense(event.target.value === '' ? null : Number(event.target.value))}>
-      <option value="">{text.exampleSenseUnspecified}</option>{editor.snapshot.digest.map((entry, index) => <option key={index} value={index}>{entry.translation || text.missing}</option>)}
+      <option value="">{text.exampleSenseUnspecified}</option>{editor.snapshot.digest.map((entry, index) => <option key={index} value={index} lang={entry.core ? 'zh' : undefined}>{digestLabel(entry, text.missing)}</option>)}
     </select>
     {notebook.meaningRequired && <p id="example-sense-required" className="runtime-error">{text.exampleSenseRequired}</p>}
     <ExampleSource source={editor.example_source} text={text} runtime={runtime} />

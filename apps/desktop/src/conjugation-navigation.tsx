@@ -82,9 +82,14 @@ function dictionaryKeys(lemma: string, preferred?: string) {
     : [...new Set([lemma, lemma.replaceAll('’', "'"), lemma.replaceAll("'", '’')])];
 }
 
+export function dictionaryVerb(entry: DictionaryLookup['entries'][number]) {
+  return entry.core_senses?.length ? entry.core_senses.some((sense) => sense.pos === 'AUX' || sense.pos === 'VER')
+    : entry.grammar.includes('v');
+}
+
 function dictionaryEntries(result: DictionaryLookup, lemma: string) {
   return result.entries.filter((entry) => expressionMatches(entry.key, lemma)
-    && (entry.grammar.includes('v') || (entry.html !== undefined && entry.grammar.length === 0)));
+    && (dictionaryVerb(entry) || (entry.html !== undefined && entry.grammar.length === 0)));
 }
 
 export function ConjugationDictionary({ runtime, locale, lemma, dictionaryKey, dictionaryId, onOpen }: {
@@ -112,10 +117,12 @@ export function ConjugationDictionary({ runtime, locale, lemma, dictionaryKey, d
   return <div className="dictionary-link">
     {candidates.length === 0 && <p>{text.dictionaryUnavailable}</p>}
     {candidates.length > 1 && <p>{text.chooseDictionary}</p>}
-    {candidates.some(({ entry }) => !entry.grammar.includes('v')) && <p>{text.dictionaryPosUnknown}</p>}
+    {candidates.some(({ entry }) => !dictionaryVerb(entry)) && <p>{text.dictionaryPosUnknown}</p>}
     {candidates.map(({ result, entry }) => <button key={JSON.stringify([result.dictionary_id, entry.key, entry.ordinal])} type="button" onClick={() => onOpen({ result, ordinal: entry.ordinal })}>
       {text.openDictionary}: <span lang="fr">{entry.key}</span>
-      {candidates.length > 1 && ` · ${entry.senses.flatMap((sense) => sense.translations).join(' / ')}`}
+      {candidates.length > 1 && <> · <span lang={entry.core_senses?.length ? 'zh' : undefined}>{entry.core_senses?.length
+        ? entry.core_senses.map((sense) => `${sense.pos} · ${sense.meaning_zh}`).join(' / ')
+        : entry.senses.flatMap((sense) => sense.translations).join(' / ')}</span></>}
     </button>)}
   </div>;
 }
@@ -128,7 +135,7 @@ async function lemmaTargets(runtime: RuntimeAdapter, lemma: string, id: string):
   const targets = await Promise.all(dictionaryKeys(lemma).map(async (key): Promise<LemmaTargets> => {
     try {
       const result = await runtime.lookupDictionary(key, id);
-      return { links: result ? dictionaryEntries(result, lemma).map((entry) => ({ lemma, key: entry.key, unknownPos: !entry.grammar.includes('v') })) : [], errors: [] };
+      return { links: result ? dictionaryEntries(result, lemma).map((entry) => ({ lemma, key: entry.key, unknownPos: !dictionaryVerb(entry) })) : [], errors: [] };
     } catch (cause) { const error = dictionaryFailure(cause); return { links: [], errors: [{ ...error, message: `${key}: ${error.message}` }] }; }
   }));
   return { links: [...new Map(targets.flatMap((target) => target.links).map((link) => [link.key, link])).values()], errors: targets.flatMap((target) => target.errors) };
