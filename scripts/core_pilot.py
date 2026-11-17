@@ -1,4 +1,4 @@
-"""Prepare the independently reviewed twelve-group D2 pilot and its real notices."""
+"""Prepare the independently reviewed D2 core content and its real notices."""
 
 import argparse
 import csv
@@ -14,7 +14,7 @@ from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 RESOURCE = ROOT / "resources/core-pilot-79"
-ROWS = (1, 2, 3, 4, 5, 70, 71, 360, 422, 423, 483, 1911)
+ROWS = (*range(1, 51), 70, 71, 360, 422, 423, 483, 1911)
 FIELDS = {"french_definition": "definition_fr", "ipa": "ipa", "english": "meaning_en", "chinese": "meaning_zh"}
 LANGUAGES = {"french_definition": "fr", "ipa": "und", "english": "en", "chinese": "zh"}
 MATERIALS = (
@@ -84,7 +84,7 @@ def load_inputs(source_dir):
         raise ValueError("A separate independent field review is required")
     groups = curated.get("groups", [])
     if [group.get("frozen_row") for group in groups] != list(ROWS):
-        raise ValueError("Pilot frozen scope rows changed")
+        raise ValueError("Admitted frozen scope rows changed")
     sources = {source["id"]: source for source in curated["sources"]}
     if len(sources) != len(curated["sources"]):
         raise ValueError("Duplicate field source identity")
@@ -98,9 +98,10 @@ def load_inputs(source_dir):
             raise ValueError("Invalid fixed field source version")
     field_reviews = {(field["sense_id"], field["field"]): field for field in reviewed["fields"]}
     usage_reviews = {usage["sense_id"]: usage for usage in reviewed["usage"]}
-    if len(field_reviews) != 48 or len(usage_reviews) != 12:
+    if len(field_reviews) != len(ROWS) * 4 or len(usage_reviews) != len(ROWS):
         raise ValueError("Independent field review is incomplete or duplicated")
     selected = []
+    scope_gaps = {}
     seen = set()
     for group in groups:
         original = scope[group["frozen_row"] - 1]
@@ -109,7 +110,7 @@ def load_inputs(source_dir):
         if unicodedata.normalize("NFC", group["headword"]) != group["headword"]:
             raise ValueError("Frozen scope spelling must remain NFC")
         if not group.get("senses"):
-            raise ValueError("A pilot group is missing its complete four-field sense")
+            raise ValueError("An admitted group is missing its complete four-field sense")
         for index, sense in enumerate(group["senses"], 1):
             identity = sense["sense_id"]
             if identity in seen:
@@ -120,6 +121,13 @@ def load_inputs(source_dir):
                 raise ValueError("A selected sense is not independently reviewed")
             if (sense["use"], sense["use_language"], sense["source_headword"]) != (usage["accepted_usage"], usage["language"], usage["source_headword"]):
                 raise ValueError("Selected usage differs from the independently reviewed wording")
+            if usage.get("everyday_sense_status") not in ("passed", "unresolved"):
+                raise ValueError("An explicit everyday-sense review is required")
+            if usage["everyday_sense_status"] == "unresolved":
+                scope_gaps[group["frozen_row"]] = {
+                    "incomplete_requirements": ["modern_everyday_sense"],
+                    "reason": text(usage.get("everyday_sense_reason"), "unresolved everyday-sense reason"),
+                }
             if sense.get("cefr") is not None or set(sense.get("fields", {})) != set(FIELDS):
                 raise ValueError("A selected sense requires exactly four complete fields and no inferred CEFR")
             payload = {"sense_id": text(identity, "sense identity", 128), "frozen_row": group["frozen_row"],
@@ -153,14 +161,17 @@ def load_inputs(source_dir):
                 }
             payload["field_sources"] = provenance
             selected.append((group["frozen_row"], index, group["headword"], payload))
-    if len(selected) != 12 or len(seen) != 12:
-        raise ValueError("Pilot selected-sense scope changed")
+    if len(selected) != len(ROWS) or len(seen) != len(ROWS):
+        raise ValueError("Admitted selected-sense scope changed")
     relations = curated["spelling_relations"]
     expected_relations = reviewed["spelling_relations"]
-    if len(relations) != 2 or [{key: row[key] for key in expected_relations[0]} for row in relations] != expected_relations:
+    if len(relations) != 5 or [{key: row[key] for key in expected_relations[0]} for row in relations] != expected_relations:
         raise ValueError("Spelling relation differs from the independently reviewed evidence")
     aliases = {row["source_headword"]: row["frozen_headword"] for row in relations}
-    if aliases != {"cœur": "coeur", "aujourd’hui": "aujourd'hui"} or relations[1]["source_span"]["raw_source_excerpt"] != "#REDIRECT [[aujourd’hui]]":
+    if aliases != {"cœur": "coeur", "aujourd’hui": "aujourd'hui", "l’": "l'", "d’": "d'"} or any(
+        relation["source_span"]["raw_source_excerpt"] != f"#REDIRECT [[{relation['source_headword']}]]"
+        for relation in relations if relation["relationship"] == "explicit hard redirect"
+    ):
         raise ValueError("Unsupported spelling relation or incomplete redirect evidence")
     checksums = read_json(source_dir / "input-checksums.json")
     if set(checksums) != set(MATERIALS):
@@ -168,12 +179,12 @@ def load_inputs(source_dir):
     for name, expected in checksums.items():
         if digest(source_dir / name) != expected:
             raise ValueError(f"Curated material changed after review: {name}")
-    return curated, scope, selected, aliases
+    return curated, scope, selected, aliases, scope_gaps
 
 
 def prepare(destination, source_dir=RESOURCE, project_license=ROOT / "LICENSE"):
     destination, source_dir = Path(destination), Path(source_dir)
-    curated, scope, selected, aliases = load_inputs(source_dir)
+    curated, scope, selected, aliases, scope_gaps = load_inputs(source_dir)
     if source_dir.resolve() == destination.resolve() or source_dir.resolve().is_relative_to(destination.resolve()):
         raise ValueError("Prepared output must not overwrite curated inputs")
     project_license = Path(project_license)
@@ -186,10 +197,14 @@ def prepare(destination, source_dir=RESOURCE, project_license=ROOT / "LICENSE"):
               "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en"}
     metadata = {"format_version": "1", "content_version": version, "source": compact(source),
                 "scope_denominator_groups": "4087", "scope_denominator_headwords": "3773"}
-    complete_rows = {row[0] for row in selected}
+    complete_rows = {row[0] for row in selected} - scope_gaps.keys()
+    if (curated.get("complete_groups"), curated.get("remaining_groups")) != (len(complete_rows), 4087 - len(complete_rows)):
+        raise ValueError("Curated everyday-sense coverage differs from its review")
     coverage = {"denominator_groups": 4087, "denominator_headwords": 3773, "complete_groups": len(complete_rows),
                 "complete_fields": len(selected) * 4, "remaining_groups": 4087 - len(complete_rows),
-                "incomplete_groups": [{"frozen_row": index, **group, "incomplete_fields": list(FIELDS)}
+                "incomplete_groups": [{"frozen_row": index, **group,
+                                       "incomplete_fields": [] if index in scope_gaps else list(FIELDS),
+                                       **scope_gaps.get(index, {})}
                                       for index, group in enumerate(scope, 1) if index not in complete_rows]}
     destination.parent.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(prefix="lexique-core-", dir=destination.parent) as temporary:
@@ -231,9 +246,16 @@ def prepare(destination, source_dir=RESOURCE, project_license=ROOT / "LICENSE"):
         report = {"format_version": 1, "content_version": version, "sqlite_sha256": digest(database),
                   "sqlite_bytes": database.stat().st_size, "inputs": inputs,
                   "admission": {"independent_field_review": "passed", "produced_resource_self_check": "passed",
+                                "everyday_sense_review": "incomplete" if scope_gaps else "passed",
                                 "selected_source_rights_and_materials": "passed", "complete_groups": len(complete_rows),
                                 "complete_senses": len(selected), "complete_fields": len(selected) * 4, "remaining_groups": 4087 - len(complete_rows)},
                   "learner_acceptance": {"status": "not_run", "accepted": False}, "first_release": "incomplete",
+                  "content_batches": [{"issue": 81, "target_groups": 50, "reused_pilot_groups": 5, "new_groups": 45,
+                                       "complete_groups": len(complete_rows.intersection(range(1, 51))),
+                                       "complete_fields": sum(4 for row in selected if row[0] <= 50),
+                                       "groups": [{"frozen_row": row, "headword": word, "pos": payload["pos"], "complete_fields": 4,
+                                                   **scope_gaps.get(row, {})}
+                                                  for row, _, word, payload in selected if row <= 50]}],
                   "limits": {"query_utf8_bytes": 512, "matching_senses": 200, "response_bytes": 4 * 1024 * 1024,
                              "resource_bytes": 16_000_000, "field_unicode_scalars": 20_000},
                   "measurements": {"maximum_sense_json_bytes": max(len(compact(row[3]).encode()) for row in selected),

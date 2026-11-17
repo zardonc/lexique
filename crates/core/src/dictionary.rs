@@ -63,7 +63,26 @@ fn web_url(value: &str) -> bool {
 impl CoreSense {
     pub fn validate(&self) -> Result<(), String> {
         if !(1..=4_087).contains(&self.frozen_row)
-            || !matches!(self.pos.as_str(), "AUX" | "NOM" | "VER" | "ADV" | "ADJ")
+            || !matches!(
+                self.pos.as_str(),
+                "AUX"
+                    | "NOM"
+                    | "VER"
+                    | "ADV"
+                    | "ADJ"
+                    | "PRO:per"
+                    | "PRE"
+                    | "ART:def"
+                    | "CON"
+                    | "ADJ:num"
+                    | "ART:ind"
+                    | "PRO:ind"
+                    | "PRO:int"
+                    | "PRO:rel"
+                    | "PRO:dem"
+                    | "ADJ:ind"
+                    | "ADJ:dem"
+            )
         {
             return Err("Invalid frozen core group".into());
         }

@@ -1,5 +1,6 @@
 import json
 import os
+from contextlib import closing
 from pathlib import Path
 import shutil
 import sqlite3
@@ -14,6 +15,80 @@ FIELD_NAMES = {"french_definition": "definition_fr", "ipa": "ipa", "english": "m
 
 
 class CorePilotPreparationTests(unittest.TestCase):
+    def test_first_content_batch_keeps_all_fifty_frozen_word_pos_pairs(self):
+        expected = [
+            ("être", "AUX"), ("être", "NOM"), ("être", "VER"),
+            ("avoir", "AUX"), ("avoir", "VER"), ("je", "PRO:per"),
+            ("de", "PRE"), ("ne", "ADV"), ("pas", "ADV"), ("pas", "NOM"),
+            ("le", "ART:def"), ("le", "PRO:per"), ("la", "ART:def"),
+            ("la", "PRO:per"), ("tu", "PRO:per"), ("vous", "PRO:per"),
+            ("il", "PRO:per"), ("et", "CON"), ("un", "ADJ:num"),
+            ("un", "ART:ind"), ("un", "PRO:ind"), ("à", "PRE"),
+            ("l'", "ART:def"), ("l'", "PRO:per"), ("qui", "PRO:int"),
+            ("qui", "PRO:rel"), ("aller", "NOM"), ("aller", "VER"),
+            ("les", "ART:def"), ("les", "PRO:per"), ("en", "ADV"),
+            ("en", "PRE"), ("en", "PRO:per"), ("ça", "NOM"),
+            ("ça", "PRO:dem"), ("faire", "VER"), ("tout", "ADJ"),
+            ("tout", "ADJ:ind"), ("tout", "ADV"), ("tout", "NOM"),
+            ("tout", "PRO:ind"), ("on", "PRO:per"), ("que", "PRO:int"),
+            ("que", "PRO:rel"), ("une", "ADJ:num"), ("une", "ART:ind"),
+            ("une", "PRO:ind"), ("ce", "ADJ:dem"), ("ce", "PRO:dem"),
+            ("d'", "PRE"),
+        ]
+        with tempfile.TemporaryDirectory() as temporary:
+            output = Path(temporary) / "prepared"
+            report = prepare(output)
+            with closing(sqlite3.connect(output / "core.sqlite3")) as connection:
+                batch = [json.loads(row[0]) for row in connection.execute(
+                    "SELECT payload FROM senses WHERE frozen_row BETWEEN 1 AND 50 ORDER BY frozen_row,sense_index")]
+            self.assertEqual([(sense["headword"], sense["pos"]) for sense in batch], expected)
+            self.assertTrue(all(sense[field].strip() for sense in batch for field in FIELD_NAMES.values()))
+            content_batch = report["content_batches"][0]
+            self.assertEqual((content_batch["issue"], content_batch["target_groups"], content_batch["complete_groups"],
+                              content_batch["complete_fields"], content_batch["reused_pilot_groups"], content_batch["new_groups"]),
+                             (81, 50, 49, 200, 5, 45))
+            self.assertEqual([(group["headword"], group["pos"]) for group in content_batch["groups"]], expected)
+
+    def test_specialist_ca_noun_does_not_complete_everyday_batch(self):
+        inputs = json.loads((RESOURCE / "curated-inputs.json").read_text(encoding="utf-8"))
+        noun = next(group for group in inputs["groups"]
+                    if (group["headword"], group["lexique_cgram"]) == ("ça", "NOM"))
+        self.assertEqual(noun["senses"][0]["sense_id"], "ca-noun-psychoanalytic-id")
+        with tempfile.TemporaryDirectory() as temporary:
+            report = prepare(Path(temporary) / "prepared")
+            self.assertEqual(report["content_batches"][0]["complete_groups"], 49,
+                             "Specialist ça/NOM does not satisfy the everyday-sense requirement")
+            batch_noun = next(group for group in report["content_batches"][0]["groups"]
+                              if group["frozen_row"] == 34)
+            self.assertEqual(batch_noun["complete_fields"], 4)
+            self.assertEqual(batch_noun["incomplete_requirements"], ["modern_everyday_sense"])
+            coverage = json.loads((Path(temporary) / "prepared/coverage.json").read_text(encoding="utf-8"))
+            gap = next(group for group in coverage["incomplete_groups"] if group["frozen_row"] == 34)
+            self.assertEqual((gap["word"], gap["lexique_cgram"]), ("ça", "NOM"))
+            self.assertEqual(gap["incomplete_fields"], [])
+            self.assertEqual(gap["incomplete_requirements"], ["modern_everyday_sense"])
+            self.assertIn("psychoanalytic", gap["reason"])
+            self.assertEqual(report["admission"]["everyday_sense_review"], "incomplete")
+
+    def test_missing_invalid_or_unexplained_everyday_review_fails_admission(self):
+        for change in ("missing", "invalid", "unexplained"):
+            with self.subTest(change=change), tempfile.TemporaryDirectory() as temporary:
+                root = Path(temporary)
+                source = root / "inputs"
+                shutil.copytree(RESOURCE, source)
+                review = json.loads((source / "field-review.json").read_text(encoding="utf-8"))
+                usage = next(row for row in review["usage"] if row["sense_id"] == "ca-noun-psychoanalytic-id")
+                if change == "missing":
+                    del usage["everyday_sense_status"]
+                elif change == "invalid":
+                    usage["everyday_sense_status"] = "pending"
+                else:
+                    del usage["everyday_sense_reason"]
+                (source / "field-review.json").write_text(json.dumps(review, ensure_ascii=False), encoding="utf-8")
+                with self.assertRaisesRegex(ValueError, "everyday-sense"):
+                    prepare(root / "output", source_dir=source)
+                self.assertFalse((root / "output/core.sqlite3").exists())
+
     def test_repeat_preparation_preserves_verified_resource_timestamps(self):
         with tempfile.TemporaryDirectory() as temporary:
             output = Path(temporary) / "prepared"
@@ -35,19 +110,20 @@ class CorePilotPreparationTests(unittest.TestCase):
             second = prepare(root / "second")
             self.assertEqual(report["sqlite_sha256"], second["sqlite_sha256"])
             self.assertEqual((root / "first/core.sqlite3").read_bytes(), (root / "second/core.sqlite3").read_bytes())
-            self.assertEqual(report["admission"]["complete_groups"], 12)
-            self.assertEqual(report["admission"]["complete_fields"], 48)
-            self.assertEqual(report["admission"]["remaining_groups"], 4075)
+            self.assertEqual(report["admission"]["complete_groups"], 56)
+            self.assertEqual(report["admission"]["complete_fields"], 228)
+            self.assertEqual(report["admission"]["remaining_groups"], 4031)
             self.assertFalse(report["learner_acceptance"]["accepted"])
             connection = sqlite3.connect((root / "first/core.sqlite3").as_uri() + "?mode=ro", uri=True)
             with connection:
                 senses = [json.loads(row[0]) for row in connection.execute("SELECT payload FROM senses ORDER BY frozen_row,sense_index")]
-                self.assertEqual([row["frozen_row"] for row in senses], [1, 2, 3, 4, 5, 70, 71, 360, 422, 423, 483, 1911])
+                self.assertEqual([row["frozen_row"] for row in senses], [*range(1, 51), 70, 71, 360, 422, 423, 483, 1911])
                 self.assertEqual([row["pos"] for row in senses[:5]], ["AUX", "NOM", "VER", "AUX", "VER"])
                 self.assertIn("all pronominal verbs", senses[0]["meaning_en"])
                 self.assertIn("past participle", senses[3]["meaning_en"])
                 self.assertIn("être", senses[3]["meaning_en"])
-                self.assertEqual(dict(connection.execute("SELECT query,headword FROM aliases")), {"cœur": "coeur", "aujourd’hui": "aujourd'hui"})
+                self.assertEqual(dict(connection.execute("SELECT query,headword FROM aliases")),
+                                 {"cœur": "coeur", "aujourd’hui": "aujourd'hui", "l’": "l'", "d’": "d'"})
                 reviewed = json.loads((RESOURCE / "field-review.json").read_text(encoding="utf-8"))
                 by_id = {sense["sense_id"]: sense for sense in senses}
                 for field in reviewed["fields"]:
@@ -60,8 +136,9 @@ class CorePilotPreparationTests(unittest.TestCase):
                     connection.execute("DELETE FROM senses")
             connection.close()
             coverage = json.loads((root / "first/coverage.json").read_text(encoding="utf-8"))
-            self.assertEqual(len(coverage["incomplete_groups"]), 4075)
-            self.assertTrue(all(set(group["incomplete_fields"]) == set(FIELD_NAMES) for group in coverage["incomplete_groups"]))
+            self.assertEqual(len(coverage["incomplete_groups"]), 4031)
+            self.assertTrue(all(set(group["incomplete_fields"]) == set(FIELD_NAMES)
+                                for group in coverage["incomplete_groups"] if group["frozen_row"] != 34))
             self.assertIn("COPYING", report["inputs"])
             self.assertIn("core_pilot.py", report["inputs"])
             self.assertIn("LEXIQUE-UPSTREAM-README.txt", report["inputs"])

@@ -14,6 +14,16 @@ assert.ok([scenario, resources, binary, conjugation, frequency, curationPath, de
 assert.ok(['pilot', 'review', 'no-speech', 'catalogue', 'missing', 'corrupt', 'future', 'unsupported', 'newer', 'limit', 'export', 'restore', 'legacy', 'reject'].includes(scenario));
 const curation = JSON.parse(await readFile(resolve(curationPath), 'utf8'));
 const membership = [[1, 'être', 'AUX'], [2, 'être', 'NOM'], [3, 'être', 'VER'], [4, 'avoir', 'AUX'], [5, 'avoir', 'VER'],
+  [6, 'je', 'PRO:per'], [7, 'de', 'PRE'], [8, 'ne', 'ADV'], [9, 'pas', 'ADV'], [10, 'pas', 'NOM'],
+  [11, 'le', 'ART:def'], [12, 'le', 'PRO:per'], [13, 'la', 'ART:def'], [14, 'la', 'PRO:per'],
+  [15, 'tu', 'PRO:per'], [16, 'vous', 'PRO:per'], [17, 'il', 'PRO:per'], [18, 'et', 'CON'],
+  [19, 'un', 'ADJ:num'], [20, 'un', 'ART:ind'], [21, 'un', 'PRO:ind'], [22, 'à', 'PRE'],
+  [23, "l'", 'ART:def'], [24, "l'", 'PRO:per'], [25, 'qui', 'PRO:int'], [26, 'qui', 'PRO:rel'],
+  [27, 'aller', 'NOM'], [28, 'aller', 'VER'], [29, 'les', 'ART:def'], [30, 'les', 'PRO:per'],
+  [31, 'en', 'ADV'], [32, 'en', 'PRE'], [33, 'en', 'PRO:per'], [34, 'ça', 'NOM'], [35, 'ça', 'PRO:dem'],
+  [36, 'faire', 'VER'], [37, 'tout', 'ADJ'], [38, 'tout', 'ADJ:ind'], [39, 'tout', 'ADV'],
+  [40, 'tout', 'NOM'], [41, 'tout', 'PRO:ind'], [42, 'on', 'PRO:per'], [43, 'que', 'PRO:int'], [44, 'que', 'PRO:rel'],
+  [45, 'une', 'ADJ:num'], [46, 'une', 'ART:ind'], [47, 'une', 'PRO:ind'], [48, 'ce', 'ADJ:dem'], [49, 'ce', 'PRO:dem'], [50, "d'", 'PRE'],
   [70, 'bien', 'ADV'], [71, 'bien', 'NOM'], [360, "aujourd'hui", 'ADV'], [422, 'fort', 'ADJ'], [423, 'fort', 'ADV'],
   [483, 'coeur', 'NOM'], [1911, 'côte', 'NOM']];
 assert.deepEqual(curation.groups.map((group) => [group.frozen_row, group.headword, group.lexique_cgram]), membership);
@@ -173,6 +183,7 @@ async function query(key) {
 
 async function openRecord(record) {
   await page.getByRole('button', { name: 'Notebook', exact: true }).click();
+  await page.getByLabel('Words per page').selectOption('100');
   await page.locator('.vocabulary-list button').filter({ has: page.getByText(record.headword, { exact: true }) }).click();
   await fields(page.locator('.vocabulary-summary'), record.digest.map((item) => item.core));
   await expect(page.getByLabel('Personal notes', { exact: true })).toHaveValue(record.notes);
@@ -189,6 +200,7 @@ async function rate(record) {
 
 async function pilot() {
   assert.deepEqual((await invoke('dictionary_settings')).map((item) => item.id), ['builtin-core', 'builtin', 'builtin-fra-eng']);
+  assert.equal((await invoke('dictionary_lookup', { key: 'être', dictionary_id: 'builtin-core' })).source.version, 'core-81-v1');
   await invoke('dictionary_settings', { order: ['builtin', 'builtin-fra-eng', 'builtin-core'] });
   const before = readState(destination);
   for (const field of ['digest', 'reference']) await rejected('vocabulary_save', {
@@ -198,7 +210,7 @@ async function pilot() {
   const saved = [];
   for (const [index, key] of [...new Set(curation.groups.map((group) => group.headword))].entries()) saved.push(await save(key, `word-${index}`));
   const first = saved[0];
-  for (const [queryKey, frozen] of [['e\u0302tre', 'être'], ['cœur', 'coeur'], ['coeur', 'coeur'], ['aujourd’hui', "aujourd'hui"]]) {
+  for (const [queryKey, frozen] of [['e\u0302tre', 'être'], ['cœur', 'coeur'], ['coeur', 'coeur'], ['aujourd’hui', "aujourd'hui"], ['l’', "l'"], ['d’', "d'"]]) {
     admitted(await invoke('dictionary_lookup', { key: queryKey, dictionary_id: 'builtin-core' }), frozen);
   }
   assert.deepEqual((await invoke('dictionary_lookup', { key: 'mot-absent-du-pilote', dictionary_id: 'builtin-core' })).entries, []);
@@ -238,11 +250,16 @@ async function pilot() {
   compareLearning(readState(destination), persisted);
   assert.deepEqual(await invoke('vocabulary_find', { headword: 'e\u0302tre' }), edited.record);
   await openRecord(edited.record); await page.screenshot({ path: join(destination, 'native-core-details.png'), fullPage: true });
+  const batchRecord = saved.find((value) => value.record.headword === 'le').record;
+  assert.deepEqual(await invoke('vocabulary_find', { headword: 'le' }), batchRecord);
+  await openRecord(batchRecord);
+  await page.screenshot({ path: join(destination, 'native-core-batch-le-details.png'), fullPage: true });
   if (scenario === 'no-speech') {
     await rejected('speech_generate', { vocabularyId: edited.record.id, operation: 'native-79-no-speech' });
     assert.deepEqual((await invoke('vocabulary_find', { headword: 'être' })).digest, edited.record.digest);
   }
-  evidence.checks.push({ check: '12 groups / 48 reviewed fields, explicit trusted provider, spelling bindings, retry, duplicate, notes, examples, FSRS and normal restart', status: 'passed' });
+  evidence.checks.push({ check: '50 batch groups / 200 fields; 57 total groups / 228 fields; trusted provider, spelling bindings, retry, duplicate, notes, examples, FSRS and normal restart', status: 'passed' });
+  evidence.checks.push({ check: 'Batch le article/pronoun saved fields and provenance match audited content after normal restart', status: 'passed' });
 }
 
 async function review() {
