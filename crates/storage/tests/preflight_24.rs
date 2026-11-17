@@ -11,7 +11,7 @@ pub use lexique_storage::StorageError;
 #[path = "../src/queue_cache.rs"]
 mod queue_cache;
 pub use queue_cache::*;
-use rusqlite::{Connection, params};
+use rusqlite::{Connection, TransactionBehavior, params};
 
 #[allow(dead_code)]
 mod candidate {
@@ -24,6 +24,13 @@ mod candidate {
         ids: &[i64],
     ) -> Result<Vec<BatchOutcome>, StorageError> {
         let tx = connection.transaction_with_behavior(TransactionBehavior::Immediate)?;
+        batch_transaction(tx, ids)
+    }
+
+    pub fn batch_transaction(
+        tx: rusqlite::Transaction<'_>,
+        ids: &[i64],
+    ) -> Result<Vec<BatchOutcome>, StorageError> {
         let mut outcomes = vec![];
         for &id in ids {
             tx.execute_batch("SAVEPOINT word")?;
@@ -70,12 +77,14 @@ fn database(count: i64) -> (PathBuf, Connection) {
     let root = database_root(nonce);
     std::fs::create_dir_all(&root).unwrap();
     let path = root.join("test.sqlite3");
-    let connection = Connection::open(&path).unwrap();
+    let mut connection = Connection::open(&path).unwrap();
     lexique_storage::initialize(&connection).unwrap();
     let snapshot = serde_json::json!({"reference":{"dictionary":"synthetic","lookup_key":"synthetic","version":"1","attribution":"synthetic","license":"MIT","source_url":"https://example.org","license_url":"https://example.org","sha256":"a".repeat(64)},"digest":[]}).to_string();
+    let tx = connection.transaction().unwrap();
     for id in 1..=count {
-        connection.execute("INSERT INTO vocabulary(id,headword,snapshot,notes,created_at,updated_at) VALUES(?1,?2,?3,'original',1000,1000)", params![id,format!("synthetic-{id}"),snapshot]).unwrap();
+        tx.execute("INSERT INTO vocabulary(id,headword,snapshot,notes,created_at,updated_at) VALUES(?1,?2,?3,'original',1000,1000)", params![id,format!("synthetic-{id}"),snapshot]).unwrap();
     }
+    tx.commit().unwrap();
     (path, connection)
 }
 
@@ -177,6 +186,8 @@ fn v03_candidate_transaction_sizes_and_competing_notes_and_ratings() {
                     other
                         .busy_timeout(std::time::Duration::from_millis(250))
                         .unwrap();
+                    // Release the writer only after the candidate holds the write lock.
+                    barrier.wait();
                     barrier.wait();
                     let start = Instant::now();
                     other
@@ -200,9 +211,13 @@ fn v03_candidate_transaction_sizes_and_competing_notes_and_ratings() {
                     start.elapsed().as_secs_f64() * 1000.0
                 });
                 barrier.wait();
+                let tx = connection
+                    .transaction_with_behavior(TransactionBehavior::Immediate)
+                    .unwrap();
                 let start = Instant::now();
+                barrier.wait();
                 assert!(
-                    candidate::batch(&mut connection, &(1..=size).collect::<Vec<_>>())
+                    candidate::batch_transaction(tx, &(1..=size).collect::<Vec<_>>())
                         .unwrap()
                         .iter()
                         .all(|(_, r)| r.is_ok())
