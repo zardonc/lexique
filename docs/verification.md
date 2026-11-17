@@ -8,6 +8,8 @@
 
 日常义项覆盖检查使用 Windows x64／Python 3.14.10：7 项转换测试、仓库及独立目录重建、文档链接与 `git diff --check` 通过；全部 17 份准备文件可逐字节重现，286,720 字节的 SQLite 与留存批次产物相同。原生与浏览器套件未重新执行，其证据仍归属原批次。当前命令、源码基点与留存日志见 [#81 覆盖检查](evidence/issue-81/README.md#everyday-use-and-coverage)。
 
+2026-11-17 UTC，[PR #168](https://github.com/zardonc/lexique/pull/168) 已合并：最终分支提交 `bbd7568326ce3f3782f7c6ab58ebe303522d900c`，合并提交 `7de4b213298c219bf812562faea79c6621631025`。PR 的 22 项检查全部通过；该合并提交的 [main CI](https://github.com/zardonc/lexique/actions/runs/44021843125) 11／11 job 通过。
+
 ## D2 数据保持与长内容／备份验证（#80）
 
 2026-11-16 UTC，[#80](https://github.com/zardonc/lexique/issues/80) 的十四项 Windows x64 原生检查通过：缺失、损坏、正确绑定的更高资源格式、来源升级、201 项／4 MiB 上限、完整长内容、v2 导出／恢复、真实既有 v1 恢复，以及三类无效备份。独立 SQLite 前后读取保持记录 ID、引用、原摘要数组／索引、例句及逐句出处、笔记、提交操作、卡片、FSRS／历史与选定／受保护音频；资源缺失后的提交重放及笔记编辑通过。重复保存保持原记录，其他来源可通过标签继续查询，新版来源与冻结内容明确区分。
