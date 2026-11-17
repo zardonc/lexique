@@ -47,7 +47,7 @@ pnpm rust:fmt
 pnpm rust:check
 pnpm rust:test:build      # 先编译测试，避免将首次编译计入运行预算
 pnpm test:rust            # 真正执行后端测试，硬性 60 秒超时并终止进程树
-pnpm core:prepare         # 从逐字段独立复核的选编输入生成 D2 12 组只读试点及来源材料
+pnpm core:prepare         # 从逐字段独立复核的选编输入生成 D2 只读核心及来源材料
 pnpm test:core            # 完整性、许可／署名材料、覆盖缺口及可复现转换检查
 pnpm mdict:test:build     # 独立 MDX/MDD 兼容探针；预编译可公开夹具检查
 pnpm test:mdict           # 实际查询与配对媒体／失败检查，同一 60 秒硬限
@@ -84,7 +84,7 @@ Windows x64 语音开发小样可在构建后运行 `python -X utf8 scripts/pack
 
 Windows x64 开发包随包提供一份 [FreeDict 法英 0.4.1 MDX](resources/freedict-fra-eng-mdx-0.4.1/README.md)：原内容日期 2018-08-11，273,758 字节、8,505 条记录，GPL-2.0-or-later。它是有缺项的补充词典；内置法中小样的注册保持。核心、法中小样、法英补充词典均可排序，15 份自定义 MDX 的容量保持；移出只适用于自定义词典。设置中共九类、13 项来源入口，含一项随包核心材料入口及原有八类、12 项自选来源／下载页；其他词典不随包或自动下载。校验与重建入口为 `python -B -X utf8 scripts/freedict_mdx.py`，对应原始源、许可、作者和修改说明随包保留；[原生接入与打包证据](docs/evidence/d2-mdx/README.md)记录原法英接入范围。完整默认词典／CEFR 继续按 D2 准入。
 
-[Lexique FR–EN–ZH](resources/core-pilot-79/README.md) 的 [D2 内容批次 001 #81](https://github.com/zardonc/lexique/issues/81) 保留冻结行 0001–0050 的全部 50 组及其 200 项已审定的法语释义、IPA、英语、中文字段，其中 49 组满足现代日常义项要求；`ça/NOM` 的精神分析“本我”义项仍保留，但日常名词用法证据未解决，#81 尚未完成。与原十二组试点合计 57 组／228 项已审定字段，56 组达到完整范围，复用内容只计一次。固定分母仍为 4,087 个词元／词性组、3,773 个词头，4,031 组尚未完整，学习者验收未运行。`pnpm core:prepare` 无需联网，以逐字段独立复核的选编输入生成只读 `target/desktop-core-pilot/core.sqlite3`、逐组字段／日常义项缺项清单、批次完整性及大小报告，内容版本为 `core-81-v1`。原生构建与 portable 包保留 `dictionary/core-pilot-79/` 中的真实来源节选、当前及历史署名、原始 Lexique 说明、完整 CC BY-SA 4.0 法律文本、转换器和单独 MIT 代码许可。设置中的核心来源入口打开这个固定随包目录，材料缺失会显示错误。详情及字段修改记录见[来源说明](resources/core-pilot-79/NOTICES.md)；完整 D2、CEFR 和 M5 仍待验收。
+[Lexique FR–EN–ZH](resources/core-pilot-79/README.md) 的十二组试点、[内容批次 001 #81](https://github.com/zardonc/lexique/issues/81) 与[内容批次 002 #82](https://github.com/zardonc/lexique/issues/82) 合计 **104 组／416 项独立审定字段**，内容版本 `core-82-v1`。#82 保留冻结行 0051–0100 的全部 50 个目标，已接受 49 组／196 字段，其中两组 `bien` 复用原内容、47 组新增；行 87 `quoi/ADJ` 的四字段仍明确未解决，按用户批准的部分范围保持 #82 未完成。原 57 组及字段／来源保持不变；总计 103 个现代日常组及 #81 已批准的唯一专业义例外 `ça/NOM`，复用只计一次。固定分母为 4,087 个词元／词性组、3,773 个词头，3,983 组尚未接受；日常义覆盖单独为 103 组齐备、3,984 组未齐备，学习者验收未运行。`pnpm core:prepare` 无需联网，从逐字段独立复核的选编输入生成只读 `target/desktop-core-pilot/core.sqlite3`、逐组缺项清单、批次完整性及大小报告。原生构建与 portable 包保留 `dictionary/core-pilot-79/` 中的真实来源节选、当前及历史署名、原始 Lexique 说明、完整 CC BY-SA 4.0 法律文本、转换器和单独 MIT 代码许可。设置中的核心来源入口打开这个固定随包目录，材料缺失会显示错误。来源及字段修改见[资源通知](resources/core-pilot-79/NOTICES.md)，本批次的执行范围见[#82 证据](docs/evidence/issue-82/README.md)；完整 D2、CEFR 和 M5 仍待验收。
 
 词频入口：`pnpm frequency:prepare`、`pnpm test:frequency`。固定 Lexique 3.83 完整源、CC BY-SA 4.0 法律原文及署名随仓库保存；准备到 `target/desktop-frequency-v1/`，缓存复用前验证输入、数据库和通知。生词本当前页批量读取最多 100 个词头，详情显示字幕词元／词性数值与来源；高／中／低／未知均有文字标签，资源失败保留笔记编辑及重试。词频不改变记录、FSRS 或选定音频，详见 [#57 证据](docs/evidence/issue-57/README.md)。
 

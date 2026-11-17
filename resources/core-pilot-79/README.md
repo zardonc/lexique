@@ -1,7 +1,14 @@
 # Lexique FR–EN–ZH D2 core
 
-This development resource contains **57 independently reviewed senses / 228
-fields** in 57 frozen headword/POS groups, content version `core-81-v1`.
+This development resource contains **104 independently reviewed senses / 416
+fields** in 104 frozen headword/POS groups, content version `core-82-v1`.
+[Batch 002 #82](https://github.com/zardonc/lexique/issues/82) retains all fifty
+targets in frozen rows 0051–0100. **49 groups / 196 fields are accepted**:
+47 new groups / 188 fields and two unchanged reused groups, `bien/ADV` and
+`bien/NOM`. Frozen row 87, `quoi/ADJ`, has no evidenced modern everyday adjective
+use and keeps four explicitly unresolved fields. Pronoun content does not replace
+that target; #82 remains incomplete.
+
 [Batch 001 #81](https://github.com/zardonc/lexique/issues/81) retains all fifty
 groups in frozen rows 0001–0050 and their **200 reviewed fields**, including five
 reused pilot groups and 45 new groups. **All fifty groups meet the approved batch
@@ -10,9 +17,9 @@ scope: 49 everyday groups and one documented specialist exception**. Frozen row
 singular and uncountability restrictions. The project owner's #81 decision is
 recorded in the usage review; this row remains outside literal everyday coverage.
 All twelve original pilot groups remain in the resource.
-Its permanent target is **4,087 groups / 3,773 headwords**; **57 groups are
-accepted and 4,030 remain unaccepted**. Literal everyday coverage is **56 complete
-groups and 4,031 incomplete groups**, including the approved specialist noun.
+Its permanent target is **4,087 groups / 3,773 headwords**; **104 groups are
+accepted and 3,983 remain unaccepted**. Literal everyday coverage is **103 complete
+groups and 3,984 incomplete groups**, including the approved specialist noun.
 Learner acceptance,
 the complete D2 release and other platform/release gates remain open. It supplies
 no CEFR labels.
@@ -33,8 +40,15 @@ replace the fixed current content versions.
 membership and row order. Frozen `coeur` remains distinct from source `cœur`;
 frozen `aujourd'hui` remains distinct from source `aujourd’hui`. Frozen `l'` and
 `d'` retain their article/pronoun and preposition groups; source `l’` and `d’`
-have fixed redirect evidence. The four query aliases use these specific source
-relationships, with separate article and pronoun records for `l’`.
+have fixed redirect evidence. Frozen `t'` and `s'` use fixed redirects to `t’`
+and `s’`, with separate conjunction and personal-pronoun records for `s’`.
+The six query aliases use these eight specific spelling records.
+
+Frozen `où/PRO:int` and `où/PRO:rel` retain Lexique's subclasses; the selected
+source describes interrogative and relative adverbs. OQLF corroborates the
+interrogative-adverb classification and permits both relative-pronoun and
+relative-adverb terminology. The usage and modification notices record that
+correspondence. `y/NOM` selects the ordinary masculine, invariable letter name.
 
 Selected/adapted content and licensed membership use **CC BY-SA 4.0**. Read
 [NOTICES.md](NOTICES.md), [COPYING](COPYING), and
@@ -53,6 +67,8 @@ missing fields alongside accepted groups and the approved exception. `report.jso
 records scope acceptance separately from everyday-sense completeness. The converter
 accepts the specialist decision only for frozen row 34, `ça/NOM`, bound to #81
 and the project owner's approval. Field completeness counts all reviewed fields.
+Batch #82 reports all fifty targets separately from the 49 admitted groups;
+row 87 remains in coverage with four missing fields and its unresolved reason.
 
 Whole Wiktionary pages, unselected dictionary bodies, literary/comic quotations,
 images and audio are outside this resource. OQLF and the Canadian Translation

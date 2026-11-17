@@ -59,3 +59,33 @@ The project owner's approved #81 scope includes `ça/NOM` as the sole specialist
 exception, retaining its psychoanalytic, masculine, singular and uncountability
 restrictions. It is counted separately from everyday coverage. Learner acceptance
 remains unrun.
+
+## Batch 002 (#82)
+
+The batch adds 47 independently reviewed groups and reuses `bien/ADV` and
+`bien/NOM` unchanged. All new field adaptations, selected excerpts and grammatical
+restrictions retain CC BY-SA 4.0, their fixed versions/spans, contributor histories
+and individual modification notices. The three new spelling records use fixed
+hard redirects for `t'` → `t’` and `s'` → `s’`; `s'` keeps distinct conjunction
+and personal-pronoun records. They produce two additional query aliases.
+
+Also credit **Académie française, Dictionnaire de l’Académie française,
+8th edition (1932–1935)** for the declared import notices on `pouvoir`, `nous`,
+`moi`, `devoir`, `oui`, `comme`, `venir` and `sur`. The independent batch review
+distinguishes surviving selected wording from article-level import credit and
+separately records historical revisions and the combined redistribution
+obligations in [selected-source-context.json](selected-source-context.json).
+Older authorship evidence does not replace the selected fixed content revision.
+
+Frozen `où/PRO:int` corresponds to the selected source's interrogative adverb;
+`où/PRO:rel` corresponds to its relative adverb. The terminology is corroborated
+by [OQLF's classification of où](https://vitrinelinguistique.oqlf.gouv.qc.ca/21461/la-grammaire/les-pronoms/pronoms-relatifs/ou-employe-comme-pronom-relatif-ou-adverbe),
+which also calls relative `où` a pronoun. These grammatical facts are paraphrased;
+OQLF prose is excluded. The ordinary masculine, invariable letter name for
+`y/NOM` is separately corroborated by
+[Académie française](https://www.dictionnaire-academie.fr/article/A9Y0001);
+the modern article supplies corroboration only.
+
+Frozen row 87, `quoi/ADJ`, remains a target with four unresolved fields.
+The admitted pronoun uses retain their own subclasses and do not provide
+adjective content. Issue #82 and complete D2 release acceptance remain incomplete.

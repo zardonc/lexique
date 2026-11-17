@@ -238,8 +238,8 @@ test('core saving and notebook details keep selected example meaning and complet
 
 
 test('batch grammatical subclasses survive lookup and remain readable', async ({ page }) => {
-  const subclasses = ['PRO:per', 'PRE', 'ART:def', 'CON', 'ADJ:num', 'ART:ind', 'PRO:ind', 'PRO:int', 'PRO:rel', 'PRO:dem', 'ADJ:ind', 'ADJ:dem'];
-  const labels = ['Personal pronoun', 'Preposition', 'Definite article', 'Conjunction', 'Numeral adjective', 'Indefinite article', 'Indefinite pronoun', 'Interrogative pronoun', 'Relative pronoun', 'Demonstrative pronoun', 'Indefinite adjective', 'Demonstrative adjective'];
+  const subclasses = ['PRO:per', 'PRE', 'ART:def', 'CON', 'ADJ:num', 'ART:ind', 'PRO:ind', 'PRO:int', 'PRO:rel', 'PRO:dem', 'ADJ:ind', 'ADJ:dem', 'ADJ:pos'];
+  const labels = ['Personal pronoun', 'Preposition', 'Definite article', 'Conjunction', 'Numeral adjective', 'Indefinite article', 'Indefinite pronoun', 'Interrogative pronoun', 'Relative pronoun', 'Demonstrative pronoun', 'Indefinite adjective', 'Demonstrative adjective', 'Possessive adjective'];
   const entries = subclasses.map((pos, index) => {
     const sense = { ...coreSenses[0], sense_id: `batch-${index}`, frozen_row: index + 6, pos };
     return { ...coreLookup.entries[0], ordinal: index + 6, grammar: [pos], core_senses: [sense] };

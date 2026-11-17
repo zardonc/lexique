@@ -11,7 +11,7 @@ pub use lexique_storage::StorageError;
 #[path = "../src/queue_cache.rs"]
 mod queue_cache;
 pub use queue_cache::*;
-use rusqlite::{Connection, params};
+use rusqlite::{Connection, TransactionBehavior, params};
 
 #[allow(dead_code)]
 mod candidate {
@@ -24,6 +24,13 @@ mod candidate {
         ids: &[i64],
     ) -> Result<Vec<BatchOutcome>, StorageError> {
         let tx = connection.transaction_with_behavior(TransactionBehavior::Immediate)?;
+        batch_transaction(tx, ids)
+    }
+
+    pub fn batch_transaction(
+        tx: rusqlite::Transaction<'_>,
+        ids: &[i64],
+    ) -> Result<Vec<BatchOutcome>, StorageError> {
         let mut outcomes = vec![];
         for &id in ids {
             tx.execute_batch("SAVEPOINT word")?;
@@ -70,12 +77,14 @@ fn database(count: i64) -> (PathBuf, Connection) {
     let root = database_root(nonce);
     std::fs::create_dir_all(&root).unwrap();
     let path = root.join("test.sqlite3");
-    let connection = Connection::open(&path).unwrap();
+    let mut connection = Connection::open(&path).unwrap();
     lexique_storage::initialize(&connection).unwrap();
     let snapshot = serde_json::json!({"reference":{"dictionary":"synthetic","lookup_key":"synthetic","version":"1","attribution":"synthetic","license":"MIT","source_url":"https://example.org","license_url":"https://example.org","sha256":"a".repeat(64)},"digest":[]}).to_string();
+    let tx = connection.transaction().unwrap();
     for id in 1..=count {
-        connection.execute("INSERT INTO vocabulary(id,headword,snapshot,notes,created_at,updated_at) VALUES(?1,?2,?3,'original',1000,1000)", params![id,format!("synthetic-{id}"),snapshot]).unwrap();
+        tx.execute("INSERT INTO vocabulary(id,headword,snapshot,notes,created_at,updated_at) VALUES(?1,?2,?3,'original',1000,1000)", params![id,format!("synthetic-{id}"),snapshot]).unwrap();
     }
+    tx.commit().unwrap();
     (path, connection)
 }
 
@@ -166,25 +175,45 @@ fn v03_per_word_failure_rolls_back_first_card_and_commit_failure_reports_no_succ
 #[test]
 fn v03_candidate_transaction_sizes_and_competing_notes_and_ratings() {
     for size in [20, 50, 100] {
-        for repeat in 0..3 {
+        let mut contended_samples = 0;
+        for repeat in 0..10 {
             let (path, mut connection) = database(size + 1);
             let existing = lexique_storage::add_review(&mut connection, size + 1).unwrap();
             let barrier = std::sync::Barrier::new(2);
-            std::thread::scope(|scope| {
-                let writer = scope.spawn(|| {
+            let contended = std::thread::scope(|scope| {
+                let writer_ready = &barrier;
+                // A buffered signal keeps rendezvous waits out of the timed transaction.
+                let (start_writer, writer_start) = std::sync::mpsc::channel();
+                let writer = scope.spawn(move || {
                     let mut other = Connection::open(&path).unwrap();
                     lexique_storage::initialize(&other).unwrap();
+                    other.busy_timeout(std::time::Duration::ZERO).unwrap();
+                    writer_ready.wait();
+                    writer_start.recv().unwrap();
+                    let start = Instant::now();
+                    let note_result = other.execute(
+                        "UPDATE vocabulary SET notes=?1 WHERE id=?2",
+                        params!["concurrent note", size + 1],
+                    );
+                    let contended = note_result.is_err();
+                    if let Err(error) = note_result {
+                        assert_eq!(
+                            error.sqlite_error_code(),
+                            Some(rusqlite::ErrorCode::DatabaseBusy),
+                            "{error}"
+                        );
+                    }
                     other
                         .busy_timeout(std::time::Duration::from_millis(250))
                         .unwrap();
-                    barrier.wait();
-                    let start = Instant::now();
-                    other
-                        .execute(
-                            "UPDATE vocabulary SET notes=?1 WHERE id=?2",
-                            params!["concurrent note", size + 1],
-                        )
-                        .unwrap();
+                    if contended {
+                        other
+                            .execute(
+                                "UPDATE vocabulary SET notes=?1 WHERE id=?2",
+                                params!["concurrent note", size + 1],
+                            )
+                            .unwrap();
+                    }
                     lexique_storage::rate_card(
                         &mut other,
                         &lexique_storage::RatingRequest {
@@ -197,20 +226,24 @@ fn v03_candidate_transaction_sizes_and_competing_notes_and_ratings() {
                         },
                     )
                     .unwrap();
-                    start.elapsed().as_secs_f64() * 1000.0
+                    (start.elapsed().as_secs_f64() * 1000.0, contended)
                 });
                 barrier.wait();
+                let tx = connection
+                    .transaction_with_behavior(TransactionBehavior::Immediate)
+                    .unwrap();
                 let start = Instant::now();
+                start_writer.send(()).unwrap();
                 assert!(
-                    candidate::batch(&mut connection, &(1..=size).collect::<Vec<_>>())
+                    candidate::batch_transaction(tx, &(1..=size).collect::<Vec<_>>())
                         .unwrap()
                         .iter()
                         .all(|(_, r)| r.is_ok())
                 );
                 let transaction_ms = start.elapsed().as_secs_f64() * 1000.0;
-                let writer_ms = writer.join().unwrap();
+                let (writer_ms, contended) = writer.join().unwrap();
                 println!(
-                    "V03 {{\"size\":{size},\"repeat\":{repeat},\"transaction_ms\":{transaction_ms},\"writer_ms\":{writer_ms}}}"
+                    "V03 {{\"size\":{size},\"repeat\":{repeat},\"transaction_ms\":{transaction_ms},\"writer_ms\":{writer_ms},\"contended\":{contended}}}"
                 );
                 assert!(
                     transaction_ms <= 100.0,
@@ -224,7 +257,18 @@ fn v03_candidate_transaction_sizes_and_competing_notes_and_ratings() {
                     lexique_storage::get(&connection, size + 1).unwrap().notes,
                     "concurrent note"
                 );
+                contended
             });
+            if contended {
+                contended_samples += 1;
+                if contended_samples == 3 {
+                    break;
+                }
+            }
         }
+        assert_eq!(
+            contended_samples, 3,
+            "insufficient write contention samples"
+        );
     }
 }
