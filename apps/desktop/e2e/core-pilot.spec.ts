@@ -235,3 +235,21 @@ test('core saving and notebook details keep selected example meaning and complet
   await savedNoun.getByText('Field sources', { exact: true }).click();
   await expect(savedNoun.getByText('Chinese meaning span', { exact: true })).toBeVisible();
 });
+
+
+test('batch grammatical subclasses survive lookup and remain readable', async ({ page }) => {
+  const subclasses = ['PRO:per', 'PRE', 'ART:def', 'CON', 'ADJ:num', 'ART:ind', 'PRO:ind', 'PRO:int', 'PRO:rel', 'PRO:dem', 'ADJ:ind', 'ADJ:dem'];
+  const labels = ['Personal pronoun', 'Preposition', 'Definite article', 'Conjunction', 'Numeral adjective', 'Indefinite article', 'Indefinite pronoun', 'Interrogative pronoun', 'Relative pronoun', 'Demonstrative pronoun', 'Indefinite adjective', 'Demonstrative adjective'];
+  const entries = subclasses.map((pos, index) => {
+    const sense = { ...coreSenses[0], sense_id: `batch-${index}`, frozen_row: index + 6, pos };
+    return { ...coreLookup.entries[0], ordinal: index + 6, grammar: [pos], core_senses: [sense] };
+  });
+  await nativeFixture(page, { interface_preferences: [{ value: { locale: 'en', theme: 'white' } }],
+    dictionary_settings: [{ value: coreCatalog }], dictionary_lookup: [{ value: { ...coreLookup, entries } }] });
+  await page.goto('/');
+  await page.getByLabel('French word or phrase').fill('être');
+  await page.getByLabel('French word or phrase').press('Enter');
+  for (const [index, pos] of subclasses.entries()) {
+    await expect(page.locator(`.dictionary-entry .core-sense[data-pos="${pos}"] h4`)).toHaveText(`${labels[index]} (${pos})`);
+  }
+});

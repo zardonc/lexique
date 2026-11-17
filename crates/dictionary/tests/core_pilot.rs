@@ -60,6 +60,31 @@ fn reviewed_groups_keep_all_four_fields_frozen_pos_order_and_only_evidenced_quer
     for (query, rows, frozen) in [
         ("être", vec![1, 2, 3], "être"),
         ("avoir", vec![4, 5], "avoir"),
+        ("je", vec![6], "je"),
+        ("de", vec![7], "de"),
+        ("ne", vec![8], "ne"),
+        ("pas", vec![9, 10], "pas"),
+        ("le", vec![11, 12], "le"),
+        ("la", vec![13, 14], "la"),
+        ("tu", vec![15], "tu"),
+        ("vous", vec![16], "vous"),
+        ("il", vec![17], "il"),
+        ("et", vec![18], "et"),
+        ("un", vec![19, 20, 21], "un"),
+        ("à", vec![22], "à"),
+        ("l'", vec![23, 24], "l'"),
+        ("qui", vec![25, 26], "qui"),
+        ("aller", vec![27, 28], "aller"),
+        ("les", vec![29, 30], "les"),
+        ("en", vec![31, 32, 33], "en"),
+        ("ça", vec![34, 35], "ça"),
+        ("faire", vec![36], "faire"),
+        ("tout", vec![37, 38, 39, 40, 41], "tout"),
+        ("on", vec![42], "on"),
+        ("que", vec![43, 44], "que"),
+        ("une", vec![45, 46, 47], "une"),
+        ("ce", vec![48, 49], "ce"),
+        ("d'", vec![50], "d'"),
         ("bien", vec![70, 71], "bien"),
         ("aujourd'hui", vec![360], "aujourd'hui"),
         ("fort", vec![422, 423], "fort"),
@@ -67,11 +92,13 @@ fn reviewed_groups_keep_all_four_fields_frozen_pos_order_and_only_evidenced_quer
         ("côte", vec![1911], "côte"),
         ("cœur", vec![483], "coeur"),
         ("aujourd’hui", vec![360], "aujourd'hui"),
+        ("l’", vec![23, 24], "l'"),
+        ("d’", vec![50], "d'"),
         ("e\u{0302}tre", vec![1, 2, 3], "être"),
     ] {
         let lookup = core::lookup(&path, query, &expected).unwrap();
         assert_eq!(lookup.dictionary_id.as_deref(), Some("builtin-core"));
-        assert_eq!(lookup.source.version, "pilot-79-v1");
+        assert_eq!(lookup.source.version, "core-81-v1");
         assert_eq!(
             lookup
                 .entries
@@ -105,7 +132,7 @@ fn reviewed_groups_keep_all_four_fields_frozen_pos_order_and_only_evidenced_quer
             }
         }
     }
-    for query in ["cote", "côté", "coeurs", "aujourdhui"] {
+    for query in ["cote", "côté", "coeurs", "aujourdhui", "l", "d"] {
         assert!(
             core::lookup(&path, query, &expected)
                 .unwrap()

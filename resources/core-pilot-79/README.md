@@ -1,16 +1,21 @@
-# Lexique FR–EN–ZH D2 pilot
+# Lexique FR–EN–ZH D2 core
 
-This development resource contains twelve independently reviewed modern everyday
-senses in twelve frozen headword/POS groups. Its permanent target is **4,087
-groups / 3,773 headwords**; **4,075 groups remain incomplete**. Learner acceptance,
+This development resource contains **57 independently reviewed senses / 228
+fields** in 57 frozen headword/POS groups, content version `core-81-v1`.
+[Batch 001 #81](https://github.com/zardonc/lexique/issues/81) completes frozen rows
+0001–0050: **50 groups / 200 fields**, including five reused pilot groups and
+45 new groups. All twelve original pilot groups remain in the resource.
+Its permanent target is **4,087 groups / 3,773 headwords**; **4,030 groups remain
+incomplete**. Learner acceptance,
 the complete D2 release and other platform/release gates remain open. It supplies
 no CEFR labels.
 
 [curated-inputs.json](curated-inputs.json) contains the selected French definition,
 IPA, English and Chinese fields, exact POS/use, source revision/spans and actual
 modifications. [field-review.json](field-review.json) preserves the separate
-reviewer's exact accepted text. Six auxiliary wording corrections and the full
-apostrophe redirect have been applied. [selected-source-excerpts.json](selected-source-excerpts.json)
+reviewer's exact accepted text and selected-use evidence. Construction, register
+and domain restrictions remain part of the complete meanings.
+[selected-source-excerpts.json](selected-source-excerpts.json)
 contains only selected excerpts; [selected-source-context.json](selected-source-context.json)
 retains applicable source/import notices, fixed article/history attribution and
 separately labelled older authorship/merger evidence. Older revisions do not
@@ -18,9 +23,10 @@ replace the fixed current content versions.
 
 [scope-manifest.csv](scope-manifest.csv) preserves the accepted four-column
 membership and row order. Frozen `coeur` remains distinct from source `cœur`;
-frozen `aujourd'hui` remains distinct from source `aujourd’hui`. Their two exact
-query bindings have source evidence. This pilot adds no general accent, ligature,
-apostrophe or noun-form folding.
+frozen `aujourd'hui` remains distinct from source `aujourd’hui`. Frozen `l'` and
+`d'` retain their article/pronoun and preposition groups; source `l’` and `d’`
+have fixed redirect evidence. The four query aliases use these specific source
+relationships, with separate article and pronoun records for `l’`.
 
 Selected/adapted content and licensed membership use **CC BY-SA 4.0**. Read
 [NOTICES.md](NOTICES.md), [COPYING](COPYING), and
@@ -38,5 +44,5 @@ review and the produced SQLite. `coverage.json` lists all incomplete groups and
 their required fields.
 
 Whole Wiktionary pages, unselected dictionary bodies, literary/comic quotations,
-images and audio are outside this resource. OQLF corroborates grammar facts;
-its prose is excluded.
+images and audio are outside this resource. OQLF and the Canadian Translation
+Bureau corroborate grammar facts; their prose is excluded.

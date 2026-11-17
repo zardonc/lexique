@@ -24,7 +24,10 @@ group; removed wiki markup; added selected IPA slash delimiters; translated or
 adapted scoped French, English and Chinese explanations; clarified auxiliary +
 past-participle construction, all pronominal forms with être and verbs requiring
 être rather than avoir; retained compound-tense anteriority including future
-reference times; and bound only the two evidenced source spellings. Each field
+reference times; clarified article/pronoun agreement, elision, complement and
+register restrictions; distinguished the whole/entire adjective from the
+distributive indefinite adjective and the adverb; retained the psychoanalytic
+domain of the noun ça; and bound the four evidenced source spellings. Each field
 records its own actual modification. The membership projects four accepted
 columns and preserves NFC spelling, original POS, frequency values and row order.
 
@@ -41,11 +44,16 @@ The elected CC BY-SA route follows [Wikimedia Terms revision 598588](https://fou
 §7(h) modification/addition and licensing notices. French/English contributor
 policies and selected-source boundary evidence remain in the context records.
 GFDL is not additionally imposed. CC BY-SA does not require the whole upstream
-corpus or executable corresponding source; this pilot bundles its actual curated
+corpus or executable corresponding source; this core bundles its actual curated
 inputs, converter, selected excerpts and notices for reproducibility.
 
 The independently accepted auxiliary explanations express grammar facts
 corroborated by [OQLF](https://vitrinelinguistique.oqlf.gouv.qc.ca/24224/la-grammaire/le-verbe/auxiliaires/emploi-des-auxiliaires-avoir-et-etre).
-OQLF prose is excluded. The six exact accepted replacements and usage changes
-are in [field-review.json](field-review.json); this is independent field review,
+The adjective distinction for tout is corroborated by the
+[Canadian Translation Bureau](https://nos-langues.canada.ca/fr/cles-de-la-redaction/tout-accord-de-ladjectif),
+with the frozen grammatical subclasses defined by the
+[Lexique 3 manual](https://www.lexique.org/databases/Lexique382/Manuel_Lexique3.html).
+OQLF and Canadian Translation Bureau prose is excluded. Exact accepted texts,
+usages and grammar-fact evidence are in [field-review.json](field-review.json);
+this is independent field review,
 with learner acceptance still unrun.
