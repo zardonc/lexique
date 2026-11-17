@@ -5374,8 +5374,14 @@
       "source_headword": "ça",
       "quality_note": "The noun is modern psychoanalytic le ça, with domain, masculine gender, uncountability and singular restriction retained.",
       "source_binding_evidence": [],
-      "everyday_sense_status": "unresolved",
-      "everyday_sense_reason": "The fixed source labels this noun as psychoanalytic. Its reviewed id sense does not establish the modern everyday nominal use required by the frozen batch."
+      "everyday_sense_status": "approved_specialist_exception",
+      "everyday_sense_reason": "The fixed source labels this noun as psychoanalytic. The project owner approved its reviewed id sense as the sole specialist exception for frozen row 34 in #81; it remains outside literal modern everyday coverage.",
+      "specialist_exception_decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/81",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-16",
+        "decision": "Retain frozen row 34, ça/NOM, as the sole documented specialist exception using the reviewed psychoanalytic id sense. Preserve its domain, masculine gender, singular and uncountability restrictions; count exception acceptance separately from modern everyday coverage."
+      }
     },
     {
       "sense_id": "ca-informal-demonstrative",

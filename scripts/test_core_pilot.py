@@ -49,18 +49,25 @@ class CorePilotPreparationTests(unittest.TestCase):
                              (81, 50, 49, 200, 5, 45))
             self.assertEqual([(group["headword"], group["pos"]) for group in content_batch["groups"]], expected)
 
-    def test_specialist_ca_noun_does_not_complete_everyday_batch(self):
+    def test_approved_ca_noun_exception_completes_acceptance_without_everyday_coverage(self):
         inputs = json.loads((RESOURCE / "curated-inputs.json").read_text(encoding="utf-8"))
         noun = next(group for group in inputs["groups"]
                     if (group["headword"], group["lexique_cgram"]) == ("ça", "NOM"))
         self.assertEqual(noun["senses"][0]["sense_id"], "ca-noun-psychoanalytic-id")
         with tempfile.TemporaryDirectory() as temporary:
             report = prepare(Path(temporary) / "prepared")
+            self.assertEqual(report["content_batches"][0].get("accepted_groups"), 50,
+                             "The approved specialist exception completes batch acceptance")
+            self.assertEqual(report["content_batches"][0]["approved_specialist_exception_groups"], 1)
+            self.assertEqual(report["content_batches"][0]["scope_acceptance"], "passed")
             self.assertEqual(report["content_batches"][0]["complete_groups"], 49,
                              "Specialist ça/NOM does not satisfy the everyday-sense requirement")
             batch_noun = next(group for group in report["content_batches"][0]["groups"]
                               if group["frozen_row"] == 34)
             self.assertEqual(batch_noun["complete_fields"], 4)
+            self.assertEqual(batch_noun["everyday_sense_status"], "approved_specialist_exception")
+            self.assertEqual(batch_noun["specialist_exception_decision"]["issue"],
+                             "https://github.com/zardonc/lexique/issues/81")
             self.assertEqual(batch_noun["incomplete_requirements"], ["modern_everyday_sense"])
             coverage = json.loads((Path(temporary) / "prepared/coverage.json").read_text(encoding="utf-8"))
             gap = next(group for group in coverage["incomplete_groups"] if group["frozen_row"] == 34)
@@ -68,7 +75,41 @@ class CorePilotPreparationTests(unittest.TestCase):
             self.assertEqual(gap["incomplete_fields"], [])
             self.assertEqual(gap["incomplete_requirements"], ["modern_everyday_sense"])
             self.assertIn("psychoanalytic", gap["reason"])
+            self.assertEqual(coverage["accepted_groups"], 57)
+            self.assertEqual(coverage["remaining_unaccepted_groups"], 4030)
+            self.assertEqual(coverage["approved_specialist_exception_groups"], 1)
             self.assertEqual(report["admission"]["everyday_sense_review"], "incomplete")
+            self.assertEqual(report["admission"]["selected_scope_acceptance"], "passed")
+            self.assertEqual(report["admission"]["accepted_groups"], 57)
+            self.assertEqual(report["first_release"], "incomplete")
+
+    def test_missing_unapproved_or_wrongly_bound_specialist_exception_fails_admission(self):
+        for change in ("missing", "unapproved", "wrong_issue", "wrong_binding", "wrong_group", "unexplained"):
+            with self.subTest(change=change), tempfile.TemporaryDirectory() as temporary:
+                root = Path(temporary)
+                source = root / "inputs"
+                shutil.copytree(RESOURCE, source)
+                review = json.loads((source / "field-review.json").read_text(encoding="utf-8"))
+                usage = next(row for row in review["usage"] if row["sense_id"] == "ca-noun-psychoanalytic-id")
+                if change == "missing":
+                    del usage["specialist_exception_decision"]
+                elif change == "unapproved":
+                    usage["specialist_exception_decision"]["approved_by"] = "reviewer"
+                elif change == "wrong_issue":
+                    usage["specialist_exception_decision"]["issue"] = "https://github.com/zardonc/lexique/issues/78"
+                elif change == "wrong_binding":
+                    usage["frozen_row"] = 35
+                elif change == "wrong_group":
+                    pronoun = next(row for row in review["usage"] if row["frozen_row"] == 35)
+                    pronoun["everyday_sense_status"] = "approved_specialist_exception"
+                    pronoun["everyday_sense_reason"] = usage["everyday_sense_reason"]
+                    pronoun["specialist_exception_decision"] = usage["specialist_exception_decision"]
+                else:
+                    del usage["specialist_exception_decision"]["decision"]
+                (source / "field-review.json").write_text(json.dumps(review, ensure_ascii=False), encoding="utf-8")
+                with self.assertRaisesRegex(ValueError, "specialist exception"):
+                    prepare(root / "output", source_dir=source)
+                self.assertFalse((root / "output/core.sqlite3").exists())
 
     def test_missing_invalid_or_unexplained_everyday_review_fails_admission(self):
         for change in ("missing", "invalid", "unexplained"):

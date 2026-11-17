@@ -121,13 +121,26 @@ def load_inputs(source_dir):
                 raise ValueError("A selected sense is not independently reviewed")
             if (sense["use"], sense["use_language"], sense["source_headword"]) != (usage["accepted_usage"], usage["language"], usage["source_headword"]):
                 raise ValueError("Selected usage differs from the independently reviewed wording")
-            if usage.get("everyday_sense_status") not in ("passed", "unresolved"):
+            status = usage.get("everyday_sense_status")
+            if status not in ("passed", "unresolved", "approved_specialist_exception"):
                 raise ValueError("An explicit everyday-sense review is required")
-            if usage["everyday_sense_status"] == "unresolved":
+            if status != "passed":
                 scope_gaps[group["frozen_row"]] = {
+                    "everyday_sense_status": status,
                     "incomplete_requirements": ["modern_everyday_sense"],
-                    "reason": text(usage.get("everyday_sense_reason"), "unresolved everyday-sense reason"),
+                    "reason": text(usage.get("everyday_sense_reason"), "non-everyday-sense reason"),
                 }
+            if status == "approved_specialist_exception":
+                if (group["frozen_row"], group["headword"], group["lexique_cgram"], identity) != (34, "ça", "NOM", "ca-noun-psychoanalytic-id") or (
+                    usage.get("frozen_row"), usage.get("headword"), usage.get("pos")
+                ) != (34, "ça", "NOM"):
+                    raise ValueError("The specialist exception applies only to frozen row 34, ça/NOM")
+                decision = usage.get("specialist_exception_decision")
+                if not isinstance(decision, dict) or decision.get("issue") != "https://github.com/zardonc/lexique/issues/81" or decision.get("approved_by") != "project_owner":
+                    raise ValueError("The specialist exception requires the project owner's #81 approval")
+                text(decision.get("approved_on"), "specialist exception approval date", 32)
+                text(decision.get("decision"), "specialist exception decision")
+                scope_gaps[group["frozen_row"]]["specialist_exception_decision"] = decision
             if sense.get("cefr") is not None or set(sense.get("fields", {})) != set(FIELDS):
                 raise ValueError("A selected sense requires exactly four complete fields and no inferred CEFR")
             payload = {"sense_id": text(identity, "sense identity", 128), "frozen_row": group["frozen_row"],
@@ -198,10 +211,16 @@ def prepare(destination, source_dir=RESOURCE, project_license=ROOT / "LICENSE"):
     metadata = {"format_version": "1", "content_version": version, "source": compact(source),
                 "scope_denominator_groups": "4087", "scope_denominator_headwords": "3773"}
     complete_rows = {row[0] for row in selected} - scope_gaps.keys()
+    specialist_rows = {row for row, gap in scope_gaps.items() if gap["everyday_sense_status"] == "approved_specialist_exception"}
+    accepted_rows = complete_rows | specialist_rows
+    acceptance = {"accepted_groups": len(accepted_rows), "approved_specialist_exception_groups": len(specialist_rows),
+                  "remaining_unaccepted_groups": 4087 - len(accepted_rows)}
     if (curated.get("complete_groups"), curated.get("remaining_groups")) != (len(complete_rows), 4087 - len(complete_rows)):
         raise ValueError("Curated everyday-sense coverage differs from its review")
+    if any(curated.get(key) != value for key, value in acceptance.items()):
+        raise ValueError("Curated scope acceptance differs from its reviewed specialist exception")
     coverage = {"denominator_groups": 4087, "denominator_headwords": 3773, "complete_groups": len(complete_rows),
-                "complete_fields": len(selected) * 4, "remaining_groups": 4087 - len(complete_rows),
+                "complete_fields": len(selected) * 4, "remaining_groups": 4087 - len(complete_rows), **acceptance,
                 "incomplete_groups": [{"frozen_row": index, **group,
                                        "incomplete_fields": [] if index in scope_gaps else list(FIELDS),
                                        **scope_gaps.get(index, {})}
@@ -247,11 +266,16 @@ def prepare(destination, source_dir=RESOURCE, project_license=ROOT / "LICENSE"):
                   "sqlite_bytes": database.stat().st_size, "inputs": inputs,
                   "admission": {"independent_field_review": "passed", "produced_resource_self_check": "passed",
                                 "everyday_sense_review": "incomplete" if scope_gaps else "passed",
+                                "selected_scope_acceptance": "passed" if not (scope_gaps.keys() - specialist_rows) else "incomplete",
+                                **acceptance,
                                 "selected_source_rights_and_materials": "passed", "complete_groups": len(complete_rows),
                                 "complete_senses": len(selected), "complete_fields": len(selected) * 4, "remaining_groups": 4087 - len(complete_rows)},
                   "learner_acceptance": {"status": "not_run", "accepted": False}, "first_release": "incomplete",
                   "content_batches": [{"issue": 81, "target_groups": 50, "reused_pilot_groups": 5, "new_groups": 45,
                                        "complete_groups": len(complete_rows.intersection(range(1, 51))),
+                                       "accepted_groups": len(accepted_rows.intersection(range(1, 51))),
+                                       "approved_specialist_exception_groups": len(specialist_rows.intersection(range(1, 51))),
+                                       "scope_acceptance": "passed" if len(accepted_rows.intersection(range(1, 51))) == 50 else "incomplete",
                                        "complete_fields": sum(4 for row in selected if row[0] <= 50),
                                        "groups": [{"frozen_row": row, "headword": word, "pos": payload["pos"], "complete_fields": 4,
                                                    **scope_gaps.get(row, {})}

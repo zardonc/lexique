@@ -10,6 +10,9 @@
   "selected_fields": 228,
   "complete_groups": 56,
   "remaining_groups": 4031,
+  "accepted_groups": 57,
+  "approved_specialist_exception_groups": 1,
+  "remaining_unaccepted_groups": 4030,
   "content_license": "CC-BY-SA-4.0",
   "complete_legal_text": "COPYING",
   "rights_authorities": [
@@ -5043,8 +5046,8 @@
   ],
   "authorship_boundary_evidence": "selected-source-context.json",
   "material_limits": [
-    "57 selected modern senses in 57 frozen groups; 56 groups meet the everyday-sense requirement and 4,031 of 4,087 groups remain incomplete.",
-    "Frozen row 34 (ça/NOM) retains its reviewed psychoanalytic id sense; everyday nominal-use evidence remains unresolved.",
+    "57 selected modern senses in 57 frozen groups; 56 everyday groups and one approved specialist exception are accepted, leaving 4,030 of 4,087 groups unaccepted. Literal everyday coverage remains 56 complete and 4,031 incomplete groups.",
+    "Frozen row 34 (ça/NOM) retains its reviewed psychoanalytic id sense as the project-owner-approved sole specialist exception in #81; it is counted separately from modern everyday coverage.",
     "No CEFR labels, other senses, general spelling folding or whole upstream pages are admitted.",
     "All 228 fields and five spelling records independently reviewed. Learner acceptance has not been run.",
     "Preparation self-check admits only the produced development resource; wider D2, platform and release gates remain open."
@@ -5076,6 +5079,9 @@
       "new_groups": 45,
       "complete_groups": 49,
       "everyday_sense_review": "incomplete",
+      "accepted_groups": 50,
+      "approved_specialist_exception_groups": 1,
+      "scope_acceptance": "passed",
       "independent_review": "passed"
     }
   ]

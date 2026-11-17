@@ -55,5 +55,7 @@ with the frozen grammatical subclasses defined by the
 [Lexique 3 manual](https://www.lexique.org/databases/Lexique382/Manuel_Lexique3.html).
 OQLF and Canadian Translation Bureau prose is excluded. Exact accepted texts,
 usages and grammar-fact evidence are in [field-review.json](field-review.json).
-This is independent field review; everyday-use eligibility for the specialist
-`ça/NOM` sense remains unresolved, with learner acceptance still unrun.
+The project owner's approved #81 scope includes `ça/NOM` as the sole specialist
+exception, retaining its psychoanalytic, masculine, singular and uncountability
+restrictions. It is counted separately from everyday coverage. Learner acceptance
+remains unrun.
