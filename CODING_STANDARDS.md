@@ -4,7 +4,11 @@
 
 Include these inputs in each reviewer handoff:
 
+- Issue/spec reference and PR URL when available.
 - Absolute path to the reviewed checkout, plus diff base and head SHA.
+- Changes covered: committed, staged, unstaged, or an explicit combination.
+- For staged or unstaged changes, exact diff command and absolute path to the
+  retained patch.
 - Absolute root of retained execution evidence, plus its tested SHA and platform.
 
 Ignored logs and snapshots stay in their owning worktree; a detached review
