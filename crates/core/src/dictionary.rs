@@ -75,6 +75,7 @@ impl CoreSense {
                     | "ART:def"
                     | "CON"
                     | "ADJ:num"
+                    | "ADJ:pos"
                     | "ART:ind"
                     | "PRO:ind"
                     | "PRO:int"

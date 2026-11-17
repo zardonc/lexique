@@ -11,7 +11,7 @@ import { compareLearning, fixtureSql, inspectPackage, readState, seedAudio } fro
 const [scenario, resources, binary, conjugation, frequency, curationPath, destinationPath, input] = process.argv.slice(2);
 assert.ok([scenario, resources, binary, conjugation, frequency, curationPath, destinationPath].every(Boolean),
   'Expected scenario, package, binary, conjugation, frequency, reviewed curation and new destination; backup/profile scenarios also take an input');
-assert.ok(['pilot', 'review', 'no-speech', 'catalogue', 'missing', 'corrupt', 'future', 'unsupported', 'newer', 'limit', 'export', 'restore', 'legacy', 'reject'].includes(scenario));
+assert.ok(['pilot', 'review', 'no-speech', 'catalogue', 'missing', 'corrupt', 'future', 'unsupported', 'newer', 'upgrade', 'limit', 'export', 'restore', 'legacy', 'reject'].includes(scenario));
 const curation = JSON.parse(await readFile(resolve(curationPath), 'utf8'));
 const membership = [[1, 'être', 'AUX'], [2, 'être', 'NOM'], [3, 'être', 'VER'], [4, 'avoir', 'AUX'], [5, 'avoir', 'VER'],
   [6, 'je', 'PRO:per'], [7, 'de', 'PRE'], [8, 'ne', 'ADV'], [9, 'pas', 'ADV'], [10, 'pas', 'NOM'],
@@ -24,7 +24,17 @@ const membership = [[1, 'être', 'AUX'], [2, 'être', 'NOM'], [3, 'être', 'VER'
   [36, 'faire', 'VER'], [37, 'tout', 'ADJ'], [38, 'tout', 'ADJ:ind'], [39, 'tout', 'ADV'],
   [40, 'tout', 'NOM'], [41, 'tout', 'PRO:ind'], [42, 'on', 'PRO:per'], [43, 'que', 'PRO:int'], [44, 'que', 'PRO:rel'],
   [45, 'une', 'ADJ:num'], [46, 'une', 'ART:ind'], [47, 'une', 'PRO:ind'], [48, 'ce', 'ADJ:dem'], [49, 'ce', 'PRO:dem'], [50, "d'", 'PRE'],
-  [70, 'bien', 'ADV'], [71, 'bien', 'NOM'], [360, "aujourd'hui", 'ADV'], [422, 'fort', 'ADJ'], [423, 'fort', 'ADV'],
+  [51, 'pour', 'NOM'], [52, 'pour', 'PRE'], [53, 'des', 'ART:ind'], [54, 'dire', 'NOM'], [55, 'dire', 'VER'],
+  [56, 'pouvoir', 'NOM'], [57, 'pouvoir', 'VER'], [58, 'vouloir', 'VER'], [59, 'mais', 'CON'], [60, 'me', 'PRO:per'],
+  [61, 'nous', 'PRO:per'], [62, 'dans', 'PRE'], [63, 'savoir', 'NOM'], [64, 'savoir', 'VER'], [65, 'elle', 'PRO:per'],
+  [66, 'du', 'ART:def'], [67, 'y', 'NOM'], [68, 'y', 'PRO:per'], [69, 'bien', 'ADJ'], [70, 'bien', 'ADV'], [71, 'bien', 'NOM'],
+  [72, 'où', 'PRO:int'], [73, 'où', 'PRO:rel'], [74, "t'", 'PRO:per'], [75, 'voir', 'VER'], [76, 'plus', 'ADV'],
+  [77, 'plus', 'NOM'], [78, 'non', 'ADV'], [79, 'te', 'PRO:per'], [80, 'mon', 'ADJ:pos'], [81, 'au', 'ART:def'],
+  [82, 'avec', 'PRE'], [83, 'moi', 'NOM'], [84, 'moi', 'PRO:per'], [85, 'si', 'ADV'], [86, 'si', 'CON'],
+  [88, 'quoi', 'PRO:int'], [89, 'quoi', 'PRO:rel'], [90, 'devoir', 'NOM'], [91, 'devoir', 'VER'],
+  [92, "s'", 'CON'], [93, "s'", 'PRO:per'], [94, 'oui', 'ADV'], [95, 'ils', 'PRO:per'],
+  [96, 'comme', 'ADV'], [97, 'comme', 'CON'], [98, 'se', 'PRO:per'], [99, 'venir', 'VER'], [100, 'sur', 'ADJ'],
+  [360, "aujourd'hui", 'ADV'], [422, 'fort', 'ADJ'], [423, 'fort', 'ADV'],
   [483, 'coeur', 'NOM'], [1911, 'côte', 'NOM']];
 assert.deepEqual(curation.groups.map((group) => [group.frozen_row, group.headword, group.lexique_cgram]), membership);
 assert.equal(curation.scope_denominator_groups, 4087);
@@ -200,7 +210,7 @@ async function rate(record) {
 
 async function pilot() {
   assert.deepEqual((await invoke('dictionary_settings')).map((item) => item.id), ['builtin-core', 'builtin', 'builtin-fra-eng']);
-  assert.equal((await invoke('dictionary_lookup', { key: 'être', dictionary_id: 'builtin-core' })).source.version, 'core-81-v1');
+  assert.equal((await invoke('dictionary_lookup', { key: 'être', dictionary_id: 'builtin-core' })).source.version, 'core-82-v1');
   await invoke('dictionary_settings', { order: ['builtin', 'builtin-fra-eng', 'builtin-core'] });
   const before = readState(destination);
   for (const field of ['digest', 'reference']) await rejected('vocabulary_save', {
@@ -210,7 +220,7 @@ async function pilot() {
   const saved = [];
   for (const [index, key] of [...new Set(curation.groups.map((group) => group.headword))].entries()) saved.push(await save(key, `word-${index}`));
   const first = saved[0];
-  for (const [queryKey, frozen] of [['e\u0302tre', 'être'], ['cœur', 'coeur'], ['coeur', 'coeur'], ['aujourd’hui', "aujourd'hui"], ['l’', "l'"], ['d’', "d'"]]) {
+  for (const [queryKey, frozen] of [['e\u0302tre', 'être'], ['cœur', 'coeur'], ['coeur', 'coeur'], ['aujourd’hui', "aujourd'hui"], ['l’', "l'"], ['d’', "d'"], ['t’', "t'"], ['s’', "s'"]]) {
     admitted(await invoke('dictionary_lookup', { key: queryKey, dictionary_id: 'builtin-core' }), frozen);
   }
   assert.deepEqual((await invoke('dictionary_lookup', { key: 'mot-absent-du-pilote', dictionary_id: 'builtin-core' })).entries, []);
@@ -250,16 +260,26 @@ async function pilot() {
   compareLearning(readState(destination), persisted);
   assert.deepEqual(await invoke('vocabulary_find', { headword: 'e\u0302tre' }), edited.record);
   await openRecord(edited.record); await page.screenshot({ path: join(destination, 'native-core-details.png'), fullPage: true });
-  const batchRecord = saved.find((value) => value.record.headword === 'le').record;
-  assert.deepEqual(await invoke('vocabulary_find', { headword: 'le' }), batchRecord);
+  const batchRecord = saved.find((value) => value.record.headword === 'pour').record;
+  assert.deepEqual(await invoke('vocabulary_find', { headword: 'pour' }), batchRecord);
   await openRecord(batchRecord);
-  await page.screenshot({ path: join(destination, 'native-core-batch-le-details.png'), fullPage: true });
+  await page.screenshot({ path: join(destination, 'native-core-batch-pour-details.png'), fullPage: true });
+  const possessive = saved.find((value) => value.record.headword === 'mon').record;
+  await query('mon');
+  for (const [locale, label] of [['en', 'Possessive adjective'], ['fr', 'Adjectif possessif'], ['zh', '物主形容词']]) {
+    await page.getByRole('banner').getByRole('combobox').first().selectOption(locale);
+    await expect(page.locator('.dictionary-entry .core-sense[data-pos="ADJ:pos"] h4')).toHaveText(`${label} (ADJ:pos)`);
+    await fields(page.locator('.dictionary-entry'), possessive.digest.map((item) => item.core));
+  }
+  await page.getByRole('banner').getByRole('combobox').first().selectOption('en');
+  await openRecord(possessive);
   if (scenario === 'no-speech') {
     await rejected('speech_generate', { vocabularyId: edited.record.id, operation: 'native-79-no-speech' });
     assert.deepEqual((await invoke('vocabulary_find', { headword: 'être' })).digest, edited.record.digest);
   }
-  evidence.checks.push({ check: '50 batch groups / 200 fields; 57 total groups / 228 fields; trusted provider, spelling bindings, retry, duplicate, notes, examples, FSRS and normal restart', status: 'passed' });
-  evidence.checks.push({ check: 'Batch le article/pronoun saved fields and provenance match audited content after normal restart', status: 'passed' });
+  evidence.checks.push({ check: '49 of 50 batch-82 groups / 196 fields; row 87 unresolved; 104 total groups / 416 fields; trusted provider, spelling bindings, retry, duplicate, notes, examples, FSRS and normal restart', status: 'passed' });
+  evidence.checks.push({ check: 'Batch pour noun/preposition saved fields and provenance match audited content after normal restart', status: 'passed' });
+  evidence.checks.push({ check: 'mon/ADJ:pos lookup and saved fields remain readable with English, French and Chinese subclass labels', status: 'passed' });
 }
 
 async function review() {
@@ -584,7 +604,7 @@ async function copiedProfile() {
 }
 
 async function replacement() {
-  const previous = readState(destination), record = await invoke('vocabulary_find', { headword: 'être' });
+  const previous = readState(scenario === 'upgrade' ? resolve(input) : destination), record = await invoke('vocabulary_find', { headword: 'être' });
   evidence.beforeState = previous;
   if (scenario === 'limit' || scenario === 'unsupported') {
     await failedProvider(scenario === 'limit' ? 'bien' : 'être', scenario === 'limit' ? 'limit' : 'unsupported');
@@ -593,7 +613,10 @@ async function replacement() {
   } else {
     const current = await invoke('dictionary_lookup', { key: 'être', dictionary_id: 'builtin-core' });
     assert.notEqual(current.source.version, record.reference.version);
-    assert.notEqual(senses(current).find((sense) => sense.frozen_row === 2).meaning_zh, record.digest.find((entry) => entry.core?.frozen_row === 2).core.meaning_zh);
+    if (scenario === 'upgrade') {
+      assert.equal(current.source.version, 'core-82-v1');
+      admitted(current, 'être');
+    } else assert.notEqual(senses(current).find((sense) => sense.frozen_row === 2).meaning_zh, record.digest.find((entry) => entry.core?.frozen_row === 2).core.meaning_zh);
     await query('être'); await page.getByRole('button', { name: 'View existing record', exact: true }).click();
     await openRecord(record);
     await expect(page.getByText('The dictionary version has changed. The saved digest keeps its original content.', { exact: true })).toBeVisible();
@@ -602,11 +625,13 @@ async function replacement() {
   const preserved = readState(destination);
   compareLearning(preserved, previous);
   preservedAudio(preserved, previous);
-  const committed = previous.saves.find((operation) => operation.record_id === record.id);
+  if (scenario === 'upgrade') assert.ok((await invoke('speech_cached', { vocabularyId: record.id })).bytes.length > 0);
+  const committed = previous.saves.find((operation) => operation.record_id === record.id && operation.outcome === 'created');
   assert.equal((await invoke('vocabulary_save', { request: committed.request, dictionary_id: 'builtin-core' })).outcome, 'replayed');
   if (scenario === 'newer') await save('bien', 'newer-content');
+  if (scenario === 'upgrade') await save('pour', 'batch-82-upgrade');
   await openRecord(record);
-  evidence.checks.push({ check: scenario === 'newer' ? 'New resource version is visible while previous digest, progress and audio remain frozen' : `Native ${scenario} rejection preserves saved content and committed retry`, status: 'passed' });
+  evidence.checks.push({ check: ['newer', 'upgrade'].includes(scenario) ? 'New resource version is visible while previous digest, progress and audio remain frozen' : `Native ${scenario} rejection preserves saved content and committed retry`, status: 'passed' });
 }
 
 try {
@@ -615,7 +640,7 @@ try {
     if (present) await rename(model, model + '.unavailable');
     evidence.speechModel = 'absent in isolated package';
   }
-  if (['newer', 'limit', 'unsupported'].includes(scenario)) await copiedProfile();
+  if (['newer', 'upgrade', 'limit', 'unsupported'].includes(scenario)) await copiedProfile();
   await start();
   if (['pilot', 'no-speech'].includes(scenario)) await pilot();
   else if (scenario === 'review') await review();

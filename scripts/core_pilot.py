@@ -14,7 +14,7 @@ from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 RESOURCE = ROOT / "resources/core-pilot-79"
-ROWS = (*range(1, 51), 70, 71, 360, 422, 423, 483, 1911)
+ROWS = (*range(1, 87), *range(88, 101), 360, 422, 423, 483, 1911)
 FIELDS = {"french_definition": "definition_fr", "ipa": "ipa", "english": "meaning_en", "chinese": "meaning_zh"}
 LANGUAGES = {"french_definition": "fr", "ipa": "und", "english": "en", "chinese": "zh"}
 MATERIALS = (
@@ -176,12 +176,27 @@ def load_inputs(source_dir):
             selected.append((group["frozen_row"], index, group["headword"], payload))
     if len(selected) != len(ROWS) or len(seen) != len(ROWS):
         raise ValueError("Admitted selected-sense scope changed")
+    unresolved = reviewed.get("unresolved_fields", [])
+    if len(unresolved) != 4:
+        raise ValueError("Frozen row 87 requires four explicit unresolved fields")
+    for field in unresolved:
+        row = field["frozen_row"]
+        if not isinstance(row, int) or row != 87 or (field["headword"], field["pos"]) != (scope[row - 1]["word"], scope[row - 1]["lexique_cgram"]) or field["field"] not in FIELDS:
+            raise ValueError("Unresolved field is bound to an admitted or incorrect frozen group")
+        gap = scope_gaps.setdefault(row, {
+            "everyday_sense_status": "unresolved", "incomplete_fields": [],
+            "incomplete_requirements": ["same_pos_source_binding", "modern_everyday_sense"],
+            "reason": text(field["reason"], "unresolved field reason"),
+        })
+        if field["field"] in gap["incomplete_fields"]:
+            raise ValueError("Duplicate unresolved field")
+        gap["incomplete_fields"].append(field["field"])
     relations = curated["spelling_relations"]
     expected_relations = reviewed["spelling_relations"]
-    if len(relations) != 5 or [{key: row[key] for key in expected_relations[0]} for row in relations] != expected_relations:
+    if len(relations) != 8 or [{key: row[key] for key in expected_relations[0]} for row in relations] != expected_relations:
         raise ValueError("Spelling relation differs from the independently reviewed evidence")
     aliases = {row["source_headword"]: row["frozen_headword"] for row in relations}
-    if aliases != {"cœur": "coeur", "aujourd’hui": "aujourd'hui", "l’": "l'", "d’": "d'"} or any(
+    if aliases != {"cœur": "coeur", "aujourd’hui": "aujourd'hui", "l’": "l'", "d’": "d'", "t’": "t'", "s’": "s'"} or any(
         relation["source_span"]["raw_source_excerpt"] != f"#REDIRECT [[{relation['source_headword']}]]"
         for relation in relations if relation["relationship"] == "explicit hard redirect"
     ):
@@ -210,7 +225,8 @@ def prepare(destination, source_dir=RESOURCE, project_license=ROOT / "LICENSE"):
               "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en"}
     metadata = {"format_version": "1", "content_version": version, "source": compact(source),
                 "scope_denominator_groups": "4087", "scope_denominator_headwords": "3773"}
-    complete_rows = {row[0] for row in selected} - scope_gaps.keys()
+    selected_rows = {row[0] for row in selected}
+    complete_rows = selected_rows - scope_gaps.keys()
     specialist_rows = {row for row, gap in scope_gaps.items() if gap["everyday_sense_status"] == "approved_specialist_exception"}
     accepted_rows = complete_rows | specialist_rows
     acceptance = {"accepted_groups": len(accepted_rows), "approved_specialist_exception_groups": len(specialist_rows),
@@ -222,7 +238,7 @@ def prepare(destination, source_dir=RESOURCE, project_license=ROOT / "LICENSE"):
     coverage = {"denominator_groups": 4087, "denominator_headwords": 3773, "complete_groups": len(complete_rows),
                 "complete_fields": len(selected) * 4, "remaining_groups": 4087 - len(complete_rows), **acceptance,
                 "incomplete_groups": [{"frozen_row": index, **group,
-                                       "incomplete_fields": [] if index in scope_gaps else list(FIELDS),
+                                       "incomplete_fields": [] if index in selected_rows else list(FIELDS),
                                        **scope_gaps.get(index, {})}
                                       for index, group in enumerate(scope, 1) if index not in complete_rows]}
     destination.parent.mkdir(parents=True, exist_ok=True)
@@ -262,24 +278,35 @@ def prepare(destination, source_dir=RESOURCE, project_license=ROOT / "LICENSE"):
         shutil.copyfile(project_license, staged / "LICENSE-MIT")
         (staged / "coverage.json").write_text(json.dumps(coverage, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
         inputs = {file.name: digest(file) for file in staged.iterdir() if file.name != "core.sqlite3"}
+        content_batches = []
+        for batch in curated["content_batches"]:
+            if batch["issue"] == 79:
+                continue
+            first, last = batch["frozen_first_row"], batch["frozen_last_row"]
+            batch_rows = set(range(first, last + 1))
+            content_batches.append({
+                "issue": batch["issue"], "target_groups": len(batch_rows),
+                "reused_pilot_groups": batch["reused_groups"], "new_groups": batch["new_groups"],
+                "complete_groups": len(complete_rows & batch_rows),
+                "accepted_groups": len(accepted_rows & batch_rows),
+                "approved_specialist_exception_groups": len(specialist_rows & batch_rows),
+                "scope_acceptance": "passed" if batch_rows <= accepted_rows else "incomplete",
+                "complete_fields": sum(4 for row in selected if row[0] in batch_rows),
+                "groups": [{"frozen_row": row, "headword": scope[row - 1]["word"],
+                            "pos": scope[row - 1]["lexique_cgram"], "complete_fields": 4 if row in selected_rows else 0,
+                            **scope_gaps.get(row, {})}
+                           for row in range(first, last + 1)],
+            })
         report = {"format_version": 1, "content_version": version, "sqlite_sha256": digest(database),
                   "sqlite_bytes": database.stat().st_size, "inputs": inputs,
                   "admission": {"independent_field_review": "passed", "produced_resource_self_check": "passed",
                                 "everyday_sense_review": "incomplete" if scope_gaps else "passed",
-                                "selected_scope_acceptance": "passed" if not (scope_gaps.keys() - specialist_rows) else "incomplete",
+                                "selected_scope_acceptance": "passed" if not ((scope_gaps.keys() & selected_rows) - specialist_rows) else "incomplete",
                                 **acceptance,
                                 "selected_source_rights_and_materials": "passed", "complete_groups": len(complete_rows),
                                 "complete_senses": len(selected), "complete_fields": len(selected) * 4, "remaining_groups": 4087 - len(complete_rows)},
                   "learner_acceptance": {"status": "not_run", "accepted": False}, "first_release": "incomplete",
-                  "content_batches": [{"issue": 81, "target_groups": 50, "reused_pilot_groups": 5, "new_groups": 45,
-                                       "complete_groups": len(complete_rows.intersection(range(1, 51))),
-                                       "accepted_groups": len(accepted_rows.intersection(range(1, 51))),
-                                       "approved_specialist_exception_groups": len(specialist_rows.intersection(range(1, 51))),
-                                       "scope_acceptance": "passed" if len(accepted_rows.intersection(range(1, 51))) == 50 else "incomplete",
-                                       "complete_fields": sum(4 for row in selected if row[0] <= 50),
-                                       "groups": [{"frozen_row": row, "headword": word, "pos": payload["pos"], "complete_fields": 4,
-                                                   **scope_gaps.get(row, {})}
-                                                  for row, _, word, payload in selected if row <= 50]}],
+                  "content_batches": content_batches,
                   "limits": {"query_utf8_bytes": 512, "matching_senses": 200, "response_bytes": 4 * 1024 * 1024,
                              "resource_bytes": 16_000_000, "field_unicode_scalars": 20_000},
                   "measurements": {"maximum_sense_json_bytes": max(len(compact(row[3]).encode()) for row in selected),
