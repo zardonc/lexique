@@ -19,7 +19,7 @@ retaining the actual corpus contributors and source statements in
 [lexique-provenance.json](lexique-provenance.json), and
 [MEMBERSHIP-NOTICES.txt](MEMBERSHIP-NOTICES.txt).
 
-Modifications by Lexique: selected one specified modern everyday use per frozen
+Modifications by Lexique: selected one specified use per frozen
 group; removed wiki markup; added selected IPA slash delimiters; translated or
 adapted scoped French, English and Chinese explanations; clarified auxiliary +
 past-participle construction, all pronominal forms with être and verbs requiring
@@ -54,6 +54,6 @@ The adjective distinction for tout is corroborated by the
 with the frozen grammatical subclasses defined by the
 [Lexique 3 manual](https://www.lexique.org/databases/Lexique382/Manuel_Lexique3.html).
 OQLF and Canadian Translation Bureau prose is excluded. Exact accepted texts,
-usages and grammar-fact evidence are in [field-review.json](field-review.json);
-this is independent field review,
-with learner acceptance still unrun.
+usages and grammar-fact evidence are in [field-review.json](field-review.json).
+This is independent field review; everyday-use eligibility for the specialist
+`ça/NOM` sense remains unresolved, with learner acceptance still unrun.

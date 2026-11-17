@@ -101,6 +101,7 @@ def load_inputs(source_dir):
     if len(field_reviews) != len(ROWS) * 4 or len(usage_reviews) != len(ROWS):
         raise ValueError("Independent field review is incomplete or duplicated")
     selected = []
+    scope_gaps = {}
     seen = set()
     for group in groups:
         original = scope[group["frozen_row"] - 1]
@@ -120,6 +121,13 @@ def load_inputs(source_dir):
                 raise ValueError("A selected sense is not independently reviewed")
             if (sense["use"], sense["use_language"], sense["source_headword"]) != (usage["accepted_usage"], usage["language"], usage["source_headword"]):
                 raise ValueError("Selected usage differs from the independently reviewed wording")
+            if usage.get("everyday_sense_status") not in ("passed", "unresolved"):
+                raise ValueError("An explicit everyday-sense review is required")
+            if usage["everyday_sense_status"] == "unresolved":
+                scope_gaps[group["frozen_row"]] = {
+                    "incomplete_requirements": ["modern_everyday_sense"],
+                    "reason": text(usage.get("everyday_sense_reason"), "unresolved everyday-sense reason"),
+                }
             if sense.get("cefr") is not None or set(sense.get("fields", {})) != set(FIELDS):
                 raise ValueError("A selected sense requires exactly four complete fields and no inferred CEFR")
             payload = {"sense_id": text(identity, "sense identity", 128), "frozen_row": group["frozen_row"],
@@ -171,12 +179,12 @@ def load_inputs(source_dir):
     for name, expected in checksums.items():
         if digest(source_dir / name) != expected:
             raise ValueError(f"Curated material changed after review: {name}")
-    return curated, scope, selected, aliases
+    return curated, scope, selected, aliases, scope_gaps
 
 
 def prepare(destination, source_dir=RESOURCE, project_license=ROOT / "LICENSE"):
     destination, source_dir = Path(destination), Path(source_dir)
-    curated, scope, selected, aliases = load_inputs(source_dir)
+    curated, scope, selected, aliases, scope_gaps = load_inputs(source_dir)
     if source_dir.resolve() == destination.resolve() or source_dir.resolve().is_relative_to(destination.resolve()):
         raise ValueError("Prepared output must not overwrite curated inputs")
     project_license = Path(project_license)
@@ -189,10 +197,14 @@ def prepare(destination, source_dir=RESOURCE, project_license=ROOT / "LICENSE"):
               "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en"}
     metadata = {"format_version": "1", "content_version": version, "source": compact(source),
                 "scope_denominator_groups": "4087", "scope_denominator_headwords": "3773"}
-    complete_rows = {row[0] for row in selected}
+    complete_rows = {row[0] for row in selected} - scope_gaps.keys()
+    if (curated.get("complete_groups"), curated.get("remaining_groups")) != (len(complete_rows), 4087 - len(complete_rows)):
+        raise ValueError("Curated everyday-sense coverage differs from its review")
     coverage = {"denominator_groups": 4087, "denominator_headwords": 3773, "complete_groups": len(complete_rows),
                 "complete_fields": len(selected) * 4, "remaining_groups": 4087 - len(complete_rows),
-                "incomplete_groups": [{"frozen_row": index, **group, "incomplete_fields": list(FIELDS)}
+                "incomplete_groups": [{"frozen_row": index, **group,
+                                       "incomplete_fields": [] if index in scope_gaps else list(FIELDS),
+                                       **scope_gaps.get(index, {})}
                                       for index, group in enumerate(scope, 1) if index not in complete_rows]}
     destination.parent.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(prefix="lexique-core-", dir=destination.parent) as temporary:
@@ -234,13 +246,15 @@ def prepare(destination, source_dir=RESOURCE, project_license=ROOT / "LICENSE"):
         report = {"format_version": 1, "content_version": version, "sqlite_sha256": digest(database),
                   "sqlite_bytes": database.stat().st_size, "inputs": inputs,
                   "admission": {"independent_field_review": "passed", "produced_resource_self_check": "passed",
+                                "everyday_sense_review": "incomplete" if scope_gaps else "passed",
                                 "selected_source_rights_and_materials": "passed", "complete_groups": len(complete_rows),
                                 "complete_senses": len(selected), "complete_fields": len(selected) * 4, "remaining_groups": 4087 - len(complete_rows)},
                   "learner_acceptance": {"status": "not_run", "accepted": False}, "first_release": "incomplete",
                   "content_batches": [{"issue": 81, "target_groups": 50, "reused_pilot_groups": 5, "new_groups": 45,
                                        "complete_groups": len(complete_rows.intersection(range(1, 51))),
                                        "complete_fields": sum(4 for row in selected if row[0] <= 50),
-                                       "groups": [{"frozen_row": row, "headword": word, "pos": payload["pos"], "complete_fields": 4}
+                                       "groups": [{"frozen_row": row, "headword": word, "pos": payload["pos"], "complete_fields": 4,
+                                                   **scope_gaps.get(row, {})}
                                                   for row, _, word, payload in selected if row <= 50]}],
                   "limits": {"query_utf8_bytes": 512, "matching_senses": 200, "response_bytes": 4 * 1024 * 1024,
                              "resource_bytes": 16_000_000, "field_unicode_scalars": 20_000},

@@ -1,10 +1,20 @@
 # D2 content batch 001 (#81)
 
-[Issue #81](https://github.com/zardonc/lexique/issues/81) completes frozen rows
-0001–0050, retaining every headword and grammatical subclass. The fifty groups
-contain 200 reviewed fields; five groups reuse the pilot. The complete development
-resource now contains **57 groups / 228 fields**, with **4,030 of 4,087 groups
-incomplete**. Content version: `core-81-v1`, resource format 1.
+[Issue #81](https://github.com/zardonc/lexique/issues/81) retains all fifty frozen
+groups in rows 0001–0050 and their 200 reviewed fields; five groups reuse the
+pilot. **49 of the fifty groups meet the modern everyday-sense requirement**.
+The development resource contains **57 groups / 228 reviewed fields**, with
+**56 complete groups and 4,031 of 4,087 groups incomplete**. Content version:
+`core-81-v1`, resource format 1.
+
+Frozen row 34, `ça/NOM`, retains the reviewed psychoanalytic *id* sense and all
+four accurately scoped fields. The fixed Wiktionnaire revision 39860132, line
+129, labels that noun as psychoanalytic; the accepted usage does not establish
+the everyday nominal use required by #81. Its everyday-sense review is unresolved
+and #81 remains incomplete. The converter requires an explicit everyday-sense
+decision for every selected use and includes this gap in both global coverage
+and the batch report. Field completeness remains 200 for the batch and 228 for
+the resource; the missing requirement is everyday use.
 
 ## Content and redistribution
 
@@ -45,6 +55,23 @@ Windows x64 execution evidence is retained under
 | `pnpm rust:test:build`, `pnpm test:rust` | Passed; 194 backend tests, with the existing hard 60-second runner limit |
 | `pnpm rust:check`, `pnpm rust:fmt` | Passed |
 
+### Everyday use and coverage
+
+Windows x64 coverage checks use Python 3.14.10 through
+`uv run --no-project --no-python-downloads --cache-dir target/uv-cache --python 3.14.10`.
+The checkout is
+`C:\Users\inthe\IdeaProjects\lexique\target\issue-81-review-fix-20261116\worktree`,
+based on `b354b78a5fde916ccbc880b086fb1572bcbe1cc1` plus the coverage changes.
+Logs and prepared artifacts are retained in its `target/review-81/` directory;
+the source diff is `verified-source.diff`.
+
+| Check | Result |
+| --- | --- |
+| `python -B -X utf8 -m unittest discover -s scripts -p test_core_pilot.py -v` | 7 passed, including the specialist-use gap and missing, invalid or unexplained everyday-use decisions; `core-suite.log` |
+| `python -B -X utf8 scripts/core_pilot.py prepare target/review-81/after` | Passed: 49 complete batch groups, 200 batch fields, 56 complete global groups and 4,031 incomplete; `prepare.log` |
+| `python -B -X utf8 target/review-81/after/core_pilot.py prepare target/review-81/standalone --source-dir target/review-81/after --project-license target/review-81/after/LICENSE-MIT` | Passed; all 17 prepared files reproduce byte-for-byte, and the 286,720-byte SQLite matches the retained batch artifact; `standalone.log` and `artifact-compare.log` |
+| `pnpm test:docs`, `git diff --check` | Passed |
+
 ## Native execution and package
 
 `pnpm desktop:build --no-bundle` and `python -X utf8 scripts/package_portable.py
@@ -72,11 +99,14 @@ card identities and FSRS state pass the existing preservation assertions.
 External WebView requests are empty, and remaining owned hosts/workers/helpers
 are zero. The native runner retains its hard 60-second execution limit.
 
-Both independent review axes pass. `pnpm test:docs` and `git diff --check` pass.
+The field and source reviews pass; everyday-use eligibility for `ça/NOM` remains
+unresolved. `pnpm test:docs` and `git diff --check` pass for the recorded batch.
 
 ## Limits
 
 This is a development content batch. Learner acceptance, CEFR labels, the
-remaining 4,030 groups, whole-machine offline acceptance, other-platform execution
+remaining 4,031 groups, whole-machine offline acceptance, other-platform execution
 and formal release gates remain open. The broader resource-update/backup matrix
 is recorded in [#80](../issue-80/README.md).
+Browser and native suites were not rerun for the coverage changes; their evidence
+above belongs to the batch implementation.

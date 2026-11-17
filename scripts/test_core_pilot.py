@@ -46,8 +46,48 @@ class CorePilotPreparationTests(unittest.TestCase):
             content_batch = report["content_batches"][0]
             self.assertEqual((content_batch["issue"], content_batch["target_groups"], content_batch["complete_groups"],
                               content_batch["complete_fields"], content_batch["reused_pilot_groups"], content_batch["new_groups"]),
-                             (81, 50, 50, 200, 5, 45))
+                             (81, 50, 49, 200, 5, 45))
             self.assertEqual([(group["headword"], group["pos"]) for group in content_batch["groups"]], expected)
+
+    def test_specialist_ca_noun_does_not_complete_everyday_batch(self):
+        inputs = json.loads((RESOURCE / "curated-inputs.json").read_text(encoding="utf-8"))
+        noun = next(group for group in inputs["groups"]
+                    if (group["headword"], group["lexique_cgram"]) == ("ça", "NOM"))
+        self.assertEqual(noun["senses"][0]["sense_id"], "ca-noun-psychoanalytic-id")
+        with tempfile.TemporaryDirectory() as temporary:
+            report = prepare(Path(temporary) / "prepared")
+            self.assertEqual(report["content_batches"][0]["complete_groups"], 49,
+                             "Specialist ça/NOM does not satisfy the everyday-sense requirement")
+            batch_noun = next(group for group in report["content_batches"][0]["groups"]
+                              if group["frozen_row"] == 34)
+            self.assertEqual(batch_noun["complete_fields"], 4)
+            self.assertEqual(batch_noun["incomplete_requirements"], ["modern_everyday_sense"])
+            coverage = json.loads((Path(temporary) / "prepared/coverage.json").read_text(encoding="utf-8"))
+            gap = next(group for group in coverage["incomplete_groups"] if group["frozen_row"] == 34)
+            self.assertEqual((gap["word"], gap["lexique_cgram"]), ("ça", "NOM"))
+            self.assertEqual(gap["incomplete_fields"], [])
+            self.assertEqual(gap["incomplete_requirements"], ["modern_everyday_sense"])
+            self.assertIn("psychoanalytic", gap["reason"])
+            self.assertEqual(report["admission"]["everyday_sense_review"], "incomplete")
+
+    def test_missing_invalid_or_unexplained_everyday_review_fails_admission(self):
+        for change in ("missing", "invalid", "unexplained"):
+            with self.subTest(change=change), tempfile.TemporaryDirectory() as temporary:
+                root = Path(temporary)
+                source = root / "inputs"
+                shutil.copytree(RESOURCE, source)
+                review = json.loads((source / "field-review.json").read_text(encoding="utf-8"))
+                usage = next(row for row in review["usage"] if row["sense_id"] == "ca-noun-psychoanalytic-id")
+                if change == "missing":
+                    del usage["everyday_sense_status"]
+                elif change == "invalid":
+                    usage["everyday_sense_status"] = "pending"
+                else:
+                    del usage["everyday_sense_reason"]
+                (source / "field-review.json").write_text(json.dumps(review, ensure_ascii=False), encoding="utf-8")
+                with self.assertRaisesRegex(ValueError, "everyday-sense"):
+                    prepare(root / "output", source_dir=source)
+                self.assertFalse((root / "output/core.sqlite3").exists())
 
     def test_repeat_preparation_preserves_verified_resource_timestamps(self):
         with tempfile.TemporaryDirectory() as temporary:
@@ -70,9 +110,9 @@ class CorePilotPreparationTests(unittest.TestCase):
             second = prepare(root / "second")
             self.assertEqual(report["sqlite_sha256"], second["sqlite_sha256"])
             self.assertEqual((root / "first/core.sqlite3").read_bytes(), (root / "second/core.sqlite3").read_bytes())
-            self.assertEqual(report["admission"]["complete_groups"], 57)
+            self.assertEqual(report["admission"]["complete_groups"], 56)
             self.assertEqual(report["admission"]["complete_fields"], 228)
-            self.assertEqual(report["admission"]["remaining_groups"], 4030)
+            self.assertEqual(report["admission"]["remaining_groups"], 4031)
             self.assertFalse(report["learner_acceptance"]["accepted"])
             connection = sqlite3.connect((root / "first/core.sqlite3").as_uri() + "?mode=ro", uri=True)
             with connection:
@@ -96,8 +136,9 @@ class CorePilotPreparationTests(unittest.TestCase):
                     connection.execute("DELETE FROM senses")
             connection.close()
             coverage = json.loads((root / "first/coverage.json").read_text(encoding="utf-8"))
-            self.assertEqual(len(coverage["incomplete_groups"]), 4030)
-            self.assertTrue(all(set(group["incomplete_fields"]) == set(FIELD_NAMES) for group in coverage["incomplete_groups"]))
+            self.assertEqual(len(coverage["incomplete_groups"]), 4031)
+            self.assertTrue(all(set(group["incomplete_fields"]) == set(FIELD_NAMES)
+                                for group in coverage["incomplete_groups"] if group["frozen_row"] != 34))
             self.assertIn("COPYING", report["inputs"])
             self.assertIn("core_pilot.py", report["inputs"])
             self.assertIn("LEXIQUE-UPSTREAM-README.txt", report["inputs"])
