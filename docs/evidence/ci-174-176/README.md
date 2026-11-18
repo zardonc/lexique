@@ -8,7 +8,7 @@ All three PR heads passed 22 checks before merging on 2026-11-18.
 | [#175](https://github.com/zardonc/lexique/pull/175) | [60af1f4](https://github.com/zardonc/lexique/commit/60af1f4bf1de7637eebe89f132efa7676adff291) | [19db064](https://github.com/zardonc/lexique/commit/19db0645f6bfc1f92d1aaed59ea9a33bf2e841bd) | 22/22 |
 | [#176](https://github.com/zardonc/lexique/pull/176) | [15df003](https://github.com/zardonc/lexique/commit/15df003e3b5408af36f69acf01936e03343f1bdf) | [42c7205](https://github.com/zardonc/lexique/commit/42c720556fd1195cca39ba704761877d1c0df48a) | 22/22 |
 
-The combined merge tree has its own [main CI run](https://github.com/zardonc/lexique/actions/runs/44377907700).
+The combined merge tree, `42c720556fd1195cca39ba704761877d1c0df48a`, passed all 11 jobs in its [main CI run](https://github.com/zardonc/lexique/actions/runs/44377907700).
 
 ## Queue E2E races
 

@@ -2,7 +2,7 @@
 
 ## PR #174–#176 合并与 CI 恢复
 
-2026-11-18，[PR #174](https://github.com/zardonc/lexique/pull/174)、[PR #175](https://github.com/zardonc/lexique/pull/175) 和 [PR #176](https://github.com/zardonc/lexique/pull/176) 的固定 head 各 22 项检查通过后合并，最终合并提交为 `42c720556fd1195cca39ba704761877d1c0df48a`。队列 E2E 竞态修复在延迟请求对照中由 4／4 失败变为 4／4 通过，Windows x64／Edge 完整 391 项通过。Intel macOS 对照确认 COMMIT 锁竞争及其他等待，原始 V03 超时的具体原因仍未完全定位；事务／竞争写入预算保持 100／250 ms，后端执行硬限保持 60 秒。固定提交、原始失败、对照结果、ARM64 runner 恢复及合并后的 main CI 链接见 [CI 恢复记录](evidence/ci-174-176/README.md)。
+2026-11-18，[PR #174](https://github.com/zardonc/lexique/pull/174)、[PR #175](https://github.com/zardonc/lexique/pull/175) 和 [PR #176](https://github.com/zardonc/lexique/pull/176) 的固定 head 各 22 项检查通过后合并，最终合并提交为 `42c720556fd1195cca39ba704761877d1c0df48a`，该提交的 [main CI](https://github.com/zardonc/lexique/actions/runs/44377907700) 11 项检查全部通过。队列 E2E 竞态修复在延迟请求对照中由 4／4 失败变为 4／4 通过，Windows x64／Edge 完整 391 项通过。Intel macOS 对照确认 COMMIT 锁竞争及其他等待，原始 V03 超时的具体原因仍未完全定位；事务／竞争写入预算保持 100／250 ms，后端执行硬限保持 60 秒。固定提交、原始失败、对照结果、ARM64 runner 恢复及合并后的 main CI 链接见 [CI 恢复记录](evidence/ci-174-176/README.md)。
 
 ## D2 核心内容第三批五十组（#83）
 
