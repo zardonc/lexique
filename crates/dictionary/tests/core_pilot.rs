@@ -118,7 +118,41 @@ fn reviewed_groups_keep_all_four_fields_frozen_pos_order_and_only_evidenced_quer
         ("comme", vec![96, 97], "comme"),
         ("se", vec![98], "se"),
         ("venir", vec![99], "venir"),
-        ("sur", vec![100], "sur"),
+        ("sur", vec![100, 101], "sur"),
+        ("toi", vec![102], "toi"),
+        ("ici", vec![103], "ici"),
+        ("rien", vec![104], "rien"),
+        ("ma", vec![105], "ma"),
+        ("lui", vec![106], "lui"),
+        ("bon", vec![107, 108, 109, 110], "bon"),
+        ("là", vec![111, 112], "là"),
+        ("suivre", vec![113], "suivre"),
+        ("pourquoi", vec![114, 115], "pourquoi"),
+        ("parler", vec![116, 117], "parler"),
+        ("prendre", vec![118], "prendre"),
+        ("cette", vec![119], "cette"),
+        ("votre", vec![120], "votre"),
+        ("quand", vec![121], "quand"),
+        ("son", vec![122, 123], "son"),
+        ("alors", vec![124], "alors"),
+        ("ton", vec![125, 126], "ton"),
+        ("chose", vec![127], "chose"),
+        ("par", vec![128, 129], "par"),
+        ("croire", vec![130], "croire"),
+        ("aimer", vec![131], "aimer"),
+        ("falloir", vec![132], "falloir"),
+        ("comment", vec![133, 134, 135], "comment"),
+        ("très", vec![136], "très"),
+        ("ou", vec![137], "ou"),
+        ("passer", vec![138], "passer"),
+        ("penser", vec![139], "penser"),
+        ("aussi", vec![140], "aussi"),
+        ("jamais", vec![141], "jamais"),
+        ("même", vec![142, 143, 144], "même"),
+        ("attendre", vec![145], "attendre"),
+        ("petit", vec![146, 147, 148], "petit"),
+        ("trouver", vec![149], "trouver"),
+        ("laisser", vec![150], "laisser"),
         ("aujourd'hui", vec![360], "aujourd'hui"),
         ("fort", vec![422, 423], "fort"),
         ("coeur", vec![483], "coeur"),
@@ -133,7 +167,7 @@ fn reviewed_groups_keep_all_four_fields_frozen_pos_order_and_only_evidenced_quer
     ] {
         let lookup = core::lookup(&path, query, &expected).unwrap();
         assert_eq!(lookup.dictionary_id.as_deref(), Some("builtin-core"));
-        assert_eq!(lookup.source.version, "core-82-v1");
+        assert_eq!(lookup.source.version, "core-83-v1");
         assert_eq!(
             lookup
                 .entries

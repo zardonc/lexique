@@ -15,6 +15,45 @@ FIELD_NAMES = {"french_definition": "definition_fr", "ipa": "ipa", "english": "m
 
 
 class CorePilotPreparationTests(unittest.TestCase):
+    def test_third_content_batch_keeps_all_frozen_groups_and_four_fields(self):
+        expected = [
+            ("sur", "PRE"), ("toi", "PRO:per"), ("ici", "ADV"),
+            ("rien", "PRO:ind"), ("ma", "ADJ:pos"), ("lui", "PRO:per"),
+            ("bon", "ADJ"), ("bon", "ADV"), ("bon", "NOM"), ("bon", "ONO"),
+            ("là", "ADV"), ("là", "ONO"), ("suivre", "VER"),
+            ("pourquoi", "ADV"), ("pourquoi", "CON"), ("parler", "NOM"),
+            ("parler", "VER"), ("prendre", "VER"), ("cette", "ADJ:dem"),
+            ("votre", "ADJ:pos"), ("quand", "CON"), ("son", "ADJ:pos"),
+            ("son", "NOM"), ("alors", "ADV"), ("ton", "ADJ:pos"), ("ton", "NOM"),
+            ("chose", "NOM"), ("par", "NOM"), ("par", "PRE"), ("croire", "VER"),
+            ("aimer", "VER"), ("falloir", "VER"), ("comment", "ADV"),
+            ("comment", "CON"), ("comment", "ONO"), ("très", "ADV"),
+            ("ou", "CON"), ("passer", "VER"), ("penser", "VER"), ("aussi", "ADV"),
+            ("jamais", "ADV"), ("même", "ADJ"), ("même", "ADV"),
+            ("même", "PRO:ind"), ("attendre", "VER"), ("petit", "ADJ"),
+            ("petit", "ADV"), ("petit", "NOM"), ("trouver", "VER"), ("laisser", "VER"),
+        ]
+        with tempfile.TemporaryDirectory() as temporary:
+            output = Path(temporary) / "prepared"
+            report = prepare(output)
+            batch = next(item for item in report["content_batches"] if item["issue"] == 83)
+            self.assertEqual((batch["target_groups"], batch["new_groups"], batch["reused_pilot_groups"],
+                              batch["complete_groups"], batch["accepted_groups"]),
+                             (50, 50, 0, 49, 50))
+            self.assertEqual(batch["approved_specialist_exception_groups"], 1)
+            self.assertEqual(batch["complete_fields"], 200)
+            self.assertEqual(batch["scope_acceptance"], "passed")
+            golf = next(group for group in batch["groups"] if group["frozen_row"] == 128)
+            self.assertEqual(golf["everyday_sense_status"], "approved_specialist_exception")
+            self.assertEqual(golf["specialist_exception_decision"]["issue"],
+                             "https://github.com/zardonc/lexique/issues/83")
+            with closing(sqlite3.connect(output / "core.sqlite3")) as connection:
+                senses = [json.loads(row[0]) for row in connection.execute(
+                    "SELECT payload FROM senses WHERE frozen_row BETWEEN 101 AND 150 ORDER BY frozen_row,sense_index")]
+            self.assertEqual([(sense["headword"], sense["pos"]) for sense in senses], expected)
+            self.assertEqual([sense["frozen_row"] for sense in senses], list(range(101, 151)))
+            self.assertTrue(all(sense[field].strip() for sense in senses for field in FIELD_NAMES.values()))
+
     def test_second_content_batch_keeps_frozen_targets_and_exposes_unresolved_adjective(self):
         expected = [
             ("pour", "NOM"), ("pour", "PRE"), ("des", "ART:ind"),
@@ -54,9 +93,9 @@ class CorePilotPreparationTests(unittest.TestCase):
             self.assertEqual(unresolved["complete_fields"], 0)
             self.assertEqual(unresolved["incomplete_fields"], list(FIELD_NAMES))
             self.assertEqual(unresolved["everyday_sense_status"], "unresolved")
-            self.assertEqual(report["admission"]["accepted_groups"], 104)
-            self.assertEqual(report["admission"]["complete_fields"], 416)
-            self.assertEqual(report["admission"]["remaining_unaccepted_groups"], 3983)
+            self.assertEqual(report["admission"]["accepted_groups"], 154)
+            self.assertEqual(report["admission"]["complete_fields"], 616)
+            self.assertEqual(report["admission"]["remaining_unaccepted_groups"], 3933)
 
     def test_first_content_batch_keeps_all_fifty_frozen_word_pos_pairs(self):
         expected = [
@@ -141,12 +180,12 @@ class CorePilotPreparationTests(unittest.TestCase):
             self.assertEqual(gap["incomplete_fields"], [])
             self.assertEqual(gap["incomplete_requirements"], ["modern_everyday_sense"])
             self.assertIn("psychoanalytic", gap["reason"])
-            self.assertEqual(coverage["accepted_groups"], 104)
-            self.assertEqual(coverage["remaining_unaccepted_groups"], 3983)
-            self.assertEqual(coverage["approved_specialist_exception_groups"], 1)
+            self.assertEqual(coverage["accepted_groups"], 154)
+            self.assertEqual(coverage["remaining_unaccepted_groups"], 3933)
+            self.assertEqual(coverage["approved_specialist_exception_groups"], 2)
             self.assertEqual(report["admission"]["everyday_sense_review"], "incomplete")
             self.assertEqual(report["admission"]["selected_scope_acceptance"], "passed")
-            self.assertEqual(report["admission"]["accepted_groups"], 104)
+            self.assertEqual(report["admission"]["accepted_groups"], 154)
             self.assertEqual(report["first_release"], "incomplete")
 
     def test_missing_unapproved_or_wrongly_bound_specialist_exception_fails_admission(self):
@@ -217,14 +256,13 @@ class CorePilotPreparationTests(unittest.TestCase):
             second = prepare(root / "second")
             self.assertEqual(report["sqlite_sha256"], second["sqlite_sha256"])
             self.assertEqual((root / "first/core.sqlite3").read_bytes(), (root / "second/core.sqlite3").read_bytes())
-            self.assertEqual(report["admission"]["complete_groups"], 103)
-            self.assertEqual(report["admission"]["complete_fields"], 416)
-            self.assertEqual(report["admission"]["remaining_groups"], 3984)
+            self.assertEqual(report["admission"]["complete_groups"], 152)
+            self.assertEqual(report["admission"]["complete_fields"], 616)
+            self.assertEqual(report["admission"]["remaining_groups"], 3935)
             self.assertFalse(report["learner_acceptance"]["accepted"])
-            connection = sqlite3.connect((root / "first/core.sqlite3").as_uri() + "?mode=ro", uri=True)
-            with connection:
+            with closing(sqlite3.connect((root / "first/core.sqlite3").as_uri() + "?mode=ro", uri=True)) as connection:
                 senses = [json.loads(row[0]) for row in connection.execute("SELECT payload FROM senses ORDER BY frozen_row,sense_index")]
-                self.assertEqual([row["frozen_row"] for row in senses], [*range(1, 87), *range(88, 101), 360, 422, 423, 483, 1911])
+                self.assertEqual([row["frozen_row"] for row in senses], [*range(1, 87), *range(88, 151), 360, 422, 423, 483, 1911])
                 self.assertEqual([row["pos"] for row in senses[:5]], ["AUX", "NOM", "VER", "AUX", "VER"])
                 self.assertIn("all pronominal verbs", senses[0]["meaning_en"])
                 self.assertIn("past participle", senses[3]["meaning_en"])
@@ -241,11 +279,10 @@ class CorePilotPreparationTests(unittest.TestCase):
                     self.assertIn(str(field["exact_source"]["line_1_based"]), source["span"])
                 with self.assertRaises(sqlite3.OperationalError):
                     connection.execute("DELETE FROM senses")
-            connection.close()
             coverage = json.loads((root / "first/coverage.json").read_text(encoding="utf-8"))
-            self.assertEqual(len(coverage["incomplete_groups"]), 3984)
+            self.assertEqual(len(coverage["incomplete_groups"]), 3935)
             self.assertTrue(all(set(group["incomplete_fields"]) == set(FIELD_NAMES)
-                                for group in coverage["incomplete_groups"] if group["frozen_row"] != 34))
+                                for group in coverage["incomplete_groups"] if group["frozen_row"] not in {34, 128}))
             self.assertIn("COPYING", report["inputs"])
             self.assertIn("core_pilot.py", report["inputs"])
             self.assertIn("LEXIQUE-UPSTREAM-README.txt", report["inputs"])

@@ -14,7 +14,7 @@ from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 RESOURCE = ROOT / "resources/core-pilot-79"
-ROWS = (*range(1, 87), *range(88, 101), 360, 422, 423, 483, 1911)
+ROWS = (*range(1, 87), *range(88, 151), 360, 422, 423, 483, 1911)
 FIELDS = {"french_definition": "definition_fr", "ipa": "ipa", "english": "meaning_en", "chinese": "meaning_zh"}
 LANGUAGES = {"french_definition": "fr", "ipa": "und", "english": "en", "chinese": "zh"}
 MATERIALS = (
@@ -131,13 +131,17 @@ def load_inputs(source_dir):
                     "reason": text(usage.get("everyday_sense_reason"), "non-everyday-sense reason"),
                 }
             if status == "approved_specialist_exception":
-                if (group["frozen_row"], group["headword"], group["lexique_cgram"], identity) != (34, "ça", "NOM", "ca-noun-psychoanalytic-id") or (
+                approved_issue = {
+                    (34, "ça", "NOM", "ca-noun-psychoanalytic-id"): 81,
+                    (128, "par", "NOM", "par-noun-golf-standard-strokes"): 83,
+                }.get((group["frozen_row"], group["headword"], group["lexique_cgram"], identity))
+                if approved_issue is None or (
                     usage.get("frozen_row"), usage.get("headword"), usage.get("pos")
-                ) != (34, "ça", "NOM"):
-                    raise ValueError("The specialist exception applies only to frozen row 34, ça/NOM")
+                ) != (group["frozen_row"], group["headword"], group["lexique_cgram"]):
+                    raise ValueError("The specialist exception applies only to the approved frozen noun and sense")
                 decision = usage.get("specialist_exception_decision")
-                if not isinstance(decision, dict) or decision.get("issue") != "https://github.com/zardonc/lexique/issues/81" or decision.get("approved_by") != "project_owner":
-                    raise ValueError("The specialist exception requires the project owner's #81 approval")
+                if not isinstance(decision, dict) or decision.get("issue") != f"https://github.com/zardonc/lexique/issues/{approved_issue}" or decision.get("approved_by") != "project_owner":
+                    raise ValueError("The specialist exception requires the project owner's matching issue approval")
                 text(decision.get("approved_on"), "specialist exception approval date", 32)
                 text(decision.get("decision"), "specialist exception decision")
                 scope_gaps[group["frozen_row"]]["specialist_exception_decision"] = decision
