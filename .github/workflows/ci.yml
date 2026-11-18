@@ -1,49 +1,21 @@
-name: scaffold checks
+name: ci174 native timing diagnosis
 
 on:
   push:
-  pull_request:
+    branches: [codex/diagnose-ci174-macos-timing]
   workflow_dispatch:
 
 permissions:
   contents: read
 
 jobs:
-  documentation:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 24
-      - run: pnpm test:docs:validator
-      - run: pnpm test:docs
-
-  frontend:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 24
-          cache: pnpm
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm test:build-args
-      - run: pnpm lint && pnpm typecheck && pnpm build
-      - run: pnpm --filter @lexique/desktop exec playwright install --with-deps chromium
-      - run: pnpm test:e2e
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: frontend-evidence
-          path: |
-            apps/desktop/playwright-report
-            apps/desktop/test-results
-
-  backend:
-    runs-on: ubuntu-latest
+  timing:
+    runs-on: macos-15-intel
+    timeout-minutes: 15
+    env:
+      CARGO_BUILD_TARGET: x86_64-apple-darwin
+      CARGO_PROFILE_TEST_OPT_LEVEL: '1'
+      RUST_TEST_THREADS: '1'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -53,120 +25,20 @@ jobs:
         with:
           node-version: 24
       - run: rustup show
-      - run: cargo fmt --all --check
       - run: python -X utf8 scripts/dictionary_sample.py prepare target/desktop-dictionary-sample
       - run: python -B -X utf8 scripts/core_pilot.py prepare target/desktop-core-pilot
       - run: python -X utf8 scripts/conjugation_sample.py prepare target/desktop-conjugation-v6-stats
       - run: python -B -X utf8 scripts/frequency_sample.py target/desktop-frequency-v1
-      - run: cargo clippy --locked -p lexique-core -p lexique-storage -p lexique-dictionary --all-targets -- -D warnings
-      - run: cargo test --locked -p lexique-core -p lexique-storage -p lexique-dictionary --no-run
-      - run: node scripts/test-rust.mjs
-      - run: cargo fmt --manifest-path tools/mdict-probe/Cargo.toml --check
-      - run: cargo clippy --locked --manifest-path tools/mdict-probe/Cargo.toml --all-targets -- -D warnings
-      - run: cargo test --locked --manifest-path tools/mdict-probe/Cargo.toml --no-run
-      - run: node scripts/test-rust.mjs --mdict
-      - run: cargo build --locked --release -p lexique-core --target wasm32-unknown-unknown
-      - run: node scripts/check-wasm.mjs
-      - run: cargo build --locked --release -p lexique-core --example schedule
-      - run: node scripts/check-scheduling.mjs
+      - run: cargo test --locked -p lexique-storage --test preflight_24 --no-run
+      - name: repeat the lock-budget test
+        run: |
+          mkdir -p target/ci-native-timing
+          for attempt in {1..30}; do
+            node scripts/test-rust.mjs || exit $?
+          done 2>&1 | tee target/ci-native-timing/probe.log
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: core-wasm
-          path: |
-            target/wasm32-unknown-unknown/release/lexique_core.wasm
-            target/issue-13/conformance.json
-            resources/fsrs-6.6.2/
-            resources/libm-0.2.16/
-            docs/evidence/issue-13/dependencies.txt
-
-  dictionary-resource:
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
-    runs-on: ${{ matrix.os }}
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.14.10'
-      - run: python -X utf8 -m unittest discover -s scripts -p test_dictionary_sample.py -v
-      - run: python -B -X utf8 -m unittest discover -s scripts -p test_core_pilot.py -v
-      - run: python -X utf8 -m unittest discover -s scripts -p test_conjugation_sample.py -v
-      - run: python -X utf8 -m unittest discover -s scripts -p test_package_portable.py -v
-      - run: python -X utf8 -m unittest discover -s scripts -p test_speech_portable.py -v
-
-  native:
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - os: windows-latest
-            target: x86_64-pc-windows-msvc
-            arch: amd64
-          - os: windows-11-arm
-            target: aarch64-pc-windows-msvc
-            arch: amd64_arm64
-          - os: macos-15-intel
-            target: x86_64-apple-darwin
-          - os: macos-latest
-            target: aarch64-apple-darwin
-    runs-on: ${{ matrix.os }}
-    env:
-      CARGO_BUILD_TARGET: ${{ matrix.target }}
-      # Resource-heavy tests must fit the existing 60-second execution limit.
-      CARGO_PROFILE_TEST_OPT_LEVEL: '1'
-      # Keep unrelated fixture writes out of the SQLite timing measurement.
-      RUST_TEST_THREADS: '1'
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.14.10'
-      - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 24
-          cache: pnpm
-      - uses: ilammy/msvc-dev-cmd@v1
-        if: runner.os == 'Windows'
-        with:
-          arch: ${{ matrix.arch }}
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm build
-      - run: rustup target add ${{ matrix.target }}
-      - run: cargo check --locked --workspace --target ${{ matrix.target }}
-      - run: cargo test --locked -p lexique-core -p lexique-storage -p lexique-dictionary --no-run
-      - run: pnpm test:rust
-      - run: cargo test --locked --release -p lexique-desktop --lib --no-run
-      - run: pnpm test:desktop:lib
-
-  windows-portable:
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.14.10'
-      - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 24
-          cache: pnpm
-      - uses: ilammy/msvc-dev-cmd@v1
-        with:
-          arch: amd64
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm test:tooling
-      - run: pnpm test:sherpa:smoke
-      - run: pnpm desktop:portable
-      - run: cargo test --locked --release -p lexique-desktop --test speech_cache --lib --no-run
-      - run: pnpm test:speech:cache
-      - run: pnpm test:desktop:lib
-      - uses: actions/upload-artifact@v4
-        with:
-          name: windows-x64-portable
-          path: |
-            target/portable/*.zip
-            target/portable/*.zip.sha256
-          if-no-files-found: error
+          name: ci174-native-timing
+          path: target/ci-native-timing/probe.log
+          if-no-files-found: ignore
