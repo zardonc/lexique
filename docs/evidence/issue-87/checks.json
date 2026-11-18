@@ -1,0 +1,96 @@
+{
+  "commands": {
+    "focused_tests": {
+      "command": "uv run --python 3.14 python -B -X utf8 -m unittest discover -s scripts -p test_core_batch_87.py -v",
+      "status": "passed",
+      "tests": 4
+    },
+    "conversion": {
+      "command": "uv run --python 3.14 python -B -X utf8 scripts/core_pilot.py prepare target/issue-87/conversion",
+      "status": "failed_expected_pending_review",
+      "error": "Unreviewed field source or incompatible licence",
+      "produced_artifact": false
+    },
+    "source_validation": {
+      "status": "passed",
+      "frozen_groups": 50,
+      "candidate_senses": 49,
+      "candidate_fields": 196,
+      "unresolved_fields": 4,
+      "sources": 44,
+      "fixed_context_lines": 124,
+      "registered_article_user_entries": 3949,
+      "admitted_fields": 0,
+      "boundary": "fixed source/input structure and preservation; not independent quality or native execution"
+    },
+    "preservation": {
+      "curated-inputs": "all prior records and metadata unchanged",
+      "field-review": "all prior records and metadata unchanged",
+      "selected-source-excerpts": "all prior records and metadata unchanged",
+      "selected-source-context": "all prior records and metadata unchanged"
+    },
+    "local_links": {
+      "status": "passed",
+      "checked_links": [
+        {
+          "document": "quality-review.md",
+          "target": "review-candidates.json",
+          "status": "exists"
+        },
+        {
+          "document": "README.md",
+          "target": "source-research.md",
+          "status": "exists"
+        },
+        {
+          "document": "README.md",
+          "target": "review-candidates.json",
+          "status": "exists"
+        },
+        {
+          "document": "README.md",
+          "target": "quality-review.md",
+          "status": "exists"
+        },
+        {
+          "document": "README.md",
+          "target": "../../../scripts/test_core_batch_87.py",
+          "status": "exists"
+        },
+        {
+          "document": "source-research.md",
+          "target": "source-index.json",
+          "status": "exists"
+        },
+        {
+          "document": "source-research.md",
+          "target": "../../../resources/core-pilot-79/selected-source-context.json",
+          "status": "exists"
+        },
+        {
+          "document": "source-research.md",
+          "target": "review-candidates.json",
+          "status": "exists"
+        },
+        {
+          "document": "source-research.md",
+          "target": "../../../resources/core-pilot-79/COPYING",
+          "status": "exists"
+        },
+        {
+          "document": "source-research.md",
+          "target": "../../../resources/core-pilot-79/curated-inputs.json",
+          "status": "exists"
+        },
+        {
+          "document": "source-research.md",
+          "target": "../../../resources/core-pilot-79/NOTICES.md",
+          "status": "exists"
+        }
+      ]
+    },
+    "native": {
+      "status": "pending_coordinator"
+    }
+  }
+}
