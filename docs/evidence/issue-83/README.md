@@ -81,9 +81,9 @@ diff is `review-final.diff`. PowerShell 7, pnpm 11.25.0, uv-resolved Python
 
 | Check | Result and retained evidence |
 | --- | --- |
-| `pnpm core:prepare` | Passed; exact membership, 50 batch groups / 200 fields and fixed global denominator; `core-prepare-delivery.log` |
-| `pnpm test:core` | 11 passed; field/usage acceptance, specialist exceptions and reproducible conversion; `core-tests-delivery.log` |
-| Preservation comparison | Passed; all 104 prior payloads and prior source/review bindings preserved; `preservation.json`, `preservation-delivery.log` |
+| `pnpm core:prepare` | Passed; exact membership, 50 batch groups / 200 fields and fixed global denominator; `core-prepare-metadata.log` |
+| `pnpm test:core` | 11 passed; field/usage acceptance, specialist exceptions and reproducible conversion; `core-tests-metadata.log` |
+| Preservation comparison | Passed; all 104 prior payloads and prior source/review bindings preserved; reviewed curation retained and prepared SQLite/executable match native-tested hashes; `preservation.json`, `preservation-delivery.log`, `metadata-preservation.log` |
 | `pnpm test:tooling` | Passed; `tooling-tests.log` |
 | `pnpm lint`, `pnpm typecheck`, `pnpm build` | Passed; `lint-delivery.log`, `typecheck-delivery.log`, `build-delivery.log` |
 | Rust formatting and compilation | Passed; `rust-fmt-final.log`, `rust-check-final.log` |
@@ -91,8 +91,8 @@ diff is `review-final.diff`. PowerShell 7, pnpm 11.25.0, uv-resolved Python
 | Localized browser coverage check | 3 passed; `coverage-browser-delivery.log` |
 | `pnpm test:e2e` | 391 passed with build/native processes stopped; unchanged test timeouts; `e2e-delivery-isolated.log` |
 | `node scripts/build-desktop.mjs --no-bundle` | Passed; fresh release executable, locked Cargo, two existing dead-code warnings; `native-build-delivery.log` |
-| `python -B -X utf8 scripts/package_portable.py --output-dir target/issue-83/packages-delivery` | Passed; 183 verified files; `package-delivery.log`, `package-delivery-metadata.json` |
-| `pnpm test:docs`, `git diff --cached --check` | Passed; 178 documents / 1,427 local links, including all three batch evidence files; `docs-delivery.log` |
+| `python -B -X utf8 scripts/package_portable.py --output-dir target/issue-83/packages-resource-metadata` | Passed; 183 verified files; `package-metadata.log`, `package-metadata-summary.json` |
+| `pnpm test:docs`, `git diff --cached --check` | Passed; 178 documents / 1,427 local links, including all three batch evidence files; `docs-metadata.log` |
 
 Additional retained browser execution records are `e2e-delivery.log` (389 passed,
 two 30-second conjugation timeouts during concurrent compilation) and
@@ -104,12 +104,14 @@ The prepared SQLite is **741,376 bytes**, SHA-256
 Its report accepts all fifty #83 groups and their 200 fields within the approved
 scope. Global everyday completeness remains incomplete at 152 / 4,087 groups.
 
-The portable ZIP is **35,348,235 bytes**, SHA-256
-`c99cd4e3c9138665f03898dc65264fab35eb9367db44208a093a4102d42d499f`.
-The extracted package contains **183 files / 71,544,988 bytes**. The freshly
+The portable ZIP is **35,348,257 bytes**, SHA-256
+`4445ee03196d01de96917baaf5738aff2f55cfef80a623529da44f5691a802d3`.
+The extracted package contains **183 files / 71,545,085 bytes**. The freshly
 built executable is **29,781,504 bytes**, SHA-256
 `8903453007ff1e0a330ff6c4e848f6e55e507f445d13cdce7c4302f32aca7613`;
-the packaged executable has the same hash.
+the packaged executable has the same hash. The delivery archive uses the same
+SQLite and executable verified by the native scenarios below; its bundled
+limitation metadata and input checksums match the current curation.
 
 ## Native lookup, save and upgrade
 
