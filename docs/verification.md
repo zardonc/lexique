@@ -1,5 +1,9 @@
 # 骨架验证记录
 
+## PR #174–#176 合并与 CI 恢复
+
+2026-11-18，[PR #174](https://github.com/zardonc/lexique/pull/174)、[PR #175](https://github.com/zardonc/lexique/pull/175) 和 [PR #176](https://github.com/zardonc/lexique/pull/176) 的固定 head 各 22 项检查通过后合并，最终合并提交为 `42c720556fd1195cca39ba704761877d1c0df48a`。队列 E2E 竞态修复在延迟请求对照中由 4／4 失败变为 4／4 通过，Windows x64／Edge 完整 391 项通过。Intel macOS 对照确认 COMMIT 锁竞争及其他等待，原始 V03 超时的具体原因仍未完全定位；事务／竞争写入预算保持 100／250 ms，后端执行硬限保持 60 秒。固定提交、原始失败、对照结果、ARM64 runner 恢复及合并后的 main CI 链接见 [CI 恢复记录](evidence/ci-174-176/README.md)。
+
 ## D2 核心内容第三批五十组（#83）
 
 2026-11-18 UTC，[#83](https://github.com/zardonc/lexique/issues/83) 的冻结行 0101–0150 全部完成，接受 50 组／200 字段，无复用组：49 组现代日常义，加上项目所有者批准的行 128 `par/NOM` 高尔夫专业义例外。该名词仅表示完成单个球洞的标准击球次数，保留原词头、词性、冻结行和分母。全部 200 字段、50 项用法及 37 份固定来源捕获通过独立质量与来源权利审核，实际署名、选定片段、修改说明和再分发材料随包保留。
