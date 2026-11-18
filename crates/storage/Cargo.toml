@@ -15,3 +15,4 @@ sha2 = "0.10"
 
 [dev-dependencies]
 rusqlite = { workspace = true, features = ["hooks", "trace"] }
+libc = "=0.2.191"

@@ -17,6 +17,24 @@ use rusqlite::{Connection, TransactionBehavior, params};
 mod candidate {
     include!("../src/review.rs");
 
+    fn thread_cpu_ms() -> f64 {
+        #[cfg(target_os = "macos")]
+        {
+            let mut time = libc::timespec {
+                tv_sec: 0,
+                tv_nsec: 0,
+            };
+            // SAFETY: the clock API writes into a valid, initialized timespec.
+            let status = unsafe { libc::clock_gettime(libc::CLOCK_THREAD_CPUTIME_ID, &mut time) };
+            assert_eq!(status, 0);
+            time.tv_sec as f64 * 1000.0 + time.tv_nsec as f64 / 1_000_000.0
+        }
+        #[cfg(not(target_os = "macos"))]
+        {
+            panic!("[DEBUG-ci174175] Thread CPU probe requires macOS");
+        }
+    }
+
     type BatchOutcome = (i64, Result<Vec<ReviewCard>, String>);
 
     pub fn batch(
@@ -24,14 +42,15 @@ mod candidate {
         ids: &[i64],
     ) -> Result<Vec<BatchOutcome>, StorageError> {
         let tx = connection.transaction_with_behavior(TransactionBehavior::Immediate)?;
-        batch_transaction(tx, ids).map(|(outcomes, _, _)| outcomes)
+        batch_transaction(tx, ids).map(|(outcomes, _, _, _, _)| outcomes)
     }
 
     pub fn batch_transaction(
         tx: rusqlite::Transaction<'_>,
         ids: &[i64],
-    ) -> Result<(Vec<BatchOutcome>, f64, f64), StorageError> {
+    ) -> Result<(Vec<BatchOutcome>, f64, f64, f64, f64), StorageError> {
         let sql_started = std::time::Instant::now();
+        let sql_cpu_started = thread_cpu_ms();
         let mut outcomes = vec![];
         for &id in ids {
             tx.execute_batch("SAVEPOINT word")?;
@@ -50,10 +69,13 @@ mod candidate {
             tx.execute_batch("RELEASE word")?;
         }
         let sql_ms = sql_started.elapsed().as_secs_f64() * 1000.0;
+        let sql_cpu_ms = thread_cpu_ms() - sql_cpu_started;
         let commit_started = std::time::Instant::now();
+        let commit_cpu_started = thread_cpu_ms();
         tx.commit()?;
         let commit_ms = commit_started.elapsed().as_secs_f64() * 1000.0;
-        Ok((outcomes, sql_ms, commit_ms))
+        let commit_cpu_ms = thread_cpu_ms() - commit_cpu_started;
+        Ok((outcomes, sql_ms, commit_ms, sql_cpu_ms, commit_cpu_ms))
     }
 }
 
@@ -248,13 +270,13 @@ fn v03_candidate_transaction_sizes_and_competing_notes_and_ratings() {
                     .unwrap();
                 let start = Instant::now();
                 start_writer.send(()).unwrap();
-                let (outcomes, sql_ms, commit_ms) =
+                let (outcomes, sql_ms, commit_ms, sql_cpu_ms, commit_cpu_ms) =
                     candidate::batch_transaction(tx, &(1..=size).collect::<Vec<_>>()).unwrap();
                 assert!(outcomes.iter().all(|(_, r)| r.is_ok()));
                 let transaction_ms = start.elapsed().as_secs_f64() * 1000.0;
                 let (writer_ms, contended) = writer.join().unwrap();
                 println!(
-                    "[DEBUG-ci174175] size={size} repeat={repeat} sql_ms={sql_ms} commit_ms={commit_ms} overhead_ms={}",
+                    "[DEBUG-ci174175] size={size} repeat={repeat} sql_ms={sql_ms} commit_ms={commit_ms} overhead_ms={} sql_cpu_ms={sql_cpu_ms} commit_cpu_ms={commit_cpu_ms}",
                     transaction_ms - sql_ms - commit_ms
                 );
                 println!(

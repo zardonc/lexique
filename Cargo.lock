@@ -2262,6 +2262,7 @@ name = "lexique-storage"
 version = "0.1.0"
 dependencies = [
  "lexique-core",
+ "libc",
  "rusqlite",
  "serde",
  "serde_json",
