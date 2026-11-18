@@ -21,7 +21,7 @@
 ## Development workflow
 
 - For code reviews and reviewer handoffs, read [CODING_STANDARDS.md](CODING_STANDARDS.md).
-- Before invoking development dependencies or collecting large tool outputs, consult [LOCAL-DEV-ENV.md](LOCAL-DEV-ENV.md) when present and follow its requirements.
+- Before invoking development dependencies or collecting large tool outputs, consult [LOCAL-DEV-ENV.md](LOCAL-DEV-ENV.md) when present and follow its requirements. In a linked worktree without it, use `git worktree list --porcelain` to locate the primary checkout and read its copy when present.
 - Use the pnpm version in `package.json` and the Rust toolchain in `rust-toolchain.toml`. Install with `pnpm install --frozen-lockfile`; use locked Cargo commands and change lockfiles only for intentional dependency changes.
 - On Windows, use PowerShell 7. Prefer the native file-editing / `apply_patch` tool; if a safe fallback is needed, verify the resulting diff.
 - Use `rg` for text and file searches. For symbol or call-path exploration, use the existing CodeGraph index when available, then verify findings against current source; creating or rebuilding an index requires a user request.

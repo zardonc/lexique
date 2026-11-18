@@ -259,6 +259,17 @@ class CorePilotPreparationTests(unittest.TestCase):
             self.assertEqual(report["admission"]["complete_groups"], 152)
             self.assertEqual(report["admission"]["complete_fields"], 616)
             self.assertEqual(report["admission"]["remaining_groups"], 3935)
+            curated = json.loads((root / "first/curated-inputs.json").read_text(encoding="utf-8"))
+            material_limits = " ".join(curated["material_limits"])
+            admission = report["admission"]
+            self.assertIn(f"{admission['complete_senses']} selected senses in {admission['accepted_groups']} frozen groups;",
+                          material_limits)
+            self.assertIn(f"{admission['complete_groups']} everyday groups", material_limits)
+            self.assertIn(f"leaving {admission['remaining_unaccepted_groups']:,} of "
+                          f"{admission['complete_groups'] + admission['remaining_groups']:,} groups unaccepted", material_limits)
+            self.assertIn(f"{admission['complete_groups']} complete and {admission['remaining_groups']:,} incomplete groups",
+                          material_limits)
+            self.assertIn(f"All {admission['complete_fields']} fields", material_limits)
             self.assertFalse(report["learner_acceptance"]["accepted"])
             with closing(sqlite3.connect((root / "first/core.sqlite3").as_uri() + "?mode=ro", uri=True)) as connection:
                 senses = [json.loads(row[0]) for row in connection.execute("SELECT payload FROM senses ORDER BY frozen_row,sense_index")]

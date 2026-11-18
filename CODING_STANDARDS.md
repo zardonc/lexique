@@ -15,6 +15,19 @@ Ignored logs and snapshots stay in their owning worktree; a detached review
 checkout contains tracked files. Locate evidence at the supplied root and
 match its SHA and platform to the verification claim.
 
+When curated resource data dominates the diff, supply a separate patch for
+runtime code and tests alongside the full retained diff. Include structural
+preservation and source-review evidence at its owning worktree path.
+
+## Persisted values and rollback
+
+For changes to persisted shapes or allowed values, trace stored data through
+notebook lists, review cards and snapshot import/restore, including any other
+affected readers. Describe whether the previous reader accepts new records
+and whether rejecting one record fails a whole response. Record supported
+resource and application rollback paths in the PR, including reader-version
+and backup requirements.
+
 ## Database fixtures
 
 Batch bulk SQLite fixture writes in a transaction when assertions depend on
