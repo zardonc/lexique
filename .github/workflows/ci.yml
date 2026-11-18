@@ -11,7 +11,7 @@ permissions:
 jobs:
   timing:
     runs-on: macos-15-intel
-    timeout-minutes: 15
+    timeout-minutes: 30
     env:
       CARGO_BUILD_TARGET: x86_64-apple-darwin
       CARGO_PROFILE_TEST_OPT_LEVEL: '1'
@@ -25,20 +25,51 @@ jobs:
         with:
           node-version: 24
       - run: rustup show
+      - name: check probe failure propagation
+        shell: bash
+        run: |
+          if {
+            probe_status=0
+            false || probe_status=1
+            exit "$probe_status"
+          } 2>&1 | tee /dev/null; then
+            exit 1
+          fi
       - run: python -X utf8 scripts/dictionary_sample.py prepare target/desktop-dictionary-sample
       - run: python -B -X utf8 scripts/core_pilot.py prepare target/desktop-core-pilot
       - run: python -X utf8 scripts/conjugation_sample.py prepare target/desktop-conjugation-v6-stats
       - run: python -B -X utf8 scripts/frequency_sample.py target/desktop-frequency-v1
       - run: cargo test --locked -p lexique-storage --test preflight_24 --no-run
       - name: repeat the lock-budget test
+        shell: bash
         run: |
           mkdir -p target/ci-native-timing
-          for attempt in {1..30}; do
-            node scripts/test-rust.mjs || exit $?
-          done 2>&1 | tee target/ci-native-timing/probe.log
+          {
+            probe_status=0
+            for probe_attempt in {1..100}; do
+              printf '[DEBUG-ci174175] attempt=%s\n' "$probe_attempt"
+              node scripts/test-rust.mjs || probe_status=1
+            done
+            exit "$probe_status"
+          } 2>&1 | tee target/ci-native-timing/probe.log
+      - name: repeat with main-connection SQLite sync disabled
+        if: always()
+        shell: bash
+        env:
+          LEXIQUE_DIAGNOSTIC_NO_SYNC: '1'
+        run: |
+          mkdir -p target/ci-native-timing
+          {
+            probe_status=0
+            for probe_attempt in {1..100}; do
+              printf '[DEBUG-ci174175] attempt=%s\n' "$probe_attempt"
+              node scripts/test-rust.mjs || probe_status=1
+            done
+            exit "$probe_status"
+          } 2>&1 | tee target/ci-native-timing/no-sync-probe.log
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: ci174-native-timing
-          path: target/ci-native-timing/probe.log
+          path: target/ci-native-timing/*.log
           if-no-files-found: ignore

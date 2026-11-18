@@ -83,6 +83,16 @@ fn database(count: i64) -> (PathBuf, Connection) {
     let path = root.join("test.sqlite3");
     let mut connection = Connection::open(&path).unwrap();
     lexique_storage::initialize(&connection).unwrap();
+    // [DEBUG-ci174175] Disable sync only for the synthetic main-connection control.
+    if std::env::var_os("LEXIQUE_DIAGNOSTIC_NO_SYNC").is_some() {
+        connection
+            .pragma_update(None, "synchronous", "OFF")
+            .unwrap();
+        let synchronous: i64 = connection
+            .query_row("PRAGMA synchronous", [], |row| row.get(0))
+            .unwrap();
+        assert_eq!(synchronous, 0);
+    }
     let snapshot = serde_json::json!({"reference":{"dictionary":"synthetic","lookup_key":"synthetic","version":"1","attribution":"synthetic","license":"MIT","source_url":"https://example.org","license_url":"https://example.org","sha256":"a".repeat(64)},"digest":[]}).to_string();
     let tx = connection.transaction().unwrap();
     for id in 1..=count {
