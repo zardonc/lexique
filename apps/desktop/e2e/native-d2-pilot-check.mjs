@@ -11,7 +11,7 @@ import { compareLearning, fixtureSql, inspectPackage, readState, seedAudio } fro
 const [scenario, resources, binary, conjugation, frequency, curationPath, destinationPath, input] = process.argv.slice(2);
 assert.ok([scenario, resources, binary, conjugation, frequency, curationPath, destinationPath].every(Boolean),
   'Expected scenario, package, binary, conjugation, frequency, reviewed curation and new destination; backup/profile scenarios also take an input');
-assert.ok(['pilot', 'review', 'no-speech', 'catalogue', 'missing', 'corrupt', 'future', 'unsupported', 'newer', 'upgrade', 'limit', 'export', 'restore', 'legacy', 'reject'].includes(scenario));
+assert.ok(['pilot', 'batch', 'review', 'no-speech', 'catalogue', 'missing', 'corrupt', 'future', 'unsupported', 'newer', 'upgrade', 'limit', 'export', 'restore', 'legacy', 'reject'].includes(scenario));
 const curation = JSON.parse(await readFile(resolve(curationPath), 'utf8'));
 const membership = [[1, 'être', 'AUX'], [2, 'être', 'NOM'], [3, 'être', 'VER'], [4, 'avoir', 'AUX'], [5, 'avoir', 'VER'],
   [6, 'je', 'PRO:per'], [7, 'de', 'PRE'], [8, 'ne', 'ADV'], [9, 'pas', 'ADV'], [10, 'pas', 'NOM'],
@@ -303,6 +303,31 @@ async function pilot() {
   evidence.checks.push({ check: '50 batch-83 groups / 200 fields, including 49 everyday groups and the approved golf exception; row 87 unresolved; 154 total groups / 616 fields; trusted provider, spelling bindings, retry, duplicate, notes, examples, FSRS and normal restart', status: 'passed' });
   evidence.checks.push({ check: 'Batch bon adjective/adverb/noun/interjection saved fields and provenance match audited content after normal restart; bon, petit and par restrictions remain readable; ONO has English, French and Chinese labels', status: 'passed' });
   evidence.checks.push({ check: 'mon/ADJ:pos lookup and saved fields remain readable with English, French and Chinese subclass labels', status: 'passed' });
+}
+
+async function contentBatch() {
+  const issue = Number(input);
+  assert.ok(Number.isInteger(issue) && issue >= 84 && issue <= 89, 'Expected batch issue 84–89');
+  const firstRow = 151 + (issue - 84) * 50;
+  const groups = curation.groups.filter((group) => group.frozen_row >= firstRow && group.frozen_row < firstRow + 50);
+  assert.equal(groups.length, 50);
+  const saved = [];
+  for (const [index, key] of [...new Set(groups.map((group) => group.headword))].entries()) {
+    const result = await save(key, `batch-${issue}-${index}`);
+    assert.equal(result.record.reference.version, curation.content_version);
+    saved.push(result);
+  }
+  await query(saved[0].record.headword);
+  await fields(page.locator('.dictionary-entry'), saved[0].record.digest.map((item) => item.core));
+  await page.screenshot({ path: join(destination, `batch-${issue}-lookup.png`), fullPage: true });
+  const before = readState(destination);
+  await fixture.stop(true);
+  await start();
+  for (const { record } of saved) assert.deepEqual(await invoke('vocabulary_find', { headword: record.headword }), record);
+  compareLearning(readState(destination), before);
+  await openRecord(saved[0].record);
+  await page.screenshot({ path: join(destination, `batch-${issue}-reopened.png`), fullPage: true });
+  evidence.checks.push({ check: `Batch #${issue}: all 50 frozen groups / 200 fields match audited content; ${saved.length} headwords saved and reopened with unchanged provenance and learning state`, status: 'passed' });
 }
 
 async function review() {
@@ -658,7 +683,7 @@ async function replacement() {
 }
 
 try {
-  if (['no-speech', 'legacy'].includes(scenario)) {
+  if (['no-speech', 'batch', 'legacy'].includes(scenario)) {
     const present = await stat(model).catch((error) => { if (error.code === 'ENOENT') return null; throw error; });
     if (present) await rename(model, model + '.unavailable');
     evidence.speechModel = 'absent in isolated package';
@@ -666,6 +691,7 @@ try {
   if (['newer', 'upgrade', 'limit', 'unsupported'].includes(scenario)) await copiedProfile();
   await start();
   if (['pilot', 'no-speech'].includes(scenario)) await pilot();
+  else if (scenario === 'batch') await contentBatch();
   else if (scenario === 'review') await review();
   else if (scenario === 'catalogue') await catalogue();
   else if (['missing', 'corrupt', 'future'].includes(scenario)) await lifecycle();
