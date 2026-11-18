@@ -2,11 +2,13 @@
 
 All three PR heads passed 22 checks before merging on 2026-11-18.
 
-| PR | Verified head | Merge commit | Checks |
-| --- | --- | --- | ---: |
-| [#174](https://github.com/zardonc/lexique/pull/174) | [bfab389](https://github.com/zardonc/lexique/commit/bfab389407d736af8ab501646d5ee8c2bfdc6553) | [04e3ec6](https://github.com/zardonc/lexique/commit/04e3ec60a2ba4b88ca4f7cf233833032e37ee88b) | 22/22 |
-| [#175](https://github.com/zardonc/lexique/pull/175) | [60af1f4](https://github.com/zardonc/lexique/commit/60af1f4bf1de7637eebe89f132efa7676adff291) | [19db064](https://github.com/zardonc/lexique/commit/19db0645f6bfc1f92d1aaed59ea9a33bf2e841bd) | 22/22 |
-| [#176](https://github.com/zardonc/lexique/pull/176) | [15df003](https://github.com/zardonc/lexique/commit/15df003e3b5408af36f69acf01936e03343f1bdf) | [42c7205](https://github.com/zardonc/lexique/commit/42c720556fd1195cca39ba704761877d1c0df48a) | 22/22 |
+| PR | Verified head | Merge commit | Successful runs | Checks |
+| --- | --- | --- | --- | ---: |
+| [#174](https://github.com/zardonc/lexique/pull/174) | [bfab389](https://github.com/zardonc/lexique/commit/bfab389407d736af8ab501646d5ee8c2bfdc6553) | [04e3ec6](https://github.com/zardonc/lexique/commit/04e3ec60a2ba4b88ca4f7cf233833032e37ee88b) | [push](https://github.com/zardonc/lexique/actions/runs/44249142896), [pull request](https://github.com/zardonc/lexique/actions/runs/44249205804) | 22/22 |
+| [#175](https://github.com/zardonc/lexique/pull/175) | [60af1f4](https://github.com/zardonc/lexique/commit/60af1f4bf1de7637eebe89f132efa7676adff291) | [19db064](https://github.com/zardonc/lexique/commit/19db0645f6bfc1f92d1aaed59ea9a33bf2e841bd) | [push](https://github.com/zardonc/lexique/actions/runs/44254947969), [pull request](https://github.com/zardonc/lexique/actions/runs/44254952723) | 22/22 |
+| [#176](https://github.com/zardonc/lexique/pull/176) | [15df003](https://github.com/zardonc/lexique/commit/15df003e3b5408af36f69acf01936e03343f1bdf) | [42c7205](https://github.com/zardonc/lexique/commit/42c720556fd1195cca39ba704761877d1c0df48a) | [push](https://github.com/zardonc/lexique/actions/runs/44351931557), [pull request](https://github.com/zardonc/lexique/actions/runs/44352460139) | 22/22 |
+
+Each head's total covers the 11-job push run and the 11-job pull-request run.
 
 The combined merge tree, `42c720556fd1195cca39ba704761877d1c0df48a`, passed all 11 jobs in its [main CI run](https://github.com/zardonc/lexique/actions/runs/44377907700).
 
