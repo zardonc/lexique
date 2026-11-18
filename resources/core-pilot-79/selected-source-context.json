@@ -3875,26 +3875,26 @@
           "sense_id": "sur-adjective-sour-taste",
           "field": "chinese",
           "line_1_based": 334
-      },
-      {
-        "sense_id": "sur-preposition-supported-position",
-        "field": "french_definition",
-        "line_1_based": 19
-      },
-      {
-        "sense_id": "sur-preposition-supported-position",
-        "field": "ipa",
-        "line_1_based": 18
-      },
-      {
-        "sense_id": "sur-preposition-supported-position",
-        "field": "english",
-        "line_1_based": 19
-      },
-      {
-        "sense_id": "sur-preposition-supported-position",
-        "field": "chinese",
-        "line_1_based": 19
+        },
+        {
+          "sense_id": "sur-preposition-supported-position",
+          "field": "french_definition",
+          "line_1_based": 19
+        },
+        {
+          "sense_id": "sur-preposition-supported-position",
+          "field": "ipa",
+          "line_1_based": 18
+        },
+        {
+          "sense_id": "sur-preposition-supported-position",
+          "field": "english",
+          "line_1_based": 19
+        },
+        {
+          "sense_id": "sur-preposition-supported-position",
+          "field": "chinese",
+          "line_1_based": 19
         }
       ],
       "source_page_notices_to_record": [
@@ -5060,6 +5060,1937 @@
       "source_page_notices_to_record": [],
       "scope": "Only independently accepted selected definition/IPA adaptations and eligible supporting spans; unselected dictionary bodies, quoted external prose, audio and images are excluded.",
       "rights_eligibility_status": "passed_at_selected_text_boundary"
+    },
+    {
+      "id": "b89_fr_5315",
+      "title": "sang",
+      "pageid": 5315,
+      "current_content_revid": 39765267,
+      "timestamp": "2026-08-03T05:07:04Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=sang&oldid=39765267",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=sang&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "source_frame": "Latest public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "status": "pending_independent_audit",
+      "selected_locations": [
+        9,
+        11
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 519,
+          "markers": [
+            "{{Import:DAF8}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935)",
+          "eligible_for_bundled_text": false
+        },
+        {
+          "line_1_based": 520,
+          "markers": [
+            "{{R:Littré}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": null,
+          "eligible_for_bundled_text": false
+        },
+        {
+          "line_1_based": 521,
+          "markers": [
+            "{{R:TLFi}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": null,
+          "eligible_for_bundled_text": false
+        }
+      ],
+      "rights_eligibility_status": "pending_selected_span_audit",
+      "scope": "Only the selected definition/IPA and explicitly listed contributor support spans are candidates. Article-level imports need selected-span verification. No whole-page, external dictionary, quotation, image or audio admission.",
+      "selected_source_capture": {
+        "title": "sang",
+        "pageid": 5315,
+        "revid": 39765267,
+        "timestamp": "2026-08-03T05:07:04Z",
+        "last_editor": "WikiLucas00",
+        "capture": "first_party_api",
+        "api_path": "target\\issue-89\\sources\\sang.api.json",
+        "raw_path": "target\\issue-89\\sources\\sang.wiki",
+        "fixed_url": "https://fr.wiktionary.org/w/index.php?title=sang&oldid=39765267",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=sang&action=history"
+      }
+    },
+    {
+      "id": "b89_fr_59077",
+      "title": "place",
+      "pageid": 59077,
+      "current_content_revid": 39771477,
+      "timestamp": "2026-08-03T10:44:02Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=place&oldid=39771477",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=place&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "source_frame": "Latest public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "status": "pending_independent_audit",
+      "selected_locations": [
+        11,
+        12
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 391,
+          "markers": [
+            "{{Import:DAF8}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935)",
+          "eligible_for_bundled_text": false
+        }
+      ],
+      "rights_eligibility_status": "pending_selected_span_audit",
+      "scope": "Only the selected definition/IPA and explicitly listed contributor support spans are candidates. Article-level imports need selected-span verification. No whole-page, external dictionary, quotation, image or audio admission.",
+      "selected_source_capture": {
+        "title": "place",
+        "pageid": 59077,
+        "revid": 39771477,
+        "timestamp": "2026-08-03T10:44:02Z",
+        "last_editor": "WikiLucas00",
+        "capture": "first_party_api",
+        "api_path": "target\\issue-89\\sources\\place.api.json",
+        "raw_path": "target\\issue-89\\sources\\place.wiki",
+        "fixed_url": "https://fr.wiktionary.org/w/index.php?title=place&oldid=39771477",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=place&action=history"
+      }
+    },
+    {
+      "id": "b89_fr_42745",
+      "title": "espérer",
+      "pageid": 42745,
+      "current_content_revid": 39770953,
+      "timestamp": "2026-08-03T10:30:51Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=esp%C3%A9rer&oldid=39770953",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=esp%C3%A9rer&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "source_frame": "Latest public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "status": "pending_independent_audit",
+      "selected_locations": [
+        9,
+        26
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 138,
+          "markers": [
+            "{{R:TLFi}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": null,
+          "eligible_for_bundled_text": false
+        }
+      ],
+      "rights_eligibility_status": "pending_selected_span_audit",
+      "scope": "Only the selected definition/IPA and explicitly listed contributor support spans are candidates. Article-level imports need selected-span verification. No whole-page, external dictionary, quotation, image or audio admission.",
+      "selected_source_capture": {
+        "title": "espérer",
+        "pageid": 42745,
+        "revid": 39770953,
+        "timestamp": "2026-08-03T10:30:51Z",
+        "last_editor": "WikiLucas00",
+        "capture": "first_party_api",
+        "api_path": "target\\issue-89\\sources\\espérer.api.json",
+        "raw_path": "target\\issue-89\\sources\\espérer.wiki",
+        "fixed_url": "https://fr.wiktionary.org/w/index.php?title=esp%C3%A9rer&oldid=39770953",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=esp%C3%A9rer&action=history"
+      }
+    },
+    {
+      "id": "b89_fr_36766",
+      "title": "gros",
+      "pageid": 36766,
+      "current_content_revid": 39771576,
+      "timestamp": "2026-08-03T10:46:31Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=gros&oldid=39771576",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=gros&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "source_frame": "Latest public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "status": "pending_independent_audit",
+      "selected_locations": [
+        16,
+        17,
+        523,
+        524
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 684,
+          "markers": [
+            "{{Import:DAF8}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935)",
+          "eligible_for_bundled_text": false
+        },
+        {
+          "line_1_based": 685,
+          "markers": [
+            "{{R:Littré}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": null,
+          "eligible_for_bundled_text": false
+        }
+      ],
+      "rights_eligibility_status": "pending_selected_span_audit",
+      "scope": "Only the selected definition/IPA and explicitly listed contributor support spans are candidates. Article-level imports need selected-span verification. No whole-page, external dictionary, quotation, image or audio admission.",
+      "selected_source_capture": {
+        "title": "gros",
+        "pageid": 36766,
+        "revid": 39771576,
+        "timestamp": "2026-08-03T10:46:31Z",
+        "last_editor": "WikiLucas00",
+        "capture": "first_party_api",
+        "api_path": "target\\issue-89\\sources\\gros.api.json",
+        "raw_path": "target\\issue-89\\sources\\gros.wiki",
+        "fixed_url": "https://fr.wiktionary.org/w/index.php?title=gros&oldid=39771576",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=gros&action=history"
+      }
+    },
+    {
+      "id": "b89_fr_157482",
+      "title": "désoler",
+      "pageid": 157482,
+      "current_content_revid": 37055393,
+      "timestamp": "2025-01-24T01:32:07Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=d%C3%A9soler&oldid=37055393",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=d%C3%A9soler&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "source_frame": "Latest public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "status": "pending_independent_audit",
+      "selected_locations": [
+        6,
+        23
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 78,
+          "markers": [
+            "{{Import:DAF8}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935)",
+          "eligible_for_bundled_text": false
+        }
+      ],
+      "rights_eligibility_status": "pending_selected_span_audit",
+      "scope": "Only the selected definition/IPA and explicitly listed contributor support spans are candidates. Article-level imports need selected-span verification. No whole-page, external dictionary, quotation, image or audio admission.",
+      "selected_source_capture": {
+        "title": "désoler",
+        "pageid": 157482,
+        "revid": 37055393,
+        "timestamp": "2025-01-24T01:32:07Z",
+        "last_editor": "Snawei",
+        "capture": "first_party_api",
+        "api_path": "target\\issue-89\\sources\\désoler.api.json",
+        "raw_path": "target\\issue-89\\sources\\désoler.wiki",
+        "fixed_url": "https://fr.wiktionary.org/w/index.php?title=d%C3%A9soler&oldid=37055393",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=d%C3%A9soler&action=history"
+      }
+    },
+    {
+      "id": "b89_fr_160506",
+      "title": "eux",
+      "pageid": 160506,
+      "current_content_revid": 39773048,
+      "timestamp": "2026-08-03T13:39:19Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=eux&oldid=39773048",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=eux&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "source_frame": "Latest public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "status": "pending_independent_audit",
+      "selected_locations": [
+        9,
+        10
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 80,
+          "markers": [
+            "{{Import:DAF8}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935)",
+          "eligible_for_bundled_text": false
+        }
+      ],
+      "rights_eligibility_status": "pending_selected_span_audit",
+      "scope": "Only the selected definition/IPA and explicitly listed contributor support spans are candidates. Article-level imports need selected-span verification. No whole-page, external dictionary, quotation, image or audio admission.",
+      "selected_source_capture": {
+        "title": "eux",
+        "pageid": 160506,
+        "revid": 39773048,
+        "timestamp": "2026-08-03T13:39:19Z",
+        "last_editor": "WikiLucas00",
+        "capture": "first_party_api",
+        "api_path": "target\\issue-89\\sources\\eux.api.json",
+        "raw_path": "target\\issue-89\\sources\\eux.wiki",
+        "fixed_url": "https://fr.wiktionary.org/w/index.php?title=eux&oldid=39773048",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=eux&action=history"
+      }
+    },
+    {
+      "id": "b89_fr_175132",
+      "title": "retrouver",
+      "pageid": 175132,
+      "current_content_revid": 39771515,
+      "timestamp": "2026-08-03T10:45:03Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=retrouver&oldid=39771515",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=retrouver&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "source_frame": "Latest public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "status": "pending_independent_audit",
+      "selected_locations": [
+        8,
+        27
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 132,
+          "markers": [
+            "{{Import:DAF8}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935)",
+          "eligible_for_bundled_text": false
+        }
+      ],
+      "rights_eligibility_status": "pending_selected_span_audit",
+      "scope": "Only the selected definition/IPA and explicitly listed contributor support spans are candidates. Article-level imports need selected-span verification. No whole-page, external dictionary, quotation, image or audio admission.",
+      "selected_source_capture": {
+        "title": "retrouver",
+        "pageid": 175132,
+        "revid": 39771515,
+        "timestamp": "2026-08-03T10:45:03Z",
+        "last_editor": "WikiLucas00",
+        "capture": "first_party_api",
+        "api_path": "target\\issue-89\\sources\\retrouver.api.json",
+        "raw_path": "target\\issue-89\\sources\\retrouver.wiki",
+        "fixed_url": "https://fr.wiktionary.org/w/index.php?title=retrouver&oldid=39771515",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=retrouver&action=history"
+      }
+    },
+    {
+      "id": "b89_fr_11349",
+      "title": "ville",
+      "pageid": 11349,
+      "current_content_revid": 39818820,
+      "timestamp": "2026-08-20T10:37:34Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=ville&oldid=39818820",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=ville&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "source_frame": "Latest public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "status": "pending_independent_audit",
+      "selected_locations": [
+        11,
+        12
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 378,
+          "markers": [
+            "{{R:DAF8}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": null,
+          "eligible_for_bundled_text": false
+        }
+      ],
+      "rights_eligibility_status": "pending_selected_span_audit",
+      "scope": "Only the selected definition/IPA and explicitly listed contributor support spans are candidates. Article-level imports need selected-span verification. No whole-page, external dictionary, quotation, image or audio admission.",
+      "selected_source_capture": {
+        "title": "ville",
+        "pageid": 11349,
+        "revid": 39818820,
+        "timestamp": "2026-08-20T10:37:34Z",
+        "last_editor": "Richaringan",
+        "capture": "first_party_api",
+        "api_path": "target\\issue-89\\sources\\ville.api.json",
+        "raw_path": "target\\issue-89\\sources\\ville.wiki",
+        "fixed_url": "https://fr.wiktionary.org/w/index.php?title=ville&oldid=39818820",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=ville&action=history"
+      }
+    },
+    {
+      "id": "b89_fr_274",
+      "title": "terre",
+      "pageid": 274,
+      "current_content_revid": 39848327,
+      "timestamp": "2026-09-01T21:17:36Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=terre&oldid=39848327",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=terre&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "source_frame": "Latest public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "status": "pending_independent_audit",
+      "selected_locations": [
+        10,
+        11
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 715,
+          "markers": [
+            "{{R:DAF8}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": null,
+          "eligible_for_bundled_text": false
+        }
+      ],
+      "rights_eligibility_status": "pending_selected_span_audit",
+      "scope": "Only the selected definition/IPA and explicitly listed contributor support spans are candidates. Article-level imports need selected-span verification. No whole-page, external dictionary, quotation, image or audio admission.",
+      "selected_source_capture": {
+        "title": "terre",
+        "pageid": 274,
+        "revid": 39848327,
+        "timestamp": "2026-09-01T21:17:36Z",
+        "last_editor": "Wikiki2022",
+        "capture": "first_party_api",
+        "api_path": "target\\issue-89\\sources\\terre.api.json",
+        "raw_path": "target\\issue-89\\sources\\terre.wiki",
+        "fixed_url": "https://fr.wiktionary.org/w/index.php?title=terre&oldid=39848327",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=terre&action=history"
+      }
+    },
+    {
+      "id": "b89_fr_9689",
+      "title": "gagner",
+      "pageid": 9689,
+      "current_content_revid": 39771236,
+      "timestamp": "2026-08-03T10:37:58Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=gagner&oldid=39771236",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=gagner&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "source_frame": "Latest public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "status": "pending_independent_audit",
+      "selected_locations": [
+        7,
+        8
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 429,
+          "markers": [
+            "{{R:DAF8}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": null,
+          "eligible_for_bundled_text": false
+        },
+        {
+          "line_1_based": 430,
+          "markers": [
+            "{{R:TLFi}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": null,
+          "eligible_for_bundled_text": false
+        }
+      ],
+      "rights_eligibility_status": "pending_selected_span_audit",
+      "scope": "Only the selected definition/IPA and explicitly listed contributor support spans are candidates. Article-level imports need selected-span verification. No whole-page, external dictionary, quotation, image or audio admission.",
+      "selected_source_capture": {
+        "title": "gagner",
+        "pageid": 9689,
+        "revid": 39771236,
+        "timestamp": "2026-08-03T10:37:58Z",
+        "last_editor": "WikiLucas00",
+        "capture": "first_party_api",
+        "api_path": "target\\issue-89\\sources\\gagner.api.json",
+        "raw_path": "target\\issue-89\\sources\\gagner.wiki",
+        "fixed_url": "https://fr.wiktionary.org/w/index.php?title=gagner&oldid=39771236",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=gagner&action=history"
+      }
+    },
+    {
+      "id": "b89_fr_46",
+      "title": "semaine",
+      "pageid": 46,
+      "current_content_revid": 39862519,
+      "timestamp": "2026-09-06T09:33:05Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=semaine&oldid=39862519",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=semaine&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "source_frame": "Latest public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "status": "pending_independent_audit",
+      "selected_locations": [
+        7,
+        8
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 3,
+          "markers": [
+            "{{R:DMF}}",
+            "{{R:DÉCT}}",
+            "{{R:TLFi}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": null,
+          "eligible_for_bundled_text": false
+        },
+        {
+          "line_1_based": 248,
+          "markers": [
+            "{{Import:DAF8}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935)",
+          "eligible_for_bundled_text": false
+        }
+      ],
+      "rights_eligibility_status": "pending_selected_span_audit",
+      "scope": "Only the selected definition/IPA and explicitly listed contributor support spans are candidates. Article-level imports need selected-span verification. No whole-page, external dictionary, quotation, image or audio admission.",
+      "selected_source_capture": {
+        "title": "semaine",
+        "pageid": 46,
+        "revid": 39862519,
+        "timestamp": "2026-09-06T09:33:05Z",
+        "capture": "byte_identical_research_api_copy",
+        "original_api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-resource-research\\target\\d2-research\\dictionary-parallel-frequency-selection-20261115\\nouns-adjectives\\semaine-fixed-api.json",
+        "api_path": "target\\issue-89\\sources\\semaine.api.json",
+        "raw_path": "target\\issue-89\\sources\\semaine.wiki",
+        "fixed_url": "https://fr.wiktionary.org/w/index.php?title=semaine&oldid=39862519",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=semaine&action=history"
+      }
+    },
+    {
+      "id": "b89_fr_11100",
+      "title": "acheter",
+      "pageid": 11100,
+      "current_content_revid": 39847034,
+      "timestamp": "2026-09-01T19:24:50Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=acheter&oldid=39847034",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=acheter&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "source_frame": "Latest public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "status": "pending_independent_audit",
+      "selected_locations": [
+        6,
+        7
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 265,
+          "markers": [
+            "{{Import:DAF8}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935)",
+          "eligible_for_bundled_text": false
+        }
+      ],
+      "rights_eligibility_status": "pending_selected_span_audit",
+      "scope": "Only the selected definition/IPA and explicitly listed contributor support spans are candidates. Article-level imports need selected-span verification. No whole-page, external dictionary, quotation, image or audio admission.",
+      "selected_source_capture": {
+        "title": "acheter",
+        "pageid": 11100,
+        "revid": 39847034,
+        "timestamp": "2026-09-01T19:24:50Z",
+        "capture": "byte_identical_research_api_copy",
+        "original_api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-resource-research\\target\\d2-research\\dictionary-parallel-usage-selection-20261115\\common-verbs\\acheter-fixed-api.json",
+        "api_path": "target\\issue-89\\sources\\acheter.api.json",
+        "raw_path": "target\\issue-89\\sources\\acheter.wiki",
+        "fixed_url": "https://fr.wiktionary.org/w/index.php?title=acheter&oldid=39847034",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=acheter&action=history"
+      }
+    },
+    {
+      "id": "b89_fr_166843",
+      "title": "longtemps",
+      "pageid": 166843,
+      "current_content_revid": 39772427,
+      "timestamp": "2026-08-03T11:09:31Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=longtemps&oldid=39772427",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=longtemps&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "source_frame": "Latest public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "status": "pending_independent_audit",
+      "selected_locations": [
+        8,
+        9
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 122,
+          "markers": [
+            "{{Import:DAF8}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935)",
+          "eligible_for_bundled_text": false
+        }
+      ],
+      "rights_eligibility_status": "pending_selected_span_audit",
+      "scope": "Only the selected definition/IPA and explicitly listed contributor support spans are candidates. Article-level imports need selected-span verification. No whole-page, external dictionary, quotation, image or audio admission.",
+      "selected_source_capture": {
+        "title": "longtemps",
+        "pageid": 166843,
+        "revid": 39772427,
+        "timestamp": "2026-08-03T11:09:31Z",
+        "capture": "byte_identical_research_api_copy",
+        "original_api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-resource-research\\target\\d2-research\\dictionary-parallel-common-selection-20261115\\adverbs-connectives\\longtemps-fixed-api.json",
+        "api_path": "target\\issue-89\\sources\\longtemps.api.json",
+        "raw_path": "target\\issue-89\\sources\\longtemps.wiki",
+        "fixed_url": "https://fr.wiktionary.org/w/index.php?title=longtemps&oldid=39772427",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=longtemps&action=history"
+      }
+    },
+    {
+      "id": "b89_fr_162459",
+      "title": "gars",
+      "pageid": 162459,
+      "current_content_revid": 39518963,
+      "timestamp": "2026-05-18T12:42:05Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=gars&oldid=39518963",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=gars&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "source_frame": "Latest public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "status": "pending_independent_audit",
+      "selected_locations": [
+        10,
+        11
+      ],
+      "source_page_notices_to_record": [],
+      "rights_eligibility_status": "pending_selected_span_audit",
+      "scope": "Only the selected definition/IPA and explicitly listed contributor support spans are candidates. Article-level imports need selected-span verification. No whole-page, external dictionary, quotation, image or audio admission.",
+      "selected_source_capture": {
+        "title": "gars",
+        "pageid": 162459,
+        "revid": 39518963,
+        "timestamp": "2026-05-18T12:42:05Z",
+        "capture": "byte_identical_research_api_copy",
+        "original_api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-resource-research\\target\\d2-research\\dictionary-parallel-frequency-selection-20261115\\nouns-adjectives\\gars-fixed-api.json",
+        "api_path": "target\\issue-89\\sources\\gars.api.json",
+        "raw_path": "target\\issue-89\\sources\\gars.wiki",
+        "fixed_url": "https://fr.wiktionary.org/w/index.php?title=gars&oldid=39518963",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=gars&action=history"
+      }
+    },
+    {
+      "id": "b89_fr_152763",
+      "title": "chambre",
+      "pageid": 152763,
+      "current_content_revid": 39909790,
+      "timestamp": "2026-09-29T15:16:30Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=chambre&oldid=39909790",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=chambre&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "source_frame": "Latest public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "status": "pending_independent_audit",
+      "selected_locations": [
+        9,
+        11
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 5,
+          "markers": [
+            "{{R:DMF}}",
+            "{{R:DÉCT}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": null,
+          "eligible_for_bundled_text": false
+        },
+        {
+          "line_1_based": 409,
+          "markers": [
+            "{{Import:DAF8}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935)",
+          "eligible_for_bundled_text": false
+        }
+      ],
+      "rights_eligibility_status": "pending_selected_span_audit",
+      "scope": "Only the selected definition/IPA and explicitly listed contributor support spans are candidates. Article-level imports need selected-span verification. No whole-page, external dictionary, quotation, image or audio admission.",
+      "selected_source_capture": {
+        "title": "chambre",
+        "pageid": 152763,
+        "revid": 39909790,
+        "timestamp": "2026-09-29T15:16:30Z",
+        "capture": "byte_identical_research_api_copy",
+        "original_api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-resource-research\\target\\d2-research\\dictionary-parallel-frequency-selection-20261115\\nouns-adjectives\\chambre-fixed-api.json",
+        "api_path": "target\\issue-89\\sources\\chambre.api.json",
+        "raw_path": "target\\issue-89\\sources\\chambre.wiki",
+        "fixed_url": "https://fr.wiktionary.org/w/index.php?title=chambre&oldid=39909790",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=chambre&action=history"
+      }
+    },
+    {
+      "id": "b89_fr_163538",
+      "title": "hé",
+      "pageid": 163538,
+      "current_content_revid": 39752629,
+      "timestamp": "2026-08-02T18:56:08Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=h%C3%A9&oldid=39752629",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=h%C3%A9&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "source_frame": "Latest public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "status": "pending_independent_audit",
+      "selected_locations": [
+        10,
+        11
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 74,
+          "markers": [
+            "{{R:DAF8}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": null,
+          "eligible_for_bundled_text": false
+        },
+        {
+          "line_1_based": 77,
+          "markers": [
+            "{{Import:DAF8}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935)",
+          "eligible_for_bundled_text": false
+        }
+      ],
+      "rights_eligibility_status": "pending_selected_span_audit",
+      "scope": "Only the selected definition/IPA and explicitly listed contributor support spans are candidates. Article-level imports need selected-span verification. No whole-page, external dictionary, quotation, image or audio admission.",
+      "selected_source_capture": {
+        "title": "hé",
+        "pageid": 163538,
+        "revid": 39752629,
+        "timestamp": "2026-08-02T18:56:08Z",
+        "last_editor": "WikiLucas00",
+        "capture": "first_party_api",
+        "api_path": "target\\issue-89\\sources\\hé.api.json",
+        "raw_path": "target\\issue-89\\sources\\hé.wiki",
+        "fixed_url": "https://fr.wiktionary.org/w/index.php?title=h%C3%A9&oldid=39752629",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=h%C3%A9&action=history"
+      }
+    },
+    {
+      "id": "b89_fr_155776",
+      "title": "côté",
+      "pageid": 155776,
+      "current_content_revid": 39827549,
+      "timestamp": "2026-08-24T12:28:50Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=c%C3%B4t%C3%A9&oldid=39827549",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=c%C3%B4t%C3%A9&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "source_frame": "Latest public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "status": "pending_independent_audit",
+      "selected_locations": [
+        8,
+        11
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 240,
+          "markers": [
+            "{{R:DAF8}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": null,
+          "eligible_for_bundled_text": false
+        }
+      ],
+      "rights_eligibility_status": "pending_selected_span_audit",
+      "scope": "Only the selected definition/IPA and explicitly listed contributor support spans are candidates. Article-level imports need selected-span verification. No whole-page, external dictionary, quotation, image or audio admission.",
+      "selected_source_capture": {
+        "title": "côté",
+        "pageid": 155776,
+        "revid": 39827549,
+        "timestamp": "2026-08-24T12:28:50Z",
+        "last_editor": "Beaurenard",
+        "capture": "first_party_api",
+        "api_path": "target\\issue-89\\sources\\côté.api.json",
+        "raw_path": "target\\issue-89\\sources\\côté.wiki",
+        "fixed_url": "https://fr.wiktionary.org/w/index.php?title=c%C3%B4t%C3%A9&oldid=39827549",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=c%C3%B4t%C3%A9&action=history"
+      }
+    },
+    {
+      "id": "b89_fr_362",
+      "title": "ensemble",
+      "pageid": 362,
+      "current_content_revid": 39911454,
+      "timestamp": "2026-09-30T18:26:42Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=ensemble&oldid=39911454",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=ensemble&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "source_frame": "Latest public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "status": "pending_independent_audit",
+      "selected_locations": [
+        9,
+        10,
+        156,
+        157
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 355,
+          "markers": [
+            "{{R:DAF8}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": null,
+          "eligible_for_bundled_text": false
+        },
+        {
+          "line_1_based": 356,
+          "markers": [
+            "{{R:TLFi}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": null,
+          "eligible_for_bundled_text": false
+        }
+      ],
+      "rights_eligibility_status": "pending_selected_span_audit",
+      "scope": "Only the selected definition/IPA and explicitly listed contributor support spans are candidates. Article-level imports need selected-span verification. No whole-page, external dictionary, quotation, image or audio admission.",
+      "selected_source_capture": {
+        "title": "ensemble",
+        "pageid": 362,
+        "revid": 39911454,
+        "timestamp": "2026-09-30T18:26:42Z",
+        "capture": "byte_identical_research_api_copy",
+        "original_api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-resource-research\\target\\d2-research\\dictionary-parallel-everyday-selection-20261115\\adverbs-connectives\\ensemble-fixed-api.json",
+        "api_path": "target\\issue-89\\sources\\ensemble.api.json",
+        "raw_path": "target\\issue-89\\sources\\ensemble.wiki",
+        "fixed_url": "https://fr.wiktionary.org/w/index.php?title=ensemble&oldid=39911454",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=ensemble&action=history"
+      }
+    },
+    {
+      "id": "b89_fr_173903",
+      "title": "rappeler",
+      "pageid": 173903,
+      "current_content_revid": 39773210,
+      "timestamp": "2026-08-03T13:43:31Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=rappeler&oldid=39773210",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=rappeler&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "source_frame": "Latest public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "status": "pending_independent_audit",
+      "selected_locations": [
+        6,
+        7
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 192,
+          "markers": [
+            "{{Import:DAF8}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935)",
+          "eligible_for_bundled_text": false
+        }
+      ],
+      "rights_eligibility_status": "pending_selected_span_audit",
+      "scope": "Only the selected definition/IPA and explicitly listed contributor support spans are candidates. Article-level imports need selected-span verification. No whole-page, external dictionary, quotation, image or audio admission.",
+      "selected_source_capture": {
+        "title": "rappeler",
+        "pageid": 173903,
+        "revid": 39773210,
+        "timestamp": "2026-08-03T13:43:31Z",
+        "capture": "byte_identical_research_api_copy",
+        "original_api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-resource-research\\target\\d2-research\\dictionary-parallel-usage-selection-20261115\\common-verbs\\rappeler-fixed-api.json",
+        "api_path": "target\\issue-89\\sources\\rappeler.api.json",
+        "raw_path": "target\\issue-89\\sources\\rappeler.wiki",
+        "fixed_url": "https://fr.wiktionary.org/w/index.php?title=rappeler&oldid=39773210",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=rappeler&action=history"
+      }
+    },
+    {
+      "id": "b89_fr_9056",
+      "title": "fort",
+      "pageid": 9056,
+      "current_content_revid": 39827775,
+      "timestamp": "2026-08-24T14:41:06Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=fort&oldid=39827775",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=fort&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "source_frame": "Latest public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "status": "pending_independent_audit",
+      "selected_locations": [
+        354,
+        355
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 477,
+          "markers": [
+            "{{R:Littré}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": null,
+          "eligible_for_bundled_text": false
+        },
+        {
+          "line_1_based": 478,
+          "markers": [
+            "{{R:DAF8}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": null,
+          "eligible_for_bundled_text": false
+        },
+        {
+          "line_1_based": 479,
+          "markers": [
+            "{{R:TLFi}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": null,
+          "eligible_for_bundled_text": false
+        }
+      ],
+      "rights_eligibility_status": "pending_selected_span_audit",
+      "scope": "Only the selected definition/IPA and explicitly listed contributor support spans are candidates. Article-level imports need selected-span verification. No whole-page, external dictionary, quotation, image or audio admission.",
+      "selected_source_capture": {
+        "title": "fort",
+        "pageid": 9056,
+        "revid": 39827775,
+        "timestamp": "2026-08-24T14:41:06Z",
+        "capture": "byte_identical_research_api_copy",
+        "original_api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-resource-research\\target\\d2-research\\dictionary-parallel-frequency-followup-20261115\\adverbs-connectives\\fort-fixed-api.json",
+        "api_path": "target\\issue-89\\sources\\fort.api.json",
+        "raw_path": "target\\issue-89\\sources\\fort.wiki",
+        "fixed_url": "https://fr.wiktionary.org/w/index.php?title=fort&oldid=39827775",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=fort&action=history"
+      }
+    },
+    {
+      "id": "b89_fr_65079",
+      "title": "cas",
+      "pageid": 65079,
+      "current_content_revid": 39869835,
+      "timestamp": "2026-09-10T13:15:35Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=cas&oldid=39869835",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=cas&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "source_frame": "Latest public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "status": "pending_independent_audit",
+      "selected_locations": [
+        17,
+        18
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 296,
+          "markers": [
+            "{{Import:DAF8}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935)",
+          "eligible_for_bundled_text": false
+        }
+      ],
+      "rights_eligibility_status": "pending_selected_span_audit",
+      "scope": "Only the selected definition/IPA and explicitly listed contributor support spans are candidates. Article-level imports need selected-span verification. No whole-page, external dictionary, quotation, image or audio admission.",
+      "selected_source_capture": {
+        "title": "cas",
+        "pageid": 65079,
+        "revid": 39869835,
+        "timestamp": "2026-09-10T13:15:35Z",
+        "capture": "byte_identical_research_api_copy",
+        "original_api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-resource-research\\target\\d2-research\\dictionary-parallel-frequency-selection-20261115\\nouns-adjectives\\cas-fixed-api.json",
+        "api_path": "target\\issue-89\\sources\\cas.api.json",
+        "raw_path": "target\\issue-89\\sources\\cas.wiki",
+        "fixed_url": "https://fr.wiktionary.org/w/index.php?title=cas&oldid=39869835",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=cas&action=history"
+      }
+    },
+    {
+      "id": "b89_fr_283",
+      "title": "mot",
+      "pageid": 283,
+      "current_content_revid": 39770829,
+      "timestamp": "2026-08-03T10:27:51Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=mot&oldid=39770829",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=mot&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "source_frame": "Latest public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "status": "pending_independent_audit",
+      "selected_locations": [
+        20,
+        21
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 449,
+          "markers": [
+            "{{R:DAF8}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": null,
+          "eligible_for_bundled_text": false
+        }
+      ],
+      "rights_eligibility_status": "pending_selected_span_audit",
+      "scope": "Only the selected definition/IPA and explicitly listed contributor support spans are candidates. Article-level imports need selected-span verification. No whole-page, external dictionary, quotation, image or audio admission.",
+      "selected_source_capture": {
+        "title": "mot",
+        "pageid": 283,
+        "revid": 39770829,
+        "timestamp": "2026-08-03T10:27:51Z",
+        "capture": "byte_identical_research_api_copy",
+        "original_api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-resource-research\\target\\d2-research\\dictionary-parallel-frequency-followup-20261115\\nouns-adjectives\\mot-fixed-api.json",
+        "api_path": "target\\issue-89\\sources\\mot.api.json",
+        "raw_path": "target\\issue-89\\sources\\mot.wiki",
+        "fixed_url": "https://fr.wiktionary.org/w/index.php?title=mot&oldid=39770829",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=mot&action=history"
+      }
+    },
+    {
+      "id": "b89_fr_176438",
+      "title": "seulement",
+      "pageid": 176438,
+      "current_content_revid": 39772714,
+      "timestamp": "2026-08-03T11:16:12Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=seulement&oldid=39772714",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=seulement&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "source_frame": "Latest public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "status": "pending_independent_audit",
+      "selected_locations": [
+        6,
+        7
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 122,
+          "markers": [
+            "{{Import:DAF8}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935)",
+          "eligible_for_bundled_text": false
+        }
+      ],
+      "rights_eligibility_status": "pending_selected_span_audit",
+      "scope": "Only the selected definition/IPA and explicitly listed contributor support spans are candidates. Article-level imports need selected-span verification. No whole-page, external dictionary, quotation, image or audio admission.",
+      "selected_source_capture": {
+        "title": "seulement",
+        "pageid": 176438,
+        "revid": 39772714,
+        "timestamp": "2026-08-03T11:16:12Z",
+        "capture": "byte_identical_research_api_copy",
+        "original_api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-resource-research\\target\\d2-research\\dictionary-parallel-everyday-selection-20261115\\adverbs-connectives\\seulement-fixed-api.json",
+        "api_path": "target\\issue-89\\sources\\seulement.api.json",
+        "raw_path": "target\\issue-89\\sources\\seulement.wiki",
+        "fixed_url": "https://fr.wiktionary.org/w/index.php?title=seulement&oldid=39772714",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=seulement&action=history"
+      }
+    },
+    {
+      "id": "b89_fr_5323",
+      "title": "toucher",
+      "pageid": 5323,
+      "current_content_revid": 39903995,
+      "timestamp": "2026-09-25T20:03:55Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=toucher&oldid=39903995",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=toucher&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "source_frame": "Latest public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "status": "pending_independent_audit",
+      "selected_locations": [
+        7,
+        8
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 623,
+          "markers": [
+            "{{R:TLFi}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": null,
+          "eligible_for_bundled_text": false
+        }
+      ],
+      "rights_eligibility_status": "pending_selected_span_audit",
+      "scope": "Only the selected definition/IPA and explicitly listed contributor support spans are candidates. Article-level imports need selected-span verification. No whole-page, external dictionary, quotation, image or audio admission.",
+      "selected_source_capture": {
+        "title": "toucher",
+        "pageid": 5323,
+        "revid": 39903995,
+        "timestamp": "2026-09-25T20:03:55Z",
+        "capture": "byte_identical_research_api_copy",
+        "original_api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-resource-research\\target\\d2-research\\dictionary-parallel-usage-selection-20261115\\common-verbs\\toucher-fixed-api.json",
+        "api_path": "target\\issue-89\\sources\\toucher.api.json",
+        "raw_path": "target\\issue-89\\sources\\toucher.wiki",
+        "fixed_url": "https://fr.wiktionary.org/w/index.php?title=toucher&oldid=39903995",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=toucher&action=history"
+      }
+    },
+    {
+      "id": "b89_fr_9360",
+      "title": "voici",
+      "pageid": 9360,
+      "current_content_revid": 39869758,
+      "timestamp": "2026-09-10T12:20:12Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=voici&oldid=39869758",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=voici&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "source_frame": "Latest public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "status": "pending_independent_audit",
+      "selected_locations": [
+        6,
+        7
+      ],
+      "source_page_notices_to_record": [],
+      "rights_eligibility_status": "pending_selected_span_audit",
+      "scope": "Only the selected definition/IPA and explicitly listed contributor support spans are candidates. Article-level imports need selected-span verification. No whole-page, external dictionary, quotation, image or audio admission.",
+      "selected_source_capture": {
+        "title": "voici",
+        "pageid": 9360,
+        "revid": 39869758,
+        "timestamp": "2026-09-10T12:20:12Z",
+        "capture": "byte_identical_research_api_copy",
+        "original_api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-resource-research\\target\\d2-research\\dictionary-parallel-frequency-selection-20261115\\adverbs-connectives\\voici-fixed-api.json",
+        "api_path": "target\\issue-89\\sources\\voici.api.json",
+        "raw_path": "target\\issue-89\\sources\\voici.wiki",
+        "fixed_url": "https://fr.wiktionary.org/w/index.php?title=voici&oldid=39869758",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=voici&action=history"
+      }
+    },
+    {
+      "id": "b89_fr_36059",
+      "title": "monter",
+      "pageid": 36059,
+      "current_content_revid": 39902997,
+      "timestamp": "2026-09-25T09:28:33Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=monter&oldid=39902997",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=monter&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "source_frame": "Latest public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "status": "pending_independent_audit",
+      "selected_locations": [
+        8,
+        9
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 526,
+          "markers": [
+            "{{R:TLFi}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": null,
+          "eligible_for_bundled_text": false
+        },
+        {
+          "line_1_based": 527,
+          "markers": [
+            "{{R:Babault}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": null,
+          "eligible_for_bundled_text": false
+        },
+        {
+          "line_1_based": 528,
+          "markers": [
+            "{{R:Bescherelle}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": null,
+          "eligible_for_bundled_text": false
+        },
+        {
+          "line_1_based": 529,
+          "markers": [
+            "{{R:LarousseXXe}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": null,
+          "eligible_for_bundled_text": false
+        },
+        {
+          "line_1_based": 530,
+          "markers": [
+            "{{R:Noël 1839}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": null,
+          "eligible_for_bundled_text": false
+        },
+        {
+          "line_1_based": 531,
+          "markers": [
+            "{{R:DAF8}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": null,
+          "eligible_for_bundled_text": false
+        }
+      ],
+      "rights_eligibility_status": "pending_selected_span_audit",
+      "scope": "Only the selected definition/IPA and explicitly listed contributor support spans are candidates. Article-level imports need selected-span verification. No whole-page, external dictionary, quotation, image or audio admission.",
+      "selected_source_capture": {
+        "title": "monter",
+        "pageid": 36059,
+        "revid": 39902997,
+        "timestamp": "2026-09-25T09:28:33Z",
+        "capture": "byte_identical_research_api_copy",
+        "original_api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-resource-research\\target\\d2-research\\dictionary-parallel-usage-selection-20261115\\common-verbs\\monter-fixed-api.json",
+        "api_path": "target\\issue-89\\sources\\monter.api.json",
+        "raw_path": "target\\issue-89\\sources\\monter.wiki",
+        "fixed_url": "https://fr.wiktionary.org/w/index.php?title=monter&oldid=39902997",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=monter&action=history"
+      }
+    },
+    {
+      "id": "b89_fr_193628",
+      "title": "désolé",
+      "pageid": 193628,
+      "current_content_revid": 39841689,
+      "timestamp": "2026-08-30T20:59:36Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=d%C3%A9sol%C3%A9&oldid=39841689",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=d%C3%A9sol%C3%A9&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "source_frame": "Latest public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "status": "pending_independent_audit",
+      "selected_locations": [
+        8,
+        19,
+        20
+      ],
+      "source_page_notices_to_record": [],
+      "rights_eligibility_status": "pending_selected_span_audit",
+      "scope": "Only the selected definition/IPA and explicitly listed contributor support spans are candidates. Article-level imports need selected-span verification. No whole-page, external dictionary, quotation, image or audio admission.",
+      "selected_source_capture": {
+        "title": "désolé",
+        "pageid": 193628,
+        "revid": 39841689,
+        "timestamp": "2026-08-30T20:59:36Z",
+        "capture": "byte_identical_research_api_copy",
+        "original_api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-resource-research\\target\\d2-research\\dictionary-parallel-frequency-followup-20261115\\nouns-adjectives\\désolé-fixed-api.json",
+        "api_path": "target\\issue-89\\sources\\désolé.api.json",
+        "raw_path": "target\\issue-89\\sources\\désolé.wiki",
+        "fixed_url": "https://fr.wiktionary.org/w/index.php?title=d%C3%A9sol%C3%A9&oldid=39841689",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=d%C3%A9sol%C3%A9&action=history"
+      }
+    },
+    {
+      "id": "b89_fr_8330",
+      "title": "quitter",
+      "pageid": 8330,
+      "current_content_revid": 39753758,
+      "timestamp": "2026-08-02T19:18:03Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=quitter&oldid=39753758",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=quitter&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "source_frame": "Latest public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "status": "pending_independent_audit",
+      "selected_locations": [
+        6,
+        20
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 235,
+          "markers": [
+            "{{R:DAF8}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": null,
+          "eligible_for_bundled_text": false
+        }
+      ],
+      "rights_eligibility_status": "pending_selected_span_audit",
+      "scope": "Only the selected definition/IPA and explicitly listed contributor support spans are candidates. Article-level imports need selected-span verification. No whole-page, external dictionary, quotation, image or audio admission.",
+      "selected_source_capture": {
+        "title": "quitter",
+        "pageid": 8330,
+        "revid": 39753758,
+        "timestamp": "2026-08-02T19:18:03Z",
+        "capture": "byte_identical_research_api_copy",
+        "original_api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-resource-research\\target\\d2-research\\dictionary-parallel-usage-selection-20261115\\common-verbs\\quitter-fixed-api.json",
+        "api_path": "target\\issue-89\\sources\\quitter.api.json",
+        "raw_path": "target\\issue-89\\sources\\quitter.wiki",
+        "fixed_url": "https://fr.wiktionary.org/w/index.php?title=quitter&oldid=39753758",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=quitter&action=history"
+      }
+    },
+    {
+      "id": "b89_fr_118734",
+      "title": "police",
+      "pageid": 118734,
+      "current_content_revid": 39823088,
+      "timestamp": "2026-08-22T04:16:49Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=police&oldid=39823088",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=police&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "source_frame": "Latest public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "status": "pending_independent_audit",
+      "selected_locations": [
+        13,
+        14,
+        23
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 227,
+          "markers": [
+            "{{R:LarousseXIXe|police s. f. (2)}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": null,
+          "eligible_for_bundled_text": false
+        },
+        {
+          "line_1_based": 228,
+          "markers": [
+            "{{Import:CFC}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": null,
+          "eligible_for_bundled_text": false
+        },
+        {
+          "line_1_based": 309,
+          "markers": [
+            "{{Import:DAF8}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935)",
+          "eligible_for_bundled_text": false
+        },
+        {
+          "line_1_based": 310,
+          "markers": [
+            "{{R:LarousseXIXe|police s. f. (2)}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": null,
+          "eligible_for_bundled_text": false
+        },
+        {
+          "line_1_based": 311,
+          "markers": [
+            "{{R:TLFi}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": null,
+          "eligible_for_bundled_text": false
+        }
+      ],
+      "rights_eligibility_status": "pending_selected_span_audit",
+      "scope": "Only the selected definition/IPA and explicitly listed contributor support spans are candidates. Article-level imports need selected-span verification. No whole-page, external dictionary, quotation, image or audio admission.",
+      "selected_source_capture": {
+        "title": "police",
+        "pageid": 118734,
+        "revid": 39823088,
+        "timestamp": "2026-08-22T04:16:49Z",
+        "capture": "byte_identical_research_api_copy",
+        "original_api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-resource-research\\target\\d2-research\\dictionary-parallel-frequency-followup-20261115\\nouns-adjectives\\police-fixed-api.json",
+        "api_path": "target\\issue-89\\sources\\police.api.json",
+        "raw_path": "target\\issue-89\\sources\\police.wiki",
+        "fixed_url": "https://fr.wiktionary.org/w/index.php?title=police&oldid=39823088",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=police&action=history"
+      }
+    },
+    {
+      "id": "b89_fr_121196",
+      "title": "suite",
+      "pageid": 121196,
+      "current_content_revid": 39772614,
+      "timestamp": "2026-08-03T11:14:02Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=suite&oldid=39772614",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=suite&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "source_frame": "Latest public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "status": "pending_independent_audit",
+      "selected_locations": [
+        11,
+        22
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 335,
+          "markers": [
+            "{{Import:DAF8}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935)",
+          "eligible_for_bundled_text": false
+        }
+      ],
+      "rights_eligibility_status": "pending_selected_span_audit",
+      "scope": "Only the selected definition/IPA and explicitly listed contributor support spans are candidates. Article-level imports need selected-span verification. No whole-page, external dictionary, quotation, image or audio admission.",
+      "selected_source_capture": {
+        "title": "suite",
+        "pageid": 121196,
+        "revid": 39772614,
+        "timestamp": "2026-08-03T11:14:02Z",
+        "capture": "byte_identical_research_api_copy",
+        "original_api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-resource-research\\target\\d2-research\\dictionary-parallel-frequency-followup-20261115\\nouns-adjectives\\suite-fixed-api.json",
+        "api_path": "target\\issue-89\\sources\\suite.api.json",
+        "raw_path": "target\\issue-89\\sources\\suite.wiki",
+        "fixed_url": "https://fr.wiktionary.org/w/index.php?title=suite&oldid=39772614",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=suite&action=history"
+      }
+    },
+    {
+      "id": "b89_fr_10742",
+      "title": "matin",
+      "pageid": 10742,
+      "current_content_revid": 39863376,
+      "timestamp": "2026-09-06T23:15:10Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=matin&oldid=39863376",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=matin&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "source_frame": "Latest public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "status": "pending_independent_audit",
+      "selected_locations": [
+        9,
+        16
+      ],
+      "source_page_notices_to_record": [],
+      "rights_eligibility_status": "pending_selected_span_audit",
+      "scope": "Only the selected definition/IPA and explicitly listed contributor support spans are candidates. Article-level imports need selected-span verification. No whole-page, external dictionary, quotation, image or audio admission.",
+      "selected_source_capture": {
+        "title": "matin",
+        "pageid": 10742,
+        "revid": 39863376,
+        "timestamp": "2026-09-06T23:15:10Z",
+        "capture": "byte_identical_research_api_copy",
+        "original_api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-resource-research\\target\\d2-research\\dictionary-parallel-frequency-followup-20261115\\nouns-adjectives\\matin-fixed-api.json",
+        "api_path": "target\\issue-89\\sources\\matin.api.json",
+        "raw_path": "target\\issue-89\\sources\\matin.wiki",
+        "fixed_url": "https://fr.wiktionary.org/w/index.php?title=matin&oldid=39863376",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=matin&action=history"
+      }
+    },
+    {
+      "id": "b89_fr_8716",
+      "title": "emmener",
+      "pageid": 8716,
+      "current_content_revid": 39770690,
+      "timestamp": "2026-08-03T10:24:01Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=emmener&oldid=39770690",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=emmener&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "source_frame": "Latest public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "status": "pending_independent_audit",
+      "selected_locations": [
+        6,
+        7
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 86,
+          "markers": [
+            "{{R:DAF8}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": null,
+          "eligible_for_bundled_text": false
+        }
+      ],
+      "rights_eligibility_status": "pending_selected_span_audit",
+      "scope": "Only the selected definition/IPA and explicitly listed contributor support spans are candidates. Article-level imports need selected-span verification. No whole-page, external dictionary, quotation, image or audio admission.",
+      "selected_source_capture": {
+        "title": "emmener",
+        "pageid": 8716,
+        "revid": 39770690,
+        "timestamp": "2026-08-03T10:24:01Z",
+        "capture": "byte_identical_research_api_copy",
+        "original_api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-resource-research\\target\\d2-research\\dictionary-parallel-usage-selection-20261115\\common-verbs\\emmener-fixed-api.json",
+        "api_path": "target\\issue-89\\sources\\emmener.api.json",
+        "raw_path": "target\\issue-89\\sources\\emmener.wiki",
+        "fixed_url": "https://fr.wiktionary.org/w/index.php?title=emmener&oldid=39770690",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=emmener&action=history"
+      }
+    },
+    {
+      "id": "b89_fr_9481",
+      "title": "devant",
+      "pageid": 9481,
+      "current_content_revid": 39770502,
+      "timestamp": "2026-08-03T10:18:31Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=devant&oldid=39770502",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=devant&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "source_frame": "Latest public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "status": "pending_independent_audit",
+      "selected_locations": [
+        6,
+        7,
+        94,
+        95
+      ],
+      "source_page_notices_to_record": [],
+      "rights_eligibility_status": "pending_selected_span_audit",
+      "scope": "Only the selected definition/IPA and explicitly listed contributor support spans are candidates. Article-level imports need selected-span verification. No whole-page, external dictionary, quotation, image or audio admission.",
+      "selected_source_capture": {
+        "title": "devant",
+        "pageid": 9481,
+        "revid": 39770502,
+        "timestamp": "2026-08-03T10:18:31Z",
+        "capture": "byte_identical_research_api_copy",
+        "original_api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-resource-research\\target\\d2-research\\dictionary-parallel-routine-selection-20261115\\adverbs-connectives\\devant-fixed-api.json",
+        "api_path": "target\\issue-89\\sources\\devant.api.json",
+        "raw_path": "target\\issue-89\\sources\\devant.wiki",
+        "fixed_url": "https://fr.wiktionary.org/w/index.php?title=devant&oldid=39770502",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=devant&action=history"
+      }
+    },
+    {
+      "id": "b89_fr_155378",
+      "title": "continuer",
+      "pageid": 155378,
+      "current_content_revid": 39899247,
+      "timestamp": "2026-09-23T08:59:18Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=continuer&oldid=39899247",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=continuer&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "source_frame": "Latest public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "status": "pending_independent_audit",
+      "selected_locations": [
+        6,
+        7
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 140,
+          "markers": [
+            "{{Import:DAF8}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935)",
+          "eligible_for_bundled_text": false
+        }
+      ],
+      "rights_eligibility_status": "pending_selected_span_audit",
+      "scope": "Only the selected definition/IPA and explicitly listed contributor support spans are candidates. Article-level imports need selected-span verification. No whole-page, external dictionary, quotation, image or audio admission.",
+      "selected_source_capture": {
+        "title": "continuer",
+        "pageid": 155378,
+        "revid": 39899247,
+        "timestamp": "2026-09-23T08:59:18Z",
+        "capture": "byte_identical_research_api_copy",
+        "original_api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-resource-research\\target\\d2-research\\dictionary-parallel-usage-selection-20261115\\common-verbs\\continuer-fixed-api.json",
+        "api_path": "target\\issue-89\\sources\\continuer.api.json",
+        "raw_path": "target\\issue-89\\sources\\continuer.wiki",
+        "fixed_url": "https://fr.wiktionary.org/w/index.php?title=continuer&oldid=39899247",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=continuer&action=history"
+      }
+    },
+    {
+      "id": "b89_fr_35893",
+      "title": "cher",
+      "pageid": 35893,
+      "current_content_revid": 39858326,
+      "timestamp": "2026-09-05T07:42:26Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=cher&oldid=39858326",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=cher&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "source_frame": "Latest public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "status": "pending_independent_audit",
+      "selected_locations": [
+        9,
+        10,
+        16,
+        18,
+        237,
+        238
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 296,
+          "markers": [
+            "{{R:DAF8}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": null,
+          "eligible_for_bundled_text": false
+        }
+      ],
+      "rights_eligibility_status": "pending_selected_span_audit",
+      "scope": "Only the selected definition/IPA and explicitly listed contributor support spans are candidates. Article-level imports need selected-span verification. No whole-page, external dictionary, quotation, image or audio admission.",
+      "selected_source_capture": {
+        "title": "cher",
+        "pageid": 35893,
+        "revid": 39858326,
+        "timestamp": "2026-09-05T07:42:26Z",
+        "capture": "byte_identical_research_api_copy",
+        "original_api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-resource-research\\target\\d2-research\\dictionary-parallel-frequency-next-20261116\\nouns-adjectives\\cher-fixed-api.json",
+        "api_path": "target\\issue-89\\sources\\cher.api.json",
+        "raw_path": "target\\issue-89\\sources\\cher.wiki",
+        "fixed_url": "https://fr.wiktionary.org/w/index.php?title=cher&oldid=39858326",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=cher&action=history"
+      }
+    },
+    {
+      "id": "b89_fr_137168",
+      "title": "enfin",
+      "pageid": 137168,
+      "current_content_revid": 39771029,
+      "timestamp": "2026-08-03T10:32:55Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=enfin&oldid=39771029",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=enfin&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "source_frame": "Latest public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "status": "pending_independent_audit",
+      "selected_locations": [
+        7,
+        8
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 128,
+          "markers": [
+            "{{Import:DAF8}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935)",
+          "eligible_for_bundled_text": false
+        }
+      ],
+      "rights_eligibility_status": "pending_selected_span_audit",
+      "scope": "Only the selected definition/IPA and explicitly listed contributor support spans are candidates. Article-level imports need selected-span verification. No whole-page, external dictionary, quotation, image or audio admission.",
+      "selected_source_capture": {
+        "title": "enfin",
+        "pageid": 137168,
+        "revid": 39771029,
+        "timestamp": "2026-08-03T10:32:55Z",
+        "capture": "byte_identical_research_api_copy",
+        "original_api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-resource-research\\target\\d2-research\\dictionary-parallel-everyday-selection-20261115\\adverbs-connectives\\enfin-fixed-api.json",
+        "api_path": "target\\issue-89\\sources\\enfin.api.json",
+        "raw_path": "target\\issue-89\\sources\\enfin.wiki",
+        "fixed_url": "https://fr.wiktionary.org/w/index.php?title=enfin&oldid=39771029",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=enfin&action=history"
+      }
+    },
+    {
+      "id": "b89_fr_120422",
+      "title": "pardon",
+      "pageid": 120422,
+      "current_content_revid": 39871719,
+      "timestamp": "2026-09-11T14:34:42Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=pardon&oldid=39871719",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=pardon&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "source_frame": "Latest public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "status": "pending_independent_audit",
+      "selected_locations": [
+        9,
+        10,
+        107,
+        108
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 189,
+          "markers": [
+            "{{R:DAF8}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": null,
+          "eligible_for_bundled_text": false
+        }
+      ],
+      "rights_eligibility_status": "pending_selected_span_audit",
+      "scope": "Only the selected definition/IPA and explicitly listed contributor support spans are candidates. Article-level imports need selected-span verification. No whole-page, external dictionary, quotation, image or audio admission.",
+      "selected_source_capture": {
+        "title": "pardon",
+        "pageid": 120422,
+        "revid": 39871719,
+        "timestamp": "2026-09-11T14:34:42Z",
+        "last_editor": "Urhixidur",
+        "capture": "first_party_api",
+        "api_path": "target\\issue-89\\sources\\pardon.api.json",
+        "raw_path": "target\\issue-89\\sources\\pardon.wiki",
+        "fixed_url": "https://fr.wiktionary.org/w/index.php?title=pardon&oldid=39871719",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=pardon&action=history"
+      }
+    },
+    {
+      "id": "b89_fr_10738",
+      "title": "mari",
+      "pageid": 10738,
+      "current_content_revid": 39770059,
+      "timestamp": "2026-08-03T09:42:09Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=mari&oldid=39770059",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=mari&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "source_frame": "Latest public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "status": "pending_independent_audit",
+      "selected_locations": [
+        9,
+        10
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 226,
+          "markers": [
+            "{{R:DAF8}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": null,
+          "eligible_for_bundled_text": false
+        },
+        {
+          "line_1_based": 227,
+          "markers": [
+            "{{R:TLFi}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": null,
+          "eligible_for_bundled_text": false
+        }
+      ],
+      "rights_eligibility_status": "pending_selected_span_audit",
+      "scope": "Only the selected definition/IPA and explicitly listed contributor support spans are candidates. Article-level imports need selected-span verification. No whole-page, external dictionary, quotation, image or audio admission.",
+      "selected_source_capture": {
+        "title": "mari",
+        "pageid": 10738,
+        "revid": 39770059,
+        "timestamp": "2026-08-03T09:42:09Z",
+        "capture": "byte_identical_research_api_copy",
+        "original_api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-resource-research\\target\\d2-research\\dictionary-parallel-frequency-followup-20261115\\nouns-adjectives\\mari-fixed-api.json",
+        "api_path": "target\\issue-89\\sources\\mari.api.json",
+        "raw_path": "target\\issue-89\\sources\\mari.wiki",
+        "fixed_url": "https://fr.wiktionary.org/w/index.php?title=mari&oldid=39770059",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=mari&action=history"
+      }
+    },
+    {
+      "id": "b89_fr_9583",
+      "title": "mauvais",
+      "pageid": 9583,
+      "current_content_revid": 39847064,
+      "timestamp": "2026-09-01T19:29:04Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=mauvais&oldid=39847064",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=mauvais&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "source_frame": "Latest public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "status": "pending_independent_audit",
+      "selected_locations": [
+        11,
+        23
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 328,
+          "markers": [
+            "{{Import:DAF8}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935)",
+          "eligible_for_bundled_text": false
+        }
+      ],
+      "rights_eligibility_status": "pending_selected_span_audit",
+      "scope": "Only the selected definition/IPA and explicitly listed contributor support spans are candidates. Article-level imports need selected-span verification. No whole-page, external dictionary, quotation, image or audio admission.",
+      "selected_source_capture": {
+        "title": "mauvais",
+        "pageid": 9583,
+        "revid": 39847064,
+        "timestamp": "2026-09-01T19:29:04Z",
+        "capture": "byte_identical_research_api_copy",
+        "original_api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-resource-research\\target\\d2-research\\dictionary-parallel-frequency-followup-20261115\\nouns-adjectives\\mauvais-fixed-api.json",
+        "api_path": "target\\issue-89\\sources\\mauvais.api.json",
+        "raw_path": "target\\issue-89\\sources\\mauvais.wiki",
+        "fixed_url": "https://fr.wiktionary.org/w/index.php?title=mauvais&oldid=39847064",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=mauvais&action=history"
+      }
+    },
+    {
+      "id": "b89_fr_17398",
+      "title": "là-bas",
+      "pageid": 17398,
+      "current_content_revid": 39875305,
+      "timestamp": "2026-09-14T08:25:32Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=l%C3%A0-bas&oldid=39875305",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=l%C3%A0-bas&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "source_frame": "Latest public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "status": "pending_independent_audit",
+      "selected_locations": [
+        8,
+        9
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 105,
+          "markers": [
+            "{{Import:DAF8|là}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935)",
+          "eligible_for_bundled_text": false
+        }
+      ],
+      "rights_eligibility_status": "pending_selected_span_audit",
+      "scope": "Only the selected definition/IPA and explicitly listed contributor support spans are candidates. Article-level imports need selected-span verification. No whole-page, external dictionary, quotation, image or audio admission.",
+      "selected_source_capture": {
+        "title": "là-bas",
+        "pageid": 17398,
+        "revid": 39875305,
+        "timestamp": "2026-09-14T08:25:32Z",
+        "capture": "byte_identical_research_api_copy",
+        "original_api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-resource-research\\target\\d2-research\\dictionary-parallel-everyday-selection-20261115\\adverbs-connectives\\là-bas-fixed-api.json",
+        "api_path": "target\\issue-89\\sources\\là-bas.api.json",
+        "raw_path": "target\\issue-89\\sources\\là-bas.wiki",
+        "fixed_url": "https://fr.wiktionary.org/w/index.php?title=l%C3%A0-bas&oldid=39875305",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=l%C3%A0-bas&action=history"
+      }
+    },
+    {
+      "id": "b89_fr_11533",
+      "title": "point",
+      "pageid": 11533,
+      "current_content_revid": 39772006,
+      "timestamp": "2026-08-03T10:57:43Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=point&oldid=39772006",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=point&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "source_frame": "Latest public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "status": "pending_independent_audit",
+      "selected_locations": [
+        8,
+        59,
+        60,
+        809,
+        810
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 158,
+          "markers": [
+            "{{Import:CFC}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": null,
+          "eligible_for_bundled_text": false
+        },
+        {
+          "line_1_based": 874,
+          "markers": [
+            "{{R:FranceTerme}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": null,
+          "eligible_for_bundled_text": false
+        },
+        {
+          "line_1_based": 875,
+          "markers": [
+            "{{R:TLFi}}"
+          ],
+          "scope": "Source-context marker only; externally attributed prose and examples are excluded.",
+          "underlying_import_credit": null,
+          "eligible_for_bundled_text": false
+        }
+      ],
+      "rights_eligibility_status": "pending_selected_span_audit",
+      "scope": "Only the selected definition/IPA and explicitly listed contributor support spans are candidates. Article-level imports need selected-span verification. No whole-page, external dictionary, quotation, image or audio admission.",
+      "selected_source_capture": {
+        "title": "point",
+        "pageid": 11533,
+        "revid": 39772006,
+        "timestamp": "2026-08-03T10:57:43Z",
+        "capture": "byte_identical_research_api_copy",
+        "original_api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-resource-research\\target\\d2-research\\dictionary-parallel-frequency-continuation-20261116\\nouns-adjectives\\point-fixed-api.json",
+        "api_path": "target\\issue-89\\sources\\point.api.json",
+        "raw_path": "target\\issue-89\\sources\\point.wiki",
+        "fixed_url": "https://fr.wiktionary.org/w/index.php?title=point&oldid=39772006",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=point&action=history"
+      }
     }
   ],
   "historical_authorship_boundary_only": [
