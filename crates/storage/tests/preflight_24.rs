@@ -72,9 +72,16 @@ mod candidate {
         let sql_cpu_ms = thread_cpu_ms() - sql_cpu_started;
         let commit_started = std::time::Instant::now();
         let commit_cpu_started = thread_cpu_ms();
-        tx.commit()?;
+        let commit_result = tx.commit();
         let commit_ms = commit_started.elapsed().as_secs_f64() * 1000.0;
         let commit_cpu_ms = thread_cpu_ms() - commit_cpu_started;
+        if let Err(error) = &commit_result {
+            eprintln!(
+                "[DEBUG-ci174175] size={} sql_ms={sql_ms} commit_ms={commit_ms} sql_cpu_ms={sql_cpu_ms} commit_cpu_ms={commit_cpu_ms} commit_error={error:?}",
+                ids.len()
+            );
+        }
+        commit_result?;
         Ok((outcomes, sql_ms, commit_ms, sql_cpu_ms, commit_cpu_ms))
     }
 }
@@ -215,6 +222,9 @@ fn v03_candidate_transaction_sizes_and_competing_notes_and_ratings() {
         for repeat in 0..10 {
             let (path, mut connection) = database(size + 1);
             let existing = lexique_storage::add_review(&mut connection, size + 1).unwrap();
+            if std::env::var_os("LEXIQUE_DIAGNOSTIC_NO_BUSY_WAIT").is_some() {
+                connection.busy_timeout(std::time::Duration::ZERO).unwrap();
+            }
             let barrier = std::sync::Barrier::new(2);
             let contended = std::thread::scope(|scope| {
                 let writer_ready = &barrier;

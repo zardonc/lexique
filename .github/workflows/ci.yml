@@ -52,11 +52,11 @@ jobs:
             done
             exit "$probe_status"
           } 2>&1 | tee target/ci-native-timing/probe.log
-      - name: repeat with main-connection SQLite sync disabled
+      - name: repeat with main-connection SQLite busy waiting disabled
         if: always()
         shell: bash
         env:
-          LEXIQUE_DIAGNOSTIC_NO_SYNC: '1'
+          LEXIQUE_DIAGNOSTIC_NO_BUSY_WAIT: '1'
         run: |
           mkdir -p target/ci-native-timing
           {
@@ -66,7 +66,7 @@ jobs:
               node scripts/test-rust.mjs || probe_status=1
             done
             exit "$probe_status"
-          } 2>&1 | tee target/ci-native-timing/no-sync-probe.log
+          } 2>&1 | tee target/ci-native-timing/no-busy-wait-probe.log
       - uses: actions/upload-artifact@v4
         if: always()
         with:
