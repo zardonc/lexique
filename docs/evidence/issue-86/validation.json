@@ -35,5 +35,36 @@
   ],
   "original_pilot_rows_360_422_423": "exact original record bytes preserved",
   "native": "pending coordinator integration and independent admission",
-  "release": "incomplete"
+  "release": "incomplete",
+  "integration": {
+    "tip": "d55b6bd",
+    "issue_86_groups": 50,
+    "issue_89_target_groups": 50,
+    "combined_record_groups": 252,
+    "parallel_and_own_records": "exact bytes preserved",
+    "original_pilot_360_422_423": "exact original bytes preserved"
+  },
+  "checks": {
+    "focused_tests": {
+      "status": "passed",
+      "tests": 3
+    },
+    "conversion": {
+      "status": "rejected_pending_sources",
+      "exit_code": 1,
+      "admitted_artifact": false
+    },
+    "checksums": {
+      "status": "passed",
+      "materials": 11
+    },
+    "documentation": {
+      "status": "passed",
+      "documents": 185,
+      "local_links": 1457,
+      "skipped_local_links": 91,
+      "problems": 0
+    },
+    "diff": "passed"
+  }
 }

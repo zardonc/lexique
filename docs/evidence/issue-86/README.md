@@ -36,6 +36,13 @@ Shared content version, global counters, resource README, notices, prior evidenc
 and runtime remain unchanged. Their combined updates belong to the coordinator.
 The existing source notices and CC BY-SA 4.0 legal text are reused.
 
+Integration tip `d55b6bd` is merged, including #89's pending records. The JSON
+resolution is an additive union and retains both branches' record bytes.
+Rows 401–450 remain owned by #89; reused pilot rows 422 and 423 appear once.
+The merged local ROWS contains both batches, while the coordinator owns its
+final combined extension. All three original pilot records (360/422/423) also
+passed an exact-byte comparison with the pinned base after this merge.
+
 The coordinator also owns shared `ADJ:int` and `PRO:pos` validators and localized
 labels, independent source/quality audit, final admitted conversion, native
 lookup/save/restart, coverage, packaging, PR and review. The test infrastructure
@@ -64,7 +71,9 @@ record bytes. Full logs remain under ignored `target/issue-86-*.log`.
 | Fixed capture/span and preservation check | Passed: 200 fields and all pre-existing records |
 | Direct conversion | Failed as expected: `Unreviewed field source or incompatible licence`; no admitted output |
 | Diff check | Passed |
-| Repository documentation check | Passed: 182 documents, 1,444 local links, 0 problems; 91 local evidence links skipped |
+| Repository documentation check | Passed: 185 documents, 1,457 local links, 0 problems; 91 local evidence links skipped |
+| Combined material checksums | Passed: all 11 existing manifest entries |
+| Integration preservation | Passed: additive #86/#89 union; both branches' records and original pilot bytes retained |
 | Native application and combined admission | Pending coordinator integration and independent review |
 
 ## Limitations
