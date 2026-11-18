@@ -6,8 +6,9 @@ The reviewer is independent of the content author and application implementer.
 **47 new groups / 188 exact fields are independently accepted**, together with
 47 selected-use reviews and three explicit spelling relationships. The two
 admitted pilot groups at rows 70–71 retain their original text and evidence.
-This gives 49 batch groups with accepted or reused content; row 87 retains four
-unresolved fields and issue #82 remains incomplete.
+This gives 49 batch groups with accepted or reused content. Row 87 has zero
+admitted fields under the annotation exception approved on 2026-11-18 UTC;
+#82 is complete within its amended scope, with 49/50 content coverage.
 
 The acceptance payload is retained at
 `target/issue-82-quality-review/accepted-review.json`. Its `fields` and `usage`
@@ -82,17 +83,22 @@ Markdown link checks pass. The source draft remains unchanged.
 
 The spec requires “All 50 listed word/POS pairs match the frozen membership
 exactly” and four accurately scoped fields for each selected use. Membership is
-retained exactly; row 87 is the declared incomplete requirement under the approved
-partial scope. No unasked content or incorrect accepted field implementation was
-found. Converter, resource and native verification are recorded separately in
+retained exactly; the approved row-87 annotation exception has zero admitted
+fields. The independent acceptance remains 49 content groups and 196 fields.
+Converter, resource and native verification are recorded separately in
 the [batch execution evidence](README.md).
 
 ## Row 87: quoi / ADJ
 
-**Unresolved.** The reviewed primary sources do not attest a modern everyday
+**Approved annotation exception (2026-11-18 UTC).** The reviewed primary sources do not attest a modern everyday
 adjectival use of the exact spelling `quoi`. The four fields for frozen row 87
 cannot be accepted from the attested pronoun uses. The manifest retains
 `quoi / ADJ`; rows 88 and 89 own its interrogative and relative pronoun uses.
+
+The [primary-source follow-up](quoi-adj-research.md) verifies the original
+Lexique annotation, its category rules and TLFi's classifications. The project
+owner approved its #78/#82 scope amendment; the annotation exception has zero
+admitted content fields.
 
 | Primary source | Exact evidence | Finding |
 | --- | --- | --- |

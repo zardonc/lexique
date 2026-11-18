@@ -64,6 +64,8 @@ pnpm test:speech:cache   # Windows 缓存发布 / 并发 / 重解析点；执行
 pnpm test:desktop:lib    # 原生桌面库全套测试；顺序八次执行，每次硬限 60 秒
 ```
 
+后端计时诊断：为同一提交的本机或 CI 测试步骤设置 `RUST_TEST_NOCAPTURE=1`，记录成功 V03 样本的耗时和实际争用结果。预编译独立进行，测试执行保持现有 60 秒硬限；复核按[计时与争用规则](CODING_STANDARDS.md#timing-and-contention-tests)核对计时边界和争用证据。
+
 已有 portable 交付会被保留；再次交付可运行 `pnpm desktop:portable --output-dir <新目录>`。构建入口会在最终进程边界追加 Cargo 的 `--locked`，无需经 pnpm 手动传递分隔符。
 
 文档检查与 #24 设计验证共用格式及链接规则，检查 Git 跟踪的 Markdown。`vendor/` 与 `.gitattributes` 标注 `-text` 的原样许可保持上游格式；`target/`、`.tooling/` 的本机证据链接及 `AGENTS.md` 的可选环境指针单独计数。CI 独立运行文档检查及其回归；Windows portable job 预编译缓存和桌面库测试后分别执行；缓存测试有 60 秒硬限，桌面库全套按其余测试、备份测试、普通恢复测试、三项强制退出循环测试各自独立执行、回滚强制退出循环测试及独立启动／原始文件恢复测试分为八次顺序执行，每次显式单线程并保持 60 秒硬限。
