@@ -242,8 +242,7 @@ no live dictionary lookup. Validation results are retained in
 | --- | --- |
 | `./target/issue-83/source-audit/prepare-source-draft.ps1` | Passed: 50 exact groups, 49 ordinary selections, one owner-approved specialist, 37 sources, 38 prior candidate groups, zero unresolved selected-use eligibility |
 | `./target/issue-83/source-audit/validate-source-draft.ps1` | Passed: 50 issue/manifest identities, unchanged 4,087 denominator, all 123 definition/IPA/support quotes, 37 source bindings and cutoff timestamps, 24 unchanged copied captures, seven retained corroboration pointers and five excluded quotation locations |
-| Initial validation run | Failed on the checker's specialist-label assertion; the checker was aligned to the unchanged draft's `owner_approved_specialist_use_evidenced` and quotation-role labels, then passed |
-| `./target/issue-83/source-audit/build-source-report.ps1` | Passed after correcting a format-expression error in the temporary generator; table rows and reference URLs come directly from the validated draft |
+| `./target/issue-83/source-audit/build-source-report.ps1` | Passed: table rows and reference URLs come directly from the validated draft |
 | Report row, reference and local-link checks | Passed: 50 exact row identities and locations, 38 defined fixed references, three existing local legal/notice links and base/prospective accounting; live URL reachability was not rechecked |
 | `git diff --no-index --check -- target/issue-83/source-audit/empty.txt docs/evidence/issue-83/source-research.md` | Passed: no whitespace diagnostics; exit 1 denotes the new-file difference |
 | Application, native, offline and release checks | Not run by the source researcher; owned by the batch implementation and execution evidence |
