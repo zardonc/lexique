@@ -313,10 +313,9 @@ async function contentBatch() {
   assert.equal(groups.length, 50);
   const saved = [];
   for (const [index, key] of [...new Set(groups.map((group) => group.headword))].entries()) {
-    const lookup = await invoke('dictionary_lookup', { key, dictionary_id: 'builtin-core' });
-    assert.equal(lookup.source.version, curation.content_version);
-    admitted(lookup, key);
-    saved.push(await save(key, `batch-${issue}-${index}`));
+    const result = await save(key, `batch-${issue}-${index}`);
+    assert.equal(result.record.reference.version, curation.content_version);
+    saved.push(result);
   }
   await query(saved[0].record.headword);
   await fields(page.locator('.dictionary-entry'), saved[0].record.digest.map((item) => item.core));
