@@ -3,9 +3,11 @@
 The admitted content for [#82](https://github.com/zardonc/lexique/issues/82) retains the exact
 frozen identities in rows 0051–0100. It supplies **47 new senses / 188 fields**
 and retains **two unchanged pilot groups / eight fields**, giving **49 groups /
-196 accepted fields**. Frozen row 87, `quoi/ADJ`, remains unresolved with four
-missing fields; #82 remains incomplete. The [independent binding review](quality-review.md)
-records the source gap for that exact adjective group.
+196 accepted fields**. Frozen row 87, `quoi/ADJ`, has zero admitted fields under
+the annotation exception approved on 2026-11-18 UTC. #82 is complete within its
+amended scope, with 49/50 content coverage and one separately reported exception.
+The [independent binding review](quality-review.md) records the source gap for
+that exact adjective group.
 
 The source base is `39e79a1`. Its prior resource contains 57 groups, including
 56 ordinary groups and the approved `ça/NOM` specialist exception. The
@@ -85,7 +87,7 @@ selected 2026 content version.
 | 84 | `moi/PRO:per` | Stressed first-person singular pronoun | [39771617][moi], 19 / 18 |
 | 85 | `si/ADV` | Degree or intensity | [39823641][si], 223 / 216 |
 | 86 | `si/CON` | Condition or supposition | [39823641][si], 22 / 21 |
-| 87 | `quoi/ADJ` | Unresolved | [39880332][quoi] attests other classes; no adjective field selected |
+| 87 | `quoi/ADJ` | Approved annotation exception | [39880332][quoi] attests other classes; [primary-source follow-up](quoi-adj-research.md) verifies the original `ADJ` annotation and records the approved scope amendment; zero admitted adjective fields |
 | 88 | `quoi/PRO:int` | Interrogative object referring to things | [39880332][quoi], 9 / 8 |
 | 89 | `quoi/PRO:rel` | Relative after a preposition, referring only to things | [39880332][quoi], 102 / 101 |
 | 90 | `devoir/NOM` | Duty or obligation | [39864895][devoir], 170 / 169 |

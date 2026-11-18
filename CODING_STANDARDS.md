@@ -23,3 +23,11 @@ individual commits when commit boundaries, recovery, or durability are the
 behavior being tested.
 
 Review fixture setup cost as part of the existing backend execution budget.
+
+## Timing and contention tests
+
+Define the operation each timer measures and its clock boundaries. Keep fixture
+and worker readiness outside the measured operation. For contention tests,
+require observable lock contention for every counted sample. Enforce the
+specified timing limits on every executed attempt, including attempts without
+contention.

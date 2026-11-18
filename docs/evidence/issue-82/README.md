@@ -2,9 +2,17 @@
 
 [Issue #82](https://github.com/zardonc/lexique/issues/82) retains all fifty frozen
 targets in rows 0051–0100. **49 groups / 196 fields are accepted**: 47 new groups
-and the two unchanged `bien` pilot groups. Frozen row 87, `quoi/ADJ`, retains
-four explicit unresolved fields and has no admitted adjective sense. The project
-owner approved this partial scope; #82 remains incomplete.
+and the two unchanged `bien` pilot groups. Frozen row 87, `quoi/ADJ`, is the
+approved annotation exception with zero admitted fields. The project owner
+approved the #78/#82 scope amendment on 2026-11-18 UTC. The batch is complete
+within that scope: 49 groups with content and one annotation exception;
+content coverage remains 49/50.
+
+The [investigation of row 87](quoi-adj-research.md) confirms the
+original Lexique `ADJ` record but finds no supported modern everyday adjective
+sense. Its [approved amendment](quoi-adj-research.md#approved-scope-amendment)
+preserves the exact frozen row and denominator and reports the annotation
+exception separately from admitted content.
 
 The development resource contains **104 groups / 416 reviewed fields**, content
 version `core-82-v1`, resource format 1. All 57 prior groups, their 228 fields and
@@ -12,7 +20,8 @@ provenance, and all 45 prior source records are preserved exactly. Reused groups
 count once. The fixed denominator remains 4,087 groups / 3,773 headwords: 104
 accepted and 3,983 unaccepted groups. Literal everyday coverage is 103 complete
 and 3,984 incomplete groups; the existing #81 `ça/NOM` specialist exception
-remains separate.
+remains separate. Row 87 is included in the unaccepted and everyday-incomplete
+totals, with one separately reported annotation exception.
 
 ## Content and redistribution
 
@@ -41,6 +50,12 @@ attribution and selected-content obligations.
 
 ## Verification
 
+The verified artifact predates the scope amendment and retains its original
+`scope_acceptance: incomplete` and `everyday_sense_review: incomplete` batch
+metadata. It reports row 87's four absent fields as unresolved content. The
+approved exception resolves the ticket's content requirement for that row;
+the artifact's content and missing-field counts retain their original values.
+
 Checks ran on 2026-11-17 UTC, Windows x64, in
 `C:\Users\inthe\IdeaProjects\lexique-82`, branch `codex/d2-content-002-82`,
 based on `39e79a11614d1f8e1bb7c573c837ce440fda2a7f` plus the batch changes.
@@ -68,6 +83,20 @@ Its `report.json` and `coverage.json` retain the fixed global denominator,
 separate batch and everyday acceptance, missing/unreviewed fields and size.
 The portable ZIP is **35,285,129 bytes**, SHA-256
 `868f1dae437bd2263c2728de97f9da9bea00bda444ebca63c13e55102a143d7e`.
+
+## Merge and CI
+
+[PR #171](https://github.com/zardonc/lexique/pull/171) merged as
+`7864cde9b32a2ad8d3e296a847b0539206e9162a` on 2026-11-17 UTC.
+The [pull-request run](https://github.com/zardonc/lexique/actions/runs/44195770556)
+and [push run](https://github.com/zardonc/lexique/actions/runs/44195759779)
+each passed all eleven jobs on head `a5a33c766dde409dc18ee33d4d6462eb345a7840`.
+The [main run](https://github.com/zardonc/lexique/actions/runs/44199943502)
+passed all eleven jobs on the merge commit, including the four native targets.
+
+Both Windows ARM64 head runs passed the V03 storage contention test. Its
+transaction and competing-writer limits remain 100 ms and 250 ms, and the
+backend runner retains its hard 60-second limit.
 
 ## Native lookup, saving and upgrade
 
@@ -105,8 +134,9 @@ retains its hard 60-second execution limit.
 
 ## Limits
 
-Row 87 `quoi/ADJ` and #82 remain incomplete. Learner acceptance, CEFR labels,
-the remaining 3,983 unaccepted groups, whole-machine network denial,
-other-platform execution and formal release gates remain open. These native runs
-do not execute the broader backup/resource-failure matrix recorded in
-[#80](../issue-80/README.md).
+Row 87 `quoi/ADJ` is accounted for by the approved annotation exception with
+zero admitted fields. Learner acceptance, CEFR labels, the remaining 3,983
+groups without admitted content, whole-machine network denial,
+hands-on application checks on other platforms and formal release gates remain
+open. These native runs do not execute the broader backup/resource-failure
+matrix recorded in [#80](../issue-80/README.md).
