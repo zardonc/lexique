@@ -43,6 +43,7 @@ the resolved interpreter is Python 3.14.10. Logs are retained under
 | Selected `écouter` four-field regression | Red before the selected use existed; green after its source-bound fields were added. `tdd-02-red.log`, `tdd-02-green.log` |
 | Candidate coverage and explicit interrogative gap | Red before the remaining candidates/gap existed; green at 49 senses / 196 fields and four incomplete row-305 fields. `tdd-03-red.log`, `tdd-03-green.log` |
 | Focused batch tests | Four tests passed, including refusal to publish pending source material. `focused-tests.log` |
+| Post-integration focused tests | Seven tests passed across #87 and #89; source/record preservation and the expected pending-review conversion failure remained unchanged. `post-merge-focused-tests.log`, `post-merge-validation.log`, `post-merge-conversion.log` |
 | Real converter | Expected failure: `Unreviewed field source or incompatible licence`; no batch SQLite produced. `conversion-pending.log` |
 | Fixed-span, candidate and predecessor preservation checks | Passed. `source-validation.json`, `preservation.json` |
 | Diff and local evidence links | Passed. `diff-check.log`, `local-links.json` |
@@ -66,3 +67,8 @@ inputs, artifact coverage/size and native lookup/save/offline/restart checks
 remain pending. The shared integration tip is merged before delivery; the
 coordinator owns combined version/counters, runtime validation, final coverage,
 PR and tracker operations.
+
+The branch incorporates integration tip `d55b6bd`, including native batch test
+infrastructure `b8931d4`, trusted-save reuse `5f39b97` and #89's pending content.
+Merge resolution retained complete records from both branches byte-for-byte,
+combined their `ROWS` additions and refreshed the local checksum manifest.

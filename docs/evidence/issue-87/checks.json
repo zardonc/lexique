@@ -92,5 +92,18 @@
     "native": {
       "status": "pending_coordinator"
     }
+  },
+  "post_integration": {
+    "integration_tip": "d55b6bd",
+    "test_infrastructure": "b8931d4",
+    "focused_tests": {
+      "command": "uv run --python 3.14 python -B -X utf8 -m unittest discover -s scripts -p test_core_batch_8[79].py -v",
+      "status": "passed",
+      "tests": 7
+    },
+    "prior_and_parallel_records": "unchanged complete serialized records verified from both merge inputs",
+    "source_validation": "passed",
+    "conversion": "expected pending-review failure; no artifact",
+    "native": "pending coordinator"
   }
 }
