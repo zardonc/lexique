@@ -48,7 +48,7 @@ pnpm rust:check
 pnpm rust:test:build      # 先编译测试，避免将首次编译计入运行预算
 pnpm test:rust            # 真正执行后端测试，硬性 60 秒超时并终止进程树
 pnpm core:prepare         # 从逐字段独立复核的选编输入生成 D2 只读核心及来源材料
-pnpm test:core            # 完整性、许可／署名材料、覆盖缺口及可复现转换检查
+pnpm test:core            # 完整性、材料中的准入计数、许可／署名材料、覆盖缺口及可复现转换检查
 pnpm mdict:test:build     # 独立 MDX/MDD 兼容探针；预编译可公开夹具检查
 pnpm test:mdict           # 实际查询与配对媒体／失败检查，同一 60 秒硬限
 pnpm wasm:build
