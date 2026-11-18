@@ -1,0 +1,39 @@
+{
+  "base_commit": "42c720556fd1195cca39ba704761877d1c0df48a",
+  "groups": 50,
+  "draft_senses": 50,
+  "draft_fields": 200,
+  "new_groups": 50,
+  "reused_groups": 0,
+  "accepted_groups": 0,
+  "accepted_fields": 0,
+  "pending_quality_fields": 200,
+  "source_binding_gaps": [
+    270,
+    274
+  ],
+  "captured_wiktionnaire_pages": 47,
+  "selected_source_pages": 46,
+  "source_span_and_revision_check": "passed against the retained first-party API captures for all 200 fields",
+  "preservation": [
+    {
+      "file": "curated-inputs.json",
+      "pre_existing_records": "unchanged, exact original bytes retained"
+    },
+    {
+      "file": "field-review.json",
+      "pre_existing_records": "unchanged, exact original bytes retained"
+    },
+    {
+      "file": "selected-source-context.json",
+      "pre_existing_records": "unchanged, exact original bytes retained"
+    },
+    {
+      "file": "selected-source-excerpts.json",
+      "pre_existing_records": "unchanged, exact original bytes retained"
+    }
+  ],
+  "original_pilot_rows_360_422_423": "exact original record bytes preserved",
+  "native": "pending coordinator integration and independent admission",
+  "release": "incomplete"
+}
