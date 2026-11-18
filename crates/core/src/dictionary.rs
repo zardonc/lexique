@@ -70,6 +70,7 @@ impl CoreSense {
                     | "VER"
                     | "ADV"
                     | "ADJ"
+                    | "ONO"
                     | "PRO:per"
                     | "PRE"
                     | "ART:def"

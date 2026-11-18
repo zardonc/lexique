@@ -34,6 +34,16 @@ const membership = [[1, 'être', 'AUX'], [2, 'être', 'NOM'], [3, 'être', 'VER'
   [88, 'quoi', 'PRO:int'], [89, 'quoi', 'PRO:rel'], [90, 'devoir', 'NOM'], [91, 'devoir', 'VER'],
   [92, "s'", 'CON'], [93, "s'", 'PRO:per'], [94, 'oui', 'ADV'], [95, 'ils', 'PRO:per'],
   [96, 'comme', 'ADV'], [97, 'comme', 'CON'], [98, 'se', 'PRO:per'], [99, 'venir', 'VER'], [100, 'sur', 'ADJ'],
+  [101, 'sur', 'PRE'], [102, 'toi', 'PRO:per'], [103, 'ici', 'ADV'], [104, 'rien', 'PRO:ind'], [105, 'ma', 'ADJ:pos'],
+  [106, 'lui', 'PRO:per'], [107, 'bon', 'ADJ'], [108, 'bon', 'ADV'], [109, 'bon', 'NOM'], [110, 'bon', 'ONO'],
+  [111, 'là', 'ADV'], [112, 'là', 'ONO'], [113, 'suivre', 'VER'], [114, 'pourquoi', 'ADV'], [115, 'pourquoi', 'CON'],
+  [116, 'parler', 'NOM'], [117, 'parler', 'VER'], [118, 'prendre', 'VER'], [119, 'cette', 'ADJ:dem'], [120, 'votre', 'ADJ:pos'],
+  [121, 'quand', 'CON'], [122, 'son', 'ADJ:pos'], [123, 'son', 'NOM'], [124, 'alors', 'ADV'], [125, 'ton', 'ADJ:pos'],
+  [126, 'ton', 'NOM'], [127, 'chose', 'NOM'], [128, 'par', 'NOM'], [129, 'par', 'PRE'], [130, 'croire', 'VER'],
+  [131, 'aimer', 'VER'], [132, 'falloir', 'VER'], [133, 'comment', 'ADV'], [134, 'comment', 'CON'], [135, 'comment', 'ONO'],
+  [136, 'très', 'ADV'], [137, 'ou', 'CON'], [138, 'passer', 'VER'], [139, 'penser', 'VER'], [140, 'aussi', 'ADV'],
+  [141, 'jamais', 'ADV'], [142, 'même', 'ADJ'], [143, 'même', 'ADV'], [144, 'même', 'PRO:ind'], [145, 'attendre', 'VER'],
+  [146, 'petit', 'ADJ'], [147, 'petit', 'ADV'], [148, 'petit', 'NOM'], [149, 'trouver', 'VER'], [150, 'laisser', 'VER'],
   [360, "aujourd'hui", 'ADV'], [422, 'fort', 'ADJ'], [423, 'fort', 'ADV'],
   [483, 'coeur', 'NOM'], [1911, 'côte', 'NOM']];
 assert.deepEqual(curation.groups.map((group) => [group.frozen_row, group.headword, group.lexique_cgram]), membership);
@@ -210,7 +220,7 @@ async function rate(record) {
 
 async function pilot() {
   assert.deepEqual((await invoke('dictionary_settings')).map((item) => item.id), ['builtin-core', 'builtin', 'builtin-fra-eng']);
-  assert.equal((await invoke('dictionary_lookup', { key: 'être', dictionary_id: 'builtin-core' })).source.version, 'core-82-v1');
+  assert.equal((await invoke('dictionary_lookup', { key: 'être', dictionary_id: 'builtin-core' })).source.version, 'core-83-v1');
   await invoke('dictionary_settings', { order: ['builtin', 'builtin-fra-eng', 'builtin-core'] });
   const before = readState(destination);
   for (const field of ['digest', 'reference']) await rejected('vocabulary_save', {
@@ -260,10 +270,23 @@ async function pilot() {
   compareLearning(readState(destination), persisted);
   assert.deepEqual(await invoke('vocabulary_find', { headword: 'e\u0302tre' }), edited.record);
   await openRecord(edited.record); await page.screenshot({ path: join(destination, 'native-core-details.png'), fullPage: true });
-  const batchRecord = saved.find((value) => value.record.headword === 'pour').record;
-  assert.deepEqual(await invoke('vocabulary_find', { headword: 'pour' }), batchRecord);
+  const batchRecord = saved.find((value) => value.record.headword === 'bon').record;
+  assert.deepEqual(await invoke('vocabulary_find', { headword: 'bon' }), batchRecord);
   await openRecord(batchRecord);
-  await page.screenshot({ path: join(destination, 'native-core-batch-pour-details.png'), fullPage: true });
+  await page.screenshot({ path: join(destination, 'native-core-batch-bon-details.png'), fullPage: true });
+  for (const key of ['bon', 'petit', 'par']) {
+    const value = saved.find((item) => item.record.headword === key).record;
+    await query(key); await fields(page.locator('.dictionary-entry'), value.digest.map((item) => item.core));
+    await page.screenshot({ path: join(destination, `native-core-batch-${key}-lookup.png`), fullPage: true });
+  }
+  await query('bon');
+  for (const [locale, label] of [['en', 'Interjection / onomatopoeia'], ['fr', 'Interjection / onomatopée'], ['zh', '感叹词／拟声词']]) {
+    await page.getByRole('banner').getByRole('combobox').first().selectOption(locale);
+    await expect(page.locator('.dictionary-entry .core-sense[data-pos="ONO"] h4')).toHaveText(`${label} (ONO)`);
+    await fields(page.locator('.dictionary-entry'), batchRecord.digest.map((item) => item.core));
+    await page.screenshot({ path: join(destination, `native-core-batch-bon-${locale}.png`), fullPage: true });
+  }
+  await page.getByRole('banner').getByRole('combobox').first().selectOption('en');
   const possessive = saved.find((value) => value.record.headword === 'mon').record;
   await query('mon');
   for (const [locale, label] of [['en', 'Possessive adjective'], ['fr', 'Adjectif possessif'], ['zh', '物主形容词']]) {
@@ -277,8 +300,8 @@ async function pilot() {
     await rejected('speech_generate', { vocabularyId: edited.record.id, operation: 'native-79-no-speech' });
     assert.deepEqual((await invoke('vocabulary_find', { headword: 'être' })).digest, edited.record.digest);
   }
-  evidence.checks.push({ check: '49 of 50 batch-82 groups / 196 fields; row 87 unresolved; 104 total groups / 416 fields; trusted provider, spelling bindings, retry, duplicate, notes, examples, FSRS and normal restart', status: 'passed' });
-  evidence.checks.push({ check: 'Batch pour noun/preposition saved fields and provenance match audited content after normal restart', status: 'passed' });
+  evidence.checks.push({ check: '50 batch-83 groups / 200 fields, including 49 everyday groups and the approved golf exception; row 87 unresolved; 154 total groups / 616 fields; trusted provider, spelling bindings, retry, duplicate, notes, examples, FSRS and normal restart', status: 'passed' });
+  evidence.checks.push({ check: 'Batch bon adjective/adverb/noun/interjection saved fields and provenance match audited content after normal restart; bon, petit and par restrictions remain readable; ONO has English, French and Chinese labels', status: 'passed' });
   evidence.checks.push({ check: 'mon/ADJ:pos lookup and saved fields remain readable with English, French and Chinese subclass labels', status: 'passed' });
 }
 
@@ -614,7 +637,7 @@ async function replacement() {
     const current = await invoke('dictionary_lookup', { key: 'être', dictionary_id: 'builtin-core' });
     assert.notEqual(current.source.version, record.reference.version);
     if (scenario === 'upgrade') {
-      assert.equal(current.source.version, 'core-82-v1');
+      assert.equal(current.source.version, 'core-83-v1');
       admitted(current, 'être');
     } else assert.notEqual(senses(current).find((sense) => sense.frozen_row === 2).meaning_zh, record.digest.find((entry) => entry.core?.frozen_row === 2).core.meaning_zh);
     await query('être'); await page.getByRole('button', { name: 'View existing record', exact: true }).click();
@@ -629,7 +652,7 @@ async function replacement() {
   const committed = previous.saves.find((operation) => operation.record_id === record.id && operation.outcome === 'created');
   assert.equal((await invoke('vocabulary_save', { request: committed.request, dictionary_id: 'builtin-core' })).outcome, 'replayed');
   if (scenario === 'newer') await save('bien', 'newer-content');
-  if (scenario === 'upgrade') await save('pour', 'batch-82-upgrade');
+  if (scenario === 'upgrade') await save('bon', 'batch-83-upgrade');
   await openRecord(record);
   evidence.checks.push({ check: ['newer', 'upgrade'].includes(scenario) ? 'New resource version is visible while previous digest, progress and audio remain frozen' : `Native ${scenario} rejection preserves saved content and committed retry`, status: 'passed' });
 }

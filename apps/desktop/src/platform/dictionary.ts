@@ -30,7 +30,7 @@ const fieldSource = z.object({ title: coreText(20_000), version: coreText(20_000
 }).strict().readonly();
 export const coreSenseSchema = z.object({
   sense_id: coreText(128), frozen_row: z.number().int().min(1).max(4_087),
-  headword: coreText(200), source_headword: coreText(200), pos: z.enum(['AUX', 'NOM', 'VER', 'ADV', 'ADJ', 'PRO:per', 'PRE', 'ART:def', 'CON', 'ADJ:num', 'ART:ind', 'PRO:ind', 'PRO:int', 'PRO:rel', 'PRO:dem', 'ADJ:ind', 'ADJ:dem', 'ADJ:pos']),
+  headword: coreText(200), source_headword: coreText(200), pos: z.enum(['AUX', 'NOM', 'VER', 'ADV', 'ADJ', 'ONO', 'PRO:per', 'PRE', 'ART:def', 'CON', 'ADJ:num', 'ART:ind', 'PRO:ind', 'PRO:int', 'PRO:rel', 'PRO:dem', 'ADJ:ind', 'ADJ:dem', 'ADJ:pos']),
   usage: coreText(20_000), definition_fr: coreText(20_000), ipa: coreText(200),
   meaning_en: coreText(20_000), meaning_zh: coreText(20_000),
   field_sources: z.object({ definition_fr: fieldSource, ipa: fieldSource,
