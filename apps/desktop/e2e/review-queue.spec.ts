@@ -22,9 +22,12 @@ test('skipping recognition opens the queued listening card without rating', asyn
   await page.getByRole('button', { name: '闪卡复习', exact: true }).click();
   await page.getByRole('region', { name: '复习卡片' }).getByRole('button', { name: '跳过', exact: true }).click();
   await expect(page.getByRole('region', { name: '复习卡片' }).locator('audio')).toBeAttached();
+  await expect.poll(async () => {
+    const calls = await page.evaluate(() => window.testNative.calls);
+    return calls.filter((call) => call.command === 'review_queue').at(-1)?.args?.skipped;
+  }).toEqual([1]);
   const calls = await page.evaluate(() => window.testNative.calls);
   expect(calls.filter((call) => call.command === 'review_rate')).toHaveLength(0);
-  expect(calls.filter((call) => call.command === 'review_queue').at(-1)?.args?.skipped).toEqual([1]);
 });
 
 test('review queue displays a card and refreshes after rating', async ({ page }) => {

@@ -68,6 +68,7 @@ test('a revision delta reuses verified bytes without replaying the current answe
 test('a mismatched delta stays visible as an error and a full response recovers it', async ({ page }) => {
   await nativeFixture(page, { review_queue: [{ value: payload(1) }, { value: payload(2, [], 0) }, { value: payload(3) }] });
   await page.goto('/'); await page.getByRole('button', { name: '闪卡复习', exact: true }).click();
+  await expect(page.getByText('待复习：21 张', { exact: true })).toBeVisible();
   await page.evaluate(() => window.testNative.emit('lexique-review-changed'));
   await expect(page.getByRole('alert')).toContainText('Queue delta revision mismatch');
   await page.getByRole('button', { name: '重试', exact: true }).click();
