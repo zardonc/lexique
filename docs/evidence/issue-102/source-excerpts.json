@@ -5008,7 +5008,7 @@
       "source_headword": "bien",
       "frozen_headword": "ben",
       "relation": "colloquial adverb spelling with degree meaning from bien",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
       "new_runtime_aliases": [],
@@ -5040,14 +5040,16 @@
           "column_1_based": 1,
           "raw_source_excerpt": "# [[beaucoup|Beaucoup]] ; [[fortement]] ; [[très]]."
         }
-      ]
+      ],
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "frozen_row": 1062,
       "frozen_headword": "a",
       "source_headword": "a",
       "relation": "French letter-name section labelled masculine invariable; lexical noun mapping",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
       "new_runtime_aliases": [],
@@ -5088,6 +5090,141 @@
           "column_1_based": 1,
           "raw_source_excerpt": "# Première [[lettre]] et première [[voyelle]] de l’[[alphabet]] français."
         }
+      ],
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
+    },
+    {
+      "frozen_row": 1057,
+      "frozen_headword": "mme",
+      "source_headword": "Mme",
+      "relation": "Lowercase dictionary/index key for French title abbreviation Mme (Madame), not an assertion that lowercase mme is standard running-text typography.",
+      "status": "passed_for_source_binding_pending_author_fields",
+      "alias_admission": "not_admitted",
+      "relation_role": "source_binding_only",
+      "new_runtime_aliases": [],
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true,
+      "reason": "Cambridge publisher entry indexes mme, labels it an abbreviation of madame, records madam and uses Mme in its example. Lexique 3.83 independently identifies exact mme/NOM/feminine singular with phon madam. Fixed Wiktionnaire Mme has the French noun title/IPA. OQLF confirms standard written M + lowercase me and its title-use restrictions.",
+      "lexique_evidence": {
+        "path": "resources/lexique-3.83/Lexique383.tsv.gz",
+        "line_1_based": 83163,
+        "edition": "3.83",
+        "ortho": "mme",
+        "phon": "madam",
+        "lemme": "mme",
+        "cgram": "NOM",
+        "genre": "f",
+        "nombre": "s",
+        "columns_1_based": {
+          "ortho": 1,
+          "phon": 2,
+          "lemme": 3,
+          "cgram": 4,
+          "genre": 5,
+          "nombre": 6
+        }
+      },
+      "evidence": [
+        {
+          "purpose": "Exact spelling/POS boundary",
+          "source_id": "b102_fr_193650",
+          "revid": 36554529,
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mme&oldid=36554529",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=Mme&action=history",
+          "line_1_based": 3,
+          "column_1_based": 1,
+          "raw_source_excerpt": "== {{langue|fr}} =="
+        },
+        {
+          "purpose": "Exact spelling/POS boundary",
+          "source_id": "b102_fr_193650",
+          "revid": 36554529,
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mme&oldid=36554529",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=Mme&action=history",
+          "line_1_based": 5,
+          "column_1_based": 1,
+          "raw_source_excerpt": ": {{date|lang=fr}} {{abréviation|fr|de=Madame|texte='''M'''ada'''me'''}}."
+        },
+        {
+          "purpose": "Exact spelling/POS boundary",
+          "source_id": "b102_fr_193650",
+          "revid": 36554529,
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mme&oldid=36554529",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=Mme&action=history",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "=== {{S|nom|fr}} ==="
+        },
+        {
+          "purpose": "Exact spelling/POS boundary",
+          "source_id": "b102_fr_193650",
+          "revid": 36554529,
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mme&oldid=36554529",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=Mme&action=history",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''Mme''' {{pron|ma.dam|fr}} {{f}}"
+        },
+        {
+          "purpose": "Exact spelling/POS boundary",
+          "source_id": "b102_fr_193650",
+          "revid": 36554529,
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mme&oldid=36554529",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=Mme&action=history",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[Madame]] (comme [[titre]])."
+        }
+      ],
+      "external_evidence": [
+        {
+          "id": "b102_corroboration_cambridge_mme",
+          "url": "https://dictionary.cambridge.org/fr/dictionnaire/francais-anglais/mme",
+          "title": "Cambridge Dictionary, French–English GLOBAL entry mme",
+          "attribution": "Cambridge University Press & Assessment; underlying GLOBAL dictionary © 2018 K Dictionaries Ltd",
+          "version": "No publisher revision ID exposed; fixed original HTML capture",
+          "captured_at_utc": "2026-11-19T21:41:41.845133+00:00",
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-102\\target\\issue-102\\reviewer-primary\\cambridge.html",
+          "spans": [
+            {
+              "line_1_based": 790,
+              "column_1_based": 54,
+              "raw_source_excerpt": "<h2 class=\"tw-bw dhw dpos-h_hw di-title \">mme</h2>"
+            },
+            {
+              "line_1_based": 790,
+              "column_1_based": 316,
+              "raw_source_excerpt": "<span class=\"ipa dipa\">madam</span>"
+            },
+            {
+              "line_1_based": 806,
+              "column_1_based": 297,
+              "raw_source_excerpt": "title=\"madame\" rel=\"\">madame</a>"
+            },
+            {
+              "line_1_based": 808,
+              "column_1_based": 328,
+              "raw_source_excerpt": "Mme ou Mlle"
+            }
+          ],
+          "rights_boundary": "Proprietary dictionary: citation and spelling/typography corroboration only; no publisher gloss, translation or example is admitted as a dictionary field."
+        },
+        {
+          "id": "b102_corroboration_oqlf_titles",
+          "url": "https://vitrinelinguistique.oqlf.gouv.qc.ca/21435/les-abreviations-et-les-symboles/les-abreviations/cas-particuliers-dabreviations/abreviation-de-madame-de-mademoiselle-et-de-monsieur",
+          "title": "OQLF, Abréviation de madame, de mademoiselle et de monsieur",
+          "attribution": "Office québécois de la langue française",
+          "version": "Fixed retrieved text capture; no page revision ID exposed",
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-102\\target\\issue-102\\reviewer-primary\\web-authorities.json",
+          "source_lines_0_based": [
+            4,
+            11,
+            22
+          ],
+          "finding": "Mme uses uppercase M, lowercase me, no abbreviation point; normally before a third person’s name/function. Direct address and letter salutations use the full title.",
+          "rights_boundary": "Citation and usage corroboration only; no OQLF prose supplies dictionary fields."
+        }
       ]
     }
   ],
@@ -5096,7 +5233,7 @@
       "frozen_row": 1051,
       "headword": "s",
       "pos": "PRO:per",
-      "reason": "The French bare s article has only a letter section. Personal-pronoun meaning is supported for s’ as elided se, not exact bare s. No sourced omission-of-apostrophe relationship established.",
+      "reason": "Independently confirmed: exact French s revision 39772394 has a letter section at lines 50–54; apostrophized s’ separately abbreviates se. Neither establishes a bare s personal pronoun or an omitted-apostrophe spelling relation. Lexique exact s/PRO:per has phon Es, the letter pronunciation, and supplies no valid pronoun IPA. Owner scope decision or new exact-spelling evidence is required.",
       "fields_pending": [
         "french_definition",
         "ipa",
@@ -5104,7 +5241,7 @@
         "chinese"
       ],
       "owner_approved_exception": false,
-      "independent_confirmation": "pending",
+      "independent_confirmation": "confirmed_source_gap",
       "evidence": [
         {
           "purpose": "Exact spelling/POS boundary",
@@ -5216,13 +5353,14 @@
           "column_1_based": 1,
           "raw_source_excerpt": "# [[pronom personnel|Pronom personnel]] de la troisième personne des deux [[genre]]s et des deux [[nombre]]s, utilisé comme [[complément d’objet]] d’un [[verbe]] [[transitif]] [[direct]] ou [[indirect]]."
         }
-      ]
+      ],
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger"
     },
     {
       "frozen_row": 1057,
       "headword": "mme",
       "pos": "NOM",
-      "reason": "Exact lowercase mme is a translingual ISO code for Mae, without a French noun section. French capitalized Mme supports Madame abbreviation; no lowercase French spelling bridge established.",
+      "reason": "Lowercase-key relation to French title Mme is independently supported by Cambridge, Lexique 3.83 and fixed Wiktionnaire Mme. Four sourced FR/IPA/EN/ZH fields and complete standard-written-title restrictions still need an author draft followed by a separate independent check. No new content is accepted and no scope exception is asserted.",
       "fields_pending": [
         "french_definition",
         "ipa",
@@ -5230,7 +5368,7 @@
         "chinese"
       ],
       "owner_approved_exception": false,
-      "independent_confirmation": "pending",
+      "independent_confirmation": "passed_spelling_relation_pending_content",
       "evidence": [
         {
           "purpose": "Exact spelling/POS boundary",
@@ -5322,7 +5460,9 @@
           "column_1_based": 1,
           "raw_source_excerpt": "# [[Madame]] (comme [[titre]])."
         }
-      ]
+      ],
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "replacement_needs": "Author four fields using eligible fixed French title sources, with standard capitalization/construction restrictions; separate reviewer must check the new exact text."
     }
   ]
 }

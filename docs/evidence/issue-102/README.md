@@ -1,8 +1,8 @@
-# Issue #102 author handoff
+# Issue #102 independent reviewer handoff
 
-All **50 frozen groups at rows 1051–1100** are retained. **48 groups / 192 FR/IPA/EN/ZH fields** have complete source-bound candidates. Two exact spellings remain blocked, with eight fields without eligible candidates. Independent admission is pending for every field; this handoff admits **zero groups / zero fields**. The denominator remains **4,087 groups**.
+All **50 frozen groups at rows 1051–1100** are retained. **48 groups / 192 exact FR/IPA/EN/ZH fields** are independently accepted. Eight fields remain missing; batch admission is pending. There is no approved exception or runtime alias. The denominator remains **4,087 groups**.
 
-[Groups](groups.json) and [review candidates](review-candidates.json) preserve the exact memberships and frequency strings. The seven-file handoff comprises groups, [sources](sources.json), [field review](field-review.json), [source context](source-context.json), [source excerpts](source-excerpts.json), [reuse](reuse.json) and [admission](admission.json). Reviewer identities and accepted texts are unset. [Independent review](independent-review.md) records the pending boundary; [source research](source-research.md) explains selections, rights and spelling restrictions.
+[Groups](groups.json) contains accepted content; [review candidates](review-candidates.json) preserves the author's 50-group draft, frequencies and original pending statuses. The seven-file handoff comprises groups, [sources](sources.json), [field review](field-review.json), [source context](source-context.json), [source excerpts](source-excerpts.json), [reuse](reuse.json) and [admission](admission.json). [Independent review](independent-review.md) records every acceptance boundary, blocker proof and validation; [rights](rights.json) identifies the required notices. The original [source research](source-research.md) records author selections; the independent decision supersedes its pending-review and lowercase-spelling conclusions.
 
 ## Fixed original evidence
 
@@ -10,9 +10,9 @@ All **50 frozen groups at rows 1051–1100** are retained. **48 groups / 192 FR/
 
 `C:/Users/inthe/IdeaProjects/lexique-batch-102/target/issue-102/`
 
-The `sources/` directory uses unique page-ID filenames for case-distinct titles. These are actual current API-selected revisions, not an October cutoff. [Rights](rights.json) records fixed authorities and imported original layers. Source excerpts retain one-based lines and columns; unrelated example prose stays in the local captures.
+The `sources/` directory uses unique page-ID filenames for case-distinct titles. The independent reviewer refetched all 56 fixed revisions and compared complete original API/wikitext, IDs, titles, timestamps and last editors. [Rights](rights.json) records checked authorities and selected original layers. Source excerpts retain one-based lines and columns; unrelated example prose stays in the local captures. New primary `mme/Mme` corroboration and exact capture paths are in the spelling-relation records.
 
-## Author verification
+## Author-stage verification
 
 ```powershell
 uv run --python 3.14.10 --no-project python -B -X utf8 -m unittest discover -s scripts -p test_core_batch_102.py
@@ -24,6 +24,6 @@ The focused resource test had a retained missing-candidate RED before the handof
 
 ## Blockers and remaining gates
 
-Row **1051 `s/PRO:per`** has no established bare-spelling pronoun source. Row **1057 `mme/NOM`** has no established lowercase French noun binding. Each retains zero fields, four missing fields, no approved exception and pending independent confirmation. Their fixed-source evidence is in [source excerpts](source-excerpts.json) and [admission](admission.json).
+Row **1051 `s/PRO:per`** has an independently confirmed bare-spelling pronoun source gap. Row **1057 `mme/NOM`** has a supported lowercase dictionary-key relationship to French `Mme`, but its four fields need an author draft and a separate independent check. Each retains zero fields, four missing fields and no approved exception. [Independent review](independent-review.md), [source excerpts](source-excerpts.json) and [admission](admission.json) record the proof and replacement needs. `ben/NOM` passes for modern slang trousers `/bɛn/`, with the botanical sense excluded.
 
-Independent field/usage/rights review, any owner scope decision, shared conversion/notices, native lookup/trusted save/reopen and final integration verification remain pending. Shared canonical resource files and learning data are outside this authored change.
+The 192 candidate fields passed independent field/usage/selected-text rights review. Remaining source/author work, any owner scope decision, shared conversion/actual notices, native lookup/trusted save/reopen and final integration verification remain pending. Shared canonical resource files and learning data are outside this review change.
