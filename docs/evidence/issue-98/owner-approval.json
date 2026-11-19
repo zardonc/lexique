@@ -1,0 +1,25 @@
+{
+  "approved_by": "project_owner",
+  "approved_on": "2026-11-18",
+  "approval_timezone": "America/Vancouver",
+  "decision": "Approve these four annotation exceptions (Recommended)",
+  "source": "Explicit user reply to the four-row scope question in this implementation session",
+  "annotations": [
+    {
+      "issue": 98,
+      "frozen_row": 859,
+      "headword": "l",
+      "pos": "ART:def",
+      "admitted_fields": 0
+    },
+    {
+      "issue": 98,
+      "frozen_row": 860,
+      "headword": "l",
+      "pos": "PRO:per",
+      "admitted_fields": 0
+    }
+  ],
+  "preservation": "All frozen identities, frequencies and the 4087-group denominator stay unchanged. Each annotation retains four missing fields and is counted separately from admitted content. Existing apostrophized records are unchanged.",
+  "source_pointer": "C:\\Users\\inthe\\.codex\\tmp\\lexique-spec-90-99\\owner-approved-annotations.json"
+}
