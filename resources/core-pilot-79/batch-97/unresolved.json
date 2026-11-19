@@ -1,0 +1,146 @@
+[
+  {
+    "frozen_row": 816,
+    "headword": "t",
+    "lexique_cgram": "PRO:per",
+    "subtitle_lemma_per_million": "119.43",
+    "subtitle_pos_per_million": "88.47",
+    "senses": [],
+    "status": "unresolved_no_eligible_evidenced_selected_use",
+    "reason": "No evidenced French bare-t personal-pronoun spelling relationship. The t texting sense is a verb flexion; the personal-pronoun section on that page is Neapolitan.",
+    "annotation_exception_decision": null,
+    "evidence": [
+      {
+        "title": "t",
+        "revid": 39772410,
+        "url": "https://fr.wiktionary.org/w/index.php?title=t&oldid=39772410",
+        "selected_spans": [
+          {
+            "line_1_based": 52,
+            "raw_source_excerpt": "=== {{S|lettre|fr}} ==="
+          },
+          {
+            "line_1_based": 54,
+            "raw_source_excerpt": "'''t''' {{pron|te|fr}} {{m}} {{invar}}"
+          },
+          {
+            "line_1_based": 55,
+            "raw_source_excerpt": "# Vingtième lettre et seizième consonne de l’alphabet (minuscule)."
+          },
+          {
+            "line_1_based": 78,
+            "raw_source_excerpt": "=== {{S|verbe|fr|flexion}} ==="
+          },
+          {
+            "line_1_based": 79,
+            "raw_source_excerpt": "'''t''' {{pron|tɛ|fr}}, {{pron|te|fr}}"
+          },
+          {
+            "line_1_based": 80,
+            "raw_source_excerpt": "# {{argot internet|fr}} {{SMS|fr}} T’[[es#fr|es]], tu es."
+          },
+          {
+            "line_1_based": 223,
+            "raw_source_excerpt": ": {{ébauche-étym|nap}}"
+          },
+          {
+            "line_1_based": 225,
+            "raw_source_excerpt": "=== {{S|pronom personnel|nap}} ==="
+          }
+        ]
+      },
+      {
+        "title": "t’",
+        "revid": 39321617,
+        "url": "https://fr.wiktionary.org/w/index.php?title=t%E2%80%99&oldid=39321617",
+        "relationship_status": "not_established_for_bare_frozen_spelling",
+        "selected_spans": [
+          {
+            "line_1_based": 7,
+            "raw_source_excerpt": "=== {{S|pronom personnel|fr|flexion}} ==="
+          },
+          {
+            "line_1_based": 8,
+            "raw_source_excerpt": "'''t’''' {{pron|t|fr}}"
+          },
+          {
+            "line_1_based": 9,
+            "raw_source_excerpt": "# {{term|Devant un verbe}} ''Élision du pronom personnel ''[[te#fr-pronom-pers|te]]'' devant une voyelle ou un h muet."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "frozen_row": 849,
+    "headword": "c",
+    "lexique_cgram": "PRO:dem",
+    "subtitle_lemma_per_million": "114.63",
+    "subtitle_pos_per_million": "46.69",
+    "senses": [],
+    "status": "unresolved_no_eligible_evidenced_selected_use",
+    "reason": "No evidenced bare-c demonstrative-pronoun spelling relationship. The c texting senses abbreviate whole verb forms c’est and s’est, not ce alone.",
+    "annotation_exception_decision": null,
+    "evidence": [
+      {
+        "title": "c",
+        "revid": 39771203,
+        "url": "https://fr.wiktionary.org/w/index.php?title=c&oldid=39771203",
+        "selected_spans": [
+          {
+            "line_1_based": 75,
+            "raw_source_excerpt": "=== {{S|lettre|fr}} ==="
+          },
+          {
+            "line_1_based": 77,
+            "raw_source_excerpt": "'''c''' {{pron|se|fr}} {{m}} {{invar}}"
+          },
+          {
+            "line_1_based": 78,
+            "raw_source_excerpt": "# Troisième [[lettre]] de l’[[alphabet]]."
+          },
+          {
+            "line_1_based": 128,
+            "raw_source_excerpt": "=== {{S|verbe|fr|flexion|num=1}} ==="
+          },
+          {
+            "line_1_based": 129,
+            "raw_source_excerpt": "'''c''' {{pron|sɛ|fr}}"
+          },
+          {
+            "line_1_based": 130,
+            "raw_source_excerpt": "# {{argot internet|fr}} {{SMS|fr}} Abréviation de ''{{lien|c’est|fr}}''."
+          },
+          {
+            "line_1_based": 134,
+            "raw_source_excerpt": "# {{argot internet|fr}} {{SMS|fr}} Abréviation de ''{{lien|s’|fr}}{{lien|est|fr}}''."
+          },
+          {
+            "line_1_based": 137,
+            "raw_source_excerpt": "=== {{S|verbe|fr|flexion|num=2}} ==="
+          }
+        ]
+      },
+      {
+        "title": "c’",
+        "revid": 39266077,
+        "url": "https://fr.wiktionary.org/w/index.php?title=c%E2%80%99&oldid=39266077",
+        "relationship_status": "not_established_for_bare_frozen_spelling",
+        "selected_spans": [
+          {
+            "line_1_based": 7,
+            "raw_source_excerpt": "=== {{S|déterminant démonstratif|fr|num=1}} ==="
+          },
+          {
+            "line_1_based": 8,
+            "raw_source_excerpt": "'''c’''' {{pron|s|fr}}"
+          },
+          {
+            "line_1_based": 9,
+            "raw_source_excerpt": "# [[élision|Élision]] du pronom démonstratif ''[[ce]]'' devant ''[[en]]'' ainsi que les formes du verbe ''[[être]]'' ou du verbe ''[[avoir]]'' commençant par un ''e'' ou un ''é''."
+          }
+        ]
+      }
+    ]
+  }
+]
