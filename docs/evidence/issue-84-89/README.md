@@ -67,8 +67,10 @@ requires an existing WebView2 runtime and contains no TTS model.
 
 ## Rollback and remaining gates
 
-The new reader can use older resources and preserves saved digests when the
-resource changes. Older application readers reject saved records containing
+Resource rollback requires a matching application/resource pair because the
+desktop binary validates the resource against its build-fixed checksum. Saved
+digests remain frozen when resource content changes. Older application readers
+reject saved records containing
 `ADJ:int` or `PRO:pos`; rejection can fail an entire notebook/card/import
 response. Application downgrade therefore requires a compatible backup or
 continued use of the new reader. Resources and learner data remain separate.

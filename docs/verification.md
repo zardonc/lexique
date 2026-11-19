@@ -819,7 +819,11 @@ packaging/browser commit: `291b254c70246ecaa8ccb8448230ecd3d9d0968e`.
 Commands, per-batch counts, source rights and retained logs are linked from the
 [combined evidence](evidence/issue-84-89/README.md).
 
-Older application readers reject saved records with the newly supported
-grammatical subclasses; downgrade requires a compatible backup or the new
-reader. Whole-machine offline, other-platform hands-on, human learner
-acceptance, complete D2/CEFR and formal release gates remain unverified.
+Resource rollback requires a matching application/resource pair because the
+desktop binary validates the resource against its build-fixed checksum. Saved
+digests remain frozen when resource content changes. Older application readers
+reject saved records with `ADJ:int` or `PRO:pos`; rejection can fail an entire
+notebook/card/import response. Application downgrade requires a compatible
+backup or continued use of the new reader. Whole-machine offline,
+other-platform hands-on, human learner acceptance, complete D2/CEFR and formal
+release gates remain unverified.
