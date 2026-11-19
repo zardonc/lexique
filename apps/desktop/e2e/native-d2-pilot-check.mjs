@@ -283,7 +283,7 @@ async function pilot() {
 
 async function contentBatch() {
   const issue = Number(input);
-  assert.ok(Number.isInteger(issue) && issue >= 84 && issue <= 99, 'Expected batch issue 84–99');
+  assert.ok(Number.isInteger(issue) && issue >= 84 && issue <= 109, 'Expected batch issue 84–109');
   const firstRow = 151 + (issue - 84) * 50;
   const groups = curation.groups.filter((group) => group.frozen_row >= firstRow && group.frozen_row < firstRow + 50);
   const annotationRows = ({ 87: [305], 97: [816, 849], 98: [859, 860], 99: [934] })[issue] ?? [];

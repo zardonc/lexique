@@ -16,6 +16,25 @@ FIELD_NAMES = {"french_definition": "definition_fr", "ipa": "ipa", "english": "m
 
 
 class CorePilotPreparationTests(unittest.TestCase):
+    def test_batches_100_to_109_retain_exact_frozen_membership_and_complete_fields(self):
+        with (RESOURCE / "scope-manifest.csv").open(encoding="utf-8-sig", newline="") as handle:
+            scope = list(csv.DictReader(handle))
+        with tempfile.TemporaryDirectory() as temporary:
+            report = prepare(Path(temporary) / "prepared")
+            batches = {batch["issue"]: batch for batch in report["content_batches"]}
+            for issue in range(100, 110):
+                with self.subTest(issue=issue):
+                    self.assertIn(issue, tuple(batches))
+                    batch = batches[issue]
+                    first = 951 + (issue - 100) * 50
+                    expected = [(row, scope[row - 1]["word"], scope[row - 1]["lexique_cgram"])
+                                for row in range(first, first + 50)]
+                    self.assertEqual([(group["frozen_row"], group["headword"], group["pos"])
+                                      for group in batch["groups"]], expected)
+                    self.assertEqual((batch["target_groups"], batch["accepted_groups"],
+                                      batch["complete_fields"], batch["annotation_exception_groups"],
+                                      batch["scope_acceptance"]), (50, 50, 200, 0, "passed"))
+
     def test_batches_90_to_99_retain_exact_frozen_membership_and_complete_fields(self):
         with (RESOURCE / "scope-manifest.csv").open(encoding="utf-8-sig", newline="") as handle:
             scope = list(csv.DictReader(handle))
