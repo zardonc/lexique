@@ -1,0 +1,418 @@
+{
+  "schema": "lexique-core-batch-admission-1",
+  "issue": "https://github.com/zardonc/lexique/issues/87",
+  "content_version": "core-89-v1",
+  "review_date": "2026-11-18",
+  "resource_admission": "passed",
+  "scope": {
+    "issue": 87,
+    "target_groups": 50,
+    "reused_pilot_groups": 0,
+    "new_groups": 49,
+    "complete_groups": 49,
+    "accepted_groups": 49,
+    "approved_specialist_exception_groups": 0,
+    "annotation_exception_groups": 1,
+    "scope_acceptance": "passed",
+    "complete_fields": 196,
+    "groups": [
+      {
+        "frozen_row": 301,
+        "headword": "écouter",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 302,
+        "headword": "raison",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 303,
+        "headword": "amour",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 304,
+        "headword": "entrer",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 305,
+        "headword": "dont",
+        "pos": "PRO:int",
+        "complete_fields": 0,
+        "everyday_sense_status": "unresolved",
+        "incomplete_fields": [
+          "french_definition",
+          "ipa",
+          "english",
+          "chinese"
+        ],
+        "incomplete_requirements": [
+          "same_pos_source_binding",
+          "modern_everyday_sense"
+        ],
+        "reason": "The fixed source marks interrogative dont meaning d’où/où obsolete; no modern everyday interrogative use is established. Modern relative dont belongs to frozen row 306 and cannot substitute for PRO:int.",
+        "annotation_exception_decision": {
+          "issue": "https://github.com/zardonc/lexique/issues/87",
+          "approved_by": "project_owner",
+          "approved_on": "2026-11-18",
+          "decision": "Approved exception to selected-sense and four-field requirements; zero admitted fields, exact frozen identity and 4,087-group denominator retained."
+        }
+      },
+      {
+        "frozen_row": 306,
+        "headword": "dont",
+        "pos": "PRO:rel",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 307,
+        "headword": "fait",
+        "pos": "ADJ",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 308,
+        "headword": "fait",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 309,
+        "headword": "devenir",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 310,
+        "headword": "nouveau",
+        "pos": "ADJ",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 311,
+        "headword": "nouveau",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 312,
+        "headword": "hein",
+        "pos": "ONO",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 313,
+        "headword": "commencer",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 314,
+        "headword": "merde",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 315,
+        "headword": "merde",
+        "pos": "ONO",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 316,
+        "headword": "moment",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 317,
+        "headword": "voiture",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 318,
+        "headword": "vieux",
+        "pos": "ADJ",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 319,
+        "headword": "vieux",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 320,
+        "headword": "revoir",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 321,
+        "headword": "revoir",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 322,
+        "headword": "elles",
+        "pos": "PRO:per",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 323,
+        "headword": "payer",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 324,
+        "headword": "fou",
+        "pos": "ADJ",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 325,
+        "headword": "fou",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 326,
+        "headword": "tirer",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 327,
+        "headword": "ouvrir",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 328,
+        "headword": "oeil",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 329,
+        "headword": "changer",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 330,
+        "headword": "question",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 331,
+        "headword": "tomber",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 332,
+        "headword": "assez",
+        "pos": "ADV",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 333,
+        "headword": "foutre",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 334,
+        "headword": "excuser",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 335,
+        "headword": "affaire",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 336,
+        "headword": "dormir",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 337,
+        "headword": "combien",
+        "pos": "ADV",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 338,
+        "headword": "frère",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 339,
+        "headword": "travail",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 340,
+        "headword": "idée",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 341,
+        "headword": "eh",
+        "pos": "ONO",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 342,
+        "headword": "puis",
+        "pos": "ADV",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 343,
+        "headword": "puis",
+        "pos": "CON",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 344,
+        "headword": "famille",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 345,
+        "headword": "tard",
+        "pos": "ADV",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 346,
+        "headword": "tard",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 347,
+        "headword": "truc",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 348,
+        "headword": "trois",
+        "pos": "ADJ:num",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 349,
+        "headword": "tant",
+        "pos": "ADV",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 350,
+        "headword": "souvenir",
+        "pos": "NOM",
+        "complete_fields": 4
+      }
+    ]
+  },
+  "global_admission": {
+    "independent_field_review": "passed",
+    "produced_resource_self_check": "passed",
+    "everyday_sense_review": "incomplete",
+    "selected_scope_acceptance": "passed",
+    "accepted_groups": 450,
+    "approved_specialist_exception_groups": 2,
+    "remaining_unaccepted_groups": 3637,
+    "annotation_exception_groups": 2,
+    "selected_source_rights_and_materials": "passed",
+    "complete_groups": 448,
+    "complete_senses": 450,
+    "complete_fields": 1800,
+    "remaining_groups": 3639
+  },
+  "sources": [
+    {
+      "id": "b87_fr_11714",
+      "edition": "fr",
+      "entry_language": "fr",
+      "title": "affaire",
+      "pageid": 11714,
+      "revid": 39810695,
+      "timestamp": "2026-08-17T16:32:42Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=affaire&oldid=39810695",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=affaire&action=history",
+      "attribution": "Wiktionnaire contributors; credit the complete article history. Selected adaptations by Lexique contributors.; Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), for declared imported text",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "source_frame": "Latest fixed French revision at or before 2026-10-01T00:00:00Z; captured or recovered from the recorded read-only research source.",
+      "selected_text_review": "passed_for_selected_spans"
+    }
+  ],
+  "accepted_field_count": 196,
+  "accepted_replacements_and_binding_corrections": [
+    {
+      "sense_id": "b87-r0335",
+      "frozen_row": 335,
+      "headword": "affaire",
+      "pos": "NOM",
+      "field": "french_definition",
+      "language": "fr",
+      "accepted_text": "Chose dont on doit s’occuper.",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "b87_fr_11714",
+        "revid": 39810695,
+        "url": "https://fr.wiktionary.org/w/index.php?title=affaire&oldid=39810695",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=affaire&action=history",
+        "line_1_based": 11,
+        "candidate_excerpt": "# Chose dont on [[devoir|doit]] s’[[occuper]] à faire.",
+        "reviewed_excerpt": "# Chose dont on [[devoir|doit]] s’[[occuper]] à faire.",
+        "attribution": "Wiktionnaire contributors; full article-history credit; selected adaptations by Lexique contributors."
+      }
+    }
+  ],
+  "all_field_reviews": "../../../resources/core-pilot-79/field-review.json",
+  "annotations": [
+    {
+      "frozen_row": 305,
+      "headword": "dont",
+      "pos": "PRO:int",
+      "admitted_fields": 0,
+      "decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/87",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-18",
+        "decision": "Approved exception to selected-sense and four-field requirements; zero admitted fields, exact frozen identity and 4,087-group denominator retained."
+      }
+    }
+  ],
+  "compiled_preservation": {
+    "groups": 154,
+    "fields": 616,
+    "payloads": "unchanged"
+  },
+  "native_acceptance": "separate check",
+  "learner_acceptance": "not_run",
+  "whole_core_release": "incomplete"
+}

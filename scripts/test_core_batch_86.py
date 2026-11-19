@@ -2,6 +2,7 @@
 
 import json
 from pathlib import Path
+import shutil
 import tempfile
 import unittest
 
@@ -14,14 +15,14 @@ RESOURCE = ROOT / "resources/core-pilot-79"
 class Batch86Tests(unittest.TestCase):
     def test_pending_batch_cannot_become_an_admitted_resource(self):
         curated = json.loads((RESOURCE / 'curated-inputs.json').read_text(encoding='utf-8'))
-        pending = [g for g in curated['groups'] if 251 <= g['frozen_row'] <= 300
-                   and any(s['independent_review'] == 'pending' for s in g['senses'])]
-        if not pending:
-            self.skipTest('Independent review resolved this draft gate; admitted/native checks run centrally')
         with tempfile.TemporaryDirectory() as temporary:
+            inputs = Path(temporary) / "inputs"
+            shutil.copytree(RESOURCE, inputs)
+            next(source for source in curated["sources"] if source["id"].startswith("b86_"))["selected_text_review"] = "pending"
+            (inputs / "curated-inputs.json").write_text(json.dumps(curated, ensure_ascii=False), encoding="utf-8")
             output = Path(temporary) / 'core'
             with self.assertRaisesRegex(ValueError, 'Unreviewed field source'):
-                prepare(output)
+                prepare(output, source_dir=inputs)
             self.assertFalse(output.exists(), 'Pending review must not create an admitted artifact')
 
     def test_batch_keeps_all_fifty_frozen_word_pos_groups(self):
@@ -55,7 +56,7 @@ class Batch86Tests(unittest.TestCase):
         for field in fields.values():
             self.assertTrue(field["text"].strip())
             self.assertTrue(field["source_span"]["raw_source_excerpt"].strip())
-            self.assertIn(field["independent_review"], ("pending", "passed"))
+            self.assertEqual(field["independent_review"], "passed")
 
 
 if __name__ == "__main__":

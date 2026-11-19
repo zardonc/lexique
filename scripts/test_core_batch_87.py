@@ -1,7 +1,9 @@
 """Check batch #87 at the frozen-input and converter admission boundaries."""
 
 import csv
+import json
 from pathlib import Path
+import shutil
 import tempfile
 import unittest
 
@@ -11,12 +13,17 @@ import core_pilot
 class CoreBatch87Tests(unittest.TestCase):
     def test_pending_source_review_cannot_publish_a_dictionary_resource(self):
         with tempfile.TemporaryDirectory() as temporary:
+            inputs = Path(temporary) / "inputs"
+            shutil.copytree(core_pilot.RESOURCE, inputs)
+            curated = core_pilot.read_json(inputs / "curated-inputs.json")
+            next(source for source in curated["sources"] if source["id"].startswith("b87_"))["selected_text_review"] = "pending"
+            (inputs / "curated-inputs.json").write_text(json.dumps(curated, ensure_ascii=False), encoding="utf-8")
             destination = Path(temporary) / "core"
             with self.assertRaisesRegex(ValueError, "Unreviewed field source or incompatible licence"):
-                core_pilot.prepare(destination)
+                core_pilot.prepare(destination, source_dir=inputs)
             self.assertFalse((destination / "core.sqlite3").exists())
 
-    def test_candidates_keep_four_pending_fields_and_the_interrogative_gap(self):
+    def test_admitted_fields_and_owner_annotation_keep_distinct_counts(self):
         curated = core_pilot.read_json(core_pilot.RESOURCE / "curated-inputs.json")
         batch = [group for group in curated["groups"] if 301 <= group["frozen_row"] <= 350]
         selected = [sense for group in batch for sense in group["senses"]]
@@ -24,15 +31,18 @@ class CoreBatch87Tests(unittest.TestCase):
         self.assertEqual(sum(len(sense["fields"]) for sense in selected), 196)
         for sense in selected:
             self.assertEqual(set(sense["fields"]), set(core_pilot.FIELDS))
-            self.assertEqual(sense["independent_review"], "pending")
+            self.assertEqual(sense["independent_review"], "passed_after_exact_accepted_replacements")
             for field in sense["fields"].values():
                 self.assertTrue(field["text"].strip())
-                self.assertEqual(field["independent_review"], "pending")
+                self.assertEqual(field["independent_review"], "passed")
                 self.assertTrue(field["source_span"]["raw_source_excerpt"].strip())
-        gap = next(group for group in batch if group["frozen_row"] == 305)
-        self.assertEqual(gap["senses"], [])
-        self.assertEqual(gap["incomplete_fields"], list(core_pilot.FIELDS))
-        self.assertIn("obsolete", gap["unresolved_reason"])
+        with tempfile.TemporaryDirectory() as temporary:
+            report = core_pilot.prepare(Path(temporary) / "core")
+            batch_report = next(row for row in report["content_batches"] if row["issue"] == 87)
+            gap = next(group for group in batch_report["groups"] if group["frozen_row"] == 305)
+            self.assertEqual(gap["complete_fields"], 0)
+            self.assertEqual(gap["incomplete_fields"], list(core_pilot.FIELDS))
+            self.assertEqual(gap["annotation_exception_decision"]["issue"], "https://github.com/zardonc/lexique/issues/87")
 
     def test_listen_fields_keep_the_selected_sound_attention_use(self):
         curated = core_pilot.read_json(core_pilot.RESOURCE / "curated-inputs.json")
@@ -49,10 +59,10 @@ class CoreBatch87Tests(unittest.TestCase):
             expected = list(csv.DictReader(handle))[300:350]
         curated = core_pilot.read_json(core_pilot.RESOURCE / "curated-inputs.json")
         batch = [group for group in curated["groups"] if 301 <= group["frozen_row"] <= 350]
-        self.assertEqual([group["frozen_row"] for group in batch], list(range(301, 351)))
+        self.assertEqual([group["frozen_row"] for group in batch], [*range(301, 305), *range(306, 351)])
         self.assertEqual(
             [(group["headword"], group["lexique_cgram"], group["subtitle_lemma_per_million"], group["subtitle_pos_per_million"]) for group in batch],
-            [tuple(row.values()) for row in expected],
+            [tuple(row.values()) for index, row in enumerate(expected, 301) if index != 305],
         )
 
 

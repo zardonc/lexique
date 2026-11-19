@@ -1,0 +1,407 @@
+{
+  "schema": "lexique-core-batch-admission-1",
+  "issue": "https://github.com/zardonc/lexique/issues/88",
+  "content_version": "core-89-v1",
+  "review_date": "2026-11-18",
+  "resource_admission": "passed",
+  "scope": {
+    "issue": 88,
+    "target_groups": 50,
+    "reused_pilot_groups": 1,
+    "new_groups": 49,
+    "complete_groups": 50,
+    "accepted_groups": 50,
+    "approved_specialist_exception_groups": 0,
+    "annotation_exception_groups": 0,
+    "scope_acceptance": "passed",
+    "complete_fields": 200,
+    "groups": [
+      {
+        "frozen_row": 351,
+        "headword": "souvenir",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 352,
+        "headword": "ni",
+        "pos": "CON",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 353,
+        "headword": "tous",
+        "pos": "PRO:ind",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 354,
+        "headword": "occuper",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 355,
+        "headword": "entre",
+        "pos": "PRE",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 356,
+        "headword": "ok",
+        "pos": "ADJ",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 357,
+        "headword": "ok",
+        "pos": "ADV",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 358,
+        "headword": "marcher",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 359,
+        "headword": "chance",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 360,
+        "headword": "aujourd'hui",
+        "pos": "ADV",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 361,
+        "headword": "envoyer",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 362,
+        "headword": "histoire",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 363,
+        "headword": "prêt",
+        "pos": "ADJ",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 364,
+        "headword": "prêt",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 365,
+        "headword": "jeune",
+        "pos": "ADJ",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 366,
+        "headword": "jeune",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 367,
+        "headword": "apprendre",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 368,
+        "headword": "minute",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 369,
+        "headword": "boire",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 370,
+        "headword": "garder",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 371,
+        "headword": "quelques",
+        "pos": "ADJ:ind",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 372,
+        "headword": "type",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 373,
+        "headword": "porte",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 374,
+        "headword": "montrer",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 375,
+        "headword": "mec",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 376,
+        "headword": "porter",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 377,
+        "headword": "asseoir",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 378,
+        "headword": "contre",
+        "pos": "PRE",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 379,
+        "headword": "pendant",
+        "pos": "PRE",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 380,
+        "headword": "attention",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 381,
+        "headword": "attention",
+        "pos": "ONO",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 382,
+        "headword": "droit",
+        "pos": "ADJ",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 383,
+        "headword": "droit",
+        "pos": "ADV",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 384,
+        "headword": "droit",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 385,
+        "headword": "année",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 386,
+        "headword": "sous",
+        "pos": "PRE",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 387,
+        "headword": "prier",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 388,
+        "headword": "meilleur",
+        "pos": "ADJ",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 389,
+        "headword": "meilleur",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 390,
+        "headword": "mois",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 391,
+        "headword": "lire",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 392,
+        "headword": "lire",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 393,
+        "headword": "servir",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 394,
+        "headword": "plein",
+        "pos": "ADJ",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 395,
+        "headword": "plein",
+        "pos": "PRE",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 396,
+        "headword": "madame",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 397,
+        "headword": "putain",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 398,
+        "headword": "écrire",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 399,
+        "headword": "part",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 400,
+        "headword": "eau",
+        "pos": "NOM",
+        "complete_fields": 4
+      }
+    ]
+  },
+  "global_admission": {
+    "independent_field_review": "passed",
+    "produced_resource_self_check": "passed",
+    "everyday_sense_review": "incomplete",
+    "selected_scope_acceptance": "passed",
+    "accepted_groups": 450,
+    "approved_specialist_exception_groups": 2,
+    "remaining_unaccepted_groups": 3637,
+    "annotation_exception_groups": 2,
+    "selected_source_rights_and_materials": "passed",
+    "complete_groups": 448,
+    "complete_senses": 450,
+    "complete_fields": 1800,
+    "remaining_groups": 3639
+  },
+  "sources": [
+    {
+      "id": "b88_fr_8110",
+      "edition": "fr",
+      "entry_language": "fr",
+      "title": "madame",
+      "pageid": 8110,
+      "revid": 39819067,
+      "timestamp": "2026-08-20T12:50:23Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=madame&oldid=39819067",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=madame&action=history",
+      "attribution": "Wiktionnaire contributors; credit the full article history; Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), for declared imported text",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "source_frame": "Latest public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "selected_text_review": "passed_for_selected_spans"
+    }
+  ],
+  "accepted_field_count": 200,
+  "accepted_replacements_and_binding_corrections": [
+    {
+      "sense_id": "b88-madame-nom-selected",
+      "frozen_row": 396,
+      "headword": "madame",
+      "pos": "NOM",
+      "field": "english",
+      "language": "en",
+      "accepted_text": "Madam; a polite title used to address a woman.",
+      "reviewer": "quality-88-2026-11-18",
+      "exact_source": {
+        "source_id": "b88_fr_8110",
+        "revid": 39819067,
+        "url": "https://fr.wiktionary.org/w/index.php?title=madame&oldid=39819067",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=madame&action=history",
+        "line_1_based": 11,
+        "reviewed_excerpt": "# Titre de politesse, dans le sens de [[Madame]]",
+        "attribution": "Wiktionnaire contributors; credit the full article history",
+        "title": "madame"
+      }
+    },
+    {
+      "sense_id": "b88-madame-nom-selected",
+      "frozen_row": 396,
+      "headword": "madame",
+      "pos": "NOM",
+      "field": "chinese",
+      "language": "zh",
+      "accepted_text": "女士；称呼女性时使用的礼貌称谓。",
+      "reviewer": "quality-88-2026-11-18",
+      "exact_source": {
+        "source_id": "b88_fr_8110",
+        "revid": 39819067,
+        "url": "https://fr.wiktionary.org/w/index.php?title=madame&oldid=39819067",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=madame&action=history",
+        "line_1_based": 11,
+        "reviewed_excerpt": "# Titre de politesse, dans le sens de [[Madame]]",
+        "attribution": "Wiktionnaire contributors; credit the full article history",
+        "title": "madame"
+      }
+    }
+  ],
+  "all_field_reviews": "../../../resources/core-pilot-79/field-review.json",
+  "annotations": [],
+  "compiled_preservation": {
+    "groups": 154,
+    "fields": 616,
+    "payloads": "unchanged"
+  },
+  "native_acceptance": "separate check",
+  "learner_acceptance": "not_run",
+  "whole_core_release": "incomplete"
+}

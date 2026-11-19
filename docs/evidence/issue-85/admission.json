@@ -1,0 +1,1372 @@
+{
+  "schema": "lexique-core-batch-admission-1",
+  "issue": "https://github.com/zardonc/lexique/issues/85",
+  "content_version": "core-89-v1",
+  "review_date": "2026-11-18",
+  "resource_admission": "passed",
+  "scope": {
+    "issue": 85,
+    "target_groups": 50,
+    "reused_pilot_groups": 0,
+    "new_groups": 50,
+    "complete_groups": 50,
+    "accepted_groups": 50,
+    "approved_specialist_exception_groups": 0,
+    "annotation_exception_groups": 0,
+    "scope_acceptance": "passed",
+    "complete_fields": 200,
+    "groups": [
+      {
+        "frozen_row": 201,
+        "headword": "personne",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 202,
+        "headword": "personne",
+        "pos": "PRO:ind",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 203,
+        "headword": "an",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 204,
+        "headword": "trop",
+        "pos": "ADV",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 205,
+        "headword": "vrai",
+        "pos": "ADJ",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 206,
+        "headword": "vrai",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 207,
+        "headword": "chez",
+        "pos": "PRE",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 208,
+        "headword": "fille",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 209,
+        "headword": "aux",
+        "pos": "ART:def",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 210,
+        "headword": "monde",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 211,
+        "headword": "ami",
+        "pos": "ADJ",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 212,
+        "headword": "ami",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 213,
+        "headword": "mal",
+        "pos": "ADJ",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 214,
+        "headword": "mal",
+        "pos": "ADV",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 215,
+        "headword": "mal",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 216,
+        "headword": "après",
+        "pos": "ADV",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 217,
+        "headword": "après",
+        "pos": "PRE",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 218,
+        "headword": "avant",
+        "pos": "ADJ",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 219,
+        "headword": "avant",
+        "pos": "ADV",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 220,
+        "headword": "avant",
+        "pos": "PRE",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 221,
+        "headword": "besoin",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 222,
+        "headword": "accord",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 223,
+        "headword": "ses",
+        "pos": "ADJ:pos",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 224,
+        "headword": "beau",
+        "pos": "ADJ",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 225,
+        "headword": "beau",
+        "pos": "ADV",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 226,
+        "headword": "beau",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 227,
+        "headword": "monsieur",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 228,
+        "headword": "grand",
+        "pos": "ADJ",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 229,
+        "headword": "grand",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 230,
+        "headword": "enfant",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 231,
+        "headword": "entendre",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 232,
+        "headword": "voilà",
+        "pos": "PRE",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 233,
+        "headword": "chercher",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 234,
+        "headword": "heure",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 235,
+        "headword": "mieux",
+        "pos": "ADV",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 236,
+        "headword": "mieux",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 237,
+        "headword": "déjà",
+        "pos": "ADV",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 238,
+        "headword": "déjà",
+        "pos": "ONO",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 239,
+        "headword": "tes",
+        "pos": "ADJ:pos",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 240,
+        "headword": "aider",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 241,
+        "headword": "mère",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 242,
+        "headword": "essayer",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 243,
+        "headword": "quel",
+        "pos": "ADJ:int",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 244,
+        "headword": "vos",
+        "pos": "ADJ:pos",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 245,
+        "headword": "depuis",
+        "pos": "ADV",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 246,
+        "headword": "depuis",
+        "pos": "PRE",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 247,
+        "headword": "quelqu'un",
+        "pos": "PRO:ind",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 248,
+        "headword": "beaucoup",
+        "pos": "ADV",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 249,
+        "headword": "revenir",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 250,
+        "headword": "donc",
+        "pos": "CON",
+        "complete_fields": 4
+      }
+    ]
+  },
+  "global_admission": {
+    "independent_field_review": "passed",
+    "produced_resource_self_check": "passed",
+    "everyday_sense_review": "incomplete",
+    "selected_scope_acceptance": "passed",
+    "accepted_groups": 450,
+    "approved_specialist_exception_groups": 2,
+    "remaining_unaccepted_groups": 3637,
+    "annotation_exception_groups": 2,
+    "selected_source_rights_and_materials": "passed",
+    "complete_groups": 448,
+    "complete_senses": 450,
+    "complete_fields": 1800,
+    "remaining_groups": 3639
+  },
+  "sources": [
+    {
+      "id": "b85_fr_10428",
+      "edition": "fr",
+      "entry_language": "fr",
+      "title": "avant",
+      "pageid": 10428,
+      "revid": 39865821,
+      "timestamp": "2026-09-08T10:18:24Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=avant&oldid=39865821",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=avant&action=history",
+      "attribution": "Wiktionnaire contributors; credit the full article history; Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), for declared imported text",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "source_frame": "Public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "selected_text_review": "passed_for_selected_spans"
+    },
+    {
+      "id": "b85_fr_9600",
+      "edition": "fr",
+      "entry_language": "fr",
+      "title": "déjà",
+      "pageid": 9600,
+      "revid": 39362190,
+      "timestamp": "2026-03-13T13:06:30Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=d%C3%A9j%C3%A0&oldid=39362190",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=d%C3%A9j%C3%A0&action=history",
+      "attribution": "Wiktionnaire contributors; credit the full article history; Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), for declared imported text",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "source_frame": "Public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "selected_text_review": "passed_for_selected_spans"
+    },
+    {
+      "id": "review85_en_30528",
+      "edition": "en",
+      "entry_language": "fr",
+      "title": "personne",
+      "pageid": 30528,
+      "revid": 94485017,
+      "timestamp": "2026-10-27T14:18:03Z",
+      "fixed_url": "https://en.wiktionary.org/w/index.php?title=personne&oldid=94485017",
+      "history_url": "https://en.wiktionary.org/w/index.php?title=personne&action=history",
+      "attribution": "Wiktionary contributors",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "source_frame": "Fixed public revision; exact selected spans independently reviewed on 2026-11-18",
+      "selected_text_review": "passed_for_selected_spans"
+    },
+    {
+      "id": "review85_en_3971",
+      "edition": "en",
+      "entry_language": "fr",
+      "title": "an",
+      "pageid": 3971,
+      "revid": 95668560,
+      "timestamp": "2026-11-17T08:57:18Z",
+      "fixed_url": "https://en.wiktionary.org/w/index.php?title=an&oldid=95668560",
+      "history_url": "https://en.wiktionary.org/w/index.php?title=an&action=history",
+      "attribution": "Wiktionary contributors",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "source_frame": "Fixed public revision; exact selected spans independently reviewed on 2026-11-18",
+      "selected_text_review": "passed_for_selected_spans"
+    },
+    {
+      "id": "review85_en_98876",
+      "edition": "en",
+      "entry_language": "fr",
+      "title": "vrai",
+      "pageid": 98876,
+      "revid": 92364201,
+      "timestamp": "2026-08-27T22:15:49Z",
+      "fixed_url": "https://en.wiktionary.org/w/index.php?title=vrai&oldid=92364201",
+      "history_url": "https://en.wiktionary.org/w/index.php?title=vrai&action=history",
+      "attribution": "Wiktionary contributors",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "source_frame": "Fixed public revision; exact selected spans independently reviewed on 2026-11-18",
+      "selected_text_review": "passed_for_selected_spans"
+    },
+    {
+      "id": "review85_en_51894",
+      "edition": "en",
+      "entry_language": "fr",
+      "title": "chez",
+      "pageid": 51894,
+      "revid": 94549836,
+      "timestamp": "2026-10-28T19:13:07Z",
+      "fixed_url": "https://en.wiktionary.org/w/index.php?title=chez&oldid=94549836",
+      "history_url": "https://en.wiktionary.org/w/index.php?title=chez&action=history",
+      "attribution": "Wiktionary contributors",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "source_frame": "Fixed public revision; exact selected spans independently reviewed on 2026-11-18",
+      "selected_text_review": "passed_for_selected_spans"
+    },
+    {
+      "id": "review85_en_185900",
+      "edition": "en",
+      "entry_language": "fr",
+      "title": "après",
+      "pageid": 185900,
+      "revid": 92490313,
+      "timestamp": "2026-09-05T07:45:02Z",
+      "fixed_url": "https://en.wiktionary.org/w/index.php?title=apr%C3%A8s&oldid=92490313",
+      "history_url": "https://en.wiktionary.org/w/index.php?title=apr%C3%A8s&action=history",
+      "attribution": "Wiktionary contributors",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "source_frame": "Fixed public revision; exact selected spans independently reviewed on 2026-11-18",
+      "selected_text_review": "passed_for_selected_spans"
+    },
+    {
+      "id": "review85_en_51327",
+      "edition": "en",
+      "entry_language": "fr",
+      "title": "avant",
+      "pageid": 51327,
+      "revid": 92304586,
+      "timestamp": "2026-08-25T05:06:34Z",
+      "fixed_url": "https://en.wiktionary.org/w/index.php?title=avant&oldid=92304586",
+      "history_url": "https://en.wiktionary.org/w/index.php?title=avant&action=history",
+      "attribution": "Wiktionary contributors",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "source_frame": "Fixed public revision; exact selected spans independently reviewed on 2026-11-18",
+      "selected_text_review": "passed_for_selected_spans"
+    },
+    {
+      "id": "review85_en_68915",
+      "edition": "en",
+      "entry_language": "fr",
+      "title": "chercher",
+      "pageid": 68915,
+      "revid": 95647730,
+      "timestamp": "2026-11-16T00:19:46Z",
+      "fixed_url": "https://en.wiktionary.org/w/index.php?title=chercher&oldid=95647730",
+      "history_url": "https://en.wiktionary.org/w/index.php?title=chercher&action=history",
+      "attribution": "Wiktionary contributors",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "source_frame": "Fixed public revision; exact selected spans independently reviewed on 2026-11-18",
+      "selected_text_review": "passed_for_selected_spans"
+    },
+    {
+      "id": "review85_en_296897",
+      "edition": "en",
+      "entry_language": "fr",
+      "title": "revenir",
+      "pageid": 296897,
+      "revid": 93745853,
+      "timestamp": "2026-10-19T19:10:39Z",
+      "fixed_url": "https://en.wiktionary.org/w/index.php?title=revenir&oldid=93745853",
+      "history_url": "https://en.wiktionary.org/w/index.php?title=revenir&action=history",
+      "attribution": "Wiktionary contributors",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "source_frame": "Fixed public revision; exact selected spans independently reviewed on 2026-11-18",
+      "selected_text_review": "passed_for_selected_spans"
+    },
+    {
+      "id": "review85_en_195763",
+      "edition": "en",
+      "entry_language": "fr",
+      "title": "donc",
+      "pageid": 195763,
+      "revid": 93811357,
+      "timestamp": "2026-10-24T21:02:44Z",
+      "fixed_url": "https://en.wiktionary.org/w/index.php?title=donc&oldid=93811357",
+      "history_url": "https://en.wiktionary.org/w/index.php?title=donc&action=history",
+      "attribution": "Wiktionary contributors",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "source_frame": "Fixed public revision; exact selected spans independently reviewed on 2026-11-18",
+      "selected_text_review": "passed_for_selected_spans"
+    },
+    {
+      "id": "review85_en_front",
+      "edition": "en",
+      "entry_language": "en",
+      "title": "front",
+      "pageid": 0,
+      "revid": 93078269,
+      "timestamp": "2026-09-30T01:59:54Z",
+      "fixed_url": "https://en.wiktionary.org/w/index.php?title=front&oldid=93078269",
+      "history_url": "https://en.wiktionary.org/w/index.php?title=front&action=history",
+      "attribution": "Wiktionary contributors",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "source_frame": "Fixed public revision; exact selected spans independently reviewed on 2026-11-18",
+      "selected_text_review": "passed_for_selected_spans"
+    },
+    {
+      "id": "review85_wikisource_soulice1836",
+      "edition": "fr",
+      "entry_language": "fr",
+      "title": "Petit dictionnaire de la langue française, à l’usage des écoles primaires",
+      "pageid": 0,
+      "revid": 14772408,
+      "timestamp": "2024-12-15T10:26:04Z",
+      "fixed_url": "https://fr.wikisource.org/w/index.php?title=Page:Soulice_-_Petit_dictionnaire_de_la_langue_française,_1836.pdf/62&oldid=14772408",
+      "history_url": "https://fr.wikisource.org/w/index.php?title=Page:Soulice_-_Petit_dictionnaire_de_la_langue_française,_1836.pdf/62&action=history",
+      "attribution": "Théodore Soulice (1800–1878), Petit dictionnaire de la langue française, à l’usage des écoles primaires, first edition 1836, Paris: L. Hachette / Firmin Didot frères, printed p. 56 / scan p. 62; Wikisource transcription contributors; Lexique contributors for the recorded adaptations",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "source_frame": "Fixed public revision; exact selected spans independently reviewed on 2026-11-18",
+      "selected_text_review": "passed_for_selected_spans",
+      "platform": "Wikisource",
+      "original_author": "Théodore Soulice (Th. Soulice), 1800–1878",
+      "original_publication": "1836 first edition; Paris: L. Hachette / Firmin Didot frères",
+      "original_content_license": "public-domain",
+      "original_printed_page": 56,
+      "scan_page": 62
+    }
+  ],
+  "accepted_field_count": 200,
+  "accepted_replacements_and_binding_corrections": [
+    {
+      "sense_id": "b85-202-negative-pronoun",
+      "frozen_row": 202,
+      "headword": "personne",
+      "pos": "PRO:ind",
+      "field": "french_definition",
+      "language": "fr",
+      "accepted_text": "Pronom indéfini négatif : aucune personne ; employé avec ne en français écrit standard.",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "review85_en_30528",
+        "revid": 94485017,
+        "url": "https://en.wiktionary.org/w/index.php?title=personne&oldid=94485017",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=personne&action=history",
+        "line_1_based": 49,
+        "reviewed_excerpt": "# {{q|with {{m|fr|ne}}}} [[no one]], [[nobody]]"
+      }
+    },
+    {
+      "sense_id": "b85-202-negative-pronoun",
+      "frozen_row": 202,
+      "headword": "personne",
+      "pos": "PRO:ind",
+      "field": "english",
+      "language": "en",
+      "accepted_text": "Nobody, no one; negative indefinite pronoun used with ne in standard written French.",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "review85_en_30528",
+        "revid": 94485017,
+        "url": "https://en.wiktionary.org/w/index.php?title=personne&oldid=94485017",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=personne&action=history",
+        "line_1_based": 49,
+        "reviewed_excerpt": "# {{q|with {{m|fr|ne}}}} [[no one]], [[nobody]]"
+      }
+    },
+    {
+      "sense_id": "b85-202-negative-pronoun",
+      "frozen_row": 202,
+      "headword": "personne",
+      "pos": "PRO:ind",
+      "field": "chinese",
+      "language": "zh",
+      "accepted_text": "没有人、无人；否定不定代词，标准书面法语中与 ne 搭配。",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "review85_en_30528",
+        "revid": 94485017,
+        "url": "https://en.wiktionary.org/w/index.php?title=personne&oldid=94485017",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=personne&action=history",
+        "line_1_based": 49,
+        "reviewed_excerpt": "# {{q|with {{m|fr|ne}}}} [[no one]], [[nobody]]"
+      }
+    },
+    {
+      "sense_id": "b85-203-year",
+      "frozen_row": 203,
+      "headword": "an",
+      "pos": "NOM",
+      "field": "french_definition",
+      "language": "fr",
+      "accepted_text": "Année ; période de douze mois.",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "review85_en_3971",
+        "revid": 95668560,
+        "url": "https://en.wiktionary.org/w/index.php?title=an&oldid=95668560",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=an&action=history",
+        "line_1_based": 874,
+        "reviewed_excerpt": "# [[year]]"
+      }
+    },
+    {
+      "sense_id": "b85-203-year",
+      "frozen_row": 203,
+      "headword": "an",
+      "pos": "NOM",
+      "field": "english",
+      "language": "en",
+      "accepted_text": "Year; a period of twelve months.",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "review85_en_3971",
+        "revid": 95668560,
+        "url": "https://en.wiktionary.org/w/index.php?title=an&oldid=95668560",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=an&action=history",
+        "line_1_based": 874,
+        "reviewed_excerpt": "# [[year]]"
+      }
+    },
+    {
+      "sense_id": "b85-203-year",
+      "frozen_row": 203,
+      "headword": "an",
+      "pos": "NOM",
+      "field": "chinese",
+      "language": "zh",
+      "accepted_text": "年；十二个月的时间。",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "review85_en_3971",
+        "revid": 95668560,
+        "url": "https://en.wiktionary.org/w/index.php?title=an&oldid=95668560",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=an&action=history",
+        "line_1_based": 874,
+        "reviewed_excerpt": "# [[year]]"
+      }
+    },
+    {
+      "sense_id": "b85-205-truthful",
+      "frozen_row": 205,
+      "headword": "vrai",
+      "pos": "ADJ",
+      "field": "french_definition",
+      "language": "fr",
+      "accepted_text": "Conforme à la vérité.",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "review85_en_98876",
+        "revid": 92364201,
+        "url": "https://en.wiktionary.org/w/index.php?title=vrai&oldid=92364201",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=vrai&action=history",
+        "line_1_based": 20,
+        "reviewed_excerpt": "# [[true]]"
+      }
+    },
+    {
+      "sense_id": "b85-205-truthful",
+      "frozen_row": 205,
+      "headword": "vrai",
+      "pos": "ADJ",
+      "field": "english",
+      "language": "en",
+      "accepted_text": "True; in accordance with the truth.",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "review85_en_98876",
+        "revid": 92364201,
+        "url": "https://en.wiktionary.org/w/index.php?title=vrai&oldid=92364201",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=vrai&action=history",
+        "line_1_based": 20,
+        "reviewed_excerpt": "# [[true]]"
+      }
+    },
+    {
+      "sense_id": "b85-205-truthful",
+      "frozen_row": 205,
+      "headword": "vrai",
+      "pos": "ADJ",
+      "field": "chinese",
+      "language": "zh",
+      "accepted_text": "真实的；与事实相符。",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "review85_en_98876",
+        "revid": 92364201,
+        "url": "https://en.wiktionary.org/w/index.php?title=vrai&oldid=92364201",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=vrai&action=history",
+        "line_1_based": 20,
+        "reviewed_excerpt": "# [[true]]"
+      }
+    },
+    {
+      "sense_id": "b85-206-truth",
+      "frozen_row": 206,
+      "headword": "vrai",
+      "pos": "NOM",
+      "field": "french_definition",
+      "language": "fr",
+      "accepted_text": "La vérité, ce qui est vrai ; nom masculin singulier.",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "review85_en_98876",
+        "revid": 92364201,
+        "url": "https://en.wiktionary.org/w/index.php?title=vrai&oldid=92364201",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=vrai&action=history",
+        "line_1_based": 43,
+        "reviewed_excerpt": "# [[truth]]"
+      }
+    },
+    {
+      "sense_id": "b85-206-truth",
+      "frozen_row": 206,
+      "headword": "vrai",
+      "pos": "NOM",
+      "field": "english",
+      "language": "en",
+      "accepted_text": "Truth; what is true, in the masculine singular noun le vrai.",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "review85_en_98876",
+        "revid": 92364201,
+        "url": "https://en.wiktionary.org/w/index.php?title=vrai&oldid=92364201",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=vrai&action=history",
+        "line_1_based": 43,
+        "reviewed_excerpt": "# [[truth]]"
+      }
+    },
+    {
+      "sense_id": "b85-206-truth",
+      "frozen_row": 206,
+      "headword": "vrai",
+      "pos": "NOM",
+      "field": "chinese",
+      "language": "zh",
+      "accepted_text": "真实、真理；阳性单数名词 le vrai，指真实的事物。",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "review85_en_98876",
+        "revid": 92364201,
+        "url": "https://en.wiktionary.org/w/index.php?title=vrai&oldid=92364201",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=vrai&action=history",
+        "line_1_based": 43,
+        "reviewed_excerpt": "# [[truth]]"
+      }
+    },
+    {
+      "sense_id": "b85-207-residence",
+      "frozen_row": 207,
+      "headword": "chez",
+      "pos": "PRE",
+      "field": "french_definition",
+      "language": "fr",
+      "accepted_text": "Au lieu de résidence ou d'activité d'une personne.",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "review85_en_51894",
+        "revid": 94549836,
+        "url": "https://en.wiktionary.org/w/index.php?title=chez&oldid=94549836",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=chez&action=history",
+        "line_1_based": 76,
+        "reviewed_excerpt": "# [[to]], [[at]], [[in]] or [[into]] the place of"
+      }
+    },
+    {
+      "sense_id": "b85-207-residence",
+      "frozen_row": 207,
+      "headword": "chez",
+      "pos": "PRE",
+      "field": "english",
+      "language": "en",
+      "accepted_text": "At someone's home or place of work; chez followed by a person or a stressed pronoun.",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "review85_en_51894",
+        "revid": 94549836,
+        "url": "https://en.wiktionary.org/w/index.php?title=chez&oldid=94549836",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=chez&action=history",
+        "line_1_based": 76,
+        "reviewed_excerpt": "# [[to]], [[at]], [[in]] or [[into]] the place of"
+      }
+    },
+    {
+      "sense_id": "b85-207-residence",
+      "frozen_row": 207,
+      "headword": "chez",
+      "pos": "PRE",
+      "field": "chinese",
+      "language": "zh",
+      "accepted_text": "在某人的家或工作场所；chez 后接人名、指人的名词或重读代词。",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "review85_en_51894",
+        "revid": 94549836,
+        "url": "https://en.wiktionary.org/w/index.php?title=chez&oldid=94549836",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=chez&action=history",
+        "line_1_based": 76,
+        "reviewed_excerpt": "# [[to]], [[at]], [[in]] or [[into]] the place of"
+      }
+    },
+    {
+      "sense_id": "b85-216-later",
+      "frozen_row": 216,
+      "headword": "après",
+      "pos": "ADV",
+      "field": "french_definition",
+      "language": "fr",
+      "accepted_text": "Ensuite, plus tard ; adverbe sans complément exprimé.",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "review85_en_185900",
+        "revid": 92490313,
+        "url": "https://en.wiktionary.org/w/index.php?title=apr%C3%A8s&oldid=92490313",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=apr%C3%A8s&action=history",
+        "line_1_based": 112,
+        "reviewed_excerpt": "# [[afterwards]]"
+      }
+    },
+    {
+      "sense_id": "b85-216-later",
+      "frozen_row": 216,
+      "headword": "après",
+      "pos": "ADV",
+      "field": "english",
+      "language": "en",
+      "accepted_text": "Afterwards, later; adverb with the reference time understood.",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "review85_en_185900",
+        "revid": 92490313,
+        "url": "https://en.wiktionary.org/w/index.php?title=apr%C3%A8s&oldid=92490313",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=apr%C3%A8s&action=history",
+        "line_1_based": 112,
+        "reviewed_excerpt": "# [[afterwards]]"
+      }
+    },
+    {
+      "sense_id": "b85-216-later",
+      "frozen_row": 216,
+      "headword": "après",
+      "pos": "ADV",
+      "field": "chinese",
+      "language": "zh",
+      "accepted_text": "后来、之后；不带明示补语的副词，参照时间由语境确定。",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "review85_en_185900",
+        "revid": 92490313,
+        "url": "https://en.wiktionary.org/w/index.php?title=apr%C3%A8s&oldid=92490313",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=apr%C3%A8s&action=history",
+        "line_1_based": 112,
+        "reviewed_excerpt": "# [[afterwards]]"
+      }
+    },
+    {
+      "sense_id": "b85-217-after",
+      "frozen_row": 217,
+      "headword": "après",
+      "pos": "PRE",
+      "field": "french_definition",
+      "language": "fr",
+      "accepted_text": "Après le moment ou l'évènement indiqué par le complément ; préposition de temps.",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "review85_en_185900",
+        "revid": 92490313,
+        "url": "https://en.wiktionary.org/w/index.php?title=apr%C3%A8s&oldid=92490313",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=apr%C3%A8s&action=history",
+        "line_1_based": 79,
+        "reviewed_excerpt": "# [[after]], later than in time."
+      }
+    },
+    {
+      "sense_id": "b85-217-after",
+      "frozen_row": 217,
+      "headword": "après",
+      "pos": "PRE",
+      "field": "english",
+      "language": "en",
+      "accepted_text": "After; preposition indicating a time later than its complement.",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "review85_en_185900",
+        "revid": 92490313,
+        "url": "https://en.wiktionary.org/w/index.php?title=apr%C3%A8s&oldid=92490313",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=apr%C3%A8s&action=history",
+        "line_1_based": 79,
+        "reviewed_excerpt": "# [[after]], later than in time."
+      }
+    },
+    {
+      "sense_id": "b85-217-after",
+      "frozen_row": 217,
+      "headword": "après",
+      "pos": "PRE",
+      "field": "chinese",
+      "language": "zh",
+      "accepted_text": "在……之后；表示时间晚于其补语的介词。",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "review85_en_185900",
+        "revid": 92490313,
+        "url": "https://en.wiktionary.org/w/index.php?title=apr%C3%A8s&oldid=92490313",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=apr%C3%A8s&action=history",
+        "line_1_based": 79,
+        "reviewed_excerpt": "# [[after]], later than in time."
+      }
+    },
+    {
+      "sense_id": "b85-220-before",
+      "frozen_row": 220,
+      "headword": "avant",
+      "pos": "PRE",
+      "field": "french_definition",
+      "language": "fr",
+      "accepted_text": "Avant le moment ou l'évènement indiqué par le complément ; préposition de temps.",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "review85_en_51327",
+        "revid": 92304586,
+        "url": "https://en.wiktionary.org/w/index.php?title=avant&oldid=92304586",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=avant&action=history",
+        "line_1_based": 106,
+        "reviewed_excerpt": "# [[before]] (in time)"
+      }
+    },
+    {
+      "sense_id": "b85-220-before",
+      "frozen_row": 220,
+      "headword": "avant",
+      "pos": "PRE",
+      "field": "english",
+      "language": "en",
+      "accepted_text": "Before; preposition expressing temporal anteriority to its complement.",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "review85_en_51327",
+        "revid": 92304586,
+        "url": "https://en.wiktionary.org/w/index.php?title=avant&oldid=92304586",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=avant&action=history",
+        "line_1_based": 106,
+        "reviewed_excerpt": "# [[before]] (in time)"
+      }
+    },
+    {
+      "sense_id": "b85-220-before",
+      "frozen_row": 220,
+      "headword": "avant",
+      "pos": "PRE",
+      "field": "chinese",
+      "language": "zh",
+      "accepted_text": "在……之前；表示时间早于其补语的介词。",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "review85_en_51327",
+        "revid": 92304586,
+        "url": "https://en.wiktionary.org/w/index.php?title=avant&oldid=92304586",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=avant&action=history",
+        "line_1_based": 106,
+        "reviewed_excerpt": "# [[before]] (in time)"
+      }
+    },
+    {
+      "sense_id": "b85-226-admirable",
+      "frozen_row": 226,
+      "headword": "beau",
+      "pos": "NOM",
+      "field": "french_definition",
+      "language": "fr",
+      "accepted_text": "Ce qui est excellent ou parfait dans son genre.",
+      "reviewer": "quality-beau-85-2026-11-18",
+      "exact_source": {
+        "source_id": "review85_wikisource_soulice1836",
+        "revid": 14772408,
+        "url": "https://fr.wikisource.org/w/index.php?title=Page:Soulice_-_Petit_dictionnaire_de_la_langue_française,_1836.pdf/62&oldid=14772408",
+        "history_url": "https://fr.wikisource.org/w/index.php?title=Page:Soulice_-_Petit_dictionnaire_de_la_langue_française,_1836.pdf/62&action=history",
+        "line_1_based": 142,
+        "end_line_1_based": 143,
+        "reviewed_excerpt": "''beau'', ''s. m.'' tout ce qui est excellent,\nparfait en son genre",
+        "subspan_boundary": "Noun clause only; ends before the semicolon and le beau idéal.",
+        "original_author": "Théodore Soulice (Th. Soulice), 1800–1878",
+        "original_publication": "1836 first edition; Paris: L. Hachette / Firmin Didot frères",
+        "original_rights": "public-domain"
+      }
+    },
+    {
+      "sense_id": "b85-226-admirable",
+      "frozen_row": 226,
+      "headword": "beau",
+      "pos": "NOM",
+      "field": "english",
+      "language": "en",
+      "accepted_text": "What is excellent or perfect of its kind; masculine singular abstract noun, as in le beau.",
+      "reviewer": "quality-beau-85-2026-11-18",
+      "exact_source": {
+        "source_id": "review85_wikisource_soulice1836",
+        "revid": 14772408,
+        "url": "https://fr.wikisource.org/w/index.php?title=Page:Soulice_-_Petit_dictionnaire_de_la_langue_française,_1836.pdf/62&oldid=14772408",
+        "history_url": "https://fr.wikisource.org/w/index.php?title=Page:Soulice_-_Petit_dictionnaire_de_la_langue_française,_1836.pdf/62&action=history",
+        "line_1_based": 142,
+        "end_line_1_based": 143,
+        "reviewed_excerpt": "''beau'', ''s. m.'' tout ce qui est excellent,\nparfait en son genre",
+        "subspan_boundary": "Noun clause only; ends before the semicolon and le beau idéal.",
+        "original_author": "Théodore Soulice (Th. Soulice), 1800–1878",
+        "original_publication": "1836 first edition; Paris: L. Hachette / Firmin Didot frères",
+        "original_rights": "public-domain"
+      }
+    },
+    {
+      "sense_id": "b85-226-admirable",
+      "frozen_row": 226,
+      "headword": "beau",
+      "pos": "NOM",
+      "field": "chinese",
+      "language": "zh",
+      "accepted_text": "优秀或完美的事物；阳性单数抽象名词，如 le beau，指同类中的卓越事物。",
+      "reviewer": "quality-beau-85-2026-11-18",
+      "exact_source": {
+        "source_id": "review85_wikisource_soulice1836",
+        "revid": 14772408,
+        "url": "https://fr.wikisource.org/w/index.php?title=Page:Soulice_-_Petit_dictionnaire_de_la_langue_française,_1836.pdf/62&oldid=14772408",
+        "history_url": "https://fr.wikisource.org/w/index.php?title=Page:Soulice_-_Petit_dictionnaire_de_la_langue_française,_1836.pdf/62&action=history",
+        "line_1_based": 142,
+        "end_line_1_based": 143,
+        "reviewed_excerpt": "''beau'', ''s. m.'' tout ce qui est excellent,\nparfait en son genre",
+        "subspan_boundary": "Noun clause only; ends before the semicolon and le beau idéal.",
+        "original_author": "Théodore Soulice (Th. Soulice), 1800–1878",
+        "original_publication": "1836 first edition; Paris: L. Hachette / Firmin Didot frères",
+        "original_rights": "public-domain"
+      }
+    },
+    {
+      "sense_id": "b85-233-look-for",
+      "frozen_row": 233,
+      "headword": "chercher",
+      "pos": "VER",
+      "field": "french_definition",
+      "language": "fr",
+      "accepted_text": "Tenter de trouver quelqu'un ou quelque chose.",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "review85_en_68915",
+        "revid": 95647730,
+        "url": "https://en.wiktionary.org/w/index.php?title=chercher&oldid=95647730",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=chercher&action=history",
+        "line_1_based": 22,
+        "reviewed_excerpt": "# {{lb|fr|transitive}} to [[look for]], to [[seek]]"
+      }
+    },
+    {
+      "sense_id": "b85-233-look-for",
+      "frozen_row": 233,
+      "headword": "chercher",
+      "pos": "VER",
+      "field": "english",
+      "language": "en",
+      "accepted_text": "Look for, search for; try to find someone or something.",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "review85_en_68915",
+        "revid": 95647730,
+        "url": "https://en.wiktionary.org/w/index.php?title=chercher&oldid=95647730",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=chercher&action=history",
+        "line_1_based": 22,
+        "reviewed_excerpt": "# {{lb|fr|transitive}} to [[look for]], to [[seek]]"
+      }
+    },
+    {
+      "sense_id": "b85-233-look-for",
+      "frozen_row": 233,
+      "headword": "chercher",
+      "pos": "VER",
+      "field": "chinese",
+      "language": "zh",
+      "accepted_text": "寻找；尝试找到某人或某物。",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "review85_en_68915",
+        "revid": 95647730,
+        "url": "https://en.wiktionary.org/w/index.php?title=chercher&oldid=95647730",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=chercher&action=history",
+        "line_1_based": 22,
+        "reviewed_excerpt": "# {{lb|fr|transitive}} to [[look for]], to [[seek]]"
+      }
+    },
+    {
+      "sense_id": "b85-249-return",
+      "frozen_row": 249,
+      "headword": "revenir",
+      "pos": "VER",
+      "field": "french_definition",
+      "language": "fr",
+      "accepted_text": "Retourner au lieu d'où l'on est parti.",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "review85_en_296897",
+        "revid": 93745853,
+        "url": "https://en.wiktionary.org/w/index.php?title=revenir&oldid=93745853",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=revenir&action=history",
+        "line_1_based": 53,
+        "reviewed_excerpt": "# to [[come back]], to [[return]]"
+      }
+    },
+    {
+      "sense_id": "b85-249-return",
+      "frozen_row": 249,
+      "headword": "revenir",
+      "pos": "VER",
+      "field": "english",
+      "language": "en",
+      "accepted_text": "Come back, return; go back to the place from which one left.",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "review85_en_296897",
+        "revid": 93745853,
+        "url": "https://en.wiktionary.org/w/index.php?title=revenir&oldid=93745853",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=revenir&action=history",
+        "line_1_based": 53,
+        "reviewed_excerpt": "# to [[come back]], to [[return]]"
+      }
+    },
+    {
+      "sense_id": "b85-249-return",
+      "frozen_row": 249,
+      "headword": "revenir",
+      "pos": "VER",
+      "field": "chinese",
+      "language": "zh",
+      "accepted_text": "回来、返回；回到原先离开的地方。",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "review85_en_296897",
+        "revid": 93745853,
+        "url": "https://en.wiktionary.org/w/index.php?title=revenir&oldid=93745853",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=revenir&action=history",
+        "line_1_based": 53,
+        "reviewed_excerpt": "# to [[come back]], to [[return]]"
+      }
+    },
+    {
+      "sense_id": "b85-250-consequence",
+      "frozen_row": 250,
+      "headword": "donc",
+      "pos": "CON",
+      "field": "french_definition",
+      "language": "fr",
+      "accepted_text": "Relie une conséquence ou un résultat à ce qui précède.",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "review85_en_195763",
+        "revid": 93811357,
+        "url": "https://en.wiktionary.org/w/index.php?title=donc&oldid=93811357",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=donc&action=history",
+        "line_1_based": 38,
+        "reviewed_excerpt": "# [[therefore]], [[consequently]]; [[thus]]"
+      }
+    },
+    {
+      "sense_id": "b85-250-consequence",
+      "frozen_row": 250,
+      "headword": "donc",
+      "pos": "CON",
+      "field": "english",
+      "language": "en",
+      "accepted_text": "Therefore, consequently; links a consequence or result to what precedes.",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "review85_en_195763",
+        "revid": 93811357,
+        "url": "https://en.wiktionary.org/w/index.php?title=donc&oldid=93811357",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=donc&action=history",
+        "line_1_based": 38,
+        "reviewed_excerpt": "# [[therefore]], [[consequently]]; [[thus]]"
+      }
+    },
+    {
+      "sense_id": "b85-250-consequence",
+      "frozen_row": 250,
+      "headword": "donc",
+      "pos": "CON",
+      "field": "chinese",
+      "language": "zh",
+      "accepted_text": "因此、所以；将结果与前面的内容联系起来。",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "review85_en_195763",
+        "revid": 93811357,
+        "url": "https://en.wiktionary.org/w/index.php?title=donc&oldid=93811357",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=donc&action=history",
+        "line_1_based": 38,
+        "reviewed_excerpt": "# [[therefore]], [[consequently]]; [[thus]]"
+      }
+    },
+    {
+      "sense_id": "b85-218-front-position",
+      "frozen_row": 218,
+      "headword": "avant",
+      "pos": "ADJ",
+      "field": "french_definition",
+      "language": "fr",
+      "accepted_text": "Situé à l'avant d'un ensemble ; adjectif invariable placé après le nom, comme dans roues avant.",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "review85_en_front",
+        "revid": 93078269,
+        "url": "https://en.wiktionary.org/w/index.php?title=front&oldid=93078269",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=front&action=history",
+        "line_1_based": 563,
+        "reviewed_excerpt": "# Located at or near the front."
+      }
+    },
+    {
+      "sense_id": "b85-218-front-position",
+      "frozen_row": 218,
+      "headword": "avant",
+      "pos": "ADJ",
+      "field": "ipa",
+      "language": "und",
+      "accepted_text": "/a.vɑ̃/",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "b85_fr_10428",
+        "revid": 39865821,
+        "url": "https://fr.wiktionary.org/w/index.php?title=avant&oldid=39865821",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=avant&action=history",
+        "line_1_based": 10,
+        "reviewed_excerpt": "'''avant''' {{pron|a.vɑ̃|fr}} {{invar}}"
+      }
+    },
+    {
+      "sense_id": "b85-218-front-position",
+      "frozen_row": 218,
+      "headword": "avant",
+      "pos": "ADJ",
+      "field": "english",
+      "language": "en",
+      "accepted_text": "Front; situated in the forward part, as in roues avant (front wheels). The French adjective avant follows the noun and is invariable.",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "review85_en_front",
+        "revid": 93078269,
+        "url": "https://en.wiktionary.org/w/index.php?title=front&oldid=93078269",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=front&action=history",
+        "line_1_based": 563,
+        "reviewed_excerpt": "# Located at or near the front."
+      }
+    },
+    {
+      "sense_id": "b85-218-front-position",
+      "frozen_row": 218,
+      "headword": "avant",
+      "pos": "ADJ",
+      "field": "chinese",
+      "language": "zh",
+      "accepted_text": "前部的、前面的；如 roues avant（前轮）。法语形容词 avant 放在名词后，形式不随性数变化。",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "review85_en_front",
+        "revid": 93078269,
+        "url": "https://en.wiktionary.org/w/index.php?title=front&oldid=93078269",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=front&action=history",
+        "line_1_based": 563,
+        "reviewed_excerpt": "# Located at or near the front."
+      }
+    },
+    {
+      "sense_id": "b85-238-surprised-already",
+      "frozen_row": 238,
+      "headword": "déjà",
+      "pos": "ONO",
+      "field": "french_definition",
+      "language": "fr",
+      "accepted_text": "Réaction de surprise devant un fait déjà accompli, plus tôt qu'on ne l'attendait ; emploi autonome Déjà ? ou Déjà !.",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "b85_fr_9600",
+        "revid": 39362190,
+        "url": "https://fr.wiktionary.org/w/index.php?title=d%C3%A9j%C3%A0&oldid=39362190",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=d%C3%A9j%C3%A0&action=history",
+        "line_1_based": 10,
+        "reviewed_excerpt": "# Indique un [[changement]] d’[[état]] ou une [[atteinte]] du critère [[jusqu’à présent]] ou [[jusqu’alors]]."
+      }
+    },
+    {
+      "sense_id": "b85-238-surprised-already",
+      "frozen_row": 238,
+      "headword": "déjà",
+      "pos": "ONO",
+      "field": "ipa",
+      "language": "und",
+      "accepted_text": "/de.ʒa/",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "b85_fr_9600",
+        "revid": 39362190,
+        "url": "https://fr.wiktionary.org/w/index.php?title=d%C3%A9j%C3%A0&oldid=39362190",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=d%C3%A9j%C3%A0&action=history",
+        "line_1_based": 9,
+        "reviewed_excerpt": "'''déjà''' {{pron|de.ʒa|fr}} {{invariable|fr}} {{adverbe de temps|fr}}"
+      }
+    },
+    {
+      "sense_id": "b85-238-surprised-already",
+      "frozen_row": 238,
+      "headword": "déjà",
+      "pos": "ONO",
+      "field": "english",
+      "language": "en",
+      "accepted_text": "Already? So soon? Reactive interjection expressing surprise that a stated event or state has been reached earlier than expected.",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "b85_fr_9600",
+        "revid": 39362190,
+        "url": "https://fr.wiktionary.org/w/index.php?title=d%C3%A9j%C3%A0&oldid=39362190",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=d%C3%A9j%C3%A0&action=history",
+        "line_1_based": 10,
+        "reviewed_excerpt": "# Indique un [[changement]] d’[[état]] ou une [[atteinte]] du critère [[jusqu’à présent]] ou [[jusqu’alors]]."
+      }
+    },
+    {
+      "sense_id": "b85-238-surprised-already",
+      "frozen_row": 238,
+      "headword": "déjà",
+      "pos": "ONO",
+      "field": "chinese",
+      "language": "zh",
+      "accepted_text": "这么快就……了？；惊讶的感叹回应，表示所说的事比预期更早已发生或实现。此处限于这一回应，不指句末追问忘记的信息。",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "b85_fr_9600",
+        "revid": 39362190,
+        "url": "https://fr.wiktionary.org/w/index.php?title=d%C3%A9j%C3%A0&oldid=39362190",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=d%C3%A9j%C3%A0&action=history",
+        "line_1_based": 10,
+        "reviewed_excerpt": "# Indique un [[changement]] d’[[état]] ou une [[atteinte]] du critère [[jusqu’à présent]] ou [[jusqu’alors]]."
+      }
+    }
+  ],
+  "all_field_reviews": "../../../resources/core-pilot-79/field-review.json",
+  "annotations": [],
+  "compiled_preservation": {
+    "groups": 154,
+    "fields": 616,
+    "payloads": "unchanged"
+  },
+  "native_acceptance": "separate check",
+  "learner_acceptance": "not_run",
+  "whole_core_release": "incomplete"
+}

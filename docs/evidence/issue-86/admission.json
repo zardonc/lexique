@@ -1,0 +1,555 @@
+{
+  "schema": "lexique-core-batch-admission-1",
+  "issue": "https://github.com/zardonc/lexique/issues/86",
+  "content_version": "core-89-v1",
+  "review_date": "2026-11-18",
+  "resource_admission": "passed",
+  "scope": {
+    "issue": 86,
+    "target_groups": 50,
+    "reused_pilot_groups": 0,
+    "new_groups": 50,
+    "complete_groups": 50,
+    "accepted_groups": 50,
+    "approved_specialist_exception_groups": 0,
+    "annotation_exception_groups": 0,
+    "scope_acceptance": "passed",
+    "complete_fields": 200,
+    "groups": [
+      {
+        "frozen_row": 251,
+        "headword": "plaire",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 252,
+        "headword": "maison",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 253,
+        "headword": "gens",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 254,
+        "headword": "nuit",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 255,
+        "headword": "ah",
+        "pos": "ONO",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 256,
+        "headword": "soir",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 257,
+        "headword": "nom",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 258,
+        "headword": "bonjour",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 259,
+        "headword": "jouer",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 260,
+        "headword": "leur",
+        "pos": "PRO:per",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 261,
+        "headword": "leur",
+        "pos": "PRO:pos",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 262,
+        "headword": "finir",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 263,
+        "headword": "peur",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 264,
+        "headword": "mort",
+        "pos": "ADJ",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 265,
+        "headword": "mort",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 266,
+        "headword": "parce que",
+        "pos": "CON",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 267,
+        "headword": "perdre",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 268,
+        "headword": "maman",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 269,
+        "headword": "sentir",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 270,
+        "headword": "ouais",
+        "pos": "ADV",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 271,
+        "headword": "rentrer",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 272,
+        "headword": "nos",
+        "pos": "ADJ:pos",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 273,
+        "headword": "argent",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 274,
+        "headword": "vivre",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 275,
+        "headword": "vivre",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 276,
+        "headword": "premier",
+        "pos": "ADJ",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 277,
+        "headword": "premier",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 278,
+        "headword": "problème",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 279,
+        "headword": "quelle",
+        "pos": "ADJ:int",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 280,
+        "headword": "rendre",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 281,
+        "headword": "dernier",
+        "pos": "ADJ",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 282,
+        "headword": "dernier",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 283,
+        "headword": "tenir",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 284,
+        "headword": "cet",
+        "pos": "ADJ:dem",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 285,
+        "headword": "main",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 286,
+        "headword": "cela",
+        "pos": "PRO:dem",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 287,
+        "headword": "vite",
+        "pos": "ADV",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 288,
+        "headword": "moins",
+        "pos": "ADV",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 289,
+        "headword": "moins",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 290,
+        "headword": "oublier",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 291,
+        "headword": "air",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 292,
+        "headword": "salut",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 293,
+        "headword": "salut",
+        "pos": "ONO",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 294,
+        "headword": "fils",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 295,
+        "headword": "travailler",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 296,
+        "headword": "demain",
+        "pos": "ADV",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 297,
+        "headword": "demain",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 298,
+        "headword": "tête",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 299,
+        "headword": "manger",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 300,
+        "headword": "coup",
+        "pos": "NOM",
+        "complete_fields": 4
+      }
+    ]
+  },
+  "global_admission": {
+    "independent_field_review": "passed",
+    "produced_resource_self_check": "passed",
+    "everyday_sense_review": "incomplete",
+    "selected_scope_acceptance": "passed",
+    "accepted_groups": 450,
+    "approved_specialist_exception_groups": 2,
+    "remaining_unaccepted_groups": 3637,
+    "annotation_exception_groups": 2,
+    "selected_source_rights_and_materials": "passed",
+    "complete_groups": 448,
+    "complete_senses": 450,
+    "complete_fields": 1800,
+    "remaining_groups": 3639
+  },
+  "sources": [
+    {
+      "title": "ce",
+      "pageid": 2493,
+      "revid": 40003876,
+      "timestamp": "2026-11-11T12:51:53Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=ce&oldid=40003876",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=ce&action=history",
+      "id": "b86_fr_2493",
+      "edition": "fr",
+      "entry_language": "fr",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "source_frame": "First-party MediaWiki API latest public revision, fixed by returned revision ID; captured 2026-11-18",
+      "selected_text_review": "passed_for_selected_spans"
+    },
+    {
+      "title": "cet",
+      "pageid": 152754,
+      "revid": 39772629,
+      "timestamp": "2026-08-03T11:14:19Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=cet&oldid=39772629",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=cet&action=history",
+      "id": "b86_fr_152754",
+      "edition": "fr",
+      "entry_language": "fr",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "source_frame": "First-party MediaWiki API latest public revision, fixed by returned revision ID; captured 2026-11-18",
+      "selected_text_review": "passed_for_selected_spans"
+    },
+    {
+      "title": "rentrer",
+      "pageid": 7956,
+      "revid": 39770918,
+      "timestamp": "2026-08-03T10:30:04Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=rentrer&oldid=39770918",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=rentrer&action=history",
+      "id": "b86_fr_7956",
+      "edition": "fr",
+      "entry_language": "fr",
+      "attribution": "Wiktionnaire contributors; credit the full article history; Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), for declared imported text",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "source_frame": "First-party MediaWiki API latest public revision, fixed by returned revision ID; captured 2026-11-18",
+      "selected_text_review": "passed_for_selected_spans"
+    },
+    {
+      "title": "vivres",
+      "pageid": 20467,
+      "revid": 39708130,
+      "timestamp": "2026-07-28T14:55:51Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=vivres&oldid=39708130",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=vivres&action=history",
+      "id": "b86_fr_20467",
+      "edition": "fr",
+      "entry_language": "fr",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "source_frame": "First-party MediaWiki API latest public revision, fixed by returned revision ID; captured 2026-11-18",
+      "selected_text_review": "passed_for_selected_spans"
+    }
+  ],
+  "accepted_field_count": 200,
+  "accepted_replacements_and_binding_corrections": [
+    {
+      "sense_id": "b86-271-ver",
+      "frozen_row": 271,
+      "headword": "rentrer",
+      "pos": "VER",
+      "field": "english",
+      "language": "en",
+      "accepted_text": "Go back in or return to a place one has left.",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "b86_fr_7956",
+        "revid": 39770918,
+        "url": "https://fr.wiktionary.org/w/index.php?title=rentrer&oldid=39770918",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=rentrer&action=history",
+        "line_1_based": 7,
+        "reviewed_excerpt": "# {{term|Sauf au Canada}} [[entrer|Entrer]] de [[nouveau]], entrer après être [[sortir|sorti]], [[revenir]] à.",
+        "attribution": "Wiktionnaire contributors; credit the full article history",
+        "title": "rentrer"
+      }
+    },
+    {
+      "sense_id": "b86-271-ver",
+      "frozen_row": 271,
+      "headword": "rentrer",
+      "pos": "VER",
+      "field": "chinese",
+      "language": "zh",
+      "accepted_text": "重新进入、返回先前离开的地方。",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "b86_fr_7956",
+        "revid": 39770918,
+        "url": "https://fr.wiktionary.org/w/index.php?title=rentrer&oldid=39770918",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=rentrer&action=history",
+        "line_1_based": 7,
+        "reviewed_excerpt": "# {{term|Sauf au Canada}} [[entrer|Entrer]] de [[nouveau]], entrer après être [[sortir|sorti]], [[revenir]] à.",
+        "attribution": "Wiktionnaire contributors; credit the full article history",
+        "title": "rentrer"
+      }
+    },
+    {
+      "sense_id": "b86-274-nom",
+      "frozen_row": 274,
+      "headword": "vivre",
+      "pos": "NOM",
+      "field": "english",
+      "language": "en",
+      "accepted_text": "Food supplies or provisions, used only in the plural vivres. The singular vivre meaning food is dated.",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "b86_fr_20467",
+        "revid": 39708130,
+        "url": "https://fr.wiktionary.org/w/index.php?title=vivres&oldid=39708130",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=vivres&action=history",
+        "line_1_based": 10,
+        "reviewed_excerpt": "# {{au pluriel}} [[denrée|Denrées]] [[destiner|destinées]] à l’[[approvisionnement]] [[alimentaire]].",
+        "attribution": "Wiktionnaire contributors; credit the full article history",
+        "title": "vivres"
+      }
+    },
+    {
+      "sense_id": "b86-274-nom",
+      "frozen_row": 274,
+      "headword": "vivre",
+      "pos": "NOM",
+      "field": "chinese",
+      "language": "zh",
+      "accepted_text": "食物供应、粮食储备；现代此义只用复数 vivres，单数 vivre 的“食物”义已陈旧。",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "b86_fr_20467",
+        "revid": 39708130,
+        "url": "https://fr.wiktionary.org/w/index.php?title=vivres&oldid=39708130",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=vivres&action=history",
+        "line_1_based": 10,
+        "reviewed_excerpt": "# {{au pluriel}} [[denrée|Denrées]] [[destiner|destinées]] à l’[[approvisionnement]] [[alimentaire]].",
+        "attribution": "Wiktionnaire contributors; credit the full article history",
+        "title": "vivres"
+      }
+    },
+    {
+      "sense_id": "b86-284-adj-dem",
+      "frozen_row": 284,
+      "headword": "cet",
+      "pos": "ADJ:dem",
+      "field": "ipa",
+      "language": "und",
+      "accepted_text": "/sɛt/",
+      "reviewer": "quality-86-2026-11-18",
+      "exact_source": {
+        "source_id": "b86_fr_152754",
+        "revid": 39772629,
+        "url": "https://fr.wiktionary.org/w/index.php?title=cet&oldid=39772629",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=cet&action=history",
+        "line_1_based": 24,
+        "reviewed_excerpt": "'''cet''' {{pron|sɛt|fr}}",
+        "attribution": "Wiktionnaire contributors; credit the full article history",
+        "title": "cet"
+      }
+    },
+    {
+      "sense_id": "b86-284-adj-dem",
+      "frozen_row": 284,
+      "headword": "cet",
+      "pos": "ADJ:dem",
+      "field": "english",
+      "language": "en",
+      "accepted_text": "This or that; the masculine singular form of ce used before a vowel sound or a silent h, whether the next word is the noun or an adjective before it.",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "b86_fr_2493",
+        "revid": 40003876,
+        "url": "https://fr.wiktionary.org/w/index.php?title=ce&oldid=40003876",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=ce&action=history",
+        "line_1_based": 26,
+        "reviewed_excerpt": "# Déterminant utilisé pour mettre en évidence une chose ou une personne dont on a la représentation devant soi. Lorsque l’objet est en nombre multiple ou lorsqu’on veut appuyer encore plus sur ce qu’on veut montrer, on rajoute ''[[-ci]]'' ou ''[[-là]]'' (selon la distance) après le nom.",
+        "attribution": "Wiktionnaire contributors; credit the full article history",
+        "title": "ce"
+      }
+    },
+    {
+      "sense_id": "b86-284-adj-dem",
+      "frozen_row": 284,
+      "headword": "cet",
+      "pos": "ADJ:dem",
+      "field": "chinese",
+      "language": "zh",
+      "accepted_text": "这个、那个；ce 的阳性单数形式，用于紧接其后的词以元音发音（包括哑音 h）开头时；该词可以是名词，也可以是名词前的形容词。",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "b86_fr_2493",
+        "revid": 40003876,
+        "url": "https://fr.wiktionary.org/w/index.php?title=ce&oldid=40003876",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=ce&action=history",
+        "line_1_based": 26,
+        "reviewed_excerpt": "# Déterminant utilisé pour mettre en évidence une chose ou une personne dont on a la représentation devant soi. Lorsque l’objet est en nombre multiple ou lorsqu’on veut appuyer encore plus sur ce qu’on veut montrer, on rajoute ''[[-ci]]'' ou ''[[-là]]'' (selon la distance) après le nom.",
+        "attribution": "Wiktionnaire contributors; credit the full article history",
+        "title": "ce"
+      }
+    }
+  ],
+  "all_field_reviews": "../../../resources/core-pilot-79/field-review.json",
+  "annotations": [],
+  "compiled_preservation": {
+    "groups": 154,
+    "fields": 616,
+    "payloads": "unchanged"
+  },
+  "native_acceptance": "separate check",
+  "learner_acceptance": "not_run",
+  "whole_core_release": "incomplete"
+}

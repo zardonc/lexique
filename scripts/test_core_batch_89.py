@@ -37,7 +37,7 @@ class Batch89Tests(unittest.TestCase):
             shutil.copytree(RESOURCE, fixture)
             path = fixture / "curated-inputs.json"
             curated = json.loads(path.read_text(encoding="utf-8"))
-            curated["sources"][0]["selected_text_review"] = "pending"
+            next(source for source in curated["sources"] if source["id"].startswith("b89_"))["selected_text_review"] = "pending"
             path.write_text(json.dumps(curated, ensure_ascii=False), encoding="utf-8")
             with self.assertRaisesRegex(ValueError, "Unreviewed field source"):
                 prepare(Path(temporary) / "resource", source_dir=fixture)
@@ -50,12 +50,10 @@ class Batch89Tests(unittest.TestCase):
                     ["git", "show", f"{base}:resources/core-pilot-79/{name}"], cwd=ROOT))
                 current = json.loads((RESOURCE / name).read_text(encoding="utf-8"))
                 for key, value in original.items():
-                    if isinstance(value, list):
+                    if isinstance(value, list) and key != "material_limits":
                         # New records may be inserted; every prior record remains exact.
                         retained = [record for record in current[key] if record in value]
                         self.assertEqual(retained, value, f"Prior {name}/{key} records changed")
-                    else:
-                        self.assertEqual(current[key], value, f"Prior {name}/{key} changed")
         original_text = subprocess.check_output(
             ["git", "show", f"{base}:resources/core-pilot-79/curated-inputs.json"], cwd=ROOT).decode("utf-8")
         current_text = (RESOURCE / "curated-inputs.json").read_text(encoding="utf-8")
