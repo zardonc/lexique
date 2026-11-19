@@ -8795,6 +8795,2648 @@
       "scope": "Only selected contributor definitions, headword IPA and grammar/spelling notes are candidates. Third-party quotations, media and other definitions are excluded.",
       "capture_origin": "First-party live MediaWiki API response captured for this batch",
       "capture_path": "target/issue-85/avant-en-api.json"
+    },
+    {
+      "id": "b84_fr_2244",
+      "title": "merci",
+      "pageid": 2244,
+      "current_content_revid": 39871928,
+      "timestamp": "2026-09-11T15:12:26Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=merci&oldid=39871928",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=merci&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; selected adaptations and explanatory translations by Lexique contributors",
+      "source_frame": "Fixed first-party revision at or before 2026-10-01T00:00:00Z; raw capture retained in target/issue-84/sources",
+      "status": "pending_independent_review",
+      "selected_locations": [
+        {
+          "sense_id": "b84-151-nom",
+          "field": "french_definition",
+          "line_1_based": 78
+        },
+        {
+          "sense_id": "b84-151-nom",
+          "field": "ipa",
+          "line_1_based": 77
+        },
+        {
+          "sense_id": "b84-151-nom",
+          "field": "english",
+          "line_1_based": 78
+        },
+        {
+          "sense_id": "b84-151-nom",
+          "field": "chinese",
+          "line_1_based": 78
+        },
+        {
+          "sense_id": "b84-152-ono",
+          "field": "french_definition",
+          "line_1_based": 135
+        },
+        {
+          "sense_id": "b84-152-ono",
+          "field": "ipa",
+          "line_1_based": 134
+        },
+        {
+          "sense_id": "b84-152-ono",
+          "field": "english",
+          "line_1_based": 135
+        },
+        {
+          "sense_id": "b84-152-ono",
+          "field": "chinese",
+          "line_1_based": 135
+        }
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 424,
+          "text": "* {{R:Godefroy}}"
+        }
+      ],
+      "contributor_context": [],
+      "scope": "Selected definition/IPA and uncited contributor support only. Literary quotations, unselected definitions, reference-dictionary prose, images and audio are excluded.",
+      "redistribution_notice": "Proposed selected adaptations: CC BY-SA 4.0; retain fixed revision and contributor-history credit, applicable article import credit, modification notices and share alike. Existing COPYING supplies the complete licence. Final selected-span rights and quality audit pending."
+    },
+    {
+      "id": "b84_fr_529",
+      "title": "sa",
+      "pageid": 529,
+      "current_content_revid": 39737822,
+      "timestamp": "2026-08-01T23:34:05Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=sa&oldid=39737822",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=sa&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; selected adaptations and explanatory translations by Lexique contributors",
+      "source_frame": "Fixed first-party revision at or before 2026-10-01T00:00:00Z; raw capture retained in target/issue-84/sources",
+      "status": "pending_independent_review",
+      "selected_locations": [
+        {
+          "sense_id": "b84-153-adj-pos",
+          "field": "french_definition",
+          "line_1_based": 16
+        },
+        {
+          "sense_id": "b84-153-adj-pos",
+          "field": "ipa",
+          "line_1_based": 15
+        },
+        {
+          "sense_id": "b84-153-adj-pos",
+          "field": "english",
+          "line_1_based": 16
+        },
+        {
+          "sense_id": "b84-153-adj-pos",
+          "field": "chinese",
+          "line_1_based": 16
+        }
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 172,
+          "text": "* {{R:Brugger1912|page=84}}"
+        },
+        {
+          "line_1_based": 288,
+          "text": "* {{R:PinalieBernabé|p=15}}"
+        },
+        {
+          "line_1_based": 489,
+          "text": "* {{R:Trémeur|vue=s-t}}"
+        },
+        {
+          "line_1_based": 512,
+          "text": "* {{R:Eon2015|p=48}}"
+        },
+        {
+          "line_1_based": 610,
+          "text": "* {{R:DMF}}"
+        },
+        {
+          "line_1_based": 649,
+          "text": "* {{R:Cantalausa}}"
+        },
+        {
+          "line_1_based": 650,
+          "text": "* {{R:Alibert-gram}}"
+        },
+        {
+          "line_1_based": 651,
+          "text": "* {{R:Vernet}}"
+        },
+        {
+          "line_1_based": 710,
+          "text": "* {{R:TEHIT}}"
+        }
+      ],
+      "contributor_context": [
+        {
+          "sense_id": "b84-153-adj-pos",
+          "line_1_based": 14,
+          "text": "{{fr-accord-mixte|ms=son|mp=ses|fs=sa|fp=ses|pms=sɔ̃|pmp=sɛ|pmp2=se|pfs=sa|pfp=sɛ|pfp2=se}}",
+          "role": "selected_form_or_construction_support",
+          "status": "pending_independent_review"
+        },
+        {
+          "sense_id": "b84-153-adj-pos",
+          "line_1_based": 17,
+          "text": "#* {{exemple | lang=fr | Tu as vu '''sa''' jupe ?}}",
+          "role": "selected_form_or_construction_support",
+          "status": "pending_independent_review"
+        },
+        {
+          "sense_id": "b84-153-adj-pos",
+          "line_1_based": 18,
+          "text": "#* {{exemple | lang=fr | A-t-il pensé à prendre '''sa''' clé ?}}",
+          "role": "selected_form_or_construction_support",
+          "status": "pending_independent_review"
+        },
+        {
+          "sense_id": "b84-153-adj-pos",
+          "line_1_based": 21,
+          "text": ": Ce mot était précédemment grammaticalement rangé dans les « adjectifs possessifs », on trouve encore cette dénomination dans quelques dictionnaires et grammaires éditées aujourd’hui.",
+          "role": "selected_form_or_construction_support",
+          "status": "pending_independent_review"
+        }
+      ],
+      "scope": "Selected definition/IPA and uncited contributor support only. Literary quotations, unselected definitions, reference-dictionary prose, images and audio are excluded.",
+      "redistribution_notice": "Proposed selected adaptations: CC BY-SA 4.0; retain fixed revision and contributor-history credit, applicable article import credit, modification notices and share alike. Existing COPYING supplies the complete licence. Final selected-span rights and quality audit pending."
+    },
+    {
+      "id": "b84_fr_148762",
+      "title": "autre",
+      "pageid": 148762,
+      "current_content_revid": 39879552,
+      "timestamp": "2026-09-17T03:02:17Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=autre&oldid=39879552",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=autre&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; selected adaptations and explanatory translations by Lexique contributors; declared article import: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935)",
+      "source_frame": "Fixed first-party revision at or before 2026-10-01T00:00:00Z; raw capture retained in target/issue-84/sources",
+      "status": "pending_independent_review",
+      "selected_locations": [
+        {
+          "sense_id": "b84-154-adj",
+          "field": "french_definition",
+          "line_1_based": 8
+        },
+        {
+          "sense_id": "b84-154-adj",
+          "field": "ipa",
+          "line_1_based": 7
+        },
+        {
+          "sense_id": "b84-154-adj",
+          "field": "english",
+          "line_1_based": 8
+        },
+        {
+          "sense_id": "b84-154-adj",
+          "field": "chinese",
+          "line_1_based": 8
+        },
+        {
+          "sense_id": "b84-155-pro-ind",
+          "field": "french_definition",
+          "line_1_based": 163
+        },
+        {
+          "sense_id": "b84-155-pro-ind",
+          "field": "ipa",
+          "line_1_based": 149
+        },
+        {
+          "sense_id": "b84-155-pro-ind",
+          "field": "english",
+          "line_1_based": 163
+        },
+        {
+          "sense_id": "b84-155-pro-ind",
+          "field": "chinese",
+          "line_1_based": 163
+        }
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 257,
+          "text": "* {{Import:DAF8}}"
+        },
+        {
+          "line_1_based": 281,
+          "text": "* {{R:Lo Congrès}}"
+        },
+        {
+          "line_1_based": 282,
+          "text": "* {{R:Cantalausa}}"
+        },
+        {
+          "line_1_based": 283,
+          "text": "* {{R:Laux-dict-oc-fr}}"
+        },
+        {
+          "line_1_based": 284,
+          "text": "* {{R:Ubaud}}"
+        },
+        {
+          "line_1_based": 285,
+          "text": "* {{R:BaTelÒc}}"
+        }
+      ],
+      "contributor_context": [
+        {
+          "sense_id": "b84-155-pro-ind",
+          "line_1_based": 147,
+          "text": "=== {{S|nom|fr}} ===",
+          "role": "selected_form_or_construction_support",
+          "status": "pending_independent_review"
+        },
+        {
+          "sense_id": "b84-155-pro-ind",
+          "line_1_based": 163,
+          "text": "# S’emploie également par [[opposition]] à '''[[un]]''' ou '''[[une]]''' pour [[distinguer]] deux [[êtres]] ou deux choses ou bien encore deux [[groupes]] d’êtres ou de choses [[déterminés]] ou [[indéterminés]].",
+          "role": "selected_form_or_construction_support",
+          "status": "pending_independent_review"
+        }
+      ],
+      "scope": "Selected definition/IPA and uncited contributor support only. Literary quotations, unselected definitions, reference-dictionary prose, images and audio are excluded.",
+      "redistribution_notice": "Proposed selected adaptations: CC BY-SA 4.0; retain fixed revision and contributor-history credit, applicable article import credit, modification notices and share alike. Existing COPYING supplies the complete licence. Final selected-span rights and quality audit pending."
+    },
+    {
+      "id": "b84_fr_527",
+      "title": "ta",
+      "pageid": 527,
+      "current_content_revid": 39709095,
+      "timestamp": "2026-07-29T05:54:09Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=ta&oldid=39709095",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=ta&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; selected adaptations and explanatory translations by Lexique contributors",
+      "source_frame": "Fixed first-party revision at or before 2026-10-01T00:00:00Z; raw capture retained in target/issue-84/sources",
+      "status": "pending_independent_review",
+      "selected_locations": [
+        {
+          "sense_id": "b84-156-adj-pos",
+          "field": "french_definition",
+          "line_1_based": 20
+        },
+        {
+          "sense_id": "b84-156-adj-pos",
+          "field": "ipa",
+          "line_1_based": 19
+        },
+        {
+          "sense_id": "b84-156-adj-pos",
+          "field": "english",
+          "line_1_based": 20
+        },
+        {
+          "sense_id": "b84-156-adj-pos",
+          "field": "chinese",
+          "line_1_based": 20
+        }
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 222,
+          "text": "* {{R:Bamadaba}}"
+        },
+        {
+          "line_1_based": 223,
+          "text": "* {{R:Lexique de base 2003}}"
+        },
+        {
+          "line_1_based": 224,
+          "text": "* {{R:LBFA 2010}}"
+        },
+        {
+          "line_1_based": 225,
+          "text": "* {{R:bm-Dumestre}}"
+        },
+        {
+          "line_1_based": 257,
+          "text": "* {{R:Brindle2017|p=152}}"
+        },
+        {
+          "line_1_based": 285,
+          "text": "* {{R:Quint|p=xxvii}}"
+        },
+        {
+          "line_1_based": 286,
+          "text": "* {{R:BrüserReisSantos|p=762 et 763}}"
+        },
+        {
+          "line_1_based": 368,
+          "text": "* {{R:Trémeur|vue=s-t}}"
+        },
+        {
+          "line_1_based": 470,
+          "text": "* {{R:Blau-Barak}}"
+        },
+        {
+          "line_1_based": 497,
+          "text": "* {{R:DMF}}"
+        },
+        {
+          "line_1_based": 541,
+          "text": "* {{R:Cantalausa}}"
+        },
+        {
+          "line_1_based": 599,
+          "text": "* {{R:Freelang}}"
+        },
+        {
+          "line_1_based": 789,
+          "text": "* {{R:Prieels2012|p=30}}"
+        },
+        {
+          "line_1_based": 835,
+          "text": "* {{R:FVDP}}"
+        },
+        {
+          "line_1_based": 855,
+          "text": "* {{R:Sohn 1975}}"
+        },
+        {
+          "line_1_based": 856,
+          "text": "* {{R:Sohn 1976}}"
+        }
+      ],
+      "contributor_context": [
+        {
+          "sense_id": "b84-156-adj-pos",
+          "line_1_based": 14,
+          "text": "{{fr-accord-mixte",
+          "role": "selected_form_or_construction_support",
+          "status": "pending_independent_review"
+        },
+        {
+          "sense_id": "b84-156-adj-pos",
+          "line_1_based": 15,
+          "text": "|ms=ton|mp=tes|fs=ta|fp=tes",
+          "role": "selected_form_or_construction_support",
+          "status": "pending_independent_review"
+        },
+        {
+          "sense_id": "b84-156-adj-pos",
+          "line_1_based": 16,
+          "text": "|pms=tɔ̃|pmp=tɛ|pmp2=te",
+          "role": "selected_form_or_construction_support",
+          "status": "pending_independent_review"
+        },
+        {
+          "sense_id": "b84-156-adj-pos",
+          "line_1_based": 17,
+          "text": "|pfs=ta|pfp=tɛ|pfp2=te",
+          "role": "selected_form_or_construction_support",
+          "status": "pending_independent_review"
+        },
+        {
+          "sense_id": "b84-156-adj-pos",
+          "line_1_based": 18,
+          "text": "}}",
+          "role": "selected_form_or_construction_support",
+          "status": "pending_independent_review"
+        },
+        {
+          "sense_id": "b84-156-adj-pos",
+          "line_1_based": 27,
+          "text": ": Ce mot était précédemment grammaticalement rangé dans les « adjectifs possessifs », on trouve encore cette dénomination dans quelques dictionnaires et grammaires éditées aujourd’hui.",
+          "role": "selected_form_or_construction_support",
+          "status": "pending_independent_review"
+        }
+      ],
+      "scope": "Selected definition/IPA and uncited contributor support only. Literary quotations, unselected definitions, reference-dictionary prose, images and audio are excluded.",
+      "redistribution_notice": "Proposed selected adaptations: CC BY-SA 4.0; retain fixed revision and contributor-history credit, applicable article import credit, modification notices and share alike. Existing COPYING supplies the complete licence. Final selected-span rights and quality audit pending."
+    },
+    {
+      "id": "b84_fr_360",
+      "title": "arriver",
+      "pageid": 360,
+      "current_content_revid": 39771089,
+      "timestamp": "2026-08-03T10:34:33Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=arriver&oldid=39771089",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=arriver&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; selected adaptations and explanatory translations by Lexique contributors; declared article import: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935)",
+      "source_frame": "Fixed first-party revision at or before 2026-10-01T00:00:00Z; raw capture retained in target/issue-84/sources",
+      "status": "pending_independent_review",
+      "selected_locations": [
+        {
+          "sense_id": "b84-157-ver",
+          "field": "french_definition",
+          "line_1_based": 7
+        },
+        {
+          "sense_id": "b84-157-ver",
+          "field": "ipa",
+          "line_1_based": 6
+        },
+        {
+          "sense_id": "b84-157-ver",
+          "field": "english",
+          "line_1_based": 7
+        },
+        {
+          "sense_id": "b84-157-ver",
+          "field": "chinese",
+          "line_1_based": 7
+        }
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 314,
+          "text": "* {{Import:DAF8}}"
+        },
+        {
+          "line_1_based": 330,
+          "text": "* {{R:Foti}}"
+        }
+      ],
+      "contributor_context": [],
+      "scope": "Selected definition/IPA and uncited contributor support only. Literary quotations, unselected definitions, reference-dictionary prose, images and audio are excluded.",
+      "redistribution_notice": "Proposed selected adaptations: CC BY-SA 4.0; retain fixed revision and contributor-history credit, applicable article import credit, modification notices and share alike. Existing COPYING supplies the complete licence. Final selected-span rights and quality audit pending."
+    },
+    {
+      "id": "b84_fr_181101",
+      "title": "ces",
+      "pageid": 181101,
+      "current_content_revid": 39770653,
+      "timestamp": "2026-08-03T10:23:18Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=ces&oldid=39770653",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=ces&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; selected adaptations and explanatory translations by Lexique contributors",
+      "source_frame": "Fixed first-party revision at or before 2026-10-01T00:00:00Z; raw capture retained in target/issue-84/sources",
+      "status": "pending_independent_review",
+      "selected_locations": [
+        {
+          "sense_id": "b84-158-adj-dem",
+          "field": "french_definition",
+          "line_1_based": 25
+        },
+        {
+          "sense_id": "b84-158-adj-dem",
+          "field": "ipa",
+          "line_1_based": 24
+        },
+        {
+          "sense_id": "b84-158-adj-dem",
+          "field": "english",
+          "line_1_based": 25
+        },
+        {
+          "sense_id": "b84-158-adj-dem",
+          "field": "chinese",
+          "line_1_based": 25
+        }
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 98,
+          "text": "* {{R:Godefroy}}"
+        },
+        {
+          "line_1_based": 118,
+          "text": "* {{R:Raynouard}}"
+        }
+      ],
+      "contributor_context": [
+        {
+          "sense_id": "b84-158-adj-dem",
+          "line_1_based": 12,
+          "text": "=== {{S|déterminant démonstratif|fr|flexion}} ===",
+          "role": "selected_form_or_construction_support",
+          "status": "pending_independent_review"
+        },
+        {
+          "sense_id": "b84-158-adj-dem",
+          "line_1_based": 25,
+          "text": "# ''Pluriel de'' [[ce#fr-dét-dém|ce]] ''et'' [[cette#fr-dét-dém|cette]].",
+          "role": "selected_form_or_construction_support",
+          "status": "pending_independent_review"
+        }
+      ],
+      "scope": "Selected definition/IPA and uncited contributor support only. Literary quotations, unselected definitions, reference-dictionary prose, images and audio are excluded.",
+      "redistribution_notice": "Proposed selected adaptations: CC BY-SA 4.0; retain fixed revision and contributor-history credit, applicable article import credit, modification notices and share alike. Existing COPYING supplies the complete licence. Final selected-span rights and quality audit pending."
+    },
+    {
+      "id": "b84_fr_5100",
+      "title": "donner",
+      "pageid": 5100,
+      "current_content_revid": 39863324,
+      "timestamp": "2026-09-06T22:49:37Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=donner&oldid=39863324",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=donner&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; selected adaptations and explanatory translations by Lexique contributors",
+      "source_frame": "Fixed first-party revision at or before 2026-10-01T00:00:00Z; raw capture retained in target/issue-84/sources",
+      "status": "pending_independent_review",
+      "selected_locations": [
+        {
+          "sense_id": "b84-159-ver",
+          "field": "french_definition",
+          "line_1_based": 11
+        },
+        {
+          "sense_id": "b84-159-ver",
+          "field": "ipa",
+          "line_1_based": 10
+        },
+        {
+          "sense_id": "b84-159-ver",
+          "field": "english",
+          "line_1_based": 11
+        },
+        {
+          "sense_id": "b84-159-ver",
+          "field": "chinese",
+          "line_1_based": 11
+        }
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 786,
+          "text": "* {{R:TLFi}}"
+        },
+        {
+          "line_1_based": 787,
+          "text": "* {{R:DAF8|donner}}"
+        }
+      ],
+      "contributor_context": [],
+      "scope": "Selected definition/IPA and uncited contributor support only. Literary quotations, unselected definitions, reference-dictionary prose, images and audio are excluded.",
+      "redistribution_notice": "Proposed selected adaptations: CC BY-SA 4.0; retain fixed revision and contributor-history credit, applicable article import credit, modification notices and share alike. Existing COPYING supplies the complete licence. Final selected-span rights and quality audit pending."
+    },
+    {
+      "id": "b84_fr_8085",
+      "title": "regarder",
+      "pageid": 8085,
+      "current_content_revid": 39808468,
+      "timestamp": "2026-08-16T16:43:35Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=regarder&oldid=39808468",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=regarder&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; selected adaptations and explanatory translations by Lexique contributors",
+      "source_frame": "Fixed first-party revision at or before 2026-10-01T00:00:00Z; raw capture retained in target/issue-84/sources",
+      "status": "pending_independent_review",
+      "selected_locations": [
+        {
+          "sense_id": "b84-160-ver",
+          "field": "french_definition",
+          "line_1_based": 8
+        },
+        {
+          "sense_id": "b84-160-ver",
+          "field": "ipa",
+          "line_1_based": 7
+        },
+        {
+          "sense_id": "b84-160-ver",
+          "field": "english",
+          "line_1_based": 8
+        },
+        {
+          "sense_id": "b84-160-ver",
+          "field": "chinese",
+          "line_1_based": 8
+        }
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 346,
+          "text": "* {{R:DAF8}}"
+        }
+      ],
+      "contributor_context": [],
+      "scope": "Selected definition/IPA and uncited contributor support only. Literary quotations, unselected definitions, reference-dictionary prose, images and audio are excluded.",
+      "redistribution_notice": "Proposed selected adaptations: CC BY-SA 4.0; retain fixed revision and contributor-history credit, applicable article import credit, modification notices and share alike. Existing COPYING supplies the complete licence. Final selected-span rights and quality audit pending."
+    },
+    {
+      "id": "b84_fr_134462",
+      "title": "encore",
+      "pageid": 134462,
+      "current_content_revid": 39835483,
+      "timestamp": "2026-08-28T07:41:22Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=encore&oldid=39835483",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=encore&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; selected adaptations and explanatory translations by Lexique contributors; declared article import: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935)",
+      "source_frame": "Fixed first-party revision at or before 2026-10-01T00:00:00Z; raw capture retained in target/issue-84/sources",
+      "status": "pending_independent_review",
+      "selected_locations": [
+        {
+          "sense_id": "b84-161-adv",
+          "field": "french_definition",
+          "line_1_based": 9
+        },
+        {
+          "sense_id": "b84-161-adv",
+          "field": "ipa",
+          "line_1_based": 8
+        },
+        {
+          "sense_id": "b84-161-adv",
+          "field": "english",
+          "line_1_based": 9
+        },
+        {
+          "sense_id": "b84-161-adv",
+          "field": "chinese",
+          "line_1_based": 9
+        }
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 225,
+          "text": "* {{Import:DAF8}}"
+        }
+      ],
+      "contributor_context": [],
+      "scope": "Selected definition/IPA and uncited contributor support only. Literary quotations, unselected definitions, reference-dictionary prose, images and audio are excluded.",
+      "redistribution_notice": "Proposed selected adaptations: CC BY-SA 4.0; retain fixed revision and contributor-history credit, applicable article import credit, modification notices and share alike. Existing COPYING supplies the complete licence. Final selected-span rights and quality audit pending."
+    },
+    {
+      "id": "b84_fr_138860",
+      "title": "appeler",
+      "pageid": 138860,
+      "current_content_revid": 39778943,
+      "timestamp": "2026-08-05T15:06:27Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=appeler&oldid=39778943",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=appeler&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; selected adaptations and explanatory translations by Lexique contributors; declared article import: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935)",
+      "source_frame": "Fixed first-party revision at or before 2026-10-01T00:00:00Z; raw capture retained in target/issue-84/sources",
+      "status": "pending_independent_review",
+      "selected_locations": [
+        {
+          "sense_id": "b84-162-ver",
+          "field": "french_definition",
+          "line_1_based": 44
+        },
+        {
+          "sense_id": "b84-162-ver",
+          "field": "ipa",
+          "line_1_based": 7
+        },
+        {
+          "sense_id": "b84-162-ver",
+          "field": "english",
+          "line_1_based": 44
+        },
+        {
+          "sense_id": "b84-162-ver",
+          "field": "chinese",
+          "line_1_based": 44
+        }
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 371,
+          "text": "* {{Import:DAF8}}"
+        }
+      ],
+      "contributor_context": [],
+      "scope": "Selected definition/IPA and uncited contributor support only. Literary quotations, unselected definitions, reference-dictionary prose, images and audio are excluded.",
+      "redistribution_notice": "Proposed selected adaptations: CC BY-SA 4.0; retain fixed revision and contributor-history credit, applicable article import credit, modification notices and share alike. Existing COPYING supplies the complete licence. Final selected-span rights and quality audit pending."
+    },
+    {
+      "id": "b84_fr_10510",
+      "title": "est-ce que",
+      "pageid": 10510,
+      "current_content_revid": 39281202,
+      "timestamp": "2026-02-05T09:24:46Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=est-ce%20que&oldid=39281202",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=est-ce%20que&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; selected adaptations and explanatory translations by Lexique contributors",
+      "source_frame": "Fixed first-party revision at or before 2026-10-01T00:00:00Z; raw capture retained in target/issue-84/sources",
+      "status": "pending_independent_review",
+      "selected_locations": [
+        {
+          "sense_id": "b84-163-adv",
+          "field": "french_definition",
+          "line_1_based": 8
+        },
+        {
+          "sense_id": "b84-163-adv",
+          "field": "ipa",
+          "line_1_based": 7
+        },
+        {
+          "sense_id": "b84-163-adv",
+          "field": "english",
+          "line_1_based": 8
+        },
+        {
+          "sense_id": "b84-163-adv",
+          "field": "chinese",
+          "line_1_based": 8
+        }
+      ],
+      "source_page_notices_to_record": [],
+      "contributor_context": [
+        {
+          "sense_id": "b84-163-adv",
+          "line_1_based": 5,
+          "text": "=== {{S|particule|fr}} ===",
+          "role": "selected_form_or_construction_support",
+          "status": "pending_independent_review"
+        },
+        {
+          "sense_id": "b84-163-adv",
+          "line_1_based": 8,
+          "text": "# Utilisé pour commencer une [[question]] pour ne pas débuter par le verbe. — {{note}} Le sujet n’est alors plus inversé avec le verbe.",
+          "role": "selected_form_or_construction_support",
+          "status": "pending_independent_review"
+        }
+      ],
+      "scope": "Selected definition/IPA and uncited contributor support only. Literary quotations, unselected definitions, reference-dictionary prose, images and audio are excluded.",
+      "redistribution_notice": "Proposed selected adaptations: CC BY-SA 4.0; retain fixed revision and contributor-history credit, applicable article import credit, modification notices and share alike. Existing COPYING supplies the complete licence. Final selected-span rights and quality audit pending.",
+      "excluded_quotation_support": [
+        {
+          "line_1_based": 16,
+          "purpose": "Attested elision est-ce qu’ before il; grammatical fact only, quotation prose not bundled.",
+          "attribution": "Jules Verne, Claudius Bombarnac (1892), chapter 6; source marker on fixed line 17",
+          "eligible_for_bundled_text": false
+        }
+      ]
+    },
+    {
+      "id": "b84_fr_10678",
+      "title": "peu",
+      "pageid": 10678,
+      "current_content_revid": 39905680,
+      "timestamp": "2026-09-26T21:01:35Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=peu&oldid=39905680",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=peu&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; selected adaptations and explanatory translations by Lexique contributors",
+      "source_frame": "Fixed first-party revision at or before 2026-10-01T00:00:00Z; raw capture retained in target/issue-84/sources",
+      "status": "pending_independent_review",
+      "selected_locations": [
+        {
+          "sense_id": "b84-164-adv",
+          "field": "french_definition",
+          "line_1_based": 10
+        },
+        {
+          "sense_id": "b84-164-adv",
+          "field": "ipa",
+          "line_1_based": 9
+        },
+        {
+          "sense_id": "b84-164-adv",
+          "field": "english",
+          "line_1_based": 10
+        },
+        {
+          "sense_id": "b84-164-adv",
+          "field": "chinese",
+          "line_1_based": 10
+        },
+        {
+          "sense_id": "b84-165-nom",
+          "field": "french_definition",
+          "line_1_based": 148
+        },
+        {
+          "sense_id": "b84-165-nom",
+          "field": "ipa",
+          "line_1_based": 147
+        },
+        {
+          "sense_id": "b84-165-nom",
+          "field": "english",
+          "line_1_based": 148
+        },
+        {
+          "sense_id": "b84-165-nom",
+          "field": "chinese",
+          "line_1_based": 148
+        }
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 259,
+          "text": "* {{R:TLFi}}"
+        },
+        {
+          "line_1_based": 260,
+          "text": "* {{R:Littré}}"
+        },
+        {
+          "line_1_based": 271,
+          "text": "* {{R:Godefroy|pui}}"
+        },
+        {
+          "line_1_based": 300,
+          "text": "* {{R:Trémeur|vue=p}}"
+        },
+        {
+          "line_1_based": 341,
+          "text": "* {{R:Cantalausa}}"
+        },
+        {
+          "line_1_based": 342,
+          "text": "* {{R:Escomessa}}"
+        },
+        {
+          "line_1_based": 343,
+          "text": "* {{R:Guilhemjoan Harrer}}"
+        },
+        {
+          "line_1_based": 345,
+          "text": "* {{R:Palay1933}}"
+        }
+      ],
+      "contributor_context": [],
+      "scope": "Selected definition/IPA and uncited contributor support only. Literary quotations, unselected definitions, reference-dictionary prose, images and audio are excluded.",
+      "redistribution_notice": "Proposed selected adaptations: CC BY-SA 4.0; retain fixed revision and contributor-history credit, applicable article import credit, modification notices and share alike. Existing COPYING supplies the complete licence. Final selected-span rights and quality audit pending."
+    },
+    {
+      "id": "b84_fr_566",
+      "title": "homme",
+      "pageid": 566,
+      "current_content_revid": 39856507,
+      "timestamp": "2026-09-04T13:35:40Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=homme&oldid=39856507",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=homme&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; selected adaptations and explanatory translations by Lexique contributors",
+      "source_frame": "Fixed first-party revision at or before 2026-10-01T00:00:00Z; raw capture retained in target/issue-84/sources",
+      "status": "pending_independent_review",
+      "selected_locations": [
+        {
+          "sense_id": "b84-166-nom",
+          "field": "french_definition",
+          "line_1_based": 14
+        },
+        {
+          "sense_id": "b84-166-nom",
+          "field": "ipa",
+          "line_1_based": 13
+        },
+        {
+          "sense_id": "b84-166-nom",
+          "field": "english",
+          "line_1_based": 14
+        },
+        {
+          "sense_id": "b84-166-nom",
+          "field": "chinese",
+          "line_1_based": 14
+        }
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 780,
+          "text": "* {{R:DAF8}}"
+        },
+        {
+          "line_1_based": 781,
+          "text": "* {{R:DMF}}"
+        },
+        {
+          "line_1_based": 782,
+          "text": "* {{R:DAF1}}"
+        },
+        {
+          "line_1_based": 783,
+          "text": "* {{R:TLFi}}"
+        }
+      ],
+      "contributor_context": [],
+      "scope": "Selected definition/IPA and uncited contributor support only. Literary quotations, unselected definitions, reference-dictionary prose, images and audio are excluded.",
+      "redistribution_notice": "Proposed selected adaptations: CC BY-SA 4.0; retain fixed revision and contributor-history credit, applicable article import credit, modification notices and share alike. Existing COPYING supplies the complete licence. Final selected-span rights and quality audit pending."
+    },
+    {
+      "id": "b84_fr_7843",
+      "title": "partir",
+      "pageid": 7843,
+      "current_content_revid": 39870672,
+      "timestamp": "2026-09-11T07:51:42Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=partir&oldid=39870672",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=partir&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; selected adaptations and explanatory translations by Lexique contributors",
+      "source_frame": "Fixed first-party revision at or before 2026-10-01T00:00:00Z; raw capture retained in target/issue-84/sources",
+      "status": "pending_independent_review",
+      "selected_locations": [
+        {
+          "sense_id": "b84-167-ver",
+          "field": "french_definition",
+          "line_1_based": 25
+        },
+        {
+          "sense_id": "b84-167-ver",
+          "field": "ipa",
+          "line_1_based": 7
+        },
+        {
+          "sense_id": "b84-167-ver",
+          "field": "english",
+          "line_1_based": 25
+        },
+        {
+          "sense_id": "b84-167-ver",
+          "field": "chinese",
+          "line_1_based": 25
+        }
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 313,
+          "text": "* {{R:Robert}}"
+        },
+        {
+          "line_1_based": 314,
+          "text": "* {{R:Larousse}}"
+        },
+        {
+          "line_1_based": 315,
+          "text": "* {{R:Usito}}"
+        },
+        {
+          "line_1_based": 316,
+          "text": "* {{R:DAF8}}"
+        },
+        {
+          "line_1_based": 432,
+          "text": "* {{R:Lo Congrès}}"
+        },
+        {
+          "line_1_based": 433,
+          "text": "* {{R:Cantalausa}}"
+        },
+        {
+          "line_1_based": 434,
+          "text": "* {{R:Ubaud}}"
+        },
+        {
+          "line_1_based": 485,
+          "text": "* {{R:Priberam|partir}}"
+        },
+        {
+          "line_1_based": 486,
+          "text": "* {{R:Michaelis|partir}}"
+        },
+        {
+          "line_1_based": 487,
+          "text": "* {{R:Aulete|partir}}"
+        },
+        {
+          "line_1_based": 488,
+          "text": "* {{R:DicionárioFonético|partir|id=22993}}"
+        }
+      ],
+      "contributor_context": [],
+      "scope": "Selected definition/IPA and uncited contributor support only. Literary quotations, unselected definitions, reference-dictionary prose, images and audio are excluded.",
+      "redistribution_notice": "Proposed selected adaptations: CC BY-SA 4.0; retain fixed revision and contributor-history credit, applicable article import credit, modification notices and share alike. Existing COPYING supplies the complete licence. Final selected-span rights and quality audit pending."
+    },
+    {
+      "id": "b84_fr_526",
+      "title": "mes",
+      "pageid": 526,
+      "current_content_revid": 39812823,
+      "timestamp": "2026-08-18T13:16:08Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=mes&oldid=39812823",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=mes&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; selected adaptations and explanatory translations by Lexique contributors",
+      "source_frame": "Fixed first-party revision at or before 2026-10-01T00:00:00Z; raw capture retained in target/issue-84/sources",
+      "status": "pending_independent_review",
+      "selected_locations": [
+        {
+          "sense_id": "b84-168-adj-pos",
+          "field": "french_definition",
+          "line_1_based": 15
+        },
+        {
+          "sense_id": "b84-168-adj-pos",
+          "field": "ipa",
+          "line_1_based": 14
+        },
+        {
+          "sense_id": "b84-168-adj-pos",
+          "field": "english",
+          "line_1_based": 15
+        },
+        {
+          "sense_id": "b84-168-adj-pos",
+          "field": "chinese",
+          "line_1_based": 15
+        }
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 53,
+          "text": "* {{R:TLFi}}"
+        },
+        {
+          "line_1_based": 109,
+          "text": "* {{R:Godefroy}}"
+        },
+        {
+          "line_1_based": 391,
+          "text": "* {{R:Lo Congrès}}"
+        },
+        {
+          "line_1_based": 392,
+          "text": "* {{R:Cantalausa}}"
+        },
+        {
+          "line_1_based": 393,
+          "text": "* {{R:Laux-dict-oc-fr}}"
+        },
+        {
+          "line_1_based": 394,
+          "text": "* {{R:Ubaud}}"
+        },
+        {
+          "line_1_based": 395,
+          "text": "* {{R:Guilhemjoan Harrer}}"
+        },
+        {
+          "line_1_based": 396,
+          "text": "* {{RÉF|1}} {{R:BaTelÒc}}"
+        },
+        {
+          "line_1_based": 466,
+          "text": "* {{R:Malau, 2011}}"
+        }
+      ],
+      "contributor_context": [
+        {
+          "sense_id": "b84-168-adj-pos",
+          "line_1_based": 12,
+          "text": "=== {{S|déterminant possessif|fr|flexion}} ===",
+          "role": "selected_form_or_construction_support",
+          "status": "pending_independent_review"
+        },
+        {
+          "sense_id": "b84-168-adj-pos",
+          "line_1_based": 15,
+          "text": "# ''Pluriel de'' [[mon#fr|mon]], [[ma#fr|ma]]. Qui sont à [[moi]], dans le cas d’un seul possesseur et de plusieurs objets.",
+          "role": "selected_form_or_construction_support",
+          "status": "pending_independent_review"
+        }
+      ],
+      "scope": "Selected definition/IPA and uncited contributor support only. Literary quotations, unselected definitions, reference-dictionary prose, images and audio are excluded.",
+      "redistribution_notice": "Proposed selected adaptations: CC BY-SA 4.0; retain fixed revision and contributor-history credit, applicable article import credit, modification notices and share alike. Existing COPYING supplies the complete licence. Final selected-span rights and quality audit pending."
+    },
+    {
+      "id": "b84_fr_4129",
+      "title": "toujours",
+      "pageid": 4129,
+      "current_content_revid": 39879817,
+      "timestamp": "2026-09-17T09:48:01Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=toujours&oldid=39879817",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=toujours&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; selected adaptations and explanatory translations by Lexique contributors",
+      "source_frame": "Fixed first-party revision at or before 2026-10-01T00:00:00Z; raw capture retained in target/issue-84/sources",
+      "status": "pending_independent_review",
+      "selected_locations": [
+        {
+          "sense_id": "b84-169-adv",
+          "field": "french_definition",
+          "line_1_based": 8
+        },
+        {
+          "sense_id": "b84-169-adv",
+          "field": "ipa",
+          "line_1_based": 7
+        },
+        {
+          "sense_id": "b84-169-adv",
+          "field": "english",
+          "line_1_based": 8
+        },
+        {
+          "sense_id": "b84-169-adv",
+          "field": "chinese",
+          "line_1_based": 8
+        }
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 277,
+          "text": "* {{R:DAF8}}"
+        }
+      ],
+      "contributor_context": [],
+      "scope": "Selected definition/IPA and uncited contributor support only. Literary quotations, unselected definitions, reference-dictionary prose, images and audio are excluded.",
+      "redistribution_notice": "Proposed selected adaptations: CC BY-SA 4.0; retain fixed revision and contributor-history credit, applicable article import credit, modification notices and share alike. Existing COPYING supplies the complete licence. Final selected-span rights and quality audit pending."
+    },
+    {
+      "id": "b84_fr_103",
+      "title": "jour",
+      "pageid": 103,
+      "current_content_revid": 39720198,
+      "timestamp": "2026-08-01T01:03:21Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=jour&oldid=39720198",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=jour&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; selected adaptations and explanatory translations by Lexique contributors",
+      "source_frame": "Fixed first-party revision at or before 2026-10-01T00:00:00Z; raw capture retained in target/issue-84/sources",
+      "status": "pending_independent_review",
+      "selected_locations": [
+        {
+          "sense_id": "b84-170-nom",
+          "field": "french_definition",
+          "line_1_based": 9
+        },
+        {
+          "sense_id": "b84-170-nom",
+          "field": "ipa",
+          "line_1_based": 8
+        },
+        {
+          "sense_id": "b84-170-nom",
+          "field": "english",
+          "line_1_based": 9
+        },
+        {
+          "sense_id": "b84-170-nom",
+          "field": "chinese",
+          "line_1_based": 9
+        }
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 679,
+          "text": "* {{R:DAF8}}"
+        },
+        {
+          "line_1_based": 696,
+          "text": "* {{R:Trémeur|vue=k-l}}"
+        },
+        {
+          "line_1_based": 714,
+          "text": "* {{R:DMF}}"
+        }
+      ],
+      "contributor_context": [],
+      "scope": "Selected definition/IPA and uncited contributor support only. Literary quotations, unselected definitions, reference-dictionary prose, images and audio are excluded.",
+      "redistribution_notice": "Proposed selected adaptations: CC BY-SA 4.0; retain fixed revision and contributor-history credit, applicable article import credit, modification notices and share alike. Existing COPYING supplies the complete licence. Final selected-span rights and quality audit pending."
+    },
+    {
+      "id": "b84_fr_773",
+      "title": "femme",
+      "pageid": 773,
+      "current_content_revid": 39908333,
+      "timestamp": "2026-09-28T14:12:26Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=femme&oldid=39908333",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=femme&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; selected adaptations and explanatory translations by Lexique contributors",
+      "source_frame": "Fixed first-party revision at or before 2026-10-01T00:00:00Z; raw capture retained in target/issue-84/sources",
+      "status": "pending_independent_review",
+      "selected_locations": [
+        {
+          "sense_id": "b84-171-nom",
+          "field": "french_definition",
+          "line_1_based": 27
+        },
+        {
+          "sense_id": "b84-171-nom",
+          "field": "ipa",
+          "line_1_based": 26
+        },
+        {
+          "sense_id": "b84-171-nom",
+          "field": "english",
+          "line_1_based": 27
+        },
+        {
+          "sense_id": "b84-171-nom",
+          "field": "chinese",
+          "line_1_based": 27
+        }
+      ],
+      "source_page_notices_to_record": [],
+      "contributor_context": [],
+      "scope": "Selected definition/IPA and uncited contributor support only. Literary quotations, unselected definitions, reference-dictionary prose, images and audio are excluded.",
+      "redistribution_notice": "Proposed selected adaptations: CC BY-SA 4.0; retain fixed revision and contributor-history credit, applicable article import credit, modification notices and share alike. Existing COPYING supplies the complete licence. Final selected-span rights and quality audit pending."
+    },
+    {
+      "id": "b84_fr_2299",
+      "title": "temps",
+      "pageid": 2299,
+      "current_content_revid": 39865587,
+      "timestamp": "2026-09-08T08:18:37Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=temps&oldid=39865587",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=temps&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; selected adaptations and explanatory translations by Lexique contributors",
+      "source_frame": "Fixed first-party revision at or before 2026-10-01T00:00:00Z; raw capture retained in target/issue-84/sources",
+      "status": "pending_independent_review",
+      "selected_locations": [
+        {
+          "sense_id": "b84-172-nom",
+          "field": "french_definition",
+          "line_1_based": 10
+        },
+        {
+          "sense_id": "b84-172-nom",
+          "field": "ipa",
+          "line_1_based": 9
+        },
+        {
+          "sense_id": "b84-172-nom",
+          "field": "english",
+          "line_1_based": 10
+        },
+        {
+          "sense_id": "b84-172-nom",
+          "field": "chinese",
+          "line_1_based": 10
+        }
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 3,
+          "text": ": {{siècle|X|lang=fr}} Du {{étyl|frm|fr|temps}}<ref>{{R:DMF}}</ref>, de l’{{étyl|fro|fr|tems}}, {{lien|''tens''|fro}}<ref>{{R:DÉCT|tens}}</ref>, du {{étyl|la|fr|mot=tempus|sens=temps, durée, époque}}{{R|TLFi}}."
+        },
+        {
+          "line_1_based": 727,
+          "text": "* {{R:DAF8}}"
+        },
+        {
+          "line_1_based": 819,
+          "text": "* {{R:Cantalausa}}"
+        },
+        {
+          "line_1_based": 820,
+          "text": "* {{R:Laux-dict-oc-fr}}"
+        },
+        {
+          "line_1_based": 821,
+          "text": "* {{R:Ubaud}}"
+        }
+      ],
+      "contributor_context": [],
+      "scope": "Selected definition/IPA and uncited contributor support only. Literary quotations, unselected definitions, reference-dictionary prose, images and audio are excluded.",
+      "redistribution_notice": "Proposed selected adaptations: CC BY-SA 4.0; retain fixed revision and contributor-history credit, applicable article import credit, modification notices and share alike. Existing COPYING supplies the complete licence. Final selected-span rights and quality audit pending."
+    },
+    {
+      "id": "b84_fr_4851",
+      "title": "maintenant",
+      "pageid": 4851,
+      "current_content_revid": 39886721,
+      "timestamp": "2026-09-21T11:45:48Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=maintenant&oldid=39886721",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=maintenant&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; selected adaptations and explanatory translations by Lexique contributors",
+      "source_frame": "Fixed first-party revision at or before 2026-10-01T00:00:00Z; raw capture retained in target/issue-84/sources",
+      "status": "pending_independent_review",
+      "selected_locations": [
+        {
+          "sense_id": "b84-173-adv",
+          "field": "french_definition",
+          "line_1_based": 10
+        },
+        {
+          "sense_id": "b84-173-adv",
+          "field": "ipa",
+          "line_1_based": 9
+        },
+        {
+          "sense_id": "b84-173-adv",
+          "field": "english",
+          "line_1_based": 10
+        },
+        {
+          "sense_id": "b84-173-adv",
+          "field": "chinese",
+          "line_1_based": 10
+        }
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 271,
+          "text": "* {{R:DAF8}}"
+        },
+        {
+          "line_1_based": 272,
+          "text": "* {{RÉF}} : {{R:TLFi}}"
+        },
+        {
+          "line_1_based": 288,
+          "text": "* {{R:Godefroy}}"
+        }
+      ],
+      "contributor_context": [],
+      "scope": "Selected definition/IPA and uncited contributor support only. Literary quotations, unselected definitions, reference-dictionary prose, images and audio are excluded.",
+      "redistribution_notice": "Proposed selected adaptations: CC BY-SA 4.0; retain fixed revision and contributor-history credit, applicable article import credit, modification notices and share alike. Existing COPYING supplies the complete licence. Final selected-span rights and quality audit pending."
+    },
+    {
+      "id": "b84_fr_533",
+      "title": "notre",
+      "pageid": 533,
+      "current_content_revid": 39770637,
+      "timestamp": "2026-08-03T10:22:51Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=notre&oldid=39770637",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=notre&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; selected adaptations and explanatory translations by Lexique contributors; declared article import: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935)",
+      "source_frame": "Fixed first-party revision at or before 2026-10-01T00:00:00Z; raw capture retained in target/issue-84/sources",
+      "status": "pending_independent_review",
+      "selected_locations": [
+        {
+          "sense_id": "b84-174-adj-pos",
+          "field": "french_definition",
+          "line_1_based": 11
+        },
+        {
+          "sense_id": "b84-174-adj-pos",
+          "field": "ipa",
+          "line_1_based": 10
+        },
+        {
+          "sense_id": "b84-174-adj-pos",
+          "field": "english",
+          "line_1_based": 11
+        },
+        {
+          "sense_id": "b84-174-adj-pos",
+          "field": "chinese",
+          "line_1_based": 11
+        }
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 132,
+          "text": "* {{Import:DAF8}}"
+        }
+      ],
+      "contributor_context": [
+        {
+          "sense_id": "b84-174-adj-pos",
+          "line_1_based": 8,
+          "text": "=== {{S|déterminant possessif|fr}} ===",
+          "role": "selected_form_or_construction_support",
+          "status": "pending_independent_review"
+        },
+        {
+          "sense_id": "b84-174-adj-pos",
+          "line_1_based": 11,
+          "text": "# [[première|Première]] [[personne]] du [[pluriel]] au singulier. Qui [[nous]] appartient. Plusieurs possesseurs (dont l’un est le locuteur) et un seul objet.",
+          "role": "selected_form_or_construction_support",
+          "status": "pending_independent_review"
+        }
+      ],
+      "scope": "Selected definition/IPA and uncited contributor support only. Literary quotations, unselected definitions, reference-dictionary prose, images and audio are excluded.",
+      "redistribution_notice": "Proposed selected adaptations: CC BY-SA 4.0; retain fixed revision and contributor-history credit, applicable article import credit, modification notices and share alike. Existing COPYING supplies the complete licence. Final selected-span rights and quality audit pending."
+    },
+    {
+      "id": "b84_fr_10724",
+      "title": "vie",
+      "pageid": 10724,
+      "current_content_revid": 39772710,
+      "timestamp": "2026-08-03T11:16:08Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=vie&oldid=39772710",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=vie&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; selected adaptations and explanatory translations by Lexique contributors",
+      "source_frame": "Fixed first-party revision at or before 2026-10-01T00:00:00Z; raw capture retained in target/issue-84/sources",
+      "status": "pending_independent_review",
+      "selected_locations": [
+        {
+          "sense_id": "b84-175-nom",
+          "field": "french_definition",
+          "line_1_based": 31
+        },
+        {
+          "sense_id": "b84-175-nom",
+          "field": "ipa",
+          "line_1_based": 18
+        },
+        {
+          "sense_id": "b84-175-nom",
+          "field": "english",
+          "line_1_based": 31
+        },
+        {
+          "sense_id": "b84-175-nom",
+          "field": "chinese",
+          "line_1_based": 31
+        }
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 506,
+          "text": "* {{R:TLFi}}"
+        },
+        {
+          "line_1_based": 507,
+          "text": "* {{R:DAF8}}"
+        },
+        {
+          "line_1_based": 529,
+          "text": "* {{R:Godefroy}}"
+        }
+      ],
+      "contributor_context": [],
+      "scope": "Selected definition/IPA and uncited contributor support only. Literary quotations, unselected definitions, reference-dictionary prose, images and audio are excluded.",
+      "redistribution_notice": "Proposed selected adaptations: CC BY-SA 4.0; retain fixed revision and contributor-history credit, applicable article import credit, modification notices and share alike. Existing COPYING supplies the complete licence. Final selected-span rights and quality audit pending."
+    },
+    {
+      "id": "b84_fr_349",
+      "title": "deux",
+      "pageid": 349,
+      "current_content_revid": 39863990,
+      "timestamp": "2026-09-07T11:39:01Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=deux&oldid=39863990",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=deux&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; selected adaptations and explanatory translations by Lexique contributors",
+      "source_frame": "Fixed first-party revision at or before 2026-10-01T00:00:00Z; raw capture retained in target/issue-84/sources",
+      "status": "pending_independent_review",
+      "selected_locations": [
+        {
+          "sense_id": "b84-176-adj-num",
+          "field": "french_definition",
+          "line_1_based": 11
+        },
+        {
+          "sense_id": "b84-176-adj-num",
+          "field": "ipa",
+          "line_1_based": 10
+        },
+        {
+          "sense_id": "b84-176-adj-num",
+          "field": "english",
+          "line_1_based": 11
+        },
+        {
+          "sense_id": "b84-176-adj-num",
+          "field": "chinese",
+          "line_1_based": 11
+        }
+      ],
+      "source_page_notices_to_record": [],
+      "contributor_context": [
+        {
+          "sense_id": "b84-176-adj-num",
+          "line_1_based": 7,
+          "text": "=== {{S|adjectif numéral|fr}} ===",
+          "role": "selected_form_or_construction_support",
+          "status": "pending_independent_review"
+        },
+        {
+          "sense_id": "b84-176-adj-num",
+          "line_1_based": 10,
+          "text": "'''deux''' {{pron|dø|fr}} {{cardinal|fr}} {{p}}, {{invariable|fr}}",
+          "role": "selected_form_or_construction_support",
+          "status": "pending_independent_review"
+        },
+        {
+          "sense_id": "b84-176-adj-num",
+          "line_1_based": 11,
+          "text": "# {{term|antéposé}} [[un|Un]] plus un.",
+          "role": "selected_form_or_construction_support",
+          "status": "pending_independent_review"
+        }
+      ],
+      "scope": "Selected definition/IPA and uncited contributor support only. Literary quotations, unselected definitions, reference-dictionary prose, images and audio are excluded.",
+      "redistribution_notice": "Proposed selected adaptations: CC BY-SA 4.0; retain fixed revision and contributor-history credit, applicable article import credit, modification notices and share alike. Existing COPYING supplies the complete licence. Final selected-span rights and quality audit pending."
+    },
+    {
+      "id": "b84_fr_801",
+      "title": "mettre",
+      "pageid": 801,
+      "current_content_revid": 39804542,
+      "timestamp": "2026-08-15T08:02:54Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=mettre&oldid=39804542",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=mettre&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; selected adaptations and explanatory translations by Lexique contributors",
+      "source_frame": "Fixed first-party revision at or before 2026-10-01T00:00:00Z; raw capture retained in target/issue-84/sources",
+      "status": "pending_independent_review",
+      "selected_locations": [
+        {
+          "sense_id": "b84-177-ver",
+          "field": "french_definition",
+          "line_1_based": 9
+        },
+        {
+          "sense_id": "b84-177-ver",
+          "field": "ipa",
+          "line_1_based": 8
+        },
+        {
+          "sense_id": "b84-177-ver",
+          "field": "english",
+          "line_1_based": 9
+        },
+        {
+          "sense_id": "b84-177-ver",
+          "field": "chinese",
+          "line_1_based": 9
+        }
+      ],
+      "source_page_notices_to_record": [],
+      "contributor_context": [],
+      "scope": "Selected definition/IPA and uncited contributor support only. Literary quotations, unselected definitions, reference-dictionary prose, images and audio are excluded.",
+      "redistribution_notice": "Proposed selected adaptations: CC BY-SA 4.0; retain fixed revision and contributor-history credit, applicable article import credit, modification notices and share alike. Existing COPYING supplies the complete licence. Final selected-span rights and quality audit pending."
+    },
+    {
+      "id": "b84_fr_8749",
+      "title": "rester",
+      "pageid": 8749,
+      "current_content_revid": 39770817,
+      "timestamp": "2026-08-03T10:27:34Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=rester&oldid=39770817",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=rester&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; selected adaptations and explanatory translations by Lexique contributors",
+      "source_frame": "Fixed first-party revision at or before 2026-10-01T00:00:00Z; raw capture retained in target/issue-84/sources",
+      "status": "pending_independent_review",
+      "selected_locations": [
+        {
+          "sense_id": "b84-178-ver",
+          "field": "french_definition",
+          "line_1_based": 8
+        },
+        {
+          "sense_id": "b84-178-ver",
+          "field": "ipa",
+          "line_1_based": 7
+        },
+        {
+          "sense_id": "b84-178-ver",
+          "field": "english",
+          "line_1_based": 8
+        },
+        {
+          "sense_id": "b84-178-ver",
+          "field": "chinese",
+          "line_1_based": 8
+        }
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 215,
+          "text": "* {{R:DAF8}}"
+        },
+        {
+          "line_1_based": 223,
+          "text": "* {{R:Godefroy}}"
+        }
+      ],
+      "contributor_context": [],
+      "scope": "Selected definition/IPA and uncited contributor support only. Literary quotations, unselected definitions, reference-dictionary prose, images and audio are excluded.",
+      "redistribution_notice": "Proposed selected adaptations: CC BY-SA 4.0; retain fixed revision and contributor-history credit, applicable article import credit, modification notices and share alike. Existing COPYING supplies the complete licence. Final selected-span rights and quality audit pending."
+    },
+    {
+      "id": "b84_fr_1827",
+      "title": "sans",
+      "pageid": 1827,
+      "current_content_revid": 39865923,
+      "timestamp": "2026-09-08T11:02:00Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=sans&oldid=39865923",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=sans&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; selected adaptations and explanatory translations by Lexique contributors",
+      "source_frame": "Fixed first-party revision at or before 2026-10-01T00:00:00Z; raw capture retained in target/issue-84/sources",
+      "status": "pending_independent_review",
+      "selected_locations": [
+        {
+          "sense_id": "b84-179-pre",
+          "field": "french_definition",
+          "line_1_based": 10
+        },
+        {
+          "sense_id": "b84-179-pre",
+          "field": "ipa",
+          "line_1_based": 9
+        },
+        {
+          "sense_id": "b84-179-pre",
+          "field": "english",
+          "line_1_based": 10
+        },
+        {
+          "sense_id": "b84-179-pre",
+          "field": "chinese",
+          "line_1_based": 10
+        }
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 264,
+          "text": "* {{R:DAF8}}"
+        },
+        {
+          "line_1_based": 265,
+          "text": "* {{R:TLFi}}"
+        },
+        {
+          "line_1_based": 319,
+          "text": "* {{R:Hammar|741}}"
+        }
+      ],
+      "contributor_context": [],
+      "scope": "Selected definition/IPA and uncited contributor support only. Literary quotations, unselected definitions, reference-dictionary prose, images and audio are excluded.",
+      "redistribution_notice": "Proposed selected adaptations: CC BY-SA 4.0; retain fixed revision and contributor-history credit, applicable article import credit, modification notices and share alike. Existing COPYING supplies the complete licence. Final selected-span rights and quality audit pending."
+    },
+    {
+      "id": "b84_fr_10094",
+      "title": "seul",
+      "pageid": 10094,
+      "current_content_revid": 39886448,
+      "timestamp": "2026-09-21T04:56:24Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=seul&oldid=39886448",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=seul&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; selected adaptations and explanatory translations by Lexique contributors; declared article import: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935)",
+      "source_frame": "Fixed first-party revision at or before 2026-10-01T00:00:00Z; raw capture retained in target/issue-84/sources",
+      "status": "pending_independent_review",
+      "selected_locations": [
+        {
+          "sense_id": "b84-180-adj",
+          "field": "french_definition",
+          "line_1_based": 10
+        },
+        {
+          "sense_id": "b84-180-adj",
+          "field": "ipa",
+          "line_1_based": 9
+        },
+        {
+          "sense_id": "b84-180-adj",
+          "field": "english",
+          "line_1_based": 10
+        },
+        {
+          "sense_id": "b84-180-adj",
+          "field": "chinese",
+          "line_1_based": 10
+        },
+        {
+          "sense_id": "b84-181-nom",
+          "field": "french_definition",
+          "line_1_based": 47
+        },
+        {
+          "sense_id": "b84-181-nom",
+          "field": "ipa",
+          "line_1_based": 9
+        },
+        {
+          "sense_id": "b84-181-nom",
+          "field": "english",
+          "line_1_based": 47
+        },
+        {
+          "sense_id": "b84-181-nom",
+          "field": "chinese",
+          "line_1_based": 47
+        }
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 158,
+          "text": "* {{Import:DAF8}}"
+        },
+        {
+          "line_1_based": 165,
+          "text": ": Du {{étyl|xbm|br}} ''seuzl''{{R|CATH}}, du {{étyl|obt|br}} ''sodol''{{R|DVB-I}} « talon », issu d’un celtique {{recons|stātlā|lang-mot-vedette=br}} « base, piédestal, ce sur quoi on se tient »{{R|LEBM}}, qui remonte à l’indo-européen {{recons|stéh₂tleh₂|lang-mot-vedette=br}}, dérivé du radical {{recons|steh₂-|lang-mot-vedette=br}} « être debout, se tenir debout »<ref>{{R:Matasovic|p=354}}</ref>."
+        },
+        {
+          "line_1_based": 168,
+          "text": ": Du vieux breton ''sol'' « autant, tout ce que »<ref>{{R:Deshayes|p=652}}</ref>, issu d’une base celtique {{recons|stāl-|lang-mot-vedette=br}}, croisement d’un type {{recons|sā-li-|lang-mot-vedette=br}} et d’un type {{recons|tā-li-|lang-mot-vedette=br}} (équivalent du latin ''{{lien|talis|la|dif=tālis}}'' « [[tel]] »), tous deux construits respectivement sur les thèmes démonstratifs c’est-à-dire {{recons|so|lang-mot-vedette=br}} et {{recons|to-|lang-mot-vedette=br}} que montre, entre autres, la déclinaison de l’article grec{{R|LEBM}}. Voir aussi ''{{lien|an|br}}''."
+        }
+      ],
+      "contributor_context": [
+        {
+          "sense_id": "b84-181-nom",
+          "line_1_based": 47,
+          "text": "# [[elliptiquement|Elliptiquement]],",
+          "role": "selected_form_or_construction_support",
+          "status": "pending_independent_review"
+        },
+        {
+          "sense_id": "b84-181-nom",
+          "line_1_based": 48,
+          "text": "#* ''Le gouvernement d’un '''seul''','' la monarchie absolue.",
+          "role": "selected_form_or_construction_support",
+          "status": "pending_independent_review"
+        },
+        {
+          "sense_id": "b84-181-nom",
+          "line_1_based": 49,
+          "text": "#* {{exemple | lang=fr | Le pouvoir, l’autorité d’un '''seul'''.}}",
+          "role": "selected_form_or_construction_support",
+          "status": "pending_independent_review"
+        }
+      ],
+      "scope": "Selected definition/IPA and uncited contributor support only. Literary quotations, unselected definitions, reference-dictionary prose, images and audio are excluded.",
+      "redistribution_notice": "Proposed selected adaptations: CC BY-SA 4.0; retain fixed revision and contributor-history credit, applicable article import credit, modification notices and share alike. Existing COPYING supplies the complete licence. Final selected-span rights and quality audit pending."
+    },
+    {
+      "id": "b84_fr_28259",
+      "title": "arrêter",
+      "pageid": 28259,
+      "current_content_revid": 39835670,
+      "timestamp": "2026-08-28T08:41:31Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=arr%C3%AAter&oldid=39835670",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=arr%C3%AAter&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; selected adaptations and explanatory translations by Lexique contributors; declared article import: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935)",
+      "source_frame": "Fixed first-party revision at or before 2026-10-01T00:00:00Z; raw capture retained in target/issue-84/sources",
+      "status": "pending_independent_review",
+      "selected_locations": [
+        {
+          "sense_id": "b84-182-ver",
+          "field": "french_definition",
+          "line_1_based": 8
+        },
+        {
+          "sense_id": "b84-182-ver",
+          "field": "ipa",
+          "line_1_based": 7
+        },
+        {
+          "sense_id": "b84-182-ver",
+          "field": "english",
+          "line_1_based": 8
+        },
+        {
+          "sense_id": "b84-182-ver",
+          "field": "chinese",
+          "line_1_based": 8
+        }
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 357,
+          "text": "* {{Import:DAF8}}"
+        }
+      ],
+      "contributor_context": [],
+      "scope": "Selected definition/IPA and uncited contributor support only. Literary quotations, unselected definitions, reference-dictionary prose, images and audio are excluded.",
+      "redistribution_notice": "Proposed selected adaptations: CC BY-SA 4.0; retain fixed revision and contributor-history credit, applicable article import credit, modification notices and share alike. Existing COPYING supplies the complete licence. Final selected-span rights and quality audit pending."
+    },
+    {
+      "id": "b84_fr_102140",
+      "title": "vraiment",
+      "pageid": 102140,
+      "current_content_revid": 39773767,
+      "timestamp": "2026-08-03T13:57:22Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=vraiment&oldid=39773767",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=vraiment&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; selected adaptations and explanatory translations by Lexique contributors",
+      "source_frame": "Fixed first-party revision at or before 2026-10-01T00:00:00Z; raw capture retained in target/issue-84/sources",
+      "status": "pending_independent_review",
+      "selected_locations": [
+        {
+          "sense_id": "b84-183-adv",
+          "field": "french_definition",
+          "line_1_based": 8
+        },
+        {
+          "sense_id": "b84-183-adv",
+          "field": "ipa",
+          "line_1_based": 7
+        },
+        {
+          "sense_id": "b84-183-adv",
+          "field": "english",
+          "line_1_based": 8
+        },
+        {
+          "sense_id": "b84-183-adv",
+          "field": "chinese",
+          "line_1_based": 8
+        }
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 109,
+          "text": "* {{R:Littré}}﻿"
+        },
+        {
+          "line_1_based": 110,
+          "text": "* {{R:DAF8}}"
+        }
+      ],
+      "contributor_context": [],
+      "scope": "Selected definition/IPA and uncited contributor support only. Literary quotations, unselected definitions, reference-dictionary prose, images and audio are excluded.",
+      "redistribution_notice": "Proposed selected adaptations: CC BY-SA 4.0; retain fixed revision and contributor-history credit, applicable article import credit, modification notices and share alike. Existing COPYING supplies the complete licence. Final selected-span rights and quality audit pending."
+    },
+    {
+      "id": "b84_fr_23561",
+      "title": "connaître",
+      "pageid": 23561,
+      "current_content_revid": 39700190,
+      "timestamp": "2026-07-24T18:00:41Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=conna%C3%AEtre&oldid=39700190",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=conna%C3%AEtre&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; selected adaptations and explanatory translations by Lexique contributors; declared article import: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935)",
+      "source_frame": "Fixed first-party revision at or before 2026-10-01T00:00:00Z; raw capture retained in target/issue-84/sources",
+      "status": "pending_independent_review",
+      "selected_locations": [
+        {
+          "sense_id": "b84-184-ver",
+          "field": "french_definition",
+          "line_1_based": 9
+        },
+        {
+          "sense_id": "b84-184-ver",
+          "field": "ipa",
+          "line_1_based": 8
+        },
+        {
+          "sense_id": "b84-184-ver",
+          "field": "english",
+          "line_1_based": 9
+        },
+        {
+          "sense_id": "b84-184-ver",
+          "field": "chinese",
+          "line_1_based": 9
+        }
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 255,
+          "text": "* {{Import:DAF8}}"
+        },
+        {
+          "line_1_based": 256,
+          "text": "* {{R:TLFi}}"
+        }
+      ],
+      "contributor_context": [],
+      "scope": "Selected definition/IPA and uncited contributor support only. Literary quotations, unselected definitions, reference-dictionary prose, images and audio are excluded.",
+      "redistribution_notice": "Proposed selected adaptations: CC BY-SA 4.0; retain fixed revision and contributor-history credit, applicable article import credit, modification notices and share alike. Existing COPYING supplies the complete licence. Final selected-span rights and quality audit pending."
+    },
+    {
+      "id": "b84_fr_173484",
+      "title": "quelque",
+      "pageid": 173484,
+      "current_content_revid": 39772610,
+      "timestamp": "2026-08-03T11:13:55Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=quelque&oldid=39772610",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=quelque&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; selected adaptations and explanatory translations by Lexique contributors; declared article import: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935)",
+      "source_frame": "Fixed first-party revision at or before 2026-10-01T00:00:00Z; raw capture retained in target/issue-84/sources",
+      "status": "pending_independent_review",
+      "selected_locations": [
+        {
+          "sense_id": "b84-185-adj-ind",
+          "field": "french_definition",
+          "line_1_based": 22
+        },
+        {
+          "sense_id": "b84-185-adj-ind",
+          "field": "ipa",
+          "line_1_based": 7
+        },
+        {
+          "sense_id": "b84-185-adj-ind",
+          "field": "english",
+          "line_1_based": 22
+        },
+        {
+          "sense_id": "b84-185-adj-ind",
+          "field": "chinese",
+          "line_1_based": 22
+        },
+        {
+          "sense_id": "b84-186-adv",
+          "field": "french_definition",
+          "line_1_based": 132
+        },
+        {
+          "sense_id": "b84-186-adv",
+          "field": "ipa",
+          "line_1_based": 122
+        },
+        {
+          "sense_id": "b84-186-adv",
+          "field": "english",
+          "line_1_based": 132
+        },
+        {
+          "sense_id": "b84-186-adv",
+          "field": "chinese",
+          "line_1_based": 132
+        }
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 169,
+          "text": "* {{Import:DAF8}}"
+        }
+      ],
+      "contributor_context": [
+        {
+          "sense_id": "b84-185-adj-ind",
+          "line_1_based": 5,
+          "text": "=== {{S|adjectif indéfini|fr}} ===",
+          "role": "selected_form_or_construction_support",
+          "status": "pending_independent_review"
+        },
+        {
+          "sense_id": "b84-185-adj-ind",
+          "line_1_based": 22,
+          "text": "# {{au singulier}} Indique que l’on ignore la [[quantité]] exacte du mot déterminé, mais pas [[beaucoup]]. Utilisé avec un indénombrable.",
+          "role": "selected_form_or_construction_support",
+          "status": "pending_independent_review"
+        },
+        {
+          "sense_id": "b84-186-adv",
+          "line_1_based": 121,
+          "text": "=== {{S|adverbe|fr}} ===",
+          "role": "selected_form_or_construction_support",
+          "status": "pending_independent_review"
+        },
+        {
+          "sense_id": "b84-186-adv",
+          "line_1_based": 132,
+          "text": "# [[environ|Environ]]. — {{note}} ''Il accompagne alors un adjectif numéral.''",
+          "role": "selected_form_or_construction_support",
+          "status": "pending_independent_review"
+        }
+      ],
+      "scope": "Selected definition/IPA and uncited contributor support only. Literary quotations, unselected definitions, reference-dictionary prose, images and audio are excluded.",
+      "redistribution_notice": "Proposed selected adaptations: CC BY-SA 4.0; retain fixed revision and contributor-history credit, applicable article import credit, modification notices and share alike. Existing COPYING supplies the complete licence. Final selected-span rights and quality audit pending."
+    },
+    {
+      "id": "b84_fr_34975",
+      "title": "sûr",
+      "pageid": 34975,
+      "current_content_revid": 39909552,
+      "timestamp": "2026-09-29T10:51:27Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=s%C3%BBr&oldid=39909552",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=s%C3%BBr&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; selected adaptations and explanatory translations by Lexique contributors; declared article import: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935)",
+      "source_frame": "Fixed first-party revision at or before 2026-10-01T00:00:00Z; raw capture retained in target/issue-84/sources",
+      "status": "pending_independent_review",
+      "selected_locations": [
+        {
+          "sense_id": "b84-187-adj",
+          "field": "french_definition",
+          "line_1_based": 78
+        },
+        {
+          "sense_id": "b84-187-adj",
+          "field": "ipa",
+          "line_1_based": 10
+        },
+        {
+          "sense_id": "b84-187-adj",
+          "field": "english",
+          "line_1_based": 78
+        },
+        {
+          "sense_id": "b84-187-adj",
+          "field": "chinese",
+          "line_1_based": 78
+        }
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 238,
+          "text": "* {{Import:DAF8}}"
+        }
+      ],
+      "contributor_context": [],
+      "scope": "Selected definition/IPA and uncited contributor support only. Literary quotations, unselected definitions, reference-dictionary prose, images and audio are excluded.",
+      "redistribution_notice": "Proposed selected adaptations: CC BY-SA 4.0; retain fixed revision and contributor-history credit, applicable article import credit, modification notices and share alike. Existing COPYING supplies the complete licence. Final selected-span rights and quality audit pending."
+    },
+    {
+      "id": "b84_fr_166004",
+      "title": "juste",
+      "pageid": 166004,
+      "current_content_revid": 39779681,
+      "timestamp": "2026-08-05T22:40:42Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=juste&oldid=39779681",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=juste&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; selected adaptations and explanatory translations by Lexique contributors",
+      "source_frame": "Fixed first-party revision at or before 2026-10-01T00:00:00Z; raw capture retained in target/issue-84/sources",
+      "status": "pending_independent_review",
+      "selected_locations": [
+        {
+          "sense_id": "b84-188-adj",
+          "field": "french_definition",
+          "line_1_based": 11
+        },
+        {
+          "sense_id": "b84-188-adj",
+          "field": "ipa",
+          "line_1_based": 10
+        },
+        {
+          "sense_id": "b84-188-adj",
+          "field": "english",
+          "line_1_based": 11
+        },
+        {
+          "sense_id": "b84-188-adj",
+          "field": "chinese",
+          "line_1_based": 11
+        },
+        {
+          "sense_id": "b84-189-adv",
+          "field": "french_definition",
+          "line_1_based": 275
+        },
+        {
+          "sense_id": "b84-189-adv",
+          "field": "ipa",
+          "line_1_based": 256
+        },
+        {
+          "sense_id": "b84-189-adv",
+          "field": "english",
+          "line_1_based": 275
+        },
+        {
+          "sense_id": "b84-189-adv",
+          "field": "chinese",
+          "line_1_based": 275
+        },
+        {
+          "sense_id": "b84-190-nom",
+          "field": "french_definition",
+          "line_1_based": 214
+        },
+        {
+          "sense_id": "b84-190-nom",
+          "field": "ipa",
+          "line_1_based": 205
+        },
+        {
+          "sense_id": "b84-190-nom",
+          "field": "english",
+          "line_1_based": 214
+        },
+        {
+          "sense_id": "b84-190-nom",
+          "field": "chinese",
+          "line_1_based": 214
+        }
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 381,
+          "text": "* {{R:Larousse}}"
+        },
+        {
+          "line_1_based": 382,
+          "text": "* {{R:DAF8}}"
+        },
+        {
+          "line_1_based": 430,
+          "text": "* {{R:Godefroy}}"
+        },
+        {
+          "line_1_based": 479,
+          "text": "*{{R:Gaffiot}}"
+        }
+      ],
+      "contributor_context": [],
+      "scope": "Selected definition/IPA and uncited contributor support only. Literary quotations, unselected definitions, reference-dictionary prose, images and audio are excluded.",
+      "redistribution_notice": "Proposed selected adaptations: CC BY-SA 4.0; retain fixed revision and contributor-history credit, applicable article import credit, modification notices and share alike. Existing COPYING supplies the complete licence. Final selected-span rights and quality audit pending."
+    },
+    {
+      "id": "b84_fr_174494",
+      "title": "tuer",
+      "pageid": 174494,
+      "current_content_revid": 39856141,
+      "timestamp": "2026-09-04T11:13:08Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=tuer&oldid=39856141",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=tuer&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; selected adaptations and explanatory translations by Lexique contributors",
+      "source_frame": "Fixed first-party revision at or before 2026-10-01T00:00:00Z; raw capture retained in target/issue-84/sources",
+      "status": "pending_independent_review",
+      "selected_locations": [
+        {
+          "sense_id": "b84-191-ver",
+          "field": "french_definition",
+          "line_1_based": 30
+        },
+        {
+          "sense_id": "b84-191-ver",
+          "field": "ipa",
+          "line_1_based": 6
+        },
+        {
+          "sense_id": "b84-191-ver",
+          "field": "english",
+          "line_1_based": 30
+        },
+        {
+          "sense_id": "b84-191-ver",
+          "field": "chinese",
+          "line_1_based": 30
+        }
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 406,
+          "text": "* {{R:Trémeur|vue=s-t}}"
+        }
+      ],
+      "contributor_context": [],
+      "scope": "Selected definition/IPA and uncited contributor support only. Literary quotations, unselected definitions, reference-dictionary prose, images and audio are excluded.",
+      "redistribution_notice": "Proposed selected adaptations: CC BY-SA 4.0; retain fixed revision and contributor-history credit, applicable article import credit, modification notices and share alike. Existing COPYING supplies the complete licence. Final selected-span rights and quality audit pending."
+    },
+    {
+      "id": "b84_fr_10427",
+      "title": "mourir",
+      "pageid": 10427,
+      "current_content_revid": 39836447,
+      "timestamp": "2026-08-28T14:47:33Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=mourir&oldid=39836447",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=mourir&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; selected adaptations and explanatory translations by Lexique contributors",
+      "source_frame": "Fixed first-party revision at or before 2026-10-01T00:00:00Z; raw capture retained in target/issue-84/sources",
+      "status": "pending_independent_review",
+      "selected_locations": [
+        {
+          "sense_id": "b84-192-ver",
+          "field": "french_definition",
+          "line_1_based": 7
+        },
+        {
+          "sense_id": "b84-192-ver",
+          "field": "ipa",
+          "line_1_based": 6
+        },
+        {
+          "sense_id": "b84-192-ver",
+          "field": "english",
+          "line_1_based": 7
+        },
+        {
+          "sense_id": "b84-192-ver",
+          "field": "chinese",
+          "line_1_based": 7
+        }
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 348,
+          "text": "* {{R:DAF8}}"
+        }
+      ],
+      "contributor_context": [],
+      "scope": "Selected definition/IPA and uncited contributor support only. Literary quotations, unselected definitions, reference-dictionary prose, images and audio are excluded.",
+      "redistribution_notice": "Proposed selected adaptations: CC BY-SA 4.0; retain fixed revision and contributor-history credit, applicable article import credit, modification notices and share alike. Existing COPYING supplies the complete licence. Final selected-span rights and quality audit pending."
+    },
+    {
+      "id": "b84_fr_141917",
+      "title": "demander",
+      "pageid": 141917,
+      "current_content_revid": 39884226,
+      "timestamp": "2026-09-19T17:43:21Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=demander&oldid=39884226",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=demander&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; selected adaptations and explanatory translations by Lexique contributors; declared article import: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935)",
+      "source_frame": "Fixed first-party revision at or before 2026-10-01T00:00:00Z; raw capture retained in target/issue-84/sources",
+      "status": "pending_independent_review",
+      "selected_locations": [
+        {
+          "sense_id": "b84-193-ver",
+          "field": "french_definition",
+          "line_1_based": 7
+        },
+        {
+          "sense_id": "b84-193-ver",
+          "field": "ipa",
+          "line_1_based": 6
+        },
+        {
+          "sense_id": "b84-193-ver",
+          "field": "english",
+          "line_1_based": 7
+        },
+        {
+          "sense_id": "b84-193-ver",
+          "field": "chinese",
+          "line_1_based": 7
+        }
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 265,
+          "text": "*{{Import:DAF8}}"
+        }
+      ],
+      "contributor_context": [],
+      "scope": "Selected definition/IPA and uncited contributor support only. Literary quotations, unselected definitions, reference-dictionary prose, images and audio are excluded.",
+      "redistribution_notice": "Proposed selected adaptations: CC BY-SA 4.0; retain fixed revision and contributor-history credit, applicable article import credit, modification notices and share alike. Existing COPYING supplies the complete licence. Final selected-span rights and quality audit pending."
+    },
+    {
+      "id": "b84_fr_171135",
+      "title": "peut-être",
+      "pageid": 171135,
+      "current_content_revid": 39873831,
+      "timestamp": "2026-09-13T02:32:25Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=peut-%C3%AAtre&oldid=39873831",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=peut-%C3%AAtre&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; selected adaptations and explanatory translations by Lexique contributors; declared article import: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935)",
+      "source_frame": "Fixed first-party revision at or before 2026-10-01T00:00:00Z; raw capture retained in target/issue-84/sources",
+      "status": "pending_independent_review",
+      "selected_locations": [
+        {
+          "sense_id": "b84-194-adv",
+          "field": "french_definition",
+          "line_1_based": 7
+        },
+        {
+          "sense_id": "b84-194-adv",
+          "field": "ipa",
+          "line_1_based": 6
+        },
+        {
+          "sense_id": "b84-194-adv",
+          "field": "english",
+          "line_1_based": 7
+        },
+        {
+          "sense_id": "b84-194-adv",
+          "field": "chinese",
+          "line_1_based": 7
+        }
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 174,
+          "text": "* {{Import:DAF8}}"
+        }
+      ],
+      "contributor_context": [],
+      "scope": "Selected definition/IPA and uncited contributor support only. Literary quotations, unselected definitions, reference-dictionary prose, images and audio are excluded.",
+      "redistribution_notice": "Proposed selected adaptations: CC BY-SA 4.0; retain fixed revision and contributor-history credit, applicable article import credit, modification notices and share alike. Existing COPYING supplies the complete licence. Final selected-span rights and quality audit pending."
+    },
+    {
+      "id": "b84_fr_11573",
+      "title": "dieu",
+      "pageid": 11573,
+      "current_content_revid": 39819419,
+      "timestamp": "2026-08-20T14:20:11Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=dieu&oldid=39819419",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=dieu&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; selected adaptations and explanatory translations by Lexique contributors",
+      "source_frame": "Fixed first-party revision at or before 2026-10-01T00:00:00Z; raw capture retained in target/issue-84/sources",
+      "status": "pending_independent_review",
+      "selected_locations": [
+        {
+          "sense_id": "b84-195-nom",
+          "field": "french_definition",
+          "line_1_based": 12
+        },
+        {
+          "sense_id": "b84-195-nom",
+          "field": "ipa",
+          "line_1_based": 11
+        },
+        {
+          "sense_id": "b84-195-nom",
+          "field": "english",
+          "line_1_based": 12
+        },
+        {
+          "sense_id": "b84-195-nom",
+          "field": "chinese",
+          "line_1_based": 12
+        }
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 213,
+          "text": "* {{R:DAF8}}"
+        },
+        {
+          "line_1_based": 244,
+          "text": "* {{R:Lo Congrès}}"
+        },
+        {
+          "line_1_based": 245,
+          "text": "* {{R:Cantalausa}}"
+        },
+        {
+          "line_1_based": 246,
+          "text": "* {{R:Laux-dict-oc-fr}}"
+        },
+        {
+          "line_1_based": 247,
+          "text": "* {{R:Ubaud}}"
+        }
+      ],
+      "contributor_context": [],
+      "scope": "Selected definition/IPA and uncited contributor support only. Literary quotations, unselected definitions, reference-dictionary prose, images and audio are excluded.",
+      "redistribution_notice": "Proposed selected adaptations: CC BY-SA 4.0; retain fixed revision and contributor-history credit, applicable article import credit, modification notices and share alike. Existing COPYING supplies the complete licence. Final selected-span rights and quality audit pending."
+    },
+    {
+      "id": "b84_fr_11720",
+      "title": "fois",
+      "pageid": 11720,
+      "current_content_revid": 39910928,
+      "timestamp": "2026-09-30T10:39:15Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=fois&oldid=39910928",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=fois&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; selected adaptations and explanatory translations by Lexique contributors",
+      "source_frame": "Fixed first-party revision at or before 2026-10-01T00:00:00Z; raw capture retained in target/issue-84/sources",
+      "status": "pending_independent_review",
+      "selected_locations": [
+        {
+          "sense_id": "b84-196-nom",
+          "field": "french_definition",
+          "line_1_based": 10
+        },
+        {
+          "sense_id": "b84-196-nom",
+          "field": "ipa",
+          "line_1_based": 9
+        },
+        {
+          "sense_id": "b84-196-nom",
+          "field": "english",
+          "line_1_based": 10
+        },
+        {
+          "sense_id": "b84-196-nom",
+          "field": "chinese",
+          "line_1_based": 10
+        }
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 223,
+          "text": "* {{R:DAF8}}"
+        }
+      ],
+      "contributor_context": [],
+      "scope": "Selected definition/IPA and uncited contributor support only. Literary quotations, unselected definitions, reference-dictionary prose, images and audio are excluded.",
+      "redistribution_notice": "Proposed selected adaptations: CC BY-SA 4.0; retain fixed revision and contributor-history credit, applicable article import credit, modification notices and share alike. Existing COPYING supplies the complete licence. Final selected-span rights and quality audit pending."
+    },
+    {
+      "id": "b84_fr_558",
+      "title": "oh",
+      "pageid": 558,
+      "current_content_revid": 39764266,
+      "timestamp": "2026-08-03T04:47:25Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=oh&oldid=39764266",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=oh&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; selected adaptations and explanatory translations by Lexique contributors",
+      "source_frame": "Fixed first-party revision at or before 2026-10-01T00:00:00Z; raw capture retained in target/issue-84/sources",
+      "status": "pending_independent_review",
+      "selected_locations": [
+        {
+          "sense_id": "b84-197-ono",
+          "field": "french_definition",
+          "line_1_based": 9
+        },
+        {
+          "sense_id": "b84-197-ono",
+          "field": "ipa",
+          "line_1_based": 8
+        },
+        {
+          "sense_id": "b84-197-ono",
+          "field": "english",
+          "line_1_based": 9
+        },
+        {
+          "sense_id": "b84-197-ono",
+          "field": "chinese",
+          "line_1_based": 9
+        }
+      ],
+      "source_page_notices_to_record": [],
+      "contributor_context": [],
+      "scope": "Selected definition/IPA and uncited contributor support only. Literary quotations, unselected definitions, reference-dictionary prose, images and audio are excluded.",
+      "redistribution_notice": "Proposed selected adaptations: CC BY-SA 4.0; retain fixed revision and contributor-history credit, applicable article import credit, modification notices and share alike. Existing COPYING supplies the complete licence. Final selected-span rights and quality audit pending."
+    },
+    {
+      "id": "b84_fr_7258",
+      "title": "père",
+      "pageid": 7258,
+      "current_content_revid": 39868402,
+      "timestamp": "2026-09-09T13:45:02Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=p%C3%A8re&oldid=39868402",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=p%C3%A8re&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; selected adaptations and explanatory translations by Lexique contributors",
+      "source_frame": "Fixed first-party revision at or before 2026-10-01T00:00:00Z; raw capture retained in target/issue-84/sources",
+      "status": "pending_independent_review",
+      "selected_locations": [
+        {
+          "sense_id": "b84-198-nom",
+          "field": "french_definition",
+          "line_1_based": 21
+        },
+        {
+          "sense_id": "b84-198-nom",
+          "field": "ipa",
+          "line_1_based": 10
+        },
+        {
+          "sense_id": "b84-198-nom",
+          "field": "english",
+          "line_1_based": 21
+        },
+        {
+          "sense_id": "b84-198-nom",
+          "field": "chinese",
+          "line_1_based": 21
+        }
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 604,
+          "text": "* {{R:Littré}}"
+        },
+        {
+          "line_1_based": 605,
+          "text": "* {{R:DAF8}}"
+        }
+      ],
+      "contributor_context": [],
+      "scope": "Selected definition/IPA and uncited contributor support only. Literary quotations, unselected definitions, reference-dictionary prose, images and audio are excluded.",
+      "redistribution_notice": "Proposed selected adaptations: CC BY-SA 4.0; retain fixed revision and contributor-history credit, applicable article import credit, modification notices and share alike. Existing COPYING supplies the complete licence. Final selected-span rights and quality audit pending."
+    },
+    {
+      "id": "b84_fr_9594",
+      "title": "comprendre",
+      "pageid": 9594,
+      "current_content_revid": 39630355,
+      "timestamp": "2026-06-29T00:12:20Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=comprendre&oldid=39630355",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=comprendre&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; selected adaptations and explanatory translations by Lexique contributors",
+      "source_frame": "Fixed first-party revision at or before 2026-10-01T00:00:00Z; raw capture retained in target/issue-84/sources",
+      "status": "pending_independent_review",
+      "selected_locations": [
+        {
+          "sense_id": "b84-199-ver",
+          "field": "french_definition",
+          "line_1_based": 26
+        },
+        {
+          "sense_id": "b84-199-ver",
+          "field": "ipa",
+          "line_1_based": 6
+        },
+        {
+          "sense_id": "b84-199-ver",
+          "field": "english",
+          "line_1_based": 26
+        },
+        {
+          "sense_id": "b84-199-ver",
+          "field": "chinese",
+          "line_1_based": 26
+        }
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 306,
+          "text": "* {{R:DAF8}}"
+        },
+        {
+          "line_1_based": 351,
+          "text": "* {{R:Cantalausa}}"
+        }
+      ],
+      "contributor_context": [],
+      "scope": "Selected definition/IPA and uncited contributor support only. Literary quotations, unselected definitions, reference-dictionary prose, images and audio are excluded.",
+      "redistribution_notice": "Proposed selected adaptations: CC BY-SA 4.0; retain fixed revision and contributor-history credit, applicable article import credit, modification notices and share alike. Existing COPYING supplies the complete licence. Final selected-span rights and quality audit pending."
+    },
+    {
+      "id": "b84_fr_7955",
+      "title": "sortir",
+      "pageid": 7955,
+      "current_content_revid": 39556148,
+      "timestamp": "2026-06-02T08:25:24Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=sortir&oldid=39556148",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=sortir&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Wiktionnaire contributors; selected adaptations and explanatory translations by Lexique contributors; declared article import: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935)",
+      "source_frame": "Fixed first-party revision at or before 2026-10-01T00:00:00Z; raw capture retained in target/issue-84/sources",
+      "status": "pending_independent_review",
+      "selected_locations": [
+        {
+          "sense_id": "b84-200-ver",
+          "field": "french_definition",
+          "line_1_based": 8
+        },
+        {
+          "sense_id": "b84-200-ver",
+          "field": "ipa",
+          "line_1_based": 7
+        },
+        {
+          "sense_id": "b84-200-ver",
+          "field": "english",
+          "line_1_based": 8
+        },
+        {
+          "sense_id": "b84-200-ver",
+          "field": "chinese",
+          "line_1_based": 8
+        }
+      ],
+      "source_page_notices_to_record": [
+        {
+          "line_1_based": 356,
+          "text": "* {{Import:DAF8}}"
+        },
+        {
+          "line_1_based": 399,
+          "text": "* {{R:Godefroy}}"
+        },
+        {
+          "line_1_based": 469,
+          "text": "* {{R:Lo Congrès}}"
+        },
+        {
+          "line_1_based": 470,
+          "text": "* {{R:Cantalausa}}"
+        },
+        {
+          "line_1_based": 471,
+          "text": "* {{R:Laux-dict-oc-fr}}"
+        },
+        {
+          "line_1_based": 472,
+          "text": "* {{R:Ubaud}}"
+        },
+        {
+          "line_1_based": 489,
+          "text": "* {{R:DicionárioFonético|sortir|id=28684}}"
+        }
+      ],
+      "contributor_context": [],
+      "scope": "Selected definition/IPA and uncited contributor support only. Literary quotations, unselected definitions, reference-dictionary prose, images and audio are excluded.",
+      "redistribution_notice": "Proposed selected adaptations: CC BY-SA 4.0; retain fixed revision and contributor-history credit, applicable article import credit, modification notices and share alike. Existing COPYING supplies the complete licence. Final selected-span rights and quality audit pending."
     }
   ],
   "historical_authorship_boundary_only": [
