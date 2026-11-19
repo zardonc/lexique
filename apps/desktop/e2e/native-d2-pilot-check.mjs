@@ -653,7 +653,9 @@ async function replacement() {
   const committed = previous.saves.find((operation) => operation.record_id === record.id && operation.outcome === 'created');
   assert.equal((await invoke('vocabulary_save', { request: committed.request, dictionary_id: 'builtin-core' })).outcome, 'replayed');
   if (scenario === 'newer') await save('bien', 'newer-content');
-  if (scenario === 'upgrade') await save('bon', 'batch-83-upgrade');
+  if (scenario === 'upgrade') {
+    for (const key of ['quel', 'leur']) await save(key, `batch-84-89-upgrade-${key}`);
+  }
   await openRecord(record);
   evidence.checks.push({ check: ['newer', 'upgrade'].includes(scenario) ? 'New resource version is visible while previous digest, progress and audio remain frozen' : `Native ${scenario} rejection preserves saved content and committed retry`, status: 'passed' });
 }
