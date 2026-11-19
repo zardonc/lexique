@@ -20,4 +20,10 @@ has zero senses, zero admitted fields and four missing fields; annotations are
 counted separately from content and retain the 4,087-group denominator.
 There is no new alias. Existing `l'` resource records and the literal-`l`
 negative Rust regression in `crates/dictionary/tests/core_pilot.rs:213` are unchanged.
-Other 48 groups have proposed four-field content pending independent acceptance.
+The other **48 groups / 192 fields** passed independent source, rights and quality
+review; [independent review](independent-review.md), [admission](admission.json)
+and the canonical [field review](field-review.json) record the accepted content.
+Full original captures are preserved under integration's
+`target/implement-90-99/worker-audit/author-98/`. Native lookup/save/reopen,
+offline and saved-state preservation checks remain pending at integration;
+see the parent [aggregate verification](../issue-90-99/README.md).

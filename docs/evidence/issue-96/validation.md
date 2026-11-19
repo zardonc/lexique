@@ -1,5 +1,15 @@
 # Ticket #96 validation
 
+All **50 groups / 200 fields** passed independent source, rights and quality
+review, including the scoped spelling/form relationships.
+[Independent review](independent-review.md), [admission](admission.json) and the
+canonical [field review](field-review.json) record the final accepted content.
+Native lookup/save/reopen, offline and saved-state preservation checks remain
+pending at integration; the parent owns the
+[aggregate verification](../issue-90-99/README.md).
+
+## Retained author checks
+
 Owning checkout: `C:/Users/inthe/IdeaProjects/lexique-content-96`, branch
 `codex/d2-content-96`, Windows x64, PowerShell 7 and uv/Python 3.14.10.
 The initially clean worktree was fast-forwarded to integration base
@@ -7,6 +17,9 @@ The initially clean worktree was fast-forwarded to integration base
 
 Complete command logs and capture data are ignored under
 `C:/Users/inthe/IdeaProjects/lexique-content-96/target/issue-96/`.
+The following results describe the original candidate handoff. Full captures
+and logs are preserved under integration's
+`target/implement-90-99/worker-audit/author-96/`.
 
 | Command or check | Result | Retained evidence |
 | --- | --- | --- |
@@ -21,13 +34,9 @@ Complete command logs and capture data are ignored under
 
 The focused test checks the ticket's JSON resource handoff against literal
 ticket membership and nonempty four-field source bindings. It is not an
-admitted SQLite artifact check or independent semantic review. Current admitted
-resource inputs, converter, global notices/counters and shared tests are
-preserved. Parent acceptance and conversion must reach the produced artifact
-before any coverage is recorded as admitted.
+admitted SQLite artifact check or independent semantic review. The final accepted
+replacements are included in the [combined core](../../../resources/core-pilot-79/README.md);
+combined resource, native and package results belong to the parent aggregate.
 
-Unrun worker checks: independent field/usage/rights and spelling acceptance;
-admitted SQLite reproduction and membership; combined notices and packaging;
-native lookup/save/reopen, offline execution and learner-state preservation.
-No native GUI build or shared heavy Cargo test was run. Learner acceptance and
+The content author and independent reviewer are separate. Learner acceptance and
 whole-core release remain open.

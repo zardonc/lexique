@@ -1,13 +1,17 @@
 # #97 selected-source research
 
-The exact 50 frozen identities are retained. There are 48 candidate groups and
-192 proposed fields, all pending independent review, plus two unsupported
-bare-letter pronoun groups with zero fields. No existing admitted row is reused
+The exact 50 frozen identities are retained. There are **48 independently
+accepted groups / 192 fields**, plus two approved bare-letter pronoun annotations
+with zero admitted fields and **eight missing fields**. [Independent review](independent-review.md),
+[admission](admission.json) and the canonical
+[field review](../../../resources/core-pilot-79/batch-97/field-review.json) record
+the accepted content and rights. No existing admitted row is reused
 or rewritten. Definitions, IPA and explanatory translations are scoped to the
 same selected use. The following locations are one-based lines in the fixed
-API main-slot wikitext retained under this worktree's `target/issue-97/sources/`.
+API main-slot wikitext originally retained under `target/issue-97/sources/` and
+preserved under integration's `target/implement-90-99/worker-audit/author-97/`.
 
-| Row | Frozen group | Selected candidate use | Fixed source; definition / IPA lines |
+| Row | Frozen group | Accepted selected use | Fixed source; definition / IPA lines |
 | ---: | --- | --- | --- |
 | 801 | `empêcher/VER` | Transitive verb: prevent someone from carrying out something; empêcher quelqu’un de faire quelque chose. | [rev. 39773808](https://fr.wiktionary.org/w/index.php?title=emp%C3%AAcher&oldid=39773808) 8 / 7 |
 | 802 | `courant/ADJ` | Adjective: common or ordinary, in everyday use. | [rev. 39899938](https://fr.wiktionary.org/w/index.php?title=courant&oldid=39899938) 29 / 9 |
@@ -58,34 +62,37 @@ API main-slot wikitext retained under this worktree's `target/issue-97/sources/`
 | 848 | `c/NOM` | Masculine noun naming the lowercase letter c, the third letter of the French alphabet. | [rev. 39771203](https://fr.wiktionary.org/w/index.php?title=c&oldid=39771203) 78 / 77 |
 | 850 | `gamin/ADJ` | Familiar adjective: mischievous or naughty. | [rev. 39903467](https://fr.wiktionary.org/w/index.php?title=gamin&oldid=39903467) 81 / 80 |
 
-## Explicit gaps and construction fit
+## Approved annotations and construction fit
 
 - **816 `t/PRO:per`**: French `t` revision 39772410, lines 78–80, is a
   texting verb flexion meaning “tu es”. Its personal-pronoun section at line
   225 belongs to Neapolitan. French `t’` revision 39321617, lines 7–9, has
   the apostrophized personal-pronoun spelling. No bare `t` spelling relationship
-  is established. No pronoun fields are proposed or admitted for row 816.
+  is established. Row 816 is an owner-approved annotation with zero admitted
+  fields and four missing fields.
 - **849 `c/PRO:dem`**: French `c` revision 39771203, lines 128–137, has
   texting verb flexions for complete forms `c’est` and `s’est`. `c’`
   revision 39266077, lines 7–9, explains elided `ce`, under a demonstrative
   determiner heading. Neither establishes bare `c` as the same pronoun spelling.
-  No pronoun fields are proposed or admitted for row 849.
+  Row 849 is an owner-approved annotation with zero admitted fields and four
+  missing fields. Both approvals are recorded in [admission](admission.json)
+  and the canonical [zero-field records](../../../resources/core-pilot-79/batch-97/unresolved.json).
 - **809 `grâce/PRE`**: `grâce` revision 39705925 links `grâce à` at line
   173. `grâce à` revision 39005892 derives the construction from `grâce` and
   `à` (line 3), labels it preposition (line 5), describes favourable causation
-  by things (line 7), and records `grâce au/aux` (line 33). The proposed fields
+  by things (line 7), and records `grâce au/aux` (line 33). The accepted fields
   retain this precise construction and things/action scope, with complete
-  construction IPA. Independent acceptance of the exact frozen component's
-  POS/use binding is pending. No spelling alias or standalone preposition is
-  inferred.
+  construction IPA. Independent review accepted this exact frozen component's
+  POS/use binding. No spelling alias or standalone preposition is inferred.
 - **824 `nul/ADJ:ind` and 825 `nul/PRO:ind`**: fixed revision 39923182
   explicitly labels these literary, or literary/legal (lines 123 and 213).
   Row 824 retains singular-only use and feminine `nulle`; row 825 retains the
   invariant singular pronoun. The 2023 `nul besoin` attribution is to Bruno
   Dewaele/Projet Voltaire; the 2018 pronoun example is attributed to Philippe
   Morvan's novel *Ours*. Their quotations are not content fields, and recent
-  publication dates alone do not establish everyday eligibility. The central
-  reviewer must resolve this gate or leave these candidates unadmitted.
+  publication dates alone do not establish everyday eligibility. Independent
+  review accepted the selected uses with their formal/literary and literary/legal
+  restrictions retained.
 
 The [priority evidence](priority-sources.json) retains exact selected source
 annotations. Full captures stay local. The noun uses of `t` and `c` select the
@@ -107,12 +114,15 @@ DAF8 declarations name the Académie française, *Dictionnaire de l’Académie
 française*, eighth edition (1932–1935). Other references, including DAF9, do
 not license their prose merely by being listed. The `grâce à` article's Littré
 citations occur in excluded literary examples; the selected sentence's underlying
-authorship remains for the rights audit. Imported prose is not relabelled as
+rights boundary passed independent review. Imported prose is not relabelled as
 original contributor prose.
 
-The four fields carry a proposed CC BY-SA 4.0 route, fixed versions/spans and
+The four fields carry the accepted CC BY-SA 4.0 route, fixed versions/spans and
 modification notices. FR adapts the selected French use; EN/ZH are newly authored
-explanatory translations of it, not claimed upstream bilingual entries. All
-independent text, usage, rights and redistribution decisions remain pending.
-Author source checks establish the captured bindings only. The prior core's
-legal texts, notices, accepted content, counters and converter are untouched.
+explanatory translations of it, not claimed upstream bilingual entries. All 48
+selected uses and 192 fields passed independent text, usage and rights review.
+The [combined core](../../../resources/core-pilot-79/README.md) contains the
+accepted records and source/adaptation obligations. Native lookup/save/reopen,
+offline and saved-state preservation checks are pending at integration; see the
+parent [aggregate verification](../issue-90-99/README.md). Learner acceptance and
+wider release gates remain open.

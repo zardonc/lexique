@@ -1,11 +1,12 @@
 # Issue #99 selected content
 
-This handoff retains all **50 frozen rows 901–950**, with **49 proposed senses /
-196 proposed fields** and one zero-field unresolved group, `i/ADJ:num` (934).
-No new field is independently accepted or admitted. The exact proposed wording,
-frequencies, POS and restrictions are in [review-candidates.json](review-candidates.json).
-[field-review.json](field-review.json) is an author-prepared review draft; its
-reviewer is null and all independent quality and rights results remain pending.
+All **50 frozen rows 901–950** are retained, with **49 independently accepted
+senses / 196 fields** and one owner-approved zero-field annotation,
+`i/ADJ:num` (934), with **four missing fields**.
+[Independent review](independent-review.md), [admission](admission.json) and the
+canonical [field review](field-review.json) record the accepted wording, rights
+and usage. The exact frequencies, POS and restrictions are in
+[groups.json](groups.json) and [review-candidates.json](review-candidates.json).
 
 ## Fixed sources and attribution
 
@@ -20,7 +21,7 @@ multi-title API response. The latter keep their actual returned revisions and
 timestamps; they are not described as cutoff captures. Full response bodies and
 blank-line-preserving wikitext remain under the ignored evidence root.
 
-Each proposed field has a one-based line and exact selected source text in
+Each accepted field has a one-based line and exact selected source text in
 [source-excerpts.json](source-excerpts.json). The preparation script compares
 every selected API revision and complete wikitext, checks the French-language
 section and IPA spelling, and checks all frozen memberships. This establishes
@@ -30,8 +31,8 @@ Seven paginated contributor API bodies contain 3,299 distinct contributor names
 summed across the 44 articles. The final response has no continuation. Full
 article-history attribution is retained; this current contributor registry is
 broader than the fixed revisions and does not establish selected-sentence authorship.
-The content author checked the selected senses and explanatory translations;
-the central reviewer must independently accept the exact fields and usage.
+The content author and independent reviewer are separate; the accepted review
+records cover all 49 selected uses and their explanatory translations.
 
 FR definitions are scoped adaptations of the selected French semantics. EN/ZH
 are new Lexique explanatory translations of those uses, not purported upstream
@@ -39,16 +40,16 @@ bilingual equivalents. IPA selects one recorded variant with slash notation;
 it does not assert exclusive pronunciation or cover liaison. Lexique selection,
 adaptation and translation credit is recorded separately from Wiki contributors.
 
-The proposed container route is CC BY-SA 4.0, under the existing
+The accepted container route is CC BY-SA 4.0, under the existing
 [COPYING](../../../resources/core-pilot-79/COPYING) and
 [rights authorities](../../../resources/core-pilot-79/curated-inputs.json).
 [source-context.json](source-context.json) retains actual `Import:DAF8` markers
-and their original Académie eighth-edition credit. Selected-text authorship and
-any imported-prose obligations remain pending at those boundaries. A container
-licence, contributor count or import marker does not independently resolve them.
-No source is marked `passed_for_selected_spans`. No external literary quotation,
+and their original Académie eighth-edition credit. Independent review accepted
+the exact selected-text rights and imported-prose boundaries recorded in the
+canonical sources. A container licence, contributor count or import marker does
+not independently resolve them. No external literary quotation,
 Robert/TLFi/Capital prose, unselected definition, audio, image or whole page is
-included in the candidate fields or tracked source excerpts.
+included in the accepted fields or tracked source excerpts.
 
 ## Selected-use and POS boundaries
 
@@ -75,7 +76,7 @@ supported by the neighbouring definition. `professeur` selects a teacher at
 any level, rather than only the university rank. `avancer` selects physical
 forward movement and `risquer` selects exposing something to possible danger.
 
-### Row 934: `i/ADJ:num` remains unresolved
+### Row 934: approved zero-field `i/ADJ:num` annotation
 
 [Wiki revision 39772403](https://fr.wiktionary.org/w/index.php?title=i&oldid=39772403)
 has Roman lowercase **one** in the **translingual** section, lines 41–43.
@@ -87,18 +88,19 @@ French numeral-adjective section for the frozen group. The
 number as uppercase `I`. That evidence does not establish a lowercase French
 numeral-adjective spelling/POS bridge or its applicable reading.
 
-Row 935 separately proposes the everyday Latin-letter noun, supported by the
+Row 935 separately admits the everyday Latin-letter noun, supported by the
 French Wiki letter section and Robert’s noun classification. It does not
 complete row 934. Row 934 retains its frozen identity/frequencies and zero
-fields, with four explicit unresolved field records. No owner exception,
-`i`→`I` alias, translingual-to-French binding or specialist admission is invented.
-The parent needs additional selected-use evidence or an explicit scope decision.
+fields and four missing-field records. The owner-approved annotation is recorded
+in [admission](admission.json); it changes the content requirement while retaining
+the exact frozen identity and denominator. No `i`→`I` alias,
+translingual-to-French binding or specialist sense is admitted.
 
-### Row 949: abstract noun `l’incroyable`, independent review pending
+### Row 949: accepted abstract noun `l’incroyable`
 
 [Wiki revision 39827744](https://fr.wiktionary.org/w/index.php?title=incroyable&oldid=39827744)
 lines 85–99 describes only Revolutionary-era dandies. That historical sense is
-excluded. The proposal selects **what cannot be believed or is difficult to
+excluded. The accepted sense selects **what cannot be believed or is difficult to
 believe**, as a masculine singular substantive with neutral value in
 **l’incroyable**. Its FR/EN/ZH explanatory text adapts the adjective semantics
 at line 10; IPA is at 9. This semantic/POS mapping is explicit, not a claim that
@@ -112,9 +114,10 @@ substantivization lead. Robert says those partner examples are selected
 automatically and not reviewed by its editors; its noun definition itself is
 historical. Local full HTML/text captures fix the observed evidence.
 
-The central reviewer must assess the proposed abstract noun’s precise POS,
-modern everyday suitability, explanatory wording and selected-text rights.
-Neither the historic dandy nor a specialist exception is admitted. The
+Independent review accepted the abstract noun's precise POS, modern everyday
+suitability, explanatory wording and selected-text rights. The accepted use is
+neutral, masculine and singular. Neither the historic dandy nor a specialist
+exception is admitted. The
 corroborating dictionaries and Capital supply read-only grammar/usage facts;
 their prose does not enter the four fields.
 
@@ -122,6 +125,8 @@ their prose does not enter the four fields.
 
 Retained full captures and logs:
 `C:/Users/inthe/IdeaProjects/lexique-content-99/target/issue-99/`.
+Full original captures and logs are preserved under integration's
+`target/implement-90-99/worker-audit/author-99/`.
 The API attempts that encountered HTTP 429 remain logged. Obscura response bodies
 are retained as UTF-8 JSON text, not claimed to be the original transport bytes.
 Only the reused `pourtant` capture is explicitly asserted byte-identical to its
@@ -132,9 +137,9 @@ uv run --python 3.14.10 --no-project docs/evidence/issue-99/prepare_candidates.p
 uv run --python 3.14.10 --no-project -m unittest discover -s scripts -p test_core_batch_99.py
 ```
 
-The focused check covers the **candidate handoff artifact**, exact frozen
-membership and source bindings. It does not claim converter admission, final
-notices, independent quality, native lookup/save/reopen, packaging or release.
-The parent integrates only exact independently accepted keyed records into the
-shared resource, then finalizes the shared version/counters/notices/checksums
-and runs the combined converter, preservation and native/package checks.
+These retained author-stage commands checked the **candidate handoff artifact**,
+exact frozen membership and source bindings. The final accepted replacements are
+included in the [combined core](../../../resources/core-pilot-79/README.md).
+Native lookup/save/reopen, offline and saved-state preservation checks are pending
+at integration; the parent owns the [aggregate verification](../issue-90-99/README.md).
+Learner acceptance and wider release gates remain open.

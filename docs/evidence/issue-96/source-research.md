@@ -9,6 +9,11 @@ Credit Boris New and Christophe Pallier, Lexique 3.83, under CC BY-SA 4.0;
 the existing [membership notice](../../../resources/core-pilot-79/MEMBERSHIP-NOTICES.txt)
 remains applicable.
 
+All **50 selected uses / 200 fields** passed independent source, rights and
+quality review. [Independent review](independent-review.md),
+[admission](admission.json) and the canonical [field review](field-review.json)
+record the accepted content and exact boundaries.
+
 ## Fixed source capture
 
 The [registry](source-captures.json) retains 94 used fixed Wiktionnaire and
@@ -19,7 +24,8 @@ from the first-party API selecting a revision at or before
 retrieved through the same-origin browser API and fetched again by explicit
 revision IDs. These are actual fixed revisions, without a claim that every
 source has the October cutoff. All 98 captures, including four unused pages,
-remain ignored under the owning evidence root.
+remain ignored under the owning evidence root, preserved under integration's
+`target/implement-90-99/worker-audit/author-96/`.
 
 The [excerpts](source-excerpts.json) give one-based line and column locations
 and exact selected text. [Contexts](source-context.json) retain the French
@@ -27,7 +33,7 @@ language and POS sections, necessary construction/form evidence and applicable
 French-section bibliography/import notices. No whole page, image or audio is
 staged. A last editor is capture metadata, not a selected-sentence author.
 Linked article/history attribution identifies the Wiktionary contributors;
-no full historical authorship audit or independent field acceptance is claimed.
+the independent selected-text review is recorded separately from capture metadata.
 
 ## Text and rights boundaries
 
@@ -36,20 +42,20 @@ French lexical meaning on English Wiktionary. They are labelled adaptations,
 not quoted upstream bilingual translations. IPA transcribes one actual
 matching French headword template variant; slash delimiters are added.
 The [source records](sources.json) retain contributor attribution, fixed
-versions, CC BY-SA 4.0 proposals and per-field modification statements.
+versions, the accepted CC BY-SA 4.0 route and per-field modification statements.
 
 French article references include imported Académie eighth-edition material
 and other dictionaries. Only factual IPA/headword and grammatical form spans
 are selected there; their imported definitions, quotations and etymologies are
 not sources for the three drafted meaning fields. English further-reading
 references do not authorize copying the referenced dictionary prose. Every
-selected span still requires a separate rights and quality audit before
-admission. Bibliography labels alone are not proof of original authorship.
+selected span passed a separate rights and quality audit at its actual boundary.
+Bibliography labels alone are not proof of original authorship.
 
 The selected contributor/adaptation material retains CC BY-SA 4.0; preserve
 fixed article/history attribution, modification information and the existing
-[complete licence](../../../resources/core-pilot-79/COPYING). The parent must
-assemble actual combined obligations and notices once the fields are accepted.
+[complete licence](../../../resources/core-pilot-79/COPYING). The combined
+[notices](../../../resources/core-pilot-79/NOTICES.md) retain the applicable obligations.
 Project code retains its separate MIT licence.
 
 ## Exact grammatical relationships
@@ -63,7 +69,7 @@ Frozen row 770 remains the exact straight-apostrophe **`l'un/PRO:ind`**.
 Its fixed French page explicitly redirects to typographic-apostrophe `l’un`.
 That target supplies the masculine singular paradigm and `/l‿œ̃/`; the fixed
 English `l'un` page supplies the partitive construction, including
-`l'un des meilleurs vins`. The pending spelling record binds only those two
+`l'un des meilleurs vins`. The accepted spelling record binds only those two
 exact forms for this selected use. It does not bind bare `un`, `l'une`,
 `les uns` or reciprocal `l'un l'autre`, and adds no runtime alias.
 
@@ -74,7 +80,11 @@ selected whole/all use. Adverbial `toute contente` and pronoun uses are excluded
 `million/NOM` retains the exact frozen numerical noun, supported by the
 masculine French noun frame and English cardinal-noun template.
 
-`amoureux/NOM` selects the sweetheart use with the English source's childhood
-register retained. `gueule/NOM` selects a person's mouth with informal/rude
+`amoureux/NOM` selects a boy or man who romantically loves someone, chiefly in
+children's speech. `gueule/NOM` selects a person's mouth with informal/rude
 restrictions. `bête/ADJ` retains the offensive qualification; `bête/NOM` is the
-separate animal use. No field is marked independently accepted.
+separate animal use. All 50 groups have accepted four-field content, with no
+annotation exception. Native lookup/save/reopen, offline and saved-state
+preservation checks are pending at integration; see the parent
+[aggregate verification](../issue-90-99/README.md). Learner acceptance and wider
+release gates remain open.
