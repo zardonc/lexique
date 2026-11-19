@@ -394,6 +394,15 @@ pub fn add_review_batch_observed(
     };
     let mut seen = std::collections::HashSet::new();
     let ids: Vec<_> = ids.iter().copied().filter(|id| seen.insert(*id)).collect();
+    for chunk in ids.chunks(100) {
+        let placeholders = vec!["?"; chunk.len()].join(",");
+        let grammar: bool = connection.query_row(&format!("SELECT EXISTS(SELECT 1 FROM vocabulary WHERE record_kind='grammar' AND id IN ({placeholders}))"), rusqlite::params_from_iter(chunk), |row| row.get(0))?;
+        if grammar {
+            return Err(StorageError::Invalid(
+                "Word audio batches cannot contain grammar notes".into(),
+            ));
+        }
+    }
     for (index, chunk) in ids.chunks(100).enumerate() {
         let tx = connection.transaction_with_behavior(TransactionBehavior::Immediate)?;
         tx.execute("INSERT OR IGNORE INTO review_batches(operation,request,voice,created_at) VALUES(?1,?2,?3,?4)",params![operation,request,voice,now])?;

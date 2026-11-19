@@ -4,7 +4,7 @@ import { nativeFixture } from './native-fixture';
 const ready = {
   operation: 'preview-1', state: 'preview_ready', phase: null, cancel_requested: false, error: null,
   preview: { filename: 'études.lexique-backup', byte_length: 48000, created_at: 1794528000, application_version: '0.1.0', requires_restart: true,
-    counts: { vocabulary: 4, cards: 8, ratings: 12, batches: 2, custom_dictionaries: 1, legacy_audio: 1,
+    counts: { vocabulary: 4, grammar: 0, categories: 0, cards: 8, ratings: 12, batches: 2, custom_dictionaries: 1, legacy_audio: 1,
       included_audio_versions: 3, included_legacy_audio: 1, audio_files: 3, source_missing_audio: 1, source_invalid_audio: 2 },
     pending_dictionaries: [{ id: 'mdx-7', title: '法语词典.mdx' }] },
 };
@@ -349,7 +349,7 @@ test('preview leaves pending learning requests untouched instead of resolving th
 
 test('an empty verified backup displays zero contents and no pending dictionary list', async ({ page }) => {
   const empty = { ...ready, preview: { ...ready.preview, filename: 'empty.lexique-backup', pending_dictionaries: [],
-    counts: { vocabulary: 0, cards: 0, ratings: 0, batches: 0, custom_dictionaries: 0, legacy_audio: 0,
+    counts: { vocabulary: 0, grammar: 0, categories: 0, cards: 0, ratings: 0, batches: 0, custom_dictionaries: 0, legacy_audio: 0,
       included_audio_versions: 0, included_legacy_audio: 0, audio_files: 0, source_missing_audio: 0, source_invalid_audio: 0 } } };
   await nativeFixture(page, { backup_preview_start: [{ value: empty }] });
   await page.goto('/');

@@ -62,7 +62,7 @@ try {
     const [early, late] = progress['zèbre'].map((item) => item.card.due_at);
     assert.equal(progress.avion[0].card.due_at, early);
     assert.ok(early < progress.bonjour[0].card.due_at && progress.bonjour[0].card.due_at < late);
-    await page.getByRole('button', { name: '生词本', exact: true }).click();
+    await page.getByRole('button', { name: '笔记', exact: true }).click();
     await page.waitForFunction(() => document.querySelectorAll('.vocabulary-list button').length === 5);
     assert.deepEqual(await page.locator('.vocabulary-list button strong').allTextContents(), ['avion', 'zèbre', 'bonjour', 'bateau', 'chat']);
     await page.getByRole('searchbox').fill('filtered');
@@ -70,7 +70,7 @@ try {
     assert.deepEqual(await page.locator('.vocabulary-list button strong').allTextContents(), ['avion', 'zèbre']);
     await stop();
     page = await start();
-    await page.getByRole('button', { name: '生词本', exact: true }).click();
+    await page.getByRole('button', { name: '笔记', exact: true }).click();
     await page.waitForFunction(() => document.querySelectorAll('.vocabulary-list button').length === 5);
     assert.equal(await page.getByLabel('排序方式').inputValue(), 'review-due-asc');
     assert.deepEqual(await page.locator('.vocabulary-list button strong').allTextContents(), ['avion', 'zèbre', 'bonjour', 'bateau', 'chat']);
@@ -84,7 +84,7 @@ try {
       await invoke('review_add', { vocabularyId: saved.record.id });
     }
   });
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.getByLabel('排序方式').selectOption('review-due-asc');
   await page.locator('.vocabulary-list button').first().getByText('bonjour').waitFor();
   await page.getByRole('button', { name: /école/ }).click();
@@ -100,7 +100,7 @@ try {
   await page.locator('.vocabulary-list button').first().getByText('bonjour').waitFor();
   await stop();
   page = await start();
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.waitForFunction(() => [...document.querySelectorAll('select')].some((select) => select.value === 'review-due-asc'));
   await page.locator('.vocabulary-list button').first().getByText('bonjour').waitFor();
   console.log('Native rating, review-time order and preference survive restart');

@@ -1,5 +1,28 @@
 # 骨架验证记录
 
+## 语法笔记与共享分类
+
+2026-11-19 UTC，按 [Q1–Q29 确认设计](grammar-notes-classification-design.md)实现独立语法笔记、共享多分类、文字问答卡和混合复习。工作区为 `lexique-grammar-classification-design`，分支为 `codex/grammar-notes-classification-design`，基线为 `42c720556fd1195cca39ba704761877d1c0df48a`；以下检查针对该基线上的本地实现，尚未推送或发布。
+
+| 检查 | 当前结果 | 证据 |
+| --- | --- | --- |
+| `pnpm lint`、`pnpm typecheck` | 通过 | [lint](../target/grammar-classification/lint-final.log)、[typecheck](../target/grammar-classification/typecheck-final.log) |
+| 前端 build、`pnpm desktop:build --no-bundle` | 通过 | [前端构建](../target/grammar-classification/frontend-build-final.log)、[原生构建](../target/grammar-classification/desktop-build-delivery.log) |
+| `pnpm rust:fmt` | 通过 | [格式](../target/grammar-classification/rust-fmt-final.log) |
+| `pnpm rust:test:build` → `pnpm test:rust` | 208 项通过，保留执行阶段硬性 60 秒上限 | [预编译](../target/grammar-classification/rust-test-build-final.log)、[执行](../target/grammar-classification/rust-tests-final.log) |
+| `pnpm rust:check`、原生桌面库与缓存检查 | 编译通过；库 97 项通过、2 项忽略；缓存 11 项通过、1 项忽略 | [编译](../target/grammar-classification/rust-check-final.log)、[库](../target/grammar-classification/desktop-lib-tests-final.log)、[缓存](../target/grammar-classification/speech-cache-tests-final.log) |
+| 完整 Playwright | 404 项通过 | [全量](../target/grammar-classification/e2e-complete.log) |
+| 最终分页文案及相关笔记流程 Playwright | `frequency.spec.ts`、`preflight-24.spec.ts`、`notebook.spec.ts`、`grammar-notes.spec.ts` 共 48 项通过 | [相关检查](../target/grammar-classification/e2e-final-ui.log) |
+| Windows x64 实际 SQLite／退出／重启／整份备份恢复 | 最终构建的笔记与备份两场景通过，各保持硬性 60 秒上限；自有进程清理通过 | [原生场景](../apps/desktop/e2e/native-grammar-classification-check.mjs)、[笔记结果](../target/grammar-classification/native-notes-20261119-r6/results.json)、[备份结果](../target/grammar-classification/native-backup-20261119-r2/results.json) |
+| `pnpm scheduling:build` → `pnpm test:scheduling` | 74 组固定输入及 4,096 组校准输入通过；排程结果和数值完全一致 | [排程对照](../target/grammar-classification/scheduling-tests.log) |
+| 文档检查与双轴审查 | 文档／链接通过；标准与规格均无未处理发现 | [文档](../target/grammar-classification/docs-final.log)、[审查](../target/grammar-classification/review-final.json) |
+
+桌面库与缓存以 `cargo test --locked --release -p lexique-desktop --lib --test speech_cache --no-run` 预编译；库分八组通过现有 runner 执行，缓存使用 `node scripts/test-rust.mjs --speech-cache`，执行阶段硬限保持。三个忽略项为既有专用子进程夹具。完整命令、源码基点、平台及日志归属见[验收元数据](../target/grammar-classification/validation-final.json)。
+
+本次仅使用自有测试目录及夹具，不触及真实学习库；主工作区和单词资源开发工作区保持。schema 19 与学习快照 v3 保存语法、分类、归属、问答、进度、评分、队列、暂停、两类排序、删除后保留额度、失效保存操作编号和撤销状态；旧 v1／v2 备份的新集合为空，整份恢复保留当前库的删除重试保护。应用回退要求升级前 v1／v2 备份及旧版独立数据目录，旧应用不能读取 schema 19／快照 v3，当前新库及其备份继续保留。
+
+其他平台实机、安装包、干净机器首装、正式发行、浏览器持久学习、分类层级、按分类复习、同步及通用导入导出不在本次验收范围。
+
 ## D2 核心内容第三批五十组（#83）
 
 2026-11-18 UTC，[#83](https://github.com/zardonc/lexique/issues/83) 的冻结行 0101–0150 全部完成，接受 50 组／200 字段，无复用组：49 组现代日常义，加上项目所有者批准的行 128 `par/NOM` 高尔夫专业义例外。该名词仅表示完成单个球洞的标准击球次数，保留原词头、词性、冻结行和分母。全部 200 字段、50 项用法及 37 份固定来源捕获通过独立质量与来源权利审核，实际署名、选定片段、修改说明和再分发材料随包保留。

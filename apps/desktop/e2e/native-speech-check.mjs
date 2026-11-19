@@ -93,7 +93,7 @@ try {
   assert.deepEqual(result.added, [result.cards, result.cards]);
   assert.ok(result.progress.some((progress) => progress.revision > 0 && progress.card.phase !== 'new'));
   assert.equal(result.paused, true);
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.getByLabel('选择 école', { exact: true }).check();
   await page.getByRole('button', { name: '批量加入复习' }).click();
   await expect(page.getByText('école：成功')).toBeVisible({ timeout: 20_000 });
@@ -144,7 +144,7 @@ try {
   } finally {
     await rename(`${audio}.saved`, audio);
   }
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').filter({ hasText: 'école' }).click();
   await expect(page.getByText('听音卡：语音已生成', { exact: true })).toBeVisible();
   await page.getByRole('button', { name: '查看识义卡' }).click();
@@ -201,7 +201,7 @@ try {
   assert.deepEqual(restored.words, result.words);
   assert.deepEqual(restored.cards, result.cards);
   assert.deepEqual(Buffer.from(restored.audio.bytes), savedAudio);
-  await reopened.getByRole('button', { name: '生词本', exact: true }).click();
+  await reopened.getByRole('button', { name: '笔记', exact: true }).click();
   await reopened.locator('.vocabulary-list button').filter({ hasText: 'école' }).click();
   await expect(reopened.getByText('听音卡：语音已生成', { exact: true })).toBeVisible();
   console.log('Native UI: real playback, slow replay, hidden front, reveal, skip and restart recovery passed');

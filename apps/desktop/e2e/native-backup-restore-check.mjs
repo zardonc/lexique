@@ -259,7 +259,7 @@ async function verifyAudio(expected, oracle, playback = true) {
     evidence.checks.push({ exactCurrentSharedPreviousCache: oracle.audio, nativeCachedBytes: cached.bytes.length, noSynthesisWorkers: true });
     return;
   }
-  await page.getByRole('button', { name: 'Notebook', exact: true }).click();
+  await page.getByRole('button', { name: 'Notes', exact: true }).click();
   await page.locator('.vocabulary-list button').filter({ hasText: 'école' }).click();
   await page.getByRole('button', { name: 'Open listening card', exact: true }).click();
   const listening = page.getByRole('dialog', { name: 'Listening card', exact: true });
@@ -372,7 +372,7 @@ try {
     const request = { operation: 'native-close-save', headword: 'école', notes: 'Saved before native close',
       example_fr: '', example_zh: '', example_sense: null, more_examples: [], id: null, revision: null };
     await invoke('vocabulary_save', { request });
-    await page.getByRole('button', { name: 'Notebook', exact: true }).click();
+    await page.getByRole('button', { name: 'Notes', exact: true }).click();
     await page.locator('.vocabulary-list button').filter({ hasText: 'école' }).click();
     const notes = page.getByLabel('Personal notes', { exact: true });
     await notes.fill('Pending native close edit');

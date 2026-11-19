@@ -3,7 +3,7 @@ use crate::{
     speech_cache, speech_tasks,
     vocabulary::{DatabasePath, open},
 };
-use lexique_storage::{self as storage, AudioVersion, QueueCard, VocabularyRecord};
+use lexique_storage::{self as storage, AudioVersion, QueueCard, ReviewRecord};
 use serde::{Deserialize, Serialize};
 use std::{
     collections::HashMap,
@@ -281,7 +281,7 @@ struct Inspection {
 #[derive(Clone, Serialize)]
 pub struct WindowEntry {
     pub card: QueueCard,
-    pub record: VocabularyRecord,
+    pub record: ReviewRecord,
     pub progress: storage::ReviewProgress,
     pub version: Option<String>,
     pub content_hash: Option<String>,
@@ -299,7 +299,7 @@ pub struct KnownEntry {
 impl KnownEntry {
     fn matches(&self, entry: &WindowEntry) -> bool {
         self.card == entry.card
-            && self.record_revision == entry.record.revision
+            && self.record_revision == entry.record.revision()
             && self.progress_revision == entry.progress.revision
             && self.version == entry.version
             && self.content_hash == entry.content_hash
@@ -335,7 +335,10 @@ impl QueueCursor {
             && self.window.iter().all(|entry| {
                 id(entry.card.id)
                     && id(entry.card.vocabulary_id)
-                    && matches!(entry.card.kind.as_str(), "recognition" | "listening")
+                    && matches!(
+                        entry.card.kind.as_str(),
+                        "recognition" | "listening" | "grammar"
+                    )
                     && entry.record_revision >= 0
                     && entry.record_revision <= 9_007_199_254_740_991
                     && entry.progress_revision >= 0
@@ -386,7 +389,7 @@ pub struct Metrics {
 #[derive(Serialize)]
 pub struct QueueView {
     pub queue: storage::ReviewQueue,
-    pub record: Option<VocabularyRecord>,
+    pub record: Option<ReviewRecord>,
     pub audio_pending: bool,
     pub audio_error: Option<String>,
     pub audio_vocabulary_id: Option<i64>,
@@ -533,7 +536,7 @@ pub fn read(
         .iter()
         .map(|(card, _)| card.vocabulary_id)
         .collect();
-    let records = storage::get_batch(&tx, &words).map_err(|e| e.to_string())?;
+    let records = storage::get_review_records(&tx, &words).map_err(|e| e.to_string())?;
     let mut window = Vec::new();
     for (card, audio) in selected {
         let record = records

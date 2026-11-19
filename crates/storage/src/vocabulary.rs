@@ -97,6 +97,8 @@ pub struct SaveRequest {
     pub more_examples: Vec<Example>,
     pub id: Option<i64>,
     pub revision: Option<i64>,
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub category_ids: Vec<i64>,
 }
 
 #[derive(Clone, Debug, Deserialize, Serialize)]
@@ -116,6 +118,8 @@ pub struct VocabularyRecord {
     pub revision: i64,
     pub created_at: i64,
     pub updated_at: i64,
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub category_ids: Vec<i64>,
 }
 
 #[derive(Debug, Serialize)]
@@ -125,6 +129,7 @@ pub struct SaveResult {
 }
 
 pub fn validate(request: &SaveRequest) -> Result<(), StorageError> {
+    crate::categories::validate_category_ids(&request.category_ids)?;
     if request.operation.is_empty()
         || request.operation.len() > 128
         || !request
@@ -181,6 +186,13 @@ fn row_record(row: &rusqlite::Row<'_>) -> rusqlite::Result<VocabularyRecord> {
         rusqlite::Error::FromSqlConversionFailure(2, rusqlite::types::Type::Text, Box::new(error))
     })?;
     Ok(VocabularyRecord {
+        category_ids: serde_json::from_str(&row.get::<_, String>(12)?).map_err(|error| {
+            rusqlite::Error::FromSqlConversionFailure(
+                12,
+                rusqlite::types::Type::Text,
+                Box::new(error),
+            )
+        })?,
         id: row.get(0)?,
         headword: row.get(1)?,
         reference: snapshot.reference,
@@ -213,11 +225,73 @@ fn row_record(row: &rusqlite::Row<'_>) -> rusqlite::Result<VocabularyRecord> {
     })
 }
 
-const COLUMNS: &str = "id, headword, snapshot, notes, revision, created_at, updated_at, example_fr, example_zh, more_examples, example_sense, example_source";
+const COLUMNS: &str = "id, headword, snapshot, notes, revision, created_at, updated_at, example_fr, example_zh, more_examples, example_sense, example_source, (SELECT json_group_array(category_id) FROM record_categories WHERE record_id = vocabulary.id)";
+
+#[derive(Clone, Debug, Deserialize, Serialize)]
+#[serde(untagged)]
+pub enum ReviewRecord {
+    Vocabulary(VocabularyRecord),
+    Grammar(crate::GrammarRecord),
+}
+
+impl ReviewRecord {
+    pub fn revision(&self) -> i64 {
+        match self {
+            Self::Vocabulary(record) => record.revision,
+            Self::Grammar(record) => record.revision,
+        }
+    }
+}
+
+pub fn get_review_records(
+    connection: &Connection,
+    ids: &[i64],
+) -> Result<std::collections::HashMap<i64, ReviewRecord>, StorageError> {
+    let mut records = get_batch(connection, ids)?
+        .into_iter()
+        .map(|(id, record)| (id, ReviewRecord::Vocabulary(record)))
+        .collect::<std::collections::HashMap<_, _>>();
+    let candidates = ids
+        .iter()
+        .filter(|id| !records.contains_key(id))
+        .copied()
+        .collect::<Vec<_>>();
+    for chunk in candidates.chunks(100) {
+        let placeholders = vec!["?"; chunk.len()].join(",");
+        let mut query = connection.prepare(&format!(
+            "SELECT id FROM vocabulary WHERE record_kind = 'grammar' AND id IN ({placeholders})"
+        ))?;
+        let grammars = query
+            .query_map(rusqlite::params_from_iter(chunk), |row| {
+                row.get::<_, i64>(0)
+            })?
+            .collect::<Result<Vec<_>, _>>()?;
+        for id in grammars {
+            records.insert(
+                id,
+                ReviewRecord::Grammar(crate::get_grammar(connection, id)?),
+            );
+        }
+    }
+    Ok(records)
+}
+
+pub(crate) fn review_due_key(
+    due: &std::collections::HashMap<i64, Option<i64>>,
+    id: i64,
+    title: &str,
+) -> (u8, i64, String, i64) {
+    let (group, time) = match due.get(&id) {
+        Some(Some(time)) => (0, *time),
+        Some(None) => (1, 0),
+        None => (2, 0),
+    };
+    (group, time, search_key(title), id)
+}
 
 pub fn get(connection: &Connection, id: i64) -> Result<VocabularyRecord, StorageError> {
     Ok(connection.query_row(
-        &format!("SELECT {COLUMNS} FROM vocabulary WHERE id = ?1"),
+        &format!("SELECT {COLUMNS} FROM vocabulary WHERE id = ?1 AND record_kind = 'vocabulary'"),
         [id],
         row_record,
     )?)
@@ -231,7 +305,7 @@ pub fn get_batch(
     for chunk in ids.chunks(100) {
         let placeholders = vec!["?"; chunk.len()].join(",");
         let mut query = connection.prepare(&format!(
-            "SELECT {COLUMNS} FROM vocabulary WHERE id IN ({placeholders})"
+            "SELECT {COLUMNS} FROM vocabulary WHERE record_kind = 'vocabulary' AND id IN ({placeholders})"
         ))?;
         for record in query.query_map(rusqlite::params_from_iter(chunk), row_record)? {
             let record = record?;
@@ -247,7 +321,7 @@ pub fn find(
 ) -> Result<Option<VocabularyRecord>, StorageError> {
     Ok(connection
         .query_row(
-            &format!("SELECT {COLUMNS} FROM vocabulary WHERE headword = ?1"),
+            &format!("SELECT {COLUMNS} FROM vocabulary WHERE headword = ?1 AND record_kind = 'vocabulary'"),
             [headword.nfc().collect::<String>()],
             row_record,
         )
@@ -259,6 +333,7 @@ pub fn replay(
     request: &SaveRequest,
 ) -> Result<Option<SaveResult>, StorageError> {
     validate(request)?;
+    crate::grammar::check_save_operation(connection, &request.operation)?;
     let previous = connection
         .query_row(
             "SELECT request, record_id, outcome FROM save_operations WHERE operation = ?1",
@@ -306,6 +381,9 @@ pub(crate) fn normalize_save_request_fields(value: &mut serde_json::Value) {
             .or_insert(serde_json::Value::Null);
         fields
             .entry("more_examples")
+            .or_insert_with(|| serde_json::json!([]));
+        fields
+            .entry("category_ids")
             .or_insert_with(|| serde_json::json!([]));
     }
 }
@@ -360,6 +438,7 @@ pub fn save(
              updated_at = MAX(updated_at + 1, CAST(unixepoch('subsec') * 1000 AS INTEGER)) WHERE id = ?6",
             params![request.notes, request.example_fr, request.example_zh, serde_json::to_string(&request.more_examples)?, request.example_sense, id, request.example_source.as_ref().map(serde_json::to_string).transpose()?],
         )?;
+        crate::categories::save_record_categories(&transaction, id, &request.category_ids)?;
         ("updated", get(&transaction, id)?)
     } else if let Some(existing) = find(&transaction, &headword)? {
         ("existing", existing)
@@ -389,6 +468,7 @@ pub fn save(
             params![headword, serde_json::to_string(&snapshot)?, request.notes, request.example_fr, request.example_zh, serde_json::to_string(&request.more_examples)?, request.example_sense, request.example_source.as_ref().map(serde_json::to_string).transpose()?],
         )?;
         let id = transaction.last_insert_rowid();
+        crate::categories::save_record_categories(&transaction, id, &request.category_ids)?;
         if crate::auto_enroll(&transaction)? {
             crate::review::ensure_review_cards(&transaction, id)?;
         }
@@ -415,7 +495,7 @@ pub fn save(
     Ok(SaveResult { outcome, record })
 }
 
-fn search_key(value: &str) -> String {
+pub(crate) fn search_key(value: &str) -> String {
     value
         .nfd()
         .filter(|character| !is_combining_mark(*character))
@@ -475,7 +555,9 @@ pub fn list(
         return Err(StorageError::Invalid("Search is too long".into()));
     }
     let query = search_key(query);
-    let mut statement = connection.prepare(&format!("SELECT {COLUMNS} FROM vocabulary"))?;
+    let mut statement = connection.prepare(&format!(
+        "SELECT {COLUMNS} FROM vocabulary WHERE record_kind = 'vocabulary'"
+    ))?;
     let mut records = statement
         .query_map([], row_record)?
         .collect::<Result<Vec<_>, _>>()?;
@@ -508,29 +590,8 @@ pub fn list(
             .any(|value| search_key(value).contains(&query))
     });
     if sort == "review-due-asc" {
-        let mut statement = connection.prepare("SELECT c.vocabulary_id, p.state FROM review_cards c LEFT JOIN review_progress p ON p.card_id = c.id")?;
-        let cards = statement.query_map([], |row| {
-            Ok((row.get::<_, i64>(0)?, row.get::<_, Option<String>>(1)?))
-        })?;
-        let mut due = std::collections::HashMap::new();
-        for card in cards {
-            let (vocabulary_id, state) = card?;
-            let state = state
-                .map(|value| serde_json::from_str::<lexique_core::scheduling::Card>(&value))
-                .transpose()?;
-            let entry = due.entry(vocabulary_id).or_insert(None::<i64>);
-            if let Some(time) = state.and_then(|card| card.due_at) {
-                *entry = Some(entry.map_or(time, |old| old.min(time)));
-            }
-        }
-        records.sort_by_cached_key(|record| {
-            let (group, time) = match due.get(&record.id) {
-                Some(Some(time)) => (0, *time),
-                Some(None) => (1, 0),
-                None => (2, 0),
-            };
-            (group, time, search_key(&record.headword), record.id)
-        });
+        let due = crate::review::review_due_times(connection)?;
+        records.sort_by_cached_key(|record| review_due_key(&due, record.id, &record.headword));
         return Ok(records);
     }
     records.sort_by_cached_key(|record| match sort.split('-').next().unwrap_or_default() {

@@ -136,13 +136,13 @@ test('dictionary links protect edits through stay, failed save, save and leave, 
   await expect(page.getByLabel('Personal notes', { exact: true })).toHaveValue(saved.notes);
   await dialog.getByRole('button', { name: 'Save and leave' }).click();
   await expect(dialog).toBeHidden(); await expect(page.locator('.conjugation-table h3')).toHaveText('laver');
-  await page.getByRole('button', { name: 'Notebook', exact: true }).click(); await page.locator('.vocabulary-list button').click();
+  await page.getByRole('button', { name: 'Notes', exact: true }).click(); await page.locator('.vocabulary-list button').click();
   await expect(page.getByLabel('Personal notes', { exact: true })).toHaveValue(saved.notes);
   await page.getByLabel('Personal notes', { exact: true }).fill('discard this edit');
   await page.getByRole('button', { name: 'Conjugation', exact: true }).click();
   await dialog.getByRole('button', { name: 'Discard changes' }).click();
   await expect(page.locator('.conjugation-table h3')).toHaveText('laver');
-  await page.getByRole('button', { name: 'Notebook', exact: true }).click(); await page.locator('.vocabulary-list button').click();
+  await page.getByRole('button', { name: 'Notes', exact: true }).click(); await page.locator('.vocabulary-list button').click();
   await expect(page.getByLabel('Personal notes', { exact: true })).toHaveValue(saved.notes);
 });
 
@@ -203,7 +203,7 @@ test('return navigation keeps the originating case and apostrophe-distinct learn
   await page.getByRole('button', { name: `Open dictionary: ${original}`, exact: true }).click();
   await page.getByRole('button', { name: 'View existing record', exact: true }).click();
   await expect(page.getByLabel('Personal notes', { exact: true })).toHaveValue(saved.notes);
-  await page.getByRole('button', { name: 'Notebook', exact: true }).click();
+  await page.getByRole('button', { name: 'Notes', exact: true }).click();
   await expect(page.locator('.vocabulary-list li')).toHaveCount(2);
   await expect(page.locator('.vocabulary-list')).toContainText(original);
   await expect(page.locator('.vocabulary-list')).toContainText(canonical);
@@ -261,9 +261,9 @@ for (const direction of ['dictionary', 'conjugation'] as const) {
       await page.getByLabel('French verb or simple form').fill('laver'); await page.getByRole('button', { name: 'Look up conjugation', exact: true }).click();
       await expect(page.locator('.conjugation-table')).toContainText('Looking up…');
     }
-    await page.getByRole('button', { name: 'Notebook', exact: true }).click();
+    await page.getByRole('button', { name: 'Notes', exact: true }).click();
     await page.evaluate(() => window.testNative.release('link'));
-    await expect(page.getByRole('heading', { name: 'Notebook', level: 1 })).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'Notes', level: 1 })).toBeVisible();
     await expect(page.locator('.conjugation-table, .dictionary-entry')).toHaveCount(0);
   });
 }

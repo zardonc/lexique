@@ -80,7 +80,7 @@ try {
   assert.equal(collected.result.outcome, 'created');
   assert.equal(collected.cards.length, 2);
   assert.equal(collected.retry.record.id, collected.result.record.id);
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.getByRole('button', { name: /école/ }).click();
   await page.getByRole('button', { name: '恢复复习', exact: true }).click();
   assert.equal(await page.evaluate((id) => window.__TAURI_INTERNALS__.invoke('review_pause', { vocabularyId: id, paused: null }), before.id), false);

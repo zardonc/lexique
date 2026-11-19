@@ -20,6 +20,7 @@ import type { InterfacePreferences } from './interface';
 import { backupStatusSchema, backupPreviewOperation, backupPreviewStatusSchema } from './backup';
 import type { BackupStatus, BackupPreviewStatus, RawPendingRequest, RestoreStatus, StartupStatus } from './backup';
 import { restoreRuntime } from './restore';
+import { matchesReviewRecord, notesRuntime, reviewRecordSchema } from './notes';
 
 async function dictionaryUpload(file: File) {
   if (!/\.mdx$/i.test(file.name) || !file.size || file.size > 128 * 1024 * 1024) throw { code: 'limit', message: 'MDX: non-empty, at most 128 MiB' };
@@ -47,8 +48,9 @@ const runtimeStatusSchema = z.object({
 
 export type RuntimeStatus = z.infer<typeof runtimeStatusSchema>;
 
+const reviewKindSchema = z.enum(['recognition', 'listening', 'grammar']);
 const cardsSchema = z.array(z.object({ id: z.number().int().positive().safe(),
-  kind: z.enum(['recognition', 'listening']) }).strict().readonly()).max(2).readonly();
+  kind: reviewKindSchema }).strict().readonly()).max(2).readonly();
 export type ReviewCard = z.infer<typeof cardsSchema>[number];
 const ratingSchema = z.enum(['again', 'hard', 'good', 'easy']);
 const scheduleCardSchema = z.object({ phase: z.enum(['new', 'learning_first', 'learning_last', 'review', 'relearning']),
@@ -84,19 +86,20 @@ const reviewSettingsSchema = z.object({ retention_percent: z.number().int().min(
   new_limit: z.number().int().min(0).max(1_000_000), review_limit: z.number().int().min(0).max(1_000_000),
   new_cards_ignore_review_limit: z.boolean() }).strict().readonly();
 export type ReviewSettings = z.infer<typeof reviewSettingsSchema>;
-const queueCardSchema = z.object({ id: z.number().int().positive().safe(), vocabulary_id: z.number().int().positive().safe(), kind: z.enum(['recognition', 'listening']) }).strict();
-const windowEntrySchema = z.object({ card: queueCardSchema, record: recordSchema, progress: progressSchema,
+const queueCardSchema = z.object({ id: z.number().int().positive().safe(), vocabulary_id: z.number().int().positive().safe(), kind: reviewKindSchema }).strict();
+const windowEntrySchema = z.object({ card: queueCardSchema, record: reviewRecordSchema, progress: progressSchema,
   version: z.string().regex(/^[a-f0-9]{64}$/).nullable(), content_hash: z.string().regex(/^[a-f0-9]{64}$/).nullable(),
   audio: speechAudioSchema.nullable() }).strict()
-  .refine((value) => value.record.id === value.card.vocabulary_id && (value.card.kind !== 'listening' || value.version !== null && value.content_hash !== null), 'Invalid verified queue entry');
-const queuePayloadSchema = z.object({ queue: z.object({ cards: z.array(queueCardSchema).max(4), reason: z.enum(['clock', 'due', 'quota', 'deferred']).nullable(), available_at: z.number().int().safe().nullable() }).strict(), record: recordSchema.nullable(), audio_pending: z.boolean(), audio_error: z.string().nullable(), audio_vocabulary_id: z.number().int().positive().safe().nullable().default(null),
+  .refine((value) => matchesReviewRecord(value.record, value.card) && (value.card.kind !== 'listening' || value.version !== null && value.content_hash !== null)
+    && (value.card.kind !== 'grammar' || value.version === null && value.content_hash === null && value.audio === null), 'Invalid verified queue entry');
+const queuePayloadSchema = z.object({ queue: z.object({ cards: z.array(queueCardSchema).max(4), reason: z.enum(['clock', 'due', 'quota', 'deferred']).nullable(), available_at: z.number().int().safe().nullable() }).strict(), record: reviewRecordSchema.nullable(), audio_pending: z.boolean(), audio_error: z.string().nullable(), audio_vocabulary_id: z.number().int().positive().safe().nullable().default(null),
   summary: z.object({ admitted_count: z.number().int().nonnegative().safe(), audio_pending_count: z.number().int().nonnegative().safe(), missing_vocabulary_ids: z.array(z.number().int().positive().safe()).max(100), verification_pending: z.boolean(), learning_day: z.string(), timezone: z.string().min(1).max(128), revision: z.number().int().nonnegative().safe(), unknown_legacy: z.boolean().default(false) }).strict(),
   delta: z.object({ before_revision: z.number().int().nonnegative().safe().nullable(), after_revision: z.number().int().nonnegative().safe(), removed: z.array(z.number().int().positive().safe()).max(4), order: z.array(z.number().int().positive().safe()).max(4) }).strict(),
   window: z.array(windowEntrySchema).max(4), metrics: z.object({ metadata_candidates: z.number().int().min(0).max(50), strict_probes: z.number().int().min(0).max(8), compressed_bytes: z.number().int().min(0).max(33_554_432), payload_bytes: z.number().int().min(0).max(33_554_432), validation_wait_ms: z.number().nonnegative().finite(), metadata_loaded_rows: z.number().int().nonnegative().safe(), parsed_progress: z.number().int().nonnegative().safe(), metadata_rebuilt: z.boolean(), rebuild_reason: z.string().nullable(), database_ms: z.number().nonnegative().finite() }).strict() }).strict()
   .refine((value) => value.delta.after_revision === value.summary.revision && value.delta.order.length === value.queue.cards.length && value.delta.order.every((id, index) => id === value.queue.cards[index]?.id), 'Invalid queue delta order')
   .refine((value) => new Set(value.delta.order).size === value.delta.order.length && new Set(value.window.map((entry) => entry.card.id)).size === value.window.length && value.window.every((entry) => value.delta.order.includes(entry.card.id)), 'Invalid queue delta entries');
 const queueViewSchema = queuePayloadSchema
-  .refine((value) => value.queue.cards.length ? value.record?.id === value.queue.cards[0]?.vocabulary_id : value.record === null, 'Invalid queue record')
+  .refine((value) => value.queue.cards.length ? value.record !== null && matchesReviewRecord(value.record, value.queue.cards[0]!) : value.record === null, 'Invalid queue record')
   .refine((value) => value.window.length === value.queue.cards.length && value.window.every((entry, index) => entry.card.id === value.queue.cards[index]?.id && (entry.card.kind !== 'listening' || entry.audio !== null)) && value.window.reduce((sum, entry) => sum + (entry.audio?.bytes.length ?? 0), 0) <= 33_554_432, 'Invalid queue window');
 export type QueueView = z.infer<typeof queueViewSchema>;
 
@@ -131,7 +134,7 @@ const batchSchema = z.object({ operation: z.string().min(1).max(128), cancelled:
 export type BatchRequest = z.infer<typeof batchRequestSchema>;
 export type BatchStatus = z.infer<typeof batchSchema>;
 
-export interface RuntimeAdapter {
+export interface RuntimeAdapter extends Readonly<typeof notesRuntime> {
   readonly startRestore: (operation: string, pendingRequests?: readonly RawPendingRequest[]) => Promise<RestoreStatus>;
   readonly restoreStatus: (operation: string) => Promise<RestoreStatus>;
   readonly onRestoreProgress: (callback: (status: RestoreStatus) => void, failed: (cause: unknown) => void) => Promise<() => void>;
@@ -208,6 +211,7 @@ async function readShortcut(command: string, shortcut?: string) {
 
 export const runtime: RuntimeAdapter = {
   ...restoreRuntime,
+  ...notesRuntime,
   backupAvailable: isTauri,
   async startBackup() {
     if (!isTauri()) throw new Error('Backups are available in the desktop app only');

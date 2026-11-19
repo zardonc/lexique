@@ -224,7 +224,7 @@ async function lemmas() {
   assert.deepEqual(snapshot(), before);
   const updated = await invoke('dictionary_lookup', { key: 'être', dictionary_id: source.id });
   assert.notEqual(updated.sha256, saved.record.reference.sha256);
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
   await expect(page.getByLabel('独立笔记', { exact: true })).toHaveValue(request.notes);
   await expect(page.locator('.dictionary-original')).toContainText('版本');

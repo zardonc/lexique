@@ -133,6 +133,7 @@ fn reference(headword: &str) -> storage::Reference {
 
 fn request(operation: &str, headword: &str, notes: &str) -> storage::SaveRequest {
     storage::SaveRequest {
+        category_ids: vec![],
         operation: operation.into(),
         headword: headword.into(),
         notes: notes.into(),
@@ -328,7 +329,7 @@ fn healthy(connection: &Connection) {
         connection
             .query_row("PRAGMA user_version", [], |row| row.get::<_, u32>(0))
             .unwrap(),
-        18
+        19
     );
     assert_eq!(
         rows(connection, "PRAGMA integrity_check", &[]),
@@ -467,6 +468,84 @@ fn normalize_old_fixture_receipt(state: &mut Value) {
         .find(|row| row[0] == "legacy-save")
         .unwrap();
     receipt[1] = json!({"operation":"legacy-save","headword":"legacy-valid","notes":"Old receipt, unknown examples","example_fr":"","example_zh":"","example_sense":null,"more_examples":[],"id":null,"revision":null});
+}
+
+#[test]
+fn restoring_an_earlier_backup_preserves_all_allocated_learning_identities() {
+    let fixture = Fixture::new();
+    let archive = fixture.root.0.join("before-notes.lexique-backup");
+    let workers = fixture.workers();
+    export_backup_to_new_file(
+        &fixture.database,
+        &workers,
+        &MaintenanceCoordinator::default(),
+        &archive,
+        "before-notes",
+        &AtomicBool::new(false),
+        |_| {},
+    )
+    .unwrap();
+    workers.shutdown().unwrap();
+    let connection = Connection::open(&fixture.database.0).unwrap();
+    let category = storage::create_category(&connection, "Temps").unwrap();
+    let request = storage::GrammarSaveRequest {
+        operation: "later-note".into(),
+        id: None,
+        revision: None,
+        title: "Passé composé".into(),
+        body: "Texte\nExemple".into(),
+        category_ids: vec![category.id],
+    };
+    let note = storage::save_grammar(&connection, &request, NOW * 1000)
+        .unwrap()
+        .record;
+    let note = storage::save_grammar_card(
+        &connection,
+        &storage::GrammarCardRequest {
+            operation: "later-card".into(),
+            id: note.id,
+            revision: note.revision,
+            question: "Quand ?".into(),
+            answer: "Avant.".into(),
+        },
+        NOW * 1000,
+    )
+    .unwrap()
+    .record;
+    let allocated = storage::learning_identities(&connection).unwrap();
+    storage::delete_grammar(&connection, note.id, note.revision).unwrap();
+    storage::delete_category(&connection, category.id).unwrap();
+    connection.close().unwrap();
+    fixture.restore(fixture.preview(&archive), "restore-before-notes");
+    let connection = Connection::open(&fixture.database.0).unwrap();
+    let category = storage::create_category(&connection, "Pronoms").unwrap();
+    let note = storage::save_grammar(
+        &connection,
+        &storage::GrammarSaveRequest {
+            operation: "after-restore-note".into(),
+            category_ids: vec![category.id],
+            ..request
+        },
+        NOW * 1000,
+    )
+    .unwrap()
+    .record;
+    let note = storage::save_grammar_card(
+        &connection,
+        &storage::GrammarCardRequest {
+            operation: "after-restore-card".into(),
+            id: note.id,
+            revision: note.revision,
+            question: "Qui ?".into(),
+            answer: "Elle.".into(),
+        },
+        NOW * 1000,
+    )
+    .unwrap()
+    .record;
+    assert!(note.id > allocated.records);
+    assert!(note.card.unwrap().id > allocated.cards);
+    assert!(category.id > allocated.categories);
 }
 
 #[test]

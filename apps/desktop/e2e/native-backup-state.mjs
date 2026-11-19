@@ -4,7 +4,7 @@ import { resolve, join, relative, isAbsolute } from 'node:path';
 
 function ownedDestination(destination) {
   const root = resolve(destination);
-  assert.ok(['issue-75', 'issue-79', 'issue-80', 'issue-81', 'issue-82', 'issue-83'].some(issue => {
+  assert.ok(['issue-75', 'issue-79', 'issue-80', 'issue-81', 'issue-82', 'issue-83', 'grammar-classification'].some(issue => {
     const owned = relative(resolve('../../target', issue), root);
     return owned && !owned.startsWith('..') && !isAbsolute(owned);
   }));
@@ -45,7 +45,7 @@ elif variant=='crc':
  output[audio.header_offset+30+n+e+80]^=1
 else:
  if variant=='unsupported-format': manifest['format_version']=2
- elif variant=='unsupported-snapshot': manifest['snapshot_version']=snapshot['snapshot_version']=3
+ elif variant=='unsupported-snapshot': manifest['snapshot_version']=snapshot['snapshot_version']=4
  elif variant=='count': manifest['counts']['cards']+=1
  elif variant=='unknown-field': snapshot['unexpected']=True
  elif variant=='invalid-number': snapshot['records'][0]['id']=0

@@ -191,7 +191,7 @@ pub fn referenced_custom_dictionary_ids(
     }
     let mut ids = BTreeSet::new();
     let mut statement = connection.prepare(
-        "SELECT snapshot FROM vocabulary UNION ALL SELECT example_source FROM vocabulary WHERE example_source IS NOT NULL UNION ALL SELECT more_examples FROM vocabulary UNION ALL SELECT request FROM save_operations",
+        "SELECT snapshot FROM vocabulary WHERE record_kind='vocabulary' UNION ALL SELECT example_source FROM vocabulary WHERE example_source IS NOT NULL UNION ALL SELECT more_examples FROM vocabulary WHERE record_kind='vocabulary' UNION ALL SELECT request FROM save_operations",
     )?;
     let rows = statement.query_map([], |row| row.get::<_, String>(0))?;
     for row in rows {

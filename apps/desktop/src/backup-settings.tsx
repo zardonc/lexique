@@ -18,7 +18,7 @@ const messages = {
     resources: '自定义 MDX 仅保存身份与顺序清单，词典正文和模型需在目标设备另行提供。',
     privacy: '备份包含个人笔记与学习历史，文件不加密。请选择新文件位置并妥善保管。',
     destination: '保存位置', size: '文件大小', bytes: '字节', created: '创建时间',
-    counts: { vocabulary: '生词', cards: '卡片', ratings: '评分', batches: '批量请求', custom_dictionaries: '自定义词典', legacy_audio: '旧音频关联',
+    counts: { vocabulary: '生词', grammar: '语法笔记', categories: '学习分类', cards: '卡片', ratings: '评分', batches: '批量请求', custom_dictionaries: '自定义词典', legacy_audio: '旧音频关联',
       included_audio_versions: '已包含音频版本', included_legacy_audio: '已包含旧音频', audio_files: '音频文件', source_missing_audio: '原音频缺失', source_invalid_audio: '原音频损坏' } },
   en: { title: 'Manual backup', create: 'Create backup', saved: 'Backup saved', working: 'Preparing backup…', error: 'Backup failed', choosing: 'Choose a location for a new backup file.', check: 'Check backup status', cancel: 'Cancel backup', cancelled: 'Backup cancelled.', cancelling: 'Cancel requested. Waiting for backup to stop…',
     paused: 'Learning changes and background audio maintenance are temporarily paused. They resume when collection finishes.',
@@ -28,7 +28,7 @@ const messages = {
     resources: 'Custom MDX dictionaries keep their identity and order only. Provide dictionary files and models separately on the destination device.',
     privacy: 'Backups contain personal notes and learning history and are not encrypted. Choose a new file location and keep it private.',
     destination: 'Saved location', size: 'File size', bytes: 'bytes', created: 'Created at',
-    counts: { vocabulary: 'Vocabulary', cards: 'Cards', ratings: 'Ratings', batches: 'Batch requests', custom_dictionaries: 'Custom dictionaries', legacy_audio: 'Legacy audio links',
+    counts: { vocabulary: 'Vocabulary', grammar: 'Grammar notes', categories: 'Learning categories', cards: 'Cards', ratings: 'Ratings', batches: 'Batch requests', custom_dictionaries: 'Custom dictionaries', legacy_audio: 'Legacy audio links',
       included_audio_versions: 'Included audio versions', included_legacy_audio: 'Included legacy audio', audio_files: 'Audio files', source_missing_audio: 'Source audio missing', source_invalid_audio: 'Source audio damaged' } },
   fr: { title: 'Sauvegarde manuelle', create: 'Créer une sauvegarde', saved: 'Sauvegarde enregistrée', working: 'Préparation de la sauvegarde…', error: 'Échec de la sauvegarde', choosing: 'Choisissez l’emplacement d’un nouveau fichier.', check: 'Vérifier la sauvegarde', cancel: 'Annuler la sauvegarde', cancelled: 'Sauvegarde annulée.', cancelling: 'Annulation demandée. Attente de l’arrêt de la sauvegarde…',
     paused: 'Les modifications et la maintenance audio sont temporairement suspendues. Elles reprennent après la collecte.',
@@ -38,7 +38,7 @@ const messages = {
     resources: 'Seuls l’identité et l’ordre des dictionnaires MDX sont conservés. Les fichiers et modèles doivent être fournis séparément sur l’appareil cible.',
     privacy: 'Les sauvegardes contiennent des notes personnelles et l’historique d’apprentissage sans chiffrement. Choisissez un nouveau fichier et conservez-le en lieu sûr.',
     destination: 'Emplacement', size: 'Taille du fichier', bytes: 'octets', created: 'Date de création',
-    counts: { vocabulary: 'Vocabulaire', cards: 'Cartes', ratings: 'Évaluations', batches: 'Demandes groupées', custom_dictionaries: 'Dictionnaires personnalisés', legacy_audio: 'Liens audio anciens',
+    counts: { vocabulary: 'Vocabulaire', grammar: 'Notes de grammaire', categories: 'Catégories d’étude', cards: 'Cartes', ratings: 'Évaluations', batches: 'Demandes groupées', custom_dictionaries: 'Dictionnaires personnalisés', legacy_audio: 'Liens audio anciens',
       included_audio_versions: 'Versions audio incluses', included_legacy_audio: 'Audios anciens inclus', audio_files: 'Fichiers audio', source_missing_audio: 'Audio source manquant', source_invalid_audio: 'Audio source endommagé' } },
 } as const;
 

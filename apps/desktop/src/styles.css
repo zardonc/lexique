@@ -201,3 +201,12 @@ dialog.review-card { width: min(480px, 90vw); overflow-wrap: anywhere; }
 .capture-controls { position: absolute; top: 8px; left: 8px; max-width: calc(100% - 16px); background: #222e; color: #fff; padding: 8px 12px; border-radius: 8px; }
 .capture-controls p { margin: 0 0 4px; font-size: 13px; }
 .capture-controls button { padding: 4px 12px; }
+.grammar-text { white-space: pre-wrap; overflow-wrap: anywhere; }
+.grammar-editor input, .grammar-editor textarea, .grammar-card-editor label { display: block; width: 100%; }
+.category-picker { margin-block: 1rem; }
+.category-picker label { display: inline-flex; align-items: center; gap: .4rem; margin-inline-end: 1rem; }
+.category-picker input { width: auto; }
+.category-manager { margin-block: 1rem; }
+.category-manager ul { list-style: none; padding: 0; }
+.category-manager form { display: flex; align-items: end; flex-wrap: wrap; gap: .5rem; margin-block: .6rem; }
+.delete-note { margin-top: 1rem; }

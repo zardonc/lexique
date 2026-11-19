@@ -479,7 +479,7 @@ async function navigationResources(page) {
     try {
       for (const state of ['missing', 'corrupt']) {
         if (state === 'corrupt') await writeFile(database, 'invalid SQLite');
-        await page.getByRole('button', { name: 'Notebook', exact: true }).click();
+        await page.getByRole('button', { name: 'Notes', exact: true }).click();
         if (resource === 'conjugation') await dictionarySearch(page, 'laver');
         else await page.getByRole('button', { name: 'Conjugation', exact: true }).click();
         await expect(page.locator(resource === 'conjugation' ? '.dictionary-original' : '.conjugation-table').getByRole('alert')).toContainText(state);

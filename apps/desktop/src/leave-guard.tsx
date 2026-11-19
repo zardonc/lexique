@@ -1,10 +1,22 @@
 import { useEffect, useRef, useState } from 'react';
 import type { RuntimeAdapter } from './platform/runtime';
 import { errorMessage } from './platform/vocabulary';
-import type { Notebook } from './use-notebook';
 import type { NotebookText } from './notebook-content';
 
-export function useLeaveGuard(runtime: RuntimeAdapter, notebook: Notebook, batchBusy: boolean) {
+export interface LeaveNotebook {
+  readonly busy: boolean;
+  readonly dirty: boolean;
+  readonly error: string;
+  readonly save: () => Promise<boolean>;
+  readonly clear: () => void;
+  readonly excerptPending?: boolean;
+  readonly meaningRequired?: boolean;
+  readonly audioError?: string;
+  readonly conflict?: unknown;
+  readonly existing?: unknown;
+}
+
+export function useLeaveGuard(runtime: RuntimeAdapter, notebook: LeaveNotebook, batchBusy: boolean) {
   const [pending, setPending] = useState<(() => void) | null>(null);
   const [error, setError] = useState('');
   const deferred = useRef<(() => void) | null>(null);
@@ -38,7 +50,7 @@ export function useLeaveGuard(runtime: RuntimeAdapter, notebook: Notebook, batch
 }
 
 export function LeaveDialog({ guard, notebook, text }: {
-  readonly guard: ReturnType<typeof useLeaveGuard>; readonly notebook: Notebook; readonly text: NotebookText;
+  readonly guard: ReturnType<typeof useLeaveGuard>; readonly notebook: LeaveNotebook; readonly text: NotebookText;
 }) {
   const dialog = useRef<HTMLDialogElement>(null);
   useEffect(() => { if (guard.pending) dialog.current?.showModal(); else dialog.current?.close(); }, [guard.pending]);
@@ -48,8 +60,8 @@ export function LeaveDialog({ guard, notebook, text }: {
     {notebook.meaningRequired && <p role="alert">{text.exampleSenseRequired}</p>}
     {notebook.error && <p role="alert">{text.saveError}: {notebook.error}</p>}
     {notebook.audioError && <p role="alert">{text.saved}. {text.listeningPending}: {notebook.audioError}</p>}
-    {notebook.conflict && <p role="alert">{text.conflict}</p>}
-    {notebook.existing && <p role="alert">{text.existing}</p>}
+    {!!notebook.conflict && <p role="alert">{text.conflict}</p>}
+    {!!notebook.existing && <p role="alert">{text.existing}</p>}
     <div className="actions"><button disabled={notebook.busy || notebook.excerptPending} onClick={() => { void guard.saveLeave(); }}>{text.saveLeave}</button>
       <button disabled={notebook.busy} onClick={guard.leave}>{text.discard}</button>
       <button disabled={notebook.busy} onClick={guard.stay}>{text.stay}</button></div>
