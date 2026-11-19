@@ -5,6 +5,63 @@ const note = { id: 2, title: 'Passé composé', body: 'Action terminée.\nJe sui
   card: null, revision: 1, created_at: 1000, updated_at: 1000 };
 const category = { id: 1, name: 'Temps' };
 
+for (const failedPart of ['note', 'card'] as const) {
+  test(`failed ${failedPart} saves retry at the revision from the other independent save`, async ({ page }) => {
+    const enrolled = { ...note, category_ids: [], card: { id: 3, question: 'Quand ?', answer: 'Avant.' } };
+    const body = 'Ma note.', answer = 'Après.';
+    const otherSaved = { ...enrolled, revision: 2, ...(failedPart === 'note' ? { card: { ...enrolled.card, answer } } : { body }) };
+    const saved = { ...otherSaved, revision: 3, body, card: { ...enrolled.card, answer } };
+    const failedCommand = failedPart === 'note' ? 'grammar_save' : 'grammar_card_save';
+    const otherCommand = failedPart === 'note' ? 'grammar_card_save' : 'grammar_save';
+    await nativeFixture(page, { grammar_list: [{ value: [enrolled] }],
+      [failedCommand]: [{ error: 'disk full' }, { value: { outcome: 'updated', record: saved } }],
+      [otherCommand]: [{ value: { outcome: 'updated', record: otherSaved } }] });
+    await page.goto('/');
+    await page.getByRole('button', { name: '笔记', exact: true }).click();
+    await page.getByRole('tab', { name: '语法', exact: true }).click();
+    await page.locator('.vocabulary-list button').click();
+    const failedSave = page.getByRole('button', { name: failedPart === 'note' ? '保存笔记' : '保存问答卡', exact: true });
+    const otherSave = page.getByRole('button', { name: failedPart === 'note' ? '保存问答卡' : '保存笔记', exact: true });
+    await page.getByLabel(failedPart === 'note' ? '语法正文' : '答案', { exact: true }).fill(failedPart === 'note' ? body : answer);
+    await failedSave.click();
+    await expect(page.getByRole('alert')).toContainText('disk full');
+    await page.getByLabel(failedPart === 'note' ? '答案' : '语法正文', { exact: true }).fill(failedPart === 'note' ? answer : body);
+    await otherSave.click();
+    await expect(otherSave).toBeDisabled();
+    await failedSave.click();
+    await expect(failedSave).toBeDisabled();
+    await expect(page.getByLabel('语法正文')).toHaveValue(body);
+    await expect(page.getByLabel('答案', { exact: true })).toHaveValue(answer);
+    const requests = await page.evaluate((command) => window.testNative.calls.filter((call) => call.command === command)
+      .map((call) => call.args?.request as { operation: string; revision: number }), failedCommand);
+    expect(requests).toHaveLength(2);
+    expect(requests[0].revision).toBe(1);
+    expect(requests[1].revision).toBe(2);
+    expect(requests[1].operation).not.toBe(requests[0].operation);
+  });
+}
+
+test('lost card-save replies replay the original operation without another save', async ({ page }) => {
+  const enrolled = { ...note, card: { id: 3, question: 'Quand ?', answer: 'Avant.' } };
+  const saved = { ...enrolled, revision: 2, card: { ...enrolled.card, answer: 'Après.' } };
+  await nativeFixture(page, { grammar_list: [{ value: [enrolled] }], learning_categories: [{ value: [category] }],
+    grammar_card_save: [{ error: 'Response lost' }, { value: { outcome: 'replayed', record: saved } }] });
+  await page.goto('/');
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
+  await page.getByRole('tab', { name: '语法', exact: true }).click();
+  await page.locator('.vocabulary-list button').click();
+  await page.getByLabel('答案', { exact: true }).fill(saved.card.answer);
+  const save = page.getByRole('button', { name: '保存问答卡', exact: true });
+  await save.click();
+  await expect(page.getByRole('alert')).toContainText('Response lost');
+  await expect(page.getByLabel('答案', { exact: true })).toHaveValue(saved.card.answer);
+  await save.click();
+  await expect(save).toBeDisabled();
+  const calls = await page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'grammar_card_save'));
+  expect(calls).toHaveLength(2);
+  expect(calls[1].args).toEqual(calls[0].args);
+});
+
 test('grammar saves retain failed input and create an independent editable question-answer card', async ({ page }) => {
   const enrolled = { ...note, revision: 2, card: { id: 3, question: 'Quand utiliser le passé composé ?', answer: 'Action terminée.' } };
   await nativeFixture(page, { learning_categories: [{ value: [category] }],
@@ -110,5 +167,8 @@ for (const editedCard of [false, true]) {
       await expect(page.getByRole('button', { name: '保存问答卡', exact: true })).toBeDisabled();
     }
     expect(await page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'grammar_card_save'))).toHaveLength(0);
+    const saves = await page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'grammar_save'));
+    expect(saves).toHaveLength(2);
+    expect(saves[1].args).toEqual(saves[0].args);
   });
 }

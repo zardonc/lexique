@@ -33,14 +33,14 @@ function conflictingCard(editor: GrammarEditor, record: GrammarRecord) {
     || !sameCardContent(editor.record.card, record.card));
 }
 function noteRequest(state: GrammarEditor, previous: GrammarSaveRequest | null): GrammarSaveRequest {
-  const id = state.record?.id ?? null;
-  if (previous && previous.id === id && sameNote(previous, state)) return previous;
-  return { operation: crypto.randomUUID(), id, revision: state.record?.revision ?? null,
+  const id = state.record?.id ?? null, revision = state.record?.revision ?? null;
+  if (previous && previous.id === id && previous.revision === revision && sameNote(previous, state)) return previous;
+  return { operation: crypto.randomUUID(), id, revision,
     title: state.title.trim(), body: state.body, category_ids: state.category_ids };
 }
 function cardRequest(state: GrammarEditor, previous: GrammarCardRequest | null): GrammarCardRequest {
   const { question, answer } = state.card!, record = state.record!;
-  if (previous && previous.id === record.id && previous.question === question && previous.answer === answer) return previous;
+  if (previous && previous.id === record.id && previous.revision === record.revision && previous.question === question && previous.answer === answer) return previous;
   return { operation: crypto.randomUUID(), id: record.id, revision: record.revision, question, answer };
 }
 
