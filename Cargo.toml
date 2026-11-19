@@ -18,3 +18,7 @@ serde = { version = "1", features = ["derive"] }
 rusqlite = { version = "0.38", features = ["bundled"] }
 lexique-core = { path = "crates/core" }
 lexique-storage = { path = "crates/storage" }
+
+# Resource checksums stay within the precompiled backend execution budget.
+[profile.test.package.sha2]
+opt-level = 3
