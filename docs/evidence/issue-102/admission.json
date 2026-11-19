@@ -1,0 +1,302 @@
+{
+  "issue": 102,
+  "status": "pending",
+  "independence": false,
+  "reviewer": null,
+  "frozen_rows": [
+    1051,
+    1052,
+    1053,
+    1054,
+    1055,
+    1056,
+    1057,
+    1058,
+    1059,
+    1060,
+    1061,
+    1062,
+    1063,
+    1064,
+    1065,
+    1066,
+    1067,
+    1068,
+    1069,
+    1070,
+    1071,
+    1072,
+    1073,
+    1074,
+    1075,
+    1076,
+    1077,
+    1078,
+    1079,
+    1080,
+    1081,
+    1082,
+    1083,
+    1084,
+    1085,
+    1086,
+    1087,
+    1088,
+    1089,
+    1090,
+    1091,
+    1092,
+    1093,
+    1094,
+    1095,
+    1096,
+    1097,
+    1098,
+    1099,
+    1100
+  ],
+  "accepted_groups": 0,
+  "accepted_fields": 0,
+  "candidate_groups": 48,
+  "candidate_fields": 192,
+  "source_blocked_groups": 2,
+  "blocked_fields": 8,
+  "missing_admitted_fields": 200,
+  "scope_denominator_groups": 4087,
+  "unresolved": [
+    {
+      "frozen_row": 1051,
+      "headword": "s",
+      "pos": "PRO:per",
+      "reason": "The French bare s article has only a letter section. Personal-pronoun meaning is supported for s’ as elided se, not exact bare s. No sourced omission-of-apostrophe relationship established.",
+      "fields_pending": [
+        "french_definition",
+        "ipa",
+        "english",
+        "chinese"
+      ],
+      "owner_approved_exception": false,
+      "independent_confirmation": "pending",
+      "evidence": [
+        {
+          "purpose": "Exact spelling/POS boundary",
+          "source_id": "b102_fr_1634938",
+          "revid": 39772394,
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=s&oldid=39772394",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=s&action=history",
+          "line_1_based": 50,
+          "column_1_based": 1,
+          "raw_source_excerpt": "== {{langue|fr}} =="
+        },
+        {
+          "purpose": "Exact spelling/POS boundary",
+          "source_id": "b102_fr_1634938",
+          "revid": 39772394,
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=s&oldid=39772394",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=s&action=history",
+          "line_1_based": 51,
+          "column_1_based": 1,
+          "raw_source_excerpt": "=== {{S|lettre|fr}} ==="
+        },
+        {
+          "purpose": "Exact spelling/POS boundary",
+          "source_id": "b102_fr_1634938",
+          "revid": 39772394,
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=s&oldid=39772394",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=s&action=history",
+          "line_1_based": 53,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''s''' {{pron|ɛs|fr}} {{m}} {{invar}}"
+        },
+        {
+          "purpose": "Exact spelling/POS boundary",
+          "source_id": "b102_fr_1634938",
+          "revid": 39772394,
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=s&oldid=39772394",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=s&action=history",
+          "line_1_based": 54,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# Dix-neuvième lettre et quinzième consonne de l’alphabet (minuscule)."
+        },
+        {
+          "purpose": "Exact spelling/POS boundary",
+          "source_id": "b102_fr_182953",
+          "revid": 38871517,
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=s%E2%80%99&oldid=38871517",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=s%E2%80%99&action=history",
+          "line_1_based": 3,
+          "column_1_based": 1,
+          "raw_source_excerpt": "== {{langue|fr}} =="
+        },
+        {
+          "purpose": "Exact spelling/POS boundary",
+          "source_id": "b102_fr_182953",
+          "revid": 38871517,
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=s%E2%80%99&oldid=38871517",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=s%E2%80%99&action=history",
+          "line_1_based": 4,
+          "column_1_based": 1,
+          "raw_source_excerpt": "=== {{S|pronom personnel|fr|flexion}} ==="
+        },
+        {
+          "purpose": "Exact spelling/POS boundary",
+          "source_id": "b102_fr_182953",
+          "revid": 38871517,
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=s%E2%80%99&oldid=38871517",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=s%E2%80%99&action=history",
+          "line_1_based": 5,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''s’''' {{pron|s‿|fr}}"
+        },
+        {
+          "purpose": "Exact spelling/POS boundary",
+          "source_id": "b102_fr_182953",
+          "revid": 38871517,
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=s%E2%80%99&oldid=38871517",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=s%E2%80%99&action=history",
+          "line_1_based": 6,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[élision|Élision]] du pronom personnel ''[[se]]'' devant une voyelle ou un ''h'' muet."
+        },
+        {
+          "purpose": "Exact spelling/POS boundary",
+          "source_id": "b102_fr_781",
+          "revid": 39957307,
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=se&oldid=39957307",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=se&action=history",
+          "line_1_based": 12,
+          "column_1_based": 1,
+          "raw_source_excerpt": "=== {{S|pronom personnel|fr}} ==="
+        },
+        {
+          "purpose": "Exact spelling/POS boundary",
+          "source_id": "b102_fr_781",
+          "revid": 39957307,
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=se&oldid=39957307",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=se&action=history",
+          "line_1_based": 14,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''se''' {{pron|sə|fr}} ''[[accusatif]]'', ''[[datif]]'', {{sp}}, {{gen-mfn}}, {{invariable|fr}} ''(pronom réfléchi, sans nominatif)''"
+        },
+        {
+          "purpose": "Exact spelling/POS boundary",
+          "source_id": "b102_fr_781",
+          "revid": 39957307,
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=se&oldid=39957307",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=se&action=history",
+          "line_1_based": 15,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[pronom personnel|Pronom personnel]] de la troisième personne des deux [[genre]]s et des deux [[nombre]]s, utilisé comme [[complément d’objet]] d’un [[verbe]] [[transitif]] [[direct]] ou [[indirect]]."
+        }
+      ]
+    },
+    {
+      "frozen_row": 1057,
+      "headword": "mme",
+      "pos": "NOM",
+      "reason": "Exact lowercase mme is a translingual ISO code for Mae, without a French noun section. French capitalized Mme supports Madame abbreviation; no lowercase French spelling bridge established.",
+      "fields_pending": [
+        "french_definition",
+        "ipa",
+        "english",
+        "chinese"
+      ],
+      "owner_approved_exception": false,
+      "independent_confirmation": "pending",
+      "evidence": [
+        {
+          "purpose": "Exact spelling/POS boundary",
+          "source_id": "b102_fr_2370320",
+          "revid": 28507769,
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=mme&oldid=28507769",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=mme&action=history",
+          "line_1_based": 3,
+          "column_1_based": 1,
+          "raw_source_excerpt": "== {{langue|conv}} =="
+        },
+        {
+          "purpose": "Exact spelling/POS boundary",
+          "source_id": "b102_fr_2370320",
+          "revid": 28507769,
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=mme&oldid=28507769",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=mme&action=history",
+          "line_1_based": 4,
+          "column_1_based": 1,
+          "raw_source_excerpt": "=== {{S|symbole|conv}} ==="
+        },
+        {
+          "purpose": "Exact spelling/POS boundary",
+          "source_id": "b102_fr_2370320",
+          "revid": 28507769,
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=mme&oldid=28507769",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=mme&action=history",
+          "line_1_based": 5,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''mme'''"
+        },
+        {
+          "purpose": "Exact spelling/POS boundary",
+          "source_id": "b102_fr_2370320",
+          "revid": 28507769,
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=mme&oldid=28507769",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=mme&action=history",
+          "line_1_based": 6,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|linguistique|conv}} Code {{w|ISO 639-3}} du [[mae]]."
+        },
+        {
+          "purpose": "Exact spelling/POS boundary",
+          "source_id": "b102_fr_193650",
+          "revid": 36554529,
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mme&oldid=36554529",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=Mme&action=history",
+          "line_1_based": 3,
+          "column_1_based": 1,
+          "raw_source_excerpt": "== {{langue|fr}} =="
+        },
+        {
+          "purpose": "Exact spelling/POS boundary",
+          "source_id": "b102_fr_193650",
+          "revid": 36554529,
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mme&oldid=36554529",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=Mme&action=history",
+          "line_1_based": 5,
+          "column_1_based": 1,
+          "raw_source_excerpt": ": {{date|lang=fr}} {{abréviation|fr|de=Madame|texte='''M'''ada'''me'''}}."
+        },
+        {
+          "purpose": "Exact spelling/POS boundary",
+          "source_id": "b102_fr_193650",
+          "revid": 36554529,
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mme&oldid=36554529",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=Mme&action=history",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "=== {{S|nom|fr}} ==="
+        },
+        {
+          "purpose": "Exact spelling/POS boundary",
+          "source_id": "b102_fr_193650",
+          "revid": 36554529,
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mme&oldid=36554529",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=Mme&action=history",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''Mme''' {{pron|ma.dam|fr}} {{f}}"
+        },
+        {
+          "purpose": "Exact spelling/POS boundary",
+          "source_id": "b102_fr_193650",
+          "revid": 36554529,
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mme&oldid=36554529",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=Mme&action=history",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[Madame]] (comme [[titre]])."
+        }
+      ]
+    }
+  ],
+  "approved_annotation_exceptions": [],
+  "final_output_validation": "pending independent review and integration conversion/native checks"
+}
