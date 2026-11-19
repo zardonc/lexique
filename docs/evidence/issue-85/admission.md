@@ -26,5 +26,6 @@ Modern proprietary dictionary material corroborates usage facts only.
 
 The content/pipeline checks and full logs are retained under
 [finalize](../../../target/implement-84-89/finalize/).
-Native/package acceptance is a separate check. Learner acceptance, the remaining
+Windows x64 native/package acceptance passed; see the [combined evidence](../issue-84-89/README.md).
+Learner acceptance, the remaining
 whole-core content and platform/release gates remain incomplete.

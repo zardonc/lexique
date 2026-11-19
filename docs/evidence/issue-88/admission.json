@@ -401,7 +401,7 @@
     "fields": 616,
     "payloads": "unchanged"
   },
-  "native_acceptance": "separate check",
+  "native_acceptance": "passed on Windows x64; see ../issue-84-89/README.md",
   "learner_acceptance": "not_run",
   "whole_core_release": "incomplete"
 }
