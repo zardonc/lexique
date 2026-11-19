@@ -238,8 +238,8 @@ test('core saving and notebook details keep selected example meaning and complet
 
 
 test('batch grammatical subclasses survive lookup and remain readable', async ({ page }) => {
-  const subclasses = ['PRO:per', 'PRE', 'ART:def', 'CON', 'ADJ:num', 'ART:ind', 'PRO:ind', 'PRO:int', 'PRO:rel', 'PRO:dem', 'ADJ:ind', 'ADJ:dem', 'ADJ:pos', 'ONO'];
-  const labels = ['Personal pronoun', 'Preposition', 'Definite article', 'Conjunction', 'Numeral adjective', 'Indefinite article', 'Indefinite pronoun', 'Interrogative pronoun', 'Relative pronoun', 'Demonstrative pronoun', 'Indefinite adjective', 'Demonstrative adjective', 'Possessive adjective', 'Interjection / onomatopoeia'];
+  const subclasses = ['PRO:per', 'PRE', 'ART:def', 'CON', 'ADJ:num', 'ART:ind', 'PRO:ind', 'PRO:int', 'PRO:rel', 'PRO:dem', 'ADJ:ind', 'ADJ:dem', 'ADJ:pos', 'ONO', 'ADJ:int', 'PRO:pos'];
+  const labels = ['Personal pronoun', 'Preposition', 'Definite article', 'Conjunction', 'Numeral adjective', 'Indefinite article', 'Indefinite pronoun', 'Interrogative pronoun', 'Relative pronoun', 'Demonstrative pronoun', 'Indefinite adjective', 'Demonstrative adjective', 'Possessive adjective', 'Interjection / onomatopoeia', 'Interrogative adjective', 'Possessive pronoun'];
   const entries = subclasses.map((pos, index) => {
     const sense = { ...coreSenses[0], sense_id: `batch-${index}`, frozen_row: index + 6, pos };
     return { ...coreLookup.entries[0], ordinal: index + 6, grammar: [pos], core_senses: [sense] };
@@ -253,3 +253,22 @@ test('batch grammatical subclasses survive lookup and remain readable', async ({
     await expect(page.locator(`.dictionary-entry .core-sense[data-pos="${pos}"] h4`)).toHaveText(`${labels[index]} (${pos})`);
   }
 });
+
+for (const [locale, query, labels] of [
+  ['fr', 'Mot ou expression en français', ['Adjectif interrogatif', 'Pronom possessif']],
+  ['zh', '法语词或词组', ['疑问形容词', '物主代词']],
+] as const) {
+  test(`new batch grammatical subclasses are localized in ${locale}`, async ({ page }) => {
+    const subclasses = ['ADJ:int', 'PRO:pos'] as const;
+    const entries = subclasses.map((pos, index) => ({ ...coreLookup.entries[0], grammar: [pos],
+      core_senses: [{ ...coreSenses[0], sense_id: `batch-${index}`, pos }] }));
+    await nativeFixture(page, { interface_preferences: [{ value: { locale, theme: 'white' } }],
+      dictionary_settings: [{ value: coreCatalog }], dictionary_lookup: [{ value: { ...coreLookup, entries } }] });
+    await page.goto('/');
+    await page.getByLabel(query, { exact: true }).fill('être');
+    await page.getByLabel(query, { exact: true }).press('Enter');
+    for (const [index, pos] of subclasses.entries()) {
+      await expect(page.locator(`.dictionary-entry .core-sense[data-pos="${pos}"] h4`)).toHaveText(`${labels[index]} (${pos})`);
+    }
+  });
+}
