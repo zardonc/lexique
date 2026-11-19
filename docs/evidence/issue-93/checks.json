@@ -1,0 +1,39 @@
+{
+  "issue": 93,
+  "platform": "Windows x64; PowerShell 7; uv Python 3.14.10; pnpm 11.25.0",
+  "tested_scope": "Author-validated additions-only content artifacts and focused membership check",
+  "commands": [
+    {
+      "command": "uv run --python 3.14.10 python scripts/test_core_batch_93.py",
+      "red_result": "expected failure: all frozen rows 601–650 absent; after shard handoff steering, missing groups.json",
+      "red_exit_code": 1,
+      "red_logs": ["target/issue-93/red.log", "target/issue-93/shard-red.log"],
+      "green_result": "passed: 1 focused membership test",
+      "green_exit_code": 0,
+      "green_log": "target/issue-93/green.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python target/issue-93/verify_slice.py",
+      "result": "passed: all 200 field spans match fixed API/wikitext, IPA variants are recorded, independent acceptance stays pending and redirect matches",
+      "exit_code": 0,
+      "log": "target/issue-93/source-binding-check.log"
+    },
+    {
+      "command": "Test-Documentation -Root WORKTREE -Files docs/evidence/issue-93/README.md,docs/evidence/issue-93/source-research.md (existing check-docs.ps1)",
+      "result": "passed: 2 documents, 16 local links, no problems",
+      "log": "target/issue-93/docs.log"
+    },
+    {
+      "command": "git diff --cached --check; git diff 3397219e8d159ef60db3ed5456bdcb2d6ff41b4a --exit-code -- resources/core-pilot-79 scripts/core_pilot.py scripts/test_core_pilot.py",
+      "result": "passed: staged whitespace and shared monolithic files unchanged",
+      "exit_code": 0,
+      "log": "target/issue-93/diff-check.log"
+    }
+  ],
+  "parent_owned_not_run": [
+    "independent quality and selected-text rights acceptance",
+    "combined converter artifact and notices/checksums",
+    "native lookup, save, reopen and preservation",
+    "combined frontend/Rust checks, packaging and release"
+  ]
+}
