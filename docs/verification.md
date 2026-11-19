@@ -827,3 +827,34 @@ notebook/card/import response. Application downgrade requires a compatible
 backup or continued use of the new reader. Whole-machine offline,
 other-platform hands-on, human learner acceptance, complete D2/CEFR and formal
 release gates remain unverified.
+
+## D2 content batches #90–#99
+
+`core-99-v1` admits **944 groups / 3,776 fields**, including 942 everyday
+groups and the two existing approved specialist senses. Seven approved
+annotations retain 28 missing fields separately. The fixed denominator remains
+4,087 groups / 3,773 headwords; 3,143 groups remain unaccepted and 3,145 lack
+everyday completeness. These ten batches add 494 groups / 1,976 fields and
+reuse row 483 unchanged. The 450 previously compiled payloads and eight prior
+aliases remain exact; the 4,435,968-byte SQLite resource reconstructs identically.
+
+Windows x64 frontend lint/typecheck/build, 43 core checks, 16 packaging checks,
+the 393-test browser suite and 194 separately precompiled backend tests passed.
+The backend retains its hard 60-second limit and all checksum assertions; only
+the existing SHA-256 dependency receives test-profile optimization. All ten
+native batches return audited content, save/reopen their distinct headwords and
+preserve provenance and learning state. The closed-profile resource upgrade
+preserves references, frozen digests, notes, examples, source associations,
+review history and protected audio. Eleven native runs use the matching binary,
+record zero external WebView requests and leave no owned processes.
+
+The native build/package source is `8b08a1adc45f05809dc16027c1533e25b6d88d7e`;
+the harness is `bc711b6802f5bfbd0e8f58979c2d4d993d11450a`. The portable ZIP is
+37,008,688 bytes with 183 verified files. Per-batch source acceptance, exact
+commands, failed attempts and passing execution evidence are in the
+[combined report](evidence/issue-90-99/README.md).
+
+Resource rollback requires the matching application/resource pair; learner
+digests remain frozen. Whole-machine offline, other-platform hands-on, learner
+acceptance, whole-core D2 coverage and formal release gates remain unverified.
+Per-word CEFR grading is deferred outside this frozen target.

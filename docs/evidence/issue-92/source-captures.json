@@ -1,0 +1,336 @@
+{
+  "retrieval": "Fresh fixed-revision first-party API via Obscura browser; batched query adapted from audit84_fetch.py/audit86-fetch.mjs.",
+  "capture_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-90-99\\target\\implement-90-99\\worker-audit\\author-92\\target\\issue-92",
+  "request_capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-90-99\\target\\implement-90-99\\worker-audit\\author-92\\target\\issue-92\\fixed-sources-request.json",
+  "api_capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-90-99\\target\\implement-90-99\\worker-audit\\author-92\\target\\issue-92\\fixed-sources.api.json",
+  "sources": [
+    {
+      "source_id": "b92_fr_373",
+      "title": "livre",
+      "revid": 39982995,
+      "timestamp": "2026-11-03T14:44:53Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=livre&oldid=39982995",
+      "raw": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-90-99\\target\\implement-90-99\\worker-audit\\author-92\\target\\issue-92\\livre.wiki"
+    },
+    {
+      "source_id": "b92_fr_106178",
+      "title": "agir",
+      "revid": 39866831,
+      "timestamp": "2026-09-08T16:20:46Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=agir&oldid=39866831",
+      "raw": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-90-99\\target\\implement-90-99\\worker-audit\\author-92\\target\\issue-92\\agir.wiki"
+    },
+    {
+      "source_id": "b92_fr_165883",
+      "title": "jeter",
+      "revid": 40039826,
+      "timestamp": "2026-11-17T10:23:20Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=jeter&oldid=40039826",
+      "raw": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-90-99\\target\\implement-90-99\\worker-audit\\author-92\\target\\issue-92\\jeter.wiki"
+    },
+    {
+      "source_id": "b92_fr_164260",
+      "title": "imaginer",
+      "revid": 39773053,
+      "timestamp": "2026-08-03T13:39:29Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=imaginer&oldid=39773053",
+      "raw": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-90-99\\target\\implement-90-99\\worker-audit\\author-92\\target\\issue-92\\imaginer.wiki"
+    },
+    {
+      "source_id": "b92_fr_10455",
+      "title": "tour",
+      "revid": 39931988,
+      "timestamp": "2026-10-13T17:54:38Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=tour&oldid=39931988",
+      "raw": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-90-99\\target\\implement-90-99\\worker-audit\\author-92\\target\\issue-92\\tour.wiki"
+    },
+    {
+      "source_id": "b92_fr_132378",
+      "title": "adorer",
+      "revid": 39796661,
+      "timestamp": "2026-08-11T15:53:05Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=adorer&oldid=39796661",
+      "raw": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-90-99\\target\\implement-90-99\\worker-audit\\author-92\\target\\issue-92\\adorer.wiki"
+    },
+    {
+      "source_id": "b92_fr_9501",
+      "title": "vérité",
+      "revid": 39972858,
+      "timestamp": "2026-11-01T11:57:33Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=v%C3%A9rit%C3%A9&oldid=39972858",
+      "raw": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-90-99\\target\\implement-90-99\\worker-audit\\author-92\\target\\issue-92\\vérité.wiki"
+    },
+    {
+      "source_id": "b92_fr_118982",
+      "title": "instant",
+      "revid": 39773659,
+      "timestamp": "2026-08-03T13:54:36Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=instant&oldid=39773659",
+      "raw": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-90-99\\target\\implement-90-99\\worker-audit\\author-92\\target\\issue-92\\instant.wiki"
+    },
+    {
+      "source_id": "b92_fr_143090",
+      "title": "recevoir",
+      "revid": 39865792,
+      "timestamp": "2026-09-08T09:54:25Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=recevoir&oldid=39865792",
+      "raw": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-90-99\\target\\implement-90-99\\worker-audit\\author-92\\target\\issue-92\\recevoir.wiki"
+    },
+    {
+      "source_id": "b92_fr_9199",
+      "title": "pleurer",
+      "revid": 39889600,
+      "timestamp": "2026-09-22T10:15:54Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=pleurer&oldid=39889600",
+      "raw": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-90-99\\target\\implement-90-99\\worker-audit\\author-92\\target\\issue-92\\pleurer.wiki"
+    },
+    {
+      "source_id": "b92_fr_7860",
+      "title": "bébé",
+      "revid": 39950208,
+      "timestamp": "2026-10-21T08:50:19Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=b%C3%A9b%C3%A9&oldid=39950208",
+      "raw": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-90-99\\target\\implement-90-99\\worker-audit\\author-92\\target\\issue-92\\bébé.wiki"
+    },
+    {
+      "source_id": "b92_fr_142082",
+      "title": "partie",
+      "revid": 39772665,
+      "timestamp": "2026-08-03T11:15:15Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=partie&oldid=39772665",
+      "raw": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-90-99\\target\\implement-90-99\\worker-audit\\author-92\\target\\issue-92\\partie.wiki"
+    },
+    {
+      "source_id": "b92_fr_93",
+      "title": "nouveau",
+      "revid": 40036910,
+      "timestamp": "2026-11-16T09:52:57Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=nouveau&oldid=40036910",
+      "raw": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-90-99\\target\\implement-90-99\\worker-audit\\author-92\\target\\issue-92\\nouveau.wiki"
+    },
+    {
+      "source_id": "b92_fr_8374",
+      "title": "nouvelle",
+      "revid": 39971909,
+      "timestamp": "2026-10-31T20:45:42Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=nouvelle&oldid=39971909",
+      "raw": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-90-99\\target\\implement-90-99\\worker-audit\\author-92\\target\\issue-92\\nouvelle.wiki"
+    },
+    {
+      "source_id": "b92_fr_29044",
+      "title": "prochain",
+      "revid": 39771006,
+      "timestamp": "2026-08-03T10:32:17Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=prochain&oldid=39771006",
+      "raw": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-90-99\\target\\implement-90-99\\worker-audit\\author-92\\target\\issue-92\\prochain.wiki"
+    },
+    {
+      "source_id": "b92_fr_477",
+      "title": "jeu",
+      "revid": 39950789,
+      "timestamp": "2026-10-21T12:17:43Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=jeu&oldid=39950789",
+      "raw": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-90-99\\target\\implement-90-99\\worker-audit\\author-92\\target\\issue-92\\jeu.wiki"
+    },
+    {
+      "source_id": "b92_fr_7960",
+      "title": "amener",
+      "revid": 39924859,
+      "timestamp": "2026-10-09T10:34:20Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=amener&oldid=39924859",
+      "raw": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-90-99\\target\\implement-90-99\\worker-audit\\author-92\\target\\issue-92\\amener.wiki"
+    },
+    {
+      "source_id": "b92_fr_10675",
+      "title": "coucher",
+      "revid": 40006422,
+      "timestamp": "2026-11-12T12:40:57Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=coucher&oldid=40006422",
+      "raw": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-90-99\\target\\implement-90-99\\worker-audit\\author-92\\target\\issue-92\\coucher.wiki"
+    },
+    {
+      "source_id": "b92_fr_12194",
+      "title": "derrière",
+      "revid": 39943995,
+      "timestamp": "2026-10-18T16:36:45Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=derri%C3%A8re&oldid=39943995",
+      "raw": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-90-99\\target\\implement-90-99\\worker-audit\\author-92\\target\\issue-92\\derrière.wiki"
+    },
+    {
+      "source_id": "b92_fr_10062",
+      "title": "service",
+      "revid": 39836493,
+      "timestamp": "2026-08-28T15:14:53Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=service&oldid=39836493",
+      "raw": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-90-99\\target\\implement-90-99\\worker-audit\\author-92\\target\\issue-92\\service.wiki"
+    },
+    {
+      "source_id": "b92_fr_4272",
+      "title": "haut",
+      "revid": 39947706,
+      "timestamp": "2026-10-20T07:21:09Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=haut&oldid=39947706",
+      "raw": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-90-99\\target\\implement-90-99\\worker-audit\\author-92\\target\\issue-92\\haut.wiki"
+    },
+    {
+      "source_id": "b92_fr_26572",
+      "title": "plaisir",
+      "revid": 39907186,
+      "timestamp": "2026-09-27T21:33:44Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=plaisir&oldid=39907186",
+      "raw": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-90-99\\target\\implement-90-99\\worker-audit\\author-92\\target\\issue-92\\plaisir.wiki"
+    },
+    {
+      "source_id": "b92_fr_9167",
+      "title": "long",
+      "revid": 39919734,
+      "timestamp": "2026-10-05T11:58:53Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=long&oldid=39919734",
+      "raw": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-90-99\\target\\implement-90-99\\worker-audit\\author-92\\target\\issue-92\\long.wiki"
+    },
+    {
+      "source_id": "b92_fr_2167",
+      "title": "content",
+      "revid": 39774575,
+      "timestamp": "2026-08-03T14:15:24Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=content&oldid=39774575",
+      "raw": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-90-99\\target\\implement-90-99\\worker-audit\\author-92\\target\\issue-92\\content.wiki"
+    },
+    {
+      "source_id": "b92_fr_42332",
+      "title": "con",
+      "revid": 39970498,
+      "timestamp": "2026-10-31T14:33:53Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=con&oldid=39970498",
+      "raw": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-90-99\\target\\implement-90-99\\worker-audit\\author-92\\target\\issue-92\\con.wiki"
+    },
+    {
+      "source_id": "b92_fr_8371",
+      "title": "promettre",
+      "revid": 39954881,
+      "timestamp": "2026-10-24T08:24:19Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=promettre&oldid=39954881",
+      "raw": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-90-99\\target\\implement-90-99\\worker-audit\\author-92\\target\\issue-92\\promettre.wiki"
+    },
+    {
+      "source_id": "b92_fr_41777",
+      "title": "mentir",
+      "revid": 39835487,
+      "timestamp": "2026-08-28T07:42:50Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=mentir&oldid=39835487",
+      "raw": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-90-99\\target\\implement-90-99\\worker-audit\\author-92\\target\\issue-92\\mentir.wiki"
+    },
+    {
+      "source_id": "b92_fr_66295",
+      "title": "sœur",
+      "revid": 39530210,
+      "timestamp": "2026-05-22T16:10:17Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=s%C5%93ur&oldid=39530210",
+      "raw": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-90-99\\target\\implement-90-99\\worker-audit\\author-92\\target\\issue-92\\sœur.wiki"
+    },
+    {
+      "source_id": "b92_fr_12428",
+      "title": "bientôt",
+      "revid": 39772562,
+      "timestamp": "2026-08-03T11:12:47Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=bient%C3%B4t&oldid=39772562",
+      "raw": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-90-99\\target\\implement-90-99\\worker-audit\\author-92\\target\\issue-92\\bientôt.wiki"
+    },
+    {
+      "source_id": "b92_fr_7932",
+      "title": "lit",
+      "revid": 39876713,
+      "timestamp": "2026-09-14T22:43:51Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=lit&oldid=39876713",
+      "raw": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-90-99\\target\\implement-90-99\\worker-audit\\author-92\\target\\issue-92\\lit.wiki"
+    },
+    {
+      "source_id": "b92_fr_178091",
+      "title": "tellement",
+      "revid": 39771742,
+      "timestamp": "2026-08-03T10:50:54Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=tellement&oldid=39771742",
+      "raw": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-90-99\\target\\implement-90-99\\worker-audit\\author-92\\target\\issue-92\\tellement.wiki"
+    },
+    {
+      "source_id": "b92_fr_8341",
+      "title": "bas",
+      "revid": 39987630,
+      "timestamp": "2026-11-05T11:55:57Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=bas&oldid=39987630",
+      "raw": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-90-99\\target\\implement-90-99\\worker-audit\\author-92\\target\\issue-92\\bas.wiki"
+    },
+    {
+      "source_id": "b92_fr_634",
+      "title": "utiliser",
+      "revid": 39846986,
+      "timestamp": "2026-09-01T19:21:56Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=utiliser&oldid=39846986",
+      "raw": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-90-99\\target\\implement-90-99\\worker-audit\\author-92\\target\\issue-92\\utiliser.wiki"
+    },
+    {
+      "source_id": "b92_fr_141",
+      "title": "lieu",
+      "revid": 40044242,
+      "timestamp": "2026-11-18T21:12:00Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=lieu&oldid=40044242",
+      "raw": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-90-99\\target\\implement-90-99\\worker-audit\\author-92\\target\\issue-92\\lieu.wiki"
+    },
+    {
+      "source_id": "b92_fr_172540",
+      "title": "presque",
+      "revid": 39771877,
+      "timestamp": "2026-08-03T10:54:12Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=presque&oldid=39771877",
+      "raw": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-90-99\\target\\implement-90-99\\worker-audit\\author-92\\target\\issue-92\\presque.wiki"
+    },
+    {
+      "source_id": "b92_fr_2518",
+      "title": "passé",
+      "revid": 39921229,
+      "timestamp": "2026-10-06T14:19:00Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=pass%C3%A9&oldid=39921229",
+      "raw": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-90-99\\target\\implement-90-99\\worker-audit\\author-92\\target\\issue-92\\passé.wiki"
+    },
+    {
+      "source_id": "b92_fr_172510",
+      "title": "préférer",
+      "revid": 39859162,
+      "timestamp": "2026-09-05T13:16:12Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=pr%C3%A9f%C3%A9rer&oldid=39859162",
+      "raw": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-90-99\\target\\implement-90-99\\worker-audit\\author-92\\target\\issue-92\\préférer.wiki"
+    },
+    {
+      "source_id": "b92_fr_11415",
+      "title": "rire",
+      "revid": 39872695,
+      "timestamp": "2026-09-12T08:08:46Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=rire&oldid=39872695",
+      "raw": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-90-99\\target\\implement-90-99\\worker-audit\\author-92\\target\\issue-92\\rire.wiki"
+    },
+    {
+      "source_id": "b92_fr_11634",
+      "title": "café",
+      "revid": 39997528,
+      "timestamp": "2026-11-08T12:18:50Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=caf%C3%A9&oldid=39997528",
+      "raw": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-90-99\\target\\implement-90-99\\worker-audit\\author-92\\target\\issue-92\\café.wiki"
+    },
+    {
+      "source_id": "b92_fr_9177",
+      "title": "roi",
+      "revid": 39957838,
+      "timestamp": "2026-10-26T07:39:42Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=roi&oldid=39957838",
+      "raw": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-90-99\\target\\implement-90-99\\worker-audit\\author-92\\target\\issue-92\\roi.wiki"
+    },
+    {
+      "source_id": "b92_fr_19593",
+      "title": "soeur",
+      "revid": 39753083,
+      "timestamp": "2026-08-02T19:06:18Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=soeur&oldid=39753083",
+      "raw": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-90-99\\target\\implement-90-99\\worker-audit\\author-92\\target\\issue-92\\soeur.wiki"
+    }
+  ]
+}

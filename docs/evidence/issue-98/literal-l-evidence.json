@@ -1,0 +1,418 @@
+{
+  "lexical_database": {
+    "source_version": "Lexique 3.83",
+    "source_url": "https://www.lexique.org/databases/Lexique383/Lexique383.tsv",
+    "source_path": "C:\\Users\\inthe\\IdeaProjects\\lexique\\target\\desktop-frequency-v1\\Lexique383.tsv.gz",
+    "attribution": "Boris New and Christophe Pallier",
+    "content_license": "CC-BY-SA-4.0",
+    "header": "ortho\tphon\tlemme\tcgram\tgenre\tnombre\tfreqlemfilms2\tfreqlemlivres\tfreqfilms2\tfreqlivres\tinfover\tnbhomogr\tnbhomoph\tislem\tnblettres\tnbphons\tcvcv\tp_cvcv\tvoisorth\tvoisphon\tpuorth\tpuphon\tsyll\tnbsyll\tcv-cv\torthrenv\tphonrenv\torthosyll\tcgramortho\tdeflem\tdefobs\told20\tpld20\tmorphoder\tnbmorph",
+    "rows": [
+      {
+        "line_1_based": 75461,
+        "raw_tsv": "l\tl\tl\tADJ:num\t\ts\t2.55\t0.68\t2.55\t0.68\t\t4\t8\t1\t1\t1\tC\tC\t25\t20\t1\t1\tl\t1\tC\tl\tl\tl\tADJ:num,ART:def,NOM,PRO:per\t\t\t1\t1\tl-:num\t2"
+      },
+      {
+        "line_1_based": 75462,
+        "raw_tsv": "l\tl\tl\tART:def\t\ts\t78.26\t3.92\t78.26\t3.92\t\t4\t8\t1\t1\t1\tC\tC\t25\t20\t1\t1\tl\t1\tC\tl\tl\tl\tADJ:num,ART:def,NOM,PRO:per\t\t\t1\t1\tl-:def\t2"
+      },
+      {
+        "line_1_based": 75463,
+        "raw_tsv": "l\tl\tl\tNOM\tm\ts\t5.44\t0.54\t4.94\t0.14\t\t4\t8\t1\t1\t1\tC\tC\t25\t20\t1\t1\tl\t1\tC\tl\tl\tl\tADJ:num,ART:def,NOM,PRO:per\t\t\t1\t1\tl\t1"
+      },
+      {
+        "line_1_based": 75464,
+        "raw_tsv": "l\tl\tl\tPRO:per\t\ts\t26.37\t2.84\t26.37\t2.84\t\t4\t8\t1\t1\t1\tC\tC\t25\t20\t1\t1\tl\t1\tC\tl\tl\tl\tADJ:num,ART:def,NOM,PRO:per\t\t\t1\t1\tl-:per\t2"
+      },
+      {
+        "line_1_based": 75465,
+        "raw_tsv": "l'\tl\tl\tNOM\tm\t\t5.44\t0.54\t0.50\t0.41\t\t4\t8\t0\t2\t1\tC'\tC\t10\t20\t2\t1\tl\t1\tC\t'l\tl\t\tNOM,ART:def,LIA,PRO:per\t\t\t1.45\t1\tl\t1"
+      },
+      {
+        "line_1_based": 75466,
+        "raw_tsv": "l'\tl\tl'\tART:def\tm\ts\t8129.41\t12746.76\t8129.41\t12746.76\t\t4\t8\t1\t2\t1\tC'\tC\t10\t20\t2\t1\tl\t1\tC\t'l\tl\t\tNOM,ART:def,LIA,PRO:per\t\t\t1.45\t1\tl'-:def\t2"
+      },
+      {
+        "line_1_based": 75467,
+        "raw_tsv": "l'\tl\tl'\tLIA\t\t\t0.00\t412.57\t0.00\t412.57\t\t4\t8\t1\t2\t1\tC'\tC\t10\t20\t2\t1\tl\t1\tC\t'l\tl\t\tNOM,ART:def,LIA,PRO:per\t\t\t1.45\t1\tl'\t1"
+      },
+      {
+        "line_1_based": 75468,
+        "raw_tsv": "l'\tl\tl'\tPRO:per\t\ts\t3260.83\t2575.41\t3260.83\t2575.41\t\t4\t8\t1\t2\t1\tC'\tC\t10\t20\t2\t1\tl\t1\tC\t'l\tl\t\tNOM,ART:def,LIA,PRO:per\t\t\t1.45\t1\tl'-:per\t2"
+      }
+    ]
+  },
+  "wiktionary": [
+    {
+      "edition": "fr",
+      "title": "l",
+      "revid": 39772406,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=l&oldid=39772406",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-content-98\\target\\issue-98\\sources\\fr-l.exact.wiki",
+      "selected_lines": [
+        {
+          "line_1_based": 41,
+          "text": ""
+        },
+        {
+          "line_1_based": 42,
+          "text": "== {{langue|fr}} =="
+        },
+        {
+          "line_1_based": 43,
+          "text": "=== {{S|lettre|fr}} ==="
+        },
+        {
+          "line_1_based": 44,
+          "text": "{{lettre|nom=elle|pron=ɛl|lang=fr}}"
+        },
+        {
+          "line_1_based": 45,
+          "text": "'''l''' {{pron|ɛl|fr}} {{m}} {{invar}}"
+        },
+        {
+          "line_1_based": 46,
+          "text": "# Douzième lettre et neuvième consonne de l’alphabet (minuscule)."
+        },
+        {
+          "line_1_based": 47,
+          "text": ""
+        },
+        {
+          "line_1_based": 48,
+          "text": "=== {{S|symbole|fr}} ==="
+        },
+        {
+          "line_1_based": 49,
+          "text": "'''l''' {{pron||fr}}"
+        },
+        {
+          "line_1_based": 50,
+          "text": "# {{symboles unités|fr}} Symbole de la [[ligne]], ancienne unité de mesure de longueur."
+        },
+        {
+          "line_1_based": 52,
+          "text": ""
+        },
+        {
+          "line_1_based": 53,
+          "text": "==== {{S|transcriptions}} ===="
+        },
+        {
+          "line_1_based": 54,
+          "text": "{{(}}"
+        },
+        {
+          "line_1_based": 55,
+          "text": "* {{T|ar}} : {{trad+|ar|ل|R=l}}"
+        },
+        {
+          "line_1_based": 56,
+          "text": "* {{T|hy}} : {{trad-|hy|լ}}"
+        },
+        {
+          "line_1_based": 57,
+          "text": "* {{T|ka}} : {{trad+|ka|ლ}}"
+        },
+        {
+          "line_1_based": 58,
+          "text": "* {{T|el}} : {{trad+|el|λ|R=l}}"
+        },
+        {
+          "line_1_based": 59,
+          "text": "* {{T|hi}} : {{trad+|hi|ल|R=l}}"
+        },
+        {
+          "line_1_based": 60,
+          "text": "* {{T|ru}} : {{trad+|ru|л|tr=l}}"
+        },
+        {
+          "line_1_based": 61,
+          "text": "{{)}}"
+        },
+        {
+          "line_1_based": 62,
+          "text": ""
+        },
+        {
+          "line_1_based": 63,
+          "text": "==== {{S|traductions}} ===="
+        },
+        {
+          "line_1_based": 64,
+          "text": "{{trad-début}}"
+        },
+        {
+          "line_1_based": 65,
+          "text": "{{trad-fin}}"
+        },
+        {
+          "line_1_based": 66,
+          "text": ""
+        },
+        {
+          "line_1_based": 67,
+          "text": "=== {{S|prononciation}} ==="
+        },
+        {
+          "line_1_based": 68,
+          "text": "''Lettre'' :"
+        },
+        {
+          "line_1_based": 70,
+          "text": "* Français méridional {{pron|ɛ.lə|fr}}"
+        },
+        {
+          "line_1_based": 71,
+          "text": "''Dans les mots'' :"
+        },
+        {
+          "line_1_based": 72,
+          "text": "* {{pron|l|fr}}"
+        },
+        {
+          "line_1_based": 73,
+          "text": "* {{pron|j|fr}} à la fin d’un mot dont la [[pénultième]] lettre est ''i'' ou dans le {{graphie|ill}}, comme dans ''[[paille]]''."
+        },
+        {
+          "line_1_based": 78,
+          "text": ""
+        },
+        {
+          "line_1_based": 79,
+          "text": "==== {{S|homophones|fr}} ===="
+        },
+        {
+          "line_1_based": 80,
+          "text": "* [[aile]]"
+        },
+        {
+          "line_1_based": 81,
+          "text": "* [[elle]]"
+        },
+        {
+          "line_1_based": 82,
+          "text": ""
+        },
+        {
+          "line_1_based": 83,
+          "text": "=== {{S|références}} ==="
+        },
+        {
+          "line_1_based": 84,
+          "text": "* {{R:DAF8}}"
+        },
+        {
+          "line_1_based": 85,
+          "text": "* {{R:Littré}}"
+        },
+        {
+          "line_1_based": 86,
+          "text": "* {{R:TLFi}}"
+        }
+      ]
+    },
+    {
+      "edition": "fr",
+      "title": "l'",
+      "revid": 22132309,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=l%27&oldid=22132309",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-content-98\\target\\issue-98\\sources\\fr-l'.exact.wiki",
+      "selected_lines": [
+        {
+          "line_1_based": 1,
+          "text": "#REDIRECT [[l’]]"
+        }
+      ]
+    },
+    {
+      "edition": "fr",
+      "title": "l’",
+      "revid": 40013906,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=l%E2%80%99&oldid=40013906",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-content-98\\target\\issue-98\\sources\\fr-l’.exact.wiki",
+      "selected_lines": [
+        {
+          "line_1_based": 3,
+          "text": "== {{langue|fr}} =="
+        },
+        {
+          "line_1_based": 4,
+          "text": "=== {{S|étymologie}} ==="
+        },
+        {
+          "line_1_based": 5,
+          "text": ": Du {{étyl|la|fr|mot=illum|sens=celui-ci », « lui}}, {{lien|''illa''|la|sens=celle-ci », « elle}}."
+        },
+        {
+          "line_1_based": 6,
+          "text": ""
+        },
+        {
+          "line_1_based": 7,
+          "text": "=== {{S|article défini|fr|flexion}} ==="
+        },
+        {
+          "line_1_based": 8,
+          "text": "'''l’''' {{pron|l|fr}} {{mf}}, {{s}}"
+        },
+        {
+          "line_1_based": 9,
+          "text": "# [[élision|Élision]] des articles définis ''[[le#fr-art-déf|le]]'' et ''[[la#fr-art-déf|la]]'' devant une voyelle ou un ''h'' muet."
+        },
+        {
+          "line_1_based": 11,
+          "text": ""
+        },
+        {
+          "line_1_based": 12,
+          "text": "==== {{S|variantes}} ===="
+        },
+        {
+          "line_1_based": 13,
+          "text": "* [[la#fr-art-déf|la]] ''(féminin)''"
+        },
+        {
+          "line_1_based": 14,
+          "text": "* [[le#fr-art-déf|le]] ''(masculin)''"
+        },
+        {
+          "line_1_based": 15,
+          "text": ""
+        },
+        {
+          "line_1_based": 16,
+          "text": "==== {{S|apparentés}} ===="
+        },
+        {
+          "line_1_based": 17,
+          "text": "* [[l’on]]"
+        },
+        {
+          "line_1_based": 18,
+          "text": ""
+        },
+        {
+          "line_1_based": 19,
+          "text": "==== {{S|traductions}} ===="
+        },
+        {
+          "line_1_based": 20,
+          "text": "{{trad-début}}"
+        },
+        {
+          "line_1_based": 21,
+          "text": "* {{T|af}} : {{trad+|af|die}}"
+        },
+        {
+          "line_1_based": 22,
+          "text": "* {{T|de}} : {{trad+|de|der}}, {{trad+|de|den}}"
+        },
+        {
+          "line_1_based": 23,
+          "text": "* {{T|an}} : {{trad-|an|l’}} (pour {{trad-|an|el}} et {{trad-|an|la}})"
+        },
+        {
+          "line_1_based": 24,
+          "text": "* {{T|ca}} : {{trad+|ca|l’}}"
+        },
+        {
+          "line_1_based": 25,
+          "text": "* {{T|es}} : {{trad+|es|el|m}}, {{trad+|es|la|f}}"
+        },
+        {
+          "line_1_based": 26,
+          "text": "* {{T|gallo}} : {{trad|gallo|l’}}"
+        },
+        {
+          "line_1_based": 27,
+          "text": "* {{T|gallo-italique de Sicile}} : {{trad|gallo-italique de Sicile|d’}}, {{trad|gallo-italique de Sicile|l’}}"
+        },
+        {
+          "line_1_based": 28,
+          "text": "* {{T|el}} : {{trad+|el|η|tr=i̱}}, {{trad+|el|η|tr=i̱}}"
+        },
+        {
+          "line_1_based": 29,
+          "text": "* {{T|it}} : {{trad+|it|l’}} (pour {{trad+|it|lo}} et {{trad+|it|la}})"
+        },
+        {
+          "line_1_based": 30,
+          "text": "* {{T|oc}} : {{trad-|oc|l’}}"
+        },
+        {
+          "line_1_based": 31,
+          "text": "{{trad-fin}}"
+        },
+        {
+          "line_1_based": 32,
+          "text": ""
+        },
+        {
+          "line_1_based": 33,
+          "text": "=== {{S|pronom personnel|fr|flexion|num=1}} ==="
+        },
+        {
+          "line_1_based": 34,
+          "text": "'''l’''' {{pron|l|fr}} {{mf}} {{s}}"
+        },
+        {
+          "line_1_based": 35,
+          "text": "# [[élision|Élision]] des [[pronom personnel|pronoms personnels]] ''[[la#fr-pronom-pers|la]]'' et ''[[le#fr-pronom-pers|le]]'' devant une voyelle ou un ''h'' muet."
+        },
+        {
+          "line_1_based": 38,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "edition": "en",
+      "title": "l",
+      "revid": 95545345,
+      "fixed_url": "https://en.wiktionary.org/w/index.php?title=l&oldid=95545345",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-content-98\\target\\issue-98\\sources\\en-l.exact.wiki",
+      "selected_lines": [
+        {
+          "line_1_based": 301,
+          "text": "==French=="
+        },
+        {
+          "line_1_based": 302,
+          "text": ""
+        },
+        {
+          "line_1_based": 303,
+          "text": "===Pronunciation==="
+        },
+        {
+          "line_1_based": 304,
+          "text": "* {{fr-IPA|elle}}"
+        },
+        {
+          "line_1_based": 305,
+          "text": ""
+        },
+        {
+          "line_1_based": 306,
+          "text": "===Letter==="
+        },
+        {
+          "line_1_based": 307,
+          "text": "{{letter|fr}}"
+        },
+        {
+          "line_1_based": 308,
+          "text": ""
+        },
+        {
+          "line_1_based": 309,
+          "text": "# {{Latn-def|fr|letter|12}}"
+        },
+        {
+          "line_1_based": 310,
+          "text": ""
+        }
+      ]
+    }
+  ]
+}
