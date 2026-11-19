@@ -14,7 +14,7 @@ from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 RESOURCE = ROOT / "resources/core-pilot-79"
-ROWS = (*range(1, 87), *range(88, 151), 360, *range(401, 451), 483, 1911)
+ROWS = (*range(1, 87), *range(88, 151), *range(351, 451), 483, 1911)
 FIELDS = {"french_definition": "definition_fr", "ipa": "ipa", "english": "meaning_en", "chinese": "meaning_zh"}
 LANGUAGES = {"french_definition": "fr", "ipa": "und", "english": "en", "chinese": "zh"}
 MATERIALS = (
