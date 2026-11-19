@@ -856,4 +856,5 @@ commands, failed attempts and passing execution evidence are in the
 
 Resource rollback requires the matching application/resource pair; learner
 digests remain frozen. Whole-machine offline, other-platform hands-on, learner
-acceptance, full D2/CEFR coverage and formal release gates remain unverified.
+acceptance, whole-core D2 coverage and formal release gates remain unverified.
+Per-word CEFR grading is deferred outside this frozen target.

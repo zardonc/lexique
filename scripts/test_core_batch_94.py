@@ -6,7 +6,7 @@ from pathlib import Path
 import unittest
 
 RESOURCE = Path(__file__).resolve().parents[1] / "resources/core-pilot-79"
-DRAFT = RESOURCE.parents[1] / "docs/evidence/issue-94/groups.json"
+BATCH_GROUPS = RESOURCE.parents[1] / "docs/evidence/issue-94/groups.json"
 
 
 class Batch94Tests(unittest.TestCase):
@@ -14,9 +14,9 @@ class Batch94Tests(unittest.TestCase):
         with (RESOURCE / "scope-manifest.csv").open(encoding="utf-8-sig", newline="") as handle:
             scope = list(csv.DictReader(handle))
         curated = json.loads((RESOURCE / "curated-inputs.json").read_text(encoding="utf-8"))
-        additions = json.loads(DRAFT.read_text(encoding="utf-8")) if DRAFT.exists() else []
+        additions = json.loads(BATCH_GROUPS.read_text(encoding="utf-8")) if BATCH_GROUPS.exists() else []
         self.assertEqual(len({group["frozen_row"] for group in additions}), len(additions),
-                         "Duplicate frozen groups in the draft")
+                         "Duplicate frozen groups in the batch evidence")
         groups = {group["frozen_row"]: group for group in curated["groups"]}
         for group in additions:
             # Independently accepted replacements take precedence after central admission.

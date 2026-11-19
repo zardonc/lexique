@@ -3,8 +3,9 @@
 `core-99-v1` provides **944 accepted groups / 3,776 fields**, including 942
 everyday groups and the two previously approved specialist senses. The frozen
 denominator remains **4,087 groups / 3,773 headwords**: 3,143 groups have no
-admitted content and 3,145 lack everyday completeness. Complete D2 and CEFR
-coverage remain open in [#78](https://github.com/zardonc/lexique/issues/78).
+admitted content and 3,145 lack everyday completeness. Whole-core D2 coverage and
+learner acceptance remain open in [#78](https://github.com/zardonc/lexique/issues/78).
+Per-word CEFR grading is deferred outside this frozen target.
 
 | Batch | Frozen rows | Accepted groups | Fields | Unchanged reused groups | Annotation exceptions |
 | --- | --- | ---: | ---: | ---: | ---: |
@@ -106,5 +107,6 @@ response; use a compatible backup or continue with the current reader.
 Resources and learner data remain separate.
 
 Whole-machine offline testing, other-platform hands-on execution, human learner
-acceptance, complete D2/CEFR coverage and formal release gates remain unverified.
+acceptance, whole-core D2 coverage and formal release gates remain unverified.
+Per-word CEFR grading is deferred outside this frozen target.
 The browser suite does not establish native persistence.

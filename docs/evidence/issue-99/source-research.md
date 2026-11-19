@@ -121,11 +121,11 @@ exception is admitted. The
 corroborating dictionaries and Capital supply read-only grammar/usage facts;
 their prose does not enter the four fields.
 
-## Evidence root and reproduction
+## Evidence root and focused check
 
 Retained full captures and logs:
 `C:/Users/inthe/IdeaProjects/lexique-content-99/target/issue-99/`.
-Full original captures and logs are preserved under integration's
+Full original captures, preparation files and logs are preserved under integration's
 `target/implement-90-99/worker-audit/author-99/`.
 The API attempts that encountered HTTP 429 remain logged. Obscura response bodies
 are retained as UTF-8 JSON text, not claimed to be the original transport bytes.
@@ -133,13 +133,14 @@ Only the reused `pourtant` capture is explicitly asserted byte-identical to its
 original path. Source IDs carry `b99_`; sense IDs carry `b99-`.
 
 ```powershell
-uv run --python 3.14.10 --no-project docs/evidence/issue-99/prepare_candidates.py
-uv run --python 3.14.10 --no-project -m unittest discover -s scripts -p test_core_batch_99.py
+uv run --python 3.14.10 --no-project python -B -X utf8 -m unittest discover -s scripts -p test_core_batch_99.py
 ```
 
-These retained author-stage commands checked the **candidate handoff artifact**,
-exact frozen membership and source bindings. The final accepted replacements are
+The focused check verifies exact frozen membership and source bindings in the
+accepted evidence. The final accepted replacements are
 included in the [combined core](../../../resources/core-pilot-79/README.md).
-Native lookup/save/reopen, offline and saved-state preservation checks are pending
-at integration; the parent owns the [aggregate verification](../issue-90-99/README.md).
-Learner acceptance and wider release gates remain open.
+Windows x64 native lookup/save/reopen and saved-state preservation passed across
+all ten batches and the resource upgrade. All eleven runs recorded zero external
+WebView requests; see the [aggregate verification](../issue-90-99/README.md).
+Whole-machine offline testing, other-platform execution, learner acceptance and
+wider release gates remain unverified.
