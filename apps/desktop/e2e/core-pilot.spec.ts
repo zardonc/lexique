@@ -9,11 +9,11 @@ const audio = { bytes: [...readFileSync(new URL('../../../docs/evidence/issue-14
 
 for (const labels of [
   { locale: 'en', query: 'French word or phrase', collect: 'Add to notebook', edit: 'View and edit', summary: 'Word summary', auxiliary: 'Auxiliary (AUX)',
-    coverage: '154 / 4,087 POS groups', fields: ['French definition', 'IPA', 'English meaning', 'Chinese meaning', 'Usage'], sources: 'Field sources' },
+    coverage: '450 / 4,087 POS groups', fields: ['French definition', 'IPA', 'English meaning', 'Chinese meaning', 'Usage'], sources: 'Field sources' },
   { locale: 'fr', query: 'Mot ou expression en français', collect: 'Ajouter au carnet', edit: 'Voir et modifier', summary: 'Résumé du mot', auxiliary: 'Auxiliaire (AUX)',
-    coverage: '154 / 4 087 groupes de catégories grammaticales', fields: ['Définition française', 'API', 'Sens anglais', 'Sens chinois', 'Usage'], sources: 'Sources des champs' },
+    coverage: '450 / 4 087 groupes de catégories grammaticales', fields: ['Définition française', 'API', 'Sens anglais', 'Sens chinois', 'Usage'], sources: 'Sources des champs' },
   { locale: 'zh', query: '法语词或词组', collect: '加入生词本', edit: '查看与编辑', summary: '基本词汇信息', auxiliary: '助动词 (AUX)',
-    coverage: '154 / 4,087 个核心词性组', fields: ['法语定义', '国际音标', '英语译义', '中文译义', '用法'], sources: '字段来源' },
+    coverage: '450 / 4,087 个核心词性组', fields: ['法语定义', '国际音标', '英语译义', '中文译义', '用法'], sources: '字段来源' },
 ]) {
   test(`core fields retain their languages with localized labels and coverage in ${labels.locale}`, async ({ page }) => {
     await nativeFixture(page, { interface_preferences: [{ value: { locale: labels.locale, theme: 'white' } }],
@@ -238,8 +238,8 @@ test('core saving and notebook details keep selected example meaning and complet
 
 
 test('batch grammatical subclasses survive lookup and remain readable', async ({ page }) => {
-  const subclasses = ['PRO:per', 'PRE', 'ART:def', 'CON', 'ADJ:num', 'ART:ind', 'PRO:ind', 'PRO:int', 'PRO:rel', 'PRO:dem', 'ADJ:ind', 'ADJ:dem', 'ADJ:pos', 'ONO'];
-  const labels = ['Personal pronoun', 'Preposition', 'Definite article', 'Conjunction', 'Numeral adjective', 'Indefinite article', 'Indefinite pronoun', 'Interrogative pronoun', 'Relative pronoun', 'Demonstrative pronoun', 'Indefinite adjective', 'Demonstrative adjective', 'Possessive adjective', 'Interjection / onomatopoeia'];
+  const subclasses = ['PRO:per', 'PRE', 'ART:def', 'CON', 'ADJ:num', 'ART:ind', 'PRO:ind', 'PRO:int', 'PRO:rel', 'PRO:dem', 'ADJ:ind', 'ADJ:dem', 'ADJ:pos', 'ONO', 'ADJ:int', 'PRO:pos'];
+  const labels = ['Personal pronoun', 'Preposition', 'Definite article', 'Conjunction', 'Numeral adjective', 'Indefinite article', 'Indefinite pronoun', 'Interrogative pronoun', 'Relative pronoun', 'Demonstrative pronoun', 'Indefinite adjective', 'Demonstrative adjective', 'Possessive adjective', 'Interjection / onomatopoeia', 'Interrogative adjective', 'Possessive pronoun'];
   const entries = subclasses.map((pos, index) => {
     const sense = { ...coreSenses[0], sense_id: `batch-${index}`, frozen_row: index + 6, pos };
     return { ...coreLookup.entries[0], ordinal: index + 6, grammar: [pos], core_senses: [sense] };
@@ -253,3 +253,22 @@ test('batch grammatical subclasses survive lookup and remain readable', async ({
     await expect(page.locator(`.dictionary-entry .core-sense[data-pos="${pos}"] h4`)).toHaveText(`${labels[index]} (${pos})`);
   }
 });
+
+for (const [locale, query, labels] of [
+  ['fr', 'Mot ou expression en français', ['Adjectif interrogatif', 'Pronom possessif']],
+  ['zh', '法语词或词组', ['疑问形容词', '物主代词']],
+] as const) {
+  test(`new batch grammatical subclasses are localized in ${locale}`, async ({ page }) => {
+    const subclasses = ['ADJ:int', 'PRO:pos'] as const;
+    const entries = subclasses.map((pos, index) => ({ ...coreLookup.entries[0], grammar: [pos],
+      core_senses: [{ ...coreSenses[0], sense_id: `batch-${index}`, pos }] }));
+    await nativeFixture(page, { interface_preferences: [{ value: { locale, theme: 'white' } }],
+      dictionary_settings: [{ value: coreCatalog }], dictionary_lookup: [{ value: { ...coreLookup, entries } }] });
+    await page.goto('/');
+    await page.getByLabel(query, { exact: true }).fill('être');
+    await page.getByLabel(query, { exact: true }).press('Enter');
+    for (const [index, pos] of subclasses.entries()) {
+      await expect(page.locator(`.dictionary-entry .core-sense[data-pos="${pos}"] h4`)).toHaveText(`${labels[index]} (${pos})`);
+    }
+  });
+}

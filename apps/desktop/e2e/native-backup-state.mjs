@@ -4,7 +4,7 @@ import { resolve, join, relative, isAbsolute } from 'node:path';
 
 function ownedDestination(destination) {
   const root = resolve(destination);
-  assert.ok(['issue-75', 'issue-79', 'issue-80', 'issue-81', 'issue-82', 'issue-83'].some(issue => {
+  assert.ok(['issue-75', 'issue-79', 'issue-80', 'issue-81', 'issue-82', 'issue-83', 'issue-84', 'issue-85', 'issue-86', 'issue-87', 'issue-88', 'issue-89'].some(issue => {
     const owned = relative(resolve('../../target', issue), root);
     return owned && !owned.startsWith('..') && !isAbsolute(owned);
   }));

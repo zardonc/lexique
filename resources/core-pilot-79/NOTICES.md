@@ -139,3 +139,47 @@ golf hole. Its masculine noun, golf domain and standard-stroke-count restriction
 remain in the selected fields and usage. The achieved score, Georgian-letter
 name and preposition are excluded. This group is accepted separately from
 literal everyday coverage, alongside the existing #81 exception.
+
+## Batches #84–#89
+
+The resource admits 296 additional groups / 1,184 fields, preserving the original
+154 groups / 616 fields and counting reused rows 360, 422 and 423 once. Fixed
+Wiktionnaire and English Wiktionary contributor spans, scoped Lexique translations
+and grammatical explanations retain **CC BY-SA 4.0**, full contributor histories,
+individual modification notices, applicable source/import credits and the warranty
+disclaimer in [COPYING](COPYING). The actual import and bibliography markers and
+their version/line boundaries are retained in [selected-source-context.json](selected-source-context.json).
+Credit **Académie française, Dictionnaire de l’Académie française, huitième édition
+(1932–1935)** wherever the supplied DAF8 import is declared. A bibliography marker
+does not grant rights to an unselected publisher's prose. Protected dictionary
+definitions, quotations, media and full-page captures are excluded.
+
+The three beau/NOM prose fields adapt **Théodore Soulice (1800–1878), Petit
+dictionnaire de la langue française, à l’usage des écoles primaires**, first edition
+1836, Paris: **L. Hachette / Firmin Didot frères**, printed p. 56 / scan p. 62.
+The selected original noun clause is public domain. Credit Wikisource transcription
+contributors through the fixed page revision **14772408**, lines **142–143**, and
+its complete history, recorded in the field source/context. Selection ends before
+the semicolon introducing the separate **beau idéal** clause. The original printed
+author/edition and the later transcription version remain distinct. Credit Lexique
+contributors for the French adaptation and English/Chinese translations, including
+the grammatical explanation. Reused transcription/adapted contributions follow the
+elected CC BY-SA 4.0 route; the public-domain original does not acquire a ShareAlike
+obligation merely by scanning or transcription. No author endorsement is implied.
+
+Accurate scoped mappings retain their source category: English front adjective
+supplies the semantic base for French avant/ADJ, with independent French grammar
+facts and French IPA; French déjà/ADV supplies the reached-state meaning for the
+reactive déjà/ONO use. The lowercase ok/ADJ and ok/ADV mappings use the attested
+French **OK** source form; oeil/NOM uses the explicit typographic variant **œil**.
+Regional familiar point/ADV selects the negative use after the finite verb without
+ne. Usito, OQLF and modern Académie material corroborate usage facts only; their
+proprietary explanatory text and examples are not redistributed.
+
+All protected adapted contributions remain under CC BY-SA 4.0, with its attribution,
+modification, ShareAlike, database and no-additional-restrictions obligations.
+Applicable copyright, licence/disclaimer, import and previous-modification notices
+are retained. The full/Lite dictionary inputs and notices are identical; application
+and converter code remain separately MIT. The frozen denominator is 4,087 groups;
+zero-field annotations at rows 87 and 305 are not admitted senses. The unchanged
+specialist approvals at rows 34 and 128 retain their original restrictions.

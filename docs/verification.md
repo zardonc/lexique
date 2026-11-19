@@ -795,3 +795,35 @@ lint、类型检查、Windows x64 release／生产前端构建、Rust 格式／�
 30 项公开 CLI 测试通过（612.479 秒），Git 暂存字节导出 42 个输入独立重建得到相同数据库。数据库 250,650,624 字节低于 256 MiB 原生快照上限，反查索引 35,909,632 字节低于显式 36 MiB 证据预算；增加的存储成本来自可单独反查的完整代词式备选。来源、公开 CLI 结果及原有 1,700 ms 延迟预算实测见 [#43 证据](evidence/issue-43/README.md)。依用户要求跳过新鲜离线包及其他 OS／架构验收，不宣布正式离线发行就绪。
 
 六次独立 CLI 进程均超过原 1,700 ms 预算：首进程 10,333 ms，后五次中位 2,485 ms、最大 2,546 ms。文件系统为热缓存，计时包含 CLI 的完整资源校验，不代表原生 IPC 延迟；此预算未通过，单独保留为性能限制。
+
+## D2 content batches #84–#89 (2026-11-18–19 UTC)
+
+`core-89-v1` admits 450 groups / 1,800 fields, including 448 everyday groups and
+two existing specialist senses. The 4,087-group / 3,773-headword denominator and
+all previous 154 compiled groups / 616 fields remain unchanged. Row 305
+`dont/PRO:int` is the owner-approved zero-field annotation exception; modern
+relative `dont` is provided through row 306.
+
+Windows x64 locked native compilation, frontend lint/typecheck/build, 194
+separately precompiled backend tests within the existing hard 60-second limit,
+13 converter tests, 19 focused batch tests and 16 packaging checks passed.
+The full browser suite passed all 393 tests in 2.9 minutes. All six native
+batches saved/reopened their audited fields and provenance; the old-profile
+upgrade preserved digests, notes, examples, source associations, review history
+and protected audio, then saved the new `ADJ:int` and `PRO:pos` subclasses.
+Native runs recorded zero external WebView requests and empty owned-process
+cleanup. The portable ZIP is 35,857,718 bytes, with 183 verified files.
+
+Tested source/build commit: `571d221f7fbe9e28be58bd22a24ced3578b9a9b2`;
+packaging/browser commit: `291b254c70246ecaa8ccb8448230ecd3d9d0968e`.
+Commands, per-batch counts, source rights and retained logs are linked from the
+[combined evidence](evidence/issue-84-89/README.md).
+
+Resource rollback requires a matching application/resource pair because the
+desktop binary validates the resource against its build-fixed checksum. Saved
+digests remain frozen when resource content changes. Older application readers
+reject saved records with `ADJ:int` or `PRO:pos`; rejection can fail an entire
+notebook/card/import response. Application downgrade requires a compatible
+backup or continued use of the new reader. Whole-machine offline,
+other-platform hands-on, human learner acceptance, complete D2/CEFR and formal
+release gates remain unverified.

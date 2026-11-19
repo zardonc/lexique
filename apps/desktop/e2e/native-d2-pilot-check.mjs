@@ -11,41 +11,16 @@ import { compareLearning, fixtureSql, inspectPackage, readState, seedAudio } fro
 const [scenario, resources, binary, conjugation, frequency, curationPath, destinationPath, input] = process.argv.slice(2);
 assert.ok([scenario, resources, binary, conjugation, frequency, curationPath, destinationPath].every(Boolean),
   'Expected scenario, package, binary, conjugation, frequency, reviewed curation and new destination; backup/profile scenarios also take an input');
-assert.ok(['pilot', 'review', 'no-speech', 'catalogue', 'missing', 'corrupt', 'future', 'unsupported', 'newer', 'upgrade', 'limit', 'export', 'restore', 'legacy', 'reject'].includes(scenario));
+assert.ok(['pilot', 'batch', 'review', 'no-speech', 'catalogue', 'missing', 'corrupt', 'future', 'unsupported', 'newer', 'upgrade', 'limit', 'export', 'restore', 'legacy', 'reject'].includes(scenario));
 const curation = JSON.parse(await readFile(resolve(curationPath), 'utf8'));
-const membership = [[1, 'être', 'AUX'], [2, 'être', 'NOM'], [3, 'être', 'VER'], [4, 'avoir', 'AUX'], [5, 'avoir', 'VER'],
-  [6, 'je', 'PRO:per'], [7, 'de', 'PRE'], [8, 'ne', 'ADV'], [9, 'pas', 'ADV'], [10, 'pas', 'NOM'],
-  [11, 'le', 'ART:def'], [12, 'le', 'PRO:per'], [13, 'la', 'ART:def'], [14, 'la', 'PRO:per'],
-  [15, 'tu', 'PRO:per'], [16, 'vous', 'PRO:per'], [17, 'il', 'PRO:per'], [18, 'et', 'CON'],
-  [19, 'un', 'ADJ:num'], [20, 'un', 'ART:ind'], [21, 'un', 'PRO:ind'], [22, 'à', 'PRE'],
-  [23, "l'", 'ART:def'], [24, "l'", 'PRO:per'], [25, 'qui', 'PRO:int'], [26, 'qui', 'PRO:rel'],
-  [27, 'aller', 'NOM'], [28, 'aller', 'VER'], [29, 'les', 'ART:def'], [30, 'les', 'PRO:per'],
-  [31, 'en', 'ADV'], [32, 'en', 'PRE'], [33, 'en', 'PRO:per'], [34, 'ça', 'NOM'], [35, 'ça', 'PRO:dem'],
-  [36, 'faire', 'VER'], [37, 'tout', 'ADJ'], [38, 'tout', 'ADJ:ind'], [39, 'tout', 'ADV'],
-  [40, 'tout', 'NOM'], [41, 'tout', 'PRO:ind'], [42, 'on', 'PRO:per'], [43, 'que', 'PRO:int'], [44, 'que', 'PRO:rel'],
-  [45, 'une', 'ADJ:num'], [46, 'une', 'ART:ind'], [47, 'une', 'PRO:ind'], [48, 'ce', 'ADJ:dem'], [49, 'ce', 'PRO:dem'], [50, "d'", 'PRE'],
-  [51, 'pour', 'NOM'], [52, 'pour', 'PRE'], [53, 'des', 'ART:ind'], [54, 'dire', 'NOM'], [55, 'dire', 'VER'],
-  [56, 'pouvoir', 'NOM'], [57, 'pouvoir', 'VER'], [58, 'vouloir', 'VER'], [59, 'mais', 'CON'], [60, 'me', 'PRO:per'],
-  [61, 'nous', 'PRO:per'], [62, 'dans', 'PRE'], [63, 'savoir', 'NOM'], [64, 'savoir', 'VER'], [65, 'elle', 'PRO:per'],
-  [66, 'du', 'ART:def'], [67, 'y', 'NOM'], [68, 'y', 'PRO:per'], [69, 'bien', 'ADJ'], [70, 'bien', 'ADV'], [71, 'bien', 'NOM'],
-  [72, 'où', 'PRO:int'], [73, 'où', 'PRO:rel'], [74, "t'", 'PRO:per'], [75, 'voir', 'VER'], [76, 'plus', 'ADV'],
-  [77, 'plus', 'NOM'], [78, 'non', 'ADV'], [79, 'te', 'PRO:per'], [80, 'mon', 'ADJ:pos'], [81, 'au', 'ART:def'],
-  [82, 'avec', 'PRE'], [83, 'moi', 'NOM'], [84, 'moi', 'PRO:per'], [85, 'si', 'ADV'], [86, 'si', 'CON'],
-  [88, 'quoi', 'PRO:int'], [89, 'quoi', 'PRO:rel'], [90, 'devoir', 'NOM'], [91, 'devoir', 'VER'],
-  [92, "s'", 'CON'], [93, "s'", 'PRO:per'], [94, 'oui', 'ADV'], [95, 'ils', 'PRO:per'],
-  [96, 'comme', 'ADV'], [97, 'comme', 'CON'], [98, 'se', 'PRO:per'], [99, 'venir', 'VER'], [100, 'sur', 'ADJ'],
-  [101, 'sur', 'PRE'], [102, 'toi', 'PRO:per'], [103, 'ici', 'ADV'], [104, 'rien', 'PRO:ind'], [105, 'ma', 'ADJ:pos'],
-  [106, 'lui', 'PRO:per'], [107, 'bon', 'ADJ'], [108, 'bon', 'ADV'], [109, 'bon', 'NOM'], [110, 'bon', 'ONO'],
-  [111, 'là', 'ADV'], [112, 'là', 'ONO'], [113, 'suivre', 'VER'], [114, 'pourquoi', 'ADV'], [115, 'pourquoi', 'CON'],
-  [116, 'parler', 'NOM'], [117, 'parler', 'VER'], [118, 'prendre', 'VER'], [119, 'cette', 'ADJ:dem'], [120, 'votre', 'ADJ:pos'],
-  [121, 'quand', 'CON'], [122, 'son', 'ADJ:pos'], [123, 'son', 'NOM'], [124, 'alors', 'ADV'], [125, 'ton', 'ADJ:pos'],
-  [126, 'ton', 'NOM'], [127, 'chose', 'NOM'], [128, 'par', 'NOM'], [129, 'par', 'PRE'], [130, 'croire', 'VER'],
-  [131, 'aimer', 'VER'], [132, 'falloir', 'VER'], [133, 'comment', 'ADV'], [134, 'comment', 'CON'], [135, 'comment', 'ONO'],
-  [136, 'très', 'ADV'], [137, 'ou', 'CON'], [138, 'passer', 'VER'], [139, 'penser', 'VER'], [140, 'aussi', 'ADV'],
-  [141, 'jamais', 'ADV'], [142, 'même', 'ADJ'], [143, 'même', 'ADV'], [144, 'même', 'PRO:ind'], [145, 'attendre', 'VER'],
-  [146, 'petit', 'ADJ'], [147, 'petit', 'ADV'], [148, 'petit', 'NOM'], [149, 'trouver', 'VER'], [150, 'laisser', 'VER'],
-  [360, "aujourd'hui", 'ADV'], [422, 'fort', 'ADJ'], [423, 'fort', 'ADV'],
-  [483, 'coeur', 'NOM'], [1911, 'côte', 'NOM']];
+const frozenScope = (await readFile(resolve(curationPath, '..', 'scope-manifest.csv'), 'utf8')).trim().split(/\r?\n/).slice(1);
+assert.equal(frozenScope.length, 4087);
+const expectedRows = [...Array.from({ length: 450 }, (_, index) => index + 1).filter((row) => ![87, 305].includes(row)), 483, 1911];
+const membership = expectedRows.map((row) => {
+  const match = frozenScope[row - 1].match(/^"((?:[^"]|"")*)","([^"]+)",/);
+  assert.ok(match, `Invalid frozen scope row ${row}`);
+  return [row, match[1].replaceAll('""', '"'), match[2]];
+});
 assert.deepEqual(curation.groups.map((group) => [group.frozen_row, group.headword, group.lexique_cgram]), membership);
 assert.equal(curation.scope_denominator_groups, 4087);
 const fixture = await native24Fixture(resolve(resources), resolve(binary), resolve(destinationPath));
@@ -220,7 +195,7 @@ async function rate(record) {
 
 async function pilot() {
   assert.deepEqual((await invoke('dictionary_settings')).map((item) => item.id), ['builtin-core', 'builtin', 'builtin-fra-eng']);
-  assert.equal((await invoke('dictionary_lookup', { key: 'être', dictionary_id: 'builtin-core' })).source.version, 'core-83-v1');
+  assert.equal((await invoke('dictionary_lookup', { key: 'être', dictionary_id: 'builtin-core' })).source.version, curation.content_version);
   await invoke('dictionary_settings', { order: ['builtin', 'builtin-fra-eng', 'builtin-core'] });
   const before = readState(destination);
   for (const field of ['digest', 'reference']) await rejected('vocabulary_save', {
@@ -300,9 +275,35 @@ async function pilot() {
     await rejected('speech_generate', { vocabularyId: edited.record.id, operation: 'native-79-no-speech' });
     assert.deepEqual((await invoke('vocabulary_find', { headword: 'être' })).digest, edited.record.digest);
   }
-  evidence.checks.push({ check: '50 batch-83 groups / 200 fields, including 49 everyday groups and the approved golf exception; row 87 unresolved; 154 total groups / 616 fields; trusted provider, spelling bindings, retry, duplicate, notes, examples, FSRS and normal restart', status: 'passed' });
+  evidence.checks.push({ check: '50 batch-83 groups / 200 fields, including 49 everyday groups and the approved golf exception; 450 total groups / 1,800 fields and two approved annotation exceptions; trusted provider, spelling bindings, retry, duplicate, notes, examples, FSRS and normal restart', status: 'passed' });
   evidence.checks.push({ check: 'Batch bon adjective/adverb/noun/interjection saved fields and provenance match audited content after normal restart; bon, petit and par restrictions remain readable; ONO has English, French and Chinese labels', status: 'passed' });
   evidence.checks.push({ check: 'mon/ADJ:pos lookup and saved fields remain readable with English, French and Chinese subclass labels', status: 'passed' });
+}
+
+async function contentBatch() {
+  const issue = Number(input);
+  assert.ok(Number.isInteger(issue) && issue >= 84 && issue <= 89, 'Expected batch issue 84–89');
+  const firstRow = 151 + (issue - 84) * 50;
+  const groups = curation.groups.filter((group) => group.frozen_row >= firstRow && group.frozen_row < firstRow + 50);
+  const annotationRows = issue === 87 ? [305] : [];
+  assert.equal(groups.length, 50 - annotationRows.length);
+  const saved = [];
+  for (const [index, key] of [...new Set(groups.map((group) => group.headword))].entries()) {
+    const result = await save(key, `batch-${issue}-${index}`);
+    assert.equal(result.record.reference.version, curation.content_version);
+    saved.push(result);
+  }
+  await query(saved[0].record.headword);
+  await fields(page.locator('.dictionary-entry'), saved[0].record.digest.map((item) => item.core));
+  await page.screenshot({ path: join(destination, `batch-${issue}-lookup.png`), fullPage: true });
+  const before = readState(destination);
+  await fixture.stop(true);
+  await start();
+  for (const { record } of saved) assert.deepEqual(await invoke('vocabulary_find', { headword: record.headword }), record);
+  compareLearning(readState(destination), before);
+  await openRecord(saved[0].record);
+  await page.screenshot({ path: join(destination, `batch-${issue}-reopened.png`), fullPage: true });
+  evidence.checks.push({ check: `Batch #${issue}: ${groups.length} admitted groups / ${groups.length * 4} fields match audited content; ${annotationRows.length} approved annotation exceptions; ${saved.length} headwords saved and reopened with unchanged provenance and learning state`, status: 'passed' });
 }
 
 async function review() {
@@ -637,7 +638,7 @@ async function replacement() {
     const current = await invoke('dictionary_lookup', { key: 'être', dictionary_id: 'builtin-core' });
     assert.notEqual(current.source.version, record.reference.version);
     if (scenario === 'upgrade') {
-      assert.equal(current.source.version, 'core-83-v1');
+      assert.equal(current.source.version, curation.content_version);
       admitted(current, 'être');
     } else assert.notEqual(senses(current).find((sense) => sense.frozen_row === 2).meaning_zh, record.digest.find((entry) => entry.core?.frozen_row === 2).core.meaning_zh);
     await query('être'); await page.getByRole('button', { name: 'View existing record', exact: true }).click();
@@ -652,13 +653,15 @@ async function replacement() {
   const committed = previous.saves.find((operation) => operation.record_id === record.id && operation.outcome === 'created');
   assert.equal((await invoke('vocabulary_save', { request: committed.request, dictionary_id: 'builtin-core' })).outcome, 'replayed');
   if (scenario === 'newer') await save('bien', 'newer-content');
-  if (scenario === 'upgrade') await save('bon', 'batch-83-upgrade');
+  if (scenario === 'upgrade') {
+    for (const key of ['quel', 'leur']) await save(key, `batch-84-89-upgrade-${key}`);
+  }
   await openRecord(record);
   evidence.checks.push({ check: ['newer', 'upgrade'].includes(scenario) ? 'New resource version is visible while previous digest, progress and audio remain frozen' : `Native ${scenario} rejection preserves saved content and committed retry`, status: 'passed' });
 }
 
 try {
-  if (['no-speech', 'legacy'].includes(scenario)) {
+  if (['no-speech', 'batch', 'legacy'].includes(scenario)) {
     const present = await stat(model).catch((error) => { if (error.code === 'ENOENT') return null; throw error; });
     if (present) await rename(model, model + '.unavailable');
     evidence.speechModel = 'absent in isolated package';
@@ -666,6 +669,7 @@ try {
   if (['newer', 'upgrade', 'limit', 'unsupported'].includes(scenario)) await copiedProfile();
   await start();
   if (['pilot', 'no-speech'].includes(scenario)) await pilot();
+  else if (scenario === 'batch') await contentBatch();
   else if (scenario === 'review') await review();
   else if (scenario === 'catalogue') await catalogue();
   else if (['missing', 'corrupt', 'future'].includes(scenario)) await lifecycle();
