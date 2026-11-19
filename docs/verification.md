@@ -818,3 +818,66 @@ lint、类型检查、Windows x64 release／生产前端构建、Rust 格式／�
 30 项公开 CLI 测试通过（612.479 秒），Git 暂存字节导出 42 个输入独立重建得到相同数据库。数据库 250,650,624 字节低于 256 MiB 原生快照上限，反查索引 35,909,632 字节低于显式 36 MiB 证据预算；增加的存储成本来自可单独反查的完整代词式备选。来源、公开 CLI 结果及原有 1,700 ms 延迟预算实测见 [#43 证据](evidence/issue-43/README.md)。依用户要求跳过新鲜离线包及其他 OS／架构验收，不宣布正式离线发行就绪。
 
 六次独立 CLI 进程均超过原 1,700 ms 预算：首进程 10,333 ms，后五次中位 2,485 ms、最大 2,546 ms。文件系统为热缓存，计时包含 CLI 的完整资源校验，不代表原生 IPC 延迟；此预算未通过，单独保留为性能限制。
+
+## D2 content batches #84–#89 (2026-11-18–19 UTC)
+
+`core-89-v1` admits 450 groups / 1,800 fields, including 448 everyday groups and
+two existing specialist senses. The 4,087-group / 3,773-headword denominator and
+all previous 154 compiled groups / 616 fields remain unchanged. Row 305
+`dont/PRO:int` is the owner-approved zero-field annotation exception; modern
+relative `dont` is provided through row 306.
+
+Windows x64 locked native compilation, frontend lint/typecheck/build, 194
+separately precompiled backend tests within the existing hard 60-second limit,
+13 converter tests, 19 focused batch tests and 16 packaging checks passed.
+The full browser suite passed all 393 tests in 2.9 minutes. All six native
+batches saved/reopened their audited fields and provenance; the old-profile
+upgrade preserved digests, notes, examples, source associations, review history
+and protected audio, then saved the new `ADJ:int` and `PRO:pos` subclasses.
+Native runs recorded zero external WebView requests and empty owned-process
+cleanup. The portable ZIP is 35,857,718 bytes, with 183 verified files.
+
+Tested source/build commit: `571d221f7fbe9e28be58bd22a24ced3578b9a9b2`;
+packaging/browser commit: `291b254c70246ecaa8ccb8448230ecd3d9d0968e`.
+Commands, per-batch counts, source rights and retained logs are linked from the
+[combined evidence](evidence/issue-84-89/README.md).
+
+Resource rollback requires a matching application/resource pair because the
+desktop binary validates the resource against its build-fixed checksum. Saved
+digests remain frozen when resource content changes. Older application readers
+reject saved records with `ADJ:int` or `PRO:pos`; rejection can fail an entire
+notebook/card/import response. Application downgrade requires a compatible
+backup or continued use of the new reader. Whole-machine offline,
+other-platform hands-on, human learner acceptance, complete D2/CEFR and formal
+release gates remain unverified.
+
+## D2 content batches #90–#99
+
+`core-99-v1` admits **944 groups / 3,776 fields**, including 942 everyday
+groups and the two existing approved specialist senses. Seven approved
+annotations retain 28 missing fields separately. The fixed denominator remains
+4,087 groups / 3,773 headwords; 3,143 groups remain unaccepted and 3,145 lack
+everyday completeness. These ten batches add 494 groups / 1,976 fields and
+reuse row 483 unchanged. The 450 previously compiled payloads and eight prior
+aliases remain exact; the 4,435,968-byte SQLite resource reconstructs identically.
+
+Windows x64 frontend lint/typecheck/build, 43 core checks, 16 packaging checks,
+the 393-test browser suite and 194 separately precompiled backend tests passed.
+The backend retains its hard 60-second limit and all checksum assertions; only
+the existing SHA-256 dependency receives test-profile optimization. All ten
+native batches return audited content, save/reopen their distinct headwords and
+preserve provenance and learning state. The closed-profile resource upgrade
+preserves references, frozen digests, notes, examples, source associations,
+review history and protected audio. Eleven native runs use the matching binary,
+record zero external WebView requests and leave no owned processes.
+
+The native build/package source is `8b08a1adc45f05809dc16027c1533e25b6d88d7e`;
+the harness is `bc711b6802f5bfbd0e8f58979c2d4d993d11450a`. The portable ZIP is
+37,008,688 bytes with 183 verified files. Per-batch source acceptance, exact
+commands, failed attempts and passing execution evidence are in the
+[combined report](evidence/issue-90-99/README.md).
+
+Resource rollback requires the matching application/resource pair; learner
+digests remain frozen. Whole-machine offline, other-platform hands-on, learner
+acceptance, whole-core D2 coverage and formal release gates remain unverified.
+Per-word CEFR grading is deferred outside this frozen target.

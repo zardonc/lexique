@@ -1,0 +1,385 @@
+{
+  "schema": "lexique-core-batch-admission-1",
+  "issue": "https://github.com/zardonc/lexique/issues/84",
+  "content_version": "core-89-v1",
+  "review_date": "2026-11-18",
+  "resource_admission": "passed",
+  "scope": {
+    "issue": 84,
+    "target_groups": 50,
+    "reused_pilot_groups": 0,
+    "new_groups": 50,
+    "complete_groups": 50,
+    "accepted_groups": 50,
+    "approved_specialist_exception_groups": 0,
+    "annotation_exception_groups": 0,
+    "scope_acceptance": "passed",
+    "complete_fields": 200,
+    "groups": [
+      {
+        "frozen_row": 151,
+        "headword": "merci",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 152,
+        "headword": "merci",
+        "pos": "ONO",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 153,
+        "headword": "sa",
+        "pos": "ADJ:pos",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 154,
+        "headword": "autre",
+        "pos": "ADJ",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 155,
+        "headword": "autre",
+        "pos": "PRO:ind",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 156,
+        "headword": "ta",
+        "pos": "ADJ:pos",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 157,
+        "headword": "arriver",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 158,
+        "headword": "ces",
+        "pos": "ADJ:dem",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 159,
+        "headword": "donner",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 160,
+        "headword": "regarder",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 161,
+        "headword": "encore",
+        "pos": "ADV",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 162,
+        "headword": "appeler",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 163,
+        "headword": "est-ce que",
+        "pos": "ADV",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 164,
+        "headword": "peu",
+        "pos": "ADV",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 165,
+        "headword": "peu",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 166,
+        "headword": "homme",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 167,
+        "headword": "partir",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 168,
+        "headword": "mes",
+        "pos": "ADJ:pos",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 169,
+        "headword": "toujours",
+        "pos": "ADV",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 170,
+        "headword": "jour",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 171,
+        "headword": "femme",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 172,
+        "headword": "temps",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 173,
+        "headword": "maintenant",
+        "pos": "ADV",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 174,
+        "headword": "notre",
+        "pos": "ADJ:pos",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 175,
+        "headword": "vie",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 176,
+        "headword": "deux",
+        "pos": "ADJ:num",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 177,
+        "headword": "mettre",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 178,
+        "headword": "rester",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 179,
+        "headword": "sans",
+        "pos": "PRE",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 180,
+        "headword": "seul",
+        "pos": "ADJ",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 181,
+        "headword": "seul",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 182,
+        "headword": "arrêter",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 183,
+        "headword": "vraiment",
+        "pos": "ADV",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 184,
+        "headword": "connaître",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 185,
+        "headword": "quelque",
+        "pos": "ADJ:ind",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 186,
+        "headword": "quelque",
+        "pos": "ADV",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 187,
+        "headword": "sûr",
+        "pos": "ADJ",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 188,
+        "headword": "juste",
+        "pos": "ADJ",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 189,
+        "headword": "juste",
+        "pos": "ADV",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 190,
+        "headword": "juste",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 191,
+        "headword": "tuer",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 192,
+        "headword": "mourir",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 193,
+        "headword": "demander",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 194,
+        "headword": "peut-être",
+        "pos": "ADV",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 195,
+        "headword": "dieu",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 196,
+        "headword": "fois",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 197,
+        "headword": "oh",
+        "pos": "ONO",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 198,
+        "headword": "père",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 199,
+        "headword": "comprendre",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 200,
+        "headword": "sortir",
+        "pos": "VER",
+        "complete_fields": 4
+      }
+    ]
+  },
+  "global_admission": {
+    "independent_field_review": "passed",
+    "produced_resource_self_check": "passed",
+    "everyday_sense_review": "incomplete",
+    "selected_scope_acceptance": "passed",
+    "accepted_groups": 450,
+    "approved_specialist_exception_groups": 2,
+    "remaining_unaccepted_groups": 3637,
+    "annotation_exception_groups": 2,
+    "selected_source_rights_and_materials": "passed",
+    "complete_groups": 448,
+    "complete_senses": 450,
+    "complete_fields": 1800,
+    "remaining_groups": 3639
+  },
+  "sources": [
+    {
+      "id": "b84_fr_166004",
+      "edition": "fr",
+      "entry_language": "fr",
+      "title": "juste",
+      "pageid": 166004,
+      "revid": 39779681,
+      "timestamp": "2026-08-05T22:40:42Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=juste&oldid=39779681",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=juste&action=history",
+      "attribution": "Wiktionnaire contributors; selected adaptations and explanatory translations by Lexique contributors; Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), for declared imported text",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "source_frame": "Fixed first-party revision at or before 2026-10-01T00:00:00Z; raw capture retained in target/issue-84/sources",
+      "selected_text_review": "passed_for_selected_spans"
+    }
+  ],
+  "accepted_field_count": 200,
+  "accepted_replacements_and_binding_corrections": [
+    {
+      "sense_id": "b84-188-adj",
+      "frozen_row": 188,
+      "headword": "juste",
+      "pos": "ADJ",
+      "field": "chinese",
+      "language": "zh",
+      "accepted_text": "公正的，公平的；符合法理、理性和正义。",
+      "reviewer": "independent-field-rights-review-84-2026-11-18",
+      "exact_source": {
+        "source_id": "b84_fr_166004",
+        "revid": 39779681,
+        "url": "https://fr.wiktionary.org/w/index.php?title=juste&oldid=39779681",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=juste&action=history",
+        "line_1_based": 11,
+        "reviewed_excerpt": "# Qui est [[conforme]] au [[droit]], à la [[raison]] et à la [[justice]]."
+      }
+    }
+  ],
+  "all_field_reviews": "../../../resources/core-pilot-79/field-review.json",
+  "annotations": [],
+  "compiled_preservation": {
+    "groups": 154,
+    "fields": 616,
+    "payloads": "unchanged"
+  },
+  "native_acceptance": "passed on Windows x64; see ../issue-84-89/README.md",
+  "learner_acceptance": "not_run",
+  "whole_core_release": "incomplete"
+}

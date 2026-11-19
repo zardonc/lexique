@@ -14,7 +14,14 @@ from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 RESOURCE = ROOT / "resources/core-pilot-79"
-ROWS = (*range(1, 87), *range(88, 151), 360, 422, 423, 483, 1911)
+ANNOTATIONS = (
+    (87, "quoi", "ADJ", 82), (305, "dont", "PRO:int", 87),
+    (816, "t", "PRO:per", 97), (849, "c", "PRO:dem", 97),
+    (859, "l", "ART:def", 98), (860, "l", "PRO:per", 98),
+    (934, "i", "ADJ:num", 99),
+)
+ANNOTATION_ROWS = tuple(entry[0] for entry in ANNOTATIONS)
+ROWS = (*(row for row in range(1, 951) if row not in ANNOTATION_ROWS), 1911)
 FIELDS = {"french_definition": "definition_fr", "ipa": "ipa", "english": "meaning_en", "chinese": "meaning_zh"}
 LANGUAGES = {"french_definition": "fr", "ipa": "und", "english": "en", "chinese": "zh"}
 MATERIALS = (
@@ -82,6 +89,16 @@ def load_inputs(source_dir):
         raise ValueError("Curated scope denominator changed")
     if reviewed.get("kind") != "separate_independent_field_review" or not reviewed.get("independence"):
         raise ValueError("A separate independent field review is required")
+    annotations = reviewed.get("annotation_exceptions", [])
+    if [(entry.get("frozen_row"), entry.get("headword"), entry.get("pos")) for entry in annotations] != [
+        entry[:3] for entry in ANNOTATIONS
+    ]:
+        raise ValueError("Annotation exceptions must retain their exact approved frozen identities")
+    for entry, (_, _, _, issue) in zip(annotations, ANNOTATIONS, strict=True):
+        decision = entry.get("decision", {})
+        if entry.get("admitted_fields") != 0 or decision.get("issue") != f"https://github.com/zardonc/lexique/issues/{issue}" or decision.get("approved_by") != "project_owner" or decision.get("approved_on") != "2026-11-18":
+            raise ValueError("Annotation exception requires the owner's matching issue approval and zero fields")
+        text(decision.get("decision"), "annotation exception decision")
     groups = curated.get("groups", [])
     if [group.get("frozen_row") for group in groups] != list(ROWS):
         raise ValueError("Admitted frozen scope rows changed")
@@ -167,7 +184,7 @@ def load_inputs(source_dir):
                 if (source["revid"], source["fixed_url"], field["source_id"], span["line_1_based"], span["raw_source_excerpt"]) != (exact["revid"], exact["url"], exact["source_id"], exact["line_1_based"], exact["reviewed_excerpt"]):
                     raise ValueError("Selected field source span differs from the independent review")
                 payload[target] = text(field["text"], f"selected {name} field", 200 if name == "ipa" else 20_000)
-                edition = "Wiktionnaire" if source["edition"] == "fr" else "Wiktionary"
+                edition = source.get("platform", "Wiktionnaire" if source["edition"] == "fr" else "Wiktionary")
                 provenance[target] = {
                     "title": f"{edition} — {source['title']}",
                     "version": f"revision {source['revid']} ({source['timestamp']})",
@@ -181,11 +198,11 @@ def load_inputs(source_dir):
     if len(selected) != len(ROWS) or len(seen) != len(ROWS):
         raise ValueError("Admitted selected-sense scope changed")
     unresolved = reviewed.get("unresolved_fields", [])
-    if len(unresolved) != 4:
-        raise ValueError("Frozen row 87 requires four explicit unresolved fields")
+    if len(unresolved) != len(ANNOTATIONS) * 4:
+        raise ValueError("Approved annotation rows require four explicit unresolved fields each")
     for field in unresolved:
         row = field["frozen_row"]
-        if not isinstance(row, int) or row != 87 or (field["headword"], field["pos"]) != (scope[row - 1]["word"], scope[row - 1]["lexique_cgram"]) or field["field"] not in FIELDS:
+        if not isinstance(row, int) or isinstance(row, bool) or row not in ANNOTATION_ROWS or (field["headword"], field["pos"]) != (scope[row - 1]["word"], scope[row - 1]["lexique_cgram"]) or field["field"] not in FIELDS:
             raise ValueError("Unresolved field is bound to an admitted or incorrect frozen group")
         gap = scope_gaps.setdefault(row, {
             "everyday_sense_status": "unresolved", "incomplete_fields": [],
@@ -195,12 +212,22 @@ def load_inputs(source_dir):
         if field["field"] in gap["incomplete_fields"]:
             raise ValueError("Duplicate unresolved field")
         gap["incomplete_fields"].append(field["field"])
+    for entry in annotations:
+        gap = scope_gaps[entry["frozen_row"]]
+        if set(gap["incomplete_fields"]) != set(FIELDS):
+            raise ValueError("Annotation exception must retain all four missing fields")
+        gap["annotation_exception_decision"] = entry["decision"]
     relations = curated["spelling_relations"]
     expected_relations = reviewed["spelling_relations"]
-    if len(relations) != 8 or [{key: row[key] for key in expected_relations[0]} for row in relations] != expected_relations:
+    if len(relations) != 15 or any(
+        {key: row[key] for key in expected} != expected
+        for row, expected in zip(relations, expected_relations, strict=True)
+    ):
         raise ValueError("Spelling relation differs from the independently reviewed evidence")
     aliases = {row["source_headword"]: row["frozen_headword"] for row in relations}
-    if aliases != {"cœur": "coeur", "aujourd’hui": "aujourd'hui", "l’": "l'", "d’": "d'", "t’": "t'", "s’": "s'"} or any(
+    if aliases != {"cœur": "coeur", "aujourd’hui": "aujourd'hui", "l’": "l'", "d’": "d'",
+                   "t’": "t'", "s’": "s'", "œil": "oeil", "OK": "ok", "d’autres": "d'autres",
+                   "d’abord": "d'abord", "l’un": "l'un"} or any(
         relation["source_span"]["raw_source_excerpt"] != f"#REDIRECT [[{relation['source_headword']}]]"
         for relation in relations if relation["relationship"] == "explicit hard redirect"
     ):
@@ -224,7 +251,7 @@ def prepare(destination, source_dir=RESOURCE, project_license=ROOT / "LICENSE"):
         raise ValueError("Missing separate MIT project/converter licence")
     version = text(curated["content_version"], "content version", 200)
     source = {"title": "Lexique FR–EN–ZH", "version": version,
-              "attribution": "Wiktionnaire/Wiktionary contributors; selected adaptations by Lexique contributors; Lexique 3.83 membership by Boris New and Christophe Pallier",
+              "attribution": "Wiktionnaire/Wiktionary and Wikisource contributors; Théodore Soulice (1836); selected adaptations by Lexique contributors; Lexique 3.83 membership by Boris New and Christophe Pallier",
               "license": "CC BY-SA 4.0", "source_url": "https://github.com/zardonc/lexique/tree/main/resources/core-pilot-79",
               "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en"}
     metadata = {"format_version": "1", "content_version": version, "source": compact(source),
@@ -232,9 +259,11 @@ def prepare(destination, source_dir=RESOURCE, project_license=ROOT / "LICENSE"):
     selected_rows = {row[0] for row in selected}
     complete_rows = selected_rows - scope_gaps.keys()
     specialist_rows = {row for row, gap in scope_gaps.items() if gap["everyday_sense_status"] == "approved_specialist_exception"}
+    annotation_rows = {row for row, gap in scope_gaps.items() if "annotation_exception_decision" in gap}
     accepted_rows = complete_rows | specialist_rows
     acceptance = {"accepted_groups": len(accepted_rows), "approved_specialist_exception_groups": len(specialist_rows),
-                  "remaining_unaccepted_groups": 4087 - len(accepted_rows)}
+                  "remaining_unaccepted_groups": 4087 - len(accepted_rows),
+                  "annotation_exception_groups": len(annotation_rows)}
     if (curated.get("complete_groups"), curated.get("remaining_groups")) != (len(complete_rows), 4087 - len(complete_rows)):
         raise ValueError("Curated everyday-sense coverage differs from its review")
     if any(curated.get(key) != value for key, value in acceptance.items()):
@@ -294,7 +323,8 @@ def prepare(destination, source_dir=RESOURCE, project_license=ROOT / "LICENSE"):
                 "complete_groups": len(complete_rows & batch_rows),
                 "accepted_groups": len(accepted_rows & batch_rows),
                 "approved_specialist_exception_groups": len(specialist_rows & batch_rows),
-                "scope_acceptance": "passed" if batch_rows <= accepted_rows else "incomplete",
+                "annotation_exception_groups": len(annotation_rows & batch_rows),
+                "scope_acceptance": "passed" if batch_rows <= (accepted_rows | annotation_rows) else "incomplete",
                 "complete_fields": sum(4 for row in selected if row[0] in batch_rows),
                 "groups": [{"frozen_row": row, "headword": scope[row - 1]["word"],
                             "pos": scope[row - 1]["lexique_cgram"], "complete_fields": 4 if row in selected_rows else 0,
