@@ -153,11 +153,20 @@ fn reviewed_groups_keep_all_four_fields_frozen_pos_order_and_only_evidenced_quer
         ("petit", vec![146, 147, 148], "petit"),
         ("trouver", vec![149], "trouver"),
         ("laisser", vec![150], "laisser"),
+        ("merci", vec![151, 152], "merci"),
+        ("quel", vec![243], "quel"),
+        ("leur", vec![260, 261], "leur"),
+        ("dont", vec![306], "dont"),
+        ("oeil", vec![328], "oeil"),
+        ("ok", vec![356, 357], "ok"),
+        ("côté", vec![418], "côté"),
         ("aujourd'hui", vec![360], "aujourd'hui"),
-        ("fort", vec![422, 423], "fort"),
+        ("fort", vec![422, 423, 424], "fort"),
         ("coeur", vec![483], "coeur"),
         ("côte", vec![1911], "côte"),
         ("cœur", vec![483], "coeur"),
+        ("œil", vec![328], "oeil"),
+        ("OK", vec![356, 357], "ok"),
         ("aujourd’hui", vec![360], "aujourd'hui"),
         ("l’", vec![23, 24], "l'"),
         ("d’", vec![50], "d'"),
@@ -167,7 +176,7 @@ fn reviewed_groups_keep_all_four_fields_frozen_pos_order_and_only_evidenced_quer
     ] {
         let lookup = core::lookup(&path, query, &expected).unwrap();
         assert_eq!(lookup.dictionary_id.as_deref(), Some("builtin-core"));
-        assert_eq!(lookup.source.version, "core-83-v1");
+        assert_eq!(json!(lookup.source.version), curated["content_version"]);
         assert_eq!(
             lookup
                 .entries
@@ -201,7 +210,7 @@ fn reviewed_groups_keep_all_four_fields_frozen_pos_order_and_only_evidenced_quer
             }
         }
     }
-    for query in ["cote", "côté", "coeurs", "aujourdhui", "l", "d"] {
+    for query in ["cote", "côtés", "coeurs", "aujourdhui", "l", "d"] {
         assert!(
             core::lookup(&path, query, &expected)
                 .unwrap()
