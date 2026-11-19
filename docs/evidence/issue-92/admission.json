@@ -1,0 +1,50 @@
+{
+  "issue": 92,
+  "status": "candidate_handoff_pending_independent_admission",
+  "frozen_first_row": 551,
+  "frozen_last_row": 600,
+  "target_groups": 50,
+  "proposed_groups": 50,
+  "proposed_fields": 200,
+  "reused_groups": 0,
+  "independently_admitted_groups": 0,
+  "independently_admitted_fields": 0,
+  "author_validation": "completed_for_draft",
+  "independent_quality_review": "pending_separate_reviewer",
+  "independent_rights_review": "pending_separate_reviewer_at_selected_text_boundary",
+  "everyday_use_attention": [
+    {
+      "frozen_row": 565,
+      "headword": "prochain",
+      "pos": "NOM",
+      "selected_use": "fellow human in moral/religious language",
+      "status": "pending_independent_everyday_use_acceptance",
+      "source_revid": 39771006,
+      "definition_line_1_based": 104,
+      "corroborating_usage_lines_1_based": [105, 107, 110],
+      "quoted_usage_prose_admitted": false
+    }
+  ],
+  "missing_candidate_fields": [],
+  "remaining_gates": [
+    "Separate exact-text and selected-use quality review of all 200 fields",
+    "Selected original-author and imported-prose rights boundary review",
+    "Independent spelling/form relationship acceptance",
+    "Combined source attribution, legal texts and modification notices",
+    "Parent converter artifact membership, reproduction and preservation checks",
+    "Parent native lookup, save and reopen, upgrade and packaging checks",
+    "Learner acceptance and whole-core/platform/release gates"
+  ],
+  "checks": {
+    "membership_before_content": "failed_as_expected_50_missing_groups",
+    "membership_after_content": "passed_1_focused_test",
+    "fixed_raw_source_bindings": "passed_author_assembly_assertions",
+    "documentation_links": "passed_pnpm_test_docs",
+    "staged_diff_check": "passed",
+    "converter": "not_run_worker_does_not_modify_shared_admission",
+    "native": "not_run_parent_owned",
+    "heavy_cargo": "not_run_parent_owned"
+  },
+  "evidence_root": "C:/Users/inthe/IdeaProjects/lexique-content-92/target/issue-92",
+  "shard_root": "C:/Users/inthe/.codex/tmp/lexique-spec-90-99/batch-92"
+}
