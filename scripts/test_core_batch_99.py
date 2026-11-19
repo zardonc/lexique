@@ -30,20 +30,22 @@ class Batch99Tests(unittest.TestCase):
                 if row == 934:
                     self.assertEqual(group["senses"], [])
                     self.assertTrue(group["unresolved_reason"])
+                    self.assertEqual(group["status"], "approved_annotation_exception")
+                    self.assertEqual((group["admitted_fields"], group["missing_fields"]), (0, 4))
                     continue
                 self.assertEqual(len(group["senses"]), 1)
                 sense = group["senses"][0]
-                self.assertEqual(sense["independent_review"], "pending")
+                self.assertEqual(sense["independent_review"], "passed_after_exact_accepted_replacements")
                 self.assertEqual(set(sense["fields"]), {"french_definition", "ipa", "english", "chinese"})
                 for name, field in sense["fields"].items():
                     self.assertTrue(field["text"].strip())
-                    self.assertEqual(field["independent_review"], "pending")
+                    self.assertEqual(field["independent_review"], "passed")
                     binding = bindings[sense["sense_id"], name]
                     self.assertEqual(field["source_id"], binding["source_id"])
-                    self.assertEqual(field["source_span"]["raw_source_excerpt"], binding["reviewed_excerpt"])
+                    self.assertEqual(field["source_span"]["raw_source_excerpt"], binding["raw_source_excerpt"])
                     self.assertEqual(field["source_span"]["line_1_based"], binding["line_1_based"])
                     self.assertGreater(binding["revid"], 0)
-                    self.assertIn("oldid=" + str(binding["revid"]), binding["url"])
+                    self.assertIn("oldid=" + str(binding["revid"]), binding["fixed_url"])
 
 
 if __name__ == "__main__":

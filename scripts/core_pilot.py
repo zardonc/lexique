@@ -14,7 +14,14 @@ from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 RESOURCE = ROOT / "resources/core-pilot-79"
-ROWS = (*range(1, 87), *range(88, 305), *range(306, 451), 483, 1911)
+ANNOTATIONS = (
+    (87, "quoi", "ADJ", 82), (305, "dont", "PRO:int", 87),
+    (816, "t", "PRO:per", 97), (849, "c", "PRO:dem", 97),
+    (859, "l", "ART:def", 98), (860, "l", "PRO:per", 98),
+    (934, "i", "ADJ:num", 99),
+)
+ANNOTATION_ROWS = tuple(entry[0] for entry in ANNOTATIONS)
+ROWS = (*(row for row in range(1, 951) if row not in ANNOTATION_ROWS), 1911)
 FIELDS = {"french_definition": "definition_fr", "ipa": "ipa", "english": "meaning_en", "chinese": "meaning_zh"}
 LANGUAGES = {"french_definition": "fr", "ipa": "und", "english": "en", "chinese": "zh"}
 MATERIALS = (
@@ -84,10 +91,10 @@ def load_inputs(source_dir):
         raise ValueError("A separate independent field review is required")
     annotations = reviewed.get("annotation_exceptions", [])
     if [(entry.get("frozen_row"), entry.get("headword"), entry.get("pos")) for entry in annotations] != [
-        (87, "quoi", "ADJ"), (305, "dont", "PRO:int")
+        entry[:3] for entry in ANNOTATIONS
     ]:
         raise ValueError("Annotation exceptions must retain their exact approved frozen identities")
-    for entry, issue in zip(annotations, (82, 87), strict=True):
+    for entry, (_, _, _, issue) in zip(annotations, ANNOTATIONS, strict=True):
         decision = entry.get("decision", {})
         if entry.get("admitted_fields") != 0 or decision.get("issue") != f"https://github.com/zardonc/lexique/issues/{issue}" or decision.get("approved_by") != "project_owner" or decision.get("approved_on") != "2026-11-18":
             raise ValueError("Annotation exception requires the owner's matching issue approval and zero fields")
@@ -191,11 +198,11 @@ def load_inputs(source_dir):
     if len(selected) != len(ROWS) or len(seen) != len(ROWS):
         raise ValueError("Admitted selected-sense scope changed")
     unresolved = reviewed.get("unresolved_fields", [])
-    if len(unresolved) != 8:
-        raise ValueError("Annotation rows 87 and 305 require four explicit unresolved fields each")
+    if len(unresolved) != len(ANNOTATIONS) * 4:
+        raise ValueError("Approved annotation rows require four explicit unresolved fields each")
     for field in unresolved:
         row = field["frozen_row"]
-        if not isinstance(row, int) or isinstance(row, bool) or row not in (87, 305) or (field["headword"], field["pos"]) != (scope[row - 1]["word"], scope[row - 1]["lexique_cgram"]) or field["field"] not in FIELDS:
+        if not isinstance(row, int) or isinstance(row, bool) or row not in ANNOTATION_ROWS or (field["headword"], field["pos"]) != (scope[row - 1]["word"], scope[row - 1]["lexique_cgram"]) or field["field"] not in FIELDS:
             raise ValueError("Unresolved field is bound to an admitted or incorrect frozen group")
         gap = scope_gaps.setdefault(row, {
             "everyday_sense_status": "unresolved", "incomplete_fields": [],
@@ -212,13 +219,15 @@ def load_inputs(source_dir):
         gap["annotation_exception_decision"] = entry["decision"]
     relations = curated["spelling_relations"]
     expected_relations = reviewed["spelling_relations"]
-    if len(relations) != 11 or any(
+    if len(relations) != 15 or any(
         {key: row[key] for key in expected} != expected
         for row, expected in zip(relations, expected_relations, strict=True)
     ):
         raise ValueError("Spelling relation differs from the independently reviewed evidence")
     aliases = {row["source_headword"]: row["frozen_headword"] for row in relations}
-    if aliases != {"cœur": "coeur", "aujourd’hui": "aujourd'hui", "l’": "l'", "d’": "d'", "t’": "t'", "s’": "s'", "œil": "oeil", "OK": "ok"} or any(
+    if aliases != {"cœur": "coeur", "aujourd’hui": "aujourd'hui", "l’": "l'", "d’": "d'",
+                   "t’": "t'", "s’": "s'", "œil": "oeil", "OK": "ok", "d’autres": "d'autres",
+                   "d’abord": "d'abord", "l’un": "l'un"} or any(
         relation["source_span"]["raw_source_excerpt"] != f"#REDIRECT [[{relation['source_headword']}]]"
         for relation in relations if relation["relationship"] == "explicit hard redirect"
     ):

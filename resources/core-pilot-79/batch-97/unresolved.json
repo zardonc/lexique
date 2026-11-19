@@ -6,9 +6,17 @@
     "subtitle_lemma_per_million": "119.43",
     "subtitle_pos_per_million": "88.47",
     "senses": [],
-    "status": "unresolved_no_eligible_evidenced_selected_use",
+    "status": "approved_annotation_exception",
     "reason": "No evidenced French bare-t personal-pronoun spelling relationship. The t texting sense is a verb flexion; the personal-pronoun section on that page is Neapolitan.",
-    "annotation_exception_decision": null,
+    "annotation_exception_decision": {
+      "issue": 97,
+      "frozen_row": 816,
+      "headword": "t",
+      "pos": "PRO:per",
+      "admitted_fields": 0,
+      "approved_by": "project_owner",
+      "approved_on": "2026-11-18"
+    },
     "evidence": [
       {
         "title": "t",
@@ -69,7 +77,9 @@
           }
         ]
       }
-    ]
+    ],
+    "admitted_fields": 0,
+    "missing_fields": 4
   },
   {
     "frozen_row": 849,
@@ -78,9 +88,17 @@
     "subtitle_lemma_per_million": "114.63",
     "subtitle_pos_per_million": "46.69",
     "senses": [],
-    "status": "unresolved_no_eligible_evidenced_selected_use",
+    "status": "approved_annotation_exception",
     "reason": "No evidenced bare-c demonstrative-pronoun spelling relationship. The c texting senses abbreviate whole verb forms c’est and s’est, not ce alone.",
-    "annotation_exception_decision": null,
+    "annotation_exception_decision": {
+      "issue": 97,
+      "frozen_row": 849,
+      "headword": "c",
+      "pos": "PRO:dem",
+      "admitted_fields": 0,
+      "approved_by": "project_owner",
+      "approved_on": "2026-11-18"
+    },
     "evidence": [
       {
         "title": "c",
@@ -141,6 +159,8 @@
           }
         ]
       }
-    ]
+    ],
+    "admitted_fields": 0,
+    "missing_fields": 4
   }
 ]

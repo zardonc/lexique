@@ -1,6 +1,9 @@
 {
   "issue": 93,
-  "status": "author_validated_pending_independent_review",
+  "status": "passed",
+  "independence": true,
+  "reviewer": "Independent selected-content and source-rights reviewer for issue 93, separate from the content author",
+  "scope": "Independent source/content acceptance only; resource conversion, native and package admission remain pending with parent.",
   "frozen_rows": [
     601,
     602,
@@ -53,23 +56,15 @@
     649,
     650
   ],
-  "drafted_groups": 50,
-  "drafted_senses": 50,
-  "drafted_fields": 200,
-  "newly_admitted_groups": 0,
-  "newly_admitted_fields": 0,
-  "independent_quality": "pending",
-  "independent_selected_text_rights": "pending",
-  "learner_acceptance": "pending",
-  "resource_conversion": "parent_owned_pending_independent_acceptance",
-  "native_lookup_save_reopen": "parent_owned_not_run",
-  "preservation_and_packaging": "parent_owned_not_run",
-  "whole_core_release": "incomplete",
-  "source_evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-content-93\\target\\issue-93",
-  "unresolved": [
-    "Central reviewer must accept all exact texts, POS/use, rights, attribution and spelling bindings.",
-    "Row 646 is restricted regional child usage; independent everyday/region acceptance is pending.",
-    "Row 605 requires independently accepted fixed apostrophe redirect evidence before shared alias integration.",
-    "Existing global counters, notices, checksums, converter and shared tests are finalized once by the parent."
-  ]
+  "accepted_groups": 50,
+  "accepted_fields": 200,
+  "accepted_sources": 41,
+  "quality_report": "../quality-93.md",
+  "approved_annotations": [],
+  "checkpoints": 10,
+  "frozen_denominator": 4087,
+  "resource_admission": "pending_parent",
+  "native_validation": "not_run",
+  "package_validation": "not_run",
+  "reviewed_input_files_root": "C:\\Users\\inthe\\.codex\\tmp\\lexique-spec-90-99\\reviewed-batch-93"
 }

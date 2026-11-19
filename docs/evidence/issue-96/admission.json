@@ -1,6 +1,9 @@
 {
   "issue": 96,
-  "parent": 78,
+  "status": "passed",
+  "independence": true,
+  "reviewer": "Separate independent selected-content and source-rights reviewers for issue 96",
+  "scope": "Independent selected-content/source acceptance only; global resource and native admission remain pending.",
   "frozen_rows": [
     751,
     752,
@@ -53,21 +56,10 @@
     799,
     800
   ],
-  "target_groups": 50,
-  "unique_headwords": 46,
-  "drafted_groups": 50,
-  "drafted_fields": 200,
-  "reused_groups": 0,
-  "independently_accepted_groups": 0,
-  "independently_accepted_fields": 0,
-  "scope_denominator_groups": 4087,
-  "status": "draft_complete_pending_independent_quality_rights_and_produced_resource_checks",
-  "author_validation": "completed",
-  "independent_review": "pending_different_central_reviewer",
-  "evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-content-96\\target\\issue-96",
-  "unresolved": [
-    "200 fields and 50 usages await different reviewer acceptance; linked contributor histories are attribution, not independently audited original sentence authorship.",
-    "Row 770 exact l'un/l’un relationship and row 774 feminine determiner relationship require central acceptance.",
-    "Parent owns accepted conversion, combined notices/counters/checksums, native lookup/save/reopen, learner-state preservation and packaging."
-  ]
+  "accepted_groups": 50,
+  "accepted_fields": 200,
+  "accepted_sources": 94,
+  "quality_report": "../quality-96.md",
+  "approved_annotations": [],
+  "reviewed_input_files_root": "C:\\Users\\inthe\\.codex\\tmp\\lexique-spec-90-99\\reviewed-batch-96"
 }

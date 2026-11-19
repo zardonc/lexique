@@ -1803,20 +1803,6 @@
   ],
   "spelling_relations": [
     {
-      "frozen_headword": "soeur",
-      "source_headword": "sœur",
-      "relationship": "explicit typographic variant",
-      "source_id": "b92_fr_19593",
-      "revid": 39753083,
-      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=soeur&oldid=39753083",
-      "source_span": {
-        "line_1_based": 7,
-        "raw_source_excerpt": "# ''Variante par contrainte typographique de'' [[sœur]]."
-      },
-      "independent_review": "pending_independent_review",
-      "alias_admission": "not_admitted_by_worker"
-    },
-    {
       "frozen_headword": "nouvelle",
       "source_headword": "nouveau",
       "relationship": "explicit feminine singular adjective form",
@@ -1827,41 +1813,52 @@
         "line_1_based": 150,
         "raw_source_excerpt": "# ''Féminin singulier de l’adjectif'' [[nouveau]]."
       },
-      "independent_review": "pending_independent_review",
-      "alias_admission": "not_admitted_by_worker"
+      "independent_review": "passed",
+      "alias_admission": "not_admitted",
+      "relation_role": "source_binding_only",
+      "reviewer": "Fresh independent source reviewer assigned #92; separate from the candidate author",
+      "independence": true
+    },
+    {
+      "frozen_headword": "soeur",
+      "source_headword": "sœur",
+      "relationship": "explicit typographic variant",
+      "source_id": "b92_fr_19593",
+      "revid": 39753083,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=soeur&oldid=39753083",
+      "source_span": {
+        "line_1_based": 7,
+        "raw_source_excerpt": "# ''Variante par contrainte typographique de'' [[sœur]]."
+      },
+      "independent_review": "passed",
+      "alias_admission": "not_admitted",
+      "relation_role": "source_binding_only",
+      "reviewer": "Fresh independent source reviewer assigned #92; separate from the candidate author",
+      "independence": true
     }
   ],
   "supporting_evidence": [
     {
-      "source_id": "b92_fr_11634",
-      "revid": 39997528,
-      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=caf%C3%A9&oldid=39997528",
-      "line_1_based": 13,
-      "reason": "The drink definition refers to this preceding roasted-and-ground bean powder.",
-      "raw_source_excerpt": "# [[graine|Graine]]s de [[caféier]], ou [[poudre]] formée de ces [[grain]]s [[torréfier|torréfiés]] et [[moudre|moulus]]."
-    },
-    {
-      "source_id": "b92_fr_42332",
-      "revid": 39970498,
-      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=con&oldid=39970498",
-      "line_1_based": 316,
-      "reason": "The adjective agreement table explicitly records feminine conne.",
-      "raw_source_excerpt": "{{fr-accord-mixte |m=con |mp=cons |pm=kɔ̃ |fs=conne |fp=connes |pf=kɔn |fs2=con |fp2=cons |pf2=kɔ̃}}"
-    },
-    {
-      "source_id": "b92_fr_2167",
-      "revid": 39774575,
-      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=content&oldid=39774575",
-      "line_1_based": 14,
-      "reason": "The selected satisfied sense explicitly supports content de quelqu’un.",
-      "raw_source_excerpt": "#* ''Être '''content''' de quelqu’un,'' être satisfait de lui, de ses procédés, de sa conduite."
-    },
-    {
-      "source_id": "b92_fr_9167",
-      "revid": 39919734,
-      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=long&oldid=39919734",
-      "line_1_based": 284,
-      "reason": "Reference location for ordinary measurement use de long; quoted example is not redistributed."
+      "source_id": "b92_fr_29044",
+      "revid": 39771006,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=prochain&oldid=39771006",
+      "local_line_spans": [
+        [
+          105,
+          105
+        ],
+        [
+          107,
+          108
+        ],
+        [
+          110,
+          111
+        ]
+      ],
+      "purpose": "Contemporary moral/religious use supports modern everyday acceptance; quoted prose remains local and is not selected for bundled fields.",
+      "quoted_prose_selected": false,
+      "sense_id": "b92-565-prochain-nom-selected"
     }
   ]
 }

@@ -1,4 +1,4 @@
-"""Frozen membership and source bindings of the pending #97 review artifact."""
+"""Frozen membership and source bindings of the accepted #97 content."""
 
 import csv
 import json
@@ -30,12 +30,14 @@ class Batch97Tests(unittest.TestCase):
                 if group in unresolved:
                     self.assertEqual(group["senses"], [])
                     self.assertTrue(group["evidence"])
+                    self.assertEqual(group["status"], "approved_annotation_exception")
+                    self.assertEqual((group["admitted_fields"], group["missing_fields"]), (0, 4))
                     continue
                 self.assertTrue(group["senses"])
                 for sense in group["senses"]:
                     self.assertEqual(set(sense["fields"]),
                                      {"french_definition", "ipa", "english", "chinese"})
-                    self.assertEqual(sense["independent_review"], "pending")
+                    self.assertEqual(sense["independent_review"], "passed_after_exact_accepted_replacements")
                     for name, field in sense["fields"].items():
                         self.assertTrue(field["text"].strip())
                         excerpt = fields[(sense["sense_id"], name)]
@@ -46,7 +48,7 @@ class Batch97Tests(unittest.TestCase):
                                          excerpt["line_1_based"])
                         self.assertGreater(excerpt["revid"], 0)
                         self.assertIn(f"oldid={excerpt['revid']}", excerpt["fixed_url"])
-                        self.assertEqual(field["independent_review"], "pending")
+                        self.assertEqual(field["independent_review"], "passed")
 
 
 if __name__ == "__main__":

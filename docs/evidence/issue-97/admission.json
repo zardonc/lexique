@@ -1,493 +1,105 @@
 {
-  "schema": "lexique-core-batch-admission-1",
-  "issue": "https://github.com/zardonc/lexique/issues/97",
-  "baseline_content_version": "core-89-v1",
-  "baseline_commit": "3397219e8d159ef60db3ed5456bdcb2d6ff41b4a",
-  "resource_admission": "pending_independent_quality_rights_and_combined_artifact_check",
-  "scope": {
-    "target_groups": 50,
-    "reused_groups": 0,
-    "proposed_groups": 48,
-    "proposed_fields": 192,
-    "unresolved_zero_field_groups": 2,
-    "accepted_groups": 0,
-    "accepted_fields": 0,
-    "new_annotation_exceptions": 0,
-    "global_denominator_groups": 4087,
-    "groups": [
-      {
-        "frozen_row": 801,
-        "headword": "empêcher",
-        "pos": "VER",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 802,
-        "headword": "courant",
-        "pos": "ADJ",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 803,
-        "headword": "courant",
-        "pos": "NOM",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 804,
-        "headword": "maintenir",
-        "pos": "VER",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 805,
-        "headword": "cheveu",
-        "pos": "NOM",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 806,
-        "headword": "sauf",
-        "pos": "ADJ",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 807,
-        "headword": "sauf",
-        "pos": "PRE",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 808,
-        "headword": "grâce",
-        "pos": "NOM",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 809,
-        "headword": "grâce",
-        "pos": "PRE",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 810,
-        "headword": "papier",
-        "pos": "NOM",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 811,
-        "headword": "présent",
-        "pos": "ADJ",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 812,
-        "headword": "présent",
-        "pos": "NOM",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 813,
-        "headword": "supposer",
-        "pos": "VER",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 814,
-        "headword": "tranquille",
-        "pos": "ADJ",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 815,
-        "headword": "t",
-        "pos": "NOM",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 816,
-        "headword": "t",
-        "pos": "PRO:per",
-        "proposed_fields": 0,
-        "accepted_fields": 0,
-        "status": "unresolved_no_evidenced_selected_use"
-      },
-      {
-        "frozen_row": 817,
-        "headword": "neuf",
-        "pos": "ADJ",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 818,
-        "headword": "neuf",
-        "pos": "ADJ:num",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 819,
-        "headword": "épouser",
-        "pos": "VER",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 820,
-        "headword": "table",
-        "pos": "NOM",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 821,
-        "headword": "dix",
-        "pos": "ADJ:num",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 822,
-        "headword": "clé",
-        "pos": "NOM",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 823,
-        "headword": "nul",
-        "pos": "ADJ",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 824,
-        "headword": "nul",
-        "pos": "ADJ:ind",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 825,
-        "headword": "nul",
-        "pos": "PRO:ind",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 826,
-        "headword": "agent",
-        "pos": "NOM",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 827,
-        "headword": "gauche",
-        "pos": "ADJ",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 828,
-        "headword": "gauche",
-        "pos": "NOM",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 829,
-        "headword": "approcher",
-        "pos": "VER",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 830,
-        "headword": "sens",
-        "pos": "NOM",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 831,
-        "headword": "craindre",
-        "pos": "VER",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 832,
-        "headword": "six",
-        "pos": "ADJ:num",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 833,
-        "headword": "message",
-        "pos": "NOM",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 834,
-        "headword": "crier",
-        "pos": "VER",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 835,
-        "headword": "salle",
-        "pos": "NOM",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 836,
-        "headword": "inviter",
-        "pos": "VER",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 837,
-        "headword": "effet",
-        "pos": "NOM",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 838,
-        "headword": "réfléchir",
-        "pos": "VER",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 839,
-        "headword": "espèce",
-        "pos": "NOM",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 840,
-        "headword": "arranger",
-        "pos": "VER",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 841,
-        "headword": "naître",
-        "pos": "VER",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 842,
-        "headword": "allô",
-        "pos": "ONO",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 843,
-        "headword": "bois",
-        "pos": "NOM",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 844,
-        "headword": "propos",
-        "pos": "NOM",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 845,
-        "headword": "camp",
-        "pos": "NOM",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 846,
-        "headword": "sorte",
-        "pos": "NOM",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 847,
-        "headword": "hôtel",
-        "pos": "NOM",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 848,
-        "headword": "c",
-        "pos": "NOM",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      },
-      {
-        "frozen_row": 849,
-        "headword": "c",
-        "pos": "PRO:dem",
-        "proposed_fields": 0,
-        "accepted_fields": 0,
-        "status": "unresolved_no_evidenced_selected_use"
-      },
-      {
-        "frozen_row": 850,
-        "headword": "gamin",
-        "pos": "ADJ",
-        "proposed_fields": 4,
-        "accepted_fields": 0,
-        "status": "pending_independent_quality_and_rights_review"
-      }
-    ]
-  },
-  "unresolved_content": [
+  "issue": 97,
+  "status": "passed",
+  "independence": true,
+  "reviewer": "Independent content and source-rights reviewer for issue 97, separate from the content author",
+  "scope": "Independent selected-content/source acceptance only; resource conversion, native admission and release remain parent-owned.",
+  "frozen_rows": [
+    801,
+    802,
+    803,
+    804,
+    805,
+    806,
+    807,
+    808,
+    809,
+    810,
+    811,
+    812,
+    813,
+    814,
+    815,
+    816,
+    817,
+    818,
+    819,
+    820,
+    821,
+    822,
+    823,
+    824,
+    825,
+    826,
+    827,
+    828,
+    829,
+    830,
+    831,
+    832,
+    833,
+    834,
+    835,
+    836,
+    837,
+    838,
+    839,
+    840,
+    841,
+    842,
+    843,
+    844,
+    845,
+    846,
+    847,
+    848,
+    849,
+    850
+  ],
+  "accepted_groups": 48,
+  "accepted_fields": 192,
+  "accepted_sources": 41,
+  "approved_annotations": [
     {
+      "issue": 97,
       "frozen_row": 816,
-      "requirement": "French exact-spelling personal-pronoun binding",
-      "evidence": "priority-sources.json; t revision 39772410 lines 78–80 and t’ revision 39321617 lines 7–9"
+      "headword": "t",
+      "pos": "PRO:per",
+      "admitted_fields": 0,
+      "subtitle_lemma_per_million": "119.43",
+      "subtitle_pos_per_million": "88.47",
+      "missing_fields": [
+        "french_definition",
+        "ipa",
+        "english",
+        "chinese"
+      ],
+      "missing_field_count": 4,
+      "approval_record": "C:\\Users\\inthe\\.codex\\tmp\\lexique-spec-90-99\\owner-approved-annotations.json"
     },
     {
+      "issue": 97,
       "frozen_row": 849,
-      "requirement": "French exact-spelling demonstrative-pronoun binding",
-      "evidence": "priority-sources.json; c revision 39771203 lines 128–137 and c’ revision 39266077 lines 7–9"
-    },
-    {
-      "frozen_row": 809,
-      "requirement": "Independent frozen-group acceptance of grâce component in grâce à construction",
-      "evidence": "priority-sources.json; grâce à revision 39005892 lines 3/5/7/33"
-    },
-    {
-      "frozen_row": 824,
-      "requirement": "Modern everyday eligibility with literary/formal restriction",
-      "evidence": "nul revision 39923182 line 123; source-research.md"
-    },
-    {
-      "frozen_row": 825,
-      "requirement": "Modern everyday eligibility with literary/legal restriction",
-      "evidence": "nul revision 39923182 line 213; source-research.md"
+      "headword": "c",
+      "pos": "PRO:dem",
+      "admitted_fields": 0,
+      "subtitle_lemma_per_million": "114.63",
+      "subtitle_pos_per_million": "46.69",
+      "missing_fields": [
+        "french_definition",
+        "ipa",
+        "english",
+        "chinese"
+      ],
+      "missing_field_count": 4,
+      "approval_record": "C:\\Users\\inthe\\.codex\\tmp\\lexique-spec-90-99\\owner-approved-annotations.json"
     }
   ],
-  "author_validation": "fixed_versions_selected_spans_languages_and_draft_field_scope_checked",
-  "independent_quality_review": "pending_different_reviewer",
-  "selected_text_rights_review": "pending_different_reviewer",
-  "evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-content-97\\target\\issue-97",
-  "checks": [
-    {
-      "command": "uv run --python 3.14.10 --no-project python -B -X utf8 -m unittest discover -s scripts -p test_core_batch_97.py",
-      "red_result": "expected_failure_before_review_artifact_existed",
-      "red_exit": 1,
-      "green_result": "passed",
-      "green_exit": 0,
-      "logs": [
-        "membership-red.log",
-        "membership-green.log"
-      ]
-    },
-    {
-      "command": "uv run --python 3.14.10 --no-project python -B -X utf8 target/issue-97/validate_sources.py",
-      "result": "passed",
-      "exit": 0,
-      "log": "source-validation.log",
-      "checks": "43 API revision/content bindings; 192 exact field spans and supporting spans; 5 byte-identical source copies; baseline shared files unchanged"
-    },
-    {
-      "command": "pnpm test:docs",
-      "result": "passed",
-      "exit": 0,
-      "documents": 208,
-      "local_links": 1534,
-      "log": "docs-check.log"
-    },
-    {
-      "command": "git diff --cached --check",
-      "result": "passed",
-      "exit": 0,
-      "log": "diff-check.log"
-    }
-  ],
-  "parent_checks": {
-    "independent_review": "pending",
-    "converter_ingestion_and_reproduction": "not_run_worker_candidates_unadmitted",
-    "native_lookup_save_reopen": "not_run_parent_owned",
-    "learner_data_preservation": "not_run_parent_owned",
-    "packaging_and_offline": "not_run_parent_owned",
-    "frontend_and_heavy_cargo": "not_run_no_runtime_changes"
-  }
+  "annotation_missing_fields": 8,
+  "global_denominator": 4087,
+  "quality_report": "../quality-97.md",
+  "checkpoint_count": 10,
+  "spelling_aliases": 0,
+  "construction_bindings": 1,
+  "reviewed_input_files_root": "C:\\Users\\inthe\\.codex\\tmp\\lexique-spec-90-99\\reviewed-batch-97"
 }

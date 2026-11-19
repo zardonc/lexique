@@ -15,7 +15,8 @@ assert.ok(['pilot', 'batch', 'review', 'no-speech', 'catalogue', 'missing', 'cor
 const curation = JSON.parse(await readFile(resolve(curationPath), 'utf8'));
 const frozenScope = (await readFile(resolve(curationPath, '..', 'scope-manifest.csv'), 'utf8')).trim().split(/\r?\n/).slice(1);
 assert.equal(frozenScope.length, 4087);
-const expectedRows = [...Array.from({ length: 450 }, (_, index) => index + 1).filter((row) => ![87, 305].includes(row)), 483, 1911];
+const expectedRows = [...Array.from({ length: 950 }, (_, index) => index + 1)
+  .filter((row) => ![87, 305, 816, 849, 859, 860, 934].includes(row)), 1911];
 const membership = expectedRows.map((row) => {
   const match = frozenScope[row - 1].match(/^"((?:[^"]|"")*)","([^"]+)",/);
   assert.ok(match, `Invalid frozen scope row ${row}`);
@@ -275,7 +276,7 @@ async function pilot() {
     await rejected('speech_generate', { vocabularyId: edited.record.id, operation: 'native-79-no-speech' });
     assert.deepEqual((await invoke('vocabulary_find', { headword: 'être' })).digest, edited.record.digest);
   }
-  evidence.checks.push({ check: '50 batch-83 groups / 200 fields, including 49 everyday groups and the approved golf exception; 450 total groups / 1,800 fields and two approved annotation exceptions; trusted provider, spelling bindings, retry, duplicate, notes, examples, FSRS and normal restart', status: 'passed' });
+  evidence.checks.push({ check: '50 batch-83 groups / 200 fields, including 49 everyday groups and the approved golf exception; 944 total groups / 3,776 fields and seven approved annotation exceptions; trusted provider, spelling bindings, retry, duplicate, notes, examples, FSRS and normal restart', status: 'passed' });
   evidence.checks.push({ check: 'Batch bon adjective/adverb/noun/interjection saved fields and provenance match audited content after normal restart; bon, petit and par restrictions remain readable; ONO has English, French and Chinese labels', status: 'passed' });
   evidence.checks.push({ check: 'mon/ADJ:pos lookup and saved fields remain readable with English, French and Chinese subclass labels', status: 'passed' });
 }
@@ -285,8 +286,22 @@ async function contentBatch() {
   assert.ok(Number.isInteger(issue) && issue >= 84 && issue <= 99, 'Expected batch issue 84–99');
   const firstRow = 151 + (issue - 84) * 50;
   const groups = curation.groups.filter((group) => group.frozen_row >= firstRow && group.frozen_row < firstRow + 50);
-  const annotationRows = issue === 87 ? [305] : [];
+  const annotationRows = ({ 87: [305], 97: [816, 849], 98: [859, 860], 99: [934] })[issue] ?? [];
   assert.equal(groups.length, 50 - annotationRows.length);
+  for (const row of annotationRows) {
+    const match = frozenScope[row - 1].match(/^"((?:[^"]|"")*)","([^"]+)",/);
+    assert.ok(match, `Invalid annotation row ${row}`);
+    const [, headword, pos] = match;
+    const lookup = await invoke('dictionary_lookup', { dictionary_id: 'builtin-core', key: headword });
+    assert.ok(senses(lookup).every((sense) => sense.pos !== pos), `Annotation row ${row} has no admitted sense`);
+  }
+  const aliases = new Map(curation.spelling_relations
+    .filter((relation) => groups.some((group) => group.headword === relation.frozen_headword
+      && group.lexique_cgram === relation.lexique_cgram))
+    .map((relation) => [relation.source_headword, relation.frozen_headword]));
+  for (const [key, frozen] of aliases) {
+    admitted(await invoke('dictionary_lookup', { dictionary_id: 'builtin-core', key }), frozen);
+  }
   const saved = [];
   for (const [index, key] of [...new Set(groups.map((group) => group.headword))].entries()) {
     const result = await save(key, `batch-${issue}-${index}`);
@@ -303,7 +318,7 @@ async function contentBatch() {
   compareLearning(readState(destination), before);
   await openRecord(saved[0].record);
   await page.screenshot({ path: join(destination, `batch-${issue}-reopened.png`), fullPage: true });
-  evidence.checks.push({ check: `Batch #${issue}: ${groups.length} admitted groups / ${groups.length * 4} fields match audited content; ${annotationRows.length} approved annotation exceptions; ${saved.length} headwords saved and reopened with unchanged provenance and learning state`, status: 'passed' });
+  evidence.checks.push({ check: `Batch #${issue}: ${groups.length} admitted groups / ${groups.length * 4} fields match audited content; ${annotationRows.length} approved annotation exceptions; ${aliases.size} reviewed spelling queries; ${saved.length} headwords saved and reopened with unchanged provenance and learning state`, status: 'passed' });
 }
 
 async function review() {

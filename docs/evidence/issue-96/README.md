@@ -1,23 +1,5 @@
-# Issue #96: D2 content draft
+# Issue #96 accepted content
 
-Rows **751–800** have 50 exact frozen groups, 46 headwords and 200 drafted
-FR/IPA/EN/ZH fields, with one selected use per group. No previously admitted
-row is replaced. Independent acceptance remains **0 groups / 0 fields**.
+Frozen rows **751–800** contain **50 admitted groups / 200 fields**, 0 groups retain approved zero-field annotations, with 0 missing fields. The permanent denominator is **4,087 groups / 3,773 headwords**.
 
-The [groups](groups.json), [sources](sources.json), [selected excerpts](source-excerpts.json)
-and [contexts](source-context.json) form an additions-only handoff. The
-[field-review records](field-review.json) contain proposed texts and explicit
-pending review states; the [admission record](admission.json) retains the fixed
-4,087-group denominator and pending gates. [Reuse](reuse.json) is empty.
-
-See [source boundaries and grammatical relationships](source-research.md) and
-[commands and results](validation.md). Full captures remain under
-`C:/Users/inthe/IdeaProjects/lexique-content-96/target/issue-96/`; the
-[capture registry](source-captures.json) identifies the used fixed revisions.
-The same eight JSON shards are supplied at
-`C:/Users/inthe/.codex/tmp/lexique-spec-90-99/batch-96/`.
-
-All fields, selected usages and the exact `l'un`/`l’un` relationship await a
-different central reviewer. The parent owns admitted SQLite conversion,
-combined notices/counters/checksums, native lookup/save/reopen, learner-data
-preservation and packaging. These drafts establish no release readiness.
+[Independent review](independent-review.md) records the selected FR/IPA/EN/ZH uses, exact source boundaries and redistribution obligations. [Source captures](source-captures.json) retain the fixed original evidence. [Admission](admission.json) covers source acceptance; the [combined core](../../../resources/core-pilot-79/README.md) supplies the runtime content and notices. Native execution and saved-state preservation are recorded in the aggregate #90–#99 verification evidence.

@@ -417,8 +417,8 @@
       "revid": 39905343,
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=cheval&oldid=39905343",
       "line_1_based": 12,
-      "column_1_based": 14,
-      "raw_source_excerpt": "{{pron|ʃə.val|fr}}"
+      "column_1_based": 1,
+      "raw_source_excerpt": "'''cheval''' {{pron|ʃə.val|fr}}"
     },
     {
       "sense_id": "b96-cheval-nom-selected",
@@ -2003,43 +2003,19 @@
   ],
   "spelling_relations": [
     {
-      "frozen_row": 770,
-      "headword": "l'un",
-      "lexique_cgram": "PRO:ind",
+      "frozen_headword": "l'un",
       "source_headword": "l’un",
-      "kind": "explicit_fixed_revision_redirect_between_apostrophe_forms",
-      "independent_review": "pending",
-      "resource_admission": "pending_central_spelling_review",
-      "evidence": [
-        {
-          "purpose": "Exact redirect from frozen straight-apostrophe form to typographic-apostrophe form",
-          "source_id": "b96_fr_401284",
-          "revid": 2264752,
-          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=l%27un&oldid=2264752",
-          "line_1_based": 1,
-          "column_1_based": 1,
-          "raw_source_excerpt": "#REDIRECT [[l’un]]"
-        },
-        {
-          "purpose": "Typographic-apostrophe masculine singular indefinite pronoun paradigm",
-          "source_id": "b96_fr_180372",
-          "revid": 39877493,
-          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=l%E2%80%99un&oldid=39877493",
-          "line_1_based": 9,
-          "column_1_based": 1,
-          "raw_source_excerpt": "{{fr-accord-mixte| ms=l’un| fs=l’une| mp=les uns| fp=les unes| pms=l‿œ̃| pfs=l‿yn| pmp=le.z‿œ̃| pfp=le.z‿yn}}"
-        },
-        {
-          "purpose": "Straight-apostrophe masculine singular pronoun paradigm",
-          "source_id": "b96_en_1138338",
-          "revid": 92726878,
-          "fixed_url": "https://en.wiktionary.org/w/index.php?title=l%27un&oldid=92726878",
-          "line_1_based": 9,
-          "column_1_based": 1,
-          "raw_source_excerpt": "{{fr-pron|m|pl=les uns}}"
-        }
-      ],
-      "restriction": "This relates only l'un and l’un for this masculine singular selected use; no general apostrophe normalization, bare un, l'une or plural-pronoun merge is authorized."
+      "lexique_cgram": "PRO:ind",
+      "relationship": "explicit hard redirect",
+      "source_id": "b96_fr_401284",
+      "source_span": {
+        "line_1_based": 1,
+        "column_1_based": 1,
+        "raw_source_excerpt": "#REDIRECT [[l’un]]"
+      },
+      "independent_review": "passed",
+      "reviewer": "Separate independent selected-content and source-rights reviewers for issue 96",
+      "scope": "The frozen straight-apostrophe l'un redirects exactly to French l’un. The target masculine singular pronoun/IPA and English straight-apostrophe partitive phrase agree. Only these spellings for this selected use are related; bare un, feminine, plural and reciprocal forms are not aliases."
     }
   ]
 }
