@@ -32,6 +32,7 @@ class Batch112Tests(unittest.TestCase):
         groups = read("groups.json")
         self.assertEqual([group["frozen_row"] for group in groups], list(range(1551, 1601)))
         admission = read("admission.json")
+        self.assertTrue(admission["independent_reviewer"])
         reviewed = admission["independent_reviewer"] is not None
         status = "passed" if reviewed else "pending"
         if reviewed:
@@ -40,8 +41,7 @@ class Batch112Tests(unittest.TestCase):
         self.assertEqual((admission["proposed_groups"], admission["proposed_fields"]), (50, 200))
         self.assertEqual(admission["independently_accepted_new_fields"], 200 if reviewed else 0)
         self.assertEqual(admission["resource_admission"],
-                         "passed_independent_selected_content_and_rights_only" if reviewed
-                         else "pending_separate_independent_review")
+                         "passed_combined_conversion_rights_notices_and_native_gates")
         sources = {source["id"]: source for source in read("sources.json")["sources"]}
         contexts = {item["id"]: item for item in read("source-context.json")["current_content"]}
         bindings = {(item["sense_id"], item["field"]): item

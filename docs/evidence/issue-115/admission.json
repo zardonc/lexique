@@ -121,7 +121,7 @@
     "b115_daf8_tien"
   ],
   "missing_authored_fields": 0,
-  "missing_admitted_fields": 200,
+  "missing_admitted_fields": 0,
   "approved_annotations": [],
   "runtime_aliases_added": [],
   "initial_base": "e26d8b4c67ffcc53b4dc3ed62dbe9f7189022451",
@@ -145,7 +145,7 @@
     1732
   ],
   "unresolved_groups": [],
-  "count_boundary": "50/200 counts independent selected-content acceptance; all 200 canonical fields remain pending parent admission/conversion, so missing_admitted_fields stays 200.",
+  "count_boundary": "All 50 independently accepted groups / 200 fields are canonically admitted in core-119-v1; missing_admitted_fields is 0.",
   "pending_parent_gates": [
     "Whole-machine offline execution",
     "Other-platform native execution",

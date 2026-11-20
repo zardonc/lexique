@@ -15,6 +15,77 @@ def read(name):
 
 class Batch119Tests(unittest.TestCase):
     def test_exact_frozen_slice_preserves_accepted_cote_and_reviews_196_new_fields(self):
+        admissions = []
+        final_keys = {
+            "status", "resource_admission", "final_output_validation", "native_checks",
+            "conversion_and_packaging", "packaging_obligations_status",
+            "canonical_newly_admitted_groups", "canonical_newly_admitted_fields",
+            "missing_admitted_fields", "count_boundary", "newly_admitted_fields",
+            "admitted_groups", "admitted_fields", "canonical_pending_fields",
+            "pending_independent_rights_fields", "author_rights_assessment", "pending_parent_gates",
+        }
+        for issue in range(110, 120):
+            with self.subTest(issue=issue):
+                evidence = ROOT / f"docs/evidence/issue-{issue}"
+                admission = json.loads((evidence / "admission.json").read_text(encoding="utf-8"))
+                admissions.append(admission)
+                new_groups, new_fields = (49, 196) if issue == 119 else (50, 200)
+                self.assertEqual(admission["status"], "admitted_core_119_v1_windows_x64_development_resource")
+                self.assertEqual(admission["resource_admission"],
+                                 "passed_combined_conversion_rights_notices_and_native_gates")
+                self.assertEqual(admission["conversion_and_packaging"],
+                                 "passed_core_119_v1_and_verified_portable_package")
+                self.assertEqual(admission["native_checks"],
+                                 "passed_windows_11_x64_exact_batch_lookup_trusted_save_reopen_and_upgrade")
+                self.assertEqual(admission["final_output_validation"],
+                                 "passed_reproducible_conversion_fixed_denominator_and_prior_payload_preservation")
+                self.assertEqual(admission["packaging_obligations_status"],
+                                 "passed_actual_combined_package_fixed_sources_credits_modifications_and_licences")
+                self.assertEqual((admission["canonical_newly_admitted_groups"],
+                                  admission["canonical_newly_admitted_fields"]), (new_groups, new_fields))
+                self.assertEqual((admission["completed_frozen_batch_groups"],
+                                  admission["completed_frozen_batch_fields"]), (50, 200))
+                for key in ("missing_admitted_fields", "canonical_pending_fields",
+                            "pending_independent_rights_fields"):
+                    if key in admission:
+                        self.assertEqual(admission[key], 0)
+                for key, expected in (("newly_admitted_fields", new_fields),
+                                      ("admitted_groups", new_groups), ("admitted_fields", new_fields)):
+                    if key in admission:
+                        self.assertEqual(admission[key], expected)
+                self.assertNotIn("pending", admission.get("count_boundary", ""))
+                if "author_rights_assessment" in admission:
+                    self.assertEqual(admission["author_rights_assessment"],
+                                     "completed_proposal_independently_reviewed_at_selected_span_boundary")
+                self.assertEqual(admission["pending_parent_gates"], [
+                    "Whole-machine offline execution", "Other-platform native execution",
+                    "Learner acceptance", "Formal release readiness",
+                ])
+                review = json.loads((evidence / "field-review.json").read_text(encoding="utf-8"))
+                self.assertIs(review["independent_acceptance"], True)
+                self.assertTrue(review["independence"])
+                self.assertTrue(admission["independent_reviewer"])
+                self.assertEqual(review["reviewer"], admission["independent_reviewer"])
+                self.assertEqual(len(review["fields"]), new_fields)
+                execution = admission["parent_execution_evidence"]
+                self.assertEqual(execution["build_source_sha"], "00ea06228926e1b9a4e8644a267bce46316f1a39")
+                snapshot = Path(execution["root"]) / execution["original_admission_snapshot"]
+                # Owning worktrees retain original snapshots; detached/CI checkouts retain review records.
+                if snapshot.exists():
+                    history = json.loads(snapshot.read_text(encoding="utf-8"))
+                    original_status = "passed_independent_selected_content_and_rights_only"
+                    if issue in (114, 116, 117, 119):
+                        original_status = "pending_parent_conversion_and_packaged_notices"
+                    elif issue == 118:
+                        original_status = "pending_parent_admission_conversion"
+                    self.assertEqual(history["resource_admission"], original_status)
+                    self.assertEqual(history["independent_quality"], "passed")
+                    self.assertEqual(history["selected_span_rights"], "passed_at_selected_text_boundary")
+                    for key, value in history.items():
+                        if key not in final_keys:
+                            self.assertEqual(admission[key], value, key)
+        self.assertEqual(sum(item["canonical_newly_admitted_groups"] for item in admissions), 499)
+        self.assertEqual(sum(item["canonical_newly_admitted_fields"] for item in admissions), 1996)
         with (ROOT / "resources/core-pilot-79/scope-manifest.csv").open(
             encoding="utf-8-sig", newline=""
         ) as handle:

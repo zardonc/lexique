@@ -30,7 +30,7 @@ class Batch115Tests(unittest.TestCase):
         self.assertEqual((admission["proposed_groups"], admission["proposed_fields"]), (50, 200))
         self.assertEqual(admission["independently_accepted_new_fields"], 200)
         self.assertEqual(admission["resource_admission"],
-                         "passed_independent_selected_content_and_rights_only")
+                         "passed_combined_conversion_rights_notices_and_native_gates")
         sources = {source["id"]: source for source in read("sources.json")["sources"]}
         contexts = {item["id"]: item for item in read("source-context.json")["current_content"]}
         bindings = {(item["sense_id"], item["field"]): item

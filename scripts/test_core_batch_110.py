@@ -82,12 +82,13 @@ class Batch110Tests(unittest.TestCase):
         self.assertEqual(admission["independently_accepted_new_fields"], 200)
         self.assertEqual(admission["independently_accepted_new_groups"], 50)
         self.assertEqual(admission["resource_admission"],
-                         "passed_independent_selected_content_and_rights_only")
+                         "passed_combined_conversion_rights_notices_and_native_gates")
         self.assertEqual(admission["unresolved_field_blockers"], [])
-        self.assertEqual(admission["canonical_newly_admitted_fields"], 0)
-        self.assertEqual(admission["missing_admitted_fields"], 200)
-        self.assertEqual(admission["conversion_and_packaging"], "integration_owned_not_run")
-        self.assertEqual(admission["native_checks"], "integration_owned_not_run")
+        self.assertEqual(admission["canonical_newly_admitted_fields"], 200)
+        self.assertEqual(admission["missing_admitted_fields"], 0)
+        self.assertEqual(admission["conversion_and_packaging"], "passed_core_119_v1_and_verified_portable_package")
+        self.assertEqual(admission["native_checks"],
+                         "passed_windows_11_x64_exact_batch_lookup_trusted_save_reopen_and_upgrade")
         sources = {source["id"]: source for source in read("sources.json")["sources"]}
         contexts = {item["id"]: item for item in read("source-context.json")["current_content"]}
         bindings = {(item["sense_id"], item["field"]): item

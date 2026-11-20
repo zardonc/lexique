@@ -31,7 +31,7 @@ class Batch118Tests(unittest.TestCase):
         self.assertEqual(admission["independently_accepted_new_fields"], 200)
         self.assertEqual(admission["independently_accepted_new_groups"], 50)
         self.assertEqual(admission["resource_admission"],
-                         "pending_parent_admission_conversion")
+                         "passed_combined_conversion_rights_notices_and_native_gates")
         sources = {source["id"]: source for source in read("sources.json")["sources"]}
         contexts = {item["id"]: item for item in read("source-context.json")["current_content"]}
         bindings = {(item["sense_id"], item["field"]): item

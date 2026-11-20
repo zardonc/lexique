@@ -38,8 +38,8 @@ class Batch114Tests(unittest.TestCase):
         self.assertTrue(admission["independence"])
         self.assertEqual(admission["independently_accepted_new_fields"], 200)
         self.assertEqual(admission["independently_accepted_new_groups"], 50)
-        self.assertEqual(admission["resource_admission"], "pending_parent_conversion_and_packaged_notices")
-        self.assertEqual(admission["newly_admitted_fields"], 0)
+        self.assertEqual(admission["resource_admission"], "passed_combined_conversion_rights_notices_and_native_gates")
+        self.assertEqual(admission["newly_admitted_fields"], 200)
         self.assertEqual(admission["approved_annotations"], [])
         self.assertEqual(admission["runtime_aliases_added"], [])
         sources = {item["id"]: item for item in read("sources.json")["sources"]}

@@ -112,7 +112,7 @@
   "accepted_groups": 50,
   "accepted_fields": 200,
   "pending_fields": 0,
-  "missing_admitted_fields": 200,
+  "missing_admitted_fields": 0,
   "approved_annotations": 0,
   "runtime_aliases_added": 0,
   "baseline_content_version": "core-109-v1",
@@ -129,7 +129,7 @@
   "reviewed_author_commit": "a34b1ae",
   "reviewed_sources": 51,
   "corrected_translation_fields": 2,
-  "count_boundary": "accepted_groups/fields count independent selected-content acceptance only; all 200 newly admitted canonical fields remain pending parent conversion/admission, so missing_admitted_fields remains 200 and global baseline is unchanged.",
+  "count_boundary": "All 50 independently accepted groups / 200 fields are canonically admitted in core-119-v1; missing_admitted_fields is 0. Baseline counters describe core-109-v1 before this cohort.",
   "pending_parent_gates": [
     "Whole-machine offline execution",
     "Other-platform native execution",
