@@ -1,0 +1,33 @@
+{
+  "ticket": 111,
+  "evidence_base": "fa4ea3eab1558fbede04b50cf0cd15f05bdf26dc",
+  "scope_denominator_groups": 4087,
+  "scope_denominator_headwords": 3773,
+  "scope_denominator_fields": 16348,
+  "batch_frozen_groups": 50,
+  "authored_groups": 50,
+  "authored_senses": 50,
+  "authored_fields_by_name": {
+    "french_definition": 50,
+    "ipa": 50,
+    "english": 50,
+    "chinese": 50
+  },
+  "authored_fields": 200,
+  "missing_authored_groups": 0,
+  "missing_authored_fields": 0,
+  "unresolved_exact_groups": [],
+  "reused_groups": 0,
+  "independently_accepted_batch_groups": 0,
+  "independently_accepted_batch_fields": 0,
+  "batch_pending_independent_fields": 200,
+  "batch_missing_admitted_fields": 200,
+  "approved_annotations": [],
+  "approved_specialist_exceptions": [],
+  "runtime_aliases_added": [],
+  "baseline_canonical_groups": 1436,
+  "baseline_canonical_fields": 5744,
+  "baseline_groups_without_admitted_content": 2651,
+  "baseline_missing_admitted_fields": 10604,
+  "note": "Authored candidates add no admitted coverage. Baseline counts come from the unchanged canonical input at the recorded base; the parent must recompute the combined artifact after review."
+}
