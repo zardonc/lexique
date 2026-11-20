@@ -27,7 +27,8 @@ edition credit, its 1932–1935 publication and the established
 [#99 original-edition basis](../issue-99/source-context.json). The Wiki
 contribution/transcription layer and these new adaptations remain separately
 CC BY-SA 4.0. An import marker is not proof of selected-sentence authorship.
-All new span-level rights judgments remain pending for the separate reviewer.
+The [separate review](independent-review.md) accepts all new selected-span rights
+boundaries; actual converted/package notices remain parent-owned.
 The Littré import in saisir's Old French section is explicitly excluded; no
 Old French text or XMLittré transcription supplies a field. Quoted examples,
 translation tables, pictures and audio do not enter the authored fields.
@@ -62,5 +63,6 @@ translation tables, pictures and audio do not enter the authored fields.
 - **gaz and ouest.** The source tables preserve their unchanged plural spellings.
 
 Every relationship has `relation_role=source_binding_only`,
-`alias_admission=not_admitted`, and independent review pending. Full capture and
-preparation scripts remain at the paths in [source-captures.json](source-captures.json).
+`alias_admission=not_admitted`, and independent review passed for source binding.
+Full capture and preparation scripts remain at the paths in
+[source-captures.json](source-captures.json).
