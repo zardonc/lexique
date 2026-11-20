@@ -23,7 +23,22 @@ Original author and reviewer logs are byte-preserved at `target/implement-110-11
 
 ## Verification
 
-Frontend lint, typecheck, build, the browser smoke test and all **13 core browser checks** passed on Windows 11 x64. Converter/cohort, portable-package, backend and final native checks are being recorded at `target/implement-110-119/`.
+The packaged native build is from `00ea06228926e1b9a4e8644a267bce46316f1a39` on Windows 11 x64. Its executable SHA-256 is `53517529b48a639db9a7f2e7606565bcc81e688c1e05dfdd09b1535b6a80decc`. The format-1 core resource is **9,039,872 bytes**, SHA-256 `5afa6c9c3d80f386e9a3e034895fabedc6e62dc0bba051cbfe855df605341ed4`. The portable ZIP passed **183-file** verification. [Build metadata](../../../target/implement-110-119/final-build.json), [package results](../../../target/implement-110-119/final-package.json), [resource report](../../../target/desktop-core-pilot/report.json) and [coverage](../../../target/desktop-core-pilot/coverage.json) retain the exact inputs and output identities.
+
+| Check | Result | Evidence |
+| --- | --- | --- |
+| Frontend lint, typecheck and build | Passed | [lint](../../../target/implement-110-119/lint-final.log), [types](../../../target/implement-110-119/typecheck.log), [build](../../../target/implement-110-119/build.log) |
+| Browser smoke and core flows | 1 + 13 passed | [smoke](../../../target/implement-110-119/browser-smoke.log), [core](../../../target/implement-110-119/browser-core.log) |
+| Converter and content cohorts | 90 passed | [tests](../../../target/implement-110-119/core-all.log) |
+| Portable package | 16 passed | [tests](../../../target/implement-110-119/package-119-green.log) |
+| Rust formatting and locked precompilation | Passed | [format](../../../target/implement-110-119/rust-fmt.log), [precompile](../../../target/implement-110-119/rust-precompile-final.log) |
+| Backend execution | 210 passed; hard 60-second execution limit retained | [tests](../../../target/implement-110-119/rust-tests.log) |
+| Actual packaged native batches | All ten passed: every exact group/field matches; every headword saved and reopened | [native execution](../../../target/implement-110-119/native-execution-verification.json) |
+| Old-resource upgrade | Passed; notes, examples, FSRS and protected Opus identities preserved; closed baseline files byte-identical | [upgrade](../../../target/issue-119/native-upgrade/results.json) |
+
+Every native scenario uses the recorded executable, retains the hard 60-second limit, reports **zero external WebView requests**, and leaves **zero owned hosts, workers or helpers**. The `tien/NOM` source panel displays the published edition and all four field sources with their versions and spans.
+
+Broad checks ran during integration. The final publication attribution and native source-detail assertions were followed by focused publication validation, lint, resource preparation and prior-payload preservation. The final portable checks and native build/scenarios include the package-version update. Full logs and this distinction are retained in [aggregate verification](../../../target/implement-110-119/verification-final.json).
 
 ## Limits
 
