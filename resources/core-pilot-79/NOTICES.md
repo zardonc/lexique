@@ -859,7 +859,7 @@ remain unchanged. Full and Lite use identical dictionary content and notices.
 ## Content batches #100–#109
 
 The additional 492 selected senses / 1,968 fields retain exact fixed sources, contributor histories and selected spans.
-Credit Wiktionnaire and Wikisource contributors for source transcription/adaptation and Lexique contributors for recorded scoped adaptations, explanatory translations and construction notes, under CC BY-SA 4.0. The marché replacement retains the original 1836 Charles Soulice public-domain source credit and its fixed Wikisource transcription separately from the recorded adaptations.
+Credit Wiktionnaire and Wikisource contributors for source transcription/adaptation and Lexique contributors for recorded scoped adaptations, explanatory translations and construction notes, under CC BY-SA 4.0. The marché replacement retains the original 1836 Théodore Soulice public-domain source credit and its fixed Wikisource transcription separately from the recorded adaptations.
 Where an Académie française eighth-edition marker is recorded, retain the original 1932–1935 collective edition credit and public-domain boundary, separately from subsequent CC BY-SA 4.0 contributions. Actual original authors/import and bibliography notices are retained in selected-source-context.json. Unselected quotation bodies, media and proprietary corroboration prose are excluded.
 The current development core contains 1,436 admitted groups / 5,744 fields, 1,434 everyday groups, two specialist senses and 15 approved zero-field annotations / 60 missing fields. Full and Lite use identical dictionary content and notices.
 
