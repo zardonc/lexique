@@ -6,7 +6,7 @@ isolated-headword IPA, original English explanation and original Chinese
 explanation for the same use. Their [field bindings](source-excerpts.json) retain
 immutable revision IDs/URLs and exact one-based source lines/columns.
 
-## Fixed sources and author rights proposal
+## Fixed sources and selected rights
 
 Fifty first-party Wiktionnaire revisions cover the 46 distinct frozen headwords
 and the supporting entries `tout`, `celle`, `celui-ci` and `professeur`.
@@ -24,7 +24,7 @@ transcription/adaptation and Lexique adaptations are recorded separately.
 The original edition's public-domain proposal reuses the project's fixed
 article L123-3 and publication evidence from [#99](../issue-99/source-context.json),
 using final publication in 1935 and conservative expiry on 2006-01-01.
-The exact new selected spans await separate review against that basis.
+The independent selected-span review applies that established basis to this batch.
 No additional imported-work template was found in these captured pages.
 Bibliographic references and quoted examples elsewhere on a page are preserved
 in raw evidence and do not supply expressive field wording.
@@ -34,8 +34,9 @@ fields, contributor-context pointers, original-work layers, authorship of new
 translations, modifications, [complete CC BY-SA 4.0 text](../../../resources/core-pilot-79/COPYING)
 and required attribution/ShareAlike/notice obligations. Current CC legal text,
 Wikimedia terms and three fixed French rights/import-policy revisions were
-captured in full. These are author proposals for a separate selected-span audit;
-combined parent packaging remains pending.
+captured in full. Individual independent decisions now accept all 200 selected
+fields and their supporting boundaries; original author assessments remain
+alongside the decisions. Combined parent packaging remains pending.
 
 ## Construction, spelling and flexion
 
@@ -72,7 +73,8 @@ API IDs/timestamps, raw content equality, source language/POS, IPA variant
 positions and exact frozen memberships. The focused test reads the delivered
 author records and retained source spans at the approved resource boundary.
 
-There are no reused assigned groups, no new owner exceptions, no admitted new
-fields and no runtime aliases. The fixed denominator stays 4,087 groups; all
-200 batch fields remain unadmitted. The parent owns canonical inclusion,
-conversion, notices and native verification after separate review.
+There are no reused assigned groups, no new owner exceptions, no canonically
+admitted new fields and no runtime aliases. Independent acceptance is 50 groups
+and 200 unchanged fields, with zero unresolved fields. The fixed denominator
+stays 4,087 groups; all 200 batch fields remain unadmitted canonically. The parent
+owns canonical inclusion, conversion, notices and native verification.

@@ -1,87 +1,74 @@
-# Issue #117 author package
+# Issue #117 independently reviewed content
 
-All **50 frozen groups, rows 1801–1850**, have one modern selected sense with
-**200 authored FR/IPA/EN/ZH fields**, zero missing authored fields and exact
-headword/POS/frequency/order preservation. Independent acceptance is
-**0 new groups / 0 new fields**. The denominator remains **4,087 groups**;
-all 200 batch fields remain missing from newly admitted coverage pending the
-parent's separate reviewer and integration gates. No annotation exception or
-runtime alias is proposed.
+**50 exact groups / 50 everyday selected senses / 200 fields accepted unchanged.**
+Corrections: **0**. Unresolved selected fields: **0**. No group, spelling, subclass,
+frequency or row order changes; no owner exception or runtime alias is added.
+The denominator remains **4,087 groups**. Canonical admission remains **0 new
+fields**, with all **200** batch fields pending parent conversion and notices.
 
 Scope: [#117](https://github.com/zardonc/lexique/issues/117),
-[parent #78](https://github.com/zardonc/lexique/issues/78),
-and the [fixed membership](../../../resources/core-pilot-79/scope-manifest.csv).
+[parent #78](https://github.com/zardonc/lexique/issues/78), and the
+[fixed manifest](../../../resources/core-pilot-79/scope-manifest.csv).
 
-| File | Content |
-| --- | --- |
-| [groups.json](groups.json) | Exact frozen identities and complete selected fields |
-| [review-candidates.json](review-candidates.json) | Unchanged author content for separate review |
-| [field-review.json](field-review.json) | 200 pending field reviews, 50 selected uses and 50 binding-only spelling relations |
-| [sources.json](sources.json) | 50 immutable revisions, authors, rights layers and modification records |
-| [source-excerpts.json](source-excerpts.json) | Exact definition/IPA lines, IPA columns and construction/flexion spans |
-| [source-context.json](source-context.json) | Full contributor names, original-work credits and source frames |
-| [source-captures.json](source-captures.json) | Full raw API/source, contributor, authority and preparation paths |
-| [rights.json](rights.json) | 200 selected-field rights proposals, legal text and redistribution obligations |
-| [reuse.json](reuse.json) | No assigned group already admitted at the baseline |
-| [admission.json](admission.json) | Author counts and pending parent gates |
+[Accepted groups](groups.json) retain all 200 texts unchanged.
+[Original candidates](review-candidates.json) retain the full author proposals
+and pending draft statuses. [Field review](field-review.json) records 200 exact
+accepted texts, language-specific reasons, selected-rights reasons, 50 modern
+uses and 50 binding-only spelling decisions. [Sources](sources.json),
+[context](source-context.json), [excerpts](source-excerpts.json) and
+[captures](source-captures.json) retain fixed revisions, full contributors,
+original-work credits and exact field/support bindings.
+[Rights](rights.json), [reuse](reuse.json) and [admission](admission.json)
+separate selected acceptance from canonical admission. The
+[independent review](independent-review.md) and
+[selected-rights report](selected-rights-review.md) explain the decisions.
 
-[Source research](source-research.md) records the selected-use boundaries.
-[Independent review status](independent-review.md) reserves judgment for the
-parent's fresh separate reviewer.
+## Identity and evidence
 
-## Author verification
+Author commit: `352d26695550607a0ab6b2d81a75dfa05ac25780`.
+Reviewed integration/diff base: `7b9510481dde923b368700a7323c6ef19bc40b03`.
+Fresh reviewer checkout: `C:/Users/inthe/IdeaProjects/lexique-review-117`,
+branch `codex/d2-review-117`, separate from author and parent integration owner.
+This is an agent content review; human learner acceptance remains separate.
 
-Checkout: `C:/Users/inthe/IdeaProjects/lexique-batch-117`, branch
-`codex/d2-content-117`; initial integration baseline
-`83c7381a3e70699790caccb5aea81858e5b47380` was confirmed and merged before work.
-The owned changes are this directory and
-[scripts/test_core_batch_117.py](../../../scripts/test_core_batch_117.py).
-The complete evidence root is `C:/Users/inthe/IdeaProjects/lexique-batch-117/target/issue-117/`.
+Full ticket/parent captures were read in
+`C:/Users/inthe/IdeaProjects/lexique-spec-110-119/target/implement-110-119/`.
+Author archive:
+`C:/Users/inthe/IdeaProjects/lexique-spec-110-119/target/implement-110-119/author-evidence/issue-117/`.
+Original author evidence remains at
+`C:/Users/inthe/IdeaProjects/lexique-batch-117/target/issue-117/`.
+Complete reviewer projections, audits and command outputs remain at
+`C:/Users/inthe/IdeaProjects/lexique-review-117/target/review-117/`.
 
-The preapproved resource boundary recorded missing-package
-[RED](../../../target/issue-117/red.log), then complete-fields
-[GREEN](../../../target/issue-117/fields-green.log).
-The rights/construction slice recorded missing-rights
-[RED](../../../target/issue-117/rights-red.log), followed by final
-[GREEN](../../../target/issue-117/green.log): **2 tests passed**.
-Membership, field/source/version/span binding, pending review, exact flexions,
-rights records and retained raw construction spans are checked.
+All fields were read in ten five-group projections against fixed definitions,
+IPA, French grammatical/form frames, neighboring senses and import/reference
+markers. The audit matches 50 complete raw/API revision pairs, 200 field and
+238 supporting spans, three authority captures and eight terminating contributor
+parts with 3,335 names summed per article. Selected text remains **15,250
+characters / 19,009 UTF-8 bytes**, with a longest field of **200 characters**.
 
-```powershell
-uv run --python 3.14.10 --no-project python -B -X utf8 target/issue-117/prepare_candidates.py
-uv run --python 3.14.10 --no-project python -B -X utf8 target/issue-117/finish_author_package.py
-uv run --python 3.14.10 --no-project python -B -X utf8 -m unittest discover -s scripts -p test_core_batch_117.py
-pnpm test:docs
-git diff --cached --check
-```
+## Verification
 
-Preparation reproduces from retained fixed captures without a live dictionary
-request. The full [preparation](../../../target/issue-117/prepare.log),
-[completion](../../../target/issue-117/finish.log),
-[documentation](../../../target/issue-117/docs-check.log),
-[diff](../../../target/issue-117/diff-check.log),
-[initial integration](../../../target/issue-117/integration-initial.log),
-[final integration](../../../target/issue-117/integration-final.log) and
-[tested state](../../../target/issue-117/tested-state.json) logs remain local.
-The full authored patch and separate tests patch are retained as
-`target/issue-117/authored-package.patch` and `target/issue-117/tests.patch`.
+Windows 11 x64, PowerShell 7, uv CPython **3.14.10**, pnpm **11.25.0**.
 
-Selected text totals **15,250 characters / 19,009 UTF-8 bytes**, with a longest
-field of **200 characters**. These are authored-text measurements.
+| Check | Result | Complete output |
+| --- | --- | --- |
+| Source/revision/span/contributor/authority audit | Passed | [source-audit.log](../../../target/review-117/source-audit.log), [source-audit.json](../../../target/review-117/source-audit.json) |
+| Focused resource check | Passed, 2 tests | [focused.log](../../../target/review-117/focused.log) |
+| Documentation and repository links | Passed | [docs-check.log](../../../target/review-117/docs-check.log) |
+| Owned diff whitespace | Passed | [diff-check.log](../../../target/review-117/diff-check.log) |
+| Committed head and merged integration tip | Recorded | [final-verification.json](../../../target/review-117/final-verification.json) |
 
-The documentation check passed for all 295 tracked documents with no problems;
-the staged diff check passed. Final post-merge results and the exact tested
-head/integration SHAs are retained in the tested-state record.
+Commands: `uv run --python 3.14.10 --no-project python -B -X utf8 -m unittest discover -s scripts -p test_core_batch_117.py`,
+`pnpm test:docs`, `git diff --check` and `git diff --cached --check`.
+The scoped committed patch and test-only patch are `reviewer.patch` and
+`reviewer-test.patch` in the reviewer evidence root.
 
 ## Pending parent gates
 
-All 50 groups / 200 fields await separate semantic, selected-rights,
-construction and spelling review. The existing DAF8 collective-work legal
-basis is reused from #99; it has not received an independent refresh here.
-Page import markers do not establish the authorship of a selected sentence.
-
-Admission, reproducible canonical conversion, combined packaged obligations,
-actual native lookup/save/reopen and learner acceptance are parent-owned and
-unrun here. Frontend, Rust, platform and release checks were not run for this
-author package. Saved learner data and the shared canonical resource retain
-their existing owners.
+All 200 batch fields remain unadmitted in canonical coverage. The parent owns
+binding normalization, canonical inclusion, reproducible conversion, coverage
+and size reports, actual packaged notices, native lookup/save/reopen, learner
+acceptance and release verification. App, Rust, native, offline and release
+checks were not run here. No live refetch or statute refresh is claimed.
+Existing learning data and original source captures are preserved.
