@@ -2,7 +2,7 @@
 
 **46 groups / 184 exact FR/IPA/EN/ZH fields accepted; 16 fields remain missing.** All 50 frozen rows 1201–1250 remain in [groups](groups.json), [original review candidates](review-candidates.json) and [admission](admission.json). The denominator remains 4,087. Four zero-field annotations are owner-approved on 2026-11-19; no runtime alias is approved.
 
-Reviewed author head: 1d3ab488bcd7ee079c674977f137f832e35604e1; author diff base: aae5273af846e57668a8d267fa6a6566c4fd6e91. Owning checkout: C:/Users/inthe/IdeaProjects/lexique-batch-105, branch codex/d2-content-105. Changes cover only this evidence directory. Full execution evidence: C:/Users/inthe/IdeaProjects/lexique-batch-105/target/issue-105/reviewer/, Windows, reviewed author head above.
+Reviewed author head: 1d3ab488bcd7ee079c674977f137f832e35604e1; author diff base: aae5273af846e57668a8d267fa6a6566c4fd6e91. Owning checkout: C:/Users/inthe/IdeaProjects/lexique-batch-105, branch codex/d2-content-105. Changes cover only this evidence directory. Full execution evidence: C:/Users/inthe/IdeaProjects/lexique-spec-100-109/target/implement-100-109/worker-audit/author-105-final/target/issue-105/reviewer/, Windows, reviewed author head above.
 
 ## Content and rights
 

@@ -26,7 +26,7 @@ The project owner explicitly approved the exact row1051 `s/PRO:per` zero-field a
 
 ## Validation and delivery
 
-Full Windows logs, fixed primary captures, structural preservation results and retained review patches are under `C:/Users/inthe/IdeaProjects/lexique-batch-102/target/issue-102/mme-review/`.
+Full Windows logs, fixed primary captures, structural preservation results and retained review patches are under `C:/Users/inthe/IdeaProjects/lexique-spec-100-109/target/implement-100-109/worker-audit/author-102-final/target/issue-102/mme-review/`.
 
 - PASS: `uv run --python 3.14.10 --no-project python -B -X utf8 -m unittest discover -s scripts -p test_core_batch_102.py` — three focused proposal/accepted-field/source/annotation tests; `focused.log`.
 - PASS: `uv run --python 3.14.10 --no-project python -B -X utf8 target/issue-102/verify_sources.py` — original API/wikitext and field bindings; `source-bindings.log`.

@@ -53,7 +53,7 @@ Author checkout: `C:/Users/inthe/IdeaProjects/lexique-batch-109`, branch
 `codex/d2-content-109`, based on integration `codex/d2-content-100-109` at
 `aae5273af846e57668a8d267fa6a6566c4fd6e91`. Integration’s current tip is merged
 before handoff. Source/capture/preparation evidence remains at
-`C:/Users/inthe/IdeaProjects/lexique-batch-109/target/issue-109/`.
+`C:/Users/inthe/IdeaProjects/lexique-spec-100-109/target/implement-100-109/worker-audit/author-109-final/target/issue-109/`.
 
 ## Review outcome and remaining gates
 

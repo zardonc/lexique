@@ -2,7 +2,7 @@
 
 **49 groups / 196 exact FR/IPA/EN/ZH fields accepted; four fields remain missing.** All 50 frozen rows 1251–1300 remain present, with their exact word/POS and frequency strings. The denominator remains 4,087 groups. The owner approved one zero-field annotation on 2026-11-19; no runtime alias is approved.
 
-Reviewed author head: c15e346d7f4dcbe37333f8f844417c4cf2614246; author diff base: aae5273af846e57668a8d267fa6a6566c4fd6e91. Owning checkout: C:/Users/inthe/IdeaProjects/lexique-batch-106, branch codex/d2-content-106. This reviewer is separate from the author and merger. Changes cover this evidence directory and the focused scripts/test_core_batch_106.py comparison. Full execution evidence: C:/Users/inthe/IdeaProjects/lexique-batch-106/target/issue-106/reviewer/, Windows, reviewed author head above.
+Reviewed author head: c15e346d7f4dcbe37333f8f844417c4cf2614246; author diff base: aae5273af846e57668a8d267fa6a6566c4fd6e91. Owning checkout: C:/Users/inthe/IdeaProjects/lexique-batch-106, branch codex/d2-content-106. This reviewer is separate from the author and merger. Changes cover this evidence directory and the focused scripts/test_core_batch_106.py comparison. Full execution evidence: C:/Users/inthe/IdeaProjects/lexique-spec-100-109/target/implement-100-109/worker-audit/author-106-final/target/issue-106/reviewer/, Windows, reviewed author head above.
 
 ## Content and rights
 

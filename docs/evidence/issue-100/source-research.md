@@ -145,7 +145,7 @@ figurative, inflected or alternative senses.
 ## Preparation and verification
 
 All preparation/acquisition helpers and complete logs remain under
-`C:/Users/inthe/IdeaProjects/lexique-batch-100/target/issue-100/`.
+`C:/Users/inthe/IdeaProjects/lexique-spec-100-109/target/implement-100-109/worker-audit/author-100-final/target/issue-100/`.
 `selection.py` contains the exact author-selected uses. `prepare.py` checks the
 original revision/wikitext and builds the candidate package; `complete_context.py`
 attaches the historical/rights observations without changing candidate wording.

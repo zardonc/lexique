@@ -20,8 +20,8 @@ The writing restrictions are readable in all three explanatory fields: capital `
 
 Complete original API response and wikitext:
 
-- `C:/Users/inthe/IdeaProjects/lexique-batch-102/target/issue-102/sources/batch.api.json`
-- `C:/Users/inthe/IdeaProjects/lexique-batch-102/target/issue-102/sources/193650.wiki`
+- `C:/Users/inthe/IdeaProjects/lexique-spec-100-109/target/implement-100-109/worker-audit/author-102-final/target/issue-102/sources/batch.api.json`
+- `C:/Users/inthe/IdeaProjects/lexique-spec-100-109/target/implement-100-109/worker-audit/author-102-final/target/issue-102/sources/193650.wiki`
 
 [Source excerpts](source-excerpts.json) bind every field and supporting span to this fixed revision. [Source context](source-context.json) records the selected grammar and [sources](sources.json) the proposed rights boundary. The retained independent remote comparison covers the original capture; it does not review the new field wording.
 
@@ -42,4 +42,4 @@ Checkout: `C:/Users/inthe/IdeaProjects/lexique-batch-102`, branch `codex/d2-cont
 - PASS: preservation comparison against the pre-change evidence — 48 accepted groups / 192 fields and review records unchanged; row 1051 and established spelling relations unchanged.
 - PASS: `git diff --check` and local Markdown links.
 
-Complete logs and full/test-only patches are under `C:/Users/inthe/IdeaProjects/lexique-batch-102/target/issue-102/mme-author/`. `tested-state.json` records the exact committed SHA and Windows execution boundary; `handoff.patch` and `tests.patch` capture `git diff c2f48cb -- docs/evidence/issue-102 scripts/test_core_batch_102.py` and `git diff c2f48cb -- scripts/test_core_batch_102.py`, respectively. Full-suite, runtime conversion, native and release checks were not run for this content-only handoff.
+Complete logs and full/test-only patches are under `C:/Users/inthe/IdeaProjects/lexique-spec-100-109/target/implement-100-109/worker-audit/author-102-final/target/issue-102/mme-author/`. `tested-state.json` records the exact committed SHA and Windows execution boundary; `handoff.patch` and `tests.patch` capture `git diff c2f48cb -- docs/evidence/issue-102 scripts/test_core_batch_102.py` and `git diff c2f48cb -- scripts/test_core_batch_102.py`, respectively. Full-suite, runtime conversion, native and release checks were not run for this content-only handoff.

@@ -20,7 +20,7 @@ wikitext, revision IDs, titles, timestamps and editors match the original
 [captures](source-captures.json); all 200 exact candidate spans match those
 originals. Full captures and verification logs remain under:
 
-`C:/Users/inthe/IdeaProjects/lexique-batch-108/target/issue-108/`
+`C:/Users/inthe/IdeaProjects/lexique-spec-100-109/target/implement-100-109/worker-audit/author-108-final/target/issue-108/`
 
 The original comparison also passed for all 173 grammar/construction spans and
 the French-language frames of all 196 admitted fields; see

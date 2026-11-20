@@ -11,7 +11,7 @@ for independent review.
 The [47 source records](sources.json) use the revisions actually returned by the
 first-party API. [Capture records](source-captures.json) point to the complete
 original response and raw article text at
-`C:/Users/inthe/IdeaProjects/lexique-batch-107/target/issue-107/sources/`.
+`C:/Users/inthe/IdeaProjects/lexique-spec-100-109/target/implement-100-109/worker-audit/author-107-final/target/issue-107/sources/`.
 Raw line numbering preserves blank lines; IPA uses the exact template substring
 and column. Quoted example bodies, images and audio remain in the ignored raw
 captures and are not field content or bundled notices.

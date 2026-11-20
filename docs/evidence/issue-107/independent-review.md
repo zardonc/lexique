@@ -2,7 +2,7 @@
 
 **50 groups / 200 FR/IPA/EN/ZH fields accepted; no missing fields.** All exact frozen rows 1301–1350, POS subclasses and both frequency strings remain. The denominator is **4,087 groups**. No alias or owner exception is approved.
 
-Ticket [#107](https://github.com/zardonc/lexique/issues/107), parent [#78](https://github.com/zardonc/lexique/issues/78). Reviewed author head: `878fee8fa59c830126065c5654792da5d9a41092`; diff base: the same head for this reviewer-only change. Owning checkout: `C:/Users/inthe/IdeaProjects/lexique-batch-107`, branch `codex/d2-content-107`. This reviewer is independent of the author and merger. Changes cover the evidence directory and the focused test's comparison of accepted content with the preserved draft. Retained patch: `C:/Users/inthe/IdeaProjects/lexique-batch-107/target/issue-107/reviewer-handoff.patch`, produced by `git diff 878fee8fa59c830126065c5654792da5d9a41092 -- docs/evidence/issue-107 scripts/test_core_batch_107.py`.
+Ticket [#107](https://github.com/zardonc/lexique/issues/107), parent [#78](https://github.com/zardonc/lexique/issues/78). Reviewed author head: `878fee8fa59c830126065c5654792da5d9a41092`; diff base: the same head for this reviewer-only change. Owning checkout: `C:/Users/inthe/IdeaProjects/lexique-batch-107`, branch `codex/d2-content-107`. This reviewer is independent of the author and merger. Changes cover the evidence directory and the focused test's comparison of accepted content with the preserved draft. Retained patch: `C:/Users/inthe/IdeaProjects/lexique-spec-100-109/target/implement-100-109/worker-audit/author-107-final/target/issue-107/reviewer-handoff.patch`, produced by `git diff 878fee8fa59c830126065c5654792da5d9a41092 -- docs/evidence/issue-107 scripts/test_core_batch_107.py`.
 
 ## Decisions
 
@@ -22,7 +22,7 @@ Combined redistribution requires fixed article/history credit, applicable origin
 
 ## Validation and limitations
 
-Windows owning-worktree logs remain under `C:/Users/inthe/IdeaProjects/lexique-batch-107/target/issue-107/`, tied to the reviewed author head plus this retained review patch:
+Windows owning-worktree logs remain under `C:/Users/inthe/IdeaProjects/lexique-spec-100-109/target/implement-100-109/worker-audit/author-107-final/target/issue-107/`, tied to the reviewed author head plus this retained review patch:
 
 - Focused baseline and final field/source/membership checks: `reviewer-focused-baseline.log` and `reviewer-focused-final.log`.
 - Independent revision comparison: `reviewer-remote.log` and `reviewer-primary/remote-verification.json`.

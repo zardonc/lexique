@@ -2,7 +2,7 @@
 
 **50 groups / 200 FR/IPA/EN/ZH fields accepted; no missing fields.** Exact frozen rows 1401–1450, POS subclasses, order and both frequency strings remain. The denominator is **4,087 groups**. No runtime alias or owner exception is approved.
 
-Ticket [#109](https://github.com/zardonc/lexique/issues/109), parent [#78](https://github.com/zardonc/lexique/issues/78). Reviewed author head and reviewer diff base: `524ac2d949d21d7eb79d33fcdbc9c6c9d880f5fd`. Owning checkout: `C:/Users/inthe/IdeaProjects/lexique-batch-109`, branch `codex/d2-content-109`. This reviewer is independent of the author and merger. Changes cover the evidence directory and the focused accepted-content comparison. Retained patch: `C:/Users/inthe/IdeaProjects/lexique-batch-109/target/issue-109/reviewer-handoff.patch`, produced by `git diff 524ac2d949d21d7eb79d33fcdbc9c6c9d880f5fd -- docs/evidence/issue-109 scripts/test_core_batch_109.py`.
+Ticket [#109](https://github.com/zardonc/lexique/issues/109), parent [#78](https://github.com/zardonc/lexique/issues/78). Reviewed author head and reviewer diff base: `524ac2d949d21d7eb79d33fcdbc9c6c9d880f5fd`. Owning checkout: `C:/Users/inthe/IdeaProjects/lexique-batch-109`, branch `codex/d2-content-109`. This reviewer is independent of the author and merger. Changes cover the evidence directory and the focused accepted-content comparison. Retained patch: `C:/Users/inthe/IdeaProjects/lexique-spec-100-109/target/implement-100-109/worker-audit/author-109-final/target/issue-109/reviewer-handoff.patch`, produced by `git diff 524ac2d949d21d7eb79d33fcdbc9c6c9d880f5fd -- docs/evidence/issue-109 scripts/test_core_batch_109.py`.
 
 ## Decisions
 
@@ -22,7 +22,7 @@ Applicable DAF8 credit uses the established Académie française collective-edit
 
 ## Validation and limitations
 
-Windows owning-worktree evidence remains under `C:/Users/inthe/IdeaProjects/lexique-batch-109/target/issue-109/`, tied to the reviewed author head plus this retained review patch:
+Windows owning-worktree evidence remains under `C:/Users/inthe/IdeaProjects/lexique-spec-100-109/target/implement-100-109/worker-audit/author-109-final/target/issue-109/`, tied to the reviewed author head plus this retained review patch:
 
 - Focused baseline and final field/source/membership checks: `reviewer-focused-baseline.log` and `reviewer-focused-final.log`.
 - Independent revision comparison: `reviewer-remote.log` and `reviewer-primary/remote-verification.json`.

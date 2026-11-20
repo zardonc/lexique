@@ -8,7 +8,7 @@ All **50 frozen groups at rows 1051–1100** are accounted for: **49 content gro
 
 [Source captures](source-captures.json) identify original first-party API response bytes, complete revision wikitext, actual revision timestamps and linked contributor histories. Full evidence and author scripts remain at:
 
-`C:/Users/inthe/IdeaProjects/lexique-batch-102/target/issue-102/`
+`C:/Users/inthe/IdeaProjects/lexique-spec-100-109/target/implement-100-109/worker-audit/author-102-final/target/issue-102/`
 
 The `sources/` directory uses unique page-ID filenames for case-distinct titles. The independent reviewer refetched all 56 fixed revisions and compared complete original API/wikitext, IDs, titles, timestamps and last editors. [Rights](rights.json) records checked authorities and selected original layers. Source excerpts retain one-based lines and columns; unrelated example prose stays in the local captures. New primary `mme/Mme` corroboration and exact capture paths are in the spelling-relation records.
 

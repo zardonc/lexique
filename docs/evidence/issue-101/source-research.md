@@ -10,7 +10,7 @@ and frequency strings. [Groups](groups.json) select one precise use for each of
 [Source captures](source-captures.json) retain 46 real Wiki pages: 42 exact
 ticket headwords and four supporting spellings, `m’`, `m'`, `me` and `s’`.
 Original first-party API response bytes and each complete revision are retained
-under `C:/Users/inthe/IdeaProjects/lexique-batch-101/target/issue-101/sources/`.
+under `C:/Users/inthe/IdeaProjects/lexique-spec-100-109/target/implement-100-109/worker-audit/author-101-final/target/issue-101/sources/`.
 The revisions are the actual returned versions, with their own timestamps;
 they are not described as October-cutoff snapshots. No source ID is reused from
 another batch; source IDs start with `b101_` and sense IDs with `b101-`.

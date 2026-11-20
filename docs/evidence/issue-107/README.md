@@ -29,7 +29,7 @@ No reused groups, scope exceptions or runtime aliases are added.
 [Capture records](source-captures.json) supply each page ID, actual revision,
 timestamp, fixed `oldid` URL, history URL and original raw/API paths. The complete
 author evidence root is
-`C:/Users/inthe/IdeaProjects/lexique-batch-107/target/issue-107/`.
+`C:/Users/inthe/IdeaProjects/lexique-spec-100-109/target/implement-100-109/worker-audit/author-107-final/target/issue-107/`.
 Its `sources/batch-current-fixed.api.json` is a first-party current API response;
 the actual returned revisions are used, rather than a claimed cutoff revision.
 The raw `.wiki` files preserve blank lines. Every selected line and IPA template

@@ -2,7 +2,7 @@
 
 **50 groups / 200 exact FR/IPA/EN/ZH fields independently accepted; zero missing fields.** All frozen rows 1151–1200, exact spellings, grammatical subclasses, order and frequency strings remain unchanged. The denominator is **4,087 groups**. No runtime alias or annotation exception is approved. Native and package admission remain parent-owned.
 
-This reviewer is separate from the content author and integration merger. Reviewed committed author head and review diff base: `147f9493b07c604c897fb553e85bb1a584b4ec30`. The author branch incorporated integration `87d4b3124bdb06f2727c817fa18bbbcd6c5c5cc5` before review. Owning checkout: `C:/Users/inthe/IdeaProjects/lexique-batch-104`. Retained execution/source evidence: `C:/Users/inthe/IdeaProjects/lexique-batch-104/target/issue-104/`, reviewed at that author head on Windows x64, PowerShell 7 and uv Python 3.14.10. Reviewer changes stay within this evidence directory and the focused batch check.
+This reviewer is separate from the content author and integration merger. Reviewed committed author head and review diff base: `147f9493b07c604c897fb553e85bb1a584b4ec30`. The author branch incorporated integration `87d4b3124bdb06f2727c817fa18bbbcd6c5c5cc5` before review. Owning checkout: `C:/Users/inthe/IdeaProjects/lexique-batch-104`. Retained execution/source evidence: `C:/Users/inthe/IdeaProjects/lexique-spec-100-109/target/implement-100-109/worker-audit/author-104-final/target/issue-104/`, reviewed at that author head on Windows x64, PowerShell 7 and uv Python 3.14.10. Reviewer changes stay within this evidence directory and the focused batch check.
 
 ## Independent content decision
 

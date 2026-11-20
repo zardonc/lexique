@@ -107,7 +107,7 @@ French `fr-rég` template, not an invented pronunciation.
 
 Raw API responses, blank-line-preserving wikitext, contributor pagination,
 selection/preparation scripts and execution logs are retained at
-`C:/Users/inthe/IdeaProjects/lexique-batch-109/target/issue-109/`.
+`C:/Users/inthe/IdeaProjects/lexique-spec-100-109/target/implement-100-109/worker-audit/author-109-final/target/issue-109/`.
 The [capture manifest](source-captures.json) gives exact per-source paths.
 
 Author preparation validated all 200 raw bindings, French/POS frames and exact
