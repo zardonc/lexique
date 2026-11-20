@@ -55,20 +55,20 @@
   ],
   "scope_denominator_groups": 4087,
   "scope_denominator_headwords": 3773,
-  "status": "pending_independent_review",
-  "accepted_groups": 0,
-  "accepted_fields": 0,
+  "status": "incomplete",
+  "accepted_groups": 49,
+  "accepted_fields": 196,
   "candidate_groups": 49,
   "candidate_fields": 196,
   "source_count": 46,
   "missing_candidate_groups": 1,
   "missing_candidate_fields": 4,
-  "unadmitted_groups": 50,
-  "unadmitted_fields": 200,
+  "unadmitted_groups": 1,
+  "unadmitted_fields": 4,
   "approved_annotation_exception_groups": 0,
-  "independent_reviewer": null,
-  "independence": false,
-  "quality_summary": "Author-checked candidates only; row 1005 needs independent confirmation of its exact-spelling/POS blocker.",
+  "independent_reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+  "independence": true,
+  "quality_summary": "49 selected modern everyday groups and 196 FR/IPA/EN/ZH fields independently accepted at their fixed source/rights boundaries; exact bare m/PRO:per remains unresolved with four missing fields.",
   "unresolved": [
     {
       "frozen_row": 1005,
@@ -82,28 +82,65 @@
       "candidate_fields": 0,
       "missing_fields": 4,
       "unadmitted_fields": 4,
-      "unresolved_reason": "No supported exact bare m/PRO:per spelling. Fixed m French section has letter, m... noun and musical adjective, but no personal pronoun. Fixed m’/me support elided/unelided pronouns with different spellings. No alias or annotation exception is authorized.",
+      "unresolved_reason": "Fixed bare m revision 39772551 has French letter (166–169), euphemistic m... noun (196–198) and musical adjective (207–212), no personal pronoun. Fixed m’ revision 39840795 lines 7–14 and me revision 39891222 lines 7–13 support different elided/unelided spellings; straight m' revision 20098185 redirects to m’. Independently retrieved Robert me supports me → m' before a vowel/mute h. None establishes apostrophe-free m as PRO:per. No bare-pronoun field, alias, specialist exception or owner annotation is admitted.",
       "pending_fields": {
         "french_definition": {
           "status": "missing_exact_spelling_pos_source",
-          "reason": "No supported exact bare m/PRO:per spelling. Fixed m French section has letter, m... noun and musical adjective, but no personal pronoun. Fixed m’/me support elided/unelided pronouns with different spellings. No alias or annotation exception is authorized."
+          "reason": "Fixed bare m revision 39772551 has French letter (166–169), euphemistic m... noun (196–198) and musical adjective (207–212), no personal pronoun. Fixed m’ revision 39840795 lines 7–14 and me revision 39891222 lines 7–13 support different elided/unelided spellings; straight m' revision 20098185 redirects to m’. Independently retrieved Robert me supports me → m' before a vowel/mute h. None establishes apostrophe-free m as PRO:per. No bare-pronoun field, alias, specialist exception or owner annotation is admitted.",
+          "candidate_text": null,
+          "accepted_text": null,
+          "accepted_fields": 0,
+          "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141"
         },
         "ipa": {
           "status": "missing_exact_spelling_pos_source",
-          "reason": "No supported exact bare m/PRO:per spelling. Fixed m French section has letter, m... noun and musical adjective, but no personal pronoun. Fixed m’/me support elided/unelided pronouns with different spellings. No alias or annotation exception is authorized."
+          "reason": "Fixed bare m revision 39772551 has French letter (166–169), euphemistic m... noun (196–198) and musical adjective (207–212), no personal pronoun. Fixed m’ revision 39840795 lines 7–14 and me revision 39891222 lines 7–13 support different elided/unelided spellings; straight m' revision 20098185 redirects to m’. Independently retrieved Robert me supports me → m' before a vowel/mute h. None establishes apostrophe-free m as PRO:per. No bare-pronoun field, alias, specialist exception or owner annotation is admitted.",
+          "candidate_text": null,
+          "accepted_text": null,
+          "accepted_fields": 0,
+          "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141"
         },
         "english": {
           "status": "missing_exact_spelling_pos_source",
-          "reason": "No supported exact bare m/PRO:per spelling. Fixed m French section has letter, m... noun and musical adjective, but no personal pronoun. Fixed m’/me support elided/unelided pronouns with different spellings. No alias or annotation exception is authorized."
+          "reason": "Fixed bare m revision 39772551 has French letter (166–169), euphemistic m... noun (196–198) and musical adjective (207–212), no personal pronoun. Fixed m’ revision 39840795 lines 7–14 and me revision 39891222 lines 7–13 support different elided/unelided spellings; straight m' revision 20098185 redirects to m’. Independently retrieved Robert me supports me → m' before a vowel/mute h. None establishes apostrophe-free m as PRO:per. No bare-pronoun field, alias, specialist exception or owner annotation is admitted.",
+          "candidate_text": null,
+          "accepted_text": null,
+          "accepted_fields": 0,
+          "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141"
         },
         "chinese": {
           "status": "missing_exact_spelling_pos_source",
-          "reason": "No supported exact bare m/PRO:per spelling. Fixed m French section has letter, m... noun and musical adjective, but no personal pronoun. Fixed m’/me support elided/unelided pronouns with different spellings. No alias or annotation exception is authorized."
+          "reason": "Fixed bare m revision 39772551 has French letter (166–169), euphemistic m... noun (196–198) and musical adjective (207–212), no personal pronoun. Fixed m’ revision 39840795 lines 7–14 and me revision 39891222 lines 7–13 support different elided/unelided spellings; straight m' revision 20098185 redirects to m’. Independently retrieved Robert me supports me → m' before a vowel/mute h. None establishes apostrophe-free m as PRO:per. No bare-pronoun field, alias, specialist exception or owner annotation is admitted.",
+          "candidate_text": null,
+          "accepted_text": null,
+          "accepted_fields": 0,
+          "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141"
         }
       },
       "annotation_exception": false,
-      "independent_confirmation": "pending"
+      "independent_confirmation": "confirmed_exact_spelling_pos_unresolved",
+      "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+      "independence": true,
+      "accepted_fields": 0
     }
   ],
-  "final_output_validation": "Author membership and fixed-source checks only; independent admission, converter, notices packaging and native lookup/save/reopen are integration responsibilities."
+  "final_output_validation": "target/issue-101/reviewer-final.log",
+  "selected_content_review_status": "passed_for_49_complete_groups",
+  "accepted_sources": 42,
+  "reviewed_source_records": 46,
+  "supporting_source_count": 4,
+  "missing_fields": 4,
+  "new_specialist_exception_groups": 0,
+  "runtime_aliases_added": [],
+  "reviewed_author_head": "da07f57e1c6236fa535512be3af2a700077bc359",
+  "integration_base": "d9f8e985a83512c1292255fc6d97f6605628fc6c",
+  "reviewed_input_files_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-101\\docs\\evidence\\issue-101",
+  "evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-101\\target\\issue-101",
+  "reviewer_independence_statement": "Fresh reviewer separate from candidate author and canonical merger; only precise corrections supported by existing authored sources. No missing group fields authored and self-accepted.",
+  "candidate_preparation_rerun": false,
+  "quality_checkpoint": "field-review.json",
+  "independent_review_summary": "independent-review.md",
+  "missing_admitted_fields": 4,
+  "retained_frozen_groups": 50,
+  "completion_reviewer": "Independent completing content/rights reviewer for issue 101; separate from author and merger"
 }

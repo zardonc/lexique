@@ -1,8 +1,8 @@
-# Issue #101 selected candidates
+# Issue #101 selected-source research
 
 All frozen rows **1001–1050** keep their exact spelling, POS subclass, ordering
 and frequency strings. [Groups](groups.json) select one precise use for each of
-49 groups, with four candidate fields per sense. The same records appear in
+49 groups, with four independently accepted fields per sense. The original candidates appear in
 [review-candidates.json](review-candidates.json). Unknown CEFR values remain null.
 
 ## Fixed sources and original layers
@@ -45,14 +45,15 @@ eighth edition, 1932–1935, collective work; article L123-3 gives seventy years
 from the year after publication, with conservative expiry 2006-01-01. Wiki
 transcription/adaptation and Lexique adaptations remain separately credited
 under CC BY-SA 4.0. The current statute request returned HTTP 403; this package
-does not claim a fresh primary-statute capture or new independent rights decision.
+does not claim a fresh primary-statute capture or newly fetched statutory basis. The independent selected-span decision is recorded in
+[independent review](independent-review.md).
 
 The current contributor-registry request returned HTTP 429, retained in
 `target/issue-101/contributors.log`. Complete linked article histories are the
 proposed attribution route permitted by Wikimedia Terms 7(b). Neither a current
 registry nor a fixed revision's last editor would establish selected-sentence
-authorship. The separate reviewer must assess each selected span's actual
-original/contributor layers and combined obligations before admission.
+authorship. The independent review records each selected span's actual
+original/contributor layers and combined obligations.
 
 The explorer's `dictionary-modern-batch50-next19-20261119` small assigned-scope
 and original-record map were inspected. Its 50 evaluated groups have no overlap
@@ -124,8 +125,8 @@ author evidence root. The selected contrasting spans are in
 [source-excerpts.json](source-excerpts.json).
 
 No prior annotation approval is applied, no new specialist/annotation exception
-is declared, and no apostrophe-removing binding is admitted. Independent
-confirmation is pending; any necessary scope decision belongs to the owner.
-All other candidates remain unadmitted until separate field quality, selected
-source rights and spelling/POS reviews pass. Integration owns final conversion,
+is declared, and no apostrophe-removing binding is admitted. The independent
+review confirms this exact source gap; any necessary scope decision belongs to the owner.
+The other 49 groups and 196 fields pass separate quality, selected-source rights
+and spelling/POS review. Integration owns final conversion,
 packaged notices and real native lookup/trusted save/reopen verification.
