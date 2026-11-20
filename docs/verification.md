@@ -2,22 +2,23 @@
 
 ## 语法笔记与共享分类
 
-2026-11-19 UTC，按 [Q1–Q29 确认设计](grammar-notes-classification-design.md)实现独立语法笔记、共享多分类、文字问答卡和混合复习。工作区为 `lexique-grammar-classification-design`，分支为 `codex/grammar-notes-classification-design`，基线为 `42c720556fd1195cca39ba704761877d1c0df48a`；以下检查针对该基线上的本地实现，尚未推送或发布。
+2026-11-19 UTC，按 [Q1–Q29 确认设计](grammar-notes-classification-design.md)实现独立语法笔记、共享多分类、文字问答卡和混合复习。审查基线为 `42c720556fd1195cca39ba704761877d1c0df48a`；原实现为 `77c98f6`，保存重试修正为 `a78b41e`，主线整合为 `2cba1bf`，最终存储修复为 `2c9017079bf4a53c79bc4d291a2757f0d540e749`。下表分别记录各提交在 Windows x64 上的实际检查。
 
-| 检查 | 当前结果 | 证据 |
-| --- | --- | --- |
-| `pnpm lint`、`pnpm typecheck` | 通过 | [lint](../target/grammar-classification/lint-final.log)、[typecheck](../target/grammar-classification/typecheck-final.log) |
-| 前端 build、`pnpm desktop:build --no-bundle` | 通过 | [前端构建](../target/grammar-classification/frontend-build-final.log)、[原生构建](../target/grammar-classification/desktop-build-delivery.log) |
-| `pnpm rust:fmt` | 通过 | [格式](../target/grammar-classification/rust-fmt-final.log) |
-| `pnpm rust:test:build` → `pnpm test:rust` | 208 项通过，保留执行阶段硬性 60 秒上限 | [预编译](../target/grammar-classification/rust-test-build-final.log)、[执行](../target/grammar-classification/rust-tests-final.log) |
-| `pnpm rust:check`、原生桌面库与缓存检查 | 编译通过；库 97 项通过、2 项忽略；缓存 11 项通过、1 项忽略 | [编译](../target/grammar-classification/rust-check-final.log)、[库](../target/grammar-classification/desktop-lib-tests-final.log)、[缓存](../target/grammar-classification/speech-cache-tests-final.log) |
-| 完整 Playwright | 404 项通过 | [全量](../target/grammar-classification/e2e-complete.log) |
-| 最终分页文案及相关笔记流程 Playwright | `frequency.spec.ts`、`preflight-24.spec.ts`、`notebook.spec.ts`、`grammar-notes.spec.ts` 共 48 项通过 | [相关检查](../target/grammar-classification/e2e-final-ui.log) |
-| Windows x64 实际 SQLite／退出／重启／整份备份恢复 | 最终构建的笔记与备份两场景通过，各保持硬性 60 秒上限；自有进程清理通过 | [原生场景](../apps/desktop/e2e/native-grammar-classification-check.mjs)、[笔记结果](../target/grammar-classification/native-notes-20261119-r6/results.json)、[备份结果](../target/grammar-classification/native-backup-20261119-r2/results.json) |
-| `pnpm scheduling:build` → `pnpm test:scheduling` | 74 组固定输入及 4,096 组校准输入通过；排程结果和数值完全一致 | [排程对照](../target/grammar-classification/scheduling-tests.log) |
-| 文档检查与双轴审查 | 文档／链接通过；标准与规格均无未处理发现 | [文档](../target/grammar-classification/docs-final.log)、[审查](../target/grammar-classification/review-final.json) |
+| 提交 | 检查 | 结果 | 证据 |
+| --- | --- | --- | --- |
+| `a78b41e` | 保存重试修正的 lint、类型检查、build 与语法 Playwright | 通过；语法 8 项通过 | [lint](../target/grammar-classification/review-20261119-user-fixes/user-fix-lint.log)、[类型](../target/grammar-classification/review-20261119-user-fixes/user-fix-typecheck.log)、[build](../target/grammar-classification/review-20261119-user-fixes/user-fix-build.log)、[语法](../target/grammar-classification/review-20261119-user-fixes/user-fix-grammar-e2e.log) |
+| `2cba1bf` | 整合后的 lint、类型检查、build、浏览器预检与完整 Playwright | 通过；全量 409 项通过（298.5 秒） | [lint](../target/grammar-classification/review-20261119-user-fixes/integration-2cba1bf/lint.log)、[类型](../target/grammar-classification/review-20261119-user-fixes/integration-2cba1bf/typecheck.log)、[build](../target/grammar-classification/review-20261119-user-fixes/integration-2cba1bf/build.log)、[预检](../target/grammar-classification/review-20261119-user-fixes/integration-2cba1bf/browser-preflight.log)、[全量](../target/grammar-classification/review-20261119-user-fixes/integration-2cba1bf/e2e.log) |
+| `2cba1bf` → `2c90170` | 删除语法记录与生词批次重放／分块恢复回归 | 修复前 2 项按预期失败，修复后 2 项通过；包含备份恢复后重放 | [红测](../target/grammar-classification/review-20261119-user-fixes/integration-2cba1bf/batch-history-red-results.json)、[绿测](../target/grammar-classification/review-20261119-user-fixes/final-review-fixes/batch-history-green-results.json) |
+| `2cba1bf` | 原生备份比较的 schema 断言 | 实际 SQLite 复现 `19 != 18`；改为 19 后通过 | [失败](../target/grammar-classification/review-20261119-user-fixes/backup-schema-red.log)、[通过](../target/grammar-classification/review-20261119-user-fixes/backup-schema-green.log) |
+| `2c90170` | Rust 格式、预编译、后端执行与锁定编译 | 通过；210 项后端测试通过 | [格式](../target/grammar-classification/review-20261119-user-fixes/final-review-fixes/rust-fmt.log)、[预编译](../target/grammar-classification/review-20261119-user-fixes/final-review-fixes/rust-test-build.log)、[执行](../target/grammar-classification/review-20261119-user-fixes/final-review-fixes/rust-tests.log)、[编译](../target/grammar-classification/review-20261119-user-fixes/final-review-fixes/rust-check.log) |
+| `2c90170` | `pnpm desktop:build --no-bundle`，含生产前端构建 | 通过；原生程序保存固定副本并核对哈希 | [构建](../target/grammar-classification/review-20261119-user-fixes/final-review-fixes/desktop-build.log)、[程序元数据](../target/grammar-classification/review-20261119-user-fixes/final-review-fixes/native-build-metadata.json) |
+| `2c90170` | 原生桌面库与缓存检查 | 预编译通过；库 97 项通过、2 项忽略；缓存 11 项通过、1 项忽略 | [预编译](../target/grammar-classification/review-20261119-user-fixes/final-review-fixes/desktop-tests-build.log)、[库](../target/grammar-classification/review-20261119-user-fixes/final-review-fixes/desktop-lib-tests.log)、[缓存](../target/grammar-classification/review-20261119-user-fixes/final-review-fixes/speech-cache-tests.log) |
+| `2c90170` | Windows x64 实际 SQLite／退出／重启／整份备份恢复 | 笔记场景与备份隔离复测通过；自有进程均已清理 | [原生场景](../apps/desktop/e2e/native-grammar-classification-check.mjs)、[笔记结果](../target/grammar-classification/native-notes-review-2c90170/results.json)、[备份结果](../target/grammar-classification/native-backup-review-2c90170-r2/results.json) |
+| `2c90170` | 双轴审查及修复补审 | Standards 的 2 项 P2 与重复验证异味均修复；Standards／Spec 各 0 项未处理 | [审查](../target/grammar-classification/review-20261119-user-fixes/final-review-fixes/review-final.md) |
 
-桌面库与缓存以 `cargo test --locked --release -p lexique-desktop --lib --test speech_cache --no-run` 预编译；库分八组通过现有 runner 执行，缓存使用 `node scripts/test-rust.mjs --speech-cache`，执行阶段硬限保持。三个忽略项为既有专用子进程夹具。完整命令、源码基点、平台及日志归属见[验收元数据](../target/grammar-classification/validation-final.json)。
+Rust 预编译与执行分开；后端、桌面库各组、缓存及每个原生场景均保留执行阶段硬性 60 秒上限。桌面库与缓存以 `cargo test --locked --release -p lexique-desktop --lib --test speech_cache --no-run` 预编译，库分八组运行。三个忽略项为既有专用子进程夹具。最终命令、完整提交、平台、程序哈希及日志归属见[审查验收元数据](../target/grammar-classification/review-20261119-user-fixes/final-review-fixes/validation.json)。原实现 `77c98f6` 的 208 项后端、404 项浏览器、48 项最终相关 UI，以及 74 组固定／4,096 组校准排程对照，保留于[原验收元数据](../target/grammar-classification/validation-final.json)。
+
+保留两次验收失败：整合首轮 V03 的 size 100／repeat 1 超过事务与竞争写入阈值，随后同代码的[独立 V03](../target/grammar-classification/review-20261119-user-fixes/integration-2cba1bf/v03-focused.json)及最终代码全套后端通过；最终 V03 九个样本均实际争用，最大事务 14.3383 ms、竞争写入 38.75 ms。首次最终[原生备份](../target/grammar-classification/review-20261119-user-fixes/final-review-fixes/native-backup.log)在文件选择阶段发生 WebView2 `ProcessFailed`（-1073741819），同一程序与固定资源在新目录[隔离复测通过](../target/grammar-classification/review-20261119-user-fixes/final-review-fixes/native-backup-r2.log)。两次失败的原因均尚未确定。
 
 本次仅使用自有测试目录及夹具，不触及真实学习库；主工作区和单词资源开发工作区保持。schema 19 与学习快照 v3 保存语法、分类、归属、问答、进度、评分、队列、暂停、两类排序、删除后保留额度、失效保存操作编号和撤销状态；旧 v1／v2 备份的新集合为空，整份恢复保留当前库的删除重试保护。应用回退要求升级前 v1／v2 备份及旧版独立数据目录，旧应用不能读取 schema 19／快照 v3，当前新库及其备份继续保留。
 
