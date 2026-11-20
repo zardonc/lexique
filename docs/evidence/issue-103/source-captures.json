@@ -1192,5 +1192,12 @@
     "revid": 38903168,
     "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\copyright-policy.api.json",
     "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\copyright-policy.wiki"
+  },
+  "independent_review": {
+    "reviewed_author_commit": "6339b0dc4aef34d07a478ded90d39ce349298a2a",
+    "reviewer": "independent-content-rights-reviewer-103-104",
+    "validation": "Complete original API bodies, revision/title/page bindings, selected columns, supporting POS/spelling and source-context bindings independently checked; no all-revision remote refetch claimed.",
+    "modern_comparisons": "target/issue-103/reviewer-modern-captures.json",
+    "extra_originals": "target/issue-103/reviewer-daf8-extra.json"
   }
 }

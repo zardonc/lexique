@@ -1,0 +1,176 @@
+{
+  "status": "passed_at_selected_text_boundary_for_196_fields",
+  "reviewer": {
+    "id": "independent-content-rights-reviewer-103-104",
+    "role": "separate content and selected-span rights reviewer",
+    "independence": "Not the content author or integration merger; independently read proposed text, fixed sources and original-source boundaries.",
+    "reviewed_author_commit": "6339b0dc4aef34d07a478ded90d39ce349298a2a",
+    "checkout": "C:/Users/inthe/IdeaProjects/lexique-batch-103",
+    "platform": "Windows x64; PowerShell 7; uv Python 3.14.10"
+  },
+  "independence": true,
+  "adaptation_license": "CC-BY-SA-4.0",
+  "complete_legal_text": "../../../resources/core-pilot-79/COPYING",
+  "authorities": [
+    {
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "sections": [
+        "1(a)",
+        "2(a)(1)",
+        "2(a)(4)",
+        "2(a)(5)",
+        "3(a)",
+        "3(b)",
+        "4"
+      ]
+    },
+    {
+      "url": "https://foundation.wikimedia.org/w/index.php?title=Policy:Terms_of_Use&oldid=598588",
+      "sections": [
+        "7(a) licensing",
+        "7(b) attribution",
+        "7(c) imported text",
+        "7(g) reuse and external-source notices",
+        "7(h) modifications/additions and licensing notice"
+      ]
+    },
+    {
+      "url": "https://fr.wiktionary.org/w/index.php?title=Convention%3ADroit_d%E2%80%99auteur&oldid=38903168",
+      "assessment": "French contributor text CC BY-SA 4.0, with explicit external-source exceptions; exceptions are checked at selected spans."
+    }
+  ],
+  "original_daf8_edition_basis": [
+    {
+      "id": "original-academie8-1932-1935",
+      "author": "Académie française",
+      "title": "Dictionnaire de l’Académie française, huitième édition",
+      "publication": "1932–1935; final publication 1935",
+      "work_type": "collective work",
+      "original_rights": "public domain",
+      "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
+      "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+      "conservative_expiry": "2006-01-01, using final publication in 1935 for the whole edition",
+      "wiki_layer": "Wiktionnaire contributor transcription/adaptation, fixed revision and complete linked history, CC BY-SA 4.0",
+      "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
+      "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
+      "legal_refresh": "Independent reviewer read the primary statute through the retained web capture; the direct live endpoint returned 403. The established edition-level basis is reused, with selected imported/quotation boundaries independently inspected for this batch."
+    }
+  ],
+  "authority_captures": [
+    {
+      "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278941/2024-07-14",
+      "source_lines_0_based": [
+        129,
+        134,
+        135,
+        138,
+        139
+      ],
+      "capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\reviewer-primary\\web-authorities.json",
+      "finding": "Primary Article L123-3 confirms collective-work 70-year publication rule; final 1935 edition publication gives conservative expiry 2006-01-01."
+    },
+    {
+      "url": "https://foundation.wikimedia.org/w/index.php?title=Policy:Terms_of_Use&oldid=598588",
+      "capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\reviewer-primary\\terms.html",
+      "sections": [
+        "7(a)",
+        "7(b)",
+        "7(c)",
+        "7(g)",
+        "7(h)"
+      ]
+    },
+    {
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "complete_legal_text": "../../../resources/core-pilot-79/COPYING",
+      "sections": [
+        "2",
+        "3(a)",
+        "3(b)",
+        "4"
+      ]
+    }
+  ],
+  "packaging_obligations": [
+    "Fixed article and linked full history credit; original-edition notices where applicable.",
+    "Retain supplied copyright, licence and warranty-disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+    "Identify Wiki transcription/adaptations and Lexique selection, scoped FR adaptations, IPA transcription and new EN/ZH explanations.",
+    "Distribute adaptations under CC BY-SA 4.0 without additional restrictions or obstructive technical measures."
+  ],
+  "combined_obligations_status": "required_materials_recorded_final_combined_package_and_distribution_owned_by_parent",
+  "unresolved_rows": [
+    1140
+  ],
+  "modern_comparisons": [
+    {
+      "url": "https://www.cnrtl.fr/definition/academie9/march%C3%A9",
+      "status": 200,
+      "chars": 267640,
+      "path": "C:/Users/inthe/IdeaProjects/lexique-batch-103/target/issue-103/reviewer-modern-0.html"
+    },
+    {
+      "url": "https://www.cnrtl.fr/definition/academie9/dent",
+      "status": 200,
+      "chars": 268733,
+      "path": "C:/Users/inthe/IdeaProjects/lexique-batch-103/target/issue-103/reviewer-modern-1.html"
+    },
+    {
+      "url": "https://dictionnaire.lerobert.com/definition/nez",
+      "status": 200,
+      "chars": 144419,
+      "path": "C:/Users/inthe/IdeaProjects/lexique-batch-103/target/issue-103/reviewer-modern-2.html"
+    },
+    {
+      "url": "https://dictionnaire.lerobert.com/definition/dent",
+      "status": 200,
+      "chars": 141747,
+      "path": "C:/Users/inthe/IdeaProjects/lexique-batch-103/target/issue-103/reviewer-modern-3.html"
+    },
+    {
+      "url": "https://usito.usherbrooke.ca/d%C3%A9finitions/nez",
+      "status": 200,
+      "chars": 317233,
+      "path": "C:/Users/inthe/IdeaProjects/lexique-batch-103/target/issue-103/reviewer-modern-4.html"
+    },
+    {
+      "url": "https://usito.usherbrooke.ca/d%C3%A9finitions/dent",
+      "status": 200,
+      "chars": 256805,
+      "path": "C:/Users/inthe/IdeaProjects/lexique-batch-103/target/issue-103/reviewer-modern-5.html"
+    }
+  ],
+  "extra_originals": [
+    {
+      "title": "dent",
+      "url": "https://www.cnrtl.fr/definition/academie8/dent",
+      "status": 200,
+      "raw_path": "C:/Users/inthe/IdeaProjects/lexique-batch-103/target/issue-103/reviewer-daf8-dent.html",
+      "text_path": "C:/Users/inthe/IdeaProjects/lexique-batch-103/target/issue-103/reviewer-daf8-dent.txt",
+      "excerpt": "édition (1935) DENT nom féminin Chacun des petits os recouverts d'une espèce d'émail, qui sont enchâssés dans la mâchoire et qui servent à inciser, à déchirer, à mâcher les aliments et à mordre. Chez l'homme, les dents sont au nombre de trente-deux. On distingue les dents en dents molaires, canines et incisives. Dents de devant, dents du fond. Des dents blanches. Dents bien rangées. La couronne, le collet, la racine d'une dent. Les dents percent à cet enfant, les dents lui viennent. Cet enfant fait ses dents. Les dents d'un brochet, d'une vipère. Dents de lait, Premières dents qui viennent aux enfants et qui tombent vers l'âge de sept ans. Dents de sagesse, Les quatre dernières dents molaire"
+    },
+    {
+      "title": "nez",
+      "url": "https://www.cnrtl.fr/definition/academie8/nez",
+      "status": 200,
+      "raw_path": "C:/Users/inthe/IdeaProjects/lexique-batch-103/target/issue-103/reviewer-daf8-nez.html",
+      "text_path": "C:/Users/inthe/IdeaProjects/lexique-batch-103/target/issue-103/reviewer-daf8-nez.txt",
+      "excerpt": "édition (1935) NEZ nom masculin Partie saillante du visage qui est entre le front et la bouche, et qui est le siège de l'odorat. Nez droit, pointu, aquilin, busqué, retroussé, épaté, camus, camard. Nez d'aigle, de perroquet, de furet. Nez rouge, enluminé, fleuri, bourgeonné. Le bout du nez. Il saigne du nez. Le nez d'un chien. Racine du nez, Endroit où le nez se raccorde au front. Faux nez, Nez en carton ou en toute autre matière, que l'on met comme déguisement. Parler, chanter du nez, Parler, chanter comme si le nez était bouché. Aller, marcher le nez au vent, La tête relevée, droit devant soi, sans faire attention. Avoir le nez au vent se dit d'un Chien qui quête, qui flaire les odeurs qu'"
+    },
+    {
+      "title": "vent",
+      "url": "https://www.cnrtl.fr/definition/academie8/vent",
+      "status": 200,
+      "raw_path": "C:/Users/inthe/IdeaProjects/lexique-batch-103/target/issue-103/reviewer-daf8-vent.html",
+      "text_path": "C:/Users/inthe/IdeaProjects/lexique-batch-103/target/issue-103/reviewer-daf8-vent.txt",
+      "excerpt": "édition (1935) VENT nom masculin Mouvement plus ou moins rapide de l'air, suivant une direction déterminée. Le vent du nord, le vent d'est, le vent d'ouest. Vents périodiques, journaliers. Vents irréguliers, variables. Vent impétueux, modéré, faible. Vent froid, piquant, frais, doux, chaud, humide, pluvieux. Il fait grand vent. Le vent souffle du nord, de l'est. Le vent se lève. Le vent change. Le vent tourne. Le vent cesse, est tombé. Être exposé au vent, à tous les vents, à tout vent. Être à l'abri du vent. La force, la vitesse, la violence, l'impétuosité du vent. Il vient bien du vent par cette porte, par cette fenêtre. Cet arbre a été abattu d'un coup de vent. Vent coulis, Léger courant "
+    },
+    {
+      "title": "frais",
+      "url": "https://www.cnrtl.fr/definition/academie8/frais",
+      "status": 200,
+      "raw_path": "C:/Users/inthe/IdeaProjects/lexique-batch-103/target/issue-103/reviewer-daf8-frais.html",
+      "text_path": "C:/Users/inthe/IdeaProjects/lexique-batch-103/target/issue-103/reviewer-daf8-frais.txt",
+      "excerpt": "édition (1935) FRAIS nom masculin pluriel Ensemble des sommes déboursées pour la mise en train ou le développement d'une entreprise, pour l'acquisition, l'entretien ou l'exécution d'une chose. Menus frais. Les frais de la guerre. Les frais d'un voyage. Frais de transport. Frais de premier établissement. Frais de bureau. Frais d'impression. Faire les frais. Faire des frais. Il en sera pour ses frais. Tous frais faits. À frais communs. À moitié frais. À grands frais. À peu de frais. Sans frais. Sans faire de frais. Frais ordinaires et extraordinaires. Faux frais, Dépenses accidentelles, accessoires, faites dans une affaire, en sus de la dépense principale. Il se dit spécialement, en termes de "
+    }
+  ]
+}
