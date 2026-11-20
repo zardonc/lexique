@@ -37,6 +37,17 @@ and link the child in the parent's task list.
 If dependencies are unavailable, add `Blocked by: #<number>` to the child.
 A ticket is unblocked when all its blocking issues are closed.
 
+## GitHub Actions status
+
+Use one watcher per run and reuse its latest status. When using `gh run watch`,
+let it own routine polling; use `gh run view` for a bounded snapshot at a
+failure, completion or handoff. Report changed conclusions and actionable
+failures. Confirm the workflow has completed before requesting a targeted
+failed-job rerun, then match the retry's head SHA to the tested change.
+
+Proposed guard preflight, workflow trigger and output tooling changes are
+recorded in [development tooling follow-ups](development-tooling-follow-ups.md).
+
 ## Merge closeout
 
 After a referenced PR merges, read its state, final head, merge commit and check
