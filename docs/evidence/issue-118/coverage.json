@@ -16,11 +16,15 @@
   "batch_missing_authored_fields": 0,
   "batch_reused_groups": 0,
   "batch_new_admitted_groups": 0,
-  "batch_pending_independent_review_fields": 200,
+  "batch_pending_independent_review_fields": 0,
   "batch_missing_admitted_fields": 200,
   "author_field_characters": 18026,
   "longest_author_field_characters": 252,
   "authored_groups_utf8_bytes": 264923,
-  "coverage_boundary": "Canonical admitted input only, plus this separate unadmitted author package; sibling author proposals are not counted. No converter, runtime or package-size claim.",
-  "release_complete": false
+  "coverage_boundary": "Canonical admitted input counts remain at the supplied core-109-v1 snapshot; this batch has 50 independently reviewed groups / 200 fields pending parent admission and conversion. Sibling proposals are not counted. No runtime or release completion claim.",
+  "release_complete": false,
+  "batch_independently_accepted_groups": 50,
+  "batch_independently_accepted_fields": 200,
+  "batch_corrected_fields": 0,
+  "batch_unresolved_fields": 0
 }
