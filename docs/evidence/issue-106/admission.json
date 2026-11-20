@@ -1,8 +1,8 @@
 {
   "issue": 106,
-  "status": "pending_independent_review",
-  "independence": false,
-  "reviewer": null,
+  "status": "passed",
+  "independence": true,
+  "reviewer": "Independent selected-content and rights reviewer for issue 106; separate from author and merger",
   "scope": "Exact frozen rows 1251–1300",
   "frozen_rows": [
     1251,
@@ -61,23 +61,64 @@
   "candidate_fields": 196,
   "candidate_sources": 43,
   "captured_sources": 44,
-  "accepted_groups": 0,
-  "accepted_fields": 0,
-  "accepted_sources": 0,
+  "accepted_groups": 49,
+  "accepted_fields": 196,
+  "accepted_sources": 43,
   "admitted_groups": 0,
   "admitted_fields": 0,
   "global_group_denominator": 4087,
-  "pending_fields": 200,
-  "pending_independent_review_fields": 196,
+  "pending_fields": 4,
+  "pending_independent_review_fields": 0,
   "missing_candidate_fields": 4,
   "source_blocked_rows": [
     1300
   ],
   "source_blocked_fields": 4,
-  "annotation_exceptions": [],
-  "missing_annotation_fields": 0,
+  "annotation_exceptions": [
+    {
+      "frozen_row": 1300,
+      "headword": "d",
+      "pos": "PRE",
+      "admitted_fields": 0,
+      "missing_fields": 4,
+      "decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/106",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-19",
+        "decision": "Owner-approved zero-field annotation exception to selected-sense/four-field requirements; exact frozen identity, frequencies, four missing fields and 4,087-group denominator retained. No runtime alias or substitute content."
+      }
+    }
+  ],
+  "missing_annotation_fields": 4,
   "runtime_aliases_added": [],
   "source_capture_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-106\\target\\issue-106",
-  "quality_report": "Separate reviewer pending; author checks are not independent admission.",
-  "final_output_validation": "pending_integration_conversion_package_and_native_checks"
+  "quality_report": "independent-review.md",
+  "final_output_validation": "seven_file_exact_source_and_content_check_package_and_native_parent_owned",
+  "independently_accepted_new_groups": 49,
+  "independently_accepted_new_fields": 196,
+  "scope_denominator_groups": 4087,
+  "resource_admission": "scope_passed_parent_conversion_package_and_native_pending",
+  "combined_redistribution_obligations": "selected_span_rights_passed_actual_package_notices_pending_parent",
+  "scope_acceptance": "passed_with_owner_approved_zero_field_annotation",
+  "scope_accepted_groups": 50,
+  "approved_annotation_exceptions": [
+    {
+      "frozen_row": 1300,
+      "headword": "d",
+      "pos": "PRE",
+      "admitted_fields": 0,
+      "missing_fields": 4,
+      "decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/106",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-19",
+        "decision": "Owner-approved zero-field annotation exception to selected-sense/four-field requirements; exact frozen identity, frequencies, four missing fields and 4,087-group denominator retained. No runtime alias or substitute content."
+      }
+    }
+  ],
+  "annotation_groups": 1,
+  "content_gap_rows": [
+    1300
+  ],
+  "unresolved_unapproved_rows": []
 }

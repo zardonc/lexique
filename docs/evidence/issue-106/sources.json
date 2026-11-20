@@ -13,7 +13,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -35,7 +35,7 @@
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
         "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
         "evidence_basis": "Existing accepted original-edition rights record in docs/evidence/issue-99/sources.json; no live statute refresh claimed.",
-        "selected_text_correspondence": "Edition-level rights only; selected-text import correspondence remains for the separate reviewer."
+        "selected_text_correspondence": "Actual selected lexical wording and notices independently read; original-edition public-domain basis is separate from Wiki/Lexique CC BY-SA 4.0 layers. An import/reference does not identify every selected sentence author."
       },
       {
         "author": "Lexique contributors",
@@ -45,11 +45,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and complete linked contributor history.",
-      "Retain the CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; project code remains MIT.",
-      "Retain original-author and applicable import/bibliography notices separately.",
-      "No noncommercial restriction or additional restriction on licensed rights."
+      "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+      "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+      "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+      "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+      "Impose no additional restrictions or obstructive effective technological measures."
     ],
     "source_page_notices_to_record": [
       {
@@ -186,7 +186,9 @@
         "selected_sentence_authorship": "not_established_by_reference_marker"
       }
     ],
-    "independent_review": "pending"
+    "independent_review": "passed_at_selected_text_boundary",
+    "url": "https://fr.wiktionary.org/w/index.php?title=dimanche&oldid=39955385",
+    "selected_text_rights_reason": "The actual selected French lexical definition, language/POS/headword frame and applicable IPA were read in fixed original wikitext. Article/full-history credit identifies Wiki contributors; Lexique FR adaptations and EN/ZH explanations are separately CC BY-SA 4.0. Unselected quotation bodies, media, foreign entries and translation tables supply no field wording. Actual DAF8 notice is preserved as an original collective-edition layer, public domain under the established 1932–1935/L123-3 basis with conservative expiry 2006-01-01; this does not identify every modern sentence author. The DAF9 religious first-day quotation in the note at line 56 is unselected; it is not covered by the DAF8 original-edition basis. Other bibliography/example-source markers retain attribution metadata, without granting rights to unselected publisher wording."
   },
   {
     "id": "b106_fr_1808",
@@ -202,7 +204,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -224,7 +226,7 @@
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
         "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
         "evidence_basis": "Existing accepted original-edition rights record in docs/evidence/issue-99/sources.json; no live statute refresh claimed.",
-        "selected_text_correspondence": "Edition-level rights only; selected-text import correspondence remains for the separate reviewer."
+        "selected_text_correspondence": "Actual selected lexical wording and notices independently read; original-edition public-domain basis is separate from Wiki/Lexique CC BY-SA 4.0 layers. An import/reference does not identify every selected sentence author."
       },
       {
         "author": "Lexique contributors",
@@ -234,11 +236,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and complete linked contributor history.",
-      "Retain the CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; project code remains MIT.",
-      "Retain original-author and applicable import/bibliography notices separately.",
-      "No noncommercial restriction or additional restriction on licensed rights."
+      "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+      "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+      "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+      "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+      "Impose no additional restrictions or obstructive effective technological measures."
     ],
     "source_page_notices_to_record": [
       {
@@ -347,7 +349,9 @@
         "eligible_for_bundled_field_text": false
       }
     ],
-    "independent_review": "pending"
+    "independent_review": "passed_at_selected_text_boundary",
+    "url": "https://fr.wiktionary.org/w/index.php?title=second&oldid=39771046",
+    "selected_text_rights_reason": "The actual selected French lexical definition, language/POS/headword frame and applicable IPA were read in fixed original wikitext. Article/full-history credit identifies Wiki contributors; Lexique FR adaptations and EN/ZH explanations are separately CC BY-SA 4.0. Unselected quotation bodies, media, foreign entries and translation tables supply no field wording. Actual DAF8 notice is preserved as an original collective-edition layer, public domain under the established 1932–1935/L123-3 basis with conservative expiry 2006-01-01; this does not identify every modern sentence author. Other bibliography/example-source markers retain attribution metadata, without granting rights to unselected publisher wording."
   },
   {
     "id": "b106_fr_7907",
@@ -363,7 +367,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -385,7 +389,7 @@
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
         "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
         "evidence_basis": "Existing accepted original-edition rights record in docs/evidence/issue-99/sources.json; no live statute refresh claimed.",
-        "selected_text_correspondence": "Edition-level rights only; selected-text import correspondence remains for the separate reviewer."
+        "selected_text_correspondence": "Actual selected lexical wording and notices independently read; original-edition public-domain basis is separate from Wiki/Lexique CC BY-SA 4.0 layers. An import/reference does not identify every selected sentence author."
       },
       {
         "author": "Lexique contributors",
@@ -395,11 +399,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and complete linked contributor history.",
-      "Retain the CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; project code remains MIT.",
-      "Retain original-author and applicable import/bibliography notices separately.",
-      "No noncommercial restriction or additional restriction on licensed rights."
+      "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+      "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+      "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+      "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+      "Impose no additional restrictions or obstructive effective technological measures."
     ],
     "source_page_notices_to_record": [
       {
@@ -599,7 +603,9 @@
         "selected_sentence_authorship": "not_established_by_reference_marker"
       }
     ],
-    "independent_review": "pending"
+    "independent_review": "passed_at_selected_text_boundary",
+    "url": "https://fr.wiktionary.org/w/index.php?title=toilette&oldid=40040254",
+    "selected_text_rights_reason": "The actual selected French lexical definition, language/POS/headword frame and applicable IPA were read in fixed original wikitext. Article/full-history credit identifies Wiki contributors; Lexique FR adaptations and EN/ZH explanations are separately CC BY-SA 4.0. Unselected quotation bodies, media, foreign entries and translation tables supply no field wording. Actual DAF8 notice is preserved as an original collective-edition layer, public domain under the established 1932–1935/L123-3 basis with conservative expiry 2006-01-01; this does not identify every modern sentence author. Other bibliography/example-source markers retain attribution metadata, without granting rights to unselected publisher wording."
   },
   {
     "id": "b106_fr_8437",
@@ -615,7 +621,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -637,7 +643,7 @@
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
         "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
         "evidence_basis": "Existing accepted original-edition rights record in docs/evidence/issue-99/sources.json; no live statute refresh claimed.",
-        "selected_text_correspondence": "Edition-level rights only; selected-text import correspondence remains for the separate reviewer."
+        "selected_text_correspondence": "Actual selected lexical wording and notices independently read; original-edition public-domain basis is separate from Wiki/Lexique CC BY-SA 4.0 layers. An import/reference does not identify every selected sentence author."
       },
       {
         "author": "Lexique contributors",
@@ -647,11 +653,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and complete linked contributor history.",
-      "Retain the CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; project code remains MIT.",
-      "Retain original-author and applicable import/bibliography notices separately.",
-      "No noncommercial restriction or additional restriction on licensed rights."
+      "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+      "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+      "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+      "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+      "Impose no additional restrictions or obstructive effective technological measures."
     ],
     "source_page_notices_to_record": [
       {
@@ -711,7 +717,9 @@
         "selected_sentence_authorship": "not_established_by_reference_marker"
       }
     ],
-    "independent_review": "pending"
+    "independent_review": "passed_at_selected_text_boundary",
+    "url": "https://fr.wiktionary.org/w/index.php?title=%C3%A9glise&oldid=39902284",
+    "selected_text_rights_reason": "The actual selected French lexical definition, language/POS/headword frame and applicable IPA were read in fixed original wikitext. Article/full-history credit identifies Wiki contributors; Lexique FR adaptations and EN/ZH explanations are separately CC BY-SA 4.0. Unselected quotation bodies, media, foreign entries and translation tables supply no field wording. Actual DAF8 notice is preserved as an original collective-edition layer, public domain under the established 1932–1935/L123-3 basis with conservative expiry 2006-01-01; this does not identify every modern sentence author. Other bibliography/example-source markers retain attribution metadata, without granting rights to unselected publisher wording."
   },
   {
     "id": "b106_fr_9183",
@@ -727,7 +735,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -743,11 +751,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and complete linked contributor history.",
-      "Retain the CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; project code remains MIT.",
-      "Retain original-author and applicable import/bibliography notices separately.",
-      "No noncommercial restriction or additional restriction on licensed rights."
+      "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+      "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+      "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+      "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+      "Impose no additional restrictions or obstructive effective technological measures."
     ],
     "source_page_notices_to_record": [
       {
@@ -835,7 +843,9 @@
         "eligible_for_bundled_field_text": false
       }
     ],
-    "independent_review": "pending"
+    "independent_review": "passed_at_selected_text_boundary",
+    "url": "https://fr.wiktionary.org/w/index.php?title=cigarette&oldid=39772134",
+    "selected_text_rights_reason": "The actual selected French lexical definition, language/POS/headword frame and applicable IPA were read in fixed original wikitext. Article/full-history credit identifies Wiki contributors; Lexique FR adaptations and EN/ZH explanations are separately CC BY-SA 4.0. Unselected quotation bodies, media, foreign entries and translation tables supply no field wording. Other bibliography/example-source markers retain attribution metadata, without granting rights to unselected publisher wording."
   },
   {
     "id": "b106_fr_9507",
@@ -851,7 +861,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -867,11 +877,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and complete linked contributor history.",
-      "Retain the CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; project code remains MIT.",
-      "Retain original-author and applicable import/bibliography notices separately.",
-      "No noncommercial restriction or additional restriction on licensed rights."
+      "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+      "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+      "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+      "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+      "Impose no additional restrictions or obstructive effective technological measures."
     ],
     "source_page_notices_to_record": [
       {
@@ -924,7 +934,9 @@
         "eligible_for_bundled_field_text": false
       }
     ],
-    "independent_review": "pending"
+    "independent_review": "passed_at_selected_text_boundary",
+    "url": "https://fr.wiktionary.org/w/index.php?title=cin%C3%A9ma&oldid=39818879",
+    "selected_text_rights_reason": "The actual selected French lexical definition, language/POS/headword frame and applicable IPA were read in fixed original wikitext. Article/full-history credit identifies Wiki contributors; Lexique FR adaptations and EN/ZH explanations are separately CC BY-SA 4.0. Unselected quotation bodies, media, foreign entries and translation tables supply no field wording. Other bibliography/example-source markers retain attribution metadata, without granting rights to unselected publisher wording."
   },
   {
     "id": "b106_fr_10691",
@@ -940,7 +952,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -962,7 +974,7 @@
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
         "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
         "evidence_basis": "Existing accepted original-edition rights record in docs/evidence/issue-99/sources.json; no live statute refresh claimed.",
-        "selected_text_correspondence": "Edition-level rights only; selected-text import correspondence remains for the separate reviewer."
+        "selected_text_correspondence": "Actual selected lexical wording and notices independently read; original-edition public-domain basis is separate from Wiki/Lexique CC BY-SA 4.0 layers. An import/reference does not identify every selected sentence author."
       },
       {
         "author": "Lexique contributors",
@@ -972,11 +984,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and complete linked contributor history.",
-      "Retain the CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; project code remains MIT.",
-      "Retain original-author and applicable import/bibliography notices separately.",
-      "No noncommercial restriction or additional restriction on licensed rights."
+      "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+      "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+      "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+      "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+      "Impose no additional restrictions or obstructive effective technological measures."
     ],
     "source_page_notices_to_record": [
       {
@@ -1085,7 +1097,9 @@
         "selected_sentence_authorship": "not_established_by_reference_marker"
       }
     ],
-    "independent_review": "pending"
+    "independent_review": "passed_at_selected_text_boundary",
+    "url": "https://fr.wiktionary.org/w/index.php?title=interdire&oldid=39224037",
+    "selected_text_rights_reason": "The actual selected French lexical definition, language/POS/headword frame and applicable IPA were read in fixed original wikitext. Article/full-history credit identifies Wiki contributors; Lexique FR adaptations and EN/ZH explanations are separately CC BY-SA 4.0. Unselected quotation bodies, media, foreign entries and translation tables supply no field wording. Actual DAF8 notice is preserved as an original collective-edition layer, public domain under the established 1932–1935/L123-3 basis with conservative expiry 2006-01-01; this does not identify every modern sentence author. Other bibliography/example-source markers retain attribution metadata, without granting rights to unselected publisher wording."
   },
   {
     "id": "b106_fr_21200",
@@ -1101,7 +1115,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -1123,7 +1137,7 @@
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
         "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
         "evidence_basis": "Existing accepted original-edition rights record in docs/evidence/issue-99/sources.json; no live statute refresh claimed.",
-        "selected_text_correspondence": "Edition-level rights only; selected-text import correspondence remains for the separate reviewer."
+        "selected_text_correspondence": "Actual selected lexical wording and notices independently read; original-edition public-domain basis is separate from Wiki/Lexique CC BY-SA 4.0 layers. An import/reference does not identify every selected sentence author."
       },
       {
         "author": "Lexique contributors",
@@ -1133,11 +1147,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and complete linked contributor history.",
-      "Retain the CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; project code remains MIT.",
-      "Retain original-author and applicable import/bibliography notices separately.",
-      "No noncommercial restriction or additional restriction on licensed rights."
+      "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+      "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+      "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+      "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+      "Impose no additional restrictions or obstructive effective technological measures."
     ],
     "source_page_notices_to_record": [
       {
@@ -1239,7 +1253,9 @@
         "selected_sentence_authorship": "not_established_by_reference_marker"
       }
     ],
-    "independent_review": "pending"
+    "independent_review": "passed_at_selected_text_boundary",
+    "url": "https://fr.wiktionary.org/w/index.php?title=respecter&oldid=39977469",
+    "selected_text_rights_reason": "The actual selected French lexical definition, language/POS/headword frame and applicable IPA were read in fixed original wikitext. Article/full-history credit identifies Wiki contributors; Lexique FR adaptations and EN/ZH explanations are separately CC BY-SA 4.0. Unselected quotation bodies, media, foreign entries and translation tables supply no field wording. Actual DAF8 notice is preserved as an original collective-edition layer, public domain under the established 1932–1935/L123-3 basis with conservative expiry 2006-01-01; this does not identify every modern sentence author. Other bibliography/example-source markers retain attribution metadata, without granting rights to unselected publisher wording."
   },
   {
     "id": "b106_fr_29842",
@@ -1255,7 +1271,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -1277,7 +1293,7 @@
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
         "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
         "evidence_basis": "Existing accepted original-edition rights record in docs/evidence/issue-99/sources.json; no live statute refresh claimed.",
-        "selected_text_correspondence": "Edition-level rights only; selected-text import correspondence remains for the separate reviewer."
+        "selected_text_correspondence": "Actual selected lexical wording and notices independently read; original-edition public-domain basis is separate from Wiki/Lexique CC BY-SA 4.0 layers. An import/reference does not identify every selected sentence author."
       },
       {
         "author": "Lexique contributors",
@@ -1287,11 +1303,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and complete linked contributor history.",
-      "Retain the CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; project code remains MIT.",
-      "Retain original-author and applicable import/bibliography notices separately.",
-      "No noncommercial restriction or additional restriction on licensed rights."
+      "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+      "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+      "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+      "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+      "Impose no additional restrictions or obstructive effective technological measures."
     ],
     "source_page_notices_to_record": [
       {
@@ -1407,7 +1423,9 @@
         "selected_sentence_authorship": "not_established_by_reference_marker"
       }
     ],
-    "independent_review": "pending"
+    "independent_review": "passed_at_selected_text_boundary",
+    "url": "https://fr.wiktionary.org/w/index.php?title=taxi&oldid=39911762",
+    "selected_text_rights_reason": "The actual selected French lexical definition, language/POS/headword frame and applicable IPA were read in fixed original wikitext. Article/full-history credit identifies Wiki contributors; Lexique FR adaptations and EN/ZH explanations are separately CC BY-SA 4.0. Unselected quotation bodies, media, foreign entries and translation tables supply no field wording. Actual DAF8 notice is preserved as an original collective-edition layer, public domain under the established 1932–1935/L123-3 basis with conservative expiry 2006-01-01; this does not identify every modern sentence author. Other bibliography/example-source markers retain attribution metadata, without granting rights to unselected publisher wording."
   },
   {
     "id": "b106_fr_29845",
@@ -1423,7 +1441,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -1445,7 +1463,7 @@
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
         "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
         "evidence_basis": "Existing accepted original-edition rights record in docs/evidence/issue-99/sources.json; no live statute refresh claimed.",
-        "selected_text_correspondence": "Edition-level rights only; selected-text import correspondence remains for the separate reviewer."
+        "selected_text_correspondence": "Actual selected lexical wording and notices independently read; original-edition public-domain basis is separate from Wiki/Lexique CC BY-SA 4.0 layers. An import/reference does not identify every selected sentence author."
       },
       {
         "author": "Lexique contributors",
@@ -1455,11 +1473,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and complete linked contributor history.",
-      "Retain the CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; project code remains MIT.",
-      "Retain original-author and applicable import/bibliography notices separately.",
-      "No noncommercial restriction or additional restriction on licensed rights."
+      "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+      "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+      "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+      "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+      "Impose no additional restrictions or obstructive effective technological measures."
     ],
     "source_page_notices_to_record": [
       {
@@ -1610,7 +1628,9 @@
         "selected_sentence_authorship": "not_established_by_reference_marker"
       }
     ],
-    "independent_review": "pending"
+    "independent_review": "passed_at_selected_text_boundary",
+    "url": "https://fr.wiktionary.org/w/index.php?title=tas&oldid=39863320",
+    "selected_text_rights_reason": "The actual selected French lexical definition, language/POS/headword frame and applicable IPA were read in fixed original wikitext. Article/full-history credit identifies Wiki contributors; Lexique FR adaptations and EN/ZH explanations are separately CC BY-SA 4.0. Unselected quotation bodies, media, foreign entries and translation tables supply no field wording. Actual DAF8 notice is preserved as an original collective-edition layer, public domain under the established 1932–1935/L123-3 basis with conservative expiry 2006-01-01; this does not identify every modern sentence author. Other bibliography/example-source markers retain attribution metadata, without granting rights to unselected publisher wording."
   },
   {
     "id": "b106_fr_34264",
@@ -1626,7 +1646,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -1648,7 +1668,7 @@
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
         "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
         "evidence_basis": "Existing accepted original-edition rights record in docs/evidence/issue-99/sources.json; no live statute refresh claimed.",
-        "selected_text_correspondence": "Edition-level rights only; selected-text import correspondence remains for the separate reviewer."
+        "selected_text_correspondence": "Actual selected lexical wording and notices independently read; original-edition public-domain basis is separate from Wiki/Lexique CC BY-SA 4.0 layers. An import/reference does not identify every selected sentence author."
       },
       {
         "author": "Lexique contributors",
@@ -1658,11 +1678,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and complete linked contributor history.",
-      "Retain the CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; project code remains MIT.",
-      "Retain original-author and applicable import/bibliography notices separately.",
-      "No noncommercial restriction or additional restriction on licensed rights."
+      "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+      "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+      "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+      "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+      "Impose no additional restrictions or obstructive effective technological measures."
     ],
     "source_page_notices_to_record": [
       {
@@ -1890,7 +1910,9 @@
         "selected_sentence_authorship": "not_established_by_reference_marker"
       }
     ],
-    "independent_review": "pending"
+    "independent_review": "passed_at_selected_text_boundary",
+    "url": "https://fr.wiktionary.org/w/index.php?title=fil&oldid=40043212",
+    "selected_text_rights_reason": "The actual selected French lexical definition, language/POS/headword frame and applicable IPA were read in fixed original wikitext. Article/full-history credit identifies Wiki contributors; Lexique FR adaptations and EN/ZH explanations are separately CC BY-SA 4.0. Unselected quotation bodies, media, foreign entries and translation tables supply no field wording. Actual DAF8 notice is preserved as an original collective-edition layer, public domain under the established 1932–1935/L123-3 basis with conservative expiry 2006-01-01; this does not identify every modern sentence author. Other bibliography/example-source markers retain attribution metadata, without granting rights to unselected publisher wording."
   },
   {
     "id": "b106_fr_36402",
@@ -1906,7 +1928,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -1928,7 +1950,7 @@
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
         "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
         "evidence_basis": "Existing accepted original-edition rights record in docs/evidence/issue-99/sources.json; no live statute refresh claimed.",
-        "selected_text_correspondence": "Edition-level rights only; selected-text import correspondence remains for the separate reviewer."
+        "selected_text_correspondence": "Actual selected lexical wording and notices independently read; original-edition public-domain basis is separate from Wiki/Lexique CC BY-SA 4.0 layers. An import/reference does not identify every selected sentence author."
       },
       {
         "author": "Lexique contributors",
@@ -1938,11 +1960,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and complete linked contributor history.",
-      "Retain the CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; project code remains MIT.",
-      "Retain original-author and applicable import/bibliography notices separately.",
-      "No noncommercial restriction or additional restriction on licensed rights."
+      "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+      "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+      "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+      "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+      "Impose no additional restrictions or obstructive effective technological measures."
     ],
     "source_page_notices_to_record": [
       {
@@ -2184,7 +2206,9 @@
         "selected_sentence_authorship": "not_established_by_reference_marker"
       }
     ],
-    "independent_review": "pending"
+    "independent_review": "passed_at_selected_text_boundary",
+    "url": "https://fr.wiktionary.org/w/index.php?title=bombe&oldid=39878090",
+    "selected_text_rights_reason": "The actual selected French lexical definition, language/POS/headword frame and applicable IPA were read in fixed original wikitext. Article/full-history credit identifies Wiki contributors; Lexique FR adaptations and EN/ZH explanations are separately CC BY-SA 4.0. Unselected quotation bodies, media, foreign entries and translation tables supply no field wording. Actual DAF8 notice is preserved as an original collective-edition layer, public domain under the established 1932–1935/L123-3 basis with conservative expiry 2006-01-01; this does not identify every modern sentence author. Other bibliography/example-source markers retain attribution metadata, without granting rights to unselected publisher wording."
   },
   {
     "id": "b106_fr_41395",
@@ -2200,7 +2224,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -2222,7 +2246,7 @@
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
         "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
         "evidence_basis": "Existing accepted original-edition rights record in docs/evidence/issue-99/sources.json; no live statute refresh claimed.",
-        "selected_text_correspondence": "Edition-level rights only; selected-text import correspondence remains for the separate reviewer."
+        "selected_text_correspondence": "Actual selected lexical wording and notices independently read; original-edition public-domain basis is separate from Wiki/Lexique CC BY-SA 4.0 layers. An import/reference does not identify every selected sentence author."
       },
       {
         "author": "Lexique contributors",
@@ -2232,11 +2256,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and complete linked contributor history.",
-      "Retain the CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; project code remains MIT.",
-      "Retain original-author and applicable import/bibliography notices separately.",
-      "No noncommercial restriction or additional restriction on licensed rights."
+      "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+      "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+      "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+      "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+      "Impose no additional restrictions or obstructive effective technological measures."
     ],
     "source_page_notices_to_record": [
       {
@@ -2289,7 +2313,9 @@
         "selected_sentence_authorship": "not_established_by_reference_marker"
       }
     ],
-    "independent_review": "pending"
+    "independent_review": "passed_at_selected_text_boundary",
+    "url": "https://fr.wiktionary.org/w/index.php?title=diriger&oldid=39753616",
+    "selected_text_rights_reason": "The actual selected French lexical definition, language/POS/headword frame and applicable IPA were read in fixed original wikitext. Article/full-history credit identifies Wiki contributors; Lexique FR adaptations and EN/ZH explanations are separately CC BY-SA 4.0. Unselected quotation bodies, media, foreign entries and translation tables supply no field wording. Actual DAF8 notice is preserved as an original collective-edition layer, public domain under the established 1932–1935/L123-3 basis with conservative expiry 2006-01-01; this does not identify every modern sentence author. Other bibliography/example-source markers retain attribution metadata, without granting rights to unselected publisher wording."
   },
   {
     "id": "b106_fr_42452",
@@ -2305,7 +2331,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -2327,7 +2353,7 @@
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
         "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
         "evidence_basis": "Existing accepted original-edition rights record in docs/evidence/issue-99/sources.json; no live statute refresh claimed.",
-        "selected_text_correspondence": "Edition-level rights only; selected-text import correspondence remains for the separate reviewer."
+        "selected_text_correspondence": "Actual selected lexical wording and notices independently read; original-edition public-domain basis is separate from Wiki/Lexique CC BY-SA 4.0 layers. An import/reference does not identify every selected sentence author."
       },
       {
         "author": "Lexique contributors",
@@ -2337,11 +2363,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and complete linked contributor history.",
-      "Retain the CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; project code remains MIT.",
-      "Retain original-author and applicable import/bibliography notices separately.",
-      "No noncommercial restriction or additional restriction on licensed rights."
+      "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+      "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+      "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+      "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+      "Impose no additional restrictions or obstructive effective technological measures."
     ],
     "source_page_notices_to_record": [
       {
@@ -2408,7 +2434,9 @@
         "selected_sentence_authorship": "not_established_by_reference_marker"
       }
     ],
-    "independent_review": "pending"
+    "independent_review": "passed_at_selected_text_boundary",
+    "url": "https://fr.wiktionary.org/w/index.php?title=malin&oldid=39338278",
+    "selected_text_rights_reason": "The actual selected French lexical definition, language/POS/headword frame and applicable IPA were read in fixed original wikitext. Article/full-history credit identifies Wiki contributors; Lexique FR adaptations and EN/ZH explanations are separately CC BY-SA 4.0. Unselected quotation bodies, media, foreign entries and translation tables supply no field wording. Actual DAF8 notice is preserved as an original collective-edition layer, public domain under the established 1932–1935/L123-3 basis with conservative expiry 2006-01-01; this does not identify every modern sentence author. Other bibliography/example-source markers retain attribution metadata, without granting rights to unselected publisher wording."
   },
   {
     "id": "b106_fr_103877",
@@ -2424,7 +2452,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -2446,7 +2474,7 @@
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
         "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
         "evidence_basis": "Existing accepted original-edition rights record in docs/evidence/issue-99/sources.json; no live statute refresh claimed.",
-        "selected_text_correspondence": "Edition-level rights only; selected-text import correspondence remains for the separate reviewer."
+        "selected_text_correspondence": "Actual selected lexical wording and notices independently read; original-edition public-domain basis is separate from Wiki/Lexique CC BY-SA 4.0 layers. An import/reference does not identify every selected sentence author."
       },
       {
         "author": "Lexique contributors",
@@ -2456,11 +2484,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and complete linked contributor history.",
-      "Retain the CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; project code remains MIT.",
-      "Retain original-author and applicable import/bibliography notices separately.",
-      "No noncommercial restriction or additional restriction on licensed rights."
+      "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+      "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+      "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+      "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+      "Impose no additional restrictions or obstructive effective technological measures."
     ],
     "source_page_notices_to_record": [
       {
@@ -2562,7 +2590,9 @@
         "eligible_for_bundled_field_text": false
       }
     ],
-    "independent_review": "pending"
+    "independent_review": "passed_at_selected_text_boundary",
+    "url": "https://fr.wiktionary.org/w/index.php?title=information&oldid=39914285",
+    "selected_text_rights_reason": "The actual selected French lexical definition, language/POS/headword frame and applicable IPA were read in fixed original wikitext. Article/full-history credit identifies Wiki contributors; Lexique FR adaptations and EN/ZH explanations are separately CC BY-SA 4.0. Unselected quotation bodies, media, foreign entries and translation tables supply no field wording. Actual DAF8 notice is preserved as an original collective-edition layer, public domain under the established 1932–1935/L123-3 basis with conservative expiry 2006-01-01; this does not identify every modern sentence author. The separately marked Import:CFC cartography sentence at line 63 is unselected. Other bibliography/example-source markers retain attribution metadata, without granting rights to unselected publisher wording."
   },
   {
     "id": "b106_fr_114408",
@@ -2578,7 +2608,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -2600,7 +2630,7 @@
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
         "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
         "evidence_basis": "Existing accepted original-edition rights record in docs/evidence/issue-99/sources.json; no live statute refresh claimed.",
-        "selected_text_correspondence": "Edition-level rights only; selected-text import correspondence remains for the separate reviewer."
+        "selected_text_correspondence": "Actual selected lexical wording and notices independently read; original-edition public-domain basis is separate from Wiki/Lexique CC BY-SA 4.0 layers. An import/reference does not identify every selected sentence author."
       },
       {
         "author": "Lexique contributors",
@@ -2610,11 +2640,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and complete linked contributor history.",
-      "Retain the CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; project code remains MIT.",
-      "Retain original-author and applicable import/bibliography notices separately.",
-      "No noncommercial restriction or additional restriction on licensed rights."
+      "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+      "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+      "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+      "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+      "Impose no additional restrictions or obstructive effective technological measures."
     ],
     "source_page_notices_to_record": [
       {
@@ -2702,7 +2732,9 @@
         "selected_sentence_authorship": "not_established_by_reference_marker"
       }
     ],
-    "independent_review": "pending"
+    "independent_review": "passed_at_selected_text_boundary",
+    "url": "https://fr.wiktionary.org/w/index.php?title=innocent&oldid=39995744",
+    "selected_text_rights_reason": "The actual selected French lexical definition, language/POS/headword frame and applicable IPA were read in fixed original wikitext. Article/full-history credit identifies Wiki contributors; Lexique FR adaptations and EN/ZH explanations are separately CC BY-SA 4.0. Unselected quotation bodies, media, foreign entries and translation tables supply no field wording. Actual DAF8 notice is preserved as an original collective-edition layer, public domain under the established 1932–1935/L123-3 basis with conservative expiry 2006-01-01; this does not identify every modern sentence author. Other bibliography/example-source markers retain attribution metadata, without granting rights to unselected publisher wording."
   },
   {
     "id": "b106_fr_116093",
@@ -2718,7 +2750,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -2734,11 +2766,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and complete linked contributor history.",
-      "Retain the CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; project code remains MIT.",
-      "Retain original-author and applicable import/bibliography notices separately.",
-      "No noncommercial restriction or additional restriction on licensed rights."
+      "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+      "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+      "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+      "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+      "Impose no additional restrictions or obstructive effective technological measures."
     ],
     "source_page_notices_to_record": [
       {
@@ -2791,7 +2823,9 @@
         "eligible_for_bundled_field_text": false
       }
     ],
-    "independent_review": "pending"
+    "independent_review": "passed_at_selected_text_boundary",
+    "url": "https://fr.wiktionary.org/w/index.php?title=cool&oldid=40007841",
+    "selected_text_rights_reason": "The actual selected French lexical definition, language/POS/headword frame and applicable IPA were read in fixed original wikitext. Article/full-history credit identifies Wiki contributors; Lexique FR adaptations and EN/ZH explanations are separately CC BY-SA 4.0. Unselected quotation bodies, media, foreign entries and translation tables supply no field wording. Other bibliography/example-source markers retain attribution metadata, without granting rights to unselected publisher wording."
   },
   {
     "id": "b106_fr_119731",
@@ -2807,7 +2841,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -2829,7 +2863,7 @@
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
         "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
         "evidence_basis": "Existing accepted original-edition rights record in docs/evidence/issue-99/sources.json; no live statute refresh claimed.",
-        "selected_text_correspondence": "Edition-level rights only; selected-text import correspondence remains for the separate reviewer."
+        "selected_text_correspondence": "Actual selected lexical wording and notices independently read; original-edition public-domain basis is separate from Wiki/Lexique CC BY-SA 4.0 layers. An import/reference does not identify every selected sentence author."
       },
       {
         "author": "Lexique contributors",
@@ -2839,11 +2873,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and complete linked contributor history.",
-      "Retain the CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; project code remains MIT.",
-      "Retain original-author and applicable import/bibliography notices separately.",
-      "No noncommercial restriction or additional restriction on licensed rights."
+      "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+      "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+      "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+      "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+      "Impose no additional restrictions or obstructive effective technological measures."
     ],
     "source_page_notices_to_record": [
       {
@@ -2973,7 +3007,9 @@
         "selected_sentence_authorship": "not_established_by_reference_marker"
       }
     ],
-    "independent_review": "pending"
+    "independent_review": "passed_at_selected_text_boundary",
+    "url": "https://fr.wiktionary.org/w/index.php?title=note&oldid=39773724",
+    "selected_text_rights_reason": "The actual selected French lexical definition, language/POS/headword frame and applicable IPA were read in fixed original wikitext. Article/full-history credit identifies Wiki contributors; Lexique FR adaptations and EN/ZH explanations are separately CC BY-SA 4.0. Unselected quotation bodies, media, foreign entries and translation tables supply no field wording. Actual DAF8 notice is preserved as an original collective-edition layer, public domain under the established 1932–1935/L123-3 basis with conservative expiry 2006-01-01; this does not identify every modern sentence author. Other bibliography/example-source markers retain attribution metadata, without granting rights to unselected publisher wording."
   },
   {
     "id": "b106_fr_120303",
@@ -2989,7 +3025,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -3011,7 +3047,7 @@
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
         "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
         "evidence_basis": "Existing accepted original-edition rights record in docs/evidence/issue-99/sources.json; no live statute refresh claimed.",
-        "selected_text_correspondence": "Edition-level rights only; selected-text import correspondence remains for the separate reviewer."
+        "selected_text_correspondence": "Actual selected lexical wording and notices independently read; original-edition public-domain basis is separate from Wiki/Lexique CC BY-SA 4.0 layers. An import/reference does not identify every selected sentence author."
       },
       {
         "author": "Lexique contributors",
@@ -3021,11 +3057,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and complete linked contributor history.",
-      "Retain the CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; project code remains MIT.",
-      "Retain original-author and applicable import/bibliography notices separately.",
-      "No noncommercial restriction or additional restriction on licensed rights."
+      "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+      "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+      "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+      "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+      "Impose no additional restrictions or obstructive effective technological measures."
     ],
     "source_page_notices_to_record": [
       {
@@ -3085,7 +3121,9 @@
         "eligible_for_bundled_field_text": false
       }
     ],
-    "independent_review": "pending"
+    "independent_review": "passed_at_selected_text_boundary",
+    "url": "https://fr.wiktionary.org/w/index.php?title=match&oldid=40046604",
+    "selected_text_rights_reason": "The actual selected French lexical definition, language/POS/headword frame and applicable IPA were read in fixed original wikitext. Article/full-history credit identifies Wiki contributors; Lexique FR adaptations and EN/ZH explanations are separately CC BY-SA 4.0. Unselected quotation bodies, media, foreign entries and translation tables supply no field wording. Actual DAF8 notice is preserved as an original collective-edition layer, public domain under the established 1932–1935/L123-3 basis with conservative expiry 2006-01-01; this does not identify every modern sentence author. Other bibliography/example-source markers retain attribution metadata, without granting rights to unselected publisher wording."
   },
   {
     "id": "b106_fr_136914",
@@ -3101,7 +3139,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -3123,7 +3161,7 @@
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
         "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
         "evidence_basis": "Existing accepted original-edition rights record in docs/evidence/issue-99/sources.json; no live statute refresh claimed.",
-        "selected_text_correspondence": "Edition-level rights only; selected-text import correspondence remains for the separate reviewer."
+        "selected_text_correspondence": "Actual selected lexical wording and notices independently read; original-edition public-domain basis is separate from Wiki/Lexique CC BY-SA 4.0 layers. An import/reference does not identify every selected sentence author."
       },
       {
         "author": "Lexique contributors",
@@ -3133,11 +3171,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and complete linked contributor history.",
-      "Retain the CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; project code remains MIT.",
-      "Retain original-author and applicable import/bibliography notices separately.",
-      "No noncommercial restriction or additional restriction on licensed rights."
+      "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+      "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+      "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+      "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+      "Impose no additional restrictions or obstructive effective technological measures."
     ],
     "source_page_notices_to_record": [
       {
@@ -3183,7 +3221,9 @@
         "selected_sentence_authorship": "not_established_by_reference_marker"
       }
     ],
-    "independent_review": "pending"
+    "independent_review": "passed_at_selected_text_boundary",
+    "url": "https://fr.wiktionary.org/w/index.php?title=%C3%A9poux&oldid=39964845",
+    "selected_text_rights_reason": "The actual selected French lexical definition, language/POS/headword frame and applicable IPA were read in fixed original wikitext. Article/full-history credit identifies Wiki contributors; Lexique FR adaptations and EN/ZH explanations are separately CC BY-SA 4.0. Unselected quotation bodies, media, foreign entries and translation tables supply no field wording. Actual DAF8 notice is preserved as an original collective-edition layer, public domain under the established 1932–1935/L123-3 basis with conservative expiry 2006-01-01; this does not identify every modern sentence author. Other bibliography/example-source markers retain attribution metadata, without granting rights to unselected publisher wording."
   },
   {
     "id": "b106_fr_145259",
@@ -3199,7 +3239,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -3221,7 +3261,7 @@
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
         "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
         "evidence_basis": "Existing accepted original-edition rights record in docs/evidence/issue-99/sources.json; no live statute refresh claimed.",
-        "selected_text_correspondence": "Edition-level rights only; selected-text import correspondence remains for the separate reviewer."
+        "selected_text_correspondence": "Actual selected lexical wording and notices independently read; original-edition public-domain basis is separate from Wiki/Lexique CC BY-SA 4.0 layers. An import/reference does not identify every selected sentence author."
       },
       {
         "author": "Lexique contributors",
@@ -3231,11 +3271,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and complete linked contributor history.",
-      "Retain the CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; project code remains MIT.",
-      "Retain original-author and applicable import/bibliography notices separately.",
-      "No noncommercial restriction or additional restriction on licensed rights."
+      "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+      "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+      "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+      "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+      "Impose no additional restrictions or obstructive effective technological measures."
     ],
     "source_page_notices_to_record": [
       {
@@ -3302,7 +3342,9 @@
         "selected_sentence_authorship": "not_established_by_reference_marker"
       }
     ],
-    "independent_review": "pending"
+    "independent_review": "passed_at_selected_text_boundary",
+    "url": "https://fr.wiktionary.org/w/index.php?title=morceau&oldid=39904395",
+    "selected_text_rights_reason": "The actual selected French lexical definition, language/POS/headword frame and applicable IPA were read in fixed original wikitext. Article/full-history credit identifies Wiki contributors; Lexique FR adaptations and EN/ZH explanations are separately CC BY-SA 4.0. Unselected quotation bodies, media, foreign entries and translation tables supply no field wording. Actual DAF8 notice is preserved as an original collective-edition layer, public domain under the established 1932–1935/L123-3 basis with conservative expiry 2006-01-01; this does not identify every modern sentence author. Other bibliography/example-source markers retain attribution metadata, without granting rights to unselected publisher wording."
   },
   {
     "id": "b106_fr_149018",
@@ -3318,7 +3360,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -3340,7 +3382,7 @@
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
         "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
         "evidence_basis": "Existing accepted original-edition rights record in docs/evidence/issue-99/sources.json; no live statute refresh claimed.",
-        "selected_text_correspondence": "Edition-level rights only; selected-text import correspondence remains for the separate reviewer."
+        "selected_text_correspondence": "Actual selected lexical wording and notices independently read; original-edition public-domain basis is separate from Wiki/Lexique CC BY-SA 4.0 layers. An import/reference does not identify every selected sentence author."
       },
       {
         "author": "Lexique contributors",
@@ -3350,11 +3392,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and complete linked contributor history.",
-      "Retain the CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; project code remains MIT.",
-      "Retain original-author and applicable import/bibliography notices separately.",
-      "No noncommercial restriction or additional restriction on licensed rights."
+      "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+      "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+      "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+      "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+      "Impose no additional restrictions or obstructive effective technological measures."
     ],
     "source_page_notices_to_record": [
       {
@@ -3449,7 +3491,9 @@
         "selected_sentence_authorship": "not_established_by_reference_marker"
       }
     ],
-    "independent_review": "pending"
+    "independent_review": "passed_at_selected_text_boundary",
+    "url": "https://fr.wiktionary.org/w/index.php?title=baisser&oldid=39772023",
+    "selected_text_rights_reason": "The actual selected French lexical definition, language/POS/headword frame and applicable IPA were read in fixed original wikitext. Article/full-history credit identifies Wiki contributors; Lexique FR adaptations and EN/ZH explanations are separately CC BY-SA 4.0. Unselected quotation bodies, media, foreign entries and translation tables supply no field wording. Actual DAF8 notice is preserved as an original collective-edition layer, public domain under the established 1932–1935/L123-3 basis with conservative expiry 2006-01-01; this does not identify every modern sentence author. Other bibliography/example-source markers retain attribution metadata, without granting rights to unselected publisher wording."
   },
   {
     "id": "b106_fr_152373",
@@ -3465,7 +3509,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -3487,7 +3531,7 @@
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
         "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
         "evidence_basis": "Existing accepted original-edition rights record in docs/evidence/issue-99/sources.json; no live statute refresh claimed.",
-        "selected_text_correspondence": "Edition-level rights only; selected-text import correspondence remains for the separate reviewer."
+        "selected_text_correspondence": "Actual selected lexical wording and notices independently read; original-edition public-domain basis is separate from Wiki/Lexique CC BY-SA 4.0 layers. An import/reference does not identify every selected sentence author."
       },
       {
         "author": "Lexique contributors",
@@ -3497,11 +3541,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and complete linked contributor history.",
-      "Retain the CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; project code remains MIT.",
-      "Retain original-author and applicable import/bibliography notices separately.",
-      "No noncommercial restriction or additional restriction on licensed rights."
+      "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+      "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+      "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+      "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+      "Impose no additional restrictions or obstructive effective technological measures."
     ],
     "source_page_notices_to_record": [
       {
@@ -3582,7 +3626,9 @@
         "selected_sentence_authorship": "not_established_by_reference_marker"
       }
     ],
-    "independent_review": "pending"
+    "independent_review": "passed_at_selected_text_boundary",
+    "url": "https://fr.wiktionary.org/w/index.php?title=causer&oldid=39720879",
+    "selected_text_rights_reason": "The actual selected French lexical definition, language/POS/headword frame and applicable IPA were read in fixed original wikitext. Article/full-history credit identifies Wiki contributors; Lexique FR adaptations and EN/ZH explanations are separately CC BY-SA 4.0. Unselected quotation bodies, media, foreign entries and translation tables supply no field wording. Actual DAF8 notice is preserved as an original collective-edition layer, public domain under the established 1932–1935/L123-3 basis with conservative expiry 2006-01-01; this does not identify every modern sentence author. Other bibliography/example-source markers retain attribution metadata, without granting rights to unselected publisher wording."
   },
   {
     "id": "b106_fr_154641",
@@ -3598,7 +3644,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -3620,7 +3666,7 @@
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
         "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
         "evidence_basis": "Existing accepted original-edition rights record in docs/evidence/issue-99/sources.json; no live statute refresh claimed.",
-        "selected_text_correspondence": "Edition-level rights only; selected-text import correspondence remains for the separate reviewer."
+        "selected_text_correspondence": "Actual selected lexical wording and notices independently read; original-edition public-domain basis is separate from Wiki/Lexique CC BY-SA 4.0 layers. An import/reference does not identify every selected sentence author."
       },
       {
         "author": "Lexique contributors",
@@ -3630,11 +3676,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and complete linked contributor history.",
-      "Retain the CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; project code remains MIT.",
-      "Retain original-author and applicable import/bibliography notices separately.",
-      "No noncommercial restriction or additional restriction on licensed rights."
+      "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+      "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+      "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+      "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+      "Impose no additional restrictions or obstructive effective technological measures."
     ],
     "source_page_notices_to_record": [
       {
@@ -3792,7 +3838,9 @@
         "selected_sentence_authorship": "not_established_by_reference_marker"
       }
     ],
-    "independent_review": "pending"
+    "independent_review": "passed_at_selected_text_boundary",
+    "url": "https://fr.wiktionary.org/w/index.php?title=commander&oldid=39906051",
+    "selected_text_rights_reason": "The actual selected French lexical definition, language/POS/headword frame and applicable IPA were read in fixed original wikitext. Article/full-history credit identifies Wiki contributors; Lexique FR adaptations and EN/ZH explanations are separately CC BY-SA 4.0. Unselected quotation bodies, media, foreign entries and translation tables supply no field wording. Actual DAF8 notice is preserved as an original collective-edition layer, public domain under the established 1932–1935/L123-3 basis with conservative expiry 2006-01-01; this does not identify every modern sentence author. Other bibliography/example-source markers retain attribution metadata, without granting rights to unselected publisher wording."
   },
   {
     "id": "b106_fr_154711",
@@ -3808,7 +3856,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -3830,7 +3878,7 @@
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
         "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
         "evidence_basis": "Existing accepted original-edition rights record in docs/evidence/issue-99/sources.json; no live statute refresh claimed.",
-        "selected_text_correspondence": "Edition-level rights only; selected-text import correspondence remains for the separate reviewer."
+        "selected_text_correspondence": "Actual selected lexical wording and notices independently read; original-edition public-domain basis is separate from Wiki/Lexique CC BY-SA 4.0 layers. An import/reference does not identify every selected sentence author."
       },
       {
         "author": "Lexique contributors",
@@ -3840,11 +3888,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and complete linked contributor history.",
-      "Retain the CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; project code remains MIT.",
-      "Retain original-author and applicable import/bibliography notices separately.",
-      "No noncommercial restriction or additional restriction on licensed rights."
+      "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+      "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+      "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+      "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+      "Impose no additional restrictions or obstructive effective technological measures."
     ],
     "source_page_notices_to_record": [
       {
@@ -3925,7 +3973,9 @@
         "selected_sentence_authorship": "not_established_by_reference_marker"
       }
     ],
-    "independent_review": "pending"
+    "independent_review": "passed_at_selected_text_boundary",
+    "url": "https://fr.wiktionary.org/w/index.php?title=combat&oldid=40006682",
+    "selected_text_rights_reason": "The actual selected French lexical definition, language/POS/headword frame and applicable IPA were read in fixed original wikitext. Article/full-history credit identifies Wiki contributors; Lexique FR adaptations and EN/ZH explanations are separately CC BY-SA 4.0. Unselected quotation bodies, media, foreign entries and translation tables supply no field wording. Actual DAF8 notice is preserved as an original collective-edition layer, public domain under the established 1932–1935/L123-3 basis with conservative expiry 2006-01-01; this does not identify every modern sentence author. Other bibliography/example-source markers retain attribution metadata, without granting rights to unselected publisher wording."
   },
   {
     "id": "b106_fr_156024",
@@ -3941,7 +3991,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -3963,7 +4013,7 @@
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
         "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
         "evidence_basis": "Existing accepted original-edition rights record in docs/evidence/issue-99/sources.json; no live statute refresh claimed.",
-        "selected_text_correspondence": "Edition-level rights only; selected-text import correspondence remains for the separate reviewer."
+        "selected_text_correspondence": "Actual selected lexical wording and notices independently read; original-edition public-domain basis is separate from Wiki/Lexique CC BY-SA 4.0 layers. An import/reference does not identify every selected sentence author."
       },
       {
         "author": "Lexique contributors",
@@ -3973,11 +4023,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and complete linked contributor history.",
-      "Retain the CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; project code remains MIT.",
-      "Retain original-author and applicable import/bibliography notices separately.",
-      "No noncommercial restriction or additional restriction on licensed rights."
+      "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+      "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+      "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+      "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+      "Impose no additional restrictions or obstructive effective technological measures."
     ],
     "source_page_notices_to_record": [
       {
@@ -4135,7 +4185,9 @@
         "selected_sentence_authorship": "not_established_by_reference_marker"
       }
     ],
-    "independent_review": "pending"
+    "independent_review": "passed_at_selected_text_boundary",
+    "url": "https://fr.wiktionary.org/w/index.php?title=crever&oldid=39918387",
+    "selected_text_rights_reason": "The actual selected French lexical definition, language/POS/headword frame and applicable IPA were read in fixed original wikitext. Article/full-history credit identifies Wiki contributors; Lexique FR adaptations and EN/ZH explanations are separately CC BY-SA 4.0. Unselected quotation bodies, media, foreign entries and translation tables supply no field wording. Actual DAF8 notice is preserved as an original collective-edition layer, public domain under the established 1932–1935/L123-3 basis with conservative expiry 2006-01-01; this does not identify every modern sentence author. Other bibliography/example-source markers retain attribution metadata, without granting rights to unselected publisher wording."
   },
   {
     "id": "b106_fr_157090",
@@ -4151,7 +4203,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -4173,7 +4225,7 @@
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
         "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
         "evidence_basis": "Existing accepted original-edition rights record in docs/evidence/issue-99/sources.json; no live statute refresh claimed.",
-        "selected_text_correspondence": "Edition-level rights only; selected-text import correspondence remains for the separate reviewer."
+        "selected_text_correspondence": "Actual selected lexical wording and notices independently read; original-edition public-domain basis is separate from Wiki/Lexique CC BY-SA 4.0 layers. An import/reference does not identify every selected sentence author."
       },
       {
         "author": "Lexique contributors",
@@ -4183,11 +4235,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and complete linked contributor history.",
-      "Retain the CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; project code remains MIT.",
-      "Retain original-author and applicable import/bibliography notices separately.",
-      "No noncommercial restriction or additional restriction on licensed rights."
+      "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+      "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+      "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+      "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+      "Impose no additional restrictions or obstructive effective technological measures."
     ],
     "source_page_notices_to_record": [
       {
@@ -4268,7 +4320,9 @@
         "selected_sentence_authorship": "not_established_by_reference_marker"
       }
     ],
-    "independent_review": "pending"
+    "independent_review": "passed_at_selected_text_boundary",
+    "url": "https://fr.wiktionary.org/w/index.php?title=demande&oldid=39906050",
+    "selected_text_rights_reason": "The actual selected French lexical definition, language/POS/headword frame and applicable IPA were read in fixed original wikitext. Article/full-history credit identifies Wiki contributors; Lexique FR adaptations and EN/ZH explanations are separately CC BY-SA 4.0. Unselected quotation bodies, media, foreign entries and translation tables supply no field wording. Actual DAF8 notice is preserved as an original collective-edition layer, public domain under the established 1932–1935/L123-3 basis with conservative expiry 2006-01-01; this does not identify every modern sentence author. Other bibliography/example-source markers retain attribution metadata, without granting rights to unselected publisher wording."
   },
   {
     "id": "b106_fr_159651",
@@ -4284,7 +4338,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -4306,7 +4360,7 @@
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
         "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
         "evidence_basis": "Existing accepted original-edition rights record in docs/evidence/issue-99/sources.json; no live statute refresh claimed.",
-        "selected_text_correspondence": "Edition-level rights only; selected-text import correspondence remains for the separate reviewer."
+        "selected_text_correspondence": "Actual selected lexical wording and notices independently read; original-edition public-domain basis is separate from Wiki/Lexique CC BY-SA 4.0 layers. An import/reference does not identify every selected sentence author."
       },
       {
         "author": "Lexique contributors",
@@ -4316,11 +4370,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and complete linked contributor history.",
-      "Retain the CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; project code remains MIT.",
-      "Retain original-author and applicable import/bibliography notices separately.",
-      "No noncommercial restriction or additional restriction on licensed rights."
+      "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+      "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+      "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+      "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+      "Impose no additional restrictions or obstructive effective technological measures."
     ],
     "source_page_notices_to_record": [
       {
@@ -4436,7 +4490,9 @@
         "selected_sentence_authorship": "not_established_by_reference_marker"
       }
     ],
-    "independent_review": "pending"
+    "independent_review": "passed_at_selected_text_boundary",
+    "url": "https://fr.wiktionary.org/w/index.php?title=enterrer&oldid=39965974",
+    "selected_text_rights_reason": "The actual selected French lexical definition, language/POS/headword frame and applicable IPA were read in fixed original wikitext. Article/full-history credit identifies Wiki contributors; Lexique FR adaptations and EN/ZH explanations are separately CC BY-SA 4.0. Unselected quotation bodies, media, foreign entries and translation tables supply no field wording. Actual DAF8 notice is preserved as an original collective-edition layer, public domain under the established 1932–1935/L123-3 basis with conservative expiry 2006-01-01; this does not identify every modern sentence author. Other bibliography/example-source markers retain attribution metadata, without granting rights to unselected publisher wording."
   },
   {
     "id": "b106_fr_160177",
@@ -4452,7 +4508,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -4474,7 +4530,7 @@
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
         "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
         "evidence_basis": "Existing accepted original-edition rights record in docs/evidence/issue-99/sources.json; no live statute refresh claimed.",
-        "selected_text_correspondence": "Edition-level rights only; selected-text import correspondence remains for the separate reviewer."
+        "selected_text_correspondence": "Actual selected lexical wording and notices independently read; original-edition public-domain basis is separate from Wiki/Lexique CC BY-SA 4.0 layers. An import/reference does not identify every selected sentence author."
       },
       {
         "author": "Lexique contributors",
@@ -4484,11 +4540,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and complete linked contributor history.",
-      "Retain the CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; project code remains MIT.",
-      "Retain original-author and applicable import/bibliography notices separately.",
-      "No noncommercial restriction or additional restriction on licensed rights."
+      "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+      "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+      "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+      "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+      "Impose no additional restrictions or obstructive effective technological measures."
     ],
     "source_page_notices_to_record": [
       {
@@ -4583,7 +4639,9 @@
         "selected_sentence_authorship": "not_established_by_reference_marker"
       }
     ],
-    "independent_review": "pending"
+    "independent_review": "passed_at_selected_text_boundary",
+    "url": "https://fr.wiktionary.org/w/index.php?title=espoir&oldid=39834691",
+    "selected_text_rights_reason": "The actual selected French lexical definition, language/POS/headword frame and applicable IPA were read in fixed original wikitext. Article/full-history credit identifies Wiki contributors; Lexique FR adaptations and EN/ZH explanations are separately CC BY-SA 4.0. Unselected quotation bodies, media, foreign entries and translation tables supply no field wording. Actual DAF8 notice is preserved as an original collective-edition layer, public domain under the established 1932–1935/L123-3 basis with conservative expiry 2006-01-01; this does not identify every modern sentence author. Other bibliography/example-source markers retain attribution metadata, without granting rights to unselected publisher wording."
   },
   {
     "id": "b106_fr_161713",
@@ -4599,7 +4657,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -4621,7 +4679,7 @@
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
         "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
         "evidence_basis": "Existing accepted original-edition rights record in docs/evidence/issue-99/sources.json; no live statute refresh claimed.",
-        "selected_text_correspondence": "Edition-level rights only; selected-text import correspondence remains for the separate reviewer."
+        "selected_text_correspondence": "Actual selected lexical wording and notices independently read; original-edition public-domain basis is separate from Wiki/Lexique CC BY-SA 4.0 layers. An import/reference does not identify every selected sentence author."
       },
       {
         "author": "Lexique contributors",
@@ -4631,11 +4689,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and complete linked contributor history.",
-      "Retain the CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; project code remains MIT.",
-      "Retain original-author and applicable import/bibliography notices separately.",
-      "No noncommercial restriction or additional restriction on licensed rights."
+      "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+      "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+      "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+      "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+      "Impose no additional restrictions or obstructive effective technological measures."
     ],
     "source_page_notices_to_record": [
       {
@@ -4723,7 +4781,9 @@
         "selected_sentence_authorship": "not_established_by_reference_marker"
       }
     ],
-    "independent_review": "pending"
+    "independent_review": "passed_at_selected_text_boundary",
+    "url": "https://fr.wiktionary.org/w/index.php?title=forcer&oldid=39713334",
+    "selected_text_rights_reason": "The actual selected French lexical definition, language/POS/headword frame and applicable IPA were read in fixed original wikitext. Article/full-history credit identifies Wiki contributors; Lexique FR adaptations and EN/ZH explanations are separately CC BY-SA 4.0. Unselected quotation bodies, media, foreign entries and translation tables supply no field wording. Actual DAF8 notice is preserved as an original collective-edition layer, public domain under the established 1932–1935/L123-3 basis with conservative expiry 2006-01-01; this does not identify every modern sentence author. Other bibliography/example-source markers retain attribution metadata, without granting rights to unselected publisher wording."
   },
   {
     "id": "b106_fr_162950",
@@ -4739,7 +4799,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -4761,7 +4821,7 @@
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
         "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
         "evidence_basis": "Existing accepted original-edition rights record in docs/evidence/issue-99/sources.json; no live statute refresh claimed.",
-        "selected_text_correspondence": "Edition-level rights only; selected-text import correspondence remains for the separate reviewer."
+        "selected_text_correspondence": "Actual selected lexical wording and notices independently read; original-edition public-domain basis is separate from Wiki/Lexique CC BY-SA 4.0 layers. An import/reference does not identify every selected sentence author."
       },
       {
         "author": "Lexique contributors",
@@ -4771,11 +4831,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and complete linked contributor history.",
-      "Retain the CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; project code remains MIT.",
-      "Retain original-author and applicable import/bibliography notices separately.",
-      "No noncommercial restriction or additional restriction on licensed rights."
+      "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+      "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+      "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+      "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+      "Impose no additional restrictions or obstructive effective technological measures."
     ],
     "source_page_notices_to_record": [
       {
@@ -4863,7 +4923,9 @@
         "selected_sentence_authorship": "not_established_by_reference_marker"
       }
     ],
-    "independent_review": "pending"
+    "independent_review": "passed_at_selected_text_boundary",
+    "url": "https://fr.wiktionary.org/w/index.php?title=grandir&oldid=39772465",
+    "selected_text_rights_reason": "The actual selected French lexical definition, language/POS/headword frame and applicable IPA were read in fixed original wikitext. Article/full-history credit identifies Wiki contributors; Lexique FR adaptations and EN/ZH explanations are separately CC BY-SA 4.0. Unselected quotation bodies, media, foreign entries and translation tables supply no field wording. Actual DAF8 notice is preserved as an original collective-edition layer, public domain under the established 1932–1935/L123-3 basis with conservative expiry 2006-01-01; this does not identify every modern sentence author. Other bibliography/example-source markers retain attribution metadata, without granting rights to unselected publisher wording."
   },
   {
     "id": "b106_fr_170432",
@@ -4879,7 +4941,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -4901,7 +4963,7 @@
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
         "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
         "evidence_basis": "Existing accepted original-edition rights record in docs/evidence/issue-99/sources.json; no live statute refresh claimed.",
-        "selected_text_correspondence": "Edition-level rights only; selected-text import correspondence remains for the separate reviewer."
+        "selected_text_correspondence": "Actual selected lexical wording and notices independently read; original-edition public-domain basis is separate from Wiki/Lexique CC BY-SA 4.0 layers. An import/reference does not identify every selected sentence author."
       },
       {
         "author": "Lexique contributors",
@@ -4911,11 +4973,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and complete linked contributor history.",
-      "Retain the CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; project code remains MIT.",
-      "Retain original-author and applicable import/bibliography notices separately.",
-      "No noncommercial restriction or additional restriction on licensed rights."
+      "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+      "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+      "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+      "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+      "Impose no additional restrictions or obstructive effective technological measures."
     ],
     "source_page_notices_to_record": [
       {
@@ -5010,7 +5072,9 @@
         "selected_sentence_authorship": "not_established_by_reference_marker"
       }
     ],
-    "independent_review": "pending"
+    "independent_review": "passed_at_selected_text_boundary",
+    "url": "https://fr.wiktionary.org/w/index.php?title=parfait&oldid=39945990",
+    "selected_text_rights_reason": "The actual selected French lexical definition, language/POS/headword frame and applicable IPA were read in fixed original wikitext. Article/full-history credit identifies Wiki contributors; Lexique FR adaptations and EN/ZH explanations are separately CC BY-SA 4.0. Unselected quotation bodies, media, foreign entries and translation tables supply no field wording. Actual DAF8 notice is preserved as an original collective-edition layer, public domain under the established 1932–1935/L123-3 basis with conservative expiry 2006-01-01; this does not identify every modern sentence author. Other bibliography/example-source markers retain attribution metadata, without granting rights to unselected publisher wording."
   },
   {
     "id": "b106_fr_172396",
@@ -5026,7 +5090,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -5048,7 +5112,7 @@
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
         "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
         "evidence_basis": "Existing accepted original-edition rights record in docs/evidence/issue-99/sources.json; no live statute refresh claimed.",
-        "selected_text_correspondence": "Edition-level rights only; selected-text import correspondence remains for the separate reviewer."
+        "selected_text_correspondence": "Actual selected lexical wording and notices independently read; original-edition public-domain basis is separate from Wiki/Lexique CC BY-SA 4.0 layers. An import/reference does not identify every selected sentence author."
       },
       {
         "author": "Lexique contributors",
@@ -5058,11 +5122,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and complete linked contributor history.",
-      "Retain the CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; project code remains MIT.",
-      "Retain original-author and applicable import/bibliography notices separately.",
-      "No noncommercial restriction or additional restriction on licensed rights."
+      "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+      "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+      "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+      "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+      "Impose no additional restrictions or obstructive effective technological measures."
     ],
     "source_page_notices_to_record": [
       {
@@ -5157,7 +5221,9 @@
         "selected_sentence_authorship": "not_established_by_reference_marker"
       }
     ],
-    "independent_review": "pending"
+    "independent_review": "passed_at_selected_text_boundary",
+    "url": "https://fr.wiktionary.org/w/index.php?title=poursuivre&oldid=39951432",
+    "selected_text_rights_reason": "The actual selected French lexical definition, language/POS/headword frame and applicable IPA were read in fixed original wikitext. Article/full-history credit identifies Wiki contributors; Lexique FR adaptations and EN/ZH explanations are separately CC BY-SA 4.0. Unselected quotation bodies, media, foreign entries and translation tables supply no field wording. Actual DAF8 notice is preserved as an original collective-edition layer, public domain under the established 1932–1935/L123-3 basis with conservative expiry 2006-01-01; this does not identify every modern sentence author. Other bibliography/example-source markers retain attribution metadata, without granting rights to unselected publisher wording."
   },
   {
     "id": "b106_fr_175712",
@@ -5173,7 +5239,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -5195,7 +5261,7 @@
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
         "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
         "evidence_basis": "Existing accepted original-edition rights record in docs/evidence/issue-99/sources.json; no live statute refresh claimed.",
-        "selected_text_correspondence": "Edition-level rights only; selected-text import correspondence remains for the separate reviewer."
+        "selected_text_correspondence": "Actual selected lexical wording and notices independently read; original-edition public-domain basis is separate from Wiki/Lexique CC BY-SA 4.0 layers. An import/reference does not identify every selected sentence author."
       },
       {
         "author": "Lexique contributors",
@@ -5205,11 +5271,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and complete linked contributor history.",
-      "Retain the CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; project code remains MIT.",
-      "Retain original-author and applicable import/bibliography notices separately.",
-      "No noncommercial restriction or additional restriction on licensed rights."
+      "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+      "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+      "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+      "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+      "Impose no additional restrictions or obstructive effective technological measures."
     ],
     "source_page_notices_to_record": [
       {
@@ -5353,7 +5419,9 @@
         "selected_sentence_authorship": "not_established_by_reference_marker"
       }
     ],
-    "independent_review": "pending"
+    "independent_review": "passed_at_selected_text_boundary",
+    "url": "https://fr.wiktionary.org/w/index.php?title=saint&oldid=39759309",
+    "selected_text_rights_reason": "The actual selected French lexical definition, language/POS/headword frame and applicable IPA were read in fixed original wikitext. Article/full-history credit identifies Wiki contributors; Lexique FR adaptations and EN/ZH explanations are separately CC BY-SA 4.0. Unselected quotation bodies, media, foreign entries and translation tables supply no field wording. Actual DAF8 notice is preserved as an original collective-edition layer, public domain under the established 1932–1935/L123-3 basis with conservative expiry 2006-01-01; this does not identify every modern sentence author. Other bibliography/example-source markers retain attribution metadata, without granting rights to unselected publisher wording."
   },
   {
     "id": "b106_fr_176639",
@@ -5369,7 +5437,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -5391,7 +5459,7 @@
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
         "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
         "evidence_basis": "Existing accepted original-edition rights record in docs/evidence/issue-99/sources.json; no live statute refresh claimed.",
-        "selected_text_correspondence": "Edition-level rights only; selected-text import correspondence remains for the separate reviewer."
+        "selected_text_correspondence": "Actual selected lexical wording and notices independently read; original-edition public-domain basis is separate from Wiki/Lexique CC BY-SA 4.0 layers. An import/reference does not identify every selected sentence author."
       },
       {
         "author": "Lexique contributors",
@@ -5401,11 +5469,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and complete linked contributor history.",
-      "Retain the CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; project code remains MIT.",
-      "Retain original-author and applicable import/bibliography notices separately.",
-      "No noncommercial restriction or additional restriction on licensed rights."
+      "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+      "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+      "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+      "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+      "Impose no additional restrictions or obstructive effective technological measures."
     ],
     "source_page_notices_to_record": [
       {
@@ -5535,7 +5603,9 @@
         "selected_sentence_authorship": "not_established_by_reference_marker"
       }
     ],
-    "independent_review": "pending"
+    "independent_review": "passed_at_selected_text_boundary",
+    "url": "https://fr.wiktionary.org/w/index.php?title=soit&oldid=39992483",
+    "selected_text_rights_reason": "The actual selected French lexical definition, language/POS/headword frame and applicable IPA were read in fixed original wikitext. Article/full-history credit identifies Wiki contributors; Lexique FR adaptations and EN/ZH explanations are separately CC BY-SA 4.0. Unselected quotation bodies, media, foreign entries and translation tables supply no field wording. Actual DAF8 notice is preserved as an original collective-edition layer, public domain under the established 1932–1935/L123-3 basis with conservative expiry 2006-01-01; this does not identify every modern sentence author. Other bibliography/example-source markers retain attribution metadata, without granting rights to unselected publisher wording."
   },
   {
     "id": "b106_fr_177641",
@@ -5551,7 +5621,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -5573,7 +5643,7 @@
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
         "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
         "evidence_basis": "Existing accepted original-edition rights record in docs/evidence/issue-99/sources.json; no live statute refresh claimed.",
-        "selected_text_correspondence": "Edition-level rights only; selected-text import correspondence remains for the separate reviewer."
+        "selected_text_correspondence": "Actual selected lexical wording and notices independently read; original-edition public-domain basis is separate from Wiki/Lexique CC BY-SA 4.0 layers. An import/reference does not identify every selected sentence author."
       },
       {
         "author": "Lexique contributors",
@@ -5583,11 +5653,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and complete linked contributor history.",
-      "Retain the CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; project code remains MIT.",
-      "Retain original-author and applicable import/bibliography notices separately.",
-      "No noncommercial restriction or additional restriction on licensed rights."
+      "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+      "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+      "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+      "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+      "Impose no additional restrictions or obstructive effective technological measures."
     ],
     "source_page_notices_to_record": [
       {
@@ -5682,7 +5752,9 @@
         "selected_sentence_authorship": "not_established_by_reference_marker"
       }
     ],
-    "independent_review": "pending"
+    "independent_review": "passed_at_selected_text_boundary",
+    "url": "https://fr.wiktionary.org/w/index.php?title=survivre&oldid=39728464",
+    "selected_text_rights_reason": "The actual selected French lexical definition, language/POS/headword frame and applicable IPA were read in fixed original wikitext. Article/full-history credit identifies Wiki contributors; Lexique FR adaptations and EN/ZH explanations are separately CC BY-SA 4.0. Unselected quotation bodies, media, foreign entries and translation tables supply no field wording. Actual DAF8 notice is preserved as an original collective-edition layer, public domain under the established 1932–1935/L123-3 basis with conservative expiry 2006-01-01; this does not identify every modern sentence author. Other bibliography/example-source markers retain attribution metadata, without granting rights to unselected publisher wording."
   },
   {
     "id": "b106_fr_178726",
@@ -5698,7 +5770,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -5720,7 +5792,7 @@
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
         "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
         "evidence_basis": "Existing accepted original-edition rights record in docs/evidence/issue-99/sources.json; no live statute refresh claimed.",
-        "selected_text_correspondence": "Edition-level rights only; selected-text import correspondence remains for the separate reviewer."
+        "selected_text_correspondence": "Actual selected lexical wording and notices independently read; original-edition public-domain basis is separate from Wiki/Lexique CC BY-SA 4.0 layers. An import/reference does not identify every selected sentence author."
       },
       {
         "author": "Lexique contributors",
@@ -5730,11 +5802,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and complete linked contributor history.",
-      "Retain the CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; project code remains MIT.",
-      "Retain original-author and applicable import/bibliography notices separately.",
-      "No noncommercial restriction or additional restriction on licensed rights."
+      "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+      "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+      "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+      "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+      "Impose no additional restrictions or obstructive effective technological measures."
     ],
     "source_page_notices_to_record": [
       {
@@ -5864,7 +5936,9 @@
         "selected_sentence_authorship": "not_established_by_reference_marker"
       }
     ],
-    "independent_review": "pending"
+    "independent_review": "passed_at_selected_text_boundary",
+    "url": "https://fr.wiktionary.org/w/index.php?title=tra%C3%AEner&oldid=40007510",
+    "selected_text_rights_reason": "The actual selected French lexical definition, language/POS/headword frame and applicable IPA were read in fixed original wikitext. Article/full-history credit identifies Wiki contributors; Lexique FR adaptations and EN/ZH explanations are separately CC BY-SA 4.0. Unselected quotation bodies, media, foreign entries and translation tables supply no field wording. Actual DAF8 notice is preserved as an original collective-edition layer, public domain under the established 1932–1935/L123-3 basis with conservative expiry 2006-01-01; this does not identify every modern sentence author. Other bibliography/example-source markers retain attribution metadata, without granting rights to unselected publisher wording."
   },
   {
     "id": "b106_fr_178879",
@@ -5880,7 +5954,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -5902,7 +5976,7 @@
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
         "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
         "evidence_basis": "Existing accepted original-edition rights record in docs/evidence/issue-99/sources.json; no live statute refresh claimed.",
-        "selected_text_correspondence": "Edition-level rights only; selected-text import correspondence remains for the separate reviewer."
+        "selected_text_correspondence": "Actual selected lexical wording and notices independently read; original-edition public-domain basis is separate from Wiki/Lexique CC BY-SA 4.0 layers. An import/reference does not identify every selected sentence author."
       },
       {
         "author": "Lexique contributors",
@@ -5912,11 +5986,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and complete linked contributor history.",
-      "Retain the CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; project code remains MIT.",
-      "Retain original-author and applicable import/bibliography notices separately.",
-      "No noncommercial restriction or additional restriction on licensed rights."
+      "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+      "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+      "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+      "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+      "Impose no additional restrictions or obstructive effective technological measures."
     ],
     "source_page_notices_to_record": [
       {
@@ -5997,7 +6071,9 @@
         "selected_sentence_authorship": "not_established_by_reference_marker"
       }
     ],
-    "independent_review": "pending"
+    "independent_review": "passed_at_selected_text_boundary",
+    "url": "https://fr.wiktionary.org/w/index.php?title=travers&oldid=39771596",
+    "selected_text_rights_reason": "The actual selected French lexical definition, language/POS/headword frame and applicable IPA were read in fixed original wikitext. Article/full-history credit identifies Wiki contributors; Lexique FR adaptations and EN/ZH explanations are separately CC BY-SA 4.0. Unselected quotation bodies, media, foreign entries and translation tables supply no field wording. Actual DAF8 notice is preserved as an original collective-edition layer, public domain under the established 1932–1935/L123-3 basis with conservative expiry 2006-01-01; this does not identify every modern sentence author. Other bibliography/example-source markers retain attribution metadata, without granting rights to unselected publisher wording."
   },
   {
     "id": "b106_fr_179201",
@@ -6013,7 +6089,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -6035,7 +6111,7 @@
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
         "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
         "evidence_basis": "Existing accepted original-edition rights record in docs/evidence/issue-99/sources.json; no live statute refresh claimed.",
-        "selected_text_correspondence": "Edition-level rights only; selected-text import correspondence remains for the separate reviewer."
+        "selected_text_correspondence": "Actual selected lexical wording and notices independently read; original-edition public-domain basis is separate from Wiki/Lexique CC BY-SA 4.0 layers. An import/reference does not identify every selected sentence author."
       },
       {
         "author": "Lexique contributors",
@@ -6045,11 +6121,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and complete linked contributor history.",
-      "Retain the CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; project code remains MIT.",
-      "Retain original-author and applicable import/bibliography notices separately.",
-      "No noncommercial restriction or additional restriction on licensed rights."
+      "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+      "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+      "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+      "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+      "Impose no additional restrictions or obstructive effective technological measures."
     ],
     "source_page_notices_to_record": [
       {
@@ -6081,7 +6157,9 @@
         "selected_sentence_authorship": "not_established_by_reference_marker"
       }
     ],
-    "independent_review": "pending"
+    "independent_review": "passed_at_selected_text_boundary",
+    "url": "https://fr.wiktionary.org/w/index.php?title=tueur&oldid=39435922",
+    "selected_text_rights_reason": "The actual selected French lexical definition, language/POS/headword frame and applicable IPA were read in fixed original wikitext. Article/full-history credit identifies Wiki contributors; Lexique FR adaptations and EN/ZH explanations are separately CC BY-SA 4.0. Unselected quotation bodies, media, foreign entries and translation tables supply no field wording. Actual DAF8 notice is preserved as an original collective-edition layer, public domain under the established 1932–1935/L123-3 basis with conservative expiry 2006-01-01; this does not identify every modern sentence author. Other bibliography/example-source markers retain attribution metadata, without granting rights to unselected publisher wording."
   },
   {
     "id": "b106_fr_184462",
@@ -6097,7 +6175,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -6113,11 +6191,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and complete linked contributor history.",
-      "Retain the CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; project code remains MIT.",
-      "Retain original-author and applicable import/bibliography notices separately.",
-      "No noncommercial restriction or additional restriction on licensed rights."
+      "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+      "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+      "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+      "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+      "Impose no additional restrictions or obstructive effective technological measures."
     ],
     "source_page_notices_to_record": [
       {
@@ -6170,7 +6248,9 @@
         "selected_sentence_authorship": "not_established_by_reference_marker"
       }
     ],
-    "independent_review": "pending"
+    "independent_review": "passed_at_selected_text_boundary",
+    "url": "https://fr.wiktionary.org/w/index.php?title=d%C3%A9sirer&oldid=39922535",
+    "selected_text_rights_reason": "The actual selected French lexical definition, language/POS/headword frame and applicable IPA were read in fixed original wikitext. Article/full-history credit identifies Wiki contributors; Lexique FR adaptations and EN/ZH explanations are separately CC BY-SA 4.0. Unselected quotation bodies, media, foreign entries and translation tables supply no field wording. Other bibliography/example-source markers retain attribution metadata, without granting rights to unselected publisher wording."
   },
   {
     "id": "b106_fr_232332",
@@ -6186,7 +6266,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -6208,7 +6288,7 @@
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
         "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
         "evidence_basis": "Existing accepted original-edition rights record in docs/evidence/issue-99/sources.json; no live statute refresh claimed.",
-        "selected_text_correspondence": "Edition-level rights only; selected-text import correspondence remains for the separate reviewer."
+        "selected_text_correspondence": "Actual selected lexical wording and notices independently read; original-edition public-domain basis is separate from Wiki/Lexique CC BY-SA 4.0 layers. An import/reference does not identify every selected sentence author."
       },
       {
         "author": "Lexique contributors",
@@ -6218,11 +6298,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and complete linked contributor history.",
-      "Retain the CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; project code remains MIT.",
-      "Retain original-author and applicable import/bibliography notices separately.",
-      "No noncommercial restriction or additional restriction on licensed rights."
+      "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+      "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+      "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+      "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+      "Impose no additional restrictions or obstructive effective technological measures."
     ],
     "source_page_notices_to_record": [
       {
@@ -6359,7 +6439,9 @@
         "selected_sentence_authorship": "not_established_by_reference_marker"
       }
     ],
-    "independent_review": "pending"
+    "independent_review": "passed_at_selected_text_boundary",
+    "url": "https://fr.wiktionary.org/w/index.php?title=imb%C3%A9cile&oldid=39677870",
+    "selected_text_rights_reason": "The actual selected French lexical definition, language/POS/headword frame and applicable IPA were read in fixed original wikitext. Article/full-history credit identifies Wiki contributors; Lexique FR adaptations and EN/ZH explanations are separately CC BY-SA 4.0. Unselected quotation bodies, media, foreign entries and translation tables supply no field wording. Actual DAF8 notice is preserved as an original collective-edition layer, public domain under the established 1932–1935/L123-3 basis with conservative expiry 2006-01-01; this does not identify every modern sentence author. Other bibliography/example-source markers retain attribution metadata, without granting rights to unselected publisher wording."
   },
   {
     "id": "b106_fr_972676",
@@ -6375,7 +6457,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -6391,11 +6473,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and complete linked contributor history.",
-      "Retain the CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; project code remains MIT.",
-      "Retain original-author and applicable import/bibliography notices separately.",
-      "No noncommercial restriction or additional restriction on licensed rights."
+      "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+      "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+      "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+      "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+      "Impose no additional restrictions or obstructive effective technological measures."
     ],
     "source_page_notices_to_record": [
       {
@@ -6427,7 +6509,9 @@
         "eligible_for_bundled_field_text": false
       }
     ],
-    "independent_review": "pending"
+    "independent_review": "passed_at_selected_text_boundary",
+    "url": "https://fr.wiktionary.org/w/index.php?title=enfuir&oldid=39321235",
+    "selected_text_rights_reason": "The actual selected French lexical definition, language/POS/headword frame and applicable IPA were read in fixed original wikitext. Article/full-history credit identifies Wiki contributors; Lexique FR adaptations and EN/ZH explanations are separately CC BY-SA 4.0. Unselected quotation bodies, media, foreign entries and translation tables supply no field wording. Other bibliography/example-source markers retain attribution metadata, without granting rights to unselected publisher wording."
   },
   {
     "id": "b106_fr_1678020",
@@ -6443,7 +6527,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -6465,7 +6549,7 @@
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
         "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
         "evidence_basis": "Existing accepted original-edition rights record in docs/evidence/issue-99/sources.json; no live statute refresh claimed.",
-        "selected_text_correspondence": "Edition-level rights only; selected-text import correspondence remains for the separate reviewer."
+        "selected_text_correspondence": "Actual selected lexical wording and notices independently read; original-edition public-domain basis is separate from Wiki/Lexique CC BY-SA 4.0 layers. An import/reference does not identify every selected sentence author."
       },
       {
         "author": "Lexique contributors",
@@ -6475,11 +6559,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and complete linked contributor history.",
-      "Retain the CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; project code remains MIT.",
-      "Retain original-author and applicable import/bibliography notices separately.",
-      "No noncommercial restriction or additional restriction on licensed rights."
+      "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+      "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+      "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+      "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+      "Impose no additional restrictions or obstructive effective technological measures."
     ],
     "source_page_notices_to_record": [
       {
@@ -6756,7 +6840,9 @@
         "eligible_for_bundled_field_text": false
       }
     ],
-    "independent_review": "pending"
+    "independent_review": "passed_at_selected_text_boundary",
+    "url": "https://fr.wiktionary.org/w/index.php?title=vert&oldid=39923154",
+    "selected_text_rights_reason": "The actual selected French lexical definition, language/POS/headword frame and applicable IPA were read in fixed original wikitext. Article/full-history credit identifies Wiki contributors; Lexique FR adaptations and EN/ZH explanations are separately CC BY-SA 4.0. Unselected quotation bodies, media, foreign entries and translation tables supply no field wording. Actual DAF8 notice is preserved as an original collective-edition layer, public domain under the established 1932–1935/L123-3 basis with conservative expiry 2006-01-01; this does not identify every modern sentence author. Other bibliography/example-source markers retain attribution metadata, without granting rights to unselected publisher wording."
   },
   {
     "id": "b106_fr_1883281",
@@ -6772,7 +6858,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "supporting_evidence_only_no_selected_fields",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -6794,7 +6880,7 @@
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
         "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
         "evidence_basis": "Existing accepted original-edition rights record in docs/evidence/issue-99/sources.json; no live statute refresh claimed.",
-        "selected_text_correspondence": "Edition-level rights only; selected-text import correspondence remains for the separate reviewer."
+        "selected_text_correspondence": "Actual selected lexical wording and notices independently read; original-edition public-domain basis is separate from Wiki/Lexique CC BY-SA 4.0 layers. An import/reference does not identify every selected sentence author."
       },
       {
         "author": "Lexique contributors",
@@ -6804,11 +6890,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and complete linked contributor history.",
-      "Retain the CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; project code remains MIT.",
-      "Retain original-author and applicable import/bibliography notices separately.",
-      "No noncommercial restriction or additional restriction on licensed rights."
+      "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+      "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+      "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+      "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+      "Impose no additional restrictions or obstructive effective technological measures."
     ],
     "source_page_notices_to_record": [
       {
@@ -6896,6 +6982,8 @@
         "selected_sentence_authorship": "not_established_by_reference_marker"
       }
     ],
-    "independent_review": "pending"
+    "independent_review": "no_accepted_fields",
+    "url": "https://fr.wiktionary.org/w/index.php?title=d&oldid=39772556",
+    "selected_text_rights_reason": "Bare d is retained only as exact language/POS blocker evidence; no field wording accepted."
   }
 ]

@@ -1,4 +1,4 @@
-"""Check #106 candidates and the exact-spelling blocker at the approved resource seam."""
+"""Check #106 reviewed content and the exact-spelling blocker at the resource seam."""
 import csv
 import json
 from pathlib import Path
@@ -13,6 +13,23 @@ def read(name):
     return json.loads((EVIDENCE / name).read_text(encoding="utf-8"))
 
 
+def meaningful_group(group):
+    result = {k: v for k, v in group.items() if k != "independent_confirmation"}
+    if "unresolved_reason" in result:
+        result["unresolved_reason"] = result["unresolved_reason"].removesuffix(
+            " No owner-approved annotation exception applies to row 1300.")
+    result["senses"] = [
+        {k: v for k, v in sense.items()
+         if k not in ("fields", "independent_review", "resource_admission")}
+        | {"fields": {
+            name: {k: v for k, v in field.items()
+                   if k not in ("independent_review", "rights_eligibility_status")}
+            for name, field in sense["fields"].items()}}
+        for sense in group["senses"]
+    ]
+    return result
+
+
 class Batch106Tests(unittest.TestCase):
     def test_frozen_groups_have_traceable_fields_or_an_explicit_source_blocker(self):
         with (ROOT / "resources/core-pilot-79/scope-manifest.csv").open(
@@ -21,18 +38,39 @@ class Batch106Tests(unittest.TestCase):
         candidates = read("review-candidates.json")
         self.assertEqual(candidates["scope_denominator_groups"], 4087)
         self.assertEqual(candidates["status"], "pending_independent_review")
-        groups = candidates["groups"]
-        self.assertEqual(groups, read("groups.json"))
+        groups = read("groups.json")
+        self.assertEqual([meaningful_group(g) for g in candidates["groups"]],
+                         [meaningful_group(g) for g in groups])
         self.assertEqual([g["frozen_row"] for g in groups], list(range(1251, 1301)))
         admission = read("admission.json")
-        self.assertEqual(admission["accepted_groups"], 0)
-        self.assertEqual(admission["accepted_fields"], 0)
+        self.assertEqual(admission["accepted_groups"], 49)
+        self.assertEqual(admission["accepted_fields"], 196)
+        self.assertEqual(admission["pending_fields"], 4)
         self.assertEqual(admission["source_blocked_rows"], [1300])
-        self.assertEqual(admission["annotation_exceptions"], [])
+        annotations = admission["approved_annotation_exceptions"]
+        self.assertEqual(admission["annotation_exceptions"], annotations)
+        self.assertEqual(len(annotations), 1)
+        annotation = annotations[0]
+        self.assertEqual((annotation["frozen_row"], annotation["headword"], annotation["pos"]),
+                         (1300, "d", "PRE"))
+        self.assertEqual((annotation["admitted_fields"], annotation["missing_fields"]), (0, 4))
+        self.assertEqual(annotation["decision"]["issue"], "https://github.com/zardonc/lexique/issues/106")
+        self.assertEqual(annotation["decision"]["approved_by"], "project_owner")
+        self.assertEqual(annotation["decision"]["approved_on"], "2026-11-19")
+        self.assertEqual(admission["status"], "passed")
+        self.assertEqual(admission["scope_accepted_groups"], 50)
+        self.assertEqual(admission["missing_annotation_fields"], 4)
+        self.assertEqual(admission["runtime_aliases_added"], [])
         review = read("field-review.json")
-        self.assertFalse(review["independence"])
-        self.assertIsNone(review["reviewer"])
-        self.assertEqual(len(review["unresolved_fields"]), 200)
+        self.assertEqual(review["approved_annotation_exceptions"], annotations)
+        self.assertEqual(review["annotation_exceptions"], annotations)
+        self.assertTrue(review["independence"])
+        self.assertTrue(review["reviewer"])
+        self.assertEqual(len(review["unresolved_fields"]), 4)
+        self.assertEqual({f["frozen_row"] for f in review["unresolved_fields"]}, {1300})
+        for missing in review["unresolved_fields"]:
+            self.assertEqual(missing["approved_annotation_exception"], annotation)
+            self.assertEqual(missing["admitted_fields"], 0)
         reviews = {(f["sense_id"], f["field"]): f for f in review["fields"]}
         excerpts = {(f["sense_id"], f["field"]): f
                     for f in read("source-excerpts.json")["fields"]}
@@ -67,7 +105,9 @@ class Batch106Tests(unittest.TestCase):
         self.assertNotIn("continue", json.loads(Path(parts[-1]).read_text(encoding="utf-8")))
         blocker = read("source-context.json")["blocked_groups"][0]
         self.assertEqual(blocker["frozen_row"], 1300)
-        self.assertFalse(blocker["annotation_exception"])
+        self.assertTrue(blocker["annotation_exception"])
+        self.assertEqual(blocker["approved_annotation_exception"], annotation)
+        self.assertEqual(blocker["admitted_fields"], 0)
         contrast = blocker["contrast_capture"]
         contrast_raw = Path(contrast["raw_path"]).read_text(encoding="utf-8")
         contrast_api = json.loads(Path(contrast["api_path"]).read_text(encoding="utf-8"))
@@ -99,13 +139,14 @@ class Batch106Tests(unittest.TestCase):
                 usage = usages[sense["sense_id"]]
                 spelling = spellings[sense["sense_id"]]
                 self.assertEqual(usage["proposed_usage"], sense["use"])
-                self.assertEqual(usage["accepted_usage_quality_status"], "pending")
+                self.assertEqual(usage["accepted_usage"], sense["use"])
+                self.assertEqual(usage["accepted_usage_quality_status"], "passed")
                 self.assertEqual((spelling["query_headword"], spelling["source_headword"]),
                                  (group["headword"], group["headword"]))
                 self.assertEqual(spelling["new_runtime_aliases"], [])
                 self.assertEqual(sense["source_headword"], group["headword"])
                 self.assertTrue(sense["use"])
-                self.assertEqual(sense["independent_review"], "pending")
+                self.assertEqual(sense["independent_review"], "passed")
                 self.assertIsNone(sense["cefr"])
                 support = sense["supporting_evidence"]
                 self.assertEqual(support[0]["raw_source_excerpt"], "== {{langue|fr}} ==")
@@ -119,11 +160,14 @@ class Batch106Tests(unittest.TestCase):
                     self.assertEqual(field["language"], LANGUAGES[name])
                     self.assertTrue(field["text"].strip())
                     self.assertTrue(field["modification"])
-                    self.assertEqual(field["independent_review"], "pending")
+                    self.assertEqual(field["independent_review"], "passed")
+                    self.assertEqual(field["rights_eligibility_status"],
+                                     "passed_at_selected_text_boundary")
                     binding = excerpts[sense["sense_id"], name]
                     proposed = reviews[sense["sense_id"], name]
                     source = sources[field["source_id"]]
                     self.assertEqual(source["title"], group["headword"])
+                    self.assertEqual(source["selected_text_review"], "passed_for_selected_spans")
                     self.assertEqual(proposed["frozen_row"], group["frozen_row"])
                     self.assertEqual((proposed["headword"], proposed["pos"]),
                                      (group["headword"], group["lexique_cgram"]))
@@ -139,9 +183,11 @@ class Batch106Tests(unittest.TestCase):
                     self.assertEqual({k: v for k, v in context_field.items()
                                       if k not in ("sense_id", "field")}, field["source_span"])
                     self.assertEqual(proposed["proposed_text"], field["text"])
+                    self.assertEqual(proposed["accepted_text"], field["text"])
                     self.assertEqual(proposed["exact_source"]["revid"], source["revid"])
-                    self.assertEqual(proposed["accepted_text_quality_status"], "pending")
-                    self.assertEqual(proposed["rights_eligibility_status"], "pending_selected_span_audit")
+                    self.assertEqual(proposed["accepted_text_quality_status"], "passed")
+                    self.assertEqual(proposed["rights_eligibility_status"],
+                                     "passed_at_selected_text_boundary")
                     self.assertEqual(binding["source_span"], field["source_span"])
                     self.assertEqual(binding["source_id"], field["source_id"])
                     for span in [field["source_span"], *support]:

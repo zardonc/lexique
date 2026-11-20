@@ -1,0 +1,53 @@
+{
+  "status": "passed_at_selected_text_boundary_for_196_fields",
+  "reviewer": "Independent selected-content and rights reviewer for issue 106; separate from author and merger",
+  "independence": true,
+  "content_license": "CC-BY-SA-4.0",
+  "authorities": [
+    {
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "sections": [
+        "1(a)",
+        "2(a)(1)",
+        "2(a)(4)",
+        "2(a)(5)",
+        "3(a)",
+        "3(b)",
+        "4"
+      ]
+    },
+    {
+      "url": "https://foundation.wikimedia.org/w/index.php?title=Policy:Terms_of_Use&oldid=598588",
+      "sections": [
+        "7(a) licensing",
+        "7(b) attribution",
+        "7(c) imported text",
+        "7(g) reuse and external-source notices",
+        "7(h) modifications/additions and licensing notice"
+      ]
+    },
+    {
+      "url": "https://fr.wiktionary.org/w/index.php?title=Convention%3ADroit_d%E2%80%99auteur&oldid=38903168",
+      "assessment": "French contributor text CC BY-SA 4.0, with explicit external-source exceptions; exceptions are checked at selected spans."
+    },
+    {
+      "url": "https://en.wiktionary.org/w/index.php?title=Wiktionary%3ACopyrights&oldid=87545419",
+      "assessment": "Original-entry dual licence statement; its historical interpretation warns that it is outdated, so actual CC 4.0 terms and Wikimedia Terms control this review."
+    }
+  ],
+  "combined_redistribution_obligations": [
+    "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+    "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+    "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+    "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+    "Impose no additional restrictions or obstructive effective technological measures."
+  ],
+  "legal_evidence": "This reviewer read the fixed French policy, Wikimedia Terms 7 and current CC legal text; authority capture paths are retained in source-captures.json.",
+  "daf8_basis": "Established collective edition 1932–1935/L123-3, conservative expiry 2006-01-01. Primary statute capture from #102 read by this reviewer; direct refresh returned 403.",
+  "excluded_rights_boundaries": [
+    "information revision 39914285: CFC-marked cartography sentence at line 63 is unselected.",
+    "dimanche revision 39955385: DAF9 religious first-day quotation at line 56 is unselected; no DAF9 public-domain claim.",
+    "Unselected literary/news prose, media, foreign entries and translation tables supply no accepted field wording."
+  ],
+  "package_gate": "Actual combined notices, conversion, native and release gates remain parent-owned."
+}
