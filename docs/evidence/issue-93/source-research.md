@@ -94,7 +94,8 @@ its independent spelling review recorded in
 
 Every row's accepted text/use and source/line are recorded in the canonical JSON.
 Independently accepted completeness is **50/50 groups / 200/200 fields**.
-The fixed denominator remains 4,087 groups. Native lookup/save/reopen, offline
-and saved-state preservation checks are pending at integration; see the parent
+The fixed denominator remains 4,087 groups.
+Native lookup/save/reopen, saved-state preservation and offline verification
+results and remaining gates are recorded in the parent
 [aggregate verification](../issue-90-99/README.md). Learner acceptance and wider
 release gates remain open.
