@@ -105,6 +105,7 @@ class PortableTests(unittest.TestCase):
             description = zipped.read(self.name + "/README.txt").decode("utf-8")
             self.assertIn("1,436 of 4,087", description)
             self.assertIn("2,651 groups remain unaccepted", description)
+            self.assertIn("fifteen approved zero-field annotations", description)
             self.assertIn("dictionary/core-pilot-79/", description)
 
     def test_missing_or_changed_core_resource_and_notices_prevent_delivery(self):

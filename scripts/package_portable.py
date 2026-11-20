@@ -127,7 +127,7 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
         "Its four fields and English usage notes, selected source excerpts, attribution and\n"
         "CC BY-SA 4.0 license are in dictionary/core-pilot-79/. The converter has a separate MIT license.\n"
         "Settings opens these bundled source materials offline. 2,651 groups remain unaccepted,\n"
-        "including seven approved zero-field annotations; two specialist senses are counted separately.\n"
+        "including fifteen approved zero-field annotations; two specialist senses are counted separately.\n"
         "learner acceptance and the full D2 resource are not complete.\n"
         "Selection shortcut: Ctrl+Alt+Shift+D. Screen OCR shortcut: Ctrl+Alt+Shift+O.\n"
         "Both shortcuts can be changed in Settings. Selection and OCR enter the Translation\n"

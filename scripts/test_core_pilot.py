@@ -112,6 +112,18 @@ class CorePilotPreparationTests(unittest.TestCase):
                     prepare(Path(temporary) / "output", source_dir=source)
                 self.assertFalse((Path(temporary) / "output/core.sqlite3").exists())
 
+    def test_annotation_approval_dates_match_the_owner_decision_cohort(self):
+        for index, wrong_date in ((0, "2026-11-19"), (-1, "2026-11-18")):
+            with self.subTest(index=index), tempfile.TemporaryDirectory() as temporary:
+                source = Path(temporary) / "inputs"
+                shutil.copytree(RESOURCE, source)
+                review = json.loads((source / "field-review.json").read_text(encoding="utf-8"))
+                review["annotation_exceptions"][index]["decision"]["approved_on"] = wrong_date
+                (source / "field-review.json").write_text(json.dumps(review, ensure_ascii=False), encoding="utf-8")
+                with self.assertRaisesRegex(ValueError, "(?i)annotation"):
+                    prepare(Path(temporary) / "output", source_dir=source)
+                self.assertFalse((Path(temporary) / "output/core.sqlite3").exists())
+
     def test_third_content_batch_keeps_all_frozen_groups_and_four_fields(self):
         expected = [
             ("sur", "PRE"), ("toi", "PRO:per"), ("ici", "ADV"),
