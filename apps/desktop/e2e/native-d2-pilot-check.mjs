@@ -670,7 +670,7 @@ async function replacement() {
   assert.equal((await invoke('vocabulary_save', { request: committed.request, dictionary_id: 'builtin-core' })).outcome, 'replayed');
   if (scenario === 'newer') await save('bien', 'newer-content');
   if (scenario === 'upgrade') {
-    for (const key of ['quel', 'leur']) await save(key, `batch-84-89-upgrade-${key}`);
+    for (const key of ['poisson', 'camarade']) await save(key, `batch-100-109-upgrade-${key}`);
   }
   await openRecord(record);
   evidence.checks.push({ check: ['newer', 'upgrade'].includes(scenario) ? 'New resource version is visible while previous digest, progress and audio remain frozen' : `Native ${scenario} rejection preserves saved content and committed retry`, status: 'passed' });
