@@ -22,7 +22,7 @@ uses French Code de la propriété intellectuelle L123-3 for a collective work,
 with conservative expiry on 2006-01-01. This applies to that original edition;
 subsequent Wiki/Lexique contributions retain their own CC BY-SA terms. Page
 import/reference markers and their exact selected boundaries remain available
-for the separate reviewer in [rights.json](rights.json).
+with independent selected-boundary decisions in [rights.json](rights.json).
 
 Modifications comprise selected-use curation, scoped French adaptations, markup
 removal, new explanatory EN/ZH translations and one isolated-headword IPA
@@ -37,6 +37,7 @@ New and Christophe Pallier’s
 under CC BY-SA 4.0, preserving exact rows, headwords and grammatical subclasses.
 
 Redistribution of adaptations requires the applicable attributions, licence
-identification/legal text, modification notices, ShareAlike and no additional
-restrictions. Field review, admission and the final assembled package’s actual
-combined notices/obligations remain separate pending decisions.
+identification/legal text, supplied copyright/disclaimer notices, modification
+notices, ShareAlike and no additional restrictions or obstructive technical
+measures. Independent field/rights review passes; canonical admission and the
+final assembled package’s actual combined obligations remain pending.

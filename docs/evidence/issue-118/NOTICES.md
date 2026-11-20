@@ -26,5 +26,8 @@ original-work credits, modification notices and complete histories/registries;
 provide ShareAlike without additional restrictions. The project's MIT code
 licence does not relicense dictionary content.
 
-These are author-proposed notices. All selected-span and combined redistribution
-reviews, conversion notices and admission remain pending for the parent.
+The selected-span attribution and rights route passes the separate
+[independent review](independent-review.md) and
+[per-source review](source-rights-review.json). These notices supply the batch
+inputs; the parent still must satisfy their combined obligations in the actual
+converted artifact and package. Canonical admission and conversion remain pending.
