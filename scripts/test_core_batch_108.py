@@ -10,6 +10,28 @@ EVIDENCE = ROOT / "docs/evidence/issue-108"
 
 
 class Batch108Tests(unittest.TestCase):
+    def test_independent_review_preserves_exact_gap_and_accepted_content(self):
+        groups = json.loads((EVIDENCE / "groups.json").read_text(encoding="utf-8"))
+        review = json.loads((EVIDENCE / "field-review.json").read_text(encoding="utf-8"))
+        candidates = json.loads((EVIDENCE / "review-candidates.json").read_text(encoding="utf-8"))
+        self.assertEqual([group["frozen_row"] for group in groups], list(range(1351, 1401)))
+        self.assertTrue(review["independence"])
+        self.assertEqual(len(review["fields"]), 196)
+        self.assertEqual(len(review["usage"]), 49)
+        self.assertEqual({field["frozen_row"] for field in review["unresolved_fields"]}, {1386})
+        self.assertEqual(len(review["unresolved_fields"]), 4)
+        for group, candidate in zip(groups, candidates["groups"], strict=True):
+            if group["frozen_row"] == 1386:
+                self.assertEqual(group["senses"], [])
+                continue
+            for sense, draft in zip(group["senses"], candidate["senses"], strict=True):
+                self.assertEqual(sense["independent_review"], "passed_after_exact_accepted_replacements")
+                for name, field in sense["fields"].items():
+                    self.assertEqual(field["text"], draft["fields"][name]["text"])
+                    self.assertEqual(field["source_id"], draft["fields"][name]["source_id"])
+                    self.assertEqual(field["source_span"], draft["fields"][name]["source_span"])
+                    self.assertEqual(field["independent_review"], "passed")
+
     def test_exact_frozen_groups_have_four_bound_candidate_fields(self):
         with (ROOT / "resources/core-pilot-79/scope-manifest.csv").open(
             encoding="utf-8-sig", newline=""

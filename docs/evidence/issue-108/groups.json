@@ -12,7 +12,7 @@
         "use": "Masculine noun: mammalian milk, including the ordinary food use; source records the cow’s-milk default.",
         "use_language": "en",
         "excluded_uses": "Plant-based drinks, cosmetic lotions and figurative uses.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -28,8 +28,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -43,8 +45,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -58,8 +62,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -73,10 +79,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "Mammalian milk and the context-dependent cow-milk default are accurately retained; no dairy substitute is introduced."
       }
     ]
   },
@@ -93,7 +104,7 @@
         "use": "Masculine noun: consequence or outcome.",
         "use_language": "en",
         "excluded_uses": "No claim that every outcome is a success.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -109,8 +120,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -124,8 +137,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -139,8 +154,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -154,10 +171,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "An outcome of an operation/event/deliberation is maintained; the decision wording is within the deliberation branch."
       }
     ]
   },
@@ -174,7 +196,7 @@
         "use": "Masculine noun: road goods vehicle; the selected generic motor-vehicle use.",
         "use_language": "en",
         "excluded_uses": "Obsolete low carts, pins and containers.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -190,8 +212,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -205,8 +229,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -220,8 +246,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -235,10 +263,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "Ordinary goods-carrying motor vehicle, rather than another camion homonym; truck/lorry and Chinese meanings agree."
       }
     ]
   },
@@ -255,7 +288,7 @@
         "use": "Feminine noun: female domestic/hotel servant or child carer; pejorative status supported by the etymology at line 5.",
         "use_language": "en",
         "excluded_uses": "The feminine adjective bon, Swiss school marks and game payments.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -271,8 +304,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -286,8 +321,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -301,8 +338,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -316,10 +355,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "Domestic/hotel servant or child carer, with the source etymology’s pejorative restriction explicitly retained."
       }
     ]
   },
@@ -336,7 +380,7 @@
         "use": "Feminine noun: physical supporting lower part.",
         "use_language": "en",
         "excluded_uses": "Military bases, chemical bases and abstract foundations.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -352,8 +396,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -367,8 +413,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -382,8 +430,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -397,10 +447,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "Physical supporting lower part; no chemical, military or figurative base sense is imported."
       }
     ]
   },
@@ -417,7 +472,7 @@
         "use": "Transitive verb: sending again.",
         "use_language": "en",
         "excluded_uses": "Dismissal, postponement, referral and returning an item to its sender.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -433,8 +488,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -448,8 +505,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -463,8 +522,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -478,10 +539,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "Sending again is the selected transitive meaning; dismissal and deportation are excluded."
       }
     ]
   },
@@ -498,7 +564,7 @@
         "use": "Invariable conjunction introducing a reason clause; source defines cause/motive/reason, without limiting it to a newly discovered cause.",
         "use_language": "en",
         "excluded_uses": "Standalone exclamatory use and other causal conjunctions.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -514,8 +580,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -529,8 +597,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -544,8 +614,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -559,10 +631,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "Causal conjunction introducing a reason; the source’s cause/motive/reason range is retained."
       }
     ]
   },
@@ -579,7 +656,7 @@
         "use": "Feminine noun: reigning female monarch.",
         "use_language": "en",
         "excluded_uses": "The king’s wife as queen consort, chess pieces, insects and figurative uses.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -595,8 +672,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -610,8 +689,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -625,8 +706,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -640,10 +723,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "Reigning queen, rather than a royal spouse or game piece; the country/kingdom relation is explicit."
       }
     ]
   },
@@ -660,7 +748,7 @@
         "use": "Intransitive verb: a new departure; second verb section.",
         "use_language": "en",
         "excluded_uses": "Literary retorting, restarting an activity and accented répartir.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -676,8 +764,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -691,8 +781,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -706,8 +798,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -721,10 +815,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "Second French verb frame, a new departure or return; neither accented répartir nor the retort meaning is selected."
       }
     ]
   },
@@ -741,7 +840,7 @@
         "use": "Transitive verb: enclosure in a closed place.",
         "use_language": "en",
         "excluded_uses": "Separate reflexive use, figurative isolation and concealment.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -757,8 +856,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -772,8 +873,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -787,8 +890,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -802,10 +907,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "Putting somebody/something in a closed place; the enclosure meaning remains transitive."
       }
     ]
   },
@@ -822,7 +932,7 @@
         "use": "Feminine noun: psychoactive drug; illegality is a frequent special case, not a universal condition.",
         "use_language": "en",
         "excluded_uses": "The card game and other historical substance/trade uses.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -838,8 +948,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -853,8 +965,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -868,8 +982,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -883,10 +999,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "Psychoactive substance and often dependence; illegal drugs are a particular case, not the entire definition."
       }
     ]
   },
@@ -903,7 +1024,7 @@
         "use": "Feminine noun: directional right, as in à droite.",
         "use_language": "en",
         "excluded_uses": "Right-hand punch, political right, mathematical line and feminine adjective droit.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -919,8 +1040,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -934,8 +1057,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -949,8 +1074,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -964,10 +1091,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "The right-hand side, not political right, straight line, punch or right hand as a body part."
       }
     ]
   },
@@ -984,7 +1116,7 @@
         "use": "Cardinal numeral adjective before a noun. IPA /ɥit/ when isolated, phrase-final or before a vowel, /ɥi/ before a consonant; fixed pronunciation table explicitly binds the noun/adjective frames.",
         "use_language": "en",
         "excluded_uses": "Postposed ordinal eighth, numeral noun, huir verb form and regional IPA variants.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -1000,8 +1132,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -1015,8 +1149,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Recorded /ɥit/ and consonant-context /ɥi/ from the fixed noun/adjective pronunciation table; context label retained in French. No audio or example sentence copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -1030,8 +1166,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -1045,10 +1183,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "Anteposed cardinal eight; /ɥit/ and preconsonantal /ɥi/ are supported by the French pronunciation table."
       }
     ]
   },
@@ -1065,7 +1208,7 @@
         "use": "Adjective: an unmixed product; narrower physical-product branch of the source definition.",
         "use_language": "en",
         "excluded_uses": "Moral purity, emotions and other meanings of unspoiled.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -1081,8 +1224,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -1096,8 +1241,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -1111,8 +1258,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -1126,10 +1275,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "The unmixed-product branch only; emotion and moral purity are not added."
       }
     ]
   },
@@ -1146,7 +1300,7 @@
         "use": "Adjective: order after another item or time.",
         "use_language": "en",
         "excluded_uses": "Noun, preposition selon and present participle of suivre.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -1162,8 +1316,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -1177,8 +1333,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -1192,8 +1350,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -1207,10 +1367,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "Adjective meaning coming after in order; the distinct nominal frame remains separate."
       }
     ]
   },
@@ -1227,7 +1392,7 @@
         "use": "Masculine noun: the next person or item, with feminine suivante for a feminine referent; modern nominal use rather than the obsolete escort sense.",
         "use_language": "en",
         "excluded_uses": "Obsolete attendant/escort, feminine theatre role, adjective and preposition.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -1243,8 +1408,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -1258,8 +1425,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -1273,8 +1442,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -1288,10 +1459,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "Next thing/person, supported by the nominal definition and ordering adjective; obsolete attendant excluded."
       }
     ]
   },
@@ -1308,7 +1484,7 @@
         "use": "Feminine noun: literal island; exact frozen traditional spelling île.",
         "use_language": "en",
         "excluded_uses": "Figurative refuge and a block of buildings; no runtime ile alias.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -1324,8 +1500,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -1339,8 +1517,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -1354,8 +1534,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -1369,10 +1551,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "Land surrounded by water; exact île spelling and French feminine noun are preserved."
       }
     ]
   },
@@ -1389,7 +1576,7 @@
         "use": "Transitive verb with the clothed person as object; mute h permits elision.",
         "use_language": "en",
         "excluded_uses": "Separate s’habiller reflexive use, supplying clothes, fit of clothing and figurative covering.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -1405,8 +1592,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -1420,8 +1609,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -1435,8 +1626,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -1450,10 +1643,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "Dressing somebody in clothes, with a transitive person object; no reflexive-only limitation is imposed."
       }
     ]
   },
@@ -1470,7 +1668,7 @@
         "use": "Transitive verb: repetition of an action.",
         "use_language": "en",
         "excluded_uses": "Repair, imitation, deception and separate reflexive uses.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -1486,8 +1684,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -1501,8 +1701,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -1516,8 +1718,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -1531,10 +1735,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "Doing again something already done; the ordinary repetition meaning is retained."
       }
     ]
   },
@@ -1551,7 +1760,7 @@
         "use": "Masculine noun: literal cutting tool.",
         "use_language": "en",
         "excluded_uses": "Shellfish, industrial blades, non-cutting painting tools and figurative uses.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -1567,8 +1776,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -1582,8 +1793,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -1597,8 +1810,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -1612,10 +1827,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "Generic sharp-edged cutting tool; meat cutting is explicitly an example rather than a necessary use."
       }
     ]
   },
@@ -1632,7 +1852,7 @@
         "use": "Feminine noun: methodical inquiry; not restricted to criminal investigation.",
         "use_language": "en",
         "excluded_uses": "No claim that every inquiry is a questionnaire survey.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -1648,8 +1868,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -1663,8 +1885,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -1678,8 +1902,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -1693,10 +1919,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "Methodical information inquiry; criminal investigation is not made a necessary condition."
       }
     ]
   },
@@ -1713,7 +1944,7 @@
         "use": "Masculine noun: faculty of taste; exact frozen traditional spelling goût.",
         "use_language": "en",
         "excluded_uses": "A particular flavour, preference, aesthetic judgement and smell; no runtime gout alias.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -1729,8 +1960,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -1744,8 +1977,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -1759,8 +1994,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -1774,10 +2011,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "The sensory faculty of distinguishing flavours; preference and figurative taste are excluded."
       }
     ]
   },
@@ -1794,7 +2036,7 @@
         "use": "Interjection of approval/applause mapped to frozen ONO; French section, not another language or the noun.",
         "use_language": "en",
         "excluded_uses": "Applause noun, hired killer and phonetic-alphabet Bravo.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -1810,8 +2052,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -1825,8 +2069,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -1840,8 +2086,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -1855,10 +2103,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "French approval/applause interjection maps to frozen ONO; other languages and noun homonyms excluded."
       }
     ]
   },
@@ -1875,7 +2128,7 @@
         "use": "Feminine noun: mental operation.",
         "use_language": "en",
         "excluded_uses": "Pansy plant, flower colour, an opinion or written maxim and verb forms.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -1891,8 +2144,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -1906,8 +2161,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -1921,8 +2178,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -1936,10 +2195,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "An operation of mind/consciousness, rather than a plant, quotation or opinion alone."
       }
     ]
   },
@@ -1956,7 +2220,7 @@
         "use": "Transitive verb: physical hindrance; one of the two source IPA variants selected.",
         "use_language": "en",
         "excluded_uses": "Embarrassing someone emotionally and separate se gêner reflexive uses.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -1972,8 +2236,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -1987,8 +2253,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -2002,8 +2270,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -2017,10 +2287,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "Hindrance of free movement; the selected /ʒe.ne/ is one explicitly recorded French variant."
       }
     ]
   },
@@ -2037,7 +2312,7 @@
         "use": "Masculine singular adjective: imprisoned. IPA comes from the shared French pronunciation section, separately bound to the adjective headword frame at line 109.",
         "use_language": "en",
         "excluded_uses": "Figurative entrapment, captive objects and the prisoner noun.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -2053,8 +2328,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -2068,8 +2345,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied. General French pronunciation section bound to the separately recorded adjective frame; not silently borrowed from the noun.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -2083,8 +2362,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -2098,10 +2379,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "Imprisoned adjective frame; shared French pronunciation is independently bound to that frame."
       }
     ]
   },
@@ -2118,7 +2404,7 @@
         "use": "Masculine noun: imprisoned/arrested person; feminine counterpart prisonnière retained as source grammar, not a query alias.",
         "use_language": "en",
         "excluded_uses": "War prisoner special sense, figurative dependence and adjective.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -2134,8 +2420,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -2149,8 +2437,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -2164,8 +2454,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -2179,10 +2471,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "Arrested/detained person noun; the adjective’s source is kept separate."
       }
     ]
   },
@@ -2199,7 +2496,7 @@
         "use": "Masculine noun: supernatural spell-caster, including fictional/folkloric description; powers are attributed rather than asserted as fact.",
         "use_language": "en",
         "excluded_uses": "Actual claims of healing practice, insults, clever expert and adjective.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -2215,8 +2512,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -2230,8 +2529,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -2245,8 +2546,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -2260,10 +2563,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "Attributed supernatural spell-casting, an ordinary fiction/folklore referent; powers are not asserted as fact."
       }
     ]
   },
@@ -2280,7 +2588,7 @@
         "use": "Masculine singular adjective: high capacity for understanding.",
         "use_language": "en",
         "excluded_uses": "Mere possession of reasoning capacity, intelligent design/system technical uses and the noun.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -2296,8 +2604,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -2311,8 +2621,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -2326,8 +2638,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -2341,10 +2655,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "High intelligence/easy understanding; the translations do not narrow this to formal education."
       }
     ]
   },
@@ -2361,7 +2680,7 @@
         "use": "Colloquial adverb in en avoir marre (de quelque chose); construction corroborated by source derived-expression links, not an unrestricted adjective meaning tired.",
         "use_language": "en",
         "excluded_uses": "The digging-tool noun, verb forms and other marre expressions.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -2377,8 +2696,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -2392,8 +2713,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -2407,8 +2730,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -2422,10 +2747,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "Popular adverb enough in en avoir marre (de…); the construction and colloquial register are retained."
       }
     ]
   },
@@ -2442,7 +2772,7 @@
         "use": "Ordinal adjective, same spelling for masculine/feminine.",
         "use_language": "en",
         "excluded_uses": "Anglicistic superlative ranking construction and the noun.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -2458,8 +2788,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -2473,8 +2805,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -2488,8 +2822,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -2503,10 +2839,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "Ordinal adjective following first, corresponding to two; no cardinal/ordinal confusion."
       }
     ]
   },
@@ -2523,7 +2864,7 @@
         "use": "Masculine or feminine noun: second item/person in an ordering.",
         "use_language": "en",
         "excluded_uses": "Adjective use and cardinal two.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -2539,8 +2880,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -2554,8 +2897,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -2569,8 +2914,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -2584,10 +2931,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "Nominal second item/person in an ordering; noun gender and ordinal meaning remain distinct from adjective."
       }
     ]
   },
@@ -2604,7 +2956,7 @@
         "use": "Feminine noun: significance or importance.",
         "use_language": "en",
         "excluded_uses": "Physical magnitude, authority and social influence.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -2620,8 +2972,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -2635,8 +2989,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -2650,8 +3006,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -2665,10 +3023,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "Significance by itself, circumstances or consequences; all three source branches are retained."
       }
     ]
   },
@@ -2685,7 +3048,7 @@
         "use": "Transitive verb: extinguishing literal combustion.",
         "use_language": "en",
         "excluded_uses": "Turning off a device/light, figurative extinction and separate reflexive use.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -2701,8 +3064,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -2716,8 +3081,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -2731,8 +3098,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -2746,10 +3115,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "Stopping combustion, the literal extinguishing use; electric-device and figurative senses excluded."
       }
     ]
   },
@@ -2766,7 +3140,7 @@
         "use": "Feminine singular indefinite adjective before a noun, meaning aucune. Fixed nul adjective frame corroborates singular-only, feminine nulle and literary register.",
         "use_language": "en",
         "excluded_uses": "Qualitative adjective meaning bad/zero, the insulting noun and the indefinite pronoun.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -2782,8 +3156,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained. Exact nulle form combined with separately fixed nul grammar/meaning evidence; subclasses remain separate.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -2797,8 +3173,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -2812,8 +3190,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation. Exact nulle form combined with separately fixed nul grammar/meaning evidence; subclasses remain separate.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -2827,10 +3207,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation. Exact nulle form combined with separately fixed nul grammar/meaning evidence; subclasses remain separate.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "Current written-register indefinite adjective: nulle and nul explicitly corroborate feminine agreement, singular-only and anteposed aucune. The base adjective’s 2023 grammar citation confirms current use; no invariable-pronoun rule is transferred to this adjective."
       }
     ]
   },
@@ -2840,81 +3225,9 @@
     "lexique_cgram": "PRO:ind",
     "subtitle_lemma_per_million": "57.3",
     "subtitle_pos_per_million": "19.46",
-    "senses": [
-      {
-        "sense_id": "b108-1386-nulle-pro-ind-selected",
-        "source_headword": "nulle",
-        "use": "Feminine singular indefinite pronoun with a feminine referent, meaning aucune; historical exact-form evidence exists, but modern everyday eligibility and the linked nul invariable-frame conflict remain unresolved.",
-        "use_language": "en",
-        "excluded_uses": "The indefinite adjective before a noun, qualitative adjective and insulting noun; no substitution by nul or aucune.",
-        "independent_review": "pending",
-        "resource_admission": "pending_independent_quality_and_rights_review",
-        "cefr": null,
-        "fields": {
-          "french_definition": {
-            "language": "fr",
-            "text": "Aucune ; forme féminine singulière du pronom indéfini nul, dans un emploi littéraire.",
-            "source_id": "b108_fr_17766",
-            "source_span": {
-              "line_1_based": 20,
-              "column_1_based": 1,
-              "raw_source_excerpt": "# ''Féminin singulier de'' [[nul]]. [[aucune|Aucune]]."
-            },
-            "content_license": "CC-BY-SA-4.0",
-            "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained. Exact nulle form combined with separately fixed nul grammar/meaning evidence; subclasses remain separate.",
-            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
-          },
-          "ipa": {
-            "language": "und",
-            "text": "/nyl/",
-            "source_id": "b108_fr_17766",
-            "source_span": {
-              "line_1_based": 19,
-              "column_1_based": 13,
-              "raw_source_excerpt": "{{pron|nyl|fr}}"
-            },
-            "content_license": "CC-BY-SA-4.0",
-            "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
-            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
-          },
-          "english": {
-            "language": "en",
-            "text": "None, the feminine singular indefinite pronoun nulle, in literary usage.",
-            "source_id": "b108_fr_17766",
-            "source_span": {
-              "line_1_based": 20,
-              "column_1_based": 1,
-              "raw_source_excerpt": "# ''Féminin singulier de'' [[nul]]. [[aucune|Aucune]]."
-            },
-            "content_license": "CC-BY-SA-4.0",
-            "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation. Exact nulle form combined with separately fixed nul grammar/meaning evidence; subclasses remain separate.",
-            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
-          },
-          "chinese": {
-            "language": "zh",
-            "text": "没有一个；不定代词 nul 的阴性单数形式 nulle，属书面文学用法。",
-            "source_id": "b108_fr_17766",
-            "source_span": {
-              "line_1_based": 20,
-              "column_1_based": 1,
-              "raw_source_excerpt": "# ''Féminin singulier de'' [[nul]]. [[aucune|Aucune]]."
-            },
-            "content_license": "CC-BY-SA-4.0",
-            "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation. Exact nulle form combined with separately fixed nul grammar/meaning evidence; subclasses remain separate.",
-            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
-          }
-        }
-      }
-    ],
-    "unresolved_reason": "Modern everyday eligibility of exact nulle/PRO:ind remains unproved: fixed nulle revision 39737088 lines 18–23 supplies a feminine pronoun frame and only an 1855 example; fixed nul revision 39923182 lines 210–213 calls the literary/legal pronoun invariable. The form is retained as a sourced candidate, with no annotation exception or substitution."
+    "senses": [],
+    "unresolved_reason": "Exact nulle/PRO:ind has only the 1855 Balzac example at nulle revision 39737088 lines 18–23; nul revision 39923182 lines 210–213 calls the base pronoun masculine singular and invariable. This establishes a historical feminine candidate, but does not resolve the modern everyday exact-form/grammar conflict. No replacement or exception is admitted.",
+    "independent_review": "unresolved"
   },
   {
     "frozen_row": 1387,
@@ -2929,7 +3242,7 @@
         "use": "Feminine noun: literal liquid container.",
         "use_language": "en",
         "excluded_uses": "Bottle contents by metonymy and compressed-gas cylinders.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -2945,8 +3258,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -2960,8 +3275,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -2975,8 +3292,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -2990,10 +3309,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "Narrow-necked liquid container; glass/translucent plastic are usual materials, not mandatory ones."
       }
     ]
   },
@@ -3010,7 +3334,7 @@
         "use": "Masculine noun: agricultural plot.",
         "use_language": "en",
         "excluded_uses": "Scientific fields, abstract domains, board/plate edges and champ’ spelling variant.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -3026,8 +3350,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -3041,8 +3367,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -3056,8 +3384,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -3071,10 +3401,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "Ordinary agricultural field at champ line 14; cartographic CFC import at line 93 supplies no wording or meaning."
       }
     ]
   },
@@ -3091,7 +3426,7 @@
         "use": "Masculine noun: spatial middle; ordinary extended sense.",
         "use_language": "en",
         "excluded_uses": "Exact circle/sphere equidistance, political centre and an institution.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -3107,8 +3442,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -3122,8 +3459,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -3137,8 +3476,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -3152,10 +3493,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "Middle of a space, the ordinary extended spatial use; no institutional or geometric specialisation added."
       }
     ]
   },
@@ -3172,7 +3518,7 @@
         "use": "Transitive verb: taking an object back to its previous location.",
         "use_language": "en",
         "excluded_uses": "Bringing souvenirs, reporting information, yielding profit and mathematical ratio.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -3188,8 +3534,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -3203,8 +3551,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -3218,8 +3568,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -3233,10 +3585,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "Bringing an object back to its previous place; reporting and profit meanings excluded."
       }
     ]
   },
@@ -3253,7 +3610,7 @@
         "use": "Adjective: war/armed-forces relation, identical masculine/feminine form.",
         "use_language": "en",
         "excluded_uses": "Figurative authoritarian manner and the service-member noun.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -3269,8 +3626,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -3284,8 +3643,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -3299,8 +3660,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -3314,10 +3677,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "Adjective relating to war/armed forces, with identical gender forms; noun remains separate."
       }
     ]
   },
@@ -3334,7 +3702,7 @@
         "use": "Masculine or feminine noun: member of an army; adjective remains separate.",
         "use_language": "en",
         "excluded_uses": "Military adjective and figurative authoritarian manner.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -3350,8 +3718,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -3365,8 +3735,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -3380,8 +3752,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -3395,10 +3769,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "A member of an army/armed forces; does not require a rank or a particular gender."
       }
     ]
   },
@@ -3415,7 +3794,7 @@
         "use": "Transitive colloquial verb: confinement in a tight place, rather than obsolete literal insertion/fixing of wedges.",
         "use_language": "en",
         "excluded_uses": "Obsolete wedge insertion/fixing, catching an offender and separate reflexive use.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -3431,8 +3810,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -3446,8 +3827,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -3461,8 +3844,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -3476,10 +3861,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "Colloquial squeezing/trapping in a tight place; obsolete wedge insertion/fixing meanings excluded."
       }
     ]
   },
@@ -3496,7 +3886,7 @@
         "use": "Masculine noun: an unfortunate event.",
         "use_language": "en",
         "excluded_uses": "Ill fortune as destiny, regretful aspects and interjection.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -3512,8 +3902,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -3527,8 +3919,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -3542,8 +3936,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -3557,10 +3953,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "Unfortunate event/accident or disaster, the ordinary misfortune sense."
       }
     ]
   },
@@ -3577,7 +3978,7 @@
         "use": "Masculine noun: everyday hyperbolic miracle, not a literal claim of divine action; one recorded IPA variant selected.",
         "use_language": "en",
         "excluded_uses": "Divine acts contrary to natural laws and gospel-specific miracles.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -3593,8 +3994,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -3608,8 +4011,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -3623,8 +4028,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -3638,10 +4045,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "Everyday hyperbolic extraordinary event/chance, with explicit restriction; supernatural causation is not asserted."
       }
     ]
   },
@@ -3658,7 +4070,7 @@
         "use": "Feminine noun: gathering of people; decision-making meetings are not the only kind.",
         "use_language": "en",
         "excluded_uses": "Reunification of separated parts, reconciliation, set union and sports-meeting special senses.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -3674,8 +4086,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -3689,8 +4103,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -3704,8 +4120,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -3719,10 +4137,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "Gathering of people; does not incorrectly require decisions or a formal meeting."
       }
     ]
   },
@@ -3739,7 +4162,7 @@
         "use": "Masculine noun: an act or deed, ordinary action sense.",
         "use_language": "en",
         "excluded_uses": "Philosophical actuality, legal documents, theatre divisions and obsolete Roman measures.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -3755,8 +4178,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -3770,8 +4195,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -3785,8 +4212,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -3800,10 +4229,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "An action/deed; legal document, theatre act and performance senses excluded."
       }
     ]
   },
@@ -3820,7 +4254,7 @@
         "use": "Transitive verb: catching someone unobservedly engaged in an action/state.",
         "use_language": "en",
         "excluded_uses": "Astonishment, unexpected visits and separate reflexive uses.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -3836,8 +4270,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -3851,8 +4287,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -3866,8 +4304,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -3881,10 +4321,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "Finding someone in an action/state while they did not expect observation; no criminal restriction is added."
       }
     ]
   },
@@ -3901,7 +4346,7 @@
         "use": "Masculine singular adjective: physical length.",
         "use_language": "en",
         "excluded_uses": "Insufficient quantity, limited intellect, duration and adverb/noun uses.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -3917,8 +4362,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -3932,8 +4379,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -3947,8 +4396,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -3962,10 +4413,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "Physical short length relative to similar objects; time, brevity and spatial distance are not conflated."
       }
     ]
   },
@@ -3982,7 +4438,7 @@
         "use": "Transitive verb with the convinced person as object; reasoning/evidence basis retained.",
         "use_language": "en",
         "excluded_uses": "Proving someone guilty of a crime or fault and separate reflexive use.",
-        "independent_review": "pending",
+        "independent_review": "passed_after_exact_accepted_replacements",
         "resource_admission": "pending_independent_quality_and_rights_review",
         "cefr": null,
         "fields": {
@@ -3998,8 +4454,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique scoped adaptation of selected French semantics; Wiki markup removed and restrictions retained.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -4013,8 +4471,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Selected recorded IPA variant, rendered between slashes; no audio/media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -4028,8 +4488,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -4043,10 +4505,15 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "New Lexique explanatory translation of the selected French use; not an upstream bilingual quotation.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_selected_span_audit"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+            "independence": true
           }
-        }
+        },
+        "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+        "independence": true,
+        "review_reason": "Convincing a person through reasoning/evidence to accept a truth/fact/opinion; the transitive frame is retained."
       }
     ]
   }
