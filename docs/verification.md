@@ -10,6 +10,9 @@ Windows 11 x64 的生产构建为 `00ea06228926e1b9a4e8644a267bce46316f1a39`。l
 最终准入记录的缺字段／待准入计数为零，新增 499 组／1,996 字段及复用组保持一致；原提案、独立复核身份与历史计数保留于原始快照。干净提交 `c0c09ff3137ab3064706e71d0819bfa93d556836` 的 90 项转换／批次测试、`pnpm test:docs` 和 `git diff --check` 通过，使用 uv Python 3.14.10、pnpm 11.25.0、PowerShell 7，证据所属目录为 `C:/Users/inthe/IdeaProjects/lexique-spec-110-119/target/final-review-fixes`。此次仅涉及准入元数据、批次断言及验证文档，原生／运行时／规范资源输入与 `00ea062` 相同，十一项原生证据仍归属于该构建。
 
 整机离线、其他平台原生、学习者验收及正式发行尚未验证；D2 全目标仍未完成，CEFR 不在本批范围。[PR #191](https://github.com/zardonc/lexique/pull/191)合并关闭 #110–#119；#78／#9 保持开放。
+## PR #174–#176 合并与 CI 恢复
+
+2026-11-18，[PR #174](https://github.com/zardonc/lexique/pull/174)、[PR #175](https://github.com/zardonc/lexique/pull/175) 和 [PR #176](https://github.com/zardonc/lexique/pull/176) 的固定 head 各 22 项检查通过后合并，最终合并提交为 `42c720556fd1195cca39ba704761877d1c0df48a`，该提交的 [main CI](https://github.com/zardonc/lexique/actions/runs/44377907700) 11 项检查全部通过。队列 E2E 竞态修复在延迟请求对照中由 4／4 失败变为 4／4 通过，Windows x64／Edge 完整 391 项通过。Intel macOS 对照确认 COMMIT 锁竞争及其他等待，原始 V03 超时的具体原因仍未完全定位；事务／竞争写入预算保持 100／250 ms，后端执行硬限保持 60 秒。固定提交、原始失败、对照结果、ARM64 runner 恢复及合并后的 main CI 链接见 [CI 恢复记录](evidence/ci-174-176/README.md)。
 
 ## 语法笔记与共享分类
 
