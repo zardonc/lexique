@@ -4774,5 +4774,13 @@
       "column_1_based": 1,
       "reviewed_excerpt": "=== {{S|nom|fr}} ==="
     }
-  ]
+  ],
+  "independent_review": {
+    "kind": "separate_independent_field_review",
+    "reviewed_base_sha": "b3560857e61286a61cbf88a1aabf2072fe8ae11e",
+    "primary_spans_checked": 200,
+    "all_supporting_spans_checked": true,
+    "method": "Matched to the full fixed raw/API captures; semantic decisions separately recorded in field-review.json.",
+    "review_report": "independent-review.md"
+  }
 }
