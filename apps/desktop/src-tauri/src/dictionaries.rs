@@ -1078,7 +1078,10 @@ mod tests {
                 .unwrap(),
             preserved
         );
-        assert_eq!(lexique_storage::initialize(&connection).unwrap(), 19);
+        assert_eq!(
+            lexique_storage::initialize(&connection).unwrap(),
+            lexique_storage::DATABASE_SCHEMA_VERSION
+        );
     }
 
     #[test]
@@ -1144,7 +1147,10 @@ mod tests {
                 bytes
             );
         }
-        assert_eq!(lexique_storage::initialize(&connection).unwrap(), 19);
+        assert_eq!(
+            lexique_storage::initialize(&connection).unwrap(),
+            lexique_storage::DATABASE_SCHEMA_VERSION
+        );
     }
 
     #[test]

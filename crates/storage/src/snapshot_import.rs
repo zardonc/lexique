@@ -99,9 +99,11 @@ fn insert_records(
         statement.execute(params![
             record.id,
             record.headword.nfc().collect::<String>(),
-            serde_json::to_string(&serde_json::json!({
-                "reference": record.reference, "digest": record.digest, "import_source": record.import_source
-            }))?,
+            serde_json::to_string(&crate::vocabulary::StoredSnapshot {
+                reference: record.reference.clone(),
+                digest: record.digest.clone(),
+                import_source: record.import_source.clone(),
+            })?,
             record.notes,
             record.example_fr,
             record.example_zh,
