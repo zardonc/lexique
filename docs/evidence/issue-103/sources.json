@@ -13,7 +13,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -21,7 +21,7 @@
         "title": "Dictionnaire de l’Académie française, huitième édition",
         "publication": "1932–1935",
         "work_type": "collective work",
-        "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+        "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -35,14 +35,15 @@
           "edition": "DAF8 1932–1935",
           "original_entry_status": "entry_returned_selected_correspondence_pending"
         },
-        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+        "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
       },
       {
         "id": "original-littre-1872-1877",
         "author": "Émile Littré",
         "title": "Dictionnaire de la langue française",
         "publication": "1872–1877",
-        "original_rights": "historical reference recorded; exact selected-text correspondence and rights pending independent review",
+        "original_rights": "public domain for the historical Littré edition; bibliographic citation alone does not identify selected-sentence authorship",
         "scope": "Bibliographic reference is not proof that a selected line was copied from Littré."
       }
     ],
@@ -145,6 +146,10 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1103
     ]
   },
   {
@@ -161,7 +166,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -169,7 +174,7 @@
         "title": "Dictionnaire de l’Académie française, huitième édition",
         "publication": "1932–1935",
         "work_type": "collective work",
-        "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+        "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -183,7 +188,8 @@
           "edition": "DAF8 1932–1935",
           "original_entry_status": "entry_returned_selected_correspondence_pending"
         },
-        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+        "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
       }
     ],
     "source_page_notices_to_record": [
@@ -221,6 +227,10 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1107
     ]
   },
   {
@@ -237,14 +247,14 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-littre-1872-1877",
         "author": "Émile Littré",
         "title": "Dictionnaire de la langue française",
         "publication": "1872–1877",
-        "original_rights": "historical reference recorded; exact selected-text correspondence and rights pending independent review",
+        "original_rights": "public domain for the historical Littré edition; bibliographic citation alone does not identify selected-sentence authorship",
         "scope": "Bibliographic reference is not proof that a selected line was copied from Littré."
       }
     ],
@@ -322,6 +332,10 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1104
     ]
   },
   {
@@ -338,7 +352,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -346,7 +360,7 @@
         "title": "Dictionnaire de l’Académie française, huitième édition",
         "publication": "1932–1935",
         "work_type": "collective work",
-        "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+        "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -360,7 +374,8 @@
           "edition": "DAF8 1932–1935",
           "original_entry_status": "entry_returned_selected_correspondence_pending"
         },
-        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+        "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
       }
     ],
     "source_page_notices_to_record": [
@@ -414,6 +429,10 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1101
     ]
   },
   {
@@ -430,7 +449,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -438,7 +457,7 @@
         "title": "Dictionnaire de l’Académie française, huitième édition",
         "publication": "1932–1935",
         "work_type": "collective work",
-        "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+        "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -452,7 +471,8 @@
           "edition": "DAF8 1932–1935",
           "original_entry_status": "entry_returned_selected_correspondence_pending"
         },
-        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+        "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
       }
     ],
     "source_page_notices_to_record": [
@@ -490,6 +510,10 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1102
     ]
   },
   {
@@ -506,7 +530,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [],
     "source_page_notices_to_record": [
       {
@@ -534,6 +558,10 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1111
     ]
   },
   {
@@ -550,7 +578,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -558,7 +586,7 @@
         "title": "Dictionnaire de l’Académie française, huitième édition",
         "publication": "1932–1935",
         "work_type": "collective work",
-        "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+        "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -572,7 +600,8 @@
           "edition": "DAF8 1932–1935",
           "original_entry_status": "entry_returned_selected_correspondence_pending"
         },
-        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+        "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
       }
     ],
     "source_page_notices_to_record": [
@@ -610,6 +639,10 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1113
     ]
   },
   {
@@ -626,7 +659,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -634,7 +667,7 @@
         "title": "Dictionnaire de l’Académie française, huitième édition",
         "publication": "1932–1935",
         "work_type": "collective work",
-        "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+        "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -648,14 +681,15 @@
           "edition": "DAF8 1932–1935",
           "original_entry_status": "entry_returned_selected_correspondence_pending"
         },
-        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+        "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
       },
       {
         "id": "original-littre-1872-1877",
         "author": "Émile Littré",
         "title": "Dictionnaire de la langue française",
         "publication": "1872–1877",
-        "original_rights": "historical reference recorded; exact selected-text correspondence and rights pending independent review",
+        "original_rights": "public domain for the historical Littré edition; bibliographic citation alone does not identify selected-sentence authorship",
         "scope": "Bibliographic reference is not proof that a selected line was copied from Littré."
       }
     ],
@@ -710,6 +744,10 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1112
     ]
   },
   {
@@ -726,7 +764,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -734,7 +772,7 @@
         "title": "Dictionnaire de l’Académie française, huitième édition",
         "publication": "1932–1935",
         "work_type": "collective work",
-        "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+        "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -748,7 +786,8 @@
           "edition": "DAF8 1932–1935",
           "original_entry_status": "entry_returned_selected_correspondence_pending"
         },
-        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+        "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
       }
     ],
     "source_page_notices_to_record": [
@@ -786,6 +825,10 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1108
     ]
   },
   {
@@ -802,7 +845,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -810,7 +853,7 @@
         "title": "Dictionnaire de l’Académie française, huitième édition",
         "publication": "1932–1935",
         "work_type": "collective work",
-        "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+        "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -824,7 +867,8 @@
           "edition": "DAF8 1932–1935",
           "original_entry_status": "entry_returned_selected_correspondence_pending"
         },
-        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+        "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
       }
     ],
     "source_page_notices_to_record": [
@@ -862,6 +906,10 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1106
     ]
   },
   {
@@ -878,7 +926,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -886,7 +934,7 @@
         "title": "Dictionnaire de l’Académie française, huitième édition",
         "publication": "1932–1935",
         "work_type": "collective work",
-        "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+        "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -900,7 +948,8 @@
           "edition": "DAF8 1932–1935",
           "original_entry_status": "entry_returned_selected_correspondence_pending"
         },
-        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+        "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
       }
     ],
     "source_page_notices_to_record": [
@@ -938,6 +987,10 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1109
     ]
   },
   {
@@ -954,7 +1007,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -962,7 +1015,7 @@
         "title": "Dictionnaire de l’Académie française, huitième édition",
         "publication": "1932–1935",
         "work_type": "collective work",
-        "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+        "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -976,7 +1029,8 @@
           "edition": "DAF8 1932–1935",
           "original_entry_status": "entry_returned_selected_correspondence_pending"
         },
-        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+        "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
       }
     ],
     "source_page_notices_to_record": [
@@ -1030,6 +1084,10 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1110
     ]
   },
   {
@@ -1046,7 +1104,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -1054,7 +1112,7 @@
         "title": "Dictionnaire de l’Académie française, huitième édition",
         "publication": "1932–1935",
         "work_type": "collective work",
-        "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+        "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -1068,7 +1126,8 @@
           "edition": "DAF8 1932–1935",
           "original_entry_status": "no_entry_returned"
         },
-        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+        "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
       }
     ],
     "source_page_notices_to_record": [
@@ -1122,6 +1181,10 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1116
     ]
   },
   {
@@ -1138,7 +1201,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -1146,7 +1209,7 @@
         "title": "Dictionnaire de l’Académie française, huitième édition",
         "publication": "1932–1935",
         "work_type": "collective work",
-        "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+        "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -1160,7 +1223,8 @@
           "edition": "DAF8 1932–1935",
           "original_entry_status": "entry_returned_selected_correspondence_pending"
         },
-        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+        "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
       }
     ],
     "source_page_notices_to_record": [
@@ -1198,6 +1262,11 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1114,
+      1115
     ]
   },
   {
@@ -1214,7 +1283,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -1222,7 +1291,7 @@
         "title": "Dictionnaire de l’Académie française, huitième édition",
         "publication": "1932–1935",
         "work_type": "collective work",
-        "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+        "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -1236,7 +1305,8 @@
           "edition": "DAF8 1932–1935",
           "original_entry_status": "entry_returned_selected_correspondence_pending"
         },
-        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+        "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
       }
     ],
     "source_page_notices_to_record": [
@@ -1274,6 +1344,10 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1105
     ]
   },
   {
@@ -1290,7 +1364,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -1298,7 +1372,7 @@
         "title": "Dictionnaire de l’Académie française, huitième édition",
         "publication": "1932–1935",
         "work_type": "collective work",
-        "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+        "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -1312,14 +1386,15 @@
           "edition": "DAF8 1932–1935",
           "original_entry_status": "entry_returned_selected_correspondence_pending"
         },
-        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+        "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
       },
       {
         "id": "original-littre-1872-1877",
         "author": "Émile Littré",
         "title": "Dictionnaire de la langue française",
         "publication": "1872–1877",
-        "original_rights": "historical reference recorded; exact selected-text correspondence and rights pending independent review",
+        "original_rights": "public domain for the historical Littré edition; bibliographic citation alone does not identify selected-sentence authorship",
         "scope": "Bibliographic reference is not proof that a selected line was copied from Littré."
       }
     ],
@@ -1390,6 +1465,11 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1125,
+      1126
     ]
   },
   {
@@ -1406,7 +1486,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -1414,7 +1494,7 @@
         "title": "Dictionnaire de l’Académie française, huitième édition",
         "publication": "1932–1935",
         "work_type": "collective work",
-        "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+        "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -1428,7 +1508,8 @@
           "edition": "DAF8 1932–1935",
           "original_entry_status": "entry_returned_selected_correspondence_pending"
         },
-        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+        "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
       }
     ],
     "source_page_notices_to_record": [
@@ -1466,6 +1547,10 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1124
     ]
   },
   {
@@ -1482,7 +1567,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -1490,7 +1575,7 @@
         "title": "Dictionnaire de l’Académie française, huitième édition",
         "publication": "1932–1935",
         "work_type": "collective work",
-        "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+        "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -1504,14 +1589,15 @@
           "edition": "DAF8 1932–1935",
           "original_entry_status": "entry_returned_selected_correspondence_pending"
         },
-        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+        "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
       },
       {
         "id": "original-littre-1872-1877",
         "author": "Émile Littré",
         "title": "Dictionnaire de la langue française",
         "publication": "1872–1877",
-        "original_rights": "historical reference recorded; exact selected-text correspondence and rights pending independent review",
+        "original_rights": "public domain for the historical Littré edition; bibliographic citation alone does not identify selected-sentence authorship",
         "scope": "Bibliographic reference is not proof that a selected line was copied from Littré."
       }
     ],
@@ -1566,6 +1652,10 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1121
     ]
   },
   {
@@ -1582,7 +1672,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [],
     "source_page_notices_to_record": [
       {
@@ -1674,6 +1764,10 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1133
     ]
   },
   {
@@ -1690,14 +1784,14 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-littre-1872-1877",
         "author": "Émile Littré",
         "title": "Dictionnaire de la langue française",
         "publication": "1872–1877",
-        "original_rights": "historical reference recorded; exact selected-text correspondence and rights pending independent review",
+        "original_rights": "public domain for the historical Littré edition; bibliographic citation alone does not identify selected-sentence authorship",
         "scope": "Bibliographic reference is not proof that a selected line was copied from Littré."
       }
     ],
@@ -1759,6 +1853,10 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1131
     ]
   },
   {
@@ -1775,7 +1873,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -1783,7 +1881,7 @@
         "title": "Dictionnaire de l’Académie française, huitième édition",
         "publication": "1932–1935",
         "work_type": "collective work",
-        "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+        "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -1797,7 +1895,8 @@
           "edition": "DAF8 1932–1935",
           "original_entry_status": "no_entry_returned"
         },
-        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+        "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
       }
     ],
     "source_page_notices_to_record": [
@@ -1835,6 +1934,10 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1119
     ]
   },
   {
@@ -1851,7 +1954,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -1859,7 +1962,7 @@
         "title": "Dictionnaire de l’Académie française, huitième édition",
         "publication": "1932–1935",
         "work_type": "collective work",
-        "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+        "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -1873,7 +1976,8 @@
           "edition": "DAF8 1932–1935",
           "original_entry_status": "entry_returned_selected_correspondence_pending"
         },
-        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+        "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
       }
     ],
     "source_page_notices_to_record": [
@@ -1927,6 +2031,10 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1122
     ]
   },
   {
@@ -1943,7 +2051,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -1951,7 +2059,7 @@
         "title": "Dictionnaire de l’Académie française, huitième édition",
         "publication": "1932–1935",
         "work_type": "collective work",
-        "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+        "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -1965,7 +2073,8 @@
           "edition": "DAF8 1932–1935",
           "original_entry_status": "entry_returned_selected_correspondence_pending"
         },
-        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+        "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
       }
     ],
     "source_page_notices_to_record": [
@@ -2003,6 +2112,10 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1130
     ]
   },
   {
@@ -2019,7 +2132,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -2027,7 +2140,7 @@
         "title": "Dictionnaire de l’Académie française, huitième édition",
         "publication": "1932–1935",
         "work_type": "collective work",
-        "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+        "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -2041,7 +2154,8 @@
           "edition": "DAF8 1932–1935",
           "original_entry_status": "entry_returned_selected_correspondence_pending"
         },
-        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+        "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
       }
     ],
     "source_page_notices_to_record": [
@@ -2079,6 +2193,10 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1123
     ]
   },
   {
@@ -2095,7 +2213,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -2103,7 +2221,7 @@
         "title": "Dictionnaire de l’Académie française, huitième édition",
         "publication": "1932–1935",
         "work_type": "collective work",
-        "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+        "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -2117,7 +2235,8 @@
           "edition": "DAF8 1932–1935",
           "original_entry_status": "no_entry_returned"
         },
-        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+        "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
       }
     ],
     "source_page_notices_to_record": [
@@ -2155,6 +2274,11 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1117,
+      1118
     ]
   },
   {
@@ -2171,7 +2295,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -2179,7 +2303,7 @@
         "title": "Dictionnaire de l’Académie française, huitième édition",
         "publication": "1932–1935",
         "work_type": "collective work",
-        "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+        "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -2193,7 +2317,8 @@
           "edition": "DAF8 1932–1935",
           "original_entry_status": "entry_returned_selected_correspondence_pending"
         },
-        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+        "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
       }
     ],
     "source_page_notices_to_record": [
@@ -2231,6 +2356,10 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1129
     ]
   },
   {
@@ -2247,7 +2376,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -2255,7 +2384,7 @@
         "title": "Dictionnaire de l’Académie française, huitième édition",
         "publication": "1932–1935",
         "work_type": "collective work",
-        "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+        "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -2269,7 +2398,8 @@
           "edition": "DAF8 1932–1935",
           "original_entry_status": "entry_returned_selected_correspondence_pending"
         },
-        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+        "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
       }
     ],
     "source_page_notices_to_record": [
@@ -2339,6 +2469,10 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1128
     ]
   },
   {
@@ -2355,7 +2489,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -2363,7 +2497,7 @@
         "title": "Dictionnaire de l’Académie française, huitième édition",
         "publication": "1932–1935",
         "work_type": "collective work",
-        "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+        "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -2377,7 +2511,8 @@
           "edition": "DAF8 1932–1935",
           "original_entry_status": "entry_returned_selected_correspondence_pending"
         },
-        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+        "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
       }
     ],
     "source_page_notices_to_record": [
@@ -2415,6 +2550,10 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1120
     ]
   },
   {
@@ -2431,7 +2570,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -2439,7 +2578,7 @@
         "title": "Dictionnaire de l’Académie française, huitième édition",
         "publication": "1932–1935",
         "work_type": "collective work",
-        "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+        "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -2453,7 +2592,8 @@
           "edition": "DAF8 1932–1935",
           "original_entry_status": "entry_returned_selected_correspondence_pending"
         },
-        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+        "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
       }
     ],
     "source_page_notices_to_record": [
@@ -2491,6 +2631,10 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1127
     ]
   },
   {
@@ -2507,7 +2651,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -2515,7 +2659,7 @@
         "title": "Dictionnaire de l’Académie française, huitième édition",
         "publication": "1932–1935",
         "work_type": "collective work",
-        "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+        "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -2529,7 +2673,8 @@
           "edition": "DAF8 1932–1935",
           "original_entry_status": "entry_returned_selected_correspondence_pending"
         },
-        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+        "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
       }
     ],
     "source_page_notices_to_record": [
@@ -2567,114 +2712,10 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
-    ]
-  },
-  {
-    "id": "b103_fr_631",
-    "edition": "fr",
-    "entry_language": "fr",
-    "title": "marché",
-    "pageid": 631,
-    "revid": 39985800,
-    "timestamp": "2026-11-04T11:10:13Z",
-    "fixed_url": "https://fr.wiktionary.org/w/index.php?title=march%C3%A9&oldid=39985800",
-    "history_url": "https://fr.wiktionary.org/w/index.php?title=march%C3%A9&action=history",
-    "attribution": "Wiktionnaire contributors (complete linked article history); Lexique contributors for scoped adaptations and new explanatory translations. Declared historical DAF8 layer: Académie française, eighth edition (1932–1935).",
-    "content_license": "CC-BY-SA-4.0",
-    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
-    "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
-    "original_authors_and_rights": [
-      {
-        "id": "original-academie8-1932-1935",
-        "author": "Académie française",
-        "title": "Dictionnaire de l’Académie française, huitième édition",
-        "publication": "1932–1935",
-        "work_type": "collective work",
-        "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
-        "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
-        "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
-        "conservative_expiry": "2006-01-01 using final publication 1935",
-        "original_capture": {
-          "title": "marché",
-          "url": "https://www.cnrtl.fr/definition/academie8/march%C3%A9",
-          "capture_time": "2026-11-19T21:31:13.817249+00:00",
-          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\originals\\marché.html",
-          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\originals\\marché.txt",
-          "status": "captured_original_response",
-          "edition": "DAF8 1932–1935",
-          "original_entry_status": "entry_returned_selected_correspondence_pending"
-        },
-        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
-      }
     ],
-    "source_page_notices_to_record": [
-      {
-        "line_1_based": 460,
-        "column_1_based": 3,
-        "raw_marker": "{{R:TLFi}}",
-        "declaration": "bibliographic_reference",
-        "reference_template": {
-          "title": "Modèle:R:TLFi",
-          "revid": 39999925,
-          "timestamp": "2026-11-09T14:34:27Z",
-          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-50676.wiki",
-          "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
-          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ATLFi&oldid=39999925"
-        },
-        "selected_text_authorship_status": "pending_selected_span_audit",
-        "original_capture": null
-      },
-      {
-        "line_1_based": 461,
-        "column_1_based": 3,
-        "raw_marker": "{{R:DAF8}}",
-        "declaration": "bibliographic_reference",
-        "reference_template": {
-          "title": "Modèle:R:DAF8",
-          "revid": 27621166,
-          "timestamp": "2020-04-04T22:35:24Z",
-          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-38725.wiki",
-          "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
-          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ADAF8&oldid=27621166"
-        },
-        "selected_text_authorship_status": "pending_selected_span_audit",
-        "original_capture": {
-          "title": "marché",
-          "url": "https://www.cnrtl.fr/definition/academie8/march%C3%A9",
-          "capture_time": "2026-11-19T21:31:13.817249+00:00",
-          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\originals\\marché.html",
-          "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\originals\\marché.txt",
-          "status": "captured_original_response",
-          "edition": "DAF8 1932–1935",
-          "original_entry_status": "entry_returned_selected_correspondence_pending"
-        }
-      },
-      {
-        "line_1_based": 462,
-        "column_1_based": 3,
-        "raw_marker": "{{R:DAF9}}",
-        "declaration": "bibliographic_reference",
-        "reference_template": {
-          "title": "Modèle:R:DAF9",
-          "revid": 36438068,
-          "timestamp": "2024-11-20T14:32:50Z",
-          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-142339.wiki",
-          "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
-          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ADAF9&oldid=36438068"
-        },
-        "selected_text_authorship_status": "pending_selected_span_audit",
-        "original_capture": null
-      }
-    ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "redistribution_obligations": [
-      "Credit each fixed Wiktionnaire article and its complete linked contributor history.",
-      "Retain applicable original-author and external-source notices at their actual boundaries.",
-      "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
-      "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1132
     ]
   },
   {
@@ -2691,7 +2732,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -2699,7 +2740,7 @@
         "title": "Dictionnaire de l’Académie française, huitième édition",
         "publication": "1932–1935",
         "work_type": "collective work",
-        "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+        "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -2713,7 +2754,8 @@
           "edition": "DAF8 1932–1935",
           "original_entry_status": "entry_returned_selected_correspondence_pending"
         },
-        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+        "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
       }
     ],
     "source_page_notices_to_record": [
@@ -2799,6 +2841,10 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1148
     ]
   },
   {
@@ -2815,7 +2861,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [],
     "source_page_notices_to_record": [
       {
@@ -2891,6 +2937,10 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1142
     ]
   },
   {
@@ -2907,7 +2957,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -2915,7 +2965,7 @@
         "title": "Dictionnaire de l’Académie française, huitième édition",
         "publication": "1932–1935",
         "work_type": "collective work",
-        "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+        "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -2929,7 +2979,8 @@
           "edition": "DAF8 1932–1935",
           "original_entry_status": "entry_returned_selected_correspondence_pending"
         },
-        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+        "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
       }
     ],
     "source_page_notices_to_record": [
@@ -2967,6 +3018,10 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1146
     ]
   },
   {
@@ -2983,7 +3038,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -2991,7 +3046,7 @@
         "title": "Dictionnaire de l’Académie française, huitième édition",
         "publication": "1932–1935",
         "work_type": "collective work",
-        "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+        "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -3005,14 +3060,15 @@
           "edition": "DAF8 1932–1935",
           "original_entry_status": "entry_returned_selected_correspondence_pending"
         },
-        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+        "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
       },
       {
         "id": "original-littre-1872-1877",
         "author": "Émile Littré",
         "title": "Dictionnaire de la langue française",
         "publication": "1872–1877",
-        "original_rights": "historical reference recorded; exact selected-text correspondence and rights pending independent review",
+        "original_rights": "public domain for the historical Littré edition; bibliographic citation alone does not identify selected-sentence authorship",
         "scope": "Bibliographic reference is not proof that a selected line was copied from Littré."
       }
     ],
@@ -3083,6 +3139,10 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1134
     ]
   },
   {
@@ -3099,7 +3159,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [],
     "source_page_notices_to_record": [],
     "independent_review": "pending",
@@ -3110,6 +3170,10 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1143
     ]
   },
   {
@@ -3126,7 +3190,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -3134,7 +3198,7 @@
         "title": "Dictionnaire de l’Académie française, huitième édition",
         "publication": "1932–1935",
         "work_type": "collective work",
-        "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+        "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -3148,7 +3212,8 @@
           "edition": "DAF8 1932–1935",
           "original_entry_status": "entry_returned_selected_correspondence_pending"
         },
-        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+        "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
       }
     ],
     "source_page_notices_to_record": [
@@ -3202,6 +3267,10 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1138
     ]
   },
   {
@@ -3218,7 +3287,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -3226,7 +3295,7 @@
         "title": "Dictionnaire de l’Académie française, huitième édition",
         "publication": "1932–1935",
         "work_type": "collective work",
-        "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+        "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -3240,7 +3309,8 @@
           "edition": "DAF8 1932–1935",
           "original_entry_status": "entry_returned_selected_correspondence_pending"
         },
-        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+        "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
       }
     ],
     "source_page_notices_to_record": [
@@ -3278,6 +3348,10 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1135
     ]
   },
   {
@@ -3294,7 +3368,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -3302,7 +3376,7 @@
         "title": "Dictionnaire de l’Académie française, huitième édition",
         "publication": "1932–1935",
         "work_type": "collective work",
-        "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+        "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -3316,7 +3390,8 @@
           "edition": "DAF8 1932–1935",
           "original_entry_status": "entry_returned_selected_correspondence_pending"
         },
-        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+        "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
       }
     ],
     "source_page_notices_to_record": [
@@ -3354,6 +3429,10 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1145
     ]
   },
   {
@@ -3370,7 +3449,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -3378,7 +3457,7 @@
         "title": "Dictionnaire de l’Académie française, huitième édition",
         "publication": "1932–1935",
         "work_type": "collective work",
-        "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+        "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -3392,7 +3471,8 @@
           "edition": "DAF8 1932–1935",
           "original_entry_status": "entry_returned_selected_correspondence_pending"
         },
-        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+        "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
       }
     ],
     "source_page_notices_to_record": [
@@ -3430,6 +3510,10 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1141
     ]
   },
   {
@@ -3446,7 +3530,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -3454,7 +3538,7 @@
         "title": "Dictionnaire de l’Académie française, huitième édition",
         "publication": "1932–1935",
         "work_type": "collective work",
-        "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+        "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -3468,14 +3552,15 @@
           "edition": "DAF8 1932–1935",
           "original_entry_status": "entry_returned_selected_correspondence_pending"
         },
-        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+        "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
       },
       {
         "id": "original-littre-1872-1877",
         "author": "Émile Littré",
         "title": "Dictionnaire de la langue française",
         "publication": "1872–1877",
-        "original_rights": "historical reference recorded; exact selected-text correspondence and rights pending independent review",
+        "original_rights": "public domain for the historical Littré edition; bibliographic citation alone does not identify selected-sentence authorship",
         "scope": "Bibliographic reference is not proof that a selected line was copied from Littré."
       }
     ],
@@ -3546,6 +3631,10 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1137
     ]
   },
   {
@@ -3562,7 +3651,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -3570,7 +3659,7 @@
         "title": "Dictionnaire de l’Académie française, huitième édition",
         "publication": "1932–1935",
         "work_type": "collective work",
-        "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+        "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -3584,7 +3673,8 @@
           "edition": "DAF8 1932–1935",
           "original_entry_status": "entry_returned_selected_correspondence_pending"
         },
-        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+        "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
       }
     ],
     "source_page_notices_to_record": [
@@ -3622,6 +3712,10 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1147
     ]
   },
   {
@@ -3638,7 +3732,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -3646,7 +3740,7 @@
         "title": "Dictionnaire de l’Académie française, huitième édition",
         "publication": "1932–1935",
         "work_type": "collective work",
-        "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+        "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -3660,7 +3754,8 @@
           "edition": "DAF8 1932–1935",
           "original_entry_status": "entry_returned_selected_correspondence_pending"
         },
-        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+        "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
       }
     ],
     "source_page_notices_to_record": [
@@ -3698,6 +3793,10 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1139
     ]
   },
   {
@@ -3714,7 +3813,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -3722,7 +3821,7 @@
         "title": "Dictionnaire de l’Académie française, huitième édition",
         "publication": "1932–1935",
         "work_type": "collective work",
-        "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+        "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -3736,14 +3835,15 @@
           "edition": "DAF8 1932–1935",
           "original_entry_status": "entry_returned_selected_correspondence_pending"
         },
-        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+        "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
       },
       {
         "id": "original-littre-1872-1877",
         "author": "Émile Littré",
         "title": "Dictionnaire de la langue française",
         "publication": "1872–1877",
-        "original_rights": "historical reference recorded; exact selected-text correspondence and rights pending independent review",
+        "original_rights": "public domain for the historical Littré edition; bibliographic citation alone does not identify selected-sentence authorship",
         "scope": "Bibliographic reference is not proof that a selected line was copied from Littré."
       }
     ],
@@ -3830,6 +3930,10 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1136
     ]
   },
   {
@@ -3846,7 +3950,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [],
     "source_page_notices_to_record": [
       {
@@ -3874,6 +3978,10 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1144
     ]
   },
   {
@@ -3890,7 +3998,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [],
     "source_page_notices_to_record": [
       {
@@ -3918,6 +4026,10 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1150
     ]
   },
   {
@@ -3934,7 +4046,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -3942,7 +4054,7 @@
         "title": "Dictionnaire de l’Académie française, huitième édition",
         "publication": "1932–1935",
         "work_type": "collective work",
-        "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+        "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -3956,7 +4068,8 @@
           "edition": "DAF8 1932–1935",
           "original_entry_status": "entry_returned_selected_correspondence_pending"
         },
-        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+        "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
       }
     ],
     "source_page_notices_to_record": [
@@ -4010,6 +4123,10 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": [
+      1149
     ]
   },
   {
@@ -4026,7 +4143,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party current-revision API response; actual returned revision and timestamp retained, not a historical cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -4034,7 +4151,7 @@
         "title": "Dictionnaire de l’Académie française, huitième édition",
         "publication": "1932–1935",
         "work_type": "collective work",
-        "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+        "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -4048,7 +4165,8 @@
           "edition": "DAF8 1932–1935",
           "original_entry_status": "entry_returned_selected_correspondence_pending"
         },
-        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+        "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+        "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
       }
     ],
     "source_page_notices_to_record": [
@@ -4102,6 +4220,207 @@
       "Retain applicable original-author and external-source notices at their actual boundaries.",
       "License selected Wiki/Lexique adaptations under CC BY-SA 4.0 with the licence link and modification notice.",
       "Resolve selected-text external/import rights before admission; the article container licence alone is insufficient."
+    ],
+    "independent_quality_report": "source-quality.json",
+    "independently_reviewed_rows": []
+  },
+  {
+    "id": "b103_replacement_wikisource_soulice1836_marche",
+    "platform": "Wikisource",
+    "title": "Page:Soulice - Petit dictionnaire de la langue française, 1836.pdf/321",
+    "pageid": 4504880,
+    "revid": 14734319,
+    "timestamp": "2024-12-03T12:41:53Z",
+    "fixed_url": "https://fr.wikisource.org/w/index.php?title=Page%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf%2F321&oldid=14734319",
+    "history_url": "https://fr.wikisource.org/w/index.php?title=Page%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf%2F321&action=history",
+    "attribution": "Théodore Soulice (1800–1878); Wikisource transcription contributors (complete linked page history, including Poslovitch); Lexique contributors for selected adaptation and new explanatory translations.",
+    "content_license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+    "source_frame": "Pinned first-party revision API and complete matching wikitext.",
+    "selected_text_review": "passed_for_selected_spans",
+    "original_rights_layer": "Théodore Soulice’s original 1836 work is public domain; later contributor material and selected Lexique adaptations use the elected CC BY-SA 4.0 route.",
+    "edition": "fr",
+    "entry_language": "fr",
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "independent-content-rights-reviewer-103-104",
+    "independent_quality_report": "source-quality.json",
+    "original_authors_and_rights": [
+      {
+        "id": "original-soulice-1836",
+        "author": "Théodore Soulice (1800–1878)",
+        "title": "Petit dictionnaire de la langue française, à l’usage des écoles primaires",
+        "publication": "1836",
+        "edition": "First edition",
+        "publishers": "Paris: L. Hachette; Firmin Didot frères",
+        "printed_page": 315,
+        "scan_page": 321,
+        "original_rights": "public-domain",
+        "legal_basis": "Established project Soulice boundary: original author died in 1878 and first publication was 1836. The author’s seventy-year term has expired; the pre-1931 publication is also public domain in the United States. The fixed Commons original-scan description explicitly declares PD-old-70 and PD-US-expired. Faithful scanning/transcription does not relicense the original. Contributor changes and selected Lexique adaptations remain a separate CC BY-SA 4.0 layer.",
+        "legal_basis_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278938",
+        "original_scan_url": "https://commons.wikimedia.org/w/index.php?title=File%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf&oldid=1200756030",
+        "original_capture": {
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103-replacement\\target\\issue-103-replacement\\soulice-page321.jpg",
+          "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103-replacement\\target\\issue-103-replacement\\soulice-scan321-url.api.json",
+          "visual_check": "The scan shows printed page 315, MARCHÉ s. m., and lieu public de vente et d’achat before a semicolon and separate senses; matching the selected transcription."
+        },
+        "scope": "Original selected 1836 clause only; contributor modifications and Lexique adaptations/translations remain a separate CC BY-SA 4.0 layer."
+      }
+    ]
+  },
+  {
+    "id": "b103_replacement_wikisource_soulice1836_marche_entry",
+    "platform": "Wikisource",
+    "title": "Petit dictionnaire de la langue française (1836)/MARCHÉ",
+    "pageid": 4514269,
+    "revid": 14751288,
+    "timestamp": "2024-12-08T15:27:26Z",
+    "fixed_url": "https://fr.wikisource.org/w/index.php?title=Petit_dictionnaire_de_la_langue_fran%C3%A7aise_(1836)%2FMARCH%C3%89&oldid=14751288",
+    "history_url": "https://fr.wikisource.org/w/index.php?title=Petit_dictionnaire_de_la_langue_fran%C3%A7aise_(1836)%2FMARCH%C3%89&action=history",
+    "attribution": "Théodore Soulice (1800–1878); Wikisource contributors, including PosloBot, through the complete linked article history.",
+    "content_license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+    "source_frame": "Pinned first-party revision API and complete matching wikitext.",
+    "selected_text_review": "passed_for_selected_spans",
+    "original_rights_layer": "Théodore Soulice’s original 1836 work is public domain; later contributor material and selected Lexique adaptations use the elected CC BY-SA 4.0 route.",
+    "edition": "fr",
+    "entry_language": "fr",
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "independent-content-rights-reviewer-103-104",
+    "independent_quality_report": "source-quality.json",
+    "original_authors_and_rights": [
+      {
+        "id": "original-soulice-1836",
+        "author": "Théodore Soulice (1800–1878)",
+        "title": "Petit dictionnaire de la langue française, à l’usage des écoles primaires",
+        "publication": "1836",
+        "edition": "First edition",
+        "publishers": "Paris: L. Hachette; Firmin Didot frères",
+        "printed_page": 315,
+        "scan_page": 321,
+        "original_rights": "public-domain",
+        "legal_basis": "Established project Soulice boundary: original author died in 1878 and first publication was 1836. The author’s seventy-year term has expired; the pre-1931 publication is also public domain in the United States. The fixed Commons original-scan description explicitly declares PD-old-70 and PD-US-expired. Faithful scanning/transcription does not relicense the original. Contributor changes and selected Lexique adaptations remain a separate CC BY-SA 4.0 layer.",
+        "legal_basis_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278938",
+        "original_scan_url": "https://commons.wikimedia.org/w/index.php?title=File%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf&oldid=1200756030",
+        "original_capture": {
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103-replacement\\target\\issue-103-replacement\\soulice-page321.jpg",
+          "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103-replacement\\target\\issue-103-replacement\\soulice-scan321-url.api.json",
+          "visual_check": "The scan shows printed page 315, MARCHÉ s. m., and lieu public de vente et d’achat before a semicolon and separate senses; matching the selected transcription."
+        },
+        "scope": "Original selected 1836 clause only; contributor modifications and Lexique adaptations/translations remain a separate CC BY-SA 4.0 layer."
+      }
+    ]
+  },
+  {
+    "id": "b103_replacement_wikisource_soulice1836_titlepage",
+    "platform": "Wikisource",
+    "title": "Page:Soulice - Petit dictionnaire de la langue française, 1836.pdf/1",
+    "pageid": 4555473,
+    "revid": 14869218,
+    "timestamp": "2025-01-23T10:00:05Z",
+    "fixed_url": "https://fr.wikisource.org/w/index.php?title=Page%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf%2F1&oldid=14869218",
+    "history_url": "https://fr.wikisource.org/w/index.php?title=Page%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf%2F1&action=history",
+    "attribution": "Théodore Soulice; publishers L. Hachette and Firmin Didot frères, Paris 1836; Wikisource transcription contributors through the complete linked page history.",
+    "content_license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+    "source_frame": "Pinned first-party revision API and complete matching wikitext.",
+    "selected_text_review": "passed_for_selected_spans",
+    "original_rights_layer": "Théodore Soulice’s original 1836 work is public domain; later contributor material and selected Lexique adaptations use the elected CC BY-SA 4.0 route.",
+    "edition": "fr",
+    "entry_language": "fr",
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "independent-content-rights-reviewer-103-104",
+    "independent_quality_report": "source-quality.json",
+    "original_authors_and_rights": [
+      {
+        "id": "original-soulice-1836",
+        "author": "Théodore Soulice (1800–1878)",
+        "title": "Petit dictionnaire de la langue française, à l’usage des écoles primaires",
+        "publication": "1836",
+        "edition": "First edition",
+        "publishers": "Paris: L. Hachette; Firmin Didot frères",
+        "printed_page": 315,
+        "scan_page": 321,
+        "original_rights": "public-domain",
+        "legal_basis": "Established project Soulice boundary: original author died in 1878 and first publication was 1836. The author’s seventy-year term has expired; the pre-1931 publication is also public domain in the United States. The fixed Commons original-scan description explicitly declares PD-old-70 and PD-US-expired. Faithful scanning/transcription does not relicense the original. Contributor changes and selected Lexique adaptations remain a separate CC BY-SA 4.0 layer.",
+        "legal_basis_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278938",
+        "original_scan_url": "https://commons.wikimedia.org/w/index.php?title=File%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf&oldid=1200756030",
+        "original_capture": {
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103-replacement\\target\\issue-103-replacement\\soulice-page321.jpg",
+          "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103-replacement\\target\\issue-103-replacement\\soulice-scan321-url.api.json",
+          "visual_check": "The scan shows printed page 315, MARCHÉ s. m., and lieu public de vente et d’achat before a semicolon and separate senses; matching the selected transcription."
+        },
+        "scope": "Original selected 1836 clause only; contributor modifications and Lexique adaptations/translations remain a separate CC BY-SA 4.0 layer."
+      }
+    ]
+  },
+  {
+    "id": "b103_replacement_fr_marche_ipa",
+    "platform": "Wiktionnaire",
+    "title": "marché",
+    "pageid": 631,
+    "revid": 39985800,
+    "timestamp": "2026-11-04T11:10:13Z",
+    "fixed_url": "https://fr.wiktionary.org/w/index.php?title=march%C3%A9&oldid=39985800",
+    "history_url": "https://fr.wiktionary.org/w/index.php?title=march%C3%A9&action=history",
+    "attribution": "Wiktionnaire contributors through the complete linked marché article history; Lexique contributors for selecting and formatting the IPA.",
+    "content_license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+    "source_frame": "Pinned first-party revision API and complete matching wikitext.",
+    "selected_text_review": "passed_for_selected_spans",
+    "original_rights_layer": "Pronunciation facts only; no dictionary definition, example, translation, audio or media selected.",
+    "edition": "fr",
+    "entry_language": "fr",
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "independent-content-rights-reviewer-103-104",
+    "independent_quality_report": "source-quality.json",
+    "original_authors_and_rights": []
+  },
+  {
+    "id": "b103_replacement_commons_soulice1836_rights",
+    "platform": "Wikimedia Commons",
+    "title": "File:Soulice - Petit dictionnaire de la langue française, 1836.pdf",
+    "pageid": 155133153,
+    "revid": 1200756030,
+    "timestamp": "2026-04-20T16:00:02Z",
+    "fixed_url": "https://commons.wikimedia.org/w/index.php?title=File%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf&oldid=1200756030",
+    "history_url": "https://commons.wikimedia.org/w/index.php?title=File%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf&action=history",
+    "attribution": "Théodore Soulice, original work; Bibliothèque nationale de France / Gallica, digitisation source; Wikimedia Commons file-description contributors through the complete linked history.",
+    "content_license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+    "source_frame": "Pinned first-party revision API and complete matching wikitext.",
+    "selected_text_review": "passed_for_selected_spans",
+    "original_rights_layer": "Théodore Soulice’s original 1836 work is public domain; later contributor material and selected Lexique adaptations use the elected CC BY-SA 4.0 route.",
+    "edition": "commons",
+    "entry_language": "und",
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "independent-content-rights-reviewer-103-104",
+    "independent_quality_report": "source-quality.json",
+    "original_authors_and_rights": [
+      {
+        "id": "original-soulice-1836",
+        "author": "Théodore Soulice (1800–1878)",
+        "title": "Petit dictionnaire de la langue française, à l’usage des écoles primaires",
+        "publication": "1836",
+        "edition": "First edition",
+        "publishers": "Paris: L. Hachette; Firmin Didot frères",
+        "printed_page": 315,
+        "scan_page": 321,
+        "original_rights": "public-domain",
+        "legal_basis": "Established project Soulice boundary: original author died in 1878 and first publication was 1836. The author’s seventy-year term has expired; the pre-1931 publication is also public domain in the United States. The fixed Commons original-scan description explicitly declares PD-old-70 and PD-US-expired. Faithful scanning/transcription does not relicense the original. Contributor changes and selected Lexique adaptations remain a separate CC BY-SA 4.0 layer.",
+        "legal_basis_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278938",
+        "original_scan_url": "https://commons.wikimedia.org/w/index.php?title=File%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf&oldid=1200756030",
+        "original_capture": {
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103-replacement\\target\\issue-103-replacement\\soulice-page321.jpg",
+          "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103-replacement\\target\\issue-103-replacement\\soulice-scan321-url.api.json",
+          "visual_check": "The scan shows printed page 315, MARCHÉ s. m., and lieu public de vente et d’achat before a semicolon and separate senses; matching the selected transcription."
+        },
+        "scope": "Original selected 1836 clause only; contributor modifications and Lexique adaptations/translations remain a separate CC BY-SA 4.0 layer."
+      }
     ]
   }
 ]

@@ -1,6 +1,24 @@
 {
   "issue": 103,
   "ticket": 103,
+  "status": "passed_independent_review_parent_conversion_and_native_gates_pending",
+  "independence": true,
+  "independent_reviewer": {
+    "id": "independent-content-rights-reviewer-103-104",
+    "role": "separate content and selected-span rights reviewer",
+    "independence": "Not the content author or integration merger; independently read proposed text, fixed sources and original-source boundaries.",
+    "reviewed_author_commit": "6339b0dc4aef34d07a478ded90d39ce349298a2a",
+    "checkout": "C:/Users/inthe/IdeaProjects/lexique-batch-103",
+    "platform": "Windows x64; PowerShell 7; uv Python 3.14.10"
+  },
+  "reviewer": {
+    "id": "independent-content-rights-reviewer-103-104",
+    "role": "separate content and selected-span rights reviewer",
+    "independence": "Not the content author or integration merger; independently read proposed text, fixed sources and original-source boundaries.",
+    "reviewed_author_commit": "6339b0dc4aef34d07a478ded90d39ce349298a2a",
+    "checkout": "C:/Users/inthe/IdeaProjects/lexique-batch-103",
+    "platform": "Windows x64; PowerShell 7; uv Python 3.14.10"
+  },
   "frozen_rows": [
     1101,
     1102,
@@ -53,22 +71,23 @@
     1149,
     1150
   ],
-  "status": "pending_independent_selected_content_and_rights_review",
-  "independent_reviewer": null,
-  "independence": false,
   "scope_denominator_groups": 4087,
   "candidate_groups": 50,
-  "candidate_senses": 50,
   "candidate_fields": 200,
-  "candidate_sources": 48,
-  "accepted_groups": 0,
-  "accepted_fields": 0,
-  "unreviewed_groups": 50,
-  "unreviewed_fields": 200,
-  "missing_candidate_fields": 0,
-  "annotation_exceptions": [],
-  "unresolved_membership_groups": [],
-  "quality_summary": "Author source-binding and scoped drafting only; separate reviewer must assess each field, selected use, spelling/IPA bridge and actual original/import rights.",
-  "resource_conversion": "integration_responsibility_pending",
-  "native_verification": "integration_responsibility_pending"
+  "accepted_groups": 50,
+  "accepted_fields": 200,
+  "accepted_sources": 52,
+  "missing_admitted_fields": 0,
+  "unreviewed_fields": 0,
+  "unresolved": [],
+  "approved_annotation_exceptions": [],
+  "runtime_aliases_added": [],
+  "quality_report": "independent-review.md",
+  "source_quality_judgments": "source-quality.json",
+  "packaging_obligations_status": "combined_required_obligations_recorded_final_package_owned_by_parent",
+  "resource_conversion": "not_run_parent_owned",
+  "native_verification": "not_run_parent_owned",
+  "rejected_originals": "rejected-original-1140.json",
+  "reviewed_replacement_commit": "d33ee57acca6518e8e41687364a789baf77bcbf9",
+  "replacement_author_head": "f839a451c3666edd9d1f55716da890bacdd2bf2e"
 }

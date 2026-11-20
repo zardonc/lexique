@@ -92,7 +92,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ADMF&oldid=39420280"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         },
         {
@@ -108,7 +108,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ATLFi&oldid=39999925"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         },
         {
@@ -124,7 +124,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ALittr%C3%A9&oldid=33413119"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         },
         {
@@ -140,7 +140,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ADAF8&oldid=27621166"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": {
             "title": "oiseau",
             "url": "https://www.cnrtl.fr/definition/academie8/oiseau",
@@ -165,7 +165,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3AMeyer&oldid=29333510"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         }
       ],
@@ -176,7 +176,7 @@
           "title": "Dictionnaire de l’Académie française, huitième édition",
           "publication": "1932–1935",
           "work_type": "collective work",
-          "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+          "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -190,14 +190,15 @@
             "edition": "DAF8 1932–1935",
             "original_entry_status": "entry_returned_selected_correspondence_pending"
           },
-          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+          "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
         },
         {
           "id": "original-littre-1872-1877",
           "author": "Émile Littré",
           "title": "Dictionnaire de la langue française",
           "publication": "1872–1877",
-          "original_rights": "historical reference recorded; exact selected-text correspondence and rights pending independent review",
+          "original_rights": "public domain for the historical Littré edition; bibliographic citation alone does not identify selected-sentence authorship",
           "scope": "Bibliographic reference is not proof that a selected line was copied from Littré."
         }
       ],
@@ -216,7 +217,11 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1103
+      ]
     },
     {
       "id": "b103_fr_490",
@@ -310,7 +315,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ADAF8&oldid=27621166"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": {
             "title": "système",
             "url": "https://www.cnrtl.fr/definition/academie8/syst%C3%A8me",
@@ -330,7 +335,7 @@
           "title": "Dictionnaire de l’Académie française, huitième édition",
           "publication": "1932–1935",
           "work_type": "collective work",
-          "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+          "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -344,7 +349,8 @@
             "edition": "DAF8 1932–1935",
             "original_entry_status": "entry_returned_selected_correspondence_pending"
           },
-          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+          "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
         }
       ],
       "current_registry_names": 72,
@@ -362,7 +368,11 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1107
+      ]
     },
     {
       "id": "b103_fr_2513",
@@ -456,7 +466,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3AFEW&oldid=38687248"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         },
         {
@@ -472,7 +482,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3AVan%20Daele&oldid=31445596"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         },
         {
@@ -488,7 +498,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ALittr%C3%A9&oldid=33413119"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         },
         {
@@ -504,7 +514,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ATLFi&oldid=39999925"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         }
       ],
@@ -514,7 +524,7 @@
           "author": "Émile Littré",
           "title": "Dictionnaire de la langue française",
           "publication": "1872–1877",
-          "original_rights": "historical reference recorded; exact selected-text correspondence and rights pending independent review",
+          "original_rights": "public domain for the historical Littré edition; bibliographic citation alone does not identify selected-sentence authorship",
           "scope": "Bibliographic reference is not proof that a selected line was copied from Littré."
         }
       ],
@@ -533,7 +543,11 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1104
+      ]
     },
     {
       "id": "b103_fr_8086",
@@ -627,7 +641,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ATLFi&oldid=39999925"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         },
         {
@@ -643,7 +657,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ADAF8&oldid=27621166"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": {
             "title": "camarade",
             "url": "https://www.cnrtl.fr/definition/academie8/camarade",
@@ -663,7 +677,7 @@
           "title": "Dictionnaire de l’Académie française, huitième édition",
           "publication": "1932–1935",
           "work_type": "collective work",
-          "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+          "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -677,7 +691,8 @@
             "edition": "DAF8 1932–1935",
             "original_entry_status": "entry_returned_selected_correspondence_pending"
           },
-          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+          "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
         }
       ],
       "current_registry_names": 66,
@@ -695,7 +710,11 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1101
+      ]
     },
     {
       "id": "b103_fr_9708",
@@ -800,7 +819,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AImport%3ADAF8&oldid=22113837"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": {
             "title": "douter",
             "url": "https://www.cnrtl.fr/definition/academie8/douter",
@@ -820,7 +839,7 @@
           "title": "Dictionnaire de l’Académie française, huitième édition",
           "publication": "1932–1935",
           "work_type": "collective work",
-          "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+          "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -834,7 +853,8 @@
             "edition": "DAF8 1932–1935",
             "original_entry_status": "entry_returned_selected_correspondence_pending"
           },
-          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+          "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
         }
       ],
       "current_registry_names": 54,
@@ -852,7 +872,11 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1102
+      ]
     },
     {
       "id": "b103_fr_11344",
@@ -946,7 +970,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ATLFi&oldid=39999925"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         }
       ],
@@ -966,7 +990,11 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1111
+      ]
     },
     {
       "id": "b103_fr_27281",
@@ -1060,7 +1088,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ADAF8&oldid=27621166"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": {
             "title": "voleur",
             "url": "https://www.cnrtl.fr/definition/academie8/voleur",
@@ -1080,7 +1108,7 @@
           "title": "Dictionnaire de l’Académie française, huitième édition",
           "publication": "1932–1935",
           "work_type": "collective work",
-          "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+          "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -1094,7 +1122,8 @@
             "edition": "DAF8 1932–1935",
             "original_entry_status": "entry_returned_selected_correspondence_pending"
           },
-          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+          "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
         }
       ],
       "current_registry_names": 83,
@@ -1112,7 +1141,11 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1113
+      ]
     },
     {
       "id": "b103_fr_36787",
@@ -1206,7 +1239,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ALittr%C3%A9&oldid=33413119"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         },
         {
@@ -1222,7 +1255,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ADAF8&oldid=27621166"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": {
             "title": "héros",
             "url": "https://www.cnrtl.fr/definition/academie8/h%C3%A9ros",
@@ -1242,7 +1275,7 @@
           "title": "Dictionnaire de l’Académie française, huitième édition",
           "publication": "1932–1935",
           "work_type": "collective work",
-          "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+          "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -1256,14 +1289,15 @@
             "edition": "DAF8 1932–1935",
             "original_entry_status": "entry_returned_selected_correspondence_pending"
           },
-          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+          "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
         },
         {
           "id": "original-littre-1872-1877",
           "author": "Émile Littré",
           "title": "Dictionnaire de la langue française",
           "publication": "1872–1877",
-          "original_rights": "historical reference recorded; exact selected-text correspondence and rights pending independent review",
+          "original_rights": "public domain for the historical Littré edition; bibliographic citation alone does not identify selected-sentence authorship",
           "scope": "Bibliographic reference is not proof that a selected line was copied from Littré."
         }
       ],
@@ -1282,7 +1316,11 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1112
+      ]
     },
     {
       "id": "b103_fr_121742",
@@ -1398,7 +1436,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AImport%3ADAF8&oldid=22113837"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": {
             "title": "capable",
             "url": "https://www.cnrtl.fr/definition/academie8/capable",
@@ -1418,7 +1456,7 @@
           "title": "Dictionnaire de l’Académie française, huitième édition",
           "publication": "1932–1935",
           "work_type": "collective work",
-          "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+          "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -1432,7 +1470,8 @@
             "edition": "DAF8 1932–1935",
             "original_entry_status": "entry_returned_selected_correspondence_pending"
           },
-          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+          "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
         }
       ],
       "current_registry_names": 64,
@@ -1450,7 +1489,11 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1108
+      ]
     },
     {
       "id": "b103_fr_138824",
@@ -1544,7 +1587,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AImport%3ADAF8&oldid=22113837"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": {
             "title": "apprécier",
             "url": "https://www.cnrtl.fr/definition/academie8/appr%C3%A9cier",
@@ -1564,7 +1607,7 @@
           "title": "Dictionnaire de l’Académie française, huitième édition",
           "publication": "1932–1935",
           "work_type": "collective work",
-          "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+          "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -1578,7 +1621,8 @@
             "edition": "DAF8 1932–1935",
             "original_entry_status": "entry_returned_selected_correspondence_pending"
           },
-          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+          "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
         }
       ],
       "current_registry_names": 52,
@@ -1596,7 +1640,11 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1106
+      ]
     },
     {
       "id": "b103_fr_141424",
@@ -1690,7 +1738,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ADAF8&oldid=27621166"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": {
             "title": "fuir",
             "url": "https://www.cnrtl.fr/definition/academie8/fuir",
@@ -1710,7 +1758,7 @@
           "title": "Dictionnaire de l’Académie française, huitième édition",
           "publication": "1932–1935",
           "work_type": "collective work",
-          "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+          "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -1724,7 +1772,8 @@
             "edition": "DAF8 1932–1935",
             "original_entry_status": "entry_returned_selected_correspondence_pending"
           },
-          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+          "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
         }
       ],
       "current_registry_names": 63,
@@ -1742,7 +1791,11 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1109
+      ]
     },
     {
       "id": "b103_fr_159581",
@@ -1836,7 +1889,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AImport%3ADAF8&oldid=22113837"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": {
             "title": "ennui",
             "url": "https://www.cnrtl.fr/definition/academie8/ennui",
@@ -1861,7 +1914,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ATLFi&oldid=39999925"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         }
       ],
@@ -1872,7 +1925,7 @@
           "title": "Dictionnaire de l’Académie française, huitième édition",
           "publication": "1932–1935",
           "work_type": "collective work",
-          "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+          "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -1886,7 +1939,8 @@
             "edition": "DAF8 1932–1935",
             "original_entry_status": "entry_returned_selected_correspondence_pending"
           },
-          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+          "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
         }
       ],
       "current_registry_names": 70,
@@ -1904,7 +1958,11 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1110
+      ]
     },
     {
       "id": "b103_fr_171839",
@@ -1998,7 +2056,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AImport%3ADAF8&oldid=22113837"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": {
             "title": "plusieurs",
             "url": "https://www.cnrtl.fr/definition/academie8/plusieurs",
@@ -2023,7 +2081,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ATLFi&oldid=39999925"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         }
       ],
@@ -2034,7 +2092,7 @@
           "title": "Dictionnaire de l’Académie française, huitième édition",
           "publication": "1932–1935",
           "work_type": "collective work",
-          "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+          "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -2048,7 +2106,8 @@
             "edition": "DAF8 1932–1935",
             "original_entry_status": "no_entry_returned"
           },
-          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+          "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
         }
       ],
       "current_registry_names": 42,
@@ -2066,7 +2125,11 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1116
+      ]
     },
     {
       "id": "b103_fr_171997",
@@ -2225,7 +2288,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AImport%3ADAF8&oldid=22113837"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": {
             "title": "politique",
             "url": "https://www.cnrtl.fr/definition/academie8/politique",
@@ -2245,7 +2308,7 @@
           "title": "Dictionnaire de l’Académie française, huitième édition",
           "publication": "1932–1935",
           "work_type": "collective work",
-          "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+          "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -2259,7 +2322,8 @@
             "edition": "DAF8 1932–1935",
             "original_entry_status": "entry_returned_selected_correspondence_pending"
           },
-          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+          "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
         }
       ],
       "current_registry_names": 89,
@@ -2277,7 +2341,12 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1114,
+        1115
+      ]
     },
     {
       "id": "b103_fr_174139",
@@ -2371,7 +2440,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AImport%3ADAF8&oldid=22113837"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": {
             "title": "recherche",
             "url": "https://www.cnrtl.fr/definition/academie8/recherche",
@@ -2391,7 +2460,7 @@
           "title": "Dictionnaire de l’Académie française, huitième édition",
           "publication": "1932–1935",
           "work_type": "collective work",
-          "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+          "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -2405,7 +2474,8 @@
             "edition": "DAF8 1932–1935",
             "original_entry_status": "entry_returned_selected_correspondence_pending"
           },
-          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+          "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
         }
       ],
       "current_registry_names": 73,
@@ -2423,7 +2493,11 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1105
+      ]
     },
     {
       "id": "b103_fr_1920",
@@ -2582,7 +2656,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ADAF8&oldid=27621166"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": {
             "title": "juif",
             "url": "https://www.cnrtl.fr/definition/academie8/juif",
@@ -2607,7 +2681,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ALittr%C3%A9&oldid=33413119"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         },
         {
@@ -2623,7 +2697,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ATLFi&oldid=39999925"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         }
       ],
@@ -2634,7 +2708,7 @@
           "title": "Dictionnaire de l’Académie française, huitième édition",
           "publication": "1932–1935",
           "work_type": "collective work",
-          "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+          "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -2648,14 +2722,15 @@
             "edition": "DAF8 1932–1935",
             "original_entry_status": "entry_returned_selected_correspondence_pending"
           },
-          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+          "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
         },
         {
           "id": "original-littre-1872-1877",
           "author": "Émile Littré",
           "title": "Dictionnaire de la langue française",
           "publication": "1872–1877",
-          "original_rights": "historical reference recorded; exact selected-text correspondence and rights pending independent review",
+          "original_rights": "public domain for the historical Littré edition; bibliographic citation alone does not identify selected-sentence authorship",
           "scope": "Bibliographic reference is not proof that a selected line was copied from Littré."
         }
       ],
@@ -2674,7 +2749,12 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1125,
+        1126
+      ]
     },
     {
       "id": "b103_fr_4871",
@@ -2768,7 +2848,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ADAF8&oldid=27621166"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": {
             "title": "respirer",
             "url": "https://www.cnrtl.fr/definition/academie8/respirer",
@@ -2788,7 +2868,7 @@
           "title": "Dictionnaire de l’Académie française, huitième édition",
           "publication": "1932–1935",
           "work_type": "collective work",
-          "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+          "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -2802,7 +2882,8 @@
             "edition": "DAF8 1932–1935",
             "original_entry_status": "entry_returned_selected_correspondence_pending"
           },
-          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+          "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
         }
       ],
       "current_registry_names": 61,
@@ -2820,7 +2901,11 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1124
+      ]
     },
     {
       "id": "b103_fr_7847",
@@ -2914,7 +2999,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ALittr%C3%A9&oldid=33413119"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         },
         {
@@ -2930,7 +3015,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ADAF8&oldid=27621166"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": {
             "title": "appartement",
             "url": "https://www.cnrtl.fr/definition/academie8/appartement",
@@ -2950,7 +3035,7 @@
           "title": "Dictionnaire de l’Académie française, huitième édition",
           "publication": "1932–1935",
           "work_type": "collective work",
-          "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+          "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -2964,14 +3049,15 @@
             "edition": "DAF8 1932–1935",
             "original_entry_status": "entry_returned_selected_correspondence_pending"
           },
-          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+          "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
         },
         {
           "id": "original-littre-1872-1877",
           "author": "Émile Littré",
           "title": "Dictionnaire de la langue française",
           "publication": "1872–1877",
-          "original_rights": "historical reference recorded; exact selected-text correspondence and rights pending independent review",
+          "original_rights": "public domain for the historical Littré edition; bibliographic citation alone does not identify selected-sentence authorship",
           "scope": "Bibliographic reference is not proof that a selected line was copied from Littré."
         }
       ],
@@ -2990,7 +3076,11 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1121
+      ]
     },
     {
       "id": "b103_fr_10018",
@@ -3084,7 +3174,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3AGrand%20Robert&oldid=36975197"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         },
         {
@@ -3100,7 +3190,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ALarousse&oldid=29912886"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         },
         {
@@ -3116,7 +3206,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3AUsito&oldid=38550920"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         },
         {
@@ -3132,7 +3222,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ATLFi&oldid=39999925"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         },
         {
@@ -3148,7 +3238,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3AFranceTerme&oldid=25526943"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         }
       ],
@@ -3168,7 +3258,11 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1133
+      ]
     },
     {
       "id": "b103_fr_11336",
@@ -3262,7 +3356,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3AF%C3%A9raud&oldid=39311513"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         },
         {
@@ -3278,7 +3372,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ALittr%C3%A9&oldid=33413119"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         },
         {
@@ -3294,7 +3388,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ATLFi&oldid=39999925"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         }
       ],
@@ -3304,7 +3398,7 @@
           "author": "Émile Littré",
           "title": "Dictionnaire de la langue française",
           "publication": "1872–1877",
-          "original_rights": "historical reference recorded; exact selected-text correspondence and rights pending independent review",
+          "original_rights": "public domain for the historical Littré edition; bibliographic citation alone does not identify selected-sentence authorship",
           "scope": "Bibliographic reference is not proof that a selected line was copied from Littré."
         }
       ],
@@ -3323,7 +3417,11 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1131
+      ]
     },
     {
       "id": "b103_fr_23819",
@@ -3417,7 +3515,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ADAF8&oldid=27621166"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": {
             "title": "excellent",
             "url": "https://www.cnrtl.fr/definition/academie8/excellent",
@@ -3437,7 +3535,7 @@
           "title": "Dictionnaire de l’Académie française, huitième édition",
           "publication": "1932–1935",
           "work_type": "collective work",
-          "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+          "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -3451,7 +3549,8 @@
             "edition": "DAF8 1932–1935",
             "original_entry_status": "no_entry_returned"
           },
-          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+          "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
         }
       ],
       "current_registry_names": 70,
@@ -3469,7 +3568,11 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1119
+      ]
     },
     {
       "id": "b103_fr_75539",
@@ -3596,7 +3699,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AImport%3ADAF8&oldid=22113837"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": {
             "title": "tel",
             "url": "https://www.cnrtl.fr/definition/academie8/tel",
@@ -3621,7 +3724,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ATLFi&oldid=39999925"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         }
       ],
@@ -3632,7 +3735,7 @@
           "title": "Dictionnaire de l’Académie française, huitième édition",
           "publication": "1932–1935",
           "work_type": "collective work",
-          "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+          "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -3646,7 +3749,8 @@
             "edition": "DAF8 1932–1935",
             "original_entry_status": "entry_returned_selected_correspondence_pending"
           },
-          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+          "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
         }
       ],
       "current_registry_names": 74,
@@ -3664,7 +3768,11 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1122
+      ]
     },
     {
       "id": "b103_fr_123178",
@@ -3758,7 +3866,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ADAF8&oldid=27621166"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": {
             "title": "sentiment",
             "url": "https://www.cnrtl.fr/definition/academie8/sentiment",
@@ -3778,7 +3886,7 @@
           "title": "Dictionnaire de l’Académie française, huitième édition",
           "publication": "1932–1935",
           "work_type": "collective work",
-          "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+          "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -3792,7 +3900,8 @@
             "edition": "DAF8 1932–1935",
             "original_entry_status": "entry_returned_selected_correspondence_pending"
           },
-          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+          "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
         }
       ],
       "current_registry_names": 61,
@@ -3810,7 +3919,11 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1130
+      ]
     },
     {
       "id": "b103_fr_130132",
@@ -3904,7 +4017,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AImport%3ADAF8&oldid=22113837"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": {
             "title": "bosser",
             "url": "https://www.cnrtl.fr/definition/academie8/bosser",
@@ -3924,7 +4037,7 @@
           "title": "Dictionnaire de l’Académie française, huitième édition",
           "publication": "1932–1935",
           "work_type": "collective work",
-          "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+          "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -3938,7 +4051,8 @@
             "edition": "DAF8 1932–1935",
             "original_entry_status": "entry_returned_selected_correspondence_pending"
           },
-          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+          "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
         }
       ],
       "current_registry_names": 49,
@@ -3956,7 +4070,11 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1123
+      ]
     },
     {
       "id": "b103_fr_139124",
@@ -4126,7 +4244,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AImport%3ADAF8&oldid=22113837"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": {
             "title": "arrière",
             "url": "https://www.cnrtl.fr/definition/academie8/arri%C3%A8re",
@@ -4146,7 +4264,7 @@
           "title": "Dictionnaire de l’Académie française, huitième édition",
           "publication": "1932–1935",
           "work_type": "collective work",
-          "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+          "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -4160,7 +4278,8 @@
             "edition": "DAF8 1932–1935",
             "original_entry_status": "no_entry_returned"
           },
-          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+          "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
         }
       ],
       "current_registry_names": 70,
@@ -4178,7 +4297,12 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1117,
+        1118
+      ]
     },
     {
       "id": "b103_fr_143696",
@@ -4272,7 +4396,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ADAF8&oldid=27621166"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": {
             "title": "libérer",
             "url": "https://www.cnrtl.fr/definition/academie8/lib%C3%A9rer",
@@ -4292,7 +4416,7 @@
           "title": "Dictionnaire de l’Académie française, huitième édition",
           "publication": "1932–1935",
           "work_type": "collective work",
-          "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+          "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -4306,7 +4430,8 @@
             "edition": "DAF8 1932–1935",
             "original_entry_status": "entry_returned_selected_correspondence_pending"
           },
-          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+          "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
         }
       ],
       "current_registry_names": 57,
@@ -4324,7 +4449,11 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1129
+      ]
     },
     {
       "id": "b103_fr_158293",
@@ -4418,7 +4547,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ARobert&oldid=33921222"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         },
         {
@@ -4434,7 +4563,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ALarousse&oldid=29912886"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         },
         {
@@ -4450,7 +4579,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ADAF8&oldid=27621166"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": {
             "title": "douleur",
             "url": "https://www.cnrtl.fr/definition/academie8/douleur",
@@ -4470,7 +4599,7 @@
           "title": "Dictionnaire de l’Académie française, huitième édition",
           "publication": "1932–1935",
           "work_type": "collective work",
-          "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+          "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -4484,7 +4613,8 @@
             "edition": "DAF8 1932–1935",
             "original_entry_status": "entry_returned_selected_correspondence_pending"
           },
-          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+          "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
         }
       ],
       "current_registry_names": 71,
@@ -4502,7 +4632,11 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1128
+      ]
     },
     {
       "id": "b103_fr_171587",
@@ -4596,7 +4730,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AImport%3ADAF8&oldid=22113837"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": {
             "title": "pitié",
             "url": "https://www.cnrtl.fr/definition/academie8/piti%C3%A9",
@@ -4616,7 +4750,7 @@
           "title": "Dictionnaire de l’Académie française, huitième édition",
           "publication": "1932–1935",
           "work_type": "collective work",
-          "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+          "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -4630,7 +4764,8 @@
             "edition": "DAF8 1932–1935",
             "original_entry_status": "entry_returned_selected_correspondence_pending"
           },
-          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+          "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
         }
       ],
       "current_registry_names": 55,
@@ -4648,7 +4783,11 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1120
+      ]
     },
     {
       "id": "b103_fr_174205",
@@ -4753,7 +4892,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AImport%3ADAF8&oldid=22113837"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": {
             "title": "récupérer",
             "url": "https://www.cnrtl.fr/definition/academie8/r%C3%A9cup%C3%A9rer",
@@ -4773,7 +4912,7 @@
           "title": "Dictionnaire de l’Académie française, huitième édition",
           "publication": "1932–1935",
           "work_type": "collective work",
-          "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+          "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -4787,7 +4926,8 @@
             "edition": "DAF8 1932–1935",
             "original_entry_status": "entry_returned_selected_correspondence_pending"
           },
-          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+          "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
         }
       ],
       "current_registry_names": 48,
@@ -4805,7 +4945,11 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1127
+      ]
     },
     {
       "id": "b103_fr_176627",
@@ -4899,7 +5043,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AImport%3ADAF8&oldid=22113837"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": {
             "title": "société",
             "url": "https://www.cnrtl.fr/definition/academie8/soci%C3%A9t%C3%A9",
@@ -4919,7 +5063,7 @@
           "title": "Dictionnaire de l’Académie française, huitième édition",
           "publication": "1932–1935",
           "work_type": "collective work",
-          "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+          "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -4933,7 +5077,8 @@
             "edition": "DAF8 1932–1935",
             "original_entry_status": "entry_returned_selected_correspondence_pending"
           },
-          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+          "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
         }
       ],
       "current_registry_names": 84,
@@ -4951,185 +5096,11 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
-    },
-    {
-      "id": "b103_fr_631",
-      "title": "marché",
-      "current_content_revid": 39985800,
-      "timestamp": "2026-11-04T11:10:13Z",
-      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=march%C3%A9&oldid=39985800",
-      "history_url": "https://fr.wiktionary.org/w/index.php?title=march%C3%A9&action=history",
-      "content_license": "CC-BY-SA-4.0",
-      "attribution": "Wiktionnaire contributors (complete linked article history); Lexique contributors for scoped adaptations and new explanatory translations. Declared historical DAF8 layer: Académie française, eighth edition (1932–1935).",
-      "selected_locations": [
-        {
-          "sense_id": "b103-1140-marché-nom-selected",
-          "field": "french_definition",
-          "frozen_row": 1140,
-          "line_1_based": 13,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# {{lexique|commerce|fr}} [[lieu|Lieu]] [[public]] où s’achètent et se vendent les [[denrées]], les [[marchandises]], les [[objets]] d’[[usage]] courant. {{cf|lang=fr|marché-gare|place du marché}}"
-        },
-        {
-          "sense_id": "b103-1140-marché-nom-selected",
-          "field": "ipa",
-          "frozen_row": 1140,
-          "line_1_based": 12,
-          "column_1_based": 14,
-          "raw_source_excerpt": "{{pron|maʁ.ʃe|fr}}"
-        },
-        {
-          "sense_id": "b103-1140-marché-nom-selected",
-          "field": "english",
-          "frozen_row": 1140,
-          "line_1_based": 13,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# {{lexique|commerce|fr}} [[lieu|Lieu]] [[public]] où s’achètent et se vendent les [[denrées]], les [[marchandises]], les [[objets]] d’[[usage]] courant. {{cf|lang=fr|marché-gare|place du marché}}"
-        },
-        {
-          "sense_id": "b103-1140-marché-nom-selected",
-          "field": "chinese",
-          "frozen_row": 1140,
-          "line_1_based": 13,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# {{lexique|commerce|fr}} [[lieu|Lieu]] [[public]] où s’achètent et se vendent les [[denrées]], les [[marchandises]], les [[objets]] d’[[usage]] courant. {{cf|lang=fr|marché-gare|place du marché}}"
-        }
-      ],
-      "selected_grammar_and_construction_evidence": [
-        {
-          "sense_id": "b103-1140-marché-nom-selected",
-          "purpose": "French entry-language frame",
-          "source_id": "b103_fr_631",
-          "revid": 39985800,
-          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=march%C3%A9&oldid=39985800",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=march%C3%A9&action=history",
-          "line_1_based": 3,
-          "column_1_based": 1,
-          "raw_source_excerpt": "== {{langue|fr}} =="
-        },
-        {
-          "sense_id": "b103-1140-marché-nom-selected",
-          "purpose": "Exact grammatical subclass",
-          "source_id": "b103_fr_631",
-          "revid": 39985800,
-          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=march%C3%A9&oldid=39985800",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=march%C3%A9&action=history",
-          "line_1_based": 8,
-          "column_1_based": 1,
-          "raw_source_excerpt": "=== {{S|nom|fr}} ==="
-        },
-        {
-          "sense_id": "b103-1140-marché-nom-selected",
-          "purpose": "Exact headword and grammatical/pronunciation frame",
-          "source_id": "b103_fr_631",
-          "revid": 39985800,
-          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=march%C3%A9&oldid=39985800",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=march%C3%A9&action=history",
-          "line_1_based": 12,
-          "column_1_based": 1,
-          "raw_source_excerpt": "'''marché''' {{pron|maʁ.ʃe|fr}} {{m}}"
-        }
-      ],
-      "import_notices": [
-        {
-          "line_1_based": 460,
-          "column_1_based": 3,
-          "raw_marker": "{{R:TLFi}}",
-          "declaration": "bibliographic_reference",
-          "reference_template": {
-            "title": "Modèle:R:TLFi",
-            "revid": 39999925,
-            "timestamp": "2026-11-09T14:34:27Z",
-            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-50676.wiki",
-            "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
-            "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ATLFi&oldid=39999925"
-          },
-          "selected_text_authorship_status": "pending_selected_span_audit",
-          "original_capture": null
-        },
-        {
-          "line_1_based": 461,
-          "column_1_based": 3,
-          "raw_marker": "{{R:DAF8}}",
-          "declaration": "bibliographic_reference",
-          "reference_template": {
-            "title": "Modèle:R:DAF8",
-            "revid": 27621166,
-            "timestamp": "2020-04-04T22:35:24Z",
-            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-38725.wiki",
-            "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
-            "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ADAF8&oldid=27621166"
-          },
-          "selected_text_authorship_status": "pending_selected_span_audit",
-          "original_capture": {
-            "title": "marché",
-            "url": "https://www.cnrtl.fr/definition/academie8/march%C3%A9",
-            "capture_time": "2026-11-19T21:31:13.817249+00:00",
-            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\originals\\marché.html",
-            "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\originals\\marché.txt",
-            "status": "captured_original_response",
-            "edition": "DAF8 1932–1935",
-            "original_entry_status": "entry_returned_selected_correspondence_pending"
-          }
-        },
-        {
-          "line_1_based": 462,
-          "column_1_based": 3,
-          "raw_marker": "{{R:DAF9}}",
-          "declaration": "bibliographic_reference",
-          "reference_template": {
-            "title": "Modèle:R:DAF9",
-            "revid": 36438068,
-            "timestamp": "2024-11-20T14:32:50Z",
-            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-142339.wiki",
-            "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
-            "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ADAF9&oldid=36438068"
-          },
-          "selected_text_authorship_status": "pending_selected_span_audit",
-          "original_capture": null
-        }
-      ],
-      "original_authors_and_rights": [
-        {
-          "id": "original-academie8-1932-1935",
-          "author": "Académie française",
-          "title": "Dictionnaire de l’Académie française, huitième édition",
-          "publication": "1932–1935",
-          "work_type": "collective work",
-          "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
-          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
-          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
-          "conservative_expiry": "2006-01-01 using final publication 1935",
-          "original_capture": {
-            "title": "marché",
-            "url": "https://www.cnrtl.fr/definition/academie8/march%C3%A9",
-            "capture_time": "2026-11-19T21:31:13.817249+00:00",
-            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\originals\\marché.html",
-            "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\originals\\marché.txt",
-            "status": "captured_original_response",
-            "edition": "DAF8 1932–1935",
-            "original_entry_status": "entry_returned_selected_correspondence_pending"
-          },
-          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
-        }
-      ],
-      "current_registry_names": 105,
-      "contributor_capture_parts": [
-        "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-1-1.api.json",
-        "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-1-2.api.json",
-        "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-1-3.api.json",
-        "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-2-1.api.json",
-        "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-2-2.api.json",
-        "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-2-3.api.json",
-        "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-3-1.api.json",
-        "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-3-2.api.json",
-        "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-3-3.api.json",
-        "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-4-1.api.json",
-        "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
-      ],
-      "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1132
+      ]
     },
     {
       "id": "b103_fr_7998",
@@ -5223,7 +5194,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ATLFi&oldid=39999925"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         },
         {
@@ -5239,7 +5210,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ALarousse&oldid=29912886"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         },
         {
@@ -5255,7 +5226,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3AUsito&oldid=38550920"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         },
         {
@@ -5271,7 +5242,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ADAF8&oldid=27621166"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": {
             "title": "sonner",
             "url": "https://www.cnrtl.fr/definition/academie8/sonner",
@@ -5291,7 +5262,7 @@
           "title": "Dictionnaire de l’Académie française, huitième édition",
           "publication": "1932–1935",
           "work_type": "collective work",
-          "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+          "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -5305,7 +5276,8 @@
             "edition": "DAF8 1932–1935",
             "original_entry_status": "entry_returned_selected_correspondence_pending"
           },
-          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+          "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
         }
       ],
       "current_registry_names": 59,
@@ -5323,7 +5295,11 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1148
+      ]
     },
     {
       "id": "b103_fr_9921",
@@ -5417,7 +5393,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ARobert&oldid=33921222"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         },
         {
@@ -5433,7 +5409,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ALarousse&oldid=29912886"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         },
         {
@@ -5449,7 +5425,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3AUsito&oldid=38550920"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         },
         {
@@ -5465,7 +5441,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ADAF9&oldid=36438068"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         }
       ],
@@ -5485,7 +5461,11 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1142
+      ]
     },
     {
       "id": "b103_fr_11339",
@@ -5579,7 +5559,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ADAF8&oldid=27621166"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": {
             "title": "cousin",
             "url": "https://www.cnrtl.fr/definition/academie8/cousin",
@@ -5599,7 +5579,7 @@
           "title": "Dictionnaire de l’Académie française, huitième édition",
           "publication": "1932–1935",
           "work_type": "collective work",
-          "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+          "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -5613,7 +5593,8 @@
             "edition": "DAF8 1932–1935",
             "original_entry_status": "entry_returned_selected_correspondence_pending"
           },
-          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+          "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
         }
       ],
       "current_registry_names": 90,
@@ -5631,7 +5612,11 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1146
+      ]
     },
     {
       "id": "b103_fr_12204",
@@ -5725,7 +5710,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ATLFi&oldid=39999925"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         },
         {
@@ -5741,7 +5726,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ADAF8&oldid=27621166"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": {
             "title": "joie",
             "url": "https://www.cnrtl.fr/definition/academie8/joie",
@@ -5766,7 +5751,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ALittr%C3%A9&oldid=33413119"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         }
       ],
@@ -5777,7 +5762,7 @@
           "title": "Dictionnaire de l’Académie française, huitième édition",
           "publication": "1932–1935",
           "work_type": "collective work",
-          "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+          "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -5791,14 +5776,15 @@
             "edition": "DAF8 1932–1935",
             "original_entry_status": "entry_returned_selected_correspondence_pending"
           },
-          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+          "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
         },
         {
           "id": "original-littre-1872-1877",
           "author": "Émile Littré",
           "title": "Dictionnaire de la langue française",
           "publication": "1872–1877",
-          "original_rights": "historical reference recorded; exact selected-text correspondence and rights pending independent review",
+          "original_rights": "public domain for the historical Littré edition; bibliographic citation alone does not identify selected-sentence authorship",
           "scope": "Bibliographic reference is not proof that a selected line was copied from Littré."
         }
       ],
@@ -5817,7 +5803,11 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1134
+      ]
     },
     {
       "id": "b103_fr_17399",
@@ -5914,7 +5904,11 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1143
+      ]
     },
     {
       "id": "b103_fr_42875",
@@ -6052,7 +6046,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ATLFi&oldid=39999925"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         },
         {
@@ -6068,7 +6062,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ADAF8&oldid=27621166"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": {
             "title": "bain",
             "url": "https://www.cnrtl.fr/definition/academie8/bain",
@@ -6088,7 +6082,7 @@
           "title": "Dictionnaire de l’Académie française, huitième édition",
           "publication": "1932–1935",
           "work_type": "collective work",
-          "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+          "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -6102,7 +6096,8 @@
             "edition": "DAF8 1932–1935",
             "original_entry_status": "entry_returned_selected_correspondence_pending"
           },
-          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+          "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
         }
       ],
       "current_registry_names": 64,
@@ -6120,7 +6115,11 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1138
+      ]
     },
     {
       "id": "b103_fr_86644",
@@ -6214,7 +6213,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AImport%3ADAF8&oldid=22113837"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": {
             "title": "relation",
             "url": "https://www.cnrtl.fr/definition/academie8/relation",
@@ -6234,7 +6233,7 @@
           "title": "Dictionnaire de l’Académie française, huitième édition",
           "publication": "1932–1935",
           "work_type": "collective work",
-          "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+          "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -6248,7 +6247,8 @@
             "edition": "DAF8 1932–1935",
             "original_entry_status": "entry_returned_selected_correspondence_pending"
           },
-          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+          "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
         }
       ],
       "current_registry_names": 71,
@@ -6266,7 +6266,11 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1135
+      ]
     },
     {
       "id": "b103_fr_102874",
@@ -6360,7 +6364,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AImport%3ADAF8&oldid=22113837"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": {
             "title": "adresse",
             "url": "https://www.cnrtl.fr/definition/academie8/adresse",
@@ -6380,7 +6384,7 @@
           "title": "Dictionnaire de l’Académie française, huitième édition",
           "publication": "1932–1935",
           "work_type": "collective work",
-          "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+          "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -6394,7 +6398,8 @@
             "edition": "DAF8 1932–1935",
             "original_entry_status": "entry_returned_selected_correspondence_pending"
           },
-          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+          "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
         }
       ],
       "current_registry_names": 77,
@@ -6412,7 +6417,11 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1145
+      ]
     },
     {
       "id": "b103_fr_115649",
@@ -6506,7 +6515,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ADAF8&oldid=27621166"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": {
             "title": "laver",
             "url": "https://www.cnrtl.fr/definition/academie8/laver",
@@ -6526,7 +6535,7 @@
           "title": "Dictionnaire de l’Académie française, huitième édition",
           "publication": "1932–1935",
           "work_type": "collective work",
-          "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+          "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -6540,7 +6549,8 @@
             "edition": "DAF8 1932–1935",
             "original_entry_status": "entry_returned_selected_correspondence_pending"
           },
-          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+          "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
         }
       ],
       "current_registry_names": 82,
@@ -6558,7 +6568,11 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1141
+      ]
     },
     {
       "id": "b103_fr_137537",
@@ -6652,7 +6666,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AImport%3ADAF8&oldid=22113837"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": {
             "title": "acteur",
             "url": "https://www.cnrtl.fr/definition/academie8/acteur",
@@ -6677,7 +6691,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ALittr%C3%A9&oldid=33413119"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         },
         {
@@ -6693,7 +6707,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ATLFi&oldid=39999925"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         }
       ],
@@ -6704,7 +6718,7 @@
           "title": "Dictionnaire de l’Académie française, huitième édition",
           "publication": "1932–1935",
           "work_type": "collective work",
-          "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+          "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -6718,14 +6732,15 @@
             "edition": "DAF8 1932–1935",
             "original_entry_status": "entry_returned_selected_correspondence_pending"
           },
-          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+          "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
         },
         {
           "id": "original-littre-1872-1877",
           "author": "Émile Littré",
           "title": "Dictionnaire de la langue française",
           "publication": "1872–1877",
-          "original_rights": "historical reference recorded; exact selected-text correspondence and rights pending independent review",
+          "original_rights": "public domain for the historical Littré edition; bibliographic citation alone does not identify selected-sentence authorship",
           "scope": "Bibliographic reference is not proof that a selected line was copied from Littré."
         }
       ],
@@ -6744,7 +6759,11 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1137
+      ]
     },
     {
       "id": "b103_fr_154824",
@@ -6838,7 +6857,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AImport%3ADAF8&oldid=22113837"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": {
             "title": "compagnie",
             "url": "https://www.cnrtl.fr/definition/academie8/compagnie",
@@ -6858,7 +6877,7 @@
           "title": "Dictionnaire de l’Académie française, huitième édition",
           "publication": "1932–1935",
           "work_type": "collective work",
-          "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+          "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -6872,7 +6891,8 @@
             "edition": "DAF8 1932–1935",
             "original_entry_status": "entry_returned_selected_correspondence_pending"
           },
-          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+          "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
         }
       ],
       "current_registry_names": 63,
@@ -6890,7 +6910,11 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1147
+      ]
     },
     {
       "id": "b103_fr_158425",
@@ -6984,7 +7008,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AImport%3ADAF8&oldid=22113837"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": {
             "title": "durer",
             "url": "https://www.cnrtl.fr/definition/academie8/durer",
@@ -7004,7 +7028,7 @@
           "title": "Dictionnaire de l’Académie française, huitième édition",
           "publication": "1932–1935",
           "work_type": "collective work",
-          "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+          "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -7018,7 +7042,8 @@
             "edition": "DAF8 1932–1935",
             "original_entry_status": "entry_returned_selected_correspondence_pending"
           },
-          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+          "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
         }
       ],
       "current_registry_names": 51,
@@ -7036,7 +7061,11 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1139
+      ]
     },
     {
       "id": "b103_fr_178034",
@@ -7130,7 +7159,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AImport%3ADAF8&oldid=22113837"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": {
             "title": "témoin",
             "url": "https://www.cnrtl.fr/definition/academie8/t%C3%A9moin",
@@ -7155,7 +7184,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3AFranceTerme&oldid=25526943"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         },
         {
@@ -7171,7 +7200,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ADMF&oldid=39420280"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         },
         {
@@ -7187,7 +7216,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ALittr%C3%A9&oldid=33413119"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         }
       ],
@@ -7198,7 +7227,7 @@
           "title": "Dictionnaire de l’Académie française, huitième édition",
           "publication": "1932–1935",
           "work_type": "collective work",
-          "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+          "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -7212,14 +7241,15 @@
             "edition": "DAF8 1932–1935",
             "original_entry_status": "entry_returned_selected_correspondence_pending"
           },
-          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+          "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
         },
         {
           "id": "original-littre-1872-1877",
           "author": "Émile Littré",
           "title": "Dictionnaire de la langue française",
           "publication": "1872–1877",
-          "original_rights": "historical reference recorded; exact selected-text correspondence and rights pending independent review",
+          "original_rights": "public domain for the historical Littré edition; bibliographic citation alone does not identify selected-sentence authorship",
           "scope": "Bibliographic reference is not proof that a selected line was copied from Littré."
         }
       ],
@@ -7238,7 +7268,11 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1136
+      ]
     },
     {
       "id": "b103_fr_1477055",
@@ -7354,7 +7388,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ATLFi&oldid=39999925"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         }
       ],
@@ -7374,7 +7408,11 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1144
+      ]
     },
     {
       "id": "b103_fr_42930",
@@ -7490,7 +7528,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ATLFi&oldid=39999925"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         }
       ],
@@ -7510,7 +7548,11 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1150
+      ]
     },
     {
       "id": "b103_fr_153303",
@@ -7604,7 +7646,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ATLFi&oldid=39999925"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         },
         {
@@ -7620,7 +7662,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ADAF8&oldid=27621166"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": {
             "title": "chaussure",
             "url": "https://www.cnrtl.fr/definition/academie8/chaussure",
@@ -7640,7 +7682,7 @@
           "title": "Dictionnaire de l’Académie française, huitième édition",
           "publication": "1932–1935",
           "work_type": "collective work",
-          "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+          "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -7654,7 +7696,8 @@
             "edition": "DAF8 1932–1935",
             "original_entry_status": "entry_returned_selected_correspondence_pending"
           },
-          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+          "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
         }
       ],
       "current_registry_names": 97,
@@ -7672,7 +7715,11 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1149
+      ]
     },
     {
       "id": "b103_fr_148984",
@@ -7699,7 +7746,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3APauleau&oldid=39770301"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": null
         },
         {
@@ -7715,7 +7762,7 @@
             "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
             "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AImport%3ADAF8&oldid=22113837"
           },
-          "selected_text_authorship_status": "pending_selected_span_audit",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
           "original_capture": {
             "title": "baigner",
             "url": "https://www.cnrtl.fr/definition/academie8/baigner",
@@ -7735,7 +7782,7 @@
           "title": "Dictionnaire de l’Académie française, huitième édition",
           "publication": "1932–1935",
           "work_type": "collective work",
-          "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+          "original_rights": "public domain for the original 1932–1935 collective edition; fixed Wiki and Lexique modifications remain CC-BY-SA-4.0",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01 using final publication 1935",
@@ -7749,7 +7796,8 @@
             "edition": "DAF8 1932–1935",
             "original_entry_status": "entry_returned_selected_correspondence_pending"
           },
-          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights.",
+          "legal_refresh": "Primary L123-3 and prior edition basis independently read from retained #102 authority capture; expiry 2006-01-01 using final 1935 publication. This does not assign authorship of modern Wiki sentences."
         }
       ],
       "current_registry_names": 57,
@@ -7767,7 +7815,372 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
       ],
       "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
-      "status": "author_source_binding_checked_independent_review_pending"
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": []
+    },
+    {
+      "id": "b103_replacement_wikisource_soulice1836_marche",
+      "title": "Page:Soulice - Petit dictionnaire de la langue française, 1836.pdf/321",
+      "current_content_revid": 14734319,
+      "timestamp": "2024-12-03T12:41:53Z",
+      "fixed_url": "https://fr.wikisource.org/w/index.php?title=Page%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf%2F321&oldid=14734319",
+      "history_url": "https://fr.wikisource.org/w/index.php?title=Page%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf%2F321&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "attribution": "Théodore Soulice (1800–1878); Wikisource transcription contributors (complete linked page history, including Poslovitch); Lexique contributors for selected adaptation and new explanatory translations.",
+      "selected_locations": [
+        {
+          "sense_id": "b103-1140-marché-nom-selected",
+          "field": "french_definition",
+          "frozen_row": 1140,
+          "source_id": "b103_replacement_wikisource_soulice1836_marche",
+          "revid": 14734319,
+          "fixed_url": "https://fr.wikisource.org/w/index.php?title=Page%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf%2F321&oldid=14734319",
+          "history_url": "https://fr.wikisource.org/w/index.php?title=Page%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf%2F321&action=history",
+          "line_1_based": 118,
+          "column_1_based": 26,
+          "end_line_1_based": 119,
+          "raw_source_excerpt": "'''MARCHÉ''', ''s. m.'' lieu public de\nvente et d’achat",
+          "subspan_boundary": "First masculine-noun physical-place clause only; ends before the first semicolon. The separate vente and condition d’un achat senses are excluded."
+        },
+        {
+          "sense_id": "b103-1140-marché-nom-selected",
+          "field": "english",
+          "frozen_row": 1140,
+          "source_id": "b103_replacement_wikisource_soulice1836_marche",
+          "revid": 14734319,
+          "fixed_url": "https://fr.wikisource.org/w/index.php?title=Page%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf%2F321&oldid=14734319",
+          "history_url": "https://fr.wikisource.org/w/index.php?title=Page%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf%2F321&action=history",
+          "line_1_based": 118,
+          "column_1_based": 26,
+          "end_line_1_based": 119,
+          "raw_source_excerpt": "'''MARCHÉ''', ''s. m.'' lieu public de\nvente et d’achat",
+          "subspan_boundary": "First masculine-noun physical-place clause only; ends before the first semicolon. The separate vente and condition d’un achat senses are excluded."
+        },
+        {
+          "sense_id": "b103-1140-marché-nom-selected",
+          "field": "chinese",
+          "frozen_row": 1140,
+          "source_id": "b103_replacement_wikisource_soulice1836_marche",
+          "revid": 14734319,
+          "fixed_url": "https://fr.wikisource.org/w/index.php?title=Page%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf%2F321&oldid=14734319",
+          "history_url": "https://fr.wikisource.org/w/index.php?title=Page%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf%2F321&action=history",
+          "line_1_based": 118,
+          "column_1_based": 26,
+          "end_line_1_based": 119,
+          "raw_source_excerpt": "'''MARCHÉ''', ''s. m.'' lieu public de\nvente et d’achat",
+          "subspan_boundary": "First masculine-noun physical-place clause only; ends before the first semicolon. The separate vente and condition d’un achat senses are excluded."
+        }
+      ],
+      "selected_grammar_and_construction_evidence": [
+        {
+          "sense_id": "b103-1140-marché-nom-selected",
+          "purpose": "Exact accented source headword and masculine-noun label; only the public-place clause selected.",
+          "source_id": "b103_replacement_wikisource_soulice1836_marche",
+          "revid": 14734319,
+          "fixed_url": "https://fr.wikisource.org/w/index.php?title=Page%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf%2F321&oldid=14734319",
+          "history_url": "https://fr.wikisource.org/w/index.php?title=Page%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf%2F321&action=history",
+          "line_1_based": 118,
+          "column_1_based": 26,
+          "end_line_1_based": 119,
+          "raw_source_excerpt": "'''MARCHÉ''', ''s. m.'' lieu public de\nvente et d’achat",
+          "subspan_boundary": "First masculine-noun physical-place clause only; ends before the first semicolon. The separate vente and condition d’un achat senses are excluded."
+        }
+      ],
+      "import_notices": [],
+      "original_authors_and_rights": [
+        {
+          "id": "original-soulice-1836",
+          "author": "Théodore Soulice (1800–1878)",
+          "title": "Petit dictionnaire de la langue française, à l’usage des écoles primaires",
+          "publication": "1836",
+          "edition": "First edition",
+          "publishers": "Paris: L. Hachette; Firmin Didot frères",
+          "printed_page": 315,
+          "scan_page": 321,
+          "original_rights": "public-domain",
+          "legal_basis": "Established project Soulice boundary: original author died in 1878 and first publication was 1836. The author’s seventy-year term has expired; the pre-1931 publication is also public domain in the United States. The fixed Commons original-scan description explicitly declares PD-old-70 and PD-US-expired. Faithful scanning/transcription does not relicense the original. Contributor changes and selected Lexique adaptations remain a separate CC BY-SA 4.0 layer.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278938",
+          "original_scan_url": "https://commons.wikimedia.org/w/index.php?title=File%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf&oldid=1200756030",
+          "original_capture": {
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103-replacement\\target\\issue-103-replacement\\soulice-page321.jpg",
+            "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103-replacement\\target\\issue-103-replacement\\soulice-scan321-url.api.json",
+            "visual_check": "The scan shows printed page 315, MARCHÉ s. m., and lieu public de vente et d’achat before a semicolon and separate senses; matching the selected transcription."
+          },
+          "scope": "Original selected 1836 clause only; contributor modifications and Lexique adaptations/translations remain a separate CC BY-SA 4.0 layer."
+        }
+      ],
+      "current_registry_names": [
+        "Poslovitch"
+      ],
+      "contributor_capture_parts": [
+        "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103-replacement\\target\\issue-103-replacement\\soulice-page321-history.api.json"
+      ],
+      "attribution_boundary": "Selected original page/section, title-page credits or Commons original-rights declarations checked directly; last editor supplies no sentence-authorship inference. Original public-domain work and later contributor/Lexique CC BY-SA layers remain distinct.",
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1140
+      ]
+    },
+    {
+      "id": "b103_replacement_wikisource_soulice1836_marche_entry",
+      "title": "Petit dictionnaire de la langue française (1836)/MARCHÉ",
+      "current_content_revid": 14751288,
+      "timestamp": "2024-12-08T15:27:26Z",
+      "fixed_url": "https://fr.wikisource.org/w/index.php?title=Petit_dictionnaire_de_la_langue_fran%C3%A7aise_(1836)%2FMARCH%C3%89&oldid=14751288",
+      "history_url": "https://fr.wikisource.org/w/index.php?title=Petit_dictionnaire_de_la_langue_fran%C3%A7aise_(1836)%2FMARCH%C3%89&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "attribution": "Théodore Soulice (1800–1878); Wikisource contributors, including PosloBot, through the complete linked article history.",
+      "selected_locations": [],
+      "selected_grammar_and_construction_evidence": [
+        {
+          "sense_id": "b103-1140-marché-nom-selected",
+          "purpose": "Article-to-original-scan transcription link, selecting MARCHÉ rather than MARCHE.",
+          "source_id": "b103_replacement_wikisource_soulice1836_marche_entry",
+          "revid": 14751288,
+          "fixed_url": "https://fr.wikisource.org/w/index.php?title=Petit_dictionnaire_de_la_langue_fran%C3%A7aise_(1836)%2FMARCH%C3%89&oldid=14751288",
+          "history_url": "https://fr.wikisource.org/w/index.php?title=Petit_dictionnaire_de_la_langue_fran%C3%A7aise_(1836)%2FMARCH%C3%89&action=history",
+          "line_1_based": 2,
+          "column_1_based": 1,
+          "end_line_1_based": 3,
+          "raw_source_excerpt": "from=321 to=321\nfromsection=\"MARCHÉ\" tosection=\"MARCHÉ\""
+        }
+      ],
+      "import_notices": [],
+      "original_authors_and_rights": [
+        {
+          "id": "original-soulice-1836",
+          "author": "Théodore Soulice (1800–1878)",
+          "title": "Petit dictionnaire de la langue française, à l’usage des écoles primaires",
+          "publication": "1836",
+          "edition": "First edition",
+          "publishers": "Paris: L. Hachette; Firmin Didot frères",
+          "printed_page": 315,
+          "scan_page": 321,
+          "original_rights": "public-domain",
+          "legal_basis": "Established project Soulice boundary: original author died in 1878 and first publication was 1836. The author’s seventy-year term has expired; the pre-1931 publication is also public domain in the United States. The fixed Commons original-scan description explicitly declares PD-old-70 and PD-US-expired. Faithful scanning/transcription does not relicense the original. Contributor changes and selected Lexique adaptations remain a separate CC BY-SA 4.0 layer.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278938",
+          "original_scan_url": "https://commons.wikimedia.org/w/index.php?title=File%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf&oldid=1200756030",
+          "original_capture": {
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103-replacement\\target\\issue-103-replacement\\soulice-page321.jpg",
+            "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103-replacement\\target\\issue-103-replacement\\soulice-scan321-url.api.json",
+            "visual_check": "The scan shows printed page 315, MARCHÉ s. m., and lieu public de vente et d’achat before a semicolon and separate senses; matching the selected transcription."
+          },
+          "scope": "Original selected 1836 clause only; contributor modifications and Lexique adaptations/translations remain a separate CC BY-SA 4.0 layer."
+        }
+      ],
+      "current_registry_names": [],
+      "contributor_capture_parts": [],
+      "attribution_boundary": "Selected original page/section, title-page credits or Commons original-rights declarations checked directly; last editor supplies no sentence-authorship inference. Original public-domain work and later contributor/Lexique CC BY-SA layers remain distinct.",
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1140
+      ]
+    },
+    {
+      "id": "b103_replacement_wikisource_soulice1836_titlepage",
+      "title": "Page:Soulice - Petit dictionnaire de la langue française, 1836.pdf/1",
+      "current_content_revid": 14869218,
+      "timestamp": "2025-01-23T10:00:05Z",
+      "fixed_url": "https://fr.wikisource.org/w/index.php?title=Page%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf%2F1&oldid=14869218",
+      "history_url": "https://fr.wikisource.org/w/index.php?title=Page%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf%2F1&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "attribution": "Théodore Soulice; publishers L. Hachette and Firmin Didot frères, Paris 1836; Wikisource transcription contributors through the complete linked page history.",
+      "selected_locations": [],
+      "selected_grammar_and_construction_evidence": [
+        {
+          "sense_id": "b103-1140-marché-nom-selected",
+          "purpose": "Original author credit on title page.",
+          "source_id": "b103_replacement_wikisource_soulice1836_titlepage",
+          "revid": 14869218,
+          "fixed_url": "https://fr.wikisource.org/w/index.php?title=Page%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf%2F1&oldid=14869218",
+          "history_url": "https://fr.wikisource.org/w/index.php?title=Page%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf%2F1&action=history",
+          "line_1_based": 15,
+          "column_1_based": 1,
+          "raw_source_excerpt": "{{c|M. {{sc|Th.}} SOULICE,|fs=120%}}"
+        },
+        {
+          "sense_id": "b103-1140-marché-nom-selected",
+          "purpose": "Original publishers and place.",
+          "source_id": "b103_replacement_wikisource_soulice1836_titlepage",
+          "revid": 14869218,
+          "fixed_url": "https://fr.wikisource.org/w/index.php?title=Page%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf%2F1&oldid=14869218",
+          "history_url": "https://fr.wikisource.org/w/index.php?title=Page%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf%2F1&action=history",
+          "line_1_based": 28,
+          "column_1_based": 1,
+          "end_line_1_based": 29,
+          "raw_source_excerpt": "{{c|L. HACHETTE, LIBRAIRE, rue Pierre-Sarrazin, n<sup>o</sup> 12.}}\n{{c|FIRMIN DIDOT FRÈRES, rue Jacob, n<sup>o</sup> 24.}}"
+        },
+        {
+          "sense_id": "b103-1140-marché-nom-selected",
+          "purpose": "Original publication year.",
+          "source_id": "b103_replacement_wikisource_soulice1836_titlepage",
+          "revid": 14869218,
+          "fixed_url": "https://fr.wikisource.org/w/index.php?title=Page%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf%2F1&oldid=14869218",
+          "history_url": "https://fr.wikisource.org/w/index.php?title=Page%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf%2F1&action=history",
+          "line_1_based": 34,
+          "column_1_based": 1,
+          "raw_source_excerpt": "{{c|{{t|1836.|225}}|1}}"
+        }
+      ],
+      "import_notices": [],
+      "original_authors_and_rights": [
+        {
+          "id": "original-soulice-1836",
+          "author": "Théodore Soulice (1800–1878)",
+          "title": "Petit dictionnaire de la langue française, à l’usage des écoles primaires",
+          "publication": "1836",
+          "edition": "First edition",
+          "publishers": "Paris: L. Hachette; Firmin Didot frères",
+          "printed_page": 315,
+          "scan_page": 321,
+          "original_rights": "public-domain",
+          "legal_basis": "Established project Soulice boundary: original author died in 1878 and first publication was 1836. The author’s seventy-year term has expired; the pre-1931 publication is also public domain in the United States. The fixed Commons original-scan description explicitly declares PD-old-70 and PD-US-expired. Faithful scanning/transcription does not relicense the original. Contributor changes and selected Lexique adaptations remain a separate CC BY-SA 4.0 layer.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278938",
+          "original_scan_url": "https://commons.wikimedia.org/w/index.php?title=File%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf&oldid=1200756030",
+          "original_capture": {
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103-replacement\\target\\issue-103-replacement\\soulice-page321.jpg",
+            "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103-replacement\\target\\issue-103-replacement\\soulice-scan321-url.api.json",
+            "visual_check": "The scan shows printed page 315, MARCHÉ s. m., and lieu public de vente et d’achat before a semicolon and separate senses; matching the selected transcription."
+          },
+          "scope": "Original selected 1836 clause only; contributor modifications and Lexique adaptations/translations remain a separate CC BY-SA 4.0 layer."
+        }
+      ],
+      "current_registry_names": [],
+      "contributor_capture_parts": [],
+      "attribution_boundary": "Selected original page/section, title-page credits or Commons original-rights declarations checked directly; last editor supplies no sentence-authorship inference. Original public-domain work and later contributor/Lexique CC BY-SA layers remain distinct.",
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1140
+      ]
+    },
+    {
+      "id": "b103_replacement_fr_marche_ipa",
+      "title": "marché",
+      "current_content_revid": 39985800,
+      "timestamp": "2026-11-04T11:10:13Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=march%C3%A9&oldid=39985800",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=march%C3%A9&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "attribution": "Wiktionnaire contributors through the complete linked marché article history; Lexique contributors for selecting and formatting the IPA.",
+      "selected_locations": [
+        {
+          "sense_id": "b103-1140-marché-nom-selected",
+          "field": "ipa",
+          "frozen_row": 1140,
+          "source_id": "b103_replacement_fr_marche_ipa",
+          "revid": 39985800,
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=march%C3%A9&oldid=39985800",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=march%C3%A9&action=history",
+          "line_1_based": 12,
+          "column_1_based": 14,
+          "raw_source_excerpt": "{{pron|maʁ.ʃe|fr}}"
+        }
+      ],
+      "selected_grammar_and_construction_evidence": [
+        {
+          "sense_id": "b103-1140-marché-nom-selected",
+          "purpose": "French-language pronunciation frame.",
+          "source_id": "b103_replacement_fr_marche_ipa",
+          "revid": 39985800,
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=march%C3%A9&oldid=39985800",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=march%C3%A9&action=history",
+          "line_1_based": 3,
+          "column_1_based": 1,
+          "raw_source_excerpt": "== {{langue|fr}} =="
+        },
+        {
+          "sense_id": "b103-1140-marché-nom-selected",
+          "purpose": "French noun section and applicable accented headword IPA.",
+          "source_id": "b103_replacement_fr_marche_ipa",
+          "revid": 39985800,
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=march%C3%A9&oldid=39985800",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=march%C3%A9&action=history",
+          "line_1_based": 12,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''marché''' {{pron|maʁ.ʃe|fr}} {{m}}"
+        }
+      ],
+      "import_notices": [],
+      "original_authors_and_rights": [],
+      "current_registry_names": [],
+      "contributor_capture_parts": [],
+      "attribution_boundary": "Only the French noun headword/POS frame and pronunciation template are selected; rejected modern definition line 13 is not a wording source. Complete linked article history provides attribution.",
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1140
+      ]
+    },
+    {
+      "id": "b103_replacement_commons_soulice1836_rights",
+      "title": "File:Soulice - Petit dictionnaire de la langue française, 1836.pdf",
+      "current_content_revid": 1200756030,
+      "timestamp": "2026-04-20T16:00:02Z",
+      "fixed_url": "https://commons.wikimedia.org/w/index.php?title=File%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf&oldid=1200756030",
+      "history_url": "https://commons.wikimedia.org/w/index.php?title=File%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "attribution": "Théodore Soulice, original work; Bibliothèque nationale de France / Gallica, digitisation source; Wikimedia Commons file-description contributors through the complete linked history.",
+      "selected_locations": [],
+      "selected_grammar_and_construction_evidence": [
+        {
+          "sense_id": "b103-1140-marché-nom-selected",
+          "purpose": "Original author and digitisation origin.",
+          "source_id": "b103_replacement_commons_soulice1836_rights",
+          "revid": 1200756030,
+          "fixed_url": "https://commons.wikimedia.org/w/index.php?title=File%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf&oldid=1200756030",
+          "history_url": "https://commons.wikimedia.org/w/index.php?title=File%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf&action=history",
+          "line_1_based": 4,
+          "column_1_based": 1,
+          "end_line_1_based": 6,
+          "raw_source_excerpt": "|date=1836\n|source={{Gallica|bpt6k6242012m}}\n|author=Théodore Soulice"
+        },
+        {
+          "sense_id": "b103-1140-marché-nom-selected",
+          "purpose": "Public-domain rights declarations for the original scan.",
+          "source_id": "b103_replacement_commons_soulice1836_rights",
+          "revid": 1200756030,
+          "fixed_url": "https://commons.wikimedia.org/w/index.php?title=File%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf&oldid=1200756030",
+          "history_url": "https://commons.wikimedia.org/w/index.php?title=File%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf&action=history",
+          "line_1_based": 12,
+          "column_1_based": 1,
+          "raw_source_excerpt": "{{PD-US-expired}}{{PD-old-70}}"
+        }
+      ],
+      "import_notices": [],
+      "original_authors_and_rights": [
+        {
+          "id": "original-soulice-1836",
+          "author": "Théodore Soulice (1800–1878)",
+          "title": "Petit dictionnaire de la langue française, à l’usage des écoles primaires",
+          "publication": "1836",
+          "edition": "First edition",
+          "publishers": "Paris: L. Hachette; Firmin Didot frères",
+          "printed_page": 315,
+          "scan_page": 321,
+          "original_rights": "public-domain",
+          "legal_basis": "Established project Soulice boundary: original author died in 1878 and first publication was 1836. The author’s seventy-year term has expired; the pre-1931 publication is also public domain in the United States. The fixed Commons original-scan description explicitly declares PD-old-70 and PD-US-expired. Faithful scanning/transcription does not relicense the original. Contributor changes and selected Lexique adaptations remain a separate CC BY-SA 4.0 layer.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278938",
+          "original_scan_url": "https://commons.wikimedia.org/w/index.php?title=File%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf&oldid=1200756030",
+          "original_capture": {
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103-replacement\\target\\issue-103-replacement\\soulice-page321.jpg",
+            "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103-replacement\\target\\issue-103-replacement\\soulice-scan321-url.api.json",
+            "visual_check": "The scan shows printed page 315, MARCHÉ s. m., and lieu public de vente et d’achat before a semicolon and separate senses; matching the selected transcription."
+          },
+          "scope": "Original selected 1836 clause only; contributor modifications and Lexique adaptations/translations remain a separate CC BY-SA 4.0 layer."
+        }
+      ],
+      "current_registry_names": [],
+      "contributor_capture_parts": [],
+      "attribution_boundary": "Selected original page/section, title-page credits or Commons original-rights declarations checked directly; last editor supplies no sentence-authorship inference. Original public-domain work and later contributor/Lexique CC BY-SA layers remain distinct.",
+      "status": "passed_for_selected_spans",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1140
+      ]
     }
   ],
   "spelling_relations": [
@@ -8944,21 +9357,27 @@
     {
       "frozen_row": 1140,
       "headword": "marché",
-      "source_headword": "marché",
-      "source_id": "b103_fr_631",
-      "relation": "exact_French_headword_spelling",
+      "source_headword": "MARCHÉ",
+      "source_id": "b103_replacement_wikisource_soulice1836_marche",
+      "relation": "uppercase_source_heading_to_lowercase_French_lemma",
       "evidence": [
         {
-          "source_id": "b103_fr_631",
-          "revid": 39985800,
-          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=march%C3%A9&oldid=39985800",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=march%C3%A9&action=history",
-          "line_1_based": 3,
-          "column_1_based": 1,
-          "raw_source_excerpt": "== {{langue|fr}} =="
+          "sense_id": "b103-1140-marché-nom-selected",
+          "purpose": "Exact accented source headword and masculine-noun label; only the public-place clause selected.",
+          "source_id": "b103_replacement_wikisource_soulice1836_marche",
+          "revid": 14734319,
+          "fixed_url": "https://fr.wikisource.org/w/index.php?title=Page%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf%2F321&oldid=14734319",
+          "history_url": "https://fr.wikisource.org/w/index.php?title=Page%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf%2F321&action=history",
+          "line_1_based": 118,
+          "column_1_based": 26,
+          "end_line_1_based": 119,
+          "raw_source_excerpt": "'''MARCHÉ''', ''s. m.'' lieu public de\nvente et d’achat",
+          "subspan_boundary": "First masculine-noun physical-place clause only; ends before the first semicolon. The separate vente and condition d’un achat senses are excluded."
         },
         {
-          "source_id": "b103_fr_631",
+          "sense_id": "b103-1140-marché-nom-selected",
+          "purpose": "French noun section and applicable accented headword IPA.",
+          "source_id": "b103_replacement_fr_marche_ipa",
           "revid": 39985800,
           "fixed_url": "https://fr.wiktionary.org/w/index.php?title=march%C3%A9&oldid=39985800",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=march%C3%A9&action=history",
@@ -8969,7 +9388,9 @@
       ],
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "independent_review": "pending"
+      "independent_review": "passed_source_binding_only",
+      "reviewer": "independent-content-rights-reviewer-103-104",
+      "review_reason": "Source heading MARCHÉ is ordinary dictionary display capitalisation; lowercasing preserves every letter and the acute accent. The fixed French noun frame supplies marché and masculine POS. This is a source binding, with no alias or annotation exception."
     },
     {
       "frozen_row": 1141,
@@ -9916,6 +10337,187 @@
         "error": "HTTP Error 403: Forbidden"
       }
     ],
-    "selected_original_correspondence": "pending_independent_review"
-  }
+    "selected_original_correspondence": "independently_reviewed_for_admitted_spans_with_unresolved_rows_separately_retained"
+  },
+  "unresolved_content": [],
+  "rejected_content": [
+    {
+      "id": "b103_fr_631",
+      "title": "marché",
+      "current_content_revid": 39985800,
+      "timestamp": "2026-11-04T11:10:13Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=march%C3%A9&oldid=39985800",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=march%C3%A9&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "attribution": "Wiktionnaire contributors (complete linked article history); Lexique contributors for scoped adaptations and new explanatory translations. Declared historical DAF8 layer: Académie française, eighth edition (1932–1935).",
+      "selected_locations": [
+        {
+          "sense_id": "b103-1140-marché-nom-selected",
+          "field": "french_definition",
+          "frozen_row": 1140,
+          "line_1_based": 13,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|commerce|fr}} [[lieu|Lieu]] [[public]] où s’achètent et se vendent les [[denrées]], les [[marchandises]], les [[objets]] d’[[usage]] courant. {{cf|lang=fr|marché-gare|place du marché}}"
+        },
+        {
+          "sense_id": "b103-1140-marché-nom-selected",
+          "field": "ipa",
+          "frozen_row": 1140,
+          "line_1_based": 12,
+          "column_1_based": 14,
+          "raw_source_excerpt": "{{pron|maʁ.ʃe|fr}}"
+        },
+        {
+          "sense_id": "b103-1140-marché-nom-selected",
+          "field": "english",
+          "frozen_row": 1140,
+          "line_1_based": 13,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|commerce|fr}} [[lieu|Lieu]] [[public]] où s’achètent et se vendent les [[denrées]], les [[marchandises]], les [[objets]] d’[[usage]] courant. {{cf|lang=fr|marché-gare|place du marché}}"
+        },
+        {
+          "sense_id": "b103-1140-marché-nom-selected",
+          "field": "chinese",
+          "frozen_row": 1140,
+          "line_1_based": 13,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{lexique|commerce|fr}} [[lieu|Lieu]] [[public]] où s’achètent et se vendent les [[denrées]], les [[marchandises]], les [[objets]] d’[[usage]] courant. {{cf|lang=fr|marché-gare|place du marché}}"
+        }
+      ],
+      "selected_grammar_and_construction_evidence": [
+        {
+          "sense_id": "b103-1140-marché-nom-selected",
+          "purpose": "French entry-language frame",
+          "source_id": "b103_fr_631",
+          "revid": 39985800,
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=march%C3%A9&oldid=39985800",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=march%C3%A9&action=history",
+          "line_1_based": 3,
+          "column_1_based": 1,
+          "raw_source_excerpt": "== {{langue|fr}} =="
+        },
+        {
+          "sense_id": "b103-1140-marché-nom-selected",
+          "purpose": "Exact grammatical subclass",
+          "source_id": "b103_fr_631",
+          "revid": 39985800,
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=march%C3%A9&oldid=39985800",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=march%C3%A9&action=history",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "=== {{S|nom|fr}} ==="
+        },
+        {
+          "sense_id": "b103-1140-marché-nom-selected",
+          "purpose": "Exact headword and grammatical/pronunciation frame",
+          "source_id": "b103_fr_631",
+          "revid": 39985800,
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=march%C3%A9&oldid=39985800",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=march%C3%A9&action=history",
+          "line_1_based": 12,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''marché''' {{pron|maʁ.ʃe|fr}} {{m}}"
+        }
+      ],
+      "import_notices": [
+        {
+          "line_1_based": 460,
+          "column_1_based": 3,
+          "raw_marker": "{{R:TLFi}}",
+          "declaration": "bibliographic_reference",
+          "reference_template": {
+            "title": "Modèle:R:TLFi",
+            "revid": 39999925,
+            "timestamp": "2026-11-09T14:34:27Z",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-50676.wiki",
+            "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
+            "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ATLFi&oldid=39999925"
+          },
+          "selected_text_authorship_status": "pending_selected_span_audit",
+          "original_capture": null
+        },
+        {
+          "line_1_based": 461,
+          "column_1_based": 3,
+          "raw_marker": "{{R:DAF8}}",
+          "declaration": "bibliographic_reference",
+          "reference_template": {
+            "title": "Modèle:R:DAF8",
+            "revid": 27621166,
+            "timestamp": "2020-04-04T22:35:24Z",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-38725.wiki",
+            "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
+            "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ADAF8&oldid=27621166"
+          },
+          "selected_text_authorship_status": "pending_selected_span_audit",
+          "original_capture": {
+            "title": "marché",
+            "url": "https://www.cnrtl.fr/definition/academie8/march%C3%A9",
+            "capture_time": "2026-11-19T21:31:13.817249+00:00",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\originals\\marché.html",
+            "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\originals\\marché.txt",
+            "status": "captured_original_response",
+            "edition": "DAF8 1932–1935",
+            "original_entry_status": "entry_returned_selected_correspondence_pending"
+          }
+        },
+        {
+          "line_1_based": 462,
+          "column_1_based": 3,
+          "raw_marker": "{{R:DAF9}}",
+          "declaration": "bibliographic_reference",
+          "reference_template": {
+            "title": "Modèle:R:DAF9",
+            "revid": 36438068,
+            "timestamp": "2024-11-20T14:32:50Z",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-142339.wiki",
+            "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\reference-templates.api.json",
+            "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AR%3ADAF9&oldid=36438068"
+          },
+          "selected_text_authorship_status": "pending_selected_span_audit",
+          "original_capture": null
+        }
+      ],
+      "original_authors_and_rights": [
+        {
+          "id": "original-academie8-1932-1935",
+          "author": "Académie française",
+          "title": "Dictionnaire de l’Académie française, huitième édition",
+          "publication": "1932–1935",
+          "work_type": "collective work",
+          "original_rights": "public-domain route proposed; selected original correspondence pending independent review",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01 using final publication 1935",
+          "original_capture": {
+            "title": "marché",
+            "url": "https://www.cnrtl.fr/definition/academie8/march%C3%A9",
+            "capture_time": "2026-11-19T21:31:13.817249+00:00",
+            "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\originals\\marché.html",
+            "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\originals\\marché.txt",
+            "status": "captured_original_response",
+            "edition": "DAF8 1932–1935",
+            "original_entry_status": "entry_returned_selected_correspondence_pending"
+          },
+          "scope": "Declared DAF8 layer only; modern source prose, Wiki changes and Lexique translations have separate rights."
+        }
+      ],
+      "current_registry_names": 105,
+      "contributor_capture_parts": [
+        "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-1-1.api.json",
+        "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-1-2.api.json",
+        "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-1-3.api.json",
+        "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-2-1.api.json",
+        "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-2-2.api.json",
+        "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-2-3.api.json",
+        "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-3-1.api.json",
+        "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-3-2.api.json",
+        "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-3-3.api.json",
+        "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-4-1.api.json",
+        "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103\\target\\issue-103\\sources\\contributors-support-1.api.json"
+      ],
+      "attribution_boundary": "Paginated current contributor registry is broader than fixed revisions; complete article histories provide revision attribution, not sentence authorship.",
+      "status": "author_source_binding_checked_independent_review_pending"
+    }
+  ]
 }
