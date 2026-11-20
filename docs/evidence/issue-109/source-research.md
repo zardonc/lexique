@@ -1,8 +1,10 @@
 # Issue #109 fixed sources and selected uses
 
-The [candidate groups](groups.json) contain 50 exact frozen groups and 200
-proposed fields. [Field review](field-review.json) and [admission](admission.json)
-retain pending independent quality, rights, use and spelling decisions.
+The [review candidates](review-candidates.json) preserve the original 50-group
+author draft. [Groups](groups.json), [field review](field-review.json) and
+[admission](admission.json) record 50 groups / 200 fields independently accepted
+for quality, selected-span rights, use and spelling. See the
+[independent review](independent-review.md) for the final judgments.
 
 ## Captures and attribution
 
@@ -114,8 +116,7 @@ missing handoff. Candidate field text totals **7,664 Unicode characters**; the
 longest field is **140 characters**. These are authored-content measurements,
 not compiled-resource or native-memory measurements.
 
-No unsupported-field blocker was identified by the author. Independent review
-must evaluate the exact 200 texts, their same-use translations, all 50 uses and
-spelling/construction relations, and the selected-text/original import rights
-boundaries. Native lookup/save/reopen, conversion, packaging and final admission
-remain integration-owned and unrun for this handoff.
+No exact-row fields remain unresolved after independent review of all 200 texts,
+50 uses and spelling/construction relations. Native lookup/save/reopen,
+conversion, combined packaging and final admission remain parent-owned and
+unrun for this handoff.

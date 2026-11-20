@@ -620,5 +620,11 @@
   "capture_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-109\\target\\issue-109",
   "captured_at_utc": "2026-11-19T21:45:05.067895+00:00",
   "preparation_script": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-109\\target\\issue-109\\prepare_candidates.py",
-  "selection_file": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-109\\target\\issue-109\\selection.py"
+  "selection_file": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-109\\target\\issue-109\\selection.py",
+  "independent_remote_verification": {
+    "status": "passed",
+    "revisions": 50,
+    "report": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-109\\target\\issue-109\\reviewer-primary\\remote-verification.json",
+    "reviewed_author_commit": "524ac2d949d21d7eb79d33fcdbc9c6c9d880f5fd"
+  }
 }

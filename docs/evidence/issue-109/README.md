@@ -1,26 +1,29 @@
-# Issue #109 authored content
+# Issue #109 independently reviewed content
 
 All **50 frozen rows 1401–1450** retain their exact headwords, POS subclasses,
 frequencies and order. Each has one authored selected sense with **FR/IPA/EN/ZH**:
-**50 candidate senses / 200 candidate fields**. Independent acceptance is
-**0 groups / 0 fields**. The global denominator remains **4,087 groups**.
+**50 accepted senses / 200 accepted fields**, with **no missing fields**.
+The global denominator remains **4,087 groups**. Final package admission awaits
+the parent's combined conversion, notices and native gates.
 
 The [ticket](https://github.com/zardonc/lexique/issues/109) and
 [parent spec](https://github.com/zardonc/lexique/issues/78) define the scope.
 [Source research](source-research.md) explains the selected-use boundaries and
-retained evidence. This handoff is for a separate content/rights reviewer.
+retained evidence. [Independent review](independent-review.md) records exact
+same-use quality and [selected-span rights](rights.json). Original draft groups
+and pending author statuses are preserved in [review candidates](review-candidates.json).
 
 ## Handoff files
 
 | File | Content |
 | --- | --- |
-| [groups.json](groups.json) | Exact frozen identities and complete proposed senses |
+| [groups.json](groups.json) | Exact frozen identities and complete independently accepted senses |
 | [sources.json](sources.json) | Fixed source records, attribution, original-work rights proposals and modifications |
-| [field-review.json](field-review.json) | Proposed field text, exact sources, use and spelling evidence; independent statuses pending |
+| [field-review.json](field-review.json) | Proposed and unchanged accepted text, exact sources, independent use/rights/spelling judgments |
 | [source-context.json](source-context.json) | French/POS frames, construction evidence, contributors, bibliography and import boundaries |
 | [source-excerpts.json](source-excerpts.json) | Exact one-based raw lines and selected IPA variant positions |
 | [reuse.json](reuse.json) | Empty reuse list; no prior content is rewritten |
-| [admission.json](admission.json) | Candidate counts and pending independent/admission outcomes |
+| [admission.json](admission.json) | 50 groups / 200 fields accepted; final package gates pending |
 | [source-captures.json](source-captures.json) | Fixed API/wikitext paths and complete contributor pagination |
 
 ## Author verification
@@ -52,15 +55,16 @@ Author checkout: `C:/Users/inthe/IdeaProjects/lexique-batch-109`, branch
 before handoff. Source/capture/preparation evidence remains at
 `C:/Users/inthe/IdeaProjects/lexique-batch-109/target/issue-109/`.
 
-## Pending outcomes
+## Review outcome and remaining gates
 
-No unsupported-field blocker was identified in author selection. Separate review
-must decide all 200 fields, all 50 uses, the construction/component bindings and
-the selected-text rights boundaries, including the 27 DAF8-marked pages. All
-independent statuses remain pending. No new specialist or annotation exception
-is proposed. The seven existing exceptions elsewhere remain unchanged.
+All 200 fields and 50 uses pass independent quality/selected-rights review.
+Explicit construction/component evidence supports `quels`, `mien`, `mienne`
+and `enceinte`. Exact `to/NOM` selects the ordinary regional food, `cent/NOM`
+the number 100, and both `enfoiré` POS rows preserve their insulting register.
+No exact-row gap, runtime alias or owner exception is added.
 
 Canonical resource admission, conversion, notices packaging and actual native
-lookup/save/reopen are integration-owned. They were not run for this candidate
-handoff. Whole-core completion, learner acceptance and release/platform gates
-remain separate.
+lookup/save/reopen are parent-owned and were not run for this review.
+The established DAF8 edition-level basis is reused; the independent direct
+statute endpoint returned HTTP 403. Whole-core completion, learner acceptance
+and release/platform gates remain separate.

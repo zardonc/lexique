@@ -14,6 +14,15 @@ def read(name):
     return json.loads((EVIDENCE / name).read_text(encoding="utf-8"))
 
 
+def content(value):
+    if isinstance(value, list):
+        return [content(item) for item in value]
+    if isinstance(value, dict):
+        return {key: content(item) for key, item in value.items()
+                if key not in {"independent_review", "resource_admission", "rights_eligibility_status"}}
+    return value
+
+
 class Batch109Tests(unittest.TestCase):
     def test_exact_frozen_groups_have_four_bound_candidate_fields(self):
         with (ROOT / "resources/core-pilot-79/scope-manifest.csv").open(
@@ -23,17 +32,23 @@ class Batch109Tests(unittest.TestCase):
         groups = read("groups.json")
         self.assertEqual([group["frozen_row"] for group in groups], list(range(1401, 1451)))
         admission = read("admission.json")
+        reviewed = admission["independent_reviewer"] is not None
+        status = "passed" if reviewed else "pending"
+        if reviewed:
+            self.assertEqual(content(groups), content(read("review-candidates.json")))
         self.assertEqual(admission["scope_denominator_groups"], 4087)
         self.assertEqual((admission["proposed_groups"], admission["proposed_fields"]), (50, 200))
-        self.assertEqual(admission["independently_accepted_new_fields"], 0)
-        self.assertEqual(admission["resource_admission"], "pending_separate_independent_review")
+        self.assertEqual(admission["independently_accepted_new_fields"], 200 if reviewed else 0)
+        self.assertEqual(admission["resource_admission"],
+                         "passed_independent_selected_content_and_rights_only" if reviewed
+                         else "pending_separate_independent_review")
         sources = {source["id"]: source for source in read("sources.json")["sources"]}
         contexts = {item["id"]: item for item in read("source-context.json")["current_content"]}
         bindings = {(item["sense_id"], item["field"]): item
                     for item in read("source-excerpts.json")["fields"]}
         reviews = read("field-review.json")
-        self.assertFalse(reviews["independent_acceptance"])
-        self.assertIsNone(reviews["reviewer"])
+        self.assertEqual(reviews["independent_acceptance"], reviewed)
+        self.assertEqual(reviews["reviewer"], admission["independent_reviewer"])
         self.assertEqual(len(reviews["fields"]), 200)
         self.assertEqual(len(bindings), 200)
         proposed = {(item["sense_id"], item["field"]): item for item in reviews["fields"]}
@@ -51,7 +66,8 @@ class Batch109Tests(unittest.TestCase):
                     self.assertEqual(group[frequency], frozen[frequency])
                 self.assertEqual(len(group["senses"]), 1)
                 sense = group["senses"][0]
-                self.assertEqual(sense["independent_review"], "pending")
+                self.assertEqual(sense["independent_review"],
+                                 "passed_after_exact_accepted_replacements" if reviewed else "pending")
                 self.assertIsNone(sense["cefr"])
                 self.assertTrue(sense["use"].strip())
                 self.assertEqual(set(sense["fields"]), set(LANGUAGES))
@@ -61,17 +77,17 @@ class Batch109Tests(unittest.TestCase):
                     source = sources[field["source_id"]]
                     context = contexts[source["id"]]
                     self.assertTrue(field["text"].strip())
-                    self.assertEqual(review["proposed_text"], field["text"])
+                    self.assertEqual(review["accepted_text" if reviewed else "proposed_text"], field["text"])
                     self.assertEqual((review["frozen_row"], review["headword"], review["pos"]),
                                      (row, group["headword"], group["lexique_cgram"]))
                     self.assertEqual(review["exact_source"],
                                      {key: value for key, value in binding.items()
                                       if key not in ("sense_id", "field")})
-                    self.assertEqual(review["accepted_text_quality_status"], "pending")
-                    self.assertIsNone(review["reviewer"])
+                    self.assertEqual(review["accepted_text_quality_status"], status)
+                    self.assertEqual(review["reviewer"], admission["independent_reviewer"])
                     self.assertEqual(field["language"], LANGUAGES[name])
                     self.assertTrue(field["modification"])
-                    self.assertEqual(field["independent_review"], "pending")
+                    self.assertEqual(field["independent_review"], status)
                     self.assertEqual(field["content_license"], "CC-BY-SA-4.0")
                     self.assertEqual(field["source_id"], binding["source_id"])
                     self.assertEqual(field["source_span"]["line_1_based"], binding["line_1_based"])
