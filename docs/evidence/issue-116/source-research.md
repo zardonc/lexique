@@ -2,8 +2,8 @@
 
 All 50 exact frozen rows 1751–1800 have one authored selected sense and four
 nonempty fields. The fixed denominator remains 4,087 groups. Independent
-semantic, selected-span rights and construction/spelling/flexion review is
-pending for every row; there are zero newly admitted fields.
+semantic, selected-span rights and construction/spelling/flexion review passes
+for every row; there are zero newly admitted canonical fields.
 
 ## Fixed sources and rights
 
@@ -19,7 +19,7 @@ particular selected sentence.
 
 [rights.json](rights.json) binds each of the 200 fields and every construction
 support span to its actual fixed article and selected lexical/phonetic boundary.
-The contributor/adaptation layer is proposed under CC BY-SA 4.0. The 21 pages
+The contributor/adaptation layer is accepted under CC BY-SA 4.0. The 21 pages
 with DAF8 import notices also retain the separate Académie française original
 collective-work basis, publication 1932–1935 and conservative expiry 2006-01-01.
 Reference markers do not establish selected-sentence origin. Attributed
@@ -64,7 +64,7 @@ with `alias_admission=not_admitted`; none introduces a runtime alias.
 | 1753 | `mouvement/NOM` | Déplacement d’un corps ou d’une de ses parties d’un endroit à un autre. |
 | 1754 | `marque/NOM` | Signe placé sur un objet pour le reconnaître ou le distinguer d’un autre. |
 | 1755 | `autrement/ADV` | D’une autre manière, d’une façon différente. |
-| 1756 | `nombre/NOM` | Quantité de personnes ou de choses. |
+| 1756 | `nombre/NOM` | Quantité non précisée de personnes ou de choses. |
 | 1757 | `balancer/VER` | Faire aller un corps alternativement d’un côté puis de l’autre. |
 | 1758 | `vitesse/NOM` | Rapidité avec laquelle un corps ou une personne se déplace. |
 | 1759 | `filmer/VER` | Enregistrer des images animées à l’aide d’un moyen technique moderne. |
@@ -117,6 +117,9 @@ the longest field contains **121 characters**. These measure authored
 content, not a converted database, native memory or release package.
 
 There are zero reused groups and zero author-identified missing-content rows.
-All 50 rows / 200 fields still await independent review and admission.
+All 50 rows / 200 fields pass independent review and still await canonical
+admission. Three accepted `nombre` replacements retain the selected source's
+unspecified-quantity restriction; original proposals remain in
+[review-candidates.json](review-candidates.json) and [field-review.json](field-review.json).
 Combined conversion/notices, actual native lookup/save/reopen, learner
 acceptance and release/platform checks remain parent-owned and unrun.
