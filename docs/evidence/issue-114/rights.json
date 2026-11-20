@@ -1,7 +1,7 @@
 {
-  "status": "author_proposal_pending_separate_selected_span_rights_review",
-  "independent_review": "pending",
-  "reviewer": null,
+  "status": "selected_span_rights_review_passed_packaging_pending",
+  "independent_review": "passed_at_selected_text_boundary",
+  "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
   "proposed_adaptation_license": "CC-BY-SA-4.0",
   "complete_legal_text": "resources/core-pilot-79/COPYING",
   "authority_captures": [
@@ -52,12 +52,14 @@
         "3(b)",
         "4"
       ],
-      "author_reading": "Sharing and adaptations, including commercial use, require attribution, licence identification, modification notices, ShareAlike and no additional restrictions; public-domain original content is separate."
+      "author_reading": "Sharing and adaptations, including commercial use, require attribution, licence identification, modification notices, ShareAlike and no additional restrictions; public-domain original content is separate.",
+      "independent_review": "read_from_retained_first_party_authority_capture"
     },
     {
       "authority": "Wikimedia Terms of Use",
       "section": "7: Licensing of Content",
-      "author_reading": "Article/history links provide attribution; imported material and media need their own applicable conditions; modifications and share-alike obligations continue."
+      "author_reading": "Article/history links provide attribution; imported material and media need their own applicable conditions; modifications and share-alike obligations continue.",
+      "independent_review": "read_from_retained_first_party_authority_capture"
     },
     {
       "authority": "Convention:Droit d’auteur",
@@ -66,14 +68,16 @@
         17,
         22
       ],
-      "author_reading": "Text licence is CC BY-SA 4.0; externally included or referenced material can retain other rights."
+      "author_reading": "Text licence is CC BY-SA 4.0; externally included or referenced material can retain other rights.",
+      "independent_review": "read_from_retained_first_party_authority_capture"
     },
     {
       "authority": "Modèle:Import:DAF8",
       "lines_1_based": [
         1
       ],
-      "author_reading": "All or part was extracted from DAF8 and may have changed; the marker does not identify the selected sentence’s author."
+      "author_reading": "All or part was extracted from DAF8 and may have changed; the marker does not identify the selected sentence’s author.",
+      "independent_review": "read_from_retained_first_party_authority_capture"
     }
   ],
   "original_daf8_basis_source": "docs/evidence/issue-99/source-context.json",
@@ -82,7 +86,10 @@
     "Retain fixed article URLs, complete linked histories, contributor attribution and separately credited original-work layers.",
     "Provide CC BY-SA 4.0 legal text and licence link, modification notices and the same licence for the adaptation layer.",
     "Preserve selected-span source material, reference/import context and actual combined notices in the produced package.",
-    "Exclude unselected literary/news quotations, images, audio and other-language text from content redistribution."
+    "Exclude unselected literary/news quotations, images, audio and other-language text from content redistribution.",
+    "Retain supplied creator, copyright, licence and warranty/disclaimer notices, including previous modification notices where supplied (CC BY-SA 4.0 section 3(a)).",
+    "Allow commercial reuse, licensed extraction/redistribution and adaptations; apply the same licence to the adaptation and applicable database layer, without additional legal or technical restrictions (sections 2–4).",
+    "Carry the separately identified Académie française eighth-edition original-work notices where imported; the text licence does not relicense unselected media or quotations."
   ],
   "sources": [
     {
@@ -135,7 +142,8 @@
           "line_1_based": 295,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_inferred_from_import_notice; fixed_article_history_attribution_retained",
+          "author_selected_sentence_assessment": "pending_separate_selected_span_review"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -150,7 +158,7 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_collective_edition_boundary"
         }
       ],
       "reference_markers": [
@@ -216,9 +224,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "article fixed revision 39812217: selected definition/IPA locations 15, 29 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. DAF8 notice at 295 retains the Académie française eighth-edition 1932–1935 collective-work basis (CPI L123-3; conservative 2006 expiry). The notice alone does not identify selected-sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_7936",
@@ -269,9 +280,12 @@
       "original_historical_dictionary_layers": [],
       "reference_markers": [],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "sommeil fixed revision 39968386: selected definition/IPA locations 10, 11 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. No external text-import notice attaches to the selected lexical wording; bibliography alone is not evidence of sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_36600",
@@ -323,7 +337,8 @@
           "line_1_based": 258,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_inferred_from_import_notice; fixed_article_history_attribution_retained",
+          "author_selected_sentence_assessment": "pending_separate_selected_span_review"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -338,7 +353,7 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_collective_edition_boundary"
         }
       ],
       "reference_markers": [
@@ -364,9 +379,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "étude fixed revision 39770689: selected definition/IPA locations 8, 9 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. DAF8 notice at 258 retains the Académie française eighth-edition 1932–1935 collective-work basis (CPI L123-3; conservative 2006 expiry). The notice alone does not identify selected-sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_42108",
@@ -463,9 +481,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "stop fixed revision 40002861: selected definition/IPA locations 11, 12 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. No external text-import notice attaches to the selected lexical wording; bibliography alone is not evidence of sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_132106",
@@ -522,9 +543,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "viande fixed revision 39953886: selected definition/IPA locations 10, 29 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. No external text-import notice attaches to the selected lexical wording; bibliography alone is not evidence of sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_132198",
@@ -596,9 +620,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "week-end fixed revision 40046602: selected definition/IPA locations 9, 10 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. No external text-import notice attaches to the selected lexical wording; bibliography alone is not evidence of sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_136898",
@@ -655,9 +682,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "goûter fixed revision 39771957: selected definition/IPA locations 8, 15 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. No external text-import notice attaches to the selected lexical wording; bibliography alone is not evidence of sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_157601",
@@ -709,7 +739,8 @@
           "line_1_based": 84,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_inferred_from_import_notice; fixed_article_history_attribution_retained",
+          "author_selected_sentence_assessment": "pending_separate_selected_span_review"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -724,7 +755,7 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_collective_edition_boundary"
         }
       ],
       "reference_markers": [
@@ -735,9 +766,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "détendre fixed revision 39740743: selected definition/IPA locations 6, 7 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. DAF8 notice at 84 retains the Académie française eighth-edition 1932–1935 collective-work basis (CPI L123-3; conservative 2006 expiry). The notice alone does not identify selected-sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_165465",
@@ -789,7 +823,8 @@
           "line_1_based": 114,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_inferred_from_import_notice; fixed_article_history_attribution_retained",
+          "author_selected_sentence_assessment": "pending_separate_selected_span_review"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -804,7 +839,7 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_collective_edition_boundary"
         }
       ],
       "reference_markers": [
@@ -815,9 +850,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "interroger fixed revision 39720238: selected definition/IPA locations 6, 7 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. DAF8 notice at 114 retains the Académie française eighth-edition 1932–1935 collective-work basis (CPI L123-3; conservative 2006 expiry). The notice alone does not identify selected-sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_193624",
@@ -874,9 +912,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "flingue fixed revision 39611986: selected definition/IPA locations 17, 25 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. No external text-import notice attaches to the selected lexical wording; bibliography alone is not evidence of sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_8458",
@@ -960,7 +1001,8 @@
           "line_1_based": 244,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_inferred_from_import_notice; fixed_article_history_attribution_retained",
+          "author_selected_sentence_assessment": "pending_separate_selected_span_review"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -975,7 +1017,7 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_collective_edition_boundary"
         }
       ],
       "reference_markers": [
@@ -1026,9 +1068,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "blond fixed revision 39906792: selected definition/IPA locations 9, 22, 135, 136 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. DAF8 notice at 244 retains the Académie française eighth-edition 1932–1935 collective-work basis (CPI L123-3; conservative 2006 expiry). The notice alone does not identify selected-sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_9830",
@@ -1095,9 +1140,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "espace fixed revision 40008849: selected definition/IPA locations 10, 16 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. No external text-import notice attaches to the selected lexical wording; bibliography alone is not evidence of sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_10733",
@@ -1154,9 +1202,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "condamner fixed revision 39952699: selected definition/IPA locations 6, 7 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. No external text-import notice attaches to the selected lexical wording; bibliography alone is not evidence of sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_11707",
@@ -1208,7 +1259,8 @@
           "line_1_based": 148,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_inferred_from_import_notice; fixed_article_history_attribution_retained",
+          "author_selected_sentence_assessment": "pending_separate_selected_span_review"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -1223,7 +1275,7 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_collective_edition_boundary"
         }
       ],
       "reference_markers": [
@@ -1234,9 +1286,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "au-dessus fixed revision 39959391: selected definition/IPA locations 7, 8 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. DAF8 notice at 148 retains the Académie française eighth-edition 1932–1935 collective-work basis (CPI L123-3; conservative 2006 expiry). The notice alone does not identify selected-sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_23896",
@@ -1293,9 +1348,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "profond fixed revision 39656995: selected definition/IPA locations 7, 8 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. No external text-import notice attaches to the selected lexical wording; bibliography alone is not evidence of sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_30884",
@@ -1346,9 +1404,12 @@
       "original_historical_dictionary_layers": [],
       "reference_markers": [],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "marrant fixed revision 39133158: selected definition/IPA locations 7, 8 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. No external text-import notice attaches to the selected lexical wording; bibliography alone is not evidence of sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_137114",
@@ -1400,7 +1461,8 @@
           "line_1_based": 157,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_inferred_from_import_notice; fixed_article_history_attribution_retained",
+          "author_selected_sentence_assessment": "pending_separate_selected_span_review"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -1415,7 +1477,7 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_collective_edition_boundary"
         }
       ],
       "reference_markers": [
@@ -1436,9 +1498,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "faillir fixed revision 39879207: selected definition/IPA locations 7, 32 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. DAF8 notice at 157 retains the Académie française eighth-edition 1932–1935 collective-work basis (CPI L123-3; conservative 2006 expiry). The notice alone does not identify selected-sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_155689",
@@ -1490,7 +1555,8 @@
           "line_1_based": 294,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_inferred_from_import_notice; fixed_article_history_attribution_retained",
+          "author_selected_sentence_assessment": "pending_separate_selected_span_review"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -1505,7 +1571,7 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_collective_edition_boundary"
         }
       ],
       "reference_markers": [
@@ -1521,9 +1587,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "cou fixed revision 39976866: selected definition/IPA locations 18, 19 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. DAF8 notice at 294 retains the Académie française eighth-edition 1932–1935 collective-work basis (CPI L123-3; conservative 2006 expiry). The notice alone does not identify selected-sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_173177",
@@ -1575,7 +1644,8 @@
           "line_1_based": 142,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_inferred_from_import_notice; fixed_article_history_attribution_retained",
+          "author_selected_sentence_assessment": "pending_separate_selected_span_review"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -1590,7 +1660,7 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_collective_edition_boundary"
         }
       ],
       "reference_markers": [
@@ -1601,9 +1671,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "puissant fixed revision 39943724: selected definition/IPA locations 8, 10 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. DAF8 notice at 142 retains the Académie française eighth-edition 1932–1935 collective-work basis (CPI L123-3; conservative 2006 expiry). The notice alone does not identify selected-sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_177853",
@@ -1655,7 +1728,8 @@
           "line_1_based": 117,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_inferred_from_import_notice; fixed_article_history_attribution_retained",
+          "author_selected_sentence_assessment": "pending_separate_selected_span_review"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -1670,7 +1744,7 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_collective_edition_boundary"
         }
       ],
       "reference_markers": [
@@ -1711,9 +1785,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "talent fixed revision 39973681: selected definition/IPA locations 8, 18 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. DAF8 notice at 117 retains the Académie française eighth-edition 1932–1935 collective-work basis (CPI L123-3; conservative 2006 expiry). The notice alone does not identify selected-sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_2080",
@@ -1795,9 +1872,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "mètre fixed revision 39719614: selected definition/IPA locations 12, 13 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. No external text-import notice attaches to the selected lexical wording; bibliography alone is not evidence of sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_11853",
@@ -1869,9 +1949,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "don fixed revision 39765065: selected definition/IPA locations 18, 27 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. No external text-import notice attaches to the selected lexical wording; bibliography alone is not evidence of sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_115255",
@@ -1923,7 +2006,8 @@
           "line_1_based": 336,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_inferred_from_import_notice; fixed_article_history_attribution_retained",
+          "author_selected_sentence_assessment": "pending_separate_selected_span_review"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -1938,7 +2022,7 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_collective_edition_boundary"
         }
       ],
       "reference_markers": [
@@ -1994,9 +2078,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "sec fixed revision 39927565: selected definition/IPA locations 29, 30 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. DAF8 notice at 336 retains the Académie française eighth-edition 1932–1935 collective-work basis (CPI L123-3; conservative 2006 expiry). The notice alone does not identify selected-sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_137293",
@@ -2073,9 +2160,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "abattre fixed revision 39915001: selected definition/IPA locations 6, 7 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. No external text-import notice attaches to the selected lexical wording; bibliography alone is not evidence of sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_153191",
@@ -2137,9 +2227,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "château fixed revision 39718965: selected definition/IPA locations 15, 16 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. No external text-import notice attaches to the selected lexical wording; bibliography alone is not evidence of sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_153301",
@@ -2201,9 +2294,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "chemise fixed revision 39914363: selected definition/IPA locations 9, 12 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. No external text-import notice attaches to the selected lexical wording; bibliography alone is not evidence of sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_158759",
@@ -2255,7 +2351,8 @@
           "line_1_based": 159,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_inferred_from_import_notice; fixed_article_history_attribution_retained",
+          "author_selected_sentence_assessment": "pending_separate_selected_span_review"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -2270,7 +2367,7 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_collective_edition_boundary"
         }
       ],
       "reference_markers": [
@@ -2281,9 +2378,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "égal fixed revision 39774392: selected definition/IPA locations 8, 9 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. DAF8 notice at 159 retains the Académie française eighth-edition 1932–1935 collective-work basis (CPI L123-3; conservative 2006 expiry). The notice alone does not identify selected-sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_167486",
@@ -2345,9 +2445,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "marquer fixed revision 39879886: selected definition/IPA locations 7, 8 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. No external text-import notice attaches to the selected lexical wording; bibliography alone is not evidence of sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_173799",
@@ -2399,7 +2502,8 @@
           "line_1_based": 202,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_inferred_from_import_notice; fixed_article_history_attribution_retained",
+          "author_selected_sentence_assessment": "pending_separate_selected_span_review"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -2414,7 +2518,7 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_collective_edition_boundary"
         }
       ],
       "reference_markers": [
@@ -2430,9 +2534,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "ramasser fixed revision 39774602: selected definition/IPA locations 6, 31 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. DAF8 notice at 202 retains the Académie française eighth-edition 1932–1935 collective-work basis (CPI L123-3; conservative 2006 expiry). The notice alone does not identify selected-sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_195749",
@@ -2499,9 +2606,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "apparaître fixed revision 39711222: selected definition/IPA locations 10, 11 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. No external text-import notice attaches to the selected lexical wording; bibliography alone is not evidence of sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_458",
@@ -2553,7 +2663,8 @@
           "line_1_based": 202,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_inferred_from_import_notice; fixed_article_history_attribution_retained",
+          "author_selected_sentence_assessment": "pending_separate_selected_span_review"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -2568,7 +2679,7 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_collective_edition_boundary"
         }
       ],
       "reference_markers": [
@@ -2579,9 +2690,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "énergie fixed revision 39677570: selected definition/IPA locations 9, 13 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. DAF8 notice at 202 retains the Académie française eighth-edition 1932–1935 collective-work basis (CPI L123-3; conservative 2006 expiry). The notice alone does not identify selected-sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_4906",
@@ -2643,9 +2757,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "connaissance fixed revision 39938912: selected definition/IPA locations 8, 21 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. No external text-import notice attaches to the selected lexical wording; bibliography alone is not evidence of sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_10838",
@@ -2696,9 +2813,12 @@
       "original_historical_dictionary_layers": [],
       "reference_markers": [],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "unité fixed revision 39552485: selected definition/IPA locations 9, 10 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. No external text-import notice attaches to the selected lexical wording; bibliography alone is not evidence of sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_37711",
@@ -2755,9 +2875,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "apparemment fixed revision 39774231: selected definition/IPA locations 7, 21 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. No external text-import notice attaches to the selected lexical wording; bibliography alone is not evidence of sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_38790",
@@ -2819,9 +2942,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "pendre fixed revision 39310776: selected definition/IPA locations 8, 29 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. No external text-import notice attaches to the selected lexical wording; bibliography alone is not evidence of sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_154785",
@@ -2849,7 +2975,8 @@
           "line_1_based": 183,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_inferred_from_import_notice; fixed_article_history_attribution_retained",
+          "author_selected_sentence_assessment": "pending_separate_selected_span_review"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -2864,7 +2991,7 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_collective_edition_boundary"
         }
       ],
       "reference_markers": [
@@ -2890,9 +3017,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "commissaire fixed revision 39304231: selected definition/IPA locations 7 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. DAF8 notice at 183 retains the Académie française eighth-edition 1932–1935 collective-work basis (CPI L123-3; conservative 2006 expiry). The notice alone does not identify selected-sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_155186",
@@ -2944,7 +3074,8 @@
           "line_1_based": 166,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_inferred_from_import_notice; fixed_article_history_attribution_retained",
+          "author_selected_sentence_assessment": "pending_separate_selected_span_review"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -2959,7 +3090,7 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_collective_edition_boundary"
         }
       ],
       "reference_markers": [
@@ -2970,9 +3101,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "considérer fixed revision 39773212: selected definition/IPA locations 6, 21 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. DAF8 notice at 166 retains the Académie française eighth-edition 1932–1935 collective-work basis (CPI L123-3; conservative 2006 expiry). The notice alone does not identify selected-sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_167134",
@@ -3024,7 +3158,8 @@
           "line_1_based": 108,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_inferred_from_import_notice; fixed_article_history_attribution_retained",
+          "author_selected_sentence_assessment": "pending_separate_selected_span_review"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -3039,7 +3174,7 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_collective_edition_boundary"
         }
       ],
       "reference_markers": [
@@ -3050,9 +3185,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "majesté fixed revision 39849215: selected definition/IPA locations 9, 27 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. DAF8 notice at 108 retains the Académie française eighth-edition 1932–1935 collective-work basis (CPI L123-3; conservative 2006 expiry). The notice alone does not identify selected-sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_171939",
@@ -3104,7 +3242,8 @@
           "line_1_based": 208,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_inferred_from_import_notice; fixed_article_history_attribution_retained",
+          "author_selected_sentence_assessment": "pending_separate_selected_span_review"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -3119,7 +3258,7 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_collective_edition_boundary"
         }
       ],
       "reference_markers": [
@@ -3130,9 +3269,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "policier fixed revision 40038641: selected definition/IPA locations 8, 9 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. DAF8 notice at 208 retains the Académie française eighth-edition 1932–1935 collective-work basis (CPI L123-3; conservative 2006 expiry). The notice alone does not identify selected-sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_177806",
@@ -3194,9 +3336,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "taille fixed revision 39875507: selected definition/IPA locations 17, 54 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. No external text-import notice attaches to the selected lexical wording; bibliography alone is not evidence of sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_2036",
@@ -3248,7 +3393,8 @@
           "line_1_based": 359,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_inferred_from_import_notice; fixed_article_history_attribution_retained",
+          "author_selected_sentence_assessment": "pending_separate_selected_span_review"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -3263,7 +3409,7 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_collective_edition_boundary"
         }
       ],
       "reference_markers": [
@@ -3289,9 +3435,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "cellule fixed revision 39881740: selected definition/IPA locations 11, 21 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. DAF8 notice at 359 retains the Académie française eighth-edition 1932–1935 collective-work basis (CPI L123-3; conservative 2006 expiry). The notice alone does not identify selected-sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_7399",
@@ -3343,7 +3492,8 @@
           "line_1_based": 180,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_inferred_from_import_notice; fixed_article_history_attribution_retained",
+          "author_selected_sentence_assessment": "pending_separate_selected_span_review"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -3358,7 +3508,7 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_collective_edition_boundary"
         }
       ],
       "reference_markers": [
@@ -3369,9 +3519,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "posséder fixed revision 39717082: selected definition/IPA locations 8, 9 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. DAF8 notice at 180 retains the Académie française eighth-edition 1932–1935 collective-work basis (CPI L123-3; conservative 2006 expiry). The notice alone does not identify selected-sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_8143",
@@ -3438,9 +3591,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "effort fixed revision 39770646: selected definition/IPA locations 8, 14 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. No external text-import notice attaches to the selected lexical wording; bibliography alone is not evidence of sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_127973",
@@ -3492,7 +3648,8 @@
           "line_1_based": 165,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_inferred_from_import_notice; fixed_article_history_attribution_retained",
+          "author_selected_sentence_assessment": "pending_separate_selected_span_review"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -3507,7 +3664,7 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_collective_edition_boundary"
         }
       ],
       "reference_markers": [
@@ -3518,9 +3675,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "observer fixed revision 39829306: selected definition/IPA locations 6, 22 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. DAF8 notice at 165 retains the Académie française eighth-edition 1932–1935 collective-work basis (CPI L123-3; conservative 2006 expiry). The notice alone does not identify selected-sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_139153",
@@ -3572,7 +3732,8 @@
           "line_1_based": 151,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_inferred_from_import_notice; fixed_article_history_attribution_retained",
+          "author_selected_sentence_assessment": "pending_separate_selected_span_review"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -3587,7 +3748,7 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_collective_edition_boundary"
         }
       ],
       "reference_markers": [
@@ -3598,9 +3759,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "arrivée fixed revision 39819802: selected definition/IPA locations 8, 19 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. DAF8 notice at 151 retains the Académie française eighth-edition 1932–1935 collective-work basis (CPI L123-3; conservative 2006 expiry). The notice alone does not identify selected-sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_150010",
@@ -3652,7 +3816,8 @@
           "line_1_based": 154,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_inferred_from_import_notice; fixed_article_history_attribution_retained",
+          "author_selected_sentence_assessment": "pending_separate_selected_span_review"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -3667,7 +3832,7 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_collective_edition_boundary"
         }
       ],
       "reference_markers": [
@@ -3688,9 +3853,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "bouffer fixed revision 39914651: selected definition/IPA locations 7, 29 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. DAF8 notice at 154 retains the Académie française eighth-edition 1932–1935 collective-work basis (CPI L123-3; conservative 2006 expiry). The notice alone does not identify selected-sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_154722",
@@ -3742,7 +3910,8 @@
           "line_1_based": 114,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_inferred_from_import_notice; fixed_article_history_attribution_retained",
+          "author_selected_sentence_assessment": "pending_separate_selected_span_review"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -3757,7 +3926,7 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_collective_edition_boundary"
         }
       ],
       "reference_markers": [
@@ -3773,9 +3942,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "combattre fixed revision 39955273: selected definition/IPA locations 6, 7 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. DAF8 notice at 114 retains the Académie française eighth-edition 1932–1935 collective-work basis (CPI L123-3; conservative 2006 expiry). The notice alone does not identify selected-sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_157984",
@@ -3827,7 +3999,8 @@
           "line_1_based": 189,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_inferred_from_import_notice; fixed_article_history_attribution_retained",
+          "author_selected_sentence_assessment": "pending_separate_selected_span_review"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -3842,7 +4015,7 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_collective_edition_boundary"
         }
       ],
       "reference_markers": [
@@ -3858,9 +4031,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "discours fixed revision 39773172: selected definition/IPA locations 10, 41 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. DAF8 notice at 189 retains the Académie française eighth-edition 1932–1935 collective-work basis (CPI L123-3; conservative 2006 expiry). The notice alone does not identify selected-sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_168882",
@@ -3912,7 +4088,8 @@
           "line_1_based": 337,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_inferred_from_import_notice; fixed_article_history_attribution_retained",
+          "author_selected_sentence_assessment": "pending_separate_selected_span_review"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -3927,7 +4104,7 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_collective_edition_boundary"
         }
       ],
       "reference_markers": [
@@ -3938,9 +4115,12 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "naturel fixed revision 40043205: selected definition/IPA locations 9, 19 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. DAF8 notice at 337 retains the Académie française eighth-edition 1932–1935 collective-work basis (CPI L123-3; conservative 2006 expiry). The notice alone does not identify selected-sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     },
     {
       "source_id": "b114_fr_2238454",
@@ -3983,12 +4163,17 @@
       "original_historical_dictionary_layers": [],
       "reference_markers": [],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor wording and Lexique adaptations/translations; retain the separately credited DAF8 original-work basis where imported.",
-      "selected_text_boundary": "Selected lexical definition, language/POS/grammar and recorded IPA only. Literary/news examples, media, etymologies and other-language text are excluded from the proposed fields.",
-      "independent_review": "pending",
-      "reviewer": null
+      "selected_text_boundary": "passed_for_selected_spans",
+      "independent_review": "passed_at_selected_text_boundary",
+      "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+      "independence": true,
+      "independent_rights_reason": "commissaire de police fixed revision 39874189: selected definition/IPA locations 8 and their French grammatical context were independently read. Lexical definitions and explicit IPA are separate from quoted examples, etymology, bibliography, media and other-language sections. No external text-import notice attaches to the selected lexical wording; bibliography alone is not evidence of sentence authorship. Wiktionnaire contributor transcription/adaptation and Lexique scoped definitions/explanatory translations retain CC BY-SA 4.0, fixed article/full history attribution and modification notices. Actual assembled notices remain a parent gate.",
+      "actual_packaged_obligations": "pending_parent_verification"
     }
   ],
   "proposed_fields": 200,
-  "independent_rights_fields_accepted": 0,
-  "final_combined_package_status": "pending_parent_conversion_notices_and_admission"
+  "independent_rights_fields_accepted": 200,
+  "final_combined_package_status": "pending_parent_conversion_and_actual_notices",
+  "independence": true,
+  "quality_report": "independent-review.md"
 }

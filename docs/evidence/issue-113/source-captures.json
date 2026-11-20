@@ -697,5 +697,13 @@
   ],
   "lexique_key_evidence": "target/issue-113/sources/lexique-mlle.json",
   "completion_script": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-113\\target\\issue-113\\finish_author_package.py",
-  "source_capture_note": "The initial exact mlle API result is missing; source binding uses separately captured Mlle and mademoiselle with retained lexical-key corroboration."
+  "source_capture_note": "The initial exact mlle API result is missing; source binding uses separately captured Mlle and mademoiselle with retained lexical-key corroboration.",
+  "independent_fixed_revision_verification": {
+    "status": "passed",
+    "reviewer": "Independent semantic and selected-rights reviewer for issue #113; separate from author and parent integrator",
+    "reviewed_author_commit": "e26d8b4c67ffcc53b4dc3ed62dbe9f7189022451",
+    "report": "source-revision-review.json",
+    "source_count": 49,
+    "raw_refetches_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-review-113\\target\\issue-113-review"
+  }
 }
