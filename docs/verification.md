@@ -1,5 +1,9 @@
 # 骨架验证记录
 
+## PR #174–#176 合并与 CI 恢复
+
+2026-11-18，[PR #174](https://github.com/zardonc/lexique/pull/174)、[PR #175](https://github.com/zardonc/lexique/pull/175) 和 [PR #176](https://github.com/zardonc/lexique/pull/176) 的固定 head 各 22 项检查通过后合并，最终合并提交为 `42c720556fd1195cca39ba704761877d1c0df48a`，该提交的 [main CI](https://github.com/zardonc/lexique/actions/runs/44377907700) 11 项检查全部通过。队列 E2E 竞态修复在延迟请求对照中由 4／4 失败变为 4／4 通过，Windows x64／Edge 完整 391 项通过。Intel macOS 对照确认 COMMIT 锁竞争及其他等待，原始 V03 超时的具体原因仍未完全定位；事务／竞争写入预算保持 100／250 ms，后端执行硬限保持 60 秒。固定提交、原始失败、对照结果、ARM64 runner 恢复及合并后的 main CI 链接见 [CI 恢复记录](evidence/ci-174-176/README.md)。
+
 ## 语法笔记与共享分类
 
 2026-11-19–20 UTC，按 [Q1–Q29 确认设计](grammar-notes-classification-design.md)实现独立语法笔记、共享多分类、文字问答卡和混合复习。审查基线为 `42c720556fd1195cca39ba704761877d1c0df48a`；原实现为 `77c98f6`，保存重试修正为 `a78b41e`，主线整合为 `2cba1bf`，批次历史修复为 `2c90170`，最终生产代码为 `e27ba23d73313ebb2d34df83146c7168a3737710`，WASM 版本验收为 `c6c85f4524247ad9403724cf7fc0892d5205b44d`。[PR #182](https://github.com/zardonc/lexique/pull/182)整合本功能与修复，下表分别记录各提交在 Windows x64 上的实际检查。
