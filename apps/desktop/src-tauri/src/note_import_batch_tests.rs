@@ -357,7 +357,7 @@ fn omitted_identical_clear_skip_and_invalid_group_exclusion_have_explicit_counts
     );
     std::fs::write(
         &path,
-        "headword,notes\nretained,\nskipped,replacement\nconflict,one\nvalid,new\nconflict,two\n",
+        format!("headword,notes\nretained,\nskipped,replacement\nconflict,one\nvalid,new\nconflict,two\noversized,{}\n", "x".repeat(20_001)),
     )
     .unwrap();
     let preview = preview_file(&connection, &path, "clear-notes").unwrap();
@@ -370,9 +370,16 @@ fn omitted_identical_clear_skip_and_invalid_group_exclusion_have_explicit_counts
             .contains("conflicting notes")
     );
     let mut decisions = decide(&preview);
+    assert_eq!(preview.groups[4].status, "invalid");
+    assert_eq!(preview.groups[4].rows, [7]);
+    assert!(preview.groups[4].error.as_ref().unwrap().contains("20,000"));
+    decisions[4].action = NoteImportAction::Create;
+    assert!(commit_preview(&mut connection, &preview, &decisions).is_err());
+    assert!(find(&connection, "valid").unwrap().is_none());
+    decisions[4].action = NoteImportAction::Skip;
     decisions[1].action = NoteImportAction::Skip;
     let result = commit_preview(&mut connection, &preview, &decisions).unwrap();
-    assert_eq!((result.created, result.updated, result.skipped), (1, 1, 2));
+    assert_eq!((result.created, result.updated, result.skipped), (1, 1, 3));
     let retained = get(&connection, records[0].id).unwrap();
     assert_eq!(retained.notes, "");
     assert_eq!(retained.example_fr, "old French");

@@ -36,7 +36,9 @@ function samePayload(previous: SaveRequest, payload: ReturnType<typeof savePaylo
 function needsExampleSense(editor: Editor) {
   const hasContent = [editor.example_fr, editor.example_zh, ...editor.more_examples.flatMap((example) => [example.fr, example.zh])].some((value) => value.trim());
   const original = editor.record;
-  return editor.example_sense === null && hasContent && original?.example_sense !== null && !editor.snapshot.import_source;
+  const persistedUnlinked = original?.example_sense === null
+    && [original.example_fr, original.example_zh, ...original.more_examples.flatMap((example) => [example.fr, example.zh])].some((value) => value.trim());
+  return editor.example_sense === null && hasContent && !persistedUnlinked && !editor.snapshot.import_source;
 }
 
 function editMoreExamples(editor: Editor, examples: VocabularyRecord['more_examples']) {

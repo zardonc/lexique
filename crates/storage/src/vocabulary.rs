@@ -485,9 +485,18 @@ pub(crate) fn save_in_transaction(
                 record: current,
             });
         }
+        let persisted_unlinked = current.example_sense.is_none()
+            && std::iter::once((&current.example_fr, &current.example_zh))
+                .chain(
+                    current
+                        .more_examples
+                        .iter()
+                        .map(|example| (&example.fr, &example.zh)),
+                )
+                .any(|(fr, zh)| !fr.trim().is_empty() || !zh.trim().is_empty());
         if has_examples
             && request.example_sense.is_none()
-            && current.example_sense.is_some()
+            && !persisted_unlinked
             && current.import_source.is_none()
             && !importing
         {

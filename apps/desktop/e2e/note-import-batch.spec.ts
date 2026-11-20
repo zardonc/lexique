@@ -74,3 +74,25 @@ test('one CSV commit stays pending until its response and review enrollment is a
   await expect.poll(() => page.evaluate(() => ({ pending: localStorage.getItem('lexique-pending-review-batch'), errors: Array.from(document.querySelectorAll('[role=alert]')).map((node) => node.textContent) }))).toEqual({ pending: null, errors: [] });
   await expect(enroll).toBeEnabled();
 });
+
+test('an imported update keeps dictionary meanings and its unlinked primary example can be edited', async ({ page }) => {
+  const imported = { ...record, notes: '导入笔记', example_fr: 'Imported unlinked.', example_zh: '', example_sense: null,
+    more_examples: [{ fr: 'Retained linked.', zh: '', sense: 0 }] };
+  const edited = { ...imported, revision: 2, example_fr: 'Edited unlinked.' };
+  await nativeFixture(page, { note_import_preview: [{ value: { ...preview, groups: [changed] } }],
+    note_import_commit: [{ value: { created: 0, updated: 1, skipped: 0, records: [imported] } }],
+    vocabulary_save: [{ value: { outcome: 'updated', record: edited } }] });
+  await page.goto('/'); await page.getByRole('button', { name: '笔记', exact: true }).click();
+  await page.getByRole('button', { name: '导入 CSV', exact: true }).click();
+  await page.getByLabel(`导入决定：${record.headword}`, { exact: true }).selectOption('update');
+  await page.getByRole('button', { name: '确认导入', exact: true }).click();
+  await page.getByRole('button', { name: '打开记录', exact: true }).click();
+  await expect(page.locator('#example-sense')).toHaveValue('');
+  await expect(page.locator('select[aria-label$=" 2"]')).toHaveValue('0');
+  await page.locator('#example-fr').fill(edited.example_fr);
+  await expect(page.getByRole('button', { name: '保存', exact: true })).toBeEnabled();
+  await page.getByRole('button', { name: '保存', exact: true }).click();
+  await expect(page.getByText('已保存', { exact: true })).toBeVisible();
+  const saved = await page.evaluate(() => window.testNative.calls.find((call) => call.command === 'vocabulary_save'));
+  expect(saved?.args?.request).toMatchObject({ example_fr: edited.example_fr, example_sense: null, more_examples: imported.more_examples });
+});

@@ -3,7 +3,9 @@ use lexique_storage::{
 };
 use rusqlite::Connection;
 use serde::{Deserialize, Serialize};
-use std::{path::Path, sync::Mutex};
+#[cfg(test)]
+use std::path::Path;
+use std::sync::Mutex;
 use tauri::{Manager, State};
 use tauri_plugin_dialog::DialogExt;
 
@@ -66,6 +68,7 @@ struct Session {
 #[derive(Default)]
 pub struct NoteImportState(Mutex<Option<Session>>);
 
+#[cfg(test)]
 pub fn preview_csv_file(
     connection: &Connection,
     path: &Path,

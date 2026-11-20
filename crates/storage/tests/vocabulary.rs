@@ -300,7 +300,7 @@ fn save_request_requires_all_example_fields() {
 }
 
 #[test]
-fn unassigned_legacy_examples_are_preserved_but_new_edits_require_a_meaning() {
+fn new_examples_require_a_meaning_but_persisted_unlinked_examples_remain_editable() {
     let mut connection = Connection::open_in_memory().unwrap();
     initialize(&connection).unwrap();
     let original = save(
@@ -330,7 +330,9 @@ fn unassigned_legacy_examples_are_preserved_but_new_edits_require_a_meaning() {
     assert_eq!(preserved.example_fr, "Legacy");
     let mut edit = update("edit-legacy", &preserved, "note");
     edit.example_fr = "Changed".into();
-    assert!(save(&mut connection, &edit, None).is_err());
+    let edited = save(&mut connection, &edit, None).unwrap().record;
+    assert_eq!(edited.example_fr, "Changed");
+    assert_eq!(edited.example_sense, None);
     edit.example_sense = Some(0);
     assert_eq!(
         save(&mut connection, &edit, None)
