@@ -1,4 +1,4 @@
-"""Resource-boundary check for the issue #101 author handoff."""
+"""Resource-boundary check for the issue #101 reviewed handoff."""
 
 import csv
 import json
@@ -15,7 +15,9 @@ class Batch101Tests(unittest.TestCase):
         with (RESOURCE / "scope-manifest.csv").open(encoding="utf-8-sig", newline="") as handle:
             scope = list(csv.DictReader(handle))
         candidates = json.loads((EVIDENCE / "review-candidates.json").read_text(encoding="utf-8"))
-        groups = candidates["groups"]
+        groups = json.loads((EVIDENCE / "groups.json").read_text(encoding="utf-8"))
+        originals = {group["frozen_row"]: group for group in candidates["groups"]}
+        self.assertEqual(sorted(originals), list(range(1001, 1051)))
         self.assertEqual([group["frozen_row"] for group in groups], list(range(1001, 1051)))
         self.assertEqual(candidates["scope_denominator_groups"], 4087)
         excerpts = json.loads((EVIDENCE / "source-excerpts.json").read_text(encoding="utf-8"))
@@ -24,8 +26,17 @@ class Batch101Tests(unittest.TestCase):
         sources = {source["id"]: source for source in json.loads(
             (EVIDENCE / "sources.json").read_text(encoding="utf-8"))}
         self.assertEqual(len(bindings), 196)
-        self.assertEqual(groups, json.loads((EVIDENCE / "groups.json").read_text(encoding="utf-8")))
         review = json.loads((EVIDENCE / "field-review.json").read_text(encoding="utf-8"))
+        self.assertTrue(review["independence"])
+        self.assertTrue(review["independent_reviewer"])
+        changes = {(record["sense_id"], record["field"]): record
+                   for record in review["accepted_text_changes"]}
+        self.assertEqual({(record["frozen_row"], record["field"]) for record in changes.values()},
+                         {(1029, "chinese"), (1034, "english"), (1040, "excluded_uses")})
+        admission = json.loads((EVIDENCE / "admission.json").read_text(encoding="utf-8"))
+        self.assertEqual((admission["accepted_groups"], admission["accepted_fields"],
+                          admission["missing_admitted_fields"]), (49, 196, 4))
+        self.assertEqual(admission["status"], "incomplete")
         reviewed = {(record["sense_id"], record["field"]): record for record in review["fields"]}
         context = json.loads((EVIDENCE / "source-context.json").read_text(encoding="utf-8"))
         locations = {(record["sense_id"], record["field"]): record for source in context["current_content"]
@@ -48,9 +59,23 @@ class Batch101Tests(unittest.TestCase):
                     continue
                 self.assertEqual(len(group["senses"]), 1)
                 sense = group["senses"][0]
+                original = originals[row]["senses"][0]
+                for key in ("sense_id", "source_headword", "use", "use_language", "cefr"):
+                    self.assertEqual(sense[key], original[key])
+                excluded_change = changes.get((sense["sense_id"], "excluded_uses"))
+                self.assertEqual(sense["excluded_uses"], excluded_change["accepted_text"]
+                                 if excluded_change else original["excluded_uses"])
                 self.assertEqual(sense["source_headword"], group["headword"])
                 self.assertEqual(set(sense["fields"]), {"french_definition", "ipa", "english", "chinese"})
                 for name, field in sense["fields"].items():
+                    original_field = original["fields"][name]
+                    for key in ("language", "source_id", "source_span", "content_license", "modification"):
+                        self.assertEqual(field[key], original_field[key])
+                    change = changes.get((sense["sense_id"], name))
+                    self.assertEqual(field["text"], change["accepted_text"]
+                                     if change else original_field["text"])
+                    if change:
+                        self.assertEqual(change["candidate_text"], original_field["text"])
                     self.assertTrue(field["text"].strip())
                     binding = bindings[sense["sense_id"], name]
                     self.assertEqual(field["source_id"], binding["source_id"])
@@ -61,15 +86,19 @@ class Batch101Tests(unittest.TestCase):
                     self.assertEqual(source["revid"], binding["revid"])
                     self.assertEqual(source["fixed_url"], binding["fixed_url"])
                     self.assertIn("oldid=" + str(binding["revid"]), binding["fixed_url"])
-                    self.assertEqual(field["text"], reviewed[sense["sense_id"], name]["candidate_text"])
+                    record = reviewed[sense["sense_id"], name]
+                    self.assertEqual(original_field["text"], record["candidate_text"])
+                    self.assertEqual(field["text"], record["accepted_text"])
+                    self.assertEqual(record["accepted_text_quality_status"], "passed")
+                    self.assertEqual(record["rights_eligibility_status"], "passed_at_selected_text_boundary")
+                    self.assertTrue(record["independence"])
                     self.assertEqual(binding["raw_source_excerpt"], locations[sense["sense_id"], name]["raw_source_excerpt"])
                     self.assertEqual(binding["revid"], locations[sense["sense_id"], name]["revid"])
                     if name == "ipa":
                         self.assertTrue(field["text"].startswith("/") and field["text"].endswith("/"))
                         self.assertIn("|" + field["text"][1:-1] + "|", binding["raw_source_excerpt"])
-                    if not review["independence"]:
-                        self.assertEqual(field["independent_review"], "pending")
-                        self.assertIsNone(field["reviewer"])
+                    self.assertEqual(field["independent_review"], "passed")
+                    self.assertTrue(field["reviewer"])
 
     def test_fields_match_retained_original_revision_text(self):
         captures = json.loads((EVIDENCE / "source-captures.json").read_text(encoding="utf-8"))["sources"]

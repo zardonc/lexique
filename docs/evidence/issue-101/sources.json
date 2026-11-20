@@ -13,14 +13,18 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are Wiki contributor text under CC BY-SA 4.0. The selected lines are not quoted third-party examples or identified proprietary imports. Dictionary bibliography, where present, is preserved as bibliography; it does not license or establish copying of those works. No third-party example, image, audio or proprietary Robert wording supplies a field.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "selected_field_source"
   },
   {
     "id": "b101_fr_429",
@@ -32,11 +36,11 @@
     "timestamp": "2026-11-12T13:19:47Z",
     "fixed_url": "https://fr.wiktionary.org/w/index.php?title=animal&oldid=40006470",
     "history_url": "https://fr.wiktionary.org/w/index.php?title=animal&action=history",
-    "attribution": "Wiktionnaire contributors (complete linked article history); Lexique contributors for selected adaptations and new explanatory translations.",
+    "attribution": "Wiktionnaire contributors (complete linked article history); Académie française, Dictionnaire de l’Académie française, huitième édition, 1932–1935, for the declared original-edition layer; Lexique contributors for scoped adaptations and new explanatory translations.",
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -50,16 +54,20 @@
         "conservative_expiry": "2006-01-01, using final publication in 1935 for the whole edition",
         "wiki_layer": "Wiktionnaire contributor transcription/adaptation, fixed revision and complete linked history, CC BY-SA 4.0",
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
-        "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
-        "assessment": "Proposed reuse of the admitted #99 edition-level basis; independent selected-span review pending. Current statute capture returned HTTP 403."
+        "scope": "DAF8 import or bibliographic reference in the selected French section; preserve original-edition attribution without claiming every selected sentence is verbatim DAF8.",
+        "assessment": "Independently applied to the declared DAF8 edition layer: final publication 1935, collective-work seventy-year term from 1936, conservative expiry 2006-01-01. Original edition is distinct from licensed Wiki changes and Lexique adaptations. The existing fixed legal basis is retained; no successful fresh statute retrieval is claimed."
       }
     ],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are outside cited example prose. DAF8 import/reference is preserved with Académie française edition attribution and the original collective-edition public-domain basis, separately from CC BY-SA 4.0 Wiki transcription/adaptation and Lexique translations. No sentence-level DAF8 authorship is inferred from the marker.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "selected_field_source"
   },
   {
     "id": "b101_fr_2910",
@@ -75,14 +83,18 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are Wiki contributor text under CC BY-SA 4.0. The selected lines are not quoted third-party examples or identified proprietary imports. Dictionary bibliography, where present, is preserved as bibliography; it does not license or establish copying of those works. No third-party example, image, audio or proprietary Robert wording supplies a field.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "selected_field_source"
   },
   {
     "id": "b101_fr_5151",
@@ -94,11 +106,11 @@
     "timestamp": "2026-09-30T06:28:30Z",
     "fixed_url": "https://fr.wiktionary.org/w/index.php?title=cr%C3%A9er&oldid=39910556",
     "history_url": "https://fr.wiktionary.org/w/index.php?title=cr%C3%A9er&action=history",
-    "attribution": "Wiktionnaire contributors (complete linked article history); Lexique contributors for selected adaptations and new explanatory translations.",
+    "attribution": "Wiktionnaire contributors (complete linked article history); Académie française, Dictionnaire de l’Académie française, huitième édition, 1932–1935, for the declared original-edition layer; Lexique contributors for scoped adaptations and new explanatory translations.",
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -112,16 +124,20 @@
         "conservative_expiry": "2006-01-01, using final publication in 1935 for the whole edition",
         "wiki_layer": "Wiktionnaire contributor transcription/adaptation, fixed revision and complete linked history, CC BY-SA 4.0",
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
-        "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
-        "assessment": "Proposed reuse of the admitted #99 edition-level basis; independent selected-span review pending. Current statute capture returned HTTP 403."
+        "scope": "DAF8 import or bibliographic reference in the selected French section; preserve original-edition attribution without claiming every selected sentence is verbatim DAF8.",
+        "assessment": "Independently applied to the declared DAF8 edition layer: final publication 1935, collective-work seventy-year term from 1936, conservative expiry 2006-01-01. Original edition is distinct from licensed Wiki changes and Lexique adaptations. The existing fixed legal basis is retained; no successful fresh statute retrieval is claimed."
       }
     ],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are outside cited example prose. DAF8 import/reference is preserved with Académie française edition attribution and the original collective-edition public-domain basis, separately from CC BY-SA 4.0 Wiki transcription/adaptation and Lexique translations. No sentence-level DAF8 authorship is inferred from the marker.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "selected_field_source"
   },
   {
     "id": "b101_fr_5168",
@@ -133,18 +149,38 @@
     "timestamp": "2026-10-27T01:18:37Z",
     "fixed_url": "https://fr.wiktionary.org/w/index.php?title=vin&oldid=39959102",
     "history_url": "https://fr.wiktionary.org/w/index.php?title=vin&action=history",
-    "attribution": "Wiktionnaire contributors (complete linked article history); Lexique contributors for selected adaptations and new explanatory translations.",
+    "attribution": "Wiktionnaire contributors (complete linked article history); Académie française, Dictionnaire de l’Académie française, huitième édition, 1932–1935, for the declared original-edition layer; Lexique contributors for scoped adaptations and new explanatory translations.",
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
-    "original_authors_and_rights": [],
+    "selected_text_review": "passed_for_selected_spans",
+    "original_authors_and_rights": [
+      {
+        "id": "original-academie8-1932-1935",
+        "author": "Académie française",
+        "title": "Dictionnaire de l’Académie française, huitième édition",
+        "publication": "1932–1935; final publication 1935",
+        "work_type": "collective work",
+        "original_rights": "public domain",
+        "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
+        "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+        "conservative_expiry": "2006-01-01, using final publication in 1935 for the whole edition",
+        "wiki_layer": "Wiktionnaire contributor transcription/adaptation, fixed revision and complete linked history, CC BY-SA 4.0",
+        "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
+        "scope": "DAF8 import or bibliographic reference in the selected French section; preserve original-edition attribution without claiming every selected sentence is verbatim DAF8.",
+        "assessment": "Independently applied to the declared DAF8 edition layer: final publication 1935, collective-work seventy-year term from 1936, conservative expiry 2006-01-01. Original edition is distinct from licensed Wiki changes and Lexique adaptations. The existing fixed legal basis is retained; no successful fresh statute retrieval is claimed."
+      }
+    ],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are outside cited example prose. DAF8 import/reference is preserved with Académie française edition attribution and the original collective-edition public-domain basis, separately from CC BY-SA 4.0 Wiki transcription/adaptation and Lexique translations. No sentence-level DAF8 authorship is inferred from the marker.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "selected_field_source"
   },
   {
     "id": "b101_fr_7338",
@@ -156,18 +192,38 @@
     "timestamp": "2026-08-03T11:12:31Z",
     "fixed_url": "https://fr.wiktionary.org/w/index.php?title=m&oldid=39772551",
     "history_url": "https://fr.wiktionary.org/w/index.php?title=m&action=history",
-    "attribution": "Wiktionnaire contributors (complete linked article history); Lexique contributors for selected adaptations and new explanatory translations.",
+    "attribution": "Wiktionnaire contributors (complete linked article history); Académie française, Dictionnaire de l’Académie française, huitième édition, 1932–1935, for the declared original-edition layer; Lexique contributors for scoped adaptations and new explanatory translations.",
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
-    "original_authors_and_rights": [],
+    "selected_text_review": "passed_for_selected_spans",
+    "original_authors_and_rights": [
+      {
+        "id": "original-academie8-1932-1935",
+        "author": "Académie française",
+        "title": "Dictionnaire de l’Académie française, huitième édition",
+        "publication": "1932–1935; final publication 1935",
+        "work_type": "collective work",
+        "original_rights": "public domain",
+        "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
+        "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+        "conservative_expiry": "2006-01-01, using final publication in 1935 for the whole edition",
+        "wiki_layer": "Wiktionnaire contributor transcription/adaptation, fixed revision and complete linked history, CC BY-SA 4.0",
+        "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
+        "scope": "DAF8 import or bibliographic reference in the selected French section; preserve original-edition attribution without claiming every selected sentence is verbatim DAF8.",
+        "assessment": "Independently applied to the declared DAF8 edition layer: final publication 1935, collective-work seventy-year term from 1936, conservative expiry 2006-01-01. Original edition is distinct from licensed Wiki changes and Lexique adaptations. The existing fixed legal basis is retained; no successful fresh statute retrieval is claimed."
+      }
+    ],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are outside cited example prose. DAF8 import/reference is preserved with Académie française edition attribution and the original collective-edition public-domain basis, separately from CC BY-SA 4.0 Wiki transcription/adaptation and Lexique translations. No sentence-level DAF8 authorship is inferred from the marker.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "selected_field_source"
   },
   {
     "id": "b101_fr_8063",
@@ -179,18 +235,38 @@
     "timestamp": "2026-11-09T15:17:09Z",
     "fixed_url": "https://fr.wiktionary.org/w/index.php?title=doigt&oldid=40000052",
     "history_url": "https://fr.wiktionary.org/w/index.php?title=doigt&action=history",
-    "attribution": "Wiktionnaire contributors (complete linked article history); Lexique contributors for selected adaptations and new explanatory translations.",
+    "attribution": "Wiktionnaire contributors (complete linked article history); Académie française, Dictionnaire de l’Académie française, huitième édition, 1932–1935, for the declared original-edition layer; Lexique contributors for scoped adaptations and new explanatory translations.",
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
-    "original_authors_and_rights": [],
+    "selected_text_review": "passed_for_selected_spans",
+    "original_authors_and_rights": [
+      {
+        "id": "original-academie8-1932-1935",
+        "author": "Académie française",
+        "title": "Dictionnaire de l’Académie française, huitième édition",
+        "publication": "1932–1935; final publication 1935",
+        "work_type": "collective work",
+        "original_rights": "public domain",
+        "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
+        "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+        "conservative_expiry": "2006-01-01, using final publication in 1935 for the whole edition",
+        "wiki_layer": "Wiktionnaire contributor transcription/adaptation, fixed revision and complete linked history, CC BY-SA 4.0",
+        "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
+        "scope": "DAF8 import or bibliographic reference in the selected French section; preserve original-edition attribution without claiming every selected sentence is verbatim DAF8.",
+        "assessment": "Independently applied to the declared DAF8 edition layer: final publication 1935, collective-work seventy-year term from 1936, conservative expiry 2006-01-01. Original edition is distinct from licensed Wiki changes and Lexique adaptations. The existing fixed legal basis is retained; no successful fresh statute retrieval is claimed."
+      }
+    ],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are outside cited example prose. DAF8 import/reference is preserved with Académie française edition attribution and the original collective-edition public-domain basis, separately from CC BY-SA 4.0 Wiki transcription/adaptation and Lexique translations. No sentence-level DAF8 authorship is inferred from the marker.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "selected_field_source"
   },
   {
     "id": "b101_fr_8562",
@@ -202,11 +278,11 @@
     "timestamp": "2026-05-13T15:26:42Z",
     "fixed_url": "https://fr.wiktionary.org/w/index.php?title=mille&oldid=39506344",
     "history_url": "https://fr.wiktionary.org/w/index.php?title=mille&action=history",
-    "attribution": "Wiktionnaire contributors (complete linked article history); Lexique contributors for selected adaptations and new explanatory translations.",
+    "attribution": "Wiktionnaire contributors (complete linked article history); Académie française, Dictionnaire de l’Académie française, huitième édition, 1932–1935, for the declared original-edition layer; Lexique contributors for scoped adaptations and new explanatory translations.",
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -220,16 +296,20 @@
         "conservative_expiry": "2006-01-01, using final publication in 1935 for the whole edition",
         "wiki_layer": "Wiktionnaire contributor transcription/adaptation, fixed revision and complete linked history, CC BY-SA 4.0",
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
-        "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
-        "assessment": "Proposed reuse of the admitted #99 edition-level basis; independent selected-span review pending. Current statute capture returned HTTP 403."
+        "scope": "DAF8 import or bibliographic reference in the selected French section; preserve original-edition attribution without claiming every selected sentence is verbatim DAF8.",
+        "assessment": "Independently applied to the declared DAF8 edition layer: final publication 1935, collective-work seventy-year term from 1936, conservative expiry 2006-01-01. Original edition is distinct from licensed Wiki changes and Lexique adaptations. The existing fixed legal basis is retained; no successful fresh statute retrieval is claimed."
       }
     ],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are outside cited example prose. DAF8 import/reference is preserved with Académie française edition attribution and the original collective-edition public-domain basis, separately from CC BY-SA 4.0 Wiki transcription/adaptation and Lexique translations. No sentence-level DAF8 authorship is inferred from the marker.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "selected_field_source"
   },
   {
     "id": "b101_fr_10397",
@@ -241,18 +321,38 @@
     "timestamp": "2026-11-13T09:04:41Z",
     "fixed_url": "https://fr.wiktionary.org/w/index.php?title=robe&oldid=40007837",
     "history_url": "https://fr.wiktionary.org/w/index.php?title=robe&action=history",
-    "attribution": "Wiktionnaire contributors (complete linked article history); Lexique contributors for selected adaptations and new explanatory translations.",
+    "attribution": "Wiktionnaire contributors (complete linked article history); Académie française, Dictionnaire de l’Académie française, huitième édition, 1932–1935, for the declared original-edition layer; Lexique contributors for scoped adaptations and new explanatory translations.",
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
-    "original_authors_and_rights": [],
+    "selected_text_review": "passed_for_selected_spans",
+    "original_authors_and_rights": [
+      {
+        "id": "original-academie8-1932-1935",
+        "author": "Académie française",
+        "title": "Dictionnaire de l’Académie française, huitième édition",
+        "publication": "1932–1935; final publication 1935",
+        "work_type": "collective work",
+        "original_rights": "public domain",
+        "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
+        "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+        "conservative_expiry": "2006-01-01, using final publication in 1935 for the whole edition",
+        "wiki_layer": "Wiktionnaire contributor transcription/adaptation, fixed revision and complete linked history, CC BY-SA 4.0",
+        "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
+        "scope": "DAF8 import or bibliographic reference in the selected French section; preserve original-edition attribution without claiming every selected sentence is verbatim DAF8.",
+        "assessment": "Independently applied to the declared DAF8 edition layer: final publication 1935, collective-work seventy-year term from 1936, conservative expiry 2006-01-01. Original edition is distinct from licensed Wiki changes and Lexique adaptations. The existing fixed legal basis is retained; no successful fresh statute retrieval is claimed."
+      }
+    ],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are outside cited example prose. DAF8 import/reference is preserved with Académie française edition attribution and the original collective-edition public-domain basis, separately from CC BY-SA 4.0 Wiki transcription/adaptation and Lexique translations. No sentence-level DAF8 authorship is inferred from the marker.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "selected_field_source"
   },
   {
     "id": "b101_fr_11654",
@@ -264,11 +364,11 @@
     "timestamp": "2026-09-29T09:25:51Z",
     "fixed_url": "https://fr.wiktionary.org/w/index.php?title=vaisseau&oldid=39909455",
     "history_url": "https://fr.wiktionary.org/w/index.php?title=vaisseau&action=history",
-    "attribution": "Wiktionnaire contributors (complete linked article history); Lexique contributors for selected adaptations and new explanatory translations.",
+    "attribution": "Wiktionnaire contributors (complete linked article history); Académie française, Dictionnaire de l’Académie française, huitième édition, 1932–1935, for the declared original-edition layer; Lexique contributors for scoped adaptations and new explanatory translations.",
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -282,16 +382,20 @@
         "conservative_expiry": "2006-01-01, using final publication in 1935 for the whole edition",
         "wiki_layer": "Wiktionnaire contributor transcription/adaptation, fixed revision and complete linked history, CC BY-SA 4.0",
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
-        "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
-        "assessment": "Proposed reuse of the admitted #99 edition-level basis; independent selected-span review pending. Current statute capture returned HTTP 403."
+        "scope": "DAF8 import or bibliographic reference in the selected French section; preserve original-edition attribution without claiming every selected sentence is verbatim DAF8.",
+        "assessment": "Independently applied to the declared DAF8 edition layer: final publication 1935, collective-work seventy-year term from 1936, conservative expiry 2006-01-01. Original edition is distinct from licensed Wiki changes and Lexique adaptations. The existing fixed legal basis is retained; no successful fresh statute retrieval is claimed."
       }
     ],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are outside cited example prose. DAF8 import/reference is preserved with Académie française edition attribution and the original collective-edition public-domain basis, separately from CC BY-SA 4.0 Wiki transcription/adaptation and Lexique translations. No sentence-level DAF8 authorship is inferred from the marker.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "selected_field_source"
   },
   {
     "id": "b101_fr_13016",
@@ -303,11 +407,11 @@
     "timestamp": "2026-10-10T19:19:51Z",
     "fixed_url": "https://fr.wiktionary.org/w/index.php?title=d%C3%A9jeuner&oldid=39927173",
     "history_url": "https://fr.wiktionary.org/w/index.php?title=d%C3%A9jeuner&action=history",
-    "attribution": "Wiktionnaire contributors (complete linked article history); Lexique contributors for selected adaptations and new explanatory translations.",
+    "attribution": "Wiktionnaire contributors (complete linked article history); Académie française, Dictionnaire de l’Académie française, huitième édition, 1932–1935, for the declared original-edition layer; Lexique contributors for scoped adaptations and new explanatory translations.",
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -321,16 +425,20 @@
         "conservative_expiry": "2006-01-01, using final publication in 1935 for the whole edition",
         "wiki_layer": "Wiktionnaire contributor transcription/adaptation, fixed revision and complete linked history, CC BY-SA 4.0",
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
-        "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
-        "assessment": "Proposed reuse of the admitted #99 edition-level basis; independent selected-span review pending. Current statute capture returned HTTP 403."
+        "scope": "DAF8 import or bibliographic reference in the selected French section; preserve original-edition attribution without claiming every selected sentence is verbatim DAF8.",
+        "assessment": "Independently applied to the declared DAF8 edition layer: final publication 1935, collective-work seventy-year term from 1936, conservative expiry 2006-01-01. Original edition is distinct from licensed Wiki changes and Lexique adaptations. The existing fixed legal basis is retained; no successful fresh statute retrieval is claimed."
       }
     ],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are outside cited example prose. DAF8 import/reference is preserved with Académie française edition attribution and the original collective-edition public-domain basis, separately from CC BY-SA 4.0 Wiki transcription/adaptation and Lexique translations. No sentence-level DAF8 authorship is inferred from the marker.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "selected_field_source"
   },
   {
     "id": "b101_fr_21362",
@@ -346,14 +454,18 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are Wiki contributor text under CC BY-SA 4.0. The selected lines are not quoted third-party examples or identified proprietary imports. Dictionary bibliography, where present, is preserved as bibliography; it does not license or establish copying of those works. No third-party example, image, audio or proprietary Robert wording supplies a field.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "selected_field_source"
   },
   {
     "id": "b101_fr_25237",
@@ -369,14 +481,18 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are Wiki contributor text under CC BY-SA 4.0. The selected lines are not quoted third-party examples or identified proprietary imports. Dictionary bibliography, where present, is preserved as bibliography; it does not license or establish copying of those works. No third-party example, image, audio or proprietary Robert wording supplies a field.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "selected_field_source"
   },
   {
     "id": "b101_fr_26868",
@@ -392,14 +508,18 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are Wiki contributor text under CC BY-SA 4.0. The selected lines are not quoted third-party examples or identified proprietary imports. Dictionary bibliography, where present, is preserved as bibliography; it does not license or establish copying of those works. No third-party example, image, audio or proprietary Robert wording supplies a field.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "selected_field_source"
   },
   {
     "id": "b101_fr_34946",
@@ -411,11 +531,11 @@
     "timestamp": "2026-08-28T07:39:01Z",
     "fixed_url": "https://fr.wiktionary.org/w/index.php?title=co%C3%BBter&oldid=39835477",
     "history_url": "https://fr.wiktionary.org/w/index.php?title=co%C3%BBter&action=history",
-    "attribution": "Wiktionnaire contributors (complete linked article history); Lexique contributors for selected adaptations and new explanatory translations.",
+    "attribution": "Wiktionnaire contributors (complete linked article history); Académie française, Dictionnaire de l’Académie française, huitième édition, 1932–1935, for the declared original-edition layer; Lexique contributors for scoped adaptations and new explanatory translations.",
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -429,16 +549,20 @@
         "conservative_expiry": "2006-01-01, using final publication in 1935 for the whole edition",
         "wiki_layer": "Wiktionnaire contributor transcription/adaptation, fixed revision and complete linked history, CC BY-SA 4.0",
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
-        "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
-        "assessment": "Proposed reuse of the admitted #99 edition-level basis; independent selected-span review pending. Current statute capture returned HTTP 403."
+        "scope": "DAF8 import or bibliographic reference in the selected French section; preserve original-edition attribution without claiming every selected sentence is verbatim DAF8.",
+        "assessment": "Independently applied to the declared DAF8 edition layer: final publication 1935, collective-work seventy-year term from 1936, conservative expiry 2006-01-01. Original edition is distinct from licensed Wiki changes and Lexique adaptations. The existing fixed legal basis is retained; no successful fresh statute retrieval is claimed."
       }
     ],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are outside cited example prose. DAF8 import/reference is preserved with Académie française edition attribution and the original collective-edition public-domain basis, separately from CC BY-SA 4.0 Wiki transcription/adaptation and Lexique translations. No sentence-level DAF8 authorship is inferred from the marker.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "selected_field_source"
   },
   {
     "id": "b101_fr_36603",
@@ -454,14 +578,18 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are Wiki contributor text under CC BY-SA 4.0. The selected lines are not quoted third-party examples or identified proprietary imports. Dictionary bibliography, where present, is preserved as bibliography; it does not license or establish copying of those works. No third-party example, image, audio or proprietary Robert wording supplies a field.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "selected_field_source"
   },
   {
     "id": "b101_fr_37815",
@@ -477,14 +605,18 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are Wiki contributor text under CC BY-SA 4.0. The selected lines are not quoted third-party examples or identified proprietary imports. Dictionary bibliography, where present, is preserved as bibliography; it does not license or establish copying of those works. No third-party example, image, audio or proprietary Robert wording supplies a field.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "selected_field_source"
   },
   {
     "id": "b101_fr_42279",
@@ -496,18 +628,38 @@
     "timestamp": "2026-09-22T13:32:12Z",
     "fixed_url": "https://fr.wiktionary.org/w/index.php?title=me&oldid=39891222",
     "history_url": "https://fr.wiktionary.org/w/index.php?title=me&action=history",
-    "attribution": "Wiktionnaire contributors (complete linked article history); Lexique contributors for selected adaptations and new explanatory translations.",
+    "attribution": "Wiktionnaire contributors (complete linked article history); Académie française, Dictionnaire de l’Académie française, huitième édition, 1932–1935, for the declared original-edition layer; Lexique contributors for scoped adaptations and new explanatory translations.",
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
-    "original_authors_and_rights": [],
+    "selected_text_review": "passed_for_selected_spans",
+    "original_authors_and_rights": [
+      {
+        "id": "original-academie8-1932-1935",
+        "author": "Académie française",
+        "title": "Dictionnaire de l’Académie française, huitième édition",
+        "publication": "1932–1935; final publication 1935",
+        "work_type": "collective work",
+        "original_rights": "public domain",
+        "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
+        "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+        "conservative_expiry": "2006-01-01, using final publication in 1935 for the whole edition",
+        "wiki_layer": "Wiktionnaire contributor transcription/adaptation, fixed revision and complete linked history, CC BY-SA 4.0",
+        "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
+        "scope": "DAF8 import or bibliographic reference in the selected French section; preserve original-edition attribution without claiming every selected sentence is verbatim DAF8.",
+        "assessment": "Independently applied to the declared DAF8 edition layer: final publication 1935, collective-work seventy-year term from 1936, conservative expiry 2006-01-01. Original edition is distinct from licensed Wiki changes and Lexique adaptations. The existing fixed legal basis is retained; no successful fresh statute retrieval is claimed."
+      }
+    ],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are outside cited example prose. DAF8 import/reference is preserved with Académie française edition attribution and the original collective-edition public-domain basis, separately from CC BY-SA 4.0 Wiki transcription/adaptation and Lexique translations. No sentence-level DAF8 authorship is inferred from the marker.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "supporting_evidence_only"
   },
   {
     "id": "b101_fr_67808",
@@ -519,11 +671,11 @@
     "timestamp": "2026-09-11T15:41:21Z",
     "fixed_url": "https://fr.wiktionary.org/w/index.php?title=adieu&oldid=39872001",
     "history_url": "https://fr.wiktionary.org/w/index.php?title=adieu&action=history",
-    "attribution": "Wiktionnaire contributors (complete linked article history); Lexique contributors for selected adaptations and new explanatory translations.",
+    "attribution": "Wiktionnaire contributors (complete linked article history); Académie française, Dictionnaire de l’Académie française, huitième édition, 1932–1935, for the declared original-edition layer; Lexique contributors for scoped adaptations and new explanatory translations.",
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -537,16 +689,20 @@
         "conservative_expiry": "2006-01-01, using final publication in 1935 for the whole edition",
         "wiki_layer": "Wiktionnaire contributor transcription/adaptation, fixed revision and complete linked history, CC BY-SA 4.0",
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
-        "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
-        "assessment": "Proposed reuse of the admitted #99 edition-level basis; independent selected-span review pending. Current statute capture returned HTTP 403."
+        "scope": "DAF8 import or bibliographic reference in the selected French section; preserve original-edition attribution without claiming every selected sentence is verbatim DAF8.",
+        "assessment": "Independently applied to the declared DAF8 edition layer: final publication 1935, collective-work seventy-year term from 1936, conservative expiry 2006-01-01. Original edition is distinct from licensed Wiki changes and Lexique adaptations. The existing fixed legal basis is retained; no successful fresh statute retrieval is claimed."
       }
     ],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are outside cited example prose. DAF8 import/reference is preserved with Académie française edition attribution and the original collective-edition public-domain basis, separately from CC BY-SA 4.0 Wiki transcription/adaptation and Lexique translations. No sentence-level DAF8 authorship is inferred from the marker.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "selected_field_source"
   },
   {
     "id": "b101_fr_70402",
@@ -558,18 +714,38 @@
     "timestamp": "2026-11-09T20:10:09Z",
     "fixed_url": "https://fr.wiktionary.org/w/index.php?title=vol&oldid=40000714",
     "history_url": "https://fr.wiktionary.org/w/index.php?title=vol&action=history",
-    "attribution": "Wiktionnaire contributors (complete linked article history); Lexique contributors for selected adaptations and new explanatory translations.",
+    "attribution": "Wiktionnaire contributors (complete linked article history); Académie française, Dictionnaire de l’Académie française, huitième édition, 1932–1935, for the declared original-edition layer; Lexique contributors for scoped adaptations and new explanatory translations.",
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
-    "original_authors_and_rights": [],
+    "selected_text_review": "passed_for_selected_spans",
+    "original_authors_and_rights": [
+      {
+        "id": "original-academie8-1932-1935",
+        "author": "Académie française",
+        "title": "Dictionnaire de l’Académie française, huitième édition",
+        "publication": "1932–1935; final publication 1935",
+        "work_type": "collective work",
+        "original_rights": "public domain",
+        "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
+        "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+        "conservative_expiry": "2006-01-01, using final publication in 1935 for the whole edition",
+        "wiki_layer": "Wiktionnaire contributor transcription/adaptation, fixed revision and complete linked history, CC BY-SA 4.0",
+        "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
+        "scope": "DAF8 import or bibliographic reference in the selected French section; preserve original-edition attribution without claiming every selected sentence is verbatim DAF8.",
+        "assessment": "Independently applied to the declared DAF8 edition layer: final publication 1935, collective-work seventy-year term from 1936, conservative expiry 2006-01-01. Original edition is distinct from licensed Wiki changes and Lexique adaptations. The existing fixed legal basis is retained; no successful fresh statute retrieval is claimed."
+      }
+    ],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are outside cited example prose. DAF8 import/reference is preserved with Académie française edition attribution and the original collective-edition public-domain basis, separately from CC BY-SA 4.0 Wiki transcription/adaptation and Lexique translations. No sentence-level DAF8 authorship is inferred from the marker.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "selected_field_source"
   },
   {
     "id": "b101_fr_103171",
@@ -581,11 +757,11 @@
     "timestamp": "2026-08-18T20:08:11Z",
     "fixed_url": "https://fr.wiktionary.org/w/index.php?title=billet&oldid=39814201",
     "history_url": "https://fr.wiktionary.org/w/index.php?title=billet&action=history",
-    "attribution": "Wiktionnaire contributors (complete linked article history); Lexique contributors for selected adaptations and new explanatory translations.",
+    "attribution": "Wiktionnaire contributors (complete linked article history); Académie française, Dictionnaire de l’Académie française, huitième édition, 1932–1935, for the declared original-edition layer; Lexique contributors for scoped adaptations and new explanatory translations.",
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -599,16 +775,20 @@
         "conservative_expiry": "2006-01-01, using final publication in 1935 for the whole edition",
         "wiki_layer": "Wiktionnaire contributor transcription/adaptation, fixed revision and complete linked history, CC BY-SA 4.0",
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
-        "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
-        "assessment": "Proposed reuse of the admitted #99 edition-level basis; independent selected-span review pending. Current statute capture returned HTTP 403."
+        "scope": "DAF8 import or bibliographic reference in the selected French section; preserve original-edition attribution without claiming every selected sentence is verbatim DAF8.",
+        "assessment": "Independently applied to the declared DAF8 edition layer: final publication 1935, collective-work seventy-year term from 1936, conservative expiry 2006-01-01. Original edition is distinct from licensed Wiki changes and Lexique adaptations. The existing fixed legal basis is retained; no successful fresh statute retrieval is claimed."
       }
     ],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are outside cited example prose. DAF8 import/reference is preserved with Académie française edition attribution and the original collective-edition public-domain basis, separately from CC BY-SA 4.0 Wiki transcription/adaptation and Lexique translations. No sentence-level DAF8 authorship is inferred from the marker.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "selected_field_source"
   },
   {
     "id": "b101_fr_104204",
@@ -620,11 +800,11 @@
     "timestamp": "2026-08-03T22:04:45Z",
     "fixed_url": "https://fr.wiktionary.org/w/index.php?title=mission&oldid=39775890",
     "history_url": "https://fr.wiktionary.org/w/index.php?title=mission&action=history",
-    "attribution": "Wiktionnaire contributors (complete linked article history); Lexique contributors for selected adaptations and new explanatory translations.",
+    "attribution": "Wiktionnaire contributors (complete linked article history); Académie française, Dictionnaire de l’Académie française, huitième édition, 1932–1935, for the declared original-edition layer; Lexique contributors for scoped adaptations and new explanatory translations.",
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -638,16 +818,20 @@
         "conservative_expiry": "2006-01-01, using final publication in 1935 for the whole edition",
         "wiki_layer": "Wiktionnaire contributor transcription/adaptation, fixed revision and complete linked history, CC BY-SA 4.0",
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
-        "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
-        "assessment": "Proposed reuse of the admitted #99 edition-level basis; independent selected-span review pending. Current statute capture returned HTTP 403."
+        "scope": "DAF8 import or bibliographic reference in the selected French section; preserve original-edition attribution without claiming every selected sentence is verbatim DAF8.",
+        "assessment": "Independently applied to the declared DAF8 edition layer: final publication 1935, collective-work seventy-year term from 1936, conservative expiry 2006-01-01. Original edition is distinct from licensed Wiki changes and Lexique adaptations. The existing fixed legal basis is retained; no successful fresh statute retrieval is claimed."
       }
     ],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are outside cited example prose. DAF8 import/reference is preserved with Académie française edition attribution and the original collective-edition public-domain basis, separately from CC BY-SA 4.0 Wiki transcription/adaptation and Lexique translations. No sentence-level DAF8 authorship is inferred from the marker.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "selected_field_source"
   },
   {
     "id": "b101_fr_104428",
@@ -663,14 +847,18 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are Wiki contributor text under CC BY-SA 4.0. The selected lines are not quoted third-party examples or identified proprietary imports. Dictionary bibliography, where present, is preserved as bibliography; it does not license or establish copying of those works. No third-party example, image, audio or proprietary Robert wording supplies a field.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "selected_field_source"
   },
   {
     "id": "b101_fr_111209",
@@ -682,18 +870,38 @@
     "timestamp": "2026-11-13T07:45:17Z",
     "fixed_url": "https://fr.wiktionary.org/w/index.php?title=poste&oldid=40007697",
     "history_url": "https://fr.wiktionary.org/w/index.php?title=poste&action=history",
-    "attribution": "Wiktionnaire contributors (complete linked article history); Lexique contributors for selected adaptations and new explanatory translations.",
+    "attribution": "Wiktionnaire contributors (complete linked article history); Académie française, Dictionnaire de l’Académie française, huitième édition, 1932–1935, for the declared original-edition layer; Lexique contributors for scoped adaptations and new explanatory translations.",
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
-    "original_authors_and_rights": [],
+    "selected_text_review": "passed_for_selected_spans",
+    "original_authors_and_rights": [
+      {
+        "id": "original-academie8-1932-1935",
+        "author": "Académie française",
+        "title": "Dictionnaire de l’Académie française, huitième édition",
+        "publication": "1932–1935; final publication 1935",
+        "work_type": "collective work",
+        "original_rights": "public domain",
+        "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
+        "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+        "conservative_expiry": "2006-01-01, using final publication in 1935 for the whole edition",
+        "wiki_layer": "Wiktionnaire contributor transcription/adaptation, fixed revision and complete linked history, CC BY-SA 4.0",
+        "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
+        "scope": "DAF8 import or bibliographic reference in the selected French section; preserve original-edition attribution without claiming every selected sentence is verbatim DAF8.",
+        "assessment": "Independently applied to the declared DAF8 edition layer: final publication 1935, collective-work seventy-year term from 1936, conservative expiry 2006-01-01. Original edition is distinct from licensed Wiki changes and Lexique adaptations. The existing fixed legal basis is retained; no successful fresh statute retrieval is claimed."
+      }
+    ],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are outside cited example prose. DAF8 import/reference is preserved with Académie française edition attribution and the original collective-edition public-domain basis, separately from CC BY-SA 4.0 Wiki transcription/adaptation and Lexique translations. No sentence-level DAF8 authorship is inferred from the marker.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "selected_field_source"
   },
   {
     "id": "b101_fr_115306",
@@ -705,18 +913,38 @@
     "timestamp": "2026-08-03T11:13:24Z",
     "fixed_url": "https://fr.wiktionary.org/w/index.php?title=signe&oldid=39772591",
     "history_url": "https://fr.wiktionary.org/w/index.php?title=signe&action=history",
-    "attribution": "Wiktionnaire contributors (complete linked article history); Lexique contributors for selected adaptations and new explanatory translations.",
+    "attribution": "Wiktionnaire contributors (complete linked article history); Académie française, Dictionnaire de l’Académie française, huitième édition, 1932–1935, for the declared original-edition layer; Lexique contributors for scoped adaptations and new explanatory translations.",
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
-    "original_authors_and_rights": [],
+    "selected_text_review": "passed_for_selected_spans",
+    "original_authors_and_rights": [
+      {
+        "id": "original-academie8-1932-1935",
+        "author": "Académie française",
+        "title": "Dictionnaire de l’Académie française, huitième édition",
+        "publication": "1932–1935; final publication 1935",
+        "work_type": "collective work",
+        "original_rights": "public domain",
+        "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
+        "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+        "conservative_expiry": "2006-01-01, using final publication in 1935 for the whole edition",
+        "wiki_layer": "Wiktionnaire contributor transcription/adaptation, fixed revision and complete linked history, CC BY-SA 4.0",
+        "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
+        "scope": "DAF8 import or bibliographic reference in the selected French section; preserve original-edition attribution without claiming every selected sentence is verbatim DAF8.",
+        "assessment": "Independently applied to the declared DAF8 edition layer: final publication 1935, collective-work seventy-year term from 1936, conservative expiry 2006-01-01. Original edition is distinct from licensed Wiki changes and Lexique adaptations. The existing fixed legal basis is retained; no successful fresh statute retrieval is claimed."
+      }
+    ],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are outside cited example prose. DAF8 import/reference is preserved with Académie française edition attribution and the original collective-edition public-domain basis, separately from CC BY-SA 4.0 Wiki transcription/adaptation and Lexique translations. No sentence-level DAF8 authorship is inferred from the marker.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "selected_field_source"
   },
   {
     "id": "b101_fr_120591",
@@ -728,11 +956,11 @@
     "timestamp": "2026-09-23T18:10:36Z",
     "fixed_url": "https://fr.wiktionary.org/w/index.php?title=surprise&oldid=39900511",
     "history_url": "https://fr.wiktionary.org/w/index.php?title=surprise&action=history",
-    "attribution": "Wiktionnaire contributors (complete linked article history); Lexique contributors for selected adaptations and new explanatory translations.",
+    "attribution": "Wiktionnaire contributors (complete linked article history); Académie française, Dictionnaire de l’Académie française, huitième édition, 1932–1935, for the declared original-edition layer; Lexique contributors for scoped adaptations and new explanatory translations.",
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -746,16 +974,20 @@
         "conservative_expiry": "2006-01-01, using final publication in 1935 for the whole edition",
         "wiki_layer": "Wiktionnaire contributor transcription/adaptation, fixed revision and complete linked history, CC BY-SA 4.0",
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
-        "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
-        "assessment": "Proposed reuse of the admitted #99 edition-level basis; independent selected-span review pending. Current statute capture returned HTTP 403."
+        "scope": "DAF8 import or bibliographic reference in the selected French section; preserve original-edition attribution without claiming every selected sentence is verbatim DAF8.",
+        "assessment": "Independently applied to the declared DAF8 edition layer: final publication 1935, collective-work seventy-year term from 1936, conservative expiry 2006-01-01. Original edition is distinct from licensed Wiki changes and Lexique adaptations. The existing fixed legal basis is retained; no successful fresh statute retrieval is claimed."
       }
     ],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are outside cited example prose. DAF8 import/reference is preserved with Académie française edition attribution and the original collective-edition public-domain basis, separately from CC BY-SA 4.0 Wiki transcription/adaptation and Lexique translations. No sentence-level DAF8 authorship is inferred from the marker.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "selected_field_source"
   },
   {
     "id": "b101_fr_122368",
@@ -767,11 +999,11 @@
     "timestamp": "2026-10-06T14:05:40Z",
     "fixed_url": "https://fr.wiktionary.org/w/index.php?title=personnel&oldid=39921225",
     "history_url": "https://fr.wiktionary.org/w/index.php?title=personnel&action=history",
-    "attribution": "Wiktionnaire contributors (complete linked article history); Lexique contributors for selected adaptations and new explanatory translations.",
+    "attribution": "Wiktionnaire contributors (complete linked article history); Académie française, Dictionnaire de l’Académie française, huitième édition, 1932–1935, for the declared original-edition layer; Lexique contributors for scoped adaptations and new explanatory translations.",
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -785,16 +1017,20 @@
         "conservative_expiry": "2006-01-01, using final publication in 1935 for the whole edition",
         "wiki_layer": "Wiktionnaire contributor transcription/adaptation, fixed revision and complete linked history, CC BY-SA 4.0",
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
-        "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
-        "assessment": "Proposed reuse of the admitted #99 edition-level basis; independent selected-span review pending. Current statute capture returned HTTP 403."
+        "scope": "DAF8 import or bibliographic reference in the selected French section; preserve original-edition attribution without claiming every selected sentence is verbatim DAF8.",
+        "assessment": "Independently applied to the declared DAF8 edition layer: final publication 1935, collective-work seventy-year term from 1936, conservative expiry 2006-01-01. Original edition is distinct from licensed Wiki changes and Lexique adaptations. The existing fixed legal basis is retained; no successful fresh statute retrieval is claimed."
       }
     ],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are outside cited example prose. DAF8 import/reference is preserved with Académie française edition attribution and the original collective-edition public-domain basis, separately from CC BY-SA 4.0 Wiki transcription/adaptation and Lexique translations. No sentence-level DAF8 authorship is inferred from the marker.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "selected_field_source"
   },
   {
     "id": "b101_fr_141511",
@@ -806,18 +1042,38 @@
     "timestamp": "2026-08-22T12:46:28Z",
     "fixed_url": "https://fr.wiktionary.org/w/index.php?title=moiti%C3%A9&oldid=39824319",
     "history_url": "https://fr.wiktionary.org/w/index.php?title=moiti%C3%A9&action=history",
-    "attribution": "Wiktionnaire contributors (complete linked article history); Lexique contributors for selected adaptations and new explanatory translations.",
+    "attribution": "Wiktionnaire contributors (complete linked article history); Académie française, Dictionnaire de l’Académie française, huitième édition, 1932–1935, for the declared original-edition layer; Lexique contributors for scoped adaptations and new explanatory translations.",
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
-    "original_authors_and_rights": [],
+    "selected_text_review": "passed_for_selected_spans",
+    "original_authors_and_rights": [
+      {
+        "id": "original-academie8-1932-1935",
+        "author": "Académie française",
+        "title": "Dictionnaire de l’Académie française, huitième édition",
+        "publication": "1932–1935; final publication 1935",
+        "work_type": "collective work",
+        "original_rights": "public domain",
+        "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
+        "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+        "conservative_expiry": "2006-01-01, using final publication in 1935 for the whole edition",
+        "wiki_layer": "Wiktionnaire contributor transcription/adaptation, fixed revision and complete linked history, CC BY-SA 4.0",
+        "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
+        "scope": "DAF8 import or bibliographic reference in the selected French section; preserve original-edition attribution without claiming every selected sentence is verbatim DAF8.",
+        "assessment": "Independently applied to the declared DAF8 edition layer: final publication 1935, collective-work seventy-year term from 1936, conservative expiry 2006-01-01. Original edition is distinct from licensed Wiki changes and Lexique adaptations. The existing fixed legal basis is retained; no successful fresh statute retrieval is claimed."
+      }
+    ],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are outside cited example prose. DAF8 import/reference is preserved with Académie française edition attribution and the original collective-edition public-domain basis, separately from CC BY-SA 4.0 Wiki transcription/adaptation and Lexique translations. No sentence-level DAF8 authorship is inferred from the marker.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "selected_field_source"
   },
   {
     "id": "b101_fr_148753",
@@ -829,11 +1085,11 @@
     "timestamp": "2026-08-03T10:46:08Z",
     "fixed_url": "https://fr.wiktionary.org/w/index.php?title=autour&oldid=39771563",
     "history_url": "https://fr.wiktionary.org/w/index.php?title=autour&action=history",
-    "attribution": "Wiktionnaire contributors (complete linked article history); Lexique contributors for selected adaptations and new explanatory translations.",
+    "attribution": "Wiktionnaire contributors (complete linked article history); Académie française, Dictionnaire de l’Académie française, huitième édition, 1932–1935, for the declared original-edition layer; Lexique contributors for scoped adaptations and new explanatory translations.",
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -847,16 +1103,20 @@
         "conservative_expiry": "2006-01-01, using final publication in 1935 for the whole edition",
         "wiki_layer": "Wiktionnaire contributor transcription/adaptation, fixed revision and complete linked history, CC BY-SA 4.0",
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
-        "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
-        "assessment": "Proposed reuse of the admitted #99 edition-level basis; independent selected-span review pending. Current statute capture returned HTTP 403."
+        "scope": "DAF8 import or bibliographic reference in the selected French section; preserve original-edition attribution without claiming every selected sentence is verbatim DAF8.",
+        "assessment": "Independently applied to the declared DAF8 edition layer: final publication 1935, collective-work seventy-year term from 1936, conservative expiry 2006-01-01. Original edition is distinct from licensed Wiki changes and Lexique adaptations. The existing fixed legal basis is retained; no successful fresh statute retrieval is claimed."
       }
     ],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are outside cited example prose. DAF8 import/reference is preserved with Académie française edition attribution and the original collective-edition public-domain basis, separately from CC BY-SA 4.0 Wiki transcription/adaptation and Lexique translations. No sentence-level DAF8 authorship is inferred from the marker.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "selected_field_source"
   },
   {
     "id": "b101_fr_155213",
@@ -868,11 +1128,11 @@
     "timestamp": "2026-10-18T19:29:56Z",
     "fixed_url": "https://fr.wiktionary.org/w/index.php?title=conseil&oldid=39944783",
     "history_url": "https://fr.wiktionary.org/w/index.php?title=conseil&action=history",
-    "attribution": "Wiktionnaire contributors (complete linked article history); Lexique contributors for selected adaptations and new explanatory translations.",
+    "attribution": "Wiktionnaire contributors (complete linked article history); Académie française, Dictionnaire de l’Académie française, huitième édition, 1932–1935, for the declared original-edition layer; Lexique contributors for scoped adaptations and new explanatory translations.",
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -886,16 +1146,20 @@
         "conservative_expiry": "2006-01-01, using final publication in 1935 for the whole edition",
         "wiki_layer": "Wiktionnaire contributor transcription/adaptation, fixed revision and complete linked history, CC BY-SA 4.0",
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
-        "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
-        "assessment": "Proposed reuse of the admitted #99 edition-level basis; independent selected-span review pending. Current statute capture returned HTTP 403."
+        "scope": "DAF8 import or bibliographic reference in the selected French section; preserve original-edition attribution without claiming every selected sentence is verbatim DAF8.",
+        "assessment": "Independently applied to the declared DAF8 edition layer: final publication 1935, collective-work seventy-year term from 1936, conservative expiry 2006-01-01. Original edition is distinct from licensed Wiki changes and Lexique adaptations. The existing fixed legal basis is retained; no successful fresh statute retrieval is claimed."
       }
     ],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are outside cited example prose. DAF8 import/reference is preserved with Académie française edition attribution and the original collective-edition public-domain basis, separately from CC BY-SA 4.0 Wiki transcription/adaptation and Lexique translations. No sentence-level DAF8 authorship is inferred from the marker.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "selected_field_source"
   },
   {
     "id": "b101_fr_160194",
@@ -911,14 +1175,18 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are Wiki contributor text under CC BY-SA 4.0. The selected lines are not quoted third-party examples or identified proprietary imports. Dictionary bibliography, where present, is preserved as bibliography; it does not license or establish copying of those works. No third-party example, image, audio or proprietary Robert wording supplies a field.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "supporting_evidence_only"
   },
   {
     "id": "b101_fr_160466",
@@ -930,11 +1198,11 @@
     "timestamp": "2026-08-03T10:36:50Z",
     "fixed_url": "https://fr.wiktionary.org/w/index.php?title=%C3%A9viter&oldid=39771187",
     "history_url": "https://fr.wiktionary.org/w/index.php?title=%C3%A9viter&action=history",
-    "attribution": "Wiktionnaire contributors (complete linked article history); Lexique contributors for selected adaptations and new explanatory translations.",
+    "attribution": "Wiktionnaire contributors (complete linked article history); Académie française, Dictionnaire de l’Académie française, huitième édition, 1932–1935, for the declared original-edition layer; Lexique contributors for scoped adaptations and new explanatory translations.",
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -948,16 +1216,20 @@
         "conservative_expiry": "2006-01-01, using final publication in 1935 for the whole edition",
         "wiki_layer": "Wiktionnaire contributor transcription/adaptation, fixed revision and complete linked history, CC BY-SA 4.0",
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
-        "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
-        "assessment": "Proposed reuse of the admitted #99 edition-level basis; independent selected-span review pending. Current statute capture returned HTTP 403."
+        "scope": "DAF8 import or bibliographic reference in the selected French section; preserve original-edition attribution without claiming every selected sentence is verbatim DAF8.",
+        "assessment": "Independently applied to the declared DAF8 edition layer: final publication 1935, collective-work seventy-year term from 1936, conservative expiry 2006-01-01. Original edition is distinct from licensed Wiki changes and Lexique adaptations. The existing fixed legal basis is retained; no successful fresh statute retrieval is claimed."
       }
     ],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are outside cited example prose. DAF8 import/reference is preserved with Académie française edition attribution and the original collective-edition public-domain basis, separately from CC BY-SA 4.0 Wiki transcription/adaptation and Lexique translations. No sentence-level DAF8 authorship is inferred from the marker.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "selected_field_source"
   },
   {
     "id": "b101_fr_165341",
@@ -969,11 +1241,11 @@
     "timestamp": "2026-08-03T10:41:01Z",
     "fixed_url": "https://fr.wiktionary.org/w/index.php?title=int%C3%A9ressant&oldid=39771367",
     "history_url": "https://fr.wiktionary.org/w/index.php?title=int%C3%A9ressant&action=history",
-    "attribution": "Wiktionnaire contributors (complete linked article history); Lexique contributors for selected adaptations and new explanatory translations.",
+    "attribution": "Wiktionnaire contributors (complete linked article history); Académie française, Dictionnaire de l’Académie française, huitième édition, 1932–1935, for the declared original-edition layer; Lexique contributors for scoped adaptations and new explanatory translations.",
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -987,16 +1259,20 @@
         "conservative_expiry": "2006-01-01, using final publication in 1935 for the whole edition",
         "wiki_layer": "Wiktionnaire contributor transcription/adaptation, fixed revision and complete linked history, CC BY-SA 4.0",
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
-        "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
-        "assessment": "Proposed reuse of the admitted #99 edition-level basis; independent selected-span review pending. Current statute capture returned HTTP 403."
+        "scope": "DAF8 import or bibliographic reference in the selected French section; preserve original-edition attribution without claiming every selected sentence is verbatim DAF8.",
+        "assessment": "Independently applied to the declared DAF8 edition layer: final publication 1935, collective-work seventy-year term from 1936, conservative expiry 2006-01-01. Original edition is distinct from licensed Wiki changes and Lexique adaptations. The existing fixed legal basis is retained; no successful fresh statute retrieval is claimed."
       }
     ],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are outside cited example prose. DAF8 import/reference is preserved with Académie française edition attribution and the original collective-edition public-domain basis, separately from CC BY-SA 4.0 Wiki transcription/adaptation and Lexique translations. No sentence-level DAF8 authorship is inferred from the marker.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "selected_field_source"
   },
   {
     "id": "b101_fr_171627",
@@ -1008,11 +1284,11 @@
     "timestamp": "2026-09-07T18:00:01Z",
     "fixed_url": "https://fr.wiktionary.org/w/index.php?title=plaisanter&oldid=39864861",
     "history_url": "https://fr.wiktionary.org/w/index.php?title=plaisanter&action=history",
-    "attribution": "Wiktionnaire contributors (complete linked article history); Lexique contributors for selected adaptations and new explanatory translations.",
+    "attribution": "Wiktionnaire contributors (complete linked article history); Académie française, Dictionnaire de l’Académie française, huitième édition, 1932–1935, for the declared original-edition layer; Lexique contributors for scoped adaptations and new explanatory translations.",
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -1026,16 +1302,20 @@
         "conservative_expiry": "2006-01-01, using final publication in 1935 for the whole edition",
         "wiki_layer": "Wiktionnaire contributor transcription/adaptation, fixed revision and complete linked history, CC BY-SA 4.0",
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
-        "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
-        "assessment": "Proposed reuse of the admitted #99 edition-level basis; independent selected-span review pending. Current statute capture returned HTTP 403."
+        "scope": "DAF8 import or bibliographic reference in the selected French section; preserve original-edition attribution without claiming every selected sentence is verbatim DAF8.",
+        "assessment": "Independently applied to the declared DAF8 edition layer: final publication 1935, collective-work seventy-year term from 1936, conservative expiry 2006-01-01. Original edition is distinct from licensed Wiki changes and Lexique adaptations. The existing fixed legal basis is retained; no successful fresh statute retrieval is claimed."
       }
     ],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are outside cited example prose. DAF8 import/reference is preserved with Académie française edition attribution and the original collective-edition public-domain basis, separately from CC BY-SA 4.0 Wiki transcription/adaptation and Lexique translations. No sentence-level DAF8 authorship is inferred from the marker.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "selected_field_source"
   },
   {
     "id": "b101_fr_174106",
@@ -1047,11 +1327,11 @@
     "timestamp": "2026-08-03T10:58:59Z",
     "fixed_url": "https://fr.wiktionary.org/w/index.php?title=recommencer&oldid=39772047",
     "history_url": "https://fr.wiktionary.org/w/index.php?title=recommencer&action=history",
-    "attribution": "Wiktionnaire contributors (complete linked article history); Lexique contributors for selected adaptations and new explanatory translations.",
+    "attribution": "Wiktionnaire contributors (complete linked article history); Académie française, Dictionnaire de l’Académie française, huitième édition, 1932–1935, for the declared original-edition layer; Lexique contributors for scoped adaptations and new explanatory translations.",
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -1065,16 +1345,20 @@
         "conservative_expiry": "2006-01-01, using final publication in 1935 for the whole edition",
         "wiki_layer": "Wiktionnaire contributor transcription/adaptation, fixed revision and complete linked history, CC BY-SA 4.0",
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
-        "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
-        "assessment": "Proposed reuse of the admitted #99 edition-level basis; independent selected-span review pending. Current statute capture returned HTTP 403."
+        "scope": "DAF8 import or bibliographic reference in the selected French section; preserve original-edition attribution without claiming every selected sentence is verbatim DAF8.",
+        "assessment": "Independently applied to the declared DAF8 edition layer: final publication 1935, collective-work seventy-year term from 1936, conservative expiry 2006-01-01. Original edition is distinct from licensed Wiki changes and Lexique adaptations. The existing fixed legal basis is retained; no successful fresh statute retrieval is claimed."
       }
     ],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are outside cited example prose. DAF8 import/reference is preserved with Académie française edition attribution and the original collective-edition public-domain basis, separately from CC BY-SA 4.0 Wiki transcription/adaptation and Lexique translations. No sentence-level DAF8 authorship is inferred from the marker.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "selected_field_source"
   },
   {
     "id": "b101_fr_174430",
@@ -1086,11 +1370,11 @@
     "timestamp": "2026-10-05T14:49:50Z",
     "fixed_url": "https://fr.wiktionary.org/w/index.php?title=r%C3%A9gler&oldid=39919984",
     "history_url": "https://fr.wiktionary.org/w/index.php?title=r%C3%A9gler&action=history",
-    "attribution": "Wiktionnaire contributors (complete linked article history); Lexique contributors for selected adaptations and new explanatory translations.",
+    "attribution": "Wiktionnaire contributors (complete linked article history); Académie française, Dictionnaire de l’Académie française, huitième édition, 1932–1935, for the declared original-edition layer; Lexique contributors for scoped adaptations and new explanatory translations.",
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -1104,16 +1388,20 @@
         "conservative_expiry": "2006-01-01, using final publication in 1935 for the whole edition",
         "wiki_layer": "Wiktionnaire contributor transcription/adaptation, fixed revision and complete linked history, CC BY-SA 4.0",
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
-        "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
-        "assessment": "Proposed reuse of the admitted #99 edition-level basis; independent selected-span review pending. Current statute capture returned HTTP 403."
+        "scope": "DAF8 import or bibliographic reference in the selected French section; preserve original-edition attribution without claiming every selected sentence is verbatim DAF8.",
+        "assessment": "Independently applied to the declared DAF8 edition layer: final publication 1935, collective-work seventy-year term from 1936, conservative expiry 2006-01-01. Original edition is distinct from licensed Wiki changes and Lexique adaptations. The existing fixed legal basis is retained; no successful fresh statute retrieval is claimed."
       }
     ],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are outside cited example prose. DAF8 import/reference is preserved with Académie française edition attribution and the original collective-edition public-domain basis, separately from CC BY-SA 4.0 Wiki transcription/adaptation and Lexique translations. No sentence-level DAF8 authorship is inferred from the marker.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "selected_field_source"
   },
   {
     "id": "b101_fr_176927",
@@ -1125,11 +1413,11 @@
     "timestamp": "2026-10-19T17:51:24Z",
     "fixed_url": "https://fr.wiktionary.org/w/index.php?title=souhaiter&oldid=39946686",
     "history_url": "https://fr.wiktionary.org/w/index.php?title=souhaiter&action=history",
-    "attribution": "Wiktionnaire contributors (complete linked article history); Lexique contributors for selected adaptations and new explanatory translations.",
+    "attribution": "Wiktionnaire contributors (complete linked article history); Académie française, Dictionnaire de l’Académie française, huitième édition, 1932–1935, for the declared original-edition layer; Lexique contributors for scoped adaptations and new explanatory translations.",
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -1143,16 +1431,20 @@
         "conservative_expiry": "2006-01-01, using final publication in 1935 for the whole edition",
         "wiki_layer": "Wiktionnaire contributor transcription/adaptation, fixed revision and complete linked history, CC BY-SA 4.0",
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
-        "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
-        "assessment": "Proposed reuse of the admitted #99 edition-level basis; independent selected-span review pending. Current statute capture returned HTTP 403."
+        "scope": "DAF8 import or bibliographic reference in the selected French section; preserve original-edition attribution without claiming every selected sentence is verbatim DAF8.",
+        "assessment": "Independently applied to the declared DAF8 edition layer: final publication 1935, collective-work seventy-year term from 1936, conservative expiry 2006-01-01. Original edition is distinct from licensed Wiki changes and Lexique adaptations. The existing fixed legal basis is retained; no successful fresh statute retrieval is claimed."
       }
     ],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are outside cited example prose. DAF8 import/reference is preserved with Académie française edition attribution and the original collective-edition public-domain basis, separately from CC BY-SA 4.0 Wiki transcription/adaptation and Lexique translations. No sentence-level DAF8 authorship is inferred from the marker.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "selected_field_source"
   },
   {
     "id": "b101_fr_177712",
@@ -1164,11 +1456,11 @@
     "timestamp": "2026-08-03T13:45:08Z",
     "fixed_url": "https://fr.wiktionary.org/w/index.php?title=surveiller&oldid=39773271",
     "history_url": "https://fr.wiktionary.org/w/index.php?title=surveiller&action=history",
-    "attribution": "Wiktionnaire contributors (complete linked article history); Lexique contributors for selected adaptations and new explanatory translations.",
+    "attribution": "Wiktionnaire contributors (complete linked article history); Académie française, Dictionnaire de l’Académie française, huitième édition, 1932–1935, for the declared original-edition layer; Lexique contributors for scoped adaptations and new explanatory translations.",
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -1182,16 +1474,20 @@
         "conservative_expiry": "2006-01-01, using final publication in 1935 for the whole edition",
         "wiki_layer": "Wiktionnaire contributor transcription/adaptation, fixed revision and complete linked history, CC BY-SA 4.0",
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
-        "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
-        "assessment": "Proposed reuse of the admitted #99 edition-level basis; independent selected-span review pending. Current statute capture returned HTTP 403."
+        "scope": "DAF8 import or bibliographic reference in the selected French section; preserve original-edition attribution without claiming every selected sentence is verbatim DAF8.",
+        "assessment": "Independently applied to the declared DAF8 edition layer: final publication 1935, collective-work seventy-year term from 1936, conservative expiry 2006-01-01. Original edition is distinct from licensed Wiki changes and Lexique adaptations. The existing fixed legal basis is retained; no successful fresh statute retrieval is claimed."
       }
     ],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are outside cited example prose. DAF8 import/reference is preserved with Académie française edition attribution and the original collective-edition public-domain basis, separately from CC BY-SA 4.0 Wiki transcription/adaptation and Lexique translations. No sentence-level DAF8 authorship is inferred from the marker.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "selected_field_source"
   },
   {
     "id": "b101_fr_180010",
@@ -1203,11 +1499,11 @@
     "timestamp": "2026-10-17T20:27:19Z",
     "fixed_url": "https://fr.wiktionary.org/w/index.php?title=virer&oldid=39941214",
     "history_url": "https://fr.wiktionary.org/w/index.php?title=virer&action=history",
-    "attribution": "Wiktionnaire contributors (complete linked article history); Lexique contributors for selected adaptations and new explanatory translations.",
+    "attribution": "Wiktionnaire contributors (complete linked article history); Académie française, Dictionnaire de l’Académie française, huitième édition, 1932–1935, for the declared original-edition layer; Lexique contributors for scoped adaptations and new explanatory translations.",
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -1221,16 +1517,20 @@
         "conservative_expiry": "2006-01-01, using final publication in 1935 for the whole edition",
         "wiki_layer": "Wiktionnaire contributor transcription/adaptation, fixed revision and complete linked history, CC BY-SA 4.0",
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
-        "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
-        "assessment": "Proposed reuse of the admitted #99 edition-level basis; independent selected-span review pending. Current statute capture returned HTTP 403."
+        "scope": "DAF8 import or bibliographic reference in the selected French section; preserve original-edition attribution without claiming every selected sentence is verbatim DAF8.",
+        "assessment": "Independently applied to the declared DAF8 edition layer: final publication 1935, collective-work seventy-year term from 1936, conservative expiry 2006-01-01. Original edition is distinct from licensed Wiki changes and Lexique adaptations. The existing fixed legal basis is retained; no successful fresh statute retrieval is claimed."
       }
     ],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are outside cited example prose. DAF8 import/reference is preserved with Académie française edition attribution and the original collective-edition public-domain basis, separately from CC BY-SA 4.0 Wiki transcription/adaptation and Lexique translations. No sentence-level DAF8 authorship is inferred from the marker.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "selected_field_source"
   },
   {
     "id": "b101_fr_182951",
@@ -1246,14 +1546,18 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are Wiki contributor text under CC BY-SA 4.0. The selected lines are not quoted third-party examples or identified proprietary imports. Dictionary bibliography, where present, is preserved as bibliography; it does not license or establish copying of those works. No third-party example, image, audio or proprietary Robert wording supplies a field.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "supporting_evidence_only"
   },
   {
     "id": "b101_fr_182953",
@@ -1269,14 +1573,18 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are Wiki contributor text under CC BY-SA 4.0. The selected lines are not quoted third-party examples or identified proprietary imports. Dictionary bibliography, where present, is preserved as bibliography; it does not license or establish copying of those works. No third-party example, image, audio or proprietary Robert wording supplies a field.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "supporting_evidence_only"
   },
   {
     "id": "b101_fr_193633",
@@ -1292,14 +1600,18 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are Wiki contributor text under CC BY-SA 4.0. The selected lines are not quoted third-party examples or identified proprietary imports. Dictionary bibliography, where present, is preserved as bibliography; it does not license or establish copying of those works. No third-party example, image, audio or proprietary Robert wording supplies a field.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "selected_field_source"
   },
   {
     "id": "b101_fr_193637",
@@ -1315,14 +1627,18 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are Wiki contributor text under CC BY-SA 4.0. The selected lines are not quoted third-party examples or identified proprietary imports. Dictionary bibliography, where present, is preserved as bibliography; it does not license or establish copying of those works. No third-party example, image, audio or proprietary Robert wording supplies a field.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "selected_field_source"
   },
   {
     "id": "b101_fr_193654",
@@ -1338,14 +1654,18 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are Wiki contributor text under CC BY-SA 4.0. The selected lines are not quoted third-party examples or identified proprietary imports. Dictionary bibliography, where present, is preserved as bibliography; it does not license or establish copying of those works. No third-party example, image, audio or proprietary Robert wording supplies a field.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "selected_field_source"
   },
   {
     "id": "b101_fr_756376",
@@ -1357,11 +1677,11 @@
     "timestamp": "2026-10-20T18:55:38Z",
     "fixed_url": "https://fr.wiktionary.org/w/index.php?title=est&oldid=39949298",
     "history_url": "https://fr.wiktionary.org/w/index.php?title=est&action=history",
-    "attribution": "Wiktionnaire contributors (complete linked article history); Lexique contributors for selected adaptations and new explanatory translations.",
+    "attribution": "Wiktionnaire contributors (complete linked article history); Académie française, Dictionnaire de l’Académie française, huitième édition, 1932–1935, for the declared original-edition layer; Lexique contributors for scoped adaptations and new explanatory translations.",
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -1375,16 +1695,20 @@
         "conservative_expiry": "2006-01-01, using final publication in 1935 for the whole edition",
         "wiki_layer": "Wiktionnaire contributor transcription/adaptation, fixed revision and complete linked history, CC BY-SA 4.0",
         "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
-        "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
-        "assessment": "Proposed reuse of the admitted #99 edition-level basis; independent selected-span review pending. Current statute capture returned HTTP 403."
+        "scope": "DAF8 import or bibliographic reference in the selected French section; preserve original-edition attribution without claiming every selected sentence is verbatim DAF8.",
+        "assessment": "Independently applied to the declared DAF8 edition layer: final publication 1935, collective-work seventy-year term from 1936, conservative expiry 2006-01-01. Original edition is distinct from licensed Wiki changes and Lexique adaptations. The existing fixed legal basis is retained; no successful fresh statute retrieval is claimed."
       }
     ],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are outside cited example prose. DAF8 import/reference is preserved with Académie française edition attribution and the original collective-edition public-domain basis, separately from CC BY-SA 4.0 Wiki transcription/adaptation and Lexique translations. No sentence-level DAF8 authorship is inferred from the marker.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "selected_field_source"
   },
   {
     "id": "b101_fr_1634938",
@@ -1396,17 +1720,37 @@
     "timestamp": "2026-08-03T11:08:08Z",
     "fixed_url": "https://fr.wiktionary.org/w/index.php?title=s&oldid=39772394",
     "history_url": "https://fr.wiktionary.org/w/index.php?title=s&action=history",
-    "attribution": "Wiktionnaire contributors (complete linked article history); Lexique contributors for selected adaptations and new explanatory translations.",
+    "attribution": "Wiktionnaire contributors (complete linked article history); Académie française, Dictionnaire de l’Académie française, huitième édition, 1932–1935, for the declared original-edition layer; Lexique contributors for scoped adaptations and new explanatory translations.",
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Original first-party API response; actual returned revision retained, not an October cutoff capture.",
-    "selected_text_review": "pending_independent_selected_span_review",
-    "original_authors_and_rights": [],
+    "selected_text_review": "passed_for_selected_spans",
+    "original_authors_and_rights": [
+      {
+        "id": "original-academie8-1932-1935",
+        "author": "Académie française",
+        "title": "Dictionnaire de l’Académie française, huitième édition",
+        "publication": "1932–1935; final publication 1935",
+        "work_type": "collective work",
+        "original_rights": "public domain",
+        "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
+        "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+        "conservative_expiry": "2006-01-01, using final publication in 1935 for the whole edition",
+        "wiki_layer": "Wiktionnaire contributor transcription/adaptation, fixed revision and complete linked history, CC BY-SA 4.0",
+        "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
+        "scope": "DAF8 import or bibliographic reference in the selected French section; preserve original-edition attribution without claiming every selected sentence is verbatim DAF8.",
+        "assessment": "Independently applied to the declared DAF8 edition layer: final publication 1935, collective-work seventy-year term from 1936, conservative expiry 2006-01-01. Original edition is distinct from licensed Wiki changes and Lexique adaptations. The existing fixed legal basis is retained; no successful fresh statute retrieval is claimed."
+      }
+    ],
     "redistribution_obligations": [
-      "Attribute fixed article and complete contributor history.",
-      "Retain CC BY-SA 4.0 legal text and licence link.",
-      "Identify selected adaptations and new translations; distribute them under CC BY-SA 4.0.",
-      "Retain applicable original-author/import notices separately at their actual selected-text boundaries."
-    ]
+      "Retain article identity, fixed revision URL and complete linked history for contributor attribution.",
+      "Retain CC BY-SA 4.0 legal text, licence URL and warranty disclaimer notice.",
+      "Identify markup removal, prior Wiki transcription/adaptation, scoped French adaptation and new Lexique English/Chinese translations.",
+      "Release adapted text/database under CC BY-SA 4.0 without downstream restrictions or technological restrictions on the licensed material.",
+      "Preserve applicable original-author/import and selected-section dictionary bibliography notices."
+    ],
+    "selected_text_rights_reason": "Selected French lexical definitions/IPA and supporting grammar are outside cited example prose. DAF8 import/reference is preserved with Académie française edition attribution and the original collective-edition public-domain basis, separately from CC BY-SA 4.0 Wiki transcription/adaptation and Lexique translations. No sentence-level DAF8 authorship is inferred from the marker.",
+    "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+    "source_role": "selected_field_source"
   }
 ]
