@@ -328,3 +328,23 @@ fn valid_long_import_headword_reports_query_limit_without_claiming_resource_dama
     assert_eq!(record.headword, headword);
     assert!(record.reference.is_none());
 }
+
+#[test]
+fn decomposed_custom_dictionary_headword_links_by_exact_nfc_identity() {
+    let fixture = Fixture::new();
+    let mut connection = fixture.open();
+    let bytes = include_bytes!("../fixtures/nfd-headword.mdx");
+    crate::dictionaries::import(&fixture.database(), "nfd.mdx", bytes).unwrap();
+    fixture.first_source(&connection, "mdx-1");
+    let preview = fixture.preview(&connection, "élève", "decomposed-source");
+    let record = commit_preview(&mut connection, &preview).unwrap().record;
+    assert_eq!(
+        record.reference.as_ref().unwrap().dictionary_id.as_deref(),
+        Some("mdx-1")
+    );
+    assert_eq!(
+        record.reference.as_ref().unwrap().lookup_key,
+        "e\u{301}le\u{300}ve"
+    );
+    assert_eq!(record.headword, "élève");
+}

@@ -3,6 +3,7 @@ use std::path::Path;
 use lexique_dictionary::{DictionaryError, LookupWarning};
 use lexique_storage::Snapshot;
 use serde::Serialize;
+use unicode_normalization::UnicodeNormalization;
 
 use crate::{dictionaries::Registry, vocabulary::DatabasePath};
 
@@ -45,26 +46,37 @@ pub(crate) fn enrich_new_note(
         Err(error) => return NoteEnrichment::failed(error),
     };
     let key = lexique_storage::normalize_headword(headword);
+    let decomposed = key.nfd().collect::<String>();
+    let queries = if decomposed == key {
+        vec![key.as_str()]
+    } else {
+        vec![key.as_str(), decomposed.as_str()]
+    };
     let mut warnings = vec![];
     for config in catalog.entries {
-        match registry.lookup_source(path, builtin, &config, &key) {
-            Ok(mut lookup) => {
-                lookup
-                    .entries
-                    .retain(|entry| lexique_storage::normalize_headword(&entry.key) == key);
-                if !lookup.entries.is_empty() {
-                    return NoteEnrichment {
-                        status: "linked",
-                        snapshot: Some(crate::vocabulary::snapshot(lookup)),
-                        warnings,
-                    };
+        for query in &queries {
+            match registry.lookup_source(path, builtin, &config, query) {
+                Ok(mut lookup) => {
+                    lookup
+                        .entries
+                        .retain(|entry| lexique_storage::normalize_headword(&entry.key) == key);
+                    if !lookup.entries.is_empty() {
+                        return NoteEnrichment {
+                            status: "linked",
+                            snapshot: Some(crate::vocabulary::snapshot(lookup)),
+                            warnings,
+                        };
+                    }
+                }
+                Err(error) => {
+                    warnings.push(LookupWarning {
+                        dictionary_id: config.id.clone(),
+                        code: error.code,
+                        message: error.message,
+                    });
+                    break;
                 }
             }
-            Err(error) => warnings.push(LookupWarning {
-                dictionary_id: config.id,
-                code: error.code,
-                message: error.message,
-            }),
         }
     }
     NoteEnrichment {

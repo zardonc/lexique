@@ -2256,6 +2256,7 @@ dependencies = [
  "tauri-build",
  "tauri-plugin-dialog",
  "tauri-plugin-global-shortcut",
+ "unicode-normalization",
  "webview2-com",
  "windows",
  "windows-core",
