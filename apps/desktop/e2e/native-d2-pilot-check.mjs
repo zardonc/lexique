@@ -15,7 +15,7 @@ assert.ok(['pilot', 'batch', 'review', 'no-speech', 'catalogue', 'missing', 'cor
 const curation = JSON.parse(await readFile(resolve(curationPath), 'utf8'));
 const frozenScope = (await readFile(resolve(curationPath, '..', 'scope-manifest.csv'), 'utf8')).trim().split(/\r?\n/).slice(1);
 assert.equal(frozenScope.length, 4087);
-const expectedRows = [...Array.from({ length: 950 }, (_, index) => index + 1)
+const expectedRows = [...Array.from({ length: 1450 }, (_, index) => index + 1)
   .filter((row) => ![87, 305, 816, 849, 859, 860, 934].includes(row)), 1911];
 const membership = expectedRows.map((row) => {
   const match = frozenScope[row - 1].match(/^"((?:[^"]|"")*)","([^"]+)",/);
@@ -276,7 +276,7 @@ async function pilot() {
     await rejected('speech_generate', { vocabularyId: edited.record.id, operation: 'native-79-no-speech' });
     assert.deepEqual((await invoke('vocabulary_find', { headword: 'être' })).digest, edited.record.digest);
   }
-  evidence.checks.push({ check: '50 batch-83 groups / 200 fields, including 49 everyday groups and the approved golf exception; 944 total groups / 3,776 fields and seven approved annotation exceptions; trusted provider, spelling bindings, retry, duplicate, notes, examples, FSRS and normal restart', status: 'passed' });
+  evidence.checks.push({ check: `50 batch-83 groups / 200 fields, including 49 everyday groups and the approved golf exception; ${curation.groups.length} total groups / ${curation.groups.length * 4} fields and ${curation.annotation_exception_groups} approved annotation exceptions; trusted provider, spelling bindings, retry, duplicate, notes, examples, FSRS and normal restart`, status: 'passed' });
   evidence.checks.push({ check: 'Batch bon adjective/adverb/noun/interjection saved fields and provenance match audited content after normal restart; bon, petit and par restrictions remain readable; ONO has English, French and Chinese labels', status: 'passed' });
   evidence.checks.push({ check: 'mon/ADJ:pos lookup and saved fields remain readable with English, French and Chinese subclass labels', status: 'passed' });
 }
