@@ -1,8 +1,8 @@
 # Issue #113 source and construction evidence
 
-The [author records](groups.json) contain 50 selected everyday senses and
-200 complete authored fields. [Field review](field-review.json) binds each text
-to an exact source revision/span and retains pending independent judgments.
+The [reviewed records](groups.json) contain 50 selected everyday senses and
+200 independently accepted fields. [Field review](field-review.json) binds each
+proposed/accepted text to its exact source revision/span and independent reasons.
 
 ## Fixed source and rights boundaries
 
@@ -31,12 +31,13 @@ other languages and unselected senses supply no field text.
 
 **21 articles** contain `Import:DAF8`; **37 articles** contain either that import
 or a DAF8 reference. Their raw markers and applicable Académie française
-eighth-edition credit (1932–1935) are retained. The author proposal reuses the
+eighth-edition credit (1932–1935) are retained. The selected-rights review reuses the
 project's established collective-work edition basis under L123-3, with conservative
 expiry on 2006-01-01, documented in
 [prior original-edition evidence](../issue-99/source-context.json).
 Page markers and bibliography do not establish selected-sentence authorship.
-Separate review must assess the new selected spans and their original-work fit.
+The [independent report](independent-review.md) assesses the new selected spans
+and their original-work fit.
 
 `objet` revision 39803556, line 77, and `valeur` revision 39958809, line 75,
 contain **unselected CFC cartography imports**. Their actual notices are retained;
@@ -48,7 +49,7 @@ Current first-party French copyright policy revision **38903168**, DAF8 template
 **22113837**, CFC template **29619964**, CC legal text and Wikimedia Terms were
 captured under `target/issue-113/sources/`. [Rights](rights.json) records the exact
 URLs, timestamps, original credits, licence and modification obligations. All
-selected-rights judgments remain author proposals. Actual combined redistribution
+selected-rights judgments are recorded independently. Actual combined redistribution
 materials and final admission belong to the parent.
 
 ## Spelling and construction
@@ -59,7 +60,7 @@ materials and final admission belong to the parent.
 | 1604 `celui-ci/PRO:dem` | Revision 39771178, exact French demonstrative/IPA frames and line 8 select the masculine singular proximal pronoun. The hyphen and gender/number restriction remain. |
 | 1607 `toi-même/PRO:per` | Revision 34323933, lines 5–7: emphatic singular addressee as directly responsible subject. `toi` revision 39298856, lines 16–17 fixes second-person singular; `même` revision 39991560, line 37 supports the hyphenated emphasis construction. Object/reflexive meaning is separate. |
 | 1610 `mlle/NOM` | Original Lexique 3.83 TSV line 83159 has exact `mlle`, feminine singular `NOM`, phon `madmwazEl`. Cambridge's indexed `mlle` expands to the title and corroborates pronunciation. French `Mlle` revision 39033727, lines 4, 6–9, supplies abbreviation, noun, inflection and `/mad.mwa.zɛl/`; standard writing has capital M, preferably superscript lle, no abbreviation point, plural Mlles. |
-| 1627 `demi/ADJ` | Revision 39890664, lines 89–92 and 101: one of two equal parts; before-noun invariable demi, immediately after the noun generally gender agreement without number agreement. Beer/wine nouns and adverb use are excluded. |
+| 1627 `demi/ADJ` | Revision 39890664, lines 89–92 and 101–103: one of two equal parts; before-noun invariable demi joined by a hyphen, immediately after the noun generally gender agreement without number agreement. Beer/wine nouns and adverb use are excluded. |
 | 1630 `obéir/VER` | Revision 39938121, lines 7–9: indirect transitive obedience, retaining `obéir à`. |
 | 1631/1632 `troisième/ADJ` and `/NOM` | Revision 39628814, adjective lines 6, 8–9; ordinal noun lines 138, 140–141. `/tʁwa.zjɛm/` is an explicitly recorded variant in each frame. Ordinal rank three is supported by `trois` revision 40003470, line 353. Fraction, school class, floor and gear are separate senses. |
 | 1633 `mets/NOM` | Revision 39742708, lines 5, 7–8: prepared food, masculine, identical singular/plural spelling, `/mɛ/`. The plural of `met` at lines 44–47 has `/mɛt/`; it is excluded, as are `mettre` forms. |
@@ -77,7 +78,8 @@ corroborates the lowercase dictionary key. Both captures are dated and retained
 with their authors and exact HTML lines. Their proprietary prose, translations
 and examples are not copied into the fields. The lowercase frozen dictionary key
 is not proposed as standard running-text typography; no runtime alias or owner
-exception is added. Independent spelling/construction review remains pending.
+exception is added. Independent spelling/construction review passes for these
+exact source bindings with `alias_admission=not_admitted`.
 
 `suspect/NOM` retains suspicion rather than guilt. `maudit/ADJ` selects the
 reproachful complaint about an annoying person or thing; literal curse and Quebec
@@ -89,14 +91,14 @@ exact selected use and excluded alternatives remain in the author records.
 
 ## Coverage and limits
 
-All 50 groups have four authored fields, **9,334 Unicode characters** /
+The original proposals have four authored fields per group, **9,334 Unicode characters** /
 **11,833 UTF-8 bytes** of field text; the longest field is **566 characters**.
 No already admitted group is reused in this range, and no prior group or learner
 record is rewritten. The authored subset does not change the 4,087-group global
 denominator, canonical admission counts or release state.
 
-Preparation validates raw API/wikitext identity, French/POS frames and all 200
-field spans. The focused resource check passes two tests. Separate semantic and
-selected-rights review, conversion/resource size, notices packaging and native
-lookup/save/reopen remain pending under the parent; author checks establish none
-of those outcomes.
+Independent review accepts all 50 uses and 200 fields, with five exact wording
+replacements and no unresolved fields. All 49 fixed revisions were independently
+refetched and matched in full; the focused resource check passes three tests.
+Conversion/resource size, actual combined notices and native lookup/save/reopen
+remain pending under the parent.
