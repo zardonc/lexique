@@ -1,0 +1,499 @@
+{
+  "status": "passed_at_selected_text_boundary_for_200_fields",
+  "reviewer": {
+    "id": "independent-content-rights-reviewer-103-104",
+    "role": "separate content and selected-span rights reviewer",
+    "independence": "Not the content author or integration merger; independently read proposed text, fixed sources and original-source boundaries.",
+    "reviewed_author_commit": "147f9493b07c604c897fb553e85bb1a584b4ec30",
+    "checkout": "C:/Users/inthe/IdeaProjects/lexique-batch-104",
+    "platform": "Windows x64; PowerShell 7; uv Python 3.14.10"
+  },
+  "independence": true,
+  "adaptation_license": "CC-BY-SA-4.0",
+  "complete_legal_text": "../../../resources/core-pilot-79/COPYING",
+  "authorities": [
+    {
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "sections": [
+        "1(a)",
+        "2(a)(1)",
+        "2(a)(4)",
+        "2(a)(5)",
+        "3(a)",
+        "3(b)",
+        "4"
+      ]
+    },
+    {
+      "url": "https://foundation.wikimedia.org/w/index.php?title=Policy:Terms_of_Use&oldid=598588",
+      "sections": [
+        "7(a) licensing",
+        "7(b) attribution",
+        "7(c) imported text",
+        "7(g) reuse and external-source notices",
+        "7(h) modifications/additions and licensing notice"
+      ]
+    },
+    {
+      "url": "https://fr.wiktionary.org/w/index.php?title=Convention%3ADroit_d%E2%80%99auteur&oldid=38903168",
+      "assessment": "French contributor text CC BY-SA 4.0, with explicit external-source exceptions; exceptions are checked at selected spans."
+    }
+  ],
+  "original_daf8_edition_basis": [
+    {
+      "id": "original-academie8-1932-1935",
+      "author": "Académie française",
+      "title": "Dictionnaire de l’Académie française, huitième édition",
+      "publication": "1932–1935; final publication 1935",
+      "work_type": "collective work",
+      "original_rights": "public domain",
+      "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
+      "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+      "conservative_expiry": "2006-01-01, using final publication in 1935 for the whole edition",
+      "wiki_layer": "Wiktionnaire contributor transcription/adaptation, fixed revision and complete linked history, CC BY-SA 4.0",
+      "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
+      "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
+      "legal_refresh": "Independent reviewer read the primary statute through the retained web capture; the direct live endpoint returned 403. The established edition-level basis is reused, with selected imported/quotation boundaries independently inspected for this batch."
+    }
+  ],
+  "authority_captures": [
+    {
+      "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278941/2024-07-14",
+      "source_lines_0_based": [
+        129,
+        134,
+        135,
+        138,
+        139
+      ],
+      "capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-103-final\\target\\issue-103\\reviewer-primary\\web-authorities.json",
+      "finding": "Primary Article L123-3 confirms collective-work 70-year publication rule; final 1935 edition publication gives conservative expiry 2006-01-01."
+    },
+    {
+      "url": "https://foundation.wikimedia.org/w/index.php?title=Policy:Terms_of_Use&oldid=598588",
+      "capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-103-final\\target\\issue-103\\reviewer-primary\\terms.html",
+      "sections": [
+        "7(a)",
+        "7(b)",
+        "7(c)",
+        "7(g)",
+        "7(h)"
+      ]
+    },
+    {
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "complete_legal_text": "../../../resources/core-pilot-79/COPYING",
+      "sections": [
+        "2",
+        "3(a)",
+        "3(b)",
+        "4"
+      ]
+    }
+  ],
+  "packaging_obligations": [
+    "Fixed article and linked full history credit; original-edition notices where applicable.",
+    "Retain supplied copyright, licence and warranty-disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+    "Identify Wiki transcription/adaptations and Lexique selection, scoped FR adaptations, IPA transcription and new EN/ZH explanations.",
+    "Distribute adaptations under CC BY-SA 4.0 without additional restrictions or obstructive technical measures."
+  ],
+  "combined_obligations_status": "required_materials_recorded_final_combined_package_and_distribution_owned_by_parent",
+  "unresolved_rows": [],
+  "modern_comparisons": [],
+  "extra_originals": [
+    {
+      "title": "avenir",
+      "url": "https://www.cnrtl.fr/definition/academie8/avenir",
+      "status": 200,
+      "captured_at_utc": "2026-11-20T00:23:22.638Z",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\avenir.html",
+      "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\avenir.txt",
+      "entry_returned": false
+    },
+    {
+      "title": "beauté",
+      "url": "https://www.cnrtl.fr/definition/academie8/beaut%C3%A9",
+      "status": 200,
+      "captured_at_utc": "2026-11-20T00:23:22.647Z",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\beauté.html",
+      "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\beauté.txt",
+      "entry_returned": true
+    },
+    {
+      "title": "expérience",
+      "url": "https://www.cnrtl.fr/definition/academie8/exp%C3%A9rience",
+      "status": 200,
+      "captured_at_utc": "2026-11-20T00:23:22.779Z",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\expérience.html",
+      "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\expérience.txt",
+      "entry_returned": true
+    },
+    {
+      "title": "liste",
+      "url": "https://www.cnrtl.fr/definition/academie8/liste",
+      "status": 200,
+      "captured_at_utc": "2026-11-20T00:23:22.799Z",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\liste.html",
+      "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\liste.txt",
+      "entry_returned": true
+    },
+    {
+      "title": "installer",
+      "url": "https://www.cnrtl.fr/definition/academie8/installer",
+      "status": 200,
+      "captured_at_utc": "2026-11-20T00:23:22.810Z",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\installer.html",
+      "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\installer.txt",
+      "entry_returned": true
+    },
+    {
+      "title": "étudier",
+      "url": "https://www.cnrtl.fr/definition/academie8/%C3%A9tudier",
+      "status": 200,
+      "captured_at_utc": "2026-11-20T00:23:22.851Z",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\étudier.html",
+      "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\étudier.txt",
+      "entry_returned": true
+    },
+    {
+      "title": "langue",
+      "url": "https://www.cnrtl.fr/definition/academie8/langue",
+      "status": 200,
+      "captured_at_utc": "2026-11-20T00:23:22.991Z",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\langue.html",
+      "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\langue.txt",
+      "entry_returned": true
+    },
+    {
+      "title": "emporter",
+      "url": "https://www.cnrtl.fr/definition/academie8/emporter",
+      "status": 200,
+      "captured_at_utc": "2026-11-20T00:23:22.993Z",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\emporter.html",
+      "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\emporter.txt",
+      "entry_returned": true
+    },
+    {
+      "title": "courage",
+      "url": "https://www.cnrtl.fr/definition/academie8/courage",
+      "status": 200,
+      "captured_at_utc": "2026-11-20T00:23:23.014Z",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\courage.html",
+      "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\courage.txt",
+      "entry_returned": true
+    },
+    {
+      "title": "contraire",
+      "url": "https://www.cnrtl.fr/definition/academie8/contraire",
+      "status": 200,
+      "captured_at_utc": "2026-11-20T00:23:23.045Z",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\contraire.html",
+      "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\contraire.txt",
+      "entry_returned": false
+    },
+    {
+      "title": "réaliser",
+      "url": "https://www.cnrtl.fr/definition/academie8/r%C3%A9aliser",
+      "status": 200,
+      "captured_at_utc": "2026-11-20T00:23:23.192Z",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\réaliser.html",
+      "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\réaliser.txt",
+      "entry_returned": true
+    },
+    {
+      "title": "oreille",
+      "url": "https://www.cnrtl.fr/definition/academie8/oreille",
+      "status": 200,
+      "captured_at_utc": "2026-11-20T00:23:23.218Z",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\oreille.html",
+      "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\oreille.txt",
+      "entry_returned": true
+    },
+    {
+      "title": "milieu",
+      "url": "https://www.cnrtl.fr/definition/academie8/milieu",
+      "status": 200,
+      "captured_at_utc": "2026-11-20T00:23:23.225Z",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\milieu.html",
+      "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\milieu.txt",
+      "entry_returned": true
+    },
+    {
+      "title": "commandant",
+      "url": "https://www.cnrtl.fr/definition/academie8/commandant",
+      "status": 200,
+      "captured_at_utc": "2026-11-20T00:23:23.242Z",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\commandant.html",
+      "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\commandant.txt",
+      "entry_returned": false
+    },
+    {
+      "title": "blague",
+      "url": "https://www.cnrtl.fr/definition/academie8/blague",
+      "status": 200,
+      "captured_at_utc": "2026-11-20T00:23:23.283Z",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\blague.html",
+      "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\blague.txt",
+      "entry_returned": true
+    },
+    {
+      "title": "probablement",
+      "url": "https://www.cnrtl.fr/definition/academie8/probablement",
+      "status": 200,
+      "captured_at_utc": "2026-11-20T00:23:23.386Z",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\probablement.html",
+      "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\probablement.txt",
+      "entry_returned": true
+    },
+    {
+      "title": "action",
+      "url": "https://www.cnrtl.fr/definition/academie8/action",
+      "status": 200,
+      "captured_at_utc": "2026-11-20T00:23:23.417Z",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\action.html",
+      "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\action.txt",
+      "entry_returned": true
+    },
+    {
+      "title": "art",
+      "url": "https://www.cnrtl.fr/definition/academie8/art",
+      "status": 200,
+      "captured_at_utc": "2026-11-20T00:23:23.422Z",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\art.html",
+      "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\art.txt",
+      "entry_returned": true
+    },
+    {
+      "title": "course",
+      "url": "https://www.cnrtl.fr/definition/academie8/course",
+      "status": 200,
+      "captured_at_utc": "2026-11-20T00:23:23.523Z",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\course.html",
+      "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\course.txt",
+      "entry_returned": true
+    },
+    {
+      "title": "rôle",
+      "url": "https://www.cnrtl.fr/definition/academie8/r%C3%B4le",
+      "status": 200,
+      "captured_at_utc": "2026-11-20T00:23:23.582Z",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\rôle.html",
+      "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\rôle.txt",
+      "entry_returned": true
+    },
+    {
+      "title": "ange",
+      "url": "https://www.cnrtl.fr/definition/academie8/ange",
+      "status": 200,
+      "captured_at_utc": "2026-11-20T00:23:23.625Z",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\ange.html",
+      "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\ange.txt",
+      "entry_returned": true
+    },
+    {
+      "title": "hors",
+      "url": "https://www.cnrtl.fr/definition/academie8/hors",
+      "status": 200,
+      "captured_at_utc": "2026-11-20T00:23:23.653Z",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\hors.html",
+      "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\hors.txt",
+      "entry_returned": false
+    },
+    {
+      "title": "manière",
+      "url": "https://www.cnrtl.fr/definition/academie8/mani%C3%A8re",
+      "status": 200,
+      "captured_at_utc": "2026-11-20T00:23:23.667Z",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\manière.html",
+      "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\manière.txt",
+      "entry_returned": true
+    },
+    {
+      "title": "retenir",
+      "url": "https://www.cnrtl.fr/definition/academie8/retenir",
+      "status": 200,
+      "captured_at_utc": "2026-11-20T00:23:23.667Z",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\retenir.html",
+      "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\retenir.txt",
+      "entry_returned": true
+    },
+    {
+      "title": "avance",
+      "url": "https://www.cnrtl.fr/definition/academie8/avance",
+      "status": 200,
+      "captured_at_utc": "2026-11-20T00:23:23.765Z",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\avance.html",
+      "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\avance.txt",
+      "entry_returned": true
+    },
+    {
+      "title": "cour",
+      "url": "https://www.cnrtl.fr/definition/academie8/cour",
+      "status": 200,
+      "captured_at_utc": "2026-11-20T00:23:23.787Z",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\cour.html",
+      "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\cour.txt",
+      "entry_returned": true
+    },
+    {
+      "title": "coupable",
+      "url": "https://www.cnrtl.fr/definition/academie8/coupable",
+      "status": 200,
+      "captured_at_utc": "2026-11-20T00:23:23.825Z",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\coupable.html",
+      "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\coupable.txt",
+      "entry_returned": false
+    },
+    {
+      "title": "deviner",
+      "url": "https://www.cnrtl.fr/definition/academie8/deviner",
+      "status": 200,
+      "captured_at_utc": "2026-11-20T00:23:23.891Z",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\deviner.html",
+      "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\deviner.txt",
+      "entry_returned": true
+    },
+    {
+      "title": "inspecteur",
+      "url": "https://www.cnrtl.fr/definition/academie8/inspecteur",
+      "status": 200,
+      "captured_at_utc": "2026-11-20T00:23:23.902Z",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\inspecteur.html",
+      "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\inspecteur.txt",
+      "entry_returned": true
+    },
+    {
+      "title": "laisse",
+      "url": "https://www.cnrtl.fr/definition/academie8/laisse",
+      "status": 200,
+      "captured_at_utc": "2026-11-20T00:23:23.904Z",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\laisse.html",
+      "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\laisse.txt",
+      "entry_returned": true
+    },
+    {
+      "title": "parmi",
+      "url": "https://www.cnrtl.fr/definition/academie8/parmi",
+      "status": 200,
+      "captured_at_utc": "2026-11-20T00:23:23.980Z",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\parmi.html",
+      "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\parmi.txt",
+      "entry_returned": false
+    },
+    {
+      "title": "moquer",
+      "url": "https://www.cnrtl.fr/definition/academie8/moquer",
+      "status": 200,
+      "captured_at_utc": "2026-11-20T00:23:24.003Z",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\moquer.html",
+      "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\moquer.txt",
+      "entry_returned": false
+    },
+    {
+      "title": "projet",
+      "url": "https://www.cnrtl.fr/definition/academie8/projet",
+      "status": 200,
+      "captured_at_utc": "2026-11-20T00:23:24.026Z",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\projet.html",
+      "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\projet.txt",
+      "entry_returned": true
+    },
+    {
+      "title": "proposer",
+      "url": "https://www.cnrtl.fr/definition/academie8/proposer",
+      "status": 200,
+      "captured_at_utc": "2026-11-20T00:23:24.133Z",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\proposer.html",
+      "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\proposer.txt",
+      "entry_returned": true
+    },
+    {
+      "title": "ravir",
+      "url": "https://www.cnrtl.fr/definition/academie8/ravir",
+      "status": 200,
+      "captured_at_utc": "2026-11-20T00:23:24.141Z",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\ravir.html",
+      "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\ravir.txt",
+      "entry_returned": true
+    },
+    {
+      "title": "remonter",
+      "url": "https://www.cnrtl.fr/definition/academie8/remonter",
+      "status": 200,
+      "captured_at_utc": "2026-11-20T00:23:24.152Z",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\remonter.html",
+      "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\remonter.txt",
+      "entry_returned": true
+    },
+    {
+      "title": "ridicule",
+      "url": "https://www.cnrtl.fr/definition/academie8/ridicule",
+      "status": 200,
+      "captured_at_utc": "2026-11-20T00:23:24.182Z",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\ridicule.html",
+      "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\ridicule.txt",
+      "entry_returned": false
+    },
+    {
+      "title": "secours",
+      "url": "https://www.cnrtl.fr/definition/academie8/secours",
+      "status": 200,
+      "captured_at_utc": "2026-11-20T00:23:24.232Z",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\secours.html",
+      "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\secours.txt",
+      "entry_returned": true
+    },
+    {
+      "title": "risque",
+      "url": "https://www.cnrtl.fr/definition/academie8/risque",
+      "status": 200,
+      "captured_at_utc": "2026-11-20T00:23:24.241Z",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\risque.html",
+      "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\risque.txt",
+      "entry_returned": true
+    },
+    {
+      "title": "soin",
+      "url": "https://www.cnrtl.fr/definition/academie8/soin",
+      "status": 200,
+      "captured_at_utc": "2026-11-20T00:23:24.373Z",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\soin.html",
+      "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\soin.txt",
+      "entry_returned": true
+    },
+    {
+      "title": "traverser",
+      "url": "https://www.cnrtl.fr/definition/academie8/traverser",
+      "status": 200,
+      "captured_at_utc": "2026-11-20T00:23:24.392Z",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\traverser.html",
+      "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\traverser.txt",
+      "entry_returned": true
+    },
+    {
+      "title": "voisin",
+      "url": "https://www.cnrtl.fr/definition/academie8/voisin",
+      "status": 200,
+      "captured_at_utc": "2026-11-20T00:23:24.405Z",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\voisin.html",
+      "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\voisin.txt",
+      "entry_returned": false
+    },
+    {
+      "title": "frais",
+      "url": "https://www.cnrtl.fr/definition/academie8/frais",
+      "status": 200,
+      "entry_returned": true,
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\frais.html",
+      "text_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final\\target\\issue-104\\reviewer-originals\\frais.txt",
+      "capture_origin": "Independent #103 capture retained in #104 owning evidence; inspected for the plural expenses noun."
+    }
+  ],
+  "excluded_import": {
+    "source_title": "langue",
+    "line_1_based": 86,
+    "marker": "{{Import:CFC}}",
+    "selected_language_definition_line_1_based": 41,
+    "decision": "Cartographic definition and its import supply no field wording; its original rights are not transferred to the selected communication-system meaning."
+  }
+}

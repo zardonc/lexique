@@ -56,7 +56,7 @@ class PortableTests(unittest.TestCase):
             self.write(f"target/release/dictionary/core-pilot-79/{filename}", data)
             core_inputs[filename] = hashlib.sha256(data).hexdigest()
         core_report = json.dumps({
-            "format_version": 1, "content_version": "core-99-v1",
+            "format_version": 1, "content_version": "core-109-v1",
             "sqlite_sha256": hashlib.sha256(b"reviewed core dictionary").hexdigest(),
             "sqlite_bytes": len(b"reviewed core dictionary"), "inputs": core_inputs,
         }).encode()
@@ -103,8 +103,9 @@ class PortableTests(unittest.TestCase):
             for filename, digest in report["inputs"].items():
                 self.assertEqual(hashlib.sha256(zipped.read(prefix + filename)).hexdigest(), digest)
             description = zipped.read(self.name + "/README.txt").decode("utf-8")
-            self.assertIn("944 of 4,087", description)
-            self.assertIn("3,143 groups remain unaccepted", description)
+            self.assertIn("1,436 of 4,087", description)
+            self.assertIn("2,651 groups remain unaccepted", description)
+            self.assertIn("fifteen approved zero-field annotations", description)
             self.assertIn("dictionary/core-pilot-79/", description)
 
     def test_missing_or_changed_core_resource_and_notices_prevent_delivery(self):

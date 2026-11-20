@@ -53,7 +53,7 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
     core_report = read_json(core_report_path)
     core = release / "dictionary/core-pilot-79"
     core_names = {*MATERIALS, "input-checksums.json", "LICENSE-MIT", "core_pilot.py", "coverage.json"}
-    if (core_report.get("format_version") != 1 or core_report.get("content_version") != "core-99-v1"
+    if (core_report.get("format_version") != 1 or core_report.get("content_version") != "core-109-v1"
             or not isinstance(core_report.get("inputs"), dict) or set(core_report["inputs"]) != core_names):
         raise ValueError("Prepared core report must name all reviewed materials")
     if (core / "report.json").read_bytes() != core_report_path.read_bytes():
@@ -123,11 +123,11 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
         "This sample provides FreeDict fra-zho lookup and M1 vocabulary notes with explicit save,\n"
         "search, sorting and restart recovery. Saved words can be added to two review cards;\n"
         "review scoring and card progress survive restart. A full dictionary is not included.\n"
-        "Lexique FR–EN–ZH is a reviewed development core: 944 of 4,087 frozen POS groups.\n"
+        "Lexique FR–EN–ZH is a reviewed development core: 1,436 of 4,087 frozen POS groups.\n"
         "Its four fields and English usage notes, selected source excerpts, attribution and\n"
         "CC BY-SA 4.0 license are in dictionary/core-pilot-79/. The converter has a separate MIT license.\n"
-        "Settings opens these bundled source materials offline. 3,143 groups remain unaccepted,\n"
-        "including seven approved zero-field annotations; two specialist senses are counted separately.\n"
+        "Settings opens these bundled source materials offline. 2,651 groups remain unaccepted,\n"
+        "including fifteen approved zero-field annotations; two specialist senses are counted separately.\n"
         "learner acceptance and the full D2 resource are not complete.\n"
         "Selection shortcut: Ctrl+Alt+Shift+D. Screen OCR shortcut: Ctrl+Alt+Shift+O.\n"
         "Both shortcuts can be changed in Settings. Selection and OCR enter the Translation\n"

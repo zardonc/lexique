@@ -884,3 +884,13 @@ Resource rollback requires the matching application/resource pair; learner
 digests remain frozen. Whole-machine offline, other-platform hands-on, learner
 acceptance, whole-core D2 coverage and formal release gates remain unverified.
 Per-word CEFR grading is deferred outside this frozen target.
+
+## D2 content batches #100–#109
+
+2026-11-19: `core-109-v1` admits 1,436 groups / 5,744 fields after independently reviewing frozen rows 951–1450. The ten batches add 492 groups / 1,968 fields; eight new owner-approved zero-field annotations join seven preserved annotations, retaining 60 missing fields. The 4,087-group / 3,773-headword denominator remains fixed. Everyday coverage is 1,434 complete groups, with two existing specialist senses counted separately; 2,651 groups remain unaccepted and 2,653 everyday-incomplete. All 944 prior SQLite payloads and 11 aliases are byte-preserved, with no aliases added.
+
+63 converter/cohort, 16 package, 194 backend and 13 applicable browser tests pass, along with lint, typecheck, build, rustfmt and locked Rust precompilation. Backend execution retains its hard 60-second limit. Windows x64 final build/harness `090b10c2384a68ebb9a5ea0cb9346a7c1765dafa` passes all ten native batches and the saved-state upgrade, including new poisson/camarade saves, frozen digests, notes, examples, progress, committed replay and protected audio. All eleven runs verify the same binary, zero external WebView requests and zero owned processes. The 261-file closed baseline copy remains byte-identical after execution.
+
+The SQLite resource is 6,721,536 bytes; the final portable ZIP is 38,547,297 bytes with 183 verified files. Separate Standards and Spec reviews have zero remaining findings; one minor test duplication was resolved in a fresh implementer. Exact commits, content/source decisions, owner approvals, artifact identities, commands, retained failures and platform limits are in [the cohort evidence](evidence/issues-100-109/README.md) and [final review](evidence/issues-100-109/final-review.md). [PR #180](https://github.com/zardonc/lexique/pull/180) closes #100–#109 when merged; #78 remains open. Documentation closeout and exact-head CI are recorded in the aggregate evidence.
+
+Whole-machine offline execution, other-platform native flows, learner acceptance and full D2 release readiness remain unverified.

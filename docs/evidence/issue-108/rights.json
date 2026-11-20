@@ -1,0 +1,70 @@
+{
+  "status": "passed_at_selected_text_boundary_for_196_fields",
+  "reviewer": "Independent selected-content and rights reviewer for issue 108; separate from author and merger",
+  "independence": true,
+  "proposed_adaptation_license": "CC-BY-SA-4.0",
+  "complete_legal_text": "../../../resources/core-pilot-79/COPYING",
+  "established_rights_authorities": [
+    {
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "sections": [
+        "1(a)",
+        "2(a)(1)",
+        "2(a)(4)",
+        "2(a)(5)",
+        "3(a)",
+        "3(b)",
+        "4"
+      ]
+    },
+    {
+      "url": "https://foundation.wikimedia.org/w/index.php?title=Policy:Terms_of_Use&oldid=598588",
+      "sections": [
+        "7(a) licensing",
+        "7(b) attribution",
+        "7(c) imported text",
+        "7(g) reuse and external-source notices",
+        "7(h) modifications/additions and licensing notice"
+      ]
+    },
+    {
+      "url": "https://fr.wiktionary.org/w/index.php?title=Convention%3ADroit_d%E2%80%99auteur&oldid=38903168",
+      "assessment": "French contributor text CC BY-SA 4.0, with explicit external-source exceptions; exceptions are checked at selected spans."
+    },
+    {
+      "url": "https://en.wiktionary.org/w/index.php?title=Wiktionary%3ACopyrights&oldid=87545419",
+      "assessment": "Original-entry dual licence statement; its historical interpretation warns that it is outdated, so actual CC 4.0 terms and Wikimedia Terms control this review."
+    }
+  ],
+  "original_daf8_edition_basis": [
+    {
+      "id": "original-academie8-1932-1935",
+      "author": "Académie française",
+      "title": "Dictionnaire de l’Académie française, huitième édition",
+      "publication": "1932–1935; final publication 1935",
+      "work_type": "collective work",
+      "original_rights": "public domain",
+      "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
+      "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+      "conservative_expiry": "2006-01-01, using final publication in 1935 for the whole edition",
+      "wiki_layer": "Wiktionnaire contributor transcription/adaptation, fixed revision and complete linked history, CC BY-SA 4.0",
+      "lexique_layer": "Scoped adaptations and new FR/EN/ZH explanatory translations, Lexique contributors, CC BY-SA 4.0",
+      "scope": "Original DAF8 historical edition where imported/referenced; edition-level public-domain basis. Wiki contributor changes and Lexique adaptations remain separately CC BY-SA 4.0.",
+      "legal_refresh": "Independent reviewer read the primary statute through the retained web capture; the direct live endpoint returned 403. The established edition-level basis is reused, with selected imported/quotation boundaries independently inspected for this batch."
+    }
+  ],
+  "original_daf8_basis_source": "../issue-99/source-context.json",
+  "original_daf8_basis_scope": "Established original edition term reused; this reviewer separately checked the 196 selected fields and actual page markers.",
+  "selected_original_check": "46 fixed originals independently refetched; all 200 candidate spans matched complete original wikitext.",
+  "selected_span_decision": "Selected French lexical definition/grammar/IPA only; no adjacent quotation, media, audio or bilingual translation table is copied. Full fixed article and linked history credit Wiktionnaire contributors; scoped adaptations/new explanatory translations credit Lexique contributors under CC BY-SA 4.0. Actual DAF8 markers retain Académie française 1932–1935 original-edition credit and the established L123-3 collective-work expiry 2006-01-01. A page marker alone does not assign modern sentence authorship. The champ CFC cartography import is unselected and contributes no field.",
+  "excluded_cfc_import": {
+    "title": "champ",
+    "revid": 39877668,
+    "line_1_based": 93,
+    "selected_definition_line": 14,
+    "decision": "Unselected cartography definition; no wording or meaning copied."
+  },
+  "modification_layer": "Lexique scoped adaptation and new explanatory EN/ZH translations; selected French IPA transcription.",
+  "packaging_obligations": "Fixed source/history credit; CC BY-SA legal text/link; same-licence adaptation distribution; modification notices; separately applicable original-author notices. Integration must satisfy final combined obligations.",
+  "combined_obligations_status": "Selected content eligible; actual combined notices and native integration remain pending."
+}

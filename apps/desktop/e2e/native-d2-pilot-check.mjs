@@ -15,8 +15,8 @@ assert.ok(['pilot', 'batch', 'review', 'no-speech', 'catalogue', 'missing', 'cor
 const curation = JSON.parse(await readFile(resolve(curationPath), 'utf8'));
 const frozenScope = (await readFile(resolve(curationPath, '..', 'scope-manifest.csv'), 'utf8')).trim().split(/\r?\n/).slice(1);
 assert.equal(frozenScope.length, 4087);
-const expectedRows = [...Array.from({ length: 950 }, (_, index) => index + 1)
-  .filter((row) => ![87, 305, 816, 849, 859, 860, 934].includes(row)), 1911];
+const expectedRows = [...Array.from({ length: 1450 }, (_, index) => index + 1)
+  .filter((row) => ![87, 305, 816, 849, 859, 860, 934, 1005, 1051, 1208, 1218, 1219, 1220, 1300, 1386].includes(row)), 1911];
 const membership = expectedRows.map((row) => {
   const match = frozenScope[row - 1].match(/^"((?:[^"]|"")*)","([^"]+)",/);
   assert.ok(match, `Invalid frozen scope row ${row}`);
@@ -276,17 +276,18 @@ async function pilot() {
     await rejected('speech_generate', { vocabularyId: edited.record.id, operation: 'native-79-no-speech' });
     assert.deepEqual((await invoke('vocabulary_find', { headword: 'être' })).digest, edited.record.digest);
   }
-  evidence.checks.push({ check: '50 batch-83 groups / 200 fields, including 49 everyday groups and the approved golf exception; 944 total groups / 3,776 fields and seven approved annotation exceptions; trusted provider, spelling bindings, retry, duplicate, notes, examples, FSRS and normal restart', status: 'passed' });
+  evidence.checks.push({ check: `50 batch-83 groups / 200 fields, including 49 everyday groups and the approved golf exception; ${curation.groups.length} total groups / ${curation.groups.length * 4} fields and ${curation.annotation_exception_groups} approved annotation exceptions; trusted provider, spelling bindings, retry, duplicate, notes, examples, FSRS and normal restart`, status: 'passed' });
   evidence.checks.push({ check: 'Batch bon adjective/adverb/noun/interjection saved fields and provenance match audited content after normal restart; bon, petit and par restrictions remain readable; ONO has English, French and Chinese labels', status: 'passed' });
   evidence.checks.push({ check: 'mon/ADJ:pos lookup and saved fields remain readable with English, French and Chinese subclass labels', status: 'passed' });
 }
 
 async function contentBatch() {
   const issue = Number(input);
-  assert.ok(Number.isInteger(issue) && issue >= 84 && issue <= 99, 'Expected batch issue 84–99');
+  assert.ok(Number.isInteger(issue) && issue >= 84 && issue <= 109, 'Expected batch issue 84–109');
   const firstRow = 151 + (issue - 84) * 50;
   const groups = curation.groups.filter((group) => group.frozen_row >= firstRow && group.frozen_row < firstRow + 50);
-  const annotationRows = ({ 87: [305], 97: [816, 849], 98: [859, 860], 99: [934] })[issue] ?? [];
+  const annotationRows = ({ 87: [305], 97: [816, 849], 98: [859, 860], 99: [934],
+    101: [1005], 102: [1051], 105: [1208, 1218, 1219, 1220], 106: [1300], 108: [1386] })[issue] ?? [];
   assert.equal(groups.length, 50 - annotationRows.length);
   for (const row of annotationRows) {
     const match = frozenScope[row - 1].match(/^"((?:[^"]|"")*)","([^"]+)",/);
@@ -669,7 +670,7 @@ async function replacement() {
   assert.equal((await invoke('vocabulary_save', { request: committed.request, dictionary_id: 'builtin-core' })).outcome, 'replayed');
   if (scenario === 'newer') await save('bien', 'newer-content');
   if (scenario === 'upgrade') {
-    for (const key of ['quel', 'leur']) await save(key, `batch-84-89-upgrade-${key}`);
+    for (const key of ['poisson', 'camarade']) await save(key, `batch-100-109-upgrade-${key}`);
   }
   await openRecord(record);
   evidence.checks.push({ check: ['newer', 'upgrade'].includes(scenario) ? 'New resource version is visible while previous digest, progress and audio remain frozen' : `Native ${scenario} rejection preserves saved content and committed retry`, status: 'passed' });
