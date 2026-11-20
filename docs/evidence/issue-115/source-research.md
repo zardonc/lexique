@@ -1,4 +1,8 @@
-# Issue #115 fixed sources and selected uses
+# Issue #115 author research: fixed sources and selected uses
+
+This document retains author selection and rights proposals. Current verdicts
+and accepted wording are recorded in [independent review](independent-review.md),
+[field review](field-review.json) and [rights review](rights-review.md).
 
 The package authors all 50 exact groups in rows 1701–1750 with one modern
 selected sense and four bound fields each. French text is a scoped adaptation;
