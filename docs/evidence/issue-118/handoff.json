@@ -1,0 +1,59 @@
+{
+  "ticket": 118,
+  "parent": 78,
+  "checkout": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-118",
+  "branch": "codex/d2-content-118",
+  "initial_integration_tip": "2b0a4554704a1fc093e965fae5d78eaca1b1e6d0",
+  "latest_integration_tip": "7b9510481dde923b368700a7323c6ef19bc40b03",
+  "tested_base_commit": "7b9510481dde923b368700a7323c6ef19bc40b03",
+  "reviewed_changes": "This author evidence directory and scripts/test_core_batch_118.py; exact pending/staged patch retained under the owning target directory.",
+  "final_commit_and_tested_tree_record": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-118\\target\\issue-118\\tested-state.json",
+  "author_owned_paths": [
+    "docs/evidence/issue-118/",
+    "scripts/test_core_batch_118.py"
+  ],
+  "diff_command": "git diff --cached --binary -- docs/evidence/issue-118 scripts/test_core_batch_118.py",
+  "diff_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-118\\target\\issue-118\\authored-package.patch",
+  "tests_diff_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-118\\target\\issue-118\\tests.patch",
+  "evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-118\\target\\issue-118",
+  "platform": "Windows x64; PowerShell 7.6.9; uv Python resource boundary",
+  "checks": [
+    {
+      "command": "uv run --no-project python scripts/test_core_batch_118.py",
+      "status": "passed",
+      "result": "2 resource-boundary tests",
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-118\\target\\issue-118\\green.log"
+    },
+    {
+      "command": "pnpm test:docs",
+      "status": "passed",
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-118\\target\\issue-118\\docs-check.log",
+      "result": "No documentation/link problems; 184 local evidence links counted separately."
+    },
+    {
+      "command": "git diff --cached --check",
+      "status": "passed",
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-118\\target\\issue-118\\final-diff-check.log"
+    }
+  ],
+  "red_checks": [
+    {
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-118\\target\\issue-118\\red.log",
+      "result": "Expected absent groups.json failure"
+    },
+    {
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-118\\target\\issue-118\\rights-red.log",
+      "result": "Expected absent rights.json failure"
+    }
+  ],
+  "source_capture_boundary": "54 selected/supporting fixed revisions; raw APIs, full source text, authorities and complete contributor pagination retained locally.",
+  "independently_accepted_groups": 0,
+  "independently_accepted_fields": 0,
+  "pending_review_fields": 200,
+  "missing_authored_fields": 0,
+  "native_checks": "integration_owned_not_run",
+  "conversion_checks": "integration_owned_not_run",
+  "learner_and_release_checks": "not_run",
+  "runtime_source_and_saved_data_changes": "none_from_this_author_package",
+  "verification_boundary": "Resource and documentation checks passed at the recorded integration base plus the exact author patch. Native/conversion/independent acceptance remain unrun or pending."
+}
