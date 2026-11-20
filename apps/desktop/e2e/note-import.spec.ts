@@ -5,7 +5,7 @@ import { nativeFixture, record } from './native-fixture';
 const external = { ...record, headword: 'école externe', reference: null, digest: [], import_source: { format: 'csv', filename: 'mes-écoles.csv' },
   notes: '学校\n独立笔记', example_fr: 'Une école indépendante.', example_zh: '一所独立学校。', example_sense: null,
   more_examples: [{ fr: '', zh: '尚待法语例句' }] };
-const preview = { operation: 'csv-fixture', source: external.import_source, rows: [2, 3], status: 'create', error: null, existing: null,
+const preview = { operation: 'csv-fixture', source: external.import_source, rows: [2, 3], status: 'create', error: null, existing: null, enrichment: null,
   content: { headword: external.headword, notes: external.notes, examples: [{ fr: external.example_fr, zh: external.example_zh }, ...external.more_examples] } };
 
 test('single-word preview confirms content without adding cards or speech and offers the saved record', async ({ page }) => {

@@ -4,16 +4,18 @@ import type { RuntimeAdapter } from './platform/runtime';
 import type { NoteImportPreview } from './platform/note-import';
 import { errorMessage } from './platform/vocabulary';
 import type { VocabularyRecord } from './platform/vocabulary';
+import { NoteImportDictionary } from './note-import-dictionary';
 
 function useNoteImport(runtime: RuntimeAdapter, messages: NotebookText['interchange'], onSaved: () => void) {
   const [preview, setPreview] = useState<NoteImportPreview | null>(null);
   const [result, setResult] = useState<VocabularyRecord | null>(null);
+  const [allowUnlinked, setAllowUnlinked] = useState(false);
   const [error, setError] = useState(''), [status, setStatus] = useState(''), [busy, setBusy] = useState(false);
   const working = useRef(false), operation = useRef<string | null>(null);
   useEffect(() => () => { if (operation.current) void runtime.cancelNoteImport(operation.current).catch(console.error); }, [runtime]);
   async function select() {
     if (working.current) return;
-    working.current = true; setBusy(true); setPreview(null); setResult(null); setError(''); setStatus('');
+    working.current = true; setBusy(true); setPreview(null); setResult(null); setError(''); setStatus(''); setAllowUnlinked(false);
     const id = crypto.randomUUID(); operation.current = id;
     try {
       const selected = await runtime.previewNoteImport(id);
@@ -27,7 +29,7 @@ function useNoteImport(runtime: RuntimeAdapter, messages: NotebookText['intercha
     if (!preview || working.current) return;
     working.current = true; setBusy(true); setError('');
     try {
-      const saved = await runtime.commitNoteImport(preview.operation);
+      const saved = await runtime.commitNoteImport(preview.operation, allowUnlinked);
       setResult(saved.record); setPreview(null);
       setStatus(saved.outcome === 'existing' ? messages.skipped : messages.imported); onSaved();
     } catch (cause) { setError(errorMessage(cause)); }
@@ -40,7 +42,8 @@ function useNoteImport(runtime: RuntimeAdapter, messages: NotebookText['intercha
       setPreview(null); setError(''); setStatus(messages.cancelled);
     } catch (cause) { setError(errorMessage(cause)); }
   }
-  return { preview, result, error, status, busy, select, confirm, cancel };
+  const canConfirm = preview && ['create', 'identical'].includes(preview.status) && (preview.enrichment?.status !== 'error' || allowUnlinked);
+  return { preview, result, error, status, busy, select, confirm, cancel, allowUnlinked, setAllowUnlinked, canConfirm };
 }
 
 function ImportPreview({ state, messages }: { readonly state: ReturnType<typeof useNoteImport>; readonly messages: NotebookText['interchange'] }) {
@@ -50,11 +53,14 @@ function ImportPreview({ state, messages }: { readonly state: ReturnType<typeof 
     <h3>{messages.title}</h3><p>{messages.source}: {preview.source.filename}</p>
     <p>{messages.rows}: {preview.rows.join(', ')}</p><p>{messages[preview.status]}</p>
     {preview.error && <p role="alert">{preview.error}</p>}
+    {preview.enrichment && <NoteImportDictionary enrichment={preview.enrichment} existing={preview.existing}
+      messages={messages.dictionary}
+      allowUnlinked={state.allowUnlinked} onContinue={state.setAllowUnlinked} disabled={busy} />}
     {preview.content && <><h4 lang="fr">{preview.content.headword}</h4><p>{messages.incoming}</p><pre>{preview.content.notes}</pre>
       {preview.content.examples?.map((example, index) => <div key={index}><pre lang="fr">{example.fr}</pre><pre lang="zh">{example.zh}</pre></div>)}</>}
     {preview.existing && <><p>{messages.current}</p><pre>{preview.existing.notes}</pre><pre>{preview.existing.example_fr}{'\n'}{preview.existing.example_zh}</pre>
       {preview.existing.more_examples.map((example, index) => <pre key={index}>{example.fr}{'\n'}{example.zh}</pre>)}</>}
-    <button disabled={busy || !['create', 'identical'].includes(preview.status)} onClick={() => { void confirm(); }}>{messages.confirm}</button>
+    <button disabled={busy || !state.canConfirm} onClick={() => { void confirm(); }}>{messages.confirm}</button>
     <button disabled={busy} onClick={() => { void cancel(); }}>{messages.cancel}</button>
   </section>;
 }

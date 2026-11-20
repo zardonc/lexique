@@ -1,5 +1,6 @@
 use std::{fs::File, io::Read, path::Path, sync::Mutex};
 
+use crate::note_enrichment::{NoteEnrichment, enrich_new_note};
 use lexique_storage::{
     ImportSource, NoteExample, NoteFormat, NoteImportContent, SaveResult, VocabularyRecord,
 };
@@ -17,6 +18,7 @@ pub struct NoteImportPreview {
     pub existing: Option<VocabularyRecord>,
     pub status: &'static str,
     pub error: Option<String>,
+    pub enrichment: Option<NoteEnrichment>,
 }
 
 #[derive(Default)]
@@ -62,6 +64,7 @@ pub fn preview_csv_file(
         existing: None,
         status: "invalid",
         error: None,
+        enrichment: None,
     };
     for row in reader.records() {
         let row = row.map_err(|e| format!("CSV record: {e}"))?;
@@ -109,6 +112,14 @@ pub fn commit_preview(
     connection: &mut Connection,
     preview: &NoteImportPreview,
 ) -> Result<SaveResult, String> {
+    commit_preview_with_consent(connection, preview, false)
+}
+
+pub fn commit_preview_with_consent(
+    connection: &mut Connection,
+    preview: &NoteImportPreview,
+    allow_unlinked: bool,
+) -> Result<SaveResult, String> {
     let content = preview
         .content
         .as_ref()
@@ -133,8 +144,42 @@ pub fn commit_preview(
     if preview.status != "create" {
         return Err("Resolve CSV errors or differences before importing".into());
     }
-    lexique_storage::save_imported_note(connection, &request, None, preview.source.clone())
+    if preview
+        .enrichment
+        .as_ref()
+        .is_some_and(|value| value.status == "error")
+        && !allow_unlinked
+    {
+        return Err("Choose whether to continue without a dictionary link before importing".into());
+    }
+    let snapshot = preview
+        .enrichment
+        .as_ref()
+        .and_then(|value| value.snapshot.clone());
+    lexique_storage::save_imported_note(connection, &request, snapshot, preview.source.clone())
         .map_err(|e| e.to_string())
+}
+
+pub fn preview_csv_file_with_dictionaries(
+    connection: &Connection,
+    file: &Path,
+    operation: &str,
+    database: &crate::vocabulary::DatabasePath,
+    builtin: &Path,
+    registry: &crate::dictionaries::Registry,
+) -> Result<NoteImportPreview, String> {
+    let mut preview = preview_csv_file(connection, file, operation)?;
+    if preview.status == "create" {
+        preview.enrichment = Some(enrich_new_note(
+            registry,
+            database,
+            builtin,
+            &preview.content.as_ref().unwrap().headword,
+        ));
+    } else if preview.existing.is_some() {
+        preview.enrichment = Some(NoteEnrichment::retained());
+    }
+    Ok(preview)
 }
 
 #[tauri::command]
@@ -174,7 +219,19 @@ pub async fn note_import_preview(
             .map_err(|e| format!("Could not resolve CSV file: {e}"))?;
         let connection =
             crate::vocabulary::open(app.state::<crate::vocabulary::DatabasePath>().inner())?;
-        let preview = preview_csv_file(&connection, &path, &operation)?;
+        let builtin = app
+            .path()
+            .resource_dir()
+            .map_err(|e| e.to_string())?
+            .join("dictionary/dictionary.sqlite3");
+        let preview = preview_csv_file_with_dictionaries(
+            &connection,
+            &path,
+            &operation,
+            &app.state::<crate::vocabulary::DatabasePath>(),
+            &builtin,
+            &app.state::<crate::dictionaries::Registry>(),
+        )?;
         let state = app.state::<NoteImportState>();
         let mut state = state
             .0
@@ -198,6 +255,7 @@ pub async fn note_import_commit(
     app: tauri::AppHandle,
     window: tauri::WebviewWindow,
     operation: String,
+    allow_unlinked: Option<bool>,
 ) -> Result<SaveResult, String> {
     if window.label() != "main" {
         return Err("Note import requires the main window".into());
@@ -217,7 +275,7 @@ pub async fn note_import_commit(
             .ok_or("CSV preview no longer available; preview again")?;
         let mut connection =
             crate::vocabulary::open(app.state::<crate::vocabulary::DatabasePath>().inner())?;
-        commit_preview(&mut connection, preview)
+        commit_preview_with_consent(&mut connection, preview, allow_unlinked.unwrap_or(false))
     })
     .await
     .map_err(|e| format!("CSV import task failed: {e}"))?
@@ -244,3 +302,7 @@ pub fn note_import_cancel(
 #[cfg(test)]
 #[path = "note_import_tests.rs"]
 mod tests;
+
+#[cfg(test)]
+#[path = "note_enrichment_tests.rs"]
+mod enrichment_tests;
