@@ -2,7 +2,7 @@
 
 ## 语法笔记与共享分类
 
-2026-11-19–20 UTC，按 [Q1–Q29 确认设计](grammar-notes-classification-design.md)实现独立语法笔记、共享多分类、文字问答卡和混合复习。审查基线为 `42c720556fd1195cca39ba704761877d1c0df48a`；原实现为 `77c98f6`，保存重试修正为 `a78b41e`，主线整合为 `2cba1bf`，批次历史修复为 `2c90170`，严格 Clippy 修复后的最终代码为 `e27ba23d73313ebb2d34df83146c7168a3737710`。下表分别记录各提交在 Windows x64 上的实际检查。
+2026-11-19–20 UTC，按 [Q1–Q29 确认设计](grammar-notes-classification-design.md)实现独立语法笔记、共享多分类、文字问答卡和混合复习。审查基线为 `42c720556fd1195cca39ba704761877d1c0df48a`；原实现为 `77c98f6`，保存重试修正为 `a78b41e`，主线整合为 `2cba1bf`，批次历史修复为 `2c90170`，最终生产代码为 `e27ba23d73313ebb2d34df83146c7168a3737710`，WASM 版本验收为 `c6c85f4524247ad9403724cf7fc0892d5205b44d`。[PR #182](https://github.com/zardonc/lexique/pull/182)整合本功能与修复，下表分别记录各提交在 Windows x64 上的实际检查。
 
 | 提交 | 检查 | 结果 | 证据 |
 | --- | --- | --- | --- |
@@ -16,6 +16,7 @@
 | `e27ba23` | 原生桌面库与缓存检查 | 预编译通过；库 97 项通过、2 项忽略；缓存 11 项通过、1 项忽略 | [预编译](../target/grammar-classification/review-20261119-user-fixes/ci-clippy-repair/desktop-tests-build.log)、[库](../target/grammar-classification/review-20261119-user-fixes/ci-clippy-repair/desktop-lib-tests.log)、[缓存](../target/grammar-classification/review-20261119-user-fixes/ci-clippy-repair/speech-cache-tests.log) |
 | `e27ba23` | Windows x64 实际 SQLite／退出／重启／整份备份恢复 | 笔记与备份场景均通过；自有进程均已清理 | [原生场景](../apps/desktop/e2e/native-grammar-classification-check.mjs)、[笔记结果](../target/grammar-classification/native-notes-review-e27ba23/results.json)、[备份结果](../target/grammar-classification/native-backup-review-e27ba23/results.json) |
 | `e27ba23` | 双轴审查及两次修复补审 | Standards 的 2 项 P2 与重复验证异味均修复；Standards／Spec 各 0 项未处理 | [最终审查](../target/grammar-classification/review-20261119-user-fixes/ci-clippy-repair/review-final.md)、[前次审查](../target/grammar-classification/review-20261119-user-fixes/final-review-fixes/review-final.md) |
+| `c6c85f4` | `pnpm wasm:build`、`node scripts/check-wasm.mjs`、`pnpm scheduling:build`、`pnpm test:scheduling` | 通过；实际 WASM 导出 schema 19，74 组固定与 4,096 组校准向量的日期／阶段完全一致，浮点最大绝对／相对误差均为 0 | [版本失败](../target/grammar-classification/review-20261119-user-fixes/ci-wasm-schema-repair/check-wasm-before.log)、[版本通过](../target/grammar-classification/review-20261119-user-fixes/ci-wasm-schema-repair/check-wasm-after.log)、[排程](../target/grammar-classification/review-20261119-user-fixes/ci-wasm-schema-repair/scheduling-conformance.json)、[元数据](../target/grammar-classification/review-20261119-user-fixes/ci-wasm-schema-repair/validation.json) |
 
 Rust 预编译与执行分开；后端、桌面库各组、缓存及每个原生场景均保留执行阶段硬性 60 秒上限。桌面库与缓存以 `cargo test --locked --release -p lexique-desktop --lib --test speech_cache --no-run` 预编译，库分八组运行。三个忽略项为既有专用子进程夹具。最终命令、完整提交、平台、程序哈希及日志归属见[审查验收元数据](../target/grammar-classification/review-20261119-user-fixes/ci-clippy-repair/validation.json)。`2c90170` 的前次验收保留于[历史元数据](../target/grammar-classification/review-20261119-user-fixes/final-review-fixes/validation.json)。原实现 `77c98f6` 的 208 项后端、404 项浏览器、48 项最终相关 UI，以及 74 组固定／4,096 组校准排程对照，保留于[原验收元数据](../target/grammar-classification/validation-final.json)。
 
