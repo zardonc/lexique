@@ -628,5 +628,11 @@
     "selected_sentence_authorship_proved": false
   },
   "preparation_script": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\prepare_candidates.py",
-  "selection_file": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\selection.py"
+  "selection_file": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\selection.py",
+  "independent_remote_verification": {
+    "status": "passed",
+    "revisions": 47,
+    "report": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\reviewer-primary\\remote-verification.json",
+    "reviewed_author_commit": "878fee8fa59c830126065c5654792da5d9a41092"
+  }
 }

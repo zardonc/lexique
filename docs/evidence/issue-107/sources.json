@@ -13,7 +13,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -31,7 +31,7 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
         "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-        "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+        "selected_text_authorship_status": "Edition credit retained where referenced/imported; page reference does not identify the selected sentence author. Established edition-level basis reused, not metadata-derived content acceptance."
       },
       {
         "author": "Other original authors identified by the retained bibliographic markers",
@@ -43,8 +43,8 @@
             "role": "bibliography_or_import_metadata"
           }
         ],
-        "selected_text_authorship_status": "Pending: bibliography is not proof of imported selected wording",
-        "applicable_rights": "Unresolved at any non-DAF8 original-text boundary; page-wide CC BY-SA does not settle external wording rights"
+        "selected_text_authorship_status": "Bibliographic markers independently inspected; no selected external wording identified. Unselected etymology, other-language entries and quotations provide no bundled fields.",
+        "applicable_rights": "No rights to these external works are claimed; their wording is not selected."
       },
       {
         "author": "Lexique contributors",
@@ -54,11 +54,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [
       {
@@ -74,7 +74,7 @@
         "role": "bibliography_or_import_metadata"
       }
     ],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "Actarus Prince d'Euphor",
       "Ainoa Luß",
@@ -179,7 +179,9 @@
       "Àncilu bot"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "Tokoss78"
+    "last_revision_editor": "Tokoss78",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_405",
@@ -195,7 +197,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -213,7 +215,7 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
         "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-        "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+        "selected_text_authorship_status": "Edition credit retained where referenced/imported; page reference does not identify the selected sentence author. Established edition-level basis reused, not metadata-derived content acceptance."
       },
       {
         "author": "Other original authors identified by the retained bibliographic markers",
@@ -225,8 +227,8 @@
             "role": "bibliography_or_import_metadata"
           }
         ],
-        "selected_text_authorship_status": "Pending: bibliography is not proof of imported selected wording",
-        "applicable_rights": "Unresolved at any non-DAF8 original-text boundary; page-wide CC BY-SA does not settle external wording rights"
+        "selected_text_authorship_status": "Bibliographic markers independently inspected; no selected external wording identified. Unselected etymology, other-language entries and quotations provide no bundled fields.",
+        "applicable_rights": "No rights to these external works are claimed; their wording is not selected."
       },
       {
         "author": "Lexique contributors",
@@ -236,11 +238,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [
       {
@@ -256,7 +258,7 @@
         "role": "bibliography_or_import_metadata"
       }
     ],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "Actarus Prince d'Euphor",
       "Alphabeta",
@@ -349,7 +351,9 @@
       "Àncilu bot"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "Crulder"
+    "last_revision_editor": "Crulder",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_816",
@@ -365,7 +369,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -383,7 +387,7 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
         "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-        "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+        "selected_text_authorship_status": "Edition credit retained where referenced/imported; page reference does not identify the selected sentence author. Established edition-level basis reused, not metadata-derived content acceptance."
       },
       {
         "author": "Other original authors identified by the retained bibliographic markers",
@@ -473,8 +477,8 @@
             "role": "bibliography_or_import_metadata"
           }
         ],
-        "selected_text_authorship_status": "Pending: bibliography is not proof of imported selected wording",
-        "applicable_rights": "Unresolved at any non-DAF8 original-text boundary; page-wide CC BY-SA does not settle external wording rights"
+        "selected_text_authorship_status": "Bibliographic markers independently inspected; no selected external wording identified. Unselected etymology, other-language entries and quotations provide no bundled fields.",
+        "applicable_rights": "No rights to these external works are claimed; their wording is not selected."
       },
       {
         "author": "Lexique contributors",
@@ -484,11 +488,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [
       {
@@ -588,7 +592,7 @@
         "role": "bibliography_or_import_metadata"
       }
     ],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "ABLouisBot",
       "Actarus Prince d'Euphor",
@@ -679,7 +683,9 @@
       "Àncilu bot"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "Sayoxime"
+    "last_revision_editor": "Sayoxime",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_1851",
@@ -695,7 +701,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -711,14 +717,14 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "A12n",
       "A4rizm",
@@ -862,7 +868,9 @@
       "Àncilu bot"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "Cdang"
+    "last_revision_editor": "Cdang",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_4929",
@@ -878,7 +886,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -896,7 +904,7 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
         "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-        "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+        "selected_text_authorship_status": "Edition credit retained where referenced/imported; page reference does not identify the selected sentence author. Established edition-level basis reused, not metadata-derived content acceptance."
       },
       {
         "author": "Lexique contributors",
@@ -906,11 +914,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [
       {
@@ -920,7 +928,7 @@
         "role": "bibliography_or_import_metadata"
       }
     ],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "Alphabeta",
       "ArthurBot",
@@ -996,7 +1004,9 @@
       "Àncilu"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "The.shahab"
+    "last_revision_editor": "The.shahab",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_8320",
@@ -1012,7 +1022,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -1030,7 +1040,7 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
         "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-        "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+        "selected_text_authorship_status": "Edition credit retained where referenced/imported; page reference does not identify the selected sentence author. Established edition-level basis reused, not metadata-derived content acceptance."
       },
       {
         "author": "Lexique contributors",
@@ -1040,11 +1050,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [
       {
@@ -1054,7 +1064,7 @@
         "role": "bibliography_or_import_metadata"
       }
     ],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "AerreDG",
       "Alphabeta",
@@ -1118,7 +1128,9 @@
       "~2026-51826-27"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "~2026-51826-27"
+    "last_revision_editor": "~2026-51826-27",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_8612",
@@ -1134,7 +1146,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -1152,7 +1164,7 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
         "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-        "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+        "selected_text_authorship_status": "Edition credit retained where referenced/imported; page reference does not identify the selected sentence author. Established edition-level basis reused, not metadata-derived content acceptance."
       },
       {
         "author": "Other original authors identified by the retained bibliographic markers",
@@ -1176,8 +1188,8 @@
             "role": "bibliography_or_import_metadata"
           }
         ],
-        "selected_text_authorship_status": "Pending: bibliography is not proof of imported selected wording",
-        "applicable_rights": "Unresolved at any non-DAF8 original-text boundary; page-wide CC BY-SA does not settle external wording rights"
+        "selected_text_authorship_status": "Bibliographic markers independently inspected; no selected external wording identified. Unselected etymology, other-language entries and quotations provide no bundled fields.",
+        "applicable_rights": "No rights to these external works are claimed; their wording is not selected."
       },
       {
         "author": "Lexique contributors",
@@ -1187,11 +1199,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [
       {
@@ -1219,7 +1231,7 @@
         "role": "bibliography_or_import_metadata"
       }
     ],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "Aandrem",
       "Abalg",
@@ -1336,7 +1348,9 @@
       "Àncilu bot"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "Dhegiha"
+    "last_revision_editor": "Dhegiha",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_8751",
@@ -1352,7 +1366,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -1370,7 +1384,7 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
         "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-        "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+        "selected_text_authorship_status": "Edition credit retained where referenced/imported; page reference does not identify the selected sentence author. Established edition-level basis reused, not metadata-derived content acceptance."
       },
       {
         "author": "Other original authors identified by the retained bibliographic markers",
@@ -1382,8 +1396,8 @@
             "role": "bibliography_or_import_metadata"
           }
         ],
-        "selected_text_authorship_status": "Pending: bibliography is not proof of imported selected wording",
-        "applicable_rights": "Unresolved at any non-DAF8 original-text boundary; page-wide CC BY-SA does not settle external wording rights"
+        "selected_text_authorship_status": "Bibliographic markers independently inspected; no selected external wording identified. Unselected etymology, other-language entries and quotations provide no bundled fields.",
+        "applicable_rights": "No rights to these external works are claimed; their wording is not selected."
       },
       {
         "author": "Lexique contributors",
@@ -1393,11 +1407,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [
       {
@@ -1413,7 +1427,7 @@
         "role": "bibliography_or_import_metadata"
       }
     ],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "Actarus Prince d'Euphor",
       "Alexander Mikhalenko",
@@ -1471,7 +1485,9 @@
       "Àncilu bot"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "Fagairolles 34"
+    "last_revision_editor": "Fagairolles 34",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_9218",
@@ -1487,7 +1503,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -1505,7 +1521,7 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
         "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-        "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+        "selected_text_authorship_status": "Edition credit retained where referenced/imported; page reference does not identify the selected sentence author. Established edition-level basis reused, not metadata-derived content acceptance."
       },
       {
         "author": "Other original authors identified by the retained bibliographic markers",
@@ -1523,8 +1539,8 @@
             "role": "bibliography_or_import_metadata"
           }
         ],
-        "selected_text_authorship_status": "Pending: bibliography is not proof of imported selected wording",
-        "applicable_rights": "Unresolved at any non-DAF8 original-text boundary; page-wide CC BY-SA does not settle external wording rights"
+        "selected_text_authorship_status": "Bibliographic markers independently inspected; no selected external wording identified. Unselected etymology, other-language entries and quotations provide no bundled fields.",
+        "applicable_rights": "No rights to these external works are claimed; their wording is not selected."
       },
       {
         "author": "Lexique contributors",
@@ -1534,11 +1550,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [
       {
@@ -1560,7 +1576,7 @@
         "role": "bibliography_or_import_metadata"
       }
     ],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "ABLouisBot",
       "Adelpine",
@@ -1655,7 +1671,9 @@
       "רפאל"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "Ngala Brain"
+    "last_revision_editor": "Ngala Brain",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_9490",
@@ -1671,7 +1689,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -1689,7 +1707,7 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
         "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-        "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+        "selected_text_authorship_status": "Edition credit retained where referenced/imported; page reference does not identify the selected sentence author. Established edition-level basis reused, not metadata-derived content acceptance."
       },
       {
         "author": "Other original authors identified by the retained bibliographic markers",
@@ -1707,8 +1725,8 @@
             "role": "bibliography_or_import_metadata"
           }
         ],
-        "selected_text_authorship_status": "Pending: bibliography is not proof of imported selected wording",
-        "applicable_rights": "Unresolved at any non-DAF8 original-text boundary; page-wide CC BY-SA does not settle external wording rights"
+        "selected_text_authorship_status": "Bibliographic markers independently inspected; no selected external wording identified. Unselected etymology, other-language entries and quotations provide no bundled fields.",
+        "applicable_rights": "No rights to these external works are claimed; their wording is not selected."
       },
       {
         "author": "Lexique contributors",
@@ -1718,11 +1736,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [
       {
@@ -1744,7 +1762,7 @@
         "role": "bibliography_or_import_metadata"
       }
     ],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "Abalg",
       "Actarus Prince d'Euphor",
@@ -1820,7 +1838,9 @@
       "Àncilu bot"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "WikiLucas00"
+    "last_revision_editor": "WikiLucas00",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_9799",
@@ -1836,7 +1856,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -1854,7 +1874,7 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
         "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-        "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+        "selected_text_authorship_status": "Edition credit retained where referenced/imported; page reference does not identify the selected sentence author. Established edition-level basis reused, not metadata-derived content acceptance."
       },
       {
         "author": "Other original authors identified by the retained bibliographic markers",
@@ -1872,8 +1892,8 @@
             "role": "bibliography_or_import_metadata"
           }
         ],
-        "selected_text_authorship_status": "Pending: bibliography is not proof of imported selected wording",
-        "applicable_rights": "Unresolved at any non-DAF8 original-text boundary; page-wide CC BY-SA does not settle external wording rights"
+        "selected_text_authorship_status": "Bibliographic markers independently inspected; no selected external wording identified. Unselected etymology, other-language entries and quotations provide no bundled fields.",
+        "applicable_rights": "No rights to these external works are claimed; their wording is not selected."
       },
       {
         "author": "Lexique contributors",
@@ -1883,11 +1903,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [
       {
@@ -1909,7 +1929,7 @@
         "role": "bibliography_or_import_metadata"
       }
     ],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "Adelpine",
       "Alphabeta",
@@ -1985,7 +2005,9 @@
       "आरसएनइउरडअगआलइऑम"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "Courvey"
+    "last_revision_editor": "Courvey",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_9972",
@@ -2001,7 +2023,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -2017,14 +2039,14 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "Actarus Prince d'Euphor",
       "Aelmvn",
@@ -2094,7 +2116,9 @@
       "Àncilu bot"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "Justinetto"
+    "last_revision_editor": "Justinetto",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_11991",
@@ -2110,7 +2134,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -2128,7 +2152,7 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
         "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-        "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+        "selected_text_authorship_status": "Edition credit retained where referenced/imported; page reference does not identify the selected sentence author. Established edition-level basis reused, not metadata-derived content acceptance."
       },
       {
         "author": "Other original authors identified by the retained bibliographic markers",
@@ -2254,8 +2278,8 @@
             "role": "bibliography_or_import_metadata"
           }
         ],
-        "selected_text_authorship_status": "Pending: bibliography is not proof of imported selected wording",
-        "applicable_rights": "Unresolved at any non-DAF8 original-text boundary; page-wide CC BY-SA does not settle external wording rights"
+        "selected_text_authorship_status": "Bibliographic markers independently inspected; no selected external wording identified. Unselected etymology, other-language entries and quotations provide no bundled fields.",
+        "applicable_rights": "No rights to these external works are claimed; their wording is not selected."
       },
       {
         "author": "Lexique contributors",
@@ -2265,11 +2289,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [
       {
@@ -2399,7 +2423,7 @@
         "role": "bibliography_or_import_metadata"
       }
     ],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "Alphabeta",
       "Amqui",
@@ -2505,7 +2529,9 @@
       "Àncilu bot"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "Sayoxime"
+    "last_revision_editor": "Sayoxime",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_12113",
@@ -2521,7 +2547,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -2539,7 +2565,7 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
         "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-        "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+        "selected_text_authorship_status": "Edition credit retained where referenced/imported; page reference does not identify the selected sentence author. Established edition-level basis reused, not metadata-derived content acceptance."
       },
       {
         "author": "Other original authors identified by the retained bibliographic markers",
@@ -2551,8 +2577,8 @@
             "role": "bibliography_or_import_metadata"
           }
         ],
-        "selected_text_authorship_status": "Pending: bibliography is not proof of imported selected wording",
-        "applicable_rights": "Unresolved at any non-DAF8 original-text boundary; page-wide CC BY-SA does not settle external wording rights"
+        "selected_text_authorship_status": "Bibliographic markers independently inspected; no selected external wording identified. Unselected etymology, other-language entries and quotations provide no bundled fields.",
+        "applicable_rights": "No rights to these external works are claimed; their wording is not selected."
       },
       {
         "author": "Lexique contributors",
@@ -2562,11 +2588,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [
       {
@@ -2582,7 +2608,7 @@
         "role": "bibliography_or_import_metadata"
       }
     ],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "16@r",
       "Actarus Prince d'Euphor",
@@ -2681,7 +2707,9 @@
       "Àncilu bot"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "WikiLucas00"
+    "last_revision_editor": "WikiLucas00",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_25802",
@@ -2697,7 +2725,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -2757,8 +2785,8 @@
             "role": "bibliography_or_import_metadata"
           }
         ],
-        "selected_text_authorship_status": "Pending: bibliography is not proof of imported selected wording",
-        "applicable_rights": "Unresolved at any non-DAF8 original-text boundary; page-wide CC BY-SA does not settle external wording rights"
+        "selected_text_authorship_status": "Bibliographic markers independently inspected; no selected external wording identified. Unselected etymology, other-language entries and quotations provide no bundled fields.",
+        "applicable_rights": "No rights to these external works are claimed; their wording is not selected."
       },
       {
         "author": "Lexique contributors",
@@ -2768,11 +2796,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [
       {
@@ -2824,7 +2852,7 @@
         "role": "bibliography_or_import_metadata"
       }
     ],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "Alphabeta",
       "Amqui",
@@ -2939,7 +2967,9 @@
       "Àncilu bot"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "WikiLucas00"
+    "last_revision_editor": "WikiLucas00",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_35652",
@@ -2955,7 +2985,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -2979,8 +3009,8 @@
             "role": "bibliography_or_import_metadata"
           }
         ],
-        "selected_text_authorship_status": "Pending: bibliography is not proof of imported selected wording",
-        "applicable_rights": "Unresolved at any non-DAF8 original-text boundary; page-wide CC BY-SA does not settle external wording rights"
+        "selected_text_authorship_status": "Bibliographic markers independently inspected; no selected external wording identified. Unselected etymology, other-language entries and quotations provide no bundled fields.",
+        "applicable_rights": "No rights to these external works are claimed; their wording is not selected."
       },
       {
         "author": "Lexique contributors",
@@ -2990,11 +3020,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [
       {
@@ -3010,7 +3040,7 @@
         "role": "bibliography_or_import_metadata"
       }
     ],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "ABLouisBot",
       "B0000000000m1798",
@@ -3058,7 +3088,9 @@
       "X"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "JClaudeBBKing"
+    "last_revision_editor": "JClaudeBBKing",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_36528",
@@ -3074,7 +3106,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -3104,8 +3136,8 @@
             "role": "bibliography_or_import_metadata"
           }
         ],
-        "selected_text_authorship_status": "Pending: bibliography is not proof of imported selected wording",
-        "applicable_rights": "Unresolved at any non-DAF8 original-text boundary; page-wide CC BY-SA does not settle external wording rights"
+        "selected_text_authorship_status": "Bibliographic markers independently inspected; no selected external wording identified. Unselected etymology, other-language entries and quotations provide no bundled fields.",
+        "applicable_rights": "No rights to these external works are claimed; their wording is not selected."
       },
       {
         "author": "Lexique contributors",
@@ -3115,11 +3147,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [
       {
@@ -3141,7 +3173,7 @@
         "role": "bibliography_or_import_metadata"
       }
     ],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "ABLouisBot",
       "Ainoa Luß",
@@ -3217,7 +3249,9 @@
       "Мартын 48"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "Dhegiha"
+    "last_revision_editor": "Dhegiha",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_40832",
@@ -3233,7 +3267,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -3257,8 +3291,8 @@
             "role": "bibliography_or_import_metadata"
           }
         ],
-        "selected_text_authorship_status": "Pending: bibliography is not proof of imported selected wording",
-        "applicable_rights": "Unresolved at any non-DAF8 original-text boundary; page-wide CC BY-SA does not settle external wording rights"
+        "selected_text_authorship_status": "Bibliographic markers independently inspected; no selected external wording identified. Unselected etymology, other-language entries and quotations provide no bundled fields.",
+        "applicable_rights": "No rights to these external works are claimed; their wording is not selected."
       },
       {
         "author": "Lexique contributors",
@@ -3268,11 +3302,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [
       {
@@ -3288,7 +3322,7 @@
         "role": "bibliography_or_import_metadata"
       }
     ],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "ABLouisBot",
       "Aandrem",
@@ -3386,7 +3420,9 @@
       "Àncilu bot"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "Pixeltoo"
+    "last_revision_editor": "Pixeltoo",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_50668",
@@ -3402,7 +3438,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -3426,8 +3462,8 @@
             "role": "bibliography_or_import_metadata"
           }
         ],
-        "selected_text_authorship_status": "Pending: bibliography is not proof of imported selected wording",
-        "applicable_rights": "Unresolved at any non-DAF8 original-text boundary; page-wide CC BY-SA does not settle external wording rights"
+        "selected_text_authorship_status": "Bibliographic markers independently inspected; no selected external wording identified. Unselected etymology, other-language entries and quotations provide no bundled fields.",
+        "applicable_rights": "No rights to these external works are claimed; their wording is not selected."
       },
       {
         "author": "Lexique contributors",
@@ -3437,11 +3473,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [
       {
@@ -3457,7 +3493,7 @@
         "role": "bibliography_or_import_metadata"
       }
     ],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "Alexander Mikhalenko",
       "Alkamid",
@@ -3505,7 +3541,9 @@
       "Àncilu bot"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "Sik666"
+    "last_revision_editor": "Sik666",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_58171",
@@ -3521,7 +3559,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -3539,7 +3577,7 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
         "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-        "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+        "selected_text_authorship_status": "Edition credit retained where referenced/imported; page reference does not identify the selected sentence author. Established edition-level basis reused, not metadata-derived content acceptance."
       },
       {
         "author": "Other original authors identified by the retained bibliographic markers",
@@ -3563,8 +3601,8 @@
             "role": "bibliography_or_import_metadata"
           }
         ],
-        "selected_text_authorship_status": "Pending: bibliography is not proof of imported selected wording",
-        "applicable_rights": "Unresolved at any non-DAF8 original-text boundary; page-wide CC BY-SA does not settle external wording rights"
+        "selected_text_authorship_status": "Bibliographic markers independently inspected; no selected external wording identified. Unselected etymology, other-language entries and quotations provide no bundled fields.",
+        "applicable_rights": "No rights to these external works are claimed; their wording is not selected."
       },
       {
         "author": "Lexique contributors",
@@ -3574,11 +3612,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [
       {
@@ -3606,7 +3644,7 @@
         "role": "bibliography_or_import_metadata"
       }
     ],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "Abanove",
       "Aelmvn",
@@ -3678,7 +3716,9 @@
       "Àncilu bot"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "WikiLucas00"
+    "last_revision_editor": "WikiLucas00",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_118465",
@@ -3694,7 +3734,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -3712,7 +3752,7 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
         "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-        "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+        "selected_text_authorship_status": "Edition credit retained where referenced/imported; page reference does not identify the selected sentence author. Established edition-level basis reused, not metadata-derived content acceptance."
       },
       {
         "author": "Lexique contributors",
@@ -3722,11 +3762,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [
       {
@@ -3736,7 +3776,7 @@
         "role": "bibliography_or_import_metadata"
       }
     ],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "Actarus Prince d'Euphor",
       "Alphabeta",
@@ -3799,7 +3839,9 @@
       "Серк.123"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "Montrealais"
+    "last_revision_editor": "Montrealais",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_120193",
@@ -3815,7 +3857,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -3833,7 +3875,7 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
         "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-        "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+        "selected_text_authorship_status": "Edition credit retained where referenced/imported; page reference does not identify the selected sentence author. Established edition-level basis reused, not metadata-derived content acceptance."
       },
       {
         "author": "Other original authors identified by the retained bibliographic markers",
@@ -3845,8 +3887,8 @@
             "role": "bibliography_or_import_metadata"
           }
         ],
-        "selected_text_authorship_status": "Pending: bibliography is not proof of imported selected wording",
-        "applicable_rights": "Unresolved at any non-DAF8 original-text boundary; page-wide CC BY-SA does not settle external wording rights"
+        "selected_text_authorship_status": "Bibliographic markers independently inspected; no selected external wording identified. Unselected etymology, other-language entries and quotations provide no bundled fields.",
+        "applicable_rights": "No rights to these external works are claimed; their wording is not selected."
       },
       {
         "author": "Lexique contributors",
@@ -3856,11 +3898,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [
       {
@@ -3876,7 +3918,7 @@
         "role": "bibliography_or_import_metadata"
       }
     ],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "Afsmassa",
       "Alphabeta",
@@ -3951,7 +3993,9 @@
       "Àncilu bot"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "WikiLucas00"
+    "last_revision_editor": "WikiLucas00",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_120345",
@@ -3967,7 +4011,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -3985,7 +4029,7 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
         "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-        "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+        "selected_text_authorship_status": "Edition credit retained where referenced/imported; page reference does not identify the selected sentence author. Established edition-level basis reused, not metadata-derived content acceptance."
       },
       {
         "author": "Other original authors identified by the retained bibliographic markers",
@@ -4015,8 +4059,8 @@
             "role": "bibliography_or_import_metadata"
           }
         ],
-        "selected_text_authorship_status": "Pending: bibliography is not proof of imported selected wording",
-        "applicable_rights": "Unresolved at any non-DAF8 original-text boundary; page-wide CC BY-SA does not settle external wording rights"
+        "selected_text_authorship_status": "Bibliographic markers independently inspected; no selected external wording identified. Unselected etymology, other-language entries and quotations provide no bundled fields.",
+        "applicable_rights": "No rights to these external works are claimed; their wording is not selected."
       },
       {
         "author": "Lexique contributors",
@@ -4026,11 +4070,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [
       {
@@ -4064,7 +4108,7 @@
         "role": "bibliography_or_import_metadata"
       }
     ],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "A4rbre",
       "Actarus Prince d'Euphor",
@@ -4136,7 +4180,9 @@
       "WikiLucas00"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "Diligent"
+    "last_revision_editor": "Diligent",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_120447",
@@ -4152,7 +4198,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -4170,7 +4216,7 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
         "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-        "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+        "selected_text_authorship_status": "Edition credit retained where referenced/imported; page reference does not identify the selected sentence author. Established edition-level basis reused, not metadata-derived content acceptance."
       },
       {
         "author": "Other original authors identified by the retained bibliographic markers",
@@ -4182,8 +4228,8 @@
             "role": "bibliography_or_import_metadata"
           }
         ],
-        "selected_text_authorship_status": "Pending: bibliography is not proof of imported selected wording",
-        "applicable_rights": "Unresolved at any non-DAF8 original-text boundary; page-wide CC BY-SA does not settle external wording rights"
+        "selected_text_authorship_status": "Bibliographic markers independently inspected; no selected external wording identified. Unselected etymology, other-language entries and quotations provide no bundled fields.",
+        "applicable_rights": "No rights to these external works are claimed; their wording is not selected."
       },
       {
         "author": "Lexique contributors",
@@ -4193,11 +4239,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [
       {
@@ -4213,7 +4259,7 @@
         "role": "bibliography_or_import_metadata"
       }
     ],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "ABLouisBot",
       "Alphabeta",
@@ -4285,7 +4331,9 @@
       "Àncilu"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "The.shahab"
+    "last_revision_editor": "The.shahab",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_122158",
@@ -4301,7 +4349,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -4319,7 +4367,7 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
         "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-        "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+        "selected_text_authorship_status": "Edition credit retained where referenced/imported; page reference does not identify the selected sentence author. Established edition-level basis reused, not metadata-derived content acceptance."
       },
       {
         "author": "Other original authors identified by the retained bibliographic markers",
@@ -4361,8 +4409,8 @@
             "role": "bibliography_or_import_metadata"
           }
         ],
-        "selected_text_authorship_status": "Pending: bibliography is not proof of imported selected wording",
-        "applicable_rights": "Unresolved at any non-DAF8 original-text boundary; page-wide CC BY-SA does not settle external wording rights"
+        "selected_text_authorship_status": "Bibliographic markers independently inspected; no selected external wording identified. Unselected etymology, other-language entries and quotations provide no bundled fields.",
+        "applicable_rights": "No rights to these external works are claimed; their wording is not selected."
       },
       {
         "author": "Lexique contributors",
@@ -4372,11 +4420,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [
       {
@@ -4422,7 +4470,7 @@
         "role": "bibliography_or_import_metadata"
       }
     ],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "Actarus Prince d'Euphor",
       "Alhajib Almansour",
@@ -4505,7 +4553,9 @@
       "Àncilu bot"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "Fagairolles 34"
+    "last_revision_editor": "Fagairolles 34",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_135043",
@@ -4521,7 +4571,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -4539,7 +4589,7 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
         "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-        "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+        "selected_text_authorship_status": "Edition credit retained where referenced/imported; page reference does not identify the selected sentence author. Established edition-level basis reused, not metadata-derived content acceptance."
       },
       {
         "author": "Lexique contributors",
@@ -4549,11 +4599,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [
       {
@@ -4563,7 +4613,7 @@
         "role": "bibliography_or_import_metadata"
       }
     ],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "Actarus Prince d'Euphor",
       "Alphabeta",
@@ -4616,7 +4666,9 @@
       "Xic667"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "WikiLucas00"
+    "last_revision_editor": "WikiLucas00",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_144584",
@@ -4632,7 +4684,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -4648,14 +4700,14 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "AerreDG",
       "Alphabeta",
@@ -4733,7 +4785,9 @@
       "Àncilu bot"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "Sapphorain"
+    "last_revision_editor": "Sapphorain",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_148492",
@@ -4749,7 +4803,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -4767,7 +4821,7 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
         "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-        "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+        "selected_text_authorship_status": "Edition credit retained where referenced/imported; page reference does not identify the selected sentence author. Established edition-level basis reused, not metadata-derived content acceptance."
       },
       {
         "author": "Lexique contributors",
@@ -4777,11 +4831,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [
       {
@@ -4791,7 +4845,7 @@
         "role": "bibliography_or_import_metadata"
       }
     ],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "16@r",
       "AerreDG",
@@ -4853,7 +4907,9 @@
       "Àncilu bot"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "CKali"
+    "last_revision_editor": "CKali",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_148613",
@@ -4869,7 +4925,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -4887,7 +4943,7 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
         "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-        "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+        "selected_text_authorship_status": "Edition credit retained where referenced/imported; page reference does not identify the selected sentence author. Established edition-level basis reused, not metadata-derived content acceptance."
       },
       {
         "author": "Lexique contributors",
@@ -4897,11 +4953,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [
       {
@@ -4911,7 +4967,7 @@
         "role": "bibliography_or_import_metadata"
       }
     ],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "Alphabeta",
       "Arcuz94",
@@ -4981,7 +5037,9 @@
       "Àncilu bot"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "Unsui"
+    "last_revision_editor": "Unsui",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_148851",
@@ -4997,7 +5055,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -5015,7 +5073,7 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
         "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-        "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+        "selected_text_authorship_status": "Edition credit retained where referenced/imported; page reference does not identify the selected sentence author. Established edition-level basis reused, not metadata-derived content acceptance."
       },
       {
         "author": "Other original authors identified by the retained bibliographic markers",
@@ -5033,8 +5091,8 @@
             "role": "bibliography_or_import_metadata"
           }
         ],
-        "selected_text_authorship_status": "Pending: bibliography is not proof of imported selected wording",
-        "applicable_rights": "Unresolved at any non-DAF8 original-text boundary; page-wide CC BY-SA does not settle external wording rights"
+        "selected_text_authorship_status": "Bibliographic markers independently inspected; no selected external wording identified. Unselected etymology, other-language entries and quotations provide no bundled fields.",
+        "applicable_rights": "No rights to these external works are claimed; their wording is not selected."
       },
       {
         "author": "Lexique contributors",
@@ -5044,11 +5102,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [
       {
@@ -5070,7 +5128,7 @@
         "role": "bibliography_or_import_metadata"
       }
     ],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "Actarus Prince d'Euphor",
       "Arpyia",
@@ -5133,7 +5191,9 @@
       "Àncilu bot"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "WikiLucas00"
+    "last_revision_editor": "WikiLucas00",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_155393",
@@ -5149,7 +5209,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -5167,7 +5227,7 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
         "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-        "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+        "selected_text_authorship_status": "Edition credit retained where referenced/imported; page reference does not identify the selected sentence author. Established edition-level basis reused, not metadata-derived content acceptance."
       },
       {
         "author": "Other original authors identified by the retained bibliographic markers",
@@ -5179,8 +5239,8 @@
             "role": "bibliography_or_import_metadata"
           }
         ],
-        "selected_text_authorship_status": "Pending: bibliography is not proof of imported selected wording",
-        "applicable_rights": "Unresolved at any non-DAF8 original-text boundary; page-wide CC BY-SA does not settle external wording rights"
+        "selected_text_authorship_status": "Bibliographic markers independently inspected; no selected external wording identified. Unselected etymology, other-language entries and quotations provide no bundled fields.",
+        "applicable_rights": "No rights to these external works are claimed; their wording is not selected."
       },
       {
         "author": "Lexique contributors",
@@ -5190,11 +5250,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [
       {
@@ -5210,7 +5270,7 @@
         "role": "bibliography_or_import_metadata"
       }
     ],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "Alphabeta",
       "ArséniureDeGallium",
@@ -5269,7 +5329,9 @@
       "Àncilu bot"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "Lepticed7"
+    "last_revision_editor": "Lepticed7",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_156543",
@@ -5285,7 +5347,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -5303,7 +5365,7 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
         "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-        "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+        "selected_text_authorship_status": "Edition credit retained where referenced/imported; page reference does not identify the selected sentence author. Established edition-level basis reused, not metadata-derived content acceptance."
       },
       {
         "author": "Lexique contributors",
@@ -5313,11 +5375,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [
       {
@@ -5327,7 +5389,7 @@
         "role": "bibliography_or_import_metadata"
       }
     ],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "Baltic Bot",
       "Bercours",
@@ -5371,7 +5433,9 @@
       "~2025-29276-71"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "WikiLucas00"
+    "last_revision_editor": "WikiLucas00",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_157193",
@@ -5387,7 +5451,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -5405,7 +5469,7 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
         "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-        "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+        "selected_text_authorship_status": "Edition credit retained where referenced/imported; page reference does not identify the selected sentence author. Established edition-level basis reused, not metadata-derived content acceptance."
       },
       {
         "author": "Lexique contributors",
@@ -5415,11 +5479,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [
       {
@@ -5429,7 +5493,7 @@
         "role": "bibliography_or_import_metadata"
       }
     ],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "Alexander Mikhalenko",
       "Andrew Sheedy",
@@ -5477,7 +5541,9 @@
       "Àncilu bot"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "Freneo"
+    "last_revision_editor": "Freneo",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_166008",
@@ -5493,7 +5559,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -5511,7 +5577,7 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
         "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-        "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+        "selected_text_authorship_status": "Edition credit retained where referenced/imported; page reference does not identify the selected sentence author. Established edition-level basis reused, not metadata-derived content acceptance."
       },
       {
         "author": "Lexique contributors",
@@ -5521,11 +5587,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [
       {
@@ -5535,7 +5601,7 @@
         "role": "bibliography_or_import_metadata"
       }
     ],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "Automatik",
       "Baltic Bot",
@@ -5582,7 +5648,9 @@
       "Àncilu bot"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "Mioche28"
+    "last_revision_editor": "Mioche28",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_166983",
@@ -5598,7 +5666,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -5616,7 +5684,7 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
         "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-        "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+        "selected_text_authorship_status": "Edition credit retained where referenced/imported; page reference does not identify the selected sentence author. Established edition-level basis reused, not metadata-derived content acceptance."
       },
       {
         "author": "Lexique contributors",
@@ -5626,11 +5694,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [
       {
@@ -5640,7 +5708,7 @@
         "role": "bibliography_or_import_metadata"
       }
     ],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "Alno",
       "Alphabeta",
@@ -5724,7 +5792,9 @@
       "Àncilu"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "Aoulassa Nadine"
+    "last_revision_editor": "Aoulassa Nadine",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_167756",
@@ -5740,7 +5810,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -5758,7 +5828,7 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
         "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-        "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+        "selected_text_authorship_status": "Edition credit retained where referenced/imported; page reference does not identify the selected sentence author. Established edition-level basis reused, not metadata-derived content acceptance."
       },
       {
         "author": "Other original authors identified by the retained bibliographic markers",
@@ -5776,8 +5846,8 @@
             "role": "bibliography_or_import_metadata"
           }
         ],
-        "selected_text_authorship_status": "Pending: bibliography is not proof of imported selected wording",
-        "applicable_rights": "Unresolved at any non-DAF8 original-text boundary; page-wide CC BY-SA does not settle external wording rights"
+        "selected_text_authorship_status": "Bibliographic markers independently inspected; no selected external wording identified. Unselected etymology, other-language entries and quotations provide no bundled fields.",
+        "applicable_rights": "No rights to these external works are claimed; their wording is not selected."
       },
       {
         "author": "Lexique contributors",
@@ -5787,11 +5857,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [
       {
@@ -5813,7 +5883,7 @@
         "role": "bibliography_or_import_metadata"
       }
     ],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "Abalg",
       "Ainoa Luß",
@@ -5897,7 +5967,9 @@
       "Àncilu bot"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "Richaringan"
+    "last_revision_editor": "Richaringan",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_168960",
@@ -5913,7 +5985,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -5931,7 +6003,7 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
         "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-        "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+        "selected_text_authorship_status": "Edition credit retained where referenced/imported; page reference does not identify the selected sentence author. Established edition-level basis reused, not metadata-derived content acceptance."
       },
       {
         "author": "Lexique contributors",
@@ -5941,11 +6013,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [
       {
@@ -5955,7 +6027,7 @@
         "role": "bibliography_or_import_metadata"
       }
     ],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "Aandrem",
       "Abrandao",
@@ -6024,7 +6096,9 @@
       "Àncilu bot"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "CKali"
+    "last_revision_editor": "CKali",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_169439",
@@ -6040,7 +6114,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -6058,7 +6132,7 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
         "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-        "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+        "selected_text_authorship_status": "Edition credit retained where referenced/imported; page reference does not identify the selected sentence author. Established edition-level basis reused, not metadata-derived content acceptance."
       },
       {
         "author": "Other original authors identified by the retained bibliographic markers",
@@ -6076,8 +6150,8 @@
             "role": "bibliography_or_import_metadata"
           }
         ],
-        "selected_text_authorship_status": "Pending: bibliography is not proof of imported selected wording",
-        "applicable_rights": "Unresolved at any non-DAF8 original-text boundary; page-wide CC BY-SA does not settle external wording rights"
+        "selected_text_authorship_status": "Bibliographic markers independently inspected; no selected external wording identified. Unselected etymology, other-language entries and quotations provide no bundled fields.",
+        "applicable_rights": "No rights to these external works are claimed; their wording is not selected."
       },
       {
         "author": "Lexique contributors",
@@ -6087,11 +6161,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [
       {
@@ -6113,7 +6187,7 @@
         "role": "bibliography_or_import_metadata"
       }
     ],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "Aabdullayev851",
       "Alphabeta",
@@ -6181,7 +6255,9 @@
       "Àncilu bot"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "François GOGLINS"
+    "last_revision_editor": "François GOGLINS",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_169536",
@@ -6197,7 +6273,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -6215,7 +6291,7 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
         "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-        "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+        "selected_text_authorship_status": "Edition credit retained where referenced/imported; page reference does not identify the selected sentence author. Established edition-level basis reused, not metadata-derived content acceptance."
       },
       {
         "author": "Lexique contributors",
@@ -6225,11 +6301,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [
       {
@@ -6239,7 +6315,7 @@
         "role": "bibliography_or_import_metadata"
       }
     ],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "Actarus Prince d'Euphor",
       "BAICAN XXX",
@@ -6294,7 +6370,9 @@
       "WikiLucas00"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "The.shahab"
+    "last_revision_editor": "The.shahab",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_170431",
@@ -6310,7 +6388,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -6328,7 +6406,7 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
         "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-        "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+        "selected_text_authorship_status": "Edition credit retained where referenced/imported; page reference does not identify the selected sentence author. Established edition-level basis reused, not metadata-derived content acceptance."
       },
       {
         "author": "Other original authors identified by the retained bibliographic markers",
@@ -6346,8 +6424,8 @@
             "role": "bibliography_or_import_metadata"
           }
         ],
-        "selected_text_authorship_status": "Pending: bibliography is not proof of imported selected wording",
-        "applicable_rights": "Unresolved at any non-DAF8 original-text boundary; page-wide CC BY-SA does not settle external wording rights"
+        "selected_text_authorship_status": "Bibliographic markers independently inspected; no selected external wording identified. Unselected etymology, other-language entries and quotations provide no bundled fields.",
+        "applicable_rights": "No rights to these external works are claimed; their wording is not selected."
       },
       {
         "author": "Lexique contributors",
@@ -6357,11 +6435,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [
       {
@@ -6383,7 +6461,7 @@
         "role": "bibliography_or_import_metadata"
       }
     ],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "Alphabeta",
       "Automatik",
@@ -6421,7 +6499,9 @@
       "YS-Bot"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "Thomas le numéro 24"
+    "last_revision_editor": "Thomas le numéro 24",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_174564",
@@ -6437,7 +6517,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -6455,7 +6535,7 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
         "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-        "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+        "selected_text_authorship_status": "Edition credit retained where referenced/imported; page reference does not identify the selected sentence author. Established edition-level basis reused, not metadata-derived content acceptance."
       },
       {
         "author": "Other original authors identified by the retained bibliographic markers",
@@ -6467,8 +6547,8 @@
             "role": "bibliography_or_import_metadata"
           }
         ],
-        "selected_text_authorship_status": "Pending: bibliography is not proof of imported selected wording",
-        "applicable_rights": "Unresolved at any non-DAF8 original-text boundary; page-wide CC BY-SA does not settle external wording rights"
+        "selected_text_authorship_status": "Bibliographic markers independently inspected; no selected external wording identified. Unselected etymology, other-language entries and quotations provide no bundled fields.",
+        "applicable_rights": "No rights to these external works are claimed; their wording is not selected."
       },
       {
         "author": "Lexique contributors",
@@ -6478,11 +6558,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [
       {
@@ -6498,7 +6578,7 @@
         "role": "bibliography_or_import_metadata"
       }
     ],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "Actarus Prince d'Euphor",
       "Alphabeta",
@@ -6577,7 +6657,9 @@
       "Àncilu bot"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "Diligent"
+    "last_revision_editor": "Diligent",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_175504",
@@ -6593,7 +6675,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -6611,7 +6693,7 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
         "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-        "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+        "selected_text_authorship_status": "Edition credit retained where referenced/imported; page reference does not identify the selected sentence author. Established edition-level basis reused, not metadata-derived content acceptance."
       },
       {
         "author": "Other original authors identified by the retained bibliographic markers",
@@ -6623,8 +6705,8 @@
             "role": "bibliography_or_import_metadata"
           }
         ],
-        "selected_text_authorship_status": "Pending: bibliography is not proof of imported selected wording",
-        "applicable_rights": "Unresolved at any non-DAF8 original-text boundary; page-wide CC BY-SA does not settle external wording rights"
+        "selected_text_authorship_status": "Bibliographic markers independently inspected; no selected external wording identified. Unselected etymology, other-language entries and quotations provide no bundled fields.",
+        "applicable_rights": "No rights to these external works are claimed; their wording is not selected."
       },
       {
         "author": "Lexique contributors",
@@ -6634,11 +6716,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [
       {
@@ -6654,7 +6736,7 @@
         "role": "bibliography_or_import_metadata"
       }
     ],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "AerreDG",
       "Alphabeta",
@@ -6738,7 +6820,9 @@
       "~2026-35482-37"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "Courvey"
+    "last_revision_editor": "Courvey",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_177436",
@@ -6754,7 +6838,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -6772,7 +6856,7 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
         "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-        "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+        "selected_text_authorship_status": "Edition credit retained where referenced/imported; page reference does not identify the selected sentence author. Established edition-level basis reused, not metadata-derived content acceptance."
       },
       {
         "author": "Other original authors identified by the retained bibliographic markers",
@@ -6796,8 +6880,8 @@
             "role": "bibliography_or_import_metadata"
           }
         ],
-        "selected_text_authorship_status": "Pending: bibliography is not proof of imported selected wording",
-        "applicable_rights": "Unresolved at any non-DAF8 original-text boundary; page-wide CC BY-SA does not settle external wording rights"
+        "selected_text_authorship_status": "Bibliographic markers independently inspected; no selected external wording identified. Unselected etymology, other-language entries and quotations provide no bundled fields.",
+        "applicable_rights": "No rights to these external works are claimed; their wording is not selected."
       },
       {
         "author": "Lexique contributors",
@@ -6807,11 +6891,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [
       {
@@ -6839,7 +6923,7 @@
         "role": "bibliography_or_import_metadata"
       }
     ],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "ABLouisBot",
       "Automatik",
@@ -6890,7 +6974,9 @@
       "WikiLucas00"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "WikiLucas00"
+    "last_revision_editor": "WikiLucas00",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_177854",
@@ -6906,7 +6992,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -6924,7 +7010,7 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
         "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-        "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+        "selected_text_authorship_status": "Edition credit retained where referenced/imported; page reference does not identify the selected sentence author. Established edition-level basis reused, not metadata-derived content acceptance."
       },
       {
         "author": "Other original authors identified by the retained bibliographic markers",
@@ -6936,8 +7022,8 @@
             "role": "bibliography_or_import_metadata"
           }
         ],
-        "selected_text_authorship_status": "Pending: bibliography is not proof of imported selected wording",
-        "applicable_rights": "Unresolved at any non-DAF8 original-text boundary; page-wide CC BY-SA does not settle external wording rights"
+        "selected_text_authorship_status": "Bibliographic markers independently inspected; no selected external wording identified. Unselected etymology, other-language entries and quotations provide no bundled fields.",
+        "applicable_rights": "No rights to these external works are claimed; their wording is not selected."
       },
       {
         "author": "Lexique contributors",
@@ -6947,11 +7033,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [
       {
@@ -6967,7 +7053,7 @@
         "role": "bibliography_or_import_metadata"
       }
     ],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "16@r",
       "Actarus Prince d'Euphor",
@@ -7056,7 +7142,9 @@
       "Àncilu bot"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "Bpierreb"
+    "last_revision_editor": "Bpierreb",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_178069",
@@ -7072,7 +7160,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -7090,7 +7178,7 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
         "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-        "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+        "selected_text_authorship_status": "Edition credit retained where referenced/imported; page reference does not identify the selected sentence author. Established edition-level basis reused, not metadata-derived content acceptance."
       },
       {
         "author": "Lexique contributors",
@@ -7100,11 +7188,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [
       {
@@ -7114,7 +7202,7 @@
         "role": "bibliography_or_import_metadata"
       }
     ],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "Aelmvn",
       "Ainoa Luß",
@@ -7154,7 +7242,9 @@
       "Àncilu bot"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "WikiLucas00"
+    "last_revision_editor": "WikiLucas00",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_193640",
@@ -7170,7 +7260,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -7186,14 +7276,14 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "Adelpine",
       "Aelmvn",
@@ -7222,7 +7312,9 @@
       "WarddrBOT"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "Crulder"
+    "last_revision_editor": "Crulder",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   },
   {
     "id": "b107_fr_1883282",
@@ -7238,7 +7330,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Current first-party multi-title API response; actual returned revision retained, not a cutoff revision.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_at_selected_text_boundary",
     "original_authors_and_rights": [
       {
         "author": "Wiktionnaire contributors",
@@ -7256,7 +7348,7 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
         "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-        "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+        "selected_text_authorship_status": "Edition credit retained where referenced/imported; page reference does not identify the selected sentence author. Established edition-level basis reused, not metadata-derived content acceptance."
       },
       {
         "author": "Other original authors identified by the retained bibliographic markers",
@@ -7436,8 +7528,8 @@
             "role": "bibliography_or_import_metadata"
           }
         ],
-        "selected_text_authorship_status": "Pending: bibliography is not proof of imported selected wording",
-        "applicable_rights": "Unresolved at any non-DAF8 original-text boundary; page-wide CC BY-SA does not settle external wording rights"
+        "selected_text_authorship_status": "Bibliographic markers independently inspected; no selected external wording identified. Unselected etymology, other-language entries and quotations provide no bundled fields.",
+        "applicable_rights": "No rights to these external works are claimed; their wording is not selected."
       },
       {
         "author": "Lexique contributors",
@@ -7447,11 +7539,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Attribute the fixed article and full linked contributor history.",
-      "Retain CC BY-SA 4.0 licence text/link and modification notices.",
-      "Share adapted selected dictionary content under CC BY-SA 4.0; do not relabel third-party text as MIT.",
-      "Retain original-author and applicable import notices separately.",
-      "No noncommercial restriction in CC BY-SA 4.0; no additional restrictions on licensed rights."
+      "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+      "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+      "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+      "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+      "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
     ],
     "source_page_notices_to_record": [
       {
@@ -7635,7 +7727,7 @@
         "role": "bibliography_or_import_metadata"
       }
     ],
-    "independent_review": "pending",
+    "independent_review": "passed",
     "contributor_registry_names": [
       "16@r",
       "A12n",
@@ -7742,6 +7834,8 @@
       "Àncilu bot"
     ],
     "contributor_registry_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\contributor-registry.json",
-    "last_revision_editor": "DE8AH"
+    "last_revision_editor": "DE8AH",
+    "reviewer": "Independent content/rights reviewer for issue #107; separate from author and merger",
+    "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices."
   }
 ]

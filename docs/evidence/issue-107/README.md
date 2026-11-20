@@ -1,10 +1,11 @@
-# Issue #107 candidate handoff
+# Issue #107 reviewed content handoff
 
-Frozen rows **1301–1350** have **50 candidate groups and 200 candidate fields**
+Frozen rows **1301–1350** have **50 independently accepted groups and 200 fields**
 from 47 fixed Wiktionnaire articles. Every group retains its exact spelling,
 Lexique POS subclass and both original frequency strings. The denominator is
-**4,087 groups**. **Zero groups and zero fields are admitted**: all selected
-content and rights decisions await a separate reviewer.
+**4,087 groups**. Selected content and rights pass the
+[independent review](independent-review.md); final batch admission awaits the
+parent's combined conversion, notices and native gates.
 
 Scope: [ticket #107](https://github.com/zardonc/lexique/issues/107) under
 [spec #78](https://github.com/zardonc/lexique/issues/78). Author checkout:
@@ -18,8 +19,9 @@ The seven-file handoff is [groups](groups.json), [sources](sources.json),
 [field review](field-review.json), [source context](source-context.json),
 [source excerpts](source-excerpts.json), [reuse](reuse.json) and
 [admission](admission.json). [Review candidates](review-candidates.json) contain
-the identical draft groups. Review records hold proposed text and use, explicit
-pending quality/rights statuses, no reviewer and no claim of independence.
+the original draft groups and pending author statuses. Reviewed groups retain
+their exact original content; review records add accepted text, independent
+same-use judgments and [selected-span rights](rights.json).
 No reused groups, scope exceptions or runtime aliases are added.
 
 ## Source captures
@@ -68,14 +70,12 @@ for the reviewer.
 
 ## Limitations
 
-All 200 fields remain unresolved at the independent admission gate. Review must
-assess the actual translations, modern selected use, applicable IPA, construction
-fit and original-text rights. The `e` letter-to-noun mapping requires that review
-despite its explicit corroboration. Bibliographic references to other dictionaries
-do not establish that their wording was imported or licensed for this package.
-No incompatible source or unsupported exact spelling was established by the
-author; the selected-text decisions remain pending.
+No selected-content fields remain unresolved. The independent review accepts the
+exact `e/NOM` letter-name mapping and all construction/register restrictions.
+Bibliographic references do not identify every selected sentence's author.
+The established DAF8 edition-level rights basis is reused; a direct independent
+request to the statute endpoint returned HTTP 403.
 
 Conversion, final notices, package reproduction, native lookup/save/reopen,
-learner acceptance and release evidence belong to integration and the separate
-reviewer. Frontend, Rust and native checks were not run for this candidate handoff.
+learner acceptance and release evidence belong to the parent. Frontend, Rust and
+native checks were not run for this content review.

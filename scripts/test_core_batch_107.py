@@ -13,6 +13,15 @@ def read(name):
     return json.loads((EVIDENCE / name).read_text(encoding="utf-8"))
 
 
+def content(value):
+    if isinstance(value, list):
+        return [content(item) for item in value]
+    if isinstance(value, dict):
+        return {key: content(item) for key, item in value.items()
+                if key not in {"independent_review", "resource_admission", "rights_eligibility_status"}}
+    return value
+
+
 class Batch107Tests(unittest.TestCase):
     def test_exact_frozen_groups_have_four_traceable_candidate_fields(self):
         with (ROOT / "resources/core-pilot-79/scope-manifest.csv").open(
@@ -23,9 +32,9 @@ class Batch107Tests(unittest.TestCase):
         admission = read("admission.json")
         pending = admission["status"] == "pending_independent_review"
         self.assertEqual(admission["status"], "pending_independent_review" if pending else "passed")
-        self.assertEqual(candidates["status"], "pending_independent_review" if pending else "independently_accepted")
-        groups = candidates["groups"]
-        self.assertEqual(groups, read("groups.json"))
+        self.assertEqual(candidates["status"], "pending_independent_review")
+        groups = read("groups.json")
+        self.assertEqual(content(groups), content(candidates["groups"]))
         self.assertEqual([g["frozen_row"] for g in groups], list(range(1301, 1351)))
         sources = {s["id"]: s for s in read("sources.json")}
         captures = {s["source_id"]: s for s in read("source-captures.json")["sources"]}
