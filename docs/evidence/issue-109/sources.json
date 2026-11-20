@@ -14,7 +14,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -27,10 +27,21 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary",
+          "selected_text_authorship_status": "Established collective-work DAF8 edition basis reused; applicable edition credit retained without inferring the selected sentence author from import metadata."
         }
       ],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_2308",
@@ -46,7 +57,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -59,10 +70,21 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary",
+          "selected_text_authorship_status": "Established collective-work DAF8 edition basis reused; applicable edition credit retained without inferring the selected sentence author from import metadata."
         }
       ],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_4671",
@@ -78,9 +100,19 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_5252",
@@ -96,9 +128,19 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_5263",
@@ -114,9 +156,19 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_8078",
@@ -132,9 +184,19 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_9800",
@@ -150,7 +212,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -163,10 +225,21 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary",
+          "selected_text_authorship_status": "Established collective-work DAF8 edition basis reused; applicable edition credit retained without inferring the selected sentence author from import metadata."
         }
       ],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_9848",
@@ -182,7 +255,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -195,10 +268,21 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary",
+          "selected_text_authorship_status": "Established collective-work DAF8 edition basis reused; applicable edition credit retained without inferring the selected sentence author from import metadata."
         }
       ],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_10497",
@@ -214,9 +298,19 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_12762",
@@ -232,7 +326,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -245,10 +339,21 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary",
+          "selected_text_authorship_status": "Established collective-work DAF8 edition basis reused; applicable edition credit retained without inferring the selected sentence author from import metadata."
         }
       ],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_17553",
@@ -264,9 +369,19 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_22182",
@@ -282,9 +397,19 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_22212",
@@ -300,9 +425,19 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_28176",
@@ -318,7 +453,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -331,10 +466,21 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary",
+          "selected_text_authorship_status": "Established collective-work DAF8 edition basis reused; applicable edition credit retained without inferring the selected sentence author from import metadata."
         }
       ],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_33943",
@@ -350,7 +496,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -363,10 +509,21 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary",
+          "selected_text_authorship_status": "Established collective-work DAF8 edition basis reused; applicable edition credit retained without inferring the selected sentence author from import metadata."
         }
       ],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_37509",
@@ -382,9 +539,19 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_37601",
@@ -400,9 +567,19 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_40894",
@@ -418,7 +595,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -431,10 +608,21 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary",
+          "selected_text_authorship_status": "Established collective-work DAF8 edition basis reused; applicable edition credit retained without inferring the selected sentence author from import metadata."
         }
       ],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_62030",
@@ -450,7 +638,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -463,10 +651,21 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary",
+          "selected_text_authorship_status": "Established collective-work DAF8 edition basis reused; applicable edition credit retained without inferring the selected sentence author from import metadata."
         }
       ],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_64792",
@@ -482,7 +681,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -495,10 +694,21 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary",
+          "selected_text_authorship_status": "Established collective-work DAF8 edition basis reused; applicable edition credit retained without inferring the selected sentence author from import metadata."
         }
       ],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_74391",
@@ -514,7 +724,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -527,10 +737,21 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary",
+          "selected_text_authorship_status": "Established collective-work DAF8 edition basis reused; applicable edition credit retained without inferring the selected sentence author from import metadata."
         }
       ],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_114604",
@@ -546,7 +767,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -559,10 +780,21 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary",
+          "selected_text_authorship_status": "Established collective-work DAF8 edition basis reused; applicable edition credit retained without inferring the selected sentence author from import metadata."
         }
       ],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_121171",
@@ -578,7 +810,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -591,10 +823,21 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary",
+          "selected_text_authorship_status": "Established collective-work DAF8 edition basis reused; applicable edition credit retained without inferring the selected sentence author from import metadata."
         }
       ],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_122478",
@@ -610,7 +853,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -623,10 +866,21 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary",
+          "selected_text_authorship_status": "Established collective-work DAF8 edition basis reused; applicable edition credit retained without inferring the selected sentence author from import metadata."
         }
       ],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_138549",
@@ -642,7 +896,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -655,10 +909,21 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary",
+          "selected_text_authorship_status": "Established collective-work DAF8 edition basis reused; applicable edition credit retained without inferring the selected sentence author from import metadata."
         }
       ],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_139117",
@@ -674,7 +939,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -687,10 +952,21 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary",
+          "selected_text_authorship_status": "Established collective-work DAF8 edition basis reused; applicable edition credit retained without inferring the selected sentence author from import metadata."
         }
       ],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_148601",
@@ -706,9 +982,19 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_150419",
@@ -724,7 +1010,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -737,10 +1023,21 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary",
+          "selected_text_authorship_status": "Established collective-work DAF8 edition basis reused; applicable edition credit retained without inferring the selected sentence author from import metadata."
         }
       ],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_153118",
@@ -756,7 +1053,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -769,10 +1066,21 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary",
+          "selected_text_authorship_status": "Established collective-work DAF8 edition basis reused; applicable edition credit retained without inferring the selected sentence author from import metadata."
         }
       ],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_155216",
@@ -788,7 +1096,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -801,10 +1109,21 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary",
+          "selected_text_authorship_status": "Established collective-work DAF8 edition basis reused; applicable edition credit retained without inferring the selected sentence author from import metadata."
         }
       ],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_156152",
@@ -820,7 +1139,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -833,10 +1152,21 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary",
+          "selected_text_authorship_status": "Established collective-work DAF8 edition basis reused; applicable edition credit retained without inferring the selected sentence author from import metadata."
         }
       ],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_157645",
@@ -852,7 +1182,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -865,10 +1195,21 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary",
+          "selected_text_authorship_status": "Established collective-work DAF8 edition basis reused; applicable edition credit retained without inferring the selected sentence author from import metadata."
         }
       ],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_158683",
@@ -884,7 +1225,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -897,10 +1238,21 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary",
+          "selected_text_authorship_status": "Established collective-work DAF8 edition basis reused; applicable edition credit retained without inferring the selected sentence author from import metadata."
         }
       ],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_159304",
@@ -916,7 +1268,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -929,10 +1281,21 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary",
+          "selected_text_authorship_status": "Established collective-work DAF8 edition basis reused; applicable edition credit retained without inferring the selected sentence author from import metadata."
         }
       ],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_160884",
@@ -948,9 +1311,19 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_163880",
@@ -966,7 +1339,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -979,10 +1352,21 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary",
+          "selected_text_authorship_status": "Established collective-work DAF8 edition basis reused; applicable edition credit retained without inferring the selected sentence author from import metadata."
         }
       ],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_165581",
@@ -998,9 +1382,19 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_165914",
@@ -1016,7 +1410,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1029,10 +1423,21 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary",
+          "selected_text_authorship_status": "Established collective-work DAF8 edition basis reused; applicable edition credit retained without inferring the selected sentence author from import metadata."
         }
       ],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_166041",
@@ -1048,9 +1453,19 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_166673",
@@ -1066,7 +1481,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1079,10 +1494,21 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary",
+          "selected_text_authorship_status": "Established collective-work DAF8 edition basis reused; applicable edition credit retained without inferring the selected sentence author from import metadata."
         }
       ],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_167704",
@@ -1098,9 +1524,19 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_193638",
@@ -1116,9 +1552,19 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_223441",
@@ -1134,9 +1580,19 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_223593",
@@ -1152,9 +1608,19 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_229735",
@@ -1170,9 +1636,19 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_229736",
@@ -1188,7 +1664,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1201,10 +1677,21 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary",
+          "selected_text_authorship_status": "Established collective-work DAF8 edition basis reused; applicable edition credit retained without inferring the selected sentence author from import metadata."
         }
       ],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_1235776",
@@ -1220,9 +1707,19 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_17311",
@@ -1238,9 +1735,19 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_142558",
@@ -1256,9 +1763,19 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     },
     {
       "id": "b109_fr_324670",
@@ -1274,9 +1791,19 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual current revision returned by the retained first-party API; not an October-cutoff claim.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_for_selected_spans",
       "original_historical_dictionary_layers": [],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed."
+      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no example quotation, media or whole page redistributed.",
+      "independent_review": "passed",
+      "reviewer": "Independent content/rights reviewer for issue #109; separate from author and merger",
+      "selected_text_rights_reason": "The selected French lexical definition, grammatical/construction frames and explicit IPA were independently read apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming selected-sentence authorship. Lexique translations/adaptations retain that licence and modification notices.",
+      "redistribution_obligations": [
+        "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+        "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+        "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+        "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+        "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+      ]
     }
   ]
 }
