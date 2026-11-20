@@ -620,5 +620,87 @@
   "capture_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-114\\target\\issue-114",
   "captured_at_utc": "2026-11-20T16:33:04.427861+00:00",
   "preparation_script": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-114\\target\\issue-114\\prepare_candidates.py",
-  "selection_file": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-114\\target\\issue-114\\selection.py"
+  "selection_file": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-114\\target\\issue-114\\selection.py",
+  "independent_review": {
+    "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+    "independence": true,
+    "reviewed_author_commit": "15cf8309ee3539ec1c2846c084a83cdc58013d75",
+    "method": "Read retained complete fixed wikitext and API captures; compare selected fields/context and revision metadata without a live refetch.",
+    "evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-review-114\\target\\issue-114-review",
+    "projection_batches": [
+      [
+        1651,
+        1652,
+        1653,
+        1654,
+        1655
+      ],
+      [
+        1656,
+        1657,
+        1658,
+        1659,
+        1660
+      ],
+      [
+        1661,
+        1662,
+        1663,
+        1664,
+        1665
+      ],
+      [
+        1666,
+        1667,
+        1668,
+        1669,
+        1670
+      ],
+      [
+        1671,
+        1672,
+        1673,
+        1674,
+        1675
+      ],
+      [
+        1676,
+        1677,
+        1678,
+        1679,
+        1680
+      ],
+      [
+        1681,
+        1682,
+        1683,
+        1684,
+        1685
+      ],
+      [
+        1686,
+        1687,
+        1688,
+        1689,
+        1690
+      ],
+      [
+        1691,
+        1692,
+        1693,
+        1694,
+        1695
+      ],
+      [
+        1696,
+        1697,
+        1698,
+        1699,
+        1700
+      ]
+    ],
+    "reviewed_fields": 200,
+    "reviewed_groups": 50,
+    "remote_refetch": "not_run"
+  }
 }
