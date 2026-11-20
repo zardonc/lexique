@@ -1,82 +1,69 @@
-# Issue #115 author package
+# Issue #115 independently reviewed content
 
-All **50 frozen groups, rows 1701–1750**, retain their exact spellings, POS
-subclasses, frequencies and order. Each has one authored modern selected sense:
-**50 senses / 200 FR/IPA/EN/ZH fields**, with **zero missing authored fields**.
-There are **zero independently accepted new groups or fields**: all 200 fields
-await the parent's fresh separate quality, spelling/construction and rights
-review. No group is dropped, substituted or given a new exception. The fixed
-denominator remains **4,087 groups**.
+**50 exact frozen groups / 50 selected senses / 200 FR/IPA/EN/ZH fields pass
+independent content and selected-rights review.** Six fields in `violence` and
+`titre` retain complete selected-source conditions. There are **no unresolved
+groups or fields**, no dropped/substituted identities, no new annotations and
+no admitted runtime aliases. Rows 1701–1750, frequencies and order remain exact;
+the denominator remains 4,087 groups.
 
 Scope: [#115](https://github.com/zardonc/lexique/issues/115),
-[parent #78](https://github.com/zardonc/lexique/issues/78), and the unchanged
+[parent #78](https://github.com/zardonc/lexique/issues/78) and the unchanged
 [scope manifest](../../../resources/core-pilot-79/scope-manifest.csv).
 
 ## Records
 
 | File | Content |
 | --- | --- |
-| [groups.json](groups.json) | Exact groups, complete authored fields, selected uses and exclusions |
-| [review-candidates.json](review-candidates.json) | Same authored content for the separate reviewer |
-| [field-review.json](field-review.json) | 200 texts/source bindings, 50 uses and spelling relations; reviewer null |
-| [sources.json](sources.json) | 50 fixed Wiki revisions and one fixed DAF8 edition/page; contributor/history and original-work credits |
-| [source-excerpts.json](source-excerpts.json) | Exact definition/IPA lines, IPA columns and grammar/construction support |
-| [source-context.json](source-context.json) | Full contributor registries, original imports/references and nominal/spelling evidence |
-| [source-captures.json](source-captures.json) | Real raw-source, authority and preparation paths |
-| [rights.json](rights.json) | Author rights proposal, legal text, attribution/modifications and redistribution obligations |
-| [reuse.json](reuse.json) | Zero assigned groups already admitted at the initial base |
-| [admission.json](admission.json) | Author counts and pending review/conversion/native gates |
+| [groups.json](groups.json) | Accepted wording, exact frozen groups, uses and exclusions |
+| [review-candidates.json](review-candidates.json) | Unchanged original author proposals |
+| [field-review.json](field-review.json) | 200 proposed/accepted texts, individual reasons, 50 use and 50 spelling decisions |
+| [sources.json](sources.json) | 50 fixed Wiki revisions and one fixed DAF8 edition/page |
+| [source-excerpts.json](source-excerpts.json) | Unchanged exact field and supporting bindings |
+| [source-context.json](source-context.json) | Complete registries, original layers and per-source review |
+| [source-captures.json](source-captures.json) | Original source, authority and preparation locations |
+| [rights.json](rights.json) | Preserved proposals and independent selected-rights verdicts |
+| [reuse.json](reuse.json) | No assigned group admitted at the author base |
+| [admission.json](admission.json) | Independent counts and separate parent gates |
 
-[Source research](source-research.md) explains the selected-source boundaries.
-[Independent review status](independent-review.md) reserves judgments for the
-parent's separate reviewer.
+[Independent review](independent-review.md) records reviewer identity, exact
+inputs, corrections and checks. [Rights review](rights-review.md) records
+applicable obligations. [Author research](source-research.md) preserves selection
+and proposal rationale.
 
-## Verification and handoff
+## Verification
 
-Author checkout: `C:/Users/inthe/IdeaProjects/lexique-batch-115`, branch
-`codex/d2-content-115`. Integration `codex/d2-content-110-119` was confirmed at
-`e26d8b4c67ffcc53b4dc3ed62dbe9f7189022451` and fast-forwarded before authoring.
-Only this evidence directory and
-[the focused test](../../../scripts/test_core_batch_115.py) are author-owned
-tracked changes. The two captured APIs, full contributor responses, publication
-pages, rights authorities and preparation scripts remain under
-`target/issue-115/` in this checkout.
+Review checkout: `C:/Users/inthe/IdeaProjects/lexique-review-115`, branch
+`codex/d2-review-115`. Reviewed author commit:
+`d136ed09ca0581f1cce6c581636b1fd6d6e17702`; review base:
+`6b29f8be699ef3b489a4e5285db18ed120fe7501`.
 
-The parent's Testing Decisions approve the resource boundary. The check first
-recorded the absent-batch [RED](../../../target/issue-115/red.log), then
-[GREEN for all fields](../../../target/issue-115/fields-green.log).
-The rights/construction slice recorded missing-rights
-[RED](../../../target/issue-115/rights-red.log), followed by final
-[GREEN](../../../target/issue-115/green.log): **2 tests passed**.
-The checks verify membership, source-span bindings, contributor context,
-complete rights records, pending independence, nominal `tien`, typographic
-`oeuvre`, familiar feminine `com` and singular/plural `os` restrictions.
+The source audit matches 51 sources, 200 field and 218 supporting bindings, and
+nine terminal contributor-response parts containing 3,348 names across 52
+articles. Actual fields and neighbouring context were independently read.
+The focused suite passes **three tests**; changed-document links and whitespace
+checks pass. Full tests/source/projection/docs/diff logs, owned patches and final
+head/integration metadata remain under
+`C:/Users/inthe/IdeaProjects/lexique-review-115/target/issue-115-review`.
 
 ```powershell
-uv run --python 3.14.10 --no-project python -B -X utf8 target/issue-115/prepare_candidates.py
-uv run --python 3.14.10 --no-project python -B -X utf8 target/issue-115/finish_author_package.py
 uv run --python 3.14.10 --no-project python -B -X utf8 -m unittest discover -s scripts -p test_core_batch_115.py
+pnpm test:docs
 git diff --cached --check
 ```
 
-[Preparation](../../../target/issue-115/prepare.log),
-[completion](../../../target/issue-115/finish.log),
-[diff check](../../../target/issue-115/diff-check.log),
-[local link check](../../../target/issue-115/docs-check.log),
-[initial integration](../../../target/issue-115/integration-start.log),
-[final integration](../../../target/issue-115/integration-end.log) and
-[tested Git state](../../../target/issue-115/tested-state.json) are retained.
-Authored fields total **15,709 characters / 19,523 UTF-8 bytes**; the longest is
-**216 characters**. These measure selected text, not converted or release size.
+Verified author archive:
+`C:/Users/inthe/IdeaProjects/lexique-spec-110-119/target/implement-110-119/author-evidence/issue-115`.
+Original logs remain at `C:/Users/inthe/IdeaProjects/lexique-batch-115/target/issue-115`.
+Accepted fields total **15,778 characters / 19,610 UTF-8 bytes**; the longest is
+**216 characters**. These are selected-text measurements.
 
-## Pending parent gates
+## Remaining gates
 
-Separate semantic/quality and selected-rights review remains pending for all
-50 groups / 200 fields. Modern construction corroboration is factual evidence,
-not independent reviewer acceptance. The historical DAF8 edition-level legal
-basis is reused from existing evidence; it was not refreshed independently here.
-
-Conversion, combined packaged notices, native lookup/save/reopen, learner
-acceptance and formal admission remain parent-owned and unrun here. All
-200 fields remain missing from newly admitted batch coverage until those gates
-pass. The shared canonical core and saved learning/audio data are unchanged.
+Independent acceptance is separate from canonical resource admission. All
+200 newly admitted canonical fields remain pending parent normalization,
+conversion and actual packaged notices. Fixed-publication identity, coverage/size
+reports, native lookup/save/reopen and learning-data preservation remain
+parent-owned, as do learner acceptance and offline/release checks. Shared
+canonical resources and learning/audio data remain unchanged. Fixed captures
+were used without a live source or statute refresh.

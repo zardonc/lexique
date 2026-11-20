@@ -11,7 +11,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1707-pomme-nom-selected",
@@ -321,8 +321,24 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
-      "original_edition_references": []
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "original_edition_references": [],
+      "selected_rights_review": {
+        "source_id": "b115_fr_541",
+        "title": "pomme",
+        "revid": 40002300,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          3,
+          7,
+          13,
+          14
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\pomme.wiki",
+        "reason": "No DAF8 import/reference marker attaches to this article’s selected French lexical/form content. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_889",
@@ -335,7 +351,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Referenced historical edition where applicable: Académie française, eighth edition (1932–1935).",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1745-os-nom-selected",
@@ -763,14 +779,30 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_edition_references": [
         {
           "line_1_based": 373,
           "raw_marker": "{{R:DAF8}}",
           "selected_sentence_authorship": "not_established_by_page_marker"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "source_id": "b115_fr_889",
+        "title": "os",
+        "revid": 39950453,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          8,
+          12,
+          16,
+          17
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\os.wiki",
+        "reason": "An R:DAF8 bibliographic reference is retained without inferring selected-sentence copying or authorship. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_7953",
@@ -783,7 +815,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Referenced historical edition where applicable: Académie française, eighth edition (1932–1935).",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1741-appuyer-ver-selected",
@@ -1094,14 +1126,30 @@
         "أسامة الجزري"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_edition_references": [
         {
           "line_1_based": 245,
           "raw_marker": "{{R:DAF8}}",
           "selected_sentence_authorship": "not_established_by_page_marker"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "source_id": "b115_fr_7953",
+        "title": "appuyer",
+        "revid": 39886333,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          1,
+          5,
+          6,
+          18
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\appuyer.wiki",
+        "reason": "An R:DAF8 bibliographic reference is retained without inferring selected-sentence copying or authorship. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_8116",
@@ -1114,7 +1162,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Referenced historical edition where applicable: Académie française, eighth edition (1932–1935).",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1704-gardien-adj-selected",
@@ -1402,14 +1450,34 @@
         "Àncilu"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_edition_references": [
         {
           "line_1_based": 237,
           "raw_marker": "{{R:DAF8}}",
           "selected_sentence_authorship": "not_established_by_page_marker"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "source_id": "b115_fr_8116",
+        "title": "gardien",
+        "revid": 40015775,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          1,
+          5,
+          8,
+          9,
+          208,
+          210,
+          211,
+          218
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\gardien.wiki",
+        "reason": "An R:DAF8 bibliographic reference is retained without inferring selected-sentence copying or authorship. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_8336",
@@ -1422,7 +1490,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Referenced historical edition where applicable: Académie française, eighth edition (1932–1935).",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1720-punir-ver-selected",
@@ -1649,14 +1717,30 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_edition_references": [
         {
           "line_1_based": 96,
           "raw_marker": "{{R:DAF8}}",
           "selected_sentence_authorship": "not_established_by_page_marker"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "source_id": "b115_fr_8336",
+        "title": "punir",
+        "revid": 39921527,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          1,
+          5,
+          6,
+          7
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\punir.wiki",
+        "reason": "An R:DAF8 bibliographic reference is retained without inferring selected-sentence copying or authorship. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_9508",
@@ -1669,7 +1753,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1714-oeuvre-nom-selected",
@@ -1988,8 +2072,24 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
-      "original_edition_references": []
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "original_edition_references": [],
+      "selected_rights_review": {
+        "source_id": "b115_fr_9508",
+        "title": "œuvre",
+        "revid": 39796721,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          3,
+          7,
+          9,
+          21
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\œuvre.wiki",
+        "reason": "An Import:DAF8 notice indicates an original-edition layer and possible later modification; the 1932–1935 collective-work basis and original credit are retained. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_9581",
@@ -2002,7 +2102,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1729-violence-nom-selected",
@@ -2262,8 +2362,24 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
-      "original_edition_references": []
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "original_edition_references": [],
+      "selected_rights_review": {
+        "source_id": "b115_fr_9581",
+        "title": "violence",
+        "revid": 39958703,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          1,
+          5,
+          8,
+          25
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\violence.wiki",
+        "reason": "An Import:DAF8 notice indicates an original-edition layer and possible later modification; the 1932–1935 collective-work basis and original credit are retained. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_11723",
@@ -2276,7 +2392,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Referenced historical edition where applicable: Académie française, eighth edition (1932–1935).",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1732-titre-nom-selected",
@@ -2580,14 +2696,30 @@
         "Ʒødəlabiskɔt"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_edition_references": [
         {
           "line_1_based": 307,
           "raw_marker": "{{R:DAF8}}",
           "selected_sentence_authorship": "not_established_by_page_marker"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "source_id": "b115_fr_11723",
+        "title": "titre",
+        "revid": 39997858,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          3,
+          8,
+          10,
+          11
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\titre.wiki",
+        "reason": "An R:DAF8 bibliographic reference is retained without inferring selected-sentence copying or authorship. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected. The CFC cartography definitions at lines 76–77 are not selected or adapted into fields.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_11737",
@@ -2600,7 +2732,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Referenced historical edition where applicable: Académie française, eighth edition (1932–1935).",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1706-fouiller-ver-selected",
@@ -2894,14 +3026,30 @@
         "ZoliveR"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_edition_references": [
         {
           "line_1_based": 204,
           "raw_marker": "{{R:DAF8}}",
           "selected_sentence_authorship": "not_established_by_page_marker"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "source_id": "b115_fr_11737",
+        "title": "fouiller",
+        "revid": 39844337,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          1,
+          5,
+          7,
+          18
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\fouiller.wiki",
+        "reason": "An R:DAF8 bibliographic reference is retained without inferring selected-sentence copying or authorship. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_14938",
@@ -2914,7 +3062,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1746-blessé-adj-selected",
@@ -3168,8 +3316,27 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
-      "original_edition_references": []
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "original_edition_references": [],
+      "selected_rights_review": {
+        "source_id": "b115_fr_14938",
+        "title": "blessé",
+        "revid": 39839299,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          3,
+          7,
+          10,
+          11,
+          61,
+          63,
+          64
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\blessé.wiki",
+        "reason": "No DAF8 import/reference marker attaches to this article’s selected French lexical/form content. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_17835",
@@ -3182,7 +3349,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1714-oeuvre-nom-selected",
@@ -3277,8 +3444,24 @@
         "W.andrea"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
-      "original_edition_references": []
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "original_edition_references": [],
+      "selected_rights_review": {
+        "source_id": "b115_fr_17835",
+        "title": "oeuvre",
+        "revid": 37442666,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          3,
+          4,
+          6,
+          7
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\oeuvre.wiki",
+        "reason": "No DAF8 import/reference marker attaches to this article’s selected French lexical/form content. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_21345",
@@ -3291,7 +3474,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Referenced historical edition where applicable: Académie française, eighth edition (1932–1935).",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1735-poulet-nom-selected",
@@ -3593,14 +3776,30 @@
         "حسام الدين"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_edition_references": [
         {
           "line_1_based": 328,
           "raw_marker": "{{R:DAF8}}",
           "selected_sentence_authorship": "not_established_by_page_marker"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "source_id": "b115_fr_21345",
+        "title": "poulet",
+        "revid": 39904268,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          3,
+          8,
+          11,
+          21
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\poulet.wiki",
+        "reason": "An R:DAF8 bibliographic reference is retained without inferring selected-sentence copying or authorship. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_25889",
@@ -3613,7 +3812,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1750-tien-nom-selected",
@@ -3736,8 +3935,23 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
-      "original_edition_references": []
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "original_edition_references": [],
+      "selected_rights_review": {
+        "source_id": "b115_fr_25889",
+        "title": "tien",
+        "revid": 38579571,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          3,
+          7,
+          9
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\tien.wiki",
+        "reason": "An Import:DAF8 notice indicates an original-edition layer and possible later modification; the 1932–1935 collective-work basis and original credit are retained. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_26781",
@@ -3750,7 +3964,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1716-médicament-nom-selected",
@@ -3949,8 +4163,24 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
-      "original_edition_references": []
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "original_edition_references": [],
+      "selected_rights_review": {
+        "source_id": "b115_fr_26781",
+        "title": "médicament",
+        "revid": 40003012,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          3,
+          7,
+          10,
+          11
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\médicament.wiki",
+        "reason": "No DAF8 import/reference marker attaches to this article’s selected French lexical/form content. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_26852",
@@ -3963,7 +4193,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1724-agréable-adj-selected",
@@ -4176,8 +4406,24 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
-      "original_edition_references": []
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "original_edition_references": [],
+      "selected_rights_review": {
+        "source_id": "b115_fr_26852",
+        "title": "agréable",
+        "revid": 39810522,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          3,
+          7,
+          9,
+          10
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\agréable.wiki",
+        "reason": "An Import:DAF8 notice indicates an original-edition layer and possible later modification; the 1932–1935 collective-work basis and original credit are retained. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_27347",
@@ -4190,7 +4436,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1738-porc-nom-selected",
@@ -4461,8 +4707,24 @@
         "Yun"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
-      "original_edition_references": []
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "original_edition_references": [],
+      "selected_rights_review": {
+        "source_id": "b115_fr_27347",
+        "title": "porc",
+        "revid": 40041594,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          3,
+          7,
+          12,
+          27
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\porc.wiki",
+        "reason": "An Import:DAF8 notice indicates an original-edition layer and possible later modification; the 1932–1935 collective-work basis and original credit are retained. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_36719",
@@ -4475,7 +4737,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Referenced historical edition where applicable: Académie française, eighth edition (1932–1935).",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1744-geste-nom-selected",
@@ -4803,14 +5065,30 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_edition_references": [
         {
           "line_1_based": 182,
           "raw_marker": "{{R:DAF8}}",
           "selected_sentence_authorship": "not_established_by_page_marker"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "source_id": "b115_fr_36719",
+        "title": "geste",
+        "revid": 39873017,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          2,
+          7,
+          9,
+          10
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\geste.wiki",
+        "reason": "An R:DAF8 bibliographic reference is retained without inferring selected-sentence copying or authorship. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_41649",
@@ -4823,7 +5101,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1710-insister-ver-selected",
@@ -5039,8 +5317,24 @@
         "Xic667"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
-      "original_edition_references": []
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "original_edition_references": [],
+      "selected_rights_review": {
+        "source_id": "b115_fr_41649",
+        "title": "insister",
+        "revid": 39792640,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          1,
+          5,
+          6,
+          19
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\insister.wiki",
+        "reason": "An Import:DAF8 notice indicates an original-edition layer and possible later modification; the 1932–1935 collective-work basis and original credit are retained. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_42449",
@@ -5053,7 +5347,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Referenced historical edition where applicable: Académie française, eighth edition (1932–1935).",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1723-queue-nom-selected",
@@ -5394,14 +5688,30 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_edition_references": [
         {
           "line_1_based": 659,
           "raw_marker": "{{R:DAF8}}",
           "selected_sentence_authorship": "not_established_by_page_marker"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "source_id": "b115_fr_42449",
+        "title": "queue",
+        "revid": 39977466,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          1,
+          7,
+          12,
+          90
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\queue.wiki",
+        "reason": "An R:DAF8 bibliographic reference is retained without inferring selected-sentence copying or authorship. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_63897",
@@ -5414,7 +5724,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Referenced historical edition where applicable: Académie française, eighth edition (1932–1935).",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1734-alcool-nom-selected",
@@ -5741,14 +6051,30 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_edition_references": [
         {
           "line_1_based": 354,
           "raw_marker": "{{R:DAF8}}",
           "selected_sentence_authorship": "not_established_by_page_marker"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "source_id": "b115_fr_63897",
+        "title": "alcool",
+        "revid": 39741452,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          3,
+          12,
+          17,
+          39
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\alcool.wiki",
+        "reason": "An R:DAF8 bibliographic reference is retained without inferring selected-sentence copying or authorship. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_107895",
@@ -5761,7 +6087,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1743-com-nom-selected",
@@ -6039,8 +6365,24 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
-      "original_edition_references": []
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "original_edition_references": [],
+      "selected_rights_review": {
+        "source_id": "b115_fr_107895",
+        "title": "com",
+        "revid": 39837141,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          11,
+          17,
+          19,
+          20
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\com.wiki",
+        "reason": "No DAF8 import/reference marker attaches to this article’s selected French lexical/form content. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_114215",
@@ -6053,7 +6395,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Referenced historical edition where applicable: Académie française, eighth edition (1932–1935).",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1740-front-nom-selected",
@@ -6439,14 +6781,30 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_edition_references": [
         {
           "line_1_based": 382,
           "raw_marker": "{{R:DAF8}}",
           "selected_sentence_authorship": "not_established_by_page_marker"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "source_id": "b115_fr_114215",
+        "title": "front",
+        "revid": 39928521,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          3,
+          7,
+          9,
+          18
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\front.wiki",
+        "reason": "An R:DAF8 bibliographic reference is retained without inferring selected-sentence copying or authorship. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_114637",
@@ -6459,7 +6817,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1730-ministre-nom-selected",
@@ -6723,8 +7081,24 @@
         "Éduarel"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
-      "original_edition_references": []
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "original_edition_references": [],
+      "selected_rights_review": {
+        "source_id": "b115_fr_114637",
+        "title": "ministre",
+        "revid": 39933324,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          3,
+          12,
+          15,
+          42
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\ministre.wiki",
+        "reason": "No DAF8 import/reference marker attaches to this article’s selected French lexical/form content. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_115212",
@@ -6737,7 +7111,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1731-rompre-ver-selected",
@@ -7147,8 +7521,24 @@
         "YS-Bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
-      "original_edition_references": []
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "original_edition_references": [],
+      "selected_rights_review": {
+        "source_id": "b115_fr_115212",
+        "title": "rompre",
+        "revid": 39951140,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          1,
+          5,
+          6,
+          29
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\rompre.wiki",
+        "reason": "An Import:DAF8 notice indicates an original-edition layer and possible later modification; the 1932–1935 collective-work basis and original credit are retained. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_120510",
@@ -7161,7 +7551,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1749-chauffeur-nom-selected",
@@ -7409,8 +7799,24 @@
         "Мартын 48"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
-      "original_edition_references": []
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "original_edition_references": [],
+      "selected_rights_review": {
+        "source_id": "b115_fr_120510",
+        "title": "chauffeur",
+        "revid": 39753108,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          3,
+          8,
+          10,
+          22
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\chauffeur.wiki",
+        "reason": "An Import:DAF8 notice indicates an original-edition layer and possible later modification; the 1932–1935 collective-work basis and original credit are retained. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_134356",
@@ -7423,7 +7829,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1702-lycée-nom-selected",
@@ -7656,8 +8062,24 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
-      "original_edition_references": []
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "original_edition_references": [],
+      "selected_rights_review": {
+        "source_id": "b115_fr_134356",
+        "title": "lycée",
+        "revid": 39991529,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          2,
+          8,
+          10,
+          11
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\lycée.wiki",
+        "reason": "An Import:DAF8 notice indicates an original-edition layer and possible later modification; the 1932–1935 collective-work basis and original credit are retained. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_138082",
@@ -7670,7 +8092,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1739-allonger-ver-selected",
@@ -7947,8 +8369,24 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
-      "original_edition_references": []
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "original_edition_references": [],
+      "selected_rights_review": {
+        "source_id": "b115_fr_138082",
+        "title": "allonger",
+        "revid": 39319097,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          1,
+          5,
+          6,
+          7
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\allonger.wiki",
+        "reason": "An Import:DAF8 notice indicates an original-edition layer and possible later modification; the 1932–1935 collective-work basis and original credit are retained. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_138606",
@@ -7961,7 +8399,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1712-annuler-ver-selected",
@@ -8175,8 +8613,24 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
-      "original_edition_references": []
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "original_edition_references": [],
+      "selected_rights_review": {
+        "source_id": "b115_fr_138606",
+        "title": "annuler",
+        "revid": 39812045,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          1,
+          5,
+          6,
+          13
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\annuler.wiki",
+        "reason": "An Import:DAF8 notice indicates an original-edition layer and possible later modification; the 1932–1935 collective-work basis and original credit are retained. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_142802",
@@ -8189,7 +8643,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1742-résoudre-ver-selected",
@@ -8377,8 +8831,24 @@
         "WikiLucas00"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
-      "original_edition_references": []
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "original_edition_references": [],
+      "selected_rights_review": {
+        "source_id": "b115_fr_142802",
+        "title": "résoudre",
+        "revid": 39842706,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          3,
+          7,
+          8,
+          24
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\résoudre.wiki",
+        "reason": "No DAF8 import/reference marker attaches to this article’s selected French lexical/form content. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_149868",
@@ -8391,7 +8861,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1717-blessure-nom-selected",
@@ -8607,8 +9077,24 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
-      "original_edition_references": []
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "original_edition_references": [],
+      "selected_rights_review": {
+        "source_id": "b115_fr_149868",
+        "title": "blessure",
+        "revid": 39034686,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          1,
+          5,
+          8,
+          9
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\blessure.wiki",
+        "reason": "An Import:DAF8 notice indicates an original-edition layer and possible later modification; the 1932–1935 collective-work basis and original credit are retained. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_154992",
@@ -8621,7 +9107,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Referenced historical edition where applicable: Académie française, eighth edition (1932–1935).",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1725-confier-ver-selected",
@@ -8809,14 +9295,30 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_edition_references": [
         {
           "line_1_based": 102,
           "raw_marker": "{{R:DAF8}}",
           "selected_sentence_authorship": "not_established_by_page_marker"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "source_id": "b115_fr_154992",
+        "title": "confier",
+        "revid": 39982643,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          1,
+          5,
+          6,
+          7
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\confier.wiki",
+        "reason": "An R:DAF8 bibliographic reference is retained without inferring selected-sentence copying or authorship. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_156726",
@@ -8829,7 +9331,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1722-déclarer-ver-selected",
@@ -9046,8 +9548,24 @@
         "~2026-49046-88"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
-      "original_edition_references": []
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "original_edition_references": [],
+      "selected_rights_review": {
+        "source_id": "b115_fr_156726",
+        "title": "déclarer",
+        "revid": 39873764,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          1,
+          5,
+          6,
+          7
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\déclarer.wiki",
+        "reason": "An Import:DAF8 notice indicates an original-edition layer and possible later modification; the 1932–1935 collective-work basis and original credit are retained. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_157228",
@@ -9060,7 +9578,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1701-dépasser-ver-selected",
@@ -9292,8 +9810,24 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
-      "original_edition_references": []
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "original_edition_references": [],
+      "selected_rights_review": {
+        "source_id": "b115_fr_157228",
+        "title": "dépasser",
+        "revid": 40040670,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          1,
+          5,
+          6,
+          17
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\dépasser.wiki",
+        "reason": "An Import:DAF8 notice indicates an original-edition layer and possible later modification; the 1932–1935 collective-work basis and original credit are retained. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_158623",
@@ -9306,7 +9840,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1733-éclater-ver-selected",
@@ -9531,8 +10065,24 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
-      "original_edition_references": []
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "original_edition_references": [],
+      "selected_rights_review": {
+        "source_id": "b115_fr_158623",
+        "title": "éclater",
+        "revid": 40009842,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          1,
+          5,
+          6,
+          7
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\éclater.wiki",
+        "reason": "An Import:DAF8 notice indicates an original-edition layer and possible later modification; the 1932–1935 collective-work basis and original credit are retained. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_158972",
@@ -9545,7 +10095,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1737-éloigner-ver-selected",
@@ -9732,8 +10282,24 @@
         "Xic667"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
-      "original_edition_references": []
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "original_edition_references": [],
+      "selected_rights_review": {
+        "source_id": "b115_fr_158972",
+        "title": "éloigner",
+        "revid": 40008343,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          1,
+          5,
+          6,
+          7
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\éloigner.wiki",
+        "reason": "An Import:DAF8 notice indicates an original-edition layer and possible later modification; the 1932–1935 collective-work basis and original credit are retained. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_159282",
@@ -9746,7 +10312,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1713-empreinte-nom-selected",
@@ -9982,8 +10548,24 @@
         "Zorglub~frwiktionary"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
-      "original_edition_references": []
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "original_edition_references": [],
+      "selected_rights_review": {
+        "source_id": "b115_fr_159282",
+        "title": "empreinte",
+        "revid": 39863169,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          1,
+          5,
+          8,
+          9
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\empreinte.wiki",
+        "reason": "An Import:DAF8 notice indicates an original-edition layer and possible later modification; the 1932–1935 collective-work basis and original credit are retained. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_161654",
@@ -9996,7 +10578,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Referenced historical edition where applicable: Académie française, eighth edition (1932–1935).",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1703-fonctionner-ver-selected",
@@ -10170,14 +10752,30 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_edition_references": [
         {
           "line_1_based": 76,
           "raw_marker": "{{R:DAF8}}",
           "selected_sentence_authorship": "not_established_by_page_marker"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "source_id": "b115_fr_161654",
+        "title": "fonctionner",
+        "revid": 39774158,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          1,
+          5,
+          6,
+          7
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\fonctionner.wiki",
+        "reason": "An R:DAF8 bibliographic reference is retained without inferring selected-sentence copying or authorship. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_165043",
@@ -10190,7 +10788,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1728-infirmier-nom-selected",
@@ -10372,8 +10970,24 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
-      "original_edition_references": []
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "original_edition_references": [],
+      "selected_rights_review": {
+        "source_id": "b115_fr_165043",
+        "title": "infirmier",
+        "revid": 39995336,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          2,
+          6,
+          9,
+          10
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\infirmier.wiki",
+        "reason": "An Import:DAF8 notice indicates an original-edition layer and possible later modification; the 1932–1935 collective-work basis and original credit are retained. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_166375",
@@ -10386,7 +11000,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1727-leçon-nom-selected",
@@ -10608,8 +11222,24 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
-      "original_edition_references": []
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "original_edition_references": [],
+      "selected_rights_review": {
+        "source_id": "b115_fr_166375",
+        "title": "leçon",
+        "revid": 39695128,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          2,
+          6,
+          8,
+          9
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\leçon.wiki",
+        "reason": "An Import:DAF8 notice indicates an original-edition layer and possible later modification; the 1932–1935 collective-work basis and original credit are retained. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_170739",
@@ -10622,7 +11252,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Referenced historical edition where applicable: Académie française, eighth edition (1932–1935).",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1736-péché-nom-selected",
@@ -10846,14 +11476,30 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_edition_references": [
         {
           "line_1_based": 146,
           "raw_marker": "{{R:DAF8}}",
           "selected_sentence_authorship": "not_established_by_page_marker"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "source_id": "b115_fr_170739",
+        "title": "péché",
+        "revid": 39870072,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          3,
+          7,
+          9,
+          10
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\péché.wiki",
+        "reason": "An R:DAF8 bibliographic reference is retained without inferring selected-sentence copying or authorship. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_174327",
@@ -10866,7 +11512,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1718-réel-adj-selected",
@@ -11088,8 +11734,24 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
-      "original_edition_references": []
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "original_edition_references": [],
+      "selected_rights_review": {
+        "source_id": "b115_fr_174327",
+        "title": "réel",
+        "revid": 39835529,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          3,
+          7,
+          9,
+          10
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\réel.wiki",
+        "reason": "An Import:DAF8 notice indicates an original-edition layer and possible later modification; the 1932–1935 collective-work basis and original credit are retained. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_174719",
@@ -11102,7 +11764,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1721-renoncer-ver-selected",
@@ -11341,8 +12003,24 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
-      "original_edition_references": []
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "original_edition_references": [],
+      "selected_rights_review": {
+        "source_id": "b115_fr_174719",
+        "title": "renoncer",
+        "revid": 39718306,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          1,
+          5,
+          6,
+          15
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\renoncer.wiki",
+        "reason": "An Import:DAF8 notice indicates an original-edition layer and possible later modification; the 1932–1935 collective-work basis and original credit are retained. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_174779",
@@ -11355,7 +12033,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1708-repos-nom-selected",
@@ -11549,8 +12227,24 @@
         "Àncilu"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
-      "original_edition_references": []
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "original_edition_references": [],
+      "selected_rights_review": {
+        "source_id": "b115_fr_174779",
+        "title": "repos",
+        "revid": 39802721,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          1,
+          5,
+          9,
+          12
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\repos.wiki",
+        "reason": "An Import:DAF8 notice indicates an original-edition layer and possible later modification; the 1932–1935 collective-work basis and original credit are retained. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_175049",
@@ -11563,7 +12257,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1715-réunir-ver-selected",
@@ -11771,8 +12465,24 @@
         "~2026-23636-39"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
-      "original_edition_references": []
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "original_edition_references": [],
+      "selected_rights_review": {
+        "source_id": "b115_fr_175049",
+        "title": "réunir",
+        "revid": 39716193,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          3,
+          7,
+          8,
+          29
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\réunir.wiki",
+        "reason": "An Import:DAF8 notice indicates an original-edition layer and possible later modification; the 1932–1935 collective-work basis and original credit are retained. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_178306",
@@ -11785,7 +12495,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1726-théâtre-nom-selected",
@@ -12112,8 +12822,24 @@
         "~2025-41479-46"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
-      "original_edition_references": []
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "original_edition_references": [],
+      "selected_rights_review": {
+        "source_id": "b115_fr_178306",
+        "title": "théâtre",
+        "revid": 39745935,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          3,
+          24,
+          40,
+          54
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\théâtre.wiki",
+        "reason": "An Import:DAF8 notice indicates an original-edition layer and possible later modification; the 1932–1935 collective-work basis and original credit are retained. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_178761",
@@ -12126,7 +12852,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1711-transformer-ver-selected",
@@ -12363,8 +13089,24 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
-      "original_edition_references": []
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "original_edition_references": [],
+      "selected_rights_review": {
+        "source_id": "b115_fr_178761",
+        "title": "transformer",
+        "revid": 39774125,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          1,
+          5,
+          6,
+          7
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\transformer.wiki",
+        "reason": "An Import:DAF8 notice indicates an original-edition layer and possible later modification; the 1932–1935 collective-work basis and original credit are retained. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_179368",
@@ -12377,7 +13119,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1748-université-nom-selected",
@@ -12593,8 +13335,24 @@
         "Àncilu"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
-      "original_edition_references": []
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "original_edition_references": [],
+      "selected_rights_review": {
+        "source_id": "b115_fr_179368",
+        "title": "université",
+        "revid": 39773069,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          1,
+          5,
+          8,
+          14
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\université.wiki",
+        "reason": "An Import:DAF8 notice indicates an original-edition layer and possible later modification; the 1932–1935 collective-work basis and original credit are retained. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_235214",
@@ -12607,7 +13365,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1709-conversation-nom-selected",
@@ -12846,8 +13604,24 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
-      "original_edition_references": []
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "original_edition_references": [],
+      "selected_rights_review": {
+        "source_id": "b115_fr_235214",
+        "title": "conversation",
+        "revid": 39959694,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          1,
+          5,
+          8,
+          9
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\conversation.wiki",
+        "reason": "An Import:DAF8 notice indicates an original-edition layer and possible later modification; the 1932–1935 collective-work basis and original credit are retained. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_242102",
@@ -12860,7 +13634,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1719-piger-ver-selected",
@@ -13115,8 +13889,24 @@
         "Überlinois"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
-      "original_edition_references": []
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "original_edition_references": [],
+      "selected_rights_review": {
+        "source_id": "b115_fr_242102",
+        "title": "piger",
+        "revid": 39451447,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          1,
+          6,
+          7,
+          39
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\piger.wiki",
+        "reason": "No DAF8 import/reference marker attaches to this article’s selected French lexical/form content. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_fr_1951864",
@@ -13129,7 +13919,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Referenced historical edition where applicable: Académie française, eighth edition (1932–1935).",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [],
       "selected_grammar_and_construction_evidence": [
         {
@@ -13233,7 +14023,7 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_edition_references": [
         {
           "line_1_based": 29,
@@ -13245,7 +14035,22 @@
           "raw_marker": "{{R:DAF8|sien}}",
           "selected_sentence_authorship": "not_established_by_page_marker"
         }
-      ]
+      ],
+      "selected_rights_review": {
+        "source_id": "b115_fr_1951864",
+        "title": "y mettre du sien",
+        "revid": 38097847,
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          1,
+          6,
+          11
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\y mettre du sien.wiki",
+        "reason": "An R:DAF8 bibliographic reference is retained without inferring selected-sentence copying or authorship. The exact French/POS, definition or isolated-form IPA spans were read apart from quotations, etymology, media, translations and other languages. Fixed article/history credit and the audited complete contributor registry support the CC BY-SA 4.0 contribution/transcription route; registry names and last editor do not prove sentence authorship. New scoped French adaptations and EN/ZH explanations retain ShareAlike and modification notices; no separately restricted wording is selected.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     },
     {
       "id": "b115_daf8_tien",
@@ -13258,7 +14063,7 @@
       "content_license": "Public-domain-original;CC-BY-SA-4.0-adaptation",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Académie française, Dictionnaire de l’Académie française, eighth edition, tome 2, p. 659 (1935); Académie française digital presentation; Lexique contributors for selection, adaptation and new translations.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_separate_independent_selected_content_review",
       "selected_locations": [
         {
           "sense_id": "b115-1750-tien-nom-selected",
@@ -13382,11 +14187,30 @@
         "Lexique contributors (new adaptation and EN/ZH)"
       ],
       "attribution_boundary": "Fixed 1935 collective work, printed page and author named; no Wiki registry or selected-sentence authorship claim for this source.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_original_edition_audit",
-      "original_edition_references": []
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "original_edition_references": [],
+      "selected_rights_review": {
+        "source_id": "b115_daf8_tien",
+        "title": "tien, ienne",
+        "revid": "A8T0594-1935-tome2-page659",
+        "reviewer": "Independent semantic and selected-rights reviewer #115 on codex/d2-review-115; fresh context separate from author d136ed0",
+        "selected_text_rights_status": "passed_at_selected_text_boundary",
+        "reviewed_lines_1_based": [
+          729,
+          730,
+          736,
+          737,
+          739,
+          740,
+          758
+        ],
+        "raw_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-115\\sources\\academy8-tien.txt",
+        "reason": "The selected noun, contribution and concession wording is from the identified 1935 DAF8 original edition, tome 2 page 659. Académie française receives original-edition credit; the existing collective-work L123-3 basis expires conservatively on 2006-01-01. Only that historical wording is adapted under CC BY-SA 4.0; modern site layout and ninth-edition prose do not supply fields. No new live statute determination or website-wide redistribution right is asserted.",
+        "combined_package_status": "pending_parent_conversion_and_actual_notices"
+      }
     }
   ],
-  "rights_review": "Author-proposed CC BY-SA 4.0 contribution/adaptation route and separately attributed DAF8 original-work basis; independent selected-span rights review remains pending.",
+  "rights_review": "Passed separate independent selected-span rights review; original author proposals remain retained, with per-source verdicts in selected_rights_review.",
   "spelling_relations": [
     {
       "sense_id": "b115-1701-dépasser-ver-selected",
