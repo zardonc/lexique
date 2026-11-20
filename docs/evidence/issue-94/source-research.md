@@ -23,4 +23,7 @@ The difficult groups remain separate:
 | `ressembler/VER` | Intransitive `ressembler à`; no direct-object construction. |
 | `flic/NOM`, `cul/NOM` | Slang/potentially derogatory police term and vulgar buttocks term, respectively. |
 
-Full pages, literary quotations, etymologies, unselected senses, translation tables and media are excluded from the tracked shards. All 50 groups have independently accepted four-field content, with no annotation exception. Native lookup/save/reopen, offline and saved-state preservation checks are pending at integration; see the parent [aggregate verification](../issue-90-99/README.md). Learner acceptance and wider release gates remain open.
+Full pages, literary quotations, etymologies, unselected senses, translation tables and media are excluded from the tracked shards. All 50 groups have independently accepted four-field content, with no annotation exception.
+Native lookup/save/reopen, saved-state preservation and offline verification
+results and remaining gates are recorded in the parent
+[aggregate verification](../issue-90-99/README.md). Learner acceptance and wider release gates remain open.

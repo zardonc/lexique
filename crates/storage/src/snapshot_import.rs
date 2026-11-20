@@ -25,11 +25,15 @@ pub fn import_learning_snapshot(
     insert_records(&tx, snapshot)?;
     insert_speech_demands(&tx, snapshot)?;
     insert_review(&tx, snapshot)?;
+    insert_grammar_cards(&tx, snapshot)?;
     insert_batches(&tx, snapshot)?;
     insert_audio_versions(&tx, snapshot, captured_at)?;
     insert_audio_links(&tx, snapshot)?;
     insert_audio_history(&tx, snapshot)?;
     insert_preferences(&tx, &snapshot.preferences)?;
+    if let Some(identities) = snapshot.identities {
+        preserve_learning_identities(&tx, identities)?;
+    }
     write_dictionary_catalog(&tx, &snapshot.dictionary_catalog)?;
     if tx.prepare("PRAGMA foreign_key_check")?.exists([])? {
         return Err(StorageError::Invalid(
@@ -45,6 +49,9 @@ pub fn import_learning_snapshot(
     for record in &snapshot.records {
         get(&tx, record.id)?;
         review_cards(&tx, record.id)?;
+    }
+    for record in &snapshot.grammar_records {
+        get_grammar(&tx, record.id)?;
     }
     let record_ids: Vec<_> = snapshot.records.iter().map(|record| record.id).collect();
     let card_ids: Vec<_> = snapshot.cards.iter().map(|card| card.id).collect();
@@ -63,6 +70,7 @@ pub fn import_learning_snapshot(
     conjugation_preferences(&tx)?;
     conjugation_block_order(&tx)?;
     sort_preference(&tx)?;
+    grammar_sort_preference(&tx)?;
     read_dictionary_catalog(&tx)?;
     tx.commit()?;
     Ok(())
@@ -72,6 +80,16 @@ fn insert_records(
     connection: &Connection,
     snapshot: &LearningSnapshot,
 ) -> Result<(), StorageError> {
+    for category in &snapshot.categories {
+        connection.execute(
+            "INSERT INTO learning_categories(id, name, name_key) VALUES (?1, ?2, ?3)",
+            params![
+                category.id,
+                category.name,
+                crate::categories::category_name_key(&category.name)
+            ],
+        )?;
+    }
     let mut statement = connection.prepare(
         "INSERT INTO vocabulary(id,headword,snapshot,notes,example_fr,example_zh,example_source,
          example_sense,more_examples,revision,created_at,updated_at)
@@ -98,6 +116,11 @@ fn insert_records(
             record.created_at,
             record.updated_at,
         ])?;
+        crate::categories::save_record_categories(connection, record.id, &record.category_ids)?;
+    }
+    for record in &snapshot.grammar_records {
+        connection.execute("INSERT INTO vocabulary(id, headword, notes, snapshot, record_kind, revision, created_at, updated_at) VALUES (?1, ?2, ?3, NULL, 'grammar', ?4, ?5, ?6)", params![record.id, record.title, record.body, record.revision, record.created_at, record.updated_at])?;
+        crate::categories::save_record_categories(connection, record.id, &record.category_ids)?;
     }
     let mut statement = connection.prepare(
         "INSERT INTO save_operations(operation,request,outcome,record_id) VALUES(?1,?2,?3,?4)",
@@ -109,6 +132,37 @@ fn insert_records(
             saved.outcome,
             saved.record_id,
         ])?;
+    }
+    for saved in &snapshot.grammar_save_operations {
+        statement.execute(params![
+            saved.operation,
+            serde_json::to_string(&saved.request)?,
+            saved.outcome,
+            saved.record_id
+        ])?;
+    }
+    let mut statement =
+        connection.prepare("INSERT INTO deleted_grammar_operations(operation) VALUES (?1)")?;
+    for operation in &snapshot.deleted_grammar_operations {
+        statement.execute([operation])?;
+    }
+    Ok(())
+}
+
+fn insert_grammar_cards(
+    connection: &Connection,
+    snapshot: &LearningSnapshot,
+) -> Result<(), StorageError> {
+    for record in &snapshot.grammar_records {
+        if let Some(card) = &record.card {
+            connection.execute(
+                "INSERT INTO grammar_cards(card_id, question, answer) VALUES (?1, ?2, ?3)",
+                params![card.id, card.question, card.answer],
+            )?;
+        }
+    }
+    for usage in &snapshot.retained_review_usage {
+        connection.execute("INSERT INTO retained_review_usage(learning_day, reviewed_at, new_cards, review_cards) VALUES (?1, ?2, ?3, ?4)", params![usage.learning_day, usage.reviewed_at, usage.new_cards, usage.review_cards])?;
     }
     Ok(())
 }
@@ -140,6 +194,13 @@ fn insert_preferences(
     )?;
     set_conjugation_block_order(connection, &preferences.conjugation.block_order)?;
     set_sort_preference(connection, &preferences.vocabulary_sort)?;
+    set_grammar_sort_preference(connection, &preferences.grammar_sort)?;
+    if preferences.undo_blocked {
+        connection.execute(
+            "INSERT INTO app_metadata(key, value) VALUES ('review-undo-blocked', 'true')",
+            [],
+        )?;
+    }
     Ok(())
 }
 

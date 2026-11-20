@@ -55,7 +55,7 @@ try {
       return setItem.call(this, key, value);
     };
   });
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').first().click();
   await page.getByRole('button', { name: '查看识义卡' }).click();
   const card = page.getByRole('region', { name: '识义卡' });
@@ -75,7 +75,7 @@ try {
   assert.equal(initial.result.step_seconds, 600);
   await stop();
   page = await start();
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').first().click();
   await page.getByRole('button', { name: '查看识义卡' }).click();
   await page.getByRole('region', { name: '识义卡' }).getByRole('button', { name: '显示答案' }).click();

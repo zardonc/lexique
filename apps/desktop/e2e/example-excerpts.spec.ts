@@ -9,7 +9,7 @@ test('pending excerpt explains why save-and-leave is unavailable and preserves i
   await page.getByRole('button', { name: '查词', exact: true }).click();
   await page.getByRole('button', { name: '摘录例句', exact: true }).click();
   await page.getByLabel('摘录法语').fill('Une école.');
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   const dialog = page.getByRole('dialog');
   await expect(dialog.getByRole('button', { name: /保存/ })).toBeDisabled();
   await expect(dialog.getByRole('alert')).toContainText('请先将摘录加入草稿或取消摘录');
@@ -18,7 +18,7 @@ test('pending excerpt explains why save-and-leave is unavailable and preserves i
   await expect(page.getByLabel('摘录法语')).toHaveValue('Une école.');
   await page.getByRole('button', { name: '加入草稿', exact: true }).click();
   await page.getByLabel('例句对应释义').selectOption('0');
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await dialog.getByRole('button', { name: '保存后离开', exact: true }).click();
   await expect(dialog).not.toBeVisible();
   expect(await page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'vocabulary_save'))).toHaveLength(1);
@@ -89,7 +89,7 @@ test('capacity and Unicode length errors retain pasted input and leave guard pro
   await page.getByRole('button', { name: '加入草稿', exact: true }).click(); await expect(page.getByRole('alert').filter({ hasText: '20,000' })).toBeVisible();
   await page.getByLabel('摘录法语').fill('𠮷'.repeat(20_000)); await page.getByRole('button', { name: '加入草稿', exact: true }).click();
   await expect(page.getByText('更多例句已达 100 组，摘录内容已保留。')).toBeVisible(); await expect(page.getByLabel('摘录法语')).toHaveValue('𠮷'.repeat(20_000));
-  await page.getByRole('button', { name: '生词本', exact: true }).click(); await expect(page.getByRole('dialog')).toBeVisible();
+  await page.getByRole('button', { name: '笔记', exact: true }).click(); await expect(page.getByRole('dialog')).toBeVisible();
 });
 
 test('new word excerpt is created only by explicit save with the original collection preference', async ({ page }) => {

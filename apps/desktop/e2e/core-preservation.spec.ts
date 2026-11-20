@@ -42,7 +42,7 @@ test('complete 20,000-character core fields remain readable in lookup, saved fal
   await page.getByLabel('French word or phrase', { exact: true }).fill('être');
   await page.getByLabel('French word or phrase', { exact: true }).press('Enter');
   await completeContent(page.getByRole('region', { name: 'Dictionary text', exact: true }));
-  await page.getByRole('button', { name: 'Notebook', exact: true }).click();
+  await page.getByRole('button', { name: 'Notes', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
   await expect(page.locator('.dictionary-original [role="alert"]')).toContainText('Core resource removed');
   await completeContent(page.getByRole('region', { name: 'Word summary', exact: true }));
@@ -66,7 +66,7 @@ test('a late newer core response identifies both versions and preserves unsaved 
     dictionary_settings: [{ value: coreCatalog }], vocabulary_list: [{ value: [coreRecord] }],
     dictionary_lookup: [{ gate: 'newer-core-1', value: newerLookup }, { gate: 'newer-core-2', value: newerLookup }] });
   await page.goto('/');
-  await page.getByRole('button', { name: 'Notebook', exact: true }).click();
+  await page.getByRole('button', { name: 'Notes', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
   await expect(page.locator('.dictionary-original [role="status"]')).toBeVisible();
   await page.getByLabel('Personal notes', { exact: true }).fill('Keep this unsaved note.');
@@ -90,11 +90,11 @@ test('leaving a pending core lookup cannot replace the next record or its unsave
     dictionary_settings: [{ value: coreCatalog }], vocabulary_list: [{ value: [coreRecord, { ...record, id: 2 }] }],
     dictionary_lookup: [{ gate: 'old-core-1', value: newerLookup }, { gate: 'old-core-2', value: newerLookup }, { value: dictionary }] });
   await page.goto('/');
-  await page.getByRole('button', { name: 'Notebook', exact: true }).click();
+  await page.getByRole('button', { name: 'Notes', exact: true }).click();
   await page.locator('.vocabulary-list button').first().click();
   await expect(page.locator('.dictionary-original [role="status"]')).toBeVisible();
   await page.getByLabel('Personal notes', { exact: true }).fill('Previous draft.');
-  await page.getByRole('button', { name: 'Notebook', exact: true }).click();
+  await page.getByRole('button', { name: 'Notes', exact: true }).click();
   await page.getByRole('dialog', { name: 'You have unsaved changes' }).getByRole('button', { name: 'Discard changes', exact: true }).click();
   await page.locator('.vocabulary-list button').last().click();
   await page.getByLabel('Personal notes', { exact: true }).fill('Keep the next record draft.');

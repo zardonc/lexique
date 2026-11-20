@@ -122,7 +122,8 @@ modification notices. FR adapts the selected French use; EN/ZH are newly authore
 explanatory translations of it, not claimed upstream bilingual entries. All 48
 selected uses and 192 fields passed independent text, usage and rights review.
 The [combined core](../../../resources/core-pilot-79/README.md) contains the
-accepted records and source/adaptation obligations. Native lookup/save/reopen,
-offline and saved-state preservation checks are pending at integration; see the
-parent [aggregate verification](../issue-90-99/README.md). Learner acceptance and
+accepted records and source/adaptation obligations.
+Native lookup/save/reopen, saved-state preservation and offline verification
+results and remaining gates are recorded in the parent
+[aggregate verification](../issue-90-99/README.md). Learner acceptance and
 wider release gates remain open.

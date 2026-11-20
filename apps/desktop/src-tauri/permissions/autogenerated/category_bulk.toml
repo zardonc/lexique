@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-category-bulk"
+description = "Enables the category_bulk command without any pre-configured scope."
+commands.allow = ["category_bulk"]
+
+[[permission]]
+identifier = "deny-category-bulk"
+description = "Denies the category_bulk command without any pre-configured scope."
+commands.deny = ["category_bulk"]

@@ -11,7 +11,7 @@ const entries = [0, 9.99, 10, 99.99, 100].map((per_million, index) => ({ key: `m
 test('notebook frequency labels include zero and both product thresholds without changing notes', async ({ page }) => {
   const rows = entries.map((entry, index) => ({ ...record, id: index + 1, headword: entry.key, notes: `note ${index}` }));
   await nativeFixture(page, { vocabulary_list: [{ value: rows }], frequency_lookup: [{ value: { source, metric: 'freqlemfilms2', entries } }] });
-  await page.goto('/'); await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.goto('/'); await page.getByRole('button', { name: '笔记', exact: true }).click();
   for (const [index, label] of ['低频', '低频', '中频', '中频', '高频'].entries()) {
     const row = page.locator('.vocabulary-list li').nth(index);
     await expect(row.locator('.frequency-badge')).toHaveText(label);
@@ -22,10 +22,10 @@ test('notebook frequency labels include zero and both product thresholds without
 test('frequency reads only the visible notebook page up to one hundred words', async ({ page }) => {
   const rows = Array.from({ length: 101 }, (_, index) => ({ ...record, id: index + 1, headword: `mot ${index}` }));
   await nativeFixture(page, { vocabulary_list: [{ value: rows }] });
-  await page.goto('/'); await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.goto('/'); await page.getByRole('button', { name: '笔记', exact: true }).click();
   await expect(page.locator('.frequency-badge')).toHaveCount(20);
   await expect(page.getByText('正在读取词频…', { exact: true })).toHaveCount(0);
-  await page.getByLabel('每页词数').selectOption('100');
+  await page.getByLabel('每页记录数').selectOption('100');
   await expect(page.locator('.frequency-badge')).toHaveCount(100);
   await expect(page.getByText('正在读取词频…', { exact: true })).toHaveCount(0);
   await page.getByRole('button', { name: '下一页', exact: true }).click();
@@ -42,7 +42,7 @@ test('a late frequency failure from the previous page cannot replace the current
     { error: { code: 'query_failed', message: 'stale frequency failure' }, gate: 'first-frequency' },
     { value: { source, metric: 'freqlemfilms2', entries: [entry] } },
   ] });
-  await page.goto('/'); await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.goto('/'); await page.getByRole('button', { name: '笔记', exact: true }).click();
   await expect(page.locator('.vocabulary-list li')).toHaveCount(20);
   await expect(page.getByText('正在读取词频…', { exact: true })).toBeVisible();
   await page.getByRole('button', { name: '下一页', exact: true }).click();
@@ -59,7 +59,7 @@ test('saved details retain a missing POS value and explain the unknown total', a
   const lookup = { source, metric: 'freqlemfilms2', entries: [entry] };
   await nativeFixture(page, { vocabulary_list: [{ value: [{ ...record, headword: 'o', notes: '原有笔记' }] }],
     frequency_lookup: [{ value: lookup }, { value: lookup }] });
-  await page.goto('/'); await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.goto('/'); await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
   await expect(page.locator('.vocabulary-summary .frequency-badge')).toHaveText('暂无词频');
   await page.getByText('词频数值与来源', { exact: true }).click();
@@ -76,7 +76,7 @@ test('a missing resource leaves notes editable and retry only reads frequency', 
   const lookup = { source, metric: 'freqlemfilms2', entries: [entry] };
   await nativeFixture(page, { vocabulary_list: [{ value: [record] }], frequency_lookup: [{ value: lookup },
     { error: { code: 'missing', message: 'frequency resource missing' } }, { value: lookup }] });
-  await page.goto('/'); await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.goto('/'); await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
   await expect(page.getByRole('alert')).toContainText('frequency resource missing');
   await page.getByLabel('独立笔记', { exact: true }).fill('未保存输入');
@@ -93,7 +93,7 @@ for (const [name, entry] of [
 ] as const) test(`invalid frequency response is visible: ${name}`, async ({ page }) => {
   await nativeFixture(page, { vocabulary_list: [{ value: [{ ...record, headword: entries[0]!.key }] }],
     frequency_lookup: [{ value: { source, metric: 'freqlemfilms2', entries: [entry] } }] });
-  await page.goto('/'); await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.goto('/'); await page.getByRole('button', { name: '笔记', exact: true }).click();
   await expect(page.getByRole('alert')).toContainText('词频读取失败');
   await expect(page.locator('.vocabulary-list .frequency-badge')).toHaveText('暂无词频');
   await expect(page.locator('.vocabulary-list button')).toBeEnabled();
@@ -107,7 +107,7 @@ for (const theme of ['white', 'sepia', 'dark']) for (const [locale, labels] of [
   await nativeFixture(page, { vocabulary_list: [{ value: values.map((entry, index) => ({ ...record, id: index + 1, headword: entry.key })) }],
     frequency_lookup: [{ value: { source, metric: 'freqlemfilms2', entries: values } }] });
   await page.goto('/'); await page.getByLabel('显示主题').selectOption(theme);
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.getByLabel('界面语言').selectOption(locale);
   await expect(page.locator('.frequency-badge')).toHaveText([...labels]);
   const contrasts = await page.locator('.frequency-badge').evaluateAll((badges) => {

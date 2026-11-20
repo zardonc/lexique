@@ -16,14 +16,14 @@ test.beforeEach(async ({ page }) => {
 });
 async function open(page: Page) {
   await page.goto('/');
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
 }
 
 test('draft example speech normalizes only its spoken copy without saving', async ({ page }) => {
   await nativeFixture(page, { vocabulary_list: [{ value: [record] }], speech_preview: [{ error: 'model missing' }] });
   await page.goto('/');
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
   const original = '  Une e\u0301cole.\n\t Une phrase.  ';
   await page.getByLabel('法语例句', { exact: true }).fill(original);

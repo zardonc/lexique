@@ -268,10 +268,11 @@ pub(crate) fn validate_word_spec(
     id: i64,
     key: Option<&str>,
 ) -> Result<(), StorageError> {
-    let headword: String =
-        connection.query_row("SELECT headword FROM vocabulary WHERE id=?1", [id], |row| {
-            row.get(0)
-        })?;
+    let headword: String = connection.query_row(
+        "SELECT headword FROM vocabulary WHERE id=?1 AND record_kind='vocabulary'",
+        [id],
+        |row| row.get(0),
+    )?;
     if let Some(key) = key {
         let saved: String = connection.query_row(
             "SELECT spec FROM speech_assets WHERE semantic_key=?1",

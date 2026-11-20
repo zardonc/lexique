@@ -4,7 +4,7 @@ import { collect, nativeFixture, record } from './native-fixture';
 const completed = {
   operation: 'backup-1', state: 'completed', phase: null, cancel_requested: false, error: null,
   result: { destination: 'C:\\Backups\\study.lexique-backup', byte_length: 48000, created_at: 1794528000,
-    counts: { vocabulary: 4, cards: 8, ratings: 12, batches: 2, custom_dictionaries: 1, legacy_audio: 1,
+    counts: { vocabulary: 4, grammar: 0, categories: 0, cards: 8, ratings: 12, batches: 2, custom_dictionaries: 1, legacy_audio: 1,
       included_audio_versions: 3, included_legacy_audio: 1, audio_files: 3, source_missing_audio: 1, source_invalid_audio: 2 } },
 };
 

@@ -43,19 +43,49 @@ pub fn export_learning_snapshot(
     captured_at: i64,
 ) -> Result<LearningSnapshot, StorageError> {
     let tx = connection.transaction_with_behavior(TransactionBehavior::Deferred)?;
-    let ids = rows(&tx, "SELECT id FROM vocabulary ORDER BY id", |r| {
-        r.get::<_, i64>(0)
-    })?;
+    let ids = rows(
+        &tx,
+        "SELECT id FROM vocabulary WHERE record_kind = 'vocabulary' ORDER BY id",
+        |r| r.get::<_, i64>(0),
+    )?;
     let mut records = get_batch(&tx, &ids)?;
     let mut snapshot = LearningSnapshot {
-        snapshot_version: 2,
+        snapshot_version: 3,
+        grammar_records: list_grammar(&tx, "", "created-asc")?,
+        grammar_save_operations: rows(
+            &tx,
+            "SELECT s.operation, s.request, s.outcome, s.record_id FROM save_operations s JOIN vocabulary v ON v.id = s.record_id WHERE v.record_kind = 'grammar' ORDER BY s.rowid",
+            |r| {
+                Ok(SnapshotGrammarSaveOperation {
+                    operation: r.get(0)?,
+                    request: json(r, 1)?,
+                    outcome: r.get(2)?,
+                    record_id: r.get(3)?,
+                })
+            },
+        )?,
+        deleted_grammar_operations: deleted_grammar_operations(&tx)?,
+        categories: learning_categories(&tx)?,
+        retained_review_usage: rows(
+            &tx,
+            "SELECT learning_day, reviewed_at, new_cards, review_cards FROM retained_review_usage ORDER BY learning_day, reviewed_at",
+            |r| {
+                Ok(SnapshotRetainedUsage {
+                    learning_day: r.get(0)?,
+                    reviewed_at: r.get(1)?,
+                    new_cards: r.get(2)?,
+                    review_cards: r.get(3)?,
+                })
+            },
+        )?,
+        identities: Some(learning_identities(&tx)?),
         records: ids
             .into_iter()
             .map(|id| records.remove(&id).unwrap())
             .collect(),
         save_operations: rows(
             &tx,
-            "SELECT operation,request,outcome,record_id FROM save_operations ORDER BY rowid",
+            "SELECT s.operation,s.request,s.outcome,s.record_id FROM save_operations s JOIN vocabulary v ON v.id = s.record_id WHERE v.record_kind = 'vocabulary' ORDER BY s.rowid",
             |r| {
                 Ok(SnapshotSaveOperation {
                     operation: r.get(0)?,
@@ -309,6 +339,8 @@ pub fn export_learning_snapshot(
                 block_order: conjugation_block_order(&tx)?,
             },
             vocabulary_sort: sort_preference(&tx)?,
+            grammar_sort: grammar_sort_preference(&tx)?,
+            undo_blocked: crate::review::review_undo_blocked(&tx)?,
         },
         dictionary_catalog: read_dictionary_catalog(&tx)?,
     };

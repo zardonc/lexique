@@ -2,9 +2,9 @@ use lexique_core::scheduling::{Card, Scheduled};
 use serde::{Deserialize, Serialize, Serializer, ser::SerializeMap};
 
 use crate::{
-    ConjugationBlockOrder, ConjugationMode, DictionaryCatalog, InterfacePreferences, QueueCard,
-    RatingRequest, ReviewSettings, SaveRequest, SpeechPreferences, SpeechSpec, SpeechVoice,
-    VocabularyRecord,
+    ConjugationBlockOrder, ConjugationMode, DictionaryCatalog, GrammarCardRequest, GrammarRecord,
+    GrammarSaveRequest, InterfacePreferences, LearningCategory, QueueCard, RatingRequest,
+    ReviewSettings, SaveRequest, SpeechPreferences, SpeechSpec, SpeechVoice, VocabularyRecord,
 };
 
 #[derive(Deserialize, Serialize)]
@@ -32,6 +32,51 @@ pub struct LearningSnapshot {
     pub audio_repairs: Vec<SnapshotAudioRepair>,
     pub preferences: SnapshotPreferences,
     pub dictionary_catalog: DictionaryCatalog,
+    #[serde(default)]
+    pub grammar_records: Vec<GrammarRecord>,
+    #[serde(default)]
+    pub grammar_save_operations: Vec<SnapshotGrammarSaveOperation>,
+    #[serde(default)]
+    pub deleted_grammar_operations: Vec<String>,
+    #[serde(default)]
+    pub categories: Vec<LearningCategory>,
+    #[serde(default)]
+    pub retained_review_usage: Vec<SnapshotRetainedUsage>,
+    #[serde(default)]
+    pub identities: Option<SnapshotIdentities>,
+}
+
+#[derive(Deserialize, Serialize)]
+#[serde(untagged)]
+pub enum SnapshotGrammarRequest {
+    Note(GrammarSaveRequest),
+    Card(GrammarCardRequest),
+}
+
+#[derive(Deserialize, Serialize)]
+#[serde(deny_unknown_fields)]
+pub struct SnapshotGrammarSaveOperation {
+    pub operation: String,
+    pub request: SnapshotGrammarRequest,
+    pub outcome: String,
+    pub record_id: i64,
+}
+
+#[derive(Clone, Copy, Debug, Default, Deserialize, Serialize, PartialEq, Eq)]
+#[serde(deny_unknown_fields)]
+pub struct SnapshotIdentities {
+    pub records: i64,
+    pub cards: i64,
+    pub categories: i64,
+}
+
+#[derive(Deserialize, Serialize)]
+#[serde(deny_unknown_fields)]
+pub struct SnapshotRetainedUsage {
+    pub learning_day: String,
+    pub reviewed_at: i64,
+    pub new_cards: u32,
+    pub review_cards: u32,
 }
 
 #[derive(Deserialize, Serialize)]
@@ -302,6 +347,14 @@ pub struct SnapshotPreferences {
     pub interface: InterfacePreferences,
     pub conjugation: SnapshotConjugationPreferences,
     pub vocabulary_sort: String,
+    #[serde(default = "default_grammar_sort")]
+    pub grammar_sort: String,
+    #[serde(default)]
+    pub undo_blocked: bool,
+}
+
+fn default_grammar_sort() -> String {
+    crate::DEFAULT_SORT.into()
 }
 
 #[derive(Deserialize, Serialize)]
@@ -347,7 +400,7 @@ struct PortableRecord<'a>(&'a VocabularyRecord);
 impl Serialize for PortableRecord<'_> {
     fn serialize<S: Serializer>(&self, serializer: S) -> Result<S::Ok, S::Error> {
         let record = self.0;
-        let mut map = serializer.serialize_map(Some(13))?;
+        let mut map = serializer.serialize_map(Some(14))?;
         map.serialize_entry("id", &record.id)?;
         map.serialize_entry("headword", &record.headword)?;
         map.serialize_entry("reference", &PortableReference(&record.reference))?;
@@ -371,6 +424,7 @@ impl Serialize for PortableRecord<'_> {
         map.serialize_entry("revision", &record.revision)?;
         map.serialize_entry("created_at", &record.created_at)?;
         map.serialize_entry("updated_at", &record.updated_at)?;
+        map.serialize_entry("category_ids", &record.category_ids)?;
         map.end()
     }
 }
@@ -390,7 +444,7 @@ fn serialize_save_request<S: Serializer>(
     request: &SaveRequest,
     serializer: S,
 ) -> Result<S::Ok, S::Error> {
-    let mut map = serializer.serialize_map(Some(10))?;
+    let mut map = serializer.serialize_map(Some(11))?;
     map.serialize_entry("operation", &request.operation)?;
     map.serialize_entry("headword", &request.headword)?;
     map.serialize_entry("notes", &request.notes)?;
@@ -411,5 +465,6 @@ fn serialize_save_request<S: Serializer>(
     )?;
     map.serialize_entry("id", &request.id)?;
     map.serialize_entry("revision", &request.revision)?;
+    map.serialize_entry("category_ids", &request.category_ids)?;
     map.end()
 }

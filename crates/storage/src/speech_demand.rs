@@ -89,6 +89,7 @@ pub fn plan_review_words(
     recent
         .iter()
         .take(4)
+        .filter(|card| card.kind != "grammar")
         .map(|card| (card, 1))
         .chain(
             today

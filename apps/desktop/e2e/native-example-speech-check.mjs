@@ -26,7 +26,7 @@ async function open(page) {
     const play = HTMLMediaElement.prototype.play;
     HTMLMediaElement.prototype.play = function () { Reflect.get(window, 'examplePlayers').push(this); return play.call(this); };
   });
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
 }
 async function play(page) {

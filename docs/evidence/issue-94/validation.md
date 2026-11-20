@@ -3,8 +3,8 @@
 All **50 groups / 200 fields** passed independent source, rights and quality
 review. [Independent review](independent-review.md), [admission](admission.json)
 and the canonical [field review](field-review.json) record the accepted delivery.
-Native lookup/save/reopen, offline and saved-state preservation checks remain
-pending at integration; the parent owns the
+Native lookup/save/reopen, saved-state preservation and offline verification
+results and remaining gates are recorded in the parent
 [aggregate verification](../issue-90-99/README.md).
 
 ## Retained author checks

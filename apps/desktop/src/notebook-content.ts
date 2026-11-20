@@ -1,8 +1,10 @@
 import type { Locale } from './content';
 import { coreMessages } from './core-sense';
+import { notesMessages } from './notes-content';
 
 export const notebookMessages = {
   zh: {
+    notesText: notesMessages.zh,
     core: coreMessages.zh,
     excerpt: '摘录例句', excerptFr: '摘录法语', excerptZh: '摘录中文', transferExcerpt: '加入草稿', cancelExcerpt: '取消摘录', duplicateExcerpt: '例句已存在，已定位原例句。', capacityExcerpt: '更多例句已达 100 组，摘录内容已保留。', unknownSource: '出处未知', reopenExample: '查看例句原文',
     frequency: { locale: 'zh-CN', high: '高频', medium: '中频', low: '低频', unknown: '暂无词频', details: '词频数值与来源',
@@ -14,7 +16,7 @@ export const notebookMessages = {
     approximateSpeed: '旧音频声线未知，按默认女声基准近似播放。',
     regenerateSpeech: '重新生成语音',
     batchProgress: '批量任务', cardsCreated: '已创建卡片', audioProgress: '音频完成', stopAudio: '停止剩余音频生成', audioCancelled: '已停止剩余生成；卡片与完成音频保留',
-    pageSize: '每页词数', previousPage: '上一页', nextPage: '下一页',
+    pageSize: '每页记录数', previousPage: '上一页', nextPage: '下一页',
     exampleSense: '例句对应释义', exampleSenseUnspecified: '未指定释义', exampleSenseRequired: '请为新增或修改的例句选择释义。',
     summary: '基本词汇信息', fallback: '收藏时的只读摘要', original: '词典原文', notes: '独立笔记', playExample: '播放例句', exampleSpeechLimit: '朗读仅支持规范化后最多 200 个字符；例句仍可完整保存。', exampleSpeechControl: '例句含有无法朗读的控制字符。', exampleFr: '法语例句', exampleZh: '例句中文译文', exampleUser: '个人例句', exampleLimit: '例句每项不能超过 20,000 个字符。',
     pronunciation: '音标', grammar: '语法', translation: '中文译义', missing: '未提供', moreExamples: '更多例句', addExample: '添加例句', removeExample: '删除例句',
@@ -40,6 +42,7 @@ export const notebookMessages = {
     availability: { due: '尚未到期', quota: '今日额度已用完', deferred: '同词卡片暂缓', paused: '复习已暂停', clock: '设备时间早于最近评分，请检查时间', conflict: '卡片已被其他操作修改', invalid: '评分请求无效' },
   },
   en: {
+    notesText: notesMessages.en,
     core: coreMessages.en,
     excerpt: 'Excerpt example', excerptFr: 'Excerpt French', excerptZh: 'Excerpt Chinese', transferExcerpt: 'Add to draft', cancelExcerpt: 'Cancel excerpt', duplicateExcerpt: 'Example already exists; focused the original.', capacityExcerpt: 'The 100 extra examples limit is reached. Your excerpt is retained.', unknownSource: 'Unknown source', reopenExample: 'View example original',
     frequency: { locale: 'en', high: 'High frequency', medium: 'Medium frequency', low: 'Low frequency', unknown: 'Frequency unavailable', details: 'Frequency values and source',
@@ -51,7 +54,7 @@ export const notebookMessages = {
     approximateSpeed: 'Unknown legacy voice; speed is approximate using the default female voice.',
     regenerateSpeech: 'Regenerate audio',
     batchProgress: 'Batch tasks', cardsCreated: 'Cards created', audioProgress: 'Audio complete', stopAudio: 'Stop remaining audio', audioCancelled: 'Remaining generation stopped; cards and completed audio kept',
-    pageSize: 'Words per page', previousPage: 'Previous page', nextPage: 'Next page',
+    pageSize: 'Records per page', previousPage: 'Previous page', nextPage: 'Next page',
     exampleSense: 'Meaning for examples', exampleSenseUnspecified: 'Meaning not specified', exampleSenseRequired: 'Select a meaning for new or edited examples.',
     summary: 'Word summary', fallback: 'Read-only summary saved at collection', original: 'Dictionary text', notes: 'Personal notes', playExample: 'Play example', exampleSpeechLimit: 'Speech supports at most 200 normalized characters; the complete example can still be saved.', exampleSpeechControl: 'The example contains unsupported control characters.', exampleFr: 'French example', exampleZh: 'Chinese translation of example', exampleUser: 'Personal example', exampleLimit: 'Each example field must be at most 20,000 characters.',
     pronunciation: 'Pronunciation', grammar: 'Grammar', translation: 'Chinese translation', missing: 'Not provided', moreExamples: 'More examples', addExample: 'Add example', removeExample: 'Remove example',
@@ -77,6 +80,7 @@ export const notebookMessages = {
     availability: { due: 'Not due yet', quota: 'Daily limit reached', deferred: 'Other card deferred', paused: 'Review paused', clock: 'Device time is before the last rating; check the clock', conflict: 'Card changed in another operation', invalid: 'Invalid rating request' },
   },
   fr: {
+    notesText: notesMessages.fr,
     core: coreMessages.fr,
     excerpt: 'Extraire un exemple', excerptFr: 'Extrait français', excerptZh: 'Extrait chinois', transferExcerpt: 'Ajouter au brouillon', cancelExcerpt: 'Annuler l’extrait', duplicateExcerpt: 'Cet exemple existe déjà ; l’original est sélectionné.', capacityExcerpt: 'La limite de 100 exemples supplémentaires est atteinte. L’extrait est conservé.', unknownSource: 'Source inconnue', reopenExample: 'Voir l’original de l’exemple',
     frequency: { locale: 'fr', high: 'Fréquence élevée', medium: 'Fréquence moyenne', low: 'Fréquence faible', unknown: 'Fréquence indisponible', details: 'Valeurs et source de fréquence',
@@ -88,7 +92,7 @@ export const notebookMessages = {
     approximateSpeed: 'Ancienne voix inconnue : vitesse approximative basée sur la voix féminine par défaut.',
     regenerateSpeech: 'Régénérer l’audio',
     batchProgress: 'Tâches du lot', cardsCreated: 'Cartes créées', audioProgress: 'Audio terminé', stopAudio: 'Arrêter les audios restants', audioCancelled: 'Génération restante arrêtée ; cartes et audios terminés conservés',
-    pageSize: 'Mots par page', previousPage: 'Page précédente', nextPage: 'Page suivante',
+    pageSize: 'Notes par page', previousPage: 'Page précédente', nextPage: 'Page suivante',
     exampleSense: 'Sens des exemples', exampleSenseUnspecified: 'Sens non précisé', exampleSenseRequired: 'Choisissez un sens pour les exemples ajoutés ou modifiés.',
     summary: 'Résumé du mot', fallback: 'Résumé en lecture seule conservé à l’ajout', original: 'Texte du dictionnaire', notes: 'Notes personnelles', playExample: 'Écouter l’exemple', exampleSpeechLimit: 'La lecture accepte au plus 200 caractères normalisés ; l’exemple complet peut être enregistré.', exampleSpeechControl: 'L’exemple contient des caractères de contrôle non pris en charge.', exampleFr: 'Exemple en français', exampleZh: 'Traduction chinoise de l’exemple', exampleUser: 'Exemple personnel', exampleLimit: 'Chaque champ d’exemple est limité à 20 000 caractères.',
     pronunciation: 'Prononciation', grammar: 'Grammaire', translation: 'Traduction chinoise', missing: 'Non fourni', moreExamples: 'Autres exemples', addExample: 'Ajouter un exemple', removeExample: 'Supprimer l’exemple',
