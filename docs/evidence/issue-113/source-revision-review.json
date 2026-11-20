@@ -1,0 +1,467 @@
+{
+  "kind": "separate_independent_fixed_revision_comparison",
+  "reviewer": "Independent semantic and selected-rights reviewer for issue #113; separate from author and parent integrator",
+  "independence": true,
+  "reviewed_author_commit": "e26d8b4c67ffcc53b4dc3ed62dbe9f7189022451",
+  "platform": "Windows / PowerShell 7.6.9 / CPython 3.14.10 via uv",
+  "method": "First-party API queried by fixed revision IDs in seven batches of seven; complete wikitext and all recorded metadata compared with author raw files.",
+  "sources": [
+    {
+      "title": "chinois",
+      "pageid": 218,
+      "revid": 39818457,
+      "timestamp": "2026-08-20T07:37:58Z",
+      "last_editor": "Richaringan",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "nommer",
+      "pageid": 428,
+      "revid": 39572018,
+      "timestamp": "2026-06-07T16:45:45Z",
+      "last_editor": "François GOGLINS",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "troisième",
+      "pageid": 878,
+      "revid": 39628814,
+      "timestamp": "2026-06-28T11:27:31Z",
+      "last_editor": "Enkeli28",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "trois",
+      "pageid": 879,
+      "revid": 40003470,
+      "timestamp": "2026-11-11T10:52:53Z",
+      "last_editor": "Tokoss78",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "larme",
+      "pageid": 5053,
+      "revid": 40003388,
+      "timestamp": "2026-11-11T09:53:31Z",
+      "last_editor": "Dhegiha",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "sein",
+      "pageid": 5329,
+      "revid": 39961952,
+      "timestamp": "2026-10-28T14:21:28Z",
+      "last_editor": "Basnormand",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "obéir",
+      "pageid": 8393,
+      "revid": 39938121,
+      "timestamp": "2026-10-16T15:55:43Z",
+      "last_editor": "KaseNoceda",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "sage",
+      "pageid": 8488,
+      "revid": 40047356,
+      "timestamp": "2026-11-20T00:14:42Z",
+      "last_editor": "Olivier Hammam",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "objet",
+      "pageid": 9198,
+      "revid": 39803556,
+      "timestamp": "2026-08-14T20:12:03Z",
+      "last_editor": "Enkeli28",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "rat",
+      "pageid": 9290,
+      "revid": 40039545,
+      "timestamp": "2026-11-17T09:00:17Z",
+      "last_editor": "Aoulassa Nadine",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "conscience",
+      "pageid": 9608,
+      "revid": 39804877,
+      "timestamp": "2026-08-15T09:22:39Z",
+      "last_editor": "Harmonide",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "nourriture",
+      "pageid": 9684,
+      "revid": 40039550,
+      "timestamp": "2026-11-17T09:03:47Z",
+      "last_editor": "Aoulassa Nadine",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "cri",
+      "pageid": 9720,
+      "revid": 39807254,
+      "timestamp": "2026-08-16T04:28:01Z",
+      "last_editor": "Serpicozaure",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "rechercher",
+      "pageid": 11007,
+      "revid": 39753024,
+      "timestamp": "2026-08-02T19:05:01Z",
+      "last_editor": "WikiLucas00",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "demi",
+      "pageid": 11333,
+      "revid": 39890664,
+      "timestamp": "2026-09-22T12:29:29Z",
+      "last_editor": "Pamputt",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "siècle",
+      "pageid": 12066,
+      "revid": 39628677,
+      "timestamp": "2026-06-28T10:16:22Z",
+      "last_editor": "Enkeli28",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "présence",
+      "pageid": 12403,
+      "revid": 39800082,
+      "timestamp": "2026-08-13T08:27:47Z",
+      "last_editor": "Diligent",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "pluie",
+      "pageid": 13641,
+      "revid": 39953765,
+      "timestamp": "2026-10-23T07:30:43Z",
+      "last_editor": "Cdang",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "maudit",
+      "pageid": 17519,
+      "revid": 39963702,
+      "timestamp": "2026-10-28T23:18:09Z",
+      "last_editor": "Harmonide",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "paquet",
+      "pageid": 32792,
+      "revid": 39874654,
+      "timestamp": "2026-09-13T16:23:50Z",
+      "last_editor": "Justinetto",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "vidéo",
+      "pageid": 34761,
+      "revid": 39774254,
+      "timestamp": "2026-08-03T14:08:14Z",
+      "last_editor": "WikiLucas00",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "finalement",
+      "pageid": 37268,
+      "revid": 39857604,
+      "timestamp": "2026-09-04T21:49:12Z",
+      "last_editor": "Harmonide",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "parfaitement",
+      "pageid": 37597,
+      "revid": 39771465,
+      "timestamp": "2026-08-03T10:43:43Z",
+      "last_editor": "WikiLucas00",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "sort",
+      "pageid": 87068,
+      "revid": 40041861,
+      "timestamp": "2026-11-18T00:06:36Z",
+      "last_editor": "JackBot",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "presse",
+      "pageid": 104439,
+      "revid": 39789700,
+      "timestamp": "2026-08-09T07:37:50Z",
+      "last_editor": "Jochenknabben",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "principal",
+      "pageid": 111309,
+      "revid": 39841004,
+      "timestamp": "2026-08-30T16:11:32Z",
+      "last_editor": "Enkeli28",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "plat",
+      "pageid": 114946,
+      "revid": 40036627,
+      "timestamp": "2026-11-16T06:33:27Z",
+      "last_editor": "Aoulassa Nadine",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "voyager",
+      "pageid": 116984,
+      "revid": 39803535,
+      "timestamp": "2026-08-14T20:06:53Z",
+      "last_editor": "Enkeli28",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "passage",
+      "pageid": 119756,
+      "revid": 39864919,
+      "timestamp": "2026-09-07T18:18:07Z",
+      "last_editor": "Sayoxime",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "direction",
+      "pageid": 120061,
+      "revid": 39806638,
+      "timestamp": "2026-08-15T20:54:30Z",
+      "last_editor": "Cdang",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "unique",
+      "pageid": 120384,
+      "revid": 39771215,
+      "timestamp": "2026-08-03T10:37:29Z",
+      "last_editor": "WikiLucas00",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "suspect",
+      "pageid": 121790,
+      "revid": 39868456,
+      "timestamp": "2026-09-09T14:54:11Z",
+      "last_editor": "Crulder",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "nombreux",
+      "pageid": 141393,
+      "revid": 39772962,
+      "timestamp": "2026-08-03T13:37:27Z",
+      "last_editor": "WikiLucas00",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "désir",
+      "pageid": 157514,
+      "revid": 39921902,
+      "timestamp": "2026-10-07T08:21:30Z",
+      "last_editor": "~2026-39094-25",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "toi",
+      "pageid": 161139,
+      "revid": 39298856,
+      "timestamp": "2026-02-11T22:47:47Z",
+      "last_editor": "Unsui",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "celui-ci",
+      "pageid": 161908,
+      "revid": 39771178,
+      "timestamp": "2026-08-03T10:36:37Z",
+      "last_editor": "WikiLucas00",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "guérir",
+      "pageid": 163302,
+      "revid": 39770380,
+      "timestamp": "2026-08-03T10:14:48Z",
+      "last_editor": "WikiLucas00",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "même",
+      "pageid": 167805,
+      "revid": 39991560,
+      "timestamp": "2026-11-06T22:22:27Z",
+      "last_editor": "Fofofe",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "menteur",
+      "pageid": 167815,
+      "revid": 39792621,
+      "timestamp": "2026-08-10T06:49:26Z",
+      "last_editor": "Tokoss78",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "mets",
+      "pageid": 168013,
+      "revid": 39742708,
+      "timestamp": "2026-08-02T02:03:46Z",
+      "last_editor": "WikiLucas00",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "mordre",
+      "pageid": 168504,
+      "revid": 40015209,
+      "timestamp": "2026-11-14T17:26:05Z",
+      "last_editor": "Justinetto",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "ombre",
+      "pageid": 169546,
+      "revid": 40010504,
+      "timestamp": "2026-11-13T22:22:47Z",
+      "last_editor": "Sik666",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "procès",
+      "pageid": 172818,
+      "revid": 39838881,
+      "timestamp": "2026-08-29T17:37:23Z",
+      "last_editor": "The.shahab",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "valeur",
+      "pageid": 173115,
+      "revid": 39958809,
+      "timestamp": "2026-10-26T20:15:12Z",
+      "last_editor": "Tokoss78",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "saluer",
+      "pageid": 175729,
+      "revid": 40047749,
+      "timestamp": "2026-11-20T09:07:43Z",
+      "last_editor": "The.shahab",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "invité",
+      "pageid": 193646,
+      "revid": 39838293,
+      "timestamp": "2026-08-29T12:57:50Z",
+      "last_editor": "Jochenknabben",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "Mlle",
+      "pageid": 236832,
+      "revid": 39033727,
+      "timestamp": "2025-11-04T21:18:07Z",
+      "last_editor": "Àncilu bot",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "toi-même",
+      "pageid": 363274,
+      "revid": 34323933,
+      "timestamp": "2024-04-25T10:08:25Z",
+      "last_editor": "LeptiBot",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    },
+    {
+      "title": "mademoiselle",
+      "pageid": 1477055,
+      "revid": 39790877,
+      "timestamp": "2026-08-09T15:16:46Z",
+      "last_editor": "Justinetto",
+      "fixed_revision_refetched_and_raw_equal": true,
+      "status": 200
+    }
+  ],
+  "raw_refetches_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-review-113\\target\\issue-113-review",
+  "contributor_check": {
+    "sources": 49,
+    "field_bindings": 200,
+    "usage": 50,
+    "api_raw_revision_and_supporting_spans": "passed",
+    "contributors": "all retained names exactly match paginated API; anonymous contributors credited by full history"
+  },
+  "supporting_evidence_check": {
+    "lexique_exact_lowercase_noun_key": "matched full original TSV row",
+    "lexique_source": "C:\\Users\\inthe\\IdeaProjects\\lexique\\target\\grammar-classification\\native-resources-20261119-r1\\frequency\\Lexique383.tsv.gz",
+    "line_1_based": 83159,
+    "ipa_basis": "madmwazEl",
+    "contributors_pagination_terminal": true,
+    "daf8_original_basis": "matches established independently reviewed issue-99 record; not a live statute retrieval"
+  }
+}

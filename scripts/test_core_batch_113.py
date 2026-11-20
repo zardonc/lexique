@@ -8,6 +8,13 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 EVIDENCE = ROOT / "docs/evidence/issue-113"
 LANGUAGES = {"french_definition": "fr", "ipa": "und", "english": "en", "chinese": "zh"}
+REPLACEMENTS = {
+    (1615, "chinese"): "鼠；吻部尖、腿短、尾巴长，会啃食谷粒、秸秆等的啮齿动物。",
+    (1627, "french_definition"): "Qui représente la moitié d’une chose divisée ou divisible en deux parties égales. Devant le nom, reste invariable et se lie au nom par un trait d’union ; immédiatement après le nom, s’accorde généralement en genre, sans accord en nombre.",
+    (1627, "english"): "Half: representing one of two equal parts of a thing. Before the noun it is invariable and joined to the noun by a hyphen; immediately after the noun it generally agrees in gender, but not in number.",
+    (1627, "chinese"): "一半的；表示事物分成或可分成的两个相等部分中的一个。在名词前不变形，用连字符与名词连接；紧接名词后通常按性配合，但不按数配合。",
+    (1644, "chinese"): "咬；用牙齿夹紧某物，咬入或咬破其表面。",
+}
 
 
 def read(name):
@@ -35,7 +42,12 @@ class Batch113Tests(unittest.TestCase):
         reviewed = admission["independent_reviewer"] is not None
         status = "passed" if reviewed else "pending"
         if reviewed:
-            self.assertEqual(content(groups), content(read("review-candidates.json")))
+            expected = read("review-candidates.json")
+            for group in expected:
+                for name, field in group["senses"][0]["fields"].items():
+                    if (group["frozen_row"], name) in REPLACEMENTS:
+                        field["text"] = REPLACEMENTS[group["frozen_row"], name]
+            self.assertEqual(content(groups), content(expected))
         self.assertEqual(admission["scope_denominator_groups"], 4087)
         self.assertEqual((admission["proposed_groups"], admission["proposed_fields"]), (50, 200))
         self.assertEqual(admission["independently_accepted_new_fields"], 200 if reviewed else 0)
@@ -106,11 +118,16 @@ class Batch113Tests(unittest.TestCase):
                         self.assertEqual(lines[binding["line_1_based"] - 1], binding["reviewed_excerpt"])
         self.assertEqual(read("reuse.json")["reused_groups"], [])
 
-    def test_author_rights_and_construction_evidence_is_not_independent_admission(self):
+    def test_selected_rights_and_construction_evidence_remains_separate_from_final_gates(self):
         rights = read("rights.json")
-        self.assertEqual(rights["status"], "author_proposal_pending_independent_selected_span_review")
-        self.assertFalse(rights["independent_acceptance"])
-        self.assertIsNone(rights["reviewer"])
+        admission = read("admission.json")
+        reviewed = admission["independent_reviewer"] is not None
+        self.assertEqual(rights["status"], "passed_at_selected_text_boundary" if reviewed
+                         else "author_proposal_pending_independent_selected_span_review")
+        self.assertEqual(rights["independent_acceptance"], reviewed)
+        self.assertEqual(rights["reviewer"], admission["independent_reviewer"])
+        self.assertEqual(admission["native_checks"], "integration_owned_not_run")
+        self.assertEqual(admission["conversion_and_packaging"], "integration_owned_not_run")
         self.assertEqual(rights["adaptation_license"], "CC-BY-SA-4.0")
         self.assertTrue((EVIDENCE / rights["complete_legal_text"]).resolve().is_file())
         self.assertTrue(rights["redistribution_obligations"])
@@ -134,6 +151,39 @@ class Batch113Tests(unittest.TestCase):
                         if item["frozen_row"] == 1610)
         self.assertEqual(relation["alias_admission"], "not_admitted")
         self.assertEqual(len(relation["corroboration"]), 2)
+
+    def test_exact_independent_acceptance_preserves_candidates_and_corrections(self):
+        groups = {g["frozen_row"]: g for g in read("groups.json")}
+        for (row, name), expected_text in REPLACEMENTS.items():
+            self.assertEqual(groups[row]["senses"][0]["fields"][name]["text"], expected_text)
+        review = read("field-review.json")
+        self.assertEqual(review["kind"], "separate_independent_field_review")
+        self.assertIs(review["independence"], True)
+        self.assertEqual(review["reviewed_author_commit"],
+                         "e26d8b4c67ffcc53b4dc3ed62dbe9f7189022451")
+        candidates = {(g["frozen_row"], name): f["text"]
+                      for g in read("review-candidates.json")
+                      for name, f in g["senses"][0]["fields"].items()}
+        changed = set()
+        for field in review["fields"]:
+            key = field["frozen_row"], field["field"]
+            self.assertEqual(field["proposed_text"], candidates[key])
+            self.assertEqual(field["accepted_text"], REPLACEMENTS.get(key, candidates[key]))
+            self.assertTrue(field["review_reason"])
+            self.assertTrue(field["selected_text_rights_reason"])
+            if field["accepted_text"] != field["proposed_text"]:
+                changed.add(key)
+                self.assertTrue(field["replacement_reason"])
+        self.assertEqual(changed, set(REPLACEMENTS))
+        self.assertEqual(review["unresolved_fields"], [])
+        for relation in review["spelling_relations"]:
+            self.assertEqual(relation["independent_review"], "passed_for_source_binding")
+            self.assertEqual(relation["alias_admission"], "not_admitted")
+        demi = [f for f in review["fields"] if f["frozen_row"] == 1627]
+        for field in demi:
+            if field["field"] != "ipa":
+                self.assertTrue({102, 103}.issubset(
+                    {b["line_1_based"] for b in field["supporting_sources"]}))
 
 
 if __name__ == "__main__":
