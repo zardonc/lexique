@@ -173,11 +173,11 @@ class Batch118Tests(unittest.TestCase):
                     self.assertEqual(support["revid"], sources[support["source_id"]]["revid"])
                     self.assertEqual(support["independent_review"], "passed_at_selected_text_boundary")
         admission = read("admission.json")
-        self.assertEqual((admission["missing_authored_fields"], admission["missing_admitted_fields"]), (0, 200))
+        self.assertEqual((admission["missing_authored_fields"], admission["missing_admitted_fields"]), (0, 0))
         self.assertEqual(admission["approved_annotations"], [])
         self.assertEqual(admission["runtime_aliases_added"], [])
         self.assertEqual(admission["independently_accepted_new_groups"], 50)
-        self.assertEqual((admission["admitted_groups"], admission["admitted_fields"]), (0, 0))
+        self.assertEqual((admission["admitted_groups"], admission["admitted_fields"]), (50, 200))
         self.assertEqual(admission["pending_independent_review_rows"], [])
         coverage = read("coverage.json")
         self.assertEqual((coverage["scope_denominator_groups"], coverage["scope_denominator_headwords"]),

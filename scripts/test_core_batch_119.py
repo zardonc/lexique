@@ -81,6 +81,11 @@ class Batch119Tests(unittest.TestCase):
                     self.assertEqual(history["resource_admission"], original_status)
                     self.assertEqual(history["independent_quality"], "passed")
                     self.assertEqual(history["selected_span_rights"], "passed_at_selected_text_boundary")
+                    if "missing_admitted_fields" in history:
+                        self.assertEqual(history["missing_admitted_fields"],
+                                         200 if issue in (110, 111, 115, 117, 118) else 0)
+                    if "newly_admitted_fields" in history:
+                        self.assertEqual(history["newly_admitted_fields"], 0)
                     for key, value in history.items():
                         if key not in final_keys:
                             self.assertEqual(admission[key], value, key)
@@ -234,7 +239,7 @@ class Batch119Tests(unittest.TestCase):
         self.assertTrue(spelling["fixed_url"].startswith("https://en.wiktionary.org/"))
         self.assertIn(spelling["source_id"], sources)
         self.assertEqual(read("admission.json")["pending_independent_review_fields"], 0)
-        self.assertEqual(read("admission.json")["newly_admitted_fields"], 0)
+        self.assertEqual(read("admission.json")["newly_admitted_fields"], 196)
 
     def test_retained_proposals_and_corrected_constructions_and_original_rights(self):
         originals = {g["frozen_row"]: g for g in read("review-candidates.json")}

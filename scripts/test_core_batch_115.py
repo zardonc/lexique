@@ -124,12 +124,12 @@ class Batch115Tests(unittest.TestCase):
         self.assertEqual([item["title"] for item in rights["unselected_import_boundaries"]], ["titre"])
         self.assertEqual(rights["unselected_import_boundaries"][0]["status"], "excluded_from_selected_fields")
         admission = read("admission.json")
-        self.assertEqual((admission["missing_authored_fields"], admission["missing_admitted_fields"]), (0, 200))
+        self.assertEqual((admission["missing_authored_fields"], admission["missing_admitted_fields"]), (0, 0))
         self.assertEqual(admission["approved_annotations"], [])
         self.assertEqual(admission["runtime_aliases_added"], [])
         self.assertEqual(admission["independently_accepted_new_groups"], 50)
         self.assertEqual((admission["canonical_newly_admitted_groups"],
-                          admission["canonical_newly_admitted_fields"]), (0, 0))
+                          admission["canonical_newly_admitted_fields"]), (50, 200))
         groups = {group["frozen_row"]: group for group in read("groups.json")}
         relations = {item["frozen_row"]: item for item in read("field-review.json")["spelling_relations"]}
         sources = {item["id"]: item for item in read("sources.json")["sources"]}

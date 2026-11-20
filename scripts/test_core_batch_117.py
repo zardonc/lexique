@@ -115,7 +115,7 @@ class Batch117Tests(unittest.TestCase):
                         self.assertEqual(lines[binding["line_1_based"] - 1], binding["reviewed_excerpt"])
         self.assertEqual(read("reuse.json")["reused_groups"], [])
 
-    def test_selected_rights_and_exact_flexions_pass_without_canonical_admission(self):
+    def test_selected_rights_and_exact_flexions_preserve_independent_history_and_final_admission(self):
         rights = read("rights.json")
         self.assertEqual(rights["status"], "selected_span_rights_review_passed_packaging_pending")
         self.assertTrue(rights["independent_acceptance"])
@@ -125,7 +125,7 @@ class Batch117Tests(unittest.TestCase):
         self.assertTrue(rights["authority_captures"])
         self.assertTrue(rights["redistribution_obligations"])
         admission = read("admission.json")
-        self.assertEqual((admission["missing_authored_fields"], admission["missing_admitted_fields"]), (0, 200))
+        self.assertEqual((admission["missing_authored_fields"], admission["missing_admitted_fields"]), (0, 0))
         self.assertEqual(admission["approved_annotations"], [])
         self.assertEqual(admission["runtime_aliases_added"], [])
         groups = {item["frozen_row"]: item for item in read("groups.json")}

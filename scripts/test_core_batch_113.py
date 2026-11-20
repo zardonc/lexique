@@ -126,8 +126,9 @@ class Batch113Tests(unittest.TestCase):
                          else "author_proposal_pending_independent_selected_span_review")
         self.assertEqual(rights["independent_acceptance"], reviewed)
         self.assertEqual(rights["reviewer"], admission["independent_reviewer"])
-        self.assertEqual(admission["native_checks"], "integration_owned_not_run")
-        self.assertEqual(admission["conversion_and_packaging"], "integration_owned_not_run")
+        self.assertEqual(admission["native_checks"],
+                         "passed_windows_11_x64_exact_batch_lookup_trusted_save_reopen_and_upgrade")
+        self.assertEqual(admission["conversion_and_packaging"], "passed_core_119_v1_and_verified_portable_package")
         self.assertEqual(rights["adaptation_license"], "CC-BY-SA-4.0")
         self.assertTrue((EVIDENCE / rights["complete_legal_text"]).resolve().is_file())
         self.assertTrue(rights["redistribution_obligations"])
