@@ -27,6 +27,7 @@ fn saved_word(connection: &mut Connection, operation: &str, headword: &str) -> V
             example_source: None,
             example_sense: Some(0),
             more_examples: vec![Example {
+                sense: None,
                 fr: "Je vais à l'école.".into(),
                 zh: "我去学校。".into(),
                 source: None,

@@ -387,10 +387,13 @@ struct PortableExample<'a>(&'a crate::Example);
 
 impl Serialize for PortableExample<'_> {
     fn serialize<S: Serializer>(&self, serializer: S) -> Result<S::Ok, S::Error> {
-        let mut map = serializer.serialize_map(Some(3))?;
+        let mut map = serializer.serialize_map(Some(3 + usize::from(self.0.sense.is_some())))?;
         map.serialize_entry("fr", &self.0.fr)?;
         map.serialize_entry("zh", &self.0.zh)?;
         map.serialize_entry("source", &self.0.source.as_ref().map(PortableReference))?;
+        if let Some(sense) = self.0.sense {
+            map.serialize_entry("sense", &sense)?;
+        }
         map.end()
     }
 }

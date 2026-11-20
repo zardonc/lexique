@@ -183,6 +183,7 @@ pub(super) fn save(connection: &mut Connection, notes: &str) -> storage::SaveRes
             example_source: None,
             example_sense: Some(0),
             more_examples: vec![storage::Example {
+                sense: None,
                 fr: "Je vais à l'école.".into(),
                 zh: "我去学校。".into(),
                 source: None,

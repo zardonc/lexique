@@ -17,6 +17,7 @@ fn saved_word(connection: &mut Connection, operation: &str, headword: &str) -> i
             example_source: None,
             example_sense: Some(0),
             more_examples: vec![Example {
+                sense: None,
                 fr: "Une autre école.".into(),
                 zh: String::new(),
                 source: None,
