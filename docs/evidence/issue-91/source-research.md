@@ -57,6 +57,7 @@ integration's `target/implement-90-99/worker-audit/author-91/`.
 | 547–550 `malade`, `parent` | Separate adjective and person-noun uses. `parent/NOM` selects family relative, not the father/mother use; adjective selects family relatedness. |
 
 All 50 groups have accepted four-field content, with no annotation exception.
-Native lookup/save/reopen, offline and saved-state preservation verification is
-pending at integration; see the parent [aggregate evidence](../issue-90-99/README.md).
+Native lookup/save/reopen, saved-state preservation and offline verification
+results and remaining gates are recorded in the parent
+[aggregate verification](../issue-90-99/README.md).
 Learner acceptance and wider release gates remain open.
