@@ -1,0 +1,994 @@
+{
+  "status": "verified",
+  "date": "2026-11-19",
+  "parent_spec": "https://github.com/zardonc/lexique/issues/78",
+  "pr": "https://github.com/zardonc/lexique/pull/180",
+  "review_base": "aae5273af846e57668a8d267fa6a6566c4fd6e91",
+  "reviewed_source_head": "090b10c2384a68ebb9a5ea0cb9346a7c1765dafa",
+  "build_head": "090b10c2384a68ebb9a5ea0cb9346a7c1765dafa",
+  "harness_head": "090b10c2384a68ebb9a5ea0cb9346a7c1765dafa",
+  "totals": {
+    "denominator_groups": 4087,
+    "denominator_headwords": 3773,
+    "new_groups": 492,
+    "new_fields": 1968,
+    "admitted_groups": 1436,
+    "fields": 5744,
+    "everyday_groups": 1434,
+    "specialist_senses": 2,
+    "annotations": 15,
+    "missing_annotation_fields": 60,
+    "unaccepted_groups": 2651,
+    "everyday_incomplete_groups": 2653
+  },
+  "batches": [
+    {
+      "issue": 100,
+      "groups": 50,
+      "fields": 200,
+      "annotations": 0,
+      "archive": {
+        "issue": 100,
+        "original_worktree": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100",
+        "archive": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-100-final",
+        "head": "8cd8d85ccf6862fcb02ca9b4e6f565c6e0898ba4",
+        "tracked_status": "",
+        "files": 253,
+        "bytes": 23007057,
+        "byte_preservation": "passed"
+      }
+    },
+    {
+      "issue": 101,
+      "groups": 49,
+      "fields": 196,
+      "annotations": 1,
+      "archive": {
+        "issue": 101,
+        "original_worktree": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-101",
+        "archive": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-101-final",
+        "head": "ae37206be06fb064a6f3cc88580b32fb13e472a1",
+        "tracked_status": "",
+        "files": 136,
+        "bytes": 8926768,
+        "byte_preservation": "passed"
+      }
+    },
+    {
+      "issue": 102,
+      "groups": 49,
+      "fields": 196,
+      "annotations": 1,
+      "archive": {
+        "issue": 102,
+        "original_worktree": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-102",
+        "archive": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-102-final",
+        "head": "2f3ea27d94c4831ff2cac7177f7afb6029d1f27a",
+        "tracked_status": "",
+        "files": 250,
+        "bytes": 12720559,
+        "byte_preservation": "passed"
+      }
+    },
+    {
+      "issue": 103,
+      "groups": 50,
+      "fields": 200,
+      "annotations": 0,
+      "archive": {
+        "issue": 103,
+        "original_worktree": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103",
+        "archive": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-103-final",
+        "head": "f8571f8c5b4e55adba6e11c1ce4a47c25cf402a1",
+        "tracked_status": "",
+        "files": 303,
+        "bytes": 19458148,
+        "byte_preservation": "passed"
+      }
+    },
+    {
+      "issue": 104,
+      "groups": 50,
+      "fields": 200,
+      "annotations": 0,
+      "archive": {
+        "issue": 104,
+        "original_worktree": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-104",
+        "archive": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-104-final",
+        "head": "10a0d2b388569753bbbd0a993c9f0c2e4c33dc91",
+        "tracked_status": "",
+        "files": 200,
+        "bytes": 12181520,
+        "byte_preservation": "passed"
+      }
+    },
+    {
+      "issue": 105,
+      "groups": 46,
+      "fields": 184,
+      "annotations": 4,
+      "archive": {
+        "issue": 105,
+        "original_worktree": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105",
+        "archive": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-105-final",
+        "head": "ca3a3869d39b5bf388bf6daddda2a12d28342914",
+        "tracked_status": "",
+        "files": 127,
+        "bytes": 6660989,
+        "byte_preservation": "passed"
+      }
+    },
+    {
+      "issue": 106,
+      "groups": 49,
+      "fields": 196,
+      "annotations": 1,
+      "archive": {
+        "issue": 106,
+        "original_worktree": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-106",
+        "archive": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-106-final",
+        "head": "fafc3e6e842c2203986d7b7cc5121a7de0a7fd4f",
+        "tracked_status": "",
+        "files": 110,
+        "bytes": 8359099,
+        "byte_preservation": "passed"
+      }
+    },
+    {
+      "issue": 107,
+      "groups": 50,
+      "fields": 200,
+      "annotations": 0,
+      "archive": {
+        "issue": 107,
+        "original_worktree": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107",
+        "archive": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-107-final",
+        "head": "f5a7f8e9789420e18582b068913a212471e9e9f3",
+        "tracked_status": "",
+        "files": 131,
+        "bytes": 8556333,
+        "byte_preservation": "passed"
+      }
+    },
+    {
+      "issue": 108,
+      "groups": 49,
+      "fields": 196,
+      "annotations": 1,
+      "archive": {
+        "issue": 108,
+        "original_worktree": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-108",
+        "archive": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-108-final",
+        "head": "ad6222aac602aecb0387caa3249c822d7dcf99e2",
+        "tracked_status": "",
+        "files": 115,
+        "bytes": 6817882,
+        "byte_preservation": "passed"
+      }
+    },
+    {
+      "issue": 109,
+      "groups": 50,
+      "fields": 200,
+      "annotations": 0,
+      "archive": {
+        "issue": 109,
+        "original_worktree": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-109",
+        "archive": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-109-final",
+        "head": "bd087f494019c5b7ebd4438dfda52574c2fa94b9",
+        "tracked_status": "",
+        "files": 129,
+        "bytes": 8432601,
+        "byte_preservation": "passed"
+      }
+    }
+  ],
+  "annotations": [
+    {
+      "frozen_row": 87,
+      "headword": "quoi",
+      "pos": "ADJ",
+      "admitted_fields": 0,
+      "decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/82",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-18",
+        "decision": "Approved exception to selected-sense and four-field requirements; zero admitted fields, exact frozen identity and 4,087-group denominator retained."
+      }
+    },
+    {
+      "frozen_row": 305,
+      "headword": "dont",
+      "pos": "PRO:int",
+      "admitted_fields": 0,
+      "decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/87",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-18",
+        "decision": "Approved exception to selected-sense and four-field requirements; zero admitted fields, exact frozen identity and 4,087-group denominator retained."
+      }
+    },
+    {
+      "frozen_row": 816,
+      "headword": "t",
+      "pos": "PRO:per",
+      "admitted_fields": 0,
+      "decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/97",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-18",
+        "decision": "Approved zero-field annotation; frozen identity, frequencies and denominator retained; four missing fields counted separately."
+      }
+    },
+    {
+      "frozen_row": 849,
+      "headword": "c",
+      "pos": "PRO:dem",
+      "admitted_fields": 0,
+      "decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/97",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-18",
+        "decision": "Approved zero-field annotation; frozen identity, frequencies and denominator retained; four missing fields counted separately."
+      }
+    },
+    {
+      "frozen_row": 859,
+      "headword": "l",
+      "pos": "ART:def",
+      "admitted_fields": 0,
+      "decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/98",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-18",
+        "decision": "Approved zero-field annotation; frozen identity, frequencies and denominator retained; four missing fields counted separately."
+      }
+    },
+    {
+      "frozen_row": 860,
+      "headword": "l",
+      "pos": "PRO:per",
+      "admitted_fields": 0,
+      "decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/98",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-18",
+        "decision": "Approved zero-field annotation; frozen identity, frequencies and denominator retained; four missing fields counted separately."
+      }
+    },
+    {
+      "frozen_row": 934,
+      "headword": "i",
+      "pos": "ADJ:num",
+      "admitted_fields": 0,
+      "decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/99",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-18",
+        "decision": "Approved zero-field annotation; frozen identity, frequencies and denominator retained; four missing fields counted separately."
+      }
+    },
+    {
+      "frozen_row": 1005,
+      "headword": "m",
+      "pos": "PRO:per",
+      "admitted_fields": 0,
+      "decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/101",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-19",
+        "decision": "Approved zero-field annotation; frozen identity, frequencies and denominator retained; four missing fields counted separately."
+      }
+    },
+    {
+      "frozen_row": 1051,
+      "headword": "s",
+      "pos": "PRO:per",
+      "admitted_fields": 0,
+      "decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/102",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-19",
+        "decision": "Approved zero-field annotation; frozen identity, frequencies and denominator retained; four missing fields counted separately."
+      }
+    },
+    {
+      "frozen_row": 1208,
+      "headword": "quiconque",
+      "pos": "PRO:int",
+      "admitted_fields": 0,
+      "decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/105",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-19",
+        "decision": "Approved zero-field annotation; frozen identity, frequencies and denominator retained; four missing fields counted separately."
+      }
+    },
+    {
+      "frozen_row": 1218,
+      "headword": "qu",
+      "pos": "CON",
+      "admitted_fields": 0,
+      "decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/105",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-19",
+        "decision": "Approved zero-field annotation; frozen identity, frequencies and denominator retained; four missing fields counted separately."
+      }
+    },
+    {
+      "frozen_row": 1219,
+      "headword": "qu",
+      "pos": "PRO:int",
+      "admitted_fields": 0,
+      "decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/105",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-19",
+        "decision": "Approved zero-field annotation; frozen identity, frequencies and denominator retained; four missing fields counted separately."
+      }
+    },
+    {
+      "frozen_row": 1220,
+      "headword": "qu",
+      "pos": "PRO:rel",
+      "admitted_fields": 0,
+      "decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/105",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-19",
+        "decision": "Approved zero-field annotation; frozen identity, frequencies and denominator retained; four missing fields counted separately."
+      }
+    },
+    {
+      "frozen_row": 1300,
+      "headword": "d",
+      "pos": "PRE",
+      "admitted_fields": 0,
+      "decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/106",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-19",
+        "decision": "Approved zero-field annotation; frozen identity, frequencies and denominator retained; four missing fields counted separately."
+      }
+    },
+    {
+      "frozen_row": 1386,
+      "headword": "nulle",
+      "pos": "PRO:ind",
+      "admitted_fields": 0,
+      "decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/108",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-19",
+        "decision": "Approved zero-field annotation; frozen identity, frequencies and denominator retained; four missing fields counted separately."
+      }
+    }
+  ],
+  "preservation": {
+    "status": "passed",
+    "reconstruction": "byte-identical",
+    "preserved_payloads": 944,
+    "preserved_aliases": 11,
+    "admission": {
+      "independent_field_review": "passed",
+      "produced_resource_self_check": "passed",
+      "everyday_sense_review": "incomplete",
+      "selected_scope_acceptance": "passed",
+      "accepted_groups": 1436,
+      "approved_specialist_exception_groups": 2,
+      "remaining_unaccepted_groups": 2651,
+      "annotation_exception_groups": 15,
+      "selected_source_rights_and_materials": "passed",
+      "complete_groups": 1434,
+      "complete_senses": 1436,
+      "complete_fields": 5744,
+      "remaining_groups": 2653
+    },
+    "sqlite_bytes": 6721536,
+    "sqlite_sha256": "75548a5c0cc9ec2e7007237f9c5cfaaf357d83ffef47706273cff9633b6c8c19"
+  },
+  "package": {
+    "archive": "target\\implement-100-109\\final-package-v3\\Lexique-0.1.0-windows-x64-portable.zip",
+    "bytes": 38547297,
+    "sha256": "78abfbf31a6fbd193086f60aea6ce4747611ee2d6e1e4255b5c537e84e413aab",
+    "verified_files": 183
+  },
+  "native": {
+    "status": "passed",
+    "platform": "Windows x64",
+    "build_sha": "090b10c2384a68ebb9a5ea0cb9346a7c1765dafa",
+    "harness_sha": "090b10c2384a68ebb9a5ea0cb9346a7c1765dafa",
+    "binary_sha256": "2135708520e81b78b2327af431b29d8d9b174c79fc75e1accc03e6d5ccbb4f59",
+    "native_runs": 11,
+    "runs": [
+      {
+        "destination": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\issue-100\\native-admitted-v3",
+        "scenario": "batch",
+        "checks": [
+          {
+            "check": "Batch #100: 50 admitted groups / 200 fields match audited content; 0 approved annotation exceptions; 0 reviewed spelling queries; 42 headwords saved and reopened with unchanged provenance and learning state",
+            "status": "passed"
+          }
+        ],
+        "status": "passed"
+      },
+      {
+        "destination": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\issue-101\\native-admitted-v3",
+        "scenario": "batch",
+        "checks": [
+          {
+            "check": "Batch #101: 49 admitted groups / 196 fields match audited content; 1 approved annotation exceptions; 0 reviewed spelling queries; 42 headwords saved and reopened with unchanged provenance and learning state",
+            "status": "passed"
+          }
+        ],
+        "status": "passed"
+      },
+      {
+        "destination": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\issue-102\\native-admitted-v3",
+        "scenario": "batch",
+        "checks": [
+          {
+            "check": "Batch #102: 49 admitted groups / 196 fields match audited content; 1 approved annotation exceptions; 0 reviewed spelling queries; 44 headwords saved and reopened with unchanged provenance and learning state",
+            "status": "passed"
+          }
+        ],
+        "status": "passed"
+      },
+      {
+        "destination": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\issue-103\\native-admitted-v3",
+        "scenario": "batch",
+        "checks": [
+          {
+            "check": "Batch #103: 50 admitted groups / 200 fields match audited content; 0 approved annotation exceptions; 0 reviewed spelling queries; 47 headwords saved and reopened with unchanged provenance and learning state",
+            "status": "passed"
+          }
+        ],
+        "status": "passed"
+      },
+      {
+        "destination": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\issue-104\\native-admitted-v3",
+        "scenario": "batch",
+        "checks": [
+          {
+            "check": "Batch #104: 50 admitted groups / 200 fields match audited content; 0 approved annotation exceptions; 0 reviewed spelling queries; 46 headwords saved and reopened with unchanged provenance and learning state",
+            "status": "passed"
+          }
+        ],
+        "status": "passed"
+      },
+      {
+        "destination": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\issue-105\\native-admitted-v3",
+        "scenario": "batch",
+        "checks": [
+          {
+            "check": "Batch #105: 46 admitted groups / 184 fields match audited content; 4 approved annotation exceptions; 0 reviewed spelling queries; 40 headwords saved and reopened with unchanged provenance and learning state",
+            "status": "passed"
+          }
+        ],
+        "status": "passed"
+      },
+      {
+        "destination": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\issue-106\\native-admitted-v3",
+        "scenario": "batch",
+        "checks": [
+          {
+            "check": "Batch #106: 49 admitted groups / 196 fields match audited content; 1 approved annotation exceptions; 0 reviewed spelling queries; 43 headwords saved and reopened with unchanged provenance and learning state",
+            "status": "passed"
+          }
+        ],
+        "status": "passed"
+      },
+      {
+        "destination": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\issue-107\\native-admitted-v3",
+        "scenario": "batch",
+        "checks": [
+          {
+            "check": "Batch #107: 50 admitted groups / 200 fields match audited content; 0 approved annotation exceptions; 0 reviewed spelling queries; 47 headwords saved and reopened with unchanged provenance and learning state",
+            "status": "passed"
+          }
+        ],
+        "status": "passed"
+      },
+      {
+        "destination": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\issue-108\\native-admitted-v3",
+        "scenario": "batch",
+        "checks": [
+          {
+            "check": "Batch #108: 49 admitted groups / 196 fields match audited content; 1 approved annotation exceptions; 0 reviewed spelling queries; 45 headwords saved and reopened with unchanged provenance and learning state",
+            "status": "passed"
+          }
+        ],
+        "status": "passed"
+      },
+      {
+        "destination": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\issue-109\\native-admitted-v3",
+        "scenario": "batch",
+        "checks": [
+          {
+            "check": "Batch #109: 50 admitted groups / 200 fields match audited content; 0 approved annotation exceptions; 0 reviewed spelling queries; 46 headwords saved and reopened with unchanged provenance and learning state",
+            "status": "passed"
+          }
+        ],
+        "status": "passed"
+      },
+      {
+        "destination": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\issue-109\\native-upgrade-v2",
+        "scenario": "upgrade",
+        "checks": [
+          {
+            "check": "New resource version is visible while previous digest, progress and audio remain frozen",
+            "status": "passed"
+          }
+        ],
+        "status": "passed"
+      }
+    ]
+  },
+  "tests": {
+    "core": {
+      "passed": 63,
+      "log": "fresh-worker-core-all.log"
+    },
+    "package": {
+      "passed": 16,
+      "log": "final-package-tests.log"
+    },
+    "backend": {
+      "passed": 194,
+      "log": "final-rust-tests.log",
+      "head": "45c9e4ab841c4e92081702b7bf412828868c4e2d",
+      "hard_timeout_seconds": 60
+    },
+    "browser": {
+      "passed": 13,
+      "log": "final-browser-core-v3.log"
+    },
+    "lint_typecheck_build": "passed",
+    "rust_format_locked_precompile": "passed"
+  },
+  "review": {
+    "standards": {
+      "review_axis": "standards",
+      "status": "complete",
+      "checkout": "C:/Users/inthe/IdeaProjects/lexique-spec-100-109",
+      "base_sha": "aae5273af846e57668a8d267fa6a6566c4fd6e91",
+      "reviewed_sha": "090b10c2384a68ebb9a5ea0cb9346a7c1765dafa",
+      "diff_command": "git diff aae5273af846e57668a8d267fa6a6566c4fd6e91...090b10c2384a68ebb9a5ea0cb9346a7c1765dafa",
+      "coverage": "Committed new source packages, shared converter, tests, package and native harness changes since base; content/rights proof joins without repeating source retrievals.",
+      "standards_sources": [
+        "CODING_STANDARDS.md",
+        "AGENTS.md",
+        "DEV-SCOPE.md",
+        "LOCAL-DEV-ENV.md",
+        "docs/architecture.md",
+        "docs/agents/issue-tracker.md",
+        "docs/agents/domain.md",
+        "apps/desktop/eslint.config.js",
+        "apps/desktop/tsconfig.json"
+      ],
+      "rustfmt_configuration": "No custom rustfmt configuration found; no Rust source changes.",
+      "hard_violations": [],
+      "findings": [
+        {
+          "title": "[P3] Consolidate duplicate cohort membership checks",
+          "category": "judgement",
+          "smell": "Duplicated Code",
+          "priority": 3,
+          "blocking": false,
+          "file": "C:/Users/inthe/IdeaProjects/lexique-spec-100-109/scripts/test_core_pilot.py",
+          "start_line": 18,
+          "end_line": 37,
+          "quote": "report = prepare(Path(temporary) / \"prepared\")\\nfor issue in range(100, 110):",
+          "body": "The new test repeats the existing 90–99 test's setup and membership/completeness assertions. Extend the existing cohort loop to 90–109 with one annotation-count table, retaining the reused-pilot assertion; avoid repeated logic and a second full preparation.",
+          "status": "resolved",
+          "observed_at_sha": "ce66dc33d2b0f6d7c9fe70b5c79e95fbb0b8ca16",
+          "resolution_sha": "f0344637027cc5e5d7ffad1fa0c0d1608ee4c9a3",
+          "resolution": "Confirmed committed delta changes only scripts/test_core_pilot.py: one loop now covers issues 90–109; independent annotation counts, exact membership, completeness and reused-pilot assertions remain. Targeted check and all 63 core-family tests passed."
+        }
+      ],
+      "evidence": {
+        "assembly_preservation": "target/implement-100-109/assembly-preservation.json",
+        "compiled_preservation": "target/implement-100-109/compiled-preservation.json",
+        "compiled_verification_current": "target/implement-100-109/compiled-verification-v2.log",
+        "current_app_package_sha": "090b10c2384a68ebb9a5ea0cb9346a7c1765dafa",
+        "current_harness_sha": "090b10c2384a68ebb9a5ea0cb9346a7c1765dafa",
+        "native_execution_status": "passed",
+        "native_execution_artifact": "target/implement-100-109/native-execution-verification.json",
+        "native_runs": 11,
+        "platform": "Windows x64",
+        "package_verification": "target/implement-100-109/final-package-v3.json",
+        "native_execution_check": "target/implement-100-109/native-execution-check-v3.log",
+        "cohort_fix_verification": "target/implement-100-109/fresh-worker-verification.txt",
+        "cohort_fix_test_log": "target/implement-100-109/fresh-worker-core-all.log",
+        "cohort_fix_tests": {
+          "status": "passed",
+          "count": 63,
+          "seconds": 37.989,
+          "tested_sha": "f0344637027cc5e5d7ffad1fa0c0d1608ee4c9a3"
+        },
+        "native_to_review_head_delta": "The v3 app/package and harness match reviewed head 090b10c. Core-family proof remains at f034; only two French coverage strings changed afterward, verified by the v3 frontend and browser checks.",
+        "prior_native_execution": {
+          "artifact": "target/implement-100-109/native-execution-verification-v2.json",
+          "build_sha": "ce66dc33d2b0f6d7c9fe70b5c79e95fbb0b8ca16",
+          "harness_sha": "ce66dc33d2b0f6d7c9fe70b5c79e95fbb0b8ca16",
+          "status": "passed",
+          "native_runs": 11
+        },
+        "locale_delta": {
+          "from_sha": "f0344637027cc5e5d7ffad1fa0c0d1608ee4c9a3",
+          "to_sha": "090b10c2384a68ebb9a5ea0cb9346a7c1765dafa",
+          "files": [
+            "apps/desktop/src/content.ts",
+            "apps/desktop/e2e/core-pilot.spec.ts"
+          ],
+          "change": "French coverage numerator 1,436 becomes 1 436",
+          "standards_status": "passed",
+          "lint": "passed",
+          "typecheck": "passed",
+          "build": "passed",
+          "browser_checks": 13,
+          "browser_status": "passed",
+          "browser_seconds": 10.4,
+          "logs": [
+            "target/implement-100-109/final-lint-v3.log",
+            "target/implement-100-109/final-typecheck-v3.log",
+            "target/implement-100-109/final-build-v3.log",
+            "target/implement-100-109/final-browser-core-v3.log"
+          ]
+        },
+        "binary_sha256": "2135708520e81b78b2327af431b29d8d9b174c79fc75e1accc03e6d5ccbb4f59",
+        "external_requests": 0,
+        "owned_processes_remaining": 0,
+        "package": {
+          "archive": "target/implement-100-109/final-package-v3/Lexique-0.1.0-windows-x64-portable.zip",
+          "bytes": 38547297,
+          "sha256": "78abfbf31a6fbd193086f60aea6ce4747611ee2d6e1e4255b5c537e84e413aab",
+          "verified_files": 183
+        },
+        "core_resource": {
+          "bytes": 6721536,
+          "sha256": "75548a5c0cc9ec2e7007237f9c5cfaaf357d83ffef47706273cff9633b6c8c19",
+          "proof": "target/implement-100-109/final-core-prepare-v3.log"
+        }
+      },
+      "reviewer_checks": {
+        "tests_rerun": false,
+        "source_retrievals_repeated": false,
+        "tracked_files_modified": false,
+        "read_only_source_review": true
+      },
+      "retained_inputs": "target/implement-100-109/review-standards-inputs.json",
+      "limitations": [
+        "Whole-machine offline behavior",
+        "Other platforms",
+        "Human learner acceptance",
+        "Full release readiness"
+      ],
+      "open_findings": [],
+      "counts": {
+        "hard_violations": 0,
+        "judgement_findings": 1,
+        "resolved_judgement_findings": 1,
+        "remaining_findings": 0
+      },
+      "source_standards_status": "passed"
+    },
+    "spec": {
+      "axis": "spec",
+      "status": "passed",
+      "findings": [],
+      "finding_counts": {
+        "missing_or_partial_requirements": 0,
+        "unrequested_scope": 0,
+        "wrong_implementation": 0
+      },
+      "reviewed_checkout": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109",
+      "base_sha": "aae5273af846e57668a8d267fa6a6566c4fd6e91",
+      "review_head": "090b10c2384a68ebb9a5ea0cb9346a7c1765dafa",
+      "diff_command": "git diff aae5273af846e57668a8d267fa6a6566c4fd6e91...090b10c2384a68ebb9a5ea0cb9346a7c1765dafa",
+      "covered_changes": "Committed fixed-base-to-head090 comparison, supplied aggregate and exact v3 execution evidence; only permitted target review artifacts written.",
+      "earlier_integration_sha": "45c9e4ab841c4e92081702b7bf412828868c4e2d",
+      "upgrade_harness_sha": "d32e5ea1d341d2075e4a0bba0cac5784303dae76",
+      "final_build_sha": "090b10c2384a68ebb9a5ea0cb9346a7c1765dafa",
+      "final_harness_sha": "090b10c2384a68ebb9a5ea0cb9346a7c1765dafa",
+      "specs": {
+        "parent": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\spec-78-owner-verified.json",
+        "children": [
+          "C:/Users/inthe/IdeaProjects/lexique/target/implement-100-109/issue-100.json",
+          "C:/Users/inthe/IdeaProjects/lexique/target/implement-100-109/issue-101.json",
+          "C:/Users/inthe/IdeaProjects/lexique/target/implement-100-109/issue-102.json",
+          "C:/Users/inthe/IdeaProjects/lexique/target/implement-100-109/issue-103.json",
+          "C:/Users/inthe/IdeaProjects/lexique/target/implement-100-109/issue-104.json",
+          "C:/Users/inthe/IdeaProjects/lexique/target/implement-100-109/issue-105.json",
+          "C:/Users/inthe/IdeaProjects/lexique/target/implement-100-109/issue-106.json",
+          "C:/Users/inthe/IdeaProjects/lexique/target/implement-100-109/issue-107.json",
+          "C:/Users/inthe/IdeaProjects/lexique/target/implement-100-109/issue-108.json",
+          "C:/Users/inthe/IdeaProjects/lexique/target/implement-100-109/issue-109.json"
+        ]
+      },
+      "verified_totals": {
+        "denominator_groups": 4087,
+        "denominator_headwords": 3773,
+        "new_admitted_groups": 492,
+        "new_admitted_fields": 1968,
+        "admitted_groups": 1436,
+        "admitted_fields": 5744,
+        "everyday_complete_groups": 1434,
+        "original_specialist_senses": 2,
+        "annotation_groups": 15,
+        "annotation_missing_fields": 60,
+        "unaccepted_groups": 2651,
+        "everyday_incomplete_groups": 2653
+      },
+      "resource_identity": {
+        "content_version": "core-109-v1",
+        "sqlite_bytes": 6721536,
+        "sqlite_sha256": "75548a5c0cc9ec2e7007237f9c5cfaaf357d83ffef47706273cff9633b6c8c19",
+        "new_selected_sources": 449,
+        "total_selected_sources": 1475,
+        "preserved_old_payloads": 944,
+        "preserved_old_aliases": 11,
+        "reconstruction": "byte-identical",
+        "original_author": "Théodore Soulice (1800–1878)",
+        "notice_and_manifest_source_head": "ce66dc33d2b0f6d7c9fe70b5c79e95fbb0b8ca16",
+        "manifest_line_endings": "LF per .gitattributes",
+        "latest_compiled_preservation_log": "target/implement-100-109/compiled-verification-v2.log",
+        "resource_readme": "resources/core-pilot-79/README.md",
+        "notices": "resources/core-pilot-79/NOTICES.md"
+      },
+      "package_identity": {
+        "review_head": "090b10c2384a68ebb9a5ea0cb9346a7c1765dafa",
+        "package": {
+          "archive": "target\\implement-100-109\\final-package-v3\\Lexique-0.1.0-windows-x64-portable.zip",
+          "bytes": 38547297,
+          "sha256": "78abfbf31a6fbd193086f60aea6ce4747611ee2d6e1e4255b5c537e84e413aab",
+          "verified_files": 183
+        },
+        "content_version": "core-109-v1",
+        "core_sha256": "75548a5c0cc9ec2e7007237f9c5cfaaf357d83ffef47706273cff9633b6c8c19",
+        "core_bytes": 6721536,
+        "binary_sha256": "2135708520e81b78b2327af431b29d8d9b174c79fc75e1accc03e6d5ccbb4f59",
+        "notices_match_current_canonical": true,
+        "executable_matches_current_build": true,
+        "core_materials_in_archive": 15,
+        "archive_entries": 183,
+        "status": "passed"
+      },
+      "native_identity": {
+        "status": "passed",
+        "platform": "Windows x64",
+        "build_sha": "090b10c2384a68ebb9a5ea0cb9346a7c1765dafa",
+        "harness_sha": "090b10c2384a68ebb9a5ea0cb9346a7c1765dafa",
+        "binary_sha256": "2135708520e81b78b2327af431b29d8d9b174c79fc75e1accc03e6d5ccbb4f59",
+        "native_runs": 11
+      },
+      "reviewed_content_heads": [
+        {
+          "issue": 100,
+          "head": "8cd8d85ccf6862fcb02ca9b4e6f565c6e0898ba4",
+          "fields": 200,
+          "matches_exact_review_head": true
+        },
+        {
+          "issue": 101,
+          "head": "ae37206be06fb064a6f3cc88580b32fb13e472a1",
+          "fields": 196,
+          "matches_exact_review_head": true
+        },
+        {
+          "issue": 102,
+          "head": "2f3ea27d94c4831ff2cac7177f7afb6029d1f27a",
+          "fields": 196,
+          "matches_exact_review_head": true
+        },
+        {
+          "issue": 103,
+          "head": "f8571f8c5b4e55adba6e11c1ce4a47c25cf402a1",
+          "fields": 200,
+          "matches_exact_review_head": true
+        },
+        {
+          "issue": 104,
+          "head": "10a0d2b388569753bbbd0a993c9f0c2e4c33dc91",
+          "fields": 200,
+          "matches_exact_review_head": true
+        },
+        {
+          "issue": 105,
+          "head": "ca3a3869d39b5bf388bf6daddda2a12d28342914",
+          "fields": 184,
+          "matches_exact_review_head": true
+        },
+        {
+          "issue": 106,
+          "head": "fafc3e6e842c2203986d7b7cc5121a7de0a7fd4f",
+          "fields": 196,
+          "matches_exact_review_head": true
+        },
+        {
+          "issue": 107,
+          "head": "f5a7f8e9789420e18582b068913a212471e9e9f3",
+          "fields": 200,
+          "matches_exact_review_head": true
+        },
+        {
+          "issue": 108,
+          "head": "ad6222aac602aecb0387caa3249c822d7dcf99e2",
+          "fields": 196,
+          "matches_exact_review_head": true
+        },
+        {
+          "issue": 109,
+          "head": "bd087f494019c5b7ebd4438dfda52574c2fa94b9",
+          "fields": 200,
+          "matches_exact_review_head": true
+        }
+      ],
+      "joins": {
+        "new_fields": 1968,
+        "old_raw_groups": 944,
+        "status": "passed",
+        "evidence": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\review-spec-joins.json",
+        "proof_sha": "d32e5ea1d341d2075e4a0bba0cac5784303dae76",
+        "current_invariance": "Curated fields and independent review proofs are unchanged. Final extensions consolidate cohort tests and format only the French display hint and matching browser expectation."
+      },
+      "native_proof": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\native-execution-verification.json",
+      "independent_native_read": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\review-spec-native-proof-v3.json",
+      "native_checks": {
+        "runs": 11,
+        "batches": [
+          100,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109
+        ],
+        "upgrade_new_saves": [
+          "poisson",
+          "camarade"
+        ],
+        "hard_timeout_seconds": 60,
+        "external_webview_requests": 0,
+        "owned_processes_remaining": 0
+      },
+      "checks_verified": {
+        "core": 63,
+        "package": 16,
+        "rust": 194,
+        "browser": 13,
+        "lint": "passed",
+        "typecheck": "passed",
+        "build": "passed",
+        "rustfmt": "passed",
+        "diff_check": "passed",
+        "code_check_head": "45c9e4ab841c4e92081702b7bf412828868c4e2d",
+        "code_check_applicability": "63 core tests passed at f034; unchanged Rust retains 194 passed tests; v3 frontend checks and eleven native runs match final head090.",
+        "core_check_head": "f0344637027cc5e5d7ffad1fa0c0d1608ee4c9a3",
+        "core_check_log": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\fresh-worker-core-all.log",
+        "frontend_check_head": "090b10c2384a68ebb9a5ea0cb9346a7c1765dafa",
+        "frontend_check_logs": [
+          "final-lint-v3.log",
+          "final-typecheck-v3.log",
+          "final-build-v3.log",
+          "final-browser-core-v3.log"
+        ]
+      },
+      "initial_failed_fixture_evidence": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\native-100.log",
+      "readiness": "Windows x64 bounded development slice passed with final v3 packet; whole-core and M5 release gates remain open.",
+      "not_repeated": [
+        "449 source retrievals",
+        "independent field-quality/rights reviews",
+        "development test suites"
+      ],
+      "unverified": [
+        "whole-machine offline",
+        "other-platform flows",
+        "human learner acceptance",
+        "full release"
+      ],
+      "report_md": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\review-spec.md",
+      "previous_review_head": "f0344637027cc5e5d7ffad1fa0c0d1608ee4c9a3",
+      "test_only_extension": {
+        "base_sha": "ce66dc33d2b0f6d7c9fe70b5c79e95fbb0b8ca16",
+        "head_sha": "f0344637027cc5e5d7ffad1fa0c0d1608ee4c9a3",
+        "changed_files": [
+          "scripts/test_core_pilot.py"
+        ],
+        "finding_count": 0,
+        "assertions_preserved": [
+          "exact frozen membership for cohorts 90 through 109",
+          "annotation counts",
+          "four-field completeness",
+          "scope acceptance",
+          "reused pilot group count"
+        ],
+        "core_tests_passed": 63,
+        "execution_log": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\fresh-worker-core-all.log",
+        "retained_patch": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\review-spec-test-delta.patch",
+        "native_app_resource_sources_unchanged": true,
+        "reviewer_reran_source_or_tests": false
+      },
+      "native_verification_log": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\native-execution-check-v3.log",
+      "native_packet": "v3",
+      "prior_v2_native_proof": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\native-execution-verification-v2.json",
+      "prior_v2_native_head": "ce66dc33d2b0f6d7c9fe70b5c79e95fbb0b8ca16",
+      "locale_extension": {
+        "axis": "spec",
+        "source_verdict": "passed",
+        "findings": [],
+        "base_sha": "f0344637027cc5e5d7ffad1fa0c0d1608ee4c9a3",
+        "head_sha": "090b10c2384a68ebb9a5ea0cb9346a7c1765dafa",
+        "changed_files": [
+          "apps/desktop/e2e/core-pilot.spec.ts",
+          "apps/desktop/src/content.ts"
+        ],
+        "behavior": "French coverage numerator uses the same space grouping as the denominator; expected browser text matches. English/Chinese unchanged.",
+        "checks": {
+          "lint": "passed",
+          "typecheck": "passed",
+          "build": "passed",
+          "browser_passed": 13,
+          "browser_seconds": 10.4,
+          "logs": [
+            "final-lint-v3.log",
+            "final-typecheck-v3.log",
+            "final-build-v3.log",
+            "final-browser-core-v3.log"
+          ]
+        },
+        "applicability": "Converter/data/Rust/storage/IPC/native harness unchanged; prior source/rights joins and 63 core tests remain applicable.",
+        "native_readiness": "passed: eleven v3 runs with matching build/harness head090",
+        "retained_patch": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\review-spec-locale-extension.patch",
+        "native_proof": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\native-execution-verification.json"
+      },
+      "cross_axis_resolution": {
+        "spec_remaining": 0,
+        "standards_reported": 1,
+        "standards_resolved": 1,
+        "standards_remaining": 0,
+        "standards_resolution_head": "f0344637027cc5e5d7ffad1fa0c0d1608ee4c9a3",
+        "basis": "Parent-reported Standards P3 resolution; spec delta review confirms cohort assertions preserved."
+      }
+    },
+    "resolution_head": "f0344637027cc5e5d7ffad1fa0c0d1608ee4c9a3",
+    "remaining_findings": 0
+  },
+  "evidence_archive": {
+    "files": 1836,
+    "byte_preservation": "passed",
+    "manifest": "target/implement-100-109/author-evidence-relocation.json"
+  },
+  "upgrade_baseline": {
+    "files": 261,
+    "byte_preservation_after_runs": "passed",
+    "path": "target/issue-109/native-baseline-upgrade-source"
+  },
+  "documentation_checks": {
+    "status": "passed",
+    "command": "pnpm test:docs",
+    "documents": 271,
+    "local_links": 2016,
+    "skipped_local_links": 107,
+    "problems": 0,
+    "log": "final-docs-staged.log",
+    "history_preservation": "all previous verification bytes preserved",
+    "diff_check": "passed"
+  },
+  "ci": {
+    "status": "tracked_by_pull_request_checks",
+    "url": "https://github.com/zardonc/lexique/pull/180/checks",
+    "scope": "Exact final head verification is recorded in PR checks and closeout; source/native evidence remains pinned to its tested commits."
+  },
+  "limitations": [
+    "Whole-machine offline execution",
+    "Other-platform native flows",
+    "Learner acceptance",
+    "Full D2 release readiness"
+  ]
+}
