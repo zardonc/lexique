@@ -1,0 +1,263 @@
+{
+  "issue": 102,
+  "frozen_row": 1057,
+  "frozen_headword": "mme",
+  "lexique_cgram": "NOM",
+  "source_headword": "Mme",
+  "status": "author_handoff_pending_independent_review",
+  "independence": false,
+  "reviewer": null,
+  "new_fields": 4,
+  "new_admitted_fields": 0,
+  "accepted_fields_unchanged": 192,
+  "spelling_relation": "Reuses the independently supported lowercase dictionary-key relationship recorded at c2f48cb; no annotation exception or runtime alias.",
+  "selected_sense": {
+    "sense_id": "b102-1057-mme-nom-selected",
+    "use": "Feminine courtesy-title noun, read as madame; the frozen lowercase mme is a dictionary key. Standard written singular Mme (Mᵐᵉ), plural Mmes (Mᵐᵉˢ), without an abbreviation point. Referring to an adult woman, regardless of marital status, before her name, given name, title or role; spell out Madame in direct address, standalone use, letter greetings/closings and on envelopes.",
+    "fields": {
+      "french_definition": {
+        "language": "fr",
+        "text": "Abréviation du titre de civilité « Madame » pour une femme adulte, mariée ou non. À l’écrit : Mme, avec M majuscule, me minuscules de préférence en exposant, sans point abréviatif ; au pluriel, Mmes. La forme abrégée précède le nom, le prénom, le titre ou la fonction de la personne dont on parle. Pour s’adresser à elle ou employer le titre seul, utiliser la forme complète Madame ; également dans l’appel et la salutation d’une lettre, ainsi que sur l’enveloppe.",
+        "source_id": "b102_fr_193650",
+        "source_span": {
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[Madame]] (comme [[titre]])."
+        },
+        "content_license": "CC-BY-SA-4.0",
+        "modification": "Lexique contributor adaptation of the French title definition and modern marital-status note, with independently worded explanatory translation and writing restrictions; no bilingual table, example or proprietary prose copied.",
+        "author_validation": "passed_fixed_source_binding_and_scoped_draft_check",
+        "independent_review": "pending",
+        "rights_eligibility_status": "pending_independent_selected_text_boundary_review",
+        "reviewer": null,
+        "independence": false
+      },
+      "ipa": {
+        "language": "und",
+        "text": "/ma.dam/",
+        "source_id": "b102_fr_193650",
+        "source_span": {
+          "line_1_based": 9,
+          "column_1_based": 11,
+          "raw_source_excerpt": "{{pron|ma.dam|fr}}"
+        },
+        "content_license": "CC-BY-SA-4.0",
+        "modification": "French ma.dam IPA template transcribed with slash delimiters; no audio copied.",
+        "author_validation": "passed_fixed_source_binding_and_scoped_draft_check",
+        "independent_review": "pending",
+        "rights_eligibility_status": "pending_independent_selected_text_boundary_review",
+        "reviewer": null,
+        "independence": false
+      },
+      "english": {
+        "language": "en",
+        "text": "Written abbreviation of the courtesy title Madame for an adult woman, whether married or unmarried. Write Mme with capital M and lowercase me, preferably superscript, without an abbreviation point; plural Mmes. The abbreviation precedes the name, given name, title or role of the woman being referred to. Use the full form Madame when addressing her or using the title alone, and in a letter’s greeting and closing salutation and on its envelope.",
+        "source_id": "b102_fr_193650",
+        "source_span": {
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[Madame]] (comme [[titre]])."
+        },
+        "content_license": "CC-BY-SA-4.0",
+        "modification": "Lexique contributor adaptation of the French title definition and modern marital-status note, with independently worded explanatory translation and writing restrictions; no bilingual table, example or proprietary prose copied.",
+        "author_validation": "passed_fixed_source_binding_and_scoped_draft_check",
+        "independent_review": "pending",
+        "rights_eligibility_status": "pending_independent_selected_text_boundary_review",
+        "reviewer": null,
+        "independence": false
+      },
+      "chinese": {
+        "language": "zh",
+        "text": "女性敬称 Madame 的书面缩写，用于成年女性，不限婚姻状况。规范写作 Mme：M 大写，me 小写，宜置于右上角，不加缩写点；复数为 Mmes。谈及某人时，缩写置于其姓氏、名字、头衔或职务之前。直接称呼本人、单独使用敬称，以及在信件的开头称呼、结尾敬语和信封上，均使用完整形式 Madame。",
+        "source_id": "b102_fr_193650",
+        "source_span": {
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[Madame]] (comme [[titre]])."
+        },
+        "content_license": "CC-BY-SA-4.0",
+        "modification": "Lexique contributor adaptation of the French title definition and modern marital-status note, with independently worded explanatory translation and writing restrictions; no bilingual table, example or proprietary prose copied.",
+        "author_validation": "passed_fixed_source_binding_and_scoped_draft_check",
+        "independent_review": "pending",
+        "rights_eligibility_status": "pending_independent_selected_text_boundary_review",
+        "reviewer": null,
+        "independence": false
+      }
+    },
+    "independent_review": "pending",
+    "independence": false,
+    "reviewer": null,
+    "source_headword": "Mme",
+    "use_language": "en",
+    "excluded_uses": "Translingual ISO code mme; letter names; common-noun madame for an anonymous adult woman; historical royal or household-servant titles. Lowercase running-text typography and abbreviation in direct address are not the selected use.",
+    "resource_admission": "pending",
+    "cefr": null
+  },
+  "field_spans": [
+    {
+      "sense_id": "b102-1057-mme-nom-selected",
+      "field": "french_definition",
+      "frozen_row": 1057,
+      "source_id": "b102_fr_193650",
+      "revid": 36554529,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mme&oldid=36554529",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=Mme&action=history",
+      "line_1_based": 10,
+      "column_1_based": 1,
+      "raw_source_excerpt": "# [[Madame]] (comme [[titre]])."
+    },
+    {
+      "sense_id": "b102-1057-mme-nom-selected",
+      "field": "ipa",
+      "frozen_row": 1057,
+      "source_id": "b102_fr_193650",
+      "revid": 36554529,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mme&oldid=36554529",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=Mme&action=history",
+      "line_1_based": 9,
+      "column_1_based": 11,
+      "raw_source_excerpt": "{{pron|ma.dam|fr}}"
+    },
+    {
+      "sense_id": "b102-1057-mme-nom-selected",
+      "field": "english",
+      "frozen_row": 1057,
+      "source_id": "b102_fr_193650",
+      "revid": 36554529,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mme&oldid=36554529",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=Mme&action=history",
+      "line_1_based": 10,
+      "column_1_based": 1,
+      "raw_source_excerpt": "# [[Madame]] (comme [[titre]])."
+    },
+    {
+      "sense_id": "b102-1057-mme-nom-selected",
+      "field": "chinese",
+      "frozen_row": 1057,
+      "source_id": "b102_fr_193650",
+      "revid": 36554529,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mme&oldid=36554529",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=Mme&action=history",
+      "line_1_based": 10,
+      "column_1_based": 1,
+      "raw_source_excerpt": "# [[Madame]] (comme [[titre]])."
+    }
+  ],
+  "supporting_spans": [
+    {
+      "sense_id": "b102-1057-mme-nom-selected",
+      "frozen_row": 1057,
+      "source_id": "b102_fr_193650",
+      "revid": 36554529,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mme&oldid=36554529",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=Mme&action=history",
+      "line_1_based": 5,
+      "column_1_based": 1,
+      "raw_source_excerpt": ": {{date|lang=fr}} {{abréviation|fr|de=Madame|texte='''M'''ada'''me'''}}."
+    },
+    {
+      "sense_id": "b102-1057-mme-nom-selected",
+      "frozen_row": 1057,
+      "source_id": "b102_fr_193650",
+      "revid": 36554529,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mme&oldid=36554529",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=Mme&action=history",
+      "line_1_based": 7,
+      "column_1_based": 1,
+      "raw_source_excerpt": "=== {{S|nom|fr}} ==="
+    },
+    {
+      "sense_id": "b102-1057-mme-nom-selected",
+      "frozen_row": 1057,
+      "source_id": "b102_fr_193650",
+      "revid": 36554529,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mme&oldid=36554529",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=Mme&action=history",
+      "line_1_based": 8,
+      "column_1_based": 1,
+      "raw_source_excerpt": "{{fr-accord-mf|s=M{{e|me}}|ps=ma.dam|p=M{{e|mes}}|pp=mɛ.dam|pp2=me.dam}}"
+    },
+    {
+      "sense_id": "b102-1057-mme-nom-selected",
+      "frozen_row": 1057,
+      "source_id": "b102_fr_193650",
+      "revid": 36554529,
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mme&oldid=36554529",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=Mme&action=history",
+      "line_1_based": 23,
+      "column_1_based": 1,
+      "raw_source_excerpt": ": Traditionnellement, cette abréviation n’est employée que pour les femmes mariées, par opposition à ''[[Mlle|M{{e|lle}}]]''. Aujourd’hui, il est recommandé de l’utiliser indépendamment de l’état civil de la personne identifiée, comme c’est le cas pour ''[[M.]]'' (''[[Monsieur]]''). L’abréviation ''[[Mad.]]'' avait été proposée à la fin des années 1970 pour remplacer à la fois ''Mᵐᵉ'' et ''Mˡˡᵉ'', mais elle ne fut pas retenue par l’usage ; c’est ''Mᵐᵉ'' qui fut choisie à cette fin."
+    }
+  ],
+  "first_party_capture": {
+    "title": "Mme",
+    "pageid": 193650,
+    "revid": 36554529,
+    "timestamp": "2024-12-07T15:06:55Z",
+    "last_editor": "Destraak",
+    "capture": "first_party_multi_title_api_current_selected_revision",
+    "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-102\\target\\issue-102\\sources\\batch.api.json",
+    "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-102\\target\\issue-102\\sources\\193650.wiki",
+    "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mme&oldid=36554529",
+    "history_url": "https://fr.wiktionary.org/w/index.php?title=Mme&action=history",
+    "edition": "fr",
+    "id": "b102_fr_193650"
+  },
+  "independent_capture_comparison": "Existing reviewer-primary/fr-fixed-revisions-0.api.json and fr-fixed-revisions-50.api.json; reviewer-primary/remote-verification.json records the original independent comparison. New exact field text has not been independently reviewed.",
+  "selected_original_layers": [
+    {
+      "author": "Wiktionnaire contributors",
+      "rights": "CC-BY-SA-4.0",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=Mme&action=history",
+      "scope": "French title definition at line 10, IPA at line 9, lexical form/etymology at lines 5–8 and modern marital-status note at line 23. No named imported/original bibliographic layer occurs within these selected spans; last editor is capture metadata, not sole authorship.",
+      "independent_review": "pending"
+    },
+    {
+      "author": "Lexique contributors",
+      "rights": "CC-BY-SA-4.0",
+      "scope": "Scoped French adaptation, new English/Chinese explanations and IPA transcription. Writing restrictions are independently worded grammatical facts; copyrighted examples, translation tables, OQLF and Lacroux expressions are unselected.",
+      "independent_review": "pending"
+    }
+  ],
+  "unselected_layers": [
+    {
+      "source": "Mme literary/news examples, lines 11–20; bilingual translation table, lines 37–65; audio/media",
+      "rights": "Separately authored/imported expression or media; not selected or copied into the four fields.",
+      "authors": "Honoré de Balzac; Gregory Godier; Belga/RTBF; Pierre Lemaitre; translation/media contributors as recorded in the full capture."
+    },
+    {
+      "source": "Madame revision 39716168, line 55, citing Jean-Pierre Lacroux, Orthotypographie, volume II, pages 107–111",
+      "rights": "The original first-party site states CC BY-NC-ND 2.0 France and prohibits commercial use/modification without permission; this prose is excluded from bundled field text and adaptations.",
+      "primary_rights_url": "https://www.orthotypographie.fr/",
+      "capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-102\\target\\issue-102\\mme-author\\orthotypographie.html",
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/2.0/fr/"
+    },
+    {
+      "source": "Cambridge / K Dictionaries and OQLF",
+      "rights": "Corroboration of lexical/grammatical facts only; no proprietary wording, dictionary translations or examples selected."
+    }
+  ],
+  "writing_facts_corroboration": {
+    "source_id": "b102_corroboration_oqlf_titles",
+    "url": "https://vitrinelinguistique.oqlf.gouv.qc.ca/21435/les-abreviations-et-les-symboles/les-abreviations/cas-particuliers-dabreviations/abreviation-de-madame-de-mademoiselle-et-de-monsieur",
+    "capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-102\\target\\issue-102\\reviewer-primary\\web-authorities.json",
+    "capture_sections": {
+      "L4": "Reference to a person before name/role",
+      "L11": "Capitalization, superscript, no abbreviation point and plural",
+      "L22": "Full title in direct address, letter greeting/closing and on envelope"
+    },
+    "role": "Factual cross-check of independently worded Lexique writing restrictions; copyrighted source expression is not a selected layer."
+  },
+  "redistribution_obligations": [
+    "Credit the fixed article and its full linked contributor history.",
+    "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
+    "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
+    "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+  ],
+  "remaining_gates": [
+    "Independent linguistic review of the four exact fields and use",
+    "Independent selected-span/original-layer rights review and actual notices",
+    "Row 1051 s/PRO:per remains unresolved without alias or exception",
+    "Batch admission, conversion/native evidence and integration remain separate"
+  ]
+}

@@ -57,8 +57,8 @@
   ],
   "accepted_groups": 48,
   "accepted_fields": 192,
-  "candidate_groups": 48,
-  "candidate_fields": 192,
+  "candidate_groups": 49,
+  "candidate_fields": 196,
   "source_blocked_groups": 1,
   "blocked_fields": 8,
   "missing_admitted_fields": 8,
@@ -195,7 +195,7 @@
       "frozen_row": 1057,
       "headword": "mme",
       "pos": "NOM",
-      "reason": "Lowercase-key relation to French title Mme is independently supported by Cambridge, Lexique 3.83 and fixed Wiktionnaire Mme. Four sourced FR/IPA/EN/ZH fields and complete standard-written-title restrictions still need an author draft followed by a separate independent check. No new content is accepted and no scope exception is asserted.",
+      "reason": "Four sourced author fields are present for the supported lowercase dictionary key mme / French written title Mme. Independent review of the new exact text, construction restrictions and selected rights remains pending; zero new fields are admitted.",
       "fields_pending": [
         "french_definition",
         "ipa",
@@ -297,14 +297,16 @@
         }
       ],
       "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
-      "replacement_needs": "Author four fields using eligible fixed French title sources, with standard capitalization/construction restrictions; separate reviewer must check the new exact text."
+      "replacement_needs": "Separate independent review of four new exact fields and selected rights; no new author fields are missing.",
+      "author_fields": 4,
+      "independent_review": "pending"
     }
   ],
   "approved_annotation_exceptions": [],
   "final_output_validation": "pending batch completion and integration conversion/notices/native checks",
   "reviewed_author_commit": "3a4e358a9a9a8562574729b604321d9f7dde1c83",
   "accepted_sources": 45,
-  "pending_author_groups": 1,
+  "pending_author_groups": 0,
   "quality_report": "independent-review.md",
   "runtime_aliases_added": [],
   "packaging_obligations_status": "identified for all 192 accepted fields; final combined bundle not verified by this reviewer",
@@ -315,9 +317,11 @@
     },
     {
       "frozen_row": 1057,
-      "need": "Author four sourced title fields and capitalization/construction restrictions; independently review the new exact wording."
+      "need": "Separate independent review of the four new author fields, complete restrictions and selected rights; zero new fields admitted."
     }
   ],
   "source_blocked_fields": 4,
-  "pending_author_fields": 4
+  "pending_author_fields": 0,
+  "pending_independent_review_groups": 1,
+  "pending_independent_review_fields": 4
 }

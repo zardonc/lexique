@@ -11381,8 +11381,102 @@
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations.",
       "status": "candidate_pending_independent_review",
-      "selected_locations": [],
-      "selected_grammar_and_construction_evidence": [],
+      "selected_locations": [
+        {
+          "sense_id": "b102-1057-mme-nom-selected",
+          "field": "french_definition",
+          "frozen_row": 1057,
+          "source_id": "b102_fr_193650",
+          "revid": 36554529,
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mme&oldid=36554529",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=Mme&action=history",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[Madame]] (comme [[titre]])."
+        },
+        {
+          "sense_id": "b102-1057-mme-nom-selected",
+          "field": "ipa",
+          "frozen_row": 1057,
+          "source_id": "b102_fr_193650",
+          "revid": 36554529,
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mme&oldid=36554529",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=Mme&action=history",
+          "line_1_based": 9,
+          "column_1_based": 11,
+          "raw_source_excerpt": "{{pron|ma.dam|fr}}"
+        },
+        {
+          "sense_id": "b102-1057-mme-nom-selected",
+          "field": "english",
+          "frozen_row": 1057,
+          "source_id": "b102_fr_193650",
+          "revid": 36554529,
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mme&oldid=36554529",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=Mme&action=history",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[Madame]] (comme [[titre]])."
+        },
+        {
+          "sense_id": "b102-1057-mme-nom-selected",
+          "field": "chinese",
+          "frozen_row": 1057,
+          "source_id": "b102_fr_193650",
+          "revid": 36554529,
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mme&oldid=36554529",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=Mme&action=history",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[Madame]] (comme [[titre]])."
+        }
+      ],
+      "selected_grammar_and_construction_evidence": [
+        {
+          "sense_id": "b102-1057-mme-nom-selected",
+          "frozen_row": 1057,
+          "source_id": "b102_fr_193650",
+          "revid": 36554529,
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mme&oldid=36554529",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=Mme&action=history",
+          "line_1_based": 5,
+          "column_1_based": 1,
+          "raw_source_excerpt": ": {{date|lang=fr}} {{abréviation|fr|de=Madame|texte='''M'''ada'''me'''}}."
+        },
+        {
+          "sense_id": "b102-1057-mme-nom-selected",
+          "frozen_row": 1057,
+          "source_id": "b102_fr_193650",
+          "revid": 36554529,
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mme&oldid=36554529",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=Mme&action=history",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "=== {{S|nom|fr}} ==="
+        },
+        {
+          "sense_id": "b102-1057-mme-nom-selected",
+          "frozen_row": 1057,
+          "source_id": "b102_fr_193650",
+          "revid": 36554529,
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mme&oldid=36554529",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=Mme&action=history",
+          "line_1_based": 8,
+          "column_1_based": 1,
+          "raw_source_excerpt": "{{fr-accord-mf|s=M{{e|me}}|ps=ma.dam|p=M{{e|mes}}|pp=mɛ.dam|pp2=me.dam}}"
+        },
+        {
+          "sense_id": "b102-1057-mme-nom-selected",
+          "frozen_row": 1057,
+          "source_id": "b102_fr_193650",
+          "revid": 36554529,
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mme&oldid=36554529",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=Mme&action=history",
+          "line_1_based": 23,
+          "column_1_based": 1,
+          "raw_source_excerpt": ": Traditionnellement, cette abréviation n’est employée que pour les femmes mariées, par opposition à ''[[Mlle|M{{e|lle}}]]''. Aujourd’hui, il est recommandé de l’utiliser indépendamment de l’état civil de la personne identifiée, comme c’est le cas pour ''[[M.]]'' (''[[Monsieur]]''). L’abréviation ''[[Mad.]]'' avait été proposée à la fin des années 1970 pour remplacer à la fois ''Mᵐᵉ'' et ''Mˡˡᵉ'', mais elle ne fut pas retenue par l’usage ; c’est ''Mᵐᵉ'' qui fut choisie à cette fin."
+        }
+      ],
       "blocker_evidence": [
         {
           "purpose": "Exact spelling/POS boundary",
@@ -11470,9 +11564,11 @@
         }
       ],
       "original_authors_and_rights": [],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+      "selected_text_rights_boundary": "Mme French lexical definition, IPA, inflection/abbreviation templates and contemporary marital-status note only. Literary/news examples and translation-table wording are excluded. Writing restrictions are original Lexique explanations of grammatical facts, corroborated by OQLF; neither OQLF nor Lacroux prose is adapted.",
       "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "independent_selected_span_rights_status": "pending",
+      "reviewer": null,
+      "independence": false
     },
     {
       "id": "b102_fr_1634938",
@@ -12087,7 +12183,7 @@
       "frozen_row": 1057,
       "headword": "mme",
       "pos": "NOM",
-      "reason": "Lowercase-key relation to French title Mme is independently supported by Cambridge, Lexique 3.83 and fixed Wiktionnaire Mme. Four sourced FR/IPA/EN/ZH fields and complete standard-written-title restrictions still need an author draft followed by a separate independent check. No new content is accepted and no scope exception is asserted.",
+      "reason": "Four sourced author fields are present for the supported lowercase dictionary key mme / French written title Mme. Independent review of the new exact text, construction restrictions and selected rights remains pending; zero new fields are admitted.",
       "fields_pending": [
         "french_definition",
         "ipa",
@@ -12189,7 +12285,9 @@
         }
       ],
       "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
-      "replacement_needs": "Author four fields using eligible fixed French title sources, with standard capitalization/construction restrictions; separate reviewer must check the new exact text."
+      "replacement_needs": "Separate independent review of four new exact fields and selected rights; no new author fields are missing.",
+      "author_fields": 4,
+      "independent_review": "pending"
     }
   ]
 }

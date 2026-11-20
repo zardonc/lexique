@@ -1,6 +1,6 @@
 # Issue #102 selected source candidates
 
-Rows **1051–1100** retain 50 exact word/POS groups. The author handoff contains 48 selected-use candidates / 192 fields and two unresolved groups / eight candidate-field gaps. All 200 required fields remain unadmitted pending independent review. There are no new aliases, approved annotations or reused admitted groups.
+Rows **1051–1100** retain 50 exact word/POS groups. The handoff contains 49 selected-use candidates / 196 fields: 48 groups / 192 fields are independently accepted and unchanged; the four Mme fields await separate independent review. Row 1051 retains four source-missing fields. Eight required fields remain unadmitted. There are no new aliases, approved annotations or reused admitted groups.
 
 ## Source and modification boundaries
 
@@ -32,6 +32,6 @@ Separate adjective/noun groups remain separate for `connard`, `directeur`, `pati
 
 **1051 `s/PRO:per`:** French [revision 39772394](https://fr.wiktionary.org/w/index.php?title=s&oldid=39772394), lines 50–54, supplies only the bare letter. The separate apostrophized article supplies personal-pronoun elision of `se`; its fixed revision and exact lines 3–6 are in [source excerpts](source-excerpts.json). Neither source establishes a bare `s` pronoun or an omission-of-apostrophe spelling relationship. The French letter pronunciation `/ɛs/` is not bound to the pronoun.
 
-**1057 `mme/NOM`:** Exact lowercase [revision 28507769](https://fr.wiktionary.org/w/index.php?title=mme&oldid=28507769), lines 3–6, supplies a translingual ISO 639-3 code for Mae. Capitalized [Mme revision 36554529](https://fr.wiktionary.org/w/index.php?title=Mme&oldid=36554529), lines 3–10, supplies the French abbreviation of Madame and `/ma.dam/`. No lowercase French noun bridge is established. The capitalized pronunciation/meaning is not assigned to the frozen lowercase group.
+**1057 `mme/NOM`:** Exact lowercase [revision 28507769](https://fr.wiktionary.org/w/index.php?title=mme&oldid=28507769), lines 3–6, supplies a translingual ISO 639-3 code for Mae. The independent review establishes the lowercase dictionary-key relationship to French written `Mme`, corroborated by Lexique 3.83 and Cambridge. [Mme revision 36554529](https://fr.wiktionary.org/w/index.php?title=Mme&oldid=36554529), lines 5–10 and 23, supplies the French title abbreviation, inflection, `/ma.dam/` and contemporary marital-status note. [Mme author handoff](mme-author.md) records four pending fields, exact spans and original-layer boundaries. The frozen key remains `mme/NOM`; no runtime alias or annotation exception is introduced.
 
-Each blocker retains zero candidates, four missing fields and pending independent confirmation. An owner-approved exception or a new supported source would change the integration decision; neither is recorded here.
+Row 1051 retains zero candidates and four missing fields. Row 1057 has four candidates pending separate independent linguistic and selected-rights review. Both retain zero admitted fields and four missing admitted fields.
