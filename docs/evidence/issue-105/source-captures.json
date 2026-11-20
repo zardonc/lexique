@@ -645,5 +645,20 @@
     }
   ],
   "reproduction_script": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\prepare_candidates.py",
-  "selection_script": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\selection.py"
+  "selection_script": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\selection.py",
+  "reviewer_verification": {
+    "reviewer": "Independent selected-content and rights reviewer for issue 105; separate from author and merger",
+    "sources": 43,
+    "status": "all_fixed_wikitext_pageid_title_revid_timestamp_and_last_editor_refetched_and_matched",
+    "record": "target/issue-105/reviewer/remote-verification.json",
+    "api": "target/issue-105/reviewer/fixed-revisions.api.json"
+  },
+  "reviewer_supplementary_capture": {
+    "title": "qu’",
+    "revid": 39524860,
+    "timestamp": "2026-05-20T10:13:26Z",
+    "fixed_url": "https://fr.wiktionary.org/w/index.php?title=qu%E2%80%99&oldid=39524860",
+    "api_absolute_path": "C:/Users/inthe/IdeaProjects/lexique-batch-105/target/issue-105/reviewer/qu-apostrophe-target.api.json",
+    "role": "apostrophe_form_relationship_only_no_bare_spelling_or_field_admission"
+  }
 }

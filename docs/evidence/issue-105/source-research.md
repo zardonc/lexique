@@ -42,10 +42,7 @@ selected sentence.
 Actual `Import:DAF8`, `R:DAF8`, `R:Littré` and other bibliographic markers are
 preserved with their source locations. Académie française, eighth edition
 (1932–1935), and Émile Littré are credited as original bibliographic layers
-where the source actually identifies them. A marker does not establish whether
-a selected definition is original imported prose, subsequent Wiki wording or a
-mixture. That selected-original-text boundary and its rights remain pending
-separate review. No author check promotes page-wide licensing into acceptance.
+where the source actually identifies them. The independent [review](independent-review.md) and [rights decision](rights.json) resolve the selected-original-text boundary for the 184 accepted fields, separately from the original candidate provenance checks. A marker does not identify every modern definition author.
 
 Raw quoted examples, full article bodies and Robert/CNRTL page bodies remain in
 ignored captures. Tracked context preserves bibliographic markers and selected

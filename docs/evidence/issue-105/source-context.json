@@ -8,7 +8,7 @@
       "timestamp": "2026-09-28T14:29:32Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=th%C3%A9&oldid=39908360",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=th%C3%A9&action=history",
-      "status": "author_source_binding_checked_independent_review_pending",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b105-1201-thé-nom-selected",
@@ -102,13 +102,13 @@
           "author": "Académie française",
           "work": "Dictionnaire de l’Académie française, huitième édition (1932–1935)",
           "relationship": "Actual import or bibliographic marker retained; its presence does not identify the author of each selected sentence.",
-          "rights_status": "pending_independent_original_text_boundary_review"
+          "rights_status": "public_domain_daf8_original_edition_wiki_and_lexique_layers_cc_by_sa_4_0"
         },
         {
           "author": "Émile Littré",
           "work": "Dictionnaire de la langue française",
           "relationship": "Bibliographic marker only; no claim that every selected sentence is original Littré prose.",
-          "rights_status": "pending_independent_original_text_boundary_review"
+          "rights_status": "public_domain_littre_original_edition_wiki_and_lexique_layers_cc_by_sa_4_0"
         }
       ],
       "contributors": [
@@ -216,7 +216,8 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\sources\\contributors-initial-2.api.json"
       ],
       "attribution_boundary": "Current paginated registry is broader than the fixed revision. Full article history provides attribution; names alone do not establish selected-sentence authorship or imported-text rights.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_review"
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "selected_text_rights_reason": "Selected French lexical definition/IPA and matching form/POS inspected in the fixed first-party wikitext. Full article/history credits Wiki contributors; Lexique scoped adaptation and EN/ZH translations remain CC BY-SA 4.0. Unselected quoted examples, media, foreign-language and translation-table wording are excluded. Actual DAF8 edition notice is retained separately; established 1932–1935 collective-edition public-domain basis under L123-3 gives conservative expiry 2006-01-01. The notice does not identify every modern sentence author. Referenced Littré original edition is public domain (1873–1874/1878; author died 1881); Wiki/Lexique modifications remain separately CC BY-SA 4.0. Other bibliography is a reference, not selected publisher quotation or licence transfer."
     },
     {
       "id": "b105_fr_126771",
@@ -226,7 +227,7 @@
       "timestamp": "2026-09-27T14:57:58Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=responsable&oldid=39906564",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=responsable&action=history",
-      "status": "author_source_binding_checked_independent_review_pending",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b105-1202-responsable-adj-selected",
@@ -390,7 +391,7 @@
           "author": "Académie française",
           "work": "Dictionnaire de l’Académie française, huitième édition (1932–1935)",
           "relationship": "Actual import or bibliographic marker retained; its presence does not identify the author of each selected sentence.",
-          "rights_status": "pending_independent_original_text_boundary_review"
+          "rights_status": "public_domain_daf8_original_edition_wiki_and_lexique_layers_cc_by_sa_4_0"
         }
       ],
       "contributors": [
@@ -466,7 +467,8 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\sources\\contributors-initial-2.api.json"
       ],
       "attribution_boundary": "Current paginated registry is broader than the fixed revision. Full article history provides attribution; names alone do not establish selected-sentence authorship or imported-text rights.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_review"
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "selected_text_rights_reason": "Selected French lexical definition/IPA and matching form/POS inspected in the fixed first-party wikitext. Full article/history credits Wiki contributors; Lexique scoped adaptation and EN/ZH translations remain CC BY-SA 4.0. Unselected quoted examples, media, foreign-language and translation-table wording are excluded. Actual DAF8 edition notice is retained separately; established 1932–1935 collective-edition public-domain basis under L123-3 gives conservative expiry 2006-01-01. The notice does not identify every modern sentence author. Other bibliography is a reference, not selected publisher quotation or licence transfer."
     },
     {
       "id": "b105_fr_8142",
@@ -476,7 +478,7 @@
       "timestamp": "2026-09-22T18:28:20Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=col%C3%A8re&oldid=39893292",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=col%C3%A8re&action=history",
-      "status": "author_source_binding_checked_independent_review_pending",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b105-1204-colère-nom-selected",
@@ -651,7 +653,8 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\sources\\contributors-initial-2.api.json"
       ],
       "attribution_boundary": "Current paginated registry is broader than the fixed revision. Full article history provides attribution; names alone do not establish selected-sentence authorship or imported-text rights.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_review"
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "selected_text_rights_reason": "Selected French lexical definition/IPA and matching form/POS inspected in the fixed first-party wikitext. Full article/history credits Wiki contributors; Lexique scoped adaptation and EN/ZH translations remain CC BY-SA 4.0. Unselected quoted examples, media, foreign-language and translation-table wording are excluded. Other bibliography is a reference, not selected publisher quotation or licence transfer."
     },
     {
       "id": "b105_fr_102175",
@@ -661,7 +664,7 @@
       "timestamp": "2026-08-03T14:14:18Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=d%C3%A9part&oldid=39774529",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=d%C3%A9part&action=history",
-      "status": "author_source_binding_checked_independent_review_pending",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b105-1205-départ-nom-selected",
@@ -747,7 +750,7 @@
           "author": "Académie française",
           "work": "Dictionnaire de l’Académie française, huitième édition (1932–1935)",
           "relationship": "Actual import or bibliographic marker retained; its presence does not identify the author of each selected sentence.",
-          "rights_status": "pending_independent_original_text_boundary_review"
+          "rights_status": "public_domain_daf8_original_edition_wiki_and_lexique_layers_cc_by_sa_4_0"
         }
       ],
       "contributors": [
@@ -817,7 +820,8 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\sources\\contributors-initial-2.api.json"
       ],
       "attribution_boundary": "Current paginated registry is broader than the fixed revision. Full article history provides attribution; names alone do not establish selected-sentence authorship or imported-text rights.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_review"
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "selected_text_rights_reason": "Selected French lexical definition/IPA and matching form/POS inspected in the fixed first-party wikitext. Full article/history credits Wiki contributors; Lexique scoped adaptation and EN/ZH translations remain CC BY-SA 4.0. Unselected quoted examples, media, foreign-language and translation-table wording are excluded. Actual DAF8 edition notice is retained separately; established 1932–1935 collective-edition public-domain basis under L123-3 gives conservative expiry 2006-01-01. The notice does not identify every modern sentence author. Other bibliography is a reference, not selected publisher quotation or licence transfer."
     },
     {
       "id": "b105_fr_159997",
@@ -827,7 +831,7 @@
       "timestamp": "2026-08-03T10:51:43Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=%C3%A9poque&oldid=39771784",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=%C3%A9poque&action=history",
-      "status": "author_source_binding_checked_independent_review_pending",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b105-1206-époque-nom-selected",
@@ -913,7 +917,7 @@
           "author": "Académie française",
           "work": "Dictionnaire de l’Académie française, huitième édition (1932–1935)",
           "relationship": "Actual import or bibliographic marker retained; its presence does not identify the author of each selected sentence.",
-          "rights_status": "pending_independent_original_text_boundary_review"
+          "rights_status": "public_domain_daf8_original_edition_wiki_and_lexique_layers_cc_by_sa_4_0"
         }
       ],
       "contributors": [
@@ -990,7 +994,8 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\sources\\contributors-initial-2.api.json"
       ],
       "attribution_boundary": "Current paginated registry is broader than the fixed revision. Full article history provides attribution; names alone do not establish selected-sentence authorship or imported-text rights.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_review"
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "selected_text_rights_reason": "Selected French lexical definition/IPA and matching form/POS inspected in the fixed first-party wikitext. Full article/history credits Wiki contributors; Lexique scoped adaptation and EN/ZH translations remain CC BY-SA 4.0. Unselected quoted examples, media, foreign-language and translation-table wording are excluded. Actual DAF8 edition notice is retained separately; established 1932–1935 collective-edition public-domain basis under L123-3 gives conservative expiry 2006-01-01. The notice does not identify every modern sentence author. Other bibliography is a reference, not selected publisher quotation or licence transfer."
     },
     {
       "id": "b105_fr_142376",
@@ -1000,7 +1005,7 @@
       "timestamp": "2026-05-02T09:41:27Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=quiconque&oldid=39477804",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=quiconque&action=history",
-      "status": "author_source_binding_checked_independent_review_pending",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b105-1207-quiconque-pro-ind-selected",
@@ -1168,13 +1173,13 @@
           "author": "Académie française",
           "work": "Dictionnaire de l’Académie française, huitième édition (1932–1935)",
           "relationship": "Actual import or bibliographic marker retained; its presence does not identify the author of each selected sentence.",
-          "rights_status": "pending_independent_original_text_boundary_review"
+          "rights_status": "public_domain_daf8_original_edition_wiki_and_lexique_layers_cc_by_sa_4_0"
         },
         {
           "author": "Émile Littré",
           "work": "Dictionnaire de la langue française",
           "relationship": "Bibliographic marker only; no claim that every selected sentence is original Littré prose.",
-          "rights_status": "pending_independent_original_text_boundary_review"
+          "rights_status": "public_domain_littre_original_edition_wiki_and_lexique_layers_cc_by_sa_4_0"
         }
       ],
       "contributors": [
@@ -1232,7 +1237,8 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\sources\\contributors-initial-2.api.json"
       ],
       "attribution_boundary": "Current paginated registry is broader than the fixed revision. Full article history provides attribution; names alone do not establish selected-sentence authorship or imported-text rights.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_review"
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "selected_text_rights_reason": "Selected French lexical definition/IPA and matching form/POS inspected in the fixed first-party wikitext. Full article/history credits Wiki contributors; Lexique scoped adaptation and EN/ZH translations remain CC BY-SA 4.0. Unselected quoted examples, media, foreign-language and translation-table wording are excluded. Actual DAF8 edition notice is retained separately; established 1932–1935 collective-edition public-domain basis under L123-3 gives conservative expiry 2006-01-01. The notice does not identify every modern sentence author. Referenced Littré original edition is public domain (1873–1874/1878; author died 1881); Wiki/Lexique modifications remain separately CC BY-SA 4.0. Other bibliography is a reference, not selected publisher quotation or licence transfer."
     },
     {
       "id": "b105_fr_193641",
@@ -1242,7 +1248,7 @@
       "timestamp": "2025-11-05T20:04:06Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=mari%C3%A9&oldid=39039210",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=mari%C3%A9&action=history",
-      "status": "author_source_binding_checked_independent_review_pending",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b105-1210-marié-adj-selected",
@@ -1469,7 +1475,8 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\sources\\contributors-initial-2.api.json"
       ],
       "attribution_boundary": "Current paginated registry is broader than the fixed revision. Full article history provides attribution; names alone do not establish selected-sentence authorship or imported-text rights.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_review"
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "selected_text_rights_reason": "Selected French lexical definition/IPA and matching form/POS inspected in the fixed first-party wikitext. Full article/history credits Wiki contributors; Lexique scoped adaptation and EN/ZH translations remain CC BY-SA 4.0. Unselected quoted examples, media, foreign-language and translation-table wording are excluded. Other bibliography is a reference, not selected publisher quotation or licence transfer."
     },
     {
       "id": "b105_fr_159549",
@@ -1479,7 +1486,7 @@
       "timestamp": "2026-07-31T18:34:40Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=engager&oldid=39716172",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=engager&action=history",
-      "status": "author_source_binding_checked_independent_review_pending",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b105-1212-engager-ver-selected",
@@ -1565,7 +1572,7 @@
           "author": "Académie française",
           "work": "Dictionnaire de l’Académie française, huitième édition (1932–1935)",
           "relationship": "Actual import or bibliographic marker retained; its presence does not identify the author of each selected sentence.",
-          "rights_status": "pending_independent_original_text_boundary_review"
+          "rights_status": "public_domain_daf8_original_edition_wiki_and_lexique_layers_cc_by_sa_4_0"
         }
       ],
       "contributors": [
@@ -1639,7 +1646,8 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\sources\\contributors-initial-2.api.json"
       ],
       "attribution_boundary": "Current paginated registry is broader than the fixed revision. Full article history provides attribution; names alone do not establish selected-sentence authorship or imported-text rights.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_review"
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "selected_text_rights_reason": "Selected French lexical definition/IPA and matching form/POS inspected in the fixed first-party wikitext. Full article/history credits Wiki contributors; Lexique scoped adaptation and EN/ZH translations remain CC BY-SA 4.0. Unselected quoted examples, media, foreign-language and translation-table wording are excluded. Actual DAF8 edition notice is retained separately; established 1932–1935 collective-edition public-domain basis under L123-3 gives conservative expiry 2006-01-01. The notice does not identify every modern sentence author. Other bibliography is a reference, not selected publisher quotation or licence transfer."
     },
     {
       "id": "b105_fr_167654",
@@ -1649,7 +1657,7 @@
       "timestamp": "2026-09-30T10:35:01Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=m%C3%A9chant&oldid=39910921",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=m%C3%A9chant&action=history",
-      "status": "author_source_binding_checked_independent_review_pending",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b105-1213-méchant-adj-selected",
@@ -1904,7 +1912,8 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\sources\\contributors-initial-2.api.json"
       ],
       "attribution_boundary": "Current paginated registry is broader than the fixed revision. Full article history provides attribution; names alone do not establish selected-sentence authorship or imported-text rights.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_review"
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "selected_text_rights_reason": "Selected French lexical definition/IPA and matching form/POS inspected in the fixed first-party wikitext. Full article/history credits Wiki contributors; Lexique scoped adaptation and EN/ZH translations remain CC BY-SA 4.0. Unselected quoted examples, media, foreign-language and translation-table wording are excluded. Other bibliography is a reference, not selected publisher quotation or licence transfer."
     },
     {
       "id": "b105_fr_571",
@@ -1914,7 +1923,7 @@
       "timestamp": "2026-10-21T20:23:43Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=bar&oldid=39951587",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=bar&action=history",
-      "status": "author_source_binding_checked_independent_review_pending",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b105-1229-bar-nom-selected",
@@ -2032,13 +2041,13 @@
           "author": "Académie française",
           "work": "Dictionnaire de l’Académie française, huitième édition (1932–1935)",
           "relationship": "Actual import or bibliographic marker retained; its presence does not identify the author of each selected sentence.",
-          "rights_status": "pending_independent_original_text_boundary_review"
+          "rights_status": "public_domain_daf8_original_edition_wiki_and_lexique_layers_cc_by_sa_4_0"
         },
         {
           "author": "Émile Littré",
           "work": "Dictionnaire de la langue française",
           "relationship": "Bibliographic marker only; no claim that every selected sentence is original Littré prose.",
-          "rights_status": "pending_independent_original_text_boundary_review"
+          "rights_status": "public_domain_littre_original_edition_wiki_and_lexique_layers_cc_by_sa_4_0"
         }
       ],
       "contributors": [
@@ -2185,7 +2194,8 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\sources\\contributors-initial-2.api.json"
       ],
       "attribution_boundary": "Current paginated registry is broader than the fixed revision. Full article history provides attribution; names alone do not establish selected-sentence authorship or imported-text rights.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_review"
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "selected_text_rights_reason": "Selected French lexical definition/IPA and matching form/POS inspected in the fixed first-party wikitext. Full article/history credits Wiki contributors; Lexique scoped adaptation and EN/ZH translations remain CC BY-SA 4.0. Unselected quoted examples, media, foreign-language and translation-table wording are excluded. Actual DAF8 edition notice is retained separately; established 1932–1935 collective-edition public-domain basis under L123-3 gives conservative expiry 2006-01-01. The notice does not identify every modern sentence author. Referenced Littré original edition is public domain (1873–1874/1878; author died 1881); Wiki/Lexique modifications remain separately CC BY-SA 4.0. Other bibliography is a reference, not selected publisher quotation or licence transfer."
     },
     {
       "id": "b105_fr_765",
@@ -2195,7 +2205,7 @@
       "timestamp": "2026-03-11T20:09:49Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=russe&oldid=39359510",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=russe&action=history",
-      "status": "author_source_binding_checked_independent_review_pending",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b105-1224-russe-adj-selected",
@@ -2441,7 +2451,8 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\sources\\contributors-initial-2.api.json"
       ],
       "attribution_boundary": "Current paginated registry is broader than the fixed revision. Full article history provides attribution; names alone do not establish selected-sentence authorship or imported-text rights.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_review"
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "selected_text_rights_reason": "Selected French lexical definition/IPA and matching form/POS inspected in the fixed first-party wikitext. Full article/history credits Wiki contributors; Lexique scoped adaptation and EN/ZH translations remain CC BY-SA 4.0. Unselected quoted examples, media, foreign-language and translation-table wording are excluded. Other bibliography is a reference, not selected publisher quotation or licence transfer."
     },
     {
       "id": "b105_fr_2160",
@@ -2451,7 +2462,7 @@
       "timestamp": "2026-09-18T18:47:10Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=%C3%A9t%C3%A9&oldid=39882107",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=%C3%A9t%C3%A9&action=history",
-      "status": "author_source_binding_checked_independent_review_pending",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b105-1234-été-nom-selected",
@@ -2537,7 +2548,7 @@
           "author": "Académie française",
           "work": "Dictionnaire de l’Académie française, huitième édition (1932–1935)",
           "relationship": "Actual import or bibliographic marker retained; its presence does not identify the author of each selected sentence.",
-          "rights_status": "pending_independent_original_text_boundary_review"
+          "rights_status": "public_domain_daf8_original_edition_wiki_and_lexique_layers_cc_by_sa_4_0"
         }
       ],
       "contributors": [
@@ -2659,7 +2670,8 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\sources\\contributors-initial-2.api.json"
       ],
       "attribution_boundary": "Current paginated registry is broader than the fixed revision. Full article history provides attribution; names alone do not establish selected-sentence authorship or imported-text rights.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_review"
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "selected_text_rights_reason": "Selected French lexical definition/IPA and matching form/POS inspected in the fixed first-party wikitext. Full article/history credits Wiki contributors; Lexique scoped adaptation and EN/ZH translations remain CC BY-SA 4.0. Unselected quoted examples, media, foreign-language and translation-table wording are excluded. Actual DAF8 edition notice is retained separately; established 1932–1935 collective-edition public-domain basis under L123-3 gives conservative expiry 2006-01-01. The notice does not identify every modern sentence author. Other bibliography is a reference, not selected publisher quotation or licence transfer."
     },
     {
       "id": "b105_fr_2251",
@@ -2669,7 +2681,7 @@
       "timestamp": "2026-11-19T20:47:58Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=que&oldid=40046884",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=que&action=history",
-      "status": "author_source_binding_checked_independent_review_pending",
+      "status": "supporting_evidence_only",
       "selected_locations": [],
       "selected_frames": [],
       "bibliographic_and_import_markers": [
@@ -2852,7 +2864,8 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\sources\\contributors-initial-2.api.json"
       ],
       "attribution_boundary": "Current paginated registry is broader than the fixed revision. Full article history provides attribution; names alone do not establish selected-sentence authorship or imported-text rights.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_review"
+      "selected_text_rights_status": "no_accepted_fields",
+      "selected_text_rights_reason": "Source documents unresolved exact form/POS, not accepted field content."
     },
     {
       "id": "b105_fr_4643",
@@ -2862,7 +2875,7 @@
       "timestamp": "2026-09-02T19:12:54Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=sept&oldid=39849824",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=sept&action=history",
-      "status": "author_source_binding_checked_independent_review_pending",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b105-1247-sept-adj-num-selected",
@@ -3080,7 +3093,8 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\sources\\contributors-initial-2.api.json"
       ],
       "attribution_boundary": "Current paginated registry is broader than the fixed revision. Full article history provides attribution; names alone do not establish selected-sentence authorship or imported-text rights.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_review"
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "selected_text_rights_reason": "Selected French lexical definition/IPA and matching form/POS inspected in the fixed first-party wikitext. Full article/history credits Wiki contributors; Lexique scoped adaptation and EN/ZH translations remain CC BY-SA 4.0. Unselected quoted examples, media, foreign-language and translation-table wording are excluded. Other bibliography is a reference, not selected publisher quotation or licence transfer."
     },
     {
       "id": "b105_fr_5085",
@@ -3090,7 +3104,7 @@
       "timestamp": "2026-11-10T17:16:15Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=glace&oldid=40002114",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=glace&action=history",
-      "status": "author_source_binding_checked_independent_review_pending",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b105-1240-glace-nom-selected",
@@ -3313,7 +3327,8 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\sources\\contributors-initial-2.api.json"
       ],
       "attribution_boundary": "Current paginated registry is broader than the fixed revision. Full article history provides attribution; names alone do not establish selected-sentence authorship or imported-text rights.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_review"
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "selected_text_rights_reason": "Selected French lexical definition/IPA and matching form/POS inspected in the fixed first-party wikitext. Full article/history credits Wiki contributors; Lexique scoped adaptation and EN/ZH translations remain CC BY-SA 4.0. Unselected quoted examples, media, foreign-language and translation-table wording are excluded. Other bibliography is a reference, not selected publisher quotation or licence transfer."
     },
     {
       "id": "b105_fr_5099",
@@ -3323,7 +3338,7 @@
       "timestamp": "2026-10-15T14:28:40Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=cesser&oldid=39934982",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=cesser&action=history",
-      "status": "author_source_binding_checked_independent_review_pending",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b105-1215-cesser-ver-selected",
@@ -3413,7 +3428,7 @@
           "author": "Académie française",
           "work": "Dictionnaire de l’Académie française, huitième édition (1932–1935)",
           "relationship": "Actual import or bibliographic marker retained; its presence does not identify the author of each selected sentence.",
-          "rights_status": "pending_independent_original_text_boundary_review"
+          "rights_status": "public_domain_daf8_original_edition_wiki_and_lexique_layers_cc_by_sa_4_0"
         }
       ],
       "contributors": [
@@ -3477,7 +3492,8 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\sources\\contributors-initial-2.api.json"
       ],
       "attribution_boundary": "Current paginated registry is broader than the fixed revision. Full article history provides attribution; names alone do not establish selected-sentence authorship or imported-text rights.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_review"
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "selected_text_rights_reason": "Selected French lexical definition/IPA and matching form/POS inspected in the fixed first-party wikitext. Full article/history credits Wiki contributors; Lexique scoped adaptation and EN/ZH translations remain CC BY-SA 4.0. Unselected quoted examples, media, foreign-language and translation-table wording are excluded. Actual DAF8 edition notice is retained separately; established 1932–1935 collective-edition public-domain basis under L123-3 gives conservative expiry 2006-01-01. The notice does not identify every modern sentence author. Other bibliography is a reference, not selected publisher quotation or licence transfer."
     },
     {
       "id": "b105_fr_7889",
@@ -3487,7 +3503,7 @@
       "timestamp": "2026-08-03T14:14:03Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=club&oldid=39774519",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=club&action=history",
-      "status": "author_source_binding_checked_independent_review_pending",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b105-1231-club-nom-selected",
@@ -3665,7 +3681,8 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\sources\\contributors-initial-2.api.json"
       ],
       "attribution_boundary": "Current paginated registry is broader than the fixed revision. Full article history provides attribution; names alone do not establish selected-sentence authorship or imported-text rights.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_review"
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "selected_text_rights_reason": "Selected French lexical definition/IPA and matching form/POS inspected in the fixed first-party wikitext. Full article/history credits Wiki contributors; Lexique scoped adaptation and EN/ZH translations remain CC BY-SA 4.0. Unselected quoted examples, media, foreign-language and translation-table wording are excluded. Other bibliography is a reference, not selected publisher quotation or licence transfer."
     },
     {
       "id": "b105_fr_8390",
@@ -3675,7 +3692,7 @@
       "timestamp": "2026-08-03T10:55:55Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=s%C3%A9parer&oldid=39771937",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=s%C3%A9parer&action=history",
-      "status": "author_source_binding_checked_independent_review_pending",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b105-1246-séparer-ver-selected",
@@ -3765,7 +3782,7 @@
           "author": "Académie française",
           "work": "Dictionnaire de l’Académie française, huitième édition (1932–1935)",
           "relationship": "Actual import or bibliographic marker retained; its presence does not identify the author of each selected sentence.",
-          "rights_status": "pending_independent_original_text_boundary_review"
+          "rights_status": "public_domain_daf8_original_edition_wiki_and_lexique_layers_cc_by_sa_4_0"
         }
       ],
       "contributors": [
@@ -3837,7 +3854,8 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\sources\\contributors-initial-2.api.json"
       ],
       "attribution_boundary": "Current paginated registry is broader than the fixed revision. Full article history provides attribution; names alone do not establish selected-sentence authorship or imported-text rights.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_review"
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "selected_text_rights_reason": "Selected French lexical definition/IPA and matching form/POS inspected in the fixed first-party wikitext. Full article/history credits Wiki contributors; Lexique scoped adaptation and EN/ZH translations remain CC BY-SA 4.0. Unselected quoted examples, media, foreign-language and translation-table wording are excluded. Actual DAF8 edition notice is retained separately; established 1932–1935 collective-edition public-domain basis under L123-3 gives conservative expiry 2006-01-01. The notice does not identify every modern sentence author. Other bibliography is a reference, not selected publisher quotation or licence transfer."
     },
     {
       "id": "b105_fr_9250",
@@ -3847,7 +3865,7 @@
       "timestamp": "2026-10-15T12:16:33Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=pain&oldid=39934657",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=pain&action=history",
-      "status": "author_source_binding_checked_independent_review_pending",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b105-1228-pain-nom-selected",
@@ -3937,7 +3955,7 @@
           "author": "Académie française",
           "work": "Dictionnaire de l’Académie française, huitième édition (1932–1935)",
           "relationship": "Actual import or bibliographic marker retained; its presence does not identify the author of each selected sentence.",
-          "rights_status": "pending_independent_original_text_boundary_review"
+          "rights_status": "public_domain_daf8_original_edition_wiki_and_lexique_layers_cc_by_sa_4_0"
         }
       ],
       "contributors": [
@@ -4114,7 +4132,8 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\sources\\contributors-initial-2.api.json"
       ],
       "attribution_boundary": "Current paginated registry is broader than the fixed revision. Full article history provides attribution; names alone do not establish selected-sentence authorship or imported-text rights.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_review"
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "selected_text_rights_reason": "Selected French lexical definition/IPA and matching form/POS inspected in the fixed first-party wikitext. Full article/history credits Wiki contributors; Lexique scoped adaptation and EN/ZH translations remain CC BY-SA 4.0. Unselected quoted examples, media, foreign-language and translation-table wording are excluded. Actual DAF8 edition notice is retained separately; established 1932–1935 collective-edition public-domain basis under L123-3 gives conservative expiry 2006-01-01. The notice does not identify every modern sentence author. Other bibliography is a reference, not selected publisher quotation or licence transfer."
     },
     {
       "id": "b105_fr_10687",
@@ -4124,7 +4143,7 @@
       "timestamp": "2026-11-15T00:08:19Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=maladie&oldid=40018877",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=maladie&action=history",
-      "status": "author_source_binding_checked_independent_review_pending",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b105-1248-maladie-nom-selected",
@@ -4323,7 +4342,8 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\sources\\contributors-initial-2.api.json"
       ],
       "attribution_boundary": "Current paginated registry is broader than the fixed revision. Full article history provides attribution; names alone do not establish selected-sentence authorship or imported-text rights.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_review"
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "selected_text_rights_reason": "Selected French lexical definition/IPA and matching form/POS inspected in the fixed first-party wikitext. Full article/history credits Wiki contributors; Lexique scoped adaptation and EN/ZH translations remain CC BY-SA 4.0. Unselected quoted examples, media, foreign-language and translation-table wording are excluded. Other bibliography is a reference, not selected publisher quotation or licence transfer."
     },
     {
       "id": "b105_fr_11743",
@@ -4333,7 +4353,7 @@
       "timestamp": "2026-11-19T17:53:40Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=construire&oldid=40046455",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=construire&action=history",
-      "status": "author_source_binding_checked_independent_review_pending",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b105-1227-construire-ver-selected",
@@ -4427,7 +4447,7 @@
           "author": "Académie française",
           "work": "Dictionnaire de l’Académie française, huitième édition (1932–1935)",
           "relationship": "Actual import or bibliographic marker retained; its presence does not identify the author of each selected sentence.",
-          "rights_status": "pending_independent_original_text_boundary_review"
+          "rights_status": "public_domain_daf8_original_edition_wiki_and_lexique_layers_cc_by_sa_4_0"
         }
       ],
       "contributors": [
@@ -4505,7 +4525,8 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\sources\\contributors-initial-2.api.json"
       ],
       "attribution_boundary": "Current paginated registry is broader than the fixed revision. Full article history provides attribution; names alone do not establish selected-sentence authorship or imported-text rights.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_review"
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "selected_text_rights_reason": "Selected French lexical definition/IPA and matching form/POS inspected in the fixed first-party wikitext. Full article/history credits Wiki contributors; Lexique scoped adaptation and EN/ZH translations remain CC BY-SA 4.0. Unselected quoted examples, media, foreign-language and translation-table wording are excluded. Actual DAF8 edition notice is retained separately; established 1932–1935 collective-edition public-domain basis under L123-3 gives conservative expiry 2006-01-01. The notice does not identify every modern sentence author. Other bibliography is a reference, not selected publisher quotation or licence transfer."
     },
     {
       "id": "b105_fr_11874",
@@ -4515,7 +4536,7 @@
       "timestamp": "2026-09-24T09:19:55Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=nature&oldid=39901176",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=nature&action=history",
-      "status": "author_source_binding_checked_independent_review_pending",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b105-1249-nature-nom-selected",
@@ -4605,7 +4626,7 @@
           "author": "Académie française",
           "work": "Dictionnaire de l’Académie française, huitième édition (1932–1935)",
           "relationship": "Actual import or bibliographic marker retained; its presence does not identify the author of each selected sentence.",
-          "rights_status": "pending_independent_original_text_boundary_review"
+          "rights_status": "public_domain_daf8_original_edition_wiki_and_lexique_layers_cc_by_sa_4_0"
         }
       ],
       "contributors": [
@@ -4714,7 +4735,8 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\sources\\contributors-initial-2.api.json"
       ],
       "attribution_boundary": "Current paginated registry is broader than the fixed revision. Full article history provides attribution; names alone do not establish selected-sentence authorship or imported-text rights.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_review"
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "selected_text_rights_reason": "Selected French lexical definition/IPA and matching form/POS inspected in the fixed first-party wikitext. Full article/history credits Wiki contributors; Lexique scoped adaptation and EN/ZH translations remain CC BY-SA 4.0. Unselected quoted examples, media, foreign-language and translation-table wording are excluded. Actual DAF8 edition notice is retained separately; established 1932–1935 collective-edition public-domain basis under L123-3 gives conservative expiry 2006-01-01. The notice does not identify every modern sentence author. Other bibliography is a reference, not selected publisher quotation or licence transfer."
     },
     {
       "id": "b105_fr_12074",
@@ -4724,7 +4746,7 @@
       "timestamp": "2026-08-30T16:31:25Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=vacance&oldid=39841120",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=vacance&action=history",
-      "status": "author_source_binding_checked_independent_review_pending",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b105-1217-vacance-nom-selected",
@@ -4864,7 +4886,8 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\sources\\contributors-initial-2.api.json"
       ],
       "attribution_boundary": "Current paginated registry is broader than the fixed revision. Full article history provides attribution; names alone do not establish selected-sentence authorship or imported-text rights.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_review"
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "selected_text_rights_reason": "Selected French lexical definition/IPA and matching form/POS inspected in the fixed first-party wikitext. Full article/history credits Wiki contributors; Lexique scoped adaptation and EN/ZH translations remain CC BY-SA 4.0. Unselected quoted examples, media, foreign-language and translation-table wording are excluded. Other bibliography is a reference, not selected publisher quotation or licence transfer."
     },
     {
       "id": "b105_fr_17402",
@@ -4874,7 +4897,7 @@
       "timestamp": "2025-10-31T08:30:58Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=l%C3%A0-haut&oldid=38990486",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=l%C3%A0-haut&action=history",
-      "status": "author_source_binding_checked_independent_review_pending",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b105-1221-là-haut-adv-selected",
@@ -4960,7 +4983,7 @@
           "author": "Académie française",
           "work": "Dictionnaire de l’Académie française, huitième édition (1932–1935)",
           "relationship": "Actual import or bibliographic marker retained; its presence does not identify the author of each selected sentence.",
-          "rights_status": "pending_independent_original_text_boundary_review"
+          "rights_status": "public_domain_daf8_original_edition_wiki_and_lexique_layers_cc_by_sa_4_0"
         }
       ],
       "contributors": [
@@ -5004,7 +5027,8 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\sources\\contributors-initial-2.api.json"
       ],
       "attribution_boundary": "Current paginated registry is broader than the fixed revision. Full article history provides attribution; names alone do not establish selected-sentence authorship or imported-text rights.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_review"
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "selected_text_rights_reason": "Selected French lexical definition/IPA and matching form/POS inspected in the fixed first-party wikitext. Full article/history credits Wiki contributors; Lexique scoped adaptation and EN/ZH translations remain CC BY-SA 4.0. Unselected quoted examples, media, foreign-language and translation-table wording are excluded. Actual DAF8 edition notice is retained separately; established 1932–1935 collective-edition public-domain basis under L123-3 gives conservative expiry 2006-01-01. The notice does not identify every modern sentence author. Other bibliography is a reference, not selected publisher quotation or licence transfer."
     },
     {
       "id": "b105_fr_29317",
@@ -5014,7 +5038,7 @@
       "timestamp": "2026-09-22T04:53:36Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=machine&oldid=39887745",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=machine&action=history",
-      "status": "author_source_binding_checked_independent_review_pending",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b105-1222-machine-nom-selected",
@@ -5104,7 +5128,7 @@
           "author": "Académie française",
           "work": "Dictionnaire de l’Académie française, huitième édition (1932–1935)",
           "relationship": "Actual import or bibliographic marker retained; its presence does not identify the author of each selected sentence.",
-          "rights_status": "pending_independent_original_text_boundary_review"
+          "rights_status": "public_domain_daf8_original_edition_wiki_and_lexique_layers_cc_by_sa_4_0"
         }
       ],
       "contributors": [
@@ -5205,7 +5229,8 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\sources\\contributors-initial-2.api.json"
       ],
       "attribution_boundary": "Current paginated registry is broader than the fixed revision. Full article history provides attribution; names alone do not establish selected-sentence authorship or imported-text rights.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_review"
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "selected_text_rights_reason": "Selected French lexical definition/IPA and matching form/POS inspected in the fixed first-party wikitext. Full article/history credits Wiki contributors; Lexique scoped adaptation and EN/ZH translations remain CC BY-SA 4.0. Unselected quoted examples, media, foreign-language and translation-table wording are excluded. Actual DAF8 edition notice is retained separately; established 1932–1935 collective-edition public-domain basis under L123-3 gives conservative expiry 2006-01-01. The notice does not identify every modern sentence author. Other bibliography is a reference, not selected publisher quotation or licence transfer."
     },
     {
       "id": "b105_fr_40843",
@@ -5215,7 +5240,7 @@
       "timestamp": "2016-06-14T03:35:06Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=qu%27&oldid=21403352",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=qu%27&action=history",
-      "status": "author_source_binding_checked_independent_review_pending",
+      "status": "supporting_evidence_only",
       "selected_locations": [],
       "selected_frames": [],
       "bibliographic_and_import_markers": [],
@@ -5236,7 +5261,8 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\sources\\contributors-initial-2.api.json"
       ],
       "attribution_boundary": "Current paginated registry is broader than the fixed revision. Full article history provides attribution; names alone do not establish selected-sentence authorship or imported-text rights.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_review"
+      "selected_text_rights_status": "no_accepted_fields",
+      "selected_text_rights_reason": "Source documents unresolved exact form/POS, not accepted field content."
     },
     {
       "id": "b105_fr_40880",
@@ -5246,7 +5272,7 @@
       "timestamp": "2023-04-20T16:46:20Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=qu&oldid=32115306",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=qu&action=history",
-      "status": "author_source_binding_checked_independent_review_pending",
+      "status": "supporting_evidence_only",
       "selected_locations": [],
       "selected_frames": [],
       "bibliographic_and_import_markers": [],
@@ -5281,7 +5307,8 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\sources\\contributors-initial-2.api.json"
       ],
       "attribution_boundary": "Current paginated registry is broader than the fixed revision. Full article history provides attribution; names alone do not establish selected-sentence authorship or imported-text rights.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_review"
+      "selected_text_rights_status": "no_accepted_fields",
+      "selected_text_rights_reason": "Source documents unresolved exact form/POS, not accepted field content."
     },
     {
       "id": "b105_fr_42455",
@@ -5291,7 +5318,7 @@
       "timestamp": "2026-11-10T16:47:15Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=tort&oldid=40001998",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=tort&action=history",
-      "status": "author_source_binding_checked_independent_review_pending",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b105-1216-tort-nom-selected",
@@ -5381,7 +5408,7 @@
           "author": "Académie française",
           "work": "Dictionnaire de l’Académie française, huitième édition (1932–1935)",
           "relationship": "Actual import or bibliographic marker retained; its presence does not identify the author of each selected sentence.",
-          "rights_status": "pending_independent_original_text_boundary_review"
+          "rights_status": "public_domain_daf8_original_edition_wiki_and_lexique_layers_cc_by_sa_4_0"
         }
       ],
       "contributors": [
@@ -5465,7 +5492,8 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\sources\\contributors-initial-2.api.json"
       ],
       "attribution_boundary": "Current paginated registry is broader than the fixed revision. Full article history provides attribution; names alone do not establish selected-sentence authorship or imported-text rights.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_review"
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "selected_text_rights_reason": "Selected French lexical definition/IPA and matching form/POS inspected in the fixed first-party wikitext. Full article/history credits Wiki contributors; Lexique scoped adaptation and EN/ZH translations remain CC BY-SA 4.0. Unselected quoted examples, media, foreign-language and translation-table wording are excluded. Actual DAF8 edition notice is retained separately; established 1932–1935 collective-edition public-domain basis under L123-3 gives conservative expiry 2006-01-01. The notice does not identify every modern sentence author. Other bibliography is a reference, not selected publisher quotation or licence transfer."
     },
     {
       "id": "b105_fr_102195",
@@ -5475,7 +5503,7 @@
       "timestamp": "2026-10-02T14:40:24Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=quartier&oldid=39914356",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=quartier&action=history",
-      "status": "author_source_binding_checked_independent_review_pending",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b105-1250-quartier-nom-selected",
@@ -5565,7 +5593,7 @@
           "author": "Académie française",
           "work": "Dictionnaire de l’Académie française, huitième édition (1932–1935)",
           "relationship": "Actual import or bibliographic marker retained; its presence does not identify the author of each selected sentence.",
-          "rights_status": "pending_independent_original_text_boundary_review"
+          "rights_status": "public_domain_daf8_original_edition_wiki_and_lexique_layers_cc_by_sa_4_0"
         }
       ],
       "contributors": [
@@ -5677,7 +5705,8 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\sources\\contributors-initial-2.api.json"
       ],
       "attribution_boundary": "Current paginated registry is broader than the fixed revision. Full article history provides attribution; names alone do not establish selected-sentence authorship or imported-text rights.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_review"
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "selected_text_rights_reason": "Selected French lexical definition/IPA and matching form/POS inspected in the fixed first-party wikitext. Full article/history credits Wiki contributors; Lexique scoped adaptation and EN/ZH translations remain CC BY-SA 4.0. Unselected quoted examples, media, foreign-language and translation-table wording are excluded. Actual DAF8 edition notice is retained separately; established 1932–1935 collective-edition public-domain basis under L123-3 gives conservative expiry 2006-01-01. The notice does not identify every modern sentence author. Other bibliography is a reference, not selected publisher quotation or licence transfer."
     },
     {
       "id": "b105_fr_114660",
@@ -5687,7 +5716,7 @@
       "timestamp": "2026-10-31T23:48:48Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=monstre&oldid=39972124",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=monstre&action=history",
-      "status": "author_source_binding_checked_independent_review_pending",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b105-1233-monstre-nom-selected",
@@ -5781,7 +5810,7 @@
           "author": "Académie française",
           "work": "Dictionnaire de l’Académie française, huitième édition (1932–1935)",
           "relationship": "Actual import or bibliographic marker retained; its presence does not identify the author of each selected sentence.",
-          "rights_status": "pending_independent_original_text_boundary_review"
+          "rights_status": "public_domain_daf8_original_edition_wiki_and_lexique_layers_cc_by_sa_4_0"
         }
       ],
       "contributors": [
@@ -5878,7 +5907,8 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\sources\\contributors-initial-2.api.json"
       ],
       "attribution_boundary": "Current paginated registry is broader than the fixed revision. Full article history provides attribution; names alone do not establish selected-sentence authorship or imported-text rights.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_review"
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "selected_text_rights_reason": "Selected French lexical definition/IPA and matching form/POS inspected in the fixed first-party wikitext. Full article/history credits Wiki contributors; Lexique scoped adaptation and EN/ZH translations remain CC BY-SA 4.0. Unselected quoted examples, media, foreign-language and translation-table wording are excluded. Actual DAF8 edition notice is retained separately; established 1932–1935 collective-edition public-domain basis under L123-3 gives conservative expiry 2006-01-01. The notice does not identify every modern sentence author. Other bibliography is a reference, not selected publisher quotation or licence transfer."
     },
     {
       "id": "b105_fr_122024",
@@ -5888,7 +5918,7 @@
       "timestamp": "2026-11-17T18:49:23Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=horrible&oldid=40040994",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=horrible&action=history",
-      "status": "author_source_binding_checked_independent_review_pending",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b105-1235-horrible-adj-selected",
@@ -5978,7 +6008,7 @@
           "author": "Académie française",
           "work": "Dictionnaire de l’Académie française, huitième édition (1932–1935)",
           "relationship": "Actual import or bibliographic marker retained; its presence does not identify the author of each selected sentence.",
-          "rights_status": "pending_independent_original_text_boundary_review"
+          "rights_status": "public_domain_daf8_original_edition_wiki_and_lexique_layers_cc_by_sa_4_0"
         }
       ],
       "contributors": [
@@ -6047,7 +6077,8 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\sources\\contributors-initial-2.api.json"
       ],
       "attribution_boundary": "Current paginated registry is broader than the fixed revision. Full article history provides attribution; names alone do not establish selected-sentence authorship or imported-text rights.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_review"
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "selected_text_rights_reason": "Selected French lexical definition/IPA and matching form/POS inspected in the fixed first-party wikitext. Full article/history credits Wiki contributors; Lexique scoped adaptation and EN/ZH translations remain CC BY-SA 4.0. Unselected quoted examples, media, foreign-language and translation-table wording are excluded. Actual DAF8 edition notice is retained separately; established 1932–1935 collective-edition public-domain basis under L123-3 gives conservative expiry 2006-01-01. The notice does not identify every modern sentence author. Other bibliography is a reference, not selected publisher quotation or licence transfer."
     },
     {
       "id": "b105_fr_142897",
@@ -6057,7 +6088,7 @@
       "timestamp": "2026-11-17T06:51:54Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=pleuvoir&oldid=40039356",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=pleuvoir&action=history",
-      "status": "author_source_binding_checked_independent_review_pending",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b105-1238-pleuvoir-ver-selected",
@@ -6236,7 +6267,8 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\sources\\contributors-initial-2.api.json"
       ],
       "attribution_boundary": "Current paginated registry is broader than the fixed revision. Full article history provides attribution; names alone do not establish selected-sentence authorship or imported-text rights.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_review"
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "selected_text_rights_reason": "Selected French lexical definition/IPA and matching form/POS inspected in the fixed first-party wikitext. Full article/history credits Wiki contributors; Lexique scoped adaptation and EN/ZH translations remain CC BY-SA 4.0. Unselected quoted examples, media, foreign-language and translation-table wording are excluded. Other bibliography is a reference, not selected publisher quotation or licence transfer."
     },
     {
       "id": "b105_fr_145946",
@@ -6246,7 +6278,7 @@
       "timestamp": "2026-08-03T10:39:10Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=juge&oldid=39771286",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=juge&action=history",
-      "status": "author_source_binding_checked_independent_review_pending",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b105-1244-juge-nom-selected",
@@ -6412,7 +6444,8 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\sources\\contributors-initial-2.api.json"
       ],
       "attribution_boundary": "Current paginated registry is broader than the fixed revision. Full article history provides attribution; names alone do not establish selected-sentence authorship or imported-text rights.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_review"
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "selected_text_rights_reason": "Selected French lexical definition/IPA and matching form/POS inspected in the fixed first-party wikitext. Full article/history credits Wiki contributors; Lexique scoped adaptation and EN/ZH translations remain CC BY-SA 4.0. Unselected quoted examples, media, foreign-language and translation-table wording are excluded. Other bibliography is a reference, not selected publisher quotation or licence transfer."
     },
     {
       "id": "b105_fr_153363",
@@ -6422,7 +6455,7 @@
       "timestamp": "2026-08-03T10:24:35Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=chier&oldid=39770712",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=chier&action=history",
-      "status": "author_source_binding_checked_independent_review_pending",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b105-1230-chier-ver-selected",
@@ -6516,7 +6549,7 @@
           "author": "Académie française",
           "work": "Dictionnaire de l’Académie française, huitième édition (1932–1935)",
           "relationship": "Actual import or bibliographic marker retained; its presence does not identify the author of each selected sentence.",
-          "rights_status": "pending_independent_original_text_boundary_review"
+          "rights_status": "public_domain_daf8_original_edition_wiki_and_lexique_layers_cc_by_sa_4_0"
         }
       ],
       "contributors": [
@@ -6614,7 +6647,8 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\sources\\contributors-initial-2.api.json"
       ],
       "attribution_boundary": "Current paginated registry is broader than the fixed revision. Full article history provides attribution; names alone do not establish selected-sentence authorship or imported-text rights.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_review"
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "selected_text_rights_reason": "Selected French lexical definition/IPA and matching form/POS inspected in the fixed first-party wikitext. Full article/history credits Wiki contributors; Lexique scoped adaptation and EN/ZH translations remain CC BY-SA 4.0. Unselected quoted examples, media, foreign-language and translation-table wording are excluded. Actual DAF8 edition notice is retained separately; established 1932–1935 collective-edition public-domain basis under L123-3 gives conservative expiry 2006-01-01. The notice does not identify every modern sentence author. Other bibliography is a reference, not selected publisher quotation or licence transfer."
     },
     {
       "id": "b105_fr_155390",
@@ -6624,7 +6658,7 @@
       "timestamp": "2026-03-31T13:59:22Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=contr%C3%B4le&oldid=39406725",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=contr%C3%B4le&action=history",
-      "status": "author_source_binding_checked_independent_review_pending",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b105-1245-contrôle-nom-selected",
@@ -6710,7 +6744,7 @@
           "author": "Académie française",
           "work": "Dictionnaire de l’Académie française, huitième édition (1932–1935)",
           "relationship": "Actual import or bibliographic marker retained; its presence does not identify the author of each selected sentence.",
-          "rights_status": "pending_independent_original_text_boundary_review"
+          "rights_status": "public_domain_daf8_original_edition_wiki_and_lexique_layers_cc_by_sa_4_0"
         }
       ],
       "contributors": [
@@ -6783,7 +6817,8 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\sources\\contributors-initial-2.api.json"
       ],
       "attribution_boundary": "Current paginated registry is broader than the fixed revision. Full article history provides attribution; names alone do not establish selected-sentence authorship or imported-text rights.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_review"
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "selected_text_rights_reason": "Selected French lexical definition/IPA and matching form/POS inspected in the fixed first-party wikitext. Full article/history credits Wiki contributors; Lexique scoped adaptation and EN/ZH translations remain CC BY-SA 4.0. Unselected quoted examples, media, foreign-language and translation-table wording are excluded. Actual DAF8 edition notice is retained separately; established 1932–1935 collective-edition public-domain basis under L123-3 gives conservative expiry 2006-01-01. The notice does not identify every modern sentence author. Other bibliography is a reference, not selected publisher quotation or licence transfer."
     },
     {
       "id": "b105_fr_156702",
@@ -6793,7 +6828,7 @@
       "timestamp": "2026-08-03T10:32:19Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=d%C3%A9cision&oldid=39771007",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=d%C3%A9cision&action=history",
-      "status": "author_source_binding_checked_independent_review_pending",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b105-1243-décision-nom-selected",
@@ -6879,7 +6914,7 @@
           "author": "Académie française",
           "work": "Dictionnaire de l’Académie française, huitième édition (1932–1935)",
           "relationship": "Actual import or bibliographic marker retained; its presence does not identify the author of each selected sentence.",
-          "rights_status": "pending_independent_original_text_boundary_review"
+          "rights_status": "public_domain_daf8_original_edition_wiki_and_lexique_layers_cc_by_sa_4_0"
         }
       ],
       "contributors": [
@@ -6937,7 +6972,8 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\sources\\contributors-initial-2.api.json"
       ],
       "attribution_boundary": "Current paginated registry is broader than the fixed revision. Full article history provides attribution; names alone do not establish selected-sentence authorship or imported-text rights.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_review"
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "selected_text_rights_reason": "Selected French lexical definition/IPA and matching form/POS inspected in the fixed first-party wikitext. Full article/history credits Wiki contributors; Lexique scoped adaptation and EN/ZH translations remain CC BY-SA 4.0. Unselected quoted examples, media, foreign-language and translation-table wording are excluded. Actual DAF8 edition notice is retained separately; established 1932–1935 collective-edition public-domain basis under L123-3 gives conservative expiry 2006-01-01. The notice does not identify every modern sentence author. Other bibliography is a reference, not selected publisher quotation or licence transfer."
     },
     {
       "id": "b105_fr_171341",
@@ -6947,7 +6983,7 @@
       "timestamp": "2026-11-19T20:48:20Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=pierre&oldid=40046886",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=pierre&action=history",
-      "status": "author_source_binding_checked_independent_review_pending",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b105-1237-pierre-nom-selected",
@@ -7037,7 +7073,7 @@
           "author": "Académie française",
           "work": "Dictionnaire de l’Académie française, huitième édition (1932–1935)",
           "relationship": "Actual import or bibliographic marker retained; its presence does not identify the author of each selected sentence.",
-          "rights_status": "pending_independent_original_text_boundary_review"
+          "rights_status": "public_domain_daf8_original_edition_wiki_and_lexique_layers_cc_by_sa_4_0"
         }
       ],
       "contributors": [
@@ -7171,7 +7207,8 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\sources\\contributors-initial-2.api.json"
       ],
       "attribution_boundary": "Current paginated registry is broader than the fixed revision. Full article history provides attribution; names alone do not establish selected-sentence authorship or imported-text rights.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_review"
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "selected_text_rights_reason": "Selected French lexical definition/IPA and matching form/POS inspected in the fixed first-party wikitext. Full article/history credits Wiki contributors; Lexique scoped adaptation and EN/ZH translations remain CC BY-SA 4.0. Unselected quoted examples, media, foreign-language and translation-table wording are excluded. Actual DAF8 edition notice is retained separately; established 1932–1935 collective-edition public-domain basis under L123-3 gives conservative expiry 2006-01-01. The notice does not identify every modern sentence author. Other bibliography is a reference, not selected publisher quotation or licence transfer."
     },
     {
       "id": "b105_fr_172751",
@@ -7181,7 +7218,7 @@
       "timestamp": "2026-09-01T21:11:10Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=proche&oldid=39848264",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=proche&action=history",
-      "status": "author_source_binding_checked_independent_review_pending",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b105-1241-proche-adj-selected",
@@ -7345,13 +7382,13 @@
           "author": "Académie française",
           "work": "Dictionnaire de l’Académie française, huitième édition (1932–1935)",
           "relationship": "Actual import or bibliographic marker retained; its presence does not identify the author of each selected sentence.",
-          "rights_status": "pending_independent_original_text_boundary_review"
+          "rights_status": "public_domain_daf8_original_edition_wiki_and_lexique_layers_cc_by_sa_4_0"
         },
         {
           "author": "Émile Littré",
           "work": "Dictionnaire de la langue française",
           "relationship": "Bibliographic marker only; no claim that every selected sentence is original Littré prose.",
-          "rights_status": "pending_independent_original_text_boundary_review"
+          "rights_status": "public_domain_littre_original_edition_wiki_and_lexique_layers_cc_by_sa_4_0"
         }
       ],
       "contributors": [
@@ -7435,7 +7472,8 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\sources\\contributors-initial-2.api.json"
       ],
       "attribution_boundary": "Current paginated registry is broader than the fixed revision. Full article history provides attribution; names alone do not establish selected-sentence authorship or imported-text rights.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_review"
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "selected_text_rights_reason": "Selected French lexical definition/IPA and matching form/POS inspected in the fixed first-party wikitext. Full article/history credits Wiki contributors; Lexique scoped adaptation and EN/ZH translations remain CC BY-SA 4.0. Unselected quoted examples, media, foreign-language and translation-table wording are excluded. Actual DAF8 edition notice is retained separately; established 1932–1935 collective-edition public-domain basis under L123-3 gives conservative expiry 2006-01-01. The notice does not identify every modern sentence author. Referenced Littré original edition is public domain (1873–1874/1878; author died 1881); Wiki/Lexique modifications remain separately CC BY-SA 4.0. Other bibliography is a reference, not selected publisher quotation or licence transfer."
     },
     {
       "id": "b105_fr_172752",
@@ -7445,7 +7483,7 @@
       "timestamp": "2026-08-03T14:04:46Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=profiter&oldid=39774097",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=profiter&action=history",
-      "status": "author_source_binding_checked_independent_review_pending",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b105-1236-profiter-ver-selected",
@@ -7547,7 +7585,7 @@
           "author": "Académie française",
           "work": "Dictionnaire de l’Académie française, huitième édition (1932–1935)",
           "relationship": "Actual import or bibliographic marker retained; its presence does not identify the author of each selected sentence.",
-          "rights_status": "pending_independent_original_text_boundary_review"
+          "rights_status": "public_domain_daf8_original_edition_wiki_and_lexique_layers_cc_by_sa_4_0"
         }
       ],
       "contributors": [
@@ -7618,7 +7656,8 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\sources\\contributors-initial-2.api.json"
       ],
       "attribution_boundary": "Current paginated registry is broader than the fixed revision. Full article history provides attribution; names alone do not establish selected-sentence authorship or imported-text rights.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_review"
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "selected_text_rights_reason": "Selected French lexical definition/IPA and matching form/POS inspected in the fixed first-party wikitext. Full article/history credits Wiki contributors; Lexique scoped adaptation and EN/ZH translations remain CC BY-SA 4.0. Unselected quoted examples, media, foreign-language and translation-table wording are excluded. Actual DAF8 edition notice is retained separately; established 1932–1935 collective-edition public-domain basis under L123-3 gives conservative expiry 2006-01-01. The notice does not identify every modern sentence author. Other bibliography is a reference, not selected publisher quotation or licence transfer."
     },
     {
       "id": "b105_fr_174815",
@@ -7628,7 +7667,7 @@
       "timestamp": "2026-10-18T15:59:49Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=r%C3%A9parer&oldid=39943919",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=r%C3%A9parer&action=history",
-      "status": "author_source_binding_checked_independent_review_pending",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b105-1226-réparer-ver-selected",
@@ -7714,7 +7753,7 @@
           "author": "Académie française",
           "work": "Dictionnaire de l’Académie française, huitième édition (1932–1935)",
           "relationship": "Actual import or bibliographic marker retained; its presence does not identify the author of each selected sentence.",
-          "rights_status": "pending_independent_original_text_boundary_review"
+          "rights_status": "public_domain_daf8_original_edition_wiki_and_lexique_layers_cc_by_sa_4_0"
         }
       ],
       "contributors": [
@@ -7788,7 +7827,8 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\sources\\contributors-initial-2.api.json"
       ],
       "attribution_boundary": "Current paginated registry is broader than the fixed revision. Full article history provides attribution; names alone do not establish selected-sentence authorship or imported-text rights.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_review"
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "selected_text_rights_reason": "Selected French lexical definition/IPA and matching form/POS inspected in the fixed first-party wikitext. Full article/history credits Wiki contributors; Lexique scoped adaptation and EN/ZH translations remain CC BY-SA 4.0. Unselected quoted examples, media, foreign-language and translation-table wording are excluded. Actual DAF8 edition notice is retained separately; established 1932–1935 collective-edition public-domain basis under L123-3 gives conservative expiry 2006-01-01. The notice does not identify every modern sentence author. Other bibliography is a reference, not selected publisher quotation or licence transfer."
     },
     {
       "id": "b105_fr_176605",
@@ -7798,7 +7838,7 @@
       "timestamp": "2026-09-04T12:01:23Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=signifier&oldid=39856327",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=signifier&action=history",
-      "status": "author_source_binding_checked_independent_review_pending",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b105-1223-signifier-ver-selected",
@@ -7884,7 +7924,7 @@
           "author": "Académie française",
           "work": "Dictionnaire de l’Académie française, huitième édition (1932–1935)",
           "relationship": "Actual import or bibliographic marker retained; its presence does not identify the author of each selected sentence.",
-          "rights_status": "pending_independent_original_text_boundary_review"
+          "rights_status": "public_domain_daf8_original_edition_wiki_and_lexique_layers_cc_by_sa_4_0"
         }
       ],
       "contributors": [
@@ -7953,7 +7993,8 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\sources\\contributors-initial-2.api.json"
       ],
       "attribution_boundary": "Current paginated registry is broader than the fixed revision. Full article history provides attribution; names alone do not establish selected-sentence authorship or imported-text rights.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_review"
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "selected_text_rights_reason": "Selected French lexical definition/IPA and matching form/POS inspected in the fixed first-party wikitext. Full article/history credits Wiki contributors; Lexique scoped adaptation and EN/ZH translations remain CC BY-SA 4.0. Unselected quoted examples, media, foreign-language and translation-table wording are excluded. Actual DAF8 edition notice is retained separately; established 1932–1935 collective-edition public-domain basis under L123-3 gives conservative expiry 2006-01-01. The notice does not identify every modern sentence author. Other bibliography is a reference, not selected publisher quotation or licence transfer."
     },
     {
       "id": "b105_fr_1677955",
@@ -7963,7 +8004,7 @@
       "timestamp": "2026-09-10T10:51:12Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=salope&oldid=39869608",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=salope&action=history",
-      "status": "author_source_binding_checked_independent_review_pending",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b105-1239-salope-nom-selected",
@@ -8057,7 +8098,7 @@
           "author": "Académie française",
           "work": "Dictionnaire de l’Académie française, huitième édition (1932–1935)",
           "relationship": "Actual import or bibliographic marker retained; its presence does not identify the author of each selected sentence.",
-          "rights_status": "pending_independent_original_text_boundary_review"
+          "rights_status": "public_domain_daf8_original_edition_wiki_and_lexique_layers_cc_by_sa_4_0"
         }
       ],
       "contributors": [
@@ -8198,7 +8239,8 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\sources\\contributors-initial-2.api.json"
       ],
       "attribution_boundary": "Current paginated registry is broader than the fixed revision. Full article history provides attribution; names alone do not establish selected-sentence authorship or imported-text rights.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_review"
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "selected_text_rights_reason": "Selected French lexical definition/IPA and matching form/POS inspected in the fixed first-party wikitext. Full article/history credits Wiki contributors; Lexique scoped adaptation and EN/ZH translations remain CC BY-SA 4.0. Unselected quoted examples, media, foreign-language and translation-table wording are excluded. Actual DAF8 edition notice is retained separately; established 1932–1935 collective-edition public-domain basis under L123-3 gives conservative expiry 2006-01-01. The notice does not identify every modern sentence author. Other bibliography is a reference, not selected publisher quotation or licence transfer."
     },
     {
       "id": "b105_fr_1883288",
@@ -8208,7 +8250,7 @@
       "timestamp": "2026-08-03T11:08:50Z",
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=j&oldid=39772412",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=j&action=history",
-      "status": "author_source_binding_checked_independent_review_pending",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b105-1232-j-nom-selected",
@@ -8381,7 +8423,8 @@
         "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-105\\target\\issue-105\\sources\\contributors-initial-2.api.json"
       ],
       "attribution_boundary": "Current paginated registry is broader than the fixed revision. Full article history provides attribution; names alone do not establish selected-sentence authorship or imported-text rights.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_review"
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "selected_text_rights_reason": "Selected French lexical definition/IPA and matching form/POS inspected in the fixed first-party wikitext. Full article/history credits Wiki contributors; Lexique scoped adaptation and EN/ZH translations remain CC BY-SA 4.0. Unselected quoted examples, media, foreign-language and translation-table wording are excluded. Other bibliography is a reference, not selected publisher quotation or licence transfer."
     }
   ],
   "grammar_corroboration": [
@@ -8415,7 +8458,7 @@
       "proposed_spelling": "mariée",
       "relation_role": "source_binding_only",
       "alias_admission": "not_admitted",
-      "independent_review": "pending",
+      "independent_review": "passed_for_distinct_form_evidence_only",
       "exact_source": {
         "source_id": "b105_fr_193641",
         "revid": 39039210,
@@ -8427,7 +8470,9 @@
         "raw_source_excerpt": "'''marié''' {{pron|ma.ʁje|fr}}",
         "reviewed_excerpt": "'''marié''' {{pron|ma.ʁje|fr}}"
       },
-      "assessment": "Evidence of a distinct source form only; it does not authorize a runtime alias or substitution of frozen membership."
+      "assessment": "The distinct feminine source form is grammatical evidence only; exact masculine frozen spelling and use stay unchanged. No alias is approved.",
+      "reviewer": "Independent selected-content and rights reviewer for issue 105; separate from author and merger",
+      "independence": true
     },
     {
       "frozen_row": 1211,
@@ -8435,7 +8480,7 @@
       "proposed_spelling": "mariée",
       "relation_role": "source_binding_only",
       "alias_admission": "not_admitted",
-      "independent_review": "pending",
+      "independent_review": "passed_for_distinct_form_evidence_only",
       "exact_source": {
         "source_id": "b105_fr_193641",
         "revid": 39039210,
@@ -8447,7 +8492,9 @@
         "raw_source_excerpt": "'''marié''' {{pron|ma.ʁje|fr}} {{m}} {{équiv-pour|une femme|mariée|lang=fr}}",
         "reviewed_excerpt": "'''marié''' {{pron|ma.ʁje|fr}} {{m}} {{équiv-pour|une femme|mariée|lang=fr}}"
       },
-      "assessment": "Evidence of a distinct source form only; it does not authorize a runtime alias or substitution of frozen membership."
+      "assessment": "The distinct feminine source form is grammatical evidence only; exact masculine frozen spelling and use stay unchanged. No alias is approved.",
+      "reviewer": "Independent selected-content and rights reviewer for issue 105; separate from author and merger",
+      "independence": true
     },
     {
       "frozen_row": 1214,
@@ -8455,7 +8502,7 @@
       "proposed_spelling": "méchante",
       "relation_role": "source_binding_only",
       "alias_admission": "not_admitted",
-      "independent_review": "pending",
+      "independent_review": "passed_for_distinct_form_evidence_only",
       "exact_source": {
         "source_id": "b105_fr_167654",
         "revid": 39910921,
@@ -8467,7 +8514,9 @@
         "raw_source_excerpt": "'''méchant''' {{pron|me.ʃɑ̃|fr}} {{m}} {{équiv-pour|lang=fr|une femme|méchante}}",
         "reviewed_excerpt": "'''méchant''' {{pron|me.ʃɑ̃|fr}} {{m}} {{équiv-pour|lang=fr|une femme|méchante}}"
       },
-      "assessment": "Evidence of a distinct source form only; it does not authorize a runtime alias or substitution of frozen membership."
+      "assessment": "The distinct feminine source form is grammatical evidence only; exact masculine frozen spelling and use stay unchanged. No alias is approved.",
+      "reviewer": "Independent selected-content and rights reviewer for issue 105; separate from author and merger",
+      "independence": true
     },
     {
       "frozen_row": 1218,
@@ -8475,7 +8524,7 @@
       "proposed_spelling": "qu'",
       "relation_role": "source_binding_only",
       "alias_admission": "not_admitted",
-      "independent_review": "pending",
+      "independent_review": "rejected_as_bare_spelling_bridge",
       "exact_source": {
         "source_id": "b105_fr_40843",
         "revid": 21403352,
@@ -8487,7 +8536,9 @@
         "raw_source_excerpt": "#REDIRECT [[qu’]]",
         "reviewed_excerpt": "#REDIRECT [[qu’]]"
       },
-      "assessment": "Evidence of a distinct source form only; it does not authorize a runtime alias or substitution of frozen membership."
+      "assessment": "Actual qu' redirect and qu’ revision 39524860 support apostrophe-form elision of que in these POS frames. Bare qu revision 32115306 supplies only the letter-name noun /ky/. No primary bridge to the exact frozen bare spelling was found; four fields remain missing.",
+      "reviewer": "Independent selected-content and rights reviewer for issue 105; separate from author and merger",
+      "independence": true
     },
     {
       "frozen_row": 1219,
@@ -8495,7 +8546,7 @@
       "proposed_spelling": "qu'",
       "relation_role": "source_binding_only",
       "alias_admission": "not_admitted",
-      "independent_review": "pending",
+      "independent_review": "rejected_as_bare_spelling_bridge",
       "exact_source": {
         "source_id": "b105_fr_40843",
         "revid": 21403352,
@@ -8507,7 +8558,9 @@
         "raw_source_excerpt": "#REDIRECT [[qu’]]",
         "reviewed_excerpt": "#REDIRECT [[qu’]]"
       },
-      "assessment": "Evidence of a distinct source form only; it does not authorize a runtime alias or substitution of frozen membership."
+      "assessment": "Actual qu' redirect and qu’ revision 39524860 support apostrophe-form elision of que in these POS frames. Bare qu revision 32115306 supplies only the letter-name noun /ky/. No primary bridge to the exact frozen bare spelling was found; four fields remain missing.",
+      "reviewer": "Independent selected-content and rights reviewer for issue 105; separate from author and merger",
+      "independence": true
     },
     {
       "frozen_row": 1220,
@@ -8515,7 +8568,7 @@
       "proposed_spelling": "qu'",
       "relation_role": "source_binding_only",
       "alias_admission": "not_admitted",
-      "independent_review": "pending",
+      "independent_review": "rejected_as_bare_spelling_bridge",
       "exact_source": {
         "source_id": "b105_fr_40843",
         "revid": 21403352,
@@ -8527,7 +8580,9 @@
         "raw_source_excerpt": "#REDIRECT [[qu’]]",
         "reviewed_excerpt": "#REDIRECT [[qu’]]"
       },
-      "assessment": "Evidence of a distinct source form only; it does not authorize a runtime alias or substitution of frozen membership."
+      "assessment": "Actual qu' redirect and qu’ revision 39524860 support apostrophe-form elision of que in these POS frames. Bare qu revision 32115306 supplies only the letter-name noun /ky/. No primary bridge to the exact frozen bare spelling was found; four fields remain missing.",
+      "reviewer": "Independent selected-content and rights reviewer for issue 105; separate from author and merger",
+      "independence": true
     },
     {
       "frozen_row": 1232,
@@ -8535,7 +8590,7 @@
       "proposed_spelling": "J",
       "relation_role": "source_binding_only",
       "alias_admission": "not_admitted",
-      "independent_review": "pending",
+      "independent_review": "not_accepted_as_case_equivalence",
       "exact_source": {
         "source_id": "b105_fr_1883288",
         "revid": 39772412,
@@ -8547,9 +8602,18 @@
         "raw_source_excerpt": "# Dixième lettre et septième consonne de l’alphabet (minuscule).",
         "reviewed_excerpt": "# Dixième lettre et septième consonne de l’alphabet (minuscule)."
       },
-      "assessment": "Evidence of a distinct source form only; it does not authorize a runtime alias or substitution of frozen membership."
+      "assessment": "The selected exact source says minuscule; it supports j/NOM, not an uppercase-equivalence admission. No case alias is approved.",
+      "reviewer": "Independent selected-content and rights reviewer for issue 105; separate from author and merger",
+      "independence": true
     }
   ],
   "source_licensing_authorities": "Existing core-pilot-79 curated-inputs.json rights authorities and COPYING; source-specific selected text and import rights still require separate review.",
-  "rights_review": "Pending independent selected-text and original imported-prose audit; article licence and contributor names alone are not an admission decision."
+  "rights_review": "passed_at_selected_text_boundary_for_184_fields; actual combined package notices remain parent-owned",
+  "combined_redistribution_obligations": [
+    "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+    "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+    "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+    "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+    "Impose no additional restrictions or obstructive effective technological measures."
+  ]
 }

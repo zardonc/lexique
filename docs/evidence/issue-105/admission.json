@@ -1,6 +1,6 @@
 {
   "ticket": 105,
-  "status": "pending_separate_independent_review",
+  "status": "selected_content_review_passed_batch_incomplete",
   "frozen_rows": [
     1201,
     1202,
@@ -59,9 +59,9 @@
   "proposed_groups": 46,
   "proposed_fields": 184,
   "candidate_missing_fields": 16,
-  "independently_accepted_new_groups": 0,
-  "independently_accepted_new_fields": 0,
-  "admitted_missing_fields": 200,
+  "independently_accepted_new_groups": 46,
+  "independently_accepted_new_fields": 184,
+  "admitted_missing_fields": 16,
   "unresolved_rows": [
     1208,
     1218,
@@ -69,9 +69,16 @@
     1220
   ],
   "approved_new_annotation_exceptions": [],
-  "reviewer": null,
+  "reviewer": "Independent selected-content and rights reviewer for issue 105; separate from author and merger",
   "resource_admission": "incomplete",
-  "combined_redistribution_obligations": "pending_independent_original_text_and_final_package_review",
-  "native_checks": "integration_owned_not_run_by_content_author",
-  "final_output_validation": "author_boundary_check_only"
+  "combined_redistribution_obligations": "selected_span_rights_passed_actual_package_notices_pending_parent",
+  "native_checks": "parent_owned_not_run_by_independent_content_reviewer",
+  "final_output_validation": "seven_file_exact_source_content_and_membership_check",
+  "independence": true,
+  "accepted_groups": 46,
+  "accepted_fields": 184,
+  "accepted_sources": 40,
+  "pending_independent_review_fields": 0,
+  "quality_report": "independent-review.md",
+  "runtime_aliases_added": []
 }
