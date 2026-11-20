@@ -789,5 +789,60 @@
   "current_revision_cutoff": null,
   "capture_boundary": "Original first-party API response bytes and complete blank-line-preserving wikitext; unique page-ID filenames preserve case-distinct titles.",
   "full_article_history_attribution": true,
-  "selected_sentence_authorship_proved": false
+  "selected_sentence_authorship_proved": false,
+  "independent_verification": {
+    "status": "passed",
+    "refetched_fixed_revisions": 56,
+    "report": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-102\\target\\issue-102\\reviewer-primary\\remote-verification.json",
+    "scope": "Original API bytes/wikitext compared against independent first-party fixed-revision requests, including timestamps, page IDs, titles and last editor. Full history links provide contributor attribution."
+  },
+  "reviewer_primary_corroboration": [
+    {
+      "id": "b102_corroboration_cambridge_mme",
+      "url": "https://dictionary.cambridge.org/fr/dictionnaire/francais-anglais/mme",
+      "title": "Cambridge Dictionary, French–English GLOBAL entry mme",
+      "attribution": "Cambridge University Press & Assessment; underlying GLOBAL dictionary © 2018 K Dictionaries Ltd",
+      "version": "No publisher revision ID exposed; fixed original HTML capture",
+      "captured_at_utc": "2026-11-19T21:41:41.845133+00:00",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-102\\target\\issue-102\\reviewer-primary\\cambridge.html",
+      "spans": [
+        {
+          "line_1_based": 790,
+          "column_1_based": 54,
+          "raw_source_excerpt": "<h2 class=\"tw-bw dhw dpos-h_hw di-title \">mme</h2>"
+        },
+        {
+          "line_1_based": 790,
+          "column_1_based": 316,
+          "raw_source_excerpt": "<span class=\"ipa dipa\">madam</span>"
+        },
+        {
+          "line_1_based": 806,
+          "column_1_based": 297,
+          "raw_source_excerpt": "title=\"madame\" rel=\"\">madame</a>"
+        },
+        {
+          "line_1_based": 808,
+          "column_1_based": 328,
+          "raw_source_excerpt": "Mme ou Mlle"
+        }
+      ],
+      "rights_boundary": "Proprietary dictionary: citation and spelling/typography corroboration only; no publisher gloss, translation or example is admitted as a dictionary field."
+    },
+    {
+      "id": "b102_corroboration_oqlf_titles",
+      "url": "https://vitrinelinguistique.oqlf.gouv.qc.ca/21435/les-abreviations-et-les-symboles/les-abreviations/cas-particuliers-dabreviations/abreviation-de-madame-de-mademoiselle-et-de-monsieur",
+      "title": "OQLF, Abréviation de madame, de mademoiselle et de monsieur",
+      "attribution": "Office québécois de la langue française",
+      "version": "Fixed retrieved text capture; no page revision ID exposed",
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-102\\target\\issue-102\\reviewer-primary\\web-authorities.json",
+      "source_lines_0_based": [
+        4,
+        11,
+        22
+      ],
+      "finding": "Mme uses uppercase M, lowercase me, no abbreviation point; normally before a third person’s name/function. Direct address and letter salutations use the full title.",
+      "rights_boundary": "Citation and usage corroboration only; no OQLF prose supplies dictionary fields."
+    }
+  ]
 }

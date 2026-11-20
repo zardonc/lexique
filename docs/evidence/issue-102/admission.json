@@ -1,8 +1,8 @@
 {
   "issue": 102,
   "status": "pending",
-  "independence": false,
-  "reviewer": null,
+  "independence": true,
+  "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
   "frozen_rows": [
     1051,
     1052,
@@ -55,20 +55,20 @@
     1099,
     1100
   ],
-  "accepted_groups": 0,
-  "accepted_fields": 0,
+  "accepted_groups": 48,
+  "accepted_fields": 192,
   "candidate_groups": 48,
   "candidate_fields": 192,
-  "source_blocked_groups": 2,
+  "source_blocked_groups": 1,
   "blocked_fields": 8,
-  "missing_admitted_fields": 200,
+  "missing_admitted_fields": 8,
   "scope_denominator_groups": 4087,
   "unresolved": [
     {
       "frozen_row": 1051,
       "headword": "s",
       "pos": "PRO:per",
-      "reason": "The French bare s article has only a letter section. Personal-pronoun meaning is supported for s’ as elided se, not exact bare s. No sourced omission-of-apostrophe relationship established.",
+      "reason": "Independently confirmed: exact French s revision 39772394 has a letter section at lines 50–54; apostrophized s’ separately abbreviates se. Neither establishes a bare s personal pronoun or an omitted-apostrophe spelling relation. Lexique exact s/PRO:per has phon Es, the letter pronunciation, and supplies no valid pronoun IPA. Owner scope decision or new exact-spelling evidence is required.",
       "fields_pending": [
         "french_definition",
         "ipa",
@@ -76,7 +76,7 @@
         "chinese"
       ],
       "owner_approved_exception": false,
-      "independent_confirmation": "pending",
+      "independent_confirmation": "confirmed_source_gap",
       "evidence": [
         {
           "purpose": "Exact spelling/POS boundary",
@@ -188,13 +188,14 @@
           "column_1_based": 1,
           "raw_source_excerpt": "# [[pronom personnel|Pronom personnel]] de la troisième personne des deux [[genre]]s et des deux [[nombre]]s, utilisé comme [[complément d’objet]] d’un [[verbe]] [[transitif]] [[direct]] ou [[indirect]]."
         }
-      ]
+      ],
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger"
     },
     {
       "frozen_row": 1057,
       "headword": "mme",
       "pos": "NOM",
-      "reason": "Exact lowercase mme is a translingual ISO code for Mae, without a French noun section. French capitalized Mme supports Madame abbreviation; no lowercase French spelling bridge established.",
+      "reason": "Lowercase-key relation to French title Mme is independently supported by Cambridge, Lexique 3.83 and fixed Wiktionnaire Mme. Four sourced FR/IPA/EN/ZH fields and complete standard-written-title restrictions still need an author draft followed by a separate independent check. No new content is accepted and no scope exception is asserted.",
       "fields_pending": [
         "french_definition",
         "ipa",
@@ -202,7 +203,7 @@
         "chinese"
       ],
       "owner_approved_exception": false,
-      "independent_confirmation": "pending",
+      "independent_confirmation": "passed_spelling_relation_pending_content",
       "evidence": [
         {
           "purpose": "Exact spelling/POS boundary",
@@ -294,9 +295,29 @@
           "column_1_based": 1,
           "raw_source_excerpt": "# [[Madame]] (comme [[titre]])."
         }
-      ]
+      ],
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "replacement_needs": "Author four fields using eligible fixed French title sources, with standard capitalization/construction restrictions; separate reviewer must check the new exact text."
     }
   ],
   "approved_annotation_exceptions": [],
-  "final_output_validation": "pending independent review and integration conversion/native checks"
+  "final_output_validation": "pending batch completion and integration conversion/notices/native checks",
+  "reviewed_author_commit": "3a4e358a9a9a8562574729b604321d9f7dde1c83",
+  "accepted_sources": 45,
+  "pending_author_groups": 1,
+  "quality_report": "independent-review.md",
+  "runtime_aliases_added": [],
+  "packaging_obligations_status": "identified for all 192 accepted fields; final combined bundle not verified by this reviewer",
+  "replacement_needs": [
+    {
+      "frozen_row": 1051,
+      "need": "New primary exact bare-s pronoun evidence or owner scope decision; no substitute admitted."
+    },
+    {
+      "frozen_row": 1057,
+      "need": "Author four sourced title fields and capitalization/construction restrictions; independently review the new exact wording."
+    }
+  ],
+  "source_blocked_fields": 4,
+  "pending_author_fields": 4
 }

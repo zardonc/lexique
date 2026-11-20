@@ -12,7 +12,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1060-poisson-nom-selected",
@@ -211,9 +211,11 @@
         }
       ],
       "original_authors_and_rights": [],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_648",
@@ -227,7 +229,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations. Referenced/imported original edition: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), public domain separately from Wiki/Lexique adaptations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1093-but-nom-selected",
@@ -477,12 +479,14 @@
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
           "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-          "independent_review": "pending"
+          "independent_review": "passed_edition_basis_for_selected_spans"
         }
       ],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_781",
@@ -549,7 +553,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1059-bière-nom-selected",
@@ -828,9 +832,11 @@
         }
       ],
       "original_authors_and_rights": [],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_3432",
@@ -844,7 +850,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations. Referenced/imported original edition: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), public domain separately from Wiki/Lexique adaptations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1062-a-nom-selected",
@@ -1046,12 +1052,14 @@
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
           "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-          "independent_review": "pending"
+          "independent_review": "passed_edition_basis_for_selected_spans"
         }
       ],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_3796",
@@ -1065,7 +1073,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations. Referenced/imported original edition: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), public domain separately from Wiki/Lexique adaptations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1052-couleur-nom-selected",
@@ -1409,12 +1417,14 @@
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
           "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-          "independent_review": "pending"
+          "independent_review": "passed_edition_basis_for_selected_spans"
         }
       ],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line. The CFC cartography sentence at line 99 is unselected and supplies no wording or meaning.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_4060",
@@ -1428,7 +1438,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1078-liberté-nom-selected",
@@ -1660,9 +1670,11 @@
         }
       ],
       "original_authors_and_rights": [],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_4146",
@@ -1676,7 +1688,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations. Referenced/imported original edition: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), public domain separately from Wiki/Lexique adaptations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1072-retirer-ver-selected",
@@ -1894,12 +1906,14 @@
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
           "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-          "independent_review": "pending"
+          "independent_review": "passed_edition_basis_for_selected_spans"
         }
       ],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_4443",
@@ -1913,7 +1927,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations. Referenced/imported original edition: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), public domain separately from Wiki/Lexique adaptations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1058-arbre-nom-selected",
@@ -2098,12 +2112,14 @@
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
           "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-          "independent_review": "pending"
+          "independent_review": "passed_edition_basis_for_selected_spans"
         }
       ],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_4748",
@@ -2117,7 +2133,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations. Referenced/imported original edition: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), public domain separately from Wiki/Lexique adaptations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1089-bonheur-nom-selected",
@@ -2343,12 +2359,14 @@
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
           "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-          "independent_review": "pending"
+          "independent_review": "passed_edition_basis_for_selected_spans"
         }
       ],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_7864",
@@ -2362,7 +2380,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1086-classe-nom-selected",
@@ -2722,9 +2740,11 @@
         }
       ],
       "original_authors_and_rights": [],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_7910",
@@ -2738,7 +2758,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations. Referenced/imported original edition: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), public domain separately from Wiki/Lexique adaptations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1087-dossier-nom-selected",
@@ -2940,12 +2960,14 @@
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
           "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-          "independent_review": "pending"
+          "independent_review": "passed_edition_basis_for_selected_spans"
         }
       ],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_8077",
@@ -2959,7 +2981,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1096-radio-nom-selected",
@@ -3167,9 +3189,11 @@
         }
       ],
       "original_authors_and_rights": [],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_8114",
@@ -3183,7 +3207,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations. Referenced/imported original edition: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), public domain separately from Wiki/Lexique adaptations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1073-directeur-adj-selected",
@@ -3486,12 +3510,14 @@
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
           "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-          "independent_review": "pending"
+          "independent_review": "passed_edition_basis_for_selected_spans"
         }
       ],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_8327",
@@ -3505,7 +3531,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations. Referenced/imported original edition: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), public domain separately from Wiki/Lexique adaptations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1085-partager-ver-selected",
@@ -3763,12 +3789,14 @@
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
           "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-          "independent_review": "pending"
+          "independent_review": "passed_edition_basis_for_selected_spans"
         }
       ],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_8361",
@@ -3782,7 +3810,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations. Referenced/imported original edition: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), public domain separately from Wiki/Lexique adaptations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1071-dedans-adv-selected",
@@ -3936,12 +3964,14 @@
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
           "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-          "independent_review": "pending"
+          "independent_review": "passed_edition_basis_for_selected_spans"
         }
       ],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_8369",
@@ -3955,7 +3985,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations. Referenced/imported original edition: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), public domain separately from Wiki/Lexique adaptations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1091-défendre-ver-selected",
@@ -4275,12 +4305,14 @@
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
           "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-          "independent_review": "pending"
+          "independent_review": "passed_edition_basis_for_selected_spans"
         }
       ],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_8590",
@@ -4294,7 +4326,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations. Referenced/imported original edition: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), public domain separately from Wiki/Lexique adaptations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1069-ben-adv-selected",
@@ -4560,12 +4592,14 @@
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
           "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-          "independent_review": "pending"
+          "independent_review": "passed_edition_basis_for_selected_spans"
         }
       ],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_10164",
@@ -4579,7 +4613,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations. Referenced/imported original edition: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), public domain separately from Wiki/Lexique adaptations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1061-selon-pre-selected",
@@ -4740,12 +4774,14 @@
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
           "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-          "independent_review": "pending"
+          "independent_review": "passed_edition_basis_for_selected_spans"
         }
       ],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_11725",
@@ -4759,7 +4795,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations. Referenced/imported original edition: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), public domain separately from Wiki/Lexique adaptations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1053-image-nom-selected",
@@ -4999,12 +5035,14 @@
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
           "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-          "independent_review": "pending"
+          "independent_review": "passed_edition_basis_for_selected_spans"
         }
       ],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_12447",
@@ -5018,7 +5056,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations. Referenced/imported original edition: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), public domain separately from Wiki/Lexique adaptations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1098-vide-adj-selected",
@@ -5355,12 +5393,14 @@
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
           "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-          "independent_review": "pending"
+          "independent_review": "passed_edition_basis_for_selected_spans"
         }
       ],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_15149",
@@ -5374,7 +5414,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations. Referenced/imported original edition: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), public domain separately from Wiki/Lexique adaptations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1100-celui-là-pro-dem-selected",
@@ -5523,12 +5563,14 @@
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
           "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-          "independent_review": "pending"
+          "independent_review": "passed_edition_basis_for_selected_spans"
         }
       ],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_36359",
@@ -5542,7 +5584,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations. Referenced/imported original edition: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), public domain separately from Wiki/Lexique adaptations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1094-bande-nom-selected",
@@ -5863,12 +5905,14 @@
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
           "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-          "independent_review": "pending"
+          "independent_review": "passed_edition_basis_for_selected_spans"
         }
       ],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_39120",
@@ -5882,7 +5926,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations. Referenced/imported original edition: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), public domain separately from Wiki/Lexique adaptations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1069-ben-adv-selected",
@@ -6180,12 +6224,14 @@
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
           "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-          "independent_review": "pending"
+          "independent_review": "passed_edition_basis_for_selected_spans"
         }
       ],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_62218",
@@ -6199,7 +6245,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1054-connard-adj-selected",
@@ -6510,9 +6556,11 @@
         }
       ],
       "original_authors_and_rights": [],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_68847",
@@ -6526,7 +6574,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations. Referenced/imported original edition: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), public domain separately from Wiki/Lexique adaptations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1075-bord-nom-selected",
@@ -6728,12 +6776,14 @@
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
           "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-          "independent_review": "pending"
+          "independent_review": "passed_edition_basis_for_selected_spans"
         }
       ],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_86355",
@@ -6747,7 +6797,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations. Referenced/imported original edition: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), public domain separately from Wiki/Lexique adaptations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1082-patient-adj-selected",
@@ -7044,12 +7094,14 @@
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
           "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-          "independent_review": "pending"
+          "independent_review": "passed_edition_basis_for_selected_spans"
         }
       ],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_117759",
@@ -7063,7 +7115,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations. Referenced/imported original edition: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), public domain separately from Wiki/Lexique adaptations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1064-lieutenant-nom-selected",
@@ -7282,12 +7334,14 @@
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
           "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-          "independent_review": "pending"
+          "independent_review": "passed_edition_basis_for_selected_spans"
         }
       ],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_138813",
@@ -7301,7 +7355,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations. Referenced/imported original edition: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), public domain separately from Wiki/Lexique adaptations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1066-appartenir-ver-selected",
@@ -7511,12 +7565,14 @@
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
           "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-          "independent_review": "pending"
+          "independent_review": "passed_edition_basis_for_selected_spans"
         }
       ],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_149155",
@@ -7530,7 +7586,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations. Referenced/imported original edition: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), public domain separately from Wiki/Lexique adaptations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1081-banque-nom-selected",
@@ -7747,12 +7803,14 @@
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
           "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-          "independent_review": "pending"
+          "independent_review": "passed_edition_basis_for_selected_spans"
         }
       ],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_156396",
@@ -7766,7 +7824,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations. Referenced/imported original edition: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), public domain separately from Wiki/Lexique adaptations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1065-danger-nom-selected",
@@ -7952,12 +8010,14 @@
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
           "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-          "independent_review": "pending"
+          "independent_review": "passed_edition_basis_for_selected_spans"
         }
       ],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_159683",
@@ -7971,7 +8031,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations. Referenced/imported original edition: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), public domain separately from Wiki/Lexique adaptations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1076-entier-adj-selected",
@@ -8141,12 +8201,14 @@
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
           "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-          "independent_review": "pending"
+          "independent_review": "passed_edition_basis_for_selected_spans"
         }
       ],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_161065",
@@ -8160,7 +8222,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations. Referenced/imported original edition: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), public domain separately from Wiki/Lexique adaptations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1095-fatiguer-ver-selected",
@@ -8345,12 +8407,14 @@
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
           "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-          "independent_review": "pending"
+          "independent_review": "passed_edition_basis_for_selected_spans"
         }
       ],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_165344",
@@ -8364,7 +8428,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations. Referenced/imported original edition: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), public domain separately from Wiki/Lexique adaptations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1063-intérêt-nom-selected",
@@ -8565,12 +8629,14 @@
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
           "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-          "independent_review": "pending"
+          "independent_review": "passed_edition_basis_for_selected_spans"
         }
       ],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_165493",
@@ -8584,7 +8650,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations. Referenced/imported original edition: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), public domain separately from Wiki/Lexique adaptations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1079-inutile-adj-selected",
@@ -8778,12 +8844,14 @@
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
           "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-          "independent_review": "pending"
+          "independent_review": "passed_edition_basis_for_selected_spans"
         }
       ],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_166231",
@@ -8797,7 +8865,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations. Referenced/imported original edition: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), public domain separately from Wiki/Lexique adaptations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1084-lancer-ver-selected",
@@ -9239,12 +9307,14 @@
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
           "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-          "independent_review": "pending"
+          "independent_review": "passed_edition_basis_for_selected_spans"
         }
       ],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_168080",
@@ -9258,7 +9328,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations. Referenced/imported original edition: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), public domain separately from Wiki/Lexique adaptations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1090-mignon-adj-selected",
@@ -9507,12 +9577,14 @@
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
           "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-          "independent_review": "pending"
+          "independent_review": "passed_edition_basis_for_selected_spans"
         }
       ],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_170387",
@@ -9526,7 +9598,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations. Referenced/imported original edition: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), public domain separately from Wiki/Lexique adaptations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1056-parier-ver-selected",
@@ -9679,12 +9751,14 @@
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
           "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-          "independent_review": "pending"
+          "independent_review": "passed_edition_basis_for_selected_spans"
         }
       ],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_172717",
@@ -9698,7 +9772,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations. Referenced/imported original edition: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), public domain separately from Wiki/Lexique adaptations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1097-prévoir-ver-selected",
@@ -9924,12 +9998,14 @@
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
           "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-          "independent_review": "pending"
+          "independent_review": "passed_edition_basis_for_selected_spans"
         }
       ],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_173869",
@@ -9943,7 +10019,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations. Referenced/imported original edition: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), public domain separately from Wiki/Lexique adaptations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1068-rater-ver-selected",
@@ -10116,12 +10192,14 @@
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
           "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-          "independent_review": "pending"
+          "independent_review": "passed_edition_basis_for_selected_spans"
         }
       ],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_174407",
@@ -10135,7 +10213,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations. Referenced/imported original edition: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), public domain separately from Wiki/Lexique adaptations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1080-règle-nom-selected",
@@ -10353,12 +10431,14 @@
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
           "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-          "independent_review": "pending"
+          "independent_review": "passed_edition_basis_for_selected_spans"
         }
       ],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_174560",
@@ -10372,7 +10452,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations. Referenced/imported original edition: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), public domain separately from Wiki/Lexique adaptations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1067-remarquer-ver-selected",
@@ -10542,12 +10622,14 @@
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
           "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-          "independent_review": "pending"
+          "independent_review": "passed_edition_basis_for_selected_spans"
         }
       ],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_174947",
@@ -10561,7 +10643,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations. Referenced/imported original edition: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), public domain separately from Wiki/Lexique adaptations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1088-ressentir-ver-selected",
@@ -10783,12 +10865,14 @@
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
           "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-          "independent_review": "pending"
+          "independent_review": "passed_edition_basis_for_selected_spans"
         }
       ],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_177298",
@@ -10802,7 +10886,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations. Referenced/imported original edition: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), public domain separately from Wiki/Lexique adaptations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1092-stupide-adj-selected",
@@ -10980,12 +11064,14 @@
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
           "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-          "independent_review": "pending"
+          "independent_review": "passed_edition_basis_for_selected_spans"
         }
       ],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_178192",
@@ -10999,7 +11085,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations. Referenced/imported original edition: Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), public domain separately from Wiki/Lexique adaptations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1077-tenter-ver-selected",
@@ -11177,12 +11263,14 @@
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
           "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-          "independent_review": "pending"
+          "independent_review": "passed_edition_basis_for_selected_spans"
         }
       ],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_182953",
@@ -11560,7 +11648,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "English Wiktionary contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1058-arbre-nom-selected",
@@ -11634,9 +11722,11 @@
         }
       ],
       "original_authors_and_rights": [],
-      "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending"
+      "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields.",
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed_at_selected_text_boundary",
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     }
   ],
   "spelling_relations": [
@@ -11645,7 +11735,7 @@
       "source_headword": "bien",
       "frozen_headword": "ben",
       "relation": "colloquial adverb spelling with degree meaning from bien",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
       "new_runtime_aliases": [],
@@ -11677,14 +11767,16 @@
           "column_1_based": 1,
           "raw_source_excerpt": "# [[beaucoup|Beaucoup]] ; [[fortement]] ; [[très]]."
         }
-      ]
+      ],
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
     },
     {
       "frozen_row": 1062,
       "frozen_headword": "a",
       "source_headword": "a",
       "relation": "French letter-name section labelled masculine invariable; lexical noun mapping",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
       "new_runtime_aliases": [],
@@ -11725,6 +11817,141 @@
           "column_1_based": 1,
           "raw_source_excerpt": "# Première [[lettre]] et première [[voyelle]] de l’[[alphabet]] français."
         }
+      ],
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true
+    },
+    {
+      "frozen_row": 1057,
+      "frozen_headword": "mme",
+      "source_headword": "Mme",
+      "relation": "Lowercase dictionary/index key for French title abbreviation Mme (Madame), not an assertion that lowercase mme is standard running-text typography.",
+      "status": "passed_for_source_binding_pending_author_fields",
+      "alias_admission": "not_admitted",
+      "relation_role": "source_binding_only",
+      "new_runtime_aliases": [],
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "independence": true,
+      "reason": "Cambridge publisher entry indexes mme, labels it an abbreviation of madame, records madam and uses Mme in its example. Lexique 3.83 independently identifies exact mme/NOM/feminine singular with phon madam. Fixed Wiktionnaire Mme has the French noun title/IPA. OQLF confirms standard written M + lowercase me and its title-use restrictions.",
+      "lexique_evidence": {
+        "path": "resources/lexique-3.83/Lexique383.tsv.gz",
+        "line_1_based": 83163,
+        "edition": "3.83",
+        "ortho": "mme",
+        "phon": "madam",
+        "lemme": "mme",
+        "cgram": "NOM",
+        "genre": "f",
+        "nombre": "s",
+        "columns_1_based": {
+          "ortho": 1,
+          "phon": 2,
+          "lemme": 3,
+          "cgram": 4,
+          "genre": 5,
+          "nombre": 6
+        }
+      },
+      "evidence": [
+        {
+          "purpose": "Exact spelling/POS boundary",
+          "source_id": "b102_fr_193650",
+          "revid": 36554529,
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mme&oldid=36554529",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=Mme&action=history",
+          "line_1_based": 3,
+          "column_1_based": 1,
+          "raw_source_excerpt": "== {{langue|fr}} =="
+        },
+        {
+          "purpose": "Exact spelling/POS boundary",
+          "source_id": "b102_fr_193650",
+          "revid": 36554529,
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mme&oldid=36554529",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=Mme&action=history",
+          "line_1_based": 5,
+          "column_1_based": 1,
+          "raw_source_excerpt": ": {{date|lang=fr}} {{abréviation|fr|de=Madame|texte='''M'''ada'''me'''}}."
+        },
+        {
+          "purpose": "Exact spelling/POS boundary",
+          "source_id": "b102_fr_193650",
+          "revid": 36554529,
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mme&oldid=36554529",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=Mme&action=history",
+          "line_1_based": 7,
+          "column_1_based": 1,
+          "raw_source_excerpt": "=== {{S|nom|fr}} ==="
+        },
+        {
+          "purpose": "Exact spelling/POS boundary",
+          "source_id": "b102_fr_193650",
+          "revid": 36554529,
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mme&oldid=36554529",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=Mme&action=history",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "'''Mme''' {{pron|ma.dam|fr}} {{f}}"
+        },
+        {
+          "purpose": "Exact spelling/POS boundary",
+          "source_id": "b102_fr_193650",
+          "revid": 36554529,
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mme&oldid=36554529",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=Mme&action=history",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# [[Madame]] (comme [[titre]])."
+        }
+      ],
+      "external_evidence": [
+        {
+          "id": "b102_corroboration_cambridge_mme",
+          "url": "https://dictionary.cambridge.org/fr/dictionnaire/francais-anglais/mme",
+          "title": "Cambridge Dictionary, French–English GLOBAL entry mme",
+          "attribution": "Cambridge University Press & Assessment; underlying GLOBAL dictionary © 2018 K Dictionaries Ltd",
+          "version": "No publisher revision ID exposed; fixed original HTML capture",
+          "captured_at_utc": "2026-11-19T21:41:41.845133+00:00",
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-102\\target\\issue-102\\reviewer-primary\\cambridge.html",
+          "spans": [
+            {
+              "line_1_based": 790,
+              "column_1_based": 54,
+              "raw_source_excerpt": "<h2 class=\"tw-bw dhw dpos-h_hw di-title \">mme</h2>"
+            },
+            {
+              "line_1_based": 790,
+              "column_1_based": 316,
+              "raw_source_excerpt": "<span class=\"ipa dipa\">madam</span>"
+            },
+            {
+              "line_1_based": 806,
+              "column_1_based": 297,
+              "raw_source_excerpt": "title=\"madame\" rel=\"\">madame</a>"
+            },
+            {
+              "line_1_based": 808,
+              "column_1_based": 328,
+              "raw_source_excerpt": "Mme ou Mlle"
+            }
+          ],
+          "rights_boundary": "Proprietary dictionary: citation and spelling/typography corroboration only; no publisher gloss, translation or example is admitted as a dictionary field."
+        },
+        {
+          "id": "b102_corroboration_oqlf_titles",
+          "url": "https://vitrinelinguistique.oqlf.gouv.qc.ca/21435/les-abreviations-et-les-symboles/les-abreviations/cas-particuliers-dabreviations/abreviation-de-madame-de-mademoiselle-et-de-monsieur",
+          "title": "OQLF, Abréviation de madame, de mademoiselle et de monsieur",
+          "attribution": "Office québécois de la langue française",
+          "version": "Fixed retrieved text capture; no page revision ID exposed",
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-102\\target\\issue-102\\reviewer-primary\\web-authorities.json",
+          "source_lines_0_based": [
+            4,
+            11,
+            22
+          ],
+          "finding": "Mme uses uppercase M, lowercase me, no abbreviation point; normally before a third person’s name/function. Direct address and letter salutations use the full title.",
+          "rights_boundary": "Citation and usage corroboration only; no OQLF prose supplies dictionary fields."
+        }
       ]
     }
   ],
@@ -11733,7 +11960,7 @@
       "frozen_row": 1051,
       "headword": "s",
       "pos": "PRO:per",
-      "reason": "The French bare s article has only a letter section. Personal-pronoun meaning is supported for s’ as elided se, not exact bare s. No sourced omission-of-apostrophe relationship established.",
+      "reason": "Independently confirmed: exact French s revision 39772394 has a letter section at lines 50–54; apostrophized s’ separately abbreviates se. Neither establishes a bare s personal pronoun or an omitted-apostrophe spelling relation. Lexique exact s/PRO:per has phon Es, the letter pronunciation, and supplies no valid pronoun IPA. Owner scope decision or new exact-spelling evidence is required.",
       "fields_pending": [
         "french_definition",
         "ipa",
@@ -11741,7 +11968,7 @@
         "chinese"
       ],
       "owner_approved_exception": false,
-      "independent_confirmation": "pending",
+      "independent_confirmation": "confirmed_source_gap",
       "evidence": [
         {
           "purpose": "Exact spelling/POS boundary",
@@ -11853,13 +12080,14 @@
           "column_1_based": 1,
           "raw_source_excerpt": "# [[pronom personnel|Pronom personnel]] de la troisième personne des deux [[genre]]s et des deux [[nombre]]s, utilisé comme [[complément d’objet]] d’un [[verbe]] [[transitif]] [[direct]] ou [[indirect]]."
         }
-      ]
+      ],
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger"
     },
     {
       "frozen_row": 1057,
       "headword": "mme",
       "pos": "NOM",
-      "reason": "Exact lowercase mme is a translingual ISO code for Mae, without a French noun section. French capitalized Mme supports Madame abbreviation; no lowercase French spelling bridge established.",
+      "reason": "Lowercase-key relation to French title Mme is independently supported by Cambridge, Lexique 3.83 and fixed Wiktionnaire Mme. Four sourced FR/IPA/EN/ZH fields and complete standard-written-title restrictions still need an author draft followed by a separate independent check. No new content is accepted and no scope exception is asserted.",
       "fields_pending": [
         "french_definition",
         "ipa",
@@ -11867,7 +12095,7 @@
         "chinese"
       ],
       "owner_approved_exception": false,
-      "independent_confirmation": "pending",
+      "independent_confirmation": "passed_spelling_relation_pending_content",
       "evidence": [
         {
           "purpose": "Exact spelling/POS boundary",
@@ -11959,7 +12187,9 @@
           "column_1_based": 1,
           "raw_source_excerpt": "# [[Madame]] (comme [[titre]])."
         }
-      ]
+      ],
+      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+      "replacement_needs": "Author four fields using eligible fixed French title sources, with standard capitalization/construction restrictions; separate reviewer must check the new exact text."
     }
   ]
 }

@@ -13,12 +13,12 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 16,
@@ -109,10 +109,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   },
   {
@@ -129,7 +130,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -142,13 +143,13 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
         "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-        "independent_review": "pending"
+        "independent_review": "passed_edition_basis_for_selected_spans"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 20,
@@ -279,10 +280,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   },
   {
@@ -327,12 +329,12 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 13,
@@ -503,10 +505,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   },
   {
@@ -523,7 +526,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -536,13 +539,13 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
         "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-        "independent_review": "pending"
+        "independent_review": "passed_edition_basis_for_selected_spans"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 78,
@@ -625,10 +628,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   },
   {
@@ -645,7 +649,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -658,13 +662,13 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
         "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-        "independent_review": "pending"
+        "independent_review": "passed_edition_basis_for_selected_spans"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line. The CFC cartography sentence at line 99 is unselected and supplies no wording or meaning.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 14,
@@ -889,10 +893,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   },
   {
@@ -909,12 +914,12 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 13,
@@ -1038,10 +1043,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   },
   {
@@ -1058,7 +1064,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -1071,13 +1077,13 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
         "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-        "independent_review": "pending"
+        "independent_review": "passed_edition_basis_for_selected_spans"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 21,
@@ -1176,10 +1182,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   },
   {
@@ -1196,7 +1203,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -1209,13 +1216,13 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
         "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-        "independent_review": "pending"
+        "independent_review": "passed_edition_basis_for_selected_spans"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 15,
@@ -1328,10 +1335,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   },
   {
@@ -1348,7 +1356,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -1361,13 +1369,13 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
         "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-        "independent_review": "pending"
+        "independent_review": "passed_edition_basis_for_selected_spans"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 14,
@@ -1474,10 +1482,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   },
   {
@@ -1494,12 +1503,12 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 16,
@@ -1751,10 +1760,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   },
   {
@@ -1771,7 +1781,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -1784,13 +1794,13 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
         "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-        "independent_review": "pending"
+        "independent_review": "passed_edition_basis_for_selected_spans"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 12,
@@ -1873,10 +1883,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   },
   {
@@ -1893,12 +1904,12 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 13,
@@ -1998,10 +2009,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   },
   {
@@ -2018,7 +2030,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -2031,13 +2043,13 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
         "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-        "independent_review": "pending"
+        "independent_review": "passed_edition_basis_for_selected_spans"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 9,
@@ -2118,10 +2130,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   },
   {
@@ -2138,7 +2151,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -2151,13 +2164,13 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
         "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-        "independent_review": "pending"
+        "independent_review": "passed_edition_basis_for_selected_spans"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 11,
@@ -2296,10 +2309,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   },
   {
@@ -2316,7 +2330,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -2329,13 +2343,13 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
         "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-        "independent_review": "pending"
+        "independent_review": "passed_edition_basis_for_selected_spans"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 80,
@@ -2370,10 +2384,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   },
   {
@@ -2390,7 +2405,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -2403,13 +2418,13 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
         "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-        "independent_review": "pending"
+        "independent_review": "passed_edition_basis_for_selected_spans"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 10,
@@ -2610,10 +2625,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   },
   {
@@ -2630,7 +2646,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -2643,13 +2659,13 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
         "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-        "independent_review": "pending"
+        "independent_review": "passed_edition_basis_for_selected_spans"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 22,
@@ -2740,10 +2756,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   },
   {
@@ -2760,7 +2777,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -2773,13 +2790,13 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
         "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-        "independent_review": "pending"
+        "independent_review": "passed_edition_basis_for_selected_spans"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 12,
@@ -2821,10 +2838,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   },
   {
@@ -2841,7 +2859,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -2854,13 +2872,13 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
         "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-        "independent_review": "pending"
+        "independent_review": "passed_edition_basis_for_selected_spans"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 13,
@@ -2981,10 +2999,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   },
   {
@@ -3001,7 +3020,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -3014,13 +3033,13 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
         "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-        "independent_review": "pending"
+        "independent_review": "passed_edition_basis_for_selected_spans"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 14,
@@ -3135,10 +3154,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   },
   {
@@ -3155,7 +3175,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -3168,13 +3188,13 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
         "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-        "independent_review": "pending"
+        "independent_review": "passed_edition_basis_for_selected_spans"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 13,
@@ -3193,10 +3213,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   },
   {
@@ -3213,7 +3234,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -3226,13 +3247,13 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
         "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-        "independent_review": "pending"
+        "independent_review": "passed_edition_basis_for_selected_spans"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 19,
@@ -3434,10 +3455,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   },
   {
@@ -3454,7 +3476,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -3467,13 +3489,13 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
         "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-        "independent_review": "pending"
+        "independent_review": "passed_edition_basis_for_selected_spans"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 13,
@@ -3697,10 +3719,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   },
   {
@@ -3717,12 +3740,12 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 10,
@@ -3822,10 +3845,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   },
   {
@@ -3842,7 +3866,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -3855,13 +3879,13 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
         "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-        "independent_review": "pending"
+        "independent_review": "passed_edition_basis_for_selected_spans"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 14,
@@ -3944,10 +3968,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   },
   {
@@ -3964,7 +3989,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -3977,13 +4002,13 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
         "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-        "independent_review": "pending"
+        "independent_review": "passed_edition_basis_for_selected_spans"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 13,
@@ -4058,10 +4083,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   },
   {
@@ -4078,7 +4104,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -4091,13 +4117,13 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
         "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-        "independent_review": "pending"
+        "independent_review": "passed_edition_basis_for_selected_spans"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 11,
@@ -4186,10 +4212,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   },
   {
@@ -4206,7 +4233,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -4219,13 +4246,13 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
         "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-        "independent_review": "pending"
+        "independent_review": "passed_edition_basis_for_selected_spans"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 8,
@@ -4316,10 +4343,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   },
   {
@@ -4336,7 +4364,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -4349,13 +4377,13 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
         "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-        "independent_review": "pending"
+        "independent_review": "passed_edition_basis_for_selected_spans"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 18,
@@ -4453,10 +4481,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   },
   {
@@ -4473,7 +4502,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -4486,13 +4515,13 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
         "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-        "independent_review": "pending"
+        "independent_review": "passed_edition_basis_for_selected_spans"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 12,
@@ -4559,10 +4588,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   },
   {
@@ -4579,7 +4609,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -4592,13 +4622,13 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
         "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-        "independent_review": "pending"
+        "independent_review": "passed_edition_basis_for_selected_spans"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 13,
@@ -4649,10 +4679,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   },
   {
@@ -4669,7 +4700,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -4682,13 +4713,13 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
         "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-        "independent_review": "pending"
+        "independent_review": "passed_edition_basis_for_selected_spans"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 10,
@@ -4754,10 +4785,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   },
   {
@@ -4774,7 +4806,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -4787,13 +4819,13 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
         "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-        "independent_review": "pending"
+        "independent_review": "passed_edition_basis_for_selected_spans"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 11,
@@ -4875,10 +4907,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   },
   {
@@ -4895,7 +4928,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -4908,13 +4941,13 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
         "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-        "independent_review": "pending"
+        "independent_review": "passed_edition_basis_for_selected_spans"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 11,
@@ -4989,10 +5022,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   },
   {
@@ -5009,7 +5043,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -5022,13 +5056,13 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
         "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-        "independent_review": "pending"
+        "independent_review": "passed_edition_basis_for_selected_spans"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 11,
@@ -5351,10 +5385,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   },
   {
@@ -5371,7 +5406,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -5384,13 +5419,13 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
         "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-        "independent_review": "pending"
+        "independent_review": "passed_edition_basis_for_selected_spans"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 14,
@@ -5520,10 +5555,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   },
   {
@@ -5540,7 +5576,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -5553,13 +5589,13 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
         "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-        "independent_review": "pending"
+        "independent_review": "passed_edition_basis_for_selected_spans"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 20,
@@ -5593,10 +5629,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   },
   {
@@ -5613,7 +5650,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -5626,13 +5663,13 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
         "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-        "independent_review": "pending"
+        "independent_review": "passed_edition_basis_for_selected_spans"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 12,
@@ -5739,10 +5776,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   },
   {
@@ -5759,7 +5797,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -5772,13 +5810,13 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
         "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-        "independent_review": "pending"
+        "independent_review": "passed_edition_basis_for_selected_spans"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 18,
@@ -5821,10 +5859,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   },
   {
@@ -5841,7 +5880,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -5854,13 +5893,13 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
         "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-        "independent_review": "pending"
+        "independent_review": "passed_edition_basis_for_selected_spans"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 12,
@@ -5959,10 +5998,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   },
   {
@@ -5979,7 +6019,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -5992,13 +6032,13 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
         "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-        "independent_review": "pending"
+        "independent_review": "passed_edition_basis_for_selected_spans"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 14,
@@ -6049,10 +6089,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   },
   {
@@ -6069,7 +6110,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -6082,13 +6123,13 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
         "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-        "independent_review": "pending"
+        "independent_review": "passed_edition_basis_for_selected_spans"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 10,
@@ -6191,10 +6232,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   },
   {
@@ -6211,7 +6253,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -6224,13 +6266,13 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
         "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-        "independent_review": "pending"
+        "independent_review": "passed_edition_basis_for_selected_spans"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 9,
@@ -6289,10 +6331,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   },
   {
@@ -6309,7 +6352,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [
       {
         "id": "original-academie8-1932-1935",
@@ -6322,13 +6365,13 @@
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "evidence_route": "Previously accepted edition-level basis in issue-99/sources.json; exact selected-text boundary requires this batch independent review.",
         "scope": "Referenced/imported historical edition; does not identify the original author of every sentence.",
-        "independent_review": "pending"
+        "independent_review": "passed_edition_basis_for_selected_spans"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields. The page-level DAF8 import/reference is retained as an original Académie française edition notice, separately from Wiki and Lexique CC BY-SA 4.0 layers; the established collective-edition term under L123-3 gives expiry 2006-01-01 using final publication in 1935. It is not attributed as the author of every modern line.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 16,
@@ -6387,10 +6430,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   },
   {
@@ -6621,12 +6665,12 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
+    "selected_text_review": "passed_for_selected_fields",
     "original_authors_and_rights": [],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "independent_review": "passed_for_selected_spans",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
+    "selected_text_rights_boundary": "Selected lexical meaning, exact French form/POS and IPA only; linked article history credits contributors. Nearby literary/news quotations, images, audio and bilingual translation tables are not copied into fields.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 114,
@@ -6637,10 +6681,11 @@
       }
     ],
     "redistribution_obligations": [
-      "Credit the fixed article and its full linked contributor history.",
-      "Retain CC BY-SA 4.0 legal text/link and attribution; distribute adaptations under CC BY-SA 4.0.",
-      "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
-      "Satisfy actual external-source obligations identified at independent selected-span review before admission."
+      "Credit the fixed article URL/revision and full contributor-history URL; article-history attribution follows Wikimedia Terms 7(b)/7(g), not last-editor-only attribution.",
+      "Retain supplied attribution, copyright and licence notices and disclaimer references; include CC BY-SA 4.0 legal text/link and distribute Wiki/Lexique adaptations under that licence.",
+      "Identify Lexique contributors and clearly indicate scoped definition adaptation, new explanatory English/Chinese translation and IPA template transcription; preserve previous modification notices.",
+      "Retain separately applicable original Académie française DAF8 edition/import attribution where recorded; do not attribute every modern sentence or excluded quotation to that edition.",
+      "Do not impose additional restrictions or effective technical measures that prevent exercise of the licensed rights; preserve applicable database rights terms."
     ]
   }
 ]
