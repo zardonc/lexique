@@ -4,12 +4,10 @@ import { conjugationQuery, conjugationSchema, conjugationPreferencesSchema, conj
 import type { ConjugationLookup, ConjugationPreferences, ConjugationOrder } from './conjugation';
 import { z } from 'zod';
 import { listen } from '@tauri-apps/api/event';
-import { recordSchema, saveRequestSchema, saveResultSchema, sortSchema } from './vocabulary';
-import type { SaveRequest, SaveResult, VocabularyRecord, VocabularySort } from './vocabulary';
+import { recordSchema, saveRequestSchema, saveResultSchema, sortSchema, type SaveRequest, type SaveResult, type VocabularyRecord, type VocabularySort } from './vocabulary';
 import { dictionarySchema, dictionaryQuery, dictionaryId, dictionaryCatalog, dictionaryOrder, dictionaryContentHash, dictionaryRelink } from './dictionary';
 import type { DictionaryLookup, DictionaryCatalog, DictionaryRelink } from './dictionary';
-import { frequencyQuery, frequencySchema } from './frequency';
-import type { FrequencyLookup } from './frequency';
+import { frequencyQuery, frequencySchema, type FrequencyLookup } from './frequency';
 import { speechAudioSchema, speechPreferencesSchema, speechVoiceSchema } from './speech';
 import type { SpeechAudio, SpeechPreferences } from './speech';
 import { readSelectionEvent, selectionText, shortcutStatusSchema, shortcutText } from './selection';
