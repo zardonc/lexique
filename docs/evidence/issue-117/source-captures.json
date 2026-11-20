@@ -677,5 +677,17 @@
   "reused_preparation_patterns": [
     "C:/Users/inthe/IdeaProjects/lexique-batch-115/target/issue-115/"
   ],
-  "source_capture_note": "50 fixed Wiki revisions: 46 frozen headwords plus tout, celle, celui-ci and professeur. Complete eight-part contributor registry; no source website needed to reprepare retained inputs."
+  "source_capture_note": "50 fixed Wiki revisions: 46 frozen headwords plus tout, celle, celui-ci and professeur. Complete eight-part contributor registry; no source website needed to reprepare retained inputs.",
+  "independent_review": {
+    "reviewer": "Independent semantic and selected-rights reviewer #117; fresh context separate from author and parent integration owner",
+    "independence": true,
+    "reviewed_base": "7b9510481dde923b368700a7323c6ef19bc40b03",
+    "archived_author_evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-117",
+    "evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-review-117\\target\\review-117",
+    "method": "Read archived fixed first-party captures and compared API/raw metadata, every field/support span and complete contributor registries; no independent live refetch.",
+    "reviewed_groups": 50,
+    "reviewed_fields": 200,
+    "supporting_bindings": 238,
+    "source_audit": "source-audit.json"
+  }
 }
