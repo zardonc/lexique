@@ -7,7 +7,7 @@ const operationSchema = z.string().min(1).max(110).regex(/^[a-zA-Z0-9-]+$/);
 const column = z.number().int().nonnegative().safe().nullable();
 export const noteImportMappingSchema = z.object({ headword: column, notes: column, example_fr: column, example_zh: column }).strict().readonly();
 export type NoteImportMapping = z.infer<typeof noteImportMappingSchema>;
-const optionsSchema = z.object({ delimiter: z.enum(['comma', 'semicolon']), mapping: noteImportMappingSchema.nullable(), format: z.enum(['csv', 'markdown']).optional() }).strict().readonly();
+const optionsSchema = z.object({ delimiter: z.enum(['comma', 'semicolon']), mapping: noteImportMappingSchema.nullable(), format: z.enum(['csv', 'markdown', 'zip']).optional() }).strict().readonly();
 export type NoteImportOptions = z.infer<typeof optionsSchema>;
 export const noteImportGroupSchema = z.object({
   content: z.object({ headword: z.string(), notes: z.string().nullable(),
@@ -16,6 +16,7 @@ export const noteImportGroupSchema = z.object({
   rows: z.array(z.number().int().nonnegative().safe()).readonly(),
   existing: recordSchema.nullable(), status: z.enum(['create', 'identical', 'different', 'invalid']), error: z.string().nullable(),
   enrichment: noteEnrichmentSchema.nullable().optional(),
+  files: z.array(z.string()).readonly().optional(),
 }).strict().readonly();
 export type NoteImportGroup = z.infer<typeof noteImportGroupSchema>;
 export const noteImportPreviewSchema = z.object({

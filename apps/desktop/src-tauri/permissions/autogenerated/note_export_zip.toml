@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-note-export-zip"
+description = "Enables the note_export_zip command without any pre-configured scope."
+commands.allow = ["note_export_zip"]
+
+[[permission]]
+identifier = "deny-note-export-zip"
+description = "Denies the note_export_zip command without any pre-configured scope."
+commands.deny = ["note_export_zip"]

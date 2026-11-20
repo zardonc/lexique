@@ -11,7 +11,7 @@ import template from '../../../docs/examples/lexique-note-v1.md?raw';
 function useNoteImport(runtime: RuntimeAdapter, messages: NotebookText['interchange'], onSaved: () => void) {
   const [preview, setPreview] = useState<NoteImportPreview | null>(null), [result, setResult] = useState<NoteImportResult | null>(null);
   const [error, setError] = useState(''), [status, setStatus] = useState(''), [busy, setBusy] = useState(false), [dirty, setDirty] = useState(false);
-  const [delimiter, setDelimiter] = useState<'comma' | 'semicolon'>('comma'), [format, setFormat] = useState<'csv' | 'markdown'>('csv');
+  const [delimiter, setDelimiter] = useState<'comma' | 'semicolon'>('comma'), [format, setFormat] = useState<'csv' | 'markdown' | 'zip'>('csv');
   const [mapping, setMapping] = useState<NoteImportMapping>({ headword: null, notes: null, example_fr: null, example_zh: null });
   const [decisions, setDecisions] = useState<readonly (NoteImportSelection['action'] | '')[]>([]);
   const [allowUnlinked, setAllowUnlinked] = useState<readonly boolean[]>([]);
@@ -29,15 +29,15 @@ function useNoteImport(runtime: RuntimeAdapter, messages: NotebookText['intercha
     try { await action(); } catch (cause) { setError(errorMessage(cause)); }
     finally { working.current = false; setBusy(false); }
   }
-  function select(format: 'csv' | 'markdown' = 'csv') { void work(async () => {
+  function select(format: 'csv' | 'markdown' | 'zip' = 'csv') { void work(async () => {
     setFormat(format);
     if (operation.current) await runtime.cancelNoteImport(operation.current);
     setPreview(null); setResult(null);
     const id = crypto.randomUUID(); operation.current = id;
-    accept(await runtime.previewNoteImport(id, { delimiter, mapping: null, ...(format === 'markdown' ? { format } : {}) }));
+    accept(await runtime.previewNoteImport(id, { delimiter, mapping: null, ...(format !== 'csv' ? { format } : {}) }));
   }); }
   function remap() { void work(async () => {
-    if (operation.current) accept(await runtime.remapNoteImport(operation.current, { delimiter, mapping, ...(format === 'markdown' ? { format } : {}) }));
+    if (operation.current) accept(await runtime.remapNoteImport(operation.current, { delimiter, mapping, ...(format !== 'csv' ? { format } : {}) }));
   }); }
   function confirm() { void work(async () => {
     if (!preview || dirty || needsConsent || decisions.some((action) => !action)) return;
@@ -62,7 +62,7 @@ type ImportState = ReturnType<typeof useNoteImport>;
 type Messages = NotebookText['interchange'];
 
 function Mapping({ state, messages }: { readonly state: ImportState; readonly messages: Messages }) {
-  if (state.format === 'markdown') return state.preview && <button disabled={state.busy} onClick={state.remap}>{messages.remap}</button>;
+  if (state.format !== 'csv') return state.preview && <button disabled={state.busy} onClick={state.remap}>{messages.remap}</button>;
   return <fieldset disabled={state.busy}>
     <label>{messages.delimiter}<select aria-label={messages.delimiter} value={state.delimiter} onChange={(event) => state.separate(event.target.value as 'comma' | 'semicolon')}>
       <option value="comma">{messages.comma}</option><option value="semicolon">{messages.semicolon}</option>
@@ -97,16 +97,16 @@ function Group({ state, index, messages }: { readonly state: ImportState; readon
 
 function GroupDictionary({ state, index, messages }: { readonly state: ImportState; readonly index: number; readonly messages: Messages }) {
   const group = state.preview!.groups[index];
-  if (!group.enrichment) return null;
-  return <NoteImportDictionary enrichment={group.enrichment} existing={group.existing} messages={messages.dictionary}
-    allowUnlinked={state.allowUnlinked[index] ?? false} onContinue={(value) => state.continueUnlinked(index, value)} disabled={state.busy || state.decisions[index] !== 'create'} />;
+  return <>{group.files && <p>{messages.source}: {group.files.join(', ')}</p>}
+    {group.enrichment && <NoteImportDictionary enrichment={group.enrichment} existing={group.existing} messages={messages.dictionary}
+      allowUnlinked={state.allowUnlinked[index] ?? false} onContinue={(value) => state.continueUnlinked(index, value)} disabled={state.busy || state.decisions[index] !== 'create'} />}</>;
 }
 
 function ImportPreview({ state, messages }: { readonly state: ImportState; readonly messages: Messages }) {
   const preview = state.preview;
   if (!preview) return null;
   const selected = state.decisions.filter((action) => action === 'create' || action === 'update').length;
-  const title = state.format === 'markdown' ? messages.markdown.title : messages.title;
+  const title = state.format === 'csv' ? messages.title : messages[state.format].title;
   return <section aria-label={title}>
     <h3>{title}</h3><p>{messages.source}: {preview.source.filename}</p>
     {preview.error && <p role="alert">{preview.error}</p>}
@@ -118,7 +118,7 @@ function ImportPreview({ state, messages }: { readonly state: ImportState; reado
 }
 
 function ImportFeedback({ state, messages }: { readonly state: ImportState; readonly messages: Messages }) {
-  const labels = state.format === 'markdown' ? messages.markdown : messages;
+  const labels = state.format === 'csv' ? messages : messages[state.format];
   return <>{state.busy && <p role="status">{labels.busy}</p>}
     {state.error && <p role="alert">{labels.error}: {state.error}</p>}</>;
 }
@@ -132,7 +132,8 @@ export function NoteImport({ runtime, text, onSaved, onOpen, onPrepare, batch }:
   const { busy, status, result } = state;
   return <section aria-label={messages.open}>
     <button disabled={busy} onClick={() => onPrepare(() => state.select())}>{messages.open}</button>
-    <button disabled={busy} onClick={() => onPrepare(() => state.select('markdown'))}>{messages.markdown.open}</button><p>{messages.columns}</p>
+    <button disabled={busy} onClick={() => onPrepare(() => state.select('markdown'))}>{messages.markdown.open}</button>
+    <button disabled={busy} onClick={() => onPrepare(() => state.select('zip'))}>{messages.zip.open}</button><p>{messages.columns}</p>
     <details><summary>{messages.markdown.help}</summary><p>{messages.markdown.rules}</p><pre>{template}</pre>
       <button disabled={busy} onClick={state.exportTemplate}>{messages.markdown.example}</button></details>
     <Mapping state={state} messages={messages} />

@@ -164,6 +164,7 @@ fn main() {
             "note_export_snapshot",
             "note_export_csv",
             "note_export_markdown",
+            "note_export_zip",
             "grammar_list",
             "grammar_get",
             "grammar_save",

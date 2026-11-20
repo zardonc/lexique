@@ -20,9 +20,9 @@ function ExportCounts({ snapshot, text }: { readonly snapshot: NoteExportSnapsho
 }
 
 function MarkdownSave({ single, disabled, text, save }: {
-  readonly single: boolean; readonly disabled: boolean; readonly text: NoteExportText; readonly save: () => void;
+  readonly single: boolean; readonly disabled: boolean; readonly text: NoteExportText; readonly save: (format: 'markdown' | 'zip') => void;
 }) {
-  return single && <button disabled={disabled} onClick={save}>{text.saveMarkdown}</button>;
+  return <button disabled={disabled} onClick={() => save(single ? 'markdown' : 'zip')}>{single ? text.saveMarkdown : text.saveZip}</button>;
 }
 
 function ExportDialog({ runtime, scope, text, close }: {
@@ -40,10 +40,13 @@ function ExportDialog({ runtime, scope, text, close }: {
       .catch((cause: unknown) => { if (!cancelled) setError(errorMessage(cause)); });
     return () => { cancelled = true; };
   }, [runtime, selection, retry]);
-  async function save(format: 'csv' | 'markdown' = 'csv') {
+  async function save(format: 'csv' | 'markdown' | 'zip' = 'csv') {
     if (!snapshot || busy) return;
     setBusy(true); setError(''); setResult('');
-    try { const value = await (format === 'markdown' ? runtime.exportNoteMarkdown(snapshot.token) : runtime.exportNoteCsv(snapshot.token)); setResult(value.state === 'saved' ? text.saved : text.cancelled); }
+    try {
+      const value = await (format === 'zip' ? runtime.exportNoteZip(snapshot.token) : format === 'markdown' ? runtime.exportNoteMarkdown(snapshot.token) : runtime.exportNoteCsv(snapshot.token));
+      setResult(value.state === 'saved' ? text.saved : text.cancelled);
+    }
     catch (cause) { setError(errorMessage(cause)); }
     finally { setBusy(false); }
   }
@@ -55,7 +58,7 @@ function ExportDialog({ runtime, scope, text, close }: {
     {error && <p role="alert">{error} <button disabled={busy} onClick={() => setRetry((value) => value + 1)}>{text.retry}</button></p>}
     {result && <p role="status">{result}</p>}
     <div className="actions"><button disabled={busy || !snapshot?.records} onClick={() => { void save(); }}>{busy ? text.busy : text.save}</button>
-      <MarkdownSave single={scope.kind === 'single'} disabled={busy || !snapshot?.records} text={text} save={() => { void save('markdown'); }} />
+      <MarkdownSave single={scope.kind === 'single'} disabled={busy || !snapshot?.records} text={text} save={(format) => { void save(format); }} />
       <button disabled={busy} onClick={close}>{text.close}</button></div>
   </dialog>;
 }

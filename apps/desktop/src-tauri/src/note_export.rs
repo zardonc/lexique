@@ -96,6 +96,35 @@ pub fn write_note_markdown(
     })
 }
 
+pub fn write_note_zip(snapshot: &NoteExportSnapshot, destination: &Path) -> Result<(), String> {
+    use std::io::Write;
+    if snapshot.records.is_empty() {
+        return Err("No saved vocabulary in this export scope".into());
+    }
+    let file = std::fs::File::create(destination)
+        .map_err(|error| format!("Could not create ZIP {}: {error}", destination.display()))?;
+    let mut archive = zip::ZipWriter::new(file);
+    let options =
+        zip::write::SimpleFileOptions::default().compression_method(zip::CompressionMethod::Stored);
+    for record in &snapshot.records {
+        let name = crate::note_markdown::note_markdown_filename(record);
+        archive
+            .start_file(&name, options)
+            .map_err(|error| format!("Could not write ZIP entry {name}: {error}"))?;
+        archive
+            .write_all(crate::note_markdown::format_note_markdown(record).as_bytes())
+            .map_err(|error| format!("Could not write ZIP entry {name}: {error}"))?;
+    }
+    archive
+        .finish()
+        .and_then(|file| {
+            file.sync_all()?;
+            Ok(file)
+        })
+        .map_err(|error| format!("Could not finish ZIP {}: {error}", destination.display()))?;
+    Ok(())
+}
+
 #[tauri::command]
 pub async fn note_export_snapshot(
     app: tauri::AppHandle,
@@ -230,4 +259,43 @@ pub async fn note_export_markdown(
     })
     .await
     .map_err(|error| format!("Markdown export task failed: {error}"))?
+}
+
+#[tauri::command]
+pub async fn note_export_zip(
+    app: tauri::AppHandle,
+    window: tauri::WebviewWindow,
+    exports: State<'_, NoteExports>,
+    token: String,
+) -> Result<ExportResult, String> {
+    crate::backup_operations::main_window(&window)?;
+    let snapshot = exports.retained(&token)?;
+    if snapshot.records.is_empty() {
+        return Err("No saved vocabulary in this export scope".into());
+    }
+    tauri::async_runtime::spawn_blocking(move || {
+        let destination = app
+            .dialog()
+            .file()
+            .set_parent(&window)
+            .add_filter("Markdown ZIP", &["zip"])
+            .set_file_name("lexique-notes.zip")
+            .blocking_save_file();
+        let state = if let Some(destination) = destination {
+            let path = destination
+                .into_path()
+                .map_err(|error| format!("Could not resolve ZIP destination: {error}"))?;
+            write_note_zip(&snapshot, &path)?;
+            "saved"
+        } else {
+            "cancelled"
+        };
+        Ok(ExportResult {
+            state,
+            records: snapshot.records.len(),
+            rows: snapshot.row_count(),
+        })
+    })
+    .await
+    .map_err(|error| format!("Markdown ZIP export task failed: {error}"))?
 }

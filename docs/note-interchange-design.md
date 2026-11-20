@@ -131,6 +131,6 @@ Markdown 文件名使用适合 Windows 的可读词头及已有记录编号，�
 
 ## 限制
 
-CSV 经表格软件编辑和另存时可能发生类型转换，导回前须以预览中的实际文本核对；Markdown 模板提供纯文本往返。CSV 与单条 Markdown 导入导出已实现；ZIP 组合与最终原生文件交互验证由后续切片完成。
+CSV 经表格软件编辑和另存时可能发生类型转换，导回前须以预览中的实际文本核对；Markdown 模板提供纯文本往返。CSV、单条 Markdown 与 Markdown ZIP 导入导出已实现；Windows 组合原生文件交互已通过，来源、证据与平台边界见[验收记录](note-interchange-verification.md)。
 
 笔记内容交换与[产品基线](product.md)中的导入导出目标衔接；完整备份和跨设备同步继续遵循各自的[设计边界](sync-design.md)。

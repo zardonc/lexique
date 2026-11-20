@@ -911,4 +911,12 @@ Whole-machine offline execution, other-platform native flows, learner acceptance
 
 [存储测试](../crates/storage/tests/note_export.rs)覆盖保存读取、完整查询范围、分类筛选、排序、非法范围及并发保存时的内容／数量／到期顺序一致性。[真实文件测试](../apps/desktop/src-tauri/src/note_export_tests.rs)通过真实 SQLite 与 CSV reader 逐字段核对三种范围，验证空例句、写入失败和重开后学习数据保持。[浏览器测试](../apps/desktop/e2e/note-export.spec.ts)的五项流程通过，覆盖范围、空结果、取消、失败重试及未保存草稿；使用独立 1485 端口。前端 lint／typecheck／build、locked workspace 编译、分别预编译后的后端测试及 rustfmt 通过，后端执行保留 60 秒硬限。
 
-实际 Windows 文件选择与重新构建的组合原生执行统一由 #189 验证，当前未声称通过；#184 未关联词典的外部记录须在组合后通过相同导出链路。浏览器 fixture 只证明 UI，开发程序编译不证明实际原生、其他平台、整机离线或正式发行就绪。
+实际 Windows 文件选择与重新构建的组合原生执行现已由 #189 验证，包括 #184 未关联词典的外部记录经过相同导出链路。浏览器 fixture 只证明 UI，开发程序编译不证明实际原生、其他平台、整机离线或正式发行就绪。
+
+## CSV／Markdown／ZIP 组合验收（#183／#189）
+
+2026-11-20：Markdown ZIP 批量导出／导入已完成。真实 ZIP／SQLite 覆盖同快照范围与命名、同词去重／整组冲突、无效条目／损坏容器、原子失败、修订复验、响应丢失重放及 101／102 例句边界。共享读文件边界已修复，超过 32 MiB 的合法应用 CSV 导出可以重新导入，字段限制与错误上下文保持。
+
+前端 lint／typecheck／build、locked workspace 编译、后端检查、exact shared all-target Clippy、rustfmt、分别预编译后的八段桌面测试与 27 项浏览器交换检查通过。使用本切片代码重新构建并打包的 Windows x64 程序通过七类真实原生场景：分号 CSV／手动映射、混合保存／排除、单 Markdown、全部／搜索 ZIP、资源错误明确继续、主动单条／批量双卡、完整备份恢复与重启。既有丰富／空词典信息、普通／语法笔记、分类、进度、暂停与选定音频通过实际回读保持；导入未自动新增卡或音频任务。
+
+精确来源树、二进制 SHA-256、命令、原生链路、失败与恢复证据、快照降级限制见[组合验收记录](note-interchange-verification.md)。本工单未执行其他平台原生、干净机器安装或整机离线验收；父任务继续负责最终合并、审查与发行门槛。
