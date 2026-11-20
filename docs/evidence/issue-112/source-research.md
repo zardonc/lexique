@@ -70,8 +70,8 @@ with Wiktionnaire transcription/adaptation contributors and Lexique adaptation
 and translation contributors credited separately. The original collective work
 was published in 1932–1935; the existing project L123-3 basis uses the final year
 and expiry on 1 January 2006. Import markers identify a declared layer, rather
-than establishing which contributor wrote each selected sentence. Selected-span
-rights review remains pending for the separate reviewer.
+than establishing which contributor wrote each selected sentence. Independent
+[selected-span rights review](selected-rights.md) passes at this boundary.
 
 For adverbial `lourd`, the tracked construction evidence retains only the short
 combination `pèse lourd` at its exact column in the fixed source, and identifies
@@ -80,18 +80,23 @@ narrative sentence is outside the selected content. The author rights proposal
 uses the noncreative grammatical fact, without claiming the book is public
 domain or its prose is covered by Wiktionnaire’s licence.
 
-The CFC cartographic import on `rose` is explicitly excluded at its marker
-boundary; it contributes no selected definition. Bibliographic identities
+The CFC markers on `rose` (revision 39955249, line 258), `source`
+(revision 39793245, line 53) and `chasse` (revision 39773099, footer line 336)
+are explicitly recorded. The first two attach to separate cartographic senses;
+`chasse` has its typography definition at line 48, separate from selected animal
+hunting at line 23. None supplies a selected field. Bibliographic identities
 identify context, not permission to redistribute their literary quotations.
 The combined package must retain the [notices](NOTICES.md), legal text, selected
 spans, fixed source histories and modifications. No noncommercial restriction
 is introduced.
 
-## Author state
+## Independent review state
 
-All 50 groups / 200 fields are complete authored records. The canonical input
+All 50 groups / 200 fields pass [independent selected-content review](independent-review.md)
+unchanged, with [selected-rights decisions](selected-rights.md) and 50 accepted
+spelling/use bindings. The canonical input
 contains no previously admitted assigned row, so the [reuse record](reuse.json)
-is explicitly empty and prior entries remain unchanged. Semantic, rights and
-spelling judgments in this package are author proposals. All independent
-quality/rights states remain pending; final admission and native execution are
-parent-owned.
+is explicitly empty and prior entries remain unchanged. Original author
+proposals remain in [review-candidates.json](review-candidates.json) and the
+`proposed_*` field records. Final canonical admission, combined notices,
+conversion and native execution remain parent-owned.
