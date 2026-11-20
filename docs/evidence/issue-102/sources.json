@@ -6512,12 +6512,26 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "Actual current API-selected fixed revision; no cutoff assertion.",
-    "selected_text_review": "pending",
-    "original_authors_and_rights": [],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
-    "selected_text_rights_boundary": "Selected lexical meaning, grammar/form and IPA only. Each actual imported/original layer is separately identified; bibliography and examples are not fields. Independent selected-span rights review pending.",
+    "selected_text_review": "passed",
+    "original_authors_and_rights": [
+      {
+        "author": "Wiktionnaire contributors",
+        "rights": "CC-BY-SA-4.0",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=Mme&action=history",
+        "scope": "French title definition at line 10, IPA at line 9, lexical form/etymology at lines 5–8 and modern marital-status note at line 23. No named imported/original bibliographic layer occurs within these selected spans; last editor is capture metadata, not sole authorship.",
+        "independent_review": "passed"
+      },
+      {
+        "author": "Lexique contributors",
+        "rights": "CC-BY-SA-4.0",
+        "scope": "Scoped French adaptation, new English/Chinese explanations and IPA transcription. Writing restrictions are independently worded grammatical facts; copyrighted examples, translation tables, OQLF and Lacroux expressions are unselected.",
+        "independent_review": "passed"
+      }
+    ],
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "Independent row1057 Mme content and selected-rights reviewer for issue 102; separate from its author, previous reviewer and merger",
+    "selected_text_rights_boundary": "Mme French lexical definition, IPA, inflection/abbreviation templates and contemporary marital-status note only. Literary/news examples and translation-table wording are excluded. Writing restrictions are original Lexique explanations of grammatical facts, corroborated by OQLF; neither OQLF nor Lacroux prose is adapted.",
     "source_page_notices_to_record": [
       {
         "line_1_based": 13,

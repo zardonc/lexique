@@ -844,5 +844,12 @@
       "finding": "Mme uses uppercase M, lowercase me, no abbreviation point; normally before a third person’s name/function. Direct address and letter salutations use the full title.",
       "rights_boundary": "Citation and usage corroboration only; no OQLF prose supplies dictionary fields."
     }
-  ]
+  ],
+  "mme_independent_verification": {
+    "reviewer": "Independent row1057 Mme content and selected-rights reviewer for issue 102; separate from its author, previous reviewer and merger",
+    "reviewed_author_commit": "29b1da6071fde79accc3b512e6406a315c85c674",
+    "source_proof": "mme-source-proof.json",
+    "complete_original_api_and_wikitext_match": true,
+    "scope": "Only the new row1057 four fields; previous source comparisons remain unchanged."
+  }
 }
