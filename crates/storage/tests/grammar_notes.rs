@@ -401,6 +401,107 @@ fn word(connection: &mut Connection, category_ids: &[i64]) -> lexique_storage::V
 }
 
 #[test]
+fn grammar_deletion_preserves_unrelated_vocabulary_batch_history() {
+    use lexique_storage::{
+        add_review_batch, batch_status, delete_grammar, export_learning_snapshot,
+        import_learning_snapshot, read_learning_snapshot, review_cards,
+    };
+    let mut connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    let record = word(&mut connection, &[]);
+    let ids = [record.id, record.id + 1];
+    let original = serde_json::to_value(
+        add_review_batch(&mut connection, "batch-history-delete", &ids, 1000).unwrap(),
+    )
+    .unwrap();
+    let cards = review_cards(&connection, record.id).unwrap();
+    let note = save_grammar(&connection, &request("batch-history-note"), 1001)
+        .unwrap()
+        .record;
+    assert_eq!(note.id, ids[1]);
+    delete_grammar(&connection, note.id, note.revision).unwrap();
+    assert_eq!(
+        serde_json::to_value(batch_status(&connection, "batch-history-delete").unwrap()).unwrap(),
+        original
+    );
+    assert_eq!(review_cards(&connection, record.id).unwrap(), cards);
+    let snapshot = export_learning_snapshot(&mut connection, 1002).unwrap();
+    let bytes = serde_json::to_vec(&snapshot).unwrap();
+    let snapshot = read_learning_snapshot(bytes.as_slice(), 1002).unwrap();
+    let mut restored = Connection::open_in_memory().unwrap();
+    initialize(&restored).unwrap();
+    import_learning_snapshot(&mut restored, &snapshot, 1002).unwrap();
+    assert_eq!(
+        serde_json::to_value(
+            add_review_batch(&mut restored, "batch-history-delete", &ids, 1002).unwrap()
+        )
+        .unwrap(),
+        original
+    );
+    assert_eq!(review_cards(&restored, record.id).unwrap(), cards);
+}
+
+#[test]
+fn vocabulary_batch_history_replays_and_resumes_when_missing_ids_become_grammar() {
+    use lexique_storage::{
+        add_review_batch, add_review_batch_observed, batch_status, delete_grammar,
+        export_learning_snapshot, import_learning_snapshot, read_learning_snapshot,
+    };
+    use std::panic::{AssertUnwindSafe, catch_unwind};
+    let mut connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    let record = word(&mut connection, &[]);
+    let mut ids = vec![record.id, record.id + 1];
+    ids.extend(1000..1098);
+    ids.push(record.id + 2);
+    let interrupted = catch_unwind(AssertUnwindSafe(|| {
+        add_review_batch_observed(&mut connection, "batch-history-resume", &ids, 1000, || {
+            panic!("interrupt after the first committed chunk");
+        })
+    }));
+    assert!(interrupted.is_err());
+    let committed = batch_status(&connection, "batch-history-resume").unwrap();
+    assert_eq!(committed.items.len(), 100);
+    let note = save_grammar(&connection, &request("batch-history-committed-note"), 1001)
+        .unwrap()
+        .record;
+    assert_eq!(note.id, ids[1]);
+    let pending = save_grammar(&connection, &request("batch-history-pending-note"), 1002)
+        .unwrap()
+        .record;
+    assert_eq!(pending.id, *ids.last().unwrap());
+    assert!(
+        add_review_batch(&mut connection, "batch-history-resume", &ids, 1003)
+            .err()
+            .unwrap()
+            .to_string()
+            .contains("Word audio batches cannot contain grammar notes")
+    );
+    delete_grammar(&connection, pending.id, pending.revision).unwrap();
+    let resumed = add_review_batch(&mut connection, "batch-history-resume", &ids, 1004).unwrap();
+    assert_eq!(resumed.items.len(), ids.len());
+    assert_eq!(
+        serde_json::to_value(&resumed.items[..100]).unwrap(),
+        serde_json::to_value(&committed.items).unwrap()
+    );
+    assert!(resumed.items[1].error.is_some());
+    assert!(get_grammar(&connection, note.id).unwrap().card.is_none());
+    let snapshot = export_learning_snapshot(&mut connection, 1005).unwrap();
+    let bytes = serde_json::to_vec(&snapshot).unwrap();
+    let snapshot = read_learning_snapshot(bytes.as_slice(), 1005).unwrap();
+    let mut restored = Connection::open_in_memory().unwrap();
+    initialize(&restored).unwrap();
+    import_learning_snapshot(&mut restored, &snapshot, 1005).unwrap();
+    assert_eq!(
+        serde_json::to_value(
+            add_review_batch(&mut restored, "batch-history-resume", &ids, 1005).unwrap()
+        )
+        .unwrap(),
+        serde_json::to_value(resumed).unwrap()
+    );
+}
+
+#[test]
 fn deleted_note_save_replays_stay_rejected_after_snapshot_restore() {
     use lexique_storage::{
         delete_grammar, export_learning_snapshot, import_learning_snapshot, read_learning_snapshot,

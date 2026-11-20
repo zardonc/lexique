@@ -1251,20 +1251,6 @@ pub(crate) fn delete_grammar_learning(
             )?;
         }
     }
-    let batches = tx
-        .prepare("SELECT DISTINCT operation FROM review_batch_items WHERE vocabulary_id = ?1")?
-        .query_map([id], |row| row.get::<_, String>(0))?
-        .collect::<Result<Vec<_>, _>>()?;
-    for operation in batches {
-        tx.execute(
-            "DELETE FROM review_batch_items WHERE operation = ?1",
-            [&operation],
-        )?;
-        tx.execute(
-            "DELETE FROM review_batches WHERE operation = ?1",
-            [&operation],
-        )?;
-    }
     for sql in [
         "DELETE FROM review_ratings WHERE card_id IN (SELECT id FROM review_cards WHERE vocabulary_id = ?1)",
         "DELETE FROM review_progress WHERE card_id IN (SELECT id FROM review_cards WHERE vocabulary_id = ?1)",

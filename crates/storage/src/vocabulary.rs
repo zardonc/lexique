@@ -130,17 +130,7 @@ pub struct SaveResult {
 
 pub fn validate(request: &SaveRequest) -> Result<(), StorageError> {
     crate::categories::validate_category_ids(&request.category_ids)?;
-    if request.operation.is_empty()
-        || request.operation.len() > 128
-        || !request
-            .operation
-            .bytes()
-            .all(|byte| byte.is_ascii_alphanumeric() || byte == b'-')
-    {
-        return Err(StorageError::Invalid(
-            "Invalid save operation identifier".into(),
-        ));
-    }
+    crate::grammar::validate_operation(&request.operation)?;
     if request.headword.trim().is_empty()
         || request.headword.chars().count() > 200
         || request.headword.chars().any(char::is_control)
