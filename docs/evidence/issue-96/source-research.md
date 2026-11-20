@@ -84,7 +84,8 @@ masculine French noun frame and English cardinal-noun template.
 children's speech. `gueule/NOM` selects a person's mouth with informal/rude
 restrictions. `bête/ADJ` retains the offensive qualification; `bête/NOM` is the
 separate animal use. All 50 groups have accepted four-field content, with no
-annotation exception. Native lookup/save/reopen, offline and saved-state
-preservation checks are pending at integration; see the parent
+annotation exception.
+Native lookup/save/reopen, saved-state preservation and offline verification
+results and remaining gates are recorded in the parent
 [aggregate verification](../issue-90-99/README.md). Learner acceptance and wider
 release gates remain open.

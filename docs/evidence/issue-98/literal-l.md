@@ -24,6 +24,7 @@ The other **48 groups / 192 fields** passed independent source, rights and quali
 review; [independent review](independent-review.md), [admission](admission.json)
 and the canonical [field review](field-review.json) record the accepted content.
 Full original captures are preserved under integration's
-`target/implement-90-99/worker-audit/author-98/`. Native lookup/save/reopen,
-offline and saved-state preservation checks remain pending at integration;
-see the parent [aggregate verification](../issue-90-99/README.md).
+`target/implement-90-99/worker-audit/author-98/`.
+Native lookup/save/reopen, saved-state preservation and offline verification
+results and remaining gates are recorded in the parent
+[aggregate verification](../issue-90-99/README.md).

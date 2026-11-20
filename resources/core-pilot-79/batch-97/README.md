@@ -19,5 +19,6 @@ obligations in the [combined core](../README.md). Full source captures are
 preserved under integration's `target/implement-90-99/worker-audit/author-97/`.
 See the [admission evidence](../../../docs/evidence/issue-97/README.md) and
 [independent review](../../../docs/evidence/issue-97/independent-review.md).
-Native lookup/save/reopen, offline and saved-state preservation checks remain
-pending in the parent [aggregate verification](../../../docs/evidence/issue-90-99/README.md).
+Native lookup/save/reopen, saved-state preservation and offline verification
+results and remaining gates are recorded in the parent
+[aggregate verification](../../../docs/evidence/issue-90-99/README.md).
