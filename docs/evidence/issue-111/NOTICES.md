@@ -5,8 +5,8 @@ adaptations/translations use **Creative Commons Attribution-ShareAlike 4.0
 International**. The complete licence and warranty disclaimer are in
 [COPYING](COPYING), retaining the existing core licence text.
 The public legal text is [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en).
-The author's proposed selected-span rights are recorded in [rights.json](rights.json);
-independent review and combined resource admission are pending.
+The independently accepted selected-span rights are recorded in [rights.json](rights.json)
+and [the rights report](selected-rights-review.md). Combined resource admission is pending.
 
 Credit **Wiktionnaire contributors**, **French Wikipedia contributors** for
 the “Projet pilote” construction, and **Lexique contributors** for selection,
@@ -25,7 +25,7 @@ layer where imported or referenced. The author reuses the established
 French intellectual-property code. The 26 captured DAF8 markers identify an
 original-work boundary; they do not establish the authorship of each selected
 sentence. Wiki transcription/adaptation and Lexique adaptations remain
-separately CC BY-SA 4.0. Independent selected-span assessment is pending.
+separately CC BY-SA 4.0. Independent selected-span assessment passed.
 
 Credit **Boris New and Christophe Pallier** for **Lexique 3.83** membership and
 frequencies under CC BY-SA 4.0. These records retain the exact selected
@@ -47,11 +47,11 @@ French `pilote`. These relationships add no runtime aliases.
 Selected literary example prose, audio, images and whole source articles are
 excluded. The retained `tel` line 74 is a short grammatical example supporting
 the exact feminine indefinite-adjective construction; its source layers are
-included in the pending rights record. Full raw captures remain local research
+included in the accepted selected-rights record. Full raw captures remain local research
 evidence.
 
 Downstream adaptations retain CC BY-SA rights, attribution, source links,
 modification notices and the complete licence. Add no restriction preventing
 exercise of those rights. Project-owned application/converter code retains
 its separate MIT licence. Actual combined notices/source packaging remains
-parent-owned and unrun for this author package.
+parent-owned and unrun for this review package.
