@@ -662,6 +662,7 @@ fn file_database_reopens_with_record_identity_content_and_sort_preference() {
         request.example_zh = "我去学校。".into();
         request.example_sense = Some(0);
         request.more_examples.push(lexique_storage::Example {
+            sense: None,
             source: Some(Reference {
                 dictionary: "Another dictionary".into(),
                 ..snapshot().reference
@@ -917,6 +918,7 @@ fn legacy_examples_gain_no_source_on_upgrade_and_source_is_part_of_retry_identit
     request.example_fr = "Legacy French".into();
     request.example_sense = Some(0);
     request.more_examples.push(lexique_storage::Example {
+        sense: None,
         fr: String::new(),
         zh: "旧译文".into(),
         source: None,

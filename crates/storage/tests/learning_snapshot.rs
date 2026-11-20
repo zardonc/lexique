@@ -188,6 +188,7 @@ fn old_save_requests_and_unknown_example_sources_keep_their_original_meaning() {
             example_source: None,
             example_sense: Some(0),
             more_examples: vec![Example {
+                sense: None,
                 fr: "Une école.".into(),
                 zh: String::new(),
                 source: None,

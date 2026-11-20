@@ -36,8 +36,12 @@ function samePayload(previous: SaveRequest, payload: ReturnType<typeof savePaylo
 function needsExampleSense(editor: Editor) {
   const hasContent = [editor.example_fr, editor.example_zh, ...editor.more_examples.flatMap((example) => [example.fr, example.zh])].some((value) => value.trim());
   const original = editor.record;
-  const unchangedLegacy = original && original.example_sense === null && editor.example_fr === original.example_fr && editor.example_zh === original.example_zh && JSON.stringify(editor.more_examples) === JSON.stringify(original.more_examples);
-  return editor.example_sense === null && hasContent && !unchangedLegacy && !editor.snapshot.import_source;
+  return editor.example_sense === null && hasContent && original?.example_sense !== null && !editor.snapshot.import_source;
+}
+
+function editMoreExamples(editor: Editor, examples: VocabularyRecord['more_examples']) {
+  return examples.map((example) => editor.more_examples.some((old) => old.fr === example.fr && old.zh === example.zh)
+    || (!editor.snapshot.import_source && example.sense === undefined) ? example : { fr: example.fr, zh: example.zh });
 }
 
 
@@ -136,7 +140,7 @@ export function useNotebook(runtime: RuntimeAdapter) {
     refresh: () => refreshVocabulary(runtime, editor?.record ?? null, { open, setBusy, setError }), editCategories: (category_ids: readonly number[]) => { setEditor((value) => value && { ...value, category_ids }); setSaved(false); setExisting(null); },
     edit: (notes: string) => { setEditor((value) => value && { ...value, notes }); setSaved(false); setExisting(null); },
     editExample: (field: 'example_fr' | 'example_zh', text: string) => { setEditor((value) => value && { ...value, [field]: text, ...(value.snapshot.import_source ? { example_source: undefined, example_sense: null } : {}) }); setSaved(false); setExisting(null); },
-    editSense: (example_sense: number | null) => { setEditor((value) => value && { ...value, example_sense }); setSaved(false); setExisting(null); }, editMore: (examples: VocabularyRecord['more_examples']) => { setEditor((value) => value && { ...value, more_examples: value.snapshot.import_source ? examples.map((example) => value.more_examples.some((old) => old.fr === example.fr && old.zh === example.zh) ? example : { fr: example.fr, zh: example.zh }) : examples, ...(value.snapshot.import_source ? { example_sense: null } : {}) }); setSaved(false); setExisting(null); },
+    editSense: (example_sense: number | null) => { setEditor((value) => value && { ...value, example_sense }); setSaved(false); setExisting(null); }, editMore: (examples: VocabularyRecord['more_examples']) => { setEditor((value) => value && { ...value, more_examples: editMoreExamples(value, examples) }); setSaved(false); setExisting(null); },
     adopt: () => { if (conflict) open(conflict); },
     back: () => setConflict(null),
   };

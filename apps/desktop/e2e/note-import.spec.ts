@@ -5,15 +5,17 @@ import { nativeFixture, record } from './native-fixture';
 const external = { ...record, headword: 'école externe', reference: null, digest: [], import_source: { format: 'csv', filename: 'mes-écoles.csv' },
   notes: '学校\n独立笔记', example_fr: 'Une école indépendante.', example_zh: '一所独立学校。', example_sense: null,
   more_examples: [{ fr: '', zh: '尚待法语例句' }] };
-const preview = { operation: 'csv-fixture', source: external.import_source, rows: [2, 3], status: 'create', error: null, existing: null,
+const group = { rows: [2, 3], status: 'create', error: null, existing: null,
   content: { headword: external.headword, notes: external.notes, examples: [{ fr: external.example_fr, zh: external.example_zh }, ...external.more_examples] } };
+const preview = { operation: 'csv-fixture', source: external.import_source, columns: ['headword', 'notes', 'example_fr', 'example_zh'],
+  mapping: { headword: 0, notes: 1, example_fr: 2, example_zh: 3 }, groups: [group], error: null };
 
-test('single-word preview confirms content without adding cards or speech and offers the saved record', async ({ page }) => {
-  await nativeFixture(page, { note_import_preview: [{ value: preview }], note_import_commit: [{ value: { outcome: 'created', record: external } }],
+test('CSV preview confirms content without adding cards or speech and offers the saved record', async ({ page }) => {
+  await nativeFixture(page, { note_import_preview: [{ value: preview }], note_import_commit: [{ value: { created: 1, updated: 0, skipped: 0, records: [external] } }],
     vocabulary_list: [{ value: [] }, { value: [external] }], review_auto_enroll: [{ value: true }] });
   await page.goto('/'); await page.getByRole('button', { name: '笔记', exact: true }).click();
-  await page.getByRole('button', { name: '导入单词 CSV', exact: true }).click();
-  const panel = page.getByRole('region', { name: '单词 CSV 导入预览', exact: true });
+  await page.getByRole('button', { name: '导入 CSV', exact: true }).click();
+  const panel = page.getByRole('region', { name: 'CSV 导入预览', exact: true });
   await expect(panel).toContainText('mes-écoles.csv'); await expect(panel).toContainText('尚待法语例句');
   await page.getByRole('button', { name: '确认导入', exact: true }).click();
   await expect(page.getByText('导入已保存。可打开记录，主动加入识义卡和听音卡。')).toBeVisible();
@@ -42,34 +44,34 @@ test('external notes and unassigned examples save and reopen without requiring a
 test('file-picker and preview cancellation never commit learning data', async ({ page }) => {
   await nativeFixture(page, { note_import_preview: [{ value: null }, { value: preview }], note_import_cancel: [{ value: null }] });
   await page.goto('/'); await page.getByRole('button', { name: '笔记', exact: true }).click();
-  await page.getByRole('button', { name: '导入单词 CSV', exact: true }).click();
+  await page.getByRole('button', { name: '导入 CSV', exact: true }).click();
   await expect(page.getByText('已取消，未保存任何记录。')).toBeVisible();
-  await page.getByRole('button', { name: '导入单词 CSV', exact: true }).click();
+  await page.getByRole('button', { name: '导入 CSV', exact: true }).click();
   await page.getByRole('button', { name: '取消导入', exact: true }).click();
-  await expect(page.getByRole('region', { name: '单词 CSV 导入预览', exact: true })).toBeHidden();
+  await expect(page.getByRole('region', { name: 'CSV 导入预览', exact: true })).toBeHidden();
   expect(await page.evaluate(() => window.testNative.calls.some((call) => call.command === 'note_import_commit'))).toBe(false);
 });
 
 test('read and write errors stay visible and a failed confirmation retains preview for retry', async ({ page }) => {
   await nativeFixture(page, { note_import_preview: [{ error: 'CSV read denied' }, { value: preview }],
-    note_import_commit: [{ error: 'SQLite write failed' }, { value: { outcome: 'created', record: external } }] });
+    note_import_commit: [{ error: 'SQLite write failed' }, { value: { created: 1, updated: 0, skipped: 0, records: [external] } }] });
   await page.goto('/'); await page.getByRole('button', { name: '笔记', exact: true }).click();
-  await page.getByRole('button', { name: '导入单词 CSV', exact: true }).click(); await expect(page.getByRole('alert')).toContainText('CSV read denied');
-  await page.getByRole('button', { name: '导入单词 CSV', exact: true }).click();
+  await page.getByRole('button', { name: '导入 CSV', exact: true }).click(); await expect(page.getByRole('alert')).toContainText('CSV read denied');
+  await page.getByRole('button', { name: '导入 CSV', exact: true }).click();
   await page.getByRole('button', { name: '确认导入', exact: true }).click(); await expect(page.getByRole('alert')).toContainText('SQLite write failed');
-  await expect(page.getByRole('region', { name: '单词 CSV 导入预览', exact: true })).toContainText(external.notes);
+  await expect(page.getByRole('region', { name: 'CSV 导入预览', exact: true })).toContainText(external.notes);
   await page.getByRole('button', { name: '确认导入', exact: true }).click(); await expect(page.getByRole('button', { name: '打开记录', exact: true })).toBeVisible();
   const calls = await page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'note_import_commit'));
   expect(calls.map((call) => call.args?.operation)).toEqual(['csv-fixture', 'csv-fixture']);
 });
 
 test('differences and invalid groups block confirmation and display file locations and existing content', async ({ page }) => {
-  await nativeFixture(page, { note_import_preview: [{ value: { ...preview, status: 'different', existing: { ...external, notes: '已有笔记' } } },
-    { value: { ...preview, status: 'invalid', error: 'Row 2: Headword exceeds 200 characters' } }] });
+  await nativeFixture(page, { note_import_preview: [{ value: { ...preview, groups: [{ ...group, status: 'different', existing: { ...external, notes: '已有笔记' } }] } },
+    { value: { ...preview, groups: [{ ...group, status: 'invalid', error: 'Row 2: Headword exceeds 200 characters' }] } }] });
   await page.goto('/'); await page.getByRole('button', { name: '笔记', exact: true }).click();
-  await page.getByRole('button', { name: '导入单词 CSV', exact: true }).click();
+  await page.getByRole('button', { name: '导入 CSV', exact: true }).click();
   await expect(page.getByRole('button', { name: '确认导入', exact: true })).toBeDisabled(); await expect(page.getByText('已有笔记', { exact: true })).toBeVisible();
-  await page.getByRole('button', { name: '导入单词 CSV', exact: true }).click();
+  await page.getByRole('button', { name: '导入 CSV', exact: true }).click();
   await expect(page.getByRole('button', { name: '确认导入', exact: true })).toBeDisabled(); await expect(page.getByRole('alert')).toContainText('Row 2');
 });
 

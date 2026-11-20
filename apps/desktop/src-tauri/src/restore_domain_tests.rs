@@ -143,11 +143,13 @@ fn request(operation: &str, headword: &str, notes: &str) -> storage::SaveRequest
         example_sense: Some(0),
         more_examples: vec![
             storage::Example {
+                sense: None,
                 fr: "Je vais à l'école.".into(),
                 zh: "我去学校。".into(),
                 source: Some(reference(headword)),
             },
             storage::Example {
+                sense: None,
                 fr: "Ancien exemple sans source.".into(),
                 zh: String::new(),
                 source: None,
