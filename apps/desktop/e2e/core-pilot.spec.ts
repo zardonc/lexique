@@ -11,7 +11,7 @@ for (const labels of [
   { locale: 'en', query: 'French word or phrase', collect: 'Add to notebook', edit: 'View and edit', summary: 'Word summary', auxiliary: 'Auxiliary (AUX)',
     coverage: '1,436 / 4,087 POS groups', fields: ['French definition', 'IPA', 'English meaning', 'Chinese meaning', 'Usage'], sources: 'Field sources' },
   { locale: 'fr', query: 'Mot ou expression en français', collect: 'Ajouter au carnet', edit: 'Voir et modifier', summary: 'Résumé du mot', auxiliary: 'Auxiliaire (AUX)',
-    coverage: '1,436 / 4 087 groupes de catégories grammaticales', fields: ['Définition française', 'API', 'Sens anglais', 'Sens chinois', 'Usage'], sources: 'Sources des champs' },
+    coverage: '1 436 / 4 087 groupes de catégories grammaticales', fields: ['Définition française', 'API', 'Sens anglais', 'Sens chinois', 'Usage'], sources: 'Sources des champs' },
   { locale: 'zh', query: '法语词或词组', collect: '加入生词本', edit: '查看与编辑', summary: '基本词汇信息', auxiliary: '助动词 (AUX)',
     coverage: '1,436 / 4,087 个核心词性组', fields: ['法语定义', '国际音标', '英语译义', '中文译义', '用法'], sources: '字段来源' },
 ]) {

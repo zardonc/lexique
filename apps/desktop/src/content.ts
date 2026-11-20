@@ -81,7 +81,7 @@ export const messages = {
     dictionary: {
       core: coreMessages.fr,
       label: 'Mot ou expression en français', search: 'Chercher', loading: 'Recherche…',
-      hint: 'Noyau lexical pilote · 1,436 / 4 087 groupes de catégories grammaticales. Compléments FreeDict. Essayez être, avoir, bien, fort, aujourd\'hui, cœur ou côte.',
+      hint: 'Noyau lexical pilote · 1 436 / 4 087 groupes de catégories grammaticales. Compléments FreeDict. Essayez être, avoir, bien, fort, aujourd\'hui, cœur ou côte.',
       preview: 'L’aperçu web ne peut pas lire le dictionnaire intégré. Utilisez l’application de bureau.',
       noMatch: 'Aucune entrée exacte trouvée.', records: 'Entrées', source: 'Source', details: 'Détails de l’erreur',
       missing: 'Le dictionnaire est absent.', corrupt: 'Le dictionnaire est endommagé.',
