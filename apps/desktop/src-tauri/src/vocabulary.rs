@@ -233,7 +233,7 @@ fn first_translation(senses: &[Sense]) -> Option<String> {
     })
 }
 
-fn snapshot(lookup: Lookup) -> Snapshot {
+pub(crate) fn snapshot(lookup: Lookup) -> Snapshot {
     let source = lookup.source;
     Snapshot {
         reference: Reference {

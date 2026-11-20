@@ -150,6 +150,7 @@ pub fn preview_csv_bytes(
             let index = *identities.entry(headword.clone()).or_insert_with(|| {
                 let index = preview.groups.len();
                 preview.groups.push(NoteImportGroup {
+                    enrichment: None,
                     content: NoteImportContent {
                         headword,
                         notes: notes.clone(),

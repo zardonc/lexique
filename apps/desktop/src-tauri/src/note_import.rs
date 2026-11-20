@@ -1,11 +1,10 @@
+use crate::note_enrichment::{NoteEnrichment, enrich_new_note};
 use lexique_storage::{
     ImportSource, NoteImportContent, NoteImportItem, NoteImportResult, VocabularyRecord,
 };
 use rusqlite::Connection;
 use serde::{Deserialize, Serialize};
-#[cfg(test)]
-use std::path::Path;
-use std::sync::Mutex;
+use std::{path::Path, sync::Mutex};
 use tauri::{Manager, State};
 use tauri_plugin_dialog::DialogExt;
 
@@ -37,6 +36,8 @@ pub struct NoteImportGroup {
     pub existing: Option<VocabularyRecord>,
     pub status: &'static str,
     pub error: Option<String>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub enrichment: Option<NoteEnrichment>,
 }
 #[derive(Clone, Debug, Serialize)]
 pub struct NoteImportPreview {
@@ -52,6 +53,8 @@ pub struct NoteImportPreview {
 pub struct NoteImportSelection {
     pub index: usize,
     pub action: NoteImportAction,
+    #[serde(default)]
+    pub allow_unlinked: bool,
 }
 #[derive(Clone, Debug, Deserialize, Serialize, PartialEq)]
 #[serde(rename_all = "lowercase")]
@@ -78,6 +81,46 @@ pub fn preview_csv_file(
     let (source, bytes) = crate::note_import_csv::read_csv_file(path)?;
     crate::note_import_csv::preview_csv_bytes(connection, source, &bytes, operation, options)
 }
+pub(crate) fn enrich_preview(
+    preview: &mut NoteImportPreview,
+    database: &crate::vocabulary::DatabasePath,
+    builtin: &Path,
+    registry: &crate::dictionaries::Registry,
+) {
+    for group in &mut preview.groups {
+        group.enrichment = if preview.error.is_some() || group.error.is_some() {
+            None
+        } else if group.existing.is_some() {
+            Some(NoteEnrichment::retained())
+        } else if group.status == "create" {
+            Some(enrich_new_note(
+                registry,
+                database,
+                builtin,
+                &group.content.headword,
+            ))
+        } else {
+            None
+        };
+    }
+}
+pub(crate) fn enrich_preview_from_app(
+    app: &tauri::AppHandle,
+    preview: &mut NoteImportPreview,
+) -> Result<(), String> {
+    let builtin = app
+        .path()
+        .resource_dir()
+        .map_err(|e| e.to_string())?
+        .join("dictionary/dictionary.sqlite3");
+    enrich_preview(
+        preview,
+        &app.state::<crate::vocabulary::DatabasePath>(),
+        &builtin,
+        &app.state::<crate::dictionaries::Registry>(),
+    );
+    Ok(())
+}
 pub fn commit_preview(
     connection: &mut Connection,
     preview: &NoteImportPreview,
@@ -91,14 +134,15 @@ pub fn commit_preview(
         let decision = decisions
             .get_mut(selection.index)
             .ok_or("Invalid import group index")?;
-        if decision.replace(&selection.action).is_some() {
+        if decision.replace(selection).is_some() {
             return Err("Duplicate import group decision".into());
         }
     }
     let mut items = Vec::new();
     let mut skipped = 0;
     for (group, decision) in preview.groups.iter().zip(decisions) {
-        let decision = decision.ok_or("Decide every import group")?;
+        let selection = decision.ok_or("Decide every import group")?;
+        let decision = &selection.action;
         if *decision == NoteImportAction::Skip {
             skipped += 1;
             continue;
@@ -110,11 +154,30 @@ pub fn commit_preview(
         {
             return Err("Resolve errors and choose create, update or skip for each group".into());
         }
+        if *decision == NoteImportAction::Create
+            && group
+                .enrichment
+                .as_ref()
+                .is_some_and(|value| value.status == "error")
+            && !selection.allow_unlinked
+        {
+            return Err(format!(
+                "Choose whether to continue without a dictionary link for {} before importing",
+                group.content.headword
+            ));
+        }
         items.push(NoteImportItem {
             content: group.content.clone(),
             existing: group.existing.clone(),
             source: preview.source.clone(),
-            snapshot: None,
+            snapshot: if *decision == NoteImportAction::Create {
+                group
+                    .enrichment
+                    .as_ref()
+                    .and_then(|value| value.snapshot.clone())
+            } else {
+                None
+            },
         });
     }
     lexique_storage::save_note_import_batch(connection, &preview.operation, &items, skipped)
@@ -171,13 +234,14 @@ pub async fn note_import_preview(
         let (source, bytes) = crate::note_import_csv::read_csv_file(&path)?;
         let connection =
             crate::vocabulary::open(app.state::<crate::vocabulary::DatabasePath>().inner())?;
-        let preview = crate::note_import_csv::preview_csv_bytes(
+        let mut preview = crate::note_import_csv::preview_csv_bytes(
             &connection,
             source.clone(),
             &bytes,
             &operation,
             &options,
         )?;
+        enrich_preview_from_app(&app, &mut preview)?;
         let state = app.state::<NoteImportState>();
         let mut state = state
             .0
@@ -220,13 +284,14 @@ pub async fn note_import_remap(
         let (source, bytes) = session.file.as_ref().ok_or("CSV selection is not ready")?;
         let connection =
             crate::vocabulary::open(app.state::<crate::vocabulary::DatabasePath>().inner())?;
-        let preview = crate::note_import_csv::preview_csv_bytes(
+        let mut preview = crate::note_import_csv::preview_csv_bytes(
             &connection,
             source.clone(),
             bytes,
             &operation,
             &options,
         )?;
+        enrich_preview_from_app(&app, &mut preview)?;
         session.preview = Some(preview.clone());
         Ok(preview)
     })
@@ -283,3 +348,7 @@ pub fn note_import_cancel(
 #[cfg(test)]
 #[path = "note_import_tests.rs"]
 mod tests;
+
+#[cfg(test)]
+#[path = "note_enrichment_tests.rs"]
+mod enrichment_tests;

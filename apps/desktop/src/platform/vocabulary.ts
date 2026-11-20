@@ -26,6 +26,7 @@ const reference = z.object({
   sha256: z.string().regex(/^[a-f0-9]{64}$/),
 }).strict().readonly();
 const exampleSource = reference.nullable().optional();
+export const dictionarySnapshotSchema = z.object({ reference, digest: z.array(digestEntry).min(1).readonly() }).strict().readonly();
 const moreExamples = z.array(z.object({ fr: notes, zh: notes, source: exampleSource, sense: z.number().int().nonnegative().safe().optional() }).strict().readonly()).max(100).readonly();
 export const importSourceSchema = z.object({
   format: z.enum(['csv', 'markdown']),
