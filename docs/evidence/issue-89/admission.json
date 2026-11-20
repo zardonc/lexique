@@ -1,0 +1,455 @@
+{
+  "schema": "lexique-core-batch-admission-1",
+  "issue": "https://github.com/zardonc/lexique/issues/89",
+  "content_version": "core-89-v1",
+  "review_date": "2026-11-18",
+  "resource_admission": "passed",
+  "scope": {
+    "issue": 89,
+    "target_groups": 50,
+    "reused_pilot_groups": 2,
+    "new_groups": 48,
+    "complete_groups": 50,
+    "accepted_groups": 50,
+    "approved_specialist_exception_groups": 0,
+    "annotation_exception_groups": 0,
+    "scope_acceptance": "passed",
+    "complete_fields": 200,
+    "groups": [
+      {
+        "frozen_row": 401,
+        "headword": "sang",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 402,
+        "headword": "place",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 403,
+        "headword": "espérer",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 404,
+        "headword": "gros",
+        "pos": "ADJ",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 405,
+        "headword": "gros",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 406,
+        "headword": "désoler",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 407,
+        "headword": "eux",
+        "pos": "PRO:per",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 408,
+        "headword": "retrouver",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 409,
+        "headword": "ville",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 410,
+        "headword": "terre",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 411,
+        "headword": "gagner",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 412,
+        "headword": "semaine",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 413,
+        "headword": "acheter",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 414,
+        "headword": "longtemps",
+        "pos": "ADV",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 415,
+        "headword": "gars",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 416,
+        "headword": "chambre",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 417,
+        "headword": "hé",
+        "pos": "ONO",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 418,
+        "headword": "côté",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 419,
+        "headword": "ensemble",
+        "pos": "ADV",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 420,
+        "headword": "ensemble",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 421,
+        "headword": "rappeler",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 422,
+        "headword": "fort",
+        "pos": "ADJ",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 423,
+        "headword": "fort",
+        "pos": "ADV",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 424,
+        "headword": "fort",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 425,
+        "headword": "cas",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 426,
+        "headword": "mot",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 427,
+        "headword": "seulement",
+        "pos": "ADV",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 428,
+        "headword": "toucher",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 429,
+        "headword": "voici",
+        "pos": "PRE",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 430,
+        "headword": "monter",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 431,
+        "headword": "désolé",
+        "pos": "ADJ",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 432,
+        "headword": "quitter",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 433,
+        "headword": "police",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 434,
+        "headword": "suite",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 435,
+        "headword": "matin",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 436,
+        "headword": "emmener",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 437,
+        "headword": "devant",
+        "pos": "ADV",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 438,
+        "headword": "devant",
+        "pos": "PRE",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 439,
+        "headword": "continuer",
+        "pos": "VER",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 440,
+        "headword": "cher",
+        "pos": "ADJ",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 441,
+        "headword": "cher",
+        "pos": "ADV",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 442,
+        "headword": "cher",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 443,
+        "headword": "enfin",
+        "pos": "ADV",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 444,
+        "headword": "pardon",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 445,
+        "headword": "pardon",
+        "pos": "ONO",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 446,
+        "headword": "mari",
+        "pos": "NOM",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 447,
+        "headword": "mauvais",
+        "pos": "ADJ",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 448,
+        "headword": "là-bas",
+        "pos": "ADV",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 449,
+        "headword": "point",
+        "pos": "ADV",
+        "complete_fields": 4
+      },
+      {
+        "frozen_row": 450,
+        "headword": "point",
+        "pos": "NOM",
+        "complete_fields": 4
+      }
+    ]
+  },
+  "global_admission": {
+    "independent_field_review": "passed",
+    "produced_resource_self_check": "passed",
+    "everyday_sense_review": "incomplete",
+    "selected_scope_acceptance": "passed",
+    "accepted_groups": 450,
+    "approved_specialist_exception_groups": 2,
+    "remaining_unaccepted_groups": 3637,
+    "annotation_exception_groups": 2,
+    "selected_source_rights_and_materials": "passed",
+    "complete_groups": 448,
+    "complete_senses": 450,
+    "complete_fields": 1800,
+    "remaining_groups": 3639
+  },
+  "sources": [
+    {
+      "id": "b89_fr_11533",
+      "edition": "fr",
+      "entry_language": "fr",
+      "title": "point",
+      "pageid": 11533,
+      "revid": 39772006,
+      "timestamp": "2026-08-03T10:57:43Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=point&oldid=39772006",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=point&action=history",
+      "attribution": "Wiktionnaire contributors; credit the full article history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "source_frame": "Latest public MediaWiki revision at or before 2026-10-01T00:00:00Z",
+      "selected_text_review": "passed_for_selected_spans"
+    },
+    {
+      "id": "review89_en_point",
+      "edition": "en",
+      "entry_language": "fr",
+      "title": "point",
+      "pageid": 0,
+      "revid": 93015241,
+      "timestamp": "2026-09-29T19:50:56Z",
+      "fixed_url": "https://en.wiktionary.org/w/index.php?title=point&oldid=93015241",
+      "history_url": "https://en.wiktionary.org/w/index.php?title=point&action=history&offset=20260929195057&limit=500",
+      "attribution": "Wiktionary contributors",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "source_frame": "Fixed public revision; exact selected spans independently reviewed on 2026-11-18",
+      "selected_text_review": "passed_for_selected_spans"
+    }
+  ],
+  "accepted_field_count": 200,
+  "accepted_replacements_and_binding_corrections": [
+    {
+      "sense_id": "b89-point-adv-selected",
+      "frozen_row": 449,
+      "headword": "point",
+      "pos": "ADV",
+      "field": "french_definition",
+      "language": "fr",
+      "accepted_text": "Dans certains usages régionaux familiers, adverbe qui marque la négation après le verbe conjugué, sans ne, comme pas.",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "review89_en_point",
+        "revid": 93015241,
+        "url": "https://en.wiktionary.org/w/index.php?title=point&oldid=93015241",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=point&action=history&offset=20260929195057&limit=500",
+        "line_1_based": 1761,
+        "reviewed_excerpt": "# {{senseid|fr|adverb}}{{lb|fr|literary|or|dialectal|usually with \"ne\"}} [[not]]"
+      }
+    },
+    {
+      "sense_id": "b89-point-adv-selected",
+      "frozen_row": 449,
+      "headword": "point",
+      "pos": "ADV",
+      "field": "ipa",
+      "language": "und",
+      "accepted_text": "/pwɛ̃/",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "b89_fr_11533",
+        "revid": 39772006,
+        "url": "https://fr.wiktionary.org/w/index.php?title=point&oldid=39772006",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=point&action=history",
+        "line_1_based": 809,
+        "reviewed_excerpt": "'''point''' {{pron|pwɛ̃|fr}} {{invariable|fr}} (adverbe de négation)"
+      }
+    },
+    {
+      "sense_id": "b89-point-adv-selected",
+      "frozen_row": 449,
+      "headword": "point",
+      "pos": "ADV",
+      "field": "english",
+      "language": "en",
+      "accepted_text": "Not: a negative adverb placed after the conjugated verb without ne in familiar speech in some regional varieties of French.",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "review89_en_point",
+        "revid": 93015241,
+        "url": "https://en.wiktionary.org/w/index.php?title=point&oldid=93015241",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=point&action=history&offset=20260929195057&limit=500",
+        "line_1_based": 1761,
+        "reviewed_excerpt": "# {{senseid|fr|adverb}}{{lb|fr|literary|or|dialectal|usually with \"ne\"}} [[not]]"
+      }
+    },
+    {
+      "sense_id": "b89-point-adv-selected",
+      "frozen_row": 449,
+      "headword": "point",
+      "pos": "ADV",
+      "field": "chinese",
+      "language": "zh",
+      "accepted_text": "不：某些地区法语非正式口语中的否定副词，放在变位动词后，不与 ne 连用，相当于 pas。",
+      "reviewer": "quality-followup-85-87-2026-11-18",
+      "exact_source": {
+        "source_id": "review89_en_point",
+        "revid": 93015241,
+        "url": "https://en.wiktionary.org/w/index.php?title=point&oldid=93015241",
+        "history_url": "https://en.wiktionary.org/w/index.php?title=point&action=history&offset=20260929195057&limit=500",
+        "line_1_based": 1761,
+        "reviewed_excerpt": "# {{senseid|fr|adverb}}{{lb|fr|literary|or|dialectal|usually with \"ne\"}} [[not]]"
+      }
+    }
+  ],
+  "all_field_reviews": "../../../resources/core-pilot-79/field-review.json",
+  "annotations": [],
+  "compiled_preservation": {
+    "groups": 154,
+    "fields": 616,
+    "payloads": "unchanged"
+  },
+  "native_acceptance": "passed on Windows x64; see ../issue-84-89/README.md",
+  "learner_acceptance": "not_run",
+  "whole_core_release": "incomplete"
+}

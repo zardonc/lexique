@@ -109,14 +109,14 @@ try {
   const cache = join(directory, 'Lexique-data', 'temp', 'speech', `${before.word.id}.ogg`);
   const audio = await readFile(cache);
   await writeFile(cache, 'OggS invalid playback fixture');
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.getByRole('button', { name: '闪卡复习', exact: true }).click();
   await queueCard.getByRole('button', { name: '跳过', exact: true }).click();
   await expect(queueCard.getByRole('alert')).toContainText('播放失败');
   await queueCard.getByRole('button', { name: '显示答案' }).click();
   await expect(queueCard.getByRole('button', { name: '记得', exact: true })).toBeDisabled();
   await queueCard.getByRole('button', { name: '跳过', exact: true }).click();
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').filter({ hasText: 'école' }).click();
   await page.getByLabel('法语例句').fill('Une phrase.');
   const saveActions = page.getByRole('button', { name: '保存', exact: true }).locator('..');
@@ -137,7 +137,7 @@ try {
   await listening.getByRole('button', { name: '跳过', exact: true }).click();
   await writeFile(cache, audio);
   await page.getByRole('button', { name: '闪卡复习', exact: true }).click();
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').filter({ hasText: 'école' }).click();
   await page.getByRole('button', { name: '查看听音卡' }).click();
   await expect.poll(() => listening.locator('audio').evaluate((audio) => audio.currentTime)).toBeGreaterThan(0);
@@ -172,7 +172,7 @@ try {
   await expect(queueCard.locator('audio')).toBeAttached();
   await expect.poll(() => queueCard.locator('audio').evaluate((audio) => audio.ended), { timeout: 20_000 }).toBe(true);
   await queueCard.getByRole('button', { name: '跳过', exact: true }).click();
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').filter({ hasText: 'école' }).click();
   await page.getByLabel('例句对应释义').selectOption('0');
   await page.getByLabel('法语例句').fill('Je vais à l’école.');
@@ -212,7 +212,7 @@ try {
   const python = join(directory, 'speech', 'runtime', 'python.exe');
   await rename(python, `${python}.disabled`);
   try {
-    await page.getByRole('button', { name: '生词本', exact: true }).click();
+    await page.getByRole('button', { name: '笔记', exact: true }).click();
     await page.getByLabel('选择 école', { exact: true }).check();
     await page.getByLabel('选择 bonjour', { exact: true }).check();
     const batchBefore = await snapshot(page, before.word.id);

@@ -1,0 +1,52 @@
+| Row | Frozen group | Definition source / line | IPA source / line |
+| ---: | --- | --- | --- |
+| 251 | `plaire/VER` | [plaire r39835463](https://fr.wiktionary.org/w/index.php?title=plaire&oldid=39835463) / 7 | [plaire r39835463](https://fr.wiktionary.org/w/index.php?title=plaire&oldid=39835463) / 6 |
+| 252 | `maison/NOM` | [maison r39996395](https://fr.wiktionary.org/w/index.php?title=maison&oldid=39996395) / 10 | [maison r39996395](https://fr.wiktionary.org/w/index.php?title=maison&oldid=39996395) / 9 |
+| 253 | `gens/NOM` | [gens r39969490](https://fr.wiktionary.org/w/index.php?title=gens&oldid=39969490) / 11 | [gens r39969490](https://fr.wiktionary.org/w/index.php?title=gens&oldid=39969490) / 10 |
+| 254 | `nuit/NOM` | [nuit r40027844](https://fr.wiktionary.org/w/index.php?title=nuit&oldid=40027844) / 11 | [nuit r40027844](https://fr.wiktionary.org/w/index.php?title=nuit&oldid=40027844) / 10 |
+| 255 | `ah/ONO` | [ah r39879435](https://fr.wiktionary.org/w/index.php?title=ah&oldid=39879435) / 20 | [ah r39879435](https://fr.wiktionary.org/w/index.php?title=ah&oldid=39879435) / 19 |
+| 256 | `soir/NOM` | [soir r40028122](https://fr.wiktionary.org/w/index.php?title=soir&oldid=40028122) / 8 | [soir r40028122](https://fr.wiktionary.org/w/index.php?title=soir&oldid=40028122) / 7 |
+| 257 | `nom/NOM` | [nom r39970471](https://fr.wiktionary.org/w/index.php?title=nom&oldid=39970471) / 18 | [nom r39970471](https://fr.wiktionary.org/w/index.php?title=nom&oldid=39970471) / 17 |
+| 258 | `bonjour/NOM` | [bonjour r39999172](https://fr.wiktionary.org/w/index.php?title=bonjour&oldid=39999172) / 247 | [bonjour r39999172](https://fr.wiktionary.org/w/index.php?title=bonjour&oldid=39999172) / 246 |
+| 259 | `jouer/VER` | [jouer r39888467](https://fr.wiktionary.org/w/index.php?title=jouer&oldid=39888467) / 19 | [jouer r39888467](https://fr.wiktionary.org/w/index.php?title=jouer&oldid=39888467) / 8 |
+| 260 | `leur/PRO:per` | [leur r39770609](https://fr.wiktionary.org/w/index.php?title=leur&oldid=39770609) / 84 | [leur r39770609](https://fr.wiktionary.org/w/index.php?title=leur&oldid=39770609) / 83 |
+| 261 | `leur/PRO:pos` | [le leur r38979962](https://fr.wiktionary.org/w/index.php?title=le%20leur&oldid=38979962) / 17 | [leur r39770609](https://fr.wiktionary.org/w/index.php?title=leur&oldid=39770609) / 83 |
+| 262 | `finir/VER` | [finir r39911410](https://fr.wiktionary.org/w/index.php?title=finir&oldid=39911410) / 7 | [finir r39911410](https://fr.wiktionary.org/w/index.php?title=finir&oldid=39911410) / 6 |
+| 263 | `peur/NOM` | [peur r39848810](https://fr.wiktionary.org/w/index.php?title=peur&oldid=39848810) / 11 | [peur r39848810](https://fr.wiktionary.org/w/index.php?title=peur&oldid=39848810) / 10 |
+| 264 | `mort/ADJ` | [mort r39969604](https://fr.wiktionary.org/w/index.php?title=mort&oldid=39969604) / 459 | [mort r39969604](https://fr.wiktionary.org/w/index.php?title=mort&oldid=39969604) / 458 |
+| 265 | `mort/NOM` | [mort r39969604](https://fr.wiktionary.org/w/index.php?title=mort&oldid=39969604) / 13 | [mort r39969604](https://fr.wiktionary.org/w/index.php?title=mort&oldid=39969604) / 12 |
+| 266 | `parce que/CON` | [parce que r39773933](https://fr.wiktionary.org/w/index.php?title=parce%20que&oldid=39773933) / 9 | [parce que r39773933](https://fr.wiktionary.org/w/index.php?title=parce%20que&oldid=39773933) / 8 |
+| 267 | `perdre/VER` | [perdre r39823158](https://fr.wiktionary.org/w/index.php?title=perdre&oldid=39823158) / 9 | [perdre r39823158](https://fr.wiktionary.org/w/index.php?title=perdre&oldid=39823158) / 8 |
+| 268 | `maman/NOM` | [maman r39542962](https://fr.wiktionary.org/w/index.php?title=maman&oldid=39542962) / 20 | [maman r39542962](https://fr.wiktionary.org/w/index.php?title=maman&oldid=39542962) / 9 |
+| 269 | `sentir/VER` | [sentir r39884792](https://fr.wiktionary.org/w/index.php?title=sentir&oldid=39884792) / 13 | [sentir r39884792](https://fr.wiktionary.org/w/index.php?title=sentir&oldid=39884792) / 6 |
+| 270 | `ouais/ADV` | [ouais r39568604](https://fr.wiktionary.org/w/index.php?title=ouais&oldid=39568604) / 13 | [ouais r39568604](https://fr.wiktionary.org/w/index.php?title=ouais&oldid=39568604) / 12 |
+| 271 | `rentrer/VER` | [rentrer r39770918](https://fr.wiktionary.org/w/index.php?title=rentrer&oldid=39770918) / 7 | [rentrer r39770918](https://fr.wiktionary.org/w/index.php?title=rentrer&oldid=39770918) / 6 |
+| 272 | `nos/ADJ:pos` | [nos r39801228](https://fr.wiktionary.org/w/index.php?title=nos&oldid=39801228) / 19 | [nos r39801228](https://fr.wiktionary.org/w/index.php?title=nos&oldid=39801228) / 18 |
+| 273 | `argent/NOM` | [argent r40036805](https://fr.wiktionary.org/w/index.php?title=argent&oldid=40036805) / 41 | [argent r40036805](https://fr.wiktionary.org/w/index.php?title=argent&oldid=40036805) / 12 |
+| 274 | `vivre/NOM` | [vivres r39708130](https://fr.wiktionary.org/w/index.php?title=vivres&oldid=39708130) / 10 | [vivres r39708130](https://fr.wiktionary.org/w/index.php?title=vivres&oldid=39708130) / 9 |
+| 275 | `vivre/VER` | [vivre r39923645](https://fr.wiktionary.org/w/index.php?title=vivre&oldid=39923645) / 11 | [vivre r39923645](https://fr.wiktionary.org/w/index.php?title=vivre&oldid=39923645) / 10 |
+| 276 | `premier/ADJ` | [premier r39874235](https://fr.wiktionary.org/w/index.php?title=premier&oldid=39874235) / 11 | [premier r39874235](https://fr.wiktionary.org/w/index.php?title=premier&oldid=39874235) / 10 |
+| 277 | `premier/NOM` | [premier r39874235](https://fr.wiktionary.org/w/index.php?title=premier&oldid=39874235) / 301 | [premier r39874235](https://fr.wiktionary.org/w/index.php?title=premier&oldid=39874235) / 300 |
+| 278 | `problème/NOM` | [problème r39816540](https://fr.wiktionary.org/w/index.php?title=probl%C3%A8me&oldid=39816540) / 26 | [problème r39816540](https://fr.wiktionary.org/w/index.php?title=probl%C3%A8me&oldid=39816540) / 9 |
+| 279 | `quelle/ADJ:int` | [quel r39953698](https://fr.wiktionary.org/w/index.php?title=quel&oldid=39953698) / 10 | [quelle r39771917](https://fr.wiktionary.org/w/index.php?title=quelle&oldid=39771917) / 5 |
+| 280 | `rendre/VER` | [rendre r39924966](https://fr.wiktionary.org/w/index.php?title=rendre&oldid=39924966) / 9 | [rendre r39924966](https://fr.wiktionary.org/w/index.php?title=rendre&oldid=39924966) / 8 |
+| 281 | `dernier/ADJ` | [dernier r39863317](https://fr.wiktionary.org/w/index.php?title=dernier&oldid=39863317) / 10 | [dernier r39863317](https://fr.wiktionary.org/w/index.php?title=dernier&oldid=39863317) / 9 |
+| 282 | `dernier/NOM` | [dernier r39863317](https://fr.wiktionary.org/w/index.php?title=dernier&oldid=39863317) / 203 | [dernier r39863317](https://fr.wiktionary.org/w/index.php?title=dernier&oldid=39863317) / 202 |
+| 283 | `tenir/VER` | [tenir r39867539](https://fr.wiktionary.org/w/index.php?title=tenir&oldid=39867539) / 10 | [tenir r39867539](https://fr.wiktionary.org/w/index.php?title=tenir&oldid=39867539) / 9 |
+| 284 | `cet/ADJ:dem` | [ce r40003876](https://fr.wiktionary.org/w/index.php?title=ce&oldid=40003876) / 26 | [cet r39772629](https://fr.wiktionary.org/w/index.php?title=cet&oldid=39772629) / 24 |
+| 285 | `main/NOM` | [main r39969229](https://fr.wiktionary.org/w/index.php?title=main&oldid=39969229) / 15 | [main r39969229](https://fr.wiktionary.org/w/index.php?title=main&oldid=39969229) / 14 |
+| 286 | `cela/PRO:dem` | [cela r39873192](https://fr.wiktionary.org/w/index.php?title=cela&oldid=39873192) / 10 | [cela r39873192](https://fr.wiktionary.org/w/index.php?title=cela&oldid=39873192) / 9 |
+| 287 | `vite/ADV` | [vite r39926530](https://fr.wiktionary.org/w/index.php?title=vite&oldid=39926530) / 69 | [vite r39926530](https://fr.wiktionary.org/w/index.php?title=vite&oldid=39926530) / 68 |
+| 288 | `moins/ADV` | [moins r39019132](https://fr.wiktionary.org/w/index.php?title=moins&oldid=39019132) / 9 | [moins r39019132](https://fr.wiktionary.org/w/index.php?title=moins&oldid=39019132) / 8 |
+| 289 | `moins/NOM` | [moins r39019132](https://fr.wiktionary.org/w/index.php?title=moins&oldid=39019132) / 132 | [moins r39019132](https://fr.wiktionary.org/w/index.php?title=moins&oldid=39019132) / 131 |
+| 290 | `oublier/VER` | [oublier r39952739](https://fr.wiktionary.org/w/index.php?title=oublier&oldid=39952739) / 7 | [oublier r39952739](https://fr.wiktionary.org/w/index.php?title=oublier&oldid=39952739) / 6 |
+| 291 | `air/NOM` | [air r39913490](https://fr.wiktionary.org/w/index.php?title=air&oldid=39913490) / 21 | [air r39913490](https://fr.wiktionary.org/w/index.php?title=air&oldid=39913490) / 20 |
+| 292 | `salut/NOM` | [salut r40004727](https://fr.wiktionary.org/w/index.php?title=salut&oldid=40004727) / 38 | [salut r40004727](https://fr.wiktionary.org/w/index.php?title=salut&oldid=40004727) / 8 |
+| 293 | `salut/ONO` | [salut r40004727](https://fr.wiktionary.org/w/index.php?title=salut&oldid=40004727) / 212 | [salut r40004727](https://fr.wiktionary.org/w/index.php?title=salut&oldid=40004727) / 211 |
+| 294 | `fils/NOM` | [fils r39753117](https://fr.wiktionary.org/w/index.php?title=fils&oldid=39753117) / 10 | [fils r39753117](https://fr.wiktionary.org/w/index.php?title=fils&oldid=39753117) / 9 |
+| 295 | `travailler/VER` | [travailler r39707647](https://fr.wiktionary.org/w/index.php?title=travailler&oldid=39707647) / 38 | [travailler r39707647](https://fr.wiktionary.org/w/index.php?title=travailler&oldid=39707647) / 6 |
+| 296 | `demain/ADV` | [demain r39957906](https://fr.wiktionary.org/w/index.php?title=demain&oldid=39957906) / 19 | [demain r39957906](https://fr.wiktionary.org/w/index.php?title=demain&oldid=39957906) / 18 |
+| 297 | `demain/NOM` | [demain r39957906](https://fr.wiktionary.org/w/index.php?title=demain&oldid=39957906) / 8 | [demain r39957906](https://fr.wiktionary.org/w/index.php?title=demain&oldid=39957906) / 7 |
+| 298 | `tête/NOM` | [tête r39893876](https://fr.wiktionary.org/w/index.php?title=t%C3%AAte&oldid=39893876) / 12 | [tête r39893876](https://fr.wiktionary.org/w/index.php?title=t%C3%AAte&oldid=39893876) / 11 |
+| 299 | `manger/VER` | [manger r39949656](https://fr.wiktionary.org/w/index.php?title=manger&oldid=39949656) / 8 | [manger r39949656](https://fr.wiktionary.org/w/index.php?title=manger&oldid=39949656) / 7 |
+| 300 | `coup/NOM` | [coup r40004772](https://fr.wiktionary.org/w/index.php?title=coup&oldid=40004772) / 8 | [coup r40004772](https://fr.wiktionary.org/w/index.php?title=coup&oldid=40004772) / 7 |

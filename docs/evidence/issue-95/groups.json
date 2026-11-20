@@ -1,0 +1,3840 @@
+[
+  {
+    "frozen_row": 701,
+    "headword": "dès",
+    "lexique_cgram": "PRE",
+    "subtitle_lemma_per_million": "143.72",
+    "subtitle_pos_per_million": "143.72",
+    "senses": [
+      {
+        "sense_id": "b95-701-dès-pre-selected",
+        "source_headword": "dès",
+        "use": "Preposition introducing the time from which something starts; dès followed by a time expression.",
+        "use_language": "en",
+        "excluded_uses": "Spatial and obsolete uses; dès que as a separate construction.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "À compter d’un moment donné.",
+            "source_id": "b95_en_296244",
+            "source_span": {
+              "line_1_based": 16,
+              "raw_source_excerpt": "# [[from]] […] onward; [[starting]] [[from]]; as early as, as soon as"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/dɛ/",
+            "source_id": "b95_fr_157387",
+            "source_span": {
+              "line_1_based": 9,
+              "raw_source_excerpt": "'''dès''' {{pron|dɛ|fr}} {{invar}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "From a specified time onward.",
+            "source_id": "b95_en_296244",
+            "source_span": {
+              "line_1_based": 16,
+              "raw_source_excerpt": "# [[from]] […] onward; [[starting]] [[from]]; as early as, as soon as"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "自某一时刻起。",
+            "source_id": "b95_en_296244",
+            "source_span": {
+              "line_1_based": 16,
+              "raw_source_excerpt": "# [[from]] […] onward; [[starting]] [[from]]; as early as, as soon as"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 702,
+    "headword": "président",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "143.39",
+    "subtitle_pos_per_million": "143.39",
+    "senses": [
+      {
+        "sense_id": "b95-702-président-nom-selected",
+        "source_headword": "président",
+        "use": "Masculine noun for the head-of-state title; feminine présidente.",
+        "use_language": "en",
+        "excluded_uses": "Chairing meetings, municipal executives and the verb form président.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Personne qui occupe la fonction de chef d’État dans une république.",
+            "source_id": "b95_en_274635",
+            "source_span": {
+              "line_1_based": 19,
+              "raw_source_excerpt": "# [[president]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/pʁe.zi.dɑ̃/",
+            "source_id": "b95_fr_172594",
+            "source_span": {
+              "line_1_based": 10,
+              "raw_source_excerpt": "'''président''' {{pron|pʁe.zi.dɑ̃|fr}} {{m}} {{équiv-pour|une femme|présidente|lang=fr}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "President; the head of state in a republic.",
+            "source_id": "b95_en_274635",
+            "source_span": {
+              "line_1_based": 19,
+              "raw_source_excerpt": "# [[president]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "总统；共和国的国家元首。",
+            "source_id": "b95_en_274635",
+            "source_span": {
+              "line_1_based": 19,
+              "raw_source_excerpt": "# [[president]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 703,
+    "headword": "cours",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "143.05",
+    "subtitle_pos_per_million": "143.05",
+    "senses": [
+      {
+        "sense_id": "b95-703-cours-nom-selected",
+        "source_headword": "cours",
+        "use": "Masculine noun for a period of instruction, as in cours de langue; singular and plural have the same written form.",
+        "use_language": "en",
+        "excluded_uses": "Publications, financial rates, watercourses and forms of cour or courir.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Enseignement d’une matière, ou séance consacrée à cet enseignement.",
+            "source_id": "b95_en_223222",
+            "source_span": {
+              "line_1_based": 51,
+              "raw_source_excerpt": "# [[teaching]], [[lesson]], [[lecture]], [[class]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/kuʁ/",
+            "source_id": "b95_fr_36491",
+            "source_span": {
+              "line_1_based": 9,
+              "raw_source_excerpt": "'''cours''' {{pron|kuʁ|fr}} {{m}}, {{sp}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "A course, class or lesson in a subject.",
+            "source_id": "b95_en_223222",
+            "source_span": {
+              "line_1_based": 51,
+              "raw_source_excerpt": "# [[teaching]], [[lesson]], [[lecture]], [[class]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "课程；课，指某一学科的教学或一次授课。",
+            "source_id": "b95_en_223222",
+            "source_span": {
+              "line_1_based": 51,
+              "raw_source_excerpt": "# [[teaching]], [[lesson]], [[lecture]], [[class]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 704,
+    "headword": "vivant",
+    "lexique_cgram": "ADJ",
+    "subtitle_lemma_per_million": "142.86",
+    "subtitle_pos_per_million": "124.97",
+    "senses": [
+      {
+        "sense_id": "b95-704-vivant-adj-selected",
+        "source_headword": "vivant",
+        "use": "Adjective for a person or organism that is alive; feminine vivante.",
+        "use_language": "en",
+        "excluded_uses": "Lively or figurative uses, nouns and the present participle of vivre.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Qui est encore en vie.",
+            "source_id": "b95_en_266910",
+            "source_span": {
+              "line_1_based": 36,
+              "raw_source_excerpt": "# [[alive]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/vi.vɑ̃/",
+            "source_id": "b95_fr_154807",
+            "source_span": {
+              "line_1_based": 7,
+              "raw_source_excerpt": "'''vivant''' {{pron|vi.vɑ̃|fr}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "Alive; still living.",
+            "source_id": "b95_en_266910",
+            "source_span": {
+              "line_1_based": 36,
+              "raw_source_excerpt": "# [[alive]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "活着的；仍有生命的。",
+            "source_id": "b95_en_266910",
+            "source_span": {
+              "line_1_based": 36,
+              "raw_source_excerpt": "# [[alive]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 705,
+    "headword": "vivant",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "142.86",
+    "subtitle_pos_per_million": "17.89",
+    "senses": [
+      {
+        "sense_id": "b95-705-vivant-nom-selected",
+        "source_headword": "vivant",
+        "use": "Masculine person noun, vivant; feminine vivante; often plural les vivants.",
+        "use_language": "en",
+        "excluded_uses": "The abstract noun le vivant, lifetime expressions and adjective/participle uses.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Être humain qui est en vie.",
+            "source_id": "b95_en_266910",
+            "source_span": {
+              "line_1_based": 57,
+              "raw_source_excerpt": "# living [[person]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/vi.vɑ̃/",
+            "source_id": "b95_fr_154807",
+            "source_span": {
+              "line_1_based": 181,
+              "raw_source_excerpt": "'''vivant''' {{pron|vi.vɑ̃|fr}} {{m}} {{équiv-pour|lang=fr|une femme|vivante}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "A living person.",
+            "source_id": "b95_en_266910",
+            "source_span": {
+              "line_1_based": 57,
+              "raw_source_excerpt": "# living [[person]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "活着的人；生者。",
+            "source_id": "b95_en_266910",
+            "source_span": {
+              "line_1_based": 57,
+              "raw_source_excerpt": "# living [[person]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 706,
+    "headword": "terminer",
+    "lexique_cgram": "VER",
+    "subtitle_lemma_per_million": "142.38",
+    "subtitle_pos_per_million": "142.38",
+    "senses": [
+      {
+        "sense_id": "b95-706-terminer-ver-selected",
+        "source_headword": "terminer",
+        "use": "Transitive lexical verb terminer quelque chose.",
+        "use_language": "en",
+        "excluded_uses": "Bounding or marking an endpoint; pronominal se terminer.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Mener quelque chose jusqu’à sa fin.",
+            "source_id": "b95_en_422943",
+            "source_span": {
+              "line_1_based": 40,
+              "raw_source_excerpt": "# {{lb|fr|transitive}} to [[end]], to [[finish]], to [[complete]], to [[conclude]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/tɛʁ.mi.ne/",
+            "source_id": "b95_fr_24576",
+            "source_span": {
+              "line_1_based": 6,
+              "raw_source_excerpt": "'''terminer''' {{pron|tɛʁ.mi.ne|fr}} {{t|fr}} {{conj|grp=1|fr}} {{lien pronominal}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "To finish or complete something.",
+            "source_id": "b95_en_422943",
+            "source_span": {
+              "line_1_based": 40,
+              "raw_source_excerpt": "# {{lb|fr|transitive}} to [[end]], to [[finish]], to [[complete]], to [[conclude]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "完成；把某事做完。",
+            "source_id": "b95_en_422943",
+            "source_span": {
+              "line_1_based": 40,
+              "raw_source_excerpt": "# {{lb|fr|transitive}} to [[end]], to [[finish]], to [[complete]], to [[conclude]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 707,
+    "headword": "ciel",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "142.32",
+    "subtitle_pos_per_million": "142.32",
+    "senses": [
+      {
+        "sense_id": "b95-707-ciel-nom-selected",
+        "source_headword": "ciel",
+        "use": "Masculine noun for the visible sky above us.",
+        "use_language": "en",
+        "excluded_uses": "Heaven, atmospheric/climatic figurative uses, bed canopies and interjections.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Espace que l’on voit au-dessus de soi quand on regarde en l’air.",
+            "source_id": "b95_en_51446",
+            "source_span": {
+              "line_1_based": 61,
+              "raw_source_excerpt": "# [[sky]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/sjɛl/",
+            "source_id": "b95_fr_8889",
+            "source_span": {
+              "line_1_based": 10,
+              "raw_source_excerpt": "'''ciel''' {{pron|sjɛl|fr}} {{m}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "The sky above us.",
+            "source_id": "b95_en_51446",
+            "source_span": {
+              "line_1_based": 61,
+              "raw_source_excerpt": "# [[sky]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "天空；抬头所见的上方空间。",
+            "source_id": "b95_en_51446",
+            "source_span": {
+              "line_1_based": 61,
+              "raw_source_excerpt": "# [[sky]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 708,
+    "headword": "partout",
+    "lexique_cgram": "ADV",
+    "subtitle_lemma_per_million": "141.94",
+    "subtitle_pos_per_million": "141.94",
+    "senses": [
+      {
+        "sense_id": "b95-708-partout-adv-selected",
+        "source_headword": "partout",
+        "use": "Invariable adverb of place.",
+        "use_language": "en",
+        "excluded_uses": "The free-choice sense wherever.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Dans tous les endroits.",
+            "source_id": "b95_en_277390",
+            "source_span": {
+              "line_1_based": 43,
+              "raw_source_excerpt": "# [[everywhere]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/paʁ.tu/",
+            "source_id": "b95_fr_170468",
+            "source_span": {
+              "line_1_based": 9,
+              "raw_source_excerpt": "'''partout''' {{pron|paʁ.tu|fr}} {{invariable|fr}}, {{adverbe de lieu|fr}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "Everywhere; in all places.",
+            "source_id": "b95_en_277390",
+            "source_span": {
+              "line_1_based": 43,
+              "raw_source_excerpt": "# [[everywhere]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "到处；在所有地方。",
+            "source_id": "b95_en_277390",
+            "source_span": {
+              "line_1_based": 43,
+              "raw_source_excerpt": "# [[everywhere]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 709,
+    "headword": "âme",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "141.59",
+    "subtitle_pos_per_million": "141.59",
+    "senses": [
+      {
+        "sense_id": "b95-709-âme-nom-selected",
+        "source_headword": "âme",
+        "use": "Feminine noun in the ordinary religious/spiritual sense, without asserting a scientific fact.",
+        "use_language": "en",
+        "excluded_uses": "Inhabitants, personality metaphors and technical cores of instruments or materials.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Dans les croyances religieuses, élément spirituel d’une personne, distinct de son corps.",
+            "source_id": "b95_en_229506",
+            "source_span": {
+              "line_1_based": 27,
+              "raw_source_excerpt": "# {{lb|fr|religion|philosophy}} [[soul]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/ɑm/",
+            "source_id": "b95_fr_5152",
+            "source_span": {
+              "line_1_based": 9,
+              "raw_source_excerpt": "'''âme''' {{pron|ɑm|fr}} <small>ou</small> {{pron|am|fr}} {{f}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "Soul; in religious belief, a person's spiritual part, distinct from the body.",
+            "source_id": "b95_en_229506",
+            "source_span": {
+              "line_1_based": 27,
+              "raw_source_excerpt": "# {{lb|fr|religion|philosophy}} [[soul]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "灵魂；宗教信仰中区别于身体的人的精神部分。",
+            "source_id": "b95_en_229506",
+            "source_span": {
+              "line_1_based": 27,
+              "raw_source_excerpt": "# {{lb|fr|religion|philosophy}} [[soul]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 710,
+    "headword": "patron",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "141.53",
+    "subtitle_pos_per_million": "141.53",
+    "senses": [
+      {
+        "sense_id": "b95-710-patron-nom-selected",
+        "source_headword": "patron",
+        "use": "Masculine person noun patron; feminine patronne; selected employer sense.",
+        "use_language": "en",
+        "excluded_uses": "A manager who is not the employer, protectors, saints and sewing patterns.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Personne qui emploie des salariés.",
+            "source_id": "b95_en_46535",
+            "source_span": {
+              "line_1_based": 240,
+              "raw_source_excerpt": "# a [[boss]], [[employer]],"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/pa.tʁɔ̃/",
+            "source_id": "b95_fr_125281",
+            "source_span": {
+              "line_1_based": 9,
+              "raw_source_excerpt": "'''patron''' {{pron|pa.tʁɔ̃|fr}} {{m}} {{équiv-pour|une femme|patronne|lang=fr}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "An employer; someone who employs workers.",
+            "source_id": "b95_en_46535",
+            "source_span": {
+              "line_1_based": 240,
+              "raw_source_excerpt": "# a [[boss]], [[employer]],"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "雇主；雇用员工的人。",
+            "source_id": "b95_en_46535",
+            "source_span": {
+              "line_1_based": 240,
+              "raw_source_excerpt": "# a [[boss]], [[employer]],"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 711,
+    "headword": "amuser",
+    "lexique_cgram": "VER",
+    "subtitle_lemma_per_million": "141.41",
+    "subtitle_pos_per_million": "141.41",
+    "senses": [
+      {
+        "sense_id": "b95-711-amuser-ver-selected",
+        "source_headword": "amuser",
+        "use": "Transitive amuser quelqu’un.",
+        "use_language": "en",
+        "excluded_uses": "Pronominal s’amuser, wasting time, empty promises and mocking.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Faire passer un moment agréable à quelqu’un, le divertir.",
+            "source_id": "b95_en_182011",
+            "source_span": {
+              "line_1_based": 50,
+              "raw_source_excerpt": "# {{lb|fr|transitive}} to [[amuse]], to [[entertain]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/a.my.ze/",
+            "source_id": "b95_fr_5158",
+            "source_span": {
+              "line_1_based": 6,
+              "raw_source_excerpt": "'''amuser''' {{pron|a.my.ze|fr}} {{t|fr}} ou {{prnl|fr}} {{conj|grp=1|fr}} {{lien pronominal|'}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "To amuse or entertain someone.",
+            "source_id": "b95_en_182011",
+            "source_span": {
+              "line_1_based": 50,
+              "raw_source_excerpt": "# {{lb|fr|transitive}} to [[amuse]], to [[entertain]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "逗乐；使某人开心、得到消遣。",
+            "source_id": "b95_en_182011",
+            "source_span": {
+              "line_1_based": 50,
+              "raw_source_excerpt": "# {{lb|fr|transitive}} to [[amuse]], to [[entertain]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 712,
+    "headword": "celle",
+    "lexique_cgram": "PRO:dem",
+    "subtitle_lemma_per_million": "141.3",
+    "subtitle_pos_per_million": "141.28",
+    "senses": [
+      {
+        "sense_id": "b95-712-celle-pro-dem-selected",
+        "source_headword": "celle",
+        "use": "Feminine singular counterpart of celui; constructions such as celle qui… or celle de…; not a standalone determiner.",
+        "use_language": "en",
+        "excluded_uses": "Ancient or monastic nouns and the colloquial ellipsis meaning a joke.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Pronom démonstratif féminin singulier remplaçant une personne ou une chose, suivi d’une proposition relative ou d’un groupe prépositionnel.",
+            "source_id": "b95_fr_103269",
+            "source_span": {
+              "line_1_based": 41,
+              "raw_source_excerpt": "# Utilisé pour remplacer la [[personne]] ou la [[chose]] dont on parle au féminin. — {{note}} Il est toujours suivi par une [[proposition relative]] ou par un [[syntagme prépositionnel]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "French learner explanation adapted from the selected definition; markup removed and selected construction/scope stated by Lexique contributors.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/sɛl/",
+            "source_id": "b95_fr_103269",
+            "source_span": {
+              "line_1_based": 40,
+              "raw_source_excerpt": "'''celle''' {{pron|sɛl|fr}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "The one; feminine singular demonstrative pronoun replacing a person or thing, followed by a relative clause or a prepositional phrase.",
+            "source_id": "b95_fr_103269",
+            "source_span": {
+              "line_1_based": 41,
+              "raw_source_excerpt": "# Utilisé pour remplacer la [[personne]] ou la [[chose]] dont on parle au féminin. — {{note}} Il est toujours suivi par une [[proposition relative]] ou par un [[syntagme prépositionnel]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "English translation and scoped explanation of the selected French use by Lexique contributors.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "那一个；代替阴性单数的人或事物的指示代词，后接关系从句或介词短语。",
+            "source_id": "b95_fr_103269",
+            "source_span": {
+              "line_1_based": 41,
+              "raw_source_excerpt": "# Utilisé pour remplacer la [[personne]] ou la [[chose]] dont on parle au féminin. — {{note}} Il est toujours suivi par une [[proposition relative]] ou par un [[syntagme prépositionnel]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Chinese translation and scoped explanation of the selected French use by Lexique contributors.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 713,
+    "headword": "visage",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "141.23",
+    "subtitle_pos_per_million": "141.23",
+    "senses": [
+      {
+        "sense_id": "b95-713-visage-nom-selected",
+        "source_headword": "visage",
+        "use": "Masculine noun for a human face.",
+        "use_language": "en",
+        "excluded_uses": "Expressions, appearances and figurative moral characteristics.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Partie de la tête humaine où se trouvent les yeux, le nez et la bouche.",
+            "source_id": "b95_en_49456",
+            "source_span": {
+              "line_1_based": 99,
+              "raw_source_excerpt": "# [[face]] (of a human)"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/vi.zaʒ/",
+            "source_id": "b95_fr_10015",
+            "source_span": {
+              "line_1_based": 10,
+              "raw_source_excerpt": "'''visage''' {{pron|vi.zaʒ|fr}} {{m}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "The human face; the part of the head with the eyes, nose and mouth.",
+            "source_id": "b95_en_49456",
+            "source_span": {
+              "line_1_based": 99,
+              "raw_source_excerpt": "# [[face]] (of a human)"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "脸；人头部上有眼、鼻、口的部分。",
+            "source_id": "b95_en_49456",
+            "source_span": {
+              "line_1_based": 99,
+              "raw_source_excerpt": "# [[face]] (of a human)"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 714,
+    "headword": "intéresser",
+    "lexique_cgram": "VER",
+    "subtitle_lemma_per_million": "140.8",
+    "subtitle_pos_per_million": "140.8",
+    "senses": [
+      {
+        "sense_id": "b95-714-intéresser-ver-selected",
+        "source_headword": "intéresser",
+        "use": "Transitive intéresser quelqu’un, as in ce sujet m’intéresse.",
+        "use_language": "en",
+        "excluded_uses": "Pronominal s’intéresser à, involving someone, financial stakes and medical uses.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Donner à quelqu’un envie de porter son attention sur une chose.",
+            "source_id": "b95_en_1445758",
+            "source_span": {
+              "line_1_based": 18,
+              "raw_source_excerpt": "# {{lb|fr|transitive}} to [[interest]]; to make interested"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/ɛ̃.te.ʁɛ.se/",
+            "source_id": "b95_fr_184886",
+            "source_span": {
+              "line_1_based": 7,
+              "raw_source_excerpt": "'''intéresser''' {{pron|ɛ̃.te.ʁɛ.se|fr}} <small>ou</small> {{pron|ɛ̃.te.ʁe.se|fr}} {{t|fr}} {{conj|grp=1|fr}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "To interest someone; make them interested in something.",
+            "source_id": "b95_en_1445758",
+            "source_span": {
+              "line_1_based": 18,
+              "raw_source_excerpt": "# {{lb|fr|transitive}} to [[interest]]; to make interested"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "使某人感兴趣；引起其关注。",
+            "source_id": "b95_en_1445758",
+            "source_span": {
+              "line_1_based": 18,
+              "raw_source_excerpt": "# {{lb|fr|transitive}} to [[interest]]; to make interested"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 715,
+    "headword": "reconnaître",
+    "lexique_cgram": "VER",
+    "subtitle_lemma_per_million": "140.73",
+    "subtitle_pos_per_million": "140.73",
+    "senses": [
+      {
+        "sense_id": "b95-715-reconnaître-ver-selected",
+        "source_headword": "reconnaître",
+        "use": "Transitive reconnaître quelqu’un ou quelque chose through prior acquaintance.",
+        "use_language": "en",
+        "excluded_uses": "Identifying something never seen before, acknowledging, confessing, gratitude and pronominal uses.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Identifier une personne ou une chose que l’on a déjà rencontrée.",
+            "source_id": "b95_en_296299",
+            "source_span": {
+              "line_1_based": 43,
+              "raw_source_excerpt": "# to [[recognise]] (something or someone that one has encountered before)"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/ʁə.kɔ.nɛtʁ/",
+            "source_id": "b95_fr_145305",
+            "source_span": {
+              "line_1_based": 9,
+              "raw_source_excerpt": "'''reconnaître''' {{pron|ʁə.kɔ.nɛtʁ|fr}} {{t|fr}} {{conjugaison|fr|groupe=3}} {{lien pronominal}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "To recognize someone or something encountered before.",
+            "source_id": "b95_en_296299",
+            "source_span": {
+              "line_1_based": 43,
+              "raw_source_excerpt": "# to [[recognise]] (something or someone that one has encountered before)"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "认出；辨认曾经接触过的人或事物。",
+            "source_id": "b95_en_296299",
+            "source_span": {
+              "line_1_based": 43,
+              "raw_source_excerpt": "# to [[recognise]] (something or someone that one has encountered before)"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 716,
+    "headword": "médecin",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "140.19",
+    "subtitle_pos_per_million": "140.19",
+    "senses": [
+      {
+        "sense_id": "b95-716-médecin-nom-selected",
+        "source_headword": "médecin",
+        "use": "Person noun médecin, usable for women and men; a medical practitioner, not any holder of an academic doctorate.",
+        "use_language": "en",
+        "excluded_uses": "Military rank, remedies, healers and the archaic adjective.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Personne qualifiée pour exercer la médecine et soigner les patients.",
+            "source_id": "b95_en_472429",
+            "source_span": {
+              "line_1_based": 24,
+              "raw_source_excerpt": "# [[physician]]; (medical) [[doctor]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/med.sɛ̃/",
+            "source_id": "b95_fr_31221",
+            "source_span": {
+              "line_1_based": 51,
+              "raw_source_excerpt": "'''médecin''' {{pron|med.sɛ̃|fr}} ou {{pron|mɛd.sɛ̃|fr}} {{mf}} ou très rarement {{équiv-pour|une femme|lang=fr|médecine|médecienne|femme-médecin}} (voir la [[#Notes|note]])"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "A physician or medical doctor qualified to treat patients.",
+            "source_id": "b95_en_472429",
+            "source_span": {
+              "line_1_based": 24,
+              "raw_source_excerpt": "# [[physician]]; (medical) [[doctor]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "医生；具备行医资格、诊治患者的专业人员。",
+            "source_id": "b95_en_472429",
+            "source_span": {
+              "line_1_based": 24,
+              "raw_source_excerpt": "# [[physician]]; (medical) [[doctor]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 717,
+    "headword": "rapport",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "140.08",
+    "subtitle_pos_per_million": "140.08",
+    "senses": [
+      {
+        "sense_id": "b95-717-rapport-nom-selected",
+        "source_headword": "rapport",
+        "use": "Masculine noun for an account or report.",
+        "use_language": "en",
+        "excluded_uses": "Relationships, mathematical ratios, income, reimbursements and digestive uses.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Présentation de faits ou d’une activité, à l’oral ou par écrit.",
+            "source_id": "b95_en_81106",
+            "source_span": {
+              "line_1_based": 125,
+              "raw_source_excerpt": "# [[report]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/ʁa.pɔʁ/",
+            "source_id": "b95_fr_173906",
+            "source_span": {
+              "line_1_based": 7,
+              "raw_source_excerpt": "'''rapport''' {{pron|ʁa.pɔʁ|fr}} {{m}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "A report; a spoken or written account of facts or an activity.",
+            "source_id": "b95_en_81106",
+            "source_span": {
+              "line_1_based": 125,
+              "raw_source_excerpt": "# [[report]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "报告；对事实或活动作出的口头或书面陈述。",
+            "source_id": "b95_en_81106",
+            "source_span": {
+              "line_1_based": 125,
+              "raw_source_excerpt": "# [[report]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 718,
+    "headword": "rouge",
+    "lexique_cgram": "ADJ",
+    "subtitle_lemma_per_million": "140.07",
+    "subtitle_pos_per_million": "102.93",
+    "senses": [
+      {
+        "sense_id": "b95-718-rouge-adj-selected",
+        "source_headword": "rouge",
+        "use": "Adjective naming the ordinary red colour; same masculine and feminine form.",
+        "use_language": "en",
+        "excluded_uses": "Political, emotional, heated and other figurative uses; the colour noun.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "De la couleur du sang.",
+            "source_id": "b95_en_39566",
+            "source_span": {
+              "line_1_based": 202,
+              "raw_source_excerpt": "# [[red]] {{gloss|of a red color}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/ʁuʒ/",
+            "source_id": "b95_fr_688",
+            "source_span": {
+              "line_1_based": 10,
+              "raw_source_excerpt": "'''rouge''' {{pron|ʁuʒ|fr}} {{mf}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "Red; having the colour of blood.",
+            "source_id": "b95_en_39566",
+            "source_span": {
+              "line_1_based": 202,
+              "raw_source_excerpt": "# [[red]] {{gloss|of a red color}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "红色的；像血液的颜色。",
+            "source_id": "b95_en_39566",
+            "source_span": {
+              "line_1_based": 202,
+              "raw_source_excerpt": "# [[red]] {{gloss|of a red color}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 719,
+    "headword": "rouge",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "140.07",
+    "subtitle_pos_per_million": "37.14",
+    "senses": [
+      {
+        "sense_id": "b95-719-rouge-nom-selected",
+        "source_headword": "rouge",
+        "use": "Masculine colour noun le rouge.",
+        "use_language": "en",
+        "excluded_uses": "Wine, cosmetics, traffic lights, deficits, political groups and the adjective.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Nom de la couleur rouge.",
+            "source_id": "b95_en_39566",
+            "source_span": {
+              "line_1_based": 214,
+              "raw_source_excerpt": "# [[red]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/ʁuʒ/",
+            "source_id": "b95_fr_688",
+            "source_span": {
+              "line_1_based": 694,
+              "raw_source_excerpt": "'''rouge''' {{pron|ʁuʒ|fr}} {{m}}<ref>{{Accord des couleurs}}</ref>"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "Red, the colour.",
+            "source_id": "b95_en_39566",
+            "source_span": {
+              "line_1_based": 214,
+              "raw_source_excerpt": "# [[red]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "红色；颜色名称。",
+            "source_id": "b95_en_39566",
+            "source_span": {
+              "line_1_based": 214,
+              "raw_source_excerpt": "# [[red]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 720,
+    "headword": "pardonner",
+    "lexique_cgram": "VER",
+    "subtitle_lemma_per_million": "139.46",
+    "subtitle_pos_per_million": "139.46",
+    "senses": [
+      {
+        "sense_id": "b95-720-pardonner-ver-selected",
+        "source_headword": "pardonner",
+        "use": "Selected forgiveness construction: pardonner une faute à quelqu’un; the thing is direct object and the person indirect object with à.",
+        "use_language": "en",
+        "excluded_uses": "Tolerance, formal politeness, sparing harm and other constructions.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Ne plus tenir rigueur d’une faute ; pardonner une faute à quelqu’un.",
+            "source_id": "b95_en_295775",
+            "source_span": {
+              "line_1_based": 15,
+              "raw_source_excerpt": "# to [[pardon]], [[forgive]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/paʁ.dɔ.ne/",
+            "source_id": "b95_fr_170336",
+            "source_span": {
+              "line_1_based": 7,
+              "raw_source_excerpt": "'''pardonner''' {{pron|paʁ.dɔ.ne|fr}} {{t|fr}} {{conj|grp=1|fr}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "To forgive a fault; pardonner quelque chose à quelqu’un, with the fault as direct object and the person introduced by à.",
+            "source_id": "b95_en_295775",
+            "source_span": {
+              "line_1_based": 15,
+              "raw_source_excerpt": "# to [[pardon]], [[forgive]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "原谅过错；pardonner quelque chose à quelqu’un，过错作直接宾语，人由 à 引出。",
+            "source_id": "b95_en_295775",
+            "source_span": {
+              "line_1_based": 15,
+              "raw_source_excerpt": "# to [[pardon]], [[forgive]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 721,
+    "headword": "avis",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "139.22",
+    "subtitle_pos_per_million": "139.22",
+    "senses": [
+      {
+        "sense_id": "b95-721-avis-nom-selected",
+        "source_headword": "avis",
+        "use": "Masculine noun, as in à mon avis or donner son avis; written singular and plural avis.",
+        "use_language": "en",
+        "excluded_uses": "Public notices, warnings, advice, judicial votes and the verb form.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Point de vue d’une personne sur quelque chose.",
+            "source_id": "b95_en_38229",
+            "source_span": {
+              "line_1_based": 79,
+              "raw_source_excerpt": "# [[opinion]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/a.vi/",
+            "source_id": "b95_fr_12114",
+            "source_span": {
+              "line_1_based": 10,
+              "raw_source_excerpt": "'''avis''' {{pron|a.vi|fr}} {{m}}, {{sp}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "An opinion; someone's view of something.",
+            "source_id": "b95_en_38229",
+            "source_span": {
+              "line_1_based": 79,
+              "raw_source_excerpt": "# [[opinion]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "意见；对某事的看法。",
+            "source_id": "b95_en_38229",
+            "source_span": {
+              "line_1_based": 79,
+              "raw_source_excerpt": "# [[opinion]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 722,
+    "headword": "embrasser",
+    "lexique_cgram": "VER",
+    "subtitle_lemma_per_million": "138.97",
+    "subtitle_pos_per_million": "138.97",
+    "senses": [
+      {
+        "sense_id": "b95-722-embrasser-ver-selected",
+        "source_headword": "embrasser",
+        "use": "Transitive embrasser quelqu’un in the ordinary kissing sense.",
+        "use_language": "en",
+        "excluded_uses": "Hugging without a kiss, encompassing, adopting an idea and pronominal uses.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Toucher quelqu’un des lèvres pour lui donner un baiser.",
+            "source_id": "b95_en_956698",
+            "source_span": {
+              "line_1_based": 19,
+              "raw_source_excerpt": "# {{lb|fr|transitive}} to [[kiss]] {{gloss|to touch with the lips}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/ɑ̃.bʁa.se/",
+            "source_id": "b95_fr_5269",
+            "source_span": {
+              "line_1_based": 6,
+              "raw_source_excerpt": "'''embrasser''' {{pron|ɑ̃.bʁa.se|fr}} {{conj|grp=1|fr}} {{lien pronominal|'}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "To kiss someone.",
+            "source_id": "b95_en_956698",
+            "source_span": {
+              "line_1_based": 19,
+              "raw_source_excerpt": "# {{lb|fr|transitive}} to [[kiss]] {{gloss|to touch with the lips}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "亲吻某人。",
+            "source_id": "b95_en_956698",
+            "source_span": {
+              "line_1_based": 19,
+              "raw_source_excerpt": "# {{lb|fr|transitive}} to [[kiss]] {{gloss|to touch with the lips}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 723,
+    "headword": "retour",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "138.94",
+    "subtitle_pos_per_million": "138.94",
+    "senses": [
+      {
+        "sense_id": "b95-723-retour-nom-selected",
+        "source_headword": "retour",
+        "use": "Masculine noun for coming back to the point of departure.",
+        "use_language": "en",
+        "excluded_uses": "Reactions, returns of goods, financial/legal uses and interpretation or monitoring equipment.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Fait de revenir à l’endroit que l’on avait quitté.",
+            "source_id": "b95_en_296248",
+            "source_span": {
+              "line_1_based": 72,
+              "raw_source_excerpt": "# [[return]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/ʁə.tuʁ/",
+            "source_id": "b95_fr_175074",
+            "source_span": {
+              "line_1_based": 9,
+              "raw_source_excerpt": "'''retour''' {{pron|ʁə.tuʁ|fr}} {{m}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "A return; coming back to the place one left.",
+            "source_id": "b95_en_296248",
+            "source_span": {
+              "line_1_based": 72,
+              "raw_source_excerpt": "# [[return]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "返回；回到原先离开的地方。",
+            "source_id": "b95_en_296248",
+            "source_span": {
+              "line_1_based": 72,
+              "raw_source_excerpt": "# [[return]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 724,
+    "headword": "sérieux",
+    "lexique_cgram": "ADJ",
+    "subtitle_lemma_per_million": "138.57",
+    "subtitle_pos_per_million": "110.48",
+    "senses": [
+      {
+        "sense_id": "b95-724-sérieux-adj-selected",
+        "source_headword": "sérieux",
+        "use": "Adjective describing a serious, thoughtful person; feminine sérieuse.",
+        "use_language": "en",
+        "excluded_uses": "Severe consequences, credibility, sincerity and noun/adverb uses.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Qui se comporte avec gravité et réflexion.",
+            "source_id": "b95_en_317889",
+            "source_span": {
+              "line_1_based": 17,
+              "raw_source_excerpt": "# [[serious]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/se.ʁjø/",
+            "source_id": "b95_fr_154338",
+            "source_span": {
+              "line_1_based": 10,
+              "raw_source_excerpt": "'''sérieux''' {{pron|se.ʁjø|fr}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "Serious; behaving gravely and thoughtfully.",
+            "source_id": "b95_en_317889",
+            "source_span": {
+              "line_1_based": 17,
+              "raw_source_excerpt": "# [[serious]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "严肃的；郑重、审慎行事的。",
+            "source_id": "b95_en_317889",
+            "source_span": {
+              "line_1_based": 17,
+              "raw_source_excerpt": "# [[serious]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 725,
+    "headword": "sérieux",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "138.57",
+    "subtitle_pos_per_million": "28.09",
+    "senses": [
+      {
+        "sense_id": "b95-725-sérieux-nom-selected",
+        "source_headword": "sérieux",
+        "use": "Masculine abstract noun le sérieux for diligence and care in what one does, as in travailler avec sérieux.",
+        "use_language": "en",
+        "excluded_uses": "Gravity of a situation, the adjective, the interjection and the beer-measure noun.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Application et rigueur dans ce que l’on fait, comme dans travailler avec sérieux.",
+            "source_id": "b95_en_317889",
+            "source_span": {
+              "line_1_based": 38,
+              "raw_source_excerpt": "#: {{coi|fr|manque de '''sérieux'''|lack of professionalism, lack of rigor}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/sɛ.ʁjø/",
+            "source_id": "b95_fr_154338",
+            "source_span": {
+              "line_1_based": 249,
+              "raw_source_excerpt": "* {{pron|sɛ.ʁjø|fr}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "Seriousness; diligence and care in what one does, as in travailler avec sérieux.",
+            "source_id": "b95_en_317889",
+            "source_span": {
+              "line_1_based": 38,
+              "raw_source_excerpt": "#: {{coi|fr|manque de '''sérieux'''|lack of professionalism, lack of rigor}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "认真；严谨，指做事时的用心和审慎，如 travailler avec sérieux（认真工作）。",
+            "source_id": "b95_en_317889",
+            "source_span": {
+              "line_1_based": 38,
+              "raw_source_excerpt": "#: {{coi|fr|manque de '''sérieux'''|lack of professionalism, lack of rigor}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 726,
+    "headword": "laquelle",
+    "lexique_cgram": "PRO:int",
+    "subtitle_lemma_per_million": "137.88",
+    "subtitle_pos_per_million": "68.94",
+    "senses": [
+      {
+        "sense_id": "b95-726-laquelle-pro-int-selected",
+        "source_headword": "laquelle",
+        "use": "Feminine singular interrogative form of lequel, for a feminine referent; a pronoun, not an interrogative determiner.",
+        "use_language": "en",
+        "excluded_uses": "Relative use and masculine/plural forms.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Pronom interrogatif féminin singulier servant à demander de quelle personne ou chose il s’agit parmi plusieurs.",
+            "source_id": "b95_fr_162778",
+            "source_span": {
+              "line_1_based": 80,
+              "raw_source_excerpt": "# Quelle [[personne]] ou [[quelle]] [[chose]] [[parmi]] un [[ensemble]] de [[personne]]s ou de [[chose]]s. {{usage}} S’accorde en genre avec les référents. Toujours au masculin pour des infinitifs."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "French learner explanation adapted from the selected definition; markup removed and selected construction/scope stated by Lexique contributors.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/la.kɛl/",
+            "source_id": "b95_fr_162788",
+            "source_span": {
+              "line_1_based": 43,
+              "raw_source_excerpt": "'''laquelle''' {{pron|la.kɛl|fr}} {{f}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "Which one? Feminine singular interrogative pronoun asking which person or thing is meant among several.",
+            "source_id": "b95_fr_162778",
+            "source_span": {
+              "line_1_based": 80,
+              "raw_source_excerpt": "# Quelle [[personne]] ou [[quelle]] [[chose]] [[parmi]] un [[ensemble]] de [[personne]]s ou de [[chose]]s. {{usage}} S’accorde en genre avec les référents. Toujours au masculin pour des infinitifs."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "English translation and scoped explanation of the selected French use by Lexique contributors.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "哪一个？阴性单数疑问代词，询问多个对象中的哪一个人或事物。",
+            "source_id": "b95_fr_162778",
+            "source_span": {
+              "line_1_based": 80,
+              "raw_source_excerpt": "# Quelle [[personne]] ou [[quelle]] [[chose]] [[parmi]] un [[ensemble]] de [[personne]]s ou de [[chose]]s. {{usage}} S’accorde en genre avec les référents. Toujours au masculin pour des infinitifs."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Chinese translation and scoped explanation of the selected French use by Lexique contributors.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 727,
+    "headword": "laquelle",
+    "lexique_cgram": "PRO:rel",
+    "subtitle_lemma_per_million": "137.88",
+    "subtitle_pos_per_million": "68.94",
+    "senses": [
+      {
+        "sense_id": "b95-727-laquelle-pro-rel-selected",
+        "source_headword": "laquelle",
+        "use": "Feminine singular relative form of lequel, agreeing with a feminine antecedent; as in la table sur laquelle….",
+        "use_language": "en",
+        "excluded_uses": "Interrogative use and masculine/plural forms.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Pronom relatif féminin singulier reprenant une personne ou une chose déjà nommée, notamment après une préposition.",
+            "source_id": "b95_fr_162778",
+            "source_span": {
+              "line_1_based": 8,
+              "raw_source_excerpt": "# Pronom relatif qui remplace le nom et établit le lien avec la [[proposition relative]] qui suit."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "French learner explanation adapted from the selected definition; markup removed and selected construction/scope stated by Lexique contributors.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/la.kɛl/",
+            "source_id": "b95_fr_162788",
+            "source_span": {
+              "line_1_based": 13,
+              "raw_source_excerpt": "'''laquelle''' {{pron|la.kɛl|fr}} {{f}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "Which; feminine singular relative pronoun referring back to a named person or thing, especially after a preposition.",
+            "source_id": "b95_fr_162778",
+            "source_span": {
+              "line_1_based": 8,
+              "raw_source_excerpt": "# Pronom relatif qui remplace le nom et établit le lien avec la [[proposition relative]] qui suit."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "English translation and scoped explanation of the selected French use by Lexique contributors.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "该人或该物；回指已提及的阴性单数先行词的关系代词，尤其用于介词之后。",
+            "source_id": "b95_fr_162778",
+            "source_span": {
+              "line_1_based": 8,
+              "raw_source_excerpt": "# Pronom relatif qui remplace le nom et établit le lien avec la [[proposition relative]] qui suit."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Chinese translation and scoped explanation of the selected French use by Lexique contributors.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 728,
+    "headword": "danser",
+    "lexique_cgram": "VER",
+    "subtitle_lemma_per_million": "137.36",
+    "subtitle_pos_per_million": "137.36",
+    "senses": [
+      {
+        "sense_id": "b95-728-danser-ver-selected",
+        "source_headword": "danser",
+        "use": "Intransitive lexical verb for dancing.",
+        "use_language": "en",
+        "excluded_uses": "Figurative motion, transitive naming of dance steps and pronominal passive use.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Faire des mouvements du corps qui constituent une danse.",
+            "source_id": "b95_en_104805",
+            "source_span": {
+              "line_1_based": 86,
+              "raw_source_excerpt": "# {{lb|fr|ambitransitive}} to [[dance]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/dɑ̃.se/",
+            "source_id": "b95_fr_156418",
+            "source_span": {
+              "line_1_based": 11,
+              "raw_source_excerpt": "'''danser''' {{pron|dɑ̃.se|fr}} {{i|fr}}, {{t|fr}} ou {{prnl|fr}} {{conj|grp=1|fr}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "To dance; perform the movements of a dance.",
+            "source_id": "b95_en_104805",
+            "source_span": {
+              "line_1_based": 86,
+              "raw_source_excerpt": "# {{lb|fr|ambitransitive}} to [[dance]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "跳舞；做出舞蹈动作。",
+            "source_id": "b95_en_104805",
+            "source_span": {
+              "line_1_based": 86,
+              "raw_source_excerpt": "# {{lb|fr|ambitransitive}} to [[dance]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 729,
+    "headword": "humain",
+    "lexique_cgram": "ADJ",
+    "subtitle_lemma_per_million": "137.1",
+    "subtitle_pos_per_million": "107.1",
+    "senses": [
+      {
+        "sense_id": "b95-729-humain-adj-selected",
+        "source_headword": "humain",
+        "use": "Adjective for what relates to human beings; feminine humaine.",
+        "use_language": "en",
+        "excluded_uses": "Humane or compassionate qualities and the person noun.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Qui concerne les êtres humains.",
+            "source_id": "b95_en_328300",
+            "source_span": {
+              "line_1_based": 23,
+              "raw_source_excerpt": "# [[human]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/y.mɛ̃/",
+            "source_id": "b95_fr_1959",
+            "source_span": {
+              "line_1_based": 9,
+              "raw_source_excerpt": "'''humain''' {{pron|y.mɛ̃|fr}} {{m}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "Human; relating to human beings.",
+            "source_id": "b95_en_328300",
+            "source_span": {
+              "line_1_based": 23,
+              "raw_source_excerpt": "# [[human]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "人的；与人类有关的。",
+            "source_id": "b95_en_328300",
+            "source_span": {
+              "line_1_based": 23,
+              "raw_source_excerpt": "# [[human]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 730,
+    "headword": "humain",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "137.1",
+    "subtitle_pos_per_million": "30.0",
+    "senses": [
+      {
+        "sense_id": "b95-730-humain-nom-selected",
+        "source_headword": "humain",
+        "use": "Masculine person noun humain; feminine humaine.",
+        "use_language": "en",
+        "excluded_uses": "The collective plural humanity, figurative social relations and the adjective.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Individu de l’espèce humaine.",
+            "source_id": "b95_en_328300",
+            "source_span": {
+              "line_1_based": 18,
+              "raw_source_excerpt": "# [[human]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/y.mɛ̃/",
+            "source_id": "b95_fr_1959",
+            "source_span": {
+              "line_1_based": 149,
+              "raw_source_excerpt": "'''humain''' {{pron|y.mɛ̃|fr}} {{m}} (pour une femme, on dit : [[humaine]])"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "A human being.",
+            "source_id": "b95_en_328300",
+            "source_span": {
+              "line_1_based": 18,
+              "raw_source_excerpt": "# [[human]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "人；人类个体。",
+            "source_id": "b95_en_328300",
+            "source_span": {
+              "line_1_based": 18,
+              "raw_source_excerpt": "# [[human]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 731,
+    "headword": "chaud",
+    "lexique_cgram": "ADJ",
+    "subtitle_lemma_per_million": "137.06",
+    "subtitle_pos_per_million": "84.16",
+    "senses": [
+      {
+        "sense_id": "b95-731-chaud-adj-selected",
+        "source_headword": "chaud",
+        "use": "Temperature adjective; feminine chaude.",
+        "use_language": "en",
+        "excluded_uses": "Warm colours, enthusiasm, danger, sexual, radioactive and other figurative uses.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Dont la température est élevée.",
+            "source_id": "b95_en_53711",
+            "source_span": {
+              "line_1_based": 25,
+              "raw_source_excerpt": "# [[warm]], [[hot]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/ʃo/",
+            "source_id": "b95_fr_10581",
+            "source_span": {
+              "line_1_based": 11,
+              "raw_source_excerpt": "'''chaud''' {{pron|ʃo|fr}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "Hot; having a high temperature.",
+            "source_id": "b95_en_53711",
+            "source_span": {
+              "line_1_based": 25,
+              "raw_source_excerpt": "# [[warm]], [[hot]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "热的；温度高的。",
+            "source_id": "b95_en_53711",
+            "source_span": {
+              "line_1_based": 25,
+              "raw_source_excerpt": "# [[warm]], [[hot]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 732,
+    "headword": "chaud",
+    "lexique_cgram": "ADV",
+    "subtitle_lemma_per_million": "137.06",
+    "subtitle_pos_per_million": "39.06",
+    "senses": [
+      {
+        "sense_id": "b95-732-chaud-adv-selected",
+        "source_headword": "chaud",
+        "use": "Invariable adverbial chaud used with consuming food or drink; the source’s manger chaud and boire chaud attest this construction.",
+        "use_language": "en",
+        "excluded_uses": "Adjective agreement, impersonal faire chaud, motivational senses and the noun.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "À température élevée, dans des constructions comme manger chaud ou boire chaud.",
+            "source_id": "b95_fr_10581",
+            "source_span": {
+              "line_1_based": 314,
+              "raw_source_excerpt": "# [[chaudement|Chaudement]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "French learner explanation adapted from the selected definition; markup removed and selected construction/scope stated by Lexique contributors.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/ʃo/",
+            "source_id": "b95_fr_10581",
+            "source_span": {
+              "line_1_based": 313,
+              "raw_source_excerpt": "'''chaud''' {{pron|ʃo|fr}} {{invar}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "Hot; at a high temperature, in constructions such as manger chaud or boire chaud.",
+            "source_id": "b95_fr_10581",
+            "source_span": {
+              "line_1_based": 314,
+              "raw_source_excerpt": "# [[chaudement|Chaudement]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "English translation and scoped explanation of the selected French use by Lexique contributors.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "趁热、以热的状态；用于 manger chaud 或 boire chaud 等吃喝表达。",
+            "source_id": "b95_fr_10581",
+            "source_span": {
+              "line_1_based": 314,
+              "raw_source_excerpt": "# [[chaudement|Chaudement]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Chinese translation and scoped explanation of the selected French use by Lexique contributors.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 733,
+    "headword": "chaud",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "137.06",
+    "subtitle_pos_per_million": "13.84",
+    "senses": [
+      {
+        "sense_id": "b95-733-chaud-nom-selected",
+        "source_headword": "chaud",
+        "use": "Masculine abstract noun le chaud, contrasted with le froid.",
+        "use_language": "en",
+        "excluded_uses": "Person nouns for an enthusiast or a skilled person, and adjective/adverb uses.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Chaleur, par opposition au froid.",
+            "source_id": "b95_en_53711",
+            "source_span": {
+              "line_1_based": 86,
+              "raw_source_excerpt": "# [[heat]], [[warmth]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/ʃo/",
+            "source_id": "b95_fr_10581",
+            "source_span": {
+              "line_1_based": 353,
+              "raw_source_excerpt": "'''chaud''' {{pron|ʃo|fr}} {{m}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "Heat or warmth, as opposed to cold.",
+            "source_id": "b95_en_53711",
+            "source_span": {
+              "line_1_based": 86,
+              "raw_source_excerpt": "# [[heat]], [[warmth]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "热；温暖，与冷相对。",
+            "source_id": "b95_en_53711",
+            "source_span": {
+              "line_1_based": 86,
+              "raw_source_excerpt": "# [[heat]], [[warmth]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 734,
+    "headword": "maître",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "137.0",
+    "subtitle_pos_per_million": "128.55",
+    "senses": [
+      {
+        "sense_id": "b95-734-maître-nom-selected",
+        "source_headword": "maître",
+        "use": "Masculine person noun in the primary-school teaching sense; feminine maîtresse.",
+        "use_language": "en",
+        "excluded_uses": "Owners, masters exercising authority, lawyers’ titles, military grades and the adjective.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Enseignant d’une école primaire ; au féminin, maîtresse.",
+            "source_id": "b95_en_255194",
+            "source_span": {
+              "line_1_based": 57,
+              "raw_source_excerpt": "# [[teacher]] (in a [[primary school]])"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/mɛtʁ/",
+            "source_id": "b95_fr_8494",
+            "source_span": {
+              "line_1_based": 17,
+              "raw_source_excerpt": "'''maître''' {{pron|mɛtʁ|fr}} {{m}} {{tradit}} (le féminin est ''[[maîtresse]]'' pour les définitions 1 à 7, parfois identique au masculin pour les suivantes)"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "A primary-school teacher; the feminine form is maîtresse.",
+            "source_id": "b95_en_255194",
+            "source_span": {
+              "line_1_based": 57,
+              "raw_source_excerpt": "# [[teacher]] (in a [[primary school]])"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "小学教师；阴性形式为 maîtresse。",
+            "source_id": "b95_en_255194",
+            "source_span": {
+              "line_1_based": 57,
+              "raw_source_excerpt": "# [[teacher]] (in a [[primary school]])"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 735,
+    "headword": "exister",
+    "lexique_cgram": "VER",
+    "subtitle_lemma_per_million": "136.24",
+    "subtitle_pos_per_million": "136.24",
+    "senses": [
+      {
+        "sense_id": "b95-735-exister-ver-selected",
+        "source_headword": "exister",
+        "use": "Intransitive lexical verb for actual existence or occurrence.",
+        "use_language": "en",
+        "excluded_uses": "The philosophy-specific definition, living and figurative absence of importance.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Avoir une existence réelle.",
+            "source_id": "b95_en_544896",
+            "source_span": {
+              "line_1_based": 32,
+              "raw_source_excerpt": "# to [[exist]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/ɛɡ.zis.te/",
+            "source_id": "b95_fr_41497",
+            "source_span": {
+              "line_1_based": 7,
+              "raw_source_excerpt": "'''exister''' {{pron|ɛɡ.zis.te|fr}} {{i|fr}} {{conj|grp=1|fr}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "To exist; to be real or present.",
+            "source_id": "b95_en_544896",
+            "source_span": {
+              "line_1_based": 32,
+              "raw_source_excerpt": "# to [[exist]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "存在；实际存在。",
+            "source_id": "b95_en_544896",
+            "source_span": {
+              "line_1_based": 32,
+              "raw_source_excerpt": "# to [[exist]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 736,
+    "headword": "différent",
+    "lexique_cgram": "ADJ",
+    "subtitle_lemma_per_million": "135.8",
+    "subtitle_pos_per_million": "135.8",
+    "senses": [
+      {
+        "sense_id": "b95-736-différent-adj-selected",
+        "source_headword": "différent",
+        "use": "Adjective indicating difference; feminine différente; comparison can use différent de.",
+        "use_language": "en",
+        "excluded_uses": "Disability-related extension and the numismatic noun; différend is another word.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Qui n’est pas identique à une autre personne ou chose.",
+            "source_id": "b95_en_93340",
+            "source_span": {
+              "line_1_based": 18,
+              "raw_source_excerpt": "# [[different]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/di.fe.ʁɑ̃/",
+            "source_id": "b95_fr_66288",
+            "source_span": {
+              "line_1_based": 9,
+              "raw_source_excerpt": "'''différent''' {{pron|di.fe.ʁɑ̃|fr}} {{m}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "Different; not the same as another person or thing.",
+            "source_id": "b95_en_93340",
+            "source_span": {
+              "line_1_based": 18,
+              "raw_source_excerpt": "# [[different]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "不同的；与另一人或事物不一样的。",
+            "source_id": "b95_en_93340",
+            "source_span": {
+              "line_1_based": 18,
+              "raw_source_excerpt": "# [[different]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 737,
+    "headword": "faux",
+    "lexique_cgram": "ADJ",
+    "subtitle_lemma_per_million": "135.55",
+    "subtitle_pos_per_million": "122.23",
+    "senses": [
+      {
+        "sense_id": "b95-737-faux-adj-selected",
+        "source_headword": "faux",
+        "use": "Truth-value adjective; feminine fausse; used of an idea, statement or representation.",
+        "use_language": "en",
+        "excluded_uses": "Counterfeit objects, musical pitch, deceptive people, the adverb and the feminine tool noun.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Qui n’est pas vrai, comme une affirmation ou une réponse erronée.",
+            "source_id": "b95_en_48944",
+            "source_span": {
+              "line_1_based": 118,
+              "raw_source_excerpt": "# [[false]]; [[untrue]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/fo/",
+            "source_id": "b95_fr_10734",
+            "source_span": {
+              "line_1_based": 15,
+              "raw_source_excerpt": "'''faux''' {{pron|fo|fr}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "False or untrue, as of an incorrect statement or answer.",
+            "source_id": "b95_en_48944",
+            "source_span": {
+              "line_1_based": 118,
+              "raw_source_excerpt": "# [[false]]; [[untrue]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "不真实的；错误的，如不符合事实的陈述或答案。",
+            "source_id": "b95_en_48944",
+            "source_span": {
+              "line_1_based": 118,
+              "raw_source_excerpt": "# [[false]]; [[untrue]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 738,
+    "headword": "souvent",
+    "lexique_cgram": "ADV",
+    "subtitle_lemma_per_million": "135.54",
+    "subtitle_pos_per_million": "135.54",
+    "senses": [
+      {
+        "sense_id": "b95-738-souvent-adv-selected",
+        "source_headword": "souvent",
+        "use": "Invariable adverb of frequency.",
+        "use_language": "en",
+        "excluded_uses": "No additional selected use.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "À de nombreuses occasions.",
+            "source_id": "b95_en_209048",
+            "source_span": {
+              "line_1_based": 18,
+              "raw_source_excerpt": "# [[often]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/su.vɑ̃/",
+            "source_id": "b95_fr_177051",
+            "source_span": {
+              "line_1_based": 6,
+              "raw_source_excerpt": "'''souvent''' {{pron|su.vɑ̃|fr}} {{adverbe de temps|fr}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "Often; on many occasions.",
+            "source_id": "b95_en_209048",
+            "source_span": {
+              "line_1_based": 18,
+              "raw_source_excerpt": "# [[often]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "经常；多次。",
+            "source_id": "b95_en_209048",
+            "source_span": {
+              "line_1_based": 18,
+              "raw_source_excerpt": "# [[often]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 739,
+    "headword": "clair",
+    "lexique_cgram": "ADJ",
+    "subtitle_lemma_per_million": "135.48",
+    "subtitle_pos_per_million": "122.69",
+    "senses": [
+      {
+        "sense_id": "b95-739-clair-adj-selected",
+        "source_headword": "clair",
+        "use": "Figurative adjective describing an explanation or message; feminine claire.",
+        "use_language": "en",
+        "excluded_uses": "Brightness, transparency, pale colour, sparse texture, the noun and the adverb.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Que l’on comprend facilement, comme une explication.",
+            "source_id": "b95_en_49937",
+            "source_span": {
+              "line_1_based": 21,
+              "raw_source_excerpt": "# [[clear]] {{gloss|understandable}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/klɛʁ/",
+            "source_id": "b95_fr_36469",
+            "source_span": {
+              "line_1_based": 9,
+              "raw_source_excerpt": "'''clair''' {{pron|klɛʁ|fr}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "Clear; easy to understand, as of an explanation.",
+            "source_id": "b95_en_49937",
+            "source_span": {
+              "line_1_based": 21,
+              "raw_source_excerpt": "# [[clear]] {{gloss|understandable}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "清楚的；明白易懂的，如解释。",
+            "source_id": "b95_en_49937",
+            "source_span": {
+              "line_1_based": 21,
+              "raw_source_excerpt": "# [[clear]] {{gloss|understandable}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 740,
+    "headword": "clair",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "135.48",
+    "subtitle_pos_per_million": "12.79",
+    "senses": [
+      {
+        "sense_id": "b95-740-clair-nom-selected",
+        "source_headword": "clair",
+        "use": "Masculine noun clair in the everyday expression clair de lune, meaning light from the moon.",
+        "use_language": "en",
+        "excluded_uses": "Unrestricted standalone light, painting/tapestry terminology, threadbare fabric and other noun senses.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Dans clair de lune, clarté produite par la lune.",
+            "source_id": "b95_en_102860",
+            "source_span": {
+              "line_1_based": 37,
+              "raw_source_excerpt": "# [[moonlight]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/klɛʁ/",
+            "source_id": "b95_fr_36469",
+            "source_span": {
+              "line_1_based": 430,
+              "raw_source_excerpt": "'''clair''' {{pron|klɛʁ|fr}} {{m}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "Light from the moon, in the expression clair de lune (moonlight).",
+            "source_id": "b95_en_102860",
+            "source_span": {
+              "line_1_based": 37,
+              "raw_source_excerpt": "# [[moonlight]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "月光；此处的 clair 用于 clair de lune 这一表达。",
+            "source_id": "b95_en_102860",
+            "source_span": {
+              "line_1_based": 37,
+              "raw_source_excerpt": "# [[moonlight]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 741,
+    "headword": "lumière",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "134.83",
+    "subtitle_pos_per_million": "134.83",
+    "senses": [
+      {
+        "sense_id": "b95-741-lumière-nom-selected",
+        "source_headword": "lumière",
+        "use": "Feminine noun for visible illumination.",
+        "use_language": "en",
+        "excluded_uses": "Lamps as objects, figurative knowledge, technical openings and Quebec traffic-light or headlight uses.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Rayonnement visible qui permet de voir.",
+            "source_id": "b95_en_214845",
+            "source_span": {
+              "line_1_based": 20,
+              "raw_source_excerpt": "# [[light]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/ly.mjɛʁ/",
+            "source_id": "b95_fr_7411",
+            "source_span": {
+              "line_1_based": 10,
+              "raw_source_excerpt": "'''lumière''' {{pron|ly.mjɛʁ|fr}} {{f}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "Light; visible radiation that allows us to see.",
+            "source_id": "b95_en_214845",
+            "source_span": {
+              "line_1_based": 20,
+              "raw_source_excerpt": "# [[light]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "光；使人能够看见的可见辐射。",
+            "source_id": "b95_en_214845",
+            "source_span": {
+              "line_1_based": 20,
+              "raw_source_excerpt": "# [[light]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 742,
+    "headword": "génial",
+    "lexique_cgram": "ADJ",
+    "subtitle_lemma_per_million": "134.47",
+    "subtitle_pos_per_million": "134.47",
+    "senses": [
+      {
+        "sense_id": "b95-742-génial-adj-selected",
+        "source_headword": "génial",
+        "use": "Informal adjective expressing strong praise; feminine géniale; selected adjective use.",
+        "use_language": "en",
+        "excluded_uses": "Literal genius and standalone interjections.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Très bon, formidable (familier).",
+            "source_id": "b95_en_1450134",
+            "source_span": {
+              "line_1_based": 14,
+              "raw_source_excerpt": "# {{lb|fr|informal}} [[great]], [[fantastic]], [[awesome]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/ʒe.njal/",
+            "source_id": "b95_fr_162551",
+            "source_span": {
+              "line_1_based": 9,
+              "raw_source_excerpt": "'''génial''' {{pron|ʒe.njal|fr}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "Great or fantastic (informal praise).",
+            "source_id": "b95_en_1450134",
+            "source_span": {
+              "line_1_based": 14,
+              "raw_source_excerpt": "# {{lb|fr|informal}} [[great]], [[fantastic]], [[awesome]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "太棒的；极好的（口语褒义）。",
+            "source_id": "b95_en_1450134",
+            "source_span": {
+              "line_1_based": 14,
+              "raw_source_excerpt": "# {{lb|fr|informal}} [[great]], [[fantastic]], [[awesome]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 743,
+    "headword": "normal",
+    "lexique_cgram": "ADJ",
+    "subtitle_lemma_per_million": "134.44",
+    "subtitle_pos_per_million": "127.15",
+    "senses": [
+      {
+        "sense_id": "b95-743-normal-adj-selected",
+        "source_headword": "normal",
+        "use": "Adjective for an expected or usual state; feminine normale.",
+        "use_language": "en",
+        "excluded_uses": "Technical mathematical uses, teacher-training school names and the abstract noun.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Conforme à ce qui est habituel ou attendu.",
+            "source_id": "b95_en_53787",
+            "source_span": {
+              "line_1_based": 417,
+              "raw_source_excerpt": "# {{l|en|normal}} {{gloss|according to norms, usual}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/nɔʁ.mal/",
+            "source_id": "b95_fr_38646",
+            "source_span": {
+              "line_1_based": 9,
+              "raw_source_excerpt": "'''normal''' {{pron|nɔʁ.mal|fr}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "Normal; usual or as expected.",
+            "source_id": "b95_en_53787",
+            "source_span": {
+              "line_1_based": 417,
+              "raw_source_excerpt": "# {{l|en|normal}} {{gloss|according to norms, usual}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "正常的；符合通常情况或预期的。",
+            "source_id": "b95_en_53787",
+            "source_span": {
+              "line_1_based": 417,
+              "raw_source_excerpt": "# {{l|en|normal}} {{gloss|according to norms, usual}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 744,
+    "headword": "libre",
+    "lexique_cgram": "ADJ",
+    "subtitle_lemma_per_million": "134.42",
+    "subtitle_pos_per_million": "134.42",
+    "senses": [
+      {
+        "sense_id": "b95-744-libre-adj-selected",
+        "source_headword": "libre",
+        "use": "Adjective describing a person’s liberty; same masculine and feminine form.",
+        "use_language": "en",
+        "excluded_uses": "Available, unoccupied, free of charge, free licensing and technical uses.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Qui dispose de sa liberté et peut agir ou choisir.",
+            "source_id": "b95_en_1514",
+            "source_span": {
+              "line_1_based": 231,
+              "raw_source_excerpt": "# [[free]], at liberty"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/libʁ/",
+            "source_id": "b95_fr_11732",
+            "source_span": {
+              "line_1_based": 9,
+              "raw_source_excerpt": "'''libre''' {{pron|libʁ|fr}} {{mf}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "Free; at liberty to act or choose.",
+            "source_id": "b95_en_1514",
+            "source_span": {
+              "line_1_based": 231,
+              "raw_source_excerpt": "# [[free]], at liberty"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "自由的；有行动或选择的自由。",
+            "source_id": "b95_en_1514",
+            "source_span": {
+              "line_1_based": 231,
+              "raw_source_excerpt": "# [[free]], at liberty"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 745,
+    "headword": "moyen",
+    "lexique_cgram": "ADJ",
+    "subtitle_lemma_per_million": "134.16",
+    "subtitle_pos_per_million": "50.69",
+    "senses": [
+      {
+        "sense_id": "b95-745-moyen-adj-selected",
+        "source_headword": "moyen",
+        "use": "Adjective for an intermediate level or size; feminine moyenne.",
+        "use_language": "en",
+        "excluded_uses": "Mediocre quality, arithmetic averages, Quebec intensifier, noun and adverb.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Intermédiaire entre un niveau faible et un niveau élevé.",
+            "source_id": "b95_en_101488",
+            "source_span": {
+              "line_1_based": 60,
+              "raw_source_excerpt": "# [[middle]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/mwa.jɛ̃/",
+            "source_id": "b95_fr_154339",
+            "source_span": {
+              "line_1_based": 10,
+              "raw_source_excerpt": "'''moyen''' {{pron|mwa.jɛ̃|fr}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "Medium or intermediate in level.",
+            "source_id": "b95_en_101488",
+            "source_span": {
+              "line_1_based": 60,
+              "raw_source_excerpt": "# [[middle]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "中等的；介于低与高之间的。",
+            "source_id": "b95_en_101488",
+            "source_span": {
+              "line_1_based": 60,
+              "raw_source_excerpt": "# [[middle]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 746,
+    "headword": "moyen",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "134.16",
+    "subtitle_pos_per_million": "83.47",
+    "senses": [
+      {
+        "sense_id": "b95-746-moyen-nom-selected",
+        "source_headword": "moyen",
+        "use": "Masculine noun un moyen; the English singular equivalent means has final s.",
+        "use_language": "en",
+        "excluded_uses": "Wealth, legal arguments, mathematical terms, school classes, adjective and adverb.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Manière ou ressource permettant d’atteindre un objectif.",
+            "source_id": "b95_en_101488",
+            "source_span": {
+              "line_1_based": 33,
+              "raw_source_excerpt": "# [[means]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/mwa.jɛ̃/",
+            "source_id": "b95_fr_154339",
+            "source_span": {
+              "line_1_based": 134,
+              "raw_source_excerpt": "'''moyen''' {{pron|mwa.jɛ̃|fr}} ou localement, {{pron|mo.jɛ̃|fr}} {{m}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "A means or method of achieving a goal.",
+            "source_id": "b95_en_101488",
+            "source_span": {
+              "line_1_based": 33,
+              "raw_source_excerpt": "# [[means]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "手段；方法；达成目标的方式或资源。",
+            "source_id": "b95_en_101488",
+            "source_span": {
+              "line_1_based": 33,
+              "raw_source_excerpt": "# [[means]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 747,
+    "headword": "dollar",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "134.1",
+    "subtitle_pos_per_million": "134.1",
+    "senses": [
+      {
+        "sense_id": "b95-747-dollar-nom-selected",
+        "source_headword": "dollar",
+        "use": "Masculine currency noun in the source’s ordinary US-dollar sense; other countries’ dollars remain distinct.",
+        "use_language": "en",
+        "excluded_uses": "Canadian and other dollars and Canadian money in general.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Unité monétaire des États-Unis (USD), dans ce sens.",
+            "source_id": "b95_en_3742",
+            "source_span": {
+              "line_1_based": 334,
+              "raw_source_excerpt": "# {{l|en|dollar}}, usually the [[US dollar]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/dɔ.laʁ/",
+            "source_id": "b95_fr_55375",
+            "source_span": {
+              "line_1_based": 11,
+              "raw_source_excerpt": "'''dollar''' {{pron|dɔ.laʁ|fr}} {{m}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "The US dollar (USD), in this selected sense.",
+            "source_id": "b95_en_3742",
+            "source_span": {
+              "line_1_based": 334,
+              "raw_source_excerpt": "# {{l|en|dollar}}, usually the [[US dollar]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "美元（USD），此处选取美国货币义。",
+            "source_id": "b95_en_3742",
+            "source_span": {
+              "line_1_based": 334,
+              "raw_source_excerpt": "# {{l|en|dollar}}, usually the [[US dollar]]."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 748,
+    "headword": "sûrement",
+    "lexique_cgram": "ADV",
+    "subtitle_lemma_per_million": "133.67",
+    "subtitle_pos_per_million": "133.67",
+    "senses": [
+      {
+        "sense_id": "b95-748-sûrement-adv-selected",
+        "source_headword": "sûrement",
+        "use": "Invariable adverb expressing probability in its explicitly weakened sense.",
+        "use_language": "en",
+        "excluded_uses": "The certainty sense and safely or securely.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Très probablement, dans un emploi qui n’exprime pas une certitude absolue.",
+            "source_id": "b95_en_498410",
+            "source_span": {
+              "line_1_based": 22,
+              "raw_source_excerpt": "# [[probably]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/syʁ.mɑ̃/",
+            "source_id": "b95_fr_35545",
+            "source_span": {
+              "line_1_based": 7,
+              "raw_source_excerpt": "'''sûrement''' {{pron|syʁ.mɑ̃|fr}} {{invar}} {{tradit}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "Probably or most likely; this use does not express absolute certainty.",
+            "source_id": "b95_en_498410",
+            "source_span": {
+              "line_1_based": 22,
+              "raw_source_excerpt": "# [[probably]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "很可能；多半，此用法不表示绝对确定。",
+            "source_id": "b95_en_498410",
+            "source_span": {
+              "line_1_based": 22,
+              "raw_source_excerpt": "# [[probably]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 749,
+    "headword": "hôpital",
+    "lexique_cgram": "NOM",
+    "subtitle_lemma_per_million": "133.15",
+    "subtitle_pos_per_million": "133.15",
+    "senses": [
+      {
+        "sense_id": "b95-749-hôpital-nom-selected",
+        "source_headword": "hôpital",
+        "use": "Masculine noun with h muet: l’hôpital, plural les hôpitaux.",
+        "use_language": "en",
+        "excluded_uses": "Hyperbolic houses full of ill people and the obsolete kettle.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Établissement où des patients reçoivent des soins médicaux.",
+            "source_id": "b95_en_472427",
+            "source_span": {
+              "line_1_based": 20,
+              "raw_source_excerpt": "# [[hospital]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/o.pi.tal/",
+            "source_id": "b95_fr_163922",
+            "source_span": {
+              "line_1_based": 9,
+              "raw_source_excerpt": "'''hôpital''' {{h muet}}{{pron|o.pi.tal|fr}} ou {{h muet}}{{pron|ɔ.pi.tal|fr}} {{m}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "A hospital; an institution providing medical care to patients.",
+            "source_id": "b95_en_472427",
+            "source_span": {
+              "line_1_based": 20,
+              "raw_source_excerpt": "# [[hospital]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "医院；为患者提供医疗服务的机构。",
+            "source_id": "b95_en_472427",
+            "source_span": {
+              "line_1_based": 20,
+              "raw_source_excerpt": "# [[hospital]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "frozen_row": 750,
+    "headword": "ceci",
+    "lexique_cgram": "PRO:dem",
+    "subtitle_lemma_per_million": "133.07",
+    "subtitle_pos_per_million": "133.07",
+    "senses": [
+      {
+        "sense_id": "b95-750-ceci-pro-dem-selected",
+        "source_headword": "ceci",
+        "use": "Invariable neuter demonstrative pronoun introducing forthcoming information.",
+        "use_language": "en",
+        "excluded_uses": "Physical pointing, retrospective reference, derogatory person reference and the philosophy noun.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "pending_parent_integration_and_produced_resource_checks",
+        "author_validation": "selected_spans_and_four_field_meaning_fit_checked_by_content_author",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Pronom démonstratif neutre désignant ici ce que l’on va dire.",
+            "source_id": "b95_en_194022",
+            "source_span": {
+              "line_1_based": 25,
+              "raw_source_excerpt": "# [[this]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique fr translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/sə.si/",
+            "source_id": "b95_fr_152495",
+            "source_span": {
+              "line_1_based": 7,
+              "raw_source_excerpt": "'''ceci''' {{pron|sə.si|fr}} {{n}} {{invariable|fr}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected the fixed textual IPA and added slash delimiters; no audio is included.",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "english": {
+            "language": "en",
+            "text": "This; here a neuter demonstrative pronoun referring to what is about to be said.",
+            "source_id": "b95_en_194022",
+            "source_span": {
+              "line_1_based": 25,
+              "raw_source_excerpt": "# [[this]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique en translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "这；此处指即将说出的内容的中性指示代词。",
+            "source_id": "b95_en_194022",
+            "source_span": {
+              "line_1_based": 25,
+              "raw_source_excerpt": "# [[this]]"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Lexique zh translation and scoped explanation of the selected French lexical use in the fixed English Wiktionary span; grammatical construction and register restrictions stated explicitly.",
+            "independent_review": "passed",
+            "author_validation": "not_applicable_to_independent_accepted_replacement",
+            "rights_eligibility_status": "passed_at_selected_text_boundary"
+          }
+        }
+      }
+    ]
+  }
+]

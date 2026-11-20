@@ -4,6 +4,32 @@
 
 2026-11-18，[PR #174](https://github.com/zardonc/lexique/pull/174)、[PR #175](https://github.com/zardonc/lexique/pull/175) 和 [PR #176](https://github.com/zardonc/lexique/pull/176) 的固定 head 各 22 项检查通过后合并，最终合并提交为 `42c720556fd1195cca39ba704761877d1c0df48a`，该提交的 [main CI](https://github.com/zardonc/lexique/actions/runs/44377907700) 11 项检查全部通过。队列 E2E 竞态修复在延迟请求对照中由 4／4 失败变为 4／4 通过，Windows x64／Edge 完整 391 项通过。Intel macOS 对照确认 COMMIT 锁竞争及其他等待，原始 V03 超时的具体原因仍未完全定位；事务／竞争写入预算保持 100／250 ms，后端执行硬限保持 60 秒。固定提交、原始失败、对照结果、ARM64 runner 恢复及合并后的 main CI 链接见 [CI 恢复记录](evidence/ci-174-176/README.md)。
 
+## 语法笔记与共享分类
+
+2026-11-19–20 UTC，按 [Q1–Q29 确认设计](grammar-notes-classification-design.md)实现独立语法笔记、共享多分类、文字问答卡和混合复习。审查基线为 `42c720556fd1195cca39ba704761877d1c0df48a`；原实现为 `77c98f6`，保存重试修正为 `a78b41e`，主线整合为 `2cba1bf`，批次历史修复为 `2c90170`，最终生产代码为 `e27ba23d73313ebb2d34df83146c7168a3737710`，WASM 版本验收为 `c6c85f4524247ad9403724cf7fc0892d5205b44d`。[PR #182](https://github.com/zardonc/lexique/pull/182)整合本功能与修复，下表分别记录各提交在 Windows x64 上的实际检查。
+
+| 提交 | 检查 | 结果 | 证据 |
+| --- | --- | --- | --- |
+| `a78b41e` | 保存重试修正的 lint、类型检查、build 与语法 Playwright | 通过；语法 8 项通过 | [lint](../target/grammar-classification/review-20261119-user-fixes/user-fix-lint.log)、[类型](../target/grammar-classification/review-20261119-user-fixes/user-fix-typecheck.log)、[build](../target/grammar-classification/review-20261119-user-fixes/user-fix-build.log)、[语法](../target/grammar-classification/review-20261119-user-fixes/user-fix-grammar-e2e.log) |
+| `2cba1bf` | 整合后的 lint、类型检查、build、浏览器预检与完整 Playwright | 通过；全量 409 项通过（298.5 秒） | [lint](../target/grammar-classification/review-20261119-user-fixes/integration-2cba1bf/lint.log)、[类型](../target/grammar-classification/review-20261119-user-fixes/integration-2cba1bf/typecheck.log)、[build](../target/grammar-classification/review-20261119-user-fixes/integration-2cba1bf/build.log)、[预检](../target/grammar-classification/review-20261119-user-fixes/integration-2cba1bf/browser-preflight.log)、[全量](../target/grammar-classification/review-20261119-user-fixes/integration-2cba1bf/e2e.log) |
+| `2cba1bf` → `2c90170` | 删除语法记录与生词批次重放／分块恢复回归 | 修复前 2 项按预期失败，修复后 2 项通过；包含备份恢复后重放 | [红测](../target/grammar-classification/review-20261119-user-fixes/integration-2cba1bf/batch-history-red-results.json)、[绿测](../target/grammar-classification/review-20261119-user-fixes/final-review-fixes/batch-history-green-results.json) |
+| `2cba1bf` | 原生备份比较的 schema 断言 | 实际 SQLite 复现 `19 != 18`；改为 19 后通过 | [失败](../target/grammar-classification/review-20261119-user-fixes/backup-schema-red.log)、[通过](../target/grammar-classification/review-20261119-user-fixes/backup-schema-green.log) |
+| `e27ba23` | Rust 格式、预编译、后端执行与锁定编译 | 通过；210 项后端测试通过 | [格式](../target/grammar-classification/review-20261119-user-fixes/ci-clippy-repair/rust-fmt.log)、[预编译](../target/grammar-classification/review-20261119-user-fixes/ci-clippy-repair/rust-test-build.log)、[执行](../target/grammar-classification/review-20261119-user-fixes/ci-clippy-repair/rust-tests.log)、[编译](../target/grammar-classification/review-20261119-user-fixes/ci-clippy-repair/rust-check.log) |
+| `1c7bd66` → `e27ba23` | `cargo clippy --locked -p lexique-core -p lexique-storage -p lexique-dictionary --all-targets -- -D warnings` | 三处生产代码及三处测试诊断复现，全部修复后通过 | [原始诊断](../target/grammar-classification/review-20261119-user-fixes/ci-clippy-repair/clippy-red.log)、[后续测试诊断](../target/grammar-classification/review-20261119-user-fixes/ci-clippy-repair/clippy-after-first-three.log)、[通过](../target/grammar-classification/review-20261119-user-fixes/ci-clippy-repair/clippy-green.log) |
+| `e27ba23` | `pnpm desktop:build --no-bundle`，含生产前端构建 | 通过；原生程序保存固定副本并核对哈希 | [构建](../target/grammar-classification/review-20261119-user-fixes/ci-clippy-repair/desktop-build.log)、[程序元数据](../target/grammar-classification/review-20261119-user-fixes/ci-clippy-repair/native-build-metadata.json) |
+| `e27ba23` | 原生桌面库与缓存检查 | 预编译通过；库 97 项通过、2 项忽略；缓存 11 项通过、1 项忽略 | [预编译](../target/grammar-classification/review-20261119-user-fixes/ci-clippy-repair/desktop-tests-build.log)、[库](../target/grammar-classification/review-20261119-user-fixes/ci-clippy-repair/desktop-lib-tests.log)、[缓存](../target/grammar-classification/review-20261119-user-fixes/ci-clippy-repair/speech-cache-tests.log) |
+| `e27ba23` | Windows x64 实际 SQLite／退出／重启／整份备份恢复 | 笔记与备份场景均通过；自有进程均已清理 | [原生场景](../apps/desktop/e2e/native-grammar-classification-check.mjs)、[笔记结果](../target/grammar-classification/native-notes-review-e27ba23/results.json)、[备份结果](../target/grammar-classification/native-backup-review-e27ba23/results.json) |
+| `e27ba23` | 双轴审查及两次修复补审 | Standards 的 2 项 P2 与重复验证异味均修复；Standards／Spec 各 0 项未处理 | [最终审查](../target/grammar-classification/review-20261119-user-fixes/ci-clippy-repair/review-final.md)、[前次审查](../target/grammar-classification/review-20261119-user-fixes/final-review-fixes/review-final.md) |
+| `c6c85f4` | `pnpm wasm:build`、`node scripts/check-wasm.mjs`、`pnpm scheduling:build`、`pnpm test:scheduling` | 通过；实际 WASM 导出 schema 19，74 组固定与 4,096 组校准向量的日期／阶段完全一致，浮点最大绝对／相对误差均为 0 | [版本失败](../target/grammar-classification/review-20261119-user-fixes/ci-wasm-schema-repair/check-wasm-before.log)、[版本通过](../target/grammar-classification/review-20261119-user-fixes/ci-wasm-schema-repair/check-wasm-after.log)、[排程](../target/grammar-classification/review-20261119-user-fixes/ci-wasm-schema-repair/scheduling-conformance.json)、[元数据](../target/grammar-classification/review-20261119-user-fixes/ci-wasm-schema-repair/validation.json) |
+
+Rust 预编译与执行分开；后端、桌面库各组、缓存及每个原生场景均保留执行阶段硬性 60 秒上限。桌面库与缓存以 `cargo test --locked --release -p lexique-desktop --lib --test speech_cache --no-run` 预编译，库分八组运行。三个忽略项为既有专用子进程夹具。最终命令、完整提交、平台、程序哈希及日志归属见[审查验收元数据](../target/grammar-classification/review-20261119-user-fixes/ci-clippy-repair/validation.json)。`2c90170` 的前次验收保留于[历史元数据](../target/grammar-classification/review-20261119-user-fixes/final-review-fixes/validation.json)。原实现 `77c98f6` 的 208 项后端、404 项浏览器、48 项最终相关 UI，以及 74 组固定／4,096 组校准排程对照，保留于[原验收元数据](../target/grammar-classification/validation-final.json)。
+
+保留验收失败：整合首轮 V03 的 size 100／repeat 1 超过事务与竞争写入阈值，随后同代码的[独立 V03](../target/grammar-classification/review-20261119-user-fixes/integration-2cba1bf/v03-focused.json)及最终代码全套后端通过；`e27ba23` 的九个 V03 样本均实际争用，最大事务 15.0798 ms、竞争写入 37.7745 ms。`2c90170` 的首次[原生备份](../target/grammar-classification/review-20261119-user-fixes/final-review-fixes/native-backup.log)在文件选择阶段发生 WebView2 `ProcessFailed`（-1073741819），同一程序与固定资源在新目录[隔离复测通过](../target/grammar-classification/review-20261119-user-fixes/final-review-fixes/native-backup-r2.log)；两次波动原因仍未确定。首次发布提交 `1c7bd66` 的[后端 CI](../target/grammar-classification/review-20261119-user-fixes/final-review-fixes/ci-backend-135992307609.log)在严格 Clippy 阶段失败，诊断与完整复测已按上表保留。
+
+本次仅使用自有测试目录及夹具，不触及真实学习库；主工作区和单词资源开发工作区保持。schema 19 与学习快照 v3 保存语法、分类、归属、问答、进度、评分、队列、暂停、两类排序、删除后保留额度、失效保存操作编号和撤销状态；旧 v1／v2 备份的新集合为空，整份恢复保留当前库的删除重试保护。应用回退要求升级前 v1／v2 备份及旧版独立数据目录，旧应用不能读取 schema 19／快照 v3，当前新库及其备份继续保留。
+
+其他平台实机、安装包、干净机器首装、正式发行、浏览器持久学习、分类层级、按分类复习、同步及通用导入导出不在本次验收范围。
+
 ## D2 核心内容第三批五十组（#83）
 
 2026-11-18 UTC，[#83](https://github.com/zardonc/lexique/issues/83) 的冻结行 0101–0150 全部完成，接受 50 组／200 字段，无复用组：49 组现代日常义，加上项目所有者批准的行 128 `par/NOM` 高尔夫专业义例外。该名词仅表示完成单个球洞的标准击球次数，保留原词头、词性、冻结行和分母。全部 200 字段、50 项用法及 37 份固定来源捕获通过独立质量与来源权利审核，实际署名、选定片段、修改说明和再分发材料随包保留。
@@ -799,3 +825,76 @@ lint、类型检查、Windows x64 release／生产前端构建、Rust 格式／�
 30 项公开 CLI 测试通过（612.479 秒），Git 暂存字节导出 42 个输入独立重建得到相同数据库。数据库 250,650,624 字节低于 256 MiB 原生快照上限，反查索引 35,909,632 字节低于显式 36 MiB 证据预算；增加的存储成本来自可单独反查的完整代词式备选。来源、公开 CLI 结果及原有 1,700 ms 延迟预算实测见 [#43 证据](evidence/issue-43/README.md)。依用户要求跳过新鲜离线包及其他 OS／架构验收，不宣布正式离线发行就绪。
 
 六次独立 CLI 进程均超过原 1,700 ms 预算：首进程 10,333 ms，后五次中位 2,485 ms、最大 2,546 ms。文件系统为热缓存，计时包含 CLI 的完整资源校验，不代表原生 IPC 延迟；此预算未通过，单独保留为性能限制。
+
+## D2 content batches #84–#89 (2026-11-18–19 UTC)
+
+`core-89-v1` admits 450 groups / 1,800 fields, including 448 everyday groups and
+two existing specialist senses. The 4,087-group / 3,773-headword denominator and
+all previous 154 compiled groups / 616 fields remain unchanged. Row 305
+`dont/PRO:int` is the owner-approved zero-field annotation exception; modern
+relative `dont` is provided through row 306.
+
+Windows x64 locked native compilation, frontend lint/typecheck/build, 194
+separately precompiled backend tests within the existing hard 60-second limit,
+13 converter tests, 19 focused batch tests and 16 packaging checks passed.
+The full browser suite passed all 393 tests in 2.9 minutes. All six native
+batches saved/reopened their audited fields and provenance; the old-profile
+upgrade preserved digests, notes, examples, source associations, review history
+and protected audio, then saved the new `ADJ:int` and `PRO:pos` subclasses.
+Native runs recorded zero external WebView requests and empty owned-process
+cleanup. The portable ZIP is 35,857,718 bytes, with 183 verified files.
+
+Tested source/build commit: `571d221f7fbe9e28be58bd22a24ced3578b9a9b2`;
+packaging/browser commit: `291b254c70246ecaa8ccb8448230ecd3d9d0968e`.
+Commands, per-batch counts, source rights and retained logs are linked from the
+[combined evidence](evidence/issue-84-89/README.md).
+
+Resource rollback requires a matching application/resource pair because the
+desktop binary validates the resource against its build-fixed checksum. Saved
+digests remain frozen when resource content changes. Older application readers
+reject saved records with `ADJ:int` or `PRO:pos`; rejection can fail an entire
+notebook/card/import response. Application downgrade requires a compatible
+backup or continued use of the new reader. Whole-machine offline,
+other-platform hands-on, human learner acceptance, complete D2/CEFR and formal
+release gates remain unverified.
+
+## D2 content batches #90–#99
+
+`core-99-v1` admits **944 groups / 3,776 fields**, including 942 everyday
+groups and the two existing approved specialist senses. Seven approved
+annotations retain 28 missing fields separately. The fixed denominator remains
+4,087 groups / 3,773 headwords; 3,143 groups remain unaccepted and 3,145 lack
+everyday completeness. These ten batches add 494 groups / 1,976 fields and
+reuse row 483 unchanged. The 450 previously compiled payloads and eight prior
+aliases remain exact; the 4,435,968-byte SQLite resource reconstructs identically.
+
+Windows x64 frontend lint/typecheck/build, 43 core checks, 16 packaging checks,
+the 393-test browser suite and 194 separately precompiled backend tests passed.
+The backend retains its hard 60-second limit and all checksum assertions; only
+the existing SHA-256 dependency receives test-profile optimization. All ten
+native batches return audited content, save/reopen their distinct headwords and
+preserve provenance and learning state. The closed-profile resource upgrade
+preserves references, frozen digests, notes, examples, source associations,
+review history and protected audio. Eleven native runs use the matching binary,
+record zero external WebView requests and leave no owned processes.
+
+The native build/package source is `8b08a1adc45f05809dc16027c1533e25b6d88d7e`;
+the harness is `bc711b6802f5bfbd0e8f58979c2d4d993d11450a`. The portable ZIP is
+37,008,688 bytes with 183 verified files. Per-batch source acceptance, exact
+commands, failed attempts and passing execution evidence are in the
+[combined report](evidence/issue-90-99/README.md).
+
+Resource rollback requires the matching application/resource pair; learner
+digests remain frozen. Whole-machine offline, other-platform hands-on, learner
+acceptance, whole-core D2 coverage and formal release gates remain unverified.
+Per-word CEFR grading is deferred outside this frozen target.
+
+## D2 content batches #100–#109
+
+2026-11-19: `core-109-v1` admits 1,436 groups / 5,744 fields after independently reviewing frozen rows 951–1450. The ten batches add 492 groups / 1,968 fields; eight new owner-approved zero-field annotations join seven preserved annotations, retaining 60 missing fields. The 4,087-group / 3,773-headword denominator remains fixed. Everyday coverage is 1,434 complete groups, with two existing specialist senses counted separately; 2,651 groups remain unaccepted and 2,653 everyday-incomplete. All 944 prior SQLite payloads and 11 aliases are byte-preserved, with no aliases added.
+
+63 converter/cohort, 16 package, 194 backend and 13 applicable browser tests pass, along with lint, typecheck, build, rustfmt and locked Rust precompilation. Backend execution retains its hard 60-second limit. Windows x64 final build/harness `090b10c2384a68ebb9a5ea0cb9346a7c1765dafa` passes all ten native batches and the saved-state upgrade, including new poisson/camarade saves, frozen digests, notes, examples, progress, committed replay and protected audio. All eleven runs verify the same binary, zero external WebView requests and zero owned processes. The 261-file closed baseline copy remains byte-identical after execution.
+
+The SQLite resource is 6,721,536 bytes; the final portable ZIP is 38,547,297 bytes with 183 verified files. Separate Standards and Spec reviews have zero remaining findings; one minor test duplication was resolved in a fresh implementer. Exact commits, content/source decisions, owner approvals, artifact identities, commands, retained failures and platform limits are in [the cohort evidence](evidence/issues-100-109/README.md) and [final review](evidence/issues-100-109/final-review.md). [PR #180](https://github.com/zardonc/lexique/pull/180) closes #100–#109 when merged; #78 remains open. Documentation closeout and exact-head CI are recorded in the aggregate evidence.
+
+Whole-machine offline execution, other-platform native flows, learner acceptance and full D2 release readiness remain unverified.

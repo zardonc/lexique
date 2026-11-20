@@ -3,7 +3,7 @@ import type { Page } from '@playwright/test';
 export const ready = { state: 'ready', operation: null, restored: null, retained_copies: [], error: null };
 export const recovery = { ...ready, state: 'recovery_required', operation: 'restore-1', error: 'Restore journal cannot be read' };
 export const restored = { filename: 'checkpoint.lexique-backup', byte_length: 4096, created_at: 1730000000, application_version: '0.1.0', requires_restart: true,
-  counts: { vocabulary: 1, cards: 2, ratings: 3, batches: 1, custom_dictionaries: 0, legacy_audio: 0, included_audio_versions: 1,
+  counts: { vocabulary: 1, grammar: 0, categories: 0, cards: 2, ratings: 3, batches: 1, custom_dictionaries: 0, legacy_audio: 0, included_audio_versions: 1,
     included_legacy_audio: 0, audio_files: 1, source_missing_audio: 0, source_invalid_audio: 0 }, pending_dictionaries: [] };
 export const cleanup = { ...ready, state: 'cleanup_required', operation: 'preview-1', restored };
 export const completed = { ...cleanup, state: 'ready' };

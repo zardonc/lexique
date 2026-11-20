@@ -1,0 +1,70 @@
+{
+  "status": "passed_at_selected_text_boundary_for_196_fields",
+  "independence": true,
+  "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
+  "completion_reviewer": "Independent completing content/rights reviewer for issue 101; separate from author and merger",
+  "proposed_adaptation_license": "CC-BY-SA-4.0",
+  "complete_legal_text": "../../../resources/core-pilot-79/COPYING",
+  "established_rights_authorities": [
+    {
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "sections": [
+        "1(a)",
+        "2(a)(1)",
+        "2(a)(4)",
+        "2(a)(5)",
+        "3(a)",
+        "3(b)",
+        "4"
+      ]
+    },
+    {
+      "url": "https://foundation.wikimedia.org/w/index.php?title=Policy:Terms_of_Use&oldid=598588",
+      "sections": [
+        "7(a) licensing",
+        "7(b) attribution",
+        "7(c) imported text",
+        "7(g) reuse and external-source notices",
+        "7(h) modifications/additions and licensing notice"
+      ]
+    },
+    {
+      "url": "https://fr.wiktionary.org/w/index.php?title=Convention%3ADroit_d%E2%80%99auteur&oldid=38903168",
+      "assessment": "French contributor text CC BY-SA 4.0, with explicit external-source exceptions; exceptions are checked at selected spans."
+    }
+  ],
+  "statutory_basis_capture": {
+    "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278941/2024-07-14",
+    "source_lines_0_based": [
+      129,
+      134,
+      135,
+      138,
+      139
+    ],
+    "capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-102-final\\target\\issue-102\\reviewer-primary\\web-authorities.json",
+    "finding": "Primary Article L123-3 confirms collective-work 70-year publication rule; final 1935 edition publication gives conservative expiry 2006-01-01."
+  },
+  "original_edition_basis": "Académie française DAF8 1932–1935 collective edition: conservative expiry 2006-01-01 under L123-3. Historical Littré bibliography is public-domain comparison material, not proprietary modern prose.",
+  "selected_span_decision": "Fixed French lexical definitions, same-spelling IPA and grammar, without third-party quotations or proprietary dictionary definitions. DAF8 original import/reference notices, Wiki contributor adaptations and Lexique FR/EN/ZH adaptations retain separate attribution.",
+  "packaging_obligations": [
+    "Retain fixed article/full-history contributor credit and applicable original import/reference notices.",
+    "Retain supplied copyright/licence/warranty-disclaimer notices.",
+    "Retain CC BY-SA 4.0 legal text/link and Lexique adaptation/translation and IPA-transcription notices.",
+    "Distribute adapted text under CC BY-SA 4.0; apply no additional restrictions or obstructive technical measures."
+  ],
+  "corroboration_boundary": "Robert m/s noun classifications, me elision, déjeuner midday use and faire l’intéressant are read-only corroboration. No proprietary Robert prose is a field.",
+  "unresolved": {
+    "frozen_row": 1005,
+    "headword": "m",
+    "pos": "PRO:per",
+    "missing_fields": [
+      "french_definition",
+      "ipa",
+      "english",
+      "chinese"
+    ],
+    "decision": "Exact bare-spelling personal-pronoun source absent; no substitute, alias or owner exception admitted."
+  },
+  "combined_obligations_status": "Selected handoff obligations recorded; actual assembled package satisfaction remains a parent integration gate."
+}

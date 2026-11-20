@@ -132,20 +132,38 @@ fn daily_usage(connection: &Connection, day: &str, now: i64) -> Result<(u32, u32
     let (mut new, mut review) = (0_u32, 0_u32);
     for row in rows {
         let (quota, before, request) = row?;
-        if quota == "new" {
-            new = new.saturating_add(1);
-        } else {
-            let card: Card = serde_json::from_str(&before)?;
-            let request: RatingRequest = serde_json::from_str(&request)?;
-            if matches!(
-                queue_class(&card, day, &request.timezone)?,
-                QueueClass::Interday | QueueClass::Review
-            ) {
-                review = review.saturating_add(1);
-            }
-        }
+        let (used_new, used_review) = rating_usage(&quota, &before, &request, day)?;
+        new = new.saturating_add(used_new);
+        review = review.saturating_add(used_review);
     }
+    let retained: (u32, u32) = connection.query_row("SELECT COALESCE(SUM(new_cards),0), COALESCE(SUM(review_cards),0) FROM retained_review_usage WHERE learning_day = ?1 AND reviewed_at <= ?2", params![day, now], |row| Ok((row.get(0)?, row.get(1)?)))?;
+    new = new.saturating_add(retained.0);
+    review = review.saturating_add(retained.1);
     Ok((new, review))
+}
+
+fn rating_usage(
+    quota: &str,
+    before: &str,
+    request: &str,
+    day: &str,
+) -> Result<(u32, u32), StorageError> {
+    if quota == "new" {
+        return Ok((1, 0));
+    }
+    let card: Card = serde_json::from_str(before)?;
+    let request: RatingRequest = serde_json::from_str(request)?;
+    Ok((
+        0,
+        u32::from(matches!(
+            queue_class(&card, day, &request.timezone)?,
+            QueueClass::Interday | QueueClass::Review
+        )),
+    ))
+}
+
+fn latest_review_time(connection: &Connection) -> Result<Option<i64>, StorageError> {
+    Ok(connection.query_row("SELECT MAX(reviewed_at) FROM (SELECT reviewed_at FROM review_ratings WHERE undo_operation IS NULL UNION ALL SELECT reviewed_at FROM retained_review_usage)", [], |row| row.get(0))?)
 }
 
 fn remaining_limits(settings: &ReviewSettings, used_new: u32, used_review: u32) -> (usize, usize) {
@@ -432,11 +450,7 @@ fn read_queue_from_cache(
     let all: Vec<_> = cache.cards.values().cloned().collect();
     let settings = review_settings(snapshot)?;
     let (used_new, used_review) = daily_usage(snapshot, &day, now)?;
-    let latest: Option<i64> = snapshot.query_row(
-        "SELECT MAX(reviewed_at) FROM review_ratings WHERE undo_operation IS NULL",
-        [],
-        |row| row.get(0),
-    )?;
+    let latest = latest_review_time(snapshot)?;
     let (remaining_new, remaining_review) = remaining_limits(&settings, used_new, used_review);
     let existing: Vec<_> = cache
         .positions
@@ -727,11 +741,7 @@ fn eligibility(
     }
     let day =
         lexique_core::scheduling::learning_day_for(now, timezone).map_err(StorageError::Invalid)?;
-    let latest: Option<i64> = connection.query_row(
-        "SELECT MAX(reviewed_at) FROM review_ratings WHERE undo_operation IS NULL",
-        [],
-        |row| row.get(0),
-    )?;
+    let latest = latest_review_time(connection)?;
     if latest.is_some_and(|time| now < time) {
         return Ok((Some("clock".into()), latest));
     }
@@ -896,11 +906,7 @@ pub fn rate_card(
     } else {
         "review"
     };
-    let latest: Option<i64> = tx.query_row(
-        "SELECT MAX(reviewed_at) FROM review_ratings WHERE undo_operation IS NULL",
-        [],
-        |row| row.get(0),
-    )?;
+    let latest = latest_review_time(&tx)?;
     if let (Some(reason), _) =
         eligibility(&tx, request.card_id, &card, request.now, &request.timezone)?
     {
@@ -939,11 +945,15 @@ pub fn rate_card(
         [request.card_id],
     )?;
     tx.execute("INSERT INTO review_ratings (operation, card_id, request, before_state, result, reviewed_at, learning_day, quota, queue_before) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9)", params![request.operation, request.card_id, encoded, before, result, request.now, day, quota, queue_before])?;
+    tx.execute(
+        "DELETE FROM app_metadata WHERE key = 'review-undo-blocked'",
+        [],
+    )?;
     tx.commit()?;
     Ok(serde_json::from_str(&result)?)
 }
 
-#[derive(Deserialize)]
+#[derive(Deserialize, Serialize)]
 #[serde(deny_unknown_fields)]
 struct QueueSnapshot {
     card_id: i64,
@@ -954,6 +964,9 @@ struct QueueSnapshot {
 }
 
 pub fn undo_target(connection: &Connection) -> Result<Option<String>, StorageError> {
+    if review_undo_blocked(connection)? {
+        return Ok(None);
+    }
     let row: Option<(String, Option<String>)> = connection
         .query_row(
             "SELECT operation, undo_operation FROM review_ratings ORDER BY rowid DESC LIMIT 1",
@@ -990,6 +1003,11 @@ pub fn undo_rating(
         } else {
             Err(StorageError::Invalid("Undo operation already used".into()))
         };
+    }
+    if review_undo_blocked(&tx)? {
+        return Err(StorageError::Invalid(
+            "Rating is no longer available for undo".into(),
+        ));
     }
     type UndoRatingRow = (String, i64, String, String, Option<String>, Option<String>);
     let latest: Option<UndoRatingRow> = tx.query_row(
@@ -1107,6 +1125,27 @@ pub fn review_cards(
     Ok(rows.collect::<Result<Vec<_>, _>>()?)
 }
 
+pub(crate) fn review_due_times(
+    connection: &Connection,
+) -> Result<std::collections::HashMap<i64, Option<i64>>, StorageError> {
+    let mut statement = connection.prepare("SELECT c.vocabulary_id, p.state FROM review_cards c LEFT JOIN review_progress p ON p.card_id = c.id")?;
+    let cards = statement.query_map([], |row| {
+        Ok((row.get::<_, i64>(0)?, row.get::<_, Option<String>>(1)?))
+    })?;
+    let mut due = std::collections::HashMap::new();
+    for card in cards {
+        let (id, state) = card?;
+        let state = state
+            .map(|value| serde_json::from_str::<Card>(&value))
+            .transpose()?;
+        let entry = due.entry(id).or_insert(None::<i64>);
+        if let Some(time) = state.and_then(|card| card.due_at) {
+            *entry = Some(entry.map_or(time, |old| old.min(time)));
+        }
+    }
+    Ok(due)
+}
+
 pub fn add_review(
     connection: &mut Connection,
     vocabulary_id: i64,
@@ -1122,6 +1161,13 @@ pub(crate) fn ensure_review_cards(
     transaction: &rusqlite::Transaction<'_>,
     vocabulary_id: i64,
 ) -> Result<(), StorageError> {
+    if !transaction.query_row(
+        "SELECT EXISTS(SELECT 1 FROM vocabulary WHERE id = ?1 AND record_kind = 'vocabulary')",
+        [vocabulary_id],
+        |row| row.get::<_, bool>(0),
+    )? {
+        return Err(StorageError::Invalid("Vocabulary record not found".into()));
+    }
     for kind in ["recognition", "listening"] {
         transaction.execute(
             "INSERT INTO review_cards (vocabulary_id, kind) VALUES (?1, ?2) ON CONFLICT (vocabulary_id, kind) DO NOTHING",
@@ -1157,5 +1203,62 @@ pub fn set_review_paused(
         )?;
     }
     tx.commit()?;
+    Ok(())
+}
+
+pub(crate) fn review_undo_blocked(connection: &Connection) -> Result<bool, StorageError> {
+    let value = connection
+        .query_row(
+            "SELECT value FROM app_metadata WHERE key = 'review-undo-blocked'",
+            [],
+            |row| row.get::<_, String>(0),
+        )
+        .optional()?;
+    match value.as_deref() {
+        None | Some("false") => Ok(false),
+        Some("true") => Ok(true),
+        _ => Err(StorageError::Invalid("Invalid review undo state".into())),
+    }
+}
+
+pub(crate) fn delete_grammar_learning(
+    tx: &rusqlite::Transaction<'_>,
+    id: i64,
+) -> Result<(), StorageError> {
+    let latest_record = tx.query_row("SELECT c.vocabulary_id FROM review_ratings r JOIN review_cards c ON c.id = r.card_id ORDER BY r.rowid DESC LIMIT 1", [], |row| row.get::<_, i64>(0)).optional()?;
+    if latest_record == Some(id) {
+        tx.execute("INSERT INTO app_metadata(key, value) VALUES ('review-undo-blocked', 'true') ON CONFLICT(key) DO UPDATE SET value = 'true'", [])?;
+    }
+    let cards = review_cards(tx, id)?
+        .into_iter()
+        .map(|card| card.id)
+        .collect::<std::collections::HashSet<_>>();
+    let ratings = tx.prepare("SELECT quota, before_state, request, learning_day, reviewed_at FROM review_ratings WHERE undo_operation IS NULL AND card_id IN (SELECT id FROM review_cards WHERE vocabulary_id = ?1)")?
+        .query_map([id], |row| Ok((row.get::<_, String>(0)?, row.get::<_, String>(1)?, row.get::<_, String>(2)?, row.get::<_, String>(3)?, row.get::<_, i64>(4)?)))?.collect::<Result<Vec<_>, _>>()?;
+    for (quota, before, request, day, at) in ratings {
+        let (new, review) = rating_usage(&quota, &before, &request, &day)?;
+        tx.execute("INSERT INTO retained_review_usage(learning_day, reviewed_at, new_cards, review_cards) VALUES (?1, ?2, ?3, ?4) ON CONFLICT(learning_day, reviewed_at) DO UPDATE SET new_cards = new_cards + excluded.new_cards, review_cards = review_cards + excluded.review_cards", params![day, at, new, review])?;
+    }
+    let snapshots = tx.prepare("SELECT operation, queue_before FROM review_ratings WHERE queue_before IS NOT NULL AND card_id NOT IN (SELECT id FROM review_cards WHERE vocabulary_id = ?1)")?
+        .query_map([id], |row| Ok((row.get::<_, String>(0)?, row.get::<_, String>(1)?)))?.collect::<Result<Vec<_>, _>>()?;
+    for (operation, value) in snapshots {
+        let mut queue: QueueSnapshot = serde_json::from_str(&value)?;
+        if let Some(order) = &mut queue.ordered_cards {
+            order.retain(|card| !cards.contains(card));
+            tx.execute(
+                "UPDATE review_ratings SET queue_before = ?1 WHERE operation = ?2",
+                params![serde_json::to_string(&queue)?, operation],
+            )?;
+        }
+    }
+    for sql in [
+        "DELETE FROM review_ratings WHERE card_id IN (SELECT id FROM review_cards WHERE vocabulary_id = ?1)",
+        "DELETE FROM review_progress WHERE card_id IN (SELECT id FROM review_cards WHERE vocabulary_id = ?1)",
+        "DELETE FROM review_queue_entries WHERE card_id IN (SELECT id FROM review_cards WHERE vocabulary_id = ?1)",
+        "DELETE FROM review_cards WHERE vocabulary_id = ?1",
+        "DELETE FROM review_paused WHERE vocabulary_id = ?1",
+    ] {
+        tx.execute(sql, [id])?;
+    }
     Ok(())
 }

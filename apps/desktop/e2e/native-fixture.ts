@@ -37,13 +37,15 @@ class NativeFixture {
   private readonly defaults: Record<string, unknown>;
 
   constructor(private readonly responses: Readonly<Record<string, readonly Reply[]>>, lookup: typeof dictionary) {
-    this.defaults = { runtime_status: { version: '0.1.0', schemaVersion: 18, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } },
+    this.defaults = { runtime_status: { version: '0.1.0', schemaVersion: 19, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } },
       startup_status: { state: 'ready', operation: null, restored: null, retained_copies: [], error: null },
       startup_retry: { state: 'ready', operation: null, restored: null, retained_copies: [], error: null },
       dictionary_lookup: lookup, dictionary_settings: [{ id: 'builtin', title: 'FreeDict fra-zho', content_hash: null, availability: 'available' },
         { id: 'builtin-fra-eng', title: 'FreeDict fra-eng 0.4.1', content_hash: null, availability: 'available' },
         { id: 'builtin-core', title: 'Lexique core pilot', content_hash: null, availability: 'available' }],
       vocabulary_find: null, vocabulary_list: [], vocabulary_sort: 'updated-desc', finish_close: null,
+      grammar_list: [], grammar_get: null, grammar_sort: 'updated-desc', grammar_delete: null,
+      learning_categories: [], category_delete: null,
       interface_preferences: { locale: 'zh', theme: 'white' },
       speech_preferences: { voice: 'female', wpm: 180 }, review_settings: { retention_percent: 90, new_limit: 20, review_limit: 50, new_cards_ignore_review_limit: false },
       review_queue: { queue: { cards: [], reason: null, available_at: null }, record: null, audio_pending: false, audio_error: null }, review_cards: [], speech_cached: null,
@@ -92,7 +94,7 @@ class NativeFixture {
     if (command === 'review_add_batch') return this.batch(args);
     this.settings(command, args);
     if (command === 'review_availability') return this.availability();
-    const value=command === 'vocabulary_sort' ? args?.sort ?? this.defaults[command] : this.defaults[command];
+    const value=['vocabulary_sort', 'grammar_sort'].includes(command) ? args?.sort ?? this.defaults[command] : this.defaults[command];
     return command === 'review_queue' ? this.queueResponse(value) : value;
   }
   private eventFailure(command: string, args?: Record<string, unknown>) {
@@ -125,6 +127,7 @@ class NativeFixture {
   private response(command: string, value: unknown, args?: Record<string, unknown>) {
     if (command === 'ocr_image') { this.emit('selection-input', value); return null; }
     if (command === 'vocabulary_save') this.defaults.vocabulary_find = (value as { record: unknown }).record;
+    if (command === 'grammar_save' || command === 'grammar_card_save') this.defaults.grammar_get = (value as { record: unknown }).record;
     if (command === 'review_add_batch') return this.batchResponse(value, args);
     return command === 'review_queue' ? this.queueResponse(value) : value;
   }

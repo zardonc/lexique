@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-grammar-sort"
+description = "Enables the grammar_sort command without any pre-configured scope."
+commands.allow = ["grammar_sort"]
+
+[[permission]]
+identifier = "deny-grammar-sort"
+description = "Denies the grammar_sort command without any pre-configured scope."
+commands.deny = ["grammar_sort"]

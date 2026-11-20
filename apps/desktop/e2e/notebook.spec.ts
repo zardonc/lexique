@@ -5,7 +5,7 @@ test('save and leave explains why an example without a meaning cannot be saved',
   const saved = { ...record, revision: 2, example_sense: 0, example_fr: 'Je vais à l’école.' };
   await nativeFixture(page, { vocabulary_list: [{ value: [record] }], vocabulary_save: [{ value: { outcome: 'updated', record: saved } }] });
   await page.goto('/');
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
   await page.getByLabel('法语例句').fill('Je vais à l’école.');
   await expect(page.getByRole('button', { name: '保存', exact: true }).locator('..').getByRole('alert')).toContainText('请为新增或修改的例句选择释义');
@@ -30,7 +30,7 @@ test('rating a card refreshes the review-time order in the open notebook', async
     review_rate: [{ value: { status: 'committed', result: { card: { phase: 'learning_first', memory: { stability: 1, difficulty: 5 }, last_review_at: 1700000000, due_at: 1700000060 }, elapsed_days: 0, step_seconds: 60, interval_days: null, model: { version: 'v', parameters: [] }, retention_percent: 90, timezone_database: 'v' } } }],
   });
   await page.goto('/');
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.getByLabel('排序方式').selectOption('review-due-asc');
   await page.getByRole('button', { name: /école/ }).click();
   await page.getByRole('button', { name: '查看识义卡' }).click();
@@ -46,7 +46,7 @@ test('example edits remain guarded and the saved pair appears on the recognition
     vocabulary_save: [{ error: 'disk full' }, { value: { outcome: 'updated', record: saved } }],
     review_cards: [{ value: [{ id: 1, kind: 'recognition' }] }] });
   await page.goto('/');
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
   await page.getByLabel('例句对应释义').selectOption('0');
   await page.getByLabel('法语例句').fill(saved.example_fr);
@@ -72,13 +72,13 @@ test('example edits remain guarded and the saved pair appears on the recognition
 const queuedBatch = { operation: 'fixture', cancelled: false, items: [{ vocabulary_id: 1, created_cards: 2, error: null, audio_state: 'queued', audio_error: null }] };
 const failedBatch = { ...queuedBatch, items: [{ ...queuedBatch.items[0], audio_state: 'failed', audio_error: 'voice unavailable' }] };
 
-test('batch selection clears on sorting and search and reports committed partial failures', async ({ page }) => {
+test('batch selection survives sorting, clears on search and reports committed partial failures', async ({ page }) => {
   const second = { ...record, id: 2, headword: 'bonjour' };
   const result = { ...queuedBatch, items: [...queuedBatch.items, { vocabulary_id: 2, created_cards: 0, error: 'disk full', audio_state: null, audio_error: null }] };
   await nativeFixture(page, { vocabulary_list: [{ value: [record, second] }], review_add_batch: [{ value: result }] });
-  await page.goto('/'); await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.goto('/'); await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.getByLabel('选择本页', { exact: true }).check(); await page.getByLabel('排序方式').selectOption('headword-asc');
-  await expect(page.getByLabel('选择 école')).not.toBeChecked();
+  await expect(page.getByLabel('选择 école')).toBeChecked();
   await page.getByLabel('选择本页', { exact: true }).check(); await page.getByRole('button', { name: '批量加入复习' }).click();
   await expect(page.getByRole('region', { name: '批量任务', exact: true })).toContainText('失败: 1');
   await expect(page.getByText('#2: disk full')).toBeVisible();
@@ -98,7 +98,7 @@ test('automatic enrollment reports a saved word without waiting for audio', asyn
 test('save and leave completes while enrolled audio is still pending', async ({ page }) => {
   await nativeFixture(page, { vocabulary_save: [{ value: { outcome: 'created', record } }],
     review_cards: [{ value: [{ id: 1, kind: 'recognition' }, { id: 2, kind: 'listening' }] }], speech_cached: [{ value: null }] });
-  await collect(page); await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await collect(page); await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.getByRole('button', { name: '保存后离开' }).click();
   await expect(page.getByRole('dialog', { name: '有尚未保存的修改' })).toBeHidden();
   expect(await page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'speech_generate'))).toEqual([]);
@@ -108,7 +108,7 @@ test('batch enrollment distinguishes committed cards from failed audio and retri
   const ready = { ...failedBatch, items: [{ ...failedBatch.items[0], audio_state: 'ready', audio_error: null }] };
   await nativeFixture(page, { vocabulary_list: [{ value: [record] }], review_add_batch: [{ value: failedBatch }],
     review_batch_status: [{ value: null }, { value: ready }], speech_generate: [{ value: { bytes: [79, 103, 103, 83], voice: 'female' } }] });
-  await page.goto('/'); await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.goto('/'); await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.getByLabel('选择 école').check(); await page.getByRole('button', { name: '批量加入复习' }).click();
   await expect(page.getByText(/已创建卡片: 2/)).toBeVisible(); await expect(page.getByText('#1: voice unavailable')).toBeVisible();
   await page.getByRole('button', { name: '重试 #1', exact: true }).click();
@@ -118,7 +118,7 @@ test('batch enrollment distinguishes committed cards from failed audio and retri
 
 test('batch audio retry failures keep the existing cards and failure details', async ({ page }) => {
   await nativeFixture(page, { vocabulary_list: [{ value: [record] }], review_add_batch: [{ value: failedBatch }], speech_generate: [{ error: 'disk denied' }] });
-  await page.goto('/'); await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.goto('/'); await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.getByLabel('选择 école').check(); await page.getByRole('button', { name: '批量加入复习' }).click();
   await page.getByRole('button', { name: '重试 #1', exact: true }).click();
   await expect(page.getByRole('alert')).toContainText('disk denied'); await expect(page.getByText(/已创建卡片: 2/)).toBeVisible();
@@ -126,7 +126,7 @@ test('batch audio retry failures keep the existing cards and failure details', a
 
 test('submitted batch remains visible after navigating during the commit', async ({ page }) => {
   await nativeFixture(page, { vocabulary_list: [{ value: [record] }], review_add_batch: [{ value: queuedBatch, gate: 'save-batch' }] });
-  await page.goto('/'); await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.goto('/'); await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.getByLabel('选择 école').check(); await page.getByRole('button', { name: '批量加入复习' }).click();
   await expect.poll(() => page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'review_add_batch').length)).toBe(1);
   await page.getByRole('button', { name: '词典', exact: true }).click();
@@ -140,7 +140,7 @@ test('review management exposes persisted auto enrollment and word pause', async
   await page.getByRole('button', { name: '设置', exact: true }).click();
   await page.getByLabel('今后收藏自动加入复习').check();
   await expect(page.getByLabel('今后收藏自动加入复习')).toBeChecked();
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
   await page.getByRole('button', { name: '暂停复习', exact: true }).click();
   await expect(page.getByText('复习已暂停', { exact: true })).toBeVisible();
@@ -155,7 +155,7 @@ test('retrying audio for a paused word does not resume it', async ({ page }) => 
   await nativeFixture(page, { vocabulary_list: [{ value: [record] }], review_cards: [{ value: cards }],
     review_pause: [{ value: true }], review_add: [{ value: cards }], speech_cached: [{ value: null }], speech_generate: [{ value: { bytes: [1], voice: 'female' } }] });
   await page.goto('/');
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
   await expect(page.getByText('复习已暂停', { exact: true })).toBeVisible();
   await page.getByRole('button', { name: '加入复习', exact: true }).click();
@@ -167,7 +167,7 @@ test('pause and resume reload card rating eligibility', async ({ page }) => {
   await nativeFixture(page, { vocabulary_list: [{ value: [record] }],
     review_cards: [{ value: [{ id: 1, kind: 'recognition' }] }] });
   await page.goto('/');
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
   await expect(page.getByRole('button', { name: '暂停复习', exact: true })).toBeVisible();
   await page.getByRole('button', { name: '查看识义卡' }).click();
@@ -187,7 +187,7 @@ test('pause and resume reload card rating eligibility', async ({ page }) => {
 
 test('browser notebook clearly reports unavailable native persistence', async ({ page }) => {
   await page.goto('/');
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await expect(page.getByText('浏览器预览无法读写生词本，请使用桌面应用。')).toBeVisible();
   await expect(page.getByRole('button', { name: '保存', exact: true })).toHaveCount(0);
 });
@@ -220,7 +220,7 @@ test('empty notes save, existing records can be cleared, and resource failures p
     vocabulary_save: [{ value: { outcome: 'updated', record: { ...record, revision: 2 } } }],
     dictionary_lookup: [{ error: { code: 'missing', message: 'resource removed' } }],
   });
-  await page.goto('/'); await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.goto('/'); await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
   await expect(page.getByLabel('独立笔记', { exact: true })).toHaveValue('old notes');
   await expect(page.locator('.dictionary-original')).toContainText('词典资源不存在');
@@ -254,7 +254,7 @@ test('stale updates keep input and retain conflict checks until current content 
 test('navigation and native close callbacks offer save, discard or keep editing', async ({ page }) => {
   await nativeFixture(page, { vocabulary_save: [{ error: 'database unavailable' }] });
   await collect(page); await page.getByLabel('独立笔记', { exact: true }).fill('keep me');
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await expect(page.getByRole('dialog')).toBeVisible();
   await page.getByRole('button', { name: '继续编辑' }).click();
   await expect(page.getByLabel('独立笔记', { exact: true })).toHaveValue('keep me');
@@ -283,7 +283,7 @@ test('Unicode limits preserve overlong input and invalid IPC responses remain vi
 test('notebook restores sort and sends literal searches while read failures never appear empty', async ({ page }) => {
   await nativeFixture(page, { vocabulary_sort: [{ value: 'headword-desc' }],
     vocabulary_list: [{ value: [record] }, { error: 'read failed' }, { value: [record] }] });
-  await page.goto('/'); await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.goto('/'); await page.getByRole('button', { name: '笔记', exact: true }).click();
   await expect(page.getByLabel('排序方式')).toHaveValue('headword-desc');
   await page.getByRole('searchbox', { name: '搜索词头、摘要或笔记' }).fill('ÉCOLE%_');
   await expect(page.getByRole('alert')).toContainText('read failed');
@@ -299,7 +299,7 @@ test('notebook restores sort and sends literal searches while read failures neve
 test('an uncertain update remains guarded when input returns to the originally loaded text', async ({ page }) => {
   await nativeFixture(page, { vocabulary_list: [{ value: [record] }],
     vocabulary_save: [{ error: 'response lost after commit' }] });
-  await page.goto('/'); await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.goto('/'); await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
   await page.getByLabel('独立笔记', { exact: true }).fill('committed but unconfirmed');
   await page.getByRole('button', { name: '保存', exact: true }).click();
@@ -312,7 +312,7 @@ test('an uncertain update remains guarded when input returns to the originally l
 
 test('all sort directions persist through the adapter and notebook works in three languages on mobile', async ({ page }) => {
   await nativeFixture(page, { vocabulary_list: [{ value: [record] }] });
-  await page.goto('/'); await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.goto('/'); await page.getByRole('button', { name: '笔记', exact: true }).click();
   await expect(page.getByLabel('排序方式')).toHaveValue('updated-desc');
   for (const sort of ['headword-asc', 'headword-desc', 'created-asc', 'created-desc', 'updated-asc', 'updated-desc', 'review-due-asc']) {
     await page.getByLabel('排序方式').selectOption(sort);
@@ -335,7 +335,7 @@ test('new examples require a meaning and a conflict shows the saved meaning', as
   const current = { ...record, example_sense: 1, revision: 2 };
   await nativeFixture(page, { vocabulary_list: [{ value: [record] }], vocabulary_save: [{ value: { outcome: 'conflict', record: current } }] });
   await page.goto('/');
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
   await page.getByLabel('法语例句').fill('Une phrase.');
   await expect(page.getByRole('button', { name: '保存', exact: true })).toBeDisabled();

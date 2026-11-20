@@ -6,6 +6,7 @@ fn saved_word(connection: &mut Connection, headword: &str) -> i64 {
     save(
         connection,
         &SaveRequest {
+            category_ids: vec![],
             operation: format!("save-{}", headword.len()),
             headword: headword.into(),
             notes: "historical notes".into(),
@@ -109,7 +110,7 @@ fn empty_snapshot_contains_the_complete_portable_contract() {
         .unwrap();
     let snapshot = export_learning_snapshot(&mut connection, 1_800_000_000).unwrap();
     let value = serde_json::to_value(snapshot).unwrap();
-    assert_eq!(value["snapshot_version"], 2);
+    assert_eq!(value["snapshot_version"], 3);
     for collection in [
         "records",
         "save_operations",
@@ -128,6 +129,11 @@ fn empty_snapshot_contains_the_complete_portable_contract() {
         "audio_operations",
         "audio_publications",
         "audio_repairs",
+        "grammar_records",
+        "grammar_save_operations",
+        "deleted_grammar_operations",
+        "categories",
+        "retained_review_usage",
     ] {
         assert_eq!(value[collection], serde_json::json!([]), "{collection}");
     }
@@ -144,6 +150,12 @@ fn empty_snapshot_contains_the_complete_portable_contract() {
         serde_json::json!({"voice": "female", "wpm": 180})
     );
     assert_eq!(value["preferences"]["auto_enroll"], false);
+    assert_eq!(value["preferences"]["grammar_sort"], "updated-desc");
+    assert_eq!(value["preferences"]["undo_blocked"], false);
+    assert_eq!(
+        value["identities"],
+        serde_json::json!({"records": 0, "cards": 0, "categories": 0})
+    );
     assert_eq!(value["dictionary_catalog"]["next_id"], 1);
     assert_eq!(
         value["dictionary_catalog"]["entries"]
@@ -152,7 +164,7 @@ fn empty_snapshot_contains_the_complete_portable_contract() {
             .len(),
         3
     );
-    assert_eq!(value.as_object().unwrap().len(), 21);
+    assert_eq!(value.as_object().unwrap().len(), 27);
     assert!(!value.to_string().contains("secret-device-path"));
 }
 
@@ -167,6 +179,7 @@ fn old_save_requests_and_unknown_example_sources_keep_their_original_meaning() {
     let saved = save(
         &mut connection,
         &SaveRequest {
+            category_ids: vec![],
             operation: "legacy-save".into(),
             headword: "école".into(),
             notes: "Mon\n筆記".into(),

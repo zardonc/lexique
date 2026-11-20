@@ -10,6 +10,7 @@ const headword = z.string().refine((value) => value.trim().length > 0 && charact
   }), 'Headword must be 1–200 characters on one line');
 const notes = z.string().refine((value) => characterCount(value) <= 20_000, 'Notes exceed 20,000 Unicode characters');
 const positiveId = z.number().int().positive().max(Number.MAX_SAFE_INTEGER);
+export const categoryIdsSchema = z.array(positiveId).readonly().refine((ids) => new Set(ids).size === ids.length, 'Duplicate category identity');
 const digestEntry = z.object({
   pronunciations: z.array(z.string()).readonly(), grammar: z.array(z.string()).readonly(),
   translation: z.string().nullable(),
@@ -29,10 +30,12 @@ const moreExamples = z.array(z.object({ fr: notes, zh: notes, source: exampleSou
 export const recordSchema = z.object({
   id: positiveId, headword, reference, digest: z.array(digestEntry).min(1).readonly(), notes, example_fr: notes, example_zh: notes, example_source: exampleSource, example_sense: z.number().int().nonnegative().safe().nullable(), more_examples: moreExamples,
   revision: positiveId, created_at: positiveId, updated_at: positiveId,
+  category_ids: categoryIdsSchema.optional(),
 }).strict().readonly();
 export const saveRequestSchema = z.object({
   operation: z.string().min(1).max(128).regex(/^[a-zA-Z0-9-]+$/), headword, notes, example_fr: notes, example_zh: notes, example_source: exampleSource, example_sense: z.number().int().nonnegative().safe().nullable(), more_examples: moreExamples,
   id: positiveId.nullable(), revision: positiveId.nullable(),
+  category_ids: categoryIdsSchema.optional(),
 }).strict().readonly().refine((value) => (value.id === null) === (value.revision === null));
 export const saveResultSchema = z.object({
   outcome: z.enum(['created', 'existing', 'updated', 'replayed', 'conflict']), record: recordSchema,

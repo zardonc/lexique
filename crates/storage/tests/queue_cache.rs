@@ -354,7 +354,11 @@ fn a_queue_snapshot_keeps_admission_records_and_revision_coherent_during_repair_
 
 #[test]
 fn queue_snapshots_finish_under_continuous_audio_revision_churn() {
-    use std::sync::mpsc;
+    use std::sync::{
+        Arc,
+        atomic::{AtomicBool, Ordering},
+        mpsc,
+    };
     let path = std::env::temp_dir().join(format!(
         "lexique-churn-{}-{}.sqlite3",
         std::process::id(),
@@ -410,8 +414,13 @@ fn queue_snapshots_finish_under_continuous_audio_revision_churn() {
         .unwrap()
         .transaction;
     let (committed, observed) = mpsc::sync_channel(0);
+    let stop = Arc::new(AtomicBool::new(false));
+    let worker_stop = Arc::clone(&stop);
     let worker = std::thread::spawn(move || {
-        for index in 0..1000 {
+        for index in 0.. {
+            if worker_stop.load(Ordering::Relaxed) {
+                break;
+            }
             writer.execute("UPDATE speech_versions SET verification=CASE WHEN verification='missing' THEN 'invalid' ELSE 'missing' END", []).unwrap();
             if index == 0 {
                 committed.send(queue_revision(&writer).unwrap()).unwrap();
@@ -436,6 +445,7 @@ fn queue_snapshots_finish_under_continuous_audio_revision_churn() {
         assert_eq!(snapshot.demand_candidates.len(), 1000);
         snapshot.transaction.commit().unwrap();
     }
+    stop.store(true, Ordering::Relaxed);
     worker.join().unwrap();
     drop(reader);
     std::fs::remove_file(path).unwrap();

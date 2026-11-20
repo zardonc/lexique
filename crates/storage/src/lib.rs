@@ -5,6 +5,10 @@ use rusqlite::Connection;
 
 mod vocabulary;
 pub use vocabulary::*;
+mod grammar;
+pub use grammar::*;
+mod categories;
+pub use categories::*;
 mod speech;
 pub use speech::*;
 mod conjugation;
@@ -45,6 +49,9 @@ const LEARNING_ROWS: &str = "SELECT 1 FROM vocabulary UNION ALL SELECT 1 FROM sa
      UNION ALL SELECT 1 FROM word_audio_selections UNION ALL SELECT 1 FROM word_audio_imports
      UNION ALL SELECT 1 FROM legacy_speech UNION ALL SELECT 1 FROM word_audio_operations
      UNION ALL SELECT 1 FROM word_audio_publications UNION ALL SELECT 1 FROM word_audio_repairs
+     UNION ALL SELECT 1 FROM grammar_cards UNION ALL SELECT 1 FROM learning_categories
+     UNION ALL SELECT 1 FROM record_categories UNION ALL SELECT 1 FROM retained_review_usage
+     UNION ALL SELECT 1 FROM deleted_grammar_operations
      UNION ALL SELECT 1 FROM app_metadata LIMIT 1";
 
 /// Checks storage before learning workers start; the schema version alone cannot prove health.
@@ -198,6 +205,9 @@ fn migrate(connection: &Connection, version: u32) -> Result<u32, StorageError> {
     }
     if version < 18 {
         transaction.execute_batch(include_str!("../migrations/0018_example_sources.sql"))?;
+    }
+    if version < 19 {
+        transaction.execute_batch(include_str!("../migrations/0019_grammar_categories.sql"))?;
     }
     if transaction
         .prepare("PRAGMA foreign_key_check")?

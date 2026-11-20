@@ -108,7 +108,7 @@ pub fn validate_learning_snapshot(
     captured_at: i64,
 ) -> Result<(), StorageError> {
     require(
-        matches!(snapshot.snapshot_version, 1 | 2),
+        matches!(snapshot.snapshot_version, 1..=3),
         "unsupported snapshot version",
     )?;
     timestamp(captured_at)?;
@@ -135,6 +135,7 @@ pub fn validate_learning_snapshot(
             more_examples: record.more_examples.clone(),
             id: Some(record.id),
             revision: Some(record.revision),
+            category_ids: record.category_ids.clone(),
         })?;
         reference(&record.reference)?;
         if record.reference.dictionary_id.as_deref()
@@ -142,7 +143,7 @@ pub fn validate_learning_snapshot(
             || record.digest.iter().any(|entry| entry.core.is_some())
         {
             require(
-                snapshot.snapshot_version == 2,
+                snapshot.snapshot_version >= 2,
                 "core senses require snapshot v2",
             )?;
         }
@@ -160,6 +161,7 @@ pub fn validate_learning_snapshot(
             reference(source)?;
         }
     }
+    let records = validate_notes(snapshot, &words)?;
     let mut saves = HashSet::new();
     for saved in &snapshot.save_operations {
         validate(&saved.request)?;
@@ -199,13 +201,28 @@ pub fn validate_learning_snapshot(
             reference(source)?;
         }
     }
+    for saved in &snapshot.grammar_save_operations {
+        require(saves.insert(&saved.operation), "duplicate save operation")?;
+    }
+    for operation in &snapshot.deleted_grammar_operations {
+        crate::grammar::validate_operation(operation)?;
+        require(saves.insert(operation), "duplicate save operation")?;
+    }
     let mut cards = HashSet::new();
     let mut kinds = HashSet::new();
+    let grammar_cards = snapshot
+        .grammar_records
+        .iter()
+        .filter_map(|record| record.card.as_ref().map(|card| (card.id, record.id)))
+        .collect::<HashMap<_, _>>();
     for card in &snapshot.cards {
         integer(card.id, 1)?;
-        known(card.vocabulary_id, &words)?;
+        known(card.vocabulary_id, &records)?;
         require(
-            matches!(card.kind.as_str(), "recognition" | "listening")
+            ((matches!(card.kind.as_str(), "recognition" | "listening")
+                && words.contains(&card.vocabulary_id))
+                || (card.kind == "grammar"
+                    && grammar_cards.get(&card.id) == Some(&card.vocabulary_id)))
                 && cards.insert(card.id)
                 && kinds.insert((card.vocabulary_id, &card.kind)),
             "duplicate or invalid card",
@@ -234,7 +251,7 @@ pub fn validate_learning_snapshot(
     }
     let mut paused = HashSet::new();
     for id in &snapshot.paused_vocabulary_ids {
-        known(*id, &words)?;
+        known(*id, &records)?;
         require(paused.insert(id), "duplicate pause")?;
     }
     validate_speech(snapshot, &words, captured_at)?;
@@ -252,7 +269,166 @@ pub fn validate_learning_snapshot(
         "invalid speech preference",
     )?;
     validate_sort(&snapshot.preferences.vocabulary_sort)?;
+    validate_sort(&snapshot.preferences.grammar_sort)?;
     Ok(())
+}
+
+fn validate_notes(
+    snapshot: &LearningSnapshot,
+    words: &HashSet<i64>,
+) -> Result<HashSet<i64>, StorageError> {
+    if snapshot.snapshot_version < 3 {
+        require(
+            snapshot.grammar_records.is_empty()
+                && snapshot.grammar_save_operations.is_empty()
+                && snapshot.deleted_grammar_operations.is_empty()
+                && snapshot.categories.is_empty()
+                && snapshot.retained_review_usage.is_empty()
+                && snapshot
+                    .records
+                    .iter()
+                    .all(|record| record.category_ids.is_empty())
+                && !snapshot.preferences.undo_blocked,
+            "grammar and classification require snapshot v3",
+        )?;
+    }
+    let mut categories = HashSet::new();
+    let mut names = HashSet::new();
+    for category in &snapshot.categories {
+        integer(category.id, 1)?;
+        crate::grammar::validate_title(&category.name)?;
+        require(
+            category.name.trim() == category.name
+                && categories.insert(category.id)
+                && names.insert(crate::categories::category_name_key(&category.name)),
+            "duplicate or invalid category",
+        )?;
+    }
+    let mut records = words.clone();
+    let mut grammars = HashSet::new();
+    let cards = snapshot
+        .cards
+        .iter()
+        .map(|card| (card.id, card))
+        .collect::<HashMap<_, _>>();
+    for record in &snapshot.grammar_records {
+        integer(record.id, 1)?;
+        integer(record.revision, 1)?;
+        integer(record.created_at, 0)?;
+        integer(record.updated_at, 0)?;
+        crate::grammar::validate_grammar_request(&GrammarSaveRequest {
+            operation: "snapshot-grammar-record".into(),
+            id: Some(record.id),
+            revision: Some(record.revision),
+            title: record.title.clone(),
+            body: record.body.clone(),
+            category_ids: record.category_ids.clone(),
+        })?;
+        require(
+            record.title.trim() == record.title
+                && records.insert(record.id)
+                && grammars.insert(record.id),
+            "duplicate or invalid grammar identity",
+        )?;
+        if let Some(card) = &record.card {
+            crate::grammar::validate_grammar_card_request(&GrammarCardRequest {
+                operation: "snapshot-grammar-card".into(),
+                id: record.id,
+                revision: record.revision,
+                question: card.question.clone(),
+                answer: card.answer.clone(),
+            })?;
+            integer(card.id, 1)?;
+            require(
+                cards.get(&card.id).is_some_and(|saved| {
+                    saved.kind == "grammar" && saved.vocabulary_id == record.id
+                }),
+                "grammar question and answer have no matching card",
+            )?;
+        }
+    }
+    for ids in snapshot
+        .records
+        .iter()
+        .map(|record| &record.category_ids)
+        .chain(
+            snapshot
+                .grammar_records
+                .iter()
+                .map(|record| &record.category_ids),
+        )
+    {
+        crate::categories::validate_category_ids(ids)?;
+        for id in ids {
+            known(*id, &categories)?;
+        }
+    }
+    let mut operations = HashSet::new();
+    for saved in &snapshot.grammar_save_operations {
+        known(saved.record_id, &grammars)?;
+        require(
+            operations.insert(&saved.operation),
+            "duplicate grammar save operation",
+        )?;
+        let (operation, id, outcome) = match &saved.request {
+            SnapshotGrammarRequest::Note(request) => {
+                crate::grammar::validate_grammar_request(request)?;
+                (
+                    &request.operation,
+                    request.id,
+                    matches!(saved.outcome.as_str(), "created" | "updated"),
+                )
+            }
+            SnapshotGrammarRequest::Card(request) => {
+                crate::grammar::validate_grammar_card_request(request)?;
+                (
+                    &request.operation,
+                    Some(request.id),
+                    saved.outcome == "updated",
+                )
+            }
+        };
+        require(
+            saved.operation == *operation && id.is_none_or(|id| id == saved.record_id) && outcome,
+            "inconsistent grammar save operation",
+        )?;
+    }
+    let mut usage = HashSet::new();
+    for retained in &snapshot.retained_review_usage {
+        validate_learning_day(&retained.learning_day).map_err(StorageError::Invalid)?;
+        timestamp(retained.reviewed_at)?;
+        require(
+            usage.insert((&retained.learning_day, retained.reviewed_at)),
+            "duplicate retained quota usage",
+        )?;
+    }
+    require(
+        snapshot.snapshot_version < 3 || snapshot.identities.is_some(),
+        "missing learning identity watermarks",
+    )?;
+    if let Some(identities) = snapshot.identities {
+        for (value, maximum) in [
+            (
+                identities.records,
+                records.iter().copied().max().unwrap_or(0),
+            ),
+            (
+                identities.cards,
+                snapshot.cards.iter().map(|card| card.id).max().unwrap_or(0),
+            ),
+            (
+                identities.categories,
+                categories.iter().copied().max().unwrap_or(0),
+            ),
+        ] {
+            integer(value, 0)?;
+            require(
+                value >= maximum,
+                "learning identity watermark precedes a live object",
+            )?;
+        }
+    }
+    Ok(records)
 }
 
 fn queue_context(day: &str, timezone: &str) -> Result<(), StorageError> {

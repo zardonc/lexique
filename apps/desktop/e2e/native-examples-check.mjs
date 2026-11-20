@@ -55,7 +55,7 @@ try {
     return { record, cards, progress: await Promise.all(cards.map((card) => invoke('review_progress', { cardId: card.id }))) };
   });
   assert.ok(initial.cards.length > 0, 'Fixture must contain review cards');
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').first().click();
   await page.getByLabel('例句对应释义').selectOption('0');
   await page.getByLabel('法语例句').fill('Je lis un livre.');

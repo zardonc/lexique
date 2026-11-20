@@ -1,0 +1,42 @@
+[
+  {
+    "frozen_row": 859,
+    "headword": "l",
+    "lexique_cgram": "ART:def",
+    "subtitle_lemma_per_million": "112.62",
+    "subtitle_pos_per_million": "78.26",
+    "senses": [],
+    "status": "approved_annotation_exception",
+    "admitted_fields": 0,
+    "missing_fields": 4,
+    "evidence": [
+      "owner-approval.json",
+      "literal-l-evidence.json"
+    ],
+    "approved_by": "project_owner",
+    "approved_on": "2026-11-18",
+    "approval_timezone": "America/Vancouver",
+    "scope_effect": "Exempt from selected-sense/four-field requirement; retains exact frozen identity and four missing fields, counted separately from content.",
+    "spelling_relationship": "No l-to-l' alias. Existing apostrophized records remain exact."
+  },
+  {
+    "frozen_row": 860,
+    "headword": "l",
+    "lexique_cgram": "PRO:per",
+    "subtitle_lemma_per_million": "112.62",
+    "subtitle_pos_per_million": "26.37",
+    "senses": [],
+    "status": "approved_annotation_exception",
+    "admitted_fields": 0,
+    "missing_fields": 4,
+    "evidence": [
+      "owner-approval.json",
+      "literal-l-evidence.json"
+    ],
+    "approved_by": "project_owner",
+    "approved_on": "2026-11-18",
+    "approval_timezone": "America/Vancouver",
+    "scope_effect": "Exempt from selected-sense/four-field requirement; retains exact frozen identity and four missing fields, counted separately from content.",
+    "spelling_relationship": "No l-to-l' alias. Existing apostrophized records remain exact."
+  }
+]

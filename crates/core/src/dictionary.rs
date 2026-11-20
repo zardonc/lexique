@@ -77,11 +77,13 @@ impl CoreSense {
                     | "CON"
                     | "ADJ:num"
                     | "ADJ:pos"
+                    | "ADJ:int"
                     | "ART:ind"
                     | "PRO:ind"
                     | "PRO:int"
                     | "PRO:rel"
                     | "PRO:dem"
+                    | "PRO:pos"
                     | "ADJ:ind"
                     | "ADJ:dem"
             )

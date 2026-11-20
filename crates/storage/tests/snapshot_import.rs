@@ -8,6 +8,7 @@ fn saved_word(connection: &mut Connection, operation: &str, headword: &str) -> i
     let id = save(
         connection,
         &SaveRequest {
+            category_ids: vec![],
             operation: operation.into(),
             headword: headword.into(),
             notes: "  Une note\navec son espacement.  ".into(),
@@ -104,7 +105,7 @@ fn imported_record_and_preferences_are_readable_and_saved_operations_remain_idem
         interface_preferences(&target).unwrap().theme,
         InterfaceTheme::Dark
     ));
-    assert_eq!(initialize(&target).unwrap(), 18);
+    assert_eq!(initialize(&target).unwrap(), DATABASE_SCHEMA_VERSION);
     assert!(
         !target
             .prepare("SELECT 1 FROM app_metadata WHERE key='private-service'")
@@ -1086,7 +1087,7 @@ fn snapshot_import_rolls_back_partial_writes_when_sqlite_runs_out_of_pages() {
             .exists([])
             .unwrap()
     );
-    assert_eq!(initialize(&target).unwrap(), 18);
+    assert_eq!(initialize(&target).unwrap(), DATABASE_SCHEMA_VERSION);
     assert!(
         !target
             .prepare("PRAGMA foreign_key_check")
@@ -1141,7 +1142,7 @@ fn snapshot_import_rejects_populated_or_incompatible_destinations_without_writes
         "synthetic-value"
     );
 
-    for schema in [0_u32, 17, 19, 99] {
+    for schema in [0_u32, 17, 18, 99] {
         let mut incompatible = Connection::open_in_memory().unwrap();
         if schema != 0 {
             initialize(&incompatible).unwrap();

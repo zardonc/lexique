@@ -11,6 +11,8 @@ import { ReviewCards } from './review-cards';
 import { ExampleSpeech } from './example-speech';
 import { SpeechButton } from './speech-button';
 import { CoreSenseContent, digestLabel } from './core-sense';
+import { CategoryPicker } from './learning-categories';
+import type { LearningCategories } from './learning-categories';
 
 export function VocabularySummary({ snapshot, text, frequency }: { readonly snapshot: VocabularySnapshot; readonly text: NotebookText; readonly frequency?: ReactNode }) {
   return <section className="vocabulary-summary" aria-label={text.summary}>
@@ -108,8 +110,9 @@ function ExcerptEditor({ notebook, text, runtime }: { readonly notebook: Noteboo
     </fieldset>);
 }
 
-export function VocabularyEditor({ notebook, text, viewExisting, runtime, onReviewChanged }: {
+export function VocabularyEditor({ notebook, text, viewExisting, runtime, onReviewChanged, categories }: {
   readonly notebook: Notebook; readonly text: NotebookText; readonly viewExisting: () => void; readonly runtime: RuntimeAdapter; readonly onReviewChanged: () => void;
+  readonly categories: LearningCategories;
 }) {
   const textarea = useRef<HTMLTextAreaElement>(null);
   const headword = notebook.editor?.snapshot.headword;
@@ -127,6 +130,7 @@ export function VocabularyEditor({ notebook, text, viewExisting, runtime, onRevi
       aria-invalid={characterCount(notes) > 20_000} aria-describedby="note-count" onChange={(event) => notebook.edit(event.target.value)} />
     <p id="note-count">{characterCount(notes).toLocaleString()} / 20,000 {text.count}</p>
     {characterCount(notes) > 20_000 && <p role="alert">{text.limit}</p>}
+    <CategoryPicker state={categories} selected={notebook.editor.category_ids} disabled={notebook.busy} onChange={notebook.editCategories} text={text.notesText} />
     <ExcerptEditor notebook={notebook} text={text} runtime={runtime} />
     <ExampleEditor key={snapshot.headword} notebook={notebook} text={text} runtime={runtime} />
     {notebook.error && <p role="alert">{text.saveError}: {notebook.error}</p>}

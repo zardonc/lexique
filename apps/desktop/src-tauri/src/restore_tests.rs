@@ -174,6 +174,7 @@ pub(super) fn save(connection: &mut Connection, notes: &str) -> storage::SaveRes
     storage::save(
         connection,
         &storage::SaveRequest {
+            category_ids: vec![],
             operation: "save-A".into(),
             headword: "école".into(),
             notes: notes.into(),
@@ -247,6 +248,18 @@ fn preparation_preserves_b_and_ordinary_startup_installs_verified_a() {
             [original.id],
         )
         .unwrap();
+    let deleted_request = storage::GrammarSaveRequest {
+        operation: "deleted-after-backup".into(),
+        id: None,
+        revision: None,
+        title: "Note effacée".into(),
+        body: "Un contenu supprimé".into(),
+        category_ids: vec![],
+    };
+    let deleted = storage::save_grammar(&connection, &deleted_request, 100)
+        .unwrap()
+        .record;
+    storage::delete_grammar(&connection, deleted.id, deleted.revision).unwrap();
     connection.close().unwrap();
 
     let prepared = crate::restore::prepare_normal(
@@ -276,6 +289,14 @@ fn preparation_preserves_b_and_ordinary_startup_installs_verified_a() {
     assert_eq!(
         serde_json::to_value(restored).unwrap(),
         serde_json::to_value(&original).unwrap()
+    );
+    assert!(
+        storage::save_grammar(
+            &Connection::open(&fixture.database.0).unwrap(),
+            &deleted_request,
+            101,
+        )
+        .is_err()
     );
 
     let before = prepared

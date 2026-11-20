@@ -44,3 +44,8 @@ and worker readiness outside the measured operation. For contention tests,
 require observable lock contention for every counted sample. Enforce the
 specified timing limits on every executed attempt, including attempts without
 contention.
+
+For stress tests, tie background workers to the observation window: keep the
+required workload active through the assertions, then signal completion and
+join the workers. Review teardown cost separately from the measured operation
+and include it in the backend execution budget.

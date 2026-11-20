@@ -507,6 +507,14 @@ pub(crate) fn prepare_normal(
     observe("preparing")?;
     let old = crate::vocabulary::open(database)?;
     let mut target = crate::vocabulary::open(&DatabasePath(stage.database().to_owned()))?;
+    let identities =
+        lexique_storage::learning_identities(&old).map_err(|error| error.to_string())?;
+    lexique_storage::preserve_learning_identities(&target, identities)
+        .map_err(|error| error.to_string())?;
+    let deleted_operations =
+        lexique_storage::deleted_grammar_operations(&old).map_err(|error| error.to_string())?;
+    lexique_storage::preserve_deleted_grammar_operations(&target, &deleted_operations)
+        .map_err(|error| error.to_string())?;
     let catalog =
         lexique_storage::read_dictionary_catalog(&target).map_err(|error| error.to_string())?;
     crate::dictionaries::restore_catalog(&mut target, database, &catalog)

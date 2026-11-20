@@ -144,7 +144,7 @@ try {
   await expect.poll(() => page.context().pages().filter((candidate) => new URL(candidate.url()).searchParams.has('capture')).length).toBe(0);
   await expect(page.getByLabel('法语原文', { exact: true })).toHaveValue('');
   results.push({ check: 'Escape closes both capture windows and cancels the request', passed: true });
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list li').filter({ hasText: 'école' }).getByRole('button').click();
   await page.getByLabel('独立笔记', { exact: true }).fill('Draft to preserve during capture close');
   shortcut(80); await overlays();
