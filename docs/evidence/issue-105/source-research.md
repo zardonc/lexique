@@ -42,10 +42,7 @@ selected sentence.
 Actual `Import:DAF8`, `R:DAF8`, `R:Littré` and other bibliographic markers are
 preserved with their source locations. Académie française, eighth edition
 (1932–1935), and Émile Littré are credited as original bibliographic layers
-where the source actually identifies them. A marker does not establish whether
-a selected definition is original imported prose, subsequent Wiki wording or a
-mixture. That selected-original-text boundary and its rights remain pending
-separate review. No author check promotes page-wide licensing into acceptance.
+where the source actually identifies them. The independent [review](independent-review.md) and [rights decision](rights.json) resolve the selected-original-text boundary for the 184 accepted fields, separately from the original candidate provenance checks. A marker does not identify every modern definition author.
 
 Raw quoted examples, full article bodies and Robert/CNRTL page bodies remain in
 ignored captures. Tracked context preserves bibliographic markers and selected
@@ -107,6 +104,10 @@ The bare `qu` noun has letter-name IPA `/ky/`. Supporting revision 21403352 is
 an actual redirect from `qu'` to distinct `qu’`. Supporting `que` revision
 40046884 has conjunction and interrogative/relative frames, but no relation
 establishes the literal frozen `qu` spelling in those subclasses. The negative
-source/spelling findings are retained separately; no substitution, automatic
-alias or annotation exception is made. All four rows retain four missing fields
+source/spelling findings are retained separately; no substitution or runtime
+alias is made. All four rows retain four missing fields
 in the fixed 4,087-group denominator.
+
+## Owner-approved zero-field annotations
+
+On 2026-11-19, project_owner explicitly approved rows 1208 quiconque/PRO:int and 1218–1220 qu/CON, qu/PRO:int, qu/PRO:rel for [issue #105](https://github.com/zardonc/lexique/issues/105). Exact approved_annotation_exceptions records are in field-review.json and admission.json. Each admits zero fields and retains four missing fields, its frozen identity/frequencies and the 4,087-group denominator. Genuine unsupported-binding evidence and all 184 accepted strings remain unchanged. Scope acceptance passes as 46 complete groups / 184 fields plus four annotations; package/native/release gates remain parent-owned.

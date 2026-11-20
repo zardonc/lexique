@@ -1,0 +1,50 @@
+{
+  "status": "passed_at_selected_text_boundary_for_184_fields",
+  "reviewer": "Independent selected-content and rights reviewer for issue 105; separate from author and merger",
+  "independence": true,
+  "content_license": "CC-BY-SA-4.0",
+  "authorities": [
+    {
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "sections": [
+        "1(a)",
+        "2(a)(1)",
+        "2(a)(4)",
+        "2(a)(5)",
+        "3(a)",
+        "3(b)",
+        "4"
+      ]
+    },
+    {
+      "url": "https://foundation.wikimedia.org/w/index.php?title=Policy:Terms_of_Use&oldid=598588",
+      "sections": [
+        "7(a) licensing",
+        "7(b) attribution",
+        "7(c) imported text",
+        "7(g) reuse and external-source notices",
+        "7(h) modifications/additions and licensing notice"
+      ]
+    },
+    {
+      "url": "https://fr.wiktionary.org/w/index.php?title=Convention%3ADroit_d%E2%80%99auteur&oldid=38903168",
+      "assessment": "French contributor text CC BY-SA 4.0, with explicit external-source exceptions; exceptions are checked at selected spans."
+    },
+    {
+      "url": "https://en.wiktionary.org/w/index.php?title=Wiktionary%3ACopyrights&oldid=87545419",
+      "assessment": "Original-entry dual licence statement; its historical interpretation warns that it is outdated, so actual CC 4.0 terms and Wikimedia Terms control this review."
+    }
+  ],
+  "combined_redistribution_obligations": [
+    "Credit Wiktionnaire contributors through each fixed article and full history URL; retain supplied copyright, licence and disclaimer notices.",
+    "Identify Lexique selection, scoped adaptation, EN/ZH explanatory translations and IPA notation changes; retain earlier applicable modification notices.",
+    "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
+    "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
+    "Impose no additional restrictions or obstructive effective technological measures."
+  ],
+  "legal_evidence": "target/issue-105/reviewer/rights-fetch.json; fixed French policy in fixed-revisions.api.json",
+  "daf8_basis": "Established collective edition 1932–1935, L123-3 conservative expiry 2006-01-01. Read primary statute capture retained by issue-102; this reviewer direct refresh returned 403.",
+  "littre_basis": "Original 1873–1874/1878 edition; author Émile Littré died 1881, original public domain; Wiki and Lexique changes are separately CC BY-SA 4.0.",
+  "selected_boundary": "Selected lexical definitions, French frames and applicable IPA inspected. Unselected examples/media/translation tables and other-language/publisher prose supply no field wording.",
+  "package_gate": "Actual combined package notices, conversion and native checks are parent-owned and pending."
+}
