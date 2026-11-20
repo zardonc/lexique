@@ -1,4 +1,5 @@
 import { Fragment, useEffect, useMemo, useState } from 'react';
+import { NoteImport } from './note-import';
 import { FrequencyBadge, FrequencyState, useFrequency } from './frequency';
 import type { RuntimeAdapter } from './platform/runtime';
 import { digestMeaning, errorMessage, sortSchema } from './platform/vocabulary';
@@ -109,7 +110,8 @@ function RecordContent({ record, frequency, text }: {
     <span>{record.digest.map((entry, index) => {
       const meaning = digestMeaning(entry) || text.missing;
       return <Fragment key={index}>{index > 0 && ' · '}{entry.core ? <span lang="zh">{meaning}</span> : meaning}</Fragment>;
-    })}</span><span className="note-excerpt">{record.notes}</span></>;
+    })}</span>{record.import_source && <span>{text.interchange.external}: {record.import_source.filename}</span>}
+    {!record.reference && <span>{text.interchange.missing}</span>}<span className="note-excerpt">{record.notes}</span></>;
 }
 
 function NotesTabs({ kind, onChange, text }: { readonly kind: NoteKind; readonly onChange: (value: NoteKind) => void; readonly text: NotebookText }) {
@@ -141,6 +143,14 @@ function useActiveCategory(filter: CategoryFilter, categories: LearningCategorie
   }, [categories, filter]);
 }
 
+function NotesActions({ kind, runtime, text, onOpen, onSaved, onPrepare, onCreateGrammar }: {
+  readonly kind: NoteKind; readonly runtime: RuntimeAdapter; readonly text: NotebookText; readonly onOpen: (record: ReviewRecord) => void;
+  readonly onSaved: () => void; readonly onPrepare: (action: () => void) => void; readonly onCreateGrammar: () => void;
+}) {
+  return kind === 'grammar' ? <button onClick={onCreateGrammar}>{text.notesText.create}</button>
+    : <NoteImport runtime={runtime} text={text} onSaved={onSaved} onOpen={onOpen} onPrepare={onPrepare} />;
+}
+
 export function NotebookPanel({ runtime, version, text, onOpen, batch, categories, onMutation, onScopeChange, onCreateGrammar }: {
   readonly runtime: RuntimeAdapter; readonly version: number; readonly text: NotebookText;
   readonly onOpen: (record: ReviewRecord) => void; readonly batch: BatchReview; readonly categories: LearningCategories;
@@ -170,7 +180,7 @@ export function NotebookPanel({ runtime, version, text, onOpen, batch, categorie
       setKind(value); reset(); list.setQuery(''); document.getElementById(`notes-tab-${value}`)?.focus();
     }); }} />
     <div id="notes-panel" role="tabpanel" aria-labelledby={`notes-tab-${kind}`}>
-    {kind === 'grammar' && <button onClick={onCreateGrammar}>{text.notesText.create}</button>}
+    <NotesActions kind={kind} runtime={runtime} text={text} onSaved={list.retry} onOpen={onOpen} onPrepare={onScopeChange} onCreateGrammar={onCreateGrammar} />
     <CategoryManager state={categories} runtime={runtime} onMutation={onMutation} text={text.notesText} />
     <NotebookFilters list={list} kind={kind} categories={categories} filter={filter} onFilter={(value) => { reset(); setFilter(value); }} reset={reset} text={text} />
     <ReadingState list={{ ...list, records: filtered }} text={text} kind={kind} />

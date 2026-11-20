@@ -45,7 +45,7 @@ elif variant=='crc':
  output[audio.header_offset+30+n+e+80]^=1
 else:
  if variant=='unsupported-format': manifest['format_version']=2
- elif variant=='unsupported-snapshot': manifest['snapshot_version']=snapshot['snapshot_version']=4
+ elif variant=='unsupported-snapshot': manifest['snapshot_version']=snapshot['snapshot_version']=5
  elif variant=='count': manifest['counts']['cards']+=1
  elif variant=='unknown-field': snapshot['unexpected']=True
  elif variant=='invalid-number': snapshot['records'][0]['id']=0
@@ -150,7 +150,7 @@ print(json.dumps(result,ensure_ascii=False))`, {}, true);
 }
 
 export function compareLearning(actual, expected) {
-  assert.equal(actual.schema, 19); assert.deepEqual(actual.integrity, ['ok']); assert.deepEqual(actual.foreign_keys, []);
+  assert.equal(actual.schema, 20); assert.deepEqual(actual.integrity, ['ok']); assert.deepEqual(actual.foreign_keys, []);
   for (const key of ['records', 'saves', 'cards', 'progress', 'ratings', 'queue_context', 'queue', 'paused', 'batches', 'batch_items', 'settings', 'preferences', 'absent_progress']) {
     assert.deepEqual(actual[key], expected[key], `Independent restored ${key}`);
   }

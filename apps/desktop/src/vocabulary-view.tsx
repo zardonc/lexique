@@ -1,4 +1,5 @@
 import { ExampleSource } from './example-source';
+import { VocabularySource } from './vocabulary-source';
 import { useEffect, useMemo, useRef } from 'react';
 import type { ReactNode } from 'react';
 import { FrequencyBadge, FrequencyDetails, FrequencyState, useFrequency } from './frequency';
@@ -17,6 +18,7 @@ import type { LearningCategories } from './learning-categories';
 export function VocabularySummary({ snapshot, text, frequency }: { readonly snapshot: VocabularySnapshot; readonly text: NotebookText; readonly frequency?: ReactNode }) {
   return <section className="vocabulary-summary" aria-label={text.summary}>
     <h3><span lang="fr">{snapshot.headword}</span> {frequency}</h3>
+    {!snapshot.digest.length && <p>{text.interchange.missing}</p>}
     {snapshot.digest.map((entry, index) => entry.core ? <CoreSenseContent key={index} sense={entry.core} text={text.core} /> : <dl key={index}>
       <dt>{text.pronunciation}</dt><dd lang="fr">{entry.pronunciations.join(' · ') || text.missing}</dd>
       <dt>{text.grammar}</dt><dd>{entry.grammar.join(' · ') || text.missing}</dd>
@@ -38,11 +40,7 @@ function SavedVocabularySummary({ snapshot, text, runtime }: {
 }
 
 function SavedSource({ snapshot, text }: { readonly snapshot: VocabularySnapshot; readonly text: NotebookText }) {
-  const source = snapshot.reference;
-  return <footer className="dictionary-source"><h4>{text.source}</h4>
-    <p>{source.dictionary} · {source.version}</p><p>{source.attribution ?? text.missing} · {source.license ?? text.missing}</p>
-    <p>{source.source_url ?? text.missing}</p><p>{source.license_url ?? text.missing}</p>
-  </footer>;
+  return <VocabularySource snapshot={snapshot} text={text} />;
 }
 
 function Conflict({ notebook, text, runtime }: { readonly notebook: Notebook; readonly text: NotebookText; readonly runtime: RuntimeAdapter }) {
@@ -83,6 +81,7 @@ function ExampleEditor({ notebook, text, runtime }: { readonly notebook: Noteboo
       <option value="">{text.exampleSenseUnspecified}</option>{editor.snapshot.digest.map((entry, index) => <option key={index} value={index} lang={entry.core ? 'zh' : undefined}>{digestLabel(entry, text.missing)}</option>)}
     </select>
     {notebook.meaningRequired && <p id="example-sense-required" className="runtime-error">{text.exampleSenseRequired}</p>}
+    {editor.snapshot.import_source && editor.example_sense === null && <p role="status">{text.interchange.association}</p>}
     <ExampleSource source={editor.example_source} text={text} runtime={runtime} />
     <label htmlFor="example-fr">{text.exampleFr}</label><textarea id="example-fr" lang="fr" value={editor.example_fr} disabled={notebook.busy} rows={3} aria-invalid={characterCount(editor.example_fr) > 20_000} aria-describedby={overLimit ? 'example-limit' : undefined} onChange={(event) => notebook.editExample('example_fr', event.target.value)} />
     <ExampleSpeech value={editor.example_fr} runtime={runtime} text={text} />

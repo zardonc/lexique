@@ -26,6 +26,7 @@ use conjugation::{conjugation_block_order, conjugation_lookup, conjugation_prefe
 use dictionaries::{
     dictionary_import, dictionary_lookup, dictionary_relink, dictionary_remove, dictionary_settings,
 };
+mod note_import;
 mod notes;
 mod speech_cache;
 mod speech_tasks;
@@ -103,6 +104,7 @@ pub fn run() {
     tauri::Builder::default()
         .manage(vocabulary::CloseAuthorization::default())
         .manage(maintenance::MaintenanceCoordinator::default())
+        .manage(note_import::NoteImportState::default())
         .manage(backup_operations::BackupOperations::default())
         .manage(restore_operations::RestoreOperations::default())
         .manage(dictionaries::Registry::default())
@@ -197,6 +199,9 @@ pub fn run() {
             notes::category_delete,
             notes::category_bulk,
             vocabulary_save,
+            note_import::note_import_preview,
+            note_import::note_import_commit,
+            note_import::note_import_cancel,
             vocabulary_sort,
             review_add,
             vocabulary::review_add_batch,

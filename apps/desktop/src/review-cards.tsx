@@ -1,4 +1,5 @@
 import { ExampleSource } from './example-source';
+import { VocabularySource } from './vocabulary-source';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { NotebookText } from './notebook-content';
 import type { ReviewCard, RuntimeAdapter } from './platform/runtime';
@@ -35,14 +36,14 @@ function Examples({ record, text, runtime }: { readonly record: VocabularyRecord
 
 function Answer({ record, text, runtime }: { readonly record: VocabularyRecord; readonly text: NotebookText; readonly runtime: RuntimeAdapter }) {
   return <>
+    {!record.digest.length && <p>{text.interchange.missing}</p>}
     {record.digest.some((entry) => entry.core) ? record.digest.map((entry, index) => entry.core
       ? <CoreSenseContent key={index} sense={entry.core} text={text.core} /> : <p key={index}>{entry.translation || text.missing}</p>)
       : <p>{record.digest.map((entry) => entry.translation || text.missing).join(' · ')}</p>}
     <ExampleSense record={record} text={text} />
     <Examples record={record} text={text} runtime={runtime} />
     <details><summary>{text.more}</summary><p>{record.notes || text.missing}</p>
-      <p>{record.reference.dictionary} · {record.reference.version} · {record.reference.attribution} · {record.reference.license}</p>
-      <p>{record.reference.source_url}</p><p>{record.reference.license_url}</p></details>
+      <VocabularySource snapshot={record} text={text} /></details>
   </>;
 }
 

@@ -858,7 +858,7 @@ fn complete_backup_restores_notes_classification_quota_undo_and_identity_waterma
     }
     delete_grammar(&connection, notes[2].id, notes[2].revision).unwrap();
     let snapshot = export_learning_snapshot(&mut connection, now + 2).unwrap();
-    assert_eq!(snapshot.snapshot_version, 3);
+    assert_eq!(snapshot.snapshot_version, 4);
     let bytes = serde_json::to_vec(&snapshot).unwrap();
     let content = String::from_utf8(bytes.clone()).unwrap();
     assert!(!content.contains("removed-grammar-body-distinct"));

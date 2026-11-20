@@ -400,10 +400,14 @@ struct PortableRecord<'a>(&'a VocabularyRecord);
 impl Serialize for PortableRecord<'_> {
     fn serialize<S: Serializer>(&self, serializer: S) -> Result<S::Ok, S::Error> {
         let record = self.0;
-        let mut map = serializer.serialize_map(Some(14))?;
+        let mut map =
+            serializer.serialize_map(Some(14 + usize::from(record.import_source.is_some())))?;
         map.serialize_entry("id", &record.id)?;
         map.serialize_entry("headword", &record.headword)?;
-        map.serialize_entry("reference", &PortableReference(&record.reference))?;
+        map.serialize_entry(
+            "reference",
+            &record.reference.as_ref().map(PortableReference),
+        )?;
         map.serialize_entry("digest", &record.digest)?;
         map.serialize_entry("notes", &record.notes)?;
         map.serialize_entry("example_fr", &record.example_fr)?;
@@ -425,6 +429,9 @@ impl Serialize for PortableRecord<'_> {
         map.serialize_entry("created_at", &record.created_at)?;
         map.serialize_entry("updated_at", &record.updated_at)?;
         map.serialize_entry("category_ids", &record.category_ids)?;
+        if let Some(source) = &record.import_source {
+            map.serialize_entry("import_source", source)?;
+        }
         map.end()
     }
 }

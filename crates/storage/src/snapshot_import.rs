@@ -100,7 +100,7 @@ fn insert_records(
             record.id,
             record.headword.nfc().collect::<String>(),
             serde_json::to_string(&serde_json::json!({
-                "reference": record.reference, "digest": record.digest
+                "reference": record.reference, "digest": record.digest, "import_source": record.import_source
             }))?,
             record.notes,
             record.example_fr,

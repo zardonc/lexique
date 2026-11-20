@@ -2,6 +2,53 @@ use lexique_storage::{DigestEntry, Reference, SaveRequest, Snapshot, get, initia
 use lexique_storage::{find, list, set_sort_preference, sort_preference};
 use rusqlite::Connection;
 
+#[test]
+fn external_record_without_dictionary_information_can_be_reopened() {
+    let connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    let snapshot = serde_json::json!({
+        "reference": null, "digest": [],
+        "import_source": { "format": "csv", "filename": "mes-notes.csv" }
+    });
+    connection.execute(
+        "INSERT INTO vocabulary(headword,snapshot,notes,example_fr,example_zh,created_at,updated_at) VALUES('école externe',?1,'学校笔记','Je découvre cette école.','',1,1)",
+        [snapshot.to_string()],
+    ).unwrap();
+    let reopened = get(&connection, connection.last_insert_rowid());
+    assert!(
+        reopened.is_ok(),
+        "external learning content must be readable: {reopened:?}"
+    );
+    let record = serde_json::to_value(reopened.unwrap()).unwrap();
+    assert_eq!(record["reference"], serde_json::Value::Null);
+    assert_eq!(record["digest"], serde_json::json!([]));
+    assert_eq!(record["import_source"]["filename"], "mes-notes.csv");
+    assert_eq!(record["example_fr"], "Je découvre cette école.");
+}
+
+#[test]
+fn external_examples_can_be_edited_without_selecting_a_dictionary_meaning() {
+    let mut connection = Connection::open_in_memory().unwrap();
+    initialize(&connection).unwrap();
+    connection.execute(
+        "INSERT INTO vocabulary(headword,snapshot,notes,created_at,updated_at) VALUES('mot externe',?1,'',1,1)",
+        [serde_json::json!({"reference": null, "digest": [], "import_source": {"format": "csv", "filename": "notes.csv"}}).to_string()],
+    ).unwrap();
+    let mut request = create("external-edit", "mot externe", "新笔记");
+    request.id = Some(connection.last_insert_rowid());
+    request.revision = Some(1);
+    request.example_fr = "Une phrase indépendante.".into();
+    let saved = save(&mut connection, &request, None);
+    assert!(
+        saved.is_ok(),
+        "unlinked examples must remain editable: {saved:?}"
+    );
+    assert_eq!(
+        get(&connection, request.id.unwrap()).unwrap().example_fr,
+        "Une phrase indépendante."
+    );
+}
+
 fn snapshot() -> Snapshot {
     Snapshot {
         reference: Reference {
