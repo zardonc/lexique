@@ -13,8 +13,8 @@
     "timestamp": "2024-12-07T15:06:55Z",
     "last_editor": "Destraak",
     "capture": "first_party_multi_title_api_current_selected_revision",
-    "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-102\\target\\issue-102\\sources\\batch.api.json",
-    "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-102\\target\\issue-102\\sources\\193650.wiki",
+    "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-102-final\\target\\issue-102\\sources\\batch.api.json",
+    "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-102-final\\target\\issue-102\\sources\\193650.wiki",
     "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mme&oldid=36554529",
     "history_url": "https://fr.wiktionary.org/w/index.php?title=Mme&action=history",
     "edition": "fr",
@@ -37,7 +37,7 @@
     ],
     "fixed_api_capture": "target\\issue-102\\mme-review\\fixed.api.json"
   },
-  "independent_capture_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-102\\target\\issue-102\\mme-review",
+  "independent_capture_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-102-final\\target\\issue-102\\mme-review",
   "field_spans": [
     {
       "sense_id": "b102-1057-mme-nom-selected",
@@ -154,23 +154,23 @@
     {
       "role": "fixed French copyright policy",
       "revid": 38903168,
-      "capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-102\\target\\issue-102\\mme-review\\11150.wiki"
+      "capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-102-final\\target\\issue-102\\mme-review\\11150.wiki"
     },
     {
       "role": "Wikimedia attribution, imported text and adaptation obligations, section 7",
       "url": "https://foundation.wikimedia.org/w/index.php?title=Policy:Terms_of_Use&oldid=598588",
-      "capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-102\\target\\issue-102\\mme-review\\terms.html"
+      "capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-102-final\\target\\issue-102\\mme-review\\terms.html"
     },
     {
       "role": "CC BY-SA 4.0 commercial adaptation and attribution/ShareAlike conditions, sections 2–4",
       "url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
-      "capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-102\\target\\issue-102\\mme-review\\cc.html"
+      "capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-102-final\\target\\issue-102\\mme-review\\cc.html"
     }
   ],
   "corroboration": {
-    "oqlf_abbreviation_capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-102\\target\\issue-102\\mme-review\\oqlf.html",
-    "oqlf_capitalization_capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-102\\target\\issue-102\\mme-review\\oqlf-capitals.html",
-    "cambridge_capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-102\\target\\issue-102\\mme-review\\cambridge.html",
+    "oqlf_abbreviation_capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-102-final\\target\\issue-102\\mme-review\\oqlf.html",
+    "oqlf_capitalization_capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-102-final\\target\\issue-102\\mme-review\\oqlf-capitals.html",
+    "cambridge_capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-102-final\\target\\issue-102\\mme-review\\cambridge.html",
     "boundary": "First-party factual corroboration only; no proprietary wording, examples or translation-table text selected.",
     "oqlf_capitalization_url": "https://vitrinelinguistique.oqlf.gouv.qc.ca/23515/la-typographie/majuscules/emploi-de-la-majuscule-pour-des-noms-particuliers/majuscule-aux-noms-madame-et-monsieur"
   },
@@ -184,7 +184,7 @@
       "source": "Madame revision 39716168, line 55, citing Jean-Pierre Lacroux, Orthotypographie, volume II, pages 107–111",
       "rights": "The original first-party site states CC BY-NC-ND 2.0 France and prohibits commercial use/modification without permission; this prose is excluded from bundled field text and adaptations.",
       "primary_rights_url": "https://www.orthotypographie.fr/",
-      "capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-102\\target\\issue-102\\mme-author\\orthotypographie.html",
+      "capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-102-final\\target\\issue-102\\mme-author\\orthotypographie.html",
       "license_url": "https://creativecommons.org/licenses/by-nc-nd/2.0/fr/"
     },
     {
@@ -198,5 +198,5 @@
     "Record Lexique adaptation/translation modifications and applicable original-author notices separately.",
     "Satisfy actual external-source obligations identified at independent selected-span review before admission."
   ],
-  "excluded_original_rights_capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-102\\target\\issue-102\\mme-review\\orthotypographie.html"
+  "excluded_original_rights_capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-102-final\\target\\issue-102\\mme-review\\orthotypographie.html"
 }

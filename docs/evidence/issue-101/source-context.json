@@ -9486,42 +9486,42 @@
     {
       "id": "robert-m",
       "url": "https://dictionnaire.lerobert.com/definition/m",
-      "original_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-101\\target\\issue-101\\support\\robert-m.html",
+      "original_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-101-final\\target\\issue-101\\support\\robert-m.html",
       "retrieved_at": "2026-11-19T21:24:38.883562+00:00",
       "status": "captured"
     },
     {
       "id": "robert-s",
       "url": "https://dictionnaire.lerobert.com/definition/s",
-      "original_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-101\\target\\issue-101\\support\\robert-s.html",
+      "original_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-101-final\\target\\issue-101\\support\\robert-s.html",
       "retrieved_at": "2026-11-19T21:24:39.274150+00:00",
       "status": "captured"
     },
     {
       "id": "robert-interessant",
       "url": "https://dictionnaire.lerobert.com/definition/interessant",
-      "original_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-101\\target\\issue-101\\support\\robert-interessant.html",
+      "original_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-101-final\\target\\issue-101\\support\\robert-interessant.html",
       "retrieved_at": "2026-11-19T21:24:39.759751+00:00",
       "status": "captured"
     },
     {
       "id": "robert-dejeuner",
       "url": "https://dictionnaire.lerobert.com/definition/dejeuner",
-      "original_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-101\\target\\issue-101\\support\\robert-dejeuner.html",
+      "original_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-101-final\\target\\issue-101\\support\\robert-dejeuner.html",
       "retrieved_at": "2026-11-19T21:24:40.180903+00:00",
       "status": "captured"
     },
     {
       "id": "cc-by-sa-4",
       "url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
-      "original_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-101\\target\\issue-101\\support\\cc-by-sa-4.html",
+      "original_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-101-final\\target\\issue-101\\support\\cc-by-sa-4.html",
       "retrieved_at": "2026-11-19T21:24:40.376262+00:00",
       "status": "captured"
     },
     {
       "id": "wikimedia-terms",
       "url": "https://foundation.wikimedia.org/w/index.php?title=Policy:Terms_of_Use&oldid=598588",
-      "original_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-101\\target\\issue-101\\support\\wikimedia-terms.html",
+      "original_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-101-final\\target\\issue-101\\support\\wikimedia-terms.html",
       "retrieved_at": "2026-11-19T21:24:40.877077+00:00",
       "status": "captured"
     },
@@ -9534,14 +9534,14 @@
     {
       "id": "daf8-import-template",
       "url": "https://fr.wiktionary.org/w/api.php?action=query&format=json&formatversion=2&prop=revisions&rvprop=ids%7Ctimestamp%7Ccontent&rvslots=main&titles=Mod%C3%A8le:Import:DAF8",
-      "original_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-101\\target\\issue-101\\support\\daf8-import-template.api.json",
+      "original_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-101-final\\target\\issue-101\\support\\daf8-import-template.api.json",
       "retrieved_at": "2026-11-19T21:24:41.709281+00:00",
       "status": "captured"
     },
     {
       "id": "wiki-copyright",
       "url": "https://fr.wiktionary.org/w/api.php?action=query&format=json&formatversion=2&prop=revisions&rvprop=ids%7Ctimestamp%7Ccontent&rvslots=main&revids=38903168",
-      "original_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-101\\target\\issue-101\\support\\wiki-copyright.api.json",
+      "original_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-101-final\\target\\issue-101\\support\\wiki-copyright.api.json",
       "retrieved_at": "2026-11-19T21:24:41.974406+00:00",
       "status": "captured"
     }
@@ -9596,7 +9596,7 @@
     ],
     "independent_corroboration": {
       "url": "https://dictionnaire.lerobert.com/definition/me",
-      "capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-101\\target\\issue-101\\reviewer-robert-me.html",
+      "capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-100-109\\target\\implement-100-109\\worker-audit\\author-101-final\\target\\issue-101\\reviewer-robert-me.html",
       "role": "read_only_spelling_relationship_no_field_text"
     },
     "reason": "Fixed bare m revision 39772551 has French letter (166–169), euphemistic m... noun (196–198) and musical adjective (207–212), no personal pronoun. Fixed m’ revision 39840795 lines 7–14 and me revision 39891222 lines 7–13 support different elided/unelided spellings; straight m' revision 20098185 redirects to m’. Independently retrieved Robert me supports me → m' before a vowel/mute h. None establishes apostrophe-free m as PRO:per. No bare-pronoun field, alias, specialist exception or owner annotation is admitted.",

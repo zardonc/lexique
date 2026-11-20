@@ -1,10 +1,10 @@
 # Lexique FR–EN–ZH D2 core
 
-This development resource contains **944 independently reviewed senses / 3,776 fields**
-in 944 frozen headword/POS groups, content version `core-99-v1`.
-Its permanent target is **4,087 groups / 3,773 headwords**; **944 groups are accepted
-and 3,143 remain unaccepted**. Literal everyday coverage is **942 complete groups
-and 3,145 incomplete groups**. All **3,776 fields** have exact independent reviews.
+This development resource contains **1,436 independently reviewed senses / 5,744 fields**
+in 1,436 frozen headword/POS groups, content version `core-109-v1`.
+Its permanent target is **4,087 groups / 3,773 headwords**; **1,436 groups are accepted
+and 2,651 remain unaccepted**. Everyday coverage is **1,434 complete groups
+and 2,653 incomplete groups**. All **5,744 fields** have exact independent reviews.
 
 | Batch | Frozen rows | Admitted groups | Fields | Reused groups | Annotation exceptions |
 | --- | --- | ---: | ---: | ---: | ---: |
@@ -24,22 +24,28 @@ and 3,145 incomplete groups**. All **3,776 fields** have exact independent revie
 | #97 | 801–850 | 48 | 192 | 0 | 2 |
 | #98 | 851–900 | 48 | 192 | 0 | 2 |
 | #99 | 901–950 | 49 | 196 | 0 | 1 |
+| #100 | 951–1000 | 50 | 200 | 0 | 0 |
+| #101 | 1001–1050 | 49 | 196 | 0 | 1 |
+| #102 | 1051–1100 | 49 | 196 | 0 | 1 |
+| #103 | 1101–1150 | 50 | 200 | 0 | 0 |
+| #104 | 1151–1200 | 50 | 200 | 0 | 0 |
+| #105 | 1201–1250 | 46 | 184 | 0 | 4 |
+| #106 | 1251–1300 | 49 | 196 | 0 | 1 |
+| #107 | 1301–1350 | 50 | 200 | 0 | 0 |
+| #108 | 1351–1400 | 49 | 196 | 0 | 1 |
+| #109 | 1401–1450 | 50 | 200 | 0 | 0 |
 
-All prior **450 groups / 1,800 fields**, their raw records, source bindings,
+All prior **944 groups / 3,776 fields**, their raw records, source bindings,
 independent reviews, contexts and compiled payloads remain exact. Row 483
 `coeur/NOM` is reused unchanged in #90 and counted once globally; row 1911
 remains admitted. The 15 reviewed spelling relations yield 11 query aliases.
 
 The owner-approved specialist senses are row 34 `ça/NOM` (psychoanalytic id, #81)
 and row 128 `par/NOM` (single-hole standard golf strokes, #83). Their original
-restrictions, approvals and four-field records remain intact. Annotation exceptions
-are rows 87 `quoi/ADJ`, 305 `dont/PRO:int`, 816 `t/PRO:per`, 849 `c/PRO:dem`,
-859 `l/ART:def`, 860 `l/PRO:per` and 934 `i/ADJ:num`. Each retains its exact
-frozen identity, frequencies, four missing fields and zero admitted content;
-the seven annotations retain 28 missing fields in the fixed denominator.
-The owner approved the five new annotation exceptions on 2026-11-18.
-Existing apostrophized records remain unchanged; no bare t/c/l or i-to-I alias
-is admitted. Relative `dont` remains an independent everyday use at row 306.
+restrictions, approvals and four-field records remain intact. Annotation exceptions are row 87 `quoi/ADJ`, row 305 `dont/PRO:int`, row 816 `t/PRO:per`, row 849 `c/PRO:dem`, row 859 `l/ART:def`, row 860 `l/PRO:per`, row 934 `i/ADJ:num`, row 1005 `m/PRO:per`, row 1051 `s/PRO:per`, row 1208 `quiconque/PRO:int`, row 1218 `qu/CON`, row 1219 `qu/PRO:int`, row 1220 `qu/PRO:rel`, row 1300 `d/PRE`, row 1386 `nulle/PRO:ind`. Each retains its exact frozen identity, frequencies, four missing fields and zero admitted content.
+The 15 owner-approved annotations retain 60 missing fields in the fixed denominator.
+The original seven approvals and two specialist senses remain intact. New approvals are recorded with their matching issue and date in field-review.json.
+No new runtime alias is admitted; existing apostrophized records and relative `dont` at row 306 remain intact.
 
 [curated-inputs.json](curated-inputs.json) contains the complete FR/IPA/EN/ZH fields,
 use restrictions, fixed versions and actual adaptations. [field-review.json](field-review.json)
