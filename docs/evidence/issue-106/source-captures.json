@@ -679,5 +679,19 @@
     "pagination_complete": true,
     "page_associated_names": 3089,
     "selected_sentence_authorship_proved": false
+  },
+  "reviewer_verification": {
+    "reviewer": "Independent selected-content and rights reviewer for issue 106; separate from author and merger",
+    "status": "45_fixed_revisions_including_contrast_refetched_and_matched",
+    "record": "target/issue-106/reviewer/remote-verification.json",
+    "api": "target/issue-106/reviewer/fixed-revisions.api.json"
+  },
+  "reviewer_legal_evidence": {
+    "owning_capture_root": "C:/Users/inthe/IdeaProjects/lexique-batch-105/target/issue-105/reviewer",
+    "terms": "terms.html",
+    "cc": "cc.html",
+    "french_policy": "fixed-revisions.api.json (revision 38903168)",
+    "primary_statute": "C:/Users/inthe/IdeaProjects/lexique-batch-102/target/issue-102/reviewer-primary/web-authorities.json",
+    "direct_statute_refresh": "HTTP 403; established edition basis and retained primary statutory text used"
   }
 }

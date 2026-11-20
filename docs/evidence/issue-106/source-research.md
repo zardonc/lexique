@@ -3,7 +3,7 @@
 All 50 frozen identities and both frequency strings are retained. The 49
 supported groups have one same-use FR/IPA/EN/ZH candidate sense each. Bare
 `d/PRE` (1300) has no supported candidate sense and four missing fields.
-Independent quality and rights review remains pending for every proposed field.
+The independent [review](independent-review.md) accepts all 196 proposed fields at the selected-content/rights boundary; four exact d/PRE fields remain missing.
 
 ## Source and rights boundary
 
@@ -27,7 +27,7 @@ conservative public-domain expiry on 2006-01-01 under
 This does not establish a particular import's wording correspondence. Other
 page bibliography and example-source markers remain attributed metadata; no
 permission for their unselected quoted prose is claimed. Selected-sentence
-rights eligibility remains for the independent reviewer.
+rights eligibility is resolved for the 196 fields in [rights](rights.json), with unselected publisher quotations and CFC wording excluded.
 
 Redistribution requires fixed article/history attribution, the actual CC BY-SA
 4.0 legal text and link, modification notices, share-alike for adaptations and
@@ -120,8 +120,11 @@ meaning. `information/NOM` selects an item of knowledge on a medium, away from
 the CFC-marked cartography definition. `vert/ADJ` keeps the everyday chromatic
 comparison; wavelength detail is not part of this scoped explanation.
 
-All 196 proposed fields await independent same-use quality and selected-text
-rights review. The four `d/PRE` fields have a separate source blocker. There is
-no newly approved annotation or scope exception. Real resource conversion,
+All 196 proposed fields have independently passed same-use quality and selected-text
+rights review. The four `d/PRE` fields have an independently confirmed exact-binding blocker. The owner approved the exact d/PRE zero-field annotation on 2026-11-19. Real resource conversion,
 lookup/save/reopen, packaging, learner acceptance and wider release gates keep
 their separate completion states.
+
+## Owner-approved zero-field annotation
+
+On 2026-11-19, project_owner explicitly approved row 1300 d/PRE for [issue #106](https://github.com/zardonc/lexique/issues/106). Exact approved_annotation_exceptions records are in field-review.json and admission.json, with admitted_fields 0 and four missing fields. The frozen identity, frequencies, denominator and genuine unsupported-binding evidence remain intact. All 196 accepted strings are unchanged. Scope acceptance passes as 49 complete groups / 196 fields plus one annotation; package/native/release gates remain parent-owned.
