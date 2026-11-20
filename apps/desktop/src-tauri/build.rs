@@ -176,6 +176,7 @@ fn main() {
             "category_bulk",
             "vocabulary_save",
             "note_import_preview",
+            "note_import_remap",
             "note_import_commit",
             "note_import_cancel",
             "vocabulary_sort",

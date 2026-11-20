@@ -300,7 +300,7 @@ fn save_request_requires_all_example_fields() {
 }
 
 #[test]
-fn unassigned_legacy_examples_are_preserved_but_new_edits_require_a_meaning() {
+fn new_examples_require_a_meaning_but_persisted_unlinked_examples_remain_editable() {
     let mut connection = Connection::open_in_memory().unwrap();
     initialize(&connection).unwrap();
     let original = save(
@@ -330,7 +330,10 @@ fn unassigned_legacy_examples_are_preserved_but_new_edits_require_a_meaning() {
     assert_eq!(preserved.example_fr, "Legacy");
     let mut edit = update("edit-legacy", &preserved, "note");
     edit.example_fr = "Changed".into();
-    assert!(save(&mut connection, &edit, None).is_err());
+    let edited = save(&mut connection, &edit, None).unwrap().record;
+    assert_eq!(edited.example_fr, "Changed");
+    assert_eq!(edited.example_sense, None);
+    let mut edit = update("assign-legacy", &edited, "note");
     edit.example_sense = Some(0);
     assert_eq!(
         save(&mut connection, &edit, None)
@@ -662,6 +665,7 @@ fn file_database_reopens_with_record_identity_content_and_sort_preference() {
         request.example_zh = "我去学校。".into();
         request.example_sense = Some(0);
         request.more_examples.push(lexique_storage::Example {
+            sense: None,
             source: Some(Reference {
                 dictionary: "Another dictionary".into(),
                 ..snapshot().reference
@@ -917,6 +921,7 @@ fn legacy_examples_gain_no_source_on_upgrade_and_source_is_part_of_retry_identit
     request.example_fr = "Legacy French".into();
     request.example_sense = Some(0);
     request.more_examples.push(lexique_storage::Example {
+        sense: None,
         fr: String::new(),
         zh: "旧译文".into(),
         source: None,

@@ -144,12 +144,13 @@ function useActiveCategory(filter: CategoryFilter, categories: LearningCategorie
   }, [categories, filter]);
 }
 
-function NotesActions({ kind, runtime, text, onOpen, onSaved, onPrepare, onCreateGrammar }: {
+function NotesActions({ kind, runtime, text, onOpen, onSaved, onPrepare, onCreateGrammar, batch }: {
   readonly kind: NoteKind; readonly runtime: RuntimeAdapter; readonly text: NotebookText; readonly onOpen: (record: ReviewRecord) => void;
   readonly onSaved: () => void; readonly onPrepare: (action: () => void) => void; readonly onCreateGrammar: () => void;
+  readonly batch: BatchReview;
 }) {
   return kind === 'grammar' ? <button onClick={onCreateGrammar}>{text.notesText.create}</button>
-    : <NoteImport runtime={runtime} text={text} onSaved={onSaved} onOpen={onOpen} onPrepare={onPrepare} />;
+    : <NoteImport runtime={runtime} text={text} onSaved={onSaved} onOpen={onOpen} onPrepare={onPrepare} batch={batch} />;
 }
 
 export function NotebookPanel({ runtime, version, text, onOpen, batch, categories, onMutation, onScopeChange, onCreateGrammar }: {
@@ -181,7 +182,7 @@ export function NotebookPanel({ runtime, version, text, onOpen, batch, categorie
       setKind(value); reset(); list.setQuery(''); document.getElementById(`notes-tab-${value}`)?.focus();
     }); }} />
     <div id="notes-panel" role="tabpanel" aria-labelledby={`notes-tab-${kind}`}>
-    <NotesActions kind={kind} runtime={runtime} text={text} onSaved={list.retry} onOpen={onOpen} onPrepare={onScopeChange} onCreateGrammar={onCreateGrammar} />
+    <NotesActions kind={kind} runtime={runtime} text={text} onSaved={list.retry} onOpen={onOpen} onPrepare={onScopeChange} onCreateGrammar={onCreateGrammar} batch={batch} />
     <CategoryManager state={categories} runtime={runtime} onMutation={onMutation} text={text.notesText} />
     <NotebookFilters list={list} kind={kind} categories={categories} filter={filter} onFilter={(value) => { reset(); setFilter(value); }} reset={reset} text={text} />
     <NotebookExport runtime={runtime} text={text.exportText} kind={kind} sort={list.sort} query={list.query}

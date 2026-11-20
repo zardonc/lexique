@@ -30,7 +30,9 @@ function Examples({ record, text, runtime }: { readonly record: VocabularyRecord
       {first.fr.trim() && <p lang="fr">{first.fr}</p>}<ExampleSpeech value={first.fr} runtime={runtime} text={text} />{first.zh.trim() && <p lang="zh">{first.zh}</p>}<ExampleSource source={first.source} text={text} runtime={runtime} /></section>}
     {(!first?.fr.trim() || !first?.zh.trim()) && <p>{text.exampleMissing}</p>}
     {rest.length > 0 && <details onToggle={(event) => setExpanded(event.currentTarget.open)}><summary>{text.moreExamples}</summary>{expanded && rest.map((example, index) => <section key={index}>
-      <p lang="fr">{example.fr}</p><ExampleSpeech value={example.fr} runtime={runtime} text={text} /><p lang="zh">{example.zh}</p><ExampleSource source={example.source} text={text} runtime={runtime} />{(!example.fr.trim() || !example.zh.trim()) && <p>{text.exampleMissing}</p>}</section>)}</details>}
+      <p lang="fr">{example.fr}</p><ExampleSpeech value={example.fr} runtime={runtime} text={text} /><p lang="zh">{example.zh}</p><ExampleSource source={example.source} text={text} runtime={runtime} />
+      {example.sense !== undefined && <p>{text.exampleSense}：{digestLabel(record.digest[example.sense], text.missing)}</p>}
+      {(!example.fr.trim() || !example.zh.trim()) && <p>{text.exampleMissing}</p>}</section>)}</details>}
   </>;
 }
 

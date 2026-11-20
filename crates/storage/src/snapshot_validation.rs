@@ -167,7 +167,12 @@ pub fn validate_learning_snapshot(
         require(
             record
                 .example_sense
-                .is_none_or(|index| (index as usize) < record.digest.len()),
+                .is_none_or(|index| (index as usize) < record.digest.len())
+                && record.more_examples.iter().all(|example| {
+                    example.sense.is_none_or(|index| {
+                        (index as usize) < record.digest.len() && snapshot.snapshot_version >= 4
+                    })
+                }),
             "example meaning is not in the saved summary",
         )?;
         for source in record.example_source.iter().chain(
@@ -218,6 +223,14 @@ pub fn validate_learning_snapshot(
         ) {
             reference(source)?;
         }
+        require(
+            saved.request.more_examples.iter().all(|example| {
+                example.sense.is_none_or(|index| {
+                    (index as usize) < record.digest.len() && snapshot.snapshot_version >= 4
+                })
+            }),
+            "example meaning is not in the saved summary",
+        )?;
     }
     for saved in &snapshot.grammar_save_operations {
         require(saves.insert(&saved.operation), "duplicate save operation")?;

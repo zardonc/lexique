@@ -89,6 +89,10 @@ function ExampleEditor({ notebook, text, runtime }: { readonly notebook: Noteboo
     <label htmlFor="example-zh">{text.exampleZh}</label><textarea id="example-zh" lang="zh" value={editor.example_zh} disabled={notebook.busy} rows={3} aria-invalid={characterCount(editor.example_zh) > 20_000} aria-describedby={overLimit ? 'example-limit' : undefined} onChange={(event) => notebook.editExample('example_zh', event.target.value)} />
     {editor.more_examples.map((example, index) => <fieldset key={index}><legend>{text.exampleUser} {index + 2}</legend>
       <ExampleSource source={example.source} text={text} runtime={runtime} />
+      <label>{text.exampleSense}<select aria-label={`${text.exampleSense} ${index + 2}`} disabled={notebook.busy} value={example.sense ?? ''}
+        onChange={(event) => notebook.editMore(editor.more_examples.map((item, at) => at === index ? { ...item, sense: event.target.value === '' ? undefined : Number(event.target.value) } : item))}>
+        <option value="">{text.exampleSenseUnspecified}</option>{editor.snapshot.digest.map((entry, at) => <option key={at} value={at}>{digestLabel(entry, text.missing)}</option>)}
+      </select></label>
       <label htmlFor={`example-fr-${index}`}>{text.exampleFr}</label><textarea id={`example-fr-${index}`} lang="fr" value={example.fr} disabled={notebook.busy} aria-invalid={characterCount(example.fr) > 20_000} aria-describedby={overLimit ? 'example-limit' : undefined} onChange={(event) => notebook.editMore(editor.more_examples.map((item, i) => i === index ? { ...item, fr: event.target.value } : item))} />
       <ExampleSpeech value={example.fr} runtime={runtime} text={text} />
       <label htmlFor={`example-zh-${index}`}>{text.exampleZh}</label><textarea id={`example-zh-${index}`} lang="zh" value={example.zh} disabled={notebook.busy} aria-invalid={characterCount(example.zh) > 20_000} aria-describedby={overLimit ? 'example-limit' : undefined} onChange={(event) => notebook.editMore(editor.more_examples.map((item, i) => i === index ? { ...item, zh: event.target.value } : item))} />
