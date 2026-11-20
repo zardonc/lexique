@@ -108,7 +108,7 @@ pub fn validate_learning_snapshot(
     captured_at: i64,
 ) -> Result<(), StorageError> {
     require(
-        matches!(snapshot.snapshot_version, 1 | 2 | 3),
+        matches!(snapshot.snapshot_version, 1..=3),
         "unsupported snapshot version",
     )?;
     timestamp(captured_at)?;

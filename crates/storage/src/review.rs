@@ -450,7 +450,7 @@ fn read_queue_from_cache(
     let all: Vec<_> = cache.cards.values().cloned().collect();
     let settings = review_settings(snapshot)?;
     let (used_new, used_review) = daily_usage(snapshot, &day, now)?;
-    let latest = latest_review_time(&snapshot)?;
+    let latest = latest_review_time(snapshot)?;
     let (remaining_new, remaining_review) = remaining_limits(&settings, used_new, used_review);
     let existing: Vec<_> = cache
         .positions

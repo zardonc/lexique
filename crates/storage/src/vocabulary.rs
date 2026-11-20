@@ -220,7 +220,7 @@ const COLUMNS: &str = "id, headword, snapshot, notes, revision, created_at, upda
 #[derive(Clone, Debug, Deserialize, Serialize)]
 #[serde(untagged)]
 pub enum ReviewRecord {
-    Vocabulary(VocabularyRecord),
+    Vocabulary(Box<VocabularyRecord>),
     Grammar(crate::GrammarRecord),
 }
 
@@ -239,7 +239,7 @@ pub fn get_review_records(
 ) -> Result<std::collections::HashMap<i64, ReviewRecord>, StorageError> {
     let mut records = get_batch(connection, ids)?
         .into_iter()
-        .map(|(id, record)| (id, ReviewRecord::Vocabulary(record)))
+        .map(|(id, record)| (id, ReviewRecord::Vocabulary(Box::new(record))))
         .collect::<std::collections::HashMap<_, _>>();
     let candidates = ids
         .iter()

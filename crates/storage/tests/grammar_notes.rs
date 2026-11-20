@@ -307,7 +307,7 @@ fn deletion_keeps_consumed_quota_and_only_clears_the_deleted_latest_undo() {
     }
     let mut settings = review_settings(&connection).unwrap();
     settings.new_limit = 2;
-    set_review_settings(&mut connection, &settings).unwrap();
+    set_review_settings(&connection, &settings).unwrap();
     review_queue(&mut connection, now, "UTC").unwrap();
     for (index, note) in notes.iter().take(2).enumerate() {
         rate_card(
@@ -333,7 +333,7 @@ fn deletion_keeps_consumed_quota_and_only_clears_the_deleted_latest_undo() {
     assert!(queue.cards.is_empty());
     assert_eq!(queue.reason.as_deref(), Some("quota"));
     settings.new_limit = 3;
-    set_review_settings(&mut connection, &settings).unwrap();
+    set_review_settings(&connection, &settings).unwrap();
     review_queue(&mut connection, now + 2, "UTC").unwrap();
     rate_card(
         &mut connection,
@@ -522,8 +522,8 @@ fn deleted_note_save_replays_stay_rejected_after_snapshot_restore() {
     assert!(snapshot.grammar_records.is_empty());
     assert!(snapshot.grammar_save_operations.is_empty());
     assert_eq!(
-        snapshot.deleted_grammar_operations,
-        [draft.operation.clone()]
+        snapshot.deleted_grammar_operations.as_slice(),
+        std::slice::from_ref(&draft.operation)
     );
     let bytes = serde_json::to_vec(&snapshot).unwrap();
     let json = std::str::from_utf8(&bytes).unwrap();
