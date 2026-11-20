@@ -48,7 +48,7 @@ fn export_scopes_include_all_query_matches_and_follow_simple_and_review_due_sort
     let grammar = serde_json::from_value(serde_json::json!({
         "operation":"grammar", "id":null, "revision":null, "title":"école", "body":"topic", "category_ids":[]
     })).unwrap();
-    let grammar = lexique_storage::save_grammar(&mut connection, &grammar, 1000)
+    let grammar = lexique_storage::save_grammar(&connection, &grammar, 1000)
         .unwrap()
         .record;
     for sort in [
