@@ -22,6 +22,10 @@ originals. Full captures and verification logs remain under:
 
 `C:/Users/inthe/IdeaProjects/lexique-batch-108/target/issue-108/`
 
+The original comparison also passed for all 173 grammar/construction spans and
+the French-language frames of all 196 admitted fields; see
+`independent-context-check.log` under the evidence root.
+
 The distinct row 1385 indefinite adjective passes for the current written use:
 both source pages establish feminine agreement, singular-only, before-noun
 construction and literary register. The pronoun's invariable-frame conflict
@@ -30,6 +34,7 @@ field; the unselected CFC cartography import contributes no field.
 
 ```powershell
 uv run --python 3.14.10 --no-project python -B -X utf8 target/issue-108/independent_original_check.py
+uv run --python 3.14.10 --no-project python -B -X utf8 target/issue-108/independent_context_check.py
 uv run --python 3.14.10 --no-project python -B -X utf8 -m unittest discover -s scripts -p test_core_batch_108.py
 git diff --check
 ```
