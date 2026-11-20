@@ -1,80 +1,50 @@
-# Issue #111 authored content
+# Issue #111 independently reviewed content
 
-All **50 exact frozen groups at rows 1501–1550** have one authored everyday
-selected sense and **200 nonempty FR/IPA/EN/ZH fields**. Headwords, POS
-subclasses, frequencies and order match the fixed manifest. There are **zero
-unresolved exact groups**, **zero reused groups**, and no added annotations,
-specialist exceptions or runtime aliases.
-
-**Independent semantic, spelling/construction and selected-span rights review
-is pending for all 200 fields.** The author records zero independently accepted
-groups or fields. Candidate completeness adds no admitted coverage.
+**50 exact frozen groups / 200 FR/IPA/EN/ZH fields accepted unchanged;
+zero unresolved groups or fields.** Rows 1501–1550 retain their headwords,
+POS subclasses, frequencies and order against the 4,087-group manifest.
+Independent selected-content and rights acceptance is complete. Canonical
+conversion, actual combined notices, packaging and native admission are
+parent-owned and pending.
 
 The [ticket](https://github.com/zardonc/lexique/issues/111) and
-[parent spec](https://github.com/zardonc/lexique/issues/78) define the scope.
-[Source research](source-research.md) records selected-use boundaries;
-[notices](NOTICES.md) and [rights proposals](rights.json) identify the applicable
-source layers and redistribution obligations.
-
-## Author package
+[parent](https://github.com/zardonc/lexique/issues/78) define the scope.
+[Independent review](independent-review.md) records semantic, construction,
+spelling and verification decisions. [Selected-rights review](selected-rights-review.md)
+records the actual original-work, contributor and adaptation boundaries.
 
 | File | Content |
 | --- | --- |
-| [groups.json](groups.json) | 50 frozen identities, authored senses and four fields per sense |
-| [sources.json](sources.json) | 43 fixed source revisions, attribution and modification records |
-| [source-excerpts.json](source-excerpts.json) | All 200 field bindings, exact raw lines, IPA variant positions and support |
-| [source-context.json](source-context.json) | French/POS/construction frames, complete contributors and original-work boundaries |
-| [source-captures.json](source-captures.json) | Retained API/wikitext paths and complete contributor pagination |
-| [field-review.json](field-review.json) | Proposed text and pending separate review for 200 fields, 50 uses and 50 spelling relations |
-| [rights.json](rights.json) | Per-field author rights proposals and pending independent decisions |
-| [reuse.json](reuse.json) | Explicit empty reuse; existing canonical content remains unchanged |
-| [coverage.json](coverage.json) | Fixed 4,087-group / 16,348-field denominator and pending admission counts |
-| [measurements.json](measurements.json) | Actual authored-field and source-capture sizes; runtime measurements pending |
-| [admission.json](admission.json) | Complete author package with independent and parent-owned gates pending |
-| [COPYING](COPYING) | Actual complete CC BY-SA 4.0 licence text |
+| [groups.json](groups.json) | 50 accepted exact uses and their four fields |
+| [review-candidates.json](review-candidates.json) | Unmodified original author groups and pending statuses |
+| [field-review.json](field-review.json) | 200 accepted/proposed texts, individual reasons, 50 use decisions and 50 binding-only spelling decisions |
+| [sources.json](sources.json) | 43 fixed revisions, attribution, contributors and selected-span decisions |
+| [source-excerpts.json](source-excerpts.json) | Exact primary field spans checked against the fixed raw captures |
+| [source-context.json](source-context.json) | Grammar/construction support, original layers and independent capture comparisons |
+| [source-captures.json](source-captures.json) | Owning raw/API paths, contributor pagination and independent comparison record |
+| [rights.json](rights.json) | 200 separate selected-rights decisions and redistribution obligations |
+| [NOTICES.md](NOTICES.md) / [COPYING](COPYING) | Attribution/modifications and full CC BY-SA 4.0 legal text |
+| [source-research.md](source-research.md) | Author selection and preparation record |
+| [admission.json](admission.json) / [coverage.json](coverage.json) | Review acceptance separated from pending canonical admission |
+| [measurements.json](measurements.json) | Source/field sizes; parent runtime measurements pending |
+| [reuse.json](reuse.json) | Empty reuse; no canonical content rewritten |
 
-The baseline canonical input at `fa4ea3e` has 1,436 admitted groups / 5,744
-fields, with 2,651 groups / 10,604 fields without admitted content. This batch's
-50 groups / 200 fields remain pending and are included in those missing totals.
-The parent recomputes combined coverage after independent review.
+All spelling relationships are source bindings with `alias_admission=not_admitted`.
+No runtime alias, owner annotation or specialist exception is added.
+The unchanged canonical baseline has 1,436 groups / 5,744 fields; this review
+does not add actual assembled coverage. The denominator remains 4,087 groups /
+16,348 fields, and the parent recomputes combined coverage on admission.
 
-## Verification and evidence
+## Verification
 
-The [focused resource check](../../../scripts/test_core_batch_111.py) uses the
-parent-authorized resource/admission seam. It checks exact frozen membership,
-frequencies, four-field bindings, captured raw spans, language labels, attribution,
-actual licence text and honest pending states. Preparation also verifies that
-retained wikitext equals the captured API revision and that all seven contributor
-capture parts terminate their pagination. These are author checks.
+Windows x64, PowerShell 7, uv-pinned Python 3.14.10. Reviewed base:
+`b3560857e61286a61cbf88a1aabf2072fe8ae11e`; author:
+`9aca23191000a915a757ed9999646d9b24c55099`.
+The [focused test](../../../scripts/test_core_batch_111.py) passes all four
+tests, including the existing validator on an isolated resource seam and
+rejection of altered text, source, use, rights and aliases.
 
-```powershell
-uv run --python 3.14.10 --no-project python -B -X utf8 target/issue-111/prepare_candidates.py
-uv run --python 3.14.10 --no-project python -B -X utf8 -m unittest discover -s scripts -p test_core_batch_111.py
-pwsh -NoProfile -File scripts/check-docs.ps1
-git diff --cached --check
-```
-
-[Missing-batch RED](../../../target/issue-111/red.log),
-[rights RED](../../../target/issue-111/rights-red.log),
-[preparation](../../../target/issue-111/prepare.log),
-[GREEN](../../../target/issue-111/green.log),
-[documentation](../../../target/issue-111/docs.log) and
-[diff](../../../target/issue-111/diff-check.log) evidence remains in
-`C:/Users/inthe/IdeaProjects/lexique-batch-111/target/issue-111/`, together with
-the author scripts, exact source selection and full API/wikitext captures.
-
-Author checkout: `C:/Users/inthe/IdeaProjects/lexique-batch-111`, branch
-`codex/d2-content-111`. Initial HEAD, integration tip and merge base were all
-`fa4ea3eab1558fbede04b50cf0cd15f05bdf26dc`. The integration tip is merged before
-handoff; the final tested Git state is retained in
-[verification state](../../../target/issue-111/verification-state.json).
-
-## Remaining gates
-
-The parent arranges independent review before canonical admission. Combined
-conversion, actual notices/source bundling, native lookup for every audited
-group, representative trusted save/reopen, resource-update preservation and
-native size/performance checks remain parent-owned and unrun for this author
-package. Frontend/Rust/UI checks are unrun because this changes only owned
-content evidence and its resource test. Whole-core, learner acceptance and
-release/platform gates retain their separate states.
+Full reviewer logs and bounded five-group projections are retained under
+`C:/Users/inthe/IdeaProjects/lexique-review-111/target/issue-111-review/`.
+Raw sources remain under the supplied author evidence root; the
+[review document](independent-review.md) records exact paths and commands.
