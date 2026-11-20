@@ -2,8 +2,9 @@
 
 **50 frozen groups / 49 new selected senses / 196 authored fields**, plus
 unchanged accepted `côte/NOM` at row 1911. The denominator remains **4,087
-groups**. All new fields have an exact source binding and await independent
-semantic, selected-span rights and construction/spelling review.
+groups**. All new fields have an exact source binding and pass independent
+semantic, selected-span rights and construction/spelling review. The
+[review](independent-review.md) retains proposals and accepted wording separately.
 
 ## Source and rights boundaries
 
@@ -65,7 +66,8 @@ nautical noun. All five relationships are source bindings with
 `alias_admission=not_admitted`; no runtime alias is added.
 
 The two `soudain` POS groups and two `civil` POS groups remain separate.
-`civil/NOM` selects civilian status, not the technical legal person category.
+`civil/NOM` selects civilian status/life in `dans le civil`, distinct from
+the technical legal person category.
 `saigner` selects the explicitly intransitive loss-of-blood sense despite
 the broader article’s transitive label; `glisser` also selects intransitive
 motion. `visiter` takes a place rather than the obsolete person-visit use;
@@ -117,7 +119,7 @@ interpretation in [field-review.json](field-review.json).
 | 1930 | `celles/PRO:dem` | Pronom démonstratif féminin pluriel remplaçant des personnes ou des choses déjà évoquées ; suivi d’une relative ou d’un groupe prépositionnel. |
 | 1931 | `social/ADJ` | Relatif à une société, une communauté ou une collectivité. |
 | 1932 | `civil/ADJ` | Relatif aux citoyens. |
-| 1933 | `civil/NOM` | Statut des citoyens qui ne sont pas militaires. |
+| 1933 | `civil/NOM` | Dans le civil : statut ou vie des citoyens qui ne sont pas militaires. |
 | 1934 | `vieil/ADJ` | D’un certain âge ; forme masculine singulière de vieux devant une voyelle ou un h muet. |
 | 1935 | `gaffe/NOM` | Familier : bêtise. |
 | 1936 | `vôtre/PRO:pos` | Dans le vôtre, pronom possessif masculin singulier : ce qui est à vous, au pluriel ou par politesse. |
@@ -132,7 +134,7 @@ interpretation in [field-review.json](field-review.json).
 | 1945 | `provoquer/VER` | Causer ; susciter. |
 | 1946 | `durant/PRE` | Tout au long de ; placé avant l’expression de durée. |
 | 1947 | `trembler/VER` | Être agité de petites secousses fréquentes. |
-| 1948 | `embêter/VER` | Énerver ou importuner quelqu’un. |
+| 1948 | `embêter/VER` | Familier : énerver ou importuner quelqu’un. |
 | 1949 | `opinion/NOM` | Avis ou jugement que l’on a sur une chose. |
 | 1950 | `confirmer/VER` | Rendre plus certaine une chose déjà donnée ou reçue pour vraie. |
 
@@ -145,7 +147,7 @@ retains `cote-noun-rib`, `fr_cote` and all four fixed field identifiers;
 the existing accepted `côte/NOM` group is unchanged, with no pending copies.
 
 There are zero author-identified unresolved content groups and no owner
-exceptions, drops or substitutions. All 49 new groups / 196 fields still
-await independent review. Canonical admission, combined notices/conversion,
+exceptions, drops or substitutions. All 49 new groups / 196 fields pass
+independent review. Canonical admission, combined notices/conversion,
 native lookup/save/reopen, learner acceptance and offline/platform/release
 validation remain parent-owned and unrun.

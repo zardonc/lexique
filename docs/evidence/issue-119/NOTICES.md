@@ -6,7 +6,7 @@ Christophe Pallier’s Lexique 3.83, licensed under
 Word/POS values, frequencies and order are unchanged; frozen rows identify
 manifest positions, not runtime entry IDs.
 
-The 196 authored fields select lexical definitions and isolated IPA from
+The 196 independently accepted fields select lexical definitions and isolated IPA from
 fixed French Wiktionnaire articles. Wiktionnaire contributors retain credit
 through each fixed article URL, complete linked history and captured named
 registry. Anonymous contributors are credited through the history; their
@@ -45,5 +45,6 @@ existing [core notices](../../../resources/core-pilot-79/NOTICES.md) and
 [sources.json](sources.json), [source-context.json](source-context.json) and
 [rights.json](rights.json) identify exact versions, selected spans,
 contributors, original layers and authority captures. All new selected-span
-rights and quality judgments remain pending separate independent review.
+rights and quality judgments pass separate independent review, recorded in
+[independent-review.md](independent-review.md) and [rights-review.md](rights-review.md).
 Canonical admission and actual combined package obligations are parent gates.

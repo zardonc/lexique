@@ -1,11 +1,18 @@
-# Issue #119 authored content
+# Issue #119 independently reviewed content
 
 All **50 exact frozen rows 1901–1950** have complete selected content:
 **49 new groups / 49 selected senses / 196 authored FR/IPA/EN/ZH fields**, plus
 the **unchanged accepted côte/NOM group / four fields at row 1911**. The fixed
 denominator remains **4,087 groups**. No assigned group or authored field is
-missing. All 196 new fields await separate independent review; **zero new
-fields are independently accepted or canonically admitted**.
+missing. All **49 new uses / 196 fields are independently accepted**, with
+five exact wording replacements and no unresolved fields. The full batch is
+**50 accepted groups / 200 fields**, counting reused côte once globally.
+Canonical admission and actual combined packaging remain parent-owned.
+
+The [independent review](independent-review.md) records individual field,
+use, spelling and selected-rights decisions; [rights review](rights-review.md)
+records the corrected DAF8 original-work basis. Original proposals are retained
+in [review-candidates.json](review-candidates.json) and `field-review.json`.
 
 The [ticket](https://github.com/zardonc/lexique/issues/119) and
 [parent](https://github.com/zardonc/lexique/issues/78) define this batch. The
@@ -19,13 +26,15 @@ parent’s Testing Decisions authorize the existing resource/admission seam.
 | [source-excerpts.json](source-excerpts.json) | 196 exact new field bindings and construction evidence |
 | [source-context.json](source-context.json) | Selected boundaries, import/reference markers, complete named registries and anonymous counts |
 | [source-captures.json](source-captures.json) | Complete retained API/wikitext paths, contributor pagination and preparation scripts |
-| [field-review.json](field-review.json) | Actual proposed texts and pending independent field/use/spelling review; no côte review copies |
-| [rights.json](rights.json) | Selected author rights proposals, exact spans, authorities and redistribution obligations |
-| [admission.json](admission.json) | New/reused counts, pending review rows and separate parent gates |
+| [field-review.json](field-review.json) | Proposed/accepted texts and independent field/use/spelling reasons; no côte review copies |
+| [rights.json](rights.json) | Original proposals, independent selected-rights decisions, exact spans and obligations |
+| [admission.json](admission.json) | 49 new accepted groups / 196 fields, one reused group / four fields and separate parent gates |
 | [NOTICES.md](NOTICES.md) | Attribution, modification and original-work notices |
 | [COPYING](COPYING) | Complete CC BY-SA 4.0 legal text |
 | [source-research.md](source-research.md) | Selected-use table and construction/spelling evidence |
-| [independent-review.md](independent-review.md) | Separate reviewer handoff |
+| [independent-review.md](independent-review.md) | Independent reviewer result and verification |
+| [review-candidates.json](review-candidates.json) | Unchanged original author group objects and proposals |
+| [rights-review.md](rights-review.md) | Independent original-work and selected-boundary reasoning |
 
 `côte/NOM` retains `cote-noun-rib`, source `fr_cote` and all four accepted
 field objects exactly as recorded in the existing
@@ -35,7 +44,8 @@ continues to supply its quality evidence. It contributes no new pending fields.
 
 ## Author verification
 
-The [focused check](../../../scripts/test_core_batch_119.py) passes **2 tests**.
+The authored [focused check](../../../scripts/test_core_batch_119.py) passed
+**2 tests** before review; the independent review now passes **3 tests**.
 The TDD record covers absent membership/reuse evidence and incomplete source
 metadata before their corresponding passing packages. Complete fixed API
 revisions reproduce the authored source bindings; byte-for-byte reproduction
@@ -74,13 +84,13 @@ authored #116 pattern. Fixed rights authorities are reused unchanged from
 
 ## Remaining gates
 
-All **49 new groups / 196 new fields** need independent semantic,
+All **49 new groups / 196 new fields** pass independent semantic,
 selected-span rights and construction/spelling review. There are **zero
-author-identified unresolved content groups**, owner exceptions, drops or
-substitutions. All spelling/inflection relations are source bindings;
+unresolved content fields**, new owner exceptions, drops or substitutions.
+All spelling/inflection relations are source bindings;
 `alias_admission=not_admitted` throughout.
 
 Canonical admission, combined conversion/notices, actual native
 lookup/save/reopen, learner acceptance and platform/offline/release checks
-remain parent-owned and unrun for this author handoff. Existing learner data
+remain parent-owned and unrun by this reviewer. Existing learner data
 and canonical resources are unchanged.
