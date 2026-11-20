@@ -11380,7 +11380,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for scoped adaptations and explanatory translations.",
-      "status": "candidate_pending_independent_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b102-1057-mme-nom-selected",
@@ -11563,12 +11563,26 @@
           "scope": "Bibliographic source payload only; example prose stays in full local capture."
         }
       ],
-      "original_authors_and_rights": [],
+      "original_authors_and_rights": [
+        {
+          "author": "Wiktionnaire contributors",
+          "rights": "CC-BY-SA-4.0",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=Mme&action=history",
+          "scope": "French title definition at line 10, IPA at line 9, lexical form/etymology at lines 5–8 and modern marital-status note at line 23. No named imported/original bibliographic layer occurs within these selected spans; last editor is capture metadata, not sole authorship.",
+          "independent_review": "passed"
+        },
+        {
+          "author": "Lexique contributors",
+          "rights": "CC-BY-SA-4.0",
+          "scope": "Scoped French adaptation, new English/Chinese explanations and IPA transcription. Writing restrictions are independently worded grammatical facts; copyrighted examples, translation tables, OQLF and Lacroux expressions are unselected.",
+          "independent_review": "passed"
+        }
+      ],
       "selected_text_rights_boundary": "Mme French lexical definition, IPA, inflection/abbreviation templates and contemporary marital-status note only. Literary/news examples and translation-table wording are excluded. Writing restrictions are original Lexique explanations of grammatical facts, corroborated by OQLF; neither OQLF nor Lacroux prose is adapted.",
-      "independent_quality_status": "pending",
-      "independent_selected_span_rights_status": "pending",
-      "reviewer": null,
-      "independence": false
+      "independent_quality_status": "passed",
+      "independent_selected_span_rights_status": "passed",
+      "reviewer": "Independent row1057 Mme content and selected-rights reviewer for issue 102; separate from its author, previous reviewer and merger",
+      "independence": true
     },
     {
       "id": "b102_fr_1634938",
@@ -12056,14 +12070,14 @@
       "frozen_row": 1051,
       "headword": "s",
       "pos": "PRO:per",
-      "reason": "Independently confirmed: exact French s revision 39772394 has a letter section at lines 50–54; apostrophized s’ separately abbreviates se. Neither establishes a bare s personal pronoun or an omitted-apostrophe spelling relation. Lexique exact s/PRO:per has phon Es, the letter pronunciation, and supplies no valid pronoun IPA. Owner scope decision or new exact-spelling evidence is required.",
+      "reason": "Independently confirmed: exact French s revision 39772394 has a letter section at lines 50–54; apostrophized s’ separately abbreviates se. Neither establishes a bare s personal pronoun or an omitted-apostrophe spelling relation. Lexique exact s/PRO:per has phon Es, the letter pronunciation, and supplies no valid pronoun IPA. The project owner approved this exact group as a zero-field annotation for issue #102 on 2026-11-19; four fields remain missing and no alias is added.",
       "fields_pending": [
         "french_definition",
         "ipa",
         "english",
         "chinese"
       ],
-      "owner_approved_exception": false,
+      "owner_approved_exception": true,
       "independent_confirmation": "confirmed_source_gap",
       "evidence": [
         {
@@ -12177,117 +12191,13 @@
           "raw_source_excerpt": "# [[pronom personnel|Pronom personnel]] de la troisième personne des deux [[genre]]s et des deux [[nombre]]s, utilisé comme [[complément d’objet]] d’un [[verbe]] [[transitif]] [[direct]] ou [[indirect]]."
         }
       ],
-      "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger"
-    },
-    {
-      "frozen_row": 1057,
-      "headword": "mme",
-      "pos": "NOM",
-      "reason": "Four sourced author fields are present for the supported lowercase dictionary key mme / French written title Mme. Independent review of the new exact text, construction restrictions and selected rights remains pending; zero new fields are admitted.",
-      "fields_pending": [
-        "french_definition",
-        "ipa",
-        "english",
-        "chinese"
-      ],
-      "owner_approved_exception": false,
-      "independent_confirmation": "passed_spelling_relation_pending_content",
-      "evidence": [
-        {
-          "purpose": "Exact spelling/POS boundary",
-          "source_id": "b102_fr_2370320",
-          "revid": 28507769,
-          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=mme&oldid=28507769",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=mme&action=history",
-          "line_1_based": 3,
-          "column_1_based": 1,
-          "raw_source_excerpt": "== {{langue|conv}} =="
-        },
-        {
-          "purpose": "Exact spelling/POS boundary",
-          "source_id": "b102_fr_2370320",
-          "revid": 28507769,
-          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=mme&oldid=28507769",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=mme&action=history",
-          "line_1_based": 4,
-          "column_1_based": 1,
-          "raw_source_excerpt": "=== {{S|symbole|conv}} ==="
-        },
-        {
-          "purpose": "Exact spelling/POS boundary",
-          "source_id": "b102_fr_2370320",
-          "revid": 28507769,
-          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=mme&oldid=28507769",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=mme&action=history",
-          "line_1_based": 5,
-          "column_1_based": 1,
-          "raw_source_excerpt": "'''mme'''"
-        },
-        {
-          "purpose": "Exact spelling/POS boundary",
-          "source_id": "b102_fr_2370320",
-          "revid": 28507769,
-          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=mme&oldid=28507769",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=mme&action=history",
-          "line_1_based": 6,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# {{lexique|linguistique|conv}} Code {{w|ISO 639-3}} du [[mae]]."
-        },
-        {
-          "purpose": "Exact spelling/POS boundary",
-          "source_id": "b102_fr_193650",
-          "revid": 36554529,
-          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mme&oldid=36554529",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=Mme&action=history",
-          "line_1_based": 3,
-          "column_1_based": 1,
-          "raw_source_excerpt": "== {{langue|fr}} =="
-        },
-        {
-          "purpose": "Exact spelling/POS boundary",
-          "source_id": "b102_fr_193650",
-          "revid": 36554529,
-          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mme&oldid=36554529",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=Mme&action=history",
-          "line_1_based": 5,
-          "column_1_based": 1,
-          "raw_source_excerpt": ": {{date|lang=fr}} {{abréviation|fr|de=Madame|texte='''M'''ada'''me'''}}."
-        },
-        {
-          "purpose": "Exact spelling/POS boundary",
-          "source_id": "b102_fr_193650",
-          "revid": 36554529,
-          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mme&oldid=36554529",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=Mme&action=history",
-          "line_1_based": 7,
-          "column_1_based": 1,
-          "raw_source_excerpt": "=== {{S|nom|fr}} ==="
-        },
-        {
-          "purpose": "Exact spelling/POS boundary",
-          "source_id": "b102_fr_193650",
-          "revid": 36554529,
-          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mme&oldid=36554529",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=Mme&action=history",
-          "line_1_based": 9,
-          "column_1_based": 1,
-          "raw_source_excerpt": "'''Mme''' {{pron|ma.dam|fr}} {{f}}"
-        },
-        {
-          "purpose": "Exact spelling/POS boundary",
-          "source_id": "b102_fr_193650",
-          "revid": 36554529,
-          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mme&oldid=36554529",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=Mme&action=history",
-          "line_1_based": 10,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# [[Madame]] (comme [[titre]])."
-        }
-      ],
       "reviewer": "Independent selected-content and rights reviewer for issue 102; separate from author and merger",
-      "replacement_needs": "Separate independent review of four new exact fields and selected rights; no new author fields are missing.",
-      "author_fields": 4,
-      "independent_review": "pending"
+      "annotation_decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/102",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-19",
+        "decision": "Retain exact frozen row1051 s/PRO:per as a zero-field annotation. Four lexical fields remain missing; no replacement identity, frequency change or runtime alias is approved."
+      }
     }
   ]
 }

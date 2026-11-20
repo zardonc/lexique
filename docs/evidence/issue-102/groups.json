@@ -5,11 +5,11 @@
     "lexique_cgram": "PRO:per",
     "subtitle_lemma_per_million": "82.34",
     "subtitle_pos_per_million": "40.59",
-    "status": "unresolved_exact_spelling_pos",
+    "status": "approved_zero_field_annotation",
     "independent_review": "pending",
     "admitted_fields": 0,
     "missing_fields": 4,
-    "unresolved_reason": "Independently confirmed: exact French s revision 39772394 has a letter section at lines 50–54; apostrophized s’ separately abbreviates se. Neither establishes a bare s personal pronoun or an omitted-apostrophe spelling relation. Lexique exact s/PRO:per has phon Es, the letter pronunciation, and supplies no valid pronoun IPA. Owner scope decision or new exact-spelling evidence is required.",
+    "unresolved_reason": "Confirmed bare-s pronoun source gap; retained by the project owner as a zero-field annotation on 2026-11-19. Four fields remain missing, with exact frozen identity/frequencies and no alias.",
     "senses": [],
     "blocker_evidence": [
       {
@@ -123,7 +123,13 @@
         "raw_source_excerpt": "# [[pronom personnel|Pronom personnel]] de la troisième personne des deux [[genre]]s et des deux [[nombre]]s, utilisé comme [[complément d’objet]] d’un [[verbe]] [[transitif]] [[direct]] ou [[indirect]]."
       }
     ],
-    "independent_confirmation": "confirmed_source_gap"
+    "independent_confirmation": "confirmed_source_gap",
+    "annotation_decision": {
+      "issue": "https://github.com/zardonc/lexique/issues/102",
+      "approved_by": "project_owner",
+      "approved_on": "2026-11-19",
+      "decision": "Retain exact frozen row1051 s/PRO:per as a zero-field annotation. Four lexical fields remain missing; no replacement identity, frequency change or runtime alias is approved."
+    }
   },
   {
     "frozen_row": 1052,
@@ -626,11 +632,11 @@
     "lexique_cgram": "NOM",
     "subtitle_lemma_per_million": "81.7",
     "subtitle_pos_per_million": "81.64",
-    "status": "candidate_pending_independent_review",
-    "independent_review": "pending",
-    "admitted_fields": 0,
-    "missing_fields": 4,
-    "unresolved_reason": "Four sourced author fields are present for the supported lowercase dictionary key mme / French written title Mme. Independent review of the new exact text, construction restrictions and selected rights remains pending; zero new fields are admitted.",
+    "status": "accepted_pending_batch_completion",
+    "independent_review": "passed",
+    "admitted_fields": 4,
+    "missing_fields": 0,
+    "unresolved_reason": null,
     "senses": [
       {
         "sense_id": "b102-1057-mme-nom-selected",
@@ -648,10 +654,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique contributor adaptation of the French title definition and modern marital-status note, with independently worded explanatory translation and writing restrictions; no bilingual table, example or proprietary prose copied.",
             "author_validation": "passed_fixed_source_binding_and_scoped_draft_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_independent_selected_text_boundary_review",
-            "reviewer": null,
-            "independence": false
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent row1057 Mme content and selected-rights reviewer for issue 102; separate from its author, previous reviewer and merger",
+            "independence": true
           },
           "ipa": {
             "language": "und",
@@ -665,10 +671,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "French ma.dam IPA template transcribed with slash delimiters; no audio copied.",
             "author_validation": "passed_fixed_source_binding_and_scoped_draft_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_independent_selected_text_boundary_review",
-            "reviewer": null,
-            "independence": false
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent row1057 Mme content and selected-rights reviewer for issue 102; separate from its author, previous reviewer and merger",
+            "independence": true
           },
           "english": {
             "language": "en",
@@ -682,10 +688,10 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique contributor adaptation of the French title definition and modern marital-status note, with independently worded explanatory translation and writing restrictions; no bilingual table, example or proprietary prose copied.",
             "author_validation": "passed_fixed_source_binding_and_scoped_draft_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_independent_selected_text_boundary_review",
-            "reviewer": null,
-            "independence": false
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent row1057 Mme content and selected-rights reviewer for issue 102; separate from its author, previous reviewer and merger",
+            "independence": true
           },
           "chinese": {
             "language": "zh",
@@ -699,19 +705,19 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "Lexique contributor adaptation of the French title definition and modern marital-status note, with independently worded explanatory translation and writing restrictions; no bilingual table, example or proprietary prose copied.",
             "author_validation": "passed_fixed_source_binding_and_scoped_draft_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_independent_selected_text_boundary_review",
-            "reviewer": null,
-            "independence": false
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "Independent row1057 Mme content and selected-rights reviewer for issue 102; separate from its author, previous reviewer and merger",
+            "independence": true
           }
         },
-        "independent_review": "pending",
-        "independence": false,
-        "reviewer": null,
+        "independent_review": "passed",
+        "independence": true,
+        "reviewer": "Independent row1057 Mme content and selected-rights reviewer for issue 102; separate from its author, previous reviewer and merger",
         "source_headword": "Mme",
         "use_language": "en",
         "excluded_uses": "Translingual ISO code mme; letter names; common-noun madame for an anonymous adult woman; historical royal or household-servant titles. Lowercase running-text typography and abbreviation in direct address are not the selected use.",
-        "resource_admission": "pending",
+        "resource_admission": "passed_independent_content_review",
         "cefr": null
       }
     ],
@@ -807,7 +813,7 @@
         "raw_source_excerpt": "# [[Madame]] (comme [[titre]])."
       }
     ],
-    "independent_confirmation": "passed_spelling_relation_pending_content",
+    "independent_confirmation": "passed_exact_content_and_selected_rights",
     "spelling_relation_review": {
       "frozen_row": 1057,
       "frozen_headword": "mme",

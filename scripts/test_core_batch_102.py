@@ -58,7 +58,7 @@ class Batch102Tests(unittest.TestCase):
         review = json.loads((EVIDENCE / "field-review.json").read_text(encoding="utf-8"))
         reviewed_fields = {(sense["sense_id"], name): field for group in reviewed
                            for sense in group["senses"] for name, field in sense["fields"].items()}
-        self.assertEqual(len(review["fields"]), 192)
+        self.assertEqual(len(review["fields"]), 196)
         for decision in review["fields"]:
             field = reviewed_fields[decision["sense_id"], decision["field"]]
             self.assertEqual(field["text"], decision["accepted_text"])
@@ -68,8 +68,10 @@ class Batch102Tests(unittest.TestCase):
         admission = json.loads((EVIDENCE / "admission.json").read_text(encoding="utf-8"))
         self.assertEqual(admission["status"], "pending")
         self.assertTrue(admission["independence"])
-        self.assertEqual((admission["accepted_groups"], admission["accepted_fields"]), (48, 192))
-        self.assertEqual(admission["approved_annotation_exceptions"], [])
+        self.assertEqual((admission["accepted_groups"], admission["accepted_fields"]), (49, 196))
+        self.assertEqual(admission["approved_annotation_groups"], 1)
+        self.assertEqual(admission["completed_target_groups"], 50)
+        self.assertEqual(admission["approved_annotation_exceptions"], review["annotation_exceptions"])
         languages = {"french_definition": "fr", "ipa": "und", "english": "en", "chinese": "zh"}
         for group in candidates["groups"]:
             for sense in group["senses"]:
@@ -94,33 +96,49 @@ class Batch102Tests(unittest.TestCase):
                         self.assertIn("oldid=" + str(binding["revid"]), binding["fixed_url"])
                         self.assertTrue(field["modification"])
 
-    def test_mme_title_has_four_pending_fields_without_admitting_bare_s(self):
+    def test_mme_title_has_four_reviewed_fields_and_bare_s_has_zero_field_annotation(self):
         groups = json.loads((EVIDENCE / "groups.json").read_text(encoding="utf-8"))
         blocked, mme = groups[0], groups[6]
         self.assertEqual((blocked["frozen_row"], blocked["headword"], blocked["lexique_cgram"]),
                          (1051, "s", "PRO:per"))
         self.assertEqual(blocked["senses"], [])
+        self.assertEqual((blocked["admitted_fields"], blocked["missing_fields"]), (0, 4))
         self.assertEqual((mme["frozen_row"], mme["headword"], mme["lexique_cgram"]),
                          (1057, "mme", "NOM"))
-        self.assertEqual((mme["admitted_fields"], mme["missing_fields"]), (0, 4))
-        self.assertEqual(mme["independent_review"], "pending")
+        self.assertEqual((mme["admitted_fields"], mme["missing_fields"]), (4, 0))
+        self.assertEqual(mme["independent_review"], "passed")
         self.assertEqual(len(mme["senses"]), 1)
         sense = mme["senses"][0]
-        self.assertEqual(sense["independent_review"], "pending")
+        self.assertEqual(sense["independent_review"], "passed")
         self.assertEqual(set(sense["fields"]), {"french_definition", "ipa", "english", "chinese"})
         self.assertEqual(sense["fields"]["ipa"]["text"], "/ma.dam/")
         for name, field in sense["fields"].items():
             self.assertEqual(field["source_id"], "b102_fr_193650")
             expected = "{{pron|ma.dam|fr}}" if name == "ipa" else "# [[Madame]] (comme [[titre]])."
             self.assertEqual(field["source_span"]["raw_source_excerpt"], expected)
-            self.assertEqual(field["independent_review"], "pending")
+            self.assertEqual(field["independent_review"], "passed")
             self.assertEqual(field["rights_eligibility_status"],
-                             "pending_independent_selected_text_boundary_review")
-            self.assertIsNone(field["reviewer"])
-            self.assertFalse(field["independence"])
+                             "passed_at_selected_text_boundary")
+            self.assertTrue(field["reviewer"])
+            self.assertTrue(field["independence"])
         admission = json.loads((EVIDENCE / "admission.json").read_text(encoding="utf-8"))
-        self.assertEqual(admission["missing_admitted_fields"], 8)
+        self.assertEqual(admission["missing_admitted_fields"], 4)
         self.assertEqual(admission["runtime_aliases_added"], [])
+        annotation, = admission["approved_annotation_exceptions"]
+        self.assertEqual((annotation["frozen_row"], annotation["headword"], annotation["pos"]),
+                         (1051, "s", "PRO:per"))
+        self.assertEqual((annotation["admitted_fields"], annotation["missing_fields"]), (0, 4))
+        decision = annotation["decision"]
+        self.assertEqual(decision["issue"], "https://github.com/zardonc/lexique/issues/102")
+        self.assertEqual(decision["approved_by"], "project_owner")
+        self.assertEqual(decision["approved_on"], "2026-11-19")
+        self.assertEqual(decision, blocked["annotation_decision"])
+        proof = json.loads((EVIDENCE / "mme-independent-review.json").read_text(encoding="utf-8"))
+        self.assertTrue(proof["independence"])
+        self.assertEqual(proof["newly_accepted_fields"], 4)
+        self.assertEqual({field["field"] for field in proof["fields"]}, set(sense["fields"]))
+        for field in proof["fields"]:
+            self.assertEqual(field["accepted_text"], sense["fields"][field["field"]]["text"])
 
 
 if __name__ == "__main__":
