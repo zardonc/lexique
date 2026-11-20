@@ -117,7 +117,7 @@ test('core conflicts identify the saved meaning while retaining the current draf
     dictionary_settings: [{ value: coreCatalog }], vocabulary_list: [{ value: [original] }],
     vocabulary_save: [{ value: { outcome: 'conflict', record: current } }] });
   await page.goto('/');
-  await page.getByRole('button', { name: 'Notebook', exact: true }).click();
+  await page.getByRole('button', { name: 'Notes', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
   await page.getByLabel('Personal notes', { exact: true }).fill('Keep my draft');
   await page.getByRole('button', { name: 'Save', exact: true }).click();
@@ -151,7 +151,7 @@ test('saved core content stays readable when its source fails and another dictio
     };
   }, { unavailable, supplement });
   await page.goto('/');
-  await page.getByRole('button', { name: 'Notebook', exact: true }).click();
+  await page.getByRole('button', { name: 'Notes', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
   await expect(page.getByRole('region', { name: 'Dictionary text', exact: true }).getByRole('alert')).toContainText('Core fixture resource unavailable');
   const summary = page.getByRole('region', { name: 'View and edit', exact: true }).getByRole('region', { name: 'Word summary', exact: true });
@@ -170,7 +170,7 @@ test('saved core content stays readable when its source fails and another dictio
   await other.focus(); await other.press('Enter');
   await expect(other).toHaveAttribute('aria-selected', 'true');
   await expect(page.locator('.dictionary-entry').getByText('to be', { exact: true })).toBeVisible();
-  await page.getByRole('button', { name: 'Notebook', exact: true }).click();
+  await page.getByRole('button', { name: 'Notes', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
   await expect(noun.getByText('存在的个体，尤指生物。', { exact: true })).toBeVisible();
   await expect(page.getByLabel('Meaning for examples', { exact: true })).toHaveValue('1');
@@ -182,7 +182,7 @@ test('both core review backs show four fields, provenance and the associated exa
     dictionary_settings: [{ value: coreCatalog }], vocabulary_list: [{ value: [saved] }],
     review_cards: [{ value: [{ id: 10, kind: 'recognition' }, { id: 11, kind: 'listening' }] }], speech_cached: [{ value: audio }] });
   await page.goto('/');
-  await page.getByRole('button', { name: 'Notebook', exact: true }).click();
+  await page.getByRole('button', { name: 'Notes', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
   for (const [open, name] of [['Open recognition card', 'Recognition card'], ['Open listening card', 'Listening card']]) {
     await page.getByRole('button', { name: open, exact: true }).click();
@@ -222,7 +222,7 @@ test('core saving and notebook details keep selected example meaning and complet
   await page.getByRole('button', { name: 'Save', exact: true }).click();
   await expect(page.getByRole('status').filter({ hasText: /^Saved$/ })).toBeVisible();
   await expect(page.getByLabel('Meaning for examples', { exact: true })).toHaveValue('1');
-  await page.getByRole('button', { name: 'Notebook', exact: true }).click();
+  await page.getByRole('button', { name: 'Notes', exact: true }).click();
   const item = page.locator('.vocabulary-list button');
   await expect(item).toContainText('存在的个体，尤指生物。');
   await expect(item.getByText('存在的个体，尤指生物。', { exact: true })).toHaveAttribute('lang', 'zh');

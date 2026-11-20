@@ -287,6 +287,7 @@ fn warm_queue_reuses_the_loaded_positions() {
 
 fn saved_word(connection: &mut Connection) -> i64 {
     let request = SaveRequest {
+        category_ids: vec![],
         operation: "create-review-word".into(),
         headword: "école".into(),
         notes: "my notes".into(),
@@ -526,6 +527,7 @@ fn auto_enrollment_applies_only_to_newly_saved_words() {
     assert!(review_cards(&connection, existing).unwrap().is_empty());
     let original = lexique_storage::get(&connection, existing).unwrap();
     let request = SaveRequest {
+        category_ids: vec![],
         operation: "new-auto-word".into(),
         headword: "bonjour".into(),
         notes: String::new(),
@@ -566,6 +568,7 @@ fn auto_enrollment_rolls_back_word_and_cards_when_card_creation_fails() {
     lexique_storage::set_auto_enroll(&connection, true).unwrap();
     connection.execute_batch("CREATE TRIGGER fail_listening BEFORE INSERT ON review_cards WHEN NEW.kind = 'listening' BEGIN SELECT RAISE(ABORT, 'card creation failed'); END;").unwrap();
     let request = SaveRequest {
+        category_ids: vec![],
         operation: "failed-auto-word".into(),
         headword: "bonjour".into(),
         notes: String::new(),
@@ -722,6 +725,7 @@ fn undo_rating_outside_queue_keeps_later_notes_and_settings() {
     let edited = save(
         &mut connection,
         &SaveRequest {
+            category_ids: vec![],
             operation: "edit-after-rating".into(),
             headword: record.headword,
             notes: "Notes saved after the rating\nÉcole : mon exemple.".into(),
@@ -1027,7 +1031,7 @@ fn legacy_schema_upgrade_undo_retry_survives_reopening() {
                 .execute_batch(&format!("DROP TRIGGER {trigger}"))
                 .unwrap();
         }
-        connection.execute_batch("DROP VIEW audio_version_protection; DROP TABLE review_queue_changes; DROP TABLE word_audio_repairs; DROP TABLE word_audio_operations; DROP TABLE word_audio_publications; DROP TABLE word_audio_imports; DROP TABLE word_audio_selections; DROP TABLE speech_versions; DROP TABLE review_batch_items; DROP TABLE review_batches; DROP TABLE speech_tasks; DROP TABLE speech_owners; DROP TABLE legacy_speech; DROP TABLE speech_assets;").unwrap();
+        connection.execute_batch("DROP TABLE grammar_cards; DROP TABLE record_categories; DROP TABLE learning_categories; DROP TABLE retained_review_usage; DROP TABLE deleted_grammar_operations; DROP VIEW audio_version_protection; DROP TABLE review_queue_changes; DROP TABLE word_audio_repairs; DROP TABLE word_audio_operations; DROP TABLE word_audio_publications; DROP TABLE word_audio_imports; DROP TABLE word_audio_selections; DROP TABLE speech_versions; DROP TABLE review_batch_items; DROP TABLE review_batches; DROP TABLE speech_tasks; DROP TABLE speech_owners; DROP TABLE legacy_speech; DROP TABLE speech_assets;").unwrap();
         connection.execute_batch("DROP TABLE review_paused; DROP INDEX review_ratings_undo_operation; ALTER TABLE review_ratings DROP COLUMN undo_operation; ALTER TABLE review_ratings DROP COLUMN undo_queue_rebuilt; ALTER TABLE vocabulary DROP COLUMN example_fr; ALTER TABLE vocabulary DROP COLUMN example_zh; ALTER TABLE vocabulary DROP COLUMN more_examples; ALTER TABLE vocabulary DROP COLUMN example_sense; ALTER TABLE vocabulary DROP COLUMN example_source; PRAGMA user_version = 5;").unwrap();
     }
     {

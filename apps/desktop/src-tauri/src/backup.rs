@@ -32,6 +32,10 @@ pub enum BackupPhase {
 #[serde(deny_unknown_fields)]
 pub struct BackupCounts {
     pub vocabulary: u64,
+    #[serde(default)]
+    pub grammar: u64,
+    #[serde(default)]
+    pub categories: u64,
     pub cards: u64,
     pub ratings: u64,
     pub batches: u64,
@@ -59,6 +63,8 @@ impl BackupCounts {
             .collect::<Vec<_>>();
         Self {
             vocabulary: snapshot.records.len() as u64,
+            grammar: snapshot.grammar_records.len() as u64,
+            categories: snapshot.categories.len() as u64,
             cards: snapshot.cards.len() as u64,
             ratings: snapshot.ratings.len() as u64,
             batches: snapshot.batches.len() as u64,
@@ -525,7 +531,7 @@ pub fn validate_backup(
     .map_err(|e| format!("Invalid backup manifest: {e}"))?;
     if manifest.kind != "lexique-backup"
         || manifest.format_version != 1
-        || !matches!(manifest.snapshot_version, 1 | 2)
+        || !matches!(manifest.snapshot_version, 1 | 2 | 3)
         || !(0..=SAFE_INTEGER as i64).contains(&manifest.created_at)
         || manifest.application_version.trim().is_empty()
         || manifest.application_version.len() > 200
@@ -925,6 +931,7 @@ mod tests {
         let result = storage::save(
             connection,
             &storage::SaveRequest {
+                category_ids: vec![],
                 operation: format!("fixture-{}", NEXT_DIRECTORY.fetch_add(1, Ordering::Relaxed)),
                 headword: headword.into(),
                 notes: "Mes notes\n个人笔记".into(),
@@ -1313,17 +1320,31 @@ mod tests {
         storage::initialize(&connection).unwrap();
         let time = 1_794_564_000;
         let snapshot = storage::export_learning_snapshot(&mut connection, time).unwrap();
-        assert_eq!(snapshot.snapshot_version, 2);
-        for version in [2, 1] {
+        assert_eq!(snapshot.snapshot_version, 3);
+        for version in [3, 2, 1] {
             let mut value = serde_json::to_value(&snapshot).unwrap();
             value["snapshot_version"] = version.into();
+            if version < 3 {
+                for key in [
+                    "grammar_records",
+                    "grammar_save_operations",
+                    "categories",
+                    "retained_review_usage",
+                    "identities",
+                ] {
+                    value.as_object_mut().unwrap().remove(key);
+                }
+                for key in ["grammar_sort", "undo_blocked"] {
+                    value["preferences"].as_object_mut().unwrap().remove(key);
+                }
+            }
             if version == 1 {
                 value["dictionary_catalog"]["entries"]
                     .as_array_mut()
                     .unwrap()
                     .retain(|entry| entry["id"] != "builtin-core");
             }
-            let mut manifest = BackupManifest {
+            let manifest = BackupManifest {
                 kind: "lexique-backup".into(),
                 format_version: 1,
                 snapshot_version: version,
@@ -1331,10 +1352,19 @@ mod tests {
                 application_version: "0.1.0".into(),
                 counts: BackupCounts::from_snapshot(&snapshot),
             };
+            let mut manifest_value = serde_json::to_value(&manifest).unwrap();
+            if version < 3 {
+                for key in ["grammar", "categories"] {
+                    manifest_value["counts"]
+                        .as_object_mut()
+                        .unwrap()
+                        .remove(key);
+                }
+            }
             let mut entries = vec![
                 (
                     "manifest.json".into(),
-                    serde_json::to_vec(&manifest).unwrap(),
+                    serde_json::to_vec(&manifest_value).unwrap(),
                 ),
                 ("snapshot.json".into(), serde_json::to_vec(&value).unwrap()),
             ];
@@ -1346,9 +1376,18 @@ mod tests {
             let admitted = validate_backup(&file, &staging.0, &AtomicBool::new(false)).unwrap();
             assert_eq!(admitted.snapshot.snapshot_version, version);
             assert_eq!(admitted.snapshot.dictionary_catalog.entries.len(), 3);
+            assert_eq!(admitted.manifest.counts.grammar, 0);
+            assert_eq!(admitted.manifest.counts.categories, 0);
+            assert!(admitted.snapshot.grammar_records.is_empty());
+            assert!(admitted.snapshot.categories.is_empty());
+            assert_eq!(
+                admitted.snapshot.preferences.grammar_sort,
+                storage::DEFAULT_SORT
+            );
+            assert!(!admitted.snapshot.preferences.undo_blocked);
             drop(staging);
-            manifest.snapshot_version = if version == 1 { 2 } else { 1 };
-            entries[0].1 = serde_json::to_vec(&manifest).unwrap();
+            manifest_value["snapshot_version"] = if version == 1 { 2 } else { 1 }.into();
+            entries[0].1 = serde_json::to_vec(&manifest_value).unwrap();
             assert_archive_rejected(
                 &directory,
                 &format!("version-disagreement-{version}"),
@@ -2447,7 +2486,7 @@ mod tests {
         for (field, value) in [
             ("kind", serde_json::json!("other")),
             ("format_version", serde_json::json!(2)),
-            ("snapshot_version", serde_json::json!(3)),
+            ("snapshot_version", serde_json::json!(4)),
             ("created_at", serde_json::json!(9_007_199_254_740_992_i64)),
             ("application_version", serde_json::json!("")),
             ("unknown", serde_json::json!(true)),

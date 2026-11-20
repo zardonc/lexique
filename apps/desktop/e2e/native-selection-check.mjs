@@ -97,7 +97,7 @@ try {
   shortcut('Lexique selection editor');
   await captured(page, raw);
   results.push({ check: 'Win32 RichEdit → custom shortcut → translation input → explicit dictionary lookup', passed: true });
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list li').filter({ hasText: 'école' }).getByRole('button').click();
   await page.getByLabel('独立笔记', { exact: true }).fill('Draft to preserve');
   shortcut('Lexique selection editor');

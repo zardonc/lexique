@@ -26,6 +26,7 @@ use conjugation::{conjugation_block_order, conjugation_lookup, conjugation_prefe
 use dictionaries::{
     dictionary_import, dictionary_lookup, dictionary_relink, dictionary_remove, dictionary_settings,
 };
+mod notes;
 mod speech_cache;
 mod speech_tasks;
 mod startup;
@@ -184,6 +185,17 @@ pub fn run() {
             conjugation_block_order,
             vocabulary_find,
             vocabulary_list,
+            notes::grammar_list,
+            notes::grammar_get,
+            notes::grammar_save,
+            notes::grammar_card_save,
+            notes::grammar_delete,
+            notes::grammar_sort,
+            notes::learning_categories,
+            notes::category_create,
+            notes::category_rename,
+            notes::category_delete,
+            notes::category_bulk,
             vocabulary_save,
             vocabulary_sort,
             review_add,

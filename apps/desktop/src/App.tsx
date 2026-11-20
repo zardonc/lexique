@@ -30,6 +30,11 @@ import { StartupFeedback, StartupScreen, useStartup } from './startup';
 import type { StartupStatus } from './platform/backup';
 import { RestoreScreen, useFormalRestore } from './backup-restore';
 import type { FormalRestore } from './backup-restore';
+import { useGrammarNotebook } from './use-grammar-notebook';
+import { GrammarEditor } from './grammar-editor';
+import { useLearningCategories } from './learning-categories';
+import type { NotebookMutation } from './learning-categories';
+import { errorMessage } from './platform/vocabulary';
 
 const themes: readonly Theme[] = ['white', 'sepia', 'dark'];
 const locales: readonly Locale[] = ['zh', 'en', 'fr'];
@@ -83,53 +88,85 @@ export function App({ runtime }: { readonly runtime: RuntimeAdapter }) {
   return startup.status?.state === 'ready' && !startup.error && !startup.pending ? <LearningApp runtime={runtime} startup={startup.status} restore={restore} /> : <StartupScreen runtime={runtime} startup={startup} restore={restore} />;
 }
 
-function LearningApp({ runtime, startup, restore }: { readonly runtime: RuntimeAdapter; readonly startup: StartupStatus; readonly restore: FormalRestore }) {
+function useLearningState(runtime: RuntimeAdapter) {
   const preferences = useInterfacePreferences(runtime);
   const { locale, theme } = preferences.value;
   const [collapsed, setCollapsed] = useState(false), [backupPaused, setBackupPaused] = useState(false);
+  const [notesBusy, setNotesBusy] = useState(false), [categoryVersion, setCategoryVersion] = useState(0), [mutationError, setMutationError] = useState('');
   const batch = useBatchReview(runtime);
   const [reviewVersion, setReviewVersion] = useState(0);
   const reviewChanged = () => setReviewVersion((value) => value + 1);
   const text = messages[locale], notebookText = notebookMessages[locale];
   const notebook = useNotebook(runtime);
-  const guard = useLeaveGuard(runtime, notebook, batch.working);
-  const navigation = useLookupNavigation((action) => guard.request(() => { notebook.clear(); action(); }));
+  const grammar = useGrammarNotebook(runtime), categories = useLearningCategories(runtime, categoryVersion);
+  const clearEditors = () => { notebook.clear(); grammar.clear(); };
+  const editor = { ...(grammar.editor ? grammar : notebook), busy: notebook.busy || grammar.busy, clear: clearEditors };
+  const guard = useLeaveGuard(runtime, editor, batch.working || notesBusy);
+  const scopeChange = (action: () => void) => guard.request(() => { clearEditors(); action(); });
+  const navigation = useLookupNavigation(scopeChange);
+  const mutate: NotebookMutation = (action) => {
+    const refreshEditor = !editor.dirty;
+    guard.request(() => {
+      setNotesBusy(true); setMutationError('');
+      void action().then(async (changed) => {
+        if (!changed) return;
+        setCategoryVersion((value) => value + 1); reviewChanged();
+        if (refreshEditor) await Promise.all([notebook.refresh(), grammar.refresh()]);
+      }).catch((cause: unknown) => setMutationError(errorMessage(cause))).finally(() => setNotesBusy(false));
+    });
+  };
   const page = navigation.page;
   const selection = useSelectionInput(runtime, { page, locale }, navigation.openInput);
   useEffect(() => { document.documentElement.lang = languageTags[locale]; }, [locale]);
+  return { preferences, locale, theme, collapsed, backupPaused, notesBusy, mutationError, reviewVersion, reviewChanged, text, notebookText,
+    notebook, grammar, categories, editor, guard, navigation, page, selection, mutate, scopeChange, batch, setBackupPaused,
+    toggleCollapsed: () => setCollapsed((value) => !value) };
+}
+
+function LearningPage({ runtime, state }: { readonly runtime: RuntimeAdapter; readonly state: ReturnType<typeof useLearningState> }) {
+  const { page, locale, text, notebookText, notebook, grammar, categories, navigation, selection, mutate, scopeChange, guard, reviewVersion, batch } = state;
+  if (page === 0) return <DictionaryPanel runtime={runtime} text={text.dictionary} notebookText={notebookText} version={notebook.version}
+    preserveExcerpt={notebook.preservesExcerpt} locale={locale} initial={navigation.dictionary} onConjugation={navigation.openConjugation}
+    onExcerpt={(result, record) => { const start = () => { grammar.clear(); notebook.beginExcerpt(result, record); }; if (notebook.editor?.snapshot.headword === result.entries[0]?.key && !notebook.excerpt && !notebook.busy) start(); else guard.request(start); }} onCollect={(result) => scopeChange(() => notebook.collect(result))}
+    onOpen={(record) => scopeChange(() => notebook.open(record))} beforeSearch={navigation.beforeSearch} />;
+  if (page === 1) return <ConjugationPanel runtime={runtime} locale={locale} initial={navigation.conjugation} onChange={navigation.setConjugation} onDictionary={navigation.openDictionary} />;
+  if (page === 2) return <NotebookPanel runtime={runtime} version={notebook.version + grammar.version + reviewVersion} text={notebookText} batch={batch}
+    categories={categories} onMutation={mutate} onScopeChange={scopeChange} onCreateGrammar={() => scopeChange(grammar.create)}
+    onOpen={(record) => scopeChange(() => { if ('title' in record) grammar.open(record); else notebook.open(record); })} />;
+  if (page === 3) return <ReviewQueuePanel runtime={runtime} locale={locale} text={notebookText} />;
+  if (page === 5) return <LookupInputPanel runtime={runtime} locale={locale} selection={selection.input} onCancel={selection.cancel} onDictionary={navigation.openDictionaryResult} />;
+  if (page === 7) return <SettingsPanels runtime={runtime} locale={locale} />;
+  return <div className="empty-state"><p>{text.pending[page]}</p><small>{text.scaffold}</small></div>;
+}
+
+function LearningApp({ runtime, startup, restore }: { readonly runtime: RuntimeAdapter; readonly startup: StartupStatus; readonly restore: FormalRestore }) {
+  const state = useLearningState(runtime);
+  const { preferences, locale, theme, collapsed, backupPaused, notesBusy, text, notebookText, notebook, grammar, categories,
+    editor, guard, navigation, page, selection, reviewChanged, mutationError, scopeChange, batch } = state;
   return <ExampleSpeechGroup><div className="app" data-theme={theme} data-collapsed={collapsed}>
     <a className="skip-link" href="#main-content">{text.skip}</a>
-    <Navigation text={text} selected={page} collapsed={collapsed} disabled={backupPaused} onSelect={navigation.changePage} onToggle={() => setCollapsed((value) => !value)} />
+    <Navigation text={text} selected={page} collapsed={collapsed} disabled={backupPaused || notesBusy} onSelect={navigation.changePage} onToggle={state.toggleCollapsed} />
     <div className="workspace"><fieldset className="backup-controls" disabled={backupPaused}><Header text={text} preferences={preferences} onLocal={selection.local} selectionError={selection.error} /></fieldset>
       <main id="main-content" tabIndex={-1}>
         <p className="eyebrow">{text.eyebrow}</p><h1 id="main-page-heading">{text.modules[page]}</h1><StartupFeedback runtime={runtime} status={startup} locale={locale} />
         <section className="page-content" aria-labelledby={pageTitleId(page)}>
-          <BackupSettings runtime={runtime} locale={locale} beforeStart={(action) => guard.request(() => { notebook.clear(); action(); })} onPause={setBackupPaused} onResolved={batch.confirmPending} visible={page === 7} restore={restore} />
-          <fieldset className="backup-controls" disabled={backupPaused}>
+          <BackupSettings runtime={runtime} locale={locale} beforeStart={scopeChange} onPause={state.setBackupPaused} onResolved={batch.confirmPending} visible={page === 7} restore={restore} />
+          <fieldset className="backup-controls" disabled={backupPaused || notesBusy}>
           <PageIntroduction page={page} text={text} />
-          {page === 0 ? <DictionaryPanel runtime={runtime} text={text.dictionary} notebookText={notebookText} version={notebook.version}
-            preserveExcerpt={notebook.preservesExcerpt} locale={locale} initial={navigation.dictionary} onConjugation={navigation.openConjugation}
-            onExcerpt={(result, record) => { const start = () => notebook.beginExcerpt(result, record); if (notebook.editor?.snapshot.headword === result.entries[0]?.key && !notebook.excerpt && !notebook.busy) start(); else guard.request(start); }} onCollect={(result) => guard.request(() => notebook.collect(result))}
-            onOpen={(record) => guard.request(() => notebook.open(record))}
-            beforeSearch={navigation.beforeSearch} /> : page === 1 ?
-            <ConjugationPanel runtime={runtime} locale={locale} initial={navigation.conjugation} onChange={navigation.setConjugation} onDictionary={navigation.openDictionary} /> : page === 2 ?
-            <NotebookPanel runtime={runtime} version={notebook.version + reviewVersion} text={notebookText} batch={batch}
-              onOpen={(record) => guard.request(() => notebook.open(record))} /> : page === 3 ? <ReviewQueuePanel runtime={runtime} locale={locale} text={notebookText} /> : page === 5 ?
-            <LookupInputPanel runtime={runtime} locale={locale} selection={selection.input} onCancel={selection.cancel}
-              onDictionary={navigation.openDictionaryResult} /> : page === 7 ?
-            <SettingsPanels runtime={runtime} locale={locale} /> :
-            <div className="empty-state"><p>{text.pending[page]}</p><small>{text.scaffold}</small></div>}
-          <VocabularyEditor notebook={notebook} text={notebookText} runtime={runtime} onReviewChanged={reviewChanged} viewExisting={() => {
-            if (notebook.existing) { const record = notebook.existing; guard.request(() => notebook.open(record)); }
+          <LearningPage runtime={runtime} state={state} />
+          <VocabularyEditor notebook={notebook} categories={categories} text={notebookText} runtime={runtime} onReviewChanged={reviewChanged} viewExisting={() => {
+            if (notebook.existing) { const record = notebook.existing; scopeChange(() => notebook.open(record)); }
           }} />
+          <GrammarEditor notebook={grammar} categories={categories} runtime={runtime} text={notebookText} onChanged={reviewChanged} />
           {page === 2 && notebook.editor && <RecordOriginal reference={notebook.editor.snapshot.reference}
             runtime={runtime} text={text.dictionary} title={notebookText.original} />}
           {guard.error && <p role="alert">{notebookText.closeError}: {guard.error}</p>}
+          {mutationError && <p role="alert">{notebookText.notesText.categoryError}: {mutationError}</p>}
           <BatchProgress batch={batch} text={notebookText} /></fieldset>
         </section>
         <RuntimeStatusPanel runtime={runtime} text={text} />
       </main>
     </div>
-    <LeaveDialog guard={guard} notebook={notebook} text={notebookText} />
+    <LeaveDialog guard={guard} notebook={editor} text={notebookText} />
   </div></ExampleSpeechGroup>;
 }

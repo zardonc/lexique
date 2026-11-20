@@ -8,6 +8,7 @@ interface Editor {
   readonly snapshot: VocabularySnapshot;
   readonly record: VocabularyRecord | null;
   readonly notes: string;
+  readonly category_ids: readonly number[];
   readonly example_fr: string;
   readonly example_zh: string;
   readonly example_source?: VocabularyRecord['reference'] | null;
@@ -16,11 +17,11 @@ interface Editor {
 }
 
 function acceptRecord(record: VocabularyRecord): Editor {
-  return { snapshot: record, record, notes: record.notes, example_fr: record.example_fr, example_zh: record.example_zh, example_source: record.example_source, example_sense: record.example_sense, more_examples: record.more_examples };
+  return { snapshot: record, record, notes: record.notes, category_ids: record.category_ids ?? [], example_fr: record.example_fr, example_zh: record.example_zh, example_source: record.example_source, example_sense: record.example_sense, more_examples: record.more_examples };
 }
 
 function savePayload(editor: Editor) {
-  return { headword: editor.snapshot.headword, notes: editor.notes, example_fr: editor.example_fr, example_zh: editor.example_zh, example_source: editor.example_source, example_sense: editor.example_sense, more_examples: editor.more_examples,
+  return { headword: editor.snapshot.headword, notes: editor.notes, category_ids: editor.category_ids, example_fr: editor.example_fr, example_zh: editor.example_zh, example_source: editor.example_source, example_sense: editor.example_sense, more_examples: editor.more_examples,
     id: editor.record?.id ?? null, revision: editor.record?.revision ?? null };
 }
 
@@ -72,6 +73,23 @@ function hasExcerptSource(editor: Editor | null) {
   return editor && [editor.example_source, ...editor.more_examples.map((example) => example.source)].some(Boolean);
 }
 
+async function refreshVocabulary(runtime: RuntimeAdapter, record: VocabularyRecord | null, state: {
+  readonly open: (record: VocabularyRecord) => void; readonly setBusy: (value: boolean) => void; readonly setError: (value: string) => void;
+}) {
+  if (!record) return;
+  state.setBusy(true);
+  try {
+    const current = await runtime.findVocabulary(record.headword);
+    if (!current || current.id !== record.id) throw new Error('Vocabulary record unavailable');
+    state.open(current);
+  } catch (cause) { state.setError(errorMessage(cause)); }
+  finally { state.setBusy(false); }
+}
+
+function hasUnsavedNotes(editor: Editor | null, operation: SaveRequest | null) {
+  return editor !== null && (editor.record === null || !samePayload({ ...savePayload(acceptRecord(editor.record)), operation: '' }, savePayload(editor)) || operation !== null);
+}
+
 export function useNotebook(runtime: RuntimeAdapter) {
   const [editor, setEditor] = useState<Editor | null>(null);
   const [conflict, setConflict] = useState<VocabularyRecord | null>(null);
@@ -85,7 +103,7 @@ export function useNotebook(runtime: RuntimeAdapter) {
   function clear() { excerpts.cancelExcerpt(); setEditor(null); setConflict(null); setExisting(null); setError(''); setSaved(false); operation.current = null; }
   function open(record: VocabularyRecord) { clear(); setEditor(acceptRecord(record)); }
   function collect(lookup: DictionaryLookup) {
-    clear(); setEditor({ snapshot: snapshotFromLookup(lookup), record: null, notes: '', example_fr: '', example_zh: '', example_sense: null, more_examples: [] });
+    clear(); setEditor({ snapshot: snapshotFromLookup(lookup), record: null, notes: '', category_ids: [], example_fr: '', example_zh: '', example_sense: null, more_examples: [] });
   }
   const excerpts = useExcerpt(editor, setEditor, { open, collect, changed: () => { setSaved(false); setExisting(null); } });
   function applyResult(result: SaveResult, payload: ReturnType<typeof savePayload>) {
@@ -114,8 +132,8 @@ export function useNotebook(runtime: RuntimeAdapter) {
     } catch (cause) { setError(errorMessage(cause)); return false; }
     finally { saving.current = false; setBusy(false); }
   }
-  const dirty = excerpts.excerptPending || editor !== null && (editor.record === null || !samePayload({ ...savePayload(acceptRecord(editor.record)), operation: '' }, savePayload(editor)) || operation.current !== null);
-  return { ...excerpts, preservesExcerpt: Boolean(excerpts.excerpt || hasExcerptSource(editor)), editor, conflict, existing, error, audioError: '', saved, busy, dirty, meaningRequired: editor !== null && needsExampleSense(editor), version, save, clear, open, collect,
+  return { ...excerpts, preservesExcerpt: Boolean(excerpts.excerpt || hasExcerptSource(editor)), editor, conflict, existing, error, audioError: '', saved, busy, dirty: excerpts.excerptPending || hasUnsavedNotes(editor, operation.current), meaningRequired: editor !== null && needsExampleSense(editor), version, save, clear, open, collect,
+    refresh: () => refreshVocabulary(runtime, editor?.record ?? null, { open, setBusy, setError }), editCategories: (category_ids: readonly number[]) => { setEditor((value) => value && { ...value, category_ids }); setSaved(false); setExisting(null); },
     edit: (notes: string) => { setEditor((value) => value && { ...value, notes }); setSaved(false); setExisting(null); },
     editExample: (field: 'example_fr' | 'example_zh', text: string) => { setEditor((value) => value && { ...value, [field]: text }); setSaved(false); setExisting(null); },
     editSense: (example_sense: number | null) => { setEditor((value) => value && { ...value, example_sense }); setSaved(false); setExisting(null); }, editMore: (examples: VocabularyRecord['more_examples']) => { setEditor((value) => value && { ...value, more_examples: examples }); setSaved(false); setExisting(null); },

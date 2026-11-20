@@ -8,7 +8,7 @@ test('dictionary and notebook expose playback failures without creating review c
   await page.getByRole('button', { name: '查词', exact: true }).click();
   await page.getByRole('button', { name: /播放单词: école/ }).click();
   await expect(page.getByRole('alert')).toContainText('voice unavailable');
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
   await page.getByRole('button', { name: /播放单词: école/ }).click();
   await expect(page.getByRole('alert')).toContainText('voice unavailable');

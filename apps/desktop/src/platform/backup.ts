@@ -3,7 +3,7 @@ import { dictionaryId } from './dictionary';
 
 const count = z.number().int().nonnegative().safe();
 const countsSchema = z.object({
-  vocabulary: count, cards: count, ratings: count, batches: count, custom_dictionaries: count,
+  vocabulary: count, grammar: count, categories: count, cards: count, ratings: count, batches: count, custom_dictionaries: count,
   legacy_audio: count, included_audio_versions: count, included_legacy_audio: count,
   audio_files: count, source_missing_audio: count, source_invalid_audio: count,
 }).strict().readonly();

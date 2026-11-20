@@ -18,6 +18,7 @@ fn saved_word(connection: &mut Connection, operation: &str, headword: &str) -> V
     save(
         connection,
         &SaveRequest {
+            category_ids: vec![],
             operation: operation.into(),
             headword: headword.into(),
             notes: "A notes — accents é".into(),
@@ -1696,6 +1697,7 @@ fn portable_preferences_and_ordered_catalog_exclude_private_device_metadata() {
             "review":{"retention_percent":95,"new_limit":3,"review_limit":7,"new_cards_ignore_review_limit":true},
             "auto_enroll":true,"speech":{"voice":"male","wpm":100},"interface":{"locale":"fr","theme":"dark"},
             "conjugation":{"mode":"main","block_order":order},"vocabulary_sort":"headword-asc",
+            "grammar_sort":"updated-desc","undo_blocked":false,
         })
     );
     assert_eq!(snapshot["dictionary_catalog"], catalog);
@@ -1861,7 +1863,7 @@ fn snapshot_types_domains_collections_and_identities_are_strict() {
     let baseline = strict_fixture();
     for (path, value) in [
         ("/snapshot_version", json!("1")),
-        ("/snapshot_version", json!(3)),
+        ("/snapshot_version", json!(4)),
         ("/records/0/id", json!(1.0)),
         ("/records/0/created_at", json!(9_007_199_254_740_992_i64)),
         ("/records/0/reference/sha256", json!("A".repeat(64))),

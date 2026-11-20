@@ -10,6 +10,8 @@ import { speechPlaybackRate } from './platform/speech';
 import { ExampleSpeech } from './example-speech';
 import type { SpeechAudio } from './platform/speech';
 import { CoreSenseContent, digestLabel } from './core-sense';
+import type { ReviewRecord } from './platform/notes';
+import { GrammarReviewCard } from './grammar-review';
 
 function ExampleSense({ record, text }: { readonly record: VocabularyRecord; readonly text: NotebookText }) {
   const entry = record.example_sense === null ? undefined : record.digest[record.example_sense];
@@ -48,7 +50,18 @@ function MachineVoiceNotice({ audio, text }: { readonly audio: SpeechAudio; read
   return <p>{text.machineVoice}{audio.voice === null && <> · {text.approximateSpeed}</>}</p>;
 }
 
-export function QueueReviewCard({ record, text, runtime, card, audio, onRated, onSkip, enabled = true, progressRevision }: {
+interface QueueReviewProps {
+  readonly record: ReviewRecord; readonly text: NotebookText; readonly runtime: RuntimeAdapter;
+  readonly card: ReviewCard; readonly audio: SpeechAudio | null; readonly onRated: () => void; readonly onSkip: () => void;
+  readonly enabled?: boolean; readonly progressRevision: number;
+}
+
+export function QueueReviewCard(props: QueueReviewProps) {
+  return 'title' in props.record ? <GrammarReviewCard {...props} record={props.record} enabled={props.enabled ?? true} />
+    : <VocabularyQueueReviewCard {...props} record={props.record} />;
+}
+
+function VocabularyQueueReviewCard({ record, text, runtime, card, audio, onRated, onSkip, enabled = true, progressRevision }: {
   readonly record: VocabularyRecord; readonly text: NotebookText; readonly runtime: RuntimeAdapter;
   readonly card: ReviewCard; readonly audio: SpeechAudio | null; readonly onRated: () => void; readonly onSkip: () => void;
   readonly enabled?: boolean;

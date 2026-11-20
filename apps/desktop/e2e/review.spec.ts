@@ -10,7 +10,7 @@ for (const voice of ['female', null]) {
       review_cards: [{ value: [{ id: 10, kind: 'recognition' }, { id: 11, kind: 'listening' }] }],
       speech_cached: [{ value: { ...audio, voice } }], speech_preferences: [{ value: { voice: 'male', wpm: 240 } }] });
     await page.goto('/');
-    await page.getByRole('button', { name: '生词本', exact: true }).click();
+    await page.getByRole('button', { name: '笔记', exact: true }).click();
     await page.locator('.vocabulary-list button').click();
     await page.getByRole('button', { name: '查看听音卡', exact: true }).click();
     const card = page.getByRole('dialog', { name: '听音卡', exact: true });
@@ -26,7 +26,7 @@ test('both cards identify the meaning selected for an example', async ({ page })
     vocabulary_save: [{ value: { outcome: 'updated', record: saved } }],
     review_cards: [{ value: [{ id: 10, kind: 'recognition' }, { id: 11, kind: 'listening' }] }], speech_cached: [{ value: audio }] });
   await page.goto('/');
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
   await page.getByLabel('例句对应释义').selectOption('1');
   await page.getByLabel('法语例句').fill(saved.example_fr);
@@ -49,7 +49,7 @@ test('both cards show the first nonempty later example by default', async ({ pag
   await nativeFixture(page, { vocabulary_list: [{ value: [exampleRecord] }],
     review_cards: [{ value: [{ id: 10, kind: 'recognition' }, { id: 11, kind: 'listening' }] }], speech_cached: [{ value: audio }] });
   await page.goto('/');
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
   for (const [open, region] of [['查看识义卡', '识义卡'], ['查看听音卡', '听音卡']] as const) {
     await page.getByRole('button', { name: open }).click();
@@ -69,7 +69,7 @@ test('a complete later example does not show a missing marker', async ({ page })
   const exampleRecord = { ...record, more_examples: [{ fr: 'Une phrase.', zh: '一句话。' }] };
   await nativeFixture(page, { vocabulary_list: [{ value: [exampleRecord] }], review_cards: [{ value: [{ id: 10, kind: 'recognition' }] }] });
   await page.goto('/');
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
   await page.getByRole('button', { name: '查看识义卡' }).click();
   const card = page.getByRole('region', { name: '识义卡' });
@@ -86,7 +86,7 @@ for (const [fr, zh, missing] of [['Bonjour.', '', true], ['', '你好。', true]
     await nativeFixture(page, { vocabulary_list: [{ value: [exampleRecord] }],
       review_cards: [{ value: [{ id: 10, kind: 'recognition' }, { id: 11, kind: 'listening' }] }], speech_cached: [{ value: audio }] });
     await page.goto('/');
-    await page.getByRole('button', { name: '生词本', exact: true }).click();
+    await page.getByRole('button', { name: '笔记', exact: true }).click();
     await page.locator('.vocabulary-list button').click();
     for (const [open, region] of [['查看识义卡', '识义卡'], ['查看听音卡', '听音卡']] as const) {
       await page.getByRole('button', { name: open }).click();
@@ -107,7 +107,7 @@ test('a saved word can be added to review without claiming audio is available', 
     review_add: [{ value: [{ id: 10, kind: 'recognition' }, { id: 11, kind: 'listening' }] }],
   });
   await page.goto('/');
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
   await page.getByRole('button', { name: '加入复习', exact: true }).click();
   await expect(page.getByText('识义卡', { exact: true })).toBeVisible();
@@ -123,7 +123,7 @@ test('existing cards are restored and a failed retry remains visible', async ({ 
     review_add: [{ error: 'database unavailable' }],
   });
   await page.goto('/');
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
   await expect(page.getByText('识义卡', { exact: true })).toBeVisible();
   await expect(page.getByText('听音卡：待生成语音', { exact: true })).toBeVisible();
@@ -140,7 +140,7 @@ test('existing audio is restored without regenerating after reopening a saved wo
     speech_cached: [{ value: audio }],
   });
   await page.goto('/');
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
   await expect(page.getByText('听音卡：语音已生成', { exact: true })).toBeVisible();
   await page.getByRole('button', { name: '加入复习', exact: true }).click();
@@ -158,7 +158,7 @@ test('missing cached audio can be regenerated for existing cards', async ({ page
     speech_generate: [{ value: audio }],
   });
   await page.goto('/');
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
   await expect(page.getByText('听音卡：待生成语音', { exact: true })).toBeVisible();
   await page.getByRole('button', { name: '加入复习', exact: true }).click();
@@ -174,7 +174,7 @@ test('recognition card reveals the saved meaning only after flipping', async ({ 
     review_cards: [{ value: [{ id: 10, kind: 'recognition' }, { id: 11, kind: 'listening' }] }],
   });
   await page.goto('/');
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
   await page.getByRole('button', { name: '查看识义卡' }).click();
   const card = page.getByRole('region', { name: '识义卡' });
@@ -194,7 +194,7 @@ test('recognition rating appears after reveal and preserves a failed request for
     review_rate: [{ error: 'database unavailable' }, { value: { status: 'committed', result: { card: { phase: 'learning_first', memory: { stability: 1, difficulty: 5 }, last_review_at: 1700000000, due_at: 1700000060 }, elapsed_days: 0, step_seconds: 60, interval_days: null, model: { version: 'v', parameters: [] }, retention_percent: 90, timezone_database: 'v' } } }],
   });
   await page.goto('/');
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
   await page.getByRole('button', { name: '查看识义卡' }).click();
   const card = page.getByRole('region', { name: '识义卡' });
@@ -215,7 +215,7 @@ test('an undued card shows its next time instead of rating controls', async ({ p
     review_progress: [{ value: { revision: 1, card: { phase: 'learning_first', memory: { stability: 1, difficulty: 5 }, last_review_at: 1700000000, due_at: 4102444800 } } }],
   });
   await page.goto('/');
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
   await page.getByRole('button', { name: '查看识义卡' }).click();
   const card = page.getByRole('region', { name: '识义卡' });
@@ -231,7 +231,7 @@ test('a deferred card shows when it can be reviewed instead of rating buttons', 
     review_availability: [{ value: { progress: { revision: 0, card: { phase: 'new', memory: null, last_review_at: null, due_at: null } }, reason: 'deferred', available_at: 4102444800 } }],
   });
   await page.goto('/');
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
   await page.getByRole('button', { name: '查看识义卡' }).click();
   const card = page.getByRole('region', { name: '识义卡' });
@@ -245,7 +245,7 @@ test('a waiting card becomes rateable after its due time', async ({ page }) => {
   await nativeFixture(page, { vocabulary_list: [{ value: [record] }], review_cards: [{ value: [{ id: 10, kind: 'recognition' }] }],
     review_progress: [{ value: { revision: 1, card: { phase: 'learning_first', memory: { stability: 1, difficulty: 5 }, last_review_at: now - 58, due_at: now + 2 } } }] });
   await page.goto('/');
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
   await page.getByRole('button', { name: '查看识义卡' }).click();
   const card = page.getByRole('region', { name: '识义卡' });
@@ -259,7 +259,7 @@ test('a failed availability refresh can be retried', async ({ page }) => {
   await nativeFixture(page, { vocabulary_list: [{ value: [record] }], review_cards: [{ value: [{ id: 10, kind: 'recognition' }] }],
     review_availability: [{ value: { progress, reason: 'deferred', available_at: now + 1 } }, { error: 'temporary failure' }, { value: { progress, reason: null, available_at: null } }] });
   await page.goto('/');
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
   await page.getByRole('button', { name: '查看识义卡' }).click();
   const card = page.getByRole('region', { name: '识义卡' });
@@ -277,7 +277,7 @@ test('a successful timed refresh clears an earlier rejection', async ({ page }) 
     review_availability: [{ value: available }, { value: available }, { value: { progress, reason: 'due', available_at: now + 2 } }, { value: available }],
     review_rate: [{ value: { status: 'rejected', code: 'due', detail: 'not due' } }] });
   await page.goto('/');
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
   await page.getByRole('button', { name: '查看识义卡' }).click();
   const card = page.getByRole('region', { name: '识义卡' });
@@ -294,7 +294,7 @@ test('a rejected stale rating can be abandoned without leaving a pending retry',
     review_rate: [{ value: { status: 'rejected', code: 'conflict', detail: 'Review card revision conflict' } }],
   });
   await page.goto('/');
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
   await page.getByRole('button', { name: '查看识义卡' }).click();
   const card = page.getByRole('region', { name: '识义卡' });
@@ -308,7 +308,7 @@ test('a corrupt pending rating blocks new ratings', async ({ page }) => {
   await page.addInitScript(() => localStorage.setItem('lexique-pending-rating-10', '{invalid'));
   await nativeFixture(page, { vocabulary_list: [{ value: [record] }], review_cards: [{ value: [{ id: 10, kind: 'recognition' }] }] });
   await page.goto('/');
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
   await page.getByRole('button', { name: '查看识义卡' }).click();
   const card = page.getByRole('region', { name: '识义卡' });
@@ -321,7 +321,7 @@ test('rating submission keeps the card open until failure is shown', async ({ pa
   await nativeFixture(page, { vocabulary_list: [{ value: [record] }], review_cards: [{ value: [{ id: 10, kind: 'recognition' }] }],
     review_rate: [{ error: 'database unavailable', delay: 500 }] });
   await page.goto('/');
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
   await page.getByRole('button', { name: '查看识义卡' }).click();
   const card = page.getByRole('region', { name: '识义卡' });
@@ -339,7 +339,7 @@ test('speech generation failure keeps both cards and allows retry', async ({ pag
     speech_generate: [{ error: 'model missing' }, { error: 'model missing' }],
   });
   await page.goto('/');
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
   await page.getByRole('button', { name: '加入复习', exact: true }).click();
   await expect(page.getByRole('alert')).toContainText('model missing');
@@ -363,7 +363,7 @@ test('listening card plays once, hides the word and reports playback failure', a
     speech_generate: [{ value: audio }],
   });
   await page.goto('/');
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
   await page.getByRole('button', { name: '加入复习', exact: true }).click();
   await page.getByRole('button', { name: '查看听音卡' }).click();
@@ -400,7 +400,7 @@ test('listening card blocks rating while replay is pending', async ({ page }) =>
     speech_cached: [{ value: audio }],
   });
   await page.goto('/');
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
   await page.getByRole('button', { name: '查看听音卡' }).click();
   const card = page.getByRole('region', { name: '听音卡' });
@@ -429,7 +429,7 @@ test('adding again regenerates audio after playback failure', async ({ page }) =
     speech_generate: [{ value: audio }, { value: audio }],
   });
   await page.goto('/');
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
   await page.getByRole('button', { name: '加入复习', exact: true }).click();
   await page.getByRole('button', { name: '查看听音卡' }).click();
@@ -455,7 +455,7 @@ test('successful replay preserves usable audio when adding again', async ({ page
     review_add: [{ value: cards }], speech_cached: [{ value: audio }],
   });
   await page.goto('/');
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
   await page.getByRole('button', { name: '查看听音卡' }).click();
   const card = page.getByRole('region', { name: '听音卡' });
@@ -491,7 +491,7 @@ test('reopening a listening card cancels its previous pending autoplay', async (
       return Promise.resolve();
     };
   });
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
   await page.getByRole('button', { name: '查看听音卡' }).click();
   const card = page.getByRole('region', { name: '听音卡' });

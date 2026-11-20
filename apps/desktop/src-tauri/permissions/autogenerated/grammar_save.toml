@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-grammar-save"
+description = "Enables the grammar_save command without any pre-configured scope."
+commands.allow = ["grammar_save"]
+
+[[permission]]
+identifier = "deny-grammar-save"
+description = "Denies the grammar_save command without any pre-configured scope."
+commands.deny = ["grammar_save"]

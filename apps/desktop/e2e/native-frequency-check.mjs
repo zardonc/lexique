@@ -28,7 +28,7 @@ print(json.dumps(r))`, database], { encoding: 'utf8', windowsHide: true, timeout
   return JSON.parse(result.stdout);
 }
 async function notebook(page) {
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await expect(page.locator('.vocabulary-list li')).toHaveCount(2);
 }
 async function blockInternet(page) {

@@ -130,7 +130,7 @@ try {
   await page.getByLabel('法语词或词组').fill('école');
   await page.getByRole('button', { name: '查词', exact: true }).click();
   results.push({ flow: 'word', ...await play(page, page.getByRole('button', { name: /播放单词: école/ }).first(), 1.609130193) });
-  await page.getByRole('button', { name: '生词本', exact: true }).click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click();
   await page.locator('.vocabulary-list button').click();
   const listening = await play(page, page.getByRole('button', { name: '查看听音卡', exact: true }), 1.607968168);
   results.push({ flow: 'listening-selected-female', ...listening });

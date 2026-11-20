@@ -80,7 +80,7 @@ try {
   await rename(join(destination, 'dictionary'), join(destination, 'dictionary.unavailable')); hidden = true;
   page = await fixture.start(); await page.context().setOffline(true);
   assert.deepEqual((await records(page))[0], saved);
-  await page.getByRole('button', { name: '生词本', exact: true }).click(); await page.locator('.vocabulary-list button').click();
+  await page.getByRole('button', { name: '笔记', exact: true }).click(); await page.locator('.vocabulary-list button').click();
   await page.locator('#example-fr').fill('Une école modifiée.'); await page.getByRole('button', { name: '保存', exact: true }).click();
   await expect(page.getByRole('status').filter({ hasText: '已保存' })).toBeVisible();
   const edited = (await records(page))[0]; assert.deepEqual(edited.example_source, saved.example_source); assert.deepEqual(edited.more_examples, saved.more_examples);

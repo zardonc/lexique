@@ -178,8 +178,8 @@ async function query(key) {
 }
 
 async function openRecord(record) {
-  await page.getByRole('button', { name: 'Notebook', exact: true }).click();
-  await page.getByLabel('Words per page').selectOption('100');
+  await page.getByRole('button', { name: 'Notes', exact: true }).click();
+  await page.getByLabel('Records per page').selectOption('100');
   await page.locator('.vocabulary-list button').filter({ has: page.getByText(record.headword, { exact: true }) }).click();
   await fields(page.locator('.vocabulary-summary'), record.digest.map((item) => item.core));
   await expect(page.getByLabel('Personal notes', { exact: true })).toHaveValue(record.notes);
@@ -416,7 +416,7 @@ async function exportBackup() {
   const status = await backupStatus('export', 'completed');
   assert.equal(status.result.destination, filename); assert.equal((await stat(filename)).size, status.result.byte_length);
   const archive = inspectPackage(destination, filename);
-  assert.equal(archive.manifest.format_version, 1); assert.equal(archive.manifest.snapshot_version, 2); assert.equal(archive.snapshot.snapshot_version, 2);
+  assert.equal(archive.manifest.format_version, 1); assert.equal(archive.manifest.snapshot_version, 3); assert.equal(archive.snapshot.snapshot_version, 3);
   assert.equal(archive.snapshot.records.length, 7);
   assert.equal(archive.snapshot.cards.length, 4); assert.equal(archive.snapshot.ratings.length, 1);
   snapshotLearning(before, archive.snapshot); compareLearning(readState(destination), before);
@@ -431,7 +431,7 @@ async function restoreBackup(legacy = false) {
   const filename = join(destination, legacy ? 'legacy.lexique-backup' : 'pilot.lexique-backup');
   await cp(resolve(input), filename);
   const original = await readFile(filename), archive = inspectPackage(destination, filename);
-  assert.equal(archive.manifest.format_version, 1); assert.equal(archive.snapshot.snapshot_version, legacy ? 1 : 2);
+  assert.equal(archive.manifest.format_version, 1); assert.equal(archive.snapshot.snapshot_version, legacy ? 1 : 3);
   const seed = await save('bien', 'before-restore'); await rate(seed.record);
   await seedSelectedAudio([seed.record.id]); await start();
   await watchBackup(); await picker('Choose backup', filename);
@@ -501,7 +501,7 @@ source=pathlib.Path(p['source']); target=source.with_name('invalid-'+p['variant'
 with zipfile.ZipFile(source) as z: entries=[(i,z.read(i)) for i in z.infolist()]
 manifest=json.loads(dict((i.filename,b) for i,b in entries)['manifest.json'])
 snapshot=json.loads(dict((i.filename,b) for i,b in entries)['snapshot.json'])
-if p['variant']=='future': manifest['snapshot_version']=snapshot['snapshot_version']=3
+if p['variant']=='future': manifest['snapshot_version']=snapshot['snapshot_version']=4
 elif p['variant']=='mismatch': manifest['snapshot_version']=1
 else: snapshot['records'][0]['digest'][0]['core']['meaning_zh']=''
 with zipfile.ZipFile(target,'w',compression=zipfile.ZIP_STORED) as z:

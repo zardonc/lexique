@@ -20,6 +20,52 @@ function payload(revision: number, changed = entries, before: number | null = nu
       validation_wait_ms: 0, metadata_loaded_rows: 0, parsed_progress: 0, metadata_rebuilt: false, rebuild_reason: null, database_ms: 0 } };
 }
 
+const grammarEntry = { ...entry(101, 'recognition'), card: { id: 101, vocabulary_id: 101, kind: 'grammar' },
+  record: { id: 101, title: 'Passé composé', body: 'Une note indépendante.', category_ids: [], revision: 1, created_at: 1000, updated_at: 1000,
+    card: { id: 101, question: 'Quand utiliser ce temps ?', answer: 'Une action terminée.\nJe suis partie.' } } };
+function mixedPayload() {
+  const nextGrammar = { ...grammarEntry, card: { id: 103, vocabulary_id: 103, kind: 'grammar' },
+    record: { ...grammarEntry.record, id: 103, card: { ...grammarEntry.record.card, id: 103 } } };
+  const mixed = [grammarEntry, entry(2, 'recognition'), nextGrammar, entry(4, 'recognition')];
+  const base = payload(1);
+  return { ...base, queue: { ...base.queue, cards: mixed.map((item) => item.card) }, record: grammarEntry.record, window: mixed,
+    summary: { ...base.summary, admitted_count: 4 }, delta: { ...base.delta, order: mixed.map((item) => item.card.id) } };
+}
+
+test('mixed four-card windows review grammar as text and advance through the shared queue', async ({ page }) => {
+  const view = mixedPayload();
+  const rated = { status: 'committed', result: { card: progress.card, elapsed_days: 0, step_seconds: 60, interval_days: null,
+    model: { version: 'test', parameters: [] }, retention_percent: 90, timezone_database: 'test' } };
+  await nativeFixture(page, { review_queue: [{ value: view }, { value: view, gate: 'mixed-refill' }], review_rate: [{ value: rated }] });
+  await page.goto('/');
+  await page.getByRole('button', { name: '闪卡复习', exact: true }).click();
+  await expect(page.getByRole('heading', { name: grammarEntry.record.card.question })).toBeVisible();
+  await page.getByRole('button', { name: '显示答案', exact: true }).click();
+  await expect(page.getByText(grammarEntry.record.card.answer, { exact: true })).toBeVisible();
+  expect(await page.evaluate(() => window.testNative.calls.filter((call) => call.command.startsWith('speech_')))).toHaveLength(0);
+  await page.getByRole('button', { name: '记得', exact: true }).click();
+  await expect(page.getByRole('heading', { name: 'bonjour', exact: true })).toBeVisible();
+  await expect.poll(() => page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'review_queue').length)).toBe(2);
+  const calls = await page.evaluate(() => window.testNative.calls);
+  expect(calls.find((call) => call.command === 'review_rate')?.args?.request).toMatchObject({ card_id: 101, expected_revision: 0, rating: 'good' });
+  expect(calls.filter((call) => call.command === 'review_queue')[1].args?.cursor).toMatchObject({ window: view.window.map((item) => ({ card: item.card })) });
+  await page.evaluate(() => window.testNative.release('mixed-refill'));
+});
+
+for (const corruption of ['kind', 'card', 'audio'] as const) {
+  test(`mixed windows reject mismatched grammar ${corruption} at the IPC boundary`, async ({ page }) => {
+    const view = mixedPayload();
+    const invalid = corruption === 'kind' ? { ...grammarEntry, record: { ...record, id: 101 } }
+      : corruption === 'card' ? { ...grammarEntry, record: { ...grammarEntry.record, card: { ...grammarEntry.record.card, id: 999 } } }
+      : { ...grammarEntry, audio };
+    await nativeFixture(page, { review_queue: [{ value: { ...view, window: [invalid, ...view.window.slice(1)] } }] });
+    await page.goto('/');
+    await page.getByRole('button', { name: '闪卡复习', exact: true }).click();
+    await expect(page.getByRole('alert')).toContainText('Invalid verified queue entry');
+    await expect(page.getByRole('button', { name: '显示答案', exact: true })).toHaveCount(0);
+  });
+}
+
 test('unverified audio is distinguished from audio awaiting generation', async ({ page }) => {
   const view = payload(1);
   const empty = { ...view, queue: { cards: [], reason: null, available_at: null }, record: null,
