@@ -333,6 +333,7 @@ fn new_examples_require_a_meaning_but_persisted_unlinked_examples_remain_editabl
     let edited = save(&mut connection, &edit, None).unwrap().record;
     assert_eq!(edited.example_fr, "Changed");
     assert_eq!(edited.example_sense, None);
+    let mut edit = update("assign-legacy", &edited, "note");
     edit.example_sense = Some(0);
     assert_eq!(
         save(&mut connection, &edit, None)
