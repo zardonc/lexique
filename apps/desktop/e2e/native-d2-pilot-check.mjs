@@ -15,8 +15,8 @@ assert.ok(['pilot', 'batch', 'review', 'no-speech', 'catalogue', 'missing', 'cor
 const curation = JSON.parse(await readFile(resolve(curationPath), 'utf8'));
 const frozenScope = (await readFile(resolve(curationPath, '..', 'scope-manifest.csv'), 'utf8')).trim().split(/\r?\n/).slice(1);
 assert.equal(frozenScope.length, 4087);
-const expectedRows = [...Array.from({ length: 1450 }, (_, index) => index + 1)
-  .filter((row) => ![87, 305, 816, 849, 859, 860, 934, 1005, 1051, 1208, 1218, 1219, 1220, 1300, 1386].includes(row)), 1911];
+const expectedRows = Array.from({ length: 1950 }, (_, index) => index + 1)
+  .filter((row) => ![87, 305, 816, 849, 859, 860, 934, 1005, 1051, 1208, 1218, 1219, 1220, 1300, 1386].includes(row));
 const membership = expectedRows.map((row) => {
   const match = frozenScope[row - 1].match(/^"((?:[^"]|"")*)","([^"]+)",/);
   assert.ok(match, `Invalid frozen scope row ${row}`);
@@ -283,7 +283,7 @@ async function pilot() {
 
 async function contentBatch() {
   const issue = Number(input);
-  assert.ok(Number.isInteger(issue) && issue >= 84 && issue <= 109, 'Expected batch issue 84–109');
+  assert.ok(Number.isInteger(issue) && issue >= 84 && issue <= 119, 'Expected batch issue 84–119');
   const firstRow = 151 + (issue - 84) * 50;
   const groups = curation.groups.filter((group) => group.frozen_row >= firstRow && group.frozen_row < firstRow + 50);
   const annotationRows = ({ 87: [305], 97: [816, 849], 98: [859, 860], 99: [934],
@@ -309,15 +309,29 @@ async function contentBatch() {
     assert.equal(result.record.reference.version, curation.content_version);
     saved.push(result);
   }
-  await query(saved[0].record.headword);
-  await fields(page.locator('.dictionary-entry'), saved[0].record.digest.map((item) => item.core));
+  const representative = issue === 115 ? saved.find(({ record }) => record.headword === 'tien') : saved[0];
+  assert.ok(representative);
+  await query(representative.record.headword);
+  await fields(page.locator('.dictionary-entry'), representative.record.digest.map((item) => item.core));
+  if (issue === 115) {
+    const published = representative.record.digest.map((item) => item.core)
+      .find((sense) => sense.field_sources.definition_fr.version.includes('A8T0594-1935-tome2-page659'));
+    assert.ok(published);
+    const block = page.locator(`.dictionary-entry .core-sense[data-sense-id="${published.sense_id}"]`);
+    await block.locator('.core-sources summary').click();
+    for (const [index, field] of ['definition_fr', 'ipa', 'meaning_en', 'meaning_zh'].entries()) {
+      const source = published.field_sources[field], section = block.locator('.core-field-source').nth(index);
+      for (const value of [source.title, source.version, source.span]) await expect(section.getByText(value, { exact: true })).toBeVisible();
+    }
+    evidence.checks.push({ check: 'The DAF8 tien noun displays its fixed printed edition, selected capture lines and four field sources', status: 'passed' });
+  }
   await page.screenshot({ path: join(destination, `batch-${issue}-lookup.png`), fullPage: true });
   const before = readState(destination);
   await fixture.stop(true);
   await start();
   for (const { record } of saved) assert.deepEqual(await invoke('vocabulary_find', { headword: record.headword }), record);
   compareLearning(readState(destination), before);
-  await openRecord(saved[0].record);
+  await openRecord(representative.record);
   await page.screenshot({ path: join(destination, `batch-${issue}-reopened.png`), fullPage: true });
   evidence.checks.push({ check: `Batch #${issue}: ${groups.length} admitted groups / ${groups.length * 4} fields match audited content; ${annotationRows.length} approved annotation exceptions; ${aliases.size} reviewed spelling queries; ${saved.length} headwords saved and reopened with unchanged provenance and learning state`, status: 'passed' });
 }
@@ -670,7 +684,16 @@ async function replacement() {
   assert.equal((await invoke('vocabulary_save', { request: committed.request, dictionary_id: 'builtin-core' })).outcome, 'replayed');
   if (scenario === 'newer') await save('bien', 'newer-content');
   if (scenario === 'upgrade') {
-    for (const key of ['poisson', 'camarade']) await save(key, `batch-100-109-upgrade-${key}`);
+    const existing = await invoke('vocabulary_find', { headword: 'lâche' });
+    if (existing) {
+      assert.deepEqual(existing.digest.filter((item) => item.core).map((item) => item.core.frozen_row), [1450]);
+      const lookup = await invoke('dictionary_lookup', { key: 'lâche', dictionary_id: 'builtin-core' });
+      admitted(lookup, 'lâche');
+      assert.deepEqual(senses(lookup).map((sense) => sense.frozen_row), [1450, 1451]);
+      assert.deepEqual(await invoke('vocabulary_find', { headword: 'lâche' }), existing);
+      evidence.checks.push({ check: 'The existing lâche adjective digest remains frozen while current lookup also returns the new noun', status: 'passed' });
+    }
+    for (const key of ['valise', 'confirmer']) await save(key, `batch-110-119-upgrade-${key}`);
   }
   await openRecord(record);
   evidence.checks.push({ check: ['newer', 'upgrade'].includes(scenario) ? 'New resource version is visible while previous digest, progress and audio remain frozen' : `Native ${scenario} rejection preserves saved content and committed retry`, status: 'passed' });
