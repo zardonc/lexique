@@ -1,7 +1,7 @@
 {
   "issue": 103,
   "ticket": 103,
-  "status": "partial_independent_review_batch_admission_pending",
+  "status": "passed_independent_review_parent_conversion_and_native_gates_pending",
   "independence": true,
   "independent_reviewer": {
     "id": "independent-content-rights-reviewer-103-104",
@@ -74,105 +74,20 @@
   "scope_denominator_groups": 4087,
   "candidate_groups": 50,
   "candidate_fields": 200,
-  "accepted_groups": 49,
-  "accepted_fields": 196,
-  "accepted_sources": 47,
-  "missing_admitted_fields": 4,
+  "accepted_groups": 50,
+  "accepted_fields": 200,
+  "accepted_sources": 52,
+  "missing_admitted_fields": 0,
   "unreviewed_fields": 0,
-  "unresolved": [
-    {
-      "frozen_row": 1140,
-      "headword": "marché",
-      "pos": "NOM",
-      "sense_id": "b103-1140-marché-nom-selected",
-      "missing_fields": [
-        "french_definition",
-        "ipa",
-        "english",
-        "chinese"
-      ],
-      "reason": "Selected Wiki line 13 closely tracks modern DAF9’s denrées/marchandises/objets d’usage courant enumeration; DAF8 has different wording. Current selected-wording permission/origin remains unresolved.",
-      "field_decisions": [
-        {
-          "field": "french_definition",
-          "candidate_text": "Lieu public où l’on achète et vend des denrées, des marchandises et des objets d’usage courant.",
-          "exact_source": {
-            "source_id": "b103_fr_631",
-            "revid": 39985800,
-            "url": "https://fr.wiktionary.org/w/index.php?title=march%C3%A9&oldid=39985800",
-            "history_url": "https://fr.wiktionary.org/w/index.php?title=march%C3%A9&action=history",
-            "line_1_based": 13,
-            "column_1_based": 1,
-            "reviewed_excerpt": "# {{lexique|commerce|fr}} [[lieu|Lieu]] [[public]] où s’achètent et se vendent les [[denrées]], les [[marchandises]], les [[objets]] d’[[usage]] courant. {{cf|lang=fr|marché-gare|place du marché}}"
-          },
-          "accepted_text_quality_status": "passed",
-          "rights_eligibility_status": "unresolved_selected_original_wording",
-          "admission": "withheld",
-          "review_reason": "Physical public marketplace; all three explanations align and noun IPA is applicable.",
-          "selected_text_rights_reason": "Selected Wiki line 13 closely tracks modern DAF9’s denrées/marchandises/objets d’usage courant enumeration; DAF8 has different wording. Current selected-wording permission/origin remains unresolved."
-        },
-        {
-          "field": "ipa",
-          "candidate_text": "/maʁ.ʃe/",
-          "exact_source": {
-            "source_id": "b103_fr_631",
-            "revid": 39985800,
-            "url": "https://fr.wiktionary.org/w/index.php?title=march%C3%A9&oldid=39985800",
-            "history_url": "https://fr.wiktionary.org/w/index.php?title=march%C3%A9&action=history",
-            "line_1_based": 12,
-            "column_1_based": 14,
-            "reviewed_excerpt": "{{pron|maʁ.ʃe|fr}}"
-          },
-          "accepted_text_quality_status": "passed",
-          "rights_eligibility_status": "passed_at_selected_text_boundary",
-          "admission": "withheld_from_incomplete_four_field_sense",
-          "review_reason": "Physical public marketplace; all three explanations align and noun IPA is applicable.",
-          "selected_text_rights_reason": "Applicable fixed French noun IPA independently verified; not wording from the unresolved modern definition."
-        },
-        {
-          "field": "english",
-          "candidate_text": "Market: a public place where food, goods and everyday items are bought and sold.",
-          "exact_source": {
-            "source_id": "b103_fr_631",
-            "revid": 39985800,
-            "url": "https://fr.wiktionary.org/w/index.php?title=march%C3%A9&oldid=39985800",
-            "history_url": "https://fr.wiktionary.org/w/index.php?title=march%C3%A9&action=history",
-            "line_1_based": 13,
-            "column_1_based": 1,
-            "reviewed_excerpt": "# {{lexique|commerce|fr}} [[lieu|Lieu]] [[public]] où s’achètent et se vendent les [[denrées]], les [[marchandises]], les [[objets]] d’[[usage]] courant. {{cf|lang=fr|marché-gare|place du marché}}"
-          },
-          "accepted_text_quality_status": "passed",
-          "rights_eligibility_status": "unresolved_selected_original_wording",
-          "admission": "withheld",
-          "review_reason": "Physical public marketplace; all three explanations align and noun IPA is applicable.",
-          "selected_text_rights_reason": "Selected Wiki line 13 closely tracks modern DAF9’s denrées/marchandises/objets d’usage courant enumeration; DAF8 has different wording. Current selected-wording permission/origin remains unresolved."
-        },
-        {
-          "field": "chinese",
-          "candidate_text": "市场、集市：买卖食品、商品和日常用品的公共场所。",
-          "exact_source": {
-            "source_id": "b103_fr_631",
-            "revid": 39985800,
-            "url": "https://fr.wiktionary.org/w/index.php?title=march%C3%A9&oldid=39985800",
-            "history_url": "https://fr.wiktionary.org/w/index.php?title=march%C3%A9&action=history",
-            "line_1_based": 13,
-            "column_1_based": 1,
-            "reviewed_excerpt": "# {{lexique|commerce|fr}} [[lieu|Lieu]] [[public]] où s’achètent et se vendent les [[denrées]], les [[marchandises]], les [[objets]] d’[[usage]] courant. {{cf|lang=fr|marché-gare|place du marché}}"
-          },
-          "accepted_text_quality_status": "passed",
-          "rights_eligibility_status": "unresolved_selected_original_wording",
-          "admission": "withheld",
-          "review_reason": "Physical public marketplace; all three explanations align and noun IPA is applicable.",
-          "selected_text_rights_reason": "Selected Wiki line 13 closely tracks modern DAF9’s denrées/marchandises/objets d’usage courant enumeration; DAF8 has different wording. Current selected-wording permission/origin remains unresolved."
-        }
-      ]
-    }
-  ],
+  "unresolved": [],
   "approved_annotation_exceptions": [],
   "runtime_aliases_added": [],
   "quality_report": "independent-review.md",
   "source_quality_judgments": "source-quality.json",
   "packaging_obligations_status": "combined_required_obligations_recorded_final_package_owned_by_parent",
   "resource_conversion": "not_run_parent_owned",
-  "native_verification": "not_run_parent_owned"
+  "native_verification": "not_run_parent_owned",
+  "rejected_originals": "rejected-original-1140.json",
+  "reviewed_replacement_commit": "d33ee57acca6518e8e41687364a789baf77bcbf9",
+  "replacement_author_head": "f839a451c3666edd9d1f55716da890bacdd2bf2e"
 }

@@ -4817,7 +4817,197 @@
     "lexique_cgram": "NOM",
     "subtitle_lemma_per_million": "74.36",
     "subtitle_pos_per_million": "74.36",
-    "senses": [],
+    "senses": [
+      {
+        "sense_id": "b103-1140-marché-nom-selected",
+        "source_headword": "marché",
+        "use": "Masculine noun: physical public marketplace, a place for buying and selling.",
+        "use_language": "en",
+        "excluded_uses": "The sale itself; purchase conditions or commercial agreement; abstract supply and demand or financial market; marché as a verb participle; unaccented marche.",
+        "independent_review": "passed_after_exact_accepted_replacements",
+        "resource_admission": "passed_independent_selected_content_and_rights",
+        "cefr": null,
+        "fields": {
+          "french_definition": {
+            "language": "fr",
+            "text": "Lieu public de vente et d’achat.",
+            "source_id": "b103_replacement_wikisource_soulice1836_marche",
+            "source_span": {
+              "line_1_based": 118,
+              "end_line_1_based": 119,
+              "column_1_based": 26,
+              "raw_source_excerpt": "'''MARCHÉ''', ''s. m.'' lieu public de\nvente et d’achat",
+              "subspan_boundary": "First masculine-noun physical-place clause only; ends before the first semicolon. The separate vente and condition d’un achat senses are excluded."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected Soulice public-place clause only; headword/POS markup removed, initial capital and final full stop added, line break replaced with a space.",
+            "author_validation": "passed_fixed_source_span_and_scoped_draft_check",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "independent-content-rights-reviewer-103-104"
+          },
+          "ipa": {
+            "language": "und",
+            "text": "/maʁ.ʃe/",
+            "source_id": "b103_replacement_fr_marche_ipa",
+            "source_span": {
+              "line_1_based": 12,
+              "end_line_1_based": 12,
+              "column_1_based": 14,
+              "raw_source_excerpt": "{{pron|maʁ.ʃe|fr}}"
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "Selected applicable French noun IPA template value, with slash delimiters; no pronunciation change or audio copied.",
+            "author_validation": "passed_fixed_source_span_and_scoped_draft_check",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "independent-content-rights-reviewer-103-104"
+          },
+          "english": {
+            "language": "en",
+            "text": "Market: a public place for buying and selling.",
+            "source_id": "b103_replacement_wikisource_soulice1836_marche",
+            "source_span": {
+              "line_1_based": 118,
+              "end_line_1_based": 119,
+              "column_1_based": 26,
+              "raw_source_excerpt": "'''MARCHÉ''', ''s. m.'' lieu public de\nvente et d’achat",
+              "subspan_boundary": "First masculine-noun physical-place clause only; ends before the first semicolon. The separate vente and condition d’un achat senses are excluded."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected Soulice public-place clause; not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_draft_check",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "independent-content-rights-reviewer-103-104"
+          },
+          "chinese": {
+            "language": "zh",
+            "text": "集市、市场：进行买卖的公共场所。",
+            "source_id": "b103_replacement_wikisource_soulice1836_marche",
+            "source_span": {
+              "line_1_based": 118,
+              "end_line_1_based": 119,
+              "column_1_based": 26,
+              "raw_source_excerpt": "'''MARCHÉ''', ''s. m.'' lieu public de\nvente et d’achat",
+              "subspan_boundary": "First masculine-noun physical-place clause only; ends before the first semicolon. The separate vente and condition d’un achat senses are excluded."
+            },
+            "content_license": "CC-BY-SA-4.0",
+            "modification": "New Lexique explanatory translation of the selected Soulice public-place clause; not an upstream bilingual quotation.",
+            "author_validation": "passed_fixed_source_span_and_scoped_draft_check",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "reviewer": "independent-content-rights-reviewer-103-104"
+          }
+        },
+        "supporting_evidence": [
+          {
+            "sense_id": "b103-1140-marché-nom-selected",
+            "purpose": "Exact accented source headword and masculine-noun label; only the public-place clause selected.",
+            "source_id": "b103_replacement_wikisource_soulice1836_marche",
+            "revid": 14734319,
+            "fixed_url": "https://fr.wikisource.org/w/index.php?title=Page%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf%2F321&oldid=14734319",
+            "history_url": "https://fr.wikisource.org/w/index.php?title=Page%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf%2F321&action=history",
+            "line_1_based": 118,
+            "column_1_based": 26,
+            "end_line_1_based": 119,
+            "raw_source_excerpt": "'''MARCHÉ''', ''s. m.'' lieu public de\nvente et d’achat",
+            "subspan_boundary": "First masculine-noun physical-place clause only; ends before the first semicolon. The separate vente and condition d’un achat senses are excluded."
+          },
+          {
+            "sense_id": "b103-1140-marché-nom-selected",
+            "purpose": "Article-to-original-scan transcription link, selecting MARCHÉ rather than MARCHE.",
+            "source_id": "b103_replacement_wikisource_soulice1836_marche_entry",
+            "revid": 14751288,
+            "fixed_url": "https://fr.wikisource.org/w/index.php?title=Petit_dictionnaire_de_la_langue_fran%C3%A7aise_(1836)%2FMARCH%C3%89&oldid=14751288",
+            "history_url": "https://fr.wikisource.org/w/index.php?title=Petit_dictionnaire_de_la_langue_fran%C3%A7aise_(1836)%2FMARCH%C3%89&action=history",
+            "line_1_based": 2,
+            "column_1_based": 1,
+            "end_line_1_based": 3,
+            "raw_source_excerpt": "from=321 to=321\nfromsection=\"MARCHÉ\" tosection=\"MARCHÉ\""
+          },
+          {
+            "sense_id": "b103-1140-marché-nom-selected",
+            "purpose": "French-language pronunciation frame.",
+            "source_id": "b103_replacement_fr_marche_ipa",
+            "revid": 39985800,
+            "fixed_url": "https://fr.wiktionary.org/w/index.php?title=march%C3%A9&oldid=39985800",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=march%C3%A9&action=history",
+            "line_1_based": 3,
+            "column_1_based": 1,
+            "raw_source_excerpt": "== {{langue|fr}} =="
+          },
+          {
+            "sense_id": "b103-1140-marché-nom-selected",
+            "purpose": "French noun section and applicable accented headword IPA.",
+            "source_id": "b103_replacement_fr_marche_ipa",
+            "revid": 39985800,
+            "fixed_url": "https://fr.wiktionary.org/w/index.php?title=march%C3%A9&oldid=39985800",
+            "history_url": "https://fr.wiktionary.org/w/index.php?title=march%C3%A9&action=history",
+            "line_1_based": 12,
+            "column_1_based": 1,
+            "raw_source_excerpt": "'''marché''' {{pron|maʁ.ʃe|fr}} {{m}}"
+          },
+          {
+            "sense_id": "b103-1140-marché-nom-selected",
+            "purpose": "Original author credit on title page.",
+            "source_id": "b103_replacement_wikisource_soulice1836_titlepage",
+            "revid": 14869218,
+            "fixed_url": "https://fr.wikisource.org/w/index.php?title=Page%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf%2F1&oldid=14869218",
+            "history_url": "https://fr.wikisource.org/w/index.php?title=Page%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf%2F1&action=history",
+            "line_1_based": 15,
+            "column_1_based": 1,
+            "raw_source_excerpt": "{{c|M. {{sc|Th.}} SOULICE,|fs=120%}}"
+          },
+          {
+            "sense_id": "b103-1140-marché-nom-selected",
+            "purpose": "Original publishers and place.",
+            "source_id": "b103_replacement_wikisource_soulice1836_titlepage",
+            "revid": 14869218,
+            "fixed_url": "https://fr.wikisource.org/w/index.php?title=Page%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf%2F1&oldid=14869218",
+            "history_url": "https://fr.wikisource.org/w/index.php?title=Page%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf%2F1&action=history",
+            "line_1_based": 28,
+            "column_1_based": 1,
+            "end_line_1_based": 29,
+            "raw_source_excerpt": "{{c|L. HACHETTE, LIBRAIRE, rue Pierre-Sarrazin, n<sup>o</sup> 12.}}\n{{c|FIRMIN DIDOT FRÈRES, rue Jacob, n<sup>o</sup> 24.}}"
+          },
+          {
+            "sense_id": "b103-1140-marché-nom-selected",
+            "purpose": "Original publication year.",
+            "source_id": "b103_replacement_wikisource_soulice1836_titlepage",
+            "revid": 14869218,
+            "fixed_url": "https://fr.wikisource.org/w/index.php?title=Page%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf%2F1&oldid=14869218",
+            "history_url": "https://fr.wikisource.org/w/index.php?title=Page%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf%2F1&action=history",
+            "line_1_based": 34,
+            "column_1_based": 1,
+            "raw_source_excerpt": "{{c|{{t|1836.|225}}|1}}"
+          },
+          {
+            "sense_id": "b103-1140-marché-nom-selected",
+            "purpose": "Original author and digitisation origin.",
+            "source_id": "b103_replacement_commons_soulice1836_rights",
+            "revid": 1200756030,
+            "fixed_url": "https://commons.wikimedia.org/w/index.php?title=File%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf&oldid=1200756030",
+            "history_url": "https://commons.wikimedia.org/w/index.php?title=File%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf&action=history",
+            "line_1_based": 4,
+            "column_1_based": 1,
+            "end_line_1_based": 6,
+            "raw_source_excerpt": "|date=1836\n|source={{Gallica|bpt6k6242012m}}\n|author=Théodore Soulice"
+          },
+          {
+            "sense_id": "b103-1140-marché-nom-selected",
+            "purpose": "Public-domain rights declarations for the original scan.",
+            "source_id": "b103_replacement_commons_soulice1836_rights",
+            "revid": 1200756030,
+            "fixed_url": "https://commons.wikimedia.org/w/index.php?title=File%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf&oldid=1200756030",
+            "history_url": "https://commons.wikimedia.org/w/index.php?title=File%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf&action=history",
+            "line_1_based": 12,
+            "column_1_based": 1,
+            "raw_source_excerpt": "{{PD-US-expired}}{{PD-old-70}}"
+          }
+        ]
+      }
+    ],
     "resource_admission": "pending_eligible_complete_same_use_fields"
   },
   {

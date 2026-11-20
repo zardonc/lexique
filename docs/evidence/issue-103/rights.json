@@ -1,5 +1,5 @@
 {
-  "status": "passed_at_selected_text_boundary_for_196_fields",
+  "status": "passed_at_selected_text_boundary_for_200_fields",
   "reviewer": {
     "id": "independent-content-rights-reviewer-103-104",
     "role": "separate content and selected-span rights reviewer",
@@ -98,9 +98,7 @@
     "Distribute adaptations under CC BY-SA 4.0 without additional restrictions or obstructive technical measures."
   ],
   "combined_obligations_status": "required_materials_recorded_final_combined_package_and_distribution_owned_by_parent",
-  "unresolved_rows": [
-    1140
-  ],
+  "unresolved_rows": [],
   "modern_comparisons": [
     {
       "url": "https://www.cnrtl.fr/definition/academie9/march%C3%A9",
@@ -172,5 +170,33 @@
       "text_path": "C:/Users/inthe/IdeaProjects/lexique-batch-103/target/issue-103/reviewer-daf8-frais.txt",
       "excerpt": "édition (1935) FRAIS nom masculin pluriel Ensemble des sommes déboursées pour la mise en train ou le développement d'une entreprise, pour l'acquisition, l'entretien ou l'exécution d'une chose. Menus frais. Les frais de la guerre. Les frais d'un voyage. Frais de transport. Frais de premier établissement. Frais de bureau. Frais d'impression. Faire les frais. Faire des frais. Il en sera pour ses frais. Tous frais faits. À frais communs. À moitié frais. À grands frais. À peu de frais. Sans frais. Sans faire de frais. Frais ordinaires et extraordinaires. Faux frais, Dépenses accidentelles, accessoires, faites dans une affaire, en sus de la dépense principale. Il se dit spécialement, en termes de "
     }
+  ],
+  "original_soulice_edition_basis": {
+    "id": "original-soulice-1836",
+    "author": "Théodore Soulice (1800–1878)",
+    "title": "Petit dictionnaire de la langue française, à l’usage des écoles primaires",
+    "publication": "1836",
+    "edition": "First edition",
+    "publishers": "Paris: L. Hachette; Firmin Didot frères",
+    "printed_page": 315,
+    "scan_page": 321,
+    "original_rights": "public-domain",
+    "legal_basis": "Established project Soulice boundary: original author died in 1878 and first publication was 1836. The author’s seventy-year term has expired; the pre-1931 publication is also public domain in the United States. The fixed Commons original-scan description explicitly declares PD-old-70 and PD-US-expired. Faithful scanning/transcription does not relicense the original. Contributor changes and selected Lexique adaptations remain a separate CC BY-SA 4.0 layer.",
+    "legal_basis_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278938",
+    "original_scan_url": "https://commons.wikimedia.org/w/index.php?title=File%3ASoulice_-_Petit_dictionnaire_de_la_langue_fran%C3%A7aise%2C_1836.pdf&oldid=1200756030",
+    "original_capture": {
+      "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103-replacement\\target\\issue-103-replacement\\soulice-page321.jpg",
+      "api_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-103-replacement\\target\\issue-103-replacement\\soulice-scan321-url.api.json",
+      "visual_check": "The scan shows printed page 315, MARCHÉ s. m., and lieu public de vente et d’achat before a semicolon and separate senses; matching the selected transcription."
+    },
+    "scope": "Original selected 1836 clause only; contributor modifications and Lexique adaptations/translations remain a separate CC BY-SA 4.0 layer."
+  },
+  "replacement_selected_text_rights_reason": "Selected first masculine-noun clause is directly present in Soulice’s 1836 original, printed p. 315 / scan p. 321; scan and fixed transcription agree. Original is public domain (Soulice died 1878; first publication 1836; fixed Commons PD-old-70/PD-US-expired declarations). Wikisource/Wiktionnaire contributor and Lexique adaptation layers retain fixed-revision/history attribution, modification notices and elected CC BY-SA 4.0. Modern DAF9 wording and later sale/agreement clauses supply no accepted definition or translation.",
+  "rejected_originals": "rejected-original-1140.json",
+  "replacement_redistribution_obligations": [
+    "Credit Théodore Soulice, the 1836 title/edition/publishers and printed p. 315 / scan p. 321. The public-domain original remains distinct from later contributions.",
+    "Credit Wikisource transcription contributors and Wiktionnaire pronunciation contributors via each fixed revision and complete history link; retain source labels and selected spans.",
+    "Credit Lexique contributors for the selected French adaptation and new English/Chinese explanations; retain the recorded modifications and CC BY-SA 4.0 licence/link for the combined selected adaptations.",
+    "The complete raw captures and scan are review evidence only. Only selected source excerpts and proposed fields enter this fixture; independent review and actual assembled-notice compliance precede admission."
   ]
 }
