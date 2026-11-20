@@ -21,15 +21,20 @@ Every new selected FR/IPA/EN/ZH field and modern use passed independent review. 
 
 Original author and reviewer logs are byte-preserved at `target/implement-110-119/author-evidence/issue-N` and `target/implement-110-119/reviewer-evidence/issue-N`; the [author archive](../../../target/implement-110-119/author-archive.json) and [reviewer archive](../../../target/implement-110-119/reviewer-archive.json) record their original and retained roots.
 
+Final admission records report zero missing batch fields and the accepted canonical counts. Original pre-admission statuses and counters remain byte-preserved at `C:/Users/inthe/IdeaProjects/lexique-spec-110-119/target/implement-110-119/pre-final-admissions/issue-N.json`. Cohort checks require the exact final admission status and preserve independent reviewer identity, decisions and original proposal history.
+
 ## Verification
 
 The packaged native build is from `00ea06228926e1b9a4e8644a267bce46316f1a39` on Windows 11 x64. Its executable SHA-256 is `53517529b48a639db9a7f2e7606565bcc81e688c1e05dfdd09b1535b6a80decc`. The format-1 core resource is **9,039,872 bytes**, SHA-256 `5afa6c9c3d80f386e9a3e034895fabedc6e62dc0bba051cbfe855df605341ed4`. The portable ZIP passed **183-file** verification. [Build metadata](../../../target/implement-110-119/final-build.json), [package results](../../../target/implement-110-119/final-package.json), [resource report](../../../target/desktop-core-pilot/report.json) and [coverage](../../../target/desktop-core-pilot/coverage.json) retain the exact inputs and output identities.
+
+Final admission metadata and all **90 converter/cohort tests** passed at clean source `c0c09ff3137ab3064706e71d0819bfa93d556836`, using Python 3.14.10 via uv, pnpm 11.25.0 and PowerShell 7 on Windows 11 x64. The owning evidence root is `C:/Users/inthe/IdeaProjects/lexique-final-fixes-110-119/target/final-review-fixes`; [execution metadata](../../../target/final-review-fixes/core-check.json) records the command, exact source and clean-tree status. `pnpm test:docs` and `git diff --check` passed. Native, runtime and canonical resource inputs remain unchanged from `00ea062`; its eleven native scenarios retain that build identity.
 
 | Check | Result | Evidence |
 | --- | --- | --- |
 | Frontend lint, typecheck and build | Passed | [lint](../../../target/implement-110-119/lint-final.log), [types](../../../target/implement-110-119/typecheck.log), [build](../../../target/implement-110-119/build.log) |
 | Browser smoke and core flows | 1 + 13 passed | [smoke](../../../target/implement-110-119/browser-smoke.log), [core](../../../target/implement-110-119/browser-core.log) |
-| Converter and content cohorts | 90 passed | [tests](../../../target/implement-110-119/core-all.log) |
+| Converter and content cohorts, final metadata | 90 passed at `c0c09ff3137ab3064706e71d0819bfa93d556836` | [tests](../../../target/final-review-fixes/core-all.log) |
+| Documentation | Passed; 318 documents, no problems | [check](../../../target/final-review-fixes/docs-clean-final-source.log) |
 | Portable package | 16 passed | [tests](../../../target/implement-110-119/package-119-green.log) |
 | Rust formatting and locked precompilation | Passed | [format](../../../target/implement-110-119/rust-fmt.log), [precompile](../../../target/implement-110-119/rust-precompile-final.log) |
 | Backend execution | 210 passed; hard 60-second execution limit retained | [tests](../../../target/implement-110-119/rust-tests.log) |
