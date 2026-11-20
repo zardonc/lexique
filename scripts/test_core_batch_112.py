@@ -1,4 +1,4 @@
-"""Resource-boundary check of #112 authored candidates and fixed captures."""
+"""Resource-boundary check of #112 content, independent decisions and bindings."""
 
 import csv
 import json
@@ -48,7 +48,16 @@ class Batch112Tests(unittest.TestCase):
                     for item in read("source-excerpts.json")["fields"]}
         reviews = read("field-review.json")
         self.assertEqual(reviews["independent_acceptance"], reviewed)
+        self.assertEqual(reviews["independence"], reviewed)
         self.assertEqual(reviews["reviewer"], admission["independent_reviewer"])
+        if reviewed:
+            self.assertEqual(reviews["review_scope"]["groups_reviewed"], 50)
+            self.assertEqual(reviews["review_scope"]["fields_reviewed"], 200)
+            self.assertEqual(reviews["accepted_replacements"], [])
+            self.assertEqual(admission["pending_independent_fields"], 0)
+            self.assertEqual(admission["unresolved_exact_groups"], [])
+            self.assertEqual(admission["approved_annotations"], [])
+            self.assertEqual(admission["runtime_aliases_added"], [])
         self.assertEqual(len(reviews["fields"]), 200)
         self.assertEqual(len(bindings), 200)
         proposed = {(item["sense_id"], item["field"]): item for item in reviews["fields"]}
@@ -71,6 +80,18 @@ class Batch112Tests(unittest.TestCase):
                 self.assertIsNone(sense["cefr"])
                 self.assertTrue(sense["use"].strip())
                 self.assertEqual(set(sense["fields"]), set(LANGUAGES))
+                if reviewed:
+                    usage = next(item for item in reviews["usage"]
+                                 if item["sense_id"] == sense["sense_id"])
+                    self.assertEqual(usage["accepted_usage"], sense["use"])
+                    self.assertEqual(usage["accepted_usage_quality_status"], "passed")
+                    self.assertEqual(usage["everyday_sense_status"], "passed")
+                    self.assertTrue(usage["review_reason"])
+                    spelling = next(item for item in reviews["spelling_relations"]
+                                    if item["sense_id"] == sense["sense_id"])
+                    self.assertEqual(spelling["independent_review"], "passed_for_source_binding")
+                    self.assertEqual(spelling["alias_admission"], "not_admitted")
+                    self.assertEqual(spelling["new_runtime_aliases"], [])
                 for name, field in sense["fields"].items():
                     binding = bindings[sense["sense_id"], name]
                     review = proposed[sense["sense_id"], name]
@@ -85,6 +106,13 @@ class Batch112Tests(unittest.TestCase):
                                       if key not in ("sense_id", "field")})
                     self.assertEqual(review["accepted_text_quality_status"], status)
                     self.assertEqual(review["reviewer"], admission["independent_reviewer"])
+                    if reviewed:
+                        self.assertEqual(review["accepted_text"], review["proposed_text"])
+                        self.assertTrue(review["independence"])
+                        self.assertTrue(review["review_reason"])
+                        self.assertTrue(review["selected_text_rights_reason"])
+                        self.assertEqual(review["rights_eligibility_status"],
+                                         "passed_at_selected_text_boundary")
                     self.assertEqual(field["language"], LANGUAGES[name])
                     self.assertTrue(field["modification"])
                     self.assertEqual(field["independent_review"], status)
@@ -108,8 +136,14 @@ class Batch112Tests(unittest.TestCase):
 
     def test_selected_rights_and_constructions_have_explicit_author_evidence(self):
         rights = read("rights.json")
-        self.assertFalse(rights["independent_acceptance"])
-        self.assertIsNone(rights["reviewer"])
+        admission = read("admission.json")
+        reviewed = admission["independent_reviewer"] is not None
+        self.assertEqual(rights["independent_acceptance"], reviewed)
+        self.assertEqual(rights["reviewer"], admission["independent_reviewer"])
+        if reviewed:
+            self.assertTrue(rights["independence"])
+            self.assertEqual(len(rights["selected_source_reviews"]), 46)
+            self.assertEqual(rights["assembled_redistribution_validation"], "integration_owned_not_run")
         bindings = {(item["sense_id"], item["field"]): item
                     for item in read("source-excerpts.json")["fields"]}
         self.assertEqual(len(rights["fields"]), 200)
@@ -121,7 +155,11 @@ class Batch112Tests(unittest.TestCase):
                 self.assertEqual(item["source_id"], binding["source_id"])
                 self.assertEqual(item["source_revision"], binding["revid"])
                 self.assertEqual(item["license"], "CC-BY-SA-4.0")
-                self.assertEqual(item["independent_review"], "pending")
+                self.assertEqual(item["independent_review"],
+                                 "passed_at_selected_text_boundary" if reviewed else "pending")
+                self.assertEqual(item["reviewer"], admission["independent_reviewer"])
+                if reviewed:
+                    self.assertTrue(item["review_reason"])
                 self.assertTrue(item["author_rights_basis"])
                 self.assertTrue(item["attribution"])
                 self.assertTrue(item["modification"])
@@ -129,6 +167,14 @@ class Batch112Tests(unittest.TestCase):
         captures = read("source-captures.json")
         self.assertTrue(captures["contributor_registry"]["pagination_complete"])
         self.assertFalse(captures["contributor_registry"]["selected_sentence_authorship_proved"])
+        contexts = read("source-context.json")["current_content"]
+        self.assertEqual({item["title"] for item in contexts if item["excluded_import_layers"]},
+                         {"rose", "source", "chasse"})
+        if reviewed:
+            self.assertEqual(sum(bool(item["import_notices"]) for item in contexts), 25)
+            for item in contexts:
+                self.assertEqual(item["selected_text_rights_status"], "passed_at_selected_text_boundary")
+                self.assertTrue(item["independent_selected_rights_reason"])
         groups = {group["frozen_row"]: group for group in read("groups.json")}
         self.assertEqual(groups[1580]["headword"], "quelles")
         self.assertEqual(groups[1580]["lexique_cgram"], "ADJ:int")
