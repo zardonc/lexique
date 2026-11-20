@@ -11,7 +11,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations. Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), original public-domain layer where applicable.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1198-langue-nom-selected",
@@ -90,8 +90,8 @@
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
-          "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-          "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+          "evidence_basis": "Independent fixed Wiki/import and available primary DAF8 passage comparison; L123-3 primary capture and established 1932–1935 edition basis read separately.",
+          "selected_text_authorship_status": "Specific selected-boundary decision in source-quality.json; a page reference or contributor registry does not attribute every selected sentence to this edition."
         },
         {
           "author": "Lexique contributors",
@@ -105,13 +105,19 @@
           "line_1_based": 86,
           "column_1_based": 153,
           "raw_marker": "{{Import:CFC}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "unselected_cartography_import"
         },
         {
           "line_1_based": 722,
           "column_1_based": 3,
           "raw_marker": "{{Import:DAF8}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -125,8 +131,12 @@
       ],
       "current_registry_names": 159,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1198
+      ]
     },
     {
       "id": "b104_fr_4667",
@@ -139,7 +149,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations. Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), original public-domain layer where applicable.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1168-expérience-nom-selected",
@@ -218,8 +228,8 @@
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
-          "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-          "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+          "evidence_basis": "Independent fixed Wiki/import and available primary DAF8 passage comparison; L123-3 primary capture and established 1932–1935 edition basis read separately.",
+          "selected_text_authorship_status": "Specific selected-boundary decision in source-quality.json; a page reference or contributor registry does not attribute every selected sentence to this edition."
         },
         {
           "author": "Lexique contributors",
@@ -233,7 +243,10 @@
           "line_1_based": 209,
           "column_1_based": 3,
           "raw_marker": "{{R:DAF8}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -247,8 +260,12 @@
       ],
       "current_registry_names": 76,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1168
+      ]
     },
     {
       "id": "b104_fr_4915",
@@ -261,7 +278,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations. Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), original public-domain layer where applicable.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1155-avenir-nom-selected",
@@ -340,8 +357,8 @@
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
-          "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-          "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+          "evidence_basis": "Independent fixed Wiki/import and available primary DAF8 passage comparison; L123-3 primary capture and established 1932–1935 edition basis read separately.",
+          "selected_text_authorship_status": "Specific selected-boundary decision in source-quality.json; a page reference or contributor registry does not attribute every selected sentence to this edition."
         },
         {
           "author": "Lexique contributors",
@@ -355,49 +372,73 @@
           "line_1_based": 147,
           "column_1_based": 3,
           "raw_marker": "{{R:DAF1}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 148,
           "column_1_based": 3,
           "raw_marker": "{{R:DAF8}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 167,
           "column_1_based": 3,
           "raw_marker": "{{R:Littré}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fro",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 205,
           "column_1_based": 3,
           "raw_marker": "{{R:Melesse|consult=13 juillet 2019}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "gallo",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 232,
           "column_1_based": 3,
           "raw_marker": "{{R:Lo Congrès}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "oc",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 233,
           "column_1_based": 3,
           "raw_marker": "{{R:Cantalausa}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "oc",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 234,
           "column_1_based": 3,
           "raw_marker": "{{R:Laux-dict-oc-fr}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "oc",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 235,
           "column_1_based": 3,
           "raw_marker": "{{R:Ubaud}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "oc",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -411,8 +452,12 @@
       ],
       "current_registry_names": 80,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1155
+      ]
     },
     {
       "id": "b104_fr_4936",
@@ -425,7 +470,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations. Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), original public-domain layer where applicable.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1173-liste-nom-selected",
@@ -504,8 +549,8 @@
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
-          "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-          "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+          "evidence_basis": "Independent fixed Wiki/import and available primary DAF8 passage comparison; L123-3 primary capture and established 1932–1935 edition basis read separately.",
+          "selected_text_authorship_status": "Specific selected-boundary decision in source-quality.json; a page reference or contributor registry does not attribute every selected sentence to this edition."
         },
         {
           "author": "Lexique contributors",
@@ -519,19 +564,28 @@
           "line_1_based": 162,
           "column_1_based": 11,
           "raw_marker": "{{R:TLFi}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 163,
           "column_1_based": 3,
           "raw_marker": "{{Import:DAF8}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 205,
           "column_1_based": 3,
           "raw_marker": "{{R:Godefroy}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fro",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -545,8 +599,12 @@
       ],
       "current_registry_names": 72,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1173
+      ]
     },
     {
       "id": "b104_fr_7959",
@@ -559,7 +617,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations. Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), original public-domain layer where applicable.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1178-installer-ver-selected",
@@ -638,8 +696,8 @@
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
-          "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-          "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+          "evidence_basis": "Independent fixed Wiki/import and available primary DAF8 passage comparison; L123-3 primary capture and established 1932–1935 edition basis read separately.",
+          "selected_text_authorship_status": "Specific selected-boundary decision in source-quality.json; a page reference or contributor registry does not attribute every selected sentence to this edition."
         },
         {
           "author": "Lexique contributors",
@@ -653,13 +711,19 @@
           "line_1_based": 131,
           "column_1_based": 3,
           "raw_marker": "{{R:DAF8}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 132,
           "column_1_based": 3,
           "raw_marker": "{{R:TLFi}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -673,8 +737,12 @@
       ],
       "current_registry_names": 65,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1178
+      ]
     },
     {
       "id": "b104_fr_8253",
@@ -687,7 +755,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations. Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), original public-domain layer where applicable.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1159-beauté-nom-selected",
@@ -766,8 +834,8 @@
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
-          "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-          "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+          "evidence_basis": "Independent fixed Wiki/import and available primary DAF8 passage comparison; L123-3 primary capture and established 1932–1935 edition basis read separately.",
+          "selected_text_authorship_status": "Specific selected-boundary decision in source-quality.json; a page reference or contributor registry does not attribute every selected sentence to this edition."
         },
         {
           "author": "Lexique contributors",
@@ -781,7 +849,10 @@
           "line_1_based": 276,
           "column_1_based": 3,
           "raw_marker": "{{R:DAF8}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -795,8 +866,12 @@
       ],
       "current_registry_names": 101,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1159
+      ]
     },
     {
       "id": "b104_fr_8718",
@@ -809,7 +884,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations. Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), original public-domain layer where applicable.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1200-emporter-ver-selected",
@@ -888,8 +963,8 @@
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
-          "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-          "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+          "evidence_basis": "Independent fixed Wiki/import and available primary DAF8 passage comparison; L123-3 primary capture and established 1932–1935 edition basis read separately.",
+          "selected_text_authorship_status": "Specific selected-boundary decision in source-quality.json; a page reference or contributor registry does not attribute every selected sentence to this edition."
         },
         {
           "author": "Lexique contributors",
@@ -903,13 +978,19 @@
           "line_1_based": 201,
           "column_1_based": 3,
           "raw_marker": "{{R:TLFi}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 202,
           "column_1_based": 3,
           "raw_marker": "{{R:DAF8}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -923,8 +1004,12 @@
       ],
       "current_registry_names": 66,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1200
+      ]
     },
     {
       "id": "b104_fr_9618",
@@ -937,7 +1022,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1187-contact-nom-selected",
@@ -1019,13 +1104,19 @@
           "line_1_based": 134,
           "column_1_based": 3,
           "raw_marker": "{{R:FranceTerme}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 135,
           "column_1_based": 2,
           "raw_marker": "{{R:TLFi}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -1039,8 +1130,12 @@
       ],
       "current_registry_names": 60,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1187
+      ]
     },
     {
       "id": "b104_fr_10008",
@@ -1053,7 +1148,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations. Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), original public-domain layer where applicable.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1177-étudier-ver-selected",
@@ -1132,8 +1227,8 @@
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
-          "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-          "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+          "evidence_basis": "Independent fixed Wiki/import and available primary DAF8 passage comparison; L123-3 primary capture and established 1932–1935 edition basis read separately.",
+          "selected_text_authorship_status": "Specific selected-boundary decision in source-quality.json; a page reference or contributor registry does not attribute every selected sentence to this edition."
         },
         {
           "author": "Lexique contributors",
@@ -1147,7 +1242,10 @@
           "line_1_based": 191,
           "column_1_based": 3,
           "raw_marker": "{{Import:DAF8}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -1161,8 +1259,12 @@
       ],
       "current_registry_names": 63,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1177
+      ]
     },
     {
       "id": "b104_fr_10730",
@@ -1175,7 +1277,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations. Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), original public-domain layer where applicable.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1179-courage-nom-selected",
@@ -1254,8 +1356,8 @@
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
-          "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-          "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+          "evidence_basis": "Independent fixed Wiki/import and available primary DAF8 passage comparison; L123-3 primary capture and established 1932–1935 edition basis read separately.",
+          "selected_text_authorship_status": "Specific selected-boundary decision in source-quality.json; a page reference or contributor registry does not attribute every selected sentence to this edition."
         },
         {
           "author": "Lexique contributors",
@@ -1269,7 +1371,10 @@
           "line_1_based": 188,
           "column_1_based": 3,
           "raw_marker": "{{R:DAF8}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -1283,8 +1388,12 @@
       ],
       "current_registry_names": 89,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1179
+      ]
     },
     {
       "id": "b104_fr_10986",
@@ -1297,7 +1406,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations. Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), original public-domain layer where applicable.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1182-milieu-nom-selected",
@@ -1376,8 +1485,8 @@
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
-          "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-          "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+          "evidence_basis": "Independent fixed Wiki/import and available primary DAF8 passage comparison; L123-3 primary capture and established 1932–1935 edition basis read separately.",
+          "selected_text_authorship_status": "Specific selected-boundary decision in source-quality.json; a page reference or contributor registry does not attribute every selected sentence to this edition."
         },
         {
           "author": "Lexique contributors",
@@ -1391,7 +1500,10 @@
           "line_1_based": 324,
           "column_1_based": 3,
           "raw_marker": "{{Import:DAF8}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -1405,8 +1517,12 @@
       ],
       "current_registry_names": 78,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1182
+      ]
     },
     {
       "id": "b104_fr_11337",
@@ -1419,7 +1535,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1153-grand-mère-nom-selected",
@@ -1501,13 +1617,19 @@
           "line_1_based": 239,
           "column_1_based": 3,
           "raw_marker": "{{R:Littré|grand'mère}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 240,
           "column_1_based": 3,
           "raw_marker": "{{R:TLFi}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -1521,8 +1643,12 @@
       ],
       "current_registry_names": 99,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1153
+      ]
     },
     {
       "id": "b104_fr_11718",
@@ -1535,7 +1661,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations. Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), original public-domain layer where applicable.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1199-contraire-nom-selected",
@@ -1614,8 +1740,8 @@
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
-          "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-          "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+          "evidence_basis": "Independent fixed Wiki/import and available primary DAF8 passage comparison; L123-3 primary capture and established 1932–1935 edition basis read separately.",
+          "selected_text_authorship_status": "Specific selected-boundary decision in source-quality.json; a page reference or contributor registry does not attribute every selected sentence to this edition."
         },
         {
           "author": "Lexique contributors",
@@ -1629,7 +1755,10 @@
           "line_1_based": 129,
           "column_1_based": 3,
           "raw_marker": "{{Import:DAF8}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -1643,8 +1772,12 @@
       ],
       "current_registry_names": 58,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1199
+      ]
     },
     {
       "id": "b104_fr_22757",
@@ -1657,7 +1790,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations. Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), original public-domain layer where applicable.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1152-oreille-nom-selected",
@@ -1736,8 +1869,8 @@
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
-          "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-          "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+          "evidence_basis": "Independent fixed Wiki/import and available primary DAF8 passage comparison; L123-3 primary capture and established 1932–1935 edition basis read separately.",
+          "selected_text_authorship_status": "Specific selected-boundary decision in source-quality.json; a page reference or contributor registry does not attribute every selected sentence to this edition."
         },
         {
           "author": "Lexique contributors",
@@ -1751,7 +1884,10 @@
           "line_1_based": 591,
           "column_1_based": 3,
           "raw_marker": "{{R:DAF8}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -1765,8 +1901,12 @@
       ],
       "current_registry_names": 130,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1152
+      ]
     },
     {
       "id": "b104_fr_24867",
@@ -1779,7 +1919,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations. Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), original public-domain layer where applicable.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1194-action-nom-selected",
@@ -1858,8 +1998,8 @@
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
-          "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-          "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+          "evidence_basis": "Independent fixed Wiki/import and available primary DAF8 passage comparison; L123-3 primary capture and established 1932–1935 edition basis read separately.",
+          "selected_text_authorship_status": "Specific selected-boundary decision in source-quality.json; a page reference or contributor registry does not attribute every selected sentence to this edition."
         },
         {
           "author": "Lexique contributors",
@@ -1873,13 +2013,19 @@
           "line_1_based": 286,
           "column_1_based": 3,
           "raw_marker": "{{Import:DAF8}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 381,
           "column_1_based": 3,
           "raw_marker": "{{R:DDO|action}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "da",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -1893,8 +2039,12 @@
       ],
       "current_registry_names": 90,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1194
+      ]
     },
     {
       "id": "b104_fr_25598",
@@ -1907,7 +2057,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations. Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), original public-domain layer where applicable.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1175-réaliser-ver-selected",
@@ -1986,8 +2136,8 @@
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
-          "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-          "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+          "evidence_basis": "Independent fixed Wiki/import and available primary DAF8 passage comparison; L123-3 primary capture and established 1932–1935 edition basis read separately.",
+          "selected_text_authorship_status": "Specific selected-boundary decision in source-quality.json; a page reference or contributor registry does not attribute every selected sentence to this edition."
         },
         {
           "author": "Lexique contributors",
@@ -2001,13 +2151,19 @@
           "line_1_based": 154,
           "column_1_based": 3,
           "raw_marker": "{{Import:DAF8}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 156,
           "column_1_based": 3,
           "raw_marker": "{{R:TLFi}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -2021,8 +2177,12 @@
       ],
       "current_registry_names": 61,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1175
+      ]
     },
     {
       "id": "b104_fr_34199",
@@ -2035,7 +2195,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations. Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), original public-domain layer where applicable.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1160-commandant-adj-selected",
@@ -2172,8 +2332,8 @@
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
-          "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-          "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+          "evidence_basis": "Independent fixed Wiki/import and available primary DAF8 passage comparison; L123-3 primary capture and established 1932–1935 edition basis read separately.",
+          "selected_text_authorship_status": "Specific selected-boundary decision in source-quality.json; a page reference or contributor registry does not attribute every selected sentence to this edition."
         },
         {
           "author": "Lexique contributors",
@@ -2187,7 +2347,10 @@
           "line_1_based": 102,
           "column_1_based": 3,
           "raw_marker": "{{R:DAF8}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -2201,8 +2364,13 @@
       ],
       "current_registry_names": 43,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1160,
+        1161
+      ]
     },
     {
       "id": "b104_fr_35762",
@@ -2215,7 +2383,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations. Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), original public-domain layer where applicable.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1158-blague-nom-selected",
@@ -2294,8 +2462,8 @@
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
-          "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-          "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+          "evidence_basis": "Independent fixed Wiki/import and available primary DAF8 passage comparison; L123-3 primary capture and established 1932–1935 edition basis read separately.",
+          "selected_text_authorship_status": "Specific selected-boundary decision in source-quality.json; a page reference or contributor registry does not attribute every selected sentence to this edition."
         },
         {
           "author": "Lexique contributors",
@@ -2309,13 +2477,19 @@
           "line_1_based": 214,
           "column_1_based": 3,
           "raw_marker": "{{Import:DAF8}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 239,
           "column_1_based": 3,
           "raw_marker": "{{R:DicionárioFonético|blague|id=4821}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "pt",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -2329,8 +2503,12 @@
       ],
       "current_registry_names": 67,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1158
+      ]
     },
     {
       "id": "b104_fr_37598",
@@ -2343,7 +2521,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations. Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), original public-domain layer where applicable.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1191-probablement-adv-selected",
@@ -2422,8 +2600,8 @@
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
-          "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-          "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+          "evidence_basis": "Independent fixed Wiki/import and available primary DAF8 passage comparison; L123-3 primary capture and established 1932–1935 edition basis read separately.",
+          "selected_text_authorship_status": "Specific selected-boundary decision in source-quality.json; a page reference or contributor registry does not attribute every selected sentence to this edition."
         },
         {
           "author": "Lexique contributors",
@@ -2437,13 +2615,19 @@
           "line_1_based": 105,
           "column_1_based": 3,
           "raw_marker": "{{R:DAF8}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 106,
           "column_1_based": 3,
           "raw_marker": "{{R:Littré}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -2457,8 +2641,12 @@
       ],
       "current_registry_names": 37,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1191
+      ]
     },
     {
       "id": "b104_fr_42930",
@@ -2471,7 +2659,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1151-frais-nom-selected",
@@ -2553,19 +2741,28 @@
           "line_1_based": 355,
           "column_1_based": 3,
           "raw_marker": "{{R:TLFi}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 364,
           "column_1_based": 3,
           "raw_marker": "{{R:Godefroy}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fro",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 375,
           "column_1_based": 3,
           "raw_marker": "{{R:La Perrière|F}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "gallo",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -2579,8 +2776,12 @@
       ],
       "current_registry_names": 104,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1151
+      ]
     },
     {
       "id": "b104_fr_55259",
@@ -2593,7 +2794,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations. Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), original public-domain layer where applicable.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1154-art-nom-selected",
@@ -2672,8 +2873,8 @@
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
-          "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-          "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+          "evidence_basis": "Independent fixed Wiki/import and available primary DAF8 passage comparison; L123-3 primary capture and established 1932–1935 edition basis read separately.",
+          "selected_text_authorship_status": "Specific selected-boundary decision in source-quality.json; a page reference or contributor registry does not attribute every selected sentence to this edition."
         },
         {
           "author": "Lexique contributors",
@@ -2687,55 +2888,82 @@
           "line_1_based": 9,
           "column_1_based": 3,
           "raw_marker": "{{R:SIL|art}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "conv",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 304,
           "column_1_based": 3,
           "raw_marker": "{{Import:DAF8}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 305,
           "column_1_based": 3,
           "raw_marker": "{{R:Littré}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 306,
           "column_1_based": 3,
           "raw_marker": "{{R:TLFi}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 431,
           "column_1_based": 3,
           "raw_marker": "{{R:GK|art}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "kw",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 458,
           "column_1_based": 3,
           "raw_marker": "{{R:PMatao|p=93}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "gallo",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 546,
           "column_1_based": 3,
           "raw_marker": "{{R:Cantalausa}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "oc",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 599,
           "column_1_based": 3,
           "raw_marker": "{{R:DSL|airt_n1}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "sco",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 600,
           "column_1_based": 3,
           "raw_marker": "{{R:DSL|airt_n2}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "sco",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -2749,8 +2977,12 @@
       ],
       "current_registry_names": 111,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1154
+      ]
     },
     {
       "id": "b104_fr_67515",
@@ -2763,7 +2995,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations. Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), original public-domain layer where applicable.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1166-manière-nom-selected",
@@ -2842,8 +3074,8 @@
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
-          "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-          "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+          "evidence_basis": "Independent fixed Wiki/import and available primary DAF8 passage comparison; L123-3 primary capture and established 1932–1935 edition basis read separately.",
+          "selected_text_authorship_status": "Specific selected-boundary decision in source-quality.json; a page reference or contributor registry does not attribute every selected sentence to this edition."
         },
         {
           "author": "Lexique contributors",
@@ -2857,13 +3089,19 @@
           "line_1_based": 163,
           "column_1_based": 3,
           "raw_marker": "{{R:TLFi}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 164,
           "column_1_based": 3,
           "raw_marker": "{{R:DAF8}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -2877,8 +3115,12 @@
       ],
       "current_registry_names": 59,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1166
+      ]
     },
     {
       "id": "b104_fr_115184",
@@ -2891,7 +3133,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations. Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), original public-domain layer where applicable.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1172-retenir-ver-selected",
@@ -2970,8 +3212,8 @@
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
-          "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-          "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+          "evidence_basis": "Independent fixed Wiki/import and available primary DAF8 passage comparison; L123-3 primary capture and established 1932–1935 edition basis read separately.",
+          "selected_text_authorship_status": "Specific selected-boundary decision in source-quality.json; a page reference or contributor registry does not attribute every selected sentence to this edition."
         },
         {
           "author": "Lexique contributors",
@@ -2985,37 +3227,55 @@
           "line_1_based": 216,
           "column_1_based": 3,
           "raw_marker": "{{R:DAF8}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 233,
           "column_1_based": 3,
           "raw_marker": "{{R:Godefroy|complément=1}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fro",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 266,
           "column_1_based": 3,
           "raw_marker": "{{R:Lo Congrès}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "oc",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 267,
           "column_1_based": 3,
           "raw_marker": "{{R:Cantalausa}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "oc",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 268,
           "column_1_based": 3,
           "raw_marker": "{{R:Laux-dict-oc-fr}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "oc",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 269,
           "column_1_based": 3,
           "raw_marker": "{{R:Ubaud}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "oc",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -3029,8 +3289,12 @@
       ],
       "current_registry_names": 59,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1172
+      ]
     },
     {
       "id": "b104_fr_117386",
@@ -3043,7 +3307,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations. Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), original public-domain layer where applicable.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1163-course-nom-selected",
@@ -3122,8 +3386,8 @@
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
-          "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-          "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+          "evidence_basis": "Independent fixed Wiki/import and available primary DAF8 passage comparison; L123-3 primary capture and established 1932–1935 edition basis read separately.",
+          "selected_text_authorship_status": "Specific selected-boundary decision in source-quality.json; a page reference or contributor registry does not attribute every selected sentence to this edition."
         },
         {
           "author": "Lexique contributors",
@@ -3137,7 +3401,10 @@
           "line_1_based": 291,
           "column_1_based": 3,
           "raw_marker": "{{Import:DAF8}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -3151,8 +3418,12 @@
       ],
       "current_registry_names": 79,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1163
+      ]
     },
     {
       "id": "b104_fr_121593",
@@ -3165,7 +3436,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations. Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), original public-domain layer where applicable.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1192-rôle-nom-selected",
@@ -3244,8 +3515,8 @@
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
-          "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-          "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+          "evidence_basis": "Independent fixed Wiki/import and available primary DAF8 passage comparison; L123-3 primary capture and established 1932–1935 edition basis read separately.",
+          "selected_text_authorship_status": "Specific selected-boundary decision in source-quality.json; a page reference or contributor registry does not attribute every selected sentence to this edition."
         },
         {
           "author": "Lexique contributors",
@@ -3259,7 +3530,10 @@
           "line_1_based": 205,
           "column_1_based": 3,
           "raw_marker": "{{Import:DAF8}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -3273,8 +3547,12 @@
       ],
       "current_registry_names": 57,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1192
+      ]
     },
     {
       "id": "b104_fr_123987",
@@ -3287,7 +3565,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations. Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), original public-domain layer where applicable.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1170-hors-pre-selected",
@@ -3376,8 +3654,8 @@
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
-          "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-          "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+          "evidence_basis": "Independent fixed Wiki/import and available primary DAF8 passage comparison; L123-3 primary capture and established 1932–1935 edition basis read separately.",
+          "selected_text_authorship_status": "Specific selected-boundary decision in source-quality.json; a page reference or contributor registry does not attribute every selected sentence to this edition."
         },
         {
           "author": "Lexique contributors",
@@ -3391,19 +3669,28 @@
           "line_1_based": 127,
           "column_1_based": 3,
           "raw_marker": "{{Import:DAF8}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 131,
           "column_1_based": 50,
           "raw_marker": "{{R:MED|id=MED21229}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "enm",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 156,
           "column_1_based": 3,
           "raw_marker": "{{R:MED|id=MED21229}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "enm",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -3417,8 +3704,12 @@
       ],
       "current_registry_names": 57,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1170
+      ]
     },
     {
       "id": "b104_fr_138571",
@@ -3431,7 +3722,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations. Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), original public-domain layer where applicable.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1195-ange-nom-selected",
@@ -3510,8 +3801,8 @@
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
-          "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-          "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+          "evidence_basis": "Independent fixed Wiki/import and available primary DAF8 passage comparison; L123-3 primary capture and established 1932–1935 edition basis read separately.",
+          "selected_text_authorship_status": "Specific selected-boundary decision in source-quality.json; a page reference or contributor registry does not attribute every selected sentence to this edition."
         },
         {
           "author": "Lexique contributors",
@@ -3525,25 +3816,37 @@
           "line_1_based": 353,
           "column_1_based": 3,
           "raw_marker": "{{Import:DAF8}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 354,
           "column_1_based": 3,
           "raw_marker": "{{R:Huguet16e|article=ange|pages=212, tome I|lien=https://fr.wikisource.org/wiki/Dictionnaire_de_la_langue_fran%C3%A7aise_du_seizi%C3%A8me_si%C3%A8cle/Ange}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 376,
           "column_1_based": 3,
           "raw_marker": "{{R:Godefroy|complément=1}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fro",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 404,
           "column_1_based": 3,
           "raw_marker": "{{R:Hammar|24}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "sv",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -3557,8 +3860,12 @@
       ],
       "current_registry_names": 99,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1195
+      ]
     },
     {
       "id": "b104_fr_148743",
@@ -3571,7 +3878,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations. Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), original public-domain layer where applicable.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1196-avance-nom-selected",
@@ -3650,8 +3957,8 @@
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
-          "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-          "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+          "evidence_basis": "Independent fixed Wiki/import and available primary DAF8 passage comparison; L123-3 primary capture and established 1932–1935 edition basis read separately.",
+          "selected_text_authorship_status": "Specific selected-boundary decision in source-quality.json; a page reference or contributor registry does not attribute every selected sentence to this edition."
         },
         {
           "author": "Lexique contributors",
@@ -3665,19 +3972,28 @@
           "line_1_based": 158,
           "column_1_based": 3,
           "raw_marker": "{{Import:DAF8}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 159,
           "column_1_based": 3,
           "raw_marker": "{{R:BDLP|base=BE|no=1457}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 189,
           "column_1_based": 3,
           "raw_marker": "{{R:PMatao|p=97}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "gallo",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -3691,8 +4007,12 @@
       ],
       "current_registry_names": 56,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1196
+      ]
     },
     {
       "id": "b104_fr_155790",
@@ -3705,7 +4025,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations. Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), original public-domain layer where applicable.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1171-cour-nom-selected",
@@ -3784,8 +4104,8 @@
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
-          "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-          "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+          "evidence_basis": "Independent fixed Wiki/import and available primary DAF8 passage comparison; L123-3 primary capture and established 1932–1935 edition basis read separately.",
+          "selected_text_authorship_status": "Specific selected-boundary decision in source-quality.json; a page reference or contributor registry does not attribute every selected sentence to this edition."
         },
         {
           "author": "Lexique contributors",
@@ -3799,7 +4119,10 @@
           "line_1_based": 259,
           "column_1_based": 3,
           "raw_marker": "{{Import:DAF8}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -3813,8 +4136,12 @@
       ],
       "current_registry_names": 77,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1171
+      ]
     },
     {
       "id": "b104_fr_155864",
@@ -3827,7 +4154,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations. Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), original public-domain layer where applicable.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1164-coupable-adj-selected",
@@ -3964,8 +4291,8 @@
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
-          "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-          "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+          "evidence_basis": "Independent fixed Wiki/import and available primary DAF8 passage comparison; L123-3 primary capture and established 1932–1935 edition basis read separately.",
+          "selected_text_authorship_status": "Specific selected-boundary decision in source-quality.json; a page reference or contributor registry does not attribute every selected sentence to this edition."
         },
         {
           "author": "Lexique contributors",
@@ -3979,7 +4306,10 @@
           "line_1_based": 133,
           "column_1_based": 3,
           "raw_marker": "{{Import:DAF8}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -3993,8 +4323,13 @@
       ],
       "current_registry_names": 59,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1164,
+        1165
+      ]
     },
     {
       "id": "b104_fr_157665",
@@ -4007,7 +4342,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations. Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), original public-domain layer where applicable.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1156-deviner-ver-selected",
@@ -4086,8 +4421,8 @@
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
-          "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-          "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+          "evidence_basis": "Independent fixed Wiki/import and available primary DAF8 passage comparison; L123-3 primary capture and established 1932–1935 edition basis read separately.",
+          "selected_text_authorship_status": "Specific selected-boundary decision in source-quality.json; a page reference or contributor registry does not attribute every selected sentence to this edition."
         },
         {
           "author": "Lexique contributors",
@@ -4101,7 +4436,10 @@
           "line_1_based": 108,
           "column_1_based": 3,
           "raw_marker": "{{Import:DAF8}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -4115,8 +4453,12 @@
       ],
       "current_registry_names": 48,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1156
+      ]
     },
     {
       "id": "b104_fr_165232",
@@ -4129,7 +4471,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations. Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), original public-domain layer where applicable.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1189-inspecteur-nom-selected",
@@ -4208,8 +4550,8 @@
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
-          "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-          "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+          "evidence_basis": "Independent fixed Wiki/import and available primary DAF8 passage comparison; L123-3 primary capture and established 1932–1935 edition basis read separately.",
+          "selected_text_authorship_status": "Specific selected-boundary decision in source-quality.json; a page reference or contributor registry does not attribute every selected sentence to this edition."
         },
         {
           "author": "Lexique contributors",
@@ -4223,7 +4565,10 @@
           "line_1_based": 91,
           "column_1_based": 3,
           "raw_marker": "{{Import:DAF8}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -4237,8 +4582,12 @@
       ],
       "current_registry_names": 48,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1189
+      ]
     },
     {
       "id": "b104_fr_166138",
@@ -4251,7 +4600,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations. Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), original public-domain layer where applicable.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1162-laisse-nom-selected",
@@ -4330,8 +4679,8 @@
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
-          "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-          "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+          "evidence_basis": "Independent fixed Wiki/import and available primary DAF8 passage comparison; L123-3 primary capture and established 1932–1935 edition basis read separately.",
+          "selected_text_authorship_status": "Specific selected-boundary decision in source-quality.json; a page reference or contributor registry does not attribute every selected sentence to this edition."
         },
         {
           "author": "Lexique contributors",
@@ -4345,25 +4694,37 @@
           "line_1_based": 133,
           "column_1_based": 13,
           "raw_marker": "{{R:TLFi}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 134,
           "column_1_based": 13,
           "raw_marker": "{{R:Littré}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 136,
           "column_1_based": 3,
           "raw_marker": "{{Import:DAF8}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 152,
           "column_1_based": 3,
           "raw_marker": "{{R:Godefroy}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fro",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -4377,8 +4738,12 @@
       ],
       "current_registry_names": 49,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1162
+      ]
     },
     {
       "id": "b104_fr_168384",
@@ -4391,7 +4756,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations. Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), original public-domain layer where applicable.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1176-moquer-ver-selected",
@@ -4470,8 +4835,8 @@
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
-          "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-          "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+          "evidence_basis": "Independent fixed Wiki/import and available primary DAF8 passage comparison; L123-3 primary capture and established 1932–1935 edition basis read separately.",
+          "selected_text_authorship_status": "Specific selected-boundary decision in source-quality.json; a page reference or contributor registry does not attribute every selected sentence to this edition."
         },
         {
           "author": "Lexique contributors",
@@ -4485,19 +4850,28 @@
           "line_1_based": 121,
           "column_1_based": 3,
           "raw_marker": "{{R:TLFi}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 122,
           "column_1_based": 3,
           "raw_marker": "{{Import:DAF8}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 133,
           "column_1_based": 3,
           "raw_marker": "{{R:Godefroy|complément=1}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fro",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -4511,8 +4885,12 @@
       ],
       "current_registry_names": 56,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1176
+      ]
     },
     {
       "id": "b104_fr_170385",
@@ -4525,7 +4903,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations. Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), original public-domain layer where applicable.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1197-parmi-pre-selected",
@@ -4604,8 +4982,8 @@
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
-          "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-          "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+          "evidence_basis": "Independent fixed Wiki/import and available primary DAF8 passage comparison; L123-3 primary capture and established 1932–1935 edition basis read separately.",
+          "selected_text_authorship_status": "Specific selected-boundary decision in source-quality.json; a page reference or contributor registry does not attribute every selected sentence to this edition."
         },
         {
           "author": "Lexique contributors",
@@ -4619,13 +4997,19 @@
           "line_1_based": 93,
           "column_1_based": 3,
           "raw_marker": "{{Import:DAF8}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 106,
           "column_1_based": 3,
           "raw_marker": "{{R:Godefroy}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fro",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -4639,8 +5023,12 @@
       ],
       "current_registry_names": 59,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1197
+      ]
     },
     {
       "id": "b104_fr_172855",
@@ -4653,7 +5041,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations. Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), original public-domain layer where applicable.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1190-projet-nom-selected",
@@ -4732,8 +5120,8 @@
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
-          "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-          "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+          "evidence_basis": "Independent fixed Wiki/import and available primary DAF8 passage comparison; L123-3 primary capture and established 1932–1935 edition basis read separately.",
+          "selected_text_authorship_status": "Specific selected-boundary decision in source-quality.json; a page reference or contributor registry does not attribute every selected sentence to this edition."
         },
         {
           "author": "Lexique contributors",
@@ -4747,13 +5135,19 @@
           "line_1_based": 120,
           "column_1_based": 3,
           "raw_marker": "{{Import:DAF8}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 151,
           "column_1_based": 3,
           "raw_marker": "{{R:ÚJČ}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "cs",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -4767,8 +5161,12 @@
       ],
       "current_registry_names": 53,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1190
+      ]
     },
     {
       "id": "b104_fr_172895",
@@ -4781,7 +5179,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations. Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), original public-domain layer where applicable.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1186-proposer-ver-selected",
@@ -4860,8 +5258,8 @@
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
-          "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-          "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+          "evidence_basis": "Independent fixed Wiki/import and available primary DAF8 passage comparison; L123-3 primary capture and established 1932–1935 edition basis read separately.",
+          "selected_text_authorship_status": "Specific selected-boundary decision in source-quality.json; a page reference or contributor registry does not attribute every selected sentence to this edition."
         },
         {
           "author": "Lexique contributors",
@@ -4875,7 +5273,10 @@
           "line_1_based": 149,
           "column_1_based": 3,
           "raw_marker": "{{Import:DAF8}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -4889,8 +5290,12 @@
       ],
       "current_registry_names": 50,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1186
+      ]
     },
     {
       "id": "b104_fr_173953",
@@ -4903,7 +5308,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations. Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), original public-domain layer where applicable.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1157-ravir-ver-selected",
@@ -4982,8 +5387,8 @@
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
-          "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-          "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+          "evidence_basis": "Independent fixed Wiki/import and available primary DAF8 passage comparison; L123-3 primary capture and established 1932–1935 edition basis read separately.",
+          "selected_text_authorship_status": "Specific selected-boundary decision in source-quality.json; a page reference or contributor registry does not attribute every selected sentence to this edition."
         },
         {
           "author": "Lexique contributors",
@@ -4997,7 +5402,10 @@
           "line_1_based": 106,
           "column_1_based": 3,
           "raw_marker": "{{Import:DAF8}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -5011,8 +5419,12 @@
       ],
       "current_registry_names": 44,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1157
+      ]
     },
     {
       "id": "b104_fr_174562",
@@ -5025,7 +5437,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations. Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), original public-domain layer where applicable.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1174-remonter-ver-selected",
@@ -5104,8 +5516,8 @@
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
-          "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-          "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+          "evidence_basis": "Independent fixed Wiki/import and available primary DAF8 passage comparison; L123-3 primary capture and established 1932–1935 edition basis read separately.",
+          "selected_text_authorship_status": "Specific selected-boundary decision in source-quality.json; a page reference or contributor registry does not attribute every selected sentence to this edition."
         },
         {
           "author": "Lexique contributors",
@@ -5119,13 +5531,19 @@
           "line_1_based": 321,
           "column_1_based": 3,
           "raw_marker": "{{Import:DAF8}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 322,
           "column_1_based": 3,
           "raw_marker": "{{R:TLFi}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -5139,8 +5557,12 @@
       ],
       "current_registry_names": 61,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1174
+      ]
     },
     {
       "id": "b104_fr_175227",
@@ -5153,7 +5575,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations. Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), original public-domain layer where applicable.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1188-ridicule-adj-selected",
@@ -5232,8 +5654,8 @@
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
-          "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-          "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+          "evidence_basis": "Independent fixed Wiki/import and available primary DAF8 passage comparison; L123-3 primary capture and established 1932–1935 edition basis read separately.",
+          "selected_text_authorship_status": "Specific selected-boundary decision in source-quality.json; a page reference or contributor registry does not attribute every selected sentence to this edition."
         },
         {
           "author": "Lexique contributors",
@@ -5247,13 +5669,19 @@
           "line_1_based": 189,
           "column_1_based": 3,
           "raw_marker": "{{R:DAF8}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 238,
           "column_1_based": 3,
           "raw_marker": "{{R:Gaffiot}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "la",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -5267,8 +5695,12 @@
       ],
       "current_registry_names": 70,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1188
+      ]
     },
     {
       "id": "b104_fr_175317",
@@ -5281,7 +5713,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations. Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), original public-domain layer where applicable.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1193-risque-nom-selected",
@@ -5360,8 +5792,8 @@
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
-          "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-          "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+          "evidence_basis": "Independent fixed Wiki/import and available primary DAF8 passage comparison; L123-3 primary capture and established 1932–1935 edition basis read separately.",
+          "selected_text_authorship_status": "Specific selected-boundary decision in source-quality.json; a page reference or contributor registry does not attribute every selected sentence to this edition."
         },
         {
           "author": "Lexique contributors",
@@ -5375,7 +5807,10 @@
           "line_1_based": 149,
           "column_1_based": 3,
           "raw_marker": "{{R:DAF8}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -5389,8 +5824,12 @@
       ],
       "current_registry_names": 62,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1193
+      ]
     },
     {
       "id": "b104_fr_176194",
@@ -5403,7 +5842,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations. Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), original public-domain layer where applicable.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1183-secours-nom-selected",
@@ -5482,8 +5921,8 @@
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
-          "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-          "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+          "evidence_basis": "Independent fixed Wiki/import and available primary DAF8 passage comparison; L123-3 primary capture and established 1932–1935 edition basis read separately.",
+          "selected_text_authorship_status": "Specific selected-boundary decision in source-quality.json; a page reference or contributor registry does not attribute every selected sentence to this edition."
         },
         {
           "author": "Lexique contributors",
@@ -5497,7 +5936,10 @@
           "line_1_based": 145,
           "column_1_based": 3,
           "raw_marker": "{{Import:DAF8}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -5511,8 +5953,12 @@
       ],
       "current_registry_names": 47,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1183
+      ]
     },
     {
       "id": "b104_fr_176626",
@@ -5525,7 +5971,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations. Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), original public-domain layer where applicable.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1169-soin-nom-selected",
@@ -5604,8 +6050,8 @@
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
-          "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-          "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+          "evidence_basis": "Independent fixed Wiki/import and available primary DAF8 passage comparison; L123-3 primary capture and established 1932–1935 edition basis read separately.",
+          "selected_text_authorship_status": "Specific selected-boundary decision in source-quality.json; a page reference or contributor registry does not attribute every selected sentence to this edition."
         },
         {
           "author": "Lexique contributors",
@@ -5619,13 +6065,19 @@
           "line_1_based": 150,
           "column_1_based": 3,
           "raw_marker": "{{Import:DAF8}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         },
         {
           "line_1_based": 169,
           "column_1_based": 1,
           "raw_marker": "{{R:Elhuyar}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "eu",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -5639,8 +6091,12 @@
       ],
       "current_registry_names": 60,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1169
+      ]
     },
     {
       "id": "b104_fr_178891",
@@ -5653,7 +6109,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations. Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), original public-domain layer where applicable.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1167-traverser-ver-selected",
@@ -5732,8 +6188,8 @@
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
-          "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-          "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+          "evidence_basis": "Independent fixed Wiki/import and available primary DAF8 passage comparison; L123-3 primary capture and established 1932–1935 edition basis read separately.",
+          "selected_text_authorship_status": "Specific selected-boundary decision in source-quality.json; a page reference or contributor registry does not attribute every selected sentence to this edition."
         },
         {
           "author": "Lexique contributors",
@@ -5747,7 +6203,10 @@
           "line_1_based": 162,
           "column_1_based": 3,
           "raw_marker": "{{Import:DAF8}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -5761,8 +6220,12 @@
       ],
       "current_registry_names": 65,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1167
+      ]
     },
     {
       "id": "b104_fr_180206",
@@ -5775,7 +6238,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations. Académie française, Dictionnaire de l’Académie française, huitième édition (1932–1935), original public-domain layer where applicable.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1184-voisin-adj-selected",
@@ -5912,8 +6375,8 @@
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
-          "evidence_basis": "Existing issue #99 original-edition rights record; no live legal refresh claimed",
-          "selected_text_authorship_status": "Page references this edition; exact import/selected-text correspondence remains for independent review"
+          "evidence_basis": "Independent fixed Wiki/import and available primary DAF8 passage comparison; L123-3 primary capture and established 1932–1935 edition basis read separately.",
+          "selected_text_authorship_status": "Specific selected-boundary decision in source-quality.json; a page reference or contributor registry does not attribute every selected sentence to this edition."
         },
         {
           "author": "Lexique contributors",
@@ -5927,7 +6390,10 @@
           "line_1_based": 189,
           "column_1_based": 3,
           "raw_marker": "{{Import:DAF8}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -5941,8 +6407,13 @@
       ],
       "current_registry_names": 84,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1184,
+        1185
+      ]
     },
     {
       "id": "b104_fr_193632",
@@ -5955,7 +6426,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors, fixed article and full linked history; Lexique contributors for scoped adaptations and new explanatory translations.",
-      "status": "pending_independent_selected_span_review",
+      "status": "passed_for_selected_spans",
       "selected_locations": [
         {
           "sense_id": "b104-1180-dingue-adj-selected",
@@ -6095,7 +6566,10 @@
           "line_1_based": 111,
           "column_1_based": 3,
           "raw_marker": "{{R:TLFi}}",
-          "role": "bibliography_or_import_metadata"
+          "role": "bibliography_or_import_metadata",
+          "selected_text_authorship_status": "independently_checked_reference_or_import_boundary_not_blanket_sentence_attribution",
+          "entry_language": "fr",
+          "selected_content_role": "reference_metadata_not_blanket_selected_sentence_attribution"
         }
       ],
       "contributor_capture_parts": [
@@ -6109,9 +6583,22 @@
       ],
       "current_registry_names": 38,
       "attribution_boundary": "Current paginated contributor registry is attribution support; selected-sentence authorship is not proved.",
-      "selected_text_rights_status": "pending_independent_import_and_selected_text_boundary_audit",
-      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices."
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "quoted_example_prose": "Retained only in ignored raw/API source captures; not part of candidate fields or bundled notices.",
+      "independent_quality_report": "source-quality.json",
+      "independently_reviewed_rows": [
+        1180,
+        1181
+      ]
     }
   ],
-  "rights_review": "pending_independent_selected_text_and_import_boundary_review"
+  "rights_review": "passed_at_selected_text_boundary_for_200_fields_with_original_import_layers_and_unselected_CFC_separate",
+  "rights_authorities": {
+    "copyright_policy_fixed_url": "https://fr.wiktionary.org/w/index.php?title=Convention%3ADroit_d%E2%80%99auteur&oldid=38903168",
+    "complete_legal_text": "../../../resources/core-pilot-79/COPYING",
+    "selected_original_correspondence": "independently_reviewed_for_admitted_spans_with_unresolved_rows_separately_retained",
+    "policy_raw_path": "C:/Users/inthe/IdeaProjects/lexique-batch-104/target/issue-104/reviewer-primary/copyright-policy.wiki",
+    "policy_api_path": "C:/Users/inthe/IdeaProjects/lexique-batch-104/target/issue-104/reviewer-primary/copyright-policy.api.json"
+  },
+  "unresolved_content": []
 }
