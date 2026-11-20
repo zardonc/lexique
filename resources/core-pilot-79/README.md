@@ -1,10 +1,10 @@
 # Lexique FR–EN–ZH D2 core
 
-This development resource contains **1,436 independently reviewed senses / 5,744 fields**
-in 1,436 frozen headword/POS groups, content version `core-109-v1`.
-Its permanent target is **4,087 groups / 3,773 headwords**; **1,436 groups are accepted
-and 2,651 remain unaccepted**. Everyday coverage is **1,434 complete groups
-and 2,653 incomplete groups**. All **5,744 fields** have exact independent reviews.
+This development resource contains **1,935 independently reviewed senses / 7,740 fields**
+in 1,935 frozen headword/POS groups, content version `core-119-v1`.
+Its permanent target is **4,087 groups / 3,773 headwords**; **1,935 groups are accepted
+and 2,152 remain unaccepted**. Everyday coverage is **1,933 complete groups
+and 2,154 incomplete groups**. All **7,740 fields** have exact independent reviews.
 
 | Batch | Frozen rows | Admitted groups | Fields | Reused groups | Annotation exceptions |
 | --- | --- | ---: | ---: | ---: | ---: |
@@ -34,11 +34,21 @@ and 2,653 incomplete groups**. All **5,744 fields** have exact independent revie
 | #107 | 1301–1350 | 50 | 200 | 0 | 0 |
 | #108 | 1351–1400 | 49 | 196 | 0 | 1 |
 | #109 | 1401–1450 | 50 | 200 | 0 | 0 |
+| #110 | 1451–1500 | 50 | 200 | 0 | 0 |
+| #111 | 1501–1550 | 50 | 200 | 0 | 0 |
+| #112 | 1551–1600 | 50 | 200 | 0 | 0 |
+| #113 | 1601–1650 | 50 | 200 | 0 | 0 |
+| #114 | 1651–1700 | 50 | 200 | 0 | 0 |
+| #115 | 1701–1750 | 50 | 200 | 0 | 0 |
+| #116 | 1751–1800 | 50 | 200 | 0 | 0 |
+| #117 | 1801–1850 | 50 | 200 | 0 | 0 |
+| #118 | 1851–1900 | 50 | 200 | 0 | 0 |
+| #119 | 1901–1950 | 50 | 200 | 1 | 0 |
 
-All prior **944 groups / 3,776 fields**, their raw records, source bindings,
+All prior **1,436 groups / 5,744 fields**, their raw records, source bindings,
 independent reviews, contexts and compiled payloads remain exact. Row 483
 `coeur/NOM` is reused unchanged in #90 and counted once globally; row 1911
-remains admitted. The 15 reviewed spelling relations yield 11 query aliases.
+`côte/NOM` is reused unchanged in #119. Rows 1451–1950 add 499 groups / 1,996 fields. The 15 reviewed spelling relations yield 11 query aliases.
 
 The owner-approved specialist senses are row 34 `ça/NOM` (psychoanalytic id, #81)
 and row 128 `par/NOM` (single-hole standard golf strokes, #83). Their original

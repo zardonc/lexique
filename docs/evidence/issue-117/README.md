@@ -53,11 +53,11 @@ Windows 11 x64, PowerShell 7, uv CPython **3.14.10**, pnpm **11.25.0**.
 
 | Check | Result | Complete output |
 | --- | --- | --- |
-| Source/revision/span/contributor/authority audit | Passed | [source-audit.log](../../../target/review-117/source-audit.log), [source-audit.json](../../../target/review-117/source-audit.json) |
-| Focused resource check | Passed, 2 tests | [focused.log](../../../target/review-117/focused.log) |
-| Documentation and repository links | Passed | [docs-check.log](../../../target/review-117/docs-check.log) |
-| Owned diff whitespace | Passed | [diff-check.log](../../../target/review-117/diff-check.log) |
-| Committed head and merged integration tip | Recorded | [final-verification.json](../../../target/review-117/final-verification.json) |
+| Source/revision/span/contributor/authority audit | Passed | [source-audit.log](../../../target/implement-110-119/reviewer-evidence/issue-117/source-audit.log), [source-audit.json](../../../target/implement-110-119/reviewer-evidence/issue-117/source-audit.json) |
+| Focused resource check | Passed, 2 tests | [focused.log](../../../target/implement-110-119/reviewer-evidence/issue-117/focused.log) |
+| Documentation and repository links | Passed | [docs-check.log](../../../target/implement-110-119/reviewer-evidence/issue-117/docs-check.log) |
+| Owned diff whitespace | Passed | [diff-check.log](../../../target/implement-110-119/reviewer-evidence/issue-117/diff-check.log) |
+| Committed head and merged integration tip | Recorded | [final-verification.json](../../../target/implement-110-119/reviewer-evidence/issue-117/final-verification.json) |
 
 Commands: `uv run --python 3.14.10 --no-project python -B -X utf8 -m unittest discover -s scripts -p test_core_batch_117.py`,
 `pnpm test:docs`, `git diff --check` and `git diff --cached --check`.

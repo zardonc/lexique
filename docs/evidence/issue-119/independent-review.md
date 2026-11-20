@@ -80,9 +80,9 @@ remains parent-owned.
 ## Verification and handoff
 
 Reviewer evidence: `C:/Users/inthe/IdeaProjects/lexique-review-119/target/issue-119-review/`.
-The [source audit](../../../target/issue-119-review/source-audit.json),
-[focused results](../../../target/issue-119-review/green.log) and
-[documentation results](../../../target/issue-119-review/docs.log) retain full
+The [source audit](../../../target/implement-110-119/reviewer-evidence/issue-119/source-audit.json),
+[focused results](../../../target/implement-110-119/reviewer-evidence/issue-119/green.log) and
+[documentation results](../../../target/implement-110-119/reviewer-evidence/issue-119/docs.log) retain full
 outputs. Retained reviewer patch command:
 `git diff d4abf52426449dd5601e989640dc91649e6196f9 HEAD -- docs/evidence/issue-119 scripts/test_core_batch_119.py`;
 patches are `reviewer.patch` and `reviewer-test.patch` in that evidence root.

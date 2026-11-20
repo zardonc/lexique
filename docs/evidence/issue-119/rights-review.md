@@ -60,7 +60,7 @@ replacements. No additional source or runtime alias is admitted.
 Raw sources and authorities:
 `C:/Users/inthe/IdeaProjects/lexique-batch-119/target/issue-119/`.
 Reviewer comparison:
-[source-audit.json](../../../target/issue-119-review/source-audit.json).
+[source-audit.json](../../../target/implement-110-119/reviewer-evidence/issue-119/source-audit.json).
 Future integration archive:
 `target/implement-110-119/author-evidence/issue-119`.
 

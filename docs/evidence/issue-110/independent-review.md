@@ -63,11 +63,11 @@ rather than proof of a selected sentence’s author.
 
 | Check | Result | Retained evidence |
 | --- | --- | --- |
-| Scoped Chinese regression before correction | Expected RED, two failing row assertions | [red.log](../../../target/issue-110-review/red.log) |
-| Fixed captures and source/form bindings | Passed | [capture-check.json](../../../target/issue-110-review/capture-check.json) |
-| Pinned focused Python check | Passed, 3 tests | [green.log](../../../target/issue-110-review/green.log) |
-| Documentation format and repository links | Passed | [docs.log](../../../target/issue-110-review/docs.log) |
-| Staged diff whitespace | Passed | [diff-check.log](../../../target/issue-110-review/diff-check.log) |
+| Scoped Chinese regression before correction | Expected RED, two failing row assertions | [red.log](../../../target/implement-110-119/reviewer-evidence/issue-110/red.log) |
+| Fixed captures and source/form bindings | Passed | [capture-check.json](../../../target/implement-110-119/reviewer-evidence/issue-110/capture-check.json) |
+| Pinned focused Python check | Passed, 3 tests | [green.log](../../../target/implement-110-119/reviewer-evidence/issue-110/green.log) |
+| Documentation format and repository links | Passed | [docs.log](../../../target/implement-110-119/reviewer-evidence/issue-110/docs.log) |
+| Staged diff whitespace | Passed | [diff-check.log](../../../target/implement-110-119/reviewer-evidence/issue-110/diff-check.log) |
 
 ## Pending parent gates
 

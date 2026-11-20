@@ -69,15 +69,15 @@ Checkout: `C:/Users/inthe/IdeaProjects/lexique-batch-119`, branch
 `codex/d2-content-110-119`; integration was merged at
 `6b29f8be699ef3b489a4e5285db18ed120fe7501` before authoring. The latest
 integration tip is merged before handoff. The tested commits, commands and
-results are in [final verification](../../../target/issue-119/final-verification.json).
+results are in [final verification](../../../target/implement-110-119/author-evidence/issue-119/final-verification.json).
 
 All raw responses, requests, source wikitext, scripts, reproduction and check
 logs remain in this checkout’s ignored `target/issue-119/`, including
-[membership RED](../../../target/issue-119/red.log),
-[source RED](../../../target/issue-119/rights-red.log),
-[GREEN](../../../target/issue-119/green.log),
-[reproduction](../../../target/issue-119/reproduction.log) and
-[documentation](../../../target/issue-119/full-docs-check.log).
+[membership RED](../../../target/implement-110-119/author-evidence/issue-119/red.log),
+[source RED](../../../target/implement-110-119/author-evidence/issue-119/rights-red.log),
+[GREEN](../../../target/implement-110-119/author-evidence/issue-119/green.log),
+[reproduction](../../../target/implement-110-119/author-evidence/issue-119/reproduction.log) and
+[documentation](../../../target/implement-110-119/author-evidence/issue-119/full-docs-check.log).
 Preparation follows reviewed #110/#111/#113/#114 evidence layouts and the
 authored #116 pattern. Fixed rights authorities are reused unchanged from
 `C:/Users/inthe/IdeaProjects/lexique-batch-116/target/issue-116/`.

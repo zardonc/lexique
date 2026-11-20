@@ -50,12 +50,12 @@ git diff --cached --check
 ```
 
 Full evidence remains in this worktree’s ignored `target/issue-116/`:
-[RED](../../../target/issue-116/red.log),
-[preparation](../../../target/issue-116/prepare.log),
-[author rights check](../../../target/issue-116/rights-author-check.log),
-[GREEN](../../../target/issue-116/green.log),
-[reproduction](../../../target/issue-116/reproduction.log) and
-[final verification](../../../target/issue-116/final-verification.json).
+[RED](../../../target/implement-110-119/author-evidence/issue-116/red.log),
+[preparation](../../../target/implement-110-119/author-evidence/issue-116/prepare.log),
+[author rights check](../../../target/implement-110-119/author-evidence/issue-116/rights-author-check.log),
+[GREEN](../../../target/implement-110-119/author-evidence/issue-116/green.log),
+[reproduction](../../../target/implement-110-119/author-evidence/issue-116/reproduction.log) and
+[final verification](../../../target/implement-110-119/author-evidence/issue-116/final-verification.json).
 Source-capture requests/responses, preparation/selection scripts, full patches
 and documentation results are retained there too.
 
