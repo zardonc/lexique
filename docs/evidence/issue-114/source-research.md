@@ -1,8 +1,9 @@
 # Issue #114 fixed sources and selected uses
 
 The [groups](groups.json) preserve rows **1651–1700**, exact frozen spellings,
-POS subclasses, both frequency strings and order. There are 50 authored senses
-and 200 nonempty fields: **7,389 Unicode characters**, longest field **115**.
+POS subclasses, both frequency strings and order. There are 50 independently
+reviewed senses and 200 accepted fields: **7,430 Unicode characters**, longest
+field **117**. The unchanged [author drafts](review-candidates.json) are retained.
 The denominator stays 4,087 groups. These are content measurements, not compiled
 resource, package-size or native-memory measurements.
 
@@ -15,7 +16,9 @@ last editors, immutable `oldid` URLs and complete linked article histories are
 recorded in [sources](sources.json) and [capture paths](source-captures.json).
 All 200 field bindings retain exact one-based raw source lines; IPA also retains
 the selected variant and its column. French/POS frames and construction evidence
-are separately retained in [source excerpts](source-excerpts.json).
+are separately retained in [source excerpts](source-excerpts.json), including
+207 supporting bindings. The independent audit matched all complete raw articles
+to their retained first-party API versions and every selected/context binding.
 
 Seven main and one supporting contributor responses end without continuation.
 They retain **3,418 distinct contributor names summed per article**, including
@@ -34,7 +37,7 @@ French variant. No whole phrase pronunciation replaces a component’s IPA.
 
 [Rights](rights.json) records the author’s **CC BY-SA 4.0** proposal, captured
 first-party rights authorities and each source’s selected spans, attributions,
-import markers and pending separate decision. The complete legal text already
+import markers and separate independent selected-span decisions. The complete legal text already
 exists in [COPYING](../../../resources/core-pilot-79/COPYING).
 
 **26 articles** carry `Import:DAF8`. Their exact notice lines and the original
@@ -43,7 +46,7 @@ reuses the established [#99 original-work basis](../issue-99/source-context.json
 [CPI L123-3](https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20),
 collective-work publication plus seventy years, conservatively expired on
 2006-01-01 using the final 1935 publication. This is the recorded original-edition
-basis; new selected spans still require separate review. Wiki transcription,
+basis; the new selected spans pass separate independent review. Wiki transcription,
 adaptation and Lexique’s new translations retain their separate licence layers.
 
 The captured DAF8 template states that all or part was extracted and may have
@@ -57,7 +60,8 @@ includes media syntax; only its lexical definition is adapted into the fields.
 The combined output still requires actual attribution, original-work credits,
 licence text/link, ShareAlike for adaptations and modification notices, with no
 additional restrictions. Final notices and canonical resource admission remain
-pending with the parent. No independent rights acceptance is claimed here.
+pending with the parent. The [rights report](rights-review.md) records accepted
+selected-text eligibility separately from actual assembled-package compliance.
 
 ## Selected-use restrictions
 
@@ -71,14 +75,14 @@ pending with the parent. No independent rights acceptance is claimed here.
 | 1661 `faillir/VER` | `faillir + infinitive`, nearly doing something that does not occur; source labels the use auxiliaire within its verb section |
 | 1664 `blond/ADJ` | Hair-colour adjective, source colour range separately bound |
 | 1665 `blond/NOM` | Masculine man/boy noun, distinct from colour noun and feminine `blonde` |
-| 1667 `puissant/ADJ` | Power adjective; `/pɥi.sɑ̃/` is explicitly in its `fr-accord-cons` template |
+| 1667 `puissant/ADJ` | Authority/influence adjective, distinct from the effect-producing sense; `/pɥi.sɑ̃/` is explicit in `fr-accord-cons` |
 | 1668 `au-dessus/ADV` | Invariable higher-position adverb, component IPA with internal space; no full preposition alias |
 | 1672 `apparaître/VER` | Intransitive becoming visible, exact circumflex retained |
 | 1675 `ramasser/VER` | Transitive picking up from the ground, excluding the adjacent media content |
 | 1677 `château/NOM` | Ordinary castle sense: fortified feudal residence, rather than an unfortified country house |
 | 1680 `mètre/NOM` | SI length unit, symbol m; not a measuring instrument or poetry term |
 | 1684 `majesté/NOM` | Honorific title for emperor/empress/king/queen; lowercase frozen noun retained |
-| 1685 `commissaire/NOM` | Common police ellipsis, component line 39 plus phrase definition line 8; phrase composition line 3 and ellipsis line 25; component `/kɔ.mi.sɛʁ/` retained |
+| 1685 `commissaire/NOM` | Common police ellipsis and public-order regulations, component line 39 plus phrase definition line 8; composition line 3 and ellipsis line 25; component `/kɔ.mi.sɛʁ/` retained |
 | 1686 `taille/NOM` | Human stature measured from soles to head, not waist or clothing size |
 | 1687 `apparemment/ADV` | Inference from appearances without certainty, excluding obsolete assuredly |
 | 1691 `pendre/VER` | Explicitly intransitive suspension, excluding execution and suicide |
@@ -98,7 +102,12 @@ The focused resource check passed after the absent-package RED. Scripts, full
 API/wikitext captures, contributor pagination, rights authorities and execution
 logs remain in `C:/Users/inthe/IdeaProjects/lexique-batch-114/target/issue-114/`.
 
-All 50 rows have complete authored content and pending separate semantic,
-selected-span rights and spelling/construction review. Actual native execution,
+All 50 rows and 200 fields pass separate semantic, selected-span rights and
+spelling/construction review, with individual reasons in [field review](field-review.json).
+All source-binding relations retain `alias_admission=not_admitted`; there are
+no unresolved fields or new owner annotations. Independent logs and ten five-group
+field/context projections remain in
+`C:/Users/inthe/IdeaProjects/lexique-review-114/target/issue-114-review/`.
+Actual native execution,
 conversion, packaged notices, learner acceptance and release gates are unrun
 for this handoff and remain parent-owned.

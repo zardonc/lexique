@@ -4761,6 +4761,36 @@
       "line_1_based": 5,
       "column_1_based": 1,
       "reviewed_excerpt": "=== {{S|verbe|fr}} ==="
+    },
+    {
+      "sense_id": "b114-1667-puissant-adj-selected",
+      "frozen_row": 1667,
+      "role": "selected_authority_use_and_adjacent_distinct_effect_sense",
+      "source_id": "b114_fr_173177",
+      "revid": 39943724,
+      "url": "https://fr.wiktionary.org/w/index.php?title=puissant&oldid=39943724",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=puissant&action=history",
+      "line_1_based": 11,
+      "column_1_based": 1,
+      "reviewed_excerpt": "#* {{exemple | lang=fr | C’est une famille qui est '''puissante''' dans la région.}}"
+    },
+    {
+      "sense_id": "b114-1667-puissant-adj-selected",
+      "frozen_row": 1667,
+      "role": "selected_authority_use_and_adjacent_distinct_effect_sense",
+      "source_id": "b114_fr_173177",
+      "revid": 39943724,
+      "url": "https://fr.wiktionary.org/w/index.php?title=puissant&oldid=39943724",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=puissant&action=history",
+      "line_1_based": 21,
+      "column_1_based": 1,
+      "reviewed_excerpt": "# Qui est [[capable]] de [[produire]] un [[effet]] [[considérable]]."
     }
-  ]
+  ],
+  "independent_review": {
+    "reviewer": "Independent semantic and selected-rights reviewer #114; separate from author and parent integration owner",
+    "independence": true,
+    "selected_field_bindings": 200,
+    "status": "passed_exact_fixed_source_and_context_bindings"
+  }
 }
