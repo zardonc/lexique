@@ -7,7 +7,7 @@
 
 Windows 11 x64 的生产构建为 `00ea06228926e1b9a4e8644a267bce46316f1a39`。lint／类型／build、16 项 portable、210 项后端、1 项浏览器预检及 13 项核心浏览器检查通过。已核对 183 文件的 portable 实际运行十个批次及旧资源升级；每个冻结组／字段查找匹配，所有词头保存重开，学习内容、FSRS、受保护 Opus 和原关闭基线文件保持。各原生场景保留硬性 60 秒执行上限、外部 WebView 请求为零、所属进程与 helper 清理为零。完整 SHA、资源大小／摘要、命令、检查覆盖范围和日志见[批次验证](evidence/issues-110-119/README.md#verification)。
 
-最终准入记录的缺字段／待准入计数为零，新增 499 组／1,996 字段及复用组保持一致；原提案、独立复核身份与历史计数保留于原始快照。干净提交 `c0c09ff3137ab3064706e71d0819bfa93d556836` 的 90 项转换／批次测试、`pnpm test:docs` 和 `git diff --check` 通过，使用 uv Python 3.14.10、pnpm 11.25.0、PowerShell 7，证据所属目录为 `C:/Users/inthe/IdeaProjects/lexique-final-fixes-110-119/target/final-review-fixes`。此次仅涉及准入元数据、批次断言及验证文档，原生／运行时／规范资源输入与 `00ea062` 相同，十一项原生证据仍归属于该构建。
+最终准入记录的缺字段／待准入计数为零，新增 499 组／1,996 字段及复用组保持一致；原提案、独立复核身份与历史计数保留于原始快照。干净提交 `c0c09ff3137ab3064706e71d0819bfa93d556836` 的 90 项转换／批次测试、`pnpm test:docs` 和 `git diff --check` 通过，使用 uv Python 3.14.10、pnpm 11.25.0、PowerShell 7，证据所属目录为 `C:/Users/inthe/IdeaProjects/lexique-spec-110-119/target/final-review-fixes`。此次仅涉及准入元数据、批次断言及验证文档，原生／运行时／规范资源输入与 `00ea062` 相同，十一项原生证据仍归属于该构建。
 
 整机离线、其他平台原生、学习者验收及正式发行尚未验证；D2 全目标仍未完成，CEFR 不在本批范围。[PR #191](https://github.com/zardonc/lexique/pull/191)合并关闭 #110–#119；#78／#9 保持开放。
 
