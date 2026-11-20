@@ -1,9 +1,11 @@
 # Issue #110 fixed sources and authored uses
 
-The [groups](groups.json) contain complete authored FR/IPA/EN/ZH content for all
-50 exact frozen groups. [Field review](field-review.json) preserves each proposed
-text and pending independent state. [Admission](admission.json) distinguishes
-200 authored fields from zero accepted fields.
+The [groups](groups.json) contain independently reviewed FR/IPA/EN/ZH content for
+all 50 exact frozen groups. [Field review](field-review.json) preserves every
+proposal alongside the accepted text and individual independent judgment.
+[Review candidates](review-candidates.json) retain the author's original package.
+[Admission](admission.json) records 200 independently accepted fields and zero
+new canonical fields, with parent admission still pending.
 
 ## Fixed capture and attribution
 
@@ -32,11 +34,11 @@ quotations. Unknown CEFR levels remain null.
 
 ## Rights and material obligations
 
-[Rights](rights.json) proposes **CC BY-SA 4.0** for the fixed Wiktionnaire
+[Rights](rights.json) records independently assessed **CC BY-SA 4.0** boundaries for the fixed Wiktionnaire
 contribution/adaptation and new Lexique adaptations. It retains actual source
 and history URLs, attribution, modifications, licence and disclaimer obligations,
 and references the existing full [legal text](../../../resources/core-pilot-79/COPYING).
-The parent bundles these records through the existing converter/material packer.
+The parent owns bundling through the existing converter/material packer.
 Project-owned code remains separately MIT.
 
 **29 articles** contain `Import:DAF8`, including the supporting `certain` and
@@ -47,13 +49,15 @@ basis in [issue #99 source context](../issue-99/source-context.json):
 with conservative expiry on 2006-01-01 using final publication in 1935. A page
 import marker does not establish the original author of a selected sentence.
 Wiki transcription/adaptation and Lexique adaptations retain their own
-CC BY-SA 4.0 layers. Independent selected-span rights review remains pending.
+CC BY-SA 4.0 layers. [Selected-span rights review](selected-rights.md) is complete,
+with the 12 bibliography-only DAF8 references distinguished from declared imports.
 
 Fresh author captures of the French copyright policy and DAF8 template,
 CC legal text and Wikimedia Terms returned HTTP 200. The direct statute endpoint
 returned HTTP 403; the inherited edition-level basis is identified rather than
-claiming a live statutory check. These author captures are not independent
-review. Their exact paths and fixed policy revisions are in [rights](rights.json).
+claiming a live statutory check. The separate reviewer read these retained
+author captures directly. Their exact paths and fixed policy revisions are in
+[rights](rights.json).
 
 Bibliographic identities remain in tracked context; unselected literary and news
 examples remain in ignored raw captures. No such quotation, media, whole article,
@@ -124,6 +128,8 @@ and earlier canonical records remain unchanged.
 Raw APIs, blank-line-preserving wikitext, contributor pagination, rights captures,
 selection/preparation scripts and RED/GREEN logs remain at
 `C:/Users/inthe/IdeaProjects/lexique-batch-110/target/issue-110/`.
-Author preparation verifies the API revision against raw wikitext and validates
-all 200 selected bindings. Independent quality/rights review, assembled conversion,
-notices packaging and actual native lookup/save/reopen remain parent-owned gates.
+Author preparation and the separate review compare API revisions against raw
+wikitext and validate all 200 selected bindings. [Independent review](independent-review.md)
+records complete semantic, spelling/construction and [selected-rights](selected-rights.md)
+judgments. Assembled conversion, canonical admission, notices packaging and actual
+native lookup/save/reopen remain parent-owned gates.
