@@ -1,10 +1,10 @@
 {
-  "status": "author_proposed_selected_text_rights_pending_separate_review",
-  "independent_review": "pending",
-  "independent_reviewer": null,
+  "status": "passed_independent_selected_text_rights_parent_packaging_pending",
+  "independent_review": "passed_at_selected_text_boundary",
+  "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
   "proposed_adaptation_license": "CC-BY-SA-4.0",
   "complete_legal_text": "../../../resources/core-pilot-79/COPYING",
-  "selected_text_rights_reason": "Author-selected French semantics, IPA and grammar/form evidence use the fixed Wiktionnaire contribution/adaptation layer under CC BY-SA 4.0, with original DAF8 edition credit retained where declared. Authored FR adaptations and EN/ZH explanatory translations retain that licence. This author assessment is not independent quality or rights acceptance.",
+  "selected_text_rights_reason": "All 200 selected lexical/form fields and 51 source contexts independently reviewed at their exact fixed boundaries; full article/history and applicable original-edition credit retained. Per-source import and bibliography distinctions are recorded in source_assessments. Actual combined packaging/admission remains parent-owned.",
   "redistribution_obligations": [
     "Credit each fixed article, full linked history and applicable original authors; preserve supplied copyright and attribution notices.",
     "Retain licence and warranty-disclaimer notices and include the full existing CC BY-SA 4.0 legal text/link in the combined material package.",
@@ -117,9 +117,20 @@
         }
       ],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_2149",
+        "boundary_kind": "declared_daf8_article_import_selected_lexical_boundary",
+        "selected_lines": [
+          1,
+          5,
+          7,
+          8
+        ],
+        "reason": "appareil revision 39921045, selected lines 1, 5, 7, 8: The actual fixed article footer declares extraction of all or part of the article from Académie française’s collective eighth edition, 1932–1935. That notice does not identify the original author of this selected sentence. The retained copyright policy revision 38903168, line 80, supports historical-edition reuse; the established issue #99 L123-3 assessment uses final publication 1935 and conservative expiry 2006-01-01. Académie française credit is retained for the declared original layer, while wiki contributor transcription/adaptation is separately CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_4229",
@@ -215,9 +226,21 @@
       "raw_import_markers": [],
       "original_historical_dictionary_layers": [],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_4229",
+        "boundary_kind": "daf8_reference_not_selected_authorship_proof",
+        "selected_lines": [
+          1,
+          5,
+          6,
+          7,
+          15
+        ],
+        "reason": "nerveux revision 39873189, selected lines 1, 5, 6, 7, 15: The actual footer contains an R:DAF8 bibliographic reference and no Import:DAF8 declaration. The reference is retained as bibliography, without inferring that this selected sentence was copied from that dictionary or assigning its authorship to the Académie. The selected fixed wiki lexical/form contribution is evaluated under CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_7376",
@@ -394,9 +417,23 @@
         }
       ],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_7376",
+        "boundary_kind": "declared_daf8_article_import_selected_lexical_boundary",
+        "selected_lines": [
+          3,
+          7,
+          9,
+          10,
+          199,
+          202,
+          203
+        ],
+        "reason": "aveugle revision 39982972, selected lines 3, 7, 9, 10, 199, 202, 203: The actual fixed article footer declares extraction of all or part of the article from Académie française’s collective eighth edition, 1932–1935. That notice does not identify the original author of this selected sentence. The retained copyright policy revision 38903168, line 80, supports historical-edition reuse; the established issue #99 L123-3 assessment uses final publication 1935 and conservative expiry 2006-01-01. Académie française credit is retained for the declared original layer, while wiki contributor transcription/adaptation is separately CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_7838",
@@ -501,9 +538,20 @@
         }
       ],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_7838",
+        "boundary_kind": "declared_daf8_article_import_selected_lexical_boundary",
+        "selected_lines": [
+          3,
+          7,
+          9,
+          34
+        ],
+        "reason": "sexe revision 39872068, selected lines 3, 7, 9, 34: The actual fixed article footer declares extraction of all or part of the article from Académie française’s collective eighth edition, 1932–1935. That notice does not identify the original author of this selected sentence. The retained copyright policy revision 38903168, line 80, supports historical-edition reuse; the established issue #99 L123-3 assessment uses final publication 1935 and conservative expiry 2006-01-01. Académie française credit is retained for the declared original layer, while wiki contributor transcription/adaptation is separately CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_7884",
@@ -608,9 +656,20 @@
         }
       ],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_7884",
+        "boundary_kind": "declared_daf8_article_import_selected_lexical_boundary",
+        "selected_lines": [
+          3,
+          49,
+          52,
+          53
+        ],
+        "reason": "marche revision 40009915, selected lines 3, 49, 52, 53: The actual fixed article footer declares extraction of all or part of the article from Académie française’s collective eighth edition, 1932–1935. That notice does not identify the original author of this selected sentence. The retained copyright policy revision 38903168, line 80, supports historical-edition reuse; the established issue #99 L123-3 assessment uses final publication 1935 and conservative expiry 2006-01-01. Académie française credit is retained for the declared original layer, while wiki contributor transcription/adaptation is separately CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_8693",
@@ -696,9 +755,22 @@
       "raw_import_markers": [],
       "original_historical_dictionary_layers": [],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_8693",
+        "boundary_kind": "daf8_reference_not_selected_authorship_proof",
+        "selected_lines": [
+          1,
+          5,
+          6,
+          18,
+          19,
+          20
+        ],
+        "reason": "presser revision 40038587, selected lines 1, 5, 6, 18, 19, 20: The actual footer contains an R:DAF8 bibliographic reference and no Import:DAF8 declaration. The reference is retained as bibliography, without inferring that this selected sentence was copied from that dictionary or assigning its authorship to the Académie. The selected fixed wiki lexical/form contribution is evaluated under CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_9499",
@@ -803,9 +875,20 @@
         }
       ],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_9499",
+        "boundary_kind": "declared_daf8_article_import_selected_lexical_boundary",
+        "selected_lines": [
+          3,
+          7,
+          9,
+          12
+        ],
+        "reason": "réalité revision 39802563, selected lines 3, 7, 9, 12: The actual fixed article footer declares extraction of all or part of the article from Académie française’s collective eighth edition, 1932–1935. That notice does not identify the original author of this selected sentence. The retained copyright policy revision 38903168, line 80, supports historical-edition reuse; the established issue #99 L123-3 assessment uses final publication 1935 and conservative expiry 2006-01-01. Académie française credit is retained for the declared original layer, while wiki contributor transcription/adaptation is separately CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_9683",
@@ -891,9 +974,20 @@
       "raw_import_markers": [],
       "original_historical_dictionary_layers": [],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_9683",
+        "boundary_kind": "daf8_reference_not_selected_authorship_proof",
+        "selected_lines": [
+          1,
+          5,
+          7,
+          25
+        ],
+        "reason": "nourrir revision 39773623, selected lines 1, 5, 7, 25: The actual footer contains an R:DAF8 bibliographic reference and no Import:DAF8 declaration. The reference is retained as bibliography, without inferring that this selected sentence was copied from that dictionary or assigning its authorship to the Académie. The selected fixed wiki lexical/form contribution is evaluated under CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_9901",
@@ -998,9 +1092,20 @@
         }
       ],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_9901",
+        "boundary_kind": "declared_daf8_article_import_selected_lexical_boundary",
+        "selected_lines": [
+          1,
+          5,
+          8,
+          35
+        ],
+        "reason": "accorder revision 39842663, selected lines 1, 5, 8, 35: The actual fixed article footer declares extraction of all or part of the article from Académie française’s collective eighth edition, 1932–1935. That notice does not identify the original author of this selected sentence. The retained copyright policy revision 38903168, line 80, supports historical-edition reuse; the established issue #99 L123-3 assessment uses final publication 1935 and conservative expiry 2006-01-01. Académie française credit is retained for the declared original layer, while wiki contributor transcription/adaptation is separately CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_10163",
@@ -1086,9 +1191,20 @@
       "raw_import_markers": [],
       "original_historical_dictionary_layers": [],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_10163",
+        "boundary_kind": "selected_wiki_lexical_or_form_layer",
+        "selected_lines": [
+          1,
+          5,
+          7,
+          17
+        ],
+        "reason": "accuser revision 39844578, selected lines 1, 5, 7, 17: The actual fixed capture has no DAF8 import declaration or DAF8 bibliography marker. Other references, including R:DAF1, R:DAF9, Robert, TLFi and Littré where present, are bibliography and not selected-sentence authorship evidence or a licence to copy those works. The selected fixed wiki lexical/form contribution is evaluated under CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_11671",
@@ -1174,9 +1290,20 @@
       "raw_import_markers": [],
       "original_historical_dictionary_layers": [],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_11671",
+        "boundary_kind": "selected_wiki_lexical_or_form_layer",
+        "selected_lines": [
+          3,
+          7,
+          10,
+          11
+        ],
+        "reason": "vache revision 39767194, selected lines 3, 7, 10, 11: The actual fixed capture has no DAF8 import declaration or DAF8 bibliography marker. Other references, including R:DAF1, R:DAF9, Robert, TLFi and Littré where present, are bibliography and not selected-sentence authorship evidence or a licence to copy those works. The selected fixed wiki lexical/form contribution is evaluated under CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_11738",
@@ -1262,9 +1389,22 @@
       "raw_import_markers": [],
       "original_historical_dictionary_layers": [],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_11738",
+        "boundary_kind": "daf8_reference_not_selected_authorship_proof",
+        "selected_lines": [
+          1,
+          40,
+          41,
+          49,
+          50,
+          51
+        ],
+        "reason": "ranger revision 39836381, selected lines 1, 40, 41, 49, 50, 51: The actual footer contains an R:DAF8 bibliographic reference and no Import:DAF8 declaration. The reference is retained as bibliography, without inferring that this selected sentence was copied from that dictionary or assigning its authorship to the Académie. The selected fixed wiki lexical/form contribution is evaluated under CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_12116",
@@ -1350,9 +1490,20 @@
       "raw_import_markers": [],
       "original_historical_dictionary_layers": [],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_12116",
+        "boundary_kind": "selected_wiki_lexical_or_form_layer",
+        "selected_lines": [
+          2,
+          6,
+          8,
+          24
+        ],
+        "reason": "intention revision 39773551, selected lines 2, 6, 8, 24: The actual fixed capture has no DAF8 import declaration or DAF8 bibliography marker. Other references, including R:DAF1, R:DAF9, Robert, TLFi and Littré where present, are bibliography and not selected-sentence authorship evidence or a licence to copy those works. The selected fixed wiki lexical/form contribution is evaluated under CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_20489",
@@ -1468,9 +1619,20 @@
       "raw_import_markers": [],
       "original_historical_dictionary_layers": [],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_20489",
+        "boundary_kind": "daf8_reference_not_selected_authorship_proof",
+        "selected_lines": [
+          2,
+          63,
+          64,
+          66
+        ],
+        "reason": "vu revision 40002800, selected lines 2, 63, 64, 66: The actual footer contains an R:DAF8 bibliographic reference and no Import:DAF8 declaration. The reference is retained as bibliography, without inferring that this selected sentence was copied from that dictionary or assigning its authorship to the Académie. The selected fixed wiki lexical/form contribution is evaluated under CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_36515",
@@ -1556,9 +1718,20 @@
       "raw_import_markers": [],
       "original_historical_dictionary_layers": [],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_36515",
+        "boundary_kind": "selected_wiki_lexical_or_form_layer",
+        "selected_lines": [
+          3,
+          7,
+          10,
+          11
+        ],
+        "reason": "danse revision 39921087, selected lines 3, 7, 10, 11: The actual fixed capture has no DAF8 import declaration or DAF8 bibliography marker. Other references, including R:DAF1, R:DAF9, Robert, TLFi and Littré where present, are bibliography and not selected-sentence authorship evidence or a licence to copy those works. The selected fixed wiki lexical/form contribution is evaluated under CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_36657",
@@ -1644,9 +1817,20 @@
       "raw_import_markers": [],
       "original_historical_dictionary_layers": [],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_36657",
+        "boundary_kind": "selected_wiki_lexical_or_form_layer",
+        "selected_lines": [
+          3,
+          8,
+          11,
+          31
+        ],
+        "reason": "folie revision 39950861, selected lines 3, 8, 11, 31: The actual fixed capture has no DAF8 import declaration or DAF8 bibliography marker. Other references, including R:DAF1, R:DAF9, Robert, TLFi and Littré where present, are bibliography and not selected-sentence authorship evidence or a licence to copy those works. The selected fixed wiki lexical/form contribution is evaluated under CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_42386",
@@ -1751,9 +1935,20 @@
         }
       ],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_42386",
+        "boundary_kind": "declared_daf8_article_import_selected_lexical_boundary",
+        "selected_lines": [
+          1,
+          6,
+          7,
+          8
+        ],
+        "reason": "placer revision 39774485, selected lines 1, 6, 7, 8: The actual fixed article footer declares extraction of all or part of the article from Académie française’s collective eighth edition, 1932–1935. That notice does not identify the original author of this selected sentence. The retained copyright policy revision 38903168, line 80, supports historical-edition reuse; the established issue #99 L123-3 assessment uses final publication 1935 and conservative expiry 2006-01-01. Académie française credit is retained for the declared original layer, while wiki contributor transcription/adaptation is separately CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_71559",
@@ -1839,9 +2034,20 @@
       "raw_import_markers": [],
       "original_historical_dictionary_layers": [],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_71559",
+        "boundary_kind": "daf8_reference_not_selected_authorship_proof",
+        "selected_lines": [
+          3,
+          7,
+          9,
+          10
+        ],
+        "reason": "piste revision 39920907, selected lines 3, 7, 9, 10: The actual footer contains an R:DAF8 bibliographic reference and no Import:DAF8 declaration. The reference is retained as bibliography, without inferring that this selected sentence was copied from that dictionary or assigning its authorship to the Académie. The selected fixed wiki lexical/form contribution is evaluated under CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_76907",
@@ -1946,9 +2152,22 @@
         }
       ],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_76907",
+        "boundary_kind": "declared_daf8_article_import_selected_lexical_boundary",
+        "selected_lines": [
+          3,
+          7,
+          11,
+          38,
+          39,
+          40
+        ],
+        "reason": "costume revision 39759835, selected lines 3, 7, 11, 38, 39, 40: The actual fixed article footer declares extraction of all or part of the article from Académie française’s collective eighth edition, 1932–1935. That notice does not identify the original author of this selected sentence. The retained copyright policy revision 38903168, line 80, supports historical-edition reuse; the established issue #99 L123-3 assessment uses final publication 1935 and conservative expiry 2006-01-01. Académie française credit is retained for the declared original layer, while wiki contributor transcription/adaptation is separately CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_103896",
@@ -2063,9 +2282,21 @@
         }
       ],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_103896",
+        "boundary_kind": "declared_daf8_article_import_selected_lexical_boundary",
+        "selected_lines": [
+          3,
+          7,
+          8,
+          9,
+          26
+        ],
+        "reason": "jaloux revision 39772166, selected lines 3, 7, 8, 9, 26: The actual fixed article footer declares extraction of all or part of the article from Académie française’s collective eighth edition, 1932–1935. That notice does not identify the original author of this selected sentence. The retained copyright policy revision 38903168, line 80, supports historical-edition reuse; the established issue #99 L123-3 assessment uses final publication 1935 and conservative expiry 2006-01-01. Académie française credit is retained for the declared original layer, while wiki contributor transcription/adaptation is separately CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_116509",
@@ -2162,9 +2393,20 @@
         }
       ],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_116509",
+        "boundary_kind": "declared_daf8_article_import_selected_lexical_boundary",
+        "selected_lines": [
+          1,
+          6,
+          41,
+          42
+        ],
+        "reason": "certain revision 39848777, selected lines 1, 6, 41, 42: The actual fixed article footer declares extraction of all or part of the article from Académie française’s collective eighth edition, 1932–1935. That notice does not identify the original author of this selected sentence. The retained copyright policy revision 38903168, line 80, supports historical-edition reuse; the established issue #99 L123-3 assessment uses final publication 1935 and conservative expiry 2006-01-01. Académie française credit is retained for the declared original layer, while wiki contributor transcription/adaptation is separately CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_117365",
@@ -2250,9 +2492,21 @@
       "raw_import_markers": [],
       "original_historical_dictionary_layers": [],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_117365",
+        "boundary_kind": "daf8_reference_not_selected_authorship_proof",
+        "selected_lines": [
+          3,
+          8,
+          10,
+          71,
+          72
+        ],
+        "reason": "code revision 39842311, selected lines 3, 8, 10, 71, 72: The actual footer contains an R:DAF8 bibliographic reference and no Import:DAF8 declaration. The reference is retained as bibliography, without inferring that this selected sentence was copied from that dictionary or assigning its authorship to the Académie. The selected fixed wiki lexical/form contribution is evaluated under CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_117898",
@@ -2348,9 +2602,20 @@
       "raw_import_markers": [],
       "original_historical_dictionary_layers": [],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_117898",
+        "boundary_kind": "daf8_reference_not_selected_authorship_proof",
+        "selected_lines": [
+          3,
+          7,
+          9,
+          10
+        ],
+        "reason": "fiancé revision 39837151, selected lines 3, 7, 9, 10: The actual footer contains an R:DAF8 bibliographic reference and no Import:DAF8 declaration. The reference is retained as bibliography, without inferring that this selected sentence was copied from that dictionary or assigning its authorship to the Académie. The selected fixed wiki lexical/form contribution is evaluated under CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_122296",
@@ -2436,9 +2701,20 @@
       "raw_import_markers": [],
       "original_historical_dictionary_layers": [],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_122296",
+        "boundary_kind": "selected_wiki_lexical_or_form_layer",
+        "selected_lines": [
+          3,
+          8,
+          12,
+          13
+        ],
+        "reason": "valise revision 39917388, selected lines 3, 8, 12, 13: The actual fixed capture has no DAF8 import declaration or DAF8 bibliography marker. Other references, including R:DAF1, R:DAF9, Robert, TLFi and Littré where present, are bibliography and not selected-sentence authorship evidence or a licence to copy those works. The selected fixed wiki lexical/form contribution is evaluated under CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_122673",
@@ -2543,9 +2819,20 @@
         }
       ],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_122673",
+        "boundary_kind": "declared_daf8_article_import_selected_lexical_boundary",
+        "selected_lines": [
+          3,
+          7,
+          9,
+          14
+        ],
+        "reason": "terrain revision 40047346, selected lines 3, 7, 9, 14: The actual fixed article footer declares extraction of all or part of the article from Académie française’s collective eighth edition, 1932–1935. That notice does not identify the original author of this selected sentence. The retained copyright policy revision 38903168, line 80, supports historical-edition reuse; the established issue #99 L123-3 assessment uses final publication 1935 and conservative expiry 2006-01-01. Académie française credit is retained for the declared original layer, while wiki contributor transcription/adaptation is separately CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_137388",
@@ -2650,9 +2937,20 @@
         }
       ],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_137388",
+        "boundary_kind": "declared_daf8_article_import_selected_lexical_boundary",
+        "selected_lines": [
+          1,
+          5,
+          6,
+          7
+        ],
+        "reason": "accrocher revision 39849917, selected lines 1, 5, 6, 7: The actual fixed article footer declares extraction of all or part of the article from Académie française’s collective eighth edition, 1932–1935. That notice does not identify the original author of this selected sentence. The retained copyright policy revision 38903168, line 80, supports historical-edition reuse; the established issue #99 L123-3 assessment uses final publication 1935 and conservative expiry 2006-01-01. Académie française credit is retained for the declared original layer, while wiki contributor transcription/adaptation is separately CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_150924",
@@ -2757,9 +3055,20 @@
         }
       ],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_150924",
+        "boundary_kind": "declared_daf8_article_import_selected_lexical_boundary",
+        "selected_lines": [
+          3,
+          11,
+          15,
+          38
+        ],
+        "reason": "campagne revision 39955267, selected lines 3, 11, 15, 38: The actual fixed article footer declares extraction of all or part of the article from Académie française’s collective eighth edition, 1932–1935. That notice does not identify the original author of this selected sentence. The retained copyright policy revision 38903168, line 80, supports historical-edition reuse; the established issue #99 L123-3 assessment uses final publication 1935 and conservative expiry 2006-01-01. Académie française credit is retained for the declared original layer, while wiki contributor transcription/adaptation is separately CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_154552",
@@ -2864,9 +3173,20 @@
         }
       ],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_154552",
+        "boundary_kind": "declared_daf8_article_import_selected_lexical_boundary",
+        "selected_lines": [
+          1,
+          5,
+          6,
+          7
+        ],
+        "reason": "coller revision 40025137, selected lines 1, 5, 6, 7: The actual fixed article footer declares extraction of all or part of the article from Académie française’s collective eighth edition, 1932–1935. That notice does not identify the original author of this selected sentence. The retained copyright policy revision 38903168, line 80, supports historical-edition reuse; the established issue #99 L123-3 assessment uses final publication 1935 and conservative expiry 2006-01-01. Académie française credit is retained for the declared original layer, while wiki contributor transcription/adaptation is separately CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_155305",
@@ -2971,9 +3291,20 @@
         }
       ],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_155305",
+        "boundary_kind": "declared_daf8_article_import_selected_lexical_boundary",
+        "selected_lines": [
+          3,
+          7,
+          9,
+          10
+        ],
+        "reason": "contrat revision 39772624, selected lines 3, 7, 9, 10: The actual fixed article footer declares extraction of all or part of the article from Académie française’s collective eighth edition, 1932–1935. That notice does not identify the original author of this selected sentence. The retained copyright policy revision 38903168, line 80, supports historical-edition reuse; the established issue #99 L123-3 assessment uses final publication 1935 and conservative expiry 2006-01-01. Académie française credit is retained for the declared original layer, while wiki contributor transcription/adaptation is separately CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_157308",
@@ -3078,9 +3409,20 @@
         }
       ],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_157308",
+        "boundary_kind": "declared_daf8_article_import_selected_lexical_boundary",
+        "selected_lines": [
+          1,
+          5,
+          6,
+          12
+        ],
+        "reason": "déposer revision 39882231, selected lines 1, 5, 6, 12: The actual fixed article footer declares extraction of all or part of the article from Académie française’s collective eighth edition, 1932–1935. That notice does not identify the original author of this selected sentence. The retained copyright policy revision 38903168, line 80, supports historical-edition reuse; the established issue #99 L123-3 assessment uses final publication 1935 and conservative expiry 2006-01-01. Académie française credit is retained for the declared original layer, while wiki contributor transcription/adaptation is separately CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_157573",
@@ -3185,9 +3527,20 @@
         }
       ],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_157573",
+        "boundary_kind": "declared_daf8_article_import_selected_lexical_boundary",
+        "selected_lines": [
+          3,
+          8,
+          10,
+          19
+        ],
+        "reason": "destin revision 39801157, selected lines 3, 8, 10, 19: The actual fixed article footer declares extraction of all or part of the article from Académie française’s collective eighth edition, 1932–1935. That notice does not identify the original author of this selected sentence. The retained copyright policy revision 38903168, line 80, supports historical-edition reuse; the established issue #99 L123-3 assessment uses final publication 1935 and conservative expiry 2006-01-01. Académie française credit is retained for the declared original layer, while wiki contributor transcription/adaptation is separately CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_158953",
@@ -3292,9 +3645,20 @@
         }
       ],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_158953",
+        "boundary_kind": "declared_daf8_article_import_selected_lexical_boundary",
+        "selected_lines": [
+          1,
+          5,
+          6,
+          7
+        ],
+        "reason": "élever revision 39835139, selected lines 1, 5, 6, 7: The actual fixed article footer declares extraction of all or part of the article from Académie française’s collective eighth edition, 1932–1935. That notice does not identify the original author of this selected sentence. The retained copyright policy revision 38903168, line 80, supports historical-edition reuse; the established issue #99 L123-3 assessment uses final publication 1935 and conservative expiry 2006-01-01. Académie française credit is retained for the declared original layer, while wiki contributor transcription/adaptation is separately CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_159377",
@@ -3399,9 +3763,20 @@
         }
       ],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_159377",
+        "boundary_kind": "declared_daf8_article_import_selected_lexical_boundary",
+        "selected_lines": [
+          1,
+          5,
+          6,
+          7
+        ],
+        "reason": "énerver revision 39692333, selected lines 1, 5, 6, 7: The actual fixed article footer declares extraction of all or part of the article from Académie française’s collective eighth edition, 1932–1935. That notice does not identify the original author of this selected sentence. The retained copyright policy revision 38903168, line 80, supports historical-edition reuse; the established issue #99 L123-3 assessment uses final publication 1935 and conservative expiry 2006-01-01. Académie française credit is retained for the declared original layer, while wiki contributor transcription/adaptation is separately CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_159618",
@@ -3536,9 +3911,22 @@
         }
       ],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_159618",
+        "boundary_kind": "declared_daf8_article_import_selected_lexical_boundary",
+        "selected_lines": [
+          1,
+          5,
+          6,
+          7,
+          20,
+          21
+        ],
+        "reason": "entendu revision 39771282, selected lines 1, 5, 6, 7, 20, 21: The actual fixed article footer declares extraction of all or part of the article from Académie française’s collective eighth edition, 1932–1935. That notice does not identify the original author of this selected sentence. The retained copyright policy revision 38903168, line 80, supports historical-edition reuse; the established issue #99 L123-3 assessment uses final publication 1935 and conservative expiry 2006-01-01. Académie française credit is retained for the declared original layer, while wiki contributor transcription/adaptation is separately CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_160375",
@@ -3643,9 +4031,20 @@
         }
       ],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_160375",
+        "boundary_kind": "declared_daf8_article_import_selected_lexical_boundary",
+        "selected_lines": [
+          1,
+          5,
+          6,
+          15
+        ],
+        "reason": "étonner revision 39004314, selected lines 1, 5, 6, 15: The actual fixed article footer declares extraction of all or part of the article from Académie française’s collective eighth edition, 1932–1935. That notice does not identify the original author of this selected sentence. The retained copyright policy revision 38903168, line 80, supports historical-edition reuse; the established issue #99 L123-3 assessment uses final publication 1935 and conservative expiry 2006-01-01. Académie française credit is retained for the declared original layer, while wiki contributor transcription/adaptation is separately CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_160729",
@@ -3750,9 +4149,20 @@
         }
       ],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_160729",
+        "boundary_kind": "declared_daf8_article_import_selected_lexical_boundary",
+        "selected_lines": [
+          1,
+          5,
+          7,
+          8
+        ],
+        "reason": "exploser revision 39666811, selected lines 1, 5, 7, 8: The actual fixed article footer declares extraction of all or part of the article from Académie française’s collective eighth edition, 1932–1935. That notice does not identify the original author of this selected sentence. The retained copyright policy revision 38903168, line 80, supports historical-edition reuse; the established issue #99 L123-3 assessment uses final publication 1935 and conservative expiry 2006-01-01. Académie française credit is retained for the declared original layer, while wiki contributor transcription/adaptation is separately CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_162026",
@@ -3824,9 +4234,21 @@
       "raw_import_markers": [],
       "original_historical_dictionary_layers": [],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_162026",
+        "boundary_kind": "selected_wiki_lexical_or_form_layer",
+        "selected_lines": [
+          1,
+          5,
+          6,
+          7,
+          8
+        ],
+        "reason": "celle-là revision 39684070, selected lines 1, 5, 6, 7, 8: The actual fixed capture has no DAF8 import declaration or DAF8 bibliography marker. Other references, including R:DAF1, R:DAF9, Robert, TLFi and Littré where present, are bibliography and not selected-sentence authorship evidence or a licence to copy those works. The selected fixed wiki lexical/form contribution is evaluated under CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_162375",
@@ -3994,9 +4416,23 @@
       "raw_import_markers": [],
       "original_historical_dictionary_layers": [],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_162375",
+        "boundary_kind": "daf8_reference_not_selected_authorship_proof",
+        "selected_lines": [
+          3,
+          8,
+          12,
+          15,
+          154,
+          156,
+          157
+        ],
+        "reason": "gare revision 39920880, selected lines 3, 8, 12, 15, 154, 156, 157: The actual footer contains an R:DAF8 bibliographic reference and no Import:DAF8 declaration. The reference is retained as bibliography, without inferring that this selected sentence was copied from that dictionary or assigning its authorship to the Académie. The selected fixed wiki lexical/form contribution is evaluated under CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_166041",
@@ -4082,9 +4518,20 @@
       "raw_import_markers": [],
       "original_historical_dictionary_layers": [],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_166041",
+        "boundary_kind": "daf8_reference_not_selected_authorship_proof",
+        "selected_lines": [
+          3,
+          124,
+          126,
+          127
+        ],
+        "reason": "lâche revision 39845496, selected lines 3, 124, 126, 127: The actual footer contains an R:DAF8 bibliographic reference and no Import:DAF8 declaration. The reference is retained as bibliography, without inferring that this selected sentence was copied from that dictionary or assigning its authorship to the Académie. The selected fixed wiki lexical/form contribution is evaluated under CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_172654",
@@ -4170,9 +4617,20 @@
       "raw_import_markers": [],
       "original_historical_dictionary_layers": [],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_172654",
+        "boundary_kind": "selected_wiki_lexical_or_form_layer",
+        "selected_lines": [
+          3,
+          8,
+          10,
+          11
+        ],
+        "reason": "prêtre revision 40044234, selected lines 3, 8, 10, 11: The actual fixed capture has no DAF8 import declaration or DAF8 bibliography marker. Other references, including R:DAF1, R:DAF9, Robert, TLFi and Littré where present, are bibliography and not selected-sentence authorship evidence or a licence to copy those works. The selected fixed wiki lexical/form contribution is evaluated under CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_173868",
@@ -4277,9 +4735,20 @@
         }
       ],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_173868",
+        "boundary_kind": "declared_daf8_article_import_selected_lexical_boundary",
+        "selected_lines": [
+          1,
+          5,
+          7,
+          8
+        ],
+        "reason": "rapide revision 40007761, selected lines 1, 5, 7, 8: The actual fixed article footer declares extraction of all or part of the article from Académie française’s collective eighth edition, 1932–1935. That notice does not identify the original author of this selected sentence. The retained copyright policy revision 38903168, line 80, supports historical-edition reuse; the established issue #99 L123-3 assessment uses final publication 1935 and conservative expiry 2006-01-01. Académie française credit is retained for the declared original layer, while wiki contributor transcription/adaptation is separately CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_174200",
@@ -4384,9 +4853,20 @@
         }
       ],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_174200",
+        "boundary_kind": "declared_daf8_article_import_selected_lexical_boundary",
+        "selected_lines": [
+          1,
+          5,
+          6,
+          30
+        ],
+        "reason": "reculer revision 40003734, selected lines 1, 5, 6, 30: The actual fixed article footer declares extraction of all or part of the article from Académie française’s collective eighth edition, 1932–1935. That notice does not identify the original author of this selected sentence. The retained copyright policy revision 38903168, line 80, supports historical-edition reuse; the established issue #99 L123-3 assessment uses final publication 1935 and conservative expiry 2006-01-01. Académie française credit is retained for the declared original layer, while wiki contributor transcription/adaptation is separately CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_174549",
@@ -4491,9 +4971,21 @@
         }
       ],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_174549",
+        "boundary_kind": "declared_daf8_article_import_selected_lexical_boundary",
+        "selected_lines": [
+          1,
+          5,
+          6,
+          30,
+          32
+        ],
+        "reason": "remplacer revision 39880072, selected lines 1, 5, 6, 30, 32: The actual fixed article footer declares extraction of all or part of the article from Académie française’s collective eighth edition, 1932–1935. That notice does not identify the original author of this selected sentence. The retained copyright policy revision 38903168, line 80, supports historical-edition reuse; the established issue #99 L123-3 assessment uses final publication 1935 and conservative expiry 2006-01-01. Académie française credit is retained for the declared original layer, while wiki contributor transcription/adaptation is separately CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_176507",
@@ -4598,9 +5090,22 @@
         }
       ],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_176507",
+        "boundary_kind": "declared_daf8_article_import_selected_lexical_boundary",
+        "selected_lines": [
+          1,
+          5,
+          6,
+          19,
+          20,
+          21
+        ],
+        "reason": "serrer revision 39771399, selected lines 1, 5, 6, 19, 20, 21: The actual fixed article footer declares extraction of all or part of the article from Académie française’s collective eighth edition, 1932–1935. That notice does not identify the original author of this selected sentence. The retained copyright policy revision 38903168, line 80, supports historical-edition reuse; the established issue #99 L123-3 assessment uses final publication 1935 and conservative expiry 2006-01-01. Académie française credit is retained for the declared original layer, while wiki contributor transcription/adaptation is separately CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_177473",
@@ -4686,9 +5191,21 @@
       "raw_import_markers": [],
       "original_historical_dictionary_layers": [],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_177473",
+        "boundary_kind": "daf8_reference_not_selected_authorship_proof",
+        "selected_lines": [
+          1,
+          5,
+          7,
+          8,
+          9
+        ],
+        "reason": "supplier revision 39953475, selected lines 1, 5, 7, 8, 9: The actual footer contains an R:DAF8 bibliographic reference and no Import:DAF8 declaration. The reference is retained as bibliography, without inferring that this selected sentence was copied from that dictionary or assigning its authorship to the Académie. The selected fixed wiki lexical/form contribution is evaluated under CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_179316",
@@ -4793,9 +5310,20 @@
         }
       ],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_179316",
+        "boundary_kind": "declared_daf8_article_import_selected_lexical_boundary",
+        "selected_lines": [
+          3,
+          7,
+          10,
+          11
+        ],
+        "reason": "usine revision 40013933, selected lines 3, 7, 10, 11: The actual fixed article footer declares extraction of all or part of the article from Académie française’s collective eighth edition, 1932–1935. That notice does not identify the original author of this selected sentence. The retained copyright policy revision 38903168, line 80, supports historical-edition reuse; the established issue #99 L123-3 assessment uses final publication 1935 and conservative expiry 2006-01-01. Académie française credit is retained for the declared original layer, while wiki contributor transcription/adaptation is separately CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_179334",
@@ -4910,9 +5438,21 @@
         }
       ],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_179334",
+        "boundary_kind": "declared_daf8_article_import_selected_lexical_boundary",
+        "selected_lines": [
+          1,
+          3,
+          5,
+          7,
+          8
+        ],
+        "reason": "urgence revision 39756177, selected lines 1, 3, 5, 7, 8: The actual fixed article footer declares extraction of all or part of the article from Académie française’s collective eighth edition, 1932–1935. That notice does not identify the original author of this selected sentence. The retained copyright policy revision 38903168, line 80, supports historical-edition reuse; the established issue #99 L123-3 assessment uses final publication 1935 and conservative expiry 2006-01-01. Académie française credit is retained for the declared original layer, while wiki contributor transcription/adaptation is separately CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_180395",
@@ -4984,9 +5524,20 @@
       "raw_import_markers": [],
       "original_historical_dictionary_layers": [],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_180395",
+        "boundary_kind": "selected_wiki_lexical_or_form_layer",
+        "selected_lines": [
+          3,
+          4,
+          6,
+          7
+        ],
+        "reason": "certaines revision 32694780, selected lines 3, 4, 6, 7: The actual fixed capture has no DAF8 import declaration or DAF8 bibliography marker. Other references, including R:DAF1, R:DAF9, Robert, TLFi and Littré where present, are bibliography and not selected-sentence authorship evidence or a licence to copy those works. The selected fixed wiki lexical/form contribution is evaluated under CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_193639",
@@ -5072,9 +5623,20 @@
       "raw_import_markers": [],
       "original_historical_dictionary_layers": [],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_193639",
+        "boundary_kind": "selected_wiki_lexical_or_form_layer",
+        "selected_lines": [
+          1,
+          5,
+          6,
+          13
+        ],
+        "reason": "emmerder revision 39772051, selected lines 1, 5, 6, 13: The actual fixed capture has no DAF8 import declaration or DAF8 bibliography marker. Other references, including R:DAF1, R:DAF9, Robert, TLFi and Littré where present, are bibliography and not selected-sentence authorship evidence or a licence to copy those works. The selected fixed wiki lexical/form contribution is evaluated under CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_15149",
@@ -5132,9 +5694,19 @@
       "raw_import_markers": [],
       "original_historical_dictionary_layers": [],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_15149",
+        "boundary_kind": "daf8_reference_not_selected_authorship_proof",
+        "selected_lines": [
+          1,
+          5,
+          8
+        ],
+        "reason": "celui-là revision 39973552, selected lines 1, 5, 8: The actual footer contains an R:DAF8 bibliographic reference and no Import:DAF8 declaration. The reference is retained as bibliography, without inferring that this selected sentence was copied from that dictionary or assigning its authorship to the Académie. The selected fixed wiki lexical/form contribution is evaluated under CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     },
     {
       "source_id": "b110_fr_119212",
@@ -5187,9 +5759,18 @@
         }
       ],
       "author_selected_boundary_assessment": "Selected lexical definition, French/POS/form frames and exact IPA are separated from literary/news examples, media and bilingual tables. The short anonymous remarque entendue example is retained only as adjective construction evidence. Captured import markers identify only DAF8; no selected sentence is attributed to a particular contributor or original author without evidence.",
-      "independent_review": "pending",
-      "independent_reviewer": null,
-      "selected_sentence_authorship": "not_established_by_current_contributor_registry_or_page_import_marker"
+      "independent_review": "passed_at_selected_text_boundary",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #110 on codex/d2-review-110; separate from content author a34b1ae",
+      "selected_sentence_authorship": "not_proved",
+      "independent_selected_boundary_assessment": {
+        "source_id": "b110_fr_119212",
+        "boundary_kind": "declared_daf8_article_import_selected_lexical_boundary",
+        "selected_lines": [
+          5,
+          8
+        ],
+        "reason": "urgent revision 39759472, selected lines 5, 8: The actual fixed article footer declares extraction of all or part of the article from Académie française’s collective eighth edition, 1932–1935. That notice does not identify the original author of this selected sentence. The retained copyright policy revision 38903168, line 80, supports historical-edition reuse; the established issue #99 L123-3 assessment uses final publication 1935 and conservative expiry 2006-01-01. Académie française credit is retained for the declared original layer, while wiki contributor transcription/adaptation is separately CC BY-SA 4.0. The selected definitions, French/POS/form frames and explicit IPA were inspected separately from examples, etymology, media, bilingual tables and other-language content. No distinct non-DAF8 external-text import or quotation notice attaches to these selected spans. Current full contributor registries and fixed article/history links provide credit without proving sentence authorship. Lexique’s scoped French adaptations and new English/Chinese explanations retain CC BY-SA 4.0 and modification notices. Actual combined notices and canonical/native admission remain parent-owned."
+      }
     }
   ],
   "authority_captures": [
@@ -5233,7 +5814,7 @@
       "error": "HTTP Error 403: Forbidden"
     }
   ],
-  "authority_reading": "The author captured current French copyright policy, the DAF8 import template, CC BY-SA 4.0 legal text and Wikimedia Terms. This is author reading, not independent review. The direct L123-3 endpoint returned HTTP 403; its prior edition-level assessment is reused with no live-statute refresh claim.",
+  "authority_reading": "This reviewer independently read the retained French copyright policy revision 38903168 (including the external-material exemption and historical collective-work paragraph), DAF8 import template revision 22113837, CC BY-SA 4.0 Sections 2–4, and Wikimedia Terms Section 7. The policy supports historical DAF8 reuse, with the established project’s conservative final-1935 expiry retained. The author’s direct L123-3 HTTP 403 is retained; no fresh statute retrieval is claimed.",
   "original_daf8_basis_source": "../issue-99/source-context.json",
   "original_daf8_basis_scope": "Established Académie française collective eighth edition, 1932–1935; conservative expiry 2006-01-01 under L123-3 using final publication 1935. The page-wide import notice does not prove a selected sentence’s original author. Fixed contributor transcription/adaptation and new Lexique adaptations remain separately CC BY-SA 4.0.",
   "original_daf8_boundary_sources": [
@@ -5268,5 +5849,15 @@
     "b110_fr_119212"
   ],
   "selected_component_boundaries": "celle-là/celui-là and certaines/certain bind the exact feminine forms to independently captured lemma semantics; gare/ONO uses the warning interjection; vu/ADJ IPA comes from its adjective agreement template; entendu/ADJ selects knowing/complicit use. These are source bindings only; no query aliases are added.",
-  "final_combined_package_status": "pending_parent_conversion_notices_and_native_gates"
+  "final_combined_package_status": "pending_parent_conversion_notices_and_native_gates",
+  "independence": true,
+  "selected_rights_report": "selected-rights.md",
+  "reviewed_fields": 200,
+  "reviewed_sources": 51,
+  "unresolved_selected_fields": [],
+  "selected_boundary_counts": {
+    "declared_daf8_article_import_selected_lexical_boundary": 29,
+    "daf8_reference_not_selected_authorship_proof": 12,
+    "selected_wiki_lexical_or_form_layer": 10
+  }
 }
