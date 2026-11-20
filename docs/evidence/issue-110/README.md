@@ -1,81 +1,76 @@
-# Issue #110 authored content
+# Issue #110 independently reviewed content
 
-All **50 frozen rows 1451–1500** have one complete authored selected sense with
-French, IPA, English and Chinese content: **50 senses / 200 fields**, with
-**no unresolved exact groups or unauthored fields**. Headwords, POS subclasses,
-frequencies and order match the fixed manifest. Independent acceptance is
-**0 groups / 0 fields**; the 200 authored fields await the separate reviewer.
-The global denominator remains **4,087 groups**.
+**50 exact frozen groups / 50 selected senses / 200 independently accepted
+fields**, with **0 unresolved selected fields**. Two Chinese translations have
+accepted replacements. Headwords, POS subclasses, frequencies and order retain
+rows 1451–1500 exactly. The global denominator remains **4,087 groups**.
 
 The [ticket](https://github.com/zardonc/lexique/issues/110) and
-[parent spec](https://github.com/zardonc/lexique/issues/78) define the scope.
-[Source research](source-research.md) records the exact selected uses and
-construction boundaries. [Rights](rights.json) records the author assessment,
-attribution and redistribution obligations. [Independent review](independent-review.md)
-has no reviewer or acceptance evidence yet.
+[parent](https://github.com/zardonc/lexique/issues/78) define the scope.
+[Independent review](independent-review.md) records individual semantic,
+construction, IPA and spelling judgments. [Selected rights](selected-rights.md)
+records the actual import, bibliography and contributor boundaries.
 
-## Handoff files
+## Review materials
 
 | File | Content |
 | --- | --- |
-| [groups.json](groups.json) | Exact frozen groups and 200 complete authored fields |
+| [groups.json](groups.json) | Exact groups and independently accepted fields |
+| [review-candidates.json](review-candidates.json) | Unchanged author proposals at a34b1ae |
+| [field-review.json](field-review.json) | Separate independent review, proposed/accepted texts, per-field reasons, context and bindings |
 | [sources.json](sources.json) | 51 fixed French sources, history credit, licences and modifications |
-| [field-review.json](field-review.json) | Proposed exact texts, 200 source bindings and pending independent judgments |
-| [source-context.json](source-context.json) | French/POS/form frames, construction evidence, full contributor registries and original-work boundaries |
-| [source-excerpts.json](source-excerpts.json) | Exact raw one-based lines and selected IPA positions |
-| [source-captures.json](source-captures.json) | API/wikitext capture paths and complete contributor pagination |
-| [rights.json](rights.json) | Selected-source author assessments, captured authorities and material obligations |
-| [reuse.json](reuse.json) | No previously admitted exact group reused; earlier canonical content remains unchanged |
-| [admission.json](admission.json) | Author counts, baseline counts and pending review/conversion/native gates |
+| [source-context.json](source-context.json) | Individual reviewed source boundaries, actual import/reference markers, form and construction evidence, complete contributor registries |
+| [source-excerpts.json](source-excerpts.json) | Unchanged 200 exact raw field bindings |
+| [source-captures.json](source-captures.json) | Fixed first-party API/wikitext captures and full contributor pagination |
+| [rights.json](rights.json) | Independent selected-boundary judgments and redistribution obligations |
+| [reuse.json](reuse.json) | No reused exact group; prior canonical content remains unchanged |
+| [admission.json](admission.json) | Independent counts and pending parent canonical/conversion/native gates |
 
-## Author verification
+The review retains all four languages/IPA fields for the same selected modern
+use. The coat-rack translation at row 1489 and symbol-system translation at row
+1495 are corrected with their proposals and reasons retained. The constructions
+for `supplier`, `remplacer` and `accorder` are explicit. Exact spelling/flexion
+records retain `alias_admission=not_admitted`, with no runtime aliases added.
+
+## Verification
 
 The [focused resource check](../../../scripts/test_core_batch_110.py) uses the
-parent's approved resource boundary. It checks exact frozen membership and
-frequencies, four nonempty fields per sense, raw source bindings, contributor
-and rights records, and honest pending independent states. Raw captures are
-checked when available in the author checkout; tracked bindings remain usable
-in a detached checkout. Automated binding checks are not semantic or rights
-acceptance.
+parent's approved resource boundary. It checks frozen membership and frequencies,
+proposal preservation, accepted outcomes, independent reasons and identities,
+source/version/span bindings, attribution and honest pending parent gates.
+The independent raw-capture check also reads all fixed captures and contributor
+pages in the author checkout.
 
 ```powershell
-uv run --python 3.14.10 --no-project python -B -X utf8 target/issue-110/prepare_candidates.py
-uv run --python 3.14.10 --no-project python -B -X utf8 target/issue-110/complete_handoff.py
-uv run --python 3.14.10 --no-project python -B -X utf8 -m unittest discover -s scripts -p test_core_batch_110.py
+uv run --python 3.14.10 --no-project python -B -X utf8 -m unittest discover -s scripts -p test_core_batch_110.py -v
 pnpm test:docs
 git diff --cached --check
 ```
 
-The focused check recorded RED on the absent group package, then GREEN with the
-authored fields. The rights slice recorded RED on the absent rights record, then
-GREEN with complete author assessments. Both tests pass. Retained logs:
-[RED groups](../../../target/issue-110/red.log),
-[RED rights](../../../target/issue-110/red-rights.log),
-[source capture](../../../target/issue-110/fetch.log),
-[contributors](../../../target/issue-110/contributors.log),
-[preparation](../../../target/issue-110/prepare.log),
-[rights completion](../../../target/issue-110/handoff.log) and
-[GREEN](../../../target/issue-110/green.log). Documentation and diff results are
-retained in the same evidence directory.
+The focused Python check passes **3 tests**. The Chinese regression first failed
+at both affected rows. Documentation format/repository links and staged diff
+checks pass. The [independent review](independent-review.md) identifies complete
+logs, capture verification, tested base and platform.
 
-`pnpm test:docs` passed for 277 tracked documents. The batch-only check passed
-for its three Markdown files and 29 repository links; staged diff checks passed.
-
-Author checkout: `C:/Users/inthe/IdeaProjects/lexique-batch-110`, branch
-`codex/d2-content-110`. Its clean initial HEAD and integration merge base were
-`fa4ea3eab1558fbede04b50cf0cd15f05bdf26dc`. The integration branch is
-`codex/d2-content-110-119`; its current tip is merged before handoff. Preparation,
-complete raw captures and execution logs remain in
+Review checkout: `C:/Users/inthe/IdeaProjects/lexique-review-110`, branch
+`codex/d2-review-110`, pinned base
+`ba97a83619d0f952e5df51d1fd4549dcc348118b`, content author `a34b1ae`.
+Independent logs remain under `target/issue-110-review/` in that checkout.
+Fixed author captures/logs remain at
 `C:/Users/inthe/IdeaProjects/lexique-batch-110/target/issue-110/`.
 
-## Remaining gates
+## Pending parent gates
 
-Independent semantic, selected-span rights and spelling/construction review
-remain pending for every proposed field. Combined conversion, notices packaging,
-actual native lookup/save/reopen and final admission are parent-owned and unrun
-here. The author reused the established DAF8 original-edition basis; the direct
-statute endpoint returned HTTP 403. No live statute refresh is claimed.
-Learner acceptance, whole-core completion and release/platform gates remain
-separate. The unchanged baseline has **1,436 accepted groups / 5,744 fields**
-and **2,651 groups without accepted content**, including the approved annotation
-rows; this author package adds no accepted content to those totals.
+Independent selected acceptance is **50 groups / 200 fields**; newly admitted
+canonical content from this review remains **0 groups / 0 fields**, with all
+**200 canonical fields pending**. The baseline stays at **1,436 accepted groups /
+5,744 fields** and **2,651 groups without accepted content**, including the
+approved annotation rows.
+
+The parent owns final canonical admission and binding-only normalization,
+reproducible conversion, fixed-denominator coverage/size reporting, actual
+combined notices packaging and native lookup/save/reopen. Native, UI, offline
+and release/platform checks were not run here. The direct live L123-3 capture
+was unavailable; the fixed policy and established original-edition basis are
+identified in the selected-rights report. Learner data and canonical runtime
+aliases are unchanged.

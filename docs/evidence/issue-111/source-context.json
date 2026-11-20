@@ -11,7 +11,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_independent_selected_content_and_rights_only",
       "selected_locations": [
         {
           "sense_id": "b111-1536-futur-adj-selected",
@@ -346,7 +346,21 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit"
+      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "independent_capture_review": {
+        "id": "b111_fr_568",
+        "title": "futur",
+        "revid": 39516968,
+        "timestamp": "2026-05-17T15:27:54Z",
+        "last_editor": "Fagairolles 34",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\sources\\futur.wiki",
+        "raw_sha256": "624b8cc3c1712e5b2eb4cd2aba28ee057fb509ad7f68dacee8424494c6fb03ab",
+        "contributors": 85,
+        "raw_equals_fixed_api_revision": true,
+        "boundary_markers": []
+      },
+      "selected_rights_reason": "Selected definitions/IPA and grammar frames read separately from examples, media, etymology and other-language material. Per-field decisions are in field-review.json and rights.json; complete contributor registry and linked history retained."
     },
     {
       "id": "b111_fr_574",
@@ -359,7 +373,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_independent_selected_content_and_rights_only",
       "selected_locations": [
         {
           "sense_id": "b111-1514-italien-adj-selected",
@@ -641,7 +655,21 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit"
+      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "independent_capture_review": {
+        "id": "b111_fr_574",
+        "title": "italien",
+        "revid": 39819146,
+        "timestamp": "2026-08-20T13:16:29Z",
+        "last_editor": "Richaringan",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\sources\\italien.wiki",
+        "raw_sha256": "183bb445bc0791b6348e2555cfdfb69cb08c8cbfaaf826cd30df45d88b77569f",
+        "contributors": 82,
+        "raw_equals_fixed_api_revision": true,
+        "boundary_markers": []
+      },
+      "selected_rights_reason": "Selected definitions/IPA and grammar frames read separately from examples, media, etymology and other-language material. Per-field decisions are in field-review.json and rights.json; complete contributor registry and linked history retained."
     },
     {
       "id": "b111_fr_5104",
@@ -654,7 +682,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_independent_selected_content_and_rights_only",
       "selected_locations": [
         {
           "sense_id": "b111-1538-souci-nom-selected",
@@ -736,7 +764,7 @@
           "line_1_based": 215,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_proven_by_marker_original_edition_credited_conservatively"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -751,7 +779,8 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_edition_boundary_only",
+          "review_reason": "Established DAF8 original collective edition expired conservatively on 2006-01-01; this does not license later Wiki changes or attribute selected-sentence authorship."
         }
       ],
       "bibliographic_identities": [
@@ -933,7 +962,26 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit"
+      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "independent_capture_review": {
+        "id": "b111_fr_5104",
+        "title": "souci",
+        "revid": 39865738,
+        "timestamp": "2026-09-08T09:13:30Z",
+        "last_editor": "Poiuytrell",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\sources\\souci.wiki",
+        "raw_sha256": "b7e53ff91dd6501dd6e0b0fd1687b81d316c1df80bfa3163c19b0ccfea6cf0e6",
+        "contributors": 80,
+        "raw_equals_fixed_api_revision": true,
+        "boundary_markers": [
+          {
+            "line": 215,
+            "text": "* {{Import:DAF8}}"
+          }
+        ]
+      },
+      "selected_rights_reason": "Selected definitions/IPA and grammar frames read separately from examples, media, etymology and other-language material. Per-field decisions are in field-review.json and rights.json; complete contributor registry and linked history retained."
     },
     {
       "id": "b111_fr_5363",
@@ -946,7 +994,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_independent_selected_content_and_rights_only",
       "selected_locations": [
         {
           "sense_id": "b111-1544-faible-adj-selected",
@@ -1241,7 +1289,21 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit"
+      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "independent_capture_review": {
+        "id": "b111_fr_5363",
+        "title": "faible",
+        "revid": 39902777,
+        "timestamp": "2026-09-25T05:33:27Z",
+        "last_editor": "Diligent",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\sources\\faible.wiki",
+        "raw_sha256": "0bc3648f7ed2394a666374119df15beb0de0672186c08c11a4f0a9bfbf973a4d",
+        "contributors": 85,
+        "raw_equals_fixed_api_revision": true,
+        "boundary_markers": []
+      },
+      "selected_rights_reason": "Selected definitions/IPA and grammar frames read separately from examples, media, etymology and other-language material. Per-field decisions are in field-review.json and rights.json; complete contributor registry and linked history retained."
     },
     {
       "id": "b111_fr_7917",
@@ -1254,7 +1316,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_independent_selected_content_and_rights_only",
       "selected_locations": [
         {
           "sense_id": "b111-1518-tableau-nom-selected",
@@ -1336,7 +1398,7 @@
           "line_1_based": 299,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_proven_by_marker_original_edition_credited_conservatively"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -1351,7 +1413,8 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_edition_boundary_only",
+          "review_reason": "Established DAF8 original collective edition expired conservatively on 2006-01-01; this does not license later Wiki changes or attribute selected-sentence authorship."
         }
       ],
       "bibliographic_identities": [
@@ -1505,7 +1568,26 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit"
+      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "independent_capture_review": {
+        "id": "b111_fr_7917",
+        "title": "tableau",
+        "revid": 39770797,
+        "timestamp": "2026-08-03T10:26:51Z",
+        "last_editor": "WikiLucas00",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\sources\\tableau.wiki",
+        "raw_sha256": "c46549d7bd389a6cc5f76537537cfead7cec80d4be542a452fa4a7cc62166c15",
+        "contributors": 82,
+        "raw_equals_fixed_api_revision": true,
+        "boundary_markers": [
+          {
+            "line": 299,
+            "text": "* {{Import:DAF8}}"
+          }
+        ]
+      },
+      "selected_rights_reason": "Selected definitions/IPA and grammar frames read separately from examples, media, etymology and other-language material. Per-field decisions are in field-review.json and rights.json; complete contributor registry and linked history retained."
     },
     {
       "id": "b111_fr_9186",
@@ -1518,7 +1600,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_independent_selected_content_and_rights_only",
       "selected_locations": [
         {
           "sense_id": "b111-1521-restaurant-nom-selected",
@@ -1752,7 +1834,21 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit"
+      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "independent_capture_review": {
+        "id": "b111_fr_9186",
+        "title": "restaurant",
+        "revid": 40036808,
+        "timestamp": "2026-11-16T08:51:30Z",
+        "last_editor": "Manta fonom celine",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\sources\\restaurant.wiki",
+        "raw_sha256": "7c752d27821da8eafb4742cf4e972e8a5d4247237167f1514de3bbed6e718377",
+        "contributors": 86,
+        "raw_equals_fixed_api_revision": true,
+        "boundary_markers": []
+      },
+      "selected_rights_reason": "Selected definitions/IPA and grammar frames read separately from examples, media, etymology and other-language material. Per-field decisions are in field-review.json and rights.json; complete contributor registry and linked history retained."
     },
     {
       "id": "b111_fr_9898",
@@ -1765,7 +1861,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_independent_selected_content_and_rights_only",
       "selected_locations": [
         {
           "sense_id": "b111-1528-double-adj-selected",
@@ -2068,7 +2164,21 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit"
+      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "independent_capture_review": {
+        "id": "b111_fr_9898",
+        "title": "double",
+        "revid": 39922874,
+        "timestamp": "2026-10-07T17:55:44Z",
+        "last_editor": "Renard Migrant",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\sources\\double.wiki",
+        "raw_sha256": "00c14f75b9fec84624a8b98edf1f4d061343584feda4356a344b2bacb24ef311",
+        "contributors": 68,
+        "raw_equals_fixed_api_revision": true,
+        "boundary_markers": []
+      },
+      "selected_rights_reason": "Selected definitions/IPA and grammar frames read separately from examples, media, etymology and other-language material. Per-field decisions are in field-review.json and rights.json; complete contributor registry and linked history retained."
     },
     {
       "id": "b111_fr_9915",
@@ -2081,7 +2191,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_independent_selected_content_and_rights_only",
       "selected_locations": [
         {
           "sense_id": "b111-1501-justice-nom-selected",
@@ -2163,7 +2273,7 @@
           "line_1_based": 269,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_proven_by_marker_original_edition_credited_conservatively"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -2178,7 +2288,8 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_edition_boundary_only",
+          "review_reason": "Established DAF8 original collective edition expired conservatively on 2006-01-01; this does not license later Wiki changes or attribute selected-sentence authorship."
         }
       ],
       "bibliographic_identities": [
@@ -2360,7 +2471,26 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit"
+      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "independent_capture_review": {
+        "id": "b111_fr_9915",
+        "title": "justice",
+        "revid": 39953940,
+        "timestamp": "2026-10-23T10:15:16Z",
+        "last_editor": "Noé",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\sources\\justice.wiki",
+        "raw_sha256": "628e843a0b59ee22d5b879ccf55e33465df100e07f90c6888012ae62bd522b2e",
+        "contributors": 90,
+        "raw_equals_fixed_api_revision": true,
+        "boundary_markers": [
+          {
+            "line": 269,
+            "text": "* {{Import:DAF8}}"
+          }
+        ]
+      },
+      "selected_rights_reason": "Selected definitions/IPA and grammar frames read separately from examples, media, etymology and other-language material. Per-field decisions are in field-review.json and rights.json; complete contributor registry and linked history retained."
     },
     {
       "id": "b111_fr_13089",
@@ -2373,7 +2503,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_independent_selected_content_and_rights_only",
       "selected_locations": [
         {
           "sense_id": "b111-1548-fusil-nom-selected",
@@ -2607,7 +2737,21 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit"
+      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "independent_capture_review": {
+        "id": "b111_fr_13089",
+        "title": "fusil",
+        "revid": 39771467,
+        "timestamp": "2026-08-03T10:43:47Z",
+        "last_editor": "WikiLucas00",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\sources\\fusil.wiki",
+        "raw_sha256": "fb2b83edd3c5871dac30e382221aea644947c540c12e8704f54c83d1c9bf2694",
+        "contributors": 71,
+        "raw_equals_fixed_api_revision": true,
+        "boundary_markers": []
+      },
+      "selected_rights_reason": "Selected definitions/IPA and grammar frames read separately from examples, media, etymology and other-language material. Per-field decisions are in field-review.json and rights.json; complete contributor registry and linked history retained."
     },
     {
       "id": "b111_fr_20095",
@@ -2620,7 +2764,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_independent_selected_content_and_rights_only",
       "selected_locations": [
         {
           "sense_id": "b111-1506-telle-adj-ind-selected",
@@ -2714,7 +2858,21 @@
         "YS-Bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit"
+      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "independent_capture_review": {
+        "id": "b111_fr_20095",
+        "title": "telle",
+        "revid": 39770550,
+        "timestamp": "2026-08-03T10:20:07Z",
+        "last_editor": "WikiLucas00",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\sources\\telle.wiki",
+        "raw_sha256": "9ff36fc970c5a4499b3f2d1213fcb6d0fe6ed7a5224f0a8016e8925093812a88",
+        "contributors": 15,
+        "raw_equals_fixed_api_revision": true,
+        "boundary_markers": []
+      },
+      "selected_rights_reason": "Selected definitions/IPA and grammar frames read separately from examples, media, etymology and other-language material. Per-field decisions are in field-review.json and rights.json; complete contributor registry and linked history retained."
     },
     {
       "id": "b111_fr_22636",
@@ -2727,7 +2885,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_independent_selected_content_and_rights_only",
       "selected_locations": [
         {
           "sense_id": "b111-1509-bus-nom-selected",
@@ -2981,7 +3139,21 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit"
+      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "independent_capture_review": {
+        "id": "b111_fr_22636",
+        "title": "bus",
+        "revid": 39887685,
+        "timestamp": "2026-09-21T22:57:06Z",
+        "last_editor": "Snawei",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\sources\\bus.wiki",
+        "raw_sha256": "ec236bcf8384e3cba4eac6f15725c13c8c793dc5226dc7c250a3955acef6db28",
+        "contributors": 96,
+        "raw_equals_fixed_api_revision": true,
+        "boundary_markers": []
+      },
+      "selected_rights_reason": "Selected definitions/IPA and grammar frames read separately from examples, media, etymology and other-language material. Per-field decisions are in field-review.json and rights.json; complete contributor registry and linked history retained."
     },
     {
       "id": "b111_fr_36499",
@@ -2994,7 +3166,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_independent_selected_content_and_rights_only",
       "selected_locations": [
         {
           "sense_id": "b111-1516-crise-nom-selected",
@@ -3287,7 +3459,21 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit"
+      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "independent_capture_review": {
+        "id": "b111_fr_36499",
+        "title": "crise",
+        "revid": 39874097,
+        "timestamp": "2026-09-13T09:36:38Z",
+        "last_editor": "Chesspac",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\sources\\crise.wiki",
+        "raw_sha256": "1ae440a9ea41bc23d87803c9f0ca46bbd9de975e0229adc4e7c898d37f0c141a",
+        "contributors": 70,
+        "raw_equals_fixed_api_revision": true,
+        "boundary_markers": []
+      },
+      "selected_rights_reason": "Selected definitions/IPA and grammar frames read separately from examples, media, etymology and other-language material. Per-field decisions are in field-review.json and rights.json; complete contributor registry and linked history retained."
     },
     {
       "id": "b111_fr_41280",
@@ -3300,7 +3486,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_independent_selected_content_and_rights_only",
       "selected_locations": [
         {
           "sense_id": "b111-1540-concerner-ver-selected",
@@ -3382,7 +3568,7 @@
           "line_1_based": 56,
           "raw_marker": "*{{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_proven_by_marker_original_edition_credited_conservatively"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -3397,7 +3583,8 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_edition_boundary_only",
+          "review_reason": "Established DAF8 original collective edition expired conservatively on 2006-01-01; this does not license later Wiki changes or attribute selected-sentence authorship."
         }
       ],
       "bibliographic_identities": [
@@ -3475,7 +3662,26 @@
         "~2026-24794-00"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit"
+      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "independent_capture_review": {
+        "id": "b111_fr_41280",
+        "title": "concerner",
+        "revid": 39818921,
+        "timestamp": "2026-08-20T11:41:01Z",
+        "last_editor": "The.shahab",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\sources\\concerner.wiki",
+        "raw_sha256": "badff257baa2cc115a8807cb955f3c5cd448217540a776d9132985abd869f682",
+        "contributors": 41,
+        "raw_equals_fixed_api_revision": true,
+        "boundary_markers": [
+          {
+            "line": 56,
+            "text": "*{{Import:DAF8}}"
+          }
+        ]
+      },
+      "selected_rights_reason": "Selected definitions/IPA and grammar frames read separately from examples, media, etymology and other-language material. Per-field decisions are in field-review.json and rights.json; complete contributor registry and linked history retained."
     },
     {
       "id": "b111_fr_42275",
@@ -3488,7 +3694,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_independent_selected_content_and_rights_only",
       "selected_locations": [
         {
           "sense_id": "b111-1531-poche-nom-selected",
@@ -3947,7 +4153,21 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit"
+      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "independent_capture_review": {
+        "id": "b111_fr_42275",
+        "title": "poche",
+        "revid": 39771778,
+        "timestamp": "2026-08-03T10:51:34Z",
+        "last_editor": "WikiLucas00",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\sources\\poche.wiki",
+        "raw_sha256": "71549a4712178af16b996709bd2f31662fbdb3fd19f3b331a9b0a552b7291117",
+        "contributors": 96,
+        "raw_equals_fixed_api_revision": true,
+        "boundary_markers": []
+      },
+      "selected_rights_reason": "Selected definitions/IPA and grammar frames read separately from examples, media, etymology and other-language material. Per-field decisions are in field-review.json and rights.json; complete contributor registry and linked history retained."
     },
     {
       "id": "b111_fr_75539",
@@ -3960,7 +4180,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_independent_selected_content_and_rights_only",
       "selected_locations": [
         {
           "sense_id": "b111-1506-telle-adj-ind-selected",
@@ -4034,7 +4254,7 @@
           "line_1_based": 231,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_proven_by_marker_original_edition_credited_conservatively"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -4049,7 +4269,8 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_edition_boundary_only",
+          "review_reason": "Established DAF8 original collective edition expired conservatively on 2006-01-01; this does not license later Wiki changes or attribute selected-sentence authorship."
         }
       ],
       "bibliographic_identities": [
@@ -4230,7 +4451,26 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit"
+      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "independent_capture_review": {
+        "id": "b111_fr_75539",
+        "title": "tel",
+        "revid": 39812663,
+        "timestamp": "2026-08-18T12:26:53Z",
+        "last_editor": "Wisdood",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\sources\\tel.wiki",
+        "raw_sha256": "19bd344c2d030e3efd7944fb384aa385a02bfb7640c1a49c4429aabdcf179109",
+        "contributors": 74,
+        "raw_equals_fixed_api_revision": true,
+        "boundary_markers": [
+          {
+            "line": 231,
+            "text": "* {{Import:DAF8}}"
+          }
+        ]
+      },
+      "selected_rights_reason": "Selected definitions/IPA and grammar frames read separately from examples, media, etymology and other-language material. Per-field decisions are in field-review.json and rights.json; complete contributor registry and linked history retained."
     },
     {
       "id": "b111_fr_104265",
@@ -4243,7 +4483,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_independent_selected_content_and_rights_only",
       "selected_locations": [
         {
           "sense_id": "b111-1507-niveau-nom-selected",
@@ -4325,7 +4565,7 @@
           "line_1_based": 218,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_proven_by_marker_original_edition_credited_conservatively"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -4340,7 +4580,8 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_edition_boundary_only",
+          "review_reason": "Established DAF8 original collective edition expired conservatively on 2006-01-01; this does not license later Wiki changes or attribute selected-sentence authorship."
         }
       ],
       "bibliographic_identities": [
@@ -4487,7 +4728,26 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit"
+      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "independent_capture_review": {
+        "id": "b111_fr_104265",
+        "title": "niveau",
+        "revid": 39938928,
+        "timestamp": "2026-10-16T20:55:42Z",
+        "last_editor": "Tokoss78",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\sources\\niveau.wiki",
+        "raw_sha256": "9fd2e602490dfbd5f15b162c3dab9bd5055e742bd214b714d4cd86195deb7192",
+        "contributors": 70,
+        "raw_equals_fixed_api_revision": true,
+        "boundary_markers": [
+          {
+            "line": 218,
+            "text": "* {{Import:DAF8}}"
+          }
+        ]
+      },
+      "selected_rights_reason": "Selected definitions/IPA and grammar frames read separately from examples, media, etymology and other-language material. Per-field decisions are in field-review.json and rights.json; complete contributor registry and linked history retained."
     },
     {
       "id": "b111_fr_115435",
@@ -4500,7 +4760,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_independent_selected_content_and_rights_only",
       "selected_locations": [
         {
           "sense_id": "b111-1510-tendre-adj-selected",
@@ -4880,7 +5140,21 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit"
+      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "independent_capture_review": {
+        "id": "b111_fr_115435",
+        "title": "tendre",
+        "revid": 40046504,
+        "timestamp": "2026-11-19T18:13:05Z",
+        "last_editor": "Dhegiha",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\sources\\tendre.wiki",
+        "raw_sha256": "c7c88e432753b9b5bc7131f549977a23fb4b9e2bea118ea3fbb105e67941c87c",
+        "contributors": 85,
+        "raw_equals_fixed_api_revision": true,
+        "boundary_markers": []
+      },
+      "selected_rights_reason": "Selected definitions/IPA and grammar frames read separately from examples, media, etymology and other-language material. Per-field decisions are in field-review.json and rights.json; complete contributor registry and linked history retained."
     },
     {
       "id": "b111_fr_118570",
@@ -4893,7 +5167,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_independent_selected_content_and_rights_only",
       "selected_locations": [
         {
           "sense_id": "b111-1533-couple-nom-selected",
@@ -4975,7 +5249,7 @@
           "line_1_based": 235,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_proven_by_marker_original_edition_credited_conservatively"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -4990,7 +5264,8 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_edition_boundary_only",
+          "review_reason": "Established DAF8 original collective edition expired conservatively on 2006-01-01; this does not license later Wiki changes or attribute selected-sentence authorship."
         }
       ],
       "bibliographic_identities": [
@@ -5240,7 +5515,26 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit"
+      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "independent_capture_review": {
+        "id": "b111_fr_118570",
+        "title": "couple",
+        "revid": 39826397,
+        "timestamp": "2026-08-23T15:57:21Z",
+        "last_editor": "Sayoxime",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\sources\\couple.wiki",
+        "raw_sha256": "dde45146653743f6e5913520188176e5a4e1047ac61f58d514167e0d13c4ab94",
+        "contributors": 93,
+        "raw_equals_fixed_api_revision": true,
+        "boundary_markers": [
+          {
+            "line": 235,
+            "text": "* {{Import:DAF8}}"
+          }
+        ]
+      },
+      "selected_rights_reason": "Selected definitions/IPA and grammar frames read separately from examples, media, etymology and other-language material. Per-field decisions are in field-review.json and rights.json; complete contributor registry and linked history retained."
     },
     {
       "id": "b111_fr_120313",
@@ -5253,7 +5547,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_independent_selected_content_and_rights_only",
       "selected_locations": [
         {
           "sense_id": "b111-1542-programme-nom-selected",
@@ -5445,7 +5739,21 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit"
+      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "independent_capture_review": {
+        "id": "b111_fr_120313",
+        "title": "programme",
+        "revid": 39815941,
+        "timestamp": "2026-08-19T16:07:54Z",
+        "last_editor": "Amqui",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\sources\\programme.wiki",
+        "raw_sha256": "b3ee3b018572746112c9c765a51d4f84503461c0162446ef0cd6272252d7f7a5",
+        "contributors": 69,
+        "raw_equals_fixed_api_revision": true,
+        "boundary_markers": []
+      },
+      "selected_rights_reason": "Selected definitions/IPA and grammar frames read separately from examples, media, etymology and other-language material. Per-field decisions are in field-review.json and rights.json; complete contributor registry and linked history retained."
     },
     {
       "id": "b111_fr_136816",
@@ -5458,7 +5766,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_independent_selected_content_and_rights_only",
       "selected_locations": [
         {
           "sense_id": "b111-1522-pilote-adj-selected",
@@ -5702,7 +6010,21 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit"
+      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "independent_capture_review": {
+        "id": "b111_fr_136816",
+        "title": "pilote",
+        "revid": 39771694,
+        "timestamp": "2026-08-03T10:49:47Z",
+        "last_editor": "WikiLucas00",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\sources\\pilote.wiki",
+        "raw_sha256": "b2bbe07126cd868e0417e496a529a0c4f04b3be9dc02c68f22f3ee1eb3d8744d",
+        "contributors": 63,
+        "raw_equals_fixed_api_revision": true,
+        "boundary_markers": []
+      },
+      "selected_rights_reason": "Selected definitions/IPA and grammar frames read separately from examples, media, etymology and other-language material. Per-field decisions are in field-review.json and rights.json; complete contributor registry and linked history retained."
     },
     {
       "id": "b111_fr_137641",
@@ -5715,7 +6037,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_independent_selected_content_and_rights_only",
       "selected_locations": [
         {
           "sense_id": "b111-1520-admettre-ver-selected",
@@ -5797,7 +6119,7 @@
           "line_1_based": 144,
           "raw_marker": "*{{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_proven_by_marker_original_edition_credited_conservatively"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -5812,7 +6134,8 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_edition_boundary_only",
+          "review_reason": "Established DAF8 original collective edition expired conservatively on 2006-01-01; this does not license later Wiki changes or attribute selected-sentence authorship."
         }
       ],
       "bibliographic_identities": [
@@ -5931,7 +6254,26 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit"
+      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "independent_capture_review": {
+        "id": "b111_fr_137641",
+        "title": "admettre",
+        "revid": 39719991,
+        "timestamp": "2026-08-01T00:53:55Z",
+        "last_editor": "WikiLucas00",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\sources\\admettre.wiki",
+        "raw_sha256": "91572b00713541691cefa0dcb91e5c244f0f2e5197bc3d0648699bf80b21c508",
+        "contributors": 52,
+        "raw_equals_fixed_api_revision": true,
+        "boundary_markers": [
+          {
+            "line": 144,
+            "text": "*{{Import:DAF8}}"
+          }
+        ]
+      },
+      "selected_rights_reason": "Selected definitions/IPA and grammar frames read separately from examples, media, etymology and other-language material. Per-field decisions are in field-review.json and rights.json; complete contributor registry and linked history retained."
     },
     {
       "id": "b111_fr_139171",
@@ -5944,7 +6286,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_independent_selected_content_and_rights_only",
       "selected_locations": [
         {
           "sense_id": "b111-1503-arrêt-nom-selected",
@@ -6198,7 +6540,21 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit"
+      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "independent_capture_review": {
+        "id": "b111_fr_139171",
+        "title": "arrêt",
+        "revid": 39989923,
+        "timestamp": "2026-11-06T16:02:57Z",
+        "last_editor": "Cdang",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\sources\\arrêt.wiki",
+        "raw_sha256": "68651fb78a6375d463d4a1b72e6366d54afdaba980f3ee4092c9608023ed3f49",
+        "contributors": 61,
+        "raw_equals_fixed_api_revision": true,
+        "boundary_markers": []
+      },
+      "selected_rights_reason": "Selected definitions/IPA and grammar frames read separately from examples, media, etymology and other-language material. Per-field decisions are in field-review.json and rights.json; complete contributor registry and linked history retained."
     },
     {
       "id": "b111_fr_141510",
@@ -6211,7 +6567,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_independent_selected_content_and_rights_only",
       "selected_locations": [
         {
           "sense_id": "b111-1535-odeur-nom-selected",
@@ -6428,7 +6784,21 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit"
+      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "independent_capture_review": {
+        "id": "b111_fr_141510",
+        "title": "odeur",
+        "revid": 39881710,
+        "timestamp": "2026-09-18T13:20:44Z",
+        "last_editor": "Tokoss78",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\sources\\odeur.wiki",
+        "raw_sha256": "176679d6197565b9a2fa617c8699daec9593f297c490de8533cfff0868d06a68",
+        "contributors": 69,
+        "raw_equals_fixed_api_revision": true,
+        "boundary_markers": []
+      },
+      "selected_rights_reason": "Selected definitions/IPA and grammar frames read separately from examples, media, etymology and other-language material. Per-field decisions are in field-review.json and rights.json; complete contributor registry and linked history retained."
     },
     {
       "id": "b111_fr_149471",
@@ -6441,7 +6811,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_independent_selected_content_and_rights_only",
       "selected_locations": [
         {
           "sense_id": "b111-1547-bénir-ver-selected",
@@ -6523,7 +6893,7 @@
           "line_1_based": 165,
           "raw_marker": "*{{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_proven_by_marker_original_edition_credited_conservatively"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -6538,7 +6908,8 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_edition_boundary_only",
+          "review_reason": "Established DAF8 original collective edition expired conservatively on 2006-01-01; this does not license later Wiki changes or attribute selected-sentence authorship."
         }
       ],
       "bibliographic_identities": [
@@ -6661,7 +7032,26 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit"
+      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "independent_capture_review": {
+        "id": "b111_fr_149471",
+        "title": "bénir",
+        "revid": 38999578,
+        "timestamp": "2025-11-01T03:13:23Z",
+        "last_editor": "Àncilu bot",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\sources\\bénir.wiki",
+        "raw_sha256": "5df936e3e5c6c1f930aff68836c44f0e0fb2548ffbb5740b02ebb56f50e12e1e",
+        "contributors": 61,
+        "raw_equals_fixed_api_revision": true,
+        "boundary_markers": [
+          {
+            "line": 165,
+            "text": "*{{Import:DAF8}}"
+          }
+        ]
+      },
+      "selected_rights_reason": "Selected definitions/IPA and grammar frames read separately from examples, media, etymology and other-language material. Per-field decisions are in field-review.json and rights.json; complete contributor registry and linked history retained."
     },
     {
       "id": "b111_fr_156774",
@@ -6674,7 +7064,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_independent_selected_content_and_rights_only",
       "selected_locations": [
         {
           "sense_id": "b111-1502-défense-nom-selected",
@@ -6756,7 +7146,7 @@
           "line_1_based": 285,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_proven_by_marker_original_edition_credited_conservatively"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -6771,7 +7161,8 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_edition_boundary_only",
+          "review_reason": "Established DAF8 original collective edition expired conservatively on 2006-01-01; this does not license later Wiki changes or attribute selected-sentence authorship."
         }
       ],
       "bibliographic_identities": [
@@ -6942,7 +7333,26 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit"
+      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "independent_capture_review": {
+        "id": "b111_fr_156774",
+        "title": "défense",
+        "revid": 39773477,
+        "timestamp": "2026-08-03T13:49:57Z",
+        "last_editor": "WikiLucas00",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\sources\\défense.wiki",
+        "raw_sha256": "e1b9dc3f67d9d0f3b521fb53926703af608136b64460d15f23bbad5929e6158f",
+        "contributors": 74,
+        "raw_equals_fixed_api_revision": true,
+        "boundary_markers": [
+          {
+            "line": 285,
+            "text": "* {{Import:DAF8}}"
+          }
+        ]
+      },
+      "selected_rights_reason": "Selected definitions/IPA and grammar frames read separately from examples, media, etymology and other-language material. Per-field decisions are in field-review.json and rights.json; complete contributor registry and linked history retained."
     },
     {
       "id": "b111_fr_159620",
@@ -6955,7 +7365,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_independent_selected_content_and_rights_only",
       "selected_locations": [
         {
           "sense_id": "b111-1541-énorme-adj-selected",
@@ -7133,7 +7543,21 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit"
+      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "independent_capture_review": {
+        "id": "b111_fr_159620",
+        "title": "énorme",
+        "revid": 39871265,
+        "timestamp": "2026-09-11T11:29:23Z",
+        "last_editor": "Beaurenard",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\sources\\énorme.wiki",
+        "raw_sha256": "1ed7acb667bba46caa634977e295241801e9275bfdf000712255122c5f9d1c34",
+        "contributors": 50,
+        "raw_equals_fixed_api_revision": true,
+        "boundary_markers": []
+      },
+      "selected_rights_reason": "Selected definitions/IPA and grammar frames read separately from examples, media, etymology and other-language material. Per-field decisions are in field-review.json and rights.json; complete contributor registry and linked history retained."
     },
     {
       "id": "b111_fr_159727",
@@ -7146,7 +7570,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_independent_selected_content_and_rights_only",
       "selected_locations": [
         {
           "sense_id": "b111-1508-entraîner-ver-selected",
@@ -7228,7 +7652,7 @@
           "line_1_based": 152,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_proven_by_marker_original_edition_credited_conservatively"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -7243,7 +7667,8 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_edition_boundary_only",
+          "review_reason": "Established DAF8 original collective edition expired conservatively on 2006-01-01; this does not license later Wiki changes or attribute selected-sentence authorship."
         }
       ],
       "bibliographic_identities": [
@@ -7380,7 +7805,26 @@
         "X"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit"
+      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "independent_capture_review": {
+        "id": "b111_fr_159727",
+        "title": "entraîner",
+        "revid": 39727348,
+        "timestamp": "2026-08-01T17:15:46Z",
+        "last_editor": "WikiLucas00",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\sources\\entraîner.wiki",
+        "raw_sha256": "a92320b465c86d86060d37cd1795b38ac631573c4fcbc8dd61a7d968d71be2b2",
+        "contributors": 55,
+        "raw_equals_fixed_api_revision": true,
+        "boundary_markers": [
+          {
+            "line": 152,
+            "text": "* {{Import:DAF8}}"
+          }
+        ]
+      },
+      "selected_rights_reason": "Selected definitions/IPA and grammar frames read separately from examples, media, etymology and other-language material. Per-field decisions are in field-review.json and rights.json; complete contributor registry and linked history retained."
     },
     {
       "id": "b111_fr_159778",
@@ -7393,7 +7837,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_independent_selected_content_and_rights_only",
       "selected_locations": [
         {
           "sense_id": "b111-1512-envers-nom-selected",
@@ -7547,7 +7991,7 @@
           "line_1_based": 119,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_proven_by_marker_original_edition_credited_conservatively"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -7562,7 +8006,8 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_edition_boundary_only",
+          "review_reason": "Established DAF8 original collective edition expired conservatively on 2006-01-01; this does not license later Wiki changes or attribute selected-sentence authorship."
         }
       ],
       "bibliographic_identities": [
@@ -7663,7 +8108,26 @@
         "Xic667"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit"
+      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "independent_capture_review": {
+        "id": "b111_fr_159778",
+        "title": "envers",
+        "revid": 39771131,
+        "timestamp": "2026-08-03T10:35:33Z",
+        "last_editor": "WikiLucas00",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\sources\\envers.wiki",
+        "raw_sha256": "4695db5263b9cff7e3d0b5fa49bf3080fa625a288ee4e6d9d3f5441c8718a3ef",
+        "contributors": 39,
+        "raw_equals_fixed_api_revision": true,
+        "boundary_markers": [
+          {
+            "line": 119,
+            "text": "* {{Import:DAF8}}"
+          }
+        ]
+      },
+      "selected_rights_reason": "Selected definitions/IPA and grammar frames read separately from examples, media, etymology and other-language material. Per-field decisions are in field-review.json and rights.json; complete contributor registry and linked history retained."
     },
     {
       "id": "b111_fr_162222",
@@ -7676,7 +8140,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_independent_selected_content_and_rights_only",
       "selected_locations": [
         {
           "sense_id": "b111-1534-gâcher-ver-selected",
@@ -7758,7 +8222,7 @@
           "line_1_based": 110,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_proven_by_marker_original_edition_credited_conservatively"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -7773,7 +8237,8 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_edition_boundary_only",
+          "review_reason": "Established DAF8 original collective edition expired conservatively on 2006-01-01; this does not license later Wiki changes or attribute selected-sentence authorship."
         }
       ],
       "bibliographic_identities": [
@@ -7880,7 +8345,26 @@
         "Xic667"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit"
+      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "independent_capture_review": {
+        "id": "b111_fr_162222",
+        "title": "gâcher",
+        "revid": 39923391,
+        "timestamp": "2026-10-08T04:00:58Z",
+        "last_editor": "Hardifesses",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\sources\\gâcher.wiki",
+        "raw_sha256": "4a6d6723a50b039334304235a7380a6c0aa287b3f422920dddc921c258f2479c",
+        "contributors": 55,
+        "raw_equals_fixed_api_revision": true,
+        "boundary_markers": [
+          {
+            "line": 110,
+            "text": "* {{Import:DAF8}}"
+          }
+        ]
+      },
+      "selected_rights_reason": "Selected definitions/IPA and grammar frames read separately from examples, media, etymology and other-language material. Per-field decisions are in field-review.json and rights.json; complete contributor registry and linked history retained."
     },
     {
       "id": "b111_fr_166824",
@@ -7893,7 +8377,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_independent_selected_content_and_rights_only",
       "selected_locations": [
         {
           "sense_id": "b111-1539-lorsque-con-selected",
@@ -7975,7 +8459,7 @@
           "line_1_based": 82,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_proven_by_marker_original_edition_credited_conservatively"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -7990,7 +8474,8 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_edition_boundary_only",
+          "review_reason": "Established DAF8 original collective edition expired conservatively on 2006-01-01; this does not license later Wiki changes or attribute selected-sentence authorship."
         }
       ],
       "bibliographic_identities": [
@@ -8082,7 +8567,26 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit"
+      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "independent_capture_review": {
+        "id": "b111_fr_166824",
+        "title": "lorsque",
+        "revid": 39773733,
+        "timestamp": "2026-08-03T13:56:27Z",
+        "last_editor": "WikiLucas00",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\sources\\lorsque.wiki",
+        "raw_sha256": "80b90f4d70663a2b65ac6c57834276ab65ae75681be84e19a021705ca87da6e0",
+        "contributors": 55,
+        "raw_equals_fixed_api_revision": true,
+        "boundary_markers": [
+          {
+            "line": 82,
+            "text": "* {{Import:DAF8}}"
+          }
+        ]
+      },
+      "selected_rights_reason": "Selected definitions/IPA and grammar frames read separately from examples, media, etymology and other-language material. Per-field decisions are in field-review.json and rights.json; complete contributor registry and linked history retained."
     },
     {
       "id": "b111_fr_167212",
@@ -8095,7 +8599,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_independent_selected_content_and_rights_only",
       "selected_locations": [
         {
           "sense_id": "b111-1504-malheureux-adj-selected",
@@ -8249,7 +8753,7 @@
           "line_1_based": 185,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_proven_by_marker_original_edition_credited_conservatively"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -8264,7 +8768,8 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_edition_boundary_only",
+          "review_reason": "Established DAF8 original collective edition expired conservatively on 2006-01-01; this does not license later Wiki changes or attribute selected-sentence authorship."
         }
       ],
       "bibliographic_identities": [
@@ -8376,7 +8881,26 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit"
+      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "independent_capture_review": {
+        "id": "b111_fr_167212",
+        "title": "malheureux",
+        "revid": 39707054,
+        "timestamp": "2026-07-28T05:18:07Z",
+        "last_editor": "Diligent",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\sources\\malheureux.wiki",
+        "raw_sha256": "13877c22d684a4f6ea6219b8a4ebec2255713d340ff0716ee036838d64bea358",
+        "contributors": 55,
+        "raw_equals_fixed_api_revision": true,
+        "boundary_markers": [
+          {
+            "line": 185,
+            "text": "* {{Import:DAF8}}"
+          }
+        ]
+      },
+      "selected_rights_reason": "Selected definitions/IPA and grammar frames read separately from examples, media, etymology and other-language material. Per-field decisions are in field-review.json and rights.json; complete contributor registry and linked history retained."
     },
     {
       "id": "b111_fr_167847",
@@ -8389,7 +8913,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_independent_selected_content_and_rights_only",
       "selected_locations": [
         {
           "sense_id": "b111-1532-menacer-ver-selected",
@@ -8471,7 +8995,7 @@
           "line_1_based": 181,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_proven_by_marker_original_edition_credited_conservatively"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -8486,7 +9010,8 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_edition_boundary_only",
+          "review_reason": "Established DAF8 original collective edition expired conservatively on 2006-01-01; this does not license later Wiki changes or attribute selected-sentence authorship."
         }
       ],
       "bibliographic_identities": [
@@ -8696,7 +9221,26 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit"
+      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "independent_capture_review": {
+        "id": "b111_fr_167847",
+        "title": "menacer",
+        "revid": 39734242,
+        "timestamp": "2026-08-01T21:16:27Z",
+        "last_editor": "WikiLucas00",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\sources\\menacer.wiki",
+        "raw_sha256": "13a36bc487efad846bcf5d78ee8c4f16d8170a97dac059cc0d600e2feec64872",
+        "contributors": 53,
+        "raw_equals_fixed_api_revision": true,
+        "boundary_markers": [
+          {
+            "line": 181,
+            "text": "* {{Import:DAF8}}"
+          }
+        ]
+      },
+      "selected_rights_reason": "Selected definitions/IPA and grammar frames read separately from examples, media, etymology and other-language material. Per-field decisions are in field-review.json and rights.json; complete contributor registry and linked history retained."
     },
     {
       "id": "b111_fr_168275",
@@ -8709,7 +9253,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_independent_selected_content_and_rights_only",
       "selected_locations": [
         {
           "sense_id": "b111-1517-moindre-adj-selected",
@@ -8791,7 +9335,7 @@
           "line_1_based": 103,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_proven_by_marker_original_edition_credited_conservatively"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -8806,7 +9350,8 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_edition_boundary_only",
+          "review_reason": "Established DAF8 original collective edition expired conservatively on 2006-01-01; this does not license later Wiki changes or attribute selected-sentence authorship."
         }
       ],
       "bibliographic_identities": [
@@ -8920,7 +9465,26 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit"
+      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "independent_capture_review": {
+        "id": "b111_fr_168275",
+        "title": "moindre",
+        "revid": 39771722,
+        "timestamp": "2026-08-03T10:50:27Z",
+        "last_editor": "WikiLucas00",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\sources\\moindre.wiki",
+        "raw_sha256": "4a1137342297d900817a6ace6230853f8c827d181f5088c882c383e9f690ec69",
+        "contributors": 42,
+        "raw_equals_fixed_api_revision": true,
+        "boundary_markers": [
+          {
+            "line": 103,
+            "text": "* {{Import:DAF8}}"
+          }
+        ]
+      },
+      "selected_rights_reason": "Selected definitions/IPA and grammar frames read separately from examples, media, etymology and other-language material. Per-field decisions are in field-review.json and rights.json; complete contributor registry and linked history retained."
     },
     {
       "id": "b111_fr_168356",
@@ -8933,7 +9497,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_independent_selected_content_and_rights_only",
       "selected_locations": [
         {
           "sense_id": "b111-1550-montre-nom-selected",
@@ -9015,7 +9579,7 @@
           "line_1_based": 223,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_proven_by_marker_original_edition_credited_conservatively"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -9030,7 +9594,8 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_edition_boundary_only",
+          "review_reason": "Established DAF8 original collective edition expired conservatively on 2006-01-01; this does not license later Wiki changes or attribute selected-sentence authorship."
         }
       ],
       "bibliographic_identities": [
@@ -9231,7 +9796,26 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit"
+      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "independent_capture_review": {
+        "id": "b111_fr_168356",
+        "title": "montre",
+        "revid": 39901218,
+        "timestamp": "2026-09-24T09:36:14Z",
+        "last_editor": "CKali",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\sources\\montre.wiki",
+        "raw_sha256": "ad7622250659adcafc5b404562159b182424d3244e0829c713ea1b99b81de287",
+        "contributors": 84,
+        "raw_equals_fixed_api_revision": true,
+        "boundary_markers": [
+          {
+            "line": 223,
+            "text": "* {{Import:DAF8}}"
+          }
+        ]
+      },
+      "selected_rights_reason": "Selected definitions/IPA and grammar frames read separately from examples, media, etymology and other-language material. Per-field decisions are in field-review.json and rights.json; complete contributor registry and linked history retained."
     },
     {
       "id": "b111_fr_171597",
@@ -9244,7 +9828,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_independent_selected_content_and_rights_only",
       "selected_locations": [
         {
           "sense_id": "b111-1519-piquer-ver-selected",
@@ -9326,7 +9910,7 @@
           "line_1_based": 482,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_proven_by_marker_original_edition_credited_conservatively"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -9341,7 +9925,8 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_edition_boundary_only",
+          "review_reason": "Established DAF8 original collective edition expired conservatively on 2006-01-01; this does not license later Wiki changes or attribute selected-sentence authorship."
         }
       ],
       "bibliographic_identities": [
@@ -9599,7 +10184,26 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit"
+      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "independent_capture_review": {
+        "id": "b111_fr_171597",
+        "title": "piquer",
+        "revid": 39774450,
+        "timestamp": "2026-08-03T14:12:25Z",
+        "last_editor": "WikiLucas00",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\sources\\piquer.wiki",
+        "raw_sha256": "e6afa0d775cdc5db78a59ff520be45064e6452f69c08de40e9553d9b5dd45c01",
+        "contributors": 81,
+        "raw_equals_fixed_api_revision": true,
+        "boundary_markers": [
+          {
+            "line": 482,
+            "text": "* {{Import:DAF8}}"
+          }
+        ]
+      },
+      "selected_rights_reason": "Selected definitions/IPA and grammar frames read separately from examples, media, etymology and other-language material. Per-field decisions are in field-review.json and rights.json; complete contributor registry and linked history retained."
     },
     {
       "id": "b111_fr_172785",
@@ -9612,7 +10216,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_independent_selected_content_and_rights_only",
       "selected_locations": [
         {
           "sense_id": "b111-1527-produire-ver-selected",
@@ -9694,7 +10298,7 @@
           "line_1_based": 152,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_proven_by_marker_original_edition_credited_conservatively"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -9709,7 +10313,8 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_edition_boundary_only",
+          "review_reason": "Established DAF8 original collective edition expired conservatively on 2006-01-01; this does not license later Wiki changes or attribute selected-sentence authorship."
         }
       ],
       "bibliographic_identities": [
@@ -9858,7 +10463,26 @@
         "~2025-26907-62"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit"
+      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "independent_capture_review": {
+        "id": "b111_fr_172785",
+        "title": "produire",
+        "revid": 39881722,
+        "timestamp": "2026-09-18T13:28:14Z",
+        "last_editor": "Florencedepau",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\sources\\produire.wiki",
+        "raw_sha256": "9275f30e9894ea7ef39171eb23a5fc715f978caadd35ff774c148cd5211bf334",
+        "contributors": 62,
+        "raw_equals_fixed_api_revision": true,
+        "boundary_markers": [
+          {
+            "line": 152,
+            "text": "* {{Import:DAF8}}"
+          }
+        ]
+      },
+      "selected_rights_reason": "Selected definitions/IPA and grammar frames read separately from examples, media, etymology and other-language material. Per-field decisions are in field-review.json and rights.json; complete contributor registry and linked history retained."
     },
     {
       "id": "b111_fr_174747",
@@ -9871,7 +10495,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_independent_selected_content_and_rights_only",
       "selected_locations": [
         {
           "sense_id": "b111-1549-repas-nom-selected",
@@ -9953,7 +10577,7 @@
           "line_1_based": 148,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_proven_by_marker_original_edition_credited_conservatively"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -9968,7 +10592,8 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_edition_boundary_only",
+          "review_reason": "Established DAF8 original collective edition expired conservatively on 2006-01-01; this does not license later Wiki changes or attribute selected-sentence authorship."
         }
       ],
       "bibliographic_identities": [
@@ -10100,7 +10725,26 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit"
+      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "independent_capture_review": {
+        "id": "b111_fr_174747",
+        "title": "repas",
+        "revid": 39911999,
+        "timestamp": "2026-10-01T00:07:39Z",
+        "last_editor": "JackBot",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\sources\\repas.wiki",
+        "raw_sha256": "0a0451f3b5cfcd28a3be98878c8cf7f0804d8b69056638515cd1b31f5bd03a63",
+        "contributors": 70,
+        "raw_equals_fixed_api_revision": true,
+        "boundary_markers": [
+          {
+            "line": 148,
+            "text": "* {{Import:DAF8}}"
+          }
+        ]
+      },
+      "selected_rights_reason": "Selected definitions/IPA and grammar frames read separately from examples, media, etymology and other-language material. Per-field decisions are in field-review.json and rights.json; complete contributor registry and linked history retained."
     },
     {
       "id": "b111_fr_174838",
@@ -10113,7 +10757,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_independent_selected_content_and_rights_only",
       "selected_locations": [
         {
           "sense_id": "b111-1546-représenter-ver-selected",
@@ -10195,7 +10839,7 @@
           "line_1_based": 263,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_proven_by_marker_original_edition_credited_conservatively"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -10210,7 +10854,8 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_edition_boundary_only",
+          "review_reason": "Established DAF8 original collective edition expired conservatively on 2006-01-01; this does not license later Wiki changes or attribute selected-sentence authorship."
         }
       ],
       "bibliographic_identities": [
@@ -10384,7 +11029,26 @@
         "Xic667"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit"
+      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "independent_capture_review": {
+        "id": "b111_fr_174838",
+        "title": "représenter",
+        "revid": 39681248,
+        "timestamp": "2026-07-17T05:03:25Z",
+        "last_editor": "François GOGLINS",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\sources\\représenter.wiki",
+        "raw_sha256": "6903a87b7e882eeaa186a6c5dda9764e4047e9db3b32e84c91c2bde5edcab5d5",
+        "contributors": 52,
+        "raw_equals_fixed_api_revision": true,
+        "boundary_markers": [
+          {
+            "line": 263,
+            "text": "* {{Import:DAF8}}"
+          }
+        ]
+      },
+      "selected_rights_reason": "Selected definitions/IPA and grammar frames read separately from examples, media, etymology and other-language material. Per-field decisions are in field-review.json and rights.json; complete contributor registry and linked history retained."
     },
     {
       "id": "b111_fr_178469",
@@ -10397,7 +11061,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_independent_selected_content_and_rights_only",
       "selected_locations": [
         {
           "sense_id": "b111-1530-tombe-nom-selected",
@@ -10479,7 +11143,7 @@
           "line_1_based": 261,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_proven_by_marker_original_edition_credited_conservatively"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -10494,7 +11158,8 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_edition_boundary_only",
+          "review_reason": "Established DAF8 original collective edition expired conservatively on 2006-01-01; this does not license later Wiki changes or attribute selected-sentence authorship."
         }
       ],
       "bibliographic_identities": [
@@ -10659,7 +11324,26 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit"
+      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "independent_capture_review": {
+        "id": "b111_fr_178469",
+        "title": "tombe",
+        "revid": 39827540,
+        "timestamp": "2026-08-24T12:23:14Z",
+        "last_editor": "Beaurenard",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\sources\\tombe.wiki",
+        "raw_sha256": "3529b8a9511e8f9a12fc5926d42fefd93de5ee224d9888f76c84dac7b0dcb6a5",
+        "contributors": 68,
+        "raw_equals_fixed_api_revision": true,
+        "boundary_markers": [
+          {
+            "line": 261,
+            "text": "* {{Import:DAF8}}"
+          }
+        ]
+      },
+      "selected_rights_reason": "Selected definitions/IPA and grammar frames read separately from examples, media, etymology and other-language material. Per-field decisions are in field-review.json and rights.json; complete contributor registry and linked history retained."
     },
     {
       "id": "b111_fr_178505",
@@ -10672,7 +11356,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_independent_selected_content_and_rights_only",
       "selected_locations": [
         {
           "sense_id": "b111-1543-toit-nom-selected",
@@ -10754,7 +11438,7 @@
           "line_1_based": 273,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_proven_by_marker_original_edition_credited_conservatively"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -10769,7 +11453,8 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_edition_boundary_only",
+          "review_reason": "Established DAF8 original collective edition expired conservatively on 2006-01-01; this does not license later Wiki changes or attribute selected-sentence authorship."
         }
       ],
       "bibliographic_identities": [
@@ -10922,7 +11607,26 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit"
+      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "independent_capture_review": {
+        "id": "b111_fr_178505",
+        "title": "toit",
+        "revid": 39815858,
+        "timestamp": "2026-08-19T15:45:24Z",
+        "last_editor": "Amqui",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\sources\\toit.wiki",
+        "raw_sha256": "f1c9f463387f02330202662233daf316824941124668de6e7c84c90d9f44b646",
+        "contributors": 81,
+        "raw_equals_fixed_api_revision": true,
+        "boundary_markers": [
+          {
+            "line": 273,
+            "text": "* {{Import:DAF8}}"
+          }
+        ]
+      },
+      "selected_rights_reason": "Selected definitions/IPA and grammar frames read separately from examples, media, etymology and other-language material. Per-field decisions are in field-review.json and rights.json; complete contributor registry and linked history retained."
     },
     {
       "id": "b111_fr_178946",
@@ -10935,7 +11639,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_independent_selected_content_and_rights_only",
       "selected_locations": [
         {
           "sense_id": "b111-1524-trésor-nom-selected",
@@ -11017,7 +11721,7 @@
           "line_1_based": 171,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_proven_by_marker_original_edition_credited_conservatively"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -11032,7 +11736,8 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_edition_boundary_only",
+          "review_reason": "Established DAF8 original collective edition expired conservatively on 2006-01-01; this does not license later Wiki changes or attribute selected-sentence authorship."
         }
       ],
       "bibliographic_identities": [
@@ -11170,7 +11875,26 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit"
+      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "independent_capture_review": {
+        "id": "b111_fr_178946",
+        "title": "trésor",
+        "revid": 39897298,
+        "timestamp": "2026-09-23T04:17:46Z",
+        "last_editor": "Basnormand",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\sources\\trésor.wiki",
+        "raw_sha256": "d2546c49c1ca9c6870f8df7658b934deddbf0f88dd9236769add37605f126224",
+        "contributors": 66,
+        "raw_equals_fixed_api_revision": true,
+        "boundary_markers": [
+          {
+            "line": 171,
+            "text": "* {{Import:DAF8}}"
+          }
+        ]
+      },
+      "selected_rights_reason": "Selected definitions/IPA and grammar frames read separately from examples, media, etymology and other-language material. Per-field decisions are in field-review.json and rights.json; complete contributor registry and linked history retained."
     },
     {
       "id": "b111_fr_179971",
@@ -11183,7 +11907,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_independent_selected_content_and_rights_only",
       "selected_locations": [
         {
           "sense_id": "b111-1525-vierge-adj-selected",
@@ -11337,7 +12061,7 @@
           "line_1_based": 260,
           "raw_marker": "* {{Import:DAF8}}",
           "declared_source": "Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935).",
-          "selected_sentence_authorship": "pending_separate_selected_span_review"
+          "selected_sentence_authorship": "not_proven_by_marker_original_edition_credited_conservatively"
         }
       ],
       "original_historical_dictionary_layers": [
@@ -11352,7 +12076,8 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_edition_boundary_only",
+          "review_reason": "Established DAF8 original collective edition expired conservatively on 2006-01-01; this does not license later Wiki changes or attribute selected-sentence authorship."
         }
       ],
       "bibliographic_identities": [
@@ -11535,7 +12260,26 @@
         "Àncilu bot"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit"
+      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "independent_capture_review": {
+        "id": "b111_fr_179971",
+        "title": "vierge",
+        "revid": 39909546,
+        "timestamp": "2026-09-29T10:44:25Z",
+        "last_editor": "CKali",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\sources\\vierge.wiki",
+        "raw_sha256": "6dd2481777efce5756c92397cf0dc3ccace3b95bd70901806fe2fa9288d33f2b",
+        "contributors": 71,
+        "raw_equals_fixed_api_revision": true,
+        "boundary_markers": [
+          {
+            "line": 260,
+            "text": "* {{Import:DAF8}}"
+          }
+        ]
+      },
+      "selected_rights_reason": "Selected definitions/IPA and grammar frames read separately from examples, media, etymology and other-language material. Per-field decisions are in field-review.json and rights.json; complete contributor registry and linked history retained."
     },
     {
       "id": "b111_fr_wp_11643364",
@@ -11548,7 +12292,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "French Wikipedia contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations.",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
+      "status": "passed_independent_selected_content_and_rights_only",
       "selected_locations": [
         {
           "sense_id": "b111-1522-pilote-adj-selected",
@@ -11613,10 +12357,24 @@
         "Tortue robotisée"
       ],
       "attribution_boundary": "Complete paginated current registry and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit"
+      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "independent_reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "independent_capture_review": {
+        "id": "b111_fr_wp_11643364",
+        "title": "Projet pilote",
+        "revid": 223861804,
+        "timestamp": "2025-03-13T21:10:48Z",
+        "last_editor": "Tortue robotisée",
+        "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\sources\\wikipedia-11643364.wiki",
+        "raw_sha256": "d9974d5d6190125be4f20ff02330426ae8b65e7e5f1921ce6bd32f90e53d4c2f",
+        "contributors": 6,
+        "raw_equals_fixed_api_revision": true,
+        "boundary_markers": []
+      },
+      "selected_rights_reason": "Selected definitions/IPA and grammar frames read separately from examples, media, etymology and other-language material. Per-field decisions are in field-review.json and rights.json; complete contributor registry and linked history retained."
     }
   ],
-  "rights_review": "Author-proposed CC BY-SA 4.0 contribution/adaptation route and separately attributed DAF8 original-work basis; independent selected-span rights review remains pending.",
+  "rights_review": "Passed for selected text boundaries after independent reading of all 200 fields and their French grammar/construction support. DAF8 original edition, Wiki changes and Lexique adaptations remain distinct; assembled-package obligations are parent-owned.",
   "spelling_relations": [
     {
       "sense_id": "b111-1501-justice-nom-selected",
@@ -11664,7 +12422,9 @@
           "reviewed_excerpt": "=== {{S|nom|fr}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The selected feminine noun denotes the justice institution/power, not fairness. Enforcing rights and punishing wrongdoing agree in FR/EN/ZH. Source binding only."
     },
     {
       "sense_id": "b111-1502-défense-nom-selected",
@@ -11712,7 +12472,9 @@
           "reviewed_excerpt": "=== {{S|nom|fr}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The prohibition noun is ordinary notice language. Raw line 66 explicitly supplies défense de + infinitive; FR/EN/ZH keep that construction and exclude defence/protection. Source binding only."
     },
     {
       "sense_id": "b111-1503-arrêt-nom-selected",
@@ -11760,7 +12522,9 @@
           "reviewed_excerpt": "=== {{S|nom|fr}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "Stopping is an unmarked masculine noun use. FR/EN/ZH explain the action or stopped state, excluding a court ruling, arrest or a named bus stop. Source binding only."
     },
     {
       "sense_id": "b111-1504-malheureux-adj-selected",
@@ -11808,7 +12572,9 @@
           "reviewed_excerpt": "=== {{S|adjectif|fr}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The adjective describes an unhappy/unfortunate person, not someone causing misfortune. All three meanings retain unhappiness associated with misfortune; masculine spelling and feminine malheureuse agree with the accord template. Source binding only."
     },
     {
       "sense_id": "b111-1505-malheureux-nom-selected",
@@ -11856,7 +12622,9 @@
           "reviewed_excerpt": "=== {{S|nom|fr}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The noun section specifically denotes a person suffering illness or an accident. All three meanings keep this restriction, distinct from the adjective and the broader poor-person sense. Source binding only."
     },
     {
       "sense_id": "b111-1506-telle-adj-ind-selected",
@@ -11940,7 +12708,9 @@
           "reviewed_excerpt": "#* {{exemple | lang=fr | Il est allé s’établir dans '''telle''' ville.}}"
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "Tel lines 72–74 explicitly give the indefinite-adjective frame and telle ville. The exact telle flexion article supplies feminine singular and /tɛl/. FR/EN/ZH specify an unspecified referent before a feminine singular noun, excluding similarity and pronoun uses. Source binding only."
     },
     {
       "sense_id": "b111-1507-niveau-nom-selected",
@@ -11988,7 +12758,9 @@
           "reviewed_excerpt": "=== {{S|nom|fr}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The physical-height noun is everyday in the raw fleuve/sea-level examples at lines 21–22 despite geographical/geometrical indexing. FR/EN/ZH keep reference-plane height, excluding tools, ability and reservoir contents. Source binding only."
     },
     {
       "sense_id": "b111-1508-entraîner-ver-selected",
@@ -12036,7 +12808,9 @@
           "reviewed_excerpt": "=== {{S|verbe|fr}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The selected transitive training sense explicitly extends from horses to a person and physical/intellectual exercise. FR/EN/ZH select that human extension, with entraîner quelqu’un à an exercise, not drag, cause or s’entraîner. Source binding only."
     },
     {
       "sense_id": "b111-1509-bus-nom-selected",
@@ -12093,7 +12867,9 @@
           "reviewed_excerpt": ": Le mot est traité comme féminin par beaucoup de locuteurs du Canada, notamment ceux de la région des villes de Québec et de Sherbrooke, ainsi que ceux de Moncton, au Nouveau-Brunswick. Le mot est masculin ailleurs au Canada et dans la francophonie<ref name=\"Thibault\">{{Lien web|auteur=André Thibault|titre=La « bus » ou le « bosse » ? Une autre rivalité Québec-Montréal…|url=https://francaisdenosregions.com/2018/10/22/la-bus-ou-le-bosse-une-autre-rivalite-quebec-montreal/|site=francaisdenosregions.com|date=22 octobre 2018|consulté le=17 août 2021}}.</ref><ref>{{Lien web|auteur=Benoît Melançon|titre=Le dilemme de l’autobus|url=http://oreilletendue.com/2011/11/19/le-dilemme-de-l%E2%80%99autobus/|site=oreilletendue.com|date=19 novembre 2011|consulté le=17 août 2021}}.</ref>."
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The French transport noun and /bys/ are distinct from boire flexions /by/. The source regional-gender note is retained in usage; all three meanings describe the public road vehicle, not a computer bus. Source binding only."
     },
     {
       "sense_id": "b111-1510-tendre-adj-selected",
@@ -12141,7 +12917,9 @@
           "reviewed_excerpt": "=== {{S|adjectif|fr}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The adjective section selects easy-to-cut/chew food. FR/EN/ZH retain food texture and exclude affection, softness of another material and the separate verb. Source binding only."
     },
     {
       "sense_id": "b111-1511-tendre-ver-selected",
@@ -12189,7 +12967,9 @@
           "reviewed_excerpt": "=== {{S|verbe|fr}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The transitive verb makes a thread, rope or surface taut. FR/EN/ZH retain stretching/tension, excluding offering a hand, setting a trap, tending towards and the food adjective. Source binding only."
     },
     {
       "sense_id": "b111-1512-envers-nom-selected",
@@ -12237,7 +13017,9 @@
           "reviewed_excerpt": "=== {{S|nom|fr}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The masculine noun is the hidden reverse face of a two-sided object. FR/EN/ZH agree; ordinary l’envers does not become a separate runtime spelling. Source binding only."
     },
     {
       "sense_id": "b111-1513-envers-pre-selected",
@@ -12285,7 +13067,9 @@
           "reviewed_excerpt": "=== {{S|préposition|fr}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The French preposition is à l’égard de, expressing a relation or attitude. FR/EN/ZH do not substitute physical direction or the reverse-side noun. Source binding only."
     },
     {
       "sense_id": "b111-1514-italien-adj-selected",
@@ -12333,7 +13117,9 @@
           "reviewed_excerpt": "=== {{S|adjectif|fr}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "Lowercase italien is the masculine adjective relating to Italy, its people and culture. FR/EN/ZH agree, and italienne is only an evidenced inflection, not an alias. Source binding only."
     },
     {
       "sense_id": "b111-1515-italien-nom-selected",
@@ -12381,7 +13167,9 @@
           "reviewed_excerpt": "=== {{S|nom|fr}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The lowercase masculine noun denotes the Italian language. The source singular-only restriction is retained in usage; FR/EN/ZH exclude a person from Italy. Source binding only."
     },
     {
       "sense_id": "b111-1516-crise-nom-selected",
@@ -12429,7 +13217,9 @@
           "reviewed_excerpt": "=== {{S|nom|fr}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The figurative but unmarked everyday noun denotes a dangerous decisive moment. FR/EN/ZH match that crisis sense, excluding a medical attack or specialist diagnostic stage. Source binding only."
     },
     {
       "sense_id": "b111-1517-moindre-adj-selected",
@@ -12477,7 +13267,9 @@
           "reviewed_excerpt": "=== {{S|adjectif|fr}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The exact adjective moindre is the comparative of petit. FR/EN/ZH describe lesser size/amount/degree, excluding the separate least/minimal le moindre constructions. Source binding only."
     },
     {
       "sense_id": "b111-1518-tableau-nom-selected",
@@ -12525,7 +13317,9 @@
           "reviewed_excerpt": "=== {{S|nom|fr}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The movable painting sense remains everyday despite the peinture index. FR/EN/ZH preserve panel/plate/framed-canvas support and exclude a table, chart, blackboard or stage scene. Source binding only."
     },
     {
       "sense_id": "b111-1519-piquer-ver-selected",
@@ -12573,7 +13367,9 @@
           "reviewed_excerpt": "=== {{S|verbe|fr}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The transitive selected sense is a slight puncture with something pointed. FR/EN/ZH agree and exclude stealing, insect-stinging, injecting, pronominal and idiomatic uses. Source binding only."
     },
     {
       "sense_id": "b111-1520-admettre-ver-selected",
@@ -12621,7 +13417,9 @@
           "reviewed_excerpt": "=== {{S|verbe|fr}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "Recognising something as true is the transitive admission sense. FR/EN/ZH do not substitute allowing entry, tolerating conduct or accepting someone as a member. Source binding only."
     },
     {
       "sense_id": "b111-1521-restaurant-nom-selected",
@@ -12669,7 +13467,9 @@
           "reviewed_excerpt": "=== {{S|nom|fr}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The noun is a commercial meal-selling establishment. FR/EN/ZH agree; the same spelling’s participle/adjective uses are excluded. Source binding only."
     },
     {
       "sense_id": "b111-1522-pilote-adj-selected",
@@ -12717,7 +13517,9 @@
           "reviewed_excerpt": "Dans le cas de projets de grande ampleur ou grande taille, le projet pilote vient après le [[prototype]] destiné à « tester l'idée ». Il peut éventuellement être précédé d'un « [[wikt:démonstrateur|démonstrateur]] », modèle en vraie grandeur et plus robuste, destiné à simuler les contraintes qui seraient encore susceptibles de « tuer l'idée ». Il peut être suivi d'une [[wikt:présérie|présérie]]."
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "French Wikipedia line 3 supplies the preliminary small-scale projet pilote construction and purpose. Frozen Lexique supplies ADJ; the French dictionary supplies exact component /pi.lɔt/, not an adjective section. Acceptance is limited to this postnominal construction, not a free-standing generic adjective or the aircraft operator. Source binding only."
     },
     {
       "sense_id": "b111-1523-pilote-nom-selected",
@@ -12765,7 +13567,9 @@
           "reviewed_excerpt": "=== {{S|nom|fr}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The dictionary noun explicitly includes an aircraft operator. FR/EN/ZH select the airplane/aircraft use and retain a person of either gender, excluding nautical guidance, racing, software and the projet pilote modifier. Source binding only."
     },
     {
       "sense_id": "b111-1524-trésor-nom-selected",
@@ -12813,7 +13617,9 @@
           "reviewed_excerpt": "=== {{S|nom|fr}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The masculine noun is a stored/hidden/buried collection of valuables. FR/EN/ZH keep gold/silver/other valuables and exclude public finances, a beloved person or a valuable information source. Source binding only."
     },
     {
       "sense_id": "b111-1525-vierge-adj-selected",
@@ -12861,7 +13667,9 @@
           "reviewed_excerpt": "=== {{S|adjectif|fr}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The adjective applies to a person without prior sexual relations. FR/EN/ZH restrict the selected use to people, excluding the animal extension, untouched material and the separate female noun. Source binding only."
     },
     {
       "sense_id": "b111-1526-vierge-nom-selected",
@@ -12909,7 +13717,9 @@
           "reviewed_excerpt": "=== {{S|nom|fr}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The feminine noun source says fille with no commerce charnel with a man. FR/EN/ZH retain the female and with-a-man restriction; the broader ungendered adjective is not silently substituted. Source binding only."
     },
     {
       "sense_id": "b111-1527-produire-ver-selected",
@@ -12957,7 +13767,9 @@
           "reviewed_excerpt": "=== {{S|verbe|fr}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The selected transitive make/compose/create sense concerns a thing or work. FR/EN/ZH agree, excluding yielding crops, presenting evidence and se produire. Source binding only."
     },
     {
       "sense_id": "b111-1528-double-adj-selected",
@@ -13005,7 +13817,9 @@
           "reviewed_excerpt": "=== {{S|adjectif|fr}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The adjective compares value, weight or contained amount at two times a reference. FR/EN/ZH agree, excluding deceptive character, duplicates and the quantity noun. Source binding only."
     },
     {
       "sense_id": "b111-1529-double-nom-selected",
@@ -13053,7 +13867,9 @@
           "reviewed_excerpt": "=== {{S|nom|fr}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The masculine quantity noun is exactly twice another amount. FR/EN/ZH make the factor two explicit and do not turn deux fois plus grande into three times or substitute a copy/lookalike. Source binding only."
     },
     {
       "sense_id": "b111-1530-tombe-nom-selected",
@@ -13101,7 +13917,9 @@
           "reviewed_excerpt": "=== {{S|nom|fr}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The ordinary funeral noun denotes a burial pit/place containing one or more dead people. FR/EN/ZH match, excluding tomber flexions and a tombstone-only sense. Source binding only."
     },
     {
       "sense_id": "b111-1531-poche-nom-selected",
@@ -13158,7 +13976,9 @@
           "reviewed_excerpt": "# {{par extension|fr}} Espace [[confectionné]] pour contenir des objets ou des liquides."
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The garment-specific noun at line 27 and containing-space definition at line 23 jointly support the cloth compartment. FR/EN/ZH specify garment attachment and holding objects, excluding a bag, anatomical pouch or regional adjective. Source binding only."
     },
     {
       "sense_id": "b111-1532-menacer-ver-selected",
@@ -13206,7 +14026,9 @@
           "reviewed_excerpt": "=== {{S|verbe|fr}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The transitive selected sense concerns threatening words addressed to someone. FR/EN/ZH agree, excluding merely posing a danger or threatening weather. Source binding only."
     },
     {
       "sense_id": "b111-1533-couple-nom-selected",
@@ -13254,7 +14076,9 @@
           "reviewed_excerpt": "=== {{S|nom|fr|num=2}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The selected masculine noun denotes two people linked by love, marriage or sexual relations. FR/EN/ZH retain these alternatives with no sex-pairing restriction; the separate feminine pair noun is excluded. Source binding only."
     },
     {
       "sense_id": "b111-1534-gâcher-ver-selected",
@@ -13302,7 +14126,9 @@
           "reviewed_excerpt": "=== {{S|verbe|fr}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The transitive selected sense makes something bad, unusable or unbearable. FR/EN/ZH agree, excluding mixing mortar and a waste-only sense; the exact accented frozen spelling remains. Source binding only."
     },
     {
       "sense_id": "b111-1535-odeur-nom-selected",
@@ -13350,7 +14176,9 @@
           "reviewed_excerpt": "=== {{S|nom|fr}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The feminine noun is an olfactory sensation from emanations. FR/EN/ZH preserve neutral pleasant/unpleasant scope and do not substitute an intuition or a figurative reputation. Source binding only."
     },
     {
       "sense_id": "b111-1536-futur-adj-selected",
@@ -13398,7 +14226,9 @@
           "reviewed_excerpt": "=== {{S|adjectif|fr}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The masculine adjective selects the future-occurrence branch of the source definition. FR/EN/ZH agree on occurrence after the present, excluding a future spouse and grammatical tense. Source binding only."
     },
     {
       "sense_id": "b111-1537-futur-nom-selected",
@@ -13446,7 +14276,9 @@
           "reviewed_excerpt": "=== {{S|nom|fr|num=1}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The masculine noun denotes the temporal future. FR/EN/ZH agree; the English-influence note concerns lexical borrowing, not an imported English text quotation or a tense-only sense. Source binding only."
     },
     {
       "sense_id": "b111-1538-souci-nom-selected",
@@ -13494,7 +14326,9 @@
           "reviewed_excerpt": "=== {{S|nom|fr|num=1}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The feeling noun denotes worry/concern. FR/EN/ZH agree; the separate botanical souci and care-only senses are excluded. Source binding only."
     },
     {
       "sense_id": "b111-1539-lorsque-con-selected",
@@ -13542,7 +14376,9 @@
           "reviewed_excerpt": "=== {{S|conjonction|fr}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The source explicitly labels a temporal subordinating conjunction. FR/EN/ZH identify when/au moment où before a clause; the isolated schwa IPA is an attested variant, not a generated elision or liaison form. Source binding only."
     },
     {
       "sense_id": "b111-1540-concerner-ver-selected",
@@ -13590,7 +14426,9 @@
           "reviewed_excerpt": "=== {{S|verbe|fr}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The transitive source uses a thing/matter as subject and the affected person/thing as object. FR/EN/ZH retain this argument relation and exclude personal worry or an unsupported reflexive construction. Source binding only."
     },
     {
       "sense_id": "b111-1541-énorme-adj-selected",
@@ -13638,7 +14476,9 @@
           "reviewed_excerpt": "=== {{S|adjectif|fr}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The adjective denotes physical size/bulk far beyond normal. FR/EN/ZH agree, excluding a moral enormity or a vague quantity-only gloss. Source binding only."
     },
     {
       "sense_id": "b111-1542-programme-nom-selected",
@@ -13686,7 +14526,9 @@
           "reviewed_excerpt": "=== {{S|nom|fr}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The masculine noun denotes a written detailed event outline. FR/EN/ZH agree; computing code, school syllabus and a political platform are excluded. Source binding only."
     },
     {
       "sense_id": "b111-1543-toit-nom-selected",
@@ -13734,7 +14576,9 @@
           "reviewed_excerpt": "=== {{S|nom|fr}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The building-roof noun includes framework and covering. FR/EN/ZH retain both; the architecture index does not make an ordinary roof a specialist exception. Source binding only."
     },
     {
       "sense_id": "b111-1544-faible-adj-selected",
@@ -13782,7 +14626,9 @@
           "reviewed_excerpt": "=== {{S|adjectif|fr}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The adjective denotes deficient physical strength/vigour. FR/EN/ZH avoid treating débile as an intellectual insult and exclude numerical weakness or a low-sound sense. Source binding only."
     },
     {
       "sense_id": "b111-1545-faible-nom-selected",
@@ -13830,7 +14676,9 @@
           "reviewed_excerpt": "=== {{S|nom|fr|num=2}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The masculine noun denotes the least strong/solid part of a thing. Raw line 236 includes a machine, beam and joist, so acceptance is not confined to the sword example or a specialist exception. FR/EN/ZH exclude a weak person and a fondness. Source binding only."
     },
     {
       "sense_id": "b111-1546-représenter-ver-selected",
@@ -13878,7 +14726,9 @@
           "reviewed_excerpt": "=== {{S|verbe|fr}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The transitive representative sense requires delegated authority from the represented people. FR/EN/ZH retain that authority, excluding depiction, performance and pronominal representation. Source binding only."
     },
     {
       "sense_id": "b111-1547-bénir-ver-selected",
@@ -13926,7 +14776,9 @@
           "reviewed_excerpt": "=== {{S|verbe|fr}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The transitive blessing sense invokes divine protection on a person. FR/EN/ZH keep the religious context; the ordinary parent/child use is explicitly included, without substituting secular good wishes or object consecration. Source binding only."
     },
     {
       "sense_id": "b111-1548-fusil-nom-selected",
@@ -13974,7 +14826,9 @@
           "reviewed_excerpt": "=== {{S|nom|fr}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The masculine noun denotes a portable shoulder-fired firearm. FR/EN/ZH preserve its firing mechanism without falsely narrowing fusil to a rifled barrel or copying the adjacent historical flint sense. Source binding only."
     },
     {
       "sense_id": "b111-1549-repas-nom-selected",
@@ -14022,7 +14876,9 @@
           "reviewed_excerpt": "=== {{S|nom|fr}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The masculine noun denotes food eaten during a meal period. FR/EN/ZH retain food and the often-regular timing, not only a social meal event; singular/plural spellings agree. Source binding only."
     },
     {
       "sense_id": "b111-1550-montre-nom-selected",
@@ -14070,7 +14926,9 @@
           "reviewed_excerpt": "=== {{S|nom|fr}} ==="
         }
       ],
-      "independent_review": "pending"
+      "independent_review": "passed",
+      "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+      "review_reason": "The feminine noun is a portable personal timepiece, carried or worn. All three definitions retain case/dial/mechanism and portability; the Chinese 手表 example is covered by the broader 表 and definition, not a wrist-only restriction. Source binding only."
     }
   ]
 }

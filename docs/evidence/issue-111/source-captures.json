@@ -538,5 +538,15 @@
   "capture_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111",
   "captured_at_utc": "2026-11-20T16:17:11.288676+00:00",
   "preparation_script": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\prepare_candidates.py",
-  "selection_file": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\selection.py"
+  "selection_file": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-111\\target\\issue-111\\selection.py",
+  "independent_capture_audit": {
+    "reviewer": "Independent semantic and selected-rights reviewer for issue #111; not the content author",
+    "reviewed_base_sha": "b3560857e61286a61cbf88a1aabf2072fe8ae11e",
+    "report": "C:/Users/inthe/IdeaProjects/lexique-review-111/target/issue-111-review/capture-audit.json",
+    "fixed_raw_revision_matches": 43,
+    "field_primary_spans": 200,
+    "all_supporting_spans_checked": true,
+    "contributor_pagination_complete": true,
+    "live_refetch_performed": false
+  }
 }
