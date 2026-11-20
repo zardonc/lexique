@@ -329,7 +329,7 @@ fn healthy(connection: &Connection) {
         connection
             .query_row("PRAGMA user_version", [], |row| row.get::<_, u32>(0))
             .unwrap(),
-        19
+        lexique_storage::DATABASE_SCHEMA_VERSION
     );
     assert_eq!(
         rows(connection, "PRAGMA integrity_check", &[]),
