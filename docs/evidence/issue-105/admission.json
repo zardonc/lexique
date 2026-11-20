@@ -1,6 +1,6 @@
 {
   "ticket": 105,
-  "status": "selected_content_review_passed_batch_incomplete",
+  "status": "passed",
   "frozen_rows": [
     1201,
     1202,
@@ -68,9 +68,62 @@
     1219,
     1220
   ],
-  "approved_new_annotation_exceptions": [],
+  "approved_new_annotation_exceptions": [
+    {
+      "frozen_row": 1208,
+      "headword": "quiconque",
+      "pos": "PRO:int",
+      "admitted_fields": 0,
+      "missing_fields": 4,
+      "decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/105",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-19",
+        "decision": "Owner-approved zero-field annotation exception to selected-sense/four-field requirements; exact frozen identity, frequencies, four missing fields and 4,087-group denominator retained. No runtime alias or substitute content."
+      }
+    },
+    {
+      "frozen_row": 1218,
+      "headword": "qu",
+      "pos": "CON",
+      "admitted_fields": 0,
+      "missing_fields": 4,
+      "decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/105",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-19",
+        "decision": "Owner-approved zero-field annotation exception to selected-sense/four-field requirements; exact frozen identity, frequencies, four missing fields and 4,087-group denominator retained. No runtime alias or substitute content."
+      }
+    },
+    {
+      "frozen_row": 1219,
+      "headword": "qu",
+      "pos": "PRO:int",
+      "admitted_fields": 0,
+      "missing_fields": 4,
+      "decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/105",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-19",
+        "decision": "Owner-approved zero-field annotation exception to selected-sense/four-field requirements; exact frozen identity, frequencies, four missing fields and 4,087-group denominator retained. No runtime alias or substitute content."
+      }
+    },
+    {
+      "frozen_row": 1220,
+      "headword": "qu",
+      "pos": "PRO:rel",
+      "admitted_fields": 0,
+      "missing_fields": 4,
+      "decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/105",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-19",
+        "decision": "Owner-approved zero-field annotation exception to selected-sense/four-field requirements; exact frozen identity, frequencies, four missing fields and 4,087-group denominator retained. No runtime alias or substitute content."
+      }
+    }
+  ],
   "reviewer": "Independent selected-content and rights reviewer for issue 105; separate from author and merger",
-  "resource_admission": "incomplete",
+  "resource_admission": "scope_passed_parent_conversion_package_and_native_pending",
   "combined_redistribution_obligations": "selected_span_rights_passed_actual_package_notices_pending_parent",
   "native_checks": "parent_owned_not_run_by_independent_content_reviewer",
   "final_output_validation": "seven_file_exact_source_content_and_membership_check",
@@ -80,5 +133,124 @@
   "accepted_sources": 40,
   "pending_independent_review_fields": 0,
   "quality_report": "independent-review.md",
-  "runtime_aliases_added": []
+  "runtime_aliases_added": [],
+  "scope_acceptance": "passed_with_owner_approved_zero_field_annotations",
+  "scope_accepted_groups": 50,
+  "approved_annotation_exceptions": [
+    {
+      "frozen_row": 1208,
+      "headword": "quiconque",
+      "pos": "PRO:int",
+      "admitted_fields": 0,
+      "missing_fields": 4,
+      "decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/105",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-19",
+        "decision": "Owner-approved zero-field annotation exception to selected-sense/four-field requirements; exact frozen identity, frequencies, four missing fields and 4,087-group denominator retained. No runtime alias or substitute content."
+      }
+    },
+    {
+      "frozen_row": 1218,
+      "headword": "qu",
+      "pos": "CON",
+      "admitted_fields": 0,
+      "missing_fields": 4,
+      "decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/105",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-19",
+        "decision": "Owner-approved zero-field annotation exception to selected-sense/four-field requirements; exact frozen identity, frequencies, four missing fields and 4,087-group denominator retained. No runtime alias or substitute content."
+      }
+    },
+    {
+      "frozen_row": 1219,
+      "headword": "qu",
+      "pos": "PRO:int",
+      "admitted_fields": 0,
+      "missing_fields": 4,
+      "decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/105",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-19",
+        "decision": "Owner-approved zero-field annotation exception to selected-sense/four-field requirements; exact frozen identity, frequencies, four missing fields and 4,087-group denominator retained. No runtime alias or substitute content."
+      }
+    },
+    {
+      "frozen_row": 1220,
+      "headword": "qu",
+      "pos": "PRO:rel",
+      "admitted_fields": 0,
+      "missing_fields": 4,
+      "decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/105",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-19",
+        "decision": "Owner-approved zero-field annotation exception to selected-sense/four-field requirements; exact frozen identity, frequencies, four missing fields and 4,087-group denominator retained. No runtime alias or substitute content."
+      }
+    }
+  ],
+  "annotation_exceptions": [
+    {
+      "frozen_row": 1208,
+      "headword": "quiconque",
+      "pos": "PRO:int",
+      "admitted_fields": 0,
+      "missing_fields": 4,
+      "decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/105",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-19",
+        "decision": "Owner-approved zero-field annotation exception to selected-sense/four-field requirements; exact frozen identity, frequencies, four missing fields and 4,087-group denominator retained. No runtime alias or substitute content."
+      }
+    },
+    {
+      "frozen_row": 1218,
+      "headword": "qu",
+      "pos": "CON",
+      "admitted_fields": 0,
+      "missing_fields": 4,
+      "decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/105",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-19",
+        "decision": "Owner-approved zero-field annotation exception to selected-sense/four-field requirements; exact frozen identity, frequencies, four missing fields and 4,087-group denominator retained. No runtime alias or substitute content."
+      }
+    },
+    {
+      "frozen_row": 1219,
+      "headword": "qu",
+      "pos": "PRO:int",
+      "admitted_fields": 0,
+      "missing_fields": 4,
+      "decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/105",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-19",
+        "decision": "Owner-approved zero-field annotation exception to selected-sense/four-field requirements; exact frozen identity, frequencies, four missing fields and 4,087-group denominator retained. No runtime alias or substitute content."
+      }
+    },
+    {
+      "frozen_row": 1220,
+      "headword": "qu",
+      "pos": "PRO:rel",
+      "admitted_fields": 0,
+      "missing_fields": 4,
+      "decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/105",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-19",
+        "decision": "Owner-approved zero-field annotation exception to selected-sense/four-field requirements; exact frozen identity, frequencies, four missing fields and 4,087-group denominator retained. No runtime alias or substitute content."
+      }
+    }
+  ],
+  "annotation_groups": 4,
+  "missing_annotation_fields": 16,
+  "content_gap_rows": [
+    1208,
+    1218,
+    1219,
+    1220
+  ],
+  "unresolved_unapproved_rows": []
 }

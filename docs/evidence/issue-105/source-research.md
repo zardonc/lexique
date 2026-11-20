@@ -107,3 +107,7 @@ establishes the literal frozen `qu` spelling in those subclasses. The negative
 source/spelling findings are retained separately; no substitution, automatic
 alias or annotation exception is made. All four rows retain four missing fields
 in the fixed 4,087-group denominator.
+
+## Owner-approved zero-field annotations
+
+On 2026-11-19, project_owner explicitly approved rows 1208 quiconque/PRO:int and 1218–1220 qu/CON, qu/PRO:int, qu/PRO:rel for [issue #105](https://github.com/zardonc/lexique/issues/105). Exact approved_annotation_exceptions records are in field-review.json and admission.json. Each admits zero fields and retains four missing fields, its frozen identity/frequencies and the 4,087-group denominator. Genuine unsupported-binding evidence and all 184 accepted strings remain unchanged. Scope acceptance passes as 46 complete groups / 184 fields plus four annotations; package/native/release gates remain parent-owned.

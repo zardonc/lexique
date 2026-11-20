@@ -10,6 +10,31 @@ EVIDENCE = ROOT / "docs/evidence/issue-105"
 
 
 class Batch105Tests(unittest.TestCase):
+    def test_owner_annotations_preserve_zero_fields_and_exact_gaps(self):
+        admission = json.loads((EVIDENCE / "admission.json").read_text(encoding="utf-8"))
+        review = json.loads((EVIDENCE / "field-review.json").read_text(encoding="utf-8"))
+        annotations = admission["approved_annotation_exceptions"]
+        self.assertEqual(annotations, review["approved_annotation_exceptions"])
+        self.assertEqual(annotations, review["annotation_exceptions"])
+        self.assertEqual([(a["frozen_row"], a["headword"], a["pos"]) for a in annotations],
+                         [(1208, "quiconque", "PRO:int"), (1218, "qu", "CON"),
+                          (1219, "qu", "PRO:int"), (1220, "qu", "PRO:rel")])
+        self.assertEqual(admission["status"], "passed")
+        self.assertEqual(admission["scope_accepted_groups"], 50)
+        self.assertEqual((admission["accepted_groups"], admission["accepted_fields"]), (46, 184))
+        self.assertEqual(admission["missing_annotation_fields"], 16)
+        self.assertEqual(admission["scope_denominator_groups"], 4087)
+        self.assertEqual(admission["runtime_aliases_added"], [])
+        groups = json.loads((EVIDENCE / "groups.json").read_text(encoding="utf-8"))
+        for annotation in annotations:
+            group = next(g for g in groups if g["frozen_row"] == annotation["frozen_row"])
+            self.assertEqual(group["senses"], [])
+            self.assertTrue(group["blocker_evidence"])
+            self.assertEqual((annotation["admitted_fields"], annotation["missing_fields"]), (0, 4))
+            self.assertEqual(annotation["decision"]["issue"], "https://github.com/zardonc/lexique/issues/105")
+            self.assertEqual(annotation["decision"]["approved_by"], "project_owner")
+            self.assertEqual(annotation["decision"]["approved_on"], "2026-11-19")
+
     def test_exact_frozen_groups_have_sourced_candidates_or_explicit_gaps(self):
         with (ROOT / "resources/core-pilot-79/scope-manifest.csv").open(
             encoding="utf-8-sig", newline=""

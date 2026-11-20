@@ -8615,5 +8615,59 @@
     "Distribute adaptations under CC BY-SA 4.0 with the legal text or link and the same-licence conditions.",
     "Preserve applicable DAF8/Littré original-edition notices separately from Wiki/Lexique rights; reference markers do not identify every selected sentence author.",
     "Impose no additional restrictions or obstructive effective technological measures."
+  ],
+  "approved_annotation_exceptions": [
+    {
+      "frozen_row": 1208,
+      "headword": "quiconque",
+      "pos": "PRO:int",
+      "admitted_fields": 0,
+      "missing_fields": 4,
+      "decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/105",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-19",
+        "decision": "Owner-approved zero-field annotation exception to selected-sense/four-field requirements; exact frozen identity, frequencies, four missing fields and 4,087-group denominator retained. No runtime alias or substitute content."
+      }
+    },
+    {
+      "frozen_row": 1218,
+      "headword": "qu",
+      "pos": "CON",
+      "admitted_fields": 0,
+      "missing_fields": 4,
+      "decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/105",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-19",
+        "decision": "Owner-approved zero-field annotation exception to selected-sense/four-field requirements; exact frozen identity, frequencies, four missing fields and 4,087-group denominator retained. No runtime alias or substitute content."
+      }
+    },
+    {
+      "frozen_row": 1219,
+      "headword": "qu",
+      "pos": "PRO:int",
+      "admitted_fields": 0,
+      "missing_fields": 4,
+      "decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/105",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-19",
+        "decision": "Owner-approved zero-field annotation exception to selected-sense/four-field requirements; exact frozen identity, frequencies, four missing fields and 4,087-group denominator retained. No runtime alias or substitute content."
+      }
+    },
+    {
+      "frozen_row": 1220,
+      "headword": "qu",
+      "pos": "PRO:rel",
+      "admitted_fields": 0,
+      "missing_fields": 4,
+      "decision": {
+        "issue": "https://github.com/zardonc/lexique/issues/105",
+        "approved_by": "project_owner",
+        "approved_on": "2026-11-19",
+        "decision": "Owner-approved zero-field annotation exception to selected-sense/four-field requirements; exact frozen identity, frequencies, four missing fields and 4,087-group denominator retained. No runtime alias or substitute content."
+      }
+    }
   ]
 }
