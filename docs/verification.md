@@ -898,3 +898,11 @@ Per-word CEFR grading is deferred outside this frozen target.
 The SQLite resource is 6,721,536 bytes; the final portable ZIP is 38,547,297 bytes with 183 verified files. Separate Standards and Spec reviews have zero remaining findings; one minor test duplication was resolved in a fresh implementer. Exact commits, content/source decisions, owner approvals, artifact identities, commands, retained failures and platform limits are in [the cohort evidence](evidence/issues-100-109/README.md) and [final review](evidence/issues-100-109/final-review.md). [PR #180](https://github.com/zardonc/lexique/pull/180) closes #100–#109 when merged; #78 remains open. Documentation closeout and exact-head CI are recorded in the aggregate evidence.
 
 Whole-machine offline execution, other-platform native flows, learner acceptance and full D2 release readiness remain unverified.
+
+## 生词笔记 CSV 导出（#185）
+
+2026-11-20：生词本与单条已保存记录提供 CSV 导出。全部／当前搜索与分类范围／单条的词头、笔记、有序例句、记录及文件行数来自同一 SQLite 读取快照；当前搜索不受分页限制，沿用生词本全部七种排序。文件使用 `csv` 1.4.0、UTF-8 BOM 和固定四列，保留文本空白、中文、重音、引用内换行、单侧及重复例句；没有非空例句时仍输出一行。原生文件选择与写入使用受限平台命令。
+
+[存储测试](../crates/storage/tests/note_export.rs)覆盖保存读取、完整查询范围、分类筛选、排序、非法范围及并发保存时的内容／数量／到期顺序一致性。[真实文件测试](../apps/desktop/src-tauri/src/note_export_tests.rs)通过真实 SQLite 与 CSV reader 逐字段核对三种范围，验证空例句、写入失败和重开后学习数据保持。[浏览器测试](../apps/desktop/e2e/note-export.spec.ts)的五项流程通过，覆盖范围、空结果、取消、失败重试及未保存草稿；使用独立 1485 端口。前端 lint／typecheck／build、locked workspace 编译、分别预编译后的后端测试及 rustfmt 通过，后端执行保留 60 秒硬限。
+
+实际 Windows 文件选择与重新构建的组合原生执行统一由 #189 验证，当前未声称通过；#184 未关联词典的外部记录须在组合后通过相同导出链路。浏览器 fixture 只证明 UI，开发程序编译不证明实际原生、其他平台、整机离线或正式发行就绪。

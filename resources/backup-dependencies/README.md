@@ -16,7 +16,12 @@ The desktop resource mapping and Windows portable packager deliver this director
 | typed-path 0.13.0 | MIT | [chipsenkbeil/typed-path](https://github.com/chipsenkbeil/typed-path) |
 | zeroize 1.9.1 | MIT | [RustCrypto/utils](https://github.com/RustCrypto/utils) |
 | zeroize_derive 1.5.0 | MIT | [RustCrypto/utils](https://github.com/RustCrypto/utils) |
+| csv 1.4.0 | MIT | [rust-csv](https://github.com/BurntSushi/rust-csv) |
+| csv-core 0.1.13 | MIT | [rust-csv](https://github.com/BurntSushi/rust-csv) |
+| ryu 1.0.23 | BSL-1.0 | [dtolnay/ryu](https://github.com/dtolnay/ryu) |
 
 Each package subdirectory preserves its selected license. `cfg_aliases` also includes its upstream third-party notice, and `rfd` includes the MIT notice for its XDG window-identifier implementation. The Tauri SPDX copyright records are preserved beside the selected MIT licenses. The optional Apache-2.0 and CC0 alternatives are not selected for this delivery.
 
 The filesystem plugin is a native transitive dependency of the dialog plugin. The main WebView receives only Lexique's restricted backup commands; it is not granted filesystem, dialog or shell plugin permissions.
+
+The pinned CSV writer and reader support vocabulary note interchange. Their selected original licenses and the new `ryu` transitive license travel through the same desktop and portable resource mapping.

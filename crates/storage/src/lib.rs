@@ -5,6 +5,8 @@ use rusqlite::Connection;
 
 mod vocabulary;
 pub use vocabulary::*;
+mod note_export;
+pub use note_export::*;
 mod grammar;
 pub use grammar::*;
 mod categories;
