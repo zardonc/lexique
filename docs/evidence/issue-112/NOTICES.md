@@ -15,8 +15,9 @@ capture index is in [source-captures.json](source-captures.json).
 Where DAF8 is declared, credit **Académie française, Dictionnaire de l’Académie
 française, eighth edition (1932–1935)** for the original historical layer.
 The original collective edition’s public-domain basis is separate from the
-CC BY-SA 4.0 transcription and adaptation contributions. The author proposal
-and fixed policy evidence are recorded in [rights.json](rights.json).
+CC BY-SA 4.0 transcription and adaptation contributions. The independent
+[selected-rights review](selected-rights.md) and fixed policy evidence are
+recorded in [rights.json](rights.json).
 
 Credit **Lexique contributors** for selection, scoped French adaptations,
 English/Chinese explanations, spelling/construction binding and selection of
@@ -42,6 +43,6 @@ Reuse and adaptation require retaining attribution, source/version links,
 licence and modification information, and sharing adapted textual content
 under CC BY-SA 4.0 without additional restrictions or effective technical
 measures. Project and converter code retains its separate MIT licence.
-The parent must include these actual materials with the admitted artifact;
-this author package does not assert assembled redistribution validation or
-independent review acceptance.
+The parent must include these actual materials with the admitted artifact.
+This package records independent selected-text eligibility; assembled
+redistribution validation remains pending with the parent.

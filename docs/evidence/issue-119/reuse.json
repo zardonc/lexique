@@ -1,0 +1,49 @@
+{
+  "base_commit": "6b29f8be699ef3b489a4e5285db18ed120fe7501",
+  "comparison_input": "resources/core-pilot-79/curated-inputs.json",
+  "canonical_content_version": "core-109-v1",
+  "existing_admitted_groups": 1436,
+  "reused_groups": 1,
+  "reused_fields": 4,
+  "groups": [
+    {
+      "frozen_row": 1911,
+      "headword": "côte",
+      "lexique_cgram": "NOM",
+      "sense_id": "cote-noun-rib",
+      "record_identifier": {
+        "frozen_row": 1911,
+        "headword": "côte",
+        "lexique_cgram": "NOM",
+        "sense_id": "cote-noun-rib"
+      },
+      "field_identifiers": {
+        "french_definition": {
+          "sense_id": "cote-noun-rib",
+          "field": "french_definition",
+          "source_id": "fr_cote"
+        },
+        "ipa": {
+          "sense_id": "cote-noun-rib",
+          "field": "ipa",
+          "source_id": "fr_cote"
+        },
+        "english": {
+          "sense_id": "cote-noun-rib",
+          "field": "english",
+          "source_id": "fr_cote"
+        },
+        "chinese": {
+          "sense_id": "cote-noun-rib",
+          "field": "chinese",
+          "source_id": "fr_cote"
+        }
+      },
+      "content_status": "unchanged_existing_accepted_content",
+      "evidence": "resources/core-pilot-79/curated-inputs.json; resources/core-pilot-79/field-review.json",
+      "fields_unchanged": true,
+      "independent_review": "existing_accepted_review_reused"
+    }
+  ],
+  "note": "The exact accepted côte/NOM group and four fields are copied unchanged; none enters the new pending review records."
+}
