@@ -144,22 +144,35 @@ fn zip_identical_files_dedupe_conflicting_fields_invalidate_whole_groups_and_inv
 fn zip_exports_all_and_current_query_in_saved_snapshot_order_with_unique_windows_names() {
     let fixture = Fixture::new();
     let mut connection = fixture.open();
-    let items = ["A/B", "a?b", "CON", "école"]
-        .into_iter()
-        .map(|word| NoteImportItem {
-            content: NoteImportContent {
-                headword: word.into(),
-                notes: Some("snapshot\n`````\n中文".into()),
-                examples: None,
-            },
-            existing: None,
-            source: ImportSource {
-                format: NoteFormat::Csv,
-                filename: "seed.csv".into(),
-            },
-            snapshot: None,
-        })
-        .collect::<Vec<_>>();
+    let items = [
+        "A/B",
+        "a?b",
+        "CON",
+        "école",
+        "CON.txt",
+        "con.TXT",
+        "PRN.txt",
+        "aUx.md",
+        "NUL.data",
+        "com1.txt",
+        "LPT9.md",
+        "lpt².txt",
+    ]
+    .into_iter()
+    .map(|word| NoteImportItem {
+        content: NoteImportContent {
+            headword: word.into(),
+            notes: Some("snapshot\n`````\n中文".into()),
+            examples: None,
+        },
+        existing: None,
+        source: ImportSource {
+            format: NoteFormat::Csv,
+            filename: "seed.csv".into(),
+        },
+        snapshot: None,
+    })
+    .collect::<Vec<_>>();
     save_note_import_batch(&mut connection, "zip-seed", &items, 0).unwrap();
     for scope in [
         NoteExportScope::All {
@@ -174,6 +187,24 @@ fn zip_exports_all_and_current_query_in_saved_snapshot_order_with_unique_windows
         let expected = capture_note_export(&mut connection, &scope).unwrap();
         let path = fixture.0.join("notes.zip");
         crate::note_export::write_note_zip(&expected, &path).unwrap();
+        let extracted = fixture.0.join("extracted");
+        let extraction = std::process::Command::new("python")
+            .args([
+                "-B",
+                "-X",
+                "utf8",
+                "-c",
+                "import zipfile,sys; zipfile.ZipFile(sys.argv[1]).extractall(sys.argv[2])",
+            ])
+            .arg(&path)
+            .arg(&extracted)
+            .output()
+            .unwrap();
+        assert!(
+            extraction.status.success(),
+            "Windows ZIP extraction: {}",
+            String::from_utf8_lossy(&extraction.stderr)
+        );
         let mut archive = ::zip::ZipArchive::new(std::fs::File::open(&path).unwrap()).unwrap();
         assert_eq!(archive.len(), expected.records.len());
         let mut names = std::collections::HashSet::new();
@@ -183,8 +214,12 @@ fn zip_exports_all_and_current_query_in_saved_snapshot_order_with_unique_windows
             assert!(names.insert(name.to_lowercase()));
             assert!(!name.chars().any(|ch| "<>:\"/\\|?*".contains(ch)));
             assert!(name.ends_with(&format!("-{}.md", record.id)));
+            if record.headword.contains('.') {
+                assert_eq!(name, format!("_{}-{}.md", record.headword, record.id));
+            }
             let mut text = String::new();
             entry.read_to_string(&mut text).unwrap();
+            assert_eq!(std::fs::read_to_string(extracted.join(name)).unwrap(), text);
             let actual = crate::note_markdown::parse_note_markdown(&text).unwrap();
             assert_eq!(actual.headword, record.headword);
             assert_eq!(actual.notes.as_deref(), Some(record.notes.as_str()));

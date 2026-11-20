@@ -84,6 +84,93 @@ fn saved_single_markdown_file_roundtrips_unicode_backticks_and_every_newline_end
 }
 
 #[test]
+fn default_markdown_exports_use_windows_filesystem_names_and_preserve_saved_text() {
+    let path = directory();
+    let mut connection = Connection::open(path.join("learning.sqlite3")).unwrap();
+    initialize(&connection).unwrap();
+    let contents: Vec<_> = [
+        "CON.txt",
+        "con.TXT",
+        "PRN.md",
+        "pRn.data",
+        "AUX.foo",
+        "aUx.bar",
+        "NUL.txt",
+        "nUl.TXT",
+        "COM1.txt",
+        "com2.txt",
+        "COM9.md",
+        "LPT1.txt",
+        "lpt2.txt",
+        "LPT9.md",
+        "COM¹.txt",
+        "lpt².txt",
+        "LPT³.md",
+        "ordinary.txt",
+    ]
+    .into_iter()
+    .map(|word| NoteImportContent {
+        headword: word.into(),
+        notes: Some("  中文 `notes`\r\n终行\n".into()),
+        examples: Some(vec![NoteExample {
+            fr: " À l’école.\r\n".into(),
+            zh: " 单侧\n".into(),
+        }]),
+    })
+    .collect();
+    let items: Vec<_> = contents
+        .iter()
+        .map(|content| NoteImportItem {
+            content: content.clone(),
+            existing: None,
+            source: ImportSource {
+                format: NoteFormat::Markdown,
+                filename: "external.md".into(),
+            },
+            snapshot: None,
+        })
+        .collect();
+    let saved = save_note_import_batch(&mut connection, "device-names", &items, 0).unwrap();
+    for record in &saved.records {
+        let snapshot =
+            capture_note_export(&mut connection, &NoteExportScope::Single { id: record.id })
+                .unwrap();
+        let name = super::note_markdown_filename(&snapshot.records[0]);
+        let destination = path.join(&name);
+        crate::note_export::write_note_markdown(&snapshot, &destination)
+            .unwrap_or_else(|error| panic!("Default filename {name}: {error}"));
+        let readback = std::process::Command::new("python")
+            .args(["-B", "-X", "utf8", "-c", "import pathlib,sys; sys.stdout.buffer.write(pathlib.Path(sys.argv[1]).read_bytes())"])
+            .arg(&destination)
+            .output()
+            .unwrap();
+        assert!(
+            readback.status.success(),
+            "Default filename {name}: {}",
+            String::from_utf8_lossy(&readback.stderr)
+        );
+        let prefix = if record.headword == "ordinary.txt" {
+            ""
+        } else {
+            "_"
+        };
+        assert_eq!(
+            name,
+            format!("{prefix}{}-{}.md", record.headword, record.id),
+            "Windows-usable default filename"
+        );
+        let expected = contents
+            .iter()
+            .find(|item| item.headword == record.headword)
+            .unwrap();
+        assert_eq!(
+            parse_note_markdown(std::str::from_utf8(&readback.stdout).unwrap()).unwrap(),
+            *expected
+        );
+    }
+}
+
+#[test]
 fn template_preserves_plain_text_and_newline_boundaries() {
     let content = parse_note_markdown(
         "# Lexique note v1\n\n## headword\n\n```text\nécole\n```\n\n## notes\n\n`````text\n\n  **学校** `x`\r\n````\n尾行\r\n\n`````\n\n## examples\n\n### 1\n\n#### fr\n\n```text\n\n À l’école. \r\n```\n\n#### zh\n\n```text\n\n```\n",

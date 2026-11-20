@@ -1,5 +1,5 @@
 use lexique_storage::{NoteExportScope, capture_note_export, initialize, save};
-use rusqlite::Connection;
+use rusqlite::{Connection, params};
 use std::sync::atomic::{AtomicU64, Ordering};
 
 static NEXT_OPERATION: AtomicU64 = AtomicU64::new(1);
@@ -91,9 +91,15 @@ fn export_scopes_include_all_query_matches_and_follow_simple_and_review_due_sort
     assert!(
         capture_note_export(&mut connection, &NoteExportScope::Single { id: grammar.id }).is_err()
     );
+    let fixture_snapshot = serde_json::json!({"reference":{"dictionary":"Fixture","lookup_key":"fixture","version":"1","sha256":"a".repeat(64)},"digest":[]}).to_string();
+    let tx = connection.transaction().unwrap();
     for index in 0..25 {
-        saved(&mut connection, &format!("word-{index:02}"), "topic");
+        tx.execute(
+            "INSERT INTO vocabulary(headword,snapshot,notes,created_at,updated_at) VALUES(?1,?2,'topic',1000,1000)",
+            params![format!("word-{index:02}"), fixture_snapshot],
+        ).unwrap();
     }
+    tx.commit().unwrap();
     let scope = serde_json::from_value(serde_json::json!({"kind":"search", "query":"TOPIC", "sort":"headword-asc", "category":"all"})).unwrap();
     let snapshot = capture_note_export(&mut connection, &scope).unwrap();
     assert_eq!(snapshot.records.len(), 27);
