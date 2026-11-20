@@ -23,6 +23,9 @@ class Batch108Tests(unittest.TestCase):
         for group, candidate in zip(groups, candidates["groups"], strict=True):
             if group["frozen_row"] == 1386:
                 self.assertEqual(group["senses"], [])
+                self.assertEqual((group["admitted_fields"], group["missing_fields"]), (0, 4))
+                self.assertEqual(group["annotation_exception_decision"]["approved_by"], "project_owner")
+                self.assertEqual(group["annotation_exception_decision"]["approved_on"], "2026-11-19")
                 continue
             for sense, draft in zip(group["senses"], candidate["senses"], strict=True):
                 self.assertEqual(sense["independent_review"], "passed_after_exact_accepted_replacements")

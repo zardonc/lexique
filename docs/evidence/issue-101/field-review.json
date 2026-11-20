@@ -9654,5 +9654,15 @@
   "rights_review_scope": "Selected lexical/IPA spans, supporting language/POS/construction evidence and actual source notices; no page-wide or quotation-body admission.",
   "completion_reviewer": "Independent completing content/rights reviewer for issue 101; separate from author and merger",
   "completion_confirmation": "All 196 exact accepted fields and 49 modern same-use decisions confirmed against fixed first-party wikitext and current selected-span rights. Existing wording corrections and original reviewer identities preserved.",
-  "quality_summary": "independent-review.md"
+  "quality_summary": "independent-review.md",
+  "approved_annotation_exception_groups": 1,
+  "annotation_exception_decisions": [
+    {
+      "frozen_row": 1005,
+      "issue": "https://github.com/zardonc/lexique/issues/101",
+      "approved_by": "project_owner",
+      "approved_on": "2026-11-19",
+      "admitted_fields": 0
+    }
+  ]
 }

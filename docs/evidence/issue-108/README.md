@@ -3,7 +3,7 @@
 All **50 frozen groups at rows 1351–1400** remain represented. **49 groups / 196
 unchanged FR/IPA/EN/ZH fields** pass independent content and selected-text rights
 review. Row **1386 `nulle/PRO:ind`** retains zero admitted fields and four missing
-fields. No annotation exception or runtime alias is approved; the denominator
+fields. The owner approved the zero-field annotation on 2026-11-19; no runtime alias is approved; the denominator
 remains **4,087 groups**.
 
 The seven-file handoff comprises [groups](groups.json), [sources](sources.json),
@@ -43,3 +43,5 @@ Original-source/span verification, both focused checks and diff checking passed.
 Logs are `independent-original-check.log` and `independent-tests.log` under the
 evidence root. Shared conversion, actual combined notices, native trusted
 save/reopen, final integration review and learner acceptance remain pending.
+
+Owner decision: the exact frozen group retains zero admitted fields and four missing fields. The 2026-11-19 approval changes scope acceptance only; the 4,087-group denominator and frequencies remain fixed.

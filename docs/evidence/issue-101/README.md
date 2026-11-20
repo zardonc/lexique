@@ -1,6 +1,6 @@
 # Issue #101 reviewed content handoff
 
-**49 groups / 196 FR/IPA/EN/ZH fields independently accepted.** All 50 frozen rows 1001–1050, exact spellings/POS subclasses and frequencies are retained. Row **1005 `m/PRO:per`** has four missing fields; no substitute, runtime alias or annotation exception is admitted. The denominator remains 4,087 groups / 3,773 headwords.
+**49 groups / 196 FR/IPA/EN/ZH fields independently accepted.** All 50 frozen rows 1001–1050, exact spellings/POS subclasses and frequencies are retained. Row **1005 `m/PRO:per`** has four missing fields; the owner approved a zero-field annotation on 2026-11-19; no substitute or runtime alias is admitted. The denominator remains 4,087 groups / 3,773 headwords.
 
 The seven canonical files are [groups](groups.json), [sources](sources.json), [field review](field-review.json), [source context](source-context.json), [source excerpts](source-excerpts.json), [reuse](reuse.json) and [admission](admission.json). [Independent review](independent-review.md) records exact source-quality judgments and the unresolved row; [rights](rights.json) records combined obligations. [Original candidates](review-candidates.json) remain unchanged, and [fixed captures](source-captures.json) locate the owning raw evidence. [Source research](source-research.md) retains acquisition and source boundaries.
 
@@ -13,3 +13,7 @@ uv run --python 3.14.10 --no-project python -B -X utf8 -m unittest discover -s s
 ```
 
 Both checks pass. Parent-owned canonical conversion, assembled notices and native lookup/trusted save/reopen remain separate gates. No application/native suite was run; four missing fields keep this batch incomplete.
+
+Owner decision: the exact frozen group retains zero admitted fields and four missing fields. The 2026-11-19 approval changes scope acceptance only; the 4,087-group denominator and frequencies remain fixed.
+
+Owner decision: the exact frozen group retains zero admitted fields and four missing fields. The 2026-11-19 approval changes scope acceptance only; the 4,087-group denominator and frequencies remain fixed.

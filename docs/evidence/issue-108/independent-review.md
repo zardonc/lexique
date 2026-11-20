@@ -1,6 +1,6 @@
 # Issue #108 independent selected-content review
 
-All 50 exact frozen groups at rows 1351–1400 remain represented. 49 groups / 196 unchanged fields pass independent content and selected-text rights review. Row 1386 retains zero admitted fields and four missing fields; no owner exception is approved. The denominator remains 4,087 groups.
+All 50 exact frozen groups at rows 1351–1400 remain represented. 49 groups / 196 unchanged fields pass independent content and selected-text rights review. Row 1386 retains zero admitted fields and four missing fields; the owner approved its zero-field annotation on 2026-11-19. The denominator remains 4,087 groups.
 
 The reviewer is separate from the author and merger. All 46 fixed original revisions were independently refetched; complete wikitext, IDs, titles, timestamps and editors match the author captures. All 200 original exact spans were verified. The original API response and check log are retained under `target/issue-108/`. Candidate wording/source identities remain unchanged for the accepted 196 fields. Original 200-field proposals remain in [review-candidates](review-candidates.json) and the source excerpts.
 
@@ -67,3 +67,5 @@ Exact nulle/PRO:ind has only the 1855 Balzac example at nulle revision 39737088 
 The distinct row 1385 indefinite adjective passes: nulle lines 25–27 and nul lines 120–126 establish feminine agreement, singular-only, before-noun construction and current written register. Neither binding creates a runtime alias.
 
 Rights authorities and original DAF8 edition evidence are retained in [rights](rights.json). Shared conversion/notices, native save/reopen, final integration review and learner acceptance remain pending.
+
+Owner decision: the exact frozen group retains zero admitted fields and four missing fields. The 2026-11-19 approval changes scope acceptance only; the 4,087-group denominator and frequencies remain fixed.

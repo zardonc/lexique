@@ -19,9 +19,13 @@ ANNOTATIONS = (
     (816, "t", "PRO:per", 97), (849, "c", "PRO:dem", 97),
     (859, "l", "ART:def", 98), (860, "l", "PRO:per", 98),
     (934, "i", "ADJ:num", 99),
+    (1005, "m", "PRO:per", 101), (1051, "s", "PRO:per", 102),
+    (1208, "quiconque", "PRO:int", 105), (1218, "qu", "CON", 105),
+    (1219, "qu", "PRO:int", 105), (1220, "qu", "PRO:rel", 105),
+    (1300, "d", "PRE", 106), (1386, "nulle", "PRO:ind", 108),
 )
 ANNOTATION_ROWS = tuple(entry[0] for entry in ANNOTATIONS)
-ROWS = (*(row for row in range(1, 951) if row not in ANNOTATION_ROWS), 1911)
+ROWS = (*(row for row in range(1, 1451) if row not in ANNOTATION_ROWS), 1911)
 FIELDS = {"french_definition": "definition_fr", "ipa": "ipa", "english": "meaning_en", "chinese": "meaning_zh"}
 LANGUAGES = {"french_definition": "fr", "ipa": "und", "english": "en", "chinese": "zh"}
 MATERIALS = (
@@ -96,7 +100,8 @@ def load_inputs(source_dir):
         raise ValueError("Annotation exceptions must retain their exact approved frozen identities")
     for entry, (_, _, _, issue) in zip(annotations, ANNOTATIONS, strict=True):
         decision = entry.get("decision", {})
-        if entry.get("admitted_fields") != 0 or decision.get("issue") != f"https://github.com/zardonc/lexique/issues/{issue}" or decision.get("approved_by") != "project_owner" or decision.get("approved_on") != "2026-11-18":
+        approved_on = "2026-11-18" if entry["frozen_row"] < 951 else "2026-11-19"
+        if entry.get("admitted_fields") != 0 or decision.get("issue") != f"https://github.com/zardonc/lexique/issues/{issue}" or decision.get("approved_by") != "project_owner" or decision.get("approved_on") != approved_on:
             raise ValueError("Annotation exception requires the owner's matching issue approval and zero fields")
         text(decision.get("decision"), "annotation exception decision")
     groups = curated.get("groups", [])

@@ -36,7 +36,8 @@ class Batch101Tests(unittest.TestCase):
         admission = json.loads((EVIDENCE / "admission.json").read_text(encoding="utf-8"))
         self.assertEqual((admission["accepted_groups"], admission["accepted_fields"],
                           admission["missing_admitted_fields"]), (49, 196, 4))
-        self.assertEqual(admission["status"], "incomplete")
+        self.assertEqual(admission["status"], "passed")
+        self.assertEqual(admission["approved_annotation_exception_groups"], 1)
         reviewed = {(record["sense_id"], record["field"]): record for record in review["fields"]}
         context = json.loads((EVIDENCE / "source-context.json").read_text(encoding="utf-8"))
         locations = {(record["sense_id"], record["field"]): record for source in context["current_content"]
@@ -52,6 +53,8 @@ class Batch101Tests(unittest.TestCase):
                 self.assertEqual(group["subtitle_pos_per_million"], scope[row - 1]["subtitle_pos_per_million"])
                 if row == 1005:
                     self.assertEqual(group["senses"], [])
+                    self.assertEqual(group["annotation_exception_decision"]["approved_by"], "project_owner")
+                    self.assertEqual(group["annotation_exception_decision"]["approved_on"], "2026-11-19")
                     self.assertEqual(group["status"], "source_spelling_pos_unresolved")
                     self.assertEqual(set(group["pending_fields"]), {"french_definition", "ipa", "english", "chinese"})
                     self.assertEqual((group["admitted_fields"], group["missing_fields"]), (0, 4))

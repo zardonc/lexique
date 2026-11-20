@@ -377,11 +377,22 @@
   "scope_denominator_groups": 4087,
   "final_output_validation": "independent_fixed_original_and_exact_span_check_passed",
   "author_evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-108\\target\\issue-108",
-  "status": "incomplete",
+  "status": "passed",
   "independence": true,
   "accepted_groups": 49,
   "accepted_fields": 196,
   "missing_admitted_fields": 4,
   "independent_quality": "49 groups/196 unchanged fields passed; row1386 modern exact-form grammar unresolved",
-  "selected_span_rights": "passed_at_selected_text_boundary_for_196_fields"
+  "selected_span_rights": "passed_at_selected_text_boundary_for_196_fields",
+  "approved_annotation_exception_groups": 1,
+  "annotation_exception_decisions": [
+    {
+      "frozen_row": 1386,
+      "issue": "https://github.com/zardonc/lexique/issues/108",
+      "approved_by": "project_owner",
+      "approved_on": "2026-11-19",
+      "admitted_fields": 0
+    }
+  ],
+  "scope_acceptance": "passed_with_owner_approved_zero_field_annotation"
 }

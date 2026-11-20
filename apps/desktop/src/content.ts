@@ -20,7 +20,7 @@ export const messages = {
     dictionary: {
       core: coreMessages.zh,
       label: '法语词或词组', search: '查词', loading: '正在查询…',
-      hint: '核心词典试点 · 944 / 4,087 个核心词性组。另有 FreeDict 补充词典。可试 être、avoir、bien、fort、aujourd\'hui、cœur、côte。',
+      hint: '核心词典试点 · 1,436 / 4,087 个核心词性组。另有 FreeDict 补充词典。可试 être、avoir、bien、fort、aujourd\'hui、cœur、côte。',
       preview: '浏览器预览无法读取内置词典，请在桌面应用中查词。',
       noMatch: '未找到完全匹配的词条。', records: '词条记录', source: '来源', details: '错误详情',
       missing: '词典资源不存在。', corrupt: '词典资源已损坏。',
@@ -50,7 +50,7 @@ export const messages = {
     dictionary: {
       core: coreMessages.en,
       label: 'French word or phrase', search: 'Look up', loading: 'Looking up…',
-      hint: 'Core pilot · 944 / 4,087 POS groups. FreeDict supplements. Try être, avoir, bien, fort, aujourd\'hui, cœur or côte.',
+      hint: 'Core pilot · 1,436 / 4,087 POS groups. FreeDict supplements. Try être, avoir, bien, fort, aujourd\'hui, cœur or côte.',
       preview: 'Browser preview cannot read the bundled dictionary. Use the desktop app.',
       noMatch: 'No exact entry found.', records: 'Entry records', source: 'Source', details: 'Error details',
       missing: 'Dictionary is missing.', corrupt: 'Dictionary is corrupt.',
@@ -81,7 +81,7 @@ export const messages = {
     dictionary: {
       core: coreMessages.fr,
       label: 'Mot ou expression en français', search: 'Chercher', loading: 'Recherche…',
-      hint: 'Noyau lexical pilote · 944 / 4 087 groupes de catégories grammaticales. Compléments FreeDict. Essayez être, avoir, bien, fort, aujourd\'hui, cœur ou côte.',
+      hint: 'Noyau lexical pilote · 1,436 / 4 087 groupes de catégories grammaticales. Compléments FreeDict. Essayez être, avoir, bien, fort, aujourd\'hui, cœur ou côte.',
       preview: 'L’aperçu web ne peut pas lire le dictionnaire intégré. Utilisez l’application de bureau.',
       noMatch: 'Aucune entrée exacte trouvée.', records: 'Entrées', source: 'Source', details: 'Détails de l’erreur',
       missing: 'Le dictionnaire est absent.', corrupt: 'Le dictionnaire est endommagé.',

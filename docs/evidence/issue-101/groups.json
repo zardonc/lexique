@@ -436,7 +436,13 @@
     },
     "reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
     "independence": true,
-    "accepted_fields": 0
+    "accepted_fields": 0,
+    "annotation_exception_decision": {
+      "issue": "https://github.com/zardonc/lexique/issues/101",
+      "approved_by": "project_owner",
+      "approved_on": "2026-11-19",
+      "admitted_fields": 0
+    }
   },
   {
     "frozen_row": 1006,

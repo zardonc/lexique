@@ -55,7 +55,7 @@
   ],
   "scope_denominator_groups": 4087,
   "scope_denominator_headwords": 3773,
-  "status": "incomplete",
+  "status": "passed",
   "accepted_groups": 49,
   "accepted_fields": 196,
   "candidate_groups": 49,
@@ -65,7 +65,7 @@
   "missing_candidate_fields": 4,
   "unadmitted_groups": 1,
   "unadmitted_fields": 4,
-  "approved_annotation_exception_groups": 0,
+  "approved_annotation_exception_groups": 1,
   "independent_reviewer": "issue101-independent-reviewer-01a1f5aa-0518-7f82-936f-d668d166d141",
   "independence": true,
   "quality_summary": "49 selected modern everyday groups and 196 FR/IPA/EN/ZH fields independently accepted at their fixed source/rights boundaries; exact bare m/PRO:per remains unresolved with four missing fields.",
@@ -142,5 +142,15 @@
   "independent_review_summary": "independent-review.md",
   "missing_admitted_fields": 4,
   "retained_frozen_groups": 50,
-  "completion_reviewer": "Independent completing content/rights reviewer for issue 101; separate from author and merger"
+  "completion_reviewer": "Independent completing content/rights reviewer for issue 101; separate from author and merger",
+  "annotation_exception_decisions": [
+    {
+      "frozen_row": 1005,
+      "issue": "https://github.com/zardonc/lexique/issues/101",
+      "approved_by": "project_owner",
+      "approved_on": "2026-11-19",
+      "admitted_fields": 0
+    }
+  ],
+  "scope_acceptance": "passed_with_owner_approved_zero_field_annotation"
 }

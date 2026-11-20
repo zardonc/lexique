@@ -1,6 +1,6 @@
 # Issue #101 independent selected-content review
 
-**49 groups / 196 exact FR/IPA/EN/ZH fields accepted; row 1005 remains unresolved with four missing fields.** All 50 frozen rows 1001–1050 are retained in [groups](groups.json), with exact headword/POS/frequency values. The denominator remains 4,087 groups. No spelling substitution, runtime alias or annotation exception is admitted.
+**49 groups / 196 exact FR/IPA/EN/ZH fields accepted; row 1005 retains its owner-approved zero-field annotation and four missing fields.** All 50 frozen rows 1001–1050 are retained in [groups](groups.json), with exact headword/POS/frequency values. The denominator remains 4,087 groups. The owner approved the zero-field annotation on 2026-11-19. No spelling substitution or runtime alias is admitted.
 
 The content/rights reviewers are separate from the author and merger. Reviewed author head: `da07f57e1c6236fa535512be3af2a700077bc359`; diff base/integrated checkout head: `d9f8e985a83512c1292255fc6d97f6605628fc6c`. Owning checkout: `C:/Users/inthe/IdeaProjects/lexique-batch-101`. Windows evidence remains under `target/issue-101/`. Ticket [#101](https://github.com/zardonc/lexique/issues/101), parent [#78](https://github.com/zardonc/lexique/issues/78).
 
@@ -29,3 +29,7 @@ The reviewed Wikimedia Terms revision 598588, section 7(a–c, g–h), fixed Fre
 Both focused checks pass: exact frozen membership, all 196 source locations against 46 retained API/wikitext captures, accepted/candidate content comparison and only the three recorded replacements. The focused test compares actual text/provenance separately from review labels. Complete source/context join verification passed for 743 bindings. Logs: `reviewer-final.log`, `reviewer-source-check.json`, `reviewer-diff-check.log`, `reviewer-links.json`. Reading/rights evidence: `reviewer-resumed-reading.log`, `reviewer-resumed-import-boundaries.json`, `reviewer-resumed-rights.json`. The preserved incoming review patch is `reviewer-resumed-partial.patch`.
 
 Actual assembled notices, canonical conversion, native lookup/save/reopen and release checks remain parent/integration work. No full application suite or native gate was run. Four unresolved fields keep #101 incomplete.
+
+Owner decision: the exact frozen group retains zero admitted fields and four missing fields. The 2026-11-19 approval changes scope acceptance only; the 4,087-group denominator and frequencies remain fixed.
+
+Owner decision: the exact frozen group retains zero admitted fields and four missing fields. The 2026-11-19 approval changes scope acceptance only; the 4,087-group denominator and frequencies remain fixed.
