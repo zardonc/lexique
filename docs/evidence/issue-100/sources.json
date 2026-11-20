@@ -13,7 +13,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party API current revision; actual returned version and timestamp retained.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "source_page_notices_to_record": [
       {
         "line_1_based": 12,
@@ -160,12 +160,14 @@
       "Attribute the fixed article and complete linked contributor history.",
       "Retain applicable original author/import notices separately from Wiki contributions.",
       "Retain CC BY-SA 4.0 legal text/link and modification notices for adapted fields.",
-      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0."
+      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0.",
+      "Retain supplied copyright, licence and warranty-disclaimer notices.",
+      "Apply no additional restrictions or effective technological measures that obstruct the granted rights."
     ],
     "original_authors_and_rights": [],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
     "contributor_capture_parts": [
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-1.api.json",
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-2.api.json",
@@ -176,7 +178,8 @@
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-7.api.json"
     ],
     "current_registry_names": 54,
-    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship."
+    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship.",
+    "selected_text_rights_reason": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. "
   },
   {
     "id": "b100_fr_10676",
@@ -192,7 +195,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party API current revision; actual returned version and timestamp retained.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "source_page_notices_to_record": [
       {
         "line_1_based": 9,
@@ -437,7 +440,9 @@
       "Attribute the fixed article and complete linked contributor history.",
       "Retain applicable original author/import notices separately from Wiki contributions.",
       "Retain CC BY-SA 4.0 legal text/link and modification notices for adapted fields.",
-      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0."
+      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0.",
+      "Retain supplied copyright, licence and warranty-disclaimer notices.",
+      "Apply no additional restrictions or effective technological measures that obstruct the granted rights."
     ],
     "original_authors_and_rights": [
       {
@@ -447,7 +452,7 @@
         "publication": "1932–1935; final publication 1935",
         "work_type": "collective work",
         "original_rights": "public domain",
-        "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
@@ -462,12 +467,12 @@
           "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
           "captured_at": "2026-11-19T21:29:28.419199+00:00"
         },
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
     "contributor_capture_parts": [
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-1.api.json",
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-2.api.json",
@@ -478,7 +483,8 @@
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-7.api.json"
     ],
     "current_registry_names": 55,
-    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship."
+    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship.",
+    "selected_text_rights_reason": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. "
   },
   {
     "id": "b100_fr_158556",
@@ -494,7 +500,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party API current revision; actual returned version and timestamp retained.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "source_page_notices_to_record": [
       {
         "line_1_based": 3,
@@ -788,7 +794,9 @@
       "Attribute the fixed article and complete linked contributor history.",
       "Retain applicable original author/import notices separately from Wiki contributions.",
       "Retain CC BY-SA 4.0 legal text/link and modification notices for adapted fields.",
-      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0."
+      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0.",
+      "Retain supplied copyright, licence and warranty-disclaimer notices.",
+      "Apply no additional restrictions or effective technological measures that obstruct the granted rights."
     ],
     "original_authors_and_rights": [
       {
@@ -798,7 +806,7 @@
         "publication": "1932–1935; final publication 1935",
         "work_type": "collective work",
         "original_rights": "public domain",
-        "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
@@ -813,7 +821,7 @@
           "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
           "captured_at": "2026-11-19T21:29:28.419199+00:00"
         },
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       },
       {
         "id": "original-littre-1872-1877",
@@ -821,7 +829,7 @@
         "title": "Dictionnaire de la langue française",
         "publication": "1872–1877",
         "original_rights": "public domain",
-        "author_rights_assessment": "Historical Littré edition is identified by the fixed import notice and the rights convention’s explicit public-domain Littré example; exact imported wording awaits independent assessment.",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "source_notice_evidence": {
           "title": "Modèle:Import:Littré",
           "revid": 30857967,
@@ -842,12 +850,12 @@
         },
         "wiki_layer": "Contributor transcription/adaptation under CC BY-SA 4.0, separately from original public-domain prose.",
         "lexique_layer": "Scoped adaptations and new explanatory translations, Lexique contributors, CC BY-SA 4.0.",
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
     "contributor_capture_parts": [
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-1.api.json",
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-2.api.json",
@@ -858,7 +866,8 @@
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-7.api.json"
     ],
     "current_registry_names": 61,
-    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship."
+    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship.",
+    "selected_text_rights_reason": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. Historical Littré 1872–1877 is separately public-domain; modern dictionary references convey no prose licence. "
   },
   {
     "id": "b100_fr_175176",
@@ -874,7 +883,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party API current revision; actual returned version and timestamp retained.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "source_page_notices_to_record": [
       {
         "line_1_based": 5,
@@ -993,7 +1002,9 @@
       "Attribute the fixed article and complete linked contributor history.",
       "Retain applicable original author/import notices separately from Wiki contributions.",
       "Retain CC BY-SA 4.0 legal text/link and modification notices for adapted fields.",
-      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0."
+      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0.",
+      "Retain supplied copyright, licence and warranty-disclaimer notices.",
+      "Apply no additional restrictions or effective technological measures that obstruct the granted rights."
     ],
     "original_authors_and_rights": [
       {
@@ -1003,7 +1014,7 @@
         "publication": "1932–1935; final publication 1935",
         "work_type": "collective work",
         "original_rights": "public domain",
-        "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
@@ -1018,12 +1029,12 @@
           "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
           "captured_at": "2026-11-19T21:29:28.419199+00:00"
         },
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
     "contributor_capture_parts": [
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-1.api.json",
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-2.api.json",
@@ -1034,7 +1045,8 @@
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-7.api.json"
     ],
     "current_registry_names": 80,
-    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship."
+    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship.",
+    "selected_text_rights_reason": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. "
   },
   {
     "id": "b100_fr_8031",
@@ -1050,7 +1062,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party API current revision; actual returned version and timestamp retained.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "source_page_notices_to_record": [
       {
         "line_1_based": 5,
@@ -1246,12 +1258,14 @@
       "Attribute the fixed article and complete linked contributor history.",
       "Retain applicable original author/import notices separately from Wiki contributions.",
       "Retain CC BY-SA 4.0 legal text/link and modification notices for adapted fields.",
-      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0."
+      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0.",
+      "Retain supplied copyright, licence and warranty-disclaimer notices.",
+      "Apply no additional restrictions or effective technological measures that obstruct the granted rights."
     ],
     "original_authors_and_rights": [],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
     "contributor_capture_parts": [
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-1.api.json",
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-2.api.json",
@@ -1262,7 +1276,8 @@
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-7.api.json"
     ],
     "current_registry_names": 81,
-    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship."
+    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship.",
+    "selected_text_rights_reason": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. "
   },
   {
     "id": "b100_fr_145123",
@@ -1278,7 +1293,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party API current revision; actual returned version and timestamp retained.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "source_page_notices_to_record": [
       {
         "line_1_based": 15,
@@ -1495,7 +1510,9 @@
       "Attribute the fixed article and complete linked contributor history.",
       "Retain applicable original author/import notices separately from Wiki contributions.",
       "Retain CC BY-SA 4.0 legal text/link and modification notices for adapted fields.",
-      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0."
+      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0.",
+      "Retain supplied copyright, licence and warranty-disclaimer notices.",
+      "Apply no additional restrictions or effective technological measures that obstruct the granted rights."
     ],
     "original_authors_and_rights": [
       {
@@ -1505,7 +1522,7 @@
         "publication": "1932–1935; final publication 1935",
         "work_type": "collective work",
         "original_rights": "public domain",
-        "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
@@ -1520,12 +1537,12 @@
           "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
           "captured_at": "2026-11-19T21:29:28.419199+00:00"
         },
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
     "contributor_capture_parts": [
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-1.api.json",
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-2.api.json",
@@ -1536,7 +1553,8 @@
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-7.api.json"
     ],
     "current_registry_names": 86,
-    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship."
+    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship.",
+    "selected_text_rights_reason": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. "
   },
   {
     "id": "b100_fr_152812",
@@ -1552,7 +1570,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party API current revision; actual returned version and timestamp retained.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "source_page_notices_to_record": [
       {
         "line_1_based": 17,
@@ -1671,7 +1689,9 @@
       "Attribute the fixed article and complete linked contributor history.",
       "Retain applicable original author/import notices separately from Wiki contributions.",
       "Retain CC BY-SA 4.0 legal text/link and modification notices for adapted fields.",
-      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0."
+      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0.",
+      "Retain supplied copyright, licence and warranty-disclaimer notices.",
+      "Apply no additional restrictions or effective technological measures that obstruct the granted rights."
     ],
     "original_authors_and_rights": [
       {
@@ -1681,7 +1701,7 @@
         "publication": "1932–1935; final publication 1935",
         "work_type": "collective work",
         "original_rights": "public domain",
-        "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
@@ -1696,12 +1716,12 @@
           "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
           "captured_at": "2026-11-19T21:29:28.419199+00:00"
         },
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
     "contributor_capture_parts": [
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-1.api.json",
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-2.api.json",
@@ -1712,7 +1732,8 @@
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-7.api.json"
     ],
     "current_registry_names": 59,
-    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship."
+    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship.",
+    "selected_text_rights_reason": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. "
   },
   {
     "id": "b100_fr_5266",
@@ -1728,7 +1749,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party API current revision; actual returned version and timestamp retained.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "source_page_notices_to_record": [
       {
         "line_1_based": 15,
@@ -1931,7 +1952,9 @@
       "Attribute the fixed article and complete linked contributor history.",
       "Retain applicable original author/import notices separately from Wiki contributions.",
       "Retain CC BY-SA 4.0 legal text/link and modification notices for adapted fields.",
-      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0."
+      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0.",
+      "Retain supplied copyright, licence and warranty-disclaimer notices.",
+      "Apply no additional restrictions or effective technological measures that obstruct the granted rights."
     ],
     "original_authors_and_rights": [
       {
@@ -1941,7 +1964,7 @@
         "publication": "1932–1935; final publication 1935",
         "work_type": "collective work",
         "original_rights": "public domain",
-        "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
@@ -1956,12 +1979,12 @@
           "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
           "captured_at": "2026-11-19T21:29:28.419199+00:00"
         },
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
     "contributor_capture_parts": [
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-1.api.json",
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-2.api.json",
@@ -1972,7 +1995,8 @@
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-7.api.json"
     ],
     "current_registry_names": 85,
-    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship."
+    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship.",
+    "selected_text_rights_reason": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. "
   },
   {
     "id": "b100_fr_530735",
@@ -1988,7 +2012,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party API current revision; actual returned version and timestamp retained.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "source_page_notices_to_record": [
       {
         "line_1_based": 11,
@@ -2093,7 +2117,9 @@
       "Attribute the fixed article and complete linked contributor history.",
       "Retain applicable original author/import notices separately from Wiki contributions.",
       "Retain CC BY-SA 4.0 legal text/link and modification notices for adapted fields.",
-      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0."
+      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0.",
+      "Retain supplied copyright, licence and warranty-disclaimer notices.",
+      "Apply no additional restrictions or effective technological measures that obstruct the granted rights."
     ],
     "original_authors_and_rights": [
       {
@@ -2103,7 +2129,7 @@
         "publication": "1932–1935; final publication 1935",
         "work_type": "collective work",
         "original_rights": "public domain",
-        "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
@@ -2118,12 +2144,12 @@
           "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
           "captured_at": "2026-11-19T21:29:28.419199+00:00"
         },
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
     "contributor_capture_parts": [
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-1.api.json",
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-2.api.json",
@@ -2134,7 +2160,8 @@
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-7.api.json"
     ],
     "current_registry_names": 74,
-    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship."
+    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship.",
+    "selected_text_rights_reason": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. "
   },
   {
     "id": "b100_fr_153016",
@@ -2150,7 +2177,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party API current revision; actual returned version and timestamp retained.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "source_page_notices_to_record": [
       {
         "line_1_based": 3,
@@ -2290,7 +2317,9 @@
       "Attribute the fixed article and complete linked contributor history.",
       "Retain applicable original author/import notices separately from Wiki contributions.",
       "Retain CC BY-SA 4.0 legal text/link and modification notices for adapted fields.",
-      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0."
+      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0.",
+      "Retain supplied copyright, licence and warranty-disclaimer notices.",
+      "Apply no additional restrictions or effective technological measures that obstruct the granted rights."
     ],
     "original_authors_and_rights": [
       {
@@ -2300,7 +2329,7 @@
         "publication": "1932–1935; final publication 1935",
         "work_type": "collective work",
         "original_rights": "public domain",
-        "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
@@ -2315,7 +2344,7 @@
           "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
           "captured_at": "2026-11-19T21:29:28.419199+00:00"
         },
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       },
       {
         "id": "original-littre-1872-1877",
@@ -2323,7 +2352,7 @@
         "title": "Dictionnaire de la langue française",
         "publication": "1872–1877",
         "original_rights": "public domain",
-        "author_rights_assessment": "Historical Littré edition is identified by the fixed import notice and the rights convention’s explicit public-domain Littré example; exact imported wording awaits independent assessment.",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "source_notice_evidence": {
           "title": "Modèle:Import:Littré",
           "revid": 30857967,
@@ -2344,12 +2373,12 @@
         },
         "wiki_layer": "Contributor transcription/adaptation under CC BY-SA 4.0, separately from original public-domain prose.",
         "lexique_layer": "Scoped adaptations and new explanatory translations, Lexique contributors, CC BY-SA 4.0.",
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
     "contributor_capture_parts": [
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-1.api.json",
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-2.api.json",
@@ -2360,7 +2389,8 @@
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-7.api.json"
     ],
     "current_registry_names": 67,
-    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship."
+    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship.",
+    "selected_text_rights_reason": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. Historical Littré 1872–1877 is separately public-domain; modern dictionary references convey no prose licence. "
   },
   {
     "id": "b100_fr_388",
@@ -2376,7 +2406,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party API current revision; actual returned version and timestamp retained.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "source_page_notices_to_record": [
       {
         "line_1_based": 5,
@@ -2558,7 +2588,9 @@
       "Attribute the fixed article and complete linked contributor history.",
       "Retain applicable original author/import notices separately from Wiki contributions.",
       "Retain CC BY-SA 4.0 legal text/link and modification notices for adapted fields.",
-      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0."
+      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0.",
+      "Retain supplied copyright, licence and warranty-disclaimer notices.",
+      "Apply no additional restrictions or effective technological measures that obstruct the granted rights."
     ],
     "original_authors_and_rights": [
       {
@@ -2568,7 +2600,7 @@
         "publication": "1932–1935; final publication 1935",
         "work_type": "collective work",
         "original_rights": "public domain",
-        "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
@@ -2583,12 +2615,12 @@
           "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
           "captured_at": "2026-11-19T21:29:28.419199+00:00"
         },
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
     "contributor_capture_parts": [
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-1.api.json",
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-2.api.json",
@@ -2599,7 +2631,8 @@
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-7.api.json"
     ],
     "current_registry_names": 209,
-    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship."
+    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship.",
+    "selected_text_rights_reason": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. "
   },
   {
     "id": "b100_fr_122480",
@@ -2615,7 +2648,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party API current revision; actual returned version and timestamp retained.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "source_page_notices_to_record": [
       {
         "line_1_based": 11,
@@ -2776,7 +2809,9 @@
       "Attribute the fixed article and complete linked contributor history.",
       "Retain applicable original author/import notices separately from Wiki contributions.",
       "Retain CC BY-SA 4.0 legal text/link and modification notices for adapted fields.",
-      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0."
+      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0.",
+      "Retain supplied copyright, licence and warranty-disclaimer notices.",
+      "Apply no additional restrictions or effective technological measures that obstruct the granted rights."
     ],
     "original_authors_and_rights": [
       {
@@ -2786,7 +2821,7 @@
         "publication": "1932–1935; final publication 1935",
         "work_type": "collective work",
         "original_rights": "public domain",
-        "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
@@ -2801,12 +2836,12 @@
           "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
           "captured_at": "2026-11-19T21:29:28.419199+00:00"
         },
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
     "contributor_capture_parts": [
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-1.api.json",
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-2.api.json",
@@ -2817,7 +2852,8 @@
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-7.api.json"
     ],
     "current_registry_names": 86,
-    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship."
+    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship.",
+    "selected_text_rights_reason": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. "
   },
   {
     "id": "b100_fr_111650",
@@ -2833,7 +2869,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party API current revision; actual returned version and timestamp retained.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "source_page_notices_to_record": [
       {
         "line_1_based": 13,
@@ -2973,7 +3009,9 @@
       "Attribute the fixed article and complete linked contributor history.",
       "Retain applicable original author/import notices separately from Wiki contributions.",
       "Retain CC BY-SA 4.0 legal text/link and modification notices for adapted fields.",
-      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0."
+      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0.",
+      "Retain supplied copyright, licence and warranty-disclaimer notices.",
+      "Apply no additional restrictions or effective technological measures that obstruct the granted rights."
     ],
     "original_authors_and_rights": [
       {
@@ -2983,7 +3021,7 @@
         "publication": "1932–1935; final publication 1935",
         "work_type": "collective work",
         "original_rights": "public domain",
-        "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
@@ -2998,12 +3036,12 @@
           "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
           "captured_at": "2026-11-19T21:29:28.419199+00:00"
         },
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
     "contributor_capture_parts": [
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-1.api.json",
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-2.api.json",
@@ -3014,7 +3052,8 @@
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-7.api.json"
     ],
     "current_registry_names": 79,
-    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship."
+    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship.",
+    "selected_text_rights_reason": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. "
   },
   {
     "id": "b100_fr_8342",
@@ -3030,7 +3069,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party API current revision; actual returned version and timestamp retained.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "source_page_notices_to_record": [
       {
         "line_1_based": 14,
@@ -3142,7 +3181,9 @@
       "Attribute the fixed article and complete linked contributor history.",
       "Retain applicable original author/import notices separately from Wiki contributions.",
       "Retain CC BY-SA 4.0 legal text/link and modification notices for adapted fields.",
-      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0."
+      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0.",
+      "Retain supplied copyright, licence and warranty-disclaimer notices.",
+      "Apply no additional restrictions or effective technological measures that obstruct the granted rights."
     ],
     "original_authors_and_rights": [
       {
@@ -3152,7 +3193,7 @@
         "publication": "1932–1935; final publication 1935",
         "work_type": "collective work",
         "original_rights": "public domain",
-        "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
@@ -3167,12 +3208,12 @@
           "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
           "captured_at": "2026-11-19T21:29:28.419199+00:00"
         },
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
     "contributor_capture_parts": [
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-1.api.json",
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-2.api.json",
@@ -3183,7 +3224,8 @@
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-7.api.json"
     ],
     "current_registry_names": 70,
-    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship."
+    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship.",
+    "selected_text_rights_reason": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. "
   },
   {
     "id": "b100_fr_9468",
@@ -3199,7 +3241,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party API current revision; actual returned version and timestamp retained.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "source_page_notices_to_record": [
       {
         "line_1_based": 11,
@@ -3479,7 +3521,9 @@
       "Attribute the fixed article and complete linked contributor history.",
       "Retain applicable original author/import notices separately from Wiki contributions.",
       "Retain CC BY-SA 4.0 legal text/link and modification notices for adapted fields.",
-      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0."
+      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0.",
+      "Retain supplied copyright, licence and warranty-disclaimer notices.",
+      "Apply no additional restrictions or effective technological measures that obstruct the granted rights."
     ],
     "original_authors_and_rights": [
       {
@@ -3489,7 +3533,7 @@
         "publication": "1932–1935; final publication 1935",
         "work_type": "collective work",
         "original_rights": "public domain",
-        "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
@@ -3504,12 +3548,12 @@
           "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
           "captured_at": "2026-11-19T21:29:28.419199+00:00"
         },
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
     "contributor_capture_parts": [
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-1.api.json",
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-2.api.json",
@@ -3520,7 +3564,8 @@
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-7.api.json"
     ],
     "current_registry_names": 89,
-    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship."
+    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship.",
+    "selected_text_rights_reason": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. "
   },
   {
     "id": "b100_fr_8370",
@@ -3536,7 +3581,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party API current revision; actual returned version and timestamp retained.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "source_page_notices_to_record": [
       {
         "line_1_based": 10,
@@ -3662,7 +3707,9 @@
       "Attribute the fixed article and complete linked contributor history.",
       "Retain applicable original author/import notices separately from Wiki contributions.",
       "Retain CC BY-SA 4.0 legal text/link and modification notices for adapted fields.",
-      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0."
+      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0.",
+      "Retain supplied copyright, licence and warranty-disclaimer notices.",
+      "Apply no additional restrictions or effective technological measures that obstruct the granted rights."
     ],
     "original_authors_and_rights": [
       {
@@ -3672,7 +3719,7 @@
         "publication": "1932–1935; final publication 1935",
         "work_type": "collective work",
         "original_rights": "public domain",
-        "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
@@ -3687,12 +3734,12 @@
           "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
           "captured_at": "2026-11-19T21:29:28.419199+00:00"
         },
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
     "contributor_capture_parts": [
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-1.api.json",
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-2.api.json",
@@ -3703,7 +3750,8 @@
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-7.api.json"
     ],
     "current_registry_names": 55,
-    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship."
+    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship.",
+    "selected_text_rights_reason": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. "
   },
   {
     "id": "b100_fr_158161",
@@ -3719,7 +3767,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party API current revision; actual returned version and timestamp retained.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "source_page_notices_to_record": [
       {
         "line_1_based": 5,
@@ -3810,7 +3858,9 @@
       "Attribute the fixed article and complete linked contributor history.",
       "Retain applicable original author/import notices separately from Wiki contributions.",
       "Retain CC BY-SA 4.0 legal text/link and modification notices for adapted fields.",
-      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0."
+      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0.",
+      "Retain supplied copyright, licence and warranty-disclaimer notices.",
+      "Apply no additional restrictions or effective technological measures that obstruct the granted rights."
     ],
     "original_authors_and_rights": [
       {
@@ -3820,7 +3870,7 @@
         "publication": "1932–1935; final publication 1935",
         "work_type": "collective work",
         "original_rights": "public domain",
-        "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
@@ -3835,12 +3885,12 @@
           "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
           "captured_at": "2026-11-19T21:29:28.419199+00:00"
         },
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
     "contributor_capture_parts": [
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-1.api.json",
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-2.api.json",
@@ -3851,7 +3901,8 @@
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-7.api.json"
     ],
     "current_registry_names": 60,
-    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship."
+    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship.",
+    "selected_text_rights_reason": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. "
   },
   {
     "id": "b100_fr_70222",
@@ -3867,7 +3918,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party API current revision; actual returned version and timestamp retained.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "source_page_notices_to_record": [
       {
         "line_1_based": 13,
@@ -4063,7 +4114,9 @@
       "Attribute the fixed article and complete linked contributor history.",
       "Retain applicable original author/import notices separately from Wiki contributions.",
       "Retain CC BY-SA 4.0 legal text/link and modification notices for adapted fields.",
-      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0."
+      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0.",
+      "Retain supplied copyright, licence and warranty-disclaimer notices.",
+      "Apply no additional restrictions or effective technological measures that obstruct the granted rights."
     ],
     "original_authors_and_rights": [
       {
@@ -4073,7 +4126,7 @@
         "publication": "1932–1935; final publication 1935",
         "work_type": "collective work",
         "original_rights": "public domain",
-        "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
@@ -4088,12 +4141,12 @@
           "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
           "captured_at": "2026-11-19T21:29:28.419199+00:00"
         },
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
     "contributor_capture_parts": [
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-1.api.json",
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-2.api.json",
@@ -4104,7 +4157,8 @@
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-7.api.json"
     ],
     "current_registry_names": 100,
-    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship."
+    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship.",
+    "selected_text_rights_reason": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. "
   },
   {
     "id": "b100_fr_386",
@@ -4120,7 +4174,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party API current revision; actual returned version and timestamp retained.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "source_page_notices_to_record": [
       {
         "line_1_based": 11,
@@ -4351,7 +4405,9 @@
       "Attribute the fixed article and complete linked contributor history.",
       "Retain applicable original author/import notices separately from Wiki contributions.",
       "Retain CC BY-SA 4.0 legal text/link and modification notices for adapted fields.",
-      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0."
+      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0.",
+      "Retain supplied copyright, licence and warranty-disclaimer notices.",
+      "Apply no additional restrictions or effective technological measures that obstruct the granted rights."
     ],
     "original_authors_and_rights": [
       {
@@ -4361,7 +4417,7 @@
         "publication": "1932–1935; final publication 1935",
         "work_type": "collective work",
         "original_rights": "public domain",
-        "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
@@ -4376,7 +4432,7 @@
           "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
           "captured_at": "2026-11-19T21:29:28.419199+00:00"
         },
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       },
       {
         "id": "original-littre-1872-1877",
@@ -4384,7 +4440,7 @@
         "title": "Dictionnaire de la langue française",
         "publication": "1872–1877",
         "original_rights": "public domain",
-        "author_rights_assessment": "Historical Littré edition is identified by the fixed import notice and the rights convention’s explicit public-domain Littré example; exact imported wording awaits independent assessment.",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "source_notice_evidence": {
           "title": "Modèle:Import:Littré",
           "revid": 30857967,
@@ -4405,12 +4461,12 @@
         },
         "wiki_layer": "Contributor transcription/adaptation under CC BY-SA 4.0, separately from original public-domain prose.",
         "lexique_layer": "Scoped adaptations and new explanatory translations, Lexique contributors, CC BY-SA 4.0.",
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
     "contributor_capture_parts": [
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-1.api.json",
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-2.api.json",
@@ -4421,7 +4477,8 @@
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-7.api.json"
     ],
     "current_registry_names": 103,
-    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship."
+    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship.",
+    "selected_text_rights_reason": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. Historical Littré 1872–1877 is separately public-domain; modern dictionary references convey no prose licence. "
   },
   {
     "id": "b100_fr_137371",
@@ -4437,7 +4494,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party API current revision; actual returned version and timestamp retained.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "source_page_notices_to_record": [
       {
         "line_1_based": 10,
@@ -4584,7 +4641,9 @@
       "Attribute the fixed article and complete linked contributor history.",
       "Retain applicable original author/import notices separately from Wiki contributions.",
       "Retain CC BY-SA 4.0 legal text/link and modification notices for adapted fields.",
-      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0."
+      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0.",
+      "Retain supplied copyright, licence and warranty-disclaimer notices.",
+      "Apply no additional restrictions or effective technological measures that obstruct the granted rights."
     ],
     "original_authors_and_rights": [
       {
@@ -4594,7 +4653,7 @@
         "publication": "1932–1935; final publication 1935",
         "work_type": "collective work",
         "original_rights": "public domain",
-        "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
@@ -4609,12 +4668,12 @@
           "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
           "captured_at": "2026-11-19T21:29:28.419199+00:00"
         },
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
     "contributor_capture_parts": [
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-1.api.json",
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-2.api.json",
@@ -4625,7 +4684,8 @@
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-7.api.json"
     ],
     "current_registry_names": 71,
-    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship."
+    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship.",
+    "selected_text_rights_reason": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. "
   },
   {
     "id": "b100_fr_5265",
@@ -4641,7 +4701,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party API current revision; actual returned version and timestamp retained.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "source_page_notices_to_record": [
       {
         "line_1_based": 15,
@@ -4774,7 +4834,9 @@
       "Attribute the fixed article and complete linked contributor history.",
       "Retain applicable original author/import notices separately from Wiki contributions.",
       "Retain CC BY-SA 4.0 legal text/link and modification notices for adapted fields.",
-      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0."
+      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0.",
+      "Retain supplied copyright, licence and warranty-disclaimer notices.",
+      "Apply no additional restrictions or effective technological measures that obstruct the granted rights."
     ],
     "original_authors_and_rights": [
       {
@@ -4784,7 +4846,7 @@
         "publication": "1932–1935; final publication 1935",
         "work_type": "collective work",
         "original_rights": "public domain",
-        "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
@@ -4799,7 +4861,7 @@
           "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
           "captured_at": "2026-11-19T21:29:28.419199+00:00"
         },
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       },
       {
         "id": "original-littre-1872-1877",
@@ -4807,7 +4869,7 @@
         "title": "Dictionnaire de la langue française",
         "publication": "1872–1877",
         "original_rights": "public domain",
-        "author_rights_assessment": "Historical Littré edition is identified by the fixed import notice and the rights convention’s explicit public-domain Littré example; exact imported wording awaits independent assessment.",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "source_notice_evidence": {
           "title": "Modèle:Import:Littré",
           "revid": 30857967,
@@ -4828,12 +4890,12 @@
         },
         "wiki_layer": "Contributor transcription/adaptation under CC BY-SA 4.0, separately from original public-domain prose.",
         "lexique_layer": "Scoped adaptations and new explanatory translations, Lexique contributors, CC BY-SA 4.0.",
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
     "contributor_capture_parts": [
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-1.api.json",
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-2.api.json",
@@ -4844,7 +4906,8 @@
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-7.api.json"
     ],
     "current_registry_names": 123,
-    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship."
+    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship.",
+    "selected_text_rights_reason": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. Historical Littré 1872–1877 is separately public-domain; modern dictionary references convey no prose licence. "
   },
   {
     "id": "b100_fr_167887",
@@ -4860,7 +4923,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party API current revision; actual returned version and timestamp retained.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "source_page_notices_to_record": [
       {
         "line_1_based": 4,
@@ -4993,7 +5056,9 @@
       "Attribute the fixed article and complete linked contributor history.",
       "Retain applicable original author/import notices separately from Wiki contributions.",
       "Retain CC BY-SA 4.0 legal text/link and modification notices for adapted fields.",
-      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0."
+      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0.",
+      "Retain supplied copyright, licence and warranty-disclaimer notices.",
+      "Apply no additional restrictions or effective technological measures that obstruct the granted rights."
     ],
     "original_authors_and_rights": [
       {
@@ -5003,7 +5068,7 @@
         "publication": "1932–1935; final publication 1935",
         "work_type": "collective work",
         "original_rights": "public domain",
-        "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
@@ -5018,7 +5083,7 @@
           "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
           "captured_at": "2026-11-19T21:29:28.419199+00:00"
         },
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       },
       {
         "id": "original-littre-1872-1877",
@@ -5026,7 +5091,7 @@
         "title": "Dictionnaire de la langue française",
         "publication": "1872–1877",
         "original_rights": "public domain",
-        "author_rights_assessment": "Historical Littré edition is identified by the fixed import notice and the rights convention’s explicit public-domain Littré example; exact imported wording awaits independent assessment.",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "source_notice_evidence": {
           "title": "Modèle:Import:Littré",
           "revid": 30857967,
@@ -5047,12 +5112,12 @@
         },
         "wiki_layer": "Contributor transcription/adaptation under CC BY-SA 4.0, separately from original public-domain prose.",
         "lexique_layer": "Scoped adaptations and new explanatory translations, Lexique contributors, CC BY-SA 4.0.",
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
     "contributor_capture_parts": [
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-1.api.json",
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-2.api.json",
@@ -5063,7 +5128,8 @@
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-7.api.json"
     ],
     "current_registry_names": 74,
-    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship."
+    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship.",
+    "selected_text_rights_reason": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. Historical Littré 1872–1877 is separately public-domain; modern dictionary references convey no prose licence. "
   },
   {
     "id": "b100_fr_72",
@@ -5079,7 +5145,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party API current revision; actual returned version and timestamp retained.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "source_page_notices_to_record": [
       {
         "line_1_based": 3,
@@ -5191,7 +5257,9 @@
       "Attribute the fixed article and complete linked contributor history.",
       "Retain applicable original author/import notices separately from Wiki contributions.",
       "Retain CC BY-SA 4.0 legal text/link and modification notices for adapted fields.",
-      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0."
+      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0.",
+      "Retain supplied copyright, licence and warranty-disclaimer notices.",
+      "Apply no additional restrictions or effective technological measures that obstruct the granted rights."
     ],
     "original_authors_and_rights": [
       {
@@ -5200,7 +5268,7 @@
         "title": "Dictionnaire de la langue française",
         "publication": "1872–1877",
         "original_rights": "public domain",
-        "author_rights_assessment": "Historical Littré edition is identified by the fixed import notice and the rights convention’s explicit public-domain Littré example; exact imported wording awaits independent assessment.",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "source_notice_evidence": {
           "title": "Modèle:Import:Littré",
           "revid": 30857967,
@@ -5221,12 +5289,12 @@
         },
         "wiki_layer": "Contributor transcription/adaptation under CC BY-SA 4.0, separately from original public-domain prose.",
         "lexique_layer": "Scoped adaptations and new explanatory translations, Lexique contributors, CC BY-SA 4.0.",
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
     "contributor_capture_parts": [
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-1.api.json",
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-2.api.json",
@@ -5237,7 +5305,8 @@
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-7.api.json"
     ],
     "current_registry_names": 118,
-    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship."
+    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship.",
+    "selected_text_rights_reason": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. Historical Littré 1872–1877 is separately public-domain; modern dictionary references convey no prose licence. "
   },
   {
     "id": "b100_fr_169866",
@@ -5253,7 +5322,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party API current revision; actual returned version and timestamp retained.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "source_page_notices_to_record": [
       {
         "line_1_based": 10,
@@ -5323,7 +5392,9 @@
       "Attribute the fixed article and complete linked contributor history.",
       "Retain applicable original author/import notices separately from Wiki contributions.",
       "Retain CC BY-SA 4.0 legal text/link and modification notices for adapted fields.",
-      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0."
+      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0.",
+      "Retain supplied copyright, licence and warranty-disclaimer notices.",
+      "Apply no additional restrictions or effective technological measures that obstruct the granted rights."
     ],
     "original_authors_and_rights": [
       {
@@ -5333,7 +5404,7 @@
         "publication": "1932–1935; final publication 1935",
         "work_type": "collective work",
         "original_rights": "public domain",
-        "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
@@ -5348,12 +5419,12 @@
           "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
           "captured_at": "2026-11-19T21:29:28.419199+00:00"
         },
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
     "contributor_capture_parts": [
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-1.api.json",
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-2.api.json",
@@ -5364,7 +5435,8 @@
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-7.api.json"
     ],
     "current_registry_names": 54,
-    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship."
+    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship.",
+    "selected_text_rights_reason": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. "
   },
   {
     "id": "b100_fr_9617",
@@ -5380,7 +5452,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party API current revision; actual returned version and timestamp retained.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "source_page_notices_to_record": [
       {
         "line_1_based": 17,
@@ -5485,7 +5557,9 @@
       "Attribute the fixed article and complete linked contributor history.",
       "Retain applicable original author/import notices separately from Wiki contributions.",
       "Retain CC BY-SA 4.0 legal text/link and modification notices for adapted fields.",
-      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0."
+      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0.",
+      "Retain supplied copyright, licence and warranty-disclaimer notices.",
+      "Apply no additional restrictions or effective technological measures that obstruct the granted rights."
     ],
     "original_authors_and_rights": [
       {
@@ -5495,7 +5569,7 @@
         "publication": "1932–1935; final publication 1935",
         "work_type": "collective work",
         "original_rights": "public domain",
-        "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
@@ -5510,12 +5584,12 @@
           "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
           "captured_at": "2026-11-19T21:29:28.419199+00:00"
         },
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
     "contributor_capture_parts": [
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-1.api.json",
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-2.api.json",
@@ -5526,7 +5600,8 @@
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-7.api.json"
     ],
     "current_registry_names": 55,
-    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship."
+    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship.",
+    "selected_text_rights_reason": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. "
   },
   {
     "id": "b100_fr_7891",
@@ -5542,7 +5617,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party API current revision; actual returned version and timestamp retained.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "source_page_notices_to_record": [
       {
         "line_1_based": 11,
@@ -5703,7 +5778,9 @@
       "Attribute the fixed article and complete linked contributor history.",
       "Retain applicable original author/import notices separately from Wiki contributions.",
       "Retain CC BY-SA 4.0 legal text/link and modification notices for adapted fields.",
-      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0."
+      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0.",
+      "Retain supplied copyright, licence and warranty-disclaimer notices.",
+      "Apply no additional restrictions or effective technological measures that obstruct the granted rights."
     ],
     "original_authors_and_rights": [
       {
@@ -5713,7 +5790,7 @@
         "publication": "1932–1935; final publication 1935",
         "work_type": "collective work",
         "original_rights": "public domain",
-        "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
@@ -5728,12 +5805,12 @@
           "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
           "captured_at": "2026-11-19T21:29:28.419199+00:00"
         },
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
     "contributor_capture_parts": [
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-1.api.json",
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-2.api.json",
@@ -5744,7 +5821,8 @@
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-7.api.json"
     ],
     "current_registry_names": 90,
-    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship."
+    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship.",
+    "selected_text_rights_reason": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. "
   },
   {
     "id": "b100_fr_10947",
@@ -5760,7 +5838,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party API current revision; actual returned version and timestamp retained.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "source_page_notices_to_record": [
       {
         "line_1_based": 12,
@@ -5942,7 +6020,9 @@
       "Attribute the fixed article and complete linked contributor history.",
       "Retain applicable original author/import notices separately from Wiki contributions.",
       "Retain CC BY-SA 4.0 legal text/link and modification notices for adapted fields.",
-      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0."
+      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0.",
+      "Retain supplied copyright, licence and warranty-disclaimer notices.",
+      "Apply no additional restrictions or effective technological measures that obstruct the granted rights."
     ],
     "original_authors_and_rights": [
       {
@@ -5952,7 +6032,7 @@
         "publication": "1932–1935; final publication 1935",
         "work_type": "collective work",
         "original_rights": "public domain",
-        "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
@@ -5967,12 +6047,12 @@
           "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
           "captured_at": "2026-11-19T21:29:28.419199+00:00"
         },
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
     "contributor_capture_parts": [
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-1.api.json",
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-2.api.json",
@@ -5983,7 +6063,8 @@
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-7.api.json"
     ],
     "current_registry_names": 137,
-    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship."
+    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship.",
+    "selected_text_rights_reason": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. "
   },
   {
     "id": "b100_fr_11722",
@@ -5999,7 +6080,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party API current revision; actual returned version and timestamp retained.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "source_page_notices_to_record": [
       {
         "line_1_based": 14,
@@ -6321,7 +6402,9 @@
       "Attribute the fixed article and complete linked contributor history.",
       "Retain applicable original author/import notices separately from Wiki contributions.",
       "Retain CC BY-SA 4.0 legal text/link and modification notices for adapted fields.",
-      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0."
+      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0.",
+      "Retain supplied copyright, licence and warranty-disclaimer notices.",
+      "Apply no additional restrictions or effective technological measures that obstruct the granted rights."
     ],
     "original_authors_and_rights": [
       {
@@ -6331,7 +6414,7 @@
         "publication": "1932–1935; final publication 1935",
         "work_type": "collective work",
         "original_rights": "public domain",
-        "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
@@ -6346,12 +6429,12 @@
           "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
           "captured_at": "2026-11-19T21:29:28.419199+00:00"
         },
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
     "contributor_capture_parts": [
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-1.api.json",
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-2.api.json",
@@ -6362,7 +6445,8 @@
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-7.api.json"
     ],
     "current_registry_names": 106,
-    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship."
+    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship.",
+    "selected_text_rights_reason": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. CFC cartographic definition at line 156 is unselected; the selected page-character row is at line 61. "
   },
   {
     "id": "b100_fr_37751",
@@ -6378,7 +6462,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party API current revision; actual returned version and timestamp retained.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "source_page_notices_to_record": [
       {
         "line_1_based": 10,
@@ -6483,7 +6567,9 @@
       "Attribute the fixed article and complete linked contributor history.",
       "Retain applicable original author/import notices separately from Wiki contributions.",
       "Retain CC BY-SA 4.0 legal text/link and modification notices for adapted fields.",
-      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0."
+      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0.",
+      "Retain supplied copyright, licence and warranty-disclaimer notices.",
+      "Apply no additional restrictions or effective technological measures that obstruct the granted rights."
     ],
     "original_authors_and_rights": [
       {
@@ -6493,7 +6579,7 @@
         "publication": "1932–1935; final publication 1935",
         "work_type": "collective work",
         "original_rights": "public domain",
-        "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
@@ -6508,7 +6594,7 @@
           "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
           "captured_at": "2026-11-19T21:29:28.419199+00:00"
         },
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       },
       {
         "id": "original-littre-1872-1877",
@@ -6516,7 +6602,7 @@
         "title": "Dictionnaire de la langue française",
         "publication": "1872–1877",
         "original_rights": "public domain",
-        "author_rights_assessment": "Historical Littré edition is identified by the fixed import notice and the rights convention’s explicit public-domain Littré example; exact imported wording awaits independent assessment.",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "source_notice_evidence": {
           "title": "Modèle:Import:Littré",
           "revid": 30857967,
@@ -6537,12 +6623,12 @@
         },
         "wiki_layer": "Contributor transcription/adaptation under CC BY-SA 4.0, separately from original public-domain prose.",
         "lexique_layer": "Scoped adaptations and new explanatory translations, Lexique contributors, CC BY-SA 4.0.",
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
     "contributor_capture_parts": [
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-1.api.json",
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-2.api.json",
@@ -6553,7 +6639,8 @@
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-7.api.json"
     ],
     "current_registry_names": 52,
-    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship."
+    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship.",
+    "selected_text_rights_reason": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. Historical Littré 1872–1877 is separately public-domain; modern dictionary references convey no prose licence. "
   },
   {
     "id": "b100_fr_160442",
@@ -6569,7 +6656,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party API current revision; actual returned version and timestamp retained.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "source_page_notices_to_record": [
       {
         "line_1_based": 14,
@@ -6618,7 +6705,9 @@
       "Attribute the fixed article and complete linked contributor history.",
       "Retain applicable original author/import notices separately from Wiki contributions.",
       "Retain CC BY-SA 4.0 legal text/link and modification notices for adapted fields.",
-      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0."
+      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0.",
+      "Retain supplied copyright, licence and warranty-disclaimer notices.",
+      "Apply no additional restrictions or effective technological measures that obstruct the granted rights."
     ],
     "original_authors_and_rights": [
       {
@@ -6628,7 +6717,7 @@
         "publication": "1932–1935; final publication 1935",
         "work_type": "collective work",
         "original_rights": "public domain",
-        "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
@@ -6643,12 +6732,12 @@
           "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
           "captured_at": "2026-11-19T21:29:28.419199+00:00"
         },
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
     "contributor_capture_parts": [
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-1.api.json",
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-2.api.json",
@@ -6659,7 +6748,8 @@
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-7.api.json"
     ],
     "current_registry_names": 62,
-    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship."
+    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship.",
+    "selected_text_rights_reason": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. "
   },
   {
     "id": "b100_fr_23887",
@@ -6675,7 +6765,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party API current revision; actual returned version and timestamp retained.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "source_page_notices_to_record": [
       {
         "line_1_based": 17,
@@ -6717,7 +6807,9 @@
       "Attribute the fixed article and complete linked contributor history.",
       "Retain applicable original author/import notices separately from Wiki contributions.",
       "Retain CC BY-SA 4.0 legal text/link and modification notices for adapted fields.",
-      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0."
+      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0.",
+      "Retain supplied copyright, licence and warranty-disclaimer notices.",
+      "Apply no additional restrictions or effective technological measures that obstruct the granted rights."
     ],
     "original_authors_and_rights": [
       {
@@ -6727,7 +6819,7 @@
         "publication": "1932–1935; final publication 1935",
         "work_type": "collective work",
         "original_rights": "public domain",
-        "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
@@ -6742,12 +6834,12 @@
           "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
           "captured_at": "2026-11-19T21:29:28.419199+00:00"
         },
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
     "contributor_capture_parts": [
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-1.api.json",
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-2.api.json",
@@ -6758,7 +6850,8 @@
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-7.api.json"
     ],
     "current_registry_names": 54,
-    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship."
+    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship.",
+    "selected_text_rights_reason": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. "
   },
   {
     "id": "b100_fr_5268",
@@ -6774,7 +6867,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party API current revision; actual returned version and timestamp retained.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "source_page_notices_to_record": [
       {
         "line_1_based": 22,
@@ -7215,7 +7308,9 @@
       "Attribute the fixed article and complete linked contributor history.",
       "Retain applicable original author/import notices separately from Wiki contributions.",
       "Retain CC BY-SA 4.0 legal text/link and modification notices for adapted fields.",
-      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0."
+      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0.",
+      "Retain supplied copyright, licence and warranty-disclaimer notices.",
+      "Apply no additional restrictions or effective technological measures that obstruct the granted rights."
     ],
     "original_authors_and_rights": [
       {
@@ -7225,7 +7320,7 @@
         "publication": "1932–1935; final publication 1935",
         "work_type": "collective work",
         "original_rights": "public domain",
-        "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
@@ -7240,12 +7335,12 @@
           "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
           "captured_at": "2026-11-19T21:29:28.419199+00:00"
         },
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
     "contributor_capture_parts": [
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-1.api.json",
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-2.api.json",
@@ -7256,7 +7351,8 @@
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-7.api.json"
     ],
     "current_registry_names": 121,
-    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship."
+    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship.",
+    "selected_text_rights_reason": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. "
   },
   {
     "id": "b100_fr_159430",
@@ -7272,7 +7368,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party API current revision; actual returned version and timestamp retained.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "source_page_notices_to_record": [
       {
         "line_1_based": 14,
@@ -7405,7 +7501,9 @@
       "Attribute the fixed article and complete linked contributor history.",
       "Retain applicable original author/import notices separately from Wiki contributions.",
       "Retain CC BY-SA 4.0 legal text/link and modification notices for adapted fields.",
-      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0."
+      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0.",
+      "Retain supplied copyright, licence and warranty-disclaimer notices.",
+      "Apply no additional restrictions or effective technological measures that obstruct the granted rights."
     ],
     "original_authors_and_rights": [
       {
@@ -7415,7 +7513,7 @@
         "publication": "1932–1935; final publication 1935",
         "work_type": "collective work",
         "original_rights": "public domain",
-        "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
@@ -7430,12 +7528,12 @@
           "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
           "captured_at": "2026-11-19T21:29:28.419199+00:00"
         },
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
     "contributor_capture_parts": [
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-1.api.json",
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-2.api.json",
@@ -7446,7 +7544,8 @@
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-7.api.json"
     ],
     "current_registry_names": 82,
-    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship."
+    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship.",
+    "selected_text_rights_reason": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. "
   },
   {
     "id": "b100_fr_173044",
@@ -7462,7 +7561,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party API current revision; actual returned version and timestamp retained.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "source_page_notices_to_record": [
       {
         "line_1_based": 10,
@@ -7518,7 +7617,9 @@
       "Attribute the fixed article and complete linked contributor history.",
       "Retain applicable original author/import notices separately from Wiki contributions.",
       "Retain CC BY-SA 4.0 legal text/link and modification notices for adapted fields.",
-      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0."
+      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0.",
+      "Retain supplied copyright, licence and warranty-disclaimer notices.",
+      "Apply no additional restrictions or effective technological measures that obstruct the granted rights."
     ],
     "original_authors_and_rights": [
       {
@@ -7528,7 +7629,7 @@
         "publication": "1932–1935; final publication 1935",
         "work_type": "collective work",
         "original_rights": "public domain",
-        "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
@@ -7543,12 +7644,12 @@
           "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
           "captured_at": "2026-11-19T21:29:28.419199+00:00"
         },
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
     "contributor_capture_parts": [
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-1.api.json",
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-2.api.json",
@@ -7559,7 +7660,8 @@
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-7.api.json"
     ],
     "current_registry_names": 41,
-    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship."
+    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship.",
+    "selected_text_rights_reason": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. "
   },
   {
     "id": "b100_fr_9019",
@@ -7575,7 +7677,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party API current revision; actual returned version and timestamp retained.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "source_page_notices_to_record": [
       {
         "line_1_based": 5,
@@ -7806,7 +7908,9 @@
       "Attribute the fixed article and complete linked contributor history.",
       "Retain applicable original author/import notices separately from Wiki contributions.",
       "Retain CC BY-SA 4.0 legal text/link and modification notices for adapted fields.",
-      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0."
+      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0.",
+      "Retain supplied copyright, licence and warranty-disclaimer notices.",
+      "Apply no additional restrictions or effective technological measures that obstruct the granted rights."
     ],
     "original_authors_and_rights": [
       {
@@ -7816,7 +7920,7 @@
         "publication": "1932–1935; final publication 1935",
         "work_type": "collective work",
         "original_rights": "public domain",
-        "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
@@ -7831,12 +7935,12 @@
           "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
           "captured_at": "2026-11-19T21:29:28.419199+00:00"
         },
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
     "contributor_capture_parts": [
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-1.api.json",
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-2.api.json",
@@ -7847,7 +7951,8 @@
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-7.api.json"
     ],
     "current_registry_names": 105,
-    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship."
+    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship.",
+    "selected_text_rights_reason": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. TLFi/Usito references follow the alternate IPA in line 11; selected /bwat/ is factual transcription and no proprietary dictionary prose is copied. "
   },
   {
     "id": "b100_fr_175841",
@@ -7863,7 +7968,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party API current revision; actual returned version and timestamp retained.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "source_page_notices_to_record": [
       {
         "line_1_based": 11,
@@ -7975,7 +8080,9 @@
       "Attribute the fixed article and complete linked contributor history.",
       "Retain applicable original author/import notices separately from Wiki contributions.",
       "Retain CC BY-SA 4.0 legal text/link and modification notices for adapted fields.",
-      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0."
+      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0.",
+      "Retain supplied copyright, licence and warranty-disclaimer notices.",
+      "Apply no additional restrictions or effective technological measures that obstruct the granted rights."
     ],
     "original_authors_and_rights": [
       {
@@ -7985,7 +8092,7 @@
         "publication": "1932–1935; final publication 1935",
         "work_type": "collective work",
         "original_rights": "public domain",
-        "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
@@ -8000,12 +8107,12 @@
           "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
           "captured_at": "2026-11-19T21:29:28.419199+00:00"
         },
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
     "contributor_capture_parts": [
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-1.api.json",
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-2.api.json",
@@ -8016,7 +8123,8 @@
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-7.api.json"
     ],
     "current_registry_names": 94,
-    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship."
+    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship.",
+    "selected_text_rights_reason": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. "
   },
   {
     "id": "b100_fr_184761",
@@ -8032,7 +8140,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party API current revision; actual returned version and timestamp retained.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "source_page_notices_to_record": [
       {
         "line_1_based": 10,
@@ -8172,12 +8280,14 @@
       "Attribute the fixed article and complete linked contributor history.",
       "Retain applicable original author/import notices separately from Wiki contributions.",
       "Retain CC BY-SA 4.0 legal text/link and modification notices for adapted fields.",
-      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0."
+      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0.",
+      "Retain supplied copyright, licence and warranty-disclaimer notices.",
+      "Apply no additional restrictions or effective technological measures that obstruct the granted rights."
     ],
     "original_authors_and_rights": [],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
     "contributor_capture_parts": [
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-1.api.json",
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-2.api.json",
@@ -8188,7 +8298,8 @@
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-7.api.json"
     ],
     "current_registry_names": 68,
-    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship."
+    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship.",
+    "selected_text_rights_reason": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. "
   },
   {
     "id": "b100_fr_167116",
@@ -8204,7 +8315,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party API current revision; actual returned version and timestamp retained.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "source_page_notices_to_record": [
       {
         "line_1_based": 10,
@@ -8281,7 +8392,9 @@
       "Attribute the fixed article and complete linked contributor history.",
       "Retain applicable original author/import notices separately from Wiki contributions.",
       "Retain CC BY-SA 4.0 legal text/link and modification notices for adapted fields.",
-      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0."
+      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0.",
+      "Retain supplied copyright, licence and warranty-disclaimer notices.",
+      "Apply no additional restrictions or effective technological measures that obstruct the granted rights."
     ],
     "original_authors_and_rights": [
       {
@@ -8291,7 +8404,7 @@
         "publication": "1932–1935; final publication 1935",
         "work_type": "collective work",
         "original_rights": "public domain",
-        "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
@@ -8306,12 +8419,12 @@
           "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
           "captured_at": "2026-11-19T21:29:28.419199+00:00"
         },
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
     "contributor_capture_parts": [
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-1.api.json",
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-2.api.json",
@@ -8322,7 +8435,8 @@
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-7.api.json"
     ],
     "current_registry_names": 59,
-    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship."
+    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship.",
+    "selected_text_rights_reason": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. "
   },
   {
     "id": "b100_fr_530742",
@@ -8338,7 +8452,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party API current revision; actual returned version and timestamp retained.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "source_page_notices_to_record": [
       {
         "line_1_based": 10,
@@ -8422,7 +8536,9 @@
       "Attribute the fixed article and complete linked contributor history.",
       "Retain applicable original author/import notices separately from Wiki contributions.",
       "Retain CC BY-SA 4.0 legal text/link and modification notices for adapted fields.",
-      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0."
+      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0.",
+      "Retain supplied copyright, licence and warranty-disclaimer notices.",
+      "Apply no additional restrictions or effective technological measures that obstruct the granted rights."
     ],
     "original_authors_and_rights": [
       {
@@ -8432,7 +8548,7 @@
         "publication": "1932–1935; final publication 1935",
         "work_type": "collective work",
         "original_rights": "public domain",
-        "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
@@ -8447,12 +8563,12 @@
           "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
           "captured_at": "2026-11-19T21:29:28.419199+00:00"
         },
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
     "contributor_capture_parts": [
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-1.api.json",
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-2.api.json",
@@ -8463,7 +8579,8 @@
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-7.api.json"
     ],
     "current_registry_names": 66,
-    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship."
+    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship.",
+    "selected_text_rights_reason": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. "
   },
   {
     "id": "b100_fr_122429",
@@ -8479,7 +8596,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party API current revision; actual returned version and timestamp retained.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "source_page_notices_to_record": [
       {
         "line_1_based": 15,
@@ -8661,7 +8778,9 @@
       "Attribute the fixed article and complete linked contributor history.",
       "Retain applicable original author/import notices separately from Wiki contributions.",
       "Retain CC BY-SA 4.0 legal text/link and modification notices for adapted fields.",
-      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0."
+      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0.",
+      "Retain supplied copyright, licence and warranty-disclaimer notices.",
+      "Apply no additional restrictions or effective technological measures that obstruct the granted rights."
     ],
     "original_authors_and_rights": [
       {
@@ -8671,7 +8790,7 @@
         "publication": "1932–1935; final publication 1935",
         "work_type": "collective work",
         "original_rights": "public domain",
-        "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
@@ -8686,12 +8805,12 @@
           "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
           "captured_at": "2026-11-19T21:29:28.419199+00:00"
         },
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
     "contributor_capture_parts": [
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-1.api.json",
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-2.api.json",
@@ -8702,7 +8821,8 @@
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-7.api.json"
     ],
     "current_registry_names": 101,
-    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship."
+    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship.",
+    "selected_text_rights_reason": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. "
   },
   {
     "id": "b100_fr_12736",
@@ -8718,7 +8838,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party API current revision; actual returned version and timestamp retained.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "source_page_notices_to_record": [
       {
         "line_1_based": 23,
@@ -8921,7 +9041,9 @@
       "Attribute the fixed article and complete linked contributor history.",
       "Retain applicable original author/import notices separately from Wiki contributions.",
       "Retain CC BY-SA 4.0 legal text/link and modification notices for adapted fields.",
-      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0."
+      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0.",
+      "Retain supplied copyright, licence and warranty-disclaimer notices.",
+      "Apply no additional restrictions or effective technological measures that obstruct the granted rights."
     ],
     "original_authors_and_rights": [
       {
@@ -8931,7 +9053,7 @@
         "publication": "1932–1935; final publication 1935",
         "work_type": "collective work",
         "original_rights": "public domain",
-        "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
@@ -8946,12 +9068,12 @@
           "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
           "captured_at": "2026-11-19T21:29:28.419199+00:00"
         },
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
     "contributor_capture_parts": [
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-1.api.json",
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-2.api.json",
@@ -8962,7 +9084,8 @@
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-7.api.json"
     ],
     "current_registry_names": 81,
-    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship."
+    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship.",
+    "selected_text_rights_reason": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. "
   },
   {
     "id": "b100_fr_119001",
@@ -8978,7 +9101,7 @@
     "content_license": "CC-BY-SA-4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
     "source_frame": "First-party API current revision; actual returned version and timestamp retained.",
-    "selected_text_review": "pending_independent_selected_span_review",
+    "selected_text_review": "passed_for_selected_spans",
     "source_page_notices_to_record": [
       {
         "line_1_based": 12,
@@ -9104,7 +9227,9 @@
       "Attribute the fixed article and complete linked contributor history.",
       "Retain applicable original author/import notices separately from Wiki contributions.",
       "Retain CC BY-SA 4.0 legal text/link and modification notices for adapted fields.",
-      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0."
+      "Redistribute adapted Wiki and Lexique fields under CC BY-SA 4.0.",
+      "Retain supplied copyright, licence and warranty-disclaimer notices.",
+      "Apply no additional restrictions or effective technological measures that obstruct the granted rights."
     ],
     "original_authors_and_rights": [
       {
@@ -9114,7 +9239,7 @@
         "publication": "1932–1935; final publication 1935",
         "work_type": "collective work",
         "original_rights": "public domain",
-        "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+        "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
         "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
         "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
         "conservative_expiry": "2006-01-01",
@@ -9129,12 +9254,12 @@
           "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
           "captured_at": "2026-11-19T21:29:28.419199+00:00"
         },
-        "independent_review": "pending"
+        "independent_review": "passed_at_original_edition_boundary"
       }
     ],
-    "independent_review": "pending",
-    "independence": false,
-    "reviewer": null,
+    "independent_review": "passed",
+    "independence": true,
+    "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
     "contributor_capture_parts": [
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-1.api.json",
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-2.api.json",
@@ -9145,6 +9270,7 @@
       "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\contributors-7.api.json"
     ],
     "current_registry_names": 67,
-    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship."
+    "attribution_boundary": "Complete linked article history and fully paginated current registry; the latter is broader than a fixed revision and does not identify selected-sentence authorship.",
+    "selected_text_rights_reason": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. "
   }
 ]
