@@ -104,8 +104,8 @@ The bare `qu` noun has letter-name IPA `/ky/`. Supporting revision 21403352 is
 an actual redirect from `qu'` to distinct `qu’`. Supporting `que` revision
 40046884 has conjunction and interrogative/relative frames, but no relation
 establishes the literal frozen `qu` spelling in those subclasses. The negative
-source/spelling findings are retained separately; no substitution, automatic
-alias or annotation exception is made. All four rows retain four missing fields
+source/spelling findings are retained separately; no substitution or runtime
+alias is made. All four rows retain four missing fields
 in the fixed 4,087-group denominator.
 
 ## Owner-approved zero-field annotations

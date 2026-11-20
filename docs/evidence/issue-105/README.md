@@ -1,6 +1,6 @@
 # Issue #105 selected-content evidence
 
-**46 groups / 184 fields independently accepted; four exact groups / 16 fields unresolved.** All frozen rows 1201–1250 and frequency strings remain present. The denominator remains 4,087. [Independent review](independent-review.md) gives content/rights decisions and limitations; [admission](admission.json) records passed scope acceptance with four owner-approved zero-field annotations.
+**Scope acceptance passes: 46 complete groups / 184 accepted fields plus four owner-approved zero-field annotations.** The 16 annotation fields remain missing. All frozen rows 1201–1250 and frequency strings remain present. The denominator remains 4,087. [Independent review](independent-review.md) gives content/rights decisions and limitations; [admission](admission.json) records the scope decision.
 
 The seven-file handoff comprises [groups](groups.json), [sources](sources.json), [field review](field-review.json), [source context](source-context.json), [source excerpts](source-excerpts.json), [reuse](reuse.json) and admission. [Review candidates](review-candidates.json) preserves the original 50-group draft. Accepted strings are unchanged. [Captures](source-captures.json) identifies fixed first-party originals and independent verification; [rights](rights.json) records selected-span obligations.
 
