@@ -45,6 +45,7 @@ pub fn preview_markdown_bytes(
                 status,
                 rows: vec![1],
                 error: None,
+                enrichment: None,
             });
         }
         Err(error) => preview.error = Some(format!("{}: {error}", preview.source.filename)),

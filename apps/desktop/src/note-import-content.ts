@@ -1,5 +1,7 @@
+import { dictionaryImportMessages } from './note-import-dictionary';
+
 export const noteImportMessages = {
-  zh: { open: '导入 CSV', select: '选择 CSV 文件', title: 'CSV 导入预览', columns: '支持多个词头和有序例句。规范列：headword,notes,example_fr,example_zh；其他列可手动映射。',
+  zh: { dictionary: dictionaryImportMessages.zh, open: '导入 CSV', select: '选择 CSV 文件', title: 'CSV 导入预览', columns: '支持多个词头和有序例句。规范列：headword,notes,example_fr,example_zh；其他列可手动映射。',
     markdown: { open: '导入 Markdown', title: 'Markdown 导入预览', help: 'Markdown 模板与示例', example: '导出 Markdown 示例', exported: '示例已导出。', cancelled: '已取消，未导出文件。', busy: '正在处理 Markdown…', error: 'Markdown 导入失败',
       rules: '只接受 Lexique note v1 模板。headword 必需；notes 和 examples 省略时保留，空章节清空。例句从 1 连续编号，fr 和 zh 可只提供一侧。text 围栏内为纯文本；围栏须长于内容中的反引号序列。字段与结束围栏之间额外添加一个换行，格式与开始围栏后的换行一致。' },
     confirm: '确认导入', cancel: '取消导入', cancelled: '已取消，未保存任何记录。', busy: '正在处理 CSV…',
@@ -7,7 +9,7 @@ export const noteImportMessages = {
     delimiter: '分隔符', comma: '逗号', semicolon: '分号', remap: '重新预览', unmapped: '未提供', update: '更新', skip: '跳过', decide: '请选择', decision: '导入决定', exclude: '排除无效组', replacement: '例句将整组替换；未提供的语言侧为空。', preserved: '未提供的字段保留已有内容。', selected: '选定记录', createdCount: '新建', updatedCount: '更新', skippedCount: '跳过', addBatch: '将导入记录加入双卡复习',
     imported: '导入已保存。可打开记录，主动加入识义卡和听音卡。', skipped: '内容相同，已有记录保持不变。', rows: '文件行', incoming: '文件内容', current: '已有内容',
     source: '导入来源', missing: '尚未关联词典，暂无词汇摘要。', external: '外部笔记', error: 'CSV 导入失败', openRecord: '打开记录', association: '例句尚未关联词典义项；可以保存后继续整理。' },
-  en: { open: 'Import CSV', select: 'Choose CSV file', title: 'CSV import preview', columns: 'Multiple headwords with ordered examples. Canonical columns: headword,notes,example_fr,example_zh; map other columns manually.',
+  en: { dictionary: dictionaryImportMessages.en, open: 'Import CSV', select: 'Choose CSV file', title: 'CSV import preview', columns: 'Multiple headwords with ordered examples. Canonical columns: headword,notes,example_fr,example_zh; map other columns manually.',
     markdown: { open: 'Import Markdown', title: 'Markdown import preview', help: 'Markdown template and example', example: 'Export Markdown example', exported: 'Example exported.', cancelled: 'Cancelled; no file exported.', busy: 'Processing Markdown…', error: 'Markdown import failed',
       rules: 'Use the Lexique note v1 template. headword is required; omitted notes and examples retain saved content, empty sections clear it. Number examples consecutively from 1; fr or zh may be omitted. text fences contain plain text and must be longer than any backtick run inside. Add one separator newline before the closing fence, using the same newline as the opening fence.' },
     confirm: 'Confirm import', cancel: 'Cancel import', cancelled: 'Cancelled. No records saved.', busy: 'Processing CSV…',
@@ -15,7 +17,7 @@ export const noteImportMessages = {
     delimiter: 'Delimiter', comma: 'Comma', semicolon: 'Semicolon', remap: 'Preview again', unmapped: 'Not provided', update: 'Update', skip: 'Skip', decide: 'Choose', decision: 'Import decision', exclude: 'Exclude invalid group', replacement: 'Examples replace the entire list; a missing language side is empty.', preserved: 'Omitted fields retain saved content.', selected: 'Selected records', createdCount: 'Created', updatedCount: 'Updated', skippedCount: 'Skipped', addBatch: 'Add imported records to both review cards',
     imported: 'Import saved. Open the record to add recognition and listening cards explicitly.', skipped: 'Identical content. Existing record unchanged.', rows: 'File rows', incoming: 'File content', current: 'Saved content',
     source: 'Import source', missing: 'No dictionary link or vocabulary summary yet.', external: 'External note', error: 'CSV import failed', openRecord: 'Open record', association: 'Examples have no dictionary meaning assigned; you can save and organize them later.' },
-  fr: { open: 'Importer un CSV', select: 'Choisir le fichier CSV', title: 'Aperçu de l’import CSV', columns: 'Plusieurs mots et exemples ordonnés. Colonnes : headword,notes,example_fr,example_zh ; les autres colonnes sont associées manuellement.',
+  fr: { dictionary: dictionaryImportMessages.fr, open: 'Importer un CSV', select: 'Choisir le fichier CSV', title: 'Aperçu de l’import CSV', columns: 'Plusieurs mots et exemples ordonnés. Colonnes : headword,notes,example_fr,example_zh ; les autres colonnes sont associées manuellement.',
     markdown: { open: 'Importer un Markdown', title: 'Aperçu de l’import Markdown', help: 'Modèle Markdown et exemple', example: 'Exporter l’exemple Markdown', exported: 'Exemple exporté.', cancelled: 'Annulé ; aucun fichier exporté.', busy: 'Traitement du Markdown…', error: 'Échec de l’import Markdown',
       rules: 'Utilisez le modèle Lexique note v1. headword est obligatoire ; omettre notes ou examples conserve le contenu, une section vide l’efface. Numérotez les exemples à partir de 1 ; fr ou zh peut être omis. Les blocs text conservent le texte brut ; la clôture doit dépasser toute suite de backticks du contenu. Ajoutez un saut de ligne séparateur avant la clôture, identique à celui de l’ouverture.' },
     confirm: 'Confirmer l’import', cancel: 'Annuler l’import', cancelled: 'Import annulé. Aucun enregistrement sauvegardé.', busy: 'Traitement du CSV…',

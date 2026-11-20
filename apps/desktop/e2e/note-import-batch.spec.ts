@@ -25,7 +25,7 @@ test('batch CSV mapping and explicit update and invalid exclusion submit one sel
   await expect(page.getByRole('region', { name: '导入 CSV', exact: true }).getByRole('status')).toContainText('新建 1 · 更新 1 · 跳过 1');
   const calls = await page.evaluate(() => window.testNative.calls.filter((call) => call.command.startsWith('note_import_')));
   expect(calls.find((call) => call.command === 'note_import_remap')?.args?.options).toEqual({ delimiter: 'semicolon', mapping });
-  expect(calls.find((call) => call.command === 'note_import_commit')?.args?.selections).toEqual([{ index: 0, action: 'create' }, { index: 1, action: 'update' }, { index: 2, action: 'skip' }]);
+  expect(calls.find((call) => call.command === 'note_import_commit')?.args?.selections).toEqual([{ index: 0, action: 'create', allow_unlinked: false }, { index: 1, action: 'update', allow_unlinked: false }, { index: 2, action: 'skip', allow_unlinked: false }]);
 });
 
 test('stale CSV preview remains visible and remapping requires fresh decisions before retry', async ({ page }) => {

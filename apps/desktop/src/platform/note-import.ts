@@ -1,5 +1,6 @@
 import { invoke, isTauri } from '@tauri-apps/api/core';
 import { z } from 'zod';
+import { noteEnrichmentSchema } from './note-enrichment';
 import { importSourceSchema, recordSchema } from './vocabulary';
 
 const operationSchema = z.string().min(1).max(110).regex(/^[a-zA-Z0-9-]+$/);
@@ -14,6 +15,7 @@ export const noteImportGroupSchema = z.object({
   }).strict().readonly(),
   rows: z.array(z.number().int().nonnegative().safe()).readonly(),
   existing: recordSchema.nullable(), status: z.enum(['create', 'identical', 'different', 'invalid']), error: z.string().nullable(),
+  enrichment: noteEnrichmentSchema.nullable().optional(),
 }).strict().readonly();
 export type NoteImportGroup = z.infer<typeof noteImportGroupSchema>;
 export const noteImportPreviewSchema = z.object({
@@ -21,7 +23,8 @@ export const noteImportPreviewSchema = z.object({
   mapping: noteImportMappingSchema, groups: z.array(noteImportGroupSchema).readonly(), error: z.string().nullable(),
 }).strict().readonly();
 export type NoteImportPreview = z.infer<typeof noteImportPreviewSchema>;
-const selectionSchema = z.object({ index: z.number().int().nonnegative().safe(), action: z.enum(['create', 'update', 'skip']) }).strict().readonly();
+const selectionSchema = z.object({ index: z.number().int().nonnegative().safe(), action: z.enum(['create', 'update', 'skip']),
+  allow_unlinked: z.boolean().default(false) }).strict().readonly();
 export type NoteImportSelection = z.infer<typeof selectionSchema>;
 const resultSchema = z.object({ created: z.number().int().nonnegative().safe(), updated: z.number().int().nonnegative().safe(),
   skipped: z.number().int().nonnegative().safe(), records: z.array(recordSchema).readonly() }).strict().readonly();

@@ -26,6 +26,7 @@ use conjugation::{conjugation_block_order, conjugation_lookup, conjugation_prefe
 use dictionaries::{
     dictionary_import, dictionary_lookup, dictionary_relink, dictionary_remove, dictionary_settings,
 };
+mod note_enrichment;
 mod note_export;
 mod note_import;
 mod note_import_csv;

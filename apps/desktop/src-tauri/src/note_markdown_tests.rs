@@ -145,6 +145,7 @@ fn real_markdown_preview_commits_reopens_skips_and_clears_only_supplied_fields()
         &[NoteImportSelection {
             index: 0,
             action: NoteImportAction::Create,
+            allow_unlinked: false,
         }],
     )
     .unwrap()
@@ -174,6 +175,7 @@ fn real_markdown_preview_commits_reopens_skips_and_clears_only_supplied_fields()
         &[NoteImportSelection {
             index: 0,
             action: NoteImportAction::Skip,
+            allow_unlinked: false,
         }],
     )
     .unwrap();
@@ -192,6 +194,7 @@ fn real_markdown_preview_commits_reopens_skips_and_clears_only_supplied_fields()
         &[NoteImportSelection {
             index: 0,
             action: NoteImportAction::Update,
+            allow_unlinked: false,
         }],
     )
     .unwrap()

@@ -25,6 +25,7 @@ fn commit_creates(
         .enumerate()
         .map(|(index, group)| NoteImportSelection {
             index,
+            allow_unlinked: false,
             action: if group.status == "identical" {
                 NoteImportAction::Skip
             } else {

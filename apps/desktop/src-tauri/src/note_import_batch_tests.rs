@@ -668,6 +668,7 @@ fn decide(preview: &NoteImportPreview) -> Vec<NoteImportSelection> {
         .enumerate()
         .map(|(index, group)| NoteImportSelection {
             index,
+            allow_unlinked: false,
             action: match group.status {
                 "create" => NoteImportAction::Create,
                 "different" => NoteImportAction::Update,
