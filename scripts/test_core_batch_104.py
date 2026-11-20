@@ -1,4 +1,4 @@
-"""Check the issue #104 candidate handoff at the approved resource boundary."""
+"""Check original candidates and exact independently accepted content for #104."""
 
 import csv
 import json
@@ -20,30 +20,15 @@ class Batch104Tests(unittest.TestCase):
             scope = list(csv.DictReader(handle))
         candidates = read("review-candidates.json")
         self.assertEqual(candidates["scope_denominator_groups"], 4087)
-        admission = read("admission.json")
-        pending = admission["status"] == "pending_independent_review"
-        self.assertEqual(admission["status"], "pending_independent_review" if pending else "passed")
-        self.assertEqual(candidates["status"], "pending_independent_review" if pending else "independently_accepted")
+        self.assertEqual(candidates["status"], "pending_independent_review")
         groups = candidates["groups"]
-        self.assertEqual(groups, read("groups.json"))
         self.assertEqual([g["frozen_row"] for g in groups], list(range(1151, 1201)))
         sources = {s["id"]: s for s in read("sources.json")}
         captures = {s["source_id"]: s for s in read("source-captures.json")["sources"]}
         excerpts = {(e["sense_id"], e["field"]): e
                     for e in read("source-excerpts.json")["fields"]}
         contexts = {c["id"]: c for c in read("source-context.json")["current_content"]}
-        review = read("field-review.json")
-        self.assertEqual(review["independence"], not pending)
-        if pending:
-            self.assertIsNone(review["reviewer"])
-        else:
-            self.assertTrue(review["reviewer"])
-            self.assertTrue(admission["independence"])
-            self.assertTrue(admission["reviewer"])
-        reviews = {(f["sense_id"], f["field"]): f for f in review["fields"]}
         self.assertEqual(len(excerpts), 200)
-        self.assertEqual(len(reviews), 200)
-        self.assertEqual(len(review["unresolved_fields"]), 200 if pending else 0)
         for group in groups:
             row = scope[group["frozen_row"] - 1]
             with self.subTest(row=group["frozen_row"]):
@@ -53,8 +38,8 @@ class Batch104Tests(unittest.TestCase):
                     self.assertEqual(group[frequency], row[frequency])
                 self.assertEqual(len(group["senses"]), 1)
                 sense = group["senses"][0]
-                self.assertEqual(sense["independent_review"], "pending" if pending else "passed_after_exact_accepted_replacements")
-                self.assertEqual(sense["resource_admission"], "pending" if pending else "passed_independent_selected_content_and_rights_only")
+                self.assertEqual(sense["independent_review"], "pending")
+                self.assertEqual(sense["resource_admission"], "pending")
                 self.assertTrue(sense["use"])
                 source = sources[sense["fields"]["ipa"]["source_id"]]
                 context = contexts[source["id"]]
@@ -71,7 +56,7 @@ class Batch104Tests(unittest.TestCase):
                 for name, field in sense["fields"].items():
                     self.assertTrue(field["text"].strip())
                     self.assertTrue(field["modification"])
-                    self.assertEqual(field["independent_review"], "pending" if pending else "passed")
+                    self.assertEqual(field["independent_review"], "pending")
                     source = sources[field["source_id"]]
                     self.assertTrue(source["attribution"])
                     self.assertTrue(source["original_authors_and_rights"])
@@ -83,14 +68,10 @@ class Batch104Tests(unittest.TestCase):
                     page = next(p for p in api["query"]["pages"] if p["title"] == source["title"])
                     revision = next(r for r in page["revisions"] if r["revid"] == source["revid"])
                     self.assertEqual(raw, revision["slots"]["main"]["content"])
+                    self.assertEqual(revision["timestamp"], capture["timestamp"])
+                    self.assertEqual(page["pageid"], capture["pageid"])
                     binding = excerpts[sense["sense_id"], name]
-                    field_review = reviews[sense["sense_id"], name]
-                    self.assertEqual(field_review["proposed_text" if pending else "accepted_text"], field["text"])
-                    self.assertEqual(field_review["accepted_text_quality_status"], "pending" if pending else "passed")
-                    self.assertEqual(field_review["exact_source"]["revid"], source["revid"])
                     self.assertEqual(binding["revid"], source["revid"])
-                    self.assertEqual(field_review["exact_source"]["reviewed_excerpt"],
-                                     field["source_span"]["raw_source_excerpt"])
                     self.assertEqual(field["source_span"], binding["source_span"])
                     self.assertEqual(field["source_id"], binding["source_id"])
                     for span in [field["source_span"], *sense["supporting_evidence"]]:
@@ -98,8 +79,42 @@ class Batch104Tests(unittest.TestCase):
                         column = span["column_1_based"] - 1
                         self.assertEqual(line[column:column + len(span["raw_source_excerpt"])],
                                          span["raw_source_excerpt"])
-        self.assertEqual(admission["accepted_groups"], 0 if pending else 50)
-        self.assertEqual(admission["accepted_fields"], 0 if pending else 200)
+
+    def test_reviewed_content_matches_preserved_candidates(self):
+        groups = read("groups.json")
+        candidates = read("review-candidates.json")["groups"]
+        review = read("field-review.json")
+        admission = read("admission.json")
+        self.assertTrue(review["independence"])
+        self.assertTrue(review["reviewer"])
+        self.assertEqual([group["frozen_row"] for group in groups], list(range(1151, 1201)))
+        fields = {(record["sense_id"], record["field"]): record for record in review["fields"]}
+        usage = {record["sense_id"]: record for record in review["usage"]}
+        for group, candidate in zip(groups, candidates, strict=True):
+            for key in ("frozen_row", "headword", "lexique_cgram", "subtitle_lemma_per_million",
+                        "subtitle_pos_per_million"):
+                self.assertEqual(group[key], candidate[key])
+            self.assertEqual(len(group["senses"]), 1)
+            sense, original = group["senses"][0], candidate["senses"][0]
+            for key in ("sense_id", "use", "use_language", "source_headword", "excluded_uses", "cefr"):
+                self.assertEqual(sense[key], original[key])
+            self.assertEqual(sense["independent_review"], "passed_after_exact_accepted_replacements")
+            self.assertEqual(usage[sense["sense_id"]]["accepted_usage"], sense["use"])
+            for name, field in sense["fields"].items():
+                for key in ("text", "language", "source_id", "source_span", "content_license", "modification"):
+                    self.assertEqual(field[key], original["fields"][name][key])
+                record = fields[sense["sense_id"], name]
+                self.assertEqual(record["accepted_text"], field["text"])
+                self.assertEqual(record["accepted_text_quality_status"], "passed")
+                self.assertEqual(record["rights_eligibility_status"], "passed_at_selected_text_boundary")
+                self.assertEqual(record["exact_source"]["reviewed_excerpt"], field["source_span"]["raw_source_excerpt"])
+        self.assertEqual(len(fields), 200)
+        self.assertEqual(len(usage), 50)
+        self.assertEqual((admission["accepted_groups"], admission["accepted_fields"],
+                          admission["missing_admitted_fields"]), (50, 200, 0))
+        self.assertEqual(review["unresolved_fields"], [])
+        self.assertEqual(admission["approved_annotation_exceptions"], [])
+        self.assertEqual(admission["runtime_aliases_added"], [])
 
 
 if __name__ == "__main__":

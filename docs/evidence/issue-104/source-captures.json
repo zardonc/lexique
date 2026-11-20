@@ -615,5 +615,18 @@
     "selected_sentence_authorship_proved": false
   },
   "preparation_script": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-104\\target\\issue-104\\prepare_candidates.py",
-  "selection_file": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-104\\target\\issue-104\\selection.py"
+  "selection_file": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-104\\target\\issue-104\\selection.py",
+  "independent_review": {
+    "reviewed_author_commit": "147f9493b07c604c897fb553e85bb1a584b4ec30",
+    "reviewer": "independent-content-rights-reviewer-103-104",
+    "original_comparison_manifest": "target/issue-104/reviewer-originals/captures.json",
+    "original_endpoint_summary": {
+      "requested": 42,
+      "entries": 33,
+      "no_entry": 9
+    },
+    "rights_policy_raw_path": "C:/Users/inthe/IdeaProjects/lexique-batch-104/target/issue-104/reviewer-primary/copyright-policy.wiki",
+    "CFC_template_raw_path": "C:/Users/inthe/IdeaProjects/lexique-batch-104/target/issue-104/reviewer-primary/import-cfc.wiki",
+    "validation": "Original API/wikitext equality, revision/title/timestamp, all 200 exact selected bindings and complete same-use/spelling/POS independently checked. No all-revision remote refetch claimed."
+  }
 }
