@@ -2,10 +2,12 @@ import type { Locale } from './content';
 import { coreMessages } from './core-sense';
 import { notesMessages } from './notes-content';
 import { noteImportMessages } from './note-import-content';
+import { noteExportMessages } from './note-export-content';
 
 export const notebookMessages = {
   zh: {
     interchange: noteImportMessages.zh,
+    exportText: noteExportMessages.zh,
     notesText: notesMessages.zh,
     core: coreMessages.zh,
     excerpt: '摘录例句', excerptFr: '摘录法语', excerptZh: '摘录中文', transferExcerpt: '加入草稿', cancelExcerpt: '取消摘录', duplicateExcerpt: '例句已存在，已定位原例句。', capacityExcerpt: '更多例句已达 100 组，摘录内容已保留。', unknownSource: '出处未知', reopenExample: '查看例句原文',
@@ -45,6 +47,7 @@ export const notebookMessages = {
   },
   en: {
     interchange: noteImportMessages.en,
+    exportText: noteExportMessages.en,
     notesText: notesMessages.en,
     core: coreMessages.en,
     excerpt: 'Excerpt example', excerptFr: 'Excerpt French', excerptZh: 'Excerpt Chinese', transferExcerpt: 'Add to draft', cancelExcerpt: 'Cancel excerpt', duplicateExcerpt: 'Example already exists; focused the original.', capacityExcerpt: 'The 100 extra examples limit is reached. Your excerpt is retained.', unknownSource: 'Unknown source', reopenExample: 'View example original',
@@ -84,6 +87,7 @@ export const notebookMessages = {
   },
   fr: {
     interchange: noteImportMessages.fr,
+    exportText: noteExportMessages.fr,
     notesText: notesMessages.fr,
     core: coreMessages.fr,
     excerpt: 'Extraire un exemple', excerptFr: 'Extrait français', excerptZh: 'Extrait chinois', transferExcerpt: 'Ajouter au brouillon', cancelExcerpt: 'Annuler l’extrait', duplicateExcerpt: 'Cet exemple existe déjà ; l’original est sélectionné.', capacityExcerpt: 'La limite de 100 exemples supplémentaires est atteinte. L’extrait est conservé.', unknownSource: 'Source inconnue', reopenExample: 'Voir l’original de l’exemple',

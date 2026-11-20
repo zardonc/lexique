@@ -161,6 +161,8 @@ fn main() {
             "conjugation_block_order",
             "vocabulary_find",
             "vocabulary_list",
+            "note_export_snapshot",
+            "note_export_csv",
             "grammar_list",
             "grammar_get",
             "grammar_save",

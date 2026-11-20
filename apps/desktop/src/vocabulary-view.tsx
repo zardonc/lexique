@@ -14,6 +14,7 @@ import { SpeechButton } from './speech-button';
 import { CoreSenseContent, digestLabel } from './core-sense';
 import { CategoryPicker } from './learning-categories';
 import type { LearningCategories } from './learning-categories';
+import { SavedNoteExport } from './note-export';
 
 export function VocabularySummary({ snapshot, text, frequency }: { readonly snapshot: VocabularySnapshot; readonly text: NotebookText; readonly frequency?: ReactNode }) {
   return <section className="vocabulary-summary" aria-label={text.summary}>
@@ -135,6 +136,7 @@ export function VocabularyEditor({ notebook, text, viewExisting, runtime, onRevi
     {notebook.error && <p role="alert">{text.saveError}: {notebook.error}</p>}
     {notebook.audioError && <p role="alert">{text.listeningPending}: {notebook.audioError}</p>}
     <SaveActions notebook={notebook} text={text} overLimit={overLimit} />
+    <SavedNoteExport runtime={runtime} text={text.exportText} record={notebook.editor.record} disabled={notebook.busy} />
     {notebook.editor.record && <ReviewCards key={`${notebook.editor.record.id}-${notebook.version}`} record={notebook.editor.record} runtime={runtime} text={text} onChanged={onReviewChanged} />}
     {notebook.existing && <p role="status">{text.existing} <button onClick={viewExisting}>{text.view}</button></p>}
     <Conflict notebook={notebook} text={text} runtime={runtime} /><SavedSource snapshot={snapshot} text={text} />

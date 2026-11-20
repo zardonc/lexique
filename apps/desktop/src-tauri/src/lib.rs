@@ -26,6 +26,7 @@ use conjugation::{conjugation_block_order, conjugation_lookup, conjugation_prefe
 use dictionaries::{
     dictionary_import, dictionary_lookup, dictionary_relink, dictionary_remove, dictionary_settings,
 };
+mod note_export;
 mod note_import;
 mod notes;
 mod speech_cache;
@@ -106,6 +107,7 @@ pub fn run() {
         .manage(maintenance::MaintenanceCoordinator::default())
         .manage(note_import::NoteImportState::default())
         .manage(backup_operations::BackupOperations::default())
+        .manage(note_export::NoteExports::default())
         .manage(restore_operations::RestoreOperations::default())
         .manage(dictionaries::Registry::default())
         .manage(selection::SelectionState::default())
@@ -187,6 +189,8 @@ pub fn run() {
             conjugation_block_order,
             vocabulary_find,
             vocabulary_list,
+            note_export::note_export_snapshot,
+            note_export::note_export_csv,
             notes::grammar_list,
             notes::grammar_get,
             notes::grammar_save,

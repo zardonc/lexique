@@ -22,6 +22,7 @@ import type { BackupStatus, BackupPreviewStatus, RawPendingRequest, RestoreStatu
 import { restoreRuntime } from './restore';
 import { matchesReviewRecord, notesRuntime, reviewRecordSchema } from './notes';
 import { noteImportRuntime } from './note-import';
+import { noteExportRuntime } from './note-export';
 
 async function dictionaryUpload(file: File) {
   if (!/\.mdx$/i.test(file.name) || !file.size || file.size > 128 * 1024 * 1024) throw { code: 'limit', message: 'MDX: non-empty, at most 128 MiB' };
@@ -135,7 +136,7 @@ const batchSchema = z.object({ operation: z.string().min(1).max(128), cancelled:
 export type BatchRequest = z.infer<typeof batchRequestSchema>;
 export type BatchStatus = z.infer<typeof batchSchema>;
 
-export interface RuntimeAdapter extends Readonly<typeof notesRuntime>, Readonly<typeof noteImportRuntime> {
+export interface RuntimeAdapter extends Readonly<typeof notesRuntime>, Readonly<typeof noteImportRuntime>, Readonly<typeof noteExportRuntime> {
   readonly startRestore: (operation: string, pendingRequests?: readonly RawPendingRequest[]) => Promise<RestoreStatus>;
   readonly restoreStatus: (operation: string) => Promise<RestoreStatus>;
   readonly onRestoreProgress: (callback: (status: RestoreStatus) => void, failed: (cause: unknown) => void) => Promise<() => void>;
@@ -214,6 +215,7 @@ export const runtime: RuntimeAdapter = {
   ...noteImportRuntime,
   ...restoreRuntime,
   ...notesRuntime,
+  ...noteExportRuntime,
   backupAvailable: isTauri,
   async startBackup() {
     if (!isTauri()) throw new Error('Backups are available in the desktop app only');

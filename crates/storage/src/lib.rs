@@ -7,6 +7,8 @@ mod vocabulary;
 pub use vocabulary::*;
 mod note_interchange;
 pub use note_interchange::*;
+mod note_export;
+pub use note_export::*;
 mod grammar;
 pub use grammar::*;
 mod categories;

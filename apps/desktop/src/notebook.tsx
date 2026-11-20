@@ -10,6 +10,7 @@ import { matchesCategory } from './platform/notes';
 import type { CategoryFilter, ReviewRecord } from './platform/notes';
 import { CategoryBulkControls, CategoryManager } from './learning-categories';
 import type { LearningCategories, NotebookMutation } from './learning-categories';
+import { NotebookExport } from './note-export';
 
 type NoteKind = 'vocabulary' | 'grammar';
 function useNotesList(runtime: RuntimeAdapter, version: number, kind: NoteKind) {
@@ -183,6 +184,8 @@ export function NotebookPanel({ runtime, version, text, onOpen, batch, categorie
     <NotesActions kind={kind} runtime={runtime} text={text} onSaved={list.retry} onOpen={onOpen} onPrepare={onScopeChange} onCreateGrammar={onCreateGrammar} />
     <CategoryManager state={categories} runtime={runtime} onMutation={onMutation} text={text.notesText} />
     <NotebookFilters list={list} kind={kind} categories={categories} filter={filter} onFilter={(value) => { reset(); setFilter(value); }} reset={reset} text={text} />
+    <NotebookExport runtime={runtime} text={text.exportText} kind={kind} sort={list.sort} query={list.query}
+      category={filter} disabled={list.busy} loaded={!!list.records} />
     <ReadingState list={{ ...list, records: filtered }} text={text} kind={kind} />
     {!!words.length && <FrequencyState state={frequencies} text={text.frequency} />}
     <PageControls page={currentPage} count={filtered?.length ?? 0} capacity={capacity} text={text}
