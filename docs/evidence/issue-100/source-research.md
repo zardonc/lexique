@@ -1,10 +1,9 @@
 # Issue #100 selected-source evidence
 
-All 50 exact word/POS pairs at frozen rows 951–1000 have one author-selected
-candidate sense and 200 nonempty fields. The [groups](groups.json) retain exact
+All 50 exact word/POS pairs at frozen rows 951–1000 have one independently accepted
+sense and 200 nonempty fields. The [groups](groups.json) retain exact
 frequency strings, distinct POS identities, construction/register restrictions
-and `cefr: null`. Source binding passed; all independent field and rights
-decisions remain pending in [field review](field-review.json) and
+and `cefr: null`. Source binding and independent field/rights review passed in [field review](field-review.json) and
 [admission](admission.json).
 
 ## Fixed sources
@@ -48,8 +47,8 @@ unselected quotation bodies. In particular:
   l’Académie française, eighth edition (1932–1935)**. The edition-level
   public-domain assessment uses the final 1935 publication and the collective
   work term in [CPI L123-3](https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20),
-  giving conservative expiry on 2006-01-01. The exact selected wording and Wiki
-  modifications still need independent comparison. This statutory pointer was
+  giving conservative expiry on 2006-01-01. Historical wording and Wiki modifications remain separately identified;
+  see the independent selected-content review. This statutory pointer was
   retained from the existing accepted rights record; no live statute refresh
   is claimed.
 - `étranger` explicitly has **Import:Littré** as well as DAF8. Fixed import and
@@ -115,7 +114,7 @@ selects the attested standalone interjection **dommage !**, expressing regret,
 under the exact frozen ONO identity. The interjection section has no IPA
 template; its same-spelling French pronunciation comes from the explicit noun
 frame, with that boundary recorded. The source does not call this an imitation
-of a sound. The separate reviewer must assess the interjection-to-Lexique-ONO
+of a sound. The independent reviewer must assess the interjection-to-Lexique-ONO
 mapping and applicable pronunciation; no annotation exemption is inferred.
 
 `merveilleux/NOM` selects the general masculine singular abstract **le merveilleux**,
@@ -154,6 +153,7 @@ The original HTML, API bytes and wikitext are retained separately from transform
 edition text and selected excerpts.
 
 The focused [resource check](../../../scripts/test_core_batch_100.py) passed
-membership/frequencies, all 200 exact source locations and pending review
-consistency. Author semantic checks support these drafts; they do not supply
-an independent reviewer, native evidence or final redistribution acceptance.
+membership/frequencies, all 200 exact source locations and accepted-text
+preservation against the original candidates. The separate
+[independent review](independent-review.md) records selected-content and rights
+acceptance. Native execution and final assembled redistribution remain parent gates.

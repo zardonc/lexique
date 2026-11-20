@@ -233,7 +233,7 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "selected_text_rights_status": "pending_independent_selected_span_and_import_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_wikitext_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\connerie.wiki",
       "api_response_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\revisions-1.api.json",
       "current_content_revid": 40045461,
@@ -254,8 +254,11 @@
       ],
       "current_registry_names": 54,
       "import_notices": [],
-      "source_boundary_assessment": "Selected lexical meaning/IPA and authored explanations only. Bibliography and references are retained as metadata; cited examples, protected dictionary prose, images and audio are not candidate field text.",
-      "status": "author_source_validation_only_independent_review_pending"
+      "source_boundary_assessment": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. ",
+      "status": "passed_for_selected_spans",
+      "independent_review": "passed",
+      "independence": true,
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger"
     },
     {
       "id": "b100_fr_10676",
@@ -588,7 +591,7 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "selected_text_rights_status": "pending_independent_selected_span_and_import_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_wikitext_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\reposer.wiki",
       "api_response_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\revisions-1.api.json",
       "current_content_revid": 39790798,
@@ -601,7 +604,7 @@
           "publication": "1932–1935; final publication 1935",
           "work_type": "collective work",
           "original_rights": "public domain",
-          "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
@@ -616,7 +619,7 @@
             "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
             "captured_at": "2026-11-19T21:29:28.419199+00:00"
           },
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         }
       ],
       "original_edition_snapshots": [
@@ -658,8 +661,11 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "source_boundary_assessment": "Selected lexical meaning/IPA and authored explanations only. Bibliography and references are retained as metadata; cited examples, protected dictionary prose, images and audio are not candidate field text.",
-      "status": "author_source_validation_only_independent_review_pending"
+      "source_boundary_assessment": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. ",
+      "status": "passed_for_selected_spans",
+      "independent_review": "passed",
+      "independence": true,
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger"
     },
     {
       "id": "b100_fr_158556",
@@ -1041,7 +1047,7 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "selected_text_rights_status": "pending_independent_selected_span_and_import_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_wikitext_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\échapper.wiki",
       "api_response_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\revisions-1.api.json",
       "current_content_revid": 39720050,
@@ -1054,7 +1060,7 @@
           "publication": "1932–1935; final publication 1935",
           "work_type": "collective work",
           "original_rights": "public domain",
-          "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
@@ -1069,7 +1075,7 @@
             "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
             "captured_at": "2026-11-19T21:29:28.419199+00:00"
           },
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         },
         {
           "id": "original-littre-1872-1877",
@@ -1077,7 +1083,7 @@
           "title": "Dictionnaire de la langue française",
           "publication": "1872–1877",
           "original_rights": "public domain",
-          "author_rights_assessment": "Historical Littré edition is identified by the fixed import notice and the rights convention’s explicit public-domain Littré example; exact imported wording awaits independent assessment.",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "source_notice_evidence": {
             "title": "Modèle:Import:Littré",
             "revid": 30857967,
@@ -1098,7 +1104,7 @@
           },
           "wiki_layer": "Contributor transcription/adaptation under CC BY-SA 4.0, separately from original public-domain prose.",
           "lexique_layer": "Scoped adaptations and new explanatory translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         }
       ],
       "original_edition_snapshots": [
@@ -1132,8 +1138,11 @@
       ],
       "current_registry_names": 61,
       "import_notices": [],
-      "source_boundary_assessment": "Selected lexical meaning/IPA and authored explanations only. Bibliography and references are retained as metadata; cited examples, protected dictionary prose, images and audio are not candidate field text.",
-      "status": "author_source_validation_only_independent_review_pending"
+      "source_boundary_assessment": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. Historical Littré 1872–1877 is separately public-domain; modern dictionary references convey no prose licence. ",
+      "status": "passed_for_selected_spans",
+      "independent_review": "passed",
+      "independence": true,
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger"
     },
     {
       "id": "b100_fr_175176",
@@ -1421,7 +1430,7 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "selected_text_rights_status": "pending_independent_selected_span_and_import_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_wikitext_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\riche.wiki",
       "api_response_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\revisions-1.api.json",
       "current_content_revid": 39774622,
@@ -1434,7 +1443,7 @@
           "publication": "1932–1935; final publication 1935",
           "work_type": "collective work",
           "original_rights": "public domain",
-          "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
@@ -1449,7 +1458,7 @@
             "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
             "captured_at": "2026-11-19T21:29:28.419199+00:00"
           },
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         }
       ],
       "original_edition_snapshots": [
@@ -1501,8 +1510,11 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "source_boundary_assessment": "Selected lexical meaning/IPA and authored explanations only. Bibliography and references are retained as metadata; cited examples, protected dictionary prose, images and audio are not candidate field text.",
-      "status": "author_source_validation_only_independent_review_pending"
+      "source_boundary_assessment": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. ",
+      "status": "passed_for_selected_spans",
+      "independent_review": "passed",
+      "independence": true,
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger"
     },
     {
       "id": "b100_fr_8031",
@@ -1786,7 +1798,7 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "selected_text_rights_status": "pending_independent_selected_span_and_import_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_wikitext_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\forme.wiki",
       "api_response_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\revisions-1.api.json",
       "current_content_revid": 39849016,
@@ -1807,8 +1819,11 @@
       ],
       "current_registry_names": 81,
       "import_notices": [],
-      "source_boundary_assessment": "Selected lexical meaning/IPA and authored explanations only. Bibliography and references are retained as metadata; cited examples, protected dictionary prose, images and audio are not candidate field text.",
-      "status": "author_source_validation_only_independent_review_pending"
+      "source_boundary_assessment": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. ",
+      "status": "passed_for_selected_spans",
+      "independent_review": "passed",
+      "independence": true,
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger"
     },
     {
       "id": "b100_fr_145123",
@@ -2113,7 +2128,7 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "selected_text_rights_status": "pending_independent_selected_span_and_import_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_wikitext_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\bruit.wiki",
       "api_response_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\revisions-1.api.json",
       "current_content_revid": 39877288,
@@ -2126,7 +2141,7 @@
           "publication": "1932–1935; final publication 1935",
           "work_type": "collective work",
           "original_rights": "public domain",
-          "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
@@ -2141,7 +2156,7 @@
             "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
             "captured_at": "2026-11-19T21:29:28.419199+00:00"
           },
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         }
       ],
       "original_edition_snapshots": [
@@ -2175,8 +2190,11 @@
       ],
       "current_registry_names": 86,
       "import_notices": [],
-      "source_boundary_assessment": "Selected lexical meaning/IPA and authored explanations only. Bibliography and references are retained as metadata; cited examples, protected dictionary prose, images and audio are not candidate field text.",
-      "status": "author_source_validation_only_independent_review_pending"
+      "source_boundary_assessment": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. ",
+      "status": "passed_for_selected_spans",
+      "independent_review": "passed",
+      "independence": true,
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger"
     },
     {
       "id": "b100_fr_152812",
@@ -2394,7 +2412,7 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "selected_text_rights_status": "pending_independent_selected_span_and_import_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_wikitext_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\chacun.wiki",
       "api_response_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\revisions-1.api.json",
       "current_content_revid": 39906704,
@@ -2407,7 +2425,7 @@
           "publication": "1932–1935; final publication 1935",
           "work_type": "collective work",
           "original_rights": "public domain",
-          "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
@@ -2422,7 +2440,7 @@
             "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
             "captured_at": "2026-11-19T21:29:28.419199+00:00"
           },
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         }
       ],
       "original_edition_snapshots": [
@@ -2474,8 +2492,11 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "source_boundary_assessment": "Selected lexical meaning/IPA and authored explanations only. Bibliography and references are retained as metadata; cited examples, protected dictionary prose, images and audio are not candidate field text.",
-      "status": "author_source_validation_only_independent_review_pending"
+      "source_boundary_assessment": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. ",
+      "status": "passed_for_selected_spans",
+      "independent_review": "passed",
+      "independence": true,
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger"
     },
     {
       "id": "b100_fr_5266",
@@ -2858,7 +2879,7 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "selected_text_rights_status": "pending_independent_selected_span_and_import_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_wikitext_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\fier.wiki",
       "api_response_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\revisions-1.api.json",
       "current_content_revid": 39715331,
@@ -2871,7 +2892,7 @@
           "publication": "1932–1935; final publication 1935",
           "work_type": "collective work",
           "original_rights": "public domain",
-          "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
@@ -2886,7 +2907,7 @@
             "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
             "captured_at": "2026-11-19T21:29:28.419199+00:00"
           },
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         }
       ],
       "original_edition_snapshots": [
@@ -2936,8 +2957,11 @@
       ],
       "current_registry_names": 85,
       "import_notices": [],
-      "source_boundary_assessment": "Selected lexical meaning/IPA and authored explanations only. Bibliography and references are retained as metadata; cited examples, protected dictionary prose, images and audio are not candidate field text.",
-      "status": "author_source_validation_only_independent_review_pending"
+      "source_boundary_assessment": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. ",
+      "status": "passed_for_selected_spans",
+      "independent_review": "passed",
+      "independence": true,
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger"
     },
     {
       "id": "b100_fr_530735",
@@ -3130,7 +3154,7 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "selected_text_rights_status": "pending_independent_selected_span_and_import_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_wikitext_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\exemple.wiki",
       "api_response_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\revisions-1.api.json",
       "current_content_revid": 39821753,
@@ -3143,7 +3167,7 @@
           "publication": "1932–1935; final publication 1935",
           "work_type": "collective work",
           "original_rights": "public domain",
-          "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
@@ -3158,7 +3182,7 @@
             "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
             "captured_at": "2026-11-19T21:29:28.419199+00:00"
           },
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         }
       ],
       "original_edition_snapshots": [
@@ -3200,8 +3224,11 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "source_boundary_assessment": "Selected lexical meaning/IPA and authored explanations only. Bibliography and references are retained as metadata; cited examples, protected dictionary prose, images and audio are not candidate field text.",
-      "status": "author_source_validation_only_independent_review_pending"
+      "source_boundary_assessment": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. ",
+      "status": "passed_for_selected_spans",
+      "independent_review": "passed",
+      "independence": true,
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger"
     },
     {
       "id": "b100_fr_153016",
@@ -3440,7 +3467,7 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "selected_text_rights_status": "pending_independent_selected_span_and_import_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_wikitext_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\charger.wiki",
       "api_response_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\revisions-1.api.json",
       "current_content_revid": 39827222,
@@ -3453,7 +3480,7 @@
           "publication": "1932–1935; final publication 1935",
           "work_type": "collective work",
           "original_rights": "public domain",
-          "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
@@ -3468,7 +3495,7 @@
             "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
             "captured_at": "2026-11-19T21:29:28.419199+00:00"
           },
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         },
         {
           "id": "original-littre-1872-1877",
@@ -3476,7 +3503,7 @@
           "title": "Dictionnaire de la langue française",
           "publication": "1872–1877",
           "original_rights": "public domain",
-          "author_rights_assessment": "Historical Littré edition is identified by the fixed import notice and the rights convention’s explicit public-domain Littré example; exact imported wording awaits independent assessment.",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "source_notice_evidence": {
             "title": "Modèle:Import:Littré",
             "revid": 30857967,
@@ -3497,7 +3524,7 @@
           },
           "wiki_layer": "Contributor transcription/adaptation under CC BY-SA 4.0, separately from original public-domain prose.",
           "lexique_layer": "Scoped adaptations and new explanatory translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         }
       ],
       "original_edition_snapshots": [
@@ -3531,8 +3558,11 @@
       ],
       "current_registry_names": 67,
       "import_notices": [],
-      "source_boundary_assessment": "Selected lexical meaning/IPA and authored explanations only. Bibliography and references are retained as metadata; cited examples, protected dictionary prose, images and audio are not candidate field text.",
-      "status": "author_source_validation_only_independent_review_pending"
+      "source_boundary_assessment": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. Historical Littré 1872–1877 is separately public-domain; modern dictionary references convey no prose licence. ",
+      "status": "passed_for_selected_spans",
+      "independent_review": "passed",
+      "independence": true,
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger"
     },
     {
       "id": "b100_fr_388",
@@ -3802,7 +3832,7 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "selected_text_rights_status": "pending_independent_selected_span_and_import_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_wikitext_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\chat.wiki",
       "api_response_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\revisions-2.api.json",
       "current_content_revid": 40029500,
@@ -3815,7 +3845,7 @@
           "publication": "1932–1935; final publication 1935",
           "work_type": "collective work",
           "original_rights": "public domain",
-          "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
@@ -3830,7 +3860,7 @@
             "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
             "captured_at": "2026-11-19T21:29:28.419199+00:00"
           },
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         }
       ],
       "original_edition_snapshots": [
@@ -3864,8 +3894,11 @@
       ],
       "current_registry_names": 209,
       "import_notices": [],
-      "source_boundary_assessment": "Selected lexical meaning/IPA and authored explanations only. Bibliography and references are retained as metadata; cited examples, protected dictionary prose, images and audio are not candidate field text.",
-      "status": "author_source_validation_only_independent_review_pending"
+      "source_boundary_assessment": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. ",
+      "status": "passed_for_selected_spans",
+      "independent_review": "passed",
+      "independence": true,
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger"
     },
     {
       "id": "b100_fr_122480",
@@ -4114,7 +4147,7 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "selected_text_rights_status": "pending_independent_selected_span_and_import_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_wikitext_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\supporter.wiki",
       "api_response_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\revisions-2.api.json",
       "current_content_revid": 39982668,
@@ -4127,7 +4160,7 @@
           "publication": "1932–1935; final publication 1935",
           "work_type": "collective work",
           "original_rights": "public domain",
-          "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
@@ -4142,7 +4175,7 @@
             "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
             "captured_at": "2026-11-19T21:29:28.419199+00:00"
           },
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         }
       ],
       "original_edition_snapshots": [
@@ -4184,8 +4217,11 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "source_boundary_assessment": "Selected lexical meaning/IPA and authored explanations only. Bibliography and references are retained as metadata; cited examples, protected dictionary prose, images and audio are not candidate field text.",
-      "status": "author_source_validation_only_independent_review_pending"
+      "source_boundary_assessment": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. ",
+      "status": "passed_for_selected_spans",
+      "independent_review": "passed",
+      "independence": true,
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger"
     },
     {
       "id": "b100_fr_111650",
@@ -4413,7 +4449,7 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "selected_text_rights_status": "pending_independent_selected_span_and_import_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_wikitext_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\rendez-vous.wiki",
       "api_response_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\revisions-2.api.json",
       "current_content_revid": 39877566,
@@ -4426,7 +4462,7 @@
           "publication": "1932–1935; final publication 1935",
           "work_type": "collective work",
           "original_rights": "public domain",
-          "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
@@ -4441,7 +4477,7 @@
             "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
             "captured_at": "2026-11-19T21:29:28.419199+00:00"
           },
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         }
       ],
       "original_edition_snapshots": [
@@ -4483,8 +4519,11 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "source_boundary_assessment": "Selected lexical meaning/IPA and authored explanations only. Bibliography and references are retained as metadata; cited examples, protected dictionary prose, images and audio are not candidate field text.",
-      "status": "author_source_validation_only_independent_review_pending"
+      "source_boundary_assessment": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. ",
+      "status": "passed_for_selected_spans",
+      "independent_review": "passed",
+      "independence": true,
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger"
     },
     {
       "id": "b100_fr_8342",
@@ -4684,7 +4723,7 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "selected_text_rights_status": "pending_independent_selected_span_and_import_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_wikitext_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\debout.wiki",
       "api_response_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\revisions-2.api.json",
       "current_content_revid": 39770946,
@@ -4697,7 +4736,7 @@
           "publication": "1932–1935; final publication 1935",
           "work_type": "collective work",
           "original_rights": "public domain",
-          "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
@@ -4712,7 +4751,7 @@
             "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
             "captured_at": "2026-11-19T21:29:28.419199+00:00"
           },
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         }
       ],
       "original_edition_snapshots": [
@@ -4756,8 +4795,11 @@
       ],
       "current_registry_names": 70,
       "import_notices": [],
-      "source_boundary_assessment": "Selected lexical meaning/IPA and authored explanations only. Bibliography and references are retained as metadata; cited examples, protected dictionary prose, images and audio are not candidate field text.",
-      "status": "author_source_validation_only_independent_review_pending"
+      "source_boundary_assessment": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. ",
+      "status": "passed_for_selected_spans",
+      "independent_review": "passed",
+      "independence": true,
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger"
     },
     {
       "id": "b100_fr_9468",
@@ -5206,7 +5248,7 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "selected_text_rights_status": "pending_independent_selected_span_and_import_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_wikitext_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\public.wiki",
       "api_response_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\revisions-2.api.json",
       "current_content_revid": 40028687,
@@ -5219,7 +5261,7 @@
           "publication": "1932–1935; final publication 1935",
           "work_type": "collective work",
           "original_rights": "public domain",
-          "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
@@ -5234,7 +5276,7 @@
             "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
             "captured_at": "2026-11-19T21:29:28.419199+00:00"
           },
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         }
       ],
       "original_edition_snapshots": [
@@ -5286,8 +5328,11 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "source_boundary_assessment": "Selected lexical meaning/IPA and authored explanations only. Bibliography and references are retained as metadata; cited examples, protected dictionary prose, images and audio are not candidate field text.",
-      "status": "author_source_validation_only_independent_review_pending"
+      "source_boundary_assessment": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. ",
+      "status": "passed_for_selected_spans",
+      "independent_review": "passed",
+      "independence": true,
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger"
     },
     {
       "id": "b100_fr_8370",
@@ -5501,7 +5546,7 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "selected_text_rights_status": "pending_independent_selected_span_and_import_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_wikitext_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\obliger.wiki",
       "api_response_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\revisions-2.api.json",
       "current_content_revid": 39772219,
@@ -5514,7 +5559,7 @@
           "publication": "1932–1935; final publication 1935",
           "work_type": "collective work",
           "original_rights": "public domain",
-          "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
@@ -5529,7 +5574,7 @@
             "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
             "captured_at": "2026-11-19T21:29:28.419199+00:00"
           },
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         }
       ],
       "original_edition_snapshots": [
@@ -5563,8 +5608,11 @@
       ],
       "current_registry_names": 55,
       "import_notices": [],
-      "source_boundary_assessment": "Selected lexical meaning/IPA and authored explanations only. Bibliography and references are retained as metadata; cited examples, protected dictionary prose, images and audio are not candidate field text.",
-      "status": "author_source_validation_only_independent_review_pending"
+      "source_boundary_assessment": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. ",
+      "status": "passed_for_selected_spans",
+      "independent_review": "passed",
+      "independence": true,
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger"
     },
     {
       "id": "b100_fr_158161",
@@ -5835,7 +5883,7 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "selected_text_rights_status": "pending_independent_selected_span_and_import_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_wikitext_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\dommage.wiki",
       "api_response_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\revisions-2.api.json",
       "current_content_revid": 39912382,
@@ -5848,7 +5896,7 @@
           "publication": "1932–1935; final publication 1935",
           "work_type": "collective work",
           "original_rights": "public domain",
-          "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
@@ -5863,7 +5911,7 @@
             "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
             "captured_at": "2026-11-19T21:29:28.419199+00:00"
           },
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         }
       ],
       "original_edition_snapshots": [
@@ -5905,8 +5953,11 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "source_boundary_assessment": "Selected lexical meaning/IPA and authored explanations only. Bibliography and references are retained as metadata; cited examples, protected dictionary prose, images and audio are not candidate field text.",
-      "status": "author_source_validation_only_independent_review_pending"
+      "source_boundary_assessment": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. ",
+      "status": "passed_for_selected_spans",
+      "independent_review": "passed",
+      "independence": true,
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger"
     },
     {
       "id": "b100_fr_70222",
@@ -6190,7 +6241,7 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "selected_text_rights_status": "pending_independent_selected_span_and_import_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_wikitext_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\trou.wiki",
       "api_response_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\revisions-2.api.json",
       "current_content_revid": 39772096,
@@ -6203,7 +6254,7 @@
           "publication": "1932–1935; final publication 1935",
           "work_type": "collective work",
           "original_rights": "public domain",
-          "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
@@ -6218,7 +6269,7 @@
             "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
             "captured_at": "2026-11-19T21:29:28.419199+00:00"
           },
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         }
       ],
       "original_edition_snapshots": [
@@ -6260,8 +6311,11 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "source_boundary_assessment": "Selected lexical meaning/IPA and authored explanations only. Bibliography and references are retained as metadata; cited examples, protected dictionary prose, images and audio are not candidate field text.",
-      "status": "author_source_validation_only_independent_review_pending"
+      "source_boundary_assessment": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. ",
+      "status": "passed_for_selected_spans",
+      "independent_review": "passed",
+      "independence": true,
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger"
     },
     {
       "id": "b100_fr_386",
@@ -6661,7 +6715,7 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "selected_text_rights_status": "pending_independent_selected_span_and_import_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_wikitext_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\étranger.wiki",
       "api_response_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\revisions-2.api.json",
       "current_content_revid": 40040213,
@@ -6674,7 +6728,7 @@
           "publication": "1932–1935; final publication 1935",
           "work_type": "collective work",
           "original_rights": "public domain",
-          "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
@@ -6689,7 +6743,7 @@
             "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
             "captured_at": "2026-11-19T21:29:28.419199+00:00"
           },
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         },
         {
           "id": "original-littre-1872-1877",
@@ -6697,7 +6751,7 @@
           "title": "Dictionnaire de la langue française",
           "publication": "1872–1877",
           "original_rights": "public domain",
-          "author_rights_assessment": "Historical Littré edition is identified by the fixed import notice and the rights convention’s explicit public-domain Littré example; exact imported wording awaits independent assessment.",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "source_notice_evidence": {
             "title": "Modèle:Import:Littré",
             "revid": 30857967,
@@ -6718,7 +6772,7 @@
           },
           "wiki_layer": "Contributor transcription/adaptation under CC BY-SA 4.0, separately from original public-domain prose.",
           "lexique_layer": "Scoped adaptations and new explanatory translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         }
       ],
       "original_edition_snapshots": [
@@ -6802,8 +6856,11 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "source_boundary_assessment": "Selected lexical meaning/IPA and authored explanations only. Bibliography and references are retained as metadata; cited examples, protected dictionary prose, images and audio are not candidate field text.",
-      "status": "author_source_validation_only_independent_review_pending"
+      "source_boundary_assessment": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. Historical Littré 1872–1877 is separately public-domain; modern dictionary references convey no prose licence. ",
+      "status": "passed_for_selected_spans",
+      "independent_review": "passed",
+      "independence": true,
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger"
     },
     {
       "id": "b100_fr_137371",
@@ -7038,7 +7095,7 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "selected_text_rights_status": "pending_independent_selected_span_and_import_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_wikitext_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\accompagner.wiki",
       "api_response_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\revisions-2.api.json",
       "current_content_revid": 39774447,
@@ -7051,7 +7108,7 @@
           "publication": "1932–1935; final publication 1935",
           "work_type": "collective work",
           "original_rights": "public domain",
-          "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
@@ -7066,7 +7123,7 @@
             "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
             "captured_at": "2026-11-19T21:29:28.419199+00:00"
           },
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         }
       ],
       "original_edition_snapshots": [
@@ -7108,8 +7165,11 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "source_boundary_assessment": "Selected lexical meaning/IPA and authored explanations only. Bibliography and references are retained as metadata; cited examples, protected dictionary prose, images and audio are not candidate field text.",
-      "status": "author_source_validation_only_independent_review_pending"
+      "source_boundary_assessment": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. ",
+      "status": "passed_for_selected_spans",
+      "independent_review": "passed",
+      "independence": true,
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger"
     },
     {
       "id": "b100_fr_5265",
@@ -7330,7 +7390,7 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "selected_text_rights_status": "pending_independent_selected_span_and_import_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_wikitext_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\fenêtre.wiki",
       "api_response_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\revisions-3.api.json",
       "current_content_revid": 39921057,
@@ -7343,7 +7403,7 @@
           "publication": "1932–1935; final publication 1935",
           "work_type": "collective work",
           "original_rights": "public domain",
-          "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
@@ -7358,7 +7418,7 @@
             "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
             "captured_at": "2026-11-19T21:29:28.419199+00:00"
           },
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         },
         {
           "id": "original-littre-1872-1877",
@@ -7366,7 +7426,7 @@
           "title": "Dictionnaire de la langue française",
           "publication": "1872–1877",
           "original_rights": "public domain",
-          "author_rights_assessment": "Historical Littré edition is identified by the fixed import notice and the rights convention’s explicit public-domain Littré example; exact imported wording awaits independent assessment.",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "source_notice_evidence": {
             "title": "Modèle:Import:Littré",
             "revid": 30857967,
@@ -7387,7 +7447,7 @@
           },
           "wiki_layer": "Contributor transcription/adaptation under CC BY-SA 4.0, separately from original public-domain prose.",
           "lexique_layer": "Scoped adaptations and new explanatory translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         }
       ],
       "original_edition_snapshots": [
@@ -7421,8 +7481,11 @@
       ],
       "current_registry_names": 123,
       "import_notices": [],
-      "source_boundary_assessment": "Selected lexical meaning/IPA and authored explanations only. Bibliography and references are retained as metadata; cited examples, protected dictionary prose, images and audio are not candidate field text.",
-      "status": "author_source_validation_only_independent_review_pending"
+      "source_boundary_assessment": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. Historical Littré 1872–1877 is separately public-domain; modern dictionary references convey no prose licence. ",
+      "status": "passed_for_selected_spans",
+      "independent_review": "passed",
+      "independence": true,
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger"
     },
     {
       "id": "b100_fr_167887",
@@ -7735,7 +7798,7 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "selected_text_rights_status": "pending_independent_selected_span_and_import_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_wikitext_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\merveilleux.wiki",
       "api_response_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\revisions-3.api.json",
       "current_content_revid": 39971666,
@@ -7748,7 +7811,7 @@
           "publication": "1932–1935; final publication 1935",
           "work_type": "collective work",
           "original_rights": "public domain",
-          "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
@@ -7763,7 +7826,7 @@
             "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
             "captured_at": "2026-11-19T21:29:28.419199+00:00"
           },
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         },
         {
           "id": "original-littre-1872-1877",
@@ -7771,7 +7834,7 @@
           "title": "Dictionnaire de la langue française",
           "publication": "1872–1877",
           "original_rights": "public domain",
-          "author_rights_assessment": "Historical Littré edition is identified by the fixed import notice and the rights convention’s explicit public-domain Littré example; exact imported wording awaits independent assessment.",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "source_notice_evidence": {
             "title": "Modèle:Import:Littré",
             "revid": 30857967,
@@ -7792,7 +7855,7 @@
           },
           "wiki_layer": "Contributor transcription/adaptation under CC BY-SA 4.0, separately from original public-domain prose.",
           "lexique_layer": "Scoped adaptations and new explanatory translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         }
       ],
       "original_edition_snapshots": [
@@ -7836,8 +7899,11 @@
       ],
       "current_registry_names": 74,
       "import_notices": [],
-      "source_boundary_assessment": "Selected lexical meaning/IPA and authored explanations only. Bibliography and references are retained as metadata; cited examples, protected dictionary prose, images and audio are not candidate field text.",
-      "status": "author_source_validation_only_independent_review_pending"
+      "source_boundary_assessment": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. Historical Littré 1872–1877 is separately public-domain; modern dictionary references convey no prose licence. ",
+      "status": "passed_for_selected_spans",
+      "independent_review": "passed",
+      "independence": true,
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger"
     },
     {
       "id": "b100_fr_72",
@@ -8129,7 +8195,7 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "selected_text_rights_status": "pending_independent_selected_span_and_import_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_wikitext_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\allemand.wiki",
       "api_response_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\revisions-3.api.json",
       "current_content_revid": 40037457,
@@ -8141,7 +8207,7 @@
           "title": "Dictionnaire de la langue française",
           "publication": "1872–1877",
           "original_rights": "public domain",
-          "author_rights_assessment": "Historical Littré edition is identified by the fixed import notice and the rights convention’s explicit public-domain Littré example; exact imported wording awaits independent assessment.",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "source_notice_evidence": {
             "title": "Modèle:Import:Littré",
             "revid": 30857967,
@@ -8162,7 +8228,7 @@
           },
           "wiki_layer": "Contributor transcription/adaptation under CC BY-SA 4.0, separately from original public-domain prose.",
           "lexique_layer": "Scoped adaptations and new explanatory translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         }
       ],
       "original_edition_snapshots": [],
@@ -8180,8 +8246,11 @@
       ],
       "current_registry_names": 118,
       "import_notices": [],
-      "source_boundary_assessment": "Selected lexical meaning/IPA and authored explanations only. Bibliography and references are retained as metadata; cited examples, protected dictionary prose, images and audio are not candidate field text.",
-      "status": "author_source_validation_only_independent_review_pending"
+      "source_boundary_assessment": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. Historical Littré 1872–1877 is separately public-domain; modern dictionary references convey no prose licence. ",
+      "status": "passed_for_selected_spans",
+      "independent_review": "passed",
+      "independence": true,
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger"
     },
     {
       "id": "b100_fr_169866",
@@ -8339,7 +8408,7 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "selected_text_rights_status": "pending_independent_selected_span_and_import_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_wikitext_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\oser.wiki",
       "api_response_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\revisions-3.api.json",
       "current_content_revid": 39720852,
@@ -8352,7 +8421,7 @@
           "publication": "1932–1935; final publication 1935",
           "work_type": "collective work",
           "original_rights": "public domain",
-          "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
@@ -8367,7 +8436,7 @@
             "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
             "captured_at": "2026-11-19T21:29:28.419199+00:00"
           },
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         }
       ],
       "original_edition_snapshots": [
@@ -8409,8 +8478,11 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "source_boundary_assessment": "Selected lexical meaning/IPA and authored explanations only. Bibliography and references are retained as metadata; cited examples, protected dictionary prose, images and audio are not candidate field text.",
-      "status": "author_source_validation_only_independent_review_pending"
+      "source_boundary_assessment": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. ",
+      "status": "passed_for_selected_spans",
+      "independent_review": "passed",
+      "independence": true,
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger"
     },
     {
       "id": "b100_fr_9617",
@@ -8603,7 +8675,7 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "selected_text_rights_status": "pending_independent_selected_span_and_import_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_wikitext_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\impression.wiki",
       "api_response_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\revisions-3.api.json",
       "current_content_revid": 39773516,
@@ -8616,7 +8688,7 @@
           "publication": "1932–1935; final publication 1935",
           "work_type": "collective work",
           "original_rights": "public domain",
-          "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
@@ -8631,7 +8703,7 @@
             "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
             "captured_at": "2026-11-19T21:29:28.419199+00:00"
           },
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         }
       ],
       "original_edition_snapshots": [
@@ -8665,8 +8737,11 @@
       ],
       "current_registry_names": 55,
       "import_notices": [],
-      "source_boundary_assessment": "Selected lexical meaning/IPA and authored explanations only. Bibliography and references are retained as metadata; cited examples, protected dictionary prose, images and audio are not candidate field text.",
-      "status": "author_source_validation_only_independent_review_pending"
+      "source_boundary_assessment": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. ",
+      "status": "passed_for_selected_spans",
+      "independent_review": "passed",
+      "independence": true,
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger"
     },
     {
       "id": "b100_fr_7891",
@@ -9007,7 +9082,7 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "selected_text_rights_status": "pending_independent_selected_span_and_import_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_wikitext_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\sourire.wiki",
       "api_response_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\revisions-3.api.json",
       "current_content_revid": 39989386,
@@ -9020,7 +9095,7 @@
           "publication": "1932–1935; final publication 1935",
           "work_type": "collective work",
           "original_rights": "public domain",
-          "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
@@ -9035,7 +9110,7 @@
             "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
             "captured_at": "2026-11-19T21:29:28.419199+00:00"
           },
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         }
       ],
       "original_edition_snapshots": [
@@ -9069,8 +9144,11 @@
       ],
       "current_registry_names": 90,
       "import_notices": [],
-      "source_boundary_assessment": "Selected lexical meaning/IPA and authored explanations only. Bibliography and references are retained as metadata; cited examples, protected dictionary prose, images and audio are not candidate field text.",
-      "status": "author_source_validation_only_independent_review_pending"
+      "source_boundary_assessment": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. ",
+      "status": "passed_for_selected_spans",
+      "independent_review": "passed",
+      "independence": true,
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger"
     },
     {
       "id": "b100_fr_10947",
@@ -9340,7 +9418,7 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "selected_text_rights_status": "pending_independent_selected_span_and_import_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_wikitext_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\bouche.wiki",
       "api_response_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\revisions-3.api.json",
       "current_content_revid": 39935487,
@@ -9353,7 +9431,7 @@
           "publication": "1932–1935; final publication 1935",
           "work_type": "collective work",
           "original_rights": "public domain",
-          "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
@@ -9368,7 +9446,7 @@
             "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
             "captured_at": "2026-11-19T21:29:28.419199+00:00"
           },
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         }
       ],
       "original_edition_snapshots": [
@@ -9402,8 +9480,11 @@
       ],
       "current_registry_names": 137,
       "import_notices": [],
-      "source_boundary_assessment": "Selected lexical meaning/IPA and authored explanations only. Bibliography and references are retained as metadata; cited examples, protected dictionary prose, images and audio are not candidate field text.",
-      "status": "author_source_validation_only_independent_review_pending"
+      "source_boundary_assessment": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. ",
+      "status": "passed_for_selected_spans",
+      "independent_review": "passed",
+      "independence": true,
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger"
     },
     {
       "id": "b100_fr_11722",
@@ -9813,7 +9894,7 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "selected_text_rights_status": "pending_independent_selected_span_and_import_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_wikitext_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\ligne.wiki",
       "api_response_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\revisions-3.api.json",
       "current_content_revid": 39910819,
@@ -9826,7 +9907,7 @@
           "publication": "1932–1935; final publication 1935",
           "work_type": "collective work",
           "original_rights": "public domain",
-          "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
@@ -9841,7 +9922,7 @@
             "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
             "captured_at": "2026-11-19T21:29:28.419199+00:00"
           },
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         }
       ],
       "original_edition_snapshots": [
@@ -9890,8 +9971,8 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "source_boundary_assessment": "Selected lexical meaning/IPA and authored explanations only. Bibliography and references are retained as metadata; cited examples, protected dictionary prose, images and audio are not candidate field text.",
-      "status": "author_source_validation_only_independent_review_pending",
+      "source_boundary_assessment": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. CFC cartographic definition at line 156 is unselected; the selected page-character row is at line 61. ",
+      "status": "passed_for_selected_spans",
       "cfc_boundary": {
         "selected": false,
         "definition_line_1_based": 156,
@@ -9906,7 +9987,10 @@
           "captured_at": "2026-11-19T21:29:28.424404+00:00"
         },
         "note": "The template identifies the Comité français de cartographie 1990 glossary and a CC BY-SA 4.0 donation. That cartographic definition is outside the selected text-row use."
-      }
+      },
+      "independent_review": "passed",
+      "independence": true,
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger"
     },
     {
       "id": "b100_fr_37751",
@@ -10099,7 +10183,7 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "selected_text_rights_status": "pending_independent_selected_span_and_import_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_wikitext_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\absolument.wiki",
       "api_response_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\revisions-3.api.json",
       "current_content_revid": 39773252,
@@ -10112,7 +10196,7 @@
           "publication": "1932–1935; final publication 1935",
           "work_type": "collective work",
           "original_rights": "public domain",
-          "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
@@ -10127,7 +10211,7 @@
             "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
             "captured_at": "2026-11-19T21:29:28.419199+00:00"
           },
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         },
         {
           "id": "original-littre-1872-1877",
@@ -10135,7 +10219,7 @@
           "title": "Dictionnaire de la langue française",
           "publication": "1872–1877",
           "original_rights": "public domain",
-          "author_rights_assessment": "Historical Littré edition is identified by the fixed import notice and the rights convention’s explicit public-domain Littré example; exact imported wording awaits independent assessment.",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "source_notice_evidence": {
             "title": "Modèle:Import:Littré",
             "revid": 30857967,
@@ -10156,7 +10240,7 @@
           },
           "wiki_layer": "Contributor transcription/adaptation under CC BY-SA 4.0, separately from original public-domain prose.",
           "lexique_layer": "Scoped adaptations and new explanatory translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         }
       ],
       "original_edition_snapshots": [
@@ -10198,8 +10282,11 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "source_boundary_assessment": "Selected lexical meaning/IPA and authored explanations only. Bibliography and references are retained as metadata; cited examples, protected dictionary prose, images and audio are not candidate field text.",
-      "status": "author_source_validation_only_independent_review_pending"
+      "source_boundary_assessment": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. Historical Littré 1872–1877 is separately public-domain; modern dictionary references convey no prose licence. ",
+      "status": "passed_for_selected_spans",
+      "independent_review": "passed",
+      "independence": true,
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger"
     },
     {
       "id": "b100_fr_160442",
@@ -10336,7 +10423,7 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "selected_text_rights_status": "pending_independent_selected_span_and_import_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_wikitext_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\étrange.wiki",
       "api_response_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\revisions-3.api.json",
       "current_content_revid": 39693353,
@@ -10349,7 +10436,7 @@
           "publication": "1932–1935; final publication 1935",
           "work_type": "collective work",
           "original_rights": "public domain",
-          "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
@@ -10364,7 +10451,7 @@
             "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
             "captured_at": "2026-11-19T21:29:28.419199+00:00"
           },
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         }
       ],
       "original_edition_snapshots": [
@@ -10416,8 +10503,11 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "source_boundary_assessment": "Selected lexical meaning/IPA and authored explanations only. Bibliography and references are retained as metadata; cited examples, protected dictionary prose, images and audio are not candidate field text.",
-      "status": "author_source_validation_only_independent_review_pending"
+      "source_boundary_assessment": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. ",
+      "status": "passed_for_selected_spans",
+      "independent_review": "passed",
+      "independence": true,
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger"
     },
     {
       "id": "b100_fr_23887",
@@ -10547,7 +10637,7 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "selected_text_rights_status": "pending_independent_selected_span_and_import_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_wikitext_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\regretter.wiki",
       "api_response_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\revisions-4.api.json",
       "current_content_revid": 39923740,
@@ -10560,7 +10650,7 @@
           "publication": "1932–1935; final publication 1935",
           "work_type": "collective work",
           "original_rights": "public domain",
-          "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
@@ -10575,7 +10665,7 @@
             "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
             "captured_at": "2026-11-19T21:29:28.419199+00:00"
           },
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         }
       ],
       "original_edition_snapshots": [
@@ -10617,8 +10707,11 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "source_boundary_assessment": "Selected lexical meaning/IPA and authored explanations only. Bibliography and references are retained as metadata; cited examples, protected dictionary prose, images and audio are not candidate field text.",
-      "status": "author_source_validation_only_independent_review_pending"
+      "source_boundary_assessment": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. ",
+      "status": "passed_for_selected_spans",
+      "independent_review": "passed",
+      "independence": true,
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger"
     },
     {
       "id": "b100_fr_5268",
@@ -11147,7 +11240,7 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "selected_text_rights_status": "pending_independent_selected_span_and_import_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_wikitext_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\mur.wiki",
       "api_response_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\revisions-4.api.json",
       "current_content_revid": 40046141,
@@ -11160,7 +11253,7 @@
           "publication": "1932–1935; final publication 1935",
           "work_type": "collective work",
           "original_rights": "public domain",
-          "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
@@ -11175,7 +11268,7 @@
             "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
             "captured_at": "2026-11-19T21:29:28.419199+00:00"
           },
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         }
       ],
       "original_edition_snapshots": [
@@ -11217,8 +11310,11 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "source_boundary_assessment": "Selected lexical meaning/IPA and authored explanations only. Bibliography and references are retained as metadata; cited examples, protected dictionary prose, images and audio are not candidate field text.",
-      "status": "author_source_validation_only_independent_review_pending"
+      "source_boundary_assessment": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. ",
+      "status": "passed_for_selected_spans",
+      "independent_review": "passed",
+      "independence": true,
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger"
     },
     {
       "id": "b100_fr_159430",
@@ -11439,7 +11535,7 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "selected_text_rights_status": "pending_independent_selected_span_and_import_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_wikitext_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\enfer.wiki",
       "api_response_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\revisions-4.api.json",
       "current_content_revid": 39909696,
@@ -11452,7 +11548,7 @@
           "publication": "1932–1935; final publication 1935",
           "work_type": "collective work",
           "original_rights": "public domain",
-          "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
@@ -11467,7 +11563,7 @@
             "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
             "captured_at": "2026-11-19T21:29:28.419199+00:00"
           },
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         }
       ],
       "original_edition_snapshots": [
@@ -11509,8 +11605,11 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "source_boundary_assessment": "Selected lexical meaning/IPA and authored explanations only. Bibliography and references are retained as metadata; cited examples, protected dictionary prose, images and audio are not candidate field text.",
-      "status": "author_source_validation_only_independent_review_pending"
+      "source_boundary_assessment": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. ",
+      "status": "passed_for_selected_spans",
+      "independent_review": "passed",
+      "independence": true,
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger"
     },
     {
       "id": "b100_fr_173044",
@@ -11654,7 +11753,7 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "selected_text_rights_status": "pending_independent_selected_span_and_import_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_wikitext_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\prouver.wiki",
       "api_response_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\revisions-4.api.json",
       "current_content_revid": 39770913,
@@ -11667,7 +11766,7 @@
           "publication": "1932–1935; final publication 1935",
           "work_type": "collective work",
           "original_rights": "public domain",
-          "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
@@ -11682,7 +11781,7 @@
             "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
             "captured_at": "2026-11-19T21:29:28.419199+00:00"
           },
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         }
       ],
       "original_edition_snapshots": [
@@ -11724,8 +11823,11 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "source_boundary_assessment": "Selected lexical meaning/IPA and authored explanations only. Bibliography and references are retained as metadata; cited examples, protected dictionary prose, images and audio are not candidate field text.",
-      "status": "author_source_validation_only_independent_review_pending"
+      "source_boundary_assessment": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. ",
+      "status": "passed_for_selected_spans",
+      "independent_review": "passed",
+      "independence": true,
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger"
     },
     {
       "id": "b100_fr_9019",
@@ -12055,7 +12157,7 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "selected_text_rights_status": "pending_independent_selected_span_and_import_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_wikitext_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\boîte.wiki",
       "api_response_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\revisions-4.api.json",
       "current_content_revid": 39828542,
@@ -12068,7 +12170,7 @@
           "publication": "1932–1935; final publication 1935",
           "work_type": "collective work",
           "original_rights": "public domain",
-          "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
@@ -12083,7 +12185,7 @@
             "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
             "captured_at": "2026-11-19T21:29:28.419199+00:00"
           },
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         }
       ],
       "original_edition_snapshots": [
@@ -12117,9 +12219,12 @@
       ],
       "current_registry_names": 105,
       "import_notices": [],
-      "source_boundary_assessment": "Selected lexical meaning/IPA and authored explanations only. Bibliography and references are retained as metadata; cited examples, protected dictionary prose, images and audio are not candidate field text.",
-      "status": "author_source_validation_only_independent_review_pending",
-      "ipa_boundary": "Selects the first /bwat/ template; trailing TLFi/Usito references on the same headword line and the alternate /bwɑt/ remain explicit context, not copied dictionary prose or a new query alias."
+      "source_boundary_assessment": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. TLFi/Usito references follow the alternate IPA in line 11; selected /bwat/ is factual transcription and no proprietary dictionary prose is copied. ",
+      "status": "passed_for_selected_spans",
+      "ipa_boundary": "Selects the first /bwat/ template; trailing TLFi/Usito references on the same headword line and the alternate /bwɑt/ remain explicit context, not copied dictionary prose or a new query alias.",
+      "independent_review": "passed",
+      "independence": true,
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger"
     },
     {
       "id": "b100_fr_175841",
@@ -12319,7 +12424,7 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "selected_text_rights_status": "pending_independent_selected_span_and_import_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_wikitext_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\santé.wiki",
       "api_response_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\revisions-4.api.json",
       "current_content_revid": 39918334,
@@ -12332,7 +12437,7 @@
           "publication": "1932–1935; final publication 1935",
           "work_type": "collective work",
           "original_rights": "public domain",
-          "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
@@ -12347,7 +12452,7 @@
             "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
             "captured_at": "2026-11-19T21:29:28.419199+00:00"
           },
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         }
       ],
       "original_edition_snapshots": [
@@ -12389,8 +12494,11 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "source_boundary_assessment": "Selected lexical meaning/IPA and authored explanations only. Bibliography and references are retained as metadata; cited examples, protected dictionary prose, images and audio are not candidate field text.",
-      "status": "author_source_validation_only_independent_review_pending"
+      "source_boundary_assessment": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. ",
+      "status": "passed_for_selected_spans",
+      "independent_review": "passed",
+      "independence": true,
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger"
     },
     {
       "id": "b100_fr_184761",
@@ -12618,7 +12726,7 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "selected_text_rights_status": "pending_independent_selected_span_and_import_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_wikitext_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\couvrir.wiki",
       "api_response_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\revisions-4.api.json",
       "current_content_revid": 39828092,
@@ -12639,8 +12747,11 @@
       ],
       "current_registry_names": 68,
       "import_notices": [],
-      "source_boundary_assessment": "Selected lexical meaning/IPA and authored explanations only. Bibliography and references are retained as metadata; cited examples, protected dictionary prose, images and audio are not candidate field text.",
-      "status": "author_source_validation_only_independent_review_pending"
+      "source_boundary_assessment": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. ",
+      "status": "passed_for_selected_spans",
+      "independent_review": "passed",
+      "independence": true,
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger"
     },
     {
       "id": "b100_fr_167116",
@@ -12805,7 +12916,7 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "selected_text_rights_status": "pending_independent_selected_span_and_import_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_wikitext_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\magnifique.wiki",
       "api_response_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\revisions-4.api.json",
       "current_content_revid": 39312450,
@@ -12818,7 +12929,7 @@
           "publication": "1932–1935; final publication 1935",
           "work_type": "collective work",
           "original_rights": "public domain",
-          "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
@@ -12833,7 +12944,7 @@
             "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
             "captured_at": "2026-11-19T21:29:28.419199+00:00"
           },
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         }
       ],
       "original_edition_snapshots": [
@@ -12875,8 +12986,11 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "source_boundary_assessment": "Selected lexical meaning/IPA and authored explanations only. Bibliography and references are retained as metadata; cited examples, protected dictionary prose, images and audio are not candidate field text.",
-      "status": "author_source_validation_only_independent_review_pending"
+      "source_boundary_assessment": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. ",
+      "status": "passed_for_selected_spans",
+      "independent_review": "passed",
+      "independence": true,
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger"
     },
     {
       "id": "b100_fr_530742",
@@ -13059,7 +13173,7 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "selected_text_rights_status": "pending_independent_selected_span_and_import_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_wikitext_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\obtenir.wiki",
       "api_response_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\revisions-4.api.json",
       "current_content_revid": 39985451,
@@ -13072,7 +13186,7 @@
           "publication": "1932–1935; final publication 1935",
           "work_type": "collective work",
           "original_rights": "public domain",
-          "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
@@ -13087,7 +13201,7 @@
             "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
             "captured_at": "2026-11-19T21:29:28.419199+00:00"
           },
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         }
       ],
       "original_edition_snapshots": [
@@ -13121,8 +13235,11 @@
       ],
       "current_registry_names": 66,
       "import_notices": [],
-      "source_boundary_assessment": "Selected lexical meaning/IPA and authored explanations only. Bibliography and references are retained as metadata; cited examples, protected dictionary prose, images and audio are not candidate field text.",
-      "status": "author_source_validation_only_independent_review_pending"
+      "source_boundary_assessment": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. ",
+      "status": "passed_for_selected_spans",
+      "independent_review": "passed",
+      "independence": true,
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger"
     },
     {
       "id": "b100_fr_122429",
@@ -13392,7 +13509,7 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "selected_text_rights_status": "pending_independent_selected_span_and_import_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_wikitext_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\cuisine.wiki",
       "api_response_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\revisions-4.api.json",
       "current_content_revid": 40044247,
@@ -13405,7 +13522,7 @@
           "publication": "1932–1935; final publication 1935",
           "work_type": "collective work",
           "original_rights": "public domain",
-          "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
@@ -13420,7 +13537,7 @@
             "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
             "captured_at": "2026-11-19T21:29:28.419199+00:00"
           },
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         }
       ],
       "original_edition_snapshots": [
@@ -13462,8 +13579,11 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "source_boundary_assessment": "Selected lexical meaning/IPA and authored explanations only. Bibliography and references are retained as metadata; cited examples, protected dictionary prose, images and audio are not candidate field text.",
-      "status": "author_source_validation_only_independent_review_pending"
+      "source_boundary_assessment": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. ",
+      "status": "passed_for_selected_spans",
+      "independent_review": "passed",
+      "independence": true,
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger"
     },
     {
       "id": "b100_fr_12736",
@@ -13754,7 +13874,7 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "selected_text_rights_status": "pending_independent_selected_span_and_import_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_wikitext_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\vue.wiki",
       "api_response_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\revisions-5.api.json",
       "current_content_revid": 39985307,
@@ -13767,7 +13887,7 @@
           "publication": "1932–1935; final publication 1935",
           "work_type": "collective work",
           "original_rights": "public domain",
-          "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
@@ -13782,7 +13902,7 @@
             "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
             "captured_at": "2026-11-19T21:29:28.419199+00:00"
           },
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         }
       ],
       "original_edition_snapshots": [
@@ -13824,8 +13944,11 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "source_boundary_assessment": "Selected lexical meaning/IPA and authored explanations only. Bibliography and references are retained as metadata; cited examples, protected dictionary prose, images and audio are not candidate field text.",
-      "status": "author_source_validation_only_independent_review_pending"
+      "source_boundary_assessment": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. ",
+      "status": "passed_for_selected_spans",
+      "independent_review": "passed",
+      "independence": true,
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger"
     },
     {
       "id": "b100_fr_119001",
@@ -14039,7 +14162,7 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "selected_text_rights_status": "pending_independent_selected_span_and_import_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "original_wikitext_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\terrible.wiki",
       "api_response_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\sources\\revisions-5.api.json",
       "current_content_revid": 39919446,
@@ -14052,7 +14175,7 @@
           "publication": "1932–1935; final publication 1935",
           "work_type": "collective work",
           "original_rights": "public domain",
-          "author_rights_assessment": "edition-level basis; exact imported wording awaits independent assessment",
+          "author_rights_assessment": "Eligible original historical edition; comparison/reference/import scope only. Exact modern selected-gloss authorship is not inferred from page metadata.",
           "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication for collective works",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
@@ -14067,7 +14190,7 @@
             "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-100\\target\\issue-100\\rights\\Modèle_R_DAF8.wiki",
             "captured_at": "2026-11-19T21:29:28.419199+00:00"
           },
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_edition_boundary"
         }
       ],
       "original_edition_snapshots": [
@@ -14109,8 +14232,11 @@
           "scope": "Bibliography/import metadata only; preceding example or definition prose excluded."
         }
       ],
-      "source_boundary_assessment": "Selected lexical meaning/IPA and authored explanations only. Bibliography and references are retained as metadata; cited examples, protected dictionary prose, images and audio are not candidate field text.",
-      "status": "author_source_validation_only_independent_review_pending"
+      "source_boundary_assessment": "Only selected lexical semantics, French spelling/POS and IPA are used. Fixed article and complete history credit Wiki contributors; FR adaptations and new EN/ZH explanatory translations are credited to Lexique under CC BY-SA 4.0. Literary quotations, media and translation tables supply no field text. DAF8 is an eligible historical comparison/import layer: Académie française 1932–1935, collective-work publication term, conservative expiry 2006-01-01. It is not assigned authorship of every modern gloss. ",
+      "status": "passed_for_selected_spans",
+      "independent_review": "passed",
+      "independence": true,
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger"
     }
   ],
   "rights_authorities": [
@@ -14896,11 +15022,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''connerie''' {{pron|kɔn.ʁi|fr}} {{f}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-952-reposer-ver-selected",
@@ -14918,11 +15044,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''reposer''' {{pron|ʁə.po.ze|fr}} {{conj|grp=1|fr}} {{lien pronominal}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-953-échapper-ver-selected",
@@ -14940,11 +15066,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''échapper''' {{pron|e.ʃa.pe|fr}} {{i|fr}}, {{t|fr}}  ou {{prnl|fr}} {{conj|grp=1|fr}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-954-riche-adj-selected",
@@ -14962,11 +15088,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''riche''' {{pron|ʁiʃ|fr}} {{mf}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-955-riche-nom-selected",
@@ -14984,11 +15110,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''riche''' {{pron|ʁiʃ|fr}} {{mf}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-956-forme-nom-selected",
@@ -15006,11 +15132,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''forme''' {{pron|fɔʁm|fr}} {{f}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-957-bruit-nom-selected",
@@ -15028,11 +15154,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''bruit''' {{pron|bʁɥi|fr}} {{m}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-958-chacun-pro-ind-selected",
@@ -15050,11 +15176,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''chacun''' {{pron|ʃa.kœ̃|fr}} {{s}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-959-fier-adj-selected",
@@ -15072,11 +15198,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''fier''' {{pron|fjɛʁ|fr}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-960-fier-ver-selected",
@@ -15094,11 +15220,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''fier''' {{pron|fje|fr}} {{conj|grp=1|fr}} {{lien pronominal}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-961-exemple-nom-selected",
@@ -15116,11 +15242,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''exemple''' {{pron|ɛɡ.zɑ̃pl|fr}} {{m}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-962-charger-ver-selected",
@@ -15138,11 +15264,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''charger''' {{pron|ʃaʁ.ʒe|fr}} {{t|fr}} {{conj|grp=1|fr}} {{lien pronominal}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-963-chat-nom-selected",
@@ -15160,11 +15286,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''chat''' {{pron|ʃa|ʃɑ|fr}} {{m}} {{équiv-pour|lang=fr|une femelle|chatte}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-964-supporter-ver-selected",
@@ -15182,11 +15308,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''supporter''' {{pron|sy.pɔʁ.te|fr}} {{t|fr}} {{conj|grp=1|fr}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-965-rendez-vous-nom-selected",
@@ -15204,11 +15330,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''rendez-vous''' {{pron|ʁɑ̃.de.vu|fr}} {{m}} {{sp}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-966-debout-adv-selected",
@@ -15226,11 +15352,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''debout''' {{pron|də.bu|fr}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-967-public-adj-selected",
@@ -15248,11 +15374,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''public''' {{pron|py.blik|fr}} {{m}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-968-public-nom-selected",
@@ -15270,11 +15396,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''public''' {{pron|py.blik|fr}} {{m}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-969-obliger-ver-selected",
@@ -15292,11 +15418,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''obliger''' {{pron|ɔ.bli.ʒe|fr}} ou {{pron|o.bli.ʒe|fr}} {{t|fr}} {{conj|grp=1|fr}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-970-dommage-nom-selected",
@@ -15314,11 +15440,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''dommage''' {{pron|dɔ.maʒ|fr}} {{m}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-971-dommage-ono-selected",
@@ -15336,11 +15462,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''dommage'''"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-972-trou-nom-selected",
@@ -15358,11 +15484,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''trou''' {{pron|tʁu|fr}} {{m}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-973-étranger-adj-selected",
@@ -15380,11 +15506,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''étranger''' {{pron|e.tʁɑ̃.ʒe|fr}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-974-étranger-nom-selected",
@@ -15402,11 +15528,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''étranger''' {{pron|e.tʁɑ̃.ʒe|fr}} {{m}} {{équiv-pour|lang=fr|une femme|étrangère}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-975-accompagner-ver-selected",
@@ -15424,11 +15550,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''accompagner''' {{pron|a.kɔ̃.pa.ɲe|fr}} {{t|fr}} {{conj|grp=1|fr}} {{lien pronominal|'}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-976-fenêtre-nom-selected",
@@ -15446,11 +15572,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''fenêtre''' {{pron|fə.nɛtʁ|fnɛtʁ|fr}} {{f}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-977-merveilleux-adj-selected",
@@ -15468,11 +15594,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''merveilleux''' {{pron|mɛʁ.vɛ.jø|mɛʁ.ve.jø|fr}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-978-merveilleux-nom-selected",
@@ -15490,11 +15616,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''merveilleux''' {{pron|mɛʁ.vɛ.jø|mɛʁ.ve.jø|fr}} {{m}} {{s}} ''(Toujours précédé de l'article défini ''le'')''"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-979-allemand-adj-selected",
@@ -15512,11 +15638,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''allemand''' {{pron|al.mɑ̃|fr}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-980-allemand-nom-selected",
@@ -15534,11 +15660,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''allemand''' {{pron|al.mɑ̃|fr}} {{m}}, {{au singulier uniquement|fr}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-981-oser-ver-selected",
@@ -15556,11 +15682,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''oser''' {{pron|o.ze|fr}} {{t|fr}} {{conj|grp=1|fr}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-982-impression-nom-selected",
@@ -15578,11 +15704,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''impression''' {{pron|ɛ̃.pʁɛ.sjɔ̃|fr}} {{f}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-983-sourire-nom-selected",
@@ -15600,11 +15726,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''sourire''' {{pron|su.ʁiʁ|fr}} {{m}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-984-sourire-ver-selected",
@@ -15622,11 +15748,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''sourire''' {{pron|su.ʁiʁ|fr}} {{i|fr}} {{conjugaison|fr|groupe=3}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-985-bouche-nom-selected",
@@ -15644,11 +15770,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''bouche''' {{pron|buʃ|fr}} {{f}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-986-ligne-nom-selected",
@@ -15666,11 +15792,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''ligne''' {{pron|liɲ|fr}} {{f}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-987-absolument-adv-selected",
@@ -15688,11 +15814,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''absolument''' {{pron|ap.sɔ.ly.mɑ̃|fr}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-988-étrange-adj-selected",
@@ -15710,11 +15836,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''étrange''' {{pron|e.tʁɑ̃ʒ|fr}} {{mf}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-989-regretter-ver-selected",
@@ -15732,11 +15858,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''regretter''' {{pron|ʁə.ɡʁe.te|fr}} ou {{pron|ʁə.ɡʁɛ.te|fr}} {{t|fr}} {{conj|grp=1|fr}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-990-mur-nom-selected",
@@ -15754,11 +15880,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''mur''' {{pron|myʁ|fr}} {{m}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-991-enfer-nom-selected",
@@ -15776,11 +15902,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''enfer''' {{pron|ɑ̃.fɛʁ|fr}} {{m}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-992-prouver-ver-selected",
@@ -15798,11 +15924,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''prouver''' {{pron|pʁu.ve|fr}} {{t|fr}} ou {{prnl|fr}} {{conj|grp=1|fr}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-993-boîte-nom-selected",
@@ -15820,11 +15946,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''boîte''' {{pron|bwat|fr}} ou {{pron|bwɑt|fr}}{{R|TLFi}}{{R|Usito}} {{f}} {{tradit}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-994-santé-nom-selected",
@@ -15842,11 +15968,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''santé''' {{pron|sɑ̃.te|fr}} {{f}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-995-couvrir-ver-selected",
@@ -15864,11 +15990,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''couvrir''' {{pron|ku.vʁiʁ|fr}} {{t|fr}} {{conjugaison|fr|groupe=3}} {{lien pronominal}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-996-magnifique-adj-selected",
@@ -15886,11 +16012,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''magnifique''' {{pron|ma.ɲi.fik|fr}} ou {{pron|ma.ni.fik|fr}} {{mf}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-997-obtenir-ver-selected",
@@ -15908,11 +16034,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''obtenir''' {{pron|ɔp.tə.niʁ|fr}} et {{pron|ɔb.tə.niʁ|fr}} (prononciation rare) {{t|fr}} {{conjugaison|fr|groupe=3}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-998-cuisine-nom-selected",
@@ -15930,11 +16056,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''cuisine''' {{pron|kɥi.zin|fr}} {{f}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-999-vue-nom-selected",
@@ -15952,11 +16078,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''vue''' {{pron|vy|fr}} {{f|fr}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     },
     {
       "sense_id": "b100-1000-terrible-adj-selected",
@@ -15974,11 +16100,11 @@
         "column_1_based": 1,
         "raw_source_excerpt": "'''terrible''' {{pron|tɛ.ʁibl|fr}} {{mf}}"
       },
-      "status": "pending_independent_review",
+      "status": "passed_exact_spelling_source_binding",
       "alias_admission": "not_admitted",
       "relation_role": "source_binding_only",
-      "reviewer": null,
-      "independence": false
+      "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+      "independence": true
     }
   ]
 }

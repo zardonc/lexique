@@ -1,8 +1,8 @@
 {
   "issue": 100,
-  "status": "pending_independent_review",
-  "independence": false,
-  "reviewer": null,
+  "status": "passed",
+  "independence": true,
+  "reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
   "frozen_rows": [
     951,
     952,
@@ -58,13 +58,15 @@
   "scope_denominator_groups": 4087,
   "candidate_groups": 50,
   "candidate_fields": 200,
-  "accepted_groups": 0,
-  "accepted_fields": 0,
-  "accepted_sources": 0,
-  "missing_admitted_fields": 200,
+  "accepted_groups": 50,
+  "accepted_fields": 200,
+  "accepted_sources": 42,
+  "missing_admitted_fields": 0,
   "annotation_exceptions": [],
-  "scope": "Author evidence only; independent selected-content and rights decision, integration and native gates pending.",
-  "quality_summary": "source-research.md",
+  "scope": "Independent selected-content/rights acceptance; combined package conversion and native gates belong to integration.",
+  "quality_summary": "independent-review.md",
   "quality_checkpoint": "field-review.json",
-  "final_output_validation": "target/issue-100/green-final.log"
+  "final_output_validation": "target/issue-100/reviewer-final.log",
+  "independent_reviewer": "Independent selected-content and rights reviewer for issue 100; separate from author and merger",
+  "unresolved": []
 }
