@@ -1,5 +1,11 @@
 # 骨架验证记录
 
+## 单条 Markdown 笔记交换（#188）
+
+2026-11-20，按[交换设计](note-interchange-design.md)实现固定模板的单文件导入与单条已保存快照导出，并在入口提供[示例模板](examples/lexique-note-v1.md)。Windows x64 的真实文件／SQLite 检查覆盖逐字符空白、LF／CR／CRLF、长反引号、省略与清空、单侧例句、非法模板、保留元数据与来源、失效预览、写入失败和共享词典补充／明确继续。单独预编译后，原有 60 秒硬限 runner 执行 `node scripts/test-rust.mjs --desktop-lib note_ --test-threads=1`，39 项通过（含 9 项 Markdown，3.66 秒）；另行预编译的 `pnpm test:rust` 通过，保留 `RUST_TEST_NOCAPTURE=1` 与 V03 的 100／250 ms 限值。此前桌面分区尝试在 Cargo 重编译时触及 60 秒硬限，尚未开始测试；原日志保留。
+
+相关导入／批次／词典／导出 Playwright 24 项通过（26.4 秒）；lint、类型检查、build、rustfmt、locked workspace 编译及 all-target Clippy 通过。完整日志与真实文件／数据库在本机 `target/issue-188/`，其中 `backend-tests.log`、`desktop-focused-final.log` 和 `browser-final.log` 记录最终执行。浏览器检查不证明原生文件对话框；T39 的 Windows 原生单文件导出→导入→重启验证明确合并至 #189，ZIP 组合验证也由该切片完成。
+
 ## PR #174–#176 合并与 CI 恢复
 
 2026-11-18，[PR #174](https://github.com/zardonc/lexique/pull/174)、[PR #175](https://github.com/zardonc/lexique/pull/175) 和 [PR #176](https://github.com/zardonc/lexique/pull/176) 的固定 head 各 22 项检查通过后合并，最终合并提交为 `42c720556fd1195cca39ba704761877d1c0df48a`，该提交的 [main CI](https://github.com/zardonc/lexique/actions/runs/44377907700) 11 项检查全部通过。队列 E2E 竞态修复在延迟请求对照中由 4／4 失败变为 4／4 通过，Windows x64／Edge 完整 391 项通过。Intel macOS 对照确认 COMMIT 锁竞争及其他等待，原始 V03 超时的具体原因仍未完全定位；事务／竞争写入预算保持 100／250 ms，后端执行硬限保持 60 秒。固定提交、原始失败、对照结果、ARM64 runner 恢复及合并后的 main CI 链接见 [CI 恢复记录](evidence/ci-174-176/README.md)。

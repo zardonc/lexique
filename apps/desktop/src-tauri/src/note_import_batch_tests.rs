@@ -253,6 +253,7 @@ fn semicolon_bom_multiline_external_mapping_and_illegal_mappings_use_real_files(
         let options = NoteImportOptions {
             delimiter: NoteDelimiter::Semicolon,
             mapping: None,
+            format: None,
         };
         let unmapped = preview_csv_file(&connection, &path, "map-required", &options).unwrap();
         assert!(unmapped.error.as_ref().unwrap().contains("headword"));
@@ -284,6 +285,7 @@ fn semicolon_bom_multiline_external_mapping_and_illegal_mappings_use_real_files(
                 &NoteImportOptions {
                     delimiter: NoteDelimiter::Semicolon,
                     mapping: Some(invalid),
+                    format: None,
                 },
             )
             .unwrap();
@@ -297,6 +299,7 @@ fn semicolon_bom_multiline_external_mapping_and_illegal_mappings_use_real_files(
             &NoteImportOptions {
                 delimiter: NoteDelimiter::Semicolon,
                 mapping: Some(mapping),
+                format: None,
             },
         )
         .unwrap();

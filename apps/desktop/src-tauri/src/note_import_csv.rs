@@ -3,27 +3,10 @@ use crate::note_import::{
 };
 use lexique_storage::{ImportSource, NoteExample, NoteFormat, NoteImportContent};
 use rusqlite::Connection;
-use std::{fs::File, io::Read, path::Path};
+use std::path::Path;
 
 pub fn read_csv_file(path: &Path) -> Result<(ImportSource, Vec<u8>), String> {
-    let source = ImportSource {
-        format: NoteFormat::Csv,
-        filename: path
-            .file_name()
-            .and_then(|name| name.to_str())
-            .ok_or("CSV filename is not UTF-8")?
-            .into(),
-    };
-    source.validate().map_err(|e| e.to_string())?;
-    let file = File::open(path).map_err(|e| format!("Could not open CSV: {e}"))?;
-    let mut bytes = Vec::new();
-    file.take(32 * 1024 * 1024 + 1)
-        .read_to_end(&mut bytes)
-        .map_err(|e| format!("Could not read CSV: {e}"))?;
-    if bytes.len() > 32 * 1024 * 1024 {
-        return Err("CSV exceeds 32 MiB".into());
-    }
-    Ok((source, bytes))
+    crate::note_import::read_note_file(path, NoteFormat::Csv)
 }
 fn automatic_mapping(columns: &[String]) -> Result<NoteImportMapping, String> {
     let mut mapping = NoteImportMapping::default();

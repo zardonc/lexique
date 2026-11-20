@@ -1,6 +1,6 @@
 use crate::note_enrichment::{NoteEnrichment, enrich_new_note};
 use lexique_storage::{
-    ImportSource, NoteImportContent, NoteImportItem, NoteImportResult, VocabularyRecord,
+    ImportSource, NoteFormat, NoteImportContent, NoteImportItem, NoteImportResult, VocabularyRecord,
 };
 use rusqlite::Connection;
 use serde::{Deserialize, Serialize};
@@ -28,6 +28,8 @@ pub enum NoteDelimiter {
 pub struct NoteImportOptions {
     pub delimiter: NoteDelimiter,
     pub mapping: Option<NoteImportMapping>,
+    #[serde(default)]
+    pub format: Option<NoteFormat>,
 }
 #[derive(Clone, Debug, Serialize)]
 pub struct NoteImportGroup {
@@ -70,6 +72,48 @@ struct Session {
 }
 #[derive(Default)]
 pub struct NoteImportState(Mutex<Option<Session>>);
+
+pub fn read_note_file(path: &Path, format: NoteFormat) -> Result<(ImportSource, Vec<u8>), String> {
+    use std::{fs::File, io::Read};
+    let source = ImportSource {
+        format,
+        filename: path
+            .file_name()
+            .and_then(|name| name.to_str())
+            .ok_or_else(|| format!("Import filename is not UTF-8: {}", path.display()))?
+            .into(),
+    };
+    source
+        .validate()
+        .map_err(|error| format!("{}: {error}", source.filename))?;
+    let file =
+        File::open(path).map_err(|error| format!("Could not open {}: {error}", path.display()))?;
+    let mut bytes = Vec::new();
+    file.take(32 * 1024 * 1024 + 1)
+        .read_to_end(&mut bytes)
+        .map_err(|error| format!("Could not read {}: {error}", path.display()))?;
+    if bytes.len() > 32 * 1024 * 1024 {
+        return Err(format!("{}: note file exceeds 32 MiB", source.filename));
+    }
+    Ok((source, bytes))
+}
+
+fn preview_note_bytes(
+    connection: &Connection,
+    source: ImportSource,
+    bytes: &[u8],
+    operation: &str,
+    options: &NoteImportOptions,
+) -> Result<NoteImportPreview, String> {
+    match source.format {
+        NoteFormat::Csv => {
+            crate::note_import_csv::preview_csv_bytes(connection, source, bytes, operation, options)
+        }
+        NoteFormat::Markdown => {
+            crate::note_markdown::preview_markdown_bytes(connection, source, bytes, operation)
+        }
+    }
+}
 
 #[cfg(test)]
 pub fn preview_csv_file(
@@ -219,28 +263,24 @@ pub async fn note_import_preview(
     });
     tauri::async_runtime::spawn_blocking(move || {
         let _admission = admission;
-        let selected = app
-            .dialog()
-            .file()
-            .set_parent(&window)
-            .add_filter("CSV", &["csv"])
-            .blocking_pick_file();
+        let format = options.format.clone().unwrap_or(NoteFormat::Csv);
+        let dialog = app.dialog().file().set_parent(&window);
+        let selected = match format {
+            NoteFormat::Csv => dialog.add_filter("CSV", &["csv"]),
+            NoteFormat::Markdown => dialog.add_filter("Markdown", &["md", "markdown"]),
+        }
+        .blocking_pick_file();
         let Some(selected) = selected else {
             return Ok(None);
         };
         let path = selected
             .into_path()
-            .map_err(|e| format!("Could not resolve CSV file: {e}"))?;
-        let (source, bytes) = crate::note_import_csv::read_csv_file(&path)?;
+            .map_err(|e| format!("Could not resolve note file: {e}"))?;
+        let (source, bytes) = read_note_file(&path, format)?;
         let connection =
             crate::vocabulary::open(app.state::<crate::vocabulary::DatabasePath>().inner())?;
-        let mut preview = crate::note_import_csv::preview_csv_bytes(
-            &connection,
-            source.clone(),
-            &bytes,
-            &operation,
-            &options,
-        )?;
+        let mut preview =
+            preview_note_bytes(&connection, source.clone(), &bytes, &operation, &options)?;
         enrich_preview_from_app(&app, &mut preview)?;
         let state = app.state::<NoteImportState>();
         let mut state = state
@@ -250,13 +290,13 @@ pub async fn note_import_preview(
         let session = state
             .as_mut()
             .filter(|session| session.operation == operation)
-            .ok_or("CSV selection was replaced or cancelled")?;
+            .ok_or("Note selection was replaced or cancelled")?;
         session.file = Some((source, bytes));
         session.preview = Some(preview.clone());
         Ok(Some(preview))
     })
     .await
-    .map_err(|e| format!("CSV preview task failed: {e}"))?
+    .map_err(|e| format!("Note preview task failed: {e}"))?
 }
 #[tauri::command]
 pub async fn note_import_remap(
@@ -279,24 +319,19 @@ pub async fn note_import_remap(
         let session = state
             .as_mut()
             .filter(|session| session.operation == operation)
-            .ok_or("CSV preview no longer available; preview again")?;
+            .ok_or("Note preview no longer available; preview again")?;
         session.preview = None;
-        let (source, bytes) = session.file.as_ref().ok_or("CSV selection is not ready")?;
+        let (source, bytes) = session.file.as_ref().ok_or("Note selection is not ready")?;
         let connection =
             crate::vocabulary::open(app.state::<crate::vocabulary::DatabasePath>().inner())?;
-        let mut preview = crate::note_import_csv::preview_csv_bytes(
-            &connection,
-            source.clone(),
-            bytes,
-            &operation,
-            &options,
-        )?;
+        let mut preview =
+            preview_note_bytes(&connection, source.clone(), bytes, &operation, &options)?;
         enrich_preview_from_app(&app, &mut preview)?;
         session.preview = Some(preview.clone());
         Ok(preview)
     })
     .await
-    .map_err(|e| format!("CSV mapping task failed: {e}"))?
+    .map_err(|e| format!("Note preview task failed: {e}"))?
 }
 #[tauri::command]
 pub async fn note_import_commit(
@@ -320,13 +355,13 @@ pub async fn note_import_commit(
             .as_ref()
             .filter(|session| session.operation == operation)
             .and_then(|session| session.preview.as_ref())
-            .ok_or("CSV preview no longer available; preview again")?;
+            .ok_or("Note preview no longer available; preview again")?;
         let mut connection =
             crate::vocabulary::open(app.state::<crate::vocabulary::DatabasePath>().inner())?;
         commit_preview(&mut connection, preview, &selections)
     })
     .await
-    .map_err(|e| format!("CSV import task failed: {e}"))?
+    .map_err(|e| format!("Note import task failed: {e}"))?
 }
 #[tauri::command]
 pub fn note_import_cancel(

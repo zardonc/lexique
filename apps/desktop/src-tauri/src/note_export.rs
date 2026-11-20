@@ -22,6 +22,18 @@ mod tests;
 #[derive(Default)]
 pub struct NoteExports(Mutex<Option<(String, Arc<NoteExportSnapshot>)>>);
 
+impl NoteExports {
+    pub(crate) fn retained(&self, token: &str) -> Result<Arc<NoteExportSnapshot>, String> {
+        self.0
+            .lock()
+            .map_err(|_| "Note export snapshot unavailable")?
+            .as_ref()
+            .filter(|(identity, _)| identity == token)
+            .map(|(_, snapshot)| snapshot.clone())
+            .ok_or_else(|| "Note export snapshot changed; select the scope again".into())
+    }
+}
+
 #[derive(Serialize)]
 pub struct ExportSummary {
     token: String,
@@ -63,6 +75,25 @@ pub fn write_note_csv(snapshot: &NoteExportSnapshot, destination: &Path) -> Resu
         .into_inner()
         .map_err(|error| format!("Could not finish CSV: {error}"))?;
     std::fs::write(destination, bytes).map_err(|error| format!("Could not write CSV file: {error}"))
+}
+
+pub fn write_note_markdown(
+    snapshot: &NoteExportSnapshot,
+    destination: &Path,
+) -> Result<(), String> {
+    let [record] = snapshot.records.as_slice() else {
+        return Err("Single Markdown export requires one saved vocabulary record".into());
+    };
+    std::fs::write(
+        destination,
+        crate::note_markdown::format_note_markdown(record),
+    )
+    .map_err(|error| {
+        format!(
+            "Could not write Markdown file {}: {error}",
+            destination.display()
+        )
+    })
 }
 
 #[tauri::command]
@@ -107,14 +138,7 @@ pub async fn note_export_csv(
     token: String,
 ) -> Result<ExportResult, String> {
     crate::backup_operations::main_window(&window)?;
-    let snapshot = exports
-        .0
-        .lock()
-        .map_err(|_| "Note export snapshot unavailable")?
-        .as_ref()
-        .filter(|(identity, _)| *identity == token)
-        .map(|(_, snapshot)| snapshot.clone())
-        .ok_or("Note export snapshot changed; select the scope again")?;
+    let snapshot = exports.retained(&token)?;
     if snapshot.records.is_empty() {
         return Err("No saved vocabulary in this export scope".into());
     }
@@ -146,4 +170,64 @@ pub async fn note_export_csv(
     })
     .await
     .map_err(|error| format!("CSV export task failed: {error}"))?
+}
+
+#[tauri::command]
+pub async fn note_export_markdown(
+    app: tauri::AppHandle,
+    window: tauri::WebviewWindow,
+    exports: State<'_, NoteExports>,
+    token: Option<String>,
+) -> Result<ExportResult, String> {
+    crate::backup_operations::main_window(&window)?;
+    let snapshot = token
+        .as_deref()
+        .map(|token| exports.retained(token))
+        .transpose()?;
+    let (filename, rows) = if let Some(snapshot) = &snapshot {
+        let [record] = snapshot.records.as_slice() else {
+            return Err("Single Markdown export requires one saved vocabulary record".into());
+        };
+        (
+            crate::note_markdown::note_markdown_filename(record),
+            snapshot.row_count(),
+        )
+    } else {
+        ("lexique-note-v1.md".into(), 1)
+    };
+    tauri::async_runtime::spawn_blocking(move || {
+        let destination = app
+            .dialog()
+            .file()
+            .set_parent(&window)
+            .add_filter("Markdown", &["md"])
+            .set_file_name(&filename)
+            .blocking_save_file();
+        let state = if let Some(destination) = destination {
+            let path = destination
+                .into_path()
+                .map_err(|error| format!("Could not resolve Markdown destination: {error}"))?;
+            if let Some(snapshot) = &snapshot {
+                write_note_markdown(snapshot, &path)?;
+            } else {
+                std::fs::write(
+                    &path,
+                    include_str!("../../../../docs/examples/lexique-note-v1.md"),
+                )
+                .map_err(|error| {
+                    format!("Could not write Markdown file {}: {error}", path.display())
+                })?;
+            }
+            "saved"
+        } else {
+            "cancelled"
+        };
+        Ok(ExportResult {
+            state,
+            records: 1,
+            rows,
+        })
+    })
+    .await
+    .map_err(|error| format!("Markdown export task failed: {error}"))?
 }
