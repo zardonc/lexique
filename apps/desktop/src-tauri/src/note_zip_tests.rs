@@ -210,7 +210,7 @@ fn zip_exports_all_and_current_query_in_saved_snapshot_order_with_unique_windows
         let mut names = std::collections::HashSet::new();
         for (index, record) in expected.records.iter().enumerate() {
             let mut entry = archive.by_index(index).unwrap();
-            let name = entry.name().unwrap();
+            let name = entry.name().unwrap().into_owned();
             assert!(names.insert(name.to_lowercase()));
             assert!(!name.chars().any(|ch| "<>:\"/\\|?*".contains(ch)));
             assert!(name.ends_with(&format!("-{}.md", record.id)));
