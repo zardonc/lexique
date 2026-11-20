@@ -1,0 +1,55 @@
+{
+  "status": "passed_at_selected_text_boundary_for_200_fields",
+  "proposed_adaptation_license": "CC-BY-SA-4.0",
+  "complete_legal_text": "../../../resources/core-pilot-79/COPYING",
+  "selected_text_rights_reason": "Selected French lexical definition, grammatical frame and IPA inspected directly, apart from literary/news quotations, etymology, media, bilingual tables and other-language sections. No non-DAF8 external-text import notice attaches to the selected wording. Bibliographic links alone do not identify its author. Contributor transcription/adaptation is reused under CC BY-SA 4.0 with fixed article/history credit; applicable DAF8 original-edition attribution is retained conservatively without claiming sentence-level authorship. Lexique translations/adaptations retain that licence and modification notices.",
+  "redistribution_obligations": [
+    "Credit fixed article and full linked history to the contributing authors; preserve applicable original-edition notices.",
+    "Retain supplied copyright, licence and disclaimer notices; include CC BY-SA 4.0 legal text/link.",
+    "Mark Lexique scoped adaptations, translations and IPA-template formatting, retaining previous modification notices.",
+    "Distribute adapted dictionary content and applicable database rights under CC BY-SA 4.0; project MIT does not relicense it.",
+    "Impose no additional restrictions or effective technological measures obstructing the licensed rights."
+  ],
+  "authority_captures": [
+    {
+      "path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\reviewer-primary\\fr-policy.api.json",
+      "url": "https://fr.wiktionary.org/w/api.php?action=query&format=json&formatversion=2&prop=revisions&titles=Convention%3ADroit+d%E2%80%99auteur%7CMod%C3%A8le%3AImport%3ADAF8&rvprop=ids%7Ctimestamp%7Cuser%7Ccontent&rvslots=main",
+      "status": 200,
+      "pages": [
+        {
+          "title": "Convention:Droit d’auteur",
+          "pageid": 11150,
+          "revid": 38903168,
+          "timestamp": "2025-10-14T19:47:22Z",
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\reviewer-primary\\policy-11150.wiki"
+        },
+        {
+          "title": "Modèle:Import:DAF8",
+          "pageid": 273395,
+          "revid": 22113837,
+          "timestamp": "2017-02-04T13:48:32Z",
+          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\reviewer-primary\\policy-273395.wiki"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\reviewer-primary\\cc-legal.html",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "status": 200
+    },
+    {
+      "path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\reviewer-primary\\terms.html",
+      "url": "https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use",
+      "status": 200
+    },
+    {
+      "path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-107\\target\\issue-107\\reviewer-primary\\l123-3.html",
+      "url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ],
+  "original_daf8_basis_source": "../issue-99/sources.json",
+  "original_daf8_basis_scope": "Established Académie française collective DAF8 edition 1932–1935; conservative expiry 2006-01-01. Independent current legal endpoint returned 403; the established edition basis and current Wiktionnaire copyright-policy/template captures are reused, not a claimed live statute refresh.",
+  "proprietary_corroboration": "Le Robert e and censé captures establish grammar only; no proprietary wording is redistributed.",
+  "final_combined_package_status": "pending_parent_conversion_notices_and_native_gates"
+}
