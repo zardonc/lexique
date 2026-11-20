@@ -40,6 +40,7 @@ pub fn preview_markdown_bytes(
                 None => "create",
             };
             preview.groups.push(NoteImportGroup {
+                files: None,
                 content,
                 existing,
                 status,

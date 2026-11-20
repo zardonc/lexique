@@ -33,6 +33,8 @@ pub struct NoteImportOptions {
 }
 #[derive(Clone, Debug, Serialize)]
 pub struct NoteImportGroup {
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub files: Option<Vec<String>>,
     pub content: NoteImportContent,
     pub rows: Vec<u64>,
     pub existing: Option<VocabularyRecord>,
@@ -86,15 +88,11 @@ pub fn read_note_file(path: &Path, format: NoteFormat) -> Result<(ImportSource, 
     source
         .validate()
         .map_err(|error| format!("{}: {error}", source.filename))?;
-    let file =
+    let mut file =
         File::open(path).map_err(|error| format!("Could not open {}: {error}", path.display()))?;
     let mut bytes = Vec::new();
-    file.take(32 * 1024 * 1024 + 1)
-        .read_to_end(&mut bytes)
+    file.read_to_end(&mut bytes)
         .map_err(|error| format!("Could not read {}: {error}", path.display()))?;
-    if bytes.len() > 32 * 1024 * 1024 {
-        return Err(format!("{}: note file exceeds 32 MiB", source.filename));
-    }
     Ok((source, bytes))
 }
 
@@ -112,6 +110,7 @@ fn preview_note_bytes(
         NoteFormat::Markdown => {
             crate::note_markdown::preview_markdown_bytes(connection, source, bytes, operation)
         }
+        NoteFormat::Zip => crate::note_zip::preview_zip_bytes(connection, source, bytes, operation),
     }
 }
 
@@ -268,6 +267,7 @@ pub async fn note_import_preview(
         let selected = match format {
             NoteFormat::Csv => dialog.add_filter("CSV", &["csv"]),
             NoteFormat::Markdown => dialog.add_filter("Markdown", &["md", "markdown"]),
+            NoteFormat::Zip => dialog.add_filter("Markdown ZIP", &["zip"]),
         }
         .blocking_pick_file();
         let Some(selected) = selected else {

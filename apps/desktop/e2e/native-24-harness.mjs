@@ -11,7 +11,7 @@ import assert from 'node:assert/strict';
 
 export async function native24Fixture(packagePath, binaryPath, destinationPath) {
   const destination = resolve(destinationPath);
-  assert.ok(['issue-9', 'issue-24', 'issue-56', 'issue-57', 'issue-58', 'issue-59', 'issue-65', 'issue-66', 'issue-75', 'issue-79', 'issue-80', 'issue-81', 'issue-82', 'issue-83', 'issue-84', 'issue-85', 'issue-86', 'issue-87', 'issue-88', 'issue-89', 'issue-90', 'issue-91', 'issue-92', 'issue-93', 'issue-94', 'issue-95', 'issue-96', 'issue-97', 'issue-98', 'issue-99', 'issue-100', 'issue-101', 'issue-102', 'issue-103', 'issue-104', 'issue-105', 'issue-106', 'issue-107', 'issue-108', 'issue-109', 'grammar-classification'].some((issue) => destination.startsWith(resolve('../../target/' + issue) + '\\')));
+  assert.ok(['issue-9', 'issue-24', 'issue-56', 'issue-57', 'issue-58', 'issue-59', 'issue-65', 'issue-66', 'issue-75', 'issue-79', 'issue-80', 'issue-81', 'issue-82', 'issue-83', 'issue-84', 'issue-85', 'issue-86', 'issue-87', 'issue-88', 'issue-89', 'issue-90', 'issue-91', 'issue-92', 'issue-93', 'issue-94', 'issue-95', 'issue-96', 'issue-97', 'issue-98', 'issue-99', 'issue-100', 'issue-101', 'issue-102', 'issue-103', 'issue-104', 'issue-105', 'issue-106', 'issue-107', 'issue-108', 'issue-109', 'grammar-classification', 'issue-189'].some((issue) => destination.startsWith(resolve('../../target/' + issue) + '\\')));
   await mkdir(destination);
   // Reused test packages also contain old results. Only copy distribution resources:
   // a failed run must never inherit a successful report or someone else's data.

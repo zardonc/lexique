@@ -8,6 +8,9 @@ use std::{
 #[path = "note_import_batch_tests.rs"]
 mod batch;
 
+#[path = "note_zip_tests.rs"]
+mod zip;
+
 fn preview_file(
     connection: &Connection,
     path: &Path,
@@ -78,6 +81,68 @@ impl Drop for Fixture {
 }
 fn row(word: &str, notes: &str, fr: &str, zh: &str) -> Vec<String> {
     [word, notes, fr, zh].map(String::from).into()
+}
+
+#[test]
+fn valid_saved_csv_exports_larger_than_32_mib_preview_and_reimport_exactly() {
+    let mut failures = Vec::new();
+    for (count, notes, zh) in [(6, "n", "z"), (3, "中", "文")] {
+        let fixture = Fixture::new();
+        let mut connection = fixture.open();
+        let items = (0..count)
+            .map(|index| NoteImportItem {
+                content: NoteImportContent {
+                    headword: format!("large-{index}"),
+                    notes: Some(notes.repeat(20_000)),
+                    examples: Some(vec![
+                        NoteExample {
+                            fr: "f".repeat(20_000),
+                            zh: zh.repeat(20_000),
+                        };
+                        101
+                    ]),
+                },
+                existing: None,
+                source: ImportSource {
+                    format: NoteFormat::Csv,
+                    filename: "seed.csv".into(),
+                },
+                snapshot: None,
+            })
+            .collect::<Vec<_>>();
+        save_note_import_batch(&mut connection, "large-seed", &items, 0).unwrap();
+        let expected = capture_note_export(
+            &mut connection,
+            &NoteExportScope::All {
+                sort: "headword-asc".into(),
+            },
+        )
+        .unwrap();
+        let path = fixture.0.join("large.csv");
+        crate::note_export::write_note_csv(&expected, &path).unwrap();
+        assert!(std::fs::metadata(&path).unwrap().len() > 32 * 1024 * 1024);
+        let mut destination = Connection::open(fixture.0.join("destination.sqlite3")).unwrap();
+        initialize(&destination).unwrap();
+        let preview = match preview_file(&destination, &path, "large-reimport") {
+            Ok(preview) => preview,
+            Err(error) => {
+                failures.push(format!("{count} records ({notes}/{zh}): {error}"));
+                continue;
+            }
+        };
+        assert!(preview.error.is_none());
+        assert_eq!(preview.groups.len(), count);
+        commit_creates(&mut destination, &preview).unwrap();
+        let actual = capture_note_export(
+            &mut destination,
+            &NoteExportScope::All {
+                sort: "headword-asc".into(),
+            },
+        )
+        .unwrap();
+        assert_eq!(actual.records, expected.records);
+    }
+    assert!(failures.is_empty(), "{}", failures.join("\n"));
 }
 
 #[test]

@@ -28,4 +28,8 @@ export const noteExportRuntime = {
     if (!isTauri()) throw new Error('Markdown export requires the desktop application');
     return resultSchema.parse(await invoke('note_export_markdown', { token: z.string().min(1).nullable().parse(token) }));
   },
+  async exportNoteZip(token: string) {
+    if (!isTauri()) throw new Error('Markdown ZIP export requires the desktop application');
+    return resultSchema.parse(await invoke('note_export_zip', { token: z.string().min(1).parse(token) }));
+  },
 };

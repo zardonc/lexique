@@ -85,6 +85,7 @@ pub struct ImportSource {
 pub enum NoteFormat {
     Csv,
     Markdown,
+    Zip,
 }
 
 impl ImportSource {

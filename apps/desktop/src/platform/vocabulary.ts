@@ -29,7 +29,7 @@ const exampleSource = reference.nullable().optional();
 export const dictionarySnapshotSchema = z.object({ reference, digest: z.array(digestEntry).min(1).readonly() }).strict().readonly();
 const moreExamples = z.array(z.object({ fr: notes, zh: notes, source: exampleSource, sense: z.number().int().nonnegative().safe().optional() }).strict().readonly()).max(100).readonly();
 export const importSourceSchema = z.object({
-  format: z.enum(['csv', 'markdown']),
+  format: z.enum(['csv', 'markdown', 'zip']),
   filename: z.string().min(1).refine((value) => value.trim().length > 0 && characterCount(value) <= 255 && Array.from(value).every((char) => {
     const code = char.codePointAt(0)!;
     return code >= 32 && (code < 127 || code > 159) && char !== '/' && char !== '\\';
