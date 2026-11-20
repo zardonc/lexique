@@ -163,6 +163,7 @@ fn main() {
             "vocabulary_list",
             "note_export_snapshot",
             "note_export_csv",
+            "note_export_markdown",
             "grammar_list",
             "grammar_get",
             "grammar_save",

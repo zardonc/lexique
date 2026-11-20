@@ -19,6 +19,12 @@ function ExportCounts({ snapshot, text }: { readonly snapshot: NoteExportSnapsho
   return <p role="status">{snapshot.records} {text.records} · {snapshot.rows} {text.rows}{snapshot.records === 0 && <> — {text.empty}</>}</p>;
 }
 
+function MarkdownSave({ single, disabled, text, save }: {
+  readonly single: boolean; readonly disabled: boolean; readonly text: NoteExportText; readonly save: () => void;
+}) {
+  return single && <button disabled={disabled} onClick={save}>{text.saveMarkdown}</button>;
+}
+
 function ExportDialog({ runtime, scope, text, close }: {
   readonly runtime: RuntimeAdapter; readonly scope: NoteExportScope; readonly text: NoteExportText; readonly close: () => void;
 }) {
@@ -34,10 +40,10 @@ function ExportDialog({ runtime, scope, text, close }: {
       .catch((cause: unknown) => { if (!cancelled) setError(errorMessage(cause)); });
     return () => { cancelled = true; };
   }, [runtime, selection, retry]);
-  async function save() {
+  async function save(format: 'csv' | 'markdown' = 'csv') {
     if (!snapshot || busy) return;
     setBusy(true); setError(''); setResult('');
-    try { const value = await runtime.exportNoteCsv(snapshot.token); setResult(value.state === 'saved' ? text.saved : text.cancelled); }
+    try { const value = await (format === 'markdown' ? runtime.exportNoteMarkdown(snapshot.token) : runtime.exportNoteCsv(snapshot.token)); setResult(value.state === 'saved' ? text.saved : text.cancelled); }
     catch (cause) { setError(errorMessage(cause)); }
     finally { setBusy(false); }
   }
@@ -49,6 +55,7 @@ function ExportDialog({ runtime, scope, text, close }: {
     {error && <p role="alert">{error} <button disabled={busy} onClick={() => setRetry((value) => value + 1)}>{text.retry}</button></p>}
     {result && <p role="status">{result}</p>}
     <div className="actions"><button disabled={busy || !snapshot?.records} onClick={() => { void save(); }}>{busy ? text.busy : text.save}</button>
+      <MarkdownSave single={scope.kind === 'single'} disabled={busy || !snapshot?.records} text={text} save={() => { void save('markdown'); }} />
       <button disabled={busy} onClick={close}>{text.close}</button></div>
   </dialog>;
 }
@@ -58,6 +65,7 @@ export function NoteExport({ runtime, scope, text, disabled = false }: {
 }) {
   const [open, setOpen] = useState(false);
   return <><button disabled={disabled} onClick={() => setOpen(true)}>{text.open}</button>
+    {scope.kind === 'single' && <button disabled={disabled} onClick={() => setOpen(true)}>{text.openMarkdown}</button>}
     {open && <ExportDialog runtime={runtime} scope={scope} text={text} close={() => setOpen(false)} />}</>;
 }
 

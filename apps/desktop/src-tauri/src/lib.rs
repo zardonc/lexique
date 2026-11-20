@@ -29,6 +29,7 @@ use dictionaries::{
 mod note_export;
 mod note_import;
 mod note_import_csv;
+mod note_markdown;
 mod notes;
 mod speech_cache;
 mod speech_tasks;
@@ -192,6 +193,7 @@ pub fn run() {
             vocabulary_list,
             note_export::note_export_snapshot,
             note_export::note_export_csv,
+            note_export::note_export_markdown,
             notes::grammar_list,
             notes::grammar_get,
             notes::grammar_save,

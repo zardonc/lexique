@@ -5,11 +5,13 @@ import type { NoteImportMapping, NoteImportPreview, NoteImportResult, NoteImport
 import { errorMessage } from './platform/vocabulary';
 import type { VocabularyRecord } from './platform/vocabulary';
 import type { BatchReview } from './use-batch-review';
+import template from '../../../docs/examples/lexique-note-v1.md?raw';
 
 function useNoteImport(runtime: RuntimeAdapter, messages: NotebookText['interchange'], onSaved: () => void) {
   const [preview, setPreview] = useState<NoteImportPreview | null>(null), [result, setResult] = useState<NoteImportResult | null>(null);
   const [error, setError] = useState(''), [status, setStatus] = useState(''), [busy, setBusy] = useState(false), [dirty, setDirty] = useState(false);
   const [delimiter, setDelimiter] = useState<'comma' | 'semicolon'>('comma');
+  const [format, setFormat] = useState<'csv' | 'markdown'>('csv');
   const [mapping, setMapping] = useState<NoteImportMapping>({ headword: null, notes: null, example_fr: null, example_zh: null });
   const [decisions, setDecisions] = useState<readonly (NoteImportSelection['action'] | '')[]>([]);
   const working = useRef(false), operation = useRef<string | null>(null);
@@ -25,14 +27,15 @@ function useNoteImport(runtime: RuntimeAdapter, messages: NotebookText['intercha
     try { await action(); } catch (cause) { setError(errorMessage(cause)); }
     finally { working.current = false; setBusy(false); }
   }
-  function select() { void work(async () => {
+  function select(format: 'csv' | 'markdown' = 'csv') { void work(async () => {
+    setFormat(format);
     if (operation.current) await runtime.cancelNoteImport(operation.current);
     setPreview(null); setResult(null);
     const id = crypto.randomUUID(); operation.current = id;
-    accept(await runtime.previewNoteImport(id, { delimiter, mapping: null }));
+    accept(await runtime.previewNoteImport(id, { delimiter, mapping: null, ...(format === 'markdown' ? { format } : {}) }));
   }); }
   function remap() { void work(async () => {
-    if (operation.current) accept(await runtime.remapNoteImport(operation.current, { delimiter, mapping }));
+    if (operation.current) accept(await runtime.remapNoteImport(operation.current, { delimiter, mapping, ...(format === 'markdown' ? { format } : {}) }));
   }); }
   function confirm() { void work(async () => {
     if (!preview || dirty || decisions.some((action) => !action)) return;
@@ -44,7 +47,11 @@ function useNoteImport(runtime: RuntimeAdapter, messages: NotebookText['intercha
     if (operation.current) await runtime.cancelNoteImport(operation.current);
     operation.current = null; setPreview(null); setError(''); setStatus(messages.cancelled);
   }); }
-  return { preview, result, error, status, busy, dirty, delimiter, mapping, decisions, select, remap, confirm, cancel,
+  function exportTemplate() { void work(async () => {
+    const exported = await runtime.exportNoteMarkdown(null);
+    setStatus(exported.state === 'saved' ? messages.markdown.exported : messages.markdown.cancelled);
+  }); }
+  return { preview, result, error, status, busy, dirty, delimiter, format, mapping, decisions, select, remap, confirm, cancel, exportTemplate,
     map: (field: keyof NoteImportMapping, value: number | null) => { setMapping((old) => ({ ...old, [field]: value })); setDirty(true); },
     separate: (value: 'comma' | 'semicolon') => { setDelimiter(value); if (preview) setDirty(true); },
     decide: (index: number, action: NoteImportSelection['action'] | '') => setDecisions((old) => old.map((value, at) => at === index ? action : value)) };
@@ -53,6 +60,7 @@ type ImportState = ReturnType<typeof useNoteImport>;
 type Messages = NotebookText['interchange'];
 
 function Mapping({ state, messages }: { readonly state: ImportState; readonly messages: Messages }) {
+  if (state.format === 'markdown') return state.preview && <button disabled={state.busy} onClick={state.remap}>{messages.remap}</button>;
   return <fieldset disabled={state.busy}>
     <label>{messages.delimiter}<select aria-label={messages.delimiter} value={state.delimiter} onChange={(event) => state.separate(event.target.value as 'comma' | 'semicolon')}>
       <option value="comma">{messages.comma}</option><option value="semicolon">{messages.semicolon}</option>
@@ -88,8 +96,9 @@ function ImportPreview({ state, messages }: { readonly state: ImportState; reado
   const preview = state.preview;
   if (!preview) return null;
   const selected = state.decisions.filter((action) => action === 'create' || action === 'update').length;
-  return <section aria-label={messages.title}>
-    <h3>{messages.title}</h3><p>{messages.source}: {preview.source.filename}</p>
+  const title = state.format === 'markdown' ? messages.markdown.title : messages.title;
+  return <section aria-label={title}>
+    <h3>{title}</h3><p>{messages.source}: {preview.source.filename}</p>
     {preview.error && <p role="alert">{preview.error}</p>}
     {preview.groups.map((_group, index) => <Group key={index} state={state} index={index} messages={messages} />)}
     <p>{messages.selected}: {selected}</p>
@@ -98,19 +107,27 @@ function ImportPreview({ state, messages }: { readonly state: ImportState; reado
   </section>;
 }
 
+function ImportFeedback({ state, messages }: { readonly state: ImportState; readonly messages: Messages }) {
+  const labels = state.format === 'markdown' ? messages.markdown : messages;
+  return <>{state.busy && <p role="status">{labels.busy}</p>}
+    {state.error && <p role="alert">{labels.error}: {state.error}</p>}</>;
+}
+
 export function NoteImport({ runtime, text, onSaved, onOpen, onPrepare, batch }: {
   readonly runtime: RuntimeAdapter; readonly text: NotebookText; readonly onSaved: () => void;
   readonly onOpen: (record: VocabularyRecord) => void; readonly onPrepare: (action: () => void) => void;
   readonly batch: BatchReview;
 }) {
   const messages = text.interchange, state = useNoteImport(runtime, messages, onSaved);
-  const { busy, error, status, result } = state;
+  const { busy, status, result } = state;
   return <section aria-label={messages.open}>
-    <button disabled={busy} onClick={() => onPrepare(state.select)}>{messages.open}</button><p>{messages.columns}</p>
+    <button disabled={busy} onClick={() => onPrepare(() => state.select())}>{messages.open}</button>
+    <button disabled={busy} onClick={() => onPrepare(() => state.select('markdown'))}>{messages.markdown.open}</button><p>{messages.columns}</p>
+    <details><summary>{messages.markdown.help}</summary><p>{messages.markdown.rules}</p><pre>{template}</pre>
+      <button disabled={busy} onClick={state.exportTemplate}>{messages.markdown.example}</button></details>
     <Mapping state={state} messages={messages} />
-    {busy && <p role="status">{messages.busy}</p>}
+    <ImportFeedback state={state} messages={messages} />
     <ImportPreview state={state} messages={messages} />
-    {error && <p role="alert">{messages.error}: {error}</p>}
     {status && <p role="status">{status}{result && <> {messages.createdCount} {result.created} · {messages.updatedCount} {result.updated} · {messages.skippedCount} {result.skipped}</>}</p>}
     {result?.records.map((record) => <button key={record.id} onClick={() => onOpen(record)}>{messages.openRecord}{result.records.length > 1 && `：${record.headword}`}</button>)}
     {!!result?.records.length && <button disabled={batch.working || !!batch.pending} onClick={() => onPrepare(() => { void batch.run(result.records, 'add'); })}>{messages.addBatch}</button>}

@@ -24,4 +24,8 @@ export const noteExportRuntime = {
     if (!isTauri()) throw new Error('Note export is available in the desktop app only');
     return resultSchema.parse(await invoke('note_export_csv', { token: z.string().min(1).parse(token) }));
   },
+  async exportNoteMarkdown(token: string | null) {
+    if (!isTauri()) throw new Error('Markdown export requires the desktop application');
+    return resultSchema.parse(await invoke('note_export_markdown', { token: z.string().min(1).nullable().parse(token) }));
+  },
 };
