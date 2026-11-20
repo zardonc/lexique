@@ -33,17 +33,17 @@ export type NoteImportResult = z.infer<typeof resultSchema>;
 export const noteImportRuntime = {
   async previewNoteImport(operation: string, options: NoteImportOptions): Promise<NoteImportPreview | null> {
     operationSchema.parse(operation); optionsSchema.parse(options);
-    if (!isTauri()) throw new Error('CSV import requires the desktop application');
+    if (!isTauri()) throw new Error(`${options.format === 'markdown' ? 'Markdown' : 'CSV'} import requires the desktop application`);
     return noteImportPreviewSchema.nullable().parse(await invoke('note_import_preview', { operation, options }));
   },
   async remapNoteImport(operation: string, options: NoteImportOptions): Promise<NoteImportPreview> {
     operationSchema.parse(operation); optionsSchema.parse(options);
-    if (!isTauri()) throw new Error('CSV import requires the desktop application');
+    if (!isTauri()) throw new Error(`${options.format === 'markdown' ? 'Markdown' : 'CSV'} import requires the desktop application`);
     return noteImportPreviewSchema.parse(await invoke('note_import_remap', { operation, options }));
   },
   async commitNoteImport(operation: string, selections: readonly NoteImportSelection[]): Promise<NoteImportResult> {
     operationSchema.parse(operation); z.array(selectionSchema).parse(selections);
-    if (!isTauri()) throw new Error('CSV import requires the desktop application');
+    if (!isTauri()) throw new Error('Note import requires the desktop application');
     return resultSchema.parse(await invoke('note_import_commit', { operation, selections }));
   },
   async cancelNoteImport(operation: string) {

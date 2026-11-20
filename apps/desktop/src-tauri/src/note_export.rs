@@ -180,22 +180,20 @@ pub async fn note_export_markdown(
     token: Option<String>,
 ) -> Result<ExportResult, String> {
     crate::backup_operations::main_window(&window)?;
-    let (filename, text, rows) = if let Some(token) = token {
-        let snapshot = exports.retained(&token)?;
+    let snapshot = token
+        .as_deref()
+        .map(|token| exports.retained(token))
+        .transpose()?;
+    let (filename, rows) = if let Some(snapshot) = &snapshot {
         let [record] = snapshot.records.as_slice() else {
             return Err("Single Markdown export requires one saved vocabulary record".into());
         };
         (
             crate::note_markdown::note_markdown_filename(record),
-            crate::note_markdown::format_note_markdown(record),
             snapshot.row_count(),
         )
     } else {
-        (
-            "lexique-note-v1.md".into(),
-            include_str!("../../../../docs/examples/lexique-note-v1.md").into(),
-            1,
-        )
+        ("lexique-note-v1.md".into(), 1)
     };
     tauri::async_runtime::spawn_blocking(move || {
         let destination = app
@@ -209,9 +207,17 @@ pub async fn note_export_markdown(
             let path = destination
                 .into_path()
                 .map_err(|error| format!("Could not resolve Markdown destination: {error}"))?;
-            std::fs::write(&path, text).map_err(|error| {
-                format!("Could not write Markdown file {}: {error}", path.display())
-            })?;
+            if let Some(snapshot) = &snapshot {
+                write_note_markdown(snapshot, &path)?;
+            } else {
+                std::fs::write(
+                    &path,
+                    include_str!("../../../../docs/examples/lexique-note-v1.md"),
+                )
+                .map_err(|error| {
+                    format!("Could not write Markdown file {}: {error}", path.display())
+                })?;
+            }
             "saved"
         } else {
             "cancelled"

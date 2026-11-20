@@ -11,8 +11,7 @@ import template from '../../../docs/examples/lexique-note-v1.md?raw';
 function useNoteImport(runtime: RuntimeAdapter, messages: NotebookText['interchange'], onSaved: () => void) {
   const [preview, setPreview] = useState<NoteImportPreview | null>(null), [result, setResult] = useState<NoteImportResult | null>(null);
   const [error, setError] = useState(''), [status, setStatus] = useState(''), [busy, setBusy] = useState(false), [dirty, setDirty] = useState(false);
-  const [delimiter, setDelimiter] = useState<'comma' | 'semicolon'>('comma');
-  const [format, setFormat] = useState<'csv' | 'markdown'>('csv');
+  const [delimiter, setDelimiter] = useState<'comma' | 'semicolon'>('comma'), [format, setFormat] = useState<'csv' | 'markdown'>('csv');
   const [mapping, setMapping] = useState<NoteImportMapping>({ headword: null, notes: null, example_fr: null, example_zh: null });
   const [decisions, setDecisions] = useState<readonly (NoteImportSelection['action'] | '')[]>([]);
   const [allowUnlinked, setAllowUnlinked] = useState<readonly boolean[]>([]);
@@ -51,8 +50,7 @@ function useNoteImport(runtime: RuntimeAdapter, messages: NotebookText['intercha
     operation.current = null; setPreview(null); setError(''); setStatus(messages.cancelled);
   }); }
   function exportTemplate() { void work(async () => {
-    const exported = await runtime.exportNoteMarkdown(null);
-    setStatus(exported.state === 'saved' ? messages.markdown.exported : messages.markdown.cancelled);
+    const exported = await runtime.exportNoteMarkdown(null); setStatus(exported.state === 'saved' ? messages.markdown.exported : messages.markdown.cancelled);
   }); }
   return { preview, result, error, status, busy, dirty, delimiter, format, mapping, decisions, allowUnlinked, needsConsent, select, remap, confirm, cancel, exportTemplate,
     continueUnlinked: (index: number, value: boolean) => setAllowUnlinked((old) => old.map((allowed, at) => at === index ? value : allowed)),

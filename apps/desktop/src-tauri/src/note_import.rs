@@ -324,7 +324,8 @@ pub async fn note_import_remap(
         let (source, bytes) = session.file.as_ref().ok_or("Note selection is not ready")?;
         let connection =
             crate::vocabulary::open(app.state::<crate::vocabulary::DatabasePath>().inner())?;
-        let mut preview = preview_note_bytes(&connection, source.clone(), bytes, &operation, &options)?;
+        let mut preview =
+            preview_note_bytes(&connection, source.clone(), bytes, &operation, &options)?;
         enrich_preview_from_app(&app, &mut preview)?;
         session.preview = Some(preview.clone());
         Ok(preview)
