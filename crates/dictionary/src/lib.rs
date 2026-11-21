@@ -38,7 +38,7 @@ pub struct Lookup {
     pub warnings: Vec<LookupWarning>,
 }
 
-#[derive(Debug, Serialize)]
+#[derive(Clone, Debug, Serialize)]
 pub struct LookupWarning {
     pub dictionary_id: String,
     pub code: &'static str,

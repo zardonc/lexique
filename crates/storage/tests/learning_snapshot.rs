@@ -110,7 +110,7 @@ fn empty_snapshot_contains_the_complete_portable_contract() {
         .unwrap();
     let snapshot = export_learning_snapshot(&mut connection, 1_800_000_000).unwrap();
     let value = serde_json::to_value(snapshot).unwrap();
-    assert_eq!(value["snapshot_version"], 3);
+    assert_eq!(value["snapshot_version"], 4);
     for collection in [
         "records",
         "save_operations",
@@ -188,6 +188,7 @@ fn old_save_requests_and_unknown_example_sources_keep_their_original_meaning() {
             example_source: None,
             example_sense: Some(0),
             more_examples: vec![Example {
+                sense: None,
                 fr: "Une école.".into(),
                 zh: String::new(),
                 source: None,

@@ -1,4 +1,5 @@
 import { ExampleSource } from './example-source';
+import { VocabularySource } from './vocabulary-source';
 import { useEffect, useMemo, useRef } from 'react';
 import type { ReactNode } from 'react';
 import { FrequencyBadge, FrequencyDetails, FrequencyState, useFrequency } from './frequency';
@@ -13,10 +14,12 @@ import { SpeechButton } from './speech-button';
 import { CoreSenseContent, digestLabel } from './core-sense';
 import { CategoryPicker } from './learning-categories';
 import type { LearningCategories } from './learning-categories';
+import { SavedNoteExport } from './note-export';
 
 export function VocabularySummary({ snapshot, text, frequency }: { readonly snapshot: VocabularySnapshot; readonly text: NotebookText; readonly frequency?: ReactNode }) {
   return <section className="vocabulary-summary" aria-label={text.summary}>
     <h3><span lang="fr">{snapshot.headword}</span> {frequency}</h3>
+    {!snapshot.digest.length && <p>{text.interchange.missing}</p>}
     {snapshot.digest.map((entry, index) => entry.core ? <CoreSenseContent key={index} sense={entry.core} text={text.core} /> : <dl key={index}>
       <dt>{text.pronunciation}</dt><dd lang="fr">{entry.pronunciations.join(' · ') || text.missing}</dd>
       <dt>{text.grammar}</dt><dd>{entry.grammar.join(' · ') || text.missing}</dd>
@@ -38,11 +41,7 @@ function SavedVocabularySummary({ snapshot, text, runtime }: {
 }
 
 function SavedSource({ snapshot, text }: { readonly snapshot: VocabularySnapshot; readonly text: NotebookText }) {
-  const source = snapshot.reference;
-  return <footer className="dictionary-source"><h4>{text.source}</h4>
-    <p>{source.dictionary} · {source.version}</p><p>{source.attribution ?? text.missing} · {source.license ?? text.missing}</p>
-    <p>{source.source_url ?? text.missing}</p><p>{source.license_url ?? text.missing}</p>
-  </footer>;
+  return <VocabularySource snapshot={snapshot} text={text} />;
 }
 
 function Conflict({ notebook, text, runtime }: { readonly notebook: Notebook; readonly text: NotebookText; readonly runtime: RuntimeAdapter }) {
@@ -83,12 +82,17 @@ function ExampleEditor({ notebook, text, runtime }: { readonly notebook: Noteboo
       <option value="">{text.exampleSenseUnspecified}</option>{editor.snapshot.digest.map((entry, index) => <option key={index} value={index} lang={entry.core ? 'zh' : undefined}>{digestLabel(entry, text.missing)}</option>)}
     </select>
     {notebook.meaningRequired && <p id="example-sense-required" className="runtime-error">{text.exampleSenseRequired}</p>}
+    {editor.snapshot.import_source && editor.example_sense === null && <p role="status">{text.interchange.association}</p>}
     <ExampleSource source={editor.example_source} text={text} runtime={runtime} />
     <label htmlFor="example-fr">{text.exampleFr}</label><textarea id="example-fr" lang="fr" value={editor.example_fr} disabled={notebook.busy} rows={3} aria-invalid={characterCount(editor.example_fr) > 20_000} aria-describedby={overLimit ? 'example-limit' : undefined} onChange={(event) => notebook.editExample('example_fr', event.target.value)} />
     <ExampleSpeech value={editor.example_fr} runtime={runtime} text={text} />
     <label htmlFor="example-zh">{text.exampleZh}</label><textarea id="example-zh" lang="zh" value={editor.example_zh} disabled={notebook.busy} rows={3} aria-invalid={characterCount(editor.example_zh) > 20_000} aria-describedby={overLimit ? 'example-limit' : undefined} onChange={(event) => notebook.editExample('example_zh', event.target.value)} />
     {editor.more_examples.map((example, index) => <fieldset key={index}><legend>{text.exampleUser} {index + 2}</legend>
       <ExampleSource source={example.source} text={text} runtime={runtime} />
+      <label>{text.exampleSense}<select aria-label={`${text.exampleSense} ${index + 2}`} disabled={notebook.busy} value={example.sense ?? ''}
+        onChange={(event) => notebook.editMore(editor.more_examples.map((item, at) => at === index ? { ...item, sense: event.target.value === '' ? undefined : Number(event.target.value) } : item))}>
+        <option value="">{text.exampleSenseUnspecified}</option>{editor.snapshot.digest.map((entry, at) => <option key={at} value={at}>{digestLabel(entry, text.missing)}</option>)}
+      </select></label>
       <label htmlFor={`example-fr-${index}`}>{text.exampleFr}</label><textarea id={`example-fr-${index}`} lang="fr" value={example.fr} disabled={notebook.busy} aria-invalid={characterCount(example.fr) > 20_000} aria-describedby={overLimit ? 'example-limit' : undefined} onChange={(event) => notebook.editMore(editor.more_examples.map((item, i) => i === index ? { ...item, fr: event.target.value } : item))} />
       <ExampleSpeech value={example.fr} runtime={runtime} text={text} />
       <label htmlFor={`example-zh-${index}`}>{text.exampleZh}</label><textarea id={`example-zh-${index}`} lang="zh" value={example.zh} disabled={notebook.busy} aria-invalid={characterCount(example.zh) > 20_000} aria-describedby={overLimit ? 'example-limit' : undefined} onChange={(event) => notebook.editMore(editor.more_examples.map((item, i) => i === index ? { ...item, zh: event.target.value } : item))} />
@@ -136,6 +140,7 @@ export function VocabularyEditor({ notebook, text, viewExisting, runtime, onRevi
     {notebook.error && <p role="alert">{text.saveError}: {notebook.error}</p>}
     {notebook.audioError && <p role="alert">{text.listeningPending}: {notebook.audioError}</p>}
     <SaveActions notebook={notebook} text={text} overLimit={overLimit} />
+    <SavedNoteExport runtime={runtime} text={text.exportText} record={notebook.editor.record} disabled={notebook.busy} />
     {notebook.editor.record && <ReviewCards key={`${notebook.editor.record.id}-${notebook.version}`} record={notebook.editor.record} runtime={runtime} text={text} onChanged={onReviewChanged} />}
     {notebook.existing && <p role="status">{text.existing} <button onClick={viewExisting}>{text.view}</button></p>}
     <Conflict notebook={notebook} text={text} runtime={runtime} /><SavedSource snapshot={snapshot} text={text} />

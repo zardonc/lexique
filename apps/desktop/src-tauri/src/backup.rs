@@ -531,7 +531,7 @@ pub fn validate_backup(
     .map_err(|e| format!("Invalid backup manifest: {e}"))?;
     if manifest.kind != "lexique-backup"
         || manifest.format_version != 1
-        || !matches!(manifest.snapshot_version, 1 | 2 | 3)
+        || !matches!(manifest.snapshot_version, 1..=4)
         || !(0..=SAFE_INTEGER as i64).contains(&manifest.created_at)
         || manifest.application_version.trim().is_empty()
         || manifest.application_version.len() > 200
@@ -1294,7 +1294,7 @@ mod tests {
                 let record = storage::get(&restored, id).unwrap();
                 assert_eq!(record.headword, "école");
                 assert_eq!(storage::find(&restored, headword).unwrap().unwrap().id, id);
-                assert_eq!(record.reference.lookup_key, headword);
+                assert_eq!(record.reference.as_ref().unwrap().lookup_key, headword);
                 assert_eq!(record.notes, "Mes notes\n个人笔记");
                 assert_eq!(record.example_fr, "Une école.");
                 assert_eq!(record.example_zh, "学校");
@@ -1320,8 +1320,8 @@ mod tests {
         storage::initialize(&connection).unwrap();
         let time = 1_794_564_000;
         let snapshot = storage::export_learning_snapshot(&mut connection, time).unwrap();
-        assert_eq!(snapshot.snapshot_version, 3);
-        for version in [3, 2, 1] {
+        assert_eq!(snapshot.snapshot_version, 4);
+        for version in [4, 3, 2, 1] {
             let mut value = serde_json::to_value(&snapshot).unwrap();
             value["snapshot_version"] = version.into();
             if version < 3 {
@@ -2486,7 +2486,7 @@ mod tests {
         for (field, value) in [
             ("kind", serde_json::json!("other")),
             ("format_version", serde_json::json!(2)),
-            ("snapshot_version", serde_json::json!(4)),
+            ("snapshot_version", serde_json::json!(5)),
             ("created_at", serde_json::json!(9_007_199_254_740_992_i64)),
             ("application_version", serde_json::json!("")),
             ("unknown", serde_json::json!(true)),

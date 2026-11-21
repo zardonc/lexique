@@ -17,6 +17,7 @@ fn saved_word(connection: &mut Connection, operation: &str, headword: &str) -> i
             example_source: None,
             example_sense: Some(0),
             more_examples: vec![Example {
+                sense: None,
                 fr: "Une autre école.".into(),
                 zh: String::new(),
                 source: None,
@@ -83,7 +84,10 @@ fn imported_record_and_preferences_are_readable_and_saved_operations_remain_idem
     let record = get(&target, id).unwrap();
     assert_eq!(record.headword, "école");
     assert_eq!(record.notes, "  Une note\navec son espacement.  ");
-    assert_eq!(record.reference.dictionary_id.as_deref(), Some("mdx-99"));
+    assert_eq!(
+        record.reference.as_ref().unwrap().dictionary_id.as_deref(),
+        Some("mdx-99")
+    );
     assert_eq!(record.digest[0].translation.as_deref(), Some("学校"));
     assert_eq!(record.example_fr, "L’école est ouverte.");
     assert_eq!(record.example_zh, "学校开着。");
@@ -137,7 +141,7 @@ fn imported_decomposed_headword_is_findable_editable_and_replayable() {
     }
     let record = get(&target, id).unwrap();
     assert_eq!(record.headword, "été");
-    assert_eq!(record.reference.lookup_key, headword);
+    assert_eq!(record.reference.as_ref().unwrap().lookup_key, headword);
     assert_eq!(record.notes, snapshot.records[0].notes);
     let replayed = save(&mut target, &snapshot.save_operations[0].request, None).unwrap();
     assert_eq!(replayed.outcome, "replayed");

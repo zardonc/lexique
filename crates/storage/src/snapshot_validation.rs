@@ -108,7 +108,7 @@ pub fn validate_learning_snapshot(
     captured_at: i64,
 ) -> Result<(), StorageError> {
     require(
-        matches!(snapshot.snapshot_version, 1..=3),
+        matches!(snapshot.snapshot_version, 1..=4),
         "unsupported snapshot version",
     )?;
     timestamp(captured_at)?;
@@ -137,20 +137,43 @@ pub fn validate_learning_snapshot(
             revision: Some(record.revision),
             category_ids: record.category_ids.clone(),
         })?;
-        reference(&record.reference)?;
-        if record.reference.dictionary_id.as_deref()
-            == Some(lexique_core::dictionary::CORE_DICTIONARY_ID)
-            || record.digest.iter().any(|entry| entry.core.is_some())
-        {
+        if let Some(frozen) = &record.reference {
+            reference(frozen)?;
+            if frozen.dictionary_id.as_deref() == Some(lexique_core::dictionary::CORE_DICTIONARY_ID)
+                || record.digest.iter().any(|entry| entry.core.is_some())
+            {
+                require(
+                    snapshot.snapshot_version >= 2,
+                    "core senses require snapshot v2",
+                )?;
+            }
+            crate::vocabulary::validate_core_digest(&record.headword, frozen, &record.digest)?;
+        } else {
             require(
-                snapshot.snapshot_version >= 2,
-                "core senses require snapshot v2",
+                snapshot.snapshot_version >= 4
+                    && record.import_source.is_some()
+                    && record.digest.is_empty()
+                    && record.example_sense.is_none(),
+                "unlinked records require snapshot v4, import source and no dictionary summary",
             )?;
         }
-        crate::vocabulary::validate_core_digest(
-            &record.headword,
-            &record.reference,
-            &record.digest,
+        if let Some(source) = &record.import_source {
+            require(
+                snapshot.snapshot_version >= 4,
+                "import source requires snapshot v4",
+            )?;
+            source.validate()?;
+        }
+        require(
+            record
+                .example_sense
+                .is_none_or(|index| (index as usize) < record.digest.len())
+                && record.more_examples.iter().all(|example| {
+                    example.sense.is_none_or(|index| {
+                        (index as usize) < record.digest.len() && snapshot.snapshot_version >= 4
+                    })
+                }),
+            "example meaning is not in the saved summary",
         )?;
         for source in record.example_source.iter().chain(
             record
@@ -200,6 +223,14 @@ pub fn validate_learning_snapshot(
         ) {
             reference(source)?;
         }
+        require(
+            saved.request.more_examples.iter().all(|example| {
+                example.sense.is_none_or(|index| {
+                    (index as usize) < record.digest.len() && snapshot.snapshot_version >= 4
+                })
+            }),
+            "example meaning is not in the saved summary",
+        )?;
     }
     for saved in &snapshot.grammar_save_operations {
         require(saves.insert(&saved.operation), "duplicate save operation")?;
@@ -1016,7 +1047,7 @@ pub fn read_learning_snapshot(
     }
     if let Some(records) = value["records"].as_array() {
         for record in records {
-            required(record, &["example_sense"])?;
+            required(record, &["example_sense", "reference"])?;
             if let Some(digest) = record["digest"].as_array() {
                 for entry in digest {
                     required(entry, &["translation"])?;

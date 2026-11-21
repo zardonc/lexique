@@ -417,7 +417,7 @@ fn reserve_id(
     Ok(number)
 }
 
-fn import(
+pub(crate) fn import(
     path: &DatabasePath,
     title: &str,
     bytes: &[u8],
@@ -643,7 +643,7 @@ struct Cached {
 pub struct Registry(Mutex<Vec<Cached>>);
 
 impl Registry {
-    fn lookup_source(
+    pub(crate) fn lookup_source(
         &self,
         path: &DatabasePath,
         builtin: &Path,
@@ -1078,7 +1078,10 @@ mod tests {
                 .unwrap(),
             preserved
         );
-        assert_eq!(lexique_storage::initialize(&connection).unwrap(), 19);
+        assert_eq!(
+            lexique_storage::initialize(&connection).unwrap(),
+            lexique_storage::DATABASE_SCHEMA_VERSION
+        );
     }
 
     #[test]
@@ -1144,7 +1147,10 @@ mod tests {
                 bytes
             );
         }
-        assert_eq!(lexique_storage::initialize(&connection).unwrap(), 19);
+        assert_eq!(
+            lexique_storage::initialize(&connection).unwrap(),
+            lexique_storage::DATABASE_SCHEMA_VERSION
+        );
     }
 
     #[test]

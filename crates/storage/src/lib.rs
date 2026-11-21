@@ -5,6 +5,10 @@ use rusqlite::Connection;
 
 mod vocabulary;
 pub use vocabulary::*;
+mod note_interchange;
+pub use note_interchange::*;
+mod note_export;
+pub use note_export::*;
 mod grammar;
 pub use grammar::*;
 mod categories;
@@ -208,6 +212,9 @@ fn migrate(connection: &Connection, version: u32) -> Result<u32, StorageError> {
     }
     if version < 19 {
         transaction.execute_batch(include_str!("../migrations/0019_grammar_categories.sql"))?;
+    }
+    if version < 20 {
+        transaction.execute_batch(include_str!("../migrations/0020_external_notes.sql"))?;
     }
     if transaction
         .prepare("PRAGMA foreign_key_check")?

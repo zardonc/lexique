@@ -79,7 +79,7 @@ function Collection({ result, runtime, text, version, onCollect, onOpen, onExcer
 }
 
 export function RecordOriginal({ reference, runtime, text, title }: {
-  readonly reference: VocabularySnapshot['reference']; readonly runtime: RuntimeAdapter; readonly text: Messages['dictionary']; readonly title: string;
+  readonly reference: NonNullable<VocabularySnapshot['reference']>; readonly runtime: RuntimeAdapter; readonly text: Messages['dictionary']; readonly title: string;
 }) {
   const [result, setResult] = useState<DictionaryLookup | null>();
   const [error, setError] = useState<DictionaryFailure>();

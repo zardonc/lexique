@@ -1,4 +1,5 @@
 import { ExampleSource } from './example-source';
+import { VocabularySource } from './vocabulary-source';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { NotebookText } from './notebook-content';
 import type { ReviewCard, RuntimeAdapter } from './platform/runtime';
@@ -29,20 +30,22 @@ function Examples({ record, text, runtime }: { readonly record: VocabularyRecord
       {first.fr.trim() && <p lang="fr">{first.fr}</p>}<ExampleSpeech value={first.fr} runtime={runtime} text={text} />{first.zh.trim() && <p lang="zh">{first.zh}</p>}<ExampleSource source={first.source} text={text} runtime={runtime} /></section>}
     {(!first?.fr.trim() || !first?.zh.trim()) && <p>{text.exampleMissing}</p>}
     {rest.length > 0 && <details onToggle={(event) => setExpanded(event.currentTarget.open)}><summary>{text.moreExamples}</summary>{expanded && rest.map((example, index) => <section key={index}>
-      <p lang="fr">{example.fr}</p><ExampleSpeech value={example.fr} runtime={runtime} text={text} /><p lang="zh">{example.zh}</p><ExampleSource source={example.source} text={text} runtime={runtime} />{(!example.fr.trim() || !example.zh.trim()) && <p>{text.exampleMissing}</p>}</section>)}</details>}
+      <p lang="fr">{example.fr}</p><ExampleSpeech value={example.fr} runtime={runtime} text={text} /><p lang="zh">{example.zh}</p><ExampleSource source={example.source} text={text} runtime={runtime} />
+      {example.sense !== undefined && <p>{text.exampleSense}：{digestLabel(record.digest[example.sense], text.missing)}</p>}
+      {(!example.fr.trim() || !example.zh.trim()) && <p>{text.exampleMissing}</p>}</section>)}</details>}
   </>;
 }
 
 function Answer({ record, text, runtime }: { readonly record: VocabularyRecord; readonly text: NotebookText; readonly runtime: RuntimeAdapter }) {
   return <>
+    {!record.digest.length && <p>{text.interchange.missing}</p>}
     {record.digest.some((entry) => entry.core) ? record.digest.map((entry, index) => entry.core
       ? <CoreSenseContent key={index} sense={entry.core} text={text.core} /> : <p key={index}>{entry.translation || text.missing}</p>)
       : <p>{record.digest.map((entry) => entry.translation || text.missing).join(' · ')}</p>}
     <ExampleSense record={record} text={text} />
     <Examples record={record} text={text} runtime={runtime} />
     <details><summary>{text.more}</summary><p>{record.notes || text.missing}</p>
-      <p>{record.reference.dictionary} · {record.reference.version} · {record.reference.attribution} · {record.reference.license}</p>
-      <p>{record.reference.source_url}</p><p>{record.reference.license_url}</p></details>
+      <VocabularySource snapshot={record} text={text} /></details>
   </>;
 }
 
