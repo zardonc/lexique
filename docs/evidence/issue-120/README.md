@@ -1,87 +1,17 @@
-# D2 #120 independently reviewed content
+# D2 issue #120: accepted content and native admission
 
-The package has **50 accepted exact groups, 50 selected senses and 200 fields** for
-frozen rows **1951–2000**. Every selected sense has French definition, IPA,
-English meaning and Chinese meaning for the same use. All **46 French source
-articles** have fixed revisions, exact numbered spans and complete retained
-contributor pagination: **7 responses, 3,332 named contributor memberships**.
+Frozen rows **1951–2000** contain **50 accepted groups / 200 fields**, with zero missing or pending batch fields and no reuse, new annotation exceptions or runtime aliases. The fields are bundled in `core-129-v1`; the fixed denominator remains 4,087 groups / 3,773 headwords.
 
-[Groups](groups.json) and [review candidates](review-candidates.json) contain
-the accepted and original four-field content respectively. [Field review](field-review.json)
-is a separate independent review, with one accepted record per field and
-specific semantic, rights, use, construction and spelling reasons.
-[Admission](admission.json) retains the **4,087-group** global denominator.
-[Reuse](reuse.json) compares the exact slice with admitted `core-119-v1`:
-**0 reused groups / 0 reused fields**. No annotation or specialist exception is
-admitted. [Independent review](independent-review.md) records **197 unchanged
-fields and three exact `épée` replacements**, with zero unresolved decisions.
-Original [admission](authored-admission.json), [field review](authored-field-review.json),
-[rights](authored-rights.json), [sources](authored-sources.json) and
-[context](authored-source-context.json) snapshots retain the author proposals.
+## Content and rights
 
-## Fixed evidence
+The [exact groups and accepted text](groups.json), [independent field/use decisions](field-review.json), [selected rights](rights.json), [source context](source-context.json), [fixed-source captures](source-captures.json) and [selected excerpts](source-excerpts.json) retain the precise POS/use, source versions, contributors and import/original-work boundaries. Original proposals remain in the preserved snapshots. The [independent-review handoff](README-independent-review.md) records the earlier review stage; its pending parent gates are historical.
 
-- [Sources](sources.json): article identity, revision, timestamp, fixed URL,
-  complete history, contributor attribution, licence and passed selected-span frames.
-- [Source captures](source-captures.json): retained first-party API responses,
-  raw wikitext, request URLs, current contributor pagination and recapture entry.
-- [Selected spans](source-excerpts.json): four field bindings per sense plus
-  French language, exact POS, headword, grammar and construction spans.
-- [Source context](source-context.json): contributors, anonymous counts,
-  import/reference boundaries and 50 source spelling relations. The relations
-  bind source evidence only; no lookup alias is proposed.
-- [Reviewed rights](rights.json), [independent rights review](rights-review.md), [selected rights](selected-rights.md),
-  [notices](NOTICES.md) and [CC BY-SA 4.0 legal text](COPYING): fixed policies,
-  field-level modification/attribution records and scoped original-work layers.
-- [Selected-use notes](source-research.md): register, construction and semantic
-  boundaries accepted during separate review.
+The actual combined resource includes [notices](../../../resources/core-pilot-79/NOTICES.md) and [CC BY-SA 4.0 terms](../../../resources/core-pilot-79/COPYING). The resource now contains 2,435 accepted groups / 9,740 fields; all 1,935 prior groups and compiled payloads, 15 spelling relationships / 11 aliases, and 15 zero-field annotations / 60 missing fields are preserved.
 
-All **200 fields** pass independent semantic, rights and construction/spelling
-review. Contributor pagination does not establish selected-sentence authorship.
-Unselected quotations, media, etymologies and other-language sections supply no
-content fields. This package does not admit the source dictionaries as a
-whole.
+## Native verification
 
-## Reproduction and checks
+Windows 11 x64 build `2c14c0e7e3cf27c480fd816123bdbf097d6e5392` passed this batch's exact lookup, trusted save and restart/reopen checks. The closed `core-119-v1` upgrade preserved learning state, notes, examples, FSRS and selected audio. Every native runner retained its hard 60-second limit, zero external WebView requests and zero remaining owned processes.
 
-The approved test seam is the resource/admission record. Membership is checked
-against the self-contained ticket and frozen manifest. Checks verify every
-accepted text, proposal, source/rights binding and use; subsequent canonical
-overlap is allowed only for identical whole records. Retained
-[RED](../../../target/implement-120-129/reviewer-evidence/issue-120/issue-120-review/content-rights-red.log),
-[GREEN](../../../target/implement-120-129/reviewer-evidence/issue-120/issue-120-review/content-rights-green.log) and
-[full focused results](../../../target/implement-120-129/reviewer-evidence/issue-120/issue-120-review/green.log) cover the
-approved resource/admission seam.
+[Batch results](../../../target/issue-120/native-admitted/results.json), [run identity](../../../target/issue-120/native-admitted/run-metadata.json), [cleanup](../../../target/issue-120/native-admitted/cleanup.json), [upgrade](../../../target/issue-129/native-upgrade/results.json), [prior-record preservation](../../../target/implement-120-129/preservation.json), [portable package](../../../target/implement-120-129/final-package.json) and [combined admission metadata](admission.json) retain execution evidence.
 
-The independent offline [byte audit](../../../target/implement-120-129/reviewer-evidence/issue-120/issue-120-review/fixed-source-byte-audit.json)
-matches all **46 complete wikitext articles byte for byte** with retained
-first-party revision and fixed-recapture responses, all 200 spans and complete
-contributor pagination. No new upstream requests or 429 retries were made.
-
-```powershell
-uv run --python 3.14.10 scripts/test_core_batch_120.py -v
-uv run --python 3.14.10 target/issue-120-review/audit_sources.py
-pnpm test:docs
-git diff --cached --check
-```
-
-The original author scripts, raw responses, requests and execution logs are
-copied byte-for-byte into ignored `target/issue-120-review/author-evidence/`
-for parent archival. The originals remain in the author and integration
-worktrees. [Documentation checks](../../../target/implement-120-129/reviewer-evidence/issue-120/issue-120-review/docs.log)
-and [final verification](../../../target/implement-120-129/reviewer-evidence/issue-120/issue-120-review/final-verification.json)
-record the current review commands and statuses. Author reproduction scripts
-describe the preserved proposals; they do not generate the accepted review.
-
-Review checkout: `C:/Users/inthe/IdeaProjects/lexique-review-120`, branch
-`codex/d2-review-120`; initial review base
-`92c208d2154c262035c8781463e3218463fac04f`. The latest integration tip is merged
-before handoff; final verification records the tested head and merged tip.
-
-## Remaining gates
-
-Canonical resource assembly and reproduction, combined redistribution
-notices, native lookup/save/reopen, learner acceptance, platform/offline checks
-and release readiness remain parent-owned. Application and native checks were
-not run by this reviewer. The existing canonical resource and learner data are
-unchanged.
+Whole-machine offline denial, other-platform native execution, learner acceptance and formal release readiness remain unverified. CEFR labels remain unknown; #78 remains open.

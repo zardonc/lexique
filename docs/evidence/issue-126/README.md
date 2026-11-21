@@ -1,31 +1,17 @@
-# D2 issue #126 independently reviewed content
+# D2 issue #126: accepted content and native admission
 
-[Ticket #126](https://github.com/zardonc/lexique/issues/126) / [parent spec #78](https://github.com/zardonc/lexique/issues/78).
+Frozen rows **2251–2300** contain **50 accepted groups / 200 fields**, with zero missing or pending batch fields and no reuse, new annotation exceptions or runtime aliases. The fields are bundled in `core-129-v1`; the fixed denominator remains 4,087 groups / 3,773 headwords.
 
-50 exact frozen groups (2251–2300), 50 everyday selected uses and 200 independently accepted fields. No reused exact group exists in the admitted core-119-v1 baseline; no alias, specialist exception or annotation is admitted. The fixed denominator remains 4,087 groups. Zero content/rights fields remain missing or pending. [independent-review.md](independent-review.md) records the separate review, one Chinese wording replacement, corrected collective-work statute, source frames and RED/GREEN/audit logs. Canonical resource and native admission remain parent-owned.
+## Content and rights
 
-[groups.json](groups.json) contains the accepted fields. [review-candidates.json](review-candidates.json) and the six `*-author-proposal.json` snapshots retain original author proposals byte-identical to commit `60805fc`, including [admission-author-proposal.json](admission-author-proposal.json). [source-research.md](source-research.md) lists every selected use. [source-excerpts.json](source-excerpts.json), [sources.json](sources.json) and [source-context.json](source-context.json) retain reviewed fixed spans, French/POS frames, complete contributor attribution and import/reference boundaries. [rights.json](rights.json), [selected-rights.md](selected-rights.md), [NOTICES.md](NOTICES.md) and [COPYING](COPYING) provide independently reviewed selected rights and batch obligations. [field-review.json](field-review.json) contains all 200 specific independent field decisions and 50 use/spelling decisions. [admission.json](admission.json) and [reuse.json](reuse.json) separate coverage from final resource admission.
+The [exact groups and accepted text](groups.json), [independent field/use decisions](field-review.json), [selected rights](rights.json), [source context](source-context.json), [fixed-source captures](source-captures.json) and [selected excerpts](source-excerpts.json) retain the precise POS/use, source versions, contributors and import/original-work boundaries. Original proposals remain in the preserved snapshots. The [independent-review handoff](README-independent-review.md) records the earlier review stage; its pending parent gates are historical.
 
-There are 49 fixed French articles, six fully paginated contributor-registry responses and 7,902 public revisions across complete fixed-revision histories. Exact source bytes are recaptured by revision ID, and all owned evidence files are replayed from retained source/selection inputs. Source markers identify imported or referenced original layers; selected-sentence origin is not inferred solely from a bibliography.
+The actual combined resource includes [notices](../../../resources/core-pilot-79/NOTICES.md) and [CC BY-SA 4.0 terms](../../../resources/core-pilot-79/COPYING). The resource now contains 2,435 accepted groups / 9,740 fields; all 1,935 prior groups and compiled payloads, 15 spelling relationships / 11 aliases, and 15 zero-field annotations / 60 missing fields are preserved.
 
-## Author verification and retained evidence
+## Native verification
 
-Author checkout: `C:/Users/inthe/IdeaProjects/lexique-batch-126`, branch `codex/d2-content-126`; initial clean baseline `b91c4729a0a1c93baa58f86ed666b173fb2fc253`, integration merged before authoring. Scope: `docs/evidence/issue-126/**` and `scripts/test_core_batch_126.py`.
+Windows 11 x64 build `2c14c0e7e3cf27c480fd816123bdbf097d6e5392` passed this batch's exact lookup, trusted save and restart/reopen checks. The closed `core-119-v1` upgrade preserved learning state, notes, examples, FSRS and selected audio. Every native runner retained its hard 60-second limit, zero external WebView requests and zero remaining owned processes.
 
-Approved seam: conversion output/admission record in spec Testing Decision 2. The focused resource/admission check verifies exact membership and frequencies, all four scoped fields, source-byte reproduction, contributor/history completion, precise rights records and pending independent decisions.
+[Batch results](../../../target/issue-126/native-admitted/results.json), [run identity](../../../target/issue-126/native-admitted/run-metadata.json), [cleanup](../../../target/issue-126/native-admitted/cleanup.json), [upgrade](../../../target/issue-129/native-upgrade/results.json), [prior-record preservation](../../../target/implement-120-129/preservation.json), [portable package](../../../target/implement-120-129/final-package.json) and [combined admission metadata](admission.json) retain execution evidence.
 
-| Check | Result | Retained log |
-| --- | --- | --- |
-| Exact membership TDD red | Expected absent-package failure | `target/issue-126/tdd-red.log` |
-| Membership tracer green | Passed | `target/issue-126/tdd-green-membership.log` |
-| Provenance TDD red | Expected absent-rights failure | `target/issue-126/tdd-red-provenance.log` |
-| Focused admission candidates | Passed | `target/issue-126/tdd-green.log` |
-| Fixed source byte recapture | 49 articles reproduced | `target/issue-126/source-reproduction.log` |
-| Complete candidate byte replay | Passed | `target/issue-126/package-reproduction.log` |
-| Diff / local document links | Passed | `target/issue-126/diff-check.log`, `target/issue-126/link-check.log` |
-
-Raw API responses, fixed UTF-8 Wiki source, complete contributor and revision pagination, legal authorities, selection and preparation/replay scripts remain in `C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-126/` for parent archival. [source-captures.json](source-captures.json) names the exact retained inputs. Reproduction uses `uv run --python 3.14.10 python -B -X utf8 target/issue-126/reproduce_package.py`; the focused check uses `uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_126.py`.
-
-## Independent verification and limitations
-
-The separate reviewer passes 50 groups, 200 fields and 186 selected source frames; all 49 fixed source bytes, contributor registries and 7,902 public revisions are audited. Five focused checks pass. Canonical overlap of 50 identical records passes; a changed adjective IPA is rejected. Full review logs and scripts remain in `C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/reviewer-evidence/issue-126/issue-126-review/`. Canonical conversion and actual combined notices, native lookup/save/reopen and learner/release acceptance remain parent-owned and unrun here.
+Whole-machine offline denial, other-platform native execution, learner acceptance and formal release readiness remain unverified. CEFR labels remain unknown; #78 remains open.

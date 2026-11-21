@@ -25,7 +25,24 @@ The [canonical resource](../../../resources/core-pilot-79/README.md) converts wi
 
 ## Verification
 
-Backend formatting, locked precompilation and **210 bounded backend tests** passed after the character-budget fixture was restricted to its selected headword. Production size limits remain unchanged. **135 core/cohort tests**, **16 portable-package tests**, documentation links and diff checks passed. The production build, ten native batch runs and closed-baseline upgrade are pending.
+Windows 11 x64 production build: `2c14c0e7e3cf27c480fd816123bdbf097d6e5392`. Executable SHA-256: `a02a1c78b8084fa749444c778e881734f048dd1454d2d296c6cd6bb0849dd8c4`. The format-1 core is **11,350,016 bytes**, SHA-256 `06e0a500a900e63d5438769b2835fe373fe747cdaeeb2fd3d57bf6f49be9c4fc`. The portable ZIP passed **183-file** verification.
+
+| Check | Result | Evidence |
+| --- | --- | --- |
+| Core conversion and content batches | 135 passed | [Core/cohort log](../../../target/implement-120-129/core-all.log) |
+| Final admission metadata and evidence links | 44 focused tests, lint, documentation links and diff checks passed | [Batch tests](../../../target/implement-120-129/cohort-postnative.log), [lint](../../../target/implement-120-129/lint-final.log), [documentation links](../../../target/implement-120-129/docs-final.log) |
+| Portable package | 16 passed; actual ZIP verified | [Tests](../../../target/implement-120-129/package-final-tests.log), [package metadata](../../../target/implement-120-129/final-package.json) |
+| Rust formatting and locked precompilation | Passed | [Format](../../../target/implement-120-129/rust-format-final.log), [precompile](../../../target/implement-120-129/rust-precompile-final.log) |
+| Backend execution | 210 passed; hard 60-second limit | [Backend log](../../../target/implement-120-129/rust-tests-final.log) |
+| Frontend lint, types and production build | Passed | [Lint](../../../target/implement-120-129/lint.log), [types](../../../target/implement-120-129/typecheck.log), [native/production build](../../../target/implement-120-129/final-native-build.log) |
+| Browser smoke | 1 passed | [Smoke log](../../../target/implement-120-129/browser-smoke.log) |
+| Native batches #120–#129 | All ten passed: exact lookup, trusted save, restart/reopen | [Native execution metadata](../../../target/implement-120-129/native-execution-verification.json) |
+| Closed `core-119-v1` upgrade | Passed; learning state and closed baseline preserved | [Upgrade results](../../../target/issue-129/native-upgrade/results.json) |
+| Prior raw records, payloads and aliases | All 1,935 groups preserved | [Preservation](../../../target/implement-120-129/preservation.json) |
+
+All eleven native runners matched the recorded executable, retained their hard 60-second execution limit, recorded zero external WebView requests and left zero owned processes. The upgrade used the closed six-headword `core-119-v1` baseline, retaining references, frozen digests, notes, examples, FSRS and protected selected audio. Speech models were absent.
+
+[Build identity](../../../target/implement-120-129/final-build.json), [upgrade-helper scope](../../../target/implement-120-129/native-upgrade-helper-fix.patch) and [complete verification metadata](../../../target/implement-120-129/verification-final.json) retain exact inputs, outputs and evidence scope. The character-budget fixture covers its selected headword; production resource and response limits remain unchanged. Final admission metadata reports zero missing or pending fields in all ten completed batches; authored and independent-review snapshots remain preserved.
 
 ## Remaining gates
 

@@ -1,50 +1,17 @@
-# D2 #128 independent content and rights review
+# D2 issue #128: accepted content and native admission
 
-**50/50 selected uses and 200/200 fields pass independent review:** 197 fields
-unchanged and three construction replacements for Québec `sacrer/VER`.
-There are zero unresolved or pending independent fields, zero pending source
-frames, and no annotation exception, specialist exception or runtime alias.
-The frozen rows **2351–2400**, exact headwords/POS/frequencies and **4,087-group**
-denominator are preserved. Canonical admission remains **0 new fields / 200
-pending fields** until the parent assembles and tests the resource.
+Frozen rows **2351–2400** contain **50 accepted groups / 200 fields**, with zero missing or pending batch fields and no reuse, new annotation exceptions or runtime aliases. The fields are bundled in `core-129-v1`; the fixed denominator remains 4,087 groups / 3,773 headwords.
 
-The [independent report](independent-review.md), [200 field decisions](field-review.json),
-[selected rights](selected-rights.md) and [three exact replacements](accepted-replacements.json)
-record the review. [Groups](groups.json) contain accepted wording;
-[original candidates](review-candidates.json), [authored admission](admission-author-proposal.json),
-[authored README](README-author-proposal.md) and [authored rights narrative](selected-rights-author-proposal.md)
-preserve proposals and the original pending state. The [live ledger](admission.json)
-reports the actual independent result separately from parent gates.
+## Content and rights
 
-All **47 fixed French articles**, **200 selected field bindings** and **189
-language/POS/form/construction frames** were checked against retained bytes.
-Six complete contributor responses record **2,749 named memberships**, anonymous
-counts and full-history attribution; that registry is not selected-sentence
-authorship proof. [Sources](sources.json), [captures](source-captures.json),
-[spans](source-excerpts.json), [context](source-context.json), [rights](rights.json),
-[notices](NOTICES.md) and [legal text](COPYING) retain those boundaries.
+The [exact groups and accepted text](groups.json), [independent field/use decisions](field-review.json), [selected rights](rights.json), [source context](source-context.json), [fixed-source captures](source-captures.json) and [selected excerpts](source-excerpts.json) retain the precise POS/use, source versions, contributors and import/original-work boundaries. Original proposals remain in the preserved snapshots. The [independent-review handoff](README-independent-review.md) records the earlier review stage; its pending parent gates are historical.
 
-Verification in `C:/Users/inthe/IdeaProjects/lexique-review-128`, branch
-`codex/d2-review-128`:
+The actual combined resource includes [notices](../../../resources/core-pilot-79/NOTICES.md) and [CC BY-SA 4.0 terms](../../../resources/core-pilot-79/COPYING). The resource now contains 2,435 accepted groups / 9,740 fields; all 1,935 prior groups and compiled payloads, 15 spelling relationships / 11 aliases, and 15 zero-field annotations / 60 missing fields are preserved.
 
-```powershell
-uv run --python 3.14.10 --no-project python -B -X utf8 -m unittest discover -s scripts -p test_core_batch_128.py -v
-uv run --python 3.14.10 --no-project python -B -X utf8 target/issue-128-review/audit.py
-uv run --python 3.14.10 --no-project python -B -X utf8 target/issue-128-review/check_review_mutations.py
-pnpm test:docs
-git diff --cached --check
-```
+## Native verification
 
-The [complete test log](../../../target/implement-120-129/reviewer-evidence/issue-128/issue-128-review/full-green.log),
-[fixed-source byte audit](../../../target/implement-120-129/reviewer-evidence/issue-128/issue-128-review/fixed-source-byte-audit.log),
-[canonical overlap and negative checks](../../../target/implement-120-129/reviewer-evidence/issue-128/issue-128-review/overlap-and-mutations.log)
-and [verification record](../../../target/implement-120-129/reviewer-evidence/issue-128/issue-128-review/verification.json)
-are retained under ignored `target/issue-128-review/`, including RED/GREEN logs.
-Author raw/current/fixed API captures, contributor continuations and legal
-authorities remain at `C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-128`;
-the integration archive is the alternate retained root. The independent audit
-used retained captures and made no upstream requests.
+Windows 11 x64 build `2c14c0e7e3cf27c480fd816123bdbf097d6e5392` passed this batch's exact lookup, trusted save and restart/reopen checks. The closed `core-119-v1` upgrade preserved learning state, notes, examples, FSRS and selected audio. Every native runner retained its hard 60-second limit, zero external WebView requests and zero remaining owned processes.
 
-Canonical conversion, combined packaged notices, native lookup/save/reopen,
-learner acceptance, offline/platform and release checks remain parent-owned.
-This review does not assert application or canonical admission.
+[Batch results](../../../target/issue-128/native-admitted/results.json), [run identity](../../../target/issue-128/native-admitted/run-metadata.json), [cleanup](../../../target/issue-128/native-admitted/cleanup.json), [upgrade](../../../target/issue-129/native-upgrade/results.json), [prior-record preservation](../../../target/implement-120-129/preservation.json), [portable package](../../../target/implement-120-129/final-package.json) and [combined admission metadata](admission.json) retain execution evidence.
+
+Whole-machine offline denial, other-platform native execution, learner acceptance and formal release readiness remain unverified. CEFR labels remain unknown; #78 remains open.

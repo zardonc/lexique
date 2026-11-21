@@ -1,51 +1,17 @@
-# Issue #121 independently reviewed content
+# D2 issue #121: accepted content and native admission
 
-**All 50 exact frozen groups at rows 2001–2050 and all 200 FR/IPA/EN/ZH
-fields pass independent content and selected-rights review.** The review
-accepts 197 unchanged fields and three replacements at row 2044. There are
-zero unresolved/pending independent fields, zero baseline reuse, no new
-exceptions and no runtime aliases. The denominator remains 4,087 groups.
-Canonical resource assembly remains pending the parent.
+Frozen rows **2001–2050** contain **50 accepted groups / 200 fields**, with zero missing or pending batch fields and no reuse, new annotation exceptions or runtime aliases. The fields are bundled in `core-129-v1`; the fixed denominator remains 4,087 groups / 3,773 headwords.
 
-The [independent review](independent-review.md) records field/use decisions,
-the three exact replacements and verification boundary. The
-[rights review](rights-review.md) resolves 39 DAF8 import/reference boundaries
-and the separate contribution/adaptation layers. All 48 selected source frames
-pass in [sources.json](sources.json) and [source-context.json](source-context.json).
+## Content and rights
 
-| File | Evidence |
-| --- | --- |
-| [groups.json](groups.json) | Exact frozen membership, selected use and accepted four-field content |
-| [field-review.json](field-review.json) | Separate independent review of 200 exact fields, 50 uses and 50 source-spelling bindings |
-| [rights.json](rights.json) | Selected field rights, original works, contributors, modifications and independent reasons |
-| [source-excerpts.json](source-excerpts.json) | Fixed lexical, phonetic and grammatical spans |
-| [source-captures.json](source-captures.json) | Raw/API captures and complete contributor pagination |
-| [admission.json](admission.json) | Actual independent acceptance and separate parent gates |
-| [review-candidates.json](review-candidates.json) | Original authored group proposals |
-| [admission-author-proposal.json](admission-author-proposal.json) | Original authored acceptance/pending ledger |
-| [authored-snapshots](authored-snapshots/) | Original groups, field review, rights, sources, context and admission from author commit 4e466b0 |
-| [reuse.json](reuse.json) | Baseline comparison: no reused group/field |
-| [source-research.md](source-research.md) | Author's selected-use research |
-| [rights-proposal.md](rights-proposal.md) | Retained author rights proposal |
-| [NOTICES.md](NOTICES.md) and [COPYING](COPYING) | Attribution, original-work credit, modifications and complete licence |
+The [exact groups and accepted text](groups.json), [independent field/use decisions](field-review.json), [selected rights](rights.json), [source context](source-context.json), [fixed-source captures](source-captures.json) and [selected excerpts](source-excerpts.json) retain the precise POS/use, source versions, contributors and import/original-work boundaries. Original proposals remain in the preserved snapshots. The [independent-review handoff](README-independent-review.md) records the earlier review stage; its pending parent gates are historical.
 
-The [focused check](../../../scripts/test_core_batch_121.py) passes **five
-tests**. The [fixed-source audit](../../../target/implement-120-129/reviewer-evidence/issue-121/issue-121-review/source-audit.json)
-passes 48 raw/API/fixed-replay bodies byte-for-byte, 200 field spans, 190
-supporting spans, seven contributor parts, 3,336 named article memberships and
-anonymous counts. Sixty retained files match the integration mirror. The
-reviewer uses retained exact dictionary captures without fresh upstream
-dictionary requests.
+The actual combined resource includes [notices](../../../resources/core-pilot-79/NOTICES.md) and [CC BY-SA 4.0 terms](../../../resources/core-pilot-79/COPYING). The resource now contains 2,435 accepted groups / 9,740 fields; all 1,935 prior groups and compiled payloads, 15 spelling relationships / 11 aliases, and 15 zero-field annotations / 60 missing fields are preserved.
 
-Complete RED/GREEN, source-byte, documentation, diff and patch logs remain at
-`C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/reviewer-evidence/issue-121/issue-121-review/`.
-The [final verification record](../../../target/implement-120-129/reviewer-evidence/issue-121/issue-121-review/final-verification.json)
-records the delivered SHA and latest merged integration. Original scripts/raw
-evidence remain in the author's and integration's `target/issue-121/`
-archives; review reproduction and commands are listed in
-[independent-review.md](independent-review.md).
+## Native verification
 
-Canonical conversion, combined obligations/notices, native lookup/save/reopen,
-learner acceptance and platform/offline/release checks remain parent-owned and
-unrun here. This review changes no shared pipeline, canonical resource,
-tracker, application code or learning data.
+Windows 11 x64 build `2c14c0e7e3cf27c480fd816123bdbf097d6e5392` passed this batch's exact lookup, trusted save and restart/reopen checks. The closed `core-119-v1` upgrade preserved learning state, notes, examples, FSRS and selected audio. Every native runner retained its hard 60-second limit, zero external WebView requests and zero remaining owned processes.
+
+[Batch results](../../../target/issue-121/native-admitted/results.json), [run identity](../../../target/issue-121/native-admitted/run-metadata.json), [cleanup](../../../target/issue-121/native-admitted/cleanup.json), [upgrade](../../../target/issue-129/native-upgrade/results.json), [prior-record preservation](../../../target/implement-120-129/preservation.json), [portable package](../../../target/implement-120-129/final-package.json) and [combined admission metadata](admission.json) retain execution evidence.
+
+Whole-machine offline denial, other-platform native execution, learner acceptance and formal release readiness remain unverified. CEFR labels remain unknown; #78 remains open.

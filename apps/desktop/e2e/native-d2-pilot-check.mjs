@@ -686,14 +686,17 @@ async function replacement() {
   if (scenario === 'upgrade') {
     const existing = await invoke('vocabulary_find', { headword: 'lâche' });
     if (existing) {
-      assert.deepEqual(existing.digest.filter((item) => item.core).map((item) => item.core.frozen_row), [1450]);
+      assert.deepEqual(existing.digest.filter((item) => item.core).map((item) => item.core.frozen_row), [1450, 1451]);
       const lookup = await invoke('dictionary_lookup', { key: 'lâche', dictionary_id: 'builtin-core' });
       admitted(lookup, 'lâche');
       assert.deepEqual(senses(lookup).map((sense) => sense.frozen_row), [1450, 1451]);
       assert.deepEqual(await invoke('vocabulary_find', { headword: 'lâche' }), existing);
-      evidence.checks.push({ check: 'The existing lâche adjective digest remains frozen while current lookup also returns the new noun', status: 'passed' });
+      evidence.checks.push({ check: 'The existing lâche adjective and noun digests remain frozen after the resource update', status: 'passed' });
     }
-    for (const key of ['valise', 'confirmer']) await save(key, `batch-110-119-upgrade-${key}`);
+    for (const row of [1951, 2450]) {
+      const key = curation.groups.find((group) => group.frozen_row === row).headword;
+      await save(key, `batch-120-129-upgrade-${key}`);
+    }
   }
   await openRecord(record);
   evidence.checks.push({ check: ['newer', 'upgrade'].includes(scenario) ? 'New resource version is visible while previous digest, progress and audio remain frozen' : `Native ${scenario} rejection preserves saved content and committed retry`, status: 'passed' });
