@@ -1,7 +1,14 @@
 # Lexique FR–EN–ZH D2 core
 
 This development resource contains **2,435 independently reviewed senses / 9,740 fields**
-in 2,435 frozen headword/POS groups, content version `core-129-v1`.
+in 2,435 frozen headword/POS groups, content version `core-129-v2`.
+The ordinary `épée/NOM` weapon meaning has independently reviewed French,
+English and Chinese fields without mandatory blade geometry or carrying
+equipment; its fixed source, IPA, attribution and CC BY-SA 4.0 adaptation
+remain recorded in the [field review](field-review.json).
+Deliver this core with its matching rebuilt executable; the native reader
+rejects a resource whose hash differs from its build. Existing saved digests
+keep their original content.
 Its permanent target is **4,087 groups / 3,773 headwords**; **2,435 groups are accepted
 and 1,652 remain unaccepted**. Everyday coverage is **2,433 complete groups
 and 1,654 incomplete groups**. All **9,740 fields** have exact independent reviews.

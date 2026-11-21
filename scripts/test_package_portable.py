@@ -56,7 +56,7 @@ class PortableTests(unittest.TestCase):
             self.write(f"target/release/dictionary/core-pilot-79/{filename}", data)
             core_inputs[filename] = hashlib.sha256(data).hexdigest()
         core_report = json.dumps({
-            "format_version": 1, "content_version": "core-129-v1",
+            "format_version": 1, "content_version": "core-129-v2",
             "sqlite_sha256": hashlib.sha256(b"reviewed core dictionary").hexdigest(),
             "sqlite_bytes": len(b"reviewed core dictionary"), "inputs": core_inputs,
         }).encode()

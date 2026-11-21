@@ -3573,7 +3573,7 @@
       {
         "sense_id": "b120-1995-épée-nom-selected",
         "source_headword": "épée",
-        "use": "Feminine noun; selected sword weapon with a long sharpened triangular-section blade, handle and scabbard; distinct from the sporting practice.",
+        "use": "Feminine noun; sword as an ordinary bladed weapon name.",
         "use_language": "en",
         "excluded_uses": "Fencing as a sport, card suits, heraldry, military estate and slang expert.",
         "independent_review": "passed",
@@ -3582,7 +3582,7 @@
         "fields": {
           "french_definition": {
             "language": "fr",
-            "text": "Dans ce sens d’arme, épée à longue lame affilée de section triangulaire, munie d’une poignée, utilisée pour attaquer ou se défendre et portée dans un fourreau.",
+            "text": "Arme blanche à longue lame affilée munie d’une poignée, utilisée pour attaquer ou se défendre.",
             "source_id": "b120_fr_9221",
             "source_span": {
               "line_1_based": 14,
@@ -3590,7 +3590,7 @@
               "raw_source_excerpt": "# {{armes|fr|blanches}} {{lexique|escrime|fr}} [[arme|Arme]] [[offensif|offensive]] et [[défensif|défensive]] [[composer|composée]] d’une longue [[lame]] [[affiler|affilée]] de section triangulaire avec une [[poignée]] et que les [[guerrier]]s [[porter|portaient]] au [[côté]] dans un [[fourreau]]."
             },
             "content_license": "CC-BY-SA-4.0",
-            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained. The selected triangular blade cross-section is explicitly retained.",
+            "modification": "Lexique adaptation of the fixed French weapon description; markup, its inaccurate triangular-section restriction and historical carrying detail are removed.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
             "independent_review": "passed",
             "rights_eligibility_status": "passed_at_selected_text_boundary"
@@ -3612,7 +3612,7 @@
           },
           "english": {
             "language": "en",
-            "text": "In this selected weapon sense, a sword with a long sharpened blade of triangular cross-section and a handle, used to attack or defend and carried in a scabbard.",
+            "text": "A sword: a bladed weapon with a long sharpened blade and a handle, used to attack or defend.",
             "source_id": "b120_fr_9221",
             "source_span": {
               "line_1_based": 14,
@@ -3620,14 +3620,14 @@
               "raw_source_excerpt": "# {{armes|fr|blanches}} {{lexique|escrime|fr}} [[arme|Arme]] [[offensif|offensive]] et [[défensif|défensive]] [[composer|composée]] d’une longue [[lame]] [[affiler|affilée]] de section triangulaire avec une [[poignée]] et que les [[guerrier]]s [[porter|portaient]] au [[côté]] dans un [[fourreau]]."
             },
             "content_license": "CC-BY-SA-4.0",
-            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation. The selected triangular blade cross-section is explicitly retained.",
+            "modification": "New Lexique explanatory translation of the ordinary sword definition; the inaccurate source restriction on blade geometry and historical carrying detail are omitted. No Académie ninth-edition wording is imported.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
             "independent_review": "passed",
             "rights_eligibility_status": "passed_at_selected_text_boundary"
           },
           "chinese": {
             "language": "zh",
-            "text": "在所选武器义中：剑；带柄、长而锋利且横截面呈三角形的刀刃武器，用于进攻或防御，佩带时置于剑鞘中。",
+            "text": "剑；带柄的长锋利刀刃武器，用于进攻或防御。",
             "source_id": "b120_fr_9221",
             "source_span": {
               "line_1_based": 14,
@@ -3635,7 +3635,7 @@
               "raw_source_excerpt": "# {{armes|fr|blanches}} {{lexique|escrime|fr}} [[arme|Arme]] [[offensif|offensive]] et [[défensif|défensive]] [[composer|composée]] d’une longue [[lame]] [[affiler|affilée]] de section triangulaire avec une [[poignée]] et que les [[guerrier]]s [[porter|portaient]] au [[côté]] dans un [[fourreau]]."
             },
             "content_license": "CC-BY-SA-4.0",
-            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation. The selected triangular blade cross-section is explicitly retained.",
+            "modification": "New Lexique explanatory translation of the ordinary sword definition; the inaccurate source restriction on blade geometry and historical carrying detail are omitted. No Académie ninth-edition wording is imported.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
             "independent_review": "passed",
             "rights_eligibility_status": "passed_at_selected_text_boundary"

@@ -37,6 +37,12 @@ class CorePilotPreparationTests(unittest.TestCase):
                     self.assertEqual([(sense["headword"], sense["pos"]) for sense in senses],
                                      [(row["word"], row["lexique_cgram"]) for row in scope[first - 1:first + 49]])
                     self.assertTrue(all(sense[field].strip() for sense in senses for field in FIELD_NAMES.values()))
+                sword = json.loads(connection.execute(
+                    "SELECT payload FROM senses WHERE frozen_row = 1995").fetchone()[0])
+                for field, restriction in (("definition_fr", "triangulaire"),
+                                           ("meaning_en", "triangular"), ("meaning_zh", "三角")):
+                    with self.subTest(field=field):
+                        self.assertNotIn(restriction, sword[field])
 
     def test_reviewed_published_edition_preserves_its_identity_and_rejects_missing_rights(self):
         with tempfile.TemporaryDirectory() as temporary:

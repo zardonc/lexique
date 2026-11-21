@@ -29,15 +29,25 @@ uses the independently reviewed [#119 schema](../issue-119/field-review.json).
 
 | Field at row 1995, `épée/NOM` | Accepted text |
 | --- | --- |
-| French | Dans ce sens d’arme, épée à longue lame affilée de section triangulaire, munie d’une poignée, utilisée pour attaquer ou se défendre et portée dans un fourreau. |
-| English | In this selected weapon sense, a sword with a long sharpened blade of triangular cross-section and a handle, used to attack or defend and carried in a scabbard. |
-| Chinese | 在所选武器义中：剑；带柄、长而锋利且横截面呈三角形的刀刃武器，用于进攻或防御，佩带时置于剑鞘中。 |
+| French | Arme blanche à longue lame affilée munie d’une poignée, utilisée pour attaquer ou se défendre. |
+| English | A sword: a bladed weapon with a long sharpened blade and a handle, used to attack or defend. |
+| Chinese | 剑；带柄的长锋利刀刃武器，用于进攻或防御。 |
 
-Fixed revision **39863164, line 14** supplies the weapon description and
-triangular cross-section. The accepted use is explicitly that weapon sense,
-distinct from the sporting practice and an unrestricted description of all
-swords. IPA `/e.pe/` is unchanged. All other 197 field texts are accepted as
-proposed.
+Fixed revision **39863164, line 14** supplies the blade, handle and
+offensive/defensive function. The accepted everyday weapon meaning omits the
+source's inaccurate blade geometry and historical carrying detail. The
+[Académie ninth edition, `épée`, A9E2134](https://www.dictionnaire-academie.fr/article/A9E2134)
+corroborates the distinction between ordinary swords and triangular sporting
+equipment without supplying imported or translated wording. The fixed
+Wiktionnaire excerpts, history, attribution, DAF8 credit and CC BY-SA 4.0
+adaptation obligations remain intact. IPA `/e.pe/` is unchanged. All other
+197 field texts are accepted as proposed.
+
+The independent Spec reviewer for PR #193 accepted these exact three meanings,
+the unchanged IPA and the ordinary feminine-noun use, separately from the
+correction author. The four field records and usage record retain the reviewer
+and modern-sense evidence. The accepted fields describe a sword without
+requiring a triangular blade or carrying equipment.
 
 Adjective/noun `adulte`, `canon`, `débile` and `idéal` remain distinct.
 `participer à` and `réagir à` preserve their indirect/trigger constructions;
@@ -76,6 +86,11 @@ assembly remains pending for all 200 accepted fields.
 
 Full evidence root:
 `C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/reviewer-evidence/issue-120/issue-120-review/`.
+The current everyday-sword regression exercises the produced SQLite payload in
+French, English and Chinese. Its [RED](../../../target/fix-193/red.log) and
+[GREEN](../../../target/fix-193/green.log) results use the same deterministic
+converter path. The [independent exact-field acceptance](../../../target/fix-193/independent-sword-review.json)
+records the four-field and usage decisions.
 The [RED](../../../target/implement-120-129/reviewer-evidence/issue-120/issue-120-review/content-rights-red.log) and
 [GREEN](../../../target/implement-120-129/reviewer-evidence/issue-120/issue-120-review/content-rights-green.log) verify the
 exact weapon scope and original-work date. The

@@ -1,6 +1,6 @@
 # D2 issue #120: accepted content and native admission
 
-Frozen rows **1951–2000** contain **50 accepted groups / 200 fields**, with zero missing or pending batch fields and no reuse, new annotation exceptions or runtime aliases. The fields are bundled in `core-129-v1`; the fixed denominator remains 4,087 groups / 3,773 headwords.
+Frozen rows **1951–2000** contain **50 accepted groups / 200 fields**, with zero missing or pending batch fields and no reuse, new annotation exceptions or runtime aliases. The fields are bundled in `core-129-v2`; the fixed denominator remains 4,087 groups / 3,773 headwords.
 
 ## Content and rights
 
@@ -10,8 +10,8 @@ The actual combined resource includes [notices](../../../resources/core-pilot-79
 
 ## Native verification
 
-Windows 11 x64 build `2c14c0e7e3cf27c480fd816123bdbf097d6e5392` passed this batch's exact lookup, trusted save and restart/reopen checks. The closed `core-119-v1` upgrade preserved learning state, notes, examples, FSRS and selected audio. Every native runner retained its hard 60-second limit, zero external WebView requests and zero remaining owned processes.
+Windows 11 x64 with the matching rebuilt `core-129-v2` executable passed exact lookup for all 50 groups / 200 fields and trusted save/restart/reopen for all 46 headwords. The ordinary sword meanings retain their accepted scope and provenance. The closed `core-119-v1` upgrade preserved learning state, frozen digests, notes, examples, FSRS and selected audio. Both native runs retained their hard 60-second limit, zero external WebView requests and zero remaining owned processes.
 
-[Batch results](../../../target/issue-120/native-admitted/results.json), [run identity](../../../target/issue-120/native-admitted/run-metadata.json), [cleanup](../../../target/issue-120/native-admitted/cleanup.json), [upgrade](../../../target/issue-129/native-upgrade/results.json), [prior-record preservation](../../../target/implement-120-129/preservation.json), [portable package](../../../target/implement-120-129/final-package.json) and [combined admission metadata](admission.json) retain execution evidence.
+[Batch results](../../../target/issue-120/native-core-129-v2-final/results.json), [run identity](../../../target/issue-120/native-core-129-v2-final/run-metadata.json), [cleanup](../../../target/issue-120/native-core-129-v2-final/cleanup.json), [upgrade](../../../target/issue-129/native-core-129-v2-final-upgrade/results.json), [other-record preservation](../../../target/fix-193/preservation.log), [build identity](../../../target/fix-193/build.json), [portable package](../../../target/fix-193/checked-package.log) and [combined admission metadata](admission.json) retain execution evidence. The [combined verification](../issues-120-129/README.md#verification) separates current v2 results from the baseline evidence.
 
 Whole-machine offline denial, other-platform native execution, learner acceptance and formal release readiness remain unverified. CEFR labels remain unknown; #78 remains open.

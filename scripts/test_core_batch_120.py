@@ -34,16 +34,21 @@ def read(name):
 
 
 class Batch120Tests(unittest.TestCase):
-    def test_independent_selected_weapon_scope_and_original_rights_are_exact(self):
+    def test_independent_everyday_sword_scope_and_original_rights_are_exact(self):
         group = next(g for g in read("groups.json") if g["frozen_row"] == 1995)
         expected = {
-            "french_definition": "Dans ce sens d’arme, épée à longue lame affilée de section triangulaire, munie d’une poignée, utilisée pour attaquer ou se défendre et portée dans un fourreau.",
-            "english": "In this selected weapon sense, a sword with a long sharpened blade of triangular cross-section and a handle, used to attack or defend and carried in a scabbard.",
-            "chinese": "在所选武器义中：剑；带柄、长而锋利且横截面呈三角形的刀刃武器，用于进攻或防御，佩带时置于剑鞘中。",
+            "french_definition": "Arme blanche à longue lame affilée munie d’une poignée, utilisée pour attaquer ou se défendre.",
+            "english": "A sword: a bladed weapon with a long sharpened blade and a handle, used to attack or defend.",
+            "chinese": "剑；带柄的长锋利刀刃武器，用于进攻或防御。",
         }
         for name, text in expected.items():
             self.assertEqual(group["senses"][0]["fields"][name]["text"], text)
         review = read("field-review.json")
+        self.assertEqual(group["senses"][0]["use"], "Feminine noun; sword as an ordinary bladed weapon name.")
+        for row in review["fields"]:
+            if row["frozen_row"] == 1995:
+                self.assertTrue(row["follow_up_reviewer"])
+                self.assertIn("A9E2134", row["modern_sense_verification"])
         self.assertEqual(review["kind"], "separate_independent_field_review")
         self.assertTrue(review["independent_acceptance"])
         self.assertEqual(len(review["fields"]), 200)
