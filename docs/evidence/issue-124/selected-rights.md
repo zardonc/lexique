@@ -1,9 +1,12 @@
-# Issue #124 selected-rights proposals
+# Issue #124 independent selected-rights decisions
 
-All **200 fields** have fixed selected-span rights proposals in
+All **200 fields pass independent selected-span rights review** in
 [rights.json](rights.json). Each retains its source/revision, exact span,
-contributor attribution, modification and original-work boundary. Independent
-rights review remains pending; no author check is recorded as acceptance.
+contributor attribution, modification and original-work boundary. Reviewer:
+Independent semantic and selected-rights reviewer #124, separate from author
+and parent integration owner. [Authored rights](rights-author-proposal.json)
+preserve the original proposals; live source frames and original-work copies
+record passed decisions at the actual selected boundaries.
 
 ## Contribution and adaptation layers
 
@@ -42,7 +45,7 @@ credit is retained conservatively at the marked edition boundary.
 `masque` has a **CFC import at line 124**, attached to an unselected historical
 photomechanical/cartographic definition. The selected false-face meaning at
 line 22, isolated IPA at line 21 and grammar/POS support are outside that
-boundary. No CFC wording supplies a candidate field or construction support.
+boundary. No CFC wording supplies an accepted field or construction support.
 Bibliographic DAF8, TLFi, Littré and other markers are retained in full context;
 they are not evidence that an external work authored a selected sentence.
 `croiser` uses the first recorded IPA, before the separately referenced variant.
@@ -73,9 +76,15 @@ binding is a runtime alias proposal.
 
 ## Redistribution obligations
 
-Proposed [notices](NOTICES.md) retain fixed article/history URLs, contributor
+[Notices](NOTICES.md) retain fixed article/history URLs, contributor
 credits, original-edition credits and modification notices. The complete
 CC BY-SA 4.0 text accompanies the package. Selected source spans, construction
 evidence, original/import context and preparation material remain available
 for the parent's corresponding-source archive. Final combined notices and
-artifact obligations await parent assembly and independent rights acceptance.
+artifact obligations await parent assembly. The independent audit matches all
+57 fixed raw/API revisions, the integration copy, all selected/support spans,
+12 contributor responses and eight terminating continuation chains. Complete
+named registries total 3,291 entries; anonymous counts also match. Fresh author
+recapture hit HTTP 429, while retained fixed-source validation/offline byte
+reproduction passed. This reviewer independently inspected the retained bytes
+without retrying upstream. No fresh network validation is claimed.

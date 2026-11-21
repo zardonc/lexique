@@ -1,4 +1,4 @@
-# Issue #124 proposed source notices
+# Issue #124 selected source notices
 
 Fixed Wiktionnaire/Wiktionary contributor wording and Lexique selections, scoped
 French adaptations and new English/Chinese explanations use **CC BY-SA 4.0**.
@@ -86,6 +86,6 @@ Frozen membership and frequencies derive from **Boris New and Christophe Pallier
 Lexique 3.83**, under CC BY-SA 4.0. The exact rows and spelling/POS values
 are retained; the fixed global denominator is 4,087 groups.
 
-These are proposed notices for the author package. Independent rights review and
-the parent’s combined conversion, source archive and redistribution obligations
-remain separate acceptance gates. Project-owned code remains MIT.
+These notices cover the independently accepted selected batch content. The
+parent’s combined conversion, source archive and packaged redistribution
+obligations remain pending. Project-owned code remains MIT.
