@@ -1,97 +1,104 @@
-# Issue #125 author package
+# Issue #125 independently reviewed content
 
-All **50 exact frozen groups, rows 2201–2250**, have one selected everyday
-sense and **200 proposed FR/IPA/EN/ZH fields**. There are **zero reused groups**,
-zero annotation exceptions and no missing authored fields. The denominator
-remains **4,087 groups**. All **200 fields await independent quality and
-selected-rights review**; none is independently accepted or canonically admitted
-by this author package.
+**50 selected uses / 200 fields accepted: 196 unchanged, four replaced, zero
+pending or missing.** All frozen rows **2201–2250**, exact headwords/POS
+subclasses, frequencies and ordering remain. No annotation exception, reused
+group or runtime alias is admitted. The denominator remains **4,087 groups**.
+Canonical assembly and application acceptance remain parent-owned.
 
-The [ticket](https://github.com/zardonc/lexique/issues/125) and
-[parent specification](https://github.com/zardonc/lexique/issues/78) define the
-exact scope and approved resource/admission testing seam.
+Ticket [#125](https://github.com/zardonc/lexique/issues/125),
+[PR #193](https://github.com/zardonc/lexique/pull/193),
+parent [#78](https://github.com/zardonc/lexique/issues/78).
+Reviewed author head: `9cb84bab4e7f41f15195c6fd359037b91c320580`.
+Reviewer: **Independent semantic and selected-rights reviewer #125**, separate
+from the author and parent integration owner. This is an agent review;
+learner acceptance remains a separate gate. The supplied spec's Testing
+Decisions approve the resource/admission seam.
 
-| File | Purpose |
+| File | Result |
 | --- | --- |
-| [groups.json](groups.json) | Exact frozen identities, frequencies, uses and four proposed fields |
-| [sources.json](sources.json) | 51 fixed French source revisions, attribution, modifications and licences |
-| [source-excerpts.json](source-excerpts.json) | 200 exact field bindings and language/POS/form/construction frames |
-| [source-context.json](source-context.json) | Full named contributor registries, anonymous counts, selected spans, import and reference boundaries |
-| [source-captures.json](source-captures.json) | Retained first-party responses, wikitext, contributor pagination and script pointers |
-| [field-review.json](field-review.json) | Field/use/spelling proposals for the separate reviewer; acceptance is false |
-| [rights.json](rights.json) | Per-field selected-rights proposals, original-work layers, authorities and obligations |
-| [reuse.json](reuse.json) | No overlap with the inspected core-119-v1 canonical input |
-| [admission.json](admission.json) | Author counts, pending independent decisions and parent gates |
-| [source-research.md](source-research.md) | All selected uses and fixed source spans |
-| [selected-rights.md](selected-rights.md) | Selected import boundaries and the proposed redistribution route |
-| [NOTICES.md](NOTICES.md) | Fixed article/history attribution, original-work credit and changes |
-| [COPYING](COPYING) | Complete CC BY-SA 4.0 legal text |
-| [selection.py](selection.py) | Authored exact-use selection, text and fixed line numbers |
-| [prepare_candidates.py](prepare_candidates.py) | Existing evidence-schema preparation from archived source responses |
-| [finish_author_package.py](finish_author_package.py) | Selected-rights proposals and notices |
-| [reproduce.py](reproduce.py) | Byte comparison of the ten generated outputs and source/contributor capture checks |
+| [groups.json](groups.json) | Exact frozen groups and accepted fields/use |
+| [field-review.json](field-review.json) | `separate_independent_field_review`; 200 specific field/rights reasons, 50 uses and spelling decisions |
+| [review-candidates.json](review-candidates.json) | Complete unchanged original author group objects |
+| [admission-author-proposal.json](admission-author-proposal.json) | Original author admission/count ledger, byte for byte |
+| [admission.json](admission.json) | Actual 50/200 acceptance, zero pending/missing and separate parent gates |
+| [sources.json](sources.json), [source-excerpts.json](source-excerpts.json), [source-context.json](source-context.json) | 51 fixed revisions, selected fields and reviewed French language/POS/form/construction frames, complete contributors |
+| [source-captures.json](source-captures.json) | Original API/raw capture and pagination pointers |
+| [rights.json](rights.json), [selected-rights.md](selected-rights.md) | Accepted selected-span and original-work rights, original proposals retained |
+| [NOTICES.md](NOTICES.md), [COPYING](COPYING) | Attribution, changes and full CC BY-SA 4.0 text |
+| [independent-review.md](independent-review.md) | Independent result, exact replacements and verification boundaries |
+| [source-research.md](source-research.md), [selection.py](selection.py) | Retained authored selection/research, not the live acceptance ledger |
 
-`vous-même/PRO:per` retains polite **singular** address. `grand-chose/PRO:ind`
-retains the negative construction and invariable form. `cents/ADJ:num` remains
-the exact plural cardinal spelling, sourced through its own adjective entry and
-the fixed `cent` cardinal/number notes; its IPA is **/sɑ̃/**, distinct from the
-currency-noun entries. These are source bindings with no runtime alias proposed.
+`gay/ADJ` retains the selected source's **exclusive** same-sex or same-gender
+sexual/romantic attraction in FR/EN/ZH. `noyer/VER` Chinese retains asphyxiation
+by immersion in **liquid**. `vous-même` remains polite singular; `grand-chose`
+remains an invariable negative-construction pronoun. Exact plural cardinal
+`cents` has its own adjective IPA **/sɑ̃/** and reviewed multiplied-hundreds,
+completing-numeral and ordinal notes. No source spelling becomes a runtime alias.
 
-## Verification and reproduction
+## Verification and retained evidence
 
-The [focused admission check](../../../scripts/test_core_batch_125.py) passes
-**two tests**. The retained TDD logs show absent membership evidence before the
-complete membership package and absent rights evidence before the complete
-selected-rights proposals. The author checks validate fixed spans and metadata;
-the separate reviewer decides actual field/use/spelling and rights acceptance.
+Review checkout: `C:/Users/inthe/IdeaProjects/lexique-review-125`, branch
+`codex/d2-review-125`. Author raw evidence:
+`C:/Users/inthe/IdeaProjects/lexique-batch-125/target/issue-125/`;
+review copy and complete logs:
+`C:/Users/inthe/IdeaProjects/lexique-review-125/target/issue-125-review/`.
 
-Reproduction passes for **51 source wikitext files**, **seven main contributor
-pages plus one cent-support page**, and **nine JSON files plus NOTICES.md**.
-There are **3,004 named main article credits and 121 cent-support credits**;
-these are per-article registry counts, not unique people across the package.
-Anonymous contributors remain credited through complete histories and retained
-API counts. Registries can include later contributors.
+The [focused check](../../../scripts/test_core_batch_125.py) passes **five tests**.
+It verifies exact accepted fields against the retained proposals and four
+literal replacements, fixed sources, independent selected rights and source
+frames, live counters and original snapshots. Identical subsequent canonical
+overlap is supported; overlapping content must match the reviewed record.
 
-Restore the complete retained `target/issue-125/` directory into this author
-checkout before reproducing. It contains source-index.json, the original API
-responses and request URLs, wikitext, full contributor pagination, rights
-authorities, acquisition scripts and logs. Reproduction uses these archived
-inputs rather than mutable current articles. Run against the author baseline
-before canonical assembly; a later reviewed/canonical package has its own inputs.
+The independent [byte/source audit](../../../target/issue-125-review/source-audit.json)
+passes **51 fixed API/raw files**, **200 field spans**, **812 field-support
+spans** and all frozen identities. Seven main contributor response parts and
+one `cent` part terminate without continuation; **3,004 + 121 named article
+credits** and **460 + 25 anonymous contributor counts** match the retained
+registries. Counts are per article, not unique people. Registries may include
+later contributors and do not identify individual sentence authors.
+
+Retained logs: [acceptance RED](../../../target/issue-125-review/acceptance-red.log),
+[acceptance GREEN](../../../target/issue-125-review/acceptance-green.log),
+[gay RED](../../../target/issue-125-review/gay-red.log),
+[gay GREEN](../../../target/issue-125-review/gay-green.log),
+[noyer RED](../../../target/issue-125-review/noyer-red.log),
+[noyer GREEN](../../../target/issue-125-review/noyer-green.log),
+[full focused GREEN](../../../target/issue-125-review/green.log),
+[source bytes](../../../target/issue-125-review/source-byte-audit-reviewed.log),
+[documentation](../../../target/issue-125-review/docs-check.log),
+[owned links](../../../target/issue-125-review/owned-links.json) and
+[final verification](../../../target/issue-125-review/final-verification.json).
+PowerShell 7 and uv Python **3.14.10** are used. All complete author logs/raw
+inputs, acquisition scripts and original tracked snapshots are retained in
+`author-evidence/` and `authored-snapshots/` under the review evidence root.
+No upstream requests or hot retries were made.
 
 ```powershell
-uv run --python 3.14.10 --no-project python -B -X utf8 docs/evidence/issue-125/prepare_candidates.py
-uv run --python 3.14.10 --no-project python -B -X utf8 docs/evidence/issue-125/finish_author_package.py
 uv run --python 3.14.10 --no-project python -B -X utf8 -m unittest discover -s scripts -p test_core_batch_125.py -v
-uv run --python 3.14.10 --no-project python -B -X utf8 docs/evidence/issue-125/reproduce.py
+uv run --python 3.14.10 --no-project python -B -X utf8 target/issue-125-review/source_audit.py
 pwsh -NoProfile -File scripts/check-docs.ps1
 git diff --cached --check
 ```
 
-The complete acquisition scripts are `fetch.py`, `fetch_cent.py`,
-`contributors.py` and `contributors_cent.py` in the retained capture directory.
-The first two record fixed revisions; contributor scripts retain every
-continuation URL and terminal response. Re-running acquisition without the
-archive requests current sources and does not reproduce this selection.
+The retained author preparation/reproduction scripts regenerate **author
+proposals** and must be run against the author baseline with its original
+`target/issue-125/` inputs. The reviewed content has separate accepted records,
+snapshots and independent audit; re-running author generation in this review
+checkout would overwrite those decisions.
 
-Checkout: `C:/Users/inthe/IdeaProjects/lexique-batch-125`, branch
-`codex/d2-content-125`. Only this directory and the focused test are authored.
-The branch descends from integration and merges the current integration tip
-before handoff. Final commit, merged tip, command results and archive inventory
-are retained in `target/issue-125/final-verification.json`.
+Retained patch command:
+`git diff 9cb84bab4e7f41f15195c6fd359037b91c320580 HEAD -- docs/evidence/issue-125 scripts/test_core_batch_125.py`.
+The owned patch and separate test patch are `reviewer.patch` and
+`reviewer-test.patch` in the review evidence root. The latest committed
+integration tip is merged before handoff; exact SHAs and results are in
+`final-verification.json`. Only the evidence directory and focused test are
+committed by this reviewer.
 
-Logs and raw package: `C:/Users/inthe/IdeaProjects/lexique-batch-125/target/issue-125/`.
-Key logs: `membership-red.log`, `membership-green.log`, `rights-red.log`,
-`green.log`, `reproduction.log`, `docs-check.log`, `owned-links.json`,
-`diff-check.log` and `integration-merge.log`. Parent archives this complete
-directory before cleanup.
+## Remaining gates
 
-## Limitations
-
-No material author sourcing blocker remains. Independent quality, use/spelling
-and selected-rights decisions remain pending for all 200 fields. Rights
-authorities reuse retained primary snapshots and the established original-work
-bases; no live statute refresh is claimed. Canonical conversion, actual combined
-packaged notices, resource/native lookup/save/reopen, learner acceptance and
-release readiness are parent-owned and unrun here. This author package does not
-close the ticket or establish whole-core readiness.
+Zero unresolved field/use/spelling/source-frame/selected-rights decisions
+remain. Rights authorities and original-work bases use retained evidence;
+no live statute refresh is claimed. Canonical conversion, actual combined
+notices, global coverage/size, native lookup/save/reopen, learner acceptance
+and offline/platform/release checks remain parent-owned and unrun here.
