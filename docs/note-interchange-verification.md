@@ -187,3 +187,55 @@ The fresh native recovery establishes the affected behavior without attributing
 that renderer failure. The unchanged frontend's full browser suite was not
 rerun; other-platform, clean-machine and whole-machine offline acceptance
 remain unrun.
+
+## Combined source with admitted core data
+
+Runtime build source `64961c937f5072cc24bd069ab51a376f7d73ca15` includes main
+`b91c4729a0a1c93baa58f86ed666b173fb2fc253` and its admitted #110–#119 core
+resources. Integration preserves main's resource and packaging files exactly;
+`target/issue-183/main-resource-preservation.patch` is empty. The three resolved
+conflicts retain both sets of native evidence roots and verification sections.
+Subsequent closeout changes affect documentation only.
+
+`pnpm desktop:build --no-bundle` and
+`python -B -X utf8 scripts/package_portable.py --output-dir target/issue-183/post-main-package`
+passed with the admitted core data. Built, packaged and all accepted disposable
+executables match SHA-256
+`77449269117b55399583805f47c676b0a857230882f6e2775193612170d4794d`.
+The portable archive contains 186 verified files and is 41,106,294 bytes.
+`post-main-native-build.log`, `post-main-package.log` and
+`post-main-native-manifest.json` are retained under `target/issue-183`.
+
+The existing native driver passed all eight scenarios against that package.
+Each uses real WebView2, native IPC, files and SQLite, with actual Windows
+pickers where applicable and the original hard 60-second limit. The persisted
+chain uses fresh roots under `target/issue-189`:
+
+| Accepted root | Seconds | Real pickers |
+| --- | ---: | ---: |
+| `post-main-01-seed` | 8.970 | 1 |
+| `post-main-01-csv` | 16.134 | 2 |
+| `post-main-01-markdown` | 10.388 | 2 |
+| `post-main-01-zip` | 25.254 | 6 |
+| `post-main-01-consent` | 14.809 | 2 |
+| `post-main-01-enroll` | 8.125 | 0 |
+| `post-main-01-backup` | 15.168 | 2 |
+| `post-main-02-device-names` | 24.846 | 6 |
+
+The first seven roots form one saved-state chain. The device-name check uses
+an independent database and verifies dotted/case-variant reserved names,
+standalone Markdown, ordinary Windows ZIP extraction, exact body text,
+all/search counts and order, and unchanged records on reimport. Each accepted
+root retains results, lifecycle, executable identity, driver/helper copies,
+actual learning data and cleanup evidence with zero owned hosts/workers/helpers.
+
+`post-main-01-device-names` retains a WebView2 renderer access violation
+(`-1073741819`) after the import picker and before assertions. The fresh
+`post-main-02-device-names` recovery passed with the unchanged source and
+executable. Its cause remains unknown.
+
+Post-integration frontend lint, typecheck, build and documentation checks passed.
+The complete 436-test browser result remains attached to `120ff887`; frontend
+runtime source is unchanged by the review fixes and main synchronization.
+Other-platform GUI, clean-machine installation and whole-machine offline
+acceptance remain unrun.
