@@ -335,6 +335,12 @@ fn validate_notes(
             "duplicate or invalid category",
         )?;
     }
+    snapshot.preferences.review_scope.validate()?;
+    if let ReviewScope::Vocabulary { category_ids, .. } = &snapshot.preferences.review_scope {
+        for id in category_ids {
+            known(*id, &categories)?;
+        }
+    }
     let mut records = words.clone();
     let mut grammars = HashSet::new();
     let cards = snapshot

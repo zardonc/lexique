@@ -20,6 +20,24 @@ const pendingBatch = { operation: 'pending-batch', vocabulary_ids: [10, 20, 30] 
 const cancelledBatch = { operation: 'pending-batch', cancelled: true,
   items: [{ vocabulary_id: 10, created_cards: 2, error: null, audio_state: 'cancelled', audio_error: null }] };
 
+test('backup includes the applied review scope while an unapplied choice stays transient', async ({ page }) => {
+  await nativeFixture(page, { learning_categories: [{ value: [{ id: 7, name: 'Voyage' }] }],
+    review_queue: [{ value: { queue: { cards: [{ id: 1, vocabulary_id: 1, kind: 'recognition' }], reason: null, available_at: null }, record, audio_pending: false, audio_error: null } }],
+    backup_export_start: [{ value: completed }] });
+  await page.goto('/');
+  await page.getByRole('button', { name: '闪卡复习', exact: true }).click();
+  await page.getByRole('group', { name: '复习范围', exact: true }).getByRole('checkbox', { name: 'Voyage', exact: true }).check();
+  await expect(page.getByText('将在当前卡片评分或跳过后应用：Voyage', { exact: true })).toBeVisible();
+  await page.getByRole('button', { name: '设置', exact: true }).click();
+  await expect(page.getByText(/已应用的复习范围/)).toBeVisible();
+  await page.getByRole('button', { name: '创建备份', exact: true }).click();
+  await expect(page.getByText('备份已保存', { exact: true })).toBeVisible();
+  expect(await page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'review_scope' && call.args?.scope))).toEqual([]);
+  await page.getByRole('button', { name: '闪卡复习', exact: true }).click();
+  await expect(page.getByText('当前范围：全部复习', { exact: true })).toBeVisible();
+  await expect(page.getByText('将在当前卡片评分或跳过后应用：Voyage', { exact: true })).toHaveCount(0);
+});
+
 test('backup resolves all pending card keys and keeps a confirmed cancelled partial batch', async ({ page }) => {
   await nativeFixture(page, { review_rate: [{ value: ratingResult }], review_batch_status: [{ value: cancelledBatch }],
     backup_export_start: [{ gate: 'backup-start', value: completed }] });
