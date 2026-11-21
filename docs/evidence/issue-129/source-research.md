@@ -1,6 +1,6 @@
 # Selected uses for #129
 
-One selected sense per exact frozen group supplies 200 proposed fields.
+One selected sense per exact frozen group supplies 200 independently reviewed fields.
 [Groups](groups.json) and [field review](field-review.json) retain the full
 FR/IPA/EN/ZH wording, exclusions and fixed line bindings. English and Chinese
 are new scoped explanations of the selected French use, licensed as adaptations
@@ -80,5 +80,8 @@ per-field [rights records](rights.json) distinguish those original works from
 the Wiktionnaire and Lexique contribution/adaptation layers. Source reference
 lists or import markers do not identify a selected sentence's individual author.
 
-Independent semantic, rights, pronunciation, spelling and construction review
-remains pending for all 200 fields.
+All 200 fields pass separate independent semantic and selected-span rights
+review; all 50 uses and source spelling/construction frames pass. Exact decisions
+and original proposals are retained in field-review.json and authored snapshots.
+The Chinese boucler field specifies a buckle (搭扣). Canonical assembly remains
+parent-owned and pending.
