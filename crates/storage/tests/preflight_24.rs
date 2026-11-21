@@ -207,13 +207,19 @@ fn v03_candidate_transaction_sizes_and_competing_notes_and_ratings() {
                         .busy_timeout(std::time::Duration::from_millis(250))
                         .unwrap();
                     if contended {
-                        other
-                            .execute(
-                                "UPDATE vocabulary SET notes=?1 WHERE id=?2",
-                                params!["concurrent note", size + 1],
-                            )
-                            .unwrap();
+                        let note_result = other.execute(
+                            "UPDATE vocabulary SET notes=?1 WHERE id=?2",
+                            params!["concurrent note", size + 1],
+                        );
+                        if let Err(error) = &note_result {
+                            eprintln!(
+                                "V03_WRITE_FAILURE size={size} repeat={repeat} writer_ms={} error={error:?}",
+                                start.elapsed().as_secs_f64() * 1000.0
+                            );
+                        }
+                        note_result.unwrap();
                     }
+                    let note_ms = start.elapsed().as_secs_f64() * 1000.0;
                     lexique_storage::rate_card(
                         &mut other,
                         &lexique_storage::RatingRequest {
@@ -226,7 +232,7 @@ fn v03_candidate_transaction_sizes_and_competing_notes_and_ratings() {
                         },
                     )
                     .unwrap();
-                    (start.elapsed().as_secs_f64() * 1000.0, contended)
+                    (start.elapsed().as_secs_f64() * 1000.0, contended, note_ms)
                 });
                 barrier.wait();
                 let tx = connection
@@ -241,7 +247,14 @@ fn v03_candidate_transaction_sizes_and_competing_notes_and_ratings() {
                         .all(|(_, r)| r.is_ok())
                 );
                 let transaction_ms = start.elapsed().as_secs_f64() * 1000.0;
-                let (writer_ms, contended) = writer.join().unwrap();
+                let (writer_ms, contended, note_ms) = writer.join().unwrap_or_else(|panic| {
+                    eprintln!("V03_TX size={size} repeat={repeat} transaction_ms={transaction_ms}");
+                    std::panic::resume_unwind(panic)
+                });
+                println!(
+                    "V03_PHASES size={size} repeat={repeat} note_ms={note_ms} rating_ms={}",
+                    writer_ms - note_ms
+                );
                 println!(
                     "V03 {{\"size\":{size},\"repeat\":{repeat},\"transaction_ms\":{transaction_ms},\"writer_ms\":{writer_ms},\"contended\":{contended}}}"
                 );

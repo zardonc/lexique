@@ -1,4 +1,4 @@
-use rusqlite::{Connection, OptionalExtension, TransactionBehavior, params};
+use rusqlite::{Connection, OptionalExtension, Transaction, TransactionBehavior, params};
 use serde::{Deserialize, Serialize};
 use unicode_normalization::{UnicodeNormalization, char::is_combining_mark};
 
@@ -75,9 +75,50 @@ pub struct Snapshot {
 
 #[derive(Debug, Clone, Deserialize, Serialize, PartialEq)]
 #[serde(deny_unknown_fields)]
+pub struct ImportSource {
+    pub format: NoteFormat,
+    pub filename: String,
+}
+
+#[derive(Debug, Clone, Deserialize, Serialize, PartialEq)]
+#[serde(rename_all = "lowercase")]
+pub enum NoteFormat {
+    Csv,
+    Markdown,
+    Zip,
+}
+
+impl ImportSource {
+    pub fn validate(&self) -> Result<(), StorageError> {
+        if self.filename.trim().is_empty()
+            || self.filename.chars().count() > 255
+            || self
+                .filename
+                .chars()
+                .any(|ch| ch.is_control() || ch == '/' || ch == '\\')
+        {
+            return Err(StorageError::Invalid("Invalid import filename".into()));
+        }
+        Ok(())
+    }
+}
+
+#[derive(Deserialize, Serialize)]
+#[serde(deny_unknown_fields)]
+pub(crate) struct StoredSnapshot {
+    pub reference: Option<Reference>,
+    pub digest: Vec<DigestEntry>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub import_source: Option<ImportSource>,
+}
+
+#[derive(Debug, Clone, Deserialize, Serialize, PartialEq)]
+#[serde(deny_unknown_fields)]
 pub struct Example {
     pub fr: String,
     pub zh: String,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub sense: Option<u32>,
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub source: Option<Reference>,
 }
@@ -106,8 +147,10 @@ pub struct SaveRequest {
 pub struct VocabularyRecord {
     pub id: i64,
     pub headword: String,
-    pub reference: Reference,
+    pub reference: Option<Reference>,
     pub digest: Vec<DigestEntry>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub import_source: Option<ImportSource>,
     pub notes: String,
     pub example_fr: String,
     pub example_zh: String,
@@ -172,7 +215,7 @@ pub fn validate(request: &SaveRequest) -> Result<(), StorageError> {
 
 fn row_record(row: &rusqlite::Row<'_>) -> rusqlite::Result<VocabularyRecord> {
     let json: String = row.get(2)?;
-    let snapshot: Snapshot = serde_json::from_str(&json).map_err(|error| {
+    let snapshot: StoredSnapshot = serde_json::from_str(&json).map_err(|error| {
         rusqlite::Error::FromSqlConversionFailure(2, rusqlite::types::Type::Text, Box::new(error))
     })?;
     Ok(VocabularyRecord {
@@ -187,6 +230,7 @@ fn row_record(row: &rusqlite::Row<'_>) -> rusqlite::Result<VocabularyRecord> {
         headword: row.get(1)?,
         reference: snapshot.reference,
         digest: snapshot.digest,
+        import_source: snapshot.import_source,
         notes: row.get(3)?,
         revision: row.get(4)?,
         created_at: row.get(5)?,
@@ -312,10 +356,14 @@ pub fn find(
     Ok(connection
         .query_row(
             &format!("SELECT {COLUMNS} FROM vocabulary WHERE headword = ?1 AND record_kind = 'vocabulary'"),
-            [headword.nfc().collect::<String>()],
+            [normalize_headword(headword)],
             row_record,
         )
         .optional()?)
+}
+
+pub fn normalize_headword(headword: &str) -> String {
+    headword.nfc().collect()
 }
 
 pub fn replay(
@@ -383,12 +431,44 @@ pub fn save(
     request: &SaveRequest,
     snapshot: Option<Snapshot>,
 ) -> Result<SaveResult, StorageError> {
+    save_with_import_source(connection, request, snapshot, None)
+}
+
+pub fn save_imported_note(
+    connection: &mut Connection,
+    request: &SaveRequest,
+    snapshot: Option<Snapshot>,
+    source: ImportSource,
+) -> Result<SaveResult, StorageError> {
+    source.validate()?;
+    save_with_import_source(connection, request, snapshot, Some(source))
+}
+
+fn save_with_import_source(
+    connection: &mut Connection,
+    request: &SaveRequest,
+    snapshot: Option<Snapshot>,
+    import_source: Option<ImportSource>,
+) -> Result<SaveResult, StorageError> {
     validate(request)?;
     let transaction = connection.transaction_with_behavior(TransactionBehavior::Immediate)?;
-    if let Some(result) = replay(&transaction, request)? {
+    let result = save_in_transaction(&transaction, request, snapshot, import_source)?;
+    transaction.commit()?;
+    Ok(result)
+}
+
+pub(crate) fn save_in_transaction(
+    transaction: &Transaction<'_>,
+    request: &SaveRequest,
+    snapshot: Option<Snapshot>,
+    import_source: Option<ImportSource>,
+) -> Result<SaveResult, StorageError> {
+    let importing = import_source.is_some();
+    validate(request)?;
+    if let Some(result) = replay(transaction, request)? {
         return Ok(result);
     }
-    let headword = request.headword.nfc().collect::<String>();
+    let headword = normalize_headword(&request.headword);
     let has_examples = !request.example_fr.trim().is_empty()
         || !request.example_zh.trim().is_empty()
         || request
@@ -396,7 +476,7 @@ pub fn save(
             .iter()
             .any(|example| !example.fr.trim().is_empty() || !example.zh.trim().is_empty());
     let (outcome, record) = if let Some(id) = request.id {
-        let current = get(&transaction, id)?;
+        let current = get(transaction, id)?;
         if current.headword != headword {
             return Err(StorageError::Invalid("Headword is read-only".into()));
         }
@@ -406,11 +486,21 @@ pub fn save(
                 record: current,
             });
         }
-        let unchanged_legacy = current.example_sense.is_none()
-            && current.example_fr == request.example_fr
-            && current.example_zh == request.example_zh
-            && current.more_examples == request.more_examples;
-        if has_examples && request.example_sense.is_none() && !unchanged_legacy {
+        let persisted_unlinked = current.example_sense.is_none()
+            && std::iter::once((&current.example_fr, &current.example_zh))
+                .chain(
+                    current
+                        .more_examples
+                        .iter()
+                        .map(|example| (&example.fr, &example.zh)),
+                )
+                .any(|(fr, zh)| !fr.trim().is_empty() || !zh.trim().is_empty());
+        if has_examples
+            && request.example_sense.is_none()
+            && !persisted_unlinked
+            && current.import_source.is_none()
+            && !importing
+        {
             return Err(StorageError::Invalid(
                 "Select a meaning for new or edited examples".into(),
             ));
@@ -418,6 +508,11 @@ pub fn save(
         if request
             .example_sense
             .is_some_and(|index| index as usize >= current.digest.len())
+            || request.more_examples.iter().any(|example| {
+                example
+                    .sense
+                    .is_some_and(|index| index as usize >= current.digest.len())
+            })
         {
             return Err(StorageError::Invalid(
                 "Example meaning is not in the saved summary".into(),
@@ -428,25 +523,52 @@ pub fn save(
              updated_at = MAX(updated_at + 1, CAST(unixepoch('subsec') * 1000 AS INTEGER)) WHERE id = ?6",
             params![request.notes, request.example_fr, request.example_zh, serde_json::to_string(&request.more_examples)?, request.example_sense, id, request.example_source.as_ref().map(serde_json::to_string).transpose()?],
         )?;
-        crate::categories::save_record_categories(&transaction, id, &request.category_ids)?;
-        ("updated", get(&transaction, id)?)
-    } else if let Some(existing) = find(&transaction, &headword)? {
+        crate::categories::save_record_categories(transaction, id, &request.category_ids)?;
+        ("updated", get(transaction, id)?)
+    } else if let Some(existing) = find(transaction, &headword)? {
+        if import_source.is_some() {
+            return Err(StorageError::Invalid(
+                "Headword was saved after preview; preview again".into(),
+            ));
+        }
         ("existing", existing)
     } else {
-        if has_examples && request.example_sense.is_none() {
+        if has_examples && request.example_sense.is_none() && import_source.is_none() {
             return Err(StorageError::Invalid(
                 "Select a meaning for new or edited examples".into(),
             ));
         }
-        let snapshot = snapshot
-            .ok_or_else(|| StorageError::Invalid("Verified dictionary content required".into()))?;
-        if snapshot.digest.is_empty() {
-            return Err(StorageError::Invalid("Dictionary digest is empty".into()));
-        }
-        validate_core_digest(&headword, &snapshot.reference, &snapshot.digest)?;
+        let snapshot = match snapshot {
+            Some(snapshot) => {
+                if snapshot.digest.is_empty() {
+                    return Err(StorageError::Invalid("Dictionary digest is empty".into()));
+                }
+                validate_core_digest(&headword, &snapshot.reference, &snapshot.digest)?;
+                StoredSnapshot {
+                    reference: Some(snapshot.reference),
+                    digest: snapshot.digest,
+                    import_source,
+                }
+            }
+            None if import_source.is_some() => StoredSnapshot {
+                reference: None,
+                digest: vec![],
+                import_source,
+            },
+            None => {
+                return Err(StorageError::Invalid(
+                    "Verified dictionary content required".into(),
+                ));
+            }
+        };
         if request
             .example_sense
             .is_some_and(|index| index as usize >= snapshot.digest.len())
+            || request.more_examples.iter().any(|example| {
+                example
+                    .sense
+                    .is_some_and(|index| index as usize >= snapshot.digest.len())
+            })
         {
             return Err(StorageError::Invalid(
                 "Example meaning is not in the saved summary".into(),
@@ -458,11 +580,11 @@ pub fn save(
             params![headword, serde_json::to_string(&snapshot)?, request.notes, request.example_fr, request.example_zh, serde_json::to_string(&request.more_examples)?, request.example_sense, request.example_source.as_ref().map(serde_json::to_string).transpose()?],
         )?;
         let id = transaction.last_insert_rowid();
-        crate::categories::save_record_categories(&transaction, id, &request.category_ids)?;
-        if crate::auto_enroll(&transaction)? {
-            crate::review::ensure_review_cards(&transaction, id)?;
+        crate::categories::save_record_categories(transaction, id, &request.category_ids)?;
+        if snapshot.import_source.is_none() && crate::auto_enroll(transaction)? {
+            crate::review::ensure_review_cards(transaction, id)?;
         }
-        ("created", get(&transaction, id)?)
+        ("created", get(transaction, id)?)
     };
     transaction.execute(
         "INSERT INTO save_operations (operation, request, record_id, outcome) VALUES (?1, ?2, ?3, ?4)",
@@ -473,15 +595,16 @@ pub fn save(
         ],
     )?;
     let audio_now = transaction.query_row("SELECT unixepoch()", [], |row| row.get(0))?;
-    crate::attach_word_audio_at(&transaction, record.id, audio_now)?;
-    if outcome == "created" && crate::auto_enroll(&transaction)? {
+    if !importing {
+        crate::attach_word_audio_at(transaction, record.id, audio_now)?;
+    }
+    if !importing && outcome == "created" && crate::auto_enroll(transaction)? {
         let spec = crate::SpeechSpec::word(
             &record.headword,
-            crate::speech_preferences(&transaction)?.voice,
+            crate::speech_preferences(transaction)?.voice,
         );
-        crate::demand_speech(&transaction, &spec, 1, audio_now, false)?;
+        crate::demand_speech(transaction, &spec, 1, audio_now, false)?;
     }
-    transaction.commit()?;
     Ok(SaveResult { outcome, record })
 }
 

@@ -1,5 +1,10 @@
 # 骨架验证记录
 
+## 单条 Markdown 笔记交换（#188）
+
+2026-11-20，按[交换设计](note-interchange-design.md)实现固定模板的单文件导入与单条已保存快照导出，并在入口提供[示例模板](examples/lexique-note-v1.md)。Windows x64 的真实文件／SQLite 检查覆盖逐字符空白、LF／CR／CRLF、长反引号、省略与清空、单侧例句、非法模板、保留元数据与来源、失效预览、写入失败和共享词典补充／明确继续。单独预编译后，原有 60 秒硬限 runner 执行 `node scripts/test-rust.mjs --desktop-lib note_ --test-threads=1`，39 项通过（含 9 项 Markdown，3.66 秒）；另行预编译的 `pnpm test:rust` 通过，保留 `RUST_TEST_NOCAPTURE=1` 与 V03 的 100／250 ms 限值。此前桌面分区尝试在 Cargo 重编译时触及 60 秒硬限，尚未开始测试；原日志保留。
+
+相关导入／批次／词典／导出 Playwright 24 项通过（26.4 秒）；lint、类型检查、build、rustfmt、locked workspace 编译及 all-target Clippy 通过。完整日志与真实文件／数据库在本机 `target/issue-188/`，其中 `backend-tests.log`、`desktop-focused-final.log` 和 `browser-final.log` 记录最终执行。浏览器检查不证明原生文件对话框；T39 的 Windows 原生单文件导出→导入→重启验证明确合并至 #189，ZIP 组合验证也由该切片完成。
 
 ## D2 冻结批次 #120–#129
 
@@ -918,3 +923,23 @@ Per-word CEFR grading is deferred outside this frozen target.
 The SQLite resource is 6,721,536 bytes; the final portable ZIP is 38,547,297 bytes with 183 verified files. Separate Standards and Spec reviews have zero remaining findings; one minor test duplication was resolved in a fresh implementer. Exact commits, content/source decisions, owner approvals, artifact identities, commands, retained failures and platform limits are in [the cohort evidence](evidence/issues-100-109/README.md) and [final review](evidence/issues-100-109/final-review.md). [PR #180](https://github.com/zardonc/lexique/pull/180) closes #100–#109 when merged; #78 remains open. Documentation closeout and exact-head CI are recorded in the aggregate evidence.
 
 Whole-machine offline execution, other-platform native flows, learner acceptance and full D2 release readiness remain unverified.
+
+## 生词笔记 CSV 导出（#185）
+
+2026-11-20：生词本与单条已保存记录提供 CSV 导出。全部／当前搜索与分类范围／单条的词头、笔记、有序例句、记录及文件行数来自同一 SQLite 读取快照；当前搜索不受分页限制，沿用生词本全部七种排序。文件使用 `csv` 1.4.0、UTF-8 BOM 和固定四列，保留文本空白、中文、重音、引用内换行、单侧及重复例句；没有非空例句时仍输出一行。原生文件选择与写入使用受限平台命令。
+
+[存储测试](../crates/storage/tests/note_export.rs)覆盖保存读取、完整查询范围、分类筛选、排序、非法范围及并发保存时的内容／数量／到期顺序一致性。[真实文件测试](../apps/desktop/src-tauri/src/note_export_tests.rs)通过真实 SQLite 与 CSV reader 逐字段核对三种范围，验证空例句、写入失败和重开后学习数据保持。[浏览器测试](../apps/desktop/e2e/note-export.spec.ts)的五项流程通过，覆盖范围、空结果、取消、失败重试及未保存草稿；使用独立 1485 端口。前端 lint／typecheck／build、locked workspace 编译、分别预编译后的后端测试及 rustfmt 通过，后端执行保留 60 秒硬限。
+
+实际 Windows 文件选择与重新构建的组合原生执行现已由 #189 验证，包括 #184 未关联词典的外部记录经过相同导出链路。浏览器 fixture 只证明 UI，开发程序编译不证明实际原生、其他平台、整机离线或正式发行就绪。
+
+## CSV／Markdown／ZIP 组合验收（#183／#189）
+
+2026-11-20：Markdown ZIP 批量导出／导入已完成。真实 ZIP／SQLite 覆盖同快照范围与命名、同词去重／整组冲突、无效条目／损坏容器、原子失败、修订复验、响应丢失重放及 101／102 例句边界。共享读文件边界已修复，超过 32 MiB 的合法应用 CSV 导出可以重新导入，字段限制与错误上下文保持。
+
+前端 lint／typecheck／build、locked workspace 编译、后端检查、exact shared all-target Clippy、rustfmt、分别预编译后的八段桌面测试与 27 项浏览器交换检查通过。使用本切片代码重新构建并打包的 Windows x64 程序通过七类真实原生场景：分号 CSV／手动映射、混合保存／排除、单 Markdown、全部／搜索 ZIP、资源错误明确继续、主动单条／批量双卡、完整备份恢复与重启。既有丰富／空词典信息、普通／语法笔记、分类、进度、暂停与选定音频通过实际回读保持；导入未自动新增卡或音频任务。
+
+与 main 的 #110–#119 已准入核心数据合并后，来源 `64961c9` 重新构建并打包；原有七类真实 Windows 场景与保留设备文件名的独立回归均通过，保持 60 秒硬限与零遗留原生进程。Standards／Spec 两项审查问题已解决：批量 fixture 使用单事务，带点及大小写设备词头生成 Windows 可保存文件名且保留正文身份。[PR #192](https://github.com/zardonc/lexique/pull/192)已合并为 `501211152d9d135699c1421e7f3f3f89f32c8ba1`，#183–#189 全部关闭。
+
+最终头 `f2cced1` 的 PR／push 两次 CI 各十一项首次运行通过，PR CI 与该头的源码树一致，包含 436 项浏览器测试与 144 项 Windows x64 桌面测试。[合并后 main CI](https://github.com/zardonc/lexique/actions/runs/44859507861)在 `5012111` 通过。
+
+精确来源树、二进制 SHA-256、命令、原生链路、失败与恢复证据、快照降级限制见[组合验收记录](note-interchange-verification.md)。`native-green-01` 与 `post-main-01-device-names` 两份转储均定位到 `RTSSHooks64.dll + 0x1490AF`；按用户确认作为 RTSS 注入相关环境失败排除出 #192 阻塞项，见[转储归因](note-interchange-verification.md#rtss-crash-attribution)。未执行关闭 RTSS 的对照测试；其他历史 renderer 失败和 V03 偶发超时未据此归因。其他平台原生、干净机器安装与整机离线验收未执行，发行门槛仍保留。

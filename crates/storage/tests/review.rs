@@ -540,7 +540,7 @@ fn auto_enrollment_applies_only_to_newly_saved_words() {
         revision: None,
     };
     let snapshot = Snapshot {
-        reference: original.reference,
+        reference: original.reference.unwrap(),
         digest: original.digest,
     };
     let result = save(&mut connection, &request, Some(snapshot)).unwrap();
@@ -581,7 +581,7 @@ fn auto_enrollment_rolls_back_word_and_cards_when_card_creation_fails() {
         revision: None,
     };
     let snapshot = Snapshot {
-        reference: original.reference,
+        reference: original.reference.unwrap(),
         digest: original.digest,
     };
     assert!(save(&mut connection, &request, Some(snapshot)).is_err());
@@ -1872,7 +1872,7 @@ fn adding_a_saved_word_creates_two_cards_once_without_changing_the_record() {
     let source_id = saved_word(&mut source);
     let source_record = lexique_storage::get(&source, source_id).unwrap();
     let snapshot = Snapshot {
-        reference: source_record.reference,
+        reference: source_record.reference.unwrap(),
         digest: source_record.digest,
     };
     let mut connection = Connection::open_in_memory().unwrap();

@@ -37,7 +37,7 @@ class NativeFixture {
   private readonly defaults: Record<string, unknown>;
 
   constructor(private readonly responses: Readonly<Record<string, readonly Reply[]>>, lookup: typeof dictionary) {
-    this.defaults = { runtime_status: { version: '0.1.0', schemaVersion: 19, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } },
+    this.defaults = { runtime_status: { version: '0.1.0', schemaVersion: 20, storage: 'sqlite', audioMigration: { pending: 0, failed: 0 } },
       startup_status: { state: 'ready', operation: null, restored: null, retained_copies: [], error: null },
       startup_retry: { state: 'ready', operation: null, restored: null, retained_copies: [], error: null },
       dictionary_lookup: lookup, dictionary_settings: [{ id: 'builtin', title: 'FreeDict fra-zho', content_hash: null, availability: 'available' },

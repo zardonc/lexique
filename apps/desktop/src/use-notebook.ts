@@ -36,14 +36,20 @@ function samePayload(previous: SaveRequest, payload: ReturnType<typeof savePaylo
 function needsExampleSense(editor: Editor) {
   const hasContent = [editor.example_fr, editor.example_zh, ...editor.more_examples.flatMap((example) => [example.fr, example.zh])].some((value) => value.trim());
   const original = editor.record;
-  const unchangedLegacy = original && original.example_sense === null && editor.example_fr === original.example_fr && editor.example_zh === original.example_zh && JSON.stringify(editor.more_examples) === JSON.stringify(original.more_examples);
-  return editor.example_sense === null && hasContent && !unchangedLegacy;
+  const persistedUnlinked = original?.example_sense === null
+    && [original.example_fr, original.example_zh, ...original.more_examples.flatMap((example) => [example.fr, example.zh])].some((value) => value.trim());
+  return editor.example_sense === null && hasContent && !persistedUnlinked && !editor.snapshot.import_source;
+}
+
+function editMoreExamples(editor: Editor, examples: VocabularyRecord['more_examples']) {
+  return examples.map((example) => editor.more_examples.some((old) => old.fr === example.fr && old.zh === example.zh)
+    || (!editor.snapshot.import_source && example.sense === undefined) ? example : { fr: example.fr, zh: example.zh });
 }
 
 
 
 function useExcerpt(editor: Editor | null, setEditor: (editor: Editor) => void, { open, collect, changed }: { readonly open: (record: VocabularyRecord) => void; readonly collect: (lookup: DictionaryLookup) => void; readonly changed: () => void }) {
-  const [excerpt, setExcerpt] = useState<{ readonly source: VocabularyRecord['reference']; readonly fr: string; readonly zh: string } | null>(null);
+  const [excerpt, setExcerpt] = useState<{ readonly source: NonNullable<VocabularyRecord['reference']>; readonly fr: string; readonly zh: string } | null>(null);
   const [excerptStatus, setExcerptStatus] = useState<'duplicate' | 'capacity' | 'limit' | ''>('');
   const [focusExample, setFocusExample] = useState('');
   function beginExcerpt(lookup: DictionaryLookup, record: VocabularyRecord | null) {
@@ -125,7 +131,7 @@ export function useNotebook(runtime: RuntimeAdapter) {
     }
     saving.current = true; setBusy(true); setError(''); setSaved(false);
     try {
-      const result = await runtime.saveVocabulary(operation.current!, editor.snapshot.reference.dictionary_id ?? 'builtin');
+      const result = await runtime.saveVocabulary(operation.current!, editor.snapshot.reference?.dictionary_id);
       if (!result) throw new Error('Native notebook storage unavailable');
       const accepted = applyResult(result, payload);
       return accepted;
@@ -135,8 +141,8 @@ export function useNotebook(runtime: RuntimeAdapter) {
   return { ...excerpts, preservesExcerpt: Boolean(excerpts.excerpt || hasExcerptSource(editor)), editor, conflict, existing, error, audioError: '', saved, busy, dirty: excerpts.excerptPending || hasUnsavedNotes(editor, operation.current), meaningRequired: editor !== null && needsExampleSense(editor), version, save, clear, open, collect,
     refresh: () => refreshVocabulary(runtime, editor?.record ?? null, { open, setBusy, setError }), editCategories: (category_ids: readonly number[]) => { setEditor((value) => value && { ...value, category_ids }); setSaved(false); setExisting(null); },
     edit: (notes: string) => { setEditor((value) => value && { ...value, notes }); setSaved(false); setExisting(null); },
-    editExample: (field: 'example_fr' | 'example_zh', text: string) => { setEditor((value) => value && { ...value, [field]: text }); setSaved(false); setExisting(null); },
-    editSense: (example_sense: number | null) => { setEditor((value) => value && { ...value, example_sense }); setSaved(false); setExisting(null); }, editMore: (examples: VocabularyRecord['more_examples']) => { setEditor((value) => value && { ...value, more_examples: examples }); setSaved(false); setExisting(null); },
+    editExample: (field: 'example_fr' | 'example_zh', text: string) => { setEditor((value) => value && { ...value, [field]: text, ...(value.snapshot.import_source ? { example_source: undefined, example_sense: null } : {}) }); setSaved(false); setExisting(null); },
+    editSense: (example_sense: number | null) => { setEditor((value) => value && { ...value, example_sense }); setSaved(false); setExisting(null); }, editMore: (examples: VocabularyRecord['more_examples']) => { setEditor((value) => value && { ...value, more_examples: editMoreExamples(value, examples) }); setSaved(false); setExisting(null); },
     adopt: () => { if (conflict) open(conflict); },
     back: () => setConflict(null),
   };

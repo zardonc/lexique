@@ -26,12 +26,21 @@ const reference = z.object({
   sha256: z.string().regex(/^[a-f0-9]{64}$/),
 }).strict().readonly();
 const exampleSource = reference.nullable().optional();
-const moreExamples = z.array(z.object({ fr: notes, zh: notes, source: exampleSource }).strict().readonly()).max(100).readonly();
+export const dictionarySnapshotSchema = z.object({ reference, digest: z.array(digestEntry).min(1).readonly() }).strict().readonly();
+const moreExamples = z.array(z.object({ fr: notes, zh: notes, source: exampleSource, sense: z.number().int().nonnegative().safe().optional() }).strict().readonly()).max(100).readonly();
+export const importSourceSchema = z.object({
+  format: z.enum(['csv', 'markdown', 'zip']),
+  filename: z.string().min(1).refine((value) => value.trim().length > 0 && characterCount(value) <= 255 && Array.from(value).every((char) => {
+    const code = char.codePointAt(0)!;
+    return code >= 32 && (code < 127 || code > 159) && char !== '/' && char !== '\\';
+  })),
+}).strict().readonly();
 export const recordSchema = z.object({
-  id: positiveId, headword, reference, digest: z.array(digestEntry).min(1).readonly(), notes, example_fr: notes, example_zh: notes, example_source: exampleSource, example_sense: z.number().int().nonnegative().safe().nullable(), more_examples: moreExamples,
+  id: positiveId, headword, reference: reference.nullable(), digest: z.array(digestEntry).readonly(), import_source: importSourceSchema.optional(), notes, example_fr: notes, example_zh: notes, example_source: exampleSource, example_sense: z.number().int().nonnegative().safe().nullable(), more_examples: moreExamples,
   revision: positiveId, created_at: positiveId, updated_at: positiveId,
   category_ids: categoryIdsSchema.optional(),
-}).strict().readonly();
+}).strict().readonly().refine((value) => value.reference === null ? value.import_source !== undefined && value.digest.length === 0 && value.example_sense === null : value.digest.length > 0, 'Dictionary information is missing or inconsistent')
+  .refine((value) => (value.example_sense === null || value.example_sense < value.digest.length) && value.more_examples.every((example) => example.sense === undefined || example.sense < value.digest.length), 'Example meaning is not in the saved summary');
 export const saveRequestSchema = z.object({
   operation: z.string().min(1).max(128).regex(/^[a-zA-Z0-9-]+$/), headword, notes, example_fr: notes, example_zh: notes, example_source: exampleSource, example_sense: z.number().int().nonnegative().safe().nullable(), more_examples: moreExamples,
   id: positiveId.nullable(), revision: positiveId.nullable(),
@@ -45,7 +54,7 @@ export type VocabularyRecord = z.infer<typeof recordSchema>;
 export type SaveRequest = z.infer<typeof saveRequestSchema>;
 export type SaveResult = z.infer<typeof saveResultSchema>;
 export type VocabularySort = z.infer<typeof sortSchema>;
-export type VocabularySnapshot = Pick<VocabularyRecord, 'headword' | 'reference' | 'digest'>;
+export type VocabularySnapshot = Pick<VocabularyRecord, 'headword' | 'reference' | 'digest' | 'import_source'>;
 
 function firstTranslation(senses: readonly DictionarySense[]): string | null {
   for (const sense of senses) {
@@ -55,7 +64,7 @@ function firstTranslation(senses: readonly DictionarySense[]): string | null {
   return null;
 }
 
-export function snapshotFromLookup(lookup: DictionaryLookup): VocabularySnapshot {
+export function snapshotFromLookup(lookup: DictionaryLookup): VocabularySnapshot & { readonly reference: NonNullable<VocabularyRecord['reference']> } {
   const first = lookup.entries[0];
   if (!first) throw new Error('Dictionary has no matching headword');
   return {

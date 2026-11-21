@@ -26,6 +26,12 @@ use conjugation::{conjugation_block_order, conjugation_lookup, conjugation_prefe
 use dictionaries::{
     dictionary_import, dictionary_lookup, dictionary_relink, dictionary_remove, dictionary_settings,
 };
+mod note_enrichment;
+mod note_export;
+mod note_import;
+mod note_import_csv;
+mod note_markdown;
+mod note_zip;
 mod notes;
 mod speech_cache;
 mod speech_tasks;
@@ -103,7 +109,9 @@ pub fn run() {
     tauri::Builder::default()
         .manage(vocabulary::CloseAuthorization::default())
         .manage(maintenance::MaintenanceCoordinator::default())
+        .manage(note_import::NoteImportState::default())
         .manage(backup_operations::BackupOperations::default())
+        .manage(note_export::NoteExports::default())
         .manage(restore_operations::RestoreOperations::default())
         .manage(dictionaries::Registry::default())
         .manage(selection::SelectionState::default())
@@ -185,6 +193,10 @@ pub fn run() {
             conjugation_block_order,
             vocabulary_find,
             vocabulary_list,
+            note_export::note_export_snapshot,
+            note_export::note_export_csv,
+            note_export::note_export_markdown,
+            note_export::note_export_zip,
             notes::grammar_list,
             notes::grammar_get,
             notes::grammar_save,
@@ -197,6 +209,10 @@ pub fn run() {
             notes::category_delete,
             notes::category_bulk,
             vocabulary_save,
+            note_import::note_import_preview,
+            note_import::note_import_remap,
+            note_import::note_import_commit,
+            note_import::note_import_cancel,
             vocabulary_sort,
             review_add,
             vocabulary::review_add_batch,

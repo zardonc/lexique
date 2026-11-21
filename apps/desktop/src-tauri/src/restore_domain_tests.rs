@@ -143,11 +143,13 @@ fn request(operation: &str, headword: &str, notes: &str) -> storage::SaveRequest
         example_sense: Some(0),
         more_examples: vec![
             storage::Example {
+                sense: None,
                 fr: "Je vais à l'école.".into(),
                 zh: "我去学校。".into(),
                 source: Some(reference(headword)),
             },
             storage::Example {
+                sense: None,
                 fr: "Ancien exemple sans source.".into(),
                 zh: String::new(),
                 source: None,
@@ -329,7 +331,7 @@ fn healthy(connection: &Connection) {
         connection
             .query_row("PRAGMA user_version", [], |row| row.get::<_, u32>(0))
             .unwrap(),
-        19
+        lexique_storage::DATABASE_SCHEMA_VERSION
     );
     assert_eq!(
         rows(connection, "PRAGMA integrity_check", &[]),

@@ -1,0 +1,27 @@
+{
+  "analyzed_on": "2026-11-20",
+  "platform": "Windows x64",
+  "method": "Map MINIDUMP ExceptionStream (6) address to ModuleListStream (4) ranges",
+  "exception_code": "0xC0000005",
+  "exception_address": "0x1801490AF",
+  "fault_module": "RTSSHooks64.dll",
+  "module_offset": "0x1490AF",
+  "access": "read",
+  "referenced_address": "0x7FFBF81984C0",
+  "reports": [
+    {
+      "scenario": "native-green-01",
+      "evidence_root": "target/issue-183/worker-evidence/review-fixes/native-green-01",
+      "dump": "Lexique-data/webview/EBWebView/EBWebView/Crashpad/reports/b30f5c94-7348-45e5-8301-5360fa8b70f8.dmp"
+    },
+    {
+      "scenario": "post-main-01-device-names",
+      "evidence_root": "target/issue-189/post-main-01-device-names",
+      "dump": "Lexique-data/webview/EBWebView/EBWebView/Crashpad/reports/b810c039-eb54-4971-99e3-4cf2782e6738.dmp"
+    }
+  ],
+  "owner_disposition": "Exclude these two RTSS injection-related environment failures from PR #192 blockers",
+  "comparison_without_rtss": "not_run",
+  "other_renderer_failures": "not_attributed",
+  "v03_timing_overruns": "not_attributed"
+}

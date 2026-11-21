@@ -158,7 +158,7 @@ function LearningApp({ runtime, startup, restore }: { readonly runtime: RuntimeA
             if (notebook.existing) { const record = notebook.existing; scopeChange(() => notebook.open(record)); }
           }} />
           <GrammarEditor notebook={grammar} categories={categories} runtime={runtime} text={notebookText} onChanged={reviewChanged} />
-          {page === 2 && notebook.editor && <RecordOriginal reference={notebook.editor.snapshot.reference}
+          {page === 2 && notebook.editor?.snapshot.reference && <RecordOriginal reference={notebook.editor.snapshot.reference}
             runtime={runtime} text={text.dictionary} title={notebookText.original} />}
           {guard.error && <p role="alert">{notebookText.closeError}: {guard.error}</p>}
           {mutationError && <p role="alert">{notebookText.notesText.categoryError}: {mutationError}</p>}
