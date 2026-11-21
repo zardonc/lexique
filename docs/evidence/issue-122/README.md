@@ -1,87 +1,56 @@
-# Issue #122 author package
+# Issue #122 independently accepted content
 
-All **50 exact frozen groups at rows 2051–2100** have one sourced selected
-sense and **200 complete FR/IPA/EN/ZH candidate fields**. There is **zero reuse**,
-no missing authored field, no annotation exception and no proposed runtime alias.
-The fixed global denominator remains **4,087 groups**. All 200 fields await
-independent semantic, construction/spelling and selected-rights review;
-this author package admits **zero new groups or fields**.
+All **50 exact frozen groups at rows 2051–2100 / 200 FR/IPA/EN/ZH fields**
+pass independent semantic, use, spelling and selected-rights review. **193 fields
+are unchanged; seven fields and one use have exact accepted replacements;
+zero fields are unresolved or missing.** There is zero reuse, zero annotation
+exception and no new runtime alias. The global denominator remains **4,087 groups**.
 
 The [ticket](https://github.com/zardonc/lexique/issues/122) and
-[parent specification](https://github.com/zardonc/lexique/issues/78) supply the
-scope. The captured spec and ticket are at
-`C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/`.
-The handoff is
-`C:/Users/inthe/IdeaProjects/lexique-agent-notes/120-129/context.md`.
+[parent specification](https://github.com/zardonc/lexique/issues/78) were read
+in full from `C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/`.
+Review checkout: `C:/Users/inthe/IdeaProjects/lexique-review-122`, branch
+`codex/d2-review-122`. Author commit: `435b0000b431bf18fe21a05752523242a0dc7750`;
+author final integration head: `5d12853`. Review start: `7937180a4ab592cb4d0e8f0e7af4cffd80cb74e8`.
 
-| File | Purpose |
+| Record | Content |
 | --- | --- |
-| [groups.json](groups.json) | Exact identities, frequencies, selected uses and all four proposed fields |
-| [reuse.json](reuse.json) | Baseline comparison: no previously admitted group in this frozen slice |
-| [sources.json](sources.json) | 52 selected fixed French revisions, licences and attribution |
-| [source-excerpts.json](source-excerpts.json) | 200 exact field spans and selected language/POS/construction support |
-| [source-context.json](source-context.json) | Full named registries, anonymous counts, import/reference and original-work boundaries |
-| [source-captures.json](source-captures.json) | Original API captures, exact revision recaptures and reproduction scripts |
-| [field-review.json](field-review.json) | Author proposals for each field, use and spelling relationship; independent review pending |
-| [review-candidates.json](review-candidates.json) | Original author group objects for later reviewer comparison |
-| [rights.json](rights.json) | Selected-span author rights proposals and fixed legal authorities |
-| [selected-rights.md](selected-rights.md) | Contributor, historical-original, IPA and translation boundaries |
-| [admission.json](admission.json) | 50 proposed groups / 200 fields, zero admitted, and separate parent gates |
-| [source-research.md](source-research.md) | All selected uses and construction/spelling decisions |
-| [NOTICES.md](NOTICES.md) | Source histories, attribution and modification notices |
-| [COPYING](COPYING) | Complete CC BY-SA 4.0 legal text |
+| [groups.json](groups.json) | Exact frozen identities, frequencies, accepted uses and fields |
+| [field-review.json](field-review.json) | Every original proposal, accepted field/use and independent reason |
+| [accepted-replacements.json](accepted-replacements.json) | Seven exact field replacements and one use replacement |
+| [review-candidates.json](review-candidates.json) | Unchanged authored proposal objects |
+| [author-admission.json](author-admission.json) | Unchanged authored admission/count snapshot |
+| [admission.json](admission.json) | Live independent acceptance, missing/pending counts and parent gates |
+| [rights.json](rights.json) | Every selected field's original rights proposal and accepted boundary reason |
+| [rights-review.md](rights-review.md) | Primary legal authorities and actual import/original-work decisions |
+| [independent-review.md](independent-review.md) | Complete review scope, corrections and verification |
+| [sources.json](sources.json), [source-context.json](source-context.json) | Fixed versions, contributor registries, imports and accepted source bindings |
+| [source-excerpts.json](source-excerpts.json) | Exact field and supporting raw spans |
+| [source-captures.json](source-captures.json) | Author raw sources, API captures, pagination and reproduction pointers |
+| [NOTICES.md](NOTICES.md), [COPYING](COPYING) | Credits, modification notices and full CC BY-SA 4.0 legal text |
 
-All **52 selected wikitext bodies reproduce byte for byte** through six exact
-revision-ID requests. Contributor pagination terminates in six main and two
-support responses. The author JSON package reproduces byte for byte from the
-retained sources and explicit selections. Original whole-page audit captures
-include unselected material; only the recorded lexical/IPA/grammar spans supply
-candidate fields. English and Chinese are new scoped explanations of the same
-selected French use.
-
-## Verification and reproduction
-
-The TDD seam is the spec's approved resource/admission handoff: exact frozen
-membership, complete fields, truthful pending admission, fixed source bindings
-and selected-rights proposals. It detects dropped/substituted groups, missing
-fields, false acceptance, mismatched captured spans and missing rights records.
-It does not establish independent linguistic quality or native execution.
-
-The [focused check](../../../scripts/test_core_batch_122.py) passed **two tests**.
-The retained RED/GREEN records cover absent candidate membership, then absent
-selected-rights evidence, before their corresponding complete packages.
+The [focused check](../../../scripts/test_core_batch_122.py) passes **six tests**:
+exact membership, accepted fields/uses/rights and proposal preservation, fixed
+raw source/registry verification, and the three corrected meaning/grammar cases.
+It compares any already assembled row to the reviewed shard; overlap is not
+treated as missing or counted as another group. Detached checkouts validate
+tracked source bindings; the owning reviewer check also verifies actual raw bytes.
 
 ```powershell
-uv run --python 3.14.10 --no-project python -B -X utf8 target/issue-122/prepare_candidates.py
-uv run --python 3.14.10 --no-project python -B -X utf8 target/issue-122/finish_author_package.py
-uv run --python 3.14.10 --no-project python -B -X utf8 target/issue-122/write_package.py
 uv run --python 3.14.10 --no-project python -B -X utf8 -m unittest discover -s scripts -p test_core_batch_122.py -v
-uv run --python 3.14.10 --no-project python -B -X utf8 target/issue-122/reproduce.py
-uv run --python 3.14.10 --no-project python -B -X utf8 target/issue-122/capture_fixed.py
-pwsh -NoProfile -File scripts/check-docs.ps1
-git diff --cached --check
 ```
 
-Checkout: `C:/Users/inthe/IdeaProjects/lexique-batch-122`, branch
-`codex/d2-content-122`. The clean starting HEAD was
-`b91c4729a0a1c93baa58f86ed666b173fb2fc253`, an ancestor of integration
-`codex/d2-content-120-129`. Only this evidence directory and the focused test
-are owned changes. Latest integration is merged before handoff.
+Raw author evidence remains at
+`C:/Users/inthe/IdeaProjects/lexique-batch-122/target/issue-122/`.
+Independent scripts, source comparisons, legal retrieval and RED/GREEN logs
+remain at `C:/Users/inthe/IdeaProjects/lexique-review-122/target/issue-122-review/`.
+`final-verification.json` records the tested commit, merged integration tip,
+Windows/Python environment, commands and outcomes. Author preparation scripts
+reproduce the authored proposal; reviewed content is the accepted shard above.
 
-Complete execution evidence is retained in
-`C:/Users/inthe/IdeaProjects/lexique-batch-122/target/issue-122/`:
-`red.log`, `membership-green.log`, `rights-red.log`, `green.log`,
-`fixed-recapture.log`, `reproduction.log`, `owned-docs-check.json`,
-`full-docs-check.log` and `final-verification.json`. Standalone preparation,
-selection, contributor pagination, exact revision recapture and reproduction
-scripts remain alongside the raw sources and fixed rights authorities.
-The final verification record supplies the tested commit, integration tip,
-Windows/Python environment and actual check outcomes.
+## Limitations
 
-## Remaining gates
-
-Independent field/use/spelling/rights review is pending for all 200 fields.
-Canonical conversion and combined redistribution obligations, actual native
-lookup/save/reopen, learner acceptance and offline/platform/release checks
-remain integration-owned and unrun here. Canonical resources, shared pipelines
-and learner data are unchanged.
+Canonical resource assembly, actual combined notices and package compliance,
+native lookup/save/reopen, human learner acceptance and remaining offline,
+platform and formal release gates remain parent-owned and unrun in this checkout.
+Independent acceptance is complete; canonical installation is still pending.
