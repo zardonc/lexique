@@ -1,9 +1,9 @@
 # #128 source and modification notices
 
-The proposed dictionary text is adapted from fixed Wiktionnaire contributions
+The independently reviewed dictionary text is adapted from fixed Wiktionnaire contributions
 under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en).
 The [complete legal text](COPYING), article attribution, full history links,
-original-work layers and modification notices accompany this author package.
+original-work layers and modification notices accompany this reviewed package.
 New French adaptations and English/Chinese explanatory translations are by
 Lexique contributors and retain CC BY-SA 4.0.
 
@@ -16,6 +16,8 @@ Frequency is not a CEFR level.
 
 One sense is selected for each exact group. French wording is scoped to that
 use, with markup removed and grammatical/register restrictions retained.
+The three meaning fields for Québec `sacrer` explicitly retain its intransitive
+or `contre` construction; original wording is preserved in the proposal snapshot.
 English and Chinese fields are new explanatory translations of that French
 use. One recorded isolated IPA variant is selected and enclosed in slashes.
 Unselected senses, etymologies, quoted examples, images, audio and other-language
