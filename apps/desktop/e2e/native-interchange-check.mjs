@@ -8,7 +8,7 @@ import { native24Fixture } from './native-24-harness.mjs';
 import { inspectPackage, readState, seedAudio, compareLearning } from './native-backup-state.mjs';
 
 const [resources, binary, destinationPath, scenario, source] = process.argv.slice(2);
-assert.ok(['seed', 'csv', 'markdown', 'zip', 'consent', 'enroll', 'backup'].includes(scenario));
+assert.ok(['seed', 'csv', 'markdown', 'zip', 'consent', 'enroll', 'backup', 'device-names'].includes(scenario));
 const fixture = await native24Fixture(resources, binary, destinationPath);
 const { destination } = fixture;
 const evidence = { scenario, checks: [], pickers: [] };
@@ -48,7 +48,8 @@ async function picker(button, filename, save = false) {
   const selected = await helper(filename ? 'picker-select' : 'picker-cancel', filename, id);
   await clicked; assert.equal(selected.disappeared, true);
   if (filename) assert.equal(selected.filename, filename);
-  evidence.pickers.push({ button, filename, filenameId: id, pid: controls.pid });
+  evidence.pickers.push({ button, filename, filenameId: id, pid: controls.pid, defaultFilename: selected.defaultFilename });
+  return selected;
 }
 async function notebook() { await page.getByRole('button', { name: '笔记', exact: true }).click(); }
 async function confirm() { await page.getByRole('button', { name: '确认导入', exact: true }).click(); await expect(page.getByRole('region', { name: '导入 CSV', exact: true }).getByRole('status')).toContainText('导入已保存'); }
@@ -155,6 +156,46 @@ async function zip() {
   assert.deepEqual(await words(), before); await picker('导入 Markdown ZIP', '');
   evidence.checks.push('all/search ZIP counts, unique names, deflated nested paths read directly, dedupe, invalid entry exclusion, corrupt container, picker cancellation and CSV/Markdown/ZIP/CSV exact text');
 }
+async function deviceNames() {
+  const headwords = ['CON.txt', 'con.TXT', 'COM1.txt', 'lPt9.data'];
+  const entries = headwords.map((word) => ({ text: `# Lexique note v1\n## headword\n\`\`\`text\n${word}\n\`\`\`\n## notes\n\`\`\`text\n  中文 \`notes\`\r\n尾行\n\`\`\`\n## examples\n### 1\n#### fr\n\`\`\`text\n À l’école.\r\n\`\`\`\n#### zh\n\`\`\`text\n 单侧\n\`\`\`\n` }));
+  const input = join(destination, 'device-input.zip');
+  python("import zipfile,json,sys\nwith zipfile.ZipFile(sys.argv[1],'w') as z:\n for i,e in enumerate(json.loads(sys.argv[2])): z.writestr(str(i)+'.md',e['text'])", [input, JSON.stringify(entries)]);
+  await notebook(); await picker('导入 Markdown ZIP', input); await confirm();
+  await page.getByLabel('排序方式').selectOption('headword-asc');
+  const before = await words(); assert.equal(before.length, 4);
+  const search = page.getByRole('searchbox', { name: '搜索词头、摘要或笔记' });
+  const filenames = before.map((record) => `_${record.headword}-${record.id}.md`);
+  for (const word of headwords.slice(0, 2)) {
+    const record = before.find((item) => item.headword === word);
+    await search.fill(word);
+    await page.locator('.vocabulary-list button').filter({ has: page.getByText(word, { exact: true }) }).click();
+    await page.locator('.vocabulary-editor').getByRole('button', { name: '导出 Markdown', exact: true }).click();
+    const filename = `_${word}-${record.id}.md`, file = join(destination, filename);
+    const selected = await picker('保存 Markdown', file, true); assert.equal(selected.defaultFilename, filename);
+    const text = await readFile(file, 'utf8'); assert.ok(text.includes(`\n${word}\n`));
+    assert.ok(text.includes('  中文 `notes`\r\n尾行')); assert.ok(text.includes(' À l’école.\r\n'));
+    await page.getByRole('dialog', { name: '导出笔记' }).getByRole('button', { name: '关闭', exact: true }).click();
+  }
+  await search.fill('COM1.txt');
+  await page.getByRole('button', { name: '导出 CSV', exact: true }).first().click();
+  const dialog = page.getByRole('dialog', { name: '导出笔记' }), all = join(destination, 'devices.zip'), filtered = join(destination, 'filtered.zip');
+  await expect(dialog).toContainText('1 条生词'); await picker('保存 Markdown ZIP', filtered, true);
+  await dialog.getByLabel('导出范围').selectOption('all'); await expect(dialog).toContainText('4 条生词');
+  await picker('保存 Markdown ZIP', all, true); await dialog.getByRole('button', { name: '关闭', exact: true }).click();
+  const output = python("import zipfile,json,sys,pathlib\nwith zipfile.ZipFile(sys.argv[1]) as z:\n z.extractall(pathlib.Path(sys.argv[1]).parent/'extracted')\n print(json.dumps([{'name':i.filename,'text':z.read(i).decode('utf-8')} for i in z.infolist()],ensure_ascii=False))", [all]);
+  assert.deepEqual(output.map((entry) => entry.name), filenames);
+  assert.equal(new Set(filenames.map((name) => name.toLowerCase())).size, 4);
+  for (const record of before) {
+    const text = output.find((entry) => entry.name === `_${record.headword}-${record.id}.md`).text;
+    assert.ok(text.includes(`\n${record.headword}\n`)); assert.ok(text.includes(record.notes));
+    assert.equal(await readFile(join(destination, 'extracted', `_${record.headword}-${record.id}.md`), 'utf8'), text);
+  }
+  assert.equal(python("import zipfile,json,sys\nprint(json.dumps(zipfile.ZipFile(sys.argv[1]).namelist()))", [filtered]).length, 1);
+  await picker('导入 Markdown ZIP', all); await expect(page.getByRole('region', { name: 'Markdown ZIP 导入预览', exact: true })).toContainText('内容相同，将跳过');
+  await confirm(); assert.deepEqual(await words(), before);
+  evidence.checks.push('observed default Windows Markdown names and actual saved files for dotted device case variants', 'ZIP extraction on Windows, exact body identity/text, unique names, all/search counts/order and unchanged saved records on reimport');
+}
 async function consent() {
   const learning = readState(destination);
   await rename(join(destination, 'dictionary/dictionary.sqlite3'), join(destination, 'dictionary/withheld.sqlite3'));
@@ -236,7 +277,7 @@ try {
     evidence.initialCsv = JSON.parse(await readFile(join(resolve(source), 'results.json'), 'utf8')).initialCsv;
   }
   page = await fixture.start(); page.setDefaultTimeout(8000); await page.context().setOffline(true); await expect(page.getByRole('banner')).toBeVisible();
-  await ({ seed, csv, markdown, zip, consent, enroll, backup })[scenario]();
+  await ({ seed, csv, markdown, zip, consent, enroll, backup, 'device-names': deviceNames })[scenario]();
   if (scenario !== 'seed') { evidence.records = await words(); await page.screenshot({ path: join(destination, 'native-interchange.png') }); await fixture.stop(true); }
   evidence.state = readState(destination);
   await writeFile(join(destination, 'results.json'), JSON.stringify(evidence, null, 2)); console.log(JSON.stringify({ scenario, passed: true, checks: evidence.checks.length }));

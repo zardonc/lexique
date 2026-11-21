@@ -32,12 +32,18 @@ provenance; downgrading such data is unsupported.
 
 ## Source and artifact lineage
 
-Owning checkout: `C:/Users/inthe/IdeaProjects/lexique-interchange-189`, branch
+Historical execution checkout: `C:/Users/inthe/IdeaProjects/lexique-interchange-189`, branch
 `codex/note-interchange-189`. Inherited integration is
 `f92d3ff6b50acd1e601855e361c7df259dda16a3`, which includes all five prior slices
 and the parent's test-only V03 diagnostics. It is not the ZIP-enabled source.
 
-The ignored `target/issue-189` evidence root retains `source-pre-native.patch`,
+Prior evidence is retained at
+`C:/Users/inthe/IdeaProjects/lexique-interchange-183/target/issue-183/worker-evidence/ticket-189`.
+The `target/issue-189` paths below identify the original execution root; their
+relative artifact paths now resolve within this archived root. Original paths
+inside manifests remain execution history.
+
+The archive retains `source-pre-native.patch`,
 `source-pre-native.zip` and metadata for source tree
 `d44b0575200eafdb79a8ddc167ae65a45928afd5`. The release build used its runtime
 inputs; the record-equality test assertion was corrected after that build and
@@ -112,8 +118,72 @@ mapping assertion. No cause is attributed to that renderer failure. Backup
 baseline preferences are persisted through actual native commands before the
 raw SQLite comparison because restore materializes defaults.
 
-The parent's initial/retry Markdown CI failures and later successful diagnostic
-CI are separate inherited evidence; recovery does not prove the DatabaseBusy
-cause. No parent V03 diagnostic source was edited here. macOS/Linux native
+The parent's inherited f92d3ff diagnostic run `44824859852` passed all 11 jobs;
+the duplicate PR run `44824853320` failed V03 before rating, with a 391.6065 ms
+primary transaction and 252.9793 ms competing writer. Its cause remains unknown;
+the export fixture convention change does not explain that failure. Diagnostics
+are recorded in
+`C:/Users/inthe/IdeaProjects/lexique-interchange-183-context/parent-v03-diagnostics.md`.
+At integration `120ff887ea8c4fdaaf50b38d9f3952e9c449a2bd`, PR run `44832581524`
+and push run `44832574034` both passed all 22 jobs without retry. The parent's
+436 browser tests, lint, typecheck and build also passed at that integration.
+The PR watcher's HTTP 502 annotation error was a client failure; authoritative
+job results were successful. These are inherited results, separate from the
+review-fix source checks below. No parent V03 diagnostic source was edited here.
+macOS/Linux native
 execution, clean-machine installation and whole-machine offline checks remain
 unrun in this ticket. Parent owns final PR review, integration and cleanup.
+
+## Review fixes at integration 120ff887
+
+The shared Markdown filename helper prefixes Windows device basenames before
+the first dot, case-insensitively, including numbered COM/LPT names and their
+documented superscript digits. `CON.txt` now exports as `_CON.txt-<id>.md` in
+both single Markdown and ZIP; `CON-<id>.md` remains usable without a prefix.
+Body headwords and text, saved IDs, snapshot scope/count/order and uniqueness
+are preserved. The 25-row export-completeness fixture uses parameterized
+inserts in one transaction, committed before export.
+
+Execution checkout:
+`C:/Users/inthe/IdeaProjects/lexique-interchange-review-fixes`.
+Evidence is under its ignored `target/review-fixes`; the parent's final archive
+destination is
+`C:/Users/inthe/IdeaProjects/lexique-interchange-183/target/issue-183/worker-evidence/review-fixes`.
+Original execution paths in manifests remain historical after archival.
+
+Fresh release source is `acf89234486c6d5bee32bf46d468aa4cd1e62422`, retained
+in `source-built.{zip,json}`. Tested source is
+`31bb1043d594ccd2f4e8ba4b099b3fe6e8271b9a`, retained in
+`source-tested.{zip,json}`; `built-to-tested.patch` contains only one test-only
+ZIP entry-name ownership line. Runtime and native driver inputs are identical.
+The fresh executable, package and passing native executable share SHA-256
+`7e61e3a6cf5a0cd15a381480faf98880fb2c12918b2f2db9c011a841aa898745`.
+
+`verify.ps1` and `checks.jsonl` retain successful lint/typecheck/build, locked
+workspace compilation, shared all-target Clippy and 218 separately precompiled
+backend checks. `desktop-precompile-recovery.log` precedes
+`desktop-tests-recovery.log` in the same pinned Cargo/MSVC/Python environment,
+with no intervening source/resource preparation. All eight original 60-second
+desktop partitions passed: 144 tests and two deliberately ignored child entry
+points invoked by their interruption parents. Dotted device names and case
+variants exercise actual single-file readback and ordinary-tool ZIP extraction.
+Rust formatting, documentation links and diff checks passed.
+
+`native-green-02` passed the `device-names` scenario using the existing native
+driver/helper, six real Windows pickers and actual files/SQLite in 21.388 s,
+with the hard 60-second limit unchanged. It observed `_CON.txt-1.md` and
+`_con.TXT-2.md` as the picker defaults and saved both files. Four exported ZIP
+entries extracted on Windows with exact body identity/text, unique names,
+all/search counts/order and unchanged saved records on reimport.
+`native-manifest.json`, per-run driver/helper copies, `results.json`, lifecycle
+logs, screenshot, generated files and copied single-file regression artifacts
+retain the evidence. `owned-processes-final.json` is empty.
+
+`source-red-native.{zip,patch,json}` and `native-red-02` retain the real picker
+default regression. Earlier probe logs, the initial native locator failure and
+test compilation failure remain retained. `native-green-01` records a WebView2
+renderer access violation before export assertions; its cause remains unknown.
+The fresh native recovery establishes the affected behavior without attributing
+that renderer failure. The unchanged frontend's full browser suite was not
+rerun; other-platform, clean-machine and whole-machine offline acceptance
+remain unrun.

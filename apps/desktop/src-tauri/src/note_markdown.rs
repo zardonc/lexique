@@ -68,7 +68,7 @@ pub fn note_markdown_filename(record: &lexique_storage::NoteExportRecord) -> Str
         })
         .collect();
     let readable = readable.trim_matches([' ', '.']);
-    format!(
+    let filename = format!(
         "{}-{}.md",
         if readable.is_empty() {
             "note"
@@ -76,7 +76,24 @@ pub fn note_markdown_filename(record: &lexique_storage::NoteExportRecord) -> Str
             readable
         },
         record.id
-    )
+    );
+    // Windows reserves device basenames even when followed by an extension.
+    let basename = filename
+        .split('.')
+        .next()
+        .unwrap_or(&filename)
+        .to_ascii_uppercase();
+    let numbered_device = basename
+        .strip_prefix("COM")
+        .or_else(|| basename.strip_prefix("LPT"))
+        .is_some_and(|number| {
+            ["1", "2", "3", "4", "5", "6", "7", "8", "9", "¹", "²", "³"].contains(&number)
+        });
+    if matches!(basename.as_str(), "CON" | "PRN" | "AUX" | "NUL") || numbered_device {
+        format!("_{filename}")
+    } else {
+        filename
+    }
 }
 
 pub fn format_note_markdown(record: &lexique_storage::NoteExportRecord) -> String {
