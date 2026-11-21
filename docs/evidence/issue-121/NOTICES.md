@@ -12,7 +12,9 @@ Provide the complete [licence](COPYING), licence link, attribution and modificat
 notice with any redistribution; preserve ShareAlike and impose no additional restrictions.
 
 **Original historical layer:** Académie française, *Dictionnaire de l’Académie
-française*, eighth edition (1932–1935), for the 24 marked source articles.
+française*, eighth edition (1932–1935), for the 39 source articles that import
+or reference that edition. This comprises 24 explicit imports and 15
+bibliographic references; credit is conservative at the selected original-work boundary.
 The established collective-work basis in CPI L123-3 gives conservative expiry
 2006-01-01 using final 1935 publication plus seventy years from the following
 January. Fixed Wiktionnaire transcription/adaptation and Lexique adaptations
