@@ -1,73 +1,88 @@
-# Issue #127 selected-rights proposal
+# Issue #127 independent selected-rights acceptance
 
-The proposed 200 fields use **CC BY-SA 4.0** for fixed Wiktionnaire contribution
-and transcription layers, scoped French adaptations and new Lexique
-English/Chinese explanations. IPA is one recorded isolated-headword variant.
-[rights.json](rights.json) retains pending independent review and a null
-reviewer for every field.
+**All 200 fields pass selected-text rights review.** The fixed contribution
+and transcription layers, scoped French adaptations and new Lexique EN/ZH
+explanations use CC BY-SA 4.0. [rights.json](rights.json) and
+[field-review.json](field-review.json) record each accepted text, selected
+span, reviewer and specific independent reason. This accepts selected batch
+content; actual combined artifact obligations remain pending.
 
-All 49 articles retain fixed revisions, full article-history attribution,
-complete paginated named registries and anonymous counts in
-[source-context.json](source-context.json). The registries support attribution;
-they may include later contributors and do not establish selected-sentence
-authorship. English and Chinese meanings are new explanations of the selected
-French use, not imported bilingual-table wording.
+## Original works and contribution layers
 
-**29 articles carry DAF8 import markers.** The original edition is separately
-credited to **Académie française, Dictionnaire de l’Académie française, eighth
-edition, 1932–1935**. The established
-[original-work evidence](../issue-99/source-context.json) uses
-[CPI L123-3](https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20):
-seventy years from January following collective publication, giving conservative
-expiry **2006-01-01** from the final 1935 publication. Original public-domain
-prose and the contributor/adaptation layers have separate rights records.
+The 29 articles with DAF8 import markers retain credit to **Académie française,
+Dictionnaire de l’Académie française, eighth edition, 1932–1935**. Article import
+markers do not identify a particular sentence’s author.
 
-`copie` additionally carries **Import:Littré at line 204**, alongside DAF8 at
-line 203. Original credit to **Émile Littré, Dictionnaire de la langue française,
-1872–1877** follows the established
-[#100 original-work record](../issue-100/source-context.json), retained import
-template revision **30857967**, and copyright-policy revision **38903168**,
-which expressly allows the original public-domain dictionary. The selected
-duplicate-of-an-original definition at **line 12**, IPA/headword at **line 9**
-and their grammatical frames carry both historical import boundaries in the
-proposal. The modern wording and translations retain CC BY-SA 4.0. Import
-markers identify historical layers without assigning sentence authorship.
+The retained primary authorities from the independent
+[#123 review](../issue-123/selected-rights.md) distinguish the institutional
+original dictionary from its modern enriched electronic edition.
+[CPI L113-2](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278882)
+defines collective works by initiative, direction, publication under the
+institution’s name and contributions combined in the whole. The official
+[Académie presentation](https://www.dictionnaire-academie.fr/presentation.html)
+dates original volumes to 1932 and 1935.
+[CPI L123-3](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278941)
+provides seventy years from January following collective publication:
+the conservative final-volume calculation is **1936-01-01 + 70 years =
+2006-01-01**. [CPI L121-1](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278891)
+retains perpetual author/work respect; original credits and modification notices
+remain. The original-work boundary excludes modern electronic editorial prose.
 
-[source-excerpts.json](source-excerpts.json) and
-[field-review.json](field-review.json) fix each definition, isolated IPA
-substring and French language/POS/grammar support. Selected spans contain no
-attributed literary/news examples, external reference prose, etymologies,
-media, translation-table text or other-language entries. Modern dictionaries
-listed in bibliographies convey no prose licence. The `émotion` illustration
-line is outside the selected grammar spans. For `jeudi`, the selected line-8
-substring starts at **“de la semaine”** after the ISO reference; the adapted
-definition identifies the day by Wednesday/Friday, without importing the
-reference or its week-number convention.
+For `copie`, fixed revision **39771130** has **Import:DAF8 at line 203** and
+**Import:Littré at line 204**. Both are now present in the structured import
+context. The selected duplicate-of-an-original definition is **line 12**;
+headword/IPA is **line 9**. **Émile Littré, Dictionnaire de la langue française,
+1872–1877** retains its separate original public-domain basis under the established
+[#100 record](../issue-100/source-context.json), fixed import-template revision
+**30857967** and copyright-policy revision **38903168**. The actual template says
+the imported article may have been modified. Neither marker assigns the selected
+sentence to one original dictionary. No modern external digital edition text is
+admitted.
 
-The selected `bite` span retains the vulgar register; `pub` binds /pyb/ to the
-feminine advertisement noun rather than the /pœb/ bar. `monseigneur` retains
-its honorific scope and source plural forms. Exact headword/POS identity and
-construction evidence remain separate from runtime aliases, of which none is
-proposed.
+Contributor transcription/adaptation and new Lexique explanations remain
+CC BY-SA 4.0. The complete [legal text](COPYING), sections 2(a), 3(a), 3(b)
+and 4, permits sharing, adaptations and applicable database extraction subject
+to attribution, source/licence identification, modification notices, ShareAlike
+and no downstream restrictions. Wikimedia Terms section 7 supplies the article
+and full-history attribution route and preserves external import obligations.
 
-[COPYING](COPYING) contains the complete CC BY-SA 4.0 legal text. Sections 2(a),
-3(a), 3(b) and 4 cover sharing, adaptation and database extraction with
-attribution, source/licence identification, modification notice, ShareAlike
-and no additional restrictions. Wikimedia Terms section 7 supplies the
-article/history attribution route while retaining import-specific conditions.
-The fixed policy/import/terms/CC authority captures are indexed in
-`target/issue-127/rights-authorities.json` and reproduced against the retained
-#125 source-authority bytes.
+## Selected spans and attribution
 
-[NOTICES.md](NOTICES.md) carries membership attribution, selected article and
-history links, historical credits and modifications. Parent assembly must
-satisfy the actual combined data and package obligations, including applicable
-legal text and source-material delivery. The MIT application and retained GPL
-FreeDict supplement keep their separate licences.
+All 49 exact French revisions, selected lexical and grammar/IPA spans, named
+registries and anonymous counts were checked against retained first-party API
+responses and their raw bytes. The nine contributor responses complete five
+pagination chains; **3,039 named per-article credits** are retained. These are
+not a count of unique people across articles. Registries may include later
+contributors and do not identify sentence authorship. Full histories retain
+the attribution route, including anonymous contributions.
 
-## Limitations
+For `jeudi`, selected line 8 starts at its recorded column after the ISO
+reference; weekday identity is expressed by Wednesday/Friday, without importing
+ISO wording or its week-number convention. For `émotion`, selected grammar
+spans exclude the illustration at line 8. `technique` noun and adjective
+sections are distinct; `pub` uses the feminine /pyb/ advertising section,
+excluding the masculine /pœb/ bar; `roman` uses the fictional-novel noun section.
+`hop` uses modern interjection line 19, excluding obsolete line 18.
 
-All rights conclusions remain author proposals for independent selected-span
-review. The established original-work bases and retained primary snapshots are
-reused; the statute was not refreshed live. Actual combined converter/package
-obligations remain integration-owned and pending.
+No accepted field uses neighbouring attributed literary/news quotations,
+media/captions, etymological prose, external modern dictionary prose,
+translation-table text or another language’s entry. Bibliographic references
+do not convey a prose licence. All EN/ZH texts are scoped Lexique explanations
+of the selected French use, including the corrected honorific explanation.
+
+[NOTICES.md](NOTICES.md) retains membership credit, article/history URLs,
+historical original-work credits and modifications. The [source contexts](source-context.json)
+and [field rights](rights.json) retain selected boundaries and separate layers.
+
+## Evidence and remaining gates
+
+All source bytes and selected spans pass the independent audit in
+`C:/Users/inthe/IdeaProjects/lexique-review-127/target/issue-127-review/source-audit.json`.
+Legal passages and exact retained primary-source responses are under
+`target/issue-127-review/legal-authorities/`, with reuse provenance in
+[rights.json](rights.json). Original author authority bytes remain in both
+author and integration `target/issue-127/rights/` directories.
+
+No live source retry or statute refresh was performed. Canonical conversion,
+combined notices/source delivery, actual packaged obligations, native
+lookup/save/reopen, learner acceptance and release gates remain parent-owned.

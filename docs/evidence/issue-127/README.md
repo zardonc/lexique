@@ -1,88 +1,67 @@
-# Issue #127 author package
+# Issue #127 independent content and rights review
 
-All **50 exact frozen groups, rows 2301–2350**, have one proposed everyday
-selected sense and **200 sourced FR/IPA/EN/ZH candidate fields**. There are zero
-reused groups, zero new annotations and no proposed runtime aliases. The
-denominator remains **4,087 groups**. Independent quality and selected-rights
-acceptance remain pending for all 200 fields; this package admits no content.
+**50 exact frozen groups / 200 fields accepted by the independent reviewer.**
+Rows 2301–2350 retain their exact headwords, Lexique POS subclasses, frequency
+strings and order. **199 fields are unchanged; one English field is replaced.**
+There are zero missing fields, pending independent decisions, reused groups,
+new exceptions or runtime aliases. The global denominator remains 4,087 groups.
 
-The [ticket](https://github.com/zardonc/lexique/issues/127) and
-[parent specification](https://github.com/zardonc/lexique/issues/78) supply the
-exact membership and approved resource/admission testing seam.
+Reviewer: Independent semantic and selected-rights reviewer #127, separate
+from the author and parent integration owner. This is an agent review; human
+learner acceptance remains a separate gate. Author commit:
+`1a2825fbe070384d45e39b91f8675c8a112c9053`, [PR #193](https://github.com/zardonc/lexique/pull/193).
+Issue [#127](https://github.com/zardonc/lexique/issues/127) and parent
+[#78](https://github.com/zardonc/lexique/issues/78) were read from integration’s
+retained specification and issue capture.
 
-| File | Purpose |
+| Evidence | Result |
 | --- | --- |
-| [groups.json](groups.json) | Exact identities, frequencies, selected uses and four candidate fields |
-| [sources.json](sources.json) | 49 fixed French revisions, credits, modifications and licences |
-| [source-excerpts.json](source-excerpts.json) | 200 field spans and French language/POS/construction support |
-| [source-context.json](source-context.json) | Complete named registries, anonymous counts, selected spans and import/reference boundaries |
-| [source-captures.json](source-captures.json) | Original responses, source bytes, pagination and ignored control-script pointers |
-| [field-review.json](field-review.json) | Pending independent field/use/spelling decisions; null reviewer |
-| [rights.json](rights.json) | Per-field rights proposals, original-work layers, authorities and obligations |
-| [reuse.json](reuse.json) | No overlap with the inspected core-119-v1 canonical input |
-| [admission.json](admission.json) | Proposed counts and pending independent/parent gates |
-| [source-research.md](source-research.md) | Every selected sense and fixed definition/IPA location |
-| [selected-rights.md](selected-rights.md) | Precise selected boundaries and proposed redistribution route |
-| [NOTICES.md](NOTICES.md) | Fixed article/history links, original-work credits and modification notice |
-| [COPYING](COPYING) | Complete CC BY-SA 4.0 legal text |
+| [groups.json](groups.json) | Exact 50 reviewed uses and four fields each |
+| [field-review.json](field-review.json) | Separate independent field, use, spelling and selected-rights decisions with exact proposals and accepted texts |
+| [rights.json](rights.json) | 200 passed selected-text rights decisions, historical layers and attribution obligations |
+| [sources.json](sources.json), [source-context.json](source-context.json) | 49 passed selected source frames, complete registries, anonymous counts and both historical import layers for copie |
+| [source-excerpts.json](source-excerpts.json), [source-captures.json](source-captures.json) | Unchanged exact field/frame spans and raw capture inventory |
+| [admission.json](admission.json) | Live 50/200 acceptance, zero pending/missing independent fields; parent artifact/native gates remain pending |
+| [review-candidates.json](review-candidates.json) | Original authored group objects |
+| [admission-author-proposal.json](admission-author-proposal.json), [authored-review-proposals.json](authored-review-proposals.json) | Original admission and complete source/context/field-review/rights proposals |
+| [selected-rights.md](selected-rights.md), [NOTICES.md](NOTICES.md), [COPYING](COPYING) | Selected-boundary rights, credits/modifications and complete CC BY-SA 4.0 text |
+| [source-research.md](source-research.md) | All selected uses and fixed definition/IPA locations |
+| [independent-review.md](independent-review.md) | Review result, exact replacement and reproducible verification handoff |
 
-`technique/ADJ` and `technique/NOM` retain separate source sections and sense
-identities. `bite/NOM` retains its vulgar register. `monseigneur/NOM` is a scoped
-honorific, especially for bishops. `pub/NOM` selects the informal **feminine
-advertising message /pyb/**, distinct from the masculine bar /pœb/. `au-delà`
-is a place adverb; `romantique` selects the sourced idealistic adjective.
-`associé` retains its masculine noun form and evidenced feminine equivalent.
-`hop` retains its aspirated-h frame. Alternative IPA variants are not extra
-senses. No spelling substitution or annotation exception is proposed.
+The English field for row 2322 `monseigneur/NOM` is now:
+“An honorific used when addressing certain people of high birth or dignity,
+especially bishops.” The apparent equivalent “Monsignor” is removed because
+the selected French span establishes an address form, without establishing
+that distinct specific ecclesiastical title. The original proposal remains in
+the snapshots and per-field decisions.
 
-## Verification and reproduction
+Both `technique` POS groups retain their separate sections. `pub` is the
+informal feminine advertisement /pyb/, `bite` retains vulgar register,
+`au-delà` retains its place-adverb use and `associé` retains its masculine
+noun and evidenced feminine form. `hop`’s aspirated-h restriction does not
+require a pronounced /h/. No specialist exception is needed for the common
+sand noun’s precisely scoped material definition.
 
-The [focused admission check](../../../scripts/test_core_batch_127.py) passes
-two tests. The retained TDD logs cover missing group evidence and missing rights
-evidence before the corresponding complete author proposals. These checks
-validate candidate bindings and review status; acceptance belongs to the
-separate reviewer.
+## Verification
 
-Source reproduction passes for **49 exact wikitext files**, **nine contributor
-responses across five fully terminated pagination chains**, and **nine JSON
-outputs plus NOTICES.md**. There are **3,039 named per-article credits**, not
-3,039 distinct people across the package. Anonymous contributors are credited
-through their full linked histories and retained API counts. Current registries
-may extend beyond the fixed revision and do not identify sentence authorship.
-Reused legal-authority files and COPYING retain their original bytes.
+The [focused check](../../../scripts/test_core_batch_127.py) passes four tests
+for exact membership, accepted content/rights, preserved proposals and identical
+canonical overlap. The independent byte audit passes 49 fixed source/API
+revisions, all 200 field and 200 rights spans, selected construction spans,
+3,039 named per-article credits and nine responses across five terminated
+contributor chains. No live source request or retry was made.
 
-Restore the full retained `target/issue-127/` directory to this checkout before
-reproducing. It contains `source-index.json`, original API responses and request
-URLs, wikitext, contributor pagination, rights authorities, acquisition and
-preparation scripts, selection data and logs. The control scripts remain ignored;
-the existing core converter remains integration-owned. Run against the author
-baseline before independent review/canonical assembly changes these records.
+Reviewer logs and control scripts:
+`C:/Users/inthe/IdeaProjects/lexique-review-127/target/issue-127-review/`.
+Author captures:
+`C:/Users/inthe/IdeaProjects/lexique-batch-127/target/issue-127/`.
+Integration captures:
+`C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/issue-127/`.
+The [independent review](independent-review.md) gives commands and log names.
 
-```powershell
-uv run --python 3.14.10 python -B -X utf8 target/issue-127/prepare_candidates.py
-uv run --python 3.14.10 python -B -X utf8 target/issue-127/finish_author_package.py
-uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_127.py -v
-uv run --python 3.14.10 python -B -X utf8 target/issue-127/reproduce.py
-pwsh -NoProfile -File scripts/check-docs.ps1
-git diff --cached --check
-```
+## Remaining gates
 
-Checkout: `C:/Users/inthe/IdeaProjects/lexique-batch-127`, branch
-`codex/d2-content-127`. Only this evidence directory and the focused test are
-tracked author changes. The complete raw package and logs remain in
-`C:/Users/inthe/IdeaProjects/lexique-batch-127/target/issue-127/` for parent
-archival. Final commit, integrated tip, verification results and file inventory
-are recorded in `target/issue-127/final-verification.json`.
-
-Key logs: `tdd-red.log`, `tdd-green-fields.log`, `tdd-red-rights.log`,
-`tdd-green.log`, `reproduction.log`, `docs-check.log`, `owned-links.json`,
-`diff-check.log` and `integration-final.log`.
-
-## Limitations
-
-No material author sourcing blocker remains. All 200 fields await independent
-quality, use/spelling and selected-rights decisions. Original-work bases and
-primary authority snapshots are reused; no live statute refresh is claimed.
-Canonical conversion, combined packaged obligations, actual native
-lookup/save/reopen, learner acceptance and release readiness are parent-owned
-and unrun here.
+Canonical assembly, combined package obligations, native lookup/save/reopen,
+learner acceptance and offline/platform/release checks remain parent-owned and
+unrun here. The established legal authorities were reused and read for this
+selected-boundary review; no live statute refresh is claimed.

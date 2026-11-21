@@ -1,6 +1,6 @@
 # Issue #127 selected-content notices
 
-Proposed selected content and Lexique adaptations/explanations: CC BY-SA 4.0.
+Independently reviewed selected content and Lexique adaptations/explanations: CC BY-SA 4.0.
 Wiktionnaire contributors are credited through the fixed articles and complete histories below.
 Named contributor registries and anonymous counts are retained in source-context.json.
 Registries may include contributors after the selected revision and do not identify sentence authorship.

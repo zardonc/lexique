@@ -1,10 +1,11 @@
 # Issue #127 selected source research
 
-Every exact frozen row has one proposed everyday use and four sourced fields in
+Every exact frozen row has one independently reviewed everyday use and four sourced fields in
 [groups.json](groups.json). [source-excerpts.json](source-excerpts.json) retains
 fixed definitions, isolated IPA substrings and French language/POS/grammar frames.
 English and Chinese fields explain the selected French use. Independent quality,
-use/spelling and selected-rights review remain pending for every field.
+use/spelling and selected-rights review pass for all 200 fields; exact proposals
+remain in the authored snapshots linked from the [review](independent-review.md).
 
 All 49 original article bodies reproduce from the retained first-party API bytes.
 Nine contributor responses form five fully terminated chains, with 3,039 named
@@ -92,6 +93,6 @@ Raw responses, request URLs, control scripts and logs remain under ignored
 
 ## Limitations
 
-Independent field/use/spelling/rights acceptance, canonical converter and
-combined package obligations, actual native execution and learner/release
-acceptance remain separate parent gates. No current sourcing blocker remains.
+Canonical converter and combined package obligations, actual native execution
+and learner/release acceptance remain separate parent gates. No unresolved
+independent field/use/spelling/rights decision remains.
