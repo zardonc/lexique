@@ -182,9 +182,10 @@ retain the evidence. `owned-processes-final.json` is empty.
 `source-red-native.{zip,patch,json}` and `native-red-02` retain the real picker
 default regression. Earlier probe logs, the initial native locator failure and
 test compilation failure remain retained. `native-green-01` records a WebView2
-renderer access violation before export assertions; its cause remains unknown.
-The fresh native recovery establishes the affected behavior without attributing
-that renderer failure. The unchanged frontend's full browser suite was not
+renderer access violation before export assertions; its retained dump faults in
+`RTSSHooks64.dll`, as detailed in [RTSS crash attribution](#rtss-crash-attribution).
+The fresh native recovery establishes the affected export behavior. The
+unchanged frontend's full browser suite was not
 rerun; other-platform, clean-machine and whole-machine offline acceptance
 remain unrun.
 
@@ -232,10 +233,49 @@ actual learning data and cleanup evidence with zero owned hosts/workers/helpers.
 `post-main-01-device-names` retains a WebView2 renderer access violation
 (`-1073741819`) after the import picker and before assertions. The fresh
 `post-main-02-device-names` recovery passed with the unchanged source and
-executable. Its cause remains unknown.
+executable. Its retained dump faults in `RTSSHooks64.dll`, as detailed below.
 
 Post-integration frontend lint, typecheck, build and documentation checks passed.
 The complete 436-test browser result remains attached to `120ff887`; frontend
 runtime source is unchanged by the review fixes and main synchronization.
 Other-platform GUI, clean-machine installation and whole-machine offline
 acceptance remain unrun.
+
+## RTSS crash attribution
+
+2026-11-20, Windows x64. The retained dumps from `native-green-01` and
+`post-main-01-device-names` both record exception `0xC0000005` at
+`0x1801490AF`, inside `RTSSHooks64.dll + 0x1490AF`. Each exception is a failed
+read of `0x7FFBF81984C0`. A local parser mapped the standard MINIDUMP
+ExceptionStream address to ModuleListStream ranges; the matching fault addresses
+establish more than the module's presence in a WebView2 process.
+
+The [diagnostic summary](evidence/issue-183/rtss-crash-analysis.json) records the
+dump identifiers, relative paths and exact fault facts. The original dumps stay
+at the archived review-fix evidence root and post-main execution root documented
+above, under `Lexique-data/webview/EBWebView/EBWebView/Crashpad/reports/`.
+The parser and raw analysis output remain at
+`C:/Users/inthe/IdeaProjects/lexique/target/pr-192-review/rtss-debug/inspect-webview-dumps.py`
+and `target/pr-192-review/rtss-dump-analysis.jsonl` in that primary checkout.
+
+The owner accepted these two crashes as RTSS injection-related environment
+failures and excluded them from PR #192 blockers. RTSS was not disabled for a
+controlled comparison. This attribution covers these two dumps; other historical
+renderer failures and the unexplained V03 timing overruns retain their own status.
+
+## Merge closeout
+
+[PR #192](https://github.com/zardonc/lexique/pull/192) merged as
+`501211152d9d135699c1421e7f3f3f89f32c8ba1`; #183–#189 are closed.
+The final reviewed head is `f2cced1b166935ae7edf376bc595c6dc93f7b411`.
+Its [PR CI](https://github.com/zardonc/lexique/actions/runs/44846880648) and
+[push CI](https://github.com/zardonc/lexique/actions/runs/44846873032) each passed
+all eleven jobs on attempt 1. The PR CI checkout `fee01338` has the same tree as
+that head. Its frontend log confirms 436 browser tests; its Windows x64 desktop
+partitions confirm 144 tests with the original 60-second limits.
+
+[Post-merge main CI](https://github.com/zardonc/lexique/actions/runs/44859507861)
+passed on merge commit `5012111`. Earlier Windows native execution remains
+attached to runtime source `64961c9`, whose runtime tree is unchanged by the
+documentation closeout. Other-platform GUI, clean-machine installation and
+whole-machine offline acceptance remain unrun.
