@@ -102,9 +102,9 @@ are identical. They do not assert final pending author counts or require
 absence from a subsequently assembled canonical resource.
 
 Complete reviewer execution evidence and reproduction scripts:
-`C:/Users/inthe/IdeaProjects/lexique-review-126/target/issue-126-review/`.
+`C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/reviewer-evidence/issue-126/issue-126-review/`.
 Original raw captures, complete histories and legal authorities:
-`C:/Users/inthe/IdeaProjects/lexique-batch-126/target/issue-126/` and the supplied
+`C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-126/` and the supplied
 integration `target/issue-126/` archive. These ignored files remain available
 for parent archival.
 

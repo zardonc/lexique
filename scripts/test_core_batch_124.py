@@ -43,7 +43,7 @@ class Batch124Tests(unittest.TestCase):
         for row, group in accepted.items():
             sense = group['senses'][0]
             original = originals[row]['senses'][0]
-            self.assertEqual(sense['independent_review'], 'passed')
+            self.assertEqual(sense['independent_review'], 'passed_after_exact_accepted_replacements')
             self.assertEqual(sense['use'], original['use'])
             for name, field in sense['fields'].items():
                 with self.subTest(row=row, field=name):
@@ -87,8 +87,12 @@ class Batch124Tests(unittest.TestCase):
         self.assertEqual(admission['pending_independent_rights_fields'], 0)
         self.assertEqual((admission['accepted_groups'], admission['accepted_fields']), (50, 200))
         self.assertEqual((admission['missing_groups'], admission['missing_fields']), (0, 0))
-        self.assertEqual(admission['newly_admitted_fields'], 0)
-        self.assertEqual(admission['resource_admission'], 'pending_parent_canonical_assembly_and_output_validation')
+        if admission['status'] == 'admitted_core_129_v1_windows_x64_development_resource':
+            self.assertEqual(admission['newly_admitted_fields'], 200)
+            self.assertEqual(admission['resource_admission'], 'passed_combined_conversion_rights_notices_and_native_gates')
+        else:
+            self.assertEqual(admission['newly_admitted_fields'], 0)
+            self.assertEqual(admission['resource_admission'], 'pending_parent_canonical_assembly_and_output_validation')
         # Identical canonical records may overlap after parent assembly.
         canonical = {g['frozen_row']: g for g in json.loads(
             (ROOT / 'resources/core-pilot-79/curated-inputs.json').read_text(encoding='utf-8'))['groups']}

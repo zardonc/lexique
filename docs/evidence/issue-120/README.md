@@ -48,12 +48,12 @@ The approved test seam is the resource/admission record. Membership is checked
 against the self-contained ticket and frozen manifest. Checks verify every
 accepted text, proposal, source/rights binding and use; subsequent canonical
 overlap is allowed only for identical whole records. Retained
-[RED](../../../target/issue-120-review/content-rights-red.log),
-[GREEN](../../../target/issue-120-review/content-rights-green.log) and
-[full focused results](../../../target/issue-120-review/green.log) cover the
+[RED](../../../target/implement-120-129/reviewer-evidence/issue-120/issue-120-review/content-rights-red.log),
+[GREEN](../../../target/implement-120-129/reviewer-evidence/issue-120/issue-120-review/content-rights-green.log) and
+[full focused results](../../../target/implement-120-129/reviewer-evidence/issue-120/issue-120-review/green.log) cover the
 approved resource/admission seam.
 
-The independent offline [byte audit](../../../target/issue-120-review/fixed-source-byte-audit.json)
+The independent offline [byte audit](../../../target/implement-120-129/reviewer-evidence/issue-120/issue-120-review/fixed-source-byte-audit.json)
 matches all **46 complete wikitext articles byte for byte** with retained
 first-party revision and fixed-recapture responses, all 200 spans and complete
 contributor pagination. No new upstream requests or 429 retries were made.
@@ -68,8 +68,8 @@ git diff --cached --check
 The original author scripts, raw responses, requests and execution logs are
 copied byte-for-byte into ignored `target/issue-120-review/author-evidence/`
 for parent archival. The originals remain in the author and integration
-worktrees. [Documentation checks](../../../target/issue-120-review/docs.log)
-and [final verification](../../../target/issue-120-review/final-verification.json)
+worktrees. [Documentation checks](../../../target/implement-120-129/reviewer-evidence/issue-120/issue-120-review/docs.log)
+and [final verification](../../../target/implement-120-129/reviewer-evidence/issue-120/issue-120-review/final-verification.json)
 record the current review commands and statuses. Author reproduction scripts
 describe the preserved proposals; they do not generate the accepted review.
 

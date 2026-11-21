@@ -68,12 +68,12 @@ records provide the batch materials for parent assembly. The seven accepted
 replacements retain the same exact sources and licence; all original proposals
 remain in [review-candidates.json](review-candidates.json) and field-review records.
 
-Raw author authorities: `C:/Users/inthe/IdeaProjects/lexique-batch-122/target/issue-122/rights/`.
+Raw author authorities: `C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-122/rights/`.
 The CC/Wikimedia/policy captures reuse archived #119 primary authorities and
 were read here at these selected import/adaptation boundaries. CPI L123-1,
 L123-3 and L121-1 were read from Légifrance Titre II, displayed version
 2026-11-13; exact selected retrieval is retained at
-`C:/Users/inthe/IdeaProjects/lexique-review-122/target/issue-122-review/legifrance-selected.txt`.
+`C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/reviewer-evidence/issue-122/issue-122-review/legifrance-selected.txt`.
 The direct article endpoints returned HTTP 403 and Tavily extraction returned
 a plan-limit error; the alternative official code-title retrieval succeeded.
 

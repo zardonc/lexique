@@ -25,7 +25,7 @@ ANNOTATIONS = (
     (1300, "d", "PRE", 106), (1386, "nulle", "PRO:ind", 108),
 )
 ANNOTATION_ROWS = tuple(entry[0] for entry in ANNOTATIONS)
-ROWS = tuple(row for row in range(1, 1951) if row not in ANNOTATION_ROWS)
+ROWS = tuple(row for row in range(1, 2451) if row not in ANNOTATION_ROWS)
 FIELDS = {"french_definition": "definition_fr", "ipa": "ipa", "english": "meaning_en", "chinese": "meaning_zh"}
 LANGUAGES = {"french_definition": "fr", "ipa": "und", "english": "en", "chinese": "zh"}
 MATERIALS = (

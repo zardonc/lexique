@@ -72,11 +72,11 @@ admitted.
 
 ## Retained evidence
 
-The [byte audit](../../../target/issue-120-review/fixed-source-byte-audit.json)
+The [byte audit](../../../target/implement-120-129/reviewer-evidence/issue-120/issue-120-review/fixed-source-byte-audit.json)
 records each fixed article, exact selected/frame spans, import/reference markers,
 contributors and six retained authority captures. The
-[legal clauses](../../../target/issue-120-review/selected-legal-clauses.log) and
-[Terms §7](../../../target/issue-120-review/terms-section7.log) retain the text
+[legal clauses](../../../target/implement-120-129/reviewer-evidence/issue-120/issue-120-review/selected-legal-clauses.log) and
+[Terms §7](../../../target/implement-120-129/reviewer-evidence/issue-120/issue-120-review/terms-section7.log) retain the text
 used for this judgement. Raw author captures and fixed-recapture responses
 remain byte-for-byte in ignored reviewer evidence; no live recapture or hot
 retry was performed. Field and selected-frame rights have passed; canonical

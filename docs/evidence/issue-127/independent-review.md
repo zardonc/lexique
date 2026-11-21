@@ -58,7 +58,7 @@ No field or difficult identity is dropped.
 ## Verification and reproduction
 
 Retained reviewer execution root:
-`C:/Users/inthe/IdeaProjects/lexique-review-127/target/issue-127-review/`.
+`C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/reviewer-evidence/issue-127/issue-127-review/`.
 Platform: Windows x64, PowerShell 7, uv Python 3.14.10.
 
 | Check | Result and full log |
@@ -94,7 +94,7 @@ pending counts or assert that these reviewed identities remain absent from
 future canonical inputs.
 
 Raw author evidence:
-`C:/Users/inthe/IdeaProjects/lexique-batch-127/target/issue-127/`.
+`C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-127/`.
 Integration copies:
 `C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/issue-127/`.
 The reviewer’s audit, inspection and decision scripts stay in the ignored

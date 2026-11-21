@@ -82,11 +82,11 @@ records and [COPYING](COPYING) identify the batch obligations. The parent must
 retain the applicable materials and fulfil them in the actual combined output.
 
 The original author authority archive remains at
-`C:/Users/inthe/IdeaProjects/lexique-batch-121/target/issue-121/rights/rights/`.
+`C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-121/rights/rights/`.
 Reusable #123 statute, edition and licensing captures were read from
-`C:/Users/inthe/IdeaProjects/lexique-review-123/target/issue-123/review-rights/`.
+`C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/reviewer-evidence/issue-123/issue-123/review-rights/`.
 The reviewer’s L123-3 search/open/failure captures and fixed-byte audit remain
-at `C:/Users/inthe/IdeaProjects/lexique-review-121/target/issue-121-review/`.
+at `C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/reviewer-evidence/issue-121/issue-121-review/`.
 Exact authority paths and evidence boundaries are recorded in [rights.json](rights.json).
 
 Selected-text acceptance does not assert canonical assembly, packaged

@@ -41,9 +41,9 @@ uv run --python 3.14.10 --no-project python -B -X utf8 -m unittest discover -s s
 ```
 
 Raw author evidence remains at
-`C:/Users/inthe/IdeaProjects/lexique-batch-122/target/issue-122/`.
+`C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-122/`.
 Independent scripts, source comparisons, legal retrieval and RED/GREEN logs
-remain at `C:/Users/inthe/IdeaProjects/lexique-review-122/target/issue-122-review/`.
+remain at `C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/reviewer-evidence/issue-122/issue-122-review/`.
 `final-verification.json` records the tested commit, merged integration tip,
 Windows/Python environment, commands and outcomes. Author preparation scripts
 reproduce the authored proposal; reviewed content is the accepted shard above.

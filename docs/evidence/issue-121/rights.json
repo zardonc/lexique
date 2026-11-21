@@ -6,7 +6,7 @@
   "complete_legal_text": "resources/core-pilot-79/COPYING",
   "authority_captures": [
     {
-      "path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-121\\target\\issue-121\\rights\\rights\\fr-policy.api.json",
+      "path": "C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-121/rights/rights/fr-policy.api.json",
       "url": "https://fr.wiktionary.org/w/api.php?action=query&format=json&formatversion=2&prop=revisions&titles=Convention%3ADroit+d%E2%80%99auteur%7CMod%C3%A8le%3AImport%3ADAF8&rvprop=ids%7Ctimestamp%7Cuser%7Ccontent&rvslots=main",
       "status": 200,
       "retained_at_utc": "2026-11-20T17:49:00.624356+00:00",
@@ -16,38 +16,38 @@
           "pageid": 11150,
           "revid": 38903168,
           "timestamp": "2025-10-14T19:47:22Z",
-          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-121\\target\\issue-121\\rights\\rights\\policy-11150.wiki",
+          "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-121/rights/rights/policy-11150.wiki",
           "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Convention%3ADroit%20d%E2%80%99auteur&oldid=38903168",
-          "original_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-119\\target\\issue-119\\rights\\policy-11150.wiki"
+          "original_capture_path": "C:/Users/inthe/IdeaProjects/lexique-batch-119/target/issue-119/rights/policy-11150.wiki"
         },
         {
           "title": "Modèle:Import:DAF8",
           "pageid": 273395,
           "revid": 22113837,
           "timestamp": "2017-02-04T13:48:32Z",
-          "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-121\\target\\issue-121\\rights\\rights\\policy-273395.wiki",
+          "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-121/rights/rights/policy-273395.wiki",
           "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AImport%3ADAF8&oldid=22113837",
-          "original_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-119\\target\\issue-119\\rights\\policy-273395.wiki"
+          "original_capture_path": "C:/Users/inthe/IdeaProjects/lexique-batch-119/target/issue-119/rights/policy-273395.wiki"
         }
       ],
-      "original_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-119\\target\\issue-119\\rights\\fr-policy.api.json",
-      "reused_from": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-119\\rights"
+      "original_capture_path": "C:/Users/inthe/IdeaProjects/lexique-batch-119/target/issue-119/rights/fr-policy.api.json",
+      "reused_from": "C:/Users/inthe/IdeaProjects/lexique-spec-110-119/target/implement-110-119/author-evidence/issue-119/rights"
     },
     {
-      "path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-121\\target\\issue-121\\rights\\rights\\cc-legal.html",
+      "path": "C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-121/rights/rights/cc-legal.html",
       "url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "status": 200,
       "retained_at_utc": "2026-11-20T17:49:04.866792+00:00",
-      "original_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-119\\target\\issue-119\\rights\\cc-legal.html",
-      "reused_from": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-119\\rights"
+      "original_capture_path": "C:/Users/inthe/IdeaProjects/lexique-batch-119/target/issue-119/rights/cc-legal.html",
+      "reused_from": "C:/Users/inthe/IdeaProjects/lexique-spec-110-119/target/implement-110-119/author-evidence/issue-119/rights"
     },
     {
-      "path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-121\\target\\issue-121\\rights\\rights\\terms.html",
+      "path": "C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-121/rights/rights/terms.html",
       "url": "https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use",
       "status": 200,
       "retained_at_utc": "2026-11-20T17:49:08.068198+00:00",
-      "original_capture_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-119\\target\\issue-119\\rights\\terms.html",
-      "reused_from": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-110-119\\target\\implement-110-119\\author-evidence\\issue-119\\rights"
+      "original_capture_path": "C:/Users/inthe/IdeaProjects/lexique-batch-119/target/issue-119/rights/terms.html",
+      "reused_from": "C:/Users/inthe/IdeaProjects/lexique-spec-110-119/target/implement-110-119/author-evidence/issue-119/rights"
     }
   ],
   "authority_reading": [
@@ -15953,7 +15953,7 @@
   "selected_span_rights": "passed_at_selected_text_boundary",
   "combined_resource_rights": "pending_parent_actual_assembly_and_packaged_notices",
   "independent_authority_evidence": {
-    "reused_123_root": "C:/Users/inthe/IdeaProjects/lexique-review-123/target/issue-123/review-rights",
+    "reused_123_root": "C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/reviewer-evidence/issue-123/issue-123/review-rights",
     "files": [
       "lawdetails.json",
       "legalConfirmed.json",

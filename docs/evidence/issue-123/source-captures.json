@@ -747,17 +747,17 @@
     },
     "selected_sentence_authorship_proved": false
   },
-  "capture_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-123\\target\\issue-123",
+  "capture_root": "C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-123",
   "captured_at_utc": "2026-11-20T23:33:16.808584+00:00",
-  "preparation_script": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-123\\target\\issue-123\\prepare_candidates.py",
-  "selection_file": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-123\\target\\issue-123\\selection.py",
+  "preparation_script": "C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-123/prepare_candidates.py",
+  "selection_file": "C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-123/selection.py",
   "fixed_revision_recapture": {
     "parts": [
       "target\\issue-123\\sources\\fixed-1.api.json",
       "target\\issue-123\\sources\\fixed-2.api.json",
       "target\\issue-123\\sources\\fixed-3.api.json"
     ],
-    "reproduction_script": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-123\\target\\issue-123\\reproduce_sources.py",
+    "reproduction_script": "C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-123/reproduce_sources.py",
     "result": "52 exact fixed revisions matched retained UTF-8 source bytes",
     "replay": "Retained first-party responses are replayed; deleting only fixed-*.api.json triggers live requests by revid, never current titles."
   }

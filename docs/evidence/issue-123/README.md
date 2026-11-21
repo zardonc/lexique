@@ -45,22 +45,22 @@ sources, full contributors and preparation/reproduction scripts remain at its
 Review checkout: `C:/Users/inthe/IdeaProjects/lexique-review-123`, branch
 `codex/d2-review-123`. Changes cover only this evidence directory and
 `scripts/test_core_batch_123.py`; ignored review evidence:
-`C:/Users/inthe/IdeaProjects/lexique-review-123/target/issue-123/`.
+`C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/reviewer-evidence/issue-123/issue-123/`.
 
-The [independent source audit](../../../target/issue-123/source-audit.json) checks
+The [independent source audit](../../../target/implement-120-129/reviewer-evidence/issue-123/issue-123/source-audit.json) checks
 all **52 fixed raw/API revisions**, every field/POS/construction span, exact
 membership and complete named/anonymous contributor registries. The
-[byte reproduction](../../../target/issue-123/reproduction.log) matches all 52
+[byte reproduction](../../../target/implement-120-129/reviewer-evidence/issue-123/issue-123/reproduction.log) matches all 52
 articles against the separately retained fixed-revision responses. Raw inputs
 also remain in the review directory’s ignored `sources/` copy.
 
 The approved resource/admission seam passes **four focused tests**.
-[Acceptance RED](../../../target/issue-123/acceptance-red.log),
-[v RED](../../../target/issue-123/v-red.log),
-[whisky RED](../../../target/issue-123/whisky-red.log) and
-[GREEN](../../../target/issue-123/green.log) retain exact regression results.
-[Documentation results](../../../target/issue-123/docs.log) and
-[final verification](../../../target/issue-123/final-verification.json) retain
+[Acceptance RED](../../../target/implement-120-129/reviewer-evidence/issue-123/issue-123/acceptance-red.log),
+[v RED](../../../target/implement-120-129/reviewer-evidence/issue-123/issue-123/v-red.log),
+[whisky RED](../../../target/implement-120-129/reviewer-evidence/issue-123/issue-123/whisky-red.log) and
+[GREEN](../../../target/implement-120-129/reviewer-evidence/issue-123/issue-123/green.log) retain exact regression results.
+[Documentation results](../../../target/implement-120-129/reviewer-evidence/issue-123/issue-123/docs.log) and
+[final verification](../../../target/implement-120-129/reviewer-evidence/issue-123/issue-123/final-verification.json) retain
 commands, statuses, tested SHA, platform and merged integration tip.
 PowerShell 7 and uv Python **3.14.10** are used.
 

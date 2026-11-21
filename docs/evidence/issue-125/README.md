@@ -40,9 +40,9 @@ completing-numeral and ordinal notes. No source spelling becomes a runtime alias
 
 Review checkout: `C:/Users/inthe/IdeaProjects/lexique-review-125`, branch
 `codex/d2-review-125`. Author raw evidence:
-`C:/Users/inthe/IdeaProjects/lexique-batch-125/target/issue-125/`;
+`C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-125/`;
 review copy and complete logs:
-`C:/Users/inthe/IdeaProjects/lexique-review-125/target/issue-125-review/`.
+`C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/reviewer-evidence/issue-125/issue-125-review/`.
 
 The [focused check](../../../scripts/test_core_batch_125.py) passes **five tests**.
 It verifies exact accepted fields against the retained proposals and four
@@ -50,7 +50,7 @@ literal replacements, fixed sources, independent selected rights and source
 frames, live counters and original snapshots. Identical subsequent canonical
 overlap is supported; overlapping content must match the reviewed record.
 
-The independent [byte/source audit](../../../target/issue-125-review/source-audit.json)
+The independent [byte/source audit](../../../target/implement-120-129/reviewer-evidence/issue-125/issue-125-review/source-audit.json)
 passes **51 fixed API/raw files**, **200 field spans**, **812 field-support
 spans** and all frozen identities. Seven main contributor response parts and
 one `cent` part terminate without continuation; **3,004 + 121 named article
@@ -58,17 +58,17 @@ credits** and **460 + 25 anonymous contributor counts** match the retained
 registries. Counts are per article, not unique people. Registries may include
 later contributors and do not identify individual sentence authors.
 
-Retained logs: [acceptance RED](../../../target/issue-125-review/acceptance-red.log),
-[acceptance GREEN](../../../target/issue-125-review/acceptance-green.log),
-[gay RED](../../../target/issue-125-review/gay-red.log),
-[gay GREEN](../../../target/issue-125-review/gay-green.log),
-[noyer RED](../../../target/issue-125-review/noyer-red.log),
-[noyer GREEN](../../../target/issue-125-review/noyer-green.log),
-[full focused GREEN](../../../target/issue-125-review/green.log),
-[source bytes](../../../target/issue-125-review/source-byte-audit-reviewed.log),
-[documentation](../../../target/issue-125-review/docs-check.log),
-[owned links](../../../target/issue-125-review/owned-links.json) and
-[final verification](../../../target/issue-125-review/final-verification.json).
+Retained logs: [acceptance RED](../../../target/implement-120-129/reviewer-evidence/issue-125/issue-125-review/acceptance-red.log),
+[acceptance GREEN](../../../target/implement-120-129/reviewer-evidence/issue-125/issue-125-review/acceptance-green.log),
+[gay RED](../../../target/implement-120-129/reviewer-evidence/issue-125/issue-125-review/gay-red.log),
+[gay GREEN](../../../target/implement-120-129/reviewer-evidence/issue-125/issue-125-review/gay-green.log),
+[noyer RED](../../../target/implement-120-129/reviewer-evidence/issue-125/issue-125-review/noyer-red.log),
+[noyer GREEN](../../../target/implement-120-129/reviewer-evidence/issue-125/issue-125-review/noyer-green.log),
+[full focused GREEN](../../../target/implement-120-129/reviewer-evidence/issue-125/issue-125-review/green.log),
+[source bytes](../../../target/implement-120-129/reviewer-evidence/issue-125/issue-125-review/source-byte-audit-reviewed.log),
+[documentation](../../../target/implement-120-129/reviewer-evidence/issue-125/issue-125-review/docs-check.log),
+[owned links](../../../target/implement-120-129/reviewer-evidence/issue-125/issue-125-review/owned-links.json) and
+[final verification](../../../target/implement-120-129/reviewer-evidence/issue-125/issue-125-review/final-verification.json).
 PowerShell 7 and uv Python **3.14.10** are used. All complete author logs/raw
 inputs, acquisition scripts and original tracked snapshots are retained in
 `author-evidence/` and `authored-snapshots/` under the review evidence root.

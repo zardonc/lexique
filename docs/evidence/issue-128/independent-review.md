@@ -18,10 +18,10 @@ Reviewed author commit: `b70a64eac359b7da97ab7192816e207843d6a056`,
 `C:/Users/inthe/IdeaProjects/lexique-review-128`, `codex/d2-review-128`.
 Clean integration `55971e6301c930cb381a6ef67349eece0de35269` was merged before
 review; the latest integration is merged before final reporting, with its exact
-SHA in the [verification record](../../../target/issue-128-review/verification.json).
+SHA in the [verification record](../../../target/implement-120-129/reviewer-evidence/issue-128/issue-128-review/verification.json).
 The reviewed changes are committed author content plus the owned review diff;
-the retained [review patch](../../../target/issue-128-review/review.patch) and
-[test patch](../../../target/issue-128-review/tests.patch) identify that diff.
+the retained [review patch](../../../target/implement-120-129/reviewer-evidence/issue-128/issue-128-review/review.patch) and
+[test patch](../../../target/implement-120-129/reviewer-evidence/issue-128/issue-128-review/tests.patch) identify that diff.
 
 The captured spec and issue were read at
 `C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/`.
@@ -81,27 +81,27 @@ records, including the converter's normalization of the sense acceptance-state
 spelling, and rejects differing content or provenance. Parent canonical counts
 can advance to completion without freezing authored pending counts.
 
-- Construction [RED](../../../target/issue-128-review/construction-red.log)
-  and [GREEN](../../../target/issue-128-review/construction-green.log).
-- Independent admission [RED](../../../target/issue-128-review/admission-red.log)
-  and [GREEN](../../../target/issue-128-review/admission-green.log).
-- Field admission states [RED](../../../target/issue-128-review/field-state-red.log)
-  and [GREEN](../../../target/issue-128-review/field-state-green.log).
-- [Full GREEN](../../../target/issue-128-review/full-green.log): four tests.
-- [Fixed-source byte audit](../../../target/issue-128-review/fixed-source-byte-audit.log):
+- Construction [RED](../../../target/implement-120-129/reviewer-evidence/issue-128/issue-128-review/construction-red.log)
+  and [GREEN](../../../target/implement-120-129/reviewer-evidence/issue-128/issue-128-review/construction-green.log).
+- Independent admission [RED](../../../target/implement-120-129/reviewer-evidence/issue-128/issue-128-review/admission-red.log)
+  and [GREEN](../../../target/implement-120-129/reviewer-evidence/issue-128/issue-128-review/admission-green.log).
+- Field admission states [RED](../../../target/implement-120-129/reviewer-evidence/issue-128/issue-128-review/field-state-red.log)
+  and [GREEN](../../../target/implement-120-129/reviewer-evidence/issue-128/issue-128-review/field-state-green.log).
+- [Full GREEN](../../../target/implement-120-129/reviewer-evidence/issue-128/issue-128-review/full-green.log): four tests.
+- [Fixed-source byte audit](../../../target/implement-120-129/reviewer-evidence/issue-128/issue-128-review/fixed-source-byte-audit.log):
   all 47 complete raw articles equal both current-capture and exact-revision
   recapture API bytes; all 200 fields and 189 support lines match; six
   contributor continuation chains end completely; five legal captures exist.
-- [Isolated overlap/negative checks](../../../target/issue-128-review/overlap-and-mutations.log):
+- [Isolated overlap/negative checks](../../../target/implement-120-129/reviewer-evidence/issue-128/issue-128-review/overlap-and-mutations.log):
   50 identical overlaps pass; changed canonical text/span, removed construction,
   pending field rights, pending support frame, pending original-work layer and
   false pending counts fail; later canonical completion counts pass.
-- [Documentation checks](../../../target/issue-128-review/docs-check.log) and
-  [diff checks](../../../target/issue-128-review/diff-check.log).
+- [Documentation checks](../../../target/implement-120-129/reviewer-evidence/issue-128/issue-128-review/docs-check.log) and
+  [diff checks](../../../target/implement-120-129/reviewer-evidence/issue-128/issue-128-review/diff-check.log).
 
 Complete evidence remains under ignored `target/issue-128-review/`. Raw/current/
 fixed API captures and rights authorities are retained in the specified author
-archive, `C:/Users/inthe/IdeaProjects/lexique-batch-128/target/issue-128`;
+archive, `C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-128`;
 the integration `target/issue-128` is the alternate archive. No live requests or
 hot retries were made; retained exact captures respect the upstream 429 limit.
 

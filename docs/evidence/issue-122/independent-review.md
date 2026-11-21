@@ -78,12 +78,12 @@ has a retained RED/GREEN slice at the approved seam. Fixed-source audit verifies
 supporting spans, exact title/revision/timestamp and eight complete contributor
 responses. The terminal main/support responses have no continuation.
 
-Reviewer root: `C:/Users/inthe/IdeaProjects/lexique-review-122/target/issue-122-review/`.
+Reviewer root: `C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/reviewer-evidence/issue-122/issue-122-review/`.
 Files: `source-audit.json`, `source-audit.log`, `red-mince.log`, `green-mince.log`,
 `red-race.log`, `green-race.log`, `red-recu.log`, `green-recu.log`,
 `red-acceptance.log`, `green-acceptance.log`, `focused-green.log`,
 `owned-docs-check.json`, `review.patch`, `tests.patch` and `final-verification.json`.
-Author raw root: `C:/Users/inthe/IdeaProjects/lexique-batch-122/target/issue-122/`.
+Author raw root: `C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-122/`.
 
 ## Limitations
 

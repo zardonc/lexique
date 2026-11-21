@@ -93,7 +93,7 @@ recorded DAF8/Littré original layer.
   sound, etymologies, other-language sections and unrelated senses supply no
   admitted field.
 
-The [byte audit](../../../target/issue-128-review/fixed-source-byte-audit.log)
+The [byte audit](../../../target/implement-120-129/reviewer-evidence/issue-128/issue-128-review/fixed-source-byte-audit.log)
 checks every retained selected/support line and complete article against both
 API captures. Full raw articles are research evidence; only selected lexical/
 phonetic and factual construction content is eligible for the resource.

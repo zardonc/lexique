@@ -35,13 +35,13 @@ pnpm test:docs
 git diff --cached --check
 ```
 
-The [complete test log](../../../target/issue-128-review/full-green.log),
-[fixed-source byte audit](../../../target/issue-128-review/fixed-source-byte-audit.log),
-[canonical overlap and negative checks](../../../target/issue-128-review/overlap-and-mutations.log)
-and [verification record](../../../target/issue-128-review/verification.json)
+The [complete test log](../../../target/implement-120-129/reviewer-evidence/issue-128/issue-128-review/full-green.log),
+[fixed-source byte audit](../../../target/implement-120-129/reviewer-evidence/issue-128/issue-128-review/fixed-source-byte-audit.log),
+[canonical overlap and negative checks](../../../target/implement-120-129/reviewer-evidence/issue-128/issue-128-review/overlap-and-mutations.log)
+and [verification record](../../../target/implement-120-129/reviewer-evidence/issue-128/issue-128-review/verification.json)
 are retained under ignored `target/issue-128-review/`, including RED/GREEN logs.
 Author raw/current/fixed API captures, contributor continuations and legal
-authorities remain at `C:/Users/inthe/IdeaProjects/lexique-batch-128/target/issue-128`;
+authorities remain at `C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-128`;
 the integration archive is the alternate retained root. The independent audit
 used retained captures and made no upstream requests.
 

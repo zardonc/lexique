@@ -44,7 +44,7 @@ class Batch123Tests(unittest.TestCase):
                 self.assertEqual(len(group['senses']), 1)
                 sense = group['senses'][0]
                 self.assertTrue(sense['use'].strip())
-                self.assertEqual(sense['independent_review'], 'passed')
+                self.assertEqual(sense['independent_review'], 'passed_after_exact_accepted_replacements')
                 self.assertEqual(set(sense['fields']), set(LANGUAGES))
                 for name, field in sense['fields'].items():
                     self.assertTrue(field['text'].strip())

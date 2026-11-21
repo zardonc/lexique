@@ -46,7 +46,7 @@ accepted fields/rights and source frames, frozen membership/proposal preservatio
 retained bytes/contributors, and resolved original-work layers. Identical
 canonical records may overlap after parent assembly.
 
-The independent [raw audit](../../../target/issue-124-review/source-audit.json)
+The independent [raw audit](../../../target/implement-120-129/reviewer-evidence/issue-124/issue-124-review/source-audit.json)
 passes **57 fixed article/API revisions**, author/integration byte equality,
 **2,250 span occurrences**, **12 contributor responses**, eight terminating
 chains and **3,291 named registry entries**. Current registries may postdate
@@ -58,19 +58,19 @@ offline byte reproduction passed. The reviewer independently inspected retained
 exact bytes, made no hot retry, and claims no fresh network validation.
 
 Ignored review root:
-`C:/Users/inthe/IdeaProjects/lexique-review-124/target/issue-124-review/`.
-Complete [acceptance RED](../../../target/issue-124-review/acceptance-red.log),
-[acceptance GREEN](../../../target/issue-124-review/acceptance-green.log),
-[original-layer RED](../../../target/issue-124-review/source-layers-red.log),
-[spelling-schema RED](../../../target/issue-124-review/spelling-schema-red.log),
-[final GREEN](../../../target/issue-124-review/green.log),
-[byte audit](../../../target/issue-124-review/source-audit.log),
-[documentation checks](../../../target/issue-124-review/docs.log) and
-[final verification](../../../target/issue-124-review/final-verification.json)
+`C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/reviewer-evidence/issue-124/issue-124-review/`.
+Complete [acceptance RED](../../../target/implement-120-129/reviewer-evidence/issue-124/issue-124-review/acceptance-red.log),
+[acceptance GREEN](../../../target/implement-120-129/reviewer-evidence/issue-124/issue-124-review/acceptance-green.log),
+[original-layer RED](../../../target/implement-120-129/reviewer-evidence/issue-124/issue-124-review/source-layers-red.log),
+[spelling-schema RED](../../../target/implement-120-129/reviewer-evidence/issue-124/issue-124-review/spelling-schema-red.log),
+[final GREEN](../../../target/implement-120-129/reviewer-evidence/issue-124/issue-124-review/green.log),
+[byte audit](../../../target/implement-120-129/reviewer-evidence/issue-124/issue-124-review/source-audit.log),
+[documentation checks](../../../target/implement-120-129/reviewer-evidence/issue-124/issue-124-review/docs.log) and
+[final verification](../../../target/implement-120-129/reviewer-evidence/issue-124/issue-124-review/final-verification.json)
 are retained. PowerShell 7 and uv Python **3.14.10** are used.
 
 Raw author evidence and offline reproduction remain at
-`C:/Users/inthe/IdeaProjects/lexique-batch-124/target/issue-124/`; the integration
+`C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-124/`; the integration
 copy is `C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/issue-124/`.
 Full owned/test patches, tested SHA and latest merged integration SHA are in
 the review root. Review changes cover only this evidence directory and

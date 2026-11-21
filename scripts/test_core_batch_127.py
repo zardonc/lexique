@@ -36,7 +36,7 @@ class Batch127Tests(unittest.TestCase):
                 sense = group["senses"][0]
                 self.assertTrue(sense["use"])
                 self.assertIsNone(sense["cefr"])
-                self.assertEqual(sense["independent_review"], "passed")
+                self.assertEqual(sense["independent_review"], "passed_after_exact_accepted_replacements")
                 self.assertEqual(set(sense["fields"]), set(LANGUAGES))
                 for name, field in sense["fields"].items():
                     self.assertEqual(field["language"], LANGUAGES[name])

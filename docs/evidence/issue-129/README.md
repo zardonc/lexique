@@ -83,9 +83,9 @@ remain in authored snapshots and explicit proposal keys. `passager` also retains
 Littré original-work credit and its **1952-01-01** L123-1 expiry.
 
 Raw source and authority evidence:
-`C:/Users/inthe/IdeaProjects/lexique-batch-129/target/issue-129/`.
+`C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-129/`.
 Independent audit and complete execution logs:
-`C:/Users/inthe/IdeaProjects/lexique-review-129/target/issue-129-review/`.
+`C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/reviewer-evidence/issue-129/issue-129-review/`.
 Retained copyright-policy/template text matches the captured API after CRLF to
 LF normalization; the audit records this separately from literal article byte
 equality. No fresh upstream requests or retries were made.

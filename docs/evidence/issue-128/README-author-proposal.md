@@ -2,7 +2,7 @@
 
 This package proposes **50 exact groups, 50 selected senses and 200 fields** for
 frozen rows **2351–2400** of [ticket #128](https://github.com/zardonc/lexique/issues/128),
-under the captured [D2 spec](../../../target/issue-128/spec.md).
+under the captured [D2 spec](../../../target/implement-120-129/author-evidence/issue-128/spec.md).
 Every sense has a French definition, isolated IPA, English meaning and Chinese
 meaning for the same selected POS/use. All **47 French articles** have fixed
 revisions and numbered spans. Complete contributor pagination is retained in
@@ -49,10 +49,10 @@ raw/API byte equality and every contributor continuation. Tracked records
 remain checkable in a checkout without ignored captures; live/raw reproduction
 requires the retained archive.
 
-The TDD evidence is [membership RED](../../../target/issue-128/membership-red.log),
-[membership GREEN](../../../target/issue-128/membership-green.log),
-[source/rights RED](../../../target/issue-128/source-rights-red.log) and
-[GREEN](../../../target/issue-128/green.log).
+The TDD evidence is [membership RED](../../../target/implement-120-129/author-evidence/issue-128/membership-red.log),
+[membership GREEN](../../../target/implement-120-129/author-evidence/issue-128/membership-green.log),
+[source/rights RED](../../../target/implement-120-129/author-evidence/issue-128/source-rights-red.log) and
+[GREEN](../../../target/implement-120-129/author-evidence/issue-128/green.log).
 
 Live fixed-revision recapture matches all **47 complete articles byte for byte**.
 Offline preparation reproduces the **ten JSON evidence files** and article
@@ -72,16 +72,16 @@ pnpm test:docs
 git diff --cached --check
 ```
 
-See [recapture](../../../target/issue-128/fixed-recapture.log),
-[reproduction](../../../target/issue-128/reproduction.log),
-[documentation](../../../target/issue-128/docs-check.log) and
-[final verification](../../../target/issue-128/final-verification.json).
-The [selection](../../../target/issue-128/selection.py),
-[preparation](../../../target/issue-128/prepare_candidates.py),
-[rights preparation](../../../target/issue-128/finish_author_package.py),
-[notice preparation](../../../target/issue-128/write_notices.py),
-[reproduction script](../../../target/issue-128/reproduce.py),
-[recapture script](../../../target/issue-128/recapture_fixed.py), full API
+See [recapture](../../../target/implement-120-129/author-evidence/issue-128/fixed-recapture.log),
+[reproduction](../../../target/implement-120-129/author-evidence/issue-128/reproduction.log),
+[documentation](../../../target/implement-120-129/author-evidence/issue-128/docs-check.log) and
+[final verification](../../../target/implement-120-129/author-evidence/issue-128/final-verification.json).
+The [selection](../../../target/implement-120-129/author-evidence/issue-128/selection.py),
+[preparation](../../../target/implement-120-129/author-evidence/issue-128/prepare_candidates.py),
+[rights preparation](../../../target/implement-120-129/author-evidence/issue-128/finish_author_package.py),
+[notice preparation](../../../target/implement-120-129/author-evidence/issue-128/write_notices.py),
+[reproduction script](../../../target/implement-120-129/author-evidence/issue-128/reproduce.py),
+[recapture script](../../../target/implement-120-129/author-evidence/issue-128/recapture_fixed.py), full API
 responses/raw articles and request files remain under ignored `target/issue-128/`
 for parent archival before cleanup. No dependency or shared converter change
 is required by this author package.

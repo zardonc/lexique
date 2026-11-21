@@ -67,19 +67,19 @@ attributed literary/news example supplies accepted content.
 
 ## Evidence and remaining gates
 
-The [raw audit](../../../target/issue-123/source-audit.json) passes **52 source/API
+The [raw audit](../../../target/implement-120-129/reviewer-evidence/issue-123/issue-123/source-audit.json) passes **52 source/API
 revisions**, all exact field/construction spans, named registries and anonymous
 counts, and both terminating contributor paginations. **3,546 named registry
 entries** and full histories are retained. Current registries can include later
 contributors and do not establish sentence-level authorship.
 
 Authority responses remain under
-`C:/Users/inthe/IdeaProjects/lexique-review-123/target/issue-123/review-rights/`,
+`C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/reviewer-evidence/issue-123/issue-123/review-rights/`,
 with exact paths in [rights.json](rights.json). Statute review uses retained
 primary-source search-index passages and the successful Légifrance section read;
 direct requests also encountered HTTP 403. The official edition presentation
 was read through the web source. Author authority files remain at
-`C:/Users/inthe/IdeaProjects/lexique-batch-123/target/issue-123/rights/`.
+`C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-123/rights/`.
 
 [NOTICES.md](NOTICES.md) and [COPYING](COPYING) retain batch credits,
 modifications and licence. Actual combined converter output, packaged

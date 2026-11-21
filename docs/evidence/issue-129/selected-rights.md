@@ -80,9 +80,9 @@ anonymous contributors and other edits; registries can include later editors
 and do not prove sentence-level authorship.
 
 Raw authorities and sources:
-`C:/Users/inthe/IdeaProjects/lexique-batch-129/target/issue-129/`.
+`C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-129/`.
 Independent audit, source-boundary records and full logs:
-`C:/Users/inthe/IdeaProjects/lexique-review-129/target/issue-129-review/`.
+`C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/reviewer-evidence/issue-129/issue-129-review/`.
 Retained policy/template files match their API content after CRLF-to-LF
 normalization, explicitly recorded separately from article byte equality.
 Existing successful captures and original-work authorities were reused;

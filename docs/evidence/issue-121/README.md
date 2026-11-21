@@ -30,7 +30,7 @@ pass in [sources.json](sources.json) and [source-context.json](source-context.js
 | [NOTICES.md](NOTICES.md) and [COPYING](COPYING) | Attribution, original-work credit, modifications and complete licence |
 
 The [focused check](../../../scripts/test_core_batch_121.py) passes **five
-tests**. The [fixed-source audit](../../../target/issue-121-review/source-audit.json)
+tests**. The [fixed-source audit](../../../target/implement-120-129/reviewer-evidence/issue-121/issue-121-review/source-audit.json)
 passes 48 raw/API/fixed-replay bodies byte-for-byte, 200 field spans, 190
 supporting spans, seven contributor parts, 3,336 named article memberships and
 anonymous counts. Sixty retained files match the integration mirror. The
@@ -38,8 +38,8 @@ reviewer uses retained exact dictionary captures without fresh upstream
 dictionary requests.
 
 Complete RED/GREEN, source-byte, documentation, diff and patch logs remain at
-`C:/Users/inthe/IdeaProjects/lexique-review-121/target/issue-121-review/`.
-The [final verification record](../../../target/issue-121-review/final-verification.json)
+`C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/reviewer-evidence/issue-121/issue-121-review/`.
+The [final verification record](../../../target/implement-120-129/reviewer-evidence/issue-121/issue-121-review/final-verification.json)
 records the delivered SHA and latest merged integration. Original scripts/raw
 evidence remain in the author's and integration's `target/issue-121/`
 archives; review reproduction and commands are listed in

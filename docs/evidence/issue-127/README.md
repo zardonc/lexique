@@ -52,9 +52,9 @@ revisions, all 200 field and 200 rights spans, selected construction spans,
 contributor chains. No live source request or retry was made.
 
 Reviewer logs and control scripts:
-`C:/Users/inthe/IdeaProjects/lexique-review-127/target/issue-127-review/`.
+`C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/reviewer-evidence/issue-127/issue-127-review/`.
 Author captures:
-`C:/Users/inthe/IdeaProjects/lexique-batch-127/target/issue-127/`.
+`C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-127/`.
 Integration captures:
 `C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/issue-127/`.
 The [independent review](independent-review.md) gives commands and log names.

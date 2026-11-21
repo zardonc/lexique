@@ -48,7 +48,7 @@ class Batch126Tests(unittest.TestCase):
                 self.assertEqual(len(group['senses']), 1)
                 sense = group['senses'][0]
                 self.assertTrue(sense['use'].strip())
-                self.assertEqual(sense['independent_review'], 'passed')
+                self.assertEqual(sense['independent_review'], 'passed_after_exact_accepted_replacements')
                 self.assertEqual(set(sense['fields']), set(LANGUAGES))
                 for name, field in sense['fields'].items():
                     self.assertTrue(field['text'].strip())
@@ -63,8 +63,10 @@ class Batch126Tests(unittest.TestCase):
         self.assertEqual(admission['pending_independent_rights_fields'], 0)
         self.assertEqual(admission['missing_fields'], 0)
         self.assertEqual(admission['unresolved_field_blockers'], [])
-        self.assertEqual(admission['resource_admission'],
-                         'pending_parent_combined_conversion_rights_notices_and_native_gates')
+        expected_admission = ('passed_combined_conversion_rights_notices_and_native_gates'
+                              if admission['status'] == 'admitted_core_129_v1_windows_x64_development_resource'
+                              else 'pending_parent_combined_conversion_rights_notices_and_native_gates')
+        self.assertEqual(admission['resource_admission'], expected_admission)
 
     def test_parent_can_overlap_identical_reviewed_canonical_records(self):
         canonical = json.loads((ROOT / 'resources/core-pilot-79/curated-inputs.json').read_text(encoding='utf-8'))

@@ -748,37 +748,37 @@
     },
     "selected_sentence_authorship_proved": false
   },
-  "capture_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-122\\target\\issue-122",
+  "capture_root": "C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-122",
   "captured_at_utc": "2026-11-20T23:34:19.603967+00:00",
-  "preparation_script": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-122\\target\\issue-122\\prepare_candidates.py",
-  "selection_file": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-122\\target\\issue-122\\selection.py",
+  "preparation_script": "C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-122/prepare_candidates.py",
+  "selection_file": "C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-122/selection.py",
   "fixed_revision_recapture": {
-    "script": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-122\\target\\issue-122\\capture_fixed.py",
+    "script": "C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-122/capture_fixed.py",
     "selected_articles": 52,
     "requests": [
-      "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-122\\target\\issue-122\\fixed-revisions\\part-1.api.request.txt",
-      "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-122\\target\\issue-122\\fixed-revisions\\part-2.api.request.txt",
-      "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-122\\target\\issue-122\\fixed-revisions\\part-3.api.request.txt",
-      "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-122\\target\\issue-122\\fixed-revisions\\part-4.api.request.txt",
-      "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-122\\target\\issue-122\\fixed-revisions\\part-5.api.request.txt",
-      "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-122\\target\\issue-122\\fixed-revisions\\part-6.api.request.txt"
+      "C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-122/fixed-revisions/part-1.api.request.txt",
+      "C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-122/fixed-revisions/part-2.api.request.txt",
+      "C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-122/fixed-revisions/part-3.api.request.txt",
+      "C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-122/fixed-revisions/part-4.api.request.txt",
+      "C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-122/fixed-revisions/part-5.api.request.txt",
+      "C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-122/fixed-revisions/part-6.api.request.txt"
     ],
     "responses": [
-      "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-122\\target\\issue-122\\fixed-revisions\\part-1.api.json",
-      "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-122\\target\\issue-122\\fixed-revisions\\part-2.api.json",
-      "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-122\\target\\issue-122\\fixed-revisions\\part-3.api.json",
-      "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-122\\target\\issue-122\\fixed-revisions\\part-4.api.json",
-      "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-122\\target\\issue-122\\fixed-revisions\\part-5.api.json",
-      "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-122\\target\\issue-122\\fixed-revisions\\part-6.api.json"
+      "C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-122/fixed-revisions/part-1.api.json",
+      "C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-122/fixed-revisions/part-2.api.json",
+      "C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-122/fixed-revisions/part-3.api.json",
+      "C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-122/fixed-revisions/part-4.api.json",
+      "C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-122/fixed-revisions/part-5.api.json",
+      "C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-122/fixed-revisions/part-6.api.json"
     ],
     "verification": "fixed-recapture.log: exact revision IDs, timestamps and byte-for-byte wikitext comparison",
     "status": "passed"
   },
   "preparation_scripts": [
-    "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-122\\target\\issue-122\\prepare_candidates.py",
-    "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-122\\target\\issue-122\\finish_author_package.py",
-    "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-122\\target\\issue-122\\write_package.py",
-    "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-122\\target\\issue-122\\reproduce.py"
+    "C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-122/prepare_candidates.py",
+    "C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-122/finish_author_package.py",
+    "C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-122/write_package.py",
+    "C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-122/reproduce.py"
   ],
   "unselected_capture_titles": [
     "venir",

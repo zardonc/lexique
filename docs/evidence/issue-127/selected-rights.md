@@ -77,7 +77,7 @@ and [field rights](rights.json) retain selected boundaries and separate layers.
 ## Evidence and remaining gates
 
 All source bytes and selected spans pass the independent audit in
-`C:/Users/inthe/IdeaProjects/lexique-review-127/target/issue-127-review/source-audit.json`.
+`C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/reviewer-evidence/issue-127/issue-127-review/source-audit.json`.
 Legal passages and exact retained primary-source responses are under
 `target/issue-127-review/legal-authorities/`, with reuse provenance in
 [rights.json](rights.json). Original author authority bytes remain in both

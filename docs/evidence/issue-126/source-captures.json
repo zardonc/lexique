@@ -703,17 +703,17 @@
     },
     "selected_sentence_authorship_proved": false
   },
-  "capture_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-126\\target\\issue-126",
+  "capture_root": "C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-126",
   "captured_at_utc": "2026-11-21T00:27:57.242037+00:00",
-  "preparation_script": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-126\\target\\issue-126\\prepare_candidates.py",
-  "selection_file": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-126\\target\\issue-126\\selection.py",
+  "preparation_script": "C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-126/prepare_candidates.py",
+  "selection_file": "C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-126/selection.py",
   "fixed_revision_recapture": {
     "parts": [
       "target\\issue-126\\sources\\fixed-1.api.json",
       "target\\issue-126\\sources\\fixed-2.api.json",
       "target\\issue-126\\sources\\fixed-3.api.json"
     ],
-    "reproduction_script": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-126\\target\\issue-126\\reproduce_sources.py",
+    "reproduction_script": "C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-126/reproduce_sources.py",
     "result": "49 exact fixed revisions matched retained UTF-8 source bytes",
     "replay": "Retained first-party responses are replayed; deleting only fixed-*.api.json triggers live requests by revid, never current titles."
   },
@@ -1613,7 +1613,7 @@
     "source_count": 49,
     "pagination_complete": true,
     "revisions": 7902,
-    "capture_script": "C:\\Users\\inthe\\IdeaProjects\\lexique-batch-126\\target\\issue-126\\capture_history.py",
+    "capture_script": "C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-126/capture_history.py",
     "scope": "All public revisions from each fixed revision back to the first surviving public revision, including public editor identities and comments; not a claim to identify a hidden editor or the original author of every sentence."
   }
 }

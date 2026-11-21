@@ -175,7 +175,7 @@ class Batch129Tests(unittest.TestCase):
         self.assertEqual(set(reviews), set(bindings))
         for group in read("groups.json"):
             sense = group["senses"][0]
-            self.assertEqual(sense["independent_review"], "passed")
+            self.assertEqual(sense["independent_review"], "passed_after_exact_accepted_replacements")
             for name, field in sense["fields"].items():
                 with self.subTest(row=group["frozen_row"], field=name):
                     span = field["source_span"]

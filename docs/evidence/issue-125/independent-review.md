@@ -80,7 +80,7 @@ prose, examples, media and language sections are outside this selection.
 Initial integration merge fast-forwarded cleanly from `a27f410` to `3ef6048`.
 Latest integration is merged before the final report. Exact commit/merge tips,
 Windows platform, commands and statuses are in the ignored
-[final verification](../../../target/issue-125-review/final-verification.json).
+[final verification](../../../target/implement-120-129/reviewer-evidence/issue-125/issue-125-review/final-verification.json).
 
 **Five focused tests pass**, verifying reviewed content against the original
 snapshots plus four literal replacements, selected rights/source-frame
@@ -88,8 +88,8 @@ acceptance and actual ledger counts. Identical future canonical overlap is
 allowed; its identities, selected use and content/provenance must match.
 The original 200 pending author counts are asserted only in the snapshot.
 
-The [source audit](../../../target/issue-125-review/source-audit.json) and
-[byte log](../../../target/issue-125-review/source-byte-audit-reviewed.log) pass
+The [source audit](../../../target/implement-120-129/reviewer-evidence/issue-125/issue-125-review/source-audit.json) and
+[byte log](../../../target/implement-120-129/reviewer-evidence/issue-125/issue-125-review/source-byte-audit-reviewed.log) pass
 **51 API/raw byte comparisons, 200 selected field spans and 812 field support
 spans**, exact frozen membership, and complete contributor pagination.
 Main: **seven parts, 50 articles, 3,004 named credits, 460 anonymous counts**.
@@ -100,9 +100,9 @@ through the full linked history. These totals are per article, not unique people
 Acceptance, gay and noyer **RED/GREEN** logs, complete focused GREEN,
 fixed-source audit scripts/inputs, original tracked snapshots, documentation
 results, owned-link checks and full/test-only patches remain in
-`C:/Users/inthe/IdeaProjects/lexique-review-125/target/issue-125-review/`.
+`C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/reviewer-evidence/issue-125/issue-125-review/`.
 The original author evidence also remains at
-`C:/Users/inthe/IdeaProjects/lexique-batch-125/target/issue-125/` and is copied
+`C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-125/` and is copied
 under the review root's `author-evidence/`. Source requests were not repeated.
 
 Canonical conversion and combined packaged notices, global coverage/size,

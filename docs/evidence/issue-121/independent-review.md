@@ -86,13 +86,13 @@ fields describe the separate parent assembly boundary, not pending review.
 ## Verification and retained evidence
 
 Complete reviewer execution evidence is under
-`C:/Users/inthe/IdeaProjects/lexique-review-121/target/issue-121-review/`.
+`C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/reviewer-evidence/issue-121/issue-121-review/`.
 Author raw evidence remains in
-`C:/Users/inthe/IdeaProjects/lexique-batch-121/target/issue-121/` and its retained
+`C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/author-evidence/issue-121/` and its retained
 integration mirror at
 `C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/issue-121/`.
 
-The [fixed-source audit](../../../target/issue-121-review/source-audit.json)
+The [fixed-source audit](../../../target/implement-120-129/reviewer-evidence/issue-121/issue-121-review/source-audit.json)
 passes **48 raw/API bodies and 48 retained fixed-revision replay bodies
 byte-for-byte**, **200 field spans**, **190 supporting spans**, all **seven
 terminating contributor pages**, **3,336 named article memberships**, and
@@ -102,11 +102,11 @@ retrying rate-limited upstreams. Reused policy files are byte-identical to
 their archive; their CRLF-to-LF text normalisation against policy API bodies is
 recorded separately from the exact lexical byte comparison.
 
-TDD retained [content RED](../../../target/issue-121-review/content-red.log),
-[content GREEN](../../../target/issue-121-review/content-green.log),
-[acceptance RED](../../../target/issue-121-review/acceptance-red.log) and
-[acceptance GREEN](../../../target/issue-121-review/acceptance-green.log).
-The [focused final result](../../../target/issue-121-review/green.log) passes
+TDD retained [content RED](../../../target/implement-120-129/reviewer-evidence/issue-121/issue-121-review/content-red.log),
+[content GREEN](../../../target/implement-120-129/reviewer-evidence/issue-121/issue-121-review/content-green.log),
+[acceptance RED](../../../target/implement-120-129/reviewer-evidence/issue-121/issue-121-review/acceptance-red.log) and
+[acceptance GREEN](../../../target/implement-120-129/reviewer-evidence/issue-121/issue-121-review/acceptance-green.log).
+The [focused final result](../../../target/implement-120-129/reviewer-evidence/issue-121/issue-121-review/green.log) passes
 **five tests**, without skips. It checks all frozen identities, exact accepted
 content, original proposals, independent decisions, source/rights/frame
 bindings and raw contributor evidence. Later canonical overlap is allowed only
@@ -120,7 +120,7 @@ pwsh -NoProfile -File scripts/check-docs.ps1
 git diff --cached --check
 ```
 
-The [final verification record](../../../target/issue-121-review/final-verification.json)
+The [final verification record](../../../target/implement-120-129/reviewer-evidence/issue-121/issue-121-review/final-verification.json)
 records the delivered SHA, latest merged integration, commands and outcomes.
 Full reviewer and test patches are retained as `reviewer.patch` and
 `reviewer-test.patch`; their command is

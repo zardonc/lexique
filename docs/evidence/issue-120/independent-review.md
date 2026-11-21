@@ -75,12 +75,12 @@ assembly remains pending for all 200 accepted fields.
 ## Verification
 
 Full evidence root:
-`C:/Users/inthe/IdeaProjects/lexique-review-120/target/issue-120-review/`.
-The [RED](../../../target/issue-120-review/content-rights-red.log) and
-[GREEN](../../../target/issue-120-review/content-rights-green.log) verify the
+`C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/reviewer-evidence/issue-120/issue-120-review/`.
+The [RED](../../../target/implement-120-129/reviewer-evidence/issue-120/issue-120-review/content-rights-red.log) and
+[GREEN](../../../target/implement-120-129/reviewer-evidence/issue-120/issue-120-review/content-rights-green.log) verify the
 exact weapon scope and original-work date. The
-[fixed-source byte audit](../../../target/issue-120-review/fixed-source-byte-audit.json)
-and [complete audit log](../../../target/issue-120-review/fixed-source-byte-audit.log)
+[fixed-source byte audit](../../../target/implement-120-129/reviewer-evidence/issue-120/issue-120-review/fixed-source-byte-audit.json)
+and [complete audit log](../../../target/implement-120-129/reviewer-evidence/issue-120/issue-120-review/fixed-source-byte-audit.log)
 compare all 46 articles to retained first-party revision and fixed-recapture
 API content, all 200 spans and complete contributor pagination: **seven
 responses / 3,332 named memberships**, with separate anonymous counts.
@@ -89,10 +89,10 @@ inferred from them. Four policy captures reproduce their exact LF or CRLF
 serialization explicitly; this is distinct from the 46 exact article/API byte
 matches. No new upstream requests or 429 retries were made.
 
-The [full focused checks](../../../target/issue-120-review/green.log),
-[documentation checks](../../../target/issue-120-review/docs.log),
-[owned local links](../../../target/issue-120-review/links.log) and
-[final verification](../../../target/issue-120-review/final-verification.json)
+The [full focused checks](../../../target/implement-120-129/reviewer-evidence/issue-120/issue-120-review/green.log),
+[documentation checks](../../../target/implement-120-129/reviewer-evidence/issue-120/issue-120-review/docs.log),
+[owned local links](../../../target/implement-120-129/reviewer-evidence/issue-120/issue-120-review/links.log) and
+[final verification](../../../target/implement-120-129/reviewer-evidence/issue-120/issue-120-review/final-verification.json)
 retain commands, statuses and tested head. Author raw evidence and its
 reproduction scripts are copied byte-for-byte into the ignored
 `target/issue-120-review/author-evidence/` directory. Original evidence also
