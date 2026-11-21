@@ -15,6 +15,11 @@ Ignored logs and snapshots stay in their owning worktree; a detached review
 checkout contains tracked files. Locate evidence at the supplied root and
 match its SHA and platform to the verification claim.
 
+If a reviewer is unavailable, follow
+[reviewer availability](docs/agents/development-tooling-follow-ups.md#reviewer-availability).
+For native renderer failures, use the same document's
+[crash diagnosis](docs/agents/development-tooling-follow-ups.md#native-crash-diagnosis).
+
 When curated resource data dominates the diff, supply a separate patch for
 runtime code and tests alongside the full retained diff. Include structural
 preservation and source-review evidence at its owning worktree path.

@@ -928,6 +928,8 @@ Whole-machine offline execution, other-platform native flows, learner acceptance
 
 前端 lint／typecheck／build、locked workspace 编译、后端检查、exact shared all-target Clippy、rustfmt、分别预编译后的八段桌面测试与 27 项浏览器交换检查通过。使用本切片代码重新构建并打包的 Windows x64 程序通过七类真实原生场景：分号 CSV／手动映射、混合保存／排除、单 Markdown、全部／搜索 ZIP、资源错误明确继续、主动单条／批量双卡、完整备份恢复与重启。既有丰富／空词典信息、普通／语法笔记、分类、进度、暂停与选定音频通过实际回读保持；导入未自动新增卡或音频任务。
 
-与 main 的 #110–#119 已准入核心数据合并后，来源 `64961c9` 重新构建并打包；原有七类真实 Windows 场景与保留设备文件名的独立回归均通过，保持 60 秒硬限与零遗留原生进程。Standards／Spec 两项审查问题已解决：批量 fixture 使用单事务，带点及大小写设备词头生成 Windows 可保存文件名且保留正文身份。[PR #192](https://github.com/zardonc/lexique/pull/192)承载 #183–#189，尚未合并。
+与 main 的 #110–#119 已准入核心数据合并后，来源 `64961c9` 重新构建并打包；原有七类真实 Windows 场景与保留设备文件名的独立回归均通过，保持 60 秒硬限与零遗留原生进程。Standards／Spec 两项审查问题已解决：批量 fixture 使用单事务，带点及大小写设备词头生成 Windows 可保存文件名且保留正文身份。[PR #192](https://github.com/zardonc/lexique/pull/192)已合并为 `501211152d9d135699c1421e7f3f3f89f32c8ba1`，#183–#189 全部关闭。
 
-精确来源树、二进制 SHA-256、命令、原生链路、失败与恢复证据、快照降级限制见[组合验收记录](note-interchange-verification.md)。WebView2 renderer 的访问违规原因仍不明确；同源新运行通过不代表已修复该崩溃。其他平台原生、干净机器安装与整机离线验收未执行，发行门槛仍保留。
+最终头 `f2cced1` 的 PR／push 两次 CI 各十一项首次运行通过，PR CI 与该头的源码树一致，包含 436 项浏览器测试与 144 项 Windows x64 桌面测试。[合并后 main CI](https://github.com/zardonc/lexique/actions/runs/44859507861)在 `5012111` 通过。
+
+精确来源树、二进制 SHA-256、命令、原生链路、失败与恢复证据、快照降级限制见[组合验收记录](note-interchange-verification.md)。`native-green-01` 与 `post-main-01-device-names` 两份转储均定位到 `RTSSHooks64.dll + 0x1490AF`；按用户确认作为 RTSS 注入相关环境失败排除出 #192 阻塞项，见[转储归因](note-interchange-verification.md#rtss-crash-attribution)。未执行关闭 RTSS 的对照测试；其他历史 renderer 失败和 V03 偶发超时未据此归因。其他平台原生、干净机器安装与整机离线验收未执行，发行门槛仍保留。
