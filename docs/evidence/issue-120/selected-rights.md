@@ -1,11 +1,13 @@
-# Selected rights proposal for #120
+# Selected rights for #120
 
-The 200 proposed fields use fixed Wiktionnaire text under **CC BY-SA 4.0**.
+The 200 independently reviewed fields use fixed Wiktionnaire text under **CC BY-SA 4.0**.
 French fields are scoped adaptations; English and Chinese meanings are new
 explanations of those same selected uses. IPA retains one recorded isolated
 headword variant with added slashes. [Rights records](rights.json) bind each
 field to its actual revision/span, attribution, original-work layers,
-modifications and selected boundary. No field has independent rights acceptance.
+modifications and selected boundary. The [separate rights review](rights-review.md)
+accepts all 200 fields at those boundaries; [authored rights](authored-rights.json)
+preserves the proposals.
 
 The fixed [French copyright policy](https://fr.wiktionary.org/w/index.php?title=Convention%3ADroit%20d%E2%80%99auteur&oldid=38903168),
 retained Wikimedia Terms of Use section 7, and [complete licence](COPYING)
@@ -53,5 +55,5 @@ licence for the adapted dictionary text, with no additional restrictions.
 Complete retained authorities and source responses remain available under
 `target/issue-120/` for parent archival.
 
-This is an author proposal. Separate selected-span rights review and the actual
-combined converted resource/notices remain pending.
+Independent selected-span rights review has passed. The actual combined
+converted resource/notices remain pending parent assembly and verification.
