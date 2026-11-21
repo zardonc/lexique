@@ -1,7 +1,7 @@
 # Selected uses for #120
 
 The exact ticket slice contains 50 groups at rows 1951–2000. One selected sense
-per group gives 200 proposed fields. The complete FR/IPA/EN/ZH wording and
+per group gives 200 independently accepted fields. The complete FR/IPA/EN/ZH wording and
 fixed line bindings are in [groups](groups.json) and [field review](field-review.json).
 English and Chinese fields are new scoped explanations of the selected French
 use, under CC BY-SA 4.0. They do not reuse an unverified translation table.
@@ -19,7 +19,7 @@ variants are selected where the fixed source supplies alternatives.
 | ---: | --- | --- |
 | 1951 | passion/NOM | Strong interest in an activity; romantic passion and suffering are separate. |
 | 1952–1953 | adulte/ADJ, adulte/NOM | Post-adolescent adjective and physically grown person noun; no fixed legal age is inferred. |
-| 1958 | hum/ONO | Hesitation, doubt, reluctance or impatience; /œm/ with h aspiré. Pleasure with a lengthened vowel is unselected. |
+| 1958 | hum/ONO | Doubt, reluctance or impatience; /œm/ with h aspiré. Pleasure with a lengthened vowel is unselected. |
 | 1959 | participer/VER | Indirect construction participer à, taking part with others; older participer de and financial contributions are separate. |
 | 1963 | lunette/NOM | Singular toilet seat. Spectacles, telescopes and weapon sights do not supply this sense. The linked photograph is not copied. |
 | 1965 | canon/ADJ | Informal attractive appearance, distinct from canonical uses and the cannon noun. |
@@ -34,7 +34,7 @@ variants are selected where the fixed source supplies alternatives.
 | 1983 | coupe/NOM | Haircut manner/result, distinct from cups, trophies, competitions and forms of couper. |
 | 1991 | pis/ADV | Comparative of mal in surviving expressions tant pis and de mal en pis. Free use is dated; the source definition’s restriction and both lexical derivative links are retained. |
 | 1994 | zéro/NOM | Number zero, distinct from numeral adjectives and the unselected cartographic datum. |
-| 1995 | épée/NOM | Long bladed weapon with handle and scabbard; sport, card suits and heraldry are separate. |
+| 1995 | épée/NOM | Selected long sharpened triangular-section blade weapon with handle and scabbard; sporting practice, card suits and heraldry are separate. |
 | 1998 | fixer/VER | Direct transitive fastening of something in place; fixer as a noun and other verbal uses are excluded. |
 | 2000 | rivière/NOM | Broad natural-watercourse definition, including its nonabsolute flow comparison; the narrower tributary definition is unselected. |
 
@@ -53,7 +53,7 @@ numbering (`disque`) or an inline anchor (`essence`) retain their exact original
 source line. Bibliographic references and neighbouring examples remain source
 context, with no quoted example body entering a field.
 
-The [rights proposal](rights.json) credits the original Académie française
+The [reviewed rights](rights.json) credit the original Académie française
 eighth-edition layer where article imports identify it. `hum` separately
 credits Émile Littré’s 1872–1877 original work. `zéro` records the CFC glossary
 notice and excludes the cartographic-datum definition at line 163 from the
@@ -61,4 +61,6 @@ number-zero sense at line 121. The selected-use evidence neither identifies a
 sentence’s individual author nor admits an entire imported corpus.
 
 Independent semantic, selected-span rights, construction and spelling review
-remain pending for all 200 fields.
+pass for all 200 fields; the [separate review](independent-review.md) records
+the decisions and original proposals. Canonical conversion, packaging and
+native verification remain parent-owned.

@@ -1,17 +1,19 @@
 # Issue #125 selected-content notices
 
-Proposed selected content and Lexique adaptations/explanations: CC BY-SA 4.0.
+Accepted selected content and Lexique adaptations/explanations: CC BY-SA 4.0.
 Wiktionnaire contributors are credited through the fixed articles and complete histories below.
 Named contributor registries and anonymous counts are retained in source-context.json.
 Registries may include contributors after the selected revision and do not identify sentence authorship.
 
-Original historical layers where imported: Académie française, Dictionnaire de l’Académie française,
+Original historical layers where imported or conservatively credited at selected reference boundaries: Académie française, Dictionnaire de l’Académie française,
 eighth edition (1932–1935); Émile Littré, Dictionnaire de la langue française (1872–1877).
 Original public-domain works remain separate from contributor adaptations.
 
 Changes: selection of one everyday use per frozen group, scoped French adaptations, markup removal,
 new English/Chinese explanations and one isolated IPA variant with delimiters.
-The numeral cents retains exact plural/form restrictions; no runtime spelling alias is proposed.
+The numeral cents retains exact plural/form restrictions; no runtime spelling alias is admitted.
+Scoped wording: gay retains exclusive same-sex/gender sexual or romantic attraction in FR/EN/ZH;
+noyer Chinese retains immersion in liquid and asphyxiation. Original proposals remain in the review evidence.
 
 Licence: https://creativecommons.org/licenses/by-sa/4.0/legalcode.en; full text in COPYING.
 Frozen membership: Boris New and Christophe Pallier, Lexique 3.83, CC BY-SA 4.0.

@@ -1,70 +1,90 @@
-# Issue #125 selected-rights proposal
+# Issue #125 independent selected-rights review
 
-The proposed **200 fields** use **CC BY-SA 4.0** for fixed Wiktionnaire
-contributor wording/transcription and Lexique scoped French adaptations and new
-English/Chinese explanations. Selected isolated IPA variants retain their exact
-template substrings. All decisions are author proposals; [rights.json](rights.json)
-records a null reviewer and pending independent review for each field.
+**200 selected fields pass their independent rights review.** All 51 fixed
+articles and French language/POS/form/construction frames pass at their
+selected boundary. Original author proposals remain in the field/rights
+records, [review-candidates.json](review-candidates.json) and
+[admission-author-proposal.json](admission-author-proposal.json).
+Reviewer: Independent semantic and selected-rights reviewer #125, separate
+from the author and parent integration owner. Author head:
+`9cb84bab4e7f41f15195c6fd359037b91c320580`.
 
-The **51 articles** retain fixed revisions, full histories and complete
-paginated named registries with anonymous counts in
-[source-context.json](source-context.json). The registry supplies attribution
-and may extend beyond the chosen revision; it does not prove the author of an
-individual sentence. English and Chinese fields are new explanations of the
-selected French use, not copied translation-table entries.
+The retained primary CC BY-SA 4.0 legal text, copyright-policy revision
+**38903168**, DAF8 import-template revision **22113837**, Littré import-template
+revision **30857967**, Wikimedia Terms section 7 and established #99/#100/#119
+original-work records were read and applied to this selection. Capture
+provenance remains in [rights.json](rights.json); copies are in the ignored
+review `author-evidence/rights/`. No upstream refresh/retry was made.
 
-**34 articles carry DAF8 import markers**, including support article `cent`.
-Conservative original-work credit is retained for Académie française,
-Dictionnaire de l’Académie française, eighth edition, 1932–1935. The established
-[original-work record](../issue-99/source-context.json) uses
-[CPI L123-3](https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20):
-seventy years from the January following collective publication. Final 1935
-publication gives conservative expiry **2006-01-01**. The fixed contribution
-layer and scoped translations retain CC BY-SA 4.0 separately from original
-public-domain prose.
+**34 articles carry DAF8 import markers**, including supporting `cent`.
+The selected French boundaries of **ten further articles reference DAF8**:
+`étouffer`, `miroir`, `pause`, `goutte`, `fini`, `foule`, `royaume`, `noyer`,
+`habit` and `interrompre`. Conservative original-edition credit covers these
+references as well as explicit imports. It does not assign a selected
+sentence's authorship to the Académie. Original credit:
+**Académie française, Dictionnaire de l’Académie française, eighth edition,
+1932–1935**. [CPI L123-3](https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20)
+supplies seventy years from January following collective publication;
+using final publication in 1935 yields conservative expiry **2006-01-01**.
+The established [#99 original-work record](../issue-99/source-context.json) and
+[#119 review](../issue-119/rights-review.md) supply the retained authority.
 
-`rang` additionally carries **Import:Littré**, raw line 263. Original credit to
-**Émile Littré, Dictionnaire de la langue française, 1872–1877** follows the
-established [#100 original-work record](../issue-100/source-context.json),
-retained import-template revision **30857967**, and copyright-policy revision
-**38903168**, which explicitly permits the original public-domain dictionary.
-The selected row/line meaning at line 11 and IPA at line 10 are proposed with
-both original import boundaries credited. An import marker identifies an
-original-work layer without assigning authorship to the selected sentence.
+`rang` carries **Import:Littré** at line **263** and DAF8 at **262**.
+Selected definition **11** and IPA **10** are reviewed with both original
+layers credited. French references in `évidemment`, `goutte`, `noyer` and
+`habit` also receive conservative Littré credit. Original credit:
+**Émile Littré, Dictionnaire de la langue française, 1872–1877**. The established
+[#100 record](../issue-100/source-context.json), fixed import template and
+copyright policy identify this original public-domain edition. These are
+edition/reference/import boundaries, not blanket permission for any later
+edition or every sentence in a contemporary article.
 
-All selected field and construction spans have been compared with the retained
-first-party responses. They contain lexical definitions, IPA, French language
-and POS/grammar/form support. None copies an attributed literary/news example,
-external reference prose, etymology, media or another-language entry. References
-such as TLFi, DAF9 or Robert remain bibliography; their prose receives no
-permission through this proposal. The religious-source reference in the
-unselected `mystère` theological definition is outside the selected secret-in-
-human-affairs definition at line 31.
+All selected contribution/transcription wording and IPA values retain
+**CC BY-SA 4.0**, separately from original public-domain prose. Lexique's
+scoped FR adaptations and new EN/ZH explanations retain CC BY-SA 4.0; no
+bilingual translation-table text is imported. [COPYING](COPYING), sections
+2(a), 3(a), 3(b) and 4, permits sharing, adaptation, format changes and database
+extraction with attribution, licence/source identification, modification
+notices, ShareAlike and no additional restrictions. Wikimedia Terms section
+7 provides the article/history attribution route and preserves imported
+material's own conditions. Named registries and anonymous-history credit are
+complete; registries may extend beyond the fixed revision and do not identify
+sentence-level authorship.
 
-The **cents** boundary uses the exact plural adjective at lines 3–6, the plural
-restriction at line 10, and fixed `cent` cardinal/number notes. Currency noun
-pronunciations and singular/ordinal replacements are excluded. `vous-même`
-and `grand-chose` retain their source’s singular-politeness and negative-
-construction restrictions. Exact evidence is retained in
-[source-excerpts.json](source-excerpts.json) and
-[field-review.json](field-review.json).
+Specific selected boundaries:
 
-[COPYING](COPYING) contains the complete CC BY-SA 4.0 legal text. Sections 2(a),
-3(a), 3(b) and 4 permit sharing, adaptations and database extraction with
-attribution, licence/source identification, modification notices, ShareAlike
-and no additional restrictions. Wikimedia Terms section 7 supplies the
-article/history attribution route and preserves import-specific conditions.
-The retained primary policy, import, terms and CC captures are indexed in
-`target/issue-125/rights-authorities.json`; their reuse provenance is explicit.
+- `prise` selects the electrical/data-port definition at **104**; DAF8 notice
+  **276** does not identify the modern sentence's author. No FranceTerme
+  reference prose is copied.
+- `mystère` selects secret human affairs at **31**. The religious-source
+  definition/reference at **14** and philosophical example ending at **30**
+  are outside the adaptation.
+- `gay` selects the French adjective at **15–20**. Earlier SIL bibliography,
+  other languages, archaic `gai` and person-noun entries are excluded.
+- `printemps` selects only the first lexical sentence of **13**, the season
+  between winter and summer. Subsequent calendar/date assertions are excluded.
+- `cents` selects its own French adjective-flexion header/form at **3–6**, IPA
+  **5**, and spelling example **11**. Supporting `cent` uses cardinal **7–11**,
+  terminal multiplied hundreds **35–40** and ordinal exclusion **41–43**.
+  The parenthesized noun explanation in `cents` **10** is not adopted; currency
+  nouns and media are excluded. `cent` supplies evidence, not a runtime alias.
+- `ambulance` selects the current land-transport vehicle at **9**. Regulatory
+  subclasses/references at **34** are context, not copied statutory text.
+- `divorcer` adapts only the spouse-subject **demander/obtenir** branches at
+  **7**, excluding the judicial **prononcer** branch.
 
-[NOTICES.md](NOTICES.md) carries selected article/history links, membership
-attribution, original-work credits and changes. The actual assembled database
-must carry the applicable combined licence, attribution, modification and
-source-material obligations. The MIT application and retained GPL FreeDict
-supplement keep their existing separate licences.
+Each of the 200 records in [rights.json](rights.json) and
+[field-review.json](field-review.json) has its accepted text, exact fixed
+source span, reviewer and selected boundary reason. Other attributed
+literary/news examples, etymologies, media and reference prose are excluded.
+TLFi, DAF9, Robert and other bibliography do not obtain redistribution
+permission through CC on this selection. The four scoped wording replacements
+retain original proposals and modification records.
 
-## Limitations
-
-The original-work bases and primary authority snapshots are reused; this author
-did not refresh the statute live. Independent selected-span rights/quality
-review and actual combined converter/package obligations remain pending.
+[NOTICES.md](NOTICES.md) retains all 51 fixed article/history links, named/
+anonymous attribution, original-work credit, membership source and changes.
+Actual canonical conversion and the assembled database's combined notices,
+licences, source materials and packaging remain parent-owned. MIT application
+code and the separate GPL FreeDict supplement retain their established
+licences. Live statute refresh, native/offline/learner acceptance and release
+checks were not performed by this reviewer.
