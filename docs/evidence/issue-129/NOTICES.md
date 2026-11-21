@@ -10,11 +10,11 @@ Lexique contributors, under CC BY-SA 4.0. Project source code remains MIT.
 Exact frozen membership and frequency columns derive from Boris New and
 Christophe Pallier's [Lexique 3.83](https://chrplr.github.io/openlexicon/datasets-info/Lexique383/README-Lexique.html),
 CC BY-SA 4.0, through the unchanged [scope manifest](../../../resources/core-pilot-79/scope-manifest.csv).
-Frequency is not a CEFR level; every candidate retains unknown CEFR.
+Frequency is not a CEFR level; every selected sense retains unknown CEFR.
 
 ## Modifications
 
-One everyday selected sense is proposed per exact word/POS group. French
+One everyday selected sense is independently accepted per exact word/POS group. French
 definitions retain the selected semantics, construction and register with
 markup removed. English and Chinese are new scoped explanatory translations
 of that selected French use. One recorded isolated IPA variant is selected
@@ -89,7 +89,7 @@ identify the author of a selected sentence.
 
 Thirty source articles declare Académie française's eighth-edition dictionary
 (1932–1935). `passager` also declares Émile Littré's *Dictionnaire de la langue
-française* (1872–1877). The [selected-rights proposal](selected-rights.md)
+française* (1872–1877). The [selected-rights review](selected-rights.md)
 retains their separate original-work public-domain bases and current
 CC BY-SA 4.0 contribution/adaptation layers. Import markers alone do not
 establish selected-sentence authorship.
@@ -108,5 +108,8 @@ Distribute adaptations under CC BY-SA 4.0 with no additional restrictions.
 External works retain their own applicable terms. The parent must verify the
 combined notices and source obligations in the actual converted/package artifact.
 
-These are author-proposed notices. All 200 fields await separate independent
-quality and rights review; zero new fields are admitted by this package.
+All 200 fields pass separate independent quality and selected-span rights review.
+The DAF8 original collective-work expiry is 2006-01-01; Littré original-work
+expiry is 1952-01-01. The Chinese boucler explanation specifies a buckle
+(搭扣) while retaining the fixed source and transitive use.
+Canonical admission and actual combined packaged obligations remain pending.
