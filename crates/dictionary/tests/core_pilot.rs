@@ -236,6 +236,9 @@ fn complete_core_fields_at_the_character_budget_are_retained_and_oversized_conte
     fixture.copy();
     let path = fixture.database();
     let mut connection = Connection::open(&path).unwrap();
+    connection
+        .execute_batch("DELETE FROM senses WHERE headword <> 'être'; VACUUM;")
+        .unwrap();
     let mut payload: Value = serde_json::from_str(
         &connection
             .query_row::<String, _, _>(

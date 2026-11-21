@@ -53,7 +53,7 @@ def package(root: Path, output_directory: Path | None = None, architecture: str 
     core_report = read_json(core_report_path)
     core = release / "dictionary/core-pilot-79"
     core_names = {*MATERIALS, "input-checksums.json", "LICENSE-MIT", "core_pilot.py", "coverage.json"}
-    if (core_report.get("format_version") != 1 or core_report.get("content_version") != "core-119-v1"
+    if (core_report.get("format_version") != 1 or core_report.get("content_version") != "core-129-v2"
             or not isinstance(core_report.get("inputs"), dict) or set(core_report["inputs"]) != core_names):
         raise ValueError("Prepared core report must name all reviewed materials")
     if (core / "report.json").read_bytes() != core_report_path.read_bytes():
