@@ -1,0 +1,70 @@
+{
+  "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+  "independence": true,
+  "fields": [
+    {
+      "frozen_row": 2080,
+      "sense_id": "b122-2080-mince-ono-selected",
+      "field": "english",
+      "proposed_text": "Darn! An euphemistic exclamation used instead of merde! (shit!).",
+      "accepted_text": "Darn! A euphemistic exclamation used instead of merde! (shit!).",
+      "reason": "Euphemistic exclamation replacing merde, attested by Oh mince; corrected English indefinite article. Article-wide /mɛ̃s/ applies to the isolated interjection, without claiming expressive intonation."
+    },
+    {
+      "frozen_row": 2096,
+      "sense_id": "b122-2096-race-nom-selected",
+      "field": "french_definition",
+      "proposed_text": "En élevage, subdivision d’animaux d’une même espèce ou sous-espèce, obtenue en lignée pure et définie par des caractères morphologiques ou des performances.",
+      "accepted_text": "En élevage, subdivision d’animaux d’une même espèce ou sous-espèce, obtenue en lignée pure et définie par des caractères morphologiques ou des performances économiques.",
+      "reason": "Domestic-animal breed subdivision with pure-lineage and morphological or economic-performance criteria. Restored economic qualification in FR/EN/ZH; no human racial classification is selected. Race de chien is everyday usage of this animal sense."
+    },
+    {
+      "frozen_row": 2096,
+      "sense_id": "b122-2096-race-nom-selected",
+      "field": "english",
+      "proposed_text": "In animal breeding, a breed: a subdivision within a species or subspecies, obtained as a pure lineage and defined by physical characteristics or performance.",
+      "accepted_text": "In animal breeding, a breed: a subdivision within a species or subspecies, obtained as a pure lineage and defined by physical characteristics or economic performance.",
+      "reason": "Domestic-animal breed subdivision with pure-lineage and morphological or economic-performance criteria. Restored economic qualification in FR/EN/ZH; no human racial classification is selected. Race de chien is everyday usage of this animal sense."
+    },
+    {
+      "frozen_row": 2096,
+      "sense_id": "b122-2096-race-nom-selected",
+      "field": "chinese",
+      "proposed_text": "在动物育种中，品种：同一物种或亚种内，经纯系繁育形成、按形态特征或性能界定的动物群体。",
+      "accepted_text": "在动物育种中，品种：同一物种或亚种内，经纯系繁育形成、按形态特征或经济性能界定的动物群体。",
+      "reason": "Domestic-animal breed subdivision with pure-lineage and morphological or economic-performance criteria. Restored economic qualification in FR/EN/ZH; no human racial classification is selected. Race de chien is everyday usage of this animal sense."
+    },
+    {
+      "frozen_row": 2100,
+      "sense_id": "b122-2100-reçu-nom-selected",
+      "field": "french_definition",
+      "proposed_text": "Quittance écrite par laquelle on reconnaît avoir reçu une somme d’argent.",
+      "accepted_text": "Quittance sous seing privé par laquelle on reconnaît avoir reçu une somme d’argent.",
+      "reason": "Money receipt under private signature: sous seing privé is material to the selected source and is restored in FR/EN/ZH and usage; not a general acknowledgement of an object or a public authenticated deed."
+    },
+    {
+      "frozen_row": 2100,
+      "sense_id": "b122-2100-reçu-nom-selected",
+      "field": "english",
+      "proposed_text": "A receipt: a written acknowledgement that a sum of money has been received.",
+      "accepted_text": "A privately signed receipt acknowledging that a sum of money has been received.",
+      "reason": "Money receipt under private signature: sous seing privé is material to the selected source and is restored in FR/EN/ZH and usage; not a general acknowledgement of an object or a public authenticated deed."
+    },
+    {
+      "frozen_row": 2100,
+      "sense_id": "b122-2100-reçu-nom-selected",
+      "field": "chinese",
+      "proposed_text": "收据；书面确认已收到一笔钱款的凭证。",
+      "accepted_text": "私人签署的收据；书面确认已收到一笔钱款的凭证。",
+      "reason": "Money receipt under private signature: sous seing privé is material to the selected source and is restored in FR/EN/ZH and usage; not a general acknowledgement of an object or a public authenticated deed."
+    }
+  ],
+  "uses": [
+    {
+      "frozen_row": 2100,
+      "proposed_usage": "Masculine noun; written acknowledgement of money received.",
+      "accepted_usage": "Masculine noun; privately signed written acknowledgement of money received.",
+      "reason": "Money receipt under private signature: sous seing privé is material to the selected source and is restored in FR/EN/ZH and usage; not a general acknowledgement of an object or a public authenticated deed."
+    }
+  ]
+}

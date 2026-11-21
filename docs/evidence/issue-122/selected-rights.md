@@ -1,10 +1,10 @@
-# Issue #122 selected-rights proposals
+# Issue #122 selected-rights records
 
 Each of the **200 fields** has its exact source revision and original span in
 [rights.json](rights.json), its attribution and current contributor registry in
 [source-context.json](source-context.json), and its modification record in
-[groups.json](groups.json). These are complete author proposals; independent
-rights acceptance remains pending.
+[groups.json](groups.json). Original author proposals are retained beside the independently accepted
+selected-span decisions; all 200 fields pass. See [rights-review.md](rights-review.md).
 
 The selected French lexical definitions and phonetic/grammatical records come
 from fixed Wiktionnaire revisions under **CC BY-SA 4.0**. Lexique's scoped French
@@ -32,7 +32,7 @@ seventy years from 1 January following publication; using final publication
 1935 gives **2006-01-01**. The owning reviewed basis is
 [issue #99 source context](../issue-99/source-context.json), with the arithmetic
 and boundary recorded in [issue #119 rights review](../issue-119/rights-review.md).
-This reuses that original-work authority; new selected spans still await review.
+This reuses that original-work authority; new selected spans now pass their separate review.
 
 `gorge`, revision fixed in [sources.json](sources.json), has `Import:Littré` at
 line 412. Its selected internal-throat definition is line 22 and its IPA line
