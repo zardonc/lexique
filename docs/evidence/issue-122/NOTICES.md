@@ -1,6 +1,6 @@
 # Issue #122 attribution and modification notices
 
-The 50 selected groups and their 200 proposed FR/IPA/EN/ZH fields are adaptations
+The 50 selected groups and their 200 accepted FR/IPA/EN/ZH fields are adaptations
 under **CC BY-SA 4.0**. [COPYING](COPYING) contains the complete legal text.
 Fixed Wiktionnaire contributors retain their contribution rights; Lexique
 contributors supply selection, scoped definitions and new English/Chinese
@@ -16,10 +16,16 @@ eighth edition, 1932–1935**, original collective-work rights conservatively
 expired 2006-01-01 under CPI L123-3; and, for `gorge`, **Émile Littré
 (1801–1881), Dictionnaire de la langue française, nineteenth-century edition
 and supplement**, original prose in the public domain under CPI L123-1.
-These original-work proposals remain subject to independent selected-span review.
+These original-work boundaries pass the [independent selected-rights review](rights-review.md).
 Contributor transcription/adaptation and this package's adaptations retain
 CC BY-SA 4.0. Bibliography and import markers do not identify the author of
 an individual selected sentence.
+
+The accepted adaptations retain all selected construction and register
+restrictions, including economic-performance criteria for animal breeds and
+private signature for the money receipt. Selection, markup removal, scoped
+French adaptations and English/Chinese explanatory translations are Lexique
+modifications; original proposals remain in [review-candidates.json](review-candidates.json).
 
 Complete returned named registries, anonymous counts and history credits appear
 in [source-context.json](source-context.json). Current contributor registries
