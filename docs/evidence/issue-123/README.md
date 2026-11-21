@@ -1,85 +1,79 @@
-# Issue #123 author package
+# Issue #123 accepted field and selected-rights evidence
 
-All **50 exact frozen groups, rows 2101–2150**, have one selected everyday use
-and **200 authored FR/IPA/EN/ZH fields**. There are **zero reused groups**,
-missing author fields, proposed annotations or specialist exceptions. The
-global denominator remains **4,087 groups**. All 200 independent semantic and
-selected-rights decisions remain pending; this package records candidate
-content, with zero newly admitted fields.
+**50 uses / 200 fields accepted: 196 unchanged, four replaced, zero unresolved.**
+All frozen rows **2101–2150**, exact headwords/POS subclasses, frequency strings
+and ordering remain. There is no reused content, annotation exception or new
+runtime alias. The global denominator remains **4,087 groups**. This is accepted
+batch evidence; canonical admission remains pending with the parent.
 
-The [ticket](https://github.com/zardonc/lexique/issues/123) and
-[parent spec](https://github.com/zardonc/lexique/issues/78) supply the scope.
-The parent-approved resource/admission boundary is exercised by the
-[focused check](../../../scripts/test_core_batch_123.py).
+Ticket [#123](https://github.com/zardonc/lexique/issues/123), parent
+[#78](https://github.com/zardonc/lexique/issues/78). Supplied full spec/ticket:
+`C:/Users/inthe/IdeaProjects/lexique-spec-120-129/target/implement-120-129/spec.md`
+and `issue-123.json`; shared context:
+`C:/Users/inthe/IdeaProjects/lexique-agent-notes/120-129/context.md`.
+Reviewer: **Independent semantic and selected-rights reviewer #123**, separate
+from the content author and parent integration owner. This is an agent review;
+learner acceptance remains a separate gate.
 
-| File | Content |
-| --- | --- |
-| [groups.json](groups.json) | Exact frozen identities, frequencies, selected uses and four proposed fields |
-| [review-candidates.json](review-candidates.json) | Original author group objects for the independent reviewer |
-| [reuse.json](reuse.json) | Exact-pair comparison with admitted core-119-v1; no reuse |
-| [sources.json](sources.json) | 52 fixed French source revisions, attribution, modifications and original-work layers |
-| [source-excerpts.json](source-excerpts.json) | 200 fixed field spans and exact language/POS/construction support |
-| [source-context.json](source-context.json) | Import/reference boundaries, 3,546 named registry entries and anonymous counts |
-| [source-captures.json](source-captures.json) | Retained API/wikitext paths, eight terminating contributor responses and three fixed-revision recaptures |
-| [field-review.json](field-review.json) | 200 individual field proposals, 50 use decisions and 50 spelling/construction bindings; independent decisions pending |
-| [rights.json](rights.json) | Per-field selected-rights proposals, authorities and redistribution obligations |
-| [selected-rights.md](selected-rights.md) | Actual contribution, historical-original and import boundaries |
-| [source-research.md](source-research.md) | Every selected use with fixed FR/IPA source lines and restrictions |
-| [NOTICES.md](NOTICES.md) | Proposed fixed-source credits and modification notices |
-| [COPYING](COPYING) | Complete CC BY-SA 4.0 legal text |
-| [admission.json](admission.json) | Exact author counts and separate pending review/integration gates |
+## Accepted records
 
-Construction evidence retains `auprès de + complement`, `se suicider`, the
-masculine lowercase letter `v`, abbreviated `labo` and France/informal `fac`.
-The two `physique` POS groups have separate source frames. Meaning fields
-retain the malted-barley restriction for `whisky`, the metro/small-station
-restriction for `station` and complementless `davantage`. No query alias is
-proposed.
+[groups.json](groups.json) contains the accepted content.
+[field-review.json](field-review.json) retains all **200 original proposals and
+accepted texts**, individual semantic/rights reasons, **50 accepted uses** and
+**50 spelling decisions**. [review-candidates.json](review-candidates.json)
+preserves the complete original author group objects.
+The [authored admission snapshot](admission-author-proposal.json) retains the
+original proposal/count ledger byte for byte from the author commit. The live
+ledger records 50 accepted uses / 200 fields with zero pending or missing fields.
+[admission.json](admission.json) records the accepted subset and separate parent
+gates. [selected-rights.md](selected-rights.md), [rights.json](rights.json),
+[NOTICES.md](NOTICES.md) and [COPYING](COPYING) record the selected imported/
+original-work boundaries and obligations.
 
-## Verification and reproduction
+The `v` FR/EN/ZH meanings retain the supported twenty-second-letter description
+and omit the source’s incorrect eighteenth-consonant ordinal. Its masculine
+invariant noun binding and `/ve/` remain. The `whisky` Chinese meaning is
+**麦芽威士忌；以发芽大麦制成的烈酒**, retaining the source’s malted-barley restriction.
+All other proposed fields and all proposed uses are accepted unchanged.
 
-The focused check passes **2 tests**. The TDD record contains an absent-package
-membership RED followed by GREEN, and a missing-rights-package RED followed by
-GREEN. Every field and source frame is checked against retained first-party
-responses. Fresh requests by fixed revision reproduced all **52 source
-articles byte for byte**. Rebuilding from those captures reproduces all
-**10 JSON evidence files byte for byte**. Contributor pagination terminates
-for both the main and support request sets.
+## Independent verification and handoff
 
-Run from `C:/Users/inthe/IdeaProjects/lexique-batch-123`:
+Reviewed author/diff base: **`5bec78284a8489d7245c7e4eab88026d19903475`**.
+Author checkout: `C:/Users/inthe/IdeaProjects/lexique-batch-123`; original raw
+sources, full contributors and preparation/reproduction scripts remain at its
+`target/issue-123/`.
+Review checkout: `C:/Users/inthe/IdeaProjects/lexique-review-123`, branch
+`codex/d2-review-123`. Changes cover only this evidence directory and
+`scripts/test_core_batch_123.py`; ignored review evidence:
+`C:/Users/inthe/IdeaProjects/lexique-review-123/target/issue-123/`.
 
-```powershell
-uv run --python 3.14.10 --no-project python -B -X utf8 target/issue-123/reproduce.py
-uv run --python 3.14.10 --no-project python -B -X utf8 -m unittest discover -s scripts -p test_core_batch_123.py -v
-pwsh -NoProfile -File scripts/check-docs.ps1
-git diff --cached --check
-```
+The [independent source audit](../../../target/issue-123/source-audit.json) checks
+all **52 fixed raw/API revisions**, every field/POS/construction span, exact
+membership and complete named/anonymous contributor registries. The
+[byte reproduction](../../../target/issue-123/reproduction.log) matches all 52
+articles against the separately retained fixed-revision responses. Raw inputs
+also remain in the review directory’s ignored `sources/` copy.
 
-The ignored [capture root](../../../target/issue-123/source-index.json) retains
-raw responses, request URLs, complete wikitext, contributor continuations,
-rights authorities, selections and preparation/reproduction scripts for parent
-archival. `reproduce_sources.py` uses exact `revid` requests; retained fixed
-responses support offline replay. The original batch captures are preserved
-separately from the fixed-revision recaptures.
+The approved resource/admission seam passes **four focused tests**.
+[Acceptance RED](../../../target/issue-123/acceptance-red.log),
+[v RED](../../../target/issue-123/v-red.log),
+[whisky RED](../../../target/issue-123/whisky-red.log) and
+[GREEN](../../../target/issue-123/green.log) retain exact regression results.
+[Documentation results](../../../target/issue-123/docs.log) and
+[final verification](../../../target/issue-123/final-verification.json) retain
+commands, statuses, tested SHA, platform and merged integration tip.
+PowerShell 7 and uv Python **3.14.10** are used.
 
-Logs: [membership RED](../../../target/issue-123/membership-red.log),
-[membership GREEN](../../../target/issue-123/membership-green.log),
-[rights RED](../../../target/issue-123/rights-red.log),
-[GREEN](../../../target/issue-123/green.log),
-[reproduction](../../../target/issue-123/reproduction.log) and
-[final verification](../../../target/issue-123/final-verification.json).
+Retained patch command:
+`git diff 5bec78284a8489d7245c7e4eab88026d19903475 HEAD -- docs/evidence/issue-123 scripts/test_core_batch_123.py`.
+The owned patch and separate test patch are `reviewer.patch` and
+`reviewer-test.patch` in the ignored review root. The current integration tip is
+merged before handoff; its exact SHA is in `final-verification.json`.
 
 ## Remaining gates
 
-Independent semantic, selected-span rights and construction/spelling review
-remain pending for all 200 new fields. The author’s source/rights proposals
-are separate from independent acceptance. Actual combined conversion,
-packaged notices, canonical resource admission and native lookup/save/reopen
-belong to the integration owner. Learner acceptance, platform/offline and
-formal release checks remain unrun. Existing canonical resources and learner
-data are preserved.
-
-The branch is `codex/d2-content-123`, based on integration ancestor
-`b91c4729a0a1c93baa58f86ed666b173fb2fc253`. The current integration tip is merged
-before handoff; its exact SHA and final checks are retained in the verification
-record above.
+Zero unresolved field/use/spelling/selected-rights decisions remain.
+Canonical assembly, combined conversion and notices, global coverage and size
+reports, actual native lookup/save/reopen, learner acceptance and offline/
+platform/release checks remain parent-owned and unrun here. Canonical resources
+and learner data are unchanged by the review.
