@@ -1,6 +1,6 @@
 # Issue #126 selected source uses
 
-50 exact frozen groups / 200 proposed fields. All semantic, construction and selected-rights decisions await independent review.
+50 exact frozen groups / 200 independently reviewed fields. Semantic, construction and selected-rights decisions pass in [independent-review.md](independent-review.md).
 
 Membership: Boris New and Christophe Pallier, Lexique 3.83, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Rows 2251–2300 retain exact word/POS identity and both frequencies in [groups.json](groups.json); denominator: 4,087 groups.
 

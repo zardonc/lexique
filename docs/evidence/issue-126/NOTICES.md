@@ -1,12 +1,12 @@
-# Issue #126 candidate notices
+# Issue #126 reviewed batch notices
 
-The proposed adaptation is **CC BY-SA 4.0**, with [complete legal text](COPYING). This notice accompanies candidate inputs; it does not assert admission or final combined-package acceptance.
+The reviewed adaptation is **CC BY-SA 4.0**, with [complete legal text](COPYING). This notice accompanies independently accepted batch inputs; final combined-package acceptance remains pending parent validation.
 
 Membership: Boris New and Christophe Pallier, Lexique 3.83. Fixed Wiki contribution/transcription/adaptation layers: Wiktionnaire contributors, credited through the complete article histories and named/anonymous contributor records. Selection, French adaptations and new English/Chinese explanations: Lexique contributors.
 
 Original historical prose, where retained: Académie française, Dictionnaire de l’Académie française, eighth edition (1932–1935), and referenced fourth/fifth editions (1762/1798); Émile Littré (1801–1881), Dictionnaire de la langue française, original nineteenth-century edition and supplement. Their expired economic-rights bases remain separate from current CC BY-SA contribution layers. Original attribution and moral rights remain.
 
-Modifications: select one scoped use per exact group; remove Wiki markup; adapt French wording without removing selected conditions; write new EN/ZH explanations; select an isolated recorded IPA variant and add slashes. No literary/news quotations, media or modern cited dictionary editorial prose supplies the proposed fields.
+Modifications: select one scoped use per exact group; remove Wiki markup; adapt French wording without removing selected conditions; write new EN/ZH explanations; select an isolated recorded IPA variant and add slashes. The Chinese explanation of `exagérer` is limited to overstated importance. No literary/news quotations, media or modern cited dictionary editorial prose supplies the accepted fields.
 
 | Fixed French article | Revision | Complete history | Named contributors | Anonymous count |
 | --- | ---: | --- | ---: | ---: |

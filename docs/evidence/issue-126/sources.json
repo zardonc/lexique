@@ -14,7 +14,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -31,7 +31,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-2161-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_2796",
@@ -47,20 +48,22 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
           "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
           "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "CPI L126-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis": "CPI L123-3: seventy years from 1 January following publication of a collective work.",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
           "established_project_evidence": "docs/evidence/issue-99/source-context.json",
           "scope": "Conservative credit for the referenced DAF8 original edition; bibliography does not establish selected-sentence origin.",
           "wiki_layer": "Fixed Wiktionnaire contributions, CC BY-SA 4.0.",
           "lexique_layer": "Scoped Lexique adaptations and translations, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -93,7 +96,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-2796-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_8329",
@@ -109,20 +113,22 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
           "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
           "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle, article L126-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
           "established_project_evidence": "docs/evidence/issue-99/source-context.json: current_content[].original_authors_and_rights",
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -135,7 +141,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-8329-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_22553",
@@ -151,13 +158,14 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-22553-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_36479",
@@ -173,20 +181,22 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
           "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
           "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "CPI L126-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis": "CPI L123-3: seventy years from 1 January following publication of a collective work.",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
           "established_project_evidence": "docs/evidence/issue-99/source-context.json",
           "scope": "Conservative credit for the referenced DAF8 original edition; bibliography does not establish selected-sentence origin.",
           "wiki_layer": "Fixed Wiktionnaire contributions, CC BY-SA 4.0.",
           "lexique_layer": "Scoped Lexique adaptations and translations, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         },
         {
           "original_authors": "Émile Littré (1801–1881)",
@@ -198,7 +208,9 @@
           "established_project_evidence": "docs/evidence/issue-122/selected-rights.md and docs/evidence/issue-99/source-context.json",
           "scope": "Original historical prose only, where the selected definition descends from it; no modern publisher, XMLittré markup or referenced web editorial text.",
           "selected_sentence_origin": "Article import/reference markers retained; neither a bibliographic reference nor an import notice proves selected-sentence authorship.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -226,7 +238,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-36479-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_144857",
@@ -242,20 +255,22 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
           "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
           "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle, article L126-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
           "established_project_evidence": "docs/evidence/issue-99/source-context.json: current_content[].original_authors_and_rights",
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -273,7 +288,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-144857-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_159648",
@@ -289,20 +305,22 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
           "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
           "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle, article L126-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
           "established_project_evidence": "docs/evidence/issue-99/source-context.json: current_content[].original_authors_and_rights",
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -315,7 +333,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-159648-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_160777",
@@ -331,20 +350,22 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
           "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
           "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle, article L126-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
           "established_project_evidence": "docs/evidence/issue-99/source-context.json: current_content[].original_authors_and_rights",
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -357,7 +378,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-160777-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_176339",
@@ -373,20 +395,22 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
           "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
           "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle, article L126-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
           "established_project_evidence": "docs/evidence/issue-99/source-context.json: current_content[].original_authors_and_rights",
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -429,7 +453,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-176339-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_177483",
@@ -445,20 +470,22 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
           "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
           "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle, article L126-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
           "established_project_evidence": "docs/evidence/issue-99/source-context.json: current_content[].original_authors_and_rights",
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -481,7 +508,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-177483-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_5261",
@@ -497,20 +525,22 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
           "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
           "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "CPI L126-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis": "CPI L123-3: seventy years from 1 January following publication of a collective work.",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
           "established_project_evidence": "docs/evidence/issue-99/source-context.json",
           "scope": "Conservative credit for the referenced DAF8 original edition; bibliography does not establish selected-sentence origin.",
           "wiki_layer": "Fixed Wiktionnaire contributions, CC BY-SA 4.0.",
           "lexique_layer": "Scoped Lexique adaptations and translations, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -533,7 +563,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-5261-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_11086",
@@ -549,20 +580,22 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
           "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
           "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle, article L126-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
           "established_project_evidence": "docs/evidence/issue-99/source-context.json: current_content[].original_authors_and_rights",
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -575,7 +608,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-11086-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_25790",
@@ -591,7 +625,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -608,7 +642,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-25790-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_35561",
@@ -624,7 +659,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Émile Littré (1801–1881)",
@@ -636,7 +671,9 @@
           "established_project_evidence": "docs/evidence/issue-122/selected-rights.md and docs/evidence/issue-99/source-context.json",
           "scope": "Original historical prose only, where the selected definition descends from it; no modern publisher, XMLittré markup or referenced web editorial text.",
           "selected_sentence_origin": "Article import/reference markers retained; neither a bibliographic reference nor an import notice proves selected-sentence authorship.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -659,7 +696,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-35561-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_154550",
@@ -675,20 +713,22 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
           "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
           "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle, article L126-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
           "established_project_evidence": "docs/evidence/issue-99/source-context.json: current_content[].original_authors_and_rights",
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -701,7 +741,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-154550-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_154941",
@@ -717,20 +758,22 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
           "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
           "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle, article L126-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
           "established_project_evidence": "docs/evidence/issue-99/source-context.json: current_content[].original_authors_and_rights",
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -768,7 +811,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-154941-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_162212",
@@ -784,20 +828,22 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
           "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
           "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle, article L126-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
           "established_project_evidence": "docs/evidence/issue-99/source-context.json: current_content[].original_authors_and_rights",
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -810,7 +856,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-162212-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_171893",
@@ -826,20 +873,22 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
           "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
           "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle, article L126-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
           "established_project_evidence": "docs/evidence/issue-99/source-context.json: current_content[].original_authors_and_rights",
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -852,7 +901,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-171893-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_173998",
@@ -868,20 +918,22 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
           "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
           "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "CPI L126-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis": "CPI L123-3: seventy years from 1 January following publication of a collective work.",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
           "established_project_evidence": "docs/evidence/issue-99/source-context.json",
           "scope": "Conservative credit for the referenced DAF8 original edition; bibliography does not establish selected-sentence origin.",
           "wiki_layer": "Fixed Wiktionnaire contributions, CC BY-SA 4.0.",
           "lexique_layer": "Scoped Lexique adaptations and translations, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         },
         {
           "original_authors": "Émile Littré (1801–1881)",
@@ -893,7 +945,9 @@
           "established_project_evidence": "docs/evidence/issue-122/selected-rights.md and docs/evidence/issue-99/source-context.json",
           "scope": "Original historical prose only, where the selected definition descends from it; no modern publisher, XMLittré markup or referenced web editorial text.",
           "selected_sentence_origin": "Article import/reference markers retained; neither a bibliographic reference nor an import notice proves selected-sentence authorship.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -931,7 +985,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-173998-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_174826",
@@ -947,20 +1002,22 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
           "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
           "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle, article L126-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
           "established_project_evidence": "docs/evidence/issue-99/source-context.json: current_content[].original_authors_and_rights",
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -978,7 +1035,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-174826-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_37774",
@@ -994,20 +1052,22 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
           "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
           "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle, article L126-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
           "established_project_evidence": "docs/evidence/issue-99/source-context.json: current_content[].original_authors_and_rights",
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         },
         {
           "original_authors": "Émile Littré (1801–1881)",
@@ -1019,7 +1079,9 @@
           "established_project_evidence": "docs/evidence/issue-122/selected-rights.md and docs/evidence/issue-99/source-context.json",
           "scope": "Original historical prose only, where the selected definition descends from it; no modern publisher, XMLittré markup or referenced web editorial text.",
           "selected_sentence_origin": "Article import/reference markers retained; neither a bibliographic reference nor an import notice proves selected-sentence authorship.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1037,7 +1099,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-37774-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_103457",
@@ -1053,20 +1116,22 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
           "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
           "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle, article L126-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
           "established_project_evidence": "docs/evidence/issue-99/source-context.json: current_content[].original_authors_and_rights",
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         },
         {
           "original_authors": "Émile Littré (1801–1881)",
@@ -1078,7 +1143,9 @@
           "established_project_evidence": "docs/evidence/issue-122/selected-rights.md and docs/evidence/issue-99/source-context.json",
           "scope": "Original historical prose only, where the selected definition descends from it; no modern publisher, XMLittré markup or referenced web editorial text.",
           "selected_sentence_origin": "Article import/reference markers retained; neither a bibliographic reference nor an import notice proves selected-sentence authorship.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1111,7 +1178,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-103457-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_138037",
@@ -1127,20 +1195,22 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
           "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
           "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle, article L126-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
           "established_project_evidence": "docs/evidence/issue-99/source-context.json: current_content[].original_authors_and_rights",
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1158,7 +1228,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-138037-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_148769",
@@ -1174,20 +1245,22 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
           "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
           "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle, article L126-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
           "established_project_evidence": "docs/evidence/issue-99/source-context.json: current_content[].original_authors_and_rights",
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1200,7 +1273,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-148769-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_165261",
@@ -1216,20 +1290,22 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
           "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
           "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle, article L126-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
           "established_project_evidence": "docs/evidence/issue-99/source-context.json: current_content[].original_authors_and_rights",
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1247,7 +1323,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-165261-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_167014",
@@ -1263,20 +1340,22 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
           "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
           "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle, article L126-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
           "established_project_evidence": "docs/evidence/issue-99/source-context.json: current_content[].original_authors_and_rights",
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1289,7 +1368,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-167014-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_174755",
@@ -1305,20 +1385,22 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
           "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
           "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle, article L126-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
           "established_project_evidence": "docs/evidence/issue-99/source-context.json: current_content[].original_authors_and_rights",
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1336,7 +1418,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-174755-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_176855",
@@ -1352,20 +1435,22 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
           "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
           "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle, article L126-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
           "established_project_evidence": "docs/evidence/issue-99/source-context.json: current_content[].original_authors_and_rights",
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1378,7 +1463,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-176855-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_209216",
@@ -1394,7 +1480,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Émile Littré (1801–1881)",
@@ -1406,7 +1492,9 @@
           "established_project_evidence": "docs/evidence/issue-122/selected-rights.md and docs/evidence/issue-99/source-context.json",
           "scope": "Original historical prose only, where the selected definition descends from it; no modern publisher, XMLittré markup or referenced web editorial text.",
           "selected_sentence_origin": "Article import/reference markers retained; neither a bibliographic reference nor an import notice proves selected-sentence authorship.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1419,7 +1507,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-209216-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_894109",
@@ -1435,7 +1524,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -1462,7 +1551,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-894109-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_12213",
@@ -1478,7 +1568,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Émile Littré (1801–1881)",
@@ -1490,7 +1580,9 @@
           "established_project_evidence": "docs/evidence/issue-122/selected-rights.md and docs/evidence/issue-99/source-context.json",
           "scope": "Original historical prose only, where the selected definition descends from it; no modern publisher, XMLittré markup or referenced web editorial text.",
           "selected_sentence_origin": "Article import/reference markers retained; neither a bibliographic reference nor an import notice proves selected-sentence authorship.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1513,7 +1605,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-12213-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_37678",
@@ -1529,7 +1622,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Émile Littré (1801–1881)",
@@ -1541,7 +1634,9 @@
           "established_project_evidence": "docs/evidence/issue-122/selected-rights.md and docs/evidence/issue-99/source-context.json",
           "scope": "Original historical prose only, where the selected definition descends from it; no modern publisher, XMLittré markup or referenced web editorial text.",
           "selected_sentence_origin": "Article import/reference markers retained; neither a bibliographic reference nor an import notice proves selected-sentence authorship.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1554,7 +1649,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-37678-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_104223",
@@ -1570,20 +1666,22 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
           "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
           "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle, article L126-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
           "established_project_evidence": "docs/evidence/issue-99/source-context.json: current_content[].original_authors_and_rights",
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1636,7 +1734,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-104223-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_121805",
@@ -1652,20 +1751,22 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
           "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
           "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "CPI L126-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis": "CPI L123-3: seventy years from 1 January following publication of a collective work.",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
           "established_project_evidence": "docs/evidence/issue-99/source-context.json",
           "scope": "Conservative credit for the referenced DAF8 original edition; bibliography does not establish selected-sentence origin.",
           "wiki_layer": "Fixed Wiktionnaire contributions, CC BY-SA 4.0.",
           "lexique_layer": "Scoped Lexique adaptations and translations, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1708,7 +1809,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-121805-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_148507",
@@ -1724,20 +1826,22 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
           "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
           "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle, article L126-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
           "established_project_evidence": "docs/evidence/issue-99/source-context.json: current_content[].original_authors_and_rights",
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         },
         {
           "original_authors": "Émile Littré (1801–1881)",
@@ -1749,7 +1853,9 @@
           "established_project_evidence": "docs/evidence/issue-122/selected-rights.md and docs/evidence/issue-99/source-context.json",
           "scope": "Original historical prose only, where the selected definition descends from it; no modern publisher, XMLittré markup or referenced web editorial text.",
           "selected_sentence_origin": "Article import/reference markers retained; neither a bibliographic reference nor an import notice proves selected-sentence authorship.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1767,7 +1873,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-148507-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_149236",
@@ -1783,20 +1890,22 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
           "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
           "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "CPI L126-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis": "CPI L123-3: seventy years from 1 January following publication of a collective work.",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
           "established_project_evidence": "docs/evidence/issue-99/source-context.json",
           "scope": "Conservative credit for the referenced DAF8 original edition; bibliography does not establish selected-sentence origin.",
           "wiki_layer": "Fixed Wiktionnaire contributions, CC BY-SA 4.0.",
           "lexique_layer": "Scoped Lexique adaptations and translations, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         },
         {
           "original_authors": "Émile Littré (1801–1881)",
@@ -1808,7 +1917,9 @@
           "established_project_evidence": "docs/evidence/issue-122/selected-rights.md and docs/evidence/issue-99/source-context.json",
           "scope": "Original historical prose only, where the selected definition descends from it; no modern publisher, XMLittré markup or referenced web editorial text.",
           "selected_sentence_origin": "Article import/reference markers retained; neither a bibliographic reference nor an import notice proves selected-sentence authorship.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1836,7 +1947,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-149236-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_167705",
@@ -1852,20 +1964,22 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
           "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
           "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle, article L126-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
           "established_project_evidence": "docs/evidence/issue-99/source-context.json: current_content[].original_authors_and_rights",
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1883,7 +1997,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-167705-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_179235",
@@ -1899,20 +2014,22 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
           "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
           "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle, article L126-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
           "established_project_evidence": "docs/evidence/issue-99/source-context.json: current_content[].original_authors_and_rights",
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1925,7 +2042,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-179235-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_370431",
@@ -1941,7 +2059,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -1953,7 +2071,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-370431-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_1883283",
@@ -1969,20 +2088,22 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
           "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
           "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle, article L126-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
           "established_project_evidence": "docs/evidence/issue-99/source-context.json: current_content[].original_authors_and_rights",
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         },
         {
           "original_authors": "Émile Littré (1801–1881)",
@@ -1994,7 +2115,9 @@
           "established_project_evidence": "docs/evidence/issue-122/selected-rights.md and docs/evidence/issue-99/source-context.json",
           "scope": "Original historical prose only, where the selected definition descends from it; no modern publisher, XMLittré markup or referenced web editorial text.",
           "selected_sentence_origin": "Article import/reference markers retained; neither a bibliographic reference nor an import notice proves selected-sentence authorship.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -2072,7 +2195,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-1883283-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_11412",
@@ -2088,20 +2212,22 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
           "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
           "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle, article L126-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
           "established_project_evidence": "docs/evidence/issue-99/source-context.json: current_content[].original_authors_and_rights",
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -2124,7 +2250,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-11412-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_14664",
@@ -2140,13 +2267,14 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-14664-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_17523",
@@ -2162,7 +2290,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Émile Littré (1801–1881)",
@@ -2174,7 +2302,9 @@
           "established_project_evidence": "docs/evidence/issue-122/selected-rights.md and docs/evidence/issue-99/source-context.json",
           "scope": "Original historical prose only, where the selected definition descends from it; no modern publisher, XMLittré markup or referenced web editorial text.",
           "selected_sentence_origin": "Article import/reference markers retained; neither a bibliographic reference nor an import notice proves selected-sentence authorship.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         },
         {
           "original_authors": "Académie française",
@@ -2184,7 +2314,9 @@
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "1833-01-01",
           "scope": "Referenced historical original prose only; bibliography is not proof that the selected sentence was copied.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         },
         {
           "original_authors": "Académie française",
@@ -2194,7 +2326,9 @@
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "1869-01-01",
           "scope": "Referenced historical original prose only; bibliography is not proof that the selected sentence was copied.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -2242,7 +2376,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-17523-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_36542",
@@ -2258,7 +2393,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Émile Littré (1801–1881)",
@@ -2270,7 +2405,9 @@
           "established_project_evidence": "docs/evidence/issue-122/selected-rights.md and docs/evidence/issue-99/source-context.json",
           "scope": "Original historical prose only, where the selected definition descends from it; no modern publisher, XMLittré markup or referenced web editorial text.",
           "selected_sentence_origin": "Article import/reference markers retained; neither a bibliographic reference nor an import notice proves selected-sentence authorship.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -2308,7 +2445,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-36542-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_71515",
@@ -2324,20 +2462,22 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
           "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
           "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle, article L126-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
           "established_project_evidence": "docs/evidence/issue-99/source-context.json: current_content[].original_authors_and_rights",
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -2355,7 +2495,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-71515-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_147964",
@@ -2371,20 +2512,22 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
           "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
           "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle, article L126-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
           "established_project_evidence": "docs/evidence/issue-99/source-context.json: current_content[].original_authors_and_rights",
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -2397,7 +2540,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-147964-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_165247",
@@ -2413,20 +2557,22 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
           "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
           "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle, article L126-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
           "established_project_evidence": "docs/evidence/issue-99/source-context.json: current_content[].original_authors_and_rights",
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -2439,7 +2585,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-165247-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_175692",
@@ -2455,20 +2602,22 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
           "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
           "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle, article L126-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
           "established_project_evidence": "docs/evidence/issue-99/source-context.json: current_content[].original_authors_and_rights",
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -2496,7 +2645,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-175692-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     },
     {
       "id": "b126_fr_179928",
@@ -2512,20 +2662,22 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
           "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
           "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle, article L126-3: seventy years from 1 January following publication of a collective work.",
+          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
           "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
           "conservative_expiry": "2006-01-01",
           "established_project_evidence": "docs/evidence/issue-99/source-context.json: current_content[].original_authors_and_rights",
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner",
+          "independent_rights_reason": "Original historical economic-rights scope only; original author/edition credit retained. CPI L123-3 collective publication term applies to Académie editions; CPI L123-1 life-plus-seventy applies to Littré (died 1881, expiry 1952-01-01). Wiki and Lexique adaptations retain CC BY-SA 4.0; modern publisher editorial prose and markup are excluded. Article markers do not prove the selected sentence author."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -2563,7 +2715,8 @@
       ],
       "revision_history_parts": [
         "target\\issue-126\\sources\\history-179928-1.api.json"
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #126; separate from author and parent integration owner"
     }
   ]
 }
