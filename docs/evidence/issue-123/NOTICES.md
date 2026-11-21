@@ -1,14 +1,14 @@
-# Issue #123 proposed content notices
+# Issue #123 reviewed content notices
 
 Membership selection: Boris New and Christophe Pallier, **Lexique 3.83**, [upstream](https://chrplr.github.io/openlexicon/datasets-info/Lexique383/README-Lexique.html), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Exact word/POS identities, row order and frequencies are preserved.
 
 Selected French lexical, grammatical and IPA text: **Wiktionnaire contributors**. Each fixed article and its complete history are credited below. Named registries and anonymous counts are retained in [source-context.json](source-context.json); the current registry can include editors later than the fixed revision and does not identify authors of individual sentences.
 
-French selections/adaptations and new English/Chinese explanatory translations: **Lexique contributors**. Markup removed, one isolated-headword IPA chosen, selected semantics/constructions retained, other senses excluded. No upstream bilingual wording or media is copied into the proposed fields.
+French selections/adaptations and new English/Chinese explanatory translations: **Lexique contributors**. Markup removed, one isolated-headword IPA chosen, selected semantics/constructions retained, other senses excluded. The accepted v meanings omit the incorrect consonant ordinal; the Chinese whisky explanation identifies malted barley. No upstream bilingual wording or media is copied into the accepted fields.
 
 Contribution/adaptation layer: **CC BY-SA 4.0**, [complete legal text](COPYING), [licence URL](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en). Preserve credits, fixed source/history/licence links and modification information; share the adapted content under this licence without additional restrictions.
 
-Where DAF8 is imported or referenced, original-work credit is retained conservatively: **Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935**. The established collective-work CPI L123-3 basis gives conservative expiry **2006-01-01** after final 1935 publication. That original layer is separate from the CC BY-SA contribution layers. Other bibliography, quotations and the unselected CFC import do not supply proposed content.
+Where DAF8 is imported or referenced, original-work credit is retained conservatively: **Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935**. The independently reviewed collective-work CPI L113-2/L123-3 basis gives conservative expiry **2006-01-01** after final 1935 publication. That original layer is separate from the CC BY-SA contribution layers. Author/work respect under CPI L121-1 remains; adaptations are not presented as verbatim original entries or endorsed by Académie française. Other bibliography, quotations and the unselected CFC import do not supply accepted content. Actual combined package notices remain subject to parent validation.
 
 | Article | Fixed revision | Complete history | Original DAF8 credit retained |
 | --- | --- | --- | --- |
