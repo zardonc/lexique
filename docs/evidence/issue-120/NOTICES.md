@@ -1,9 +1,9 @@
 # #120 source and modification notices
 
-The proposed dictionary text is adapted from fixed Wiktionnaire contributions
+The reviewed dictionary text is adapted from fixed Wiktionnaire contributions
 under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en).
 The [complete legal text](COPYING), article attribution, full history links,
-original-work layers and modification notices accompany this author package.
+original-work layers and modification notices accompany these reviewed records.
 New French adaptations and English/Chinese explanatory translations are by
 Lexique contributors and retain CC BY-SA 4.0.
 
@@ -92,4 +92,4 @@ modifications are retained in [rights](rights.json) and [groups](groups.json).
 | [échange](https://fr.wiktionary.org/w/index.php?title=%C3%A9change&oldid=39924769) | 39924769 | 2026-10-09T08:55:51Z | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=%C3%A9change&action=history) |
 | [épée](https://fr.wiktionary.org/w/index.php?title=%C3%A9p%C3%A9e&oldid=39863164) | 39863164 | 2026-09-06T19:52:46Z | [Contributors/history](https://fr.wiktionary.org/w/index.php?title=%C3%A9p%C3%A9e&action=history) |
 
-Independent selected-field rights/quality review and actual combined resource packaging remain pending.
+Independent selected-field rights/quality review passes for all 200 fields; actual combined resource packaging remains pending parent verification.
