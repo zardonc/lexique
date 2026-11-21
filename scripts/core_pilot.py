@@ -25,7 +25,7 @@ ANNOTATIONS = (
     (1300, "d", "PRE", 106), (1386, "nulle", "PRO:ind", 108),
 )
 ANNOTATION_ROWS = tuple(entry[0] for entry in ANNOTATIONS)
-ROWS = (*(row for row in range(1, 1451) if row not in ANNOTATION_ROWS), 1911)
+ROWS = tuple(row for row in range(1, 1951) if row not in ANNOTATION_ROWS)
 FIELDS = {"french_definition": "definition_fr", "ipa": "ipa", "english": "meaning_en", "chinese": "meaning_zh"}
 LANGUAGES = {"french_definition": "fr", "ipa": "und", "english": "en", "chinese": "zh"}
 MATERIALS = (
@@ -111,12 +111,19 @@ def load_inputs(source_dir):
     if len(sources) != len(curated["sources"]):
         raise ValueError("Duplicate field source identity")
     for source in sources.values():
-        if source.get("content_license") != "CC-BY-SA-4.0" or source.get("selected_text_review") != "passed_for_selected_spans":
+        publication = source.get("source_frame") == "fixed_publication_edition_capture"
+        content_license = "Public-domain-original;CC-BY-SA-4.0-adaptation" if publication else "CC-BY-SA-4.0"
+        if source.get("content_license") != content_license or source.get("selected_text_review") != "passed_for_selected_spans":
             raise ValueError("Unreviewed field source or incompatible licence")
         for name in ("fixed_url", "history_url", "license_url"):
             web_url(source[name], f"field source {name}")
         text(source["attribution"], "field source attribution")
-        if not isinstance(source["revid"], int) or isinstance(source["revid"], bool) or source["revid"] <= 0:
+        if publication:
+            if source.get("adaptation_license") != "CC-BY-SA-4.0" or source.get("selected_rights_review", {}).get("selected_text_rights_status") != "passed_at_selected_text_boundary":
+                raise ValueError("Unreviewed publication or incompatible published adaptation licence")
+            text(source.get("edition"), "published field source edition", 200)
+            text(source.get("revid"), "published field source version", 200)
+        elif not isinstance(source["revid"], int) or isinstance(source["revid"], bool) or source["revid"] <= 0:
             raise ValueError("Invalid fixed field source version")
     field_reviews = {(field["sense_id"], field["field"]): field for field in reviewed["fields"]}
     usage_reviews = {usage["sense_id"]: usage for usage in reviewed["usage"]}
@@ -189,13 +196,14 @@ def load_inputs(source_dir):
                 if (source["revid"], source["fixed_url"], field["source_id"], span["line_1_based"], span["raw_source_excerpt"]) != (exact["revid"], exact["url"], exact["source_id"], exact["line_1_based"], exact["reviewed_excerpt"]):
                     raise ValueError("Selected field source span differs from the independent review")
                 payload[target] = text(field["text"], f"selected {name} field", 200 if name == "ipa" else 20_000)
-                edition = source.get("platform", "Wiktionnaire" if source["edition"] == "fr" else "Wiktionary")
+                publication = source.get("source_frame") == "fixed_publication_edition_capture"
+                edition = source.get("platform", source["edition"] if publication else "Wiktionnaire" if source["edition"] == "fr" else "Wiktionary")
                 provenance[target] = {
                     "title": f"{edition} — {source['title']}",
-                    "version": f"revision {source['revid']} ({source['timestamp']})",
-                    "attribution": f"{source['attribution']}; author history: {source['history_url']}; recorded adaptations by Lexique contributors",
+                    "version": f"{source['revid']} (edition {source['edition']}; capture {source['timestamp']})" if publication else f"revision {source['revid']} ({source['timestamp']})",
+                    "attribution": f"{source['attribution']}; edition source: {source['fixed_url']}; recorded adaptations by Lexique contributors" if publication else f"{source['attribution']}; author history: {source['history_url']}; recorded adaptations by Lexique contributors",
                     "source_url": source["fixed_url"], "license": "CC BY-SA 4.0", "license_url": source["license_url"],
-                    "span": f"Fixed wikitext line {span['line_1_based']}; exact selected excerpt in selected-source-excerpts.json",
+                    "span": f"Fixed {'capture' if publication else 'wikitext'} line {span['line_1_based']}; exact selected excerpt in selected-source-excerpts.json",
                     "modification": text(field["modification"], "field modification notice"),
                 }
             payload["field_sources"] = provenance
@@ -256,7 +264,7 @@ def prepare(destination, source_dir=RESOURCE, project_license=ROOT / "LICENSE"):
         raise ValueError("Missing separate MIT project/converter licence")
     version = text(curated["content_version"], "content version", 200)
     source = {"title": "Lexique FR–EN–ZH", "version": version,
-              "attribution": "Wiktionnaire/Wiktionary and Wikisource contributors; Théodore Soulice (1836); selected adaptations by Lexique contributors; Lexique 3.83 membership by Boris New and Christophe Pallier",
+              "attribution": "Wiktionnaire/Wiktionary and Wikisource contributors; Théodore Soulice (1836); Académie française (DAF8, 1935); selected adaptations by Lexique contributors; Lexique 3.83 membership by Boris New and Christophe Pallier",
               "license": "CC BY-SA 4.0", "source_url": "https://github.com/zardonc/lexique/tree/main/resources/core-pilot-79",
               "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en"}
     metadata = {"format_version": "1", "content_version": version, "source": compact(source),
