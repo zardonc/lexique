@@ -101,7 +101,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_credited_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+          "independence": true
         }
       ],
       "bibliographic_identities": [
@@ -218,7 +220,7 @@
       "anonymous_contributors_count": 8,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 153,
@@ -226,7 +228,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "distance fixed revision 40029157: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. No external import marker is attached to the selected text; bibliographic references do not identify the author of that sentence. Separate original credit retained conservatively for Académie française, DAF eighth edition 1932–1935; established collective-edition basis reviewed against CPI L123-3, final-publication term expired 2006-01-01. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_56378",
@@ -431,7 +436,7 @@
       "anonymous_contributors_count": 2,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 104,
@@ -469,7 +474,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "bel fixed revision 39883895: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. No external import marker is attached to the selected text; bibliographic references do not identify the author of that sentence. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_64057",
@@ -579,7 +587,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_credited_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+          "independence": true
         }
       ],
       "bibliographic_identities": [
@@ -734,7 +744,7 @@
       "anonymous_contributors_count": 11,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 218,
@@ -742,7 +752,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "concert fixed revision 39773202: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. Actual import markers: line 218 * {{Import:DAF8}}. Separate original credit retained conservatively for Académie française, DAF eighth edition 1932–1935; established collective-edition basis reviewed against CPI L123-3, final-publication term expired 2006-01-01. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_115769",
@@ -845,7 +858,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_credited_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+          "independence": true
         }
       ],
       "bibliographic_identities": [
@@ -999,7 +1014,7 @@
       "anonymous_contributors_count": 10,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 4,
@@ -1022,7 +1037,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "date fixed revision 39797843: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. No external import marker is attached to the selected text; bibliographic references do not identify the author of that sentence. Separate original credit retained conservatively for Académie française, DAF eighth edition 1932–1935; established collective-edition basis reviewed against CPI L123-3, final-publication term expired 2006-01-01. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_119212",
@@ -1132,7 +1150,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_credited_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+          "independence": true
         }
       ],
       "bibliographic_identities": [
@@ -1202,7 +1222,7 @@
       "anonymous_contributors_count": 4,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 63,
@@ -1230,7 +1250,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "urgent fixed revision 39759472: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. Actual import markers: line 63 *{{Import:DAF8}}. Separate original credit retained conservatively for Académie française, DAF eighth edition 1932–1935; established collective-edition basis reviewed against CPI L123-3, final-publication term expired 2006-01-01. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_154719",
@@ -1340,7 +1363,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_credited_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+          "independence": true
         }
       ],
       "bibliographic_identities": [
@@ -1436,7 +1461,7 @@
       "anonymous_contributors_count": 6,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 133,
@@ -1444,7 +1469,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "commande fixed revision 39866157: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. Actual import markers: line 133 * {{Import:DAF8}}. Separate original credit retained conservatively for Académie française, DAF eighth edition 1932–1935; established collective-edition basis reviewed against CPI L123-3, final-publication term expired 2006-01-01. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_167675",
@@ -1554,7 +1582,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_credited_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+          "independence": true
         }
       ],
       "bibliographic_identities": [
@@ -1641,7 +1671,7 @@
       "anonymous_contributors_count": 6,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 111,
@@ -1649,7 +1679,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "médical fixed revision 39864840: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. Actual import markers: line 111 *{{Import:DAF8}}. Separate original credit retained conservatively for Académie française, DAF eighth edition 1932–1935; established collective-edition basis reviewed against CPI L123-3, final-publication term expired 2006-01-01. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_167988",
@@ -1759,7 +1792,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_credited_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+          "independence": true
         }
       ],
       "bibliographic_identities": [
@@ -1887,7 +1922,7 @@
       "anonymous_contributors_count": 6,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 157,
@@ -1905,7 +1940,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "meurtrier fixed revision 40000633: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. Actual import markers: line 157 * {{Import:DAF8}}. Separate original credit retained conservatively for Académie française, DAF eighth edition 1932–1935; established collective-edition basis reviewed against CPI L123-3, final-publication term expired 2006-01-01. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_171095",
@@ -2015,7 +2053,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_credited_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+          "independence": true
         }
       ],
       "bibliographic_identities": [
@@ -2169,7 +2209,7 @@
       "anonymous_contributors_count": 9,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 3,
@@ -2182,7 +2222,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "personnage fixed revision 39773193: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. Actual import markers: line 201 * {{Import:DAF8}}. Separate original credit retained conservatively for Académie française, DAF eighth edition 1932–1935; established collective-edition basis reviewed against CPI L123-3, final-publication term expired 2006-01-01. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_179455",
@@ -2292,7 +2335,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_credited_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+          "independence": true
         }
       ],
       "bibliographic_identities": [
@@ -2580,7 +2625,7 @@
       "anonymous_contributors_count": 22,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 415,
@@ -2593,7 +2638,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "vague fixed revision 39885933: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. Actual import markers: line 416 * {{Import:DAF8}}. Separate original credit retained conservatively for Académie française, DAF eighth edition 1932–1935; established collective-edition basis reviewed against CPI L123-3, final-publication term expired 2006-01-01. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_7983",
@@ -2696,7 +2744,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_credited_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+          "independence": true
         }
       ],
       "bibliographic_identities": [
@@ -2850,7 +2900,7 @@
       "anonymous_contributors_count": 23,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 180,
@@ -2878,7 +2928,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "secrétaire fixed revision 40004310: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. No external import marker is attached to the selected text; bibliographic references do not identify the author of that sentence. Separate original credit retained conservatively for Académie française, DAF eighth edition 1932–1935; established collective-edition basis reviewed against CPI L123-3, final-publication term expired 2006-01-01. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_11350",
@@ -2988,7 +3041,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_credited_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+          "independence": true
         }
       ],
       "bibliographic_identities": [
@@ -3168,7 +3223,7 @@
       "anonymous_contributors_count": 15,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 8,
@@ -3226,7 +3281,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "lac fixed revision 39935406: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. Actual import markers: line 346 * {{Import:DAF8}}. Separate original credit retained conservatively for Académie française, DAF eighth edition 1932–1935; established collective-edition basis reviewed against CPI L123-3, final-publication term expired 2006-01-01. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_14147",
@@ -3474,9 +3532,12 @@
       "anonymous_contributors_count": 14,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "cimetière fixed revision 39819361: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. No external import marker is attached to the selected text; bibliographic references do not identify the author of that sentence. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_42467",
@@ -3701,7 +3762,7 @@
       "anonymous_contributors_count": 12,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 191,
@@ -3709,7 +3770,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "emprunter fixed revision 39905426: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. No external import marker is attached to the selected text; bibliographic references do not identify the author of that sentence. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_121540",
@@ -3819,7 +3883,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_credited_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+          "independence": true
         }
       ],
       "bibliographic_identities": [
@@ -3915,7 +3981,7 @@
       "anonymous_contributors_count": 2,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 88,
@@ -3928,7 +3994,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "permission fixed revision 38484987: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. Actual import markers: line 89 * {{Import:DAF8}}. Separate original credit retained conservatively for Académie française, DAF eighth edition 1932–1935; established collective-edition basis reviewed against CPI L123-3, final-publication term expired 2006-01-01. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_163964",
@@ -4038,7 +4107,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_credited_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+          "independence": true
         }
       ],
       "bibliographic_identities": [
@@ -4195,7 +4266,7 @@
       "anonymous_contributors_count": 7,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 205,
@@ -4213,7 +4284,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "humeur fixed revision 39959650: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. Actual import markers: line 205 * {{Import:DAF8}}. Separate original credit retained conservatively for Académie française, DAF eighth edition 1932–1935; established collective-edition basis reviewed against CPI L123-3, final-publication term expired 2006-01-01. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_169169",
@@ -4313,7 +4387,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_credited_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+          "independence": true
         }
       ],
       "bibliographic_identities": [
@@ -4417,7 +4493,7 @@
       "anonymous_contributors_count": 3,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 3,
@@ -4445,7 +4521,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "noter fixed revision 39774280: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. Actual import markers: line 105 *{{Import:DAF8}}. Separate original credit retained conservatively for Académie française, DAF eighth edition 1932–1935; established collective-edition basis reviewed against CPI L123-3, final-publication term expired 2006-01-01. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_179760",
@@ -4545,7 +4624,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_credited_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+          "independence": true
         }
       ],
       "bibliographic_identities": [
@@ -4759,7 +4840,7 @@
       "anonymous_contributors_count": 8,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 208,
@@ -4772,7 +4853,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "verser fixed revision 39928254: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. Actual import markers: line 208 * {{Import:DAF8}}. Separate original credit retained conservatively for Académie française, DAF eighth edition 1932–1935; established collective-edition basis reviewed against CPI L123-3, final-publication term expired 2006-01-01. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_249676",
@@ -4882,7 +4966,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_credited_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+          "independence": true
         }
       ],
       "bibliographic_identities": [
@@ -5043,7 +5129,7 @@
       "anonymous_contributors_count": 7,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 171,
@@ -5056,7 +5142,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "mortel fixed revision 39875310: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. Actual import markers: line 171 * {{Import:DAF8}}. Separate original credit retained conservatively for Académie française, DAF eighth edition 1932–1935; established collective-edition basis reviewed against CPI L123-3, final-publication term expired 2006-01-01. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_369301",
@@ -5188,9 +5277,12 @@
       "anonymous_contributors_count": 2,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "allo fixed revision 39264672: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. No external import marker is attached to the selected text; bibliographic references do not identify the author of that sentence. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_9668",
@@ -5369,9 +5461,12 @@
       "anonymous_contributors_count": 10,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "immeuble fixed revision 39771483: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. No external import marker is attached to the selected text; bibliographic references do not identify the author of that sentence. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_11751",
@@ -5474,7 +5569,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_credited_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+          "independence": true
         }
       ],
       "bibliographic_identities": [
@@ -5615,7 +5712,7 @@
       "anonymous_contributors_count": 9,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 148,
@@ -5633,7 +5730,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "emploi fixed revision 39621015: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. No external import marker is attached to the selected text; bibliographic references do not identify the author of that sentence. Separate original credit retained conservatively for Académie française, DAF eighth edition 1932–1935; established collective-edition basis reviewed against CPI L123-3, final-publication term expired 2006-01-01. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_17401",
@@ -5743,7 +5843,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_credited_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+          "independence": true
         }
       ],
       "bibliographic_identities": [
@@ -5801,7 +5903,7 @@
       "anonymous_contributors_count": 3,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 57,
@@ -5809,7 +5911,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "là-dessus fixed revision 36596012: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. Actual import markers: line 57 *{{Import:DAF8}}. Separate original credit retained conservatively for Académie française, DAF eighth edition 1932–1935; established collective-edition basis reviewed against CPI L123-3, final-publication term expired 2006-01-01. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_121349",
@@ -5994,7 +6099,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_credited_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+          "independence": true
         }
       ],
       "bibliographic_identities": [
@@ -6137,7 +6244,7 @@
       "anonymous_contributors_count": 7,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 191,
@@ -6160,7 +6267,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "mince fixed revision 39914379: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. No external import marker is attached to the selected text; bibliographic references do not identify the author of that sentence. Separate original credit retained conservatively for Académie française, DAF eighth edition 1932–1935; established collective-edition basis reviewed against CPI L123-3, final-publication term expired 2006-01-01. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_121950",
@@ -6270,7 +6380,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_credited_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+          "independence": true
         }
       ],
       "bibliographic_identities": [
@@ -6394,7 +6506,7 @@
       "anonymous_contributors_count": 6,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 142,
@@ -6402,7 +6514,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "troupe fixed revision 39753081: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. Actual import markers: line 142 * {{Import:DAF8}}. Separate original credit retained conservatively for Académie française, DAF eighth edition 1932–1935; established collective-edition basis reviewed against CPI L123-3, final-publication term expired 2006-01-01. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_144582",
@@ -6505,7 +6620,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_credited_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+          "independence": true
         }
       ],
       "bibliographic_identities": [
@@ -6627,7 +6744,7 @@
       "anonymous_contributors_count": 13,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 167,
@@ -6635,7 +6752,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "tâche fixed revision 39842394: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. No external import marker is attached to the selected text; bibliographic references do not identify the author of that sentence. Separate original credit retained conservatively for Académie française, DAF eighth edition 1932–1935; established collective-edition basis reviewed against CPI L123-3, final-publication term expired 2006-01-01. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_147934",
@@ -6735,7 +6855,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_credited_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+          "independence": true
         }
       ],
       "bibliographic_identities": [
@@ -6842,7 +6964,7 @@
       "anonymous_contributors_count": 5,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 116,
@@ -6850,7 +6972,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "assassiner fixed revision 39732821: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. Actual import markers: line 116 * {{Import:DAF8}}. Separate original credit retained conservatively for Académie française, DAF eighth edition 1932–1935; established collective-edition basis reviewed against CPI L123-3, final-publication term expired 2006-01-01. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_153506",
@@ -6960,7 +7085,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_credited_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+          "independence": true
         }
       ],
       "bibliographic_identities": [
@@ -7124,7 +7251,7 @@
       "anonymous_contributors_count": 29,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 283,
@@ -7137,7 +7264,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "chouette fixed revision 39774608: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. Actual import markers: line 283 * {{Import:DAF8}}. Separate original credit retained conservatively for Académie française, DAF eighth edition 1932–1935; established collective-edition basis reviewed against CPI L123-3, final-publication term expired 2006-01-01. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_157213",
@@ -7237,7 +7367,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_credited_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+          "independence": true
         }
       ],
       "bibliographic_identities": [
@@ -7338,7 +7470,7 @@
       "anonymous_contributors_count": 2,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 71,
@@ -7346,7 +7478,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "dépenser fixed revision 39818638: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. Actual import markers: line 71 * {{Import:DAF8}}. Separate original credit retained conservatively for Académie française, DAF eighth edition 1932–1935; established collective-edition basis reviewed against CPI L123-3, final-publication term expired 2006-01-01. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_169680",
@@ -7456,7 +7591,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_credited_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+          "independence": true
         }
       ],
       "bibliographic_identities": [
@@ -7615,7 +7752,7 @@
       "anonymous_contributors_count": 4,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 178,
@@ -7628,7 +7765,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "ordure fixed revision 39882457: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. Actual import markers: line 178 * {{Import:DAF8}}. Separate original credit retained conservatively for Académie française, DAF eighth edition 1932–1935; established collective-edition basis reviewed against CPI L123-3, final-publication term expired 2006-01-01. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_32210",
@@ -7738,7 +7878,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_credited_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+          "independence": true
         }
       ],
       "bibliographic_identities": [
@@ -7839,7 +7981,7 @@
       "anonymous_contributors_count": 19,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 152,
@@ -7857,7 +7999,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "matériel fixed revision 39810832: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. Actual import markers: line 153 * {{Import:DAF8}}. Separate original credit retained conservatively for Académie française, DAF eighth edition 1932–1935; established collective-edition basis reviewed against CPI L123-3, final-publication term expired 2006-01-01. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_36410",
@@ -7960,7 +8105,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_credited_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+          "independence": true
         }
       ],
       "bibliographic_identities": [
@@ -8230,7 +8377,7 @@
       "anonymous_contributors_count": 16,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 5,
@@ -8273,7 +8420,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "boule fixed revision 39968503: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. No external import marker is attached to the selected text; bibliographic references do not identify the author of that sentence. Separate original credit retained conservatively for Académie française, DAF eighth edition 1932–1935; established collective-edition basis reviewed against CPI L123-3, final-publication term expired 2006-01-01. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_36747",
@@ -8383,7 +8533,9 @@
           "scope": "Original edition where imported; the page marker does not establish selected-sentence authorship. Fixed Wiki transcription/adaptation remains separately licensed.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_credited_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+          "independence": true
         }
       ],
       "bibliographic_identities": [
@@ -8603,7 +8755,7 @@
       "anonymous_contributors_count": 15,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 412,
@@ -8616,7 +8768,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "gorge fixed revision 39952019: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. Actual import markers: line 412 * {{Import:Littré}}. Separate original credit retained for Émile Littré (1801–1881), original 1872–1877 dictionary; CPI L123-1 life plus seventy term expired 1952-01-01. Modern website text/markup is not selected. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_42192",
@@ -8716,7 +8871,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_credited_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+          "independence": true
         }
       ],
       "bibliographic_identities": [
@@ -8878,7 +9035,7 @@
       "anonymous_contributors_count": 3,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 209,
@@ -8886,7 +9043,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "vider fixed revision 40044909: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. Actual import markers: line 209 * {{Import:DAF8}}. Separate original credit retained conservatively for Académie française, DAF eighth edition 1932–1935; established collective-edition basis reviewed against CPI L123-3, final-publication term expired 2006-01-01. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_67081",
@@ -8975,7 +9135,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_credited_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+          "independence": true
         }
       ],
       "bibliographic_identities": [
@@ -9095,7 +9257,7 @@
       "anonymous_contributors_count": 10,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 65,
@@ -9133,7 +9295,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "revolver fixed revision 39768270: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. No external import marker is attached to the selected text; bibliographic references do not identify the author of that sentence. Separate original credit retained conservatively for Académie française, DAF eighth edition 1932–1935; established collective-edition basis reviewed against CPI L123-3, final-publication term expired 2006-01-01. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_122389",
@@ -9236,7 +9401,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_credited_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+          "independence": true
         }
       ],
       "bibliographic_identities": [
@@ -9404,7 +9571,7 @@
       "anonymous_contributors_count": 12,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 191,
@@ -9412,7 +9579,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "patience fixed revision 39908613: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. No external import marker is attached to the selected text; bibliographic references do not identify the author of that sentence. Separate original credit retained conservatively for Académie française, DAF eighth edition 1932–1935; established collective-edition basis reviewed against CPI L123-3, final-publication term expired 2006-01-01. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_137644",
@@ -9512,7 +9682,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_credited_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+          "independence": true
         }
       ],
       "bibliographic_identities": [
@@ -9611,7 +9783,7 @@
       "anonymous_contributors_count": 5,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 142,
@@ -9619,7 +9791,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "adresser fixed revision 39718426: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. Actual import markers: line 142 * {{Import:DAF8}}. Separate original credit retained conservatively for Académie française, DAF eighth edition 1932–1935; established collective-edition basis reviewed against CPI L123-3, final-publication term expired 2006-01-01. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_137814",
@@ -9719,7 +9894,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_credited_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+          "independence": true
         }
       ],
       "bibliographic_identities": [
@@ -9835,7 +10012,7 @@
       "anonymous_contributors_count": 2,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 106,
@@ -9848,7 +10025,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "affronter fixed revision 39715718: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. Actual import markers: line 107 * {{Import:DAF8}}. Separate original credit retained conservatively for Académie française, DAF eighth edition 1932–1935; established collective-edition basis reviewed against CPI L123-3, final-publication term expired 2006-01-01. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_148855",
@@ -9948,7 +10128,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_credited_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+          "independence": true
         }
       ],
       "bibliographic_identities": [
@@ -10055,7 +10237,7 @@
       "anonymous_contributors_count": 4,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 103,
@@ -10078,7 +10260,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "avertir fixed revision 38975204: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. Actual import markers: line 103 * {{Import:DAF8}}. Separate original credit retained conservatively for Académie française, DAF eighth edition 1932–1935; established collective-edition basis reviewed against CPI L123-3, final-publication term expired 2006-01-01. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_178770",
@@ -10181,7 +10366,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_credited_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+          "independence": true
         }
       ],
       "bibliographic_identities": [
@@ -10307,7 +10494,7 @@
       "anonymous_contributors_count": 32,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 173,
@@ -10320,7 +10507,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "traître fixed revision 39818840: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. No external import marker is attached to the selected text; bibliographic references do not identify the author of that sentence. Separate original credit retained conservatively for Académie française, DAF eighth edition 1932–1935; established collective-edition basis reviewed against CPI L123-3, final-publication term expired 2006-01-01. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_4133",
@@ -10442,7 +10632,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_credited_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+          "independence": true
         }
       ],
       "bibliographic_identities": [
@@ -10704,7 +10896,7 @@
       "anonymous_contributors_count": 40,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 455,
@@ -10722,7 +10914,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "beau fixed revision 39872918: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. Actual import markers: line 457 * {{Import:DAF8}}. Separate original credit retained conservatively for Académie française, DAF eighth edition 1932–1935; established collective-edition basis reviewed against CPI L123-3, final-publication term expired 2006-01-01. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_7934",
@@ -10831,7 +11026,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_credited_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+          "independence": true
         }
       ],
       "bibliographic_identities": [
@@ -10884,7 +11081,7 @@
       "anonymous_contributors_count": 3,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 19,
@@ -10892,7 +11089,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "nouvel fixed revision 39771293: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. No external import marker is attached to the selected text; bibliographic references do not identify the author of that sentence. Separate original credit retained conservatively for Académie française, DAF eighth edition 1932–1935; established collective-edition basis reviewed against CPI L123-3, final-publication term expired 2006-01-01. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_12292",
@@ -11099,7 +11299,7 @@
       "anonymous_contributors_count": 11,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 193,
@@ -11112,7 +11312,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "parer fixed revision 39883667: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. No external import marker is attached to the selected text; bibliographic references do not identify the author of that sentence. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_20387",
@@ -11261,9 +11464,12 @@
       "anonymous_contributors_count": 0,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "venu fixed revision 39771959: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. No external import marker is attached to the selected text; bibliographic references do not identify the author of that sentence. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_29538",
@@ -11445,7 +11651,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_credited_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+          "independence": true
         }
       ],
       "bibliographic_identities": [
@@ -11534,7 +11742,7 @@
       "anonymous_contributors_count": 7,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 88,
@@ -11547,7 +11755,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "reçu fixed revision 39684103: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. Actual import markers: line 89 * {{Import:DAF8}}. Separate original credit retained conservatively for Académie française, DAF eighth edition 1932–1935; established collective-edition basis reviewed against CPI L123-3, final-publication term expired 2006-01-01. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_41145",
@@ -11657,7 +11868,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_credited_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+          "independence": true
         }
       ],
       "bibliographic_identities": [
@@ -11789,7 +12002,7 @@
       "anonymous_contributors_count": 8,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 104,
@@ -11807,7 +12020,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "assister fixed revision 39717069: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. Actual import markers: line 104 * {{Import:DAF8}}. Separate original credit retained conservatively for Académie française, DAF eighth edition 1932–1935; established collective-edition basis reviewed against CPI L123-3, final-publication term expired 2006-01-01. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_63852",
@@ -11917,7 +12133,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_credited_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+          "independence": true
         }
       ],
       "bibliographic_identities": [
@@ -12064,7 +12282,7 @@
       "anonymous_contributors_count": 10,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 346,
@@ -12077,7 +12295,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "produit fixed revision 39864026: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. Actual import markers: line 346 * {{Import:DAF8}}. Separate original credit retained conservatively for Académie française, DAF eighth edition 1932–1935; established collective-edition basis reviewed against CPI L123-3, final-publication term expired 2006-01-01. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_104462",
@@ -12187,7 +12408,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_credited_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+          "independence": true
         }
       ],
       "bibliographic_identities": [
@@ -12481,7 +12704,7 @@
       "anonymous_contributors_count": 14,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 5,
@@ -12514,7 +12737,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "race fixed revision 39724657: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. Actual import markers: line 291 * {{Import:DAF8}}. Separate original credit retained conservatively for Académie française, DAF eighth edition 1932–1935; established collective-edition basis reviewed against CPI L123-3, final-publication term expired 2006-01-01. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_158644",
@@ -12607,7 +12833,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_credited_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+          "independence": true
         }
       ],
       "bibliographic_identities": [
@@ -12714,7 +12942,7 @@
       "anonymous_contributors_count": 16,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 3,
@@ -12747,7 +12975,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "échouer fixed revision 39956324: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. No external import marker is attached to the selected text; bibliographic references do not identify the author of that sentence. Separate original credit retained conservatively for Académie française, DAF eighth edition 1932–1935; established collective-edition basis reviewed against CPI L123-3, final-publication term expired 2006-01-01. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_193634",
@@ -12934,7 +13165,7 @@
       "anonymous_contributors_count": 30,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 5,
@@ -12962,7 +13193,10 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "allô fixed revision 39322207: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. No external import marker is attached to the selected text; bibliographic references do not identify the author of that sentence. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_93",
@@ -13285,9 +13519,12 @@
       "anonymous_contributors_count": 30,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "nouveau fixed revision 40036910: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. No external import marker is attached to the selected text; bibliographic references do not identify the author of that sentence. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     },
     {
       "id": "b122_fr_610883",
@@ -13382,7 +13619,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_credited_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+          "independence": true
         }
       ],
       "bibliographic_identities": [
@@ -13443,7 +13682,7 @@
       "anonymous_contributors_count": 3,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
       "external_reference_markers": [
         {
           "line_1_based": 13,
@@ -13461,10 +13700,13 @@
           "role": "reference_identity_not_selected_sentence_authorship"
         }
       ],
-      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal."
+      "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "independent_selected_rights_reason": "révolver fixed revision 39424870: the exact selected lexical/IPA and French form/construction spans are separate from attributed quotations, etymology, media and other-language sections. No external import marker is attached to the selected text; bibliographic references do not identify the author of that sentence. Separate original credit retained conservatively for Académie française, DAF eighth edition 1932–1935; established collective-edition basis reviewed against CPI L123-3, final-publication term expired 2006-01-01. Named registries and anonymous counts match all completed API pagination; fixed article/full-history links provide contributor attribution under Wikimedia Terms 7. Wiki transcription/adaptation and Lexique scoped FR/EN/ZH adaptations retain CC BY-SA 4.0, legal text, attribution, modification notice, ShareAlike and no additional restrictions under sections 2(a), 3(a), 3(b), 4. Original moral rights/credit remain separate. Actual assembled notices are parent-owned."
     }
   ],
-  "rights_review": "Author-proposed CC BY-SA 4.0 contribution/adaptation route and separately attributed DAF8/Littré original-work bases; independent selected-span rights review remains pending.",
+  "rights_review": "All 200 selected fields independently pass the exact contributor/import/original-work boundary review. CC BY-SA 4.0 applies to Wiki and Lexique adaptations; DAF8 and Littré retain separate original credit and reviewed original-edition terms. Actual combined package compliance awaits parent assembly.",
   "spelling_relations": [
     {
       "sense_id": "b122-2051-concert-nom-selected",
@@ -13513,7 +13755,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Masculine noun; a musical performance event.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Musical performance event, not concord or a collection of sounds; ordinary concert usage and masculine noun frame match."
     },
     {
       "sense_id": "b122-2052-personnage-nom-selected",
@@ -13562,7 +13807,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Noun; a fictional narrative character of any gender; masculine grammatical form selected.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Fictional narrative character, not a prominent real person or an actor; masculine grammatical form does not restrict the character to a man."
     },
     {
       "sense_id": "b122-2053-distance-nom-selected",
@@ -13611,7 +13859,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Feminine noun; spatial interval.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Spatial length between points or places, not elapsed time or figurative social separation; feminine noun frame matches."
     },
     {
       "sense_id": "b122-2054-urgent-adj-selected",
@@ -13660,7 +13911,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Masculine singular adjective; urgency.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Urgency requiring action without delay; adjectival /yʁ.ʒɑ̃/ is distinct from the pronounced verbal plural form."
     },
     {
       "sense_id": "b122-2055-vague-nom-selected",
@@ -13709,7 +13963,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Feminine noun; a water wave.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Water-wave sense with wind or other impulse and sea/lake/river scope retained; feminine noun is separate from the adjective and masculine noun."
     },
     {
       "sense_id": "b122-2056-médical-adj-selected",
@@ -13758,7 +14015,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Masculine singular adjective; relation to medicine or health.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Ordinary medical relation to medicine or health, not the historical medicinal sense; adjective and recorded isolated pronunciation match."
     },
     {
       "sense_id": "b122-2057-meurtrier-nom-selected",
@@ -13807,7 +14067,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Masculine noun; murderer, with feminine counterpart meurtrière.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Murderer noun; the selected masculine form has the attested feminine counterpart meurtrière. This is not the deadly adjective."
     },
     {
       "sense_id": "b122-2058-date-nom-selected",
@@ -13856,7 +14119,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Feminine noun; the time or date of an event.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Date of an event, whether past or planned, including its indication; not the archaic document-place sense or datte."
     },
     {
       "sense_id": "b122-2059-commande-nom-selected",
@@ -13905,7 +14171,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Feminine noun; a commercial order for work or delivery.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Commercial order for making or delivering something; not a control, a computer command or a verb form."
     },
     {
       "sense_id": "b122-2060-bel-adj-selected",
@@ -14035,7 +14304,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Masculine singular adjective before a noun beginning with a vowel or silent h; exact frozen form bel.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "The bel article and beau agreement table explicitly bind this masculine singular form to pre-noun vowel/silent-h position. Its beauty sense and /bɛl/ do not import the unit noun."
     },
     {
       "sense_id": "b122-2061-cimetière-nom-selected",
@@ -14084,7 +14356,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Masculine noun; burial place.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Ordinary burial-place noun, not a figurative scrapyard; /sim.tjɛʁ/ is an attested isolated variant, not an inferred spelling pronunciation."
     },
     {
       "sense_id": "b122-2062-emprunter-ver-selected",
@@ -14124,7 +14399,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Non-pronominal transitive verb; the borrowed thing is the direct object.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Borrowing a thing as a loan; transitive non-pronominal construction, not following a route or adopting language."
     },
     {
       "sense_id": "b122-2063-humeur-nom-selected",
@@ -14173,7 +14451,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Feminine noun with silent h; state of mind.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Lasting mood, especially pleasant or unpleasant; bodily fluids and the regional masculine noun are excluded. Silent h and feminine frame match."
     },
     {
       "sense_id": "b122-2064-noter-ver-selected",
@@ -14213,7 +14494,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Transitive verb; the information written down is the direct object.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Writing information down to remember it; direct object is the information, not a person graded or musical notation."
     },
     {
       "sense_id": "b122-2065-mortel-adj-selected",
@@ -14262,7 +14546,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Masculine singular adjective; subject to death.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Mortal as subject to death, opposed to immortal; this selects neither deadly nor informal cool, nor the human-being noun."
     },
     {
       "sense_id": "b122-2066-secrétaire-nom-selected",
@@ -14311,7 +14598,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Occupational noun used for a man or woman; correspondence duties selected.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Secretary of either gender performing correspondence duties; the important-letter/message limitation follows the selected occupational definition, not the desk or bird senses."
     },
     {
       "sense_id": "b122-2067-verser-ver-selected",
@@ -14351,7 +14641,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Transitive verb; the liquid is the direct object.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Transitive pouring of a liquid, not paying money, falling crops or capsizing; selected liquid scope fits faire couler."
     },
     {
       "sense_id": "b122-2068-permission-nom-selected",
@@ -14400,7 +14693,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Feminine noun; ordinary authorization.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Permission to do or say something, not specifically military leave; ordinary feminine authorization noun."
     },
     {
       "sense_id": "b122-2069-lac-nom-selected",
@@ -14449,7 +14745,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Masculine noun; inland body of water.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Lake surrounded by land, generally fresh water; generally remains a tendency rather than excluding salt lakes."
     },
     {
       "sense_id": "b122-2070-allo-ono-selected",
@@ -14525,7 +14824,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Telephone interjection; attested unaccented frozen spelling allo.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Exact allo interjection has a French alternative-spelling record for allô and its own /a.lo/; telephone-contact sense comes from allô, not the unrelated noun."
     },
     {
       "sense_id": "b122-2071-dépenser-ver-selected",
@@ -14565,7 +14867,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Transitive verb; money spent is the direct object.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Spending a sum of money to buy something; transitive purchase use, not expenditure of energy or time."
     },
     {
       "sense_id": "b122-2072-ordure-nom-selected",
@@ -14614,7 +14919,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Feminine noun; discarded waste, commonly in the plural ordures.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Discarded waste, ordinarily expressed as plural ordures; the selected singular headword retains the waste sense rather than the insult, obscenity or excrement senses."
     },
     {
       "sense_id": "b122-2073-immeuble-nom-selected",
@@ -14663,7 +14971,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Masculine noun; ordinary urban-building sense.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Common substantial urban-building sense, explicitly plus courant in the source; not legal immovable property or the adjective."
     },
     {
       "sense_id": "b122-2074-tâche-nom-selected",
@@ -14712,7 +15023,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Feminine noun; assigned work; one attested isolated IPA variant selected.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Assigned work or task, not computing or the different unaccented stain noun. /tɑʃ/ is one of the two recorded variants."
     },
     {
       "sense_id": "b122-2075-chouette-adj-selected",
@@ -14761,7 +15075,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Informal adjective, same masculine and feminine form; approval.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Informal evaluative adjective meaning nice/great, retaining the speaker-dependent approval; not an owl or interjection."
     },
     {
       "sense_id": "b122-2076-emploi-nom-selected",
@@ -14810,7 +15127,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Masculine noun; employment or a job.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Employment position in the listed administration/agriculture/commerce/industry sectors; not use of an object or a theatrical role."
     },
     {
       "sense_id": "b122-2077-troupe-nom-selected",
@@ -14859,7 +15179,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Feminine collective noun; a group acting together.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Collective group of people walking or acting together; not limited to actors or soldiers, and no animal or tobacco sense."
     },
     {
       "sense_id": "b122-2078-là-dessus-adv-selected",
@@ -14908,7 +15231,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Adverb; figurative reference to a subject or matter; recorded optional schwa retained.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Figurative reference to a subject, matter or its reality, attested by the selected line and short constructions; optional schwa is retained as recorded."
     },
     {
       "sense_id": "b122-2079-mince-adj-selected",
@@ -14957,7 +15283,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Adjective, same masculine and feminine form; small thickness.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Thin in thickness, not slender body shape or figurative insignificance; distinct adjective frame from mince interjection."
     },
     {
       "sense_id": "b122-2080-mince-ono-selected",
@@ -15015,7 +15344,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Euphemistic interjection; isolated word pronunciation from the article-wide pronunciation section.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Euphemistic exclamation replacing merde, attested by Oh mince; corrected English indefinite article. Article-wide /mɛ̃s/ applies to the isolated interjection, without claiming expressive intonation."
     },
     {
       "sense_id": "b122-2081-assassiner-ver-selected",
@@ -15055,7 +15387,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Transitive verb; the victim is the direct object.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Intentional killing in the selected transitive murder use; not metaphorical annoyance or damage."
     },
     {
       "sense_id": "b122-2082-gorge-nom-selected",
@@ -15104,7 +15439,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Feminine noun; internal throat, as in swallowing or a sore throat.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Internal throat passage, not front of the neck, breasts or mountain gorge; gosier and le dedans bind all meanings to the same ordinary use."
     },
     {
       "sense_id": "b122-2083-avertir-ver-selected",
@@ -15144,7 +15482,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Transitive verb; person notified is the direct object, with de for the information.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Notifying a person of something, including a warning; direct person object and de-complement retained, not the specialized sporting penalty."
     },
     {
       "sense_id": "b122-2084-matériel-nom-selected",
@@ -15193,7 +15534,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Masculine collective noun; materials and tools for production.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Materials and tools for making/designing/creating/producing; second sentence of the selected definition, not the adjective or an exclusively military or computer sense."
     },
     {
       "sense_id": "b122-2085-revolver-nom-selected",
@@ -15287,7 +15631,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Masculine noun; rotating-cylinder handgun; frozen traditional spelling revolver.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Rotating-cylinder handgun, not any pistol; revolver is independently recorded as traditional French spelling of révolver, with its own matching pronunciation."
     },
     {
       "sense_id": "b122-2086-affronter-ver-selected",
@@ -15327,7 +15674,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Non-pronominal transitive verb; the person or thing faced is the direct object.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Boldly confronting or facing a person or thing; selected non-pronominal transitive use does not import reciprocal combat or deception."
     },
     {
       "sense_id": "b122-2087-adresser-ver-selected",
@@ -15367,7 +15717,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Non-pronominal transitive verb; thing sent is direct object, destination follows à; one IPA variant selected.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Sending a thing to a person or place; direct thing object and destination à, not pronominal approaching a person. One recorded /a.dʁe.se/ variant selected."
     },
     {
       "sense_id": "b122-2088-boule-nom-selected",
@@ -15416,7 +15769,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Feminine noun; rounded physical object with the source size tendency retained.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Rounded usually solid object, especially hand-sized; generally and especially preserve tendencies rather than making size/solidity absolute."
     },
     {
       "sense_id": "b122-2089-patience-nom-selected",
@@ -15465,7 +15821,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Feminine noun; calm waiting.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Calm waiting for what is slow to arrive or happen, not perseverance at work or endurance of suffering; everyday patience noun."
     },
     {
       "sense_id": "b122-2090-vider-ver-selected",
@@ -15505,7 +15864,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Transitive verb; container or place emptied is the direct object.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Removing contents from a container or place to make it empty; direct object is the emptied container/place, not leaving or settling a dispute."
     },
     {
       "sense_id": "b122-2091-traître-nom-selected",
@@ -15554,7 +15916,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Noun for a person; masculine form selected, feminine traître or traîtresse attested; circumflex spelling retained.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Person who betrays, not a deceptive object or adjective. Traditional circumflex and attested same-form feminine/traîtresse alternative retained without rebinding."
     },
     {
       "sense_id": "b122-2092-échouer-ver-selected",
@@ -15594,7 +15959,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Intransitive verb; unsuccessful undertaking, without a direct object.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Failing an undertaking or attempt; intransitive selected use, not a grounded vessel or the separately selected exam sense."
     },
     {
       "sense_id": "b122-2093-produit-nom-selected",
@@ -15643,7 +16011,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Masculine noun; commercial product, including services or software.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Commercial product includes items, services and software; series production and named/branded distribution remain in all meanings, excluding mathematical or chemical results."
     },
     {
       "sense_id": "b122-2094-nouvel-adj-selected",
@@ -15773,7 +16144,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Masculine singular prevocalic adjective form nouvel; objectively new sense.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Objectively new, not previously existing; nouvel is the recorded pre-noun masculine singular vowel/silent-h form, with /nu.vɛl/, not nouveau pronunciation."
     },
     {
       "sense_id": "b122-2095-assister-ver-selected",
@@ -15822,7 +16196,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Transitive verb; person helped is the direct object; isolated IPA transcription only from the pronunciation section.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Direct-object help or support of a person, not assister à attendance. The phonetic substring /a.sis.te/ is selected independently from the audio filename/media."
     },
     {
       "sense_id": "b122-2096-race-nom-selected",
@@ -15871,7 +16248,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Feminine noun; domestic-animal breeding sense, such as dog breeds; no human biological classification selected.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Domestic-animal breed subdivision with pure-lineage and morphological or economic-performance criteria. Restored economic qualification in FR/EN/ZH; no human racial classification is selected. Race de chien is everyday usage of this animal sense."
     },
     {
       "sense_id": "b122-2097-venu-adj-selected",
@@ -15929,7 +16309,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Masculine singular adjective, qualified by bien or mal, about development or quality of production; adjectival agreement-table IPA.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Adjectival development/production quality in bien venu or mal venu, supported by the adjective agreement table and examples; not the venir past participle or welcome sense."
     },
     {
       "sense_id": "b122-2098-parer-ver-selected",
@@ -15969,7 +16352,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Non-pronominal transitive verb; the thing adorned is the direct object.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Non-pronominal transitive adorn/embellish, attested by birds adorning banks; not preparing food, blocking a blow or parer à."
     },
     {
       "sense_id": "b122-2099-reçu-adj-selected",
@@ -16018,7 +16404,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Masculine singular adjective; an accepted or established usage or view.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Accepted/established usage or view, supported by usages reçus and maximes reçues; not exam admission or the receipt noun."
     },
     {
       "sense_id": "b122-2100-reçu-nom-selected",
@@ -16067,7 +16456,10 @@
         }
       ],
       "construction_and_flexion_interpretation": "Masculine noun; written acknowledgement of money received.",
-      "independent_review": "pending"
+      "independent_review": "passed_for_source_binding_only",
+      "reviewer": "Independent semantic and selected-rights reviewer #122; separate from author and parent integration owner",
+      "independence": true,
+      "review_reason": "Money receipt under private signature: sous seing privé is material to the selected source and is restored in FR/EN/ZH and usage; not a general acknowledgement of an object or a public authenticated deed."
     }
   ]
 }
