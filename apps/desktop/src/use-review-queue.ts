@@ -5,9 +5,11 @@ import { errorMessage } from './platform/vocabulary';
 import { nextQueueWake, QueueRefresh, readQueue } from './queue-refresh';
 import { subscribeReviewEvents } from './review-events';
 import type { SpeechAudio } from './platform/speech';
+import type { ReviewScope } from './platform/review-scope';
 
 type Status = 'loading' | 'ready' | 'preview' | 'error';
 interface Subscription {
+  readonly scope: ReviewScope | null;
   readonly runtime: RuntimeAdapter; readonly skipped: RefObject<number[]>; readonly advance: RefObject<number>;
   readonly current: RefObject<QueueView | null>; readonly controller: RefObject<QueueRefresh | null>;
   readonly latest: RefObject<QueueView | null>;
@@ -41,8 +43,11 @@ function queueAudio(result: QueueView | null, pending: string) {
 }
 
 function useQueueEvents(options: Subscription) {
-  const { runtime, skipped, advance, current, latest, controller, pendingMessage, setWakeAt, setError, setStatus, setView, setAudio } = options;
+  const { runtime, scope, skipped, advance, current, latest, controller, pendingMessage, setWakeAt, setError, setStatus, setView, setAudio } = options;
   useEffect(() => {
+    if (!scope) return;
+    advance.current += 1; current.current = null; latest.current = null;
+    setView(null); setAudio(null); setWakeAt(undefined); setStatus('loading'); setError('');
     let active = true;
     const refresh = new QueueRefresh({ visible: () => document.visibilityState !== 'hidden',
       failed: (cause) => { setError(errorMessage(cause)); setStatus('error'); },
@@ -51,6 +56,7 @@ function useQueueEvents(options: Subscription) {
         const valid = () => active && version === advance.current;
         const result = await readQueue(runtime, skipped.current);
         if (!valid()) return;
+        if (result && JSON.stringify(result.summary.scope) !== JSON.stringify(scope)) throw new Error('Queue response does not match the applied review scope');
         latest.current = result;
         setWakeAt(nextQueueWake(result)); setError('');
         if (!current.current?.queue.cards.length) {
@@ -66,10 +72,10 @@ function useQueueEvents(options: Subscription) {
       failed: (cause) => setError(errorMessage(cause)) });
     refresh.invalidate(true);
     return () => { active = false; refresh.stop(); stop(); controller.current = null; };
-  }, [runtime, skipped, advance, current, latest, controller, pendingMessage, setWakeAt, setError, setStatus, setView, setAudio]);
+  }, [runtime, scope, skipped, advance, current, latest, controller, pendingMessage, setWakeAt, setError, setStatus, setView, setAudio]);
 }
 
-export function useReviewQueue(runtime: RuntimeAdapter, pending: string) {
+export function useReviewQueue(runtime: RuntimeAdapter, pending: string, scope: ReviewScope | null) {
   const [view, setView] = useState<QueueView | null>(null);
   const [audio, setAudio] = useState<SpeechAudio | null>(null);
   const [status, setStatus] = useState<Status>('loading');
@@ -81,7 +87,7 @@ export function useReviewQueue(runtime: RuntimeAdapter, pending: string) {
   const advance = useRef(0);
   const controller = useRef<QueueRefresh | null>(null);
   const pendingMessage = useRef(pending); pendingMessage.current = pending;
-  useQueueEvents({ runtime, skipped, current, latest, advance, controller, pendingMessage, setWakeAt, setError, setStatus, setView, setAudio });
+  useQueueEvents({ runtime, scope, skipped, current, latest, advance, controller, pendingMessage, setWakeAt, setError, setStatus, setView, setAudio });
   useEffect(() => {
     if (wakeAt === undefined || document.visibilityState === 'hidden') return;
     const timer = window.setTimeout(() => controller.current?.invalidate(true), Math.min(2_147_483_647, Math.max(1, wakeAt - Date.now())));

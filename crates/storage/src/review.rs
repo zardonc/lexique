@@ -5,6 +5,18 @@ use serde::{Deserialize, Serialize};
 
 use crate::StorageError;
 
+// The same predicate filters metadata and rating eligibility before quota admission.
+pub(crate) const SCOPE_CONDITION: &str = "(json_extract(?1,'$.kind')='all' OR (json_extract(?1,'$.kind')='vocabulary' AND c.kind IN ('recognition','listening') AND (EXISTS(SELECT 1 FROM record_categories rc JOIN json_each(?1,'$.category_ids') selected ON selected.value=rc.category_id WHERE rc.record_id=c.vocabulary_id) OR (json_extract(?1,'$.include_uncategorized')=1 AND NOT EXISTS(SELECT 1 FROM record_categories rc WHERE rc.record_id=c.vocabulary_id)))))";
+
+fn card_in_scope(connection: &Connection, card_id: i64) -> Result<bool, StorageError> {
+    let encoded = serde_json::to_string(&crate::review_scope(connection)?)?;
+    Ok(connection.query_row(
+        &format!("SELECT EXISTS(SELECT 1 FROM review_cards c WHERE {SCOPE_CONDITION} AND c.id=?2)"),
+        params![encoded, card_id],
+        |row| row.get(0),
+    )?)
+}
+
 pub fn auto_enroll(connection: &Connection) -> Result<bool, StorageError> {
     let value: Option<String> = connection
         .query_row(
@@ -232,8 +244,10 @@ pub fn queue_audio_metadata(
         missing_words: Vec::new(),
         next_due: None,
     };
-    let mut query=connection.prepare("SELECT c.id,c.vocabulary_id,json_extract(p.state,'$.due_at'),COALESCE(v.sealed=1 AND v.gc_state='live' AND v.verification IN ('unverified','verified'),0) FROM review_cards c LEFT JOIN review_progress p ON p.card_id=c.id LEFT JOIN word_audio_selections s USING(vocabulary_id) LEFT JOIN speech_versions v ON v.locator=s.current_version WHERE c.kind='listening' AND NOT EXISTS(SELECT 1 FROM review_paused q WHERE q.vocabulary_id=c.vocabulary_id) ORDER BY c.id")?;
-    for row in query.query_map([], |r| {
+    let condition = SCOPE_CONDITION;
+    let scope = serde_json::to_string(&crate::review_scope(connection)?)?;
+    let mut query=connection.prepare(&format!("SELECT c.id,c.vocabulary_id,json_extract(p.state,'$.due_at'),COALESCE(v.sealed=1 AND v.gc_state='live' AND v.verification IN ('unverified','verified'),0) FROM review_cards c LEFT JOIN review_progress p ON p.card_id=c.id LEFT JOIN word_audio_selections s USING(vocabulary_id) LEFT JOIN speech_versions v ON v.locator=s.current_version WHERE {condition} AND c.kind='listening' AND NOT EXISTS(SELECT 1 FROM review_paused q WHERE q.vocabulary_id=c.vocabulary_id) ORDER BY c.id"))?;
+    for row in query.query_map([scope], |r| {
         Ok((
             r.get::<_, i64>(0)?,
             r.get::<_, i64>(1)?,
@@ -268,9 +282,11 @@ pub struct ReviewQueue {
 }
 
 pub fn review_card_inventory(connection: &Connection) -> Result<Vec<QueueCard>, StorageError> {
+    let condition = SCOPE_CONDITION;
+    let scope = serde_json::to_string(&crate::review_scope(connection)?)?;
     let mut statement =
-        connection.prepare("SELECT id, vocabulary_id, kind FROM review_cards WHERE vocabulary_id NOT IN (SELECT vocabulary_id FROM review_paused) ORDER BY id")?;
-    let rows = statement.query_map([], |row| {
+        connection.prepare(&format!("SELECT c.id, c.vocabulary_id, c.kind FROM review_cards c WHERE {condition} AND c.vocabulary_id NOT IN (SELECT vocabulary_id FROM review_paused) ORDER BY c.id"))?;
+    let rows = statement.query_map([scope], |row| {
         Ok(QueueCard {
             id: row.get(0)?,
             vocabulary_id: row.get(1)?,
@@ -732,6 +748,9 @@ fn eligibility(
     now: i64,
     timezone: &str,
 ) -> Result<(Option<String>, Option<i64>), StorageError> {
+    if !card_in_scope(connection, card_id)? {
+        return Ok((Some("scope".into()), None));
+    }
     let paused: bool = connection.query_row(
         "SELECT EXISTS(SELECT 1 FROM review_cards c JOIN review_paused p ON p.vocabulary_id = c.vocabulary_id WHERE c.id = ?1)",
         [card_id], |row| row.get(0),

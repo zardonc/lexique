@@ -21,6 +21,8 @@ import { restoreRuntime } from './restore';
 import { matchesReviewRecord, notesRuntime, reviewRecordSchema } from './notes';
 import { noteImportRuntime } from './note-import';
 import { noteExportRuntime } from './note-export';
+import { reviewScopeSchema, type ReviewScope } from './review-scope';
+import { applyQueueDelta, queueCursor } from './queue-delta';
 
 async function dictionaryUpload(file: File) {
   if (!/\.mdx$/i.test(file.name) || !file.size || file.size > 128 * 1024 * 1024) throw { code: 'limit', message: 'MDX: non-empty, at most 128 MiB' };
@@ -57,7 +59,7 @@ const scheduleCardSchema = z.object({ phase: z.enum(['new', 'learning_first', 'l
   memory: z.object({ stability: z.number().finite(), difficulty: z.number().finite() }).strict().nullable(),
   last_review_at: z.number().int().safe().nullable(), due_at: z.number().int().safe().nullable() }).strict();
 const progressSchema = z.object({ revision: z.number().int().nonnegative().safe(), card: scheduleCardSchema }).strict();
-const availabilitySchema = z.object({ progress: progressSchema, reason: z.enum(['clock', 'due', 'quota', 'deferred', 'paused']).nullable(),
+const availabilitySchema = z.object({ progress: progressSchema, reason: z.enum(['clock', 'due', 'quota', 'deferred', 'paused', 'scope']).nullable(),
   available_at: z.number().int().safe().nullable() }).strict();
 export const rateRequestSchema = z.object({ operation: z.string().min(1).max(128), card_id: z.number().int().positive().safe(),
   expected_revision: z.number().int().nonnegative().safe(), rating: ratingSchema, timezone: z.string().min(1).max(128) }).strict();
@@ -67,10 +69,10 @@ const scheduledSchema = z.object({ card: scheduleCardSchema, elapsed_days: z.num
   retention_percent: z.number().int().min(70).max(99), timezone_database: z.string() }).strict();
 const rateOutcomeSchema = z.discriminatedUnion('status', [
   z.object({ status: z.literal('committed'), result: scheduledSchema }).strict(),
-  z.object({ status: z.literal('rejected'), code: z.enum(['clock', 'due', 'quota', 'deferred', 'paused', 'conflict', 'invalid']), detail: z.string() }).strict(),
+  z.object({ status: z.literal('rejected'), code: z.enum(['clock', 'due', 'quota', 'deferred', 'paused', 'scope', 'conflict', 'invalid']), detail: z.string() }).strict(),
 ]);
 export class RatingRejected extends Error {
-  constructor(readonly code: 'clock' | 'due' | 'quota' | 'deferred' | 'paused' | 'conflict' | 'invalid', detail: string) { super(detail); }
+  constructor(readonly code: 'clock' | 'due' | 'quota' | 'deferred' | 'paused' | 'scope' | 'conflict' | 'invalid', detail: string) { super(detail); }
 }
 export class UndoRejected extends Error {}
 export class AudioGenerationFailed extends Error {}
@@ -93,7 +95,7 @@ const windowEntrySchema = z.object({ card: queueCardSchema, record: reviewRecord
   .refine((value) => matchesReviewRecord(value.record, value.card) && (value.card.kind !== 'listening' || value.version !== null && value.content_hash !== null)
     && (value.card.kind !== 'grammar' || value.version === null && value.content_hash === null && value.audio === null), 'Invalid verified queue entry');
 const queuePayloadSchema = z.object({ queue: z.object({ cards: z.array(queueCardSchema).max(4), reason: z.enum(['clock', 'due', 'quota', 'deferred']).nullable(), available_at: z.number().int().safe().nullable() }).strict(), record: reviewRecordSchema.nullable(), audio_pending: z.boolean(), audio_error: z.string().nullable(), audio_vocabulary_id: z.number().int().positive().safe().nullable().default(null),
-  summary: z.object({ admitted_count: z.number().int().nonnegative().safe(), audio_pending_count: z.number().int().nonnegative().safe(), missing_vocabulary_ids: z.array(z.number().int().positive().safe()).max(100), verification_pending: z.boolean(), learning_day: z.string(), timezone: z.string().min(1).max(128), revision: z.number().int().nonnegative().safe(), unknown_legacy: z.boolean().default(false) }).strict(),
+  summary: z.object({ scope: reviewScopeSchema, admitted_count: z.number().int().nonnegative().safe(), audio_pending_count: z.number().int().nonnegative().safe(), missing_vocabulary_ids: z.array(z.number().int().positive().safe()).max(100), verification_pending: z.boolean(), learning_day: z.string(), timezone: z.string().min(1).max(128), revision: z.number().int().nonnegative().safe(), unknown_legacy: z.boolean().default(false) }).strict(),
   delta: z.object({ before_revision: z.number().int().nonnegative().safe().nullable(), after_revision: z.number().int().nonnegative().safe(), removed: z.array(z.number().int().positive().safe()).max(4), order: z.array(z.number().int().positive().safe()).max(4) }).strict(),
   window: z.array(windowEntrySchema).max(4), metrics: z.object({ metadata_candidates: z.number().int().min(0).max(50), strict_probes: z.number().int().min(0).max(8), compressed_bytes: z.number().int().min(0).max(33_554_432), payload_bytes: z.number().int().min(0).max(33_554_432), validation_wait_ms: z.number().nonnegative().finite(), metadata_loaded_rows: z.number().int().nonnegative().safe(), parsed_progress: z.number().int().nonnegative().safe(), metadata_rebuilt: z.boolean(), rebuild_reason: z.string().nullable(), database_ms: z.number().nonnegative().finite() }).strict() }).strict()
   .refine((value) => value.delta.after_revision === value.summary.revision && value.delta.order.length === value.queue.cards.length && value.delta.order.every((id, index) => id === value.queue.cards[index]?.id), 'Invalid queue delta order')
@@ -104,27 +106,7 @@ const queueViewSchema = queuePayloadSchema
 export type QueueView = z.infer<typeof queueViewSchema>;
 
 let receivedQueue: QueueView | null = null;
-function queueCursor(view: QueueView | null) {
-  return view && { revision: view.summary.revision, window: view.window.map((entry) => ({ card: entry.card,
-    record_revision: entry.record.revision, progress_revision: entry.progress.revision,
-    version: entry.version, content_hash: entry.content_hash })) };
-}
-function reuseQueueAudio(entry: QueueView['window'][number], known: QueueView['window'][number] | undefined) {
-  if (entry.audio !== null) return entry.audio;
-  if (!known || known.version !== entry.version || known.content_hash !== entry.content_hash || known.card.vocabulary_id !== entry.card.vocabulary_id) return null;
-  return known.audio;
-}
-function applyQueueDelta(payload: z.infer<typeof queuePayloadSchema>, previous: QueueView | null) {
-  const { delta } = payload;
-  if (delta.before_revision !== null && delta.before_revision !== previous?.summary.revision) throw new Error('Queue delta revision mismatch');
-  const entries = new Map(delta.before_revision === null ? [] : previous?.window.map((entry) => [entry.card.id, entry]));
-  for (const id of delta.removed) entries.delete(id);
-  for (const entry of payload.window) {
-    entries.set(entry.card.id, { ...entry, audio: reuseQueueAudio(entry, entries.get(entry.card.id)) });
-  }
-  const window = delta.order.map((id) => { const entry = entries.get(id); if (!entry) throw new Error('Queue delta references an unknown card'); return entry; });
-  return queueViewSchema.parse({ ...payload, window });
-}
+let queueContext = 0;
 
 export const batchRequestSchema = z.object({ operation: z.string().min(1).max(128), vocabulary_ids: z.array(z.number().int().positive().safe()).min(1).max(10_000) }).strict().readonly();
 const batchSchema = z.object({ operation: z.string().min(1).max(128), cancelled: z.boolean(), items: z.array(z.object({
@@ -193,6 +175,7 @@ export interface RuntimeAdapter extends Readonly<typeof notesRuntime>, Readonly<
   readonly undoTarget: () => Promise<string | null>;
   readonly undoReview: (operation: string, ratingOperation: string) => Promise<{ readonly queue_rebuilt: boolean } | null>;
   readonly reviewSettings: (settings?: ReviewSettings) => Promise<ReviewSettings | null>;
+  readonly reviewScope: (scope?: ReviewScope) => Promise<ReviewScope | null>;
   readonly reviewQueue: (skipped?: readonly number[]) => Promise<QueueView | null>;
   readonly generateSpeech: (id: number, regenerate?: boolean, operation?: string) => Promise<SpeechAudio | null>;
   readonly previewSpeech: (text: string, voice?: SpeechPreferences['voice']) => Promise<SpeechAudio | null>;
@@ -449,6 +432,12 @@ export const runtime: RuntimeAdapter = {
     if (!isTauri()) return null;
     return reviewSettingsSchema.parse(await invoke('review_settings', { settings: settings === undefined ? null : reviewSettingsSchema.parse(settings) }));
   },
+  async reviewScope(scope) {
+    if (!isTauri()) return null;
+    const result = reviewScopeSchema.parse(await invoke('review_scope', { scope: scope === undefined ? null : reviewScopeSchema.parse(scope) }));
+    if (scope !== undefined) { queueContext += 1; receivedQueue = null; }
+    return result;
+  },
   async undoTarget() {
     if (!isTauri()) return null;
     return z.string().min(1).max(128).nullable().parse(await invoke('review_undo_target'));
@@ -462,9 +451,11 @@ export const runtime: RuntimeAdapter = {
   },
   async reviewQueue(skipped = []) {
     if (!isTauri()) return null;
+    const context = queueContext;
     const previous = receivedQueue;
     const payload = queuePayloadSchema.parse(await invoke('review_queue', { timezone: Intl.DateTimeFormat().resolvedOptions().timeZone, skipped: z.array(z.number().int().positive().safe()).max(10_000).parse(skipped), cursor: queueCursor(previous) }));
-    const result = applyQueueDelta(payload, previous);
+    if (queueContext !== context) throw new Error('Queue response belongs to an earlier scope');
+    const result = queueViewSchema.parse(applyQueueDelta(payload, previous));
     if (receivedQueue !== previous) throw new Error('Queue response arrived out of sequence');
     receivedQueue = result;
     return result;

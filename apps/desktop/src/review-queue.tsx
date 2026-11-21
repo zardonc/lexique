@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useReviewQueue } from './use-review-queue';
+import { ReviewScopeSelector, useReviewScope } from './use-review-scope';
 import type { Locale } from './content';
 import type { SpeechAudio } from './platform/speech';
 import type { NotebookText } from './notebook-content';
@@ -55,13 +56,16 @@ export function ReviewQueuePanel({ runtime, locale, text }: { readonly runtime: 
   const labels = messages[locale];
   const [rebuilt, setRebuilt] = useState(false);
   const [ratingVersion, setRatingVersion] = useState(0);
-  const { view, audio, status, error, refresh, next, retry, skip } = useReviewQueue(runtime, text.listeningPending);
-  async function rated() { setRatingVersion((version) => version + 1); await next(); }
+  const scope = useReviewScope(runtime);
+  const { view, audio, status, error, refresh, next, retry, skip } = useReviewQueue(runtime, text.listeningPending, scope.applied);
+  async function rated() { setRatingVersion((version) => version + 1); await next(); await scope.applyPending(); }
+  function skipped(id: number) { if (scope.busy) return; skip(id); void scope.applyPending(); }
   return <section aria-label={labels.loading}>
+    <ReviewScopeSelector state={scope} locale={locale} hasCard={Boolean(view?.queue.cards.length)} />
     {status === 'loading' && <p role="status">{labels.loading}</p>}
     {status === 'preview' && <p>{labels.preview}</p>}
     {error && <p role="alert">{labels.error}: {error}</p>}
-    {view && <ReadyQueue view={view} audio={audio} runtime={runtime} text={text} refresh={rated} labels={labels} skip={skip} />}
+    {view && !scope.busy && <ReadyQueue view={view} audio={audio} runtime={runtime} text={text} refresh={rated} labels={labels} skip={skipped} />}
     {rebuilt && <p role="status">{labels.rebuilt}</p>}
     <QueueActions status={status} view={view} runtime={runtime} text={text} labels={labels} refresh={refresh} retry={retry} setRebuilt={setRebuilt} ratingVersion={ratingVersion} />
   </section>;

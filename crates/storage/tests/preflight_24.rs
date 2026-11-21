@@ -7,7 +7,7 @@ use std::{
 
 use candidate as review;
 pub use candidate::{QueueAudioMetadata, QueueCard, ReviewProgress};
-pub use lexique_storage::StorageError;
+pub use lexique_storage::{ReviewScope, StorageError, review_scope};
 #[path = "../src/queue_cache.rs"]
 mod queue_cache;
 pub use queue_cache::*;

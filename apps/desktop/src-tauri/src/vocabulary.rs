@@ -1157,3 +1157,33 @@ pub fn finish_close(app: tauri::AppHandle) -> Result<(), String> {
     }
     result
 }
+
+#[tauri::command]
+pub async fn review_scope(
+    app: tauri::AppHandle,
+    path: State<'_, DatabasePath>,
+    scope: Option<lexique_storage::ReviewScope>,
+) -> Result<lexique_storage::ReviewScope, String> {
+    let admission = scope
+        .as_ref()
+        .map(|_| crate::maintenance::admit_app(&app))
+        .transpose()?;
+    let reader = scope
+        .is_none()
+        .then(|| crate::maintenance::admit_reader_app(&app))
+        .transpose()?;
+    let path = DatabasePath(path.0.clone());
+    tauri::async_runtime::spawn_blocking(move || {
+        let _admission = admission;
+        let _reader = reader;
+        let connection = open(&path)?;
+        if let Some(scope) = scope {
+            lexique_storage::set_review_scope(&connection, &scope)
+                .map_err(|error| error.to_string())?;
+            crate::speech_tasks::changed(&app);
+        }
+        lexique_storage::review_scope(&connection).map_err(|error| error.to_string())
+    })
+    .await
+    .map_err(|error| format!("Review scope task failed: {error}"))?
+}
