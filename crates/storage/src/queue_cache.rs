@@ -59,6 +59,7 @@ pub struct QueueCache {
     initialized: bool,
     day: String,
     timezone: String,
+    scope: crate::ReviewScope,
     pub(crate) metrics: QueueCacheMetrics,
 }
 
@@ -80,6 +81,10 @@ impl QueueCache {
         self.revision
     }
 
+    pub fn scope(&self) -> &crate::ReviewScope {
+        &self.scope
+    }
+
     pub fn invalidate(&mut self) {
         self.initialized = false;
     }
@@ -94,6 +99,8 @@ impl QueueCache {
         day: &str,
         timezone: &str,
     ) -> Result<QueueCacheMetrics, StorageError> {
+        let scope = crate::review_scope(connection)?;
+        let encoded_scope = serde_json::to_string(&scope)?;
         let revision = queue_revision(connection)?;
         let changes = if self.initialized {
             queue_changes_since(connection, self.revision)?
@@ -109,6 +116,7 @@ impl QueueCache {
         let collection = changes.iter().any(|change| change.kind == "collection");
         let context = self.day != day
             || self.timezone != timezone
+            || self.scope != scope
             || changes.iter().any(|c| c.kind == "context");
         let mut metrics = QueueCacheMetrics::default();
         if !self.initialized || gap || collection || context {
@@ -126,8 +134,9 @@ impl QueueCache {
                 .into(),
             );
             self.cards.clear();
-            let mut query=connection.prepare(&format!("SELECT {CARD_COLUMNS} FROM review_cards c LEFT JOIN review_progress p ON p.card_id=c.id WHERE NOT EXISTS(SELECT 1 FROM review_paused q WHERE q.vocabulary_id=c.vocabulary_id) ORDER BY c.id"))?;
-            for row in query.query_map([], card_row)? {
+            let condition = crate::review::SCOPE_CONDITION;
+            let mut query=connection.prepare(&format!("SELECT {CARD_COLUMNS} FROM review_cards c LEFT JOIN review_progress p ON p.card_id=c.id WHERE {condition} AND NOT EXISTS(SELECT 1 FROM review_paused q WHERE q.vocabulary_id=c.vocabulary_id) ORDER BY c.id"))?;
+            for row in query.query_map([&encoded_scope], card_row)? {
                 let (card, revision, state) = row?;
                 metrics.loaded_rows += 1;
                 metrics.parsed_progress += usize::from(state.is_some());
@@ -174,9 +183,16 @@ impl QueueCache {
                 }
             }
             for chunk in cards.into_iter().collect::<Vec<_>>().chunks(100) {
+                for card in chunk {
+                    self.cards.remove(card);
+                }
                 let placeholders = vec!["?"; chunk.len()].join(",");
-                let mut query=connection.prepare(&format!("SELECT {CARD_COLUMNS} FROM review_cards c LEFT JOIN review_progress p ON p.card_id=c.id WHERE c.id IN ({placeholders})"))?;
-                for row in query.query_map(rusqlite::params_from_iter(chunk), card_row)? {
+                let condition = crate::review::SCOPE_CONDITION;
+                let mut query=connection.prepare(&format!("SELECT {CARD_COLUMNS} FROM review_cards c LEFT JOIN review_progress p ON p.card_id=c.id WHERE {condition} AND c.id IN ({placeholders})"))?;
+                let parameters =
+                    std::iter::once(rusqlite::types::Value::Text(encoded_scope.clone()))
+                        .chain(chunk.iter().map(|id| rusqlite::types::Value::Integer(*id)));
+                for row in query.query_map(rusqlite::params_from_iter(parameters), card_row)? {
                     let (card, revision, state) = row?;
                     metrics.loaded_rows += 1;
                     metrics.parsed_progress += usize::from(state.is_some());
@@ -219,6 +235,7 @@ impl QueueCache {
         self.day = day.into();
         self.timezone = timezone.into();
         self.revision = revision;
+        self.scope = scope;
         Ok(metrics)
     }
 
@@ -228,7 +245,12 @@ impl QueueCache {
         skipped: &HashSet<i64>,
     ) -> crate::QueueAudioMetadata {
         let mut metadata = crate::QueueAudioMetadata {
-            ready: self.ready.clone(),
+            ready: self
+                .cards
+                .values()
+                .map(|(card, _)| card.vocabulary_id)
+                .filter(|id| self.ready.contains(id))
+                .collect(),
             pending_count: 0,
             missing_words: Vec::new(),
             next_due: None,

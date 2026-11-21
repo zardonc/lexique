@@ -314,6 +314,7 @@ impl KnownEntry {
 #[serde(deny_unknown_fields)]
 pub struct QueueCursor {
     pub revision: i64,
+    pub scope: storage::ReviewScope,
     pub window: Vec<KnownEntry>,
 }
 impl QueueCursor {
@@ -330,6 +331,7 @@ impl QueueCursor {
             })
         }
         self.revision >= 0
+            && self.scope.validate().is_ok()
             && self.revision <= 9_007_199_254_740_991
             && self.window.len() <= WINDOW_LIMIT
             && self.window.iter().all(|entry| {
@@ -364,6 +366,7 @@ pub struct QueueDelta {
 }
 #[derive(Serialize)]
 pub struct Summary {
+    pub scope: storage::ReviewScope,
     pub admitted_count: usize,
     pub audio_pending_count: usize,
     pub missing_vocabulary_ids: Vec<i64>,
@@ -585,6 +588,7 @@ pub fn read(
         audio_error = diagnostics.error;
     }
     let summary = Summary {
+        scope: cache.scope().clone(),
         admitted_count,
         audio_pending_count: snapshot.audio.pending_count,
         missing_vocabulary_ids: snapshot.audio.missing_words,
@@ -595,7 +599,9 @@ pub fn read(
         unknown_legacy: diagnostics.unknown_legacy,
     };
     let cursor = cursor.filter(|cursor| {
-        cursor.revision <= summary.revision && summary.revision - cursor.revision <= 1024
+        cursor.scope == summary.scope
+            && cursor.revision <= summary.revision
+            && summary.revision - cursor.revision <= 1024
     });
     let order: Vec<_> = window.iter().map(|entry| entry.card.id).collect();
     let removed = cursor.map_or_else(Vec::new, |cursor| {
