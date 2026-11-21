@@ -113,6 +113,7 @@ class Batch129Tests(unittest.TestCase):
         self.assertFalse(review["independent_acceptance"])
         self.assertIsNone(review["reviewer"])
         self.assertEqual(rights["independent_rights_fields_accepted"], 0)
+        self.assertIn("1966-01-01", rights["original_daf8_basis_scope"])
         self.assertTrue(rights["authority_captures"])
         for group in read("groups.json"):
             sense = group["senses"][0]
