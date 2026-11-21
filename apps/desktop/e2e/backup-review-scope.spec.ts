@@ -22,13 +22,13 @@ for (const item of cases) {
       const restored = () => sessionStorage.getItem('test-scope-restored') === 'yes';
       const applied = () => restored() ? scope : { kind: 'vocabulary', category_ids: [8], include_uncategorized: false };
       native.invoke = async (command, args, options) => {
-        if (command === 'review_scope' || command === 'learning_categories' || command.startsWith('backup_')) {
+        if (['review_scope', 'learning_categories'].includes(command) || command.startsWith('backup_')) {
           window.testNative.calls.push({ command, args });
         }
         if (command === 'review_scope') return applied();
         if (command === 'learning_categories') return restored()
           ? [{ id: 7, name: 'Voyage' }, { id: 8, name: 'École' }] : [{ id: 8, name: 'Destination' }];
-        if (command === 'backup_preview_start' || command === 'backup_preview_status') return preview;
+        if (['backup_preview_start', 'backup_preview_status'].includes(command)) return preview;
         if (command === 'backup_restore_start') {
           sessionStorage.setItem('test-scope-restored', 'yes');
           return restart;
