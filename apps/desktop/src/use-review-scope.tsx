@@ -6,9 +6,9 @@ import type { ReviewScope } from './platform/review-scope';
 import { errorMessage } from './platform/vocabulary';
 
 const messages = {
-  zh: { label: '复习范围', all: '全部复习', choose: '请选择复习范围', current: (name: string) => `当前范围：${name}`, pending: (name: string) => `将在当前卡片评分或跳过后应用：${name}`, readError: '复习范围读取失败', saveError: '复习范围保存失败', retryRead: '重读复习范围', retrySave: '重试保存复习范围' },
-  en: { label: 'Review scope', all: 'All reviews', choose: 'Choose a review scope', current: (name: string) => `Applied scope: ${name}`, pending: (name: string) => `Applies after rating or skipping the current card: ${name}`, readError: 'Could not read review scope', saveError: 'Could not save review scope', retryRead: 'Reload review scope', retrySave: 'Retry saving review scope' },
-  fr: { label: 'Périmètre de révision', all: 'Toutes les révisions', choose: 'Choisissez un périmètre', current: (name: string) => `Périmètre actuel : ${name}`, pending: (name: string) => `S’appliquera après l’évaluation ou le passage de la carte actuelle : ${name}`, readError: 'Lecture du périmètre impossible', saveError: 'Enregistrement du périmètre impossible', retryRead: 'Relire le périmètre', retrySave: 'Réessayer l’enregistrement du périmètre' },
+  zh: { label: '复习范围', all: '全部复习', uncategorized: '未分类', choose: '请选择复习范围', current: (name: string) => `当前范围：${name}`, pending: (name: string) => `将在当前卡片评分或跳过后应用：${name}`, readError: '复习范围读取失败', saveError: '复习范围保存失败', retryRead: '重读复习范围', retrySave: '重试保存复习范围' },
+  en: { label: 'Review scope', all: 'All reviews', uncategorized: 'Uncategorized', choose: 'Choose a review scope', current: (name: string) => `Applied scope: ${name}`, pending: (name: string) => `Applies after rating or skipping the current card: ${name}`, readError: 'Could not read review scope', saveError: 'Could not save review scope', retryRead: 'Reload review scope', retrySave: 'Retry saving review scope' },
+  fr: { label: 'Périmètre de révision', all: 'Toutes les révisions', uncategorized: 'Sans catégorie', choose: 'Choisissez un périmètre', current: (name: string) => `Périmètre actuel : ${name}`, pending: (name: string) => `S’appliquera après l’évaluation ou le passage de la carte actuelle : ${name}`, readError: 'Lecture du périmètre impossible', saveError: 'Enregistrement du périmètre impossible', retryRead: 'Relire le périmètre', retrySave: 'Réessayer l’enregistrement du périmètre' },
 } as const;
 
 export function useReviewScope(runtime: RuntimeAdapter) {
@@ -39,18 +39,14 @@ export function useReviewScope(runtime: RuntimeAdapter) {
     } catch (cause) { setError(errorMessage(cause)); }
     finally { saving.current = false; setBusy(false); }
   }
-  function select(value: string, hasCard: boolean) {
-    const choice: ReviewScope = value === 'all' ? { kind: 'all' } : { kind: 'vocabulary', category_ids: [Number(value)], include_uncategorized: false };
+  function select(selection: ReviewScope, hasCard: boolean) {
+    const choice: ReviewScope = selection.kind === 'vocabulary' && selection.category_ids.length === 0 && !selection.include_uncategorized
+      ? { kind: 'needs_selection' } : selection;
     const pending = JSON.stringify(choice) === JSON.stringify(applied) ? null : choice;
     setPending(pending); pendingRef.current = pending; setError('');
     if (!hasCard) void applyPending();
   }
   return { applied, pending, categories, busy, error, select, applyPending, retryRead: () => { setError(''); setVersion((value) => value + 1); } };
-}
-
-function scopeValue(scope: ReviewScope | null) {
-  if (scope?.kind === 'all') return 'all';
-  return scope?.kind === 'vocabulary' ? String(scope.category_ids[0] ?? '') : '';
 }
 
 export function ReviewScopeSelector({ state, locale, hasCard }: {
@@ -59,17 +55,22 @@ export function ReviewScopeSelector({ state, locale, hasCard }: {
   const labels = messages[locale];
   function name(scope: ReviewScope | null) {
     return scope?.kind === 'all' ? labels.all : scope?.kind === 'vocabulary'
-      ? scope.category_ids.map((id) => state.categories.find((category) => category.id === id)?.name ?? labels.choose).join(', ')
+      ? [...scope.category_ids.map((id) => state.categories.find((category) => category.id === id)?.name ?? labels.choose), ...(scope.include_uncategorized ? [labels.uncategorized] : [])].join(', ')
       : labels.choose;
   }
-  const selected = state.pending ?? state.applied;
-  const value = scopeValue(selected);
+  const selected = state.pending ?? state.applied ?? { kind: 'needs_selection' };
+  const conditions = selected.kind === 'vocabulary' ? selected : { category_ids: [], include_uncategorized: false };
+  const ids: readonly number[] = conditions.category_ids;
+  const uncategorized = conditions.include_uncategorized;
   return <div>
-    <label>{labels.label} <select aria-label={labels.label} value={value} disabled={!state.applied || state.busy}
-      onChange={(event) => state.select(event.target.value, hasCard)}>
-      <option value="" disabled>{labels.choose}</option><option value="all">{labels.all}</option>
-      {state.categories.map((category) => <option key={category.id} value={category.id}>{category.name}</option>)}
-    </select></label>
+    <fieldset className="category-picker" disabled={!state.applied || state.busy}><legend>{labels.label}</legend>
+      <label><input type="checkbox" checked={selected.kind === 'all'}
+        onChange={(event) => state.select({ kind: event.target.checked ? 'all' : 'needs_selection' }, hasCard)} />{labels.all}</label>
+      {state.categories.map((category) => <label key={category.id}><input type="checkbox" checked={ids.includes(category.id)}
+        onChange={(event) => state.select({ kind: 'vocabulary', category_ids: event.target.checked ? [...ids, category.id].sort((a, b) => a - b) : ids.filter((id) => id !== category.id), include_uncategorized: uncategorized }, hasCard)} />{category.name}</label>)}
+      <label><input type="checkbox" checked={uncategorized}
+        onChange={(event) => state.select({ kind: 'vocabulary', category_ids: ids, include_uncategorized: event.target.checked }, hasCard)} />{labels.uncategorized}</label>
+    </fieldset>
     {state.applied && <p role="status">{labels.current(name(state.applied))}</p>}
     {state.pending && <p role="status">{labels.pending(name(state.pending))}</p>}
     {state.error && <><p role="alert">{state.applied ? labels.saveError : labels.readError}: {state.error}</p>

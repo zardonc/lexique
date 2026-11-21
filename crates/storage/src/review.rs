@@ -464,6 +464,19 @@ fn read_queue_from_cache(
     cache.metrics = cache.refresh(snapshot, &day, timezone)?;
     let source_revision = cache.revision;
     let all: Vec<_> = cache.cards.values().cloned().collect();
+    let empty_reason = match cache.scope() {
+        crate::ReviewScope::NeedsSelection {} => Some("needs_selection".into()),
+        crate::ReviewScope::Vocabulary { .. } if all.is_empty() => {
+            let encoded = serde_json::to_string(cache.scope())?;
+            let enrolled: bool = snapshot.query_row(
+                &format!("SELECT EXISTS(SELECT 1 FROM review_cards c WHERE {SCOPE_CONDITION})"),
+                [encoded],
+                |row| row.get(0),
+            )?;
+            Some(if enrolled { "paused" } else { "empty_scope" }.into())
+        }
+        _ => None,
+    };
     let settings = review_settings(snapshot)?;
     let (used_new, used_review) = daily_usage(snapshot, &day, now)?;
     let latest = latest_review_time(snapshot)?;
@@ -480,7 +493,7 @@ fn read_queue_from_cache(
     // The callback can perform slow filesystem checks. Never retain a database
     // snapshot (or a day-reset write reservation) across those checks.
     let mut pending = Vec::new();
-    let mut reason = None;
+    let mut reason = empty_reason;
     let mut available_at: Option<i64> = None;
     for (card, progress) in all {
         if !available(&card, cache.ready.contains(&card.vocabulary_id))? {
