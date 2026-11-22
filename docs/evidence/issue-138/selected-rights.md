@@ -1,15 +1,16 @@
 # Selected text rights for #138
 
 Independent rights review covers the fixed spans for all **200 candidate
-fields**. Semantic/use review accepts **196 fields in 49 groups**; the four
-`halte/ONO` fields remain unresolved for everyday eligibility. The combined
+fields**. Semantic/use review accepts **200 fields in 50 groups**. `halte/ONO`
+retains familiar figurative `halte-là` definitions and parent /alt/. The combined
 converted/package artifact has its own coordinator verification gate.
 
 [Rights records](rights.json) bind each field to its exact revision/span,
 attribution, modification and separate decision. [Source audit](source-audit.json)
-records 50 independently captured fixed revisions, 50 oldest revisions and
+records 51 independently captured fixed revisions, 51 oldest revisions and
 selected historical/import boundaries. All seven author contributor responses
-and their complete continuation chain agree with [source context](source-context.json).
+and their complete continuation chain, plus the complete new derivative registry,
+agree with [source context](source-context.json).
 Named registries and anonymous counts are article credits; full linked histories
 retain attribution without asserting selected-sentence authorship.
 
@@ -54,6 +55,24 @@ XMLittré/ARTFL transcription is selected.
 These original-work boundaries do not relicense later electronic editorial
 work, current Wiktionnaire contributions or Lexique adaptations. Their current
 contribution/adaptation layer remains CC BY-SA 4.0.
+
+## Halte familiar construction
+
+The definitions select **halte-là**, fixed **39006229**, familiar line **9**.
+Its wording already occurs in creation **7379871** and corresponds to actual
+DAF8 **A8H0077**, rather than relying solely on the current line **32** reference.
+The original **Académie française, eighth edition, 1932–1935** credit and the
+established French collective-work boundary **2006-01-01** remain distinct from
+wiki transcription/editorial work and Lexique's CC BY-SA 4.0 adaptations.
+[The source review](halte-source-review.json) retains actual source captures,
+the 24-revision history, full current 17-name registry and anonymous credit.
+
+Parent **halte/38818374**, line **51**, supplies **/alt/** and h aspiré;
+derivative **/al.tə.la/** supplies construction evidence only. The short
+composition/derivative frames establish source binding. Current Académie ninth
+edition and Larousse corroborate familiar figurative use; their prose is not
+licensed or selected for these fields. The literal definition, Bazin quotation,
+audio and Russian translation remain outside the selected text boundary.
 
 ## Signature and CFC
 

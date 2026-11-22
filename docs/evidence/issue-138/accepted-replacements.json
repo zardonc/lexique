@@ -169,5 +169,89 @@
       "reviewed_excerpt": "# {{figuré|fr}} État des [[chose]]s qui [[arriver|arrivent]] [[en même temps]]."
     },
     "reason": "Removing 巧合 prevents an unsourced chance implication; 同时发生 states only the source’s contemporaneity."
+  },
+  {
+    "frozen_row": 2894,
+    "headword": "halte",
+    "pos": "ONO",
+    "sense_id": "b138-2894-halte-ono-selected",
+    "field": "french_definition",
+    "proposed_text": "Ordre lancé pour faire arrêter des soldats : « Halte ! ». Le h est aspiré : muet, mais empêchant l’élision et la liaison.",
+    "accepted_text": "Dans l’expression familière « halte-là ! », sert à arrêter ou à faire taire quelqu’un qui dépasse les bornes.",
+    "proposed_exact_source": {
+      "source_id": "b138_fr_25029",
+      "revid": 38818374,
+      "url": "https://fr.wiktionary.org/w/index.php?title=halte&oldid=38818374",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=halte&action=history",
+      "line_1_based": 52,
+      "column_1_based": 1,
+      "reviewed_excerpt": "# Se dit pour faire [[arrêter]] des [[soldat]]s."
+    },
+    "exact_source": {
+      "source_id": "b138_fr_1914833",
+      "revid": 39006229,
+      "url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&oldid=39006229",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&action=history",
+      "line_1_based": 9,
+      "column_1_based": 1,
+      "reviewed_excerpt": "# {{familier|fr}} S’emploie lorsqu’une personne s’émancipe et va au-delà de ce qui convient, et qu’on veut l’arrêter, ou lui imposer silence."
+    },
+    "reason": "The French definition explicitly selects familiar halte-là and retains both stopping/silencing and the person’s exceeding acceptable bounds; it does not generalise the soldiers command."
+  },
+  {
+    "frozen_row": 2894,
+    "headword": "halte",
+    "pos": "ONO",
+    "sense_id": "b138-2894-halte-ono-selected",
+    "field": "english",
+    "proposed_text": "Halt! A command to make soldiers stop. Its silent French h blocks elision and liaison (h aspiré).",
+    "accepted_text": "In the informal exclamation “halte-là!” (“that’s enough!”), tells someone who is overstepping acceptable bounds to stop or be quiet.",
+    "proposed_exact_source": {
+      "source_id": "b138_fr_25029",
+      "revid": 38818374,
+      "url": "https://fr.wiktionary.org/w/index.php?title=halte&oldid=38818374",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=halte&action=history",
+      "line_1_based": 52,
+      "column_1_based": 1,
+      "reviewed_excerpt": "# Se dit pour faire [[arrêter]] des [[soldat]]s."
+    },
+    "exact_source": {
+      "source_id": "b138_fr_1914833",
+      "revid": 39006229,
+      "url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&oldid=39006229",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&action=history",
+      "line_1_based": 9,
+      "column_1_based": 1,
+      "reviewed_excerpt": "# {{familier|fr}} S’emploie lorsqu’une personne s’émancipe et va au-delà de ce qui convient, et qu’on veut l’arrêter, ou lui imposer silence."
+    },
+    "reason": "Informal exclamation and overstepping acceptable bounds render familier and va au-delà de ce qui convient; stop or be quiet preserves the two stated responses. “That’s enough!” explains this scoped rebuke."
+  },
+  {
+    "frozen_row": 2894,
+    "headword": "halte",
+    "pos": "ONO",
+    "sense_id": "b138-2894-halte-ono-selected",
+    "field": "chinese",
+    "proposed_text": "“立定！停止！”：让士兵停下的口令。h 不发音，但阻止省音和连诵（h aspiré）。",
+    "accepted_text": "用于口语感叹语“halte-là !”（“够了！”），制止越过分寸的人，或让其住口。",
+    "proposed_exact_source": {
+      "source_id": "b138_fr_25029",
+      "revid": 38818374,
+      "url": "https://fr.wiktionary.org/w/index.php?title=halte&oldid=38818374",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=halte&action=history",
+      "line_1_based": 52,
+      "column_1_based": 1,
+      "reviewed_excerpt": "# Se dit pour faire [[arrêter]] des [[soldat]]s."
+    },
+    "exact_source": {
+      "source_id": "b138_fr_1914833",
+      "revid": 39006229,
+      "url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&oldid=39006229",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&action=history",
+      "line_1_based": 9,
+      "column_1_based": 1,
+      "reviewed_excerpt": "# {{familier|fr}} S’emploie lorsqu’une personne s’émancipe et va au-delà de ce qui convient, et qu’on veut l’arrêter, ou lui imposer silence."
+    },
+    "reason": "口语感叹语 marks the familiar expression, 越过分寸 retains the excessive-behaviour condition, and 制止/让其住口 retains the stopping/silencing alternatives; it is not a military order."
   }
 ]

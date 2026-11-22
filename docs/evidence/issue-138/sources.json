@@ -2030,9 +2030,9 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
-      "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
+      "modification": "Isolated headword halte IPA /alt/ and h aspiré retained; parent interjection derivative link supplies source-binding evidence. The military definition is not the accepted semantic source.",
       "external_reference_markers": []
     },
     {
@@ -2257,6 +2257,46 @@
           "line_1_based": 186,
           "raw_reference": "* {{R:DictionaryofLouisianaFrench2010|p=6}}",
           "role": "reference_identity_not_selected_sentence_authorship"
+        }
+      ]
+    },
+    {
+      "id": "b138_fr_1914833",
+      "edition": "fr",
+      "entry_language": "fr",
+      "title": "halte-là",
+      "pageid": 1914833,
+      "revid": 39006229,
+      "timestamp": "2025-11-01T17:22:37Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&oldid=39006229",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&action=history",
+      "attribution": "Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935, for the original familiar wording; Wiktionnaire contributors (complete linked article history) for transcription/editorial contributions; Lexique contributors for selection, scoped adaptation and new explanatory translations.",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "source_frame": "Selected fixed revision directly captured and byte-matched to the investigator raw response.",
+      "selected_text_review": "passed_at_selected_text_boundary",
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "legal_basis": "CPI L123-3: seventy years from 1 January following collective publication; final 1935 publication gives 2006-01-01.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md; docs/evidence/issue-99/source-context.json",
+          "scope": "Original familiar halte-là wording evidenced in creation revision 7379871 and actual A8H0077 text; modern electronic editorial material is not selected.",
+          "wiki_layer": "Fixed Wiktionnaire transcription/contribution layer, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped French adaptation and new English/Chinese explanations, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "source_origin_evidence": "halte-source-review.json#original_work",
+          "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator"
+        }
+      ],
+      "modification": "Familiar figurative halte-là definition selected for frozen halte/ONO through the documented interjection derivative; lexical subject made explicit, markup removed, new English/Chinese explanations. No publisher prose, Bazin quotation, audio or Russian translation copied.",
+      "external_reference_markers": [
+        {
+          "line_1_based": 32,
+          "raw_reference": "* {{R:DAF8|halte}}",
+          "selected_boundary": "Selected familiar line 9 already occurs in creation revision 7379871; actual DAF8 A8H0077 wording establishes the original-work boundary. Modern DAF9, Larousse and Robert prose is corroboration only."
         }
       ]
     }

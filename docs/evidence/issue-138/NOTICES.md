@@ -11,8 +11,8 @@ English/Chinese explanations under [CC BY-SA 4.0](https://creativecommons.org/li
 The [complete legal text](COPYING), fixed revisions, histories and paginated
 named/anonymous credits in [source context](source-context.json) accompany the
 records. Registry credits are article credits, not selected-sentence authorship.
-Project source code remains MIT. Independent review accepts 49 groups and 196
-fields; the four `halte/ONO` fields remain unresolved for everyday eligibility.
+Project source code remains MIT. Independent review accepts 50 groups and 200
+fields, with familiar figurative `halte-là` selected for frozen `halte/ONO`.
 Combined resource admission and packaging remain coordinator-owned.
 
 ## Modifications
@@ -24,9 +24,23 @@ slashes added; other variants remain in the fixed captures. No audio, media,
 literary/news quotations, etymologies or whole dictionaries are learner content.
 
 `u/NOM` retains the attested lowercase French masculine invariant letter name,
-pronounced /y/. `aïe/ONO` is the pain cry; `halte/ONO` is the specifically soldiers
-stopping-command candidate with h aspiré, without semantic admission.
+pronounced /y/. `aïe/ONO` is the pain cry. `halte/ONO` selects the familiar
+figurative expression `halte-là` for stopping or silencing someone who exceeds
+acceptable bounds, while its parent isolated IPA /alt/ and h aspiré are retained.
 These bindings introduce no lookup alias.
+
+The three `halte` prose fields adapt only familiar definition line 9 of
+Wiktionnaire **halte-là**, fixed revision **39006229**. Original wording is
+credited to **Académie française, Dictionnaire de l’Académie française,
+eighth edition, 1932–1935**: creation revision **7379871** and actual **A8H0077**
+establish that boundary. French economic rights in the original collective
+edition conservatively expired **2006-01-01** under CPI L123-3. Wiki editorial
+and Lexique adaptation layers retain CC BY-SA 4.0 obligations. The derivative
+has a complete current registry of **17 named contributors and one anonymous
+contributor**, recorded in [source context](source-context.json), plus its full
+article history. Its /al.tə.la/ is construction evidence; the IPA field uses
+parent **halte**, revision **38818374**, line 51. Modern publisher prose,
+the Bazin quotation, audio and other-language text are unselected.
 
 The oldest retained imports identify Émile Littré (1801–1881),
 *Dictionnaire de la langue française*, nineteenth-century original, for
@@ -92,6 +106,7 @@ definition is evidenced in the DAF fusion before the CFC import.
 | ruine | [39586714](https://fr.wiktionary.org/w/index.php?title=ruine&oldid=39586714) | [History](https://fr.wiktionary.org/w/index.php?title=ruine&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
 | toile | [40001471](https://fr.wiktionary.org/w/index.php?title=toile&oldid=40001471) | [History](https://fr.wiktionary.org/w/index.php?title=toile&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
 | absolu | [39919852](https://fr.wiktionary.org/w/index.php?title=absolu&oldid=39919852) | [History](https://fr.wiktionary.org/w/index.php?title=absolu&action=history) | Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935 |
+| halte-là | [39006229](https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&oldid=39006229) | [History](https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&action=history) | Académie française, eighth edition, familiar sentence evidenced in creation 7379871 and A8H0077 |
 
 ## Original works and redistribution
 
@@ -107,8 +122,9 @@ cartographie*, Bulletin 123–124, March–June 1990, second edition. That decla
 institutional credit and project import history are retained in the archive and
 [rights](rights.json). The printing/cartography definition at line 43 is unselected;
 the handwritten-name definition at line 10 and nominal IPA at line 9 supply this
-proposal. These markers do not identify selected-sentence origin. The selected
-boundary remains pending separate rights review.
+selection. The actual DAF fusion at revision 3156847 introduces the handwritten
+definition before CFC import 24952889; the exact selected boundary passes in
+[source audit](source-audit.json) and [selected rights](selected-rights.md).
 
 Retain fixed-source identities, licence/legal text, contributor histories and
 original-work credits, source material and modification notices. Share the

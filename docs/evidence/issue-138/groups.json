@@ -3491,28 +3491,30 @@
     "senses": [
       {
         "sense_id": "b138-2894-halte-ono-selected",
-        "source_headword": "halte",
-        "use": "Invariant stopping-command interjection mapped to exact Lexique ONO; the fixed definition specifically addresses soldiers. Recorded h aspiré retained.",
+        "source_headword": "halte-là",
+        "use": "French interjection with h aspiré; familiar figurative use in « halte-là ! » to stop or silence someone who exceeds acceptable bounds. The isolated headword halte is /alt/; the construction is /al.tə.la/.",
         "use_language": "en",
-        "excluded_uses": "Noun meanings (pause, stopping place, railway halt), verb forms and unsourced generalisations of the command are excluded.",
-        "independent_review": "unresolved_everyday_eligibility",
-        "resource_admission": "blocked_unresolved_everyday_eligibility",
+        "excluded_uses": "Noun pause/stopping-place/railway senses, verb forms, literal or military stopping commands, and the distinct halte à … construction are excluded.",
+        "independent_review": "passed",
+        "resource_admission": "pending_integration_admission",
         "cefr": null,
         "fields": {
           "french_definition": {
             "language": "fr",
-            "text": "Ordre lancé pour faire arrêter des soldats : « Halte ! ». Le h est aspiré : muet, mais empêchant l’élision et la liaison.",
-            "source_id": "b138_fr_25029",
+            "text": "Dans l’expression familière « halte-là ! », sert à arrêter ou à faire taire quelqu’un qui dépasse les bornes.",
+            "source_id": "b138_fr_1914833",
             "source_span": {
-              "line_1_based": 52,
+              "line_1_based": 9,
               "column_1_based": 1,
-              "raw_source_excerpt": "# Se dit pour faire [[arrêter]] des [[soldat]]s."
+              "raw_source_excerpt": "# {{familier|fr}} S’emploie lorsqu’une personne s’émancipe et va au-delà de ce qui convient, et qu’on veut l’arrêter, ou lui imposer silence."
             },
             "content_license": "CC-BY-SA-4.0",
-            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
-            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "unresolved_everyday_eligibility",
-            "rights_eligibility_status": "passed_at_selected_text_boundary"
+            "modification": "Familiar figurative halte-là use selected; lexical subject and construction made explicit; markup removed; new scoped explanation, with no modern publisher quotation.",
+            "author_proposal_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "author_validation": "original_proposal_only; accepted_replacement_independently_reviewed",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "source_headword": "halte-là"
           },
           "ipa": {
             "language": "und",
@@ -3526,38 +3528,43 @@
             "content_license": "CC-BY-SA-4.0",
             "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
             "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "unresolved_everyday_eligibility",
-            "rights_eligibility_status": "passed_at_selected_text_boundary"
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "source_headword": "halte"
           },
           "english": {
             "language": "en",
-            "text": "Halt! A command to make soldiers stop. Its silent French h blocks elision and liaison (h aspiré).",
-            "source_id": "b138_fr_25029",
+            "text": "In the informal exclamation “halte-là!” (“that’s enough!”), tells someone who is overstepping acceptable bounds to stop or be quiet.",
+            "source_id": "b138_fr_1914833",
             "source_span": {
-              "line_1_based": 52,
+              "line_1_based": 9,
               "column_1_based": 1,
-              "raw_source_excerpt": "# Se dit pour faire [[arrêter]] des [[soldat]]s."
+              "raw_source_excerpt": "# {{familier|fr}} S’emploie lorsqu’une personne s’émancipe et va au-delà de ce qui convient, et qu’on veut l’arrêter, ou lui imposer silence."
             },
             "content_license": "CC-BY-SA-4.0",
-            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
-            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "unresolved_everyday_eligibility",
-            "rights_eligibility_status": "passed_at_selected_text_boundary"
+            "modification": "Familiar figurative halte-là use selected; lexical subject and construction made explicit; markup removed; new scoped explanation, with no modern publisher quotation.",
+            "author_proposal_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "author_validation": "original_proposal_only; accepted_replacement_independently_reviewed",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "source_headword": "halte-là"
           },
           "chinese": {
             "language": "zh",
-            "text": "“立定！停止！”：让士兵停下的口令。h 不发音，但阻止省音和连诵（h aspiré）。",
-            "source_id": "b138_fr_25029",
+            "text": "用于口语感叹语“halte-là !”（“够了！”），制止越过分寸的人，或让其住口。",
+            "source_id": "b138_fr_1914833",
             "source_span": {
-              "line_1_based": 52,
+              "line_1_based": 9,
               "column_1_based": 1,
-              "raw_source_excerpt": "# Se dit pour faire [[arrêter]] des [[soldat]]s."
+              "raw_source_excerpt": "# {{familier|fr}} S’emploie lorsqu’une personne s’émancipe et va au-delà de ce qui convient, et qu’on veut l’arrêter, ou lui imposer silence."
             },
             "content_license": "CC-BY-SA-4.0",
-            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
-            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "unresolved_everyday_eligibility",
-            "rights_eligibility_status": "passed_at_selected_text_boundary"
+            "modification": "Familiar figurative halte-là use selected; lexical subject and construction made explicit; markup removed; new scoped explanation, with no modern publisher quotation.",
+            "author_proposal_validation": "passed_fixed_source_span_and_scoped_candidate_check",
+            "author_validation": "original_proposal_only; accepted_replacement_independently_reviewed",
+            "independent_review": "passed",
+            "rights_eligibility_status": "passed_at_selected_text_boundary",
+            "source_headword": "halte-là"
           }
         }
       }

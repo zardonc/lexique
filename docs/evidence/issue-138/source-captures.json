@@ -649,6 +649,20 @@
       "fixed_url": "https://fr.wiktionary.org/w/index.php?title=absolu&oldid=39919852",
       "history_url": "https://fr.wiktionary.org/w/index.php?title=absolu&action=history",
       "source_id": "b138_fr_236496"
+    },
+    {
+      "title": "halte-là",
+      "pageid": 1914833,
+      "revid": 39006229,
+      "timestamp": "2025-11-01T17:22:37Z",
+      "last_editor": "Àncilu bot",
+      "capture": "independent_reviewer_fixed_revision_api",
+      "api_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/halte-continuation/sources/fixed-halte-la.api.json",
+      "raw_path": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/halte-continuation/sources/39006229.wiki",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&oldid=39006229",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&action=history",
+      "source_id": "b138_fr_1914833",
+      "capture_index": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/halte-continuation/sources/capture-index.json"
     }
   ],
   "contributor_registry": {
@@ -659,11 +673,12 @@
       "target\\issue-138\\sources\\contributors-4.api.json",
       "target\\issue-138\\sources\\contributors-5.api.json",
       "target\\issue-138\\sources\\contributors-6.api.json",
-      "target\\issue-138\\sources\\contributors-7.api.json"
+      "target\\issue-138\\sources\\contributors-7.api.json",
+      "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/halte-continuation/sources/contributors-8.api.json"
     ],
     "pagination_complete": true,
-    "names": 3087,
-    "titles": 50,
+    "names": 3104,
+    "titles": 51,
     "anonymous_counts_by_title": {
       "aïe": 18,
       "féminin": 25,
@@ -712,7 +727,8 @@
       "progrès": 13,
       "métro": 13,
       "dégoûter": 9,
-      "absolu": 16
+      "absolu": 16,
+      "halte-là": 1
     },
     "selected_sentence_authorship_proved": false
   },

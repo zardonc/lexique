@@ -38,6 +38,10 @@ def read(name):
 
 
 def retained_path(name):
+    normalized = name.replace("\\", "/")
+    review_root = read("admission.json")["review_evidence_root"]
+    if normalized.startswith(review_root + "/"):
+        return review_path(normalized[len(review_root) + 1:])
     parts = name.replace("\\", "/").split("/")
     archive = Path(read("admission.json")["author_evidence_root"])
     if archive.is_dir():
@@ -60,6 +64,67 @@ def review_path(name):
 
 
 class Batch138Tests(unittest.TestCase):
+    def test_halte_familiar_derivative_keeps_parent_ipa_and_exact_source_boundary(self):
+        group = next(g for g in read('groups.json') if g['frozen_row'] == 2894)
+        self.assertEqual((group['headword'], group['lexique_cgram']), ('halte', 'ONO'))
+        sense = group['senses'][0]
+        self.assertEqual(sense['source_headword'], 'halte-là')
+        self.assertEqual(sense['independent_review'], 'passed')
+        self.assertEqual(sense['fields']['ipa']['text'], '/alt/')
+        expected = {
+            'french_definition': 'Dans l’expression familière « halte-là ! », sert à arrêter ou à faire taire quelqu’un qui dépasse les bornes.',
+            'english': 'In the informal exclamation “halte-là!” (“that’s enough!”), tells someone who is overstepping acceptable bounds to stop or be quiet.',
+            'chinese': '用于口语感叹语“halte-là !”（“够了！”），制止越过分寸的人，或让其住口。',
+        }
+        for name, text in expected.items():
+            self.assertEqual(sense['fields'][name]['text'], text)
+        sources = {s['id']: s for s in read('sources.json')['sources']}
+        for name, field in sense['fields'].items():
+            source = sources[field['source_id']]
+            parent = name == 'ipa'
+            self.assertEqual((source['title'], source['revid']),
+                             ('halte', 38818374) if parent else ('halte-là', 39006229))
+            self.assertEqual(field['source_headword'], source['title'])
+            self.assertEqual(field['source_span']['line_1_based'], 51 if parent else 9)
+            self.assertEqual(field['independent_review'], 'passed')
+        relation = next(r for r in read('field-review.json')['spelling_relations']
+                        if r['frozen_row'] == 2894)
+        self.assertEqual(relation['relation'], 'interjection_derivative_composition')
+        self.assertEqual(relation['relation_role'], 'source_binding_only')
+        self.assertEqual(relation['alias_admission'], 'not_admitted')
+        self.assertEqual((relation['frozen_headword'], relation['source_headword']), ('halte', 'halte-là'))
+        self.assertTrue(any('composé de' in e['reviewed_excerpt'] for e in relation['accepted_evidence']))
+        self.assertTrue(any(e['reviewed_excerpt'] == '* [[halte-là]]' for e in relation['accepted_evidence']))
+        audit = read('halte-source-review.json')
+        self.assertEqual(audit['everyday_use_status'], 'passed_familiar_figurative_construction')
+        self.assertEqual(audit['selected_definition_line'], 9)
+        self.assertEqual(audit['headword_ipa'], '/alt/')
+        self.assertEqual(audit['construction_ipa_not_headword_field'], '/al.tə.la/')
+        self.assertEqual(audit['named_contributors'], 17)
+        self.assertEqual(audit['anonymous_contributors'], 1)
+        self.assertEqual(audit['history_revisions'], 24)
+        history = json.loads(retained_path(audit['history_api_path']).read_bytes())
+        self.assertNotIn('continue', history)
+        revisions = history['query']['pages'][0]['revisions']
+        self.assertEqual(len(revisions), 24)
+        self.assertEqual((revisions[0]['revid'], revisions[-1]['revid']), (39006229, 7379871))
+        self.assertEqual(len({r['user'] for r in revisions if 'anon' not in r}), 17)
+        self.assertEqual(sum('anon' in r for r in revisions), 1)
+        pronunciation = json.loads(retained_path(audit['pronunciation_origin_api_path']).read_bytes())
+        pronunciation_revision = pronunciation['query']['pages'][0]['revisions'][0]
+        self.assertEqual((pronunciation_revision['revid'], pronunciation_revision['user']), (11016866, 'Pamputt'))
+        self.assertIn('{{pron|al.tə.la|fr}}', pronunciation_revision['slots']['main']['content'])
+        fixed = retained_path(next(c['raw_path'] for c in read('source-captures.json')['sources']
+                                   if c['source_id'] == 'b138_fr_1914833')).read_text(encoding='utf-8')
+        oldest = next(s['oldest_revision'] for s in read('source-audit.json')['sources']
+                      if s['source_id'] == 'b138_fr_1914833')
+        familiar = fixed.splitlines()[8].removeprefix('# {{familier|fr}} ')
+        self.assertIn(familiar, retained_path(oldest['raw_path']).read_text(encoding='utf-8'))
+        self.assertEqual(audit['annotation_exception'], 'none')
+        self.assertEqual(audit['selected_text_rights_status'], 'passed_at_selected_text_boundary')
+        self.assertEqual(audit['original_work']['conservative_french_economic_rights_expiry'], '2006-01-01')
+        self.assertEqual(audit['modern_publisher_text_reuse'], 'not_selected_or_licensed')
+
     def test_accepted_wording_retains_material_modality_and_scope(self):
         groups = {g['frozen_row']: g for g in read('groups.json')}
         expected = {
@@ -107,11 +172,9 @@ class Batch138Tests(unittest.TestCase):
                 self.assertTrue(sense["use"].strip())
                 self.assertTrue(sense["excluded_uses"].strip())
                 self.assertIsNone(sense["cefr"])
-                status = 'unresolved_everyday_eligibility' if group['frozen_row'] == 2894 else 'passed'
+                status = 'passed'
                 self.assertEqual(sense['independent_review'], status)
-                self.assertEqual(sense['resource_admission'],
-                                 'blocked_unresolved_everyday_eligibility' if group['frozen_row'] == 2894
-                                 else 'pending_integration_admission')
+                self.assertEqual(sense['resource_admission'], 'pending_integration_admission')
                 self.assertEqual(set(sense["fields"]), set(LANGUAGES))
                 for name, field in sense["fields"].items():
                     self.assertEqual(field["language"], LANGUAGES[name])
@@ -127,16 +190,16 @@ class Batch138Tests(unittest.TestCase):
         self.assertEqual(admission["scope_denominator_groups"], 4087)
         self.assertEqual((admission["proposed_groups"], admission["proposed_fields"]), (50, 200))
         self.assertEqual((admission["independently_accepted_new_groups"],
-                          admission["independently_accepted_new_fields"]), (49, 196))
+                          admission["independently_accepted_new_fields"]), (50, 200))
         self.assertEqual(admission['independent_reviewer'], read('field-review.json')['reviewer'])
-        self.assertEqual(admission['pending_independent_review_rows'], [2894])
-        self.assertEqual(admission['pending_independent_review_fields'], 4)
+        self.assertEqual(admission['pending_independent_review_rows'], [])
+        self.assertEqual(admission['pending_independent_review_fields'], 0)
         self.assertEqual(admission['pending_independent_rights_fields'], 0)
         self.assertEqual(admission["missing_admitted_fields"], 200)
         self.assertEqual(admission['newly_admitted_fields'], 0)
         self.assertEqual(admission['annotation_exception_groups'], 0)
         self.assertEqual(admission['specialist_exception_groups'], 0)
-        self.assertEqual(admission['unresolved_semantic_rows'], [2894])
+        self.assertEqual(admission['unresolved_semantic_rows'], [])
         self.assertEqual(admission['unresolved_source_rows'], [])
         self.assertEqual(admission['unresolved_legal_rows'], [])
         self.assertEqual(admission["missing_authored_fields"], 0)
@@ -148,7 +211,7 @@ class Batch138Tests(unittest.TestCase):
         sources = {s["id"]: s for s in read("sources.json")["sources"]}
         contexts = {s["id"]: s for s in read("source-context.json")["current_content"]}
         captures = read("source-captures.json")
-        self.assertEqual(len(captures["sources"]), 50)
+        self.assertEqual(len(captures["sources"]), 51)
         for capture in captures["sources"]:
             response = json.loads(retained_path(capture["api_path"]).read_text(encoding="utf-8"))
             page = next(p for p in response["query"]["pages"] if p["pageid"] == capture["pageid"])
@@ -227,7 +290,7 @@ class Batch138Tests(unittest.TestCase):
                     self.assertEqual(review['proposed_text'], authored[key]['text'])
                     self.assertEqual(review['accepted_source_span'], field['source_span'])
                     self.assertEqual(excerpt["reviewed_excerpt"], span["raw_source_excerpt"])
-                    accepted = None if group['frozen_row'] == 2894 else field['text']
+                    accepted = field['text']
                     self.assertEqual(review['accepted_text'], accepted)
                     self.assertEqual(excerpt['accepted_text'], accepted)
                     self.assertEqual(proposal['accepted_text'], accepted)
@@ -270,8 +333,6 @@ class Batch138Tests(unittest.TestCase):
         for row, ipa in ((2877, "/aj/"), (2894, "/alt/")):
             self.assertEqual(groups[row]["lexique_cgram"], "ONO")
             self.assertEqual(groups[row]["senses"][0]["fields"]["ipa"]["text"], ipa)
-        for name, restriction in (("french_definition", "soldats"), ("english", "soldiers"), ("chinese", "士兵")):
-            self.assertIn(restriction, groups[2894]["senses"][0]["fields"][name]["text"])
         self.assertIn("h aspiré", groups[2894]["senses"][0]["use"])
         # These actual homonyms must bind the modern selected noun section.
         for row, noun_number in ((2879, "num=2"), (2884, "num=2"), (2887, "num=2"), (2900, "num=2")):
@@ -289,9 +350,10 @@ class Batch138Tests(unittest.TestCase):
                    for f in read('field-review.json')['fields']}
         fields = {(f['sense_id'], f['field']): f for f in rights['fields']}
         passed = 'passed_at_selected_text_boundary'
-        self.assertEqual(len(contexts), 50)
+        self.assertEqual(len(contexts), 51)
         self.assertEqual({c['id'] for c in contexts}, set(sources))
         self.assertEqual(set(sources), set(audit))
+        self.assertEqual({(p['sense_id'], p['field']) for c in contexts for p in c['selected_locations']}, set(fields))
         for c in contexts:
             with self.subTest(source=c['id']):
                 source, capture = sources[c['id']], audit[c['id']]
@@ -308,7 +370,7 @@ class Batch138Tests(unittest.TestCase):
                 self.assertEqual(c['selected_text_rights_reason'], capture['selected_source_rights_reason'])
                 for verdict in (c, source, capture):
                     self.assertEqual(verdict['reviewer'], context['independent_reviewer'])
-                self.assertEqual({p['field'] for p in c['selected_locations']}, set(LANGUAGES))
+                self.assertTrue({p['field'] for p in c['selected_locations']} <= set(LANGUAGES))
                 for location in c['selected_locations']:
                     key = (location['sense_id'], location['field'])
                     field, review = fields[key], reviews[key]
@@ -318,11 +380,9 @@ class Batch138Tests(unittest.TestCase):
                     self.assertEqual(review['rights_eligibility_status'], passed)
                     self.assertTrue(review['selected_text_rights_reason'])
                     self.assertEqual(field['selected_text_rights_reason'], review['selected_text_rights_reason'])
-                    if location['frozen_row'] == 2894:
-                        self.assertEqual(field['quality_admission_status'], 'unresolved_everyday_eligibility')
-                        self.assertEqual(review['accepted_text_quality_status'], 'unresolved_everyday_eligibility')
-                        self.assertIsNone(field['accepted_text'])
-                        self.assertIsNone(review['accepted_text'])
+                    self.assertEqual(field['quality_admission_status'], 'passed')
+                    self.assertEqual(review['accepted_text_quality_status'], 'passed')
+                    self.assertEqual(field['accepted_text'], review['accepted_text'])
 
     def test_actual_import_boundary_and_retained_policy_material(self):
         contexts = read("source-context.json")["current_content"]
@@ -349,17 +409,17 @@ class Batch138Tests(unittest.TestCase):
         groups = {g['frozen_row']: g for g in read('groups.json')}
         self.assertEqual(len(review['usage']), 50)
         self.assertEqual(len(review['spelling_relations']), 50)
-        self.assertEqual([(r['frozen_row'], r['field']) for r in review['unresolved_fields']],
-                         [(2894, name) for name in LANGUAGES])
+        self.assertEqual(review['unresolved_fields'], [])
         for use in review['usage']:
             row = use['frozen_row']
             self.assertTrue(use['review_reason'])
             self.assertEqual(use['reviewer'], review['reviewer'])
-            self.assertEqual(use['everyday_sense_status'], 'unresolved' if row == 2894 else 'passed')
-            self.assertEqual(use['accepted_usage'], None if row == 2894 else groups[row]['senses'][0]['use'])
+            self.assertEqual(use['everyday_sense_status'], 'passed')
+            self.assertEqual(use['accepted_usage'], groups[row]['senses'][0]['use'])
         for relation in review['spelling_relations']:
             self.assertEqual(relation['independent_review'], 'passed')
-            self.assertEqual(relation['relation'], 'exact_french_source_spelling')
+            self.assertEqual(relation['relation'], 'interjection_derivative_composition' if relation['frozen_row'] == 2894
+                             else 'exact_french_source_spelling')
             self.assertEqual(relation['alias_admission'], 'not_admitted')
             self.assertTrue(relation['review_reason'])
         authored = {(g['frozen_row'], name): f['text']
@@ -369,7 +429,7 @@ class Batch138Tests(unittest.TestCase):
                           for name, f in g['senses'][0]['fields'].items()
                           if f['text'] != authored[row, name]}
         replacements = read('accepted-replacements.json')
-        self.assertEqual(len(replacements), 9)
+        self.assertEqual(len(replacements), 12)
         self.assertEqual({(r['frozen_row'], r['field']) for r in replacements}, actual_changes)
         for r in replacements:
             self.assertEqual(r['proposed_text'], authored[r['frozen_row'], r['field']])
@@ -380,26 +440,27 @@ class Batch138Tests(unittest.TestCase):
 
     def test_own_fixed_capture_bytes_and_observed_original_work_boundaries(self):
         audit = read('source-audit.json')
-        self.assertEqual((audit['source_count'], audit['fixed_capture_count'], audit['oldest_capture_count']), (50, 50, 50))
+        self.assertEqual((audit['source_count'], audit['fixed_capture_count'], audit['oldest_capture_count']), (51, 51, 51))
         self.assertEqual(audit['missing_or_unresolved_source_boundaries'], [])
         captures = {c['source_id']: c for c in read('source-captures.json')['sources']}
         contexts = {c['id']: c for c in read('source-context.json')['current_content']}
         responses = [json.loads(review_path(f'sources/fixed-{i}.api.json').read_bytes()) for i in range(1, 6)]
+        responses.append(json.loads(retained_path(audit['additional_fixed_capture_api']).read_bytes()))
         revisions = {r['revid']: (p, r) for response in responses for p in response['query']['pages'] for r in p['revisions']}
         for source in audit['sources']:
             page, revision = revisions[source['selected_revid']]
             self.assertEqual((page['pageid'], page['title']), (source['pageid'], source['title']))
             capture = captures[source['source_id']]
-            fixed_bytes = review_path('sources/' + Path(source['fixed_capture_raw_path']).name).read_bytes()
+            fixed_bytes = retained_path(source['fixed_capture_raw_path']).read_bytes()
             self.assertEqual(fixed_bytes, revision['slots']['main']['content'].encode('utf-8'))
             self.assertEqual(fixed_bytes, retained_path(capture['raw_path']).read_bytes())
             oldest = source['oldest_revision']
-            response = json.loads(review_path('sources/' + Path(oldest['api_path']).name).read_bytes())
+            response = json.loads(retained_path(oldest['api_path']).read_bytes())
             old_page = response['query']['pages'][0]
             old_revision = old_page['revisions'][0]
             self.assertEqual((old_page['pageid'], old_page['title']), (source['pageid'], source['title']))
             self.assertEqual((old_revision['revid'], old_revision['parentid']), (oldest['revid'], 0))
-            self.assertEqual(review_path('sources/' + Path(oldest['raw_path']).name).read_bytes(),
+            self.assertEqual(retained_path(oldest['raw_path']).read_bytes(),
                              old_revision['slots']['main']['content'].encode('utf-8'))
             self.assertTrue(source['selected_source_rights_reason'])
             self.assertEqual(source['selected_locations'], contexts[source['source_id']]['selected_locations'])
@@ -435,13 +496,15 @@ class Batch138Tests(unittest.TestCase):
         self.assertIn('Import:CFC', imported[32])
         self.assertIn('cartographie', imported[32])
 
-    def test_halte_noun_evidence_cannot_admit_the_frozen_interjection(self):
+    def test_halte_acceptance_keeps_the_frozen_interjection_and_construction_restriction(self):
         group = next(g for g in read('groups.json') if g['frozen_row'] == 2894)
         self.assertEqual((group['headword'], group['lexique_cgram']), ('halte', 'ONO'))
-        self.assertEqual(group['senses'][0]['independent_review'], 'unresolved_everyday_eligibility')
+        self.assertEqual(group['senses'][0]['independent_review'], 'passed')
         uses = next(u for u in read('field-review.json')['usage'] if u['frozen_row'] == 2894)
-        self.assertIn('feminine noun', uses['review_reason'])
-        self.assertIn('No exception', uses['review_reason'])
+        self.assertEqual(uses['source_headword'], 'halte-là')
+        self.assertIn('familiar figurative', uses['accepted_usage'])
+        self.assertIn('Noun', uses['excluded_uses'])
+        self.assertIn('military', uses['excluded_uses'])
 
 
 if __name__ == "__main__":

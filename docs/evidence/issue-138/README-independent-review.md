@@ -1,11 +1,11 @@
 # Independent review of #138
 
-**49 groups and 196 fields pass independent semantic/use and selected-source
-rights review.** All 50 frozen groups and 200 fields were inspected. Nine fields
-in six groups have accepted replacements; all recorded IPA values are retained.
-One group, `halte/ONO`, has four unresolved everyday-use fields and no exception.
-Selected-text rights are resolved for all 200 candidates. The batch remains
-incomplete for admission, conversion, native execution and learner acceptance.
+**50 groups and 200 fields pass independent semantic/use and selected-source
+rights review.** Twelve fields in seven groups have accepted prose replacements;
+all recorded headword IPA values are retained. `halte/ONO` selects familiar
+figurative `halte-là`, with its construction restriction and parent /alt/.
+No unresolved semantic, selected-source or legal field remains. Canonical
+admission, conversion, native execution and learner acceptance remain pending.
 
 ## Review inputs
 
@@ -30,14 +30,16 @@ incomplete for admission, conversion, native execution and learner acceptance.
 and focused test. Earlier [authored proposals](authored/) remain preserved.
 [Field review](field-review.json) records proposed/accepted wording, fixed spans
 and actual reasons for every field and use. [Accepted replacements](accepted-replacements.json)
-retain all nine wording decisions.
+retain all twelve wording decisions. [Halte source review](halte-source-review.json)
+records the additional fixed derivative, original-work boundary, modern
+corroboration and all four accepted field decisions.
 
 ## Semantic outcomes
 
 The accepted wording retains the handwritten signature's end-of-document
 condition; the cage's stated materials; a wooden stick's ability to be held;
 the identification of polymers in plastic; liquid honey; and temporal
-coincidence without an added chance condition. Eight use records also state
+coincidence without an added chance condition. Nine use records also state
 their sourced construction, absolute use or selected descriptive restriction
 more explicitly. No frozen identity, frequency string, sense ID or source
 revision is substituted. Reuse, aliases and new exceptions remain zero.
@@ -47,23 +49,40 @@ the French letter heading, `m/invar` line and `Un grand u`/`Un petit u` examples
 support nominal use. /y/ is its name, not every sound of the grapheme.
 `aïe/ONO` passes as the everyday pain interjection.
 
-`halte/ONO`, frozen row **2894**, remains unresolved. Fixed interjection lines
-**50–52** define only the command for soldiers. Modern pause/stopping-place
-uses and examples are in the feminine **noun** section, lines **7–16**;
-`faire halte` is listed at **23** under that noun. They cannot satisfy frozen
-ONO. The proposed military wording, /alt/ and h aspiré are accurate and retained
-as candidates; a general everyday command is unsupported by the actual selected
-source. No noun substitution or specialist/annotation exception is approved.
-The four fields have no accepted text in the review ledger.
+`halte/ONO`, frozen row **2894**, passes for the familiar figurative expression
+**« halte-là ! »**, used to stop or silence someone who exceeds acceptable
+bounds. The parent interjection lists this derivative at line **57**; fixed
+derivative **39006229**, line **3**, records composition from `halte` and `là`,
+and line **9** supplies the familiar definition. Académie ninth-edition
+**A9H0116** and Larousse **halte/38944** retain its nonmilitary figurative use.
+Robert supports figurative `halte à`, but its literal `halte-là` gloss is not
+the basis for this selected familiar sense. No annotation rationale is needed.
+
+The three definition/explanation fields bind source headword **halte-là**;
+the IPA field binds parent **halte**, fixed **38818374**, line **51**, at
+**/alt/** with h aspiré. The locution **/al.tə.la/** at derivative line **6** is
+construction evidence. Frozen `halte/ONO`, frequency strings and sense ID
+remain exact, with no alias or additional group. Noun pause/`faire halte`,
+literal/military commands and the distinct `halte à …` construction are excluded.
 
 ## Source and legal outcomes
 
 [Source audit](source-audit.json) records independent first-party captures of
-all **50 fixed revisions** and **50 oldest revisions**, with unchanged source
-identity and byte comparisons. All seven author contributor responses and their
-continuation requests agree with complete returned named registries and anonymous
-counts. Full history links retain attribution; registry names/counts do not
+all **51 fixed revisions** and **51 oldest revisions**, with exact source
+identities and byte comparisons. All seven author contributor responses and the
+additional complete derivative registry agree with returned named registries
+and anonymous counts. Full history links retain attribution; registry names/counts do not
 prove selected-sentence authorship.
+
+The familiar `halte-là` sentence is present in creation revision **7379871**,
+by Jona on **2010-06-09**, and matches the actual DAF8 **A8H0077** wording.
+Original credit remains **Académie française, eighth edition, 1932–1935**,
+at the established French collective-work economic-rights boundary
+**2006-01-01**. Current wiki and Lexique adaptation layers remain CC BY-SA 4.0.
+The complete derivative history has **24 revisions**, **17 named editors**
+and **one anonymous edit**; the current registry returns **17 named contributors**
+and **one anonymous contributor**. Modern publisher text, the Bazin quotation,
+audio and Russian translation are unselected.
 
 The `signature` handwritten definition has an observed **2008 DAF fusion**
 boundary. It precedes the **2018 CFC import** and is unchanged through that import
@@ -83,21 +102,19 @@ source or legal field remains; combined redistribution is still unverified.
 ## Verification boundary
 
 The focused checks verify exact 50-group membership/frequencies, four-field/POS/
-use alignment, proposed/accepted/replacement consistency, the four unresolved
-fields, source/API/raw identities, contributor continuation, selected rights and
+use alignment, proposed/accepted/replacement consistency, the parent/derivative
+bindings, source/API/raw identities, contributor continuation, selected rights and
 actual signature/Littré boundaries. They are evidence-ledger checks; linguistic
 decisions are recorded separately.
 
-Actual commands/results are retained in [verification](verification.json) and
-the review archive. `--admitted` is a separate canonical-content oracle; this
-shard does not satisfy all 50 groups. Native/global assembly, full/Lite packaging,
+Actual commands/results are retained in [halte verification](halte-verification.json),
+the [original verification](verification.json) and the review archive.
+`--admitted` is a separate coordinator canonical-content oracle.
+Native/global assembly, full/Lite packaging,
 release gates, learner feedback and tracker operations belong to the coordinator.
 The scoped review commit changes only its evidence and focused test.
 
-The [metadata alignment follow-up](metadata-alignment-verification.json) merges
-integration `75a7edd` and replaces 50 stale root source-context rights markers
-with the completed selected-text verdicts. The focused check compares each
-marker with its retained source audit and source/field rights decisions.
-Accepted prose is unchanged; `halte/ONO` retains its rights pass and unresolved
-quality status. Follow-up logs and the committed diff are archived separately
-under `metadata-alignment/` in the reviewer evidence root above.
+The [metadata alignment record](metadata-alignment-verification.json) and
+`metadata-alignment/` archive retain that separate commit's evidence.
+The current construction review, raw captures, logs and committed patch are
+retained under `halte-continuation/` in the reviewer evidence root above.
