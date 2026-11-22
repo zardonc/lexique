@@ -1,8 +1,43 @@
 # Category review acceptance (#195 / #201)
 
-The frontend CI closeout passed with the corrected fixture and matching Chromium
-below. The earlier review implementation's native acceptance and the original
-storage, desktop-library and speech-cache results retain their own revisions.
+The read-failure retry correction passed 474 browser tests and the targeted
+Windows native failure journey. Earlier native and backend results below retain
+their original source revisions.
+
+## Read failure retry correction (PR #208)
+
+Clean tested source: `17657572109e0285885a7b82239f46101ffa6b7e`, tree
+`c8ab6d0e6e9a4f2593f8a27a5f31676b3318e74f`, Windows x64. The selector uses the
+hook's existing save-error state to choose the failure message and retry action.
+Read errors call `retryRead()` even when an applied scope already exists; save
+errors continue to retry only the pending save.
+
+| Check | Result |
+| --- | --- |
+| Focused read/save failure regressions | 6 passed; two new refresh-read cases first failed with no extra read after retry |
+| `pnpm lint`, `pnpm typecheck`, `pnpm build` | Passed |
+| `pnpm --filter @lexique/desktop test:e2e --workers=2` | 474 passed; bundled Chromium, `CI=true`, no browser override |
+| `pnpm desktop:build --no-bundle` | Fresh executable passed, 130.84 s; locked Cargo 1.99.1 |
+| `node e2e/native-review-scope-check.mjs <resources> <binary> <destination> failure` | Passed, 37.48 s; unchanged hard 60-second execution limit |
+
+The new browser cases exercise `review_scope` and `learning_categories` read
+failures after successful loading. They assert the read-error message, reload
+button, an actual new read, error clearance and zero scope saves. The native
+failure journey verifies existing rating/save failures with real SQLite locks,
+preserved input, refresh, save-only retry and unchanged rating/progress/global
+usage. SQLite integrity and foreign keys passed; task-owned hosts, workers and
+helpers were cleaned up.
+
+Evidence root:
+`C:\Users\inthe\IdeaProjects\lexique-category-review-195\integration\target\spec-195\read-retry`.
+Native fixture: the same integration checkout's
+`target\ticket-201\read-retry\native-failure`. Retained logs include red/green
+checks, source patch, full browser reports, native build identity and fixture
+metadata/results/cleanup. Pre-assertion failures from the old build-script path
+cache and a rejected fixture destination remain recorded; source and admission
+rules were unchanged. Other native UI journeys and full local Rust/speech-cache
+suites were not rerun. Earlier results below retain their original identities;
+exact integration CI is recorded on [PR #208](https://github.com/zardonc/lexique/pull/208).
 
 ## Frontend CI closeout (PR #208)
 

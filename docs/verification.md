@@ -1,5 +1,13 @@
 # 骨架验证记录
 
+## 分类复习读取失败重试（PR #208）
+
+2026-11-21，从干净提交 `17657572109e0285885a7b82239f46101ffa6b7e`（tree `c8ab6d0e6e9a4f2593f8a27a5f31676b3318e74f`）完成 Windows x64 验证：lint、typecheck、build 通过，bundled Chromium／`CI=true`／2 workers 的完整浏览器套件 **474 项通过**。新增范围读取和分类读取两项回归：首次成功加载后触发刷新读取失败，正确显示读取失败及重读按钮，重试发出新读取请求、恢复后清除错误，并断言不发送范围保存请求。既有首次读取失败、评分／跳过后的保存失败和仅保存重试回归也通过。
+
+hook 向选择器保留已有 `saveError`，失败文案及按钮按实际保存错误选择保存路径，其余读取错误调用 `retryRead()`；不再以 `applied` 是否存在判断失败类型。没有修改 Rust、持久化、IPC 或原生测试 harness。相同干净源码重新完成 locked 原生构建（130.84 秒），新可执行文件的真实 SQLite 写锁 `failure` 场景通过（37.48 秒，60 秒硬限不变）：评分／保存失败保留输入，focus／review-change 后仍可仅保存重试，评分、进度和全局额度不重复；SQLite schema 20、完整性和外键检查通过，host／worker／helper 清理为零。
+
+命令、来源身份及日志保留于 `integration/target/spec-195/read-retry`，真实原生夹具位于 `integration/target/ticket-201/read-retry/native-failure`，根目录为 `C:\Users\inthe\IdeaProjects\lexique-category-review-195`。构建脚本旧路径缓存和夹具目录准入的前置失败均保留，未到达原生断言；重新编译构建脚本时只刷新文件时间，不修改源码或放宽准入。其他原生 UI 场景、完整本地 Rust／speech-cache 套件及发行验收未重跑，下面旧证据保留其原始 SHA。精确整合提交的 CI 见 [PR #208](https://github.com/zardonc/lexique/pull/208)。
+
 ## 分类复习前端 CI 收尾（#195／PR #208）
 
 2026-11-21，整合 `b1c39c07fa49826c7d591ecd7efcc23437bf7b44` 后，从干净测试修复提交 `03ef643bbc4cc8e116fd3a09b7f6ad24f4a9ab18`（tree `8c4201e8c36eb006efd655e6f4fcb6cce808cf67`）验证：lint、typecheck、build 通过，评分／跳过 T06 **2 项通过**，完整浏览器 **472 项通过（261.91 秒）**。Windows x64 `10.0.26300` 使用与失败 CI 相同的 Playwright `1.64.1`、bundled Chromium `156.0.8078.4`／revision `1248`、`CI=true` 与 **2 workers**，未设置浏览器可执行文件覆盖。CI trace 显示 focus 与 review-change 在 50 ms 队列刷新防抖内合并，而测试按每个事件排入旧范围回复，导致保存 Voyage 后仍返回旧范围并触发严格校验。暂停浏览器时钟后，两项回归先重现相同错误；修复让后续队列回复按实际保存范围生成，并确定性验证两次范围读取合并为一次队列刷新。保留失败可见性、待应用选择、完成卡边界、仅保存重试、无残余 alert／重复评分断言；未修改生产校验。
