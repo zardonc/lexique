@@ -59,5 +59,17 @@
   "manual_path": "target\\issue-130\\Manuel_Lexique.3.pdf",
   "manual_text_path": "target\\issue-130\\manual.txt",
   "selected_documentation": "page 12 Table 2: phonemic codes (R=/ʁ/, E=/ɛ/); page 13 Table 3: ADJ:ind=adjectif indéfini",
-  "ipa_transcription": "la-ply-paR-dE -> /la.ply.paʁ.dɛ/; variant copied from exact frozen phrase row, not inferred from isolated components"
+  "ipa_transcription": "la-ply-paR-dE -> /la.ply.paʁ.dɛ/; variant copied from exact frozen phrase row, not inferred from isolated components",
+  "independent_quality_review": {
+    "reviewer": "Separate field/use/selected-rights reviewer #130; not the author or coordinator",
+    "status": "passed",
+    "original_record_compared_to_actual_tsv": true,
+    "manual_tables_reextracted_from_actual_pdf": true,
+    "manual_audit": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\reviewer-evidence\\issue-130\\issue-130-review\\manual-audit.json",
+    "reason": "Exact phrase phon/syll map to /la.ply.paʁ.dɛ/ through the actual fixed PDF Table 2; Table 3 confirms ADJ:ind. The full phrase is retained, with no following-noun liaison or component-derived replacement."
+  },
+  "independent_rights_review": {
+    "status": "passed_at_selected_text_boundary",
+    "reason": "Actual Lexique383 README, named original credits, CC BY-SA 4.0 legal text and unchanged retained dataset inspected; transcription is an attributed licensed adaptation, not a public-domain source."
+  }
 }
