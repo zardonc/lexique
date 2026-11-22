@@ -1,0 +1,103 @@
+{
+  "ticket": 146,
+  "checkout": "C:/Users/inthe/IdeaProjects/lexique-d2-140-149/author-146",
+  "branch": "codex/d2-content-146",
+  "author_base": "9fa4f264509c953dba801d18ea6eaab84b2aafb2",
+  "integration_merged": "b69fbf62c48039f6ef8c10ae3994e0f8ee28cc88",
+  "diff_base": "b69fbf62c48039f6ef8c10ae3994e0f8ee28cc88",
+  "platform": "Windows x64, PowerShell 7, Python 3.14.10 via uv",
+  "scope": [
+    "docs/evidence/issue-146/**",
+    "scripts/test_core_batch_146.py"
+  ],
+  "author_evidence_root": "C:/Users/inthe/IdeaProjects/lexique-d2-140-149/context/author-evidence/issue-146",
+  "coordinator_source_root": "C:/Users/inthe/IdeaProjects/lexique-d2-140-149/context/source-preparation/issue-146",
+  "original_source_index": "source-index.original.json",
+  "proposed_groups": 50,
+  "proposed_senses": 50,
+  "proposed_fields": 200,
+  "coordinator_titles_reused_verbatim": 49,
+  "additional_support_titles": [
+    "plupart",
+    "celui-là",
+    "même",
+    "le même",
+    "la"
+  ],
+  "fixed_french_sources": 54,
+  "contributor_api_parts": 7,
+  "selected_sentence_authorship_proved": false,
+  "independently_accepted_new_fields": 0,
+  "pending_independent_quality_fields": 200,
+  "pending_independent_rights_fields": 200,
+  "missing_authored_fields": 0,
+  "missing_admitted_fields": 200,
+  "author_unresolved_content_rows": [],
+  "annotation_exception_groups": 0,
+  "specialist_exception_groups": 0,
+  "checks": [
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_146.py --admitted",
+      "status": "failed_pending_canonical_admission",
+      "tests": 7,
+      "failures": 1,
+      "log": "pending-admission.log",
+      "boundary": "All 50 exact groups remain absent from canonical core before independent review and integration assembly. Initial RED.log also retains the pre-author resource failure."
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_146.py",
+      "status": "passed",
+      "tests": 7,
+      "passed": 6,
+      "skipped": 1,
+      "log": "post-merge-resource.log",
+      "boundary": "Author resource/admission deliverable: exact membership/frequencies, 200 fields and fixed French/POS/IPA spans, raw/API bytes, contributor chains, scoped rights and excluded source bodies. Canonical admission is explicitly skipped in author mode."
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-146/reproduce.py",
+      "status": "passed",
+      "log": "post-merge-reproduction.log",
+      "boundary": "All nine author JSON files reproduced byte for byte offline from fixed snapshots and retained baseline metadata."
+    },
+    {
+      "command": "pnpm test:docs",
+      "status": "passed",
+      "log": "docs.log",
+      "documents": 490,
+      "local_links": 3778,
+      "problems": 0
+    },
+    {
+      "command": "git diff --check and git diff --cached --check",
+      "status": "passed",
+      "logs": [
+        "diff.log",
+        "staged-diff.log"
+      ]
+    },
+    {
+      "command": "scripts/test_core_batch_146.py with the owned local cache temporarily moved aside and restored",
+      "status": "passed",
+      "tests": 7,
+      "passed": 6,
+      "skipped": 1,
+      "log": "archive-fallback.log",
+      "boundary": "Actual raw/API and original-index reads used the external archive fallback while the local capture root was absent."
+    }
+  ],
+  "unrun": [
+    "Separate independent language, source-label/modern-use, construction/spelling and selected-span rights review",
+    "Combined canonical conversion, corresponding selected source materials and packaged notices",
+    "Actual native lookup/save/reopen, preservation and offline application execution",
+    "Human learner acceptance and platform/release gates",
+    "Frontend lint/typecheck/build and Rust checks: no application or Rust source changed"
+  ],
+  "original_work_obligations": "Thirty-two captured articles declare DAF8 original work (Académie française, eighth edition, 1932–1935). Each selected source has its own author assessment of lexical/phonetic facts, conventional short phrases or new adaptations. The historical France-specific collective-work calculation yields 2006-01-01 for that boundary, with no worldwide original-expression permission inferred. Original-expression originality and applicable territories remain pending independent review. Wiki/Lexique contributions/adaptations retain CC BY-SA 4.0 legal text, attribution/history, modification notices, source/version/spans, ShareAlike and no added restrictions. CFC, Reverso/Alexandria bodies, literary/news prose and media are excluded. Actual combined redistribution verification remains pending.",
+  "source_specific_original_text_assessments": 32,
+  "original_daf8_blanket_territorial_claim": false,
+  "original_proposals": "authored/snapshot.json and external original-proposals/; initial rights proposals retained, all 200 learner fields unchanged after source-specific assessments.",
+  "patches": [
+    "scoped-author.patch",
+    "resource-tests.patch"
+  ]
+}
