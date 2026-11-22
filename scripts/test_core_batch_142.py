@@ -43,11 +43,9 @@ def proposal(name):
 
 
 def retained(name):
-    local = ROOT / name
-    if local.exists():
-        return local
     archive = Path(read("source-captures.json")["capture_root_fallback"])
-    return archive.joinpath(*Path(name).parts[2:])
+    archived = archive.joinpath(*Path(name).parts[2:])
+    return archived if archived.exists() else ROOT / name
 
 
 class Batch142AdmissionTests(unittest.TestCase):

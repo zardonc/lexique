@@ -1,0 +1,133 @@
+{
+  "ticket": 142,
+  "role": "content_author",
+  "author_content_commit": "d216259117d2c2bcc4b6a9e2a1ef7055a012d4ab",
+  "integration_commit_merged": "481d4fcc935e1746f520696d3dd4cf9cca833d09",
+  "integration_merge_commit": "6c3d1c38f9679b449b895465c068458c4f195908",
+  "parent_base_commit": "ff8aae2bdaf36096c6600d5d29342745b97c0eb7",
+  "canonical_baseline_version": "core-139-v1",
+  "canonical_baseline_groups": 2932,
+  "scope_denominator_groups": 4087,
+  "exact_groups": 50,
+  "proposed_fields": 200,
+  "author_proposed_everyday_groups": 49,
+  "author_proposed_everyday_fields": 196,
+  "unresolved_modern_everyday_rows": [
+    3098
+  ],
+  "unresolved_ordinary_fields": 4,
+  "new_independently_accepted_fields": 0,
+  "pending_independent_quality_fields": 200,
+  "pending_independent_rights_fields": 200,
+  "missing_admitted_fields": 200,
+  "annotations_added": 0,
+  "specialist_exceptions_added": 0,
+  "reused_groups": 0,
+  "reused_fields": 0,
+  "fixed_source_articles": 50,
+  "field_spans_checked": 200,
+  "contributor_parts": 6,
+  "contributor_continuation_complete": true,
+  "contributor_registry_is_sentence_authorship_proof": false,
+  "original_daf8_marked_articles": 29,
+  "original_littre_marked_articles": 1,
+  "network_retry": {
+    "http_status": 429,
+    "stage": "contributor_part_6",
+    "attempts_before_success": 1,
+    "backoff_seconds": 30,
+    "successes_preserved": true,
+    "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-142\\fetch.log"
+  },
+  "reproduction": {
+    "status": "passed",
+    "byte_identical_files": [
+      "groups.json",
+      "sources.json",
+      "source-context.json",
+      "source-excerpts.json",
+      "source-captures.json",
+      "field-review.json",
+      "rights.json",
+      "admission.json",
+      "reuse.json",
+      "usage-corroboration.json",
+      "NOTICES.md",
+      "selected-rights.md",
+      "review-candidates.md",
+      "COPYING"
+    ],
+    "fixed_articles": 50,
+    "exact_groups": 50,
+    "proposed_fields": 200,
+    "independently_accepted_fields": 0
+  },
+  "capture_archive": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-142",
+  "longest_proposed_field_characters": 134,
+  "checks": [
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_142.py (initial admission tracer)",
+      "status": "failed_as_expected",
+      "exit_code": 1,
+      "reason": "All 50 exact rows lacked admitted baseline content.",
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-142\\red-admission.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_142.py (initial author tracer)",
+      "status": "failed_as_expected",
+      "exit_code": 1,
+      "reason": "Author evidence was absent.",
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-142\\red-author.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-142/reproduce.py",
+      "status": "passed",
+      "exit_code": 0,
+      "result": "14 evidence files byte-identical from fixed captures.",
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-142\\reproduction.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_142.py",
+      "status": "passed",
+      "exit_code": 0,
+      "tests_passed": 4,
+      "tests_skipped": 1,
+      "result": "After integration merge; raw spans, contributors and rights checks read archived captures.",
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-142\\post-merge-batch.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_142.py --admitted",
+      "status": "failed_as_expected",
+      "exit_code": 1,
+      "reason": "Canonical admission remains incomplete.",
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-142\\post-merge-admission.log"
+    },
+    {
+      "command": "pnpm test:docs",
+      "status": "passed",
+      "exit_code": 0,
+      "documents": 468,
+      "local_links": 3618,
+      "skipped_local_links": 404,
+      "result": "After integration merge.",
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-142\\post-merge-docs.log"
+    },
+    {
+      "command": "git diff --check; git diff --cached --check",
+      "status": "passed",
+      "exit_code": 0,
+      "log": "C:\\Users\\inthe\\IdeaProjects\\lexique-d2-140-149\\context\\author-evidence\\issue-142\\diff-check.log"
+    }
+  ],
+  "independent_quality_review": "not_run_pending_separate_reviewer",
+  "independent_selected_rights_review": "not_run_pending_separate_reviewer",
+  "actual_native_lookup_save_reopen": "not_run_coordinator_owned",
+  "combined_conversion_and_packaging": "not_run_coordinator_owned",
+  "frontend_and_rust_application_checks": "not_run_no_application_changes_authored",
+  "learner_acceptance": "not_run",
+  "whole_machine_offline": "not_run",
+  "other_platform_execution": "not_run",
+  "release_acceptance": "not_claimed",
+  "tracker_mutations": "none",
+  "push": "none"
+}
