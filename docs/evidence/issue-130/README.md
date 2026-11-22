@@ -1,55 +1,36 @@
-# Issue #130 author package
+# Issue #130 reviewed content shard
 
-**50 frozen groups / 50 selected-use proposals / 200 sourced fields** for rows
-2451–2500. All exact headwords, POS subclasses, frequency strings and order match
-[ticket #130](https://github.com/zardonc/lexique/issues/130). The denominator remains
-**4,087 groups / 3,773 headwords**. There are no reused groups, new annotations,
-specialist exceptions, runtime aliases or learner-data changes.
+**50 exact frozen groups / 50 selected uses / 200 fields independently reviewed.**
+There are **199 unchanged fields, one Chinese correction and zero unresolved
+selected fields**. Rows 2451–2500, original POS subclasses, frequency strings and
+order remain unchanged. The denominator remains 4,087 groups / 3,773 headwords.
 
-[Groups](groups.json) are proposals pending separate independent review.
-[Research](source-research.md), [sources](sources.json), [excerpts](source-excerpts.json),
-[context](source-context.json), [field proposals](field-review.json),
-[selected rights](selected-rights.md), [rights records](rights.json),
-[notices](NOTICES.md) and [COPYING](COPYING) form the author package.
-[Original proposals](authored/groups.json) remain available for accepted replacements.
+[Independent review](README-independent-review.md) records the separate reviewer,
+author commit, review base, checks and evidence archive. [Groups](groups.json),
+[field/use ledger](field-review.json), [exact replacement](accepted-replacements.json),
+[sources](sources.json), [source context](source-context.json),
+[excerpts](source-excerpts.json), [captures](source-captures.json),
+[rights](rights.json), [selected rights](selected-rights.md),
+[notices](NOTICES.md) and [COPYING](COPYING) hold the reviewed shard.
+[Authored snapshot](authored/snapshot.json) identifies the preserved proposals.
 
-The source set comprises **50 actual fixed French article/redirect captures and
-one fixed Lexique dataset source**. Contributor pagination completed in seven
-responses with 3,234 named article-contributor memberships. Raw evidence, request
-URLs, fixed manual and reproducing helpers remain at
-`C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/author-evidence/issue-130/`.
-[Capture records](source-captures.json) give precise locations.
+The fixed source set comprises 50 actual Wiktionnaire article/redirect captures
+and the licensed Lexique 3.83 dataset. Exact `la plupart des/ADJ:ind` uses
+[the original phrase row and documented phonemic transcription](lexique-phrase-source.json),
+not component IPA inferred by the reviewer. No annotation, specialist exception
+or runtime alias is admitted.
 
-## Verification
+## Verification and admission
 
-`uv run --no-project python scripts/test_core_batch_130.py --author-only` passes
-four focused checks: exact frozen proposals/honest gates, actual capture/source
-bindings, complete contributor pagination, and phrase/ambiguous-form bindings.
-The initial resource-boundary check failed because all 50 rows lack admitted
-content. The default command still fails that admission check as expected.
-[Verification metadata](verification.json) and ignored logs record actual results.
-`git diff --check` and focused local-link checks are recorded separately.
+`uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_130.py`
+checks the reviewed shard, exact membership, every field/use decision, capture
+bindings, contributors, selected rights and the replacement ledger. The optional
+`--require-canonical` additionally checks assembly into the shared resource.
+[Verification](verification.json) records actual results.
 
-Independent accepted new groups/fields: **0 / 0**. All **200 fields** await
-independent quality and selected-span rights review and remain missing from
-admitted-content coverage. Author content blockers: **none**; selected-use and
-rights eligibility are author proposals, subject to that review.
-
-## Review and integration
-
-Use the [separate reviewer handoff](README-independent-review.md). After review,
-merge `codex/d2-content-130` into `codex/d2-content-130-139` using
-`git merge --no-ff codex/d2-content-130`. The coordinator then assembles exact
-accepted rows and updates resource coverage against all 4,087 groups.
-
-Two concrete converter requirements are retained in [admission](admission.json):
-the current row limit ends at 2450; the phrase IPA uses actual Lexique version
-`3.83` with `fixed_licensed_dataset_capture`, which the current wiki/public-domain
-source validator cannot accept. Preserve its CC BY-SA licence and original
-dataset credits when adding support. No temporary acceptance flag or simulated
-independent-review state is provided.
-
-Combined conversion/package checks, actual native lookup for all 50 groups,
-representative save/reopen and persisted-data preservation remain coordinator-owned.
-Learner acceptance, other-platform execution, whole-machine offline checks and
-formal release completion remain pending.
+Independent selected-content acceptance is **50 groups / 200 fields**. Canonical
+admission remains **zero new fields / 200 pending fields**. The coordinator's
+merged converter supports Lexique `3.83` / `fixed_licensed_dataset_capture` and
+its fixed dataset credit link. Actual assembly, conversion, combined notices,
+native lookup/save/reopen, data preservation and learner/release gates remain
+coordinator-owned. See [admission](admission.json).

@@ -783,5 +783,18 @@
     "ipa_transcription": "la-ply-paR-dE -> /la.ply.paʁ.dɛ/; variant copied from exact frozen phrase row, not inferred from isolated components"
   },
   "original_capture_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\ticket-130\\target\\issue-130",
-  "capture_fallback": "Resolve target/issue-130/<relative capture> from author_evidence_root when absent in the checkout."
+  "capture_fallback": "Resolve target/issue-130/<relative capture> from author_evidence_root when absent in the checkout.",
+  "independent_audit": {
+    "reviewer": "Separate field/use/selected-rights reviewer #130; not the author or coordinator",
+    "review_base": "d3725aa325ed9ac7222c2be80527efb798508485",
+    "author_commit": "d77da5c3b6b4c98b741dd449961bbf1d84dc0729",
+    "evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\reviewer-evidence\\issue-130\\issue-130-review",
+    "source_audit": "source-audit.json",
+    "raw_api_byte_match_sources": 50,
+    "selected_field_spans": 200,
+    "supporting_span_checks": 2509,
+    "fresh_http_requests": 0,
+    "merged_integration_tip": "2a3e70a050f1356ae1cd03bb93e18558563768ac",
+    "manual_tables_confirmed_from_actual_pdf": true
+  }
 }

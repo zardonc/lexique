@@ -1,6 +1,6 @@
-# Issue #130 candidate content notices
+# Issue #130 reviewed content notices
 
-Proposed dictionary adaptations and English/Chinese explanations: Lexique
+Selected dictionary adaptations and English/Chinese explanations: Lexique
 contributors, **CC BY-SA 4.0**. Project-owned code: MIT.
 Complete content licence: [COPYING](COPYING).
 
@@ -16,8 +16,8 @@ Lexique 3.83: Boris New and Christophe Pallier and credited corpus contributors,
 CC BY-SA 4.0. The phrase IPA transcribes original line 75479 using the documented
 phonemic codes; the original source/README/provenance remain bundled.
 
-The following versions are the source attribution list for the proposals.
-Actual combined redistribution and separate independent acceptance are pending.
+The following fixed versions identify the independently reviewed selected text.
+Actual combined redistribution remains pending canonical packaging.
 
 | Source | Fixed version | History / original credits |
 | --- | --- | --- |
