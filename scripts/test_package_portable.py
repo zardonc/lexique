@@ -103,9 +103,9 @@ class PortableTests(unittest.TestCase):
             for filename, digest in report["inputs"].items():
                 self.assertEqual(hashlib.sha256(zipped.read(prefix + filename)).hexdigest(), digest)
             description = zipped.read(self.name + "/README.txt").decode("utf-8")
-            self.assertIn("2,933 of 4,087", description)
-            self.assertIn("1,154 groups remain unaccepted", description)
-            self.assertIn("seventeen approved zero-field annotations", description)
+            self.assertIn("2,932 of 4,087", description)
+            self.assertIn("1,155 groups remain unaccepted", description)
+            self.assertIn("eighteen approved zero-field annotations", description)
             self.assertIn("dictionary/core-pilot-79/", description)
 
     def test_missing_or_changed_core_resource_and_notices_prevent_delivery(self):
