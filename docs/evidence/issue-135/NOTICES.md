@@ -1,11 +1,12 @@
 # Source and modification notices for #135
 
 French selections and adaptations, selected IPA and newly authored English/Chinese
-explanations are proposed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en).
+explanations are accepted under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en).
 The [complete legal text](COPYING), source versions, article histories, named and
-anonymous contributor credits and modification notices accompany these proposals.
+anonymous contributor credits and modification notices accompany these selections.
 Lexique contributors supply the selection, adaptation and EN/ZH explanations.
-Project source code remains MIT. No new field is independently accepted here.
+Project source code remains MIT. Separate independent review accepts 200 fields;
+combined conversion, packaging and native admission remain coordinator-owned.
 
 Exact membership and frequencies derive from Boris New and Christophe Pallier’s
 [Lexique 3.83](https://chrplr.github.io/openlexicon/datasets-info/Lexique383/README-Lexique.html),
@@ -14,17 +15,20 @@ The denominator remains 4,087; frequency does not supply CEFR.
 
 ## Modifications
 
-One selected sense is proposed for each exact word/POS group. French definitions
+One selected sense is retained for each exact word/POS group. French definitions
 remove markup and retain selected meaning, register and construction. English and
 Chinese are new explanatory texts based on the French sense, not bilingual source
 quotations. IPA selects one recorded isolated-headword variant with surrounding
 slashes. Other variants remain in the fixed captures; no audio or media is copied.
 
-`cieux/NOM` uses the fixed `ciel` lands/climates definition with explicit plural
-evidence and pronunciation from `cieux`. `douer/VER` retains the natural-endowment
-restriction and separately evidenced passive participle. The two `auquel` groups
+`cieux/NOM` selects the contemporary idiom `sous d’autres cieux`, using fixed
+`ciel` country/climate semantics with explicit plural evidence and pronunciation
+from `cieux`. `douer/VER` selects natural/providential endowment in the passive
+construction `être doué de`; its IPA remains the infinitive `douer`. External
+contemporary dictionaries corroborate these constructions; their prose and
+examples are not selected for redistribution. The two `auquel` groups
 retain masculine singular, à + lequel, and separate interrogative/relative uses.
-These are source bindings; no lookup alias or annotation exception is proposed.
+These are source bindings; no lookup alias or annotation exception is admitted.
 
 ## Article credits
 

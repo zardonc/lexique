@@ -14,7 +14,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -32,7 +32,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_collective_work_boundary",
+          "reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+          "review_reason": "The official eighth-edition preface establishes institutional commission/Académie production and 1932–1935; final-year L123-3 computation conservatively ends original economic rights on 2006-01-01. This is separate from contributor text and this batch’s exact selected-span acceptance."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -43,7 +45,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "électrique, fixed revision 39773997, selected field lines 7, 8: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. The declared DAF8 import retains Académie française’s original collective eighth-edition credit and its conservative 2006-01-01 L123-3 expiry; fixed Wiktionnaire transcription/adaptation and the present explanations remain separately CC BY-SA 4.0. No sentence-level original authorship is inferred from the article-level import marker. The retained reference markers at 221 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_33824",
@@ -59,7 +64,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -77,7 +82,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_collective_work_boundary",
+          "reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+          "review_reason": "The official eighth-edition preface establishes institutional commission/Académie production and 1932–1935; final-year L123-3 computation conservatively ends original economic rights on 2006-01-01. This is separate from contributor text and this batch’s exact selected-span acceptance."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -93,7 +100,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "section, fixed revision 39207911, selected field lines 7, 12: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. The declared DAF8 import retains Académie française’s original collective eighth-edition credit and its conservative 2006-01-01 L123-3 expiry; fixed Wiktionnaire transcription/adaptation and the present explanations remain separately CC BY-SA 4.0. No sentence-level original authorship is inferred from the article-level import marker. The retained reference markers at 162, 163 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_37252",
@@ -109,7 +119,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -118,7 +128,10 @@
           "raw_reference": "* {{R:Littré}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "normalement, fixed revision 39771246, selected field lines 6, 11: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. No declared external import is attached to the selected lexical/IPA span; reference markers alone do not establish original sentence authorship or license external prose. The retained reference markers at 74 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_85156",
@@ -134,7 +147,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -148,7 +161,10 @@
           "raw_reference": "* {{R:DAF8}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "liaison, fixed revision 39959470, selected field lines 9, 23: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. No declared external import is attached to the selected lexical/IPA span; reference markers alone do not establish original sentence authorship or license external prose. The retained reference markers at 230, 231 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_117369",
@@ -164,7 +180,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -178,7 +194,10 @@
           "raw_reference": "* {{R:ÚJČ}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "transport, fixed revision 39920852, selected field lines 9, 10: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. No declared external import is attached to the selected lexical/IPA span; reference markers alone do not establish original sentence authorship or license external prose. The retained reference markers at 153, 271 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_150245",
@@ -194,7 +213,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -212,7 +231,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_collective_work_boundary",
+          "reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+          "review_reason": "The official eighth-edition preface establishes institutional commission/Académie production and 1932–1935; final-year L123-3 computation conservatively ends original economic rights on 2006-01-01. This is separate from contributor text and this batch’s exact selected-span acceptance."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -233,7 +254,10 @@
           "raw_reference": "*{{R:Godefroy}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "brancher, fixed revision 39494072, selected field lines 6, 25: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. The declared DAF8 import retains Académie française’s original collective eighth-edition credit and its conservative 2006-01-01 L123-3 expiry; fixed Wiktionnaire transcription/adaptation and the present explanations remain separately CC BY-SA 4.0. No sentence-level original authorship is inferred from the article-level import marker. The retained reference markers at 85, 86, 98 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_167394",
@@ -249,7 +273,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -267,7 +291,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_collective_work_boundary",
+          "reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+          "review_reason": "The official eighth-edition preface establishes institutional commission/Académie production and 1932–1935; final-year L123-3 computation conservatively ends original economic rights on 2006-01-01. This is separate from contributor text and this batch’s exact selected-span acceptance."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -283,7 +309,10 @@
           "raw_reference": "* {{R:Littré}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "marchand, fixed revision 39821110, selected field lines 70, 71: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. The declared DAF8 import retains Académie française’s original collective eighth-edition credit and its conservative 2006-01-01 L123-3 expiry; fixed Wiktionnaire transcription/adaptation and the present explanations remain separately CC BY-SA 4.0. No sentence-level original authorship is inferred from the article-level import marker. The retained reference markers at 214, 215 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_169618",
@@ -299,7 +328,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -318,7 +347,10 @@
           "raw_reference": "* {{R:TLFi}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "ongle, fixed revision 39950720, selected field lines 9, 11: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. No declared external import is attached to the selected lexical/IPA span; reference markers alone do not establish original sentence authorship or license external prose. The retained reference markers at 223, 224, 225 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_174797",
@@ -334,7 +366,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -352,7 +384,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_collective_work_boundary",
+          "reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+          "review_reason": "The official eighth-edition preface establishes institutional commission/Académie production and 1932–1935; final-year L123-3 computation conservatively ends original economic rights on 2006-01-01. This is separate from contributor text and this batch’s exact selected-span acceptance."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -373,7 +407,10 @@
           "raw_reference": "* {{R:TLFi}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "répandre, fixed revision 39880007, selected field lines 6, 7: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. The declared DAF8 import retains Académie française’s original collective eighth-edition credit and its conservative 2006-01-01 L123-3 expiry; fixed Wiktionnaire transcription/adaptation and the present explanations remain separately CC BY-SA 4.0. No sentence-level original authorship is inferred from the article-level import marker. The retained reference markers at 121, 122, 123 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_175547",
@@ -389,7 +426,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -408,7 +445,10 @@
           "raw_reference": "* {{R:DAF8}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "ruiner, fixed revision 39586051, selected field lines 8, 16: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. No declared external import is attached to the selected lexical/IPA span; reference markers alone do not establish original sentence authorship or license external prose. The retained reference markers at 4, 5, 74 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_2687",
@@ -424,7 +464,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -468,7 +508,10 @@
           "raw_reference": "* {{R:Gaffiot}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "prime, fixed revision 39771295, selected field lines 86, 89: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. No declared external import is attached to the selected lexical/IPA span; reference markers alone do not establish original sentence authorship or license external prose. The retained reference markers at 5, 6, 7, 9, 204, 237, 241, 332 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_7923",
@@ -484,7 +527,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -502,7 +545,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_collective_work_boundary",
+          "reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+          "review_reason": "The official eighth-edition preface establishes institutional commission/Académie production and 1932–1935; final-year L123-3 computation conservatively ends original economic rights on 2006-01-01. This is separate from contributor text and this batch’s exact selected-span acceptance."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -518,7 +563,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "tapis, fixed revision 39770926, selected field lines 10, 11: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. The declared DAF8 import retains Académie française’s original collective eighth-edition credit and its conservative 2006-01-01 L123-3 expiry; fixed Wiktionnaire transcription/adaptation and the present explanations remain separately CC BY-SA 4.0. No sentence-level original authorship is inferred from the article-level import marker. The retained reference markers at 5, 237 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_9203",
@@ -534,7 +582,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -552,7 +600,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_collective_work_boundary",
+          "reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+          "review_reason": "The official eighth-edition preface establishes institutional commission/Académie production and 1932–1935; final-year L123-3 computation conservatively ends original economic rights on 2006-01-01. This is separate from contributor text and this batch’s exact selected-span acceptance."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -568,7 +618,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "fumée, fixed revision 39774038, selected field lines 11, 12: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. The declared DAF8 import retains Académie française’s original collective eighth-edition credit and its conservative 2006-01-01 L123-3 expiry; fixed Wiktionnaire transcription/adaptation and the present explanations remain separately CC BY-SA 4.0. No sentence-level original authorship is inferred from the article-level import marker. The retained reference markers at 5, 256 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_18725",
@@ -584,10 +637,13 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
-      "external_reference_markers": []
+      "external_reference_markers": [],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "réfléchi, fixed revision 39615660, selected field lines 9, 18: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. No declared external import is attached to the selected lexical/IPA span; reference markers alone do not establish original sentence authorship or license external prose. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_156908",
@@ -603,7 +659,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -621,7 +677,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_collective_work_boundary",
+          "reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+          "review_reason": "The official eighth-edition preface establishes institutional commission/Académie production and 1932–1935; final-year L123-3 computation conservatively ends original economic rights on 2006-01-01. This is separate from contributor text and this batch’s exact selected-span acceptance."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -632,7 +690,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "dégoûtant, fixed revision 39739099, selected field lines 9, 10: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. The declared DAF8 import retains Académie française’s original collective eighth-edition credit and its conservative 2006-01-01 L123-3 expiry; fixed Wiktionnaire transcription/adaptation and the present explanations remain separately CC BY-SA 4.0. No sentence-level original authorship is inferred from the article-level import marker. The retained reference markers at 93 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_158278",
@@ -648,7 +709,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -662,7 +723,10 @@
           "raw_reference": "* {{R:DAF8}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "douer, fixed revision 39181232, selected field lines 6, 9: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. No declared external import is attached to the selected lexical/IPA span; reference markers alone do not establish original sentence authorship or license external prose. The retained reference markers at 3, 49 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_159724",
@@ -678,7 +742,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -692,7 +756,10 @@
           "raw_reference": "* {{R:DAF8}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "entraînement, fixed revision 39987866, selected field lines 10, 20: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. No declared external import is attached to the selected lexical/IPA span; reference markers alone do not establish original sentence authorship or license external prose. The retained reference markers at 6, 110 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_163749",
@@ -708,7 +775,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -772,7 +839,10 @@
           "raw_reference": "* {{R:FVDP}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "ho, fixed revision 39823554, selected field lines 14, 15: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. No declared external import is attached to the selected lexical/IPA span; reference markers alone do not establish original sentence authorship or license external prose. The retained reference markers at 10, 139, 197, 224, 225, 226, 227, 229, 230, 231, 232, 370 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_171754",
@@ -788,7 +858,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -806,7 +876,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_collective_work_boundary",
+          "reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+          "review_reason": "The official eighth-edition preface establishes institutional commission/Académie production and 1932–1935; final-year L123-3 computation conservatively ends original economic rights on 2006-01-01. This is separate from contributor text and this batch’s exact selected-span acceptance."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -847,7 +919,10 @@
           "raw_reference": "* {{R:Raymond}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "plomb, fixed revision 39866043, selected field lines 11, 18: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. The declared DAF8 import retains Académie française’s original collective eighth-edition credit and its conservative 2006-01-01 L123-3 expiry; fixed Wiktionnaire transcription/adaptation and the present explanations remain separately CC BY-SA 4.0. No sentence-level original authorship is inferred from the article-level import marker. The retained reference markers at 320, 339, 374, 375, 376, 377, 394 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_179787",
@@ -863,7 +938,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -881,7 +956,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_collective_work_boundary",
+          "reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+          "review_reason": "The official eighth-edition preface establishes institutional commission/Académie production and 1932–1935; final-year L123-3 computation conservatively ends original economic rights on 2006-01-01. This is separate from contributor text and this batch’s exact selected-span acceptance."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -892,7 +969,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "version, fixed revision 39932553, selected field lines 9, 19: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. The declared DAF8 import retains Académie française’s original collective eighth-edition credit and its conservative 2006-01-01 L123-3 expiry; fixed Wiktionnaire transcription/adaptation and the present explanations remain separately CC BY-SA 4.0. No sentence-level original authorship is inferred from the article-level import marker. The retained reference markers at 113 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_8771",
@@ -908,7 +988,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -926,7 +1006,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_collective_work_boundary",
+          "reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+          "review_reason": "The official eighth-edition preface establishes institutional commission/Académie production and 1932–1935; final-year L123-3 computation conservatively ends original economic rights on 2006-01-01. This is separate from contributor text and this batch’s exact selected-span acceptance."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -972,7 +1054,10 @@
           "raw_reference": "* {{R:Verhulst|61|69}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "blé, fixed revision 39930170, selected field lines 13, 17: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. The declared DAF8 import retains Académie française’s original collective eighth-edition credit and its conservative 2006-01-01 L123-3 expiry; fixed Wiktionnaire transcription/adaptation and the present explanations remain separately CC BY-SA 4.0. No sentence-level original authorship is inferred from the article-level import marker. The retained reference markers at 6, 7, 8, 310, 315, 316, 351, 367 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_9595",
@@ -988,7 +1073,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -997,7 +1082,10 @@
           "raw_reference": "* {{R:DAF8}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "hauteur, fixed revision 39820213, selected field lines 7, 8: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. No declared external import is attached to the selected lexical/IPA span; reference markers alone do not establish original sentence authorship or license external prose. The retained reference markers at 212 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_35341",
@@ -1013,7 +1101,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -1047,7 +1135,10 @@
           "raw_reference": "* {{R:Usito}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "oignon, fixed revision 39872465, selected field lines 9, 18: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. No declared external import is attached to the selected lexical/IPA span; reference markers alone do not establish original sentence authorship or license external prose. The retained reference markers at 371, 372, 373, 374, 376, 377 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_36688",
@@ -1063,7 +1154,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -1137,7 +1228,10 @@
           "raw_reference": "* {{R:Everett2009|p=6}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "gai, fixed revision 39445699, selected field lines 18, 19: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. No declared external import is attached to the selected lexical/IPA span; reference markers alone do not establish original sentence authorship or license external prose. The retained reference markers at 13, 247, 250, 285, 333, 402, 403, 404, 405, 406, 407, 408, 427, 431 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_124332",
@@ -1153,7 +1247,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1171,7 +1265,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_collective_work_boundary",
+          "reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+          "review_reason": "The official eighth-edition preface establishes institutional commission/Académie production and 1932–1935; final-year L123-3 computation conservatively ends original economic rights on 2006-01-01. This is separate from contributor text and this batch’s exact selected-span acceptance."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1192,7 +1288,10 @@
           "raw_reference": "* {{R:VJA}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "abuser, fixed revision 39656381, selected field lines 6, 29: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. The declared DAF8 import retains Académie française’s original collective eighth-edition credit and its conservative 2006-01-01 L123-3 expiry; fixed Wiktionnaire transcription/adaptation and the present explanations remain separately CC BY-SA 4.0. No sentence-level original authorship is inferred from the article-level import marker. The retained reference markers at 138, 193, 205 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_150653",
@@ -1208,7 +1307,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -1227,7 +1326,10 @@
           "raw_reference": "* {{R:DAF8}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "cabine, fixed revision 39886471, selected field lines 9, 14: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. No declared external import is attached to the selected lexical/IPA span; reference markers alone do not establish original sentence authorship or license external prose. The retained reference markers at 5, 145, 146 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_158734",
@@ -1243,7 +1345,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1261,7 +1363,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_collective_work_boundary",
+          "reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+          "review_reason": "The official eighth-edition preface establishes institutional commission/Académie production and 1932–1935; final-year L123-3 computation conservatively ends original economic rights on 2006-01-01. This is separate from contributor text and this batch’s exact selected-span acceptance."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1277,7 +1381,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "écrit, fixed revision 39771669, selected field lines 57, 58: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. The declared DAF8 import retains Académie française’s original collective eighth-edition credit and its conservative 2006-01-01 L123-3 expiry; fixed Wiktionnaire transcription/adaptation and the present explanations remain separately CC BY-SA 4.0. No sentence-level original authorship is inferred from the article-level import marker. The retained reference markers at 143, 144 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_172222",
@@ -1293,7 +1400,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1311,7 +1418,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_collective_work_boundary",
+          "reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+          "review_reason": "The official eighth-edition preface establishes institutional commission/Académie production and 1932–1935; final-year L123-3 computation conservatively ends original economic rights on 2006-01-01. This is separate from contributor text and this batch’s exact selected-span acceptance."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1322,7 +1431,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "positif, fixed revision 39771886, selected field lines 7, 20: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. The declared DAF8 import retains Académie française’s original collective eighth-edition credit and its conservative 2006-01-01 L123-3 expiry; fixed Wiktionnaire transcription/adaptation and the present explanations remain separately CC BY-SA 4.0. No sentence-level original authorship is inferred from the article-level import marker. The retained reference markers at 173 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_247662",
@@ -1338,10 +1450,13 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
-      "external_reference_markers": []
+      "external_reference_markers": [],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "cieux, fixed revision 39431597, selected field lines 8: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. No declared external import is attached to the selected lexical/IPA span; reference markers alone do not establish original sentence authorship or license external prose. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_360452",
@@ -1357,10 +1472,13 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
-      "external_reference_markers": []
+      "external_reference_markers": [],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "dégueulasse, fixed revision 39557195, selected field lines 9, 12: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. No declared external import is attached to the selected lexical/IPA span; reference markers alone do not establish original sentence authorship or license external prose. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_15833",
@@ -1376,7 +1494,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1394,7 +1512,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_collective_work_boundary",
+          "reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+          "review_reason": "The official eighth-edition preface establishes institutional commission/Académie production and 1932–1935; final-year L123-3 computation conservatively ends original economic rights on 2006-01-01. This is separate from contributor text and this batch’s exact selected-span acceptance."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1405,7 +1525,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "disparu, fixed revision 39773179, selected field lines 8, 10: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. The declared DAF8 import retains Académie française’s original collective eighth-edition credit and its conservative 2006-01-01 L123-3 expiry; fixed Wiktionnaire transcription/adaptation and the present explanations remain separately CC BY-SA 4.0. No sentence-level original authorship is inferred from the article-level import marker. The retained reference markers at 75 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_33034",
@@ -1421,7 +1544,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -1442,7 +1565,10 @@
           "raw_reference": "* {{R:TLFi}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "couche, fixed revision 40002906, selected field lines 10, 29: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. No declared external import is attached to the selected lexical/IPA span; reference markers alone do not establish original sentence authorship or license external prose. The retained reference markers at 86, 276, 277 identify their actual boundaries; unselected external prose is excluded. The CFC cartographic coating marker at line 86 belongs to a different definition from the selected infant diaper at line 29; no CFC-derived text is admitted. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_72048",
@@ -1458,7 +1584,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1476,7 +1602,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_collective_work_boundary",
+          "reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+          "review_reason": "The official eighth-edition preface establishes institutional commission/Académie production and 1932–1935; final-year L123-3 computation conservatively ends original economic rights on 2006-01-01. This is separate from contributor text and this batch’s exact selected-span acceptance."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1487,7 +1615,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "vain, fixed revision 39717072, selected field lines 8, 9: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. The declared DAF8 import retains Académie française’s original collective eighth-edition credit and its conservative 2006-01-01 L123-3 expiry; fixed Wiktionnaire transcription/adaptation and the present explanations remain separately CC BY-SA 4.0. No sentence-level original authorship is inferred from the article-level import marker. The retained reference markers at 111 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_148627",
@@ -1503,7 +1634,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1521,7 +1652,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_collective_work_boundary",
+          "reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+          "review_reason": "The official eighth-edition preface establishes institutional commission/Académie production and 1932–1935; final-year L123-3 computation conservatively ends original economic rights on 2006-01-01. This is separate from contributor text and this batch’s exact selected-span acceptance."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1532,7 +1665,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "auquel, fixed revision 39773412, selected field lines 16, 17, 54, 55: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. The declared DAF8 import retains Académie française’s original collective eighth-edition credit and its conservative 2006-01-01 L123-3 expiry; fixed Wiktionnaire transcription/adaptation and the present explanations remain separately CC BY-SA 4.0. No sentence-level original authorship is inferred from the article-level import marker. The retained reference markers at 72 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_154569",
@@ -1548,7 +1684,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1566,7 +1702,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_collective_work_boundary",
+          "reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+          "review_reason": "The official eighth-edition preface establishes institutional commission/Académie production and 1932–1935; final-year L123-3 computation conservatively ends original economic rights on 2006-01-01. This is separate from contributor text and this batch’s exact selected-span acceptance."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1577,7 +1715,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "collier, fixed revision 40039663, selected field lines 15, 16: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. The declared DAF8 import retains Académie française’s original collective eighth-edition credit and its conservative 2006-01-01 L123-3 expiry; fixed Wiktionnaire transcription/adaptation and the present explanations remain separately CC BY-SA 4.0. No sentence-level original authorship is inferred from the article-level import marker. The retained reference markers at 313 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_160022",
@@ -1593,7 +1734,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1611,7 +1752,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_collective_work_boundary",
+          "reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+          "review_reason": "The official eighth-edition preface establishes institutional commission/Académie production and 1932–1935; final-year L123-3 computation conservatively ends original economic rights on 2006-01-01. This is separate from contributor text and this batch’s exact selected-span acceptance."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1622,7 +1765,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "équipage, fixed revision 39845096, selected field lines 10, 11: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. The declared DAF8 import retains Académie française’s original collective eighth-edition credit and its conservative 2006-01-01 L123-3 expiry; fixed Wiktionnaire transcription/adaptation and the present explanations remain separately CC BY-SA 4.0. No sentence-level original authorship is inferred from the article-level import marker. The retained reference markers at 119 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_164293",
@@ -1638,7 +1784,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1656,7 +1802,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_collective_work_boundary",
+          "reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+          "review_reason": "The official eighth-edition preface establishes institutional commission/Académie production and 1932–1935; final-year L123-3 computation conservatively ends original economic rights on 2006-01-01. This is separate from contributor text and this batch’s exact selected-span acceptance."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1667,7 +1815,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "illégal, fixed revision 39819457, selected field lines 9, 10: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. The declared DAF8 import retains Académie française’s original collective eighth-edition credit and its conservative 2006-01-01 L123-3 expiry; fixed Wiktionnaire transcription/adaptation and the present explanations remain separately CC BY-SA 4.0. No sentence-level original authorship is inferred from the article-level import marker. The retained reference markers at 91 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_166174",
@@ -1683,7 +1834,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1701,7 +1852,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_collective_work_boundary",
+          "reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+          "review_reason": "The official eighth-edition preface establishes institutional commission/Académie production and 1932–1935; final-year L123-3 computation conservatively ends original economic rights on 2006-01-01. This is separate from contributor text and this batch’s exact selected-span acceptance."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1742,7 +1895,10 @@
           "raw_reference": "* {{R:Ubaud}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "laid, fixed revision 39942478, selected field lines 8, 13: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. The declared DAF8 import retains Académie française’s original collective eighth-edition credit and its conservative 2006-01-01 L123-3 expiry; fixed Wiktionnaire transcription/adaptation and the present explanations remain separately CC BY-SA 4.0. No sentence-level original authorship is inferred from the article-level import marker. The retained reference markers at 193, 194, 215, 265, 266, 267, 268 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_174819",
@@ -1758,7 +1914,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1776,7 +1932,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_collective_work_boundary",
+          "reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+          "review_reason": "The official eighth-edition preface establishes institutional commission/Académie production and 1932–1935; final-year L123-3 computation conservatively ends original economic rights on 2006-01-01. This is separate from contributor text and this batch’s exact selected-span acceptance."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1787,7 +1945,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "reparler, fixed revision 39667957, selected field lines 8, 9: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. The declared DAF8 import retains Académie française’s original collective eighth-edition credit and its conservative 2006-01-01 L123-3 expiry; fixed Wiktionnaire transcription/adaptation and the present explanations remain separately CC BY-SA 4.0. No sentence-level original authorship is inferred from the article-level import marker. The retained reference markers at 25 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_176924",
@@ -1803,7 +1964,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1821,7 +1982,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_collective_work_boundary",
+          "reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+          "review_reason": "The official eighth-edition preface establishes institutional commission/Académie production and 1932–1935; final-year L123-3 computation conservatively ends original economic rights on 2006-01-01. This is separate from contributor text and this batch’s exact selected-span acceptance."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1832,7 +1995,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "soupçonner, fixed revision 39959222, selected field lines 6, 7: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. The declared DAF8 import retains Académie française’s original collective eighth-edition credit and its conservative 2006-01-01 L123-3 expiry; fixed Wiktionnaire transcription/adaptation and the present explanations remain separately CC BY-SA 4.0. No sentence-level original authorship is inferred from the article-level import marker. The retained reference markers at 80 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_8021",
@@ -1848,7 +2014,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1866,7 +2032,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_collective_work_boundary",
+          "reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+          "review_reason": "The official eighth-edition preface establishes institutional commission/Académie production and 1932–1935; final-year L123-3 computation conservatively ends original economic rights on 2006-01-01. This is separate from contributor text and this batch’s exact selected-span acceptance."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1877,7 +2045,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "bibliothèque, fixed revision 40047436, selected field lines 12, 18: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. The declared DAF8 import retains Académie française’s original collective eighth-edition credit and its conservative 2006-01-01 L123-3 expiry; fixed Wiktionnaire transcription/adaptation and the present explanations remain separately CC BY-SA 4.0. No sentence-level original authorship is inferred from the article-level import marker. The retained reference markers at 327 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_10702",
@@ -1893,7 +2064,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -1907,7 +2078,10 @@
           "raw_reference": "* {{R:PMatao|p=318}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "incendie, fixed revision 39937899, selected field lines 10, 11: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. No declared external import is attached to the selected lexical/IPA span; reference markers alone do not establish original sentence authorship or license external prose. The retained reference markers at 141, 168 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_36304",
@@ -1923,7 +2097,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1941,7 +2115,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_collective_work_boundary",
+          "reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+          "review_reason": "The official eighth-edition preface establishes institutional commission/Académie production and 1932–1935; final-year L123-3 computation conservatively ends original economic rights on 2006-01-01. This is separate from contributor text and this batch’s exact selected-span acceptance."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1957,7 +2133,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "âgé, fixed revision 39770552, selected field lines 9, 17: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. The declared DAF8 import retains Académie française’s original collective eighth-edition credit and its conservative 2006-01-01 L123-3 expiry; fixed Wiktionnaire transcription/adaptation and the present explanations remain separately CC BY-SA 4.0. No sentence-level original authorship is inferred from the article-level import marker. The retained reference markers at 76, 77 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_41876",
@@ -1973,7 +2152,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1991,7 +2170,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_collective_work_boundary",
+          "reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+          "review_reason": "The official eighth-edition preface establishes institutional commission/Académie production and 1932–1935; final-year L123-3 computation conservatively ends original economic rights on 2006-01-01. This is separate from contributor text and this batch’s exact selected-span acceptance."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -2012,7 +2193,10 @@
           "raw_reference": "* {{R:Larousse}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "persuader, fixed revision 39922237, selected field lines 6, 7: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. The declared DAF8 import retains Académie française’s original collective eighth-edition credit and its conservative 2006-01-01 L123-3 expiry; fixed Wiktionnaire transcription/adaptation and the present explanations remain separately CC BY-SA 4.0. No sentence-level original authorship is inferred from the article-level import marker. The retained reference markers at 122, 123, 124 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_154988",
@@ -2028,7 +2212,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -2037,7 +2221,10 @@
           "raw_reference": "* {{R:DAF8}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "conférence, fixed revision 39771360, selected field lines 9, 25: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. No declared external import is attached to the selected lexical/IPA span; reference markers alone do not establish original sentence authorship or license external prose. The retained reference markers at 181 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_160367",
@@ -2053,7 +2240,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -2071,7 +2258,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_collective_work_boundary",
+          "reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+          "review_reason": "The official eighth-edition preface establishes institutional commission/Académie production and 1932–1935; final-year L123-3 computation conservatively ends original economic rights on 2006-01-01. This is separate from contributor text and this batch’s exact selected-span acceptance."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -2087,7 +2276,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "étonnant, fixed revision 39773470, selected field lines 6, 8: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. The declared DAF8 import retains Académie française’s original collective eighth-edition credit and its conservative 2006-01-01 L123-3 expiry; fixed Wiktionnaire transcription/adaptation and the present explanations remain separately CC BY-SA 4.0. No sentence-level original authorship is inferred from the article-level import marker. The retained reference markers at 67, 69 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_174464",
@@ -2103,7 +2295,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -2121,7 +2313,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_collective_work_boundary",
+          "reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+          "review_reason": "The official eighth-edition preface establishes institutional commission/Académie production and 1932–1935; final-year L123-3 computation conservatively ends original economic rights on 2006-01-01. This is separate from contributor text and this batch’s exact selected-span acceptance."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -2132,7 +2326,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "religieux, fixed revision 39802025, selected field lines 8, 9: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. The declared DAF8 import retains Académie française’s original collective eighth-edition credit and its conservative 2006-01-01 L123-3 expiry; fixed Wiktionnaire transcription/adaptation and the present explanations remain separately CC BY-SA 4.0. No sentence-level original authorship is inferred from the article-level import marker. The retained reference markers at 161 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_174896",
@@ -2148,7 +2345,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -2172,7 +2369,10 @@
           "raw_reference": "* {{R:Godefroy}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "reprocher, fixed revision 39720765, selected field lines 6, 7: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. No declared external import is attached to the selected lexical/IPA span; reference markers alone do not establish original sentence authorship or license external prose. The retained reference markers at 3, 78, 79, 89 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_176247",
@@ -2188,7 +2388,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -2206,7 +2406,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_collective_work_boundary",
+          "reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+          "review_reason": "The official eighth-edition preface establishes institutional commission/Académie production and 1932–1935; final-year L123-3 computation conservatively ends original economic rights on 2006-01-01. This is separate from contributor text and this batch’s exact selected-span acceptance."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -2217,7 +2419,10 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "semer, fixed revision 39469311, selected field lines 8, 9: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. The declared DAF8 import retains Académie française’s original collective eighth-edition credit and its conservative 2006-01-01 L123-3 expiry; fixed Wiktionnaire transcription/adaptation and the present explanations remain separately CC BY-SA 4.0. No sentence-level original authorship is inferred from the article-level import marker. The retained reference markers at 204 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_8889",
@@ -2233,7 +2438,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -2251,7 +2456,9 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_original_collective_work_boundary",
+          "reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+          "review_reason": "The official eighth-edition preface establishes institutional commission/Académie production and 1932–1935; final-year L123-3 computation conservatively ends original economic rights on 2006-01-01. This is separate from contributor text and this batch’s exact selected-span acceptance."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -2267,7 +2474,10 @@
           "raw_reference": "* {{R:DÉCT}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "ciel, fixed revision 39902656, selected field lines 56: the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. The declared DAF8 import retains Académie française’s original collective eighth-edition credit and its conservative 2006-01-01 L123-3 expiry; fixed Wiktionnaire transcription/adaptation and the present explanations remain separately CC BY-SA 4.0. No sentence-level original authorship is inferred from the article-level import marker. The retained reference markers at 545, 589 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     },
     {
       "id": "b135_fr_304239",
@@ -2283,7 +2493,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -2292,7 +2502,10 @@
           "raw_reference": "* {{R:Trémeur|vue=d}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "author_selected_text_review": "pending_independent_selected_span_review",
+      "independent_reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+      "selected_text_rights_reason": "doué, fixed revision 40051407, selected field lines : the lexical/POS/IPA spans were inspected separately from literary/news examples, etymologies, media and other languages. No declared external import is attached to the selected lexical/IPA span; reference markers alone do not establish original sentence authorship or license external prose. The retained reference markers at 94 identify their actual boundaries; unselected external prose is excluded. Fixed article/full linked history, complete paginated named registries and anonymous-history credit provide attribution. Modification notices, CC BY-SA 4.0 and ShareAlike apply; combined packaged obligations remain coordinator-owned."
     }
   ]
 }

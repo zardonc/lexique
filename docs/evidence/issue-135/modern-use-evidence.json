@@ -1,0 +1,108 @@
+{
+  "schema": "lexique-d2-modern-construction-review-1",
+  "reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+  "external_prose_selected_for_redistribution": false,
+  "uses": [
+    {
+      "frozen_row": 2712,
+      "construction": "être doué de",
+      "quality_status": "passed_for_scoped_modern_construction",
+      "exception_requested_or_assumed": false,
+      "reason": "Only the natural/providential endowment in the contemporary passive être doué de is accepted. The fixed douer verb definition and doué past-participle frame are supported by Larousse’s explicit verbe passif and de-complement use. The infinitive and its IPA remain douer, without adopting doué pour, the absolute talented adjective or unrestricted modern active granting.",
+      "captures": [
+        {
+          "id": "larousse-douer-confirmed",
+          "url": "https://www.larousse.fr/dictionnaires/francais/douer/26625",
+          "final_url": "https://www.larousse.fr/dictionnaires/francais/douer/26625",
+          "status": 200,
+          "bytes": 55771,
+          "captured_at": "2026-11-22T01:45:06.560890+00:00",
+          "archived_raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\reviewer-evidence\\issue-135\\issue-135-review\\modern\\larousse-douer-confirmed.html"
+        },
+        {
+          "id": "robert-douer",
+          "url": "https://dictionnaire.lerobert.com/definition/douer",
+          "final_url": "https://dictionnaire.lerobert.com/definition/douer",
+          "status": 200,
+          "bytes": 116120,
+          "captured_at": "2026-11-22T01:41:46.269466+00:00",
+          "archived_raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\reviewer-evidence\\issue-135\\issue-135-review\\modern\\robert-douer.html"
+        },
+        {
+          "id": "cnrtl-douer",
+          "url": "https://www.cnrtl.fr/definition/douer",
+          "final_url": "https://www.cnrtl.fr/definition/douer",
+          "status": 200,
+          "bytes": 83304,
+          "captured_at": "2026-11-22T01:41:48.498137+00:00",
+          "archived_raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\reviewer-evidence\\issue-135\\issue-135-review\\modern\\cnrtl-douer.html"
+        }
+      ]
+    },
+    {
+      "frozen_row": 2721,
+      "construction": "sous d’autres cieux",
+      "quality_status": "passed_for_scoped_modern_construction",
+      "exception_requested_or_assumed": false,
+      "reason": "The contemporary idiom sous d’autres cieux means elsewhere/in other countries or places, corroborated by Le Robert’s current locution and recent examples. The fixed ciel definition supplies the country/climate semantics, while cieux supplies the exact plural spelling and /sjø/. The accepted text makes the idiom explicit instead of teaching an unrestricted synonym for lands.",
+      "captures": [
+        {
+          "id": "robert-ciel",
+          "url": "https://dictionnaire.lerobert.com/definition/ciel",
+          "final_url": "https://dictionnaire.lerobert.com/definition/ciel",
+          "status": 200,
+          "bytes": 163609,
+          "captured_at": "2026-11-22T01:45:07.405606+00:00",
+          "archived_raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\reviewer-evidence\\issue-135\\issue-135-review\\modern\\robert-ciel.html"
+        },
+        {
+          "id": "robert-cieux",
+          "url": "https://dictionnaire.lerobert.com/definition/cieux",
+          "final_url": "https://dictionnaire.lerobert.com/definition/cieux",
+          "status": 200,
+          "bytes": 117004,
+          "captured_at": "2026-11-22T01:41:46.767267+00:00",
+          "archived_raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\reviewer-evidence\\issue-135\\issue-135-review\\modern\\robert-cieux.html"
+        },
+        {
+          "id": "cnrtl-ciel",
+          "url": "https://www.cnrtl.fr/definition/ciel",
+          "final_url": "https://www.cnrtl.fr/definition/ciel",
+          "status": 200,
+          "bytes": 269039,
+          "captured_at": "2026-11-22T01:41:49.768836+00:00",
+          "archived_raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\reviewer-evidence\\issue-135\\issue-135-review\\modern\\cnrtl-ciel.html"
+        }
+      ]
+    }
+  ],
+  "rights_boundary": "External dictionaries corroborate construction and contemporary usage only. Their definitions, examples and media are not learner-content sources. Fixed Wiktionnaire lexical/IPA spans remain the source of the accepted adaptations.",
+  "original_work_checks": {
+    "collective_edition": "Académie française, eighth edition, 1932–1935",
+    "conservative_expiry": "2006-01-01",
+    "calculation": "Final publication 1935; 1 January 1936 plus 70 years. L123-3 also treats separately published elements individually; using the final year is conservative for the whole original edition.",
+    "primary_edition_captures": [
+      {
+        "id": "academie-preface8",
+        "url": "https://www.academie-francaise.fr/le-dictionnaire-les-neufs-prefaces/preface-de-la-huitieme-edition-1932-1935",
+        "final_url": "https://www.academie-francaise.fr/le-dictionnaire-les-neufs-prefaces/preface-de-la-huitieme-edition-1932-1935",
+        "status": 200,
+        "bytes": 50003,
+        "captured_at": "2026-11-22T01:49:45.591606+00:00",
+        "archived_raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\reviewer-evidence\\issue-135\\issue-135-review\\modern\\academie-preface8.html"
+      },
+      {
+        "id": "academie-dates",
+        "url": "https://www.academie-francaise.fr/linstitution-lhistoire/les-grandes-dates",
+        "final_url": "https://www.academie-francaise.fr/linstitution-lhistoire/les-grandes-dates",
+        "status": 200,
+        "bytes": 56390,
+        "captured_at": "2026-11-22T01:49:46.617053+00:00",
+        "archived_raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\reviewer-evidence\\issue-135\\issue-135-review\\modern\\academie-dates.html"
+      }
+    ],
+    "legal_basis_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278941/2026-10-28",
+    "legal_read_boundary": "Indexed first-party article text retained in modern/legal-search-response.json independently confirms L123-3; direct requests returned HTTP 403. The established original-work source record remains retained separately from this batch’s new span decisions.",
+    "moral_rights": "Original author/work credit is retained; no modern electronic Académie edition is copied."
+  }
+}
