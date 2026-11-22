@@ -1,0 +1,105 @@
+{
+  "ticket": 137,
+  "parent": 78,
+  "kind": "author_package_resource_evidence",
+  "status": "author_checks_passed_independent_and_native_gates_pending",
+  "author_branch": "codex/d2-content-137",
+  "author_base_commit": "fbcc55129e1f8b4c6c47bb6ed73aa69991e926af",
+  "scope_denominator_groups": 4087,
+  "frozen_rows": [
+    2801,
+    2850
+  ],
+  "proposed_groups": 50,
+  "proposed_senses": 50,
+  "proposed_fields": 200,
+  "fixed_french_sources": 53,
+  "contributor_response_parts": 7,
+  "named_article_contributor_memberships": 3031,
+  "daf8_marked_source_articles": 32,
+  "independently_accepted_new_groups": 0,
+  "independently_accepted_new_fields": 0,
+  "pending_quality_fields": 200,
+  "pending_rights_fields": 200,
+  "missing_admitted_fields": 200,
+  "author_unresolved_content_rows": [],
+  "stable_author_evidence_root": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/author-evidence/issue-137",
+  "toolchain": {
+    "python": "3.14.10",
+    "pnpm": "11.25.0"
+  },
+  "checks": [
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_137.py",
+      "phase": "initial resource seam",
+      "result": "failed_expected_missing_admission",
+      "exit_code": 1,
+      "missing_frozen_groups": 50,
+      "log": "resource-red.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_137.py --author-only",
+      "result": "passed",
+      "tests": 4,
+      "exit_code": 0,
+      "log": "author-tests-final.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-137/reproduce.py",
+      "result": "passed",
+      "json_and_markdown_files_byte_equal": 14,
+      "isolated_copy": true,
+      "exit_code": 0,
+      "log": "reproduction-final.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-137/check_archive_fallback.py",
+      "result": "passed",
+      "tests": 4,
+      "original_checkout_cache_absent": true,
+      "exit_code": 0,
+      "log": "archive-fallback-final.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_137.py",
+      "phase": "author package plus canonical admission",
+      "result": "failed_expected_missing_admission",
+      "passed_author_tests": 4,
+      "failed_admission_tests": 1,
+      "exit_code": 1,
+      "log": "admission-pending.log"
+    },
+    {
+      "command": "pnpm test:docs",
+      "result": "passed",
+      "log": "docs-check.log",
+      "exit_code": 0,
+      "checked_documents": 400,
+      "local_links": 3112
+    },
+    {
+      "command": "git diff --cached --check",
+      "result": "passed",
+      "log": "diff-check.log",
+      "exit_code": 0
+    }
+  ],
+  "skipped_checks": [
+    {
+      "check": "combined core conversion/package and every-headword native lookup/trusted save/reopen/preservation",
+      "reason": "coordinator-owned shared assembly and actual native seams; independent admission pending"
+    },
+    {
+      "check": "frontend lint/typecheck/build and Rust checks",
+      "reason": "no frontend or Rust implementation changes in the scoped author package"
+    },
+    {
+      "check": "independent quality/rights review and learner acceptance",
+      "reason": "author package only; no independent reviewer assigned"
+    },
+    {
+      "check": "other-platform execution, whole-machine offline and formal release",
+      "reason": "existing separate release gates"
+    }
+  ]
+}
