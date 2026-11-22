@@ -1,10 +1,12 @@
 # Source and modification notices for #140
 
-These 50 author proposals retain [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en).
+These reviewed contribution/adaptation records retain [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en).
 The fixed Wiktionnaire contribution layer, French adaptations and new Lexique
 English/Chinese explanations have that licence. Project code remains MIT.
 The [complete legal text](COPYING), source/version identities, attribution,
-modification notices and selected source material accompany the proposals.
+modification notices and selected source material accompany the reviewed shard.
+Quality review is complete. Rights are resolved for 98 fields; 102 textual
+fields across 34 groups retain unresolved original-work territorial rights.
 
 Exact membership, POS subclasses and both frequency strings derive from Boris
 New and Christophe Pallier’s [Lexique 3.83](https://chrplr.github.io/openlexicon/datasets-info/Lexique383/README-Lexique.html),
@@ -87,8 +89,9 @@ retain credit for selection, adaptations and explanatory translations.
 Thirty-four articles declare Académie française eighth-edition imports
 (1932–1935), including supporting `mien`. Original credit remains distinct from
 the wiki and Lexique contribution layers. [Selected rights](selected-rights.md)
-retains the established original collective-work basis and 2006-01-01 expiry.
-That historical decision supplies no acceptance of a new #140 field.
+retains the established French collective-work basis and French economic
+expiry 2006-01-01. US clearance of the selected original expression and retained
+source material remains unresolved. No worldwide original-work grant is asserted.
 
 ## Selected boundaries and redistribution
 
