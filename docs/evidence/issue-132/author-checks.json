@@ -3,12 +3,14 @@
   "base_commit": "e4005d868880dac12c84c412773049eea737bc67",
   "boundary": "Author resource/admission handoff only; no independent quality or native execution.",
   "frozen_groups": 50,
-  "candidate_senses": 50,
-  "candidate_fields": 200,
+  "candidate_senses": 49,
+  "candidate_fields": 196,
   "modern_use_proposals": 49,
-  "unresolved_rows": [
+  "unresolved_rows": [],
+  "approved_annotation_rows": [
     2560
   ],
+  "missing_annotation_fields": 4,
   "independent_accepted_fields": 0,
   "newly_admitted_fields": 0,
   "scope_denominator_groups": 4087,
@@ -30,8 +32,8 @@
     },
     {
       "command": "uv run --no-project python -B -X utf8 -m unittest discover -s scripts -p test_core_batch_132.py -v",
-      "result": "PASS: four author-boundary tests, zero skips",
-      "log": "target/issue-132/green.log"
+      "result": "PASS: four author-boundary tests, zero skips; 49 candidates and approved annotation",
+      "log": "target/issue-132/annotation-green.log"
     },
     {
       "command": "uv run --no-project python -B -X utf8 target/issue-132/reproduce.py",
@@ -45,7 +47,7 @@
     },
     {
       "command": "pnpm test:docs",
-      "result": "PASS: 395 documents, 3067 local links, zero problems",
+      "result": "PASS: 397 documents, 3075 local links, zero problems",
       "log": "target/issue-132/docs-check.log"
     },
     {
@@ -69,6 +71,14 @@
     "Learner acceptance",
     "Frontend lint/typecheck/build and Rust checks: no application or Rust code changed"
   ],
+  "rejected_old_proposal": "rejected-old-use.json; complete original package/helpers in the stable archive",
   "raw_reproduction_requires": "Local target/issue-132 or the external archive identified in admission.json",
-  "original_work_obligations": "CC BY-SA 4.0 attribution/history/version/modifications and ShareAlike; DAF8/Littré original-work layers separately credited and pending selected-span review. CFC, media and CNRTL prose excluded."
+  "original_work_obligations": "CC BY-SA 4.0 attribution/history/version/modifications and ShareAlike; DAF8/Littré original-work layers separately credited and pending selected-span review. CFC, media and CNRTL prose excluded.",
+  "archive_preservation": {
+    "archive": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\author-evidence\\issue-132",
+    "copied_files_verified": 203,
+    "originals_preserved": true,
+    "fallback": "PASS: four resource tests, zero skips, with no local raw-capture directory",
+    "rejected_snapshot": "rejected-old-use/package and rejected-old-use/helpers"
+  }
 }

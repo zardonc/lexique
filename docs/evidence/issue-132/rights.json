@@ -17,7 +17,8 @@
           "revid": 38903168,
           "timestamp": "2025-10-14T19:47:22Z",
           "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\ticket-132\\target\\issue-132\\rights\\policy-11150.wiki",
-          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Convention%3ADroit%20d%E2%80%99auteur&oldid=38903168"
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Convention%3ADroit%20d%E2%80%99auteur&oldid=38903168",
+          "archive_raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\author-evidence\\issue-132\\rights\\policy-11150.wiki"
         },
         {
           "title": "Modèle:Import:DAF8",
@@ -25,24 +26,28 @@
           "revid": 22113837,
           "timestamp": "2017-02-04T13:48:32Z",
           "raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\ticket-132\\target\\issue-132\\rights\\policy-273395.wiki",
-          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AImport%3ADAF8&oldid=22113837"
+          "fixed_url": "https://fr.wiktionary.org/w/index.php?title=Mod%C3%A8le%3AImport%3ADAF8&oldid=22113837",
+          "archive_raw_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\author-evidence\\issue-132\\rights\\policy-273395.wiki"
         }
       ],
-      "reuse": "Unchanged established first-party authority bytes reused through the #128 author archive; original capture timestamp and URLs retained. This is authority reuse, not review of changed fields."
+      "reuse": "Unchanged established first-party authority bytes reused through the #128 author archive; original capture timestamp and URLs retained. This is authority reuse, not review of changed fields.",
+      "archive_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\author-evidence\\issue-132\\rights\\fr-policy.api.json"
     },
     {
       "path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\ticket-132\\target\\issue-132\\rights\\cc-legal.html",
       "url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "status": 200,
       "retained_at_utc": "2026-11-20T17:49:04.866792+00:00",
-      "reuse": "Unchanged established first-party authority bytes reused through the #128 author archive; original capture timestamp and URLs retained. This is authority reuse, not review of changed fields."
+      "reuse": "Unchanged established first-party authority bytes reused through the #128 author archive; original capture timestamp and URLs retained. This is authority reuse, not review of changed fields.",
+      "archive_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\author-evidence\\issue-132\\rights\\cc-legal.html"
     },
     {
       "path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\ticket-132\\target\\issue-132\\rights\\terms.html",
       "url": "https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use",
       "status": 200,
       "retained_at_utc": "2026-11-20T17:49:08.068198+00:00",
-      "reuse": "Unchanged established first-party authority bytes reused through the #128 author archive; original capture timestamp and URLs retained. This is authority reuse, not review of changed fields."
+      "reuse": "Unchanged established first-party authority bytes reused through the #128 author archive; original capture timestamp and URLs retained. This is authority reuse, not review of changed fields.",
+      "archive_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\author-evidence\\issue-132\\rights\\terms.html"
     },
     {
       "path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\ticket-132\\target\\issue-132\\rights\\bnf-catalog.body",
@@ -54,7 +59,9 @@
       "selected_metadata": [
         "DC.creator: Littré, Émile (1801-1881)",
         "DC.date: 1873-1874"
-      ]
+      ],
+      "archive_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\author-evidence\\issue-132\\rights\\bnf-catalog.body",
+      "archive_metadata_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\author-evidence\\issue-132\\rights\\bnf-catalog.json"
     },
     {
       "path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\ticket-132\\target\\issue-132\\rights\\legifrance-current-and-historical.txt",
@@ -65,7 +72,8 @@
         137,
         138
       ],
-      "selected_rule": "Current L123-3: seventy years from the following 1 January for collective works; publication in instalments is assessed for each element."
+      "selected_rule": "Current L123-3: seventy years from the following 1 January for collective works; publication in instalments is assessed for each element.",
+      "archive_path": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\author-evidence\\issue-132\\rights\\legifrance-current-and-historical.txt"
     }
   ],
   "authority_reading": [
@@ -692,40 +700,7 @@
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "contribution_and_adaptation_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
-      "selected_locations": [
-        {
-          "sense_id": "b132-2560-oublie-nom-selected",
-          "frozen_row": 2560,
-          "field": "french_definition",
-          "line_1_based": 15,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# {{lexique|cuisine|fr}} {{vieilli|fr}} [[mince|Mince]] [[gaufre]] que l’on [[cuire|cuit]] entre deux [[fer]]s, et qui peut être roulée en [[cornet]]."
-        },
-        {
-          "sense_id": "b132-2560-oublie-nom-selected",
-          "frozen_row": 2560,
-          "field": "ipa",
-          "line_1_based": 14,
-          "column_1_based": 1,
-          "raw_source_excerpt": "'''oublie''' {{pron|u.bli|fr}} {{f}}"
-        },
-        {
-          "sense_id": "b132-2560-oublie-nom-selected",
-          "frozen_row": 2560,
-          "field": "english",
-          "line_1_based": 15,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# {{lexique|cuisine|fr}} {{vieilli|fr}} [[mince|Mince]] [[gaufre]] que l’on [[cuire|cuit]] entre deux [[fer]]s, et qui peut être roulée en [[cornet]]."
-        },
-        {
-          "sense_id": "b132-2560-oublie-nom-selected",
-          "frozen_row": 2560,
-          "field": "chinese",
-          "line_1_based": 15,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# {{lexique|cuisine|fr}} {{vieilli|fr}} [[mince|Mince]] [[gaufre]] que l’on [[cuire|cuit]] entre deux [[fer]]s, et qui peut être roulée en [[cornet]]."
-        }
-      ],
+      "selected_locations": [],
       "import_notices": [
         {
           "line_1_based": 153,
@@ -779,8 +754,8 @@
         }
       ],
       "author_rights_proposal": "CC BY-SA 4.0 for fixed contributor text and Lexique adaptations/translations; separately credit recorded public-domain DAF8 and Littré original layers where applicable. Linked modern works are reference identities, without a claim to redistribute their prose.",
-      "selected_text_boundary": "Selected definition and isolated IPA plus language/POS/grammar only; selected unattributed lexical construction examples are identified separately. No attributed quotation, image, audio, etymology or other-language text supplies a field.",
-      "independent_review": "pending",
+      "selected_text_boundary": "Rejected noun evidence only; zero candidate or admitted fields.",
+      "independent_review": "annotation_evidence_only_no_candidate_fields",
       "reviewer": null
     },
     {
@@ -4261,7 +4236,7 @@
       "reviewer": null
     }
   ],
-  "proposed_fields": 200,
+  "proposed_fields": 196,
   "independent_rights_fields_accepted": 0,
   "final_combined_package_status": "pending_parent_conversion_notices_and_admission",
   "fields": [
@@ -5501,206 +5476,6 @@
         }
       ],
       "selected_boundary": "Selected lexical definition line 33 for Feminine clothing noun: belt worn around the waist.; attributed neighbouring examples and linked external prose are outside the field.",
-      "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
-      "independent_review": "pending",
-      "reviewer": null
-    },
-    {
-      "sense_id": "b132-2560-oublie-nom-selected",
-      "frozen_row": 2560,
-      "field": "french_definition",
-      "source_id": "b132_fr_169876",
-      "source_revision": 39964053,
-      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=oublie&oldid=39964053",
-      "exact_source_span": {
-        "line_1_based": 15,
-        "column_1_based": 1,
-        "raw_source_excerpt": "# {{lexique|cuisine|fr}} {{vieilli|fr}} [[mince|Mince]] [[gaufre]] que l’on [[cuire|cuit]] entre deux [[fer]]s, et qui peut être roulée en [[cornet]]."
-      },
-      "license": "CC-BY-SA-4.0",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Referenced original historical layer where applicable: Émile Littré, Dictionnaire de la langue française (1872–1877).",
-      "contributors_record": "source-context.json#b132_fr_169876",
-      "author_rights_basis": "Fixed Wiktionnaire lexical or phonetic contribution, CC BY-SA 4.0; French adaptations and new EN/ZH explanatory translations retain that licence. Recorded DAF8/Littré original-work layers are credited separately under their public-domain basis; reference links do not license modern external text.",
-      "original_historical_dictionary_layers": [
-        {
-          "original_authors": "Académie française",
-          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
-          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
-          "legal_basis_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278941",
-          "conservative_expiry": "2006-01-01, using final publication in 1935 and the seventy-year term",
-          "established_project_evidence": "docs/evidence/issue-99/source-context.json: current_content[].original_authors_and_rights",
-          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
-          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
-          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
-        },
-        {
-          "original_authors": "Émile Littré (1801–1881)",
-          "edition": "Dictionnaire de la langue française, 1872–1877",
-          "author_proposed_original_rights": "public_domain_at_original_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle L123-1: life plus seventy years after the year of death; original author died in 1881.",
-          "legal_basis_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278937",
-          "conservative_expiry": "1952-01-01",
-          "author_and_edition_authority": "https://catalogue.bnf.fr/ark:/12148/cb30824717s",
-          "established_project_evidence": "docs/d2-resource-admission-research.md: XMLittré original-work and BnF edition evidence",
-          "scope": "Original Littré wording where referenced; bibliographic references do not establish selected-sentence authorship. No modern XMLittré or ARTFL transcription is used.",
-          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
-          "lexique_layer": "Scoped French adaptations and new EN/ZH explanations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
-        }
-      ],
-      "selected_boundary": "Selected lexical definition line 15 for Blocked candidate: old-fashioned feminine culinary noun, thin wafer baked between irons; modern everyday eligibility unresolved.; attributed neighbouring examples and linked external prose are outside the field.",
-      "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
-      "independent_review": "pending",
-      "reviewer": null
-    },
-    {
-      "sense_id": "b132-2560-oublie-nom-selected",
-      "frozen_row": 2560,
-      "field": "ipa",
-      "source_id": "b132_fr_169876",
-      "source_revision": 39964053,
-      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=oublie&oldid=39964053",
-      "exact_source_span": {
-        "line_1_based": 14,
-        "column_1_based": 1,
-        "raw_source_excerpt": "'''oublie''' {{pron|u.bli|fr}} {{f}}"
-      },
-      "license": "CC-BY-SA-4.0",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Referenced original historical layer where applicable: Émile Littré, Dictionnaire de la langue française (1872–1877).",
-      "contributors_record": "source-context.json#b132_fr_169876",
-      "author_rights_basis": "Fixed Wiktionnaire lexical or phonetic contribution, CC BY-SA 4.0; French adaptations and new EN/ZH explanatory translations retain that licence. Recorded DAF8/Littré original-work layers are credited separately under their public-domain basis; reference links do not license modern external text.",
-      "original_historical_dictionary_layers": [
-        {
-          "original_authors": "Académie française",
-          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
-          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
-          "legal_basis_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278941",
-          "conservative_expiry": "2006-01-01, using final publication in 1935 and the seventy-year term",
-          "established_project_evidence": "docs/evidence/issue-99/source-context.json: current_content[].original_authors_and_rights",
-          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
-          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
-          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
-        },
-        {
-          "original_authors": "Émile Littré (1801–1881)",
-          "edition": "Dictionnaire de la langue française, 1872–1877",
-          "author_proposed_original_rights": "public_domain_at_original_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle L123-1: life plus seventy years after the year of death; original author died in 1881.",
-          "legal_basis_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278937",
-          "conservative_expiry": "1952-01-01",
-          "author_and_edition_authority": "https://catalogue.bnf.fr/ark:/12148/cb30824717s",
-          "established_project_evidence": "docs/d2-resource-admission-research.md: XMLittré original-work and BnF edition evidence",
-          "scope": "Original Littré wording where referenced; bibliographic references do not establish selected-sentence authorship. No modern XMLittré or ARTFL transcription is used.",
-          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
-          "lexique_layer": "Scoped French adaptations and new EN/ZH explanations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
-        }
-      ],
-      "selected_boundary": "Only the recorded isolated-headword IPA variant is selected; slashes added. No audio or media content is copied.",
-      "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
-      "independent_review": "pending",
-      "reviewer": null
-    },
-    {
-      "sense_id": "b132-2560-oublie-nom-selected",
-      "frozen_row": 2560,
-      "field": "english",
-      "source_id": "b132_fr_169876",
-      "source_revision": 39964053,
-      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=oublie&oldid=39964053",
-      "exact_source_span": {
-        "line_1_based": 15,
-        "column_1_based": 1,
-        "raw_source_excerpt": "# {{lexique|cuisine|fr}} {{vieilli|fr}} [[mince|Mince]] [[gaufre]] que l’on [[cuire|cuit]] entre deux [[fer]]s, et qui peut être roulée en [[cornet]]."
-      },
-      "license": "CC-BY-SA-4.0",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Referenced original historical layer where applicable: Émile Littré, Dictionnaire de la langue française (1872–1877).",
-      "contributors_record": "source-context.json#b132_fr_169876",
-      "author_rights_basis": "Fixed Wiktionnaire lexical or phonetic contribution, CC BY-SA 4.0; French adaptations and new EN/ZH explanatory translations retain that licence. Recorded DAF8/Littré original-work layers are credited separately under their public-domain basis; reference links do not license modern external text.",
-      "original_historical_dictionary_layers": [
-        {
-          "original_authors": "Académie française",
-          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
-          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
-          "legal_basis_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278941",
-          "conservative_expiry": "2006-01-01, using final publication in 1935 and the seventy-year term",
-          "established_project_evidence": "docs/evidence/issue-99/source-context.json: current_content[].original_authors_and_rights",
-          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
-          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
-          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
-        },
-        {
-          "original_authors": "Émile Littré (1801–1881)",
-          "edition": "Dictionnaire de la langue française, 1872–1877",
-          "author_proposed_original_rights": "public_domain_at_original_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle L123-1: life plus seventy years after the year of death; original author died in 1881.",
-          "legal_basis_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278937",
-          "conservative_expiry": "1952-01-01",
-          "author_and_edition_authority": "https://catalogue.bnf.fr/ark:/12148/cb30824717s",
-          "established_project_evidence": "docs/d2-resource-admission-research.md: XMLittré original-work and BnF edition evidence",
-          "scope": "Original Littré wording where referenced; bibliographic references do not establish selected-sentence authorship. No modern XMLittré or ARTFL transcription is used.",
-          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
-          "lexique_layer": "Scoped French adaptations and new EN/ZH explanations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
-        }
-      ],
-      "selected_boundary": "Selected lexical definition line 15 for Blocked candidate: old-fashioned feminine culinary noun, thin wafer baked between irons; modern everyday eligibility unresolved.; attributed neighbouring examples and linked external prose are outside the field.",
-      "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
-      "independent_review": "pending",
-      "reviewer": null
-    },
-    {
-      "sense_id": "b132-2560-oublie-nom-selected",
-      "frozen_row": 2560,
-      "field": "chinese",
-      "source_id": "b132_fr_169876",
-      "source_revision": 39964053,
-      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=oublie&oldid=39964053",
-      "exact_source_span": {
-        "line_1_based": 15,
-        "column_1_based": 1,
-        "raw_source_excerpt": "# {{lexique|cuisine|fr}} {{vieilli|fr}} [[mince|Mince]] [[gaufre]] que l’on [[cuire|cuit]] entre deux [[fer]]s, et qui peut être roulée en [[cornet]]."
-      },
-      "license": "CC-BY-SA-4.0",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Referenced original historical layer where applicable: Émile Littré, Dictionnaire de la langue française (1872–1877).",
-      "contributors_record": "source-context.json#b132_fr_169876",
-      "author_rights_basis": "Fixed Wiktionnaire lexical or phonetic contribution, CC BY-SA 4.0; French adaptations and new EN/ZH explanatory translations retain that licence. Recorded DAF8/Littré original-work layers are credited separately under their public-domain basis; reference links do not license modern external text.",
-      "original_historical_dictionary_layers": [
-        {
-          "original_authors": "Académie française",
-          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
-          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
-          "legal_basis_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278941",
-          "conservative_expiry": "2006-01-01, using final publication in 1935 and the seventy-year term",
-          "established_project_evidence": "docs/evidence/issue-99/source-context.json: current_content[].original_authors_and_rights",
-          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
-          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
-          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
-        },
-        {
-          "original_authors": "Émile Littré (1801–1881)",
-          "edition": "Dictionnaire de la langue française, 1872–1877",
-          "author_proposed_original_rights": "public_domain_at_original_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle L123-1: life plus seventy years after the year of death; original author died in 1881.",
-          "legal_basis_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278937",
-          "conservative_expiry": "1952-01-01",
-          "author_and_edition_authority": "https://catalogue.bnf.fr/ark:/12148/cb30824717s",
-          "established_project_evidence": "docs/d2-resource-admission-research.md: XMLittré original-work and BnF edition evidence",
-          "scope": "Original Littré wording where referenced; bibliographic references do not establish selected-sentence authorship. No modern XMLittré or ARTFL transcription is used.",
-          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
-          "lexique_layer": "Scoped French adaptations and new EN/ZH explanations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
-        }
-      ],
-      "selected_boundary": "Selected lexical definition line 15 for Blocked candidate: old-fashioned feminine culinary noun, thin wafer baked between irons; modern everyday eligibility unresolved.; attributed neighbouring examples and linked external prose are outside the field.",
       "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
       "independent_review": "pending",
       "reviewer": null
@@ -12153,186 +11928,6 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
-        }
-      ],
-      "author_rights_basis": "Selected contributor lexical/grammatical evidence under CC BY-SA 4.0 with original-work layers credited separately; no query alias or attributed literary example.",
-      "independent_review": "pending",
-      "reviewer": null
-    },
-    {
-      "sense_id": "b132-2560-oublie-nom-selected",
-      "frozen_row": 2560,
-      "role": "language_pos_spelling_or_construction_frame",
-      "source_id": "b132_fr_169876",
-      "revid": 39964053,
-      "url": "https://fr.wiktionary.org/w/index.php?title=oublie&oldid=39964053",
-      "history_url": "https://fr.wiktionary.org/w/index.php?title=oublie&action=history",
-      "line_1_based": 3,
-      "column_1_based": 1,
-      "reviewed_excerpt": "== {{langue|fr}} ==",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Referenced original historical layer where applicable: Émile Littré, Dictionnaire de la langue française (1872–1877).",
-      "original_historical_dictionary_layers": [
-        {
-          "original_authors": "Académie française",
-          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
-          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
-          "legal_basis_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278941",
-          "conservative_expiry": "2006-01-01, using final publication in 1935 and the seventy-year term",
-          "established_project_evidence": "docs/evidence/issue-99/source-context.json: current_content[].original_authors_and_rights",
-          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
-          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
-          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
-        },
-        {
-          "original_authors": "Émile Littré (1801–1881)",
-          "edition": "Dictionnaire de la langue française, 1872–1877",
-          "author_proposed_original_rights": "public_domain_at_original_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle L123-1: life plus seventy years after the year of death; original author died in 1881.",
-          "legal_basis_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278937",
-          "conservative_expiry": "1952-01-01",
-          "author_and_edition_authority": "https://catalogue.bnf.fr/ark:/12148/cb30824717s",
-          "established_project_evidence": "docs/d2-resource-admission-research.md: XMLittré original-work and BnF edition evidence",
-          "scope": "Original Littré wording where referenced; bibliographic references do not establish selected-sentence authorship. No modern XMLittré or ARTFL transcription is used.",
-          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
-          "lexique_layer": "Scoped French adaptations and new EN/ZH explanations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
-        }
-      ],
-      "author_rights_basis": "Selected contributor lexical/grammatical evidence under CC BY-SA 4.0 with original-work layers credited separately; no query alias or attributed literary example.",
-      "independent_review": "pending",
-      "reviewer": null
-    },
-    {
-      "sense_id": "b132-2560-oublie-nom-selected",
-      "frozen_row": 2560,
-      "role": "language_pos_spelling_or_construction_frame",
-      "source_id": "b132_fr_169876",
-      "revid": 39964053,
-      "url": "https://fr.wiktionary.org/w/index.php?title=oublie&oldid=39964053",
-      "history_url": "https://fr.wiktionary.org/w/index.php?title=oublie&action=history",
-      "line_1_based": 11,
-      "column_1_based": 1,
-      "reviewed_excerpt": "=== {{S|nom|fr}} ===",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Referenced original historical layer where applicable: Émile Littré, Dictionnaire de la langue française (1872–1877).",
-      "original_historical_dictionary_layers": [
-        {
-          "original_authors": "Académie française",
-          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
-          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
-          "legal_basis_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278941",
-          "conservative_expiry": "2006-01-01, using final publication in 1935 and the seventy-year term",
-          "established_project_evidence": "docs/evidence/issue-99/source-context.json: current_content[].original_authors_and_rights",
-          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
-          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
-          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
-        },
-        {
-          "original_authors": "Émile Littré (1801–1881)",
-          "edition": "Dictionnaire de la langue française, 1872–1877",
-          "author_proposed_original_rights": "public_domain_at_original_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle L123-1: life plus seventy years after the year of death; original author died in 1881.",
-          "legal_basis_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278937",
-          "conservative_expiry": "1952-01-01",
-          "author_and_edition_authority": "https://catalogue.bnf.fr/ark:/12148/cb30824717s",
-          "established_project_evidence": "docs/d2-resource-admission-research.md: XMLittré original-work and BnF edition evidence",
-          "scope": "Original Littré wording where referenced; bibliographic references do not establish selected-sentence authorship. No modern XMLittré or ARTFL transcription is used.",
-          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
-          "lexique_layer": "Scoped French adaptations and new EN/ZH explanations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
-        }
-      ],
-      "author_rights_basis": "Selected contributor lexical/grammatical evidence under CC BY-SA 4.0 with original-work layers credited separately; no query alias or attributed literary example.",
-      "independent_review": "pending",
-      "reviewer": null
-    },
-    {
-      "sense_id": "b132-2560-oublie-nom-selected",
-      "frozen_row": 2560,
-      "role": "language_pos_spelling_or_construction_frame",
-      "source_id": "b132_fr_169876",
-      "revid": 39964053,
-      "url": "https://fr.wiktionary.org/w/index.php?title=oublie&oldid=39964053",
-      "history_url": "https://fr.wiktionary.org/w/index.php?title=oublie&action=history",
-      "line_1_based": 12,
-      "column_1_based": 1,
-      "reviewed_excerpt": "{{fr-rég|u.bli}}",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Referenced original historical layer where applicable: Émile Littré, Dictionnaire de la langue française (1872–1877).",
-      "original_historical_dictionary_layers": [
-        {
-          "original_authors": "Académie française",
-          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
-          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
-          "legal_basis_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278941",
-          "conservative_expiry": "2006-01-01, using final publication in 1935 and the seventy-year term",
-          "established_project_evidence": "docs/evidence/issue-99/source-context.json: current_content[].original_authors_and_rights",
-          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
-          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
-          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
-        },
-        {
-          "original_authors": "Émile Littré (1801–1881)",
-          "edition": "Dictionnaire de la langue française, 1872–1877",
-          "author_proposed_original_rights": "public_domain_at_original_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle L123-1: life plus seventy years after the year of death; original author died in 1881.",
-          "legal_basis_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278937",
-          "conservative_expiry": "1952-01-01",
-          "author_and_edition_authority": "https://catalogue.bnf.fr/ark:/12148/cb30824717s",
-          "established_project_evidence": "docs/d2-resource-admission-research.md: XMLittré original-work and BnF edition evidence",
-          "scope": "Original Littré wording where referenced; bibliographic references do not establish selected-sentence authorship. No modern XMLittré or ARTFL transcription is used.",
-          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
-          "lexique_layer": "Scoped French adaptations and new EN/ZH explanations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
-        }
-      ],
-      "author_rights_basis": "Selected contributor lexical/grammatical evidence under CC BY-SA 4.0 with original-work layers credited separately; no query alias or attributed literary example.",
-      "independent_review": "pending",
-      "reviewer": null
-    },
-    {
-      "sense_id": "b132-2560-oublie-nom-selected",
-      "frozen_row": 2560,
-      "role": "language_pos_spelling_or_construction_frame",
-      "source_id": "b132_fr_169876",
-      "revid": 39964053,
-      "url": "https://fr.wiktionary.org/w/index.php?title=oublie&oldid=39964053",
-      "history_url": "https://fr.wiktionary.org/w/index.php?title=oublie&action=history",
-      "line_1_based": 14,
-      "column_1_based": 1,
-      "reviewed_excerpt": "'''oublie''' {{pron|u.bli|fr}} {{f}}",
-      "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Referenced original historical layer where applicable: Émile Littré, Dictionnaire de la langue française (1872–1877).",
-      "original_historical_dictionary_layers": [
-        {
-          "original_authors": "Académie française",
-          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
-          "author_proposed_original_rights": "public_domain_at_original_collective_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle, article L123-3: seventy years from 1 January following publication of a collective work.",
-          "legal_basis_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278941",
-          "conservative_expiry": "2006-01-01, using final publication in 1935 and the seventy-year term",
-          "established_project_evidence": "docs/evidence/issue-99/source-context.json: current_content[].original_authors_and_rights",
-          "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
-          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
-          "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
-        },
-        {
-          "original_authors": "Émile Littré (1801–1881)",
-          "edition": "Dictionnaire de la langue française, 1872–1877",
-          "author_proposed_original_rights": "public_domain_at_original_work_boundary",
-          "legal_basis": "Code de la propriété intellectuelle L123-1: life plus seventy years after the year of death; original author died in 1881.",
-          "legal_basis_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278937",
-          "conservative_expiry": "1952-01-01",
-          "author_and_edition_authority": "https://catalogue.bnf.fr/ark:/12148/cb30824717s",
-          "established_project_evidence": "docs/d2-resource-admission-research.md: XMLittré original-work and BnF edition evidence",
-          "scope": "Original Littré wording where referenced; bibliographic references do not establish selected-sentence authorship. No modern XMLittré or ARTFL transcription is used.",
-          "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
-          "lexique_layer": "Scoped French adaptations and new EN/ZH explanations, Lexique contributors, CC BY-SA 4.0.",
           "independent_review": "pending"
         }
       ],

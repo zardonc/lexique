@@ -2292,268 +2292,6 @@
       }
     },
     {
-      "sense_id": "b132-2560-oublie-nom-selected",
-      "frozen_row": 2560,
-      "headword": "oublie",
-      "pos": "NOM",
-      "field": "french_definition",
-      "language": "fr",
-      "proposed_text": "Terme vieilli de cuisine : mince gaufre cuite entre deux fers, qui peut être roulée en cornet.",
-      "exact_source": {
-        "source_id": "b132_fr_169876",
-        "revid": 39964053,
-        "url": "https://fr.wiktionary.org/w/index.php?title=oublie&oldid=39964053",
-        "history_url": "https://fr.wiktionary.org/w/index.php?title=oublie&action=history",
-        "line_1_based": 15,
-        "column_1_based": 1,
-        "reviewed_excerpt": "# {{lexique|cuisine|fr}} {{vieilli|fr}} [[mince|Mince]] [[gaufre]] que l’on [[cuire|cuit]] entre deux [[fer]]s, et qui peut être roulée en [[cornet]]."
-      },
-      "supporting_sources": [
-        {
-          "source_id": "b132_fr_169876",
-          "revid": 39964053,
-          "url": "https://fr.wiktionary.org/w/index.php?title=oublie&oldid=39964053",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=oublie&action=history",
-          "line_1_based": 3,
-          "column_1_based": 1,
-          "reviewed_excerpt": "== {{langue|fr}} =="
-        },
-        {
-          "source_id": "b132_fr_169876",
-          "revid": 39964053,
-          "url": "https://fr.wiktionary.org/w/index.php?title=oublie&oldid=39964053",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=oublie&action=history",
-          "line_1_based": 11,
-          "column_1_based": 1,
-          "reviewed_excerpt": "=== {{S|nom|fr}} ==="
-        },
-        {
-          "source_id": "b132_fr_169876",
-          "revid": 39964053,
-          "url": "https://fr.wiktionary.org/w/index.php?title=oublie&oldid=39964053",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=oublie&action=history",
-          "line_1_based": 12,
-          "column_1_based": 1,
-          "reviewed_excerpt": "{{fr-rég|u.bli}}"
-        },
-        {
-          "source_id": "b132_fr_169876",
-          "revid": 39964053,
-          "url": "https://fr.wiktionary.org/w/index.php?title=oublie&oldid=39964053",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=oublie&action=history",
-          "line_1_based": 14,
-          "column_1_based": 1,
-          "reviewed_excerpt": "'''oublie''' {{pron|u.bli|fr}} {{f}}"
-        }
-      ],
-      "author_validation": "passed_fixed_capture_binding_check",
-      "accepted_text_quality_status": "pending",
-      "rights_eligibility_status": "pending_separate_selected_span_audit",
-      "reviewer": null,
-      "author_rights_proposal": {
-        "source_id": "b132_fr_169876",
-        "evidence": "rights.json and source-context.json",
-        "selected_span_independent_rights_review": "pending"
-      }
-    },
-    {
-      "sense_id": "b132-2560-oublie-nom-selected",
-      "frozen_row": 2560,
-      "headword": "oublie",
-      "pos": "NOM",
-      "field": "ipa",
-      "language": "und",
-      "proposed_text": "/u.bli/",
-      "exact_source": {
-        "source_id": "b132_fr_169876",
-        "revid": 39964053,
-        "url": "https://fr.wiktionary.org/w/index.php?title=oublie&oldid=39964053",
-        "history_url": "https://fr.wiktionary.org/w/index.php?title=oublie&action=history",
-        "line_1_based": 14,
-        "column_1_based": 1,
-        "reviewed_excerpt": "'''oublie''' {{pron|u.bli|fr}} {{f}}",
-        "ipa_variant_column_1_based": 21,
-        "ipa_variant_excerpt": "u.bli"
-      },
-      "supporting_sources": [
-        {
-          "source_id": "b132_fr_169876",
-          "revid": 39964053,
-          "url": "https://fr.wiktionary.org/w/index.php?title=oublie&oldid=39964053",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=oublie&action=history",
-          "line_1_based": 3,
-          "column_1_based": 1,
-          "reviewed_excerpt": "== {{langue|fr}} =="
-        },
-        {
-          "source_id": "b132_fr_169876",
-          "revid": 39964053,
-          "url": "https://fr.wiktionary.org/w/index.php?title=oublie&oldid=39964053",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=oublie&action=history",
-          "line_1_based": 11,
-          "column_1_based": 1,
-          "reviewed_excerpt": "=== {{S|nom|fr}} ==="
-        },
-        {
-          "source_id": "b132_fr_169876",
-          "revid": 39964053,
-          "url": "https://fr.wiktionary.org/w/index.php?title=oublie&oldid=39964053",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=oublie&action=history",
-          "line_1_based": 12,
-          "column_1_based": 1,
-          "reviewed_excerpt": "{{fr-rég|u.bli}}"
-        },
-        {
-          "source_id": "b132_fr_169876",
-          "revid": 39964053,
-          "url": "https://fr.wiktionary.org/w/index.php?title=oublie&oldid=39964053",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=oublie&action=history",
-          "line_1_based": 14,
-          "column_1_based": 1,
-          "reviewed_excerpt": "'''oublie''' {{pron|u.bli|fr}} {{f}}"
-        }
-      ],
-      "author_validation": "passed_fixed_capture_binding_check",
-      "accepted_text_quality_status": "pending",
-      "rights_eligibility_status": "pending_separate_selected_span_audit",
-      "reviewer": null,
-      "author_rights_proposal": {
-        "source_id": "b132_fr_169876",
-        "evidence": "rights.json and source-context.json",
-        "selected_span_independent_rights_review": "pending"
-      }
-    },
-    {
-      "sense_id": "b132-2560-oublie-nom-selected",
-      "frozen_row": 2560,
-      "headword": "oublie",
-      "pos": "NOM",
-      "field": "english",
-      "language": "en",
-      "proposed_text": "An old-fashioned culinary term for a thin wafer baked between two irons, which may be rolled into a cone.",
-      "exact_source": {
-        "source_id": "b132_fr_169876",
-        "revid": 39964053,
-        "url": "https://fr.wiktionary.org/w/index.php?title=oublie&oldid=39964053",
-        "history_url": "https://fr.wiktionary.org/w/index.php?title=oublie&action=history",
-        "line_1_based": 15,
-        "column_1_based": 1,
-        "reviewed_excerpt": "# {{lexique|cuisine|fr}} {{vieilli|fr}} [[mince|Mince]] [[gaufre]] que l’on [[cuire|cuit]] entre deux [[fer]]s, et qui peut être roulée en [[cornet]]."
-      },
-      "supporting_sources": [
-        {
-          "source_id": "b132_fr_169876",
-          "revid": 39964053,
-          "url": "https://fr.wiktionary.org/w/index.php?title=oublie&oldid=39964053",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=oublie&action=history",
-          "line_1_based": 3,
-          "column_1_based": 1,
-          "reviewed_excerpt": "== {{langue|fr}} =="
-        },
-        {
-          "source_id": "b132_fr_169876",
-          "revid": 39964053,
-          "url": "https://fr.wiktionary.org/w/index.php?title=oublie&oldid=39964053",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=oublie&action=history",
-          "line_1_based": 11,
-          "column_1_based": 1,
-          "reviewed_excerpt": "=== {{S|nom|fr}} ==="
-        },
-        {
-          "source_id": "b132_fr_169876",
-          "revid": 39964053,
-          "url": "https://fr.wiktionary.org/w/index.php?title=oublie&oldid=39964053",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=oublie&action=history",
-          "line_1_based": 12,
-          "column_1_based": 1,
-          "reviewed_excerpt": "{{fr-rég|u.bli}}"
-        },
-        {
-          "source_id": "b132_fr_169876",
-          "revid": 39964053,
-          "url": "https://fr.wiktionary.org/w/index.php?title=oublie&oldid=39964053",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=oublie&action=history",
-          "line_1_based": 14,
-          "column_1_based": 1,
-          "reviewed_excerpt": "'''oublie''' {{pron|u.bli|fr}} {{f}}"
-        }
-      ],
-      "author_validation": "passed_fixed_capture_binding_check",
-      "accepted_text_quality_status": "pending",
-      "rights_eligibility_status": "pending_separate_selected_span_audit",
-      "reviewer": null,
-      "author_rights_proposal": {
-        "source_id": "b132_fr_169876",
-        "evidence": "rights.json and source-context.json",
-        "selected_span_independent_rights_review": "pending"
-      }
-    },
-    {
-      "sense_id": "b132-2560-oublie-nom-selected",
-      "frozen_row": 2560,
-      "headword": "oublie",
-      "pos": "NOM",
-      "field": "chinese",
-      "language": "zh",
-      "proposed_text": "旧时烹饪用语：在两块铁模之间烤成的薄脆饼，可卷成锥形。",
-      "exact_source": {
-        "source_id": "b132_fr_169876",
-        "revid": 39964053,
-        "url": "https://fr.wiktionary.org/w/index.php?title=oublie&oldid=39964053",
-        "history_url": "https://fr.wiktionary.org/w/index.php?title=oublie&action=history",
-        "line_1_based": 15,
-        "column_1_based": 1,
-        "reviewed_excerpt": "# {{lexique|cuisine|fr}} {{vieilli|fr}} [[mince|Mince]] [[gaufre]] que l’on [[cuire|cuit]] entre deux [[fer]]s, et qui peut être roulée en [[cornet]]."
-      },
-      "supporting_sources": [
-        {
-          "source_id": "b132_fr_169876",
-          "revid": 39964053,
-          "url": "https://fr.wiktionary.org/w/index.php?title=oublie&oldid=39964053",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=oublie&action=history",
-          "line_1_based": 3,
-          "column_1_based": 1,
-          "reviewed_excerpt": "== {{langue|fr}} =="
-        },
-        {
-          "source_id": "b132_fr_169876",
-          "revid": 39964053,
-          "url": "https://fr.wiktionary.org/w/index.php?title=oublie&oldid=39964053",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=oublie&action=history",
-          "line_1_based": 11,
-          "column_1_based": 1,
-          "reviewed_excerpt": "=== {{S|nom|fr}} ==="
-        },
-        {
-          "source_id": "b132_fr_169876",
-          "revid": 39964053,
-          "url": "https://fr.wiktionary.org/w/index.php?title=oublie&oldid=39964053",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=oublie&action=history",
-          "line_1_based": 12,
-          "column_1_based": 1,
-          "reviewed_excerpt": "{{fr-rég|u.bli}}"
-        },
-        {
-          "source_id": "b132_fr_169876",
-          "revid": 39964053,
-          "url": "https://fr.wiktionary.org/w/index.php?title=oublie&oldid=39964053",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=oublie&action=history",
-          "line_1_based": 14,
-          "column_1_based": 1,
-          "reviewed_excerpt": "'''oublie''' {{pron|u.bli|fr}} {{f}}"
-        }
-      ],
-      "author_validation": "passed_fixed_capture_binding_check",
-      "accepted_text_quality_status": "pending",
-      "rights_eligibility_status": "pending_separate_selected_span_audit",
-      "reviewer": null,
-      "author_rights_proposal": {
-        "source_id": "b132_fr_169876",
-        "evidence": "rights.json and source-context.json",
-        "selected_span_independent_rights_review": "pending"
-      }
-    },
-    {
       "sense_id": "b132-2561-kilo-nom-selected",
       "frozen_row": 2561,
       "headword": "kilo",
@@ -13555,106 +13293,6 @@
       "reviewer": null
     },
     {
-      "sense_id": "b132-2560-oublie-nom-selected",
-      "frozen_row": 2560,
-      "headword": "oublie",
-      "pos": "NOM",
-      "source_headword": "oublie",
-      "proposed_usage": "Blocked candidate: old-fashioned feminine culinary noun, thin wafer baked between irons; modern everyday eligibility unresolved.",
-      "language": "en",
-      "excluded_uses": "Original religious altar-bread sense, current interjection and all oublier verb forms; no substitution with oubli or oublié.",
-      "exact_source": {
-        "source_id": "b132_fr_169876",
-        "revid": 39964053,
-        "url": "https://fr.wiktionary.org/w/index.php?title=oublie&oldid=39964053",
-        "history_url": "https://fr.wiktionary.org/w/index.php?title=oublie&action=history",
-        "line_1_based": 15,
-        "column_1_based": 1,
-        "reviewed_excerpt": "# {{lexique|cuisine|fr}} {{vieilli|fr}} [[mince|Mince]] [[gaufre]] que l’on [[cuire|cuit]] entre deux [[fer]]s, et qui peut être roulée en [[cornet]]."
-      },
-      "supporting_sources": [
-        {
-          "source_id": "b132_fr_169876",
-          "revid": 39964053,
-          "url": "https://fr.wiktionary.org/w/index.php?title=oublie&oldid=39964053",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=oublie&action=history",
-          "line_1_based": 3,
-          "column_1_based": 1,
-          "reviewed_excerpt": "== {{langue|fr}} =="
-        },
-        {
-          "source_id": "b132_fr_169876",
-          "revid": 39964053,
-          "url": "https://fr.wiktionary.org/w/index.php?title=oublie&oldid=39964053",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=oublie&action=history",
-          "line_1_based": 11,
-          "column_1_based": 1,
-          "reviewed_excerpt": "=== {{S|nom|fr}} ==="
-        },
-        {
-          "source_id": "b132_fr_169876",
-          "revid": 39964053,
-          "url": "https://fr.wiktionary.org/w/index.php?title=oublie&oldid=39964053",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=oublie&action=history",
-          "line_1_based": 12,
-          "column_1_based": 1,
-          "reviewed_excerpt": "{{fr-rég|u.bli}}"
-        },
-        {
-          "source_id": "b132_fr_169876",
-          "revid": 39964053,
-          "url": "https://fr.wiktionary.org/w/index.php?title=oublie&oldid=39964053",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=oublie&action=history",
-          "line_1_based": 14,
-          "column_1_based": 1,
-          "reviewed_excerpt": "'''oublie''' {{pron|u.bli|fr}} {{f}}"
-        }
-      ],
-      "construction_and_flexion_evidence": [
-        {
-          "source_id": "b132_fr_169876",
-          "revid": 39964053,
-          "url": "https://fr.wiktionary.org/w/index.php?title=oublie&oldid=39964053",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=oublie&action=history",
-          "line_1_based": 3,
-          "column_1_based": 1,
-          "reviewed_excerpt": "== {{langue|fr}} =="
-        },
-        {
-          "source_id": "b132_fr_169876",
-          "revid": 39964053,
-          "url": "https://fr.wiktionary.org/w/index.php?title=oublie&oldid=39964053",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=oublie&action=history",
-          "line_1_based": 11,
-          "column_1_based": 1,
-          "reviewed_excerpt": "=== {{S|nom|fr}} ==="
-        },
-        {
-          "source_id": "b132_fr_169876",
-          "revid": 39964053,
-          "url": "https://fr.wiktionary.org/w/index.php?title=oublie&oldid=39964053",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=oublie&action=history",
-          "line_1_based": 12,
-          "column_1_based": 1,
-          "reviewed_excerpt": "{{fr-rég|u.bli}}"
-        },
-        {
-          "source_id": "b132_fr_169876",
-          "revid": 39964053,
-          "url": "https://fr.wiktionary.org/w/index.php?title=oublie&oldid=39964053",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=oublie&action=history",
-          "line_1_based": 14,
-          "column_1_based": 1,
-          "reviewed_excerpt": "'''oublie''' {{pron|u.bli|fr}} {{f}}"
-        }
-      ],
-      "author_construction_and_flexion_interpretation": "Exact French article spelling oublie; selected definition at line 15, applicable isolated IPA at line 14. The retained nearest French POS heading and headword/grammar lines establish this use. Blocked candidate: old-fashioned feminine culinary noun, thin wafer baked between irons; modern everyday eligibility unresolved. Excluded: Original religious altar-bread sense, current interjection and all oublier verb forms; no substitution with oubli or oublié.",
-      "author_everyday_use_assessment": "The exact French noun definition at Wiktionnaire revision 39964053 line 15 is marked vieilli. The retained CNRTL rendering of Académie française ninth edition also marks the pastry noun Vieilli. No modern everyday noun sense or owner-approved exception is established; interjection and oublier forms are other POS uses.",
-      "accepted_usage_quality_status": "pending",
-      "everyday_sense_status": "unresolved_source_marks_vieilli",
-      "reviewer": null
-    },
-    {
       "sense_id": "b132-2561-kilo-nom-selected",
       "frozen_row": 2561,
       "headword": "kilo",
@@ -17905,7 +17543,7 @@
       "frozen_headword": "oublie",
       "source_headword": "oublie",
       "relation": "exact_french_source_spelling",
-      "relation_role": "source_binding_only",
+      "relation_role": "annotation_evidence_only",
       "alias_admission": "not_admitted",
       "proposed_evidence": [
         {
@@ -17946,7 +17584,8 @@
         }
       ],
       "construction_and_flexion_interpretation": "Exact French article spelling oublie; selected definition at line 15, applicable isolated IPA at line 14. The retained nearest French POS heading and headword/grammar lines establish this use. Blocked candidate: old-fashioned feminine culinary noun, thin wafer baked between irons; modern everyday eligibility unresolved. Excluded: Original religious altar-bread sense, current interjection and all oublier verb forms; no substitution with oubli or oublié.",
-      "independent_review": "pending"
+      "independent_review": "not_a_candidate_field",
+      "annotation_approval": "docs/evidence/issue-132/owner-approval.md"
     },
     {
       "sense_id": "b132-2561-kilo-nom-selected",
@@ -19819,58 +19458,29 @@
       "independent_review": "pending"
     }
   ],
-  "unresolved_fields": [
+  "unresolved_fields": [],
+  "approved_annotations": [
     {
       "frozen_row": 2560,
       "headword": "oublie",
       "lexique_cgram": "NOM",
-      "sense_id": "b132-2560-oublie-nom-selected",
-      "field": "french_definition",
-      "blocker": "modern_everyday_sense_eligibility",
-      "reason": "The exact French noun definition at Wiktionnaire revision 39964053 line 15 is marked vieilli. The retained CNRTL rendering of Académie française ninth edition also marks the pastry noun Vieilli. No modern everyday noun sense or owner-approved exception is established; interjection and oublier forms are other POS uses.",
-      "source_id": "b132_fr_169876",
-      "revid": 39964053,
-      "definition_line_1_based": 15,
-      "next_step": "Independent reviewer assesses exact noun evidence; any exception requires actual project-owner approval."
-    },
-    {
-      "frozen_row": 2560,
-      "headword": "oublie",
-      "lexique_cgram": "NOM",
-      "sense_id": "b132-2560-oublie-nom-selected",
-      "field": "ipa",
-      "blocker": "modern_everyday_sense_eligibility",
-      "reason": "The exact French noun definition at Wiktionnaire revision 39964053 line 15 is marked vieilli. The retained CNRTL rendering of Académie française ninth edition also marks the pastry noun Vieilli. No modern everyday noun sense or owner-approved exception is established; interjection and oublier forms are other POS uses.",
-      "source_id": "b132_fr_169876",
-      "revid": 39964053,
-      "definition_line_1_based": 15,
-      "next_step": "Independent reviewer assesses exact noun evidence; any exception requires actual project-owner approval."
-    },
-    {
-      "frozen_row": 2560,
-      "headword": "oublie",
-      "lexique_cgram": "NOM",
-      "sense_id": "b132-2560-oublie-nom-selected",
-      "field": "english",
-      "blocker": "modern_everyday_sense_eligibility",
-      "reason": "The exact French noun definition at Wiktionnaire revision 39964053 line 15 is marked vieilli. The retained CNRTL rendering of Académie française ninth edition also marks the pastry noun Vieilli. No modern everyday noun sense or owner-approved exception is established; interjection and oublier forms are other POS uses.",
-      "source_id": "b132_fr_169876",
-      "revid": 39964053,
-      "definition_line_1_based": 15,
-      "next_step": "Independent reviewer assesses exact noun evidence; any exception requires actual project-owner approval."
-    },
-    {
-      "frozen_row": 2560,
-      "headword": "oublie",
-      "lexique_cgram": "NOM",
-      "sense_id": "b132-2560-oublie-nom-selected",
-      "field": "chinese",
-      "blocker": "modern_everyday_sense_eligibility",
-      "reason": "The exact French noun definition at Wiktionnaire revision 39964053 line 15 is marked vieilli. The retained CNRTL rendering of Académie française ninth edition also marks the pastry noun Vieilli. No modern everyday noun sense or owner-approved exception is established; interjection and oublier forms are other POS uses.",
-      "source_id": "b132_fr_169876",
-      "revid": 39964053,
-      "definition_line_1_based": 15,
-      "next_step": "Independent reviewer assesses exact noun evidence; any exception requires actual project-owner approval."
+      "subtitle_lemma_per_million": "22.56",
+      "subtitle_pos_per_million": "22.56",
+      "senses": [],
+      "status": "approved_annotation_exception",
+      "admitted_fields": 0,
+      "missing_fields": 4,
+      "unresolved_reason": "The exact old-fashioned noun has no established modern everyday selected sense; the owner approved only this frozen row as a zero-field annotation.",
+      "annotation_kind": "owner_approved_zero_field",
+      "owner_approval": {
+        "exact_decision": "批准仅 oublie/NOM 为零字段注记",
+        "date": "2026-11-21",
+        "timezone": "America/Vancouver",
+        "evidence": "docs/evidence/issue-132/owner-approval.md",
+        "original_context": "../context/oublie-independent-check/owner-approval.md"
+      },
+      "rejected_proposal": "docs/evidence/issue-132/rejected-old-use.json",
+      "alias_admission": "not_admitted"
     }
   ]
 }

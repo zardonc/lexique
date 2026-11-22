@@ -1725,83 +1725,9 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "attribution": "Wiktionnaire contributors (full linked article history); Lexique contributors for selection, scoped adaptations and new explanatory translations. Original historical dictionary layer where imported: Académie française, eighth edition. Referenced original historical layer where applicable: Émile Littré, Dictionnaire de la langue française (1872–1877).",
-      "status": "author_fixed_span_validation_passed_independent_review_pending",
-      "selected_locations": [
-        {
-          "sense_id": "b132-2560-oublie-nom-selected",
-          "frozen_row": 2560,
-          "field": "french_definition",
-          "line_1_based": 15,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# {{lexique|cuisine|fr}} {{vieilli|fr}} [[mince|Mince]] [[gaufre]] que l’on [[cuire|cuit]] entre deux [[fer]]s, et qui peut être roulée en [[cornet]]."
-        },
-        {
-          "sense_id": "b132-2560-oublie-nom-selected",
-          "frozen_row": 2560,
-          "field": "ipa",
-          "line_1_based": 14,
-          "column_1_based": 1,
-          "raw_source_excerpt": "'''oublie''' {{pron|u.bli|fr}} {{f}}"
-        },
-        {
-          "sense_id": "b132-2560-oublie-nom-selected",
-          "frozen_row": 2560,
-          "field": "english",
-          "line_1_based": 15,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# {{lexique|cuisine|fr}} {{vieilli|fr}} [[mince|Mince]] [[gaufre]] que l’on [[cuire|cuit]] entre deux [[fer]]s, et qui peut être roulée en [[cornet]]."
-        },
-        {
-          "sense_id": "b132-2560-oublie-nom-selected",
-          "frozen_row": 2560,
-          "field": "chinese",
-          "line_1_based": 15,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# {{lexique|cuisine|fr}} {{vieilli|fr}} [[mince|Mince]] [[gaufre]] que l’on [[cuire|cuit]] entre deux [[fer]]s, et qui peut être roulée en [[cornet]]."
-        }
-      ],
-      "selected_grammar_and_construction_evidence": [
-        {
-          "sense_id": "b132-2560-oublie-nom-selected",
-          "source_id": "b132_fr_169876",
-          "revid": 39964053,
-          "url": "https://fr.wiktionary.org/w/index.php?title=oublie&oldid=39964053",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=oublie&action=history",
-          "line_1_based": 3,
-          "column_1_based": 1,
-          "reviewed_excerpt": "== {{langue|fr}} =="
-        },
-        {
-          "sense_id": "b132-2560-oublie-nom-selected",
-          "source_id": "b132_fr_169876",
-          "revid": 39964053,
-          "url": "https://fr.wiktionary.org/w/index.php?title=oublie&oldid=39964053",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=oublie&action=history",
-          "line_1_based": 11,
-          "column_1_based": 1,
-          "reviewed_excerpt": "=== {{S|nom|fr}} ==="
-        },
-        {
-          "sense_id": "b132-2560-oublie-nom-selected",
-          "source_id": "b132_fr_169876",
-          "revid": 39964053,
-          "url": "https://fr.wiktionary.org/w/index.php?title=oublie&oldid=39964053",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=oublie&action=history",
-          "line_1_based": 12,
-          "column_1_based": 1,
-          "reviewed_excerpt": "{{fr-rég|u.bli}}"
-        },
-        {
-          "sense_id": "b132-2560-oublie-nom-selected",
-          "source_id": "b132_fr_169876",
-          "revid": 39964053,
-          "url": "https://fr.wiktionary.org/w/index.php?title=oublie&oldid=39964053",
-          "history_url": "https://fr.wiktionary.org/w/index.php?title=oublie&action=history",
-          "line_1_based": 14,
-          "column_1_based": 1,
-          "reviewed_excerpt": "'''oublie''' {{pron|u.bli|fr}} {{f}}"
-        }
-      ],
+      "status": "rejected_old_use_and_owner_approved_annotation_evidence_only",
+      "selected_locations": [],
+      "selected_grammar_and_construction_evidence": [],
       "import_notices": [
         {
           "line_1_based": 153,
@@ -1948,7 +1874,7 @@
       "anonymous_contributors_count": 5,
       "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
       "attribution_boundary": "Complete paginated current named registry, returned anonymous count and full history credit; registry extends beyond the fixed revision and does not establish selected-sentence authorship.",
-      "selected_text_rights_status": "pending_independent_selected_text_and_import_boundary_audit",
+      "selected_text_rights_status": "no_candidate_fields",
       "external_reference_markers": [
         {
           "line_1_based": 153,
@@ -1965,7 +1891,8 @@
           "role": "French_reference_identity_only_no_quoted_example_or_external_prose"
         }
       ],
-      "reference_boundary": "Only selected French lexical/IPA/grammatical spans supply fields. Reference identities do not identify selected-sentence authorship; linked modern dictionary prose, literary/news quotations, media, etymologies and other-language sections are excluded."
+      "reference_boundary": "Only selected French lexical/IPA/grammatical spans supply fields. Reference identities do not identify selected-sentence authorship; linked modern dictionary prose, literary/news quotations, media, etymologies and other-language sections are excluded.",
+      "rejected_proposal": "rejected-old-use.json"
     },
     {
       "id": "b132_fr_171903",
@@ -13066,7 +12993,7 @@
       "frozen_headword": "oublie",
       "source_headword": "oublie",
       "relation": "exact_french_source_spelling",
-      "relation_role": "source_binding_only",
+      "relation_role": "annotation_evidence_only",
       "alias_admission": "not_admitted",
       "proposed_evidence": [
         {
@@ -13107,7 +13034,8 @@
         }
       ],
       "construction_and_flexion_interpretation": "Exact French article spelling oublie; selected definition at line 15, applicable isolated IPA at line 14. The retained nearest French POS heading and headword/grammar lines establish this use. Blocked candidate: old-fashioned feminine culinary noun, thin wafer baked between irons; modern everyday eligibility unresolved. Excluded: Original religious altar-bread sense, current interjection and all oublier verb forms; no substitution with oubli or oublié.",
-      "independent_review": "pending"
+      "independent_review": "not_a_candidate_field",
+      "annotation_approval": "docs/evidence/issue-132/owner-approval.md"
     },
     {
       "sense_id": "b132-2561-kilo-nom-selected",

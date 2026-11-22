@@ -18,13 +18,17 @@ construction/register/spelling decision and reason. Preserve original proposals
 when replacing wording. A definition/source match is evidence of source binding;
 it does not establish everyday use or independent semantic correctness.
 
-Review row 2560 first. Its frozen identity is `oublie/NOM`, pronounced /u.bli/.
+Row 2560 is the [owner-approved zero-field annotation](owner-approval.md).
+Its frozen identity is `oublie/NOM`; no pronunciation or meaning is admitted.
+The [rejected proposal](rejected-old-use.json) records /u.bli/ and the old sense.
 Wiktionnaire revision 39964053 line 15 labels the pastry sense `vieilli`;
 the retained CNRTL Académie 9 payload labels the same noun `Vieilli`.
 The interjection and conjugated `oublier` senses belong to other POS groups.
-No owner exception exists in the read ticket/spec. Retain the unresolved row
-and four held fields unless the exact modern noun use is established or the
-owner actually revises the scope.
+The owner explicitly approved only this row: `批准仅 oublie/NOM 为零字段注记`.
+Retain zero fields and four missing annotation fields, exact membership and
+the denominator. The complete previous package/helpers remain in the stable
+archive. No old sense, pronunciation, substituted spelling or runtime alias
+enters the candidate or admitted content through this approval.
 
 Review the cooking sense `saurer` separately for ordinary modern eligibility.
 Its exact verb definition is smoke drying, especially fish salted beforehand;
@@ -42,6 +46,6 @@ The [use notes](source-research.md) and source frames retain these distinctions.
 
 The coordinator may assemble only independently accepted fields with resolved
 original-work/import rights and actual combined notices. The focused author
-test permits pending proposals and an explicit blocker; it is not an admission
+test permits 196 pending fields and the approved zero-field annotation; it is not an admission
 gate. Preserve the fixed denominator, all prior admitted content and saved
 learner data. Native lookup/save/reopen and release completion remain separate.

@@ -14,7 +14,9 @@ Frequency is not a CEFR level.
 
 ## Modifications and selected content
 
-One sense is selected for each exact group. French wording is scoped to that
+One sense is proposed for each of 49 ordinary groups. The owner-approved
+row-2560 annotation has zero fields and four missing fields; its rejected old-use
+proposal is retained as evidence only. French wording is scoped to the selected
 use, with markup removed and grammatical/register restrictions retained.
 English and Chinese fields are new explanatory translations of that French
 use. One recorded isolated IPA variant is selected and enclosed in slashes.

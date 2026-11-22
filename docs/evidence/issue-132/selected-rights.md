@@ -5,7 +5,10 @@ English/Chinese explanations use **CC BY-SA 4.0**. The [legal text](COPYING),
 [article credits](NOTICES.md), [fixed sources](sources.json) and
 [field-specific rights](rights.json) accompany the proposed text. No dictionary
 is admitted as a whole. Every field’s selected-text rights and independent
-quality remain pending.
+quality remain pending for all 196 candidate fields. The [owner approval](owner-approval.md)
+gives `oublie/NOM` zero fields and four missing annotation fields; its original
+four-field [rejected proposal](rejected-old-use.json) retains the earlier source
+and rights evidence without admission.
 
 Wiktionnaire’s retained copyright-policy revision 38903168 permits text sharing
 and adaptation under CC BY-SA 4.0 and explicitly distinguishes external

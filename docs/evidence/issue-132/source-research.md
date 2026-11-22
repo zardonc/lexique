@@ -1,6 +1,6 @@
 # #132 selected-use research
 
-All four proposed fields are bound to the selected French sense and its exact
+All four proposed fields for each of 49 ordinary groups are bound to the selected French sense and its exact
 POS, with an isolated headword pronunciation. English and Chinese meanings are
 new scoped explanations based on the retained French definition, not copied
 upstream bilingual glosses. They retain constructions and usage conditions.
@@ -21,11 +21,14 @@ selects only the feminine noun welcome ceremony; `cassé` is selected in its
 adjective section. `nazi` denotes a member of Hitler’s Nazi Party in historical
 discussion; wider pejorative political use and obsolete homographs are excluded.
 
-`oublie/NOM` remains unresolved: Wiktionnaire definition line 15 is marked
+`oublie/NOM` is an owner-approved zero-field annotation. Its rejected proposal
+records Wiktionnaire definition line 15 marked
 `vieilli`, and the retained CNRTL Académie 9 payload also marks the pastry noun
 `Vieilli`. Its contemporary interjection and the forms of `oublier` cannot
-complete the frozen noun. Four accurately restricted candidate fields are
-retained without admission or an owner exception. See the [blockers](admission.json).
+complete the frozen noun. The owner explicitly approved only row 2560:
+`批准仅 oublie/NOM 为零字段注记`. The original four fields remain in the
+[rejected proposal](rejected-old-use.json); the active annotation has zero
+fields and four missing fields. See [approval](owner-approval.md) and [admission](admission.json).
 
 `saurer` selects smoke drying, especially fish salted beforehand. This is a
 scoped food-preservation proposal, not a specialist exemption. Its modern
@@ -50,7 +53,7 @@ for each sense, plus exact proposed texts. All review decisions remain pending.
 | 2557 | [facture/NOM](https://fr.wiktionary.org/w/index.php?title=facture&oldid=39885618) | 39885618 | 32 | 9 | Feminine commercial noun: invoice document for delivered goods or rendered services. |
 | 2558 | [classique/ADJ](https://fr.wiktionary.org/w/index.php?title=classique&oldid=39772527) | 39772527 | 16 | 7 | Adjective: traditional and without extravagance; same singular form for both genders. |
 | 2559 | [ceinture/NOM](https://fr.wiktionary.org/w/index.php?title=ceinture&oldid=39917514) | 39917514 | 33 | 10 | Feminine clothing noun: belt worn around the waist. |
-| 2560 | [oublie/NOM](https://fr.wiktionary.org/w/index.php?title=oublie&oldid=39964053) | 39964053 | 15 | 14 | Blocked candidate: old-fashioned feminine culinary noun, thin wafer baked between irons; modern everyday eligibility unresolved. |
+| 2560 | oublie/NOM | — | — | — | Owner-approved zero-field annotation; four missing fields. |
 | 2561 | [kilo/NOM](https://fr.wiktionary.org/w/index.php?title=kilo&oldid=39765653) | 39765653 | 25 | 24 | Masculine unit noun: kilogram. |
 | 2562 | [volontaire/ADJ](https://fr.wiktionary.org/w/index.php?title=volontaire&oldid=39816451) | 39816451 | 8 | 7 | Adjective describing an act done without compulsion; same singular form for both genders. |
 | 2563 | [gris/ADJ](https://fr.wiktionary.org/w/index.php?title=gris&oldid=39997525) | 39997525 | 13 | 12 | Colour adjective, masculine gris; grise, gris, grises in agreement. |

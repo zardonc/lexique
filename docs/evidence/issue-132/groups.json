@@ -734,81 +734,21 @@
     "lexique_cgram": "NOM",
     "subtitle_lemma_per_million": "22.56",
     "subtitle_pos_per_million": "22.56",
-    "senses": [
-      {
-        "sense_id": "b132-2560-oublie-nom-selected",
-        "source_headword": "oublie",
-        "use": "Blocked candidate: old-fashioned feminine culinary noun, thin wafer baked between irons; modern everyday eligibility unresolved.",
-        "use_language": "en",
-        "excluded_uses": "Original religious altar-bread sense, current interjection and all oublier verb forms; no substitution with oubli or oublié.",
-        "independent_review": "pending",
-        "resource_admission": "blocked_modern_everyday_eligibility",
-        "cefr": null,
-        "fields": {
-          "french_definition": {
-            "language": "fr",
-            "text": "Terme vieilli de cuisine : mince gaufre cuite entre deux fers, qui peut être roulée en cornet.",
-            "source_id": "b132_fr_169876",
-            "source_span": {
-              "line_1_based": 15,
-              "column_1_based": 1,
-              "raw_source_excerpt": "# {{lexique|cuisine|fr}} {{vieilli|fr}} [[mince|Mince]] [[gaufre]] que l’on [[cuire|cuit]] entre deux [[fer]]s, et qui peut être roulée en [[cornet]]."
-            },
-            "content_license": "CC-BY-SA-4.0",
-            "modification": "Lexique scoped adaptation of selected French semantics; markup removed; selected use and restrictions retained.",
-            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_separate_selected_span_audit"
-          },
-          "ipa": {
-            "language": "und",
-            "text": "/u.bli/",
-            "source_id": "b132_fr_169876",
-            "source_span": {
-              "line_1_based": 14,
-              "column_1_based": 1,
-              "raw_source_excerpt": "'''oublie''' {{pron|u.bli|fr}} {{f}}"
-            },
-            "content_license": "CC-BY-SA-4.0",
-            "modification": "One recorded isolated-headword IPA variant selected; slashes added; no liaison, audio or media copied.",
-            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_separate_selected_span_audit"
-          },
-          "english": {
-            "language": "en",
-            "text": "An old-fashioned culinary term for a thin wafer baked between two irons, which may be rolled into a cone.",
-            "source_id": "b132_fr_169876",
-            "source_span": {
-              "line_1_based": 15,
-              "column_1_based": 1,
-              "raw_source_excerpt": "# {{lexique|cuisine|fr}} {{vieilli|fr}} [[mince|Mince]] [[gaufre]] que l’on [[cuire|cuit]] entre deux [[fer]]s, et qui peut être roulée en [[cornet]]."
-            },
-            "content_license": "CC-BY-SA-4.0",
-            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
-            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_separate_selected_span_audit"
-          },
-          "chinese": {
-            "language": "zh",
-            "text": "旧时烹饪用语：在两块铁模之间烤成的薄脆饼，可卷成锥形。",
-            "source_id": "b132_fr_169876",
-            "source_span": {
-              "line_1_based": 15,
-              "column_1_based": 1,
-              "raw_source_excerpt": "# {{lexique|cuisine|fr}} {{vieilli|fr}} [[mince|Mince]] [[gaufre]] que l’on [[cuire|cuit]] entre deux [[fer]]s, et qui peut être roulée en [[cornet]]."
-            },
-            "content_license": "CC-BY-SA-4.0",
-            "modification": "New Lexique explanatory translation of the selected French use, not an upstream bilingual quotation.",
-            "author_validation": "passed_fixed_source_span_and_scoped_candidate_check",
-            "independent_review": "pending",
-            "rights_eligibility_status": "pending_separate_selected_span_audit"
-          }
-        },
-        "everyday_use_status": "unresolved_source_marks_vieilli"
-      }
-    ]
+    "senses": [],
+    "status": "approved_annotation_exception",
+    "admitted_fields": 0,
+    "missing_fields": 4,
+    "unresolved_reason": "The exact old-fashioned noun has no established modern everyday selected sense; the owner approved only this frozen row as a zero-field annotation.",
+    "annotation_kind": "owner_approved_zero_field",
+    "owner_approval": {
+      "exact_decision": "批准仅 oublie/NOM 为零字段注记",
+      "date": "2026-11-21",
+      "timezone": "America/Vancouver",
+      "evidence": "docs/evidence/issue-132/owner-approval.md",
+      "original_context": "../context/oublie-independent-check/owner-approval.md"
+    },
+    "rejected_proposal": "docs/evidence/issue-132/rejected-old-use.json",
+    "alias_admission": "not_admitted"
   },
   {
     "frozen_row": 2561,

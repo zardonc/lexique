@@ -57,11 +57,14 @@ class Batch132Tests(unittest.TestCase):
         rights = {(f["sense_id"], f["field"]): f for f in read("rights.json")["fields"]}
         reviews = {(f["sense_id"], f["field"]): f for f in read("field-review.json")["fields"]}
         excerpts = {(f["sense_id"], f["field"]): f for f in read("source-excerpts.json")["fields"]}
-        self.assertEqual(len(rights), 200)
+        self.assertEqual(len(rights), 196)
         self.assertEqual(set(rights), set(reviews))
         self.assertEqual(set(rights), set(excerpts))
         self.assertEqual(read("groups.json"), read("review-candidates.json"))
         for group in read("groups.json"):
+            if group["frozen_row"] == 2560:
+                self.assertEqual(group["senses"], [])
+                continue
             self.assertEqual(len(group["senses"]), 1)
             sense = group["senses"][0]
             self.assertTrue(sense["use"].strip())
@@ -90,30 +93,41 @@ class Batch132Tests(unittest.TestCase):
                     self.assertTrue(source["history_url"])
         review = read("field-review.json")
         self.assertFalse(review["independent_acceptance"])
-        self.assertEqual(len(review["usage"]), 50)
+        self.assertEqual(len(review["usage"]), 49)
         self.assertEqual(len(review["spelling_relations"]), 50)
         self.assertTrue(all(r["alias_admission"] == "not_admitted" for r in review["spelling_relations"]))
         admission = read("admission.json")
-        self.assertEqual((admission["proposed_groups"], admission["proposed_fields"]), (50, 200))
+        self.assertEqual((admission["proposed_groups"], admission["proposed_fields"]), (49, 196))
         self.assertEqual(admission["independently_accepted_new_fields"], 0)
         self.assertEqual(admission["newly_admitted_fields"], 0)
         self.assertEqual(admission["missing_admitted_fields"], 200)
-        self.assertEqual(admission["pending_independent_review_fields"], 200)
-        self.assertEqual(admission["pending_independent_rights_fields"], 200)
+        self.assertEqual(admission["pending_independent_review_fields"], 196)
+        self.assertEqual(admission["pending_independent_rights_fields"], 196)
         self.assertEqual(admission["native_checks"], "integration_owned_not_run")
         self.assertEqual((read("reuse.json")["reused_groups"], read("reuse.json")["reused_fields"]), (0, 0))
         self.assertEqual((EVIDENCE / "COPYING").read_text(encoding="utf-8").rstrip(),
                          (ROOT / "resources/core-pilot-79/COPYING").read_text(encoding="utf-8").rstrip())
 
-    def test_oublie_remains_blocked_without_an_owner_exception(self):
+    def test_only_approved_oublie_annotation_has_zero_fields_and_keeps_rejected_proposal(self):
         admission = read("admission.json")
-        self.assertEqual(admission["author_unresolved_content_rows"], [2560])
-        self.assertEqual(admission["annotation_exception_groups"], 0)
+        self.assertEqual(admission["author_unresolved_content_rows"], [])
+        self.assertEqual(admission["annotation_exception_groups"], 1)
         self.assertEqual(admission["specialist_exception_groups"], 0)
-        self.assertEqual(len(admission["unresolved_field_blockers"]), 4)
-        sense = read("groups.json")[9]["senses"][0]
-        self.assertEqual(sense["everyday_use_status"], "unresolved_source_marks_vieilli")
-        self.assertEqual(sense["resource_admission"], "blocked_modern_everyday_eligibility")
+        self.assertEqual(admission["unresolved_field_blockers"], [])
+        self.assertEqual(admission["missing_annotation_fields"], 4)
+        self.assertEqual(admission["pending_independent_review_rows"], [r for r in range(2551, 2601) if r != 2560])
+        annotation = read("groups.json")[9]
+        self.assertEqual((annotation["headword"], annotation["lexique_cgram"]), ("oublie", "NOM"))
+        self.assertEqual(annotation["status"], "approved_annotation_exception")
+        self.assertEqual(annotation["senses"], [])
+        self.assertEqual((annotation["admitted_fields"], annotation["missing_fields"]), (0, 4))
+        self.assertEqual(annotation["owner_approval"]["exact_decision"], "批准仅 oublie/NOM 为零字段注记")
+        self.assertIn(annotation["owner_approval"]["exact_decision"], (EVIDENCE / "owner-approval.md").read_text(encoding="utf-8"))
+        rejected = read("rejected-old-use.json")
+        self.assertEqual(rejected["status"], "rejected_old_use_proposal_not_admitted")
+        sense = rejected["group"]["senses"][0]
+        self.assertEqual(len(sense["fields"]), 4)
+        self.assertEqual(sense["independent_review"], "pending")
         for name, restriction in (("french_definition", "vieilli"), ("english", "old-fashioned"), ("chinese", "旧时")):
             self.assertIn(restriction, sense["fields"][name]["text"])
         for index, restrictions in ((13, ("Se soucier de", "de", "se soucier de")),
@@ -161,6 +175,9 @@ class Batch132Tests(unittest.TestCase):
             self.assertEqual(contexts[source["id"]]["anonymous_contributors_count"], anonymous.get(source["title"], 0))
         expected_pos = {"VER": "verbe", "NOM": "nom", "ADJ": "adjectif", "ADV": "adverbe", "ADJ:num": "adjectif numéral"}
         for group in read("groups.json"):
+            if group["frozen_row"] == 2560:
+                self.assertEqual(group["senses"], [])
+                continue
             for name, field in group["senses"][0]["fields"].items():
                 lines = raw[field["source_id"]]
                 span = field["source_span"]
