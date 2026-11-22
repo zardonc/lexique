@@ -1,0 +1,99 @@
+{
+  "ticket": 138,
+  "checkout": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/ticket-138",
+  "branch": "codex/d2-content-138",
+  "platform": "Windows x64 / PowerShell 7 / Python 3.14.10 / pnpm 11.25.0",
+  "change_scope": [
+    "docs/evidence/issue-138/**",
+    "scripts/test_core_batch_138.py"
+  ],
+  "review_base": "d3725aa325ed9ac7222c2be80527efb798508485",
+  "tested_state": "scoped_author_working_tree_before_commit",
+  "committed_identity_record": "context/author-evidence/issue-138/final-verification.json",
+  "retained_evidence_root": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/author-evidence/issue-138",
+  "frozen_rows": [
+    2851,
+    2900
+  ],
+  "denominator_groups": 4087,
+  "candidate_groups": 50,
+  "candidate_senses": 50,
+  "candidate_fields": 200,
+  "fixed_french_articles": 50,
+  "contributor_capture_parts": 7,
+  "article_named_credits": 3087,
+  "complete_contributor_pagination": true,
+  "selected_sentence_authorship_proved": false,
+  "daf8_article_imports": 31,
+  "cfc_article_imports": 1,
+  "proposed_field_characters": 8565,
+  "longest_field_characters": 143,
+  "independent_quality_accepted_fields": 0,
+  "independent_rights_accepted_fields": 0,
+  "newly_admitted_fields": 0,
+  "missing_authored_fields": 0,
+  "missing_admitted_fields": 200,
+  "preserved_original_author_proposals": "authored/",
+  "author_scope_review_attention": [
+    {
+      "frozen_row": 2863,
+      "reason": "Confirm the exact lowercase masculine invariant letter-name noun through the French lettre section and nominal examples; /y/ is its name, not every grapheme sound."
+    },
+    {
+      "frozen_row": 2894,
+      "reason": "Confirm modern everyday eligibility of the stopping-command interjection with its specifically soldiers restriction and h aspiré; no noun substitution or broader command is proposed."
+    },
+    {
+      "frozen_row": 2856,
+      "reason": "Review the handwritten-signature fields against the article-level CFC notice and unselected printing/cartography definition; the notice alone does not resolve selected-sentence origin."
+    }
+  ],
+  "checks": [
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_138.py --admitted Batch138Tests.test_exact_ticket_resource_groups",
+      "exit_code": 1,
+      "result": "expected_RED_no_canonical_groups_in_rows_2851_to_2900",
+      "log": "RED-admission-final.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_138.py",
+      "exit_code": 0,
+      "result": "passed_6_real_resource_boundary_tests",
+      "log": "GREEN-final.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-138/reproduce.py",
+      "exit_code": 0,
+      "result": "passed_exact_bytes_for_20_generated_evidence_files",
+      "log": "reproduction.log"
+    },
+    {
+      "command": "pnpm test:docs",
+      "exit_code": 0,
+      "result": "passed",
+      "log": "docs.log"
+    },
+    {
+      "command": "git diff --cached --check",
+      "exit_code": 0,
+      "result": "passed",
+      "log": "diff-check.log"
+    }
+  ],
+  "gates": {
+    "independent_quality": "pending_separate_reviewer",
+    "selected_span_rights": "pending_separate_reviewer",
+    "spelling_and_modern_use": "pending_separate_reviewer",
+    "converter_and_package": "integration_owned_not_run",
+    "native_lookup_save_reopen": "integration_owned_not_run",
+    "learner_acceptance": "not_run",
+    "release_readiness": "pending"
+  },
+  "unchanged": [
+    "canonical_resources",
+    "frozen_manifest",
+    "saved_learning_data",
+    "shared_runtime_and_runners",
+    "tracker_and_PRs"
+  ]
+}
