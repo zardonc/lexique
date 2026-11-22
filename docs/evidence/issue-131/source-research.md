@@ -1,12 +1,12 @@
 # Selected-source research for #131
 
-The [exact issue](https://github.com/zardonc/lexique/issues/131) owns 50 ordinary groups at frozen rows 2501–2550 under [parent #78](https://github.com/zardonc/lexique/issues/78). All 50 have one sourced author proposal and four fields. There are no reused groups, proposed exceptions, dropped groups or runtime aliases. The baseline `core-129-v2` admits none of these rows; the denominator remains 4,087 groups / 3,773 headwords.
+The [exact issue](https://github.com/zardonc/lexique/issues/131) owns 50 ordinary groups at frozen rows 2501–2550 under [parent #78](https://github.com/zardonc/lexique/issues/78). All 50 have one independently accepted everyday sense and four reviewed fields. There are no reused groups, exceptions, dropped groups or runtime aliases. Canonical assembly remains coordinator-owned; the denominator remains 4,087 groups / 3,773 headwords.
 
-The [53 fixed captures](source-captures.json), [contribution/import context](source-context.json), [200 exact field bindings and supporting spans](source-excerpts.json) and [review candidates](field-review.json) preserve the basis for each proposal. Original proposals are the `proposed_text` records and this author commit; accepted wording must be recorded separately during review.
+The [53 fixed captures](source-captures.json), [contribution/import context](source-context.json), [200 exact field bindings and supporting spans](source-excerpts.json) and [field decisions](field-review.json) preserve the basis for each accepted text. Original proposals remain in the `proposed_text` records and [authored snapshots](authored/snapshot.json). All 200 texts are accepted unchanged; the four `chérir` rights bases are recorded in [rights replacements](accepted-replacements.json).
 
 ## Selected meanings
 
-Each final column links the exact semantic source; IPA has its own line binding in the JSON when different. Complete construction/use restrictions and excluded alternatives remain in [groups.json](groups.json) and [field-review.json](field-review.json).
+Each final column links the exact semantic source; IPA has its own line binding in the JSON when different. Complete construction/use restrictions, excluded alternatives and separate quality/rights reasons remain in [groups.json](groups.json) and [field-review.json](field-review.json).
 
 | Row | Frozen headword/POS | French definition | IPA | English explanation | Chinese explanation | Semantic source line |
 | ---: | --- | --- | --- | --- | --- | --- |
@@ -65,11 +65,11 @@ Each final column links the exact semantic source; IPA has its own line binding 
 
 - `arabe` is the lowercase language noun; capitalized person names and the adjective are not substituted. `critique`, `objectif`, `pratique`, `pourri` and `pourrir` retain their exact noun/adjective/verb boundaries.
 - `bye` is the French informal farewell interjection, with /baj/. `bah` selects the doubt/denial interjection and the recorded /baː/ variant. Neither is an English-language substitute.
-- `amen` uses English Wiktionary’s **French** interjection frame at lines 443, 458–461. The prayer-ending equivalent is resolved through that entry’s English link (line 28), corroborated by French Wiktionnaire line 9; the same French spelling/prayer use supplies IPA at line 8. The differing adverb classification is retained for independent POS review, not silently relabelled in the capture.
+- `amen` uses English Wiktionary’s **French** interjection frame at lines 443, 458–461. The prayer-ending equivalent is resolved through that entry’s English link (line 28), corroborated by French Wiktionnaire line 9; the same French spelling/prayer use supplies IPA at line 8. The differing adverb classification remains in the fixed raw source; the accepted interjection has its own explicit French POS evidence.
 - `nôtres/PRO:pos` uses `les nôtres` lines 5–17: the agreement table explicitly records masculine and feminine plural. The component /notʁ/ is attested both in that construction and the exact isolated spelling. The bare word is neither replaced in the manifest nor introduced as a general alias.
 - `déshabiller`, `enfoncer`, `rejeter`, `achever` and `chérir` select transitive uses. `pourrir`, `régner` and `parvenir` select intransitive uses. `parvenir à` retains the intended goal, effort/difficulty and preposition; quoted source prose stays outside proposed learner fields.
 - `divorce` is deliberately scoped to the source’s judicial dissolution; it does not purport to describe every modern divorce procedure. `pizza`, `robot`, `huile`, `surface`, `séance`, `attitude` and `culture` likewise retain their specific selected everyday meanings rather than collecting unrelated senses.
 
 ## Status and limitations
 
-Author span/structure checks pass. There are zero author-identified missing content fields and zero unresolved content rows; 200 fields remain unadmitted pending independent semantic and rights review. Original-work edition/authorship assessment, particularly Larousse, remains an independent-review gate. Conversion, packaged notices, all native lookups, trusted save/reopen and learner acceptance belong to coordinator verification. No whole-core or release-completion claim is made.
+All 200 fields and 50 uses pass separate quality and selected-rights review, with zero unresolved fields. DAF8 and Larousse original-work rights are cleared separately from CC BY-SA 4.0 contribution/adaptation rights; sentence authorship is not inferred from article credits or import markers. Conversion, packaged notices, all native lookups, trusted save/reopen and learner acceptance belong to coordinator verification. No whole-core or release-completion claim is made.

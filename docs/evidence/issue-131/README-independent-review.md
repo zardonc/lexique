@@ -1,36 +1,106 @@
-# Separate independent review handoff: #131
+# Issue #131 independent field and rights review
 
-Review the sourced author package for [issue #131](https://github.com/zardonc/lexique/issues/131) against [parent #78](https://github.com/zardonc/lexique/issues/78), especially its resource/admission and independent-quality testing decisions. This is an author handoff, not an independent acceptance report.
+**50 exact groups / 50 current everyday uses / 200 fields accepted.** All 200
+field texts are unchanged. Four field-rights bases for `chérir` use the
+independently verified Larousse original-work boundary. There are zero unresolved
+quality or selected-rights fields and no new exceptions or runtime aliases.
 
-## Exact input and execution boundary
+Reviewer: **Independent field and selected-rights reviewer #131; separate from
+original author and coordinator**. This records separate agent field/rights
+review; learner acceptance remains a separate gate.
 
-- Author checkout: `C:/Users/inthe/IdeaProjects/lexique-spec-130-139/ticket-131`, branch `codex/d2-content-131`.
-- Original diff base: `e4005d868880dac12c84c412773049eea737bc67`. The author commit hash and merged integration tip are supplied with delivery; archived `delivery.json` records the actual source/test identities.
-- Review committed changes with `git diff e4005d868880dac12c84c412773049eea737bc67..<author-commit> -- docs/evidence/issue-131 scripts/test_core_batch_131.py`. The complete patch and focused test patch are retained in the archive.
-- Stable source/execution evidence: `C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/author-evidence/issue-131`. Original ignored evidence remains in the author checkout. The admission’s `author_evidence_root` and source-capture fallback resolve the archive if the worktree is later cleaned.
-- Host boundary: Windows x64, PowerShell 7, Python through uv. No native application execution or independent quality review is claimed.
+- Author commit: `f81207941dc340430f3a99a6a3d0825a4215ff16`.
+- Review base: `7e13502`; branch `codex/d2-review-131`.
+- Checkout: `C:/Users/inthe/IdeaProjects/lexique-spec-130-139/review-131`.
+- Author archive: `C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/author-evidence/issue-131`.
+- Independent audit/archive: `C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-131/independent-review-7e13502`.
+- Original work and proposals: [authored snapshot](authored/snapshot.json),
+  [exact field decisions](field-review.json) and [rights replacements](accepted-replacements.json).
 
-Read [CODING_STANDARDS.md](../../../CODING_STANDARDS.md) for reviewer input and evidence rules. Work only on this ticket’s evidence and focused test. The coordinator owns global resource assembly and native integration.
+The reviewer guide at `C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-guide.md`,
+project rules, [coding standards](../../../CODING_STANDARDS.md), exact ticket and
+parent specification, glossary, resource ADRs, pipeline notes and the #129
+independently reviewed shape supplied the review boundaries.
 
-## Reviewable content
+## Accepted meaning and construction boundaries
 
-[source-research.md](source-research.md) presents the 50 four-field proposals. [groups.json](groups.json) carries exact frozen identities, source bindings, selected use and excluded alternatives. [field-review.json](field-review.json) supplies each original `proposed_text`, exact source and supporting construction spans, with null reviewer and pending acceptance. [rights.json](rights.json), [selected-rights.md](selected-rights.md), [source-context.json](source-context.json), [source-excerpts.json](source-excerpts.json) and [source-captures.json](source-captures.json) preserve rights, attribution and actual raw-capture proof.
+All 200 actual FR/IPA/EN/ZH texts and all 50 selected uses were read against the
+retained fixed source bytes. [Per-field reasons](field-review.json) distinguish
+French semantics, applicable headword pronunciation, English and Chinese alignment,
+everyday use, construction and spelling evidence. Scripts verify the ledger
+and source bindings; their output does not supply the linguistic decisions.
 
-Preserve the author commit and original proposals before applying accepted replacements. Record actual reviewer identity, independence from drafting, exact accepted text, quality/rights decisions, reasons and affected sense IDs. A changed field requires its own decision; no previous ticket quality review applies to these 200 fields.
+`arabe` is the lowercase language noun. `critique`, `objectif` and `pratique`
+retain noun frames; `pourri` retains its physical-decay adjective frame, distinct
+from intransitive `pourrir`. The ordinary wrestling, cancer, ownership,
+cultivation, pump and monarchy senses require no specialist exception.
 
-## Points requiring semantic and source judgement
+`bye` and `bah` use French interjection frames and recorded `/baj/` and
+`/baː/`. `amen` uses the French interjection frame in English Wiktionary,
+its linked prayer-ending equivalent and the same French pronunciation; French
+Wiktionnaire's different POS classification remains in the raw evidence.
+`nôtres/PRO:pos` requires `les nôtres`, with plural masculine/feminine agreement;
+`/notʁ/` is the isolated headword component of the attested construction.
 
-- Verify all 50 exact groups and one modern everyday sense per group, with four fields for the same selected use. There are no owner-approved exceptions in this ticket.
-- Review French `bye` and `bah` as interjections within Lexique `ONO`, including register and the chosen IPA variants.
-- Review `amen` using the **French** interjection frame in English Wiktionary, the resolved prayer-ending equivalent and the corroborating same-form French IPA. Retain the differing adverb label in French Wiktionnaire as evidence; an automated frame check does not decide POS equivalence.
-- Review plural possessive `nôtres` through the explicit `les nôtres` agreement/meaning frame. Confirm /notʁ/ applies to the frozen component, and preserve the required determiner construction. Do not admit a general query alias or use the archaic possessive adjective as the group’s meaning.
-- Confirm transitivity, `parvenir à`, h muet in `huile`, masculine/feminine alternatives in person nouns and all intentionally limited meanings. The judicial `divorce` and agricultural `culture` proposals remain scoped to their selected senses.
-- Assess every selected source/import boundary independently. Confirm DAF8’s original collective-work basis and the Larousse edition/original-sentence proposal. Godefroy, Rivarol, TLFi and neighbouring quoted examples are not general permission to import external prose.
+Person-object `déshabiller` and `chérir`, physical-insertion `enfoncer`, rejection
+`rejeter` and completion `achever` retain transitive restrictions.
+`parvenir à` retains an intended endpoint, effort/difficulty and indirect
+complement. `divorce` retains judicial dissolution; `pizza` retains the selected
+tomato-sauce preparation. `sous-titre` includes same-language accessibility text.
+`neveu` retains both sibling branches as `侄子、外甥`; `danseur` is not
+restricted to professional dancers.
 
-## Commands and integration
+## Source and selected-rights audit
 
-Run `uv run --no-project python -B -X utf8 scripts/test_core_batch_131.py` for the author resource/admission check. It checks fixed source spans, continuation chains, exact frozen groups and honest pending states. It does not certify semantics or rights.
+All **53** retained source revisions have literal UTF-8 equality with their API
+revision content. **50** language/POS frames, **2,106** selected/supporting span
+occurrences and **53** complete contributor pagination chains pass the audit.
+Registries contain **3,484** named article-contributor memberships and **610**
+anonymous article counts; these are article credits rather than unique people
+or sentence-level authorship. Four fixed policy/import-template revisions match
+their retained API text, with CRLF normalization recorded separately.
 
-After independent acceptance and coordinator assembly, run `uv run --no-project python -B -X utf8 scripts/test_core_batch_131.py --admitted` against the real resource. This currently fails because the baseline has no admitted #131 groups. The coordinator must separately reproduce conversion and notices, verify all 50 native lookups, trusted representative save/reopen and preservation of existing learning data before recording native completion.
+DAF8 original collective-work rights use final publication in 1935 and
+**2006-01-01** expiry. `chérir` declares both DAF8 and Larousse imports.
+The [BnF catalogue](https://catalogue.bnf.fr/ark:/12148/cb33995829b) records
+**1866–1890**, seventeen volumes including supplements. The conservative
+whole-work L123-3 calculation uses **1961-01-01**, covering the later endpoint
+without assigning the sentence to a particular volume or author. The publisher's
+main-volume/supplement chronology is independently retained in
+[original-work review](original-work-review.json).
 
-The default author check intentionally enforces the immutable pending proposal package. Preserve it when writing reviewed records; the coordinator may advance the test to the accepted evidence shape as in #120–#129 once the real independent decisions exist. Native checks and independent decisions remain pending in [admission.json](admission.json).
+Only lexical definitions, phonetic notation and necessary language/grammar facts
+are selected. `achever`'s Godefroy import lies in unselected Old French.
+`chérir`'s Rivarol commentary and thing-object extension are unselected.
+`parviendrez à` retains a short common grammatical combination, with no expressive
+GEOguide Corse text selected. Contemporary bibliographic references,
+literary/news quotations, externally attributed translations and media are
+unselected. CC BY-SA 4.0, article/history and original-work credits, legal text,
+modification notices, ShareAlike and no additional restrictions apply.
+
+## Verification
+
+Windows x64, PowerShell 7, Python through uv; approved resource/admission seam.
+
+```powershell
+uv run --no-project python -B -X utf8 scripts/test_core_batch_131.py
+uv run --no-project python -B -X utf8 target/issue-131-review/audit.py
+pwsh -NoProfile -File scripts/check-docs.ps1
+git diff --check
+```
+
+Five focused batch tests passed: frozen membership, exact accepted/proposed
+field/use/rights agreement, literal fixed bytes and complete contributors,
+original-work basis and separate decisions. The source audit passed. Retained
+evidence includes `review-red.log`, `green.log`, `source-audit.json`, exact source
+inspection captures, authority bytes, `decisions.json` and final verification
+metadata. Archive fallback, integration and documentation results accompany
+the final verification record.
+
+## Limitations
+
+Canonical conversion, combined package notices, all-group native execution,
+save/reopen, learning-data preservation, offline/platform checks, learner
+acceptance and release readiness remain coordinator-owned. The live statute
+request returned HTTP 403; the fixed copyright-policy L123-3 quotation and
+established original-work record supply the stated basis.

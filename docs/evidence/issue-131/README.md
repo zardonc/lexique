@@ -1,18 +1,36 @@
-# D2 issue #131: sourced author package
+# Issue #131: independently reviewed core batch
 
-Frozen rows **2501–2550** contain **50 proposed everyday groups / 200 authored fields**, matching the exact [ticket](https://github.com/zardonc/lexique/issues/131) under [parent #78](https://github.com/zardonc/lexique/issues/78). There are no reused groups, new exceptions, missing authored fields or author-identified unresolved content rows. **Zero new fields are independently accepted or admitted.** The global denominator remains 4,087 groups / 3,773 headwords.
+**50 exact groups, 50 current everyday uses and 200 fields pass separate quality
+and selected-rights review.** All 200 field texts are accepted unchanged. Four
+`chérir` field-rights records use the independently established Larousse
+original-work boundary. There are zero unresolved fields, annotation exceptions,
+specialist exceptions or runtime aliases. Frozen rows **2501–2550**, their word/POS
+identities, frequency strings and order retain the **4,087-group / 3,773-headword**
+denominator of [#131](https://github.com/zardonc/lexique/issues/131) and
+[parent #78](https://github.com/zardonc/lexique/issues/78).
 
-The [readable proposals](source-research.md), [exact groups](groups.json), [fixed sources](sources.json), [capture registry](source-captures.json), [source and contributor context](source-context.json), [field excerpts](source-excerpts.json), [per-field review proposals](field-review.json), [rights proposals](rights.json), [selected-rights explanation](selected-rights.md), [notices](NOTICES.md) and [licence](COPYING) form the author package. The [reviewer handoff](README-independent-review.md) records the independent review and integration boundary.
+[Groups](groups.json) and the [readable content](source-research.md) contain the
+accepted senses. [Field review](field-review.json) records the exact proposal,
+accepted text, fixed source/span, independent reason and separate rights decision
+for every field, use and spelling relation. [Authored snapshots](authored/snapshot.json)
+preserve the original author package and focused test. [Rights replacements](accepted-replacements.json)
+retain all four exact `chérir` proposals and accepted original-work decisions.
 
-## Verification
+[Sources](sources.json), [captures](source-captures.json), [context and contributors](source-context.json),
+[excerpts](source-excerpts.json), [rights](rights.json), [original-work review](original-work-review.json),
+[selected rights](selected-rights.md), [notices](NOTICES.md) and the [licence](COPYING)
+retain the selected-source and redistribution obligations.
+The [independent review report](README-independent-review.md) records reviewer
+identity, author commit, review base, source audit, execution evidence and checks.
+[Admission](admission.json) distinguishes 200 independently accepted fields from
+200 fields awaiting coordinator-owned canonical assembly and verification.
 
-- `uv run --no-project python -B -X utf8 scripts/test_core_batch_131.py`: passed, three focused author resource/admission checks. The checks compare all frozen memberships, 200 source bindings, 53 actual revision captures, complete contributor continuation chains, rights materials and pending review states.
-- `uv run --no-project python -B -X utf8 scripts/test_core_batch_131.py --admitted`: expected failure against the baseline core; all 50 groups lack admitted content. The initial failure is retained in the author evidence archive. This gate remains active for coordinator assembly after independent acceptance.
-- Stable-archive fallback: passed all three author checks in a retained fixture with no local source captures.
-- `git diff --cached --check`: passed. `pwsh -NoProfile -File scripts/check-docs.ps1`: passed, including documentation format and repository links. Command logs are retained in the archive.
+## Limitations
 
-Source, audit and helper captures are preserved at `C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/author-evidence/issue-131`; originals remain at `C:/Users/inthe/IdeaProjects/lexique-spec-130-139/ticket-131/target/issue-131`. The admission and capture fallback use the stable archive. No pre-existing resources or learning data are modified.
-
-## Remaining gates
-
-Every proposed field, selected use and spelling/construction relationship awaits an actual separate independent reviewer. Source-specific rights and original-work assessment, including the Larousse layer, also await that reviewer. Conversion, combined notices, native lookup of all groups, trusted save/reopen, learning-state preservation, offline execution and learner acceptance require coordinator verification. This package does not establish native or release completion.
+Combined conversion/notices, native lookup of every group, trusted save/reopen,
+learning-state preservation, offline execution, learner acceptance and release
+verification remain coordinator-owned. Article contributors and import markers
+do not identify a selected sentence's author; the rights assessment covers the
+declared historical original works and the separately licensed contribution and
+adaptation layers. Live statute retrieval returned HTTP 403; the retained fixed
+L123-3 quotation and established original-work evidence supply the stated basis.
