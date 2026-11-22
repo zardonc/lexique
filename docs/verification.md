@@ -2,6 +2,8 @@
 
 ## 分类复习读取失败重试（PR #208）
 
+整合已准入的最新 `main`（`7ba54109e55dcb068a23be688a0d478aa68832eb`／#209）后，从干净提交 `0f51ca974e448004f7823edaab51af263bb5fed2`（tree `cb3a2bcc75f359480dfe1375a0da3f8d05837d2a`）再次完成 lint、typecheck、build 和六项读取／保存失败回归。应用、浏览器夹具／spec 与 Rust 源码与下述 `1765757` 相同；资源与准入后的 `main` 字节一致。两套原生夹具保留双方目录白名单，验证记录也完整保留。匹配新资源的 locked 原生重构建通过（120.04 秒），新程序的真实 SQLite 写锁 `failure` 场景再次通过（34.61 秒），硬限不变，来源元数据为干净提交、SQLite 检查通过、所属进程清理为零。新原生根为相同 integration checkout 的 `target/ticket-201/read-retry/native-merged-failure`，日志以 `merged-` 开头。下述完整本地浏览器结果保留原始 SHA；最终整合 CI 在 PR 中记录。
+
 2026-11-21，从干净提交 `17657572109e0285885a7b82239f46101ffa6b7e`（tree `c8ab6d0e6e9a4f2593f8a27a5f31676b3318e74f`）完成 Windows x64 验证：lint、typecheck、build 通过，bundled Chromium／`CI=true`／2 workers 的完整浏览器套件 **474 项通过**。新增范围读取和分类读取两项回归：首次成功加载后触发刷新读取失败，正确显示读取失败及重读按钮，重试发出新读取请求、恢复后清除错误，并断言不发送范围保存请求。既有首次读取失败、评分／跳过后的保存失败和仅保存重试回归也通过。
 
 hook 向选择器保留已有 `saveError`，失败文案及按钮按实际保存错误选择保存路径，其余读取错误调用 `retryRead()`；不再以 `applied` 是否存在判断失败类型。没有修改 Rust、持久化、IPC 或原生测试 harness。相同干净源码重新完成 locked 原生构建（130.84 秒），新可执行文件的真实 SQLite 写锁 `failure` 场景通过（37.48 秒，60 秒硬限不变）：评分／保存失败保留输入，focus／review-change 后仍可仅保存重试，评分、进度和全局额度不重复；SQLite schema 20、完整性和外键检查通过，host／worker／helper 清理为零。

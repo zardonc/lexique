@@ -6,6 +6,19 @@ their original source revisions.
 
 ## Read failure retry correction (PR #208)
 
+After integrating admitted main `7ba54109e55dcb068a23be688a0d478aa68832eb`
+(#209), clean merged source `0f51ca974e448004f7823edaab51af263bb5fed2`, tree
+`cb3a2bcc75f359480dfe1375a0da3f8d05837d2a`, passed lint, typecheck, build and
+all six focused read/save failure regressions. Application, browser fixture/spec
+and Rust source match the earlier tested correction below; resources match main
+byte for byte. Both native destination whitelists and verification sections were
+preserved. The matching locked native build passed in 120.04 s; its fresh SQLite
+write-lock failure journey passed in 34.61 s with clean source metadata, SQLite
+checks and zero owned processes. Merged logs have the `merged-` prefix in the
+same evidence root; fixture metadata/results/cleanup are in integration
+`target/ticket-201/read-retry/native-merged-failure`. The full local browser result
+below retains its earlier SHA; final integrated CI is recorded on the PR.
+
 Clean tested source: `17657572109e0285885a7b82239f46101ffa6b7e`, tree
 `c8ab6d0e6e9a4f2593f8a27a5f31676b3318e74f`, Windows x64. The selector uses the
 hook's existing save-error state to choose the failure message and retry action.
