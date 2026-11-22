@@ -124,6 +124,40 @@ test('failed rating retains the answer and pending choice; scope-save retry cann
   expect(calls.filter((call) => call.command === 'review_scope' && call.args?.scope).map((call) => call.args?.scope)).toEqual([choice, choice]);
 });
 
+for (const completion of ['rating', 'skip'] as const) {
+  test(`failed scope save after ${completion} holds the completed boundary with another eligible old-scope card`, async ({ page }) => {
+    const oldWindow = windowView(first, all, { revision: 1 });
+    const nextWindow = windowView(second, all, { revision: 2 });
+    const oldCards = { ...oldWindow, summary: { ...oldWindow.summary, admitted_count: 2 },
+      queue: { ...oldWindow.queue, cards: [...first.queue.cards, ...second.queue.cards] },
+      window: [...oldWindow.window, ...nextWindow.window], delta: { ...oldWindow.delta, order: [1, 3] } };
+    await nativeFixture(page, { learning_categories: [{ value: [{ id: 7, name: 'Voyage' }] }],
+      review_scope: [{ value: all }, { value: all }, { error: 'scope disk unavailable' }, { value: voyage }],
+      review_queue: [{ value: oldCards }, { value: nextWindow }, { value: windowView(second, voyage, { revision: 3 }) }],
+      review_rate: [{ value: rated }] });
+    await page.goto('/');
+    await page.getByRole('button', { name: '闪卡复习', exact: true }).click();
+    const card = page.getByRole('region', { name: '复习卡片' });
+    const selector = page.getByRole('group', { name: '复习范围', exact: true });
+    await expect(card.getByRole('heading', { name: 'école' })).toBeVisible();
+    await selector.getByRole('checkbox', { name: 'Voyage', exact: true }).check();
+    if (completion === 'rating') {
+      await card.getByRole('button', { name: '显示答案' }).click();
+      await card.getByRole('button', { name: '记得', exact: true }).click();
+    } else await card.getByRole('button', { name: '跳过', exact: true }).click();
+    await expect(page.getByRole('alert')).toContainText('scope disk unavailable');
+    await expect(page.getByText('当前范围：全部复习')).toBeVisible();
+    await expect(selector.getByRole('checkbox', { name: 'Voyage', exact: true })).toBeChecked();
+    await expect(card).toHaveCount(0);
+    await page.getByRole('button', { name: '重试保存复习范围' }).click();
+    await expect(page.getByText('当前范围：Voyage')).toBeVisible();
+    await expect(card.getByRole('heading', { name: 'voyage' })).toBeVisible();
+    const calls = await page.evaluate(() => window.testNative.calls);
+    expect(calls.filter((call) => call.command === 'review_rate')).toHaveLength(completion === 'rating' ? 1 : 0);
+    expect(calls.filter((call) => call.command === 'review_scope' && call.args?.scope).map((call) => call.args?.scope)).toEqual([voyage, voyage]);
+  });
+}
+
 test('scope read failures remain visible and prevent mixed queue reads until retry', async ({ page }) => {
   await nativeFixture(page, { review_scope: [{ error: 'scope read failed' }, { error: 'scope read failed' }, { value: all }] });
   await page.goto('/');

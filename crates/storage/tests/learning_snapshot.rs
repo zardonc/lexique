@@ -100,25 +100,50 @@ fn invalid_review_scopes_are_rejected_before_snapshot_import_changes_learning_da
 }
 
 #[test]
-fn export_rejects_inconsistent_applied_scope_references() {
+fn export_normalizes_stale_current_scope_and_roundtrips_the_remaining_choice() {
     use lexique_storage::*;
     let mut connection = Connection::open_in_memory().unwrap();
     initialize(&connection).unwrap();
-    create_category(&connection, "Voyage").unwrap();
-    connection
-        .execute(
-            "INSERT INTO app_metadata(key,value) VALUES('review-scope',?1)",
-            [r#"{"kind":"vocabulary","category_ids":[99],"include_uncategorized":false}"#],
-        )
-        .unwrap();
-    assert!(export_learning_snapshot(&mut connection, 1_800_000_000).is_err());
-    set_review_scope(&connection, &ReviewScope::NeedsSelection {}).unwrap();
-    let snapshot = export_learning_snapshot(&mut connection, 1_800_000_000).unwrap();
-    assert_eq!(
-        snapshot.preferences.review_scope,
-        ReviewScope::NeedsSelection {}
-    );
-    validate_learning_snapshot(&snapshot, 1_800_000_000).unwrap();
+    let category = create_category(&connection, "Voyage").unwrap();
+    for (ids, uncategorized, expected) in [
+        (
+            vec![category.id, 99],
+            false,
+            ReviewScope::Vocabulary {
+                category_ids: vec![category.id],
+                include_uncategorized: false,
+            },
+        ),
+        (
+            vec![99],
+            true,
+            ReviewScope::Vocabulary {
+                category_ids: vec![],
+                include_uncategorized: true,
+            },
+        ),
+        (vec![99], false, ReviewScope::NeedsSelection {}),
+    ] {
+        let stale = ReviewScope::Vocabulary {
+            category_ids: ids,
+            include_uncategorized: uncategorized,
+        };
+        connection
+            .execute(
+                "INSERT OR REPLACE INTO app_metadata(key,value) VALUES('review-scope',?1)",
+                [serde_json::to_string(&stale).unwrap()],
+            )
+            .unwrap();
+        let snapshot = export_learning_snapshot(&mut connection, 1_800_000_000).unwrap();
+        assert_eq!(snapshot.preferences.review_scope, expected);
+        assert_eq!(review_scope(&connection).unwrap(), expected);
+        let bytes = serde_json::to_vec(&snapshot).unwrap();
+        let decoded = read_learning_snapshot(bytes.as_slice(), 1_800_000_000).unwrap();
+        let mut destination = Connection::open_in_memory().unwrap();
+        initialize(&destination).unwrap();
+        import_learning_snapshot(&mut destination, &decoded, 1_800_000_000).unwrap();
+        assert_eq!(review_scope(&destination).unwrap(), expected);
+    }
 }
 
 #[test]
