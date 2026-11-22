@@ -35,6 +35,31 @@ def read(name):
 
 
 class Batch145Tests(unittest.TestCase):
+    def test_culinary_bulk_use_retains_the_herb_and_spice_distinction(self):
+        sense = next(g for g in read("groups.json") if g["frozen_row"] == 3211)["senses"][0]
+        fields = sense["fields"]
+        self.assertIn("quantité substantielle", fields["french_definition"]["text"])
+        self.assertIn("substantial quantities", fields["english"]["text"])
+        self.assertIn("较大量", fields["chinese"]["text"])
+        self.assertIn("spices and herbs", sense["use"])
+
+    def test_accepted_emotion_uses_only_the_conventional_selected_phrase(self):
+        sense = next(g for g in read("groups.json") if g["frozen_row"] == 3210)["senses"][0]
+        for name in ("french_definition", "english", "chinese"):
+            self.assertEqual(sense["fields"][name]["source_span"]["raw_source_excerpt"],
+                             "[[épouvante]], [[crainte]] [[violent]]e.")
+
+    def test_bodily_wound_explanations_use_current_anatomical_wording(self):
+        sense = next(g for g in read("groups.json") if g["frozen_row"] == 3228)["senses"][0]
+        self.assertEqual(sense["fields"]["french_definition"]["text"], "Lésion des tissus du corps.")
+        self.assertEqual(sense["fields"]["english"]["text"], "Wound; an injury to body tissue.")
+        self.assertEqual(sense["fields"]["chinese"]["text"], "创伤或伤口；身体组织受到的损伤（阴性名词）。")
+
+    def test_motorway_crossing_restriction_is_at_road_level(self):
+        sense = next(g for g in read("groups.json") if g["frozen_row"] == 3250)["senses"][0]
+        self.assertIn("sans intersections à niveau", sense["fields"]["french_definition"]["text"])
+        self.assertIn("no at-grade intersections", sense["fields"]["english"]["text"])
+
     def test_exact_frozen_groups_have_complete_resource_records(self):
         if (EVIDENCE / "groups.json").exists():
             groups = read("groups.json")
@@ -93,6 +118,73 @@ class Batch145Tests(unittest.TestCase):
             self.assertTrue(field["modification"])
             self.assertEqual(field["independent_review"], "pending")
             self.assertIsNone(field["reviewer"])
+
+    def test_accepted_fields_uses_and_selected_rights_match_the_review(self):
+        groups = read("groups.json")
+        review, rights, admission = read("field-review.json"), read("rights.json"), read("admission.json")
+        reviewer = review["reviewer"]
+        self.assertTrue(review["independent_acceptance"])
+        self.assertTrue(review["independence"])
+        self.assertIn("reviewer #145", reviewer)
+        self.assertEqual(review["unresolved_fields"], [])
+        self.assertEqual(rights["independent_rights_fields_accepted"], 200)
+        self.assertEqual((admission["independently_accepted_new_groups"], admission["independently_accepted_new_fields"]), (50, 200))
+        self.assertEqual((admission["missing_admitted_fields"], admission["pending_independent_review_fields"], admission["pending_independent_rights_fields"]), (0, 0, 0))
+        self.assertIn("pending_coordinator", admission["native_checks"])
+        self.assertIn("pending_coordinator", admission["conversion_and_packaging"])
+        expected = {(g["senses"][0]["sense_id"], name): field for g in groups
+                    for name, field in g["senses"][0]["fields"].items()}
+        authored = {(g["senses"][0]["sense_id"], name): field for g in read("authored/groups.json")
+                    for name, field in g["senses"][0]["fields"].items()}
+        decisions = {(r["sense_id"], r["field"]): r for r in review["fields"]}
+        legal = {(r["sense_id"], r["field"]): r for r in rights["fields"]}
+        self.assertEqual(set(expected), set(decisions))
+        self.assertEqual(set(expected), set(legal))
+        for key, field in expected.items():
+            with self.subTest(key=key):
+                quality, eligibility, proposal = decisions[key], legal[key], authored[key]
+                self.assertEqual(quality["accepted_text"], field["text"])
+                self.assertEqual(quality["proposed_text"], proposal["text"])
+                self.assertEqual(quality["proposed_source_span"], proposal["source_span"])
+                self.assertEqual(eligibility["accepted_text"], field["text"])
+                self.assertEqual(eligibility["exact_source_span"], field["source_span"])
+                self.assertEqual(quality["exact_source"]["reviewed_excerpt"], field["source_span"]["raw_source_excerpt"])
+                self.assertEqual(quality["exact_source"]["column_1_based"], field["source_span"]["column_1_based"])
+                self.assertEqual(field["independent_review"], "passed")
+                self.assertEqual(quality["accepted_text_quality_status"], "passed")
+                self.assertEqual(field["rights_eligibility_status"], "passed_at_selected_text_boundary")
+                self.assertEqual(eligibility["independent_review"], field["rights_eligibility_status"])
+                self.assertEqual(quality["reviewer"], reviewer)
+                self.assertEqual(eligibility["reviewer"], reviewer)
+                self.assertTrue(quality["review_reason"])
+                self.assertEqual(quality["selected_text_rights_reason"], eligibility["selected_text_rights_reason"])
+                self.assertTrue(eligibility["independent_original_span_assessment"])
+        usage = {r["sense_id"]: r for r in review["usage"]}
+        spelling = {r["sense_id"]: r for r in review["spelling_relations"]}
+        self.assertEqual((len(usage), len(spelling)), (50, 50))
+        for group in groups:
+            sense = group["senses"][0]
+            decision = usage[sense["sense_id"]]
+            self.assertEqual(decision["accepted_usage"], sense["use"])
+            self.assertEqual(decision["everyday_sense_status"], "passed")
+            self.assertEqual(decision["reviewer"], reviewer)
+            self.assertTrue(decision["everyday_sense_reason"])
+            self.assertEqual(spelling[sense["sense_id"]]["alias_admission"], "not_admitted")
+            self.assertEqual(spelling[sense["sense_id"]]["independent_review"], "passed")
+        replacements = read("accepted-replacements.json")
+        changes = {(r["sense_id"], r["field"]): r for r in replacements["changed_fields"]}
+        self.assertEqual(set(changes), {k for k in expected if expected[k]["text"] != authored[k]["text"]
+                                      or expected[k]["source_span"] != authored[k]["source_span"]})
+        self.assertEqual(sum(expected[k]["text"] != authored[k]["text"] for k in expected), 11)
+        self.assertEqual(sum(expected[k]["source_span"] != authored[k]["source_span"] for k in expected), 6)
+        for key, record in changes.items():
+            self.assertEqual(record["proposed_text"], authored[key]["text"])
+            self.assertEqual(record["accepted_text"], expected[key]["text"])
+            self.assertEqual(record["proposed_source_span"], authored[key]["source_span"])
+            self.assertEqual(record["accepted_source_span"], expected[key]["source_span"])
+        original_scope = rights["independent_original_work_assessment"]
+        self.assertEqual(original_scope["historical_expressive_replacement"]["status"], "full_proposed_exposition_not_cleared_or_admitted")
+        self.assertIn("France-only", rights["original_daf8_basis_scope"])
 
     def test_selected_spans_and_contributors_match_fixed_captures(self):
         captures = read("source-captures.json")

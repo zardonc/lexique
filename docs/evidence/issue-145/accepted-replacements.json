@@ -1,0 +1,249 @@
+{
+  "reviewer": "Independent semantic and selected-rights reviewer #145; separate from author and parent integration owner",
+  "author_commit": "3a0dea3ce4292f82d3713a9516af36d8675a96e1",
+  "changed_fields": [
+    {
+      "frozen_row": 3210,
+      "headword": "terreur",
+      "sense_id": "b145-3210-terreur-nom-selected",
+      "field": "french_definition",
+      "proposed_text": "Peur très intense causée par un grand mal ou un grand danger, réel ou annoncé.",
+      "accepted_text": "Peur très intense ; épouvante.",
+      "proposed_source_span": {
+        "line_1_based": 9,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# [[émotion|Émotion]] [[profond]]e causée dans l’[[âme]] par la [[présence]], l’[[annonce]], la [[peinture]] d’un grand [[mal]] ou d’un grand [[péril]] ; [[épouvante]], [[crainte]] [[violent]]e."
+      },
+      "accepted_source_span": {
+        "line_1_based": 9,
+        "column_1_based": 155,
+        "raw_source_excerpt": "[[épouvante]], [[crainte]] [[violent]]e."
+      },
+      "reason": "Peur très intense; épouvante directly expresses the selected extreme-fear emotion.",
+      "rights_reason": "Scoped Lexique French adaptation. terreur revision 39564561, line 9, column 155: The original full line combines âme with a rhetorical presence/announcement/portrayal sequence; its imported expressive wording is not cleared by the France expiry. The accepted source selects only épouvante, crainte violente, conventional lexical synonyms with de minimis expression. Original-source expression is assessed separately from the wiki contribution licence; neither a DAF8 marker nor France-only 2006 expiry supplies worldwide clearance. US 17 USC 102(b), 37 CFR 202.1(a), Compendium 313.3(C)/313.4(C) support the facts/conventional-short-text assessment, not a general exemption for factual literary expression. The selected text retains no distinctive imported exposition. CC BY-SA 4.0, fixed article/history attribution, contributor credits and modification/ShareAlike notices remain for wiki and Lexique layers; combined artifact delivery is coordinator-owned.",
+      "reviewer": "Independent semantic and selected-rights reviewer #145; separate from author and parent integration owner"
+    },
+    {
+      "frozen_row": 3210,
+      "headword": "terreur",
+      "sense_id": "b145-3210-terreur-nom-selected",
+      "field": "english",
+      "proposed_text": "Terror; intense fear caused by a great danger or evil, present or reported.",
+      "accepted_text": "Terror; extreme fear.",
+      "proposed_source_span": {
+        "line_1_based": 9,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# [[émotion|Émotion]] [[profond]]e causée dans l’[[âme]] par la [[présence]], l’[[annonce]], la [[peinture]] d’un grand [[mal]] ou d’un grand [[péril]] ; [[épouvante]], [[crainte]] [[violent]]e."
+      },
+      "accepted_source_span": {
+        "line_1_based": 9,
+        "column_1_based": 155,
+        "raw_source_excerpt": "[[épouvante]], [[crainte]] [[violent]]e."
+      },
+      "reason": "Terror; extreme fear avoids an unnecessary restriction to present/reported threats.",
+      "rights_reason": "New Lexique English explanation. terreur revision 39564561, line 9, column 155: The original full line combines âme with a rhetorical presence/announcement/portrayal sequence; its imported expressive wording is not cleared by the France expiry. The accepted source selects only épouvante, crainte violente, conventional lexical synonyms with de minimis expression. Original-source expression is assessed separately from the wiki contribution licence; neither a DAF8 marker nor France-only 2006 expiry supplies worldwide clearance. US 17 USC 102(b), 37 CFR 202.1(a), Compendium 313.3(C)/313.4(C) support the facts/conventional-short-text assessment, not a general exemption for factual literary expression. The selected text retains no distinctive imported exposition. CC BY-SA 4.0, fixed article/history attribution, contributor credits and modification/ShareAlike notices remain for wiki and Lexique layers; combined artifact delivery is coordinator-owned.",
+      "reviewer": "Independent semantic and selected-rights reviewer #145; separate from author and parent integration owner"
+    },
+    {
+      "frozen_row": 3210,
+      "headword": "terreur",
+      "sense_id": "b145-3210-terreur-nom-selected",
+      "field": "chinese",
+      "proposed_text": "恐惧；面对或听闻重大危险、灾祸时产生的强烈害怕（阴性名词）。",
+      "accepted_text": "恐惧；极度害怕（阴性名词）。",
+      "proposed_source_span": {
+        "line_1_based": 9,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# [[émotion|Émotion]] [[profond]]e causée dans l’[[âme]] par la [[présence]], l’[[annonce]], la [[peinture]] d’un grand [[mal]] ou d’un grand [[péril]] ; [[épouvante]], [[crainte]] [[violent]]e."
+      },
+      "accepted_source_span": {
+        "line_1_based": 9,
+        "column_1_based": 155,
+        "raw_source_excerpt": "[[épouvante]], [[crainte]] [[violent]]e."
+      },
+      "reason": "恐惧; 极度害怕 matches the intensity and feminine emotion noun.",
+      "rights_reason": "New Lexique Chinese explanation. terreur revision 39564561, line 9, column 155: The original full line combines âme with a rhetorical presence/announcement/portrayal sequence; its imported expressive wording is not cleared by the France expiry. The accepted source selects only épouvante, crainte violente, conventional lexical synonyms with de minimis expression. Original-source expression is assessed separately from the wiki contribution licence; neither a DAF8 marker nor France-only 2006 expiry supplies worldwide clearance. US 17 USC 102(b), 37 CFR 202.1(a), Compendium 313.3(C)/313.4(C) support the facts/conventional-short-text assessment, not a general exemption for factual literary expression. The selected text retains no distinctive imported exposition. CC BY-SA 4.0, fixed article/history attribution, contributor credits and modification/ShareAlike notices remain for wiki and Lexique layers; combined artifact delivery is coordinator-owned.",
+      "reviewer": "Independent semantic and selected-rights reviewer #145; separate from author and parent integration owner"
+    },
+    {
+      "frozen_row": 3211,
+      "headword": "légume",
+      "sense_id": "b145-3211-légume-nom-selected",
+      "field": "french_definition",
+      "proposed_text": "Plante ou partie de plante comestible utilisée surtout dans des plats salés, parfois aussi un champignon comestible.",
+      "accepted_text": "Plante ou partie de plante comestible consommée surtout dans des plats salés et en quantité substantielle, contrairement aux épices et aux herbes aromatiques ; ce sens culinaire inclut parfois les champignons comestibles.",
+      "proposed_source_span": {
+        "line_1_based": 10,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{lexique|agronomie|biogéographie|ethnobiologie|fr}} Toute [[sorte]] d’[[herbe]]s [[potager|potagères]], de [[plante]]s, de [[racine]]s, de [[graine]]s [[comestible]]s. [[organisme|Organisme]] [[végétal]] [[considéré]] en tant qu’[[aliment]] et [[utilisé]] [[principalement]] dans des [[plat]]s [[salé]]s (par [[opposition]] aux [[fruit]]s) et en [[quantité]] [[substantielle]] (par opposition aux [[épice]]s et aux [[herbes]]) ; on y inclus parfois les [[champignon]]s comestibles."
+      },
+      "accepted_source_span": {
+        "line_1_based": 10,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{lexique|agronomie|biogéographie|ethnobiologie|fr}} Toute [[sorte]] d’[[herbe]]s [[potager|potagères]], de [[plante]]s, de [[racine]]s, de [[graine]]s [[comestible]]s. [[organisme|Organisme]] [[végétal]] [[considéré]] en tant qu’[[aliment]] et [[utilisé]] [[principalement]] dans des [[plat]]s [[salé]]s (par [[opposition]] aux [[fruit]]s) et en [[quantité]] [[substantielle]] (par opposition aux [[épice]]s et aux [[herbes]]) ; on y inclus parfois les [[champignon]]s comestibles."
+      },
+      "reason": "Substantial quantity and contrast with spices/herbs restore the source culinary distinction while retaining savoury dishes and occasional mushrooms.",
+      "rights_reason": "Scoped Lexique French adaptation. légume revision 39737749, line 10, column 1: The opening edible plant/part list is conventional food vocabulary. The longer continuation states culinary classification facts and explicit fruit/seasoning contrasts, without narrative imagery. The new explanations retain those facts, not distinctive original dictionary exposition. Original-source expression is assessed separately from the wiki contribution licence; neither a DAF8 marker nor France-only 2006 expiry supplies worldwide clearance. US 17 USC 102(b), 37 CFR 202.1(a), Compendium 313.3(C)/313.4(C) support the facts/conventional-short-text assessment, not a general exemption for factual literary expression. The selected text retains no distinctive imported exposition. CC BY-SA 4.0, fixed article/history attribution, contributor credits and modification/ShareAlike notices remain for wiki and Lexique layers; combined artifact delivery is coordinator-owned.",
+      "reviewer": "Independent semantic and selected-rights reviewer #145; separate from author and parent integration owner"
+    },
+    {
+      "frozen_row": 3211,
+      "headword": "légume",
+      "sense_id": "b145-3211-légume-nom-selected",
+      "field": "english",
+      "proposed_text": "Vegetable; an edible plant or plant part mainly used in savoury dishes; culinary usage sometimes includes edible mushrooms.",
+      "accepted_text": "Vegetable; an edible plant or plant part mainly eaten in savoury dishes and in substantial quantities, unlike spices and herbs used as seasoning; culinary usage sometimes includes edible mushrooms.",
+      "proposed_source_span": {
+        "line_1_based": 10,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{lexique|agronomie|biogéographie|ethnobiologie|fr}} Toute [[sorte]] d’[[herbe]]s [[potager|potagères]], de [[plante]]s, de [[racine]]s, de [[graine]]s [[comestible]]s. [[organisme|Organisme]] [[végétal]] [[considéré]] en tant qu’[[aliment]] et [[utilisé]] [[principalement]] dans des [[plat]]s [[salé]]s (par [[opposition]] aux [[fruit]]s) et en [[quantité]] [[substantielle]] (par opposition aux [[épice]]s et aux [[herbes]]) ; on y inclus parfois les [[champignon]]s comestibles."
+      },
+      "accepted_source_span": {
+        "line_1_based": 10,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{lexique|agronomie|biogéographie|ethnobiologie|fr}} Toute [[sorte]] d’[[herbe]]s [[potager|potagères]], de [[plante]]s, de [[racine]]s, de [[graine]]s [[comestible]]s. [[organisme|Organisme]] [[végétal]] [[considéré]] en tant qu’[[aliment]] et [[utilisé]] [[principalement]] dans des [[plat]]s [[salé]]s (par [[opposition]] aux [[fruit]]s) et en [[quantité]] [[substantielle]] (par opposition aux [[épice]]s et aux [[herbes]]) ; on y inclus parfois les [[champignon]]s comestibles."
+      },
+      "reason": "Substantial quantities contrasts vegetables with seasoning, rather than treating a pinch of herb as a vegetable.",
+      "rights_reason": "New Lexique English explanation. légume revision 39737749, line 10, column 1: The opening edible plant/part list is conventional food vocabulary. The longer continuation states culinary classification facts and explicit fruit/seasoning contrasts, without narrative imagery. The new explanations retain those facts, not distinctive original dictionary exposition. Original-source expression is assessed separately from the wiki contribution licence; neither a DAF8 marker nor France-only 2006 expiry supplies worldwide clearance. US 17 USC 102(b), 37 CFR 202.1(a), Compendium 313.3(C)/313.4(C) support the facts/conventional-short-text assessment, not a general exemption for factual literary expression. The selected text retains no distinctive imported exposition. CC BY-SA 4.0, fixed article/history attribution, contributor credits and modification/ShareAlike notices remain for wiki and Lexique layers; combined artifact delivery is coordinator-owned.",
+      "reviewer": "Independent semantic and selected-rights reviewer #145; separate from author and parent integration owner"
+    },
+    {
+      "frozen_row": 3211,
+      "headword": "légume",
+      "sense_id": "b145-3211-légume-nom-selected",
+      "field": "chinese",
+      "proposed_text": "蔬菜；主要用于咸味菜肴的可食用植物或其部分；烹饪用法有时也包括食用菌。",
+      "accepted_text": "蔬菜；主要用于咸味菜肴、以较大量食用的植物或其部分，与作为调味料的香料、香草相区别；烹饪用法有时也包括食用菌。",
+      "proposed_source_span": {
+        "line_1_based": 10,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{lexique|agronomie|biogéographie|ethnobiologie|fr}} Toute [[sorte]] d’[[herbe]]s [[potager|potagères]], de [[plante]]s, de [[racine]]s, de [[graine]]s [[comestible]]s. [[organisme|Organisme]] [[végétal]] [[considéré]] en tant qu’[[aliment]] et [[utilisé]] [[principalement]] dans des [[plat]]s [[salé]]s (par [[opposition]] aux [[fruit]]s) et en [[quantité]] [[substantielle]] (par opposition aux [[épice]]s et aux [[herbes]]) ; on y inclus parfois les [[champignon]]s comestibles."
+      },
+      "accepted_source_span": {
+        "line_1_based": 10,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{lexique|agronomie|biogéographie|ethnobiologie|fr}} Toute [[sorte]] d’[[herbe]]s [[potager|potagères]], de [[plante]]s, de [[racine]]s, de [[graine]]s [[comestible]]s. [[organisme|Organisme]] [[végétal]] [[considéré]] en tant qu’[[aliment]] et [[utilisé]] [[principalement]] dans des [[plat]]s [[salé]]s (par [[opposition]] aux [[fruit]]s) et en [[quantité]] [[substantielle]] (par opposition aux [[épice]]s et aux [[herbes]]) ; on y inclus parfois les [[champignon]]s comestibles."
+      },
+      "reason": "较大量食用 and 香料、香草作为调味料 preserve the bulk-food versus seasoning distinction and edible-fungus qualification.",
+      "rights_reason": "New Lexique Chinese explanation. légume revision 39737749, line 10, column 1: The opening edible plant/part list is conventional food vocabulary. The longer continuation states culinary classification facts and explicit fruit/seasoning contrasts, without narrative imagery. The new explanations retain those facts, not distinctive original dictionary exposition. Original-source expression is assessed separately from the wiki contribution licence; neither a DAF8 marker nor France-only 2006 expiry supplies worldwide clearance. US 17 USC 102(b), 37 CFR 202.1(a), Compendium 313.3(C)/313.4(C) support the facts/conventional-short-text assessment, not a general exemption for factual literary expression. The selected text retains no distinctive imported exposition. CC BY-SA 4.0, fixed article/history attribution, contributor credits and modification/ShareAlike notices remain for wiki and Lexique layers; combined artifact delivery is coordinator-owned.",
+      "reviewer": "Independent semantic and selected-rights reviewer #145; separate from author and parent integration owner"
+    },
+    {
+      "frozen_row": 3228,
+      "headword": "plaie",
+      "sense_id": "b145-3228-plaie-nom-selected",
+      "field": "french_definition",
+      "proposed_text": "Lésion du corps due à une blessure, une contusion ou un accident physiologique.",
+      "accepted_text": "Lésion des tissus du corps.",
+      "proposed_source_span": {
+        "line_1_based": 8,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# [[lésion|Lésion]] du [[corps]] [[provenir|provenant]] soit d’une [[blessure]] [[sanglant]]e ou d’une [[contusion]], soit d’un [[accident]] [[physiologique]]."
+      },
+      "accepted_source_span": {
+        "line_1_based": 8,
+        "column_1_based": 3,
+        "raw_source_excerpt": "[[lésion|Lésion]] du [[corps]]"
+      },
+      "reason": "Lésion des tissus du corps keeps the source bodily-lesion core without its dated cause taxonomy.",
+      "rights_reason": "Scoped Lexique French adaptation. plaie revision 39961124, line 8, column 3: Only Lésion du corps, the conventional anatomical core, is retained as the exact selected source. The historical full cause enumeration remains in authored evidence; new explanations do not reproduce that formulation or modern Robert prose. Original-source expression is assessed separately from the wiki contribution licence; neither a DAF8 marker nor France-only 2006 expiry supplies worldwide clearance. US 17 USC 102(b), 37 CFR 202.1(a), Compendium 313.3(C)/313.4(C) support the facts/conventional-short-text assessment, not a general exemption for factual literary expression. The selected text retains no distinctive imported exposition. CC BY-SA 4.0, fixed article/history attribution, contributor credits and modification/ShareAlike notices remain for wiki and Lexique layers; combined artifact delivery is coordinator-owned.",
+      "reviewer": "Independent semantic and selected-rights reviewer #145; separate from author and parent integration owner"
+    },
+    {
+      "frozen_row": 3228,
+      "headword": "plaie",
+      "sense_id": "b145-3228-plaie-nom-selected",
+      "field": "english",
+      "proposed_text": "Wound; a bodily lesion caused by an injury, a bruise or a physiological accident.",
+      "accepted_text": "Wound; an injury to body tissue.",
+      "proposed_source_span": {
+        "line_1_based": 8,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# [[lésion|Lésion]] du [[corps]] [[provenir|provenant]] soit d’une [[blessure]] [[sanglant]]e ou d’une [[contusion]], soit d’un [[accident]] [[physiologique]]."
+      },
+      "accepted_source_span": {
+        "line_1_based": 8,
+        "column_1_based": 3,
+        "raw_source_excerpt": "[[lésion|Lésion]] du [[corps]]"
+      },
+      "reason": "Injury to body tissue is ordinary English wound wording; physiological accident was an unclear calque.",
+      "rights_reason": "New Lexique English explanation. plaie revision 39961124, line 8, column 3: Only Lésion du corps, the conventional anatomical core, is retained as the exact selected source. The historical full cause enumeration remains in authored evidence; new explanations do not reproduce that formulation or modern Robert prose. Original-source expression is assessed separately from the wiki contribution licence; neither a DAF8 marker nor France-only 2006 expiry supplies worldwide clearance. US 17 USC 102(b), 37 CFR 202.1(a), Compendium 313.3(C)/313.4(C) support the facts/conventional-short-text assessment, not a general exemption for factual literary expression. The selected text retains no distinctive imported exposition. CC BY-SA 4.0, fixed article/history attribution, contributor credits and modification/ShareAlike notices remain for wiki and Lexique layers; combined artifact delivery is coordinator-owned.",
+      "reviewer": "Independent semantic and selected-rights reviewer #145; separate from author and parent integration owner"
+    },
+    {
+      "frozen_row": 3228,
+      "headword": "plaie",
+      "sense_id": "b145-3228-plaie-nom-selected",
+      "field": "chinese",
+      "proposed_text": "伤口或创伤；由受伤、挫伤或生理性损伤造成的身体损害（阴性名词）。",
+      "accepted_text": "创伤或伤口；身体组织受到的损伤（阴性名词）。",
+      "proposed_source_span": {
+        "line_1_based": 8,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# [[lésion|Lésion]] du [[corps]] [[provenir|provenant]] soit d’une [[blessure]] [[sanglant]]e ou d’une [[contusion]], soit d’un [[accident]] [[physiologique]]."
+      },
+      "accepted_source_span": {
+        "line_1_based": 8,
+        "column_1_based": 3,
+        "raw_source_excerpt": "[[lésion|Lésion]] du [[corps]]"
+      },
+      "reason": "创伤或伤口 and 身体组织损伤 retain the bodily meaning with clear modern Chinese.",
+      "rights_reason": "New Lexique Chinese explanation. plaie revision 39961124, line 8, column 3: Only Lésion du corps, the conventional anatomical core, is retained as the exact selected source. The historical full cause enumeration remains in authored evidence; new explanations do not reproduce that formulation or modern Robert prose. Original-source expression is assessed separately from the wiki contribution licence; neither a DAF8 marker nor France-only 2006 expiry supplies worldwide clearance. US 17 USC 102(b), 37 CFR 202.1(a), Compendium 313.3(C)/313.4(C) support the facts/conventional-short-text assessment, not a general exemption for factual literary expression. The selected text retains no distinctive imported exposition. CC BY-SA 4.0, fixed article/history attribution, contributor credits and modification/ShareAlike notices remain for wiki and Lexique layers; combined artifact delivery is coordinator-owned.",
+      "reviewer": "Independent semantic and selected-rights reviewer #145; separate from author and parent integration owner"
+    },
+    {
+      "frozen_row": 3250,
+      "headword": "autoroute",
+      "sense_id": "b145-3250-autoroute-nom-selected",
+      "field": "french_definition",
+      "proposed_text": "Route à chaussées séparées pour les deux sens, sans croisements, conçue pour la circulation rapide des automobiles.",
+      "accepted_text": "Route à chaussées séparées pour les deux sens, sans intersections à niveau, conçue pour la circulation rapide des automobiles.",
+      "proposed_source_span": {
+        "line_1_based": 11,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{lexique|transport|fr}} [[route|Route]] à [[chaussée]]s séparées pour chacun des deux sens et sans [[croisement]]s, conçue pour la circulation rapide des automobiles."
+      },
+      "accepted_source_span": {
+        "line_1_based": 11,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{lexique|transport|fr}} [[route|Route]] à [[chaussée]]s séparées pour chacun des deux sens et sans [[croisement]]s, conçue pour la circulation rapide des automobiles."
+      },
+      "reason": "Separated carriageways and no intersections à niveau preserve motorway design without excluding bridges.",
+      "rights_reason": "Scoped Lexique French adaptation. autoroute revision 39815225, line 11, column 1: Separated directions, rapid motor traffic and no at-grade intersections are conventional road-design facts. The longer gender-use note and cited dictionary prose are not selected. Original-source expression is assessed separately from the wiki contribution licence; neither a DAF8 marker nor France-only 2006 expiry supplies worldwide clearance. US 17 USC 102(b), 37 CFR 202.1(a), Compendium 313.3(C)/313.4(C) support the facts/conventional-short-text assessment, not a general exemption for factual literary expression. The selected text retains no distinctive imported exposition. CC BY-SA 4.0, fixed article/history attribution, contributor credits and modification/ShareAlike notices remain for wiki and Lexique layers; combined artifact delivery is coordinator-owned.",
+      "reviewer": "Independent semantic and selected-rights reviewer #145; separate from author and parent integration owner"
+    },
+    {
+      "frozen_row": 3250,
+      "headword": "autoroute",
+      "sense_id": "b145-3250-autoroute-nom-selected",
+      "field": "english",
+      "proposed_text": "Motorway; a road for fast motor traffic with separate carriageways for each direction and no crossings.",
+      "accepted_text": "Motorway; a road for fast motor traffic with separate carriageways for each direction and no at-grade intersections.",
+      "proposed_source_span": {
+        "line_1_based": 11,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{lexique|transport|fr}} [[route|Route]] à [[chaussée]]s séparées pour chacun des deux sens et sans [[croisement]]s, conçue pour la circulation rapide des automobiles."
+      },
+      "accepted_source_span": {
+        "line_1_based": 11,
+        "column_1_based": 1,
+        "raw_source_excerpt": "# {{lexique|transport|fr}} [[route|Route]] à [[chaussée]]s séparées pour chacun des deux sens et sans [[croisement]]s, conçue pour la circulation rapide des automobiles."
+      },
+      "reason": "No at-grade intersections makes crossings precise while allowing overpasses/underpasses.",
+      "rights_reason": "New Lexique English explanation. autoroute revision 39815225, line 11, column 1: Separated directions, rapid motor traffic and no at-grade intersections are conventional road-design facts. The longer gender-use note and cited dictionary prose are not selected. Original-source expression is assessed separately from the wiki contribution licence; neither a DAF8 marker nor France-only 2006 expiry supplies worldwide clearance. US 17 USC 102(b), 37 CFR 202.1(a), Compendium 313.3(C)/313.4(C) support the facts/conventional-short-text assessment, not a general exemption for factual literary expression. The selected text retains no distinctive imported exposition. CC BY-SA 4.0, fixed article/history attribution, contributor credits and modification/ShareAlike notices remain for wiki and Lexique layers; combined artifact delivery is coordinator-owned.",
+      "reviewer": "Independent semantic and selected-rights reviewer #145; separate from author and parent integration owner"
+    }
+  ],
+  "changed_usage": [
+    {
+      "frozen_row": 3211,
+      "proposed_usage": "Masculine culinary noun; vegetables as food, distinct from botanical fruit classification.",
+      "accepted_usage": "Masculine culinary noun; vegetables as food mainly in savoury dishes and substantial quantities, unlike spices and herbs used as seasoning; culinary usage sometimes includes edible mushrooms.",
+      "reason": "Ordinary culinary vegetables are mainly savoury food eaten in substantial quantities; the same source expressly distinguishes spices/herbs and allows mushrooms."
+    }
+  ],
+  "changed_field_texts": 11,
+  "unchanged_field_texts": 189,
+  "changed_source_spans": 6,
+  "unresolved_fields": []
+}

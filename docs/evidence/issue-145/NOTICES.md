@@ -5,7 +5,7 @@ adaptations and new English/Chinese explanations retain
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en).
 Project source code remains MIT. The [complete legal text](COPYING),
 source/history links, contributor records, original-work credits and
-modification notices accompany these author proposals.
+modification notices accompany these independently reviewed selected fields.
 
 Exact word/POS membership and both unchanged frequency strings derive from
 Boris New and Christophe Pallier’s [Lexique 3.83](https://chrplr.github.io/openlexicon/datasets-info/Lexique383/README-Lexique.html),
@@ -14,14 +14,18 @@ Rows 3201–3250 retain their order and grammatical subclasses. CEFR is unknown.
 
 ## Modifications
 
-One selected sense is proposed per exact group. French wording is a scoped
+One selected sense is accepted per exact group. French wording is a scoped
 adaptation of the selected lexical semantics; English and Chinese are new
 Lexique explanations, not upstream bilingual quotations. Construction, gender,
 number, register and region restrictions are retained. One recorded applicable
 isolated IPA variant is selected. Audio, images, lyrics and literary/news
 quotations supply no learner field. Source spelling relationships add no lookup
 aliases. [Readable proposals](review-candidates.md) retain every exact field and
-the selected and excluded uses.
+the proposed selected and excluded uses. [Accepted fields](groups.json) and
+[exact replacements](accepted-replacements.json) retain the independent result.
+Eleven field texts and one culinary-use description are corrected. Six source
+spans are narrowed to the conventional extreme-fear and anatomical cores.
+Original proposed text and source spans remain in authored evidence.
 
 ## Article credits
 
@@ -104,5 +108,11 @@ additional restrictions. External works retain their separate rights.
 The coordinator verifies actual combined source materials, notices and
 conversion before canonical admission.
 
-All 200 new fields await separate quality and selected-span rights review.
-No new field is independently accepted or admitted by this author package.
+All 200 fields have separate independent quality and selected-span rights
+decisions. DAF8's France-only 2006-01-01 duration calculation does not establish
+worldwide clearance of original expression. The accepted spans are assessed
+individually as factual/conventional lexical material, and the full expressive
+`terreur` proposal is not admitted. [Selected rights](selected-rights.md) and
+[field-specific decisions](rights.json) identify this boundary separately from
+CC BY-SA 4.0 contribution/adaptation obligations. Combined artifact delivery
+and native validation remain pending with the coordinator.

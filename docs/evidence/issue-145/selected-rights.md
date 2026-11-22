@@ -1,82 +1,89 @@
-# Selected rights proposals for #145
+# Selected rights review for #145
 
-The 200 fields are author proposals awaiting separate selected-span rights
-and quality review. Their fixed lexical, IPA and construction spans are in
-[source-excerpts.json](source-excerpts.json); field-specific attribution,
-modifications and rights proposals are in [rights.json](rights.json).
+**200 exact accepted fields pass the separate selected-span review.**
+[Rights records](rights.json) contain accepted text, exact spans, original-work
+assessment, attribution, modifications and individual reviewer reasons.
+[Field review](field-review.json) records quality separately.
+[Original proposals](authored/rights.json) retain the author's pending decisions.
 
-## Contribution and adaptation layers
+Reviewer: Independent semantic and selected-rights reviewer #145; separate
+from author and parent integration owner. Author commit:
+`3a0dea3ce4292f82d3713a9516af36d8675a96e1`; review base:
+`521ce08421c0b90b458f550eb427eeabb1df4d39`.
 
-The fixed Wiktionnaire contribution layer, scoped French adaptations and new
-Lexique English/Chinese explanations use CC BY-SA 4.0. The
+## Original expression and factual material
+
+The DAF8 collective-work date **2006-01-01** concerns the French L123-3 duration
+calculation using final publication in 1935. It does not establish worldwide
+clearance of original expression. Article import/reference markers identify
+potential original-work boundaries; neither their presence nor absence proves
+the authorship or protection of a particular selected sentence.
+
+The actual selected spans were assessed for what they contain. Conventional
+brief definitions, lexical synonyms, grammatical functions, gender/number and
+recorded IPA can carry facts or insufficient original expression. This is
+distinct from licensing an original author's expressive description. The
+retained [17 USC 102(b)](https://www.copyright.gov/title17/92chap1.html),
+[37 CFR 202.1(a)](https://www.law.cornell.edu/cfr/text/37/202.1) and
+[Copyright Office Compendium](https://www.copyright.gov/comp3/chap300/ch300-copyrightable-authorship.pdf),
+sections 313.3(C) and 313.4(C), support the US facts and short-phrase assessment.
+They do not make all factual prose unprotected or establish the law of every
+country. Accepted explanations retain facts and conventional lexical wording;
+they reproduce no distinctive original historical exposition.
+
+The full proposed `terreur` sentence describes a profound emotion in the soul
+through presence, announcement and portrayal of danger. Its historical
+expressive formulation is not cleared or admitted. The accepted exact source
+is only `[[épouvante]], [[crainte]] [[violent]]e.` at revision 39564561,
+line 9. The three new explanations express extreme fear without that exposition.
+The full proposal remains in authored evidence.
+
+The accepted `plaie` source is the anatomical core
+`[[lésion|Lésion]] du [[corps]]`, revision 39961124, line 8.
+Its new three explanations describe bodily tissue injury without the historical
+cause enumeration. The modern Robert entry was consulted for ordinary use;
+its original prose is not redistributed or used as the field source.
+
+Longer selected factual records receive individual assessment. `tigre` lists
+taxon, size, coat, feminine/juvenile names and animal-call vocabulary;
+the accepted explanations use the conventional identifying animal/coat facts.
+`légume` lists edible plant parts and culinary classification, with explicit
+fruit and seasoning contrasts. These actual passages contain conventional
+biological/lexical or food-classification description, rather than expressive
+historical narration. The adapted vegetable fields preserve the substantial
+quantity distinction from spices and herbs. No word-count rule supplies either
+decision. The other row-specific assessments are in [rights.json](rights.json).
+
+`symbole` uses the general figure/image representation definition at line 10.
+The CFC cartographic definition at line 21 is unselected. `taré` uses the short
+noun pointer and familiar adjective synonym list; the fifth-edition heraldry
+reference is unselected. Literary/news examples, modern external dictionary
+prose, media and etymologies supply no accepted field.
+
+## Wiki and Lexique obligations
+
+Fixed Wiktionnaire contributions, scoped French adaptations and new Lexique
+English/Chinese explanations retain **CC BY-SA 4.0**. The
 [complete legal text](COPYING), sections 2(a), 3(a), 3(b) and 4, permits
-sharing and adaptation, including commercial use, with attribution,
-source/licence identification, modification notices, ShareAlike and no
-additional restrictions. Project code remains MIT.
+commercial sharing/adaptation subject to attribution, licence identification,
+modification notices, ShareAlike and no additional restrictions. Project code
+remains MIT. Imported originals are assessed separately from that licence.
 
-The retained Wikimedia Terms section 7 provides article/history attribution
-and preserves imported content's separate terms. French copyright-policy
-revision 38903168 and DAF8-template revision 22113837 retain the distinction
-between wiki contributions and external works. Original authority captures
-and their reuse origins are listed in [rights.json](rights.json), under
-`authority_captures`. They are retained outside the repository with the raw
-article captures.
+Wikimedia Terms section 7 preserves external content's separate conditions.
+The retained French copyright policy revision 38903168 and DAF8 template
+revision 22113837 do not supply sentence authorship or worldwide clearance.
+All 51 fixed article/API identities and selected/supporting spans are audited.
+Complete contributor pagination comprises ten responses in six finished chains.
+Article credits and full histories provide attribution; a current registry can
+contain later editors and does not prove selected-sentence authorship.
 
-## Original works
+[Sources](sources.json), [context](source-context.json),
+[exact excerpts](source-excerpts.json), [capture pointers](source-captures.json),
+[notices](NOTICES.md) and the licence accompany the reviewed shard.
+Raw full articles remain external audit material. Actual combined source
+materials, notices, conversion and native behavior remain coordinator gates.
 
-Twenty-nine captured articles declare DAF8 imports. Original credit is retained
-to Académie française, Dictionnaire de l’Académie française, eighth edition,
-1932–1935. The established [#129 original-work evidence](../issue-129/selected-rights.md)
-records the institutional collective-work basis under
-[CPI L123-3](https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20).
-Using the final 1935 publication gives 1936-01-01 plus seventy years:
-**2006-01-01**. Original author/work credit and modification notices remain;
-later wiki transcription and Lexique adaptation layers retain CC BY-SA 4.0.
-That established original-work review does not review these new fields. An
-article import marker does not identify the author of a particular sentence.
-
-The CFC cartographic definition of `symbole` at line 21 is unselected; the
-general representational definition at line 10 supplies the proposed meaning.
-No CFC definition or licence route is proposed. The fifth-edition Académie
-heraldry reference under `taré` is unselected. No cited modern literary/news
-quotation, external dictionary excerpt, etymology, audio or image supplies a
-learner field. Reference markers remain evidence of bibliographic identity,
-without being treated as sentence-authorship or redistribution permission.
-
-## Selected uses and spelling
-
-`telles/ADJ:ind` and `tels/ADJ:ind` retain exact frozen identities. The respective
-French adjective inflection entries, lines 1–5, supply gender, number and IPA.
-The fixed `tel` article's explicit indefinite-adjective frame at lines 72–73
-supplies the unspecified-designation meaning. Its adjective agreement template
-at line 17 supplies the forms. Pronoun, qualitative resemblance and intensity
-uses are excluded. These source relationships add no runtime aliases.
-
-`out/ADJ` selects the French invariable adjective at lines 7–12, specifically
-the anglicism meaning démodé at line 12, with the recorded French /awt/
-variant at line 9. English adverb/particle, tennis and coming-out uses are
-excluded. `taré/NOM` selects the substantive pointer at line 39 together with
-the familiar fourth adjective definition at line 21; the obsolete third
-adjective sense is excluded. Its new explanations retain the derogatory
-person-description scope and make no medical diagnosis.
-
-Each English/Chinese field is a new explanation of the selected French use,
-with an explicit source basis and modification record. It is not an upstream
-bilingual quotation. IPA selects one recorded isolated variant and adds
-slashes; no audio rights are imported.
-
-## Attribution and delivery
-
-All 51 captured articles have complete paginated named-contributor registries,
-returned anonymous-contributor counts and linked full histories in
-[source-context.json](source-context.json). The ten retained API responses form
-six complete chains. The registries can contain later editors than the fixed
-revision; they credit the article and do not prove selected-sentence authorship.
-
-[NOTICES.md](NOTICES.md), the legal text, source/history links, original-work
-credits, modification records and selected source material accompany the
-proposals. Preserve those obligations in the assembled content. Raw full
-captures remain audit material outside the repository; unselected quotation
-and media content is not proposed for packaging. Actual combined notices,
-source materials, conversion, independent admission and native verification
-remain coordinator-owned gates.
+Source/API evidence:
+`C:/Users/inthe/IdeaProjects/lexique-d2-140-149/context/author-evidence/issue-145/`.
+Independent authority captures, decisions, audit and logs:
+`C:/Users/inthe/IdeaProjects/lexique-d2-140-149/context/reviewer-evidence/issue-145/`.
