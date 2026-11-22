@@ -2,7 +2,7 @@
   "ticket": 143,
   "role": "content_author",
   "independent_acceptance": false,
-  "recorded_at_utc": "2026-11-22T22:52:45.405415+00:00",
+  "recorded_at_utc": "2026-11-22T22:53:26.473980+00:00",
   "author_base_commit": "ff8aae2bdaf36096c6600d5d29342745b97c0eb7",
   "merged_integration_commit": "9fa4f264509c953dba801d18ea6eaab84b2aafb2",
   "scope": {
@@ -34,8 +34,8 @@
     {
       "command": "pnpm test:docs",
       "status": "passed",
-      "documents": 472,
-      "local_links": 3654,
+      "documents": 476,
+      "local_links": 3677,
       "archive_log": "docs.log"
     },
     {

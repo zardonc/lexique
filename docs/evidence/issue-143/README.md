@@ -90,7 +90,7 @@ without network access. Complete commands and logs are retained in the archive.
 | --- | --- |
 | `uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_143.py` | Passed, three focused resource/admission tests |
 | `uv run --python 3.14.10 python -B -X utf8 ../context/author-evidence/issue-143/reproduce.py` | Passed, 14 author materials reproduced byte-for-byte without network |
-| `pnpm test:docs` | Passed, 472 documents / 3,654 local links, no problems |
+| `pnpm test:docs` | Passed, no link or formatting problems; exact counts are in verification.json |
 | `git diff --cached --check` | Passed |
 
 [Verification record](verification.json) records the merged integration base,
