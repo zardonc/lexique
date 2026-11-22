@@ -2,9 +2,9 @@
   "ticket": 143,
   "role": "content_author",
   "independent_acceptance": false,
-  "recorded_at_utc": "2026-11-22T22:51:38.891534+00:00",
+  "recorded_at_utc": "2026-11-22T22:52:45.405415+00:00",
   "author_base_commit": "ff8aae2bdaf36096c6600d5d29342745b97c0eb7",
-  "merged_integration_commit": "900dc0eb69fb62dc7517f68886c22635f9031a63",
+  "merged_integration_commit": "9fa4f264509c953dba801d18ea6eaab84b2aafb2",
   "scope": {
     "frozen_groups": 50,
     "proposed_groups": 49,
@@ -35,7 +35,7 @@
       "command": "pnpm test:docs",
       "status": "passed",
       "documents": 472,
-      "local_links": 3653,
+      "local_links": 3654,
       "archive_log": "docs.log"
     },
     {
