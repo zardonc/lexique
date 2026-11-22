@@ -64,7 +64,9 @@ pnpm test:speech:cache   # Windows 缓存发布 / 并发 / 重解析点；执行
 pnpm test:desktop:lib    # 原生桌面库全套测试；顺序八次执行，每次硬限 60 秒
 ```
 
-后端计时诊断：为同一提交的本机或 CI 测试步骤设置 `RUST_TEST_NOCAPTURE=1`，记录成功 V03 样本的耗时和实际争用结果。预编译独立进行，测试执行保持现有 60 秒硬限；复核按[计时与争用规则](CODING_STANDARDS.md#timing-and-contention-tests)核对计时边界和争用证据。
+GitHub Actions 的 `scaffold checks` 在 PR（含草稿）创建、重新打开或收到新提交时自动运行。合并或直接推送到 `main` 后，CI 检查 `main` 上的新提交。尚未开 PR 的分支可手动运行 `scaffold checks`。详见 [CI 工作流](.github/workflows/ci.yml)。
+
+`backend` 和 `native` 的存储测试步骤设置 `RUST_TEST_NOCAPTURE=1`。在 job 日志中搜索 `V03` 可查看已输出的事务耗时、竞争写入耗时和实际争用结果。对照同一提交的本机运行时也设置 `RUST_TEST_NOCAPTURE=1`。测试单独预编译，运行硬限为 60 秒。复核依据见[计时与争用规则](CODING_STANDARDS.md#timing-and-contention-tests)。
 
 已有 portable 交付会被保留；再次交付可运行 `pnpm desktop:portable --output-dir <新目录>`。构建入口会在最终进程边界追加 Cargo 的 `--locked`，无需经 pnpm 手动传递分隔符。
 

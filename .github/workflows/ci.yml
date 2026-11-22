@@ -2,6 +2,7 @@ name: scaffold checks
 
 on:
   push:
+    branches: [main]
   pull_request:
   workflow_dispatch:
 
@@ -147,6 +148,8 @@ jobs:
       - run: cargo check --locked --workspace --target ${{ matrix.target }}
       - run: cargo test --locked -p lexique-core -p lexique-storage -p lexique-dictionary --no-run
       - run: pnpm test:rust
+        env:
+          RUST_TEST_NOCAPTURE: '1'
       - run: cargo test --locked --release -p lexique-desktop --lib --no-run
       - run: pnpm test:desktop:lib
 

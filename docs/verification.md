@@ -1,5 +1,11 @@
 # 骨架验证记录
 
+## CI 触发与 V03 计时
+
+PR 更新运行 `scaffold checks`，`main` push 检查目标分支上的新提交，其他分支可手动运行。核对触发时记录事件、提交 SHA 和运行尝试次数。
+
+排查失败时用 `V03` 样本区分事务／竞争写入性能断言（100／250 ms）与 Rust runner 的 60 秒执行硬限。GitHub Actions job 超时另查 job 的 conclusion。比较同一提交的运行时，同时记录平台和实际争用结果。V03 日志入口见 [README](../README.md#检查与构建)。
+
 ## V03 后端 CI 计时（PR #208）
 
 在[同一源码的对照运行](https://github.com/zardonc/lexique/actions/runs/45053860476)中，Ubuntu 24.04 和 26.04 的工作区磁盘共 96 次执行，4 次超过 V03 的建卡或竞争写入预算，或触发 SQLite 写锁超时。系统调用跟踪捕获到建卡日志单次 `fsync` 耗时 217.446 ms。另一个样本中，笔记和评分的六次 `fsync` 合计约 354 ms，竞争写入共耗时 434 ms。相同 runner 上的 `tmpfs` 定向测试 96 次全过，最高事务／竞争写入耗时为 21.0／36.9 ms。原始 CI 未记录系统调用，无法逐次归因。
