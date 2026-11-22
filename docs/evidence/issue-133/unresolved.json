@@ -1,0 +1,29 @@
+{
+  "groups": [],
+  "unresolved_fields": [],
+  "approved_annotations": [
+    {
+      "frozen_row": 2626,
+      "headword": "r",
+      "pos": "ADV",
+      "admitted_fields": 0,
+      "missing_fields": 4,
+      "owner_approval": {
+        "by": "project_owner",
+        "date": "2026-11-21",
+        "timezone": "America/Vancouver",
+        "issue": 133,
+        "issue_url": "https://github.com/zardonc/lexique/issues/133",
+        "parent_issue": 78,
+        "exact_decision": "批准仅 r/ADV 为零字段注记",
+        "evidence": "docs/evidence/issue-133/owner-approval.md",
+        "retained_context": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-133/issue-133-review/owner-amendment/owner-approval.md"
+      },
+      "independent_evidence_decision": "Letter and noun-abbreviation frames establish no exact adverb or applicable adverb IPA. Retain the owner-approved annotation without substitute content.",
+      "reviewer": "Independent field and selected-rights reviewer #133; separate from author and integration owner"
+    }
+  ],
+  "original_unresolved_evidence": "authored/unresolved.json",
+  "ordinary_unresolved_groups": 0,
+  "annotation_missing_fields": 4
+}

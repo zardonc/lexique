@@ -1,0 +1,91 @@
+{
+  "ticket": 134,
+  "kind": "fresh_independent_ghostwriter_review_verification",
+  "status": "passed_fresh_selected_quality_rights_and_owned_checks_parent_gates_pending",
+  "reviewer": "Fresh ghostwriter quality and selected-rights reviewer #134; separate from coordinator alternative author and original author",
+  "author_commit": "2937688639cde50a9ad919292b7803a3225b03db",
+  "alternative_proposal": "issue-134-coordinator-ghostwriter-39904725-line56",
+  "initial_review_base": "3c2432f",
+  "final_integration_merge": "c1f53950ce349a0a18b65559922618fad5dfd300",
+  "tested_state": "Owned staged and working-tree #134 evidence/test changes over the final integration base; exact final full/test patches retained in archive.",
+  "worktree": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\review-134",
+  "branch": "codex/d2-review-134",
+  "platform": "Windows x64; PowerShell 7; Python 3.14.10 via uv; pnpm 11.25.0",
+  "archive_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\reviewer-evidence\\issue-134\\ghostwriter-review",
+  "live_evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\review-134\\target\\issue-134-ghostwriter",
+  "author_evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\author-evidence\\issue-134",
+  "counts": {
+    "ordinary_groups": 50,
+    "accepted_fields": 200,
+    "prior_accepted_fields_preserved": 196,
+    "replacement_use_fields": 4,
+    "original_text_changes": 3,
+    "coordinator_text_changes": 1,
+    "unresolved_fields": 0,
+    "reused_groups": 0,
+    "reused_fields": 0,
+    "annotation_exceptions": 0,
+    "specialist_exceptions": 0,
+    "canonical_newly_admitted_fields": 0,
+    "canonical_pending_fields": 200
+  },
+  "selected_source_context_rights_passes": 51,
+  "focused_red": {
+    "status": "expected_failure",
+    "command": "uv run --no-project python -B -X utf8 -m unittest scripts.test_core_batch_134.Batch134Tests.test_ghostwriter_replacement_has_independent_quality_and_selected_rights -v",
+    "log": "RED.log",
+    "failure": "Existing selected racial fields differ from the exact paid-ghostwriter/byline fields; assertion reached."
+  },
+  "checks": [
+    {
+      "command": "uv run --no-project python -B -X utf8 -m unittest discover -s scripts -p test_core_batch_134.py -v",
+      "status": "passed",
+      "tests": 6,
+      "log": "final-batch.log"
+    },
+    {
+      "command": "uv run --no-project python -B -X utf8 target/issue-134-ghostwriter/audit.py",
+      "status": "passed",
+      "log": "audit.log",
+      "boundary": "Selected fixed raw/API, noun/IPA/use spans, contributor continuation, early revision history, actual DAF8/TLFi/Robert raw comparisons, licence/policy/terms and unchanged COPYING."
+    },
+    {
+      "command": "uv run --no-project python -B -X utf8 target/issue-134-ghostwriter/record_review.py",
+      "status": "passed",
+      "log": "preservation.log",
+      "boundary": "JSON-value equality for all prior 196 field/group/quality/rights records and other source nodes; all original authored files byte-identical."
+    },
+    {
+      "command": "pnpm test:docs",
+      "status": "passed",
+      "log": "docs.log",
+      "documents": 448,
+      "local_links": 3521
+    },
+    {
+      "command": "git diff --cached --check",
+      "status": "passed",
+      "log": "diff-check.log"
+    }
+  ],
+  "selected_source_audit": "ghostwriter-review.json#source_audit",
+  "full_patch": "accepted-shard.patch",
+  "test_patch": "tests.patch",
+  "limitations": [
+    "Fresh direct Légifrance requests returned 403; retained actual indexed first-party statutory records and fixed policy quotation were independently inspected. The DAF8 French historical term is separate from the selected wiki wording and is not a worldwide licence.",
+    "Robert/TLFi publisher prose has no asserted redistribution permission and is comparison/corroboration only; original raw responses stay in the review archive."
+  ],
+  "coordinator_owned_unrun": [
+    "Canonical assembly/conversion",
+    "Actual combined package notices/source obligations",
+    "Native all-group lookup/save/reopen and preservation",
+    "Global coverage/size gates",
+    "Learner acceptance",
+    "Offline/platform/release checks",
+    "Tracker operations"
+  ],
+  "recorded_at_utc": "2026-11-22T03:46:33.715823+00:00",
+  "completed_at_utc": "2026-11-22T03:50:54.657665+00:00",
+  "staged_coordinator_proposal_bytes": "passed: git index blob equals archived original bytes; local authored/.gitattributes preserves the raw proposal",
+  "prior_verification": "authored/pre-ghostwriter-verification.json"
+}

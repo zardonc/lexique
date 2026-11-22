@@ -1,0 +1,109 @@
+{
+  "ticket": 130,
+  "checkout": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\review-130",
+  "branch": "codex/d2-review-130",
+  "review_base": "d3725aa325ed9ac7222c2be80527efb798508485",
+  "author_commit": "d77da5c3b6b4c98b741dd449961bbf1d84dc0729",
+  "merged_integration_tip": "2a3e70a050f1356ae1cd03bb93e18558563768ac",
+  "integration_merge_commit": "4a9be2b740621de436976e45150c5d92087d28ba",
+  "tested_scope": "scoped independently reviewed working-tree shard; final tested commit identity is recorded in the independent archive",
+  "platform": "Windows x64; PowerShell 7; uv Python 3.14.10",
+  "reviewer": "Separate field/use/selected-rights reviewer #130; not the author or coordinator",
+  "independent_quality": "passed",
+  "selected_rights": "passed_at_selected_text_boundary",
+  "counts": {
+    "groups": 50,
+    "uses": 50,
+    "fields": 200,
+    "unchanged": 199,
+    "changed": 1,
+    "unresolved_selected_fields": 0,
+    "new_canonical_fields": 0,
+    "pending_canonical_fields": 200
+  },
+  "author_evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\author-evidence\\issue-130",
+  "review_evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\reviewer-evidence\\issue-130\\issue-130-review",
+  "checks": [
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_130.py --author-only",
+      "stage": "focused semantic red before correction",
+      "result": "expected_failure",
+      "exit_code": 1,
+      "log": "content-red.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 -m unittest scripts.test_core_batch_130.AuthorPackage130Tests.test_patrie_does_not_require_a_nation_state",
+      "stage": "focused semantic green before class rename",
+      "result": "passed",
+      "exit_code": 0,
+      "tests": 1,
+      "log": "content-green.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 -m unittest scripts.test_core_batch_130.AuthorPackage130Tests.test_separate_review_covers_every_field_and_use_with_exact_acceptance",
+      "stage": "independent ledger red and green before class rename",
+      "result": "expected_failure_then_passed",
+      "tests": 1,
+      "logs": [
+        "review-red.log",
+        "review-green.log"
+      ]
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-130-review/audit.py",
+      "result": "passed",
+      "exit_code": 0,
+      "log": "source-audit.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 --with pypdf python -B -X utf8 target/issue-130-review/check_manual.py",
+      "result": "passed_actual_pdf_selected_tables",
+      "exit_code": 0,
+      "log": "manual-audit.log",
+      "extractor": "pypdf 7.1.1",
+      "full_text_byte_equality": "not claimed: current extractor changes spacing outside selected tables; actual PDF tables independently verified"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_130.py",
+      "result": "passed",
+      "log": "final-shard.log",
+      "exit_code": 0,
+      "tests": 6
+    },
+    {
+      "command": "pnpm test:docs",
+      "result": "passed",
+      "log": "docs.log",
+      "exit_code": 0
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-130-review/check_links.py",
+      "result": "passed",
+      "log": "links.log",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --cached --check",
+      "result": "passed",
+      "log": "diff-check.log",
+      "exit_code": 0
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 -m unittest scripts.test_core_batch_130.Batch130Tests",
+      "result": "expected_failure_missing_all_50_canonical_rows",
+      "exit_code": 1,
+      "log": "canonical-pending.log"
+    }
+  ],
+  "native": "not_run_coordinator_owned",
+  "conversion_and_combined_packaging": "not_run_coordinator_owned",
+  "frontend_rust": "not_run_no_runtime_changes",
+  "learner_acceptance": "not_run",
+  "tracker_pr_push": "not_performed",
+  "documentation_result": {
+    "documents": 438,
+    "local_links": 3427,
+    "scoped_local_links": 38,
+    "problems": []
+  }
+}

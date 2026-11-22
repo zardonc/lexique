@@ -1,0 +1,195 @@
+{
+  "kind": "fresh_independent_selected_use_quality_and_rights_review",
+  "proposal_id": "issue-134-coordinator-ghostwriter-39904725-line56",
+  "frozen_row": 2675,
+  "headword": "nègre",
+  "pos": "NOM",
+  "reviewer": "Fresh ghostwriter quality and selected-rights reviewer #134; separate from coordinator alternative author and original author",
+  "alternative_author": "Coordinator, paid-ghostwriter alternative",
+  "original_author": "Original batch #134 author, commit 2937688",
+  "review_base": "3c2432f",
+  "review_branch": "codex/d2-review-134",
+  "quality_status": "passed",
+  "rights_status": "passed_at_selected_text_boundary",
+  "selected_lines": [
+    3,
+    13,
+    14,
+    15,
+    56
+  ],
+  "selected_use": "Masculine noun in figurative use: a paid ghostwriter writes a book signed under another person's name.",
+  "usage_reason": "Passed as an ordinary contemporary figurative masculine noun, with the paid-book-writing/byline sense limited to fixed definition 56. Original Robert HTTP 200 HTML separately identifies nom masculin / au figuré without an obsolete label on that sense. Definition 39’s racial restrictions and definition 61’s editorial revision are different uses. No specialist or annotation exception is needed.",
+  "original_proposal_preservation": "authored/original-rejected-2675.json",
+  "coordinator_proposal": "authored/coordinator-ghostwriter-proposal.json",
+  "fields": [
+    {
+      "field": "french_definition",
+      "proposed_text": "Au figuré, écrivain payé pour écrire un livre qu’une autre personne signe de son nom.",
+      "accepted_text": "Au figuré, écrivain payé pour écrire un livre qu’une autre personne signe de son nom.",
+      "quality_status": "passed",
+      "quality_reason": "Passed unchanged from coordinator proposal. Au figuré states the contemporary figurative restriction. Écrivain payé, écrire un livre and another person’s authorship credit faithfully scope fixed noun definition 56; signer de son nom denotes byline credit, not a physical autograph.",
+      "rights_status": "passed_at_selected_text_boundary",
+      "rights_reason": "Passed at selected text boundary: fixed wiki definition 56 and noun/IPA support 3,13–15 only. Initial DAF8 import revision 434860 lacks the paid-writer definition; revision 448299, parent 434860, adds it under Ericdec. Fresh first-party DAF8 has the workshop-auxiliary wording, not paid book/byline wording; TLFi has distinct anonymous-person/known-author wording, not the selected sentence. The article TLFi bibliography is not a licence or evidence of copying this sentence. Current wiki contributions and the scoped Lexique adaptation/translations are CC BY-SA 4.0 with article/history/contributor attribution, modification disclosure, licence text/link and share-alike. DAF8 original credit is retained separately. Robert/TLFi prose, quoted stories, audio and unrelated senses are excluded from resource content.",
+      "source": {
+        "source_id": "b134_fr_168876",
+        "revid": 39904725,
+        "url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&oldid=39904725",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&action=history",
+        "line_1_based": 56,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# [[écrivain|Écrivain]] payé pour [[écrire]] un livre pour une personne qui le signe de son nom."
+      }
+    },
+    {
+      "field": "ipa",
+      "proposed_text": "/nɛɡʁ/",
+      "accepted_text": "/nɛɡʁ/",
+      "quality_status": "passed",
+      "quality_reason": "Passed unchanged. Fixed French masculine noun frame 13–15 records nɛɡʁ; /nɛɡʁ/ retains that isolated-headword variant with no adjective, feminine, liaison or audio substitution.",
+      "rights_status": "passed_at_selected_text_boundary",
+      "rights_reason": "Passed at selected text boundary: fixed wiki definition 56 and noun/IPA support 3,13–15 only. Initial DAF8 import revision 434860 lacks the paid-writer definition; revision 448299, parent 434860, adds it under Ericdec. Fresh first-party DAF8 has the workshop-auxiliary wording, not paid book/byline wording; TLFi has distinct anonymous-person/known-author wording, not the selected sentence. The article TLFi bibliography is not a licence or evidence of copying this sentence. Current wiki contributions and the scoped Lexique adaptation/translations are CC BY-SA 4.0 with article/history/contributor attribution, modification disclosure, licence text/link and share-alike. DAF8 original credit is retained separately. Robert/TLFi prose, quoted stories, audio and unrelated senses are excluded from resource content.",
+      "source": {
+        "source_id": "b134_fr_168876",
+        "revid": 39904725,
+        "url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&oldid=39904725",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&action=history",
+        "line_1_based": 15,
+        "column_1_based": 1,
+        "reviewed_excerpt": "'''nègre''' {{pron|nɛɡʁ|fr}} {{m}} {{équiv-pour|lang=fr|une femme|négresse}} {{hispanisme|fr}}"
+      }
+    },
+    {
+      "field": "english",
+      "proposed_text": "In figurative use, a paid ghostwriter who writes a book that another person signs under their own name. Masculine noun.",
+      "accepted_text": "In figurative use, a paid ghostwriter who writes a book credited to another person as its author. Masculine noun.",
+      "quality_status": "passed",
+      "quality_reason": "Passed after clarification. Paid ghostwriter, writes a book and credit to another person as author match definition 56. The byline wording removes ambiguity about a physical autograph while retaining figurative use and masculine noun.",
+      "rights_status": "passed_at_selected_text_boundary",
+      "rights_reason": "Passed at selected text boundary: fixed wiki definition 56 and noun/IPA support 3,13–15 only. Initial DAF8 import revision 434860 lacks the paid-writer definition; revision 448299, parent 434860, adds it under Ericdec. Fresh first-party DAF8 has the workshop-auxiliary wording, not paid book/byline wording; TLFi has distinct anonymous-person/known-author wording, not the selected sentence. The article TLFi bibliography is not a licence or evidence of copying this sentence. Current wiki contributions and the scoped Lexique adaptation/translations are CC BY-SA 4.0 with article/history/contributor attribution, modification disclosure, licence text/link and share-alike. DAF8 original credit is retained separately. Robert/TLFi prose, quoted stories, audio and unrelated senses are excluded from resource content.",
+      "source": {
+        "source_id": "b134_fr_168876",
+        "revid": 39904725,
+        "url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&oldid=39904725",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&action=history",
+        "line_1_based": 56,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# [[écrivain|Écrivain]] payé pour [[écrire]] un livre pour une personne qui le signe de son nom."
+      }
+    },
+    {
+      "field": "chinese",
+      "proposed_text": "转义：受雇替他人写书、由对方署名的写作者，即代笔者。阳性名词。",
+      "accepted_text": "转义：受雇替他人写书、由对方署名的写作者，即代笔者。阳性名词。",
+      "quality_status": "passed",
+      "quality_reason": "Passed unchanged from coordinator proposal. 受雇 retains paid employment; 替他人写书 and 由对方署名 express writing a book with another person’s authorship credit; 代笔者 is the scoped explanation. 转义 and 阳性名词 preserve use and POS.",
+      "rights_status": "passed_at_selected_text_boundary",
+      "rights_reason": "Passed at selected text boundary: fixed wiki definition 56 and noun/IPA support 3,13–15 only. Initial DAF8 import revision 434860 lacks the paid-writer definition; revision 448299, parent 434860, adds it under Ericdec. Fresh first-party DAF8 has the workshop-auxiliary wording, not paid book/byline wording; TLFi has distinct anonymous-person/known-author wording, not the selected sentence. The article TLFi bibliography is not a licence or evidence of copying this sentence. Current wiki contributions and the scoped Lexique adaptation/translations are CC BY-SA 4.0 with article/history/contributor attribution, modification disclosure, licence text/link and share-alike. DAF8 original credit is retained separately. Robert/TLFi prose, quoted stories, audio and unrelated senses are excluded from resource content.",
+      "source": {
+        "source_id": "b134_fr_168876",
+        "revid": 39904725,
+        "url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&oldid=39904725",
+        "history_url": "https://fr.wiktionary.org/w/index.php?title=n%C3%A8gre&action=history",
+        "line_1_based": 56,
+        "column_1_based": 1,
+        "reviewed_excerpt": "# [[écrivain|Écrivain]] payé pour [[écrire]] un livre pour une personne qui le signe de son nom."
+      }
+    }
+  ],
+  "source_audit": {
+    "raw_api_equal": true,
+    "source_id": "b134_fr_168876",
+    "pageid": 168876,
+    "revid": 39904725,
+    "selected_lines": [
+      3,
+      13,
+      14,
+      15,
+      56
+    ],
+    "import_context_lines": [
+      278,
+      279
+    ],
+    "contributor_continuation_complete": true,
+    "contributor_responses": 7,
+    "named_article_contributors": 83,
+    "anonymous_article_contributors": 19,
+    "selected_sentence_authorship_proved_by_registry": false,
+    "licence_policy_api_raw_equal_after_crlf_normalization": true,
+    "licence_policy_revisions": [
+      38903168,
+      22113837
+    ],
+    "terms_underlying_import_licence_boundary_read": true,
+    "copying_preserved_and_equal_to_resource": true,
+    "writer_addition_revision": 448299,
+    "writer_addition_contributor": "Ericdec",
+    "robert_raw_derived_equal": true,
+    "robert_status": 200,
+    "robert_capture_metadata": {
+      "url": "https://dictionnaire.lerobert.com/definition/negre",
+      "final_url": "https://dictionnaire.lerobert.com/definition/negre",
+      "status": 200,
+      "raw_file_written_at_utc": "2026-11-22T03:18:01.029022+00:00",
+      "capture_timestamp_basis": "Filesystem time when the original raw HTTP response was written; HTTP Date remains in the original response headers."
+    },
+    "historical_comparisons": {
+      "daf8_http": 200,
+      "tlfi_http": 200,
+      "initial_revision": 434860
+    },
+    "direct_legifrance_status": {
+      "l123-3": 403,
+      "l121-1": 403
+    },
+    "audit_completed_at_utc": "2026-11-22T03:42:10.807930+00:00"
+  },
+  "archive_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\reviewer-evidence\\issue-134\\ghostwriter-review",
+  "selected_rights_boundary": {
+    "initial_daf8_revision": 434860,
+    "writer_addition_revision": 448299,
+    "writer_addition_contributor": "Ericdec",
+    "writer_addition_timestamp": "2006-02-23T19:03:39Z",
+    "daf8_original_wording": "Il se dit, en langage d’atelier, d’un Auxiliaire qu’on emploie pour préparer Un travail, pour en exécuter la partie en quelque sorte mécanique.",
+    "daf8_assessment": "Actual initial import and fresh first-party DAF8 comparison show that the selected paid-book/byline definition is a separate wiki addition. DAF8 original is credited; no blanket import licence inferred.",
+    "tlfi_comparison_wording": "Auxiliaire qui prépare le travail de quelqu’un et en particulier personne anonyme qui rédige pour une personnalité, qui compose les ouvrages d’un auteur connu.",
+    "tlfi_wording_selected": false,
+    "robert_wording_selected": false,
+    "tlfi_assessment": "Actual first-party TLFi entry inspected: different anonymous-person/known-author wording; no paid phrase matching selected wiki sentence, no per-definition import marker and separate recorded wiki addition. Article bibliography is contextual only; no TLFi redistribution permission asserted.",
+    "historical_original_rights": {
+      "authors": "Académie française",
+      "edition": "DAF8, 1932–1935",
+      "basis": "French CPI L123-3 collective-work seventy years following final publication; conservative French expiry 2006-01-01. CPI L121-1 attribution/integrity retained. This is a historical original boundary, not a worldwide licence or the basis for admitting definition 56, which is absent from DAF8.",
+      "evidence": "rights/web-authorities.json retained indexed first-party statutory records and fixed policy-11150.wiki statutory quotation, independently read; fresh direct Légifrance requests are 403, not HTTP-200 authorities."
+    },
+    "contribution_licence": "CC-BY-SA-4.0",
+    "adapter_licence": "CC-BY-SA-4.0",
+    "obligations": [
+      "Article title/fixed URL/full history and complete retained named/anonymous article credits",
+      "Ericdec early selected wording addition; Académie française original article import credit",
+      "Lexique adaptation/translation and English byline clarification notice",
+      "CC BY-SA 4.0 legal text/link, share-alike and no downstream restrictions"
+    ],
+    "evidence_limits": "Article registry gives 83 named and 19 anonymous article credits, not sentence authorship. Early history identifies the recorded paid-writer addition. No redistribution grant asserted for Robert/TLFi or excluded quotations/media.",
+    "review_reason": "Passed at selected text boundary: fixed wiki definition 56 and noun/IPA support 3,13–15 only. Initial DAF8 import revision 434860 lacks the paid-writer definition; revision 448299, parent 434860, adds it under Ericdec. Fresh first-party DAF8 has the workshop-auxiliary wording, not paid book/byline wording; TLFi has distinct anonymous-person/known-author wording, not the selected sentence. The article TLFi bibliography is not a licence or evidence of copying this sentence. Current wiki contributions and the scoped Lexique adaptation/translations are CC BY-SA 4.0 with article/history/contributor attribution, modification disclosure, licence text/link and share-alike. DAF8 original credit is retained separately. Robert/TLFi prose, quoted stories, audio and unrelated senses are excluded from resource content."
+  },
+  "batch_counts": {
+    "ordinary_groups": 50,
+    "accepted_fields": 200,
+    "prior_accepted_fields_preserved": 196,
+    "replacement_use_fields": 4,
+    "original_text_changes": 3,
+    "coordinator_text_changes": 1,
+    "unresolved_fields": 0,
+    "reused_groups": 0,
+    "reused_fields": 0,
+    "annotation_exceptions": 0,
+    "specialist_exceptions": 0,
+    "canonical_newly_admitted_fields": 0,
+    "canonical_pending_fields": 200
+  },
+  "completed_at_utc": "2026-11-22T03:42:11.128710+00:00",
+  "final_integration_merge": "c1f53950ce349a0a18b65559922618fad5dfd300"
+}

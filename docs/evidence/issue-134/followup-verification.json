@@ -1,0 +1,70 @@
+{
+  "ticket": 134,
+  "frozen_row": 2675,
+  "status": "metadata_checks_passed_full_quality_rights_audit_incomplete",
+  "tested_head": "90c7bc1998d46038b5226cf58428ad5d28fad5c4",
+  "initial_integration_tip": "cc641d0",
+  "final_integration_merge": "8f5c761762d7e0a674ed0fb94b08e10888343ed0",
+  "preservation_base": "b72c9fe8fb3d8084fea258054c9b1337a9ce799e",
+  "reviewed_author_commit": "2937688639cde50a9ad919292b7803a3225b03db",
+  "worktree": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/review-134",
+  "branch": "codex/d2-review-134",
+  "platform": "Windows x64; PowerShell 7; Python 3.14.10 via uv",
+  "archive_root": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-134/issue-134-followup",
+  "live_evidence_root": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/review-134/target/issue-134-review/followup",
+  "prior_capture_root": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-134/issue-134-review",
+  "previously_accepted_fields_preserved": 196,
+  "owning_json_files_preserved": 12,
+  "original_author_json_snapshots_preserved": 9,
+  "preservation_comparison": "Exact text after Git checkout line-ending normalization; owning JSON and authored snapshots have no working-tree diff.",
+  "newly_accepted_fields": 0,
+  "changed_fields": 0,
+  "unresolved_quality_fields": 4,
+  "pending_rights_fields": 4,
+  "source_metadata": {
+    "fixed_api_raw_bytes_equal": true,
+    "pageid": 168876,
+    "revid": 39904725,
+    "complete_contributor_chains": 2,
+    "registry_parts": 7,
+    "named_article_contributors": 83,
+    "anonymous_article_contributors": 19,
+    "selected_sentence_authorship_proved": false
+  },
+  "checks": [
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-134-review/followup/check.py",
+      "status": "passed",
+      "log": "metadata-check.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_134.py",
+      "status": "passed",
+      "tests": 5,
+      "log": "batch-test.log"
+    },
+    {
+      "command": "pnpm test:docs",
+      "status": "passed",
+      "log": "docs.log"
+    },
+    {
+      "command": "git diff --cached --check",
+      "status": "passed",
+      "log": "diff-check.log"
+    }
+  ],
+  "full_quality_and_rights_audit": "incomplete_content_filter_limited_source_inspection",
+  "unrun_checks": [
+    "Frontend lint/typecheck/build and Rust checks: no application code changed.",
+    "Canonical conversion, combined-package notices and native execution: coordinator-owned gates.",
+    "Learner acceptance and release validation."
+  ],
+  "archive_status": "preserved_owned_helpers_captures_logs_and_scoped_patch",
+  "initial_metadata_check": {
+    "status": "failed",
+    "log": "metadata-check.initial.log",
+    "reason": "Direct working-tree/Git-object byte comparison encountered checkout CRLF/LF differences.",
+    "resolution": "Exact text equality after checkout line-ending normalization; owning JSON has no Git diff."
+  }
+}

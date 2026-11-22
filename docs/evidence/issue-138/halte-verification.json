@@ -1,0 +1,96 @@
+{
+  "ticket": 138,
+  "kind": "independent_halte_construction_semantic_source_rights_review",
+  "checkout": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/review-138",
+  "branch": "codex/d2-review-138",
+  "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+  "prior_review_commit": "c7f8cf86783f2c94123bcfd47d97bddca3556753",
+  "initial_integration_merge": "cc641d0a09874b7099ebd2faf59b47580b3bf268",
+  "final_integration_merge": "516fe5fd11be9c746e44ffe6b06510ca6dd9f0b6",
+  "tested_state": "final integration merge plus owned halte evidence/test changes",
+  "platform": "Windows x64 / PowerShell 7 / Python 3.14.10 / pnpm 11.25.0",
+  "archive_root": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/halte-continuation",
+  "committed_identity_record": "final-verification.json in archive_root",
+  "author_snapshot": "authored/at-81f6aa9/",
+  "author_snapshot_files_byte_preserved": 26,
+  "frozen_groups": 50,
+  "reviewed_fields": 200,
+  "accepted_groups": 50,
+  "accepted_fields": 200,
+  "halte_fields_accepted": 4,
+  "halte_prose_replacements": 3,
+  "halte_headword_ipa_retained": "/alt/",
+  "total_accepted_prose_replacements": 12,
+  "total_changed_groups": 7,
+  "unchanged_neighbouring_groups": 49,
+  "fixed_sources_reviewed_and_captured": 51,
+  "oldest_revisions_captured": 51,
+  "additional_selected_source": "halte-là/39006229",
+  "selected_definition_line": 9,
+  "parent_ipa_source": "halte/38818374:51",
+  "derivative_history_revisions": 24,
+  "derivative_named_contributors": 17,
+  "derivative_anonymous_contributors": 1,
+  "source_registry_titles": 51,
+  "source_registry_name_occurrences": 3104,
+  "canonical_spelling_relations_preserved": 15,
+  "canonical_runtime_aliases_preserved": 11,
+  "new_aliases": 0,
+  "new_groups": 0,
+  "new_annotation_or_specialist_exceptions": 0,
+  "unresolved_semantic_fields": 0,
+  "unresolved_source_fields": 0,
+  "unresolved_legal_fields": 0,
+  "selected_text_rights_status": "passed_at_selected_text_boundary",
+  "original_work_boundary": "Actual DAF8 A8H0077 wording corresponds to creation revision 7379871; original collective edition 1932–1935, established French L123-3 expiry 2006-01-01; wiki/Lexique contribution and adaptation layers remain CC BY-SA 4.0.",
+  "statutory_evidence_boundary": "Established project issue-99/issue-129 original-work basis retained; investigator direct statute requests returned 403. No new successful statutory capture is claimed.",
+  "modern_publisher_text": "corroboration only; no publisher editorial wording selected or relicensed",
+  "checks": [
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-138-review/halte-continuation/read_actual_sources.py",
+      "status": "passed",
+      "log": "actual-source-read.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-138-review/halte-continuation/capture_additional_source.py",
+      "status": "passed",
+      "direct_requests": 5,
+      "log": "additional-capture.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_138.py Batch138Tests.test_halte_familiar_derivative_keeps_parent_ipa_and_exact_source_boundary",
+      "status": "expected_failure_before_accepted_source_binding",
+      "log": "RED-halte.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_138.py Batch138Tests.test_halte_familiar_derivative_keeps_parent_ipa_and_exact_source_boundary",
+      "status": "passed",
+      "log": "GREEN-halte.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_138.py",
+      "status": "passed",
+      "tests": 12,
+      "log": "GREEN-batch-final.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-138-review/halte-continuation/verify_halte_delta.py",
+      "status": "passed",
+      "log": "preservation-check.log"
+    },
+    {
+      "command": "pnpm test:docs",
+      "status": "passed",
+      "documents": 448,
+      "local_links": 3517,
+      "log": "docs-final.log"
+    },
+    {
+      "command": "git diff --cached --check",
+      "status": "passed",
+      "log": "diff-check.log"
+    }
+  ],
+  "canonical_conversion_native_package_gates_tracker": "coordinator_owned_not_run",
+  "combined_artifact_redistribution_verification": "pending_coordinator_verification"
+}

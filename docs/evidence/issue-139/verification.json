@@ -1,0 +1,109 @@
+{
+  "ticket": 139,
+  "checkout": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\review-139",
+  "branch": "codex/d2-review-139",
+  "author_commit": "29e1d2f1bc8b7e26306332015173027897cc7bc2",
+  "author_merge": "c3c385a16a590709f80b0f027f6fb29de66448cf",
+  "review_base": "7b619a70ffce54fa4c48ee79cf21fab1a5808358",
+  "tested_base_sha": "8f5c761762d7e0a674ed0fb94b08e10888343ed0",
+  "tested_changes": "Staged owned shard and focused Python test relative to tested_base_sha; the committed review identity is retained in the external archive final-verification.json.",
+  "diff_command": "git diff 8f5c761762d7e0a674ed0fb94b08e10888343ed0 -- docs/evidence/issue-139 scripts/test_core_batch_139.py",
+  "reviewer": "Independent semantic and selected-rights reviewer #139; separate from author and coordinator",
+  "platform": "Windows x64, PowerShell 7, Python 3.14.10 via uv, pnpm 11.25.0",
+  "scope": [
+    "docs/evidence/issue-139/**",
+    "scripts/test_core_batch_139.py"
+  ],
+  "author_evidence_root": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/author-evidence/issue-139",
+  "review_audit_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\review-139\\target\\issue-139-review",
+  "archive": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-139/issue-139-review.zip",
+  "exact_groups": 50,
+  "selected_senses": 50,
+  "independently_accepted_new_fields": 200,
+  "unchanged_accepted_fields": 198,
+  "changed_accepted_fields": 2,
+  "unresolved_fields": 0,
+  "pending_independent_quality_fields": 0,
+  "pending_independent_rights_fields": 0,
+  "newly_admitted_canonical_fields": 0,
+  "pending_canonical_admission_fields": 200,
+  "annotation_exception_groups": 0,
+  "specialist_exception_groups": 0,
+  "source_count": 50,
+  "literal_article_api_byte_matches": 50,
+  "selected_field_spans_checked": 200,
+  "supporting_span_occurrences_checked": 2414,
+  "named_article_credits": 2666,
+  "anonymous_article_credits": 368,
+  "contributor_api_parts": 6,
+  "all_contributor_chains_complete": true,
+  "selected_sentence_authorship_proved": false,
+  "used_source_context_root_rights_status": "passed_at_selected_text_boundary_for_all_50",
+  "reuse": {
+    "base_commit": "d3725aa325ed9ac7222c2be80527efb798508485",
+    "canonical_content_version": "core-129-v2",
+    "existing_admitted_groups": 2435,
+    "reused_groups": 0,
+    "reused_fields": 0
+  },
+  "checks": [
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_139.py",
+      "status": "passed",
+      "tests": 7,
+      "exit_code": 0,
+      "log": "target/issue-139-review/merged-batch.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-139-review/audit.py",
+      "status": "passed",
+      "exit_code": 0,
+      "log": "target/issue-139-review/merged-source-audit.log"
+    },
+    {
+      "command": "pnpm test:docs",
+      "status": "passed",
+      "exit_code": 0,
+      "log": "target/issue-139-review/merged-docs.log"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed",
+      "exit_code": 0,
+      "log": "target/issue-139-review/merged-diff.log"
+    },
+    {
+      "command": "git diff --cached --check",
+      "status": "passed",
+      "exit_code": 0,
+      "log": "target/issue-139-review/merged-cached-diff.log"
+    }
+  ],
+  "focused_author_proposal_regression": {
+    "status": "expected_failure",
+    "log": "target/issue-139-review/RED.log",
+    "failures": 2
+  },
+  "supplemental_external_checks": {
+    "technologie": {
+      "status": "read_original_HTML_HTTP_200",
+      "url": "https://dictionnaire.lerobert.com/definition/technologie",
+      "capture": "target/issue-139-review/technologie-robert.html",
+      "role": "Independent modern teaching-use corroboration; no external prose redistributed"
+    },
+    "official_law_recapture": {
+      "status": "HTTP_403_for_L123-3_and_L121-1",
+      "record": "target/issue-139-review/confirmation-captures.json",
+      "legal_evidence": "Retained policy/template and the established original DAF8 collective-work basis; no new official-law capture claimed"
+    }
+  },
+  "pending_coordinator_gates": [
+    "combined canonical conversion",
+    "actual packaged obligations",
+    "all-group native lookup/save/reopen",
+    "learner-data preservation",
+    "learner acceptance"
+  ],
+  "frontend_and_rust_checks": "not_run_evidence_and_Python_test_only",
+  "platform_offline_release_checks": "not_run_coordinator_owned"
+}

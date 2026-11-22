@@ -24,6 +24,14 @@ hook 向选择器保留已有 `saveError`，失败文案及按钮按实际保存
 
 更新证据根为 `C:\Users\inthe\IdeaProjects\lexique-category-review-195\review-fixes\target\ticket-201`，包括 `verification-run.json`、`native-runs.json`、`acceptance-summary.json`、`focused-native-failure.json`、浏览器回归和三份新 dump 分析；原生根为 `native-ee8d3ef`。此前干净提交 `a42f21e8664887aa899498dea6ae6ecb6d8ec822`（tree `9d06c344b0d3f5e986f49094f238544319d38086`）的完整 storage **242 项通过**（44.06 秒）、desktop library **147 项通过**、speech cache **11 项通过**及 472 个浏览器／12 个原生场景，保留于相邻 `evidence\ticket-201`，原生 All 备份和探索性 undo 的 RTSS 失败证据也保留。更新未修改 backend／desktop／speech 层及其测试，因此未重跑这三套测试，也不将旧结果改标为更新源码结果。命令、T01–T19 边界、元数据路径映射与重复步骤见[验收记录](evidence/issue-195/README.md)；#196–#200 的证据保留各自版本。SQLite schema 仍为 20，旧 v1–v4 缺少范围时默认 All；旧 strict v4 reader 会拒绝整份新范围备份，回滚须使用受支持的旧备份并另行保留当前数据。其他平台、干净机器安装、全机断网、正式发行验收未运行；本次修复后的最终 combined-head CI 待后续运行。
 
+## D2 冻结批次 #130–#139
+
+`core-139-v1` 准入冻结行 2451–2950 的 **497 新组／1,988 字段**，累计 **2,932 组／11,728 字段**。三项批准注记为 `oublie/NOM`、`r/ADV`、`man/NOM`；词形、词性、顺序、频率与 4,087 组／3,773 词头分母保持，每项零准入／四缺失字段。全核心有 18 注记／72 缺字段；1,155 组未准入，2,930 组日常完整、1,157 组日常未完整。原两项专业义和全部 2,435 组原始记录、9,740 字段、来源／审定记录、SQLite payload、15 拼写关系及 11 别名均保持。
+
+Windows 11 x64 验证使用构建 `d34efc046d3fd6e4d9e980253228830f42c6aea8` 与匹配的 13,656,064 字节核心。206 项核心／批次检查、16 项 portable 测试、lint、类型检查、生产构建、rustfmt、锁定 workspace 编译及单独预编译后的 218 项后端测试通过。十批原生场景核对所有已准入组的四字段和出处，可信保存后重启重开；从关闭的 `core-129-v2` 基线升级，原逻辑引用、冻结摘要、独立笔记、例句、FSRS、学习／音频关系与基线文件保持。十一个原生场景均保留硬性 60 秒上限、零外部 WebView 请求与零剩余所属进程。
+
+命令、结果、程序／资源身份、原始提案和独立复核材料见[综合证据](evidence/issues-130-139/README.md)与各批最终准入记录。程序验证内嵌的资源身份，升级或回退须同时使用匹配的程序与核心，并保留学习数据目录及备份。整机离线、其他平台原生、学习者验收、完整 D2／CEFR 和正式发行仍未验证；[PR #209](https://github.com/zardonc/lexique/pull/209) 仅实现 #130–#139，#78 保持开放。
+
 ## 单条 Markdown 笔记交换（#188）
 
 2026-11-20，按[交换设计](note-interchange-design.md)实现固定模板的单文件导入与单条已保存快照导出，并在入口提供[示例模板](examples/lexique-note-v1.md)。Windows x64 的真实文件／SQLite 检查覆盖逐字符空白、LF／CR／CRLF、长反引号、省略与清空、单侧例句、非法模板、保留元数据与来源、失效预览、写入失败和共享词典补充／明确继续。单独预编译后，原有 60 秒硬限 runner 执行 `node scripts/test-rust.mjs --desktop-lib note_ --test-threads=1`，39 项通过（含 9 项 Markdown，3.66 秒）；另行预编译的 `pnpm test:rust` 通过，保留 `RUST_TEST_NOCAPTURE=1` 与 V03 的 100／250 ms 限值。此前桌面分区尝试在 Cargo 重编译时触及 60 秒硬限，尚未开始测试；原日志保留。
