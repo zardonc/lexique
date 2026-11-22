@@ -54,6 +54,19 @@ def retained_path(name):
 
 
 class Batch135Tests(unittest.TestCase):
+    def test_canonical_use_status(self):
+        usage = read("field-review.json")["usage"]
+        self.assertEqual([record["frozen_row"] for record in usage], list(range(2701, 2751)))
+        for record in usage:
+            with self.subTest(row=record["frozen_row"]):
+                self.assertEqual(record["accepted_text_quality_status"], "passed")
+                self.assertEqual(record["rights_eligibility_status"], "passed_at_selected_text_boundary")
+                self.assertTrue(record["reviewer"])
+                self.assertTrue(record["review_reason"])
+                self.assertEqual(record["accepted_usage_quality_status"], "passed")
+                self.assertEqual(record["everyday_sense_status"], "passed")
+                self.assertEqual(record["everyday_sense_reason"], record["review_reason"])
+
     def test_exact_ticket_resource_groups(self):
         path = (ROOT / "resources/core-pilot-79/curated-inputs.json"
                 if ADMITTED else EVIDENCE / "groups.json")
