@@ -1,5 +1,11 @@
 # 骨架验证记录
 
+## CI 触发与 V03 计时
+
+PR 更新运行 `scaffold checks`，`main` push 检查目标分支上的新提交，其他分支可手动运行。核对触发时记录事件、提交 SHA 和运行尝试次数。
+
+排查失败时用 `V03` 样本区分事务／竞争写入性能断言（100／250 ms）与 Rust runner 的 60 秒执行硬限。GitHub Actions job 超时另查 job 的 conclusion。比较同一提交的运行时，同时记录平台和实际争用结果。V03 日志入口见 [README](../README.md#检查与构建)。
+
 ## 单条 Markdown 笔记交换（#188）
 
 2026-11-20，按[交换设计](note-interchange-design.md)实现固定模板的单文件导入与单条已保存快照导出，并在入口提供[示例模板](examples/lexique-note-v1.md)。Windows x64 的真实文件／SQLite 检查覆盖逐字符空白、LF／CR／CRLF、长反引号、省略与清空、单侧例句、非法模板、保留元数据与来源、失效预览、写入失败和共享词典补充／明确继续。单独预编译后，原有 60 秒硬限 runner 执行 `node scripts/test-rust.mjs --desktop-lib note_ --test-threads=1`，39 项通过（含 9 项 Markdown，3.66 秒）；另行预编译的 `pnpm test:rust` 通过，保留 `RUST_TEST_NOCAPTURE=1` 与 V03 的 100／250 ms 限值。此前桌面分区尝试在 Cargo 重编译时触及 60 秒硬限，尚未开始测试；原日志保留。

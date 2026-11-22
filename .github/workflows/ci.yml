@@ -2,6 +2,7 @@ name: scaffold checks
 
 on:
   push:
+    branches: [main]
   pull_request:
   workflow_dispatch:
 
@@ -61,6 +62,8 @@ jobs:
       - run: cargo clippy --locked -p lexique-core -p lexique-storage -p lexique-dictionary --all-targets -- -D warnings
       - run: cargo test --locked -p lexique-core -p lexique-storage -p lexique-dictionary --no-run
       - run: node scripts/test-rust.mjs
+        env:
+          RUST_TEST_NOCAPTURE: '1'
       - run: cargo fmt --manifest-path tools/mdict-probe/Cargo.toml --check
       - run: cargo clippy --locked --manifest-path tools/mdict-probe/Cargo.toml --all-targets -- -D warnings
       - run: cargo test --locked --manifest-path tools/mdict-probe/Cargo.toml --no-run
@@ -138,6 +141,8 @@ jobs:
       - run: cargo check --locked --workspace --target ${{ matrix.target }}
       - run: cargo test --locked -p lexique-core -p lexique-storage -p lexique-dictionary --no-run
       - run: pnpm test:rust
+        env:
+          RUST_TEST_NOCAPTURE: '1'
       - run: cargo test --locked --release -p lexique-desktop --lib --no-run
       - run: pnpm test:desktop:lib
 
