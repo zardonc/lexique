@@ -124,6 +124,7 @@ test('failed rating retains the answer and pending choice; scope-save retry cann
   expect(calls.filter((call) => call.command === 'review_scope' && call.args?.scope).map((call) => call.args?.scope)).toEqual([choice, choice]);
 });
 
+// Queue refresh events can coalesce while scope reads finish separately.
 for (const completion of ['rating', 'skip'] as const) {
   test(`failed scope save after ${completion} holds the completed boundary with another eligible old-scope card`, async ({ page }) => {
     const oldWindow = windowView(first, all, { revision: 1 });
@@ -133,7 +134,7 @@ for (const completion of ['rating', 'skip'] as const) {
       window: [...oldWindow.window, ...nextWindow.window], delta: { ...oldWindow.delta, order: [1, 3] } };
     await nativeFixture(page, { learning_categories: [{ value: [{ id: 7, name: 'Voyage' }] }],
       review_scope: [{ value: all }, { value: all }, { error: 'scope disk unavailable' }, { value: all }, { value: all }, { value: voyage }],
-      review_queue: [{ value: oldCards }, { value: nextWindow }, { value: nextWindow }, { value: nextWindow }, { value: windowView(second, voyage, { revision: 3 }) }],
+      review_queue: [{ value: oldCards }, { value: second }],
       review_rate: [{ value: rated }] });
     await page.goto('/');
     await page.getByRole('button', { name: '闪卡复习', exact: true }).click();
@@ -149,6 +150,9 @@ for (const completion of ['rating', 'skip'] as const) {
     await expect(page.getByText('当前范围：全部复习')).toBeVisible();
     await expect(selector.getByRole('checkbox', { name: 'Voyage', exact: true })).toBeChecked();
     await expect(card).toHaveCount(0);
+    await expect.poll(() => page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'review_queue').length)).toBe(2);
+    await page.clock.install({ time: new Date('2026-11-21T12:00:00Z') });
+    await page.clock.pauseAt(new Date('2026-11-21T12:01:00Z'));
     for (const event of ['focus', 'lexique-review-changed']) {
       const reads = await page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'review_scope' && !call.args?.scope).length);
       await page.evaluate((event) => { if (event === 'focus') window.dispatchEvent(new Event(event)); else window.testNative.emit(event); }, event);
@@ -159,7 +163,10 @@ for (const completion of ['rating', 'skip'] as const) {
       await expect(selector.getByRole('checkbox', { name: 'Voyage', exact: true })).toBeChecked();
       await expect(card).toHaveCount(0);
     }
+    await page.clock.runFor(50);
+    await expect.poll(() => page.evaluate(() => window.testNative.calls.filter((call) => call.command === 'review_queue').length)).toBe(3);
     await page.getByRole('button', { name: '重试保存复习范围' }).click();
+    await page.clock.runFor(1);
     await expect(page.getByText('当前范围：Voyage')).toBeVisible();
     await expect(page.getByRole('alert')).toHaveCount(0);
     await expect(card.getByRole('heading', { name: 'voyage' })).toBeVisible();

@@ -1,8 +1,69 @@
 # Category review acceptance (#195 / #201)
 
-The review fixes passed the complete browser suite and twelve Windows x64 native
-scenarios from updated source. The earlier complete storage, desktop-library and
-speech-cache results retain their original source revision below.
+The frontend CI closeout passed with the corrected fixture and matching Chromium
+below. The earlier review implementation's native acceptance and the original
+storage, desktop-library and speech-cache results retain their own revisions.
+
+## Frontend CI closeout (PR #208)
+
+Clean tested commit: `03ef643bbc4cc8e116fd3a09b7f6ad24f4a9ab18`, tree
+`8c4201e8c36eb006efd655e6f4fcb6cce808cf67`, after integrating
+`b1c39c07fa49826c7d591ecd7efcc23437bf7b44`. This closeout changes only the
+rating/skip T06 browser fixture and documentation. Runtime, backend, native
+harness and dependencies are unchanged from the reviewed implementation below.
+
+Both original b1 frontend jobs failed after scope-save retry. Their Playwright
+traces show focus and review-change within the queue refresh's 50 ms debounce.
+The fixture supplied one old-scope reply per notification, leaving surplus
+old-scope replies after the coalesced refresh. Strict runtime validation correctly
+rejected a later reply with `Queue response does not match the applied review
+scope`. With a paused browser clock, both focused checks reproduced that failure
+before the fix. The corrected fixture derives subsequent queue scope from saved
+scope state, and the clock forces one coalesced queue refresh after two scope
+reads. Error visibility, pending choice, completed-card boundary, save-only retry,
+successful Voyage display, no remaining alert and no duplicate rating assertions
+remain enforced. No production validation was weakened.
+
+Windows x64 `10.0.26300`, pnpm `11.25.0`, Playwright `1.64.1`, bundled Chromium
+`156.0.8078.4` / revision `1248`, `CI=true`, no executable override and **two
+workers** match the failed jobs' browser/worker settings. This is local Windows
+verification; an updated Ubuntu CI run has not been performed here.
+
+| Clean tested-head check | Outcome |
+| --- | --- |
+| `pnpm lint`, `pnpm typecheck`, `pnpm build` | Passed |
+| `pnpm --filter @lexique/desktop test:e2e review-scope.spec.ts -g "holds the completed boundary" --workers=2` | 2 passed |
+| `pnpm --filter @lexique/desktop test:e2e --workers=2` | 472 passed, 261.91 s |
+
+Evidence root: this checkout's `target/ticket-201/ci-closeout`. It retains
+`verification-run.json`, required-check logs, `coalesced-red.log` and its
+regression patch/results/report, focused green and full suite logs/results/reports,
+both original CI artifact extractions, selected trace events, and raw/plain
+logs for all four failed jobs below. Two incidental full-suite passes with eight
+workers are preserved as `unintended-workers8-*`; an extra `--` stopped flag
+parsing, so these were replaced by the explicitly verified two-worker runs above.
+Native/backend suites were not rerun: their actual source, tests and harness are
+identical to the earlier recorded revisions; their evidence is not relabeled.
+
+| Original b1 run, attempt 1 | Frontend | Backend |
+| --- | --- | --- |
+| [PR 44977549743](https://github.com/zardonc/lexique/actions/runs/44977549743/attempts/1) | [137070714276](https://github.com/zardonc/lexique/actions/runs/44977549743/job/137070714276): failed rating/skip T06 | [137070714258](https://github.com/zardonc/lexique/actions/runs/44977549743/job/137070714258): failed V03 timing |
+| [Push 44977547321](https://github.com/zardonc/lexique/actions/runs/44977547321) | [137070706549](https://github.com/zardonc/lexique/actions/runs/44977547321/job/137070706549): failed rating/skip T06 | [137070706296](https://github.com/zardonc/lexique/actions/runs/44977547321/job/137070706296): failed V03 timing |
+
+The backend owner's Windows x64 Debug observations at unchanged b1 passed:
+focused V03 in 0.77 s, and the unfiltered four-test preflight binary with default
+threads in 0.81 s. All nine counted samples contended; transaction max 18.2263 ms
+(100 ms gate), writer max 40.1496 ms (250 ms gate), hard execution timeout 60 s.
+The owner verified `ensure_review_cards` and `review_cards` byte-equivalent to spec
+base `e4005d868880dac12c84c412773049eea737bc67`; backend source/tests/runner are
+unchanged from passing `27624ed84b9b0b3e3e4bf6568ded579fe3fb1324`.
+The controlled [PR attempt 2 backend retry, job 137079648762](https://github.com/zardonc/lexique/actions/runs/44977549743/job/137079648762)
+completed successfully at unchanged b1, with all limits intact. Its snapshot is
+`v03-ci-rerun-jobs.json`; local observations are `v03-local*` and
+`v03-parallel-local*`. This establishes recovery, not a backend code fix. The
+original V03 slowdown remains unexplained, and the workflow aggregate remains
+failed because its frontend is still the failed b1 result. Original failures
+remain evidence; later combined-head CI results belong on the PR.
 
 ## Updated-source review fixes (PR #208)
 
@@ -46,7 +107,7 @@ Updated evidence root:
 `focused-native-failure.json`, browser reports and regression logs record the
 commands and results. The unchanged storage/desktop-library/speech-cache suites
 were not rerun on updated source; their complete results below remain tied to
-`a42f21e8664887aa899498dea6ae6ecb6d8ec822`. Final combined-head CI remains unrun.
+`a42f21e8664887aa899498dea6ae6ecb6d8ec822`. The failed b1 combined-head CI and subsequent backend recovery are recorded above; CI after this frontend closeout remains unrun.
 
 ## Earlier full acceptance
 
