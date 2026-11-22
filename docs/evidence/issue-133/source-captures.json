@@ -749,5 +749,10 @@
     "selected_sentence_authorship_proved": false
   },
   "preparation_script": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\author-evidence\\issue-133\\prepare.py",
-  "selection_file": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\author-evidence\\issue-133\\selection.json"
+  "selection_file": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\author-evidence\\issue-133\\selection.json",
+  "reviewer_evidence_root": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-133/issue-133-review",
+  "reviewer_capture_root": "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-133/issue-133-review/author-cache",
+  "independent_audit": "source-audit.json",
+  "reviewer": "Independent field and selected-rights reviewer #133; separate from author and integration owner",
+  "independent_capture_audit": "passed"
 }

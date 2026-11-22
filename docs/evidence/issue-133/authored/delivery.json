@@ -1,0 +1,73 @@
+{
+  "ticket": 133,
+  "status": "author_package_pending_independent_review_and_unresolved_r_adv",
+  "content_commit": "afca8fa7a4a09121ed77fb99e72cbbc67b4ceae0",
+  "integration_base": "fbcc55129e1f8b4c6c47bb6ed73aa69991e926af",
+  "integration_tip": "3d2bc78c15e1667a989fe470caf3532356dfe1af",
+  "tested_source_sha": "3d2bc78c15e1667a989fe470caf3532356dfe1af",
+  "platform": "Windows x64; PowerShell 7; uv-selected Python",
+  "changed_paths": [
+    "docs/evidence/issue-133/**",
+    "scripts/test_core_batch_133.py"
+  ],
+  "checks": [
+    {
+      "command": "uv run --no-project python scripts/test_core_batch_133.py",
+      "result": "expected failure before authoring: no resource admission/content records for rows 2601–2650",
+      "log": "red.log"
+    },
+    {
+      "command": "uv run --no-project python -X utf8 scripts/test_core_batch_133.py",
+      "result": "passed four author resource/admission checks before commit and after integration merge",
+      "log": "latest-merge-resource-check.log"
+    },
+    {
+      "command": "uv run --no-project python -X utf8 target/issue-133/check_fallback.py",
+      "result": "passed four checks in a copied checkout with no local captures; stable external archive fallback used",
+      "log": "fallback-check.log"
+    },
+    {
+      "command": "Test-Documentation -Root <ticket checkout> -Files <six ticket Markdown files>; using scripts/check-docs.ps1",
+      "result": "passed six documents and 43 local links, zero problems",
+      "log": "docs-check.json"
+    },
+    {
+      "command": "git diff --cached --check",
+      "result": "passed",
+      "log": "diff-check.log"
+    },
+    {
+      "command": "uv run --no-project python -X utf8 target/issue-133/archive.py",
+      "result": "source/audit/helper archive copies byte-verified; worktree originals preserved",
+      "log": "archive-check.json"
+    },
+    {
+      "command": "git merge --no-edit codex/d2-content-130-139",
+      "result": "Merged current integration fbcc55129e1f8b4c6c47bb6ed73aa69991e926af into ticket branch; four focused checks passed afterwards",
+      "log": "integration-latest-merge.log"
+    }
+  ],
+  "author_proposals": {
+    "frozen_groups": 50,
+    "selected_senses": 49,
+    "fields": 196,
+    "fixed_sources": 51,
+    "daf8_original_work_sources": 39,
+    "newly_admitted_fields": 0,
+    "missing_authored_fields": 4,
+    "pending_independent_quality_fields": 196,
+    "pending_independent_rights_fields": 196,
+    "unresolved": "row 2626 r/ADV; no source-supported exact modern French adverb/IPA; no owner exception"
+  },
+  "redistribution_obligations": "CC BY-SA 4.0 for selected Wiktionnaire contributions and Lexique adaptations/new explanations; fixed article/history and contributor credits, modification information, Lexique 3.83 membership credit, separate Académie française DAF8 original-work credit with established 2006-01-01 expiry; unselected examples/media/CFC cartographic text excluded; actual accepted combined package remains coordinator-owned",
+  "unrun_checks": [
+    "separate independent semantic and selected-span rights review",
+    "canonical conversion, combined admission and packaged obligations",
+    "actual native lookup, trusted save/restart/reopen and offline execution",
+    "learner acceptance and release readiness",
+    "frontend/Rust checks: no ticket-owned application code changed"
+  ],
+  "author_evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\author-evidence\\issue-133",
+  "independent_review": "not_performed",
+  "native_completion": "not_claimed"
+}
