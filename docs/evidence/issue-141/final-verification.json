@@ -1,0 +1,83 @@
+{
+  "kind": "content_author_verification",
+  "ticket": 141,
+  "parent": 78,
+  "author_checkout": "C:/Users/inthe/IdeaProjects/lexique-d2-140-149/author-141",
+  "branch": "codex/d2-content-141",
+  "baseline_commit": "ff8aae2bdaf36096c6600d5d29342745b97c0eb7",
+  "baseline_content_version": "core-139-v1",
+  "baseline_admitted_groups": 2932,
+  "baseline_admitted_fields": 11728,
+  "scope_denominator_groups": 4087,
+  "exact_groups": 50,
+  "proposed_senses": 50,
+  "proposed_fields": 200,
+  "missing_authored_fields": 0,
+  "missing_admitted_fields": 200,
+  "reused_groups": 0,
+  "reused_fields": 0,
+  "independently_accepted_new_fields": 0,
+  "independent_acceptance": false,
+  "independent_reviewer": null,
+  "fixed_article_api_revisions": 50,
+  "literal_raw_api_byte_matches": 50,
+  "selected_field_spans": 200,
+  "supporting_span_occurrences": 193,
+  "complete_contributor_response_parts": 7,
+  "named_article_credits": 3177,
+  "returned_anonymous_counts": 711,
+  "selected_sentence_authorship_proved": false,
+  "article_import_daf8_boundaries": 29,
+  "source_requests_http429": 0,
+  "checks": [
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_141.py",
+      "result": "initial_RED_missing_groups_package_then_GREEN_2_tests",
+      "boundary": "approved_resource_and_admission_record; no content acceptance"
+    },
+    {
+      "command": "same batch script with Batch141Tests.test_author_fields_have_rights_and_remain_pending_separate_review",
+      "result": "RED_missing_rights_record_then_GREEN_with_preserved_author_proposals"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 external_archive/audit.py",
+      "result": "passed_author_fixed_source_audit"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 external_archive/reproduce.py",
+      "result": "20_author_files_byte_identical_zero_network_requests"
+    },
+    {
+      "command": "pnpm test:core with uv-resolved Python directory first on process PATH",
+      "result": "18_tests_passed_on_unchanged_canonical_core",
+      "initial_default_path_attempt": "exit_9009_Python_unavailable_no_assertions_reached"
+    },
+    {
+      "command": "pnpm test:docs",
+      "result": "passed_460_documents_3569_local_links_404_skipped_links"
+    },
+    {
+      "command": "git diff --cached --check and staged-path scope inspection",
+      "result": "passed_scoped_author_files_only"
+    }
+  ],
+  "unresolved_author_content_rows": [],
+  "source_anomalies": [
+    {
+      "frozen_row": 3034,
+      "headword": "adjudant",
+      "source_line_1_based": 8,
+      "note": "Questionable source NATO OR-8 assertion excluded from all proposed fields; French rank relationship remains for separate review."
+    }
+  ],
+  "pending_independent_quality_fields": 200,
+  "pending_independent_selected_span_rights_fields": 200,
+  "pending_selected_use_and_spelling_construction_records_each": 50,
+  "combined_conversion_and_packaging": "coordinator_owned_not_run",
+  "native_all_group_lookup_save_reopen": "coordinator_owned_not_run",
+  "learner_acceptance": "not_run",
+  "frontend_and_rust_checks": "not_run_content_only_author_scope",
+  "archive_root": "C:/Users/inthe/IdeaProjects/lexique-d2-140-149/context/author-evidence/issue-141",
+  "working_logs_root": "C:/Users/inthe/IdeaProjects/lexique-d2-140-149/author-141/target/issue-141",
+  "original_work_obligations": "CC BY-SA 4.0 adaptation/contribution layer; source/history and full contributor attribution, legal text, modification notices, selected source material; separately credited DAF8 original collective-work basis; actual combined package still pending"
+}
