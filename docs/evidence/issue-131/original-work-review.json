@@ -1,0 +1,45 @@
+{
+  "reviewer": "Independent field and selected-rights reviewer #131; separate from original author and coordinator",
+  "selected_source_id": "b131_fr_153306",
+  "selected_definition": {
+    "line_1_based": 7,
+    "raw_source_excerpt": "# [[aimer|Aimer]] [[tendrement]]."
+  },
+  "declared_imports": [
+    {
+      "line_1_based": 83,
+      "raw_marker": "* {{Import:DAF8}}",
+      "language_section": "== {{langue|fr}} ==",
+      "selected_sentence_authorship": "not_established_by_article_marker",
+      "selected_boundary": "possible_declared_historical_layer"
+    },
+    {
+      "line_1_based": 84,
+      "raw_marker": "* {{Import:LarousseXIXe}}",
+      "language_section": "== {{langue|fr}} ==",
+      "selected_sentence_authorship": "not_established_by_article_marker",
+      "selected_boundary": "possible_declared_historical_layer"
+    }
+  ],
+  "original_work_catalogue": {
+    "url": "https://catalogue.bnf.fr/ark:/12148/cb33995829b",
+    "capture": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\reviewer-evidence\\issue-131\\independent-review-7e13502\\independent-authorities\\bnf-larousse.html",
+    "publication": "1866–1890",
+    "volumes": 17,
+    "contains": "15 main volumes and two supplements",
+    "publisher_main_work_dates": "1866–1876; supplements 1878 and 1888",
+    "publisher_url": "https://www.larousse.fr/encyclopedie/oeuvre/Grand_Dictionnaire_universel_du_XIX-_e_s/116449",
+    "conservative_scope": "All seventeen volumes at the later BnF endpoint 1890, rather than assuming which volume supplied the selected short definition."
+  },
+  "statutory_basis": {
+    "article": "L123-3",
+    "period_years": 70,
+    "start": "1891-01-01",
+    "expiry": "1961-01-01",
+    "retained_text_basis": "Fixed Convention:Droit d’auteur revision 38903168 references quote L123-3; established issue-99 original-work record",
+    "live_statute_capture": "403; no current live statute retrieval claimed"
+  },
+  "sentence_authorship": "Not established; legal clearance covers both declared historical original-work layers without assigning an author to the selected sentence.",
+  "selected_unselected_boundary": "Line 7 tender affection and French POS/IPA; line 9 thing-object extension and line 24 Rivarol commentary are unselected. No modern publisher prose is bundled.",
+  "rights_decision": "passed_at_selected_text_boundary"
+}

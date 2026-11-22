@@ -1,0 +1,157 @@
+{
+  "ticket": 137,
+  "parent": 78,
+  "kind": "independent_reviewed_shard_resource_evidence",
+  "status": "independent_quality_and_selected_rights_passed_canonical_native_pending",
+  "reviewer": "Independent reviewer #137, codex/d2-review-137; separate from content author and integration coordinator",
+  "review_checkout": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\review-137",
+  "review_branch": "codex/d2-review-137",
+  "review_base": "a15ed6345371399c177a33dbbfa2cad5ec8f922e",
+  "reviewed_author_commits": [
+    "637652c3e614a1f0cfef3b186631b590a79f076d",
+    "b4adaf1ce0cfd5b83ff77c950229d5486899b7e1"
+  ],
+  "platform": "Windows PowerShell 7, Python 3.14.10",
+  "scope_denominator_groups": 4087,
+  "frozen_rows": [
+    2801,
+    2850
+  ],
+  "independently_accepted_new_groups": 50,
+  "independently_accepted_new_fields": 200,
+  "unchanged_fields": 198,
+  "replacement_fields": 2,
+  "unresolved_quality_fields": 0,
+  "unresolved_selected_rights_fields": 0,
+  "canonical_pending_groups": 50,
+  "canonical_pending_fields": 200,
+  "annotation_exception_groups": 0,
+  "specialist_exception_groups": 0,
+  "source_audit": {
+    "articles": 53,
+    "article_comparison": "literal_utf8_byte_equality",
+    "selected_field_spans": 200,
+    "total_checked_span_occurrences": 1564,
+    "contributor_responses": 7,
+    "finished_contributor_chains": 2,
+    "named_article_memberships": 3031,
+    "anonymous_article_counts": 598,
+    "authorities": [
+      {
+        "title": "Convention:Droit d’auteur",
+        "revision": 38903168,
+        "comparison": "equal_after_newline_normalization"
+      },
+      {
+        "title": "Modèle:Import:DAF8",
+        "revision": 22113837,
+        "comparison": "equal_after_newline_normalization"
+      },
+      {
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+        "retained": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\author-evidence\\issue-137\\rights\\cc-legal.html"
+      },
+      {
+        "url": "https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use",
+        "retained": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\author-evidence\\issue-137\\rights\\terms.html"
+      }
+    ],
+    "unique_supporting_spans": 194,
+    "daf8_import_articles": 32,
+    "legal_or_linguistic_verdict": "None: separate recorded editorial decisions are required."
+  },
+  "stable_author_evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\author-evidence\\issue-137",
+  "stable_review_evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\reviewer-evidence\\issue-137\\issue-137-review",
+  "local_review_evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\review-137\\target\\issue-137-review",
+  "checks": [
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_137.py --author-only",
+      "result": "failed_expected_two_chinese_scope_regressions_before_correction",
+      "exit_code": 1,
+      "log": "content-red.log",
+      "tests": 5,
+      "failed_subtests": 2
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_137.py --review-only",
+      "result": "failed_expected_unreviewed_author_ledger_before_acceptance",
+      "exit_code": 1,
+      "log": "review-red.log",
+      "tests": 6
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_137.py --review-only",
+      "result": "passed",
+      "exit_code": 0,
+      "log": "review-green.log",
+      "tests": 6
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-137-review/audit.py",
+      "result": "passed",
+      "exit_code": 0,
+      "log": "source-audit.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_137.py",
+      "result": "failed_expected_coordinator_canonical_gate",
+      "exit_code": 1,
+      "log": "canonical-pending.log",
+      "passed_review_tests": 6,
+      "failed_canonical_tests": 1
+    },
+    {
+      "command": "pnpm test:docs",
+      "result": "passed",
+      "log": "docs-check.log",
+      "exit_code": 0,
+      "documents": 443,
+      "local_links": 3439
+    },
+    {
+      "command": "git diff --cached --check",
+      "result": "passed",
+      "log": "diff-check.log",
+      "exit_code": 0
+    }
+  ],
+  "statutory_refresh": {
+    "result": "live_primary_requests_returned_403",
+    "log": "rights-capture.log",
+    "scope": "Selected rights assessed under the recorded original French collective-edition L123-3 basis; no successful current statutory refresh or global jurisdictional clearance is asserted."
+  },
+  "skipped_checks": [
+    {
+      "check": "canonical assembly/conversion/combined notices, native all-headword lookup/trusted save/reopen/preservation",
+      "reason": "coordinator-owned seams; this change owns the independently reviewed shard only"
+    },
+    {
+      "check": "frontend lint/typecheck/build and Rust compilation/tests",
+      "reason": "no frontend or Rust source changes"
+    },
+    {
+      "check": "learner acceptance, other-platform execution, whole-machine offline and formal release",
+      "reason": "separate pending gates"
+    }
+  ],
+  "archive_materials": [
+    "source-cache/",
+    "rights/",
+    "decisions.json",
+    "source-audit.json",
+    "source-boundary-audit.json",
+    "frames.txt",
+    "full-review.patch",
+    "focused-test.patch",
+    "verification logs",
+    "final-verification.json"
+  ],
+  "latest_merged_integration": "7b619a70ffce54fa4c48ee79cf21fab1a5808358",
+  "recorded_at_utc": "2026-11-22T02:33:15.999978+00:00",
+  "source_cache_preservation": {
+    "copied_files": 85,
+    "byte_comparison": "equal",
+    "original_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\author-evidence\\issue-137",
+    "copied_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\review-137\\target\\issue-137-review\\source-cache"
+  }
+}

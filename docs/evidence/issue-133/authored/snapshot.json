@@ -1,0 +1,35 @@
+{
+  "author_commit": "afca8fa7a4a09121ed77fb99e72cbbc67b4ceae0",
+  "review_base": "fdd2f3b1f057a9a5b7af05641502651253beb439",
+  "author_evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\author-evidence\\issue-133",
+  "preservation": "Literal file copies from the supplied clean review base before acceptance edits; original unresolved r/ADV evidence retained.",
+  "files": [
+    "COPYING",
+    "NOTICES.md.txt",
+    "README-independent-review.md.txt",
+    "README.md.txt",
+    "SOURCE-NOTICES.md.txt",
+    "admission.json",
+    "author-proposals.json",
+    "delivery.json",
+    "field-review.json",
+    "groups.json",
+    "reuse.json",
+    "rights.json",
+    "selected-rights.md.txt",
+    "source-captures.json",
+    "source-context.json",
+    "source-excerpts.json",
+    "source-research.md.txt",
+    "sources.json",
+    "unresolved.json"
+  ],
+  "prose_files": {
+    "NOTICES.md": "NOTICES.md.txt",
+    "README-independent-review.md": "README-independent-review.md.txt",
+    "README.md": "README.md.txt",
+    "selected-rights.md": "selected-rights.md.txt",
+    "SOURCE-NOTICES.md": "SOURCE-NOTICES.md.txt",
+    "source-research.md": "source-research.md.txt"
+  }
+}

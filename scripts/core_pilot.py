@@ -23,9 +23,11 @@ ANNOTATIONS = (
     (1208, "quiconque", "PRO:int", 105), (1218, "qu", "CON", 105),
     (1219, "qu", "PRO:int", 105), (1220, "qu", "PRO:rel", 105),
     (1300, "d", "PRE", 106), (1386, "nulle", "PRO:ind", 108),
+    (2560, "oublie", "NOM", 132), (2626, "r", "ADV", 133),
+    (2792, "man", "NOM", 136),
 )
 ANNOTATION_ROWS = tuple(entry[0] for entry in ANNOTATIONS)
-ROWS = tuple(row for row in range(1, 2451) if row not in ANNOTATION_ROWS)
+ROWS = tuple(row for row in range(1, 2951) if row not in ANNOTATION_ROWS)
 FIELDS = {"french_definition": "definition_fr", "ipa": "ipa", "english": "meaning_en", "chinese": "meaning_zh"}
 LANGUAGES = {"french_definition": "fr", "ipa": "und", "english": "en", "chinese": "zh"}
 MATERIALS = (
@@ -100,7 +102,7 @@ def load_inputs(source_dir):
         raise ValueError("Annotation exceptions must retain their exact approved frozen identities")
     for entry, (_, _, _, issue) in zip(annotations, ANNOTATIONS, strict=True):
         decision = entry.get("decision", {})
-        approved_on = "2026-11-18" if entry["frozen_row"] < 951 else "2026-11-19"
+        approved_on = "2026-11-21" if issue >= 130 else "2026-11-18" if entry["frozen_row"] < 951 else "2026-11-19"
         if entry.get("admitted_fields") != 0 or decision.get("issue") != f"https://github.com/zardonc/lexique/issues/{issue}" or decision.get("approved_by") != "project_owner" or decision.get("approved_on") != approved_on:
             raise ValueError("Annotation exception requires the owner's matching issue approval and zero fields")
         text(decision.get("decision"), "annotation exception decision")
@@ -112,6 +114,7 @@ def load_inputs(source_dir):
         raise ValueError("Duplicate field source identity")
     for source in sources.values():
         publication = source.get("source_frame") == "fixed_publication_edition_capture"
+        dataset = source.get("source_frame") == "fixed_licensed_dataset_capture"
         content_license = "Public-domain-original;CC-BY-SA-4.0-adaptation" if publication else "CC-BY-SA-4.0"
         if source.get("content_license") != content_license or source.get("selected_text_review") != "passed_for_selected_spans":
             raise ValueError("Unreviewed field source or incompatible licence")
@@ -123,6 +126,9 @@ def load_inputs(source_dir):
                 raise ValueError("Unreviewed publication or incompatible published adaptation licence")
             text(source.get("edition"), "published field source edition", 200)
             text(source.get("revid"), "published field source version", 200)
+        elif dataset:
+            if (source.get("edition"), source.get("revid"), source.get("entry_language")) != ("Lexique 3.83", "3.83", "fr"):
+                raise ValueError("Invalid fixed Lexique dataset edition, version or language")
         elif not isinstance(source["revid"], int) or isinstance(source["revid"], bool) or source["revid"] <= 0:
             raise ValueError("Invalid fixed field source version")
     field_reviews = {(field["sense_id"], field["field"]): field for field in reviewed["fields"]}
@@ -197,15 +203,18 @@ def load_inputs(source_dir):
                     raise ValueError("Selected field source span differs from the independent review")
                 payload[target] = text(field["text"], f"selected {name} field", 200 if name == "ipa" else 20_000)
                 publication = source.get("source_frame") == "fixed_publication_edition_capture"
-                edition = source.get("platform", source["edition"] if publication else "Wiktionnaire" if source["edition"] == "fr" else "Wiktionary")
+                captured = publication or source.get("source_frame") == "fixed_licensed_dataset_capture"
+                edition = source.get("platform", source["edition"] if captured else "Wiktionnaire" if source["edition"] == "fr" else "Wiktionary")
                 provenance[target] = {
                     "title": f"{edition} — {source['title']}",
-                    "version": f"{source['revid']} (edition {source['edition']}; capture {source['timestamp']})" if publication else f"revision {source['revid']} ({source['timestamp']})",
-                    "attribution": f"{source['attribution']}; edition source: {source['fixed_url']}; recorded adaptations by Lexique contributors" if publication else f"{source['attribution']}; author history: {source['history_url']}; recorded adaptations by Lexique contributors",
+                    "version": f"{source['revid']} (edition {source['edition']}; capture {source['timestamp']})" if captured else f"revision {source['revid']} ({source['timestamp']})",
+                    "attribution": f"{source['attribution']}; edition source: {source['fixed_url']}; recorded adaptations by Lexique contributors" if captured else f"{source['attribution']}; author history: {source['history_url']}; recorded adaptations by Lexique contributors",
                     "source_url": source["fixed_url"], "license": "CC BY-SA 4.0", "license_url": source["license_url"],
-                    "span": f"Fixed {'capture' if publication else 'wikitext'} line {span['line_1_based']}; exact selected excerpt in selected-source-excerpts.json",
+                    "span": f"Fixed {'capture' if captured else 'wikitext'} line {span['line_1_based']}; exact selected excerpt in selected-source-excerpts.json",
                     "modification": text(field["modification"], "field modification notice"),
                 }
+                if source.get("source_frame") == "fixed_licensed_dataset_capture":
+                    provenance[target]["attribution"] += f"; dataset credits: {source['history_url']}"
             payload["field_sources"] = provenance
             selected.append((group["frozen_row"], index, group["headword"], payload))
     if len(selected) != len(ROWS) or len(seen) != len(ROWS):

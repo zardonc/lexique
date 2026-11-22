@@ -1,0 +1,12 @@
+{
+  "base_commit": "d3725aa325ed9ac7222c2be80527efb798508485",
+  "comparison_input": "resources/core-pilot-79/curated-inputs.json",
+  "canonical_content_version": "core-129-v2",
+  "existing_admitted_groups": 2435,
+  "reused_groups": 0,
+  "reused_fields": 0,
+  "groups": [],
+  "independent_review": "passed_exact_base_content_comparison",
+  "reviewer": "Independent semantic and selected-rights reviewer #139; separate from author and coordinator",
+  "independent_reason": "Pinned author base d3725aa contains core-129-v2 and 2,435 admitted groups; none of the exact 50 headword/POS pairs in rows 2901–2950 occurs there. Reuse remains zero, irrespective of later canonical assembly."
+}
