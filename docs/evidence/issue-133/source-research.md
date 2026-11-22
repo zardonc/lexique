@@ -1,6 +1,6 @@
 # #133 selected uses and source boundaries
 
-49 everyday selected-sense proposals supply 196 FR/IPA/EN/ZH fields. Exact proposed wording remains in [groups.json](groups.json) and [original proposals](author-proposals.json). All use, field-quality and selected-span rights decisions await a separate independent reviewer.
+49 everyday selected senses supply 196 independently accepted FR/IPA/EN/ZH fields. Exact proposed and accepted wording remains in [field-review.json](field-review.json), with [original proposals](author-proposals.json) preserved. All use, field-quality and selected-span rights decisions pass separate independent review.
 
 | Frozen row | Exact group | Selected use and restrictions | Excluded uses | Fixed definition basis |
 | ---: | --- | --- | --- | --- |
@@ -29,7 +29,7 @@
 | 2623 | fermé/ADJ | Adjective; physical closed state; masculine fermé, feminine fermée. | Past-participle-only analysis, unexpressive face, topology and closed-source technology. | [fermé, r39740424, line 11](https://fr.wiktionary.org/w/index.php?title=ferm%C3%A9&oldid=39740424) |
 | 2624 | fan/NOM | Common-gender noun un/une fan; admirer sense, /fan/. | Canadian electric fan and /fɑ̃/ interjection. | [fan, r39957327, line 20](https://fr.wiktionary.org/w/index.php?title=fan&oldid=39957327) |
 | 2625 | jugement/NOM | Masculine noun; court judgment. Nominal /ʒyʒ.mɑ̃/ selected; /ʒy.ʒə.mɑ̃/ also recorded. | Personal opinion, reasoning faculty, divine judgment and tarot card. | [jugement, r39007793, line 9](https://fr.wiktionary.org/w/index.php?title=jugement&oldid=39007793) |
-| 2626 | r/ADV | Unresolved: no source-supported exact French adverb or applicable IPA. Four missing fields. | Letter name and recto noun cannot substitute; no owner exception. | [Unresolved evidence](unresolved.json) |
+| 2626 | r/ADV | Owner-approved zero-field annotation; four missing fields. | Letter-name, noun abbreviation, substitute spelling and runtime alias. | [Approval](owner-approval.md); original source evidence preserved under authored. |
 | 2627 | magazine/NOM | Masculine noun; periodical publication, /ma.ɡa.zin/. | Broadcast programme and magasin spelling. | [magazine, r39781092, line 11](https://fr.wiktionary.org/w/index.php?title=magazine&oldid=39781092) |
 | 2628 | estimer/VER | Transitive verb; approximate evaluation. | Esteem/respect, belief-clause and pronominal self-assessment. | [estimer, r39771127, line 26](https://fr.wiktionary.org/w/index.php?title=estimer&oldid=39771127) |
 | 2629 | pile/NOM | Feminine noun; vertical stack, /pil/. | Battery, coin side, bridge pier, beating and adverb exactly. | [pile, r40007563, line 22](https://fr.wiktionary.org/w/index.php?title=pile&oldid=40007563) |
@@ -57,7 +57,7 @@
 
 ## Spelling, construction and pronunciation
 
-Every ordinary proposal has a French language/POS frame and its own pronunciation
+Every ordinary accepted group has a French language/POS frame and its own pronunciation
 line in that selected POS frame. Frozen frequencies and ordering are preserved.
 No general query alias or new phrase target is proposed. `for/NOM` binds to its
 attested modern `for intérieur` construction: the for article limits this sense to
@@ -69,7 +69,7 @@ from for's own nominal frame, with connected phrase pronunciation recorded separ
 alternative; no adjective is substituted. `fan/NOM` uses /fan/, distinct from the
 /fɑ̃/ interjection. `jugement` selects /ʒyʒ.mɑ̃/ while retaining the alternative
 /ʒy.ʒə.mɑ̃/ in source context. `relâcher` retains the source /ʁə.lɑ.ʃe/ variant.
-`immense` retains source /i(m).mɑ̃s/ optional-consonant notation for reviewer decision.
+`immense` retains source /i(m).mɑ̃s/ optional-consonant notation as an applicable recorded variant.
 `pourvoir` selects the transitive provision sense with X de Y; two short passive
 construction fragments have exact columns. Source definitions and full source
 context remain fixed, including alternative genders and inflections.
@@ -80,4 +80,4 @@ The [rights account](selected-rights.md) separates the historical DAF8 original 
 Wiktionnaire contributions and Lexique adaptations. No whole-page, bilingual-table,
 example-body, image, recording or external dictionary import enters learner fields.
 The assiette image/caption and réserve's unselected CFC cartographic definition are
-explicit exclusions. Exact raw context remains available to the actual reviewer.
+explicit exclusions. Exact raw context remains available in the retained review archive.
