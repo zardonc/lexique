@@ -11261,66 +11261,52 @@
         {
           "sense_id": "b138-2894-halte-ono-selected",
           "frozen_row": 2894,
-          "field": "french_definition",
-          "line_1_based": 52,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# Se dit pour faire [[arrêter]] des [[soldat]]s."
-        },
-        {
-          "sense_id": "b138-2894-halte-ono-selected",
-          "frozen_row": 2894,
           "field": "ipa",
           "line_1_based": 51,
           "column_1_based": 1,
           "raw_source_excerpt": "'''halte''' {{h aspiré}}{{pron|alt|fr}}"
-        },
-        {
-          "sense_id": "b138-2894-halte-ono-selected",
-          "frozen_row": 2894,
-          "field": "english",
-          "line_1_based": 52,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# Se dit pour faire [[arrêter]] des [[soldat]]s."
-        },
-        {
-          "sense_id": "b138-2894-halte-ono-selected",
-          "frozen_row": 2894,
-          "field": "chinese",
-          "line_1_based": 52,
-          "column_1_based": 1,
-          "raw_source_excerpt": "# Se dit pour faire [[arrêter]] des [[soldat]]s."
         }
       ],
       "selected_grammar_and_construction_evidence": [
         {
-          "sense_id": "b138-2894-halte-ono-selected",
           "source_id": "b138_fr_25029",
           "revid": 38818374,
           "url": "https://fr.wiktionary.org/w/index.php?title=halte&oldid=38818374",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=halte&action=history",
           "line_1_based": 3,
           "column_1_based": 1,
-          "reviewed_excerpt": "== {{langue|fr}} =="
+          "reviewed_excerpt": "== {{langue|fr}} ==",
+          "sense_id": "b138-2894-halte-ono-selected"
         },
         {
-          "sense_id": "b138-2894-halte-ono-selected",
           "source_id": "b138_fr_25029",
           "revid": 38818374,
           "url": "https://fr.wiktionary.org/w/index.php?title=halte&oldid=38818374",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=halte&action=history",
           "line_1_based": 50,
           "column_1_based": 1,
-          "reviewed_excerpt": "=== {{S|interjection|fr}} ==="
+          "reviewed_excerpt": "=== {{S|interjection|fr}} ===",
+          "sense_id": "b138-2894-halte-ono-selected"
         },
         {
-          "sense_id": "b138-2894-halte-ono-selected",
           "source_id": "b138_fr_25029",
           "revid": 38818374,
           "url": "https://fr.wiktionary.org/w/index.php?title=halte&oldid=38818374",
           "history_url": "https://fr.wiktionary.org/w/index.php?title=halte&action=history",
           "line_1_based": 51,
           "column_1_based": 1,
-          "reviewed_excerpt": "'''halte''' {{h aspiré}}{{pron|alt|fr}}"
+          "reviewed_excerpt": "'''halte''' {{h aspiré}}{{pron|alt|fr}}",
+          "sense_id": "b138-2894-halte-ono-selected"
+        },
+        {
+          "source_id": "b138_fr_25029",
+          "revid": 38818374,
+          "url": "https://fr.wiktionary.org/w/index.php?title=halte&oldid=38818374",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=halte&action=history",
+          "line_1_based": 57,
+          "column_1_based": 1,
+          "reviewed_excerpt": "* [[halte-là]]",
+          "sense_id": "b138-2894-halte-ono-selected"
         }
       ],
       "import_notices": [],
@@ -11406,7 +11392,7 @@
       "external_reference_markers": [],
       "reference_boundary": "Reference lists (including TLFi or Littré) do not establish selected-sentence origin. No referenced example, etymology or external dictionary is admitted by this proposal.",
       "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
-      "selected_text_rights_reason": "halte, fixed revision 38818374, selected lines 51, 52: The proposal correctly says a stopping command to soldiers and explains h aspiré, but this does not establish an eligible everyday ONO sense. Oldest revision 67358 already separates noun pauses/stopping places from a soldiers-command interjection. The current interjection line remains soldiers-only. Text rights and correct spelling/IPA do not cure the missing everyday ONO evidence. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
+      "selected_text_rights_reason": "halte, fixed revision 38818374, selected isolated headword IPA at line 51: /alt/ and recorded h aspiré are retained from the French interjection headword. The accepted semantics bind the documented halte-là derivative, not the parent’s soldiers definition. The /al.tə.la/ locution IPA is source-binding evidence and is not substituted for /alt/. Fixed Wiktionnaire contribution attribution, complete article/history credit, modification notices and CC BY-SA 4.0 ShareAlike remain required. The verdict covers this phonetic/supporting boundary; combined packaging remains coordinator-owned.",
       "independent_source_audit": "source-audit.json#b138_fr_25029"
     },
     {
@@ -12730,9 +12716,192 @@
       "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
       "selected_text_rights_reason": "absolu, fixed revision 39919852, selected lines 8, 9: Complet, sans restriction follows the selected completeness sense rather than sovereign authority or imperious character. The actual selected French lexical/phonetic sentence is separate from neighbouring quotations, etymologies, media and other languages. Original import/reference markers and oldest source identity are retained below; a bibliography is not a grant for an external edition. DAF8’s original collective edition has its separate 2006-01-01 economic-rights expiry under L123-3; fixed wiki transcription/editorial contributions and these Lexique adaptations remain CC BY-SA 4.0. No later electronic edition is copied. Fixed article and full history links, complete returned named registries and anonymous-history credit, modification notices, licence text and ShareAlike remain required. This review covers the selected text boundary; the combined package remains coordinator-owned.",
       "independent_source_audit": "source-audit.json#b138_fr_236496"
+    },
+    {
+      "id": "b138_fr_1914833",
+      "title": "halte-là",
+      "pageid": 1914833,
+      "current_content_revid": 39006229,
+      "timestamp": "2025-11-01T17:22:37Z",
+      "fixed_url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&oldid=39006229",
+      "history_url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&action=history",
+      "content_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "attribution": "Académie française, Dictionnaire de l’Académie française, eighth edition, 1932–1935, for the original familiar wording; Wiktionnaire contributors (complete linked article history) for transcription/editorial contributions; Lexique contributors for selection, scoped adaptation and new explanatory translations.",
+      "status": "passed_independent_selected_source_audit",
+      "selected_locations": [
+        {
+          "sense_id": "b138-2894-halte-ono-selected",
+          "frozen_row": 2894,
+          "field": "french_definition",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{familier|fr}} S’emploie lorsqu’une personne s’émancipe et va au-delà de ce qui convient, et qu’on veut l’arrêter, ou lui imposer silence."
+        },
+        {
+          "sense_id": "b138-2894-halte-ono-selected",
+          "frozen_row": 2894,
+          "field": "english",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{familier|fr}} S’emploie lorsqu’une personne s’émancipe et va au-delà de ce qui convient, et qu’on veut l’arrêter, ou lui imposer silence."
+        },
+        {
+          "sense_id": "b138-2894-halte-ono-selected",
+          "frozen_row": 2894,
+          "field": "chinese",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "raw_source_excerpt": "# {{familier|fr}} S’emploie lorsqu’une personne s’émancipe et va au-delà de ce qui convient, et qu’on veut l’arrêter, ou lui imposer silence."
+        }
+      ],
+      "selected_grammar_and_construction_evidence": [
+        {
+          "source_id": "b138_fr_1914833",
+          "revid": 39006229,
+          "url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&oldid=39006229",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&action=history",
+          "line_1_based": 1,
+          "column_1_based": 1,
+          "reviewed_excerpt": "== {{langue|fr}} ==",
+          "sense_id": "b138-2894-halte-ono-selected"
+        },
+        {
+          "source_id": "b138_fr_1914833",
+          "revid": 39006229,
+          "url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&oldid=39006229",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&action=history",
+          "line_1_based": 3,
+          "column_1_based": 1,
+          "reviewed_excerpt": ": {{date|lang=fr}} {{composé de|lang=fr|m=1|halte|là}}.",
+          "sense_id": "b138-2894-halte-ono-selected"
+        },
+        {
+          "source_id": "b138_fr_1914833",
+          "revid": 39006229,
+          "url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&oldid=39006229",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&action=history",
+          "line_1_based": 5,
+          "column_1_based": 1,
+          "reviewed_excerpt": "=== {{S|interjection|fr}} ===",
+          "sense_id": "b138-2894-halte-ono-selected"
+        },
+        {
+          "source_id": "b138_fr_1914833",
+          "revid": 39006229,
+          "url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&oldid=39006229",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&action=history",
+          "line_1_based": 6,
+          "column_1_based": 1,
+          "reviewed_excerpt": "'''halte-là''' {{pron|al.tə.la|fr}}",
+          "sense_id": "b138-2894-halte-ono-selected"
+        },
+        {
+          "source_id": "b138_fr_1914833",
+          "revid": 39006229,
+          "url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&oldid=39006229",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&action=history",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "reviewed_excerpt": "# {{familier|fr}} S’emploie lorsqu’une personne s’émancipe et va au-delà de ce qui convient, et qu’on veut l’arrêter, ou lui imposer silence.",
+          "sense_id": "b138-2894-halte-ono-selected"
+        },
+        {
+          "source_id": "b138_fr_1914833",
+          "revid": 39006229,
+          "url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&oldid=39006229",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&action=history",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "reviewed_excerpt": "#* {{exemple | lang=fr | '''Halte-là''', je vous arrête.}}",
+          "sense_id": "b138-2894-halte-ono-selected"
+        },
+        {
+          "source_id": "b138_fr_1914833",
+          "revid": 39006229,
+          "url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&oldid=39006229",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&action=history",
+          "line_1_based": 11,
+          "column_1_based": 1,
+          "reviewed_excerpt": "#* {{exemple | lang=fr | '''Halte-là''', vous dépassez les bornes, assez d’inconvenances !}}",
+          "sense_id": "b138-2894-halte-ono-selected"
+        },
+        {
+          "source_id": "b138_fr_1914833",
+          "revid": 39006229,
+          "url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&oldid=39006229",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&action=history",
+          "line_1_based": 32,
+          "column_1_based": 1,
+          "reviewed_excerpt": "* {{R:DAF8|halte}}",
+          "sense_id": "b138-2894-halte-ono-selected"
+        }
+      ],
+      "import_notices": [],
+      "original_historical_dictionary_layers": [
+        {
+          "original_authors": "Académie française",
+          "edition": "Dictionnaire de l’Académie française, eighth edition, 1932–1935",
+          "legal_basis": "CPI L123-3: seventy years from 1 January following collective publication; final 1935 publication gives 2006-01-01.",
+          "legal_basis_url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20",
+          "conservative_expiry": "2006-01-01",
+          "established_project_evidence": "docs/evidence/issue-129/selected-rights.md; docs/evidence/issue-99/source-context.json",
+          "scope": "Original familiar halte-là wording evidenced in creation revision 7379871 and actual A8H0077 text; modern electronic editorial material is not selected.",
+          "wiki_layer": "Fixed Wiktionnaire transcription/contribution layer, CC BY-SA 4.0.",
+          "lexique_layer": "Scoped French adaptation and new English/Chinese explanations, CC BY-SA 4.0.",
+          "independent_review": "passed_at_original_work_boundary",
+          "source_origin_evidence": "halte-source-review.json#original_work",
+          "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator"
+        }
+      ],
+      "bibliographic_identities": [
+        {
+          "line_1_based": 14,
+          "bibliographic_marker": " | source={{w|Hervé Bazin}}, {{w|''Cri de la chouette''}}, Grasset, 1972, réédition Le Livre de Poche, page 18}}",
+          "role": "unselected_Bazin_quotation"
+        }
+      ],
+      "contributor_capture_parts": [
+        "C:/Users/inthe/IdeaProjects/lexique-spec-130-139/context/reviewer-evidence/issue-138/halte-continuation/sources/contributors-8.api.json"
+      ],
+      "current_registry_names": 17,
+      "current_contributors": [
+        "A2",
+        "Daahbot",
+        "DanÿaBot",
+        "GwynBot",
+        "JackBot",
+        "JackPotte",
+        "Jona",
+        "Justinetto",
+        "LeptiBot",
+        "Lingua Libre Bot",
+        "MglovesfunBot",
+        "Nepas ledire",
+        "Pamputt",
+        "PamputtBot",
+        "Rogemiche",
+        "SniperMaské",
+        "Àncilu bot"
+      ],
+      "anonymous_contributors_count": 1,
+      "anonymous_attribution": "Anonymous identities are credited through the linked complete article history; the contributors API returns their count rather than individual names.",
+      "attribution_boundary": "Complete current named registry, returned anonymous count and full history credit; the retained history through selected revision 39006229 has 24 revisions. Article registry credit does not establish selected-sentence authorship.",
+      "selected_text_rights_status": "passed_at_selected_text_boundary",
+      "external_reference_markers": [
+        {
+          "line_1_based": 32,
+          "raw_reference": "* {{R:DAF8|halte}}",
+          "selected_boundary": "Selected familiar line 9 already occurs in creation revision 7379871; actual DAF8 A8H0077 wording establishes the original-work boundary. Modern DAF9, Larousse and Robert prose is corroboration only."
+        }
+      ],
+      "reference_boundary": "DAF8 wording origin verified through creation revision and actual A8H0077; modern publisher text, Bazin quotation and media remain unselected.",
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "selected_text_rights_reason": "halte-là, fixed revision 39006229, selected familiar definition at line 9: the sentence is present in Jona’s creation revision 7379871 (2010-06-09) and corresponds to the actual DAF8 A8H0077 familiar wording, with subject/register moved into the headword/tag. Credit Académie française, eighth edition 1932–1935; the established collective original-work L123-3 boundary is 2006-01-01. Fixed wiki transcription/editorial work and Lexique adaptations/translations remain CC BY-SA 4.0 with source/history, all 17 named contributors, anonymous-history credit, modification notices and ShareAlike. The current DAF8 reference corroborates this actual origin rather than granting a later edition’s rights. Modern DAF9/Robert/Larousse editorial text, the Bazin quotation, audio and Russian translation are unselected. This verdict covers the selected text; combined packaging remains coordinator-owned.",
+      "independent_source_audit": "source-audit.json#b138_fr_1914833"
     }
   ],
-  "rights_review": "Independent selected-text review passed for all 200 candidate fields; 196 pass semantic/use admission. Halte/ONO remains unresolved for everyday use. Combined packaging is coordinator-owned.",
+  "rights_review": "Independent selected-text rights and semantic/use review passed for all 200 fields. Halte/ONO selects familiar figurative halte-là definitions and parent halte IPA. Combined packaging is coordinator-owned.",
   "spelling_relations": [
     {
       "sense_id": "b138-2851-boisson-nom-selected",
@@ -14825,8 +14994,8 @@
       "sense_id": "b138-2894-halte-ono-selected",
       "frozen_row": 2894,
       "frozen_headword": "halte",
-      "source_headword": "halte",
-      "relation": "exact_french_source_spelling",
+      "source_headword": "halte-là",
+      "relation": "interjection_derivative_composition",
       "relation_role": "source_binding_only",
       "alias_admission": "not_admitted",
       "proposed_evidence": [
@@ -14858,9 +15027,123 @@
           "reviewed_excerpt": "'''halte''' {{h aspiré}}{{pron|alt|fr}}"
         }
       ],
-      "construction_and_flexion_interpretation": "Invariant stopping-command interjection mapped to exact Lexique ONO; the fixed definition specifically addresses soldiers. Recorded h aspiré retained.",
+      "construction_and_flexion_interpretation": "French interjection with h aspiré; familiar figurative use in « halte-là ! » to stop or silence someone who exceeds acceptable bounds. The isolated headword halte is /alt/; the construction is /al.tə.la/.",
       "independent_review": "passed",
-      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator"
+      "reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
+      "review_reason": "The familiar second sense at fixed halte-là line 9 is an interjection, and current Académie A9H0116 and Larousse halte/38944 retain its figurative use to stop excessive or inappropriate words/actions. Parent halte line 57 lists this interjection derivative; derivative line 3 explicitly composes halte and là. This is an ordinary construction-bound use of frozen halte/ONO, with familiar/figurative limits, without a noun substitution, alias or exception. Robert corroborates figurative halte à, but its literal halte-là gloss is not evidence for this selected familiar sense.",
+      "accepted_construction_and_flexion_interpretation": "French interjection with h aspiré; familiar figurative use in « halte-là ! » to stop or silence someone who exceeds acceptable bounds. The isolated headword halte is /alt/; the construction is /al.tə.la/.",
+      "proposed_relation": "exact_french_source_spelling",
+      "proposed_source_headword": "halte",
+      "accepted_evidence": [
+        {
+          "source_id": "b138_fr_25029",
+          "revid": 38818374,
+          "url": "https://fr.wiktionary.org/w/index.php?title=halte&oldid=38818374",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=halte&action=history",
+          "line_1_based": 3,
+          "column_1_based": 1,
+          "reviewed_excerpt": "== {{langue|fr}} =="
+        },
+        {
+          "source_id": "b138_fr_25029",
+          "revid": 38818374,
+          "url": "https://fr.wiktionary.org/w/index.php?title=halte&oldid=38818374",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=halte&action=history",
+          "line_1_based": 50,
+          "column_1_based": 1,
+          "reviewed_excerpt": "=== {{S|interjection|fr}} ==="
+        },
+        {
+          "source_id": "b138_fr_25029",
+          "revid": 38818374,
+          "url": "https://fr.wiktionary.org/w/index.php?title=halte&oldid=38818374",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=halte&action=history",
+          "line_1_based": 51,
+          "column_1_based": 1,
+          "reviewed_excerpt": "'''halte''' {{h aspiré}}{{pron|alt|fr}}"
+        },
+        {
+          "source_id": "b138_fr_25029",
+          "revid": 38818374,
+          "url": "https://fr.wiktionary.org/w/index.php?title=halte&oldid=38818374",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=halte&action=history",
+          "line_1_based": 57,
+          "column_1_based": 1,
+          "reviewed_excerpt": "* [[halte-là]]"
+        },
+        {
+          "source_id": "b138_fr_1914833",
+          "revid": 39006229,
+          "url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&oldid=39006229",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&action=history",
+          "line_1_based": 1,
+          "column_1_based": 1,
+          "reviewed_excerpt": "== {{langue|fr}} =="
+        },
+        {
+          "source_id": "b138_fr_1914833",
+          "revid": 39006229,
+          "url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&oldid=39006229",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&action=history",
+          "line_1_based": 3,
+          "column_1_based": 1,
+          "reviewed_excerpt": ": {{date|lang=fr}} {{composé de|lang=fr|m=1|halte|là}}."
+        },
+        {
+          "source_id": "b138_fr_1914833",
+          "revid": 39006229,
+          "url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&oldid=39006229",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&action=history",
+          "line_1_based": 5,
+          "column_1_based": 1,
+          "reviewed_excerpt": "=== {{S|interjection|fr}} ==="
+        },
+        {
+          "source_id": "b138_fr_1914833",
+          "revid": 39006229,
+          "url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&oldid=39006229",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&action=history",
+          "line_1_based": 6,
+          "column_1_based": 1,
+          "reviewed_excerpt": "'''halte-là''' {{pron|al.tə.la|fr}}"
+        },
+        {
+          "source_id": "b138_fr_1914833",
+          "revid": 39006229,
+          "url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&oldid=39006229",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&action=history",
+          "line_1_based": 9,
+          "column_1_based": 1,
+          "reviewed_excerpt": "# {{familier|fr}} S’emploie lorsqu’une personne s’émancipe et va au-delà de ce qui convient, et qu’on veut l’arrêter, ou lui imposer silence."
+        },
+        {
+          "source_id": "b138_fr_1914833",
+          "revid": 39006229,
+          "url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&oldid=39006229",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&action=history",
+          "line_1_based": 10,
+          "column_1_based": 1,
+          "reviewed_excerpt": "#* {{exemple | lang=fr | '''Halte-là''', je vous arrête.}}"
+        },
+        {
+          "source_id": "b138_fr_1914833",
+          "revid": 39006229,
+          "url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&oldid=39006229",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&action=history",
+          "line_1_based": 11,
+          "column_1_based": 1,
+          "reviewed_excerpt": "#* {{exemple | lang=fr | '''Halte-là''', vous dépassez les bornes, assez d’inconvenances !}}"
+        },
+        {
+          "source_id": "b138_fr_1914833",
+          "revid": 39006229,
+          "url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&oldid=39006229",
+          "history_url": "https://fr.wiktionary.org/w/index.php?title=halte-l%C3%A0&action=history",
+          "line_1_based": 32,
+          "column_1_based": 1,
+          "reviewed_excerpt": "* {{R:DAF8|halte}}"
+        }
+      ]
     },
     {
       "sense_id": "b138-2895-absolu-adj-selected",

@@ -2,7 +2,7 @@
   "ticket": 138,
   "parent": 78,
   "schema": "lexique-d2-content-candidate-handoff-1",
-  "status": "49_independently_reviewed_groups_one_unresolved_everyday_ONO_group",
+  "status": "50_independently_reviewed_groups_200_fields_coordinator_assembly_pending",
   "scope_denominator_groups": 4087,
   "frozen_rows": [
     2851,
@@ -60,45 +60,18 @@
   "proposed_groups": 50,
   "proposed_senses": 50,
   "proposed_fields": 200,
-  "source_count": 50,
-  "independently_accepted_new_groups": 49,
-  "independently_accepted_new_fields": 196,
+  "source_count": 51,
+  "independently_accepted_new_groups": 50,
+  "independently_accepted_new_fields": 200,
   "independent_reviewer": "Independent reviewer #138; codex/d2-review-138; separate from content author and coordinator",
-  "resource_admission": "passed_for_49_selected_groups_one_semantic_blocker_coordinator_assembly_pending",
-  "unresolved_field_blockers": [
-    {
-      "frozen_row": 2894,
-      "sense_id": "b138-2894-halte-ono-selected",
-      "field": "french_definition",
-      "reason": "Unresolved: the exact ONO group maps to the soldiers-command interjection at lines 50–52. Modern pause/stop examples are under the feminine noun at lines 7–16. Faire halte at line 23 is a noun derivative, not evidence for an everyday ONO sense. No exception or POS replacement is authorised."
-    },
-    {
-      "frozen_row": 2894,
-      "sense_id": "b138-2894-halte-ono-selected",
-      "field": "ipa",
-      "reason": "Unresolved: the exact ONO group maps to the soldiers-command interjection at lines 50–52. Modern pause/stop examples are under the feminine noun at lines 7–16. Faire halte at line 23 is a noun derivative, not evidence for an everyday ONO sense. No exception or POS replacement is authorised."
-    },
-    {
-      "frozen_row": 2894,
-      "sense_id": "b138-2894-halte-ono-selected",
-      "field": "english",
-      "reason": "Unresolved: the exact ONO group maps to the soldiers-command interjection at lines 50–52. Modern pause/stop examples are under the feminine noun at lines 7–16. Faire halte at line 23 is a noun derivative, not evidence for an everyday ONO sense. No exception or POS replacement is authorised."
-    },
-    {
-      "frozen_row": 2894,
-      "sense_id": "b138-2894-halte-ono-selected",
-      "field": "chinese",
-      "reason": "Unresolved: the exact ONO group maps to the soldiers-command interjection at lines 50–52. Modern pause/stop examples are under the feminine noun at lines 7–16. Faire halte at line 23 is a noun derivative, not evidence for an everyday ONO sense. No exception or POS replacement is authorised."
-    }
-  ],
+  "resource_admission": "passed_for_50_selected_groups_coordinator_assembly_pending",
+  "unresolved_field_blockers": [],
   "reused_groups": 0,
   "reused_fields": 0,
-  "pending_independent_review_rows": [
-    2894
-  ],
-  "independent_quality": "passed_for_196_fields_four_unresolved_everyday_eligibility",
-  "selected_span_rights": "passed_for_200_candidate_fields",
-  "construction_and_spelling_review": "passed_exact_POS_and_spelling_one_everyday_use_unresolved",
+  "pending_independent_review_rows": [],
+  "independent_quality": "passed_for_200_fields",
+  "selected_span_rights": "passed_for_200_selected_fields",
+  "construction_and_spelling_review": "passed_exact_frozen_POS_with_documented_halte_interjection_derivative",
   "final_output_validation": "independent_scoped_resource_check_only",
   "native_checks": "integration_owned_not_run",
   "conversion_and_packaging": "integration_owned_not_run",
@@ -144,14 +117,15 @@
     "b138_fr_156041",
     "b138_fr_175544",
     "b138_fr_178480",
-    "b138_fr_236496"
+    "b138_fr_236496",
+    "b138_fr_1914833"
   ],
   "annotation_exception_groups": 0,
   "specialist_exception_groups": 0,
   "newly_admitted_fields": 0,
   "missing_authored_fields": 0,
   "author_unresolved_content_rows": [],
-  "pending_independent_review_fields": 4,
+  "pending_independent_review_fields": 0,
   "pending_independent_rights_fields": 0,
   "author_semantic_scope_check": "All 50 actual proposed uses and 200 authored fields read against their captured definition, POS, IPA and restrictions; this is the author check.",
   "missing_admitted_fields": 200,
@@ -179,17 +153,16 @@
     "81f6aa997551b51f195efefb32ccbfe51ddae01e"
   ],
   "author_snapshot": "authored/at-81f6aa9/",
-  "accepted_replacements": 9,
-  "changed_field_groups": 6,
-  "accepted_use_restriction_changes": 8,
-  "unresolved_semantic_rows": [
-    2894
-  ],
+  "accepted_replacements": 12,
+  "changed_field_groups": 7,
+  "accepted_use_restriction_changes": 9,
+  "unresolved_semantic_rows": [],
   "unresolved_source_rows": [],
   "unresolved_legal_rows": [],
   "independently_reviewed_fields": 200,
   "semantic_text_accuracy_fields": 200,
-  "reviewed_field_characters": 8601,
+  "reviewed_field_characters": 8623,
   "longest_reviewed_field_characters": 143,
-  "unresolved_outcome": "Unresolved: the exact ONO group maps to the soldiers-command interjection at lines 50–52. Modern pause/stop examples are under the feminine noun at lines 7–16. Faire halte at line 23 is a noun derivative, not evidence for an everyday ONO sense. No exception or POS replacement is authorised."
+  "unresolved_outcome": "none",
+  "halte_source_review": "halte-source-review.json"
 }
