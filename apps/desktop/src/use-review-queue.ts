@@ -10,6 +10,7 @@ import type { ReviewScope } from './platform/review-scope';
 type Status = 'loading' | 'ready' | 'preview' | 'error';
 interface Subscription {
   readonly scope: ReviewScope | null;
+  readonly preserveScopePresentation: RefObject<boolean>;
   readonly runtime: RuntimeAdapter; readonly skipped: RefObject<number[]>; readonly advance: RefObject<number>;
   readonly current: RefObject<QueueView | null>; readonly controller: RefObject<QueueRefresh | null>;
   readonly latest: RefObject<QueueView | null>;
@@ -43,11 +44,12 @@ function queueAudio(result: QueueView | null, pending: string) {
 }
 
 function useQueueEvents(options: Subscription) {
-  const { runtime, scope, skipped, advance, current, latest, controller, pendingMessage, setWakeAt, setError, setStatus, setView, setAudio } = options;
+  const { runtime, scope, preserveScopePresentation, skipped, advance, current, latest, controller, pendingMessage, setWakeAt, setError, setStatus, setView, setAudio } = options;
   useEffect(() => {
     if (!scope) return;
-    advance.current += 1; current.current = null; latest.current = null;
-    setView(null); setAudio(null); setWakeAt(undefined); setStatus('loading'); setError('');
+    advance.current += 1; latest.current = null;
+    if (!preserveScopePresentation.current) { current.current = null; setView(null); setAudio(null); }
+    setWakeAt(undefined); setStatus('loading'); setError('');
     let active = true;
     const refresh = new QueueRefresh({ visible: () => document.visibilityState !== 'hidden',
       failed: (cause) => { setError(errorMessage(cause)); setStatus('error'); },
@@ -68,14 +70,16 @@ function useQueueEvents(options: Subscription) {
       } });
     controller.current = refresh;
     const resume = () => { if (document.visibilityState === 'hidden') { refresh.suspend(); setWakeAt(undefined); } else refresh.invalidate(); };
-    const stop = subscribeReviewEvents(runtime, { changed: () => refresh.invalidate(), resumed: resume,
+    const stop = subscribeReviewEvents(runtime, { changed: () => { advance.current += 1; latest.current = null; refresh.invalidate(); }, resumed: resume,
       failed: (cause) => setError(errorMessage(cause)) });
     refresh.invalidate(true);
     return () => { active = false; refresh.stop(); stop(); controller.current = null; };
-  }, [runtime, scope, skipped, advance, current, latest, controller, pendingMessage, setWakeAt, setError, setStatus, setView, setAudio]);
+  }, [runtime, scope, preserveScopePresentation, skipped, advance, current, latest, controller, pendingMessage, setWakeAt, setError, setStatus, setView, setAudio]);
 }
 
-export function useReviewQueue(runtime: RuntimeAdapter, pending: string, scope: ReviewScope | null) {
+export function useReviewQueue(runtime: RuntimeAdapter, pending: string, { applied: scope, preservePresentation: preserveScopePresentation }: {
+  readonly applied: ReviewScope | null; readonly preservePresentation: RefObject<boolean>;
+}) {
   const [view, setView] = useState<QueueView | null>(null);
   const [audio, setAudio] = useState<SpeechAudio | null>(null);
   const [status, setStatus] = useState<Status>('loading');
@@ -87,7 +91,7 @@ export function useReviewQueue(runtime: RuntimeAdapter, pending: string, scope: 
   const advance = useRef(0);
   const controller = useRef<QueueRefresh | null>(null);
   const pendingMessage = useRef(pending); pendingMessage.current = pending;
-  useQueueEvents({ runtime, scope, skipped, current, latest, advance, controller, pendingMessage, setWakeAt, setError, setStatus, setView, setAudio });
+  useQueueEvents({ runtime, scope, preserveScopePresentation, skipped, current, latest, advance, controller, pendingMessage, setWakeAt, setError, setStatus, setView, setAudio });
   useEffect(() => {
     if (wakeAt === undefined || document.visibilityState === 'hidden') return;
     const timer = window.setTimeout(() => controller.current?.invalidate(true), Math.min(2_147_483_647, Math.max(1, wakeAt - Date.now())));

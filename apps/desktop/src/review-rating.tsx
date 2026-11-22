@@ -15,21 +15,23 @@ function RatingChoices({ text, disabled, onRate }: {
     <button key={rating} disabled={disabled} onClick={() => onRate(rating)}>{text.ratings[index]}</button>)}</div></>;
 }
 
-function useAvailabilityTimer({ id, runtime, availability, setAvailability, setError }: {
+function useAvailabilityTimer({ id, runtime, availability, setAvailability, setError, presentationRevision }: {
   readonly id: number; readonly runtime: RuntimeAdapter; readonly availability: ReviewAvailability | null;
   readonly setAvailability: (value: ReviewAvailability | null) => void; readonly setError: (value: string) => void;
+  readonly presentationRevision?: number;
 }) {
   useEffect(() => {
     if (!availability?.available_at) return;
     let active = true;
     const delay = Math.max(1000, Math.min(2_147_483_647, availability.available_at * 1000 - Date.now() + 1000));
-    const timer = window.setTimeout(() => { if (document.visibilityState === 'hidden') return; void runtime.reviewAvailability(id).then((value) => { if (active) { setAvailability(value); setError(''); } }).catch((cause: unknown) => { if (active) setError(errorMessage(cause)); }); }, delay);
+    const timer = window.setTimeout(() => { if (document.visibilityState === 'hidden') return; void runtime.reviewAvailability(id, presentationRevision).then((value) => { if (active) { setAvailability(value); setError(''); } }).catch((cause: unknown) => { if (active) setError(errorMessage(cause)); }); }, delay);
     return () => { active = false; window.clearTimeout(timer); };
-  }, [availability, id, runtime, setAvailability, setError]);
+  }, [availability, id, runtime, setAvailability, setError, presentationRevision]);
 }
 
-function useAvailabilityEvents({ id, runtime, setAvailability, setError }: {
+function useAvailabilityEvents({ id, runtime, setAvailability, setError, presentationRevision }: {
   readonly id: number; readonly runtime: RuntimeAdapter; readonly setAvailability: (value: ReviewAvailability | null) => void; readonly setError: (value: string) => void;
+  readonly presentationRevision?: number;
 }) {
   useEffect(() => {
     let active = true, running = false, pending = false;
@@ -37,18 +39,19 @@ function useAvailabilityEvents({ id, runtime, setAvailability, setError }: {
       if (!active || document.visibilityState === 'hidden') return;
       if (running) { pending = true; return; }
       running = true;
-      try { const value = await runtime.reviewAvailability(id); if (active) setAvailability(value); }
+      try { const value = await runtime.reviewAvailability(id, presentationRevision); if (active) setAvailability(value); }
       catch (cause) { if (active) setError(errorMessage(cause)); }
       finally { running = false; if (pending) { pending = false; void read(); } }
     }
     const resume = () => { void read(); };
     const stop = subscribeReviewEvents(runtime, { changed: resume, resumed: resume, failed: (cause) => setError(errorMessage(cause)) });
     return () => { active = false; stop(); };
-  }, [id, runtime, setAvailability, setError]);
+  }, [id, runtime, setAvailability, setError, presentationRevision]);
 }
 
-function useReviewRating({ id, runtime, text, onSuccess, onBusyChange }: {
+function useReviewRating({ id, runtime, text, onSuccess, onBusyChange, presentationRevision }: {
   readonly id: number; readonly runtime: RuntimeAdapter; readonly text: NotebookText; readonly onSuccess: () => void; readonly onBusyChange: (busy: boolean) => void;
+  readonly presentationRevision?: number;
 }) {
   const [availability, setAvailability] = useState<ReviewAvailability | null>(null);
   const [pending, setPending] = useState<RateRequest | null>(null);
@@ -62,19 +65,19 @@ function useReviewRating({ id, runtime, text, onSuccess, onBusyChange }: {
       const request = readPendingRating(id);
       if (request) setPending(request);
     } catch (cause) { setBlocked(true); setError(errorMessage(cause)); }
-    void runtime.reviewAvailability(id).then((value) => { if (active) setAvailability(value); })
+    void runtime.reviewAvailability(id, presentationRevision).then((value) => { if (active) setAvailability(value); })
       .catch((cause: unknown) => { if (active) setError(errorMessage(cause)); });
     return () => { active = false; };
-  }, [id, key, runtime]);
-  useAvailabilityTimer({ id, runtime, availability, setAvailability, setError });
-  useAvailabilityEvents({ id, runtime, setAvailability, setError });
+  }, [id, key, runtime, presentationRevision]);
+  useAvailabilityTimer({ id, runtime, availability, setAvailability, setError, presentationRevision });
+  useAvailabilityEvents({ id, runtime, setAvailability, setError, presentationRevision });
   async function submit(request: RateRequest) {
     const revision = pendingReviewRevision();
     setBusy(true); onBusyChange(true); setError('');
     try {
       localStorage.setItem(key, JSON.stringify(request));
       setPending(request);
-      const result = await runtime.rateReview(request);
+      const result = await runtime.rateReview(request, presentationRevision);
       if (!result) throw new Error(text.ratingUnavailable);
       if (!removePendingReview(key, revision)) return;
       setPending(null); onSuccess();
@@ -83,14 +86,14 @@ function useReviewRating({ id, runtime, text, onSuccess, onBusyChange }: {
       if (cause instanceof RatingRejected) {
         if (!removePendingReview(key, revision)) return;
         setPending(null); setAvailability(null);
-        try { setAvailability(await runtime.reviewAvailability(id)); }
+        try { setAvailability(await runtime.reviewAvailability(id, presentationRevision)); }
         catch (readError) { setError(`${text.availability[cause.code]}: ${errorMessage(readError)}`); return; }
         setError(`${text.availability[cause.code]}: ${message}`);
       } else setError(message);
     }
     finally { setBusy(false); onBusyChange(false); }
   }
-  async function refresh() { setError(''); try { setAvailability(await runtime.reviewAvailability(id)); } catch (cause) { setError(errorMessage(cause)); } }
+  async function refresh() { setError(''); try { setAvailability(await runtime.reviewAvailability(id, presentationRevision)); } catch (cause) { setError(errorMessage(cause)); } }
   return { availability, pending, error, busy: busy || blocked, submit, refresh };
 }
 
@@ -99,7 +102,7 @@ export function ReviewRating({ id, runtime, text, enabled, onSuccess, onBusyChan
   readonly enabled: boolean; readonly onSuccess: () => void; readonly onBusyChange: (busy: boolean) => void;
   readonly presentationRevision?: number;
 }) {
-  const { availability, pending, error, busy, submit, refresh } = useReviewRating({ id, runtime, text, onSuccess, onBusyChange });
+  const { availability, pending, error, busy, submit, refresh } = useReviewRating({ id, runtime, text, onSuccess, onBusyChange, presentationRevision });
   return <RatingBody id={id} text={text} enabled={enabled} availability={availability} pending={pending} error={error} busy={busy} submit={submit} refresh={refresh} presentationRevision={presentationRevision} />;
 }
 

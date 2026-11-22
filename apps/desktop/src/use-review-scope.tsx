@@ -4,12 +4,19 @@ import type { LearningCategory } from './platform/notes';
 import type { RuntimeAdapter } from './platform/runtime';
 import type { ReviewScope } from './platform/review-scope';
 import { errorMessage } from './platform/vocabulary';
+import { subscribeReviewEvents } from './review-events';
 
 const messages = {
   zh: { label: '复习范围', all: '全部复习', uncategorized: '未分类', choose: '请选择复习范围', current: (name: string) => `当前范围：${name}`, pending: (name: string) => `将在当前卡片评分或跳过后应用：${name}`, readError: '复习范围读取失败', saveError: '复习范围保存失败', retryRead: '重读复习范围', retrySave: '重试保存复习范围' },
   en: { label: 'Review scope', all: 'All reviews', uncategorized: 'Uncategorized', choose: 'Choose a review scope', current: (name: string) => `Applied scope: ${name}`, pending: (name: string) => `Applies after rating or skipping the current card: ${name}`, readError: 'Could not read review scope', saveError: 'Could not save review scope', retryRead: 'Reload review scope', retrySave: 'Retry saving review scope' },
   fr: { label: 'Périmètre de révision', all: 'Toutes les révisions', uncategorized: 'Sans catégorie', choose: 'Choisissez un périmètre', current: (name: string) => `Périmètre actuel : ${name}`, pending: (name: string) => `S’appliquera après l’évaluation ou le passage de la carte actuelle : ${name}`, readError: 'Lecture du périmètre impossible', saveError: 'Enregistrement du périmètre impossible', retryRead: 'Relire le périmètre', retrySave: 'Réessayer l’enregistrement du périmètre' },
 } as const;
+
+function remainingChoice(scope: ReviewScope | null, categories: readonly LearningCategory[]): ReviewScope | null {
+  if (scope?.kind !== 'vocabulary') return scope;
+  const category_ids = scope.category_ids.filter((id) => categories.some((category) => category.id === id));
+  return category_ids.length || scope.include_uncategorized ? { ...scope, category_ids } : { kind: 'needs_selection' };
+}
 
 export function useReviewScope(runtime: RuntimeAdapter) {
   const [applied, setApplied] = useState<ReviewScope | null>(null);
@@ -18,25 +25,38 @@ export function useReviewScope(runtime: RuntimeAdapter) {
   const pendingRef = useRef<ReviewScope | null>(null);
   const [busy, setBusy] = useState(false);
   const saving = useRef(false);
+  const preservePresentation = useRef(false);
+  const requestRef = useRef(0);
   const [error, setError] = useState('');
   const [version, setVersion] = useState(0);
   useEffect(() => {
     let active = true;
-    void Promise.all([runtime.reviewScope(), runtime.learningCategories()]).then(([scope, categories]) => {
-      if (!active) return;
-      setApplied(scope ?? { kind: 'all' }); setCategories(categories ?? []); setError('');
-    }).catch((cause: unknown) => { if (active) setError(errorMessage(cause)); });
-    return () => { active = false; };
+    async function read(live = false) {
+      if (saving.current) return;
+      const current = ++requestRef.current;
+      try {
+        const [scope, categories] = await Promise.all([runtime.reviewScope(), runtime.learningCategories()]);
+        if (!active || current !== requestRef.current) return;
+        preservePresentation.current = live;
+        setApplied((previous) => JSON.stringify(previous) === JSON.stringify(scope ?? { kind: 'all' }) ? previous : scope ?? { kind: 'all' });
+        setCategories(categories ?? []); setError('');
+        pendingRef.current = remainingChoice(pendingRef.current, categories ?? []); setPending(pendingRef.current);
+      } catch (cause) { if (active && current === requestRef.current) setError(errorMessage(cause)); }
+    }
+    const stop = subscribeReviewEvents(runtime, { changed: () => { void read(true); }, resumed: () => { void read(true); }, failed: (cause) => setError(errorMessage(cause)) }); void read();
+    return () => { active = false; stop(); };
   }, [runtime, version]);
   async function applyPending() {
     const choice = pendingRef.current;
-    if (!choice || saving.current) return;
-    saving.current = true; setBusy(true); setError('');
+    if (!choice) return true;
+    if (saving.current) return false;
+    requestRef.current += 1; saving.current = true; setBusy(true); setError('');
     try {
       const saved = await runtime.reviewScope(choice);
       if (!saved) throw new Error('Native review scope unavailable');
-      setApplied(saved); setPending(null); pendingRef.current = null;
-    } catch (cause) { setError(errorMessage(cause)); }
+      preservePresentation.current = false; setApplied(saved); setPending(null); pendingRef.current = null;
+      return true;
+    } catch (cause) { setError(errorMessage(cause)); return false; }
     finally { saving.current = false; setBusy(false); }
   }
   function select(selection: ReviewScope, hasCard: boolean) {
@@ -46,7 +66,7 @@ export function useReviewScope(runtime: RuntimeAdapter) {
     setPending(pending); pendingRef.current = pending; setError('');
     if (!hasCard) void applyPending();
   }
-  return { applied, pending, categories, busy, error, select, applyPending, retryRead: () => { setError(''); setVersion((value) => value + 1); } };
+  return { applied, pending, categories, busy, error, select, applyPending, preservePresentation, retryRead: () => { setError(''); setVersion((value) => value + 1); } };
 }
 
 export function ReviewScopeSelector({ state, locale, hasCard }: {

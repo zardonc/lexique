@@ -170,8 +170,8 @@ export interface RuntimeAdapter extends Readonly<typeof notesRuntime>, Readonly<
   readonly reviewPause: (id: number, paused?: boolean) => Promise<boolean | null>;
   readonly reviewAutoEnroll: (enabled?: boolean) => Promise<boolean | null>;
   readonly reviewProgress: (id: number) => Promise<ReviewProgress | null>;
-  readonly reviewAvailability: (id: number) => Promise<ReviewAvailability | null>;
-  readonly rateReview: (request: RateRequest) => Promise<ReviewProgress | null>;
+  readonly reviewAvailability: (id: number, presentationRevision?: number) => Promise<ReviewAvailability | null>;
+  readonly rateReview: (request: RateRequest, presentationRevision?: number) => Promise<ReviewProgress | null>;
   readonly undoTarget: () => Promise<string | null>;
   readonly undoReview: (operation: string, ratingOperation: string) => Promise<{ readonly queue_rebuilt: boolean } | null>;
   readonly reviewSettings: (settings?: ReviewSettings) => Promise<ReviewSettings | null>;
@@ -416,15 +416,17 @@ export const runtime: RuntimeAdapter = {
     if (!isTauri()) return null;
     return progressSchema.parse(await invoke('review_progress', { cardId: z.number().int().positive().safe().parse(id) }));
   },
-  async reviewAvailability(id) {
+  async reviewAvailability(id, presentationRevision) {
     if (!isTauri()) return null;
     return availabilitySchema.parse(await invoke('review_availability', { cardId: z.number().int().positive().safe().parse(id),
-      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone }));
+      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+      presentationRevision: presentationRevision === undefined ? null : z.number().int().nonnegative().safe().parse(presentationRevision) }));
   },
-  async rateReview(request) {
+  async rateReview(request, presentationRevision) {
     if (!isTauri()) return null;
     const valid = rateRequestSchema.parse(request);
-    const outcome = rateOutcomeSchema.parse(await invoke('review_rate', { request: valid }));
+    const outcome = rateOutcomeSchema.parse(await invoke('review_rate', { request: valid,
+      presentationRevision: presentationRevision === undefined ? null : z.number().int().nonnegative().safe().parse(presentationRevision) }));
     if (outcome.status === 'rejected') throw new RatingRejected(outcome.code, outcome.detail);
     return { revision: valid.expected_revision + 1, card: outcome.result.card };
   },

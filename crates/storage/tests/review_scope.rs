@@ -97,6 +97,437 @@ fn saved_category_scope_preserves_vocabulary_cards_and_reopens_without_grammar()
 }
 
 #[test]
+fn deleting_selected_categories_persists_remaining_conditions_and_requires_a_choice_on_reopen() {
+    let (mut connection, path, category) = fixture();
+    let remaining = create_category(&connection, "Remaining").unwrap().id;
+    set_review_scope(
+        &connection,
+        &ReviewScope::Vocabulary {
+            category_ids: vec![category, remaining],
+            include_uncategorized: true,
+        },
+    )
+    .unwrap();
+    delete_category(&connection, category).unwrap();
+    assert_eq!(
+        review_scope(&connection).unwrap(),
+        ReviewScope::Vocabulary {
+            category_ids: vec![remaining],
+            include_uncategorized: true,
+        }
+    );
+    delete_category(&connection, remaining).unwrap();
+    assert_eq!(
+        review_scope(&connection).unwrap(),
+        ReviewScope::Vocabulary {
+            category_ids: vec![],
+            include_uncategorized: true,
+        }
+    );
+    let last = create_category(&connection, "Last").unwrap().id;
+    set_review_scope(
+        &connection,
+        &ReviewScope::Vocabulary {
+            category_ids: vec![last],
+            include_uncategorized: false,
+        },
+    )
+    .unwrap();
+    delete_category(&connection, last).unwrap();
+    assert_eq!(
+        review_scope(&connection).unwrap(),
+        ReviewScope::NeedsSelection {}
+    );
+    assert_eq!(
+        review_queue(&mut connection, 1000, "UTC")
+            .unwrap()
+            .reason
+            .as_deref(),
+        Some("needs_selection")
+    );
+    drop(connection);
+    let reopened = Connection::open(&path).unwrap();
+    assert_eq!(
+        review_scope(&reopened).unwrap(),
+        ReviewScope::NeedsSelection {}
+    );
+    drop(reopened);
+    std::fs::remove_file(path).unwrap();
+}
+
+#[test]
+fn renaming_a_selected_category_keeps_identity_memberships_progress_and_scope() {
+    let (mut connection, path, category) = fixture();
+    let scope = ReviewScope::Vocabulary {
+        category_ids: vec![category],
+        include_uncategorized: false,
+    };
+    set_review_scope(&connection, &scope).unwrap();
+    let card = review_cards(&connection, 2).unwrap()[0].id;
+    rate_card(
+        &mut connection,
+        &RatingRequest {
+            operation: "before-rename".into(),
+            card_id: card,
+            expected_revision: 0,
+            rating: Rating::Good,
+            now: 1000,
+            timezone: "UTC".into(),
+        },
+    )
+    .unwrap();
+    let progress = review_progress(&connection, card).unwrap();
+    let record = get(&connection, 2).unwrap();
+    let queue = review_queue(&mut connection, 1001, "UTC").unwrap();
+    assert_eq!(
+        rename_category(&connection, category, "Travel").unwrap(),
+        LearningCategory {
+            id: category,
+            name: "Travel".into()
+        }
+    );
+    let unrelated = create_category(&connection, "Other").unwrap();
+    rename_category(&connection, unrelated.id, "Elsewhere").unwrap();
+    assert!(rename_category(&connection, category, "Elsewhere").is_err());
+    assert_eq!(
+        serde_json::to_value(get(&connection, 2).unwrap()).unwrap(),
+        serde_json::to_value(record).unwrap()
+    );
+    assert_eq!(
+        serde_json::to_value(review_progress(&connection, card).unwrap()).unwrap(),
+        serde_json::to_value(&progress).unwrap()
+    );
+    assert_eq!(
+        review_queue(&mut connection, 1001, "UTC").unwrap().cards,
+        queue.cards
+    );
+    drop(connection);
+    let reopened = Connection::open(&path).unwrap();
+    assert_eq!(review_scope(&reopened).unwrap(), scope);
+    assert!(
+        learning_categories(&reopened)
+            .unwrap()
+            .contains(&LearningCategory {
+                id: category,
+                name: "Travel".into()
+            })
+    );
+    assert_eq!(
+        serde_json::to_value(review_progress(&reopened, card).unwrap()).unwrap(),
+        serde_json::to_value(&progress).unwrap()
+    );
+    drop(reopened);
+    std::fs::remove_file(path).unwrap();
+}
+
+#[test]
+fn stale_saved_category_identities_are_revalidated_and_persisted_on_reentry() {
+    let (connection, path, category) = fixture();
+    // A preference written before live deletion revalidation was available.
+    connection.execute("INSERT INTO app_metadata(key,value) VALUES('review-scope',?1)", [serde_json::json!({"kind":"vocabulary", "category_ids":[category, 999], "include_uncategorized":false}).to_string()]).unwrap();
+    drop(connection);
+    let reopened = Connection::open(&path).unwrap();
+    assert_eq!(
+        review_scope(&reopened).unwrap(),
+        ReviewScope::Vocabulary {
+            category_ids: vec![category],
+            include_uncategorized: false
+        }
+    );
+    drop(reopened);
+    let reopened = Connection::open(&path).unwrap();
+    delete_category(&reopened, category).unwrap();
+    assert_eq!(
+        review_scope(&reopened).unwrap(),
+        ReviewScope::NeedsSelection {}
+    );
+    assert!(
+        set_review_scope(
+            &reopened,
+            &ReviewScope::Vocabulary {
+                category_ids: vec![999],
+                include_uncategorized: false
+            }
+        )
+        .is_err()
+    );
+    assert_eq!(
+        review_scope(&reopened).unwrap(),
+        ReviewScope::NeedsSelection {}
+    );
+    drop(reopened);
+    std::fs::remove_file(path).unwrap();
+}
+
+#[test]
+fn saved_memberships_update_cached_candidates_counts_and_audio_demand_without_changing_progress() {
+    let (mut connection, path, category) = fixture();
+    set_review_scope(
+        &connection,
+        &ReviewScope::Vocabulary {
+            category_ids: vec![category],
+            include_uncategorized: false,
+        },
+    )
+    .unwrap();
+    let mut cache = QueueCache::default();
+    let skipped = std::collections::HashSet::new();
+    let (queue, audio, _) =
+        review_queue_cached(&mut connection, 1000, "UTC", &skipped, &mut cache).unwrap();
+    assert_eq!(
+        queue
+            .cards
+            .iter()
+            .map(|card| card.vocabulary_id)
+            .collect::<Vec<_>>(),
+        vec![2]
+    );
+    assert_eq!(audio.missing_words, vec![2]);
+    let cards = review_cards(&connection, 1).unwrap();
+    let request = CategoryBulkRequest {
+        record_kind: "vocabulary".into(),
+        ids: vec![1],
+        category_id: category,
+        action: "add".into(),
+    };
+    assert_eq!(
+        bulk_classify(&connection, &request).unwrap()[0].status,
+        "saved"
+    );
+    {
+        let snapshot =
+            review_queue_snapshot(&connection, 1000, "UTC", &skipped, &mut cache).unwrap();
+        assert_eq!(
+            snapshot
+                .queue
+                .cards
+                .iter()
+                .map(|card| card.vocabulary_id)
+                .collect::<Vec<_>>(),
+            vec![1, 2]
+        );
+        assert_eq!(snapshot.audio.pending_count, 2);
+        assert_eq!(snapshot.audio.missing_words, vec![1, 2]);
+        assert_eq!(
+            snapshot
+                .demand_candidates
+                .iter()
+                .map(|card| card.vocabulary_id)
+                .collect::<Vec<_>>(),
+            vec![1, 1, 2, 2]
+        );
+        snapshot.transaction.commit().unwrap();
+    }
+    let failed = CategoryBulkRequest {
+        category_id: 999,
+        ..request
+    };
+    assert_eq!(
+        bulk_classify(&connection, &failed).unwrap()[0].status,
+        "failed"
+    );
+    let (unchanged, _, _) =
+        review_queue_cached(&mut connection, 1000, "UTC", &skipped, &mut cache).unwrap();
+    assert_eq!(
+        unchanged
+            .cards
+            .iter()
+            .map(|card| card.vocabulary_id)
+            .collect::<Vec<_>>(),
+        vec![1, 2]
+    );
+    let remove = CategoryBulkRequest {
+        category_id: category,
+        action: "remove".into(),
+        ..failed
+    };
+    assert_eq!(
+        bulk_classify(&connection, &remove).unwrap()[0].status,
+        "saved"
+    );
+    let (queue, audio, _) =
+        review_queue_cached(&mut connection, 1000, "UTC", &skipped, &mut cache).unwrap();
+    assert_eq!(
+        queue
+            .cards
+            .iter()
+            .map(|card| card.vocabulary_id)
+            .collect::<Vec<_>>(),
+        vec![2]
+    );
+    assert_eq!(audio.missing_words, vec![2]);
+    assert_eq!(review_cards(&connection, 1).unwrap(), cards);
+    for card in cards {
+        assert_eq!(review_progress(&connection, card.id).unwrap().revision, 0);
+    }
+    drop(connection);
+    std::fs::remove_file(path).unwrap();
+}
+
+#[test]
+fn current_presentation_finishes_after_membership_removal_without_bypassing_other_eligibility() {
+    let (mut connection, path, category) = fixture();
+    set_review_scope(
+        &connection,
+        &ReviewScope::Vocabulary {
+            category_ids: vec![category],
+            include_uncategorized: false,
+        },
+    )
+    .unwrap();
+    let card = review_queue(&mut connection, 1000, "UTC").unwrap().cards[0].id;
+    let revision = review_progress(&connection, card).unwrap().revision;
+    let request = RatingRequest {
+        operation: "finish-presentation".into(),
+        card_id: card,
+        expected_revision: revision,
+        rating: Rating::Good,
+        now: 1000,
+        timezone: "UTC".into(),
+    };
+    bulk_classify(
+        &connection,
+        &CategoryBulkRequest {
+            record_kind: "vocabulary".into(),
+            ids: vec![2],
+            category_id: category,
+            action: "remove".into(),
+        },
+    )
+    .unwrap();
+    assert_eq!(
+        review_availability(&connection, card, 1000, "UTC")
+            .unwrap()
+            .reason
+            .as_deref(),
+        Some("scope")
+    );
+    assert!(
+        matches!(rate_card(&mut connection, &request), Err(StorageError::RatingUnavailable(reason)) if reason == "scope")
+    );
+    delete_category(&connection, category).unwrap();
+    assert_eq!(
+        review_scope(&connection).unwrap(),
+        ReviewScope::NeedsSelection {}
+    );
+    assert_eq!(
+        review_presentation_availability(&connection, card, 1000, "UTC", Some(revision))
+            .unwrap()
+            .reason,
+        None
+    );
+    set_review_paused(&mut connection, 2, true).unwrap();
+    assert!(
+        matches!(rate_presented_card(&mut connection, &request, Some(revision)), Err(StorageError::RatingUnavailable(reason)) if reason == "paused")
+    );
+    set_review_paused(&mut connection, 2, false).unwrap();
+    let mut settings = review_settings(&connection).unwrap();
+    settings.new_limit = 0;
+    set_review_settings(&connection, &settings).unwrap();
+    assert!(
+        matches!(rate_presented_card(&mut connection, &request, Some(revision)), Err(StorageError::RatingUnavailable(reason)) if reason == "quota")
+    );
+    settings.new_limit = 20;
+    set_review_settings(&connection, &settings).unwrap();
+    let result = rate_presented_card(&mut connection, &request, Some(revision)).unwrap();
+    assert_eq!(
+        rate_presented_card(&mut connection, &request, Some(revision)).unwrap(),
+        result
+    );
+    assert_eq!(
+        review_progress(&connection, card).unwrap().revision,
+        revision + 1
+    );
+    assert_eq!(
+        review_presentation_availability(&connection, card, 1001, "UTC", Some(revision))
+            .unwrap()
+            .reason
+            .as_deref(),
+        Some("scope")
+    );
+    let future = RatingRequest {
+        operation: "future-presentation".into(),
+        expected_revision: revision + 1,
+        now: 1001,
+        ..request
+    };
+    assert!(
+        matches!(rate_presented_card(&mut connection, &future, Some(revision + 1)), Err(StorageError::RatingUnavailable(reason)) if reason == "due")
+    );
+    let clock = RatingRequest {
+        operation: "clock-presentation".into(),
+        now: 999,
+        ..future
+    };
+    assert!(
+        matches!(rate_presented_card(&mut connection, &clock, Some(revision + 1)), Err(StorageError::RatingUnavailable(reason)) if reason == "clock")
+    );
+    assert!(
+        review_queue(&mut connection, 1001, "UTC")
+            .unwrap()
+            .cards
+            .is_empty()
+    );
+    drop(connection);
+    std::fs::remove_file(path).unwrap();
+}
+
+#[test]
+fn only_successfully_saved_note_memberships_change_the_scoped_queue_and_survive_reopen() {
+    let (mut connection, path, category) = fixture();
+    let scope = ReviewScope::Vocabulary {
+        category_ids: vec![category],
+        include_uncategorized: false,
+    };
+    set_review_scope(&connection, &scope).unwrap();
+    let mut cache = QueueCache::default();
+    let skipped = std::collections::HashSet::new();
+    let (before, _, _) =
+        review_queue_cached(&mut connection, 1000, "UTC", &skipped, &mut cache).unwrap();
+    let record = get(&connection, 2).unwrap();
+    let cards = review_cards(&connection, 2).unwrap();
+    let mut request = SaveRequest {
+        operation: "save-membership".into(),
+        id: Some(record.id),
+        revision: Some(record.revision),
+        headword: record.headword,
+        notes: record.notes,
+        example_fr: record.example_fr,
+        example_zh: record.example_zh,
+        example_source: record.example_source,
+        example_sense: record.example_sense,
+        more_examples: record.more_examples,
+        category_ids: vec![999],
+    };
+    assert!(save(&mut connection, &request, None).is_err());
+    assert_eq!(get(&connection, 2).unwrap().category_ids, vec![category]);
+    let (unchanged, _, _) =
+        review_queue_cached(&mut connection, 1000, "UTC", &skipped, &mut cache).unwrap();
+    assert_eq!(unchanged.cards, before.cards);
+    request.category_ids.clear();
+    assert_eq!(
+        save(&mut connection, &request, None).unwrap().outcome,
+        "updated"
+    );
+    let (after, audio, _) =
+        review_queue_cached(&mut connection, 1000, "UTC", &skipped, &mut cache).unwrap();
+    assert!(after.cards.is_empty());
+    assert_eq!(after.reason.as_deref(), Some("empty_scope"));
+    assert_eq!(audio.pending_count, 0);
+    assert_eq!(review_cards(&connection, 2).unwrap(), cards);
+    assert_eq!(get(&connection, 2).unwrap().notes, "keep");
+    drop(connection);
+    let reopened = Connection::open(&path).unwrap();
+    assert_eq!(review_scope(&reopened).unwrap(), scope);
+    assert!(get(&reopened, 2).unwrap().category_ids.is_empty());
+    for card in cards {
+        assert_eq!(review_progress(&reopened, card.id).unwrap().revision, 0);
+    }
+    drop(reopened);
+    std::fs::remove_file(path).unwrap();
+}
+
+#[test]
 fn scoped_admission_and_rating_use_the_remaining_global_quota() {
     let (mut connection, path, category) = fixture();
     let mut settings = review_settings(&connection).unwrap();
