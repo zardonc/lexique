@@ -1,54 +1,75 @@
-# Selected-rights proposals for #141
+# Issue #141 independent selected-rights acceptance
 
-All 200 fields await separate selected-span rights and language review.
-[rights.json](rights.json) records each field’s actual fixed revision/span, attribution,
-licence, modification and proposed original-work layers. [field-review.json](field-review.json)
-records no independent acceptance. These are author proposals.
+**200 fields and 50 selected uses pass selected-text rights review.**
+Reviewer: Independent semantic and selected-rights reviewer #141; separate from
+author and coordinator. [Field rights](rights.json) and [field review](field-review.json)
+record exact accepted text, fixed revision/span, individual reasons, attribution
+and modifications. Quality and rights decisions remain separate.
 
-## Contribution and adaptation layers
+## Contribution and original-work boundaries
 
-The fixed Wiktionnaire lexical, grammatical and isolated-IPA contributions and Lexique’s
-French adaptations and new EN/ZH explanations retain CC BY-SA 4.0. The [legal text](COPYING),
-sections 2(a), 3(a), 3(b) and 4, allows sharing and adaptation with source/creator attribution,
-licence identification, modification notices, ShareAlike and no additional restrictions.
-Wikimedia Terms section 7 permits article/history attribution while preserving imported
-material’s separate obligations. Retained policy revision 38903168 and DAF8-template revision
-22113837 distinguish those boundaries. [Authority captures](rights.json) were reused from the
-existing fixed archive, with their original capture dates, rather than fetched again.
+Fixed Wiktionnaire contributions and Lexique's scoped French adaptations and
+new English/Chinese explanations retain **CC BY-SA 4.0**. The [legal text](COPYING),
+sections 2(a), 3(a), 3(b) and 4, permits sharing, adaptation and database extraction
+with attribution, source/licence identification, modification and warranty notices,
+ShareAlike and no additional restrictions. Wikimedia Terms section 7 permits
+article/history attribution while retaining separate imported-content obligations.
+Fixed copyright-policy revision **38903168** and DAF8-template revision **22113837**
+were read and checked against retained API content; policy CRLF/LF normalization
+is recorded separately from literal lexical article byte equality.
 
-## Original works
+**29 articles declare DAF8 imports.** Original credit remains **Académie française,
+Dictionnaire de l'Académie française, eighth edition, 1932–1935**. The established
+[#129 original-work basis](../issue-129/selected-rights.md) concerns the original
+institutional collective work. [CPI L123-3](https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20)
+gives seventy years from the January following publication: final 1935 publication
+yields **1936-01-01 + 70 years = 2006-01-01**. The policy's older 2002 shorthand
+does not replace that conservative calculation. Original author/work respect and
+credit remain under [L121-1](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278891).
+Later electronic/editorial editions have separate rights. An article import marker
+or current contributor registry does not establish sentence authorship.
 
-29 actual article import markers identify Académie française’s eighth-edition
-Dictionnaire de l’Académie française (1932–1935). Keep that original institutional collective
-work separate from later electronic/editorial work and from the contributor/adaptation layers.
-The established [#129 original-work evidence](../issue-129/selected-rights.md) uses
-[CPI L123-3](https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006278941/2026-02-20):
-final publication in 1935 gives 1936-01-01 plus 70 years, conservatively 2006-01-01.
-Original credit and modification notices remain, consistent with
-[L121-1](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278891).
-That historical rights decision applies only to the original work; it is not a review of
-any new #141 field. Page markers do not identify the author of each selected sentence.
+Each selected definition, isolated IPA and grammatical support span was read within
+its French POS frame. Bibliographic TLFi, Littré, DAF8, DAF9, Robert, Larousse and other
+identities are retained in [source context](source-context.json). They grant no
+permission for modern external dictionary prose. Literary/news examples, etymologies,
+media and other-language/POS content supply no admitted field.
 
-Bibliographic TLFi, Littré, DAF8, DAF9, Robert, Larousse and other reference identities remain
-in source-context.json. They do not by themselves license modern external prose or prove
-imported definition text. The DAF9 marker in motif’s etymology at line 3 is outside the
-selected reason definition at line 19. No modern publisher transcription is proposed.
+| Selected boundary | Rights decision |
+| --- | --- |
+| échantillon, representative-part definition 8 | Encyclopédie material at 39/49 and editor bibliography at 115 concern excluded old standards and credit tallies. |
+| langage, manner-of-expression definition 15 | Inline DAF8 at definition 8 concerns another meaning; conservative original credit remains separate. |
+| do, definition 13 and support 22/39 | Only ut and the C pitch-name correspondence support the new explanation; adjacent bilingual wording is not copied. |
+| brigade, worker definition 26 | FR/EN/ZH retain the certain-trades restriction under the same fixed CC BY-SA adaptation route. |
+| adjudant, France-specific rank definition 8 | Source OTAN OR-8 and naval equivalence are excluded from every accepted field; no NATO classification is admitted. |
+| motif, justification definition 19 | DAF9 in etymology 3 supplies no selected definition or redistribution licence. |
+| amateur, enthusiast definition 57 | Huguet sixteenth-century reference 191 and any later transcription are outside the selection. |
+| las, pâle, pâte, villa | Selected IPA variants occur in exact adjective/noun headers; no audio or media is imported. |
 
-## Selected boundaries and pending decisions
+All 50 uses have specific quality and rights reasons in rights.json's selected_uses
+and field-review.json's usage records. Each field adds its own French adaptation,
+pronunciation or new-explanation decision to the actual selected source boundary.
+[Authored snapshots](authored/snapshot.json) and [replacements](accepted-replacements.json)
+preserve exact proposals.
 
-Selected spans retain French language/POS frames, nominal gender and inflection,
-construction, region and register. Raw capture files and full contributor request/response
-chains are archived outside the repository for separate inspection. Literary/news quotations,
-images, audio and unrelated language/POS uses are excluded. Source spelling relations are
-bindings only, with no alias admission.
+## Evidence and package boundary
 
-do uses its nominal definition plus ut at line 22 and fixed C correspondence at line 39;
-the new explanation does not copy the adjacent Chinese translation. adjudant retains only
-the France-specific rank relationship, excluding the source’s questionable NATO-code assertion.
-las, pâle and pâte select one actually recorded IPA variant; villa retains the source’s
-explicit /vil.la/ variant. New wording is preserved for actual separate semantic review.
+The independent audit checks **50 literal article/API byte pairs, 200 field spans,
+193 supporting-span occurrences**, recorded IPA variants, request/response identity
+and the completed **seven-part** contributor chain. The registry has **3,177 named
+article memberships**, with returned anonymous counts totaling **711**. These are
+article credits, not distinct people or sentence authorship. Complete histories
+supply anonymous/edit attribution; registries may include later editors. No lexical
+article was recaptured during review.
 
-Redistribution must include [NOTICES.md](NOTICES.md), the full legal text, fixed source/history
-identifiers, contributor/original-work attribution, modification notices and selected source
-material under their actual terms. Actual combined conversion, packaged obligations, native
-verification and learner acceptance are coordinator-owned and remain pending.
+Raw source/authority archive:
+`C:/Users/inthe/IdeaProjects/lexique-d2-140-149/context/author-evidence/issue-141/`.
+Independent helpers, boundary audit, supplemental original HTML and logs:
+`C:/Users/inthe/IdeaProjects/lexique-d2-140-149/context/reviewer-evidence/issue-141/`.
+Le Robert brigade/adjudant pages returned HTTP 200 and corroborate current use;
+their external prose is not redistributed. No fresh statutory capture is claimed.
+
+[NOTICES.md](NOTICES.md), COPYING, source/history credits, contributor and original-work
+attribution, modifications and selected source materials define the shard obligations.
+Combined conversion, actual packaged obligations, native/offline execution and learner
+acceptance remain coordinator owned.

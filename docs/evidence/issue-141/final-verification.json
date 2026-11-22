@@ -1,85 +1,173 @@
 {
-  "kind": "content_author_verification",
+  "kind": "separate_independent_field_and_selected_rights_verification",
   "ticket": 141,
   "parent": 78,
-  "author_checkout": "C:/Users/inthe/IdeaProjects/lexique-d2-140-149/author-141",
-  "branch": "codex/d2-content-141",
-  "baseline_commit": "ff8aae2bdaf36096c6600d5d29342745b97c0eb7",
-  "merged_integration_commit": "a72f0411da8f1bb698ab4f0bdb995f6a6595c05e",
-  "tested_author_package_commit": "100af3398fde83ecd5f8f69cee645f41fe64c20b",
-  "baseline_content_version": "core-139-v1",
-  "baseline_admitted_groups": 2932,
-  "baseline_admitted_fields": 11728,
-  "scope_denominator_groups": 4087,
+  "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+  "independent_acceptance": true,
+  "checkout": "C:/Users/inthe/IdeaProjects/lexique-d2-140-149/review-141",
+  "branch": "codex/d2-review-141",
+  "author_package": "100af3398fde83ecd5f8f69cee645f41fe64c20b",
+  "final_author_head": "beb0ccf9a1996fef355742683f88d3ca1f86427b",
+  "review_base": "900dc0eb69fb62dc7517f68886c22635f9031a63",
+  "integration_tip_merged": "4a4ce485a7a386e73060a23c362e5ece429ceaba",
+  "tested_base_sha": "4a4ce485a7a386e73060a23c362e5ece429ceaba",
+  "tested_changes": "Owned staged evidence and Python test relative to tested_base_sha; final committed identity is retained in the external final-verification.json.",
+  "diff_command": "git diff 4a4ce485a7a386e73060a23c362e5ece429ceaba -- docs/evidence/issue-141 scripts/test_core_batch_141.py",
+  "platform": "Windows x64; PowerShell 7; Python 3.14.10 via uv; pnpm 11.25.0",
+  "author_evidence_root": "C:/Users/inthe/IdeaProjects/lexique-d2-140-149/context/author-evidence/issue-141",
+  "review_evidence_root": "C:/Users/inthe/IdeaProjects/lexique-d2-140-149/context/reviewer-evidence/issue-141",
+  "review_working_evidence_root": "C:/Users/inthe/IdeaProjects/lexique-d2-140-149/review-141/target/issue-141-review",
+  "scope": [
+    "docs/evidence/issue-141/**",
+    "scripts/test_core_batch_141.py"
+  ],
   "exact_groups": 50,
-  "proposed_senses": 50,
-  "proposed_fields": 200,
-  "missing_authored_fields": 0,
-  "missing_admitted_fields": 200,
-  "reused_groups": 0,
-  "reused_fields": 0,
-  "independently_accepted_new_fields": 0,
-  "independent_acceptance": false,
-  "independent_reviewer": null,
-  "fixed_article_api_revisions": 50,
-  "literal_raw_api_byte_matches": 50,
+  "selected_uses": 50,
+  "accepted_fields": 200,
+  "unchanged_accepted_fields": 197,
+  "replaced_accepted_fields": 3,
+  "unresolved_fields": 0,
+  "accepted_use_quality_and_rights_boundaries": 50,
+  "accepted_spelling_relations": 50,
+  "annotation_exceptions": 0,
+  "specialist_exceptions": 0,
+  "newly_admitted_canonical_fields": 0,
+  "pending_canonical_admission_fields": 200,
+  "scope_denominator_groups": 4087,
+  "scope_denominator_headwords": 3773,
+  "literal_article_api_byte_pairs": 50,
   "selected_field_spans": 200,
   "supporting_span_occurrences": 193,
-  "complete_contributor_response_parts": 7,
   "named_article_credits": 3177,
-  "returned_anonymous_counts": 711,
+  "returned_anonymous_article_counts": 711,
+  "complete_contributor_response_parts": 7,
   "selected_sentence_authorship_proved": false,
   "article_import_daf8_boundaries": 29,
-  "source_requests_http429": 0,
+  "article_recaptures": 0,
+  "fixed_source_audit_http_requests": 0,
+  "original_rights": "DAF8 original collective edition conservatively expired 2006-01-01; later editorial/electronic works separate. Fixed contributions and Lexique adaptations/explanations retain CC BY-SA 4.0.",
+  "source_anomalies": [
+    {
+      "headword": "adjudant",
+      "source_line": 8,
+      "status": "Source OR-8 excluded from every accepted field; only France-specific rank and neighbours admitted."
+    }
+  ],
+  "supplemental_reads": [
+    {
+      "title": "brigade",
+      "url": "https://dictionnaire.lerobert.com/definition/brigade",
+      "requested_at_utc": "2026-11-22T22:53:18.853043+00:00",
+      "role": "Independent contemporary-use corroboration; external prose not redistributed",
+      "status": 200,
+      "final_url": "https://dictionnaire.lerobert.com/definition/brigade",
+      "headers": {
+        "Date": "Sun, 22 Nov 2026 22:53:20 GMT",
+        "Content-Type": "text/html;charset=UTF-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "CF-Ray": "a5eb8279185c5f04-YVR",
+        "CF-Cache-Status": "DYNAMIC",
+        "Access-Control-Allow-Origin": "origin",
+        "Cache-Control": "no-store, no-cache",
+        "Server": "cloudflare",
+        "x-xss-protection": "1; mode=block",
+        "Strict-Transport-Security": "max-age=15552000",
+        "Vary": "accept-encoding",
+        "access-control-allow-credentials": "true",
+        "permissions-policy": "browsing-topics=(*)",
+        "x-content-type-options": "nosniff",
+        "x-download-options": "noopen",
+        "x-frame-options": "DENY",
+        "Set-Cookie": "XSRF-TOKEN=iw42wGe1m5PUfwBgp+6sBgW/WrPg/8depBAVHGuyeYk=.1795388000676.xbkrtjp0fhXOic+BzUA5lYQGtd/Wv/I7xa4xRPIOlJw=; Path=/",
+        "set-cookie": "XSRF-TOKEN=iw42wGe1m5PUfwBgp+6sBgW/WrPg/8depBAVHGuyeYk=.1795388000676.xbkrtjp0fhXOic+BzUA5lYQGtd/Wv/I7xa4xRPIOlJw=; Path=/"
+      },
+      "capture": "brigade-robert.html"
+    },
+    {
+      "title": "adjudant",
+      "url": "https://dictionnaire.lerobert.com/definition/adjudant",
+      "requested_at_utc": "2026-11-22T22:53:20.238538+00:00",
+      "role": "Independent contemporary-use corroboration; external prose not redistributed",
+      "status": 200,
+      "final_url": "https://dictionnaire.lerobert.com/definition/adjudant",
+      "headers": {
+        "Date": "Sun, 22 Nov 2026 22:53:21 GMT",
+        "Content-Type": "text/html;charset=UTF-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "CF-Ray": "a5eb827f2d5757e1-YVR",
+        "CF-Cache-Status": "DYNAMIC",
+        "Access-Control-Allow-Origin": "origin",
+        "Cache-Control": "no-store, no-cache",
+        "Server": "cloudflare",
+        "x-xss-protection": "1; mode=block",
+        "Strict-Transport-Security": "max-age=15552000",
+        "Vary": "accept-encoding",
+        "access-control-allow-credentials": "true",
+        "permissions-policy": "browsing-topics=(*)",
+        "x-content-type-options": "nosniff",
+        "x-download-options": "noopen",
+        "x-frame-options": "DENY",
+        "Set-Cookie": "XSRF-TOKEN=HKEu8rrg0dILV90lr7M0svFAsbjaAwLbKgyTtAoNq1Q=.1795388001225.6jrfPe11FwGM/yGOsb7P7VTBGXbdT4tQFaolIRNYP5k=; Path=/",
+        "set-cookie": "XSRF-TOKEN=HKEu8rrg0dILV90lr7M0svFAsbjaAwLbKgyTtAoNq1Q=.1795388001225.6jrfPe11FwGM/yGOsb7P7VTBGXbdT4tQFaolIRNYP5k=; Path=/"
+      },
+      "capture": "adjudant-robert.html"
+    }
+  ],
   "checks": [
     {
       "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_141.py",
-      "result": "initial_RED_missing_groups_package_then_GREEN_2_tests",
-      "boundary": "approved_resource_and_admission_record; no content acceptance"
+      "status": "passed",
+      "exit_code": 0,
+      "log": "target/issue-141-review/final-batch.log",
+      "tests": 5
     },
     {
-      "command": "same batch script with Batch141Tests.test_author_fields_have_rights_and_remain_pending_separate_review",
-      "result": "RED_missing_rights_record_then_GREEN_with_preserved_author_proposals"
-    },
-    {
-      "command": "uv run --python 3.14.10 python -B -X utf8 external_archive/audit.py",
-      "result": "passed_author_fixed_source_audit"
-    },
-    {
-      "command": "uv run --python 3.14.10 python -B -X utf8 external_archive/reproduce.py",
-      "result": "20_author_files_byte_identical_zero_network_requests"
-    },
-    {
-      "command": "pnpm test:core with uv-resolved Python directory first on process PATH",
-      "result": "18_tests_passed_on_unchanged_canonical_core",
-      "initial_default_path_attempt": "exit_9009_Python_unavailable_no_assertions_reached"
+      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-141-review/audit.py",
+      "status": "passed",
+      "exit_code": 0,
+      "log": "target/issue-141-review/final-audit.log"
     },
     {
       "command": "pnpm test:docs",
-      "result": "passed_on_committed_package_468_documents_3622_local_links_404_skipped_links"
+      "status": "passed",
+      "exit_code": 0,
+      "log": "target/issue-141-review/final-docs.log"
     },
     {
-      "command": "git diff --cached --check and staged-path scope inspection",
-      "result": "passed_scoped_author_files_only"
-    }
-  ],
-  "unresolved_author_content_rows": [],
-  "source_anomalies": [
+      "command": "git diff --check",
+      "status": "passed",
+      "exit_code": 0,
+      "log": "target/issue-141-review/final-diff.log"
+    },
     {
-      "frozen_row": 3034,
-      "headword": "adjudant",
-      "source_line_1_based": 8,
-      "note": "Questionable source NATO OR-8 assertion excluded from all proposed fields; French rank relationship remains for separate review."
+      "command": "git diff --cached --check",
+      "status": "passed",
+      "exit_code": 0,
+      "log": "target/issue-141-review/final-cached-diff.log"
     }
   ],
-  "pending_independent_quality_fields": 200,
-  "pending_independent_selected_span_rights_fields": 200,
-  "pending_selected_use_and_spelling_construction_records_each": 50,
-  "combined_conversion_and_packaging": "coordinator_owned_not_run",
-  "native_all_group_lookup_save_reopen": "coordinator_owned_not_run",
-  "learner_acceptance": "not_run",
-  "frontend_and_rust_checks": "not_run_content_only_author_scope",
-  "archive_root": "C:/Users/inthe/IdeaProjects/lexique-d2-140-149/context/author-evidence/issue-141",
-  "working_logs_root": "C:/Users/inthe/IdeaProjects/lexique-d2-140-149/author-141/target/issue-141",
-  "original_work_obligations": "CC BY-SA 4.0 adaptation/contribution layer; source/history and full contributor attribution, legal text, modification notices, selected source material; separately credited DAF8 original collective-work basis; actual combined package still pending"
+  "focused_regressions": [
+    {
+      "check": "brigade certain-trades restriction",
+      "red": "red-brigade.log",
+      "green": "green-brigade.log"
+    },
+    {
+      "check": "independent resource/admission acceptance",
+      "red": "red-acceptance.log",
+      "green": "final-batch.log"
+    }
+  ],
+  "coordinator_owned_unrun": [
+    "combined canonical conversion",
+    "actual packaged obligations",
+    "all-group native lookup/save/reopen",
+    "learner-data preservation",
+    "learner acceptance",
+    "other-platform execution",
+    "offline and release gates"
+  ],
+  "frontend_and_rust_checks": "not_run_evidence_and_Python_test_only"
 }

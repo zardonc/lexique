@@ -14,7 +14,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -27,7 +27,10 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+          "original_work_rights_status": "public_domain_at_original_collective_work_boundary",
+          "independent_reason": "Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -68,7 +71,9 @@
           "raw_reference": "* {{R:Ubaud}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "absent/ADJ, fixed French revision 39770836, selected field lines 7, 8: Ordinary adjective of absence; noun absence and mental inattention are separate frames or meanings. Masculine absent and feminine absente are distinguished. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. DAF8 article import notice at 134 requires original Académie française eighth-edition (1932–1935) credit. Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it. An article marker and complete registry do not establish selected-sentence authorship. Reference identities at lines 134, 135, 159, 266, 267, 268, 269 remain bibliography, not licences for modern external definitions or proof of sentence origin. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_102201",
@@ -84,10 +89,12 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
-      "external_reference_markers": []
+      "external_reference_markers": [],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "défoncer/VER, fixed French revision 40050573, selected field lines 6, 20: Physical object damage at line 20 is unmarked; the neighbouring familiar assault, vulgar sexual and intoxication uses do not determine its register. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. No separate text-import notice identifies an original work for the selected span; fixed contributor wording remains under the recorded CC BY-SA contribution layer. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_147039",
@@ -103,7 +110,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -112,7 +119,9 @@
           "raw_reference": "* {{R:DAF8}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "vendeur/NOM, fixed French revision 39919641, selected field lines 20, 25: The ordinary masculine professional noun is selected, with vendeuse/venditrice in the noun header; the sales-promoting adjective is a different frame. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. No separate text-import notice identifies an original work for the selected span; fixed contributor wording remains under the recorded CC BY-SA contribution layer. Reference identities at lines 127 remain bibliography, not licences for modern external definitions or proof of sentence origin. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_155932",
@@ -128,7 +137,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -147,7 +156,9 @@
           "raw_reference": "* {{R:DAF8}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "couvent/NOM, fixed French revision 39396802, selected field lines 8, 9: Current dwelling noun, masculine, differs from the religious community itself, the vieilli school and couvent as a couver inflection. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. No separate text-import notice identifies an original work for the selected span; fixed contributor wording remains under the recorded CC BY-SA contribution layer. Reference identities at lines 4, 114, 117 remain bibliography, not licences for modern external definitions or proof of sentence origin. Alain Rey/TLFi etymological material at 4 and Rey bibliography at 114 are not selected; the noun dwelling definition at 9 and noun IPA at 8 are independent of the couver flexion at 83. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_158342",
@@ -163,7 +174,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -182,7 +193,9 @@
           "raw_reference": ": Du {{étyl|fr|en|mot=douceur}}{{R|Oxford}}.",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "douceur/NOM, fixed French revision 39811581, selected field lines 12, 34: The absolute singular conduct sense remains current; plural douceurs for sweets and the désuet compensation definition are outside it. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. No separate text-import notice identifies an original work for the selected span; fixed contributor wording remains under the recorded CC BY-SA contribution layer. Reference identities at lines 6, 128, 134 remain bibliography, not licences for modern external definitions or proof of sentence origin. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_158530",
@@ -198,7 +211,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -211,7 +224,10 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+          "original_work_rights_status": "public_domain_at_original_collective_work_boundary",
+          "independent_reason": "Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -242,7 +258,9 @@
           "raw_reference": "{{R|L’Encyclopédie|{{smcp|Boucher d’Argis}}, {{smcp|Le Blond}}, {{smcp|Le Roy}}, ''Encyclopédie, ou Dictionnaire raisonné des sciences, des arts et des métiers'', {{smcp|Diderot}} et {{smcp|d’Alembert}}, 1ère édition, 1751, tome 5, p. 230, « [[s:L’Encyclopédie/1re édition/ECHANTILLON|échantillon]] »}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "échantillon/NOM, fixed French revision 39394259, selected field lines 7, 8: The ordinary representative-part noun is supported before its narrower textile/scientific subsenses; archaic legal standards and credit tallies are excluded. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. DAF8 article import notice at 113 requires original Académie française eighth-edition (1932–1935) credit. Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it. An article marker and complete registry do not establish selected-sentence authorship. Reference identities at lines 39, 49, 112, 113, 115 remain bibliography, not licences for modern external definitions or proof of sentence origin. L’Encyclopédie imports/references at 39 and 49 concern obsolete standards and credit tallies, not the representative-part definition at 8. Their prose and editor credit at 115 are outside the selected fields. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_167484",
@@ -258,7 +276,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -271,7 +289,10 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+          "original_work_rights_status": "public_domain_at_original_collective_work_boundary",
+          "independent_reason": "Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -287,7 +308,9 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "massacrer/VER, fixed French revision 39648501, selected field lines 6, 7: The literal transitive killing sense has people as direct object; figurative botching, injuries by hyperbole and hunted animals are distinct. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. DAF8 article import notice at 81 requires original Académie française eighth-edition (1932–1935) credit. Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it. An article marker and complete registry do not establish selected-sentence authorship. Reference identities at lines 80, 81 remain bibliography, not licences for modern external definitions or proof of sentence origin. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_169829",
@@ -303,7 +326,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -316,7 +339,10 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+          "original_work_rights_status": "public_domain_at_original_collective_work_boundary",
+          "independent_reason": "Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -327,7 +353,9 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "ôter/VER, fixed French revision 40005869, selected field lines 8, 19: Ordinary transitive clothing-removal use, with clothing as object; its narrower scope does not claim every enlever meaning. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. DAF8 article import notice at 167 requires original Académie française eighth-edition (1932–1935) credit. Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it. An article marker and complete registry do not establish selected-sentence authorship. Reference identities at lines 167 remain bibliography, not licences for modern external definitions or proof of sentence origin. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_174099",
@@ -343,7 +371,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -356,7 +384,10 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+          "original_work_rights_status": "public_domain_at_original_collective_work_boundary",
+          "independent_reason": "Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -367,7 +398,9 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "recommander/VER, fixed French revision 39777291, selected field lines 8, 14: This transitive recommendation is distinct from forceful instructions, postal registration and se recommander. A thing or action is recommended to someone. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. DAF8 article import notice at 163 requires original Académie française eighth-edition (1932–1935) credit. Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it. An article marker and complete registry do not establish selected-sentence authorship. Reference identities at lines 163 remain bibliography, not licences for modern external definitions or proof of sentence origin. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_176832",
@@ -383,7 +416,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -396,7 +429,10 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+          "original_work_rights_status": "public_domain_at_original_collective_work_boundary",
+          "independent_reason": "Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -417,7 +453,9 @@
           "raw_reference": "* {{R:TLFi}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "solitaire/ADJ, fixed French revision 39990672, selected field lines 9, 11: The personal adjective has a shared masculine/feminine form; deserted places, historical Port-Royal, diamonds and solitaire games are separate meanings. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. DAF8 article import notice at 172 requires original Académie française eighth-edition (1932–1935) credit. Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it. An article marker and complete registry do not establish selected-sentence authorship. Reference identities at lines 172, 175, 176 remain bibliography, not licences for modern external definitions or proof of sentence origin. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_3792",
@@ -433,7 +471,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -446,7 +484,10 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+          "original_work_rights_status": "public_domain_at_original_collective_work_boundary",
+          "independent_reason": "Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -467,7 +508,9 @@
           "raw_reference": "* {{R:DIL|31425|head=maisse}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "masse/NOM, fixed French revision 39927307, selected field lines 15, 35: The ordinary quantity sense is distinct from physical mass, collective crowds, electrical ground and the hammer noun. Masse de supplies a quantity complement. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. DAF8 article import notice at 396 requires original Académie française eighth-edition (1932–1935) credit. Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it. An article marker and complete registry do not establish selected-sentence authorship. Reference identities at lines 396, 411, 452 remain bibliography, not licences for modern external definitions or proof of sentence origin. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_4055",
@@ -483,7 +526,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -496,7 +539,10 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+          "original_work_rights_status": "public_domain_at_original_collective_work_boundary",
+          "independent_reason": "Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -527,7 +573,9 @@
           "raw_reference": "* {{RÉF|1}} {{R:Mistral}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "dialogue/NOM, fixed French revision 39819326, selected field lines 9, 10: Current conversation noun; political negotiation, fictional dialogue lines, a literary work and dialoguer flexions are distinct. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. DAF8 article import notice at 139 requires original Académie française eighth-edition (1932–1935) credit. Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it. An article marker and complete registry do not establish selected-sentence authorship. Reference identities at lines 5, 139, 212, 213, 214 remain bibliography, not licences for modern external definitions or proof of sentence origin. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_5125",
@@ -543,7 +591,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -582,7 +630,9 @@
           "raw_reference": "* {{R:Godefroy}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "missile/NOM, fixed French revision 39957339, selected field lines 11, 20: Ordinary weapon noun from the modern propelled-and-guided definition; the generic projectile, figurative insult and archaic adjective are excluded. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. No separate text-import notice identifies an original work for the selected span; fixed contributor wording remains under the recorded CC BY-SA contribution layer. Reference identities at lines 5, 6, 97, 98, 128, 201, 221 remain bibliography, not licences for modern external definitions or proof of sentence origin. Robert historical-language references in the etymology at 5–6 are excluded. The selected propelled/guided noun at 20 does not copy those historical claims or the archaic adjective. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_26118",
@@ -598,10 +648,12 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
-      "external_reference_markers": []
+      "external_reference_markers": [],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "came/NOM, fixed French revision 39832796, selected field lines 43, 44: Current slang feminine drug noun; mechanical cam, poor merchandise, lighter and se camer are separate entries or extensions. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. No separate text-import notice identifies an original work for the selected span; fixed contributor wording remains under the recorded CC BY-SA contribution layer. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_134320",
@@ -617,7 +669,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -630,7 +682,10 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+          "original_work_rights_status": "public_domain_at_original_collective_work_boundary",
+          "independent_reason": "Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -641,7 +696,9 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "marquis/NOM, fixed French revision 39009030, selected field lines 11, 21: The source explicitly marks this title aujourd’hui, separate from guarding a frontier or possessing an old marquisate; the title is ordinary cultural vocabulary. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. DAF8 article import notice at 92 requires original Académie française eighth-edition (1932–1935) credit. Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it. An article marker and complete registry do not establish selected-sentence authorship. Reference identities at lines 92 remain bibliography, not licences for modern external definitions or proof of sentence origin. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_149600",
@@ -657,7 +714,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -670,7 +727,10 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+          "original_work_rights_status": "public_domain_at_original_collective_work_boundary",
+          "independent_reason": "Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -681,7 +741,9 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "bien-aimé/NOM, fixed French revision 38999669, selected field lines 42, 43: Affectionate masculine noun bien-aimé, with feminine bien-aimée; adjective and unhyphenated variant do not replace the frozen spelling. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. DAF8 article import notice at 77 requires original Académie française eighth-edition (1932–1935) credit. Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it. An article marker and complete registry do not establish selected-sentence authorship. Reference identities at lines 77 remain bibliography, not licences for modern external definitions or proof of sentence origin. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_156467",
@@ -697,7 +759,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -710,7 +772,10 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+          "original_work_rights_status": "public_domain_at_original_collective_work_boundary",
+          "independent_reason": "Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -721,7 +786,9 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "dater/VER, fixed French revision 39831462, selected field lines 7, 8: Current transitive date-marking verb, distinct from dater de, being outdated and a romantic date. The selected lexical pronunciation is frame-specific. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. DAF8 article import notice at 106 requires original Académie française eighth-edition (1932–1935) credit. Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it. An article marker and complete registry do not establish selected-sentence authorship. Reference identities at lines 106 remain bibliography, not licences for modern external definitions or proof of sentence origin. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_166390",
@@ -737,7 +804,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -750,7 +817,10 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+          "original_work_rights_status": "public_domain_at_original_collective_work_boundary",
+          "independent_reason": "Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -761,7 +831,9 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "légal/ADJ, fixed French revision 39997273, selected field lines 9, 10: Ordinary legality adjective; legal-related, statute-established and Mosaic-law meanings are distinct. Légale/légaux follow the recorded al paradigm. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. DAF8 article import notice at 145 requires original Académie française eighth-edition (1932–1935) credit. Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it. An article marker and complete registry do not establish selected-sentence authorship. Reference identities at lines 145 remain bibliography, not licences for modern external definitions or proof of sentence origin. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_168081",
@@ -777,7 +849,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -790,7 +862,10 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+          "original_work_rights_status": "public_domain_at_original_collective_work_boundary",
+          "independent_reason": "Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -811,7 +886,9 @@
           "raw_reference": "* {{R:TLFi|mineuse}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "mineur/NOM, fixed French revision 39720815, selected field lines 118, 119: Current legal noun at 119 is independent of occupational mineur/mineuse, mathematical minors and musical mode. Legal-age conditions are explicit. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. DAF8 article import notice at 312 requires original Académie française eighth-edition (1932–1935) credit. Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it. An article marker and complete registry do not establish selected-sentence authorship. Reference identities at lines 312, 313, 314 remain bibliography, not licences for modern external definitions or proof of sentence origin. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_177094",
@@ -827,7 +904,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -840,7 +917,10 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+          "original_work_rights_status": "public_domain_at_original_collective_work_boundary",
+          "independent_reason": "Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -856,7 +936,9 @@
           "raw_reference": "* {{R:Gaffiot}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "splendide/ADJ, fixed French revision 39312446, selected field lines 7, 8: The ordinary magnificence adjective is unmarked; the separate literary radiance definition supplies no additional restriction here. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. DAF8 article import notice at 69 requires original Académie française eighth-edition (1932–1935) credit. Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it. An article marker and complete registry do not establish selected-sentence authorship. Reference identities at lines 69, 91 remain bibliography, not licences for modern external definitions or proof of sentence origin. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_376",
@@ -872,7 +954,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -896,7 +978,9 @@
           "raw_reference": ": Du {{étyl|fr|en|mot=habitant}}{{R|etymonline}}.",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "habitant/NOM, fixed French revision 39774627, selected field lines 8, 9: Ordinary resident noun with feminine habitante, distinct from Canadian/Caribbean rural senses, derogatory adjective and habiter participle. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. No separate text-import notice identifies an original work for the selected span; fixed contributor wording remains under the recorded CC BY-SA contribution layer. Reference identities at lines 164, 165, 166, 176 remain bibliography, not licences for modern external definitions or proof of sentence origin. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_1817",
@@ -912,7 +996,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -926,7 +1010,9 @@
           "raw_reference": "* {{R:Meyer|date=octobre 2013|article=lapin Polonais}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "polonais/ADJ, fixed French revision 40007628, selected field lines 11, 12: Current geographic adjective, lowercase, with polonaise feminine and unchanged written masculine plural; language, rabbit and topological nouns/uses are excluded. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. No separate text-import notice identifies an original work for the selected span; fixed contributor wording remains under the recorded CC BY-SA contribution layer. Reference identities at lines 189, 190 remain bibliography, not licences for modern external definitions or proof of sentence origin. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_7929",
@@ -942,10 +1028,12 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
-      "external_reference_markers": []
+      "external_reference_markers": [],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "savon/NOM, fixed French revision 39923786, selected field lines 10, 11: Ordinary washing-product noun; the chemistry category does not make the referent specialist. Donner un savon is a separate figurative reprimand. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. No separate text-import notice identifies an original work for the selected span; fixed contributor wording remains under the recorded CC BY-SA contribution layer. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_9426",
@@ -961,7 +1049,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -985,7 +1073,9 @@
           "raw_reference": "{{R|TLFi}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "langage/NOM, fixed French revision 39774534, selected field lines 7, 15: Current manner-of-expression subsense, distinct from language faculty, animal signals, artistic systems and programming languages. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. No separate text-import notice identifies an original work for the selected span; fixed contributor wording remains under the recorded CC BY-SA contribution layer. Reference identities at lines 3, 8, 239, 240 remain bibliography, not licences for modern external definitions or proof of sentence origin. The inline DAF8 attribution at definition 8 identifies a different language-faculty definition. Selected manner-of-expression at 15 is retained under the fixed contribution/adaptation layer, with conservative DAF8 original credit already recorded. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_10801",
@@ -1001,7 +1091,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -1015,7 +1105,9 @@
           "raw_reference": "* {{R:DAF8}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "tissu/NOM, fixed French revision 40036611, selected field lines 8, 9: Ordinary fabric noun; biological tissue, figurative fabrication, circus apparatus and obsolete tistre forms are separate. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. No separate text-import notice identifies an original work for the selected span; fixed contributor wording remains under the recorded CC BY-SA contribution layer. Reference identities at lines 211, 229 remain bibliography, not licences for modern external definitions or proof of sentence origin. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_22556",
@@ -1031,7 +1123,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -1140,7 +1232,9 @@
           "raw_reference": "* {{R:PC Niger 2001}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "do/NOM, fixed French revision 39938313, selected field lines 12, 13: Current musical-note noun; actual support at 22 gives ut and 39 gives C. No middle-octave-only, movable-do, martial philosophy or harp sense is admitted. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. No separate text-import notice identifies an original work for the selected span; fixed contributor wording remains under the recorded CC BY-SA contribution layer. Reference identities at lines 6, 129, 322, 323, 324, 327, 328, 329, 330, 387, 470, 753, 813, 814, 815, 816, 854, 855, 856, 867, 969 remain bibliography, not licences for modern external definitions or proof of sentence origin. Only ut at 22 and the single C pitch-name correspondence at 39 support the new explanation. Adjacent upstream bilingual translation prose is not copied; no separate bilingual source authorship is claimed. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_149081",
@@ -1156,7 +1250,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -1175,7 +1269,9 @@
           "raw_reference": "* {{R:Meyer|article=baleines}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "baleine/NOM, fixed French revision 39953269, selected field lines 14, 15: Ordinary animal noun remains everyday vocabulary despite the biological category; clothing stays, insults, heraldry and spending metaphors are distinct. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. No separate text-import notice identifies an original work for the selected span; fixed contributor wording remains under the recorded CC BY-SA contribution layer. Reference identities at lines 312, 313, 314 remain bibliography, not licences for modern external definitions or proof of sentence origin. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_150352",
@@ -1191,7 +1287,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1204,7 +1300,10 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+          "original_work_rights_status": "public_domain_at_original_collective_work_boundary",
+          "independent_reason": "Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1230,7 +1329,9 @@
           "raw_reference": ": {{date|1630|lang=en}} Du {{étyl|fr|en|mot=brigade}}{{R|etymonline}}.",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "brigade/NOM, fixed French revision 39687328, selected field lines 9, 26: Current work-crew use is corroborated by Le Robert, especially kitchens. The source restricts this sense to certain trades, so all three meaning fields retain that condition; military/police groups are separate. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. DAF8 article import notice at 118 requires original Académie française eighth-edition (1932–1935) credit. Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it. An article marker and complete registry do not establish selected-sentence authorship. Reference identities at lines 5, 117, 118, 122 remain bibliography, not licences for modern external definitions or proof of sentence origin. The worker-crew line 26 includes dans certains corps de métier. The accepted adaptation retains that qualifier in FR/EN/ZH. Larousse bibliography at 117 and the separately captured Le Robert text are not redistributed definitions. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_160581",
@@ -1246,7 +1347,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1259,7 +1360,10 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+          "original_work_rights_status": "public_domain_at_original_collective_work_boundary",
+          "independent_reason": "Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1270,7 +1374,9 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "exceptionnel/ADJ, fixed French revision 39773952, selected field lines 7, 12: Current rarity adjective; feminine exceptionnelle has the same pronunciation. Exception-related and evaluative excellence are outside this selected use. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. DAF8 article import notice at 84 requires original Académie française eighth-edition (1932–1935) credit. Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it. An article marker and complete registry do not establish selected-sentence authorship. Reference identities at lines 84 remain bibliography, not licences for modern external definitions or proof of sentence origin. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_177048",
@@ -1286,7 +1392,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1299,7 +1405,10 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+          "original_work_rights_status": "public_domain_at_original_collective_work_boundary",
+          "independent_reason": "Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1315,7 +1424,9 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "spécialiste/NOM, fixed French revision 39773139, selected field lines 27, 28: Current shared-gender noun; the expert adjective and familiar elliptical doctor are separate. No medical specialization is inferred. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. DAF8 article import notice at 111 requires original Académie française eighth-edition (1932–1935) credit. Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it. An article marker and complete registry do not establish selected-sentence authorship. Reference identities at lines 110, 111 remain bibliography, not licences for modern external definitions or proof of sentence origin. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_40746",
@@ -1331,7 +1442,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1344,7 +1455,10 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+          "original_work_rights_status": "public_domain_at_original_collective_work_boundary",
+          "independent_reason": "Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1375,7 +1489,9 @@
           "raw_reference": "* {{R:Cantalausa}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "adjudant/NOM, fixed French revision 39207671, selected field lines 7, 8: Current French rank noun is corroborated above sergent-chef by Le Robert. France, adjudant-chef above, sergent-chef or gendarmerie maréchal des logis-chef below stay explicit; Canadian rank and bird are separate. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. DAF8 article import notice at 84 requires original Académie française eighth-edition (1932–1935) credit. Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it. An article marker and complete registry do not establish selected-sentence authorship. Reference identities at lines 83, 84, 122, 143, 162 remain bibliography, not licences for modern external definitions or proof of sentence origin. The selected source paragraph at 8 contains a source OTAN OR-8 assertion. That assertion and naval equivalence are not in accepted fields. Only the France-specific rank and neighbours are adapted; current external corroboration supplies no redistributed prose. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_53547",
@@ -1391,7 +1507,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1404,7 +1520,10 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+          "original_work_rights_status": "public_domain_at_original_collective_work_boundary",
+          "independent_reason": "Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1425,7 +1544,9 @@
           "raw_reference": "* {{R:Hammar|1046}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "villa/NOM, fixed French revision 39715923, selected field lines 8, 9: Current leisure-house noun is distinct from the street-name sense. The selected variant /vil.la/ is applicable without claiming it is the sole French pronunciation. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. DAF8 article import notice at 56 requires original Académie française eighth-edition (1932–1935) credit. Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it. An article marker and complete registry do not establish selected-sentence authorship. Reference identities at lines 56, 224, 256 remain bibliography, not licences for modern external definitions or proof of sentence origin. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_120810",
@@ -1441,7 +1562,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1454,7 +1575,10 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+          "original_work_rights_status": "public_domain_at_original_collective_work_boundary",
+          "independent_reason": "Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1475,7 +1599,9 @@
           "raw_reference": "* {{R:TLFi}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "motif/NOM, fixed French revision 39791281, selected field lines 8, 19: Current justification noun at 19 differs from motive generally, artistic/music patterns, military punishment and regex. Motif de gives the reason complement. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. DAF8 article import notice at 190 requires original Académie française eighth-edition (1932–1935) credit. Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it. An article marker and complete registry do not establish selected-sentence authorship. Reference identities at lines 3, 190, 191 remain bibliography, not licences for modern external definitions or proof of sentence origin. DAF9 occurs in etymology line 3, not in the selected justification at 19. No ninth-edition wording or licence is inferred from that reference. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_131626",
@@ -1491,7 +1617,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -1545,7 +1671,9 @@
           "raw_reference": "* {{R:BaTelÒc}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "las/ADJ, fixed French revision 39195769, selected field lines 19, 20: Current masculine fatigue adjective; feminine lasse and both recorded variants are recognized. Las de in the disgust sense and vieilli interjection are outside the selection. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. No separate text-import notice identifies an original work for the selected span; fixed contributor wording remains under the recorded CC BY-SA contribution layer. Reference identities at lines 133, 134, 169, 203, 359, 360, 361, 362, 363, 364 remain bibliography, not licences for modern external definitions or proof of sentence origin. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_141463",
@@ -1561,10 +1689,12 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
-      "external_reference_markers": []
+      "external_reference_markers": [],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "tente/NOM, fixed French revision 39937208, selected field lines 9, 17: Current camping noun differs from the anatomical extension and tenter flexions; the material/frame properties remain usual rather than mandatory. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. No separate text-import notice identifies an original work for the selected span; fixed contributor wording remains under the recorded CC BY-SA contribution layer. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_149423",
@@ -1580,7 +1710,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -1594,7 +1724,9 @@
           "raw_reference": "* {{R:DAF8}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "beau-père/NOM, fixed French revision 39825676, selected field lines 8, 9: Current kinship noun, exact hyphenated spelling and plural beaux-pères, distinct from a parent’s new partner. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. No separate text-import notice identifies an original work for the selected span; fixed contributor wording remains under the recorded CC BY-SA contribution layer. Reference identities at lines 4, 147 remain bibliography, not licences for modern external definitions or proof of sentence origin. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_172250",
@@ -1610,7 +1742,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -1634,7 +1766,9 @@
           "raw_reference": "* {{R:DAF8}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "poumon/NOM, fixed French revision 39660227, selected field lines 9, 11: Ordinary body-part noun is everyday despite anatomical tagging; figurative breath strength and sexual slang are excluded. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. No separate text-import notice identifies an original work for the selected span; fixed contributor wording remains under the recorded CC BY-SA contribution layer. Reference identities at lines 3, 4, 180, 181 remain bibliography, not licences for modern external definitions or proof of sentence origin. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_176312",
@@ -1650,7 +1784,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1663,7 +1797,10 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+          "original_work_rights_status": "public_domain_at_original_collective_work_boundary",
+          "independent_reason": "Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1679,7 +1816,9 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "séjour/NOM, fixed French revision 39930609, selected field lines 7, 22: Current duration noun at 22 is distinct from salle de séjour, residence premises, naval stop and rare liquid retention. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. DAF8 article import notice at 125 requires original Académie française eighth-edition (1932–1935) credit. Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it. An article marker and complete registry do not establish selected-sentence authorship. Reference identities at lines 124, 125 remain bibliography, not licences for modern external definitions or proof of sentence origin. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_178659",
@@ -1695,7 +1834,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1708,7 +1847,10 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+          "original_work_rights_status": "public_domain_at_original_collective_work_boundary",
+          "independent_reason": "Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1719,7 +1861,9 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "tournage/NOM, fixed French revision 39728401, selected field lines 8, 11: Current cinematic filming is an explicitly selected part of the broader line 11 definition; industrial turning and all phases of production are outside its scope. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. DAF8 article import notice at 80 requires original Académie française eighth-edition (1932–1935) credit. Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it. An article marker and complete registry do not establish selected-sentence authorship. Reference identities at lines 80 remain bibliography, not licences for modern external definitions or proof of sentence origin. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_2058920",
@@ -1735,7 +1879,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -1914,7 +2058,9 @@
           "raw_reference": "* {{R:Ménard|p=1245b}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "ski/NOM, fixed French revision 39257054, selected field lines 19, 22: Current snow sport is selected from the snow/water definition, with equipment and special Norwegian-style plural excluded. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. No separate text-import notice identifies an original work for the selected span; fixed contributor wording remains under the recorded CC BY-SA contribution layer. Reference identities at lines 46, 48, 49, 50, 52, 53, 55, 56, 57, 58, 59, 60, 61, 62, 63, 65, 66, 68, 70, 71, 73, 74, 75, 76, 77, 78, 81, 184, 185, 186, 187, 188, 189, 190, 247 remain bibliography, not licences for modern external definitions or proof of sentence origin. Robert-derived dates in the derivatives at 46–78 are excluded. The snow-sport branch at 22 and its ordinary noun IPA at 19 do not import that chronology or media. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_4911",
@@ -1930,7 +2076,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -1949,7 +2095,9 @@
           "raw_reference": "* {{R:DAF8}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "pâte/NOM, fixed French revision 39887655, selected field lines 11, 12: Current cooking noun with feminine gender and â spelling; pasta products, general paste, paint and figurative person are different meanings. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. No separate text-import notice identifies an original work for the selected span; fixed contributor wording remains under the recorded CC BY-SA contribution layer. Reference identities at lines 368, 369, 370 remain bibliography, not licences for modern external definitions or proof of sentence origin. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_23155",
@@ -1965,7 +2113,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -1978,7 +2126,10 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+          "original_work_rights_status": "public_domain_at_original_collective_work_boundary",
+          "independent_reason": "Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -1989,7 +2140,9 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "issue/NOM, fixed French revision 40040905, selected field lines 9, 10: Current feminine exit noun; outcome, offal, milling remains, issu flexion and English issue are distinct. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. DAF8 article import notice at 117 requires original Académie française eighth-edition (1932–1935) credit. Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it. An article marker and complete registry do not establish selected-sentence authorship. Reference identities at lines 117 remain bibliography, not licences for modern external definitions or proof of sentence origin. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_41675",
@@ -2005,7 +2158,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
       "external_reference_markers": [
@@ -2034,7 +2187,9 @@
           "raw_reference": "* {{R:DicionárioFonético|investir|id=18063}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "investir/VER, fixed French revision 39777227, selected field lines 7, 23: Current financial investing sense, with capital invested, differs from investing authority, surrounding a place and pronominal personal commitment. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. No separate text-import notice identifies an original work for the selected span; fixed contributor wording remains under the recorded CC BY-SA contribution layer. Reference identities at lines 125, 176, 177, 178, 179 remain bibliography, not licences for modern external definitions or proof of sentence origin. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_116405",
@@ -2050,10 +2205,12 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
-      "external_reference_markers": []
+      "external_reference_markers": [],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "basket/NOM, fixed French revision 39424831, selected field lines 9, 10: Current masculine sport noun; feminine basket footwear at 36/38 is excluded despite identical pronunciation. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. No separate text-import notice identifies an original work for the selected span; fixed contributor wording remains under the recorded CC BY-SA contribution layer. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_120940",
@@ -2069,7 +2226,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -2082,7 +2239,10 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+          "original_work_rights_status": "public_domain_at_original_collective_work_boundary",
+          "independent_reason": "Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -2093,7 +2253,9 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "dispute/NOM, fixed French revision 40054019, selected field lines 9, 21: Current heated quarrel noun is distinct from milder discussion and the historical school debate; physical violence is not required. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. DAF8 article import notice at 103 requires original Académie française eighth-edition (1932–1935) credit. Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it. An article marker and complete registry do not establish selected-sentence authorship. Reference identities at lines 103 remain bibliography, not licences for modern external definitions or proof of sentence origin. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_138278",
@@ -2109,7 +2271,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -2122,7 +2284,10 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+          "original_work_rights_status": "public_domain_at_original_collective_work_boundary",
+          "independent_reason": "Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -2153,7 +2318,9 @@
           "raw_reference": "* {{R:TLFi}}",
           "role": "reference_identity_not_selected_sentence_authorship"
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "amateur/NOM, fixed French revision 39772204, selected field lines 56, 57: Current enthusiast noun, including amateur de, differs from negligent worker, nonprofessional sports participant and the adjective; female variants are not runtime aliases. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. DAF8 article import notice at 189 requires original Académie française eighth-edition (1932–1935) credit. Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it. An article marker and complete registry do not establish selected-sentence authorship. Reference identities at lines 189, 190, 191, 192, 193 remain bibliography, not licences for modern external definitions or proof of sentence origin. Huguet sixteenth-century bibliography at 191 and its historical work are outside the selected enthusiast definition at 57; no old-language sense or modern Huguet transcription is imported. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_162811",
@@ -2169,7 +2336,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -2182,7 +2349,10 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+          "original_work_rights_status": "public_domain_at_original_collective_work_boundary",
+          "independent_reason": "Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -2193,7 +2363,9 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "gonfler/VER, fixed French revision 40003240, selected field lines 6, 8: Current transitive inflation at 8 is distinct from intransitive and pronominal swelling at 41/43, annoyance and figurative exaggeration. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. DAF8 article import notice at 222 requires original Académie française eighth-edition (1932–1935) credit. Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it. An article marker and complete registry do not establish selected-sentence authorship. Reference identities at lines 222 remain bibliography, not licences for modern external definitions or proof of sentence origin. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_170077",
@@ -2209,7 +2381,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -2222,7 +2394,10 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+          "original_work_rights_status": "public_domain_at_original_collective_work_boundary",
+          "independent_reason": "Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -2238,7 +2413,9 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "pâle/ADJ, fixed French revision 39849538, selected field lines 10, 11: Current shared-gender facial adjective, exact â spelling; other colour, light and figurative lack-of-brilliance senses remain outside it. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. DAF8 article import notice at 141 requires original Académie française eighth-edition (1932–1935) credit. Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it. An article marker and complete registry do not establish selected-sentence authorship. Reference identities at lines 140, 141 remain bibliography, not licences for modern external definitions or proof of sentence origin. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_176225",
@@ -2254,7 +2431,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -2267,7 +2444,10 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+          "original_work_rights_status": "public_domain_at_original_collective_work_boundary",
+          "independent_reason": "Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -2278,7 +2458,9 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "séduire/VER, fixed French revision 39772323, selected field lines 8, 24: Current transitive general appeal at 24 also permits absolute use at 34; deceiving, corrupting and starting a romance are separately excluded. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. DAF8 article import notice at 98 requires original Académie française eighth-edition (1932–1935) credit. Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it. An article marker and complete registry do not establish selected-sentence authorship. Reference identities at lines 98 remain bibliography, not licences for modern external definitions or proof of sentence origin. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     },
     {
       "id": "b141_fr_248592",
@@ -2294,7 +2476,7 @@
       "content_license": "CC-BY-SA-4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
       "source_frame": "Actual revision returned by the retained first-party API capture.",
-      "selected_text_review": "pending_independent_selected_span_review",
+      "selected_text_review": "passed_at_selected_text_boundary",
       "original_historical_dictionary_layers": [
         {
           "original_authors": "Académie française",
@@ -2307,7 +2489,10 @@
           "scope": "Original edition where imported/referenced; page import markers alone do not identify the author of a selected sentence.",
           "wiki_layer": "Fixed Wiktionnaire contributor transcription/adaptation, CC BY-SA 4.0.",
           "lexique_layer": "Scoped definition adaptations and new explanatory EN/ZH translations, Lexique contributors, CC BY-SA 4.0.",
-          "independent_review": "pending"
+          "independent_review": "passed_at_original_work_boundary",
+          "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+          "original_work_rights_status": "public_domain_at_original_collective_work_boundary",
+          "independent_reason": "Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it."
         }
       ],
       "modification": "Lexique selects and adapts French semantics, supplies new English/Chinese explanations, and selects one isolated IPA variant; no attributed literary/news quotation, media or whole page redistributed. Source bindings retain frozen inflected forms and the selected construction.",
@@ -2323,7 +2508,9 @@
           "role": "reference_identity_not_selected_sentence_authorship",
           "selected_boundary": "Article-level import notice; selected sentence authorship is not established by this marker."
         }
-      ]
+      ],
+      "reviewer": "Independent semantic and selected-rights reviewer #141; separate from author and coordinator",
+      "selected_text_rights_reason": "accoucher/VER, fixed French revision 40035184, selected field lines 6, 7: Current intransitive childbirth at 7 is distinct from assisting another person at 17 and figurative completion/confession. No child as direct object is taught. The selected lexical definition and nominal/adjectival/infinitive IPA/grammar are separate from attributed example prose, media, etymology and other language/POS sections. DAF8 article import notice at 174 requires original Académie française eighth-edition (1932–1935) credit. Original institutional DAF8 collective work, final publication 1935: 1936-01-01 plus seventy years under the established L123-3 basis gives economic expiry 2006-01-01. Académie française credit and work respect are retained. This decision concerns the original edition only; later publisher editorial/electronic works receive no rights grant from it. An article marker and complete registry do not establish selected-sentence authorship. Reference identities at lines 173, 174 remain bibliography, not licences for modern external definitions or proof of sentence origin. DicoHayard reference at 173 is bibliographic; the selected ordinary intransitive childbirth at 7 does not import its slang examples or a distinct external definition. Fixed article/history, complete named contributor registry and anonymous-history credit supply attribution. CC BY-SA 4.0, actual modification notices, full legal text, warranty notice and ShareAlike remain the redistribution route. Combined conversion and actual package obligations remain coordinator owned."
     }
   ]
 }
