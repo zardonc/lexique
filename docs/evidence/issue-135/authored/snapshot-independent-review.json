@@ -1,0 +1,14 @@
+{
+  "author_commit": "5a2275d8a313b298edee51455f3e228fccd4e52e",
+  "review_base": "7e135023bff4ed3ad5c681be4200ec9b0c79398d",
+  "reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+  "final_author_snapshot": "authored/commit-5a2275d",
+  "initial_authored_proposals": "authored/",
+  "snapshot_check": "Every final-author file equals its Git blob at the author commit.",
+  "verbatim_prose_files": {
+    "NOTICES.md": "NOTICES.md.txt",
+    "README.md": "README.md.txt",
+    "selected-rights.md": "selected-rights.md.txt"
+  },
+  "prose_storage": "Original Markdown bytes retained as .md.txt source snapshots; their original relative links are not review-document links."
+}

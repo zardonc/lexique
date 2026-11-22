@@ -1,0 +1,73 @@
+{
+  "schema": "lexique-d2-independent-review-verification-1",
+  "ticket": 135,
+  "reviewer": "Independent field and selected-rights reviewer #135; separate from author and coordinator",
+  "review_base": "7e135023bff4ed3ad5c681be4200ec9b0c79398d",
+  "author_commit": "5a2275d8a313b298edee51455f3e228fccd4e52e",
+  "merged_integration_commit": "2a3e70a050f1356ae1cd03bb93e18558563768ac",
+  "checkout": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\review-135",
+  "branch": "codex/d2-review-135",
+  "platform": "Windows; PowerShell 7; uv-managed Python 3.14.10",
+  "evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\reviewer-evidence\\issue-135\\issue-135-review",
+  "working_evidence_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\review-135\\target\\issue-135-review",
+  "source_audit": {
+    "status": "passed_fixed_source_bytes_spans_frames_and_attribution",
+    "source_articles": 51,
+    "selected_field_spans": 200,
+    "supporting_span_occurrences": 208,
+    "contributor_chain_responses": [
+      6,
+      1
+    ],
+    "named_article_memberships": 3037,
+    "anonymous_article_counts": 494,
+    "sentence_authorship_proved": false,
+    "literal_authority_api_raw_pages": 3,
+    "authority_materials": 4,
+    "daf8_original_boundary_sources": 30,
+    "quality_verdict_boundary": "Mechanical evidence audit; individual semantic decisions are in field-review.json.",
+    "source_archive": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\context\\author-evidence\\issue-135",
+    "review_root": "C:\\Users\\inthe\\IdeaProjects\\lexique-spec-130-139\\review-135\\target\\issue-135-review"
+  },
+  "accepted_groups": 50,
+  "accepted_fields": 200,
+  "changed_fields": 6,
+  "unchanged_fields": 194,
+  "unresolved_fields": 0,
+  "checks": [
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_135.py",
+      "status": "passed",
+      "log": "GREEN-review-final.log"
+    },
+    {
+      "command": "uv run --python 3.14.10 python -B -X utf8 target/issue-135-review/audit.py",
+      "status": "passed",
+      "log": "source-audit-final.log"
+    },
+    {
+      "command": "pnpm test:docs",
+      "status": "passed",
+      "log": "docs-final.log"
+    },
+    {
+      "command": "git diff --check; git diff --cached --check",
+      "status": "passed",
+      "log": "diff-final.log"
+    }
+  ],
+  "regression_boundary": {
+    "command": "uv run --python 3.14.10 python -B -X utf8 scripts/test_core_batch_135.py",
+    "status": "failed_as_expected_before_review",
+    "log": "RED-review.log"
+  },
+  "changes_covered": "Owned staged reviewer changes against merged integration commit; retained full scoped patch and test patch.",
+  "full_patch": "accepted-shard.diff",
+  "test_patch": "test-core-batch-135.diff",
+  "skipped_checks": [
+    "Canonical/resource conversion and packaged obligations",
+    "Frontend lint/typecheck/build and Rust/native checks: no application code changes; coordinator owns native admission",
+    "Learner/offline/other-platform/formal release verification"
+  ],
+  "source_access_limits": "Direct Légifrance requests returned 403; indexed first-party L123-3 text is archived separately. No raw statute success claimed."
+}
